@@ -1,0 +1,120 @@
+{
+  "questSettings:10": {
+    "betterquesting:10": {
+      "editmode:1": 1,
+      "hardcore:1": 0,
+      "home_anchor_x:5": 0.5,
+      "home_anchor_y:5": 0.0,
+      "home_image:8": "betterquesting:textures/gui/default_title.png",
+      "home_offset_x:3": -128,
+      "home_offset_y:3": 0,
+      "livesdef:3": 3,
+      "livesmax:3": 10,
+      "pack_name:8": "",
+      "pack_version:3": 0,
+      "party_enable:1": 1
+    }
+  },
+  "questDatabase:9": {
+    "0:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Nomi-CEu",
+          "desc:8": "This is a port of Nomifactory 1.3 to the GregTech Community Unofficial (GTCEu) generation of GT mods.\n\nThe progression has been kept mostly the same, with certain improvements native to GTCEu.\n\nAn extensive questbook is not planned. Here are some of the major changes:\n- GTCEu does not have any RF -\u003e EU conversion support yet. However, GT cables can natively supply RF at 4:1. For power generation, use native GT power, the Large Lapidary Dynamo and the conversion recipes from SFR Solar Panels to GT Solar Panels.\n- The circuit progression used is CEu\u0027s native one.\n- Many items from Scannable, Lumberaxe, More Plates, ContentTweaker and other such mods were changed to native CEu implementations.\n\nEnjoy! - §em2r1k5",
+          "icon:10": {
+            "id:8": "minecraft:nether_star",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "questlogic:8": "AND",
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "repeat_relative:1": 1,
+          "lockedprogress:1": 0,
+          "autoclaim:1": 0,
+          "issilent:1": 0,
+          "ismain:1": 0,
+          "globalshare:1": 0,
+          "simultaneous:1": 0,
+          "visibility:8": "NORMAL"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "taskID:8": "bq_standard:checkbox",
+          "index:3": 0
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewards:9": {
+            "0:10": {
+              "id:8": "contenttweaker:omnicoin100",
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "gregtech:meta_tool",
+              "Count:3": 4,
+              "Damage:2": 19,
+              "tag:10": {
+                "GT.ToolStats:10": {
+                  "Material:8": "diamond"
+                }
+              },
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "id:8": "gregtech:meta_item_1",
+              "Count:3": 1,
+              "Damage:2": 467,
+              "tag:10": {
+                "Charge:4": 1600000
+              },
+              "OreDict:8": ""
+            }
+          },
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0
+        }
+      },
+      "preRequisites:11": [],
+      "questID:3": 0
+    }
+  },
+  "questLines:9": {
+    "0:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "name:8": "Nomi-CEu",
+          "desc:8": "No Description",
+          "icon:10": {
+            "id:8": "minecraft:book",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "visibility:8": "NORMAL",
+          "bg_image:8": "",
+          "bg_size:3": 256
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": 0,
+          "id:3": 0
+        }
+      },
+      "lineID:3": 0,
+      "order:3": 0
+    }
+  },
+  "format:8": "2.0.0"
+}

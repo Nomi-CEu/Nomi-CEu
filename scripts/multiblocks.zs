@@ -255,7 +255,9 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
             .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
             .where('O', <metastate:extendedcrafting:trimmed:5>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
-            | controller.autoAbilities(true, false, true, true, false, false, false))
+            | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
+            )
             .build();
         } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -302,7 +304,9 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
             .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
             .where('O', <metastate:extendedcrafting:storage:4>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
-            | controller.autoAbilities(true, false, true, true, false, false, false))
+            | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
+            )
             .build();
         } as IPatternBuilderFunction)
     .withRecipeMap(
