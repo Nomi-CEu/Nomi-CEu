@@ -211,7 +211,7 @@ MaterialRegistry.get("curium").addIngot();
 MaterialRegistry.get("berkelium").addIngot();
 MaterialRegistry.get("californium").addIngot();
 MaterialRegistry.get("einsteinium").addIngot();
-MaterialRegistry.get("graphite").addIngot();
+//MaterialRegistry.get("graphite").addIngot();
 
 MaterialRegistry.get("uranium_235").addFluid();
 MaterialRegistry.get("neptunium").addFluid();
