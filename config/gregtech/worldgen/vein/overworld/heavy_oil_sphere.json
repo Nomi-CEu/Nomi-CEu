@@ -1,0 +1,23 @@
+{
+  "weight": 35,
+  "density": 0.9,
+  "max_height": 60,
+  "min_height": 10,
+    "dimension_filter": ["name:*(overworld|lostcities)"],
+  "generator": {
+    "type": "sphere",
+    "radius": [4, 6]
+  },
+  "filler": {
+    "type": "ignore_bedrock",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 100,
+          "value": "block:gregtech:fluid.oil_heavy"
+        }
+      ]
+    }
+  }
+}

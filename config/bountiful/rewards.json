@@ -1,0 +1,38 @@
+[
+  {
+    "content": "contenttweaker:omnicoin100",
+    "unitWorth": 100,
+    "weight": 10,
+	"amount": {
+      "min": 1,
+      "max": 3
+    }
+  },
+  {
+    "content": "contenttweaker:omnicoin5",
+    "unitWorth": 5,
+    "weight": 100,
+	"amount": {
+      "min": 10,
+      "max": 20
+    }
+  },
+  {
+    "content": "contenttweaker:omnicoin25",
+    "unitWorth": 25,
+    "weight": 50,
+	"amount": {
+      "min": 5,
+      "max": 10
+    }
+  },
+  {
+    "content": "contenttweaker:omnicoin",
+    "unitWorth": 1,
+    "weight": 100,
+	"amount": {
+      "min": 10,
+      "max": 50
+    }
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "content": "gregtech:meta_item_1:32600",
+    "amount": {
+      "min": 5,
+      "max": 10
+    },
+    "unitWorth": 5,
+    "weight": 70
+  },
+  {
+    "content": "contenttweaker:stonewidget",
+    "amount": {
+      "min": 5,
+      "max": 25
+    },
+    "unitWorth": 3,
+    "weight": 30
+  },
+  {
+    "content": "gregtech:meta_item_1:32640",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 10,
+    "weight": 50
+  },
+  {
+    "content": "gregtech:meta_item_2:32450",
+    "amount": {
+      "min": 5,
+      "max": 25
+    },
+    "unitWorth": 1,
+    "weight": 20
+  },
+  {
+    "content": "contenttweaker:combinationcircuit",
+    "amount": {
+      "min": 1,
+      "max": 5
+    },
+    "unitWorth": 35,
+    "weight": 50
+  },
+    {
+    "content": "gregtech:machine:501",
+    "amount": {
+      "min": 1,
+      "max": 5
+    },
+    "unitWorth": 10,
+    "weight": 20
+  },
+  {
+    "content": "gregtech:meta_item_1:32690",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 10,
+    "weight": 30
+  },
+  {
+    "content": "gregtech:meta_item_1:32680",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 15,
+    "weight": 30
+  },
+  {
+    "content": "gregtech:meta_item_1:32610",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 15,
+    "weight": 30
+  },
+  {
+    "content": "contenttweaker:enderwidget",
+    "amount": {
+      "min": 2,
+      "max": 5
+    },
+    "unitWorth": 30,
+    "weight": 50
+  },
+  {
+    "content": "contenttweaker:alloywidget",
+    "amount": {
+      "min": 2,
+      "max": 5
+    },
+    "unitWorth": 20,
+    "weight": 40
+  },
+  {
+    "content": "contenttweaker:woodenwidget",
+    "amount": {
+      "min": 5,
+      "max": 25
+    },
+    "unitWorth": 2,
+    "weight": 80
+  }
+]

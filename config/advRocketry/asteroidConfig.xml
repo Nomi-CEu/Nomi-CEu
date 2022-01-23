@@ -1,0 +1,11 @@
+<Asteroids>
+	<asteroid name="Small Asteroid" distance="10" mass="100" massVariability="0.5" minLevel="0" probability="10" richness="0.2" richnessVariability="0.5">
+		<ore itemStack="minecraft:iron_ore" chance="15" />
+		<ore itemStack="minecraft:gold_ore" chance="10" />
+		<ore itemStack="minecraft:redstone_ore" chance="10" />
+	</asteroid>
+	<asteroid name="Iridium Enriched asteroid" distance="100" mass="25" massVariability="0.5" minLevel="0" probability="0.75" richness="0.2" richnessVariability="0.3">
+		<ore itemStack="minecraft:iron_ore" chance="25" />
+		<ore itemStack="libvulpes:ore0 10" chance="5" />
+	</asteroid>
+</Asteroids>

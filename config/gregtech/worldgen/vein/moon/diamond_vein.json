@@ -1,0 +1,31 @@
+{
+  "weight": 0,
+  "density": 0.6,
+  "max_height": 40,
+  "min_height": 5,
+      "biome_modifier": {
+		"type": "biome_map",
+		"advancedrocketry:moon": 60,
+		"advancedrocketry:moondark": 60
+   },
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [14, 13]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 60,
+          "value": "ore:diamond"
+        },
+		{
+          "weight": 40,
+          "value": "ore:graphite"
+        }
+      ]
+    }
+  }
+}

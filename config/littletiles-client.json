@@ -1,0 +1,22 @@
+{
+  "building": {
+    "invertStickToGrid": false,
+    "maxSavedActions": 32,
+    "useALTForEverything": false,
+    "useAltWhenFlying": true
+  },
+  "rendering": {
+    "hideVBOWarning": false,
+    "hideMipmapWarning": false,
+    "useQuadCache": false,
+    "useCubeCache": true,
+    "renderingThreadCount": 2,
+    "highlightStructureBox": true,
+    "previewLines": false,
+    "previewLineThickness": 2,
+    "enableRandomDisplayTick": false,
+    "uploadToVBODirectly": true,
+    "showTooltip": true,
+    "enhancedResorting": true
+  }
+}

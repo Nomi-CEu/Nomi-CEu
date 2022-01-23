@@ -1,0 +1,173 @@
+{
+	"version": "2.0",
+	"spawns": {
+		"dense_nether_coal_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nether_coal_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+			    "numObjects": 10,
+				"size": 25,
+				"minHeight": 0,
+				"maxHeight": 200
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_nether_coal_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_nether_diamond_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nether_diamond_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+			    "numObjects": 10,
+				"size": 25,
+				"minHeight": 0,
+				"maxHeight": 200
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_nether_diamond_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_nether_emerald_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nether_emerald_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+			    "numObjects": 10,
+				"size": 25,
+				"minHeight": 0,
+				"maxHeight": 200
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_nether_emerald_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_nether_gold_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nether_gold_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+			    "numObjects": 10,
+				"size": 25,
+				"minHeight": 0,
+				"maxHeight": 200
+			},
+			"blocks": [
+				{
+					"name": "densemetals:nether_gold_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_nether_iron_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nether_iron_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+			   "numObjects": 10,
+				"size": 25,
+				"minHeight": 0,
+				"maxHeight": 200
+			},
+			"blocks": [
+				{
+					"name": "densemetals:nether_iron_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_nether_lapis_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nether_iron_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+			   "numObjects": 10,
+				"size": 25,
+				"minHeight": 0,
+				"maxHeight": 96
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_nether_lapis_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_nether_redstone_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nether_redstone_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+			   "numObjects": 10,
+				"size": 25,
+				"minHeight": 0,
+				"maxHeight": 96
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_nether_redstone_ore",
+					"chance": 100
+				}
+			]
+		}
+	}
+}

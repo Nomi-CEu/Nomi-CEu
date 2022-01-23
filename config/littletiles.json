@@ -1,0 +1,55 @@
+{
+  "core": {
+    "defaultSize": 16,
+    "minSize": 1,
+    "scale": 6,
+    "exponent": 2,
+    "forceToSaveDefaultSize": false
+  },
+  "general": {
+    "allowFlowingWater": true,
+    "allowFlowingLava": true,
+    "storagePerPixel": 1.0,
+    "enableBed": true,
+    "enableAnimationCollision": true,
+    "enableCollisionMotion": true,
+    "dyeVolume": 2.0,
+    "maxAllowedDensity": 2048,
+    "maxDoorDistance": 512
+  },
+  "build": {
+    "default": {
+      "limitAffectedBlocks": true,
+      "maxAffectedBlocks": 0,
+      "harvestLevelBlock": 0,
+      "editUnbreakable": false,
+      "minimumTransparency": 0,
+      "limitEditBlocks": true,
+      "maxEditBlocks": 0,
+      "limitPlaceBlocks": true,
+      "maxPlaceBlocks": 0
+    },
+    "survival": {
+      "limitAffectedBlocks": true,
+      "maxAffectedBlocks": 9,
+      "harvestLevelBlock": 10,
+      "editUnbreakable": false,
+      "minimumTransparency": 255,
+      "limitEditBlocks": false,
+      "maxEditBlocks": 10,
+      "limitPlaceBlocks": false,
+      "maxPlaceBlocks": 10
+    },
+    "creative": {
+      "limitAffectedBlocks": false,
+      "maxAffectedBlocks": 2,
+      "harvestLevelBlock": 4,
+      "editUnbreakable": true,
+      "minimumTransparency": 0,
+      "limitEditBlocks": false,
+      "maxEditBlocks": 10,
+      "limitPlaceBlocks": false,
+      "maxPlaceBlocks": 10
+    }
+  }
+}

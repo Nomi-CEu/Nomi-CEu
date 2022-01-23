@@ -1,0 +1,248 @@
+~ Saved With Solar Flux 12.4.11
+
++C:Avaritia={
+  +C:solarflux:infinity={
+    # How many RF/FE does this solar panel store? (Default: 262144000000, Range: [1;9223372036854775807])
+    +L:Capacity=262144000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 16777216, Range: [1;9223372036854775807])
+    +L:Generation Rate=16777216
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 65536000, Range: [1;9223372036854775807])
+    +L:Transfer Rate=65536000
+
+  }
+
+  +C:solarflux:neutronium={
+    # How many RF/FE does this solar panel store? (Default: 131072000000, Range: [1;9223372036854775807])
+    +L:Capacity=131072000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 8388608, Range: [1;9223372036854775807])
+    +L:Generation Rate=8388608
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 32768000, Range: [1;9223372036854775807])
+    +L:Transfer Rate=32768000
+
+  }
+
+}
+
+
++C:Draconic Evolution={
+  +C:solarflux:chaotic={
+    # How many RF/FE does this solar panel store? (Default: 2048000000, Range: [1;9223372036854775807])
+    +L:Capacity=2048000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 524288, Range: [1;9223372036854775807])
+    +L:Generation Rate=524288
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 4096000, Range: [1;9223372036854775807])
+    +L:Transfer Rate=4096000
+
+  }
+
+  +C:solarflux:draconic={
+    # How many RF/FE does this solar panel store? (Default: 512000000, Range: [1;9223372036854775807])
+    +L:Capacity=512000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 262144, Range: [1;9223372036854775807])
+    +L:Generation Rate=262144
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 1024000, Range: [1;9223372036854775807])
+    +L:Transfer Rate=1024000
+
+  }
+
+  +C:solarflux:wyvern={
+    # How many RF/FE does this solar panel store? (Default: 256000000, Range: [1;9223372036854775807])
+    +L:Capacity=256000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 65536, Range: [1;9223372036854775807])
+    +L:Generation Rate=65536
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 512000, Range: [1;9223372036854775807])
+    +L:Transfer Rate=512000
+
+  }
+
+}
+
+
++C:Solar Flux={
+  +C:solarflux:1={
+    # How many RF/FE does this solar panel store? (Default: 25000, Range: [1;9223372036854775807])
+    +L:Capacity=25000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 1, Range: [1;9223372036854775807])
+    +L:Generation Rate=1
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 8, Range: [1;9223372036854775807])
+    +L:Transfer Rate=8
+
+  }
+
+  +C:solarflux:2={
+    # How many RF/FE does this solar panel store? (Default: 125000, Range: [1;9223372036854775807])
+    +L:Capacity=125000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 8, Range: [1;9223372036854775807])
+    +L:Generation Rate=8
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 64, Range: [1;9223372036854775807])
+    +L:Transfer Rate=64
+
+  }
+
+  +C:solarflux:3={
+    # How many RF/FE does this solar panel store? (Default: 425000, Range: [1;9223372036854775807])
+    +L:Capacity=425000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 32, Range: [1;9223372036854775807])
+    +L:Generation Rate=32
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 256, Range: [1;9223372036854775807])
+    +L:Transfer Rate=256
+
+  }
+
+  +C:solarflux:4={
+    # How many RF/FE does this solar panel store? (Default: 2000000, Range: [1;9223372036854775807])
+    +L:Capacity=2000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 128, Range: [1;9223372036854775807])
+    +L:Generation Rate=128
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 1024, Range: [1;9223372036854775807])
+    +L:Transfer Rate=1024
+
+  }
+
+  +C:solarflux:5={
+    # How many RF/FE does this solar panel store? (Default: 8000000, Range: [1;9223372036854775807])
+    +L:Capacity=8000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 512, Range: [1;9223372036854775807])
+    +L:Generation Rate=512
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 4096, Range: [1;9223372036854775807])
+    +L:Transfer Rate=4096
+
+  }
+
+  +C:solarflux:6={
+    # How many RF/FE does this solar panel store? (Default: 32000000, Range: [1;9223372036854775807])
+    +L:Capacity=32000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 2048, Range: [1;9223372036854775807])
+    +L:Generation Rate=2048
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 16384, Range: [1;9223372036854775807])
+    +L:Transfer Rate=16384
+
+  }
+
+  +C:solarflux:7={
+    # How many RF/FE does this solar panel store? (Default: 64000000, Range: [1;9223372036854775807])
+    +L:Capacity=64000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 8192, Range: [1;9223372036854775807])
+    +L:Generation Rate=8192
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 65536, Range: [1;9223372036854775807])
+    +L:Transfer Rate=65536
+
+  }
+
+  +C:solarflux:8={
+    # How many RF/FE does this solar panel store? (Default: 128000000, Range: [1;9223372036854775807])
+    +L:Capacity=128000000
+
+    # Does this solar panel connect textures with other panels of this type? (Default: true)
+    +B:Connected Texture=true
+
+    # How many RF/FE does this solar panel produce per tick? (Default: 32768, Range: [1;9223372036854775807])
+    +L:Generation Rate=32768
+
+    # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
+    +F:Height=6.0
+
+    # How many RF/FE does this solar panel emit to other blocks, per tick? (Default: 262144, Range: [1;9223372036854775807])
+    +L:Transfer Rate=262144
+
+  }
+
+}
+
+

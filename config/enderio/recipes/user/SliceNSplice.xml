@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+
+<!-- Guardian Diode -->
+
+<recipe name="Guardian Diode"><disabled/></recipe>
+
+<recipe name="Guardian Diode Omni">
+    <slicing energy="20000">
+      <input name="ingotEnergeticAlloy"/><input name="gemPrismarine"/><input name="ingotEnergeticAlloy"/>
+      <input name="dustPrismarine"/><input name="itemSilicon"/><input name="dustPrismarine"/>
+      <output name="skullGuardianDiode"/>
+    </slicing>
+  </recipe>
+
+  <recipe name="Guardian Diode One Bonus Omni">
+    <slicing energy="40000">
+      <input name="ingotEnergeticAlloy"/><input name="gemPrismarine"/><input name="ingotEnergeticAlloy"/>
+      <input name="dustPrismarine"/><input name="gregtech:meta_item_2:32441"/><input name="dustPrismarine"/>
+      <output name="skullGuardianDiode" amount="2" />
+    </slicing>
+  </recipe>
+
+  <recipe name="Guardian Diode Two Bonus Omni">
+    <slicing energy="80000">
+      <input name="ingotEnergeticAlloy"/><input name="gemPrismarine"/><input name="ingotEnergeticAlloy"/>
+      <input name="dustPrismarine"/><input name="gregtech:meta_item_2:32442"/><input name="dustPrismarine"/>
+      <output name="skullGuardianDiode" amount="4"/>
+    </slicing>
+  </recipe>
+
+  
+<!-- Skeletal Contractor -->
+
+<recipe name="Skeletal Contractor"><disabled/></recipe>
+
+<recipe name="Skeletal Contractor Omni">
+    <slicing energy="20000">
+      <input name="ingotSoularium"/><input name="minecraft:skull:0"/><input name="ingotSoularium"/>
+      <input name="minecraft:rotten_flesh"/><input name="itemSilicon"/><input name="minecraft:rotten_flesh"/>
+      <output name="skullSkeletalContractor"/>
+    </slicing>
+  </recipe>
+
+  <recipe name="Skeletal Contractor One Bonus Omni">
+    <slicing energy="40000">
+      <input name="ingotSoularium"/><input name="minecraft:skull:0"/><input name="ingotSoularium"/>
+      <input name="minecraft:rotten_flesh"/><input name="gregtech:meta_item_2:32441"/><input name="minecraft:rotten_flesh"/>
+      <output name="skullSkeletalContractor" amount="2"/>
+    </slicing>
+  </recipe>
+
+  <recipe name="Skeletal Contractor Two Bonus Omni">
+    <slicing energy="80000">
+      <input name="ingotSoularium"/><input name="minecraft:skull:0"/><input name="ingotSoularium"/>
+      <input name="minecraft:rotten_flesh"/><input name="gregtech:meta_item_2:32442"/><input name="minecraft:rotten_flesh"/>
+      <output name="skullSkeletalContractor" amount="4"/>
+    </slicing>
+  </recipe>
+
+<!-- Ender Resonator -->
+
+<recipe name="Ender Resonator"><disabled/></recipe>
+
+<recipe name="Ender Resonator Omni">
+    <slicing energy="20000">
+      <input name="ingotSoularium"/><input name="enderio:block_enderman_skull:0"/><input name="ingotSoularium"/>
+      <input name="itemSilicon"/><input name="ingotVibrantAlloy"/><input name="itemSilicon"/>
+      <output name="skullEnderResonator"/>
+    </slicing>
+  </recipe>
+
+<recipe name="Ender Resonator One Bonus Omni">
+    <slicing energy="40000">
+      <input name="ingotSoularium"/><input name="enderio:block_enderman_skull:0"/><input name="ingotSoularium"/>
+      <input name="gregtech:meta_item_2:32441"/><input name="ingotVibrantAlloy"/><input name="gregtech:meta_item_2:32441"/>
+      <output name="skullEnderResonator" amount="2"/>
+    </slicing>
+  </recipe>
+
+  <recipe name="Ender Resonator Two Bonus Omni">
+    <slicing energy="80000">
+      <input name="ingotSoularium"/><input name="enderio:block_enderman_skull:0"/><input name="ingotSoularium"/>
+      <input name="gregtech:meta_item_2:32442"/><input name="ingotVibrantAlloy"/><input name="gregtech:meta_item_2:32442"/>
+      <output name="skullEnderResonator" amount="4"/>
+    </slicing>
+  </recipe>
+
+<!-- Z Logic Controller -->
+
+<recipe name="Controller Skull"><disabled/></recipe>
+
+<recipe name="Z Logic Controller Omni">
+    <slicing energy="20000">
+      <input name="ingotSoularium"/><input name="minecraft:skull:2"/><input name="ingotSoularium"/>
+      <input name="itemSilicon"/><input name="dustRedstone"/><input name="itemSilicon" />
+      <output name="skullZombieController"/>
+    </slicing>
+  </recipe>
+
+  <recipe name="Z Logic Controller One Bonus Omni">
+    <slicing energy="40000">
+      <input name="ingotSoularium"/><input name="minecraft:skull:2"/><input name="ingotSoularium"/>
+      <input name="gregtech:meta_item_2:32441"/><input name="dustRedstone"/><input name="gregtech:meta_item_2:32441" />
+      <output name="skullZombieController" amount="2"/>
+    </slicing>
+  </recipe>
+
+  <recipe name="Z Logic Controller Two Bonus Omni">
+    <slicing energy="80000">
+      <input name="ingotSoularium"/><input name="minecraft:skull:2"/><input name="ingotSoularium"/>
+      <input name="gregtech:meta_item_2:32442"/><input name="dustRedstone"/><input name="gregtech:meta_item_2:32442" />
+      <output name="skullZombieController" amount="4"/>
+    </slicing>
+  </recipe>
+
+
+  <!-- Dead End Recipe Removals -->
+
+  <recipe name="Electrode Skull"><disabled/></recipe>
+
+  <recipe name="Totemic Capacitor"><disabled/></recipe>
+
+
+</enderio:recipes>

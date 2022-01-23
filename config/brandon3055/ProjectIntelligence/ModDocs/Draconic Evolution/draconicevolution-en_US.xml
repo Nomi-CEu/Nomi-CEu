@@ -1,0 +1,1677 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mod docRevision="16" lang="en_US" modName="Draconic Evolution" modid="draconicevolution">
+    <content alignment="CENTER" colour="9900ff" index="0" shadow="true" size="0" type="heading">§kgkjodifshgoijsdfhbgoiujfadsbniopujgbansfpoikjgnsfpokjghnbfpsaojngojpasdfngpojasdfngopjasfdngpojnfsadpojgnafspojgnopuafsngpuofsangpounafsopugnfsaopujgnouf</content>
+    <content alignment="CENTER" colour="9900ff" index="5" shadow="true" size="0" type="heading">§kgkjodifshgoijsdfhbgoiujfadsbniopujgbansfpoikjgnsfpokjghnbfpsaojngojpasdfngpojasdfngopjasfdngpojnfsadpojgnafspojgnopuafsngpuofsangpounafsopugnfsaopujgnouf</content>
+    <content index="4" size="4" type="vSpacer"/>
+    <content alignment="CENTER" colour="ff0030" index="2" shadow="true" size="1" type="heading">Please install the new Project Intelligence mod if you wish to have access to the latest documentation for DE and any other mods that use PI </content>
+    <content alignment="CENTER" colour="ff0000" index="1" shadow="true" size="2" type="heading">Attention! This documentation is Deprecated and will be removed in the next update!!!!</content>
+    <content alignment="CENTER" colour="ff" hoverColour="ffff" index="3" link="https://minecraft.curseforge.com/projects/project-intelligence" shadow="true" size="0" targetLocation="web" type="link">§nLink to to Project Intelligence curse page.</content>
+    <content index="36" type="textArea">§6Robert W
+§r(Since 08/06/2015)§r
+
+§6pxoxd
+§r(Since 10/12/2015)§r
+
+§6antric83
+§r(Since 14/04/2016)§r
+
+§6SassyAmber
+§r(Since 25/05/2016)§r
+
+§6GreatOrator
+§r(Since 02/06/2016)§r
+
+§6Drekryan
+§r(Since 24/06/2016)§r
+
+§6Der DracheTV
+§r(Since 26/06/2016)§r
+
+§6Jordan
+§r(Since 20/07/2016)§r
+
+§6ModAPI
+§r(Since 29/11/2016)§r
+
+§6Mikepet
+§r(Since 09/12/2016)§r
+
+§6Nick_J_M
+§r(Since 19/01/2017)§r
+
+§6Halacon
+§r(Since 23/01/2017)§r
+
+§6Edward
+§r(Since 27/01/2017)§r
+
+§6WolufHD
+§r(Since 29/03/2017)§r
+
+§6Morpheus1101
+§r(Since 15/04/2017)§r
+
+§6exus_Chris
+§r(Since 18/04/2017)§r
+
+§6Zudakai
+§r(Since 21/04/2017)§r
+
+§6duomaz
+§r(Since 15/04/2017)§r
+
+§6Snakemgr12
+§r(Since 12/05/2017)§r
+
+§6Mhoku_
+§r(Since 08/06/2017)§r</content>
+    <content alignment="CENTER" colour="ff00" hoverColour="0000FF" index="39" link="https://www.patreon.com/brandon3055" shadow="true" size="0" targetLocation="web" type="link">https://www.patreon.com/brandon3055</content>
+    <content index="38" type="textArea">If you would like to become a patreon you can do so by following the link bellow.</content>
+    <content index="37" size="8" type="vSpacer"/>
+    
+    <content index="34" type="textArea">§aThe following people are supporting me on patreon!
+The support these people give really helps
+make what I do possible. 
+For this, I owe them all a debt of gratitude.</content>
+    <content index="35" size="8" type="vSpacer"/>
+    <content alignment="LEFT" index="31" type="splitContainer" vAlignment="TOP" width="20">
+        <content alignment="LEFT" index="0" splitSide="RIGHT" type="textArea">§6Covers1624§b
+Covers is the biggest DE contributor as far as DE 1.10+ is concerned.
+His work with CCL has been an enormous help is what makes a 
+lot of the fancy rendering in 1.10 possible!
+He has also been a big help with some of the DE code. 
+He is all around great guy and a very good friend! 
+    
+§6GreatOrator§b
+GreatOrator has always been and will always be one of my best friends.
+He was the first person I met in the modded community when we both
+played on the same modded 1.4.7 server a few years back.
+After playing with mods for a while we both decided we wanted to take it a step further.
+GreatOrator started working on the mod pack that is now known as Tolkiencraft
+and I decided to start messing with java and working on an add-on for Tolkiencraft
+that would one day be known as Draconic Evolution.
+
+If you told us back then how far we would go we never would have believed it
+tbh I'm still having a hard time believing it.
+I think it was the amazing success of the Tolkiencraft pack is what really helped
+DE become as popular as it is today because as people learned about TC they also
+learned about DE.
+
+Of course, that's not all he did. GreatOrator was also responsible for most of
+the textures back then and a significant amount of the content still in DE to today
+came from his ideas.</content>
+    </content>
+    <content index="30" size="8" type="vSpacer"/>
+    <content alignment="CENTER" colour="ffff" index="33" shadow="true" size="0" type="heading">§nPatreons:</content>
+    <content index="32" size="8" type="vSpacer"/>
+    <content alignment="CENTER" colour="ffff" index="28" shadow="true" size="1" type="heading">§nContributors</content>
+    
+    <content index="18" size="4" type="vSpacer"/>
+    <content alignment="CENTER" colour="ff00" hoverColour="0000FF" index="21" link="https://www.youtube.com/watch?v=2RRddsks9TA" shadow="true" size="0" targetLocation="web" type="link">§nClick here to view part 2 on youtube.</content>
+    <content alignment="CENTER" colour="ff00" hoverColour="0000FF" index="12" link="https://www.youtube.com/watch?v=iBcRT4C6RkQ" shadow="true" size="0" targetLocation="web" type="link">§nClick here to view part 1 on youtube.</content>
+    <content alignment="CENTER" colour="ffff" index="11" shadow="true" size="0" type="heading">Spotlights by Direwolf20!</content>
+    <content index="24" size="8" type="vSpacer"/>
+    
+    
+    
+    
+    <content index="27" size="24" type="vSpacer"/>
+    <content alignment="LEFT" index="26" type="splitContainer" vAlignment="BOTTOM" width="10">
+        <content alignment="LEFT" index="0" splitSide="RIGHT" type="textArea">§1§a
+-Powerful tools and armor
+
+-Teleportation
+
+-Time and weather control
+
+-Mob Farming
+          
+-The most overpowered energy storage of any mod currently in existence.
+
+-Extreme(ly Dangerous) power generation
+
+-Fancy Effects! (Because that's an important feature!)
+
+-One of the most powerful bosses in modded minecraft</content>
+    </content>
+    <content index="25" type="textArea">Draconic Evolution is a mod that focuses mainly on extreamely powerful end game tools, weapons an machines.
+
+While at the same time maintaining balance (Although this can be tricky) with equally expensive recipes and very difficult bosses which you need to go through in order to get these items.
+
+But this mod started more like an Open Blocks or Extra Utilities type mod so it also has a lot of seemingly random but useful blocs and items.
+
+Some of the key features of this mod are: </content>
+    <content index="10" size="8" type="vSpacer"/>
+    <content alignment="CENTER" index="9" shadow="true" size="0" type="heading">Now not quite as OP!!!</content>
+    <content alignment="CENTER" index="8" shadow="false" size="0" type="heading">ABC...LMN§cDraconic Evolution§rQR...WXYZ</content>
+    <content index="7" size="8" type="vSpacer"/>
+    <content alignment="CENTER" index="6" shadow="true" size="1" type="heading">§nDraconic Evolution</content>
+    <entry branchId="draconicevolution:draconium" category="wiki.cat.item" icon="draconicevolution:draconium_ingot" iconType="stack" name="Draconium" sortingWeight="10">
+        <content index="6" type="recipe">name:draconicevolution:nugget,size:1,meta:0,nbt:{}</content>
+        <content index="5" type="recipe">name:draconicevolution:draconium_ingot,size:1,meta:0,nbt:{}</content>
+        <content index="4" size="8" type="vSpacer"/>
+        <content index="3" type="textArea">Draconium is the base material used to craft all tools and machines in Draconic Evolution.</content>
+        <content index="2" size="8" type="vSpacer"/>
+        <content index="0" size="4" type="vSpacer"/>
+        <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nDraconium</content>
+    <entry branchId="draconicevolution:draconium/ore" category="wiki.cat.block" icon="name:draconicevolution:draconium_ore,size:1,meta:0,nbt:{}" iconType="stack" name="Draconium Ore" sortingWeight="10">
+            <content alignment="LEFT" index="7" type="splitContainer" vAlignment="MIDDLE" width="32">
+                <content index="0" renderSlot="true" scale="100" splitSide="LEFT" tooltip="true" type="stack">name:draconicevolution:draconium_ore,size:1,meta:2,nbt:{}</content>
+                <content alignment="LEFT" index="0" splitSide="RIGHT" type="textArea">End
+
+This is the most common variant of draconium ore found on the main island and all other islands in the End
+
+Drops:
+2-4 Draconum Dust (when harvested normally)
+2-12 Draconum Dust (when harvested with fortune 3)
+</content>
+            </content>
+            <content index="6" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="5" type="splitContainer" vAlignment="MIDDLE" width="32">
+                <content index="0" renderSlot="true" scale="100" splitSide="LEFT" tooltip="true" type="stack">name:draconicevolution:draconium_ore,size:1,meta:1,nbt:{}</content>
+                <content alignment="LEFT" index="0" splitSide="RIGHT" type="textArea">Nether
+
+More common than the overworld variant but still fairly rare and does not drop quite as much dust when harvested
+Found in the nether.
+
+Drops:
+3-5 Draconum Dust (when harvested normally)
+3-13 Draconum Dust (when harvested with fortune 3)
+</content>
+            </content>
+            <content index="4" size="8" type="vSpacer"/>
+
+
+            <content alignment="LEFT" index="3" type="splitContainer" vAlignment="MIDDLE" width="32">
+
+                <content alignment="LEFT" index="0" splitSide="RIGHT" type="textArea">Overworld
+
+The overworld variety of Draconium ore can be found in (you guessed it) the overworld and other stone based dimensions.
+This is the rarest of the 3 types with an extremely low generation rate but it drops the most draconium dust when harvested
+
+Drops:
+4-6 Draconium Dust (when harvested normally)
+4-14 Draconium Dust (when harvested with fortune 3)</content>
+            <content alignment="CENTER" index="0" renderSlot="true" scale="100" splitSide="LEFT" tooltip="true" type="stack">name:draconicevolution:draconium_ore,size:1,meta:0,nbt:{}</content>
+            </content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">Draconium ore comes in 3 different types.</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:draconium/dust" category="wiki.cat.item" icon="name:draconicevolution:draconium_dust,size:1,meta:0,nbt:{}" iconType="stack" name="Draconium Dust" sortingWeight="11">
+            <content index="1" type="textArea">Draconium Dust drops from draconium ore when harvested and 1 dust smelts into 1 draconium ingot</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:draconium/block" category="wiki.cat.block" icon="name:draconicevolution:draconium_block,size:1,meta:0,nbt:{}" iconType="stack" name="Draconium Block" sortingWeight="12">
+            <content index="3" type="recipe">name:draconicevolution:draconium_block,size:1,meta:0,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+
+            <content index="1" type="textArea">Draconium in its block form.
+
+This block is resistant to most mobs including the Wither and EnderDragon.
+
+Equivalent to 4 book shelves when used as an enchanting booster.</content>
+            <content index="0" size="8" type="vSpacer"/>
+
+        </entry>
+    <entry branchId="draconicevolution:draconium/blockCharged" category="wiki.cat.block" icon="name:draconicevolution:draconium_block,size:1,meta:1,nbt:{}" iconType="stack" name="Charged Draconium Block" sortingWeight="13">
+            <content index="1" type="textArea">§mBy placing a draconium block in a charging device such as an Energy Infuser and supplying it with 100 million RF you can make a Charged Draconium Block. Currently, in this version of Draconic Evolution, this is not used for anything.
+
+Equivalent to 12 bookshelves when used as an enchanting booster.§r
+§cThis block is currently disabled until some changes can be made.
+It is not currently used for much so this should not be a big issue.</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:draconium/nugget" category="wiki.cat.item" icon="name:draconicevolution:nugget,size:1,meta:0,nbt:{}" iconType="stack" name="Draconium Nugget" sortingWeight="14">
+            <content index="0" type="recipe">name:draconicevolution:nugget,size:1,meta:0,nbt:{}</content>
+        </entry>
+    </entry>
+    <entry branchId="draconicevolution:cores" icon="name:draconicevolution:draconic_core,size:1,meta:0,nbt:{}" iconType="stack" name="Cores" sortingWeight="20">
+        <content index="0" type="textArea">
+Cores come in 4 tiers and are components in almost all Draconic Evolution crafting recipes.</content>
+        <entry branchId="draconicevolution:cores/draconic" category="wiki.cat.item" icon="name:draconicevolution:draconic_core,size:1,meta:0,nbt:{}" iconType="stack" name="Draconic Core">
+            <content index="3" type="recipe">name:draconicevolution:draconic_core,size:1,meta:0,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="0" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">The lowest tier core. Used in simple crafting recipes</content>
+        </entry>
+    <entry branchId="draconicevolution:cores/wyvern" category="wiki.cat.item" icon="name:draconicevolution:wyvern_core,size:1,meta:0,nbt:{}" iconType="stack" name="Wyvern Core" sortingWeight="1">
+            <content index="3" type="recipe">name:draconicevolution:wyvern_core,size:1,meta:0,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">Tier 2 core.
+Used in more advanced recipes </content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:cores/awakened" category="wiki.cat.item" icon="name:draconicevolution:awakened_core,size:1,meta:0,nbt:{}" iconType="stack" name="Awakened Core" sortingWeight="2">
+            <content index="3" type="recipe">name:draconicevolution:awakened_core,size:1,meta:0,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">Tier 3 core.
+Used in higher tier crafting recipes such as those for draconic tools and weapons.</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:cores/chaotic" category="wiki.cat.item" icon="name:draconicevolution:chaotic_core,size:1,meta:0,nbt:{}" iconType="stack" name="Chaotic Core" sortingWeight="3">
+            <content index="5" type="recipe">draconicevolution:chaotic_core</content>
+            <content index="4" size="8" type="vSpacer"/>
+            <content index="3" type="textArea"/>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">Tier 4 core.
+</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:cores/wyvernEnergy" category="wiki.cat.item" icon="name:draconicevolution:wyvern_energy_core,size:1,meta:0,nbt:{}" iconType="stack" name="Wyvern Energy Core" sortingWeight="4">
+            <content index="3" type="recipe">name:draconicevolution:wyvern_energy_core,size:1,meta:0,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">A Crafting component in all wyvern items that use energy.</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:cores/draconicEnergy" category="wiki.cat.item" icon="name:draconicevolution:draconic_energy_core,size:1,meta:0,nbt:{}" iconType="stack" name="Draconic Energy Core" sortingWeight="5">
+            <content index="3" type="recipe">name:draconicevolution:draconic_energy_core,size:1,meta:0,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">A Crafting component in all Draconic items that use energy</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    </entry>
+    <entry branchId="draconicevolution:wyvernTools" icon="name:draconicevolution:wyvern_pick,size:1,meta:0,nbt:{Energy:4000000}" iconType="stack" name="Wyvern Tools" sortingWeight="50">
+        <content index="11" type="textArea">§6§nTool Configuration§r
+
+Tools can be configured via the Tool Config GUI. Click the link below for more details.
+The tool config GUI is what you use to configure most Draconic Evolution items.
+It can be accessed by pressing the keybinding, which is by default 'C'
+If this does not work, check that there are no conflicting keybindings.
+
+When you open the GUI you will see your inventory.
+All configurable items will be highlighted and everything else will be grayed out.
+Simply click an item to access its config.</content>
+        <content index="12" size="8" type="vSpacer"/>
+        
+        
+        
+        <content index="5" size="4" type="vSpacer"/>
+        <content alignment="CENTER" hoverColour="0000FF" index="6" link="draconicevolution:upgradeSystem" shadow="true" size="0" targetLocation="branch" type="link">§nLink: Fusion Upgrade System</content>
+        <content alignment="RIGHT" imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Tools/Wyvern%20Tools.jpg" index="13" scale="200" type="image"/>
+        <content index="7" size="12" type="vSpacer"/>
+        
+        
+        
+        <content index="2" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="3" type="textArea">The Wyvern tool set is the first step on the journey towards the ultimate tools!
+
+The wyvern tools have many advantages over vanilla tools.
+
+§6§n RF Powered §r
+
+§6§n Adjustable Mining Speed §r
+Not only are these tools faster than vanilla but it is also possible to adjust their speed.
+One of the biggest issues with fast tools is it can be really easy to destroy more blocks than intended which can be a big issue when, for example, working in sensitive areas of your base.
+This helps solve that issue.
+
+§6§n 5 Config Profiles §r
+Having to open a GUI and make changes every time you want adjust say the mining speed or AOE can be annoying.
+So each of these tools has 5 configurable profiles which you can easily switch between using a keybinding (Default is Backslash "\")
+These profiles can also be renamed for easier identification.
+
+§6§n Area of Effect Tools and Weapons §r
+All of the tools and weapons have AOE functions. The mining tools also have the option to enable an overlay that shows what blocks are covered by its AOE. 
+
+§6§n AOE Safe Mode §r
+This is a feature with all of the mining tools. When enabled the tool will check for any tile entities (e.g. machines) within its range.
+If it finds any it will not break any blocks and will instead give you a warning.
+This is a good way to avoid say.. accidentally wiping out your processing like when you get home from a mining trip. 
+
+§6§n Higher Attack Damage §r
+
+§6§n Tools and weapons can be upgraded! §r
+For information about tool upgrades click the link below!</content>
+        <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nWyvern Tools</content>
+        <content index="0" size="8" type="vSpacer"/>
+        <entry branchId="draconicevolution:wyvernTools/pick" category="wiki.cat.item" icon="name:draconicevolution:wyvern_pick,size:1,meta:0,nbt:{Energy:4000000}" iconType="stack" name="Wyvern Pickaxe">
+            <content index="3" type="recipe">name:draconicevolution:wyvern_pick,size:1,meta:0,nbt:{Energy:4000000,Profile_0:{digAOE:0,aoeSafeMode:0b,digSpeed:100,showDigAOE:0b}}</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§64 Million RF capacity upgradable to 32 Million.§r
+
+§61x1 base mining AOE. Upgradable to 5x5 §r</content>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Wyvern Pickaxe</content>
+        </entry>
+        <entry branchId="draconicevolution:wyvernTools/axe" category="wiki.cat.item" icon="name:draconicevolution:wyvern_axe,size:1,meta:0,nbt:{Energy:4000000}" iconType="stack" name="Wyvern Axe" sortingWeight="1">
+            <content index="4" type="recipe">name:draconicevolution:wyvern_axe,size:1,meta:0,nbt:{Energy:4000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§64 Million RF capacity upgradable to 32 Million.§r
+
+§61x1 base mining AOE. Upgradable to 5x5§r
+
+§6Tree Harvesting§r
+When enabled simply hold right click on the base of a tree and this axe will quickly block by block harvest the entire tree.
+This axe can harvest up to 512 blocks at a time.</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Wyvern Axe</content>
+        </entry>
+        <entry branchId="draconicevolution:wyvernTools/shovel" category="wiki.cat.item" icon="name:draconicevolution:wyvern_shovel,size:1,meta:0,nbt:{Energy:4000000}" iconType="stack" name="Wyvern Shovel" sortingWeight="2">
+            <content index="4" type="recipe">name:draconicevolution:wyvern_shovel,size:1,meta:0,nbt:{Energy:4000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§64 Million RF capacity upgradable to 32 Million.§r
+
+§61x1 base mining AOE. Upgradable to 5x5§r</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Wyvern Shovel</content>
+        </entry>
+        <entry branchId="draconicevolution:wyvernTools/sword" category="wiki.cat.item" icon="name:draconicevolution:wyvern_sword,size:1,meta:0,nbt:{Energy:4000000}" iconType="stack" name="Wyvern Sword" sortingWeight="3">
+            <content index="4" type="recipe">name:draconicevolution:wyvern_sword,size:1,meta:0,nbt:{Energy:4000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§64 Million RF capacity upgradable to 32 Million.§r
+
+§615 base Attack. Upgradable to 22.5§r
+
+§6Attack radius can be upgraded to 5x5§r
+Note the AOE attack only works when the sword is fully charged.
+(Referring to the new vanilla charging mechanic)</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Wyvern Sword</content>
+        </entry>
+        <entry branchId="draconicevolution:wyvernTools/bow" category="wiki.cat.item" icon="name:draconicevolution:wyvern_bow,size:1,meta:0,nbt:{Energy:4000000}" iconType="stack" name="Wyvern Bow" sortingWeight="4">
+            <content index="4" type="recipe">name:draconicevolution:wyvern_bow,size:1,meta:0,nbt:{Energy:4000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">The bows in Draconic Evolution are very powerful with many different configurable settings.
+
+§64 Million RF capacity upgradeable to 32 Million.§r
+
+§6Arrow damage: base 2, Upgradable to 6§r
+
+§6Arrow Velocity: base +100%, Upgradable to +300%§r
+
+§6Auto Fire Mode§r
+Will automatically fire when the bow is fully charged.
+
+§6Explosion Power§r
+Allows you to make your arrow explosive.
+Max power is equivalent to TNT
+
+§6Magnification§r
+Allows you to zoom in on the target to increase your accuracy
+
+§aInfo:§r
+Damage is calculated by multiplying arrow velocity with arrow damage with some randomness involved.
+
+The energy required per shot is calculated by multiplying damage, velocity, and explosion power.
+This means that just setting all 3 to maximum will require an enormous amount of power per shot.</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Wyvern Bow</content>
+        </entry>
+    <entry branchId="draconicevolution:wyvernTools/capacitor" category="wiki.cat.item" icon="draconicevolution:draconium_capacitor,1,0,{Energy:64000000}" iconType="stack" name="Wyvern FLux Capacitor" sortingWeight="5">
+            <content index="4" type="recipe">draconicevolution:draconium_capacitor,1,0,{Energy:64000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">Tired of your tools and armor running out of energy when you need them most, you have figured out how to create an item capable of storing an immense amount of energy and transferring it to your items as they need it.
+
+The wyvern flux capacitor has 4 operating modes and you can sneak-right click the capacitor to cycle between them
+
+§6Inactive
+Charge Armor
+Charge Armor + Held Item
+Charge Held Item§r
+
+This capacitor has a base capacity of 64 Million RF and can be upgraded to 128 Million</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nWyvern Flux Capacitor</content>
+        </entry>
+    </entry>
+    <entry branchId="draconicevolution:draconicTools" icon="draconicevolution:draconic_pick,1,0,{Energy:16000000}" iconType="stack" name="Draconic Tools" sortingWeight="51">
+        <content index="4" type="textArea">These are the top tier Draconic Evolution tools and weapons.
+
+These tools inherit all of the abilities of the Wyvern tools but with some significant upgrades.
+
+§6§nAdjustable Dig Depth.§r
+All of the mining tools have adjustable mining depth.
+Meaning you can for example mine a 5x5x5 cube.</content>
+        <content index="5" size="8" type="vSpacer"/>
+        <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Tools/Draconic%20Tools.jpg" index="6" scale="100" type="image"/>
+        
+        <content index="2" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="1" shadow="true" size="3" type="heading">§nDraconic Tools</content>
+        <content index="0" size="8" type="vSpacer"/>
+        <entry branchId="draconicevolution:draconicTools/pickaxe" category="wiki.cat.item" icon="name:draconicevolution:draconic_pick,size:1,meta:0,nbt:{Energy:16000000}" iconType="stack" name="Draconic Pickaxe">
+            <content index="4" type="recipe">name:draconicevolution:draconic_pick,size:1,meta:0,nbt:{Energy:16000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§616 Million RF capacity upgradable to 256 Million.§r
+
+§63x3 base mining AOE. Upgradable to 9x9§r
+
+§63 block dig depth. Upgradable to 9§r</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Draconic Pickaxe</content>
+        </entry>
+        <entry branchId="draconicevolution:draconicTools/axe" category="wiki.cat.item" icon="name:draconicevolution:draconic_axe,size:1,meta:0,nbt:{Energy:16000000}" iconType="stack" name="Draconic Axe" sortingWeight="1">
+            <content index="4" type="recipe">name:draconicevolution:draconic_axe,size:1,meta:0,nbt:{Energy:16000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§616 Million RF capacity upgradable to 256 Million.§r
+
+§63x3 base mining AOE. Upgradable to 9x9§r
+
+§63 block dig depth. Upgradable to 9§r
+
+§6Tree Harvesting§r
+When enabled simply hold right click on the base of a tree and this axe will quickly block by block harvest the entire tree.
+This axe can harvest up to 8192 blocks at a time. </content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Draconic Axe</content>
+        </entry>
+        <entry branchId="draconicevolution:draconicTools/shovel" category="wiki.cat.item" icon="name:draconicevolution:draconic_shovel,size:1,meta:0,nbt:{Energy:16000000}" iconType="stack" name="Draconic Shovel" sortingWeight="2">
+            <content index="4" type="recipe">name:draconicevolution:draconic_shovel,size:1,meta:0,nbt:{Energy:16000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§616 Million RF capacity upgradable to 256 Million.§r
+
+§63x3 base mining AOE. Upgradable to 9x9§r
+
+§63 block dig depth. Upgradable to 9§r</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Draconic Shovel</content>
+        </entry>
+        <entry branchId="draconicevolution:draconicTools/hoe" category="wiki.cat.item" icon="name:draconicevolution:draconic_hoe,size:1,meta:0,nbt:{Energy:16000000}" iconType="stack" name="Draconic Hoe" sortingWeight="3">
+            <content index="4" type="recipe">name:draconicevolution:draconic_hoe,size:1,meta:0,nbt:{Energy:16000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§616 Million RF capacity upgradable to 256 Million.§r
+
+§63x3 base mining AOE. Upgradable to 9x9§r
+
+§6Land Fill Mode§r
+When this mode is enabled it will try to automatically level out the terrain as it tills using dirt from your inventory.
+It will fill up to a 1 block deep depression and harvest up to 1 block above the tilling area.
+Any blocks harvested are placed in the player's inventory.</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Draconic Hoe</content>
+        </entry>
+        <entry branchId="draconicevolution:draconicTools/sword" category="wiki.cat.item" icon="name:draconicevolution:draconic_sword,size:1,meta:0,nbt:{Energy:16000000}" iconType="stack" name="Draconic Sword" sortingWeight="4">
+            <content index="4" type="recipe">name:draconicevolution:draconic_sword,size:1,meta:0,nbt:{Energy:16000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§b§nStats:
+
+§616 Million RF capacity upgradable to 256 Million.§r
+
+§63x3 base attack radius. Upgradable to 13x13§r
+Note the AOE attack only works when the sword is fully charged.
+(Referring to the new vanilla charging mechanic)
+
+§635 base Attack. Upgradable to 61.25§r</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Draconic Sword</content>
+        </entry>
+        <entry branchId="draconicevolution:draconicTools/bow" category="wiki.cat.item" icon="name:draconicevolution:draconic_bow,size:1,meta:0,nbt:{Energy:16000000}" iconType="stack" name="Draconic Bow" sortingWeight="5">
+            <content index="4" type="recipe">name:draconicevolution:draconic_bow,size:1,meta:0,nbt:{Energy:16000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">The bows in Draconic Evolution are very powerful with many different configurable settings.
+
+§64 Million RF capacity upgradeable to 32 Million.§r
+
+§6Arrow damage: base 3, Upgradable to 9§r
+
+§6Arrow Velocity: base +200%, Upgradable to +500%§r
+
+§6Auto Fire Mode§r
+Will automatically fire when the bow is fully charged.
+
+§6Explosion Power§r
+Allows you to make your arrow explosive.
+Max power is equivalent to TNT
+
+§6Arrow of Draconic Fire§r
+Switch to firing an arrow composed of pure Draconic energy!  
+This is essentially the same as infinity but also increases damage.
+And allows some other features.
+
+§6Shock Wave Power§r
+This creates a shockwave that deals damage similar to an explosion but more powerful and without damaging blocks.
+Only available with Arrow of Draconic Fire
+
+§6Magnification§r
+Allows you to zoom in on the target to increase your accuracy
+
+§aInfo:§r
+Damage is calculated by multiplying arrow velocity with arrow damage with some randomness involved.
+
+The energy required per shot is calculated by multiplying damage, velocity and explosion power.
+This means that just setting all 3 to maximum will require an enormous amount of power per shot.
+
+Shock Wave is only compatible with Arrow Of Draconic Fire.
+And explosive is not compatible with Arrow Of Draconic Fire</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Draconic Bow</content>
+        </entry>
+        <entry branchId="draconicevolution:draconicTools/staff" category="wiki.cat.item" icon="name:draconicevolution:draconic_staff_of_power,size:1,meta:0,nbt:{Energy:48000000}" iconType="stack" name="Draconic Staff Of Power" sortingWeight="6">
+            <content index="4" type="recipe">name:draconicevolution:draconic_staff_of_power,size:1,meta:0,nbt:{Energy:48000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">The staff of power is one of the mods powerful items in Draconic Evolution.
+It is both a mining tool and a powerful weapon with similar abilities to the Draconic Sword.
+But Stronger!
+
+§b§nStats:
+
+§648 Million RF capacity upgradeable to 768 Million.§r
+
+§65x5 base mining AOE. Upgradable to 11x11§r
+
+§65 block dig depth. Upgradable to 11§r
+
+§660 base Attack. Upgradable to 105§r
+It should be noted that because this is such a large heavy weapon the attack speed is fairly slow.
+
+§65x5 base attack radius. Upgradable to 17x17§r
+Note the AOE attack only works when the sword is fully charged.
+(Referring to the new vanilla charging mechanic)</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">Draconic Staff Of Power</content>
+        </entry>
+    <entry branchId="draconicevolution:draconicTools/capacitor" category="wiki.cat.item" icon="draconicevolution:draconium_capacitor,1,1,{Energy:256000000}" iconType="stack" name="Draconic Flux Capacitor" sortingWeight="7">
+            <content alignment="CENTER" hoverColour="0000FF" index="4" link="draconicevolution:wyvernTools/capacitor" shadow="true" size="0" targetLocation="branch" type="link">§nClick to the left or right of this text to edit.</content>
+            <content index="5" size="8" type="vSpacer"/>
+            <content index="6" type="recipe">draconicevolution:draconium_capacitor,1,1,{Energy:256000000}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">This capacitor is similar to the wyvern flux capacitor except it has a base capacity of 256 Million RF and can be upgraded to 640 Million.</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDraconic Flux Capacitor</content>
+        </entry>
+    </entry>
+    <entry branchId="draconicevolution:fusionCrafting" category="wiki.cat.block" icon="name:draconicevolution:fusion_crafting_core,size:1,meta:0,nbt:{}" iconType="stack" name="Fusion Crafting" sortingWeight="100">
+        <content index="12" size="8" type="vSpacer"/>
+        <content index="11" type="textArea">§6§nComparator Output§r
+Attaching a comparator to the core itself allows you to check the state of the crafter using redstone. The current state is indicated by the output signal.
+
+§30§r - §6No Recipe and output slot empty.
+§31§r - §6Valid recipe.                          
+§31 &gt; 15§r - §6Crafting in progress.        
+§315§r - §6Craftign complete/Item in output.
+</content>
+        <content index="10" size="8" type="vSpacer"/>
+        <content index="9" type="recipe">name:draconicevolution:fusion_crafting_core,size:1,meta:0,nbt:{}</content>
+        <content index="8" size="8" type="vSpacer"/>
+        <content alignment="CENTER" hoverColour="0000FF" index="7" link="draconicevolution:fusionCrafting/setup" shadow="true" size="0" targetLocation="branch" type="link">§l§nClick here to see setup guide</content>
+        <content index="6" size="8" type="vSpacer"/>
+        <content index="5" type="textArea">Fusion crafting is a process that uses large amounts of energy to combine of "fuse" items together at an atomic level.
+
+How It Works:
+
+§6§n Recipes §r
+
+Each Recipe requires 3 things
+
+A Catalyst
+Fusion Ingredients
+And power
+
+The catalyst is placed in the core and each ingredient is placed in a separate Fusion Crafting Injector. If the recipe is valid you will see the output displayed in the core's GUI as well as an option to start crafting.
+
+Different recipes also require different tiers crafter tiers. There are currently 4 different Fusion Crafting Tiers. Basic, Wyvern, Draconic, and Chaotic.
+The tier of your setup is determined by its crafting injectors.
+
+§6§n Crafting §r
+§o(Just sit back and enjoy the show!)§r
+There are 2 different crafting stages Charging and Crafting
+
+During the charging stage, all active injectors need power to charge. Once charging is complete the crafting process starts.
+The crafting stage will run for a few seconds after which the result of the crafting will be deposited in the output slot of the core.</content>
+        <content index="4" size="8" type="vSpacer"/>
+        <content index="0" size="8" type="vSpacer"/>
+        <content index="2" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nFusion Crafting</content>
+        <content alignment="CENTER" imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Fusion%20Crafting/Fusion%20Crafting.jpg" index="3" scale="100" type="image"/>
+        <entry branchId="draconicevolution:fusionCrafting/basicInjector" category="wiki.cat.block" icon="name:draconicevolution:crafting_pedestal,size:1,meta:0,nbt:{}" iconType="stack" name="Basic Fusion Crafting Injector">
+            <content index="3" type="recipe">name:draconicevolution:crafting_pedestal,size:1,meta:0,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="0" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">This is the lowest tier Crafting Injector. Used for simple fusion recipes.</content>
+        </entry>
+    <entry branchId="draconicevolution:fusionCrafting/wyvernInjector" category="wiki.cat.block" icon="name:draconicevolution:crafting_pedestal,size:1,meta:1,nbt:{}" iconType="stack" name="Wyvern Fusion Crafting Injector" sortingWeight="1">
+            <content index="3" type="recipe">name:draconicevolution:crafting_pedestal,size:1,meta:1,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">The tier 2 (Wyvern) injector is used for more advance recipes such as Wyvern Tools and Armor  </content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:fusionCrafting/draconicInjector" category="wiki.cat.block" icon="name:draconicevolution:crafting_pedestal,size:1,meta:2,nbt:{}" iconType="stack" name="Draconic Fusion Crafting Injector" sortingWeight="2">
+            <content index="3" type="recipe">name:draconicevolution:crafting_pedestal,size:1,meta:2,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">Tier 3 (Draconic) Fusion injector is used for most of the more expensive recipes such as Draconic Tools and Armor.</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:fusionCrafting/chaotic Injector" category="wiki.cat.block" icon="name:draconicevolution:crafting_pedestal,size:1,meta:3,nbt:{}" iconType="stack" name="Chaotic Fusion Crafting Injector" sortingWeight="3">
+            <content index="3" type="recipe">name:draconicevolution:crafting_pedestal,size:1,meta:3,nbt:{}</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="1" type="textArea">Not currently required by any recipes.
+Perhaps a hint of things to come...</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:fusionCrafting/setup" iconType="off" name="Fusion Crafting Setup" sortingWeight="4">
+            <content index="10" size="8" type="vSpacer"/>
+            <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Fusion%20Crafting/Fusion%20Crafting.jpg" index="9" scale="100" type="image"/>
+            <content index="8" size="8" type="vSpacer"/>
+            <content index="7" type="textArea">So as you can see from that injectors can be placed up to 16 blocks away and as long as they are within the area shown and pointing at the core with no obstructions they will work.
+
+Something to note about fusion crafting is that it does not matter how many injectors you have as long as you have enough for your recipe.
+You can also mix and match injector tiers. Meaning if you have a mix of Basic and Wyvern injectors you can still do Wyvern crafting as long as you only use the Wyvern injectors for those recipes.
+
+The last thing you will need to do is supply power to the crafting injectors.
+The amount of power required will depend on the current recipe but all Injectors used by a recipe require power.</content>
+            <content index="6" size="8" type="vSpacer"/>
+            <content index="4" size="8" type="vSpacer"/>
+            <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Fusion%20Crafting/Fusion%20Layout.jpg" index="5" scale="100" type="image"/>
+            <content index="3" type="textArea">The setup process is actually fairly simple.
+Just place a fusion crafting core. Then place fusion crafting injectors anywhere you like to the north, south, east, west, above or below the core.
+All injectors need to be at least 1 block away from the core and can be offset in any direction on their axis by 1 block.
+
+That may sound a little confusing so take a look at the image below.
+Each glass block represents a valid location for an injector.</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="1" shadow="true" size="1" type="heading">§nGetting started with fusion crafting</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    </entry>
+    <entry branchId="draconicevolution:energyCore" icon="name:draconicevolution:energy_storage_core,size:1,meta:0,nbt:{}" iconType="stack" name="Energy Storage Core" sortingWeight="150">
+        <content index="15" size="8" type="vSpacer"/>
+        <content alignment="CENTER" hoverColour="0000FF" index="14" link="draconicevolution:energyCore/setup" shadow="true" size="0" targetLocation="branch" type="link">§nClick here for the setup guide</content>
+        <content index="13" size="8" type="vSpacer"/>
+        <content index="12" type="recipe">name:draconicevolution:energy_storage_core,size:1,meta:0,nbt:{}</content>
+        <content index="11" size="8" type="vSpacer"/>
+        <content alignment="LEFT" hoverColour="0000FF" index="10" link="https://en.wikipedia.org/wiki/9223372036854775807" shadow="true" size="0" targetLocation="web" type="link">§nLink to a big number</content>
+        <content alignment="LEFT" index="9" type="splitContainer" vAlignment="MIDDLE" width="32">
+            <content alignment="LEFT" index="0" splitSide="RIGHT" type="textArea">§6§lTier 1:§r §b45.5 Million RF
+§6§lTier 2:§r §b273 Million RF
+§6§lTier 3:§r §b1.64 Billion RF
+§6§lTier 4:§r §b9.88 Billion RF
+§6§lTier 5:§r §b59.3 Billion RF
+§6§lTier 6:§r §b356 Billion RF
+§6§lTier 7:§r §b2.14 Trillion RF
+§6§lTier 8:§r §b...§r
+
+Ok so about the tier 8... I'm not going to lie to you and tell you that its "Infinite" But its as close as you're going to get. 
+
+Unless someone makes a mod that has, even more, storage but considering that the amount of storage this thing has is already just stupid well... 
+I would have to question that person's sanity... Almost as much as I question my own.
+
+As for Tier 8's capacity. If you want an exact number click the link below.</content>
+        </content>
+        <content index="8" size="8" type="vSpacer"/>
+        <content index="7" type="textArea">If you like energy storage your going to love this!
+If you don't... You should probably just stop reading here...
+
+I give you the Draconic Energy core. Currently the largest energy storage device in modded Minecraft.
+
+Alright so let's skip to the point: How much does it hold?
+Well, there are 8 Tiers and each holds substantially more than the last.
+</content>
+        <content index="6" size="8" type="vSpacer"/>
+        <content index="2" size="4" type="vSpacer"/>
+        <content alignment="CENTER" index="3" shadow="true" size="0" type="heading">The ultimate energy storage device.</content>
+        <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/Energy%20Core%20T8.jpg" index="5" scale="100" type="image"/>
+        <content index="4" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="1" shadow="true" size="1" type="heading">§nDraconic Energy Core</content>
+        <content index="0" size="8" type="vSpacer"/>
+        
+    <entry branchId="draconicevolution:energyCore/setup" iconType="off" name="Energy Core Setup" sortingWeight="0">
+            <content index="15" size="8" type="vSpacer"/>
+            <content alignment="CENTER" hoverColour="0000FF" index="14" link="draconicevolution:energyCore/pylon" shadow="true" size="0" targetLocation="branch" type="link">§nThen Energy Pylons. Click here to skip ahead.</content>
+            <content index="13" size="8" type="vSpacer"/>
+            <content alignment="CENTER" hoverColour="0000FF" index="12" link="draconicevolution:energyCore/stabilizer" shadow="true" size="0" targetLocation="branch" type="link">§nNext Stabilizers. Click here to continue.</content>
+            <content index="11" size="8" type="vSpacer"/>
+            <content index="10" type="splitContainer" vAlignment="MIDDLE">
+                <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/Built%20Guide.jpg" index="0" scale="100" splitSide="LEFT" type="image"/>
+                <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading"> Build Guide</content>
+            </content>
+            <content index="8" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="7" type="splitContainer" vAlignment="TOP" width="30">
+                <content alignment="LEFT" index="0" splitSide="RIGHT" type="textArea">Tier 2:
+1x Energy Core
+4x Energy Core Stabilizer
+6x Draconium Block
+
+Tier 4:
+1x Energy Core
+4x Energy Core Stabilizer
+54x Draconium Block
+26x Redstone Block
+
+Tier 6:
+1x Energy Core
+36x Energy Core Stabilizer
+150x Draconium Block
+178x Redstone Block
+
+Tier 8:
+Ok... So remember when I said this core is stupidly powerful?
+Well, it has a price tag to match...
+1x Energy Core
+36x Energy Core Stabilizer
+786x Draconium Block
+378x Awakened Draconium Block</content>
+            <content alignment="LEFT" index="0" splitSide="LEFT" type="textArea">Tier 1:
+1x Energy Core
+4x Energy Core Stabilizer
+
+Tier 3:
+1x Energy Core
+4x Energy Core Stabilizer
+26x Draconium Block
+
+Tier 5:
+1x Energy Core
+36x Energy Core Stabilizer
+90x Draconium Block
+80x Redstone Block
+
+Tier 7:
+1x Energy Core
+36x Energy Core Stabilizer
+210x Draconium Block
+328x Redstone Block</content>
+            </content>
+            
+            
+            <content index="6" size="8" type="vSpacer"/>
+            <content index="4" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="3" shadow="true" size="1" type="heading">The Core</content>
+            <content alignment="CENTER" index="5" type="textArea">Okay so remember the good old days of 1.7 when this was as simple as reading the tablet,
+watching some tutorials, placing a ton of blocks then breaking a ton of blocks to find what you did wrong, then placing the blocks again and shift-clicking a stabilizer?
+
+Well, now it's not so simple... In fact, it's even simpler! (With some exceptions)
+The first thing you need to do is place an energy core block at the center of the area you want the core
+
+Next, right-click the core to open its GUI and set the tier.
+If you're building a tier 1 core you can skip ahead to the section on stabilizers.
+Otherwise, continue reading.
+
+Now that you have selected a tier you will need to build a structure around the core from Redstone and Draconium blocks.
+
+To help you get it right there is a "Build Guide" button in the energy core GUI. This activates a holographic projection of the blocks that need to be placed.
+Now just use the build guide to build the core.
+
+The following is a list of ingredients required for each tier.
+</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="0" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nEnergy Core Setup Guide</content>
+        </entry>
+    <entry branchId="draconicevolution:energyCore/pylon" category="wiki.cat.block" icon="name:draconicevolution:energy_pylon,size:1,meta:0,nbt:{}" iconType="stack" name="Energy Pylon" sortingWeight="2">
+            <content index="9" type="recipe">name:draconicevolution:energy_pylon,size:1,meta:0,nbt:{}</content>
+            <content index="8" size="8" type="vSpacer"/>
+            <content index="7" type="textArea">The max energy though put of a pylon is 2,147,483,647RF/t per side</content>
+            <content index="6" size="8" type="vSpacer"/>
+            <content index="5" type="splitContainer" vAlignment="TOP">
+                <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/EP%20Structure.jpg" index="0" scale="40" splitSide="LEFT" type="image"/>
+                <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/EP%20Active.jpg" index="0" scale="38" splitSide="RIGHT" type="image"/>
+            </content>
+            <content index="4" size="8" type="vSpacer"/>
+            <content index="3" type="textArea">Energy Pylons are used to insert and extract energy from a core.
+
+To set one up simply place one within 16 blocks of a core and place a block of glass either above or below it depending on its Y position relative to the core.
+If the pylon is above the center of the core the glass needs to be on the bottom. Else if the pylon is below the center of the core the glass needs to be on the top.
+
+To check that the pylon is connected to the core, simply shift-right-click the pylon block. It will create a line of particles that indicates which core it is connected to.
+
+If there is more than 1 core nearby this will make the pylon cycle between the cores in range.
+
+To toggle the pylon between input and output mode simply right click the sphere.</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="1" shadow="true" size="1" type="heading">Energy Pylons</content>
+            <content alignment="LEFT" hoverColour="0000FF" index="0" link="draconicevolution:energyCore/stabilizer" shadow="true" size="0" targetLocation="branch" type="link">§nBack To Stabilizers</content>
+        </entry>
+    <entry branchId="draconicevolution:energyCore/stabilizer" category="wiki.cat.block" icon="name:draconicevolution:particle_generator,size:1,meta:2,nbt:{}" iconType="stack" name="Energy Core Stabilizer" sortingWeight="1">
+            <content index="13" type="recipe">name:draconicevolution:particle_generator,size:1,meta:2,nbt:{}</content>
+            <content index="9" type="splitContainer" vAlignment="TOP">
+                <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/Energy%20Core%20T4.jpg" index="0" scale="100" splitSide="LEFT" type="image"/>
+                <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/Energy%20Core%20T5%202.jpg" index="0" scale="20" splitSide="RIGHT" type="image"/>
+            </content>
+            <content index="12" size="8" type="vSpacer"/>
+            <content alignment="CENTER" hoverColour="0000FF" index="11" link="draconicevolution:energyCore/pylon" shadow="true" size="0" targetLocation="branch" type="link">§nNext Energy Pylons. Click here to continue.</content>
+            <content index="10" size="8" type="vSpacer"/>
+            <content alignment="LEFT" hoverColour="0000FF" index="1" link="draconicevolution:energyCore/setup" shadow="true" size="0" targetLocation="branch" type="link">§nBack to Core Setup Guide</content>
+            <content index="8" type="textArea">Once you have at least 1 stabilizer setup correctly you can right click it to once again open the energy core GUI. At this point you will want to turn off the build guide
+
+You can now also see the status of the core. If you have built the structure correctly the core status should say "Valid".
+Once you have also completed the stabilizers you should be able to activate the core.
+
+Note that the stabilizers can be placed either on the horizontal or vertical plane.
+</content>
+            <content index="7" size="8" type="vSpacer"/>
+            <content index="6" type="splitContainer" vAlignment="TOP">
+                <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/Advanced%20Stabilizer%201.jpg" index="0" scale="30" splitSide="LEFT" type="image"/>
+                <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Energy%20Core/Advanced%20Stabilizer%202.jpg" index="0" scale="28" splitSide="RIGHT" type="image"/>
+            </content>
+            <content index="5" size="8" type="vSpacer"/>
+            <content index="4" type="textArea">Stabilizers are an essential part of the core. They well... stabilize it...
+If you're building a tier 1-4 core this is as simple as placing 4 stabilizers around the core within 16 blocks.
+However, if you're building a higher tier core you will need advanced stabilizers.
+
+These are simply 9 regular stabilizers in the configuration shown below</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="2" shadow="true" size="1" type="heading">Stabilizers</content>
+        </entry>
+    </entry>
+    <entry branchId="draconicevolution:awakenedDraconium" category="wiki.cat.item" icon="name:draconicevolution:draconic_ingot,size:1,meta:0,nbt:{}" iconType="stack" name="Awakened Draconium" sortingWeight="11">
+        <content index="5" type="splitContainer" vAlignment="TOP">
+            <content index="0" splitSide="LEFT" type="recipe">name:draconicevolution:draconic_ingot,size:1,meta:0,nbt:{}</content>
+            <content index="0" splitSide="RIGHT" type="recipe">name:draconicevolution:draconic_block,size:1,meta:0,nbt:{}</content>
+        </content>
+        <content index="4" size="8" type="vSpacer"/>
+        <content index="3" type="textArea">Awakened Draconium is what comes next after regular draconium.
+It is the base crafting ingredient for all Draconic Tier tools and machines</content>
+        <content index="2" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nAwakened Draconium</content>
+        <content index="0" size="8" type="vSpacer"/>
+    <entry branchId="draconicevolution:awakenedDraconium/heart" category="wiki.cat.item" icon="name:draconicevolution:dragon_heart,size:1,meta:0,nbt:{}" iconType="stack" name="Dragon Heart">
+            <content index="4" size="8" type="vSpacer"/>
+            <content index="3" renderSlot="false" scale="300" tooltip="false" type="stack">name:draconicevolution:dragon_heart,size:1,meta:0,nbt:{}</content>
+            <content index="5" type="textArea">Dropped by the Ender Dragon and Chaos Guardian on death.
+This powerful item is used to craft Awakened Draconium. </content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="0" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nThe Dragon Heart</content>
+        </entry>
+    <entry branchId="draconicevolution:awakenedDraconium/nugget" category="wiki.cat.item" icon="name:draconicevolution:nugget,size:1,meta:1,nbt:{}" iconType="stack" name="Awakened Draconium Nugget">
+            <content index="0" type="recipe">name:draconicevolution:nugget,size:1,meta:1,nbt:{}</content>
+        </entry>
+    </entry>
+    <entry branchId="draconicevolution:upgradeSystem" category="wiki.cat.item" icon="name:draconicevolution:tool_upgrade,size:1,meta:0,nbt:{}" iconType="stack" name="Upgrade System" sortingWeight="160">
+        <content index="21" size="8" type="vSpacer"/>
+        <content alignment="CENTER" hoverColour="0000FF" index="20" link="draconicevolution:fusionCrafting" shadow="true" size="0" targetLocation="branch" type="link">§nClick here to learn about fusion crafting!</content>
+        <content index="19" size="8" type="vSpacer"/>
+        <content index="18" type="textArea">Note these upgrades are only applicable to Draconic Evolution items or other mods items if they support the upgrade API.</content>
+        <content index="17" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="16" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases jump power when applied to boots.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:11,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="15" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases movement speed when applied to boots.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:10,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="14" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Reduces armor shield recovery time.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:9,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="13" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases armor shield capacity.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:8,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="12" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the arrow speed of bows.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:7,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="11" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the draw speed of bows.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:6,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="10" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the max arrow damage of bows.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:5,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="9" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the attack AOE (Area of effect) of weapons.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:4,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="8" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the attack damage of weapons.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:3,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="7" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the AOE (Area Of Effect) of tools.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:2,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="6" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the dig speed of tools it's applied to.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:1,nbt:{}</content>
+        </content>
+        <content alignment="CENTER" index="5" type="splitContainer" vAlignment="MIDDLE" width="100">
+            <content alignment="LEFT" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">Increases the RF capacity of items it's applied to.</content>
+            <content alignment="RIGHT" index="0" splitSide="LEFT" type="recipe">name:draconicevolution:tool_upgrade,size:1,meta:0,nbt:{}</content>
+        </content>
+        
+
+        <content index="4" size="8" type="vSpacer"/>
+        <content index="3" type="textArea">Using the fusion crafting system it is possible to upgrade your tools and weapons.
+To do this you will need an upgrade key for the upgrade you want 
+and the required ingredients for the upgrade level you want to apply.
+
+Most upgrades have 4 tiers. Basic, Wyvern, Draconic, and Chaotic (Note: chaotic cannot yet be applied to any items)
+You must have the previous tier applied before you can apply a higher tier upgrade.
+
+Each upgrade tier requires different ingredients and its respective tier fusion crafter.
+To find the ingredients required for an upgrade key, simply hover over the key in your inventory and hold shift.
+You will see a list of all ingredients required. It will cycle through the tiers every 5 seconds.
+To pause the display, simply hold CTRL as well. Try it on some of the keys below. </content>
+
+        <content index="2" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nFusion Upgrades</content>
+        <content index="0" size="8" type="vSpacer"/>
+    </entry>
+<entry branchId="draconicevolution:wyvernArmor" category="wiki.cat.item" icon="draconicevolution:wyvern_chest,1,0,{Energy:4000000}" iconType="stack" name="Wyvern Armor" sortingWeight="60">
+        <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Armor/Wyvern%20Armor.jpg" index="7" scale="30" type="image"/>
+        <content index="6" size="8" type="vSpacer"/>
+        <content alignment="CENTER" hoverColour="0000FF" index="5" link="draconicevolution:deEnergyShield" shadow="true" size="0" targetLocation="branch" type="link">§nDraconic Energy Shield</content>
+        <content index="4" size="8" type="vSpacer"/>
+        <content index="3" type="textArea">Wyvern armor is your first step on the journey towards the ultimate armor set!
+
+At first glance, the armor in Draconic Evolution may seem to have fairly underwhelming stats.
+But the actual armor effect of this armor is NOT its primary line of defense.
+All armor in DE comes with a powerful shield that is capable of absorbing massive amounts of damage.
+You can read about on the page linked below.
+Some pieces of the armor also provide some buffs which can, of course, be configured via the DE config GUI.
+
+Wearing full wyvern armor gives 100% fire resistance.  </content>
+        <content index="2" size="8" type="vSpacer"/>
+        <content index="0" size="8" type="vSpacer"/>
+        <content alignment="CENTER" index="1" shadow="true" size="2" type="heading">§nWyvern Armor</content>
+    <entry branchId="draconicevolution:wyvernArmor/wyvernHelmet" category="wiki.cat.item" icon="draconicevolution:wyvern_helm,1,0,{Energy:3945909,ShieldEntropy:0.0f,ProtectionPoints:38.4f}" iconType="stack" name="Wyvern Helmet">
+            <content index="3" type="textArea">§bStats:
+
+§6+20 Base Shield Capacity
++2 Armor Toughness
++3 Armor
+</content>
+            <content index="5" type="recipe">draconicevolution:wyvern_helm,1,0,{Energy:3945909,ShieldEntropy:0.0f,ProtectionPoints:38.4f}</content>
+            <content index="4" size="8" type="vSpacer"/>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nWyvern Helmet</content>
+        </entry>
+    <entry branchId="draconicevolution:wyvernArmor/wyvernChestplate" category="wiki.cat.item" icon="draconicevolution:wyvern_chest,1,0,{Energy:3933971,ShieldEntropy:0.0f,ProtectionPoints:102.4f}" iconType="stack" name="Wyvern Chestplate">
+            <content index="4" type="recipe">draconicevolution:wyvern_chest,1,0,{Energy:3933971,ShieldEntropy:0.0f,ProtectionPoints:102.4f}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">§bStats:
+
+§6+80 Base Shield Capacity
++2 Armor Toughness
++8 Armor</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nWyvern Chestplate</content>
+        </entry>
+    <entry branchId="draconicevolution:wyvernArmor/wyvernLeggings" category="wiki.cat.item" icon="draconicevolution:wyvern_legs,1,0,{Energy:3932111,ShieldEntropy:0.0f,ProtectionPoints:76.8f,Profile_0:{sprintBoost:0b,armorSpeedModifier:0}}" iconType="stack" name="Wyvern Leggings">
+            <content index="4" type="recipe">draconicevolution:wyvern_legs,1,0,{Energy:3932111,ShieldEntropy:0.0f,ProtectionPoints:76.8f,Profile_0:{sprintBoost:0b,armorSpeedModifier:0}}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">§bStats:
+
+§6+80 Base Shield Capacity
++2 Armor Toughness
++6 Armor
+Movement Speed boost</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nWyvern Leggings</content>
+        </entry>
+    <entry branchId="draconicevolution:wyvernArmor/wyvernBoots" category="wiki.cat.item" icon="draconicevolution:wyvern_boots,1,0,{Energy:3932111,ShieldEntropy:0.0f,ProtectionPoints:38.4f,Profile_0:{sprintBoost:0b,armorJumpModifier:0}}" iconType="stack" name="Wyvern Boots">
+            <content index="4" type="recipe">draconicevolution:wyvern_boots,1,0,{Energy:3932111,ShieldEntropy:0.0f,ProtectionPoints:38.4f,Profile_0:{sprintBoost:0b,armorJumpModifier:0}}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">§bStats:
+
+§6+20 Base Shield Capacity
++2 Armor Toughness
++3 Armor
+Reduced fall damage
+Jump Height boost</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nWyvern Boots</content>
+        </entry>
+    </entry>
+<entry branchId="draconicevolution:draconicArmor" category="wiki.cat.item" icon="draconicevolution:draconic_chest,1,0,{Energy:16000000}" iconType="stack" name="Draconic Armor" sortingWeight="61">
+        <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Armor/Draconic%20Armor.jpg" index="4" scale="40" type="image"/>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">Draconic Armor is the ultimate armor!
+This armor has all the same abilities as the wyvern armor but upgraded as well as a few new abilities!</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDraconic Armor</content>
+        <entry branchId="draconicevolution:draconicArmor/draconicHelmet" category="wiki.cat.item" icon="draconicevolution:draconic_helm,1,0,{Energy:15793200,ShieldEntropy:0.0f,ProtectionPoints:76.8f,Profile_0:{armorNVLock:0b,armorNV:0b}}" iconType="stack" name="Draconic Helmet">
+            <content alignment="LEFT" index="2" type="textArea">§bStats:
+
+§6Night Vision  §a(Configurable)
+§6Cures negative potion effects
+Bypass suffocation and drowning damage
+Removes mining slowdown underwater (Aqua Affinity)
++60 Base Shield Capacity
++3 Armor Toughness
++3 Armor
+
+</content>
+            <content index="4" type="recipe">draconicevolution:draconic_helm,1,0,{Energy:15793200,ShieldEntropy:0.0f,ProtectionPoints:76.8f,Profile_0:{armorNVLock:0b,armorNV:0b}}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="0" shadow="true" size="0" type="heading">Click To Edit</content>
+        </entry>
+    <entry branchId="draconicevolution:draconicArmor/draconicChestplate" category="wiki.cat.item" icon="draconicevolution:draconic_chest,1,0,{Energy:15798257,ShieldEntropy:0.0f,ProtectionPoints:204.8f,Profile_0:{sprintBoost:0b,armorInertiaCancel:0b,armorFSpeedModifier:0,armorVFSpeedModifier:0}}" iconType="stack" name="Draconic Chestplate">
+            <content index="4" type="recipe">draconicevolution:draconic_chest,1,0,{Energy:15798257,ShieldEntropy:0.0f,ProtectionPoints:204.8f,Profile_0:{sprintBoost:0b,armorInertiaCancel:0b,armorFSpeedModifier:0,armorVFSpeedModifier:0}}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§bStats:
+
+§6Flight §a(Configurable)
+§6Removes mining slowdown while in the air
+Fire immunity
++200 Base Shield Capacity
++3 Armor Toughness
++8 Armor</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="0" shadow="true" size="0" type="heading">Click To Edit</content>
+        </entry>
+    <entry branchId="draconicevolution:draconicArmor/draconicLeggings" category="wiki.cat.item" icon="draconicevolution:draconic_legs,1,0,{Energy:15798257,ShieldEntropy:0.0f,ProtectionPoints:153.6f,Profile_0:{sprintBoost:0b,armorSpeedModifier:0}}" iconType="stack" name="Draconic Leggings">
+            <content index="4" type="recipe">draconicevolution:draconic_legs,1,0,{Energy:15798257,ShieldEntropy:0.0f,ProtectionPoints:153.6f,Profile_0:{sprintBoost:0b,armorSpeedModifier:0}}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§bStats:
+
+§6Speed Boost §a(Configurable)
+§6+180 Base Shield Capacity
++3 Armor Toughness
++6 Armor</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="0" shadow="true" size="0" type="heading">Click To Edit</content>
+        </entry>
+    <entry branchId="draconicevolution:draconicArmor/draconicBoots" category="wiki.cat.item" icon="draconicevolution:draconic_boots,1,0,{Energy:15811507,ShieldEntropy:0.0f,ProtectionPoints:76.8f,Profile_0:{sprintBoost:0b,armorJumpModifier:0,armorHillStep:1b}}" iconType="stack" name="Draconic Boots">
+            <content index="4" type="recipe">draconicevolution:draconic_boots,1,0,{Energy:15811507,ShieldEntropy:0.0f,ProtectionPoints:76.8f,Profile_0:{sprintBoost:0b,armorJumpModifier:0,armorHillStep:1b}}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="2" type="textArea">§bStats:
+
+§6Fall protection
+§6Jump boost §a(Configurable)
+§6Uphill Step Assist §a(Configurable)
+§6+60 Base Shield Capacity
++3 Armor Toughness
++3 Armor</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="CENTER" index="0" shadow="true" size="0" type="heading">Click To Edit</content>
+        </entry>
+    </entry>
+<entry branchId="draconicevolution:deEnergyShield" iconType="off" name="Draconic Energy Shield" sortingWeight="62">
+        <content alignment="LEFT" index="4" type="splitContainer" vAlignment="TOP" width="120">
+            <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Armor/Armor%20Hud.png" index="0" scale="100" splitSide="RIGHT" type="image"/>
+            <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/Armor/Draconic%20Shield.jpg" index="0" scale="30" splitSide="LEFT" type="image"/>
+        </content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="1" size="8" type="vSpacer"/>
+        <content index="2" type="textArea"> Both Wyvern and Draconic armor have a shield that is capable of absorbing damage.
+ 
+Wearing any piece of Draconic or Wyvern armor will give you this shield, but the more pieces you have the more damage the shield will be able to absorb. Draconic armor pieces give more absorption than Wyvern.
+
+ When your shield is active you will see its stats in a HUD that will, by default, be displayed to the left of your hot-bar (This can be configured in the HUD config screen which is accessed via the tool config GUI)
+
+ The HUD shows three stats. Shield points (Large Red-Green bar), Entropy (Small Green bar), and the total remaining RF stored in your armor (Small Blue bar). The Numerical values for these stats will also be shown if enabled in the HUD config.
+
+ The Shield Points or Capacity is the number of damage points (Half a heart) the armor can absorb. This will drop when you take damage. As long as any piece of armor has power, your shield points will regenerate at the cost of RF. The base regeneration rate is the equivalent of the entire capacity every 3 seconds.
+
+ Entropy ranges from 0 to 100%. It will increase each time you receive damage and will slowly decrease when you are not taking damage. Entropy reduces the rate at which your shield points regenerate. If your entropy reaches 100% your shield will not regenerate at all.
+
+ The shield can be upgraded using Upgrade Modifiers. Upgrading Shield Capacity will increase your shield points and upgrading Shield Recovery will increase the rate at which Entropy recovers. Note that the recovery rate is calculated by averaging the Recovery Points of all equipped armor pieces.
+
+ The shield also has a last standability. It is capable of blocking any fatal blow at the cost of 10 million RF. If you have less then 10MRF total stored in your armor this ability will not work at all and you will die.
+ </content>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDraconic Energy Shield</content>
+    </entry>
+<entry branchId="draconicevolution:disenchanter" category="wiki.cat.block" icon="draconicevolution:diss_enchanter" iconType="stack" name="Disenchanter" sortingWeight="170">
+        <content index="4" type="recipe">draconicevolution:diss_enchanter</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">With this device you are able to transfer enchantments (one at a time) from your items to books at the cost of experience.
+
+The cost is determined by the level of each enchantment relative to the enchantment's max level. Removing an enchantment from an item also has the secondary effect of reducing the item's repair cost making it possible to re-enchant the same item as many times as you like.
+
+To use it simply place the enchanted item in the first slot, place a regular book in the center slot and press the transfer button. The first enchantment will be stripped from the item and applied to the book.</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDisenchanter</content>
+    </entry>
+<entry branchId="draconicevolution:dislocation" icon="draconicevolution:dislocator" iconType="stack" name="Dislocation" sortingWeight="180">
+        <content index="2" type="textArea">Draconic Evolution has a number of items designed to assist with your teleportation needs!
+
+</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDislocation</content>
+        <entry branchId="draconicevolution:dislocation/dislocator" category="wiki.cat.item" icon="draconicevolution:dislocator" iconType="stack" name="Dislocator">
+            <content index="4" type="recipe">draconicevolution:dislocator</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">You have managed to infuse the powers of The End with your knowledge of the Draconic to create a basic teleporter, but at a cost.
+
+The energies binding them are unstable and only last for 10 uses, and will take some of your life energy with each use 
+
+It can only be linked to a single location but works across dimensions. Once used up, you must create a new one.</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDislocator</content>
+        </entry>
+    <entry branchId="draconicevolution:dislocation/advancedDislocator" category="wiki.cat.item" icon="draconicevolution:dislocator_advanced,1,0,{}" iconType="stack" name="Advanced Dislocator">
+            <content index="4" type="recipe">draconicevolution:dislocator_advanced,1,0,{}</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">Learning how draconic powers interact with the powers of the endermen, you have created the ultimate teleporter.
+
+You can now store up to 100 locations and use the endermen’s own pearls as fuel.
+
+This device can teleport you extreme distances - even across dimensions - at will.
+
+Shift + right click to open the GUI. Most functionality should be self-explanatory.
+
+On the left is the destination list. Each destination has a lock button that prevents you from accidentally overwriting or deleting it.
+
+Right-clicking a destination in the list will teleport you to it without actually selecting the destination.
+
+On the right, starting from the top, you have information about the selected destination, an option to rename the selected destination, an option to change the selected destination to your current coordinates and an option to delete the selected destination.
+
+Under that is the fuel, an option to teleport to the selected destination, an option to add your current location as a new destination, and an option to add Ender Pearls from your inventory to be used as fuel (shift + click to add a stack).
+
+You can also shift + scroll with the item in your hand to cycle through the destinations without opening the GUI or right-click to teleport to the current destination.
+
+You can also teleport players and mobs by left-clicking them - however, players must be holding shift and mobs cannot be teleported across dimensions.
+
+It is possible to transfer locations between dislocators. Simply place an advanced dislocator and a basic or another advanced dislocator in the first and second slots of a crafting grid to transfer a location from the dislocator in slot 1 to the dislocator in slot 2.
+
+When transferring from a basic to advanced dislocator the location will be given the name "*Copy*" When going from advanced to basic the currently selected location in the advanced dislocator will be set as the bound location in the basic dislocator.</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nAdvanced Dislocator</content>
+        </entry>
+    <entry branchId="draconicevolution:dislocation/dislocatorPedestal" category="wiki.cat.block" icon="draconicevolution:dislocator_pedestal" iconType="stack" name="Dislocator Pedestal">
+            <content index="4" type="recipe">draconicevolution:dislocator_pedestal</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">You have figured out how to create a simple pedestal on which you can place your Basic or Advanced Charms of Dislocation.
+
+Simply right-click with a Charm in your hand to place it on the pedestal, then right-click the pedestal to teleport.
+
+The advantage of this is that the Charms won't take damage or use fuel. The disadvantage is you cannot bring them with you to your destination.
+
+To remove the charm from the pedestal simply shift + right-click with an empty hand.
+
+When it is holding a Basic Charm of Dislocation that has been renamed in an anvil or an Advanced Charm of Dislocation with a destination set either the name or destination will be displayed above the pedestal respectively.
+
+If you hold shift all names will be hidden except the one you are looking at. (Shift behavior can be reversed in the config)</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDislocator Pedestal</content>
+        </entry>
+    <entry branchId="draconicevolution:dislocation/receptacle" category="wiki.cat.block" icon="draconicevolution:dislocator_receptacle" iconType="stack" name="Dislocator Receptacle (Portal)">
+            <content index="5" size="8" type="vSpacer"/>
+            <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/portal.jpg" index="6" scale="100" type="image"/>
+            <content index="4" type="recipe">draconicevolution:dislocator_receptacle</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">Like Obsidian, Infused Obsidian can be used to create a magical portal, but with some big differences. This portal can be any shape and any size between 1x1 and 150x150 blocks and using a dislocator to set the destination this portal can send you to any location.
+ 
+When building a portal the only restriction is it must be a 2-dimensional structure but the shape can be anything you like! As long as the internal area is a complete loop.  Then replace any block in the structure with a Dislocator Receptacle so that 1 side of the receptacle is touching the portal area (It can also be in a corner)
+
+To activate the portal simply right-click the Receptacle with a Basic or Advanced Charm of Dislocation that is bound to a location.
+
+You can also pipe Dislocators in and out of the Receptacle with hoppers or other methods of automation.
+
+It is possible to hide the Dislocator Receptacle by right-clicking it with a piece of infused obsidian.
+
+The portal will also respond to a redstone signal. By default, the portal will activate when a dislocator is inserted. But when powered by redstone the portal will become redstone dependent.
+
+While powered by redstone the dislocator is locked in the receptacle.</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDislocator Receptacle</content>
+        </entry>
+    <entry branchId="draconicevolution:dislocation/itemDislocator" category="wiki.cat.item" icon="draconicevolution:magnet" iconType="stack" name="Item Dislocator">
+            <content index="4" type="recipe">draconicevolution:magnet</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">Using the teleportation power of a dislocator you have found a way to teleport items dropped in the world directly into your inventory!
+The range of this dislocator is 8 blocks.
+
+To activate, simply shift+right click.
+
+§6Quality Of Life features§r
+Holding shift will temporarily disable the dislocator.
+If another player is within 3 blocks of an item and they are closer to it than you are the dislocator will not collect it.
+When you throw an item the dislocator will wait for its pick up delay to expire before collecting it again. (Meaning you can actually throw items to other players now!)
+</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nItem Dislocator</content>
+        </entry>
+    <entry branchId="draconicevolution:dislocation/itemDislocatorAdvanced" category="wiki.cat.item" icon="draconicevolution:magnet,1,1" iconType="stack" name="Awakened Item Dislocator">
+            <content index="4" type="recipe">draconicevolution:magnet,1,1</content>
+            <content index="3" size="8" type="vSpacer"/>
+            <content index="2" type="textArea">This is exactly the same as the regular Item Dislocator except it has a 32 block range!</content>
+            <content index="1" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nAwakened Item Dislocator</content>
+        </entry>
+    </entry>
+<entry branchId="draconicevolution:generator" category="wiki.cat.block" icon="draconicevolution:generator" iconType="stack" name="Generator" sortingWeight="190">
+        <content index="4" type="recipe">draconicevolution:generator</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">This is just a simple no thrills generator that burns most fuel sources and produces 84RF/t</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nGenerator</content>
+    
+    </entry>
+<entry branchId="draconicevolution:energyInfuser" category="wiki.cat.block" icon="draconicevolution:energy_infuser" iconType="stack" name="Energy Infuser" sortingWeight="200">
+        <content index="4" type="recipe">draconicevolution:energy_infuser</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">Seeing the need for faster energy transfer you have found a way to bring the Infuser to being.
+
+This charger is capable of charging items at up to 1 million RF/t.
+But it should be noted the actual charge rate is limited by the max intake rate of the item being charged.
+This charger is ideal for charging Draconic Evolution items as they are capable of accepting energy at an extremely fast rate.</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nEnergy Infuser</content>
+    
+    </entry>
+<entry branchId="draconicevolution:mobGrinder" category="wiki.cat.mob" icon="draconicevolution:grinder" iconType="stack" name="Mob Grinder" sortingWeight="210">
+        <content index="4" type="recipe">draconicevolution:grinder</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">Everyone needs effective mob farms. For the cost of a bit of  RF power, you can kill to your heart's content knowing the forces of the Draconic have your back!
+
+The grinder will kill all mobs in a 7x7 area in front of it.
+
+In order to reduce lag, experience orbs dropped by the grinder will despawn after 30 seconds if not collected. It is recommended that you use something like the EnderIO XP Vacuum to collect the experience orbs (if available).
+
+The grinder can be powered either externally or by a capacitor placed in the capacitor slot in its GUI.</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nMob Grinder</content>
+    
+    </entry>
+<entry branchId="draconicevolution:celestialManipulator" category="wiki.cat.block" icon="draconicevolution:celestial_manipulator" iconType="stack" name="Celestial Manipulator" sortingWeight="220">
+        <content index="4" type="recipe">draconicevolution:celestial_manipulator</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">The Celestial Manipulator is the ultimate time and weather control device!
+
+This device has 2 main operating modes: Time and Weather, each mode has different functions.
+§3Weather:
+§6Stop Rain
+Start Rain
+Start Thunderstorm
+
+§3Time:
+§6Skip to sunrise
+Skip to mid-day
+Skip to sunset
+Skip to moon rise
+
+Skip to midnight
+Skip to moonset
+Skip 24.§r
+This function skips to the same time the next Minecraft day. This is useful because using the stop button you can stop the time acceleration at any point along the way
+
+Each of these functions should be fairly self-explanatory.
+
+This device can also be configured for redstone control. In the redstone control tab, you can select which time or weather function to execute on redstone signal. If set to Skip 24 the time acceleration will stop early if the redstone signal stops. 
+
+Note time acceleration does not actually speed up game ticks, it just changes the world time.
+
+This device also requires a significant amount of RF power.</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nCelestial Manipulator</content>
+    
+    </entry>
+<entry branchId="draconicevolution:entityDetector" category="wiki.cat.block" icon="draconicevolution:entity_detector" iconType="stack" name="Entity Detector" sortingWeight="230">
+        <content index="5" size="8" type="vSpacer"/>
+        <content index="4" type="splitContainer" vAlignment="TOP">
+            <content index="0" splitSide="LEFT" type="recipe">draconicevolution:entity_detector</content>
+            <content index="0" splitSide="RIGHT" type="recipe">draconicevolution:entity_detector,1,1</content>
+        </content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">This is an advanced entity detector with a lot of useful features.
+
+These detectors are capable of searching for specific entity types and emitting a customized redstone signal based on what they find.
+These detectors send out scanning pulses at a configurable frequency and then update their redstone output based on what they find.
+
+§bFeatures:
+§3Basic:§6
+10 Block max scanning range.
+1.5 Second max scanning rate.
+60 Second min scanning rate.
+0.25 Second max scanning rate
+Filter by Player, Hostile, Passive, or any combination.
+
+§5Advanced:§6
+64 Block max range
+0.25 Second max scanning rate
+Filter by Player, Hostile, Passive, Other, or any combination.
+White List / Black List§r
+
+The blacklist/whitelist in the advanced detector can be set to search for or ignore pretty much any entity in the game. And not just living entities either!
+It can also search for specific players.
+
+§4Redstone:§r
+The redstone output has 2 modes. Fixed and Pulsed.
+In fixed mode, the redstone signal will be constant between scanning pulses.
+In pulse mode, it will emit a 1 tick redstone pulse each scanning pulse (Assuming it finds entities)
+
+These devices can also be configured to output different signal strength depending on the number of entities detected.
+This control comes in the form of 2 controls within the GUI. RS Min and RS Max.
+RS Min is the number of entities that must be detected by the device to output a signal strength of 1.
+RS Max is the number required for an output strength of 15.
+The output strength will vary accordingly if the number of entries detected is between these 2 values.</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="1" type="heading">§nEntity Detector &amp; Advanced Entity Detector </content>
+    </entry>
+<entry branchId="draconicevolution:potentiometer" category="wiki.cat.block" icon="draconicevolution:potentiometer" iconType="stack" name="Potentiometer" sortingWeight="240">
+        <content imgURL="https://raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/Assets/Draconic%20Evolution/potentiometer.jpg" index="6" scale="100" type="image"/>
+        <content index="5" size="8" type="vSpacer"/>
+        <content index="4" type="recipe">draconicevolution:potentiometer</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">A simple redstone emitter that is capable of emitting a variable strength redstone signal between 0 and 15.</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nPoterntiometer</content>
+    </entry>
+<entry branchId="draconicevolution:rainSensor" category="wiki.cat.block" icon="draconicevolution:rain_sensor" iconType="stack" name="Rain Sensor" sortingWeight="250">
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="4" type="recipe">draconicevolution:rain_sensor</content>
+        <content index="2" type="textArea">A device that emits a redstone signal when it rains.
+(Needs to be able to see the sky)</content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nRain Sensor</content>
+    </entry>
+<entry branchId="draconicevolution:energyNet" category="wiki.cat.block" icon="draconicevolution:energy_crystal,1,2" iconType="stack" name="Energy Network" sortingWeight="155">
+        <entry branchId="draconicevolution:energyNet/crystalBinder" category="wiki.cat.item" icon="draconicevolution:crystal_binder,1,0,{draconicevolution:binder:[645,64,315,]}" iconType="stack" name="The Basics">
+            <content index="5" type="recipe">draconicevolution:crystal_binder,1,0,{draconicevolution:binder:[645,64,315,]}</content>
+            <content index="4" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="3" type="textArea">The Draconic Evolution energy network is unlike any other. Both visually and functionally it is unique.
+
+Before you get started messing with this system you will need a Crystal Binder. 
+Note that in the future you will likely be able to use tools from other mods as well, but as of the time I am writing this, there is only one other mod that has this support and that mod is not yet ready for a 1.10 release.
+
+The DE energy network is comprised of "Energy Crystals." Each energy crystal has an internal energy buffer and crystals can be linked to one another using a Crystal Binder.
+When 2 or more crystals are linked, they will attempt to balance their stored energy so they are both at the same charge level. 
+Each crystal can only support a certain number of connections to other crystals. The exact number of connections is determined by the type and tier of the crystal.
+
+§6Linking§r
+In order to link a crystal to another crystal or some other valid device simply shift-right-click on one of the crystals with a binder, which will save that crystal to the binder.
+Then simply right-click the target block to create a link. The binder will remember the block it is bound to until you bind it to another block or shift-right-click the air.
+
+§6GUI§r
+When you look at a crystal the DE HUD will give you information about its links and energy flow. 
+Right clicking on a crystal will display its GUI, in which you will see a list of all linked devices as well as the energy flow to each one.
+Clicking on an item in the list will give you the option to identify a link using a red beam between the crystal and the target device, as well as an option to break the link.
+There is also a button at the top of the list that allows you to clear all links.
+
+§6Crystal Types§r
+There are 3 types of crystals. Energy I/O, Energy Relay and Wireless Energy.
+
+§6Energy I/O:§r
+This is the crystal you will use to insert and extract energy from your crystal network.
+To use this crystal, simply place it on the side of your energy source/consumer and connect it to your crystal network.
+This crystal has 3 I/O modes which you can cycle between by shift right clicking with an empty hand. Input, Output, and Balance.
+Input will make the crystal accept energy from the block it is attached to and output will attempt to send energy to the attached block.
+Balance mode is not yet fully implemented but is meant for use with energy conduits from other mods. This functionality needs to also be supported by the other mod and thus may not work with all conduits.  
+This crystal type only supports a very limited number of connections to other crystals.
+
+§6Energy Relay:§r
+This crystal is meant to act as a hub to which you can connect other crystals. Therefore it supports a lot more connections than the I/O crystal.
+This crystal can only link to other crystals and cannot be connected to other blocks.
+
+§6Wireless Energy:§r
+This crystal is similar to the energy relay except that it supports fewer crystal links, but can wirelessly connect to a number energy receivers. 
+This connection can only supply power to devices, not receive it, and the max energy flow is lower than that of the I/O Crystal.
+The advantage of this crystal is that it supports a large number of connections, meaning you could place one in the middle of your workshop and have it power most, if not all, of your machines.
+
+Note: See the page for each crystal type for a full list of stats. 
+
+§6Energy Visualization:§r
+When energy is flowing between two crystals it can be visualized by a beam of energy the intensity of which roughly indicates the rate at which energy is flowing.
+When energy is flowing from a wireless energy crystal to a block, the energy flow is indicated by a stream of particles the density and speed of which roughly indicates the rate at which energy is flowing.</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content index="0" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="1" shadow="true" size="1" type="heading">§nThe Basics</content>
+        </entry>
+    <entry branchId="draconicevolution:energyNet/energyIO" category="wiki.cat.block" icon="draconicevolution:energy_crystal,1,3" iconType="stack" name="Crystal Energy I/O">
+            <content index="7" type="recipe">draconicevolution:energy_crystal,1,5,{}</content>
+            <content index="6" type="recipe">draconicevolution:energy_crystal,1,4,{}</content>
+            <content index="5" type="recipe">draconicevolution:energy_crystal,1,3,{}</content>
+            <content index="4" size="8" type="vSpacer"/>
+            <content index="3" type="textArea">Stats:
+
+§9Basic§r
+Capacity: 4 Million
+Max Links: 2 
+
+§5Wyvern§r
+Capacity: 16 Million
+Max Links: 3
+
+§6Draconic§r
+Capacity: 64 Million
+Max Links: 4</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="1" shadow="true" size="1" type="heading">§nEnergy I/O Crystal</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:energyNet/relay" category="wiki.cat.block" icon="draconicevolution:energy_crystal,1,1" iconType="stack" name="Crystal Relay">
+            <content index="7" type="recipe">draconicevolution:energy_crystal,1,2</content>
+            <content index="6" type="recipe">draconicevolution:energy_crystal,1,1</content>
+            <content index="5" type="recipe">draconicevolution:energy_crystal</content>
+            <content index="4" size="8" type="vSpacer"/>
+            <content index="3" type="textArea">Stats:
+
+§9Basic§r
+Capacity: 4 Million
+Max Links: 8 
+
+§5Wyvern§r
+Capacity: 16 Million
+Max Links: 16 
+
+§6Draconic§r
+Capacity: 64 Million
+Max Links: 32</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="1" shadow="true" size="1" type="heading">§nCrystal Relay</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    <entry branchId="draconicevolution:energyNet/wierless" category="wiki.cat.block" icon="draconicevolution:energy_crystal,1,8" iconType="stack" name="Crystal Wireless">
+            <content index="7" type="recipe">draconicevolution:energy_crystal,1,8</content>
+            <content index="6" type="recipe">draconicevolution:energy_crystal,1,7</content>
+            <content index="5" type="recipe">draconicevolution:energy_crystal,1,6</content>
+            <content index="4" size="8" type="vSpacer"/>
+            <content index="3" type="textArea">Stats:
+
+§9Basic§r
+Capacity: 4 Million
+Max Links: 4
+Max Wireless Links: 16
+
+§5Wyvern§r
+Capacity: 16 Million
+Max Links: 8
+Max Wireless Links: 32
+
+§6Draconic§r
+Capacity: 64 Million
+Max Links: 16
+Max Wireless Links: 64</content>
+            <content index="2" size="8" type="vSpacer"/>
+            <content alignment="LEFT" index="1" shadow="true" size="1" type="heading">§nWireless Energy Crystal</content>
+            <content index="0" size="8" type="vSpacer"/>
+        </entry>
+    </entry>
+<entry branchId="draconicevolution:enderEnergyManipulator" category="wiki.cat.item" icon="draconicevolution:ender_energy_manipulator" iconType="stack" name="Ender Energy Manipulator" sortingWeight="260">
+        <content index="4" type="recipe">draconicevolution:ender_energy_manipulator,5</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content index="2" type="textArea">§bDont want to risk incurring the wrath of the Enderman by killing the Ender Dragon? 
+But you still want to get your hands on a dragon egg?
+No problem! 
+This mystical device allows you to extract an egg from the Ender Dragon without killing her!
+To get started simply craft this item and right click the end portal with it (in the end)
+The process will begin immediately.
+Note this may anger the enderman just a little but they will get over it. It's not like your killing the dragon after all. </content>
+        <content index="1" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nEnder Energy Manipulator</content>
+    </entry>
+<entry branchId="draconicevolution:stabilizedSpawner" category="wiki.cat.block" icon="draconicevolution:draconic_spawner,1,0,{DETileData:{SyncableEnum0:2b,SyncableStack1:{id:&quot;draconicevolution:mob_soul&quot;,Count:1b,tag:{EntityName:&quot;Pig&quot;},Damage:0s}}}" iconType="stack" name="Stabilized Spawner" sortingWeight="211">
+        <content index="13" size="8" type="vSpacer"/>
+        <content index="11" size="8" type="vSpacer"/>
+        <content index="12" type="textArea">As mentioned when you create a spawner it will be the same tier as the core you used to create it.
+If you wish to upgrade (or downgrade) a spawner you can simply right-click the spawner with a different type of core.
+The new core will be applied and the previous core will be removed and dropped as an item.
+
+Each spawner tier has certain improvements over the last.
+The spawn range for all spawners is 4 blocks (the same as the vanilla spawner)
+
+§1§nBasic§r
+The basic tier is very similar to the vanilla spawner.
+It §3spawns up to 4 mobs at a time with a delay of between 10 and 40 seconds§r between spawns.
+It §crequires a player to be within 24 blocks§r to function
+and mobs §cwill only spawn if their spawn requirements are met§r e.g. grass for cows, pigs, etc.. and darkness for monsters. 
+
+§5§nWyvern§r
+§3spawns up to 6 mobs at a time with a delay of between 5 and 20 seconds§r between spawns.
+§3 does not require a player nearby.§r
+§cWill only spawn if their spawn requirements are met§r e.g. grass for cows, pigs, etc.. and darkness for monsters. 
+
+§6§nDraconic§r
+§3spawns up to 8 mobs at a time with a delay of between 2.5 and 10 seconds§r between spawns.
+§3Does not require a player nearby.§r
+§3Ignores mob spawn requirements.§r
+
+§0§nChaotic§r
+§3spawns up to 12 mobs at a time with a delay of between 1.25 and 5 seconds§r between spawns.
+§3Does not require a player nearby.§r
+§3Ignores mob spawn requirements.§r
+§cWarning things may get a little chaotic if you choose to use this spawner!§r
+
+
+Note: If you have EnderIO installed you can create stabilized spawners by crafting a core with an EnderIO broken spawner,
+
+Creative Note: If you wish to set the type for a spawner in creative mode you can do so using a spawn egg.</content>
+        <content alignment="CENTER" colour="f0c0" hoverColour="0000FF" index="10" link="draconicevolution:mobSoul" shadow="true" size="0" targetLocation="branch" type="link">§nYou can learn more about mob souls by clicking here</content>
+        <content index="9" size="8" type="vSpacer"/>
+        <content index="5" type="splitContainer" vAlignment="TOP">
+            <content alignment="CENTER" colour="ffb000" index="0" shadow="false" size="0" splitSide="LEFT" type="heading">§n  Draconic  </content>
+            <content alignment="CENTER" colour="0" index="0" shadow="true" size="0" splitSide="RIGHT" type="heading">§n  Chaotic  </content>
+        </content>
+        <content index="3" type="splitContainer" vAlignment="TOP">
+            <content alignment="CENTER" colour="9ff" index="0" shadow="false" size="0" splitSide="LEFT" type="heading">§n  Basic  </content>
+            <content alignment="CENTER" colour="af0060" index="0" shadow="false" size="0" splitSide="RIGHT" type="heading">§n  Wyvern  </content>
+        </content>
+        <content index="6" type="splitContainer" vAlignment="TOP">
+            <content index="0" renderSlot="false" scale="500" splitSide="LEFT" tooltip="true" type="stack">draconicevolution:draconic_spawner,1,0,{DETileData:{SyncableEnum0:2b,SyncableStack1:{id:"draconicevolution:mob_soul",Count:1b,tag:{EntityName:"Zombie"},Damage:0s}}}</content>
+            <content index="0" renderSlot="false" scale="500" splitSide="RIGHT" tooltip="true" type="stack">draconicevolution:draconic_spawner,1,0,{DETileData:{SyncableEnum0:3b,SyncableStack1:{id:"draconicevolution:mob_soul",Count:1b,tag:{EntityName:"Cow"},Damage:0s}}}</content>
+        </content>
+        <content index="4" type="splitContainer" vAlignment="TOP">
+            <content index="0" renderSlot="false" scale="500" splitSide="LEFT" tooltip="true" type="stack">draconicevolution:draconic_spawner,1,0,{DETileData:{SyncableEnum0:0b,SyncableStack1:{id:"draconicevolution:mob_soul",Count:1b,tag:{EntityName:"Pig"},Damage:0s}}}</content>
+            <content index="0" renderSlot="false" scale="500" splitSide="RIGHT" tooltip="true" type="stack">draconicevolution:draconic_spawner,1,0,{DETileData:{SyncableEnum0:1b,SyncableStack1:{id:"draconicevolution:mob_soul",Count:1b,tag:{EntityName:"Creeper"},Damage:0s}}}</content>
+        </content>
+        <content index="2" size="4" type="vSpacer"/>
+        <content index="8" type="textArea">Stabilizing a spawner turns it into a very useful tool for spawning all sorts of mobs. 
+To get one all you have to do is right click a vanilla spawner with any of the 4 DE Cores. 
+The spawner will consume the core and convert the spawner to the equivalent tier Stabilized Spawner which will be dropped as an item in the world.
+This, of course, means there are 4 spawner tiers as there are 4 core tiers.
+
+It should be noted that when the spawner drops it will be set to spawn the same entity as the original spawner.
+It should also be noted that once placed you can not pick up a spawner without destroying the mob soul it contains.
+In order to reset the spawner to the same or a different mob type, you need to apply a new mob soul. </content>
+        <content index="7" size="8" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="1" type="heading">§nStabilized Spawner</content>
+    </entry>
+<entry branchId="draconicevolution:mobSoul" category="wiki.cat.item" icon="draconicevolution:mob_soul,1,0,{EntityName:&quot;[Random-Display]&quot;}" iconType="stack" name="Mob Soul" sortingWeight="212">
+        <content index="2" size="8" type="vSpacer"/>
+        <content alignment="CENTER" colour="f0c0" hoverColour="0000FF" index="6" link="draconicevolution:stabilizedSpawner" shadow="true" size="0" targetLocation="branch" type="link">Stabilized Mob Spawner</content>
+        <content index="4" size="8" type="vSpacer"/>
+        <content index="3" type="textArea">Mob souls are occasionally dropped my mobs when killed by a player using a weapon with the Reaper modifier.
+
+The drop chance is extremely low.
+1 in 1000 for hostile mobs and 1 in 800 for passive mobs (configurable) for unenchanted wyvern weapons.
+But the chances of getting a soul can be improved using the reaper enchant.
+
+DE tools essentially have a built-in reaper modifier equivalent to reaper lvl 1 for Wyvern, lvl 2 for Draconic and lvl 3 for the Staff of Power.
+The calculation to figure out your drop chance is the base drop chance divided by the weapons built in reaper modifier plus the reaper enchant lvl.
+
+So the calculation for say.. A Draconic sword with reaper 5 would be as follows,
+built-in modifier = 2,
+reaper lvl = 5,
+drop chance = 1000 / (2 + 5)
+
+Result: Drop chance is 1 in 142
+
+If the reaper modifier is 0 (so a non-DE weapon without the reaper enchant) there is 0 chance of getting a soul.
+
+Some mods may implement the reaper modifier on their weapons but as of the time of writing this, I do not know of any that do.
+
+
+§bThe main use for a mob soul is setting the spawn type for a Stabilized spawner but they can also be used to spawn their respective entity by shift right clicking on a block with a soul.
+</content>
+        <content index="1" renderSlot="false" scale="500" tooltip="true" type="stack">draconicevolution:mob_soul,1,0,{EntityName:"[Random-Display]"}</content>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nMob Soul</content>
+    </entry>
+<entry branchId="draconicevolution:draconiumChest" category="wiki.cat.block" icon="draconicevolution:draconium_chest" iconType="stack" name="Draconium Chest" sortingWeight="110">
+        <content index="11" size="8" type="vSpacer"/>
+        <content index="9" size="8" type="vSpacer"/>
+        <content imgURL="http://ss.brandon3055.com/5wxlceb.png" index="10" scale="100" type="image"/>
+        <content imgURL="http://ss.brandon3055.com/jrffmsj.png" index="8" scale="100" type="image"/>
+        <content index="7" size="8" type="vSpacer"/>
+        <content index="6" type="recipe">draconicevolution:draconium_chest</content>
+        <content index="5" size="8" type="vSpacer"/>
+        <content index="4" type="textArea">The Draconium chest is probably one of the most versatile storage devices around!
+Not only does it have 260 inventory slots but it also has a powerful multi-slot furnace
+and a crafting table for your convenience! 
+On top of all that, it has some very powerful I/O configuration options but we will get to that in a bit. First...
+
+§6The furnace§r
+
+The built-in furnace is no ordinary furnace. For starters, it can smelt 5 items at a time. at a very reasonable speed.
+But if that isn't enough for you it can be upgraded! By simply placing a wyvern, Awakened or Chaotic core
+in the furnace upgrade slot you can make it even faster! 
+And if that still wasn't enough as long as there is a wyvern core or better in the upgrade slot the furnace will double ores!
+
+But it should be noted that while increasing the speed this also increases the energy consumption
+a lot more than it decreases the process time.
+
+It should also be noted that when upgraded the core is not actually consumed and can be removed at any time.
+
+The furnace requires power which can be supplied externally or via a flux capacitor in its capacitor slot.
+
+The furnace also has an auto feed option which does exactly what you think.
+It automatically feeds the furnace smeltable items from the inventory.
+There are 4 feed modes:
+
+§bOFF§r
+Self-explanatory...
+
+§bFILL§r
+Will only feed the furnace when there are already items smelting 
+and will only keep the existing stacks currently smelting full.
+Will NOT start to smelt items types that you have not manually
+placed in the furnace,
+
+§bLOCK§r
+Pretty much the same as FILL except it will not smelt the last item.
+meaning as soon as more of that item show up in the inventory
+it will automatically start feeding again.
+
+§bALL§r
+Smelts every smeltable item in the inventory.
+
+Next...
+The §6Crafting Grid§r
+Actually, there's not much to say here.
+It looks like a crafting table,
+It smells like a crafting table,
+It tastes like a crafting table...
+It is a crafting table!
+With full JEI support!
+
+Next.
+§6Configurable IO Regions§r
+This is where things get very interesting...
+By default, the inventory works like any other inventory. You can insert or extract items from any slot from any side of the block.
+And the furnace can also insert or extract from any slot.
+But this can be changed! 
+
+You have the ability to split the inventory up into up to 6 separate I/O regions. 
+Each region can be separately configured with total control over what sides of the chest the slots can be accessed from
+with the ability to mark sides as input and or output only or just disabled completely.
+You can also configure which regions the internal furnace can accept or insert items into.
+There is also a "default region" which controls all slots that are not assigned to a region and can be configured like all other regions.
+
+To assign slots to a region you simply select the region in the editor and click and drag in the inventory to draw a rectangle around the slots you want in the region.
+Also when you have the region editor open you can simply click on existing regions to switch between them 
+
+The uses for this are endless but 1 simple example...
+You create 2 regions. 
+Region 1 only accepts items from the left side of the chest and the furnace can only pull from region 1.
+Region 2 only allows items to be extracted from the right side of the chest and the furnace can only output to region 2.
+
+Now when you pump items into the left side on the chest they will go to region 1, get smelted and then output to region 2 ready to be extracted from the right side of the chest.
+
+§6Also! if ALL that wasn't enough§r
+The chest stores its inventory when broken,
+And you can make it any colour you want!!!</content>
+        <content index="3" size="8" type="vSpacer"/>
+        <content alignment="CENTER" colour="ffff" index="2" shadow="true" size="0" type="heading">Much more then just a bigger inventory!</content>
+        <content index="1" size="4" type="vSpacer"/>
+        <content alignment="LEFT" index="0" shadow="true" size="2" type="heading">§nDraconium Chest</content>
+    </entry>
+</mod>

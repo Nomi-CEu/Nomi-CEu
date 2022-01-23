@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "seed": "minecraft:wheat_seeds",
+      "block": "minecraft:wheat",
+      "meta": 7
+    },
+    {
+      "seed": "minecraft:carrot",
+      "block": "minecraft:carrots",
+      "meta": 7
+    },
+    {
+      "seed": "minecraft:potato",
+      "block": "minecraft:potatoes",
+      "meta": 7
+    },
+    {
+      "seed": "minecraft:beetroot_seeds",
+      "block": "minecraft:beetroots",
+      "meta": 3
+    },
+    {
+      "seed": "minecraft:nether_wart",
+      "block": "minecraft:nether_wart",
+      "meta": 3
+    },
+    {
+      "seed": "mysticalagriculture:tier1_inferium_seeds",
+      "block": "mysticalagriculture:tier1_inferium_crop",
+      "optional": true
+    },
+    {
+      "seed": "mysticalagriculture:tier2_inferium_seeds",
+      "block": "mysticalagriculture:tier2_inferium_crop",
+      "optional": true
+    },
+    {
+      "seed": "mysticalagriculture:tier3_inferium_seeds",
+      "block": "mysticalagriculture:tier3_inferium_crop",
+      "optional": true
+    },
+    {
+      "seed": "mysticalagriculture:tier4_inferium_seeds",
+      "block": "mysticalagriculture:tier4_inferium_crop",
+      "optional": true
+    },
+    {
+      "seed": "mysticalagriculture:tier5_inferium_seeds",
+      "block": "mysticalagriculture:tier5_inferium_crop",
+      "optional": true
+    }
+  ]
+}

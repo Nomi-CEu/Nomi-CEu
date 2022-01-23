@@ -1,0 +1,23 @@
+{
+  "config_version": {
+    "id": "__default",
+    "version": 0
+  },
+  "dimensions": [
+    {
+      "dim": 119,
+      "normal_biomes": true,
+      "dimensiontype": {
+        "id": 119,
+        "name": "Void World",
+        "suffix": "dim_119",
+        "keeploaded": true,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "flat",
+        "generatorOptions": "3;minecraft:air;1;decoration"
+      }
+    }
+  ]
+}

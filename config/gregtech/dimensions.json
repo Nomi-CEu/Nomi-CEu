@@ -1,0 +1,24 @@
+{
+  "dims": [
+    {
+      "dimID": 0,
+      "dimName": "Overworld"
+    },
+    {
+      "dimID": 1,
+      "dimName": "End"
+    },
+    {
+      "dimID": -1,
+      "dimName": "Nether"
+    },
+    {
+      "dimID": 111,
+      "dimName": "Lost Cities"
+    },
+    {
+      "dimID": 100,
+      "dimName": "Moon"
+    }
+  ]
+}

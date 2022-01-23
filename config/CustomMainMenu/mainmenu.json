@@ -1,0 +1,141 @@
+{
+  "images": {
+    "title": {
+      "image": "minecraft:textures/gui/title/top.png",
+      "posX": -150,
+      "posY": 4,
+      "width": 300,
+      "height": 77,
+      "alignment": "top_center"
+    }
+  },
+  "buttons": {
+    "singleplayer": {
+      "text": "menu.singleplayer",
+      "posX": 4,
+      "posY": -46,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "singleplayer"
+      }
+    },
+    "multiplayer": {
+      "text": "menu.multiplayer",
+      "posX": 125,
+      "posY": -46,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "multiplayer"
+      }
+    },
+    "mods": {
+      "text": "fml.menu.mods",
+      "posX": 4,
+      "posY": -22,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "mods"
+      }
+    },
+    "options": {
+      "text": "menu.options",
+      "posX": 125,
+      "posY": -22,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "options"
+      }
+    },
+    "quit": {
+      "text": "menu.quit",
+      "posX": 4,
+      "posY": 74,
+      "width": 240,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "quit"
+      }
+    },
+    "update": {
+      "text": "Update Notes",
+      "posX": 125,
+      "posY": 26,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openLink",
+        "link": "https://github.com/Nomifactory/Nomifactory/blob/dev/UPDATENOTES.md"
+      }
+    },
+    "discord": {
+      "text": "Join Us On Discord!",
+      "posX": 4,
+      "posY": 26,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openLink",
+        "link": "https://discord.gg/zwQzqP8b6q"
+      }
+    },
+    "akliz": {
+      "text": "Rent Your Own Nomifactory Server!",
+      "posX": 4,
+      "posY": 50,
+      "width": 240,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openLink",
+        "link": "https://www.akliz.net/nomifactory"
+      }
+    }
+  },
+  "labels": {
+    "mojang": {
+      "text": "Copyright Mojang AB. Do not distribute!",
+      "posX": -197,
+      "posY": -10,
+      "color": -1,
+      "alignment": "bottom_right"
+    }
+  },
+  "other": {
+    "background": {
+      "image": "",
+      "slideshow": {
+        "displayDuration": 100,
+        "fadeDuration": 40,
+        "images": [
+          "minecraft:textures/gui/title/background/01_koslow#5221_2020-07-13_18.29.23.jpg",
+          "minecraft:textures/gui/title/background/02_zefenglin#4068_unknown.jpg",
+          "minecraft:textures/gui/title/background/03_koslow#5221_2020-07-15_12.47.13.jpg",
+          "minecraft:textures/gui/title/background/04_twgecko#4094_2020-07-23_23.52.42.jpg",
+          "minecraft:textures/gui/title/background/05_misterpemodder#0404_2020-04-16_00.02.35.jpg",
+          "minecraft:textures/gui/title/background/07_sjihttam#1781_2020-01-16_13.41.00.jpg",
+          "minecraft:textures/gui/title/background/06_koslow#5221_2020-07-22_15.51.02.jpg",
+          "minecraft:textures/gui/title/background/08_immow#9906_unknown.jpg",
+          "minecraft:textures/gui/title/background/10_twgecko#4094_2020-07-28_01.02.15.jpg",
+          "minecraft:textures/gui/title/background/09_max the potato#6258_2020-07-14_18.16.47.jpg",
+          "minecraft:textures/gui/title/background/11_thatguy#6588_2020-02-11_23.31.02.jpg",
+          "minecraft:textures/gui/title/background/12_misterpemodder#0404_2020-07-14_00.47.49.jpg"
+        ]
+      }
+    }
+  }
+}

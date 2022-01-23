@@ -1,0 +1,35 @@
+{
+  "weight": 25,
+  "density": 0.3,
+  "max_height": 30,
+  "min_height": 10,
+  "dimension_filter": ["name:*(overworld|lostcities)"],
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [13, 13]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 30,
+          "value": "ore:grossular"
+        },
+        {
+          "weight": 30,
+          "value": "ore:spessartine"
+        },
+		{
+          "weight": 30,
+          "value": "ore:pyrolusite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:tantalite"
+        }
+      ]
+    }
+  }
+}

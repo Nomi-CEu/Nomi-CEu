@@ -1,0 +1,60 @@
+{
+  "inventory": {
+    "0:4": "questbook:itemquestbook",
+    "1:2": "minecraft:leather_chestplate",
+    "0:0": "minecraft:sapling,16",
+    "1:0": "minecraft:leather_boots",
+    "1:3": "minecraft:leather_helmet",
+    "0:2": "minecraft:torch,64",
+    "0:3": "scannable:scanner,1,0,{items:{Size:9,Items:[{Slot:0,id:\"scannable:module_ore_rare\",Count:1b,Damage:0s},{Slot:1,id:\"scannable:module_ore_common\",Count:1b,Damage:0s},{Slot:2,id:\"scannable:module_range\",Count:1b,Damage:0s}]},energy:500000}",
+    "0:1": "actuallyadditions:item_fertilizer,64",
+    "1:1": "minecraft:leather_leggings"
+  },
+  "kits": {
+    "jumpstart": {
+      "1:0": "minecraft:iron_boots",
+      "0:16": "refinedstorage:wrench",
+      "1:1": "minecraft:iron_leggings",
+      "0:19": "refinedstorage:pattern,64",
+      "0:9": "refinedstorage:controller,1,0,{Energy:0}",
+      "1:3": "minecraft:iron_helmet",
+      "0:10": "refinedstorage:grid",
+      "0:22": "enderio:item_power_conduit,64",
+      "0:24": "enderio:item_liquid_conduit,64,1",
+      "0:17": "enderio:item_yeta_wrench",
+      "0:12": "refinedstorage:grid,1,2",
+      "0:0": "gregtech:meta_tool,1,1,{ench:[{lvl:1s,id:16s}],RandomKey:4056109899909888239L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:1033s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:14": "refinedstorage:crafter,16",
+      "0:18": "refinedstorage:pattern,64",
+      "0:4": "scannable:scanner,1,0,{items:{Size:9,Items:[{Slot:0,id:\"scannable:module_ore_common\",Count:1b,Damage:0s},{Slot:1,id:\"scannable:module_ore_rare\",Count:1b,Damage:0s},{Slot:2,id:\"scannable:module_range\",Count:1b,Damage:0s}]},energy:500000}",
+      "1:2": "minecraft:iron_chestplate",
+      "0:25": "enderio:item_refined_storage_conduit,64",
+      "0:2": "gregtech:meta_tool,1,3,{ench:[{lvl:1s,id:16s}],RandomKey:5405274563335862843L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:3033s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:3": "gregtech:meta_tool,1,2,{ench:[{lvl:1s,id:16s}],RandomKey:-7089872378654919681L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:2033s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:23": "enderio:item_item_conduit,64",
+      "0:8": "minecraft:cooked_chicken,64",
+      "0:20": "refinedstorage:pattern,64",
+      "0:21": "refinedstorage:pattern,64",
+      "0:15": "refinedstorage:interface,16",
+      "0:7": "minecraft:torch,64",
+      "0:11": "refinedstorage:grid,1,1",
+      "0:1": "gregtech:meta_tool,1,0,{ench:[{lvl:1s,id:16s}],RandomKey:-5020092748714047907L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:33s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:13": "refinedstorage:storage,4,2",
+      "0:26": "nuclearcraft:rtg_californium"
+    },
+    "starter": {
+      "0:0": "gregtech:meta_tool,1,1,{ench:[{lvl:1s,id:16s}],RandomKey:4056109899909888239L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:1033s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:3": "gregtech:meta_tool,1,2,{ench:[{lvl:1s,id:16s}],RandomKey:-7089872378654919681L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:2033s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:7": "minecraft:torch,64",
+      "1:2": "minecraft:iron_chestplate",
+      "0:8": "minecraft:cooked_chicken,64",
+      "1:0": "minecraft:iron_boots",
+      "1:1": "minecraft:iron_leggings",
+      "1:3": "minecraft:iron_helmet",
+      "0:2": "gregtech:meta_tool,1,3,{ench:[{lvl:1s,id:16s}],RandomKey:5405274563335862843L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:3033s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:1": "gregtech:meta_tool,1,0,{ench:[{lvl:1s,id:16s}],RandomKey:-5020092748714047907L,CreatorMost:-5567380206174582019L,CraftingComponents:[{id:\"gregtech:meta_item_2\",Count:1b,Damage:33s},{id:\"minecraft:stick\",Count:1b,Damage:0s}],GT.ToolStats:{PrimaryMaterial:\"iron\",HandleMaterial:\"wood\"},CreatorLeast:-6837252790035570724L}",
+      "0:4": "scannable:scanner,1,0,{items:{Size:9,Items:[{Slot:0,id:\"scannable:module_ore_common\",Count:1b,Damage:0s},{Slot:1,id:\"scannable:module_ore_rare\",Count:1b,Damage:0s},{Slot:2,id:\"scannable:module_range\",Count:1b,Damage:0s}]},energy:500000}"
+    },
+    "nothing": {}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "weight": 90,
+  "density": 0.8,
+  "max_height": 80,
+  "min_height": 10,
+  "dimension_filter": ["name:*(overworld|lostcities)"],
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [21, 21]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 80,
+          "value": "ore:oilsands"
+        },
+        {
+          "weight": 20,
+          "value": "ore:coal"
+        }
+      ]
+    }
+  }
+}

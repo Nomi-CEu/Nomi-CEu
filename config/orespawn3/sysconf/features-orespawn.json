@@ -1,0 +1,26 @@
+[
+  {
+    "name": "default",
+    "class": "com.mcmoddev.orespawn.impl.features.DefaultFeatureGenerator"
+  },
+  {
+    "name": "vein",
+    "class": "com.mcmoddev.orespawn.impl.features.VeinGenerator"
+  },
+  {
+    "name": "normal-cloud",
+    "class": "com.mcmoddev.orespawn.impl.features.NormalCloudGenerator"
+  },
+  {
+    "name": "precision",
+    "class": "com.mcmoddev.orespawn.impl.features.PrecisionGenerator"
+  },
+  {
+    "name": "clusters",
+    "class": "com.mcmoddev.orespawn.impl.features.ClusterGenerator"
+  },
+  {
+    "name": "underfluids",
+    "class": "com.mcmoddev.orespawn.impl.features.UnderFluid"
+  }
+]

@@ -1,0 +1,124 @@
+//The recipe format has recently been updated! Old recipes will still work but may be disabled in a future MC version.
+
+It is now possible to add custom fusion recipes and/or remove existing ones.
+This feature is intended for Mod pack creators.
+
+Recipes are specified using json file which you will need to place in config/brandon3055 (The same folder you should have found this text document in)
+The json MUST be named "CustomFusionRecipes.json" (Without the quotes)
+
+The following is an example of what the json file should look like (See further down for an explanation of what everything means)
+
+[
+    {
+        "mode": "ADD",
+        "result": "minecraft:beacon",
+        "catalyst": "minecraft:nether_star",
+        "energy": 1000,
+        "tier": 1,
+        "ingredients": [
+            "minecraft:glass",
+            "minecraft:glass",
+            "minecraft:glass",
+            "minecraft:glass",
+            "minecraft:glass",
+            "minecraft:obsidian"
+        ]
+    },
+    {
+        "mode": "ADD",
+        "result": "minecraft:diamond_sword,1,0,{ench:[0:{lvl:5s,id:21s},1:{lvl:5s,id:20s},2:{lvl:5s,id:19s}]}",
+        "catalyst": "minecraft:golden_apple,1,1",
+        "energy": 1000,
+        "tier": 1,
+        "ingredients": [
+            "ore:oreGold",
+            "ore:blockGold",
+            "ore:ingotGold",
+            "minecraft:stone,1,0,{ench:[0:{lvl:5s,id:21s},1:{lvl:5s,id:20s},2:{lvl:5s,id:19s}]}"
+        ]
+    },
+    {
+        "mode": "REMOVE",
+        "result": "draconicevolution:draconic_staff_of_power",
+        "catalyst": "draconicevolution:draconic_pick",
+        "ingredients": [
+            "draconicevolution:draconic_ingot",
+            "draconicevolution:draconic_ingot",
+            "draconicevolution:draconic_ingot",
+            "draconicevolution:draconic_ingot",
+            "draconicevolution:draconic_ingot",
+            "draconicevolution:draconic_shovel",
+            "draconicevolution:draconic_sword",
+            "draconicevolution:awakened_core"
+        ]
+    },
+    {
+        "mode": "REMOVE",
+        "result": "draconicevolution:draconic_shovel",
+        "catalyst": "draconicevolution:wyvern_shovel"
+    }    
+]
+
+
+The above json adds 2 recipes for vanilla items and removes 2 recipes from Draconic Evolution. It should be fairly clear how those examples work
+The following explains the recipes in more detail
+
+# Adding Recipes #
+
+"mode":
+- For adding recipes mode can be set to "ADD" or it can be left out and the recipe will default to the ADD function
+
+"result":
+- This is the item stack that the recipe will create.
+- This should be a specific item. It can not be an ore dictionary item.
+
+"catalyst":
+- The catalyst is the item that gets combined with the ingredients to create the result. 
+- This should be a specific item. It can not be an ore dictionary item.
+
+"energy":
+- This id the energy required for the crafting. Note that this number is multiplied by the number of ingredients.
+Meaning if you specifies 1000 for a recipe that has 8 ingredients the total energy cost would be 8000RF.
+
+"tier":
+- This is the crafting tier of this recipe 0 = basic, 1 = wyvern, 2 = awakened, 3 = chaotic
+
+"ingredients":
+- This is a list of ingredients required for the recipe.
+- These can be ore dictionary items.
+
+
+# Removing Recipes #
+
+"mode":
+- Mode must be set to "REMOVE" when removing a recipe
+
+When removing recipes you to not need to specify the tier or energy cost of the target recipe.
+You can instead just specify the result, catalyst and ingredients of the target recipe.
+Optionally if you leave out the ingredients it will remove any recipe matching the result and catalyst items.
+
+
+## Item Stack Strings ##
+
+Example:      minecraft:wool,16,14     - This is 16 red wool
+Ore Example:  ore:ingotCopper          - This is 1 copper ingots using the ore dictionary
+Note: Ore entries do not support more that 1 stack size, Item damage or nbt
+More on the ore dictionary http://www.minecraftuniversity.com/forge/ore_dictionary_list/
+
+The name used in the item/block registry name or an ore dictionary name. Both the number of items and the damage value are optional
+
+Examples:
+name, stack size, meta, NBT
+ore:stone
+minecraft:stone         
+minecraft:stone,64       
+minecraft:stone,64,3 
+minecraft:stone,64,3,{NBT}
+
+
+### Notes ###
+The order in which you add/remove recipes dose not matter when replacing recipes. 
+Meaning for example you can add a recipe for a DE item then remove the original recipe and it will not remove the one you jsut added.
+
+You can use ore dictionary items for the catalyst and result when adding recipes but the default fusion implementation dose not support that. 
+So they will be replaced with the first item stack from the ore dictionary that matches that name.

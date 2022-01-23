@@ -1,0 +1,253 @@
+{
+	"version": "2.0",
+	"spawns": {
+		"dense_coldiron_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_coldiron_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 128,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_coldiron_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_adamantine_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_adamantine_ore",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 128,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_adamantine_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_starsteel_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_starsteel_ore",
+			"dimensions": [
+				1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 255,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_starsteel_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_copper_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_copper_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 96,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_copper_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_silver_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_silver_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 32,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_silver_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_tin_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_tin_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 128,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_tin_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_lead_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_lead_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 64,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_lead_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_zinc_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_zinc_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 96,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_zinc_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_mercury_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_mercury_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 32,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_mercury_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_nickel_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_nickel_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 96,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_nickel_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dense_platinum_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "replace_platinum_ore",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"minHeight": 0,
+				"maxHeight": 32,
+				"numObjects": 8,
+				"size": 18
+			},
+			"blocks": [
+				{
+					"name": "densemetals:dense_platinum_ore",
+					"chance": 100
+				}
+			]
+		}
+	}
+}

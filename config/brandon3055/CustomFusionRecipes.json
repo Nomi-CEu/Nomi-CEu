@@ -1,0 +1,344 @@
+[{
+		"mode": "REMOVE",
+		"result": "draconicevolution:wyvern_core",
+		"catalyst": "minecraft:emerald_block"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:wyvern_core",
+		"catalyst": "actuallyadditions:block_crystal_empowered,1,4",
+		"energy": 21943000,
+		"tier": 0,
+		"ingredients": [
+			"extendedcrafting:storage,1,2",
+			"extendedcrafting:storage,1,2",
+			"draconicevolution:draconic_core",
+			"draconicevolution:draconic_core",
+			"draconicevolution:draconic_core",
+			"draconicevolution:draconic_core",
+			"armorplus:block_compressed_infused_lava_crystal",
+			"armorplus:block_compressed_infused_lava_crystal"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "solarflux:solar_panel_chaotic,4,0",
+		"catalyst": "draconicevolution:chaotic_core"
+	},
+	{
+		"mode": "ADD",
+		"result": "solarflux:solar_panel_chaotic,2,0",
+		"catalyst": "draconicevolution:chaotic_core",
+		"energy": 3355440000,
+		"tier": 3,
+		"ingredients": [
+			"solarflux:solar_panel_draconic",
+			"draconicevolution:draconic_energy_core",
+			"draconicevolution:draconic_energy_core",
+			"solarflux:solar_panel_draconic"
+		]
+	},
+	{
+		"mode": "ADD",
+		"result": "solarflux:solar_panel_neutronium",
+		"catalyst": "solarflux:solar_panel_chaotic",
+		"energy": 13421760000,
+		"tier": 3,
+		"ingredients": [
+			"draconicevolution:chaotic_core",
+			"draconicevolution:chaotic_core",
+			"gregtech:wire_single,1,432",
+			"gregtech:wire_single,1,432",
+			"extendedcrafting:storage,1,4",
+			"extendedcrafting:storage,1,4",
+			"gregtech:wire_single,1,432",
+			"gregtech:wire_single,1,432",
+			"draconicevolution:chaotic_core",
+			"draconicevolution:chaotic_core"
+		]
+	},
+	{
+		"mode": "ADD",
+		"result": "solarflux:solar_panel_draconic,2,0",
+		"catalyst": "draconicevolution:draconic_energy_core",
+		"energy": 1677720000,
+		"tier": 2,
+		"ingredients": [
+			"solarflux:solar_panel_wyvern",
+			"solarflux:solar_panel_wyvern",
+			"enderio:item_endergy_conduit,1,11",
+			"enderio:item_endergy_conduit,1,11",
+			"draconicevolution:wyvern_energy_core",
+			"draconicevolution:wyvern_energy_core",
+			"enderio:item_endergy_conduit,1,11",
+			"enderio:item_endergy_conduit,1,11",
+			"solarflux:solar_panel_wyvern",
+			"solarflux:solar_panel_wyvern"
+		]
+	},
+	{
+		"mode": "ADD",
+		"result": "solarflux:solar_panel_wyvern,2,0",
+		"catalyst": "draconicevolution:wyvern_energy_core",
+		"energy": 838860000,
+		"tier": 1,
+		"ingredients": [
+			"solarflux:solar_panel_8",
+			"solarflux:solar_panel_8",
+			"enderio:item_endergy_conduit,1,10",
+			"enderio:item_endergy_conduit,1,10",
+			"draconicevolution:draconium_block",
+			"draconicevolution:draconium_block",
+			"enderio:item_endergy_conduit,1,10",
+			"enderio:item_endergy_conduit,1,10",
+			"solarflux:solar_panel_8",
+			"solarflux:solar_panel_8"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:reactor_core",
+		"catalyst": "draconicevolution:chaos_shard"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:reactor_core",
+		"catalyst": "extendedcrafting:material,1,13",
+		"energy": 2600000000,
+		"tier": 2,
+		"ingredients": [
+			"draconicevolution:draconic_block",
+			"draconicevolution:draconic_block",
+			"draconicevolution:chaos_shard",
+			"draconicevolution:chaos_shard",
+			"contenttweaker:stabilizedeinsteinium",
+			"contenttweaker:stabilizedeinsteinium",
+			"draconicevolution:chaos_shard",
+			"draconicevolution:chaos_shard",
+			"draconicevolution:draconic_block",
+			"draconicevolution:draconic_block"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:crafting_injector,1,3",
+		"catalyst": "draconicevolution:crafting_injector,1,2"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:crafting_injector,1,3",
+		"catalyst": "draconicevolution:crafting_injector,1,2",
+		"energy": 3000000000,
+		"tier": 2,
+		"ingredients": [
+			"draconicevolution:chaos_shard",
+			"draconicevolution:chaos_shard",
+			"gregtech:meta_ingot,1,127",
+			"gregtech:meta_ingot,1,127",
+			"gregtech:meta_block_compressed_2001,1,7",
+			"gregtech:meta_block_compressed_2001,1,7",
+			"gregtech:meta_ingot,1,127",
+			"gregtech:meta_ingot,1,127",
+			"draconicevolution:chaos_shard",
+			"draconicevolution:chaos_shard"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:crafting_injector,1,2",
+		"catalyst": "draconicevolution:crafting_injector,1,1"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:crafting_injector,1,2",
+		"catalyst": "draconicevolution:crafting_injector,1,1",
+		"energy": 1000000000,
+		"tier": 1,
+		"ingredients": [
+			"minecraft:nether_star",
+			"minecraft:dragon_egg",
+			"draconicevolution:wyvern_core",
+			"draconicevolution:wyvern_core",
+			"minecraft:dragon_egg",
+			"minecraft:nether_star"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:particle_generator,1,2",
+		"catalyst": "draconicevolution:particle_generator"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:particle_generator,1,2",
+		"catalyst": "draconicevolution:particle_generator",
+		"energy": 40000000,
+		"tier": 1,
+		"ingredients": [
+			"actuallyadditions:block_crystal_empowered,1,2",
+			"actuallyadditions:block_crystal_empowered,1,2",
+			"actuallyadditions:block_crystal_empowered,1,2",
+			"actuallyadditions:block_crystal_empowered,1,2",
+			"actuallyadditions:block_crystal_empowered,1,2",
+			"actuallyadditions:block_crystal_empowered,1,2",
+			"actuallyadditions:block_crystal_empowered,1,2",
+			"actuallyadditions:block_crystal_empowered,1,2"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:reactor_component",
+		"catalyst": "draconicevolution:reactor_part"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:reactor_component",
+		"catalyst": "draconicevolution:reactor_part",
+		"energy": 7040000000,
+		"tier": 3,
+		"ingredients": [
+			"draconicevolution:reactor_part,1,4",
+			"draconicevolution:reactor_part,1,3",
+			"draconicevolution:draconic_energy_core",
+			"draconicevolution:draconic_energy_core",
+			"draconicevolution:awakened_core",
+			"draconicevolution:awakened_core",
+			"draconicevolution:awakened_core",
+			"draconicevolution:awakened_core"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:infused_obsidian",
+		"catalyst": "minecraft:obsidian"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:infused_obsidian",
+		"catalyst": "enderio:block_reinforced_obsidian",
+		"energy": 10485700,
+		"tier": 0,
+		"ingredients": [
+			"extrautils2:compressedcobblestone,1,3",
+			"enderio:block_alloy,1,6",
+			"draconicevolution:draconium_dust",
+			"draconicevolution:draconium_dust",
+			"thermalfoundation:material,1,1024",
+			"thermalfoundation:material,1,1024",
+			"armorplus:compressed_obsidian",
+			"armorplus:compressed_obsidian",
+			"armorplus:lava_crystal,1,1",
+			"armorplus:lava_crystal,1,1"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:draconic_energy_core",
+		"catalyst": "draconicevolution:wyvern_energy_core"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:draconic_energy_core",
+		"catalyst": "draconicevolution:wyvern_energy_core",
+		"energy": 41943000,
+		"tier": 2,
+		"ingredients": [
+			"draconicevolution:draconic_ingot",
+			"draconicevolution:draconic_ingot",
+			"draconicevolution:awakened_core",
+			"draconicevolution:awakened_core",
+			"ore:compressedoctadiccap",
+			"ore:compressedoctadiccap",
+			"actuallyadditions:block_crystal_empowered",
+			"actuallyadditions:block_crystal_empowered",
+			"draconicevolution:draconic_ingot",
+			"draconicevolution:draconic_ingot"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:draconic_block",
+		"catalyst": "draconicevolution:draconium_block"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:draconic_block,5,0",
+		"catalyst": "draconicevolution:draconium_block,5,0",
+		"energy": 4000000000,
+		"tier": 1,
+		"ingredients": [
+			"draconicevolution:wyvern_core",
+			"draconicevolution:wyvern_core",
+			"draconicevolution:dragon_heart",
+			"draconicevolution:dragon_heart",
+			"draconicevolution:wyvern_core",
+			"draconicevolution:wyvern_core"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:awakened_core",
+		"catalyst": "minecraft:nether_star"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:awakened_core",
+		"catalyst": "minecraft:nether_star",
+		"energy": 500000000,
+		"tier": 1,
+		"ingredients": [
+			"draconicevolution:wyvern_core",
+			"draconicevolution:wyvern_core",
+			"draconicevolution:draconic_block",
+			"draconicevolution:draconic_block",
+			"draconicevolution:wyvern_core",
+			"draconicevolution:wyvern_core"
+		]
+	},
+	{
+		"mode": "REMOVE",
+		"result": "draconicevolution:chaotic_core",
+		"catalyst": "draconicevolution:chaos_shard"
+	},
+	{
+		"mode": "ADD",
+		"result": "draconicevolution:chaotic_core",
+		"catalyst": "gregtech:meta_item_1,1,283",
+		"energy": 3000000000,
+		"tier": 3,
+		"ingredients": [
+			"draconicevolution:chaos_shard",
+			"draconicevolution:chaos_shard",
+			"gregtech:meta_ingot,1,127",
+			"gregtech:meta_ingot,1,127",
+			"extendedcrafting:material,1,32",
+			"extendedcrafting:material,1,32",
+			"gregtech:meta_ingot,1,127",
+			"gregtech:meta_ingot,1,127",
+			"draconicevolution:chaos_shard",
+			"draconicevolution:chaos_shard"
+		]
+	},
+	{
+        "mode": "REMOVE",
+        "result": "draconicevolution:dislocator_advanced",
+        "catalyst": "draconicevolution:dislocator"
+    },
+    {
+        "mode": "ADD",
+        "result": "draconicevolution:dislocator_advanced,1,0,{}",
+        "catalyst": "draconicevolution:dislocator",
+        "energy": 10000000,
+        "tier": 2,
+        "ingredients": [
+            "ore:enderpearl",
+            "ore:ingotDraconium",
+            "ore:enderpearl",
+            "ore:ingotDraconium",
+            "ore:enderpearl",
+            "ore:ingotDraconium",
+            "ore:dragonEgg",
+            "ore:ingotDraconium"
+        ]
+    }
+]

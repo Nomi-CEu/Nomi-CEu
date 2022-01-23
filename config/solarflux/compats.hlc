@@ -1,0 +1,16 @@
+~ Saved With Solar Flux 12.4.11
+
+# If you are a pack developer, ensure that client and server have the same compats enabled/disabled to connect!
++C:States={
+  # Should Solar Flux Reborn enable compat for 'Avaritia'? (Default: true)
+  +B:avaritia=true
+
+  # Should Solar Flux Reborn enable compat for 'Baubles'? (Default: true)
+  +B:baubles=true
+
+  # Should Solar Flux Reborn enable compat for 'Draconic Evolution'? (Default: true)
+  +B:draconicevolution=true
+
+}
+
+

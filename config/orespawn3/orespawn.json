@@ -1,0 +1,332 @@
+{
+	"version": "2.0",
+	"spawns": {
+		"quartz_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [
+				-1
+			],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 15,
+				"variation": 4,
+				"frequency": 7,
+				"minHeight": 0,
+				"maxHeight": 128
+			},
+			"blocks": [
+				{
+					"name": "minecraft:quartz_ore",
+					"chance": 100
+				}
+			]
+		},
+		"coal_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 25,
+				"variation": 12,
+				"frequency": 20,
+				"minHeight": 0,
+				"maxHeight": 128
+			},
+			"blocks": [
+				{
+					"name": "minecraft:coal_ore",
+					"chance": 100
+				}
+			]
+		},
+		"iron_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 8,
+				"variation": 4,
+				"frequency": 20,
+				"minHeight": 0,
+				"maxHeight": 64
+			},
+			"blocks": [
+				{
+					"name": "minecraft:iron_ore",
+					"chance": 100
+				}
+			]
+		},
+		"gold_ore_standard": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 8,
+				"variation": 2,
+				"frequency": 2,
+				"minHeight": 0,
+				"maxHeight": 32
+			},
+			"blocks": [
+				{
+					"name": "minecraft:gold_ore",
+					"chance": 100
+				}
+			]
+		},
+		"gold_ore_mesa": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"includes": [ "MESA" ]
+			},
+			"parameters": {
+				"size": 8,
+				"variation": 2,
+				"frequency": 2,
+				"minHeight": 32,
+				"maxHeight": 79
+			},
+			"blocks": [
+				{
+					"name": "minecraft:gold_ore",
+					"chance": 100
+				}
+			]
+		},
+		"diamond_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "precision",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 3,
+				"numObjects": 2,
+				"minHeight": 0,
+				"maxHeight": 16
+			},
+			"blocks": [
+				{
+					"name": "minecraft:diamond_ore",
+					"chance": 100
+				}
+			]
+		},
+		"redstone_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 6,
+				"variation": 3,
+				"frequency": 8,
+				"minHeight": 0,
+				"maxHeight": 16
+			},
+			"blocks": [
+				{
+					"name": "minecraft:redstone_ore",
+					"chance": 100
+				}
+			]
+		},
+		"lapis_ore": {
+			"retrogen": false,
+			"enabled": false,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 5,
+				"variation": 2,
+				"frequency": 1,
+				"minHeight": 0,
+				"maxHeight": 32
+			},
+			"blocks": [
+				{
+					"name": "minecraft:lapis_ore",
+					"chance": 100
+				}
+			]
+		},
+		"emerald_ore": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"includes": [ "MOUNTAIN" ]
+			},
+			"parameters": {
+				"size": 1,
+				"variation": 0,
+				"frequency": 8,
+				"minHeight": 4,
+				"maxHeight": 32
+			},
+			"blocks": [
+				{
+					"name": "minecraft:emerald_ore",
+					"chance": 100
+				}
+			]
+		},
+		"dirt": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 112,
+				"variation": 50,
+				"frequency": 10,
+				"minHeight": 0,
+				"maxHeight": 255
+			},
+			"blocks": [
+				{
+					"name": "minecraft:dirt",
+					"chance": 100,
+					"state": "snowy=false,variant=dirt"
+				}
+			]
+		},
+		"gravel": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 112,
+				"variation": 50,
+				"frequency": 8,
+				"minHeight": 0,
+				"maxHeight": 255
+			},
+			"blocks": [
+				{
+					"name": "minecraft:gravel",
+					"chance": 100
+				}
+			]
+		},
+		"andesite": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 112,
+				"variation": 50,
+				"frequency": 10,
+				"minHeight": 0,
+				"maxHeight": 255
+			},
+			"blocks": [
+				{
+					"name": "minecraft:stone",
+					"chance": 100,
+					"state": "variant=andesite"
+				}
+			]
+		},
+		"diorite": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 112,
+				"variation": 50,
+				"frequency": 10,
+				"minHeight": 0,
+				"maxHeight": 255
+			},
+			"blocks": [
+				{
+					"name": "minecraft:stone",
+					"chance": 100,
+					"state": "variant=diorite"
+				}
+			]
+		},
+		"granite": {
+			"retrogen": false,
+			"enabled": true,
+			"feature": "default",
+			"replaces": "default",
+			"dimensions": [],
+			"biomes": {
+				"excludes": []
+			},
+			"parameters": {
+				"size": 112,
+				"variation": 50,
+				"frequency": 10,
+				"minHeight": 0,
+				"maxHeight": 255
+			},
+			"blocks": [
+				{
+					"name": "minecraft:stone",
+					"chance": 100,
+					"state": "variant=granite"
+				}
+			]
+		}
+	}
+}

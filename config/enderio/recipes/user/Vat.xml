@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+
+
+<recipe name="Rocket Fuel"><disabled/></recipe>
+
+<recipe name="Ender Distilation"><disabled/></recipe>
+
+<recipe name="Ender Distillation Omni" required="true">
+    <fermenting energy="5000">
+      <inputgroup>
+        <input name="itemPulsatingPowder" multiplier="2.0"/>
+      </inputgroup>
+      <inputgroup>
+        <input name="itemVibrantPowder" multiplier="2.0"/>
+      </inputgroup>
+      <inputfluid name="ender" multiplier="0.5"/>
+      <outputfluid name="ender_distillation"/>
+    </fermenting>
+  </recipe>
+
+</enderio:recipes>

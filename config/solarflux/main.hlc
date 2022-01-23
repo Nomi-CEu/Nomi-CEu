@@ -1,0 +1,11 @@
+# Main configuration file fur Solar Flux Reborn!
+# To implement custom panels, look for the custom_panels.js file!
+~ Saved With Solar Flux 12.4.11
+
++C:Solar Panels={
+  # How much energy (percent) will get lost while picking up the solar panel? (Default: 5.0, Range: [0.0;100.0])
+  +F:Pickup Energy Loss=5.0
+
+}
+
+
