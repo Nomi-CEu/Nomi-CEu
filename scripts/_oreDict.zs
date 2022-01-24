@@ -40,6 +40,11 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 //		<forestry:resource_storage>
 	],
 
+	#blockDraconiumAwakened
+	<ore:blockDraconiumAwakened>: [
+		<draconicevolution:draconic_block>
+	],
+
 	#blockBeryllium
 	<ore:blockBeryllium> : [
 		<nuclearcraft:ingot_block:9>
@@ -67,17 +72,22 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockConductiveIron
 	<ore:blockConductiveIron> : [
-		<metaitem:blockConductiveIron>
+		<enderio:block_alloy:4>
+	],
+
+	#blockCrystalMatrix
+	<ore:blockCrystalMatrix> : [
+		<avaritia:block_resource:2>
 	],
 
 	#blockDarkSteel
 	<ore:blockDarkSteel> : [
-		<metaitem:blockDarkSteel>
+		<enderio:block_alloy:6>
 	],
   
 	#blockDraconium
 	<ore:blockDraconium> : [
-		<metaitem:blockDraconium>
+		<draconicevolution:draconium_block>
 	],
 
 	#blockElectrum
@@ -87,22 +97,27 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockElectricalSteel
 	<ore:blockElectricalSteel> : [
-		<metaitem:blockElectricalSteel>
+		<enderio:block_alloy>
 	],
 
 	#blockEndSteel
 	<ore:blockEndSteel> : [
-		<metaitem:blockEndSteel>
+		<enderio:block_alloy:8>
 	],
 
 	#blockEnergeticAlloy
 	<ore:blockEnergeticAlloy> : [
-		<metaitem:blockEnergeticAlloy>
+		<enderio:block_alloy:1>
 	],
 
 	#blockGraphite
 	<ore:blockGraphite> : [
 		<nuclearcraft:ingot_block:8>
+	],
+
+	#blockInfinity
+	<ore:blockInfinity> : [
+		<avaritia:block_resource:1>
 	],
 
 	#blockInvar
@@ -166,7 +181,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockPulsatingIron
 	<ore:blockPulsatingIron> : [
-		<metaitem:blockPulsatingIron>
+		<enderio:block_alloy:5>
 	],
 
 	#blockTin
@@ -182,7 +197,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockVibrantAlloy
 	<ore:blockVibrantAlloy> : [
-		<metaitem:blockVibrantAlloy>
+		<enderio:block_alloy:2>
 	],
 
 	#blockTitanium
@@ -280,7 +295,7 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#dustDraconium
 	<ore:dustDraconium> : [
-		<metaitem:dustDraconium>
+		<draconicevolution:draconium_dust>
 	],	
 
 	#dustElectrum
@@ -490,6 +505,11 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:132>
 	],
 
+	#ingotDraconiumAwakened
+	<ore:ingotDraconiumAwakened>: [
+		<draconicevolution:draconic_ingot>
+	],
+
 	#ingotBeryllium
 	<ore:ingotBeryllium> : [
 		<nuclearcraft:ingot:9>
@@ -508,7 +528,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotConductiveIron
 	<ore:ingotConductiveIron> : [
-		<metaitem:ingotConductiveIron>
+		<enderio:item_alloy_ingot:4>
 	],
 
 	#ingotCopper
@@ -518,6 +538,11 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 //		<forestry:ingot_copper>
 	],
 
+	#ingotCrystalMatrix
+	<ore:ingotCrystalMatrix> : [
+		<avaritia:resource:1>
+	],
+
 	#ingotDarkSteel
 	<ore:ingotDarkSteel> : [
 		<metaitem:ingotDarkSteel>
@@ -525,12 +550,12 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotDraconium
 	<ore:ingotDraconium> : [
-		<metaitem:ingotDraconium>
+		<draconicevolution:draconium_ingot>
 	],
 
 	#ingotElectricalSteel
 	<ore:ingotElectricalSteel> : [
-		<metaitem:ingotElectricalSteel>
+		<enderio:item_alloy_ingot>
 	],
 
 	#ingotElectrum
@@ -540,17 +565,17 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotEnderium
 	<ore:ingotEnderium> : [
-		<metaitem:ingotEnderium>
+		<thermalfoundation:material:167>
 	],
 
 	#ingotEndSteel
 	<ore:ingotEndSteel> : [
-		<metaitem:ingotEndSteel>
+		<enderio:item_alloy_ingot:8>
 	],
 
 	#ingotEnergeticAlloy
 	<ore:ingotEnergeticAlloy> : [
-		<metaitem:ingotEnergeticAlloy>
+		<enderio:item_alloy_ingot:1>
 	],
 
 	#ingotGraphite
@@ -565,7 +590,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotLumium
 	<ore:ingotLumium> : [
-		<metaitem:ingotLumium>
+		<thermalfoundation:material:166>
 	],
 
 	#ingotOsmiridium
@@ -576,6 +601,11 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 	<ore:ingotIridium> : [
 		<libvulpes:productingot:10>,
 		<thermalfoundation:material:135>
+	],
+
+	#ingotInfinity
+	<ore:ingotInfinity> : [
+		<avaritia:resource:6>
 	],
 
 	#ingotInvar
@@ -610,7 +640,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotPulsatingIron
 	<ore:ingotPulsatingIron> : [
-		<metaitem:ingotPulsatingIron>
+		<enderio:item_alloy_ingot:5>
 	],
 
 	#ingotRedstoneAlloy
@@ -620,7 +650,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotSignalum
 	<ore:ingotSignalum> : [
-		<metaitem:ingotSignalum>
+		<thermalfoundation:material:165>
 	],
 
 	#ingotTin
@@ -653,7 +683,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotSignalum
 	<ore:ingotSignalum>: [
-		<metaitem:ingotSignalum>
+		<thermalfoundation:material:165>
 	],
 
 	#ingotSteel
@@ -665,7 +695,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotVibrantAlloy
 	<ore:ingotVibrantAlloy> : [
-		<metaitem:ingotVibrantAlloy>
+		<enderio:item_alloy_ingot:2>
 	],
 };
 
@@ -737,6 +767,10 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 		<libvulpes:productnugget:9>
 	],
 
+	<ore:nuggetDraconiumAwakened> : [
+		<draconicevolution:nugget:1>
+	],
+
 	<ore:nuggetBronze> : [
 		<thermalfoundation:material:227>
 	],
@@ -747,7 +781,7 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 	],
 
 	<ore:nuggetDraconium> : [
-		<metaitem:nuggetDraconium>
+		<draconicevolution:nugget>
 	],
 
 	<ore:nuggetElectrum> : [
@@ -1054,6 +1088,11 @@ var gearsDisabled as IItemStack[][IOreDictEntry] = {
 	#gearPlatinum
 	<ore:gearPlatinum> : [
 		<thermalfoundation:material:262>
+	],
+
+	#gearSignalum
+	<ore:gearSignalum> : [
+		<thermalfoundation:material:293>
 	],
 
 	#gearSilver
@@ -1737,8 +1776,8 @@ mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:magic_energy_absorber>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:primitive_blast_furnace.bronze>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:cracker>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:coke_oven_hatch>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:coke_oven>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:coke_oven_hatch>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:coke_oven>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:tesla_coil>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:ceu.ulv.1>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:cef.ulv.1>);
@@ -2201,10 +2240,10 @@ solidifier.recipeBuilder().fluidInputs(<liquid:moltendarksoularium> * 144).notCo
 fluidextractor.recipeBuilder().inputs(<simplyjetpacks:metaitemmods:3>).fluidOutputs([<liquid:moltendarksoularium> * 144]).duration(20).EUt(30).buildAndRegister();
 
 //Molten Soularium
-solidifier.recipeBuilder().fluidInputs(<liquid:moltensoularium> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<enderio:block_alloy:7>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltensoularium> * 144).notConsumable(<metaitem:shape.mold.ingot>).outputs([<enderio:item_alloy_ingot:7>]).duration(40).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<enderio:item_alloy_ingot:7>).fluidOutputs([<liquid:moltensoularium> * 144]).duration(20).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<enderio:block_alloy:7>).fluidOutputs([<liquid:moltensoularium> * 1296]).duration(200).EUt(30).buildAndRegister();
+//solidifier.recipeBuilder().fluidInputs(<liquid:moltensoularium> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<enderio:block_alloy:7>]).duration(400).EUt(30).buildAndRegister();
+//solidifier.recipeBuilder().fluidInputs(<liquid:moltensoularium> * 144).notConsumable(<metaitem:shape.mold.ingot>).outputs([<enderio:item_alloy_ingot:7>]).duration(40).EUt(30).buildAndRegister();
+//fluidextractor.recipeBuilder().inputs(<enderio:item_alloy_ingot:7>).fluidOutputs([<liquid:moltensoularium> * 144]).duration(20).EUt(30).buildAndRegister();
+//fluidextractor.recipeBuilder().inputs(<enderio:block_alloy:7>).fluidOutputs([<liquid:moltensoularium> * 1296]).duration(200).EUt(30).buildAndRegister();
 
 
 

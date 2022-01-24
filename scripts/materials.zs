@@ -37,7 +37,7 @@ var dark_steel = MaterialBuilder(32003, "dark_steel")
     .ingot().fluid()
     .color(0x414751).iconSet("DULL")
     .flags(["generate_plate", "generate_rod", "generate_frame", "disable_decomposition"])
-    .components([<material:iron> * 1, <material:obsidian> * 1])
+    .components([<material:iron> * 1])
     .build();
 
 var omnium = MaterialBuilder(32004, "omnium")
@@ -47,10 +47,10 @@ var omnium = MaterialBuilder(32004, "omnium")
     .cableProperties(2147483647, 1, 0, true)
     .build();
 
-var black_quartz = MaterialBuilder(32005, "black_quartz")
-    .gem()
-    .color(0x17151a).iconSet("QUARTZ")
-    .build();
+//var black_quartz = MaterialBuilder(32005, "black_quartz")
+//    .gem()
+//    .color(0x17151a).iconSet("QUARTZ")
+//    .build();
 
 var ardite = MaterialBuilder(32006, "ardite")
     .ingot().fluid()
@@ -75,7 +75,7 @@ var signalum = MaterialBuilder(32010, "signalum")
     .ingot().fluid()
     .color(0xff7f0f).iconSet("SHINY")
     .blastTemp(4000)
-    .flags(["generate_plate", "generate_dense", "generate_rod"])
+    .flags(["generate_plate", "generate_dense", "generate_rod", "generate_gear"])
     .components([<material:annealed_copper> * 4, <material:ardite> * 2, <material:red_alloy> * 2])
     .cableProperties(32768, 1, 0, true)
     .build();
@@ -167,14 +167,16 @@ var crystal_matrix = MaterialBuilder(32023, "crystal_matrix")
     .build();
 
 var soularium = MaterialBuilder(32024, "soularium")
-    .ingot()
+    .ingot().fluid()
     .color(0x3b0d0d).iconSet("DULL")
+    .components([<material:gold> * 1])
     .build();
 
 var end_steel = MaterialBuilder(32025, "end_steel")
     .ingot().fluid()
     .color(0xd6d980).iconSet("DULL")
     .flags("generate_plate")
+    .cableProperties(2048,1,0,true)
     .build();
 
 var infinity = MaterialBuilder(32026, "infinity")
@@ -189,11 +191,11 @@ var microversium = MaterialBuilder(32027, "microversium")
     .flags("generate_plate", "generate_frame")
     .build();
 
-//var quantum_fluxed_eternium = MaterialBuilder(32028, "quantum_fluxed_eternium")
-//    .ingot()
-//    .color(0xf55c3d).iconSet("SHINY")
-//    .flags(["generate_plate"])
-//    .build();
+var draconic_superconductor = MaterialBuilder(32028, "draconic_superconductor")
+    .ingot()
+    .color(0xf5f0f4).iconSet("SHINY")
+    .cableProperties(2147483647, 4, 0, true)
+    .build();
 
 MaterialRegistry.get("niobium").addOre();
 MaterialRegistry.get("osmium").addOre();

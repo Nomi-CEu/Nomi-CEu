@@ -994,8 +994,8 @@ naquadah_reactor_2.recipeMap
 // lapidary dynamo
 large_lapidary_dynamo.recipeMap
     .recipeBuilder()
-    .duration(300)
-    .EUt(-2048)
+    .duration(19200)
+    .EUt(-32)
     .inputs(<ore:gemDiamond>)
     .buildAndRegister();
 

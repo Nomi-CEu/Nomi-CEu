@@ -12,9 +12,9 @@ furnace.remove(<ore:gemQuartzBlack>);
 furnace.remove(<ore:ingotDraconium>);
 furnace.remove(<ore:ingotMithril>);
 furnace.remove(<appliedenergistics2:material:5>);
-furnace.remove(<thermalfoundation:material:167>, <metaitem:dustEnderium>);
-furnace.remove(<thermalfoundation:material:166>, <metaitem:dustLumium>);
-furnace.remove(<thermalfoundation:material:165>, <metaitem:dustSignalum>);
+furnace.remove(<metaitem:ingotEnderium>, <metaitem:dustEnderium>);
+furnace.remove(<metaitem:ingotLumium>, <metaitem:dustLumium>);
+furnace.remove(<metaitem:ingotSignalum>, <metaitem:dustSignalum>);
 
 //  Tier 0										Steel, Silicon
 //	Tier 1	[1000 temp]		120		Copper		Black Steel, Annealed Copper
@@ -200,7 +200,7 @@ blast_furnace.recipeBuilder().inputs([<ore:dustSignalum>]).fluidInputs([<liquid:
 <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotSignalum>], null).remove();
 vacuum_freezer.recipeBuilder()
 	.inputs(<metaitem:ingotHotSignalum>)
-	.outputs(<thermalfoundation:material:165>)
+	.outputs(<metaitem:ingotSignalum>)
 	.duration(195)
 	.EUt(120)
 	.buildAndRegister();
@@ -223,7 +223,7 @@ recipes.addShapeless(<metaitem:dustLumium> * 4, [
 <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotLumium>], null).remove();
 vacuum_freezer.recipeBuilder()
 	.inputs(<metaitem:ingotHotLumium>)
-	.outputs(<thermalfoundation:material:166>)
+	.outputs(<metaitem:ingotLumium>)
 	.duration(270)
 	.EUt(120)
 	.buildAndRegister();
@@ -264,12 +264,12 @@ blast_furnace.recipeBuilder().inputs([<thermalfoundation:material:103>]).fluidIn
 <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotEnderium>], null).remove();
 vacuum_freezer.recipeBuilder()
 	.inputs(<metaitem:ingotHotEnderium>)
-	.outputs(<thermalfoundation:material:167>)
+	.outputs(<metaitem:ingotEnderium>)
 	.duration(555)
 	.EUt(120)
 	.buildAndRegister();
 //Draconium [tier 14]
-blast_furnace.recipeBuilder().inputs([<draconicevolution:draconium_dust>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
 blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
 //Naquadah Alloy [tier 15]		DISABLED IN FAVOR OF VANILLA RECIPE
@@ -299,13 +299,13 @@ blast_furnace.recipeBuilder().inputs([<redstonearsenal:material>]).outputs([<red
 
 
 //EnderIO Alloys
-alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>,<minecraft:redstone>]).outputs([<enderio:item_alloy_ingot:4>]).duration(150).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>,<ore:dustPulsating>]).outputs([<enderio:item_alloy_ingot:5>]).duration(150).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>,<minecraft:redstone>]).outputs([<metaitem:ingotConductiveIron>]).duration(150).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>,<ore:dustPulsating>]).outputs([<metaitem:ingotPulsatingIron>]).duration(150).EUt(16).buildAndRegister();
 
 
 //Removed
 //blast_furnace.findRecipe(120, [<metaitem:dustNaquadria>], [null]).remove();		//Naquadriah
-furnace.addRecipe(<metaitem:ingotNaquadria>, <metaitem:dustNaquadria>, 0.0);
+//furnace.addRecipe(<metaitem:ingotNaquadria>, <metaitem:dustNaquadria>, 0.0);
 
 
 

@@ -497,7 +497,7 @@ mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_helmet>);
 mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_helmet>, [
 [null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null],
 [null,<avaritia:resource:4>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<draconicevolution:draconic_helm>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<avaritia:resource:6>,<avaritia:resource:6>,<armorplus:the_ultimate_helmet>,<avaritia:resource:6>,<avaritia:resource:6>,<avaritia:resource:4>,null],
+[null,<avaritia:resource:4>,<ore:ingotInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_helmet>,<ore:ingotInfinity>,<ore:ingotInfinity>,<avaritia:resource:4>,null],
 [null,<avaritia:resource:4>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<draconicevolution:wyvern_helm>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<avaritia:resource:4>,null],
 [null,<avaritia:resource:4>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<avaritia:resource:4>,null],
 [null,null,null,<armorplus:the_ultimate_helmet>,null,<armorplus:the_ultimate_helmet>,null,null,null],
@@ -555,9 +555,9 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_chestplate>, [
 [<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
 [<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
 [null,<avaritia:resource:4>,<draconicevolution:draconic_chest>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<draconicevolution:wyvern_chest>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:6>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:6>,<avaritia:block_resource:1>,<avaritia:resource:6>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:6>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
+[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
+[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<avaritia:block_resource:1>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
+[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
 [null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
 [null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null]]); 
 
@@ -608,7 +608,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_pants>, [
 [<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
 [<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
 [<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<avaritia:resource:6>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<avaritia:resource:6>,<avaritia:resource:4>],
+[<avaritia:resource:4>,<ore:ingotInfinity>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<ore:ingotInfinity>,<avaritia:resource:4>],
 [<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
 [<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
 [<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>]]); 
@@ -664,7 +664,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_boots>, [
 [null,<avaritia:resource:4>,<draconicevolution:draconic_boots>,<avaritia:resource:4>,null,<avaritia:resource:4>,<draconicevolution:wyvern_boots>,<avaritia:resource:4>,null],
 [<avaritia:resource:4>,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,null,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,<avaritia:resource:4>],
 [<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,null,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:6>,null,<avaritia:resource:6>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
+[<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<ore:ingotInfinity>,null,<ore:ingotInfinity>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
 [null,null,null,null,null,null,null,null,null],
 [null,null,null,null,null,null,null,null,null],
 [null,null,null,null,null,null,null,null,null]]); 

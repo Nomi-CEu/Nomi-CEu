@@ -483,8 +483,8 @@ makeExtremeRecipe9(<contenttweaker:eternalcatalyst>,
 
 
 ////////////////////////// Infinity Ingot ///////////////////////
-mods.avaritia.ExtremeCrafting.remove(<avaritia:resource:6>);
-makeExtremeRecipe9(<avaritia:resource:6>,
+//mods.avaritia.ExtremeCrafting.remove(<ore:ingotInfinity>);
+makeExtremeRecipe9(<metaitem:ingotInfinity>,
     ["         ",
      "     ABBB",
      "  ABBBCDB",
@@ -558,16 +558,16 @@ val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType:
 
 makeExtremeRecipe9(<metaitem:creative_chest> * 2,
     ["ABBBBBBBA",
-     "BCTGDEFCB",
-     "BFSEHGSTB",
+     "BCTGDETCB",
+     "BFSEHGSFB",
      "BUJXIXJUB",
-     "BCSWKWSCB",
+     "BNSWKWSNB",
      "BUJXLXJUB",
-     "BTSEMGSFB",
-     "BCFGDETCB",
+     "BFSEMGSFB",
+     "BCTGDETCB",
      "ABBBBBBBA"],
     { A : <storagedrawers:upgrade_creative>,
-      B : <avaritia:resource:6>,
+      B : <ore:ingotInfinity>,
       C : <draconicevolution:creative_rf_source>,
       D : creativecell.only(isCreative),
       E : <extrautils2:creativeenergy>,
@@ -579,8 +579,9 @@ makeExtremeRecipe9(<metaitem:creative_chest> * 2,
       K : <avaritia:infinity_sword>,
       L : <avaritia:infinity_pants>,
       M : <avaritia:infinity_boots>,
+      N : <metaitem:infinite_energy>,
       S : <solarflux:solar_panel_infinity>,
-      T : creativetank.only(isCreative),
+      T : <metaitem:creative_tank>,
       U : <appliedenergistics2:creative_energy_cell>,
       W : <thermalcultivation:watering_can:32000>.withTag({Water: 0, Mode: 4}, false),
       X : <thermalexpansion:capacitor:32000>.withTag({Energy: 250000000}, false)
@@ -635,7 +636,7 @@ makeExtremeRecipe9(<avaritia:infinity_sword>,
      "  CB     ",
      " C  B    ",
      "N        "],
-    { A : <avaritia:resource:6>,
+    { A : <ore:ingotInfinity>,
       B : <ore:ingotCrystalMatrix>,
       C : <ore:ingotNeutronium>,
       D : <armorplus:super_star_sword>,
@@ -663,6 +664,19 @@ makeExtremeRecipe9(<draconicevolution:creative_rf_source>,
       F : <draconicevolution:reactor_component>,
       G : <draconicevolution:reactor_core>,
       H : <avaritia:resource:5> });
+
+// GT Infinite Energy
+mods.extendedcrafting.TableCrafting.addShaped(0, <metaitem:infinite_energy>, [
+	[<ore:wireGtHexMercuryBariumCalciumCuprate>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexMercuryBariumCalciumCuprate>], 
+	[<ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>], 
+	[<ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>], 
+	[<ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>], 
+	[<ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <draconicevolution:creative_rf_source>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>], 
+	[<ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>], 
+	[<ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>], 
+	[<ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>], 
+	[<ore:wireGtHexMercuryBariumCalciumCuprate>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexMercuryBariumCalciumCuprate>]
+]);
 
 makeExtremeRecipe9(<extrautils2:passivegenerator:6>,
     ["AABCDCBAA",

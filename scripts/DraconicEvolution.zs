@@ -98,45 +98,45 @@ recipes.addShaped(<draconicevolution:particle_generator>, [
 	[<minecraft:blaze_rod>, <draconicevolution:draconic_core:*>, <minecraft:blaze_rod>], 
 	[<actuallyadditions:block_crystal_empowered>, <minecraft:blaze_rod>, <actuallyadditions:block_crystal_empowered>]]);
 
-	//Draconium
-mods.jei.JEI.removeAndHide(<metaitem:blockDraconium>);
-mods.jei.JEI.removeAndHide(<metaitem:ingotDraconium>);
-mods.jei.JEI.removeAndHide(<metaitem:nuggetDraconium>);
-mods.jei.JEI.removeAndHide(<metaitem:dustDraconium>);
-//GTCE Nugget Recipe
-solidifier.findRecipe(7, [<metaitem:shape.mold.nugget>], [<liquid:draconium> * 144]).remove();
-//GTCE ingot recipe
-solidifier.findRecipe(7, [<metaitem:shape.mold.ingot>], [<liquid:draconium> * 144]).remove();
-//GTCE Block recipe
-solidifier.findRecipe(7, [<metaitem:shape.mold.block>], [<liquid:draconium> * 1296]).remove();
-
-//Nugget Recipe
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:draconium> * 144)
-	.notConsumable(<metaitem:shape.mold.nugget>)
-	.outputs([<draconicevolution:nugget> * 9])
-	.duration(200).EUt(30).buildAndRegister();
-
-//Ingot Recipe
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:draconium> * 144)
-	.notConsumable(<metaitem:shape.mold.ingot>)
-	.outputs([<draconicevolution:draconium_ingot>])
-	.duration(200).EUt(30).buildAndRegister();
-
-//Block Recipe
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:draconium> * 1296)
-	.notConsumable(<metaitem:shape.mold.block>)
-	.outputs([<draconicevolution:draconium_block>])
-	.duration(200).EUt(30).buildAndRegister();
-
-recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:dustSmallDraconium>,<metaitem:dustSmallDraconium>,<metaitem:dustSmallDraconium>,<metaitem:dustSmallDraconium>]);
-
-recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>]);
-furnace.remove(<metaitem:nuggetDraconium>);
-//GTCE Draconium ingot from dust
-furnace.remove(<metaitem:ingotDraconium>);
+//	//Draconium
+//mods.jei.JEI.removeAndHide(<metaitem:blockDraconium>);
+//mods.jei.JEI.removeAndHide(<metaitem:ingotDraconium>);
+//mods.jei.JEI.removeAndHide(<metaitem:nuggetDraconium>);
+//mods.jei.JEI.removeAndHide(<metaitem:dustDraconium>);
+////GTCE Nugget Recipe
+//solidifier.findRecipe(7, [<metaitem:shape.mold.nugget>], [<liquid:draconium> * 144]).remove();
+////GTCE ingot recipe
+//solidifier.findRecipe(7, [<metaitem:shape.mold.ingot>], [<liquid:draconium> * 144]).remove();
+////GTCE Block recipe
+//solidifier.findRecipe(7, [<metaitem:shape.mold.block>], [<liquid:draconium> * 1296]).remove();
+//
+////Nugget Recipe
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:draconium> * 144)
+//	.notConsumable(<metaitem:shape.mold.nugget>)
+//	.outputs([<draconicevolution:nugget> * 9])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+////Ingot Recipe
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:draconium> * 144)
+//	.notConsumable(<metaitem:shape.mold.ingot>)
+//	.outputs([<draconicevolution:draconium_ingot>])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+////Block Recipe
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:draconium> * 1296)
+//	.notConsumable(<metaitem:shape.mold.block>)
+//	.outputs([<draconicevolution:draconium_block>])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+//recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:dustSmallDraconium>,<metaitem:dustSmallDraconium>,<metaitem:dustSmallDraconium>,<metaitem:dustSmallDraconium>]);
+//
+//recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>,<metaitem:dustTinyDraconium>]);
+//furnace.remove(<metaitem:nuggetDraconium>);
+////GTCE Draconium ingot from dust
+//furnace.remove(<metaitem:ingotDraconium>);
 
 //GTCE tiny pile -> GTCE dust
 //packager.findRecipe(12, [<metaitem:dustTinyDraconium> * 9, <metaitem:circuit.integrated>.withTag({Configuration: 1, not_consumed: 1 as byte})], [null]).remove();
@@ -148,28 +148,28 @@ furnace.remove(<metaitem:ingotDraconium>);
 //packager.findRecipe(12, [<draconicevolution:nugget> * 9, <metaitem:circuit.integrated>.withTag({Configuration: 1, not_consumed: 1 as byte})], [null]).remove();
 
 //macerator.findRecipe(2, [<draconicevolution:draconium_ingot>], [null]).remove();
-macerator.recipeBuilder()
-	.inputs(<draconicevolution:draconium_ingot>)
-	.outputs(<draconicevolution:draconium_dust>)
-	.duration(30).EUt(8).buildAndRegister();
+//macerator.recipeBuilder()
+//	.inputs(<draconicevolution:draconium_ingot>)
+//	.outputs(<draconicevolution:draconium_dust>)
+//	.duration(30).EUt(8).buildAndRegister();
 
 //macerator.findRecipe(2, [<ore:plateDraconium>], [null]).remove();
-macerator.recipeBuilder()
-	.inputs(<ore:plateDraconium>)
-	.outputs(<draconicevolution:draconium_dust>)
-	.duration(30).EUt(8).buildAndRegister();
+//macerator.recipeBuilder()
+//	.inputs(<ore:plateDraconium>)
+//	.outputs(<draconicevolution:draconium_dust>)
+//	.duration(30).EUt(8).buildAndRegister();
 
 //macerator.findRecipe(32, [<ore:gearDraconium>], [null]).remove();
-macerator.recipeBuilder()
-	.inputs(<ore:gearDraconium>)
-	.outputs(<draconicevolution:draconium_dust> * 4)
-	.duration(120).EUt(8).buildAndRegister();
+//macerator.recipeBuilder()
+//	.inputs(<ore:gearDraconium>)
+//	.outputs(<draconicevolution:draconium_dust> * 4)
+//	.duration(120).EUt(8).buildAndRegister();
 
 //macerator.findRecipe(32, [<draconicevolution:draconium_block>], [null]).remove();
-macerator.recipeBuilder()
-	.inputs(<draconicevolution:draconium_block>)
-	.outputs(<draconicevolution:draconium_dust> * 9)
-	.duration(270).EUt(8).buildAndRegister();
+//macerator.recipeBuilder()
+//	.inputs(<draconicevolution:draconium_block>)
+//	.outputs(<draconicevolution:draconium_dust> * 9)
+//	.duration(270).EUt(8).buildAndRegister();
 
 //macerator.findRecipe(8, [<gregtech:cable:4710>], [null]).remove();
 //macerator.recipeBuilder()
@@ -224,20 +224,20 @@ macerator.recipeBuilder()
 //extruder.findRecipe(64, [<metaitem:shape.extruder.block>.withTag({not_consumed: 1 as byte}), <draconicevolution:draconium_ingot> * 9], [null]).remove();
 
 //Awakened Draconium
-fluidextractor.recipeBuilder()
-	.inputs(<draconicevolution:nugget:1>)
-	.fluidOutputs([<liquid:awakened_draconium> * 16])
-	.duration(200).EUt(30).buildAndRegister();
-
-fluidextractor.recipeBuilder()
-	.inputs(<draconicevolution:draconic_ingot>)
-	.fluidOutputs([<liquid:awakened_draconium> * 144])
-	.duration(200).EUt(30).buildAndRegister();
-
-fluidextractor.recipeBuilder()
-	.inputs(<draconicevolution:draconic_block>)
-	.fluidOutputs([<liquid:awakened_draconium> * 1296])
-	.duration(200).EUt(30).buildAndRegister();
+//fluidextractor.recipeBuilder()
+//	.inputs(<draconicevolution:nugget:1>)
+//	.fluidOutputs([<liquid:awakened_draconium> * 16])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+//fluidextractor.recipeBuilder()
+//	.inputs(<draconicevolution:draconic_ingot>)
+//	.fluidOutputs([<liquid:awakened_draconium> * 144])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+//fluidextractor.recipeBuilder()
+//	.inputs(<draconicevolution:draconic_block>)
+//	.fluidOutputs([<liquid:awakened_draconium> * 1296])
+//	.duration(200).EUt(30).buildAndRegister();
 
 //fluidextractor.recipeBuilder()
 //	.inputs(<ore:gearAwakenedDraconium>)
@@ -249,32 +249,32 @@ fluidextractor.recipeBuilder()
 //	.fluidOutputs([<liquid:awakened_draconium> * 144])
 //	.duration(200).EUt(30).buildAndRegister();
 
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:awakened_draconium> * 144)
-	.notConsumable(<metaitem:shape.mold.nugget>)
-	.outputs([<draconicevolution:nugget:1> * 9])
-	.duration(200).EUt(30).buildAndRegister();
-
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:awakened_draconium> * 144)
-	.notConsumable(<metaitem:shape.mold.ingot>)
-	.outputs([<draconicevolution:draconic_ingot>])
-	.duration(200).EUt(30).buildAndRegister();
-
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:awakened_draconium> * 1296)
-	.notConsumable(<metaitem:shape.mold.block>)
-	.outputs([<draconicevolution:draconic_block>])
-	.duration(200).EUt(30).buildAndRegister();
-
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:awakened_draconium> * 144)
-	.notConsumable(<metaitem:shape.mold.plate>)
-	.outputs([<ore:plateAwakenedDraconium>.firstItem])
-	.duration(200).EUt(30).buildAndRegister();
-
-solidifier.recipeBuilder()
-	.fluidInputs(<liquid:awakened_draconium> * 576)
-	.notConsumable(<metaitem:shape.mold.gear>)
-	.outputs([<ore:gearAwakenedDraconium>.firstItem])
-	.duration(200).EUt(30).buildAndRegister();
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:awakened_draconium> * 144)
+//	.notConsumable(<metaitem:shape.mold.nugget>)
+//	.outputs([<draconicevolution:nugget:1> * 9])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:awakened_draconium> * 144)
+//	.notConsumable(<metaitem:shape.mold.ingot>)
+//	.outputs([<draconicevolution:draconic_ingot>])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:awakened_draconium> * 1296)
+//	.notConsumable(<metaitem:shape.mold.block>)
+//	.outputs([<draconicevolution:draconic_block>])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:awakened_draconium> * 144)
+//	.notConsumable(<metaitem:shape.mold.plate>)
+//	.outputs([<ore:plateAwakenedDraconium>.firstItem])
+//	.duration(200).EUt(30).buildAndRegister();
+//
+//solidifier.recipeBuilder()
+//	.fluidInputs(<liquid:awakened_draconium> * 576)
+//	.notConsumable(<metaitem:shape.mold.gear>)
+//	.outputs([<ore:gearAwakenedDraconium>.firstItem])
+//	.duration(200).EUt(30).buildAndRegister();

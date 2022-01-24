@@ -47,12 +47,12 @@
 		"ingredients": [
 			"draconicevolution:chaotic_core",
 			"draconicevolution:chaotic_core",
-			"gregtech:wire_single,1,432",
-			"gregtech:wire_single,1,432",
+			"gregtech:wire_single,1,32028",
+			"gregtech:wire_single,1,32028",
 			"extendedcrafting:storage,1,4",
 			"extendedcrafting:storage,1,4",
-			"gregtech:wire_single,1,432",
-			"gregtech:wire_single,1,432",
+			"gregtech:wire_single,1,32028",
+			"gregtech:wire_single,1,32028",
 			"draconicevolution:chaotic_core",
 			"draconicevolution:chaotic_core"
 		]
@@ -87,8 +87,8 @@
 			"solarflux:solar_panel_8",
 			"enderio:item_endergy_conduit,1,10",
 			"enderio:item_endergy_conduit,1,10",
-			"draconicevolution:draconium_block",
-			"draconicevolution:draconium_block",
+			"gregtech:meta_block_compressed_2000,1,1",
+			"gregtech:meta_block_compressed_2000,1,1",
 			"enderio:item_endergy_conduit,1,10",
 			"enderio:item_endergy_conduit,1,10",
 			"solarflux:solar_panel_8",
@@ -107,16 +107,16 @@
 		"energy": 2600000000,
 		"tier": 2,
 		"ingredients": [
-			"draconicevolution:draconic_block",
-			"draconicevolution:draconic_block",
+			"gregtech:meta_block_compressed_2000,1,2",
+			"gregtech:meta_block_compressed_2000,1,2",
 			"draconicevolution:chaos_shard",
 			"draconicevolution:chaos_shard",
 			"contenttweaker:stabilizedeinsteinium",
 			"contenttweaker:stabilizedeinsteinium",
 			"draconicevolution:chaos_shard",
 			"draconicevolution:chaos_shard",
-			"draconicevolution:draconic_block",
-			"draconicevolution:draconic_block"
+			"gregtech:meta_block_compressed_2000,1,2",
+			"gregtech:meta_block_compressed_2000,1,2"
 		]
 	},
 	{
@@ -221,8 +221,8 @@
 		"ingredients": [
 			"extrautils2:compressedcobblestone,1,3",
 			"enderio:block_alloy,1,6",
-			"draconicevolution:draconium_dust",
-			"draconicevolution:draconium_dust",
+			"gregtech:meta_dust,1,32001",
+			"gregtech:meta_dust,1,32001",
 			"thermalfoundation:material,1,1024",
 			"thermalfoundation:material,1,1024",
 			"armorplus:compressed_obsidian",
@@ -243,27 +243,27 @@
 		"energy": 41943000,
 		"tier": 2,
 		"ingredients": [
-			"draconicevolution:draconic_ingot",
-			"draconicevolution:draconic_ingot",
+			"gregtech:meta_ingot,1,32002",
+			"gregtech:meta_ingot,1,32002",
 			"draconicevolution:awakened_core",
 			"draconicevolution:awakened_core",
-			"ore:compressedoctadiccap",
-			"ore:compressedoctadiccap",
+			"gregtech:meta_item_1,1,750",
+			"gregtech:meta_item_1,1,750",
 			"actuallyadditions:block_crystal_empowered",
 			"actuallyadditions:block_crystal_empowered",
-			"draconicevolution:draconic_ingot",
-			"draconicevolution:draconic_ingot"
+			"gregtech:meta_ingot,1,32002",
+			"gregtech:meta_ingot,1,32002"
 		]
 	},
 	{
 		"mode": "REMOVE",
-		"result": "draconicevolution:draconic_block",
-		"catalyst": "draconicevolution:draconium_block"
+		"result": "gregtech:meta_block_compressed_2000,1,2",
+		"catalyst": "gregtech:meta_block_compressed_2000,1,1"
 	},
 	{
 		"mode": "ADD",
-		"result": "draconicevolution:draconic_block,5,0",
-		"catalyst": "draconicevolution:draconium_block,5,0",
+		"result": "gregtech:meta_block_compressed_2000,5,2",
+		"catalyst": "gregtech:meta_block_compressed_2000,5,1",
 		"energy": 4000000000,
 		"tier": 1,
 		"ingredients": [
@@ -289,8 +289,8 @@
 		"ingredients": [
 			"draconicevolution:wyvern_core",
 			"draconicevolution:wyvern_core",
-			"draconicevolution:draconic_block",
-			"draconicevolution:draconic_block",
+			"gregtech:meta_block_compressed_2000,1,2",
+			"gregtech:meta_block_compressed_2000,1,2",
 			"draconicevolution:wyvern_core",
 			"draconicevolution:wyvern_core"
 		]

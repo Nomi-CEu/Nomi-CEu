@@ -246,101 +246,101 @@ alloy.recipeBuilder()
 
 //Ensure Correct Solidification
 
-val liquidMap as IItemStack[][ILiquidStack] = {
-    <liquid:electrical_steel> : [<enderio:item_alloy_ingot:0>, <enderio:block_alloy:0>, <enderio:item_alloy_nugget:0>],
-    <liquid:energetic_alloy>  : [<enderio:item_alloy_ingot:1>, <enderio:block_alloy:1>, <enderio:item_alloy_nugget:1>],
-    <liquid:vibrant_alloy>    : [<enderio:item_alloy_ingot:2>, <enderio:block_alloy:2>, <enderio:item_alloy_nugget:2>],
-    <liquid:conductive_iron>  : [<enderio:item_alloy_ingot:4>, <enderio:block_alloy:4>, <enderio:item_alloy_nugget:4>],
-    <liquid:pulsating_iron>   : [<enderio:item_alloy_ingot:5>, <enderio:block_alloy:5>, <enderio:item_alloy_nugget:5>],
-    <liquid:dark_steel>       : [<enderio:item_alloy_ingot:6>, <enderio:block_alloy:6>, <enderio:item_alloy_nugget:6>],
-    <liquid:end_steel>        : [<enderio:item_alloy_ingot:8>, <enderio:block_alloy:8>, <enderio:item_alloy_nugget:8>]
-};
+//val liquidMap as IItemStack[][ILiquidStack] = {
+//    <liquid:electrical_steel> : [<enderio:item_alloy_ingot:0>, <enderio:block_alloy:0>, <enderio:item_alloy_nugget:0>],
+//    <liquid:energetic_alloy>  : [<enderio:item_alloy_ingot:1>, <enderio:block_alloy:1>, <enderio:item_alloy_nugget:1>],
+//    <liquid:vibrant_alloy>    : [<enderio:item_alloy_ingot:2>, <enderio:block_alloy:2>, <enderio:item_alloy_nugget:2>],
+//    <liquid:conductive_iron>  : [<enderio:item_alloy_ingot:4>, <enderio:block_alloy:4>, <enderio:item_alloy_nugget:4>],
+//    <liquid:pulsating_iron>   : [<enderio:item_alloy_ingot:5>, <enderio:block_alloy:5>, <enderio:item_alloy_nugget:5>],
+//    <liquid:dark_steel>       : [<enderio:item_alloy_ingot:6>, <enderio:block_alloy:6>, <enderio:item_alloy_nugget:6>],
+//    <liquid:end_steel>        : [<enderio:item_alloy_ingot:8>, <enderio:block_alloy:8>, <enderio:item_alloy_nugget:8>]
+//};
+//
+//for liquid, items in liquidMap {
+//
+//    //Ingots
+//    solidifier.findRecipe(7, [<metaitem:shape.mold.ingot>], [liquid * 144]).remove();
+//    solidifier.recipeBuilder()
+//        .fluidInputs(liquid * 144)
+//        .notConsumable(<metaitem:shape.mold.ingot>)
+//        .outputs(items[0])
+//        .duration(20).EUt(8).buildAndRegister();
+//
+//    //Blocks
+//    solidifier.findRecipe(7, [<metaitem:shape.mold.block>], [liquid * 1296]).remove();
+//    solidifier.recipeBuilder()
+//        .fluidInputs(liquid * 1296)
+//        .notConsumable(<metaitem:shape.mold.block>)
+//        .outputs(items[1])
+//        .duration(98).EUt(8).buildAndRegister();
+//
+//    //Nuggets
+//    solidifier.findRecipe(7, [<metaitem:shape.mold.nugget>], [liquid * 144]).remove();
+//    solidifier.recipeBuilder()
+//        .fluidInputs(liquid * 144)
+//        .notConsumable(<metaitem:shape.mold.nugget>)
+//        .outputs(items[2] * 9)
+//        .duration(98).EUt(8).buildAndRegister();
+//}
+//
+//val packagerArray = [
+//    [<enderio:item_alloy_nugget:6>,<enderio:item_alloy_ingot:6>],
+//    [<enderio:item_alloy_nugget:8>,<enderio:item_alloy_ingot:8>],
+//    [<enderio:item_alloy_nugget:5>,<enderio:item_alloy_ingot:5>],
+//    [<enderio:item_alloy_nugget:4>,<enderio:item_alloy_ingot:4>],
+//    [<enderio:item_alloy_nugget:1>,<enderio:item_alloy_ingot:1>],
+//    [<enderio:item_alloy_nugget:0>,<enderio:item_alloy_ingot:0>],
+//    [<enderio:item_alloy_nugget:2>,<enderio:item_alloy_ingot:2>]
+//] as IItemStack[][];
+//
+//for nugget in packagerArray {
+//    
+//    compressor.findRecipe(2, [nugget[0] * 9], [null]).remove();
+//
+//    compressor.recipeBuilder()
+//        .inputs(nugget[0]*9)
+////        .notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 1}))
+//        .outputs(nugget[1])
+//        .duration(300).EUt(2).buildAndRegister();
+//}
 
-for liquid, items in liquidMap {
-
-    //Ingots
-    solidifier.findRecipe(7, [<metaitem:shape.mold.ingot>], [liquid * 144]).remove();
-    solidifier.recipeBuilder()
-        .fluidInputs(liquid * 144)
-        .notConsumable(<metaitem:shape.mold.ingot>)
-        .outputs(items[0])
-        .duration(20).EUt(8).buildAndRegister();
-
-    //Blocks
-    solidifier.findRecipe(7, [<metaitem:shape.mold.block>], [liquid * 1296]).remove();
-    solidifier.recipeBuilder()
-        .fluidInputs(liquid * 1296)
-        .notConsumable(<metaitem:shape.mold.block>)
-        .outputs(items[1])
-        .duration(98).EUt(8).buildAndRegister();
-
-    //Nuggets
-    solidifier.findRecipe(7, [<metaitem:shape.mold.nugget>], [liquid * 144]).remove();
-    solidifier.recipeBuilder()
-        .fluidInputs(liquid * 144)
-        .notConsumable(<metaitem:shape.mold.nugget>)
-        .outputs(items[2] * 9)
-        .duration(98).EUt(8).buildAndRegister();
-}
-
-val packagerArray = [
-    [<enderio:item_alloy_nugget:6>,<enderio:item_alloy_ingot:6>],
-    [<enderio:item_alloy_nugget:8>,<enderio:item_alloy_ingot:8>],
-    [<enderio:item_alloy_nugget:5>,<enderio:item_alloy_ingot:5>],
-    [<enderio:item_alloy_nugget:4>,<enderio:item_alloy_ingot:4>],
-    [<enderio:item_alloy_nugget:1>,<enderio:item_alloy_ingot:1>],
-    [<enderio:item_alloy_nugget:0>,<enderio:item_alloy_ingot:0>],
-    [<enderio:item_alloy_nugget:2>,<enderio:item_alloy_ingot:2>]
-] as IItemStack[][];
-
-for nugget in packagerArray {
-    
-    compressor.findRecipe(2, [nugget[0] * 9], [null]).remove();
-
-    compressor.recipeBuilder()
-        .inputs(nugget[0]*9)
-//        .notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 1}))
-        .outputs(nugget[1])
-        .duration(300).EUt(2).buildAndRegister();
-}
-
-//Furnace Recipes
-//End Steel
-furnace.remove(<metaitem:ingotEndSteel>, <metaitem:dustEndSteel>);
-furnace.addRecipe(<enderio:item_alloy_ingot:8>, <metaitem:dustEndSteel>);
-
-//Vibrant Alloy
-furnace.remove(<metaitem:ingotVibrantAlloy>, <metaitem:dustVibrantAlloy>);
-furnace.addRecipe(<enderio:item_alloy_ingot:2>, <metaitem:dustVibrantAlloy>);
-
-//Pulsating Iron
-furnace.remove(<metaitem:ingotPulsatingIron>, <metaitem:dustPulsatingIron>);
-furnace.addRecipe(<enderio:item_alloy_ingot:5>, <metaitem:dustPulsatingIron>);
-
-//Energetic Alloy
-furnace.remove(<metaitem:ingotEnergeticAlloy>, <metaitem:dustEnergeticAlloy>);
-furnace.addRecipe(<enderio:item_alloy_ingot:1>, <metaitem:dustEnergeticAlloy>);
-
-//Electrical Steel
-furnace.remove(<metaitem:ingotElectricalSteel>, <metaitem:dustElectricalSteel>);
-furnace.addRecipe(<enderio:item_alloy_ingot:0>, <metaitem:dustElectricalSteel>);
-
-//Dark Steel
-furnace.remove(<metaitem:ingotDarkSteel>, <metaitem:dustDarkSteel>);
-furnace.addRecipe(<enderio:item_alloy_ingot:6>, <metaitem:dustDarkSteel>);
-//Fixing Multismelter output of the dusts of the GTCE variants of Ender IO ingots
-val materialList as IItemStack[][] = [
-    
-    [<metaitem:dustElectricalSteel>, <enderio:item_alloy_ingot>],
-    [<metaitem:dustEnergeticAlloy>, <enderio:item_alloy_ingot:1>],
-    [<metaitem:dustVibrantAlloy>, <enderio:item_alloy_ingot:2>],
-    [<metaitem:dustDarkSteel>, <enderio:item_alloy_ingot:6>],
-    [<metaitem:dustEndSteel>, <enderio:item_alloy_ingot:8>],
-    [<metaitem:dustPulsatingIron>, <enderio:item_alloy_ingot:5>],
-    [<metaitem:dustConductiveIron>, <enderio:item_alloy_ingot:4>]
-
-
-] as IItemStack[][];
+////Furnace Recipes
+////End Steel
+//furnace.remove(<metaitem:ingotEndSteel>, <metaitem:dustEndSteel>);
+//furnace.addRecipe(<enderio:item_alloy_ingot:8>, <metaitem:dustEndSteel>);
+//
+////Vibrant Alloy
+//furnace.remove(<metaitem:ingotVibrantAlloy>, <metaitem:dustVibrantAlloy>);
+//furnace.addRecipe(<enderio:item_alloy_ingot:2>, <metaitem:dustVibrantAlloy>);
+//
+////Pulsating Iron
+//furnace.remove(<metaitem:ingotPulsatingIron>, <metaitem:dustPulsatingIron>);
+//furnace.addRecipe(<enderio:item_alloy_ingot:5>, <metaitem:dustPulsatingIron>);
+//
+////Energetic Alloy
+//furnace.remove(<metaitem:ingotEnergeticAlloy>, <metaitem:dustEnergeticAlloy>);
+//furnace.addRecipe(<enderio:item_alloy_ingot:1>, <metaitem:dustEnergeticAlloy>);
+//
+////Electrical Steel
+//furnace.remove(<metaitem:ingotElectricalSteel>, <metaitem:dustElectricalSteel>);
+//furnace.addRecipe(<enderio:item_alloy_ingot:0>, <metaitem:dustElectricalSteel>);
+//
+////Dark Steel
+//furnace.remove(<metaitem:ingotDarkSteel>, <metaitem:dustDarkSteel>);
+//furnace.addRecipe(<enderio:item_alloy_ingot:6>, <metaitem:dustDarkSteel>);
+////Fixing Multismelter output of the dusts of the GTCE variants of Ender IO ingots
+//val materialList as IItemStack[][] = [
+//    
+//    [<metaitem:dustElectricalSteel>, <enderio:item_alloy_ingot>],
+//    [<metaitem:dustEnergeticAlloy>, <enderio:item_alloy_ingot:1>],
+//    [<metaitem:dustVibrantAlloy>, <enderio:item_alloy_ingot:2>],
+//    [<metaitem:dustDarkSteel>, <enderio:item_alloy_ingot:6>],
+//    [<metaitem:dustEndSteel>, <enderio:item_alloy_ingot:8>],
+//    [<metaitem:dustPulsatingIron>, <enderio:item_alloy_ingot:5>],
+//    [<metaitem:dustConductiveIron>, <enderio:item_alloy_ingot:4>]
+//
+//
+//] as IItemStack[][];
 
 
 //for dust in materialList {

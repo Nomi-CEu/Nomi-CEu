@@ -76,3 +76,11 @@ mixer.recipeBuilder()
     .inputs([<metaitem:dustRedSteel> * 3, <minecraft:blaze_powder>])
     .duration(200).EUt(30).buildAndRegister();
 
+// Draconic Superconductor
+vacuum_freezer.recipeBuilder()
+	.inputs(<metaitem:wireGtSingleDraconium>)
+	.fluidInputs(<liquid:moltennetherstar>)
+	.outputs(<metaitem:wireGtSingleDraconicSuperconductor>)
+	.duration(100)
+	.EUt(6000)
+	.buildAndRegister();
