@@ -960,16 +960,16 @@ creative_tank_provider.recipeMap
 // Naquadah Reactor Mk1 Recipes
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
-    .duration(3000)
-    .EUt(-81875)
+    .duration(7500)
+    .EUt(-32768)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
-    .duration(12000)
-    .EUt(-81875)
+    .duration(30000)
+    .EUt(-32768)
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
@@ -977,16 +977,16 @@ naquadah_reactor_1.recipeMap
 // Naquadah Reactor Mk2 Recipes
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
-    .duration(3000)
-    .EUt(-655000)
+    .duration(60000)
+    .EUt(-32768)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
-    .duration(12000)
-    .EUt(-655000)
+    .duration(240000)
+    .EUt(-32768)
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();

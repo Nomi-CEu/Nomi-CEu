@@ -147,16 +147,16 @@ recipes.addShaped(<thermalfoundation:upgrade:1>, [
 //sig upgrade
 recipes.remove(<thermalfoundation:upgrade:2>);
 recipes.addShaped(<thermalfoundation:upgrade:2>, [
-	[<moreplates:restonia_gear>, <thermalfoundation:material:357>, <moreplates:restonia_gear>],
-	[<thermalfoundation:material:357>, <thermalfoundation:storage_alloy:6>, <thermalfoundation:material:357>],
-	[<moreplates:restonia_gear>, <thermalfoundation:material:357>, <moreplates:restonia_gear>]]);
+	[<moreplates:restonia_gear>, <metaitem:plateSignalum>, <moreplates:restonia_gear>],
+	[<metaitem:plateSignalum>, <ore:blockLumium>, <metaitem:plateSignalum>],
+	[<moreplates:restonia_gear>, <metaitem:plateSignalum>, <moreplates:restonia_gear>]]);
 
 //end upgrade
 recipes.remove(<thermalfoundation:upgrade:3>);
 recipes.addShaped(<thermalfoundation:upgrade:3>, [
-	[<moreplates:emeradic_gear>, <thermalfoundation:material:359>, <moreplates:emeradic_gear>],
-	[<thermalfoundation:material:359>, <draconicevolution:draconic_core>, <thermalfoundation:material:359>],
-	[<moreplates:emeradic_gear>, <thermalfoundation:material:359>, <moreplates:emeradic_gear>]]);
+	[<moreplates:emeradic_gear>, <metaitem:plateEnderium>, <moreplates:emeradic_gear>],
+	[<metaitem:plateEnderium>, <draconicevolution:draconic_core>, <metaitem:plateEnderium>],
+	[<moreplates:emeradic_gear>, <metaitem:plateEnderium>, <moreplates:emeradic_gear>]]);
 
 //Silver Transmission Coil
 recipes.remove(<thermalfoundation:material:514>);
@@ -415,11 +415,11 @@ mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*
 //Ensure Proper Enderium/Lumium/Signalum Ingots
 
 
-val liquidMap as IItemStack[][ILiquidStack] = {
-    <liquid:signalum> : [<thermalfoundation:material:165>, <thermalfoundation:storage_alloy:5>, <thermalfoundation:material:229>],
-    <liquid:lumium>   : [<thermalfoundation:material:166>, <thermalfoundation:storage_alloy:6>, <thermalfoundation:material:230>],
-    <liquid:enderium> : [<thermalfoundation:material:167>, <thermalfoundation:storage_alloy:7>, <thermalfoundation:material:231>]
-};
+//val liquidMap as IItemStack[][ILiquidStack] = {
+//    <liquid:signalum> : [<thermalfoundation:material:165>, <thermalfoundation:storage_alloy:5>, <thermalfoundation:material:229>],
+//    <liquid:lumium>   : [<thermalfoundation:material:166>, <thermalfoundation:storage_alloy:6>, <thermalfoundation:material:230>],
+//    <liquid:enderium> : [<thermalfoundation:material:167>, <thermalfoundation:storage_alloy:7>, <thermalfoundation:material:231>]
+//};
 
 
 //ingot, block, nugget

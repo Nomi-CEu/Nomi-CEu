@@ -596,14 +596,14 @@ recipes.addShaped(<thermalexpansion:frame:130>, [
 	[<metaitem:plateElectrum>, <metaitem:stickElectrum>, <metaitem:plateElectrum>]]);
 
 recipes.addShaped(<thermalexpansion:frame:131>, [
-	[<thermalfoundation:material:357>, <metaitem:stickSignalum>, <thermalfoundation:material:357>],
+	[<metaitem:plateSignalum>, <metaitem:stickSignalum>, <metaitem:plateSignalum>],
 	[<metaitem:stickSignalum>, null, <metaitem:stickSignalum>],
-	[<thermalfoundation:material:357>, <metaitem:stickSignalum>, <thermalfoundation:material:357>]]);
+	[<metaitem:plateSignalum>, <metaitem:stickSignalum>, <metaitem:plateSignalum>]]);
 
 recipes.addShaped(<thermalexpansion:frame:132>, [
-	[<thermalfoundation:material:359>, <metaitem:stickEnderium>, <thermalfoundation:material:359>],
+	[<metaitem:plateEnderium>, <metaitem:stickEnderium>, <metaitem:plateEnderium>],
 	[<metaitem:stickEnderium>, null, <metaitem:stickEnderium>],
-	[<thermalfoundation:material:359>, <metaitem:stickEnderium>, <thermalfoundation:material:359>]]);
+	[<metaitem:plateEnderium>, <metaitem:stickEnderium>, <metaitem:plateEnderium>]]);
 
 // redstone cell frame (filled) => "micro miner engine core"
 alloy.recipeBuilder()

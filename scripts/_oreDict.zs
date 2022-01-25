@@ -105,6 +105,11 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 		<enderio:block_alloy:8>
 	],
 
+	#blockEnderium
+	<ore:blockEnderium> : [
+		<thermalfoundation:storage_alloy:7>
+	],
+
 	#blockEnergeticAlloy
 	<ore:blockEnergeticAlloy> : [
 		<enderio:block_alloy:1>
@@ -136,6 +141,11 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:storage:3>
 	],
 
+	#blockLumium
+	<ore:blockLumium> : [
+		<thermalfoundation:storage_alloy:6>
+	],
+
 	#blockManganese
 	<ore:blockManganese> : [
 		<nuclearcraft:ingot_block:11>
@@ -160,6 +170,11 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 	#blockPlatinum
 	<ore:blockPlatinum> : [
 		<thermalfoundation:storage:6>
+	],
+
+	#blockSignalum
+	<ore:blockSignalum> : [
+		<thermalfoundation:storage_alloy:5>
 	],
 
 	#blockSilver
@@ -303,6 +318,11 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:97>
 	],
 
+	#dustEnderium
+	<ore:dustEnderium> : [
+		<thermalfoundation:material:103>
+	],
+
 	#dustEnderPearl
 	<ore:dustEnderPearl> : [
 		<appliedenergistics2:material:46>,
@@ -346,6 +366,11 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 	#dustLead
 	<ore:dustLead>: [
 		<thermalfoundation:material:67>
+	],
+
+	#dustLumium
+	<ore:dustLumium> : [
+		<thermalfoundation:material:102>
 	],
 
 	#dustInvar
@@ -403,6 +428,11 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 	#dustSaltpeter
 	<ore:dustSaltpeter> : [
 		<thermalfoundation:material:772>
+	],
+
+	#dustSignalum 
+	<ore:dustSignalum> : [
+		<thermalfoundation:material:101>
 	],
 
 	#dustSilver
@@ -767,10 +797,6 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 		<libvulpes:productnugget:9>
 	],
 
-	<ore:nuggetDraconiumAwakened> : [
-		<draconicevolution:nugget:1>
-	],
-
 	<ore:nuggetBronze> : [
 		<thermalfoundation:material:227>
 	],
@@ -784,8 +810,16 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 		<draconicevolution:nugget>
 	],
 
+	<ore:nuggetDraconiumAwakened> : [
+		<draconicevolution:nugget:1>
+	],
+
 	<ore:nuggetElectrum> : [
 		<thermalfoundation:material:225>
+	],
+
+	<ore:nuggetEnderium> : [
+		<thermalfoundation:material:231>
 	],
 
 	<ore:nuggetInvar> : [
@@ -797,9 +831,17 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 		<libvulpes:productnugget:10>
 	],
 
+	<ore:nuggetLumium> : [
+		<thermalfoundation:material:230>
+	],
+
 	#nuggetPlutonium
 	<ore:nuggetPlutonium> : [
 //		<metaitem:nuggetPlutonium>
+	],
+
+	<ore:nuggetSignalum> : [
+		<thermalfoundation:material:229>
 	],
 
 	<ore:nuggetTin> : [
@@ -2000,12 +2042,12 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:material:865>);
 
 //Custom Materials Removals
 //3 Thermal Alloys (nugget, block, ingot, dust)
-mods.jei.JEI.removeAndHide(<metaitem:nuggetLumium>);
-mods.jei.JEI.removeAndHide(<metaitem:nuggetSignalum>);
-mods.jei.JEI.removeAndHide(<metaitem:nuggetEnderium>);
-mods.jei.JEI.removeAndHide(<metaitem:blockLumium>);
-mods.jei.JEI.removeAndHide(<metaitem:blockSignalum>);
-mods.jei.JEI.removeAndHide(<metaitem:blockEnderium>);
+//mods.jei.JEI.removeAndHide(<metaitem:nuggetLumium>);
+//mods.jei.JEI.removeAndHide(<metaitem:nuggetSignalum>);
+//mods.jei.JEI.removeAndHide(<metaitem:nuggetEnderium>);
+//mods.jei.JEI.removeAndHide(<metaitem:blockLumium>);
+//mods.jei.JEI.removeAndHide(<metaitem:blockSignalum>);
+//mods.jei.JEI.removeAndHide(<metaitem:blockEnderium>);
 
 //Lib Vulpes Removals
 mods.jei.JEI.removeAndHide(<libvulpes:gtplug>);
@@ -2309,11 +2351,11 @@ solidifier.recipeBuilder()
     .duration(200).EUt(30).buildAndRegister();
 
 // Crystal Matrix Plate
-solidifier.recipeBuilder()
-    .outputs([<ore:plateCrystalMatrix>.firstItem])
-    .fluidInputs(<liquid:moltencrystalmatrix> * 144)
-    .notConsumable(<metaitem:shape.mold.plate>)
-    .duration(200).EUt(30).buildAndRegister();
+//solidifier.recipeBuilder()
+//    .outputs([<ore:plateCrystalMatrix>.firstItem])
+//    .fluidInputs(<liquid:moltencrystalmatrix> * 144)
+//    .notConsumable(<metaitem:shape.mold.plate>)
+//    .duration(200).EUt(30).buildAndRegister();
 
 // Lumium Plate
 solidifier.recipeBuilder()

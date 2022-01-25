@@ -421,18 +421,17 @@ makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
 recipes.remove(<avaritia:resource:1>);
 makeExtremeRecipe9(<metaitem:ingotCrystalMatrix>,
     ["         ",
-     "     TDDD",
-     "  TDDDNAD",
+     "      DDD",
+     "   DDDNAD",
      "DDDANAAND",
      "DANNANNAD",
      "DNAANADDD",
-     "DANDDDT  ",
-     "DDDT     ",
+     "DANDDD   ",
+     "DDD      ",
      "         "],
     { A : <avaritia:resource>,
       D : <minecraft:diamond>,
-      N : <minecraft:nether_star>,
-      T : <thermalfoundation:material:16> });
+      N : <minecraft:nether_star> });
 
 recipes.remove(<avaritia:resource>);
 recipes.addShaped(<avaritia:resource>, [

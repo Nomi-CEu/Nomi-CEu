@@ -70,7 +70,7 @@ mods.jei.JEI.removeAndHide(<solarflux:furnace_upgrade>);
 	
 recipes.addShaped(<solarflux:solar_panel_8> * 4, [
 	[<solarflux:photovoltaic_cell_6>,<solarflux:photovoltaic_cell_6>,<solarflux:photovoltaic_cell_6>],
-	[<solarflux:solar_panel_7>,<thermalfoundation:storage_alloy:7>,<solarflux:solar_panel_7>],
+	[<solarflux:solar_panel_7>,<ore:blockEnderium>,<solarflux:solar_panel_7>],
 	[<metaitem:plateOsmiridium>,<enderio:item_endergy_conduit>,<metaitem:plateOsmiridium>]]);
 
 recipes.addShaped(<solarflux:photovoltaic_cell_6> * 6, [
@@ -80,7 +80,7 @@ recipes.addShaped(<solarflux:photovoltaic_cell_6> * 6, [
 	
 recipes.addShaped(<solarflux:solar_panel_7> * 4, [
 	[<solarflux:photovoltaic_cell_5>,<solarflux:photovoltaic_cell_5>,<solarflux:photovoltaic_cell_5>],
-	[<solarflux:solar_panel_6>,<thermalfoundation:storage_alloy:5>,<solarflux:solar_panel_6>],
+	[<solarflux:solar_panel_6>,<ore:blockSignalum>,<solarflux:solar_panel_6>],
 	[<metaitem:plateOsmium>,<enderio:item_endergy_conduit:4>,<metaitem:plateOsmium>]]);
 
 recipes.addShaped(<solarflux:photovoltaic_cell_5> * 6, [
@@ -105,18 +105,26 @@ recipes.addShaped(<solarflux:photovoltaic_cell_2> * 6, [
 
 recipes.addShaped(<solarflux:solar_panel_6> * 4, [
 	[<solarflux:solar_panel_5>, <solarflux:photovoltaic_cell_4>, <solarflux:solar_panel_5>],	
-	[<thermalfoundation:material:357>, <advsolars:sunnarium_enriched>, <thermalfoundation:material:357>],	
-	[<thermalfoundation:material:357>,<enderio:item_endergy_conduit:4>,<thermalfoundation:material:357>]]);	
+	[<metaitem:plateSignalum>, <advsolars:sunnarium_enriched>, <metaitem:plateSignalum>],	
+	[<metaitem:plateSignalum>,<enderio:item_endergy_conduit:4>,<metaitem:plateSignalum>]]);	
 
 recipes.addShaped(<solarflux:solar_panel_5> * 4, [
 	[<solarflux:solar_panel_4>, <solarflux:photovoltaic_cell_3>, <solarflux:solar_panel_4>],	
-	[<thermalfoundation:material:358>, <advsolars:sunnarium>, <thermalfoundation:material:358>],	
-	[<thermalfoundation:material:358>,<enderio:item_endergy_conduit:6>,<thermalfoundation:material:358>]]);	
+	[<metaitem:plateLumium>, <advsolars:sunnarium>, <metaitem:plateLumium>],	
+	[<metaitem:plateLumium>,<enderio:item_endergy_conduit:6>,<metaitem:plateLumium>]]);	
 
 recipes.addShaped(<solarflux:solar_panel_4> * 2, [
 	[<solarflux:solar_panel_3>, <solarflux:photovoltaic_cell_2>, <solarflux:solar_panel_3>],	
 	[<ore:ingotMicroversium>, <enderio:block_alloy:8>, <ore:ingotMicroversium>],	
 	[<ore:ingotMicroversium>,<enderio:item_endergy_conduit:1>,<ore:ingotMicroversium>]]);	
+
+// Sunnarium
+alloy_smelter.recipeBuilder()
+	.inputs(<contenttweaker:stabilizedplutonium>, <contenttweaker:stabilizedcurium>)
+	.outputs(<advsolars:sunnarium>)
+	.duration(2000)
+	.EUt(4000)
+	.buildAndRegister();
 
 // Conversion recipes from RF Solars to GT Solars
 recipes.removeByRecipeName("gregtech:solar_panel_basic");

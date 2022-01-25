@@ -79,7 +79,7 @@ mixer.recipeBuilder()
 // Draconic Superconductor
 vacuum_freezer.recipeBuilder()
 	.inputs(<metaitem:wireGtSingleDraconium>)
-	.fluidInputs(<liquid:moltennetherstar>)
+	.fluidInputs(<liquid:nether_star> * 144)
 	.outputs(<metaitem:wireGtSingleDraconicSuperconductor>)
 	.duration(100)
 	.EUt(6000)

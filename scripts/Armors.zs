@@ -495,11 +495,11 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_helmet>, [
 //Infinity Helmet	
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_helmet>);
 mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_helmet>, [
-[null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<draconicevolution:draconic_helm>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<ore:ingotInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_helmet>,<ore:ingotInfinity>,<ore:ingotInfinity>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<draconicevolution:wyvern_helm>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<avaritia:resource:4>,null],
+[null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<draconicevolution:draconic_helm>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<ore:ingotInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_helmet>,<ore:ingotInfinity>,<ore:ingotInfinity>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<draconicevolution:wyvern_helm>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<metaitem:ingotNeutronium>,null],
 [null,null,null,<armorplus:the_ultimate_helmet>,null,<armorplus:the_ultimate_helmet>,null,null,null],
 [null,null,null,null,null,null,null,null,null],
 [null,null,null,null,null,null,null,null,null],
@@ -551,15 +551,15 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_chestplate
 //Infinity Chestplate
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_chestplate>);
 mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_chestplate>, [
-[null,<avaritia:resource:4>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<avaritia:resource:4>,null],
-[<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
-[null,<avaritia:resource:4>,<draconicevolution:draconic_chest>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<draconicevolution:wyvern_chest>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<avaritia:block_resource:1>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<avaritia:resource:4>,null],
-[null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null]]); 
+[null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null],
+[<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
+[null,<metaitem:ingotNeutronium>,<draconicevolution:draconic_chest>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<draconicevolution:wyvern_chest>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<metaitem:blockInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
+[null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null]]); 
 
 
 //Ultimate Leggings
@@ -603,15 +603,15 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_leggings>,
 //Infinity Leggings
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_pants>);
 mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_pants>, [
-[<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<draconicevolution:draconic_legs>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<draconicevolution:wyvern_legs>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<ore:ingotInfinity>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<ore:ingotInfinity>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<armorplus:the_ultimate_leggings>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,null,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>]]); 
+[<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<draconicevolution:draconic_legs>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<draconicevolution:wyvern_legs>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<ore:ingotInfinity>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<ore:ingotInfinity>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>]]); 
 
 
 
@@ -659,12 +659,12 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_boots>, [
 //Infinity Boots
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_boots>);
 mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_boots>, [
-[null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,null,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,null],
-[null,<avaritia:resource:4>,<draconicevolution:draconic_boots>,<avaritia:resource:4>,null,<avaritia:resource:4>,<draconicevolution:wyvern_boots>,<avaritia:resource:4>,null],
-[<avaritia:resource:4>,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,null,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>,null,<avaritia:resource:4>,<armorplus:the_ultimate_boots>,<armorplus:the_ultimate_boots>,<avaritia:resource:4>],
-[<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>,<ore:ingotInfinity>,null,<ore:ingotInfinity>,<avaritia:resource:4>,<avaritia:resource:4>,<avaritia:resource:4>],
+[null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_boots>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_boots>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<draconicevolution:draconic_boots>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<draconicevolution:wyvern_boots>,<metaitem:ingotNeutronium>,null],
+[<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_boots>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_boots>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<armorplus:the_ultimate_boots>,<armorplus:the_ultimate_boots>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_boots>,<armorplus:the_ultimate_boots>,<metaitem:ingotNeutronium>],
+[<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<ore:ingotInfinity>,null,<ore:ingotInfinity>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
 [null,null,null,null,null,null,null,null,null],
 [null,null,null,null,null,null,null,null,null],
 [null,null,null,null,null,null,null,null,null]]); 

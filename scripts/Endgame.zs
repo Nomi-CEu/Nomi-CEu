@@ -105,13 +105,15 @@ makeShaped("of_composition_sensor", <advancedrocketry:satelliteprimaryfunction:1
 //    .fluidOutputs([<liquid:raw_growth_medium> * 1000])
 //    .duration(200).EUt(200).buildAndRegister();
 
-//Neutronium Plating
+//Neutronium from Piles
 blast_furnace.recipeBuilder()
     .inputs([<avaritia:resource:2> * 9])
     .fluidInputs([<liquid:xenon> * 250])
-    .outputs(<metaitem:ingotNeutronium>)
+    .outputs(<metaitem:nuggetNeutronium>)
     .property("temperature", 9600)
     .duration(40).EUt(500000).buildAndRegister();
+
+recipes.addShapeless(<avaritia:resource:2> * 9, [<metaitem:nuggetNeutronium>]);
 
 //Superconductor Wires
 //assembler.findRecipe(512,
