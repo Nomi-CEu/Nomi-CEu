@@ -452,10 +452,18 @@ makeShaped("of_processing_array", <metaitem:processing_array>,
 
 
 //Restore Radon Recipe for QBit wafer
-reactor.recipeBuilder()
-  .inputs(<metaitem:dustIndiumGalliumPhosphide>, <metaitem:wafer.nano_central_processing_unit>)
-  .fluidInputs(<liquid:radon> * 50)
-  .outputs(<metaitem:wafer.qbit_central_processing_unit>)
-  .duration(600).EUt(1920).buildAndRegister();
+//reactor.recipeBuilder()
+//  .inputs(<metaitem:dustIndiumGalliumPhosphide>, <metaitem:wafer.nano_central_processing_unit>)
+//  .fluidInputs(<liquid:radon> * 50)
+//  .outputs(<metaitem:wafer.qbit_central_processing_unit>)
+//  .duration(600).EUt(1920).buildAndRegister();
 
 //reactor.findRecipe(1920, [<metaitem:wafer.nano_central_processing_unit>, <gregtech:cable:5354> * 8], [null]).remove();
+
+// Creative Tank Data
+extractor.recipeBuilder()
+    .inputs(<contenttweaker:heartofauniverse>)
+    .outputs(<contenttweaker:creativeportabletankmold>)
+    .duration(1000)
+    .EUt(180000)
+    .buildAndRegister();

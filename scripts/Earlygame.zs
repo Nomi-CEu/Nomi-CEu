@@ -120,8 +120,8 @@ recipes.addShaped(<storagedrawers:controllerslave>, [
 //	[<minecraft:obsidian>, <metaitem:electric.pump.lv>, <minecraft:obsidian>]]);
 //<rangedpumps:pump>.displayName = "Ender Pump";
 
-// Ender Chest (Ender Storage)
-//recipes.remove(<enderstorage:ender_storage:1>);
+// Ender Tank (Ender Storage)
+recipes.remove(<enderstorage:ender_storage:1>);
 //recipes.addShaped(<enderstorage:ender_storage:1>, [
 //	[<minecraft:blaze_rod>, <minecraft:wool>, <minecraft:blaze_rod>],
 //	[<ore:obsidian>, basictank, <ore:obsidian>],
@@ -179,7 +179,7 @@ alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <actuallyadditions:
 alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <metaitem:dustSilicon>]).outputs([<metaitem:ingotElectricalSteel>]).duration(120).EUt(16).buildAndRegister();
 alloy_smelter.recipeBuilder().inputs([<minecraft:gold_ingot>, <minecraft:soul_sand>]).outputs([<metaitem:ingotSoularium>]).duration(120).EUt(16).buildAndRegister();
 alloy_smelter.recipeBuilder().inputs([<metaitem:ingotDarkSteel>, <ore:dustEndstone>]).outputs([<metaitem:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<minecraft:glass>, <metaitem:dustCertusQuartz>]).outputs([<appliedenergistics2:quartz_glass> * 2]).duration(100).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<minecraft:glass>, <ore:dustCertusQuartz>]).outputs([<appliedenergistics2:quartz_glass> * 2]).duration(100).EUt(16).buildAndRegister();
 
 //Ender Chest
 recipes.removeByRecipeName("enderstorage:ender_chest");
@@ -264,10 +264,10 @@ recipes.addShaped(<enderio:item_yeta_wrench>, [
 
 
 
-//Chemistry
+//Chemistry Why the hell is all sorts of things put here half of these arent even early game in any capacity aaaaaaaa
 chemical_reactor.recipeBuilder().inputs([<extendedcrafting:material:7>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:end_stone>).EUt(15).duration(20).buildAndRegister();
-//chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_crystal:1>).EUt(15).duration(100).buildAndRegister();
-//chemical_reactor.recipeBuilder().inputs([<minecraft:obsidian>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_infused_obsidian>).EUt(15).duration(200).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_crystal:1>).EUt(15).duration(100).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<minecraft:obsidian>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_infused_obsidian>).EUt(15).duration(200).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<contenttweaker:block_dust>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:netherrack>).EUt(15).duration(20).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<contenttweaker:block_dust>]).fluidInputs([<liquid:water> * 1000]).outputs(<minecraft:clay>).EUt(15).duration(20).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:magma>]).fluidOutputs(<liquid:lava> * 1000).EUt(30).duration(120).buildAndRegister();

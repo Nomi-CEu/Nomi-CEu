@@ -1,4 +1,16 @@
 {
   "use-stencil": true,
-  "use-optifine-compat": true
+  "use-optifine-compat": true,
+  "palette": [
+    {
+      "name": "basic",
+      "colors": [
+        -1,
+        -16777216,
+        -65536,
+        -16711936,
+        -16776961
+      ]
+    }
+  ]
 }

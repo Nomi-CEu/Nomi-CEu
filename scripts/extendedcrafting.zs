@@ -370,17 +370,28 @@ reactor.recipeBuilder()
 ///////////////////////// Omnium  ///////////////////////////////
 
 mods.extendedcrafting.TableCrafting.remove(<extendedcrafting:singularity_ultimate>);
-mods.extendedcrafting.TableCrafting.addShaped(<extendedcrafting:singularity_ultimate>, [
-[null,                            null,                                <extendedcrafting:material:140>,    <contenttweaker:solidifiedhydrogen>,  <contenttweaker:solidifiedhelium>,        <metaitem:dustLithium>,           <extendedcrafting:material:140>,   null,                               null],
-[null,                            <extendedcrafting:material:140>,     <metaitem:ingotBeryllium>,       <metaitem:dustBoron>,          <metaitem:dustCarbon>,             <contenttweaker:solidifiednitrogen>,    <contenttweaker:solidifiedoxygen>, <extendedcrafting:material:140>,    null],
-[<extendedcrafting:material:140>, <contenttweaker:solidifiedfluorine>, <contenttweaker:solidifiedneon>,    <metaitem:dustSodium>,         <metaitem:dustMagnesium>,             <metaitem:ingotAluminium>,           <metaitem:ingotSilicon>,      <metaitem:dustPhosphorus>,        <extendedcrafting:material:140>],
-[<metaitem:dustSulfur>,     <contenttweaker:solidifiedchlorine>, <contenttweaker:solidifiedargon>,   <metaitem:dustPotassium>,         <metaitem:dustCalcium>,             <metaitem:ingotTitanium>,           <metaitem:ingotVanadium>,      <metaitem:ingotChrome>,       <metaitem:ingotManganese>],
-[<minecraft:iron_ingot>,          <metaitem:ingotCobalt>,        <metaitem:ingotNickel>,       <metaitem:ingotCopper>,         <contenttweaker:exoticmaterialscatalyst>, <metaitem:ingotZinc>,           <metaitem:ingotGallium>,      <metaitem:dustArsenic>,        <contenttweaker:solidifiedkrypton>],
-[<metaitem:ingotYttrium>,    <metaitem:ingotPalladium>,        <metaitem:ingotSilver>,       <metaitem:ingotIndium>,         <metaitem:ingotTin>,             <metaitem:ingotAntimony>,           <contenttweaker:solidifiedxenon>,  <metaitem:dustLanthanum>,       <metaitem:ingotTungsten>],
-[<extendedcrafting:material:140>, <metaitem:ingotOsmium>,        <metaitem:ingotIridium>,       <metaitem:ingotPlatinum>,         <minecraft:gold_ingot>,                   <contenttweaker:solidifiedmercury>,     <contenttweaker:solidifiedradon>,  <contenttweaker:stabilizedthorium>, <extendedcrafting:material:140>],
-[null,                            <extendedcrafting:material:140>,     <contenttweaker:stabilizeduranium>, <contenttweaker:stabilizedneptunium>, <contenttweaker:stabilizedplutonium>,     <contenttweaker:stabilizedamericium>,   <contenttweaker:stabilizedcurium>, <extendedcrafting:material:140>,    null],
-[null,                            null,                                <extendedcrafting:material:140>,    <contenttweaker:stabilizedberkelium>, <contenttweaker:stabilizedcalifornium>,   <contenttweaker:stabilizedeinsteinium>, <extendedcrafting:material:140>,   null,                               null]]);
+//mods.extendedcrafting.TableCrafting.addShaped(<extendedcrafting:singularity_ultimate>, [
+//[null,                            null,                                <extendedcrafting:material:140>,    <contenttweaker:solidifiedhydrogen>,  <contenttweaker:solidifiedhelium>,        <metaitem:dustLithium>,           <extendedcrafting:material:140>,   null,                               null],
+//[null,                            <extendedcrafting:material:140>,     <metaitem:ingotBeryllium>,       <metaitem:dustBoron>,          <metaitem:dustCarbon>,             <contenttweaker:solidifiednitrogen>,    <contenttweaker:solidifiedoxygen>, <extendedcrafting:material:140>,    null],
+//[<extendedcrafting:material:140>, <contenttweaker:solidifiedfluorine>, <contenttweaker:solidifiedneon>,    <metaitem:dustSodium>,         <metaitem:dustMagnesium>,             <metaitem:ingotAluminium>,           <metaitem:ingotSilicon>,      <metaitem:dustPhosphorus>,        <extendedcrafting:material:140>],
+//[<metaitem:dustSulfur>,     <contenttweaker:solidifiedchlorine>, <contenttweaker:solidifiedargon>,   <metaitem:dustPotassium>,         <metaitem:dustCalcium>,             <metaitem:ingotTitanium>,           <metaitem:ingotVanadium>,      <metaitem:ingotChrome>,       <metaitem:ingotManganese>],
+//[<minecraft:iron_ingot>,          <metaitem:ingotCobalt>,        <metaitem:ingotNickel>,       <metaitem:ingotCopper>,         <contenttweaker:exoticmaterialscatalyst>, <metaitem:ingotZinc>,           <metaitem:ingotGallium>,      <metaitem:dustArsenic>,        <contenttweaker:solidifiedkrypton>],
+//[<metaitem:ingotYttrium>,    <metaitem:ingotPalladium>,        <metaitem:ingotSilver>,       <metaitem:ingotIndium>,         <metaitem:ingotTin>,             <metaitem:ingotAntimony>,           <contenttweaker:solidifiedxenon>,  <metaitem:dustLanthanum>,       <metaitem:ingotTungsten>],
+//[<extendedcrafting:material:140>, <metaitem:ingotOsmium>,        <metaitem:ingotIridium>,       <metaitem:ingotPlatinum>,         <minecraft:gold_ingot>,                   <contenttweaker:solidifiedmercury>,     <contenttweaker:solidifiedradon>,  <contenttweaker:stabilizedthorium>, <extendedcrafting:material:140>],
+//[null,                            <extendedcrafting:material:140>,     <contenttweaker:stabilizeduranium>, <contenttweaker:stabilizedneptunium>, <contenttweaker:stabilizedplutonium>,     <contenttweaker:stabilizedamericium>,   <contenttweaker:stabilizedcurium>, <extendedcrafting:material:140>,    null],
+//[null,                            null,                                <extendedcrafting:material:140>,    <contenttweaker:stabilizedberkelium>, <contenttweaker:stabilizedcalifornium>,   <contenttweaker:stabilizedeinsteinium>, <extendedcrafting:material:140>,   null,                               null]]);
 
+mods.extendedcrafting.TableCrafting.addShaped(0, <extendedcrafting:singularity_ultimate>, [
+	[<ore:nuggetNetherStar>, <contenttweaker:solidifiedhydrogen>, <contenttweaker:solidifiedhelium>, <ore:dustLithium>, <ore:ingotBeryllium>, <ore:dustBoron>, <ore:dustCarbon>, <contenttweaker:solidifiednitrogen>, <ore:nuggetNetherStar>], 
+	[<contenttweaker:solidifiedoxygen>, <contenttweaker:solidifiedfluorine>, <contenttweaker:solidifiedneon>, <ore:dustSodium>, <ore:dustMagnesium>, <ore:ingotAluminium>, <ore:dustRegularSilicon>, <ore:dustPhosphorus>, <ore:dustSulfur>], 
+	[<contenttweaker:solidifiedchlorine>, <contenttweaker:solidifiedargon>, <ore:dustPotassium>, <ore:dustCalcium>, <ore:ingotTitanium>, <ore:ingotVanadium>, <ore:ingotChrome>, <ore:ingotManganese>, <ore:ingotIron>], 
+	[<ore:ingotCobalt>, <ore:ingotNickel>, <ore:ingotCopper>, <ore:ingotZinc>, <ore:nuggetNetherStar>, <ore:ingotGallium>, <ore:dustRegularArsenic>, <contenttweaker:solidifiedkrypton>, <ore:ingotYttrium>], 
+	[<ore:ingotNiobium>, <ore:ingotMolybdenum>, <ore:ingotRuthenium>, <ore:ingotRhodium>, <contenttweaker:exoticmaterialscatalyst>, <ore:ingotPalladium>, <ore:ingotSilver>, <ore:dustCadmium>, <ore:ingotIndium>], 
+	[<ore:ingotTin>, <ore:ingotAntimony>, <contenttweaker:solidifiedxenon>, <ore:ingotCaesium>, <ore:nuggetNetherStar>, <ore:dustBarium>, <ore:dustLanthanum>, <ore:dustCerium>, <ore:ingotNeodymium>], 
+	[<ore:ingotSamarium>, <ore:ingotEuropium>, <ore:ingotLutetium>, <ore:ingotTantalum>, <ore:ingotTungsten>, <ore:ingotOsmium>, <ore:ingotIridium>, <ore:ingotPlatinum>, <ore:ingotGold>], 
+	[<contenttweaker:solidifiedmercury>, <ore:ingotLead>, <contenttweaker:solidifiedradon>, <ore:ingotThorium>, <contenttweaker:stabilizeduranium>, <contenttweaker:stabilizedneptunium>, <contenttweaker:stabilizedplutonium>, <ore:ingotAmericium>, <contenttweaker:stabilizedcurium>], 
+	[<ore:nuggetNetherStar>, <contenttweaker:stabilizedberkelium>, <contenttweaker:stabilizedcalifornium>, <contenttweaker:stabilizedeinsteinium>, <ore:ingotTritanium>, <ore:ingotDuranium>, <ore:ingotTrinium>, <ore:ingotNaquadah>, <ore:nuggetNetherStar>]
+]);
 
 //////////////////// Exotic Materials Catalyst ////////////////////////
 makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
@@ -392,11 +403,11 @@ makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
      " Q G P ",
      "B  R  D"],
     { A : <ore:ingotCrystalMatrix>,
-      B : <metaitem:ingotKnightslime>,
+      B : <ore:ingotRuridit>,
       C : <ore:ingotElectricalSteel>,
       D : <ore:ingotEnergeticAlloy>,
       E : <ore:ingotVibrantAlloy>,
-      F : <ore:ingotPulsatingIron>,
+      F : <ore:ingotRhodiumPlatedPalladium>,
       G : <ore:ingotDarkSteel>,
       H : <ore:ingotSoularium>,
       I : <ore:ingotEndSteel>,
@@ -414,8 +425,8 @@ makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
       U : <ore:ingotElectrumFlux>,
       V : <simplyjetpacks:metaitemmods:3>,
       W : <thermalfoundation:material:136>,
-      X : <thermalfoundation:material:165>,
-      Y : <thermalfoundation:material:167> });
+      X : <ore:ingotSignalum>,
+      Y : <ore:ingotEnderium> });
 
 ////////////////////////// Crystal Matrix Ingot ///////////////////////
 recipes.remove(<avaritia:resource:1>);
@@ -972,7 +983,7 @@ makeExtremeRecipe9(<contenttweaker:ultimate_power_storage>,
      "CDIEFEIDC",
      "BCDIEIDCB",
      "ABCDIDCBA"],
-    { A : doublecompressedoctadiccap,
+    { A : <metaitem:battery.re.lv.lithium>,
       B : <metaitem:battery.re.mv.lithium>,
       C : <metaitem:energy_crystal>,
       D : <metaitem:lapotron_crystal>,

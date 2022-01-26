@@ -115,7 +115,7 @@ makeExtremeRecipe5(<contenttweaker:tiertwoship>,
 	  F : <thermalexpansion:frame:146>,
 	  G : <contenttweaker:t1guidance>,
 	  L : <contenttweaker:t1laser>,
-	  P : <contenttweaker:titaniumplating>,
+	  P : <metaitem:plateDoubleTitanium>,
 	  T : <simplyjetpacks:metaitemmods:8> }
 );
 

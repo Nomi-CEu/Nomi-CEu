@@ -334,6 +334,11 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 		<actuallyadditions:item_dust:3>
 	],
 
+	#dustFluix
+	<ore:dustFluix> : [
+		<appliedenergistics2:material:8>
+	],
+
 	#dustGraphite
 	<ore:dustGraphite> : [
 		<nuclearcraft:dust:8>
@@ -537,7 +542,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotDraconiumAwakened
 	<ore:ingotDraconiumAwakened>: [
-		<draconicevolution:draconic_ingot>
+//		<draconicevolution:draconic_ingot>
 	],
 
 	#ingotBeryllium
@@ -575,7 +580,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotDarkSteel
 	<ore:ingotDarkSteel> : [
-		<metaitem:ingotDarkSteel>
+		<enderio:item_alloy_ingot:6>
 	],
 
 	#ingotDraconium
@@ -1311,6 +1316,8 @@ mods.jei.JEI.hideCategory("minecraft.anvil");
 mods.jei.JEI.hideCategory("Painter");
 mods.jei.JEI.hideCategory("extrautils2.blockPatterns");
 mods.jei.JEI.hideCategory("Avatitia.Compressor");
+mods.jei.JEI.hideCategory("EIOTank");
+mods.jei.JEI.hideCategory("jeresources.enchantment");
 
 mods.jei.JEI.hideCategory("actuallyadditions.compost");
 mods.jei.JEI.hideCategory("actuallyadditions.crushing");
@@ -2225,19 +2232,19 @@ mods.jei.JEI.removeAndHide(<libvulpes:productsheet:1>);
 
 
 //Ingots to Proper Ingots
-recipes.addShapeless(<thermalfoundation:material:167>, [<metaitem:ingotEnderium>]);
-recipes.addShapeless(<enderio:item_alloy_ingot:2>, [<metaitem:ingotVibrantAlloy>]);
-recipes.addShapeless(<enderio:item_alloy_ingot:1>, [<metaitem:ingotEnergeticAlloy>]);
-recipes.addShapeless(<enderio:item_alloy_ingot:4>, [<metaitem:ingotConductiveIron>]);
-recipes.addShapeless(<enderio:item_alloy_ingot:8>, [<metaitem:ingotEndSteel>]);
-recipes.addShapeless(<enderio:item_alloy_ingot:5>, [<metaitem:ingotPulsatingIron>]);
-recipes.addShapeless(<enderio:item_alloy_ingot:6>, [<metaitem:ingotDarkSteel>]);
-recipes.addShapeless(<enderio:item_alloy_ingot>, [<metaitem:ingotElectricalSteel>]);
-recipes.addShapeless(<thermalfoundation:material:166>, [<metaitem:ingotLumium>]);
-recipes.addShapeless(<thermalfoundation:material:165>, [<metaitem:ingotSignalum>]);
-recipes.addShapeless(<draconicevolution:draconium_ingot>, [<metaitem:ingotDraconium>]);
-recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:dustDraconium>]);
-recipes.addShapeless(<ore:dustWood>.firstItem, [<thermalfoundation:material:800>]);
+//recipes.addShapeless(<thermalfoundation:material:167>, [<metaitem:ingotEnderium>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:2>, [<metaitem:ingotVibrantAlloy>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:1>, [<metaitem:ingotEnergeticAlloy>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:4>, [<metaitem:ingotConductiveIron>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:8>, [<metaitem:ingotEndSteel>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:5>, [<metaitem:ingotPulsatingIron>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:6>, [<metaitem:ingotDarkSteel>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot>, [<metaitem:ingotElectricalSteel>]);
+//recipes.addShapeless(<thermalfoundation:material:166>, [<metaitem:ingotLumium>]);
+//recipes.addShapeless(<thermalfoundation:material:165>, [<metaitem:ingotSignalum>]);
+//recipes.addShapeless(<draconicevolution:draconium_ingot>, [<metaitem:ingotDraconium>]);
+//recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:dustDraconium>]);
+//recipes.addShapeless(<ore:dustWood>.firstItem, [<thermalfoundation:material:800>]);
 
 
 
@@ -2560,6 +2567,9 @@ pulsatingDustOre.add(<contenttweaker:pulsatingdust>);
 
 pulsatingMeshOre.add(<contenttweaker:pulsatingmesh>);
 //pulsatingMeshOre.add(<forestry:crafting_material:1>);
+
+// GT Fluix
+<ore:gemFluix>.add(<appliedenergistics2:material:7>);
 
 /////////////////////////////////
 //  One Ingot To Rule Them All //

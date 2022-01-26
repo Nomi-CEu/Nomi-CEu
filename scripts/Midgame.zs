@@ -84,3 +84,13 @@ vacuum_freezer.recipeBuilder()
 	.duration(100)
 	.EUt(6000)
 	.buildAndRegister();
+
+// Allow Gas Collector to work in LostCities, void dims
+gas_collector.recipeBuilder()
+	.fluidOutputs(<liquid:air> * 10000)
+	.notConsumable(<gregtech:meta_item_1:461>.withTag({Configuration: 1}))
+	.property("dimension", 111)
+	.property("dimension", 119)
+	.duration(200)
+	.EUt(16)
+	.buildAndRegister();

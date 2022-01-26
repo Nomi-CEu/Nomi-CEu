@@ -61,47 +61,47 @@ recipes.addShaped(<enderio:item_power_conduit:2> * 3, [									//vibrant alloy 
 <enderio:item_power_conduit:2>.displayName = "Vibrant Alloy Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleVibrantAlloy> * 2, <enderio:item_power_conduit:1>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:2> * 4]).duration(80).EUt(16).buildAndRegister();	
 
-recipes.addShaped(<enderio:item_endergy_conduit:1> * 3, [									//End Steel Conduit
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleEndSteel>,<enderio:item_power_conduit:2>,<metaitem:wireGtSingleEndSteel>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
+//recipes.addShaped(<enderio:item_endergy_conduit:1> * 3, [									//End Steel Conduit
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+//	[<metaitem:wireGtSingleEndSteel>,<enderio:item_power_conduit:2>,<metaitem:wireGtSingleEndSteel>], 
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:1>.displayName = "End Steel Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleEndSteel> * 2, <enderio:item_power_conduit:2>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();	
 
-recipes.addShaped(<enderio:item_endergy_conduit:6> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleLumium>,<enderio:item_endergy_conduit:1> ,<metaitem:wireGtSingleLumium>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
+//recipes.addShaped(<enderio:item_endergy_conduit:6> * 3, [
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+//	[<metaitem:wireGtSingleLumium>,<enderio:item_endergy_conduit:1> ,<metaitem:wireGtSingleLumium>], 
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:6>.displayName = "Lumium Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleLumium> * 2, <enderio:item_endergy_conduit:1> , <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:6> * 4]).duration(80).EUt(16).buildAndRegister();
 
-recipes.addShaped(<enderio:item_endergy_conduit:4> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleSignalum>,<enderio:item_endergy_conduit:6>,<metaitem:wireGtSingleSignalum>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
+//recipes.addShaped(<enderio:item_endergy_conduit:4> * 3, [
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+//	[<metaitem:wireGtSingleSignalum>,<enderio:item_endergy_conduit:6>,<metaitem:wireGtSingleSignalum>], 
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:4>.displayName = "Signalum Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleSignalum> * 2, <enderio:item_endergy_conduit:6>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:4> * 4]).duration(80).EUt(16).buildAndRegister();
 
-recipes.addShaped(<enderio:item_endergy_conduit> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleEnderium>,<enderio:item_endergy_conduit:4>,<metaitem:wireGtSingleEnderium>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
+//recipes.addShaped(<enderio:item_endergy_conduit> * 3, [
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+//	[<metaitem:wireGtSingleEnderium>,<enderio:item_endergy_conduit:4>,<metaitem:wireGtSingleEnderium>], 
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit>.displayName = "Enderium Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleEnderium>* 2, <enderio:item_endergy_conduit:4>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit> * 4]).duration(80).EUt(16).buildAndRegister();
 
-recipes.addShaped(<enderio:item_endergy_conduit:10> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleDraconium>,<enderio:item_endergy_conduit>,<metaitem:wireGtSingleDraconium>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
+//recipes.addShaped(<enderio:item_endergy_conduit:10> * 3, [
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+//	[<metaitem:wireGtSingleDraconium>,<enderio:item_endergy_conduit>,<metaitem:wireGtSingleDraconium>], 
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:10>.displayName = "Draconium Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleDraconium>* 2, <enderio:item_endergy_conduit>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:10> * 4]).duration(80).EUt(16).buildAndRegister();
 
 //MAX Tier - Superconductor
-recipes.addShaped(<enderio:item_endergy_conduit:11> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleDraconicSuperconductor>,<enderio:item_endergy_conduit:10>,<metaitem:wireGtSingleDraconicSuperconductor>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-<enderio:item_endergy_conduit:11>.displayName = "Superconductor Energy Conduit";
+//recipes.addShaped(<enderio:item_endergy_conduit:11> * 3, [
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+//	[<metaitem:wireGtSingleDraconicSuperconductor>,<enderio:item_endergy_conduit:10>,<metaitem:wireGtSingleDraconicSuperconductor>], 
+//	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
+<enderio:item_endergy_conduit:11>.displayName = "Draconic Superconductor Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleDraconicSuperconductor>* 2, <enderio:item_endergy_conduit:10>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:11> * 4]).duration(80).EUt(16).buildAndRegister();
 
 //Item conduit - by hand
@@ -179,6 +179,10 @@ recipes.addShaped(<meta_tile_entity:hull.lv>, [
 	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 // LV Machine Hull * 1
 <recipemap:assembler>.findRecipe(16, [<gregtech:machine_casing:1>, <metaitem:cableGtSingleTin> * 2], [<liquid:plastic> * 288]).remove();
+
+// remove steel LV Motor recipes
+recipes.removeByRecipeName("gregtech:electric_motor_lv_steel");
+assembler.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickSteel> * 2, <metaitem:stickSteelMagnetic>, <metaitem:wireGtSingleCopper> * 4], [null]).remove();
 
 //LV Motor - with Fine Copper Wires
 recipes.addShaped(<metaitem:electric.motor.lv>, [

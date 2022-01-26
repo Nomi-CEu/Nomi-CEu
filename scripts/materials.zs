@@ -182,7 +182,7 @@ var end_steel = MaterialBuilder(32025, "end_steel")
 
 var infinity = MaterialBuilder(32026, "infinity")
     .ingot()
-    .color(0xedfeff).iconSet("shiny")
+    .color(0x000000).iconSet("shiny")
     .flags("generate_plate")
     .build();
 
@@ -209,6 +209,7 @@ MaterialRegistry.get("rutile").addOre();
 //MaterialRegistry.get("iridium").setOreByProducts([<material:osmium>, <material:nickel>]);
 //MaterialRegistry.get("uranium").setOreByProducts([<material:thorium>, <material:lead>, <material:neptunium>]);
 
+MaterialRegistry.get("lutetium").addIngot();
 MaterialRegistry.get("neptunium").addIngot();
 MaterialRegistry.get("curium").addIngot();
 MaterialRegistry.get("berkelium").addIngot();
@@ -232,3 +233,4 @@ MaterialRegistry.get("naquadah_enriched").addFlags(["generate_bolt_screw"]);
 MaterialRegistry.get("naquadria").addFlags(["generate_bolt_screw"]);
 
 MaterialRegistry.get("glowstone").setFormula("Au(Ca3(PO4)2)", true);
+MaterialRegistry.get("energetic_alloy").setFormula("Au(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);

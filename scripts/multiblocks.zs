@@ -19,13 +19,13 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start()
                           .aisle("CCC", "CVC", "CCC")
-                          .aisle("CCC", "G G", "CMC")
+                          .aisle("CCC", "GDG", "CMC")
                           .aisle("CSC", "CGC", "CCC")
                           .where('S', controller.self())
                           .where('G', <blockstate:gregtech:transparent_casing>)
                           .where('V', <metastate:gregtech:multiblock_casing:2>)
-                          .where(' ', CTPredicate.getAir())
-                          .where("C", CTPredicate.states(<metastate:gregtech:metal_casing:4>) | controller.autoAbilities(true, true, true, true, true, false, false))
+                          .where('D', <metastate:chisel:diamond:3>)
+                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
                           .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
                           .build();
                  } as IPatternBuilderFunction)
@@ -38,7 +38,7 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
             .maxFluidInputs(2)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
-    .withBaseTexture(<metastate:gregtech:metal_casing:4>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
+    .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
     .buildAndRegister();
 
 microverse_projector_basic.hasMufflerMechanics = true;
@@ -59,7 +59,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
                     "GDDDG",
                     "GDDDG",
                     "GDDDG",
-                    "CCCCC")
+                    "CVCVC")
             .aisle(
                     "CCCCC",
                     "GDDDG",
@@ -71,19 +71,19 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
                     "GDDDG",
                     "GDDDG",
                     "GDDDG",
-                    "CCCCC")
+                    "CVCVC")
             .aisle(
-                    "CCCCC",
+                    "CCSCC",
                     "CGGGC",
                     "CGGGC",
                     "CGGGC",
-                    "CCSCC")
+                    "CCCCC")
             .where('S', controller.self())
             .where('G', <blockstate:gregtech:transparent_casing>)
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
             .where(' ', CTPredicate.getAir())
-            .where("C", CTPredicate.states(<metastate:gregtech:metal_casing:5>) | controller.autoAbilities(true, true, true, true, true, false, false))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
             .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
             .build();
     } as IPatternBuilderFunction)
@@ -96,7 +96,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .maxFluidInputs(1)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
-    .withBaseTexture(<metastate:gregtech:metal_casing:5>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
+    .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
     .buildAndRegister();
 
 microverse_projector_advanced.hasMufflerMechanics = true;
@@ -109,10 +109,10 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .aisle(
                 "         ",
                 "         ",
-                "  CCSCC  ",
                 "  CCCCC  ",
-                "  CCCCC  ",
-                "  CCCCC  ",
+                "  CVCVC  ",
+                "  CCMCC  ",
+                "  CVCVC  ",
                 "  CCCCC  ",
                 "         ",
                 "         ")
@@ -169,19 +169,20 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .aisle(
                 "         ",
                 "         ",
-                "  CCCCC  ",
-                "  CVCVC  ",
-                "  CCMCC  ",
-                "  CVCVC  ",
+                "  CCSCC  ",
+                "  CGGGC  ",
+                "  CGGGC  ",
+                "  CGGGC  ",
                 "  CCCCC  ",
                 "         ",
                 "         ")
+            
             .where('S', controller.self())
             .where('G', <blockstate:gregtech:transparent_casing>)
             .where('V', <blockstate:gregtech:multiblock_casing>)
             .where(' ', CTPredicate.getAir())
             .where('D', <metastate:chisel:diamond:3>)
-            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:3>) | controller.autoAbilities(true, true, true, true, true, false, false))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
             .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
             .build();
     } as IPatternBuilderFunction)
@@ -193,7 +194,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .maxOutputs(16)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:3>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
+    .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
     .buildAndRegister();
 
 microverse_projector_advanced_ii.hasMufflerMechanics = true;
@@ -475,21 +476,21 @@ large_lapidary_dynamo.hasMaintenanceMechanics = false;
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
-    [<ore:circuitAdvanced>, <gregtech:metal_casing:4>, <ore:circuitAdvanced>],
-    [<gregtech:metal_casing:4>, <metaitem:cover.screen>, <gregtech:metal_casing:4>],
-    [<ore:circuitAdvanced>, <gregtech:metal_casing:4>, <ore:circuitAdvanced>]
+    [<ore:circuitAdvanced>, <contenttweaker:microverse_casing>, <ore:circuitAdvanced>],
+    [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
+    [<ore:circuitAdvanced>, <contenttweaker:microverse_casing>, <ore:circuitAdvanced>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced", <metaitem:mbt:microverse_projector_advanced>, [
-    [<ore:circuitExtreme>, <gregtech:metal_casing:2>, <ore:circuitExtreme>],
-    [<gregtech:metal_casing:2>, <metaitem:cover.screen>, <gregtech:metal_casing:2>],
-    [<ore:circuitExtreme>, <gregtech:metal_casing:2>, <ore:circuitExtreme>]
+    [<ore:circuitExtreme>, <contenttweaker:microverse_casing>, <ore:circuitExtreme>],
+    [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
+    [<ore:circuitExtreme>, <contenttweaker:microverse_casing>, <ore:circuitExtreme>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_projector_advanced_ii>, [
-    [<ore:circuitElite>, <gcym:large_multiblock_casing:3>, <ore:circuitElite>],
-    [<gcym:large_multiblock_casing:3>, <metaitem:cover.screen>, <gcym:large_multiblock_casing:3>],
-    [<ore:circuitElite>, <gcym:large_multiblock_casing:3>, <ore:circuitElite>]
+    [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>],
+    [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
+    [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>]
 ]);
 
 makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>,
@@ -545,8 +546,8 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_cassiterite_0> * 64,
              <gregtech:ore_redstone_0> * 64,
              <gregtech:ore_nickel_0> * 64,
-             <gregtech:ore_ilmenite_0> * 64,
-             <gregtech:ore_ilmenite_0> * 64,
+             <gregtech:ore_bauxite_0> * 64,
+             <gregtech:ore_bauxite_0> * 64,
              <gregtech:ore_uraninite_0> * 64,
              <gregtech:ore_galena_0> * 64,
              <gregtech:ore_galena_0> * 64,
@@ -651,9 +652,9 @@ microverse_projector_basic.recipeMap
              <metaitem:gemExquisiteRuby> * 16,
              <metaitem:gemExquisiteRuby> * 16,
              <metaitem:gemExquisiteRuby> * 16,
-             <gregtech:ore_sapphire_0> * 64,
-             <gregtech:ore_gold_0> * 64,
-             <gregtech:ore_silver_0> * 64)
+             <gregtech:ore_sapphire_0:1> * 64,
+             <gregtech:ore_gold_0:1> * 64,
+             <gregtech:ore_silver_0:1> * 64)
     .buildAndRegister();
 
 // t3 ores
@@ -689,11 +690,11 @@ microverse_projector_advanced.recipeMap
     .EUt(3750)
     .inputs(<contenttweaker:tierfourship>,
             <contenttweaker:quantumflux> * 8,
-            <metaitem:electric.pump.hv> * 6,
-            <ore:ingotSignalum> * 64)
+            <advancedrocketry:satelliteprimaryfunction:1>,
+            <ore:dustPetrotheum> * 64)
     .outputs(<contenttweaker:denseoilshale> * 64,
              <contenttweaker:denseoilshale> * 64,
-             <ore:compressed2xDustBedrock>.firstItem * 16) // TODO add infinity if/when adding enderio
+             <ore:compressed2xDustBedrock>.firstItem * 16)
     .buildAndRegister();
 
 // t4 dense gem ores
@@ -704,7 +705,7 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfourship>,
             <contenttweaker:quantumflux> * 8,
             <contenttweaker:gemsensor>,
-            <ore:ingotSignalum> * 64) 
+            <ore:dustPetrotheum> * 64) 
     .outputs(<densemetals:dense_lapis_ore> * 64,
              <densemetals:dense_diamond_ore> * 64,
              <densemetals:dense_diamond_ore> * 64,
@@ -721,7 +722,7 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfourship>,
             <contenttweaker:quantumflux> * 8,
             <contenttweaker:witherrealmdata> * 4,
-            <ore:ingotSignalum> * 64) 
+            <ore:dustPetrotheum> * 64) 
     .outputs(<gregtech:ore_iridium_0> * 64,
              <gregtech:ore_iridium_0> * 64,
              <gregtech:ore_osmium_0> * 16)
@@ -749,7 +750,7 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_beryllium_0> * 64)
     .buildAndRegister();
 
-// t5 naquadah
+// t5 naquadah sheldonite
 microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(1000)
@@ -760,7 +761,9 @@ microverse_projector_advanced.recipeMap
     .outputs(<metaitem:dustNaquadah> * 64,
              <metaitem:dustNaquadah> * 64,
              <metaitem:dustNaquadah> * 64,
-             <metaitem:dustNaquadah> * 64)
+             <metaitem:dustNaquadah> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64)
     .buildAndRegister();
 
 // t6 u/os/ir
@@ -936,15 +939,15 @@ microverse_projector_advanced_ii.recipeMap
     .buildAndRegister();
 
 // t10 tank data
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
-    .duration(6000)
-    .EUt(1000000)
-    .inputs(<contenttweaker:tiertenship>,
-            <contenttweaker:universecreationdata>,
-            <ore:blockNaquadria> * 36)
-    .outputs(<contenttweaker:creativeportabletankmold>)
-    .buildAndRegister();
+//microverse_projector_advanced_ii.recipeMap
+//    .recipeBuilder()
+//    .duration(6000)
+//    .EUt(1000000)
+//    .inputs(<contenttweaker:tiertenship>,
+//            <contenttweaker:universecreationdata>,
+//            <ore:blockNaquadria> * 36)
+//    .outputs(<contenttweaker:creativeportabletankmold>)
+//    .buildAndRegister();
 
 // creative tank provider
 // creative tank

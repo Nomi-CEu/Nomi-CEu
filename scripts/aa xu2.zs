@@ -223,8 +223,8 @@ recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_ic
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<draconicevolution:generator>, [
-	[<draconicevolution:draconium_ingot>,<draconicevolution:draconium_ingot>,<draconicevolution:draconium_ingot>], 
-	[<draconicevolution:draconium_ingot>,<extrautils2:machine>,<draconicevolution:draconium_ingot>], 
+	[<ore:ingotDraconium>,<ore:ingotDraconium>,<ore:ingotDraconium>], 
+	[<ore:ingotDraconium>,<extrautils2:machine>,<ore:ingotDraconium>], 
 	[<ore:blockStellite100>, furnGen, <ore:blockStellite100>]]);
 		
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_netherstar"}), [
@@ -264,10 +264,10 @@ recipes.remove(<actuallyadditions:item_misc:16>);
 
 //Vertical Digger	
 recipes.remove(<actuallyadditions:block_miner>);
-recipes.addShaped(<actuallyadditions:block_miner>, [
-	[<actuallyadditions:block_misc:9>, <gregtech:meta_tool:23>, <actuallyadditions:block_misc:9>], 
-	[<actuallyadditions:block_crystal:3>, <thermalinnovation:drill:2>, <actuallyadditions:block_crystal:3>], 
-	[<actuallyadditions:block_misc:9>, <actuallyadditions:item_drill:*>, <actuallyadditions:block_misc:9>]]);
+//recipes.addShaped(<actuallyadditions:block_miner>, [
+//	[<actuallyadditions:block_misc:9>, <gregtech:meta_tool:23>, <actuallyadditions:block_misc:9>], 
+//	[<actuallyadditions:block_crystal:3>, <thermalinnovation:drill:2>, <actuallyadditions:block_crystal:3>], 
+//	[<actuallyadditions:block_misc:9>, <actuallyadditions:item_drill:*>, <actuallyadditions:block_misc:9>]]);
 	
 //Ender Casing
 recipes.remove(<actuallyadditions:block_misc:8>);	
@@ -349,7 +349,7 @@ recipes.addShaped(<extrautils2:chunkloader>, [
 
 //Dragon Mill
 recipes.addShaped(<extrautils2:passivegenerator:8>, [
-	[<gregtech:meta_block_compressed_4:8>,<gregtech:meta_block_compressed_4:8>,<gregtech:meta_block_compressed_4:8>], 
+	[<metaitem:blockRuridit>,<metaitem:blockRuridit>,<metaitem:blockRuridit>], 
 	[<extrautils2:ingredients:2>, <extendedcrafting:storage:2>, <extrautils2:ingredients:2>], 
 	[<extrautils2:decorativesolid:3>, <extrautils2:ingredients:2>, <extrautils2:decorativesolid:3>]]);
 	

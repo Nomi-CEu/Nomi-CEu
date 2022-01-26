@@ -98,6 +98,20 @@ recipes.addShaped(<draconicevolution:particle_generator>, [
 	[<minecraft:blaze_rod>, <draconicevolution:draconic_core:*>, <minecraft:blaze_rod>], 
 	[<actuallyadditions:block_crystal_empowered>, <minecraft:blaze_rod>, <actuallyadditions:block_crystal_empowered>]]);
 
+// Hacky fix for broken DE stuff
+<ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
+
+<draconicevolution:draconic_ingot>.displayName = "Activated Awakened Draconium Ingot";
+
+chemical_bath.recipeBuilder()
+	.inputs(<metaitem:ingotAwakenedDraconium>)
+	.fluidInputs(<liquid:einsteinium> * 144)
+	.outputs(<draconicevolution:draconic_ingot>)
+	.duration(200)
+	.EUt(122880)
+	.buildAndRegister();
+
+
 //	//Draconium
 //mods.jei.JEI.removeAndHide(<metaitem:blockDraconium>);
 //mods.jei.JEI.removeAndHide(<metaitem:ingotDraconium>);

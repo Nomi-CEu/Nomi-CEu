@@ -68,73 +68,73 @@ var combinationcircuit = VanillaFactory.createItem("combinationcircuit");
 combinationcircuit.maxStackSize = 64;
 combinationcircuit.register();
 
-var electronicprocessor = VanillaFactory.createItem("electronicprocessor");
-electronicprocessor.maxStackSize = 64;
-electronicprocessor.register();
-
-var electronicprocessorarray = VanillaFactory.createItem("electronicprocessorarray");
-electronicprocessorarray.maxStackSize = 64;
-electronicprocessorarray.register();
-
-var refinedcircuit = VanillaFactory.createItem("refinedcircuit");
-refinedcircuit.maxStackSize = 64;
-refinedcircuit.register();
-
-var refinedprocessor = VanillaFactory.createItem("refinedprocessor");
-refinedprocessor.maxStackSize = 64;
-refinedprocessor.register();
-
-var refinedprocessorarray = VanillaFactory.createItem("refinedprocessorarray");
-refinedprocessorarray.maxStackSize = 64;
-refinedprocessorarray.register();
-
-var refinedprocessormainframe = VanillaFactory.createItem("refinedprocessormainframe");
-refinedprocessormainframe.maxStackSize = 64;
-refinedprocessormainframe.register();
-
-var microcircuit = VanillaFactory.createItem("microcircuit");
-microcircuit.maxStackSize = 64;
-microcircuit.register();
-
-var microprocessorarray = VanillaFactory.createItem("microprocessorarray");
-microprocessorarray.maxStackSize = 64;
-microprocessorarray.register();
-
-var microprocessormainframe = VanillaFactory.createItem("microprocessormainframe");
-microprocessormainframe.maxStackSize = 64;
-microprocessormainframe.register();
-
-var nanoprocessorarray = VanillaFactory.createItem("nanoprocessorarray");
-nanoprocessorarray.maxStackSize = 64;
-nanoprocessorarray.register();
-
-var nanoprocessormainframe = VanillaFactory.createItem("nanoprocessormainframe");
-nanoprocessormainframe.maxStackSize = 64;
-nanoprocessormainframe.register();
-
-var quantumprocessor = VanillaFactory.createItem("quantumprocessor");
-quantumprocessor.maxStackSize = 64;
-quantumprocessor.register();
-
-var quantumprocessorarray = VanillaFactory.createItem("quantumprocessorarray");
-quantumprocessorarray.maxStackSize = 64;
-quantumprocessorarray.register();
-
-var quantumprocessormainframe = VanillaFactory.createItem("quantumprocessormainframe");
-quantumprocessormainframe.maxStackSize = 64;
-quantumprocessormainframe.register();
-
-var crystalcircuit = VanillaFactory.createItem("crystalcircuit");
-crystalcircuit.maxStackSize = 64;
-crystalcircuit.register();
-
-var crystalprocessorarray = VanillaFactory.createItem("crystalprocessorarray");
-crystalprocessorarray.maxStackSize = 64;
-crystalprocessorarray.register();
-
-var crystalprocessormainframe = VanillaFactory.createItem("crystalprocessormainframe");
-crystalprocessormainframe.maxStackSize = 64;
-crystalprocessormainframe.register();
+//var electronicprocessor = VanillaFactory.createItem("electronicprocessor");
+//electronicprocessor.maxStackSize = 64;
+//electronicprocessor.register();
+//
+//var electronicprocessorarray = VanillaFactory.createItem("electronicprocessorarray");
+//electronicprocessorarray.maxStackSize = 64;
+//electronicprocessorarray.register();
+//
+//var refinedcircuit = VanillaFactory.createItem("refinedcircuit");
+//refinedcircuit.maxStackSize = 64;
+//refinedcircuit.register();
+//
+//var refinedprocessor = VanillaFactory.createItem("refinedprocessor");
+//refinedprocessor.maxStackSize = 64;
+//refinedprocessor.register();
+//
+//var refinedprocessorarray = VanillaFactory.createItem("refinedprocessorarray");
+//refinedprocessorarray.maxStackSize = 64;
+//refinedprocessorarray.register();
+//
+//var refinedprocessormainframe = VanillaFactory.createItem("refinedprocessormainframe");
+//refinedprocessormainframe.maxStackSize = 64;
+//refinedprocessormainframe.register();
+//
+//var microcircuit = VanillaFactory.createItem("microcircuit");
+//microcircuit.maxStackSize = 64;
+//microcircuit.register();
+//
+//var microprocessorarray = VanillaFactory.createItem("microprocessorarray");
+//microprocessorarray.maxStackSize = 64;
+//microprocessorarray.register();
+//
+//var microprocessormainframe = VanillaFactory.createItem("microprocessormainframe");
+//microprocessormainframe.maxStackSize = 64;
+//microprocessormainframe.register();
+//
+//var nanoprocessorarray = VanillaFactory.createItem("nanoprocessorarray");
+//nanoprocessorarray.maxStackSize = 64;
+//nanoprocessorarray.register();
+//
+//var nanoprocessormainframe = VanillaFactory.createItem("nanoprocessormainframe");
+//nanoprocessormainframe.maxStackSize = 64;
+//nanoprocessormainframe.register();
+//
+//var quantumprocessor = VanillaFactory.createItem("quantumprocessor");
+//quantumprocessor.maxStackSize = 64;
+//quantumprocessor.register();
+//
+//var quantumprocessorarray = VanillaFactory.createItem("quantumprocessorarray");
+//quantumprocessorarray.maxStackSize = 64;
+//quantumprocessorarray.register();
+//
+//var quantumprocessormainframe = VanillaFactory.createItem("quantumprocessormainframe");
+//quantumprocessormainframe.maxStackSize = 64;
+//quantumprocessormainframe.register();
+//
+//var crystalcircuit = VanillaFactory.createItem("crystalcircuit");
+//crystalcircuit.maxStackSize = 64;
+//crystalcircuit.register();
+//
+//var crystalprocessorarray = VanillaFactory.createItem("crystalprocessorarray");
+//crystalprocessorarray.maxStackSize = 64;
+//crystalprocessorarray.register();
+//
+//var crystalprocessormainframe = VanillaFactory.createItem("crystalprocessormainframe");
+//crystalprocessormainframe.maxStackSize = 64;
+//crystalprocessormainframe.register();
 
 
 
@@ -469,45 +469,45 @@ netherstarwest.register();
 
 
 
-var steelplating = VanillaFactory.createItem("steelplating");
-steelplating.rarity = "uncommon";
-steelplating.maxStackSize = 64;
-steelplating.register();
-
-var titaniumplating = VanillaFactory.createItem("titaniumplating");
-titaniumplating.rarity = "uncommon";
-titaniumplating.maxStackSize = 64;
-titaniumplating.register();
-
-var tungstencarbideplating = VanillaFactory.createItem("tungstencarbideplating");
-tungstencarbideplating.rarity = "uncommon";
-tungstencarbideplating.maxStackSize = 64;
-tungstencarbideplating.register();
-
-var signalumplating = VanillaFactory.createItem("signalumplating");
-signalumplating.rarity = "uncommon";
-signalumplating.maxStackSize = 64;
-signalumplating.register();
-
-var iridiumalloyplating = VanillaFactory.createItem("iridiumalloyplating");
-iridiumalloyplating.rarity = "uncommon";
-iridiumalloyplating.maxStackSize = 64;
-iridiumalloyplating.register();
-
-var enderiumplating = VanillaFactory.createItem("enderiumplating");
-enderiumplating.rarity = "rare";
-enderiumplating.maxStackSize = 64;
-enderiumplating.register();
-
-var draconiumplating = VanillaFactory.createItem("draconiumplating");
-draconiumplating.rarity = "rare";
-draconiumplating.maxStackSize = 64;
-draconiumplating.register();
-
-var crystalmatrixplating = VanillaFactory.createItem("crystalmatrixplating");
-crystalmatrixplating.rarity = "epic";
-crystalmatrixplating.maxStackSize = 64;
-crystalmatrixplating.register();
+//var steelplating = VanillaFactory.createItem("steelplating");
+//steelplating.rarity = "uncommon";
+//steelplating.maxStackSize = 64;
+//steelplating.register();
+//
+//var titaniumplating = VanillaFactory.createItem("titaniumplating");
+//titaniumplating.rarity = "uncommon";
+//titaniumplating.maxStackSize = 64;
+//titaniumplating.register();
+//
+//var tungstencarbideplating = VanillaFactory.createItem("tungstencarbideplating");
+//tungstencarbideplating.rarity = "uncommon";
+//tungstencarbideplating.maxStackSize = 64;
+//tungstencarbideplating.register();
+//
+//var signalumplating = VanillaFactory.createItem("signalumplating");
+//signalumplating.rarity = "uncommon";
+//signalumplating.maxStackSize = 64;
+//signalumplating.register();
+//
+//var iridiumalloyplating = VanillaFactory.createItem("iridiumalloyplating");
+//iridiumalloyplating.rarity = "uncommon";
+//iridiumalloyplating.maxStackSize = 64;
+//iridiumalloyplating.register();
+//
+//var enderiumplating = VanillaFactory.createItem("enderiumplating");
+//enderiumplating.rarity = "rare";
+//enderiumplating.maxStackSize = 64;
+//enderiumplating.register();
+//
+//var draconiumplating = VanillaFactory.createItem("draconiumplating");
+//draconiumplating.rarity = "rare";
+//draconiumplating.maxStackSize = 64;
+//draconiumplating.register();
+//
+//var crystalmatrixplating = VanillaFactory.createItem("crystalmatrixplating");
+//crystalmatrixplating.rarity = "epic";
+//crystalmatrixplating.maxStackSize = 64;
+//crystalmatrixplating.register();
 
 var quantumfluxedeterniumplating = VanillaFactory.createItem("quantumfluxedeterniumplating");
 quantumfluxedeterniumplating.rarity = "epic";

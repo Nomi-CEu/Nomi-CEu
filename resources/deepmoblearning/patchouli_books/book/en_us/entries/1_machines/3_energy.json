@@ -1,0 +1,19 @@
+{
+  "name": "Energy",
+  "icon": "minecraft:redstone",
+  "category": "1_machines",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "spotlight",
+      "title": "Energy",
+      "item": "minecraft:redstone",
+      "text": "This mod adds no way of producing $(item)Energy$(), so you will need some sort of $(item)Generator$() from another mod to power the $(item)Machines$()."
+    },
+    {
+      "type": "text",
+      "title": "Power Units",
+      "text": "Both $(item)Forge Energy (FE)$() and $(item)Redstone Flux (RF)$() will work."
+    }
+  ]
+}

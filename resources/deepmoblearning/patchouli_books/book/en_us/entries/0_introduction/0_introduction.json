@@ -1,0 +1,12 @@
+{
+  "name": "Introduction",
+  "icon": "deepmoblearning:soot_covered_redstone",
+  "category": "0_introduction",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "The design principle of this $(item)Mod$() is to be a simple and$(br)lag-free alternative to gathering mob resources by traditional means.$(br2)The mods mechanics encourage players to setup automation in order to gain access to infinite resources."
+    }
+  ]
+}

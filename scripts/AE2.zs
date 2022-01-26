@@ -1,6 +1,16 @@
 import mods.gregtech.recipe.RecipeMap;
 import mods.appliedenergistics2.Inscriber;
 
+// standardise fluix dust
+<ore:dustFluix>.add(<appliedenergistics2:material:8>);
+//macerator.findRecipe(8, [<ore:crystalFluix>], [null]).remove();
+//macerator.recipeBuilder()
+//	.inputs(<appliedenergistics2:material:7>)
+//	.outputs(<metaitem:dustFluix>)
+//	.duration(80)
+//	.EUt(8)
+//	.buildAndRegister();
+
 //Silicon
 Inscriber.removeRecipe(<appliedenergistics2:material:20>); 
 Inscriber.addRecipe(<appliedenergistics2:material:20>, <metaitem:plateSilicon>, true, <appliedenergistics2:material:19>);	
@@ -70,7 +80,7 @@ wiremill.recipeBuilder().inputs([<appliedenergistics2:material:11>]).outputs(<ap
 	
 //Glass Cable
 recipes.remove(<appliedenergistics2:part:16>);	
-alloy_smelter.recipeBuilder().inputs([<appliedenergistics2:material:8>, <appliedenergistics2:part:140>]).outputs(<appliedenergistics2:part:16> * 2).duration(50).EUt(16).buildAndRegister();	
+alloy_smelter.recipeBuilder().inputs([<ore:dustFluix>, <appliedenergistics2:part:140>]).outputs(<appliedenergistics2:part:16> * 2).duration(50).EUt(16).buildAndRegister();	
 
 //Covered Cable
 assembler.recipeBuilder()

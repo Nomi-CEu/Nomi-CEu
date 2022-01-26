@@ -15,7 +15,8 @@
     "enableCollisionMotion": true,
     "dyeVolume": 2.0,
     "maxAllowedDensity": 2048,
-    "maxDoorDistance": 512
+    "maxDoorDistance": 512,
+    "allowConverationToChiselsAndBits": true
   },
   "build": {
     "default": {
@@ -27,7 +28,9 @@
       "limitEditBlocks": true,
       "maxEditBlocks": 0,
       "limitPlaceBlocks": true,
-      "maxPlaceBlocks": 0
+      "maxPlaceBlocks": 0,
+      "limitRecipeSize": false,
+      "recipeBlocksLimit": 16
     },
     "survival": {
       "limitAffectedBlocks": true,
@@ -38,7 +41,9 @@
       "limitEditBlocks": false,
       "maxEditBlocks": 10,
       "limitPlaceBlocks": false,
-      "maxPlaceBlocks": 10
+      "maxPlaceBlocks": 10,
+      "limitRecipeSize": false,
+      "recipeBlocksLimit": 16
     },
     "creative": {
       "limitAffectedBlocks": false,
@@ -49,7 +54,9 @@
       "limitEditBlocks": false,
       "maxEditBlocks": 10,
       "limitPlaceBlocks": false,
-      "maxPlaceBlocks": 10
+      "maxPlaceBlocks": 10,
+      "limitRecipeSize": false,
+      "recipeBlocksLimit": 16
     }
   }
 }

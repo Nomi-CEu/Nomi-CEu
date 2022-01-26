@@ -102,13 +102,13 @@ blast_furnace.recipeBuilder().inputs([<metaitem:dustAluminium>]).fluidInputs(<li
 //blast_furnace.recipeBuilder().inputs([<metaitem:dustNeodymium>]).outputs([<metaitem:ingotNeodymium>]).property("temperature", 1500).duration(400).EUt(120).buildAndRegister();
 
 //Energetic Alloy [tier 2]
-blast_furnace.recipeBuilder().inputs([<minecraft:gold_ingot>,<nuclearcraft:compound:2>]).outputs([<enderio:item_alloy_ingot:1>]).property("temperature", 1500).duration(400).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<minecraft:gold_ingot>,<nuclearcraft:compound:2>]).outputs([<metaitem:ingotEnergeticAlloy>]).property("temperature", 1500).duration(400).EUt(120).buildAndRegister();
 
 //Energetic Silver [tier 2]
 //blast_furnace.recipeBuilder().inputs([<ore:ingotSilver>,<nuclearcraft:compound:2>]).outputs([<enderio:item_alloy_endergy_ingot:5>]).property("temperature", 1500).duration(400).EUt(120).buildAndRegister();
 
 //Vibrant Alloy [tier 3]
-blast_furnace.recipeBuilder().inputs([<ore:ingotEnergeticAlloy>,<minecraft:ender_pearl>]).outputs([<enderio:item_alloy_ingot:2>]).property("temperature", 1700).duration(600).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<ore:ingotEnergeticAlloy>,<minecraft:ender_pearl>]).outputs([<metaitem:ingotVibrantAlloy>]).property("temperature", 1700).duration(600).EUt(120).buildAndRegister();
 
 //Silicon Boule [tier 3]
 //blast_furnace.findRecipe(120, [<metaitem:dustSilicon> * 32, <metaitem:dustTinyGallium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], [null]).remove();	
@@ -254,20 +254,20 @@ vacuum_freezer.recipeBuilder()
 	
 //Enderium [tier 13]
 recipes.removeByRecipeName("thermalfoundation:dust_enderium");
-recipes.addShapeless(<thermalfoundation:material:103> * 4, [
+recipes.addShapeless(<metaitem:dustEnderium> * 4, [
 	<metaitem:dustLead>,<metaitem:dustLead>,<metaitem:dustLead>,
 	<metaitem:dustLead>,<metaitem:dustPlatinum>,<metaitem:dustPlatinum>,
 	<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>]);
-blast_furnace.recipeBuilder().inputs([<thermalfoundation:material:103>]).fluidInputs([<liquid:mana>*250]).outputs([<metaitem:ingotHotEnderium>]).property("temperature", 6400).duration(20800).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:dustEnderium>]).fluidInputs([<liquid:mana>*250]).outputs([<metaitem:ingotHotEnderium>]).property("temperature", 6400).duration(20800).EUt(120).buildAndRegister();
 
 // Enderium Ingot * 1
-<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotEnderium>], null).remove();
-vacuum_freezer.recipeBuilder()
-	.inputs(<metaitem:ingotHotEnderium>)
-	.outputs(<metaitem:ingotEnderium>)
-	.duration(555)
-	.EUt(120)
-	.buildAndRegister();
+//<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotEnderium>], null).remove();
+//vacuum_freezer.recipeBuilder()
+//	.inputs(<metaitem:ingotHotEnderium>)
+//	.outputs(<metaitem:ingotEnderium>)
+//	.duration(555)
+//	.EUt(120)
+//	.buildAndRegister();
 //Draconium [tier 14]
 blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
 blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
