@@ -73,8 +73,8 @@ recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:crafting
 
 
 //Clay Electrolyzing
-//electrolyzer.findRecipe(120, [<metaitem:dustClay> * 13], [null]).remove();
-//electrolyzer.recipeBuilder().inputs([<metaitem:dustClay> * 7]).outputs([<metaitem:dustSodium> * 2, <metaitem:dustSilicon> * 2, <metaitem:dustLithium>, <metaitem:dustAluminium> * 2]).duration(400).EUt(30).buildAndRegister();
+electrolyzer.findRecipe(60, [<metaitem:dustClay> * 13], [null]).remove();
+electrolyzer.recipeBuilder().inputs([<metaitem:dustClay> * 13]).outputs([<metaitem:dustSodium> * 2, <metaitem:dustSilicon> * 2, <metaitem:dustLithium>, <metaitem:dustAluminium> * 2]).fluidOutputs([<liquid:water>*6000]).duration(400).EUt(30).buildAndRegister();
 
 //Photovoltaic Cells
 alloy_smelter.recipeBuilder().inputs([<enderio:item_material:38> * 2, <metaitem:plateElectricalSteel>]).outputs([<enderio:item_material:3>]).duration(180).EUt(16).buildAndRegister();
