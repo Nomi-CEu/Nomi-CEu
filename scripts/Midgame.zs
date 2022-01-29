@@ -10,9 +10,9 @@ reactor.recipeBuilder().inputs([<minecraft:nether_star>]).fluidInputs([<liquid:e
 //Distillation Tower
 recipes.removeByRecipeName("gregtech:distillation_tower");
 recipes.addShaped(<meta_tile_entity:distillation_tower>, [
-	[<ore:pipeLargeStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeStainlessSteel>], 
+	[<ore:pipeLargeFluidStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeFluidStainlessSteel>], 
 	[<ore:circuitAdvanced>, <meta_tile_entity:hull.mv>, <ore:circuitAdvanced>], 
-	[<ore:pipeLargeStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeStainlessSteel>]]);
+	[<ore:pipeLargeFluidStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeFluidStainlessSteel>]]);
 
 //Fermenter
 fermenter.recipeBuilder().fluidInputs([<liquid:canolaoil> * 100]).fluidOutputs([<liquid:refinedcanolaoil> * 100]).duration(400).EUt(2).buildAndRegister();

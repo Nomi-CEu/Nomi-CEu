@@ -758,10 +758,9 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
-    .outputs(<metaitem:dustNaquadah> * 64,
-             <metaitem:dustNaquadah> * 64,
-             <metaitem:dustNaquadah> * 64,
-             <metaitem:dustNaquadah> * 64,
+    .outputs(<gregtech:ore_naquadah_0:2> * 64,
+             <gregtech:ore_naquadah_0:2> * 64,
+             <gregtech:ore_naquadah_0:2> * 32,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64)
     .buildAndRegister();
@@ -900,7 +899,7 @@ microverse_projector_advanced_ii.recipeMap
     .EUt(250000)
     .inputs(<contenttweaker:tiernineship>,
             <metaitem:neutron_reflector> * 8,
-            <draconicevolution:draconic_block> * 4,
+            <metaitem:blockAwakenedDraconium> * 4,
             <contenttweaker:stellarcreationdata>)
     .outputs(<ore:nuggetNeutronium>.firstItem * 64,
              <ore:nuggetNeutronium>.firstItem * 64,
@@ -919,7 +918,7 @@ microverse_projector_advanced_ii.recipeMap
     .duration(3000)
     .EUt(250000)
     .inputs(<contenttweaker:tiernineship>,
-            <draconicevolution:draconic_block> * 4,
+            <metaitem:blockAwakenedDraconium> * 4,
             <contenttweaker:stellarcreationdata> * 64,
             <contenttweaker:stellarcreationdata> * 64,
             <contenttweaker:stellarcreationdata> * 64,

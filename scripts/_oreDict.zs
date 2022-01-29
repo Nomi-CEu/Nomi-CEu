@@ -2422,11 +2422,11 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //<ore:dustSignalum>.remove(<thermalfoundation:material:101>);
 
 //Questbook things
-//<ore:questbookBrewery>.add(<meta_tile_entity:brewery.lv>); // LV Brewery
-//<ore:questbookBrewery>.add(<meta_tile_entity:brewery.mv>); // MV Brewery
+<ore:questbookBrewery>.add(<meta_tile_entity:brewery.lv>); // LV Brewery
+<ore:questbookBrewery>.add(<meta_tile_entity:brewery.mv>); // MV Brewery
 //
-//<ore:questbookDistillery>.add(<meta_tile_entity:distillery.lv>); // LV Distillery
-//<ore:questbookDistillery>.add(<meta_tile_entity:distillery.mv>); // MV Distillery
+<ore:questbookDistillery>.add(<meta_tile_entity:distillery.lv>); // LV Distillery
+<ore:questbookDistillery>.add(<meta_tile_entity:distillery.mv>); // MV Distillery
 //
 //<ore:questbookCentrifuge>.add(<meta_tile_entity:centrifuge.lv>); // LV Centrifuge
 //<ore:questbookCentrifuge>.add(<meta_tile_entity:centrifuge.mv>); // MV Centrifuge
@@ -2435,10 +2435,10 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //<ore:questbookPolarizer>.add(<meta_tile_entity:polarizer.lv>); // LV Polarizer
 //<ore:questbookPolarizer>.add(<meta_tile_entity:polarizer.mv>); // MV Polarizer (why)
 //
-//<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.lv>); // LV Air Succ
-//<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.mv>); // MV Air Succ
-//<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.hv>); // HV Air Succ
-//<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.ev>); // EV Air Succ
+<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.lv>); // LV Air Succ
+<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.mv>); // MV Air Succ
+<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.hv>); // HV Air Succ
+<ore:questbookAirCollector>.add(<meta_tile_entity:gas_collector.ev>); // EV Air Succ
 //
 //<ore:questbookCanning>.add(<meta_tile_entity:canner.lv>); // LV Canning
 //<ore:questbookCanning>.add(<meta_tile_entity:canner.mv>); // MV Canning

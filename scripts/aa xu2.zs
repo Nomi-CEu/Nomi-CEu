@@ -88,7 +88,7 @@ recipes.addShaped(<actuallyadditions:block_misc:9>, [
 recipes.remove(<actuallyadditions:block_atomic_reconstructor>);	
 recipes.addShaped(<actuallyadditions:block_atomic_reconstructor>, [
 [<metaitem:plateLead>,<metaitem:plateLead>,<metaitem:emitter.mv>], 
-[<metaitem:plateLead>,<actuallyadditions:block_misc:9>,<metaitem:lensEnderEye>], 
+[<metaitem:plateLead>,<actuallyadditions:block_misc:9>,<metaitem:lensEmerald>], 
 [<metaitem:plateLead>,<metaitem:plateLead>,<metaitem:emitter.mv>]]);
 
 //Display Stand

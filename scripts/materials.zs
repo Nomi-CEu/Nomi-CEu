@@ -44,7 +44,7 @@ var omnium = MaterialBuilder(32004, "omnium")
     .ingot().fluid()
     .element("Omnium")
     .color(0x84053e).iconSet("shiny")
-    .cableProperties(2147483647, 1, 0, true)
+    .cableProperties(2147483647, 64, 0, true)
     .build();
 
 //var black_quartz = MaterialBuilder(32005, "black_quartz")
@@ -133,7 +133,7 @@ var lumium = MaterialBuilder(32017, "lumium")
 var enderium = MaterialBuilder(32018, "enderium")
     .ingot().fluid()
     .color(0x1f6b62).iconSet("shiny")
-    .flags("generate_plate", "generate_gear")
+    .flags("generate_plate", "generate_gear", "generate_fine_wire")
     .blastTemp(6400)
     .components([<material:lead> * 4, <material:platinum> * 2, <material:blue_steel> * 1, <material:osmium> * 1])
     .cableProperties(131072, 1, 0, true)
@@ -204,18 +204,13 @@ MaterialRegistry.get("iridium").addOre();
 MaterialRegistry.get("uranium").addOre();
 MaterialRegistry.get("rutile").addOre();
 
-//MaterialRegistry.get("niobium").setOreByProducts([<material:tantalum>]);
-//MaterialRegistry.get("osmium").setOreByProducts([<material:iridium>, <material:nickel>]);
-//MaterialRegistry.get("iridium").setOreByProducts([<material:osmium>, <material:nickel>]);
-//MaterialRegistry.get("uranium").setOreByProducts([<material:thorium>, <material:lead>, <material:neptunium>]);
-
 MaterialRegistry.get("lutetium").addIngot();
 MaterialRegistry.get("neptunium").addIngot();
 MaterialRegistry.get("curium").addIngot();
 MaterialRegistry.get("berkelium").addIngot();
 MaterialRegistry.get("californium").addIngot();
 MaterialRegistry.get("einsteinium").addIngot();
-//MaterialRegistry.get("graphite").addIngot();
+MaterialRegistry.get("graphite").addIngot();
 
 MaterialRegistry.get("uranium_235").addFluid();
 MaterialRegistry.get("neptunium").addFluid();
@@ -226,6 +221,7 @@ MaterialRegistry.get("californium").addFluid();
 MaterialRegistry.get("einsteinium").addFluid();
 MaterialRegistry.get("nether_star").addFluid();
 
+MaterialRegistry.get("electrum").addFlags(["generate_gear"]);
 MaterialRegistry.get("neutronium").addFlags(["generate_round"]);
 MaterialRegistry.get("titanium").addFlags(["generate_foil", "generate_fine_wire"]);
 MaterialRegistry.get("stainless_steel").addFlags(["generate_foil", "generate_fine_wire"]);
@@ -234,3 +230,8 @@ MaterialRegistry.get("naquadria").addFlags(["generate_bolt_screw"]);
 
 MaterialRegistry.get("glowstone").setFormula("Au(Ca3(PO4)2)", true);
 MaterialRegistry.get("energetic_alloy").setFormula("Au(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);
+
+//MaterialRegistry.get("niobium").setOreByProducts([<material:tantalum>]);
+//MaterialRegistry.get("osmium").setOreByProducts([<material:iridium>, <material:nickel>]);
+//MaterialRegistry.get("iridium").setOreByProducts([<material:osmium>, <material:nickel>]);
+//MaterialRegistry.get("uranium").setOreByProducts([<material:thorium>, <material:lead>, <material:neptunium>]);

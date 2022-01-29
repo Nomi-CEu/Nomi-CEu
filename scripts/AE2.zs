@@ -219,10 +219,10 @@ Inscriber.removeRecipe(<appliedenergistics2:material:14>);
 Inscriber.removeRecipe(<appliedenergistics2:material:13>); 	
 Inscriber.removeRecipe(<appliedenergistics2:material:19>); 	
 Inscriber.removeRecipe(<appliedenergistics2:material:15>); 	
-laser_engraver.recipeBuilder().inputs([<gregtech:meta_block_compressed_0:1>]).notConsumable(<ore:craftingLensRed>).outputs([<appliedenergistics2:material:14>]).EUt(120).duration(1600).buildAndRegister();
-laser_engraver.recipeBuilder().inputs([<gregtech:meta_block_compressed_0:1>]).notConsumable(<ore:craftingLensBlue>).outputs([<appliedenergistics2:material:13>]).EUt(120).duration(1600).buildAndRegister();
-laser_engraver.recipeBuilder().inputs([<gregtech:meta_block_compressed_0:1>]).notConsumable(<metaitem:lensDiamond>).outputs([<appliedenergistics2:material:19>]).EUt(120).duration(1600).buildAndRegister();
-laser_engraver.recipeBuilder().inputs([<gregtech:meta_block_compressed_0:1>]).notConsumable(<ore:craftingLensLime>).outputs([<appliedenergistics2:material:15>]).EUt(120).duration(1600).buildAndRegister();
+laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensRed>).outputs([<appliedenergistics2:material:14>]).EUt(120).duration(1600).buildAndRegister();
+laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensBlue>).outputs([<appliedenergistics2:material:13>]).EUt(120).duration(1600).buildAndRegister();
+laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<metaitem:lensDiamond>).outputs([<appliedenergistics2:material:19>]).EUt(120).duration(1600).buildAndRegister();
+laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensGreen>).outputs([<appliedenergistics2:material:15>]).EUt(120).duration(1600).buildAndRegister();
  
 recipes.addShapeless(<appliedenergistics2:part:120>, [<metaitem:boltSteel>]); 
  

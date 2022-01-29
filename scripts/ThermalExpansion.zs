@@ -141,7 +141,7 @@ recipes.addShaped(<thermalfoundation:upgrade>, [
 recipes.remove(<thermalfoundation:upgrade:1>);
 recipes.addShaped(<thermalfoundation:upgrade:1>, [
 	[<metaitem:gearElectrum>, <metaitem:plateElectrum>, <metaitem:gearElectrum>],
-	[<metaitem:plateElectrum>, <gregtech:meta_block_compressed_0:1>, <metaitem:plateElectrum>],
+	[<metaitem:plateElectrum>, <metaitem:blockAluminium>, <metaitem:plateElectrum>],
 	[<metaitem:gearElectrum>, <metaitem:plateElectrum>, <metaitem:gearElectrum>]]);
 
 //sig upgrade

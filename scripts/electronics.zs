@@ -321,3 +321,96 @@ recipes.addShaped(<metaitem:board.coated> * 3, [
 	[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
 	[<metaitem:rubber_drop>, <metaitem:rubber_drop>, <metaitem:rubber_drop>]
 ]);
+
+// t1 board easier
+recipes.removeByRecipeName("gregtech:basic_circuit_board");
+recipes.addShaped("gregtech:basic_circuit_board", <metaitem:circuit_board.basic>, [[<ore:wireFineCopper>, <ore:wireFineCopper>, <ore:wireFineCopper>], [<ore:wireFineCopper>, <gregtech:meta_item_1:381>, <ore:wireFineCopper>], [<ore:wireFineCopper>, <ore:wireFineCopper>, <ore:wireFineCopper>]]);
+
+
+
+// high tier circuit progression changes
+// nano iv
+// Nano Supercomputer * 1
+<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:soldering_alloy> * 144]).remove();
+// Nano Supercomputer * 1
+<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:tin> * 288]).remove();
+// Nano Supercomputer * 1
+<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:tin> * 288]).remove();
+// Nano Supercomputer * 1
+<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:soldering_alloy> * 144]).remove();
+
+circuit_assembler.recipeBuilder()
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.fluidInputs(<liquid:tin> * 288)
+	.outputs(<metaitem:circuit.nano_computer>)
+	.duration(200)
+	.EUt(600)
+	.buildAndRegister();
+
+circuit_assembler.recipeBuilder()
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.fluidInputs(<liquid:soldering_alloy> * 144)
+	.outputs(<metaitem:circuit.nano_computer>)
+	.duration(200)
+	.EUt(600)
+	.buildAndRegister();
+
+circuit_assembler.recipeBuilder()
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.fluidInputs(<liquid:tin> * 288)
+	.outputs(<metaitem:circuit.nano_computer>)
+	.duration(200)
+	.EUt(600)
+	.buildAndRegister();
+
+circuit_assembler.recipeBuilder()
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.fluidInputs(<liquid:soldering_alloy> * 144)
+	.outputs(<metaitem:circuit.nano_computer>)
+	.duration(200)
+	.EUt(600)
+	.buildAndRegister();
+
+// zpm crystal
+// Crystal Supercomputer * 1
+<recipemap:circuit_assembler>.findRecipe(9600, [<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineNiobiumTitanium> * 32], [<liquid:soldering_alloy> * 144]).remove();
+// Crystal Supercomputer * 1
+<recipemap:circuit_assembler>.findRecipe(9600, [<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineNiobiumTitanium> * 32], [<liquid:tin> * 288]).remove();
+
+circuit_assembler.recipeBuilder()
+	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineEnderium> * 32])
+	.fluidInputs(<liquid:tin> * 288)
+	.outputs(<metaitem:circuit.crystal_computer>)
+	.duration(400)
+	.EUt(9600)
+	.buildAndRegister();
+
+circuit_assembler.recipeBuilder()
+	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineEnderium> * 32])
+	.fluidInputs(<liquid:soldering_alloy> * 144)
+	.outputs(<metaitem:circuit.crystal_computer>)
+	.duration(400)
+	.EUt(9600)
+	.buildAndRegister();
+
+// wetware
+// Stem Cells * 32
+<recipemap:chemical_reactor>.findRecipe(30720, [<metaitem:dustOsmiridium>], [<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500]).remove();
+// Stem Cells * 32
+<recipemap:large_chemical_reactor>.findRecipe(30720, [<metaitem:dustOsmiridium>], [<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500]).remove();
+
+chemical_reactor.recipeBuilder()
+	.inputs(<minecraft:dragon_egg>)
+	.fluidInputs(<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500)
+	.outputs([<metaitem:stem_cells> * 64, <metaitem:stem_cells> * 64])
+	.duration(6000)
+	.EUt(30720)
+	.buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+	.inputs(<minecraft:dragon_egg>)
+	.fluidInputs(<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500)
+	.outputs([<metaitem:stem_cells> * 64, <metaitem:stem_cells> * 64])
+	.duration(6000)
+	.EUt(30720)
+	.buildAndRegister();

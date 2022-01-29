@@ -74,7 +74,7 @@ recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:crafting
 
 //Clay Electrolyzing
 electrolyzer.findRecipe(60, [<metaitem:dustClay> * 13], [null]).remove();
-electrolyzer.recipeBuilder().inputs([<metaitem:dustClay> * 13]).outputs([<metaitem:dustSodium> * 2, <metaitem:dustSilicon> * 2, <metaitem:dustLithium>, <metaitem:dustAluminium> * 2]).fluidOutputs([<liquid:water>*6000]).duration(400).EUt(30).buildAndRegister();
+electrolyzer.recipeBuilder().inputs([<metaitem:dustClay> * 13]).outputs([<metaitem:dustSodium> * 2, <metaitem:dustSilicon> * 2, <metaitem:dustLithium>, <metaitem:dustAluminium> * 2]).fluidOutputs([<liquid:water>*6000]).duration(364).EUt(15).buildAndRegister();
 
 //Photovoltaic Cells
 alloy_smelter.recipeBuilder().inputs([<enderio:item_material:38> * 2, <metaitem:plateElectricalSteel>]).outputs([<enderio:item_material:3>]).duration(180).EUt(16).buildAndRegister();
@@ -277,9 +277,9 @@ chemical_reactor.recipeBuilder().inputs([<thermalfoundation:fertilizer>]).fluidI
 // chemical_reactor.recipeBuilder().inputs([<nuclearcraft:dust_oxide:2>]).fluidInputs(<liquid:phosphoric_acid> * 1000).outputs(<nuclearcraft:dust_oxide:2>).EUt(500).duration(120).buildAndRegister();
 mixer.recipeBuilder().inputs([<metaitem:dustTricalciumPhosphate>,<metaitem:dustGold>]).outputs(<minecraft:glowstone_dust> * 2).EUt(15).duration(80).buildAndRegister();
 mixer.recipeBuilder().inputs([<metaitem:dustIron>,<metaitem:dustTin>]).outputs(<metaitem:dustTinAlloy> * 2).EUt(15).duration(40).buildAndRegister();
-// Replaced by GTCEu Naq processing
-//mixer.recipeBuilder().inputs([<metaitem:dustNaquadah>,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
-//mixer.recipeBuilder().inputs([<metaitem:dustNaquadahAlloy>,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
+// Nq+ and Nq*
+mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched> * 3).EUt(8000).duration(400).buildAndRegister();
+mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 3,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria> * 3).EUt(30000).duration(400).buildAndRegister();
 mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
 recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustBlackBronze>, <ore:dustSteel>, <ore:dustSteel>, <ore:dustSteel>]);
 //mixer.findRecipe(8, [<ore:dustTinySteel>.firstItem * 3, <ore:dustTinyNickel>.firstItem, <ore:dustTinyBlackBronze>.firstItem], [null]).remove();
