@@ -10,6 +10,10 @@ Progression and certain mods and CT scripts have been altered or removed due to 
 Temporary: There is no RF -> EU conversion available in GTCEu yet. To alleviate this, the Large Lapidary Dynamo is added, available at MV.
 Depending on feedback it may stay even after RF -> EU conversion is made available.
 
+Installation instructions for building the bleeding-edge version:
+- Download the repository as a ZIP.
+- Import it into your launcher of choice.
+
 Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).
 GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84). 
 Thank you!
