@@ -1,0 +1,101 @@
+[
+  {
+    "content": "gregtech:meta_item_1:621",
+    "amount": {
+      "min": 5,
+      "max": 10
+    },
+    "unitWorth": 5,
+    "weight": 70
+  },
+  {
+    "content": "contenttweaker:stonewidget",
+    "amount": {
+      "min": 5,
+      "max": 25
+    },
+    "unitWorth": 3,
+    "weight": 30
+  },
+  {
+    "content": "gregtech:meta_item_1:187",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 10,
+    "weight": 50
+  },
+  {
+    "content": "gregtech:meta_item_1:127",
+    "amount": {
+      "min": 5,
+      "max": 25
+    },
+    "unitWorth": 1,
+    "weight": 20
+  },
+  {
+    "content": "gregtech:meta_item_1:157",
+    "amount": {
+      "min": 1,
+      "max": 5
+    },
+    "unitWorth": 35,
+    "weight": 50
+  },
+  {
+    "content": "gregtech:meta_item_1:142",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 10,
+    "weight": 30
+  },
+  {
+    "content": "gregtech:meta_item_1:217",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 15,
+    "weight": 30
+  },
+  {
+    "content": "gregtech:meta_item_1:232",
+    "amount": {
+      "min": 2,
+      "max": 4
+    },
+    "unitWorth": 15,
+    "weight": 30
+  },
+  {
+    "content": "contenttweaker:enderwidget",
+    "amount": {
+      "min": 2,
+      "max": 5
+    },
+    "unitWorth": 30,
+    "weight": 50
+  },
+  {
+    "content": "contenttweaker:alloywidget",
+    "amount": {
+      "min": 2,
+      "max": 5
+    },
+    "unitWorth": 20,
+    "weight": 40
+  },
+  {
+    "content": "contenttweaker:woodenwidget",
+    "amount": {
+      "min": 5,
+      "max": 25
+    },
+    "unitWorth": 2,
+    "weight": 80
+  }
+]

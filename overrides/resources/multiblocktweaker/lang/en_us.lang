@@ -1,0 +1,34 @@
+multiblocktweaker.machine.cryogenicairdistillation.name=Cryogenic Distillation Tower
+multiblocktweaker.machine.small_microverse.name=Small Microverse Projector
+multiblocktweaker.machine.medium_microverse.name=Medium Microverse Projector
+multiblocktweaker.machine.large_microverse.name=Large Microverse Projector
+multiblocktweaker.machine.oildrillingrig.name=Oil Drilling Rig
+multiblocktweaker.machine.naquadahreactormk1.name=Naquadah Reactor Mk1
+multiblocktweaker.machine.naquadahreactormk2.name=Naquadah Reactor Mk2
+multiblocktweaker.machine.lunarminingstation.name=Lunar Mining Station
+
+multiblocktweaker.multiblock.cryogenicairdistillation.description=A cryogenic air separation unit for fractional distillation of liquefied air and noble gases.
+multiblocktweaker.multiblock.small_microverse.description=A machine capable of stabilizing projection into microverses for basic Micro Miner missions.
+multiblocktweaker.multiblock.medium_microverse.description=An advanced machine capable of stabilizing projection into microverses for complex missions into the deepest parts of space.
+multiblocktweaker.multiblock.large_microverse.description=An elite machine capable of stabilizing projection into microverses for exotic missions, including collapsing the microverse whole.
+multiblocktweaker.multiblock.oildrillingrig.description=A structure that "drills" for oil, producing it seemingly from thin air.
+multiblocktweaker.multiblock.naquadahreactormk1.description=An advanced reactor that produces energy from the decay of Enriched Naquadah and Naquadria bolts.
+multiblocktweaker.multiblock.naquadahreactormk2.description=An elite reactor capable of capturing more energy from the decay of Enriched Naquadah and Naquadria bolts.
+multiblocktweaker.multiblock.lunarminingstation.description=A mining installation that §lonly forms on the moon§r. It deploys rovers to collect rare isotopes of helium and hydrogen.
+
+recipemap.cryogenicairdistillation.name=Cryogenic Air Distillation
+recipemap.small_microverse.name=Small Microverse Mission
+recipemap.medium_microverse.name=Medium Microverse Mission
+recipemap.large_microverse.name=Large Microverse Mission
+recipemap.oildrillingrig.name=Oil Drilling
+recipemap.naquadahreactormk1.name=Naquadah Decay (Mk1)
+recipemap.naquadahreactormk2.name=Naquadah Decay (Mk2)
+recipemap.lunarminingstation.name=Lunar Mining
+
+# gregtech.recipe.chance=Chance: %s%%; doubled each tier
+
+
+# Multiblock Simulation Chamber
+multiblocktweaker.machine.dml_sim_chamber.name=Simulation Supercomputer
+multiblocktweaker.multiblock.dml_sim_chamber.description=A high powered simulation device, capable of performing more complex simulations faster than ever.
+recipemap.dml_sim_chamber.name=Simulation Supercomputer
