@@ -98,15 +98,35 @@ recipes.addShaped(<draconicevolution:particle_generator>, [
 	[<minecraft:blaze_rod>, <draconicevolution:draconic_core:*>, <minecraft:blaze_rod>], 
 	[<actuallyadditions:block_crystal_empowered>, <minecraft:blaze_rod>, <actuallyadditions:block_crystal_empowered>]]);
 
+recipes.remove(<draconicevolution:energy_storage_core>);
+recipes.addShaped(<draconicevolution:energy_storage_core>, [
+	[<ore:ingotDraconium>,<ore:ingotDraconium>,<ore:ingotDraconium>],
+	[<draconicevolution:wyvern_energy_core>,<draconicevolution:wyvern_core> ,<draconicevolution:wyvern_energy_core>],
+	[<ore:ingotDraconium>,<ore:ingotDraconium>,<ore:ingotDraconium>]
+]);
+
 // Hacky fix for broken DE stuff
-<ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
+//<ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
 
 <draconicevolution:draconic_ingot>.displayName = "Activated Awakened Draconium Ingot";
+<draconicevolution:draconium_block>.displayName = "Activated Draconium Block";
+<draconicevolution:draconic_block>.displayName = "Activated Awakened Draconium Block";
+
+recipes.removeByRecipeName("draconicevolution:draconic_ingot_1");
+recipes.removeByRecipeName("draconicevolution:draconium_ingot_1");
 
 chemical_bath.recipeBuilder()
-	.inputs(<metaitem:ingotAwakenedDraconium>)
-	.fluidInputs(<liquid:einsteinium> * 144)
-	.outputs(<draconicevolution:draconic_ingot>)
+	.inputs(<metaitem:blockDraconium>)
+	.fluidInputs(<liquid:americium> * 432)
+	.outputs(<draconicevolution:draconium_block>)
+	.duration(200)
+	.EUt(30720)
+	.buildAndRegister();
+
+chemical_bath.recipeBuilder()
+	.inputs(<metaitem:blockAwakenedDraconium>)
+	.fluidInputs(<liquid:einsteinium> * 1296)
+	.outputs(<draconicevolution:draconic_block>)
 	.duration(200)
 	.EUt(122880)
 	.buildAndRegister();

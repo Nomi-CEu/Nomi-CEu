@@ -101,11 +101,6 @@ recipes.addShaped(<simplyjetpacks:metaitemmods:20>, [
 
 // fluxed electrum blend
 recipes.remove(<redstonearsenal:material>);
-recipes.addShapeless(<redstonearsenal:material> * 9,
-    [<ore:dustElectrum>,<ore:dustElectrum>,<ore:dustElectrum>,
-    <ore:dustElectrum>,<ore:dustElectrum>,<ore:dustElectrum>,
-    <thermalfoundation:material:102>,<thermalfoundation:material:101>,<ore:dustMana>]);
-
 //crafter
 recipes.remove(<enderio:block_crafter>);
 recipes.addShaped(<enderio:block_crafter>, [
@@ -371,7 +366,7 @@ alloy.recipeBuilder()
 
 // end steel + grains => stellar
 alloy.recipeBuilder()
-    .inputs([<enderio:item_alloy_ingot:8>,<enderio:item_material:20> * 8])
+    .inputs([<ore:ingotEndSteel>,<enderio:item_material:20> * 8])
     .outputs([<enderio:item_alloy_endergy_ingot:3>])
     .duration(200).EUt(2000).buildAndRegister();
 
@@ -511,7 +506,7 @@ autoclave.recipeBuilder()
 recipes.remove(<appliedenergistics2:quartz_vibrant_glass>);
 
 alloy.recipeBuilder()
-    .inputs([<appliedenergistics2:quartz_glass>,<enderio:item_alloy_ingot:2>])
+    .inputs([<appliedenergistics2:quartz_glass>,<ore:ingotVibrantAlloy>])
     .outputs([<appliedenergistics2:quartz_vibrant_glass>])
     .duration(80).EUt(16).buildAndRegister();
 
@@ -521,22 +516,22 @@ alloy.recipeBuilder()
     .duration(100).EUt(16).buildAndRegister();
 
 alloy.recipeBuilder()
-    .inputs([<enderio:item_material:11>,<enderio:item_alloy_ingot:6> * 4])
+    .inputs([<enderio:item_material:11>,<ore:ingotDarkSteel> * 4])
     .outputs([<enderio:item_material:73>])
     .duration(150).EUt(16).buildAndRegister();
 
 alloy.recipeBuilder()
-    .inputs([<enderio:item_material:11>,<enderio:item_alloy_ingot:1> * 4])
+    .inputs([<enderio:item_material:11>,<ore:ingotEnergeticAlloy> * 4])
     .outputs([<enderio:item_material:12>])
     .duration(150).EUt(16).buildAndRegister();
 
 alloy.recipeBuilder()
-    .inputs([<enderio:item_material:12>,<enderio:item_alloy_ingot:2> * 4])
+    .inputs([<enderio:item_material:12>,<ore:ingotVibrantAlloy> * 4])
     .outputs([<enderio:item_material:13>])
     .duration(200).EUt(16).buildAndRegister();
 
 alloy.recipeBuilder()
-    .inputs([<enderio:item_material:1>,<enderio:item_material:74> * 8])
+    .inputs([<enderio:item_material:1>,<ore:dustSoularium> * 8])
     .outputs([<enderio:item_material:53>])
     .duration(200).EUt(16).buildAndRegister();
 
@@ -732,8 +727,8 @@ recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"})
 
 recipes.remove(<enderio:block_soul_binder>);
 mods.extendedcrafting.TableCrafting.addShaped(<enderio:block_soul_binder>, [
-	[<enderio:item_alloy_ingot:7>, <enderio:item_alloy_ingot:7>, <enderio:item_alloy_ingot:7>,  <enderio:item_alloy_ingot:7>,<enderio:item_alloy_ingot:7>],
-	[<enderio:item_alloy_ingot:7>, <metaitem:plateTungstenSteel>, <enderio:block_enderman_skull>,<metaitem:plateTungstenSteel>,<enderio:item_alloy_ingot:7>],
-	[<enderio:item_alloy_ingot:7>, <minecraft:skull:4>,          <ore:itemSoulMachineChassi>,   <minecraft:skull:2>,         <enderio:item_alloy_ingot:7>],
-	[<enderio:item_alloy_ingot:7>, <metaitem:plateTungstenSteel>, <minecraft:skull>,             <metaitem:plateTungstenSteel>,<enderio:item_alloy_ingot:7>],
-	[<enderio:item_alloy_ingot:7>, <enderio:item_alloy_ingot:7>, <enderio:item_alloy_ingot:7>,  <enderio:item_alloy_ingot:7>,<enderio:item_alloy_ingot:7>]]);
+	[<ore:ingotSoularium>, <ore:ingotSoularium>, <ore:ingotSoularium>,  <ore:ingotSoularium>,<ore:ingotSoularium>],
+	[<ore:ingotSoularium>, <metaitem:plateTungstenSteel>, <enderio:block_enderman_skull>,<metaitem:plateTungstenSteel>,<ore:ingotSoularium>],
+	[<ore:ingotSoularium>, <minecraft:skull:4>,          <ore:itemSoulMachineChassi>,   <minecraft:skull:2>,         <ore:ingotSoularium>],
+	[<ore:ingotSoularium>, <metaitem:plateTungstenSteel>, <minecraft:skull>,             <metaitem:plateTungstenSteel>,<ore:ingotSoularium>],
+	[<ore:ingotSoularium>, <ore:ingotSoularium>, <ore:ingotSoularium>,  <ore:ingotSoularium>,<ore:ingotSoularium>]]);

@@ -3,7 +3,9 @@ import mods.appliedenergistics2.Inscriber;
 
 // standardise fluix dust
 <ore:dustFluix>.add(<appliedenergistics2:material:8>);
-//macerator.findRecipe(8, [<ore:crystalFluix>], [null]).remove();
+// Fluix Dust * 1
+//<recipemap:macerator>.findRecipe(8, [<appliedenergistics2:material:7>], null).remove();
+
 //macerator.recipeBuilder()
 //	.inputs(<appliedenergistics2:material:7>)
 //	.outputs(<metaitem:dustFluix>)

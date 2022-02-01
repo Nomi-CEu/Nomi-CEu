@@ -42,7 +42,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockDraconiumAwakened
 	<ore:blockDraconiumAwakened>: [
-		<draconicevolution:draconic_block>
+//		<draconicevolution:draconic_block>
 	],
 
 	#blockBeryllium
@@ -87,7 +87,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
   
 	#blockDraconium
 	<ore:blockDraconium> : [
-		<draconicevolution:draconium_block>
+//		<draconicevolution:draconium_block>
 	],
 
 	#blockElectrum
@@ -542,7 +542,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotDraconiumAwakened
 	<ore:ingotDraconiumAwakened>: [
-//		<draconicevolution:draconic_ingot>
+		<draconicevolution:draconic_ingot>
 	],
 
 	#ingotBeryllium
@@ -596,6 +596,11 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 	#ingotElectrum
 	<ore:ingotElectrum> : [
 		<thermalfoundation:material:161>
+	],
+
+	#ingotElectrumFlux
+	<ore:ingotElectrumFlux> : [
+		<redstonearsenal:material:32>
 	],
 
 	#ingotEnderium
@@ -670,7 +675,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotPlutonium
 	<ore:ingotPlutonium> : [
-		<metaitem:ingotPlutonium>
+//		<metaitem:ingotPlutonium>
 	],
 
 	#ingotPulsatingIron
@@ -686,6 +691,11 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 	#ingotSignalum
 	<ore:ingotSignalum> : [
 		<thermalfoundation:material:165>
+	],
+
+	#ingotSoularium
+	<ore:ingotSoularium> : [
+		<enderio:item_alloy_ingot:7>
 	],
 
 	#ingotTin

@@ -2,6 +2,7 @@
 
 import mods.gregtech.recipe.RecipeMap;
 
+global alloy_blast_smelter          as RecipeMap = RecipeMap.getByName("alloy_blast_smelter");
 global alloy                        as RecipeMap = RecipeMap.getByName("alloy_smelter");
 global alloy_smelter                as RecipeMap = RecipeMap.getByName("alloy_smelter");
 global arc_furnace                  as RecipeMap = RecipeMap.getByName("arc_furnace");

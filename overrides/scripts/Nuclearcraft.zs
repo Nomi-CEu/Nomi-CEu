@@ -461,10 +461,16 @@ mods.jei.JEI.addItem(<nuclearcraft:foursmore>); // This disappeared apparently.
 // Now for replacements:
 
 recipes.remove(<nuclearcraft:compound:2>);
-mixer.recipeBuilder()
-    .outputs(<nuclearcraft:compound:2> * 2)
-    .inputs([<minecraft:redstone>, <minecraft:glowstone_dust>])
-    .duration(40).EUt(22).buildAndRegister();
+// Recover materials from Energetic Blend as it is phased out
+centrifuge.recipeBuilder()
+    .inputs(<nuclearcraft:compound:2>)
+    .outputs([<minecraft:redstone>, <minecraft:glowstone>])
+    .duration(20).EUt(7)
+    .buildAndRegister();
+//mixer.recipeBuilder()
+//    .outputs(<nuclearcraft:compound:2> * 2)
+//    .inputs([<minecraft:redstone>, <minecraft:glowstone_dust>])
+//    .duration(40).EUt(22).buildAndRegister();
 
 recipes.remove(<nuclearcraft:reactor_casing_transparent>);
 alloy.recipeBuilder()
@@ -849,66 +855,66 @@ for iso in clumps {
 
 }
 
-compressor.findRecipe(2, [<ore:nuggetUranium235>.firstItem * 9], [null]).remove();
-compressor.findRecipe(2, [<ore:nuggetPlutonium241>.firstItem * 9], [null]).remove();
-
-
-/*  Remove NC/GTCE overlapping block and nugget recipes and replace with non-oredict ones */
-
-// U235
-recipes.removeByRecipeName("gregtech:nugget_assembling_uranium235");
-makeCompacting3("gregtech_nugget_assembling_uranium235", <metaitem:ingotUranium235>, <metaitem:nuggetUranium235>);
-
-recipes.removeByRecipeName("gregtech:block_compress_uranium235");
-makeCompacting3("gregtech_block_compress_uranium235", <metaitem:blockUranium235>, <metaitem:ingotUranium235>); //Uranium 235 Block
-
-recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.uranium._235");
-makeCompacting3("nuclearcraft_item.nuclearcraft.uranium._235", <nuclearcraft:uranium:4>, <nuclearcraft:uranium:6>);
-
-recipes.removeByRecipeName("gregtech:nugget_disassembling_uranium235");
-recipes.addShapeless("gregtech_nugget_disassembling_uranium235", <metaitem:nuggetUranium235> * 9, [<metaitem:ingotUranium235>]);
-
-// Pu241
-recipes.removeByRecipeName("gregtech:nugget_assembling_plutonium241");
-makeCompacting3("gregtech_nugget_assembling_plutonium241", <metaitem:ingotPlutonium241>, <metaitem:nuggetPlutonium241>);
-
-recipes.removeByRecipeName("gregtech:block_compress_plutonium241");
-makeCompacting3("gregtech_block_compress_plutonium241", <metaitem:blockPlutonium241>, <metaitem:ingotPlutonium241>); //Plutonium 241 block
-
-recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.plutonium._241");
-makeCompacting3("nuclearcraft_item.nuclearcraft.plutonium._235", <nuclearcraft:plutonium:8>, <nuclearcraft:plutonium:10>);
-
-recipes.removeByRecipeName("gregtech:nugget_disassembling_plutonium241");
-recipes.addShapeless("gregtech_nugget_disassembling_plutonium241", <metaitem:nuggetPlutonium241> * 9, [<metaitem:ingotPlutonium241>]);
-
-// Also fix the fuels since those use oredict...
-function makeLEFuel(name as string,
-                    output as IItemStack,
-                    replacements as IIngredient[string]) {
-    makeShapeless3(name, output, ["ABB","BBB","BBB"], replacements);
-}
-
-function makeHEFuel(name as string,
-                    output as IItemStack,
-                    replacements as IIngredient[string]) {
-    makeShapeless3(name, output, ["AAA","ABB","BBB"], replacements);
-}
-
-var U235 as IIngredient[string] = {"A":<nuclearcraft:uranium:4>, "B":<nuclearcraft:uranium:8>};
-recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_uranium.leu_235");
-makeLEFuel("nuclearcraft_item.nuclearcraft.fuel_uranium.leu_235", <nuclearcraft:fuel_uranium:4>, U235);
-
-recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_uranium.heu_235");
-makeHEFuel("nuclearcraft_item.nuclearcraft.fuel_uranium.heu_235", <nuclearcraft:fuel_uranium:6>, U235);
-
-
-var P241 as IIngredient[string] = {"A":<nuclearcraft:plutonium:8>, "B":<nuclearcraft:plutonium:12>};
-recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_plutonium.lep_241");
-makeLEFuel("nuclearcraft_item.nuclearcraft.fuel_plutonium.lep_241", <nuclearcraft:fuel_plutonium:4>, P241);
-
-recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_plutonium.hep_241");
-makeHEFuel("nuclearcraft_item.nuclearcraft.fuel_plutonium.hep_241", <nuclearcraft:fuel_plutonium:6>, P241);
-
+//compressor.findRecipe(2, [<ore:nuggetUranium235>.firstItem * 9], [null]).remove();
+//compressor.findRecipe(2, [<ore:nuggetPlutonium241>.firstItem * 9], [null]).remove();
+//
+//
+///*  Remove NC/GTCE overlapping block and nugget recipes and replace with non-oredict ones */
+//
+//// U235
+//recipes.removeByRecipeName("gregtech:nugget_assembling_uranium235");
+//makeCompacting3("gregtech_nugget_assembling_uranium235", <metaitem:ingotUranium235>, <metaitem:nuggetUranium235>);
+//
+//recipes.removeByRecipeName("gregtech:block_compress_uranium235");
+//makeCompacting3("gregtech_block_compress_uranium235", <metaitem:blockUranium235>, <metaitem:ingotUranium235>); //Uranium 235 Block
+//
+//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.uranium._235");
+//makeCompacting3("nuclearcraft_item.nuclearcraft.uranium._235", <nuclearcraft:uranium:4>, <nuclearcraft:uranium:6>);
+//
+//recipes.removeByRecipeName("gregtech:nugget_disassembling_uranium235");
+//recipes.addShapeless("gregtech_nugget_disassembling_uranium235", <metaitem:nuggetUranium235> * 9, [<metaitem:ingotUranium235>]);
+//
+//// Pu241
+//recipes.removeByRecipeName("gregtech:nugget_assembling_plutonium241");
+//makeCompacting3("gregtech_nugget_assembling_plutonium241", <metaitem:ingotPlutonium241>, <metaitem:nuggetPlutonium241>);
+//
+//recipes.removeByRecipeName("gregtech:block_compress_plutonium241");
+//makeCompacting3("gregtech_block_compress_plutonium241", <metaitem:blockPlutonium241>, <metaitem:ingotPlutonium241>); //Plutonium 241 block
+//
+//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.plutonium._241");
+//makeCompacting3("nuclearcraft_item.nuclearcraft.plutonium._235", <nuclearcraft:plutonium:8>, <nuclearcraft:plutonium:10>);
+//
+//recipes.removeByRecipeName("gregtech:nugget_disassembling_plutonium241");
+//recipes.addShapeless("gregtech_nugget_disassembling_plutonium241", <metaitem:nuggetPlutonium241> * 9, [<metaitem:ingotPlutonium241>]);
+//
+//// Also fix the fuels since those use oredict...
+//function makeLEFuel(name as string,
+//                    output as IItemStack,
+//                    replacements as IIngredient[string]) {
+//    makeShapeless3(name, output, ["ABB","BBB","BBB"], replacements);
+//}
+//
+//function makeHEFuel(name as string,
+//                    output as IItemStack,
+//                    replacements as IIngredient[string]) {
+//    makeShapeless3(name, output, ["AAA","ABB","BBB"], replacements);
+//}
+//
+//var U235 as IIngredient[string] = {"A":<nuclearcraft:uranium:4>, "B":<nuclearcraft:uranium:8>};
+//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_uranium.leu_235");
+//makeLEFuel("nuclearcraft_item.nuclearcraft.fuel_uranium.leu_235", <nuclearcraft:fuel_uranium:4>, U235);
+//
+//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_uranium.heu_235");
+//makeHEFuel("nuclearcraft_item.nuclearcraft.fuel_uranium.heu_235", <nuclearcraft:fuel_uranium:6>, U235);
+//
+//
+//var P241 as IIngredient[string] = {"A":<nuclearcraft:plutonium:8>, "B":<nuclearcraft:plutonium:12>};
+//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_plutonium.lep_241");
+//makeLEFuel("nuclearcraft_item.nuclearcraft.fuel_plutonium.lep_241", <nuclearcraft:fuel_plutonium:4>, P241);
+//
+//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_plutonium.hep_241");
+//makeHEFuel("nuclearcraft_item.nuclearcraft.fuel_plutonium.hep_241", <nuclearcraft:fuel_plutonium:6>, P241);
+//
 
 
 // Oh yeah it's S'more time
@@ -1172,24 +1178,24 @@ thermal_sep.recipeBuilder()
 //thermal_sep.findRecipe(48, [<metaitem:dustUranium>], [null]).remove();
 //thermal_sep.findRecipe(48, [<metaitem:ingotUranium>], [null]).remove();
 
-thermal_sep.recipeBuilder()
-    .inputs(<metaitem:dustUranium>)
-    .outputs(<nuclearcraft:uranium:8>)
-    .duration(3200).EUt(48).buildAndRegister();
-
-thermal_sep.recipeBuilder()
-    .inputs(<metaitem:ingotUranium>)
-    .outputs(<nuclearcraft:uranium:8>)
-    .duration(3200).EUt(48).buildAndRegister();
+//thermal_sep.recipeBuilder()
+//    .inputs(<metaitem:dustUranium>)
+//    .outputs(<nuclearcraft:uranium:8>)
+//    .duration(3200).EUt(48).buildAndRegister();
+//
+//thermal_sep.recipeBuilder()
+//    .inputs(<metaitem:ingotUranium>)
+//    .outputs(<nuclearcraft:uranium:8>)
+//    .duration(3200).EUt(48).buildAndRegister();
 
 //Adding Thermal Centrifuge Recipes for GTCE Pu241 -> NC Pu241
 
-thermal_sep.recipeBuilder()
-    .inputs(<metaitem:ingotPlutonium241>)
-    .outputs(<nuclearcraft:plutonium:8>)
-    .duration(3200).EUt(48).buildAndRegister();
-
-thermal_sep.recipeBuilder()
-    .inputs(<metaitem:dustPlutonium241>)
-    .outputs(<nuclearcraft:plutonium:8>)
-    .duration(3200).EUt(48).buildAndRegister();
+//thermal_sep.recipeBuilder()
+//    .inputs(<metaitem:ingotPlutonium241>)
+//    .outputs(<nuclearcraft:plutonium:8>)
+//    .duration(3200).EUt(48).buildAndRegister();
+//
+//thermal_sep.recipeBuilder()
+//    .inputs(<metaitem:dustPlutonium241>)
+//    .outputs(<nuclearcraft:plutonium:8>)
+//    .duration(3200).EUt(48).buildAndRegister();

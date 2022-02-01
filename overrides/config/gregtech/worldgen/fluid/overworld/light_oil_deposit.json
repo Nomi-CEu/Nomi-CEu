@@ -10,5 +10,9 @@
     "chance": 100,
     "depleted_yield": 25
   },
+  "dimension_filter": [
+    "id:0",
+    "id:111"
+  ],
   "fluid": "oil_light"
 }

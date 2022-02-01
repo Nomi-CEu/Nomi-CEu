@@ -244,6 +244,13 @@ alloy.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
+// Z-Logic Controller (Cheap)
+recipes.addShaped(<enderio:item_material:41>, [
+    [<metaitem:ingotSoularium>,<minecraft:skull:2> ,<metaitem:ingotSoularium>],
+    [<metaitem:ingotSoularium>,<ore:circuitGood> ,<metaitem:ingotSoularium>],
+    [<metaitem:wafer.silicon>, <metaitem:blockRedAlloy>,<metaitem:wafer.silicon>]
+]);
+
 //Ensure Correct Solidification
 
 //val liquidMap as IItemStack[][ILiquidStack] = {

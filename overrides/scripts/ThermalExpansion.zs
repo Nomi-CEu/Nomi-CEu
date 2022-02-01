@@ -134,7 +134,7 @@ recipes.addShaped(<thermalexpansion:dynamo:5>, [
 recipes.remove(<thermalfoundation:upgrade>);
 recipes.addShaped(<thermalfoundation:upgrade>, [
 	[<metaitem:gearInvar>, <metaitem:plateInvar>, <metaitem:gearInvar>],
-	[<metaitem:plateInvar>, <enderio:block_alloy>, <metaitem:plateInvar>],
+	[<metaitem:plateInvar>, <metaitem:blockElectricalSteel>, <metaitem:plateInvar>],
 	[<metaitem:gearInvar>, <metaitem:plateInvar>, <metaitem:gearInvar>]]);
 
 //reinforced upgrade
@@ -175,9 +175,9 @@ recipes.addShaped(<thermalfoundation:material:513>, [
 //Auxiliary Transmission Coil
 recipes.remove(<thermalexpansion:augment:512>);
 recipes.addShaped(<thermalexpansion:augment:512>, [
-	[<metaitem:ingotSterlingSilver>, <enderio:item_alloy_ingot:1>, <enderio:block_alloy:4>],
-	[<enderio:item_alloy_ingot:1>, <thermalfoundation:material:514>, <enderio:item_alloy_ingot:1>],
-	[<enderio:block_alloy:4>, <enderio:item_alloy_ingot:1>, <metaitem:ingotSterlingSilver>]]);
+	[<metaitem:ingotSterlingSilver>, <ore:ingotEnergeticAlloy>, <enderio:block_alloy:4>],
+	[<ore:ingotEnergeticAlloy>, <thermalfoundation:material:514>, <ore:ingotEnergeticAlloy>],
+	[<enderio:block_alloy:4>, <ore:ingotEnergeticAlloy>, <metaitem:ingotSterlingSilver>]]);
 
 //Auxiliary Reception Coil
 recipes.remove(<thermalexpansion:augment:128>);
@@ -267,9 +267,9 @@ recipes.addShaped(<thermalexpansion:augment:448>, [
 	//i give up
 recipes.remove(<thermalexpansion:augment:656>);
 recipes.addShaped(<thermalexpansion:augment:656>, [
-	[<enderio:item_alloy_ingot:6>, <metaitem:plateDarkSteel>, <enderio:item_alloy_ingot:6>],
+	[<ore:ingotDarkSteel>, <metaitem:plateDarkSteel>, <ore:ingotDarkSteel>],
 	[<metaitem:plateDarkSteel>, <thermalfoundation:material:1024>, <metaitem:plateDarkSteel>],
-	[<enderio:item_alloy_ingot:6>, <metaitem:plateDarkSteel>, <enderio:item_alloy_ingot:6>]]);
+	[<ore:ingotDarkSteel>, <metaitem:plateDarkSteel>, <ore:ingotDarkSteel>]]);
 
 	//i give up
 recipes.remove(<thermalexpansion:augment:496>);

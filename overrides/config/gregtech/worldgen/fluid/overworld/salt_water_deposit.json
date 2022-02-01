@@ -11,6 +11,10 @@
     "depleted_yield": 15
   },
   "fluid": "salt_water",
+  "dimension_filter": [
+    "id:0",
+    "id:111"
+  ],
   "biome_modifier": {
     "type": "biome_map",
     "ocean": 150,

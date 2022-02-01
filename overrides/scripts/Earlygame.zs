@@ -4,19 +4,19 @@ import crafttweaker.item.IItemStack;
 //import scripts.CommonVars.makeShaped as makeShaped;
 
 //Plantball
-//recipes.addShaped(<metaitem:plant_ball>, [
-//	[<ore:treeLeaves>,<ore:treeLeaves>,<ore:treeLeaves>],
-//	[<ore:treeLeaves>,null,<ore:treeLeaves>],
-//	[<ore:treeLeaves>,<ore:treeLeaves>,<ore:treeLeaves>]]);
-//recipes.addShaped(<metaitem:plant_ball>, [
-//	[<minecraft:vine>,<minecraft:vine>,<minecraft:vine>],
-//	[<minecraft:vine>,null,<minecraft:vine>],
-//	[<minecraft:vine>,<minecraft:vine>,<minecraft:vine>]]);
-//recipes.addShaped(<metaitem:plant_ball>, [
-//	[<ore:treeSapling>,<ore:treeSapling>,<ore:treeSapling>],
-//	[<ore:treeSapling>,null,<ore:treeSapling>],
-//	[<ore:treeSapling>,<ore:treeSapling>,<ore:treeSapling>]]);
-//furnace.addRecipe(<minecraft:slime_ball> * 2, <metaitem:plant_ball>, 0.0);
+recipes.addShaped(<metaitem:plant_ball>, [
+	[<ore:treeLeaves>,<ore:treeLeaves>,<ore:treeLeaves>],
+	[<ore:treeLeaves>,null,<ore:treeLeaves>],
+	[<ore:treeLeaves>,<ore:treeLeaves>,<ore:treeLeaves>]]);
+recipes.addShaped(<metaitem:plant_ball>, [
+	[<minecraft:vine>,<minecraft:vine>,<minecraft:vine>],
+	[<minecraft:vine>,null,<minecraft:vine>],
+	[<minecraft:vine>,<minecraft:vine>,<minecraft:vine>]]);
+recipes.addShaped(<metaitem:plant_ball>, [
+	[<ore:treeSapling>,<ore:treeSapling>,<ore:treeSapling>],
+	[<ore:treeSapling>,null,<ore:treeSapling>],
+	[<ore:treeSapling>,<ore:treeSapling>,<ore:treeSapling>]]);
+furnace.addRecipe(<minecraft:slime_ball> * 2, <metaitem:plant_ball>, 0.0);
 
 //Ender Pearls
 alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs([<minecraft:ender_pearl>]).duration(300).EUt(16).buildAndRegister();
@@ -278,8 +278,9 @@ chemical_reactor.recipeBuilder().inputs([<thermalfoundation:fertilizer>]).fluidI
 mixer.recipeBuilder().inputs([<metaitem:dustTricalciumPhosphate>,<metaitem:dustGold>]).outputs(<minecraft:glowstone_dust> * 2).EUt(15).duration(80).buildAndRegister();
 mixer.recipeBuilder().inputs([<metaitem:dustIron>,<metaitem:dustTin>]).outputs(<metaitem:dustTinAlloy> * 2).EUt(15).duration(40).buildAndRegister();
 // Nq+ and Nq*
-mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched> * 3).EUt(8000).duration(400).buildAndRegister();
-mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 3,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria> * 3).EUt(30000).duration(400).buildAndRegister();
+mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
+mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
+
 mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
 recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustBlackBronze>, <ore:dustSteel>, <ore:dustSteel>, <ore:dustSteel>]);
 //mixer.findRecipe(8, [<ore:dustTinySteel>.firstItem * 3, <ore:dustTinyNickel>.firstItem, <ore:dustTinyBlackBronze>.firstItem], [null]).remove();
@@ -627,7 +628,6 @@ mods.jei.JEI.removeAndHide(<ore:gemExquisiteCoke>);
 mods.jei.JEI.removeAndHide(<metaitem:gemGlass>);
 
 furnace.setFuel(<metaitem:dustGraphite>, 1200);
-furnace.setFuel(<metaitem:dustCarbon>, 1200);
 
 //compressor.recipeBuilder().inputs(<ore:ingotAluminium>).outputs(<ore:plateAluminium>.firstItem).duration(100).EUt(10).buildAndRegister();
 //compressor.recipeBuilder().inputs(<ore:ingotAmericium>).outputs(<ore:plateAmericium>.firstItem).duration(100).EUt(10).buildAndRegister();
@@ -1040,15 +1040,15 @@ electrolyzer.recipeBuilder()
 
 //Re-adding the old GTCE granite recipe, as it is being relied on.
 //Due to GTCE's weird recipe removal for items that share an oredict, only one of the items need to be removed
-// Granite Dust * 1
-<recipemap:macerator>.findRecipe(2, [<minecraft:stone:1>], null).remove();
-
-
-macerator.recipeBuilder()
-	.inputs(<ore:stoneGranite>)
-	.outputs(<metaitem:dustGraniteBlack>)
-	.chancedOutput(<metaitem:dustThorium>, 100, 100)
-	.duration(150).EUt(8).buildAndRegister();
+//// Granite Dust * 1
+//<recipemap:macerator>.findRecipe(2, [<minecraft:stone:1>], null).remove();
+//
+//
+//macerator.recipeBuilder()
+//	.inputs(<ore:stoneGranite>)
+//	.outputs(<metaitem:dustGraniteBlack>)
+//	.chancedOutput(<metaitem:dustThorium>, 100, 100)
+//	.duration(150).EUt(8).buildAndRegister();
 
 //Adjust the recipe of the Rotor mold
 recipes.removeByRecipeName("gregtech:shape/mold/shape_mold_rotor");

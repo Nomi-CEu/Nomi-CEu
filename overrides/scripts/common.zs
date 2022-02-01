@@ -235,3 +235,12 @@ function makeExtremeRecipe9(output as IItemStack,
     mods.extendedcrafting.TableCrafting.addShaped(output,
         textToIngredients(ingredients, output, recipe, replacements));
 }
+
+function absolute_int(n as int) as int {
+    var MINUS_ONE = -1 as int;
+    if (n < 0) {
+        return n * MINUS_ONE;
+    } else {
+        return n;
+    } 
+}

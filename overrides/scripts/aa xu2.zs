@@ -29,14 +29,14 @@ mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empo
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:item_crystal_empowered:5>);
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_empowered:5>);
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_enori_gear>);
-mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:5>, <actuallyadditions:block_crystal:5>, <metaitem:gemApatite>, <enderio:item_alloy_ingot:8>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "helium", Amount: 1000}}), <extendedcrafting:material:14>, 1000000, 400);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:5>, <actuallyadditions:block_crystal:5>, <metaitem:gemApatite>, <metaitem:ingotEndSteel>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "helium", Amount: 1000}}), <extendedcrafting:material:14>, 1000000, 400);
 
 
 //Empowered Void Crystal
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:item_crystal_empowered:3>);
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_empowered:3>);
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_void_gear>);
-mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:3>, <actuallyadditions:block_crystal:3>, <actuallyadditions:item_misc:5>, <enderio:item_alloy_ingot:6>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "carbon", Amount: 1000}}), <extendedcrafting:material:15>, 1000000, 400);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:3>, <actuallyadditions:block_crystal:3>, <actuallyadditions:item_misc:5>, <metaitem:ingotDarkSteel>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "carbon", Amount: 1000}}), <extendedcrafting:material:15>, 1000000, 400);
 
 
 //Empowered Diamatine
@@ -51,7 +51,7 @@ mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empo
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:item_crystal_empowered:4>);
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_empowered:4>);
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_emeradic_gear>);
-mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:4>, <actuallyadditions:block_crystal:4>, <contenttweaker:stabilizeduranium>, <enderio:item_alloy_ingot:2>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <extendedcrafting:material:17>, 1000000, 400);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:4>, <actuallyadditions:block_crystal:4>, <contenttweaker:stabilizeduranium>, <metaitem:ingotVibrantAlloy>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <extendedcrafting:material:17>, 1000000, 400);
 
 	
 //Snad	

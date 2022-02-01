@@ -10,16 +10,16 @@ var element_omnium = Elements.add(130, 234, -1, null, "Omnium", "Nm", false);
 var element_draconium = Elements.add(149, 264, -1, null, "Draconium", "Dc", false);
 var element_draconium_awakened = Elements.add(149, 267, -1, null, "AwakenedDraconium", "Dc*", false);
 
-var fluix = MaterialBuilder(32000, "fluix")
-    .gem()
-    .color(0x674FAF).iconSet("QUARTZ")
-    .flags(["generate_plate", "disable_decomposition", "no_smelting", "crystallizable"])
-    .components([<material:certus_quartz> * 1, <material:nether_quartz> * 1, <material:redstone> * 1])
-    .build();
+//var fluix = MaterialBuilder(32000, "fluix")
+//    .gem()
+//    .color(0x674FAF).iconSet("QUARTZ")
+//    .flags(["generate_plate", "disable_decomposition", "no_smelting", "crystallizable"])
+//    .components([<material:certus_quartz> * 1, <material:nether_quartz> * 1, <material:redstone> * 1])
+//    .build();
 
 var draconium = MaterialBuilder(32001, "draconium")
     .element("Draconium")
-    .ingot().fluid()
+    .ingot().fluid().ore()
     .color(0xbe49ed).iconSet("metallic")
     .blastTemp(6800, "HIGHER")
     .cableProperties(524288, 1, 0, true)
@@ -74,7 +74,7 @@ var manyullyn = MaterialBuilder(32008, "manyullyn")
 var signalum = MaterialBuilder(32010, "signalum")
     .ingot().fluid()
     .color(0xff7f0f).iconSet("shiny")
-    .blastTemp(4000)
+    .blastTemp(4000, "MID", 120, 12800)
     .flags(["generate_plate", "generate_dense", "generate_rod", "generate_gear"])
     .components([<material:annealed_copper> * 4, <material:ardite> * 2, <material:red_alloy> * 2])
     .cableProperties(32768, 1, 0, true)
@@ -92,8 +92,8 @@ var energetic_alloy = MaterialBuilder(32012, "energetic_alloy")
     .ingot().fluid()
     .color(0xffb545).iconSet("shiny")
     .flags("generate_plate", "generate_gear")
-    .blastTemp(1250)
-    .components([<material:gold> * 1, <material:redstone> * 1, <material:glowstone> * 1])
+    .blastTemp(1250, "LOW", 120, 400)
+    .components([<material:gold> * 2, <material:redstone> * 1, <material:glowstone> * 1])
     .cableProperties(128, 1, 0, true)
     .build();
 
@@ -101,7 +101,7 @@ var vibrant_alloy = MaterialBuilder(32013, "vibrant_alloy")
     .ingot().fluid()
     .color(0xa4ff70).iconSet("shiny")
     .flags("generate_plate", "generate_gear", "generate_rod", "generate_bolt_screw")
-    .blastTemp(1250)
+    .blastTemp(1250, "LOW", 120, 600)
     .components([<material:energetic_alloy> * 1, <material:ender_pearl> * 1])
     .cableProperties(512, 1, 0, true)
     .build();
@@ -123,9 +123,9 @@ var electrical_steel = MaterialBuilder(32015, "electrical_steel")
     
 var lumium = MaterialBuilder(32017, "lumium")
     .ingot().fluid()
-    .color(0xf6ff99).iconSet("shiny")
+    .color(0xf6ff99).iconSet("bright")
     .flags("generate_plate", "generate_gear")
-    .blastTemp(4500)
+    .blastTemp(4500, "MID", 120, 14400)
     .components([<material:tin_alloy> * 4, <material:sterling_silver> * 2])
     .cableProperties(8192, 1, 0, true)
     .build();
@@ -134,16 +134,17 @@ var enderium = MaterialBuilder(32018, "enderium")
     .ingot().fluid()
     .color(0x1f6b62).iconSet("shiny")
     .flags("generate_plate", "generate_gear", "generate_fine_wire")
-    .blastTemp(6400)
+    .blastTemp(6400, "HIGHEST", 120, 20800)
     .components([<material:lead> * 4, <material:platinum> * 2, <material:blue_steel> * 1, <material:osmium> * 1])
     .cableProperties(131072, 1, 0, true)
     .build();
 
 var electrum_flux = MaterialBuilder(32019, "electrum_flux")
     .ingot().fluid()
-    .color(0xf7be20).iconSet("shiny")
+    .color(0xf7be20).iconSet("bright")
     .flags("generate_plate")
-    .components([<material:electrum> * 6, <material:lumium> * 1, <material:signalum> * 1, <material:mana> * 1]) 
+    .blastTemp(1100)
+    .components([<material:electrum> * 6, <material:lumium> * 1, <material:signalum> * 1]) 
     .build();
 
 var mithril = MaterialBuilder(32021, "mithril")
@@ -153,12 +154,12 @@ var mithril = MaterialBuilder(32021, "mithril")
     .components([<material:titanium> * 1, <material:mana> * 1])
     .build();
 
-var knightslime = MaterialBuilder(32022, "knightslime")
-    .ingot()
-    .color(0xff70e2).iconSet("dull")
-    .flags("generate_plate")
-    .components([<material:titanium> * 1])
-    .build();
+//var knightslime = MaterialBuilder(32022, "knightslime")
+//    .ingot()
+//    .color(0xff70e2).iconSet("dull")
+//    .flags("generate_plate")
+//    .components([<material:titanium> * 1])
+//    .build();
 
 var crystal_matrix = MaterialBuilder(32023, "crystal_matrix")
     .ingot().fluid()
@@ -169,7 +170,7 @@ var crystal_matrix = MaterialBuilder(32023, "crystal_matrix")
 
 var soularium = MaterialBuilder(32024, "soularium")
     .ingot().fluid()
-    .color(0x3b0d0d).iconSet("metallic")
+    .color(0x7c674d).iconSet("metallic")
     .components([<material:gold> * 1])
     .build();
 
@@ -245,8 +246,8 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:naquadria>.addFlags(["generate_bolt_screw"]);
 
 <material:glowstone>.setFormula("Au(Ca3(PO4)2)", true);
-<material:energetic_alloy>.setFormula("Au(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);
-<material:black_steel>.setFormula("(AuAgCu3)Fe3?4", true);
+<material:energetic_alloy>.setFormula("Au2(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);
+<material:black_steel>.setFormula("(AuAgCu3)2Fe3?4", true);
 
 //<material:niobium>.setOreByProducts([<material:tantalum>]);
 //<material:osmium>.setOreByProducts([<material:iridium>, <material:nickel>]);

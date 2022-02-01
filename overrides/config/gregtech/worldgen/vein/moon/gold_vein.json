@@ -5,8 +5,8 @@
   "min_height": 50,
       "biome_modifier": {
 		"type": "biome_map",
-		"advancedrocketry:moon": 40,
-		"advancedrocketry:moondark": 40
+		"advancedrocketry:moon": 400,
+		"advancedrocketry:moondark": 400
    },
   "generator": {
     "type": "ellipsoid",

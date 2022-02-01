@@ -37,7 +37,7 @@ recipes.remove(<solarflux:photovoltaic_cell_1>);
 recipes.addShaped(<solarflux:photovoltaic_cell_1> * 6,[
 	[<metaitem:plateLapis>,<metaitem:plateLapis>,<metaitem:plateLapis>],		
 	[<solarflux:mirror>,<solarflux:mirror>,<solarflux:mirror>],
-	[<metaitem:plateFluix>,<metaitem:plateFluix>,<metaitem:plateFluix>]]);		
+	[<ore:plateFluix>,<ore:plateFluix>,<ore:plateFluix>]]);		
 	
 //Solar 3	
 recipes.remove(<solarflux:solar_panel_3>);

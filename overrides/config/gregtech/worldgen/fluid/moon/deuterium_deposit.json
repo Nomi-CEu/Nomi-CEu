@@ -1,0 +1,18 @@
+{
+    "weight": 500,
+    "name": "Moon Deuterium Deposit",
+    "yield": {
+      "min": 10,
+      "max": 20
+    },
+    "depletion": {
+      "amount": 1,
+      "chance": 100,
+      "depleted_yield": 3
+    },
+    "fluid": "deuterium",
+    "dimension_filter": [
+      "name:planet"
+    ]
+  }
+  

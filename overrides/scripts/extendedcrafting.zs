@@ -124,11 +124,10 @@ makeExtremeRecipe9(<metaitem:zpm>,
 
 //Luminescence
 recipes.remove(<extendedcrafting:material:7>);
-reactor.recipeBuilder()
-    .inputs([<nuclearcraft:compound:2>])
-    .inputs([<metaitem:dustAluminium>])
-    .fluidInputs([<liquid:phosphoric_acid> * 2000])
-    .outputs(<extendedcrafting:material:7> * 4)
+mixer.recipeBuilder()
+    .inputs([<ore:dustRedstone>, <ore:dustGlowstone>, <ore:dustAluminium> * 2])
+    .fluidInputs([<liquid:phosphoric_acid> * 4000])
+    .outputs(<extendedcrafting:material:7> * 8)
     .duration(20).EUt(30).buildAndRegister();
 
 // Extended Crafting Components

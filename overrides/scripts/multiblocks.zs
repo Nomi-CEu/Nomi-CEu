@@ -7,8 +7,12 @@ import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.IBlockPattern;
 import mods.gregtech.recipe.FactoryRecipeMap;
 import mods.gregtech.recipe.RecipeMap;
+import mods.gregtech.recipe.functions.IRunOverclockingLogicFunction;
+import mods.gregtech.recipe.IRecipeLogic;
+import mods.gregtech.recipe.IRecipe;
 
 import scripts.common.makeShaped as makeShaped;
+import scripts.common.absolute_int as absolute_int;
 
 //val ROCKET_ARROW as ITextureArea = ITextureArea.fullImage("multiblocktweaker:textures/gui/progress_bar/rocket.png");
 
@@ -272,6 +276,11 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
     .buildAndRegister();
 naquadah_reactor_1.hasMufflerMechanics = false;
 naquadah_reactor_1.hasMaintenanceMechanics = false;
+
+naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
+    return [recipe.getEUt(), recipe.getDuration()];
+} as IRunOverclockingLogicFunction;
+
 // Naquadah Reactor 2
 val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
@@ -322,7 +331,14 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
 
 naquadah_reactor_2.hasMufflerMechanics = false;
 naquadah_reactor_2.hasMaintenanceMechanics = false;
+
+naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
+    return [recipe.getEUt(), recipe.getDuration()];
+} as IRunOverclockingLogicFunction;
+
 // Large Lapidary Dynamo
+val LAPIDARY_EUT_FIXED = -4096 as int;
+
 val large_lapidary_dynamo = Builder.start("large_lapidary_dynamo")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
         return FactoryBlockPattern.start()
@@ -333,7 +349,7 @@ val large_lapidary_dynamo = Builder.start("large_lapidary_dynamo")
             .where('G', <blockstate:gregtech:turbine_casing>)
             .where('C', CTPredicate.states(<metastate:gregtech:metal_casing:3>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(16).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(4)
             )
             .build();
         } as IPatternBuilderFunction)
@@ -344,10 +360,17 @@ val large_lapidary_dynamo = Builder.start("large_lapidary_dynamo")
             .build())
     .withBaseTexture(<metastate:gregtech:metal_casing:3>)
     .buildAndRegister();
+
 large_lapidary_dynamo.hasMufflerMechanics = false;
 large_lapidary_dynamo.hasMaintenanceMechanics = false;
 
-// Lunar Mining Station
+//large_lapidary_dynamo.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
+//    if (absolute_int(recipe.getEUt()) > absolute_int(LAPIDARY_EUT_FIXED)) {
+//        return [recipe.getEUt(), recipe.getDuration()];
+//    }
+//} as IRunOverclockingLogicFunction;
+
+// Lunar Mining Station>
 //val isOnMoon as IBlockMatcher = function (state as IBlockWorldState) as bool {
 //    return state.getWorld().getDimension() == 100; // Moon dimension
 //};
@@ -603,13 +626,12 @@ microverse_projector_basic.recipeMap
     .inputs(<contenttweaker:tiertwoship>,
             <contenttweaker:quantumflux> * 2)
     .fluidInputs(<liquid:rocket_fuel> * 12000)
-    .outputs(<gregtech:ore_bauxite_0> * 64,
-             <gregtech:ore_bauxite_0> * 64,
-             <gregtech:ore_pyrochlore_0> * 64,
-             <gregtech:ore_pyrochlore_0> * 64,
-             <gregtech:ore_copper_0> * 64,
-             <gregtech:ore_sphalerite_0> * 64,
-             <gregtech:ore_sphalerite_0> * 64,
+    .outputs(<gregtech:ore_bauxite_0:2> * 64,
+             <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_sphalerite_0:2> * 64,
+             <gregtech:ore_cassiterite_0> * 64,
              <gregtech:ore_scheelite_0> * 64,
              <gregtech:ore_scheelite_0> * 64,
              <gregtech:ore_scheelite_0> * 64,
@@ -617,8 +639,7 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_tungstate_0> * 64,
              <gregtech:ore_tungstate_0> * 64,
              <contenttweaker:radiumsalt> * 64,
-             <contenttweaker:radiumsalt> * 64,
-             <gregtech:ore_cassiterite_0> * 64)
+             <contenttweaker:radiumsalt> * 64)
     .buildAndRegister();
 
 // t2 stellar creation data
@@ -759,11 +780,11 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
-    .outputs(<gregtech:ore_naquadah_0:2> * 64,
+    .outputs(<gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_naquadah_0:2> * 64,
-             <gregtech:ore_naquadah_0:2> * 32,
-             <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_cooperite_0:2> * 64)
+             <gregtech:ore_naquadah_0:2> * 64,
+             <gregtech:ore_naquadah_0:2> * 32)
+             
     .buildAndRegister();
 
 // t6 u/os/ir
@@ -963,16 +984,16 @@ creative_tank_provider.recipeMap
 // Naquadah Reactor Mk1 Recipes
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
-    .duration(7500)
-    .EUt(-32768)
+    .duration(938)
+    .EUt(-262144)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
-    .duration(30000)
-    .EUt(-32768)
+    .duration(3750)
+    .EUt(-262144)
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
@@ -980,16 +1001,16 @@ naquadah_reactor_1.recipeMap
 // Naquadah Reactor Mk2 Recipes
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
-    .duration(60000)
-    .EUt(-32768)
+    .duration(1875)
+    .EUt(-1048576)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
-    .duration(240000)
-    .EUt(-32768)
+    .duration(7500)
+    .EUt(-1048576)
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
@@ -997,8 +1018,8 @@ naquadah_reactor_2.recipeMap
 // lapidary dynamo
 large_lapidary_dynamo.recipeMap
     .recipeBuilder()
-    .duration(19200)
-    .EUt(-32)
+    .duration(150)
+    .EUt(-4096)
     .inputs(<ore:gemDiamond>)
     .buildAndRegister();
 

@@ -177,8 +177,6 @@ recipes.remove(<meta_tile_entity:hull.lv>);
 recipes.addShaped(<meta_tile_entity:hull.lv>, [
 	[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>], 
 	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
-// LV Machine Hull * 1
-<recipemap:assembler>.findRecipe(16, [<gregtech:machine_casing:1>, <metaitem:cableGtSingleTin> * 2], [<liquid:plastic> * 288]).remove();
 
 // remove steel LV Motor recipes
 recipes.removeByRecipeName("gregtech:electric_motor_lv_steel");
