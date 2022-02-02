@@ -16,4 +16,5 @@ Installation instructions for building the bleeding-edge version:
 
 Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).
 GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84). 
+Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/).
 Thank you!
