@@ -102,6 +102,7 @@ recipes.addShaped(<gregtech:ore_molybdenite_0> * 32, [[<contenttweaker:omnicoin5
 recipes.addShaped(<gregtech:ore_bastnasite_0> * 32, [[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>],[<contenttweaker:omnicoin5>, null, <contenttweaker:omnicoin5>], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_monazite_0> * 32, [[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>],[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, null], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_tetrahedrite_0> * 32, [[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>],[null, null, <contenttweaker:omnicoin5>], [null, null, null]]);
+recipes.addShaped(<gregtech:ore_topaz_0> * 32, [[null, null, null], [<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_ruby_0> * 32, [[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>],[null, <contenttweaker:omnicoin5>, null], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_stibnite_0> * 32, [[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>],[<contenttweaker:omnicoin5>, null, null], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_thorium_0> * 32, [[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, null],[<contenttweaker:omnicoin5>, null, null], [null, null, null]]);

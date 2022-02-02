@@ -343,9 +343,9 @@ makeFluid("uranium233",                 "187a30",   false,  1024,       "COMMON"
 //makeFluid("moltencreativeportabletank", "a02cba",   false,  1,          "EPIC",     0);
 //makeFluid("awakeneddraconium",          "ff890c",   false,  2000,       "COMMON",   0);
 //makeFluid("moltencrystalmatrix",        "4cffed",   false,  2000,       "COMMON",   0);
-makeFluid("moltensoularium",            "6b4411",   false,  1000,       "COMMON",   0);
+//makeFluid("moltensoularium",            "6b4411",   false,  1000,       "COMMON",   0);
 makeFluid("moltendarksoularium",        "422805",   false,  1000,       "COMMON",   0);
-makeFluid("moltennetherstar",           "f2f2d8",   false,  100,        "COMMON",   15);
+//makeFluid("moltennetherstar",           "f2f2d8",   false,  100,        "COMMON",   15);
 
 makeFluid("moltenempoweredrestonia",    "ff0000",   false,  10000,      "COMMON",   15);
 makeFluid("moltenempoweredpalis",       "0026ff",   false,  10000,      "COMMON",   15);

@@ -23,7 +23,7 @@ var draconium = MaterialBuilder(32001, "draconium")
     .color(0xbe49ed).iconSet("metallic")
     .blastTemp(6800, "HIGHER")
     .cableProperties(524288, 1, 0, true)
-    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_dense", "generate_lens"])
+    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_dense"])
     .build();
 
 var awakened_draconium = MaterialBuilder(32002, "awakened_draconium")
@@ -177,7 +177,7 @@ var soularium = MaterialBuilder(32024, "soularium")
 var end_steel = MaterialBuilder(32025, "end_steel")
     .ingot().fluid()
     .color(0xd6d980).iconSet("metallic")
-    .flags("generate_plate")
+    .flags("generate_plate", "generate_fine_wire")
     .cableProperties(2048,1,0,true)
     .build();
 
@@ -238,6 +238,7 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:einsteinium>.addFluid();
 <material:nether_star>.addFluid();
 
+<material:topaz>.addFlags(["generate_lens"]);
 <material:electrum>.addFlags(["generate_gear"]);
 <material:neutronium>.addFlags(["generate_round"]);
 <material:titanium>.addFlags(["generate_foil", "generate_fine_wire"]);

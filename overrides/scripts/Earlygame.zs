@@ -1091,3 +1091,11 @@ recipes.addShaped(<metaitem:steam_grinder>, [
 	[<gregtech:metal_casing>, <minecraft:diamond>, <gregtech:metal_casing>],
 	[<gregtech:metal_casing>, <metaitem:gearPotin>, <gregtech:metal_casing>]
 ]);
+
+// Crafting Station
+assembler.recipeBuilder()
+	.inputs([<minecraft:chest> * 2, <ore:plankWood> * 4, <ore:craftingTableWood>])
+	.outputs([<metaitem:workbench>])
+	.duration(100)
+	.EUt(7)
+	.buildAndRegister();

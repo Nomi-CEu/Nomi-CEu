@@ -344,6 +344,20 @@ circuit_assembler.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister();
 
+// topaz lens oredict
+<ore:craftingLensOrange>.add(<metaitem:lensTopaz>);
+
+// HV coil
+// High Voltage Coil * 1
+<recipemap:assembler>.findRecipe(480, [<metaitem:stickSteelMagnetic>, <metaitem:wireFineBlackSteel> * 16, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+assembler.recipeBuilder()
+	.inputs(<metaitem:stickSteelMagnetic>, <metaitem:wireFineEndSteel> * 16)
+	.circuit(1)
+	.outputs(<metaitem:voltage_coil.hv>)
+	.duration(200)
+	.EUt(480)
+	.buildAndRegister();
+
 // high tier circuit progression changes
 // nano iv
 // Nano Supercomputer * 1

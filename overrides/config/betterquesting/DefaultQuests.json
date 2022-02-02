@@ -4540,7 +4540,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Tetrahedrite Ore\n* Cassiterite Ore\n* Tungstate Ore\n* Scheelite Ore\n* Redstone Ore\n* Quartz Ore\n* Vanadium Magnetite Ore\n§2* Ilmenite Ore§6\n* Tin Ore\n* Sapphire Ore§r\n\nWhen equipped with Gemstone Sensor:\n§6* Exquisite Emeralds\n* Exquisite Diamonds\n* Exquisite Rubies\n* Silver Ore\n* Gold Ore\n* Almandine Ore§r",
+          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Tetrahedrite Ore\n* Cassiterite Ore\n* Tungstate Ore\n* Scheelite Ore\n* Redstone Ore\n* Quartz Ore\n* Vanadium Magnetite Ore\n§2* Ilmenite Ore§6\n* Tin Ore\n* Sapphire Ore§r\n§6* Almandine Ore§r\n\nWhen equipped with Gemstone Sensor:\n§6* Exquisite Emeralds\n* Exquisite Diamonds\n* Exquisite Rubies\n* Silver Ore\n* Gold Ore\n§2* Topaz Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5989,7 +5989,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Second Tier One Circuits",
@@ -6054,7 +6054,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Second Tier Two Circuits",
@@ -6112,7 +6112,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need a variety of §alenses§r for use in §3Precision Laser Engravers§r, all of which are made in the §2Lathe§r.\n\nInitially you\u0027ll need a §a§3§2Ruby Lens§r. Soon you will need §2Diamond, Emerald, and Sapphire Lenses§r. §2You can choose to use an MV Lathe to get a lens from a plate, or sift for an Exquisite Gem and use an LV Lathe.\n\n",
+          "desc:8": "You\u0027ll need a variety of §alenses§r for use in §3Precision Laser Engravers§r, all of which are made in the §2Lathe§r.\n\nInitially you\u0027ll need a §a§3§2Ruby Lens§r. Soon you will need §2Diamond, Emerald, Topaz, and Sapphire Lenses§r. §2You can choose to use an MV Lathe to get a lens from a plate, or sift for an Exquisite Gem and use an LV Lathe.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6120,7 +6120,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_lens"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2Lenses",
@@ -6186,7 +6186,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The First Tier Three Circuits",
@@ -9022,7 +9022,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The First Tier Four Circuits",
@@ -9089,7 +9089,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Third And Final Tier One Circuits",
@@ -9227,7 +9227,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Third And Final Tier Two Circuits",
@@ -10856,7 +10856,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Like other petroleum products, §9Sulfuric Gas§r is hydrodesulfurized into §9Refinery Gas§r using §9Hydrogen§r in a §3Chemical Reactor§r.\n\nRefinery Gas can be cracked and further distilled for its constituents, but it is also useful as fuel for §3Gas Turbines§r. While it can be burned directly, centrifuging Refinery Gas produces §9LPG§r (Liquefied Petroleum Gas), which is the ideal fuel for Gas Turbines, and §9Methane§r which is a potential suboptimal turbine fuel but is also useful for various chemical reactions.",
+          "desc:8": "Like other petroleum products, §9Sulfuric Gas§r §2or Natural Gas§r is hydrodesulfurized into §9Refinery Gas§r using §9Hydrogen§r in a §3Chemical Reactor§r.\n\nRefinery Gas can be cracked and further distilled for its constituents, but it is also useful as fuel for §3Gas Turbines§r. While it can be burned directly, centrifuging Refinery Gas produces §9LPG§r (Liquefied Petroleum Gas), which is the ideal fuel for Gas Turbines, and §9Methane§r which is a potential suboptimal turbine fuel but is also useful for various chemical reactions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10871,7 +10871,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Refinery Gas",
+          "name:8": "§2Refinery Gas",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -11097,7 +11097,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Light Fuel\u0027s distillates are now more useful, but a large proportion of the Light Fuel you produce still has to go into Diesel production.",
+          "desc:8": "§2Light Fuel\u0027s distillates are now more useful, and it is the only source of Octane for High-Octane Gasoline.\nBut a large proportion of the Light Fuel you produce still has to go into Diesel production.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11595,20 +11595,13 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "glycerol"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "glycerol"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -12850,7 +12843,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The First Tier Five Circuit",
@@ -13540,7 +13533,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Second Tier Three Circuits",
@@ -15331,11 +15324,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "darkutils:timer",
-                "orig_meta:3": 0
-              }
+              "id:8": "extrautils2:redstoneclock"
             },
             "3:10": {
               "Count:3": 1,
@@ -16202,7 +16191,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2Wetware Substrate",
@@ -16809,7 +16798,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to 32 stacks of §6Oilsands Ore§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Redstone Ore\n* Dense Emerald Ore\n* Dense Diamond Ore\n* Dense Lapis Ore\n* Dense Coal Ore§r",
+          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §264§r stacks of §6Oilsands Ore§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Redstone Ore\n* Dense Emerald Ore\n* Dense Diamond Ore\n* Dense Lapis Ore\n* Dense Coal Ore§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16820,7 +16809,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Tier Four Micro Miner",
+          "name:8": "§2Tier Four Micro Miner",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -17694,7 +17683,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Third And Final Tier Four Circuits",
@@ -17955,7 +17944,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "The Third Tier Five Circuit",
@@ -18020,7 +18009,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Second Tier Six Circuits",
@@ -19329,12 +19318,12 @@
       "preRequisites:11": [
         336,
         324,
-        179
+        901
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need at least §6Naquadah Coil Blocks§r in your blast furnace to smelt §6Draconium§r, as well as a healthy supply of §9Nitro Diesel§r to reach the immense heat it takes to liquefy.\n\nDraconium gets so hot that it requires the potent coolant §9Gelid Cryotheum§r to aid your §3Vacuum Freezer§r in turning it into usable ingots.\n\nThere are several ways to make Draconium: dust can be smelted into ingots, but you can also turn §6Ender Dragon Scales§r, which contain Draconium, directly into ingots. It uses a lot of Nitro Diesel, but is the most efficient way to craft Draconium.\n\nYou\u0027ve been stockpiling diesel, right?",
+          "desc:8": "You\u0027ll need at least §6Naquadah Coil Blocks§r in your blast furnace to smelt §6Draconium§r, as well as a healthy supply of §9Nitro Diesel §2or Gasoline§r to reach the immense heat it takes to liquefy.\n\nDraconium gets so hot that it requires the potent coolant §9Gelid Cryotheum§r to aid your §3Vacuum Freezer§r in turning it into usable ingots.\n\nThere are several ways to make Draconium: dust can be smelted into ingots, but you can also turn §6Ender Dragon Scales§r, which contain Draconium, directly into ingots. It uses a lot of§2 combustion fuel§r, but is the most efficient way to craft Draconium.\n\nYou\u0027ve been stockpiling fuel, right?",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19345,7 +19334,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Draconium Ingots",
+          "name:8": "§2Draconium Ingots",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -26902,7 +26891,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2LV Extractor",
@@ -30592,7 +30581,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Third And Final Tier Three Circuits",
@@ -32059,7 +32048,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Second Tier Five Circuits",
@@ -32124,7 +32113,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The First Tier Six Circuits",
@@ -32189,7 +32178,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The Second Tier Four Circuits",
@@ -32589,7 +32578,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2The First Tier Seven Circuits",
@@ -33151,7 +33140,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2MV Extruder",
@@ -49211,7 +49200,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2LV Bending Machine",
@@ -49285,7 +49274,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2LV Circuit Assembler",
@@ -49536,7 +49525,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Diodes",
@@ -49604,7 +49593,7 @@
               "FluidName:8": "sodium_persulfate"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Sodium Persulfate and Iron III Chloride",
@@ -49733,7 +49722,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Sifter",
@@ -49797,7 +49786,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Inductors",
@@ -49865,7 +49854,7 @@
               "FluidName:8": "polytetrafluoroethylene"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Polytetrafluoroethylene",
@@ -49926,7 +49915,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Large Chemical Reactor",
@@ -49990,7 +49979,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_dust"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Platinum Group Processing",
@@ -50064,7 +50053,7 @@
               "FluidName:8": "polybenzimidazole"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Polybenzimidazole (PBI)",
@@ -50600,7 +50589,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2MV Mixer",
@@ -50665,7 +50654,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Vanadiumsteel",
@@ -50795,7 +50784,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Crystal Growing",
@@ -50925,7 +50914,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "High Speed Steel Type E",
@@ -50990,7 +50979,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Neuro Processing Unit",
@@ -51099,7 +51088,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:wire_coil"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Trinium Coils",
@@ -51164,7 +51153,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Enriched Naquadah",
@@ -51228,7 +51217,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Naquadria",
@@ -51293,7 +51282,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Trinium",
@@ -51357,7 +51346,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Naquadah Alloy",
@@ -51488,7 +51477,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Advanced SMD Components",
@@ -51576,7 +51565,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "High Speed Steel Type S",
@@ -51641,7 +51630,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Americium Ingot",
@@ -52023,7 +52012,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Alloy Blast Smelter directly smelts dust mixtures into molten Alloys, skipping the Mixer step. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\nThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for certain normal alloys if you want. In particular, the yield of Energetic Alloy and Vibrant Alloy is doubled.",
+          "desc:8": "§2The Alloy Blast Smelter directly smelts dust combinations into molten Alloys, skipping the Mixer step. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\nThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for certain normal alloys if you want. In particular, the yield of Energetic Alloy and Vibrant Alloy is doubled.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52031,7 +52020,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Alloy Blast Smelter",
@@ -52108,7 +52097,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Gregicality Multiblocks",
@@ -52209,6 +52198,12 @@
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gcym:unique_casing"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 2009,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -53757,7 +53752,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Darmstadtium",
@@ -53889,7 +53884,7 @@
               "FluidName:8": "oil"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Patriot\u0027s Plastic",
@@ -53944,7 +53939,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fluid.\n\nGasoline is made of:\n- 16 parts Naphtha\n- 2 parts Refinery Gas\n- 2 parts Toluene\n- 1 part Methanol\n- 1 part Acetone\n\nTo refine it to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
+          "desc:8": "§2Gasoline is a powerful combustion fuel, generating 1600 EU per mB of fluid. It can also be substituted for Nitro Diesel in Draconium production.\n\nGasoline is made of:\n- 16 parts Naphtha\n- 2 parts Refinery Gas\n- 1 part Toluene\n- 1 part Methanol\n- 1 part Acetone\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53953,13 +53948,13 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "gasoline_premium"
+              "FluidName:8": "gasoline"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2High-Octane Gasoline",
+          "name:8": "§2Gasoline",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -53980,7 +53975,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin25"
+              "id:8": "contenttweaker:omnicoin5"
             }
           }
         }
@@ -53995,7 +53990,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "gasoline_premium"
+              "FluidName:8": "gasoline"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -54264,7 +54259,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2MV Assembling Machine",
@@ -54329,7 +54324,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2MV Energy Input",
@@ -54403,7 +54398,7 @@
               "FluidName:8": "sodium_potassium"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Sodium Potassium",
@@ -54453,13 +54448,12 @@
       "preRequisites:11": [
         896,
         830,
-        116,
-        898
+        899
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With Black Steel, LPICs, NaK, and an HV Assembler, you can finally make HV Energy and Dynamo hatches.\n\nYou should get the gist of making these now, so there will not be further quests on Energy and Dynamo hatches.",
+          "desc:8": "§2With End Steel, LPICs, NaK, and an HV Assembler, you can finally make HV Energy and Dynamo hatches.\n\nYou should get the gist of making these now, so there will not be further quests on Energy and Dynamo hatches.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54467,7 +54461,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2HV Energy Hatch",
@@ -54584,6 +54578,213 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "899:10": {
+      "preRequisites:11": [
+        690,
+        275
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "End Steel is an alloy of Dark Steel and Endstone Dust. End Stone can be obtained by combining Luminessence with Lava in a Chemical Reactor, or with Extraterrestrial Matter from DML.\n\nEnd Steel will be used in a few recipes, such as for §2High Voltage Coils§r. They are also EV-tier §2superconductors§r, but at high voltage tiers, cable loss becomes insignificant.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32025,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2End Steel",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 899,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32025,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "900:10": {
+      "preRequisites:11": [
+        888
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fuel. It can also be used in Draconium production, using 60% less fuel than Nitro Diesel or normal Gasoline.\n\nTo refine Gasoline to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "gasoline_premium"
+            }
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2High-Octane Gasoline",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 900,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "gasoline_premium"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "901:10": {
+      "preRequisites:11": [
+        179,
+        888
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "\"Nitro Diesel\" or \"Gasoline\"",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 901,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "902:10": {
+      "preRequisites:11": [
+        805
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2The Tablet device you spawned with is very valuable to do plenty of tasks in GregTech.§r\n\nThis Quest explains how you can use the §4Terminal§.. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, §9§9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 465,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "terminal:10": {
+                "_hw:10": {}
+              }
+            }
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Terminal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 902,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -55116,49 +55317,49 @@
           "id:3": 31,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -208,
+          "x:3": -212,
           "y:3": 516
         },
         "4:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
+          "x:3": -208,
           "y:3": 448
         },
         "5:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -244,
+          "x:3": -248,
           "y:3": 484
         },
         "6:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -284,
+          "x:3": -288,
           "y:3": 448
         },
         "7:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -160,
+          "x:3": -164,
           "y:3": 448
         },
         "8:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -116,
+          "x:3": -120,
           "y:3": 484
         },
         "9:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -116,
+          "x:3": -120,
           "y:3": 448
         },
         "10:10": {
@@ -55172,14 +55373,14 @@
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -244,
+          "x:3": -248,
           "y:3": 520
         },
         "12:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -160,
+          "x:3": -164,
           "y:3": 484
         },
         "13:10": {
@@ -55459,7 +55660,7 @@
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -284,
+          "x:3": -288,
           "y:3": 520
         },
         "53:10": {
@@ -55627,7 +55828,7 @@
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -248,
+          "x:3": -252,
           "y:3": 444
         },
         "77:10": {
@@ -55753,7 +55954,7 @@
           "id:3": 880,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -244,
+          "x:3": -248,
           "y:3": 412
         },
         "95:10": {
@@ -55771,45 +55972,38 @@
           "y:3": 296
         },
         "97:10": {
-          "id:3": 891,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 296
-        },
-        "98:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
           "y:3": 340
         },
-        "99:10": {
+        "98:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
           "y:3": 188
         },
-        "100:10": {
+        "99:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "101:10": {
+        "100:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 256
         },
-        "102:10": {
-          "id:3": 898,
+        "101:10": {
+          "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
+          "x:3": -204,
           "y:3": 256
         }
       }
@@ -56740,7 +56934,7 @@
           "id:3": 826,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -608,
+          "x:3": -64,
           "y:3": -108
         },
         "130:10": {
@@ -56829,10 +57023,10 @@
         },
         "142:10": {
           "id:3": 888,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -56,
-          "y:3": -100
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -60,
+          "y:3": 68
         },
         "143:10": {
           "id:3": 892,
@@ -56840,6 +57034,13 @@
           "sizeY:3": 48,
           "x:3": -66,
           "y:3": 267
+        },
+        "144:10": {
+          "id:3": 900,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 72
         }
       }
     },
@@ -59696,6 +59897,13 @@
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 60
+        },
+        "52:10": {
+          "id:3": 902,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -228,
+          "y:3": 132
         }
       }
     },
@@ -60354,6 +60562,13 @@
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 90
+        },
+        "16:10": {
+          "id:3": 899,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 132
         }
       }
     },

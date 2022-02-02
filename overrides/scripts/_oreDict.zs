@@ -336,7 +336,7 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#dustFluix
 	<ore:dustFluix> : [
-		<appliedenergistics2:material:8>
+//		<appliedenergistics2:material:8>
 	],
 
 	#dustGraphite
@@ -2260,9 +2260,9 @@ mods.jei.JEI.removeAndHide(<libvulpes:productsheet:1>);
 
 //Molten Nether Star
 recipes.addShapeless(<minecraft:nether_star> * 9, [<extendedcrafting:storage:2>]);
-solidifier.recipeBuilder().fluidInputs(<liquid:moltennetherstar> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<extendedcrafting:storage:2>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<minecraft:nether_star>).fluidOutputs([<liquid:moltennetherstar> * 144]).duration(40).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<extendedcrafting:storage:2>).fluidOutputs([<liquid:moltennetherstar> * 1296]).duration(360).EUt(30).buildAndRegister();
+solidifier.recipeBuilder().fluidInputs(<liquid:nether_star> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<extendedcrafting:storage:2>]).duration(200).EUt(30).buildAndRegister();
+fluidextractor.recipeBuilder().inputs(<minecraft:nether_star>).fluidOutputs([<liquid:nether_star> * 144]).duration(40).EUt(30).buildAndRegister();
+fluidextractor.recipeBuilder().inputs(<extendedcrafting:storage:2>).fluidOutputs([<liquid:nether_star> * 1296]).duration(360).EUt(30).buildAndRegister();
 
 //Molten Empowered Restonia
 solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredrestonia> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<actuallyadditions:block_crystal_empowered>]).duration(400).EUt(30).buildAndRegister();

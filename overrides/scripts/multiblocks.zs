@@ -676,7 +676,8 @@ microverse_projector_basic.recipeMap
              <metaitem:gemExquisiteRuby> * 16,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
-             <gregtech:ore_silver_0:1> * 64)
+             <gregtech:ore_silver_0:1> * 64,
+             <gregtech:ore_topaz_0:1> * 64)
     .buildAndRegister();
 
 // t3 ores
