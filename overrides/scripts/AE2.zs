@@ -310,6 +310,9 @@ recipes.addShaped(<appliedenergistics2:quantum_ring>, [
 [<appliedenergistics2:material:24>, <metaitem:quantumstar>, <appliedenergistics2:material:24>], 
 [<metaitem:plateStainlessSteel>, <appliedenergistics2:material:23>,<metaitem:plateStainlessSteel>]]);
 
+// Network Tool
+recipes.addShapeless(<appliedenergistics2:network_tool>, [<ore:itemIlluminatedPanel>, <actuallyadditions:item_laser_wrench>]);
+
 	
 recipes.removeByRecipeName("appliedenergistics2:network/cells/storage_cell_1k");
 recipes.removeByRecipeName("appliedenergistics2:network/cells/storage_cell_4k");

@@ -588,10 +588,7 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux>,
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
-    .outputs(<metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
              <gregtech:ore_apatite_0> * 64,
              <gregtech:ore_tricalcium_phosphate_0> * 64,
              <gregtech:ore_quartzite_0> * 64)
@@ -662,18 +659,10 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux> * 4,
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
-    .outputs(<metaitem:gemExquisiteEmerald> * 16,
-             <metaitem:gemExquisiteEmerald> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteDiamond> * 16,
-             <metaitem:gemExquisiteRuby> * 16,
-             <metaitem:gemExquisiteRuby> * 16,
-             <metaitem:gemExquisiteRuby> * 16,
-             <metaitem:gemExquisiteRuby> * 16,
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
+             <metaitem:gemPerfectDiamond> * 32,
+             <metaitem:gemPerfectEmerald> * 32,
+             <metaitem:gemPerfectRuby> * 64,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
              <gregtech:ore_silver_0:1> * 64,

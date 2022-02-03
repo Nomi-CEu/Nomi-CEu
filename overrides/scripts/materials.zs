@@ -3,8 +3,14 @@
 
 import mods.gregtech.material.MaterialBuilder;
 import mods.gregtech.material.MaterialRegistry;
+import mods.gregtech.material.IMaterialPredicate;
 import mods.gregtech.material.Material;
 import mods.gregtech.material.Elements;
+import mods.gregtech.ore.OrePrefix;
+
+val gemPerfect as OrePrefix = OrePrefix.registerOrePrefix("gemPerfect", 8, "gemPerfect", 1);
+gemPerfect.setGenerationPredicate(IMaterialPredicate.hasGem);
+gemPerfect.createMaterialItem();
 
 var element_omnium = Elements.add(130, 234, -1, null, "Omnium", "Nm", false);
 var element_draconium = Elements.add(149, 264, -1, null, "Draconium", "Dc", false);
@@ -165,7 +171,7 @@ var crystal_matrix = MaterialBuilder(32023, "crystal_matrix")
     .ingot().fluid()
     .color(0x70ecff).iconSet("shiny")
     .flags("generate_plate")
-    .components([<material:diamond> * 504, <material:nether_star> * 10])
+//    .components([<material:diamond> * 504, <material:nether_star> * 10])
     .build();
 
 var soularium = MaterialBuilder(32024, "soularium")

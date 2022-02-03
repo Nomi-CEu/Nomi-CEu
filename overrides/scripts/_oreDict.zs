@@ -2456,6 +2456,16 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookSifter>.add(<metaitem:sifter.lv>);
 <ore:questbookSifter>.add(<metaitem:sifter.mv>);
 
+<ore:questbookLvCef>.add(<metaitem:energy_converter.lv.1>);
+<ore:questbookLvCef>.add(<metaitem:energy_converter.lv.4>);
+<ore:questbookLvCef>.add(<metaitem:energy_converter.lv.8>);
+<ore:questbookLvCef>.add(<metaitem:energy_converter.lv.16>);
+
+<ore:questbookMvCef>.add(<metaitem:energy_converter.mv.1>);
+<ore:questbookMvCef>.add(<metaitem:energy_converter.mv.4>);
+<ore:questbookMvCef>.add(<metaitem:energy_converter.mv.8>);
+<ore:questbookMvCef>.add(<metaitem:energy_converter.mv.16>);
+
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.lv>); // LV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.hv>); // HV Fluid Extractor

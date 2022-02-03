@@ -333,7 +333,7 @@ recipes.removeByRecipeName("thermalexpansion:augment_25");
 recipes.addShaped(<thermalexpansion:augment:576>, [
 	[null, <ore:gearIron>, null],
 	[<ore:plateCopper>, <minecraft:bucket>, <ore:plateCopper>],
-	[null, <ore:blockGlass>, null]
+	[null, <ore:blockGlassHardened>, null]
 ]);
 
 recipes.addShaped(<thermalfoundation:material:515>, [
