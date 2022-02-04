@@ -9,7 +9,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main purpose for this device is to turn §6Certus Quartz Crystal§r into §6Charged Certus Quartz Crystal§r.\n\nThis device can be powered with RF via energy conduits or use AE energy from a network via ME conduits or cables.\n\nIt accepts power from two sides. Which two sides? It\u0027s pretty easy to guess.\n\n\n\n\n\n\n\n\nOk, ok. It\u0027s the top and bottom.\n\n",
+          "desc:8": "The main purpose for this device is to turn §6Activated Certus Quartz Crystal§r into §6Charged Certus Quartz Crystal§r.\n\nThis device can be powered with RF via energy conduits or use AE energy from a network via ME conduits or cables.\n\nIt accepts power from two sides. Which two sides? It\u0027s pretty easy to guess.\n\n\n\n\n\n\n\n\nOk, ok. It\u0027s the top and bottom.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -482,7 +482,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Before you continue, you\u0027ll need access to some more materials. \n\n§6Redstone§f: Found only deep in the world, in massive veins paired with §6Cinnabar§f and §6Ruby§f.\n\n§6Copper§f: Two primary sources. §6Tetrahedrite§f veins are higher up, while §6Chalcopyrite§f veins are lower, paired with some small amounts of §6Iron§f. You\u0027ll also find §6Malachite§f inside of Iron veins, this is another type of copper ore.\n\n§6Tin§f: Found essentially at ground level, and almost always detectable by §aScanner§f from the surface. §6Cassiterite§f is another type of tin ore, and they\u0027re always found together. If you cannot find a vein of tin, there are small amounts of tin inside veins of §6Aluminium§f and §6Rock Salt§f, which might be enough to hold you over until you find a proper tin vein.\n\n§6Coal§f: Found in relatively shallow depths. §6Lignite Coal§f is §2removed.\n\n§6Gold§f: Found inside of §6Magnetite§f veins, close to the surface.",
+          "desc:8": "Before you continue, you\u0027ll need access to some more materials. \n\n§6Redstone§f: Found only deep in the world, in massive veins paired with §6Cinnabar§f and §6Ruby§f.\n\n§6Copper§f: Two primary sources. §6Tetrahedrite§f veins are higher up, while §6Chalcopyrite§f veins are lower, paired with some small amounts of §6Iron§f. You\u0027ll also find §6Malachite§f inside of Iron veins, this is another type of copper ore.\n\n§6Tin§f: Found essentially at ground level. §6Cassiterite§f is another type of tin ore, and they\u0027re always found together. If you cannot find a vein of tin, there are small amounts of tin inside veins of §6Aluminium§f and §6Rock Salt§f, which might be enough to hold you over until you find a proper tin vein.\n\n§6Coal§f: Found in relatively shallow depths. §6Lignite Coal§f is §2removed.\n\n§6Gold§f: Found inside of §6Magnetite§f veins, close to the surface.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2479,7 +2479,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §bEnderIO§r alloy, made from §2mixing§r a §6Gold Ingot§r, §2Redstone Dust, and Glowstone Dust§r §2and putting it §rin your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
+          "desc:8": "An §bEnderIO§r alloy, made from §2mixing§r §22 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust§r §2and putting it §rin your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2763,7 +2763,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1675,
-              "OreDict:8": "",
+              "OreDict:8": "questbookLvCef",
               "id:8": "gregtech:machine"
             }
           },
@@ -3601,6 +3601,42 @@
       }
     },
     "52:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Coming soon!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:concrete"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Cleanroom",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 52,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "53:10": {
       "preRequisites:11": [
         56
       ],
@@ -3671,7 +3707,7 @@
         }
       }
     },
-    "53:10": {
+    "54:10": {
       "preRequisites:11": [
         267
       ],
@@ -3736,7 +3772,7 @@
         }
       }
     },
-    "54:10": {
+    "55:10": {
       "preRequisites:11": [
         53,
         727
@@ -3802,7 +3838,7 @@
         }
       }
     },
-    "55:10": {
+    "56:10": {
       "preRequisites:11": [
         409
       ],
@@ -3854,7 +3890,7 @@
         }
       }
     },
-    "56:10": {
+    "57:10": {
       "preRequisites:11": [
         35
       ],
@@ -3919,7 +3955,7 @@
         }
       }
     },
-    "57:10": {
+    "58:10": {
       "preRequisites:11": [
         38
       ],
@@ -3987,7 +4023,7 @@
         }
       }
     },
-    "58:10": {
+    "59:10": {
       "preRequisites:11": [
         19
       ],
@@ -4064,7 +4100,7 @@
         }
       }
     },
-    "59:10": {
+    "60:10": {
       "preRequisites:11": [
         59,
         21
@@ -4184,7 +4220,7 @@
         }
       }
     },
-    "60:10": {
+    "61:10": {
       "preRequisites:11": [
         192
       ],
@@ -4249,7 +4285,7 @@
         }
       }
     },
-    "61:10": {
+    "62:10": {
       "preRequisites:11": [
         282
       ],
@@ -4314,7 +4350,7 @@
         }
       }
     },
-    "62:10": {
+    "63:10": {
       "preRequisites:11": [
         62
       ],
@@ -4379,7 +4415,7 @@
         }
       }
     },
-    "63:10": {
+    "64:10": {
       "preRequisites:11": [
         282
       ],
@@ -4458,7 +4494,7 @@
         }
       }
     },
-    "64:10": {
+    "65:10": {
       "preRequisites:11": [
         246
       ],
@@ -4523,7 +4559,7 @@
         }
       }
     },
-    "65:10": {
+    "66:10": {
       "preRequisites:11": [
         6
       ],
@@ -4592,7 +4628,7 @@
             "2:10": {
               "Count:3": 16,
               "Damage:2": 2517,
-              "OreDict:8": "",
+              "OreDict:8": "ingotRedAlloy",
               "id:8": "gregtech:meta_ingot"
             },
             "3:10": {
@@ -4630,7 +4666,7 @@
         }
       }
     },
-    "66:10": {
+    "67:10": {
       "preRequisites:11": [
         35,
         44
@@ -4696,7 +4732,7 @@
         }
       }
     },
-    "67:10": {
+    "68:10": {
       "preRequisites:11": [
         35,
         296
@@ -4762,7 +4798,7 @@
         }
       }
     },
-    "68:10": {
+    "69:10": {
       "preRequisites:11": [
         60,
         260
@@ -4828,7 +4864,7 @@
         }
       }
     },
-    "69:10": {
+    "70:10": {
       "preRequisites:11": [
         187,
         2
@@ -4897,7 +4933,7 @@
         }
       }
     },
-    "70:10": {
+    "71:10": {
       "preRequisites:11": [
         76,
         259
@@ -4963,7 +4999,7 @@
         }
       }
     },
-    "71:10": {
+    "72:10": {
       "preRequisites:11": [
         517,
         516,
@@ -5030,7 +5066,7 @@
         }
       }
     },
-    "72:10": {
+    "73:10": {
       "preRequisites:11": [
         72,
         784
@@ -5096,7 +5132,7 @@
         }
       }
     },
-    "73:10": {
+    "74:10": {
       "preRequisites:11": [
         71
       ],
@@ -5167,7 +5203,7 @@
         }
       }
     },
-    "74:10": {
+    "75:10": {
       "preRequisites:11": [
         71
       ],
@@ -5232,7 +5268,7 @@
         }
       }
     },
-    "75:10": {
+    "76:10": {
       "preRequisites:11": [
         820,
         822,
@@ -5299,7 +5335,7 @@
         }
       }
     },
-    "76:10": {
+    "77:10": {
       "preRequisites:11": [
         61,
         65
@@ -5307,7 +5343,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Perfect Diamonds are used in crafting Crystal Matrix Ingots.\n\nThe others are equivalent to 8 of the base gem.",
+          "desc:8": "§2Perfect Gems are equivalent to 8 of the base gem.\n\n§211 Perfect Diamonds are used in crafting each Crystal Matrix Ingot.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5365,7 +5401,7 @@
         }
       }
     },
-    "77:10": {
+    "78:10": {
       "preRequisites:11": [
         727,
         273
@@ -5443,7 +5479,7 @@
         }
       }
     },
-    "78:10": {
+    "79:10": {
       "preRequisites:11": [
         147,
         259,
@@ -5510,7 +5546,7 @@
         }
       }
     },
-    "79:10": {
+    "80:10": {
       "preRequisites:11": [
         60,
         78
@@ -5576,7 +5612,7 @@
         }
       }
     },
-    "80:10": {
+    "81:10": {
       "preRequisites:11": [
         79,
         80
@@ -5642,7 +5678,7 @@
         }
       }
     },
-    "81:10": {
+    "82:10": {
       "preRequisites:11": [
         27,
         22
@@ -5708,7 +5744,7 @@
         }
       }
     },
-    "82:10": {
+    "83:10": {
       "preRequisites:11": [
         147,
         21,
@@ -5776,7 +5812,7 @@
         }
       }
     },
-    "83:10": {
+    "84:10": {
       "preRequisites:11": [
         83,
         81,
@@ -5849,7 +5885,7 @@
         }
       }
     },
-    "84:10": {
+    "85:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5886,7 +5922,7 @@
         }
       }
     },
-    "85:10": {
+    "86:10": {
       "preRequisites:11": [
         816,
         84
@@ -5952,7 +5988,7 @@
         }
       }
     },
-    "86:10": {
+    "87:10": {
       "preRequisites:11": [
         86
       ],
@@ -6017,7 +6053,7 @@
         }
       }
     },
-    "87:10": {
+    "88:10": {
       "preRequisites:11": [
         83,
         774
@@ -6083,7 +6119,7 @@
         }
       }
     },
-    "88:10": {
+    "89:10": {
       "preRequisites:11": [
         87,
         236
@@ -6149,7 +6185,7 @@
         }
       }
     },
-    "89:10": {
+    "90:10": {
       "preRequisites:11": [
         89,
         259
@@ -6215,7 +6251,7 @@
         }
       }
     },
-    "90:10": {
+    "91:10": {
       "preRequisites:11": [
         71
       ],
@@ -6280,7 +6316,7 @@
         }
       }
     },
-    "91:10": {
+    "92:10": {
       "preRequisites:11": [
         233,
         296
@@ -6346,7 +6382,7 @@
         }
       }
     },
-    "92:10": {
+    "93:10": {
       "preRequisites:11": [
         95,
         98
@@ -6412,7 +6448,7 @@
         }
       }
     },
-    "93:10": {
+    "94:10": {
       "preRequisites:11": [
         810
       ],
@@ -6478,7 +6514,7 @@
         }
       }
     },
-    "94:10": {
+    "95:10": {
       "preRequisites:11": [
         812,
         887
@@ -6545,7 +6581,7 @@
         }
       }
     },
-    "95:10": {
+    "96:10": {
       "preRequisites:11": [
         95
       ],
@@ -6610,7 +6646,7 @@
         }
       }
     },
-    "96:10": {
+    "97:10": {
       "preRequisites:11": [
         109
       ],
@@ -6681,7 +6717,7 @@
         }
       }
     },
-    "97:10": {
+    "98:10": {
       "preRequisites:11": [
         91
       ],
@@ -6752,7 +6788,7 @@
         }
       }
     },
-    "98:10": {
+    "99:10": {
       "preRequisites:11": [
         254
       ],
@@ -6823,7 +6859,7 @@
         }
       }
     },
-    "99:10": {
+    "100:10": {
       "preRequisites:11": [
         51
       ],
@@ -6888,7 +6924,7 @@
         }
       }
     },
-    "100:10": {
+    "101:10": {
       "preRequisites:11": [
         69,
         76,
@@ -6955,7 +6991,7 @@
         }
       }
     },
-    "101:10": {
+    "102:10": {
       "preRequisites:11": [
         51
       ],
@@ -7020,7 +7056,7 @@
         }
       }
     },
-    "102:10": {
+    "103:10": {
       "preRequisites:11": [
         837
       ],
@@ -7103,7 +7139,7 @@
         }
       }
     },
-    "103:10": {
+    "104:10": {
       "preRequisites:11": [
         96,
         109,
@@ -7170,7 +7206,7 @@
         }
       }
     },
-    "104:10": {
+    "105:10": {
       "preRequisites:11": [
         51
       ],
@@ -7235,7 +7271,7 @@
         }
       }
     },
-    "105:10": {
+    "106:10": {
       "preRequisites:11": [
         104,
         100
@@ -7301,7 +7337,7 @@
         }
       }
     },
-    "106:10": {
+    "107:10": {
       "preRequisites:11": [
         74
       ],
@@ -7366,7 +7402,7 @@
         }
       }
     },
-    "107:10": {
+    "108:10": {
       "preRequisites:11": [
         109
       ],
@@ -7431,7 +7467,7 @@
         }
       }
     },
-    "108:10": {
+    "109:10": {
       "preRequisites:11": [
         102
       ],
@@ -7496,7 +7532,7 @@
         }
       }
     },
-    "109:10": {
+    "110:10": {
       "preRequisites:11": [
         105,
         102,
@@ -7569,7 +7605,7 @@
         }
       }
     },
-    "110:10": {
+    "111:10": {
       "preRequisites:11": [
         105
       ],
@@ -7634,7 +7670,7 @@
         }
       }
     },
-    "111:10": {
+    "112:10": {
       "preRequisites:11": [
         107
       ],
@@ -7705,7 +7741,7 @@
         }
       }
     },
-    "112:10": {
+    "113:10": {
       "preRequisites:11": [
         229
       ],
@@ -7770,7 +7806,7 @@
         }
       }
     },
-    "113:10": {
+    "114:10": {
       "preRequisites:11": [
         75
       ],
@@ -7835,7 +7871,7 @@
         }
       }
     },
-    "114:10": {
+    "115:10": {
       "preRequisites:11": [
         125,
         113
@@ -7901,7 +7937,7 @@
         }
       }
     },
-    "115:10": {
+    "116:10": {
       "preRequisites:11": [
         112,
         115
@@ -7967,7 +8003,7 @@
         }
       }
     },
-    "116:10": {
+    "117:10": {
       "preRequisites:11": [
         494
       ],
@@ -8032,7 +8068,7 @@
         }
       }
     },
-    "117:10": {
+    "118:10": {
       "preRequisites:11": [
         102,
         64
@@ -8098,7 +8134,7 @@
         }
       }
     },
-    "118:10": {
+    "119:10": {
       "preRequisites:11": [
         118
       ],
@@ -8163,7 +8199,7 @@
         }
       }
     },
-    "119:10": {
+    "120:10": {
       "preRequisites:11": [
         119
       ],
@@ -8228,7 +8264,7 @@
         }
       }
     },
-    "120:10": {
+    "121:10": {
       "preRequisites:11": [
         198
       ],
@@ -8293,7 +8329,7 @@
         }
       }
     },
-    "121:10": {
+    "122:10": {
       "preRequisites:11": [
         117
       ],
@@ -8358,7 +8394,7 @@
         }
       }
     },
-    "122:10": {
+    "123:10": {
       "preRequisites:11": [
         122
       ],
@@ -8423,7 +8459,7 @@
         }
       }
     },
-    "123:10": {
+    "124:10": {
       "preRequisites:11": [
         123
       ],
@@ -8488,7 +8524,7 @@
         }
       }
     },
-    "124:10": {
+    "125:10": {
       "preRequisites:11": [
         113
       ],
@@ -8553,7 +8589,7 @@
         }
       }
     },
-    "125:10": {
+    "126:10": {
       "preRequisites:11": [
         95,
         130,
@@ -8644,7 +8680,7 @@
         }
       }
     },
-    "126:10": {
+    "127:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -8681,7 +8717,7 @@
         }
       }
     },
-    "127:10": {
+    "128:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -8718,7 +8754,7 @@
         }
       }
     },
-    "128:10": {
+    "129:10": {
       "preRequisites:11": [
         823
       ],
@@ -8788,7 +8824,7 @@
         }
       }
     },
-    "129:10": {
+    "130:10": {
       "preRequisites:11": [
         814
       ],
@@ -8853,7 +8889,7 @@
         }
       }
     },
-    "130:10": {
+    "131:10": {
       "preRequisites:11": [
         507,
         95
@@ -8919,7 +8955,7 @@
         }
       }
     },
-    "131:10": {
+    "132:10": {
       "preRequisites:11": [
         203,
         35
@@ -8985,7 +9021,7 @@
         }
       }
     },
-    "132:10": {
+    "133:10": {
       "preRequisites:11": [
         134,
         90,
@@ -9052,7 +9088,7 @@
         }
       }
     },
-    "133:10": {
+    "134:10": {
       "preRequisites:11": [
         96,
         131
@@ -9124,7 +9160,7 @@
         }
       }
     },
-    "134:10": {
+    "135:10": {
       "preRequisites:11": [
         34,
         133
@@ -9190,7 +9226,7 @@
         }
       }
     },
-    "135:10": {
+    "136:10": {
       "preRequisites:11": [
         93
       ],
@@ -9263,7 +9299,7 @@
         }
       }
     },
-    "136:10": {
+    "137:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -9300,7 +9336,7 @@
         }
       }
     },
-    "137:10": {
+    "138:10": {
       "preRequisites:11": [
         285,
         527,
@@ -9367,7 +9403,7 @@
         }
       }
     },
-    "138:10": {
+    "139:10": {
       "preRequisites:11": [
         55
       ],
@@ -9432,7 +9468,7 @@
         }
       }
     },
-    "139:10": {
+    "140:10": {
       "preRequisites:11": [
         100
       ],
@@ -9497,7 +9533,7 @@
         }
       }
     },
-    "140:10": {
+    "141:10": {
       "preRequisites:11": [
         4,
         805
@@ -9537,7 +9573,7 @@
         }
       }
     },
-    "141:10": {
+    "142:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -9574,7 +9610,7 @@
         }
       }
     },
-    "142:10": {
+    "143:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -9611,7 +9647,7 @@
         }
       }
     },
-    "143:10": {
+    "144:10": {
       "preRequisites:11": [
         139
       ],
@@ -9676,7 +9712,7 @@
         }
       }
     },
-    "144:10": {
+    "145:10": {
       "preRequisites:11": [
         53
       ],
@@ -9741,7 +9777,7 @@
         }
       }
     },
-    "145:10": {
+    "146:10": {
       "preRequisites:11": [
         53
       ],
@@ -9806,7 +9842,7 @@
         }
       }
     },
-    "146:10": {
+    "147:10": {
       "preRequisites:11": [
         53
       ],
@@ -9871,7 +9907,7 @@
         }
       }
     },
-    "147:10": {
+    "148:10": {
       "preRequisites:11": [
         149
       ],
@@ -9936,7 +9972,7 @@
         }
       }
     },
-    "148:10": {
+    "149:10": {
       "preRequisites:11": [
         152,
         157
@@ -9989,7 +10025,7 @@
         }
       }
     },
-    "149:10": {
+    "150:10": {
       "preRequisites:11": [
         132
       ],
@@ -10054,7 +10090,7 @@
         }
       }
     },
-    "150:10": {
+    "151:10": {
       "preRequisites:11": [
         93,
         232
@@ -10120,7 +10156,7 @@
         }
       }
     },
-    "151:10": {
+    "152:10": {
       "preRequisites:11": [
         151,
         153
@@ -10194,7 +10230,7 @@
         }
       }
     },
-    "152:10": {
+    "153:10": {
       "preRequisites:11": [
         93
       ],
@@ -10259,7 +10295,7 @@
         }
       }
     },
-    "153:10": {
+    "154:10": {
       "preRequisites:11": [
         89,
         98
@@ -10355,7 +10391,7 @@
         }
       }
     },
-    "154:10": {
+    "155:10": {
       "preRequisites:11": [
         291,
         744,
@@ -10423,7 +10459,7 @@
         }
       }
     },
-    "155:10": {
+    "156:10": {
       "preRequisites:11": [
         150,
         60
@@ -10489,14 +10525,14 @@
         }
       }
     },
-    "156:10": {
+    "157:10": {
       "preRequisites:11": [
         156
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Kanthal§r is the second coil material available, increasing your EBF\u0027s operating temperature to 2700K so it can process more advanced materials.\n\n§2In CEu, using higher-tier coils provides some bonuses to their multiblocks.\n- Pyrolyse Oven: Cupronickel Coils are 25% slower, every coil above Kanthal grants +50% additive speed\n- Multi Smelter: Increases number of parallel operations and decreases energy usage\n- Cracking Unit: -5% energy usage per coil above Cupronickel\n- Electric Blast Furnace: The temperature of the EBF is the coil\u0027s temperature, plus 100K for each voltage tier above MV.\nFor every 900K above the recipe temperature, the energy usage is multiplied by 0.95x.\nFor every 1800K above, one overclock becomes 100% efficient.",
+          "desc:8": "§6Kanthal§r is the second coil material available, increasing your EBF\u0027s operating temperature to 2700K so it can process more advanced materials.\n\n§2In CEu, using higher-tier coils provides some bonuses to their multiblocks.\n- Pyrolyse Oven: Cupronickel Coils are 25% slower, every coil above Kanthal grants +50% additive speed\n- Multi Smelter: Increases number of parallel operations and decreases energy usage\n- Cracking Unit: -5% energy usage per coil above Cupronickel\n- Electric Blast Furnace: The temperature of the EBF is the coil\u0027s temperature, plus 100K for each voltage tier above MV.\nFor every 900K above the recipe temperature, the energy usage is multiplied by 0.95x.\nFor every 1800K above, one overclock becomes 100% efficient - each overclock will 4x the speed instead of 2x.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10554,7 +10590,7 @@
         }
       }
     },
-    "157:10": {
+    "158:10": {
       "preRequisites:11": [
         157
       ],
@@ -10619,7 +10655,7 @@
         }
       }
     },
-    "158:10": {
+    "159:10": {
       "preRequisites:11": [
         158
       ],
@@ -10684,7 +10720,7 @@
         }
       }
     },
-    "159:10": {
+    "160:10": {
       "preRequisites:11": [
         184
       ],
@@ -10762,7 +10798,7 @@
         }
       }
     },
-    "160:10": {
+    "161:10": {
       "preRequisites:11": [
         160
       ],
@@ -10828,7 +10864,7 @@
         }
       }
     },
-    "161:10": {
+    "162:10": {
       "preRequisites:11": [
         107,
         163
@@ -10894,7 +10930,7 @@
         }
       }
     },
-    "162:10": {
+    "163:10": {
       "preRequisites:11": [
         3
       ],
@@ -10937,7 +10973,7 @@
         }
       }
     },
-    "163:10": {
+    "164:10": {
       "preRequisites:11": [
         160
       ],
@@ -11003,14 +11039,14 @@
         }
       }
     },
-    "164:10": {
+    "165:10": {
       "preRequisites:11": [
         160
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Light Fuel\u0027s distillates are now more useful, and it is the only source of Octane for High-Octane Gasoline.\nBut a large proportion of the Light Fuel you produce still has to go into Diesel production.",
+          "desc:8": "§2Light Fuel\u0027s distillates are now more useful, and it is the only source of Octane for High-Octane Gasoline.\nBut if you choose to produce Diesel, a large proportion of the Light Fuel you produce still has to go into Diesel production.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11069,7 +11105,7 @@
         }
       }
     },
-    "165:10": {
+    "166:10": {
       "preRequisites:11": [
         160
       ],
@@ -11135,7 +11171,7 @@
         }
       }
     },
-    "166:10": {
+    "167:10": {
       "preRequisites:11": [
         160
       ],
@@ -11201,7 +11237,7 @@
         }
       }
     },
-    "167:10": {
+    "168:10": {
       "preRequisites:11": [
         164,
         165
@@ -11268,7 +11304,7 @@
         }
       }
     },
-    "168:10": {
+    "169:10": {
       "preRequisites:11": [
         60
       ],
@@ -11333,14 +11369,14 @@
         }
       }
     },
-    "169:10": {
+    "170:10": {
       "preRequisites:11": [
         27
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Sodium Hydroxide§r is an ingredient in §9Bio Diesel§r.\n\nThe primary sources are:\n\n- Combining §9Water§r and §6Sodium§r in a §3Chemical Reactor§r (also a good source of §9Hydrogen§r)\n- Splitting §9Salt Water§r in an §3Electrolyzer§r (also a good source of §9Chlorine§r).\n- Combining §6Sodium Bisulfate§r and §9Water§r in a §3Chemical Reactor§r (The production of §6Sodium Bisulfate§r also yields a little §2Sulfuric Acid§r)",
+          "desc:8": "§6Sodium Hydroxide§r is an ingredient in §9Bio Diesel§r.\n\nThe primary sources are:\n\n- Combining §9Water§r and §6Sodium§r in a §3Chemical Reactor§r (also a good source of §9Hydrogen§r)\n- Splitting §9Salt Water§r in an §3Electrolyzer§r (also a good source of §9Chlorine§r).",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11398,7 +11434,7 @@
         }
       }
     },
-    "170:10": {
+    "171:10": {
       "preRequisites:11": [
         150,
         174
@@ -11451,7 +11487,7 @@
         }
       }
     },
-    "171:10": {
+    "172:10": {
       "preRequisites:11": [
         170,
         800
@@ -11518,7 +11554,7 @@
         }
       }
     },
-    "172:10": {
+    "173:10": {
       "preRequisites:11": [
         171,
         49
@@ -11585,7 +11621,7 @@
         }
       }
     },
-    "173:10": {
+    "174:10": {
       "preRequisites:11": [
         93
       ],
@@ -11641,7 +11677,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 950,
+              "Damage:2": 530,
               "OreDict:8": "questbookAirCollector",
               "id:8": "gregtech:machine"
             }
@@ -11650,7 +11686,7 @@
         }
       }
     },
-    "174:10": {
+    "175:10": {
       "preRequisites:11": [
         171
       ],
@@ -11716,7 +11752,7 @@
         }
       }
     },
-    "175:10": {
+    "176:10": {
       "preRequisites:11": [
         173
       ],
@@ -11782,7 +11818,7 @@
         }
       }
     },
-    "176:10": {
+    "177:10": {
       "preRequisites:11": [
         176
       ],
@@ -11848,7 +11884,7 @@
         }
       }
     },
-    "177:10": {
+    "178:10": {
       "preRequisites:11": [
         177,
         180
@@ -11915,7 +11951,7 @@
         }
       }
     },
-    "178:10": {
+    "179:10": {
       "preRequisites:11": [
         178,
         773
@@ -11982,7 +12018,7 @@
         }
       }
     },
-    "179:10": {
+    "180:10": {
       "preRequisites:11": [
         181
       ],
@@ -12048,7 +12084,7 @@
         }
       }
     },
-    "180:10": {
+    "181:10": {
       "preRequisites:11": [
         227
       ],
@@ -12114,7 +12150,7 @@
         }
       }
     },
-    "181:10": {
+    "182:10": {
       "preRequisites:11": [
         172,
         806
@@ -12181,7 +12217,7 @@
         }
       }
     },
-    "182:10": {
+    "183:10": {
       "preRequisites:11": [
         188
       ],
@@ -12258,7 +12294,7 @@
         }
       }
     },
-    "183:10": {
+    "184:10": {
       "preRequisites:11": [
         154,
         546
@@ -12315,7 +12351,7 @@
         }
       }
     },
-    "184:10": {
+    "185:10": {
       "preRequisites:11": [
         318
       ],
@@ -12380,7 +12416,7 @@
         }
       }
     },
-    "185:10": {
+    "186:10": {
       "preRequisites:11": [
         95
       ],
@@ -12445,7 +12481,7 @@
         }
       }
     },
-    "186:10": {
+    "187:10": {
       "preRequisites:11": [
         509,
         259
@@ -12453,7 +12489,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Remember to keep the MV area separate from your LV area. §eHooking up an LV machine to MV current will result in the machine being destroyed! Also LV cables will burn up if you put MV current through them§r. That\u0027s why it\u0027s probably best to keep the areas separate until you\u0027re comfortable and confident with voltages. Eventually you can use transformers to switch voltages within a single setup, but don\u0027t feel forced to try that until you\u0027ve got a grasp on the basics.\n\nAll RF power is the same (it has no voltages), so you can use RF conduits to route power from wherever you\u0027re generating and storing it to §3CEFs§r for each voltage. You don\u0027t have to use this setup, but it\u0027s the most foolproof one for a beginner. And if you\u0027re an expert, well... you don\u0027t need my advice.\n\nFor your MV cables, you can use §6Copper§r to start with. §6Energetic Alloy cables§r are lossless though, so consider them if you\u0027re able to mass produce those ingots.",
+          "desc:8": "Remember to keep the MV area separate from your LV area. §eHooking up an LV machine to MV current will result in the machine being destroyed! Also LV cables will burn up if you put MV current through them§r. That\u0027s why it\u0027s probably best to keep the areas separate until you\u0027re comfortable and confident with voltages. Eventually you can use transformers to switch voltages within a single setup, but don\u0027t feel forced to try that until you\u0027ve got a grasp on the basics.\n\nAll RF power is the same (it has no voltages), so you can use RF conduits to route power from wherever you\u0027re generating and storing it to §3Energy Converters§r for each voltage. You don\u0027t have to use this setup, but it\u0027s the most foolproof one for a beginner. And if you\u0027re an expert, well... you don\u0027t need my advice.\n\nFor your MV cables, you can use §6Copper§r to start with. §6Energetic Alloy cables§r are lossless though, so consider them if you\u0027re able to mass produce those ingots.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12503,7 +12539,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1679,
-              "OreDict:8": "",
+              "OreDict:8": "questbookMvCef",
               "id:8": "gregtech:machine"
             }
           },
@@ -12511,7 +12547,7 @@
         }
       }
     },
-    "187:10": {
+    "188:10": {
       "preRequisites:11": [
         185
       ],
@@ -12576,7 +12612,7 @@
         }
       }
     },
-    "188:10": {
+    "189:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -12613,7 +12649,7 @@
         }
       }
     },
-    "189:10": {
+    "190:10": {
       "preRequisites:11": [
         153,
         186
@@ -12679,7 +12715,7 @@
         }
       }
     },
-    "190:10": {
+    "191:10": {
       "preRequisites:11": [
         188,
         532
@@ -12753,7 +12789,7 @@
         }
       }
     },
-    "191:10": {
+    "192:10": {
       "preRequisites:11": [
         520,
         532
@@ -12819,7 +12855,7 @@
         }
       }
     },
-    "192:10": {
+    "193:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -12856,7 +12892,7 @@
         }
       }
     },
-    "193:10": {
+    "194:10": {
       "preRequisites:11": [
         157
       ],
@@ -12921,7 +12957,7 @@
         }
       }
     },
-    "194:10": {
+    "195:10": {
       "preRequisites:11": [
         258,
         335,
@@ -12994,7 +13030,7 @@
         }
       }
     },
-    "195:10": {
+    "196:10": {
       "preRequisites:11": [
         749
       ],
@@ -13059,7 +13095,7 @@
         }
       }
     },
-    "196:10": {
+    "197:10": {
       "preRequisites:11": [
         201
       ],
@@ -13124,7 +13160,7 @@
         }
       }
     },
-    "197:10": {
+    "198:10": {
       "preRequisites:11": [
         197,
         785
@@ -13190,7 +13226,7 @@
         }
       }
     },
-    "198:10": {
+    "199:10": {
       "preRequisites:11": [
         144,
         234,
@@ -13257,7 +13293,7 @@
         }
       }
     },
-    "199:10": {
+    "200:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -13294,7 +13330,7 @@
         }
       }
     },
-    "200:10": {
+    "201:10": {
       "preRequisites:11": [
         159
       ],
@@ -13359,7 +13395,7 @@
         }
       }
     },
-    "201:10": {
+    "202:10": {
       "preRequisites:11": [
         208,
         210
@@ -13443,7 +13479,7 @@
         }
       }
     },
-    "202:10": {
+    "203:10": {
       "preRequisites:11": [
         135,
         824
@@ -13509,7 +13545,7 @@
         }
       }
     },
-    "203:10": {
+    "204:10": {
       "preRequisites:11": [
         205
       ],
@@ -13592,7 +13628,7 @@
         }
       }
     },
-    "204:10": {
+    "205:10": {
       "preRequisites:11": [
         208,
         210
@@ -13670,7 +13706,7 @@
         }
       }
     },
-    "205:10": {
+    "206:10": {
       "preRequisites:11": [
         116,
         275
@@ -13736,7 +13772,7 @@
         }
       }
     },
-    "206:10": {
+    "207:10": {
       "preRequisites:11": [
         206
       ],
@@ -13801,7 +13837,7 @@
         }
       }
     },
-    "207:10": {
+    "208:10": {
       "preRequisites:11": [
         209,
         210
@@ -13879,7 +13915,7 @@
         }
       }
     },
-    "208:10": {
+    "209:10": {
       "preRequisites:11": [
         207
       ],
@@ -13944,7 +13980,7 @@
         }
       }
     },
-    "209:10": {
+    "210:10": {
       "preRequisites:11": [
         21
       ],
@@ -14009,7 +14045,7 @@
         }
       }
     },
-    "210:10": {
+    "211:10": {
       "preRequisites:11": [
         202
       ],
@@ -14074,7 +14110,7 @@
         }
       }
     },
-    "211:10": {
+    "212:10": {
       "preRequisites:11": [
         220,
         208
@@ -14146,7 +14182,7 @@
         }
       }
     },
-    "212:10": {
+    "213:10": {
       "preRequisites:11": [
         35
       ],
@@ -14223,7 +14259,7 @@
         }
       }
     },
-    "213:10": {
+    "214:10": {
       "preRequisites:11": [
         232
       ],
@@ -14288,7 +14324,7 @@
         }
       }
     },
-    "214:10": {
+    "215:10": {
       "preRequisites:11": [
         146
       ],
@@ -14353,7 +14389,7 @@
         }
       }
     },
-    "215:10": {
+    "216:10": {
       "preRequisites:11": [
         385,
         782,
@@ -14481,7 +14517,7 @@
         }
       }
     },
-    "216:10": {
+    "217:10": {
       "preRequisites:11": [
         216,
         395,
@@ -14548,7 +14584,7 @@
         }
       }
     },
-    "217:10": {
+    "218:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -14585,7 +14621,7 @@
         }
       }
     },
-    "218:10": {
+    "219:10": {
       "preRequisites:11": [
         35
       ],
@@ -14650,7 +14686,7 @@
         }
       }
     },
-    "219:10": {
+    "220:10": {
       "preRequisites:11": [
         221
       ],
@@ -14716,7 +14752,7 @@
         }
       }
     },
-    "220:10": {
+    "221:10": {
       "preRequisites:11": [
         222,
         223
@@ -14783,7 +14819,7 @@
         }
       }
     },
-    "221:10": {
+    "222:10": {
       "preRequisites:11": [
         224,
         225
@@ -14850,7 +14886,7 @@
         }
       }
     },
-    "222:10": {
+    "223:10": {
       "preRequisites:11": [
         224,
         226
@@ -14917,7 +14953,7 @@
         }
       }
     },
-    "223:10": {
+    "224:10": {
       "preRequisites:11": [
         227
       ],
@@ -14983,7 +15019,7 @@
         }
       }
     },
-    "224:10": {
+    "225:10": {
       "preRequisites:11": [
         227
       ],
@@ -15049,14 +15085,14 @@
         }
       }
     },
-    "225:10": {
+    "226:10": {
       "preRequisites:11": [
         227
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Water§r and §9Chlorine§r can be combined to make §9Hypochlorous Acid§r. If you add §9Mercury§r to catalyze the reaction, the yield is much better.\n\n§ePlease note that Hypochlorous Acid and Hydrochloric Acid are different things.§r\n\nYou\u0027re already familiar with Chlorine production from your forays into Plastics, but a great source of Mercury is electrolyzing §6Redstone§r.",
+          "desc:8": "§9Water§r and §9Chlorine§r can be combined to make §9Hypochlorous Acid§r. If you add §9Mercury§r to catalyze the reaction, the yield is much better.\n\n§ePlease note that Hypochlorous Acid and Hydrochloric Acid are different things.§r\n\nYou\u0027re already familiar with Chlorine production from your forays into Plastics, but a great source of Mercury is §2centrifuging§4 §6Redstone§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15071,7 +15107,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Hypochlorous Acid",
+          "name:8": "§2Hypochlorous Acid",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -15115,7 +15151,7 @@
         }
       }
     },
-    "226:10": {
+    "227:10": {
       "preRequisites:11": [
         259
       ],
@@ -15180,7 +15216,7 @@
         }
       }
     },
-    "227:10": {
+    "228:10": {
       "preRequisites:11": [
         490
       ],
@@ -15263,7 +15299,7 @@
         }
       }
     },
-    "228:10": {
+    "229:10": {
       "preRequisites:11": [
         114
       ],
@@ -15315,7 +15351,7 @@
         }
       }
     },
-    "229:10": {
+    "230:10": {
       "preRequisites:11": [
         282
       ],
@@ -15382,7 +15418,7 @@
         }
       }
     },
-    "230:10": {
+    "231:10": {
       "preRequisites:11": [
         19
       ],
@@ -15453,7 +15489,7 @@
         }
       }
     },
-    "231:10": {
+    "232:10": {
       "preRequisites:11": [
         211,
         212,
@@ -15521,7 +15557,7 @@
         }
       }
     },
-    "232:10": {
+    "233:10": {
       "preRequisites:11": [
         107
       ],
@@ -15573,7 +15609,7 @@
         }
       }
     },
-    "233:10": {
+    "234:10": {
       "preRequisites:11": [
         71
       ],
@@ -15638,7 +15674,7 @@
         }
       }
     },
-    "234:10": {
+    "235:10": {
       "preRequisites:11": [
         298
       ],
@@ -15704,7 +15740,7 @@
         }
       }
     },
-    "235:10": {
+    "236:10": {
       "preRequisites:11": [
         95,
         894
@@ -15770,7 +15806,7 @@
         }
       }
     },
-    "236:10": {
+    "237:10": {
       "preRequisites:11": [
         112
       ],
@@ -15835,7 +15871,7 @@
         }
       }
     },
-    "237:10": {
+    "238:10": {
       "preRequisites:11": [
         241,
         411,
@@ -15902,7 +15938,7 @@
         }
       }
     },
-    "238:10": {
+    "239:10": {
       "preRequisites:11": [
         238,
         256
@@ -15968,7 +16004,7 @@
         }
       }
     },
-    "239:10": {
+    "240:10": {
       "preRequisites:11": [
         244,
         317,
@@ -16036,7 +16072,7 @@
         }
       }
     },
-    "240:10": {
+    "241:10": {
       "preRequisites:11": [
         391,
         77
@@ -16102,7 +16138,7 @@
         }
       }
     },
-    "241:10": {
+    "242:10": {
       "preRequisites:11": [
         744,
         283
@@ -16174,7 +16210,7 @@
         }
       }
     },
-    "242:10": {
+    "243:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -16237,7 +16273,7 @@
         }
       }
     },
-    "243:10": {
+    "244:10": {
       "preRequisites:11": [
         262,
         258,
@@ -16304,7 +16340,7 @@
         }
       }
     },
-    "244:10": {
+    "245:10": {
       "preRequisites:11": [
         148
       ],
@@ -16369,7 +16405,7 @@
         }
       }
     },
-    "245:10": {
+    "246:10": {
       "preRequisites:11": [
         255
       ],
@@ -16434,7 +16470,7 @@
         }
       }
     },
-    "246:10": {
+    "247:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -16471,7 +16507,7 @@
         }
       }
     },
-    "247:10": {
+    "248:10": {
       "preRequisites:11": [
         10
       ],
@@ -16548,7 +16584,7 @@
         }
       }
     },
-    "248:10": {
+    "249:10": {
       "preRequisites:11": [
         250,
         248
@@ -16650,7 +16686,7 @@
         }
       }
     },
-    "249:10": {
+    "250:10": {
       "preRequisites:11": [
         217,
         232
@@ -16716,7 +16752,7 @@
         }
       }
     },
-    "250:10": {
+    "251:10": {
       "preRequisites:11": [
         315,
         386,
@@ -16783,7 +16819,7 @@
         }
       }
     },
-    "251:10": {
+    "252:10": {
       "preRequisites:11": [
         314
       ],
@@ -16848,7 +16884,7 @@
         }
       }
     },
-    "252:10": {
+    "253:10": {
       "preRequisites:11": [
         251,
         889
@@ -16914,7 +16950,7 @@
         }
       }
     },
-    "253:10": {
+    "254:10": {
       "preRequisites:11": [
         316
       ],
@@ -16979,7 +17015,7 @@
         }
       }
     },
-    "254:10": {
+    "255:10": {
       "preRequisites:11": [
         201
       ],
@@ -17044,7 +17080,7 @@
         }
       }
     },
-    "255:10": {
+    "256:10": {
       "preRequisites:11": [
         257,
         411,
@@ -17111,7 +17147,7 @@
         }
       }
     },
-    "256:10": {
+    "257:10": {
       "preRequisites:11": [
         288
       ],
@@ -17176,7 +17212,7 @@
         }
       }
     },
-    "257:10": {
+    "258:10": {
       "preRequisites:11": [
         274
       ],
@@ -17241,7 +17277,7 @@
         }
       }
     },
-    "258:10": {
+    "259:10": {
       "preRequisites:11": [
         69
       ],
@@ -17306,7 +17342,7 @@
         }
       }
     },
-    "259:10": {
+    "260:10": {
       "preRequisites:11": [
         53
       ],
@@ -17395,7 +17431,7 @@
         }
       }
     },
-    "260:10": {
+    "261:10": {
       "preRequisites:11": [
         745,
         609,
@@ -17462,7 +17498,7 @@
         }
       }
     },
-    "261:10": {
+    "262:10": {
       "preRequisites:11": [
         385,
         387
@@ -17528,7 +17564,7 @@
         }
       }
     },
-    "262:10": {
+    "263:10": {
       "preRequisites:11": [
         10
       ],
@@ -17593,7 +17629,7 @@
         }
       }
     },
-    "263:10": {
+    "264:10": {
       "preRequisites:11": [
         265,
         529,
@@ -17660,7 +17696,7 @@
         }
       }
     },
-    "264:10": {
+    "265:10": {
       "preRequisites:11": [
         263,
         54
@@ -17726,7 +17762,7 @@
         }
       }
     },
-    "265:10": {
+    "266:10": {
       "preRequisites:11": [
         6
       ],
@@ -17790,7 +17826,7 @@
         }
       }
     },
-    "266:10": {
+    "267:10": {
       "preRequisites:11": [
         10
       ],
@@ -17856,7 +17892,7 @@
         }
       }
     },
-    "267:10": {
+    "268:10": {
       "preRequisites:11": [
         264
       ],
@@ -17921,7 +17957,7 @@
         }
       }
     },
-    "268:10": {
+    "269:10": {
       "preRequisites:11": [
         268
       ],
@@ -17986,7 +18022,7 @@
         }
       }
     },
-    "269:10": {
+    "270:10": {
       "preRequisites:11": [
         145
       ],
@@ -18051,7 +18087,7 @@
         }
       }
     },
-    "270:10": {
+    "271:10": {
       "preRequisites:11": [
         776,
         331
@@ -18117,7 +18153,7 @@
         }
       }
     },
-    "271:10": {
+    "272:10": {
       "preRequisites:11": [
         30
       ],
@@ -18182,7 +18218,7 @@
         }
       }
     },
-    "272:10": {
+    "273:10": {
       "preRequisites:11": [
         53
       ],
@@ -18247,7 +18283,7 @@
         }
       }
     },
-    "273:10": {
+    "274:10": {
       "preRequisites:11": [
         256
       ],
@@ -18312,7 +18348,7 @@
         }
       }
     },
-    "274:10": {
+    "275:10": {
       "preRequisites:11": [
         276,
         273
@@ -18378,7 +18414,7 @@
         }
       }
     },
-    "275:10": {
+    "276:10": {
       "preRequisites:11": [
         539,
         94
@@ -18435,24 +18471,17 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "phosphoric_acid"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "phosphoric_acid"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
-    "276:10": {
+    "277:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -18489,7 +18518,7 @@
         }
       }
     },
-    "277:10": {
+    "278:10": {
       "preRequisites:11": [
         682
       ],
@@ -18554,7 +18583,7 @@
         }
       }
     },
-    "278:10": {
+    "279:10": {
       "preRequisites:11": [
         254
       ],
@@ -18619,7 +18648,7 @@
         }
       }
     },
-    "279:10": {
+    "280:10": {
       "preRequisites:11": [
         501,
         613,
@@ -18746,7 +18775,7 @@
         }
       }
     },
-    "280:10": {
+    "281:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -18783,7 +18812,7 @@
         }
       }
     },
-    "281:10": {
+    "282:10": {
       "preRequisites:11": [
         0
       ],
@@ -18854,7 +18883,7 @@
         }
       }
     },
-    "282:10": {
+    "283:10": {
       "preRequisites:11": [
         138,
         199,
@@ -18923,7 +18952,7 @@
         }
       }
     },
-    "283:10": {
+    "284:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -18960,7 +18989,7 @@
         }
       }
     },
-    "284:10": {
+    "285:10": {
       "preRequisites:11": [
         311
       ],
@@ -19025,7 +19054,7 @@
         }
       }
     },
-    "285:10": {
+    "286:10": {
       "preRequisites:11": [
         198,
         192
@@ -19139,7 +19168,7 @@
         }
       }
     },
-    "286:10": {
+    "287:10": {
       "preRequisites:11": [
         681,
         847
@@ -19241,7 +19270,7 @@
         }
       }
     },
-    "287:10": {
+    "288:10": {
       "preRequisites:11": [
         336,
         324,
@@ -19308,7 +19337,7 @@
         }
       }
     },
-    "288:10": {
+    "289:10": {
       "preRequisites:11": [
         839
       ],
@@ -19373,7 +19402,7 @@
         }
       }
     },
-    "289:10": {
+    "290:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -19410,7 +19439,7 @@
         }
       }
     },
-    "290:10": {
+    "291:10": {
       "preRequisites:11": [
         198,
         289,
@@ -19477,7 +19506,7 @@
         }
       }
     },
-    "291:10": {
+    "292:10": {
       "preRequisites:11": [
         155
       ],
@@ -19542,7 +19571,7 @@
         }
       }
     },
-    "292:10": {
+    "293:10": {
       "preRequisites:11": [
         331,
         280
@@ -19595,7 +19624,7 @@
         }
       }
     },
-    "293:10": {
+    "294:10": {
       "preRequisites:11": [
         344
       ],
@@ -19647,7 +19676,7 @@
         }
       }
     },
-    "294:10": {
+    "295:10": {
       "preRequisites:11": [
         325,
         337,
@@ -19720,7 +19749,7 @@
         }
       }
     },
-    "295:10": {
+    "296:10": {
       "preRequisites:11": [
         21
       ],
@@ -19791,7 +19820,7 @@
         }
       }
     },
-    "296:10": {
+    "297:10": {
       "preRequisites:11": [
         148,
         235
@@ -19863,7 +19892,7 @@
         }
       }
     },
-    "297:10": {
+    "298:10": {
       "preRequisites:11": [
         301,
         302,
@@ -19931,7 +19960,7 @@
         }
       }
     },
-    "298:10": {
+    "299:10": {
       "preRequisites:11": [
         297
       ],
@@ -19996,7 +20025,7 @@
         }
       }
     },
-    "299:10": {
+    "300:10": {
       "preRequisites:11": [
         299
       ],
@@ -20061,7 +20090,7 @@
         }
       }
     },
-    "300:10": {
+    "301:10": {
       "preRequisites:11": [
         308
       ],
@@ -20126,7 +20155,7 @@
         }
       }
     },
-    "301:10": {
+    "302:10": {
       "preRequisites:11": [
         307
       ],
@@ -20191,7 +20220,7 @@
         }
       }
     },
-    "302:10": {
+    "303:10": {
       "preRequisites:11": [
         306
       ],
@@ -20256,7 +20285,7 @@
         }
       }
     },
-    "303:10": {
+    "304:10": {
       "preRequisites:11": [
         305
       ],
@@ -20321,7 +20350,7 @@
         }
       }
     },
-    "304:10": {
+    "305:10": {
       "preRequisites:11": [
         309,
         756
@@ -20387,7 +20416,7 @@
         }
       }
     },
-    "305:10": {
+    "306:10": {
       "preRequisites:11": [
         309,
         756
@@ -20453,7 +20482,7 @@
         }
       }
     },
-    "306:10": {
+    "307:10": {
       "preRequisites:11": [
         309,
         756
@@ -20519,7 +20548,7 @@
         }
       }
     },
-    "307:10": {
+    "308:10": {
       "preRequisites:11": [
         309,
         756
@@ -20585,7 +20614,7 @@
         }
       }
     },
-    "308:10": {
+    "309:10": {
       "preRequisites:11": [
         227
       ],
@@ -20641,24 +20670,17 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "elementalreduction"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "elementalreduction"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
-    "309:10": {
+    "310:10": {
       "preRequisites:11": [
         300
       ],
@@ -20751,7 +20773,7 @@
         }
       }
     },
-    "310:10": {
+    "311:10": {
       "preRequisites:11": [
         197
       ],
@@ -20816,7 +20838,7 @@
         }
       }
     },
-    "311:10": {
+    "312:10": {
       "preRequisites:11": [
         311
       ],
@@ -20881,7 +20903,7 @@
         }
       }
     },
-    "312:10": {
+    "313:10": {
       "preRequisites:11": [
         312
       ],
@@ -20946,7 +20968,7 @@
         }
       }
     },
-    "313:10": {
+    "314:10": {
       "preRequisites:11": [
         253
       ],
@@ -21011,7 +21033,7 @@
         }
       }
     },
-    "314:10": {
+    "315:10": {
       "preRequisites:11": [
         311,
         745
@@ -21077,7 +21099,7 @@
         }
       }
     },
-    "315:10": {
+    "316:10": {
       "preRequisites:11": [
         750
       ],
@@ -21142,7 +21164,7 @@
         }
       }
     },
-    "316:10": {
+    "317:10": {
       "preRequisites:11": [
         258,
         844
@@ -21208,7 +21230,7 @@
         }
       }
     },
-    "317:10": {
+    "318:10": {
       "preRequisites:11": [
         182
       ],
@@ -21251,7 +21273,7 @@
         }
       }
     },
-    "318:10": {
+    "319:10": {
       "preRequisites:11": [
         3
       ],
@@ -21322,7 +21344,7 @@
         }
       }
     },
-    "319:10": {
+    "320:10": {
       "preRequisites:11": [
         344
       ],
@@ -21374,7 +21396,7 @@
         }
       }
     },
-    "320:10": {
+    "321:10": {
       "preRequisites:11": [
         344
       ],
@@ -21426,7 +21448,7 @@
         }
       }
     },
-    "321:10": {
+    "322:10": {
       "preRequisites:11": [
         344
       ],
@@ -21478,7 +21500,7 @@
         }
       }
     },
-    "322:10": {
+    "323:10": {
       "preRequisites:11": [
         313,
         252
@@ -21544,9 +21566,10 @@
         }
       }
     },
-    "323:10": {
+    "324:10": {
       "preRequisites:11": [
-        323
+        323,
+        138
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -21609,7 +21632,7 @@
         }
       }
     },
-    "324:10": {
+    "325:10": {
       "preRequisites:11": [
         287
       ],
@@ -21674,7 +21697,7 @@
         }
       }
     },
-    "325:10": {
+    "326:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -21711,7 +21734,7 @@
         }
       }
     },
-    "326:10": {
+    "327:10": {
       "preRequisites:11": [
         537
       ],
@@ -21776,7 +21799,7 @@
         }
       }
     },
-    "327:10": {
+    "328:10": {
       "preRequisites:11": [
         71
       ],
@@ -21841,7 +21864,7 @@
         }
       }
     },
-    "328:10": {
+    "329:10": {
       "preRequisites:11": [
         345
       ],
@@ -21906,7 +21929,7 @@
         }
       }
     },
-    "329:10": {
+    "330:10": {
       "preRequisites:11": [
         329
       ],
@@ -21971,7 +21994,7 @@
         }
       }
     },
-    "330:10": {
+    "331:10": {
       "preRequisites:11": [
         239,
         607
@@ -22037,7 +22060,7 @@
         }
       }
     },
-    "331:10": {
+    "332:10": {
       "preRequisites:11": [
         242,
         533,
@@ -22104,7 +22127,7 @@
         }
       }
     },
-    "332:10": {
+    "333:10": {
       "preRequisites:11": [
         332,
         542
@@ -22170,7 +22193,7 @@
         }
       }
     },
-    "333:10": {
+    "334:10": {
       "preRequisites:11": [
         333
       ],
@@ -22235,7 +22258,7 @@
         }
       }
     },
-    "334:10": {
+    "335:10": {
       "preRequisites:11": [
         196,
         334
@@ -22301,7 +22324,7 @@
         }
       }
     },
-    "335:10": {
+    "336:10": {
       "preRequisites:11": [
         298,
         757
@@ -22367,7 +22390,7 @@
         }
       }
     },
-    "336:10": {
+    "337:10": {
       "preRequisites:11": [
         288,
         344
@@ -22433,7 +22456,7 @@
         }
       }
     },
-    "337:10": {
+    "338:10": {
       "preRequisites:11": [
         93
       ],
@@ -22501,7 +22524,7 @@
         }
       }
     },
-    "338:10": {
+    "339:10": {
       "preRequisites:11": [
         148
       ],
@@ -22566,7 +22589,7 @@
         }
       }
     },
-    "339:10": {
+    "340:10": {
       "preRequisites:11": [
         339
       ],
@@ -22634,7 +22657,7 @@
         }
       }
     },
-    "340:10": {
+    "341:10": {
       "preRequisites:11": [
         198
       ],
@@ -22699,7 +22722,7 @@
         }
       }
     },
-    "341:10": {
+    "342:10": {
       "preRequisites:11": [
         325,
         341
@@ -22765,7 +22788,7 @@
         }
       }
     },
-    "342:10": {
+    "343:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -22802,7 +22825,7 @@
         }
       }
     },
-    "343:10": {
+    "344:10": {
       "preRequisites:11": [
         255
       ],
@@ -22873,7 +22896,7 @@
         }
       }
     },
-    "344:10": {
+    "345:10": {
       "preRequisites:11": [
         295
       ],
@@ -22938,7 +22961,7 @@
         }
       }
     },
-    "345:10": {
+    "346:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -22975,7 +22998,7 @@
         }
       }
     },
-    "346:10": {
+    "347:10": {
       "preRequisites:11": [
         199,
         732,
@@ -23042,7 +23065,7 @@
         }
       }
     },
-    "347:10": {
+    "348:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -23079,7 +23102,7 @@
         }
       }
     },
-    "348:10": {
+    "349:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -23116,7 +23139,7 @@
         }
       }
     },
-    "349:10": {
+    "350:10": {
       "preRequisites:11": [
         347
       ],
@@ -23217,7 +23240,7 @@
         }
       }
     },
-    "350:10": {
+    "351:10": {
       "preRequisites:11": [
         274
       ],
@@ -23282,7 +23305,7 @@
         }
       }
     },
-    "351:10": {
+    "352:10": {
       "preRequisites:11": [
         146,
         548
@@ -23348,7 +23371,7 @@
         }
       }
     },
-    "352:10": {
+    "353:10": {
       "preRequisites:11": [
         12,
         141
@@ -23414,7 +23437,7 @@
         }
       }
     },
-    "353:10": {
+    "354:10": {
       "preRequisites:11": [
         344
       ],
@@ -23466,7 +23489,7 @@
         }
       }
     },
-    "354:10": {
+    "355:10": {
       "preRequisites:11": [
         262,
         280,
@@ -23526,7 +23549,7 @@
         }
       }
     },
-    "355:10": {
+    "356:10": {
       "preRequisites:11": [
         355,
         367,
@@ -23580,7 +23603,7 @@
         }
       }
     },
-    "356:10": {
+    "357:10": {
       "preRequisites:11": [
         356
       ],
@@ -23632,7 +23655,7 @@
         }
       }
     },
-    "357:10": {
+    "358:10": {
       "preRequisites:11": [
         357,
         362
@@ -23685,7 +23708,7 @@
         }
       }
     },
-    "358:10": {
+    "359:10": {
       "preRequisites:11": [
         357,
         363
@@ -23738,7 +23761,7 @@
         }
       }
     },
-    "359:10": {
+    "360:10": {
       "preRequisites:11": [
         357,
         365
@@ -23791,7 +23814,7 @@
         }
       }
     },
-    "360:10": {
+    "361:10": {
       "preRequisites:11": [
         357,
         364
@@ -23844,7 +23867,7 @@
         }
       }
     },
-    "361:10": {
+    "362:10": {
       "preRequisites:11": [
         351
       ],
@@ -23896,7 +23919,7 @@
         }
       }
     },
-    "362:10": {
+    "363:10": {
       "preRequisites:11": [
         351
       ],
@@ -23948,7 +23971,7 @@
         }
       }
     },
-    "363:10": {
+    "364:10": {
       "preRequisites:11": [
         351
       ],
@@ -24000,7 +24023,7 @@
         }
       }
     },
-    "364:10": {
+    "365:10": {
       "preRequisites:11": [
         351
       ],
@@ -24052,7 +24075,7 @@
         }
       }
     },
-    "365:10": {
+    "366:10": {
       "preRequisites:11": [
         358,
         359,
@@ -24107,7 +24130,7 @@
         }
       }
     },
-    "366:10": {
+    "367:10": {
       "preRequisites:11": [
         604
       ],
@@ -24159,7 +24182,7 @@
         }
       }
     },
-    "367:10": {
+    "368:10": {
       "preRequisites:11": [
         4
       ],
@@ -24224,7 +24247,7 @@
         }
       }
     },
-    "368:10": {
+    "369:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24261,7 +24284,7 @@
         }
       }
     },
-    "369:10": {
+    "370:10": {
       "preRequisites:11": [
         4
       ],
@@ -24319,7 +24342,7 @@
         }
       }
     },
-    "370:10": {
+    "371:10": {
       "preRequisites:11": [
         37
       ],
@@ -24396,7 +24419,7 @@
         }
       }
     },
-    "371:10": {
+    "372:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24433,7 +24456,7 @@
         }
       }
     },
-    "372:10": {
+    "373:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24470,7 +24493,7 @@
         }
       }
     },
-    "373:10": {
+    "374:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24507,7 +24530,7 @@
         }
       }
     },
-    "374:10": {
+    "375:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24544,7 +24567,7 @@
         }
       }
     },
-    "375:10": {
+    "376:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24581,7 +24604,7 @@
         }
       }
     },
-    "376:10": {
+    "377:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24618,7 +24641,7 @@
         }
       }
     },
-    "377:10": {
+    "378:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24655,7 +24678,7 @@
         }
       }
     },
-    "378:10": {
+    "379:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24692,7 +24715,7 @@
         }
       }
     },
-    "379:10": {
+    "380:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24729,7 +24752,7 @@
         }
       }
     },
-    "380:10": {
+    "381:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24766,7 +24789,7 @@
         }
       }
     },
-    "381:10": {
+    "382:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24803,7 +24826,7 @@
         }
       }
     },
-    "382:10": {
+    "383:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -24840,7 +24863,7 @@
         }
       }
     },
-    "383:10": {
+    "384:10": {
       "preRequisites:11": [
         275,
         116
@@ -24906,7 +24929,7 @@
         }
       }
     },
-    "384:10": {
+    "385:10": {
       "preRequisites:11": [
         384
       ],
@@ -24971,7 +24994,7 @@
         }
       }
     },
-    "385:10": {
+    "386:10": {
       "preRequisites:11": [
         385,
         209
@@ -25037,7 +25060,7 @@
         }
       }
     },
-    "386:10": {
+    "387:10": {
       "preRequisites:11": [
         388
       ],
@@ -25102,7 +25125,7 @@
         }
       }
     },
-    "387:10": {
+    "388:10": {
       "preRequisites:11": [
         116,
         275
@@ -25168,7 +25191,7 @@
         }
       }
     },
-    "388:10": {
+    "389:10": {
       "preRequisites:11": [
         262,
         386,
@@ -25235,7 +25258,7 @@
         }
       }
     },
-    "389:10": {
+    "390:10": {
       "preRequisites:11": [
         300
       ],
@@ -25328,7 +25351,7 @@
         }
       }
     },
-    "390:10": {
+    "391:10": {
       "preRequisites:11": [
         304,
         303,
@@ -25427,7 +25450,7 @@
         }
       }
     },
-    "391:10": {
+    "392:10": {
       "preRequisites:11": [
         335
       ],
@@ -25461,7 +25484,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "392:10": {
+    "393:10": {
       "preRequisites:11": [
         805
       ],
@@ -25500,7 +25523,7 @@
         }
       }
     },
-    "393:10": {
+    "394:10": {
       "preRequisites:11": [
         38,
         811
@@ -25578,7 +25601,7 @@
         }
       }
     },
-    "394:10": {
+    "395:10": {
       "preRequisites:11": [
         214,
         690
@@ -25644,7 +25667,7 @@
         }
       }
     },
-    "395:10": {
+    "396:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -25681,7 +25704,7 @@
         }
       }
     },
-    "396:10": {
+    "397:10": {
       "preRequisites:11": [
         356
       ],
@@ -25733,7 +25756,7 @@
         }
       }
     },
-    "397:10": {
+    "398:10": {
       "preRequisites:11": [
         89,
         130
@@ -25805,7 +25828,7 @@
         }
       }
     },
-    "398:10": {
+    "399:10": {
       "preRequisites:11": [
         287
       ],
@@ -25888,7 +25911,7 @@
         }
       }
     },
-    "399:10": {
+    "400:10": {
       "preRequisites:11": [
         55
       ],
@@ -25954,7 +25977,7 @@
         }
       }
     },
-    "400:10": {
+    "401:10": {
       "preRequisites:11": [
         12
       ],
@@ -26019,14 +26042,14 @@
         }
       }
     },
-    "401:10": {
+    "402:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §a§lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §a§lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §a§lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §a§lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §a§lShutter§r: prevents automation from interacting with a specific side of a machine.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §a§lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §a§lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §a§lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §a§lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §a§lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §2§lDetector§r: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §2§lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26037,7 +26060,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Machine Covers",
+          "name:8": "§2Machine Covers",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -26087,7 +26110,7 @@
         }
       }
     },
-    "402:10": {
+    "403:10": {
       "preRequisites:11": [
         3
       ],
@@ -26131,7 +26154,7 @@
         }
       }
     },
-    "403:10": {
+    "404:10": {
       "preRequisites:11": [
         403,
         104
@@ -26171,7 +26194,7 @@
         }
       }
     },
-    "404:10": {
+    "405:10": {
       "preRequisites:11": [
         805
       ],
@@ -26223,7 +26246,7 @@
         }
       }
     },
-    "405:10": {
+    "406:10": {
       "preRequisites:11": [
         408,
         209,
@@ -26321,7 +26344,7 @@
         }
       }
     },
-    "406:10": {
+    "407:10": {
       "preRequisites:11": [
         386,
         132
@@ -26423,7 +26446,7 @@
         }
       }
     },
-    "407:10": {
+    "408:10": {
       "preRequisites:11": [
         148,
         132,
@@ -26509,7 +26532,7 @@
         }
       }
     },
-    "408:10": {
+    "409:10": {
       "preRequisites:11": [
         38
       ],
@@ -26548,7 +26571,7 @@
         }
       }
     },
-    "409:10": {
+    "410:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -26585,7 +26608,7 @@
         }
       }
     },
-    "410:10": {
+    "411:10": {
       "preRequisites:11": [
         386,
         192
@@ -26687,7 +26710,7 @@
         }
       }
     },
-    "411:10": {
+    "412:10": {
       "preRequisites:11": [
         232,
         527,
@@ -26802,7 +26825,7 @@
         }
       }
     },
-    "412:10": {
+    "413:10": {
       "preRequisites:11": [
         146,
         145
@@ -26868,7 +26891,7 @@
         }
       }
     },
-    "413:10": {
+    "414:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -26905,7 +26928,7 @@
         }
       }
     },
-    "414:10": {
+    "415:10": {
       "preRequisites:11": [
         394
       ],
@@ -26976,7 +26999,7 @@
         }
       }
     },
-    "415:10": {
+    "416:10": {
       "preRequisites:11": [
         413,
         163
@@ -27045,7 +27068,7 @@
         }
       }
     },
-    "416:10": {
+    "417:10": {
       "preRequisites:11": [
         288,
         344
@@ -27117,7 +27140,7 @@
         }
       }
     },
-    "417:10": {
+    "418:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27154,7 +27177,7 @@
         }
       }
     },
-    "418:10": {
+    "419:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27191,7 +27214,7 @@
         }
       }
     },
-    "419:10": {
+    "420:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27228,7 +27251,7 @@
         }
       }
     },
-    "420:10": {
+    "421:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27265,7 +27288,7 @@
         }
       }
     },
-    "421:10": {
+    "422:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27302,7 +27325,7 @@
         }
       }
     },
-    "422:10": {
+    "423:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27339,7 +27362,7 @@
         }
       }
     },
-    "423:10": {
+    "424:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27376,7 +27399,7 @@
         }
       }
     },
-    "424:10": {
+    "425:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27413,7 +27436,7 @@
         }
       }
     },
-    "425:10": {
+    "426:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27450,7 +27473,7 @@
         }
       }
     },
-    "426:10": {
+    "427:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27487,7 +27510,7 @@
         }
       }
     },
-    "427:10": {
+    "428:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27524,7 +27547,7 @@
         }
       }
     },
-    "428:10": {
+    "429:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27561,7 +27584,7 @@
         }
       }
     },
-    "429:10": {
+    "430:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27598,7 +27621,7 @@
         }
       }
     },
-    "430:10": {
+    "431:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27635,7 +27658,7 @@
         }
       }
     },
-    "431:10": {
+    "432:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27672,7 +27695,7 @@
         }
       }
     },
-    "432:10": {
+    "433:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27709,7 +27732,7 @@
         }
       }
     },
-    "433:10": {
+    "434:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27746,7 +27769,7 @@
         }
       }
     },
-    "434:10": {
+    "435:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27783,7 +27806,7 @@
         }
       }
     },
-    "435:10": {
+    "436:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27820,7 +27843,7 @@
         }
       }
     },
-    "436:10": {
+    "437:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27857,7 +27880,7 @@
         }
       }
     },
-    "437:10": {
+    "438:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27894,7 +27917,7 @@
         }
       }
     },
-    "438:10": {
+    "439:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27931,7 +27954,7 @@
         }
       }
     },
-    "439:10": {
+    "440:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -27968,7 +27991,7 @@
         }
       }
     },
-    "440:10": {
+    "441:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28005,7 +28028,7 @@
         }
       }
     },
-    "441:10": {
+    "442:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28042,7 +28065,7 @@
         }
       }
     },
-    "442:10": {
+    "443:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28079,7 +28102,7 @@
         }
       }
     },
-    "443:10": {
+    "444:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28116,7 +28139,7 @@
         }
       }
     },
-    "444:10": {
+    "445:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28153,7 +28176,7 @@
         }
       }
     },
-    "445:10": {
+    "446:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28190,7 +28213,7 @@
         }
       }
     },
-    "446:10": {
+    "447:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28227,7 +28250,7 @@
         }
       }
     },
-    "447:10": {
+    "448:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28264,7 +28287,7 @@
         }
       }
     },
-    "448:10": {
+    "449:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28301,7 +28324,7 @@
         }
       }
     },
-    "449:10": {
+    "450:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28338,7 +28361,7 @@
         }
       }
     },
-    "450:10": {
+    "451:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28375,7 +28398,7 @@
         }
       }
     },
-    "451:10": {
+    "452:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28412,7 +28435,7 @@
         }
       }
     },
-    "452:10": {
+    "453:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28449,7 +28472,7 @@
         }
       }
     },
-    "453:10": {
+    "454:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28486,7 +28509,7 @@
         }
       }
     },
-    "454:10": {
+    "455:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28523,7 +28546,7 @@
         }
       }
     },
-    "455:10": {
+    "456:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28560,7 +28583,7 @@
         }
       }
     },
-    "456:10": {
+    "457:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28597,7 +28620,7 @@
         }
       }
     },
-    "457:10": {
+    "458:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28634,7 +28657,7 @@
         }
       }
     },
-    "458:10": {
+    "459:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28671,7 +28694,7 @@
         }
       }
     },
-    "459:10": {
+    "460:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28708,7 +28731,7 @@
         }
       }
     },
-    "460:10": {
+    "461:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28745,7 +28768,7 @@
         }
       }
     },
-    "461:10": {
+    "462:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28782,7 +28805,7 @@
         }
       }
     },
-    "462:10": {
+    "463:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28819,7 +28842,7 @@
         }
       }
     },
-    "463:10": {
+    "464:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28856,7 +28879,7 @@
         }
       }
     },
-    "464:10": {
+    "465:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28893,7 +28916,7 @@
         }
       }
     },
-    "465:10": {
+    "466:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28930,7 +28953,7 @@
         }
       }
     },
-    "466:10": {
+    "467:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -28967,7 +28990,7 @@
         }
       }
     },
-    "467:10": {
+    "468:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29004,7 +29027,7 @@
         }
       }
     },
-    "468:10": {
+    "469:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29041,7 +29064,7 @@
         }
       }
     },
-    "469:10": {
+    "470:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29078,7 +29101,7 @@
         }
       }
     },
-    "470:10": {
+    "471:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29115,7 +29138,7 @@
         }
       }
     },
-    "471:10": {
+    "472:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29152,7 +29175,7 @@
         }
       }
     },
-    "472:10": {
+    "473:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29189,7 +29212,7 @@
         }
       }
     },
-    "473:10": {
+    "474:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29226,7 +29249,7 @@
         }
       }
     },
-    "474:10": {
+    "475:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29263,7 +29286,7 @@
         }
       }
     },
-    "475:10": {
+    "476:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29300,7 +29323,7 @@
         }
       }
     },
-    "476:10": {
+    "477:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29337,7 +29360,7 @@
         }
       }
     },
-    "477:10": {
+    "478:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29374,7 +29397,7 @@
         }
       }
     },
-    "478:10": {
+    "479:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29411,7 +29434,7 @@
         }
       }
     },
-    "479:10": {
+    "480:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29448,7 +29471,7 @@
         }
       }
     },
-    "480:10": {
+    "481:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29485,7 +29508,7 @@
         }
       }
     },
-    "481:10": {
+    "482:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29522,7 +29545,7 @@
         }
       }
     },
-    "482:10": {
+    "483:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29559,7 +29582,7 @@
         }
       }
     },
-    "483:10": {
+    "484:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29596,7 +29619,7 @@
         }
       }
     },
-    "484:10": {
+    "485:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29633,7 +29656,7 @@
         }
       }
     },
-    "485:10": {
+    "486:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29670,7 +29693,7 @@
         }
       }
     },
-    "486:10": {
+    "487:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -29707,7 +29730,7 @@
         }
       }
     },
-    "487:10": {
+    "488:10": {
       "preRequisites:11": [
         6
       ],
@@ -29778,7 +29801,7 @@
         }
       }
     },
-    "488:10": {
+    "489:10": {
       "preRequisites:11": [
         145
       ],
@@ -29843,14 +29866,14 @@
         }
       }
     },
-    "489:10": {
+    "490:10": {
       "preRequisites:11": [
         146
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but right now you want it to make §6Certus Quartz Crystals§r for §bApplied Energistics§r out of the §bGregTech§r §6Certus Quartz§r and its dust you get from mining and ore processing.",
+          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but right now you want it to make §6Activated Certus Quartz Crystals§r for §bApplied Energistics§r out of the §bGregTech§r §6Certus Quartz§r and its dust you get from mining and ore processing.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29908,7 +29931,7 @@
         }
       }
     },
-    "490:10": {
+    "491:10": {
       "preRequisites:11": [
         4
       ],
@@ -29983,7 +30006,7 @@
         }
       }
     },
-    "491:10": {
+    "492:10": {
       "preRequisites:11": [
         233
       ],
@@ -30054,7 +30077,7 @@
         }
       }
     },
-    "492:10": {
+    "493:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -30091,7 +30114,7 @@
         }
       }
     },
-    "493:10": {
+    "494:10": {
       "preRequisites:11": [
         102
       ],
@@ -30156,7 +30179,7 @@
         }
       }
     },
-    "494:10": {
+    "495:10": {
       "preRequisites:11": [
         530
       ],
@@ -30221,7 +30244,7 @@
         }
       }
     },
-    "495:10": {
+    "496:10": {
       "preRequisites:11": [
         3
       ],
@@ -30292,7 +30315,7 @@
         }
       }
     },
-    "496:10": {
+    "497:10": {
       "preRequisites:11": [
         145
       ],
@@ -30357,7 +30380,7 @@
         }
       }
     },
-    "497:10": {
+    "498:10": {
       "preRequisites:11": [
         273
       ],
@@ -30426,7 +30449,7 @@
         }
       }
     },
-    "498:10": {
+    "499:10": {
       "preRequisites:11": [
         53
       ],
@@ -30491,7 +30514,7 @@
         }
       }
     },
-    "499:10": {
+    "500:10": {
       "preRequisites:11": [
         190,
         526,
@@ -30558,7 +30581,7 @@
         }
       }
     },
-    "500:10": {
+    "501:10": {
       "preRequisites:11": [
         503,
         508,
@@ -30634,7 +30657,7 @@
         }
       }
     },
-    "501:10": {
+    "502:10": {
       "preRequisites:11": [
         19,
         96,
@@ -30701,7 +30724,7 @@
         }
       }
     },
-    "502:10": {
+    "503:10": {
       "preRequisites:11": [
         243
       ],
@@ -30766,7 +30789,7 @@
         }
       }
     },
-    "503:10": {
+    "504:10": {
       "preRequisites:11": [
         146
       ],
@@ -30831,7 +30854,7 @@
         }
       }
     },
-    "504:10": {
+    "505:10": {
       "preRequisites:11": [
         504,
         546
@@ -30898,7 +30921,7 @@
         }
       }
     },
-    "505:10": {
+    "506:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -30935,14 +30958,14 @@
         }
       }
     },
-    "506:10": {
+    "507:10": {
       "preRequisites:11": [
         260
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you primarily get it from electrolyzing either §6Salt§r or §6Rock Salt§r.",
+          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\n§2Later, you can use Fluid Rigs or break down Ghast Tears to obtain Salt Water, and electrolyze it to Chlorine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30957,7 +30980,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Chlorine",
+          "name:8": "§2Chlorine",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -31001,7 +31024,7 @@
         }
       }
     },
-    "507:10": {
+    "508:10": {
       "preRequisites:11": [
         827
       ],
@@ -31066,7 +31089,7 @@
         }
       }
     },
-    "508:10": {
+    "509:10": {
       "preRequisites:11": [
         34
       ],
@@ -31131,7 +31154,7 @@
         }
       }
     },
-    "509:10": {
+    "510:10": {
       "preRequisites:11": [
         511
       ],
@@ -31216,7 +31239,7 @@
         }
       }
     },
-    "510:10": {
+    "511:10": {
       "preRequisites:11": [
         67,
         296
@@ -31282,7 +31305,7 @@
         }
       }
     },
-    "511:10": {
+    "512:10": {
       "preRequisites:11": [
         197,
         296,
@@ -31349,7 +31372,7 @@
         }
       }
     },
-    "512:10": {
+    "513:10": {
       "preRequisites:11": [
         60
       ],
@@ -31414,7 +31437,7 @@
         }
       }
     },
-    "513:10": {
+    "514:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -31451,7 +31474,7 @@
         }
       }
     },
-    "514:10": {
+    "515:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -31488,7 +31511,7 @@
         }
       }
     },
-    "515:10": {
+    "516:10": {
       "preRequisites:11": [
         53
       ],
@@ -31553,7 +31576,7 @@
         }
       }
     },
-    "516:10": {
+    "517:10": {
       "preRequisites:11": [
         145,
         21
@@ -31619,7 +31642,7 @@
         }
       }
     },
-    "517:10": {
+    "518:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -31656,7 +31679,7 @@
         }
       }
     },
-    "518:10": {
+    "519:10": {
       "preRequisites:11": [
         99
       ],
@@ -31751,7 +31774,7 @@
         }
       }
     },
-    "519:10": {
+    "520:10": {
       "preRequisites:11": [
         8,
         148
@@ -31825,7 +31848,7 @@
         }
       }
     },
-    "520:10": {
+    "521:10": {
       "preRequisites:11": [
         750,
         261,
@@ -31892,7 +31915,7 @@
         }
       }
     },
-    "521:10": {
+    "522:10": {
       "preRequisites:11": [
         286,
         138
@@ -31958,7 +31981,7 @@
         }
       }
     },
-    "522:10": {
+    "523:10": {
       "preRequisites:11": [
         525,
         527
@@ -32024,7 +32047,7 @@
         }
       }
     },
-    "523:10": {
+    "524:10": {
       "preRequisites:11": [
         523
       ],
@@ -32089,7 +32112,7 @@
         }
       }
     },
-    "524:10": {
+    "525:10": {
       "preRequisites:11": [
         500
       ],
@@ -32154,7 +32177,7 @@
         }
       }
     },
-    "525:10": {
+    "526:10": {
       "preRequisites:11": [
         192,
         339,
@@ -32221,7 +32244,7 @@
         }
       }
     },
-    "526:10": {
+    "527:10": {
       "preRequisites:11": [
         311
       ],
@@ -32286,7 +32309,7 @@
         }
       }
     },
-    "527:10": {
+    "528:10": {
       "preRequisites:11": [
         30
       ],
@@ -32351,7 +32374,7 @@
         }
       }
     },
-    "528:10": {
+    "529:10": {
       "preRequisites:11": [
         198,
         524
@@ -32417,7 +32440,7 @@
         }
       }
     },
-    "529:10": {
+    "530:10": {
       "preRequisites:11": [
         7,
         11
@@ -32489,7 +32512,7 @@
         }
       }
     },
-    "530:10": {
+    "531:10": {
       "preRequisites:11": [
         269
       ],
@@ -32554,7 +32577,7 @@
         }
       }
     },
-    "531:10": {
+    "532:10": {
       "preRequisites:11": [
         132
       ],
@@ -32619,7 +32642,7 @@
         }
       }
     },
-    "532:10": {
+    "533:10": {
       "preRequisites:11": [
         535,
         536
@@ -32627,7 +32650,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your §6Iridium§r-based machine hulls and §6Crystal Processor Mainframes§r squared away, you can finally get on the path to making a ZPM §3Assembling Machine§r.\n\nThis tier of Assembling Machine unlocks §6Wetware Circuits§r, as well as handling crafting recipes up to 131072 EU/t. It can also optionally overclock recipes that consume up to 32768 EU/t for improved speed at the cost of relatively more power.",
+          "desc:8": "With your §2Naquadah Alloy§r-based machine hulls and §6Crystal Processor Mainframes§r squared away, you can finally get on the path to making a ZPM §3Assembling Machine§r.\n\nThis tier of Assembling Machine unlocks §6Wetware Circuits§r, as well as handling crafting recipes up to 131072 EU/t. It can also optionally overclock recipes that consume up to 32768 EU/t for improved speed at the cost of relatively more power.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32685,7 +32708,7 @@
         }
       }
     },
-    "533:10": {
+    "534:10": {
       "preRequisites:11": [
         292,
         750
@@ -32751,7 +32774,7 @@
         }
       }
     },
-    "534:10": {
+    "535:10": {
       "preRequisites:11": [
         534
       ],
@@ -32816,7 +32839,7 @@
         }
       }
     },
-    "535:10": {
+    "536:10": {
       "preRequisites:11": [
         848
       ],
@@ -32881,7 +32904,7 @@
         }
       }
     },
-    "536:10": {
+    "537:10": {
       "preRequisites:11": [
         279
       ],
@@ -32947,7 +32970,7 @@
         }
       }
     },
-    "537:10": {
+    "538:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -32984,7 +33007,7 @@
         }
       }
     },
-    "538:10": {
+    "539:10": {
       "preRequisites:11": [
         260
       ],
@@ -33049,7 +33072,7 @@
         }
       }
     },
-    "539:10": {
+    "540:10": {
       "preRequisites:11": [
         21,
         259,
@@ -33116,7 +33139,7 @@
         }
       }
     },
-    "540:10": {
+    "541:10": {
       "preRequisites:11": [
         60
       ],
@@ -33181,7 +33204,7 @@
         }
       }
     },
-    "541:10": {
+    "542:10": {
       "preRequisites:11": [
         197,
         296
@@ -33247,7 +33270,7 @@
         }
       }
     },
-    "542:10": {
+    "543:10": {
       "preRequisites:11": [
         60
       ],
@@ -33312,7 +33335,7 @@
         }
       }
     },
-    "543:10": {
+    "544:10": {
       "preRequisites:11": [
         488,
         59
@@ -33396,7 +33419,7 @@
         }
       }
     },
-    "544:10": {
+    "545:10": {
       "preRequisites:11": [
         544,
         69
@@ -33480,7 +33503,7 @@
         }
       }
     },
-    "545:10": {
+    "546:10": {
       "preRequisites:11": [
         146
       ],
@@ -33545,7 +33568,7 @@
         }
       }
     },
-    "546:10": {
+    "547:10": {
       "preRequisites:11": [
         37
       ],
@@ -33618,7 +33641,7 @@
         }
       }
     },
-    "547:10": {
+    "548:10": {
       "preRequisites:11": [
         21
       ],
@@ -33701,7 +33724,7 @@
         }
       }
     },
-    "548:10": {
+    "549:10": {
       "preRequisites:11": [
         89,
         98
@@ -33783,7 +33806,7 @@
         }
       }
     },
-    "549:10": {
+    "550:10": {
       "preRequisites:11": [
         98,
         233,
@@ -33850,14 +33873,14 @@
         }
       }
     },
-    "550:10": {
+    "551:10": {
       "preRequisites:11": [
         233
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Up to three §aPhantom Boosters§r can be placed atop the §3Vertical Digger§r to increase its area of effect.\n\nThese are also useful for extending the range of other \"Phantom\" machines and devices from §bActually Additions§r.",
+          "desc:8": "These are useful for extending the range of other \"Phantom\" machines and devices from §bActually Additions§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33915,7 +33938,7 @@
         }
       }
     },
-    "551:10": {
+    "552:10": {
       "preRequisites:11": [
         394
       ],
@@ -33988,7 +34011,7 @@
         }
       }
     },
-    "552:10": {
+    "553:10": {
       "preRequisites:11": [
         552,
         296,
@@ -34063,7 +34086,7 @@
         }
       }
     },
-    "553:10": {
+    "554:10": {
       "preRequisites:11": [
         553
       ],
@@ -34136,7 +34159,7 @@
         }
       }
     },
-    "554:10": {
+    "555:10": {
       "preRequisites:11": [
         390
       ],
@@ -34201,7 +34224,7 @@
         }
       }
     },
-    "555:10": {
+    "556:10": {
       "preRequisites:11": [
         53,
         489
@@ -34254,7 +34277,7 @@
         }
       }
     },
-    "556:10": {
+    "557:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34291,7 +34314,7 @@
         }
       }
     },
-    "557:10": {
+    "558:10": {
       "preRequisites:11": [
         24
       ],
@@ -34356,9 +34379,10 @@
         }
       }
     },
-    "558:10": {
+    "559:10": {
       "preRequisites:11": [
-        34
+        34,
+        836
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34408,7 +34432,7 @@
         }
       }
     },
-    "559:10": {
+    "560:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34445,7 +34469,7 @@
         }
       }
     },
-    "560:10": {
+    "561:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34482,7 +34506,7 @@
         }
       }
     },
-    "561:10": {
+    "562:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34519,7 +34543,7 @@
         }
       }
     },
-    "562:10": {
+    "563:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34556,7 +34580,7 @@
         }
       }
     },
-    "563:10": {
+    "564:10": {
       "preRequisites:11": [
         293
       ],
@@ -34621,7 +34645,7 @@
         }
       }
     },
-    "564:10": {
+    "565:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34658,7 +34682,7 @@
         }
       }
     },
-    "565:10": {
+    "566:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34695,7 +34719,7 @@
         }
       }
     },
-    "566:10": {
+    "567:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34732,7 +34756,7 @@
         }
       }
     },
-    "567:10": {
+    "568:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34769,7 +34793,7 @@
         }
       }
     },
-    "568:10": {
+    "569:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34806,7 +34830,7 @@
         }
       }
     },
-    "569:10": {
+    "570:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34843,7 +34867,7 @@
         }
       }
     },
-    "570:10": {
+    "571:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34880,7 +34904,7 @@
         }
       }
     },
-    "571:10": {
+    "572:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34917,7 +34941,7 @@
         }
       }
     },
-    "572:10": {
+    "573:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34954,7 +34978,7 @@
         }
       }
     },
-    "573:10": {
+    "574:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -34991,7 +35015,7 @@
         }
       }
     },
-    "574:10": {
+    "575:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -35028,7 +35052,7 @@
         }
       }
     },
-    "575:10": {
+    "576:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -35065,7 +35089,7 @@
         }
       }
     },
-    "576:10": {
+    "577:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -35102,7 +35126,7 @@
         }
       }
     },
-    "577:10": {
+    "578:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -35139,7 +35163,7 @@
         }
       }
     },
-    "578:10": {
+    "579:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -35176,7 +35200,7 @@
         }
       }
     },
-    "579:10": {
+    "580:10": {
       "preRequisites:11": [
         541
       ],
@@ -35241,7 +35265,7 @@
         }
       }
     },
-    "580:10": {
+    "581:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -35278,7 +35302,7 @@
         }
       }
     },
-    "581:10": {
+    "582:10": {
       "preRequisites:11": [
         298
       ],
@@ -35343,7 +35367,7 @@
         }
       }
     },
-    "582:10": {
+    "583:10": {
       "preRequisites:11": [
         745
       ],
@@ -35408,7 +35432,7 @@
         }
       }
     },
-    "583:10": {
+    "584:10": {
       "preRequisites:11": [
         750
       ],
@@ -35473,7 +35497,7 @@
         }
       }
     },
-    "584:10": {
+    "585:10": {
       "preRequisites:11": [
         29
       ],
@@ -35538,7 +35562,7 @@
         }
       }
     },
-    "585:10": {
+    "586:10": {
       "preRequisites:11": [
         324,
         313
@@ -35604,7 +35628,7 @@
         }
       }
     },
-    "586:10": {
+    "587:10": {
       "preRequisites:11": [
         311
       ],
@@ -35669,7 +35693,7 @@
         }
       }
     },
-    "587:10": {
+    "588:10": {
       "preRequisites:11": [
         313,
         324
@@ -35735,7 +35759,7 @@
         }
       }
     },
-    "588:10": {
+    "589:10": {
       "preRequisites:11": [
         389
       ],
@@ -35800,7 +35824,7 @@
         }
       }
     },
-    "589:10": {
+    "590:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -35837,7 +35861,7 @@
         }
       }
     },
-    "590:10": {
+    "591:10": {
       "preRequisites:11": [
         91
       ],
@@ -35902,7 +35926,7 @@
         }
       }
     },
-    "591:10": {
+    "592:10": {
       "preRequisites:11": [
         30
       ],
@@ -35967,7 +35991,7 @@
         }
       }
     },
-    "592:10": {
+    "593:10": {
       "preRequisites:11": [
         26
       ],
@@ -36032,7 +36056,7 @@
         }
       }
     },
-    "593:10": {
+    "594:10": {
       "preRequisites:11": [
         214,
         400
@@ -36098,7 +36122,7 @@
         }
       }
     },
-    "594:10": {
+    "595:10": {
       "preRequisites:11": [
         297
       ],
@@ -36163,7 +36187,7 @@
         }
       }
     },
-    "595:10": {
+    "596:10": {
       "preRequisites:11": [
         26
       ],
@@ -36228,7 +36252,7 @@
         }
       }
     },
-    "596:10": {
+    "597:10": {
       "preRequisites:11": [
         35
       ],
@@ -36293,7 +36317,7 @@
         }
       }
     },
-    "597:10": {
+    "598:10": {
       "preRequisites:11": [
         34
       ],
@@ -36358,7 +36382,7 @@
         }
       }
     },
-    "598:10": {
+    "599:10": {
       "preRequisites:11": [
         19,
         23
@@ -36424,7 +36448,7 @@
         }
       }
     },
-    "599:10": {
+    "600:10": {
       "preRequisites:11": [
         513,
         298
@@ -36490,7 +36514,7 @@
         }
       }
     },
-    "600:10": {
+    "601:10": {
       "preRequisites:11": [
         69
       ],
@@ -36555,7 +36579,7 @@
         }
       }
     },
-    "601:10": {
+    "602:10": {
       "preRequisites:11": [
         156
       ],
@@ -36620,7 +36644,7 @@
         }
       }
     },
-    "602:10": {
+    "603:10": {
       "preRequisites:11": [
         158
       ],
@@ -36685,7 +36709,7 @@
         }
       }
     },
-    "603:10": {
+    "604:10": {
       "preRequisites:11": [
         605
       ],
@@ -36737,7 +36761,7 @@
         }
       }
     },
-    "604:10": {
+    "605:10": {
       "preRequisites:11": [
         564,
         607,
@@ -36791,7 +36815,7 @@
         }
       }
     },
-    "605:10": {
+    "606:10": {
       "preRequisites:11": [
         607
       ],
@@ -36843,7 +36867,7 @@
         }
       }
     },
-    "606:10": {
+    "607:10": {
       "preRequisites:11": [
         195,
         238
@@ -36909,7 +36933,7 @@
         }
       }
     },
-    "607:10": {
+    "608:10": {
       "preRequisites:11": [
         288
       ],
@@ -36974,7 +36998,7 @@
         }
       }
     },
-    "608:10": {
+    "609:10": {
       "preRequisites:11": [
         528,
         69
@@ -37040,7 +37064,7 @@
         }
       }
     },
-    "609:10": {
+    "610:10": {
       "preRequisites:11": [
         328
       ],
@@ -37105,7 +37129,7 @@
         }
       }
     },
-    "610:10": {
+    "611:10": {
       "preRequisites:11": [
         610
       ],
@@ -37170,7 +37194,7 @@
         }
       }
     },
-    "611:10": {
+    "612:10": {
       "preRequisites:11": [
         536
       ],
@@ -37235,7 +37259,7 @@
         }
       }
     },
-    "612:10": {
+    "613:10": {
       "preRequisites:11": [
         260,
         352
@@ -37301,7 +37325,7 @@
         }
       }
     },
-    "613:10": {
+    "614:10": {
       "preRequisites:11": [
         175
       ],
@@ -37366,7 +37390,7 @@
         }
       }
     },
-    "614:10": {
+    "615:10": {
       "preRequisites:11": [
         260
       ],
@@ -37431,7 +37455,7 @@
         }
       }
     },
-    "615:10": {
+    "616:10": {
       "preRequisites:11": [
         3
       ],
@@ -37496,7 +37520,7 @@
         }
       }
     },
-    "616:10": {
+    "617:10": {
       "preRequisites:11": [
         328
       ],
@@ -37561,7 +37585,7 @@
         }
       }
     },
-    "617:10": {
+    "618:10": {
       "preRequisites:11": [
         260
       ],
@@ -37626,7 +37650,7 @@
         }
       }
     },
-    "618:10": {
+    "619:10": {
       "preRequisites:11": [
         55,
         352
@@ -37692,7 +37716,7 @@
         }
       }
     },
-    "619:10": {
+    "620:10": {
       "preRequisites:11": [
         55,
         352
@@ -37758,7 +37782,7 @@
         }
       }
     },
-    "620:10": {
+    "621:10": {
       "preRequisites:11": [
         71
       ],
@@ -37823,7 +37847,7 @@
         }
       }
     },
-    "621:10": {
+    "622:10": {
       "preRequisites:11": [
         175
       ],
@@ -37888,7 +37912,7 @@
         }
       }
     },
-    "622:10": {
+    "623:10": {
       "preRequisites:11": [
         260
       ],
@@ -37953,7 +37977,7 @@
         }
       }
     },
-    "623:10": {
+    "624:10": {
       "preRequisites:11": [
         149
       ],
@@ -38018,7 +38042,7 @@
         }
       }
     },
-    "624:10": {
+    "625:10": {
       "preRequisites:11": [
         69
       ],
@@ -38083,7 +38107,7 @@
         }
       }
     },
-    "625:10": {
+    "626:10": {
       "preRequisites:11": [
         80
       ],
@@ -38148,7 +38172,7 @@
         }
       }
     },
-    "626:10": {
+    "627:10": {
       "preRequisites:11": [
         539
       ],
@@ -38213,7 +38237,7 @@
         }
       }
     },
-    "627:10": {
+    "628:10": {
       "preRequisites:11": [
         810
       ],
@@ -38278,7 +38302,7 @@
         }
       }
     },
-    "628:10": {
+    "629:10": {
       "preRequisites:11": [
         131
       ],
@@ -38343,7 +38367,7 @@
         }
       }
     },
-    "629:10": {
+    "630:10": {
       "preRequisites:11": [
         175
       ],
@@ -38408,7 +38432,7 @@
         }
       }
     },
-    "630:10": {
+    "631:10": {
       "preRequisites:11": [
         71
       ],
@@ -38473,7 +38497,7 @@
         }
       }
     },
-    "631:10": {
+    "632:10": {
       "preRequisites:11": [
         260
       ],
@@ -38538,7 +38562,7 @@
         }
       }
     },
-    "632:10": {
+    "633:10": {
       "preRequisites:11": [
         139
       ],
@@ -38603,7 +38627,7 @@
         }
       }
     },
-    "633:10": {
+    "634:10": {
       "preRequisites:11": [
         148
       ],
@@ -38668,7 +38692,7 @@
         }
       }
     },
-    "634:10": {
+    "635:10": {
       "preRequisites:11": [
         285
       ],
@@ -38733,7 +38757,7 @@
         }
       }
     },
-    "635:10": {
+    "636:10": {
       "preRequisites:11": [
         91
       ],
@@ -38798,7 +38822,7 @@
         }
       }
     },
-    "636:10": {
+    "637:10": {
       "preRequisites:11": [
         98
       ],
@@ -38863,7 +38887,7 @@
         }
       }
     },
-    "637:10": {
+    "638:10": {
       "preRequisites:11": [
         4
       ],
@@ -38928,7 +38952,7 @@
         }
       }
     },
-    "638:10": {
+    "639:10": {
       "preRequisites:11": [
         59
       ],
@@ -38993,7 +39017,7 @@
         }
       }
     },
-    "639:10": {
+    "640:10": {
       "preRequisites:11": [
         59
       ],
@@ -39058,7 +39082,7 @@
         }
       }
     },
-    "640:10": {
+    "641:10": {
       "preRequisites:11": [
         6
       ],
@@ -39123,7 +39147,7 @@
         }
       }
     },
-    "641:10": {
+    "642:10": {
       "preRequisites:11": [
         78
       ],
@@ -39188,7 +39212,7 @@
         }
       }
     },
-    "642:10": {
+    "643:10": {
       "preRequisites:11": [
         78
       ],
@@ -39253,7 +39277,7 @@
         }
       }
     },
-    "643:10": {
+    "644:10": {
       "preRequisites:11": [
         78
       ],
@@ -39318,7 +39342,7 @@
         }
       }
     },
-    "644:10": {
+    "645:10": {
       "preRequisites:11": [
         175
       ],
@@ -39383,7 +39407,7 @@
         }
       }
     },
-    "645:10": {
+    "646:10": {
       "preRequisites:11": [
         144
       ],
@@ -39448,7 +39472,7 @@
         }
       }
     },
-    "646:10": {
+    "647:10": {
       "preRequisites:11": [
         169
       ],
@@ -39513,7 +39537,7 @@
         }
       }
     },
-    "647:10": {
+    "648:10": {
       "preRequisites:11": [
         59
       ],
@@ -39578,7 +39602,7 @@
         }
       }
     },
-    "648:10": {
+    "649:10": {
       "preRequisites:11": [
         263
       ],
@@ -39643,7 +39667,7 @@
         }
       }
     },
-    "649:10": {
+    "650:10": {
       "preRequisites:11": [
         6
       ],
@@ -39708,7 +39732,7 @@
         }
       }
     },
-    "650:10": {
+    "651:10": {
       "preRequisites:11": [
         2,
         498
@@ -39774,7 +39798,7 @@
         }
       }
     },
-    "651:10": {
+    "652:10": {
       "preRequisites:11": [
         175
       ],
@@ -39839,7 +39863,7 @@
         }
       }
     },
-    "652:10": {
+    "653:10": {
       "preRequisites:11": [
         201
       ],
@@ -39904,7 +39928,7 @@
         }
       }
     },
-    "653:10": {
+    "654:10": {
       "preRequisites:11": [
         251
       ],
@@ -39969,7 +39993,7 @@
         }
       }
     },
-    "654:10": {
+    "655:10": {
       "preRequisites:11": [
         251
       ],
@@ -40034,7 +40058,7 @@
         }
       }
     },
-    "655:10": {
+    "656:10": {
       "preRequisites:11": [
         3
       ],
@@ -40099,7 +40123,7 @@
         }
       }
     },
-    "656:10": {
+    "657:10": {
       "preRequisites:11": [
         6
       ],
@@ -40164,7 +40188,7 @@
         }
       }
     },
-    "657:10": {
+    "658:10": {
       "preRequisites:11": [
         71
       ],
@@ -40229,7 +40253,7 @@
         }
       }
     },
-    "658:10": {
+    "659:10": {
       "preRequisites:11": [
         267
       ],
@@ -40294,7 +40318,7 @@
         }
       }
     },
-    "659:10": {
+    "660:10": {
       "preRequisites:11": [
         352
       ],
@@ -40359,7 +40383,7 @@
         }
       }
     },
-    "660:10": {
+    "661:10": {
       "preRequisites:11": [
         669
       ],
@@ -40424,7 +40448,7 @@
         }
       }
     },
-    "661:10": {
+    "662:10": {
       "preRequisites:11": [
         673
       ],
@@ -40489,7 +40513,7 @@
         }
       }
     },
-    "662:10": {
+    "663:10": {
       "preRequisites:11": [
         675
       ],
@@ -40554,7 +40578,7 @@
         }
       }
     },
-    "663:10": {
+    "664:10": {
       "preRequisites:11": [
         677
       ],
@@ -40619,7 +40643,7 @@
         }
       }
     },
-    "664:10": {
+    "665:10": {
       "preRequisites:11": [
         676
       ],
@@ -40684,7 +40708,7 @@
         }
       }
     },
-    "665:10": {
+    "666:10": {
       "preRequisites:11": [
         678
       ],
@@ -40749,7 +40773,7 @@
         }
       }
     },
-    "666:10": {
+    "667:10": {
       "preRequisites:11": [
         679
       ],
@@ -40814,7 +40838,7 @@
         }
       }
     },
-    "667:10": {
+    "668:10": {
       "preRequisites:11": [
         254,
         287
@@ -40880,7 +40904,7 @@
         }
       }
     },
-    "668:10": {
+    "669:10": {
       "preRequisites:11": [
         672
       ],
@@ -40951,7 +40975,7 @@
         }
       }
     },
-    "669:10": {
+    "670:10": {
       "preRequisites:11": [
         4
       ],
@@ -41003,7 +41027,7 @@
         }
       }
     },
-    "670:10": {
+    "671:10": {
       "preRequisites:11": [
         672
       ],
@@ -41080,7 +41104,7 @@
         }
       }
     },
-    "671:10": {
+    "672:10": {
       "preRequisites:11": [
         350
       ],
@@ -41151,7 +41175,7 @@
         }
       }
     },
-    "672:10": {
+    "673:10": {
       "preRequisites:11": [
         671
       ],
@@ -41234,7 +41258,7 @@
         }
       }
     },
-    "673:10": {
+    "674:10": {
       "preRequisites:11": [
         671
       ],
@@ -41305,7 +41329,7 @@
         }
       }
     },
-    "674:10": {
+    "675:10": {
       "preRequisites:11": [
         669,
         674
@@ -41389,7 +41413,7 @@
         }
       }
     },
-    "675:10": {
+    "676:10": {
       "preRequisites:11": [
         675,
         677
@@ -41473,7 +41497,7 @@
         }
       }
     },
-    "676:10": {
+    "677:10": {
       "preRequisites:11": [
         673
       ],
@@ -41556,7 +41580,7 @@
         }
       }
     },
-    "677:10": {
+    "678:10": {
       "preRequisites:11": [
         676
       ],
@@ -41639,7 +41663,7 @@
         }
       }
     },
-    "678:10": {
+    "679:10": {
       "preRequisites:11": [
         676
       ],
@@ -41722,7 +41746,7 @@
         }
       }
     },
-    "679:10": {
+    "680:10": {
       "preRequisites:11": [
         678,
         679
@@ -41775,7 +41799,7 @@
         }
       }
     },
-    "680:10": {
+    "681:10": {
       "preRequisites:11": [
         89,
         794
@@ -41847,7 +41871,7 @@
         }
       }
     },
-    "681:10": {
+    "682:10": {
       "preRequisites:11": [
         26,
         684
@@ -41922,7 +41946,7 @@
         }
       }
     },
-    "682:10": {
+    "683:10": {
       "preRequisites:11": [
         278
       ],
@@ -41987,7 +42011,7 @@
         }
       }
     },
-    "683:10": {
+    "684:10": {
       "preRequisites:11": [
         28
       ],
@@ -42058,7 +42082,7 @@
         }
       }
     },
-    "684:10": {
+    "685:10": {
       "preRequisites:11": [
         682,
         34,
@@ -42125,7 +42149,7 @@
         }
       }
     },
-    "685:10": {
+    "686:10": {
       "preRequisites:11": [
         683
       ],
@@ -42232,7 +42256,7 @@
         }
       }
     },
-    "686:10": {
+    "687:10": {
       "preRequisites:11": [
         12
       ],
@@ -42297,7 +42321,7 @@
         }
       }
     },
-    "687:10": {
+    "688:10": {
       "preRequisites:11": [
         683
       ],
@@ -42362,7 +42386,7 @@
         }
       }
     },
-    "688:10": {
+    "689:10": {
       "preRequisites:11": [
         688
       ],
@@ -42439,7 +42463,7 @@
         }
       }
     },
-    "689:10": {
+    "690:10": {
       "preRequisites:11": [
         688
       ],
@@ -42504,7 +42528,7 @@
         }
       }
     },
-    "690:10": {
+    "691:10": {
       "preRequisites:11": [
         690
       ],
@@ -42587,7 +42611,7 @@
         }
       }
     },
-    "691:10": {
+    "692:10": {
       "preRequisites:11": [
         4,
         12
@@ -42670,7 +42694,7 @@
         }
       }
     },
-    "692:10": {
+    "693:10": {
       "preRequisites:11": [
         47,
         542
@@ -42744,7 +42768,7 @@
         }
       }
     },
-    "693:10": {
+    "694:10": {
       "preRequisites:11": [
         693,
         554
@@ -42810,7 +42834,7 @@
         }
       }
     },
-    "694:10": {
+    "695:10": {
       "preRequisites:11": [
         694,
         844
@@ -42884,7 +42908,7 @@
         }
       }
     },
-    "695:10": {
+    "696:10": {
       "preRequisites:11": [
         519
       ],
@@ -42961,7 +42985,7 @@
         }
       }
     },
-    "696:10": {
+    "697:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -42998,7 +43022,7 @@
         }
       }
     },
-    "697:10": {
+    "698:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43035,7 +43059,7 @@
         }
       }
     },
-    "698:10": {
+    "699:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43072,7 +43096,7 @@
         }
       }
     },
-    "699:10": {
+    "700:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43109,7 +43133,7 @@
         }
       }
     },
-    "700:10": {
+    "701:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43146,7 +43170,7 @@
         }
       }
     },
-    "701:10": {
+    "702:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43183,7 +43207,7 @@
         }
       }
     },
-    "702:10": {
+    "703:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43220,7 +43244,7 @@
         }
       }
     },
-    "703:10": {
+    "704:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43257,7 +43281,7 @@
         }
       }
     },
-    "704:10": {
+    "705:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43294,7 +43318,7 @@
         }
       }
     },
-    "705:10": {
+    "706:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43331,7 +43355,7 @@
         }
       }
     },
-    "706:10": {
+    "707:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43368,7 +43392,7 @@
         }
       }
     },
-    "707:10": {
+    "708:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43405,7 +43429,7 @@
         }
       }
     },
-    "708:10": {
+    "709:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43442,7 +43466,7 @@
         }
       }
     },
-    "709:10": {
+    "710:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43479,7 +43503,7 @@
         }
       }
     },
-    "710:10": {
+    "711:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43516,7 +43540,7 @@
         }
       }
     },
-    "711:10": {
+    "712:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43553,7 +43577,7 @@
         }
       }
     },
-    "712:10": {
+    "713:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43590,7 +43614,7 @@
         }
       }
     },
-    "713:10": {
+    "714:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43627,7 +43651,7 @@
         }
       }
     },
-    "714:10": {
+    "715:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43664,7 +43688,7 @@
         }
       }
     },
-    "715:10": {
+    "716:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43701,7 +43725,7 @@
         }
       }
     },
-    "716:10": {
+    "717:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43738,7 +43762,7 @@
         }
       }
     },
-    "717:10": {
+    "718:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43775,7 +43799,7 @@
         }
       }
     },
-    "718:10": {
+    "719:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43812,7 +43836,7 @@
         }
       }
     },
-    "719:10": {
+    "720:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43849,7 +43873,7 @@
         }
       }
     },
-    "720:10": {
+    "721:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43886,7 +43910,7 @@
         }
       }
     },
-    "721:10": {
+    "722:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43923,7 +43947,7 @@
         }
       }
     },
-    "722:10": {
+    "723:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43960,7 +43984,7 @@
         }
       }
     },
-    "723:10": {
+    "724:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43997,7 +44021,7 @@
         }
       }
     },
-    "724:10": {
+    "725:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44034,7 +44058,7 @@
         }
       }
     },
-    "725:10": {
+    "726:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44071,7 +44095,7 @@
         }
       }
     },
-    "726:10": {
+    "727:10": {
       "preRequisites:11": [
         260
       ],
@@ -44110,7 +44134,7 @@
         }
       }
     },
-    "727:10": {
+    "728:10": {
       "preRequisites:11": [
         227
       ],
@@ -44175,7 +44199,7 @@
         }
       }
     },
-    "728:10": {
+    "729:10": {
       "preRequisites:11": [
         102
       ],
@@ -44240,7 +44264,7 @@
         }
       }
     },
-    "729:10": {
+    "730:10": {
       "preRequisites:11": [
         227
       ],
@@ -44279,7 +44303,7 @@
         }
       }
     },
-    "730:10": {
+    "731:10": {
       "preRequisites:11": [
         227
       ],
@@ -44318,14 +44342,14 @@
         }
       }
     },
-    "731:10": {
+    "732:10": {
       "preRequisites:11": [
         19
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Hard Carbon Alloy§r is an alloy made from §6Graphite§r and §6Diamonds§r.\n\nGraphite is an important ingredient for §bNuclearCraft§r and is found principally as a byproduct of processing §6Diamond Ore§r. §6Graphite Ore§r spawns alongside Diamond Ore, but unlike Diamond Ore it is not renewable through automation (though it can be purchased using §dOmnicoins§r).",
+          "desc:8": "§6Hard Carbon Alloy§r is an alloy made from §2Steel§r and §6Diamonds§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44336,7 +44360,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Hard Carbon Alloy",
+          "name:8": "§2Hard Carbon Alloy",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -44383,7 +44407,7 @@
         }
       }
     },
-    "732:10": {
+    "733:10": {
       "preRequisites:11": [
         336
       ],
@@ -44448,7 +44472,7 @@
         }
       }
     },
-    "733:10": {
+    "734:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44485,7 +44509,7 @@
         }
       }
     },
-    "734:10": {
+    "735:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44522,7 +44546,7 @@
         }
       }
     },
-    "735:10": {
+    "736:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44559,7 +44583,7 @@
         }
       }
     },
-    "736:10": {
+    "737:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44596,7 +44620,7 @@
         }
       }
     },
-    "737:10": {
+    "738:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44633,7 +44657,7 @@
         }
       }
     },
-    "738:10": {
+    "739:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44670,7 +44694,7 @@
         }
       }
     },
-    "739:10": {
+    "740:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44707,7 +44731,7 @@
         }
       }
     },
-    "740:10": {
+    "741:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44744,7 +44768,7 @@
         }
       }
     },
-    "741:10": {
+    "742:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44781,7 +44805,7 @@
         }
       }
     },
-    "742:10": {
+    "743:10": {
       "preRequisites:11": [
         805
       ],
@@ -44820,7 +44844,7 @@
         }
       }
     },
-    "743:10": {
+    "744:10": {
       "preRequisites:11": [
         183
       ],
@@ -44891,7 +44915,7 @@
         }
       }
     },
-    "744:10": {
+    "745:10": {
       "preRequisites:11": [
         311
       ],
@@ -44956,7 +44980,7 @@
         }
       }
     },
-    "745:10": {
+    "746:10": {
       "preRequisites:11": [
         300
       ],
@@ -45049,7 +45073,7 @@
         }
       }
     },
-    "746:10": {
+    "747:10": {
       "preRequisites:11": [
         26,
         75
@@ -45115,7 +45139,7 @@
         }
       }
     },
-    "747:10": {
+    "748:10": {
       "preRequisites:11": [
         746
       ],
@@ -45180,7 +45204,7 @@
         }
       }
     },
-    "748:10": {
+    "749:10": {
       "preRequisites:11": [
         325,
         802,
@@ -45271,7 +45295,7 @@
         }
       }
     },
-    "749:10": {
+    "750:10": {
       "preRequisites:11": [
         324
       ],
@@ -45289,7 +45313,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Enderium Ingot",
+          "name:8": "§2Enderium Ingot",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -45336,7 +45360,7 @@
         }
       }
     },
-    "750:10": {
+    "751:10": {
       "preRequisites:11": [
         299
       ],
@@ -45427,7 +45451,7 @@
         }
       }
     },
-    "751:10": {
+    "752:10": {
       "preRequisites:11": [
         24,
         19
@@ -45499,7 +45523,7 @@
         }
       }
     },
-    "752:10": {
+    "753:10": {
       "preRequisites:11": [
         750,
         799
@@ -45583,7 +45607,7 @@
         }
       }
     },
-    "753:10": {
+    "754:10": {
       "preRequisites:11": [
         510,
         219
@@ -45661,7 +45685,7 @@
         }
       }
     },
-    "754:10": {
+    "755:10": {
       "preRequisites:11": [
         3
       ],
@@ -45757,7 +45781,7 @@
         }
       }
     },
-    "755:10": {
+    "756:10": {
       "preRequisites:11": [
         270
       ],
@@ -45809,7 +45833,7 @@
         }
       }
     },
-    "756:10": {
+    "757:10": {
       "preRequisites:11": [
         116
       ],
@@ -45874,7 +45898,7 @@
         }
       }
     },
-    "757:10": {
+    "758:10": {
       "preRequisites:11": [
         757
       ],
@@ -45945,7 +45969,7 @@
         }
       }
     },
-    "758:10": {
+    "759:10": {
       "preRequisites:11": [
         511
       ],
@@ -46030,7 +46054,7 @@
         }
       }
     },
-    "759:10": {
+    "760:10": {
       "preRequisites:11": [
         757
       ],
@@ -46101,7 +46125,7 @@
         }
       }
     },
-    "760:10": {
+    "761:10": {
       "preRequisites:11": [
         760
       ],
@@ -46159,7 +46183,7 @@
         }
       }
     },
-    "761:10": {
+    "762:10": {
       "preRequisites:11": [
         761,
         754
@@ -46199,7 +46223,7 @@
         }
       }
     },
-    "762:10": {
+    "763:10": {
       "preRequisites:11": [
         754,
         542
@@ -46265,7 +46289,7 @@
         }
       }
     },
-    "763:10": {
+    "764:10": {
       "preRequisites:11": [
         530,
         86,
@@ -46301,7 +46325,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "764:10": {
+    "765:10": {
       "preRequisites:11": [
         3
       ],
@@ -46340,7 +46364,7 @@
         }
       }
     },
-    "765:10": {
+    "766:10": {
       "preRequisites:11": [
         76,
         87,
@@ -46377,7 +46401,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "766:10": {
+    "767:10": {
       "preRequisites:11": [
         89,
         203,
@@ -46414,7 +46438,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "767:10": {
+    "768:10": {
       "preRequisites:11": [
         132,
         264,
@@ -46451,7 +46475,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "768:10": {
+    "769:10": {
       "preRequisites:11": [
         155,
         268,
@@ -46488,7 +46512,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "769:10": {
+    "770:10": {
       "preRequisites:11": [
         332,
         292,
@@ -46525,7 +46549,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "770:10": {
+    "771:10": {
       "preRequisites:11": [
         531,
         534,
@@ -46561,7 +46585,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "771:10": {
+    "772:10": {
       "preRequisites:11": [
         535
       ],
@@ -46595,7 +46619,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "772:10": {
+    "773:10": {
       "preRequisites:11": [
         172,
         168
@@ -46629,7 +46653,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "773:10": {
+    "774:10": {
       "preRequisites:11": [
         145
       ],
@@ -46694,14 +46718,14 @@
         }
       }
     },
-    "774:10": {
+    "775:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bMultiblock Tweaker§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview horizontally. §6Shift-left-click§r to rotate it vertically.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
+          "desc:8": "§bMultiblock Tweaker§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46733,7 +46757,7 @@
         }
       }
     },
-    "775:10": {
+    "776:10": {
       "preRequisites:11": [
         258
       ],
@@ -46798,7 +46822,7 @@
         }
       }
     },
-    "776:10": {
+    "777:10": {
       "preRequisites:11": [
         344
       ],
@@ -46850,7 +46874,7 @@
         }
       }
     },
-    "777:10": {
+    "778:10": {
       "preRequisites:11": [
         776
       ],
@@ -46921,7 +46945,7 @@
         }
       }
     },
-    "778:10": {
+    "779:10": {
       "preRequisites:11": [
         21
       ],
@@ -46985,7 +47009,7 @@
         }
       }
     },
-    "779:10": {
+    "780:10": {
       "preRequisites:11": [
         688,
         107
@@ -47051,7 +47075,7 @@
         }
       }
     },
-    "780:10": {
+    "781:10": {
       "preRequisites:11": [
         35,
         296
@@ -47135,7 +47159,7 @@
         }
       }
     },
-    "781:10": {
+    "782:10": {
       "preRequisites:11": [
         400,
         214
@@ -47169,7 +47193,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "782:10": {
+    "783:10": {
       "preRequisites:11": [
         54
       ],
@@ -47202,7 +47226,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "783:10": {
+    "784:10": {
       "preRequisites:11": [
         282
       ],
@@ -47266,7 +47290,7 @@
         }
       }
     },
-    "784:10": {
+    "785:10": {
       "preRequisites:11": [
         72
       ],
@@ -47331,7 +47355,7 @@
         }
       }
     },
-    "785:10": {
+    "786:10": {
       "preRequisites:11": [
         805
       ],
@@ -47369,7 +47393,7 @@
         }
       }
     },
-    "786:10": {
+    "787:10": {
       "preRequisites:11": [
         81,
         272,
@@ -47435,7 +47459,7 @@
         }
       }
     },
-    "787:10": {
+    "788:10": {
       "preRequisites:11": [
         3
       ],
@@ -47499,7 +47523,7 @@
         }
       }
     },
-    "788:10": {
+    "789:10": {
       "preRequisites:11": [
         3
       ],
@@ -47575,7 +47599,7 @@
         }
       }
     },
-    "789:10": {
+    "790:10": {
       "preRequisites:11": [
         69
       ],
@@ -47639,7 +47663,7 @@
         }
       }
     },
-    "790:10": {
+    "791:10": {
       "preRequisites:11": [
         524,
         798
@@ -47710,7 +47734,7 @@
         }
       }
     },
-    "791:10": {
+    "792:10": {
       "preRequisites:11": [
         172,
         177
@@ -47775,7 +47799,7 @@
         }
       }
     },
-    "792:10": {
+    "793:10": {
       "preRequisites:11": [
         27
       ],
@@ -47845,7 +47869,7 @@
         }
       }
     },
-    "793:10": {
+    "794:10": {
       "preRequisites:11": [
         793,
         792
@@ -47879,7 +47903,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "794:10": {
+    "795:10": {
       "preRequisites:11": [
         796
       ],
@@ -47943,7 +47967,7 @@
         }
       }
     },
-    "795:10": {
+    "796:10": {
       "preRequisites:11": [
         323
       ],
@@ -48007,7 +48031,7 @@
         }
       }
     },
-    "796:10": {
+    "797:10": {
       "preRequisites:11": [
         796
       ],
@@ -48071,7 +48095,7 @@
         }
       }
     },
-    "797:10": {
+    "798:10": {
       "preRequisites:11": [
         675,
         676
@@ -48136,7 +48160,7 @@
         }
       }
     },
-    "798:10": {
+    "799:10": {
       "preRequisites:11": [
         545,
         745
@@ -48206,7 +48230,7 @@
         }
       }
     },
-    "799:10": {
+    "800:10": {
       "preRequisites:11": [
         416,
         807,
@@ -48241,7 +48265,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "800:10": {
+    "801:10": {
       "preRequisites:11": [
         154
       ],
@@ -48318,7 +48342,7 @@
         }
       }
     },
-    "801:10": {
+    "802:10": {
       "preRequisites:11": [
         243,
         325
@@ -48383,7 +48407,7 @@
         }
       }
     },
-    "802:10": {
+    "803:10": {
       "preRequisites:11": [
         805
       ],
@@ -48459,7 +48483,7 @@
         }
       }
     },
-    "803:10": {
+    "804:10": {
       "preRequisites:11": [
         286,
         107
@@ -48536,7 +48560,7 @@
         }
       }
     },
-    "804:10": {
+    "805:10": {
       "preRequisites:11": [
         3
       ],
@@ -48569,7 +48593,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "805:10": {
+    "806:10": {
       "preRequisites:11": [
         166,
         226
@@ -48607,22 +48631,12 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "allyl_chloride"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
-    "806:10": {
+    "807:10": {
       "preRequisites:11": [
         163,
         413
@@ -48691,7 +48705,7 @@
         }
       }
     },
-    "807:10": {
+    "808:10": {
       "preRequisites:11": [
         805
       ],
@@ -48729,7 +48743,7 @@
         }
       }
     },
-    "808:10": {
+    "809:10": {
       "preRequisites:11": [
         367
       ],
@@ -48816,7 +48830,7 @@
         }
       }
     },
-    "809:10": {
+    "810:10": {
       "preRequisites:11": [
         260,
         278,
@@ -48883,7 +48897,7 @@
         }
       }
     },
-    "810:10": {
+    "811:10": {
       "preRequisites:11": [
         38
       ],
@@ -48962,7 +48976,7 @@
         }
       }
     },
-    "811:10": {
+    "812:10": {
       "preRequisites:11": [
         505,
         94
@@ -48996,14 +49010,14 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "812:10": {
+    "813:10": {
       "preRequisites:11": [
         4
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Check out the new Material Tree tab! It will show you all the different forms of a GregTech material (Plates, Rods, Screws, Dusts...) on a single page. You can then click on those to see their recipes.",
+          "desc:8": "§2Check out the new Material Tree tab! It will show you nearly all the different forms of a GregTech material (Plates, Rods, Screws, Dusts...) on a single page. You can then click on those to see their recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49047,7 +49061,7 @@
         }
       }
     },
-    "813:10": {
+    "814:10": {
       "preRequisites:11": [
         21
       ],
@@ -49111,14 +49125,14 @@
         }
       }
     },
-    "814:10": {
+    "815:10": {
       "preRequisites:11": [
         145
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Bending Machine makes Plates from a single ingot (instead of the Compressor) and 4 Foils from a Plate (instead of the Cluster Mill, which is no more). Why was this removed?!",
+          "desc:8": "§2The Bending Machine makes, depending on what Programmable Circuit it\u0027s given:\n- Plates from a single ingot (instead of the Compressor)\n- 4 Foils from a Plate (instead of the Cluster Mill, which is no more)\n- Double Plates from two Plates\n- Dense Plates from nine Plates\n- Small Springs from one Rod\n- Springs from one Long Rod. \n\nWhy was this removed?!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49184,7 +49198,7 @@
         }
       }
     },
-    "815:10": {
+    "816:10": {
       "preRequisites:11": [
         818,
         76
@@ -49249,7 +49263,7 @@
         }
       }
     },
-    "816:10": {
+    "817:10": {
       "preRequisites:11": [
         752
       ],
@@ -49319,7 +49333,7 @@
         }
       }
     },
-    "817:10": {
+    "818:10": {
       "preRequisites:11": [
         530
       ],
@@ -49383,7 +49397,7 @@
         }
       }
     },
-    "818:10": {
+    "819:10": {
       "preRequisites:11": [
         55
       ],
@@ -49434,7 +49448,7 @@
         }
       }
     },
-    "819:10": {
+    "820:10": {
       "preRequisites:11": [
         78,
         72,
@@ -49500,7 +49514,7 @@
         }
       }
     },
-    "820:10": {
+    "821:10": {
       "preRequisites:11": [
         27
       ],
@@ -49569,7 +49583,7 @@
         }
       }
     },
-    "821:10": {
+    "822:10": {
       "preRequisites:11": [
         82
       ],
@@ -49633,7 +49647,7 @@
         }
       }
     },
-    "822:10": {
+    "823:10": {
       "preRequisites:11": [
         727
       ],
@@ -49697,7 +49711,7 @@
         }
       }
     },
-    "823:10": {
+    "824:10": {
       "preRequisites:11": [
         95
       ],
@@ -49761,14 +49775,14 @@
         }
       }
     },
-    "824:10": {
+    "825:10": {
       "preRequisites:11": [
         153
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Polytetrafluoroethylene (PTFE, or Teflon) is a polymer made from Carbon and Fluorine.\n\nThis polymer is most importantly used to make Large Chemical Reactors.",
+          "desc:8": "§2Polytetrafluoroethylene (PTFE, or Teflon) is a polymer made from Carbon and Fluorine.\n\nThis polymer is most importantly used to make Large Chemical Reactors. It\u0027s also required for IV and LuV Machine Hulls, and can be substituted in some cases for higher yields.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49826,7 +49840,7 @@
         }
       }
     },
-    "825:10": {
+    "826:10": {
       "preRequisites:11": [
         825
       ],
@@ -49890,7 +49904,7 @@
         }
       }
     },
-    "826:10": {
+    "827:10": {
       "preRequisites:11": [
         177
       ],
@@ -49960,7 +49974,7 @@
         }
       }
     },
-    "827:10": {
+    "828:10": {
       "preRequisites:11": [
         198
       ],
@@ -50025,7 +50039,7 @@
         }
       }
     },
-    "828:10": {
+    "829:10": {
       "preRequisites:11": [
         779
       ],
@@ -50089,7 +50103,7 @@
         }
       }
     },
-    "829:10": {
+    "830:10": {
       "preRequisites:11": [
         93
       ],
@@ -50153,7 +50167,7 @@
         }
       }
     },
-    "830:10": {
+    "831:10": {
       "preRequisites:11": [
         830
       ],
@@ -50217,7 +50231,7 @@
         }
       }
     },
-    "831:10": {
+    "832:10": {
       "preRequisites:11": [
         830
       ],
@@ -50293,7 +50307,7 @@
         }
       }
     },
-    "832:10": {
+    "833:10": {
       "preRequisites:11": [
         830
       ],
@@ -50369,7 +50383,7 @@
         }
       }
     },
-    "833:10": {
+    "834:10": {
       "preRequisites:11": [
         96
       ],
@@ -50433,7 +50447,7 @@
         }
       }
     },
-    "834:10": {
+    "835:10": {
       "preRequisites:11": [
         164,
         165,
@@ -50499,7 +50513,7 @@
         }
       }
     },
-    "835:10": {
+    "836:10": {
       "preRequisites:11": [
         259,
         147
@@ -50507,7 +50521,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2In GTCEu, higher-tier blends of dusts require higher-tier Mixers to mix. The MV Mixer is required for making Vanadiumsteel. \n\nThere will not be more mixer quests above this one. Remember this when making higher-tier dust blends.",
+          "desc:8": "§2In GTCEu, higher-tier blends of dusts require higher-tier Mixers to mix. The MV Mixer is required for making Vanadiumsteel.\n\nThere will not be more mixer quests above this one. Remember this when making higher-tier dust blends.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50564,7 +50578,7 @@
         }
       }
     },
-    "836:10": {
+    "837:10": {
       "preRequisites:11": [
         836,
         91
@@ -50629,7 +50643,7 @@
         }
       }
     },
-    "837:10": {
+    "838:10": {
       "preRequisites:11": [
         526,
         194
@@ -50694,7 +50708,7 @@
         }
       }
     },
-    "838:10": {
+    "839:10": {
       "preRequisites:11": [
         882
       ],
@@ -50758,7 +50772,7 @@
         }
       }
     },
-    "839:10": {
+    "840:10": {
       "preRequisites:11": [
         791,
         323,
@@ -50824,7 +50838,7 @@
         }
       }
     },
-    "840:10": {
+    "841:10": {
       "preRequisites:11": [
         312
       ],
@@ -50888,7 +50902,7 @@
         }
       }
     },
-    "841:10": {
+    "842:10": {
       "preRequisites:11": [
         327,
         242
@@ -50953,7 +50967,7 @@
         }
       }
     },
-    "842:10": {
+    "843:10": {
       "preRequisites:11": [
         323,
         138
@@ -50996,7 +51010,7 @@
         }
       }
     },
-    "843:10": {
+    "844:10": {
       "preRequisites:11": [
         847,
         845,
@@ -51062,7 +51076,7 @@
         }
       }
     },
-    "844:10": {
+    "845:10": {
       "preRequisites:11": [
         843,
         324
@@ -51127,9 +51141,10 @@
         }
       }
     },
-    "845:10": {
+    "846:10": {
       "preRequisites:11": [
-        844
+        844,
+        536
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51191,7 +51206,7 @@
         }
       }
     },
-    "846:10": {
+    "847:10": {
       "preRequisites:11": [
         843,
         324
@@ -51256,7 +51271,7 @@
         }
       }
     },
-    "847:10": {
+    "848:10": {
       "preRequisites:11": [
         847
       ],
@@ -51320,7 +51335,7 @@
         }
       }
     },
-    "848:10": {
+    "849:10": {
       "preRequisites:11": [
         198
       ],
@@ -51384,7 +51399,7 @@
         }
       }
     },
-    "849:10": {
+    "850:10": {
       "preRequisites:11": [
         849,
         828,
@@ -51475,7 +51490,7 @@
         }
       }
     },
-    "850:10": {
+    "851:10": {
       "preRequisites:11": [
         312
       ],
@@ -51539,7 +51554,7 @@
         }
       }
     },
-    "851:10": {
+    "852:10": {
       "preRequisites:11": [
         677,
         749
@@ -51604,7 +51619,7 @@
         }
       }
     },
-    "852:10": {
+    "853:10": {
       "preRequisites:11": [
         827
       ],
@@ -51668,9 +51683,10 @@
         }
       }
     },
-    "853:10": {
+    "854:10": {
       "preRequisites:11": [
-        196
+        196,
+        885
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51732,7 +51748,7 @@
         }
       }
     },
-    "854:10": {
+    "855:10": {
       "preRequisites:11": [
         607
       ],
@@ -51796,7 +51812,7 @@
         }
       }
     },
-    "855:10": {
+    "856:10": {
       "preRequisites:11": [
         855
       ],
@@ -51826,7 +51842,20 @@
         }
       },
       "questID:3": 856,
-      "rewards:9": {},
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin100"
+            }
+          }
+        }
+      },
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -51847,7 +51876,7 @@
         }
       }
     },
-    "856:10": {
+    "857:10": {
       "preRequisites:11": [
         339
       ],
@@ -51929,7 +51958,7 @@
         }
       }
     },
-    "857:10": {
+    "858:10": {
       "preRequisites:11": [
         255,
         857
@@ -52006,7 +52035,7 @@
         }
       }
     },
-    "858:10": {
+    "859:10": {
       "preRequisites:11": [
         858,
         198
@@ -52014,11 +52043,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.\n\nThese are formed like multiblocks. You can add Parallel Control Hatches in order to allow them to process more recipes at the same time, similarly to a Processing Array. The highest tier can process 256 recipes at once!\n\nSearch \"@gregicality\" in JEI to see details of all the multiblock machines.",
+          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.\n\nThese are formed like multiblocks. You can add a Parallel Control Hatch in order to allow them to process more recipes at the same time, similarly to a Processing Array. The highest tier of Parallel Control Hatch can facilitate processing 256 recipes at once!\n\nSearch \"@gregicality\" or look up the usages of Parallel Hatches in JEI to see details of all the multiblock machines.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 2016,
+            "Damage:2": 2028,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -52037,15 +52066,41 @@
         }
       },
       "questID:3": 859,
-      "rewards:9": {},
-      "tasks:9": {
+      "rewards:9": {
         "0:10": {
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2050,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
-    "859:10": {
+    "860:10": {
       "preRequisites:11": [
         826,
         531,
@@ -52135,7 +52190,7 @@
         }
       }
     },
-    "860:10": {
+    "861:10": {
       "preRequisites:11": [
         607
       ],
@@ -52205,7 +52260,7 @@
         }
       }
     },
-    "861:10": {
+    "862:10": {
       "preRequisites:11": [
         727
       ],
@@ -52269,7 +52324,7 @@
         }
       }
     },
-    "862:10": {
+    "863:10": {
       "preRequisites:11": [
         727
       ],
@@ -52333,7 +52388,7 @@
         }
       }
     },
-    "863:10": {
+    "864:10": {
       "preRequisites:11": [
         827
       ],
@@ -52397,7 +52452,7 @@
         }
       }
     },
-    "864:10": {
+    "865:10": {
       "preRequisites:11": [
         827
       ],
@@ -52461,7 +52516,7 @@
         }
       }
     },
-    "865:10": {
+    "866:10": {
       "preRequisites:11": [
         727
       ],
@@ -52525,7 +52580,7 @@
         }
       }
     },
-    "866:10": {
+    "867:10": {
       "preRequisites:11": [
         727
       ],
@@ -52589,7 +52644,7 @@
         }
       }
     },
-    "867:10": {
+    "868:10": {
       "preRequisites:11": [
         234
       ],
@@ -52653,7 +52708,7 @@
         }
       }
     },
-    "868:10": {
+    "869:10": {
       "preRequisites:11": [
         139
       ],
@@ -52717,7 +52772,7 @@
         }
       }
     },
-    "869:10": {
+    "870:10": {
       "preRequisites:11": [
         139
       ],
@@ -52781,7 +52836,7 @@
         }
       }
     },
-    "870:10": {
+    "871:10": {
       "preRequisites:11": [
         139
       ],
@@ -52845,7 +52900,7 @@
         }
       }
     },
-    "871:10": {
+    "872:10": {
       "preRequisites:11": [
         325
       ],
@@ -52909,7 +52964,7 @@
         }
       }
     },
-    "872:10": {
+    "873:10": {
       "preRequisites:11": [
         287
       ],
@@ -52973,7 +53028,7 @@
         }
       }
     },
-    "873:10": {
+    "874:10": {
       "preRequisites:11": [
         727
       ],
@@ -53037,7 +53092,7 @@
         }
       }
     },
-    "874:10": {
+    "875:10": {
       "preRequisites:11": [
         6
       ],
@@ -53101,7 +53156,7 @@
         }
       }
     },
-    "875:10": {
+    "876:10": {
       "preRequisites:11": [
         196
       ],
@@ -53165,7 +53220,7 @@
         }
       }
     },
-    "876:10": {
+    "877:10": {
       "preRequisites:11": [
         287
       ],
@@ -53229,7 +53284,7 @@
         }
       }
     },
-    "877:10": {
+    "878:10": {
       "preRequisites:11": [
         847
       ],
@@ -53293,7 +53348,7 @@
         }
       }
     },
-    "878:10": {
+    "879:10": {
       "preRequisites:11": [
         323
       ],
@@ -53351,88 +53406,6 @@
               "Damage:2": 124,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "879:10": {
-      "preRequisites:11": [
-        781
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "§2A Numismatic Dynamo which outputs EU.\n\nYou will need one or more Dynamo Hatches.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 32006,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§2Large Lapidary Dynamo",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 880,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 32006,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:turbine_casing"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 1151,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "3:10": {
-              "Count:3": 20,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -54372,13 +54345,12 @@
     "896:10": {
       "preRequisites:11": [
         896,
-        830,
-        899
+        830
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With End Steel, LPICs, NaK, and an HV Assembler, you can finally make HV Energy and Dynamo hatches.\n\nYou should get the gist of making these now, so there will not be further quests on Energy and Dynamo hatches.",
+          "desc:8": "§2With Silver, LPICs, NaK, and an HV Assembler, you can finally make HV Energy and Dynamo hatches.\n\nYou should get the gist of making these now, so there will not be further quests on Energy and Dynamo hatches.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54508,77 +54480,12 @@
     },
     "898:10": {
       "preRequisites:11": [
-        690,
-        275
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "End Steel is an alloy of Dark Steel and Endstone Dust. End Stone can be obtained by combining Luminessence with Lava in a Chemical Reactor, or with Extraterrestrial Matter from DML.\n\nEnd Steel will be used in a few recipes, such as for §2High Voltage Coils§r. They are also EV-tier §2superconductors§r, but at high voltage tiers, cable loss becomes insignificant.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 32025,
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
-          },
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "§2End Steel",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 899,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 32025,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "899:10": {
-      "preRequisites:11": [
         888
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fuel. It can also be used in Draconium production, using 60% less fuel than Nitro Diesel or normal Gasoline.\n\nTo refine Gasoline to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
+          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fuel. It can also be used in Draconium production, using 75% less fuel than Nitro Diesel or normal Gasoline.\n\nTo refine Gasoline to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54636,7 +54543,7 @@
         }
       }
     },
-    "900:10": {
+    "899:10": {
       "preRequisites:11": [
         179,
         888
@@ -54670,7 +54577,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "901:10": {
+    "900:10": {
       "preRequisites:11": [
         805
       ],
@@ -55445,8 +55352,8 @@
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -184,
-          "y:3": 148
+          "x:3": -152,
+          "y:3": 180
         },
         "33:10": {
           "id:3": 93,
@@ -55564,7 +55471,7 @@
           "id:3": 154,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -52,
+          "x:3": -316,
           "y:3": 216
         },
         "50:10": {
@@ -55697,7 +55604,7 @@
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -216,
+          "x:3": -184,
           "y:3": 148
         },
         "69:10": {
@@ -55767,15 +55674,15 @@
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -40,
-          "y:3": 276
+          "x:3": -304,
+          "y:3": 184
         },
         "79:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -352,
-          "y:3": 256
+          "x:3": -312,
+          "y:3": 296
         },
         "80:10": {
           "id:3": 816,
@@ -55876,59 +55783,45 @@
           "y:3": 104
         },
         "94:10": {
-          "id:3": 880,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 412
-        },
-        "95:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -552,
           "y:3": 268
         },
-        "96:10": {
+        "95:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -392,
           "y:3": 296
         },
-        "97:10": {
+        "96:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
           "y:3": 340
         },
-        "98:10": {
+        "97:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
           "y:3": 188
         },
-        "99:10": {
+        "98:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "100:10": {
+        "99:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
-          "y:3": 256
-        },
-        "101:10": {
-          "id:3": 899,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
           "y:3": 256
         }
       }
@@ -57024,650 +56917,657 @@
           "y:3": 96
         },
         "5:10": {
+          "id:3": 52,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 60
+        },
+        "6:10": {
           "id:3": 60,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 60
         },
-        "6:10": {
+        "7:10": {
           "id:3": 65,
           "sizeX:3": 30,
           "sizeY:3": 28,
           "x:3": 405,
           "y:3": 127
         },
-        "7:10": {
+        "8:10": {
           "id:3": 76,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 160
         },
-        "8:10": {
+        "9:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 60
         },
-        "9:10": {
+        "10:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 132
         },
-        "10:10": {
+        "11:10": {
           "id:3": 87,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 160
         },
-        "11:10": {
+        "12:10": {
           "id:3": 89,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 188
         },
-        "12:10": {
+        "13:10": {
           "id:3": 90,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 96
         },
-        "13:10": {
+        "14:10": {
           "id:3": 132,
           "sizeX:3": 60,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 216
         },
-        "14:10": {
+        "15:10": {
           "id:3": 133,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 132
         },
-        "15:10": {
+        "16:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 60
         },
-        "16:10": {
+        "17:10": {
           "id:3": 135,
           "sizeX:3": 60,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 160
         },
-        "17:10": {
+        "18:10": {
           "id:3": 155,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 244
         },
-        "18:10": {
+        "19:10": {
           "id:3": 156,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 60
         },
-        "19:10": {
+        "20:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 96
         },
-        "20:10": {
+        "21:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 96
         },
-        "21:10": {
+        "22:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 132
         },
-        "22:10": {
+        "23:10": {
           "id:3": 183,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 60
         },
-        "23:10": {
+        "24:10": {
           "id:3": 188,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 60
         },
-        "24:10": {
+        "25:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 244
         },
-        "25:10": {
+        "26:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 276
         },
-        "26:10": {
+        "27:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 132
         },
-        "27:10": {
+        "28:10": {
           "id:3": 203,
           "sizeX:3": 60,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 188
         },
-        "28:10": {
+        "29:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 396
         },
-        "29:10": {
+        "30:10": {
           "id:3": 217,
           "sizeX:3": 30,
           "sizeY:3": 28,
           "x:3": 405,
           "y:3": 60
         },
-        "30:10": {
+        "31:10": {
           "id:3": 238,
           "sizeX:3": 36,
           "sizeY:3": 32,
           "x:3": 402,
           "y:3": 314
         },
-        "31:10": {
+        "32:10": {
           "id:3": 240,
           "sizeX:3": 36,
           "sizeY:3": 32,
           "x:3": 402,
           "y:3": 352
         },
-        "32:10": {
+        "33:10": {
           "id:3": 242,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 60
         },
-        "33:10": {
+        "34:10": {
           "id:3": 251,
           "sizeX:3": 36,
           "sizeY:3": 32,
           "x:3": 402,
           "y:3": 162
         },
-        "34:10": {
+        "35:10": {
           "id:3": 252,
           "sizeX:3": 36,
           "sizeY:3": 32,
           "x:3": 402,
           "y:3": 200
         },
-        "35:10": {
+        "36:10": {
           "id:3": 254,
           "sizeX:3": 36,
           "sizeY:3": 32,
           "x:3": 402,
           "y:3": 238
         },
-        "36:10": {
+        "37:10": {
           "id:3": 256,
           "sizeX:3": 36,
           "sizeY:3": 32,
           "x:3": 402,
           "y:3": 277
         },
-        "37:10": {
+        "38:10": {
           "id:3": 261,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 132
         },
-        "38:10": {
+        "39:10": {
           "id:3": 264,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 216
         },
-        "39:10": {
+        "40:10": {
           "id:3": 268,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 244
         },
-        "40:10": {
+        "41:10": {
           "id:3": 269,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 272
         },
-        "41:10": {
+        "42:10": {
           "id:3": 283,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 96
         },
-        "42:10": {
+        "43:10": {
           "id:3": 292,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 272
         },
-        "43:10": {
+        "44:10": {
           "id:3": 311,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 168
         },
-        "44:10": {
+        "45:10": {
           "id:3": 312,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 168
         },
-        "45:10": {
+        "46:10": {
           "id:3": 313,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 204
         },
-        "46:10": {
+        "47:10": {
           "id:3": 323,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 204
         },
-        "47:10": {
+        "48:10": {
           "id:3": 324,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 240
         },
-        "48:10": {
+        "49:10": {
           "id:3": 332,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 272
         },
-        "49:10": {
+        "50:10": {
           "id:3": 333,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 300
         },
-        "50:10": {
+        "51:10": {
           "id:3": 334,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 328
         },
-        "51:10": {
+        "52:10": {
           "id:3": 335,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 356
         },
-        "52:10": {
+        "53:10": {
           "id:3": 392,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -10,
           "y:3": 358
         },
-        "53:10": {
+        "54:10": {
           "id:3": 488,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 60
         },
-        "54:10": {
+        "55:10": {
           "id:3": 492,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 396
         },
-        "55:10": {
+        "56:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 188
         },
-        "56:10": {
+        "57:10": {
           "id:3": 521,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 168
         },
-        "57:10": {
+        "58:10": {
           "id:3": 523,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 244
         },
-        "58:10": {
+        "59:10": {
           "id:3": 524,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 272
         },
-        "59:10": {
+        "60:10": {
           "id:3": 525,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 216
         },
-        "60:10": {
+        "61:10": {
           "id:3": 526,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 96
         },
-        "61:10": {
+        "62:10": {
           "id:3": 528,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 60
         },
-        "62:10": {
+        "63:10": {
           "id:3": 529,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 96
         },
-        "63:10": {
+        "64:10": {
           "id:3": 530,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 132
         },
-        "64:10": {
+        "65:10": {
           "id:3": 531,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 300
         },
-        "65:10": {
+        "66:10": {
           "id:3": 532,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "66:10": {
+        "67:10": {
           "id:3": 533,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 96
         },
-        "67:10": {
+        "68:10": {
           "id:3": 534,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 300
         },
-        "68:10": {
+        "69:10": {
           "id:3": 535,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 328
         },
-        "69:10": {
+        "70:10": {
           "id:3": 544,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 96
         },
-        "70:10": {
+        "71:10": {
           "id:3": 545,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 132
         },
-        "71:10": {
+        "72:10": {
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 60
         },
-        "72:10": {
+        "73:10": {
           "id:3": 553,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 96
         },
-        "73:10": {
+        "74:10": {
           "id:3": 554,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 132
         },
-        "74:10": {
+        "75:10": {
           "id:3": 556,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 396
         },
-        "75:10": {
+        "76:10": {
           "id:3": 605,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
           "y:3": 388
         },
-        "76:10": {
+        "77:10": {
           "id:3": 609,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 96
         },
-        "77:10": {
+        "78:10": {
           "id:3": 692,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 396
         },
-        "78:10": {
+        "79:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 192,
           "y:3": 168
         },
-        "79:10": {
+        "80:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 168
         },
-        "80:10": {
+        "81:10": {
           "id:3": 695,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 204
         },
-        "81:10": {
+        "82:10": {
           "id:3": 744,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 60
         },
-        "82:10": {
+        "83:10": {
           "id:3": 753,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 204
         },
-        "83:10": {
+        "84:10": {
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 192,
           "y:3": 396
         },
-        "84:10": {
+        "85:10": {
           "id:3": 764,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -264,
           "y:3": 134
         },
-        "85:10": {
+        "86:10": {
           "id:3": 765,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 60
         },
-        "86:10": {
+        "87:10": {
           "id:3": 766,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -264,
           "y:3": 162
         },
-        "87:10": {
+        "88:10": {
           "id:3": 767,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -226,
           "y:3": 190
         },
-        "88:10": {
+        "89:10": {
           "id:3": 768,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -190,
           "y:3": 218
         },
-        "89:10": {
+        "90:10": {
           "id:3": 769,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -154,
           "y:3": 246
         },
-        "90:10": {
+        "91:10": {
           "id:3": 770,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -118,
           "y:3": 274
         },
-        "91:10": {
+        "92:10": {
           "id:3": 771,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -82,
           "y:3": 302
         },
-        "92:10": {
+        "93:10": {
           "id:3": 772,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -46,
           "y:3": 330
         },
-        "93:10": {
+        "94:10": {
           "id:3": 799,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 168
         },
-        "94:10": {
+        "95:10": {
           "id:3": 816,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 96
         },
-        "95:10": {
+        "96:10": {
           "id:3": 844,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 276
         },
-        "96:10": {
+        "97:10": {
           "id:3": 847,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": 240
         },
-        "97:10": {
+        "98:10": {
           "id:3": 854,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -57725,10 +57625,10 @@
         },
         "4:10": {
           "id:3": 138,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -372,
-          "y:3": 264
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -220,
+          "y:3": 260
         },
         "5:10": {
           "id:3": 155,
@@ -58421,7 +58321,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
-          "y:3": 264
+          "y:3": 176
         },
         "104:10": {
           "id:3": 844,
@@ -58441,8 +58341,8 @@
           "id:3": 846,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": 232
+          "x:3": -60,
+          "y:3": 264
         },
         "107:10": {
           "id:3": 847,
@@ -58511,8 +58411,8 @@
           "id:3": 881,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -372,
-          "y:3": 228
+          "x:3": -180,
+          "y:3": 264
         }
       }
     },
@@ -60353,7 +60253,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
-          "y:3": -36
+          "y:3": 36
         }
       }
     },
@@ -60480,20 +60380,6 @@
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 90
-        },
-        "15:10": {
-          "id:3": 880,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 90
-        },
-        "16:10": {
-          "id:3": 899,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 132
         }
       }
     },

@@ -142,7 +142,7 @@ mixer.recipeBuilder()
 mixer.recipeBuilder()
 	.inputs([<ore:dustEnergeticAlloy>, <ore:dustEnderPearl>])
 	.outputs(<metaitem:dustVibrantAlloy>)
-	.duration(180)
+	.duration(260)
 	.EUt(30)
 	.buildAndRegister();
 //blast_furnace.recipeBuilder().inputs([<ore:ingotEnergeticAlloy>,<minecraft:ender_pearl>]).outputs([<metaitem:ingotVibrantAlloy>]).property("temperature", 1700).duration(600).EUt(120).buildAndRegister();
@@ -157,10 +157,10 @@ mixer.recipeBuilder()
 
 //Nickel Zinc Ferrite [tier 3]
 //Furnace Recipe from NZF dust
-furnace.addRecipe(<metaitem:ingotNickelZincFerrite>, <metaitem:dustNickelZincFerrite>, 0.0);
+//furnace.addRecipe(<metaitem:ingotNickelZincFerrite>, <metaitem:dustNickelZincFerrite>, 0.0);
 //Remove the recipe from NZF dust
 // Nickel Zinc Ferrite Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustFerriteMixture>], [<liquid:oxygen> * 2000]).remove();
+//<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustFerriteMixture>], [<liquid:oxygen> * 2000]).remove();
 
 
 //Stainless Steel [tier 3]
@@ -361,12 +361,17 @@ mixer.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister();
 
+// Electrum Dust * 6
+<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustElectrumFlux> * 8], null).remove();
+
+
 // Fluxed Electrum * 1152
 <recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustElectrum> * 6, <metaitem:dustLumium>, <metaitem:dustSignalum>, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<metaitem:dustElectrum> * 6, <metaitem:dustLumium>, <metaitem:dustSignalum>, <ore:dustMana>])
 	.fluidOutputs(<liquid:electrum_flux> * 1296)
 	.circuit(4)
+	.property("temperature", 1100)
 	.duration(9000)
 	.EUt(120)
 	.buildAndRegister();

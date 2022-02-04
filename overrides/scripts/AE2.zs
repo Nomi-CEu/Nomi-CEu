@@ -13,6 +13,8 @@ import mods.appliedenergistics2.Inscriber;
 //	.EUt(8)
 //	.buildAndRegister();
 
+<appliedenergistics2:material>.displayName = "Activated Certus Quartz";
+
 //Silicon
 Inscriber.removeRecipe(<appliedenergistics2:material:20>); 
 Inscriber.addRecipe(<appliedenergistics2:material:20>, <metaitem:plateSilicon>, true, <appliedenergistics2:material:19>);	

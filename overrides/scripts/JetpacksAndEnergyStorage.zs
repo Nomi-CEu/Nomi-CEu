@@ -732,3 +732,21 @@ mods.extendedcrafting.TableCrafting.addShaped(<enderio:block_soul_binder>, [
 	[<ore:ingotSoularium>, <minecraft:skull:4>,          <ore:itemSoulMachineChassi>,   <minecraft:skull:2>,         <ore:ingotSoularium>],
 	[<ore:ingotSoularium>, <metaitem:plateTungstenSteel>, <minecraft:skull>,             <metaitem:plateTungstenSteel>,<ore:ingotSoularium>],
 	[<ore:ingotSoularium>, <ore:ingotSoularium>, <ore:ingotSoularium>,  <ore:ingotSoularium>,<ore:ingotSoularium>]]);
+
+// Elevation Unit
+canner.recipeBuilder()
+	.inputs(<simplyjetpacks:metaitemmods:18>)
+	.fluidInputs(<liquid:glowstone> * 4032)
+	.outputs(<simplyjetpacks:metaitemmods:19>)
+	.duration(100)
+	.EUt(7)
+	.buildAndRegister();
+
+// Coolant Unit
+canner.recipeBuilder()
+	.inputs(<simplyjetpacks:metaitemmods:20>)
+	.fluidInputs(<liquid:cryotheum> * 6000)
+	.outputs(<simplyjetpacks:metaitemmods:21>)
+	.duration(100)
+	.EUt(7)
+	.buildAndRegister();

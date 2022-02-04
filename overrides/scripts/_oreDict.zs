@@ -1336,6 +1336,8 @@ mods.jei.JEI.hideCategory("extendedcrafting:compressor");
 mods.jei.JEI.hideCategory("extendedcrafting:ender_crafting");
 mods.jei.JEI.hideCategory("thermalexpansion.compression");
 mods.jei.JEI.hideCategory("thermalexpansion.enervation");
+mods.jei.JEI.hideCategory("thermalexpansion.transposer_fill");
+mods.jei.JEI.hideCategory("thermalexpansion.transposer_extract");
 //mods.jei.JEI.hideCategory("gregtech:plasma_arc_furnace");
 //mods.jei.JEI.hideCategory("gregtech:arc_furnace");
 //mods.jei.JEI.hideCategory("gregtech:naquadah_reactor");
@@ -1686,6 +1688,9 @@ mods.jei.JEI.removeAndHide(<avaritia:matter_cluster>);
 //Deep Mob Learning Removals
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_plate>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_redstone>);
+
+//DevTech Removals
+mods.jei.JEI.removeAndHide(<devtech:meta_gem_perfect:2000>); // Perfect Glass
 
 
 //EnderIO Removals
@@ -2261,7 +2266,7 @@ mods.jei.JEI.removeAndHide(<libvulpes:productsheet:1>);
 //Molten Nether Star
 recipes.addShapeless(<minecraft:nether_star> * 9, [<extendedcrafting:storage:2>]);
 solidifier.recipeBuilder().fluidInputs(<liquid:nether_star> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<extendedcrafting:storage:2>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<minecraft:nether_star>).fluidOutputs([<liquid:nether_star> * 144]).duration(40).EUt(30).buildAndRegister();
+//fluidextractor.recipeBuilder().inputs(<minecraft:nether_star>).fluidOutputs([<liquid:nether_star> * 144]).duration(40).EUt(30).buildAndRegister();
 fluidextractor.recipeBuilder().inputs(<extendedcrafting:storage:2>).fluidOutputs([<liquid:nether_star> * 1296]).duration(360).EUt(30).buildAndRegister();
 
 //Molten Empowered Restonia
@@ -2417,8 +2422,8 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //Misc
 //<ore:lvcef>.add(<meta_tile_entity:cef.lv.4>);
 //<ore:lvcef>.add(<meta_tile_entity:cef.lv.16>);
-<ore:wireGtSinglePulsatingIron>.add(<contenttweaker:pulsatingwire>);
-<ore:dustEndstone>.add(<contenttweaker:endstonedust>);
+//<ore:wireGtSinglePulsatingIron>.add(<contenttweaker:pulsatingwire>);
+//<ore:dustEndstone>.add(<contenttweaker:endstonedust>);
 
 //Removals
 //<ore:craftingLensLime>.remove(<metaitem:lensEnderEye>);
@@ -2564,14 +2569,14 @@ recipes.addShapeless(<metaitem:dustSulfur>, [<thermalfoundation:material:771>]);
 recipes.addShapeless(<metaitem:gemCoke> * 9, [<thermalfoundation:storage_resource:1>]);
 
 // Temporary recipe to convert endstone dusts
-recipes.addShapeless(<ore:dustEndstone>.firstItem, [<contenttweaker:endstonedust>]);
-<contenttweaker:endstonedust>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
-<contenttweaker:endstonedust>.addTooltip(format.red("Please use the GregTech variant of Endstone Dust."));
+//recipes.addShapeless(<ore:dustEndstone>.firstItem, [<contenttweaker:endstonedust>]);
+//<contenttweaker:endstonedust>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
+//<contenttweaker:endstonedust>.addTooltip(format.red("Please use the GregTech variant of Endstone Dust."));
 
 // Temporary recipe to convert pulsating iron wire that is probably unnecessary anyway.
-recipes.addShapeless(<ore:wireGtSinglePulsatingIron>.firstItem, [<contenttweaker:pulsatingwire>]);
-<contenttweaker:pulsatingwire>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
-<contenttweaker:pulsatingwire>.addTooltip(format.red("Please use the GregTech variant of Pulsating Iron Wire."));
+//recipes.addShapeless(<ore:wireGtSinglePulsatingIron>.firstItem, [<contenttweaker:pulsatingwire>]);
+//<contenttweaker:pulsatingwire>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
+//<contenttweaker:pulsatingwire>.addTooltip(format.red("Please use the GregTech variant of Pulsating Iron Wire."));
 
 //neutronium plate exchange
 //recipes.addShapeless("of_exchange_neutronium_plate",

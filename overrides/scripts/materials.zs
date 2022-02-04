@@ -107,7 +107,7 @@ var vibrant_alloy = MaterialBuilder(32013, "vibrant_alloy")
     .ingot().fluid()
     .color(0xa4ff70).iconSet("shiny")
     .flags("generate_plate", "generate_gear", "generate_rod", "generate_bolt_screw")
-    .blastTemp(1250, "LOW", 120, 600)
+    .blastTemp(1350, "LOW", 120, 600)
     .components([<material:energetic_alloy> * 1, <material:ender_pearl> * 1])
     .cableProperties(512, 1, 0, true)
     .build();
@@ -183,7 +183,7 @@ var soularium = MaterialBuilder(32024, "soularium")
 var end_steel = MaterialBuilder(32025, "end_steel")
     .ingot().fluid()
     .color(0xd6d980).iconSet("metallic")
-    .flags("generate_plate", "generate_fine_wire")
+    .flags("generate_plate")
     .cableProperties(2048,1,0,true)
     .build();
 
@@ -251,6 +251,8 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:stainless_steel>.addFlags(["generate_foil", "generate_fine_wire"]);
 <material:naquadah_enriched>.addFlags(["generate_bolt_screw"]);
 <material:naquadria>.addFlags(["generate_bolt_screw"]);
+<material:redstone>.addFlags(["generate_dense"]);
+<material:lapis>.addFlags(["generate_dense"]);
 
 <material:glowstone>.setFormula("Au(Ca3(PO4)2)", true);
 <material:energetic_alloy>.setFormula("Au2(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);

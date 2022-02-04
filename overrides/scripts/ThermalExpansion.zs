@@ -281,9 +281,9 @@ recipes.addShaped(<thermalexpansion:augment:496>, [
 	//i give up
 recipes.remove(<thermalexpansion:augment:688>);
 recipes.addShaped(<thermalexpansion:augment:688>, [
-	[<ore:plateFluxedElectrum>, <ore:plateFluxedElectrum>, <ore:plateFluxedElectrum>],
-	[<ore:plateFluxedElectrum>, <thermalfoundation:material:1028>, <ore:plateFluxedElectrum>],
-	[<ore:plateFluxedElectrum>, <ore:plateFluxedElectrum>, <ore:plateFluxedElectrum>]]);
+	[<ore:plateElectrumFlux>, <ore:plateElectrumFlux>, <ore:plateElectrumFlux>],
+	[<ore:plateElectrumFlux>, <thermalfoundation:material:1028>, <ore:plateElectrumFlux>],
+	[<ore:plateElectrumFlux>, <ore:plateElectrumFlux>, <ore:plateElectrumFlux>]]);
 
 	//i give up
 recipes.remove(<thermalexpansion:augment:402>);

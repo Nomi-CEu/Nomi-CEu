@@ -204,7 +204,7 @@ makeShaped("of_elytra_wing", <craftelytra:elytra_wing>,
      "PE ",
      "PP "],
     { P : <metaitem:platePalladium>,
-      E : <metaitem:gemExquisiteEmerald> });
+      E : <metaitem:gemPerfectEmerald> });
 
 recipes.remove(<minecraft:elytra>);
 makeShaped("of_elytra", <minecraft:elytra>,
@@ -214,10 +214,10 @@ makeShaped("of_elytra", <minecraft:elytra>,
 
 
 
-fluidextractor.recipeBuilder()
-    .inputs(<contenttweaker:sentientgear>)
-    .fluidOutputs([<liquid:tungsten_carbide> * 40320])
-    .duration(1000).EUt(3000).buildAndRegister();
+//fluidextractor.recipeBuilder()
+//    .inputs(<contenttweaker:sentientgear>)
+//    .fluidOutputs([<liquid:tungsten_carbide> * 40320])
+//    .duration(1000).EUt(3000).buildAndRegister();
 
 // Helium Plasma * 125
 <recipemap:fusion_reactor>.findRecipe(4096, null, [<liquid:deuterium> * 125, <liquid:tritium> * 125]).remove();
@@ -238,7 +238,7 @@ recipes.remove(<gregtech:machine_casing:6>);
 recipes.remove(<meta_tile_entity:hull.luv>);
 
 recipes.addShaped(<meta_tile_entity:hull.luv>, [
-	[<ore:platePlastic>, <ore:plateLumium>, <ore:platePlastic>],
+	[<metaitem:platePolytetrafluoroethylene>, <ore:plateLumium>, <metaitem:platePolytetrafluoroethylene>],
 	[<ore:cableGtSingleVanadiumGallium>, <gregtech:machine_casing:6>, <ore:cableGtSingleVanadiumGallium>]]);
 
 assembler.findRecipe(16,
@@ -467,3 +467,9 @@ extractor.recipeBuilder()
     .duration(1000)
     .EUt(180000)
     .buildAndRegister();
+
+// UHV 16x Batbuf
+recipes.addShaped(<metaitem:battery_buffer.uhv.16>, [
+    [<metaitem:wireGtHexOmnium>, <metaitem:hull.uhv>, <metaitem:wireGtHexOmnium>],
+    [<metaitem:wireGtHexOmnium>, <minecraft:chest>, <metaitem:wireGtHexOmnium>]
+]);

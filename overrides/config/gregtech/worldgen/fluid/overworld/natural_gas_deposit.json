@@ -11,8 +11,8 @@
     "depleted_yield": 20
   },
   "dimension_filter": [
-    "id:0",
-    "id:111"
+    "name:overworld",
+    "name:lostcities"
   ],
   "fluid": "natural_gas"
 }

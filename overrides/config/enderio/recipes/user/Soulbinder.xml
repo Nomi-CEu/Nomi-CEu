@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+
+  
+<!-- Token Recipes -->
+
+  <recipe name="Tank: Player Token"><disabled/></recipe>
+
+  <recipe name="Tank: Player Token Omni" required="true">
+    <soulbinding energy="25000" levels="1" logic="NONE" souls="ALL">
+      <input name="gregtech:meta_item_1:293" />
+      <output name="itemTokenPlayer" />
+    </soulbinding>
+  </recipe>
+
+
+  <recipe name="Soul Binder: Monster Token"><disabled/></recipe>
+
+  <recipe name="Soul Binder: Monster Token Omni" required="true">
+    <soulbinding energy="25000" levels="1" logic="NONE" souls="MONSTERS">
+      <input name="gregtech:meta_item_1:291" />
+      <output name="itemTokenMonster" />
+    </soulbinding>
+  </recipe>
+
+
+  <recipe name="Soul Binder: Animal Token"><disabled/></recipe>
+
+  <recipe name="Soul Binder: Animal Token Omni" required="true">
+    <soulbinding energy="25000" levels="1" logic="NONE" souls="ANIMALS">
+      <input name="gregtech:meta_item_1:292" />
+      <output name="itemTokenAnimal" />
+    </soulbinding>
+  </recipe>
+
+<!-- Flight Control Unit Recipes -->
+
+  <recipe name="Soul Binder: Flight Control Bat Omni" required="true">
+    <soulbinding energy="75000" levels="8" logic="NONE">
+      <soul name="minecraft:bat" />
+      <input name="simplyjetpacks:metaitemmods:5" />
+      <output name="simplyjetpacks:metaitemmods:6" />
+    </soulbinding>
+  </recipe>
+
+  <recipe name="Soul Binder: Flight Control Ghast Omni" required="true">
+    <soulbinding energy="75000" levels="300" logic="NONE">
+      <soul name="minecraft:ghast" />
+      <input name="simplyjetpacks:metaitemmods:5" />
+      <output name="simplyjetpacks:metaitemmods:6" />
+    </soulbinding>
+  </recipe>
+
+
+</enderio:recipes>

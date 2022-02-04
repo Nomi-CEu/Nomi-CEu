@@ -479,15 +479,15 @@ alloy.recipeBuilder()
     .duration(50).EUt(16).buildAndRegister();
 
 // permutations of ferroboron and lithium ingots/dusts
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:1> * 2])
-    .inputs([<ore:ingotFerroboron>, <ore:ingotLithium>])
-    .duration(300).EUt(16).buildAndRegister();
-
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:1> * 2])
-    .inputs([<ore:dustFerroboron>, <ore:ingotLithium>])
-    .duration(300).EUt(16).buildAndRegister();
+//alloy.recipeBuilder()
+//    .outputs([<nuclearcraft:alloy:1> * 2])
+//    .inputs([<ore:ingotFerroboron>, <ore:ingotLithium>])
+//    .duration(300).EUt(16).buildAndRegister();
+//
+//alloy.recipeBuilder()
+//    .outputs([<nuclearcraft:alloy:1> * 2])
+//    .inputs([<ore:dustFerroboron>, <ore:ingotLithium>])
+//    .duration(300).EUt(16).buildAndRegister();
 
 alloy.recipeBuilder()
     .outputs([<nuclearcraft:alloy:1> * 2])
@@ -500,15 +500,15 @@ alloy.recipeBuilder()
     .duration(300).EUt(16).buildAndRegister();
 
 // permutations of steel and boron ingots/dusts
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:6> * 2])
-    .inputs([<ore:ingotSteel>, <ore:ingotBoron>])
-    .duration(300).EUt(16).buildAndRegister();
-
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:6> * 2])
-    .inputs([<ore:dustSteel>, <ore:ingotBoron>])
-    .duration(300).EUt(16).buildAndRegister();
+//alloy.recipeBuilder()
+//    .outputs([<nuclearcraft:alloy:6> * 2])
+//    .inputs([<ore:ingotSteel>, <ore:ingotBoron>])
+//    .duration(300).EUt(16).buildAndRegister();
+//
+//alloy.recipeBuilder()
+//    .outputs([<nuclearcraft:alloy:6> * 2])
+//    .inputs([<ore:dustSteel>, <ore:ingotBoron>])
+//    .duration(300).EUt(16).buildAndRegister();
 
 alloy.recipeBuilder()
     .outputs([<nuclearcraft:alloy:6> * 2])
@@ -925,26 +925,34 @@ compressor.recipeBuilder()
     .inputs([<ore:dustWheat> * 2])
     .duration(400).EUt(2).buildAndRegister();
 
+// Gelatin from CEu Gelatin
+extractor.recipeBuilder()
+    .inputs(<ore:dustGelatin>)
+    .fluidOutputs(<fluid:gelatin>)
+    .duration(100)
+    .EUt(7)
+    .buildAndRegister();
+
 // Gelatin from meat
-macerator.recipeBuilder()
-    .outputs(<nuclearcraft:gelatin>)
-    .inputs([<ore:dustSmallMeat>])
-    .duration(40).EUt(30).buildAndRegister();
+//macerator.recipeBuilder()
+//    .outputs(<nuclearcraft:gelatin>)
+//    .inputs([<ore:dustSmallMeat>])
+//    .duration(40).EUt(30).buildAndRegister();
 
 // Gelatin from fish
-var fishes as IItemStack[] = [
-    <minecraft:fish>,
-    <minecraft:fish:1>,
-    <minecraft:fish:2>,
-    <minecraft:fish:3>
-] as IItemStack[];
-
-for fish in fishes {
-    macerator.recipeBuilder()
-        .outputs(<nuclearcraft:gelatin> * 4)
-        .inputs([fish])
-        .duration(160).EUt(30).buildAndRegister();
-}
+//var fishes as IItemStack[] = [
+//    <minecraft:fish>,
+//    <minecraft:fish:1>,
+//    <minecraft:fish:2>,
+//    <minecraft:fish:3>
+//] as IItemStack[];
+//
+//for fish in fishes {
+//    macerator.recipeBuilder()
+//        .outputs(<nuclearcraft:gelatin> * 4)
+//        .inputs([fish])
+//        .duration(160).EUt(30).buildAndRegister();
+//}
 
 // Hydrated gelatin
 mixer.recipeBuilder()
@@ -1175,6 +1183,12 @@ thermal_sep.recipeBuilder()
     .duration(3200).EUt(48).buildAndRegister();
 
 //Remove Duping Uranium via extra Uranium 235 tiny Pile
+// Uranium-238 * 1
+<recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:dustUranium>], null).remove();
+// Uranium-238 * 1
+<recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotUranium>], null).remove();
+
+
 //thermal_sep.findRecipe(48, [<metaitem:dustUranium>], [null]).remove();
 //thermal_sep.findRecipe(48, [<metaitem:ingotUranium>], [null]).remove();
 

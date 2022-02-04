@@ -515,31 +515,31 @@ makeShaped("of_dml_living_matter_extraterrestrial",
 );
 
 
-// Lunar Mining Station Rovers:
-
-
-// Helium3 Rover (Tritium)
-makeShaped("of_helium3rover", <contenttweaker:helium3rover> * 16,
-	["SSA",
-	 "BCD",
-	 "E E"],
-	{ A : <metaitem:sensor.ev>,
-	  B : <metaitem:plateTitanium>,
-	  C : <meta_tile_entity:hull.ev>,
-	  D : <metaitem:robot.arm.ev>,
-	  E : <metaitem:conveyor.module.ev>,
-	  S : <solarflux:solar_panel_3> }
-);
-
-// Deuterium Rover
-makeShaped("of_deuteriumrover", <contenttweaker:deuteriumrover> * 16,
-	["SSA",
-	 "BCD",
-	 "E E"],
-	{ A : <metaitem:sensor.hv>,
-	  B : <metaitem:plateStainlessSteel>,
-	  C : <meta_tile_entity:hull.hv>,
-	  D : <metaitem:robot.arm.hv>,
-	  E : <metaitem:conveyor.module.hv>,
-	  S : <solarflux:solar_panel_2> }
-);
+//// Lunar Mining Station Rovers:
+//
+//
+//// Helium3 Rover (Tritium)
+//makeShaped("of_helium3rover", <contenttweaker:helium3rover> * 16,
+//	["SSA",
+//	 "BCD",
+//	 "E E"],
+//	{ A : <metaitem:sensor.ev>,
+//	  B : <metaitem:plateTitanium>,
+//	  C : <meta_tile_entity:hull.ev>,
+//	  D : <metaitem:robot.arm.ev>,
+//	  E : <metaitem:conveyor.module.ev>,
+//	  S : <solarflux:solar_panel_3> }
+//);
+//
+//// Deuterium Rover
+//makeShaped("of_deuteriumrover", <contenttweaker:deuteriumrover> * 16,
+//	["SSA",
+//	 "BCD",
+//	 "E E"],
+//	{ A : <metaitem:sensor.hv>,
+//	  B : <metaitem:plateStainlessSteel>,
+//	  C : <meta_tile_entity:hull.hv>,
+//	  D : <metaitem:robot.arm.hv>,
+//	  E : <metaitem:conveyor.module.hv>,
+//	  S : <solarflux:solar_panel_2> }
+//);

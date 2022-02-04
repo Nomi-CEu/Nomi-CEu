@@ -219,7 +219,7 @@ recipes.addShaped(<enderio:item_liquid_conduit:1> * 4, [
 	[<minecraft:glass>,<minecraft:glass>,<minecraft:glass>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 assembler.recipeBuilder().inputs([<minecraft:glass> * 3, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_liquid_conduit:1> * 8]).duration(80).EUt(16).buildAndRegister();
-macerator.recipeBuilder().inputs([<minecraft:diamond>]).outputs([<metaitem:dustDiamond>]).duration(80).EUt(8).buildAndRegister();
+//macerator.recipeBuilder().inputs([<minecraft:diamond>]).outputs([<metaitem:dustDiamond>]).duration(80).EUt(8).buildAndRegister();
 macerator.recipeBuilder().inputs([<appliedenergistics2:material:7>]).outputs([<appliedenergistics2:material:8>]).duration(80).EUt(8).buildAndRegister();
 
 macerator.recipeBuilder().inputs([<enderio:item_material:16>]).outputs([<enderio:item_material:37>]).duration(500).EUt(16).buildAndRegister();
@@ -323,7 +323,7 @@ recipes.addShapeless(<extrautils2:endershard> * 8, [<minecraft:ender_pearl>]);
 //	.EUt(100).duration(320).buildAndRegister();
 
 //Dimethylhydrazine: Changes the EU/t
-chemical_reactor.findRecipe(480, [null], [<liquid:monochloramine> * 1000, <liquid:dimethylamine> * 1000]).remove();
+chemical_reactor.findRecipe(480, [null], [<liquid:dimethylamine> * 1000, <liquid:monochloramine> * 1000]).remove();
 chemical_reactor.recipeBuilder()
 	.fluidInputs(<liquid:monochloramine> * 1000, <liquid:dimethylamine> * 1000)
 	.fluidOutputs(<liquid:dimethylhydrazine> * 1000,<liquid:hydrochloric_acid> * 1000)
@@ -354,8 +354,8 @@ recipes.addShaped(<actuallyadditions:block_fluid_collector>, [[<actuallyaddition
 compressor.recipeBuilder().inputs(<metaitem:rubber_drop>).outputs(<metaitem:plateRubber>).duration(20).EUt(8).buildAndRegister();
 //compressor.recipeBuilder().inputs(<extrautils2:ingredients:11>).outputs(<moreplates:demon_plate>).duration(200).EUt(400).buildAndRegister();
 compressor.recipeBuilder().inputs(<metaitem:dustCalcium> * 2).outputs(<minecraft:dye:15>).duration(20).EUt(4).buildAndRegister();
-compressor.recipeBuilder().inputs(<minecraft:dye:15> * 3).outputs(<minecraft:bone>).duration(20).EUt(8).buildAndRegister();
-compressor.recipeBuilder().inputs(<minecraft:bone> * 4).outputs(<minecraft:skull>).duration(20).EUt(16).buildAndRegister();
+//compressor.recipeBuilder().inputs(<minecraft:dye:15> * 3).outputs(<minecraft:bone>).duration(20).EUt(8).buildAndRegister();
+assembler.recipeBuilder().inputs(<minecraft:bone> * 4).circuit(14).outputs(<minecraft:skull>).duration(20).EUt(16).buildAndRegister();
 
 
 //macerator.findRecipe(8, [<minecraft:cobblestone>], [null]).remove();
@@ -364,7 +364,7 @@ compressor.recipeBuilder().inputs(<minecraft:bone> * 4).outputs(<minecraft:skull
 //macerator.recipeBuilder().inputs([<minecraft:cobblestone>]).outputs([<minecraft:gravel>]).duration(16).EUt(10).buildAndRegister();
 //macerator.recipeBuilder().inputs([<minecraft:gravel>]).outputs([<minecraft:sand>]).duration(16).EUt(10).buildAndRegister();
 forge_hammer.recipeBuilder().inputs([<minecraft:sand>]).outputs([<contenttweaker:block_dust>]).duration(16).EUt(10).buildAndRegister();
-macerator.recipeBuilder().inputs([<minecraft:netherrack>]).outputs([<metaitem:dustNetherrack>]).duration(16).EUt(10).buildAndRegister();
+//macerator.recipeBuilder().inputs([<minecraft:netherrack>]).outputs([<metaitem:dustNetherrack>]).duration(16).EUt(10).buildAndRegister();
 
 // Endstone Dust * 1
 <recipemap:macerator>.findRecipe(2, [<minecraft:end_stone:0>], null).remove();
@@ -984,24 +984,24 @@ implosion_compressor.recipeBuilder()
 //	return chance * pow(2, tier);
 //};
 
-//Slight nerf to Bone Meal Recipe
-macerator.findRecipe(2, [<minecraft:bone>], [null]).remove();
-macerator.recipeBuilder()
-	.inputs(<minecraft:bone>)
-	.outputs(<minecraft:dye:15> * 4)
-	.duration(60).EUt(8).buildAndRegister();
-
-//Adjust the Bone Meal by hand recipe
-recipes.removeByRecipeName("gregtech:bone_to_bone_meal");
-recipes.addShapeless(<minecraft:dye:15> * 3,
-	[<minecraft:bone>, <ore:gtceMortars>]);
-
-//Adjust Bone Meal Compressor recipe to prevent dupe
-//compressor.findRecipe(8, [<minecraft:dye:15> * 3], [null]).remove();
-compressor.recipeBuilder()
-	.inputs(<minecraft:dye:15> * 4)
-	.outputs(<minecraft:bone>)
-	.duration(20).EUt(8).buildAndRegister();
+////Slight nerf to Bone Meal Recipe
+//macerator.findRecipe(2, [<minecraft:bone>], [null]).remove();
+//macerator.recipeBuilder()
+//	.inputs(<minecraft:bone>)
+//	.outputs(<minecraft:dye:15> * 4)
+//	.duration(60).EUt(8).buildAndRegister();
+//
+////Adjust the Bone Meal by hand recipe
+//recipes.removeByRecipeName("gregtech:bone_to_bone_meal");
+//recipes.addShapeless(<minecraft:dye:15> * 3,
+//	[<minecraft:bone>, <ore:gtceMortars>]);
+//
+////Adjust Bone Meal Compressor recipe to prevent dupe
+////compressor.findRecipe(8, [<minecraft:dye:15> * 3], [null]).remove();
+//compressor.recipeBuilder()
+//	.inputs(<minecraft:dye:15> * 4)
+//	.outputs(<minecraft:bone>)
+//	.duration(20).EUt(8).buildAndRegister();
 
 //Add Decomposition Recipe for Polyphenylene Sulfide
 electrolyzer.recipeBuilder()
@@ -1094,8 +1094,18 @@ recipes.addShaped(<metaitem:steam_grinder>, [
 
 // Crafting Station
 assembler.recipeBuilder()
-	.inputs([<minecraft:chest> * 2, <ore:plankWood> * 4, <ore:craftingTableWood>])
+	.inputs([<minecraft:chest> * 2, <ore:plankWood> * 4, <minecraft:crafting_table>])
 	.outputs([<metaitem:workbench>])
 	.duration(100)
 	.EUt(7)
+	.buildAndRegister();
+
+// Diamond Electrolysis
+// Carbon Dust * 64
+<recipemap:electrolyzer>.findRecipe(30, [<metaitem:dustDiamond>], null).remove();
+electrolyzer.recipeBuilder()
+	.inputs(<metaitem:dustDiamond>)
+	.outputs(<metaitem:dustCarbon> * 16)
+	.duration(768)
+	.EUt(30)
 	.buildAndRegister();

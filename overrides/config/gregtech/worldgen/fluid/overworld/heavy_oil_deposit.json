@@ -12,8 +12,8 @@
   },
   "fluid": "oil_heavy",
   "dimension_filter": [
-    "id:0",
-    "id:111"
+    "name:overworld",
+    "name:lostcities"
   ],
   "biome_modifier": {
     "type": "biome_dictionary",

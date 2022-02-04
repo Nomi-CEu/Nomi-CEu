@@ -89,6 +89,7 @@ recipes.addShaped(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:cow"
 recipes.addShaped(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:pig"}}) * 2, [[<contenttweaker:omnicoin25>, null, null],[null, null, <contenttweaker:omnicoin25>], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_ilmenite_0> * 32, [[<contenttweaker:omnicoin25>, null, null],[null, <contenttweaker:omnicoin25>, null], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_platinum_0> * 32, [[<contenttweaker:omnicoin25>, null, null],[<contenttweaker:omnicoin25>, null, null], [null, null, null]]);
+recipes.addShaped(<gregtech:ore_cooperite_0> * 32, [[<contenttweaker:omnicoin25>, null, null],[<contenttweaker:omnicoin25>, <contenttweaker:omnicoin25>, null], [null, null, null]]);
 recipes.addShaped(<gregtech:ore_diamond_0> * 32, [[<contenttweaker:omnicoin25>, <contenttweaker:omnicoin25>, null],[null, null, null], [null, null, null]]);
 recipes.addShaped(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:sheep"}}) * 2, [[<contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>, <contenttweaker:omnicoin5>],[<contenttweaker:omnicoin5>, null, null], [null, <contenttweaker:omnicoin5>, null]]);
 recipes.addShaped(<gregtech:ore_tricalcium_phosphate_0> * 32, [[null, null, null],[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, <contenttweaker:omnicoin>], [null, <contenttweaker:omnicoin>, <contenttweaker:omnicoin>]]);

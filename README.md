@@ -12,9 +12,9 @@ To alleviate this, the Large Lapidary Dynamo is added, available at MV and gener
 
 Installation instructions for building the bleeding-edge version:
 - Download the repository as a ZIP.
-- Import it into your launcher of choice.
+- Import it into your launcher of choice.  
 
-Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).
-GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84). 
-Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/).
+Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
+GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).   
+Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/).  
 Thank you!

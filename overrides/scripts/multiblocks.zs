@@ -337,32 +337,32 @@ naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, 
 } as IRunOverclockingLogicFunction;
 
 // Large Lapidary Dynamo
-val LAPIDARY_EUT_FIXED = -4096 as int;
-
-val large_lapidary_dynamo = Builder.start("large_lapidary_dynamo")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle("CCC", "CCC", "CCC")
-            .aisle("CCC", "CGC", "CCC")
-            .aisle("CCC", "CSC", "CCC")
-            .where('S', controller.self())
-            .where('G', <blockstate:gregtech:turbine_casing>)
-            .where('C', CTPredicate.states(<metastate:gregtech:metal_casing:3>)
-            | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(4)
-            )
-            .build();
-        } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("large_lapidary_dynamo")
-            .minInputs(1)
-            .maxInputs(1)
-            .build())
-    .withBaseTexture(<metastate:gregtech:metal_casing:3>)
-    .buildAndRegister();
-
-large_lapidary_dynamo.hasMufflerMechanics = false;
-large_lapidary_dynamo.hasMaintenanceMechanics = false;
+//val LAPIDARY_EUT_FIXED = -4096 as int;
+//
+//val large_lapidary_dynamo = Builder.start("large_lapidary_dynamo")
+//    .withPattern(function(controller as IControllerTile) as IBlockPattern {
+//        return FactoryBlockPattern.start()
+//            .aisle("CCC", "CCC", "CCC")
+//            .aisle("CCC", "CGC", "CCC")
+//            .aisle("CCC", "CSC", "CCC")
+//            .where('S', controller.self())
+//            .where('G', <blockstate:gregtech:turbine_casing>)
+//            .where('C', CTPredicate.states(<metastate:gregtech:metal_casing:3>)
+//            | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+//            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(4)
+//            )
+//            .build();
+//        } as IPatternBuilderFunction)
+//    .withRecipeMap(
+//        FactoryRecipeMap.start("large_lapidary_dynamo")
+//            .minInputs(1)
+//            .maxInputs(1)
+//            .build())
+//    .withBaseTexture(<metastate:gregtech:metal_casing:3>)
+//    .buildAndRegister();
+//
+//large_lapidary_dynamo.hasMufflerMechanics = false;
+//large_lapidary_dynamo.hasMaintenanceMechanics = false;
 
 //large_lapidary_dynamo.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
 //    if (absolute_int(recipe.getEUt()) > absolute_int(LAPIDARY_EUT_FIXED)) {
@@ -544,15 +544,15 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
 //      L : <gregtech:machine_casing:6>, //LuV Machine Casing
 //      S : <metaitem:cover.screen>});
 
-var dynamo5 = <thermalexpansion:dynamo:5>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 1 as byte, Augments: []}, false); // Numismatic Dynamo (Hardened)
-makeShaped("large_lapidary_dynamo", <metaitem:multiblocktweaker:large_lapidary_dynamo>,
-    ["CAC",
-     "ANA",
-     "XAX"],
-    { C : <ore:circuitBasic>,
-      A : <gregtech:metal_casing:3>, // Aluminium Casing
-      X : <metaitem:gemExquisiteDiamond>,
-      N : dynamo5 });
+//var dynamo5 = <thermalexpansion:dynamo:5>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 1 as byte, Augments: []}, false); // Numismatic Dynamo (Hardened)
+//makeShaped("large_lapidary_dynamo", <metaitem:multiblocktweaker:large_lapidary_dynamo>,
+//    ["CAC",
+//     "ANA",
+//     "XAX"],
+//    { C : <ore:circuitBasic>,
+//      A : <gregtech:metal_casing:3>, // Aluminium Casing
+//      X : <metaitem:gemExquisiteDiamond>,
+//      N : dynamo5 });
 
 // multiblock recipemap recipes
 // basic projector
@@ -945,7 +945,7 @@ microverse_projector_advanced_ii.recipeMap
     .EUt(1000000)
     .inputs(<contenttweaker:tiertenship>,
             <contenttweaker:universecreationdata>,
-            <ore:blockTritanium> * 8)
+            <ore:blockAwakenedDraconium> * 8)
     .outputs(<contenttweaker:heartofauniverse>)
     .buildAndRegister();
 
@@ -1006,12 +1006,12 @@ naquadah_reactor_2.recipeMap
     .buildAndRegister();
 
 // lapidary dynamo
-large_lapidary_dynamo.recipeMap
-    .recipeBuilder()
-    .duration(150)
-    .EUt(-4096)
-    .inputs(<ore:gemDiamond>)
-    .buildAndRegister();
+//large_lapidary_dynamo.recipeMap
+//    .recipeBuilder()
+//    .duration(150)
+//    .EUt(-4096)
+//    .inputs(<ore:gemDiamond>)
+//    .buildAndRegister();
 
 // Lunar Mining Station Rover Missions
 //lunar_mining_station.recipeMap

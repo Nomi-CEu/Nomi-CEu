@@ -49,72 +49,63 @@ recipes.addShaped(<minecraft:diamond_sword>, [
 furnace.addRecipe(<thermalfoundation:material:833>, <metaitem:rubber_drop>, 0.0);
 
 //Redstone Armor
-recipes.addShaped(<contenttweaker:redstonearmorplate>, [
-[null, <metaitem:plateRedstone>, null], 
-[<metaitem:plateRedstone>, <thermalfoundation:material:833>, <metaitem:plateRedstone>], 
-[null, <metaitem:plateRedstone>, null]]);
+
 recipes.addShaped(<armorplus:redstone_helmet>, [
-	[<contenttweaker:redstonearmorplate>,<contenttweaker:redstonearmorplate>,<contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>]]);
+	[<metaitem:plateDenseRedstone>,<metaitem:plateDenseRedstone>,<metaitem:plateDenseRedstone>], 
+	[<metaitem:plateDenseRedstone>, null, <metaitem:plateDenseRedstone>]]);
 recipes.addShaped(<armorplus:redstone_chestplate>, [
-[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>], 
-[<contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>], 
-[<contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>]]);
+[<metaitem:plateDenseRedstone>, null, <metaitem:plateDenseRedstone>], 
+[<metaitem:plateDenseRedstone>, <metaitem:plateDenseRedstone>, <metaitem:plateDenseRedstone>], 
+[<metaitem:plateDenseRedstone>, <metaitem:plateDenseRedstone>, <metaitem:plateDenseRedstone>]]);
 recipes.addShaped(<armorplus:redstone_leggings>, [
-	[<contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>]]);
+	[<metaitem:plateDenseRedstone>, <metaitem:plateDenseRedstone>, <metaitem:plateDenseRedstone>], 
+	[<metaitem:plateDenseRedstone>, null, <metaitem:plateDenseRedstone>], 
+	[<metaitem:plateDenseRedstone>, null, <metaitem:plateDenseRedstone>]]);
 recipes.addShaped(<armorplus:redstone_boots>, [
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>]]);	
+	[<metaitem:plateDenseRedstone>, null, <metaitem:plateDenseRedstone>], 
+	[<metaitem:plateDenseRedstone>, null, <metaitem:plateDenseRedstone>]]);	
 recipes.addShaped(<armorplus:redstone_sword>, [
-	[null, <contenttweaker:redstonearmorplate>, null], 
-	[null, <contenttweaker:redstonearmorplate>, null], 
+	[null, <metaitem:plateDenseRedstone>, null], 
+	[null, <metaitem:plateDenseRedstone>, null], 
 	[null, <minecraft:stick>, null]]);	
 	
 //Lapis Armor
-recipes.addShaped(<contenttweaker:lapisarmorplate>, [
-[null, <metaitem:plateLapis>, null], 
-[<metaitem:plateLapis>, <thermalfoundation:material:833>, <metaitem:plateLapis>], 
-[null, <metaitem:plateLapis>, null]]);
+
 recipes.addShaped(<armorplus:lapis_helmet>, [
-	[<contenttweaker:lapisarmorplate>,<contenttweaker:lapisarmorplate>,<contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>]]);
+	[<metaitem:plateDenseLapis>,<metaitem:plateDenseLapis>,<metaitem:plateDenseLapis>], 
+	[<metaitem:plateDenseLapis>, null, <metaitem:plateDenseLapis>]]);
 recipes.addShaped(<armorplus:lapis_chestplate>, [
-[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>], 
-[<contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>], 
-[<contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>]]);
+[<metaitem:plateDenseLapis>, null, <metaitem:plateDenseLapis>], 
+[<metaitem:plateDenseLapis>, <metaitem:plateDenseLapis>, <metaitem:plateDenseLapis>], 
+[<metaitem:plateDenseLapis>, <metaitem:plateDenseLapis>, <metaitem:plateDenseLapis>]]);
 recipes.addShaped(<armorplus:lapis_leggings>, [
-	[<contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>]]);
+	[<metaitem:plateDenseLapis>, <metaitem:plateDenseLapis>, <metaitem:plateDenseLapis>], 
+	[<metaitem:plateDenseLapis>, null, <metaitem:plateDenseLapis>], 
+	[<metaitem:plateDenseLapis>, null, <metaitem:plateDenseLapis>]]);
 recipes.addShaped(<armorplus:lapis_boots>, [
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>]]);	
+	[<metaitem:plateDenseLapis>, null, <metaitem:plateDenseLapis>], 
+	[<metaitem:plateDenseLapis>, null, <metaitem:plateDenseLapis>]]);	
 recipes.addShaped(<armorplus:lapis_sword>, [
-	[null, <contenttweaker:lapisarmorplate>, null], 
-	[null, <contenttweaker:lapisarmorplate>, null], 
+	[null, <metaitem:plateDenseLapis>, null], 
+	[null, <metaitem:plateDenseLapis>, null], 
 	[null, <minecraft:stick>, null]]);	
 	
 //Carbon Armor
-recipes.addShaped(<contenttweaker:carbonarmorplate>, [
-[null, <metaitem:ingotCarbon>, null], 
-[<metaitem:ingotCarbon>, <thermalfoundation:material:833>, <metaitem:ingotCarbon>], 
-[null, <metaitem:ingotCarbon>, null]]);
+
 recipes.addShaped(<armorplus:coal_helmet>, [
-	[<contenttweaker:carbonarmorplate>,<contenttweaker:carbonarmorplate>,<contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>]]);
+	[<metaitem:carbon.plate>,<metaitem:carbon.plate>,<metaitem:carbon.plate>], 
+	[<metaitem:carbon.plate>, null, <metaitem:carbon.plate>]]);
 recipes.addShaped(<armorplus:coal_chestplate>, [
-[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>], 
-[<contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>], 
-[<contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>]]);
+[<metaitem:carbon.plate>, null, <metaitem:carbon.plate>], 
+[<metaitem:carbon.plate>, <metaitem:carbon.plate>, <metaitem:carbon.plate>], 
+[<metaitem:carbon.plate>, <metaitem:carbon.plate>, <metaitem:carbon.plate>]]);
 recipes.addShaped(<armorplus:coal_leggings>, [
-	[<contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>]]);
+	[<metaitem:carbon.plate>, <metaitem:carbon.plate>, <metaitem:carbon.plate>], 
+	[<metaitem:carbon.plate>, null, <metaitem:carbon.plate>], 
+	[<metaitem:carbon.plate>, null, <metaitem:carbon.plate>]]);
 recipes.addShaped(<armorplus:coal_boots>, [
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>]]);	
+	[<metaitem:carbon.plate>, null, <metaitem:carbon.plate>], 
+	[<metaitem:carbon.plate>, null, <metaitem:carbon.plate>]]);	
 <armorplus:coal_helmet>.displayName = "Carbon Plated Helmet";	
 <armorplus:coal_chestplate>.displayName = "Carbon Plated Chestplate";	
 <armorplus:coal_leggings>.displayName = "Carbon Plated Leggings";	
@@ -191,19 +182,19 @@ recipes.addShaped(<minecraft:iron_boots>, [
 
 //Knightslime Armor
 recipes.addShaped(<armorplus:knight_slime_helmet>, [
-	[<contenttweaker:knightslimeingot>,<contenttweaker:knightslimeingot>,<contenttweaker:knightslimeingot>], 
-	[<contenttweaker:knightslimeingot>, null, <contenttweaker:knightslimeingot>]]);
+	[<metaitem:plateTitaniumCarbide>,<metaitem:plateTitaniumCarbide>,<metaitem:plateTitaniumCarbide>], 
+	[<metaitem:plateTitaniumCarbide>, <ore:blockSlime>, <metaitem:plateTitaniumCarbide>]]);
 recipes.addShaped(<armorplus:knight_slime_chestplate>, [
-[<contenttweaker:knightslimeingot>, null, <contenttweaker:knightslimeingot>], 
-[<contenttweaker:knightslimeingot>, <contenttweaker:knightslimeingot>, <contenttweaker:knightslimeingot>], 
-[<contenttweaker:knightslimeingot>, <contenttweaker:knightslimeingot>, <contenttweaker:knightslimeingot>]]);
+[<metaitem:plateTitaniumCarbide>, <ore:blockSlime>, <metaitem:plateTitaniumCarbide>], 
+[<metaitem:plateTitaniumCarbide>, <metaitem:plateTitaniumCarbide>, <metaitem:plateTitaniumCarbide>], 
+[<metaitem:plateTitaniumCarbide>, <metaitem:plateTitaniumCarbide>, <metaitem:plateTitaniumCarbide>]]);
 recipes.addShaped(<armorplus:knight_slime_leggings>, [
-	[<contenttweaker:knightslimeingot>, <contenttweaker:knightslimeingot>, <contenttweaker:knightslimeingot>], 
-	[<contenttweaker:knightslimeingot>, null, <contenttweaker:knightslimeingot>], 
-	[<contenttweaker:knightslimeingot>, null, <contenttweaker:knightslimeingot>]]);
+	[<metaitem:plateTitaniumCarbide>, <metaitem:plateTitaniumCarbide>, <metaitem:plateTitaniumCarbide>], 
+	[<metaitem:plateTitaniumCarbide>, <ore:blockSlime>, <metaitem:plateTitaniumCarbide>], 
+	[<metaitem:plateTitaniumCarbide>, null, <metaitem:plateTitaniumCarbide>]]);
 recipes.addShaped(<armorplus:knight_slime_boots>, [
-	[<contenttweaker:knightslimeingot>, null, <contenttweaker:knightslimeingot>], 
-	[<contenttweaker:knightslimeingot>, null, <contenttweaker:knightslimeingot>]]);	
+	[<metaitem:plateTitaniumCarbide>, <ore:blockSlime>, <metaitem:plateTitaniumCarbide>], 
+	[<metaitem:plateTitaniumCarbide>, null, <metaitem:plateTitaniumCarbide>]]);	
 	
 //Infused Lava
 var obs = <armorplus:lava_infused_obsidian>;

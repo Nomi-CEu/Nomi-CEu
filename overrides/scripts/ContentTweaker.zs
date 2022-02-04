@@ -12,17 +12,17 @@ import mods.contenttweaker.IItemFoodEaten;
 import crafttweaker.potions.IPotion;
 
 
-var smallgearextrudershape = VanillaFactory.createItem("smallgearextrudershape");
-smallgearextrudershape.maxStackSize = 64;
-smallgearextrudershape.register();
-
-var deuteriumrover = VanillaFactory.createItem("deuteriumrover");
-deuteriumrover.maxStackSize = 64;
-deuteriumrover.register();
-
-var helium3rover = VanillaFactory.createItem("helium3rover");
-helium3rover.maxStackSize = 64;
-helium3rover.register();
+//var smallgearextrudershape = VanillaFactory.createItem("smallgearextrudershape");
+//smallgearextrudershape.maxStackSize = 64;
+//smallgearextrudershape.register();
+//
+//var deuteriumrover = VanillaFactory.createItem("deuteriumrover");
+//deuteriumrover.maxStackSize = 64;
+//deuteriumrover.register();
+//
+//var helium3rover = VanillaFactory.createItem("helium3rover");
+//helium3rover.maxStackSize = 64;
+//helium3rover.register();
 
 var creativeportabletankmold = VanillaFactory.createItem("creativeportabletankmold");
 creativeportabletankmold.maxStackSize = 64;
@@ -64,9 +64,9 @@ var grainsofinnocence = VanillaFactory.createItem("grainsofinnocence");
 grainsofinnocence.maxStackSize = 64;
 grainsofinnocence.register();
 
-var combinationcircuit = VanillaFactory.createItem("combinationcircuit");
-combinationcircuit.maxStackSize = 64;
-combinationcircuit.register();
+//var combinationcircuit = VanillaFactory.createItem("combinationcircuit");
+//combinationcircuit.maxStackSize = 64;
+//combinationcircuit.register();
 
 //var electronicprocessor = VanillaFactory.createItem("electronicprocessor");
 //electronicprocessor.maxStackSize = 64;
@@ -152,10 +152,10 @@ var gemsensor = VanillaFactory.createItem("gemsensor");
 gemsensor.maxStackSize = 64;
 gemsensor.register();
 
-var draconicstemcells = VanillaFactory.createItem("draconicstemcells");
-draconicstemcells.maxStackSize = 64;
-draconicstemcells.rarity = "epic";
-draconicstemcells.register();
+//var draconicstemcells = VanillaFactory.createItem("draconicstemcells");
+//draconicstemcells.maxStackSize = 64;
+//draconicstemcells.rarity = "epic";
+//draconicstemcells.register();
 
 var radiationlayer = VanillaFactory.createItem("radiationlayer");
 radiationlayer.maxStackSize = 64;
@@ -212,9 +212,9 @@ var moondust = VanillaFactory.createItem("moondust");
 moondust.maxStackSize = 64;
 moondust.register();
 
-var pulsatingwire = VanillaFactory.createItem("pulsatingwire");
-pulsatingwire.maxStackSize = 64;
-pulsatingwire.register();
+//var pulsatingwire = VanillaFactory.createItem("pulsatingwire");
+//pulsatingwire.maxStackSize = 64;
+//pulsatingwire.register();
 
 var blazepowder = VanillaFactory.createItem("blazepowder");
 blazepowder.maxStackSize = 64;
@@ -242,25 +242,25 @@ block_dust.blockResistance = 0.4;
 block_dust.gravity = true;
 block_dust.register();
 
-var endstonedust = VanillaFactory.createItem("endstonedust");
-endstonedust.maxStackSize = 64;
-endstonedust.register();
+//var endstonedust = VanillaFactory.createItem("endstonedust");
+//endstonedust.maxStackSize = 64;
+//endstonedust.register();
+//
+//var knightslimeingot = VanillaFactory.createItem("knightslimeingot");
+//knightslimeingot.maxStackSize = 64;
+//knightslimeingot.register();
 
-var knightslimeingot = VanillaFactory.createItem("knightslimeingot");
-knightslimeingot.maxStackSize = 64;
-knightslimeingot.register();
-
-var redstonearmorplate = VanillaFactory.createItem("redstonearmorplate");
-redstonearmorplate.maxStackSize = 64;
-redstonearmorplate.register();
-
-var carbonarmorplate = VanillaFactory.createItem("carbonarmorplate");
-carbonarmorplate.maxStackSize = 64;
-carbonarmorplate.register();
-
-var lapisarmorplate = VanillaFactory.createItem("lapisarmorplate");
-lapisarmorplate.maxStackSize = 64;
-lapisarmorplate.register();
+//var redstonearmorplate = VanillaFactory.createItem("redstonearmorplate");
+//redstonearmorplate.maxStackSize = 64;
+//redstonearmorplate.register();
+//
+//var carbonarmorplate = VanillaFactory.createItem("carbonarmorplate");
+//carbonarmorplate.maxStackSize = 64;
+//carbonarmorplate.register();
+//
+//var lapisarmorplate = VanillaFactory.createItem("lapisarmorplate");
+//lapisarmorplate.maxStackSize = 64;
+//lapisarmorplate.register();
 
 var solidifiedargon = VanillaFactory.createItem("solidifiedargon");
 solidifiedargon.maxStackSize = 64;
@@ -438,18 +438,18 @@ ultimate_generator.register();
 
 
 
-var hotdraconiumingot = VanillaFactory.createItem("hotdraconiumingot");
-hotdraconiumingot.rarity = "rare";
-hotdraconiumingot.maxStackSize = 16;
-
-hotdraconiumingot.onItemUpdate = function(itemStack, world, owner, slot, isSelected) {
-    if (world.getWorldTime() % 20 == 0) {
-        owner.attackEntityFrom(<damageSource:heat>.setDamageBypassesArmor(), 3.0);
-    }
-    return;
-};
-
-hotdraconiumingot.register();
+//var hotdraconiumingot = VanillaFactory.createItem("hotdraconiumingot");
+//hotdraconiumingot.rarity = "rare";
+//hotdraconiumingot.maxStackSize = 16;
+//
+//hotdraconiumingot.onItemUpdate = function(itemStack, world, owner, slot, isSelected) {
+//    if (world.getWorldTime() % 20 == 0) {
+//        owner.attackEntityFrom(<damageSource:heat>.setDamageBypassesArmor(), 3.0);
+//    }
+//    return;
+//};
+//
+//hotdraconiumingot.register();
 
 
 
@@ -514,10 +514,10 @@ quantumfluxedeterniumplating.rarity = "epic";
 quantumfluxedeterniumplating.maxStackSize = 64;
 quantumfluxedeterniumplating.register();
 
-var neutroniumplating = VanillaFactory.createItem("neutroniumplating");
-neutroniumplating.rarity = "epic";
-neutroniumplating.maxStackSize = 64;
-neutroniumplating.register();
+//var neutroniumplating = VanillaFactory.createItem("neutroniumplating");
+//neutroniumplating.rarity = "epic";
+//neutroniumplating.maxStackSize = 64;
+//neutroniumplating.register();
 
 var heartofauniverse = VanillaFactory.createItem("heartofauniverse");
 heartofauniverse.rarity = "epic";
@@ -630,20 +630,20 @@ stellarcreationdata.rarity = "rare";
 stellarcreationdata.maxStackSize = 64;
 stellarcreationdata.register();
 
-var lairoftheclockworkkingdata = VanillaFactory.createItem("lairoftheclockworkkingdata");
-lairoftheclockworkkingdata.rarity = "epic";
-lairoftheclockworkkingdata.maxStackSize = 1;
-lairoftheclockworkkingdata.register();
+//var lairoftheclockworkkingdata = VanillaFactory.createItem("lairoftheclockworkkingdata");
+//lairoftheclockworkkingdata.rarity = "epic";
+//lairoftheclockworkkingdata.maxStackSize = 1;
+//lairoftheclockworkkingdata.register();
 
 var lairofthechaosguardiandata = VanillaFactory.createItem("lairofthechaosguardiandata");
 lairofthechaosguardiandata.rarity = "epic";
 lairofthechaosguardiandata.maxStackSize = 1;
 lairofthechaosguardiandata.register();
 
-var sentientgear = VanillaFactory.createItem("sentientgear");
-sentientgear.rarity = "epic";
-sentientgear.maxStackSize = 64;
-sentientgear.register();
+//var sentientgear = VanillaFactory.createItem("sentientgear");
+//sentientgear.rarity = "epic";
+//sentientgear.maxStackSize = 64;
+//sentientgear.register();
 
 var denseoilshale = VanillaFactory.createBlock("denseoilshale", <blockmaterial:rock>);
 denseoilshale.blockSoundType = <soundtype:stone>;
@@ -716,8 +716,8 @@ pulsatingmesh.maxStackSize = 64;
 pulsatingmesh.register();
 
 
-var simulation_casing = VanillaFactory.createBlock("simulation_casing", <blockmaterial:iron>);
-simulation_casing.register();
-
-var simulation_casing_2 = VanillaFactory.createBlock("simulation_casing_2", <blockmaterial:iron>);
-simulation_casing_2.register();
+//var simulation_casing = VanillaFactory.createBlock("simulation_casing", <blockmaterial:iron>);
+//simulation_casing.register();
+//
+//var simulation_casing_2 = VanillaFactory.createBlock("simulation_casing_2", <blockmaterial:iron>);
+//simulation_casing_2.register();

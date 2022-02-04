@@ -224,49 +224,42 @@ assembler.recipeBuilder().inputs(<ore:plateIron> * 8).notConsumable(<metaitem:ci
 
 
 // pyro
-pyrolyse_oven.recipeBuilder()
-	.inputs([<ore:logWood> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 10}))
-	.fluidInputs([<liquid:steam> * 4000])
-	.outputs([<minecraft:coal:1> * 20])
-	.fluidOutputs([<liquid:creosote> * 4000])
-	.duration(600).EUt(30).buildAndRegister();
 
-//Wood Vinegar and Charcoal
-pyrolyse_oven.recipeBuilder()
-	.inputs([<ore:logWood> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 11}))
-	.fluidInputs([<liquid:steam> * 4000])
-	.outputs([<minecraft:coal:1> * 20])
-	.fluidOutputs([<liquid:wood_vinegar> * 3000])
-	.duration(600).EUt(30).buildAndRegister();
-
-//Wood Gas and Charcoal
-pyrolyse_oven.recipeBuilder()
-	.inputs([<ore:logWood> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 12}))
-	.fluidInputs([<liquid:steam> * 4000])
-	.outputs([<minecraft:coal:1> * 20])
-	.fluidOutputs([<liquid:wood_gas> * 1500])
-	.duration(600).EUt(30).buildAndRegister();
-
-//Wood Tar and Charcoal
-pyrolyse_oven.recipeBuilder()
-	.inputs([<ore:logWood> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 13}))
-	.fluidInputs([<liquid:steam> * 4000])
-	.outputs([<minecraft:coal:1> * 20])
-	.fluidOutputs([<liquid:wood_tar> * 1500])
-	.duration(600).EUt(30).buildAndRegister();
-
-//Charcoal Byproducts and Charcoal
-pyrolyse_oven.recipeBuilder()
-	.inputs([<ore:logWood> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 14}))
-	.fluidInputs([<liquid:steam> * 4000])
-	.outputs([<minecraft:coal:1> * 20])
-	.fluidOutputs([<liquid:charcoal_byproducts> * 4000])
-	.duration(600).EUt(30).buildAndRegister();
+////Wood Vinegar and Charcoal
+//pyrolyse_oven.recipeBuilder()
+//	.inputs([<ore:logWood> * 16])
+//	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 11}))
+//	.fluidInputs([<liquid:steam> * 4000])
+//	.outputs([<minecraft:coal:1> * 20])
+//	.fluidOutputs([<liquid:wood_vinegar> * 3000])
+//	.duration(600).EUt(30).buildAndRegister();
+//
+////Wood Gas and Charcoal
+//pyrolyse_oven.recipeBuilder()
+//	.inputs([<ore:logWood> * 16])
+//	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 12}))
+//	.fluidInputs([<liquid:steam> * 4000])
+//	.outputs([<minecraft:coal:1> * 20])
+//	.fluidOutputs([<liquid:wood_gas> * 1500])
+//	.duration(600).EUt(30).buildAndRegister();
+//
+////Wood Tar and Charcoal
+//pyrolyse_oven.recipeBuilder()
+//	.inputs([<ore:logWood> * 16])
+//	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 13}))
+//	.fluidInputs([<liquid:steam> * 4000])
+//	.outputs([<minecraft:coal:1> * 20])
+//	.fluidOutputs([<liquid:wood_tar> * 1500])
+//	.duration(600).EUt(30).buildAndRegister();
+//
+////Charcoal Byproducts and Charcoal
+//pyrolyse_oven.recipeBuilder()
+//	.inputs([<ore:logWood> * 16])
+//	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 14}))
+//	.fluidInputs([<liquid:steam> * 4000])
+//	.outputs([<minecraft:coal:1> * 20])
+//	.fluidOutputs([<liquid:charcoal_byproducts> * 4000])
+//	.duration(600).EUt(30).buildAndRegister();
 
 //Phenol and Coke
 pyrolyse_oven.recipeBuilder()
@@ -351,7 +344,7 @@ circuit_assembler.recipeBuilder()
 // High Voltage Coil * 1
 <recipemap:assembler>.findRecipe(480, [<metaitem:stickSteelMagnetic>, <metaitem:wireFineBlackSteel> * 16, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 assembler.recipeBuilder()
-	.inputs(<metaitem:stickSteelMagnetic>, <metaitem:wireFineEndSteel> * 16)
+	.inputs(<metaitem:stickSteelMagnetic>, <metaitem:wireFineSilver> * 16)
 	.circuit(1)
 	.outputs(<metaitem:voltage_coil.hv>)
 	.duration(200)
@@ -463,11 +456,11 @@ chemical_reactor.recipeBuilder()
 	.EUt(30720)
 	.buildAndRegister();
 
-large_chemical_reactor.recipeBuilder()
-	.inputs(<minecraft:dragon_egg>)
-	.fluidInputs(<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500)
-	.outputs([<metaitem:stem_cells> * 64, <metaitem:stem_cells> * 64])
-	.fluidOutputs(<liquid:bacterial_sludge> * 500)
-	.duration(6000)
-	.EUt(30720)
-	.buildAndRegister();
+//large_chemical_reactor.recipeBuilder()
+//	.inputs(<minecraft:dragon_egg>)
+//	.fluidInputs(<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500)
+//	.outputs([<metaitem:stem_cells> * 64, <metaitem:stem_cells> * 64])
+//	.fluidOutputs(<liquid:bacterial_sludge> * 500)
+//	.duration(6000)
+//	.EUt(30720)
+//	.buildAndRegister();
