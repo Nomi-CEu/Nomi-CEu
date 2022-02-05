@@ -223,8 +223,8 @@ recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_ic
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<draconicevolution:generator>, [
-	[<ore:ingotDraconium>,<ore:ingotDraconium>,<ore:ingotDraconium>], 
-	[<ore:ingotDraconium>,<extrautils2:machine>,<ore:ingotDraconium>], 
+	[<ore:plateDraconium>,<ore:plateDraconium>,<ore:plateDraconium>], 
+	[<ore:plateDraconium>,<extrautils2:machine>,<ore:plateDraconium>], 
 	[<ore:blockStellite100>, furnGen, <ore:blockStellite100>]]);
 		
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_netherstar"}), [

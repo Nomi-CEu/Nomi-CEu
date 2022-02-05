@@ -2358,19 +2358,19 @@ recipes.addShapeless(<extendedcrafting:material:32>, [<metaitem:ingotOmnium>]);
 //solidifier.recipeBuilder().fluidInputs(<liquid:neutronium> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<avaritia:block_resource>]).duration(200).EUt(30).buildAndRegister();
 //recipes.addShapeless(<avaritia:resource:4>, [<metaitem:ingotNeutronium>]);
 
-// Signalum Plate
-solidifier.recipeBuilder()
-    .outputs([<ore:plateSignalum>.firstItem])
-    .fluidInputs(<liquid:signalum> * 144)
-    .notConsumable(<metaitem:shape.mold.plate>)
-    .duration(200).EUt(30).buildAndRegister();
-
-// Enderium Plate
-solidifier.recipeBuilder()
-    .outputs([<ore:plateEnderium>.firstItem])
-    .fluidInputs(<liquid:enderium> * 144)
-    .notConsumable(<metaitem:shape.mold.plate>)
-    .duration(200).EUt(30).buildAndRegister();
+//// Signalum Plate
+//solidifier.recipeBuilder()
+//    .outputs([<ore:plateSignalum>.firstItem])
+//    .fluidInputs(<liquid:signalum> * 144)
+//    .notConsumable(<metaitem:shape.mold.plate>)
+//    .duration(200).EUt(30).buildAndRegister();
+//
+//// Enderium Plate
+//solidifier.recipeBuilder()
+//    .outputs([<ore:plateEnderium>.firstItem])
+//    .fluidInputs(<liquid:enderium> * 144)
+//    .notConsumable(<metaitem:shape.mold.plate>)
+//    .duration(200).EUt(30).buildAndRegister();
 
 // Crystal Matrix Plate
 //solidifier.recipeBuilder()
@@ -2379,12 +2379,12 @@ solidifier.recipeBuilder()
 //    .notConsumable(<metaitem:shape.mold.plate>)
 //    .duration(200).EUt(30).buildAndRegister();
 
-// Lumium Plate
-solidifier.recipeBuilder()
-	.outputs([<ore:plateLumium>.firstItem])
-	.fluidInputs(<liquid:lumium> * 144)
-	.notConsumable(<metaitem:shape.mold.plate>)
-	.duration(200).EUt(30).buildAndRegister();
+//// Lumium Plate
+//solidifier.recipeBuilder()
+//	.outputs([<ore:plateLumium>.firstItem])
+//	.fluidInputs(<liquid:lumium> * 144)
+//	.notConsumable(<metaitem:shape.mold.plate>)
+//	.duration(200).EUt(30).buildAndRegister();
 
 
 //Redstone Alloy
@@ -2470,6 +2470,11 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookMvCef>.add(<metaitem:energy_converter.mv.4>);
 <ore:questbookMvCef>.add(<metaitem:energy_converter.mv.8>);
 <ore:questbookMvCef>.add(<metaitem:energy_converter.mv.16>);
+
+<ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.iv>);
+<ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.luv>);
+<ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.zpm>);
+<ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.uv>);
 
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.lv>); // LV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor

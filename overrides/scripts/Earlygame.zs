@@ -58,18 +58,18 @@ recipes.addShapeless(<metaitem:dustRedAlloy>, [<metaitem:dustCopper>, <minecraft
 
 //Dusts
 //furnace.addRecipe(<metaitem:ingotTin>, <gregtech:ore_tin_0>, 0.0);
-//recipes.addShapeless(<metaitem:dustCopper>, [<ore:ingotCopper>,<ore:craftingToolMortar>]);
-//recipes.addShapeless(<metaitem:dustIron>, [<ore:ingotIron>,<ore:craftingToolMortar>]);
-//recipes.addShapeless(<metaitem:dustLithium>, [<ore:ingotLithium>,<ore:craftingToolMortar>]);
-//recipes.addShapeless(<metaitem:dustCoal>,[<minecraft:coal>,<ore:craftingToolMortar>]);
-//recipes.addShapeless(<metaitem:dustCharcoal>,[<minecraft:coal:1>,<ore:craftingToolMortar>]);
-//recipes.addShapeless(<metaitem:dustTin>, [<metaitem:ingotTin>,<ore:craftingToolMortar>]);
-recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:craftingToolMortar>]);
-recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:craftingToolMortar>]);
-recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:craftingToolMortar>]);
+//recipes.addShapeless(<metaitem:dustCopper>, [<ore:ingotCopper>,<ore:gtceMortars>]);
+//recipes.addShapeless(<metaitem:dustIron>, [<ore:ingotIron>,<ore:gtceMortars>]);
+//recipes.addShapeless(<metaitem:dustLithium>, [<ore:ingotLithium>,<ore:gtceMortars>]);
+//recipes.addShapeless(<metaitem:dustCoal>,[<minecraft:coal>,<ore:gtceMortars>]);
+//recipes.addShapeless(<metaitem:dustCharcoal>,[<minecraft:coal:1>,<ore:gtceMortars>]);
+//recipes.addShapeless(<metaitem:dustTin>, [<metaitem:ingotTin>,<ore:gtceMortars>]);
+recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
+recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:gtceMortars>]);
+recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:gtceMortars>]);
 recipes.addShapeless(<minecraft:clay>, [<contenttweaker:block_dust>,<minecraft:water_bucket>]);
 furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
-recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:craftingToolMortar>]);
+recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
 
 
 //Clay Electrolyzing
@@ -785,7 +785,7 @@ recipes.addShaped(<meta_tile_entity:extruder.ev>, [
 
 
 recipes.addShapeless(<metaitem:dustConductiveIron>, [<metaitem:dustIron>,<minecraft:redstone>]);
-//recipes.addShapeless(<minecraft:flint>, [<ore:craftingToolMortar>, <minecraft:gravel:*>, <minecraft:gravel:*>]);
+//recipes.addShapeless(<minecraft:flint>, [<ore:gtceMortars>, <minecraft:gravel:*>, <minecraft:gravel:*>]);
 
 furnace.addRecipe(<minecraft:iron_nugget> * 3, <metaitem:dustVanadiumMagnetite>, 0.0);
 furnace.addRecipe(<minecraft:iron_nugget> * 2, <metaitem:dustImpureVanadiumMagnetite>, 0.0);

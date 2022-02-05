@@ -177,6 +177,7 @@ var crystal_matrix = MaterialBuilder(32023, "crystal_matrix")
 var soularium = MaterialBuilder(32024, "soularium")
     .ingot().fluid()
     .color(0x7c674d).iconSet("metallic")
+    .flags("generate_plate")
     .components([<material:gold> * 1])
     .build();
 

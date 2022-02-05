@@ -45,7 +45,8 @@ furnace.remove(<metaitem:ingotSignalum>, <metaitem:dustSignalum>);
 //blast_furnace.findRecipe(120, [<metaitem:ingotWroughtIron>], [<liquid:oxygen> * 1000]).remove();	
 // Steel Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:ingotWroughtIron>], [<liquid:oxygen> * 1000]).remove();
-
+// Steel Ingot * 1
+<recipemap:electric_blast_furnace>.findRecipe(120, [<minecraft:iron_ingot:0>], [<liquid:oxygen> * 200]).remove();
 
 //Silcon [tier 0]
 // Silicon Ingot * 1
@@ -60,6 +61,7 @@ furnace.addRecipe(<metaitem:ingotSilicon>, <metaitem:dustSilicon>, 0.0);
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustBlackSteel>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
 blast_furnace.recipeBuilder().inputs([<metaitem:dustBlackSteel>]).outputs([<metaitem:ingotBlackSteel>]).property("temperature", 1000).duration(200).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:dustBlackSteel>]).fluidInputs([<liquid:nitrogen> * 1000]).outputs([<metaitem:ingotBlackSteel>]).property("temperature", 1000).duration(135).EUt(120).buildAndRegister();
 
 // Black Steel * 720
 <recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:nitrogen> * 5000]).remove();

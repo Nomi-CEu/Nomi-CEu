@@ -808,7 +808,7 @@ makeShaped("ar_optical_sensor",
 		" I ",
 	], {
 		G: <minecraft:glass_pane>,   // Glass Pane
-		I: <ore:ingotPulsatingIron>, // Pulsating Iron Ingot
+		I: <ore:platePulsatingIron>, // Pulsating Iron
 		S: <metaitem:sensor.ev>,     // EV Sensor
 	});
 
@@ -1150,7 +1150,7 @@ recipes.remove(<advancedrocketry:oxygenscrubber>);
 recipes.addShaped(<advancedrocketry:oxygenscrubber>, [
 	[<minecraft:iron_bars>, <metaitem:rotorTitanium>, <minecraft:iron_bars>],
 	[<minecraft:iron_bars>, <metaitem:electric.motor.ev>, <minecraft:iron_bars>],
-	[<minecraft:iron_bars>, <metaitem:ingotCarbon>, <minecraft:iron_bars>]]);
+	[<minecraft:iron_bars>, <metaitem:carbon.mesh>, <minecraft:iron_bars>]]);
 
 // Carbon Collection Cartridge - steel plating since these last a while
 recipes.remove(<advancedrocketry:carbonscrubbercartridge>);

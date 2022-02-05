@@ -250,17 +250,17 @@ block_dust.register();
 //knightslimeingot.maxStackSize = 64;
 //knightslimeingot.register();
 
-//var redstonearmorplate = VanillaFactory.createItem("redstonearmorplate");
-//redstonearmorplate.maxStackSize = 64;
-//redstonearmorplate.register();
-//
-//var carbonarmorplate = VanillaFactory.createItem("carbonarmorplate");
-//carbonarmorplate.maxStackSize = 64;
-//carbonarmorplate.register();
-//
-//var lapisarmorplate = VanillaFactory.createItem("lapisarmorplate");
-//lapisarmorplate.maxStackSize = 64;
-//lapisarmorplate.register();
+var redstonearmorplate = VanillaFactory.createItem("redstonearmorplate");
+redstonearmorplate.maxStackSize = 64;
+redstonearmorplate.register();
+
+var carbonarmorplate = VanillaFactory.createItem("carbonarmorplate");
+carbonarmorplate.maxStackSize = 64;
+carbonarmorplate.register();
+
+var lapisarmorplate = VanillaFactory.createItem("lapisarmorplate");
+lapisarmorplate.maxStackSize = 64;
+lapisarmorplate.register();
 
 var solidifiedargon = VanillaFactory.createItem("solidifiedargon");
 solidifiedargon.maxStackSize = 64;

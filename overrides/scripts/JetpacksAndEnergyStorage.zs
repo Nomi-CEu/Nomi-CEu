@@ -397,9 +397,9 @@ recipes.addShaped(<enderio:block_zombie_generator>, [
 
 recipes.remove(<enderio:block_franken_zombie_generator>);
 recipes.addShaped(<enderio:block_franken_zombie_generator>, [
-	[<ore:ingotSoularium>, <ore:ingotSoularium>, <ore:ingotSoularium>],
+	[<ore:plateSoularium>, <ore:plateSoularium>, <ore:plateSoularium>],
 	[<ore:skullZombieFrankenstein>, <enderio:block_zombie_generator>, <ore:skullZombieFrankenstein>],
-	[<metaitem:gearElectricalSteel>, <ore:ingotSoularium>, <metaitem:gearElectricalSteel>]]);
+	[<metaitem:gearElectricalSteel>, <ore:plateSoularium>, <metaitem:gearElectricalSteel>]]);
 
 //The Vat
 recipes.remove(<enderio:block_vat>);
@@ -727,11 +727,11 @@ recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"})
 
 recipes.remove(<enderio:block_soul_binder>);
 mods.extendedcrafting.TableCrafting.addShaped(<enderio:block_soul_binder>, [
-	[<ore:ingotSoularium>, <ore:ingotSoularium>, <ore:ingotSoularium>,  <ore:ingotSoularium>,<ore:ingotSoularium>],
-	[<ore:ingotSoularium>, <metaitem:plateTungstenSteel>, <enderio:block_enderman_skull>,<metaitem:plateTungstenSteel>,<ore:ingotSoularium>],
-	[<ore:ingotSoularium>, <minecraft:skull:4>,          <ore:itemSoulMachineChassi>,   <minecraft:skull:2>,         <ore:ingotSoularium>],
-	[<ore:ingotSoularium>, <metaitem:plateTungstenSteel>, <minecraft:skull>,             <metaitem:plateTungstenSteel>,<ore:ingotSoularium>],
-	[<ore:ingotSoularium>, <ore:ingotSoularium>, <ore:ingotSoularium>,  <ore:ingotSoularium>,<ore:ingotSoularium>]]);
+	[<ore:plateSoularium>, <ore:plateSoularium>, <ore:plateSoularium>,  <ore:plateSoularium>,<ore:plateSoularium>],
+	[<ore:plateSoularium>, <metaitem:plateTungstenSteel>, <enderio:block_enderman_skull>,<metaitem:plateTungstenSteel>,<ore:plateSoularium>],
+	[<ore:plateSoularium>, <minecraft:skull:4>,          <ore:itemSoulMachineChassi>,   <minecraft:skull:2>,         <ore:plateSoularium>],
+	[<ore:plateSoularium>, <metaitem:plateTungstenSteel>, <minecraft:skull>,             <metaitem:plateTungstenSteel>,<ore:plateSoularium>],
+	[<ore:plateSoularium>, <ore:plateSoularium>, <ore:plateSoularium>,  <ore:plateSoularium>,<ore:plateSoularium>]]);
 
 // Elevation Unit
 canner.recipeBuilder()

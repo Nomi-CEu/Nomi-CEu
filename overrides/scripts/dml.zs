@@ -42,9 +42,9 @@ recipes.addShapeless(<deepmoblearning:data_model_thermal_elemental>.withTag({sim
 
 recipes.remove(<deepmoblearning:extraction_chamber>);
 recipes.addShaped(<deepmoblearning:extraction_chamber>, [	
-	[<ore:ingotEnergeticAlloy>, <minecraft:glass_pane>, <ore:ingotEnergeticAlloy>], 
+	[<ore:plateEnergeticAlloy>, <minecraft:glass_pane>, <ore:plateEnergeticAlloy>], 
 	[<ore:circuitGood>, <deepmoblearning:machine_casing>, <ore:circuitGood>], 
-	[<ore:ingotEnergeticAlloy>, <minecraft:hopper>, <ore:ingotEnergeticAlloy>]]);
+	[<ore:plateEnergeticAlloy>, <minecraft:hopper>, <ore:plateEnergeticAlloy>]]);
 
 recipes.remove(<deepmoblearning:machine_casing>);
 <deepmoblearning:machine_casing>.displayName = "Dark Steel Machine Hull";
