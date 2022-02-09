@@ -65,6 +65,7 @@ recipes.addShaped(<minecraft:sapling:5> * 64, [[<contenttweaker:omnicoin>, <cont
 recipes.addShaped(<minecraft:sapling:4> * 64, [[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, null],[null, null, <contenttweaker:omnicoin>], [null, null, null]]);
 recipes.addShaped(<minecraft:sapling:1> * 64, [[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, null],[null, null, null], [null, <contenttweaker:omnicoin>, null]]);
 recipes.addShaped(<minecraft:sapling:2> * 64, [[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, null],[<contenttweaker:omnicoin>, null, null], [null, null, null]]);
+recipes.addShaped(<minecraft:clay_ball> * 64, [[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, <contenttweaker:omnicoin>],[null, null, <contenttweaker:omnicoin>], [null, null, null]]);
 recipes.addShaped(<actuallyadditions:item_canola_seed> * 32, [[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, null],[null, <contenttweaker:omnicoin>, null], [null, null, null]]);
 recipes.addShaped(<minecraft:sapling> * 64, [[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, <contenttweaker:omnicoin>],[null, null, null], [null, null, null]]);
 recipes.addShaped(<minecraft:reeds> * 32, [[<contenttweaker:omnicoin>, null, <contenttweaker:omnicoin>],[null, null, null], [null, null, null]]);

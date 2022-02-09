@@ -254,6 +254,15 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:naquadria>.addFlags(["generate_bolt_screw"]);
 <material:redstone>.addFlags(["generate_dense"]);
 <material:lapis>.addFlags(["generate_dense"]);
+// Prevent TE Gears from showing up
+<material:tin>.addFlags(["generate_gear"]);
+<material:copper>.addFlags(["generate_gear"]);
+<material:gold>.addFlags(["generate_gear"]);
+<material:lead>.addFlags(["generate_gear"]);
+<material:nickel>.addFlags(["generate_gear"]);
+<material:platinum>.addFlags(["generate_gear", ]);
+<material:silver>.addFlags(["generate_gear"]);
+<material:emerald>.addFlags(["generate_gear"]);
 
 <material:glowstone>.setFormula("Au(Ca3(PO4)2)", true);
 <material:energetic_alloy>.setFormula("Au2(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);

@@ -589,9 +589,9 @@ microverse_projector_basic.recipeMap
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
     .outputs(<metaitem:gemPerfectDiamond> * 64,
-             <gregtech:ore_apatite_0> * 64,
-             <gregtech:ore_tricalcium_phosphate_0> * 64,
-             <gregtech:ore_quartzite_0> * 64)
+             <gregtech:ore_apatite_0:7> * 64,
+             <gregtech:ore_tricalcium_phosphate_0:7> * 64,
+             <gregtech:ore_quartzite_0:7> * 64)
     .buildAndRegister();
 
 // t1 stellar creation data 1
@@ -628,13 +628,13 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_pyrochlore_0:2> * 64,
              <gregtech:ore_copper_0:2> * 64,
              <gregtech:ore_sphalerite_0:2> * 64,
-             <gregtech:ore_cassiterite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
+             <gregtech:ore_cassiterite_0:2> * 64,
+             <gregtech:ore_scheelite_0:3> * 64,
+             <gregtech:ore_scheelite_0:3> * 64,
+             <gregtech:ore_scheelite_0:3> * 64,
+             <gregtech:ore_tungstate_0:3> * 64,
+             <gregtech:ore_tungstate_0:3> * 64,
+             <gregtech:ore_tungstate_0:3> * 64,
              <contenttweaker:radiumsalt> * 64,
              <contenttweaker:radiumsalt> * 64)
     .buildAndRegister();
@@ -661,12 +661,12 @@ microverse_projector_basic.recipeMap
     .fluidInputs(<liquid:rocket_fuel> * 20000)
     .outputs(<metaitem:gemPerfectDiamond> * 64,
              <metaitem:gemPerfectDiamond> * 32,
-             <metaitem:gemPerfectEmerald> * 32,
              <metaitem:gemPerfectRuby> * 64,
+             <metaitem:gemPerfectTopaz> * 48,
+             <metaitem:gemPerfectEmerald> * 32,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
-             <gregtech:ore_silver_0:1> * 64,
-             <gregtech:ore_topaz_0:1> * 64)
+             <gregtech:ore_silver_0:1> * 64)
     .buildAndRegister();
 
 // t3 ores
@@ -678,20 +678,20 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux> * 4,
             <meta_tile_entity:super_chest.mv>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
-    .outputs(<gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_ilmenite_0> * 64,
-             <gregtech:ore_vanadium_magnetite_0> * 64,
-             <gregtech:ore_tetrahedrite_0> * 64,
-             <gregtech:ore_cassiterite_0> * 64,
-             <gregtech:ore_tin_0> * 64,
-             <gregtech:ore_redstone_0> * 64,
-             <gregtech:ore_certus_quartz_0> * 64,
-             <gregtech:ore_almandine_0> * 64)
+    .outputs(<gregtech:ore_scheelite_0:5> * 64,
+             <gregtech:ore_scheelite_0:5> * 64,
+             <gregtech:ore_scheelite_0:5> * 64,
+             <gregtech:ore_tungstate_0:5> * 64,
+             <gregtech:ore_tungstate_0:5> * 64,
+             <gregtech:ore_tungstate_0:5> * 64,
+             <gregtech:ore_ilmenite_0:5> * 64,
+             <gregtech:ore_vanadium_magnetite_0:5> * 64,
+             <gregtech:ore_tetrahedrite_0:5> * 64,
+             <gregtech:ore_cassiterite_0:5> * 64,
+             <gregtech:ore_tin_0:5> * 64,
+             <gregtech:ore_redstone_0:5> * 64,
+             <gregtech:ore_certus_quartz_0:5> * 64,
+             <gregtech:ore_almandine_0:5> * 64)
     .buildAndRegister();
 
 // advanced projector
@@ -735,9 +735,9 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 8,
             <contenttweaker:witherrealmdata> * 4,
             <ore:dustPetrotheum> * 64) 
-    .outputs(<gregtech:ore_iridosmine_8020_0> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 16)
+    .outputs(<gregtech:ore_iridosmine_8020_0:9> * 64,
+             <gregtech:ore_iridosmine_8020_0:9> * 64,
+             <gregtech:ore_osmiridium_8020_0:9> * 16)
     .buildAndRegister();
 
 // t5 ores
@@ -748,18 +748,18 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizeduranium> * 32)
-    .outputs(<gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_palladium_0> * 64,
-             <gregtech:ore_realgar_0> * 64,
-             <gregtech:ore_bastnasite_0> * 64,
-             <gregtech:ore_sphalerite_0> * 64,
-             <gregtech:ore_monazite_0> * 64,
+    .outputs(<gregtech:ore_uraninite_0:10> * 64,
+             <gregtech:ore_palladium_0:10> * 64,
+             <gregtech:ore_realgar_0:10> * 64,
+             <gregtech:ore_bastnasite_0:10> * 64,
+             <gregtech:ore_sphalerite_0:10> * 64,
+             <gregtech:ore_monazite_0:10> * 64,
              <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
-             <gregtech:ore_osmiridium_8020_0> * 16,
+             <gregtech:ore_osmiridium_8020_0:10> * 16,
              <metaitem:dustBoron> * 64,
-             <gregtech:ore_molybdenite_0> * 64,
-             <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_beryllium_0> * 64)
+             <gregtech:ore_molybdenite_0:10> * 64,
+             <gregtech:ore_beryllium_0:10> * 64,
+             <gregtech:ore_beryllium_0:10> * 64)
     .buildAndRegister();
 
 // t5 naquadah sheldonite
@@ -771,6 +771,7 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
     .outputs(<gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_naquadah_0:2> * 64,
              <gregtech:ore_naquadah_0:2> * 64,
              <gregtech:ore_naquadah_0:2> * 32)
@@ -786,15 +787,15 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizeduranium> * 32,
             <contenttweaker:witherrealmdata> * 16)
-    .outputs(<gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 64)
+    .outputs(<gregtech:ore_uraninite_0:8> * 64,
+             <gregtech:ore_uraninite_0:8> * 64,
+             <gregtech:ore_uraninite_0:8> * 64,
+             <gregtech:ore_uraninite_0:8> * 64,
+             <gregtech:ore_osmiridium_8020_0:8> * 64,
+             <gregtech:ore_osmiridium_8020_0:8> * 64,
+             <gregtech:ore_osmiridium_8020_0:8> * 64,
+             <gregtech:ore_iridosmine_8020_0:8> * 64,
+             <gregtech:ore_iridosmine_8020_0:8> * 64)
     .buildAndRegister();
 
 // t6 einsteinium

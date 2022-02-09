@@ -48,21 +48,22 @@ macerator.recipeBuilder().inputs([<thermalfoundation:material:2052>]).outputs([<
 centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
 centrifuge.recipeBuilder().inputs(<contenttweaker:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
-centrifuge.recipeBuilder().inputs(<metaitem:dustStone> * 3).outputs([<metaitem:dustSiliconDioxide> * 2]).duration(40).EUt(20).buildAndRegister();
+
+//centrifuge.recipeBuilder().inputs(<metaitem:dustStone> * 3).outputs([<metaitem:dustSiliconDioxide> * 2]).duration(40).EUt(20).buildAndRegister();
 
 //Gear Boxes Via Assembler
-assembler.recipeBuilder()
-	.inputs([<metaitem:gearSteel> * 2, <metaitem:plateSteel> * 4, <ore:frameGtSteel>])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8}))
-	.outputs([<gregtech:turbine_casing:1> * 3])
-	.duration(200).EUt(16).buildAndRegister();
-assembler.recipeBuilder()
-	.inputs([<metaitem:gearTitanium> * 2, <metaitem:plateTitanium> * 4, <ore:frameGtTitanium>])
-	.outputs([<gregtech:turbine_casing:2> * 3])
-	.duration(400).EUt(16).buildAndRegister();
-
-//Engine Intake
-assembler.recipeBuilder().inputs([<metaitem:rotorTitanium> * 4, <ore:pipeNormalFluidTitanium> * 2, <gregtech:metal_casing:6>]).outputs([<gregtech:multiblock_casing>]).duration(400).EUt(16).buildAndRegister();
+//assembler.recipeBuilder()
+//	.inputs([<metaitem:gearSteel> * 2, <metaitem:plateSteel> * 4, <ore:frameGtSteel>])
+//	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8}))
+//	.outputs([<gregtech:turbine_casing:1> * 3])
+//	.duration(200).EUt(16).buildAndRegister();
+//assembler.recipeBuilder()
+//	.inputs([<metaitem:gearTitanium> * 2, <metaitem:plateTitanium> * 4, <ore:frameGtTitanium>])
+//	.outputs([<gregtech:turbine_casing:2> * 3])
+//	.duration(400).EUt(16).buildAndRegister();
+//
+////Engine Intake
+//assembler.recipeBuilder().inputs([<metaitem:rotorTitanium> * 4, <ore:pipeNormalFluidTitanium> * 2, <gregtech:metal_casing:6>]).outputs([<gregtech:multiblock_casing>]).duration(400).EUt(16).buildAndRegister();
 
 //Manyullyn
 mixer.recipeBuilder()
@@ -88,7 +89,7 @@ vacuum_freezer.recipeBuilder()
 // Allow Gas Collector to work in LostCities, void dims
 gas_collector.recipeBuilder()
 	.fluidOutputs(<liquid:air> * 10000)
-	.notConsumable(<gregtech:meta_item_1:461>.withTag({Configuration: 1}))
+	.circuit(4)
 	.property("dimension", 111)
 	.property("dimension", 119)
 	.duration(200)

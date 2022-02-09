@@ -991,6 +991,11 @@ var platesDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:353>
 	],
 
+	#plateEnderium
+	<ore:plateEnderium> : [
+		<thermalfoundation:material:359>
+	],
+
 	#plateGold
 	<ore:plateGold> : [
 		<libvulpes:productplate:2>,
@@ -1019,6 +1024,11 @@ var platesDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:323>
 	],
 
+	#plateLumium
+	<ore:plateLumium> : [
+		<thermalfoundation:material:358>
+	],
+
 	#plateNickel
 	<ore:plateNickel> : [
 		<thermalfoundation:material:325>
@@ -1032,6 +1042,11 @@ var platesDisabled as IItemStack[][IOreDictEntry] = {
 	#platePlutonium
 	<ore:platePlutonium> : [
 //		<metaitem:platePlutonium>
+	],
+
+	#plateSignalum
+	<ore:plateSignalum> : [
+		<thermalfoundation:material:357>
 	],
 
 	#plateSilicon
@@ -1112,6 +1127,11 @@ var gearsDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:289>,
 	],
 
+	#gearEnderium
+	<ore:gearEnderium> : [
+		<thermalfoundation:material:295>
+	],
+
 	#gearGold
 	<ore:gearGold> : [
 		<thermalfoundation:material:25>
@@ -1135,6 +1155,11 @@ var gearsDisabled as IItemStack[][IOreDictEntry] = {
 	#gearLead
 	<ore:gearLead> : [
 		<thermalfoundation:material:259>
+	],
+
+	#gearLumium
+	<ore:gearLumium> : [
+		<thermalfoundation:material:294>
 	],
 
 	#gearNickel

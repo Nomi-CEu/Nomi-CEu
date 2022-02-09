@@ -419,7 +419,6 @@
     },
     "5:10": {
       "preRequisites:11": [
-        4,
         12
       ],
       "properties:10": {
@@ -1615,7 +1614,7 @@
     },
     "22:10": {
       "preRequisites:11": [
-        59
+        903
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1704,7 +1703,7 @@
               "id:8": "gregtech:machine"
             },
             "6:10": {
-              "Count:3": 12,
+              "Count:3": 10,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:machine_casing"
@@ -1712,6 +1711,18 @@
             "7:10": {
               "Count:3": 1,
               "Damage:2": 1004,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "8:10": {
+              "Count:3": 1,
+              "Damage:2": 1654,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "9:10": {
+              "Count:3": 1,
+              "Damage:2": 1657,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -4103,7 +4114,8 @@
     "60:10": {
       "preRequisites:11": [
         59,
-        21
+        21,
+        903
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4501,7 +4513,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Tetrahedrite Ore\n* Cassiterite Ore\n* Tungstate Ore\n* Scheelite Ore\n* Redstone Ore\n* Quartz Ore\n* Vanadium Magnetite Ore\n§2* Ilmenite Ore§6\n* Tin Ore\n* Sapphire Ore§r\n§6* Almandine Ore§r\n\nWhen equipped with Gemstone Sensor:\n§6* Exquisite Emeralds\n* Exquisite Diamonds\n* Exquisite Rubies\n* Silver Ore\n* Gold Ore\n§2* Topaz Ore",
+          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Tetrahedrite Ore\n* Cassiterite Ore\n* Tungstate Ore\n* Scheelite Ore\n* Redstone Ore\n* Quartz Ore\n* Vanadium Magnetite Ore\n§2* Ilmenite Ore§6\n* Tin Ore\n* Sapphire Ore§r\n§6* Almandine Ore§r\n\nWhen equipped with Gemstone Sensor:\n§6§2* Perfect Emeralds\n* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n§6* Silver Ore\n* Gold Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4512,7 +4524,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Tier Three Micro Miner",
+          "name:8": "§2Tier Three Micro Miner",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -5409,7 +5421,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Initial circuit components are a bit more difficult in CEu, and you need Arsenic in addition to Gallium.§r\n\nFor §dGallium§r, you may, ranged from worst to best:\n\n- §3Electrolyze §aSphalerite§r for a low chance of small dust. Note that you lose on direct smelting value.\n\n-§r Put §aCrushed Bauxite§r in the §3Chemical Bath§r. Note that this requires §9Sodium Persulfate§r. \n\n- Obtain it as a Byproduct of §aSphalerite§r Ore Processing, in the §3Thermal Centrifuge§r or §3Centrifuge§r.\n\n§2For Arsenic, you must centrifuge Realgar Dust, or (more involvedly) flash smelt Cobaltite Dust in the EBF.\n\nCombine both in a Mixer to make Gallium Arsenide.",
+          "desc:8": "§2Initial circuit components are a bit more difficult in CEu, and you need Arsenic in addition to Gallium.§r\n\nFor §dGallium§r, you may, ranged from worst to best:\n\n- §3Electrolyze §aSphalerite§r for a low chance of small dust. Note that you lose on direct smelting value.\n\n-§r Put §aCrushed Bauxite§r in the §3Chemical Bath§r. Note that this requires §9Sodium Persulfate§r. \n\n- Obtain it as a Byproduct of §aSphalerite§r Ore Processing, in the §3Thermal Centrifuge§r or §3Centrifuge§r.\n\n§2For Arsenic, you must centrifuge Realgar Dust, or (more involvedly) flash smelt Cobaltite Dust in the EBF, and electrolyse the resultant Arsenic Trioxide.\n\nCombine both in a Mixer to make Gallium Arsenide.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8598,7 +8610,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Surface Mounted Devices§r, or §6SMD§rs for short, are §2more efficient ways to produce the Circuit components you\u0027ve been making. They will be used until the second-to-last theme of circuits.§r\n\nAll SMD components must be produced in at least a §2HV Assembling Machine§r, and they all will require liquid §9Polyethylene§r.\n\nStart off with the §6SMD Transistor§r. These are simply a §6Gallium §2Foil§r and §6Fine Annealed Copper Wire§r.\n\nNext up are §6SMD Resistors§r, which are also simple: §6Carbon Dust§r and §6Fine Electrum Wire§r.\n\nNext up are §6SMD Diodes§r, which are fairly simple. §2Gallium Arsenide Dust§r and §6Fine Platinum Wire§r net you half a stack.\n\nThen are §6SMD Capacitors§r. You\u0027ll need sheets of §6Polyvinyl Chloride§r to make these, or they can also be made more slowly with §6Silicone Rubber§r. §2Using Tantalum Foil in place of Aluminium doubles your yield.\n\nFinally, and new to CEu, SMD Inductors. Made with Nickel Zinc Ferrite and Fine Cupronickel Wire.§r\n\nInvest in a robust system of automation for SMD components and all of their ingredients, since you\u0027ll never stop needing them. They will also work in place of the non-SMD versions you\u0027ve been using in all but the simplest of recipes.",
+          "desc:8": "§6Surface Mounted Devices§r, or §6SMD§rs for short, are §2more efficient ways to produce the Circuit components you\u0027ve been making. They will be used until the second-to-last theme of circuits.§r\n\nAll SMD components must be produced in at least a §2HV Assembling Machine§r, and they all will require liquid §9Polyethylene§r.\n\nStart off with the §6SMD Transistor§r. These are simply a §6Gallium §2Foil§r and §6Fine Annealed Copper Wire§r.\n\nNext up are §6SMD Resistors§r, which are also simple: §6Carbon Dust§r and §6Fine Electrum Wire§r.\n\nNext up are §6SMD Diodes§r, which are fairly simple. §2Gallium Arsenide Dust§r and §6Fine Platinum Wire§r net you half a stack. §2If you can\u0027t go to the End to mine Platinum there yet, buy some with Omnicoins.§r\n\nThen are §6SMD Capacitors§r. You\u0027ll need sheets of §6Polyvinyl Chloride§r to make these, or they can also be made more slowly with §6Silicone Rubber§r. §2Using Tantalum Foil in place of Aluminium doubles your yield.\n\nFinally, and new to CEu, SMD Inductors. Made with Nickel Zinc Ferrite and Fine Cupronickel Wire.§r\n\nInvest in a robust system of automation for SMD components and all of their ingredients, since you\u0027ll never stop needing them. They will also work in place of the non-SMD versions you\u0027ve been using in all but the simplest of recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10662,7 +10674,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Nichrome§r is the third coil material available, increasing your EBF\u0027s operating temperature to 3600K so it can process more advanced materials.",
+          "desc:8": "§6Nichrome§r is the third coil material available, increasing your EBF\u0027s operating temperature to 3600K so it can process more advanced materials.\n\n§23600K is now also hot enough to grant a single 100% efficient overclock to 1800K and below recipes. In effect, you will get an additional 2x speed boost by overclocking once. You may wish to use this well to make up for the slower recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10673,7 +10685,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Nichrome Coil Blocks",
+          "name:8": "§2Nichrome Coil Blocks",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -12493,7 +12505,6 @@
     },
     "187:10": {
       "preRequisites:11": [
-        509,
         259
       ],
       "properties:10": {
@@ -14276,7 +14287,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Rutile Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n\nMuch later you will also gain access to the §3Lunar Mining Station§r, which as the name suggests only works on the Moon.\n\n",
+          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Rutile Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n\n§2The Moon also contains fluid deposits of Deuterium and Helium-3, which you can harvest with a Fluid Rig. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14287,7 +14298,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Deuterium",
+          "name:8": "§2Deuterium",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14536,7 +14547,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is your first Micro Miner ever.\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Cassiterite Ore\n* Dense Iron Ore\n* Uraninite Ore\n* Redstone Ore\n* Nickel Ore\n* Rutile Ore\n* Galena Ore\n* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§6* Exquisite Diamond\n* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
+          "desc:8": "This is your first Micro Miner ever.\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Cassiterite Ore\n* Dense Iron Ore\n* Uraninite Ore\n* Redstone Ore\n* Nickel Ore\n* Rutile Ore\n* Galena Ore\n* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14547,7 +14558,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "First Foray Into The Microverse",
+          "name:8": "§2First Foray Into The Microverse",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -16151,7 +16162,8 @@
     "242:10": {
       "preRequisites:11": [
         744,
-        283
+        283,
+        537
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16902,7 +16914,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Iridium§r is an advanced material used for Micro Miner plating, §6§rand for alloying with §6Osmium§r into §6Osmiridium§r.\n\n§6Iridium Ore§r is available renewably from the Tier Four and Tier Six micro miners.\n\nIt can also be reliably obtained from purifying §6Platinum§r or Osmium§r in a §3Chemical Bath§r, as well as from ore processing Osmium generally.",
+          "desc:8": "§6Iridium§r is an advanced material used for Micro Miner plating, §6§rand for alloying with §6Osmium§r into §6Osmiridium§r.\n\n§6Iridium Ore§r is available renewably from the Tier Four and Tier Six micro miners.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19451,9 +19463,7 @@
     },
     "291:10": {
       "preRequisites:11": [
-        198,
-        289,
-        286
+        289
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -20626,7 +20636,8 @@
     },
     "309:10": {
       "preRequisites:11": [
-        227
+        227,
+        899
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -20915,7 +20926,8 @@
     },
     "313:10": {
       "preRequisites:11": [
-        312
+        312,
+        255
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -21746,12 +21758,13 @@
     },
     "327:10": {
       "preRequisites:11": [
-        537
+        537,
+        279
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Just ignore the protesters outside your base.\n\nEach craft in an §3LuV Chemical Reactor§r takes five minutes, so it\u0027s probably a good idea to have more than one machine running this recipe. At least you get §2128 from a single craft.\n\n§2Bacteria are made by processing Plant Balls into Bio Chaff, and pyrolysing it.",
+          "desc:8": "Just ignore the protesters outside your base.\n\nEach craft in an §3LuV Chemical Reactor§r takes five minutes, so it\u0027s probably a good idea to have more than one machine running this recipe. At least you get §2128 from a single craft.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21759,7 +21772,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2Stem Cells",
@@ -22072,14 +22085,13 @@
     },
     "332:10": {
       "preRequisites:11": [
-        242,
         533,
         842
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The final form of Tier Six circuits, and the final circuit theme.\n\nUsing your §2Neuro Processing Units§r and §9Sterilized Growth Medium§r, you can craft (grow?) these circuits in a ZPM or better §3Assembling Machine§r.\n\nThese are fairly slow to craft and you\u0027re going to need considerable quantities, so make sure you have a good parallelized infrastructure for keeping these stocked.",
+          "desc:8": "The final form of Tier Six circuits, and the final circuit theme.\n\nUsing your §2Neuro Processing Units§r, you can craft (grow?) these circuits in a ZPM or better §3Assembling Machine§r.\n\nThese are fairly slow to craft and you\u0027re going to need considerable quantities, so make sure you have a good parallelized infrastructure for keeping these stocked.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22740,7 +22752,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A Ludicrous Voltage tier §bGregTech§r battery.\n\nYou\u0027re unlikely to be using EU batteries so it\u0027s safe to skip this for now and do it later, though some of the infrastructure used for these batteries is also used for other things.",
+          "desc:8": "A Ludicrous Voltage tier §bGregTech§r battery.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24147,7 +24159,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §d§dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Vending Upgrade§r!\n\n",
+          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §d§dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.\n\nThe GT Creative Tank has been enhanced. You can turn it on and off, configure exactly how much fluid you want it to push and how often, and change which direction the fluid is pushed out. You can even configure the fluid you want directly from JEI!§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Vending Upgrade§r!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31106,7 +31118,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §e§2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV   - Signalum \nZPM - Enderium \nUV     - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2The default superconductors from each tier still exist, and are used in Field Generators.§r\n\nMV and higher cables are made in an §3Assembling Machine§r. They\u0027re made with liquid §9Rubber§r and §6Wires§r, plus a reusable §6Programmed Circuit§r that tells it what thickness of wire to make.\n\nYou can use Wires, and for these materials they\u0027ll conduct just as well as if they were covered. §2Superconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!",
+          "desc:8": "§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §e§2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV   - Signalum \nZPM - Enderium \nUV     - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2There are an additional set of superconductors, one for each tier, which are the CEu default superconductors. Their advantage is their higher amperage rating, reaching the hundreds of amps for higher tier 16x wires. They are also used in crafting Field Generators.§,§r\n\nMV and higher cables are made in an §3Assembling Machine§r. They\u0027re made with liquid §9Rubber§r and §6Wires§r, plus a reusable §6Programmed Circuit§r that tells it what thickness of wire to make.\n\nYou can use Wires, and for these materials they\u0027ll conduct just as well as if they were covered. §2Superconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32196,7 +32208,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your §6Titanium§r-based machine hulls and §6Microprocessor Mainframes§r squared away, you can finally get on the path to making an Extreme Voltage §3Assembling Machine§r.\n\nThis tier of Assembling Machine unlocks §6Nanocircuits§r, as well as handling crafting recipes up to 2048 EU/t. It can also optionally overclock recipes that consume up to 512 EU/t for improved speed at the cost of relatively more power.",
+          "desc:8": "With your §6Titanium§r-based machine hulls and §6Mainframes§r squared away, you can finally get on the path to making an Extreme Voltage §3Assembling Machine§r.\n\nThis tier of Assembling Machine unlocks §6Nanocircuits§r, as well as handling crafting recipes up to 2048 EU/t. It can also optionally overclock recipes that consume up to 512 EU/t for improved speed at the cost of relatively more power.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32916,7 +32928,7 @@
     },
     "537:10": {
       "preRequisites:11": [
-        279
+        905
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -45216,9 +45228,9 @@
     },
     "749:10": {
       "preRequisites:11": [
-        325,
         802,
-        332
+        332,
+        846
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49787,7 +49799,8 @@
     },
     "825:10": {
       "preRequisites:11": [
-        153
+        153,
+        899
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -50531,7 +50544,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2In GTCEu, higher-tier blends of dusts require higher-tier Mixers to mix. The MV Mixer is required for making Vanadiumsteel.\n\nThere will not be more mixer quests above this one. Remember this when making higher-tier dust blends.",
+          "desc:8": "§2In GTCEu, higher-tier blends of dusts require higher-tier Mixers to mix. The MV Mixer is required for making Vanadiumsteel and Stainless Steel.\n\nThere will not be more mixer quests above this one. Remember this when making higher-tier dust blends.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50720,12 +50733,13 @@
     },
     "839:10": {
       "preRequisites:11": [
-        882
+        750,
+        904
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Your first few Crystal Chips must be grown from liquid Europium or Enderium, and Exquisite Emeralds or Exquisite Olivine.\n\nAfter the first few, you can smash them into pieces using a Forge Hammer, and duplicate them with Bacterial Sludge, Mutagen, or more Europium or Enderium.\n\nBacterial Sludge can later be obtained in the byproducts of getting Stem Cells.",
+          "desc:8": "§2Your first few Crystal Chips must be grown from liquid Enderium, or more efficiently with Europium, and Exquisite Emeralds or Exquisite Olivine.\n\nAfter the first few, you can smash them into pieces using a Forge Hammer, and duplicate them with Bacterial Sludge, Mutagen, or more Europium or Enderium.\n\nBacterial Sludge can later be obtained in the byproducts of getting Stem Cells.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50985,7 +50999,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.\n\nFirst is by the processing of Naquadah Ore, which the Tier Five Micro Miner has been changed to yield (instead of the pure Dust). This only provides Nq+.\n\nSecond is by combining Naquadah Dust with certain heavy elements and EnderIO crystal grains. This can provide Nq+ and Nq*.\n\nFinally, you can do the full CEu processing of Naquadah Dust with Fluoroantimonic Acid, the strongest acid known to man. This is a decently involved process, but not only does it yield all 3 Nq materials, it also grants byproducts of Titanium, Indium, Barium, and Gallium.",
+          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.\n\nFirst is by the processing of Naquadah Ore, which the Tier Five Micro Miner has been changed to yield (instead of the pure Dust). This only provides Nq+.\n\nSecond is by combining Naquadah Dust with certain heavy elements and EnderIO crystal grains. This can provide Nq+ and Nq*.\n\nFinally, you can do the full CEu processing of Naquadah Dust with Fluoroantimonic Acid, the strongest acid known to man. This is a decently involved process, but not only does it yield all 3 Nq materials, it also grants byproducts of Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51015,8 +51029,18 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "fluoroantimonic_acid"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -51094,7 +51118,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2See the Naquadah Processing quest.",
+          "desc:8": "§2A heavy Naquadah isotope with more nuclear capability.\n\nEnriched Naquadah is meant to be used in as-of-yet-unimplemented CEu-native reactors. It\u0027s used in small amounts for Trinium Coil blocks, or in Nomi reactors, though Naquadria is better for that purpose.\n\nAt least it\u0027s the easiest to obtain, and you can get it by mixing, the full Naquadah chain, or by passing Purified Naquadah Dust through an Electromagnetic Separator.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51159,7 +51183,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2See the Naquadah Processing quest.",
+          "desc:8": "§2A lighter and unstable Naquadah isotope.\n\nNaquadria is used in the construction of UV components, the Fusion Reactor Mk2, and in fusing Neutronium. Each piece of Naquadria also makes 4 times more power than Enriched Naquadah in Naquadah Reactors.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51224,7 +51248,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2See the Naquadah Processing quest.\n\nTrinium is used in quite a few processes.",
+          "desc:8": "§2A strong heavy element obtained only from the Naquadah chain.\n\nTrinium comes out at the second step of Naquadah Dust processing, so if you don\u0027t mind storing the intermediates and have Fluorine under control, you can hold off doing the full chain if you don\u0027t need to yet. You get 1 Trinium per 12 Naquadah processed.\n\nThis will be required in large quantities for Trinium Coils, Superconducting Coil Blocks, Naquadah Alloy, among other things.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51695,8 +51719,7 @@
     },
     "854:10": {
       "preRequisites:11": [
-        196,
-        885
+        196
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -52102,7 +52125,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 2050,
-              "OreDict:8": "",
+              "OreDict:8": "questbookParallelControlHatch",
               "id:8": "gregtech:machine"
             }
           },
@@ -53424,6 +53447,57 @@
     },
     "880:10": {
       "preRequisites:11": [
+        397
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Configurable to output any number of GT Volts and Amps.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1650,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Infinite GT EU Emitter",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 880,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1650,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "881:10": {
+      "preRequisites:11": [
         153
       ],
       "properties:10": {
@@ -53483,7 +53557,7 @@
         }
       }
     },
-    "881:10": {
+    "882:10": {
       "preRequisites:11": [
         750,
         325
@@ -53517,7 +53591,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "882:10": {
+    "883:10": {
       "preRequisites:11": [
         885
       ],
@@ -53581,7 +53655,7 @@
         }
       }
     },
-    "883:10": {
+    "884:10": {
       "preRequisites:11": [
         288
       ],
@@ -53645,7 +53719,7 @@
         }
       }
     },
-    "884:10": {
+    "885:10": {
       "preRequisites:11": [
         749
       ],
@@ -53709,7 +53783,7 @@
         }
       }
     },
-    "885:10": {
+    "886:10": {
       "preRequisites:11": [
         89
       ],
@@ -53773,7 +53847,7 @@
         }
       }
     },
-    "886:10": {
+    "887:10": {
       "preRequisites:11": [
         546
       ],
@@ -53838,7 +53912,7 @@
         }
       }
     },
-    "887:10": {
+    "888:10": {
       "preRequisites:11": [
         826,
         166,
@@ -53905,7 +53979,7 @@
         }
       }
     },
-    "888:10": {
+    "889:10": {
       "preRequisites:11": [
         827
       ],
@@ -53938,7 +54012,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "889:10": {
+    "890:10": {
       "preRequisites:11": [
         56
       ],
@@ -53976,7 +54050,7 @@
         }
       }
     },
-    "890:10": {
+    "891:10": {
       "preRequisites:11": [
         94
       ],
@@ -54037,7 +54111,7 @@
         }
       }
     },
-    "891:10": {
+    "892:10": {
       "preRequisites:11": [
         541
       ],
@@ -54114,7 +54188,7 @@
         }
       }
     },
-    "892:10": {
+    "893:10": {
       "preRequisites:11": [
         3
       ],
@@ -54152,7 +54226,7 @@
         }
       }
     },
-    "893:10": {
+    "894:10": {
       "preRequisites:11": [
         147
       ],
@@ -54216,7 +54290,7 @@
         }
       }
     },
-    "894:10": {
+    "895:10": {
       "preRequisites:11": [
         894,
         88
@@ -54287,7 +54361,7 @@
         }
       }
     },
-    "895:10": {
+    "896:10": {
       "preRequisites:11": [
         6
       ],
@@ -54352,7 +54426,7 @@
         }
       }
     },
-    "896:10": {
+    "897:10": {
       "preRequisites:11": [
         896,
         830
@@ -54379,7 +54453,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 897,
@@ -54417,7 +54491,7 @@
         }
       }
     },
-    "897:10": {
+    "898:10": {
       "preRequisites:11": [
         93,
         891
@@ -54488,7 +54562,72 @@
         }
       }
     },
-    "898:10": {
+    "899:10": {
+      "preRequisites:11": [
+        71
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Microminer missions, or in small amounts from renewable Black Granite.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrofluoric_acid"
+            }
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Hydrofluoric Acid",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 899,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrofluoric_acid"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "900:10": {
       "preRequisites:11": [
         888
       ],
@@ -54553,7 +54692,7 @@
         }
       }
     },
-    "899:10": {
+    "901:10": {
       "preRequisites:11": [
         179,
         888
@@ -54587,7 +54726,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "900:10": {
+    "902:10": {
       "preRequisites:11": [
         805
       ],
@@ -54627,6 +54766,201 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "903:10": {
+      "preRequisites:11": [
+        72,
+        59
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2The coil recipes are harder in CEu, not only do they require their base material, they also need some extra material types and they must be made in Assembling Machines of their tier.\n\nFor Cupronickel Coils, you will need 8 Cupronickel, 2 Bronze, and 1 Tin Alloy for each coil. You need 16 for the Electric Blast Furnace and 16 for the Pyrolyse Oven. That totals to 176 Copper, 128 Nickel, 32 Tin, and 16 Iron.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtech:wire_coil"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Cupronickel Coils",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 903,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "904:10": {
+      "preRequisites:11": [
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Bacterial Sludge will be used in the Crystal and Wetware processes.\n\nPlant matter in Plant Ball can be broken down to Bio Chaff, and broken down to Bacteria. Then, combine it with your Biomass to get Bacterial Sludge.\n\nYou will also get a bit back from growing Stem Cells later.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "bacterial_sludge"
+            }
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Bacterial Sludge",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 904,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "bacterial_sludge"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "905:10": {
+      "preRequisites:11": [
+        904
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Use Uranium-238 or more efficiently, Uranium-235 to enrich Bacterial Sludge, and distill it to Mutagen. Later, you can use Naquadria to double your Enriched Bacterial Sludge yield.\n\nMutagen is used in Growth Medium production.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "mutagen"
+            }
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Mutagen",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 905,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 1,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "mutagen"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     }
@@ -54768,7 +55102,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 292
+          "y:3": 260
         },
         "17:10": {
           "id:3": 60,
@@ -55112,6 +55446,13 @@
           "sizeY:3": 36,
           "x:3": -516,
           "y:3": 320
+        },
+        "66:10": {
+          "id:3": 903,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -736,
+          "y:3": 292
         }
       }
     },
@@ -56545,8 +56886,8 @@
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -66,
-          "y:3": 144
+          "x:3": -68,
+          "y:3": 141
         },
         "98:10": {
           "id:3": 555,
@@ -56559,8 +56900,8 @@
           "id:3": 580,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -66,
-          "y:3": 204
+          "x:3": -68,
+          "y:3": 201
         },
         "100:10": {
           "id:3": 610,
@@ -56867,10 +57208,17 @@
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -66,
-          "y:3": 267
+          "x:3": -68,
+          "y:3": 264
         },
         "144:10": {
+          "id:3": 899,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -888,
+          "y:3": -100
+        },
+        "145:10": {
           "id:3": 900,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -57623,15 +57971,15 @@
           "id:3": 61,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 172
+          "x:3": 220,
+          "y:3": 264
         },
         "2:10": {
           "id:3": 77,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 148,
-          "y:3": 172
+          "x:3": 192,
+          "y:3": 264
         },
         "3:10": {
           "id:3": 99,
@@ -57673,7 +58021,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 108,
-          "y:3": 240
+          "y:3": 252
         },
         "9:10": {
           "id:3": 239,
@@ -57693,8 +58041,8 @@
           "id:3": 241,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 200
+          "x:3": 164,
+          "y:3": 264
         },
         "12:10": {
           "id:3": 242,
@@ -57743,14 +58091,14 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 12,
-          "y:3": 240
+          "y:3": 252
         },
         "19:10": {
           "id:3": 257,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 200
+          "y:3": 108
         },
         "20:10": {
           "id:3": 258,
@@ -57820,7 +58168,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
-          "y:3": 296
+          "y:3": 348
         },
         "30:10": {
           "id:3": 283,
@@ -57833,15 +58181,15 @@
           "id:3": 286,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -540,
-          "y:3": 164
+          "x:3": -492,
+          "y:3": 336
         },
         "32:10": {
           "id:3": 287,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 12,
-          "y:3": 52
+          "x:3": -20,
+          "y:3": 164
         },
         "33:10": {
           "id:3": 288,
@@ -57868,15 +58216,15 @@
           "id:3": 292,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -372,
+          "x:3": -336,
           "y:3": 312
         },
         "37:10": {
           "id:3": 295,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": 144
+          "x:3": 116,
+          "y:3": 108
         },
         "38:10": {
           "id:3": 312,
@@ -57938,29 +58286,29 @@
           "id:3": 325,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": 108
+          "x:3": 116,
+          "y:3": 176
         },
         "47:10": {
           "id:3": 327,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
-          "y:3": 352
+          "x:3": -312,
+          "y:3": 348
         },
         "48:10": {
           "id:3": 329,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 144
+          "x:3": 164,
+          "y:3": 220
         },
         "49:10": {
           "id:3": 330,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 180
+          "y:3": 220
         },
         "50:10": {
           "id:3": 331,
@@ -58008,22 +58356,22 @@
           "id:3": 337,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 144
+          "x:3": 72,
+          "y:3": 108
         },
         "57:10": {
           "id:3": 342,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 108
+          "y:3": 148
         },
         "58:10": {
           "id:3": 345,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 144
+          "x:3": 164,
+          "y:3": 108
         },
         "59:10": {
           "id:3": 351,
@@ -58065,7 +58413,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
-          "y:3": 246
+          "y:3": 258
         },
         "65:10": {
           "id:3": 417,
@@ -58127,7 +58475,7 @@
           "id:3": 534,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
+          "x:3": -264,
           "y:3": 312
         },
         "74:10": {
@@ -58148,22 +58496,22 @@
           "id:3": 537,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
-          "y:3": 324
+          "x:3": -360,
+          "y:3": 348
         },
         "77:10": {
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 168,
-          "y:3": 72
+          "x:3": 96,
+          "y:3": 12
         },
         "78:10": {
           "id:3": 607,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 168,
-          "y:3": 240
+          "y:3": 336
         },
         "79:10": {
           "id:3": 608,
@@ -58174,17 +58522,17 @@
         },
         "80:10": {
           "id:3": 681,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 18,
-          "y:3": 2
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -12,
+          "y:3": 56
         },
         "81:10": {
           "id:3": 695,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": 196
+          "x:3": -60,
+          "y:3": 148
         },
         "82:10": {
           "id:3": 696,
@@ -58211,7 +58559,7 @@
           "id:3": 750,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
+          "x:3": -264,
           "y:3": 108
         },
         "86:10": {
@@ -58246,22 +58594,22 @@
           "id:3": 792,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": 8
+          "x:3": -28,
+          "y:3": 24
         },
         "91:10": {
           "id:3": 793,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 8
+          "x:3": 12,
+          "y:3": 24
         },
         "92:10": {
           "id:3": 794,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 36,
-          "y:3": 20
+          "x:3": 4,
+          "y:3": 72
         },
         "93:10": {
           "id:3": 795,
@@ -58288,8 +58636,8 @@
           "id:3": 804,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -576,
-          "y:3": 176
+          "x:3": -528,
+          "y:3": 348
         },
         "97:10": {
           "id:3": 827,
@@ -58309,7 +58657,7 @@
           "id:3": 839,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -372,
+          "x:3": -360,
           "y:3": 108
         },
         "100:10": {
@@ -58330,7 +58678,7 @@
           "id:3": 842,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
+          "x:3": -312,
           "y:3": 384
         },
         "103:10": {
@@ -58400,15 +58748,15 @@
           "id:3": 855,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 152,
-          "y:3": 300
+          "x:3": 220,
+          "y:3": 364
         },
         "113:10": {
           "id:3": 856,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 152,
-          "y:3": 332
+          "x:3": 220,
+          "y:3": 396
         },
         "114:10": {
           "id:3": 860,
@@ -58421,8 +58769,8 @@
           "id:3": 861,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 200
+          "x:3": 220,
+          "y:3": 332
         },
         "116:10": {
           "id:3": 881,
@@ -58430,6 +58778,20 @@
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 264
+        },
+        "117:10": {
+          "id:3": 904,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -360,
+          "y:3": 156
+        },
+        "118:10": {
+          "id:3": 905,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -360,
+          "y:3": 204
         }
       }
     },
@@ -59342,13 +59704,20 @@
           "y:3": 40
         },
         "127:10": {
+          "id:3": 880,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -240,
+          "y:3": 84
+        },
+        "128:10": {
           "id:3": 883,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 92,
           "y:3": 12
         },
-        "128:10": {
+        "129:10": {
           "id:3": 884,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -59394,8 +59763,8 @@
           "id:3": 5,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 96
+          "x:3": -108,
+          "y:3": 132
         },
         "3:10": {
           "id:3": 6,
@@ -60252,20 +60621,27 @@
           "y:3": 0
         },
         "10:10": {
+          "id:3": 846,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 18,
+          "y:3": -36
+        },
+        "11:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 56,
           "y:3": -36
         },
-        "11:10": {
+        "12:10": {
           "id:3": 854,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 56,
           "y:3": 36
         },
-        "12:10": {
+        "13:10": {
           "id:3": 885,
           "sizeX:3": 24,
           "sizeY:3": 24,

@@ -220,7 +220,7 @@ makeShaped("of_elytra", <minecraft:elytra>,
 //    .duration(1000).EUt(3000).buildAndRegister();
 
 // Helium Plasma * 125
-<recipemap:fusion_reactor>.findRecipe(4096, null, [<liquid:deuterium> * 125, <liquid:tritium> * 125]).remove();
+//<recipemap:fusion_reactor>.findRecipe(4096, null, [<liquid:deuterium> * 125, <liquid:tritium> * 125]).remove();
 
 
 fusion_reactor.recipeBuilder()
@@ -473,3 +473,14 @@ recipes.addShaped(<metaitem:battery_buffer.uhv.16>, [
     [<metaitem:wireGtHexOmnium>, <metaitem:hull.uhv>, <metaitem:wireGtHexOmnium>],
     [<metaitem:wireGtHexOmnium>, <minecraft:chest>, <metaitem:wireGtHexOmnium>]
 ]);
+
+// Assembly Line
+// ZPM Field Generator * 1
+<recipemap:assembly_line>.findRecipe(24000, [<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <metaitem:circuit.quantum_mainframe> * 2, <metaitem:wireFineEuropium> * 64, <metaitem:wireFineEuropium> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4], [<liquid:soldering_alloy> * 1152]).remove();
+assembly_line.recipeBuilder()
+    .inputs([<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <metaitem:circuit.quantum_mainframe> * 2, <metaitem:wireFineEuropium> * 64, <metaitem:wireFineEuropium> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4, <metaitem:plateDenseAwakenedDraconium>, <metaitem:plateDenseAwakenedDraconium>])
+    .fluidInputs([<liquid:soldering_alloy> * 1152])
+    .outputs(<metaitem:field.generator.zpm>)
+    .duration(600)
+    .EUt(24000)
+    .buildAndRegister();

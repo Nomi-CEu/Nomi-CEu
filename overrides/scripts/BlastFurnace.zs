@@ -338,7 +338,7 @@ blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([
 //furnace.addRecipe(<metaitem:ingotNaquadahAlloy>, <metaitem:dustNaquadahAlloy>, 0.0);
 
 //Dark Soularium [tier 18]
-blast_furnace.recipeBuilder().inputs([<enderio:item_alloy_ingot:6>,<enderio:item_alloy_ingot:7>]).fluidInputs([<liquid:tritium>*1000]).outputs([<simplyjetpacks:metaitemmods:3>]).property("temperature", 8600).duration(1200).EUt(32000).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<ore:ingotSoularium>,<ore:ingotDarkSteel>]).fluidInputs([<liquid:tritium>*1000]).outputs([<simplyjetpacks:metaitemmods:3>]).property("temperature", 8600).duration(1200).EUt(32000).buildAndRegister();
 
 // Quantum Fluxed Eternium [tier 19]
 blast_furnace.recipeBuilder()
