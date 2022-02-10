@@ -1,0 +1,12 @@
+{
+	"copyFromSharedServerGlobs": [
+		"overrides/**/*",
+		"!overrides/resources/**/*"
+	],
+	"copyFromSharedClientGlobs": [
+		"overrides/**/*",
+		"!overrides/resources/minecraft/textures/gui/title/background/*"
+	],
+	"nightlyHookAvatar": "https://github.com/NomifactoryDevs.png",
+	"nightlyHookName": "Nightly Builds"
+}
