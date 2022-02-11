@@ -1,14 +1,15 @@
 # nomi-ceu
-Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [GregTech CE Unofficial](https://github.com/GregTechCEu/GregTech) generation of GT mods.
+Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [GregTech CE Unofficial](https://github.com/GregTechCEu/GregTech) generation of GT mods, with updated quests, progression and minor balance changes to adapt to CEu's changes.
+- Overhauled circuit progression closely following CEu stock 
+- Multiblock versions of nearly all machines, including EBF, Freezer and DT, processing up to 256 recipes in parallel
+- New processing chains for Naquadah, Advanced SMDs, Crystal Chips, and more
+- Fixed lots of unpleasant CE-ness - no more stupid Amp system, different ore stone types don't clog up your inventory, etc.
+- Super-performant emissive effects on machines, coil blocks, the Fusion Reactor, and more
+- Updated questbook to guide you through all the new stuff
+- lots more...
 
-Progression and certain mods and CT scripts have been altered or removed due to the fixes and content native to GTCEu. For instance:
-- Circuit progression has been largely converted to GTCEu native progression.
-- Use GTCEu native materials over other mod material items, to take advantage of the material system and Material Tree
-- Replace the Cryogenic Distillation with GTCEu native Liquid Airs distillation.
-- Gregicality: Multiblocks for a smoother late-game.
-
-Temporary: There is no RF -> EU conversion available in GTCEu yet. You have to make all EU energy with EU generators.
-To alleviate this, the Large Lapidary Dynamo is added, available at MV and generating 614,400 EU per Diamond. Depending on feedback it may stay even after RF -> EU conversion is made available.
+Current project status: 🟧 92% done. All scripts are ported and quests have been rewritten to fit CEu's new progression. There are still some bugs which need to be squashed, but you should be able to start playing now with few to no issues.
+Any release will have to wait for the next CEu update, which will (hopefully) fully release Energy Converters and add new progression elements (Cleanroom).
 
 Installation instructions for building the bleeding-edge version:
 - Download the repository as a ZIP.
