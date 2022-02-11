@@ -11257,7 +11257,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r.\n\nWhile it can be used as a fuel, the performance of §3Diesel Generators§r is middling compared to the alternatives.\n\nThe primary use is for making §9Nitro Diesel§r, which you will want to stockpile in large quantities for the later production of §6Draconium§r.",
+          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r.\n\nThe primary use is for making §9Nitro Diesel§r, which you will want to stockpile in large quantities for the later production of §6Draconium§r §2(unless you use Gasoline instead).\n\nThe performance of Combustion Generators is also improved, but you probably want to refine Diesel anyway.\n\n§2It\u0027s more power efficient to use singleblock Distilleries over a Distillation Tower for Oil, due to the overclocking mechanics being different. The correct ratio is 3 Distilleries for Light Oil and 2 Distilleries for Heavy Oil.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11981,7 +11981,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r produces §9Nitro Diesel§r, an extremely potent fuel needed later for §6Draconium§r production.\n\nIf you have a very robust petrochemical infrastructure and can afford to burn it, this fuel along with proper oxygenation §2is a potent fuel in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.\n\nShould you choose to burn Nitro Diesel for power, it\u0027s more power efficient to use singleblock Distilleries over a Distillation Tower for Oil, due to the overclocking mechanics being different. The correct ratio is 3 Distilleries for Light Oil and 2 Distilleries for Heavy Oil.",
+          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r produces §9Nitro Diesel§r, an extremely potent fuel needed later for §6Draconium§r production.\n\nIf you have a very robust petrochemical infrastructure and can afford to burn it, this fuel along with proper oxygenation §2is a potent fuel in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22086,7 +22086,8 @@
     "332:10": {
       "preRequisites:11": [
         533,
-        842
+        842,
+        906
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32933,7 +32934,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Sterilized Growth Medium§r is needed for §6Wetware Circuits§r.\n\nYou\u0027ll need to mix §6Mincemeat§r, §2Calcium, Salt, Gelatin, and Mutagen§r with water in a mixer to make §9Raw Growth Medium§r, then use a §3Fluid Heater§r to sterilize it. §2This is a significantly more involved process than before.§r\n\nMincemeat comes from pulverizing any kind of animal meat. A §aPowered Spawner§r might be useful for this endeavor.",
+          "desc:8": "§9Sterilized Growth Medium§r is needed for §6Wetware Circuits§r.\n\nYou\u0027ll need to mix §6Mincemeat§r, §2Calcium, Salt, Agar, and Mutagen§r with water in a mixer to make §9Raw Growth Medium§r, then use a §3Fluid Heater§r to sterilize it. §2This is a significantly more involved process than before.§r\n\nMincemeat comes from pulverizing any kind of animal meat. A §aPowered Spawner§r might be useful for this endeavor. §2Agar is produced from Mincemeat through multiple steps.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33168,7 +33169,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Overclocking aside, as you continue to progress in §5Nomifactory§f, materials made in the §3Electric Blast Furnace§f will take longer to complete. §eMore advanced coils do not give speed bonuses§f, only allowing for the furnace to §eget hot enough to process more advanced materials§f, §2and granting energy efficiency bonuses.§r\n\nConsequently, you\u0027ll need to continually expand your smelting and power generation infrastructure.\n\nYou don\u0027t have to get all four of these Electric Blast Furnaces completed and running just yet, but be prepared to make many of them over the course of the pack.\n\n§2As a reminder, all blocks and hatches can be shared across EBFs, except Maintenance!",
+          "desc:8": "Overclocking aside, as you continue to progress in §5Nomifactory§f, materials made in the §3Electric Blast Furnace§f will take longer to complete. §eMore advanced coils do not give speed bonuses§f §2directly§r; they mainly allow for the furnace to §eget hot enough to process more advanced materials§f, §2and they also granting energy efficiency bonuses and speed bonuses to overclocking.§r\n\nConsequently, you\u0027ll need to continually expand your smelting and power generation infrastructure.\n\nYou don\u0027t have to get all four of these Electric Blast Furnaces completed and running just yet, but be prepared to make many of them over the course of the pack.\n\n§2As a reminder, all blocks and hatches can be shared across EBFs, except Maintenance!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33179,7 +33180,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "More Blast Furnaces",
+          "name:8": "§2More Blast Furnaces",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -35229,7 +35230,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you continue to progress, crafting times for more advanced §3Electric Blast Furnace§r recipes will continue to increase. More advanced coils do not give speed bonuses, they just increase the operating temperature so you can smelt more advanced materials, §2and granting energy efficiency bonuses.§r\n\nTo compensate, you\u0027ll need to get your infrastructure for smelting, as well as for power generation, up to snuff.\n\nYou don\u0027t need to get all eight of these completed and running just yet, but plan to at some point in the future. Instead of upgrading existing EBFs, have them passively automating a stock of materials and build new EBFs with higher specifications for new materials.\n\n",
+          "desc:8": "As you continue to progress, crafting times for more advanced §3Electric Blast Furnace§r recipes will continue to increase. More advanced coils do not give speed bonuses, they just increase the operating temperature so you can smelt more advanced materials, §2and they also granting energy efficiency bonuses and speed bonuses to overclocking.§r\n\nTo compensate, you\u0027ll need to get your infrastructure for smelting, as well as for power generation, up to snuff.\n\nYou don\u0027t need to get all eight of these completed and running just yet, but plan to at some point in the future. Instead of upgrading existing EBFs, have them passively automating a stock of materials and build new EBFs with higher specifications for new materials.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35240,7 +35241,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Blast Furnaces Galore",
+          "name:8": "§2Blast Furnaces Galore",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -48623,7 +48624,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Allyl Chloride§r provides an alternative means of producing §9Epichlorohydrin§r for §9Epoxy§r.\n\nReacting §9Chlorine§r and §9Propene§r will produce Allyl Chloride. Propene is distilled in a §3Distillation Tower§r from any of various cracked petroleum products like §9Steam-Cracked Naphtha§r.",
+          "desc:8": "§2You only need this step if you are using normal Chemical Reactors. If you are using LCRs, the Allyl Chloride step is skipped.\n\n§9Allyl Chloride§r provides an alternative means of producing §9Epichlorohydrin§r for §9Epoxy§r.\n\nReacting §9Chlorine§r and §9Propene§r will produce Allyl Chloride. Propene is distilled in a §3Distillation Tower§r from any of various cracked petroleum products like §9Steam-Cracked Naphtha§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48638,7 +48639,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Allyl Chloride",
+          "name:8": "§2Allyl Chloride",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -49921,6 +49922,24 @@
               "Damage:2": 1023,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 10,
+              "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -50739,7 +50758,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Your first few Crystal Chips must be grown from liquid Enderium, or more efficiently with Europium, and Exquisite Emeralds or Exquisite Olivine.\n\nAfter the first few, you can smash them into pieces using a Forge Hammer, and duplicate them with Bacterial Sludge, Mutagen, or more Europium or Enderium.\n\nBacterial Sludge can later be obtained in the byproducts of getting Stem Cells.",
+          "desc:8": "§2Your first few Raw Crystal Chips must be grown in an Autoclave from liquid Enderium, or more efficiently with Europium, and Exquisite Emeralds or Exquisite Olivine.\n\nAfter the first few, you can smash them into pieces using a Forge Hammer, and duplicate them with Bacterial Sludge, Mutagen, or more Europium or Enderium.\n\nBacterial Sludge can later be obtained in the byproducts of getting Stem Cells.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51852,7 +51871,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2For making Wetware Circuits more easily.",
+          "desc:8": "§2For making Wetware Circuits more easily. You need UV-tier power to make them that way.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51916,7 +51935,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Used in the Alloy Blast Smelter. Remember, you need an appropriately tiered Mixer (HV for HSLA Steel, and EV for the others).",
+          "desc:8": "§2Used in building the Alloy Blast Smelter. \n\nTantalum is obtained from Tantalite Ore, or in small quantities from centrifuging Lava.\n\nMolybdenum is obtained from Molybdenum, Molybdenite, Powellite, and Wulfenite ores. They spawn together in the Nether rarely, or some of them come from Tier One and Five Micro Miners.\n\nRemember, you need an appropriately tiered Mixer (HV for HSLA Steel, and EV for the others).",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54961,6 +54980,94 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "906:10": {
+      "preRequisites:11": [
+        535
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Multiblock version of the Circuit Assembler. Can accept Parallel Control Hatches, and allows tiering it up more easily.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2028,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Large Circuit Assembler",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 906,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2028,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 55,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gcym:large_multiblock_casing"
+            },
+            "2:10": {
+              "Count:3": 10,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:multiblock_casing"
+            },
+            "3:10": {
+              "Count:3": 6,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "4:10": {
+              "Count:3": 4,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:transparent_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -58792,6 +58899,13 @@
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 204
+        },
+        "119:10": {
+          "id:3": 906,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -216,
+          "y:3": 348
         }
       }
     },

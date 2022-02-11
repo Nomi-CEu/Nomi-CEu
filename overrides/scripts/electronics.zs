@@ -207,7 +207,7 @@ recipes.addShaped(<gregtech:machine_casing:1>, [
 ]);
 // LV Machine Casing * 1
 <recipemap:assembler>.findRecipe(16, [<metaitem:plateSteel> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
-assembler.recipeBuilder().inputs(<ore:plateWroughtIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing>]).duration(30).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs(<ore:plateWroughtIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing:1>]).duration(30).EUt(16).buildAndRegister();
 
 // ULV Casing
 recipes.removeByRecipeName("gregtech:casing_ulv");

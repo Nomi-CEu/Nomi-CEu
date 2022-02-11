@@ -255,7 +255,7 @@ recipes.remove(<actuallyadditions:item_drill:3>);
 recipes.addShaped(<actuallyadditions:item_drill:3>, [
 	[<actuallyadditions:block_crystal:3>, <actuallyadditions:block_crystal:2>, <metaitem:toolHeadDrillDiamond>], 
 	[<metaitem:gearEnergeticAlloy>, <actuallyadditions:item_misc:16>, <actuallyadditions:block_crystal:2>], 
-	[<enderio:block_alloy:1>, <metaitem:gearEnergeticAlloy>, <actuallyadditions:block_crystal:3>]]);	
+	[<metaitem:blockEnergeticAlloy>, <metaitem:gearEnergeticAlloy>, <actuallyadditions:block_crystal:3>]]);	
 	
 //Drill Core
 recipes.remove(<actuallyadditions:item_misc:16>);
@@ -344,8 +344,8 @@ recipes.addShaped(<extrautils2:passivegenerator:5>, [
 //Chunk Loader
 recipes.addShaped(<extrautils2:chunkloader>, [
 	[<metaitem:stickEnergeticAlloy>, <extrautils2:ingredients:2>, <metaitem:stickEnergeticAlloy>], 
-	[<metaitem:stickEnergeticAlloy>, <enderio:block_alloy:1>, <metaitem:stickEnergeticAlloy>], 
-	[null, <enderio:block_alloy:1>, null]]);
+	[<metaitem:stickEnergeticAlloy>, <metaitem:blockEnergeticAlloy>, <metaitem:stickEnergeticAlloy>], 
+	[null, <metaitem:blockEnergeticAlloy>, null]]);
 
 //Dragon Mill
 recipes.addShaped(<extrautils2:passivegenerator:8>, [

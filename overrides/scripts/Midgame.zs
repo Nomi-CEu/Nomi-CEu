@@ -95,3 +95,27 @@ gas_collector.recipeBuilder()
 	.duration(200)
 	.EUt(16)
 	.buildAndRegister();
+
+// Rebalancing important chanced outputs
+// Helium * 120
+<recipemap:centrifuge>.findRecipe(20, [<metaitem:dustEndstone>], null).remove();
+centrifuge.recipeBuilder()
+	.inputs([<metaitem:dustEndstone>])
+	.outputs([<minecraft:sand>, <metaitem:dustSmallTungstate>])
+	.fluidOutputs([<liquid:helium> * 120])
+	.chancedOutput(<metaitem:dustTinyPlatinum>, 5000, 2000)
+	.duration(40)
+	.EUt(1280)
+	.buildAndRegister();
+
+// Black Granite Dust * 1
+<recipemap:macerator>.findRecipe(2, [<gregtech:stone_smooth:0>], null).remove();
+macerator.recipeBuilder()
+	.inputs([<gregtech:stone_smooth:0>])
+	.outputs([<metaitem:dustGraniteBlack>])
+	.chancedOutput(<metaitem:dustThorium>, 100, 300)
+	.duration(150)
+	.EUt(2)
+	.buildAndRegister();
+
+	
