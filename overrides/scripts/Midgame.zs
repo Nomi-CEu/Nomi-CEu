@@ -3,6 +3,20 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.data.IData;
 
+recipes.remove(<thermalexpansion:satchel:2>);
+recipes.addShaped("test", <thermalexpansion:satchel:2>, [
+	[null, <metaitem:nuggetElectrum>, null],
+	[<metaitem:ingotAluminium>, <thermalexpansion:satchel:1>.marked("satchel"), <metaitem:ingotAluminium>], 
+	[<metaitem:nuggetElectrum>, null, <metaitem:nuggetElectrum>]],
+	function(out, ins, cInfo) {
+    var tag = {} as IData;
+    # This if is here to keep the tinkers workbench from screwing up JEI autocomplete
+    if(ins has "satchel" && !isNull(ins.satchel) && ins.satchel.hasTag) {
+        tag = ins.satchel.tag;
+    }
+    return out.withTag(tag);
+}, null);
+
 //Ender Star
 recipes.remove(<actuallyadditions:item_misc:19>);	
 reactor.recipeBuilder().inputs([<minecraft:nether_star>]).fluidInputs([<liquid:ender_distillation> * 8000]).outputs(<actuallyadditions:item_misc:19>).EUt(400).duration(2000).buildAndRegister();
@@ -19,13 +33,13 @@ fermenter.recipeBuilder().fluidInputs([<liquid:canolaoil> * 100]).fluidOutputs([
 
 //Canola
 chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:canolaoil> * 1000,<liquid:methanol> * 6000]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000,]).duration(300).EUt(30).buildAndRegister();
-//chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:canolaoil> * 1000,<liquid:bio.ethanol> * 6000]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000,]).duration(300).EUt(30).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:canolaoil> * 1000,<liquid:ethanol> * 6000]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000,]).duration(300).EUt(30).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:refinedcanolaoil> * 750,<liquid:methanol> * 4500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000,]).duration(300).EUt(30).buildAndRegister();
-//chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:refinedcanolaoil> * 750,<liquid:bio.ethanol> * 4500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000,]).duration(300).EUt(30).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:refinedcanolaoil> * 750,<liquid:ethanol> * 4500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000,]).duration(300).EUt(30).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:crystaloil> * 500,<liquid:methanol> * 3000]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
-//chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:crystaloil> * 500,<liquid:bio.ethanol> * 3000]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:crystaloil> * 500,<liquid:ethanol> * 3000]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:empoweredoil> * 250,<liquid:methanol> * 1500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
-//chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:empoweredoil> * 250,<liquid:bio.ethanol> * 1500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:empoweredoil> * 250,<liquid:ethanol> * 1500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
 
 chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:23>).fluidInputs([<liquid:canolaoil> * 1000]).fluidOutputs([<liquid:crystaloil> * 1000]).duration(100).EUt(120).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:24>).fluidInputs([<liquid:canolaoil> * 1000]).fluidOutputs([<liquid:empoweredoil> * 1000]).duration(100).EUt(500).buildAndRegister();
@@ -49,7 +63,25 @@ centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
 centrifuge.recipeBuilder().inputs(<contenttweaker:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
 
-//centrifuge.recipeBuilder().inputs(<metaitem:dustStone> * 3).outputs([<metaitem:dustSiliconDioxide> * 2]).duration(40).EUt(20).buildAndRegister();
+//// Stone Dust
+//centrifuge.recipeBuilder()
+//	.inputs(<metaitem:dustStone> * 3)
+//	.outputs([<metaitem:dustSiliconDioxide> * 2])
+//	.circuit(2)
+//	.duration(40).EUt(20)
+//	.buildAndRegister();
+//
+//// Small Pile of Quartzite Dust * 1
+//<recipemap:centrifuge>.findRecipe(120, [<metaitem:dustStone>], null).remove();
+//centrifuge.recipeBuilder()
+//	.inputs(<metaitem:dustStone>)
+//	.circuit(1)
+//	.outputs([<metaitem:dustSmallQuartzite>, <metaitem:dustSmallPotassiumFeldspar>, <metaitem:dustTinyMarble> * 2, <metaitem:dustTinyBiotite>])
+//	.chancedOutput(<metaitem:dustTinySodalite>, 5000, 500)
+//	.chancedOutput(<metaitem:dustTinyMetalMixture>, 7500, 750)
+//	.duration(480)
+//	.EUt(120)
+//	.buildAndRegister();
 
 //Gear Boxes Via Assembler
 //assembler.recipeBuilder()
@@ -118,4 +150,8 @@ macerator.recipeBuilder()
 	.EUt(2)
 	.buildAndRegister();
 
-	
+canner.recipeBuilder()
+	.inputs(<minecraft:glass_bottle>)
+	.fluidInputs(<liquid:xpjuice> * 500)
+	.outputs(<minecraft:experience_bottle>)
+	.duration(1500).EUt(4).buildAndRegister();

@@ -164,19 +164,19 @@ makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
 	{ P : <ore:ingotMicroversium>,  //Microversium Ingot
 	  W : wrench});
 
-// LuV Machine Casing
-makeShaped("of_luv_casing", <gregtech:machine_casing:6>,
-	["PPP",
-	 "PWP",
-	 "PPP"],
-	{ P : <ore:plateLumium>,  //Lumium Plate
-	  W : wrench});
+//// LuV Machine Casing
+//makeShaped("of_luv_casing", <gregtech:machine_casing:6>,
+//	["PPP",
+//	 "PWP",
+//	 "PPP"],
+//	{ P : <ore:plateLumium>,  //Lumium Plate
+//	  W : wrench});
 
-//LV Hull
-recipes.remove(<meta_tile_entity:hull.lv>);	
-recipes.addShaped(<meta_tile_entity:hull.lv>, [
-	[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>], 
-	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
+////LV Hull
+//recipes.remove(<meta_tile_entity:hull.lv>);	
+//recipes.addShaped(<meta_tile_entity:hull.lv>, [
+//	[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>], 
+//	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 
 // remove steel LV Motor recipes
 recipes.removeByRecipeName("gregtech:electric_motor_lv_steel");
@@ -198,29 +198,29 @@ recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 	[<ore:circuitBasic>, <meta_tile_entity:hull.ulv>, <ore:circuitBasic>], 
 	[<metaitem:electric.piston.lv>, <metaitem:electric.pump.lv>, <ore:wireGtQuadrupleCupronickel>]]);
 
-// LV Casing
-recipes.removeByRecipeName("gregtech:casing.lv");
-recipes.addShaped(<gregtech:machine_casing:1>, [
-    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>],
-    [<ore:plateWroughtIron>, <ore:gtceWrenches>, <ore:plateWroughtIron>],
-    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>]
-]);
-// LV Machine Casing * 1
-<recipemap:assembler>.findRecipe(16, [<metaitem:plateSteel> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
-assembler.recipeBuilder().inputs(<ore:plateWroughtIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing:1>]).duration(30).EUt(16).buildAndRegister();
-
-// ULV Casing
-recipes.removeByRecipeName("gregtech:casing_ulv");
-
-recipes.addShaped(<gregtech:machine_casing>, [
-    [<metaitem:plateIron>, <metaitem:plateIron>, <metaitem:plateIron>],
-    [<metaitem:plateIron>, <ore:gtceWrenches>, <metaitem:plateIron>],
-    [<metaitem:plateIron>, <metaitem:plateIron>, <metaitem:plateIron>]
-]);
-// ULV Machine Casing * 1
-<recipemap:assembler>.findRecipe(16, [<metaitem:plateWroughtIron> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
-
-assembler.recipeBuilder().inputs(<ore:plateIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing>]).duration(30).EUt(16).buildAndRegister();
+//// LV Casing
+//recipes.removeByRecipeName("gregtech:casing.lv");
+//recipes.addShaped(<gregtech:machine_casing:1>, [
+//    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>],
+//    [<ore:plateWroughtIron>, <ore:gtceWrenches>, <ore:plateWroughtIron>],
+//    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>]
+//]);
+//// LV Machine Casing * 1
+//<recipemap:assembler>.findRecipe(16, [<metaitem:plateSteel> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
+//assembler.recipeBuilder().inputs(<ore:plateWroughtIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing:1>]).duration(30).EUt(16).buildAndRegister();
+//
+//// ULV Casing
+//recipes.removeByRecipeName("gregtech:casing_ulv");
+//
+//recipes.addShaped(<gregtech:machine_casing>, [
+//    [<metaitem:plateIron>, <metaitem:plateIron>, <metaitem:plateIron>],
+//    [<metaitem:plateIron>, <ore:gtceWrenches>, <metaitem:plateIron>],
+//    [<metaitem:plateIron>, <metaitem:plateIron>, <metaitem:plateIron>]
+//]);
+//// ULV Machine Casing * 1
+//<recipemap:assembler>.findRecipe(16, [<metaitem:plateWroughtIron> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
+//
+//assembler.recipeBuilder().inputs(<ore:plateIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing>]).duration(30).EUt(16).buildAndRegister();
 
 
 // pyro
@@ -285,19 +285,19 @@ chemical_reactor.recipeBuilder().inputs(<metaitem:board.coated>).fluidInputs([<l
 <recipemap:assembler>.findRecipe(7, [<metaitem:dustWood>, <metaitem:shape.mold.plate>], [<liquid:glue> * 50]).remove();
 
 // make t1 circuits craftable w/o steam
-recipes.removeByRecipeName("gregtech:electronic_circuit_lv");
-recipes.addShaped(<metaitem:circuit.electronic>, [
-	[<metaitem:component.resistor>, <ore:plateWroughtIron>, <metaitem:component.resistor>],
-	[<metaitem:circuit.vacuum_tube>, <metaitem:circuit_board.basic>, <metaitem:circuit.vacuum_tube>],
-	[<metaitem:cableGtSingleRedAlloy>, <metaitem:cableGtSingleRedAlloy>, <metaitem:cableGtSingleRedAlloy>]
-]);
-
-recipes.removeByRecipeName("gregtech:vacuum_tube");
-recipes.addShaped(<metaitem:circuit.vacuum_tube>, [
-	[null, null, null],
-	[<ore:stickWroughtIron>, <metaitem:component.glass.tube>, <ore:stickWroughtIron>],
-	[<metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>]
-]);
+//recipes.removeByRecipeName("gregtech:electronic_circuit_lv");
+//recipes.addShaped(<metaitem:circuit.electronic>, [
+//	[<metaitem:component.resistor>, <ore:plateWroughtIron>, <metaitem:component.resistor>],
+//	[<metaitem:circuit.vacuum_tube>, <metaitem:circuit_board.basic>, <metaitem:circuit.vacuum_tube>],
+//	[<metaitem:cableGtSingleRedAlloy>, <metaitem:cableGtSingleRedAlloy>, <metaitem:cableGtSingleRedAlloy>]
+//]);
+//
+//recipes.removeByRecipeName("gregtech:vacuum_tube");
+//recipes.addShaped(<metaitem:circuit.vacuum_tube>, [
+//	[null, null, null],
+//	[<ore:stickWroughtIron>, <metaitem:component.glass.tube>, <ore:stickWroughtIron>],
+//	[<metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>]
+//]);
 
 recipes.addShaped(<metaitem:component.glass.tube>, [
 	[null, null, null],

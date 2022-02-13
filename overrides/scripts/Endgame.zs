@@ -231,34 +231,35 @@ fusion_reactor.recipeBuilder()
     .property("eu_to_start", 400000000)
     .buildAndRegister();
 
-// LuV Machine Casing
-recipes.remove(<gregtech:machine_casing:6>);
-
-// LuV Machine Hull
-recipes.remove(<meta_tile_entity:hull.luv>);
-
-recipes.addShaped(<meta_tile_entity:hull.luv>, [
-	[<metaitem:platePolytetrafluoroethylene>, <ore:plateLumium>, <metaitem:platePolytetrafluoroethylene>],
-	[<ore:cableGtSingleVanadiumGallium>, <gregtech:machine_casing:6>, <ore:cableGtSingleVanadiumGallium>]]);
-
-assembler.findRecipe(16,
-    [<ore:plateRhodiumPlatedPalladium>.firstItem * 8,
-     <metaitem:circuit.integrated>.withTag({Configuration: 8})],
-    [null]).remove();
-
-assembler.recipeBuilder()
-    .inputs(<ore:plateLumium> * 8)
-    .outputs([<gregtech:machine_casing:6>])
-    .duration(30).EUt(16).buildAndRegister();
+//// LuV Machine Casing
+//recipes.remove(<gregtech:machine_casing:6>);
+//
+//// LuV Machine Hull
+//recipes.remove(<meta_tile_entity:hull.luv>);
+//
+//recipes.addShaped(<meta_tile_entity:hull.luv>, [
+//	[<metaitem:platePolytetrafluoroethylene>, <ore:plateLumium>, <metaitem:platePolytetrafluoroethylene>],
+//	[<ore:cableGtSingleVanadiumGallium>, <gregtech:machine_casing:6>, <ore:cableGtSingleVanadiumGallium>]]);
+//
+//assembler.findRecipe(16,
+//    [<ore:plateRhodiumPlatedPalladium>.firstItem * 8,
+//     <metaitem:circuit.integrated>.withTag({Configuration: 8})],
+//    [null]).remove();
+//
+//assembler.recipeBuilder()
+//    .inputs(<ore:plateLumium> * 8)
+//    .outputs([<gregtech:machine_casing:6>])
+//    .duration(30).EUt(16).buildAndRegister();
+//
 
 //Rare Earth
-// Redstone * 1
-<recipemap:centrifuge>.findRecipe(24, [<metaitem:dustImpureRedstone>], null).remove();
-
-centrifuge.recipeBuilder()
-    .inputs(<metaitem:dustImpureRedstone>)
-    .outputs([<minecraft:redstone>, <metaitem:dustTinyRareEarth>])
-    .duration(900).EUt(24).buildAndRegister();
+//// Redstone * 1
+//<recipemap:centrifuge>.findRecipe(24, [<metaitem:dustImpureRedstone>], null).remove();
+//
+//centrifuge.recipeBuilder()
+//    .inputs(<metaitem:dustImpureRedstone>)
+//    .outputs([<minecraft:redstone>, <metaitem:dustTinyRareEarth>])
+//    .duration(900).EUt(24).buildAndRegister();
 
 
 //Bismuth
@@ -483,4 +484,46 @@ assembly_line.recipeBuilder()
     .outputs(<metaitem:field.generator.zpm>)
     .duration(600)
     .EUt(24000)
+    .buildAndRegister();
+
+// Rhodium Plated Palladium
+// Rhodium Plated Palladium Dust * 4
+<recipemap:mixer>.findRecipe(7680, [<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+mixer.recipeBuilder()
+    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .circuit(1)
+    .outputs(<metaitem:dustRhodiumPlatedPalladium> * 6)
+    .duration(400)
+    .EUt(7680)
+    .buildAndRegister();
+
+// Palladium Dust * 3
+<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustRhodiumPlatedPalladium> * 4], null).remove();
+centrifuge.recipeBuilder()
+    .inputs(<metaitem:dustRhodiumPlatedPalladium> * 6)
+    .outputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .duration(630)
+    .EUt(30)
+    .buildAndRegister();
+
+// Molten Rhodium Plated Palladium * 576
+<recipemap:alloy_blast_smelter>.findRecipe(7680, [<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:circuit.integrated>.withTag({Configuration: 12})], [<liquid:argon> * 200]).remove();
+// Molten Rhodium Plated Palladium * 576
+<recipemap:alloy_blast_smelter>.findRecipe(7680, [<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
+alloy_blast_smelter.recipeBuilder()
+    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .circuit(3)
+    .fluidOutputs(<liquid:molten.rhodium_plated_palladium> * 864)
+    .property("temperature", 4500)
+    .duration(3600)
+    .EUt(7680)
+    .buildAndRegister();
+alloy_blast_smelter.recipeBuilder()
+    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .fluidInputs(<liquid:argon> * 300)
+    .circuit(13)
+    .fluidOutputs(<liquid:molten.rhodium_plated_palladium> * 864)
+    .property("temperature", 4500)
+    .duration(2412)
+    .EUt(7680)
     .buildAndRegister();

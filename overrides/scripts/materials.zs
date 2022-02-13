@@ -184,7 +184,7 @@ var soularium = MaterialBuilder(32024, "soularium")
 var end_steel = MaterialBuilder(32025, "end_steel")
     .ingot().fluid()
     .color(0xd6d980).iconSet("metallic")
-    .flags("generate_plate")
+    .flags("generate_plate", "generate_gear")
     .cableProperties(2048,1,0,true)
     .build();
 
@@ -267,6 +267,7 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:glowstone>.setFormula("Au(Ca3(PO4)2)", true);
 <material:energetic_alloy>.setFormula("Au2(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);
 <material:black_steel>.setFormula("(AuAgCu3)2Fe3?4", true);
+<material:rhodium_plated_palladium>.setFormula("((SnFe)4(CuAg4)2)2Pd3Rh", true);
 
 //<material:niobium>.setOreByProducts([<material:tantalum>]);
 //<material:osmium>.setOreByProducts([<material:iridium>, <material:nickel>]);

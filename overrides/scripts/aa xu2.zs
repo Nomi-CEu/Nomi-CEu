@@ -153,52 +153,52 @@ recipes.addShaped(furnGen, [
 	[<metaitem:plateRedAlloy>,<metaitem:plateRedAlloy>,<metaitem:plateRedAlloy>]]);
 
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_survival"}), [
-	[<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>], 
-	[<minecraft:cobblestone>, <extrautils2:machine>, <minecraft:cobblestone>], 
+	[<ore:compressed4xCobblestone>, <ore:compressed4xCobblestone>, <ore:compressed4xCobblestone>], 
+	[<ore:compressed4xCobblestone>, <extrautils2:machine>, <ore:compressed4xCobblestone>], 
 	[redPlate, furnGen, redPlate]]);
 
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_culinary"}), [
-	[<minecraft:potato>, <minecraft:potato>, <minecraft:potato>], 
+	[<metaitem:dustAgar>, <minecraft:potato>, <metaitem:dustAgar>], 
 	[<minecraft:potato>, <extrautils2:machine>, <minecraft:potato>], 
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_slime"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_lava"}), [
-	[<minecraft:lava_bucket:*>, <metaitem:plateGold>, <minecraft:lava_bucket:*>], 
+	[<ore:dustPyrotheum>, <metaitem:plateGold>, <ore:dustPyrotheum>], 
 	[<metaitem:plateGold>, <extrautils2:machine>, <metaitem:plateGold>], 
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_redstone"}), [
-	[redPlate, <ore:blockRedAlloy>, redPlate], 
-	[redPlate, <extrautils2:machine>, redPlate], 
+	[<metaitem:plateTantalum>, <ore:blockRedAlloy>, <metaitem:plateTantalum>], 
+	[<metaitem:plateTantalum>, <extrautils2:machine>, <metaitem:plateTantalum>], 
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_lava"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_ender"}), [
-	[<metaitem:plateEnderPearl>, <metaitem:plateEnderPearl>, <metaitem:plateEnderPearl>], 
+	[<metaitem:sensor.ev>, <metaitem:plateEnderPearl>, <metaitem:sensor.ev>], 
 	[<metaitem:plateEnderPearl>, <extrautils2:machine>, <metaitem:plateEnderPearl>], 
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_potion"}), [
-	[<minecraft:brewing_stand:*>,<minecraft:brewing_stand:*>,<minecraft:brewing_stand:*>], 
-	[<minecraft:brewing_stand:*>,<extrautils2:machine>,<minecraft:brewing_stand:*>], 
+	[<metaitem:springNichrome>,<metaitem:springNichrome>,<metaitem:springNichrome>], 
+	[<metaitem:springNichrome>,<extrautils2:machine>,<metaitem:springNichrome>], 
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_pink"}), [
-	[<minecraft:dye:9>, <minecraft:dye:9>, <minecraft:dye:9>], 
-	[<minecraft:dye:9>, <extrautils2:machine>, <minecraft:dye:9>], 
+	[<metaitem:dye.pink>, <metaitem:dye.pink>, <metaitem:dye.pink>], 
+	[<metaitem:dye.pink>, <extrautils2:machine>, <metaitem:dye.pink>], 
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_potion"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_overclock"}), [
-	[<extrautils2:redstoneclock>,<extrautils2:redstoneclock>,<extrautils2:redstoneclock>], 
-	[<extrautils2:redstoneclock>,<extrautils2:machine>,<extrautils2:redstoneclock>], 
+	[<metaitem:wireGtQuadrupleUraniumRhodiumDinaquadide>,<metaitem:wireGtQuadrupleUraniumRhodiumDinaquadide>,<metaitem:wireGtQuadrupleUraniumRhodiumDinaquadide>], 
+	[<metaitem:wireGtQuadrupleUraniumRhodiumDinaquadide>,<extrautils2:machine>,<metaitem:wireGtQuadrupleUraniumRhodiumDinaquadide>], 
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_tnt"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_tnt"}), [
-	[<metaitem:plateEnergeticAlloy>,<ore:blockVanadiumSteel>,<metaitem:plateEnergeticAlloy>], 
-	[<metaitem:plateEnergeticAlloy>,<extrautils2:machine>,<metaitem:plateEnergeticAlloy>], 
+	[<metaitem:plateDoubleIncoloyMa956>,<ore:blockVanadiumSteel>,<metaitem:plateDoubleIncoloyMa956>], 
+	[<metaitem:plateDoubleIncoloyMa956>,<extrautils2:machine>,<metaitem:plateDoubleIncoloyMa956>], 
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_slime"}), [
-	[<minecraft:slime>,<minecraft:slime>,<minecraft:slime>],
+	[<metaitem:blockPolybenzimidazole>,<minecraft:slime>,<metaitem:blockPolybenzimidazole>],
 	[<minecraft:slime>,<extrautils2:machine>,<minecraft:slime>],
 	[redPlate, furnGen, redPlate]]);
 	
@@ -208,18 +208,18 @@ recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_de
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_ice"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_enchant"}), [
-	[<minecraft:enchanting_table:*>,<minecraft:enchanting_table:*>,<minecraft:enchanting_table:*>], 
-	[<minecraft:enchanting_table:*>,<extrautils2:machine>,<minecraft:enchanting_table:*>], 
+	[<metaitem:magic_energy_absorber>,<metaitem:magic_energy_absorber>,<metaitem:magic_energy_absorber>], 
+	[<metaitem:magic_energy_absorber>,<extrautils2:machine>,<metaitem:magic_energy_absorber>], 
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_potion"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_dragonsbreath"}), [
-	[<minecraft:purpur_block:*>, <minecraft:end_rod:*>, <minecraft:purpur_block:*>], 
+	[<metaitem:blockCobaltBrass>, <minecraft:end_rod:*>, <metaitem:blockCobaltBrass>], 
 	[<minecraft:purpur_block:*>, <extrautils2:machine>, <minecraft:purpur_block:*>], 
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_tnt"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_ice"}), [
-	[<minecraft:ice:*>,<minecraft:ice:*>,<minecraft:ice:*>], 
-	[<minecraft:ice:*>,<extrautils2:machine>,<minecraft:ice:*>], 
+	[<nuclearcraft:block_ice>,<nuclearcraft:block_ice>,<nuclearcraft:block_ice>], 
+	[<nuclearcraft:block_ice>,<extrautils2:machine>,<nuclearcraft:block_ice>], 
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<draconicevolution:generator>, [

@@ -43,6 +43,7 @@ furnace.remove(<metaitem:ingotSignalum>, <metaitem:dustSignalum>);
 //blast_furnace.findRecipe(120, [<minecraft:iron_ingot>], [<liquid:oxygen> * 1000]).remove();	
 //blast_furnace.findRecipe(120, [<metaitem:ingotPigIron>], [<liquid:oxygen> * 1000]).remove();	
 //blast_furnace.findRecipe(120, [<metaitem:ingotWroughtIron>], [<liquid:oxygen> * 1000]).remove();	
+
 // Steel Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:ingotWroughtIron>], [<liquid:oxygen> * 1000]).remove();
 // Steel Ingot * 1

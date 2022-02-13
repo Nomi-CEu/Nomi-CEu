@@ -1863,7 +1863,7 @@ mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:electromagnetic_separator.hv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:electromagnetic_separator.ev>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:magic_energy_absorber>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:primitive_blast_furnace.bronze>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:primitive_blast_furnace.bronze>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:cracker>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:coke_oven_hatch>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:coke_oven>);
