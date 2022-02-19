@@ -803,11 +803,11 @@ recipes.addShaped(<metaitem:gearIron>, [[<metaitem:stickIron>, <ore:plateIron>, 
 //	{ P : <metaitem:plant_ball>,  // Plant Ball
 //	  M : <inspirations:mulch>});
 
-// Bronze Casing Assembler recipe
-assembler.recipeBuilder()
-	.inputs(<metaitem:plateBronze>*6, <minecraft:brick_block>)
-	.outputs(<gregtech:metal_casing>*3)
-	.duration(50).EUt(16).buildAndRegister();
+//// Bronze Casing Assembler recipe
+//assembler.recipeBuilder()
+//	.inputs(<metaitem:plateBronze>*6, <minecraft:brick_block>)
+//	.outputs(<gregtech:metal_casing>*3)
+//	.duration(50).EUt(16).buildAndRegister();
 
 //Fix unintended Concrete powerder skips
 
@@ -1182,3 +1182,6 @@ primitive_blast_furnace.recipeBuilder()
 	.buildAndRegister();
 
 
+// Kill Glowstone Decomp
+// Small Pile of Redstone Dust * 2
+<recipemap:centrifuge>.findRecipe(80, [<minecraft:glowstone_dust:0>], null).remove();

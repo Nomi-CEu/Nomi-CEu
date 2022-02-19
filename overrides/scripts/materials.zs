@@ -264,8 +264,6 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:silver>.addFlags(["generate_gear"]);
 <material:emerald>.addFlags(["generate_gear"]);
 
-<material:glowstone>.setFormula("Au(Ca3(PO4)2)", true);
-<material:energetic_alloy>.setFormula("Au2(Si(FeS2)5(CrAl2O3)Hg3)(Au(Ca3(PO4)2))", true);
 <material:black_steel>.setFormula("(AuAgCu3)2Fe3?4", true);
 <material:rhodium_plated_palladium>.setFormula("((SnFe)4(CuAg4)2)2Pd3Rh", true);
 

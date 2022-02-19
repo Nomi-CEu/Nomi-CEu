@@ -221,7 +221,11 @@ recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 //<recipemap:assembler>.findRecipe(16, [<metaitem:plateWroughtIron> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
 //
 //assembler.recipeBuilder().inputs(<ore:plateIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing>]).duration(30).EUt(16).buildAndRegister();
-
+//ULV Hull
+recipes.remove(<meta_tile_entity:hull.ulv>);	
+recipes.addShaped(<meta_tile_entity:hull.ulv>, [
+	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], 
+	[<ore:cableGtSingleRedAlloy>, <gregtech:machine_casing>, <ore:cableGtSingleRedAlloy>]]);	
 
 // pyro
 
@@ -323,14 +327,14 @@ recipes.addShaped("basic_circuit_board", <metaitem:circuit_board.basic>, [[<ore:
 // Workstation * 1
 <recipemap:circuit_assembler>.findRecipe(120, [<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <metaitem:component.diode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltBlueAlloy> * 16], [<liquid:tin> * 288]).remove();
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <metaitem:component.diode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltVibrantAlloy> * 16])
+	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltVibrantAlloy> * 16])
 	.fluidInputs([<liquid:tin> * 288])
 	.outputs(<metaitem:circuit.workstation>)
 	.duration(400)
 	.EUt(120)
 	.buildAndRegister();
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <metaitem:component.diode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltVibrantAlloy> * 16])
+	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltVibrantAlloy> * 16])
 	.fluidInputs([<liquid:soldering_alloy> * 144])
 	.outputs(<metaitem:circuit.workstation>)
 	.duration(400)

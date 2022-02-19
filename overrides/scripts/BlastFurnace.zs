@@ -51,9 +51,9 @@ furnace.remove(<metaitem:ingotSignalum>, <metaitem:dustSignalum>);
 
 //Silcon [tier 0]
 // Silicon Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustSilicon>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
-
-furnace.addRecipe(<metaitem:ingotSilicon>, <metaitem:dustSilicon>, 0.0);
+//<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustSilicon>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+//
+//furnace.addRecipe(<metaitem:ingotSilicon>, <metaitem:dustSilicon>, 0.0);
 
 //Black Steel [tier 1]
 // Black Steel Ingot * 1

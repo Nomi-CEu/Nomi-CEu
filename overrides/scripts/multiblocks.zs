@@ -516,6 +516,12 @@ recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_p
     [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>]
 ]);
 
+recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
+    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
+    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
+    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
+]);
+
 makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>,
     ["NCN",
      "GSG",
