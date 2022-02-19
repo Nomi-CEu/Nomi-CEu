@@ -1,0 +1,75 @@
+name: Deploy to GitHub Releases
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to checkout and deploy'
+        required: true
+      flavorTitle:
+        description: 'Flavor title (e. g. "Community Update")'
+        required: false
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Releases (${{ github.event.inputs.tag }})
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TAG: ${{ github.event.inputs.tag }}
+      BUILD_FLAVOR_TITLE: ${{ github.event.inputs.flavorTitle }}
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.inputs.tag }}
+
+      - name: "Restore cached files"
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            ~/.npm
+            ./.cache
+            ./buildtools/node_modules
+          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          restore-keys: ${{ runner.os }}-bunny-
+
+      - name: "Setup NodeJS v16"
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          check-latest: true
+
+      - name: "Download NPM packages"
+        working-directory: ./buildtools
+        run: npm ci
+
+      - name: "Check environmental variables"
+        working-directory: ./buildtools
+        run: npx gulp check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+
+      - name: "Build everything"
+        working-directory: ./buildtools
+        run: npx gulp buildAll
+
+      - name: "Prune cache"
+        working-directory: ./buildtools
+        run: npx gulp pruneCache
+
+      - name: "Zip everything"
+        working-directory: ./buildtools
+        run: npx gulp zipAll
+
+      - name: "Deploy to GitHub Releases"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+        working-directory: ./buildtools
+        run: npx gulp deployReleases
