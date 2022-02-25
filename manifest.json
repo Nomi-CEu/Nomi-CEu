@@ -14,6 +14,18 @@
   "version": "0.5.3",
   "author": "__tracer",
   "name": "nomi-ceu",
+  "externalDependencies": [
+    {
+      "name": "GregTech Community Edition Unofficial",
+      "url": "https://github.com/GregTechCEu/GregTech/releases/download/v2.1.2/gregtech-1.12.2-2.1.2-beta.jar",
+      "sha": "cf7da6e576b68aff76b2432a47ffb903a1b7a084"
+    },
+    {
+      "name": "CleanroomMC BetterQuesting",
+      "url": "https://cdn.discordapp.com/attachments/927054204235808839/944365350693240882/BetterQuesting-3.5.329.jar",
+      "sha": "6f0d5fe5d8713c9d99e6e06ef6e10a8167028204"
+    }
+  ],
   "files": [
     {
       "projectID": 32274,
