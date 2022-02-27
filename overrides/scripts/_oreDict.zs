@@ -427,7 +427,7 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#dustPlutonium
 	<ore:dustPlutonium> : [
-		<metaitem:dustPlutonium>
+//		<metaitem:dustPlutonium>
 	],
 
 	#dustSaltpeter

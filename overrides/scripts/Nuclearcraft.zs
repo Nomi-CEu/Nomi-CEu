@@ -928,7 +928,7 @@ compressor.recipeBuilder()
 // Gelatin from CEu Gelatin
 extractor.recipeBuilder()
     .inputs(<ore:dustGelatin>)
-    .fluidOutputs(<fluid:gelatin>)
+    .fluidOutputs(<fluid:gelatin> * 144)
     .duration(100)
     .EUt(7)
     .buildAndRegister();
@@ -1169,24 +1169,32 @@ fluid_extractor.recipeBuilder()
     .duration(720).EUt(32).buildAndRegister();
 
 //Remove Duping Thorium via extra Thorium230 tiny Pile
-//thermal_sep.findRecipe(48, [<metaitem:dustThorium>], [null]).remove();
-//thermal_sep.findRecipe(48, [<metaitem:ingotThorium>], [null]).remove();
+// Thorium-232 * 1
+<recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotThorium>], null).remove();
+// Thorium-232 * 1
+<recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:dustThorium>], null).remove();
+
 
 thermal_sep.recipeBuilder()
     .inputs(<metaitem:dustThorium>)
     .outputs(<nuclearcraft:thorium:4>)
-    .duration(3200).EUt(48).buildAndRegister();
+    .duration(1280).EUt(48).buildAndRegister();
 
 thermal_sep.recipeBuilder()
     .inputs(<metaitem:ingotThorium>)
     .outputs(<nuclearcraft:thorium:4>)
-    .duration(3200).EUt(48).buildAndRegister();
+    .duration(1280).EUt(48).buildAndRegister();
 
 //Remove Duping Uranium via extra Uranium 235 tiny Pile
 // Uranium-238 * 1
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:dustUranium>], null).remove();
 // Uranium-238 * 1
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotUranium>], null).remove();
+
+// Pu dupe
+// Plutonium-239 * 1
+<recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotPlutonium>], null).remove();
+
 
 
 //thermal_sep.findRecipe(48, [<metaitem:dustUranium>], [null]).remove();

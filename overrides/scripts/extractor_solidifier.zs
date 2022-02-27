@@ -422,12 +422,12 @@ fluid_extractor.recipeBuilder()
 
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:plutonium:4>])
-    .fluidOutputs([<liquid:plutonium2> * 144])
+    .fluidOutputs([<liquid:plutonium> * 144])
     .duration(180).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:plutonium:6>])
-    .fluidOutputs([<liquid:plutonium2> * 16])
+    .fluidOutputs([<liquid:plutonium> * 16])
     .duration(20).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()

@@ -106,8 +106,8 @@ assembler.recipeBuilder()
 	.duration(20).EUt(16).buildAndRegister();
 	
 //ME Conduit
-//recipes.remove(<enderio:item_me_conduit>);	
-//assembler.recipeBuilder().inputs([<appliedenergistics2:part:36> * 3, <enderio:item_material:4> * 6]).outputs(<enderio:item_me_conduit> * 8).duration(100).EUt(16).buildAndRegister();	
+recipes.remove(<enderio:item_me_conduit>);	
+assembler.recipeBuilder().inputs([<appliedenergistics2:part:36> * 3, <enderio:item_material:4> * 6]).outputs(<enderio:item_me_conduit> * 8).duration(100).EUt(16).buildAndRegister();	
 
 recipes.remove(<appliedenergistics2:sky_compass>);
 recipes.addShaped(<appliedenergistics2:sky_compass>,[

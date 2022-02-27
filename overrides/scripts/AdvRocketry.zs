@@ -588,16 +588,16 @@ makeShaped("ar_fuel_tank",
 	});
 
 // Concrete
-mixer.recipeBuilder()
-	.inputs([
-		<minecraft:gravel> * 3,
-		<ore:dustClay>
-	])
-	.fluidInputs([<liquid:water> * 500])
-	.fluidOutputs(<liquid:concrete> * 1000)
-	.EUt(16)
-	.duration(200)
-	.buildAndRegister();
+//mixer.recipeBuilder()
+//	.inputs([
+//		<minecraft:gravel> * 3,
+//		<ore:dustClay>
+//	])
+//	.fluidInputs([<liquid:water> * 500])
+//	.fluidOutputs(<liquid:concrete> * 1000)
+//	.EUt(16)
+//	.duration(200)
+//	.buildAndRegister();
 
 // Guidance Computer
 recipes.remove(<advancedrocketry:guidancecomputer>);

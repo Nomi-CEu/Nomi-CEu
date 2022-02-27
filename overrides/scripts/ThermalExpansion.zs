@@ -175,9 +175,9 @@ recipes.addShaped(<thermalfoundation:material:513>, [
 //Auxiliary Transmission Coil
 recipes.remove(<thermalexpansion:augment:512>);
 recipes.addShaped(<thermalexpansion:augment:512>, [
-	[<metaitem:ingotSterlingSilver>, <ore:ingotEnergeticAlloy>, <enderio:block_alloy:4>],
+	[<metaitem:ingotSterlingSilver>, <ore:ingotEnergeticAlloy>, <ore:blockConductiveIron>],
 	[<ore:ingotEnergeticAlloy>, <thermalfoundation:material:514>, <ore:ingotEnergeticAlloy>],
-	[<enderio:block_alloy:4>, <ore:ingotEnergeticAlloy>, <metaitem:ingotSterlingSilver>]]);
+	[<ore:blockConductiveIron>, <ore:ingotEnergeticAlloy>, <metaitem:ingotSterlingSilver>]]);
 
 //Auxiliary Reception Coil
 recipes.remove(<thermalexpansion:augment:128>);

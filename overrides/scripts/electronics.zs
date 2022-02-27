@@ -178,15 +178,24 @@ makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
 //	[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>], 
 //	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 
-// remove steel LV Motor recipes
+// remove LV Motor recipes
 recipes.removeByRecipeName("gregtech:electric_motor_lv_steel");
+recipes.removeByRecipeName("gregtech:electric_motor_lv_iron");
 assembler.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickSteel> * 2, <metaitem:stickSteelMagnetic>, <metaitem:wireGtSingleCopper> * 4], [null]).remove();
+<recipemap:assembler>.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickIron> * 2, <metaitem:stickIronMagnetic>, <metaitem:wireGtSingleCopper> * 4], null).remove();
+
 
 //LV Motor - with Fine Copper Wires
 recipes.addShaped(<metaitem:electric.motor.lv>, [
 	[<ore:cableGtSingleTin>, <metaitem:wireFineCopper>, <ore:stickIron>], 
 	[<metaitem:wireFineCopper>, <ore:stickIronMagnetic>, <metaitem:wireFineCopper>],
 	[<ore:stickIron>, <metaitem:wireFineCopper>, <ore:cableGtSingleTin>]]);
+assembler.recipeBuilder()
+	.inputs([<metaitem:cableGtSingleTin> * 2, <metaitem:stickIron> * 2, <metaitem:stickIronMagnetic>, <metaitem:wireFineCopper> * 4])
+	.outputs(<metaitem:electric.motor.lv>)
+	.duration(100)
+	.EUt(30)
+	.buildAndRegister();
 
 //Wood Pulp
 recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<gregtech:meta_tool:12>]);	

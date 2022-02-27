@@ -237,6 +237,28 @@ mixer.recipeBuilder()
 	.duration(300)
 	.EUt(1920)
 	.buildAndRegister();
+// Molten Signalum * 1152
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:helium> * 800]).remove();
+// Molten Signalum * 1152
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2,<thermalfoundation:material:893>])
+	.fluidInputs(<liquid:mana> * 1000)
+	.circuit(4)
+	.fluidOutputs(<liquid:molten.signalum> * 576)
+	.property("temperature", 4000)
+	.duration(51200)
+	.EUt(120)
+	.buildAndRegister();
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2,<thermalfoundation:material:893>])
+	.fluidInputs([<liquid:mana> * 1000, <liquid:helium> * 400])
+	.circuit(14)
+	.fluidOutputs(<liquid:molten.signalum> * 576)
+	.property("temperature", 4000)
+	.duration(34133)
+	.EUt(120)
+	.buildAndRegister();
 //blast_furnace.recipeBuilder().inputs([<ore:dustSignalum>]).fluidInputs([<liquid:mana>*250]).outputs([<metaitem:ingotHotSignalum>]).property("temperature", 4000).duration(12800).EUt(120).buildAndRegister();
 
 // Signalum Ingot * 1
@@ -263,6 +285,30 @@ mixer.recipeBuilder()
 	.inputs([<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2,<extendedcrafting:material:7> * 2,<thermalfoundation:material:894>])
 	.duration(300)
 	.EUt(1920)
+	.buildAndRegister();
+// Molten Lumium * 864
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 12})], [<liquid:helium> * 600]).remove();
+// Molten Lumium * 864
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
+
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2,<extendedcrafting:material:7> * 2,<thermalfoundation:material:894>])
+	.fluidInputs(<liquid:mana> * 1000)
+	.circuit(4)
+	.fluidOutputs(<liquid:molten.lumium> * 576)
+	.property("temperature", 4500)
+	.duration(57600)
+	.EUt(120)
+	.buildAndRegister();
+
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2,<extendedcrafting:material:7> * 2,<thermalfoundation:material:894>])
+	.fluidInputs([<liquid:mana> * 1000, <liquid:helium> * 400])
+	.circuit(14)
+	.fluidOutputs(<liquid:molten.lumium> * 576)
+	.property("temperature", 4500)
+	.duration(38400)
+	.EUt(120)
 	.buildAndRegister();
 
 // Lumium Ingot * 1
@@ -306,6 +352,29 @@ mixer.recipeBuilder()
 	.inputs([<metaitem:dustLead> * 4,<metaitem:dustPlatinum> * 2,<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>])
 	.duration(300)
 	.EUt(1920)
+	.buildAndRegister();
+
+// Molten Enderium * 1152
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 14})], [<liquid:krypton> * 80]).remove();
+// Molten Enderium * 1152
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 4})], null).remove();
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustLead> * 4,<metaitem:dustPlatinum> * 2,<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>])
+	.fluidInputs(<liquid:mana> * 1000)
+	.circuit(5)
+	.fluidOutputs(<liquid:molten.enderium> * 576)
+	.property("temperature", 6400)
+	.duration(83200)
+	.EUt(120)
+	.buildAndRegister();
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustLead> * 4,<metaitem:dustPlatinum> * 2,<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>])
+	.fluidInputs([<liquid:mana> * 1000, <liquid:krypton> * 40])
+	.circuit(15)
+	.fluidOutputs(<liquid:molten.enderium> * 576)
+	.property("temperature", 6400)
+	.duration(55467)
+	.EUt(120)
 	.buildAndRegister();
 
 //blast_furnace.recipeBuilder().inputs([<metaitem:dustEnderium>]).fluidInputs([<liquid:mana>*250]).outputs([<metaitem:ingotHotEnderium>]).property("temperature", 6400).duration(20800).EUt(120).buildAndRegister();

@@ -25,7 +25,7 @@ var element_draconium_awakened = Elements.add(149, 267, -1, null, "AwakenedDraco
 
 var draconium = MaterialBuilder(32001, "draconium")
     .element("Draconium")
-    .ingot().fluid().ore()
+    .ingot().fluid("fluid", false).ore()
     .color(0xbe49ed).iconSet("metallic")
     .blastTemp(6800, "HIGHER")
     .cableProperties(524288, 1, 0, true)
@@ -235,6 +235,7 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:californium>.addIngot();
 <material:einsteinium>.addIngot();
 <material:graphite>.addIngot();
+<material:graphene>.addIngot();
 
 <material:uranium_235>.addFluid();
 <material:neptunium>.addFluid();
@@ -254,6 +255,7 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:naquadria>.addFlags(["generate_bolt_screw"]);
 <material:redstone>.addFlags(["generate_dense"]);
 <material:lapis>.addFlags(["generate_dense"]);
+<material:graphene>.addFlags(["generate_foil"]);
 // Prevent TE Gears from showing up
 <material:tin>.addFlags(["generate_gear"]);
 <material:copper>.addFlags(["generate_gear"]);

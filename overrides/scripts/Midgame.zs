@@ -41,6 +41,16 @@ chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).flui
 chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:empoweredoil> * 250,<liquid:methanol> * 1500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs(<metaitem:dustTinySodiumHydroxide>).fluidInputs([<liquid:empoweredoil> * 250,<liquid:ethanol> * 1500]).fluidOutputs([<liquid:glycerol> * 1000,<liquid:bio_diesel> * 6000]).duration(300).EUt(30).buildAndRegister();
 
+
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:canolaoil> * 9000,<liquid:methanol> * 54000])			.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:canolaoil> * 9000,<liquid:ethanol> * 54000])			.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:refinedcanolaoil> * 6750,<liquid:methanol> * 40500])		.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:refinedcanolaoil> * 6750,<liquid:ethanol> * 40500])	.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:crystaloil> * 4500,<liquid:methanol> * 27000])			.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:crystaloil> * 4500,<liquid:ethanol> * 27000])		.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:empoweredoil> * 2250,<liquid:methanol> * 13500])			.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fluidInputs([<liquid:empoweredoil> * 2250,<liquid:ethanol> * 13500])		.fluidOutputs([<liquid:glycerol> * 9000,<liquid:bio_diesel> * 54000]).duration(2700).EUt(30).buildAndRegister();
+
 chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:23>).fluidInputs([<liquid:canolaoil> * 1000]).fluidOutputs([<liquid:crystaloil> * 1000]).duration(100).EUt(120).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:24>).fluidInputs([<liquid:canolaoil> * 1000]).fluidOutputs([<liquid:empoweredoil> * 1000]).duration(100).EUt(500).buildAndRegister();
 
@@ -62,6 +72,10 @@ macerator.recipeBuilder().inputs([<thermalfoundation:material:2052>]).outputs([<
 centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
 centrifuge.recipeBuilder().inputs(<contenttweaker:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
+
+recipes.removeByRecipeName("deepmoblearning:recipe1_deep_learner");
+recipes.addShaped(<deepmoblearning:deep_learner>, [[null,null,null],[<metaitem:sensor.lv>,<metaitem:tricorder_scanner>,<metaitem:sensor.lv>],[null,null,null]]);
+
 
 //// Stone Dust
 //centrifuge.recipeBuilder()
@@ -145,7 +159,7 @@ centrifuge.recipeBuilder()
 macerator.recipeBuilder()
 	.inputs([<gregtech:stone_smooth:0>])
 	.outputs([<metaitem:dustGraniteBlack>])
-	.chancedOutput(<metaitem:dustThorium>, 100, 300)
+	.chancedOutput(<metaitem:dustThorium>, 100, 700)
 	.duration(150)
 	.EUt(2)
 	.buildAndRegister();

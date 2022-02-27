@@ -363,17 +363,17 @@ recipes.addShaped(<extrautils2:drum:1>, [
 //Reinforced Drum
 recipes.removeByRecipeName("extrautils2:drum_4096");
 recipes.addShaped(<extrautils2:drum:2>, [
-	[<metaitem:plateVibrantAlloy>, <meta_tile_entity:drum.stainless_steel>, <metaitem:plateVibrantAlloy>], 
-	[<metaitem:plateVibrantAlloy>, <extrautils2:drum:1>, <metaitem:plateVibrantAlloy>], 
-	[<metaitem:plateVibrantAlloy>, <meta_tile_entity:drum.stainless_steel>, <metaitem:plateVibrantAlloy>]]);
+	[<metaitem:blockPolyvinylChloride>, <meta_tile_entity:drum.stainless_steel>, <metaitem:blockPolyvinylChloride>], 
+	[<metaitem:blockPolyvinylChloride>, <extrautils2:drum:1>, <metaitem:blockPolyvinylChloride>], 
+	[<metaitem:blockPolyvinylChloride>, <meta_tile_entity:drum.stainless_steel>, <metaitem:blockPolyvinylChloride>]]);
 	
 //Demonic	
 recipes.removeByRecipeName("extrautils2:drum_65536");
 mods.extendedcrafting.TableCrafting.addShaped(<extrautils2:drum:3>,[
 	[<extrautils2:simpledecorative:1>,<moreplates:demon_plate>,<moreplates:demon_plate>,<moreplates:demon_plate>,<extrautils2:simpledecorative:1>],
-	[<extrautils2:simpledecorative:1>,<meta_tile_entity:drum.titanium>,<meta_tile_entity:drum.titanium>,<meta_tile_entity:drum.titanium>,<extrautils2:simpledecorative:1>],
-	[<extrautils2:simpledecorative:1>,<meta_tile_entity:drum.titanium>,<extrautils2:drum:2>,<meta_tile_entity:drum.titanium>,<extrautils2:simpledecorative:1>],
-	[<extrautils2:simpledecorative:1>,<meta_tile_entity:drum.titanium>,<meta_tile_entity:drum.titanium>,<meta_tile_entity:drum.titanium>,<extrautils2:simpledecorative:1>],
+	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
+	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:drum:2>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
+	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
 	[<extrautils2:simpledecorative:1>,<moreplates:demon_plate>,<moreplates:demon_plate>,<moreplates:demon_plate>,<extrautils2:simpledecorative:1>]]);		
 	
 //Solar

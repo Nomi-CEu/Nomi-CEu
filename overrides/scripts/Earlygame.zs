@@ -410,6 +410,9 @@ recipes.addShaped(<morefurnaces:furnaceblock:3>, [
 //recipes.removeByRecipeName("gregtech:conductive_iron_cable_1");
 //recipes.addShapeless(<gregtech:cable:5700>,[<gregtech:cable:700>,<metaitem:plateRubber>]);
 
+// Battery Alloy
+recipes.addShapeless(<metaitem:dustBatteryAlloy> * 4, [<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustAntimony>]);
+
 recipes.addShapeless(<metaitem:battery.re.lv.cadmium>,[<metaitem:battery.hull.lv>,<metaitem:dustCadmium>,<metaitem:dustCadmium>]);	//Small Cadmium
 recipes.addShapeless(<metaitem:battery.re.lv.sodium>,[<metaitem:battery.hull.lv>,<metaitem:dustSodium>,<metaitem:dustSodium>]);	//Small Sodium
 recipes.addShapeless(<metaitem:battery.re.lv.lithium>,[<metaitem:battery.hull.lv>,<metaitem:dustLithium>,<metaitem:dustLithium>]);	//Small Lithium
@@ -737,7 +740,7 @@ furnace.setFuel(<metaitem:dustGraphite>, 1200);
 //recipes.removeByRecipeName("gregtech:conductive_iron_cable_2");
 //recipes.removeByRecipeName("gregtech:conductive_iron_cable_4");
 recipes.removeByRecipeName("gregtech:block_decompress_clay");
-recipes.removeByRecipeName("gregtech:gravel_to_flint");
+//recipes.removeByRecipeName("gregtech:gravel_to_flint");
 
 
 
@@ -793,7 +796,7 @@ furnace.addRecipe(<minecraft:iron_nugget> * 2, <metaitem:dustImpureVanadiumMagne
 //furnace.remove(<metaitem:ingotConductiveIron>);
 //furnace.addRecipe(<enderio:item_alloy_ingot:4>, <metaitem:dustConductiveIron>, 0.0);
 
-recipes.addShaped(<metaitem:gearIron>, [[<metaitem:stickIron>, <ore:plateIron>, <metaitem:stickIron>],[<ore:plateIron>, <gregtech:meta_tool:11>, <ore:plateIron>], [<metaitem:stickIron>, <ore:plateIron>, <metaitem:stickIron>]]);
+//recipes.addShaped(<metaitem:gearIron>, [[<metaitem:stickIron>, <ore:plateIron>, <metaitem:stickIron>],[<ore:plateIron>, <gregtech:meta_tool:11>, <ore:plateIron>], [<metaitem:stickIron>, <ore:plateIron>, <metaitem:stickIron>]]);
 
 
 //makeShaped("of_sponge", <minecraft:sponge>,
@@ -1051,12 +1054,12 @@ electrolyzer.recipeBuilder()
 //	.duration(150).EUt(8).buildAndRegister();
 
 //Adjust the recipe of the Rotor mold
-recipes.removeByRecipeName("gregtech:shape/mold/shape_mold_rotor");
-recipes.addShaped("gtce_rotor_mold", <metaitem:shape.mold.rotor>, [
-	[<ore:gtceHardHammers>, null, null],
-	[null, null, null],
-	[null, null, <metaitem:shape.empty>]
-]);
+//recipes.removeByRecipeName("gregtech:shape/mold/shape_mold_rotor");
+//recipes.addShaped("gtce_rotor_mold", <metaitem:shape.mold.rotor>, [
+//	[<ore:gtceHardHammers>, null, null],
+//	[null, null, null],
+//	[null, null, <metaitem:shape.empty>]
+//]);
 
 //recipes.removeByRecipeName("gregtech:scanner_battery.re.lv.lithium");
 //recipes.removeByRecipeName("gregtech:scanner_battery.re.lv.cadmium");
@@ -1115,6 +1118,11 @@ furnace.remove(<metaitem:brick.fireclay>);
 furnace.addRecipe(<metaitem:brick.fireclay>, <metaitem:dustFireclay>, 0.5);
 recipes.removeByRecipeName("gregtech:fireclay_dust");
 recipes.addShapeless("fireclay_dust", <metaitem:dustFireclay> * 16, [<metaitem:dustClay>, <metaitem:dustBrick>]);
+// Compressed Fireclay * 1
+<recipemap:compressor>.findRecipe(4, [<metaitem:dustFireclay>], null).remove();
+// Clay Dust * 1
+<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustFireclay> * 2], null).remove();
+
 
 // PBF recipe removals
 // Steel Ingot * 1
@@ -1185,3 +1193,27 @@ primitive_blast_furnace.recipeBuilder()
 // Kill Glowstone Decomp
 // Small Pile of Redstone Dust * 2
 <recipemap:centrifuge>.findRecipe(80, [<minecraft:glowstone_dust:0>], null).remove();
+
+cutter.recipeBuilder()
+	.inputs(<appliedenergistics2:fluix_block>)
+	.fluidInputs(<liquid:water> * 73)
+	.outputs(<moreplates:fluix_plate> * 8)
+	.duration(1568)
+	.EUt(30)
+	.buildAndRegister();
+
+cutter.recipeBuilder()
+	.inputs(<appliedenergistics2:fluix_block>)
+	.fluidInputs(<liquid:distilled_water> * 55)
+	.outputs(<moreplates:fluix_plate> * 8)
+	.duration(1176)
+	.EUt(30)
+	.buildAndRegister();
+
+cutter.recipeBuilder()
+	.inputs(<appliedenergistics2:fluix_block>)
+	.fluidInputs(<liquid:lubricant> * 18)
+	.outputs(<moreplates:fluix_plate> * 8)
+	.duration(784)
+	.EUt(30)
+	.buildAndRegister();
