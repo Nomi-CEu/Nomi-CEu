@@ -11391,7 +11391,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Sodium Hydroxide§r is an ingredient in §9Bio Diesel§r.\n\nThe primary sources are:\n\n- Combining §9Water§r and §6Sodium§r in a §3Chemical Reactor§r (also a good source of §9Hydrogen§r)\n- Splitting §9Salt Water§r in an §3Electrolyzer§r (also a good source of §9Chlorine§r).",
+          "desc:8": "§6Sodium Hydroxide§r is a strong base, and an ingredient in §9Bio Diesel§r, among other reactions.\n\n§2The only source§r is splitting §9Salt Water§r in an §3Electrolyzer§r - this is also a good source of §9Chlorine§r. You can get §9Salt Water§r from mixing §6Salt§r and §9Water§r (duh), §2dissolving Ghast Tears, or drilling it from Salt Water fluid veins, which only spawn over oceans.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13201,7 +13201,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With §6Tungstensteel§r achieved, you can now make hulls for Insane Voltage (IV) §bGregTech§r machines.\n\n§2Starting at IV, 4A and 16A Energy and Dynamo hatches are available at each tier.",
+          "desc:8": "With §6Tungstensteel§r achieved, you can now make hulls for Insane Voltage (IV) §bGregTech§r machines.\n\n§2Starting at IV, 16A Energy and Dynamo hatches are available at each tier.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22563,7 +22563,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With §6Titanium§r smelting automated, you can now build Machine Hulls for Extreme Voltage machines.",
+          "desc:8": "With §6Titanium§r smelting automated, you can now build Machine Hulls for Extreme Voltage machines.\n\n§2Starting at EV, 4A Energy and Dynamo hatches are available at each tier.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22574,7 +22574,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "EV Machine Hulls",
+          "name:8": "§2EV Machine Hulls",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -24376,12 +24376,12 @@
     },
     "371:10": {
       "preRequisites:11": [
-        37
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aRubber Soft Hammer§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the hammer.",
+          "desc:8": "A §aSoft Hammer§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the hammer.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24390,15 +24390,18 @@
             "id:8": "gregtech:meta_tool",
             "tag:10": {
               "GT.ToolStats:10": {
-                "HandleMaterial:8": "darmstadtium",
-                "PrimaryMaterial:8": "darmstadtium"
+                "AttackDamage:5": 1.0,
+                "DigSpeed:5": 4.0,
+                "HarvestLevel:3": 1,
+                "Material:8": "wood",
+                "MaxDurability:3": 48
               }
             }
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Rubber Soft Hammer",
+          "name:8": "Soft Hammer",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -24430,21 +24433,24 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 6,
-              "Damage:2": 1068,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_plate"
-            },
-            "1:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 7,
               "OreDict:8": "",
-              "id:8": "minecraft:stick"
+              "id:8": "gregtech:meta_tool",
+              "tag:10": {
+                "GT.ToolStats:10": {
+                  "AttackDamage:5": 1.0,
+                  "DigSpeed:5": 4.0,
+                  "HarvestLevel:3": 1,
+                  "Material:8": "wood",
+                  "MaxDurability:3": 48
+                }
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -47225,7 +47231,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Large Turbines have been reworked in CEu. Now, they are quite complex to run, but can generate lots of power when done well and scale very well.§r\n\nRight now, you can make the §6Large Steam Turbine§r and §6Large Gas Turbine§r. Once you get a §3Fusion Reactor§r going, you can make the §6Large Plasma Turbine§r.\n\nEach Large Turbine will need a §3Dynamo Hatch§r and a §3Rotor Holder§r of the same or higher tier than the Large Turbine itself. Each §3Rotor Holder§r tier above the Large Turbine §ddoubles§r the energy production and adds 10% to fuel efficiency.\n\nYou will need a §aRotor§r to go into each §3Rotor Holder§r§r. The Rotor will grant multiplicative Power and Efficiency bonuses depending on its material. Each Rotor also has a Durability, which is the number of seconds it will last.\n\n§aExample: §rLarge Gas Turbine, with Chrome Rotor and IV Rotor Holder:\nProduction: 4096 * 1.70 * 2 \u003d 10650 EU/t\nEfficiency: 1.55 * 1.10 \u003d 170.5%\n\nYou can run the §6Large Gas Turbine§r off §9LPG§r and §9Methane§r, but the best fuel for it is §9Nitrobenzene§r.\nThe best §6Large Steam Turbine§r fuel is a closely-guarded government secret.",
+          "desc:8": "§2Large Turbines have been improved in CEu. They are quite complex to run, but can generate lots of power when done well and scale very well.§r\n\nRight now, you can make the §6Large Steam Turbine§r and §6Large Gas Turbine§r. Once you get a §3Fusion Reactor§r going, you can make the §6Large Plasma Turbine§r.\n\nEach Large Turbine will need a §3Rotor Holder§r of the same or higher tier than the Large Turbine itself, and a §3Dynamo Hatch§r capable of handling the energy output. Each §3Rotor Holder§r tier above the Large Turbine §ddoubles§r the energy production and adds 10% to fuel efficiency.\n\nYou will need a §aRotor§r to go into each §3Rotor Holder§r§r. The Rotor will grant multiplicative Power and Efficiency bonuses depending on its material. Each Rotor also has a Durability, which is the number of seconds it will last.\n\n§aExample: §r§6Large Gas Turbine§r, with §3HSS-E Rotor§r and §3IV Rotor Holder§r:\n§aProduction:§r 4096 * 2.80 * 2 \u003d 22938 EU/t (91752 RF/t)\n§aEfficiency:§r 1.40 * 1.10 \u003d 154.0%\n§aDurability:§r 205,600 s (57.1 h)\n\nYou can run the §6Large Gas Turbine§r off §9LPG§r and §9Methane§r from §3Fluid Rigs§r, or §9Nitrobenzene§r from §6Wood§r.\nThe best §6Large Steam Turbine§r fuel is a closely-guarded government secret.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49979,7 +49985,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A rudimentary version of Platinum Group Sludge (PGS) processing existed in the base pack. Here, it is a strong source of Ruthenium and Rhodium, both used in higher tiers. And of course it is a source of Palladium, Osmium, Iridium, Platinum, and Gold.\n\nYou will need to treat certain ores with Nitric Acid to yield PGS - Sheldonite is the best. Then, using an HV+ Centrifuge and Aqua Regia, break it down into the PGS salts, and reduce those salts to the metals.\n\nThis is still optional, and you can get Ruthenium and Rhodium from Osmiridium 80/20 Ore and Iridosmine 80/20 Ore from Microverse adventures instead.",
+          "desc:8": "§2A rudimentary version of Platinum Group Sludge (PGS) processing existed in the base pack. Here, it is a strong source of the Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum - as well as Gold. All of these elements will be used in IV-tier and above materials.\n\nYou will need to treat certain ores with Nitric Acid to yield PGS - Sheldonite is the best. Then, using an HV+ Centrifuge and Aqua Regia, break it down into the PGS salts, and reduce those salts to the metals.\n\nThis is still optional, and you can get Ruthenium and Rhodium from Osmiridium 80/20 Ore and Iridosmine 80/20 Ore from Microverse adventures instead.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51142,7 +51148,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
+              "Count:3": 16,
               "Damage:2": 6,
               "OreDict:8": "",
               "id:8": "gregtech:wire_coil"
@@ -51289,7 +51295,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A strong heavy element obtained only from the Naquadah chain.\n\nTrinium comes out at the second step of Naquadah Dust processing, so if you don\u0027t mind storing the intermediates and have Fluorine under control, you can hold off doing the full chain if you don\u0027t need to yet. You get 1 Trinium per 12 Naquadah processed.\n\nThis will be required in large quantities for Trinium Coils, Superconducting Coil Blocks, Naquadah Alloy, among other things. You will need over 10 stacks for a Fusion Reactor Mk1, so stock up on it.",
+          "desc:8": "§2A strong heavy element obtained only from the Naquadah chain.\n\nTrinium comes out at the second step of Naquadah Dust processing, so if you don\u0027t mind storing the intermediates and have Fluorine under control, you can hold off doing the full chain if you don\u0027t need to yet. You get 1 Trinium per 12 Naquadah processed.\n\nThis will be required in large quantities for Trinium Coils, Superconducting Coil Blocks, Naquadah Alloy, among other things. You will need over 14 stacks at least for a Fusion Reactor Mk1, so stock up on it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51812,7 +51818,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
+              "Count:3": 16,
               "Damage:2": 7,
               "OreDict:8": "",
               "id:8": "gregtech:wire_coil"
@@ -52040,7 +52046,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Alloy Blast Smelter directly smelts dust combinations into molten Alloys, skipping the Mixer step. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\nThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for certain normal alloys if you want. In particular, the yield of Energetic Alloy and Vibrant Alloy is doubled.",
+          "desc:8": "§2The Alloy Blast Smelter directly smelts dust combinations into molten Alloys, skipping the Mixer step. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\nThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for most normal alloys if you want. In particular, the yield of Energetic Alloy and Vibrant Alloy is doubled.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53919,7 +53925,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 887,
@@ -56311,244 +56317,251 @@
           "y:3": 192
         },
         "71:10": {
+          "id:3": 549,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -292,
+          "y:3": 68
+        },
+        "72:10": {
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -184,
           "y:3": 148
         },
-        "72:10": {
+        "73:10": {
           "id:3": 556,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
           "y:3": 268
         },
-        "73:10": {
+        "74:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
           "y:3": 224
         },
-        "74:10": {
+        "75:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 20
         },
-        "75:10": {
+        "76:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -112,
           "y:3": 20
         },
-        "76:10": {
+        "77:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 20
         },
-        "77:10": {
+        "78:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 20
         },
-        "78:10": {
+        "79:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 68
         },
-        "79:10": {
+        "80:10": {
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -252,
           "y:3": 456
         },
-        "80:10": {
+        "81:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -424,
           "y:3": 88
         },
-        "81:10": {
+        "82:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 188
         },
-        "82:10": {
+        "83:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -284,
           "y:3": 264
         },
-        "83:10": {
+        "84:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -392,
           "y:3": 352
         },
-        "84:10": {
+        "85:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -616,
           "y:3": 128
         },
-        "85:10": {
+        "86:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -652,
           "y:3": 68
         },
-        "86:10": {
+        "87:10": {
           "id:3": 819,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 20
         },
-        "87:10": {
+        "88:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 20
         },
-        "88:10": {
+        "89:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": -17
         },
-        "89:10": {
+        "90:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 68
         },
-        "90:10": {
+        "91:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 48
         },
-        "91:10": {
+        "92:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 464
         },
-        "92:10": {
+        "93:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "93:10": {
+        "94:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "94:10": {
+        "95:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "95:10": {
+        "96:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "96:10": {
+        "97:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 388
         },
-        "97:10": {
+        "98:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 388
         },
-        "98:10": {
+        "99:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 140
         },
-        "99:10": {
+        "100:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 104
         },
-        "100:10": {
+        "101:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -552,
           "y:3": 268
         },
-        "101:10": {
+        "102:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 264
         },
-        "102:10": {
+        "103:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "103:10": {
+        "104:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 188
         },
-        "104:10": {
+        "105:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "105:10": {
+        "106:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -59065,7 +59078,7 @@
           "id:3": 845,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
+          "x:3": -156,
           "y:3": 176
         },
         "107:10": {
