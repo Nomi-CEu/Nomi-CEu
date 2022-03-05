@@ -598,18 +598,7 @@ makeExtremeRecipe9(<metaitem:creative_chest> * 2,
       X : <thermalexpansion:capacitor:32000>.withTag({Energy: 250000000}, false)
     });
 
-// Changed to GT Creative Tank in multiblocks.zs
 
-//solidifier.recipeBuilder()
-//    .fluidInputs([<liquid:moltencreativeportabletank> * 144])
-//    .notConsumable(<contenttweaker:creativeportabletankmold>)
-//    .outputs(creativetank)
-//    .duration(500).EUt(100000).buildAndRegister();
-//
-//fluid_extractor.recipeBuilder()
-//    .inputs([<contenttweaker:heartofauniverse>])
-//    .fluidOutputs([<liquid:moltencreativeportabletank> * 145])
-//    .duration(500).EUt(100000).buildAndRegister();
 
 
 ////////////////////////// Creative Items ///////////////////////

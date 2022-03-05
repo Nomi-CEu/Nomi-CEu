@@ -12,18 +12,6 @@ import mods.contenttweaker.IItemFoodEaten;
 import crafttweaker.potions.IPotion;
 
 
-//var smallgearextrudershape = VanillaFactory.createItem("smallgearextrudershape");
-//smallgearextrudershape.maxStackSize = 64;
-//smallgearextrudershape.register();
-//
-//var deuteriumrover = VanillaFactory.createItem("deuteriumrover");
-//deuteriumrover.maxStackSize = 64;
-//deuteriumrover.register();
-//
-//var helium3rover = VanillaFactory.createItem("helium3rover");
-//helium3rover.maxStackSize = 64;
-//helium3rover.register();
-
 var creativeportabletankmold = VanillaFactory.createItem("creativeportabletankmold");
 creativeportabletankmold.maxStackSize = 64;
 creativeportabletankmold.register();
@@ -64,79 +52,6 @@ var grainsofinnocence = VanillaFactory.createItem("grainsofinnocence");
 grainsofinnocence.maxStackSize = 64;
 grainsofinnocence.register();
 
-//var combinationcircuit = VanillaFactory.createItem("combinationcircuit");
-//combinationcircuit.maxStackSize = 64;
-//combinationcircuit.register();
-
-//var electronicprocessor = VanillaFactory.createItem("electronicprocessor");
-//electronicprocessor.maxStackSize = 64;
-//electronicprocessor.register();
-//
-//var electronicprocessorarray = VanillaFactory.createItem("electronicprocessorarray");
-//electronicprocessorarray.maxStackSize = 64;
-//electronicprocessorarray.register();
-//
-//var refinedcircuit = VanillaFactory.createItem("refinedcircuit");
-//refinedcircuit.maxStackSize = 64;
-//refinedcircuit.register();
-//
-//var refinedprocessor = VanillaFactory.createItem("refinedprocessor");
-//refinedprocessor.maxStackSize = 64;
-//refinedprocessor.register();
-//
-//var refinedprocessorarray = VanillaFactory.createItem("refinedprocessorarray");
-//refinedprocessorarray.maxStackSize = 64;
-//refinedprocessorarray.register();
-//
-//var refinedprocessormainframe = VanillaFactory.createItem("refinedprocessormainframe");
-//refinedprocessormainframe.maxStackSize = 64;
-//refinedprocessormainframe.register();
-//
-//var microcircuit = VanillaFactory.createItem("microcircuit");
-//microcircuit.maxStackSize = 64;
-//microcircuit.register();
-//
-//var microprocessorarray = VanillaFactory.createItem("microprocessorarray");
-//microprocessorarray.maxStackSize = 64;
-//microprocessorarray.register();
-//
-//var microprocessormainframe = VanillaFactory.createItem("microprocessormainframe");
-//microprocessormainframe.maxStackSize = 64;
-//microprocessormainframe.register();
-//
-//var nanoprocessorarray = VanillaFactory.createItem("nanoprocessorarray");
-//nanoprocessorarray.maxStackSize = 64;
-//nanoprocessorarray.register();
-//
-//var nanoprocessormainframe = VanillaFactory.createItem("nanoprocessormainframe");
-//nanoprocessormainframe.maxStackSize = 64;
-//nanoprocessormainframe.register();
-//
-//var quantumprocessor = VanillaFactory.createItem("quantumprocessor");
-//quantumprocessor.maxStackSize = 64;
-//quantumprocessor.register();
-//
-//var quantumprocessorarray = VanillaFactory.createItem("quantumprocessorarray");
-//quantumprocessorarray.maxStackSize = 64;
-//quantumprocessorarray.register();
-//
-//var quantumprocessormainframe = VanillaFactory.createItem("quantumprocessormainframe");
-//quantumprocessormainframe.maxStackSize = 64;
-//quantumprocessormainframe.register();
-//
-//var crystalcircuit = VanillaFactory.createItem("crystalcircuit");
-//crystalcircuit.maxStackSize = 64;
-//crystalcircuit.register();
-//
-//var crystalprocessorarray = VanillaFactory.createItem("crystalprocessorarray");
-//crystalprocessorarray.maxStackSize = 64;
-//crystalprocessorarray.register();
-//
-//var crystalprocessormainframe = VanillaFactory.createItem("crystalprocessormainframe");
-//crystalprocessormainframe.maxStackSize = 64;
-//crystalprocessormainframe.register();
-
-
 
 
 var warpengine = VanillaFactory.createItem("warpengine");
@@ -152,10 +67,6 @@ var gemsensor = VanillaFactory.createItem("gemsensor");
 gemsensor.maxStackSize = 64;
 gemsensor.register();
 
-//var draconicstemcells = VanillaFactory.createItem("draconicstemcells");
-//draconicstemcells.maxStackSize = 64;
-//draconicstemcells.rarity = "epic";
-//draconicstemcells.register();
 
 var radiationlayer = VanillaFactory.createItem("radiationlayer");
 radiationlayer.maxStackSize = 64;
@@ -212,9 +123,6 @@ var moondust = VanillaFactory.createItem("moondust");
 moondust.maxStackSize = 64;
 moondust.register();
 
-//var pulsatingwire = VanillaFactory.createItem("pulsatingwire");
-//pulsatingwire.maxStackSize = 64;
-//pulsatingwire.register();
 
 var blazepowder = VanillaFactory.createItem("blazepowder");
 blazepowder.maxStackSize = 64;
@@ -242,13 +150,6 @@ block_dust.blockResistance = 0.4;
 block_dust.gravity = true;
 block_dust.register();
 
-//var endstonedust = VanillaFactory.createItem("endstonedust");
-//endstonedust.maxStackSize = 64;
-//endstonedust.register();
-//
-//var knightslimeingot = VanillaFactory.createItem("knightslimeingot");
-//knightslimeingot.maxStackSize = 64;
-//knightslimeingot.register();
 
 var redstonearmorplate = VanillaFactory.createItem("redstonearmorplate");
 redstonearmorplate.maxStackSize = 64;
@@ -326,26 +227,14 @@ function makeFluid(name as string,
 }
 
 //        name                          color       gas?    viscosity   rarity      light
-//makeFluid("krypton",                    "73f93e",   true,   500,        "RARE",     0);
-//makeFluid("neon",                       "f435eb",   true,   500,        "RARE",     0);
-//makeFluid("xenon",                      "8d1f9b",   true,   500,        "RARE",     0);
+
 
 makeFluid("elementalreduction",         "588c5a",   false,  2000,       "COMMON",   7);
 
-//makeFluid("einsteinium",                "ddc10b",   false,  4096,       "COMMON",   0);
-//makeFluid("californium",                "9b110c",   false,  3072,       "COMMON",   0);
-//makeFluid("berkelium",                  "ba5710",   false,  2048,       "COMMON",   0);
-//makeFluid("curium",                     "421e5b",   false,  1024,       "COMMON",   0);
-//makeFluid("neptunium",                  "c3dbc6",   false,  1024,       "COMMON",   0);
 makeFluid("plutonium2",                 "f73663",   false,  1024,       "COMMON",   0);
 makeFluid("uranium233",                 "187a30",   false,  1024,       "COMMON",   0);
 
-//makeFluid("moltencreativeportabletank", "a02cba",   false,  1,          "EPIC",     0);
-//makeFluid("awakeneddraconium",          "ff890c",   false,  2000,       "COMMON",   0);
-//makeFluid("moltencrystalmatrix",        "4cffed",   false,  2000,       "COMMON",   0);
-//makeFluid("moltensoularium",            "6b4411",   false,  1000,       "COMMON",   0);
 makeFluid("moltendarksoularium",        "422805",   false,  1000,       "COMMON",   0);
-//makeFluid("moltennetherstar",           "f2f2d8",   false,  100,        "COMMON",   15);
 
 makeFluid("moltenempoweredrestonia",    "ff0000",   false,  10000,      "COMMON",   15);
 makeFluid("moltenempoweredpalis",       "0026ff",   false,  10000,      "COMMON",   15);
@@ -436,25 +325,6 @@ ultimate_generator.register();
 
 
 
-
-
-//var hotdraconiumingot = VanillaFactory.createItem("hotdraconiumingot");
-//hotdraconiumingot.rarity = "rare";
-//hotdraconiumingot.maxStackSize = 16;
-//
-//hotdraconiumingot.onItemUpdate = function(itemStack, world, owner, slot, isSelected) {
-//    if (world.getWorldTime() % 20 == 0) {
-//        owner.attackEntityFrom(<damageSource:heat>.setDamageBypassesArmor(), 3.0);
-//    }
-//    return;
-//};
-//
-//hotdraconiumingot.register();
-
-
-
-
-
 var netherstarsouth = VanillaFactory.createItem("netherstarsouth");
 netherstarsouth.maxStackSize = 64;
 netherstarsouth.register();
@@ -469,55 +339,11 @@ netherstarwest.register();
 
 
 
-//var steelplating = VanillaFactory.createItem("steelplating");
-//steelplating.rarity = "uncommon";
-//steelplating.maxStackSize = 64;
-//steelplating.register();
-//
-//var titaniumplating = VanillaFactory.createItem("titaniumplating");
-//titaniumplating.rarity = "uncommon";
-//titaniumplating.maxStackSize = 64;
-//titaniumplating.register();
-//
-//var tungstencarbideplating = VanillaFactory.createItem("tungstencarbideplating");
-//tungstencarbideplating.rarity = "uncommon";
-//tungstencarbideplating.maxStackSize = 64;
-//tungstencarbideplating.register();
-//
-//var signalumplating = VanillaFactory.createItem("signalumplating");
-//signalumplating.rarity = "uncommon";
-//signalumplating.maxStackSize = 64;
-//signalumplating.register();
-//
-//var iridiumalloyplating = VanillaFactory.createItem("iridiumalloyplating");
-//iridiumalloyplating.rarity = "uncommon";
-//iridiumalloyplating.maxStackSize = 64;
-//iridiumalloyplating.register();
-//
-//var enderiumplating = VanillaFactory.createItem("enderiumplating");
-//enderiumplating.rarity = "rare";
-//enderiumplating.maxStackSize = 64;
-//enderiumplating.register();
-//
-//var draconiumplating = VanillaFactory.createItem("draconiumplating");
-//draconiumplating.rarity = "rare";
-//draconiumplating.maxStackSize = 64;
-//draconiumplating.register();
-//
-//var crystalmatrixplating = VanillaFactory.createItem("crystalmatrixplating");
-//crystalmatrixplating.rarity = "epic";
-//crystalmatrixplating.maxStackSize = 64;
-//crystalmatrixplating.register();
-
 var quantumfluxedeterniumplating = VanillaFactory.createItem("quantumfluxedeterniumplating");
 quantumfluxedeterniumplating.rarity = "epic";
 quantumfluxedeterniumplating.maxStackSize = 64;
 quantumfluxedeterniumplating.register();
 
-//var neutroniumplating = VanillaFactory.createItem("neutroniumplating");
-//neutroniumplating.rarity = "epic";
-//neutroniumplating.maxStackSize = 64;
-//neutroniumplating.register();
 
 var heartofauniverse = VanillaFactory.createItem("heartofauniverse");
 heartofauniverse.rarity = "epic";
@@ -630,20 +456,12 @@ stellarcreationdata.rarity = "rare";
 stellarcreationdata.maxStackSize = 64;
 stellarcreationdata.register();
 
-//var lairoftheclockworkkingdata = VanillaFactory.createItem("lairoftheclockworkkingdata");
-//lairoftheclockworkkingdata.rarity = "epic";
-//lairoftheclockworkkingdata.maxStackSize = 1;
-//lairoftheclockworkkingdata.register();
 
 var lairofthechaosguardiandata = VanillaFactory.createItem("lairofthechaosguardiandata");
 lairofthechaosguardiandata.rarity = "epic";
 lairofthechaosguardiandata.maxStackSize = 1;
 lairofthechaosguardiandata.register();
 
-//var sentientgear = VanillaFactory.createItem("sentientgear");
-//sentientgear.rarity = "epic";
-//sentientgear.maxStackSize = 64;
-//sentientgear.register();
 
 var denseoilshale = VanillaFactory.createBlock("denseoilshale", <blockmaterial:rock>);
 denseoilshale.blockSoundType = <soundtype:stone>;
@@ -714,10 +532,3 @@ pulsatingdust.register();
 var pulsatingmesh = VanillaFactory.createItem("pulsatingmesh");
 pulsatingmesh.maxStackSize = 64;
 pulsatingmesh.register();
-
-
-//var simulation_casing = VanillaFactory.createBlock("simulation_casing", <blockmaterial:iron>);
-//simulation_casing.register();
-//
-//var simulation_casing_2 = VanillaFactory.createBlock("simulation_casing_2", <blockmaterial:iron>);
-//simulation_casing_2.register();

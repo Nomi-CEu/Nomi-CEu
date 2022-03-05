@@ -13,19 +13,12 @@ import scripts.common.makeShapedF as makeShapedF;
 /////////////       Thermal Expansion       //////////////////
 //////////////////////////////////////////////////////////////
 
-//mods.jei.JEI.removeAndHide(<thermalfoundation:storage_resource:1>);
-//mods.jei.JEI.removeAndHide(<thermalfoundation:material:802>);
-//mods.jei.JEI.removeAndHide(<thermalexpansion:augment:288>);
+
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:256>);
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:257>);
-//mods.jei.JEI.removeAndHide(<thermalexpansion:augment:258>);
-//mods.jei.JEI.removeAndHide(<thermalexpansion:augment:273>);
+
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:303>);
-//mods.jei.JEI.removeAndHide(<thermalexpansion:augment:304>);
-//mods.jei.JEI.removeAndHide(<thermalexpansion:augment:336>);
-//mods.jei.JEI.removeAndHide(<thermalexpansion:augment:369>);
-//mods.jei.JEI.removeAndHide(<thermalexpansion:augment:324>);
-//mods.jei.JEI.removeAndHide(<extendedcrafting:material:128>);
+
 recipes.removeByRecipeName("extendedcrafting:diamond_nugget_to");
 mods.jei.JEI.removeAndHide(<extendedcrafting:material:129>);
 recipes.removeByRecipeName("extendedcrafting:emerald_nugget_to");
@@ -412,78 +405,6 @@ mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*
 mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*6,<actuallyadditions:block_black_lotus>, <thermalfoundation:fertilizer:1>, 7200);
 mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*9,<actuallyadditions:block_black_lotus>, <thermalfoundation:fertilizer:2>, 9600);
 
-//Ensure Proper Enderium/Lumium/Signalum Ingots
-
-
-//val liquidMap as IItemStack[][ILiquidStack] = {
-//    <liquid:signalum> : [<thermalfoundation:material:165>, <thermalfoundation:storage_alloy:5>, <thermalfoundation:material:229>],
-//    <liquid:lumium>   : [<thermalfoundation:material:166>, <thermalfoundation:storage_alloy:6>, <thermalfoundation:material:230>],
-//    <liquid:enderium> : [<thermalfoundation:material:167>, <thermalfoundation:storage_alloy:7>, <thermalfoundation:material:231>]
-//};
-
-
-//ingot, block, nugget
-
-//for liquid,items in liquidMap {
-//	
-//	//Ingots
-//	solidifier.findRecipe(7, [<metaitem:shape.mold.ingot>], [liquid * 144]).remove();
-//	solidifier.recipeBuilder()
-//		.fluidInputs(liquid * 144)
-//		.notConsumable(<metaitem:shape.mold.ingot>)
-//		.outputs(items[0])
-//		.duration(20).EUt(8).buildAndRegister();
-//
-//	//Blocks
-//	solidifier.findRecipe(7, [<metaitem:shape.mold.block>], [liquid * 1296]).remove();
-//	solidifier.recipeBuilder()
-//		.fluidInputs(liquid * 1296)
-//		.notConsumable(<metaitem:shape.mold.block>)
-//		.outputs(items[1])
-//		.duration(98).EUt(8).buildAndRegister();
-//
-//	//Nuggets
-//	solidifier.findRecipe(7, [<metaitem:shape.mold.nugget>], [liquid * 144]).remove();
-//	solidifier.recipeBuilder()
-//		.fluidInputs(liquid * 144)
-//		.notConsumable(<metaitem:shape.mold.nugget>)
-//		.outputs(items[2] * 9)
-//		.duration(98).EUt(8).buildAndRegister();
-//}
-//
-////Correct Packager Recipes
-//
-//val packagerArray2 = [
-//
-//	[<thermalfoundation:material:231>, <thermalfoundation:material:167>],
-//	[<thermalfoundation:material:230>, <thermalfoundation:material:166>],
-//	[<thermalfoundation:material:229>, <thermalfoundation:material:165>]
-//
-//] as IItemStack[][];
-//
-//for nuggets in packagerArray2 {
-//	
-//	compressor.findRecipe(2, [nuggets[0] * 9], [null]).remove();
-//
-//	packager.recipeBuilder()
-//		.inputs(nuggets[0] * 9)
-//        .outputs(nuggets[1])
-//        .duration(300).EUt(2).buildAndRegister();
-//        
-//}
-//
-////Furnace Recipes
-////Enderium
-//furnace.remove(<metaitem:ingotEnderium>, <metaitem:dustEnderium>);
-//furnace.addRecipe(<thermalfoundation:material:167>, <metaitem:dustEnderium>);
-//
-////Signalum
-//furnace.remove(<metaitem:ingotSignalum>, <metaitem:dustSignalum>);
-//furnace.addRecipe(<thermalfoundation:material:165>, <metaitem:dustSignalum>);
-//
-////Lumium
-//furnace.remove(<metaitem:ingotLumium>, <metaitem:dustLumium>);
-//furnace.addRecipe(<thermalfoundation:material:166>, <metaitem:dustLumium>);
 
 //Mana Infused
 mixer.recipeBuilder()
@@ -513,40 +434,6 @@ mods.jei.JEI.addDescription(<appliedenergistics2:material:10>, "Made in the Crys
 mods.jei.JEI.addDescription(<appliedenergistics2:material:11>, "Made in the Crystal Growth Chamber or in a Phytogenic Insolator. If made in the Phytogenic Insolator, make sure to unlock the Fertilizer slot. Augments do not work for this craft.");
 mods.jei.JEI.addDescription(<appliedenergistics2:material:12>, "Made in the Crystal Growth Chamber or in a Phytogenic Insolator. If made in the Phytogenic Insolator, make sure to unlock the Fertilizer slot. Augments do not work for this craft.");
 
-//val liquids as int[][ILiquidStack] = {
-//    
-//    //Fluid : duration, power
-//    <liquid:water> * 73 : [1568, 30],
-//    <liquid:distilled_water> * 55 : [1019, 30],
-//    <liquid:lubricant> * 18 : [392, 30]
-//
-//};
-//
-//val blocks = [
-//
-//    //Enderium
-//    [<thermalfoundation:storage_alloy:7>, <thermalfoundation:material:359> * 9],
-//    //Lumium
-//    [<thermalfoundation:storage_alloy:6>, <thermalfoundation:material:358> * 9],
-//    //Signalum
-//    [<thermalfoundation:storage_alloy:5>, <thermalfoundation:material:357> * 9],
-//    //Mana Infused
-//    [<thermalfoundation:storage:8>, <thermalfoundation:material:328> * 9]
-//
-//] as IItemStack[][];
-//
-//for blockItem in blocks {
-//
-//    for liquid, values in liquids {
-//   
-//        cutter.recipeBuilder()
-//            .inputs(blockItem[0])
-//            .fluidInputs(liquid)
-//            .outputs(blockItem[1])
-//            .duration(values[0]).EUt(values[1]).buildAndRegister();
-//
-//    }
-//}
 
 //Add Rubber Trees to Phytogenic Insolator. Why would you use this?
 mods.thermalexpansion.Insolator.addRecipeSaplingInfuser(<gregtech:rubber_log> * 6, <gregtech:rubber_sapling>, <thermalfoundation:fertilizer:0>, 9600, <gregtech:rubber_sapling>, 100);

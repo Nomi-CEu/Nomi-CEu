@@ -9,58 +9,6 @@ import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 import scripts.common.makeShaped as makeShaped;
 import scripts.common.makeShapeless3 as makeShapeless3;
 
-//////////////////////////////////////////////////////////////
-/////////////	    Modular Machinery	    //////////////////
-//////////////////////////////////////////////////////////////
-
-// Controller
-//recipes.remove(<modularmachinery:blockcontroller>);
-//<modularmachinery:blockcontroller>.displayName = "Modular Machine Controller";
-//<modularmachinery:blockcontroller>.addTooltip(format.red("Modular Machinery is getting removed in a future update."));
-//<modularmachinery:blockcontroller>.addTooltip(format.red("Please use the new GregTech multiblocks instead. ('@Multiblock' in JEI)"));
-//
-//<ore:multiblockController>.add(<modularmachinery:blockcontroller>);
-
-//                 XXXXXXXXXX                            XXXXXXXXXX
-//              XXXXXXXXXXXXXXX                        XXXXXXXXXXXXXXX
-//            XXXXXXXXXXXXX XXXX                      XXXX XXXXXXXXXXXXX
-//           XXXXXXXXXXXXX XXXXX                      XXXXX XXXXXXXXXXXXX
-//          XXXXXXXXXXXXX XXXXXX                      XXXXXX XXXXXXXXXXXXX
-//         XXXXXXXXXXXXXXXXXXXXX                      XXXXXXXXXXXXXXXXXXXXX
-//        XXXXXXXXXXXXXXXXXXXXXX                      XXXXXXXXXXXXXXXXXXXXXX
-//       XXXXXXXXXXXXXXXXXXXXXX                        XXXXXXXXXXXXXXXXXXXXXX
-//       XXXXXXXXXXXXXXXXXXXXX  XXXXX            XXXXX  XXXXXXXXXXXXXXXXXXXXX
-//      XXXXXXXXXXXXXXXXXXXXX  XXXXXXXX        XXXXXXXX  XXXXXXXXXXXXXXXXXXXXX
-//      XXXXXXXXXXXXXXXXXXX    XXXXXXXX        XXXXXXXX    XXXXXXXXXXXXXXXXXXX
-//      XXXXXXXXXXXXXXXXX      XXXXXXXXX      XXXXXXXXX      XXXXXXXXXXXXXXXXX
-//      XXXXXXXXXXXXXXX          XXXXXXXXXXXXXXXXXXXX          XXXXXXXXXXXXXXX
-//      XXXXXXXXXXXX          XXXXXXXXXXXXXXXXXXXXXXXXXX          XXXXXXXXXXXX
-//      XXXXXXXXXX        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX        XXXXXXXXXX
-//       XXXXXXXXXX     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     XXXXXXXXXX
-//        XXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXX
-// XXXX     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     XXXX
-// XXXXXX    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    XXXXXX
-// XXXXXXXX    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    XXXXXXXX
-//  XXXXXXXX     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    XXXXXXXX
-//   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-//    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-//       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-//          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-//    XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXX
-//         XXX    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    XXX
-//            XXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXX
-//       XXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXX
-//    XXXXXXXXXXXXXXXXX   XXXXXXXX     XXXXXXXX     XXXXXXXX   XXXXXXXXXXXXXXXXX
-//    XXXXXXXXXXXXXX    XXXXXXXXX                    XXXXXXXXX    XXXXXXXXXXXXXX
-//     XXXXXXXXXX      XXXXXXXX                       XXXXXXXXX      XXXXXXXXXX
-//                     XXXXXXXX                        XXXXXXXX
-//                     XXXXXXXX                        XXXXXXXX
-//                      XXXXXXX                        XXXXXXX
-//                      XXXXXX                          XXXXXX
-//                      XXXXX                            XXXXX
 
 /////////////	 Tier One Space Ship   	  //////////////////	200 ingots
 
@@ -514,32 +462,3 @@ makeShaped("of_dml_living_matter_extraterrestrial",
 	  E : <minecraft:ender_pearl> }
 );
 
-
-//// Lunar Mining Station Rovers:
-//
-//
-//// Helium3 Rover (Tritium)
-//makeShaped("of_helium3rover", <contenttweaker:helium3rover> * 16,
-//	["SSA",
-//	 "BCD",
-//	 "E E"],
-//	{ A : <metaitem:sensor.ev>,
-//	  B : <metaitem:plateTitanium>,
-//	  C : <meta_tile_entity:hull.ev>,
-//	  D : <metaitem:robot.arm.ev>,
-//	  E : <metaitem:conveyor.module.ev>,
-//	  S : <solarflux:solar_panel_3> }
-//);
-//
-//// Deuterium Rover
-//makeShaped("of_deuteriumrover", <contenttweaker:deuteriumrover> * 16,
-//	["SSA",
-//	 "BCD",
-//	 "E E"],
-//	{ A : <metaitem:sensor.hv>,
-//	  B : <metaitem:plateStainlessSteel>,
-//	  C : <meta_tile_entity:hull.hv>,
-//	  D : <metaitem:robot.arm.hv>,
-//	  E : <metaitem:conveyor.module.hv>,
-//	  S : <solarflux:solar_panel_2> }
-//);

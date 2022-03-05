@@ -16,27 +16,20 @@ var element_omnium = Elements.add(130, 234, -1, null, "Omnium", "Nm", false);
 var element_draconium = Elements.add(149, 264, -1, null, "Draconium", "Dc", false);
 var element_draconium_awakened = Elements.add(149, 267, -1, null, "AwakenedDraconium", "Dc*", false);
 
-//var fluix = MaterialBuilder(32000, "fluix")
-//    .gem()
-//    .color(0x674FAF).iconSet("QUARTZ")
-//    .flags(["generate_plate", "disable_decomposition", "no_smelting", "crystallizable"])
-//    .components([<material:certus_quartz> * 1, <material:nether_quartz> * 1, <material:redstone> * 1])
-//    .build();
-
 var draconium = MaterialBuilder(32001, "draconium")
     .element("Draconium")
-    .ingot().fluid("fluid", false).ore()
+    .ingot().ore()
     .color(0xbe49ed).iconSet("metallic")
     .blastTemp(6800, "HIGHER")
     .cableProperties(524288, 1, 0, true)
-    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_dense"])
+    .flags(["generate_plate", "generate_rod", "generate_gear"])
     .build();
 
 var awakened_draconium = MaterialBuilder(32002, "awakened_draconium")
     .element("AwakenedDraconium")
     .ingot().fluid()
     .color(0xf58742).iconSet("metallic")
-    .flags(["no_smelting", "generate_plate", "generate_rod", "generate_gear", "generate_dense"])
+    .flags(["no_smelting", "generate_plate", "generate_rod", "generate_gear"])
     .build();
 
 var dark_steel = MaterialBuilder(32003, "dark_steel")
@@ -52,11 +45,6 @@ var omnium = MaterialBuilder(32004, "omnium")
     .color(0x84053e).iconSet("shiny")
     .cableProperties(2147483647, 64, 0, true)
     .build();
-
-//var black_quartz = MaterialBuilder(32005, "black_quartz")
-//    .gem()
-//    .color(0x17151a).iconSet("QUARTZ")
-//    .build();
 
 var ardite = MaterialBuilder(32006, "ardite")
     .ingot().fluid()
@@ -148,7 +136,7 @@ var enderium = MaterialBuilder(32018, "enderium")
 var electrum_flux = MaterialBuilder(32019, "electrum_flux")
     .ingot().fluid()
     .color(0xf7be20).iconSet("bright")
-    .flags("generate_plate")
+    .flags("generate_plate", "generate_gear")
     .blastTemp(1100)
     .components([<material:electrum> * 6, <material:lumium> * 1, <material:signalum> * 1]) 
     .build();
@@ -160,18 +148,10 @@ var mithril = MaterialBuilder(32021, "mithril")
     .components([<material:titanium> * 1, <material:mana> * 1])
     .build();
 
-//var knightslime = MaterialBuilder(32022, "knightslime")
-//    .ingot()
-//    .color(0xff70e2).iconSet("dull")
-//    .flags("generate_plate")
-//    .components([<material:titanium> * 1])
-//    .build();
-
 var crystal_matrix = MaterialBuilder(32023, "crystal_matrix")
     .ingot().fluid()
     .color(0x70ecff).iconSet("shiny")
     .flags("generate_plate")
-//    .components([<material:diamond> * 504, <material:nether_star> * 10])
     .build();
 
 var soularium = MaterialBuilder(32024, "soularium")
@@ -222,12 +202,6 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
     .addOreByproducts(<material:iridium>, <material:osmium>, <material:rhodium>)
     .build();
 
-//<material:niobium>.addOre();
-//<material:osmium>.addOre();
-//<material:iridium>.addOre();
-//<material:uranium>.addOre();
-//<material:rutile>.addOre();
-
 <material:lutetium>.addIngot();
 <material:neptunium>.addIngot();
 <material:curium>.addIngot();
@@ -268,8 +242,3 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 
 <material:black_steel>.setFormula("(AuAgCu3)2Fe3?4", true);
 <material:rhodium_plated_palladium>.setFormula("((SnFe)4(CuAg4)2)2Pd3Rh", true);
-
-//<material:niobium>.setOreByProducts([<material:tantalum>]);
-//<material:osmium>.setOreByProducts([<material:iridium>, <material:nickel>]);
-//<material:iridium>.setOreByProducts([<material:osmium>, <material:nickel>]);
-//<material:uranium>.setOreByProducts([<material:thorium>, <material:lead>, <material:neptunium>]);

@@ -251,113 +251,49 @@ recipes.addShaped(<enderio:item_material:41>, [
     [<metaitem:wafer.silicon>, <metaitem:blockRedAlloy>,<metaitem:wafer.silicon>]
 ]);
 
-//Ensure Correct Solidification
+// Soul Vials
 
-//val liquidMap as IItemStack[][ILiquidStack] = {
-//    <liquid:electrical_steel> : [<enderio:item_alloy_ingot:0>, <enderio:block_alloy:0>, <enderio:item_alloy_nugget:0>],
-//    <liquid:energetic_alloy>  : [<enderio:item_alloy_ingot:1>, <enderio:block_alloy:1>, <enderio:item_alloy_nugget:1>],
-//    <liquid:vibrant_alloy>    : [<enderio:item_alloy_ingot:2>, <enderio:block_alloy:2>, <enderio:item_alloy_nugget:2>],
-//    <liquid:conductive_iron>  : [<enderio:item_alloy_ingot:4>, <enderio:block_alloy:4>, <enderio:item_alloy_nugget:4>],
-//    <liquid:pulsating_iron>   : [<enderio:item_alloy_ingot:5>, <enderio:block_alloy:5>, <enderio:item_alloy_nugget:5>],
-//    <liquid:dark_steel>       : [<enderio:item_alloy_ingot:6>, <enderio:block_alloy:6>, <enderio:item_alloy_nugget:6>],
-//    <liquid:end_steel>        : [<enderio:item_alloy_ingot:8>, <enderio:block_alloy:8>, <enderio:item_alloy_nugget:8>]
-//};
-//
-//for liquid, items in liquidMap {
-//
-//    //Ingots
-//    solidifier.findRecipe(7, [<metaitem:shape.mold.ingot>], [liquid * 144]).remove();
-//    solidifier.recipeBuilder()
-//        .fluidInputs(liquid * 144)
-//        .notConsumable(<metaitem:shape.mold.ingot>)
-//        .outputs(items[0])
-//        .duration(20).EUt(8).buildAndRegister();
-//
-//    //Blocks
-//    solidifier.findRecipe(7, [<metaitem:shape.mold.block>], [liquid * 1296]).remove();
-//    solidifier.recipeBuilder()
-//        .fluidInputs(liquid * 1296)
-//        .notConsumable(<metaitem:shape.mold.block>)
-//        .outputs(items[1])
-//        .duration(98).EUt(8).buildAndRegister();
-//
-//    //Nuggets
-//    solidifier.findRecipe(7, [<metaitem:shape.mold.nugget>], [liquid * 144]).remove();
-//    solidifier.recipeBuilder()
-//        .fluidInputs(liquid * 144)
-//        .notConsumable(<metaitem:shape.mold.nugget>)
-//        .outputs(items[2] * 9)
-//        .duration(98).EUt(8).buildAndRegister();
-//}
-//
-//val packagerArray = [
-//    [<enderio:item_alloy_nugget:6>,<enderio:item_alloy_ingot:6>],
-//    [<enderio:item_alloy_nugget:8>,<enderio:item_alloy_ingot:8>],
-//    [<enderio:item_alloy_nugget:5>,<enderio:item_alloy_ingot:5>],
-//    [<enderio:item_alloy_nugget:4>,<enderio:item_alloy_ingot:4>],
-//    [<enderio:item_alloy_nugget:1>,<enderio:item_alloy_ingot:1>],
-//    [<enderio:item_alloy_nugget:0>,<enderio:item_alloy_ingot:0>],
-//    [<enderio:item_alloy_nugget:2>,<enderio:item_alloy_ingot:2>]
-//] as IItemStack[][];
-//
-//for nugget in packagerArray {
-//    
-//    compressor.findRecipe(2, [nugget[0] * 9], [null]).remove();
-//
-//    compressor.recipeBuilder()
-//        .inputs(nugget[0]*9)
-////        .notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 1}))
-//        .outputs(nugget[1])
-//        .duration(300).EUt(2).buildAndRegister();
-//}
+recipes.addShaped(<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:zombie"}), [
+	[null,<minecraft:skull:2>,null],
+	[<minecraft:skull:2>,<enderio:item_soul_vial>,<minecraft:skull:2>],
+	[null,<minecraft:skull:2>,null]]);
 
-////Furnace Recipes
-////End Steel
-//furnace.remove(<metaitem:ingotEndSteel>, <metaitem:dustEndSteel>);
-//furnace.addRecipe(<enderio:item_alloy_ingot:8>, <metaitem:dustEndSteel>);
-//
-////Vibrant Alloy
-//furnace.remove(<metaitem:ingotVibrantAlloy>, <metaitem:dustVibrantAlloy>);
-//furnace.addRecipe(<enderio:item_alloy_ingot:2>, <metaitem:dustVibrantAlloy>);
-//
-////Pulsating Iron
-//furnace.remove(<metaitem:ingotPulsatingIron>, <metaitem:dustPulsatingIron>);
-//furnace.addRecipe(<enderio:item_alloy_ingot:5>, <metaitem:dustPulsatingIron>);
-//
-////Energetic Alloy
-//furnace.remove(<metaitem:ingotEnergeticAlloy>, <metaitem:dustEnergeticAlloy>);
-//furnace.addRecipe(<enderio:item_alloy_ingot:1>, <metaitem:dustEnergeticAlloy>);
-//
-////Electrical Steel
-//furnace.remove(<metaitem:ingotElectricalSteel>, <metaitem:dustElectricalSteel>);
-//furnace.addRecipe(<enderio:item_alloy_ingot:0>, <metaitem:dustElectricalSteel>);
-//
-////Dark Steel
-//furnace.remove(<metaitem:ingotDarkSteel>, <metaitem:dustDarkSteel>);
-//furnace.addRecipe(<enderio:item_alloy_ingot:6>, <metaitem:dustDarkSteel>);
-////Fixing Multismelter output of the dusts of the GTCE variants of Ender IO ingots
-//val materialList as IItemStack[][] = [
-//    
-//    [<metaitem:dustElectricalSteel>, <enderio:item_alloy_ingot>],
-//    [<metaitem:dustEnergeticAlloy>, <enderio:item_alloy_ingot:1>],
-//    [<metaitem:dustVibrantAlloy>, <enderio:item_alloy_ingot:2>],
-//    [<metaitem:dustDarkSteel>, <enderio:item_alloy_ingot:6>],
-//    [<metaitem:dustEndSteel>, <enderio:item_alloy_ingot:8>],
-//    [<metaitem:dustPulsatingIron>, <enderio:item_alloy_ingot:5>],
-//    [<metaitem:dustConductiveIron>, <enderio:item_alloy_ingot:4>]
-//
-//
-//] as IItemStack[][];
+recipes.addShaped(<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:ghast"}), [
+	[null,<minecraft:ghast_tear>,null],
+	[<minecraft:ghast_tear>,<enderio:item_soul_vial>,<minecraft:ghast_tear>],
+	[null,<minecraft:ghast_tear>,null]]);
+	
+recipes.addShaped(<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:villager"}), [
+	[null,<minecraft:emerald>,null],
+	[<minecraft:emerald>,<enderio:item_soul_vial>,<minecraft:emerald>],
+	[null,<minecraft:emerald>,null]]);
 
+recipes.addShaped(<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:enderman"}), [
+	[null,<enderio:block_enderman_skull>,null],
+	[<enderio:block_enderman_skull>,<enderio:item_soul_vial>,<enderio:block_enderman_skull>],
+	[null,<enderio:block_enderman_skull>,null]]);
+	
+recipes.addShaped(<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:shulker"}), [
+	[null,<minecraft:shulker_shell>,null],
+	[<minecraft:shulker_shell>,<enderio:item_soul_vial>,<minecraft:shulker_shell>],
+	[null,<minecraft:shulker_shell>,null]]);
 
-//for dust in materialList {
-//
-//    furnace.recipeBuilder()
-//    .inputs(dust[0])
-//    .outputs(dust[1])
-//    .duration(128).EUt(4).buildAndRegister();
-//
-//}
+recipes.addShaped(<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:witch"}), [
+	[<minecraft:glowstone_dust>,<minecraft:redstone>,<minecraft:glowstone_dust>],
+	[<minecraft:redstone>,<enderio:item_soul_vial>,<minecraft:redstone>],
+	[<minecraft:glowstone_dust>,<minecraft:redstone>,<minecraft:glowstone_dust>]]);
+
+recipes.addShaped(<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:bat"}), [
+	[null,<actuallyadditions:item_misc:15>,null],
+	[<actuallyadditions:item_misc:15>,<enderio:item_soul_vial>,<actuallyadditions:item_misc:15>],
+	[null,<actuallyadditions:item_misc:15>,null]]);
+	
+recipes.addShaped(<actuallyadditions:item_misc:15>, [
+	[null,null,null],
+	[<minecraft:leather>,<minecraft:leather>,<minecraft:leather>],
+	[<minecraft:leather>,<minecraft:leather>,<minecraft:leather>]]);
+	
+
 
 recipes.addShapeless(<enderio:block_cap_bank:1>, [<enderio:block_cap_bank:1>]);
 recipes.addShapeless(<enderio:block_cap_bank:2>, [<enderio:block_cap_bank:2>]);

@@ -467,10 +467,7 @@ centrifuge.recipeBuilder()
     .outputs([<minecraft:redstone>, <minecraft:glowstone>])
     .duration(20).EUt(7)
     .buildAndRegister();
-//mixer.recipeBuilder()
-//    .outputs(<nuclearcraft:compound:2> * 2)
-//    .inputs([<minecraft:redstone>, <minecraft:glowstone_dust>])
-//    .duration(40).EUt(22).buildAndRegister();
+
 
 recipes.remove(<nuclearcraft:reactor_casing_transparent>);
 alloy.recipeBuilder()
@@ -478,16 +475,7 @@ alloy.recipeBuilder()
     .inputs([<nuclearcraft:fission_block>, <minecraft:glass>])
     .duration(50).EUt(16).buildAndRegister();
 
-// permutations of ferroboron and lithium ingots/dusts
-//alloy.recipeBuilder()
-//    .outputs([<nuclearcraft:alloy:1> * 2])
-//    .inputs([<ore:ingotFerroboron>, <ore:ingotLithium>])
-//    .duration(300).EUt(16).buildAndRegister();
-//
-//alloy.recipeBuilder()
-//    .outputs([<nuclearcraft:alloy:1> * 2])
-//    .inputs([<ore:dustFerroboron>, <ore:ingotLithium>])
-//    .duration(300).EUt(16).buildAndRegister();
+
 
 alloy.recipeBuilder()
     .outputs([<nuclearcraft:alloy:1> * 2])
@@ -499,16 +487,7 @@ alloy.recipeBuilder()
     .inputs([<ore:dustFerroboron>, <ore:dustLithium>])
     .duration(300).EUt(16).buildAndRegister();
 
-// permutations of steel and boron ingots/dusts
-//alloy.recipeBuilder()
-//    .outputs([<nuclearcraft:alloy:6> * 2])
-//    .inputs([<ore:ingotSteel>, <ore:ingotBoron>])
-//    .duration(300).EUt(16).buildAndRegister();
-//
-//alloy.recipeBuilder()
-//    .outputs([<nuclearcraft:alloy:6> * 2])
-//    .inputs([<ore:dustSteel>, <ore:ingotBoron>])
-//    .duration(300).EUt(16).buildAndRegister();
+
 
 alloy.recipeBuilder()
     .outputs([<nuclearcraft:alloy:6> * 2])
@@ -520,19 +499,6 @@ alloy.recipeBuilder()
     .inputs([<ore:dustSteel>, <ore:dustBoron>])
     .duration(300).EUt(16).buildAndRegister();
 
-// FIXME: this stuff isn't really related to NC at all
-// Moved
-////Manyullyn
-//mixer.recipeBuilder()
-//    .outputs(<metaitem:dustManyullyn> * 4)
-//    .inputs([<metaitem:dustArdite> * 4, <metaitem:dustCobalt> * 4, <thermalfoundation:material:1028>])
-//    .duration(400).EUt(30).buildAndRegister();
-//
-////Ardite
-//mixer.recipeBuilder()
-//    .outputs(<metaitem:dustArdite> * 4)
-//    .inputs([<metaitem:dustRedSteel> * 3, <minecraft:blaze_powder>])
-//    .duration(200).EUt(30).buildAndRegister();
 
 // remove table recipes for coolers and replace with canning machine recipes
 
@@ -735,29 +701,7 @@ alloy.recipeBuilder()
     .inputs([<nuclearcraft:alloy:2>, <ore:ingotTough>])
     .duration(200).EUt(1000).buildAndRegister();
 
-// magnesium diboride - unused
-/*
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:3> * 3])
-    .inputs([<metaitem:ingotMagnesium>, <metaitem:dustBoron> * 2])
-    .duration(100).EUt(200).buildAndRegister();
-*/
 
-// Thermoconducting Alloy - Unused
-/*
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:11> * 2])
-    .inputs([<metaitem:ingotOsmiridium>, <thermalfoundation:material:167>])
-    .duration(100).EUt(200).buildAndRegister();
-*/
-
-// zircaloy - unused
-/*
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:12> * 2])
-    .inputs([<thermalfoundation:material:166>, <nuclearcraft:ingot:10>])
-    .duration(100).EUt(200).buildAndRegister();
-*/
 
 reactor.recipeBuilder()
     .outputs(<nuclearcraft:gem_dust:1>)
@@ -793,14 +737,7 @@ makeShaped("of_nc_coppersolenoid", <nuclearcraft:part:4>,
 
 // unused part
 recipes.remove(<nuclearcraft:part:5>);
-/*
-makeShaped("of_nc_magnesium_diboride_solenoid", <nuclearcraft:part:5>,
-    ["AAA",
-     "ABA",
-     "AAA"],
-    { A : <ore:wireFineTungsten>,
-      B : <ore:ingotMagnesiumDiboride> });
-*/
+
 
 // Uranium 235 - from dust
 thermal_sep.recipeBuilder()
@@ -855,66 +792,6 @@ for iso in clumps {
 
 }
 
-//compressor.findRecipe(2, [<ore:nuggetUranium235>.firstItem * 9], [null]).remove();
-//compressor.findRecipe(2, [<ore:nuggetPlutonium241>.firstItem * 9], [null]).remove();
-//
-//
-///*  Remove NC/GTCE overlapping block and nugget recipes and replace with non-oredict ones */
-//
-//// U235
-//recipes.removeByRecipeName("gregtech:nugget_assembling_uranium235");
-//makeCompacting3("gregtech_nugget_assembling_uranium235", <metaitem:ingotUranium235>, <metaitem:nuggetUranium235>);
-//
-//recipes.removeByRecipeName("gregtech:block_compress_uranium235");
-//makeCompacting3("gregtech_block_compress_uranium235", <metaitem:blockUranium235>, <metaitem:ingotUranium235>); //Uranium 235 Block
-//
-//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.uranium._235");
-//makeCompacting3("nuclearcraft_item.nuclearcraft.uranium._235", <nuclearcraft:uranium:4>, <nuclearcraft:uranium:6>);
-//
-//recipes.removeByRecipeName("gregtech:nugget_disassembling_uranium235");
-//recipes.addShapeless("gregtech_nugget_disassembling_uranium235", <metaitem:nuggetUranium235> * 9, [<metaitem:ingotUranium235>]);
-//
-//// Pu241
-//recipes.removeByRecipeName("gregtech:nugget_assembling_plutonium241");
-//makeCompacting3("gregtech_nugget_assembling_plutonium241", <metaitem:ingotPlutonium241>, <metaitem:nuggetPlutonium241>);
-//
-//recipes.removeByRecipeName("gregtech:block_compress_plutonium241");
-//makeCompacting3("gregtech_block_compress_plutonium241", <metaitem:blockPlutonium241>, <metaitem:ingotPlutonium241>); //Plutonium 241 block
-//
-//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.plutonium._241");
-//makeCompacting3("nuclearcraft_item.nuclearcraft.plutonium._235", <nuclearcraft:plutonium:8>, <nuclearcraft:plutonium:10>);
-//
-//recipes.removeByRecipeName("gregtech:nugget_disassembling_plutonium241");
-//recipes.addShapeless("gregtech_nugget_disassembling_plutonium241", <metaitem:nuggetPlutonium241> * 9, [<metaitem:ingotPlutonium241>]);
-//
-//// Also fix the fuels since those use oredict...
-//function makeLEFuel(name as string,
-//                    output as IItemStack,
-//                    replacements as IIngredient[string]) {
-//    makeShapeless3(name, output, ["ABB","BBB","BBB"], replacements);
-//}
-//
-//function makeHEFuel(name as string,
-//                    output as IItemStack,
-//                    replacements as IIngredient[string]) {
-//    makeShapeless3(name, output, ["AAA","ABB","BBB"], replacements);
-//}
-//
-//var U235 as IIngredient[string] = {"A":<nuclearcraft:uranium:4>, "B":<nuclearcraft:uranium:8>};
-//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_uranium.leu_235");
-//makeLEFuel("nuclearcraft_item.nuclearcraft.fuel_uranium.leu_235", <nuclearcraft:fuel_uranium:4>, U235);
-//
-//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_uranium.heu_235");
-//makeHEFuel("nuclearcraft_item.nuclearcraft.fuel_uranium.heu_235", <nuclearcraft:fuel_uranium:6>, U235);
-//
-//
-//var P241 as IIngredient[string] = {"A":<nuclearcraft:plutonium:8>, "B":<nuclearcraft:plutonium:12>};
-//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_plutonium.lep_241");
-//makeLEFuel("nuclearcraft_item.nuclearcraft.fuel_plutonium.lep_241", <nuclearcraft:fuel_plutonium:4>, P241);
-//
-//recipes.removeByRecipeName("nuclearcraft:item.nuclearcraft.fuel_plutonium.hep_241");
-//makeHEFuel("nuclearcraft_item.nuclearcraft.fuel_plutonium.hep_241", <nuclearcraft:fuel_plutonium:6>, P241);
-//
 
 
 // Oh yeah it's S'more time
@@ -933,26 +810,6 @@ extractor.recipeBuilder()
     .EUt(7)
     .buildAndRegister();
 
-// Gelatin from meat
-//macerator.recipeBuilder()
-//    .outputs(<nuclearcraft:gelatin>)
-//    .inputs([<ore:dustSmallMeat>])
-//    .duration(40).EUt(30).buildAndRegister();
-
-// Gelatin from fish
-//var fishes as IItemStack[] = [
-//    <minecraft:fish>,
-//    <minecraft:fish:1>,
-//    <minecraft:fish:2>,
-//    <minecraft:fish:3>
-//] as IItemStack[];
-//
-//for fish in fishes {
-//    macerator.recipeBuilder()
-//        .outputs(<nuclearcraft:gelatin> * 4)
-//        .inputs([fish])
-//        .duration(160).EUt(30).buildAndRegister();
-//}
 
 // Hydrated gelatin
 mixer.recipeBuilder()
@@ -1066,19 +923,6 @@ while i < smingots.length {
     i += 1;
 }
 
-
-////Dust smelting into ingot
-//furnace.remove(<metaitem:ingotPlutonium>);
-////Tiny pile smelting into nugget
-//furnace.remove(<metaitem:nuggetPlutonium>);
-////Solidifying into block
-//solidifier.findRecipe(7, [<metaitem:shape.mold.block>.withTag({not_consumed: 1 as byte})], [<liquid:plutonium> * 1296]).remove();
-////Solidifying into nugget
-//solidifier.findRecipe(7, [<metaitem:shape.mold.nugget>.withTag({not_consumed: 1 as byte})], [<liquid:plutonium> * 144]).remove();
-////Solidifying into plates
-//solidifier.findRecipe(7, [<metaitem:shape.mold.plate>.withTag({not_consumed: 1 as byte})], [<liquid:plutonium> * 144]).remove();
-////Solidifying into ingots
-//solidifier.findRecipe(7, [<metaitem:shape.mold.ingot>.withTag({not_consumed: 1 as byte})], [<liquid:plutonium> * 144]).remove();
 
 recipes.removeByRecipeName("chisel:uncraft_blockuranium");
 
@@ -1195,29 +1039,3 @@ thermal_sep.recipeBuilder()
 // Plutonium-239 * 1
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotPlutonium>], null).remove();
 
-
-
-//thermal_sep.findRecipe(48, [<metaitem:dustUranium>], [null]).remove();
-//thermal_sep.findRecipe(48, [<metaitem:ingotUranium>], [null]).remove();
-
-//thermal_sep.recipeBuilder()
-//    .inputs(<metaitem:dustUranium>)
-//    .outputs(<nuclearcraft:uranium:8>)
-//    .duration(3200).EUt(48).buildAndRegister();
-//
-//thermal_sep.recipeBuilder()
-//    .inputs(<metaitem:ingotUranium>)
-//    .outputs(<nuclearcraft:uranium:8>)
-//    .duration(3200).EUt(48).buildAndRegister();
-
-//Adding Thermal Centrifuge Recipes for GTCE Pu241 -> NC Pu241
-
-//thermal_sep.recipeBuilder()
-//    .inputs(<metaitem:ingotPlutonium241>)
-//    .outputs(<nuclearcraft:plutonium:8>)
-//    .duration(3200).EUt(48).buildAndRegister();
-//
-//thermal_sep.recipeBuilder()
-//    .inputs(<metaitem:dustPlutonium241>)
-//    .outputs(<nuclearcraft:plutonium:8>)
-//    .duration(3200).EUt(48).buildAndRegister();

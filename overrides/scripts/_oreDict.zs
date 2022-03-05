@@ -95,6 +95,11 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:storage_alloy:1>
 	],
 
+	#blockElectrumFlux
+	<ore:blockElectrumFlux> : [
+		<redstonearsenal:storage>
+	],
+
 	#blockElectricalSteel
 	<ore:blockElectricalSteel> : [
 		<enderio:block_alloy>
@@ -316,6 +321,11 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 	#dustElectrum
 	<ore:dustElectrum> : [
 		<thermalfoundation:material:97>
+	],
+
+	#dustElectrumFlux
+	<ore:dustElectrumFlux> : [
+		<redstonearsenal:material>
 	],
 
 	#dustEnderium
@@ -833,6 +843,10 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:225>
 	],
 
+	<ore:nuggetElectrumFlux> : [
+		<redstonearsenal:material:64>
+	],
+
 	<ore:nuggetEnderium> : [
 		<thermalfoundation:material:231>
 	],
@@ -991,6 +1005,11 @@ var platesDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:353>
 	],
 
+	#plateElectrumFlux
+	<ore:plateElectrumFlux> : [
+		<redstonearsenal:material:128>
+	],
+
 	#plateEnderium
 	<ore:plateEnderium> : [
 		<thermalfoundation:material:359>
@@ -1102,7 +1121,7 @@ var gearsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#gearBronze
 	<ore:gearBronze> : [
-		<thermalfoundation:material:291>,
+		<thermalfoundation:material:291>
 //		<forestry:gear_bronze>
 	],
 
@@ -1113,7 +1132,7 @@ var gearsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#gearCopper
 	<ore:gearCopper> : [
-		<thermalfoundation:material:256>,
+		<thermalfoundation:material:256>
 //		<forestry:gear_copper>
 	],
 
@@ -1124,7 +1143,12 @@ var gearsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#gearElectrum
 	<ore:gearElectrum> : [
-		<thermalfoundation:material:289>,
+		<thermalfoundation:material:289>
+	],
+
+	#gearElectrumFlux
+	<ore:gearElectrumFlux> : [
+		<redstonearsenal:material:96>
 	],
 
 	#gearEnderium

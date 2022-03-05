@@ -336,166 +336,6 @@ naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, 
     return [recipe.getEUt(), recipe.getDuration()];
 } as IRunOverclockingLogicFunction;
 
-// Large Lapidary Dynamo
-//val LAPIDARY_EUT_FIXED = -4096 as int;
-//
-//val large_lapidary_dynamo = Builder.start("large_lapidary_dynamo")
-//    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-//        return FactoryBlockPattern.start()
-//            .aisle("CCC", "CCC", "CCC")
-//            .aisle("CCC", "CGC", "CCC")
-//            .aisle("CCC", "CSC", "CCC")
-//            .where('S', controller.self())
-//            .where('G', <blockstate:gregtech:turbine_casing>)
-//            .where('C', CTPredicate.states(<metastate:gregtech:metal_casing:3>)
-//            | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-//            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(4)
-//            )
-//            .build();
-//        } as IPatternBuilderFunction)
-//    .withRecipeMap(
-//        FactoryRecipeMap.start("large_lapidary_dynamo")
-//            .minInputs(1)
-//            .maxInputs(1)
-//            .build())
-//    .withBaseTexture(<metastate:gregtech:metal_casing:3>)
-//    .buildAndRegister();
-//
-//large_lapidary_dynamo.hasMufflerMechanics = false;
-//large_lapidary_dynamo.hasMaintenanceMechanics = false;
-
-//large_lapidary_dynamo.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
-//    if (absolute_int(recipe.getEUt()) > absolute_int(LAPIDARY_EUT_FIXED)) {
-//        return [recipe.getEUt(), recipe.getDuration()];
-//    }
-//} as IRunOverclockingLogicFunction;
-
-// Lunar Mining Station>
-//val isOnMoon as IBlockMatcher = function (state as IBlockWorldState) as bool {
-//    return state.getWorld().getDimension() == 100; // Moon dimension
-//};
-//val lunar_mining_station = Builder.start("lunar_mining_station")
-//    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-//        return FactoryBlockPattern.start()
-//            .aisle(
-//                "    A    ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         "
-//            )
-//            .aisle(
-//                "    A    ",
-//                "   E E   ",
-//                "    E    ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         "
-//            )
-//            .aisle(
-//                "    A    ",
-//                "   C C   ",
-//                "   CCC   ",
-//                "   CCC   ",
-//                "   CGC   ",
-//                "   CCC   ",
-//                "    C    ",
-//                "         ",
-//                "         "
-//            )
-//            .aisle(
-//                "   CAC   ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "   C C   ",
-//                "   BBB   ",
-//                "         "
-//            )
-//            .aisle(
-//                "AAAAAAAAA",
-//                "         ",
-//                "  E   E  ",
-//                "  C   C  ",
-//                "  G   G  ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "   BBB   ",
-//                "    M    "
-//            )
-//            .aisle(
-//                "   CAS   ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "  C   C  ",
-//                "   C C   ",
-//                "   BBB   ",
-//                "         "
-//            )
-//            .aisle(
-//                "    A    ",
-//                "   C C   ",
-//                "   CCC   ",
-//                "   CCC   ",
-//                "   CGC   ",
-//                "   CCC   ",
-//                "    C    ",
-//                "         ",
-//                "         "
-//            )
-//            .aisle(
-//                "    A    ",
-//                "   E E   ",
-//                "    E    ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         "
-//            )
-//            .aisle(
-//                "    A    ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         ",
-//                "         "
-//            )
-//            .where('S', controller.self())
-//            .where('M', <blockstate:minecraft:beacon>)
-//            .where('B', <metastate:enderio:block_alloy_endergy:3>)
-//            .where('G', <metastate:extrautils2:ineffableglass:3>)
-//            .where('E', <metastate:enderio:block_alloy_endergy:5>)
-//            .where('A', <metastate:actuallyadditions:block_misc:9>)
-//            .where('C', CTPredicate.states(<metastate:gregtech:machine_casing:6>)
-//            | controller.autoAbilities(true, false, true, false, false, true, false))
-//            .build();
-//    } as IPatternBuilderFunction)
-//    .withRecipeMap(
-//        FactoryRecipeMap.start("lunar_mining_station")
-//            .minInputs(1)
-//            .maxInputs(1)
-//            .minFluidOutputs(1)
-//            .minFluidOutputs(1)
-//            .build())
-//    .withBaseTexture(<metastate:gregtech:machine_casing:6>)
-//    .buildAndRegister();
-
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
@@ -541,24 +381,6 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
       N : <extendedcrafting:material:32>}); //Omnium Ingot
-
-//makeShaped("lunar_mining_station", <gregtech:machine:3007>,
-//    ["CLC",
-//     "LSL",
-//     "CLC"],
-//    { C : <ore:circuitExtreme>, //T4
-//      L : <gregtech:machine_casing:6>, //LuV Machine Casing
-//      S : <metaitem:cover.screen>});
-
-//var dynamo5 = <thermalexpansion:dynamo:5>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 1 as byte, Augments: []}, false); // Numismatic Dynamo (Hardened)
-//makeShaped("large_lapidary_dynamo", <metaitem:multiblocktweaker:large_lapidary_dynamo>,
-//    ["CAC",
-//     "ANA",
-//     "XAX"],
-//    { C : <ore:circuitBasic>,
-//      A : <gregtech:metal_casing:3>, // Aluminium Casing
-//      X : <metaitem:gemExquisiteDiamond>,
-//      N : dynamo5 });
 
 // multiblock recipemap recipes
 // basic projector
@@ -613,15 +435,6 @@ microverse_projector_basic.recipeMap
     .outputs(<contenttweaker:stellarcreationdata>)
     .buildAndRegister();
 
-// t1 stellar creation data 2
-//microverse_projector_basic.recipeMap
-//    .recipeBuilder()
-//    .duration(100)
-//    .EUt(500)
-//    .inputs(<contenttweaker:tieroneship>)
-//    .fluidInputs(<liquid:rocket_fuel> * 2000, <liquid:hydrogen> * 80000)
-//    .outputs(<contenttweaker:stellarcreationdata>)
-//    .buildAndRegister();
 
 // t2 radium + ores
 microverse_projector_basic.recipeMap
@@ -958,16 +771,6 @@ microverse_projector_advanced_ii.recipeMap
     .outputs(<contenttweaker:heartofauniverse>)
     .buildAndRegister();
 
-// t10 tank data
-//microverse_projector_advanced_ii.recipeMap
-//    .recipeBuilder()
-//    .duration(6000)
-//    .EUt(1000000)
-//    .inputs(<contenttweaker:tiertenship>,
-//            <contenttweaker:universecreationdata>,
-//            <ore:blockNaquadria> * 36)
-//    .outputs(<contenttweaker:creativeportabletankmold>)
-//    .buildAndRegister();
 
 // creative tank provider
 // creative tank
@@ -1013,34 +816,3 @@ naquadah_reactor_2.recipeMap
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
-
-// lapidary dynamo
-//large_lapidary_dynamo.recipeMap
-//    .recipeBuilder()
-//    .duration(150)
-//    .EUt(-4096)
-//    .inputs(<ore:gemDiamond>)
-//    .buildAndRegister();
-
-// Lunar Mining Station Rover Missions
-//lunar_mining_station.recipeMap
-//    .recipeBuilder()
-//    .duration(120000)
-//    .EUt(125)
-//    .inputs(<contenttweaker:deuteriumrover>)
-//    .fluidOutputs(<liquid:deuterium> * 480000)
-//    .property("dimension", 100)
-//    .buildAndRegister();
-//
-//lunar_mining_station.recipeMap
-//    .recipeBuilder()
-//    .duration(120000)
-//    .EUt(125)
-//    .inputs(<contenttweaker:helium3rover>)
-//    .fluidOutputs(<liquid:helium3> * 480000)
-//    .property("dimension", 100)
-//    .buildAndRegister();
-
-
-//game.setLocalization("mbt.machine.microverse_projector_basic.name", "Basic Microverse Projector");
-//game.setLocalization("recipemap.microverse_projector_basic.name", "Basic Microverse");

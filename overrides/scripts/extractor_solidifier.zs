@@ -106,26 +106,6 @@ fluid_extractor.recipeBuilder()
     .fluidOutputs([<liquid:seed_oil> * 250])
     .duration(32).EUt(200).buildAndRegister();
 
-//fluid_extractor.recipeBuilder()
-//    .inputs([<inspirations:potato_seeds>])
-//    .fluidOutputs([<liquid:seed_oil> * 10])
-//    .duration(32).EUt(20).buildAndRegister();
-//
-//fluid_extractor.recipeBuilder()
-//    .inputs([<inspirations:carrot_seeds>])
-//    .fluidOutputs([<liquid:seed_oil> * 10])
-//    .duration(32).EUt(20).buildAndRegister();
-//
-//fluid_extractor.recipeBuilder()
-//    .inputs([<inspirations:sugar_cane_seeds>])
-//    .fluidOutputs([<liquid:seed_oil> * 10])
-//    .duration(32).EUt(2).buildAndRegister();
-//
-//fluid_extractor.recipeBuilder()
-//    .inputs([<inspirations:cactus_seeds>])
-//    .fluidOutputs([<liquid:seed_oil> * 10])
-//    .duration(32).EUt(2).buildAndRegister();
-
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:thorium>])
     .fluidOutputs([<liquid:thorium> * 144])
@@ -312,16 +292,6 @@ solidifier.recipeBuilder()
     .outputs(<contenttweaker:stabilizedeinsteinium> * 16)
     .duration(500).EUt(16).buildAndRegister();
 
-//fluid_extractor.recipeBuilder()
-//    .inputs([<avaritia:resource:1>])
-//    .fluidOutputs([<liquid:moltencrystalmatrix> * 144])
-//    .duration(180).EUt(16).buildAndRegister();
-
-//solidifier.recipeBuilder()
-//    .fluidInputs([<liquid:moltencrystalmatrix> * 144])
-//    .notConsumable(<metaitem:shape.mold.ingot>)
-//    .outputs(<avaritia:resource:1>)
-//    .duration(500).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<minecraft:dye:4>])
@@ -440,15 +410,6 @@ fluid_extractor.recipeBuilder()
     .fluidOutputs([<liquid:plutonium2> * 16])
     .duration(20).EUt(16).buildAndRegister();
 
-//fluid_extractor.recipeBuilder()
-//    .inputs([<metaitem:ingotPlutonium>])
-//    .fluidOutputs([<liquid:plutonium> * 144])
-//    .duration(180).EUt(16).buildAndRegister();
-
-//fluid_extractor.recipeBuilder()
-//    .inputs([<metaitem:nuggetPlutonium>])
-//    .fluidOutputs([<liquid:plutonium> * 16])
-//    .duration(20).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:curium>])

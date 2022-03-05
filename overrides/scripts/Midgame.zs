@@ -77,40 +77,6 @@ recipes.removeByRecipeName("deepmoblearning:recipe1_deep_learner");
 recipes.addShaped(<deepmoblearning:deep_learner>, [[null,null,null],[<metaitem:sensor.lv>,<metaitem:tricorder_scanner>,<metaitem:sensor.lv>],[null,null,null]]);
 
 
-//// Stone Dust
-//centrifuge.recipeBuilder()
-//	.inputs(<metaitem:dustStone> * 3)
-//	.outputs([<metaitem:dustSiliconDioxide> * 2])
-//	.circuit(2)
-//	.duration(40).EUt(20)
-//	.buildAndRegister();
-//
-//// Small Pile of Quartzite Dust * 1
-//<recipemap:centrifuge>.findRecipe(120, [<metaitem:dustStone>], null).remove();
-//centrifuge.recipeBuilder()
-//	.inputs(<metaitem:dustStone>)
-//	.circuit(1)
-//	.outputs([<metaitem:dustSmallQuartzite>, <metaitem:dustSmallPotassiumFeldspar>, <metaitem:dustTinyMarble> * 2, <metaitem:dustTinyBiotite>])
-//	.chancedOutput(<metaitem:dustTinySodalite>, 5000, 500)
-//	.chancedOutput(<metaitem:dustTinyMetalMixture>, 7500, 750)
-//	.duration(480)
-//	.EUt(120)
-//	.buildAndRegister();
-
-//Gear Boxes Via Assembler
-//assembler.recipeBuilder()
-//	.inputs([<metaitem:gearSteel> * 2, <metaitem:plateSteel> * 4, <ore:frameGtSteel>])
-//	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8}))
-//	.outputs([<gregtech:turbine_casing:1> * 3])
-//	.duration(200).EUt(16).buildAndRegister();
-//assembler.recipeBuilder()
-//	.inputs([<metaitem:gearTitanium> * 2, <metaitem:plateTitanium> * 4, <ore:frameGtTitanium>])
-//	.outputs([<gregtech:turbine_casing:2> * 3])
-//	.duration(400).EUt(16).buildAndRegister();
-//
-////Engine Intake
-//assembler.recipeBuilder().inputs([<metaitem:rotorTitanium> * 4, <ore:pipeNormalFluidTitanium> * 2, <gregtech:metal_casing:6>]).outputs([<gregtech:multiblock_casing>]).duration(400).EUt(16).buildAndRegister();
-
 //Manyullyn
 mixer.recipeBuilder()
     .outputs(<metaitem:dustManyullyn> * 4)
