@@ -18,7 +18,7 @@ var element_draconium_awakened = Elements.add(149, 267, -1, null, "AwakenedDraco
 
 var draconium = MaterialBuilder(32001, "draconium")
     .element("Draconium")
-    .ingot().ore()
+    .ingot().fluid().ore()
     .color(0xbe49ed).iconSet("metallic")
     .blastTemp(6800, "HIGHER")
     .cableProperties(524288, 1, 0, true)
