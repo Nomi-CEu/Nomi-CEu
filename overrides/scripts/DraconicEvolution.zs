@@ -114,6 +114,7 @@ recipes.addShaped(<draconicevolution:energy_storage_core>, [
 
 recipes.removeByRecipeName("draconicevolution:draconic_ingot_1");
 recipes.removeByRecipeName("draconicevolution:draconium_ingot_1");
+recipes.removeByRecipeName("draconicevolution:draconium_block");
 
 chemical_bath.recipeBuilder()
 	.inputs(<metaitem:blockDraconium>)
