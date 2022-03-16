@@ -70,8 +70,8 @@ blast_furnace.recipeBuilder().inputs([<metaitem:dustKanthal>]).outputs([<metaite
 // Aluminium Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustAluminium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:dustAluminium>]).outputs([<metaitem:ingotAluminium>]).property("temperature", 1500).duration(400).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:dustAluminium>]).fluidInputs(<liquid:nitrogen> * 1000).outputs([<metaitem:ingotAluminium>]).property("temperature", 1500).duration(270).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:dustAluminium>]).outputs([<metaitem:ingotAluminium>]).circuit(1).property("temperature", 1500).duration(400).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:dustAluminium>]).fluidInputs(<liquid:nitrogen> * 1000).circuit(2).outputs([<metaitem:ingotAluminium>]).property("temperature", 1500).duration(270).EUt(120).buildAndRegister();
 
 
 //Energetic Alloy [tier 2]

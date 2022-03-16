@@ -357,13 +357,6 @@ reactor.recipeBuilder()
     .fluidOutputs(<liquid:elementalreduction> * 1000)
     .duration(80).EUt(90).buildAndRegister();
 
-//Knightslime
-reactor.recipeBuilder()
-    .inputs(<minecraft:slime>)
-    .fluidInputs([<liquid:titanium> * 144])
-    .outputs(<metaitem:ingotKnightslime>)
-    .duration(320).EUt(400).buildAndRegister();
-
 <extendedcrafting:storage:6>.displayName = "Block of Endest Stars";
 <extendedcrafting:material:40>.displayName = "Endest Star";
 <extendedcrafting:material:41>.displayName = "Endest Star Nugget";

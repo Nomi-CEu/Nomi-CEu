@@ -43,7 +43,7 @@ recipes.addShaped(<solarflux:photovoltaic_cell_1> * 6,[
 recipes.remove(<solarflux:solar_panel_3>);
 recipes.addShaped(<solarflux:solar_panel_3>,[
 	[<solarflux:solar_panel_2>, <solarflux:photovoltaic_cell_1>, <solarflux:solar_panel_2>],	
-	[<metaitem:plateElectricalSteel>, <enderio:block_alloy:4>, <metaitem:plateElectricalSteel>],	
+	[<metaitem:plateElectricalSteel>, <metaitem:blockConductiveIron>, <metaitem:plateElectricalSteel>],	
 	[<metaitem:gearElectricalSteel>, <enderio:item_power_conduit:2>, <metaitem:gearElectricalSteel>]]);	
 
 recipes.remove(<solarflux:solar_panel_4>);
@@ -115,7 +115,7 @@ recipes.addShaped(<solarflux:solar_panel_5> * 4, [
 
 recipes.addShaped(<solarflux:solar_panel_4> * 2, [
 	[<solarflux:solar_panel_3>, <solarflux:photovoltaic_cell_2>, <solarflux:solar_panel_3>],	
-	[<ore:ingotMicroversium>, <enderio:block_alloy:8>, <ore:ingotMicroversium>],	
+	[<ore:ingotMicroversium>, <metaitem:blockEndSteel>, <ore:ingotMicroversium>],	
 	[<ore:ingotMicroversium>,<enderio:item_endergy_conduit:1>,<ore:ingotMicroversium>]]);	
 
 // Sunnarium

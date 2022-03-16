@@ -41,7 +41,7 @@ recipes.addShapeless(<metaitem:dustRedAlloy>, [<metaitem:dustCopper>, <minecraft
 //Dusts
 
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
-recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:gtceMortars>]);
+recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:gtceHardHammers>]);
 recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:gtceMortars>]);
 recipes.addShapeless(<minecraft:clay>, [<contenttweaker:block_dust>,<minecraft:water_bucket>]);
 furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
@@ -88,7 +88,7 @@ recipes.remove(<enderstorage:ender_storage:1>);
 recipes.addShaped(<enderstorage:ender_storage:1>, [
 	[<minecraft:blaze_rod>, <minecraft:wool>, <minecraft:blaze_rod>],
 	[<ore:obsidian>, basictank, <ore:obsidian>],
-	[<minecraft:blaze_rod>, <gregtech:meta_block_compressed_13:10>, <minecraft:blaze_rod>]]); //Ender Pearl Block
+	[<minecraft:blaze_rod>, <ore:blockEnderpearl>, <minecraft:blaze_rod>]]); //Ender Pearl Block
 recipes.addShapeless(<enderstorage:ender_storage:1>, [<enderstorage:ender_storage:1>]);
 
 

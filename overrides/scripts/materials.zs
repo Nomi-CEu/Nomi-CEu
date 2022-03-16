@@ -209,7 +209,6 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
 <material:californium>.addIngot();
 <material:einsteinium>.addIngot();
 <material:graphite>.addIngot();
-<material:graphene>.addIngot();
 
 <material:uranium_235>.addFluid();
 <material:neptunium>.addFluid();

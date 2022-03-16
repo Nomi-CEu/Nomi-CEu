@@ -350,7 +350,7 @@ recipes.addShaped(<extrautils2:chunkloader>, [
 //Dragon Mill
 recipes.addShaped(<extrautils2:passivegenerator:8>, [
 	[<metaitem:blockRuridit>,<metaitem:blockRuridit>,<metaitem:blockRuridit>], 
-	[<extrautils2:ingredients:2>, <extendedcrafting:storage:2>, <extrautils2:ingredients:2>], 
+	[<extrautils2:ingredients:2>, <metaitem:blockNetherStar>, <extrautils2:ingredients:2>], 
 	[<extrautils2:decorativesolid:3>, <extrautils2:ingredients:2>, <extrautils2:decorativesolid:3>]]);
 	
 //Iron Drum
