@@ -8,8 +8,6 @@ Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [Gr
 - Updated questbook to guide you through all the new stuff
 - lots more...
 
-Current project status: 🟧 98% done. All scripts are ported and quests have been rewritten to fit CEu's new progression. There are still some bugs which need to be squashed, but you should be able to start playing now with few to no issues.
-
 Installation instructions for building the bleeding-edge version:
 - Download the repository as a ZIP.
 - Import it into your launcher of choice.  
