@@ -56,14 +56,6 @@ alloy_blast_smelter.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister();
 
-//Kanthal [tier 2]
-// Hot Kanthal Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustKanthal>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:nitrogen> * 1000]).remove();
-// Hot Kanthal Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustKanthal>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
-
-blast_furnace.recipeBuilder().inputs([<metaitem:dustKanthal>]).outputs([<metaitem:ingotHotKanthal>]).property("temperature", 1500).duration(200).EUt(120).buildAndRegister();
-
 //Aluminium [tier 2]
 // Aluminium Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustAluminium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:nitrogen> * 1000]).remove();
