@@ -1,4 +1,5 @@
 # nomi-ceu
+[![Curseforge](http://cf.way2muchnoise.eu/full_594351_downloads.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu)
 Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [GregTech CE Unofficial](https://github.com/GregTechCEu/GregTech) generation of GT mods, with updated quests, progression and minor balance changes to adapt to CEu's changes.
 - Overhauled circuit progression closely following CEu stock 
 - Multiblock versions of nearly all machines, including EBF, Freezer and DT, processing up to 256 recipes in parallel
