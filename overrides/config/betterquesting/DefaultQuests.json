@@ -33809,7 +33809,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2Fluid Rig",
-          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. \n\nUse your Prospector\u0027s Scanner or Portable Scanner to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second.\n\nIn the Overworld, it can harvest: Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas, Salt Water\n\nIn the Nether: Lava, Natural Gas\n\nOn the Moon: Deuterium, Helium-3\n\nHigher tier Fluid Rigs harvest fluids far faster and deplete veins slower."
+          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nUse your §3Prospector\u0027s Scanner§r to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. \n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas, Salt Water§r\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nThe first tier of Fluid Rig is good for §d100,000 operations§r. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower."
         }
       },
       "tasks:9": {
