@@ -5497,8 +5497,7 @@
       "questID:3": 79,
       "preRequisites:11": [
         147,
-        259,
-        837
+        259
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5506,7 +5505,7 @@
           "lockedprogress:1": 1,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "repeattime:3": -1,
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS",
           "simultaneous:1": 0,
           "icon:10": {
@@ -5522,8 +5521,8 @@
           "snd_update:8": "minecraft:entity.player.levelup",
           "ismain:1": 1,
           "repeat_relative:1": 1,
-          "name:8": "§2MV Cutting Machine",
-          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates is much faster than using a §2Metal Bender §rto make them one at a time.\n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n\nYou might consider waiting until you have §2Integrated Circuits§r before progressing too far down the path of MV machines, since these circuits are much easier to make than §2Electronic Circuits§r."
+          "name:8": "§2Cutting Machine",
+          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates is much faster than using a §2Metal Bender §rto make them one at a time.\n\nThis quest accepts the LV or MV version. The LV version can cut §6Silicon Boules§r for easier §6Diodes§r, and can also cut plates and other components. The MV version is required for cutting §6Wafers§r.\n\nThe blade will require you to make §2Cobalt Brass§r (for LV) or §2Vanadiumsteel§r (for MV).\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n\nYou might consider waiting until you have §2Integrated Circuits§r before progressing too far down the path of MV machines, since these circuits are much easier to make than §2Electronic Circuits§r."
         }
       },
       "tasks:9": {
@@ -5533,6 +5532,23 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 245,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
           "consume:1": 0,
           "requiredItems:9": {
             "0:10": {
@@ -8934,7 +8950,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Polyvinyl Chloride",
-          "desc:8": "§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC.\n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.\n\n"
+          "desc:8": "§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC.\n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.\n\n"
         }
       },
       "tasks:9": {
@@ -9180,7 +9196,9 @@
       "questID:3": 135,
       "preRequisites:11": [
         34,
-        133
+        90,
+        502,
+        134
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9205,7 +9223,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2The Third And Final Tier Two Circuits",
-          "desc:8": "§2Unique to this tier of Circuit, this MV circuit doesn\u0027t require the previous tier to craft."
+          "desc:8": "§2Unique to this tier of Circuit, this MV circuit doesn\u0027t require the previous tier to craft.§r These are the best kind of Tier Two circuits you can make, and you won\u0027t unlock the better recipes for quite a while.\n\nYou should absolutely automate the production of these circuits, and §ekeep a stockpile automatically crafted§r so you don\u0027t have to wait around for them or bloat your crafting orders making them on-demand through AE."
         }
       },
       "tasks:9": {
@@ -16883,7 +16901,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Tier Five Micro Miner",
-          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah §2Ore§r. §2Brings some Sheldonite Ore with it.§r\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§6§2* Uraninite Ore§6\n* Molybdenite Ore\n* Bastnasite Ore\n* Sphalerite Ore\n* Palladium Ore\n* Beryllium Ore\n* Monazite Ore\n§2* Osmiridium 80/20 Ore\n* Realgar Ore§6§r\n§6* Enderpearl Blocks\n* Boron Dust§r"
+          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah §2Ore§r. Along with it, §2Sheldonite Ore§r (for §6PGS§r) and §2Kaemanite Ore§r (for §6Trinium§r).\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§6§2* Uraninite Ore§6\n* Molybdenite Ore\n* Bastnasite Ore\n* Sphalerite Ore\n* Palladium Ore\n* Beryllium Ore\n* Monazite Ore\n§2* Osmiridium 80/20 Ore\n* Realgar Ore§6§r\n§6* Enderpearl Blocks\n* Boron Dust§r"
         }
       },
       "tasks:9": {
@@ -50504,7 +50522,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2Super Tanks",
-          "desc:8": "§2Super Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64096 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Microminer§r recipes. Higher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft."
+          "desc:8": "§2Super Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64,000 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Microminer§r recipes. Higher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft."
         }
       },
       "tasks:9": {
@@ -51091,7 +51109,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2Naquadah Processing",
-          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.\n\nFirst is by the processing of Naquadah Ore, which the Tier Five Micro Miner has been changed to yield (instead of the pure Dust). This only provides Nq+.\n\nSecond is by combining Naquadah Dust with certain heavy elements and EnderIO crystal grains. This can provide Nq+ and Nq*.\n\nFinally, you can do the full CEu processing of Naquadah Dust with Fluoroantimonic Acid, the strongest acid known to man. This is a decently involved process, but not only does it yield all 3 Nq materials, it also grants byproducts of Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium."
+          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 3 Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r."
         }
       },
       "tasks:9": {
@@ -51335,7 +51353,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Trinium",
-          "desc:8": "§2A strong heavy element obtained only from the Naquadah chain.\n\n§r§6Trinium§r comes out at the second step of §6Naquadah Dust§r processing, so if you don\u0027t mind storing the intermediates and have Fluorine under control, you can hold off doing the full chain if you don\u0027t need to yet. You get §d1 Trinium per 12 Naquadah processed§r.\n\nThis will be required in large quantities for §6Trinium Coils§r, §6Superconducting Coil Blocks§r, §6Naquadah Alloy§r, among other things. You will need 14 stacks at least for a §3Fusion Reactor Mk1§r, so stock up on it."
+          "desc:8": "§2A strong heavy element obtained from the Naquadah chain.\n\n§r§6Trinium§r can come from §6Kaemanite Ore§r, but you will probably want to bolster its production with §6Naquadah Dust§r processing. It comes out at the second stage, so if you don\u0027t mind storing the intermediates and have Fluorine under control, you can hold off doing the full chain if you don\u0027t need to yet. You get §d1 Trinium per 12 Naquadah processed§r.\n\nThis will be required in large quantities for §6Trinium Coils§r, §6Superconducting Coil Blocks§r, §6Naquadah Alloy§r, among other things. You will need 14 stacks at least for a §3Fusion Reactor Mk1§r, so stock up on it."
         }
       },
       "tasks:9": {
@@ -55958,7 +55976,7 @@
         },
         "10:10": {
           "sizeX:3": 32,
-          "x:3": -596,
+          "x:3": -592,
           "y:3": 492,
           "id:3": 52,
           "sizeY:3": 32
@@ -56106,7 +56124,7 @@
         "31:10": {
           "sizeX:3": 48,
           "x:3": -540,
-          "y:3": 376,
+          "y:3": 364,
           "id:3": 90,
           "sizeY:3": 48
         },
@@ -56216,11 +56234,11 @@
           "sizeY:3": 24
         },
         "47:10": {
-          "sizeX:3": 48,
-          "x:3": -540,
-          "y:3": 484,
+          "sizeX:3": 32,
+          "x:3": -532,
+          "y:3": 428,
           "id:3": 133,
-          "sizeY:3": 48
+          "sizeY:3": 32
         },
         "48:10": {
           "sizeX:3": 24,
@@ -56230,11 +56248,11 @@
           "sizeY:3": 24
         },
         "49:10": {
-          "sizeX:3": 24,
-          "x:3": -472,
-          "y:3": 496,
+          "sizeX:3": 40,
+          "x:3": -536,
+          "y:3": 488,
           "id:3": 135,
-          "sizeY:3": 24
+          "sizeY:3": 40
         },
         "50:10": {
           "sizeX:3": 40,
