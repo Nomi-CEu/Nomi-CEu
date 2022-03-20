@@ -593,7 +593,7 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:stabilizedplutonium> * 32)
     .outputs(<gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_kaemanite_0:2> * 64,
+             <gregtech:ore_kaemanite_0:2> * 48,
              <gregtech:ore_naquadah_0> * 64,
              <gregtech:ore_naquadah_0> * 64,
              <gregtech:ore_naquadah_0> * 64)

@@ -207,8 +207,7 @@ var kaemanite = MaterialBuilder(32031, "kaemanite")
     .components([<material:trinium> * 1, <material:tantalum> * 1, <material:oxygen> * 4])
     .color(0xe7413c).iconSet("bright")
     .ore()
-    .addOreByproducts(<material:niobium>, <material:trinium>, <material:trinium>)
-    .washedIn(<material:sodium_persulfate>)
+    .addOreByproducts(<material:niobium>, <material:kaemanite>, <material:trinium>)
     .build();
 
 <material:lutetium>.addIngot();
