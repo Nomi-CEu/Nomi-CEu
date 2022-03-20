@@ -179,10 +179,10 @@ makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
 //	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 
 // remove LV Motor recipes
-recipes.removeByRecipeName("gregtech:electric_motor_lv_steel");
-recipes.removeByRecipeName("gregtech:electric_motor_lv_iron");
-assembler.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickSteel> * 2, <metaitem:stickSteelMagnetic>, <metaitem:wireGtSingleCopper> * 4], [null]).remove();
-<recipemap:assembler>.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickIron> * 2, <metaitem:stickIronMagnetic>, <metaitem:wireGtSingleCopper> * 4], null).remove();
+//recipes.removeByRecipeName("gregtech:electric_motor_lv_steel");
+//recipes.removeByRecipeName("gregtech:electric_motor_lv_iron");
+//assembler.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickSteel> * 2, <metaitem:stickSteelMagnetic>, <metaitem:wireGtSingleCopper> * 4], [null]).remove();
+//<recipemap:assembler>.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickIron> * 2, <metaitem:stickIronMagnetic>, <metaitem:wireGtSingleCopper> * 4], null).remove();
 
 
 //LV Motor - with Fine Copper Wires
