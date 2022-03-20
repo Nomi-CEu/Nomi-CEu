@@ -340,5 +340,87 @@
             "ore:dragonEgg",
             "ore:ingotDraconium"
         ]
-    }
+    },
+	{
+		"mode": "ADD",
+		"result": "contenttweaker:tieroneship_stabilized",
+		"catalyst": "contenttweaker:tieroneship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tiertwoship_stabilized",
+		"catalyst": "contenttweaker:tiertwoship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tierthreeship_stabilized",
+		"catalyst": "contenttweaker:tierthreeship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tierfourship_stabilized",
+		"catalyst": "contenttweaker:tierfourship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tierfourandhalfship_stabilized",
+		"catalyst": "contenttweaker:tierfourandhalfship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tierfiveship_stabilized",
+		"catalyst": "contenttweaker:tierfiveship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tiersixship_stabilized",
+		"catalyst": "contenttweaker:tiersixship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tiersevenship_stabilized",
+		"catalyst": "contenttweaker:tiersevenship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	},{
+		"mode": "ADD",
+		"result": "contenttweaker:tiereightship_stabilized",
+		"catalyst": "contenttweaker:tiereightship",
+		"energy": 10000000000,
+		"tier": 3,
+		"ingredients": [
+			"contenttweaker:heartofauniverse"
+		]
+	}
 ]
