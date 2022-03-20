@@ -347,6 +347,8 @@ mods.jei.JEI.removeAndHide(<thermalexpansion:augment:433>);
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:673>);
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:674>);
 
+mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
+
 //coin thing
 recipes.remove(<thermalexpansion:augment:336>);
 recipes.addShaped(<thermalexpansion:augment:336>, [

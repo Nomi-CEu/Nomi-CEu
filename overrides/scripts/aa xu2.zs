@@ -53,14 +53,7 @@ mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_e
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_emeradic_gear>);
 mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:4>, <actuallyadditions:block_crystal:4>, <contenttweaker:stabilizeduranium>, <metaitem:ingotVibrantAlloy>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <extendedcrafting:material:17>, 1000000, 400);
 
-	
-//Snad	
-recipes.remove(<snad:snad>);
-recipes.remove(<snad:snad:1>);
-recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>],[<extrautils2:compressedsand:1>]]);
 
-	
-	
 //Long Range Breaker
 recipes.remove(<actuallyadditions:block_directional_breaker>);
 recipes.addShaped(<actuallyadditions:block_directional_breaker>, [
