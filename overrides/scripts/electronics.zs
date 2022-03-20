@@ -234,7 +234,7 @@ recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 recipes.remove(<meta_tile_entity:hull.ulv>);	
 recipes.addShaped(<meta_tile_entity:hull.ulv>, [
 	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], 
-	[<ore:cableGtSingleRedAlloy>, <gregtech:machine_casing>, <ore:cableGtSingleRedAlloy>]]);	
+	[<ore:cableGtSingleLead>, <gregtech:machine_casing>, <ore:cableGtSingleLead>]]);	
 
 // pyro
 

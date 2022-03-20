@@ -374,3 +374,25 @@ macerator.recipeBuilder()
 	.outputs(<appliedenergistics2:material:45>)
 	.inputs(<appliedenergistics2:sky_stone_block>)
 	.duration(45).EUt(8).buildAndRegister();
+
+// certus block
+recipes.removeByRecipeName("appliedenergistics2:decorative/certus_quartz_block");
+recipes.addShaped(<appliedenergistics2:quartz_block>, [
+	[<appliedenergistics2:material>, <appliedenergistics2:material>],
+	[<appliedenergistics2:material>, <appliedenergistics2:material>]
+]);
+
+// Oredict Storage Bus
+recipes.removeByRecipeName("appliedenergistics2:network/parts/oredict_storage_bus");
+recipes.removeByRecipeName("appliedenergistics2:network/parts/oredict_storage_bus_alt");
+recipes.addShapeless("nf_oredict_storage_bus",
+	<appliedenergistics2:part:222>,
+	[<appliedenergistics2:part:220>, <metaitem:ore_dictionary_filter>]);
+
+// Extended Processing Pattern Terminal
+recipes.removeByRecipeName("appliedenergistics2:network/parts/terminal_expanded_processing");
+recipes.addShaped("nf_terminal_expanded_processing", <appliedenergistics2:part:341>, [
+    [null, <appliedenergistics2:part:340>, null],
+    [null, <ore:circuitExtreme>, null],
+    [null, <packagedauto:encoder>, null]
+]);

@@ -202,6 +202,15 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
     .addOreByproducts(<material:iridium>, <material:osmium>, <material:rhodium>)
     .build();
 
+var kaemanite = MaterialBuilder(32031, "kaemanite")
+    .dust()
+    .components([<material:trinium> * 1, <material:tantalum> * 1, <material:oxygen> * 4])
+    .color(0xe7413c).iconSet("bright")
+    .ore()
+    .addOreByproducts(<material:niobium>, <material:trinium>, <material:trinium>)
+    .washedIn(<material:sodium_persulfate>)
+    .build();
+
 <material:lutetium>.addIngot();
 <material:neptunium>.addIngot();
 <material:curium>.addIngot();
