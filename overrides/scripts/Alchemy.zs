@@ -37,7 +37,7 @@ recipes.addShaped(<minecraft:cake>, [[<minecraft:milk_bucket> | <minecraft:bucke
 recipes.addShaped(<dimensionaledibles:overworld_cake>, [[<minecraft:redstone>, <metaitem:dustGold>, <minecraft:redstone>], [<ore:treeSapling>, <enderio:item_material:70>, <ore:treeSapling>],[<metaitem:plant_ball>,<minecraft:diamond>,<metaitem:plant_ball>]]);
 
 //Nether Cake
-recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustNetherrack>,<metaitem:dustNetherrack>,<metaitem:dustNetherrack>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<metaitem:blockLead>,<minecraft:gold_block>,<metaitem:blockLead>]]);
+recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustNetherrack>,<metaitem:dustNetherrack>,<metaitem:dustNetherrack>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<metaitem:blockLead>,<extrautils2:simpledecorative:1>,<metaitem:blockLead>]]);
 
 //End Cake
 recipes.addShaped(<dimensionaledibles:end_cake>, [[<ore:dustEndstone>,<ore:dustEndstone>,<ore:dustEndstone>], [<minecraft:ender_eye>, <enderio:item_material:70>, <minecraft:ender_eye>],[<metaitem:plateBlackSteel>,<metaitem:plateBlackSteel>,<metaitem:plateBlackSteel>]]);
