@@ -2,6 +2,7 @@ import mods.gregtech.recipe.RecipeMap;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.data.IData;
+import scripts.common.makeShaped as makeShaped;
 
 recipes.remove(<thermalexpansion:satchel:2>);
 recipes.addShaped("test", <thermalexpansion:satchel:2>, [
@@ -73,9 +74,6 @@ centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
 centrifuge.recipeBuilder().inputs(<contenttweaker:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
 
-recipes.removeByRecipeName("deepmoblearning:recipe1_deep_learner");
-recipes.addShaped(<deepmoblearning:deep_learner>, [[null,null,null],[<metaitem:sensor.lv>,<metaitem:tricorder_scanner>,<metaitem:sensor.lv>],[null,null,null]]);
-
 
 //Manyullyn
 mixer.recipeBuilder()
@@ -135,3 +133,15 @@ canner.recipeBuilder()
 	.fluidInputs(<liquid:xpjuice> * 500)
 	.outputs(<minecraft:experience_bottle>)
 	.duration(1500).EUt(4).buildAndRegister();
+
+// Exchanging Gadget
+recipes.removeByRecipeName("buildinggadgets:exchangingtool");
+makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate: {Name: "minecraft:air"}}),
+	["IRI",
+	 "DFD",
+	 "ILI"],
+	{ D : <ore:gemDiamond>,
+	  L : <ore:gemLapis>,
+	  F : <metaitem:emitter.iv>, // IV Field Emitter
+	  R : <ore:dustRedstone>,
+	  I : <ore:ingotIron>});

@@ -396,6 +396,11 @@ tierfourship.rarity = "uncommon";
 tierfourship.maxStackSize = 16;
 tierfourship.register();
 
+var tierfourandhalfship = VanillaFactory.createItem("tierfourandhalfship");
+tierfourandhalfship.rarity = "uncommon";
+tierfourandhalfship.maxStackSize = 16;
+tierfourandhalfship.register();
+
 var tierfiveship = VanillaFactory.createItem("tierfiveship");
 tierfiveship.rarity = "rare";
 tierfiveship.maxStackSize = 16;
@@ -441,10 +446,10 @@ witherrealmdata.rarity = "epic";
 witherrealmdata.maxStackSize = 64;
 witherrealmdata.register();
 
-var impossiblerealmdata = VanillaFactory.createItem("impossiblerealmdata");
-impossiblerealmdata.rarity = "rare";
-impossiblerealmdata.maxStackSize = 64;
-impossiblerealmdata.register();
+//var impossiblerealmdata = VanillaFactory.createItem("impossiblerealmdata");
+//impossiblerealmdata.rarity = "rare";
+//impossiblerealmdata.maxStackSize = 64;
+//impossiblerealmdata.register();
 
 var universecreationdata = VanillaFactory.createItem("universecreationdata");
 universecreationdata.rarity = "epic";
@@ -462,6 +467,9 @@ lairofthechaosguardiandata.rarity = "epic";
 lairofthechaosguardiandata.maxStackSize = 1;
 lairofthechaosguardiandata.register();
 
+var densemagma = VanillaFactory.createBlock("densemagma", <blockmaterial:rock>);
+densemagma.blockSoundType = <soundtype:stone>;
+densemagma.register();
 
 var denseoilshale = VanillaFactory.createBlock("denseoilshale", <blockmaterial:rock>);
 denseoilshale.blockSoundType = <soundtype:stone>;

@@ -191,7 +191,7 @@ var osmiridium_8020 = MaterialBuilder(32029, "osmiridium_8020")
     .components([<material:osmium> * 4, <material:iridium> * 1])
     .colorAverage()
     .ore()
-    .addOreByproducts(<material:osmium>, <material:iridium>, <material:ruthenium>)
+    .addOreByproducts(<material:osmium>, <material:iridium>, <material:nickel>)
     .build();
 
 var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
@@ -199,7 +199,7 @@ var iridosmine_8020 = MaterialBuilder(32030, "iridosmine_8020")
     .components([<material:iridium> * 4, <material:osmium> * 1])
     .colorAverage()
     .ore()
-    .addOreByproducts(<material:iridium>, <material:osmium>, <material:rhodium>)
+    .addOreByproducts(<material:iridium>, <material:osmium>, <material:nickel>)
     .build();
 
 var kaemanite = MaterialBuilder(32031, "kaemanite")

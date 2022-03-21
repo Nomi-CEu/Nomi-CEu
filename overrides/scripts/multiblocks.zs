@@ -11,6 +11,7 @@ import mods.gregtech.recipe.functions.IRunOverclockingLogicFunction;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.IRecipe;
 
+import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeShaped as makeShaped;
 import scripts.common.absolute_int as absolute_int;
 
@@ -204,30 +205,6 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
 microverse_projector_advanced_ii.hasMufflerMechanics = true;
 microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
 
-// Creative Tank Provider
-val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle("CCC", "CCC", "CCC")
-            .aisle("CCC", "CFC", "CCC")
-            .aisle("CCC", "CSC", "CCC")
-            .where('S', controller.self())
-            .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
-            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>) | controller.autoAbilities(true, false, true, true, false, false, false))
-            .build();
-    } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("creative_tank_provider")
-            .minInputs(2)
-            .maxInputs(2)
-            .minOutputs(1)
-            .maxOutputs(1)
-            .build())
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
-    .buildAndRegister();
-
-creative_tank_provider.hasMufflerMechanics = false;
-creative_tank_provider.hasMaintenanceMechanics = false;
 
 // Naquadah Reactor 1
 <gcym:large_multiblock_casing:9>.displayName = "Reaction-Safe Casing";
@@ -336,6 +313,33 @@ naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, 
     return [recipe.getEUt(), recipe.getDuration()];
 } as IRunOverclockingLogicFunction;
 
+// Actualization Chamber
+val actualization_chamber = Builder.start("actualization_chamber")
+    .withPattern(function(controller as IControllerTile) as IBlockPattern {
+        return FactoryBlockPattern.start()
+            .aisle("CCC","GGG","CCC")
+            .aisle("CCC","GOG","CCC")
+            .aisle("CSC","GGG","CCC")
+            .where('S', controller.self())
+            .where('O', <metastate:gregtech:fusion_casing:1>)
+            .where('G', <metastate:gregtech:transparent_casing:1>)
+            .where('C', CTPredicate.states(<metastate:gregtech:fusion_casing:4>)
+            | controller.autoAbilities(true, false, true, true, false, false, false)
+            )
+            .build();
+        } as IPatternBuilderFunction)
+    .withRecipeMap(
+        FactoryRecipeMap.start("actualization_chamber")
+            .minInputs(1)
+            .maxInputs(2)
+            .minOutputs(1)
+            .maxOutputs(16)
+            .build())
+    .withBaseTexture(<metastate:gregtech:fusion_casing:4>)
+    .buildAndRegister();
+
+actualization_chamber.hasMufflerMechanics = false;
+actualization_chamber.hasMaintenanceMechanics = false;
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
@@ -356,11 +360,6 @@ recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_p
     [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>]
 ]);
 
-recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
-    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
-    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
-    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
-]);
 
 makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>,
     ["NCN",
@@ -382,6 +381,19 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
       P : <appliedenergistics2:spatial_pylon>,
       N : <extendedcrafting:material:32>}); //Omnium Ingot
 
+makeExtremeRecipe5(<metaitem:multiblocktweaker:actualization_chamber>,
+    ["PPPPP",
+     "PEFSP",
+     "PWGWP",
+     "PSFEP",
+     "PPPPP"],
+    { G : <metaitem:field.generator.uv>,
+      W : <ore:circuitInfinite>,
+      P : <ore:plateAmericium>,
+      E : <metaitem:emitter.uv>,
+      S : <metaitem:sensor.uv>,
+      F : <gregtech:fusion_casing:1> });
+
 // multiblock recipemap recipes
 // basic projector
 // t1 ores
@@ -393,6 +405,28 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux>,
             <minecraft:chest>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
+    .outputs(<densemetals:dense_iron_ore> * 64,
+             <gregtech:ore_cassiterite_0> * 64,
+             <gregtech:ore_redstone_0> * 64,
+             <gregtech:ore_nickel_0> * 64,
+             <gregtech:ore_ilmenite_0> * 64,
+             <gregtech:ore_ilmenite_0> * 64,
+             <gregtech:ore_ilmenite_0> * 64,
+             <gregtech:ore_uraninite_0> * 64,
+             <gregtech:ore_galena_0> * 64,
+             <gregtech:ore_galena_0> * 64,
+             <gregtech:ore_molybdenum_0> * 64,
+             <advancedrocketry:moonturf> * 64,
+             <libvulpes:ore0> * 64,
+             <gregtech:ore_salt_0> * 64)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .circuit(1)
     .outputs(<densemetals:dense_iron_ore> * 64,
              <gregtech:ore_cassiterite_0> * 64,
              <gregtech:ore_redstone_0> * 64,
@@ -424,6 +458,18 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_quartzite_0> * 64)
     .buildAndRegister();
 
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
+             <gregtech:ore_apatite_0> * 64,
+             <gregtech:ore_tricalcium_phosphate_0> * 64,
+             <gregtech:ore_quartzite_0> * 64)
+    .buildAndRegister();
+
 // t1 stellar creation data 1
 microverse_projector_basic.recipeMap
     .recipeBuilder()
@@ -435,6 +481,25 @@ microverse_projector_basic.recipeMap
     .outputs(<contenttweaker:stellarcreationdata>)
     .buildAndRegister();
 
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<contenttweaker:stellarcreationdata>)
+    .buildAndRegister();
+
+// st1 matter
+microverse_projector_basic.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .notConsumable(<contenttweaker:tieroneship_stabilized>)
+    .inputs(<minecraft:cobblestone>)
+    .outputs(
+        <contenttweaker:tieroneship_stabilized_matter>
+    ).buildAndRegister();
 
 // t2 radium + ores
 microverse_projector_basic.recipeMap
@@ -447,15 +512,36 @@ microverse_projector_basic.recipeMap
     .outputs(<gregtech:ore_bauxite_0:2> * 64,
              <gregtech:ore_pyrochlore_0:2> * 64,
              <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_tantalite_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
              <gregtech:ore_copper_0:2> * 64,
              <gregtech:ore_sphalerite_0:2> * 64,
              <gregtech:ore_cassiterite_0:2> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
+             <gregtech:ore_scheelite_0:2> * 64,
+             <gregtech:ore_scheelite_0:2> * 64,
+             <gregtech:ore_tungstate_0:2> * 64,
+             <contenttweaker:radiumsalt> * 64,
+             <contenttweaker:radiumsalt> * 64)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiertwoship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<gregtech:ore_bauxite_0:2> * 64,
+             <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_sphalerite_0:2> * 64,
+             <gregtech:ore_cassiterite_0:2> * 64,
+             <gregtech:ore_scheelite_0:2> * 64,
+             <gregtech:ore_scheelite_0:2> * 64,
+             <gregtech:ore_tungstate_0:2> * 64,
              <contenttweaker:radiumsalt> * 64,
              <contenttweaker:radiumsalt> * 64)
     .buildAndRegister();
@@ -470,6 +556,26 @@ microverse_projector_basic.recipeMap
     .fluidInputs(<liquid:rocket_fuel> * 3000)
     .outputs(<contenttweaker:stellarcreationdata> * 4)
     .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiertwoship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<contenttweaker:stellarcreationdata> * 4)
+    .buildAndRegister();
+
+// st2 matter
+microverse_projector_basic.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tiertwoship_stabilized>)
+    .outputs(
+        <contenttweaker:tiertwoship_stabilized_matter>
+    ).buildAndRegister();
 
 // t3 gems
 microverse_projector_basic.recipeMap
@@ -490,6 +596,22 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_silver_0:1> * 64)
     .buildAndRegister();
 
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
+             <metaitem:gemPerfectDiamond> * 32,
+             <metaitem:gemPerfectRuby> * 64,
+             <metaitem:gemPerfectTopaz> * 48,
+             <metaitem:gemPerfectEmerald> * 32,
+             <gregtech:ore_sapphire_0:1> * 64,
+             <gregtech:ore_gold_0:1> * 64,
+             <gregtech:ore_silver_0:1> * 64)
+    .buildAndRegister();
+
 // t3 ores
 microverse_projector_basic.recipeMap
     .recipeBuilder()
@@ -499,21 +621,75 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux> * 4,
             <meta_tile_entity:super_chest.mv>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
-    .outputs(<gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_scheelite_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_tungstate_0> * 64,
-             <gregtech:ore_ilmenite_0> * 64,
-             <gregtech:ore_vanadium_magnetite_0> * 64,
-             <gregtech:ore_tetrahedrite_0> * 64,
-             <gregtech:ore_cassiterite_0> * 64,
-             <gregtech:ore_tin_0> * 64,
-             <gregtech:ore_redstone_0> * 64,
-             <gregtech:ore_certus_quartz_0> * 64,
-             <gregtech:ore_almandine_0> * 64)
+    .outputs(<gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_ilmenite_0:1> * 64,
+             <gregtech:ore_vanadium_magnetite_0:1> * 64,
+             <gregtech:ore_tetrahedrite_0:1> * 64,
+             <gregtech:ore_cassiterite_0:1> * 64,
+             <gregtech:ore_tin_0:1> * 64,
+             <gregtech:ore_redstone_0:1> * 64,
+             <gregtech:ore_certus_quartz_0:1> * 64,
+             <gregtech:ore_almandine_0:1> * 64)
     .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_ilmenite_0:1> * 64,
+             <gregtech:ore_vanadium_magnetite_0:1> * 64,
+             <gregtech:ore_tetrahedrite_0:1> * 64,
+             <gregtech:ore_cassiterite_0:1> * 64,
+             <gregtech:ore_tin_0:1> * 64,
+             <gregtech:ore_redstone_0:1> * 64,
+             <gregtech:ore_certus_quartz_0:1> * 64,
+             <gregtech:ore_almandine_0:1> * 64)
+    .buildAndRegister();
+
+// t3 magma
+microverse_projector_basic.recipeMap
+    .recipeBuilder()
+    .duration(700)
+    .EUt(2000)
+    .inputs(<contenttweaker:tierthreeship>,
+            <contenttweaker:quantumflux> * 4,
+            <metaitem:super_chest.lv>)
+    .fluidInputs(<liquid:rocket_fuel> * 20000)
+    .outputs(<contenttweaker:densemagma> * 64, <contenttweaker:densemagma> * 64)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<contenttweaker:densemagma> * 64, <contenttweaker:densemagma> * 64)
+    .buildAndRegister();
+
+// st3 matter
+microverse_projector_basic.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tierthreeship_stabilized>)
+    .outputs(
+        <contenttweaker:tierthreeship_stabilized_matter>
+    ).buildAndRegister();
 
 // advanced projector
 // t4 oil and infinity
@@ -525,6 +701,17 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 8,
             <advancedrocketry:satelliteprimaryfunction:1>,
             <ore:dustPetrotheum> * 64)
+    .outputs(<contenttweaker:denseoilshale> * 64,
+             <contenttweaker:denseoilshale> * 64,
+             <ore:compressed2xDustBedrock>.firstItem * 16)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .circuit(1)
     .outputs(<contenttweaker:denseoilshale> * 64,
              <contenttweaker:denseoilshale> * 64,
              <ore:compressed2xDustBedrock>.firstItem * 16)
@@ -547,7 +734,21 @@ microverse_projector_advanced.recipeMap
              <densemetals:dense_redstone_ore> * 16)
     .buildAndRegister();
 
-// t4 osmium iridium
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<densemetals:dense_lapis_ore> * 64,
+             <densemetals:dense_diamond_ore> * 64,
+             <densemetals:dense_diamond_ore> * 64,
+             <densemetals:dense_coal_ore>  * 64,
+             <densemetals:dense_emerald_ore> * 32,
+             <densemetals:dense_redstone_ore> * 16)
+    .buildAndRegister();
+
+// t4 pgs ores
 microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(800)
@@ -556,10 +757,216 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 8,
             <contenttweaker:witherrealmdata> * 4,
             <ore:dustPetrotheum> * 64) 
-    .outputs(<gregtech:ore_iridosmine_8020_0> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 16)
+    .outputs(<gregtech:ore_pentlandite_0> * 64,
+             <gregtech:ore_pentlandite_0> * 64,
+             <gregtech:ore_pentlandite_0> * 64,
+             <gregtech:ore_bornite_0> * 64,
+             <gregtech:ore_bornite_0> * 64,
+             <gregtech:ore_bornite_0> * 64,
+             <gregtech:ore_chalcocite_0> * 64,
+             <gregtech:ore_chalcocite_0> * 64,
+             <gregtech:ore_chalcocite_0> * 64)
     .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<gregtech:ore_pentlandite_0> * 64,
+             <gregtech:ore_pentlandite_0> * 64,
+             <gregtech:ore_pentlandite_0> * 64,
+             <gregtech:ore_bornite_0> * 64,
+             <gregtech:ore_bornite_0> * 64,
+             <gregtech:ore_bornite_0> * 64,
+             <gregtech:ore_chalcocite_0> * 64,
+             <gregtech:ore_chalcocite_0> * 64,
+             <gregtech:ore_chalcocite_0> * 64)
+    .buildAndRegister();
+
+// st4 matter
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tierfourship_stabilized>)
+    .outputs(
+        <contenttweaker:tierfourship_stabilized_matter>
+    ).buildAndRegister();
+
+// t4.5 ow mobs
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(800)
+    .EUt(3750)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <ore:treeSapling>)
+    .outputs(<minecraft:skull> * 48,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:skull:2> * 48,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:skull:4> * 48,
+             <minecraft:gunpowder> * 64,
+             <minecraft:slime> * 64,
+             <armorplus:material:1> * 64)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<minecraft:skull> * 48,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:skull:2> * 48,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:skull:4> * 48,
+             <minecraft:gunpowder> * 64,
+             <minecraft:slime> * 64,
+             <armorplus:material:1> * 64)
+    .buildAndRegister();
+
+// t4.5 nether mobs
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(1000)
+    .EUt(3750)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <minecraft:netherrack>)
+    .outputs(<minecraft:blaze_rod> * 64,
+             <minecraft:blaze_rod> * 64,
+             <minecraft:ghast_tear> * 64,
+             <minecraft:skull:1>* 48,
+             <armorplus:material:2> * 64,
+             <armorplus:material:2> * 64,
+             <minecraft:magma_cream> * 64,
+             <extrautils2:ingredients:10> * 4)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<minecraft:blaze_rod> * 64,
+             <minecraft:blaze_rod> * 64,
+             <minecraft:ghast_tear> * 64,
+             <minecraft:skull:1>* 48,
+             <armorplus:material:2> * 64,
+             <armorplus:material:2> * 64,
+             <minecraft:magma_cream> * 64,
+             <extrautils2:ingredients:10> * 4)
+    .buildAndRegister();
+
+// t4.5 end mobs
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(1200)
+    .EUt(3750)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <minecraft:end_stone>)
+    .outputs(<enderio:block_enderman_skull> * 48,
+             <metaitem:blockEnderPearl> * 16,
+             <minecraft:shulker_shell> * 64,
+             <minecraft:shulker_shell> * 64,
+             <darkutils:shulker_pearl> * 64)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<enderio:block_enderman_skull> * 48,
+             <metaitem:blockEnderPearl> * 16,
+             <minecraft:shulker_shell> * 64,
+             <minecraft:shulker_shell> * 64,
+             <darkutils:shulker_pearl> * 64)
+    .buildAndRegister();
+
+// t4.5 dragon
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(2000)
+    .EUt(10000)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <minecraft:ender_eye> * 16)
+    .outputs(<contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <minecraft:skull:5>)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(4)
+    .outputs(<contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <minecraft:skull:5>)
+    .buildAndRegister();
+
+// t4.5 wither
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(2000)
+    .EUt(10000)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <armorplus:material:2> * 64)
+    .outputs(<contenttweaker:witherrealmdata> * 64,
+             <contenttweaker:witherrealmdata> * 64,
+             <metaitem:blockNetherStar> * 48)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(5)
+    .outputs(<contenttweaker:witherrealmdata> * 64,
+             <contenttweaker:witherrealmdata> * 64,
+             <metaitem:blockNetherStar> * 48)
+    .buildAndRegister();
+
+// st4.5 matter
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tierfourandhalfship_stabilized>)
+    .outputs(
+        <contenttweaker:tierfourandhalfship_stabilized_matter>
+    ).buildAndRegister();
 
 // t5 ores
 microverse_projector_advanced.recipeMap
@@ -576,7 +983,29 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_sphalerite_0> * 64,
              <gregtech:ore_monazite_0> * 64,
              <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
-             <gregtech:ore_osmiridium_8020_0> * 16,
+             <gregtech:ore_osmiridium_8020_0> * 6,
+             <gregtech:ore_iridosmine_8020_0> * 6,
+             <metaitem:dustBoron> * 64,
+             <gregtech:ore_molybdenite_0> * 64,
+             <gregtech:ore_beryllium_0> * 64,
+             <gregtech:ore_beryllium_0> * 64)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<gregtech:ore_uraninite_0> * 64,
+             <gregtech:ore_palladium_0> * 64,
+             <gregtech:ore_realgar_0> * 64,
+             <gregtech:ore_bastnasite_0> * 64,
+             <gregtech:ore_sphalerite_0> * 64,
+             <gregtech:ore_monazite_0> * 64,
+             <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
+             <gregtech:ore_osmiridium_8020_0> * 6,
+             <gregtech:ore_iridosmine_8020_0> * 6,
              <metaitem:dustBoron> * 64,
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
@@ -600,6 +1029,31 @@ microverse_projector_advanced.recipeMap
              
     .buildAndRegister();
 
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_naquadah_0:2> * 64,
+             <gregtech:ore_naquadah_0:2> * 64,
+             <gregtech:ore_naquadah_0:2> * 32)
+             
+    .buildAndRegister();
+
+// st5 matter
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tierfiveship_stabilized>)
+    .outputs(
+        <contenttweaker:tierfiveship_stabilized_matter>
+    ).buildAndRegister();
+
 // t6 u/os/ir
 microverse_projector_advanced.recipeMap
     .recipeBuilder()
@@ -609,15 +1063,38 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizeduranium> * 32,
             <contenttweaker:witherrealmdata> * 16)
-    .outputs(<gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_uraninite_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 64)
+    .outputs(<gregtech:ore_uraninite_0:2> * 64,
+             <gregtech:ore_uraninite_0:2> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<gregtech:ore_uraninite_0:2> * 64,
+             <gregtech:ore_uraninite_0:2> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64,
+             <metaitem:dustPlatinumGroupSludge> * 64)
     .buildAndRegister();
 
 // t6 einsteinium
@@ -629,6 +1106,15 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32,
             <contenttweaker:witherrealmdata> * 64)
+    .outputs(<contenttweaker:stabilizedeinsteinium> * 32)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .circuit(2)
     .outputs(<contenttweaker:stabilizedeinsteinium> * 32)
     .buildAndRegister();
 
@@ -644,6 +1130,26 @@ microverse_projector_advanced.recipeMap
     .outputs(<minecraft:dragon_egg> * 32)
     .buildAndRegister();
 
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<minecraft:dragon_egg> * 32)
+    .buildAndRegister();
+
+// st6 matter
+microverse_projector_advanced.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tiersixship_stabilized>)
+    .outputs(
+        <contenttweaker:tiersixship_stabilized_matter>
+    ).buildAndRegister();
+
 // advanced projector 2
 // t7 hearts
 microverse_projector_advanced_ii.recipeMap
@@ -656,6 +1162,30 @@ microverse_projector_advanced_ii.recipeMap
             <ore:gemDilithium>.firstItem * 64,
             <contenttweaker:dragonlairdata> * 32)
     .outputs(<draconicevolution:dragon_heart> * 32,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_breath> * 64,
+             <armorplus:material:3> * 64, 
+             <armorplus:material:3> * 64,
+             <armorplus:material:3> * 64,
+             <minecraft:gold_block> * 64,
+             <minecraft:gold_block> * 64,
+             <minecraft:gold_block> * 64,
+             <metaitem:blockSilver> * 64, //Silver block
+             <metaitem:blockSilver> * 64, //Silver Block
+             <minecraft:diamond_block> * 64,
+             <minecraft:diamond_block> * 64,
+             <metaitem:blockPlatinum> * 64, //Platinum Block
+             <metaitem:blockAmericium> * 16) 
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<draconicevolution:dragon_heart> * 4,
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_breath> * 64,
@@ -689,6 +1219,26 @@ microverse_projector_advanced_ii.recipeMap
     .outputs(<contenttweaker:lairofthechaosguardiandata>)
     .buildAndRegister();
 
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<contenttweaker:lairofthechaosguardiandata>)
+    .buildAndRegister();
+
+// st7 matter
+microverse_projector_advanced_ii.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tiersevenship_stabilized>)
+    .outputs(
+        <contenttweaker:tiersevenship_stabilized_matter>
+    ).buildAndRegister();
+
 // t8 gravistar nt
 microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
@@ -704,7 +1254,21 @@ microverse_projector_advanced_ii.recipeMap
             <contenttweaker:witherrealmdata> * 64)
     .outputs(<metaitem:quantumstar> * 32,
              <metaitem:quantumeye> * 64,
-             <ore:ingotNeutronium>.firstItem * 16,
+             <avaritia:resource:2> * 64,
+             <avaritia:resource:2> * 64,
+             <metaitem:gravistar>)
+    .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiereightship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<metaitem:quantumstar> * 32,
+             <metaitem:quantumeye> * 64,
+             <avaritia:resource:2> * 64,
+             <avaritia:resource:2> * 64,
              <metaitem:gravistar>)
     .buildAndRegister();
 
@@ -726,6 +1290,30 @@ microverse_projector_advanced_ii.recipeMap
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_egg> * 64)
     .buildAndRegister();
+
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiereightship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<draconicevolution:chaos_shard> * 4,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64)
+    .buildAndRegister();
+
+// st8 matter
+microverse_projector_advanced_ii.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<minecraft:cobblestone>)
+    .notConsumable(<contenttweaker:tiereightship_stabilized>)
+    .outputs(
+        <contenttweaker:tiereightship_stabilized_matter>
+    ).buildAndRegister();
 
 // t9 nt
 microverse_projector_advanced_ii.recipeMap
@@ -772,17 +1360,6 @@ microverse_projector_advanced_ii.recipeMap
     .outputs(<contenttweaker:heartofauniverse>)
     .buildAndRegister();
 
-
-// creative tank provider
-// creative tank
-creative_tank_provider.recipeMap
-    .recipeBuilder()
-    .notConsumable(<contenttweaker:creativeportabletankmold>)
-    .inputs(<minecraft:bucket>)
-    .outputs(<metaitem:creative_tank>)
-    .duration(500)
-    .EUt(100000)
-    .buildAndRegister();
 
 // Naquadah Reactor Mk1 Recipes
 naquadah_reactor_1.recipeMap

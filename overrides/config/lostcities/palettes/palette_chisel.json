@@ -1,0 +1,377 @@
+[
+	{
+	  "type": "style",
+	  "name": "outside_chisel",
+	  "randompalettes": [
+		[
+		  {
+			"factor": 1.0,
+			"palette": "common"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "default_chisel"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "bricks_chisel_standard"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "glass_full"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "glass_side_variant_glass"
+		  }
+		]
+	  ]
+	},
+	{
+	  "type": "style",
+	  "name": "standard_chisel",
+	  "randompalettes": [
+		[
+		  {
+			"factor": 1.0,
+			"palette": "common"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "default_chisel"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "bricks_chisel_standard"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "bricks_chisel_cyan"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "bricks_chisel_gray"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "bricks_chisel_silver"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "glass_full"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_pane"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_full_white"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_pane_white"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_full_blue"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_pane_blue"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_full_light_blue"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_pane_light_blue"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_full_gray"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_pane_gray"
+		  }
+		],
+		[
+		  {
+			"factor": 1.0,
+			"palette": "glass_side_variant_glass"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_side_variant_glass"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_side_variant_bricks"
+		  },
+		  {
+			"factor": 1.0,
+			"palette": "glass_side_variant_quartz"
+		  }
+		]
+	  ]
+	},
+	{
+	  "type": "palette",
+	  "name": "bricks_chisel_standard",
+	  "palette": [
+		{
+		  "char": "X",
+		  "block": "chisel:concrete_gray1@8",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "$",
+		  "block": "minecraft:double_stone_slab",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "#",
+		  "blocks": [
+			{
+			  "random": 10,
+			  "block": "chisel:concrete_gray@2"
+			},
+			{
+			  "random": 2000,
+			  "block": "chisel:concrete_gray1@8"
+			}
+		  ],
+		  "damaged": "minecraft:iron_bars"
+		}
+	  ]
+	},
+	{
+	  "type": "palette",
+	  "name": "bricks_chisel_cyan",
+	  "palette": [
+		{
+		  "char": "X",
+		  "block": "chisel:concrete_lightgray1@8",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "$",
+		  "block": "minecraft:double_stone_slab",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "#",
+		  "blocks": [
+			{
+			  "random": 10,
+			  "block": "chisel:concrete_lightgray@2"
+			},
+			{
+			  "random": 2000,
+			  "block": "chisel:concrete_lightgray1@8"
+			}
+		  ],
+		  "damaged": "minecraft:iron_bars"
+		}
+	  ]
+	},
+	{
+	  "type": "palette",
+	  "name": "bricks_chisel_gray",
+	  "palette": [
+		{
+		  "char": "X",
+		  "block": "chisel:concrete_white1@8",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "$",
+		  "block": "minecraft:double_stone_slab",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "#",
+		  "blocks": [
+			{
+			  "random": 10,
+			  "block": "chisel:concrete_white@2"
+			},
+			{
+			  "random": 2000,
+			  "block": "chisel:concrete_white1@8"
+			}
+		  ],
+		  "damaged": "minecraft:iron_bars"
+		}
+	  ]
+	},
+	{
+	  "type": "palette",
+	  "name": "bricks_chisel_silver",
+	  "palette": [
+		{
+		  "char": "X",
+		  "block": "chisel:concrete_gray1@8",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "$",
+		  "block": "minecraft:double_stone_slab",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "#",
+		  "blocks": [
+			{
+			  "random": 10,
+			  "block": "chisel:concrete_gray@2"
+			},
+			{
+			  "random": 2000,
+			  "block": "chisel:concrete_gray1@8"
+			}
+		  ],
+		  "damaged": "minecraft:iron_bars"
+		}
+	  ]
+	},
+	{
+	  "type": "palette",
+	  "name": "default_chisel",
+	  "palette": [
+		{
+		  "char": "Q",
+		  "block": "minecraft:quartz_block",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "R",
+		  "block": "chisel:concrete_lightgray@7",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "u",
+		  "block": "minecraft:double_stone_slab",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "S",
+		  "block": "chisel:concrete_lightgray@7",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "b",
+		  "block": "minecraft:stone"
+		},
+		{
+		  "char": "B",
+		  "block": "ceramics:clay_hard@1",
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "v",
+		  "blocks": [
+			{
+			  "random": 10,
+			  "block": "minecraft:stonebrick@2"
+			},
+			{
+			  "random": 9,
+			  "block": "minecraft:stonebrick@1"
+			},
+			{
+			  "random": 2000,
+			  "block": "minecraft:stonebrick"
+			}
+		  ],
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "y",
+		  "blocks": [
+			{
+			  "random": 10,
+			  "block": "minecraft:stonebrick@2"
+			},
+			{
+			  "random": 9,
+			  "block": "minecraft:stonebrick@1"
+			},
+			{
+			  "random": 2000,
+			  "block": "minecraft:stonebrick"
+			}
+		  ],
+		  "damaged": "minecraft:iron_bars"
+		},
+		{
+		  "char": "x",
+		  "block": "minecraft:stonebrick"
+		},
+		{
+		  "char": "_",
+		  "block": "minecraft:stone_slab"
+		},
+		{
+		  "char": "=",
+		  "block": "minecraft:stone_slab@8"
+		},
+		{
+		  "char": "w",
+		  "block": "minecraft:cobblestone_wall"
+		},
+		{
+		  "char": ":",
+		  "block": "minecraft:iron_bars"
+		},
+		{
+		  "char": "A",
+		  "block": "minecraft:stone_brick_stairs@1"
+		},
+		{
+		  "char": "t",
+		  "block": "minecraft:stone_brick_stairs@0"
+		},
+		{
+		  "char": "z",
+		  "block": "minecraft:stone_brick_stairs@3"
+		},
+		{
+		  "char": "c",
+		  "block": "minecraft:stone_brick_stairs@2"
+		},
+		{
+		  "char": "d",
+		  "block": "minecraft:stone_brick_stairs@7"
+		},
+		{
+		  "char": "(",
+		  "block": "minecraft:quartz_stairs@3"
+		},
+		{
+		  "char": ")",
+		  "block": "minecraft:quartz_stairs@2"
+		},
+		{
+		  "char": "/",
+		  "block": "minecraft:stone_stairs@1"
+		}
+	  ]
+	}
+  ]

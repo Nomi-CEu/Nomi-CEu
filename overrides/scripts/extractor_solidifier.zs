@@ -62,21 +62,6 @@ fluid_extractor.recipeBuilder()
     .duration(40).EUt(8).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
-    .inputs([<deepmoblearning:living_matter_overworldian>])
-    .fluidOutputs([<liquid:xpjuice> * 200])
-    .duration(40).EUt(32).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<deepmoblearning:living_matter_hellish>])
-    .fluidOutputs([<liquid:xpjuice> * 400])
-    .duration(80).EUt(32).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<deepmoblearning:living_matter_extraterrestrial>])
-    .fluidOutputs([<liquid:xpjuice> * 500])
-    .duration(100).EUt(32).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
     .inputs([<actuallyadditions:item_rice_seed>])
     .fluidOutputs([<liquid:seed_oil> * 10])
     .duration(32).EUt(2).buildAndRegister();

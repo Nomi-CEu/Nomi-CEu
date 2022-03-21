@@ -2,9 +2,6 @@ import crafttweaker.item.IIngredient;
 import mods.gregtech.recipe.RecipeMap;
 import scripts.common.makeShaped as makeShaped;
 
-<deepmoblearning:glitch_fragment>.addTooltip(format.aqua(format.italic(
-    "Obtained by crushing Glitch Hearts against Obsidian.")));
-
 <appliedenergistics2:material:1>.addTooltip(format.aqua(format.italic(
     "Obtained by charging with RF power in the AE2 Charger.")));
 
@@ -84,11 +81,6 @@ blast_furnace.recipeBuilder()
 
 recipes.addShapeless(<avaritia:resource:2> * 9, [<metaitem:nuggetNeutronium>]);
 
-
-extractor.recipeBuilder()
-    .inputs(<contenttweaker:impossiblerealmdata>)
-    .outputs([<contenttweaker:quantumflux>])
-    .duration(100).EUt(3000).buildAndRegister();
 
 recipes.remove(<extrautils2:rainbowgenerator>);
 makeShaped("of_rainbow_generator", <extrautils2:rainbowgenerator>,
@@ -193,17 +185,6 @@ makeShaped("of_processing_array", <metaitem:processing_array>,
        C : <ore:circuitMaster>, //T6 Circuit
        S : <advsolars:sunnarium>, //Sunnarium
        B : <metaitem:tool.dataorb>}); //dataorb
-
-
-
-
-// Creative Tank Data
-extractor.recipeBuilder()
-    .inputs(<contenttweaker:heartofauniverse>)
-    .outputs(<contenttweaker:creativeportabletankmold>)
-    .duration(1000)
-    .EUt(180000)
-    .buildAndRegister();
 
 // UHV 16x Batbuf
 recipes.addShaped(<metaitem:battery_buffer.uhv.16>, [

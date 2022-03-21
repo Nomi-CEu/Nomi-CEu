@@ -1734,10 +1734,6 @@ mods.jei.JEI.removeAndHide(<avaritia:neutronium_compressor>);
 mods.jei.JEI.removeAndHide(<avaritia:matter_cluster>);
 
 
-//Deep Mob Learning Removals
-mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_plate>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_redstone>);
-
 //DevTech Removals
 mods.jei.JEI.removeAndHide(<devtech:meta_gem_perfect:2000>); // Perfect Glass
 
@@ -1857,18 +1853,18 @@ mods.jei.JEI.removeAndHide(<extrautils2:analogcrafter>);
 
 
 //Gregtech Removals
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_steel>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_macerator_bronze>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_macerator_steel>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_compressor_bronze>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_compressor_steel>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_hammer_bronze>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_hammer_steel>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_bronze>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_steel>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_bronze>);
-mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_steel>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_macerator_bronze>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_macerator_steel>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_compressor_bronze>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_compressor_steel>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_hammer_bronze>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_hammer_steel>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_bronze>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_steel>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_bronze>);
+//mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.lv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.mv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.hv>);
