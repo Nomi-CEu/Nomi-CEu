@@ -16,13 +16,6 @@ furnace.remove(<metaitem:ingotEnderium>, <metaitem:dustEnderium>);
 furnace.remove(<metaitem:ingotLumium>, <metaitem:dustLumium>);
 furnace.remove(<metaitem:ingotSignalum>, <metaitem:dustSignalum>);
 
-//Steel [tier 0]
-
-// Steel Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:ingotWroughtIron>], [<liquid:oxygen> * 1000]).remove();
-// Steel Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<minecraft:iron_ingot:0>], [<liquid:oxygen> * 200]).remove();
-
 //Black Steel [tier 1]
 // Black Steel Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustBlackSteel>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:nitrogen> * 1000]).remove();

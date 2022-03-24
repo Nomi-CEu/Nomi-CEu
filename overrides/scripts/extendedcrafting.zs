@@ -6,6 +6,10 @@ import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 
+val creativecell = <thermalexpansion:cell>.withTag({Recv: 250000, RSControl: 0 as byte, Facing: 3 as byte, Energy: 500000000, Creative: 1 as byte, SideCache: [2, 2, 2, 2, 2, 2] as byte[] as byte[], Level: 4 as byte, Send: 250000}, false);
+val creativetank = <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 1 as byte, Level: 4 as byte}, false);
+val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType: 3}, false);
+
 //Noble Gasses
 //centrifuge.findRecipe(30, [], [<liquid:liquid_air> * 53000]).remove();
 //centrifuge.findRecipe(30, [], [<liquid:noble_gases> * 43000]).remove();
@@ -555,43 +559,6 @@ mods.extendedcrafting.TableCrafting.addShapeless(<contenttweaker:ultimate_gem>,
 <contenttweaker:ultimate_gem>.addTooltip(format.yellow("Recipe is shapeless."));
 
 
-////////////////////////// Creative Vending Upgrade ///////////////////////
-val creativecell = <thermalexpansion:cell>.withTag({Recv: 250000, RSControl: 0 as byte, Facing: 3 as byte, Energy: 500000000, Creative: 1 as byte, SideCache: [2, 2, 2, 2, 2, 2] as byte[] as byte[], Level: 4 as byte, Send: 250000}, false);
-val creativetank = <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 1 as byte, Level: 4 as byte}, false);
-val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType: 3}, false);
-
-makeExtremeRecipe9(<metaitem:creative_chest> * 2,
-    ["ABBBBBBBA",
-     "BCTEDETCB",
-     "BFSGHGSFB",
-     "BUJXIXJUB",
-     "BNSWKWSNB",
-     "BUJXLXJUB",
-     "BFSGMGSFB",
-     "BCTEDETCB",
-     "ABBBBBBBA"],
-    { A : <storagedrawers:upgrade_creative>,
-      B : <ore:ingotInfinity>,
-      C : <draconicevolution:creative_rf_source>,
-      D : creativecell.only(isCreative),
-      E : <extrautils2:creativeenergy>,
-      F : <extrautils2:drum:4>,
-      G : <extrautils2:passivegenerator:6>,
-      H : <avaritia:infinity_helmet>,
-      I : <avaritia:infinity_chestplate>,
-      J : creativejetpack,
-      K : <avaritia:infinity_sword>,
-      L : <avaritia:infinity_pants>,
-      M : <avaritia:infinity_boots>,
-      N : <metaitem:infinite_energy>,
-      S : <solarflux:solar_panel_infinity>,
-      T : <metaitem:creative_tank>,
-      U : <appliedenergistics2:creative_energy_cell>,
-      W : <thermalcultivation:watering_can:32000>.withTag({Water: 0, Mode: 4}, false),
-      X : <thermalexpansion:capacitor:32000>.withTag({Energy: 250000000}, false)
-    });
-
-
 
 
 ////////////////////////// Creative Items ///////////////////////
@@ -728,22 +695,7 @@ makeExtremeRecipe9(<extrautils2:creativeenergy>,
       H : <extrautils2:opinium:8>,
       I : <extrautils2:rainbowgenerator> });
 
-makeExtremeRecipe9(<extrautils2:drum:4>,
-    ["BBBCDCBBB",
-     "BBCDEDCBB",
-     "BCDEFEDCB",
-     "CDEFFFEDC",
-     "DEFFAFFED",
-     "CDEFFFEDC",
-     "BCDEFEDCB",
-     "BBCDEDCBB",
-     "BBBCDCBBB"],
-    { A : <avaritia:resource:5>,
-      B : <metaitem:large_fluid_cell.steel>,
-      C : <metaitem:large_fluid_cell.aluminium>,
-      D : <metaitem:large_fluid_cell.stainless_steel>,
-      E : <metaitem:large_fluid_cell.titanium>,
-      F : <metaitem:large_fluid_cell.tungstensteel> });
+
 
 
 makeExtremeRecipe9(<appliedenergistics2:creative_energy_cell>,
