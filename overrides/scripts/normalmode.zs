@@ -469,6 +469,14 @@ recipes.addShaped(<thermalexpansion:dynamo:5>, [
 	[<metaitem:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:plateVibrantAlloy>],
 	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
 
+// Red Alloy
+alloy_blast_smelter.recipeBuilder()
+	.inputs(<ore:dustCopper> * 2, <minecraft:redstone> * 3)
+	.circuit(2)
+	.property("temperature", 1000)
+	.fluidOutputs(<liquid:red_alloy> * 288)
+	.duration(25).EUt(120).buildAndRegister();
+
 
 // Removals
 // GT
