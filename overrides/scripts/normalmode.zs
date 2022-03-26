@@ -505,6 +505,13 @@ autoclave.recipeBuilder()
 	.EUt(320)
 	.buildAndRegister();
 
+// Upgrade Template
+recipes.remove(<storagedrawers:upgrade_template>);
+recipes.addShaped(<storagedrawers:upgrade_template> * 2, [
+	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
+	[<ore:stickWood>, <storagedrawers:customdrawers>, <ore:stickWood>],
+	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
+
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);

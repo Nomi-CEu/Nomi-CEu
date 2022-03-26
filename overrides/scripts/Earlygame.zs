@@ -25,12 +25,6 @@ alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs(
 furnace.remove(<metaitem:nuggetWroughtIron>);
 furnace.addRecipe(<metaitem:ingotWroughtIron>, <minecraft:iron_ingot>, 0.0);
 
-recipes.remove(<storagedrawers:upgrade_template>);
-recipes.addShaped(<storagedrawers:upgrade_template> * 2, [
-	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
-	[<ore:stickWood>, <storagedrawers:customdrawers>, <ore:stickWood>],
-	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
-
 //Wood Pulp
 recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:gtceMortars>]);
 

@@ -716,6 +716,8 @@ recipes.addShaped(<minecraft:dispenser>, [
     [<metaitem:gearSmallIron>, <metaitem:stickRedAlloy>, <metaitem:gearSmallIron>]
 ]);
 
+recipes.remove(<minecraft:comparator>);
+recipes.remove(<minecraft:repeater>);
 
 recipes.remove(<minecraft:piston>);
 // Piston * 4
@@ -838,6 +840,27 @@ assembler.recipeBuilder()
     .outputs(<appliedenergistics2:material:57>)
     .duration(100).EUt(960)
     .buildAndRegister();
+
+// Small Storage Crates
+recipes.removeByRecipeName("actuallyadditions:recipes162");
+assembler.recipeBuilder()
+    .inputs(<ore:chestWood> * 4, <metaitem:frameTreatedWood> * 4, <metaitem:crate.steel>)
+    .outputs(<actuallyadditions:block_giant_chest>)
+    .duration(100).EUt(7).buildAndRegister();
+
+// Drawer Upgrades
+recipes.remove(<storagedrawers:upgrade_template>);
+recipes.removeByRecipeName("storagedrawers:upgrade_storage_emerald");
+recipes.removeByRecipeName("storagedrawers:upgrade_storage_diamond");
+
+recipes.addShaped(<storagedrawers:upgrade_template> * 4, [
+	[<ore:stickBrass>, <ore:stickBrass>, <ore:stickBrass>],
+	[<ore:stickBrass>, <storagedrawers:customdrawers>, <ore:stickBrass>],
+	[<ore:stickBrass>, <ore:stickBrass>, <ore:stickBrass>]]);
+
+recipes.addShaped(<storagedrawers:upgrade_storage:3>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotAluminium>, <storagedrawers:upgrade_template>, <ore:ingotAluminium>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
+recipes.addShaped(<storagedrawers:upgrade_storage:4>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotVibrantAlloy>, <storagedrawers:upgrade_template>, <ore:ingotVibrantAlloy>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
+
 
 // Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
