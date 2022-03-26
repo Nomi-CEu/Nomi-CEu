@@ -589,7 +589,7 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_chalcocite_0:1> * 64,
              <gregtech:ore_chalcocite_0:1> * 64,
              <gregtech:ore_cooperite_0:1> * 64,
-             <gregtech:ore_osmiridium_8020_0> * 32,
+             <gregtech:ore_osmiridium_8020_0> * 20,
              <gregtech:ore_iridosmine_8020_0> * 8)
     .buildAndRegister();
 
@@ -770,6 +770,7 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:witherrealmdata> * 16)
     .outputs(<gregtech:ore_uraninite_0:2> * 64,
              <gregtech:ore_uraninite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,

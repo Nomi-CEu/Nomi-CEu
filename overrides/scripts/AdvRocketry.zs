@@ -945,3 +945,9 @@ recipes.addShaped(<advancedrocketry:carbonscrubbercartridge>, [
 	[<ore:plateDoubleSteel>, <minecraft:iron_bars>, <ore:plateDoubleSteel>],
     [<ore:plateDoubleSteel>, <minecraft:iron_bars>, <ore:plateDoubleSteel>],
     [<ore:plateDoubleSteel>, <minecraft:iron_bars>, <ore:plateDoubleSteel>]]);
+
+// Oxidized Ferric Sand
+centrifuge.recipeBuilder()
+	.inputs(<advancedrocketry:hotturf>)
+	.chancedOutput(<metaitem:crushedBandedIron>, 5000, 500)
+	.duration(20).EUt(480).buildAndRegister();
