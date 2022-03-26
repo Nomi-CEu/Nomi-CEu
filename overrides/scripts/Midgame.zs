@@ -73,10 +73,6 @@ centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
 centrifuge.recipeBuilder().inputs(<contenttweaker:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
 
-recipes.removeByRecipeName("deepmoblearning:recipe1_deep_learner");
-recipes.addShaped(<deepmoblearning:deep_learner>, [[null,null,null],[<metaitem:sensor.lv>,<metaitem:tricorder_scanner>,<metaitem:sensor.lv>],[null,null,null]]);
-
-
 //Manyullyn
 mixer.recipeBuilder()
     .outputs(<metaitem:dustManyullyn> * 4)

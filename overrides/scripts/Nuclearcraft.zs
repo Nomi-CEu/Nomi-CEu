@@ -614,14 +614,6 @@ makeShaped("of_nc_cobblestone_generator_mirrored",
       B : <minecraft:water_bucket:*>,
       C : <minecraft:lava_bucket:*> });
 
-recipes.remove(<nuclearcraft:water_source>);
-makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
-    ["AAA",
-     "B B",
-     "AAA"],
-    { A : <ore:plateWroughtIron>,
-      B : <minecraft:water_bucket:*> });
-
 //Uranium RTG
 recipes.remove(<nuclearcraft:rtg_uranium>);
 makeShaped("of_nc_rtg_uranium", <nuclearcraft:rtg_uranium>,

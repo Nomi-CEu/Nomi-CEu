@@ -14,9 +14,6 @@ import scripts.common.makeShaped as makeShaped;
 <enderio:item_basic_capacitor:1>.displayName = "Double-Layer RF Capacitor";
 <enderio:item_basic_capacitor:2>.displayName = "Octadic RF Capacitor";
 
-//Rubber by hand
-recipes.addShaped(<metaitem:plateRubber>,[[<ore:gtceHardHammers>],[<metaitem:rubber_drop>],[<metaitem:rubber_drop>]]);	
-
 //Resonant Clathrate
 furnace.remove(<minecraft:ender_pearl>);
 furnace.addRecipe(<contenttweaker:pulsatingdust>, <thermalfoundation:material:895>, 0.0);
@@ -104,12 +101,6 @@ assembler.recipeBuilder().inputs([<metaitem:wireGtSingleDraconium>* 2, <enderio:
 <enderio:item_endergy_conduit:11>.displayName = "Draconic Superconductor Energy Conduit";
 assembler.recipeBuilder().inputs([<metaitem:wireGtSingleDraconicSuperconductor>* 2, <enderio:item_endergy_conduit:10>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:11> * 4]).duration(80).EUt(16).buildAndRegister();
 
-//Item conduit - by hand
-recipes.addShaped(<enderio:item_item_conduit> * 4, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<ore:wireGtSinglePulsatingIron>,<ore:wireGtSinglePulsatingIron>,<ore:wireGtSinglePulsatingIron>],
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-
 //redstone conduit - by hand
 recipes.addShaped(<enderio:item_redstone_conduit> * 4, [
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
@@ -122,28 +113,10 @@ recipes.addShaped(<enderio:item_me_conduit> * 4, [
 	[<appliedenergistics2:part:36>,<appliedenergistics2:part:36>,<appliedenergistics2:part:36>], 
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
-//ender fluid conduit - by hand
-recipes.addShaped(<enderio:item_liquid_conduit:2> * 4, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:wireGtSingleVibrantAlloy>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-
 //redstone conduit - assembler
 assembler.recipeBuilder()
     .inputs([<metaitem:wireGtSingleRedAlloy> * 3, <ore:itemConduitBinder> * 6])
     .outputs([<enderio:item_redstone_conduit> * 8])
-    .duration(80).EUt(16).buildAndRegister();
-
-//item conduit - assembler
-assembler.recipeBuilder()
-    .inputs([<ore:wireGtSinglePulsatingIron> * 3, <ore:itemConduitBinder> * 6])
-    .outputs([<enderio:item_item_conduit> * 8])
-    .duration(80).EUt(16).buildAndRegister();
-
-//ender fluid conduit - assembler
-assembler.recipeBuilder()
-    .inputs([<metaitem:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 6])
-    .outputs([<enderio:item_liquid_conduit:2> * 8])
     .duration(80).EUt(16).buildAndRegister();
 
 mods.jei.JEI.removeAndHide(<enderio:item_endergy_conduit:2>);
@@ -177,25 +150,6 @@ makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
 //recipes.addShaped(<meta_tile_entity:hull.lv>, [
 //	[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>], 
 //	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
-
-// remove LV Motor recipes
-recipes.removeByRecipeName("gregtech:electric_motor_lv_steel");
-recipes.removeByRecipeName("gregtech:electric_motor_lv_iron");
-assembler.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickSteel> * 2, <metaitem:stickSteelMagnetic>, <metaitem:wireGtSingleCopper> * 4], [null]).remove();
-<recipemap:assembler>.findRecipe(30, [<metaitem:cableGtSingleTin> * 2, <metaitem:stickIron> * 2, <metaitem:stickIronMagnetic>, <metaitem:wireGtSingleCopper> * 4], null).remove();
-
-
-//LV Motor - with Fine Copper Wires
-recipes.addShaped(<metaitem:electric.motor.lv>, [
-	[<ore:cableGtSingleTin>, <metaitem:wireFineCopper>, <ore:stickIron>], 
-	[<metaitem:wireFineCopper>, <ore:stickIronMagnetic>, <metaitem:wireFineCopper>],
-	[<ore:stickIron>, <metaitem:wireFineCopper>, <ore:cableGtSingleTin>]]);
-assembler.recipeBuilder()
-	.inputs([<metaitem:cableGtSingleTin> * 2, <metaitem:stickIron> * 2, <metaitem:stickIronMagnetic>, <metaitem:wireFineCopper> * 4])
-	.outputs(<metaitem:electric.motor.lv>)
-	.duration(100)
-	.EUt(30)
-	.buildAndRegister();
 
 //Wood Pulp
 recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<gregtech:meta_tool:12>]);	
@@ -276,11 +230,6 @@ chemical_reactor.recipeBuilder().inputs(<metaitem:board.coated>).fluidInputs([<l
 //	[<metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>]
 //]);
 
-recipes.addShaped(<metaitem:component.glass.tube>, [
-	[null, null, null],
-	[<ore:paneGlass>, <ore:paneGlass>, <ore:paneGlass>],
-	[<ore:paneGlass>, <ore:paneGlass>, <ore:paneGlass>]
-]);
 
 recipes.removeByRecipeName("gregtech:coated_board");
 recipes.removeByRecipeName("gregtech:coated_board_1x");
@@ -289,10 +238,6 @@ recipes.addShaped(<metaitem:board.coated> * 3, [
 	[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
 	[<metaitem:rubber_drop>, <metaitem:rubber_drop>, <metaitem:rubber_drop>]
 ]);
-
-// t1 board easier
-recipes.removeByRecipeName("gregtech:basic_circuit_board");
-recipes.addShaped("basic_circuit_board", <metaitem:circuit_board.basic>, [[<ore:wireFineCopper>, <ore:wireFineCopper>, <ore:wireFineCopper>], [<ore:wireFineCopper>, <gregtech:meta_item_1:381>, <ore:wireFineCopper>], [<ore:wireFineCopper>, <ore:wireFineCopper>, <ore:wireFineCopper>]]);
 
 // workstation use vibrant
 // Workstation * 1

@@ -672,6 +672,17 @@
       "projectID": 423758,
       "fileID": 3626196,
       "required": true
+    },
+    {
+      "projectID": 278398,
+      "fileID": 2567799,
+      "required": true
+    },
+    {
+      "projectID": 421605,
+      "fileID": 3576661,
+      "required": true,
+      "sides": ["client"]
     }
   ]
 }

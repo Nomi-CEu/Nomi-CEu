@@ -1,5 +1,5 @@
 #loader gregtech
-#priority 10000
+#packmode normal
 
 import mods.gregtech.material.MaterialBuilder;
 import mods.gregtech.material.MaterialRegistry;

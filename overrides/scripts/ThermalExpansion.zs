@@ -116,13 +116,6 @@ recipes.addShaped(<thermalexpansion:dynamo:3>, [
 	[<metaitem:plateEnergeticAlloy>, <morefurnaces:furnaceblock:1>, <metaitem:plateEnergeticAlloy>],
 	[<enderio:item_material:12>, <thermalfoundation:material:514>, <enderio:item_material:12>]]);
 
-//Numismatic Dynamo
-recipes.remove(<thermalexpansion:dynamo:5>);
-recipes.addShaped(<thermalexpansion:dynamo:5>, [
-	[null, <contenttweaker:excitationcoil>, null],
-	[<metaitem:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:plateVibrantAlloy>],
-	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
-
 //hardened upgrade
 recipes.remove(<thermalfoundation:upgrade>);
 recipes.addShaped(<thermalfoundation:upgrade>, [

@@ -89,6 +89,7 @@ item.contenttweaker.microprocessormainframe.name=Microprocessor Mainframe
 item.contenttweaker.tieroneship.name=Steel Plated Micro Miner [Tier One]
 item.contenttweaker.tiertwoship.name=Titanium Plated Micro Miner [Tier Two]
 item.contenttweaker.tierthreeship.name=Tungsten Carbide Plated Micro Miner [Tier Three]
+item.contenttweaker.tierfourandhalfship.name=Lumium Plated Micro Mob Slayer [Tier Four and Half]
 item.contenttweaker.tierfourship.name=Signalum Plated Micro Miner [Tier Four]
 item.contenttweaker.tierfiveship.name=Iridium Plated Micro Miner [Tier Five]
 item.contenttweaker.tiersixship.name=Enderium Plated Micro Miner [Tier Six]
@@ -98,6 +99,30 @@ item.contenttweaker.tiernineship.name=Eternium Plated Micro Sun Eater [Tier Nine
 item.contenttweaker.tiertenship.name=Neutronium Plated Micro Universe Harvester [Tier Ten]
 item.contenttweaker.moondust.name=Moon Dust
 item.contenttweaker.quantumflux.name=Quantum Flux
+
+item.contenttweaker.tieroneship_stabilized.name=Stabilized Steel Plated Micro Miner [Tier One]
+item.contenttweaker.tiertwoship_stabilized.name=Stabilized Titanium Plated Micro Miner [Tier Two]
+item.contenttweaker.tierthreeship_stabilized.name=Stabilized Tungsten Carbide Plated Micro Miner [Tier Three]
+item.contenttweaker.tierfourship_stabilized.name=Stabilized Signalum Plated Micro Miner [Tier Four]
+item.contenttweaker.tierfourandhalfship_stabilized.name=Stabilized Lumium Plated Micro Mob Slayer [Tier Four and Half]
+item.contenttweaker.tierfiveship_stabilized.name=Stabilized Iridium Plated Micro Miner [Tier Five]
+item.contenttweaker.tiersixship_stabilized.name=Stabilized Enderium Plated Micro Miner [Tier Six]
+item.contenttweaker.tiersevenship_stabilized.name=Stabilized Draconium Plated Micro Dragon Hunter [Tier Seven]
+item.contenttweaker.tiereightship_stabilized.name=Stabilized Crystal Matrix Plated Micro Leviathan Slayer [Tier Eight]
+item.contenttweaker.tiernineship_stabilized.name=Stabilized Eternium Plated Micro Sun Eater [Tier Nine]
+item.contenttweaker.tiertenship_stabilized.name=Stabilized Neutronium Plated Micro Universe Harvester [Tier Ten]
+
+item.contenttweaker.tieroneship_stabilized_matter.name=Pristine Steel Microverse Matter [Tier One]
+item.contenttweaker.tiertwoship_stabilized_matter.name=Pristine Titanium Microverse Matter [Tier Two]
+item.contenttweaker.tierthreeship_stabilized_matter.name=Pristine Tungsten Microverse Matter [Tier Three]
+item.contenttweaker.tierfourship_stabilized_matter.name=Pristine Signalum Microverse Matter [Tier Four]
+item.contenttweaker.tierfourandhalfship_stabilized_matter.name=Pristine Lumium Microverse Matter [Tier Four and Half]
+item.contenttweaker.tierfiveship_stabilized_matter.name=Pristine Iridium Microverse Matter [Tier Five]
+item.contenttweaker.tiersixship_stabilized_matter.name=Pristine Enderium Microverse Matter [Tier Six]
+item.contenttweaker.tiersevenship_stabilized_matter.name=Pristine Draconium Microverse Matter [Tier Seven]
+item.contenttweaker.tiereightship_stabilized_matter.name=Pristine Crystal Microverse Matter [Tier Eight]
+item.contenttweaker.tiernineship_stabilized_matter.name=Pristine Eternium Microverse Matter [Tier Nine]
+item.contenttweaker.tiertenship_stabilized_matter.name=Pristine Neutronium Microverse Matter [Tier Ten]
 
 item.contenttweaker.t1guidance.name=Basic Micro Miner Guidance System
 item.contenttweaker.t1laser.name=Basic Mining Laser
@@ -226,6 +251,7 @@ item.contenttweaker.universecreationdata.name=Universe Creation Data
 item.contenttweaker.stellarcreationdata.name=Stellar Creation Data
 item.contenttweaker.densehydrogen.name=Dense Hydrogen
 item.contenttweaker.ultradensehydrogen.name=Ultra Dense Hydrogen
+tile.contenttweaker.densemagma.name=Dense Magma Block
 
 tile.contenttweaker.microverse_casing.name=Microverse Projector Casing
 tile.contenttweaker.microverse_vent.name=Microverse Projector Vent
@@ -258,6 +284,7 @@ multiblocktweaker.machine.naquadah_reactor_1.name=Naquadah Reactor 1
 multiblocktweaker.machine.naquadah_reactor_2.name=Naquadah Reactor 2
 multiblocktweaker.machine.large_lapidary_dynamo.name=Large Lapidary Dynamo
 multiblocktweaker.machine.lunar_mining_station.name=Lunar Mining Station
+multiblocktweaker.machine.actualization_chamber.name=Actualization Chamber
 
 mbt.machine.microverse_projector_basic.name=Basic Microverse Projector
 mbt.machine.microverse_projector_advanced.name=Advanced Microverse Projector
@@ -276,4 +303,5 @@ recipemap.naquadah_reactor_1.name=Naquadah Reactor 1
 recipemap.naquadah_reactor_2.name=Naquadah Reactor 2
 recipemap.large_lapidary_dynamo.name=Large Lapidary Dynamo
 recipemap.lunar_mining_station=Lunar Mining
+recipemap.actualization_chamber.name=Actualization
 
