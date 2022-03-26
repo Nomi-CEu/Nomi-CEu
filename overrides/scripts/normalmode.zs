@@ -476,6 +476,9 @@ alloy_blast_smelter.recipeBuilder()
 	.property("temperature", 1000)
 	.fluidOutputs(<liquid:red_alloy> * 288)
 	.duration(25).EUt(120).buildAndRegister();
+// Redstone * 4
+<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustRedAlloy>], null).remove();
+
 
 
 // Removals
