@@ -485,7 +485,8 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_tin_0> * 64,
              <gregtech:ore_redstone_0> * 64,
              <gregtech:ore_certus_quartz_0> * 64,
-             <gregtech:ore_almandine_0> * 64)
+             <gregtech:ore_almandine_0> * 64,
+             <gregtech:ore_lepidolite_0> * 64)
     .buildAndRegister();
 
 // advanced projector

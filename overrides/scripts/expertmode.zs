@@ -419,7 +419,8 @@ actualization_chamber.recipeMap
              <gregtech:ore_tin_0:1> * 64,
              <gregtech:ore_redstone_0:1> * 64,
              <gregtech:ore_certus_quartz_0:1> * 64,
-             <gregtech:ore_almandine_0:1> * 64)
+             <gregtech:ore_almandine_0:1> * 64,
+             <gregtech:ore_lepidolite_0:1> * 64)
     .buildAndRegister();
 
 // t3 magma
@@ -468,15 +469,13 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierfourship_stabilized_matter>)
     .circuit(3)
-    .outputs(<gregtech:ore_pentlandite_0> * 64,
-             <gregtech:ore_pentlandite_0> * 64,
-             <gregtech:ore_pentlandite_0> * 64,
-             <gregtech:ore_bornite_0> * 64,
-             <gregtech:ore_bornite_0> * 64,
-             <gregtech:ore_bornite_0> * 64,
-             <gregtech:ore_chalcocite_0> * 64,
-             <gregtech:ore_chalcocite_0> * 64,
-             <gregtech:ore_chalcocite_0> * 64)
+    .outputs(<gregtech:ore_pentlandite_0:1> * 64,
+             <gregtech:ore_pentlandite_0:1> * 64,
+             <gregtech:ore_chalcocite_0:1> * 64,
+             <gregtech:ore_chalcocite_0:1> * 64,
+             <gregtech:ore_sheldonite_0:1> * 64,
+             <gregtech:ore_osmiridium_8020_0> * 32,
+             <gregtech:ore_iridosmine_8020_0> * 8)
     .buildAndRegister();
 
 
@@ -580,16 +579,14 @@ actualization_chamber.recipeMap
              <gregtech:ore_beryllium_0> * 64)
     .buildAndRegister();
 
-// t5 nq pt ke
+// t5 nq ke
 actualization_chamber.recipeMap
     .recipeBuilder()
     .duration(780)
     .EUt(30720)
     .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
     .circuit(2)
-    .outputs(<gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_kaemanite_0:2> * 24,
+    .outputs(<gregtech:ore_kaemanite_0:2> * 24,
              <gregtech:ore_naquadah_0:2> * 48)
     .buildAndRegister();
 
@@ -603,16 +600,10 @@ actualization_chamber.recipeMap
     .circuit(1)
     .outputs(<gregtech:ore_uraninite_0:2> * 64,
              <gregtech:ore_uraninite_0:2> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64)
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_iridosmine_8020_0> * 32)
     .buildAndRegister();
 
 // t6 es

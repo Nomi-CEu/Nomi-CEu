@@ -512,7 +512,8 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_tin_0:1> * 64,
              <gregtech:ore_redstone_0:1> * 64,
              <gregtech:ore_certus_quartz_0:1> * 64,
-             <gregtech:ore_almandine_0:1> * 64)
+             <gregtech:ore_almandine_0:1> * 64,
+             <gregtech:ore_lepidolite_0:1> * 64)
     .buildAndRegister();
 
 
@@ -583,15 +584,13 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:quantumflux> * 8,
             <contenttweaker:witherrealmdata> * 4,
             <ore:dustPetrotheum> * 64) 
-    .outputs(<gregtech:ore_pentlandite_0> * 64,
-             <gregtech:ore_pentlandite_0> * 64,
-             <gregtech:ore_pentlandite_0> * 64,
-             <gregtech:ore_bornite_0> * 64,
-             <gregtech:ore_bornite_0> * 64,
-             <gregtech:ore_bornite_0> * 64,
-             <gregtech:ore_chalcocite_0> * 64,
-             <gregtech:ore_chalcocite_0> * 64,
-             <gregtech:ore_chalcocite_0> * 64)
+    .outputs(<gregtech:ore_pentlandite_0:1> * 64,
+             <gregtech:ore_pentlandite_0:1> * 64,
+             <gregtech:ore_chalcocite_0:1> * 64,
+             <gregtech:ore_chalcocite_0:1> * 64,
+             <gregtech:ore_sheldonite_0:1> * 64,
+             <gregtech:ore_osmiridium_8020_0> * 32,
+             <gregtech:ore_iridosmine_8020_0> * 8)
     .buildAndRegister();
 
 
@@ -735,7 +734,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 
-// t5 naquadah sheldonite trinium
+// t5 naquadah trinium
 microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(1000)
@@ -743,9 +742,7 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
-    .outputs(<gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_kaemanite_0:2> * 24,
+    .outputs(<gregtech:ore_kaemanite_0:2> * 24,
              <gregtech:ore_naquadah_0:2> * 48)
              
     .buildAndRegister();
@@ -773,16 +770,10 @@ microverse_projector_advanced.recipeMap
             <contenttweaker:witherrealmdata> * 16)
     .outputs(<gregtech:ore_uraninite_0:2> * 64,
              <gregtech:ore_uraninite_0:2> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64,
-             <metaitem:dustPlatinumGroupSludge> * 64)
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_iridosmine_8020_0> * 32)
     .buildAndRegister();
 
 
