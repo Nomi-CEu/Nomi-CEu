@@ -316,32 +316,6 @@ circuit_assembler.recipeBuilder()
 	.EUt(600)
 	.buildAndRegister();
 
-// zpm crystal
-// crystal growing w Enderium
-autoclave.recipeBuilder()
-	.inputs(<ore:gemExquisiteOlivine>)
-	.fluidInputs(<liquid:enderium> * 144)
-	.chancedOutput(<metaitem:crystal.raw>, 900, 1800)
-	.duration(12000)
-	.EUt(320)
-	.buildAndRegister();
-
-autoclave.recipeBuilder()
-	.inputs(<ore:gemExquisiteEmerald>)
-	.fluidInputs(<liquid:enderium> * 144)
-	.chancedOutput(<metaitem:crystal.raw>, 900, 1800)
-	.duration(12000)
-	.EUt(320)
-	.buildAndRegister();
-
-autoclave.recipeBuilder()
-	.inputs(<metaitem:crystal.raw_chip>)
-	.fluidInputs(<liquid:enderium> * 144)
-	.chancedOutput(<metaitem:crystal.raw>, 8000, 250)
-	.duration(12000)
-	.EUt(320)
-	.buildAndRegister();
-
 // Crystal Supercomputer * 1
 <recipemap:circuit_assembler>.findRecipe(9600, [<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineNiobiumTitanium> * 32], [<liquid:soldering_alloy> * 144]).remove();
 // Crystal Supercomputer * 1

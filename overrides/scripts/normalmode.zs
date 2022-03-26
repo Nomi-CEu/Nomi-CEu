@@ -479,7 +479,31 @@ alloy_blast_smelter.recipeBuilder()
 // Redstone * 4
 <recipemap:centrifuge>.findRecipe(30, [<metaitem:dustRedAlloy>], null).remove();
 
+// zpm crystal
+// crystal growing w Enderium
+autoclave.recipeBuilder()
+	.inputs(<ore:gemExquisiteOlivine>)
+	.fluidInputs(<liquid:enderium> * 144)
+	.chancedOutput(<metaitem:crystal.raw>, 900, 1800)
+	.duration(12000)
+	.EUt(320)
+	.buildAndRegister();
 
+autoclave.recipeBuilder()
+	.inputs(<ore:gemExquisiteEmerald>)
+	.fluidInputs(<liquid:enderium> * 144)
+	.chancedOutput(<metaitem:crystal.raw>, 900, 1800)
+	.duration(12000)
+	.EUt(320)
+	.buildAndRegister();
+
+autoclave.recipeBuilder()
+	.inputs(<metaitem:crystal.raw_chip>)
+	.fluidInputs(<liquid:enderium> * 144)
+	.chancedOutput(<metaitem:crystal.raw>, 8000, 250)
+	.duration(12000)
+	.EUt(320)
+	.buildAndRegister();
 
 // Removals
 // GT
