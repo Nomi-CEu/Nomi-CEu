@@ -512,6 +512,26 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 2, [
 	[<ore:stickWood>, <storagedrawers:customdrawers>, <ore:stickWood>],
 	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 
+// NC Cobble gen
+recipes.remove(<nuclearcraft:cobblestone_generator>);
+makeShaped("of_nc_cobblestone_generator",
+    <nuclearcraft:cobblestone_generator>,
+    ["AAA",
+     "B C",
+     "AAA"],
+    { A : <ore:plateSteel>,
+      B : <minecraft:water_bucket:*>,
+      C : <minecraft:lava_bucket:*> });
+
+makeShaped("of_nc_cobblestone_generator_mirrored",
+    <nuclearcraft:cobblestone_generator>,
+    ["AAA",
+     "C B",
+     "AAA"],
+    { A : <ore:plateSteel>,
+      B : <minecraft:water_bucket:*>,
+      C : <minecraft:lava_bucket:*> });
+
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);

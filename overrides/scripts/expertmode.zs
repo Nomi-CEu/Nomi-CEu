@@ -862,6 +862,25 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 4, [
 recipes.addShaped(<storagedrawers:upgrade_storage:3>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotAluminium>, <storagedrawers:upgrade_template>, <ore:ingotAluminium>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 recipes.addShaped(<storagedrawers:upgrade_storage:4>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotVibrantAlloy>, <storagedrawers:upgrade_template>, <ore:ingotVibrantAlloy>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 
+// NC Cobble gen
+recipes.remove(<nuclearcraft:cobblestone_generator>);
+makeShaped("of_nc_cobblestone_generator",
+    <nuclearcraft:cobblestone_generator>,
+    ["AAA",
+     "B C",
+     "AAA"],
+    { A : <ore:plateBlackSteel>,
+      B : <minecraft:water_bucket:*>,
+      C : <minecraft:lava_bucket:*> });
+
+makeShaped("of_nc_cobblestone_generator_mirrored",
+    <nuclearcraft:cobblestone_generator>,
+    ["AAA",
+     "C B",
+     "AAA"],
+    { A : <ore:plateBlackSteel>,
+      B : <minecraft:water_bucket:*>,
+      C : <minecraft:lava_bucket:*> });
 
 // Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
@@ -872,3 +891,6 @@ mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_overworldian>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_hellish>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_extraterrestrial>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:polymer_clay>);
+mods.jei.JEI.hideCategory("deepmoblearning.simulation_chamber");
+mods.jei.JEI.hideCategory("deepmoblearning.extraction_chamber");
+mods.jei.JEI.hideCategory("deepmoblearning.trial_keystone");

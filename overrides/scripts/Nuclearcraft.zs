@@ -595,25 +595,6 @@ canner.recipeBuilder()
     .inputs([<nuclearcraft:cooler>, <ore:dustMagnesium> * 16])
     .duration(400).EUt(2).buildAndRegister();
 
-recipes.remove(<nuclearcraft:cobblestone_generator>);
-makeShaped("of_nc_cobblestone_generator",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "B C",
-     "AAA"],
-    { A : <ore:plateSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
-
-makeShaped("of_nc_cobblestone_generator_mirrored",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "C B",
-     "AAA"],
-    { A : <ore:plateSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
-
 //Uranium RTG
 recipes.remove(<nuclearcraft:rtg_uranium>);
 makeShaped("of_nc_rtg_uranium", <nuclearcraft:rtg_uranium>,
