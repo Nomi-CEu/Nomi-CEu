@@ -810,6 +810,43 @@ recipes.addShaped(<thermalexpansion:dynamo:5>, [
 	[<metaitem:plateZeron100>, <morefurnaces:furnaceblock:2>, <metaitem:plateZeron100>],
 	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
 
+// Auto Maintenance Hatch
+recipes.removeByRecipeName("gregtech:maintenance_hatch_automatic");
+recipes.addShaped(<metaitem:maintenance_hatch_full_auto>, [
+    [<ore:circuitElite>, <metaitem:maintenance_hatch>, <ore:circuitElite>],
+    [<metaitem:robot.arm.iv>, <metaitem:hull.iv>, <metaitem:robot.arm.iv>],
+    [<ore:circuitElite>, <metaitem:maintenance_hatch>, <ore:circuitElite>]
+]);
+
+// Fluid Storage
+recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_1k_part");
+recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_4k_part");
+recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_16k_part");
+recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_64k_part");
+
+assembler.recipeBuilder()
+    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:22>, <ore:circuitExtreme> * 2)
+    .outputs(<appliedenergistics2:material:54>)
+    .duration(100).EUt(960)
+    .buildAndRegister();
+
+assembler.recipeBuilder()
+    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:23>, <appliedenergistics2:material:54> * 3)
+    .outputs(<appliedenergistics2:material:55>)
+    .duration(100).EUt(960)
+    .buildAndRegister();
+
+assembler.recipeBuilder()
+    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:23>, <appliedenergistics2:material:55> * 3)
+    .outputs(<appliedenergistics2:material:56>)
+    .duration(100).EUt(960)
+    .buildAndRegister();
+
+assembler.recipeBuilder()
+    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:23>, <appliedenergistics2:material:56> * 3)
+    .outputs(<appliedenergistics2:material:57>)
+    .duration(100).EUt(960)
+    .buildAndRegister();
 
 // Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
