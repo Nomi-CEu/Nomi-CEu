@@ -588,7 +588,7 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_pentlandite_0:1> * 64,
              <gregtech:ore_chalcocite_0:1> * 64,
              <gregtech:ore_chalcocite_0:1> * 64,
-             <gregtech:ore_sheldonite_0:1> * 64,
+             <gregtech:ore_cooperite_0:1> * 64,
              <gregtech:ore_osmiridium_8020_0> * 32,
              <gregtech:ore_iridosmine_8020_0> * 8)
     .buildAndRegister();

@@ -473,7 +473,7 @@ actualization_chamber.recipeMap
              <gregtech:ore_pentlandite_0:1> * 64,
              <gregtech:ore_chalcocite_0:1> * 64,
              <gregtech:ore_chalcocite_0:1> * 64,
-             <gregtech:ore_sheldonite_0:1> * 64,
+             <gregtech:ore_cooperite_0:1> * 64,
              <gregtech:ore_osmiridium_8020_0> * 32,
              <gregtech:ore_iridosmine_8020_0> * 8)
     .buildAndRegister();
@@ -864,4 +864,10 @@ recipes.addShaped(<storagedrawers:upgrade_storage:4>, [[<ore:stickWood>, <ore:st
 
 // Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
-recipes.removeByMod("deepmoblearning");
+mods.jei.JEI.removeAndHide(<deepmoblearning:simulation_chamber>);
+mods.jei.JEI.removeAndHide(<deepmoblearning:extraction_chamber>);
+mods.jei.JEI.removeAndHide(<deepmoblearning:data_model_blank>);
+mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_overworldian>);
+mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_hellish>);
+mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_extraterrestrial>);
+mods.jei.JEI.removeAndHide(<deepmoblearning:polymer_clay>);
