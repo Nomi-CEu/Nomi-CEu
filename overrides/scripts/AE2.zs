@@ -95,7 +95,7 @@ assembler.recipeBuilder()
 
 assembler.recipeBuilder()
 	.inputs([<appliedenergistics2:part:16>])
-	.fluidInputs(<liquid:styrene_butadiene_rubber> * 96)
+	.fluidInputs(<liquid:styrene_butadiene_rubber> * 36)
 	.outputs(<appliedenergistics2:part:36>)
 	.duration(20).EUt(16).buildAndRegister();
 
