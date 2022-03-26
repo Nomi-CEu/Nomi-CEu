@@ -4803,7 +4803,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Aluminium Ingots",
-          "desc:8": "With your EBF running, start to create a supply of §6Aluminium Ingots§r. These are crucial ingredients for MV machines, including §bApplied Energistics§r.\n\n§2With LV power, you can only get Aluminium Dust from electrolyzing Clay Dust, Sapphire Dust or Green Sapphire Dust. Once you make an MV Electrolyzer, you can get it from a plethora of other raw resources.§r\n\nIf you find your power supply is faltering, you may want to make additional dynamos and turn them into steam boilers and turbines. Upgrading your dynamos is also advisable.\n\nHowever, you\u0027re also about to reach MV. You\u0027re bound to discover a better power source than steam before long.\n\n§2You can cut by a third the smelting time of Aluminium and some other smelting processes with Nitrogen gas. Higher-tier processes may take different gases."
+          "desc:8": "With your EBF running, start to create a supply of §6Aluminium Ingots§r. These are crucial ingredients for MV machines, including §bApplied Energistics§r.\n\n§2With LV power, you can only get Aluminium Dust from electrolyzing Sapphire Dust or Green Sapphire Dust. Once you make an MV Electrolyzer, you can get it from a plethora of other raw resources.§r\n\nIf you find your power supply is faltering, you may want to make additional dynamos and turn them into steam boilers and turbines. Upgrading your dynamos is also advisable.\n\nHowever, you\u0027re also about to reach MV. You\u0027re bound to discover a better power source than steam before long.\n\n§2You can cut by a third the smelting time of Aluminium and some other smelting processes with Nitrogen gas. Higher-tier processes may take different gases."
         }
       },
       "tasks:9": {
@@ -24141,7 +24141,7 @@
             "0:10": {
               "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 32005,
+              "Damage:2": 32011,
               "OreDict:8": ""
             }
           },
@@ -46729,7 +46729,7 @@
     "775:10": {
       "questID:3": 779,
       "preRequisites:11": [
-        21
+        909
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -46737,13 +46737,13 @@
           "lockedprogress:1": 1,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "repeattime:3": -1,
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS",
           "simultaneous:1": 0,
           "icon:10": {
-            "id:8": "nuclearcraft:cobblestone_generator",
+            "id:8": "gregtech:machine",
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 665,
             "OreDict:8": ""
           },
           "globalshare:1": 0,
@@ -46753,7 +46753,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2Infinite Cobblestone",
-          "desc:8": "Now that you have acquired §6Steel§6§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Learning§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n"
+          "desc:8": "Cobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Netherrack§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n"
         }
       },
       "tasks:9": {
@@ -46766,9 +46766,26 @@
           "consume:1": 0,
           "requiredItems:9": {
             "0:10": {
-              "id:8": "nuclearcraft:cobblestone_generator",
+              "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 20,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 665,
               "OreDict:8": ""
             }
           },
@@ -48922,7 +48939,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2Steam Grinder and Steam Oven",
-          "desc:8": "§2The Steam Grinder functions as 5.3 LV Macerators in parallel, and the Steam Oven functions as 8 Furnaces in parallel. They require an input of Steam through a Steam Hatch.\n\nYou may want to consider setting up a rudimentary ore-doubling setup with these. Point the Output Bus of the Steam Grinder into the Input Bus of the Steam Oven.\n\nApart from the controller, you will need over a stack of Bronze to make the casings to build these multiblocks. You may wish to consider waiting until you have a Metal Bender at LV to reduce the cost."
+          "desc:8": "§2The Steam Grinder functions as 5.3 LV Macerators in parallel, and the Steam Oven functions as 8 Furnaces in parallel. They require an input of Steam through a Steam Hatch.\n\n§rYou may want to consider setting up a rudimentary §dore-doubling§r setup with these. Point the Output Bus of the §3Steam Grinder§r into the Input Bus of the §3Steam Oven§r.\n\nApart from the controller, you will need over a stack of §6Bronze§r to make the casings to build these multiblocks. You may wish to consider waiting until you have a §3Metal Bender§r at LV to reduce the cost."
         }
       },
       "tasks:9": {
@@ -55339,8 +55356,8 @@
         },
         "52:10": {
           "sizeX:3": 24,
-          "x:3": -692,
-          "y:3": 88,
+          "x:3": -700,
+          "y:3": 212,
           "id:3": 779,
           "sizeY:3": 24
         },
@@ -55388,8 +55405,8 @@
         },
         "59:10": {
           "sizeX:3": 24,
-          "x:3": -692,
-          "y:3": 60,
+          "x:3": -700,
+          "y:3": 184,
           "id:3": 829,
           "sizeY:3": 24
         },
