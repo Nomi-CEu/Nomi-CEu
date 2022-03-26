@@ -2,9 +2,9 @@ import mods.gregtech.recipe.RecipeMap;
 
 recipes.remove(<draconicevolution:draconic_core>);
 recipes.addShaped(<draconicevolution:draconic_core>, [
-	[<draconicevolution:draconium_ingot>, <ore:ingotTungstenCarbide>, <draconicevolution:draconium_ingot>],
+	[<metaitem:ingotDraconium>, <ore:ingotTungstenCarbide>, <metaitem:ingotDraconium>],
 	[<ore:ingotTungstenCarbide>, <actuallyadditions:block_crystal_empowered:1>, <ore:ingotTungstenCarbide>], 
-	[<draconicevolution:draconium_ingot>, <ore:ingotTungstenCarbide>, <draconicevolution:draconium_ingot>]]);
+	[<metaitem:ingotDraconium>, <ore:ingotTungstenCarbide>, <metaitem:ingotDraconium>]]);
 
 var star = <minecraft:nether_star>;
 var dblock = <draconicevolution:draconium_block>;
