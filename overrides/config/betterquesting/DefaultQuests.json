@@ -17843,7 +17843,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2GT Item Pipes",
-          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\nTheir advantage over EnderIO Item Conduits is their far higher throughput. An unupgraded EIO Item Conduit transports 8 items per second, and up to 128 when upgraded. In comparison, small low-tier Item Pipes can transfer 64 items per second, and those made from later materials can transfer multiple stacks per second.\n\nThey don\u0027t auto-extract by themselves, so you have to use Conveyor covers etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value."
+          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\n§rTheir advantage over §5EnderIO §3Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §d8 items per second§r, and up to §d128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §d64 items per second§r, and those made from later materials can transfer §dmultiple stacks per second§r.\n\nThey don\u0027t auto-extract by themselves, so you have to use §3Conveyor covers§r etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value."
         }
       },
       "tasks:9": {
@@ -25844,7 +25844,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Multi Smelter",
-          "desc:8": "The §3Multi Smelter§r is an absolute smelting unit, and is most likely the best furnace added by a mod.\n\nIt\u0027s a 3x3x3 multiblock machine capable of §esmelting huge amounts of items per second§r. By upgrading its coils and power tier, it can become capable of smelting up to literal thousands of items per second.\n\nHover over different coil blocks: the higher the §elevel§r, the more items a Multi Smelter can smelt per operation: §e32 items per level§r. The most basic Multi Smelter essentially does 32 items in the same time as a furnace does one. With a set of level 4 coil blocks, that jumps to 128 items per operation.\n\nThis quest doesn\u0027t ask for coils, hatches or buses: feel free to choose whatever combination you want. You\u0027ll need §a8 coil blocks§r, §a1 input bus§r, §a1 output bus§r and at least §a1 energy hatch§r of any tier.\n\n"
+          "desc:8": "The §3Multi Smelter§r is an absolute smelting unit, and is most likely the best furnace added by a mod.\n\nIt\u0027s a 3x3x3 multiblock machine capable of §esmelting huge amounts of items per second§r. By upgrading its coils and power tier, it can become capable of smelting up to literal thousands of items per second.\n\nShift and hover over different coil blocks: they tell you the number of items a Multi Smelter can smelt per operation: §e32 items per level§r. The most basic Multi Smelter essentially does 32 items in the same time as a furnace does one. With a set of §6Tungstensteel§r coil blocks, that jumps to 128 items per operation.\n\nThis quest doesn\u0027t ask for coils, hatches or buses: feel free to choose whatever combination you want. You\u0027ll need §a8 coil blocks§r, §a1 input bus§r, §a1 output bus§r, and §21 maintenance hatch§r, §21 muffler hatch§r, and at least §a1 energy hatch§r, all of any tier.\n\n"
         }
       },
       "tasks:9": {
@@ -25864,7 +25864,7 @@
             },
             "1:10": {
               "id:8": "gregtech:metal_casing",
-              "Count:3": 14,
+              "Count:3": 9,
               "Damage:2": 2,
               "OreDict:8": ""
             }
@@ -56267,11 +56267,11 @@
           "sizeY:3": 24
         },
         "44:10": {
-          "sizeX:3": 24,
-          "x:3": -576,
-          "y:3": 340,
+          "sizeX:3": 32,
+          "x:3": -580,
+          "y:3": 336,
           "id:3": 130,
-          "sizeY:3": 24
+          "sizeY:3": 32
         },
         "45:10": {
           "sizeX:3": 24,
