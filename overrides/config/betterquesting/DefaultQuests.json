@@ -592,7 +592,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Cables",
-          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.\n\n§2GT cables now support RF conversion natively! You can plug an RF machine into an EU cable directly and it will convert the energy."
+          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.\n\n§2CEu has GT6-style pipes and cables on by default. §rYou will need to use §aWire Cutters§r to connect each side of a cable to machines or other cables. Placing it against the machine or cable automatically connects it as well. The same behaviour follows for GT pipes, whose tool is the §aWrench§r.\nThis can save you from energy or fluids going the wrong way. But if you don\u0027t like this, disable the config option for \"GT6 style pipes and cables\" in the GregTech config file.\n\n§2GT cables now support RF conversion natively! §rYou can plug an §dRF§r machine into an §dEU§r cable directly and it will convert the energy.\n"
         }
       },
       "tasks:9": {
@@ -36150,9 +36150,9 @@
           "consume:1": 0,
           "requiredItems:9": {
             "0:10": {
-              "id:8": "gregtech:meta_item_1",
+              "id:8": "gregtech:meta_ingot",
               "Count:3": 64,
-              "Damage:2": 10976,
+              "Damage:2": 32027,
               "OreDict:8": ""
             }
           },
@@ -48402,7 +48402,6 @@
     "802:10": {
       "questID:3": 802,
       "preRequisites:11": [
-        243,
         325
       ],
       "properties:10": {
@@ -49146,7 +49145,7 @@
           "lockedprogress:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "repeattime:3": -1,
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS",
           "simultaneous:1": 0,
           "icon:10": {
@@ -49161,7 +49160,7 @@
           "snd_update:8": "minecraft:entity.player.levelup",
           "ismain:1": 0,
           "repeat_relative:1": 1,
-          "name:8": "§2LV Arc Furnace",
+          "name:8": "§2Arc Furnace",
           "desc:8": "§2Technically not new to CEu, but it was disabled in the original version, and it had much less functionality in CE.§r\n\nThe Arc Furnace allows you to make §6Annealed Copper§r, which will be used in the MV Age. It can also make 2 pieces of Glass from 1 Sand. Later, it can make §2Tempered Glass§r§r for use in higher-tier recipes.\n\nThe Arc Furnace also functions as a §auniversal recycling machine§r. Pretty much anything can be recycled into ingots and dusts of its base components.\n\nAll of its recipes require Oxygen.\n\nAll Arc Furnace recipes use exactly 30 EU/t, so you can get away with using LV Arc Furnaces for the whole pack!"
         }
       },
@@ -49178,6 +49177,23 @@
               "id:8": "gregtech:machine",
               "Count:3": 1,
               "Damage:2": 95,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 96,
               "OreDict:8": ""
             }
           },
@@ -60651,13 +60667,6 @@
           "x:3": -54,
           "y:3": 294,
           "id:3": 911,
-          "sizeY:3": 24
-        },
-        "55:10": {
-          "sizeX:3": 24,
-          "x:3": 36,
-          "y:3": -24,
-          "id:3": 912,
           "sizeY:3": 24
         }
       },

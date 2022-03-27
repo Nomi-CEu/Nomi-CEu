@@ -593,7 +593,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Cables",
-          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.\n\n§2GT cables now support RF conversion natively! You can plug an RF machine into an EU cable directly and it will convert the energy."
+          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.\n\n§2CEu has GT6-style pipes and cables on by default. §rYou will need to use §aWire Cutters§r to connect each side of a cable to machines or other cables. Placing it against the machine or cable automatically connects it as well. The same behaviour follows for GT pipes, whose tool is the §aWrench§r.\nThis can save you from energy or fluids going the wrong way. But if you don\u0027t like this, disable the config option for \"GT6 style pipes and cables\" in the GregTech config file.\n\n§2GT cables now support RF conversion natively! §rYou can plug an §dRF§r machine into an §dEU§r cable directly and it will convert the energy.\n"
         }
       },
       "tasks:9": {
@@ -36073,9 +36073,9 @@
           "consume:1": 0,
           "requiredItems:9": {
             "0:10": {
-              "id:8": "gregtech:meta_item_1",
+              "id:8": "gregtech:meta_ingot",
               "Count:3": 64,
-              "Damage:2": 10976,
+              "Damage:2": 32027,
               "OreDict:8": ""
             }
           },
@@ -48064,7 +48064,6 @@
     "797:10": {
       "questID:3": 802,
       "preRequisites:11": [
-        243,
         325
       ],
       "properties:10": {
@@ -48556,7 +48555,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Sulfur Ore",
-          "desc:8": "§6Sulfur Ore§r is the only source of §6Sulfur Dust§r that\u0027s currently available to you.\n\nYou may want to spend a few §dOmnicoins§r on the ore to jumpstart your power storage.\n\nOtherwise the ore is only available in §athe Nether§r, and the only way to get there is with a §6Nether Cake§r. Oh no!"
+          "desc:8": "§6Sulfur Ore§r is the only source of §6Sulfur Dust§r that\u0027s currently available to you.\n\nThe ore is only available in §athe Nether§r, and the only way to get there is with a §6Nether Cake§r. Oh no!"
         }
       },
       "tasks:9": {
@@ -48595,35 +48594,7 @@
           "taskID:8": "bq_standard:retrieval"
         }
       },
-      "rewards:9": {
-        "0:10": {
-          "rewardID:8": "bq_standard:item",
-          "index:3": 0,
-          "rewards:9": {
-            "0:10": {
-              "id:8": "minecraft:skull",
-              "Count:3": 1,
-              "tag:10": {
-                "SkullOwner:10": {
-                  "Id:8": "a8088bef-5f81-4110-a734-524cd787b270",
-                  "Properties:10": {
-                    "textures:9": {
-                      "0:10": {
-                        "Value:8": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjkyNTFlMTg2NTdlNzMwNGVhY2VhYzVmOGQ0NDZkMjQ4ZWE0NmFmMmVhYjE0NWY4MTg1Y2VjZTc3OWYxNjQ4In19fQ\u003d\u003d"
-                      }
-                    }
-                  }
-                },
-                "display:10": {
-                  "Name:8": "I bought ore with Omnicoins"
-                }
-              },
-              "Damage:2": 3,
-              "OreDict:8": ""
-            }
-          }
-        }
-      }
+      "rewards:9": {}
     },
     "806:10": {
       "questID:3": 812,
@@ -60088,89 +60059,82 @@
         },
         "44:10": {
           "sizeX:3": 24,
-          "x:3": 36,
-          "y:3": -24,
-          "id:3": 682,
-          "sizeY:3": 24
-        },
-        "45:10": {
-          "sizeX:3": 24,
           "x:3": 120,
           "y:3": 80,
           "id:3": 687,
           "sizeY:3": 24
         },
-        "46:10": {
+        "45:10": {
           "sizeX:3": 24,
           "x:3": 12,
           "y:3": 66,
           "id:3": 692,
           "sizeY:3": 24
         },
-        "47:10": {
+        "46:10": {
           "sizeX:3": 24,
           "x:3": -192,
           "y:3": -12,
           "id:3": 743,
           "sizeY:3": 24
         },
-        "48:10": {
+        "47:10": {
           "sizeX:3": 24,
           "x:3": -228,
           "y:3": 60,
           "id:3": 786,
           "sizeY:3": 24
         },
-        "49:10": {
+        "48:10": {
           "sizeX:3": 24,
           "x:3": -228,
           "y:3": 96,
           "id:3": 803,
           "sizeY:3": 24
         },
-        "50:10": {
+        "49:10": {
           "sizeX:3": 24,
           "x:3": -192,
           "y:3": 96,
           "id:3": 808,
           "sizeY:3": 24
         },
-        "51:10": {
+        "50:10": {
           "sizeX:3": 24,
           "x:3": -90,
           "y:3": 356,
           "id:3": 811,
           "sizeY:3": 24
         },
-        "52:10": {
+        "51:10": {
           "sizeX:3": 24,
           "x:3": -108,
           "y:3": 60,
           "id:3": 813,
           "sizeY:3": 24
         },
-        "53:10": {
+        "52:10": {
           "sizeX:3": 24,
           "x:3": -108,
           "y:3": 200,
           "id:3": 817,
           "sizeY:3": 24
         },
-        "54:10": {
+        "53:10": {
           "sizeX:3": 24,
           "x:3": -192,
           "y:3": 24,
           "id:3": 902,
           "sizeY:3": 24
         },
-        "55:10": {
+        "54:10": {
           "sizeX:3": 40,
           "x:3": 64,
           "y:3": 192,
           "id:3": 909,
           "sizeY:3": 40
         },
-        "56:10": {
+        "55:10": {
           "sizeX:3": 24,
           "x:3": -54,
           "y:3": 356,
