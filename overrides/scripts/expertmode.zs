@@ -884,6 +884,16 @@ makeShaped("of_nc_cobblestone_generator_mirrored",
       B : <minecraft:water_bucket:*>,
       C : <minecraft:lava_bucket:*> });
 
+//Crystal Growth Chamber
+recipes.addShaped(<ae2stuff:grower>, [
+	[<ore:frameGtHslaSteel>, <appliedenergistics2:material:1>, <ore:frameGtHslaSteel>], 
+	[<appliedenergistics2:material:1>, <meta_tile_entity:hull.lv>, <appliedenergistics2:material:1>], 
+	[<ore:frameGtHslaSteel>, <appliedenergistics2:material:1>, <ore:frameGtHslaSteel>]]);	
+
+// Remove LCR Radon
+<recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:ingotPlutonium> * 8, <metaitem:dustUranium>], [<liquid:air> * 10000]).remove();
+
+
 // Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:simulation_chamber>);

@@ -298,12 +298,7 @@ recipes.addShapeless(<appliedenergistics2:part:340>, [<appliedenergistics2:mater
 //ME Terminal
 recipes.remove(<appliedenergistics2:part:380>);
 recipes.addShapeless(<appliedenergistics2:part:380>, [<ore:itemIlluminatedPanel>, <ore:circuitBasic>]);
-	
-//Crystal Growth Chamber
-recipes.addShaped(<ae2stuff:grower>, [
-	[<ore:frameGtDarkSteel>, <appliedenergistics2:material:1>, <ore:frameGtDarkSteel>], 
-	[<appliedenergistics2:material:1>, <meta_tile_entity:hull.lv>, <appliedenergistics2:material:1>], 
-	[<ore:frameGtDarkSteel>, <appliedenergistics2:material:1>, <ore:frameGtDarkSteel>]]);	
+
 
 //Quantum Ring
 recipes.remove(<appliedenergistics2:quantum_ring>);

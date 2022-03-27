@@ -532,6 +532,12 @@ makeShaped("of_nc_cobblestone_generator_mirrored",
       B : <minecraft:water_bucket:*>,
       C : <minecraft:lava_bucket:*> });
 
+//Crystal Growth Chamber
+recipes.addShaped(<ae2stuff:grower>, [
+	[<ore:frameGtDarkSteel>, <appliedenergistics2:material:1>, <ore:frameGtDarkSteel>], 
+	[<appliedenergistics2:material:1>, <meta_tile_entity:hull.lv>, <appliedenergistics2:material:1>], 
+	[<ore:frameGtDarkSteel>, <appliedenergistics2:material:1>, <ore:frameGtDarkSteel>]]);	
+
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);
