@@ -388,3 +388,6 @@ cutter.recipeBuilder()
 	.duration(784)
 	.EUt(30)
 	.buildAndRegister();
+
+// GT Axe Tooltip
+<gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
