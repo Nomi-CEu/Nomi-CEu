@@ -137,6 +137,12 @@ makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
 	{ P : <ore:ingotMicroversium>,  //Microversium Ingot
 	  W : wrench});
 
+assembler.recipeBuilder()
+	.inputs(<ore:ingotMicroversium> * 4)
+	.circuit(6)
+	.outputs(<contenttweaker:microverse_casing>)
+	.duration(50).EUt(16).buildAndRegister();
+
 //// LuV Machine Casing
 //makeShaped("of_luv_casing", <gregtech:machine_casing:6>,
 //	["PPP",
