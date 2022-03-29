@@ -237,6 +237,7 @@ var kaemanite = MaterialBuilder(32031, "kaemanite")
 <material:redstone>.addFlags(["generate_dense"]);
 <material:lapis>.addFlags(["generate_dense"]);
 <material:graphene>.addFlags(["generate_foil"]);
+<material:berkelium>.addFlags(["generate_frame"]);
 // Prevent TE Gears from showing up
 <material:tin>.addFlags(["generate_gear"]);
 <material:copper>.addFlags(["generate_gear"]);

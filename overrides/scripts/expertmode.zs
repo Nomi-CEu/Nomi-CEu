@@ -893,6 +893,46 @@ recipes.addShaped(<ae2stuff:grower>, [
 // Remove LCR Radon
 <recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:ingotPlutonium> * 8, <metaitem:dustUranium>], [<liquid:air> * 10000]).remove();
 
+// Es fluid extraction
+extractor.recipeBuilder()
+    .inputs(<contenttweaker:stabilizedeinsteinium>)
+    .fluidOutputs(<liquid:einsteinium> * 9)
+    .duration(16).EUt(30).buildAndRegister();
+
+// Drill Core
+assembler.recipeBuilder()
+    .inputs(<metaitem:power_unit.lv>, <metaitem:electric.motor.lv> * 4, <metaitem:cableGtSingleTin> * 4, <metaitem:gearSmallSteel> * 4)
+    .circuit(2)
+    .outputs(<actuallyadditions:item_misc:16>)
+    .duration(100).EUt(7).buildAndRegister();
+
+// Ore Drilling Plants
+// Basic Ore Drilling Plant * 1
+<recipemap:assembler>.findRecipe(1920, [<metaitem:hull.ev>, <metaitem:frameTitanium> * 4, <metaitem:circuit.workstation> * 4, <metaitem:electric.motor.ev> * 4, <metaitem:electric.pump.ev> * 4, <metaitem:conveyor.module.ev> * 4, <metaitem:gearTungsten> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+// Advanced Ore Drilling Plant * 1
+<recipemap:assembler>.findRecipe(7680, [<metaitem:hull.iv>, <metaitem:frameTungstenSteel> * 4, <metaitem:circuit.mainframe> * 4, <metaitem:electric.motor.iv> * 4, <metaitem:electric.pump.iv> * 4, <metaitem:conveyor.module.iv> * 4, <metaitem:gearIridium> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+// Advanced Ore Drilling Plant II * 1
+<recipemap:assembler>.findRecipe(30720, [<metaitem:hull.luv>, <metaitem:frameHsss> * 4, <metaitem:circuit.nano_mainframe> * 4, <metaitem:electric.motor.luv> * 4, <metaitem:electric.pump.luv> * 4, <metaitem:conveyor.module.luv> * 4, <metaitem:gearRuridit> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+
+assembler.recipeBuilder()
+    .inputs(<metaitem:hull.iv>, <enderio:item_stellar_alloy_pickaxe>, <contenttweaker:t3laser> * 12, <metaitem:frameStainlessSteel> * 12, <metaitem:sensor.iv> * 6, <metaitem:conveyor.module.iv> * 12, <metaitem:fluid.regulator.iv> * 12, <metaitem:gearTungstenSteel> * 12)
+    .outputs(<metaitem:large_miner.ev>)
+    .duration(400).EUt(7680).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:hull.zpm>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <contenttweaker:t3laser> * 12, <metaitem:frameNaquadahAlloy> * 12, <metaitem:sensor.zpm> * 6, <metaitem:conveyor.module.zpm> * 12, <metaitem:fluid.regulator.zpm> * 12, <metaitem:cableGtSingleVanadiumGallium> * 12, <metaitem:gearOsmiridium> * 12)
+    .fluidInputs(<liquid:concrete> * 2304)
+    .outputs(<metaitem:large_miner.iv>)
+    .duration(800).EUt(122880).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:hull.uhv>, <draconicevolution:draconic_staff_of_power>, <contenttweaker:t3laser> * 12, <metaitem:frameBerkelium> * 12, <metaitem:sensor.uv> * 12, <metaitem:conveyor.module.uv> * 24, <metaitem:fluid.regulator.uv> * 24, <metaitem:cableGtSingleEuropium> * 12, <metaitem:gearAwakenedDraconium> * 12)
+    .fluidInputs(<liquid:concrete> * 2304, <liquid:naquadria> * 576)
+    .outputs(<metaitem:large_miner.luv>)
+    .duration(800).EUt(1966080).buildAndRegister();
+
+// Remove shortcut recipes
+
 
 // Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
