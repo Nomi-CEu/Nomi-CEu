@@ -206,6 +206,31 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
 microverse_projector_advanced_ii.hasMufflerMechanics = true;
 microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
 
+// Creative Tank Provider
+val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
+    .withPattern(function(controller as IControllerTile) as IBlockPattern {
+        return FactoryBlockPattern.start()
+            .aisle("CCC", "CCC", "CCC")
+            .aisle("CCC", "CFC", "CCC")
+            .aisle("CCC", "CSC", "CCC")
+            .where('S', controller.self())
+            .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
+            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>) | controller.autoAbilities(true, false, true, true, false, false, false))
+            .build();
+    } as IPatternBuilderFunction)
+    .withRecipeMap(
+        FactoryRecipeMap.start("creative_tank_provider")
+            .minInputs(2)
+            .maxInputs(2)
+            .minOutputs(1)
+            .maxOutputs(1)
+            .build())
+    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
+    .buildAndRegister();
+
+creative_tank_provider.hasMufflerMechanics = false;
+creative_tank_provider.hasMaintenanceMechanics = false;
+
 
 // Naquadah Reactor 1
 <gcym:large_multiblock_casing:9>.displayName = "Reaction-Safe Casing";

@@ -316,6 +316,34 @@ naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, 
 } as IRunOverclockingLogicFunction;
 
 
+// Actualization Chamber
+val actualization_chamber = Builder.start("actualization_chamber")
+    .withPattern(function(controller as IControllerTile) as IBlockPattern {
+        return FactoryBlockPattern.start()
+            .aisle("CCC","GGG","CCC")
+            .aisle("CCC","GOG","CCC")
+            .aisle("CSC","GGG","CCC")
+            .where('S', controller.self())
+            .where('O', <metastate:gregtech:fusion_casing:1>)
+            .where('G', <metastate:gregtech:transparent_casing:1>)
+            .where('C', CTPredicate.states(<metastate:gregtech:fusion_casing:4>)
+            | controller.autoAbilities(true, false, true, true, false, false, false)
+            )
+            .build();
+        } as IPatternBuilderFunction)
+    .withRecipeMap(
+        FactoryRecipeMap.start("actualization_chamber")
+            .minInputs(1)
+            .maxInputs(2)
+            .minOutputs(1)
+            .maxOutputs(16)
+            .build())
+    .withBaseTexture(<cube_renderer:FUSION_TEXTURE>)
+    .buildAndRegister();
+
+actualization_chamber.hasMufflerMechanics = false;
+actualization_chamber.hasMaintenanceMechanics = false;
+
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
     [<ore:circuitAdvanced>, <contenttweaker:microverse_casing>, <ore:circuitAdvanced>],
@@ -355,6 +383,20 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
       N : <extendedcrafting:material:32>}); //Omnium Ingot
+
+
+makeExtremeRecipe5(<metaitem:multiblocktweaker:actualization_chamber>,
+    ["PPPPP",
+     "PEFSP",
+     "PWGWP",
+     "PSFEP",
+     "PPPPP"],
+    { G : <metaitem:field.generator.uv>,
+      W : <ore:circuitInfinite>,
+      P : <ore:plateAmericium>,
+      E : <metaitem:emitter.uv>,
+      S : <metaitem:sensor.uv>,
+      F : <gregtech:fusion_casing:1> });
 
 // multiblock recipemap recipes
 // basic projector
@@ -967,6 +1009,389 @@ microverse_projector_advanced_ii.recipeMap
             <contenttweaker:universecreationdata>,
             <ore:blockAwakenedDraconium> * 8)
     .outputs(<contenttweaker:heartofauniverse>)
+    .buildAndRegister();
+
+
+// actualization
+// t1 ores
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<densemetals:dense_iron_ore> * 64,
+             <gregtech:ore_cassiterite_0> * 64,
+             <gregtech:ore_redstone_0> * 64,
+             <gregtech:ore_nickel_0> * 64,
+             <gregtech:ore_ilmenite_0> * 64,
+             <gregtech:ore_ilmenite_0> * 64,
+             <gregtech:ore_ilmenite_0> * 64,
+             <gregtech:ore_uraninite_0> * 64,
+             <gregtech:ore_galena_0> * 64,
+             <gregtech:ore_galena_0> * 64,
+             <gregtech:ore_molybdenum_0> * 64,
+             <advancedrocketry:moonturf> * 64,
+             <libvulpes:ore0> * 64,
+             <gregtech:ore_salt_0> * 64)
+    .buildAndRegister();
+
+// t1 gems
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
+             <gregtech:ore_apatite_0> * 64,
+             <gregtech:ore_tricalcium_phosphate_0> * 64,
+             <gregtech:ore_quartzite_0> * 64)
+    .buildAndRegister();
+
+// t1 stellar data
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<contenttweaker:stellarcreationdata>)
+    .buildAndRegister();
+
+
+// t2 ores
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiertwoship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<gregtech:ore_bauxite_0:2> * 64,
+             <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_copper_0:2> * 64,
+             <gregtech:ore_sphalerite_0:2> * 64,
+             <gregtech:ore_cassiterite_0:2> * 64,
+             <gregtech:ore_scheelite_0:2> * 64,
+             <gregtech:ore_scheelite_0:2> * 64,
+             <gregtech:ore_tungstate_0:2> * 64,
+             <contenttweaker:radiumsalt> * 64,
+             <contenttweaker:radiumsalt> * 64)
+    .buildAndRegister();
+
+
+// t3 gems
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
+             <metaitem:gemPerfectDiamond> * 32,
+             <metaitem:gemPerfectRuby> * 64,
+             <metaitem:gemPerfectTopaz> * 48,
+             <metaitem:gemPerfectEmerald> * 32,
+             <gregtech:ore_sapphire_0:1> * 64,
+             <gregtech:ore_gold_0:1> * 64,
+             <gregtech:ore_silver_0:1> * 64)
+    .buildAndRegister();
+
+// t3 ores
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_ilmenite_0:1> * 64,
+             <gregtech:ore_vanadium_magnetite_0:1> * 64,
+             <gregtech:ore_tetrahedrite_0:1> * 64,
+             <gregtech:ore_cassiterite_0:1> * 64,
+             <gregtech:ore_tin_0:1> * 64,
+             <gregtech:ore_redstone_0:1> * 64,
+             <gregtech:ore_certus_quartz_0:1> * 64,
+             <gregtech:ore_almandine_0:1> * 64,
+             <gregtech:ore_lepidolite_0:1> * 64)
+    .buildAndRegister();
+
+// t3 magma
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<contenttweaker:densemagma> * 64, <contenttweaker:densemagma> * 64)
+    .buildAndRegister();
+
+
+
+// t4 oil and infinity
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<contenttweaker:denseoilshale> * 64,
+             <contenttweaker:denseoilshale> * 64,
+             <ore:compressed2xDustBedrock>.firstItem * 16)
+    .buildAndRegister();
+
+// t4 ores
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<densemetals:dense_lapis_ore> * 64,
+             <densemetals:dense_diamond_ore> * 64,
+             <densemetals:dense_diamond_ore> * 64,
+             <densemetals:dense_coal_ore>  * 64,
+             <densemetals:dense_emerald_ore> * 32,
+             <densemetals:dense_redstone_ore> * 16)
+    .buildAndRegister();
+
+// t4 pgs ores
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<gregtech:ore_pentlandite_0:1> * 64,
+             <gregtech:ore_pentlandite_0:1> * 64,
+             <gregtech:ore_chalcocite_0:1> * 64,
+             <gregtech:ore_chalcocite_0:1> * 64,
+             <gregtech:ore_cooperite_0:1> * 64,
+             <gregtech:ore_osmiridium_8020_0> * 20,
+             <gregtech:ore_iridosmine_8020_0> * 8)
+    .buildAndRegister();
+
+
+// t4.5 ow mobs
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<minecraft:skull> * 48,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:skull:2> * 48,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:skull:4> * 48,
+             <minecraft:gunpowder> * 64,
+             <minecraft:slime> * 64,
+             <armorplus:material:1> * 64)
+    .buildAndRegister();
+
+// t4.5 nether mobs
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<minecraft:blaze_rod> * 64,
+             <minecraft:blaze_rod> * 64,
+             <minecraft:ghast_tear> * 64,
+             <minecraft:skull:1>* 48,
+             <armorplus:material:2> * 64,
+             <armorplus:material:2> * 64,
+             <minecraft:magma_cream> * 64,
+             <extrautils2:ingredients:10> * 4)
+    .buildAndRegister();
+
+// t4.5 end mobs
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<enderio:block_enderman_skull> * 48,
+             <metaitem:blockEnderPearl> * 16,
+             <minecraft:shulker_shell> * 64,
+             <minecraft:shulker_shell> * 64,
+             <darkutils:shulker_pearl> * 64)
+    .buildAndRegister();
+
+// t4.5 dragon
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(4)
+    .outputs(<contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <minecraft:skull:5>)
+    .buildAndRegister();
+
+// t4.5 wither
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .circuit(5)
+    .outputs(<contenttweaker:witherrealmdata> * 64,
+             <contenttweaker:witherrealmdata> * 64,
+             <metaitem:blockNetherStar> * 48)
+    .buildAndRegister();
+
+
+// t5 ores
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<gregtech:ore_uraninite_0> * 64,
+             <gregtech:ore_palladium_0> * 64,
+             <gregtech:ore_realgar_0> * 64,
+             <gregtech:ore_bastnasite_0> * 64,
+             <gregtech:ore_sphalerite_0> * 64,
+             <gregtech:ore_monazite_0> * 64,
+             <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
+             <gregtech:ore_osmiridium_8020_0> * 16,
+             <metaitem:dustBoron> * 64,
+             <gregtech:ore_molybdenite_0> * 64,
+             <gregtech:ore_beryllium_0> * 64,
+             <gregtech:ore_beryllium_0> * 64)
+    .buildAndRegister();
+
+// t5 nq ke
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<gregtech:ore_kaemanite_0:2> * 24,
+             <gregtech:ore_naquadah_0:2> * 48)
+    .buildAndRegister();
+
+
+// t6 u/pgs
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<gregtech:ore_uraninite_0:2> * 64,
+             <gregtech:ore_uraninite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_cooperite_0:2> * 64,
+             <gregtech:ore_iridosmine_8020_0> * 32)
+    .buildAndRegister();
+
+// t6 es
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<contenttweaker:stabilizedeinsteinium> * 32)
+    .buildAndRegister();
+
+// t6 eggs
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .circuit(3)
+    .outputs(<minecraft:dragon_egg> * 32)
+    .buildAndRegister();
+
+
+// t7 hearts
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<draconicevolution:dragon_heart> * 4,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_breath> * 64,
+             <armorplus:material:3> * 64, 
+             <armorplus:material:3> * 64,
+             <armorplus:material:3> * 64,
+             <minecraft:gold_block> * 64,
+             <minecraft:gold_block> * 64,
+             <minecraft:gold_block> * 64,
+             <metaitem:blockSilver> * 64, //Silver block
+             <metaitem:blockSilver> * 64, //Silver Block
+             <minecraft:diamond_block> * 64,
+             <minecraft:diamond_block> * 64,
+             <metaitem:blockPlatinum> * 64, //Platinum Block
+             <metaitem:blockAmericium> * 16) 
+    .buildAndRegister();
+
+// t7 chaos
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<contenttweaker:lairofthechaosguardiandata>)
+    .buildAndRegister();
+
+
+
+// t8 nt
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiereightship_stabilized_matter>)
+    .circuit(1)
+    .outputs(<metaitem:quantumstar> * 32,
+             <metaitem:quantumeye> * 64,
+             <avaritia:resource:2> * 64,
+             <avaritia:resource:2> * 64,
+             <metaitem:gravistar>)
+    .buildAndRegister();
+
+// t8 eggs
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiereightship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<draconicevolution:chaos_shard> * 4,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64)
     .buildAndRegister();
 
 
