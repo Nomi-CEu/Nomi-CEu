@@ -3989,7 +3989,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2LV Power Storage",
-          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §2Lithium Batteries§r are the best ones, and the only ones you should really consider making.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they are fairly rare."
+          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §2Lithium Batteries§r are the best ones, followed by §6Cadmium§r and §6Sodium§r.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they only spawn in §eThe End§r§r. §6Cadmium§r comes from various §6Refined Ores§r, and §6Sodium§r is the easiest - from §6Salt§r, §6Clay§r, and many other minerals."
         }
       },
       "tasks:9": {
@@ -9568,7 +9568,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Steam Production",
-          "desc:8": "Once you get Steel, consider upgrading to HP Solar Boilers"
+          "desc:8": "Your initial method of §9Steam§r production, to fuel your first machines. They automatically output Steam on all faces except the bottom.\n\nOnce you get Steel, consider upgrading to HP Solar Boilers."
         }
       },
       "tasks:9": {
@@ -11306,7 +11306,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Diesel",
-          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r. Each mB of Diesel generates §d480 EU§r in §3Combustion Generators§r.\n\nIt\u0027s used for making §9Nitro Diesel§r, which you will want to stockpile in large quantities for the later production of §6Draconium§r §2(unless you use Gasoline instead).\n\n§2§rIt\u0027s more power efficient to use §3singleblock Distilleries§r over a §3Distillation Tower§r for Oil, due to the overclocking mechanics being different. For Diesel, the correct ratio is §d3 Distilleries for Light Oil and 2 Distilleries for Heavy Oil§r."
+          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r. Each mB of Diesel generates §d480 EU§r in §3Combustion Generators§r.\n\nOnce you get HV machinery, you can upgrade this to §9Cetane-Boosted Diesel§r.\n\n§2§rIt\u0027s more power efficient to use §3singleblock Distilleries§r over a §3Distillation Tower§r for Oil, due to the overclocking mechanics being different. For Diesel, the correct ratio is §d3 Distilleries for Light Oil and 2 Distilleries for Heavy Oil§r."
         }
       },
       "tasks:9": {
@@ -40986,7 +40986,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Steam Machines",
-          "desc:8": "Steam Machines can run recipes listed as up to §d32 EU/t§r. They need to have their vent side unobstructed. Use a Wrench to change the venting side.\n\n- §3Forge Hammer§r: Allows you to make §63 plates§r from §62 ingots§r.\n\n- §3Macerator§r: Allows you to grind §6Clay§r into §6Clay Dust§r.\n\n- §3Compressor§r: Allows you to make §6Compressed Fireclay§r and §6Rubber Sheets§r.\n\n- §3Alloy Smelter§r: Allows you to make §6Bronze§r more efficiently, as well as other useful alloys like §6Invar§r.\n\nYou can upgrade them to HP version with Steel, which doubles their speed."
+          "desc:8": "Steam Machines can run recipes listed as up to §d32 EU/t§r. They need to have their vent side unobstructed. Use a Wrench to change the venting side.\n\n- §3Forge Hammer§r: Allows you to make §63 plates§r from §62 ingots§r.\n\n- §3Macerator§r: Allows you to grind §6Clay§r into §6Clay Dust§r.\n\n- §3Compressor§r: Allows you to make §6Compressed Fireclay§r and §6Rubber Sheets§r.\n\n- §3Alloy Smelter§r: Allows you to make §6Bronze§r more efficiently, as well as other useful alloys like §6Invar§r. Also allows you to cast §6Glass§r, and make components like §eGears§r more easily with Molds.\n\nYou can upgrade them to HP version with Steel, which doubles their speed."
         }
       },
       "tasks:9": {
@@ -59781,7 +59781,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 284,
+          "y:3": 288,
           "id:3": 11
         },
         "7:10": {
@@ -59872,7 +59872,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 284,
+          "y:3": 288,
           "id:3": 40
         },
         "20:10": {
@@ -60005,7 +60005,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
-          "y:3": 284,
+          "y:3": 320,
           "id:3": 495
         },
         "39:10": {
@@ -60019,7 +60019,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 317,
+          "y:3": 320,
           "id:3": 530
         },
         "41:10": {
