@@ -359,6 +359,11 @@ recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_p
     [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>]
 ]);
 
+recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
+    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
+    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
+    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
+]);
 
 makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>,
     ["NCN",
@@ -379,6 +384,8 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
       N : <extendedcrafting:material:32>}); //Omnium Ingot
+
+
 
 // multiblock recipemap recipes
 // basic projector
@@ -771,7 +778,16 @@ microverse_projector_advanced_ii.recipeMap
     .outputs(<contenttweaker:heartofauniverse>)
     .buildAndRegister();
 
-
+// creative tank provider
+// creative tank
+creative_tank_provider.recipeMap
+    .recipeBuilder()
+    .notConsumable(<contenttweaker:creativeportabletankmold>)
+    .inputs(<minecraft:bucket>)
+    .outputs(<metaitem:creative_tank>)
+    .duration(500)
+    .EUt(100000)
+    .buildAndRegister();
 
 
 // Naquadah Reactor Mk1 Recipes
