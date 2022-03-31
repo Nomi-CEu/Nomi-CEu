@@ -11965,7 +11965,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2NITRO DIESEL!!",
-          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r produces §9Nitro Diesel§r, an extremely potent fuel needed later for §6Draconium§r production.\n\nIf you have a very robust petrochemical infrastructure and can afford to burn it, this fuel along with proper oxygenation §2is a potent fuel in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel."
+          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r produces §9Nitro Diesel§r, an extremely potent fuel. Burn it in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel."
         }
       },
       "tasks:9": {
@@ -19281,7 +19281,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Draconium Ingots",
-          "desc:8": "You\u0027ll need at least §6Naquadah Coil Blocks§r in your blast furnace to smelt §6Draconium§r, as well as a healthy supply of §9Nitro Diesel §2or Gasoline§r to reach the immense heat it takes to liquefy.\n\nDraconium gets so hot that it requires the potent coolant §9Gelid Cryotheum§r to aid your §3Vacuum Freezer§r in turning it into usable ingots.\n\nThere are several ways to make Draconium: dust can be smelted into ingots, but you can also turn §6Ender Dragon Scales§r, which contain Draconium, directly into ingots. It uses a lot of§2 combustion fuel§r, but is the most efficient way to craft Draconium.\n\nYou\u0027ve been stockpiling fuel, right?"
+          "desc:8": "You\u0027ll need at least §6Naquadah Coil Blocks§r in your blast furnace to smelt §6Draconium§r, as well as a healthy supply of §cHigh-Octane Gasoline§r to reach the immense heat it takes to liquefy.\n\nDraconium gets so hot that it requires the potent coolant §9Gelid Cryotheum§r to aid your §3Vacuum Freezer§r in turning it into usable ingots.\n\nThere are several ways to make Draconium: dust can be smelted into ingots, but you can also turn §6Ender Dragon Scales§r, which contain Draconium, directly into ingots. It uses a lot of§2 combustion fuel§r, but is the most efficient way to craft Draconium.\n\nYou\u0027ve been stockpiling fuel, right?"
         }
       },
       "tasks:9": {
@@ -53549,7 +53549,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Gasoline",
-          "desc:8": "§2Gasoline is a powerful combustion fuel, generating 1600 EU per mB of fluid. It can also be substituted for Nitro Diesel in Draconium production.\n\nGasoline is made of:\n- 16 parts Naphtha\n- 2 parts Refinery Gas\n- 1 part Toluene\n- 1 part Methanol\n- 1 part Acetone\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen."
+          "desc:8": "§2Gasoline is a powerful combustion fuel, generating 1600 EU per mB of fluid.\n\nGasoline is made of:\n- 16 parts Naphtha\n- 2 parts Refinery Gas\n- 1 part Toluene\n- 1 part Methanol\n- 1 part Acetone\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen."
         }
       },
       "tasks:9": {
@@ -54261,10 +54261,10 @@
           "questlogic:8": "AND",
           "autoclaim:1": 0,
           "snd_update:8": "minecraft:entity.player.levelup",
-          "ismain:1": 0,
+          "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2High-Octane Gasoline",
-          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fuel. It can also be used in Draconium production, using 75% less fuel than Nitro Diesel or normal Gasoline. The trade-off is the very complex processing lines you must set up for it.\n\nTo refine Gasoline to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen."
+          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fuel. This is required for production of Draconium.\n\nTo refine Gasoline to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen."
         }
       },
       "tasks:9": {
@@ -56432,10 +56432,10 @@
           "id:3": 178
         },
         "35:10": {
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -160,
-          "y:3": 68,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -156,
+          "y:3": 72,
           "id:3": 179
         },
         "36:10": {
@@ -57160,10 +57160,10 @@
           "id:3": 859
         },
         "139:10": {
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -60,
-          "y:3": 68,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -56,
+          "y:3": 72,
           "id:3": 888
         },
         "140:10": {
@@ -57181,10 +57181,10 @@
           "id:3": 899
         },
         "142:10": {
-          "sizeX:3": 24,
-          "sizeY:3": 24,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
           "x:3": -108,
-          "y:3": 72,
+          "y:3": 68,
           "id:3": 900
         }
       },
