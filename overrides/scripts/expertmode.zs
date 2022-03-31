@@ -498,7 +498,7 @@ assembler.recipeBuilder()
     .duration(400).EUt(7680).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<metaitem:hull.zpm>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <contenttweaker:t3laser> * 12, <metaitem:frameNaquadahAlloy> * 12, <metaitem:sensor.zpm> * 6, <metaitem:conveyor.module.zpm> * 12, <metaitem:fluid.regulator.zpm> * 12, <metaitem:cableGtSingleVanadiumGallium> * 12, <metaitem:gearOsmiridium> * 12)
+    .inputs(<metaitem:hull.zpm>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <contenttweaker:t3laser> * 12, <metaitem:frameNaquadahAlloy> * 12, <metaitem:sensor.zpm> * 6, <metaitem:conveyor.module.zpm> * 12, <metaitem:fluid.regulator.zpm> * 12, <metaitem:cableGtSingleVanadiumGallium> * 12, <moreplates:empowered_void_gear> * 12)
     .fluidInputs(<liquid:concrete> * 2304)
     .outputs(<metaitem:large_miner.iv>)
     .duration(800).EUt(122880).buildAndRegister();
@@ -508,6 +508,15 @@ assembly_line.recipeBuilder()
     .fluidInputs(<liquid:concrete> * 2304, <liquid:naquadria> * 576)
     .outputs(<metaitem:large_miner.luv>)
     .duration(800).EUt(1966080).buildAndRegister();
+
+//Draconium [tier 14]
+// Hot Draconium Ingot * 1
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
+// Hot Draconium Ingot * 1
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+
+blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
 // Remove shortcut recipes
 recipes.remove(<minecraft:stick> * 16);
