@@ -88,7 +88,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .where('G', <blockstate:gregtech:transparent_casing>)
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
-            .where(' ', CTPredicate.getAir())
+            .where(' ', CTPredicate.getAny())
             .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
             .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
             .build();
@@ -186,7 +186,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('S', controller.self())
             .where('G', <blockstate:gregtech:transparent_casing>)
             .where('V', <blockstate:gregtech:multiblock_casing>)
-            .where(' ', CTPredicate.getAir())
+            .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
             .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
             .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
