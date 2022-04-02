@@ -2678,7 +2678,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Rubber Sheets",
-          "desc:8": "Going out in search of a §6Rubber Tree§f is a viable option for sure. However, if this isn\u0027t appealing, you can also §eshear leaves§f and make §6Plantballs§f out of them. Plantballs smelt into §6Slime§f, and Slime smelts into §6Rubber§f.\n\nYou\u0027ll want to transition to Rubber Trees at some point, though, since the §eratio of leaves to rubber is quite poor§f.\n\nRubber can be compressed into sheets. It\u0027s quite inefficient to do it this way, but such is the life of early game §bGregTech§f. At least rubber isn\u0027t particularly hard to come by."
+          "desc:8": "Going out in search of a §6Rubber Tree§f is a viable option for sure. However, if this isn\u0027t appealing, you can also §eshear leaves§f and make §6Plantballs§f out of them. Plantballs smelt into §6Slime§f, and Slime smelts into §6Sticky Resin§r.\n\nYou\u0027ll want to transition to Rubber Trees at some point, though, since the §eratio of leaves to rubber is quite poor§f.\n\nUse the §3Steam Extractor§r to extract §6Raw Rubber Pulp§r from the resin, then \"alloy\" with §6Sulfur§r for the §6Rubber§r. It\u0027s quite inefficient to do it this way, but such is the life of early game §bGregTech§f. At least rubber isn\u0027t particularly hard to come by."
         }
       },
       "tasks:9": {
@@ -2721,7 +2721,7 @@
         }
       },
       "preRequisites:11": [
-        909
+        780
       ],
       "questID:3": 37
     },
@@ -3989,7 +3989,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "§2LV Power Storage",
-          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §2Lithium Batteries§r are the best ones, followed by §6Cadmium§r and §6Sodium§r.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they only spawn in §eThe End§r§r. §6Cadmium§r comes from various §6Refined Ores§r, and §6Sodium§r is the easiest - from §6Salt§r, §6Clay§r, and many other minerals."
+          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nThere are several types of rechargeable batteries you can make; §2Lithium Batteries§r are the best ones, followed by §6Cadmium§r and §6Sodium§r.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they only spawn in §eThe End§r§r. §6Cadmium§r comes from various §6Refined Ores§r, and §6Sodium§r is the easiest - from §6Salt§r, §6Clay§r, and many other minerals."
         }
       },
       "tasks:9": {
@@ -9566,7 +9566,7 @@
           "snd_update:8": "minecraft:entity.player.levelup",
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "name:8": "Steam Production",
           "desc:8": "Your initial method of §9Steam§r production, to fuel your first machines. They automatically output Steam on all faces except the bottom.\n\nOnce you get Steel, consider upgrading to HP Solar Boilers."
         }
@@ -16627,9 +16627,9 @@
               "OreDict:8": ""
             },
             "3:10": {
-              "id:8": "gregtech:meta_block_compressed_4",
+              "id:8": "gregtech:meta_block_compressed_7",
               "Count:3": 15,
-              "Damage:2": 8,
+              "Damage:2": 1,
               "OreDict:8": ""
             },
             "4:10": {
@@ -24287,7 +24287,7 @@
           "partysinglereward:1": 0,
           "autoclaim:1": 0,
           "snd_update:8": "minecraft:entity.player.levelup",
-          "ismain:1": 0,
+          "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Coke Oven",
           "desc:8": "§2For making Charcoal for smelting, and Creosote, which can be used as furnace fuel, boiler fuel, and for Treated Planks.\n\nUse up to 5 Coke Oven Hatches for automation."
@@ -25596,7 +25596,6 @@
         }
       },
       "preRequisites:11": [
-        811,
         911
       ],
       "questID:3": 394
@@ -40984,7 +40983,7 @@
           "snd_update:8": "minecraft:entity.player.levelup",
           "autoclaim:1": 0,
           "repeat_relative:1": 1,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "name:8": "Steam Machines",
           "desc:8": "Steam Machines can run recipes listed as up to §d32 EU/t§r. They need to have their vent side unobstructed. Use a Wrench to change the venting side.\n\n- §3Forge Hammer§r: Allows you to make §63 plates§r from §62 ingots§r.\n\n- §3Macerator§r: Allows you to grind §6Clay§r into §6Clay Dust§r.\n\n- §3Compressor§r: Allows you to make §6Compressed Fireclay§r and §6Rubber Sheets§r.\n\n- §3Alloy Smelter§r: Allows you to make §6Bronze§r more efficiently, as well as other useful alloys like §6Invar§r. Also allows you to cast §6Glass§r, and make components like §eGears§r more easily with Molds.\n\nYou can upgrade them to HP version with Steel, which doubles their speed."
         }
@@ -42238,7 +42237,7 @@
           "partysinglereward:1": 0,
           "autoclaim:1": 0,
           "snd_update:8": "minecraft:entity.player.levelup",
-          "ismain:1": 0,
+          "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Infinite Water",
           "desc:8": "Feeding §3Steam producers§r with water by hand is a pretty silly idea.\n\nA §2Primitive Water Pump§r will take care of that for you."
@@ -46842,10 +46841,10 @@
           "partysinglereward:1": 0,
           "autoclaim:1": 0,
           "snd_update:8": "minecraft:entity.player.levelup",
-          "ismain:1": 0,
+          "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2To the Nether",
-          "desc:8": "Once you have obtained your§e §rfi§rrst §rpiece of §6Hellish Matter§6§r, travel to the §r§eNether§r becomes available.\n\nThe §eNether§r contains quite a few useful resources:\n- Some initial pieces of §6Sulfur§r\n- §6Glowstone§r and §6Soul Sand§r\n- §6Fluorine§r, §6Certus Quartz§r, §6Molybdenum§r, §6Antimony§r, and §6Gold§r-bearing ores\n- §9§2Nether Air§r, which can be distilled for useful gases\n- §eLava§r and §eNatural Gas§r from §2Fluid Rigs§r\n\nDespite all this, §eNether§r travel is still strictly optional in the pack."
+          "desc:8": "The §eNether§r contains quite a few useful resources:\n- Some initial pieces of §6Sulfur§r\n- §6Glowstone§r and §6Soul Sand§r\n- §6Fluorine§r, §6Certus Quartz§r, §6Molybdenum§r, §6Antimony§r, and §6Gold§r-bearing ores\n- §9§2Nether Air§r, which can be distilled for useful gases\n- §eLava§r and §eNatural Gas§r from §2Fluid Rigs\n\n§rNether ores also contain §ddouble§r the resources per ore block compared to Overworld ores."
         }
       },
       "tasks:9": {
@@ -46860,6 +46859,12 @@
               "id:8": "dimensionaledibles:nether_cake",
               "Count:3": 1,
               "Damage:2": 0,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "gregtech:meta_dust",
+              "Count:3": 1,
+              "Damage:2": 103,
               "OreDict:8": ""
             }
           },
@@ -46882,8 +46887,7 @@
         }
       },
       "preRequisites:11": [
-        107,
-        688
+        909
       ],
       "questID:3": 780
     },
@@ -48538,108 +48542,11 @@
       },
       "preRequisites:11": [
         260,
-        278,
-        811
+        278
       ],
       "questID:3": 810
     },
     "805:10": {
-      "properties:10": {
-        "betterquesting:10": {
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "repeattime:3": -1,
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS",
-          "simultaneous:1": 0,
-          "icon:10": {
-            "id:8": "gregtech:ore_sulfur_0",
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": ""
-          },
-          "globalshare:1": 0,
-          "questlogic:8": "AND",
-          "autoclaim:1": 1,
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "ismain:1": 0,
-          "repeat_relative:1": 1,
-          "name:8": "Sulfur Ore",
-          "desc:8": "§6Sulfur Ore§r is the only source of §6Sulfur Dust§r that\u0027s currently available to you.\n\nYou may want to spend a few §dOmnicoins§r on the ore to jumpstart your power storage.\n\nOtherwise the ore is only available in §athe Nether§r, and the only way to get there is with a §6Nether Cake§r. Oh no!"
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "partialMatch:1": 1,
-          "ignoreNBT:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "autoConsume:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "id:8": "gregtech:ore_sulfur_0",
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "oreSulfur"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval",
-          "index:3": 0
-        },
-        "1:10": {
-          "partialMatch:1": 1,
-          "ignoreNBT:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "autoConsume:1": 0,
-          "requiredItems:9": {
-            "0:10": {
-              "id:8": "gregtech:ore_sulfur_0",
-              "Count:3": 1,
-              "Damage:2": 1,
-              "OreDict:8": "oreNetherrackSulfur"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval",
-          "index:3": 1
-        }
-      },
-      "rewards:9": {
-        "0:10": {
-          "rewards:9": {
-            "0:10": {
-              "id:8": "minecraft:skull",
-              "Count:3": 1,
-              "Damage:2": 3,
-              "tag:10": {
-                "SkullOwner:10": {
-                  "Id:8": "a8088bef-5f81-4110-a734-524cd787b270",
-                  "Properties:10": {
-                    "textures:9": {
-                      "0:10": {
-                        "Value:8": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjkyNTFlMTg2NTdlNzMwNGVhY2VhYzVmOGQ0NDZkMjQ4ZWE0NmFmMmVhYjE0NWY4MTg1Y2VjZTc3OWYxNjQ4In19fQ\u003d\u003d"
-                      }
-                    }
-                  }
-                },
-                "display:10": {
-                  "Name:8": "I bought ore with Omnicoins"
-                }
-              },
-              "OreDict:8": ""
-            }
-          },
-          "rewardID:8": "bq_standard:item",
-          "index:3": 0
-        }
-      },
-      "preRequisites:11": [
-        805
-      ],
-      "questID:3": 811
-    },
-    "806:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 1,
@@ -48673,7 +48580,7 @@
       ],
       "questID:3": 812
     },
-    "807:10": {
+    "806:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -48724,7 +48631,7 @@
       ],
       "questID:3": 813
     },
-    "808:10": {
+    "807:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -48788,7 +48695,7 @@
       ],
       "questID:3": 814
     },
-    "809:10": {
+    "808:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -48861,7 +48768,7 @@
       ],
       "questID:3": 815
     },
-    "810:10": {
+    "809:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -48926,7 +48833,7 @@
       ],
       "questID:3": 816
     },
-    "811:10": {
+    "810:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -48996,7 +48903,7 @@
       ],
       "questID:3": 817
     },
-    "812:10": {
+    "811:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49060,7 +48967,7 @@
       ],
       "questID:3": 818
     },
-    "813:10": {
+    "812:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49130,7 +49037,7 @@
       ],
       "questID:3": 819
     },
-    "814:10": {
+    "813:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49196,7 +49103,7 @@
       ],
       "questID:3": 820
     },
-    "815:10": {
+    "814:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49265,7 +49172,7 @@
       ],
       "questID:3": 821
     },
-    "816:10": {
+    "815:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49329,7 +49236,7 @@
       ],
       "questID:3": 822
     },
-    "817:10": {
+    "816:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49393,7 +49300,7 @@
       ],
       "questID:3": 823
     },
-    "818:10": {
+    "817:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49457,7 +49364,7 @@
       ],
       "questID:3": 824
     },
-    "819:10": {
+    "818:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49523,7 +49430,7 @@
       ],
       "questID:3": 825
     },
-    "820:10": {
+    "819:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49605,7 +49512,7 @@
       ],
       "questID:3": 826
     },
-    "821:10": {
+    "820:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49675,7 +49582,7 @@
       ],
       "questID:3": 827
     },
-    "822:10": {
+    "821:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49740,7 +49647,7 @@
       ],
       "questID:3": 828
     },
-    "823:10": {
+    "822:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49804,7 +49711,7 @@
       ],
       "questID:3": 830
     },
-    "824:10": {
+    "823:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49868,7 +49775,7 @@
       ],
       "questID:3": 831
     },
-    "825:10": {
+    "824:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -49944,7 +49851,7 @@
       ],
       "questID:3": 832
     },
-    "826:10": {
+    "825:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50020,7 +49927,7 @@
       ],
       "questID:3": 833
     },
-    "827:10": {
+    "826:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50084,7 +49991,7 @@
       ],
       "questID:3": 834
     },
-    "828:10": {
+    "827:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50148,7 +50055,7 @@
       ],
       "questID:3": 835
     },
-    "829:10": {
+    "828:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50213,7 +50120,7 @@
       ],
       "questID:3": 836
     },
-    "830:10": {
+    "829:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50278,7 +50185,7 @@
       ],
       "questID:3": 837
     },
-    "831:10": {
+    "830:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50343,7 +50250,7 @@
       ],
       "questID:3": 838
     },
-    "832:10": {
+    "831:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50408,7 +50315,7 @@
       ],
       "questID:3": 839
     },
-    "833:10": {
+    "832:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50474,7 +50381,7 @@
       ],
       "questID:3": 840
     },
-    "834:10": {
+    "833:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50538,7 +50445,7 @@
       ],
       "questID:3": 841
     },
-    "835:10": {
+    "834:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50603,7 +50510,7 @@
       ],
       "questID:3": 842
     },
-    "836:10": {
+    "835:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50655,7 +50562,7 @@
       ],
       "questID:3": 843
     },
-    "837:10": {
+    "836:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50720,7 +50627,7 @@
       ],
       "questID:3": 844
     },
-    "838:10": {
+    "837:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50785,7 +50692,7 @@
       ],
       "questID:3": 845
     },
-    "839:10": {
+    "838:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50849,7 +50756,7 @@
       ],
       "questID:3": 846
     },
-    "840:10": {
+    "839:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50914,7 +50821,7 @@
       ],
       "questID:3": 847
     },
-    "841:10": {
+    "840:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -50978,7 +50885,7 @@
       ],
       "questID:3": 848
     },
-    "842:10": {
+    "841:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51042,7 +50949,7 @@
       ],
       "questID:3": 849
     },
-    "843:10": {
+    "842:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51133,7 +51040,7 @@
       ],
       "questID:3": 850
     },
-    "844:10": {
+    "843:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51197,7 +51104,7 @@
       ],
       "questID:3": 851
     },
-    "845:10": {
+    "844:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51262,7 +51169,7 @@
       ],
       "questID:3": 852
     },
-    "846:10": {
+    "845:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51326,7 +51233,7 @@
       ],
       "questID:3": 853
     },
-    "847:10": {
+    "846:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51390,7 +51297,7 @@
       ],
       "questID:3": 854
     },
-    "848:10": {
+    "847:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51454,7 +51361,7 @@
       ],
       "questID:3": 855
     },
-    "849:10": {
+    "848:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51518,7 +51425,7 @@
       ],
       "questID:3": 856
     },
-    "850:10": {
+    "849:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51600,7 +51507,7 @@
       ],
       "questID:3": 857
     },
-    "851:10": {
+    "850:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51677,7 +51584,7 @@
       ],
       "questID:3": 858
     },
-    "852:10": {
+    "851:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51742,7 +51649,7 @@
       ],
       "questID:3": 859
     },
-    "853:10": {
+    "852:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51832,7 +51739,7 @@
       ],
       "questID:3": 860
     },
-    "854:10": {
+    "853:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51902,7 +51809,7 @@
       ],
       "questID:3": 861
     },
-    "855:10": {
+    "854:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -51966,7 +51873,7 @@
       ],
       "questID:3": 862
     },
-    "856:10": {
+    "855:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52030,7 +51937,7 @@
       ],
       "questID:3": 863
     },
-    "857:10": {
+    "856:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52094,7 +52001,7 @@
       ],
       "questID:3": 864
     },
-    "858:10": {
+    "857:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52158,7 +52065,7 @@
       ],
       "questID:3": 865
     },
-    "859:10": {
+    "858:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52222,7 +52129,7 @@
       ],
       "questID:3": 866
     },
-    "860:10": {
+    "859:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52286,7 +52193,7 @@
       ],
       "questID:3": 867
     },
-    "861:10": {
+    "860:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52350,7 +52257,7 @@
       ],
       "questID:3": 868
     },
-    "862:10": {
+    "861:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52414,7 +52321,7 @@
       ],
       "questID:3": 869
     },
-    "863:10": {
+    "862:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52478,7 +52385,7 @@
       ],
       "questID:3": 870
     },
-    "864:10": {
+    "863:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52542,7 +52449,7 @@
       ],
       "questID:3": 871
     },
-    "865:10": {
+    "864:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52606,7 +52513,7 @@
       ],
       "questID:3": 872
     },
-    "866:10": {
+    "865:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52670,7 +52577,7 @@
       ],
       "questID:3": 873
     },
-    "867:10": {
+    "866:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52734,7 +52641,7 @@
       ],
       "questID:3": 874
     },
-    "868:10": {
+    "867:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52798,7 +52705,7 @@
       ],
       "questID:3": 875
     },
-    "869:10": {
+    "868:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52862,7 +52769,7 @@
       ],
       "questID:3": 876
     },
-    "870:10": {
+    "869:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52926,7 +52833,7 @@
       ],
       "questID:3": 877
     },
-    "871:10": {
+    "870:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -52990,7 +52897,7 @@
       ],
       "questID:3": 878
     },
-    "872:10": {
+    "871:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53054,7 +52961,7 @@
       ],
       "questID:3": 879
     },
-    "873:10": {
+    "872:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53105,7 +53012,7 @@
       ],
       "questID:3": 880
     },
-    "874:10": {
+    "873:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53166,7 +53073,7 @@
       ],
       "questID:3": 881
     },
-    "875:10": {
+    "874:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53200,7 +53107,7 @@
       ],
       "questID:3": 882
     },
-    "876:10": {
+    "875:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53264,7 +53171,7 @@
       ],
       "questID:3": 883
     },
-    "877:10": {
+    "876:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53328,7 +53235,7 @@
       ],
       "questID:3": 884
     },
-    "878:10": {
+    "877:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53392,7 +53299,7 @@
       ],
       "questID:3": 885
     },
-    "879:10": {
+    "878:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53456,7 +53363,7 @@
       ],
       "questID:3": 886
     },
-    "880:10": {
+    "879:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53522,7 +53429,7 @@
       ],
       "questID:3": 887
     },
-    "881:10": {
+    "880:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53589,7 +53496,7 @@
       ],
       "questID:3": 888
     },
-    "882:10": {
+    "881:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53622,7 +53529,7 @@
       ],
       "questID:3": 889
     },
-    "883:10": {
+    "882:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53660,7 +53567,7 @@
       ],
       "questID:3": 890
     },
-    "884:10": {
+    "883:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53721,7 +53628,7 @@
       ],
       "questID:3": 891
     },
-    "885:10": {
+    "884:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53798,7 +53705,7 @@
       ],
       "questID:3": 892
     },
-    "886:10": {
+    "885:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53836,7 +53743,7 @@
       ],
       "questID:3": 893
     },
-    "887:10": {
+    "886:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53900,7 +53807,7 @@
       ],
       "questID:3": 894
     },
-    "888:10": {
+    "887:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -53971,7 +53878,7 @@
       ],
       "questID:3": 895
     },
-    "889:10": {
+    "888:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54036,7 +53943,7 @@
       ],
       "questID:3": 896
     },
-    "890:10": {
+    "889:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54101,7 +54008,7 @@
       ],
       "questID:3": 897
     },
-    "891:10": {
+    "890:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54172,7 +54079,7 @@
       ],
       "questID:3": 898
     },
-    "892:10": {
+    "891:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54237,7 +54144,7 @@
       ],
       "questID:3": 899
     },
-    "893:10": {
+    "892:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54302,7 +54209,7 @@
       ],
       "questID:3": 900
     },
-    "894:10": {
+    "893:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54336,7 +54243,7 @@
       ],
       "questID:3": 901
     },
-    "895:10": {
+    "894:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54379,7 +54286,7 @@
       ],
       "questID:3": 902
     },
-    "896:10": {
+    "895:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54444,7 +54351,7 @@
       ],
       "questID:3": 903
     },
-    "897:10": {
+    "896:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54509,7 +54416,7 @@
       ],
       "questID:3": 904
     },
-    "898:10": {
+    "897:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54574,7 +54481,7 @@
       ],
       "questID:3": 905
     },
-    "899:10": {
+    "898:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54662,7 +54569,7 @@
       ],
       "questID:3": 906
     },
-    "900:10": {
+    "899:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54696,7 +54603,7 @@
       ],
       "questID:3": 907
     },
-    "901:10": {
+    "900:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54729,7 +54636,7 @@
       ],
       "questID:3": 908
     },
-    "902:10": {
+    "901:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54749,7 +54656,7 @@
           "questlogic:8": "AND",
           "autoclaim:1": 0,
           "snd_update:8": "minecraft:entity.player.levelup",
-          "ismain:1": 0,
+          "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2§2Primitive Steelworks",
           "desc:8": "A mixture of §6Clay, Brick, §cQuartz Sand, Calcite, Gypsum, Stone Dust§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r, which forms the basis of LV Machine Hulls."
@@ -54806,7 +54713,7 @@
       ],
       "questID:3": 909
     },
-    "903:10": {
+    "902:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -54871,7 +54778,7 @@
       ],
       "questID:3": 910
     },
-    "904:10": {
+    "903:10": {
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -59858,7 +59765,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
-          "y:3": 224,
+          "y:3": 248,
           "id:3": 37
         },
         "18:10": {
@@ -59892,8 +59799,8 @@
         "22:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 320,
+          "x:3": -90,
+          "y:3": 356,
           "id:3": 58
         },
         "23:10": {
@@ -60067,30 +59974,30 @@
         "47:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
+          "x:3": 120,
+          "y:3": 200,
+          "id:3": 780
+        },
+        "48:10": {
+          "sizeX:3": 24,
+          "sizeY:3": 24,
           "x:3": -228,
           "y:3": 60,
           "id:3": 786
         },
-        "48:10": {
+        "49:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96,
           "id:3": 803
         },
-        "49:10": {
+        "50:10": {
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 96,
           "id:3": 808
-        },
-        "50:10": {
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 356,
-          "id:3": 811
         },
         "51:10": {
           "sizeX:3": 24,
