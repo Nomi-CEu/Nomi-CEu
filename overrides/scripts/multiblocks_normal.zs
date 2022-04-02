@@ -232,6 +232,7 @@ creative_tank_provider.hasMufflerMechanics = false;
 creative_tank_provider.hasMaintenanceMechanics = false;
 
 
+
 // Naquadah Reactor 1
 <gcym:large_multiblock_casing:9>.displayName = "Reaction-Safe Casing";
 val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
@@ -264,6 +265,7 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
             .where('O', <metastate:extendedcrafting:trimmed:5>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
             )
             .build();
@@ -281,8 +283,10 @@ naquadah_reactor_1.hasMufflerMechanics = false;
 naquadah_reactor_1.hasMaintenanceMechanics = false;
 
 naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
-    return [recipe.getEUt(), recipe.getDuration()];
+    return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
 } as IRunOverclockingLogicFunction;
+
+<metaitem:multiblocktweaker:naquadah_reactor_1>.addTooltip(format.yellow("Produces exactly 2A ZPM, does not overclock"));
 
 // Naquadah Reactor 2
 val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
@@ -318,6 +322,7 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
             .where('O', <metastate:extendedcrafting:storage:4>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
             )
             .build();
@@ -336,9 +341,10 @@ naquadah_reactor_2.hasMufflerMechanics = false;
 naquadah_reactor_2.hasMaintenanceMechanics = false;
 
 naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
-    return [recipe.getEUt(), recipe.getDuration()];
+    return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
 } as IRunOverclockingLogicFunction;
 
+<metaitem:multiblocktweaker:naquadah_reactor_2>.addTooltip(format.yellow("Produces exactly 2A UV, does not overclock"));
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [

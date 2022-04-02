@@ -22,7 +22,7 @@ import scripts.common.makeShapeless3 as makeShapeless3;
 
 
 // Nether Cake
-recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustNetherrack>,<metaitem:dustNetherrack>,<metaitem:dustNetherrack>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<metaitem:blockLead>,<extrautils2:simpledecorative:1>,<metaitem:blockLead>]]);
+recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustSteel>,<metaitem:dustSteel>,<metaitem:dustSteel>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<metaitem:blockLead>,<ore:blockGold>,<metaitem:blockLead>]]);
 
 // Remove Terracotta maceration
 // Clay Dust * 4
