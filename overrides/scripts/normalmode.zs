@@ -422,47 +422,47 @@ fluid_extractor.recipeBuilder()
     .duration(100).EUt(32).buildAndRegister();
 
 
-// Creative Tank Provider
-val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle("CCC", "CCC", "CCC")
-            .aisle("CCC", "CFC", "CCC")
-            .aisle("CCC", "CSC", "CCC")
-            .where('S', controller.self())
-            .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
-            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>) | controller.autoAbilities(true, false, true, true, false, false, false))
-            .build();
-    } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("creative_tank_provider")
-            .minInputs(2)
-            .maxInputs(2)
-            .minOutputs(1)
-            .maxOutputs(1)
-            .build())
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
-    .buildAndRegister();
-
-creative_tank_provider.hasMufflerMechanics = false;
-creative_tank_provider.hasMaintenanceMechanics = false;
-
-recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
-    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
-    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
-    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
-]);
-
-// creative tank provider
-// creative tank
-creative_tank_provider.recipeMap
-    .recipeBuilder()
-    .notConsumable(<contenttweaker:creativeportabletankmold>)
-    .inputs(<minecraft:bucket>)
-    .outputs(<metaitem:creative_tank>)
-    .duration(500)
-    .EUt(100000)
-    .buildAndRegister();
+//// Creative Tank Provider
+//val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
+//    .withPattern(function(controller as IControllerTile) as IBlockPattern {
+//        return FactoryBlockPattern.start()
+//            .aisle("CCC", "CCC", "CCC")
+//            .aisle("CCC", "CFC", "CCC")
+//            .aisle("CCC", "CSC", "CCC")
+//            .where('S', controller.self())
+//            .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
+//            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>) | controller.autoAbilities(true, false, true, true, false, false, false))
+//            .build();
+//    } as IPatternBuilderFunction)
+//    .withRecipeMap(
+//        FactoryRecipeMap.start("creative_tank_provider")
+//            .minInputs(2)
+//            .maxInputs(2)
+//            .minOutputs(1)
+//            .maxOutputs(1)
+//            .build())
+//    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
+//    .buildAndRegister();
+//
+//creative_tank_provider.hasMufflerMechanics = false;
+//creative_tank_provider.hasMaintenanceMechanics = false;
+//
+//recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
+//    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
+//    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
+//    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
+//]);
+//
+//// creative tank provider
+//// creative tank
+//creative_tank_provider.recipeMap
+//    .recipeBuilder()
+//    .notConsumable(<contenttweaker:creativeportabletankmold>)
+//    .inputs(<minecraft:bucket>)
+//    .outputs(<metaitem:creative_tank>)
+//    .duration(500)
+//    .EUt(100000)
+//    .buildAndRegister();
 
 //Numismatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:5>);
