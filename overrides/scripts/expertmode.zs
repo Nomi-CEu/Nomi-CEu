@@ -618,7 +618,7 @@ large_chemical_reactor.recipeBuilder()
 
 circuit_assembler.recipeBuilder()
     .inputs(<metaitem:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <metaitem:circuit.mainframe>, <metaitem:foilNiobiumTitanium> * 16)
-    .fluidInputs(<liquid:sterilized_growth_medium>)
+    .fluidInputs(<liquid:sterilized_growth_medium> * 4000)
     .outputs(<metaitem:board.wetware> * 16)
     .duration(1200).EUt(30720).buildAndRegister();
 
