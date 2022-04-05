@@ -147,12 +147,14 @@ blast_furnace.recipeBuilder()
     .inputs(<metaitem:dustApatite> * 6, <minecraft:sand> * 9, <metaitem:gemCoke> * 5)
     .outputs(<metaitem:dustPhosphorus> * 2, <metaitem:dustWollastonite> * 15, <metaitem:dustCalciumChloride>)
     .fluidOutputs(<liquid:carbon_monoxide> * 8000)
+    .property("temperature", 1650)
     .duration(200).EUt(120).buildAndRegister();
 
 blast_furnace.recipeBuilder()
     .inputs(<metaitem:dustTricalciumPhosphate> * 5, <minecraft:sand> * 9, <metaitem:gemCoke> * 5)
     .outputs(<metaitem:dustPhosphorus> * 2, <metaitem:dustWollastonite> * 15)
     .fluidOutputs(<liquid:carbon_monoxide> * 5000)
+    .property("temperature", 1650)
     .duration(200).EUt(120).buildAndRegister();
 
 // Vanadium
@@ -174,7 +176,7 @@ blast_furnace.recipeBuilder()
     .duration(450).EUt(120).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
-    .inputs(<metaitem:dustSodiumMetavanadate> * 5, <metaitem:dustAmmoniumChloride> * 6)
+    .inputs(<metaitem:dustSodiumMetavanadate> * 5, <metaitem:dustAmmoniumChloride> * 2)
     .outputs(<metaitem:dustAmmoniumMetavanadate> * 9, <metaitem:dustSalt> * 2)
     .duration(150).EUt(30).buildAndRegister();
 
