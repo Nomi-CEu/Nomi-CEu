@@ -23,14 +23,14 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 - The Steam Age
 - No Creative Tank; instead...
 - Stabilized Micro Miners for late-game infinite resources
-- Harder recipes for assorted things like Iridium, Numismatic Dynamos, and more
+- Harder recipes for assorted things like Vanadium, Graphene, Numismatic Dynamos, and more
 
 Installation instructions:
-- Change the packmode to Expert (Options -> Pack Mode). Restart to have this take effect.
-- Grab the hardmode config files from [here](https://github.com/m2r1k5/nomi-ceu/tree/main/hardmode%20config%20overrides). Drag this into your minecraft folder (you should be "replacing" the existing `config` folder).
+- Grab the hardmode config files from [here](https://github.com/m2r1k5/nomi-ceu/tree/main/hardmode%20config%20overrides). Drag this into your minecraft folder (you should be "replacing" the existing `config` folder). Restart the pack for this to take effect.
 - Run `/bq_admin default load ExpertQuests` to load the hard mode questbook.
 ## Credits
 Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
 GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).   
 Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/). ([Permission](https://ibb.co/bBpksq0) at [this message](https://discord.com/channels/771187253937438762/774353150278369351/938438074503942184) in [FurfSky Reborn server](https://discord.gg/fsr))  
+Certain hard mode recipe chains and Magnetron texture from [GCY Science](https://github.com/GregTechCEu/gregicality-science).  
 Thank you!
