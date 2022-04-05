@@ -518,6 +518,142 @@ assembly_line.recipeBuilder()
 blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
 blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
+// H2SO4 require V2O5
+// Sulfur Trioxide * 1000
+<recipemap:chemical_reactor>.findRecipe(7, null, [<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000]).remove();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000)
+    .notConsumable(<metaitem:dustVanadiumPentoxide>)
+    .fluidOutputs(<liquid:sulfur_trioxide> * 1000)
+    .duration(200).EUt(7).buildAndRegister();
+
+// Sulfuric Acid * 1000
+<recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:dustSulfur>, <metaitem:circuit.integrated>.withTag({Configuration: 24})], [<liquid:water> * 4000]).remove();
+
+large_chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustSulfur>)
+    .notConsumable(<metaitem:dustVanadiumPentoxide>)
+    .fluidInputs(<liquid:water> * 4000)
+    .circuit(24)
+    .fluidOutputs(<liquid:sulfuric_acid> * 1000)
+    .duration(320).EUt(480).buildAndRegister();
+
+// Phthalic Anhydride
+// Phthalic Acid * 2500
+<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustTinyPotassium>], [<liquid:naphthalene> * 2000, <liquid:sulfuric_acid> * 1000]).remove();
+// Phthalic Acid * 22500
+<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustPotassium>], [<liquid:naphthalene> * 18000, <liquid:sulfuric_acid> * 9000]).remove();
+
+chemical_reactor.recipeBuilder() 
+    .fluidInputs(<liquid:naphthalene> * 1000, <liquid:oxygen> * 5000)
+    .inputs(<metaitem:dustTinyVanadiumPentoxide>)
+    .outputs(<metaitem:dustPhthalicAnhydride> * 15)
+    .fluidOutputs(<liquid:carbon_dioxide> * 1000)
+    .duration(125).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder() 
+    .fluidInputs(<liquid:naphthalene> * 9000, <liquid:oxygen> * 45000)
+    .inputs(<metaitem:dustVanadiumPentoxide>)
+    .outputs(<metaitem:dustPhthalicAnhydride> * 64, <metaitem:dustPhthalicAnhydride> * 64, <metaitem:dustPhthalicAnhydride> * 7)
+    .fluidOutputs(<liquid:carbon_dioxide> * 9000)
+    .duration(1125).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustPhthalicAnhydride> * 15)
+    .fluidInputs(<liquid:water> * 1000)
+    .fluidOutputs(<liquid:phthalic_acid> * 1000)
+    .duration(100).EUt(30).buildAndRegister();
+
+distillery.recipeBuilder()
+    .fluidInputs(<liquid:phthalic_acid> * 1000)
+    .circuit(1)
+    .outputs(<metaitem:dustPhthalicAnhydride> * 15)
+    .fluidOutputs(<liquid:water> * 1000)
+    .duration(100).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:tetrafluoroethylene> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:polytetrafluoroethylene> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:vinyl_chloride> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:polyvinyl_chloride> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:ethylene> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:plastic> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:vinyl_acetate> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:polyvinyl_acetate> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+// Hydrazine Rocket Fuel
+mixer.recipeBuilder()
+    .fluidInputs(<liquid:hydrazine> * 1000, <liquid:dimethylhydrazine> * 1000)
+    .fluidOutputs(<liquid:rocket_fuel> * 9000)
+    .duration(60).EUt(16).buildAndRegister();
+
+// Dimethylformamide
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:dimethylamine> * 1000, <liquid:carbon_monoxide> * 1000)
+    .fluidOutputs(<liquid:dimethylformamide> * 1000)
+    .duration(400).EUt(7680).buildAndRegister();
+
+// Kapton K
+// Wetware Lifesupport Circuit Board * 16
+<recipemap:circuit_assembler>.findRecipe(30720, [<metaitem:board.multilayer.fiber_reinforced> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <metaitem:circuit.mainframe>, <metaitem:foilNiobiumTitanium> * 16], [<liquid:sterilized_growth_medium> * 4000]).remove();
+
+circuit_assembler.recipeBuilder()
+    .inputs(<metaitem:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <metaitem:circuit.mainframe>, <metaitem:foilNiobiumTitanium> * 16)
+    .fluidInputs(<liquid:sterilized_growth_medium>)
+    .outputs(<metaitem:board.wetware> * 16)
+    .duration(1200).EUt(30720).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:dimethylbenzene> * 1000, <liquid:chloromethane> * 1000)
+    .outputs(<metaitem:dustDurene> * 24)
+    .fluidOutputs(<liquid:hydrochloric_acid> * 1000)
+    .duration(120).EUt(120).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustDurene> * 12)
+    .fluidInputs(<liquid:oxygen> * 6000)
+    .outputs(<metaitem:dustPyromelliticDianhydride> * 9)
+    .fluidOutputs(<liquid:water> * 3000)
+    .duration(100).EUt(480).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:nitrobenzene> * 1000, <liquid:hydrogen> * 4000)
+    .circuit(1)
+    .fluidOutputs(<liquid:aminophenol> * 1000, <liquid:water> * 1000)
+    .duration(300).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:aminophenol> * 1000, <liquid:nitrochlorobenzene> * 1000, <liquid:water> * 1000)
+    .notConsumable(<metaitem:dustSaltpeter>)
+    .notConsumable(<liquid:dimethylformamide>)
+    .outputs(<metaitem:dustOxydianiline> * 27)
+    .fluidOutputs(<liquid:oxygen> * 3000, <liquid:hydrochloric_acid> * 1000)
+    .duration(200).EUt(21000).buildAndRegister();
+
+alloy_smelter.recipeBuilder()
+    .inputs(<metaitem:dustOxydianiline> * 3, <metaitem:dustPyromelliticDianhydride> * 2)
+    .outputs(<metaitem:ingotKaptonK>)
+    .duration(30).EUt(7680).buildAndRegister();
+
 // Remove shortcut recipes
 recipes.remove(<minecraft:stick> * 16);
 recipes.removeByRecipeName("appliedenergistics2:misc/vanilla_comparator");
