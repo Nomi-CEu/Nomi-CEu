@@ -320,7 +320,7 @@ var acetone_azine = MaterialBuilder(32048, "acetone_azine")
     .color(0xa1e1e1)
     .components([<material:carbon> * 6, <material:hydrogen> * 12, <material:nitrogen> * 2])
     .build();
-<material:acetone_azine>.setFormula("((CH3)2(CN))2");
+<material:acetone_azine>.setFormula("((CH3)2(CN))2", true);
 
 var graphene_oxide = MaterialBuilder(32049, "graphene_oxide")
     .dust()
@@ -332,7 +332,7 @@ var graphene_oxide = MaterialBuilder(32049, "graphene_oxide")
 var kapton_k = MaterialBuilder(32050, "kapton_k")
     .ingot().fluid()
     .color(0xffce52).iconSet("dull")
-    .flags("generate_plate", "generate_foil", "disable_decomposition")
+    .flags("generate_plate", "disable_decomposition")
     .components([<material:carbon> * 22, <material:hydrogen> * 10, <material:nitrogen> * 2, <material:oxygen> * 5])
     .build();
 <material:kapton_k>.setFormula("C6H2((CO)2N)2C6H4OC6H4", true);
