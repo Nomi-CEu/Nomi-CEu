@@ -49,6 +49,7 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
 
 microverse_projector_basic.hasMufflerMechanics = true;
 microverse_projector_basic.hasMaintenanceMechanics = true;
+microverse_projector_basic.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 // Advanced Microverse Projector
 val microverse_projector_advanced = Builder.start("mbt:microverse_projector_advanced")
@@ -107,6 +108,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
 
 microverse_projector_advanced.hasMufflerMechanics = true;
 microverse_projector_advanced.hasMaintenanceMechanics = true;
+microverse_projector_advanced.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 // Advanced Microverse Projector II
 val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_advanced_ii")
@@ -205,6 +207,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
 
 microverse_projector_advanced_ii.hasMufflerMechanics = true;
 microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
+microverse_projector_advanced_ii.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 // Creative Tank Provider
 val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
@@ -281,6 +284,7 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
     .buildAndRegister();
 naquadah_reactor_1.hasMufflerMechanics = false;
 naquadah_reactor_1.hasMaintenanceMechanics = false;
+naquadah_reactor_1.frontOverlay = <cube_renderer:TIERED_HATCH_OVERLAY>;
 
 naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
     return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
@@ -339,6 +343,7 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
 
 naquadah_reactor_2.hasMufflerMechanics = false;
 naquadah_reactor_2.hasMaintenanceMechanics = false;
+naquadah_reactor_2.frontOverlay = <cube_renderer:TIERED_HATCH_OVERLAY>;
 
 naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
     return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
@@ -348,34 +353,34 @@ naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, 
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
-    [<ore:circuitAdvanced>, <contenttweaker:microverse_casing>, <ore:circuitAdvanced>],
+    [<ore:circuitHv>, <contenttweaker:microverse_casing>, <ore:circuitHv>],
     [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitAdvanced>, <contenttweaker:microverse_casing>, <ore:circuitAdvanced>]
+    [<ore:circuitHv>, <contenttweaker:microverse_casing>, <ore:circuitHv>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced", <metaitem:mbt:microverse_projector_advanced>, [
-    [<ore:circuitExtreme>, <contenttweaker:microverse_casing>, <ore:circuitExtreme>],
+    [<ore:circuitEv>, <contenttweaker:microverse_casing>, <ore:circuitEv>],
     [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitExtreme>, <contenttweaker:microverse_casing>, <ore:circuitExtreme>]
+    [<ore:circuitEv>, <contenttweaker:microverse_casing>, <ore:circuitEv>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_projector_advanced_ii>, [
-    [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>],
+    [<ore:circuitIv>, <contenttweaker:microverse_casing>, <ore:circuitIv>],
     [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>]
+    [<ore:circuitIv>, <contenttweaker:microverse_casing>, <ore:circuitIv>]
 ]);
 
 recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
     [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
     [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
-    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
+    [<ore:circuitZpm>, <metaitem:field.generator.uv>, <ore:circuitZpm>]
 ]);
 
 makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>,
     ["NCN",
      "GSG",
      "PPP"],
-    { C : <ore:circuitElite>, //T5
+    { C : <ore:circuitIv>, //T5
       G : <nuclearcraft:reactor_casing_transparent>,
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
@@ -385,7 +390,7 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
     ["NCN",
      "GSG",
      "PPP"],
-    { C : <ore:circuitMaster>, //T6
+    { C : <ore:circuitLuv>, //T6
       G : <nuclearcraft:reactor_casing_transparent>,
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,

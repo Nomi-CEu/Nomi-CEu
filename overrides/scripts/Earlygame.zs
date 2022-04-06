@@ -52,17 +52,17 @@ recipes.addShaped(<storagedrawers:compdrawers>, [
 
 recipes.addShaped(<storagedrawers:controller>, [
 	[<ore:plateIron>,<ore:plateIron>,<ore:plateIron>],
-	[<ore:circuitBasic>, <storagedrawers:customdrawers>, <ore:circuitBasic>],
+	[<ore:circuitLv>, <storagedrawers:customdrawers>, <ore:circuitLv>],
 	[<ore:plateIron>, <minecraft:diamond_block>, <ore:plateIron>]]);
 
 recipes.addShaped(<storagedrawers:controller>, [
 	[<ore:plateIron>,<ore:plateIron>,<ore:plateIron>],
-	[<ore:circuitBasic>, <storagedrawers:customdrawers>, <ore:circuitBasic>],
+	[<ore:circuitLv>, <storagedrawers:customdrawers>, <ore:circuitLv>],
 	[<ore:plateIron>, <minecraft:emerald_block>, <ore:plateIron>]]);
 
 recipes.addShaped(<storagedrawers:controllerslave>, [
 	[<ore:plateIron>,<ore:plateIron>,<ore:plateIron>],
-	[<ore:circuitBasic>, <storagedrawers:customdrawers>, <ore:circuitBasic>],
+	[<ore:circuitLv>, <storagedrawers:customdrawers>, <ore:circuitLv>],
 	[<ore:plateIron>, <minecraft:gold_block>, <ore:plateIron>]]);
 
 

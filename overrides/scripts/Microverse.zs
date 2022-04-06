@@ -32,7 +32,7 @@ makeShaped("of_t1guidance", <contenttweaker:t1guidance>,
 	["GPG",
 	 "PCP",
 	 "CCC"],
-	{ C : <ore:circuitGood>,
+	{ C : <ore:circuitMv>,
 	  G : <metaitem:sensor.lv>,
 	  P : <ore:plateDoubleSteel> }
 );
@@ -101,7 +101,7 @@ makeExtremeRecipe5(<contenttweaker:t2laser>,
 	 "QCECQ"],
 	{ A : <contenttweaker:solidifiedargon>,
 	  B : <minecraft:quartz_block>,
-	  C : <ore:circuitAdvanced>,
+	  C : <ore:circuitHv>,
 	  E : <enderio:block_cap_bank:1>,
 	  G : <minecraft:glass>,
 	  Q : <minecraft:quartz>,
@@ -149,7 +149,7 @@ makeShaped("of_t2guidance", <contenttweaker:t2guidance>,
 	 "WCW",
 	 "CCC"],
 	{ A : <metaitem:sensor.ev>,
-	  C : <ore:circuitExtreme>,
+	  C : <ore:circuitEv>,
 	  W : <ore:plateDoubleTungstenCarbide> }
 );
 

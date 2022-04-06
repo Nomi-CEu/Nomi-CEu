@@ -21,7 +21,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:20>, <metaitem:plateSilicon>, 
 	
 //Engineering Processor	
 Inscriber.removeRecipe(<appliedenergistics2:material:24>); 	
-Inscriber.addRecipe(<appliedenergistics2:material:24>, <ore:circuitBasic>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
+Inscriber.addRecipe(<appliedenergistics2:material:24>, <ore:circuitLv>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:24>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:24>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:17>); 		
@@ -29,7 +29,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:17>, <metaitem:plateDiamond>, 
 	
 //Calculation Processor
 Inscriber.removeRecipe(<appliedenergistics2:material:23>); 	
-Inscriber.addRecipe(<appliedenergistics2:material:23>, <ore:circuitBasic>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
+Inscriber.addRecipe(<appliedenergistics2:material:23>, <ore:circuitLv>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:23>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:23>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:16>); 		
@@ -37,7 +37,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:16>, <metaitem:plateCertusQuar
 	
 //Logic Processor
 Inscriber.removeRecipe(<appliedenergistics2:material:22>); 	
-Inscriber.addRecipe(<appliedenergistics2:material:22>, <ore:circuitBasic>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
+Inscriber.addRecipe(<appliedenergistics2:material:22>, <ore:circuitLv>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:22>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:22>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:18>); 		
@@ -47,7 +47,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:18>, <metaitem:plateGold>, tru
 recipes.remove(<appliedenergistics2:drive>);
 recipes.addShaped(<appliedenergistics2:drive>, [
 	[<metaitem:plateAluminium>,<metaitem:emitter.mv>,<metaitem:plateAluminium>],
-	[<ore:circuitBasic>,<appliedenergistics2:chest>,<ore:circuitBasic>],
+	[<ore:circuitLv>,<appliedenergistics2:chest>,<ore:circuitLv>],
 	[<metaitem:plateAluminium>,<metaitem:sensor.mv>,<metaitem:plateAluminium>]]);	
 	
 //ME Inscriber
@@ -61,7 +61,7 @@ recipes.addShaped(<appliedenergistics2:inscriber>, [
 recipes.remove(<appliedenergistics2:material:52>);
 recipes.addShaped(<appliedenergistics2:material:52> * 8, [
 	[<metaitem:wireFineSilver>,<metaitem:wireFineSilver>,<metaitem:wireFineSilver>], 
-	[<metaitem:platePlastic>,<ore:circuitAdvanced>,<metaitem:platePlastic>],
+	[<metaitem:platePlastic>,<ore:circuitHv>,<metaitem:platePlastic>],
 	[<metaitem:platePlastic>, <metaitem:platePlastic>, <metaitem:platePlastic>]]);	
 
 //Crafting CPU
@@ -183,7 +183,7 @@ recipes.addShapeless(<appliedenergistics2:biometric_card>, [<appliedenergistics2
 
 //Memory Card	
 recipes.remove(<appliedenergistics2:memory_card>);	
-recipes.addShapeless(<appliedenergistics2:memory_card>, [<appliedenergistics2:material:25>, <ore:circuitAdvanced>]);
+recipes.addShapeless(<appliedenergistics2:memory_card>, [<appliedenergistics2:material:25>, <ore:circuitHv>]);
 	
 //Basic Card
 recipes.remove(<appliedenergistics2:material:25>);	
@@ -297,7 +297,7 @@ recipes.addShapeless(<appliedenergistics2:part:340>, [<appliedenergistics2:mater
 	
 //ME Terminal
 recipes.remove(<appliedenergistics2:part:380>);
-recipes.addShapeless(<appliedenergistics2:part:380>, [<ore:itemIlluminatedPanel>, <ore:circuitBasic>]);
+recipes.addShapeless(<appliedenergistics2:part:380>, [<ore:itemIlluminatedPanel>, <ore:circuitLv>]);
 
 
 //Quantum Ring
@@ -328,28 +328,28 @@ recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_cell
 recipes.remove(<appliedenergistics2:material:35>);	
 recipes.addShaped(<appliedenergistics2:material:35>, [
 	[<minecraft:glass>, <metaitem:plateRedAlloy>, <minecraft:glass>], 
-	[<metaitem:plateRedAlloy>, <ore:circuitBasic>, <metaitem:plateRedAlloy>], 
+	[<metaitem:plateRedAlloy>, <ore:circuitLv>, <metaitem:plateRedAlloy>], 
 	[<minecraft:glass>, <metaitem:plateRedAlloy>, <minecraft:glass>]]);
 	
 // 4k Storage
 recipes.remove(<appliedenergistics2:material:36>);	
 recipes.addShaped(<appliedenergistics2:material:36>, [
 	[<minecraft:glass>, <appliedenergistics2:material:22>, <minecraft:glass>],
-	[<appliedenergistics2:material:35>, <ore:circuitGood>, <appliedenergistics2:material:35>],
+	[<appliedenergistics2:material:35>, <ore:circuitMv>, <appliedenergistics2:material:35>],
 	[<minecraft:glass>, <appliedenergistics2:material:35>, <minecraft:glass>]]);
 	
 // 16k Storage
 recipes.remove(<appliedenergistics2:material:37>);
 recipes.addShaped(<appliedenergistics2:material:37>, [
 	[<minecraft:glass>, <appliedenergistics2:material:24>, <minecraft:glass>],
-	[<appliedenergistics2:material:36>, <ore:circuitAdvanced>, <appliedenergistics2:material:36>],
+	[<appliedenergistics2:material:36>, <ore:circuitHv>, <appliedenergistics2:material:36>],
 	[<minecraft:glass>, <appliedenergistics2:material:36>, <minecraft:glass>]]);
 	
 // 64k Storage
 recipes.remove(<appliedenergistics2:material:38>);
 recipes.addShaped(<appliedenergistics2:material:38>, [
 	[<appliedenergistics2:material:22>, <appliedenergistics2:material:24>, <appliedenergistics2:material:22>],
-	[<appliedenergistics2:material:37>, <ore:circuitExtreme>, <appliedenergistics2:material:37>],
+	[<appliedenergistics2:material:37>, <ore:circuitEv>, <appliedenergistics2:material:37>],
 	[<appliedenergistics2:material:22>, <appliedenergistics2:material:37>, <appliedenergistics2:material:22>]]);
 	
 //AE2 Wireless Terminal, Infinity Booster Card
@@ -388,6 +388,6 @@ recipes.addShapeless("nf_oredict_storage_bus",
 recipes.removeByRecipeName("appliedenergistics2:network/parts/terminal_expanded_processing");
 recipes.addShaped("nf_terminal_expanded_processing", <appliedenergistics2:part:341>, [
     [null, <appliedenergistics2:part:340>, null],
-    [null, <ore:circuitExtreme>, null],
+    [null, <ore:circuitEv>, null],
     [null, <packagedauto:encoder>, null]
 ]);

@@ -247,7 +247,7 @@ alloy.recipeBuilder()
 // Z-Logic Controller (Cheap)
 recipes.addShaped(<enderio:item_material:41>, [
     [<metaitem:ingotSoularium>,<minecraft:skull:2> ,<metaitem:ingotSoularium>],
-    [<metaitem:ingotSoularium>,<ore:circuitGood> ,<metaitem:ingotSoularium>],
+    [<metaitem:ingotSoularium>,<ore:circuitMv> ,<metaitem:ingotSoularium>],
     [<metaitem:wafer.silicon>, <metaitem:blockRedAlloy>,<metaitem:wafer.silicon>]
 ]);
 

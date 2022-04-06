@@ -163,8 +163,8 @@ recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<gregtech:meta_tool:
 //Pyrolyse Oven
 recipes.removeByRecipeName("gregtech:pyrolyse_oven");	
 recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
-	[<metaitem:electric.piston.lv>, <ore:circuitBasic>, <ore:wireGtQuadrupleCupronickel>], 
-	[<ore:circuitBasic>, <meta_tile_entity:hull.ulv>, <ore:circuitBasic>], 
+	[<metaitem:electric.piston.lv>, <ore:circuitLv>, <ore:wireGtQuadrupleCupronickel>], 
+	[<ore:circuitLv>, <meta_tile_entity:hull.ulv>, <ore:circuitLv>], 
 	[<metaitem:electric.piston.lv>, <metaitem:electric.pump.lv>, <ore:wireGtQuadrupleCupronickel>]]);
 
 //// LV Casing

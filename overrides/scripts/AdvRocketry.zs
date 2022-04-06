@@ -131,7 +131,7 @@ makeShaped("pauto_packager",
 		M: <packagedauto:me_package_component>, // ME Packaging Component
 		I: <appliedenergistics2:part:240>,      // ME Import Bus
 		T: <ore:plateTitanium>,   // Titanium Plate
-		C: <ore:circuitExtreme>,  // T4 Circuit
+		C: <ore:circuitEv>,  // T4 Circuit
 		X: <extrautils2:crafter>, // ExU2 Crafter
 	});
 
@@ -145,7 +145,7 @@ makeShaped("pauto_unpackager",
 		M: <packagedauto:me_package_component>, // ME Packaging Component
 		E: <appliedenergistics2:part:260>,      // ME Export Bus
 		T: <ore:plateTitanium>,   // Titanium Plate
-		C: <ore:circuitExtreme>,  // T4 Circuit
+		C: <ore:circuitEv>,  // T4 Circuit
 		X: <extrautils2:crafter>, // ExU2 Crafter
 	});
 
@@ -159,7 +159,7 @@ makeShaped("pauto_encoder",
 		M: <packagedauto:me_package_component>, // ME Packaging Component
 		H: <packagedauto:recipe_holder>,        // Recipe Holder
 		T: <ore:plateTitanium>,   // Titanium Plate
-		C: <ore:circuitExtreme>,  // T4 Circuit
+		C: <ore:circuitEv>,  // T4 Circuit
 		X: <ae2stuff:encoder>,    // AE2STuff Pattern Encoder
 	});
 
@@ -175,7 +175,7 @@ makeShaped("ae2stuff_encoder",
 		F: <appliedenergistics2:material:43>, // Formation Core
 		A: <appliedenergistics2:material:44>, // Annihilation Core
 		M: <packagedauto:me_package_component>, // ME Packaging Component
-		C: <ore:circuitAdvanced>,               // T4 Circuit
+		C: <ore:circuitHv>,               // T4 Circuit
 		X: <meta_tile_entity:hull.hv>,              // HV Machine Hull
 	});
 
@@ -260,7 +260,7 @@ makeShaped("ar_suit_workstation",
 	], {
 		T: <metaitem:workbench>, // Workstation
 		R: <metaitem:robot.arm.mv>, // MV Robot Arm
-		C: <ore:circuitGood>,       // T2 Circuit
+		C: <ore:circuitMv>,       // T2 Circuit
 		X: <meta_tile_entity:hull.mv>,  // MV Machine Hull
 		W: <meta_tile_entity:workbench>,  // GTCE Crafting Station
 	});
@@ -369,7 +369,7 @@ assembler.recipeBuilder()
 		<contenttweaker:pressurelayer> * 2,
 		<contenttweaker:radiationlayer> * 2,
 		<minecraft:glass_pane>,
-		<ore:circuitAdvanced>
+		<ore:circuitHv>
 	])
 	.outputs([<advancedrocketry:spacehelmet>])
 	.duration(500)
@@ -453,7 +453,7 @@ makeExtremeRecipe5(<advancedrocketry:guidancecomputer>,
 		X: <libvulpes:structuremachine>,  // Machine Structure
 		S: <metaitem:sensor.hv>,  // HV Sensor
 		E: <metaitem:emitter.hv>, // HV Emitter
-		C: <ore:circuitAdvanced>, // T3 Circuit
+		C: <ore:circuitHv>, // T3 Circuit
 		M: <metaitem:cover.screen>,  // GT Computer Screen
 	});
 
@@ -473,7 +473,7 @@ makeExtremeRecipe5(<advancedrocketry:rocketbuilder>,
 		A: <meta_tile_entity:assembler.mv>, // MV Assembling Machine
 		E: <metaitem:emitter.mv>,  // MV Emitter
 		M: <metaitem:cover.screen>,   //  GT Computer Screen
-		C: <ore:circuitGood>,      // T2 Circuit
+		C: <ore:circuitMv>,      // T2 Circuit
 	});
 
 // Planet ID Chip
@@ -486,7 +486,7 @@ makeShaped("ar_planet_id_chip",
 	], {
 		W: <ore:wireFineStainlessSteel>, // Fine Stainless Steel Wire
 		P: <ore:plateVibrantAlloy>, // Vibrant Alloy Plate
-		C: <ore:circuitGood>, // T2 Circuit
+		C: <ore:circuitMv>, // T2 Circuit
 	});
 
 //// Soul Powder
@@ -541,7 +541,7 @@ makeShaped("ar_linker",
 	], {
 		S: <ore:plateStainlessSteel>, // Stainless Steel Plate
 		E: <metaitem:emitter.hv>,     // HV Emitter
-		C: <ore:circuitAdvanced>,     // T3 Circuit
+		C: <ore:circuitHv>,     // T3 Circuit
 	});
 
 // Plant Fibers
@@ -595,7 +595,7 @@ makeExtremeRecipe5(<advancedrocketry:stationbuilder>,
 		R: <metaitem:robot.arm.ev>, // EV Robot Arm
 		E: <metaitem:emitter.ev>,   // EV Emitter
 		A: <meta_tile_entity:assembler.ev>,  // EV Assembling Machine
-		C: <ore:circuitExtreme>, // T4 Circuit
+		C: <ore:circuitEv>, // T4 Circuit
 		M: <metaitem:cover.screen>, // Screen
 	});
 
@@ -609,7 +609,7 @@ makeShaped("ar_station_id_chip",
 	], {
 		W: <ore:wireFineTitanium>, // Fine Titanium Wire
 		P: <ore:plateBlackSteel>,  // Black Steel Plate
-		C: <ore:circuitExtreme>,   // T4 Circuit
+		C: <ore:circuitEv>,   // T4 Circuit
 	});
 
 // Warp Monitor
@@ -623,7 +623,7 @@ makeShaped("ar_warp_monitor",
 		X: <libvulpes:structuremachine>, // Machine Structure
 		S: <metaitem:sensor.ev>, // EV Sensor
 		M: <metaitem:cover.screen>, // Screen
-		C: <ore:circuitExtreme>, // T4 Circuit
+		C: <ore:circuitEv>, // T4 Circuit
 	});
 
 // Holo Projector
@@ -675,7 +675,7 @@ makeShaped("ar_rocket_monitoring_station",
 		O: <advancedrocketry:satelliteprimaryfunction>, // Optical Sensor
 		X: <libvulpes:structuremachine>, // Machine Structure
 		R: <ore:stickCopper>, // Copper Rod
-		C: <ore:circuitGood>, // T2 Circuit
+		C: <ore:circuitMv>, // T2 Circuit
 	});
 
 // Guidance Computer Access Hatch
@@ -688,13 +688,13 @@ makeShaped("ar_guidance_computer_access_hatch",
 	], {
 		X: <libvulpes:structuremachine>, // Machine Structure
 		R: <ore:stickCopper>, // Copper Rod
-		C: <ore:circuitGood>, // T2 Circuit
+		C: <ore:circuitMv>, // T2 Circuit
 	});
 
 // Station Docking Port
 recipes.remove(<advancedrocketry:stationmarker>);
 recipes.addShapeless(<advancedrocketry:stationmarker>, [
-	<actuallyadditions:item_battery>, <ore:circuitGood>, <libvulpes:structuremachine>
+	<actuallyadditions:item_battery>, <ore:circuitMv>, <libvulpes:structuremachine>
 ]);
 
 // Station Gravity Controller
@@ -706,7 +706,7 @@ recipes.addShapeless(<advancedrocketry:gravitycontroller>, [
 // Altitude Controller
 recipes.remove(<advancedrocketry:altitudecontroller>);
 recipes.addShapeless(<advancedrocketry:altitudecontroller>, [
-	<libvulpes:structuremachine>, <metaitem:cover.screen>, <ore:circuitGood>
+	<libvulpes:structuremachine>, <metaitem:cover.screen>, <ore:circuitMv>
 ]);
 
 // Orientation Controller
@@ -718,7 +718,7 @@ recipes.addShapeless(<advancedrocketry:orientationcontroller>, [
 // Docking Pad
 recipes.remove(<advancedrocketry:landingpad>);
 recipes.addShapeless(<advancedrocketry:landingpad>, [
-	<advancedrocketry:launchpad>, <ore:circuitGood>
+	<advancedrocketry:launchpad>, <ore:circuitMv>
 ]);
 
 // Station Light
@@ -745,7 +745,7 @@ makeShaped("ar_atmosphere_detector",
 		B: <minecraft:iron_bars>, // Vanilla Iron Bars
 		M: <metaitem:cover.screen>,  // Screen
 		P: <ore:plateSteel>,  // Steel Plate
-		C: <ore:circuitGood>, // T2 Circuit
+		C: <ore:circuitMv>, // T2 Circuit
 		R: <ore:rotorSteel>,  // Steel Rotor
 	});
 
@@ -759,7 +759,7 @@ makeShaped("ar_gravity_machine",
 	], {
 		W: <advancedrocketry:warpcore>, // Warp Core
 		T: <ore:plateTitanium>,  // Titanium Plate
-		C: <ore:circuitExtreme>, // T4 Circuit
+		C: <ore:circuitEv>, // T4 Circuit
 		M: <metaitem:cover.screen>, // Screen
 	});
 
@@ -781,7 +781,7 @@ makeShaped("ar_hovercraft",
 	], {
 		T: <advancedrocketry:structuretower>, // Structure Tower
 		E: <advancedrocketry:rocketmotor>,    // Liquid Engine
-		C: <ore:circuitGood>,    // T2 Circuit
+		C: <ore:circuitMv>,    // T2 Circuit
 		M: <metaitem:cover.screen>, // Screen
 		D: <ore:crystalDilithium>,   // Dilithium Crystal
 	});
@@ -789,7 +789,7 @@ makeShaped("ar_hovercraft",
 // Planet Selector
 recipes.remove(<advancedrocketry:planetselector>);
 recipes.addShaped(<advancedrocketry:planetselector>, [
-	[<ore:circuitGood>            , <advancedrocketry:planetidchip> , <ore:circuitGood>           ],
+	[<ore:circuitMv>            , <advancedrocketry:planetidchip> , <ore:circuitMv>           ],
 	[<libvulpes:structuremachine> , <libvulpes:structuremachine>    , <libvulpes:structuremachine>]
 ]);
 
@@ -803,7 +803,7 @@ makeShaped("ar_planetselector_holo",
 	], {
 		P: <advancedrocketry:planetselector>,
 		X: <libvulpes:structuremachine>,
-		C: <ore:circuitGood>,
+		C: <ore:circuitMv>,
 		G: <minecraft:glowstone>,
 		H: <libvulpes:holoprojector>,
 	});

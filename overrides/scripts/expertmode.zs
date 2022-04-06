@@ -84,7 +84,7 @@ makeShaped("farming_station", <enderio:block_farm_station>,
 	  S : <ore:plateSteel>,
 	  G : <ore:gearIronInfinity>,
 	  H : <ore:itemSimpleMachineChassi>,
-	  C : <ore:circuitBasic>});
+	  C : <ore:circuitLv>});
 
 /////////////	 Tier Four and Half Space Ship  	  //////////////////
 makeExtremeRecipe7(<contenttweaker:tierfourandhalfship>,
@@ -372,8 +372,8 @@ makeExtremeRecipe9(<metaitem:creative_chest> * 2,
 //recipes.removeByRecipeName("gregtech:electric_blast_furnace");
 //recipes.addShaped(<metaitem:electric_blast_furnace>, [
 //    [<metaitem:electric_furnace.lv>,<metaitem:electric_furnace.lv>,<metaitem:electric_furnace.lv>],
-//    [<ore:circuitBasic>, <gregtech:metal_casing:2>, <ore:circuitBasic>],
-//    [<ore:cableGtSingleTin>,<ore:circuitBasic> ,<ore:cableGtSingleTin>]
+//    [<ore:circuitLv>, <gregtech:metal_casing:2>, <ore:circuitLv>],
+//    [<ore:cableGtSingleTin>,<ore:circuitLv> ,<ore:cableGtSingleTin>]
 //]);
 //
 
@@ -387,9 +387,9 @@ recipes.addShaped(<thermalexpansion:dynamo:5>, [
 // Auto Maintenance Hatch
 recipes.removeByRecipeName("gregtech:maintenance_hatch_automatic");
 recipes.addShaped(<metaitem:maintenance_hatch_full_auto>, [
-    [<ore:circuitElite>, <metaitem:maintenance_hatch>, <ore:circuitElite>],
+    [<ore:circuitIv>, <metaitem:maintenance_hatch>, <ore:circuitIv>],
     [<metaitem:robot.arm.iv>, <metaitem:hull.iv>, <metaitem:robot.arm.iv>],
-    [<ore:circuitElite>, <metaitem:maintenance_hatch>, <ore:circuitElite>]
+    [<ore:circuitIv>, <metaitem:maintenance_hatch>, <ore:circuitIv>]
 ]);
 
 // Fluid Storage
@@ -399,7 +399,7 @@ recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_comp
 recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_64k_part");
 
 assembler.recipeBuilder()
-    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:22>, <ore:circuitExtreme> * 2)
+    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:22>, <ore:circuitEv> * 2)
     .outputs(<appliedenergistics2:material:54>)
     .duration(100).EUt(960)
     .buildAndRegister();
@@ -521,6 +521,7 @@ blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([
 // H2SO4 require V2O5
 // Sulfur Trioxide * 1000
 <recipemap:chemical_reactor>.findRecipe(7, null, [<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000]).remove();
+<recipemap:large_chemical_reactor>.findRecipe(7, null, [<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000]).remove();
 
 chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000)
@@ -653,6 +654,41 @@ alloy_smelter.recipeBuilder()
     .inputs(<metaitem:dustOxydianiline> * 3, <metaitem:dustPyromelliticDianhydride> * 2)
     .outputs(<metaitem:ingotKaptonK>)
     .duration(30).EUt(7680).buildAndRegister();
+
+//////////////////// Exotic Materials Catalyst ////////////////////////
+makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
+    ["L  M  J",
+     " K W S ",
+     "  YNT  ",
+     "OFUVAIC",
+     "  XEH  ",
+     " Q G P ",
+     "B  R  D"],
+    { A : <ore:ingotRutheniumTriniumAmericiumNeutronate>,
+      B : <ore:ingotRuridit>,
+      C : <ore:ingotElectricalSteel>,
+      D : <ore:ingotEnergeticAlloy>,
+      E : <ore:ingotVibrantAlloy>,
+      F : <ore:ingotRhodiumPlatedPalladium>,
+      G : <ore:ingotDarkSteel>,
+      H : <ore:ingotSoularium>,
+      I : <ore:ingotEndSteel>,
+      J : <metaitem:ingotKanthal>,
+      K : <metaitem:ingotMagnalium>,
+      L : <metaitem:ingotNichrome>,
+      M : <metaitem:ingotRedSteel>,
+      N : <metaitem:ingotBlueSteel>,
+      O : <metaitem:ingotVanadiumSteel>,
+      P : <metaitem:ingotHssg>,
+      Q : <metaitem:ingotHsse>,
+      R : <metaitem:ingotHsss>,
+      S : <metaitem:ingotManyullyn>,
+      T : <ore:ingotMicroversium>,
+      U : <ore:ingotElectrumFlux>,
+      V : <simplyjetpacks:metaitemmods:3>,
+      W : <thermalfoundation:material:136>,
+      X : <ore:ingotSignalum>,
+      Y : <ore:ingotEnderium> });
 
 // Remove shortcut recipes
 recipes.remove(<minecraft:stick> * 16);

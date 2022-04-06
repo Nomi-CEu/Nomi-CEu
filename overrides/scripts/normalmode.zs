@@ -62,14 +62,14 @@ recipes.remove(<meta_tile_entity:macerator.lv>);
 recipes.addShaped(<meta_tile_entity:macerator.lv>, [
 	[<metaitem:electric.piston.lv>, <metaitem:electric.motor.lv>, <metaitem:toolHeadBuzzSawWroughtIron>],
 	[<ore:cableGtSingleTin>, <ore:cableGtSingleTin>, <meta_tile_entity:hull.lv>],
-	[<ore:circuitBasic>, <ore:circuitBasic>, <ore:cableGtSingleTin>]]);
+	[<ore:circuitLv>, <ore:circuitLv>, <ore:cableGtSingleTin>]]);
 
 //MV Macerator
 recipes.remove(<meta_tile_entity:macerator.mv>);
 recipes.addShaped(<meta_tile_entity:macerator.mv>, [
 	[<metaitem:electric.piston.mv>, <metaitem:electric.motor.mv>, <metaitem:toolHeadBuzzSawSteel>],
 	[<ore:cableGtSingleCopper>, <ore:cableGtSingleCopper>, <meta_tile_entity:hull.mv>],
-	[<ore:circuitGood>, <ore:circuitGood>, <ore:cableGtSingleCopper>]]);
+	[<ore:circuitMv>, <ore:circuitMv>, <ore:cableGtSingleCopper>]]);
 
 //LV Piston
 recipes.addShaped(<metaitem:electric.piston.lv>, [
@@ -95,19 +95,19 @@ recipes.remove(<meta_tile_entity:extruder.hv>);
 recipes.remove(<meta_tile_entity:extruder.ev>);
 
 
-recipes.addShaped(<meta_tile_entity:extruder.mv>, [[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitGood>],
+recipes.addShaped(<meta_tile_entity:extruder.mv>, [[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitMv>],
 	[<metaitem:electric.piston.mv>, <meta_tile_entity:hull.mv>, <ore:pipeNormalFluidSteel>],
-	[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitGood>]]);
+	[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitMv>]]);
 
 recipes.addShaped(<meta_tile_entity:extruder.hv>, [
-	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitAdvanced>],
+	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitHv>],
 	[<metaitem:electric.piston.hv>, <meta_tile_entity:hull.hv>, <ore:pipeNormalFluidStainlessSteel>],
-	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitAdvanced>]]);
+	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitHv>]]);
 
 recipes.addShaped(<meta_tile_entity:extruder.ev>, [
-	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitExtreme>],
+	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitEv>],
 	[<metaitem:electric.piston.ev>, <meta_tile_entity:hull.ev>, <ore:pipeNormalFluidTitanium>],
-	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitExtreme>]]);
+	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitEv>]]);
 
 
 
@@ -450,7 +450,7 @@ fluid_extractor.recipeBuilder()
 //recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
 //    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
 //    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
-//    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
+//    [<ore:circuitZpm>, <metaitem:field.generator.uv>, <ore:circuitZpm>]
 //]);
 //
 //// creative tank provider
@@ -544,7 +544,7 @@ recipes.addShaped(<ae2stuff:grower>, [
 recipes.removeByRecipeName("gregtech:distillation_tower");
 recipes.addShaped(<meta_tile_entity:distillation_tower>, [
 	[<ore:pipeLargeFluidStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeFluidStainlessSteel>], 
-	[<ore:circuitAdvanced>, <meta_tile_entity:hull.mv>, <ore:circuitAdvanced>], 
+	[<ore:circuitHv>, <meta_tile_entity:hull.mv>, <ore:circuitHv>], 
 	[<ore:pipeLargeFluidStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeFluidStainlessSteel>]]);
 
 //Draconium [tier 14]
@@ -560,6 +560,40 @@ blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([
 blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
 blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
+//////////////////// Exotic Materials Catalyst ////////////////////////
+makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
+    ["L  M  J",
+     " K W S ",
+     "  YNT  ",
+     "OFUVAIC",
+     "  XEH  ",
+     " Q G P ",
+     "B  R  D"],
+    { A : <ore:ingotCrystalMatrix>,
+      B : <ore:ingotRuridit>,
+      C : <ore:ingotElectricalSteel>,
+      D : <ore:ingotEnergeticAlloy>,
+      E : <ore:ingotVibrantAlloy>,
+      F : <ore:ingotRhodiumPlatedPalladium>,
+      G : <ore:ingotDarkSteel>,
+      H : <ore:ingotSoularium>,
+      I : <ore:ingotEndSteel>,
+      J : <metaitem:ingotKanthal>,
+      K : <metaitem:ingotMagnalium>,
+      L : <metaitem:ingotNichrome>,
+      M : <metaitem:ingotRedSteel>,
+      N : <metaitem:ingotBlueSteel>,
+      O : <metaitem:ingotVanadiumSteel>,
+      P : <metaitem:ingotHssg>,
+      Q : <metaitem:ingotHsse>,
+      R : <metaitem:ingotHsss>,
+      S : <metaitem:ingotManyullyn>,
+      T : <ore:ingotMicroversium>,
+      U : <ore:ingotElectrumFlux>,
+      V : <simplyjetpacks:metaitemmods:3>,
+      W : <thermalfoundation:material:136>,
+      X : <ore:ingotSignalum>,
+      Y : <ore:ingotEnderium> });
 
 // Removals
 // GT
