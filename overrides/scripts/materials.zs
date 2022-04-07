@@ -374,6 +374,81 @@ var oxydianiline = MaterialBuilder(32055, "oxydianiline")
     .build();
 <material:oxydianiline>.setFormula("O(C6H4NH2)2", true);
 
+var antimony_pentafluoride = MaterialBuilder(32056, "antimony_pentafluoride")
+    .fluid()
+    .flags("disable_decomposition")
+    .color(0xe3f1f1)
+    .components([<material:antimony> * 1, <material:fluorine> * 5])
+    .build();
+
+var naquadah_oxide = MaterialBuilder(32057, "naquadah_oxide")
+    .dust()
+    .flags("disable_decomposition")
+    .color(0x17ddd3).iconSet("rough")
+    .components([<material:naquadah> * 2, <material:oxygen> * 3])
+    .build();
+
+var pyromorphite = MaterialBuilder(32058, "pyromorphite")
+    .dust()
+    .flags("disable_decomposition")
+    .color(0xd3ed28).iconSet("rough")
+    .components([<material:lead> * 5, <material:phosphate> * 3, <material:chlorine> * 1])
+    .build();
+
+var snowchestite = MaterialBuilder(32059, "snowchestite")
+    .dust().ore()
+    .flags("disable_decomposition")
+    .color(0x274c9f).iconSet("shiny")
+    .components([<material:naquadah_oxide> * 3, <material:pyromorphite> * 1])
+    .addOreByproducts(<material:chalcopyrite>, <material:vanadium_magnetite>, <material:naquadah>)
+    .build();
+
+var naquadah_hydroxide = MaterialBuilder(32060, "naquadah_hydroxide")
+    .dust()
+    .flags("disable_decomposition")
+    .color(0x1941a6).iconSet("dull")
+    .components([<material:naquadah> * 1, <material:hydrogen> * 3, <material:oxygen> * 3])
+    .build();
+<material:naquadah_hydroxide>.setFormula("Nq(OH)3", true);
+
+var caesium_hydroxide = MaterialBuilder(32061, "caesium_hydroxide")
+    .dust()
+    .flags("disable_decomposition")
+    .color(0xbd8340).iconSet("dull")
+    .components([<material:caesium> * 1, <material:oxygen> * 1, <material:hydrogen> * 1])
+    .build();
+
+var neocryolite = MaterialBuilder(32062, "neocryolite")
+    .fluid()
+    .flags("disable_decomposition")
+    .color(0x3fd1aa)
+    .components([<material:caesium> * 3, <material:naquadah> * 1, <material:fluorine> * 6])
+    .build();
+
+var naquadah_oxide_petro_solution = MaterialBuilder(32063, "naquadah_oxide_petro_solution")
+    .fluid()
+    .flags("disable_decomposition")
+    .color(0x595c70)
+    .build();
+
+var naquadah_oxide_aero_solution = MaterialBuilder(32064, "naquadah_oxide_aero_solution")
+    .fluid()
+    .flags("disable_decomposition")
+    .color(0x6f7059)
+    .build();
+
+var hot_naquadah_oxide_neocryolite_solution = MaterialBuilder(32065, "hot_naquadah_oxide_neocryolite_solution")
+    .fluid()
+    .flags("disable_decomposition")
+    .color(0x658280)
+    .build();
+
+var lead_metasilicate = MaterialBuilder(32066, "lead_metasilicate")
+    .dust()
+    .color(0xF7F7E7).iconSet("dull")
+    .components([<material:lead> * 1, <material:silicon> * 1, <material:oxygen> * 3])
+    .build();
+
 <material:lutetium>.addIngot();
 <material:neptunium>.addIngot();
 <material:curium>.addIngot();

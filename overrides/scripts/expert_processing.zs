@@ -23,6 +23,73 @@ chemical_reactor.recipeBuilder()
     .outputs(<metaitem:dustTungsten>)
     .fluidOutputs(<liquid:water> * 3000)
     .duration(210).EUt(960).buildAndRegister();
+    
+// Phthalic Anhydride
+// Phthalic Acid * 2500
+<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustTinyPotassium>], [<liquid:naphthalene> * 2000, <liquid:sulfuric_acid> * 1000]).remove();
+// Phthalic Acid * 22500
+<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustPotassium>], [<liquid:naphthalene> * 18000, <liquid:sulfuric_acid> * 9000]).remove();
+
+chemical_reactor.recipeBuilder() 
+    .fluidInputs(<liquid:naphthalene> * 1000, <liquid:oxygen> * 5000)
+    .inputs(<metaitem:dustTinyVanadiumPentoxide>)
+    .outputs(<metaitem:dustPhthalicAnhydride> * 15)
+    .fluidOutputs(<liquid:carbon_dioxide> * 1000)
+    .duration(125).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder() 
+    .fluidInputs(<liquid:naphthalene> * 9000, <liquid:oxygen> * 45000)
+    .inputs(<metaitem:dustVanadiumPentoxide>)
+    .outputs(<metaitem:dustPhthalicAnhydride> * 64, <metaitem:dustPhthalicAnhydride> * 64, <metaitem:dustPhthalicAnhydride> * 7)
+    .fluidOutputs(<liquid:carbon_dioxide> * 9000)
+    .duration(1125).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustPhthalicAnhydride> * 15)
+    .fluidInputs(<liquid:water> * 1000)
+    .fluidOutputs(<liquid:phthalic_acid> * 1000)
+    .duration(100).EUt(30).buildAndRegister();
+
+distillery.recipeBuilder()
+    .fluidInputs(<liquid:phthalic_acid> * 1000)
+    .circuit(1)
+    .outputs(<metaitem:dustPhthalicAnhydride> * 15)
+    .fluidOutputs(<liquid:water> * 1000)
+    .duration(100).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:tetrafluoroethylene> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:polytetrafluoroethylene> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:vinyl_chloride> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:polyvinyl_chloride> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:ethylene> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:plastic> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:vinyl_acetate> * 2160, <liquid:oxygen> * 7500)
+    .inputs(<metaitem:dustPhthalicAnhydride>)
+    .circuit(7)
+    .fluidOutputs(<liquid:polyvinyl_acetate> * 4320)
+    .duration(800).EUt(30).buildAndRegister();
+
+// Hydrazine Rocket Fuel
+mixer.recipeBuilder()
+    .fluidInputs(<liquid:hydrazine> * 1000, <liquid:dimethylhydrazine> * 1000)
+    .fluidOutputs(<liquid:rocket_fuel> * 9000)
+    .duration(60).EUt(16).buildAndRegister();
 
 // Graphene 
 // Graphene Dust * 1
@@ -157,6 +224,13 @@ blast_furnace.recipeBuilder()
     .property("temperature", 1650)
     .duration(200).EUt(120).buildAndRegister();
 
+blast_furnace.recipeBuilder()
+    .inputs(<metaitem:dustPyromorphite> * 6, <minecraft:sand> * 9, <metaitem:gemCoke> * 5)
+    .outputs(<metaitem:dustPhosphorus> * 2, <metaitem:dustLeadMetasilicate> * 15, <metaitem:dustCalciumChloride>)
+    .fluidOutputs(<liquid:carbon_monoxide> * 8000)
+    .property("temperature", 1650)
+    .duration(200).EUt(120).buildAndRegister();
+
 // Vanadium
 // Magnetite Dust * 1
 <recipemap:centrifuge>.findRecipe(30, [<metaitem:dustVanadiumMagnetite> * 2], null).remove();
@@ -186,3 +260,104 @@ chemical_reactor.recipeBuilder()
     .outputs(<metaitem:dustVanadiumPentoxide> * 7)
     .fluidOutputs(<liquid:ammonia> * 2000, <liquid:water> * 1000)
     .duration(300).EUt(30).buildAndRegister();
+
+// H2SO4 require V2O5
+// Sulfur Trioxide * 1000
+<recipemap:chemical_reactor>.findRecipe(7, null, [<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000]).remove();
+<recipemap:large_chemical_reactor>.findRecipe(7, null, [<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000]).remove();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000)
+    .notConsumable(<metaitem:dustVanadiumPentoxide>)
+    .fluidOutputs(<liquid:sulfur_trioxide> * 1000)
+    .duration(200).EUt(7).buildAndRegister();
+
+// Sulfuric Acid * 1000
+<recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:dustSulfur>, <metaitem:circuit.integrated>.withTag({Configuration: 24})], [<liquid:water> * 4000]).remove();
+
+large_chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustSulfur>)
+    .notConsumable(<metaitem:dustVanadiumPentoxide>)
+    .fluidInputs(<liquid:water> * 4000)
+    .circuit(24)
+    .fluidOutputs(<liquid:sulfuric_acid> * 1000)
+    .duration(320).EUt(480).buildAndRegister();
+
+// Fluoroantimonic Acid
+// Fluoroantimonic Acid * 1000
+<recipemap:chemical_reactor>.findRecipe(480, [<metaitem:dustAntimonyTrifluoride> * 4], [<liquid:hydrofluoric_acid> * 4000]).remove();
+// Fluoroantimonic Acid * 1000
+<recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:dustAntimonyTrifluoride> * 4], [<liquid:hydrofluoric_acid> * 4000]).remove();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustAntimonyTrifluoride> * 4)
+    .fluidInputs(<liquid:fluorine> * 2000)
+    .notConsumable(<thermalfoundation:material:1026>)
+    .fluidOutputs(<liquid:antimony_pentafluoride> * 1000)
+    .duration(150).EUt(480).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:antimony_pentafluoride> * 1000, <liquid:hydrofluoric_acid> * 2000)
+    .notConsumable(<thermalfoundation:material:1027>)
+    .fluidOutputs(<liquid:fluoroantimonic_acid> * 1000)
+    .duration(150).EUt(480).buildAndRegister();
+
+// Neocryolite
+chemical_reactor.recipeBuilder()
+    .inputs(<ore:dustNaquadah>, <metaitem:dustSodiumHydroxide> * 9)
+    .outputs(<metaitem:dustNaquadahHydroxide> * 7, <metaitem:dustSodium> * 3)
+    .duration(480).EUt(480).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<ore:dustCaesium>)
+    .fluidInputs(<liquid:water> * 1000)
+    .outputs(<metaitem:dustCaesiumHydroxide> * 3)
+    .duration(5).EUt(7).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustCaesiumHydroxide> * 9, <metaitem:dustNaquadahHydroxide> * 3, <metaitem:dustSignalum>)
+    .fluidInputs(<liquid:hydrofluoric_acid> * 6000)
+    .fluidOutputs(<liquid:neocryolite> * 1000, <liquid:water> * 6000)
+    .duration(250).EUt(7680).buildAndRegister();
+
+// Naquadah
+large_chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustSnowchestite> * 4)
+    .fluidInputs(<liquid:fluid_petrotheum> * 3000)
+    .fluidOutputs(<liquid:naquadah_oxide_petro_solution> * 3000)
+    .outputs(<metaitem:dustPyromorphite>)
+    .duration(100).EUt(3840).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:naquadah_oxide_petro_solution> * 1000)
+    .inputs(<ore:dustAerotheum> * 4)
+    .outputs(<ore:dustBasalz>.firstItem * 8)
+    .fluidOutputs(<liquid:naquadah_oxide_aero_solution> * 1000)
+    .duration(300).EUt(240).buildAndRegister();
+
+distillery.recipeBuilder()
+    .fluidInputs(<liquid:naquadah_oxide_aero_solution> * 1000)
+    .circuit(1)
+    .outputs(<metaitem:dustNaquadahOxide> * 5)
+    .fluidOutputs(<liquid:fluid_aerotheum> * 1000)
+    .duration(300).EUt(240).buildAndRegister();
+
+blast_furnace.recipeBuilder()
+    .inputs(<metaitem:dustNaquadahOxide> * 5)
+    .fluidInputs(<liquid:neocryolite> * 4000)
+    .fluidOutputs(<liquid:hot_naquadah_oxide_neocryolite_solution> * 1000)
+    .property("temperature", 4700)
+    .duration(400).EUt(1920).buildAndRegister();
+
+electrolyzer.recipeBuilder()
+    .fluidInputs(<liquid:hot_naquadah_oxide_neocryolite_solution> * 1000)
+    .notConsumable(<metaitem:stickRuthenium> * 2)
+    .outputs(<metaitem:dustNaquadah> * 2)
+    .fluidOutputs(<liquid:neocryolite> * 970, <liquid:oxygen> * 3000)
+    .duration(750).EUt(7680).buildAndRegister();
+
+chemical_bath.recipeBuilder()
+    .fluidInputs(<liquid:fluid_aerotheum> * 250)
+    .notConsumable(<nuclearcraft:block_ice>)
+    .outputs(<ore:dustAerotheum>.firstItem)
+    .duration(100).EUt(7).buildAndRegister();
