@@ -601,6 +601,20 @@ makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
       X : <ore:ingotSignalum>,
       Y : <ore:ingotEnderium> });
 
+// Enriched Bacterial Sludge
+// Enriched Bacterial Sludge * 1000
+<recipemap:brewery>.findRecipe(4, [<metaitem:dustTinyUranium235>], [<liquid:bacterial_sludge> * 1000]).remove();
+// Enriched Bacterial Sludge * 1000
+<recipemap:brewery>.findRecipe(4, [<metaitem:dustUranium>], [<liquid:bacterial_sludge> * 1000]).remove();
+// Enriched Bacterial Sludge * 2000
+<recipemap:brewery>.findRecipe(4, [<metaitem:dustTinyNaquadria>], [<liquid:bacterial_sludge> * 1000]).remove();
+
+brewery.recipeBuilder()
+    .inputs(<ore:nuggetCalifornium252>)
+    .fluidInputs(<liquid:bacterial_sludge> * 1000)
+    .fluidOutputs(<liquid:enriched_bacterial_sludge> * 1000)
+    .duration(128).EUt(4).buildAndRegister();
+
 // Remove shortcut recipes
 recipes.remove(<minecraft:stick> * 16);
 recipes.removeByRecipeName("appliedenergistics2:misc/vanilla_comparator");

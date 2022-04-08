@@ -323,7 +323,7 @@ large_chemical_reactor.recipeBuilder()
 // Naquadah
 large_chemical_reactor.recipeBuilder()
     .inputs(<metaitem:dustSnowchestite> * 4)
-    .fluidInputs(<liquid:fluid_petrotheum> * 3000)
+    .fluidInputs(<liquid:petrotheum> * 3000)
     .fluidOutputs(<liquid:naquadah_oxide_petro_solution> * 3000)
     .outputs(<metaitem:dustPyromorphite>)
     .duration(100).EUt(3840).buildAndRegister();
@@ -339,7 +339,7 @@ distillery.recipeBuilder()
     .fluidInputs(<liquid:naquadah_oxide_aero_solution> * 1000)
     .circuit(1)
     .outputs(<metaitem:dustNaquadahOxide> * 5)
-    .fluidOutputs(<liquid:fluid_aerotheum> * 1000)
+    .fluidOutputs(<liquid:aerotheum> * 1000)
     .duration(300).EUt(240).buildAndRegister();
 
 blast_furnace.recipeBuilder()
@@ -357,7 +357,8 @@ electrolyzer.recipeBuilder()
     .duration(750).EUt(7680).buildAndRegister();
 
 chemical_bath.recipeBuilder()
-    .fluidInputs(<liquid:fluid_aerotheum> * 250)
+    .fluidInputs(<liquid:aerotheum> * 250)
     .notConsumable(<nuclearcraft:block_ice>)
     .outputs(<ore:dustAerotheum>.firstItem)
     .duration(100).EUt(7).buildAndRegister();
+
