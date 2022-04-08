@@ -14529,7 +14529,7 @@
             },
             "6:10": {
               "id:8": "gregtech:transparent_casing",
-              "Count:3": 4,
+              "Count:3": 3,
               "Damage:2": 0,
               "OreDict:8": ""
             },
@@ -19184,7 +19184,7 @@
             "4:10": {
               "id:8": "gregtech:transparent_casing",
               "Count:3": 22,
-              "Damage:2": 0,
+              "Damage:2": 2,
               "OreDict:8": ""
             },
             "5:10": {
@@ -52739,7 +52739,7 @@
           "visibility:8": "ALWAYS",
           "simultaneous:1": 0,
           "icon:10": {
-            "id:8": "gregtech:meta_ingot",
+            "id:8": "gregtech:meta_dust",
             "Count:3": 1,
             "Damage:2": 15,
             "OreDict:8": ""
@@ -52763,7 +52763,7 @@
           "autoConsume:1": 0,
           "requiredItems:9": {
             "0:10": {
-              "id:8": "gregtech:meta_ingot",
+              "id:8": "gregtech:meta_dust",
               "Count:3": 64,
               "Damage:2": 15,
               "OreDict:8": ""
