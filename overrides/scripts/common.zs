@@ -1,4 +1,5 @@
 #priority 997
+import mods.gregtech.material.Material;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemCondition;
@@ -236,6 +237,289 @@ function makeExtremeRecipe9(output as IItemStack,
         textToIngredients(ingredients, output, recipe, replacements));
 }
 
+function removeMaterialSolid(materialId as int) {
+    val materialParts as string[] = [
+        "meta_dust",
+        "meta_dust_small",
+        "meta_dust_tiny",
+        "meta_dust_impure",
+        "meta_dust_pure",
+        "meta_crushed",
+        "meta_crushed_purified",
+        "meta_crushed_centrifuged",
+        "meta_gem",
+        "meta_gem_flawless",
+        "meta_gem_exquisite",
+        "meta_ingot",
+        "meta_ingot_hot",
+        "meta_plate",
+        "meta_plate_double",
+        "meta_plate_dense",
+        "meta_foil",
+        "meta_stick",
+        "meta_stick_long",
+        "meta_bolt",
+        "meta_screw",
+        "meta_ring",
+        "meta_nugget",
+        "meta_spring",
+        "meta_spring_small",
+        "meta_gear",
+        "meta_gear_small",
+        "meta_wire_fine",
+        "meta_rotor",
+        "meta_lens",
+        "meta_turbine_blade",
+        "meta_tool_head_sword",
+        "meta_tool_head_pickaxe",
+        "meta_tool_head_shovel",
+        "meta_tool_head_axe",
+        "meta_tool_head_hoe",
+        "meta_tool_head_hammer",
+        "meta_tool_head_file",
+        "meta_tool_head_saw",
+        "meta_tool_head_drill",
+        "meta_tool_head_chainsaw",
+        "meta_tool_head_wrench",
+        "meta_tool_head_sense",
+        "meta_tool_head_buzz_saw",
+        "meta_tool_head_screwdriver"
+    ];
+    val materialWireCableParts as string[] = [
+        "wire_single",
+        "wire_double",
+        "wire_quadruple",
+        "wire_octal",
+        "wire_hex",
+        "cable_single",
+        "cable_double",
+        "cable_quadruple",
+        "cable_octal",
+        "cable_hex",
+    ];
+    val materialFluidPipeParts as string[] = [
+        "fluid_pipe_tiny",
+        "fluid_pipe_small",
+        "fluid_pipe_normal",
+        "fluid_pipe_large",
+        "fluid_pipe_huge",
+        "fluid_pipe_quadruple",
+        "fluid_pipe_nonuple",
+    ];
+    val materialItemPipeParts as string[] = [
+        "item_pipe_tiny",
+        "item_pipe_small",
+        "item_pipe_normal",
+        "item_pipe_large",
+        "item_pipe_huge",
+        "item_pipe_tiny_restrictive",
+        "item_pipe_small_restrictive",
+        "item_pipe_normal_restrictive",
+        "item_pipe_large_restrictive",
+        "item_pipe_huge_restrictive",
+    ];
+    for materialPart in materialParts {
+        mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:" + materialPart, materialId));  
+    }
+//    mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:meta_block_compressed_" + (materialId / 16), (materialId % 16)));
+}
+
+function removeMaterialFluid(materialId as int, materialFluids as ILiquidStack[]) {
+    val materialParts as string[] = [
+        "meta_dust",
+        "meta_dust_small",
+        "meta_dust_tiny",
+        "meta_dust_impure",
+        "meta_dust_pure",
+        "meta_crushed",
+        "meta_crushed_purified",
+        "meta_crushed_centrifuged",
+        "meta_gem",
+        "meta_gem_flawless",
+        "meta_gem_exquisite",
+        "meta_ingot",
+        "meta_ingot_hot",
+        "meta_plate",
+        "meta_plate_double",
+        "meta_plate_dense",
+        "meta_foil",
+        "meta_stick",
+        "meta_stick_long",
+        "meta_bolt",
+        "meta_screw",
+        "meta_ring",
+        "meta_nugget",
+        "meta_spring",
+        "meta_spring_small",
+        "meta_gear",
+        "meta_gear_small",
+        "meta_wire_fine",
+        "meta_rotor",
+        "meta_lens",
+        "meta_turbine_blade",
+        "meta_tool_head_sword",
+        "meta_tool_head_pickaxe",
+        "meta_tool_head_shovel",
+        "meta_tool_head_axe",
+        "meta_tool_head_hoe",
+        "meta_tool_head_hammer",
+        "meta_tool_head_file",
+        "meta_tool_head_saw",
+        "meta_tool_head_drill",
+        "meta_tool_head_chainsaw",
+        "meta_tool_head_wrench",
+        "meta_tool_head_sense",
+        "meta_tool_head_buzz_saw",
+        "meta_tool_head_screwdriver"
+    ];
+    val materialWireCableParts as string[] = [
+        "wire_single",
+        "wire_double",
+        "wire_quadruple",
+        "wire_octal",
+        "wire_hex",
+        "cable_single",
+        "cable_double",
+        "cable_quadruple",
+        "cable_octal",
+        "cable_hex",
+    ];
+    val materialFluidPipeParts as string[] = [
+        "fluid_pipe_tiny",
+        "fluid_pipe_small",
+        "fluid_pipe_normal",
+        "fluid_pipe_large",
+        "fluid_pipe_huge",
+        "fluid_pipe_quadruple",
+        "fluid_pipe_nonuple",
+    ];
+    val materialItemPipeParts as string[] = [
+        "item_pipe_tiny",
+        "item_pipe_small",
+        "item_pipe_normal",
+        "item_pipe_large",
+        "item_pipe_huge",
+        "item_pipe_tiny_restrictive",
+        "item_pipe_small_restrictive",
+        "item_pipe_normal_restrictive",
+        "item_pipe_large_restrictive",
+        "item_pipe_huge_restrictive",
+    ];
+    for materialPart in materialParts {
+        mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:" + materialPart, materialId));  
+    }
+//    mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:meta_block_compressed_" + (materialId / 16), (materialId % 16)));
+    for materialFluid in materialFluids {
+        mods.jei.JEI.hide(materialFluid);
+    }
+}
+
+function removeMaterial(material as Material, materialId as int, materialFluids as ILiquidStack[]) {
+    val materialParts as string[] = [
+        "meta_dust",
+        "meta_dust_small",
+        "meta_dust_tiny",
+        "meta_dust_impure",
+        "meta_dust_pure",
+        "meta_crushed",
+        "meta_crushed_purified",
+        "meta_crushed_centrifuged",
+        "meta_gem",
+        "meta_gem_flawless",
+        "meta_gem_exquisite",
+        "meta_ingot",
+        "meta_ingot_hot",
+        "meta_plate",
+        "meta_plate_double",
+        "meta_plate_dense",
+        "meta_foil",
+        "meta_stick",
+        "meta_stick_long",
+        "meta_bolt",
+        "meta_screw",
+        "meta_ring",
+        "meta_nugget",
+        "meta_spring",
+        "meta_spring_small",
+        "meta_gear",
+        "meta_gear_small",
+        "meta_wire_fine",
+        "meta_rotor",
+        "meta_lens",
+        "meta_turbine_blade",
+        "meta_tool_head_sword",
+        "meta_tool_head_pickaxe",
+        "meta_tool_head_shovel",
+        "meta_tool_head_axe",
+        "meta_tool_head_hoe",
+        "meta_tool_head_hammer",
+        "meta_tool_head_file",
+        "meta_tool_head_saw",
+        "meta_tool_head_drill",
+        "meta_tool_head_chainsaw",
+        "meta_tool_head_wrench",
+        "meta_tool_head_sense",
+        "meta_tool_head_buzz_saw",
+        "meta_tool_head_screwdriver"
+    ];
+    val materialWireCableParts as string[] = [
+        "wire_single",
+        "wire_double",
+        "wire_quadruple",
+        "wire_octal",
+        "wire_hex",
+        "cable_single",
+        "cable_double",
+        "cable_quadruple",
+        "cable_octal",
+        "cable_hex",
+    ];
+    val materialFluidPipeParts as string[] = [
+        "fluid_pipe_tiny",
+        "fluid_pipe_small",
+        "fluid_pipe_normal",
+        "fluid_pipe_large",
+        "fluid_pipe_huge",
+        "fluid_pipe_quadruple",
+        "fluid_pipe_nonuple",
+    ];
+    val materialItemPipeParts as string[] = [
+        "item_pipe_tiny",
+        "item_pipe_small",
+        "item_pipe_normal",
+        "item_pipe_large",
+        "item_pipe_huge",
+        "item_pipe_tiny_restrictive",
+        "item_pipe_small_restrictive",
+        "item_pipe_normal_restrictive",
+        "item_pipe_large_restrictive",
+        "item_pipe_huge_restrictive",
+    ];
+    for materialPart in materialParts {
+        mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:" + materialPart, materialId));  
+    }
+    if material.hasWires() {
+        for materialWireCablePart in materialWireCableParts {
+            mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:" + materialWireCablePart, materialId));  
+        }
+    }
+    if material.hasFluidPipes() {
+        for materialFluidPipePart in materialFluidPipeParts {
+            mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:" + materialFluidPipePart, materialId));  
+        }
+    }
+    if material.hasItemPipes() {
+        for materialItemPipePart in materialItemPipeParts {
+            mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:" + materialItemPipePart, materialId));  
+        }
+    }
+    mods.jei.JEI.removeAndHide(itemUtils.getItem("gregtech:meta_block_compressed_" + (materialId / 16), (materialId % 16)));
+    for materialFluid in materialFluids {
+        mods.jei.JEI.hide(materialFluid);
+        mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: materialFluid.name, Amount: 1000}));
+    }
+}
+
 function absolute_int(n as int) as int {
     var MINUS_ONE = -1 as int;
     if (n < 0) {
@@ -244,3 +528,4 @@ function absolute_int(n as int) as int {
         return n;
     } 
 }
+

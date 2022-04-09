@@ -19,6 +19,9 @@ import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 import scripts.common.makeShapeless3 as makeShapeless3;
+import scripts.common.removeMaterial as removeMaterial;
+import scripts.common.removeMaterialSolid as removeMaterialSolid;
+import scripts.common.removeMaterialFluid as removeMaterialFluid;
 
 //Nether Cake
 recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustNetherrack>,<metaitem:dustNetherrack>,<metaitem:dustNetherrack>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<minecraft:soul_sand>,<minecraft:soul_sand>,<minecraft:soul_sand>]]);
@@ -610,8 +613,45 @@ mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_steel>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_bronze>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
 
-// Stabilized Miners
+// Materials
+removeMaterialSolid(32032);
+removeMaterialSolid(32033);
+removeMaterialSolid(32034);
+removeMaterialSolid(32035);
+removeMaterialSolid(32036);
+removeMaterialSolid(32037);
+removeMaterialSolid(32038);
+removeMaterialSolid(32039);
+removeMaterialSolid(32040);
+removeMaterialSolid(32041);
+removeMaterialSolid(32042);
+removeMaterialSolid(32043);
+removeMaterialSolid(32044);
+removeMaterialSolid(32045);
+removeMaterialSolid(32049);
+removeMaterialSolid(32051);
+removeMaterialSolid(32052);
+removeMaterialSolid(32055);
+removeMaterialSolid(32057);
+removeMaterialSolid(32058);
+removeMaterialSolid(32059);
+removeMaterialSolid(32060);
+removeMaterialSolid(32061);
+removeMaterialSolid(32066);
 
+removeMaterialFluid(32046, [<liquid:hydrogen_peroxide>]);
+removeMaterialFluid(32047, [<liquid:hydrazine>]);
+removeMaterialFluid(32048, [<liquid:acetone_azine>]);
+removeMaterialFluid(32050, [<liquid:kapton_k>]);
+removeMaterialFluid(32053, [<liquid:dimethylformamide>]);
+removeMaterialFluid(32054, [<liquid:aminophenol>]);
+removeMaterialFluid(32056, [<liquid:antimony_pentafluoride>]);
+removeMaterialFluid(32062, [<liquid:neocryolite>]);
+removeMaterialFluid(32063, [<liquid:naquadah_oxide_petro_solution>]);
+removeMaterialFluid(32064, [<liquid:naquadah_oxide_aero_solution>]);
+removeMaterialFluid(32065, [<liquid:hot_naquadah_oxide_neocryolite_solution>]);
+
+// Stabilized Miners
 mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized>);
 mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized_matter>);
 mods.jei.JEI.removeAndHide(<contenttweaker:tierfiveship_stabilized>);

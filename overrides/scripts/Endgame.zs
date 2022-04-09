@@ -256,6 +256,15 @@ alloy_blast_smelter.recipeBuilder()
     .EUt(7680)
     .buildAndRegister();
 
+// Trinium balance
+// Trinium Sulfide Dust * 1
+<recipemap:centrifuge>.findRecipe(1920, null, [<liquid:impure_enriched_naquadah_solution> * 2000]).remove();
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:impure_enriched_naquadah_solution> * 2000)
+    .outputs(<metaitem:dustTriniumSulfide> * 2, <metaitem:dustAntimonyTrifluoride> * 2)
+    .fluidOutputs(<liquid:enriched_naquadah_solution> * 1000)
+    .duration(400).EUt(1920).buildAndRegister();
+
 // Stabilized Miners Tooltips
 <contenttweaker:tiereightship_stabilized>.addTooltip(format.italic(
 	format.white("A stabilized version, injected with a Heart of a Universe.")));
