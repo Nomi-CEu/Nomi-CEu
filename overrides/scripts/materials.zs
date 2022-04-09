@@ -449,6 +449,197 @@ var lead_metasilicate = MaterialBuilder(32066, "lead_metasilicate")
     .components([<material:lead> * 1, <material:silicon> * 1, <material:oxygen> * 3])
     .build();
 
+var platinum_metallic = MaterialBuilder(32067, "platinum_metallic")
+    .dust()
+    .color(0xfffbc5).iconSet("metallic")
+    .flags("disable_decomposition")
+    .components([<material:platinum> * 1, <material:rare_earth> * 1])
+    .build();
+
+var palladium_metallic = MaterialBuilder(32068, "palladium_metallic")
+    .dust()
+    .color(0x808080).iconSet("metallic")
+    .flags("disable_decomposition")
+    .components([<material:palladium> * 1, <material:rare_earth> * 1])
+    .build();
+
+var ammonium_hexachloroplatinate = MaterialBuilder(32069, "ammonium_hexachloroplatinate")
+    .dust()
+    .color(0xfef0c2).iconSet("metallic")
+    .flags("disable_decomposition")
+    .components([<material:nitrogen> * 2, <material:hydrogen> * 8, <material:platinum> * 1, <material:chlorine> * 6])
+    .build();
+<material:ammonium_hexachloroplatinate>.setFormula("(NH4)2PtCl6", true);
+
+var chloroplatinic_acid = MaterialBuilder(32070, "chloroplatinic_acid")
+    .fluid()
+    .color(0xfef0c2)
+    .flags("disable_decomposition")
+    .components([<material:hydrogen> * 2, <material:platinum> * 1, <material:chlorine> * 6])
+    .build();
+
+var potassium_bisulfate = MaterialBuilder(32071, "potassium_bisulfate")
+    .dust()
+    .color(0xfdbd68)
+    .components([<material:potassium> * 1, <material:hydrogen> * 1, <material:sulfur> * 1, <material:oxygen> * 4])
+    .build();
+
+var potassium_pyrosulfate = MaterialBuilder(32072, "potassium_pyrosulfate")
+    .dust()
+    .color(0xfbbb66)
+    .components([<material:potassium> * 2, <material:sulfur> * 2, <material:oxygen> * 7])
+    .build();
+
+var potassium_sulfate = MaterialBuilder(32073, "potassium_sulfate")
+    .dust()
+    .color(0xf0b064).iconSet("metallic")
+    .components([<material:potassium> * 2, <material:sulfur> * 1, <material:oxygen> * 4])
+    .build();
+
+var zinc_sulfate = MaterialBuilder(32074, "zinc_sulfate")
+    .dust()
+    .color(0x846649).iconSet("fine")
+    .components([<material:zinc> * 1, <material:sulfur> * 1, <material:oxygen> * 4])
+    .build();
+
+var sodium_nitrate = MaterialBuilder(32075, "sodium_nitrate")
+    .dust()
+    .color(0x846684).iconSet("rough")
+    .components([<material:sodium> * 1, <material:nitrogen> * 1, <material:oxygen> * 3])
+    .build();
+
+var rhodium_nitrate = MaterialBuilder(32076, "rhodium_nitrate")
+    .dust()
+    .color(0x776649).iconSet("fine")
+    .flags("disable_decomposition")
+    .components([<material:rhodium> * 1, <material:nitrogen> * 3, <material:oxygen> * 9])
+    .build();
+<material:rhodium_nitrate>.setFormula("Rh(NO3)3", true);
+
+var sodium_ruthenate = MaterialBuilder(32077, "sodium_ruthenate")
+    .dust()
+    .color(0x3a40cb).iconSet("shiny")
+    .flags("disable_decomposition")
+    .components([<material:sodium> * 2, <material:ruthenium> * 1, <material:oxygen> * 4])
+    .build();
+
+var sodium_peroxide = MaterialBuilder(32078, "sodium_peroxide")
+    .dust()
+    .color(0xecff80).iconSet("rough")
+    .components([<material:sodium> * 2, <material:oxygen> * 2])
+    .build();
+
+var iridium_dioxide_residue = MaterialBuilder(32079, "iridium_dioxide_residue")
+    .dust()
+    .color(0x17182e).iconSet("rough")
+    .flags("disable_decomposition")
+    .components([<material:iridium> * 1, <material:oxygen> * 2, <material:rare_earth> * 1])
+    .build();
+
+var ammonium_hexachloroiridiate = MaterialBuilder(32080, "ammonium_hexachloroiridiate")
+    .dust()
+    .color(0x644629).iconSet("rough")
+    .flags("disable_decomposition")
+    .components([<material:nitrogen> * 2, <material:hydrogen> * 8, <material:iridium> * 1, <material:chlorine> * 6])
+    .build();
+<material:ammonium_hexachloroiridiate>.setFormula("(NH4)2IrCl6", true);
+    
+var platinum_group_residue = MaterialBuilder(32081, "platinum_group_residue")
+    .dust()
+    .color(0x64632e).iconSet("rough")
+    .flags("disable_decomposition")
+    .components([<material:iridium> * 1, <material:osmium> * 1, <material:rhodium> * 1, <material:ruthenium> * 1, <material:rare_earth> * 1])
+    .build();
+
+var palladium_rich_ammonia = MaterialBuilder(32082, "palladium_rich_ammonia")
+    .fluid()
+    .color(0x808080)
+    .flags("disable_decomposition")
+    .components([<material:ammonia> * 2, <material:palladium> * 1, <material:chlorine> * 1])
+    .build();
+
+var crude_platinum_residue = MaterialBuilder(32083, "crude_platinum_residue")
+    .dust()
+    .color(0xfffbc5).iconSet("dull")
+    .flags("disable_decomposition")
+    .components([<material:platinum_raw> * 1])
+    .build();
+
+var crude_palladium_residue = MaterialBuilder(32084, "crude_palladium_residue")
+    .dust()
+    .color(0x909090).iconSet("dull")
+    .flags("disable_decomposition")
+    .components([<material:palladium_raw> * 1])
+    .build();
+
+var iridium_group_sludge = MaterialBuilder(32085, "iridium_group_sludge")
+    .dust()
+    .color(0x644629).iconSet("dull")
+    .flags("disable_decomposition")
+    .components([<material:iridium> * 1, <material:osmium> * 1, <material:ruthenium> * 1, <material:rare_earth> * 1])
+    .build();
+
+var rhodium_sulfate_solution = MaterialBuilder(32086, "rhodium_sulfate_solution")
+    .fluid()
+    .color(0xffbb66)
+    .flags("disable_decomposition")
+    .components([<material:rhodium_sulfate> * 1, <material:water> * 1])
+    .build();
+
+var crude_rhodium_residue = MaterialBuilder(32087, "crude_rhodium_residue")
+    .dust()
+    .color(0x666666).iconSet("dull")
+    .flags("disable_decomposition")
+    .components([<material:rhodium> * 2, <material:water> * 1])
+    .build();
+
+var rhodium_salt = MaterialBuilder(32088, "rhodium_salt")
+    .dust()
+    .color(0x848484).iconSet("shiny")
+    .flags("disable_decomposition")
+    .components([<material:salt> * 2, <material:rhodium> * 2, <material:chlorine> * 6])
+    .build();
+<material:rhodium_salt>.setFormula("(NaCl)2(RhCl3)2", true);
+
+var acidic_iridium_dioxide_solution = MaterialBuilder(32089, "acidic_iridium_dioxide_solution")
+    .fluid()
+    .color(0x27284e)
+    .flags("disable_decomposition")
+    .components([<material:iridium_dioxide_residue> * 1, <material:hydrochloric_acid> * 4])
+    .build();
+
+var platinum_palladium_leachate = MaterialBuilder(32090, "platinum_palladium_leachate")
+    .fluid()
+    .color(0xffffc5)
+    .flags("disable_decomposition")
+    .components([<material:platinum> * 1, <material:palladium> * 1, <material:aqua_regia> * 1])
+    .build();
+
+var methyl_formate = MaterialBuilder(32091, "methyl_formate")
+    .fluid()
+    .color(0xffaaaa)
+    .flags("disable_decomposition")
+    .components([<material:carbon> * 2, <material:hydrogen> * 4, <material:oxygen> * 2])
+    .build();
+<material:methyl_formate>.setFormula("HCOOCH3", true);
+
+var formic_acid = MaterialBuilder(32092, "formic_acid")
+    .fluid()
+    .color(0xffffc5)
+    .flags("disable_decomposition")
+    .components([<material:carbon> * 1, <material:hydrogen> * 2, <material:oxygen> * 2])
+    .build();
+<material:formic_acid>.setFormula("HCOOH", true);
+
+var sodium_methoxide = MaterialBuilder(32093, "sodium_methoxide")
+    .dust()
+    .color(0xd0d0f0).iconSet("dull")
+    .flags("disable_decomposition")
+    .components([<material:carbon> * 1, <material:hydrogen> * 3, <material:oxygen> * 1, <material:sodium> * 1])
+    .build();
+
+<material:rhodium_sulfate>.addDust();
+
 <material:lutetium>.addIngot();
 <material:neptunium>.addIngot();
 <material:curium>.addIngot();
@@ -486,6 +677,8 @@ var lead_metasilicate = MaterialBuilder(32066, "lead_metasilicate")
 <material:platinum>.addFlags(["generate_gear", ]);
 <material:silver>.addFlags(["generate_gear"]);
 <material:emerald>.addFlags(["generate_gear"]);
+
+<material:rhodium_sulfate>.setIconSet("rough");
 
 <material:black_steel>.setFormula("(AuAgCu3)2Fe3?4", true);
 <material:rhodium_plated_palladium>.setFormula("((SnFe)4(CuAg4)2)2Pd3Rh", true);

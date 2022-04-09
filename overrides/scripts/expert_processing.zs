@@ -120,7 +120,7 @@ chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:hydrogen> * 6000, <liquid:oxygen> * 6000)
     .notConsumable(<metaitem:dustPalladium>, <metaitem:dustEthylanthraquinone>)
     .fluidOutputs(<liquid:hydrogen_peroxide> * 3000)
-    .duration(440).EUt(1920).buildAndRegister();
+    .duration(330).EUt(720).buildAndRegister();
 
 // Hydrazine
 large_chemical_reactor.recipeBuilder()
@@ -362,3 +362,283 @@ chemical_bath.recipeBuilder()
     .outputs(<ore:dustAerotheum>.firstItem)
     .duration(100).EUt(7).buildAndRegister();
 
+// Platinum Group
+// Raw Platinum Powder * 3
+<recipemap:centrifuge>.findRecipe(480, [<metaitem:dustPlatinumGroupSludge> * 6], [<liquid:aqua_regia> * 1200]).remove();
+// Platinum Dust * 1
+<recipemap:electrolyzer>.findRecipe(120, [<metaitem:dustPlatinumRaw> * 3], null).remove();
+// Palladium Dust * 1
+<recipemap:chemical_reactor>.findRecipe(120, [<metaitem:dustPalladiumRaw> * 5], [<liquid:hydrochloric_acid> * 1000]).remove();
+<recipemap:large_chemical_reactor>.findRecipe(120, [<metaitem:dustPalladiumRaw> * 5], [<liquid:hydrochloric_acid> * 1000]).remove();
+// Ruthenium Tetroxide Dust * 5
+<recipemap:chemical_reactor>.findRecipe(1920, [<metaitem:dustInertMetalMixture> * 6], [<liquid:sulfuric_acid> * 1500]).remove();
+<recipemap:large_chemical_reactor>.findRecipe(1920, [<metaitem:dustInertMetalMixture> * 6], [<liquid:sulfuric_acid> * 1500]).remove();
+// Ruthenium Dust * 1
+<recipemap:chemical_reactor>.findRecipe(120, [<metaitem:dustRutheniumTetroxide> * 5, <metaitem:dustCarbon> * 2], null).remove();
+<recipemap:large_chemical_reactor>.findRecipe(120, [<metaitem:dustRutheniumTetroxide> * 5, <metaitem:dustCarbon> * 2], null).remove();
+// Rhodium Dust * 2
+<recipemap:electrolyzer>.findRecipe(120, null, [<liquid:rhodium_sulfate> * 1000]).remove();
+// Iridium Metal Residue * 5
+<recipemap:large_chemical_reactor>.findRecipe(7680, [<metaitem:dustRarestMetalMixture> * 7], [<liquid:hydrochloric_acid> * 4000]).remove();
+// Iridium Chloride Dust * 4
+<recipemap:centrifuge>.findRecipe(120, [<metaitem:dustIridiumMetalResidue> * 5], null).remove();
+// Iridium Dust * 1
+<recipemap:chemical_reactor>.findRecipe(30, [<metaitem:dustIridiumChloride> * 4], [<liquid:hydrogen> * 3000]).remove();
+<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustIridiumChloride> * 4], [<liquid:hydrogen> * 3000]).remove();
+// Osmium Tetroxide Dust * 5
+<recipemap:distillation_tower>.findRecipe(120, null, [<liquid:acidic_osmium_solution> * 2000]).remove();
+// Osmium Tetroxide Dust * 1
+<recipemap:distillery>.findRecipe(30, [<metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:acidic_osmium_solution> * 400]).remove();
+// Osmium Tetroxide Dust * 1
+<recipemap:distillery>.findRecipe(30, [<metaitem:circuit.integrated>.withTag({Configuration: 1})], [<liquid:acidic_osmium_solution> * 400]).remove();
+// Osmium Dust * 1
+<recipemap:chemical_reactor>.findRecipe(30, [<metaitem:dustOsmiumTetroxide> * 5], [<liquid:hydrogen> * 8000]).remove();
+<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustOsmiumTetroxide> * 5], [<liquid:hydrogen> * 8000]).remove();
+
+// Formic Acid
+chemical_reactor.recipeBuilder()
+    .inputs(<ore:dustSodium>)
+    .fluidInputs(<liquid:methanol> * 1000)
+    .outputs(<metaitem:dustSodiumMethoxide> * 6)
+    .fluidOutputs(<liquid:hydrogen> * 1000)
+    .duration(10).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:methanol> * 1000, <liquid:carbon_dioxide> * 1000)
+    .notConsumable(<metaitem:dustSodiumMethoxide>)
+    .fluidOutputs(<liquid:methyl_formate> * 1000)
+    .duration(16).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:methyl_formate> * 1000, <liquid:water> * 1000)
+    .fluidOutputs(<liquid:formic_acid> * 1000, <liquid:water> * 1000)
+    .duration(16).EUt(30).buildAndRegister();
+
+// Potassium Pyrosulfate
+chemical_bath.recipeBuilder()
+    .inputs(<metaitem:dustRockSalt> * 2)
+    .fluidInputs(<liquid:sulfuric_acid> * 1000)
+    .outputs(<metaitem:dustPotassiumBisulfate> * 7)
+    .fluidOutputs(<liquid:hydrochloric_acid> * 1000)
+    .duration(60).EUt(30).buildAndRegister();
+
+chemical_bath.recipeBuilder()
+    .inputs(<metaitem:dustSaltpeter> * 5)
+    .fluidInputs(<liquid:sulfuric_acid> * 1000)
+    .outputs(<metaitem:dustPotassiumBisulfate> * 7)
+    .fluidOutputs(<liquid:nitric_acid> * 1000)
+    .duration(60).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustPotassiumBisulfate> * 14)
+    .outputs(<metaitem:dustPotassiumPyrosulfate> * 11)
+    .fluidOutputs(<liquid:water> * 1000)
+    .duration(30).EUt(64).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustPotassiumSulfate> * 7)
+    .fluidInputs(<liquid:sulfur_trioxide> * 1000)
+    .outputs(<metaitem:dustPotassiumPyrosulfate> * 11)
+    .duration(30).EUt(64).buildAndRegister();
+
+// Sodium Peroxide
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustSodiumHydroxide> * 6)
+    .fluidInputs(<liquid:hydrogen_peroxide> * 7000)
+    .outputs(<metaitem:dustSodiumPeroxide> * 4)
+    .fluidOutputs(<liquid:water> * 8000, <liquid:oxygen> * 6000)
+    .duration(100).EUt(30).buildAndRegister();
+
+// Sodium Nitrate
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustSodiumHydroxide> * 3)
+    .fluidInputs(<liquid:nitric_acid> * 1000)
+    .outputs(<metaitem:dustSodiumNitrate> * 5)
+    .fluidOutputs(<liquid:water> * 1000)
+    .duration(5).EUt(60).buildAndRegister();
+
+// Platinum Group Sludge
+chemical_bath.recipeBuilder()
+    .inputs(<metaitem:dustPlatinumGroupSludge>)
+    .fluidInputs(<liquid:aqua_regia> * 2000)
+    .outputs(<metaitem:dustPlatinumGroupResidue>)
+    .fluidOutputs(<liquid:platinum_palladium_leachate> * 1000)
+    .duration(250).EUt(30).buildAndRegister();
+
+chemical_bath.recipeBuilder()
+    .inputs(<metaitem:dustPlatinumMetallic> * 2)
+    .fluidInputs(<liquid:aqua_regia> * 2000)
+    .outputs(<metaitem:dustPlatinumGroupResidue>)
+    .fluidOutputs(<liquid:platinum_palladium_leachate> * 1000)
+    .duration(250).EUt(30).buildAndRegister();
+
+// Platinum
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustAmmoniumChloride> * 8)
+    .fluidInputs(<liquid:platinum_palladium_leachate> * 1000)
+    .outputs(<metaitem:dustAmmoniumHexachloroplatinate> * 9, <metaitem:dustCrudePlatinumResidue>)
+    .fluidOutputs(<liquid:palladium_rich_ammonia> * 1000)
+    .duration(1200).EUt(30).buildAndRegister();
+
+electrolyzer.recipeBuilder()
+    .inputs(<metaitem:dustAmmoniumHexachloroplatinate> * 9)
+    .fluidOutputs(<liquid:ammonia> * 2000, <liquid:chloroplatinic_acid> * 1000)
+    .duration(30).EUt(30).buildAndRegister();
+
+distillery.recipeBuilder()
+    .fluidInputs(<liquid:chloroplatinic_acid> * 1000)
+    .circuit(1)
+    .outputs(<metaitem:dustPlatinumRaw> * 2)
+    .fluidOutputs(<liquid:hydrochloric_acid> * 4000)
+    .duration(120).EUt(30).buildAndRegister();
+
+autoclave.recipeBuilder()
+    .inputs(<metaitem:dustPlatinumRaw> * 3, <metaitem:dustCalcium>)
+    .fluidInputs(<liquid:steam> * 3840)
+    .outputs(<metaitem:dustPlatinum>, <metaitem:dustCalciumChloride> * 3)
+    .fluidOutputs(<liquid:water> * 24)
+    .duration(30).EUt(30).buildAndRegister();
+
+sifter.recipeBuilder()
+    .inputs(<metaitem:dustCrudePlatinumResidue>)
+    .chancedOutput(<metaitem:dustPlatinumMetallic>, 9500, 0)
+    .duration(600).EUt(30).buildAndRegister();
+
+// Palladium
+mixer.recipeBuilder()
+    .inputs(<metaitem:dustPalladiumMetallic> * 2)
+    .fluidInputs(<liquid:ammonia> * 2000, <liquid:chlorine> * 2000)
+    .fluidOutputs(<liquid:palladium_rich_ammonia> * 1000)
+    .duration(250).EUt(30).buildAndRegister();
+
+fluid_solidifier.recipeBuilder()
+    .fluidInputs(<liquid:palladium_rich_ammonia> * 500)
+    .notConsumable(<metaitem:shape.mold.ball>)
+    .outputs(<metaitem:dustCrudePalladiumResidue>)
+    .duration(125).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustPalladiumMetallic> * 2)
+    .fluidInputs(<liquid:palladium_rich_ammonia> * 1000)
+    .outputs(<metaitem:dustPalladiumRaw> * 3, <metaitem:dustCrudePalladiumResidue>)
+    .fluidOutputs(<liquid:ammonia> * 2000)
+    .duration(250).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustPalladiumRaw> * 3)
+    .fluidInputs(<liquid:formic_acid> * 1000)
+    .outputs(<metaitem:dustPalladium>)
+    .fluidOutputs(<liquid:hydrochloric_acid> * 2000, <liquid:carbon_dioxide> * 1000)
+    .duration(250).EUt(30).buildAndRegister();
+
+sifter.recipeBuilder()
+    .inputs(<metaitem:dustCrudePalladiumResidue>)
+    .chancedOutput(<metaitem:dustPalladiumMetallic>, 9500, 0)
+    .duration(600).EUt(30).buildAndRegister();
+
+// Rhodium
+blast_furnace.recipeBuilder()
+    .inputs(<metaitem:dustPlatinumGroupResidue>, <metaitem:dustPotassiumPyrosulfate> * 11)
+    .outputs(<metaitem:dustRhodiumSulfate>, <metaitem:dustPotassiumSulfate> * 14, <metaitem:dustIridiumGroupSludge>)
+    .property("temperature", 1048)
+    .duration(200).EUt(120).buildAndRegister();
+
+chemical_bath.recipeBuilder()
+    .inputs(<metaitem:dustRhodiumSulfate> * 6)
+    .fluidInputs(<liquid:water> * 2000)
+    .outputs(<metaitem:dustIridiumGroupSludge>)
+    .fluidOutputs(<liquid:rhodium_sulfate_solution> * 2000)
+    .duration(300).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()   
+    .inputs(<metaitem:dustZinc> * 3)
+    .fluidInputs(<liquid:rhodium_sulfate_solution> * 1000)
+    .outputs(<metaitem:dustZincSulfate> * 18, <metaitem:dustCrudeRhodiumResidue>)
+    .duration(300).EUt(30).buildAndRegister();
+
+blast_furnace.recipeBuilder()
+    .inputs(<metaitem:dustCrudeRhodiumResidue>, <metaitem:dustSalt> * 4)
+    .fluidInputs(<liquid:chlorine> * 6000)
+    .outputs(<metaitem:dustRhodiumSalt>)
+    .fluidOutputs(<liquid:steam> * 9600)
+    .property("temperature", 848)
+    .duration(300).EUt(120).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustSodiumNitrate> * 30, <metaitem:dustRhodiumSalt>)
+    .notConsumable(<liquid:water> * 8000)
+    .outputs(<metaitem:dustRhodiumNitrate> * 26, <metaitem:dustSalt> * 16)
+    .duration(300).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustRhodiumNitrate> * 13, <metaitem:dustPotassium> * 3)
+    .outputs(<metaitem:dustRhodium>, <metaitem:dustSaltpeter> * 15)
+    .duration(300).EUt(30).buildAndRegister();
+
+blast_furnace.recipeBuilder()
+    .inputs(<metaitem:dustIridiumGroupSludge>, <metaitem:dustSodaAsh>)
+    .outputs(<metaitem:dustSodiumRuthenate>, <metaitem:dustAsh>, <metaitem:dustRarestMetalMixture>)
+    .property("temperature", 1023)
+    .duration(200).EUt(120).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustSodiumRuthenate> * 6)
+    .fluidInputs(<liquid:chlorine> * 2000, <liquid:water> * 2000)
+    .outputs(<metaitem:dustRutheniumTetroxide> * 5)
+    .fluidOutputs(<liquid:salt_water> * 2000)
+    .duration(1575).EUt(480).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustRutheniumTetroxide> * 5)
+    .fluidInputs(<liquid:hydrogen> * 8000)
+    .outputs(<metaitem:dustRuthenium>)
+    .fluidOutputs(<liquid:water> * 4000)
+    .duration(300).EUt(30).buildAndRegister();
+
+// Osmium
+chemical_bath.recipeBuilder()
+    .inputs(<metaitem:dustRarestMetalMixture>)
+    .fluidInputs(<liquid:hydrochloric_acid> * 1000)
+    .outputs(<metaitem:dustIridiumMetalResidue>)
+    .fluidOutputs(<liquid:acidic_osmium_solution> * 1000)
+    .duration(100).EUt(30).buildAndRegister();
+
+distillation_tower.recipeBuilder()
+    .fluidInputs(<liquid:acidic_osmium_solution> * 1000)
+    .outputs(<metaitem:dustOsmiumTetroxide> * 5)
+    .fluidOutputs(<liquid:hydrochloric_acid> * 1000)
+    .duration(150).EUt(7680).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustOsmiumTetroxide> * 5)
+    .fluidInputs(<liquid:hydrogen> * 8000)
+    .outputs(<metaitem:dustOsmium>)
+    .fluidOutputs(<liquid:water> * 4000)
+    .duration(300).EUt(30).buildAndRegister();
+
+// Iridium
+blast_furnace.recipeBuilder()
+    .inputs(<metaitem:dustSodiumPeroxide> * 4, <metaitem:dustIridiumMetalResidue>)
+    .outputs(<metaitem:dustIridiumDioxideResidue> * 3, <metaitem:dustSodium> * 2)
+    .property("temperature", 1048)
+    .duration(200).EUt(120).buildAndRegister();
+
+mixer.recipeBuilder()
+    .inputs(<metaitem:dustIridiumDioxideResidue> * 3)
+    .fluidInputs(<liquid:hydrochloric_acid> * 4000)
+    .fluidOutputs(<liquid:acidic_iridium_dioxide_solution> * 4000)
+    .duration(300).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustAmmoniumChloride> * 4)
+    .fluidInputs(<liquid:acidic_iridium_dioxide_solution> * 4000)
+    .outputs(<metaitem:dustAmmoniumHexachloroiridiate> * 9, <metaitem:dustPlatinumGroupResidue>)
+    .fluidOutputs(<liquid:water> * 2000)
+    .duration(300).EUt(30).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustAmmoniumHexachloroiridiate> * 9)
+    .fluidInputs(<liquid:hydrogen> * 4000)
+    .outputs(<metaitem:dustIridium>)
+    .fluidOutputs(<liquid:hydrochloric_acid> * 6000, <liquid:ammonia> * 2000)
+    .duration(150).EUt(7680).buildAndRegister();
