@@ -459,7 +459,7 @@ chemical_reactor.recipeBuilder()
 
 // Platinum Group Sludge
 chemical_bath.recipeBuilder()
-    .inputs(<metaitem:dustPlatinumGroupSludge>)
+    .inputs(<metaitem:dustPlatinumGroupSludge> * 3)
     .fluidInputs(<liquid:aqua_regia> * 2000)
     .outputs(<metaitem:dustPlatinumGroupResidue>)
     .fluidOutputs(<liquid:platinum_palladium_leachate> * 1000)
@@ -575,9 +575,10 @@ chemical_reactor.recipeBuilder()
     .outputs(<metaitem:dustRhodium>, <metaitem:dustSaltpeter> * 15)
     .duration(300).EUt(30).buildAndRegister();
 
+// Ruthenium
 blast_furnace.recipeBuilder()
-    .inputs(<metaitem:dustIridiumGroupSludge>, <metaitem:dustSodaAsh>)
-    .outputs(<metaitem:dustSodiumRuthenate>, <metaitem:dustAsh>, <metaitem:dustRarestMetalMixture>)
+    .inputs(<metaitem:dustIridiumGroupSludge>, <metaitem:dustSodaAsh> * 2)
+    .outputs(<metaitem:dustSodiumRuthenate> * 2, <metaitem:dustAsh>, <metaitem:dustRarestMetalMixture>)
     .property("temperature", 1023)
     .duration(200).EUt(120).buildAndRegister();
 
@@ -604,9 +605,9 @@ chemical_bath.recipeBuilder()
     .duration(100).EUt(30).buildAndRegister();
 
 distillation_tower.recipeBuilder()
-    .fluidInputs(<liquid:acidic_osmium_solution> * 1000)
-    .outputs(<metaitem:dustOsmiumTetroxide> * 5)
-    .fluidOutputs(<liquid:hydrochloric_acid> * 1000)
+    .fluidInputs(<liquid:acidic_osmium_solution> * 2000)
+    .outputs(<metaitem:dustOsmiumTetroxide>)
+    .fluidOutputs(<liquid:hydrochloric_acid> * 2000)
     .duration(150).EUt(7680).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
@@ -632,7 +633,7 @@ mixer.recipeBuilder()
 chemical_reactor.recipeBuilder()
     .inputs(<metaitem:dustAmmoniumChloride> * 4)
     .fluidInputs(<liquid:acidic_iridium_dioxide_solution> * 4000)
-    .outputs(<metaitem:dustAmmoniumHexachloroiridiate> * 9, <metaitem:dustPlatinumGroupResidue>)
+    .outputs(<metaitem:dustAmmoniumHexachloroiridiate> * 2, <metaitem:dustPlatinumGroupResidue>)
     .fluidOutputs(<liquid:water> * 2000)
     .duration(300).EUt(30).buildAndRegister();
 
