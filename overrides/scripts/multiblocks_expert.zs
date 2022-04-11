@@ -782,7 +782,8 @@ microverse_projector_advanced.recipeMap
              <metaitem:dustBoron> * 64,
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_beryllium_0> * 64)
+             <gregtech:ore_beryllium_0> * 64,
+             <gregtech:ore_fluorite_0> * 64)
     .buildAndRegister();
 
 
@@ -829,7 +830,7 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 32)
+             <gregtech:ore_iridosmine_8020_0> * 24)
     .buildAndRegister();
 
 
@@ -1285,11 +1286,13 @@ actualization_chamber.recipeMap
              <gregtech:ore_sphalerite_0> * 64,
              <gregtech:ore_monazite_0> * 64,
              <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
-             <gregtech:ore_osmiridium_8020_0> * 16,
+             <gregtech:ore_osmiridium_8020_0> * 6,
+             <gregtech:ore_iridosmine_8020_0> * 6,
              <metaitem:dustBoron> * 64,
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_beryllium_0> * 64)
+             <gregtech:ore_beryllium_0> * 64,
+             <gregtech:ore_fluorite_0> * 64)
     .buildAndRegister();
 
 // t5 nq ke
@@ -1321,7 +1324,7 @@ actualization_chamber.recipeMap
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 32)
+             <gregtech:ore_iridosmine_8020_0> * 24)
     .buildAndRegister();
 
 // t6 es

@@ -237,9 +237,10 @@ var tantalum_pentoxide = MaterialBuilder(32035, "tantalum_pentoxide")
     .build();
 
 var fluorite = MaterialBuilder(32036, "fluorite")
-    .dust()
+    .dust().ore()
     .color(0xFFFC9E).iconSet("rough")
     .components([<material:calcium> * 1, <material:fluorine> * 2])
+    .addOreByproducts(<material:sphalerite>, <material:bastnasite>, <material:topaz>)
     .build();
 
 var manganese_difluoride = MaterialBuilder(32037, "manganese_difluoride")
