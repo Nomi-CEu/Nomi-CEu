@@ -443,6 +443,7 @@ var hot_naquadah_oxide_neocryolite_solution = MaterialBuilder(32065, "hot_naquad
     .flags("disable_decomposition")
     .color(0x658280)
     .build();
+<material:hot_naquadah_oxide_neocryolite_solution>.setFluidTemperature(4700);
 
 var lead_metasilicate = MaterialBuilder(32066, "lead_metasilicate")
     .dust()
@@ -638,6 +639,110 @@ var sodium_methoxide = MaterialBuilder(32093, "sodium_methoxide")
     .flags("disable_decomposition")
     .components([<material:carbon> * 1, <material:hydrogen> * 3, <material:oxygen> * 1, <material:sodium> * 1])
     .build();
+
+var hexafluorosilicic_acid = MaterialBuilder(32094, "hexafluorosilicic_acid")
+    .fluid()
+    .color(0xd00010)
+    .components([<material:hydrogen> * 2, <material:silicon> * 1, <material:fluorine> * 6])
+    .build();
+
+var dirty_hexafluorosilicic_acid = MaterialBuilder(32095, "dirty_hexafluorosilicic_acid")
+    .fluid()
+    .color(0xe00030)
+    .flags("disable_decomposition")
+    .components([<material:hydrogen> * 2, <material:silicon> * 1, <material:fluorine> * 6, <material:rare_earth> * 1])
+    .build();
+
+var stone_residue = MaterialBuilder(32096, "stone_residue")
+    .dust()
+    .color(0x4d4d4d).iconSet("rough")
+    .flags("disable_decomposition")
+    .build();
+
+var uncommon_residue = MaterialBuilder(32097, "uncommon_residue")
+    .dust()
+    .color(0x4d4ded).iconSet("fine")
+    .flags("disable_decomposition")
+    .build();
+
+var oxidised_residue = MaterialBuilder(32098, "oxidised_residue")
+    .dust()
+    .color(0xad4d4d).iconSet("fine")
+    .flags("disable_decomposition")
+    .build();
+
+var refined_residue = MaterialBuilder(32099, "refined_residue")
+    .dust()
+    .color(0x2a8a21).iconSet("shiny")
+    .flags("disable_decomposition")
+    .build();
+
+var clean_inert_residue = MaterialBuilder(32100, "clean_inert_residue")
+    .dust()
+    .color(0x3bbd2f).iconSet("shiny")
+    .flags("disable_decomposition")
+    .build();
+
+var ultraacidic_residue = MaterialBuilder(32101, "ultraacidic_residue")
+    .fluid()
+    .color(0xb0babf)
+    .flags("disable_decomposition")
+    .build();
+
+var xenic_acid = MaterialBuilder(32102, "xenic_acid")
+    .fluid()
+    .color(0xa567db)
+    .components([<material:xenon> * 1, <material:water> * 1, <material:oxygen> * 5, <material:hydrogen_peroxide> * 1])
+    .build();
+<material:xenic_acid>.setFormula("H2XeO4", true);
+
+var dusty_helium = MaterialBuilder(32103, "dusty_helium")
+    .fluid("gas")
+    .color(0xa040af)
+    .flags("disable_decomposition")
+    .components([<material:helium_3> * 1, <material:rare_earth> * 1])
+    .build();
+
+var taranium_enriched_helium = MaterialBuilder(32104, "taranium_enriched_helium")
+    .fluid("gas").plasma()
+    .color(0x10c050)
+    .flags("disable_decomposition")
+    .build();
+
+var taranium_depleted_helium = MaterialBuilder(32105, "taranium_depleted_helium")
+    .fluid("gas")
+    .color(0x006010)
+    .flags("disable_decomposition")
+    .build();
+
+var tritium_hydride = MaterialBuilder(32106, "tritium_hydride")
+    .fluid("gas")
+    .color(0xd01010)
+    .flags("disable_decomposition")
+    .components([<material:tritium> * 1, <material:hydrogen> * 1])
+    .build();
+
+var helium_hydride = MaterialBuilder(32107, "helium_hydride")
+    .fluid("gas")
+    .color(0xe6d62e)
+    .flags("disable_decomposition")
+    .components([<material:helium_3> * 1, <material:hydrogen> * 1])
+    .build();
+
+var dioxygen_difluoride = MaterialBuilder(32108, "dioxygen_difluoride")
+    .fluid()
+    .colorAverage()
+    .components([<material:oxygen> * 2, <material:fluorine> * 2])
+    .build();
+<material:dioxygen_difluoride>.setFluidTemperature(80);
+
+var taranium = MaterialBuilder(32109, "taranium")
+    .element("Taranium")
+    .ingot()
+    .color(0xff00ff).iconSet("bright")
+    .blastTemp(10800)
+    .build();
+<material:taranium>.setFormula("Tn");
 
 <material:rhodium_sulfate>.addDust();
 

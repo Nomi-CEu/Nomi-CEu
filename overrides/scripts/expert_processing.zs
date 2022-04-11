@@ -631,7 +631,7 @@ mixer.recipeBuilder()
     .duration(300).EUt(30).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
-    .inputs(<metaitem:dustAmmoniumChloride> * 4)
+    .inputs(<metaitem:dustAmmoniumChloride>)
     .fluidInputs(<liquid:acidic_iridium_dioxide_solution> * 4000)
     .outputs(<metaitem:dustAmmoniumHexachloroiridiate> * 2, <metaitem:dustPlatinumGroupResidue>)
     .fluidOutputs(<liquid:water> * 2000)
@@ -643,3 +643,104 @@ chemical_reactor.recipeBuilder()
     .outputs(<metaitem:dustIridium>)
     .fluidOutputs(<liquid:hydrochloric_acid> * 6000, <liquid:ammonia> * 2000)
     .duration(150).EUt(7680).buildAndRegister();
+
+// O2F2
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:oxygen> * 2000, <liquid:fluorine> * 2000)
+    .notConsumable(<actuallyadditions:item_crystal_empowered:3>)
+    .fluidOutputs(<liquid:dioxygen_difluoride> * 1000)
+    .duration(100).EUt(480).buildAndRegister();
+
+// Helium Hydride
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:hydrogen> * 1000, <liquid:tritium> * 1000)
+    .fluidOutputs(<liquid:tritium_hydride> * 1000)
+    .duration(160).EUt(1920).buildAndRegister();
+
+distillation_tower.recipeBuilder()
+    .fluidInputs(<liquid:tritium_hydride> * 10000)
+    .fluidOutputs(<liquid:tritium_hydride> * 9900, <liquid:helium_hydride> * 100)
+    .duration(800).EUt(192).buildAndRegister();
+
+// Stone Dust
+// Small Pile of Quartzite Dust * 1
+<recipemap:centrifuge>.findRecipe(120, [<metaitem:dustStone>], null).remove();
+
+chemical_bath.recipeBuilder()
+    .inputs(<ore:dustStone> * 24)
+    .fluidInputs(<liquid:hydrofluoric_acid> * 6000)
+    .outputs(<metaitem:dustQuartzite> * 4)
+    .fluidOutputs(<liquid:dirty_hexafluorosilicic_acid> * 3000)
+    .duration(40).EUt(120).buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:dirty_hexafluorosilicic_acid> * 3000)
+    .outputs(<metaitem:dustStoneResidue> * 12)
+    .fluidOutputs(<liquid:hexafluorosilicic_acid> * 1000)
+    .duration(100).EUt(96).buildAndRegister();
+
+// 1/48 scale
+centrifuge.recipeBuilder()
+    .inputs(<metaitem:dustStoneResidue> * 24, <metaitem:dustSodiumMethoxide>)
+    .outputs(<metaitem:dustPotassiumFeldspar> * 12, <metaitem:dustSodalite> * 8, <metaitem:dustBiotite> * 6, <metaitem:dustMagnetite> * 4, <metaitem:dustMetalMixture> * 3, <metaitem:dustUncommonResidue>)
+    .duration(200).EUt(96).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustUncommonResidue>)
+    .fluidInputs(<liquid:dioxygen_difluoride> * 1000)
+    .outputs(<metaitem:dustOxidisedResidue>, <metaitem:dustAsh> * 2)
+    .duration(80).EUt(96).buildAndRegister();
+
+// 1/480 scale
+centrifuge.recipeBuilder()
+    .inputs(<metaitem:dustOxidisedResidue> * 10)
+    .fluidInputs(<liquid:distilled_water> * 10000)
+    .outputs(<metaitem:dustGarnetSand> * 12, <metaitem:dustBauxite> * 8, <metaitem:dustPhosphorusPentoxide> * 4, <metaitem:dustIlmenite> * 4, <metaitem:dustChalcopyrite> * 3, <metaitem:dustRefinedResidue>)
+    .fluidOutputs(<liquid:hydrofluoric_acid> * 2000, <liquid:lead_zinc_solution> * 250, <liquid:sulfuric_nickel_solution> * 250)
+    .duration(300).EUt(720).buildAndRegister();
+
+// 1/4800 scale
+centrifuge.recipeBuilder()
+    .inputs(<metaitem:dustRefinedResidue> * 10)
+    .notConsumable(<draconicevolution:wyvern_core>)
+    .notConsumable(<liquid:fluoroantimonic_acid> * 1000)
+    .outputs(<metaitem:dustPitchblende> * 10, <metaitem:dustBorax> * 6, <metaitem:dustRareEarth> * 5, <metaitem:dustSnowchestite> * 4, <metaitem:dustDiamond> * 3, <metaitem:dustCleanInertResidue>)
+    .duration(320).EUt(400).buildAndRegister();
+
+// 1/4800 scale
+mixer.recipeBuilder()
+    .inputs(<metaitem:dustCleanInertResidue>)
+    .fluidInputs(<liquid:helium_hydride> * 1000, <liquid:helium> * 9000)
+    .fluidOutputs(<liquid:ultraacidic_residue> * 10000)
+    .duration(160).EUt(1920).buildAndRegister();
+
+// 1/9600 scale
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:xenon> * 1000, <liquid:oxygen> * 4000, <liquid:ultraacidic_residue> * 20000)
+    .notConsumable(<draconicevolution:awakened_core>)
+    .outputs(<metaitem:dustEuropium> * 3, <metaitem:dustKaemanite>, <metaitem:dustSmallOsmiridium8020>)
+    .fluidOutputs(<liquid:xenic_acid> * 1000, <liquid:dusty_helium> * 20000)
+    .duration(120).EUt(1920).buildAndRegister();
+
+// Taranium
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:dusty_helium> * 10000)
+    .fluidOutputs(<liquid:taranium_enriched_helium> * 150, <liquid:taranium_depleted_helium> * 850, <liquid:helium> * 9000)
+    .duration(400).EUt(2880).buildAndRegister();
+
+fusion_reactor.recipeBuilder()
+    .fluidInputs(<liquid:taranium_enriched_helium> * 1000, <liquid:helium_3> * 1000)
+    .fluidOutputs(<liquid:plasma.taranium_enriched_helium> * 3000)
+    .property("eu_to_start", 480000000)
+    .duration(160).EUt(3840).buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:plasma.taranium_enriched_helium> * 3000)
+    .notConsumable(<contenttweaker:magnetron>, <thermalfoundation:material:1025>)
+    .outputs(<metaitem:dustTaranium>, <metaitem:dustTinyCleanInertResidue>)
+    .duration(100).EUt(30720).buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:taranium_depleted_helium> * 2500)
+    .outputs(<metaitem:dustCleanInertResidue>)
+    .duration(320).EUt(1920).buildAndRegister();
