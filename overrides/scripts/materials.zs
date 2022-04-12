@@ -774,6 +774,7 @@ var taranium = MaterialBuilder(32109, "taranium")
 <material:lapis>.addFlags(["generate_dense"]);
 <material:graphene>.addFlags(["generate_foil"]);
 <material:berkelium>.addFlags(["generate_frame"]);
+<material:blue_steel>.addFlags(["generate_frame"]);
 // Prevent TE Gears from showing up
 <material:tin>.addFlags(["generate_gear"]);
 <material:copper>.addFlags(["generate_gear"]);

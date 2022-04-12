@@ -271,112 +271,6 @@ makeExtremeRecipe9(<metaitem:creative_chest> * 2,
       X : <thermalexpansion:capacitor:32000>.withTag({Energy: 250000000}, false)
     });
 
-// Ported Hard Recipe Configs
-//// Harder Glass
-//recipes.addShaped(<metaitem:dustQuartzSand>, [
-//    [<minecraft:sand>, <ore:gtceMortars>]
-//]);
-//
-//macerator.recipeBuilder() 
-//    .inputs(<minecraft:sand>)
-//    .outputs(<metaitem:dustQuartzSand>)
-//    .duration(30).EUt(2)
-//    .buildAndRegister();
-//
-//recipes.addShapeless(<metaitem:dustGlass>, [<metaitem:dustQuartzSand>, <metaitem:dustTinyFlint>]);
-//
-//furnace.remove(<minecraft:glass>);
-//recipes.remove(<minecraft:glass_bottle>);
-//
-//// Harder Redstone
-//recipes.remove(<minecraft:dispenser>);
-//recipes.addShaped(<minecraft:dispenser>, [
-//    [<minecraft:cobblestone>, <metaitem:ringIron>, <minecraft:cobblestone>],
-//    [<metaitem:springIron>, <minecraft:string>, <metaitem:springIron>],
-//    [<metaitem:gearSmallIron>, <metaitem:stickRedAlloy>, <metaitem:gearSmallIron>]
-//]);
-//
-//recipes.remove(<minecraft:comparator>);
-//recipes.remove(<minecraft:repeater>);
-//
-//recipes.remove(<minecraft:piston>);
-//// Piston * 4
-//<recipemap:assembler>.findRecipe(16, [<metaitem:plateAluminium>, <minecraft:planks:0> * 3, <minecraft:cobblestone:0> * 4, <minecraft:redstone:0>], null).remove();
-//// Piston * 2
-//<recipemap:assembler>.findRecipe(16, [<metaitem:plateSteel>, <minecraft:planks:0> * 3, <minecraft:cobblestone:0> * 4, <minecraft:redstone:0>], null).remove();
-//// Piston * 8
-//<recipemap:assembler>.findRecipe(16, [<metaitem:plateTitanium>, <minecraft:planks:0> * 3, <minecraft:cobblestone:0> * 4, <minecraft:redstone:0>], null).remove();
-//// Piston * 1
-//<recipemap:assembler>.findRecipe(16, [<metaitem:plateBronze>, <minecraft:planks:0> * 3, <minecraft:cobblestone:0> * 4, <minecraft:redstone:0>], null).remove();
-//// Piston * 1
-//<recipemap:assembler>.findRecipe(16, [<metaitem:plateIron>, <minecraft:planks:0> * 3, <minecraft:cobblestone:0> * 4, <minecraft:redstone:0>], null).remove();
-//
-//recipes.addShaped(<minecraft:piston>, [
-//    [<ore:plankWood>,<ore:plankWood>,<ore:plankWood>],
-//    [<metaitem:gearSmallIron>, <ore:fenceWood>, <metaitem:gearSmallIron>],
-//    [<minecraft:cobblestone>, <metaitem:plateRedAlloy>, <minecraft:cobblestone>]
-//]);
-//assembler.recipeBuilder()
-//    .inputs(<ore:stickIron>, <metaitem:gearSmallIron>, <ore:slabWood>, <minecraft:cobblestone>)
-//    .fluidInputs(<liquid:red_alloy> * 144)
-//    .outputs(<minecraft:piston>)
-//    .duration(240).EUt(7).buildAndRegister();
-//
-//assembler.recipeBuilder()
-//    .inputs(<ore:stickSteel>, <metaitem:gearSmallSteel>, <ore:slabWood> * 2, <minecraft:cobblestone> * 2)
-//    .fluidInputs(<liquid:red_alloy> * 288)
-//    .outputs(<minecraft:piston> * 2)
-//    .duration(240).EUt(7).buildAndRegister();
-//
-//assembler.recipeBuilder()
-//    .inputs(<ore:stickAluminium>, <metaitem:gearSmallAluminium>, <ore:slabWood> * 4, <minecraft:cobblestone> * 4)
-//    .fluidInputs(<liquid:red_alloy> * 432)
-//    .outputs(<minecraft:piston> * 4)
-//    .duration(240).EUt(7).buildAndRegister();
-//
-//assembler.recipeBuilder()
-//    .inputs(<ore:stickStainlessSteel>, <metaitem:gearSmallStainlessSteel>, <ore:slabWood> * 8, <minecraft:cobblestone> * 8)
-//    .fluidInputs(<liquid:red_alloy> * 576)
-//    .outputs(<minecraft:piston> * 8)
-//    .duration(240).EUt(7).buildAndRegister();
-//
-//assembler.recipeBuilder()
-//    .inputs(<ore:stickTitanium>, <metaitem:gearSmallTitanium>, <ore:slabWood> * 16, <minecraft:cobblestone> * 16)
-//    .fluidInputs(<liquid:red_alloy> * 1152)
-//    .outputs(<minecraft:piston> * 16)
-//    .duration(240).EUt(7).buildAndRegister();
-//
-//recipes.remove(<minecraft:observer>);
-//recipes.addShaped(<minecraft:observer>, [
-//    [<metaitem:ringIron>, <ore:cobblestone>, <metaitem:ringIron>],
-//    [ <ore:cobblestone>, <minecraft:quartz>, <ore:cobblestone>],
-//    [<ore:gearSmallIron>, <ore:stickRedAlloy>, <ore:gearSmallIron>]
-//]);
-//
-//recipes.addShaped(<minecraft:observer>, [
-//    [<metaitem:ringIron>, <ore:cobblestone>, <metaitem:ringIron>],
-//    [ <ore:cobblestone>, <ore:crystalCertusQuartz>, <ore:cobblestone>],
-//    [<ore:gearSmallIron>, <ore:stickRedAlloy>, <ore:gearSmallIron>]
-//]);
-//
-//recipes.addShaped(<minecraft:observer>, [
-//    [<metaitem:ringIron>, <ore:cobblestone>, <metaitem:ringIron>],
-//    [ <ore:cobblestone>, <ore:gemQuartzite>, <ore:cobblestone>],
-//    [<ore:gearSmallIron>, <ore:stickRedAlloy>, <ore:gearSmallIron>]
-//]);
-//
-//// Charcoal
-//furnace.remove(<minecraft:coal:1>);
-//
-//// Hard EBF
-//recipes.removeByRecipeName("gregtech:electric_blast_furnace");
-//recipes.addShaped(<metaitem:electric_blast_furnace>, [
-//    [<metaitem:electric_furnace.lv>,<metaitem:electric_furnace.lv>,<metaitem:electric_furnace.lv>],
-//    [<ore:circuitLv>, <gregtech:metal_casing:2>, <ore:circuitLv>],
-//    [<ore:cableGtSingleTin>,<ore:circuitLv> ,<ore:cableGtSingleTin>]
-//]);
-//
-
 //Numismatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:5>);
 recipes.addShaped(<thermalexpansion:dynamo:5>, [
@@ -464,9 +358,9 @@ makeShaped("of_nc_cobblestone_generator_mirrored",
 
 //Crystal Growth Chamber
 recipes.addShaped(<ae2stuff:grower>, [
-	[<ore:frameGtHslaSteel>, <appliedenergistics2:material:1>, <ore:frameGtHslaSteel>], 
+	[<ore:frameGtBlueSteel>, <appliedenergistics2:material:1>, <ore:frameGtBlueSteel>], 
 	[<appliedenergistics2:material:1>, <meta_tile_entity:hull.lv>, <appliedenergistics2:material:1>], 
-	[<ore:frameGtHslaSteel>, <appliedenergistics2:material:1>, <ore:frameGtHslaSteel>]]);	
+	[<ore:frameGtBlueSteel>, <appliedenergistics2:material:1>, <ore:frameGtBlueSteel>]]);	
 
 // Remove LCR Radon
 <recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:ingotPlutonium> * 8, <metaitem:dustUranium>], [<liquid:air> * 10000]).remove();

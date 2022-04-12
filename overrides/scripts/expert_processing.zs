@@ -86,9 +86,9 @@ chemical_reactor.recipeBuilder()
     .duration(800).EUt(30).buildAndRegister();
 
 // Hydrazine Rocket Fuel
-mixer.recipeBuilder()
-    .fluidInputs(<liquid:hydrazine> * 1000, <liquid:dimethylhydrazine> * 1000)
-    .fluidOutputs(<liquid:rocket_fuel> * 9000)
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:hydrazine> * 1000, <liquid:dimethylhydrazine> * 1000, <liquid:dinitrogen_tetroxide> * 2000)
+    .fluidOutputs(<liquid:rocket_fuel> * 18000)
     .duration(60).EUt(16).buildAndRegister();
 
 // Graphene 
@@ -681,9 +681,10 @@ centrifuge.recipeBuilder()
 
 // 1/48 scale
 centrifuge.recipeBuilder()
-    .inputs(<metaitem:dustStoneResidue> * 24, <metaitem:dustSodiumMethoxide>)
+    .inputs(<metaitem:dustStoneResidue> * 24, <metaitem:dustSodiumHydroxide> * 3)
+    .fluidInputs(<liquid:water> * 8000)
     .outputs(<metaitem:dustPotassiumFeldspar> * 12, <metaitem:dustSodalite> * 8, <metaitem:dustBiotite> * 6, <metaitem:dustMagnetite> * 4, <metaitem:dustMetalMixture> * 3, <metaitem:dustUncommonResidue>)
-    .duration(200).EUt(96).buildAndRegister();
+    .duration(400).EUt(96).buildAndRegister();
 
 large_chemical_reactor.recipeBuilder()
     .inputs(<metaitem:dustUncommonResidue>)
@@ -695,9 +696,9 @@ large_chemical_reactor.recipeBuilder()
 centrifuge.recipeBuilder()
     .inputs(<metaitem:dustOxidisedResidue> * 10)
     .fluidInputs(<liquid:distilled_water> * 10000)
-    .outputs(<metaitem:dustGarnetSand> * 12, <metaitem:dustBauxite> * 8, <metaitem:dustPhosphorusPentoxide> * 4, <metaitem:dustIlmenite> * 4, <metaitem:dustChalcopyrite> * 3, <metaitem:dustRefinedResidue>)
+    .outputs(<metaitem:dustGarnetSand> * 12, <metaitem:dustBasalticMineralSand> * 12, <metaitem:dustBauxite> * 8, <metaitem:dustPhosphorusPentoxide> * 4, <metaitem:dustIlmenite> * 4, <metaitem:dustRefinedResidue>)
     .fluidOutputs(<liquid:hydrofluoric_acid> * 2000, <liquid:lead_zinc_solution> * 250, <liquid:sulfuric_nickel_solution> * 250)
-    .duration(300).EUt(720).buildAndRegister();
+    .duration(600).EUt(720).buildAndRegister();
 
 // 1/4800 scale
 centrifuge.recipeBuilder()
@@ -705,27 +706,27 @@ centrifuge.recipeBuilder()
     .notConsumable(<draconicevolution:wyvern_core>)
     .notConsumable(<liquid:fluoroantimonic_acid> * 1000)
     .outputs(<metaitem:dustPitchblende> * 10, <metaitem:dustBorax> * 6, <metaitem:dustRareEarth> * 5, <metaitem:dustSnowchestite> * 4, <metaitem:dustDiamond> * 3, <metaitem:dustCleanInertResidue>)
-    .duration(320).EUt(400).buildAndRegister();
+    .duration(800).EUt(400).buildAndRegister();
 
 // 1/4800 scale
 mixer.recipeBuilder()
     .inputs(<metaitem:dustCleanInertResidue>)
-    .fluidInputs(<liquid:helium_hydride> * 1000, <liquid:helium> * 9000)
-    .fluidOutputs(<liquid:ultraacidic_residue> * 10000)
+    .fluidInputs(<liquid:helium_hydride> * 1000)
+    .fluidOutputs(<liquid:ultraacidic_residue> * 1000)
     .duration(160).EUt(1920).buildAndRegister();
 
 // 1/9600 scale
 large_chemical_reactor.recipeBuilder()
-    .fluidInputs(<liquid:xenon> * 1000, <liquid:oxygen> * 4000, <liquid:ultraacidic_residue> * 20000)
+    .fluidInputs(<liquid:xenon> * 1000, <liquid:oxygen> * 4000, <liquid:ultraacidic_residue> * 2000)
     .notConsumable(<draconicevolution:awakened_core>)
-    .outputs(<metaitem:dustEuropium> * 3, <metaitem:dustKaemanite>, <metaitem:dustSmallOsmiridium8020>)
-    .fluidOutputs(<liquid:xenic_acid> * 1000, <liquid:dusty_helium> * 20000)
+    .outputs(<metaitem:dustEuropium> * 2, <metaitem:dustKaemanite>, <metaitem:dustSmallOsmiridium8020>)
+    .fluidOutputs(<liquid:xenic_acid> * 1000, <liquid:dusty_helium> * 2000)
     .duration(120).EUt(1920).buildAndRegister();
 
 // Taranium
 centrifuge.recipeBuilder()
-    .fluidInputs(<liquid:dusty_helium> * 10000)
-    .fluidOutputs(<liquid:taranium_enriched_helium> * 150, <liquid:taranium_depleted_helium> * 850, <liquid:helium> * 9000)
+    .fluidInputs(<liquid:dusty_helium> * 1000)
+    .fluidOutputs(<liquid:taranium_enriched_helium> * 150, <liquid:taranium_depleted_helium> * 850)
     .duration(400).EUt(2880).buildAndRegister();
 
 fusion_reactor.recipeBuilder()
