@@ -194,6 +194,10 @@ makeShaped("of_processing_array", <metaitem:processing_array>,
        S : <advsolars:sunnarium>, //Sunnarium
        B : <metaitem:tool.dataorb>}); //dataorb
 
+// Titanium Ingot * 26
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:processing_array>], [<liquid:oxygen> * 381]).remove();
+// Titanium Dust * 26
+<recipemap:macerator>.findRecipe(8, [<metaitem:processing_array>], null).remove();
 
 
 

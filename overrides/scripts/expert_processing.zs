@@ -85,6 +85,15 @@ chemical_reactor.recipeBuilder()
     .fluidOutputs(<liquid:polyvinyl_acetate> * 4320)
     .duration(800).EUt(30).buildAndRegister();
 
+// Recipe conflict
+// Styrene * 1000
+<recipemap:chemical_reactor>.findRecipe(30, null, [<liquid:ethylbenzene> * 1000]).remove();
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:ethylbenzene> * 1000)
+    .circuit(1)
+    .fluidOutputs(<liquid:styrene> * 1000, <liquid:hydrogen> * 2000)
+    .duration(30).EUt(30).buildAndRegister();
+
 // Hydrazine Rocket Fuel
 chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:hydrazine> * 1000, <liquid:dimethylhydrazine> * 1000, <liquid:dinitrogen_tetroxide> * 2000)
@@ -405,13 +414,13 @@ chemical_reactor.recipeBuilder()
 
 chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:methanol> * 1000, <liquid:carbon_dioxide> * 1000)
-    .notConsumable(<metaitem:dustSodiumMethoxide>)
+    .inputs(<metaitem:dustTinySodiumMethoxide>)
     .fluidOutputs(<liquid:methyl_formate> * 1000)
     .duration(16).EUt(30).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
-    .fluidInputs(<liquid:methyl_formate> * 1000, <liquid:water> * 1000)
-    .fluidOutputs(<liquid:formic_acid> * 1000, <liquid:water> * 1000)
+    .fluidInputs(<liquid:methyl_formate> * 1000, <liquid:water> * 3000)
+    .fluidOutputs(<liquid:formic_acid> * 1000, <liquid:methanol> * 1000)
     .duration(16).EUt(30).buildAndRegister();
 
 // Potassium Pyrosulfate

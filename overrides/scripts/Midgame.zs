@@ -125,3 +125,12 @@ canner.recipeBuilder()
 	.fluidInputs(<liquid:xpjuice> * 500)
 	.outputs(<minecraft:experience_bottle>)
 	.duration(1500).EUt(4).buildAndRegister();
+
+// DE Info Tablet
+recipes.removeByRecipeName("draconicevolution:info_tablet");
+recipes.addShaped(<draconicevolution:info_tablet>, [
+	[<ore:stone>, <ore:stone>, <ore:stone>],
+	[<ore:stone>, <ore:dustDraconium>, <ore:stone>],
+	[<ore:stone>, <ore:stone>, <ore:stone>]
+]);
+
