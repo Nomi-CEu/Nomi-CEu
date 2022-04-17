@@ -89,14 +89,14 @@ vacuum_freezer.recipeBuilder()
 	.buildAndRegister();
 
 // Allow Gas Collector to work in LostCities, void dims
-//gas_collector.recipeBuilder()
-//	.fluidOutputs(<liquid:air> * 10000)
-//	.circuit(4)
-//	.property("dimension", 111)
-//	.property("dimension", 119)
-//	.duration(200)
-//	.EUt(16)
-//	.buildAndRegister();
+gas_collector.recipeBuilder()
+	.fluidOutputs(<liquid:air> * 10000)
+	.circuit(4)
+	.property("dimension", 111)
+	.property("dimension", 119)
+	.duration(200)
+	.EUt(16)
+	.buildAndRegister();
 
 // Rebalancing important chanced outputs
 // Helium * 120
