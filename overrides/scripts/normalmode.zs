@@ -598,6 +598,14 @@ makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
       X : <ore:ingotSignalum>,
       Y : <ore:ingotEnderium> });
 
+// Diamond decomp
+electrolyzer.recipeBuilder()
+	.inputs(<metaitem:dustDiamond>)
+	.outputs(<metaitem:dustCarbon> * 16)
+	.duration(768)
+	.EUt(30)
+	.buildAndRegister();
+
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);

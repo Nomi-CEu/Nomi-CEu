@@ -183,6 +183,7 @@ var microversium = MaterialBuilder(32027, "microversium")
 var draconic_superconductor = MaterialBuilder(32028, "draconic_superconductor")
     .ingot()
     .color(0xf5f0f4).iconSet("shiny")
+    .flags("no_unification")
     .cableProperties(2147483647, 4, 0, true)
     .build();
 
@@ -738,8 +739,9 @@ var dioxygen_difluoride = MaterialBuilder(32108, "dioxygen_difluoride")
 
 var taranium = MaterialBuilder(32109, "taranium")
     .element("Taranium")
-    .ingot()
+    .ingot().fluid()
     .color(0xff00ff).iconSet("bright")
+    .flags("generate_plate", "generate_dense")
     .blastTemp(10800)
     .build();
 <material:taranium>.setFormula("Tn");

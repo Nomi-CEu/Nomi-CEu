@@ -346,13 +346,6 @@ assembler.recipeBuilder()
 // Diamond Electrolysis
 // Carbon Dust * 64
 <recipemap:electrolyzer>.findRecipe(30, [<metaitem:dustDiamond>], null).remove();
-electrolyzer.recipeBuilder()
-	.inputs(<metaitem:dustDiamond>)
-	.outputs(<metaitem:dustCarbon> * 16)
-	.duration(768)
-	.EUt(30)
-	.buildAndRegister();
-
 
 // Kill Glowstone Decomp
 // Small Pile of Redstone Dust * 2

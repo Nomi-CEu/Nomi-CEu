@@ -693,7 +693,7 @@ centrifuge.recipeBuilder()
     .inputs(<metaitem:dustStoneResidue> * 24, <metaitem:dustSodiumHydroxide> * 3)
     .fluidInputs(<liquid:water> * 8000)
     .outputs(<metaitem:dustPotassiumFeldspar> * 12, <metaitem:dustSodalite> * 8, <metaitem:dustBiotite> * 6, <metaitem:dustMagnetite> * 4, <metaitem:dustMetalMixture> * 3, <metaitem:dustUncommonResidue>)
-    .duration(400).EUt(96).buildAndRegister();
+    .duration(1000).EUt(96).buildAndRegister();
 
 large_chemical_reactor.recipeBuilder()
     .inputs(<metaitem:dustUncommonResidue>)
@@ -707,7 +707,7 @@ centrifuge.recipeBuilder()
     .fluidInputs(<liquid:distilled_water> * 10000)
     .outputs(<metaitem:dustGarnetSand> * 12, <metaitem:dustBasalticMineralSand> * 12, <metaitem:dustBauxite> * 8, <metaitem:dustPhosphorusPentoxide> * 4, <metaitem:dustIlmenite> * 4, <metaitem:dustRefinedResidue>)
     .fluidOutputs(<liquid:hydrofluoric_acid> * 2000, <liquid:lead_zinc_solution> * 250, <liquid:sulfuric_nickel_solution> * 250)
-    .duration(600).EUt(720).buildAndRegister();
+    .duration(1500).EUt(720).buildAndRegister();
 
 // 1/4800 scale
 centrifuge.recipeBuilder()
@@ -715,7 +715,7 @@ centrifuge.recipeBuilder()
     .notConsumable(<draconicevolution:wyvern_core>)
     .notConsumable(<liquid:fluoroantimonic_acid> * 1000)
     .outputs(<metaitem:dustPitchblende> * 10, <metaitem:dustBorax> * 6, <metaitem:dustRareEarth> * 5, <metaitem:dustSnowchestite> * 4, <metaitem:dustDiamond> * 3, <metaitem:dustCleanInertResidue>)
-    .duration(800).EUt(400).buildAndRegister();
+    .duration(2000).EUt(400).buildAndRegister();
 
 // 1/4800 scale
 mixer.recipeBuilder()
@@ -730,7 +730,7 @@ large_chemical_reactor.recipeBuilder()
     .notConsumable(<draconicevolution:awakened_core>)
     .outputs(<metaitem:dustEuropium> * 2, <metaitem:dustKaemanite>, <metaitem:dustSmallOsmiridium8020>)
     .fluidOutputs(<liquid:xenic_acid> * 1000, <liquid:dusty_helium> * 2000)
-    .duration(120).EUt(1920).buildAndRegister();
+    .duration(1000).EUt(1920).buildAndRegister();
 
 // Taranium
 centrifuge.recipeBuilder()
@@ -747,7 +747,7 @@ fusion_reactor.recipeBuilder()
 centrifuge.recipeBuilder()
     .fluidInputs(<liquid:plasma.taranium_enriched_helium> * 3000)
     .notConsumable(<contenttweaker:magnetron>, <thermalfoundation:material:1025>)
-    .outputs(<metaitem:dustTaranium>, <metaitem:dustTinyCleanInertResidue>)
+    .outputs(<metaitem:dustTaranium>, <metaitem:dustSmallCleanInertResidue>)
     .duration(100).EUt(30720).buildAndRegister();
 
 centrifuge.recipeBuilder()
