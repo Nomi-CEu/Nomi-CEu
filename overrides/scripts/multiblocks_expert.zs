@@ -358,14 +358,65 @@ actualization_chamber.frontOverlay = <cube_renderer:ENDER_FLUID_LINK>;
 // Universal Crystallizer
 val universal_crystallizer = Builder.start("universal_crystallizer")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle("CCC","GGG","CCC")
-            .aisle("CCC","GOG","CCC")
-            .aisle("CSC","GGG","CCC")
+        return FactoryBlockPattern.start(RelativeDirection.FRONT, RelativeDirection.UP, RelativeDirection.LEFT)
+            .aisle("AAAAAAA",
+        "ABBCBBA",
+        "ABCCCBA",
+        "ACCCCCA",
+        "ABCCCBA",
+        "ABBCBBA",
+        "AAAAAAA")
+            .aisle("AAAAAAA",
+        "B     B",
+        "B  D  B",
+        "B DDD B",
+        "B  D  B",
+        "B     B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "B EEE B",
+        "B E E B",
+        "B EFE B",
+        "B E E B",
+        "B EEE B",
+        "ABBBBBA")
+            .aisle("SAAAAAA",
+        "B EEE B",
+        "B     B",
+        "B  G  B",
+        "B     B",
+        "B EEE B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "B EEE B",
+        "B E E B",
+        "B EFE B",
+        "B E E B",
+        "B EEE B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "B     B",
+        "B  D  B",
+        "B DDD B",
+        "B  D  B",
+        "B     B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "ABBCBBA",
+        "ABCCCBA",
+        "ACCCCCA",
+        "ABCCCBA",
+        "ABBCBBA",
+        "AAAAAAA")
             .where('S', controller.self())
-            .where('O', <metastate:gregtech:fusion_casing:1>)
-            .where('G', <metastate:gregtech:transparent_casing:1>)
-            .where('C', CTPredicate.states(<metastate:gregtech:fusion_casing:4>)
+            .where(' ', CTPredicate.getAir())
+            .where('C', <metastate:gregtech:meta_block_frame_0:9>)
+            .where('B', <metastate:gregtech:transparent_casing:1>)
+            .where('D', <metastate:gregtech:meta_block_compressed_2006:13>)
+            .where('E', <metastate:gregtech:fusion_casing:1>)
+            .where('F', <blockstate:draconicevolution:reactor_component>)
+            .where('G', <blockstate:draconicevolution:reactor_core>)
+            .where('A', CTPredicate.states(<metastate:gcym:large_multiblock_casing:10>).setMinGlobalLimited(80)
             | controller.autoAbilities(true, true, true, true, true, false, false)
             )
             .build();
@@ -441,7 +492,7 @@ makeExtremeRecipe5(<metaitem:multiblocktweaker:actualization_chamber>,
 
 assembly_line.recipeBuilder()
     .inputs(<metaitem:gcym:large_autoclave> * 24, <packagedexcrafting:combination_crafter> * 24, <metaitem:emitter.uv> * 24, <metaitem:field.generator.uv> * 24, <ore:circuitUhv> * 64, <gregtech:wire_coil:7> * 64, <draconicevolution:reactor_component> * 24, <draconicevolution:crafting_injector:3> * 8, <metaitem:plateInfinity> * 3, <metaitem:plateInfinity> * 3, <metaitem:plateInfinity> * 3, <metaitem:plateInfinity> * 3)
-    .fluidInputs(<liquid:cryotheum> * 36864, <liquid:moltenempowereddiamatine> * 18432, <liquid:naquadria> * 9216, <liquid:taranium> * 4608)
+    .fluidInputs(<liquid:cryotheum> * 36864, <liquid:moltenempowereddiamatine> * 18432, <liquid:naquadria> * 63216, <liquid:taranium> * 4608)
     .outputs(<metaitem:multiblocktweaker:universal_crystallizer>)
     .duration(900).EUt(7864320).buildAndRegister();
 
@@ -1489,40 +1540,64 @@ universal_crystallizer.recipeMap.recipeBuilder()
     .inputs(<ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64)
     .outputs(<minecraft:diamond> * 32)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(31457280).buildAndRegister();
+    .duration(3).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeMap.recipeBuilder()
-    .inputs(<ore:dustIron> * 9)
-    .outputs(<actuallyadditions:block_crystal_empowered:5>)
+    .inputs(<ore:dustIron> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:5> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(31457280).buildAndRegister();
+    .duration(3).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeMap.recipeBuilder()
-    .inputs(<ore:dustRedstone> * 9)
-    .outputs(<actuallyadditions:block_crystal_empowered>)
+    .inputs(<ore:dustRedstone> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(31457280).buildAndRegister();
+    .duration(3).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeMap.recipeBuilder()
-    .inputs(<ore:dustLapis> * 9)
-    .outputs(<actuallyadditions:block_crystal_empowered:1>)
+    .inputs(<ore:dustLapis> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:1> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(31457280).buildAndRegister();
+    .duration(3).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeMap.recipeBuilder()
-    .inputs(<ore:dustCoal> * 9)
-    .outputs(<actuallyadditions:block_crystal_empowered:3>)
+    .inputs(<ore:dustCoal> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:3> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(31457280).buildAndRegister();
+    .duration(3).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeMap.recipeBuilder()
-    .inputs(<ore:dustDiamond> * 9)
-    .outputs(<actuallyadditions:block_crystal_empowered:2>)
+    .inputs(<ore:dustDiamond> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:2> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(31457280).buildAndRegister();
+    .duration(3).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeMap.recipeBuilder()
-    .inputs(<ore:dustEmerald> * 9)
-    .outputs(<actuallyadditions:block_crystal_empowered:4>)
+    .inputs(<ore:dustEmerald> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:4> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(31457280).buildAndRegister();
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:gemPerfectDiamond> * 3, <minecraft:nether_star> * 9, <ore:plateDiamond> * 27, <ore:gemDiamond> * 27)
+    .outputs(<metaitem:ingotCrystalMatrix>)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<actuallyadditions:block_crystal_empowered:4>, <metaitem:blockNetherStar> * 2, <draconicevolution:draconic_core> * 4, <armorplus:block_compressed_infused_lava_crystal> * 2)
+    .outputs(<draconicevolution:wyvern_core>)
+    .fluidInputs(<liquid:naquadah_enriched> * 30)
+    .duration(30).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<minecraft:nether_star>, <draconicevolution:wyvern_core> * 4, <metaitem:blockAwakenedDraconium> * 2)
+    .outputs(<draconicevolution:awakened_core>)
+    .fluidInputs(<liquid:naquadah_enriched> * 30)
+    .duration(30).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:blockDraconium> * 5, <draconicevolution:wyvern_core> * 4, <draconicevolution:dragon_heart> * 2)
+    .outputs(<metaitem:blockAwakenedDraconium> * 5)
+    .fluidInputs(<liquid:naquadah_enriched> * 30)
+    .duration(30).EUt(23592960).buildAndRegister();

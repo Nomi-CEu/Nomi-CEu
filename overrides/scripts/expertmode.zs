@@ -533,19 +533,19 @@ recipes.addShaped(<metaitem:gcym:parallel_hatch.iv>, [
 
 recipes.addShaped(<metaitem:gcym:parallel_hatch.luv>, [
     [<metaitem:sensor.luv>, <metaitem:field.generator.luv>, <metaitem:emitter.luv>],
-    [<ore:circuitluv>, <metaitem:hull.luv>, <ore:circuitluv>],
+    [<ore:circuitLuv>, <metaitem:hull.luv>, <ore:circuitLuv>],
     [<metaitem:cableGtDoubleNiobiumTitanium>, <metaitem:field.generator.luv>, <metaitem:cableGtDoubleNiobiumTitanium>]
 ]);
 
 recipes.addShaped(<metaitem:gcym:parallel_hatch.zpm>, [
     [<metaitem:sensor.zpm>, <metaitem:field.generator.zpm>, <metaitem:emitter.zpm>],
-    [<ore:circuitzpm>, <metaitem:hull.zpm>, <ore:circuitzpm>],
+    [<ore:circuitZpm>, <metaitem:hull.zpm>, <ore:circuitZpm>],
     [<metaitem:cableGtDoubleVanadiumGallium>, <metaitem:field.generator.zpm>, <metaitem:cableGtDoubleVanadiumGallium>]
 ]);
 
 recipes.addShaped(<metaitem:gcym:parallel_hatch.uv>, [
     [<metaitem:sensor.uv>, <metaitem:field.generator.uv>, <metaitem:emitter.uv>],
-    [<ore:circuituv>, <metaitem:hull.uv>, <ore:circuituv>],
+    [<ore:circuitUv>, <metaitem:hull.uv>, <ore:circuitUv>],
     [<metaitem:cableGtDoubleYttriumBariumCuprate>, <metaitem:field.generator.uv>, <metaitem:cableGtDoubleYttriumBariumCuprate>]
 ]);
 
