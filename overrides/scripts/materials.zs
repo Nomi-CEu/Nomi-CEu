@@ -1,5 +1,4 @@
 #loader gregtech
-#packmode normal
 
 import mods.gregtech.material.MaterialBuilder;
 import mods.gregtech.material.MaterialRegistry;
@@ -7,10 +6,6 @@ import mods.gregtech.material.IMaterialPredicate;
 import mods.gregtech.material.Material;
 import mods.gregtech.material.Elements;
 import mods.gregtech.ore.OrePrefix;
-
-val gemPerfect as OrePrefix = OrePrefix.registerOrePrefix("gemPerfect", 8, "gemPerfect", 1);
-gemPerfect.setGenerationPredicate(IMaterialPredicate.hasGem);
-gemPerfect.createMaterialItem();
 
 var element_omnium = Elements.add(130, 234, -1, null, "Omnium", "Nm", false);
 var element_draconium = Elements.add(149, 264, -1, null, "Draconium", "Dc", false);
@@ -402,12 +397,11 @@ var snowchestite = MaterialBuilder(32059, "snowchestite")
     .flags("disable_decomposition")
     .color(0x274c9f).iconSet("shiny")
     .components([<material:naquadah_oxide> * 3, <material:pyromorphite> * 1])
-    .addOreByproducts(<material:chalcopyrite>, <material:vanadium_magnetite>, <material:naquadah>)
+    .addOreByproducts(<material:chalcopyrite>, <material:vanadium_magnetite>, <material:naquadah_hydroxide>)
     .build();
 
 var naquadah_hydroxide = MaterialBuilder(32060, "naquadah_hydroxide")
     .dust()
-    .flags("disable_decomposition")
     .color(0x1941a6).iconSet("dull")
     .components([<material:naquadah> * 1, <material:hydrogen> * 3, <material:oxygen> * 3])
     .build();
@@ -783,7 +777,7 @@ var taranium = MaterialBuilder(32109, "taranium")
 <material:gold>.addFlags(["generate_gear"]);
 <material:lead>.addFlags(["generate_gear"]);
 <material:nickel>.addFlags(["generate_gear"]);
-<material:platinum>.addFlags(["generate_gear", ]);
+<material:platinum>.addFlags(["generate_gear"]);
 <material:silver>.addFlags(["generate_gear"]);
 <material:emerald>.addFlags(["generate_gear"]);
 

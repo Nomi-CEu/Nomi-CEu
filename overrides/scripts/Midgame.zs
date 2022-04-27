@@ -1,6 +1,11 @@
 import mods.gregtech.recipe.RecipeMap;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
+import mods.gregtech.ore.OrePrefix;
+import mods.gregtech.ore.IOreRecipeHandler;
+import mods.gregtech.material.Material;
+import mods.gregtech.recipe.helpers;
+import mods.gregtech.recipe.IRecipeUtils;
 import crafttweaker.data.IData;
 
 recipes.remove(<thermalexpansion:satchel:2>);
@@ -134,3 +139,15 @@ recipes.addShaped(<draconicevolution:info_tablet>, [
 	[<ore:stone>, <ore:stone>, <ore:stone>]
 ]);
 
+// Perfect Gems
+val gemPerfect as OrePrefix = OrePrefix.getPrefix("gemPerfect");
+
+gemPerfect.generateRecipes(function(orePrefix as OrePrefix, material as Material) {
+	val utils as IRecipeUtils = IRecipeUtils.utils;
+
+    <recipemap:cutter>.recipeBuilder()
+        .inputs(utils.item(orePrefix, material))
+        .fluidInputs(<liquid:lubricant> * 100)
+        .outputs(utils.ore("gemExquisite", material))
+        .duration(100).EUt(1920).buildAndRegister();
+} as IOreRecipeHandler);
