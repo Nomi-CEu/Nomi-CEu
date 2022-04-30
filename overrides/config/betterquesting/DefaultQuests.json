@@ -45356,9 +45356,9 @@
         }
       },
       "preRequisites:11": [
-        332,
         802,
-        846
+        846,
+        535
       ],
       "questID:3": 749
     },
@@ -49381,7 +49381,7 @@
           "icon:10": {
             "id:8": "gregtech:machine",
             "Count:3": 1,
-            "Damage:2": 1024,
+            "Damage:2": 1025,
             "OreDict:8": ""
           },
           "globalshare:1": 0,
@@ -49390,8 +49390,8 @@
           "snd_update:8": "minecraft:entity.player.levelup",
           "ismain:1": 0,
           "repeat_relative:1": 1,
-          "name:8": "§2Steam Grinder and Steam Oven",
-          "desc:8": "§2These Steam multiblocks are intended for use in the Steam Age. This pack skips the Steam Age, but these may still be worth using.\n\nThe Steam Grinder functions as 5.3 LV Macerators in parallel, and the Steam Oven functions as 8 Furnaces in parallel. They require an input of Steam through a Steam Hatch.\nYou may want to consider setting up a rudimentary ore-doubling setup with these. Point the Output Bus of the Steam Grinder into the Input Bus of the Steam Oven.\n\nApart from the controller, you will need over a stack of Bronze to make the casings to build these multiblocks."
+          "name:8": "§2Steam Grinder",
+          "desc:8": "§2This Steam multiblock was intended for use in the Steam Age. This pack skips the Steam Age, but it may still be worth using.\n\nThe Steam Grinder functions as 5.3 LV Macerators in parallel. It requires an input of Steam through a Steam Hatch, but it uses very little Steam.\n\nYou may want to consider setting up a rudimentary ore-doubling setup with it. Point the output in the direction of several upgraded Furnaces."
         }
       },
       "tasks:9": {
@@ -49405,13 +49405,31 @@
             "0:10": {
               "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 1024,
+              "Damage:2": 1025,
               "OreDict:8": ""
             },
             "1:10": {
               "id:8": "gregtech:machine",
               "Count:3": 1,
-              "Damage:2": 1025,
+              "Damage:2": 1653,
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1652,
+              "OreDict:8": ""
+            },
+            "3:10": {
+              "id:8": "gregtech:machine",
+              "Count:3": 1,
+              "Damage:2": 1651,
+              "OreDict:8": ""
+            },
+            "4:10": {
+              "id:8": "gregtech:metal_casing",
+              "Count:3": 22,
+              "Damage:2": 0,
               "OreDict:8": ""
             }
           },
@@ -51378,7 +51396,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "§2Trinium",
-          "desc:8": "§2A strong heavy element obtained from the Naquadah chain.\n\n§r§6Trinium§r can come from §6Kaemanite Ore§r, but you will probably want to bolster its production with §6Naquadah Dust§r processing. It comes out at the second stage, so if you don\u0027t mind storing the intermediates and have Fluorine under control, you can hold off doing the full chain if you don\u0027t need to yet. You get §d1 Trinium per 12 Naquadah processed§r.\n\nThis will be required in large quantities for §6Trinium Coils§r, §6Superconducting Coil Blocks§r, §6Naquadah Alloy§r, among other things. You will need 14 stacks at least for a §3Fusion Reactor Mk1§r, so stock up on it."
+          "desc:8": "§2A strong heavy element obtained from the Naquadah chain.\n\n§r§6Trinium§r can come from §6Kaemanite Ore§r, but you will probably want to bolster its production with §6Naquadah Dust§r processing. It comes out at the second stage, so if you don\u0027t mind storing the intermediates and have Fluorine under control, you can hold off doing the full chain if you don\u0027t need to yet. You get §d1 Trinium per 6 Naquadah processed§r.\n\nThis will be required in large quantities for §6Trinium Coils§r, §6Superconducting Coil Blocks§r, §6Naquadah Alloy§r, among other things. You will need 14 stacks at least for a §3Fusion Reactor Mk1§r, so stock up on it."
         }
       },
       "tasks:9": {
