@@ -148,6 +148,6 @@ gemPerfect.generateRecipes(function(orePrefix as OrePrefix, material as Material
     <recipemap:cutter>.recipeBuilder()
         .inputs(utils.item(orePrefix, material))
         .fluidInputs(<liquid:lubricant> * 100)
-        .outputs(utils.ore("gemExquisite", material))
+        .outputs(utils.item("gemExquisite", material) * 2)
         .duration(100).EUt(1920).buildAndRegister();
 } as IOreRecipeHandler);

@@ -392,20 +392,20 @@ var pyromorphite = MaterialBuilder(32058, "pyromorphite")
     .components([<material:lead> * 5, <material:phosphate> * 3, <material:chlorine> * 1])
     .build();
 
-var snowchestite = MaterialBuilder(32059, "snowchestite")
+var naquadah_hydroxide = MaterialBuilder(32059, "naquadah_hydroxide")
+    .dust()
+    .color(0x1941a6).iconSet("dull")
+    .components([<material:naquadah> * 1, <material:hydrogen> * 3, <material:oxygen> * 3])
+    .build();
+<material:naquadah_hydroxide>.setFormula("Nq(OH)3", true);
+
+var snowchestite = MaterialBuilder(32060, "snowchestite")
     .dust().ore()
     .flags("disable_decomposition")
     .color(0x274c9f).iconSet("shiny")
     .components([<material:naquadah_oxide> * 3, <material:pyromorphite> * 1])
     .addOreByproducts(<material:chalcopyrite>, <material:vanadium_magnetite>, <material:naquadah_hydroxide>)
     .build();
-
-var naquadah_hydroxide = MaterialBuilder(32060, "naquadah_hydroxide")
-    .dust()
-    .color(0x1941a6).iconSet("dull")
-    .components([<material:naquadah> * 1, <material:hydrogen> * 3, <material:oxygen> * 3])
-    .build();
-<material:naquadah_hydroxide>.setFormula("Nq(OH)3", true);
 
 var caesium_hydroxide = MaterialBuilder(32061, "caesium_hydroxide")
     .dust()

@@ -1738,10 +1738,6 @@ mods.jei.JEI.removeAndHide(<avaritia:matter_cluster>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_plate>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_redstone>);
 
-//DevTech Removals
-mods.jei.JEI.removeAndHide(<devtech:meta_gem_perfect:2000>); // Perfect Glass
-
-
 //EnderIO Removals
 mods.jei.JEI.removeAndHide(<enderio:item_material:28>);
 mods.jei.JEI.removeAndHide(<enderio:item_material:39>);
