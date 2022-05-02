@@ -1853,6 +1853,11 @@ mods.jei.JEI.removeAndHide(<extrautils2:analogcrafter>);
 
 
 //Gregtech Removals
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.lv>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.mv>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.luv>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.zpm>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.uv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.lv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.mv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.hv>);

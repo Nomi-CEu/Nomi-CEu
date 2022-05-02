@@ -17,7 +17,7 @@ var draconium = MaterialBuilder(32001, "draconium")
     .color(0xbe49ed).iconSet("metallic")
     .blastTemp(6800, "HIGHER")
     .cableProperties(524288, 1, 0, true)
-    .flags(["generate_plate", "generate_rod", "generate_gear"])
+    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_dense"])
     .build();
 
 var awakened_draconium = MaterialBuilder(32002, "awakened_draconium")

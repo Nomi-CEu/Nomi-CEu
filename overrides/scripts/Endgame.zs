@@ -269,6 +269,34 @@ centrifuge.recipeBuilder()
     .fluidOutputs(<liquid:enriched_naquadah_solution> * 1000)
     .duration(400).EUt(1920).buildAndRegister();
 
+// World Accelerators
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.lv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.mv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.hv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.ev");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.iv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.luv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.zpm");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.uv");
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:sensor.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:plateDenseDraconium>, <metaitem:plateDoubleIridium> * 2, <metaitem:hull.luv>, <metaitem:plateDoubleIridium> * 2, <metaitem:plateDenseDraconium>, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:emitter.luv> * 20)
+    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152)
+    .outputs(<metaitem:world_accelerator.hv>)
+    .duration(900).EUt(30720).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:sensor.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:plateDenseDraconium>, <metaitem:plateDoubleEuropium> * 2, <metaitem:hull.zpm>, <metaitem:plateDoubleEuropium> * 2, <metaitem:plateDenseDraconium>, <metaitem:field.generator.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:emitter.zpm> * 20)
+    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152)
+    .outputs(<metaitem:world_accelerator.ev>)
+    .duration(900).EUt(122880).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:sensor.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:plateDenseNeutronium>, <metaitem:plateDoubleEuropium> * 2, <metaitem:hull.uv>, <metaitem:plateDoubleEuropium> * 2, <metaitem:plateDenseNeutronium>, <metaitem:field.generator.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:emitter.uv> * 20)
+    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152, <liquid:naquadria> * 576)
+    .outputs(<metaitem:world_accelerator.iv>)
+    .duration(900).EUt(491520).buildAndRegister();
+
 // Stabilized Miners Tooltips
 <contenttweaker:tiereightship_stabilized>.addTooltip(format.italic(
 	format.white("A stabilized version, injected with a Heart of a Universe.")));
