@@ -218,7 +218,7 @@ val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
             .aisle("CCC", "CSC", "CCC")
             .where('S', controller.self())
             .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
-            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>) | controller.autoAbilities(true, false, true, true, false, false, false))
+            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>).setMinGlobalLimited(15) | controller.autoAbilities(true, false, true, true, false, false, false))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
