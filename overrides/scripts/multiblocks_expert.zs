@@ -984,7 +984,7 @@ microverse_projector_advanced_ii.recipeMap
              <minecraft:diamond_block> * 64,
              <minecraft:diamond_block> * 64,
              <metaitem:blockPlatinum> * 64, //Platinum Block
-             <metaitem:blockAmericium> * 16) 
+             <metaitem:blockRuthenium> * 16) 
     .buildAndRegister();
 
 
@@ -1458,7 +1458,7 @@ actualization_chamber.recipeMap
              <minecraft:diamond_block> * 64,
              <minecraft:diamond_block> * 64,
              <metaitem:blockPlatinum> * 64, //Platinum Block
-             <metaitem:blockAmericium> * 16) 
+             <metaitem:blockRuthenium> * 16) 
     .buildAndRegister();
 
 // t7 chaos
