@@ -7,6 +7,10 @@ import mods.gregtech.material.Material;
 import mods.gregtech.material.Elements;
 import mods.gregtech.ore.OrePrefix;
 
+val gemPerfect as OrePrefix = OrePrefix.registerOrePrefix("gemPerfect", 8, "gemPerfect", 1);
+gemPerfect.setGenerationPredicate(IMaterialPredicate.hasGem);
+gemPerfect.createMaterialItem();
+
 var element_omnium = Elements.add(130, 234, -1, null, "Omnium", "Nm", false);
 var element_draconium = Elements.add(149, 264, -1, null, "Draconium", "Dc", false);
 var element_draconium_awakened = Elements.add(149, 267, -1, null, "AwakenedDraconium", "Dc*", false);
