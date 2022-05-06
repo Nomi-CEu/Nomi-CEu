@@ -100,6 +100,13 @@ chemical_reactor.recipeBuilder()
     .fluidOutputs(<liquid:rocket_fuel> * 18000)
     .duration(60).EUt(16).buildAndRegister();
 
+// Beryllium Oxide
+arc_furnace.recipeBuilder()
+    .inputs(<ore:dustBeryllium>)
+    .fluidInputs(<liquid:oxygen> * 1000)
+    .outputs(<metaitem:ingotBerylliumOxide>)
+    .duration(640).EUt(30).buildAndRegister();
+
 // Graphene 
 // Graphene Dust * 1
 <recipemap:mixer>.findRecipe(480, [<metaitem:dustGraphite>, <metaitem:dustSilicon>, <metaitem:dustCarbon> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
