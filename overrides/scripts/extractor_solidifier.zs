@@ -29,7 +29,7 @@ fluid_extractor.recipeBuilder()
 fluid_extractor.recipeBuilder()
     .inputs([<ore:gemEnderPearl>])
     .fluidOutputs([<liquid:ender> * 250])
-    .duration(40).EUt(32).buildAndRegister();
+    .duration(40).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<ore:dustMana>])
