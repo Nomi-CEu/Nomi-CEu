@@ -279,6 +279,20 @@ recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.luv");
 recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.zpm");
 recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.uv");
 
+// Mercury Barium Calcium Cuprate Ingot * 32
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.hv>], [<liquid:oxygen> * 357]).remove();
+// Mercury Barium Calcium Cuprate Dust * 32
+<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.hv>], null).remove();
+// Uranium Triplatinum Ingot * 32
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.ev>], [<liquid:oxygen> * 474]).remove();
+// Uranium Triplatinum Dust * 32
+<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.ev>], null).remove();
+// Tungstensteel Ingot * 32
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.iv>], [<liquid:oxygen> * 568]).remove();
+// Tungstensteel Dust * 32
+<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.iv>], null).remove();
+
+
 assembly_line.recipeBuilder()
     .inputs(<metaitem:sensor.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:plateDenseDraconium>, <metaitem:plateDoubleIridium> * 2, <metaitem:hull.luv>, <metaitem:plateDoubleIridium> * 2, <metaitem:plateDenseDraconium>, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:emitter.luv> * 20)
     .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152)
