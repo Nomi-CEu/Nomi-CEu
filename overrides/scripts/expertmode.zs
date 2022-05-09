@@ -549,6 +549,55 @@ recipes.addShaped(<metaitem:gcym:parallel_hatch.uv>, [
     [<metaitem:cableGtDoubleYttriumBariumCuprate>, <metaitem:field.generator.uv>, <metaitem:cableGtDoubleYttriumBariumCuprate>]
 ]);
 
+// Stabilized Miners
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tiereightship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tiereightship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tiersevenship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tiersevenship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tiersixship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tiersixship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tierfiveship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tierfiveship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tierfourship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tierfourship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tierthreeship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tierthreeship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tiertwoship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tiertwoship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tieroneship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tieroneship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
 // Remove shortcut recipes
 recipes.remove(<minecraft:stick> * 16);
 recipes.removeByRecipeName("appliedenergistics2:misc/vanilla_comparator");
