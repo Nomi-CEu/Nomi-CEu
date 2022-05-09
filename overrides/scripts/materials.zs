@@ -764,6 +764,8 @@ var taranium = MaterialBuilder(32109, "taranium")
 <material:nether_star>.addFluid();
 
 <material:topaz>.addFlags(["generate_lens"]);
+<material:blue_topaz>.addFlags(["generate_lens"]);
+<material:ender_pearl>.addFlags(["generate_lens"]);
 <material:electrum>.addFlags(["generate_gear"]);
 <material:neutronium>.addFlags(["generate_round"]);
 <material:titanium>.addFlags(["generate_foil", "generate_fine_wire"]);
