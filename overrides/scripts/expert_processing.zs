@@ -361,15 +361,15 @@ distillery.recipeBuilder()
 blast_furnace.recipeBuilder()
     .inputs(<metaitem:dustNaquadahOxide> * 5)
     .fluidInputs(<liquid:neocryolite> * 4000)
-    .fluidOutputs(<liquid:hot_naquadah_oxide_neocryolite_solution> * 1000)
+    .fluidOutputs(<liquid:hot_naquadah_oxide_neocryolite_solution> * 4000)
     .property("temperature", 4700)
     .duration(400).EUt(1920).buildAndRegister();
 
 electrolyzer.recipeBuilder()
-    .fluidInputs(<liquid:hot_naquadah_oxide_neocryolite_solution> * 1000)
+    .fluidInputs(<liquid:hot_naquadah_oxide_neocryolite_solution> * 4000)
     .notConsumable(<metaitem:stickRuthenium> * 2)
     .outputs(<metaitem:dustNaquadah> * 2)
-    .fluidOutputs(<liquid:neocryolite> * 970, <liquid:oxygen> * 3000)
+    .fluidOutputs(<liquid:neocryolite> * 3750, <liquid:oxygen> * 3000)
     .duration(750).EUt(7680).buildAndRegister();
 
 chemical_bath.recipeBuilder()
