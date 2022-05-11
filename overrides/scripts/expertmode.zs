@@ -322,6 +322,10 @@ assembler.recipeBuilder()
     .inputs(<ore:chestWood> * 4, <metaitem:frameTreatedWood> * 4, <metaitem:crate.steel>)
     .outputs(<actuallyadditions:block_giant_chest>)
     .duration(100).EUt(7).buildAndRegister();
+recipes.addShaped(<actuallyadditions:block_giant_chest>, [
+    [<ore:chestWood>, <metaitem:frameTreatedWood>, <ore:chestWood>],
+    [<metaitem:frameTreatedWood>, <metaitem:crate.steel>, <metaitem:frameTreatedWood>],
+    [<ore:chestWood>, <metaitem:frameTreatedWood>, <ore:chestWood>]]);
 
 // Drawer Upgrades
 recipes.remove(<storagedrawers:upgrade_template>);
