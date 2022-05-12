@@ -575,6 +575,12 @@ assembly_line.recipeBuilder()
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
+    .inputs(<contenttweaker:tierfourandhalfship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
+    .outputs(<contenttweaker:tierfourandhalfship_stabilized>)
+    .duration(5000).EUt(500000).buildAndRegister();
+
+assembly_line.recipeBuilder()
     .inputs(<contenttweaker:tierfourship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
     .outputs(<contenttweaker:tierfourship_stabilized>)
