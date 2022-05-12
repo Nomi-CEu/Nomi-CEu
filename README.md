@@ -26,8 +26,9 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 - Harder recipes for assorted things like Vanadium, Graphene, Numismatic Dynamos, and more
 
 Installation instructions:
-- Grab the hardmode config files from [here](https://github.com/m2r1k5/nomi-ceu/tree/main/hardmode%20config%20overrides). Drag this into your minecraft folder (you should be "replacing" the existing `config` folder). Restart the pack for this to take effect.
+- Install the hardmode config files from [here](https://github.com/tracer4b/nomi-ceu/tree/main/overrides). Restart the pack for this to take effect.
 - Run `/bq_admin default load ExpertQuests` to load the hard mode questbook.
+
 ## Credits
 Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
 GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).   
