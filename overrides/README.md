@@ -5,4 +5,6 @@ To install hard mode, drag the files inside `\config-overrides\expert` into the 
 
 ![image](https://user-images.githubusercontent.com/61507029/168111281-65006a94-4b4d-4255-aca1-1f5039eec705.png)
 
+The same for reverting back to normal mode, plus manually deleting `\config\globalgamerules.cfg` to cancel forced peaceful.
+
 Windows users may also use `pack-mode-switcher.bat` found in this directory.
