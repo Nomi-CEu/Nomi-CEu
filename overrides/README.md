@@ -7,4 +7,4 @@ To install hard mode, drag the files inside `\config-overrides\expert` into the 
 
 The same for reverting back to normal mode, plus manually deleting `\config\globalgamerules.cfg` to cancel forced peaceful.
 
-Windows users may also use `pack-mode-switcher.bat` found in this directory.
+Windows users may also use `pack-mode-switcher.bat` found in the root directory. (It was here so it comes with the pack, but curseforge clearly doesn't want suspicious file in the release.')
