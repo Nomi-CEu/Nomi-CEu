@@ -35,4 +35,5 @@ Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu
 GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).   
 Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/). ([Permission](https://ibb.co/bBpksq0) at [this message](https://discord.com/channels/771187253937438762/774353150278369351/938438074503942184) in [FurfSky Reborn server](https://discord.gg/fsr))  
 Certain hard mode recipe chains and Magnetron texture from [GCY Science](https://github.com/GregTechCEu/gregicality-science).  
+Stabilized miner textures from [Self-Torture Edition](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition).  
 Thank you!
