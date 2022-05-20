@@ -89,7 +89,7 @@ recipes.addShaped(<solarflux:photovoltaic_cell_5> * 6, [
 	[<advsolars:sunnarium_plate>,<advsolars:sunnarium_plate>,<advsolars:sunnarium_plate>]]);
 
 recipes.addShaped(<solarflux:photovoltaic_cell_4> * 6, [
-[<metaitem:lensBlueTopaz>,<metaitem:lensBlueTopaz>,<metaitem:lensBlueTopaz>],
+[<ore:craftingLensLightBlue>,<ore:craftingLensLightBlue>,<ore:craftingLensLightBlue>],
 [<solarflux:photovoltaic_cell_3>,<solarflux:photovoltaic_cell_3>,<solarflux:photovoltaic_cell_3>],
 [<ore:meshPulsating>,<ore:meshPulsating>,<ore:meshPulsating>]]);
 
