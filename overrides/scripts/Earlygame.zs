@@ -375,5 +375,6 @@ cutter.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister();
 
-// GT Axe Tooltip
+// Tooltips
 <gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
+<thermalexpansion:capacitor>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
