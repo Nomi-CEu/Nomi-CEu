@@ -25578,7 +25578,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Flux Capacitors",
-          "desc:8": "Basic §aFlux Capacitors§r hold a whopping lot of energy - §a1 million RF§r - and are useful for keeping your §aRF-powered§r equipment and tools charged.\n\nPut one into your newly crafted §3Battery Buffer§r to charge it. You can then put it in your inventory to charge your items with §aRF§r.\n\nFlux Capacitor is a §bBauble§r, open your inventory and look for the Baubles button, click it to reveal the additional bauble slots menu and put it into any slot you wish.\n\nFinally you can charge up all those depleted §6Dark Boots§r and §6The Ender§r swords you\u0027ve looted."
+          "desc:8": "Basic §aFlux Capacitors§r hold a whopping lot of energy - §a1 million RF§r - and are useful for keeping your §aRF-powered§r equipment and tools charged.\n\nPut one into your newly crafted §3Battery Buffer§r to charge it. You can then put it in your inventory to charge your items with §aRF§r. \n§cRF batteries such as Flux Capacitors cannot be drained by Battery Buffers!§r\n\nFlux Capacitor is a §bBauble§r, open your inventory and look for the Baubles button, click it to reveal the additional bauble slots menu and put it into any slot you wish.\n\nFinally you can charge up all those depleted §6Dark Boots§r and §6The Ender§r swords you\u0027ve looted."
         }
       },
       "tasks:9": {
@@ -55019,7 +55019,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "LV Battery Buffer",
-          "desc:8": "The §6Battery Buffer§r is a machine which can hold §6Batteries§r for energy storage. Each Battery accepts up to 2 amps and outputs up to 1 amp.\n\nYou can also charge §6Electric tools§r in them."
+          "desc:8": "The §6Battery Buffer§r is a machine which can hold §6Batteries§r for energy storage. Each Battery accepts up to 2 amps and outputs up to 1 amp.\n\nYou can also charge §6Electric tools§r in them.\n\n§cRF batteries such as Flux Capacitors cannot be drained by Battery Buffers!"
         }
       },
       "tasks:9": {
