@@ -162,6 +162,11 @@ recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<gregtech:meta_tool:
 
 //Pyrolyse Oven
 recipes.removeByRecipeName("gregtech:pyrolyse_oven");	
+// Aluminium Ingot * 21
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:pyrolyse_oven>], [<liquid:oxygen> * 99]).remove();
+// Aluminium Dust * 21
+<recipemap:macerator>.findRecipe(8, [<metaitem:pyrolyse_oven>], null).remove();
+
 recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 	[<metaitem:electric.piston.lv>, <ore:circuitLv>, <ore:wireGtQuadrupleCupronickel>], 
 	[<ore:circuitLv>, <meta_tile_entity:hull.ulv>, <ore:circuitLv>], 
