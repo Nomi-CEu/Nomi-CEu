@@ -50,6 +50,7 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
 
 microverse_projector_basic.hasMufflerMechanics = true;
 microverse_projector_basic.hasMaintenanceMechanics = true;
+//microverse_projector_basic.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 // Advanced Microverse Projector
 val microverse_projector_advanced = Builder.start("mbt:microverse_projector_advanced")
@@ -89,7 +90,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .where('G', <blockstate:gregtech:transparent_casing>)
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
-            .where(' ', CTPredicate.getAir())
+            .where(' ', CTPredicate.getAny())
             .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
             .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
             .build();
@@ -108,6 +109,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
 
 microverse_projector_advanced.hasMufflerMechanics = true;
 microverse_projector_advanced.hasMaintenanceMechanics = true;
+//microverse_projector_advanced.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 // Advanced Microverse Projector II
 val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_advanced_ii")
@@ -187,7 +189,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('S', controller.self())
             .where('G', <blockstate:gregtech:transparent_casing>)
             .where('V', <blockstate:gregtech:multiblock_casing>)
-            .where(' ', CTPredicate.getAir())
+            .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
             .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
             .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
@@ -206,6 +208,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
 
 microverse_projector_advanced_ii.hasMufflerMechanics = true;
 microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
+//microverse_projector_advanced_ii.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 
 // Naquadah Reactor 1
@@ -240,6 +243,7 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
             .where('O', <metastate:extendedcrafting:trimmed:5>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
             )
             .build();
@@ -255,10 +259,13 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
     .buildAndRegister();
 naquadah_reactor_1.hasMufflerMechanics = false;
 naquadah_reactor_1.hasMaintenanceMechanics = false;
+//naquadah_reactor_1.frontOverlay = <cube_renderer:CANNER_OVERLAY>;
 
 naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
-    return [recipe.getEUt(), recipe.getDuration()];
+    return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
 } as IRunOverclockingLogicFunction;
+
+<metaitem:multiblocktweaker:naquadah_reactor_1>.addTooltip(format.yellow("Produces exactly 2A ZPM, does not overclock"));
 
 // Naquadah Reactor 2
 val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
@@ -294,6 +301,7 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
             .where('O', <metastate:extendedcrafting:storage:4>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
             )
             .build();
@@ -310,11 +318,13 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
 
 naquadah_reactor_2.hasMufflerMechanics = false;
 naquadah_reactor_2.hasMaintenanceMechanics = false;
+//naquadah_reactor_2.frontOverlay = <cube_renderer:CANNER_OVERLAY>;
 
 naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
-    return [recipe.getEUt(), recipe.getDuration()];
+    return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
 } as IRunOverclockingLogicFunction;
 
+<metaitem:multiblocktweaker:naquadah_reactor_2>.addTooltip(format.yellow("Produces exactly 2A UV, does not overclock"));
 
 // Actualization Chamber
 val actualization_chamber = Builder.start("actualization_chamber")
@@ -338,29 +348,112 @@ val actualization_chamber = Builder.start("actualization_chamber")
             .minOutputs(1)
             .maxOutputs(16)
             .build())
-    .withBaseTexture(<cube_renderer:FUSION_TEXTURE>)
+//    .withBaseTexture(<cube_renderer:FUSION_TEXTURE>)
+    .withBaseTexture(<metastate:gcym:large_multiblock_casing:9>)
     .buildAndRegister();
 
 actualization_chamber.hasMufflerMechanics = false;
 actualization_chamber.hasMaintenanceMechanics = false;
+//actualization_chamber.frontOverlay = <cube_renderer:ENDER_FLUID_LINK>;
+
+// Universal Crystallizer
+val universal_crystallizer = Builder.start("universal_crystallizer")
+    .withPattern(function(controller as IControllerTile) as IBlockPattern {
+        return FactoryBlockPattern.start(RelativeDirection.FRONT, RelativeDirection.UP, RelativeDirection.LEFT)
+            .aisle("AAAAAAA",
+        "ABBCBBA",
+        "ABCCCBA",
+        "ACCCCCA",
+        "ABCCCBA",
+        "ABBCBBA",
+        "AAAAAAA")
+            .aisle("AAAAAAA",
+        "B     B",
+        "B  D  B",
+        "B DDD B",
+        "B  D  B",
+        "B     B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "B EEE B",
+        "B E E B",
+        "B EFE B",
+        "B E E B",
+        "B EEE B",
+        "ABBBBBA")
+            .aisle("SAAAAAA",
+        "B EEE B",
+        "B     B",
+        "B  G  B",
+        "B     B",
+        "B EEE B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "B EEE B",
+        "B E E B",
+        "B EFE B",
+        "B E E B",
+        "B EEE B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "B     B",
+        "B  D  B",
+        "B DDD B",
+        "B  D  B",
+        "B     B",
+        "ABBBBBA")
+            .aisle("AAAAAAA",
+        "ABBCBBA",
+        "ABCCCBA",
+        "ACCCCCA",
+        "ABCCCBA",
+        "ABBCBBA",
+        "AAAAAAA")
+            .where('S', controller.self())
+            .where(' ', CTPredicate.getAir())
+            .where('C', <metastate:gregtech:meta_block_frame_0:9>)
+            .where('B', <metastate:gregtech:transparent_casing:1>)
+            .where('D', <metastate:gregtech:meta_block_compressed_2006:13>)
+            .where('E', <metastate:gregtech:fusion_casing:1>)
+            .where('F', <blockstate:draconicevolution:reactor_component>)
+            .where('G', <blockstate:draconicevolution:reactor_core>)
+            .where('A', CTPredicate.states(<metastate:gcym:large_multiblock_casing:10>).setMinGlobalLimited(80)
+            | controller.autoAbilities(true, true, true, true, true, false, false)
+            )
+            .build();
+        } as IPatternBuilderFunction)
+    .withRecipeMap(
+        FactoryRecipeMap.start("universal_crystallizer")
+            .minInputs(1)
+            .maxInputs(9)
+            .minOutputs(1)
+            .maxOutputs(1)
+            .maxFluidInputs(1)
+            .build())
+    .withBaseTexture(<metastate:gcym:large_multiblock_casing:10>)
+    .buildAndRegister();
+
+universal_crystallizer.hasMufflerMechanics = false;
+universal_crystallizer.hasMaintenanceMechanics = true;
+//universal_crystallizer.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
-    [<ore:circuitAdvanced>, <contenttweaker:microverse_casing>, <ore:circuitAdvanced>],
+    [<ore:circuitHv>, <contenttweaker:microverse_casing>, <ore:circuitHv>],
     [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitAdvanced>, <contenttweaker:microverse_casing>, <ore:circuitAdvanced>]
+    [<ore:circuitHv>, <contenttweaker:microverse_casing>, <ore:circuitHv>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced", <metaitem:mbt:microverse_projector_advanced>, [
-    [<ore:circuitExtreme>, <contenttweaker:microverse_casing>, <ore:circuitExtreme>],
+    [<ore:circuitEv>, <contenttweaker:microverse_casing>, <ore:circuitEv>],
     [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitExtreme>, <contenttweaker:microverse_casing>, <ore:circuitExtreme>]
+    [<ore:circuitEv>, <contenttweaker:microverse_casing>, <ore:circuitEv>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_projector_advanced_ii>, [
-    [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>],
+    [<ore:circuitIv>, <contenttweaker:microverse_casing>, <ore:circuitIv>],
     [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitElite>, <contenttweaker:microverse_casing>, <ore:circuitElite>]
+    [<ore:circuitIv>, <contenttweaker:microverse_casing>, <ore:circuitIv>]
 ]);
 
 
@@ -368,7 +461,7 @@ makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>
     ["NCN",
      "GSG",
      "PPP"],
-    { C : <ore:circuitElite>, //T5
+    { C : <ore:circuitIv>, //T5
       G : <nuclearcraft:reactor_casing_transparent>,
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
@@ -378,7 +471,7 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
     ["NCN",
      "GSG",
      "PPP"],
-    { C : <ore:circuitMaster>, //T6
+    { C : <ore:circuitLuv>, //T6
       G : <nuclearcraft:reactor_casing_transparent>,
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
@@ -392,11 +485,17 @@ makeExtremeRecipe5(<metaitem:multiblocktweaker:actualization_chamber>,
      "PSFEP",
      "PPPPP"],
     { G : <metaitem:field.generator.uv>,
-      W : <ore:circuitInfinite>,
+      W : <ore:circuitUv>,
       P : <ore:plateAmericium>,
       E : <metaitem:emitter.uv>,
       S : <metaitem:sensor.uv>,
       F : <gregtech:fusion_casing:1> });
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:gcym:large_autoclave> * 24, <packagedexcrafting:combination_crafter> * 24, <metaitem:emitter.uv> * 24, <metaitem:field.generator.uv> * 24, <ore:circuitUhv> * 64, <gregtech:wire_coil:7> * 64, <draconicevolution:reactor_component> * 24, <draconicevolution:crafting_injector:3> * 8, <metaitem:plateInfinity> * 3, <metaitem:plateInfinity> * 3, <metaitem:plateInfinity> * 3, <metaitem:plateInfinity> * 3)
+    .fluidInputs(<liquid:cryotheum> * 36864, <liquid:moltenempowereddiamatine> * 18432, <liquid:naquadria> * 63216, <liquid:taranium> * 4608)
+    .outputs(<metaitem:multiblocktweaker:universal_crystallizer>)
+    .duration(900).EUt(7864320).buildAndRegister();
 
 // multiblock recipemap recipes
 // basic projector
@@ -771,7 +870,8 @@ microverse_projector_advanced.recipeMap
              <metaitem:dustBoron> * 64,
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_beryllium_0> * 64)
+             <gregtech:ore_beryllium_0> * 64,
+             <gregtech:ore_fluorite_0> * 64)
     .buildAndRegister();
 
 
@@ -783,9 +883,12 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
-    .outputs(<gregtech:ore_kaemanite_0:2> * 24,
-             <gregtech:ore_naquadah_0:2> * 48)
-             
+    .outputs(<gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_kaemanite_0> * 24)
     .buildAndRegister();
 
 
@@ -815,7 +918,7 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 32)
+             <gregtech:ore_iridosmine_8020_0> * 24)
     .buildAndRegister();
 
 
@@ -881,7 +984,7 @@ microverse_projector_advanced_ii.recipeMap
              <minecraft:diamond_block> * 64,
              <minecraft:diamond_block> * 64,
              <metaitem:blockPlatinum> * 64, //Platinum Block
-             <metaitem:blockAmericium> * 16) 
+             <metaitem:blockRuthenium> * 16) 
     .buildAndRegister();
 
 
@@ -1271,11 +1374,13 @@ actualization_chamber.recipeMap
              <gregtech:ore_sphalerite_0> * 64,
              <gregtech:ore_monazite_0> * 64,
              <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
-             <gregtech:ore_osmiridium_8020_0> * 16,
+             <gregtech:ore_osmiridium_8020_0> * 6,
+             <gregtech:ore_iridosmine_8020_0> * 6,
              <metaitem:dustBoron> * 64,
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_beryllium_0> * 64)
+             <gregtech:ore_beryllium_0> * 64,
+             <gregtech:ore_fluorite_0> * 64)
     .buildAndRegister();
 
 // t5 nq ke
@@ -1285,8 +1390,12 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
     .circuit(2)
-    .outputs(<gregtech:ore_kaemanite_0:2> * 24,
-             <gregtech:ore_naquadah_0:2> * 48)
+    .outputs(<gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
+             <gregtech:ore_kaemanite_0> * 24)
     .buildAndRegister();
 
 
@@ -1303,7 +1412,7 @@ actualization_chamber.recipeMap
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
-             <gregtech:ore_iridosmine_8020_0> * 32)
+             <gregtech:ore_iridosmine_8020_0> * 24)
     .buildAndRegister();
 
 // t6 es
@@ -1349,7 +1458,7 @@ actualization_chamber.recipeMap
              <minecraft:diamond_block> * 64,
              <minecraft:diamond_block> * 64,
              <metaitem:blockPlatinum> * 64, //Platinum Block
-             <metaitem:blockAmericium> * 16) 
+             <metaitem:blockRuthenium> * 16) 
     .buildAndRegister();
 
 // t7 chaos
@@ -1426,3 +1535,70 @@ naquadah_reactor_2.recipeMap
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
+
+// Universal Crystallizer Recipes
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64)
+    .outputs(<minecraft:diamond> * 32)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:dustIron> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:5> * 7)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:dustRedstone> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered> * 7)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:dustLapis> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:1> * 7)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:dustCoal> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:3> * 7)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:dustDiamond> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:2> * 7)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:dustEmerald> * 63)
+    .outputs(<actuallyadditions:block_crystal_empowered:4> * 7)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:gemPerfectDiamond> * 3, <minecraft:nether_star> * 9, <ore:plateDiamond> * 27, <ore:gemDiamond> * 27)
+    .outputs(<metaitem:ingotCrystalMatrix>)
+    .fluidInputs(<liquid:naquadah_enriched> * 3)
+    .duration(3).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<actuallyadditions:block_crystal_empowered:4>, <metaitem:blockNetherStar> * 2, <draconicevolution:draconic_core> * 4, <armorplus:block_compressed_infused_lava_crystal> * 2)
+    .outputs(<draconicevolution:wyvern_core>)
+    .fluidInputs(<liquid:naquadah_enriched> * 30)
+    .duration(30).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<minecraft:nether_star>, <draconicevolution:wyvern_core> * 4, <metaitem:blockAwakenedDraconium> * 2)
+    .outputs(<draconicevolution:awakened_core>)
+    .fluidInputs(<liquid:naquadah_enriched> * 30)
+    .duration(30).EUt(23592960).buildAndRegister();
+
+universal_crystallizer.recipeMap.recipeBuilder()
+    .inputs(<ore:blockDraconium> * 5, <draconicevolution:wyvern_core> * 4, <draconicevolution:dragon_heart> * 2)
+    .outputs(<metaitem:blockAwakenedDraconium> * 5)
+    .fluidInputs(<liquid:naquadah_enriched> * 30)
+    .duration(30).EUt(23592960).buildAndRegister();

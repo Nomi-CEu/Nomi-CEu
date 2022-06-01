@@ -123,7 +123,7 @@ makeExtremeRecipe9(<metaitem:zpm>,
       C : <contenttweaker:stabilizedcalifornium>,
       G : <metaitem:field.generator.zpm>,
       N : <nuclearcraft:part:3>,
-      U : <ore:circuitUltimate> });
+      U : <ore:circuitZpm> });
 
 
 //Luminescence
@@ -385,46 +385,12 @@ mods.extendedcrafting.TableCrafting.addShaped(0, <extendedcrafting:singularity_u
 	[<contenttweaker:solidifiedchlorine>, <contenttweaker:solidifiedargon>, <ore:dustPotassium>, <ore:dustCalcium>, <ore:ingotTitanium>, <ore:ingotVanadium>, <ore:ingotChrome>, <ore:ingotManganese>, <ore:ingotIron>], 
 	[<ore:ingotCobalt>, <ore:ingotNickel>, <ore:ingotCopper>, <ore:ingotZinc>, <ore:ingotGallium>, <ore:dustArsenic>, <contenttweaker:solidifiedkrypton>, <ore:ingotYttrium>, <ore:ingotNiobium>], 
 	[<ore:ingotMolybdenum>, <ore:ingotRuthenium>, <ore:ingotRhodium>, <ore:ingotPalladium>, <contenttweaker:exoticmaterialscatalyst>, <ore:ingotSilver>, <ore:dustCadmium>, <ore:ingotIndium>, <ore:ingotTin>], 
-	[<ore:ingotAntimony>, <contenttweaker:solidifiedxenon>, <ore:ingotCaesium>, <ore:dustBarium>, <ore:dustLanthanum>, <ore:dustCerium>, <ore:ingotNeodymium>, <ore:ingotSamarium>, <ore:ingotEuropium>], 
+	[<ore:ingotAntimony>, <contenttweaker:solidifiedxenon>, <ore:dustCaesium>, <ore:dustBarium>, <ore:dustLanthanum>, <ore:dustCerium>, <ore:ingotNeodymium>, <ore:ingotSamarium>, <ore:ingotEuropium>], 
 	[<ore:ingotLutetium>, <ore:ingotTantalum>, <ore:ingotTungsten>, <ore:ingotOsmium>, <ore:ingotIridium>, <ore:ingotPlatinum>, <ore:ingotGold>, <contenttweaker:solidifiedmercury>, <ore:ingotLead>], 
 	[<contenttweaker:solidifiedradon>, <ore:ingotThorium>, <contenttweaker:stabilizeduranium>, <contenttweaker:stabilizedneptunium>, <contenttweaker:stabilizedplutonium>, <ore:ingotAmericium>, <contenttweaker:stabilizedcurium>, <contenttweaker:stabilizedberkelium>, <contenttweaker:stabilizedcalifornium>], 
 	[<ore:nuggetNetherStar>, <contenttweaker:stabilizedeinsteinium>, <ore:ingotDarmstadtium>, <ore:ingotTritanium>, <ore:ingotDuranium>, <ore:ingotTrinium>, <ore:ingotDraconium>, <ore:ingotNaquadah>, <ore:nuggetNetherStar>]
 ]);
 
-//////////////////// Exotic Materials Catalyst ////////////////////////
-makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
-    ["L  M  J",
-     " K W S ",
-     "  YNT  ",
-     "OFUVAIC",
-     "  XEH  ",
-     " Q G P ",
-     "B  R  D"],
-    { A : <ore:ingotCrystalMatrix>,
-      B : <ore:ingotRuridit>,
-      C : <ore:ingotElectricalSteel>,
-      D : <ore:ingotEnergeticAlloy>,
-      E : <ore:ingotVibrantAlloy>,
-      F : <ore:ingotRhodiumPlatedPalladium>,
-      G : <ore:ingotDarkSteel>,
-      H : <ore:ingotSoularium>,
-      I : <ore:ingotEndSteel>,
-      J : <metaitem:ingotKanthal>,
-      K : <metaitem:ingotMagnalium>,
-      L : <metaitem:ingotNichrome>,
-      M : <metaitem:ingotRedSteel>,
-      N : <metaitem:ingotBlueSteel>,
-      O : <metaitem:ingotVanadiumSteel>,
-      P : <metaitem:ingotHssg>,
-      Q : <metaitem:ingotHsse>,
-      R : <metaitem:ingotHsss>,
-      S : <metaitem:ingotManyullyn>,
-      T : <ore:ingotMicroversium>,
-      U : <ore:ingotElectrumFlux>,
-      V : <simplyjetpacks:metaitemmods:3>,
-      W : <thermalfoundation:material:136>,
-      X : <ore:ingotSignalum>,
-      Y : <ore:ingotEnderium> });
 
 ////////////////////////// Crystal Matrix Ingot ///////////////////////
 recipes.remove(<avaritia:resource:1>);

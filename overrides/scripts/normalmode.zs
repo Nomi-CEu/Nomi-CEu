@@ -19,6 +19,9 @@ import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 import scripts.common.makeShapeless3 as makeShapeless3;
+import scripts.common.removeMaterial as removeMaterial;
+import scripts.common.removeMaterialSolid as removeMaterialSolid;
+import scripts.common.removeMaterialFluid as removeMaterialFluid;
 
 //Nether Cake
 recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustNetherrack>,<metaitem:dustNetherrack>,<metaitem:dustNetherrack>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<minecraft:soul_sand>,<minecraft:soul_sand>,<minecraft:soul_sand>]]);
@@ -62,14 +65,14 @@ recipes.remove(<meta_tile_entity:macerator.lv>);
 recipes.addShaped(<meta_tile_entity:macerator.lv>, [
 	[<metaitem:electric.piston.lv>, <metaitem:electric.motor.lv>, <metaitem:toolHeadBuzzSawWroughtIron>],
 	[<ore:cableGtSingleTin>, <ore:cableGtSingleTin>, <meta_tile_entity:hull.lv>],
-	[<ore:circuitBasic>, <ore:circuitBasic>, <ore:cableGtSingleTin>]]);
+	[<ore:circuitLv>, <ore:circuitLv>, <ore:cableGtSingleTin>]]);
 
 //MV Macerator
 recipes.remove(<meta_tile_entity:macerator.mv>);
 recipes.addShaped(<meta_tile_entity:macerator.mv>, [
 	[<metaitem:electric.piston.mv>, <metaitem:electric.motor.mv>, <metaitem:toolHeadBuzzSawSteel>],
 	[<ore:cableGtSingleCopper>, <ore:cableGtSingleCopper>, <meta_tile_entity:hull.mv>],
-	[<ore:circuitGood>, <ore:circuitGood>, <ore:cableGtSingleCopper>]]);
+	[<ore:circuitMv>, <ore:circuitMv>, <ore:cableGtSingleCopper>]]);
 
 //LV Piston
 recipes.addShaped(<metaitem:electric.piston.lv>, [
@@ -95,19 +98,19 @@ recipes.remove(<meta_tile_entity:extruder.hv>);
 recipes.remove(<meta_tile_entity:extruder.ev>);
 
 
-recipes.addShaped(<meta_tile_entity:extruder.mv>, [[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitGood>],
+recipes.addShaped(<meta_tile_entity:extruder.mv>, [[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitMv>],
 	[<metaitem:electric.piston.mv>, <meta_tile_entity:hull.mv>, <ore:pipeNormalFluidSteel>],
-	[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitGood>]]);
+	[<ore:wireGtQuadrupleCupronickel>, <ore:wireGtQuadrupleCupronickel>, <ore:circuitMv>]]);
 
 recipes.addShaped(<meta_tile_entity:extruder.hv>, [
-	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitAdvanced>],
+	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitHv>],
 	[<metaitem:electric.piston.hv>, <meta_tile_entity:hull.hv>, <ore:pipeNormalFluidStainlessSteel>],
-	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitAdvanced>]]);
+	[<ore:wireGtQuadrupleKanthal>, <ore:wireGtQuadrupleKanthal>, <ore:circuitHv>]]);
 
 recipes.addShaped(<meta_tile_entity:extruder.ev>, [
-	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitExtreme>],
+	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitEv>],
 	[<metaitem:electric.piston.ev>, <meta_tile_entity:hull.ev>, <ore:pipeNormalFluidTitanium>],
-	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitExtreme>]]);
+	[<ore:wireGtQuadrupleNichrome>, <ore:wireGtQuadrupleNichrome>, <ore:circuitEv>]]);
 
 
 
@@ -290,6 +293,8 @@ makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
 //Rubber by hand
 recipes.addShaped(<metaitem:plateRubber>,[[<ore:gtceHardHammers>],[<metaitem:rubber_drop>],[<metaitem:rubber_drop>]]);	
 
+//Rubber Sheet
+compressor.recipeBuilder().inputs(<metaitem:rubber_drop>).outputs(<metaitem:plateRubber>).duration(20).EUt(8).buildAndRegister();
 
 //Item conduit - by hand
 recipes.addShaped(<enderio:item_item_conduit> * 4, [
@@ -420,47 +425,47 @@ fluid_extractor.recipeBuilder()
     .duration(100).EUt(32).buildAndRegister();
 
 
-// Creative Tank Provider
-val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle("CCC", "CCC", "CCC")
-            .aisle("CCC", "CFC", "CCC")
-            .aisle("CCC", "CSC", "CCC")
-            .where('S', controller.self())
-            .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
-            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>) | controller.autoAbilities(true, false, true, true, false, false, false))
-            .build();
-    } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("creative_tank_provider")
-            .minInputs(2)
-            .maxInputs(2)
-            .minOutputs(1)
-            .maxOutputs(1)
-            .build())
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
-    .buildAndRegister();
-
-creative_tank_provider.hasMufflerMechanics = false;
-creative_tank_provider.hasMaintenanceMechanics = false;
-
-recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
-    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
-    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
-    [<ore:circuitUltimate>, <metaitem:field.generator.uv>, <ore:circuitUltimate>]
-]);
-
-// creative tank provider
-// creative tank
-creative_tank_provider.recipeMap
-    .recipeBuilder()
-    .notConsumable(<contenttweaker:creativeportabletankmold>)
-    .inputs(<minecraft:bucket>)
-    .outputs(<metaitem:creative_tank>)
-    .duration(500)
-    .EUt(100000)
-    .buildAndRegister();
+//// Creative Tank Provider
+//val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
+//    .withPattern(function(controller as IControllerTile) as IBlockPattern {
+//        return FactoryBlockPattern.start()
+//            .aisle("CCC", "CCC", "CCC")
+//            .aisle("CCC", "CFC", "CCC")
+//            .aisle("CCC", "CSC", "CCC")
+//            .where('S', controller.self())
+//            .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
+//            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>) | controller.autoAbilities(true, false, true, true, false, false, false))
+//            .build();
+//    } as IPatternBuilderFunction)
+//    .withRecipeMap(
+//        FactoryRecipeMap.start("creative_tank_provider")
+//            .minInputs(2)
+//            .maxInputs(2)
+//            .minOutputs(1)
+//            .maxOutputs(1)
+//            .build())
+//    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
+//    .buildAndRegister();
+//
+//creative_tank_provider.hasMufflerMechanics = false;
+//creative_tank_provider.hasMaintenanceMechanics = false;
+//
+//recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
+//    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
+//    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
+//    [<ore:circuitZpm>, <metaitem:field.generator.uv>, <ore:circuitZpm>]
+//]);
+//
+//// creative tank provider
+//// creative tank
+//creative_tank_provider.recipeMap
+//    .recipeBuilder()
+//    .notConsumable(<contenttweaker:creativeportabletankmold>)
+//    .inputs(<minecraft:bucket>)
+//    .outputs(<metaitem:creative_tank>)
+//    .duration(500)
+//    .EUt(100000)
+//    .buildAndRegister();
 
 //Numismatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:5>);
@@ -542,7 +547,7 @@ recipes.addShaped(<ae2stuff:grower>, [
 recipes.removeByRecipeName("gregtech:distillation_tower");
 recipes.addShaped(<meta_tile_entity:distillation_tower>, [
 	[<ore:pipeLargeFluidStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeFluidStainlessSteel>], 
-	[<ore:circuitAdvanced>, <meta_tile_entity:hull.mv>, <ore:circuitAdvanced>], 
+	[<ore:circuitHv>, <meta_tile_entity:hull.mv>, <ore:circuitHv>], 
 	[<ore:pipeLargeFluidStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeLargeFluidStainlessSteel>]]);
 
 //Draconium [tier 14]
@@ -558,6 +563,48 @@ blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([
 blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
 blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
+//////////////////// Exotic Materials Catalyst ////////////////////////
+makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
+    ["L  M  J",
+     " K W S ",
+     "  YNT  ",
+     "OFUVAIC",
+     "  XEH  ",
+     " Q G P ",
+     "B  R  D"],
+    { A : <ore:ingotCrystalMatrix>,
+      B : <ore:ingotRuridit>,
+      C : <ore:ingotElectricalSteel>,
+      D : <ore:ingotEnergeticAlloy>,
+      E : <ore:ingotVibrantAlloy>,
+      F : <ore:ingotRhodiumPlatedPalladium>,
+      G : <ore:ingotDarkSteel>,
+      H : <ore:ingotSoularium>,
+      I : <ore:ingotEndSteel>,
+      J : <metaitem:ingotKanthal>,
+      K : <metaitem:ingotMagnalium>,
+      L : <metaitem:ingotNichrome>,
+      M : <metaitem:ingotRedSteel>,
+      N : <metaitem:ingotBlueSteel>,
+      O : <metaitem:ingotVanadiumSteel>,
+      P : <metaitem:ingotHssg>,
+      Q : <metaitem:ingotHsse>,
+      R : <metaitem:ingotHsss>,
+      S : <metaitem:ingotManyullyn>,
+      T : <ore:ingotMicroversium>,
+      U : <ore:ingotElectrumFlux>,
+      V : <simplyjetpacks:metaitemmods:3>,
+      W : <thermalfoundation:material:136>,
+      X : <ore:ingotSignalum>,
+      Y : <ore:ingotEnderium> });
+
+// Diamond decomp
+electrolyzer.recipeBuilder()
+	.inputs(<metaitem:dustDiamond>)
+	.outputs(<metaitem:dustCarbon> * 16)
+	.duration(768)
+	.EUt(30)
+	.buildAndRegister();
 
 // Removals
 // GT
@@ -574,8 +621,71 @@ mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_steel>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_bronze>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
 
-// Stabilized Miners
+// Materials
+removeMaterialSolid(32032);
+removeMaterialSolid(32033);
+removeMaterialSolid(32034);
+removeMaterialSolid(32035);
+removeMaterialSolid(32036);
+removeMaterialSolid(32037);
+removeMaterialSolid(32038);
+removeMaterialSolid(32039);
+removeMaterialSolid(32040);
+removeMaterialSolid(32041);
+removeMaterialSolid(32042);
+removeMaterialSolid(32043);
+removeMaterialSolid(32044);
+removeMaterialSolid(32045);
+removeMaterialSolid(32049);
+removeMaterialSolid(32051);
+removeMaterialSolid(32052);
+removeMaterialSolid(32055);
+removeMaterialSolid(32057);
+removeMaterialSolid(32058);
+removeMaterialSolid(32059);
+removeMaterialSolid(32060);
+removeMaterialSolid(32061);
+removeMaterialSolid(32066);
+removeMaterialSolid(32067);
+removeMaterialSolid(32068);
+removeMaterialSolid(32069);
+removeMaterialSolid(32071);
+removeMaterialSolid(32072);
+removeMaterialSolid(32073);
+removeMaterialSolid(32074);
+removeMaterialSolid(32075);
+removeMaterialSolid(32076);
+removeMaterialSolid(32077);
+removeMaterialSolid(32078);
+removeMaterialSolid(32079);
+removeMaterialSolid(32080);
+removeMaterialSolid(32081);
+removeMaterialSolid(32083);
+removeMaterialSolid(32084);
+removeMaterialSolid(32085);
+removeMaterialSolid(32087);
+removeMaterialSolid(32088);
+removeMaterialSolid(32093);
+removeMaterialSolid(32096);
+removeMaterialSolid(32097);
+removeMaterialSolid(32098);
+removeMaterialSolid(32099);
+removeMaterialSolid(32100);
+removeMaterialSolid(32109);
 
+removeMaterialFluid(32046, [<liquid:hydrogen_peroxide>]);
+removeMaterialFluid(32047, [<liquid:hydrazine>]);
+removeMaterialFluid(32048, [<liquid:acetone_azine>]);
+removeMaterialFluid(32050, [<liquid:kapton_k>]);
+removeMaterialFluid(32053, [<liquid:dimethylformamide>]);
+removeMaterialFluid(32054, [<liquid:aminophenol>]);
+removeMaterialFluid(32056, [<liquid:antimony_pentafluoride>]);
+removeMaterialFluid(32062, [<liquid:neocryolite>]);
+removeMaterialFluid(32063, [<liquid:naquadah_oxide_petro_solution>]);
+removeMaterialFluid(32064, [<liquid:naquadah_oxide_aero_solution>]);
+removeMaterialFluid(32065, [<liquid:hot_naquadah_oxide_neocryolite_solution>]);
+
+// Stabilized Miners
 mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized>);
 mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized_matter>);
 mods.jei.JEI.removeAndHide(<contenttweaker:tierfiveship_stabilized>);

@@ -9,57 +9,57 @@ import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 fluid_extractor.recipeBuilder()
     .inputs([<ore:dustCryotheum>])
     .fluidOutputs([<liquid:cryotheum> * 250])
-    .duration(40).EUt(32).buildAndRegister();
+    .duration(40).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<ore:dustPyrotheum>])
     .fluidOutputs([<liquid:pyrotheum> * 250])
-    .duration(40).EUt(32).buildAndRegister();
+    .duration(40).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<ore:dustAerotheum>])
     .fluidOutputs([<liquid:aerotheum> * 250])
-    .duration(40).EUt(32).buildAndRegister();
+    .duration(40).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<ore:dustPetrotheum>])
     .fluidOutputs([<liquid:petrotheum> * 250])
-    .duration(40).EUt(32).buildAndRegister();
+    .duration(40).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<ore:gemEnderPearl>])
     .fluidOutputs([<liquid:ender> * 250])
-    .duration(40).EUt(32).buildAndRegister();
+    .duration(40).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<ore:dustMana>])
     .fluidOutputs([<liquid:mana> * 250])
-    .duration(40).EUt(32).buildAndRegister();
+    .duration(40).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<thermalfoundation:coin:1>])
     .fluidOutputs([<liquid:gold> * 48])
-    .duration(40).EUt(8).buildAndRegister();
+    .duration(40).EUt(7).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<thermalfoundation:coin:64>])
     .fluidOutputs([<liquid:copper> * 48])
-    .duration(40).EUt(8).buildAndRegister();
+    .duration(40).EUt(7).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<thermalfoundation:coin:66>])
     .fluidOutputs([<liquid:silver> * 48])
-    .duration(40).EUt(8).buildAndRegister();
+    .duration(40).EUt(7).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<thermalfoundation:coin:69>])
     .fluidOutputs([<liquid:nickel> * 48])
-    .duration(40).EUt(8).buildAndRegister();
+    .duration(40).EUt(7).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<thermalfoundation:coin:70>])
     .fluidOutputs([<liquid:platinum> * 48])
-    .duration(40).EUt(8).buildAndRegister();
+    .duration(40).EUt(7).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<actuallyadditions:item_rice_seed>])
@@ -94,22 +94,22 @@ fluid_extractor.recipeBuilder()
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:thorium>])
     .fluidOutputs([<liquid:thorium> * 144])
-    .duration(200).EUt(32).buildAndRegister();
+    .duration(200).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:thorium:4>])
     .fluidOutputs([<liquid:thorium> * 144])
-    .duration(200).EUt(32).buildAndRegister();
+    .duration(200).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:thorium:2>])
     .fluidOutputs([<liquid:thorium> * 16])
-    .duration(20).EUt(32).buildAndRegister();
+    .duration(20).EUt(30).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:thorium:6>])
     .fluidOutputs([<liquid:thorium> * 16])
-    .duration(20).EUt(32).buildAndRegister();
+    .duration(20).EUt(30).buildAndRegister();
 
 //Solidified Gasses
 solidifier.recipeBuilder()

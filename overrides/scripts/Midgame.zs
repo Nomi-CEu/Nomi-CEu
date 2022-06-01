@@ -1,6 +1,10 @@
 import mods.gregtech.recipe.RecipeMap;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
+import mods.gregtech.ore.OrePrefix;
+import mods.gregtech.ore.IOreRecipeHandler;
+import mods.gregtech.material.Material;
+import mods.gregtech.recipe.Utils;
 import crafttweaker.data.IData;
 
 recipes.remove(<thermalexpansion:satchel:2>);
@@ -125,3 +129,22 @@ canner.recipeBuilder()
 	.fluidInputs(<liquid:xpjuice> * 500)
 	.outputs(<minecraft:experience_bottle>)
 	.duration(1500).EUt(4).buildAndRegister();
+
+// DE Info Tablet
+recipes.removeByRecipeName("draconicevolution:info_tablet");
+recipes.addShaped(<draconicevolution:info_tablet>, [
+	[<ore:stone>, <ore:stone>, <ore:stone>],
+	[<ore:stone>, <ore:dustDraconium>, <ore:stone>],
+	[<ore:stone>, <ore:stone>, <ore:stone>]
+]);
+
+// Perfect Gems
+val gemPerfect as OrePrefix = OrePrefix.getPrefix("gemPerfect");
+
+gemPerfect.generateRecipes(function(orePrefix as OrePrefix, material as Material) {
+    <recipemap:cutter>.recipeBuilder()
+        .inputs(Utils.item(orePrefix, material))
+        .fluidInputs(<liquid:lubricant> * 100)
+        .outputs(Utils.item("gemExquisite", material) * 2)
+        .duration(100).EUt(1920).buildAndRegister();
+} as IOreRecipeHandler);

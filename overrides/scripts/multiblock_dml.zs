@@ -137,6 +137,7 @@ val dml_sim_chamber = Builder.start("dml_sim_chamber", 3100)
     .buildAndRegister();
 dml_sim_chamber.hasMaintenanceMechanics = false;
 dml_sim_chamber.hasMufflerMechanics = false;
+//dml_sim_chamber.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
 
 //Recipe for Controller
 makeShaped("simulation_controller", <metaitem:multiblocktweaker:dml_sim_chamber>,

@@ -660,7 +660,7 @@ makeShaped("of_nc_fission_controller", <nuclearcraft:fission_controller_new_fixe
      "BCB",
      "ABA"],
     { A : <nuclearcraft:part:1>,
-      B : <ore:circuitExtreme>,
+      B : <ore:circuitEv>,
       C : <gregtech:metal_casing:7> });
 
 alloy.recipeBuilder()

@@ -663,3 +663,8 @@ tiertwoship_stabilized_matter.rarity = "epic";
 tiertwoship_stabilized_matter.glowing = true;
 tiertwoship_stabilized_matter.maxStackSize = 64;
 tiertwoship_stabilized_matter.register();
+
+var magnetron = VanillaFactory.createItem("magnetron");
+magnetron.rarity = "rare";
+magnetron.maxStackSize = 64;
+magnetron.register();

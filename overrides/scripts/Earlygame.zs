@@ -21,10 +21,6 @@ furnace.addRecipe(<minecraft:slime_ball> * 2, <metaitem:plant_ball>, 0.0);
 //Ender Pearls
 alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs([<minecraft:ender_pearl>]).duration(300).EUt(16).buildAndRegister();
 
-//Wrought Iron
-furnace.remove(<metaitem:nuggetWroughtIron>);
-furnace.addRecipe(<metaitem:ingotWroughtIron>, <minecraft:iron_ingot>, 0.0);
-
 //Wood Pulp
 recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:gtceMortars>]);
 
@@ -56,17 +52,17 @@ recipes.addShaped(<storagedrawers:compdrawers>, [
 
 recipes.addShaped(<storagedrawers:controller>, [
 	[<ore:plateIron>,<ore:plateIron>,<ore:plateIron>],
-	[<ore:circuitBasic>, <storagedrawers:customdrawers>, <ore:circuitBasic>],
+	[<ore:circuitLv>, <storagedrawers:customdrawers>, <ore:circuitLv>],
 	[<ore:plateIron>, <minecraft:diamond_block>, <ore:plateIron>]]);
 
 recipes.addShaped(<storagedrawers:controller>, [
 	[<ore:plateIron>,<ore:plateIron>,<ore:plateIron>],
-	[<ore:circuitBasic>, <storagedrawers:customdrawers>, <ore:circuitBasic>],
+	[<ore:circuitLv>, <storagedrawers:customdrawers>, <ore:circuitLv>],
 	[<ore:plateIron>, <minecraft:emerald_block>, <ore:plateIron>]]);
 
 recipes.addShaped(<storagedrawers:controllerslave>, [
 	[<ore:plateIron>,<ore:plateIron>,<ore:plateIron>],
-	[<ore:circuitBasic>, <storagedrawers:customdrawers>, <ore:circuitBasic>],
+	[<ore:circuitLv>, <storagedrawers:customdrawers>, <ore:circuitLv>],
 	[<ore:plateIron>, <minecraft:gold_block>, <ore:plateIron>]]);
 
 
@@ -166,9 +162,9 @@ mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<act
 recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustBlackBronze>, <ore:dustSteel>, <ore:dustSteel>, <ore:dustSteel>]);
 furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>, 0.0);
 
-chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:glowstone> * 288]).outputs(<thermalfoundation:material:894>).EUt(100).duration(100).buildAndRegister();
-chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:redstone> * 288]).outputs(<thermalfoundation:material:893>).EUt(100).duration(100).buildAndRegister();
-chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:ender> * 250]).outputs(<thermalfoundation:material:895>).EUt(100).duration(100).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:glowstone> * 288]).outputs(<thermalfoundation:material:894>).EUt(75).duration(120).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:redstone> * 288]).outputs(<thermalfoundation:material:893>).EUt(75).duration(120).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:ender> * 250]).outputs(<thermalfoundation:material:895>).EUt(75).duration(120).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:dragon_breath>, <metaitem:dustManyullyn>]).outputs(<ore:dustDraconium>.firstItem).EUt(2000).duration(500).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:glass_bottle> * 4]).fluidInputs([<liquid:pyrotheum> * 1000, <liquid:nitro_fuel> * 1000]).outputs(<minecraft:dragon_breath> * 4).EUt(2000).duration(1000).buildAndRegister();
 recipes.addShaped(<extendedcrafting:material:40>, [
@@ -213,9 +209,6 @@ recipes.addShaped(<actuallyadditions:block_breaker>, [[<actuallyadditions:item_m
 recipes.addShaped(<actuallyadditions:block_placer>, [[<metaitem:electric.piston.lv>,<actuallyadditions:item_misc:7>]]);
 recipes.addShaped(<actuallyadditions:block_fluid_placer>, [[<metaitem:electric.pump.lv>,<actuallyadditions:item_misc:7>]]);
 recipes.addShaped(<actuallyadditions:block_fluid_collector>, [[<actuallyadditions:item_misc:7>,<metaitem:electric.pump.lv>]]);
-
-//Rubber Sheet
-compressor.recipeBuilder().inputs(<metaitem:rubber_drop>).outputs(<metaitem:plateRubber>).duration(20).EUt(8).buildAndRegister();
 
 compressor.recipeBuilder().inputs(<metaitem:dustCalcium> * 2).outputs(<minecraft:dye:15>).duration(20).EUt(4).buildAndRegister();
 
@@ -353,13 +346,6 @@ assembler.recipeBuilder()
 // Diamond Electrolysis
 // Carbon Dust * 64
 <recipemap:electrolyzer>.findRecipe(30, [<metaitem:dustDiamond>], null).remove();
-electrolyzer.recipeBuilder()
-	.inputs(<metaitem:dustDiamond>)
-	.outputs(<metaitem:dustCarbon> * 16)
-	.duration(768)
-	.EUt(30)
-	.buildAndRegister();
-
 
 // Kill Glowstone Decomp
 // Small Pile of Redstone Dust * 2
@@ -389,5 +375,11 @@ cutter.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister();
 
-// GT Axe Tooltip
+// Tooltips
 <gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
+<thermalexpansion:capacitor>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
+<thermalexpansion:capacitor:1>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
+<thermalexpansion:capacitor:2>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
+<thermalexpansion:capacitor:3>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
+<thermalexpansion:capacitor:4>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
+<thermalexpansion:capacitor:5>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));

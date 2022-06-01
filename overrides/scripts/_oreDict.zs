@@ -1738,10 +1738,6 @@ mods.jei.JEI.removeAndHide(<avaritia:matter_cluster>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_plate>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_redstone>);
 
-//DevTech Removals
-mods.jei.JEI.removeAndHide(<devtech:meta_gem_perfect:2000>); // Perfect Glass
-
-
 //EnderIO Removals
 mods.jei.JEI.removeAndHide(<enderio:item_material:28>);
 mods.jei.JEI.removeAndHide(<enderio:item_material:39>);
@@ -1857,6 +1853,11 @@ mods.jei.JEI.removeAndHide(<extrautils2:analogcrafter>);
 
 
 //Gregtech Removals
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.lv>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.mv>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.luv>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.zpm>);
+mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.uv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.lv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.mv>);
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:amplifab.hv>);
@@ -2431,28 +2432,28 @@ mods.jei.JEI.removeAndHide(<enderio:item_alloy_nugget:3>);
 recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 
 //Circuits
-//<ore:circuitBasic>.add(<contenttweaker:refinedcircuit>);
-//<ore:circuitBasic>.remove(<metaitem:circuit.advanced_parts>);
+//<ore:circuitLv>.add(<contenttweaker:refinedcircuit>);
+//<ore:circuitLv>.remove(<metaitem:circuit.advanced_parts>);
 //
-//<ore:circuitGood>.add(<contenttweaker:combinationcircuit>);
-//<ore:circuitGood>.add(<contenttweaker:electronicprocessor>);
-//<ore:circuitGood>.add(<contenttweaker:refinedprocessor>);
-//<ore:circuitGood>.add(<contenttweaker:microcircuit>);
-//<ore:circuitGood>.remove(<metaitem:circuit.good>);
-//<ore:circuitGood>.remove(<metaitem:circuit.advanced>);
+//<ore:circuitMv>.add(<contenttweaker:combinationcircuit>);
+//<ore:circuitMv>.add(<contenttweaker:electronicprocessor>);
+//<ore:circuitMv>.add(<contenttweaker:refinedprocessor>);
+//<ore:circuitMv>.add(<contenttweaker:microcircuit>);
+//<ore:circuitMv>.remove(<metaitem:circuit.good>);
+//<ore:circuitMv>.remove(<metaitem:circuit.advanced>);
 //
-//<ore:circuitAdvanced>.add(<contenttweaker:refinedprocessorarray>);
-//<ore:circuitAdvanced>.add(<contenttweaker:electronicprocessorarray>);
-//<ore:circuitExtreme>.add(<contenttweaker:refinedprocessormainframe>);
-//<ore:circuitExtreme>.add(<contenttweaker:microprocessorarray>);
-//<ore:circuitElite>.add(<contenttweaker:crystalcircuit>);
-//<ore:circuitElite>.add(<contenttweaker:quantumprocessor>);
-//<ore:circuitElite>.add(<contenttweaker:microprocessormainframe>);
-//<ore:circuitElite>.add(<contenttweaker:nanoprocessorarray>);
-//<ore:circuitMaster>.add(<contenttweaker:nanoprocessormainframe>);
-//<ore:circuitMaster>.add(<contenttweaker:quantumprocessorarray>);
-//<ore:circuitUltimate>.add(<contenttweaker:quantumprocessormainframe>);
-//<ore:circuitUltimate>.add(<contenttweaker:crystalprocessorarray>);
+//<ore:circuitHv>.add(<contenttweaker:refinedprocessorarray>);
+//<ore:circuitHv>.add(<contenttweaker:electronicprocessorarray>);
+//<ore:circuitEv>.add(<contenttweaker:refinedprocessormainframe>);
+//<ore:circuitEv>.add(<contenttweaker:microprocessorarray>);
+//<ore:circuitIv>.add(<contenttweaker:crystalcircuit>);
+//<ore:circuitIv>.add(<contenttweaker:quantumprocessor>);
+//<ore:circuitIv>.add(<contenttweaker:microprocessormainframe>);
+//<ore:circuitIv>.add(<contenttweaker:nanoprocessorarray>);
+//<ore:circuitLuv>.add(<contenttweaker:nanoprocessormainframe>);
+//<ore:circuitLuv>.add(<contenttweaker:quantumprocessorarray>);
+//<ore:circuitZpm>.add(<contenttweaker:quantumprocessormainframe>);
+//<ore:circuitZpm>.add(<contenttweaker:crystalprocessorarray>);
 //<ore:circuitSuperconductor>.add(<contenttweaker:crystalprocessormainframe>);
 
 
@@ -2467,8 +2468,8 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //<ore:craftingLensWhite>.remove(<metaitem:lensDiamond>);
 //<ore:craftingLensWhite>.remove(<metaitem:lensNetherStar>);
 //<ore:craftingLensGreenSapphire>.remove(<metaitem:lensDiamond>);
-//<ore:circuitElite>.remove(<metaitem:circuit.data_control>);
-//<ore:circuitElite>.remove(<metaitem:circuit.crystal_processor>);
+//<ore:circuitIv>.remove(<metaitem:circuit.data_control>);
+//<ore:circuitIv>.remove(<metaitem:circuit.crystal_processor>);
 //<ore:dustLumium>.remove(<thermalfoundation:material:102>);
 //<ore:dustEnderium>.remove(<thermalfoundation:material:103>);
 //<ore:dustSignalum>.remove(<thermalfoundation:material:101>);

@@ -45,7 +45,7 @@ recipes.addShapeless(<deepmoblearning:data_model_thermal_elemental>.withTag({sim
 recipes.remove(<deepmoblearning:extraction_chamber>);
 recipes.addShaped(<deepmoblearning:extraction_chamber>, [	
 	[<ore:plateEnergeticAlloy>, <minecraft:glass_pane>, <ore:plateEnergeticAlloy>], 
-	[<ore:circuitGood>, <deepmoblearning:machine_casing>, <ore:circuitGood>], 
+	[<ore:circuitMv>, <deepmoblearning:machine_casing>, <ore:circuitMv>], 
 	[<ore:plateEnergeticAlloy>, <minecraft:hopper>, <ore:plateEnergeticAlloy>]]);
 
 recipes.remove(<deepmoblearning:machine_casing>);
@@ -59,18 +59,18 @@ recipes.remove(<metaitem:carbon.mesh>);
 alloy.recipeBuilder().inputs([<minecraft:string> * 4,<ore:dustCoal>]).outputs([<metaitem:carbon.mesh>]).duration(100).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<minecraft:string> * 4,<ore:dustCarbon>]).outputs([<metaitem:carbon.mesh>]).duration(100).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<metaitem:carbon.mesh>,<ore:dustPulsating> * 4]).outputs([<contenttweaker:pulsatingmesh>]).duration(200).EUt(16).buildAndRegister();
-alloy.recipeBuilder().inputs([<ore:dustPulsating>,<minecraft:clay>]).outputs([<deepmoblearning:polymer_clay> * 4	]).duration(240).EUt(24).buildAndRegister();
+alloy.recipeBuilder().inputs([<ore:dustPulsating>,<minecraft:clay>]).outputs([<deepmoblearning:polymer_clay> * 4	]).duration(240).EUt(7).buildAndRegister();
 
 recipes.remove(<deepmoblearning:simulation_chamber>);
 recipes.addShaped(<deepmoblearning:simulation_chamber>, [
 	[<ore:meshPulsating>, <minecraft:glass_pane>, <ore:meshPulsating>], 
-	[<ore:circuitBasic>, <deepmoblearning:machine_casing>, <ore:circuitBasic>], 
-	[<ore:meshPulsating>, <ore:circuitBasic>, <ore:meshPulsating>]]);
+	[<ore:circuitLv>, <deepmoblearning:machine_casing>, <ore:circuitLv>], 
+	[<ore:meshPulsating>, <ore:circuitLv>, <ore:meshPulsating>]]);
 
 recipes.remove(<deepmoblearning:data_model_blank>);
 recipes.addShaped(<deepmoblearning:data_model_blank>, [
 	[<ore:plateElectricalSteel>, <ore:plateElectricalSteel>, <ore:wireFineGold>], 
-	[<ore:meshPulsating>, <ore:circuitBasic>, <ore:wireFineGold>], 
+	[<ore:meshPulsating>, <ore:circuitLv>, <ore:wireFineGold>], 
 	[<ore:plateElectricalSteel>, <ore:plateElectricalSteel>, <ore:wireFineGold>]]);
 
 recipes.remove(<deepmoblearning:polymer_clay>);

@@ -190,10 +190,14 @@ makeShaped("of_processing_array", <metaitem:processing_array>,
      "CBC"],
      { A : <metaitem:robot.arm.iv>, //Robot Arm (IV)
        H : <meta_tile_entity:hull.iv>, //Machine Hull (IV)
-       C : <ore:circuitMaster>, //T6 Circuit
+       C : <ore:circuitLuv>, //T6 Circuit
        S : <advsolars:sunnarium>, //Sunnarium
        B : <metaitem:tool.dataorb>}); //dataorb
 
+// Titanium Ingot * 26
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:processing_array>], [<liquid:oxygen> * 381]).remove();
+// Titanium Dust * 26
+<recipemap:macerator>.findRecipe(8, [<metaitem:processing_array>], null).remove();
 
 
 
@@ -207,7 +211,7 @@ recipes.addShaped(<metaitem:battery_buffer.uhv.16>, [
 // ZPM Field Generator * 1
 <recipemap:assembly_line>.findRecipe(24000, [<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <metaitem:circuit.quantum_mainframe> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4], [<liquid:soldering_alloy> * 1152]).remove();
 assembly_line.recipeBuilder()
-    .inputs([<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <ore:circuitUltimate> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4])
+    .inputs([<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <ore:circuitZpm> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4])
     .fluidInputs([<liquid:soldering_alloy> * 1152, <liquid:awakened_draconium> * 1296])
     .outputs(<metaitem:field.generator.zpm>)
     .duration(600)
@@ -255,6 +259,57 @@ alloy_blast_smelter.recipeBuilder()
     .duration(2412)
     .EUt(7680)
     .buildAndRegister();
+
+// Trinium balance
+// Trinium Sulfide Dust * 1
+<recipemap:centrifuge>.findRecipe(1920, null, [<liquid:impure_enriched_naquadah_solution> * 2000]).remove();
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:impure_enriched_naquadah_solution> * 2000)
+    .outputs(<metaitem:dustTriniumSulfide> * 2, <metaitem:dustAntimonyTrifluoride> * 2)
+    .fluidOutputs(<liquid:enriched_naquadah_solution> * 1000)
+    .duration(400).EUt(1920).buildAndRegister();
+
+// World Accelerators
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.lv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.mv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.hv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.ev");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.iv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.luv");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.zpm");
+recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.uv");
+
+// Mercury Barium Calcium Cuprate Ingot * 32
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.hv>], [<liquid:oxygen> * 357]).remove();
+// Mercury Barium Calcium Cuprate Dust * 32
+<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.hv>], null).remove();
+// Uranium Triplatinum Ingot * 32
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.ev>], [<liquid:oxygen> * 474]).remove();
+// Uranium Triplatinum Dust * 32
+<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.ev>], null).remove();
+// Tungstensteel Ingot * 32
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.iv>], [<liquid:oxygen> * 568]).remove();
+// Tungstensteel Dust * 32
+<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.iv>], null).remove();
+
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:sensor.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:plateDenseDraconium>, <metaitem:plateDoubleIridium> * 2, <metaitem:hull.luv>, <metaitem:plateDoubleIridium> * 2, <metaitem:plateDenseDraconium>, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:emitter.luv> * 20)
+    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152)
+    .outputs(<metaitem:world_accelerator.hv>)
+    .duration(900).EUt(30720).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:sensor.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:plateDenseDraconium>, <metaitem:plateDoubleEuropium> * 2, <metaitem:hull.zpm>, <metaitem:plateDoubleEuropium> * 2, <metaitem:plateDenseDraconium>, <metaitem:field.generator.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:emitter.zpm> * 20)
+    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152)
+    .outputs(<metaitem:world_accelerator.ev>)
+    .duration(900).EUt(122880).buildAndRegister();
+
+assembly_line.recipeBuilder()
+    .inputs(<metaitem:sensor.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:plateDenseNeutronium>, <metaitem:plateDoubleEuropium> * 2, <metaitem:hull.uv>, <metaitem:plateDoubleEuropium> * 2, <metaitem:plateDenseNeutronium>, <metaitem:field.generator.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:emitter.uv> * 20)
+    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152, <liquid:naquadria> * 576)
+    .outputs(<metaitem:world_accelerator.iv>)
+    .duration(900).EUt(491520).buildAndRegister();
 
 // Stabilized Miners Tooltips
 <contenttweaker:tiereightship_stabilized>.addTooltip(format.italic(
