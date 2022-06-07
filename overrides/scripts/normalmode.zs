@@ -207,6 +207,19 @@ primitive_blast_furnace.recipeBuilder()
 	.EUt(1)
 	.buildAndRegister();
 
+primitive_blast_furnace.recipeBuilder()
+	.inputs([<metaitem:ingotWroughtIron> * 2, <metaitem:gemCoke>])
+	.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyDarkAsh> * 4])
+	.duration(800)
+	.EUt(1)
+	.buildAndRegister();
+primitive_blast_furnace.recipeBuilder()
+	.inputs([<metaitem:ingotWroughtIron> * 2, <metaitem:dustCoke>])
+	.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyDarkAsh> * 4])
+	.duration(800)
+	.EUt(1)
+	.buildAndRegister();
+
 // Creative Tank Data
 extractor.recipeBuilder()
     .inputs(<contenttweaker:heartofauniverse>)
