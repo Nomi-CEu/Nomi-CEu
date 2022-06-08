@@ -385,6 +385,7 @@ alloy.recipeBuilder()
 // fused quartz
 alloy.recipeBuilder()
     .inputs([<minecraft:quartz> * 3])
+	.notConsumable(<metaitem:shape.mold.block>)
     .outputs([<enderio:block_fused_quartz>])
     .duration(80).EUt(16).buildAndRegister();
 

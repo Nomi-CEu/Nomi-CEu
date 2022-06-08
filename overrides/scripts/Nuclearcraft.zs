@@ -676,14 +676,14 @@ alloy.recipeBuilder()
 
 
 
-reactor.recipeBuilder()
+large_chemical_reactor.recipeBuilder()
     .outputs(<nuclearcraft:gem_dust:1>)
     .inputs([<ore:orePyrolusite> * 6])
     .fluidInputs([<liquid:sulfuric_acid> * 3000])
     .fluidOutputs([<liquid:manganese> * 4320])
     .duration(200).EUt(2000).buildAndRegister();
 
-reactor.recipeBuilder()
+large_chemical_reactor.recipeBuilder()
     .outputs(<nuclearcraft:gem_dust:1>)
     .inputs([<ore:oreRedstone> * 12])
     .fluidInputs([<liquid:sulfuric_acid> * 6000])
