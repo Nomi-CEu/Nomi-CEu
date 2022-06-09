@@ -384,11 +384,11 @@ assembler.recipeBuilder()
 
 // Ore Drilling Plants
 // Basic Ore Drilling Plant * 1
-<recipemap:assembler>.findRecipe(1920, [<metaitem:hull.ev>, <metaitem:frameTitanium> * 4, <metaitem:circuit.workstation> * 4, <metaitem:electric.motor.ev> * 4, <metaitem:electric.pump.ev> * 4, <metaitem:conveyor.module.ev> * 4, <metaitem:gearTungsten> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:assembler>.findRecipe(1920, [<metaitem:hull.ev>, <metaitem:frameTitanium> * 4, <metaitem:circuit.workstation> * 4, <metaitem:electric.motor.ev> * 4, <metaitem:electric.pump.ev> * 4, <metaitem:conveyor.module.ev> * 4, <metaitem:gearTungsten> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 // Advanced Ore Drilling Plant * 1
-<recipemap:assembler>.findRecipe(7680, [<metaitem:hull.iv>, <metaitem:frameTungstenSteel> * 4, <metaitem:circuit.mainframe> * 4, <metaitem:electric.motor.iv> * 4, <metaitem:electric.pump.iv> * 4, <metaitem:conveyor.module.iv> * 4, <metaitem:gearIridium> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:assembler>.findRecipe(7680, [<metaitem:hull.iv>, <metaitem:frameTungstenSteel> * 4, <metaitem:circuit.mainframe> * 4, <metaitem:electric.motor.iv> * 4, <metaitem:electric.pump.iv> * 4, <metaitem:conveyor.module.iv> * 4, <metaitem:gearIridium> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 // Advanced Ore Drilling Plant II * 1
-<recipemap:assembler>.findRecipe(30720, [<metaitem:hull.luv>, <metaitem:frameHsss> * 4, <metaitem:circuit.nano_mainframe> * 4, <metaitem:electric.motor.luv> * 4, <metaitem:electric.pump.luv> * 4, <metaitem:conveyor.module.luv> * 4, <metaitem:gearRuridit> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:assembler>.findRecipe(30720, [<metaitem:hull.luv>, <metaitem:frameHsss> * 4, <metaitem:circuit.nano_mainframe> * 4, <metaitem:electric.motor.luv> * 4, <metaitem:electric.pump.luv> * 4, <metaitem:conveyor.module.luv> * 4, <metaitem:gearRuridit> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 
 assembler.recipeBuilder()
     .inputs(<metaitem:hull.iv>, <enderio:item_stellar_alloy_pickaxe>, <contenttweaker:t3laser> * 12, <metaitem:frameStainlessSteel> * 12, <metaitem:sensor.iv> * 6, <metaitem:conveyor.module.iv> * 12, <metaitem:fluid.regulator.iv> * 12, <metaitem:gearTungstenSteel> * 12)
