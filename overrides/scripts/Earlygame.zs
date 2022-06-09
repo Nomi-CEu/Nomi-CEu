@@ -383,3 +383,6 @@ cutter.recipeBuilder()
 <thermalexpansion:capacitor:3>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
 <thermalexpansion:capacitor:4>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
 <thermalexpansion:capacitor:5>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
+<gregtech:meta_item_1:466>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
+<gregtech:meta_item_1:467>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
+<gregtech:meta_item_1:468>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
