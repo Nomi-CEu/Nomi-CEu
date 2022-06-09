@@ -1,13 +1,11 @@
 {
-  "weight": 0,
+  "weight": 80,
   "density": 0.6,
   "max_height": 90,
   "min_height": 40,
-    "biome_modifier": {
-		"type": "biome_map",
-		"advancedrocketry:moon": 800,
-		"advancedrocketry:moondark": 800
-   },
+  "dimension_filter": [
+    "dimension_id:100"
+  ],
   "generator": {
     "type": "ellipsoid",
     "radius": [15, 17]
