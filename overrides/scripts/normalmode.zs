@@ -619,6 +619,13 @@ electrolyzer.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister();
 
+// HV Cutting Saw alternate
+recipes.addShaped(<metaitem:cutter.hv>, [
+	[<metaitem:cableGtSingleGold>, <ore:circuitHv>, <gregtech:transparent_casing>],
+	[<metaitem:conveyor.module.hv>, <metaitem:hull.hv>, <metaitem:toolHeadBuzzSawEndSteel>],
+	[<ore:circuitHv>, <metaitem:cableGtSingleGold>, <metaitem:electric.motor.hv>]
+]);
+
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);
@@ -639,7 +646,7 @@ removeMaterialSolid(32032);
 removeMaterialSolid(32033);
 removeMaterialSolid(32034);
 removeMaterialSolid(32035);
-removeMaterialSolid(32036);
+//removeMaterialSolid(32036);
 removeMaterialSolid(32037);
 removeMaterialSolid(32038);
 removeMaterialSolid(32039);

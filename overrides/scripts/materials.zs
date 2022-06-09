@@ -164,6 +164,7 @@ var end_steel = MaterialBuilder(32025, "end_steel")
     .ingot().fluid()
     .color(0xd6d980).iconSet("metallic")
     .flags("generate_plate", "generate_gear")
+    .toolStats(9.5, 4.0, 1000, 17)
     .cableProperties(2048,1,0,true)
     .build();
 
