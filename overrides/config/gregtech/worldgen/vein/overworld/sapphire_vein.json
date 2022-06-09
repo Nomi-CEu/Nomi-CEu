@@ -10,7 +10,11 @@
       16
     ]
   },
-  "filler": {
+  "dimension_filter": [
+    "dimension_id:111",
+    "dimension_id:0"
+  ],
+    "filler": {
     "type": "layered",
     "values": [
       {

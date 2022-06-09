@@ -21,7 +21,11 @@
       13
     ]
   },
-  "filler": {
+  "dimension_filter": [
+    "dimension_id:111",
+    "dimension_id:0"
+  ],
+    "filler": {
     "type": "ignore_bedrock",
     "value": {
       "type": "weight_random",
