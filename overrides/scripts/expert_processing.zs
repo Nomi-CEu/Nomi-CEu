@@ -185,6 +185,8 @@ chemical_bath.recipeBuilder()
     .duration(200).EUt(480).buildAndRegister();
 
 // Molybdenum
+furnace.remove(<metaitem:ingotMolybdenum>);
+furnace.addRecipe(<metaitem:ingotMolybdenum>, <metaitem:dustMolybdenum>);
 // Molybdenum Dust * 1
 <recipemap:electrolyzer>.findRecipe(30, [<metaitem:dustMolybdenite> * 3], null).remove();
 // Calcium Dust * 1
