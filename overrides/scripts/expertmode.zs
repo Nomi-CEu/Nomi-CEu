@@ -13,6 +13,8 @@ import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.functions.IRunOverclockingLogicFunction;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.IRecipe;
+import crafttweaker.mods.IMod;
+import crafttweaker.item.IItemStack;
 
 import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
@@ -615,13 +617,25 @@ recipes.remove(<minecraft:chest> * 4);
 
 // Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:640>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:simulation_chamber>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:extraction_chamber>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:data_model_blank>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_overworldian>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_hellish>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:living_matter_extraterrestrial>);
-mods.jei.JEI.removeAndHide(<deepmoblearning:polymer_clay>);
-mods.jei.JEI.hideCategory("deepmoblearning.simulation_chamber");
-mods.jei.JEI.hideCategory("deepmoblearning.extraction_chamber");
-mods.jei.JEI.hideCategory("deepmoblearning.trial_keystone");
+
+
+
+val dml as IMod = loadedMods["deepmoblearning"];
+
+if(!isNull(dml)) {
+    val dmlItems as IItemStack[] = dml.items;
+	
+	mods.jei.JEI.hideCategory("deepmoblearning.simulation_chamber");
+	mods.jei.JEI.hideCategory("deepmoblearning.extraction_chamber");
+	mods.jei.JEI.hideCategory("deepmoblearning.trial_keystone");
+
+	//remove everything
+    for item in dmlItems {
+        mods.jei.JEI.removeAndHide(item);
+    }
+	
+	// remove book
+	mods.jei.JEI.removeAndHide(<patchouli:guide_book>.withTag({"patchouli:book": "deepmoblearning:book"}));
+	// remove spawnegg
+	mods.jei.JEI.removeAndHide(<minecraft:spawn_egg>.withTag({EntityTag: {id: "deepmoblearning:glitch"}}));
+}
