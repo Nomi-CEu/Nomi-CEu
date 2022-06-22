@@ -151,7 +151,8 @@
     {
       "projectID": 633720,
       "fileID": 3832872,
-      "required": true
+      "required": true,
+      "sides": ["client"]
     },
     {
       "projectID": 235279,
