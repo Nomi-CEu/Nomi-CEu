@@ -75,12 +75,6 @@ export async function fetchFileInfo(projectID: number, fileID: number): Promise<
 
 	if (fileInfo) {
 		fetchedFileInfoCache[slug] = fileInfo;
-
-		if (!fileInfo.downloadUrl) {
-			const fid = `${Math.floor(fileInfo.id / 1000)}/${fileInfo.id % 1000}`;
-
-			fileInfo.downloadUrl = `https://edge.forgecdn.net/files/${fid}/${fileInfo.fileName}`;
-		}
 	}
 
 	return fileInfo;
@@ -181,6 +175,12 @@ export async function fetchMods(toFetch: ModpackManifestFile[], destination: str
 				const fileDef: FileDef = {
 					url: fileInfo.downloadUrl,
 				};
+
+				if (!fileDef.url) {
+					const fid = `${Math.floor(fileInfo.id / 1000)}/${fileInfo.id % 1000}`;
+
+					fileDef.url = `https://edge.forgecdn.net/files/${fid}/${fileInfo.fileName}`;
+				}
 
 				// https://docs.curseforge.com/#tocS_GetModsByIdsListRequestBody
 				if (fileInfo.hashes) {
