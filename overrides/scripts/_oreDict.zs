@@ -2366,6 +2366,7 @@ recipes.removeByRecipeName("gregtech:block_compress_omnium");
 //fluidextractor.findRecipe(32, [<metaitem:ingotOmnium>], [null]).remove();
 //fluidextractor.findRecipe(32, [<metaitem:nuggetOmnium>], [null]).remove();
 //fluidextractor.findRecipe(32, [<metaitem:blockOmnium>], [null]).remove();
+wiremill.recipeBuilder().inputs(<extendedcrafting:material:32>).outputs(<metaitem:wireGtSingleOmnium> * 2).duration(364).EUt(7).buildAndRegister();
 fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:33>).fluidOutputs([<liquid:omnium> * 16]).duration(25).EUt(30).buildAndRegister();
 fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:32>).fluidOutputs([<liquid:omnium> * 144]).duration(200).EUt(30).buildAndRegister();
 fluidextractor.recipeBuilder().inputs(<extendedcrafting:storage:4>).fluidOutputs([<liquid:omnium> * 1296]).duration(1800).EUt(30).buildAndRegister();
