@@ -8,6 +8,7 @@ const vars = [
 	"GITHUB_REF",
 	"CURSEFORGE_PROJECT_ID",
 	"CURSEFORGE_API_TOKEN",
+	"CFCORE_API_TOKEN",
 ];
 
 /**

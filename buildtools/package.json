@@ -13,6 +13,7 @@
 		"@types/gulp-imagemin": "^7.0.2",
 		"@types/gulp-rename": "^2.0.0",
 		"@types/gulp-zip": "^4.0.1",
+		"@types/md5": "^2.3.2",
 		"@types/merge-stream": "^1.1.2",
 		"@types/mustache": "^4.1.1",
 		"@types/requestretry": "^1.12.7",
@@ -43,5 +44,8 @@
 		"typescript": "^4.2.3",
 		"unzipper": "^0.10.11",
 		"upath": "^2.0.1"
+	},
+	"dependencies": {
+		"md5": "^2.3.0"
 	}
 }

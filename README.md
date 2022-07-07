@@ -7,13 +7,7 @@ Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [Gr
 - Fixed lots of unpleasant CE-ness - no more stupid Amp system, different ore stone types don't clog up your inventory, etc.
 - Super-performant emissive effects on machines, coil blocks, the Fusion Reactor, and more
 - Updated questbook to guide you through all the new stuff
-- lots more...
-
-Installation instructions for building the bleeding-edge version:  
-- Download [Node.js](https://nodejs.org/en/)  
-- Open a command line in `buildtools`  
-- Run `npm install` (only 1st time)  
-- Run `npx gulp buildAll` and `npx gulp zipAll`  
+- lots more...   
 
 ## Hard mode info
 If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack. Highlights include:

@@ -10,22 +10,43 @@ import fs from "fs";
 import { FileDef } from "../types/fileDef";
 import { downloadOrRetrieveFileDef, relative, RetrievedFileDefReason } from "./util";
 
+function getCurseForgeToken() {
+	const vari = "CFCORE_API_TOKEN";
+	const val = process.env[vari];
+
+	if (!process.env[vari]) {
+		throw new Error(`Environmental variable ${vari} is unset.`);
+	}
+
+	return val;
+}
+
 const curseForgeProjectCache: { [key: number]: CurseForgeProject } = {};
 export async function fetchProject(toFetch: number): Promise<CurseForgeProject> {
 	if (curseForgeProjectCache[toFetch]) {
 		return curseForgeProjectCache[toFetch];
 	}
 
-	const project: CurseForgeProject = await request({
-		uri: `https://addons-ecs.forgesvc.net/api/v2/addon/${toFetch}`,
-		json: true,
-		fullResponse: false,
-		maxAttempts: 5,
-	});
+	const project: CurseForgeProject | undefined = (
+		await request({
+			uri: `${buildConfig.cfCoreApiEndpoint}/v1/mods/${toFetch}`,
+			json: true,
+			fullResponse: false,
+			maxAttempts: 5,
+			headers: {
+				"X-Api-Key": getCurseForgeToken(),
+			},
+		})
+	)?.data;
+
+	if (!project) {
+		throw new Error(`Failed to fetch project ${toFetch}`);
+	}
 
 	if (project) {
 		curseForgeProjectCache[toFetch] = project;
 	}
+
 	return project;
 }
 
@@ -37,14 +58,29 @@ export async function fetchFileInfo(projectID: number, fileID: number): Promise<
 		return fetchedFileInfoCache[slug];
 	}
 
-	const fileInfo: CurseForgeFetchedFileInfo = await request({
-		uri: `https://addons-ecs.forgesvc.net/api/v2/addon/${projectID}/file/${fileID}`,
-		json: true,
-		fullResponse: false,
-	});
+	const fileInfo: CurseForgeFetchedFileInfo = (
+		await request({
+			uri: `${buildConfig.cfCoreApiEndpoint}/v1/mods/${projectID}/files/${fileID}`,
+			json: true,
+			fullResponse: false,
+			headers: {
+				"X-Api-Key": getCurseForgeToken(),
+			},
+		})
+	)?.data;
+
+	if (!fileInfo) {
+		throw new Error(`Failed to download file ${projectID}/file/${fileID}`);
+	}
 
 	if (fileInfo) {
 		fetchedFileInfoCache[slug] = fileInfo;
+
+		if (!fileInfo.downloadUrl) {
+			const fid = `${Math.floor(fileInfo.id / 1000)}/${fileInfo.id % 1000}`;
+
+			fileInfo.downloadUrl = `https://edge.forgecdn.net/files/${fid}/${fileInfo.fileName}`;
+		}
 	}
 
 	return fileInfo;
@@ -73,12 +109,23 @@ export async function fetchProjectsBulk(toFetch: number[]): Promise<CurseForgePr
 
 	if (unfetched.length > 0) {
 		// Augment the array of known projects with new info.
-		const fetched: CurseForgeProject[] = await request.post({
-			uri: "https://addons-ecs.forgesvc.net/api/v2/addon/",
-			json: unfetched,
-			fullResponse: false,
-			maxAttempts: 5,
-		});
+		const fetched: CurseForgeProject[] = (
+			await request.post({
+				uri: `${buildConfig.cfCoreApiEndpoint}/v1/mods`,
+				json: {
+					modIds: unfetched,
+				},
+				fullResponse: false,
+				maxAttempts: 5,
+				headers: {
+					"X-Api-Key": getCurseForgeToken(),
+				},
+			})
+		)?.data;
+
+		if (!fetched) {
+			throw new Error(`Failed to bulk-fetch projects ${unfetched.join(", ")}`);
+		}
 
 		modInfos.push(...fetched);
 
@@ -133,16 +180,23 @@ export async function fetchMods(toFetch: ModpackManifestFile[], destination: str
 
 				const fileDef: FileDef = {
 					url: fileInfo.downloadUrl,
-					hashes: [{ id: "murmurhash", hashes: fileInfo.packageFingerprint }],
 				};
+
+				// https://docs.curseforge.com/#tocS_GetModsByIdsListRequestBody
+				if (fileInfo.hashes) {
+					fileDef.hashes = fileInfo.hashes.map((hash) => ({
+						hashes: hash.value,
+						id: hash.algo == 1 ? "sha1" : "md5",
+					}));
+				}
 
 				const modFile = await downloadOrRetrieveFileDef(fileDef);
 				fetched += 1;
 
 				if (modFile.reason == RetrievedFileDefReason.Downloaded) {
-					log(`Downloaded ${upath.basename(fileInfo.downloadUrl)}... (${fetched} / ${toFetch.length})`);
+					log(`Downloaded ${upath.basename(fileDef.url)}... (${fetched} / ${toFetch.length})`);
 				} else if (modFile.reason == RetrievedFileDefReason.CacheHit) {
-					log(`Fetched ${upath.basename(fileInfo.downloadUrl)} from cache... (${fetched} / ${toFetch.length})`);
+					log(`Fetched ${upath.basename(fileDef.url)} from cache... (${fetched} / ${toFetch.length})`);
 				}
 
 				const dest = upath.join(destination, "mods", fileInfo.fileName);

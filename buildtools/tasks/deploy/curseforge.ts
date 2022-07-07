@@ -8,7 +8,7 @@ import buildConfig from "../../buildConfig";
 import { makeArtifactNameBody } from "../../util/util";
 import sanitize from "sanitize-filename";
 
-const CURSEFORGE_ENDPOINT = "https://minecraft.curseforge.com/";
+const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
 const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID", "GITHUB_TAG"];
 
 /**
@@ -63,7 +63,7 @@ async function deployCurseForge(): Promise<void> {
 	log("Fetching CurseForge version manifest...");
 	const versionsManifest =
 		(await request({
-			uri: CURSEFORGE_ENDPOINT + "api/game/versions",
+			uri: CURSEFORGE_LEGACY_ENDPOINT + "api/game/versions",
 			headers: tokenHeaders,
 			method: "GET",
 			json: true,
@@ -82,7 +82,7 @@ async function deployCurseForge(): Promise<void> {
 	// Upload artifacts.
 	for (const file of files) {
 		const options = {
-			uri: CURSEFORGE_ENDPOINT + `api/projects/${process.env.CURSEFORGE_PROJECT_ID}/upload-file`,
+			uri: CURSEFORGE_LEGACY_ENDPOINT + `api/projects/${process.env.CURSEFORGE_PROJECT_ID}/upload-file`,
 			method: "POST",
 			headers: {
 				...tokenHeaders,

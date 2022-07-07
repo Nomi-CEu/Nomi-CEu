@@ -27,7 +27,7 @@ async function createMMCDirs(cb) {
  * Copies modpack overrides.
  */
 function copyOverrides() {
-	return src(upath.join(clientDestDirectory, "**/*.*"), {
+	return src(upath.join(clientDestDirectory, "**/*"), {
 		nodir: true,
 		resolveSymlinks: false,
 	}).pipe(symlink(upath.join(mmcDestDirectory)));

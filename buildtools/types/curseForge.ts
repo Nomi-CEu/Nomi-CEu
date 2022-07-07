@@ -20,25 +20,6 @@ interface Attachment {
 	status: number;
 }
 
-interface Dependency {
-	id: number;
-	addonId: number;
-	type: number;
-	fileId: number;
-}
-
-interface Module {
-	foldername: string;
-	type: number;
-}
-
-interface SortableGameVersion {
-	gameVersionPadded: string;
-	gameVersion: string;
-	gameVersionReleaseDate: Date;
-	gameVersionName: string;
-}
-
 export interface CurseForgeFileInfo {
 	id: number;
 	displayName: string;
@@ -129,32 +110,48 @@ export interface CurseForgeModInfo {
 	isExperiemental: boolean;
 }
 
+export interface CurseForgeFetchedFileInfo {
+	id: number;
+	gameId: number;
+	modId: number;
+	isAvailable: boolean;
+	displayName: string;
+	fileName: string;
+	releaseType: number;
+	fileStatus: number;
+	hashes?: Hash[];
+	fileDate: Date;
+	fileLength: number;
+	downloadCount: number;
+	downloadUrl?: string;
+	gameVersions: string[];
+	sortableGameVersions: SortableGameVersion[];
+	dependencies: Dependency[];
+	alternateFileId: number;
+	isServerPack: boolean;
+	fileFingerprint: number;
+	modules: Module[];
+}
+
 interface Dependency {
-	addonId: number;
-	type: number;
+	modId: number;
+	relationType: number;
+}
+
+interface Hash {
+	value: string;
+	algo: number;
 }
 
 interface Module {
-	foldername: string;
-	fingerprint: unknown;
+	name: string;
+	fingerprint: number;
 }
 
-export interface CurseForgeFetchedFileInfo {
-	id: number;
-	displayName: string;
-	fileName: string;
-	fileDate: Date;
-	fileLength: number;
-	releaseType: number;
-	fileStatus: number;
-	downloadUrl: string;
-	isAlternate: boolean;
-	alternateFileId: number;
-	dependencies: Dependency[];
-	isAvailable: boolean;
-	modules: Module[];
-	packageFingerprint: number;
-	gameVersion: string[];
-	hasInstallScript: boolean;
-	gameVersionDateReleased: Date;
+interface SortableGameVersion {
+	gameVersionName: string;
+	gameVersionPadded: string;
+	gameVersion: string;
+	gameVersionReleaseDate: Date;
+	gameVersionTypeId: number;
 }
