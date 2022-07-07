@@ -1,0 +1,106 @@
+name: Nightly Builds
+
+on:
+  push:
+    branches:
+      - dev
+    tags-ignore:
+      - '**'
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow --tags --force
+
+      - name: Restore cached files
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            ~/.npm
+            ./.cache
+            ./buildtools/node_modules
+          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          restore-keys: ${{ runner.os }}-bunny-
+
+      - name: "Setup NodeJS v16"
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          check-latest: true
+
+      - name: "Download NPM packages"
+        working-directory: ./buildtools
+        run: npm ci
+
+      - name: "Check environmental variables"
+        working-directory: ./buildtools
+        run: npx gulp check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      - name: "Build everything"
+        working-directory: ./buildtools
+        run: npx gulp buildAll
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      - name: "Prune cache"
+        working-directory: ./buildtools
+        run: npx gulp pruneCache
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      ##
+      ## Upload artifacts.
+      ##
+      - name: "Make artifact names"
+        id: artifactNames
+        working-directory: ./buildtools
+        run: npx gulp makeArtifactNames
+
+      - name: "Upload client artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.artifactNames.outputs.client }}
+          path: |
+            build/client/**/*
+
+      - name: "Upload server artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.artifactNames.outputs.server }}
+          path: |
+            build/server/**/*
+
+      - name: "Upload lang artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.artifactNames.outputs.lang }}
+          path: |
+            build/lang/**/*
+
+      - name: "Upload changelog artifact"
+        uses: actions/upload-artifact@v2
+        with:
+          name: changelog
+          path: |
+            build/shared/CHANGELOG.md
+
+      - name: "Fire Discord webhook"
+        working-directory: ./buildtools
+        run: npx gulp fireNightlyWebhook
+        env:
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
