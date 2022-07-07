@@ -15,6 +15,7 @@ jobs:
     name: Deploy to GitHub Releases (${{ github.event.inputs.tag }})
     runs-on: ubuntu-latest
     env:
+      name: build_pack
       GITHUB_TAG: ${{ github.event.inputs.tag }}
       BUILD_FLAVOR_TITLE: ${{ github.event.inputs.flavorTitle }}
 
