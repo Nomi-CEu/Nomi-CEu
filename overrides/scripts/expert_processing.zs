@@ -651,7 +651,7 @@ mixer.recipeBuilder()
 chemical_reactor.recipeBuilder()
     .inputs(<metaitem:dustAmmoniumChloride>)
     .fluidInputs(<liquid:acidic_iridium_dioxide_solution> * 4000)
-    .outputs(<metaitem:dustAmmoniumHexachloroiridiate> * 2, <metaitem:dustPlatinumGroupResidue>)
+    .outputs(<metaitem:dustAmmoniumHexachloroiridiate> * 2, <metaitem:dustSmallPlatinumGroupResidue>)
     .fluidOutputs(<liquid:water> * 2000)
     .duration(300).EUt(30).buildAndRegister();
 
