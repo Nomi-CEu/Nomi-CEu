@@ -13,7 +13,6 @@ jobs:
   deploy:
     name: Deploy to CurseForge (${{ github.event.inputs.tag }})
     runs-on: ubuntu-latest
-    environment: build_pack
     env:
       GITHUB_TAG: ${{ github.event.inputs.tag }}
       BUILD_FLAVOR_TITLE: ${{ github.event.inputs.flavorTitle }}
