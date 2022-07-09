@@ -199,11 +199,11 @@ freezer.recipeBuilder()
     .outputs(<nuclearcraft:block_ice>)
     .duration(600).EUt(1200).buildAndRegister();
 
-solidifier.recipeBuilder()
-    .fluidInputs([<liquid:thorium> * 144])
-    .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedthorium>)
-    .duration(500).EUt(16).buildAndRegister();
+//solidifier.recipeBuilder()
+//    .fluidInputs([<liquid:thorium> * 144])
+//    .notConsumable(<metaitem:shape.mold.ball>)
+//    .outputs(<contenttweaker:stabilizedthorium>)
+//    .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:uranium> * 144])

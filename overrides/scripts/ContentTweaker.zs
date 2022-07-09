@@ -269,9 +269,9 @@ var stabilizeduranium = VanillaFactory.createItem("stabilizeduranium");
 stabilizeduranium.maxStackSize = 64;
 stabilizeduranium.register();
 
-var stabilizedthorium = VanillaFactory.createItem("stabilizedthorium");
-stabilizedthorium.maxStackSize = 64;
-stabilizedthorium.register();
+//var stabilizedthorium = VanillaFactory.createItem("stabilizedthorium");
+//stabilizedthorium.maxStackSize = 64;
+//stabilizedthorium.register();
 
 var stabilizedcurium = VanillaFactory.createItem("stabilizedcurium");
 stabilizedcurium.maxStackSize = 64;
