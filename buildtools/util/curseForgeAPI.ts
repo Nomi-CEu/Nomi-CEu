@@ -123,9 +123,9 @@ export async function fetchProjectsBulk(toFetch: number[]): Promise<CurseForgePr
 			})
 		)?.data;
 
-		//if (!fetched) {
-		//	throw new Error(`Failed to bulk-fetch projects ${unfetched.join(", ")}`);
-		//}
+		if (!fetched) {
+			throw new Error(`Failed to bulk-fetch projects ${unfetched.join(", ")}`);
+		}
 
 		modInfos.push(...fetched);
 
