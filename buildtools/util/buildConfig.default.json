@@ -1,5 +1,5 @@
 {
-	"cfCoreApiEndpoint": "https://curseforge.neeve.workers.dev",
+	"cfCoreApiEndpoint": "https://api.curseforge.com",
 	"downloaderMaxRetries": 5,
 	"downloaderConcurrency": 50,
 	"downloaderCheckHashes": true,
