@@ -22,7 +22,7 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 Installation instructions:
 - Install the hardmode config files from [here](https://github.com/tracer4b/nomi-ceu/tree/main/overrides). Restart the pack for this to take effect. 
   - Windows users may grab the utility [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat)(right click - save as), save it to the root directory of the pack (the same level as `\config`). 
-- Run `/bq_admin default load ExpertQuests` to load the hard mode questbook.
+- If you are on an existing world, run `/bq_admin default load` to load the hard mode questbook.
 
 ## Credits
 Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
