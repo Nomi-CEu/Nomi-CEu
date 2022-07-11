@@ -14,6 +14,9 @@ import mods.gregtech.recipe.functions.IRunOverclockingLogicFunction;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.IRecipe;
 
+import crafttweaker.mods.IMod;
+import crafttweaker.item.IItemStack;
+
 import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
@@ -424,7 +427,7 @@ large_chemical_reactor.recipeBuilder()
 
 // Kapton K
 // Wetware Lifesupport Circuit Board * 16
-<recipemap:circuit_assembler>.findRecipe(30720, [<metaitem:board.multilayer.fiber_reinforced> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <ore:circuitIv>, <metaitem:foilNiobiumTitanium> * 16], [<liquid:sterilized_growth_medium> * 4000]).remove();
+<recipemap:circuit_assembler>.findRecipe(30720, [<metaitem:board.multilayer.fiber_reinforced> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <metaitem:circuit.mainframe>, <metaitem:foilNiobiumTitanium> * 16], [<liquid:sterilized_growth_medium> * 4000]).remove();
 
 circuit_assembler.recipeBuilder()
     .inputs(<metaitem:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <metaitem:circuit.mainframe>, <metaitem:foilNiobiumTitanium> * 16)
