@@ -36,7 +36,7 @@ mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empo
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:item_crystal_empowered:3>);
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_empowered:3>);
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_void_gear>);
-mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:3>, <actuallyadditions:block_crystal:3>, <actuallyadditions:item_misc:5>, <metaitem:ingotDarkSteel>, <forge:bucketfilled>.withTag({FluidName: "carbon", Amount: 1000}), <extendedcrafting:material:15>, 1000000, 400);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:3>, <actuallyadditions:block_crystal:3>, <actuallyadditions:item_misc:5>, <metaitem:ingotDarkSteel>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil", Amount: 1000}}), <extendedcrafting:material:15>, 1000000, 400);
 
 
 //Empowered Diamatine

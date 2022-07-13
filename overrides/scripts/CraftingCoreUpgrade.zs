@@ -50,7 +50,7 @@ var outputInputMap as IIngredient[][IItemStack] = {
 		<actuallyadditions:block_crystal:3>, 
 		<ore:gemQuartzBlack>,
 		<ore:ingotDarkSteel>,
-		<forge:bucketfilled>.withTag({FluidName: "carbon", Amount: 1000}), 
+		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil", Amount: 1000}}), 
 		<extendedcrafting:material:15>
 	],
 	#Empowered Emeradic
