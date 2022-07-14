@@ -26,7 +26,7 @@ var outputInputMap as IIngredient[][IItemStack] = {
 		<actuallyadditions:block_crystal>,
 		<ore:ingotRedAlloy>,
 		<ore:gemAlmandine>,
-		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "sulfuric_acid", Amount: 1000}}),
+		<gregtech:meta_item_1:85>.withTag({Fluid: {FluidName: "sulfuric_acid", Amount: 1000}}),
 		<extendedcrafting:material:19>		//conflux component
 	],
 	#Empowered Palis
@@ -50,7 +50,7 @@ var outputInputMap as IIngredient[][IItemStack] = {
 		<actuallyadditions:block_crystal:3>, 
 		<ore:gemQuartzBlack>,
 		<ore:ingotDarkSteel>,
-		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "carbon", Amount: 1000}}), 
+		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil", Amount: 1000}}), 
 		<extendedcrafting:material:15>
 	],
 	#Empowered Emeradic
