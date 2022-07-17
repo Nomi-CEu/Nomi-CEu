@@ -13,8 +13,6 @@ import mods.appliedenergistics2.Inscriber;
 //	.EUt(8)
 //	.buildAndRegister();
 
-<appliedenergistics2:material>.displayName = "Activated Certus Quartz";
-
 //Silicon
 Inscriber.removeRecipe(<appliedenergistics2:material:20>); 
 Inscriber.addRecipe(<appliedenergistics2:material:20>, <metaitem:plateSilicon>, true, <appliedenergistics2:material:19>);	
@@ -374,8 +372,8 @@ macerator.recipeBuilder()
 // certus block
 recipes.removeByRecipeName("appliedenergistics2:decorative/certus_quartz_block");
 recipes.addShaped(<appliedenergistics2:quartz_block>, [
-	[<appliedenergistics2:material>, <appliedenergistics2:material>],
-	[<appliedenergistics2:material>, <appliedenergistics2:material>]
+	[<metaitem:gemCertusQuartz>, <metaitem:gemCertusQuartz>],
+	[<metaitem:gemCertusQuartz>, <metaitem:gemCertusQuartz>]
 ]);
 
 // Oredict Storage Bus
@@ -394,8 +392,12 @@ recipes.addShaped("nf_terminal_expanded_processing", <appliedenergistics2:part:3
 ]);
 
 // GT certus quartz
-autoclave.recipeBuilder()
-    .inputs([<metaitem:gemCertusQuartz>])
-    .fluidInputs([<liquid:water> * 250])
-    .outputs([<appliedenergistics2:material>])
-    .duration(80).EUt(16).buildAndRegister();
+recipes.removeByRecipeName("appliedenergistics2:misc/deconstruction_certus_quartz_pillar");
+recipes.removeByRecipeName("appliedenergistics2:misc/deconstruction_certus_quartz_block");
+recipes.removeByRecipeName("appliedenergistics2:misc/deconstruction_certus_chiseled_quartz");
+
+recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:quartz_block>]);
+recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:quartz_pillar>]);
+recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:chiseled_quartz_block>]);
+
+mods.jei.JEI.removeAndHide(<appliedenergistics2:material:0>);

@@ -414,6 +414,9 @@ furnace.remove(<thermalfoundation:rockwool:7>, <thermalfoundation:material:864>)
 recipes.removeByRecipeName("thermalexpansion:satchel_1");
 recipes.removeByRecipeName("thermalexpansion:satchel_7");
 
+//Charged Certus
+mods.thermalexpansion.Infuser.addRecipe(<appliedenergistics2:material:1>, <metaitem:gemCertusQuartz>, 1000);
+
 //Pure Certus
 mods.thermalexpansion.Insolator.addRecipe(<appliedenergistics2:material:10>, <appliedenergistics2:crystal_seed>.withTag({progress: 0}), <minecraft:glowstone_dust>, 40000);
 
