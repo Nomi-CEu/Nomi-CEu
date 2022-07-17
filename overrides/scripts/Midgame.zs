@@ -6,6 +6,7 @@ import mods.gregtech.ore.IOreRecipeHandler;
 import mods.gregtech.material.Material;
 import mods.gregtech.recipe.Utils;
 import crafttweaker.data.IData;
+import mods.actuallyadditions.AtomicReconstructor;
 
 recipes.remove(<thermalexpansion:satchel:2>);
 recipes.addShaped("test", <thermalexpansion:satchel:2>, [
@@ -137,6 +138,9 @@ recipes.addShaped(<draconicevolution:info_tablet>, [
 	[<ore:stone>, <ore:dustDraconium>, <ore:stone>],
 	[<ore:stone>, <ore:stone>, <ore:stone>]
 ]);
+
+// Prismarine Crystals
+mods.actuallyadditions.AtomicReconstructor.addRecipe(<minecraft:prismarine_crystals>, <metaitem:gemTopaz>, 45000);
 
 // Perfect Gems
 val gemPerfect as OrePrefix = OrePrefix.getPrefix("gemPerfect");
