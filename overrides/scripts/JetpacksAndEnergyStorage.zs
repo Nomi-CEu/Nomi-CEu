@@ -481,29 +481,6 @@ autoclave.recipeBuilder()
     .outputs([<extrautils2:decorativesolid:2>])
     .duration(100).EUt(4).buildAndRegister();
 
-// (granite, diorite, andesite) => polished
-autoclave.recipeBuilder()
-    .inputs([<minecraft:stone:1>]).fluidInputs([<liquid:water> * 250])
-    .outputs([<minecraft:stone:2>])
-    .duration(100).EUt(4).buildAndRegister();
-
-autoclave.recipeBuilder()
-    .inputs([<minecraft:stone:3>]).fluidInputs([<liquid:water> * 250])
-    .outputs([<minecraft:stone:4>])
-    .duration(100).EUt(4).buildAndRegister();
-
-autoclave.recipeBuilder()
-    .inputs([<minecraft:stone:5>]).fluidInputs([<liquid:water> * 250])
-    .outputs([<minecraft:stone:6>])
-    .duration(100).EUt(4).buildAndRegister();
-
-// GT certus quartz
-autoclave.recipeBuilder()
-    .inputs([<metaitem:gemCertusQuartz>])
-    .fluidInputs([<liquid:water> * 250])
-    .outputs([<appliedenergistics2:material>])
-    .duration(80).EUt(16).buildAndRegister();
-
 recipes.remove(<appliedenergistics2:quartz_vibrant_glass>);
 
 alloy.recipeBuilder()
