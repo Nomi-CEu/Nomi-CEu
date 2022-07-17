@@ -433,6 +433,7 @@ circuit_assembler.recipeBuilder()
     .inputs(<metaitem:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <ore:circuitIv>, <metaitem:foilNiobiumTitanium> * 16)
     .fluidInputs(<liquid:sterilized_growth_medium> * 4000)
     .outputs(<metaitem:board.wetware> * 16)
+	.property("cleanroom", "sterile_cleanroom")
     .duration(1200).EUt(30720).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
@@ -514,6 +515,7 @@ brewery.recipeBuilder()
     .inputs(<ore:nuggetCalifornium252>)
     .fluidInputs(<liquid:bacterial_sludge> * 1000)
     .fluidOutputs(<liquid:enriched_bacterial_sludge> * 1000)
+	.property("cleanroom", "sterile_cleanroom")
     .duration(128).EUt(4).buildAndRegister();
 
 // Taranium in UV Fieldgen

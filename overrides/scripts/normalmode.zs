@@ -626,6 +626,20 @@ recipes.addShaped(<metaitem:cutter.hv>, [
 	[<ore:circuitHv>, <metaitem:cableGtSingleGold>, <metaitem:electric.motor.hv>]
 ]);
 
+// Sterilizing Filter
+recipes.removeByRecipeName("gregtech:blacklight");
+recipes.addShaped(<metaitem:blacklight>, [
+	[<metaitem:screwTungstenCarbide>, <metaitem:plateTungstenCarbide>, <metaitem:screwTungstenCarbide>],
+	[null, <metaitem:springHssg>, null],
+	[<ore:circuitIv>, <metaitem:plateTungstenCarbide>, <metaitem:cableGtSinglePlatinum>]
+]);
+recipes.removeByRecipeName("gregtech:filter_casing_sterile");
+recipes.addShaped(<gregtech:cleanroom_casing:2>, [
+	[<metaitem:pipeLargeFluidPolybenzimidazole>, <metaitem:emitter.luv>, <metaitem:pipeLargeFluidPolybenzimidazole>],
+	[<metaitem:item_filter>, <metaitem:blacklight>, <metaitem:item_filter>],
+	[<metaitem:electric.motor.luv>, <ore:frameGtBlackSteel>, <metaitem:rotorIridium>]
+]);
+
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);

@@ -359,6 +359,7 @@ chemical_reactor.recipeBuilder()
 	.fluidInputs(<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500)
 	.outputs([<metaitem:stem_cells> * 64, <metaitem:stem_cells> * 64])
 	.fluidOutputs(<liquid:bacterial_sludge> * 500)
+	.property("cleanroom", "sterile_cleanroom")
 	.duration(6000)
 	.EUt(30720)
 	.buildAndRegister();
