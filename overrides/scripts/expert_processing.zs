@@ -132,11 +132,11 @@ chemical_reactor.recipeBuilder()
     .fluidOutputs(<liquid:water> * 1000)
     .duration(1000).EUt(1920).buildAndRegister();
 
-chemical_reactor.recipeBuilder()
+large_chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:hydrogen> * 6000, <liquid:oxygen> * 6000)
     .notConsumable(<metaitem:dustPalladium>, <metaitem:dustEthylanthraquinone>)
     .fluidOutputs(<liquid:hydrogen_peroxide> * 3000)
-    .duration(330).EUt(720).buildAndRegister();
+    .duration(330).EUt(180).buildAndRegister();
 
 // Hydrazine
 large_chemical_reactor.recipeBuilder()
