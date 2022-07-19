@@ -568,6 +568,11 @@ thermal_centrifuge.recipeBuilder()
     .outputs(<nuclearcraft:plutonium:12> * 5, <metaitem:dustPlutonium241> * 4)
     .duration(3200).EUt(48).buildAndRegister();
 
+// Uranium-235 * 1
+<recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:dustUranium235>], null).remove();
+// Uranium-235 * 1
+<recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotUranium235>], null).remove();
+
 mods.jei.JEI.removeAndHide(<nuclearcraft:uranium:4>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:uranium:6>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:uranium:8>);
