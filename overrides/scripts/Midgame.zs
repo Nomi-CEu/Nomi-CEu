@@ -125,6 +125,17 @@ macerator.recipeBuilder()
 	.EUt(2)
 	.buildAndRegister();
 
+// Granite Dust * 1
+<recipemap:macerator>.findRecipe(2, [<minecraft:stone:1>], null).remove();
+macerator.recipeBuilder()
+	.inputs([<minecraft:stone:1>])
+	.outputs([<metaitem:dustGranite>])
+	.chancedOutput(<metaitem:dustSmallStone>, 100, 40)
+	.chancedOutput(<metaitem:dustThorium>, 100, 500)
+	.duration(150)
+	.EUt(2)
+	.buildAndRegister();
+
 canner.recipeBuilder()
 	.inputs(<minecraft:glass_bottle>)
 	.fluidInputs(<liquid:xpjuice> * 500)

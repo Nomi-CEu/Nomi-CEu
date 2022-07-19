@@ -1104,16 +1104,17 @@ fluid_extractor.recipeBuilder()
 // Thorium-232 * 1
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:dustThorium>], null).remove();
 
-
 thermal_sep.recipeBuilder()
     .inputs(<metaitem:dustThorium>)
     .outputs(<nuclearcraft:thorium:4>)
-    .duration(1280).EUt(48).buildAndRegister();
+    .duration(1100).EUt(48).buildAndRegister();
 
 thermal_sep.recipeBuilder()
     .inputs(<metaitem:ingotThorium>)
     .outputs(<nuclearcraft:thorium:4>)
-    .duration(1280).EUt(48).buildAndRegister();
+    .duration(1100).EUt(48).buildAndRegister();
+
+<nuclearcraft:thorium:4>.displayName = "Prepared Thorium-232";
 
 //Remove Duping Uranium via extra Uranium 235 tiny Pile
 // Uranium-238 * 1
