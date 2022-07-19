@@ -3,13 +3,12 @@
   "questDatabase:9": {
     "0:10": {
       "preRequisites:11": [
-        26,
-        490
+        26
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main purpose for this device is to turn §6Activated Certus Quartz Crystal§r into §6Charged Certus Quartz Crystal§r.\n\nThis device can be powered with RF via energy conduits or use AE energy from a network via ME conduits or cables.\n\nIt accepts power from two sides. Which two sides? It\u0027s pretty easy to guess.\n\n\n\n\n\n\n\n\nOk, ok. It\u0027s the top and bottom.\n\n",
+          "desc:8": "The main purpose for this device is to turn §6Certus Quartz§r into §6Charged Certus Quartz Crystal§r.\n\nThis device can be powered with RF via energy conduits or use AE energy from a network via ME conduits or cables.\n\nIt accepts power from two sides. Which two sides? It\u0027s pretty easy to guess.\n\n\n\n\n\n\n\n\nOk, ok. It\u0027s the top and bottom.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58,9 +57,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 214,
               "OreDict:8": "",
-              "id:8": "appliedenergistics2:material"
+              "id:8": "gregtech:meta_gem"
             },
             "1:10": {
               "Count:3": 1,
@@ -3620,7 +3619,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with Maintenance, it won\u0027t be as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, the edges must be §3Plascrete§r or §3Cleanroom Glass§r, and the rest of the top face is built from §3Filter Casings§r.\n\nFor transfer between the clean environment and the outside world:\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n- Energy through §3Hulls§r or §3Diodes§r (of any tier).\n- AE2 channels through §3Hulls§r.\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective.\n\nYou will also need an §3Energy §rand §3Maintenance Hatch §rfor cleaning. The rest of the wall space is filled with §3Plascrete§r or §3Cleanroom Glass§r.\n\nOther notes:\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r.\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.",
+          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with Maintenance, it won\u0027t be as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, and the rest of the top face is built from §3Filter Casings§r. The rest of the wall space is filled with §3Plascrete§r.\n\nFor transfer between the clean environment and the outside world:\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n- Energy through §3Hulls§r or §3Diodes§r (of any tier).\n- AE2 channels through §3Hulls§r.\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective.\n\nYou will also need an §3Energy §rand §3Maintenance Hatch §rfor cleaning. §3Cleanroom Glass§r can replace any §3Plascrete§r, except in the edges.\n\nIf you\u0027re facing issues forming the Cleanroom:\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r. The floor block directly under the controller must also be §3Plascrete§r or §3Cleanroom Glass§r.\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.\n- Try rotating the controller with a wrench, or for even side lengths, try the other central positions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3677,43 +3676,15 @@
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:cleanroom_casing"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
+            },
+            "2:10": {
               "Count:3": 44,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:cleanroom_casing"
             }
           },
-          "taskID:8": "bq_standard:optional_retrieval"
-        },
-        "2:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 2,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 44,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "gregtech:transparent_casing"
-            }
-          },
-          "taskID:8": "bq_standard:optional_retrieval"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -29980,7 +29951,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but right now you want it to make §6Activated Certus Quartz Crystals§r for §bApplied Energistics§r out of the §bGregTech§r §6Certus Quartz§r and its dust you get from mining and ore processing.",
+          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystal§r and §6Vibrant Crystal§r from EnderIO.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41140,7 +41111,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Thorium is another basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2Black Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium 232§r enriched in a §3Thermal Centrifuge§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium 233§r, §6Uranium 235§r, §6§6Neptunium 236§r, and §6Neptunium 237§r.",
+          "desc:8": "Thorium is another basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2(Black) Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium 232§r enriched in a §3Thermal Centrifuge§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium 233§r, §6Uranium 235§r, §6§6Neptunium 236§r, and §6Neptunium 237§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41267,13 +41238,13 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 116,
-              "OreDict:8": "ingotUranium238",
+              "OreDict:8": "ingotUranium",
               "id:8": "gregtech:meta_ingot"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 117,
-              "OreDict:8": "ingotUranium235",
+              "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             }
           },
@@ -55663,7 +55634,7 @@
           "id:3": 0,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -516,
+          "x:3": -560,
           "y:3": 136
         },
         "1:10": {
@@ -55712,8 +55683,8 @@
           "id:3": 29,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -792,
-          "y:3": 40
+          "x:3": -736,
+          "y:3": 8
         },
         "8:10": {
           "id:3": 30,
@@ -55747,8 +55718,8 @@
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": 40
+          "x:3": -692,
+          "y:3": 8
         },
         "13:10": {
           "id:3": 41,
@@ -55824,15 +55795,15 @@
           "id:3": 215,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": 88
+          "x:3": -792,
+          "y:3": 40
         },
         "24:10": {
           "id:3": 228,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -560,
-          "y:3": 88
+          "x:3": -840,
+          "y:3": 40
         },
         "25:10": {
           "id:3": 231,
@@ -55880,7 +55851,7 @@
           "id:3": 282,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -480,
+          "x:3": -520,
           "y:3": 124
         },
         "32:10": {
@@ -55929,8 +55900,8 @@
           "id:3": 490,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -560,
-          "y:3": 136
+          "x:3": -840,
+          "y:3": 88
         },
         "39:10": {
           "id:3": 497,
@@ -56935,10 +56906,10 @@
         },
         "2:10": {
           "id:3": 52,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -720,
-          "y:3": 36
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -724,
+          "y:3": 32
         },
         "3:10": {
           "id:3": 54,
