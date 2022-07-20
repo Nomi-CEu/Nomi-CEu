@@ -755,9 +755,7 @@ var taranium = MaterialBuilder(32109, "taranium")
 <material:einsteinium>.addIngot();
 <material:graphite>.addIngot();
 
-<material:uranium_235>.addFluid();
 <material:neptunium>.addFluid();
-<material:plutonium_241>.addFluid();
 <material:curium>.addFluid();
 <material:berkelium>.addFluid();
 <material:californium>.addFluid();
