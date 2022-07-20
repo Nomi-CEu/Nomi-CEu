@@ -46703,14 +46703,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "GregTech §7Low Voltage§r Tier: start building a factory!\n\nUnlock access to §bDeep Mob Learning§r, early §bEnderIO§r tech, and §bApplied Energistics 2§r Digital Storage.\n\nBuild an §3Electric Blast Furnace§r for smelting advanced materials and alloys.",
+          "desc:8": "nomifactory.quest.line.0.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1001,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "name:8": "The Beginning",
+          "name:8": "nomifactory.quest.line.0.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -47158,14 +47158,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "GregTech §bMedium Voltage§r Tier: new machines and rudimentary ore processing.\n\nOrganic Chemistry for §6Plastics§r, and build a §3Distillation Tower§r.\n\n§bApplied Energistics 2§r automation. Explore §bActually Additions§r.",
+          "desc:8": "nomifactory.quest.line.1.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 625,
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "Early Game",
+          "name:8": "nomifactory.quest.line.1.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -47935,14 +47935,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "GregTech §6High Voltage§r, §5Extreme Voltage§r, and §1Insane Voltage§r tiers:\n\n§6§3Cryogenic Distillation§r, and petrochemistry for §6Epoxy§r and §9Nitro Diesel§r.\n\nCraft §6Nether Stars§r and unlock §bThermal Expansion§r machines.\n\nBuild a§b NuclearCraft§r fission reactor to obtain new materials.\n\nBuild a Space Station and Warp Core.",
+          "desc:8": "nomifactory.quest.line.2.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
             "OreDict:8": "",
             "id:8": "gregtech:warning_sign"
           },
-          "name:8": "Mid Game",
+          "name:8": "nomifactory.quest.line.2.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -48964,14 +48964,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "It\u0027s always rewarding to take a step forward.\n\nThis tab outlines the progression of various things in §5Nomifactory§r.\n\nCircuits are the primary measure of your progress.",
+          "desc:8": "nomifactory.quest.line.3.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
             "id:8": "questbook:itemquestbook"
           },
-          "name:8": "Progression",
+          "name:8": "nomifactory.quest.line.3.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -49678,14 +49678,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "GregTech §dLuV§r, ZPM, §3UV§r, §4UHV§r tiers:\n\nBuild §3Assembly Lines§r, §3Fusion Reactors§r, and more!\n\nAutomate in style with §bPackagedAuto§r. Climb the tiers of §6Micro Miners§r.\n\n§bDraconic Evolution§r for fusion crafting and energy storage.",
+          "desc:8": "nomifactory.quest.line.4.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 647,
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "Late Game",
+          "name:8": "nomifactory.quest.line.4.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -50581,14 +50581,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "You\u0027re in the endgame now...\n\nHarvest entire microverses and unlock the §dCreative Portable Tank§r.\n\nPut your automation to the ultimate test as you progress towards the final goal: the §dCreative Vending Upgrade§r.",
+          "desc:8": "nomifactory.quest.line.5.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
             "id:8": "contenttweaker:heartofauniverse"
           },
-          "name:8": "End Game",
+          "name:8": "nomifactory.quest.line.5.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -51512,14 +51512,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Welcome to §5Nomifactory§r, I\u0027ll be your guide.",
+          "desc:8": "nomifactory.quest.line.6.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
             "id:8": "minecraft:iron_ingot"
           },
-          "name:8": "Genesis",
+          "name:8": "nomifactory.quest.line.6.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -51925,14 +51925,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Get your feet wet with §bExtra Utilities§r and §bExtended Crafting§r.\n\nConquer The End or invest in §bEnderIO §rfor teleportation technologies.\n\nBuild a rocket and go to the Moon (or don\u0027t, but it\u0027s fun).\n\nEither way, it\u0027s time to start mining §emicroverses§r.",
+          "desc:8": "nomifactory.quest.line.7.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
             "id:8": "contenttweaker:tieroneship"
           },
-          "name:8": "Into The Microverse",
+          "name:8": "nomifactory.quest.line.7.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -52338,14 +52338,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Create new elements and power your base with doughnuts!",
+          "desc:8": "nomifactory.quest.line.8.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1022,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "name:8": "Fun With Fusion",
+          "name:8": "nomifactory.quest.line.8.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -52471,14 +52471,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Convert between matter and energy with §bApplied Energistics§r§r.\n\nAutomate ALL the things! o/",
+          "desc:8": "nomifactory.quest.line.10.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
             "OreDict:8": "",
             "id:8": "chisel:futura"
           },
-          "name:8": "Matter-Energy",
+          "name:8": "nomifactory.quest.line.10.title",
           "visibility:8": "ALWAYS"
         }
       },
