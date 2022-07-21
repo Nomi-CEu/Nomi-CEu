@@ -101,7 +101,7 @@ chemical_reactor.recipeBuilder()
     .duration(60).EUt(16).buildAndRegister();
 
 // Beryllium Oxide
-arc_furnace.recipeBuilder()
+chemical_reactor.recipeBuilder()
     .inputs(<ore:dustBeryllium>)
     .fluidInputs(<liquid:oxygen> * 1000)
     .outputs(<metaitem:ingotBerylliumOxide>)
