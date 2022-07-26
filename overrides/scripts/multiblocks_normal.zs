@@ -250,8 +250,8 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
             )
             .aisle(
                 "CCC",
-                "GOG",
-                "GOG",
+                "GNG",
+                "GNG",
                 "GOG",
                 "CCC"
             )
@@ -264,8 +264,9 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
             )
             .where('S', controller.self())
             .where('G', <blockstate:nuclearcraft:reactor_casing_transparent>)
-            .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
+            .where('P', <metastate:gregtech:transparent_casing:1>)
             .where('O', <metastate:extendedcrafting:trimmed:5>)
+            .where('N', <metastate:gregtech:meta_block_compressed_8:1>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
@@ -290,7 +291,7 @@ naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, 
     return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
 } as IRunOverclockingLogicFunction;
 
-<metaitem:multiblocktweaker:naquadah_reactor_1>.addTooltip(format.yellow("Produces exactly 2A ZPM, does not overclock"));
+<metaitem:multiblocktweaker:naquadah_reactor_1>.addTooltip(format.yellow("Produces exactly 3A ZPM, does not overclock"));
 
 // Naquadah Reactor 2
 val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
@@ -306,9 +307,9 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
             )
             .aisle(
                 "CCC",
-                "GOG",
-                "GOG",
-                "GOG",
+                "GNG",
+                "GNG",
+                "GNG",
                 "GOG",
                 "CCC"
             )
@@ -321,9 +322,10 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
                 "CCC"
             )
             .where('S', controller.self())
+            .where('P', <metastate:gregtech:transparent_casing:1>)
             .where('G', <blockstate:nuclearcraft:reactor_casing_transparent>)
-            .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
             .where('O', <metastate:extendedcrafting:storage:4>)
+            .where('N', <metastate:gregtech:meta_block_compressed_27:0>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
@@ -349,7 +351,7 @@ naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, 
     return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
 } as IRunOverclockingLogicFunction;
 
-<metaitem:multiblocktweaker:naquadah_reactor_2>.addTooltip(format.yellow("Produces exactly 2A UV, does not overclock"));
+<metaitem:multiblocktweaker:naquadah_reactor_2>.addTooltip(format.yellow("Produces exactly 3A UV, does not overclock"));
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
@@ -804,16 +806,16 @@ creative_tank_provider.recipeMap
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(938)
-    .EUt(-262144)
-    .inputs(<metaitem:boltNaquadahEnriched>)
+    .EUt(-393216)
+    .inputs(<metaitem:boltNaquadahEnriched> * 8)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(3750)
-    .EUt(-262144)
-    .inputs(<metaitem:boltNaquadria>)
+    .EUt(-393216)
+    .inputs(<metaitem:boltNaquadria> * 8)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
@@ -821,15 +823,15 @@ naquadah_reactor_1.recipeMap
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(1875)
-    .EUt(-1048576)
-    .inputs(<metaitem:boltNaquadahEnriched>)
+    .EUt(-1572864)
+    .inputs(<metaitem:boltNaquadahEnriched> * 8)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(7500)
-    .EUt(-1048576)
-    .inputs(<metaitem:boltNaquadria>)
+    .EUt(-1572864)
+    .inputs(<metaitem:boltNaquadria> * 8)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
