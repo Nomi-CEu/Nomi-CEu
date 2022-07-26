@@ -361,6 +361,31 @@ reactor.recipeBuilder()
     .fluidOutputs(<liquid:elementalreduction> * 1000)
     .duration(80).EUt(90).buildAndRegister();
 
+// Rod Compression
+// Blaze Rod * 1
+<recipemap:compressor>.findRecipe(2, [<minecraft:blaze_powder:0> * 4], null).remove();
+
+compressor.recipeBuilder()
+    .inputs(<thermalfoundation:material:2051> * 5)
+    .outputs(<thermalfoundation:material:2050>)
+    .duration(400).EUt(2).buildAndRegister();
+
+compressor.recipeBuilder()
+    .inputs(<thermalfoundation:material:2049> * 5)
+    .outputs(<thermalfoundation:material:2048>)
+    .duration(400).EUt(2).buildAndRegister();
+
+compressor.recipeBuilder()
+    .inputs(<thermalfoundation:material:2053> * 5)
+    .outputs(<thermalfoundation:material:2052>)
+    .duration(400).EUt(2).buildAndRegister();
+
+compressor.recipeBuilder()
+    .inputs(<minecraft:blaze_powder> * 5)
+    .outputs(<minecraft:blaze_rod>)
+    .duration(400).EUt(2).buildAndRegister();
+
+
 <extendedcrafting:storage:6>.displayName = "Block of Endest Stars";
 <extendedcrafting:material:40>.displayName = "Endest Star";
 <extendedcrafting:material:41>.displayName = "Endest Star Nugget";
