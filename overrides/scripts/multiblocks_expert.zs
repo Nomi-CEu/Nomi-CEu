@@ -1515,7 +1515,7 @@ naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(938)
     .EUt(-393216)
-    .inputs(<metaitem:boltNaquadahEnriched> * 8)
+    .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
@@ -1523,7 +1523,7 @@ naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(3750)
     .EUt(-393216)
-    .inputs(<metaitem:boltNaquadria> * 8)
+    .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
@@ -1532,7 +1532,7 @@ naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(1875)
     .EUt(-1572864)
-    .inputs(<metaitem:boltNaquadahEnriched> * 8)
+    .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
@@ -1540,7 +1540,7 @@ naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(7500)
     .EUt(-1572864)
-    .inputs(<metaitem:boltNaquadria> * 8)
+    .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
