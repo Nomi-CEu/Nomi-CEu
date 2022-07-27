@@ -263,8 +263,8 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
                 "CCC"
             )
             .where('S', controller.self())
-            .where('G', <blockstate:nuclearcraft:reactor_casing_transparent>)
-            .where('P', <metastate:gregtech:transparent_casing:1>)
+            .where('G', <metastate:gregtech:transparent_casing:1>)
+            .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
             .where('O', <metastate:extendedcrafting:trimmed:5>)
             .where('N', <metastate:gregtech:meta_block_compressed_8:1>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
@@ -322,8 +322,8 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
                 "CCC"
             )
             .where('S', controller.self())
-            .where('P', <metastate:gregtech:transparent_casing:1>)
-            .where('G', <blockstate:nuclearcraft:reactor_casing_transparent>)
+            .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
+            .where('G', <metastate:gregtech:transparent_casing:1>)
             .where('O', <metastate:extendedcrafting:storage:4>)
             .where('N', <metastate:gregtech:meta_block_compressed_27:0>)
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
@@ -383,7 +383,7 @@ makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>
      "GSG",
      "PPP"],
     { C : <ore:circuitIv>, //T5
-      G : <nuclearcraft:reactor_casing_transparent>,
+      G : <gregtech:transparent_casing:1>,
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
       N : <extendedcrafting:material:33>}); //Omnium Nugget
@@ -393,7 +393,7 @@ makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>
      "GSG",
      "PPP"],
     { C : <ore:circuitLuv>, //T6
-      G : <nuclearcraft:reactor_casing_transparent>,
+      G : <gregtech:transparent_casing:1>,
       S : <metaitem:cover.screen>,
       P : <appliedenergistics2:spatial_pylon>,
       N : <extendedcrafting:material:32>}); //Omnium Ingot
@@ -807,7 +807,7 @@ naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(938)
     .EUt(-393216)
-    .inputs(<metaitem:boltNaquadahEnriched> * 8)
+    .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
@@ -815,7 +815,7 @@ naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(3750)
     .EUt(-393216)
-    .inputs(<metaitem:boltNaquadria> * 8)
+    .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
@@ -824,7 +824,7 @@ naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(1875)
     .EUt(-1572864)
-    .inputs(<metaitem:boltNaquadahEnriched> * 8)
+    .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
@@ -832,6 +832,6 @@ naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(7500)
     .EUt(-1572864)
-    .inputs(<metaitem:boltNaquadria> * 8)
+    .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
