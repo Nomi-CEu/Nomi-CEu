@@ -113,6 +113,7 @@ recipes.addShaped(<projectred-core:resource_item:311>, [
 ]);
 
 recipes.addShapeless(<projectred-transmission:wire:16>, [<ore:cableGtSingleRedAlloy>]);
+recipes.addShapeless(<projectred-transmission:wire:16>, [<projectred-transmission:wire:0>,<metaitem:plateRubber>]);
 
 recipes.removeByRecipeName("projectred-transmission:insulated/green_insulated_wire");
 recipes.removeByRecipeName("projectred-transmission:insulated/cyan_insulated_wire");
