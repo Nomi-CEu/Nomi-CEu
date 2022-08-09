@@ -1,10 +1,6 @@
 import crafttweaker.item.IItemStack;
 
 val toRemove = [
-	<projectred-core:resource_item:100>,		//Copper Ingot
-	<projectred-core:resource_item:101>,		//Tin Ingot
-	<projectred-core:resource_item:102>,		//Silver Ingot
-	<projectred-core:resource_item:103>,		//Red Alloy Ingot
 	<projectred-core:resource_item:104>,		//Electrotine Alloy Ingot
 	<projectred-core:resource_item:105>,		//Electrotine
 	<projectred-core:resource_item:200>,		//Ruby

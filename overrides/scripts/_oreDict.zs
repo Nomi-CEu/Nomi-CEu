@@ -580,6 +580,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 	<ore:ingotCopper> : [
 		<libvulpes:productingot:4>,
 		<thermalfoundation:material:128>,
+		<projectred-core:resource_item:100>
 //		<forestry:ingot_copper>
 	],
 
@@ -695,7 +696,8 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotRedstoneAlloy
 	<ore:ingotRedstoneAlloy> : [
-		<enderio:item_alloy_ingot:3>
+		<enderio:item_alloy_ingot:3>,
+		<projectred-core:resource_item:103>
 	],
 
 	#ingotSignalum
@@ -712,6 +714,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 	<ore:ingotTin> : [
 		<libvulpes:productingot:5>,
 		<thermalfoundation:material:129>,
+		<projectred-core:resource_item:101>
 //		<forestry:ingot_tin>
 	],
 
@@ -728,7 +731,8 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 	#ingotSilver
 	<ore:ingotSilver> : [
 		<thermalfoundation:material:130>,
-		<nuclearcraft:ingot:13>
+		<nuclearcraft:ingot:13>,
+		<projectred-core:resource_item:102>
 	],
 
 	#ingotSilicon
