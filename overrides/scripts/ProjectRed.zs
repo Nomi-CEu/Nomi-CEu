@@ -24,7 +24,9 @@ val toRemove = [
 	<projectred-transmission:framed_wire:34>,	//Framed Low Load Power Line
 	<projectred-core:resource_item:250>,		//Sandy Coal Compound
 	<projectred-core:resource_item:300>,		//Silicon Boule
-	<projectred-core:resource_item:301>			//Silicon
+	<projectred-core:resource_item:301>,		//Silicon
+	<projectred-core:resource_item:310>,		//Red Silicon Compound
+	<projectred-core:resource_item:311>		    //Glowing Silicon Compound
 ] as IItemStack[];
 
 //Removing the preceding items and their recipes
@@ -62,6 +64,10 @@ recipes.removeByRecipeName("projectred-core:parts/pointer");
 recipes.removeByRecipeName("projectred-core:parts/cathode");
 recipes.removeByRecipeName("projectred-transmission:wired_plate");
 recipes.removeByRecipeName("projectred-transmission:bundled_plate");
+recipes.remove(<projectred-core:resource_item:310>);
+recipes.remove(<projectred-core:resource_item:311>);
+furnace.remove(<projectred-core:resource_item:341>);
+furnace.remove(<projectred-core:resource_item:320>);
 
 recipes.addShaped(<projectred-core:resource_item:1>, [
 	[null, <ore:plateRedAlloy>, null],
@@ -99,18 +105,16 @@ recipes.addShaped(<projectred-core:resource_item:3>, [
 	[null, <ore:gtceScrewdrivers>, null]
 ]);
 
-recipes.remove(<projectred-core:resource_item:310>);
-recipes.remove(<projectred-core:resource_item:311>);
-recipes.addShaped(<projectred-core:resource_item:310>, [
-	[<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>], 
-	[<minecraft:redstone>,<metaitem:wafer.silicon>,<minecraft:redstone>], 
-	[<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]
-]);
-recipes.addShaped(<projectred-core:resource_item:311>, [
-	[<minecraft:glowstone_dust>,<minecraft:glowstone_dust>,<minecraft:glowstone_dust>], 
-	[<minecraft:glowstone_dust>,<metaitem:wafer.silicon>,<minecraft:glowstone_dust>], 
-	[<minecraft:glowstone_dust>,<minecraft:glowstone_dust>,<minecraft:glowstone_dust>]
-]);
+chemical_bath.recipeBuilder()
+	.inputs(<metaitem:plate.integrated_logic_circuit>)
+	.fluidInputs(<liquid:redstone> * 1152)
+	.outputs(<projectred-core:resource_item:320>)
+	.duration(400).EUt(6).buildAndRegister();
+chemical_bath.recipeBuilder()
+	.inputs(<metaitem:plate.integrated_logic_circuit>)
+	.fluidInputs(<liquid:glowstone> * 1152)
+	.outputs(<projectred-core:resource_item:341>)
+	.duration(400).EUt(6).buildAndRegister();
 
 recipes.addShapeless(<projectred-transmission:wire:16>, [<ore:cableGtSingleRedAlloy>]);
 
