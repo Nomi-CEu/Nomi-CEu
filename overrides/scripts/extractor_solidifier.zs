@@ -316,11 +316,6 @@ fluid_extractor.recipeBuilder()
     .duration(180).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
-    .inputs([<metaitem:dustNetherQuartz>])
-    .fluidOutputs([<liquid:quartz> * 144])
-    .duration(180).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
     .inputs([<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:cow"}})])
     .fluidOutputs([<liquid:milk> * 32000])
     .duration(400).EUt(30).buildAndRegister();
