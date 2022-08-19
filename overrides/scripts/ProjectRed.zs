@@ -124,26 +124,6 @@ chemical_bath.recipeBuilder()
 
 recipes.addShapeless(<projectred-transmission:wire:16>, [<ore:cableGtSingleRedAlloy>]);
 
-// hide illumar if it isn't used
-if (!<projectred-illumination:lamp> as bool) {
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:500>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:501>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:502>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:503>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:504>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:505>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:506>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:507>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:508>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:509>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:510>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:511>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:512>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:513>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:514>);
-	mods.jei.JEI.removeAndHide(<projectred-core:resource_item:515>);
-}
-
 recipes.removeByRecipeName("projectred-transmission:insulated/green_insulated_wire");
 recipes.removeByRecipeName("projectred-transmission:insulated/cyan_insulated_wire");
 recipes.removeByRecipeName("projectred-transmission:insulated/yellow_insulated_wire");
