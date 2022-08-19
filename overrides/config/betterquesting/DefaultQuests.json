@@ -5541,7 +5541,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Metal Bender §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n\nYou might consider waiting until you have §2Integrated Circuits§r before progressing too far down the path of MV machines, since these circuits are much easier to make than §2Electronic Circuits§r.",
+          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Metal Bender §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5983,7 +5983,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Much easier to mass produce than §6Electronic Circuits§r, and they fulfill the same function in nearly all cases.\n\nYou should be batch crafting these.",
+          "desc:8": "These aren\u0027t necessarily easier to mass produce than §6Electronic Circuits§r, but they\u0027re required to produce the §6Advanced Integrated Circuit§r, your first §6HV§r circuit.\n\nOtherwise, they fulfill the same requirements.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48911,12 +48911,6 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:quartz_vibrant_glass"
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:simulation_chamber"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -52373,7 +52367,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer. Can run up to 2,048 recipes in parallel.\n\nThe Rotary Hearth Furnace is quite big!",
+          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer. Can accept Parallel Control Hatches.\n\nThe Rotary Hearth Furnace is quite big!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54339,7 +54333,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Certain multiblocks in CEu will require a Maintenance Hatch and/or Muffler Hatch. These cannot be shared between multiblocks. If you knew Maintenance in GT5u, fret not - Maintenance mechanics are far less punishing in CEu.\n\n§r- §aMuffler§r: This hatch must be §cunobstructed§r so it can output its beautiful smoke particles. When a recipe is performed, there is a small chance for the §3Muffler Hatch§r to give bonus items, typically tiny Dusts of Ash. It voids excess when full, so do not worry about it stopping machines from running.\n\n- §aMaintenance§r: You will need to do Maintenance for the Multiblock to begin operating. This is done by having a §9Wrench§r, a §9Screwdriver§r, a §9Soft Mallet§r, a §9Hammer§r, a §9Wire Cutter§r, and a §9Crowbar§r in your inventory, opening the Maintenance Hatch and §eclicking the center spot once§r. §cNo need to move tools individually§r. Alternatively, you can fix problems by placing §9Tape§r in the Maintenance Hatch. \n\nMaintenance problems may occur after §d48 real hours of activity§r. Needless to say, they are very rare. Each problem increases the recipe durations by 10%. Fixing the problems is done the same way as above.\n\nAt §6HV§r age, you will unlock other Maintenance Hatches that do not enforce fixing the problems manually. Both start with §6no Maintenance required§r:\n\n- §3Automatic Maintenance Hatch§r: Eliminates the need for Maintenance, §6forever§r.\n\n- §3Configurable Maintenance Hatch§r: You can configure it to cut off §a10% duration§r on recipes, at the cost of making Maintenance issues happen three times as fast. That is §d16 real hours§r of activity. §9Tape§r can fix problems in this Hatch as well.\n",
+          "desc:8": "§2Certain multiblocks in CEu will require a Maintenance Hatch and/or Muffler Hatch. These cannot be shared between multiblocks. If you knew Maintenance in GT5u, fret not - Maintenance mechanics are far less punishing in CEu.\n\n§r- §aMuffler§r: This hatch must be §cunobstructed§r so it can output its beautiful smoke particles. When a recipe is performed, there is a small chance for the §3Muffler Hatch§r to give bonus items, typically tiny Dusts of Ash. It voids excess when full, so do not worry about it stopping machines from running.\n\n- §aMaintenance§r: You will need to do Maintenance for the Multiblock to begin operating. This is done by having a §9Wrench§r, a §9Screwdriver§r, a §9Soft Mallet§r, a §9Hammer§r, a §9Wire Cutter§r, and a §9Crowbar§r in your inventory, opening the Maintenance Hatch and §eclicking the center spot once§r. §cNo need to move tools individually§r. Alternatively, you can fix problems by placing §9Tape§r in the Maintenance Hatch. \n\nMaintenance problems may occur after §d48 real hours of activity§r. Needless to say, they are very rare. Each problem increases the recipe durations by 10%. Fixing the problems is done the same way as above.\n\nLater, you will unlock other Maintenance Hatches that do not enforce fixing the problems manually. Both start with §6no Maintenance required§r:\n\n- §3Automatic Maintenance Hatch§r (§6HV§r): Eliminates the need for Maintenance, §6forever§r.\n\n- §3Configurable Maintenance Hatch§r (§6HV§r): You can configure it to cut off §a10% duration§r on recipes, at the cost of making Maintenance issues happen three times as fast. That is §d16 real hours§r of activity. §9Tape§r can fix problems in this Hatch as well.\n\n- §3Automatic Filtration Maintenance Hatch§r (§3UV§r): Eliminates the need for Maintenance, and provides a §6Cleanroom§r environment to recipes run within it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56311,17 +56305,17 @@
         },
         "26:10": {
           "id:3": 86,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -540,
-          "y:3": 128
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -528,
+          "y:3": 140
         },
         "27:10": {
           "id:3": 87,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
-          "y:3": 188
+          "y:3": 180
         },
         "28:10": {
           "id:3": 88,
@@ -56332,10 +56326,10 @@
         },
         "29:10": {
           "id:3": 89,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 228
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -532,
+          "y:3": 224
         },
         "30:10": {
           "id:3": 90,
@@ -56432,7 +56426,7 @@
           "id:3": 130,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -580,
+          "x:3": -592,
           "y:3": 336
         },
         "44:10": {
@@ -56558,7 +56552,7 @@
           "id:3": 398,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -582,
+          "x:3": -594,
           "y:3": 222
         },
         "62:10": {
@@ -56831,8 +56825,8 @@
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -552,
-          "y:3": 268
+          "x:3": -556,
+          "y:3": 264
         },
         "101:10": {
           "id:3": 887,
@@ -56853,7 +56847,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
-          "y:3": 188
+          "y:3": 180
         },
         "104:10": {
           "id:3": 896,
