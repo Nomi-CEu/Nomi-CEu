@@ -121,7 +121,7 @@ val dml_sim_chamber = Builder.start("dml_sim_chamber", 3100)
             .where('E', <metastate:gregtech:meta_block_compressed_2001:2>) // enderium
             .where('G', <metastate:appliedenergistics2:quartz_vibrant_glass:0>)
             .where('O', <metastate:extendedcrafting:storage:4> /* omnium */)
-            .where('-', <blockstate:deepmoblearning:simulation_chamber>)
+            .where('-', CTPredicate.getAny())
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>)
             | controller.autoAbilities(true, false, true, true, false, false, false))
             .build();
