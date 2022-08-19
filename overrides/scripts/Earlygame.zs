@@ -269,8 +269,6 @@ recipes.addShapeless(<metaitem:battery.re.lv.lithium>,[<metaitem:battery.hull.lv
 
 
 centrifuge.findRecipe(30, [<metaitem:dustBlackSteel> * 5], [null]).remove();
-electrolyzer.recipeBuilder().inputs([<ore:dustEnderPearl>]).outputs([<contenttweaker:pulsatingdust>]).duration(200).EUt(1000).buildAndRegister();
-electrolyzer.findRecipe(60, [<metaitem:dustEnderPearl> * 10], [null]).remove();
 
 furnace.setFuel(<metaitem:dustGraphite>, 1200);
 
@@ -387,3 +385,11 @@ cutter.recipeBuilder()
 <gregtech:meta_item_1:466>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
 <gregtech:meta_item_1:467>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
 <gregtech:meta_item_1:468>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
+
+// Treated Wood Stick
+lathe.recipeBuilder()
+	.inputs(<ore:plankTreatedWood>)
+	.outputs(<metaitem:stickTreatedWood> * 2)
+	.duration(20)
+	.EUt(30)
+	.buildAndRegister();

@@ -132,18 +132,6 @@ makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
     { A : <ore:plateDoubleSteel>,
       B : <minecraft:water_bucket:*> });
 
-// Solidified Experience
-solidifier.recipeBuilder()
-    .fluidInputs([<liquid:xpjuice> * 160])
-    .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<actuallyadditions:item_solidified_experience>)
-    .duration(500).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-	.inputs(<actuallyadditions:item_solidified_experience>)
-	.fluidOutputs(<liquid:xpjuice> * 160)
-	.duration(80).EUt(32).buildAndRegister();
-
 // XP Juice
 mixer.recipeBuilder()
 	.inputs(<ore:itemPulsatingPowder>)
