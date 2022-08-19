@@ -269,8 +269,6 @@ recipes.addShapeless(<metaitem:battery.re.lv.lithium>,[<metaitem:battery.hull.lv
 
 
 centrifuge.findRecipe(30, [<metaitem:dustBlackSteel> * 5], [null]).remove();
-electrolyzer.recipeBuilder().inputs([<ore:dustEnderPearl>]).outputs([<contenttweaker:pulsatingdust>]).duration(200).EUt(1000).buildAndRegister();
-electrolyzer.findRecipe(60, [<metaitem:dustEnderPearl> * 10], [null]).remove();
 
 furnace.setFuel(<metaitem:dustGraphite>, 1200);
 
