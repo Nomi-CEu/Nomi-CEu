@@ -261,6 +261,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.workstation>)
 	.duration(400)
 	.EUt(120)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 circuit_assembler.recipeBuilder()
 	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltVibrantAlloy> * 16])
@@ -268,6 +269,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.workstation>)
 	.duration(400)
 	.EUt(120)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 // topaz lens oredict
@@ -301,6 +303,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
 	.EUt(600)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
@@ -309,6 +312,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
 	.EUt(600)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
@@ -317,6 +321,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
 	.EUt(600)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
@@ -325,6 +330,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
 	.EUt(600)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 // Crystal Supercomputer * 1
