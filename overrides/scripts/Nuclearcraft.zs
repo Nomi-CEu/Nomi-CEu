@@ -583,19 +583,10 @@ alloy.recipeBuilder()
     .inputs([<nuclearcraft:fission_block>, <minecraft:glass>])
     .duration(50).EUt(16).buildAndRegister();
 
-
-
 alloy.recipeBuilder()
     .outputs([<nuclearcraft:alloy:1> * 2])
     .inputs([<ore:ingotFerroboron>, <ore:dustLithium>])
     .duration(300).EUt(16).buildAndRegister();
-
-alloy.recipeBuilder()
-    .outputs([<nuclearcraft:alloy:1> * 2])
-    .inputs([<ore:dustFerroboron>, <ore:dustLithium>])
-    .duration(300).EUt(16).buildAndRegister();
-
-
 
 alloy.recipeBuilder()
     .outputs([<nuclearcraft:alloy:6> * 2])
