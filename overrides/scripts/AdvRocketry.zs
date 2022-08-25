@@ -898,6 +898,27 @@ assembler.recipeBuilder()
 	.EUt(100)
 	.buildAndRegister();
 
+// Orbital Laser Drill
+recipes.removeByRecipeName("advancedrocketry:spacelaser");
+makeExtremeRecipe5(<advancedrocketry:spacelaser>,
+	[
+		"TTTTT",
+		"TCFCT",
+		"GESEG",
+		"RZEZR",
+		"CLRLC",
+	], {
+		T: <metaitem:plateDenseTrinium>, 
+		C: <ore:circuitZpm>, 
+		F: <metaitem:field.generator.zpm>,
+		G: <metaitem:gearEndSteel>,
+		R: <metaitem:frameHsss>,
+		E: <metaitem:emitter.luv>,
+		Z: <metaitem:emitter.zpm>,
+		L: <contenttweaker:t3laser>,
+		S: <metaitem:gcym:large_engraver>,
+	});
+
 /*
 
   Removals

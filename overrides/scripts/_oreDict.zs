@@ -1479,7 +1479,7 @@ mods.jei.JEI.removeAndHide(<advancedrocketry:spaceelevatorcontroller>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:beacon>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:thermitetorch>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:wirelesstransciever>);
-mods.jei.JEI.removeAndHide(<advancedrocketry:spacelaser>);
+//mods.jei.JEI.removeAndHide(<advancedrocketry:spacelaser>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:productdust>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:productdust:1>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:productingot>);
