@@ -640,6 +640,14 @@ recipes.addShaped(<gregtech:cleanroom_casing:2>, [
 	[<metaitem:electric.motor.luv>, <ore:frameGtBlackSteel>, <metaitem:rotorIridium>]
 ]);
 
+// Butadiene
+large_chemical_reactor.recipeBuilder()
+	.fluidInputs(<liquid:ethanol> * 2000)
+	.notConsumable(<ore:dustTantalum>)
+	.fluidOutputs(<liquid:butadiene> * 1000)
+	.circuit(25)
+	.duration(300).EUt(7680).buildAndRegister();
+
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);
