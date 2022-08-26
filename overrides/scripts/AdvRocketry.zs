@@ -528,7 +528,7 @@ makeShaped("ar_launchpad",
 		"CCC",
 		"CCC",
 	], {
-		C: <ore:stoneConcrete>
+		C: <ore:dustConcrete>
 	});
 
 //Linker
