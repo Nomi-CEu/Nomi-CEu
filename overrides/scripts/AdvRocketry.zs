@@ -905,19 +905,23 @@ makeExtremeRecipe5(<advancedrocketry:spacelaser>,
 		"TTTTT",
 		"TCFCT",
 		"GESEG",
-		"RZEZR",
+		"RZWZR",
 		"CLRLC",
 	], {
 		T: <metaitem:plateDenseTrinium>, 
 		C: <ore:circuitZpm>, 
 		F: <metaitem:field.generator.zpm>,
-		G: <metaitem:gearEndSteel>,
+		G: <metaitem:gearDraconium>,
 		R: <metaitem:frameHsss>,
 		E: <metaitem:emitter.luv>,
 		Z: <metaitem:emitter.zpm>,
 		L: <contenttweaker:t3laser>,
-		S: <metaitem:gcym:large_engraver>,
+		S: <metaitem:large_miner.luv>,
+		W: <advancedrocketry:warpcore>,
 	});
+<advancedrocketry:spacelaser>.addTooltip(format.gray("Glory to the PGS!"));
+<advancedrocketry:spacelaser>.addTooltip(format.gray("Consult the AR Wiki for building instructions."));
+<advancedrocketry:spacelaser>.addTooltip(format.gray("Consumes ") + format.yellow("1,000,000") + format.gray(" RF/t"));
 
 /*
 
