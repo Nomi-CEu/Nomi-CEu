@@ -127,7 +127,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockInfinity
 	<ore:blockInfinity> : [
-		<avaritia:block_resource:1>
+//		<avaritia:block_resource:1>
 	],
 
 	#blockInvar
@@ -656,7 +656,7 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#ingotInfinity
 	<ore:ingotInfinity> : [
-		<avaritia:resource:6>
+//		<avaritia:resource:6>
 	],
 
 	#ingotInvar
@@ -1315,6 +1315,35 @@ for oreDictEntry, items in miscDisabled {
 <ore:blockAluminum>.add(<gregtech:meta_block_compressed_0:1>);
 
 <ore:blockCoalCoke>.add(<gregtech:meta_block_compressed_22:5>);
+
+// Infinity conversion
+recipes.addShapeless(<avaritia:resource:6>, [<metaitem:ingotInfinity>]);
+recipes.addShapeless(<moreplates:infinity_plate>, [<metaitem:plateInfinity>]);
+
+mods.jei.JEI.removeAndHide(<metaitem:ingotInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:plateInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:plateDoubleInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:blockInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nuggetInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:dustInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:dustSmallInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:dustTinyInfinity>);
+// Infinity Plate * 1
+<recipemap:bender>.findRecipe(24, [<metaitem:ingotInfinity>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+// Double Infinity Plate * 1
+<recipemap:bender>.findRecipe(96, [<metaitem:ingotInfinity> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
+
+bender.recipeBuilder()
+	.inputs(<avaritia:resource:6>)
+	.circuit(1)
+	.outputs(<moreplates:infinity_plate>)
+	.duration(5000).EUt(24).buildAndRegister();
+
+arc_furnace.recipeBuilder()
+	.inputs(<moreplates:infinity_plate>)
+	.fluidInputs(<liquid:oxygen> * 5000)
+	.outputs(<avaritia:resource:6>)
+	.duration(5000).EUt(30).buildAndRegister();
 
 //Add moreplates neutronium plate to gtce neutronium ore dict
 //<ore:plateNeutronium>.add(<moreplates:neutronium_plate:0>);

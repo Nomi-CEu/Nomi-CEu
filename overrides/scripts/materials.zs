@@ -172,7 +172,9 @@ var infinity = MaterialBuilder(32026, "infinity")
     .ingot()
     .color(0x000000).iconSet("shiny")
     .flags("generate_plate")
+    .components([<material:neutronium> * 5])
     .build();
+<material:infinity>.setFormula("∞");
 
 var microversium = MaterialBuilder(32027, "microversium")
     .ingot()

@@ -483,7 +483,7 @@ makeExtremeRecipe9(<contenttweaker:eternalcatalyst>,
 
 ////////////////////////// Infinity Ingot ///////////////////////
 //mods.avaritia.ExtremeCrafting.remove(<ore:ingotInfinity>);
-makeExtremeRecipe9(<metaitem:ingotInfinity>,
+makeExtremeRecipe9(<avaritia:resource:6>,
     ["         ",
      "     ABBB",
      "  ABBBCDB",
