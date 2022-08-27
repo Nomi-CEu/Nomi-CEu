@@ -16,6 +16,28 @@ furnace.remove(<metaitem:ingotEnderium>, <metaitem:dustEnderium>);
 furnace.remove(<metaitem:ingotLumium>, <metaitem:dustLumium>);
 furnace.remove(<metaitem:ingotSignalum>, <metaitem:dustSignalum>);
 
+// Tough Alloy [tier 0]
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<ore:dustSteel> * 1, <ore:dustBoron> * 1, <ore:dustLithium> * 2])
+	.circuit(3)
+	.fluidOutputs([<liquid:tough_alloy> * 576])
+	.property("temperature", 1000)
+	.duration(300)
+	.EUt(120)
+	.buildAndRegister();
+
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<ore:dustSteel> * 1, <ore:dustBoron> * 1, <ore:dustLithium> * 2])
+	.fluidInputs([<liquid:nitrogen> * 4000])
+	.circuit(13)
+	.fluidOutputs([<liquid:tough_alloy> * 576])
+	.property("temperature", 1000)
+	.duration(200)
+	.EUt(120)
+	.buildAndRegister();
+
+fluid_solidifier.recipeBuilder().fluidInputs(<liquid:tough_alloy> * 144).notConsumable(<metaitem:shape.mold.ingot>).outputs(<nuclearcraft:alloy:1>).duration(20).EUt(7).buildAndRegister();
+
 //Black Steel [tier 1]
 // Black Steel Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustBlackSteel>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:nitrogen> * 1000]).remove();
