@@ -1257,7 +1257,8 @@ var miscDisabled as IItemStack[][IOreDictEntry] = {
 		<enderio:item_material:5>,
 		<nuclearcraft:gem:6>,
 		<appliedenergistics2:material:5>,
-		<libvulpes:productingot:3>
+		<libvulpes:productingot:3>,		
+		<projectred-core:resource_item:301>
 	],
 
 	#Arsenic
@@ -1288,6 +1289,16 @@ var miscDisabled as IItemStack[][IOreDictEntry] = {
 	#stickLongPlutonium
 	<ore:stickLongPlutonium> : [
 //		<metaitem:stickLongPlutonium>
+	],
+
+	#gemRuby
+	<ore:gemRuby> : [
+		<projectred-core:resource_item:200>
+	],
+
+	#gemSapphire
+	<ore:gemSapphire> : [
+		<projectred-core:resource_item:201>
 	]
 };
 

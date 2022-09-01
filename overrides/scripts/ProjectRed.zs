@@ -3,8 +3,6 @@ import crafttweaker.item.IItemStack;
 val toRemove = [
 	<projectred-core:resource_item:104>,		//Electrotine Alloy Ingot
 	<projectred-core:resource_item:105>,		//Electrotine
-	<projectred-core:resource_item:200>,		//Ruby
-	<projectred-core:resource_item:201>,		//Sapphire
 	<projectred-core:resource_item:202>,		//Peridot
 	<projectred-core:resource_item:251>,		//Red Iron Compound
 	<projectred-core:resource_item:252>,		//Electrotine Iron Compound
@@ -23,8 +21,7 @@ val toRemove = [
 	<projectred-transmission:wire:34>,			//Low Load Power Line
 	<projectred-transmission:framed_wire:34>,	//Framed Low Load Power Line
 	<projectred-core:resource_item:250>,		//Sandy Coal Compound
-	<projectred-core:resource_item:300>,		//Silicon Boule
-	<projectred-core:resource_item:301>,		//Silicon
+	<projectred-core:resource_item:300>,		//Silicon
 	<projectred-core:resource_item:310>,		//Red Silicon Compound
 	<projectred-core:resource_item:311>		    //Glowing Silicon Compound
 ] as IItemStack[];
