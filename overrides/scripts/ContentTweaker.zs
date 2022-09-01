@@ -233,6 +233,7 @@ makeFluid("elementalreduction",         "588c5a",   false,  2000,       "COMMON"
 
 makeFluid("plutonium2",                 "f73663",   false,  1024,       "COMMON",   0);
 makeFluid("uranium233",                 "187a30",   false,  1024,       "COMMON",   0);
+makeFluid("tough_alloy",                "10041c",   false,  1024,       "COMMON",   0);
 
 makeFluid("moltendarksoularium",        "422805",   false,  1000,       "COMMON",   0);
 
