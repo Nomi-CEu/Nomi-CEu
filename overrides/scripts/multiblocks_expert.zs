@@ -872,6 +872,7 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_bastnasite_0> * 64,
              <gregtech:ore_sphalerite_0> * 64,
              <gregtech:ore_monazite_0> * 64,
+             <gregtech:ore_monazite_0> * 64,
              <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
              <gregtech:ore_osmiridium_8020_0> * 6,
              <gregtech:ore_iridosmine_8020_0> * 6,
@@ -1418,6 +1419,7 @@ actualization_chamber.recipeMap
              <gregtech:ore_realgar_0> * 64,
              <gregtech:ore_bastnasite_0> * 64,
              <gregtech:ore_sphalerite_0> * 64,
+             <gregtech:ore_monazite_0> * 64,
              <gregtech:ore_monazite_0> * 64,
              <gregtech:meta_block_compressed_26> * 64, //Ender Pearl Block
              <gregtech:ore_osmiridium_8020_0> * 6,
