@@ -422,6 +422,11 @@ tiereightship.rarity = "epic";
 tiereightship.maxStackSize = 16;
 tiereightship.register();
 
+var tiereightandhalfship = VanillaFactory.createItem("tiereightandhalfship");
+tiereightandhalfship.rarity = "epic";
+tiereightandhalfship.maxStackSize = 16;
+tiereightandhalfship.register();
+
 var tiernineship = VanillaFactory.createItem("tiernineship");
 tiernineship.rarity = "epic";
 tiernineship.maxStackSize = 16;

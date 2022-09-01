@@ -111,6 +111,19 @@ makeExtremeRecipe7(<contenttweaker:tierfourandhalfship>,
 	  I : <redstonearsenal:tool.sword_flux> }
 );
 
+// t8.5 mm
+mods.extendedcrafting.TableCrafting.addShaped(<contenttweaker:tiereightandhalfship>, [
+	[null, null, null, <contenttweaker:t3laser>, <contenttweaker:t3laser>, <contenttweaker:t3laser>, null, null, null], 
+	[null, null, <contenttweaker:t3laser>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <contenttweaker:t3laser>, null, null], 
+	[null, <contenttweaker:t2guidance>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, <contenttweaker:t2guidance>, null], 
+	[null, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <gregtech:meta_item_1:208>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, null], 
+	[null, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <gregtech:meta_item_1:223>, <draconicevolution:draconic_energy_core>, <gregtech:meta_item_1:223>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, null], 
+	[<ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <draconicevolution:reactor_part>, <gregtech:meta_item_1:208>, <draconicevolution:reactor_part>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>], 
+	[<ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <gregtech:machine:1571>, <advancedrocketry:warpcore>, <gregtech:machine:1571>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>], 
+	[<ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <advancedrocketry:warpmonitor>, <advancedrocketry:warpcore>, <advancedrocketry:warpmonitor>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>], 
+	[null, <contenttweaker:warpengine>, <contenttweaker:warpengine>, <contenttweaker:warpengine>, null, <contenttweaker:warpengine>, <contenttweaker:warpengine>, <contenttweaker:warpengine>, null]
+]);
+
 // Exchanging Gadget
 recipes.removeByRecipeName("buildinggadgets:exchangingtool");
 makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate: {Name: "minecraft:air"}}),

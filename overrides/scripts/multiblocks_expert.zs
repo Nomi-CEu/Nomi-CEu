@@ -1076,6 +1076,44 @@ microverse_projector_advanced_ii.recipeMap
         <contenttweaker:tiereightship_stabilized_matter>
     ).buildAndRegister();
 
+// t8.5 darmstadtite
+microverse_projector_advanced_ii.recipeMap
+    .recipeBuilder()
+    .duration(9000)
+    .EUt(250000)
+    .inputs(<contenttweaker:tiereightandhalfship>,
+            <metaitem:neutron_reflector> * 8,
+            <metaitem:blockNaquadah> * 24,
+            <draconicevolution:chaos_shard>)
+    .outputs(
+        <gregtech:ore_darmstadtite_0:2> * 64,
+        <gregtech:ore_darmstadtite_0:2> * 64,
+        <gregtech:ore_darmstadtite_0:2> * 64,
+        <gregtech:ore_darmstadtite_0:2> * 64,
+        <gregtech:ore_darmstadtite_0:2> * 64,
+        <gregtech:ore_darmstadtite_0:2> * 64,
+        <gregtech:ore_darmstadtite_0:2> * 64,
+        <gregtech:ore_darmstadtite_0:2> * 64)
+    .buildAndRegister();
+
+// t8.5 dulystite
+microverse_projector_advanced_ii.recipeMap
+    .recipeBuilder()
+    .duration(9000)
+    .EUt(250000)
+    .inputs(<contenttweaker:tiereightandhalfship>,
+            <metaitem:blockNaquadah> * 24,
+            <draconicevolution:chaos_shard>,
+            <contenttweaker:gemsensor>)
+    .outputs(
+        <gregtech:ore_dulystite_0:2> * 64,
+        <gregtech:ore_dulystite_0:2> * 64,
+        <gregtech:ore_dulystite_0:2> * 64,
+        <gregtech:ore_dulystite_0:2> * 64,
+        <gregtech:ore_dulystite_0:2> * 64,
+        <gregtech:ore_dulystite_0:2> * 64)
+    .buildAndRegister();
+
 // t9 nt
 microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()

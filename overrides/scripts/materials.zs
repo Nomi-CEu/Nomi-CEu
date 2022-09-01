@@ -747,6 +747,20 @@ var taranium = MaterialBuilder(32109, "taranium")
     .build();
 <material:taranium>.setFormula("Tn");
 
+var darmstadtite = MaterialBuilder(32110, "darmstadtite")
+    .dust().ore(2)
+    .colorAverage().iconSet("dull")
+    .components([<material:darmstadtium> * 2, <material:sulfur> * 3])
+    .addOreByproducts([<material:rare_earth>, <material:rhodium_sulfate>, <material:darmstadtium>])
+    .build();
+
+var dulystite = MaterialBuilder(32111, "dulystite")
+    .gem().ore(2)
+    .colorAverage().iconSet("ruby")
+    .components([<material:duranium> * 1, <material:chlorine> * 3])
+    .addOreByproducts([<material:sphalerite>, <material:duranium>, <material:europium>])
+    .build();
+
 <material:rhodium_sulfate>.addDust();
 
 <material:lutetium>.addIngot();
