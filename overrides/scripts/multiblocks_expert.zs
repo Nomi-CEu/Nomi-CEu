@@ -1103,9 +1103,9 @@ microverse_projector_advanced_ii.recipeMap
     .duration(9000)
     .EUt(250000)
     .inputs(<contenttweaker:tiereightandhalfship>,
+            <contenttweaker:gemsensor> * 8,
             <metaitem:blockNaquadah> * 24,
-            <draconicevolution:chaos_shard>,
-            <contenttweaker:gemsensor>)
+            <draconicevolution:chaos_shard>)
     .outputs(
         <gregtech:ore_dulystite_0:2> * 64,
         <gregtech:ore_dulystite_0:2> * 64,
