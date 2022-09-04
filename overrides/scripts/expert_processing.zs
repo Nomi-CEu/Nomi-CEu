@@ -763,3 +763,40 @@ centrifuge.recipeBuilder()
     .fluidInputs(<liquid:taranium_depleted_helium> * 2500)
     .outputs(<metaitem:dustCleanInertResidue>)
     .duration(320).EUt(1920).buildAndRegister();
+
+// Tributyl Phosphate
+
+chemical_reactor.recipeBuilder()
+    .inputs(<ore:dustPhosphorus>)
+    .fluidInputs(<liquid:chlorine> * 3000)
+    .fluidOutputs(<liquid:phosphorus_trichloride> * 1000)
+    .duration(300).EUt(480).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .inputs(<metaitem:dustPhosphorusPentoxide> * 7)
+    .fluidInputs(<liquid:phosphorus_trichloride> * 3000, <liquid:chlorine> * 6000)
+    .fluidOutputs(<liquid:phosphoryl_chloride> * 5000)
+    .duration(800).EUt(3840).buildAndRegister();
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:butyraldehyde> * 1000, <liquid:hydrogen> * 2000)
+    .notConsumable(<ore:dustNickel>)
+    .fluidOutputs(<liquid:butanol> * 1000)
+    .duration(300).EUt(480).buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:phosphoryl_chloride> * 1000, <liquid:butanol> * 3000)
+    .fluidOutputs(<liquid:tributyl_phosphate> * 1000)
+    .duration(600).EUt(23040).buildAndRegister();
+
+// Rare Earth
+electrolyzer.recipeBuilder()
+    .inputs(<ore:dustRareEarth>)
+    .fluidInputs(<liquid:tributyl_phosphate> * 150)
+    .chancedOutput(<metaitem:dustNeodymium>, 1500, 0)
+    .chancedOutput(<metaitem:dustSamarium>, 1500, 0)
+    .chancedOutput(<metaitem:dustYttrium>, 1500, 0)
+    .chancedOutput(<metaitem:dustLanthanum>, 1500, 0)
+    .chancedOutput(<metaitem:dustLutetium>, 600, 0)
+    .chancedOutput(<metaitem:dustEuropium>, 600, 0)
+    .duration(50).EUt(1966080).buildAndRegister();

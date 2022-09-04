@@ -761,6 +761,32 @@ var dulystite = MaterialBuilder(32111, "dulystite")
     .addOreByproducts([<material:sphalerite>, <material:duranium>, <material:europium>])
     .build();
 
+var butanol = MaterialBuilder(32112, "butanol")
+    .fluid()
+    .color(0xc7af2e)
+    .components([<material:carbon> * 4, <material:hydrogen> * 10, <material:oxygen> * 1])
+    .build();
+<material:butanol>.setFormula("C4H9OH", true);
+
+var phosphorus_trichloride = MaterialBuilder(32113, "phosphorus_trichloride")
+    .fluid()
+    .color(0xe8c474)
+    .components([<material:phosphorus> * 1, <material:chlorine> * 3])
+    .build();
+
+var phosphoryl_chloride = MaterialBuilder(32114, "phosphoryl_chloride")
+    .fluid()
+    .color(0xe8bb5b)
+    .components([<material:phosphorus> * 1, <material:oxygen> * 1, <material:chlorine> * 3])
+    .build();
+
+var tributyl_phosphate = MaterialBuilder(32115, "tributyl_phosphate")
+    .fluid()
+    .color(0xe8c4a0)
+    .components([<material:carbon> * 12, <material:hydrogen> * 27, <material:oxygen> * 4, <material:phosphorus> * 1])
+    .build();
+<material:tributyl_phosphate>.setFormula("(C4H9O)3PO", true);
+
 <material:rhodium_sulfate>.addDust();
 
 <material:lutetium>.addIngot();
