@@ -3007,11 +3007,13 @@
       }
     },
     "52:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        93
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Coming soon!",
+          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with Maintenance, it won\u0027t be as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, and the rest of the top face is built from §3Filter Casings§r. The rest of the wall space is filled with §3Plascrete§r.\n\nFor transfer between the clean environment and the outside world:\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n- Energy through §3Hulls§r or §3Diodes§r (of any tier).\n- AE2 channels through §3Hulls§r.\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective.\n\nYou will also need an §3Energy §rand §3Maintenance Hatch §rfor cleaning. §3Cleanroom Glass§r can replace any §3Plascrete§r, except in the edges.\n\nIf you\u0027re facing issues forming the Cleanroom:\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r. The floor block directly under the controller must also be §3Plascrete§r or §3Cleanroom Glass§r.\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.\n- Try rotating the controller with a wrench, or for even side lengths, try the other central positions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3019,7 +3021,7 @@
             "OreDict:8": "",
             "id:8": "minecraft:concrete"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Cleanroom",
@@ -4921,7 +4923,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Much easier to mass produce than §6Electronic Circuits§r, and they fulfill the same function in nearly all cases.\n\nYou should be batch crafting these.",
+          "desc:8": "§cThese circuits are much more complicated to process compared to their primitive counterparts. However, this design allows them to be upgraded beyond what their predecesors could withstand.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7434,7 +7436,7 @@
       "preRequisites:11": [
         90,
         134,
-        52,
+        781,
         502
       ],
       "properties:10": {
@@ -40142,6 +40144,64 @@
     },
     "781:10": {
       "preRequisites:11": [
+        52,
+        84
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6CPU Wafers§k§f are high-complexity silicon circuits that serve as the core for more compact and efficient circuit designs.\n\nThe complexity of this design comes with the drawback that the manufacturing area must be clear of any contaminants. As such, they must be manufactured in a§3 Clean Room§f§f.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 566,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "CPU Wafers",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 781,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 566,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 591,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "782:10": {
+      "preRequisites:11": [
         214,
         400
       ],
@@ -40174,7 +40234,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "782:10": {
+    "783:10": {
       "preRequisites:11": [
         897
       ],
@@ -40212,7 +40272,7 @@
         }
       }
     },
-    "783:10": {
+    "784:10": {
       "preRequisites:11": [
         282
       ],
@@ -40263,7 +40323,7 @@
         }
       }
     },
-    "784:10": {
+    "785:10": {
       "preRequisites:11": [
         72
       ],
@@ -40315,7 +40375,7 @@
         }
       }
     },
-    "785:10": {
+    "786:10": {
       "preRequisites:11": [
         805
       ],
@@ -40353,7 +40413,7 @@
         }
       }
     },
-    "786:10": {
+    "787:10": {
       "preRequisites:11": [
         272,
         296,
@@ -40406,7 +40466,7 @@
         }
       }
     },
-    "787:10": {
+    "788:10": {
       "preRequisites:11": [
         3
       ],
@@ -40457,7 +40517,7 @@
         }
       }
     },
-    "788:10": {
+    "789:10": {
       "preRequisites:11": [
         3
       ],
@@ -40520,7 +40580,7 @@
         }
       }
     },
-    "789:10": {
+    "790:10": {
       "preRequisites:11": [
         69
       ],
@@ -40571,7 +40631,7 @@
         }
       }
     },
-    "790:10": {
+    "791:10": {
       "preRequisites:11": [
         524,
         798
@@ -40629,7 +40689,7 @@
         }
       }
     },
-    "791:10": {
+    "792:10": {
       "preRequisites:11": [
         172,
         177
@@ -40681,7 +40741,7 @@
         }
       }
     },
-    "792:10": {
+    "793:10": {
       "preRequisites:11": [
         27
       ],
@@ -40738,7 +40798,7 @@
         }
       }
     },
-    "793:10": {
+    "794:10": {
       "preRequisites:11": [
         792,
         793
@@ -40772,7 +40832,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "794:10": {
+    "795:10": {
       "preRequisites:11": [
         796
       ],
@@ -40823,7 +40883,7 @@
         }
       }
     },
-    "795:10": {
+    "796:10": {
       "preRequisites:11": [
         323
       ],
@@ -40874,7 +40934,7 @@
         }
       }
     },
-    "796:10": {
+    "797:10": {
       "preRequisites:11": [
         796
       ],
@@ -40925,7 +40985,7 @@
         }
       }
     },
-    "797:10": {
+    "798:10": {
       "preRequisites:11": [
         675,
         676
@@ -40977,7 +41037,7 @@
         }
       }
     },
-    "798:10": {
+    "799:10": {
       "preRequisites:11": [
         545,
         745
@@ -41047,7 +41107,7 @@
         }
       }
     },
-    "799:10": {
+    "800:10": {
       "preRequisites:11": [
         162,
         416,
@@ -41082,7 +41142,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "800:10": {
+    "801:10": {
       "preRequisites:11": [
         154
       ],
@@ -41146,7 +41206,7 @@
         }
       }
     },
-    "801:10": {
+    "802:10": {
       "preRequisites:11": [
         325
       ],
@@ -41197,7 +41257,7 @@
         }
       }
     },
-    "802:10": {
+    "803:10": {
       "preRequisites:11": [
         805
       ],
@@ -41260,7 +41320,7 @@
         }
       }
     },
-    "803:10": {
+    "804:10": {
       "preRequisites:11": [
         107,
         286
@@ -41324,7 +41384,7 @@
         }
       }
     },
-    "804:10": {
+    "805:10": {
       "preRequisites:11": [
         3
       ],
@@ -41357,7 +41417,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "805:10": {
+    "806:10": {
       "preRequisites:11": [
         166,
         226
@@ -41400,7 +41460,7 @@
         }
       }
     },
-    "806:10": {
+    "807:10": {
       "preRequisites:11": [
         163,
         413
@@ -41456,7 +41516,7 @@
         }
       }
     },
-    "807:10": {
+    "808:10": {
       "preRequisites:11": [
         805
       ],
@@ -41494,7 +41554,7 @@
         }
       }
     },
-    "808:10": {
+    "809:10": {
       "preRequisites:11": [
         60
       ],
@@ -41546,7 +41606,7 @@
         }
       }
     },
-    "809:10": {
+    "810:10": {
       "preRequisites:11": [
         94,
         505
@@ -41580,7 +41640,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "810:10": {
+    "811:10": {
       "preRequisites:11": [
         4
       ],
@@ -41618,7 +41678,7 @@
         }
       }
     },
-    "811:10": {
+    "812:10": {
       "preRequisites:11": [
         21
       ],
@@ -41669,7 +41729,7 @@
         }
       }
     },
-    "812:10": {
+    "813:10": {
       "preRequisites:11": [
         145
       ],
@@ -41736,7 +41796,7 @@
         }
       }
     },
-    "813:10": {
+    "814:10": {
       "preRequisites:11": [
         76,
         818
@@ -41788,7 +41848,7 @@
         }
       }
     },
-    "814:10": {
+    "815:10": {
       "preRequisites:11": [
         141
       ],
@@ -41863,7 +41923,7 @@
         }
       }
     },
-    "815:10": {
+    "816:10": {
       "preRequisites:11": [
         530
       ],
@@ -41914,7 +41974,7 @@
         }
       }
     },
-    "816:10": {
+    "817:10": {
       "preRequisites:11": [
         70
       ],
@@ -41971,7 +42031,7 @@
         }
       }
     },
-    "817:10": {
+    "818:10": {
       "preRequisites:11": [
         72,
         78,
@@ -42024,7 +42084,7 @@
         }
       }
     },
-    "818:10": {
+    "819:10": {
       "preRequisites:11": [
         27
       ],
@@ -42080,7 +42140,7 @@
         }
       }
     },
-    "819:10": {
+    "820:10": {
       "preRequisites:11": [
         82
       ],
@@ -42131,7 +42191,7 @@
         }
       }
     },
-    "820:10": {
+    "821:10": {
       "preRequisites:11": [
         727
       ],
@@ -42182,7 +42242,7 @@
         }
       }
     },
-    "821:10": {
+    "822:10": {
       "preRequisites:11": [
         95
       ],
@@ -42233,7 +42293,7 @@
         }
       }
     },
-    "822:10": {
+    "823:10": {
       "preRequisites:11": [
         153,
         899
@@ -42286,7 +42346,7 @@
         }
       }
     },
-    "823:10": {
+    "824:10": {
       "preRequisites:11": [
         825
       ],
@@ -42355,7 +42415,7 @@
         }
       }
     },
-    "824:10": {
+    "825:10": {
       "preRequisites:11": [
         177
       ],
@@ -42412,7 +42472,7 @@
         }
       }
     },
-    "825:10": {
+    "826:10": {
       "preRequisites:11": [
         198
       ],
@@ -42464,7 +42524,7 @@
         }
       }
     },
-    "826:10": {
+    "827:10": {
       "preRequisites:11": [
         93
       ],
@@ -42515,7 +42575,7 @@
         }
       }
     },
-    "827:10": {
+    "828:10": {
       "preRequisites:11": [
         830
       ],
@@ -42566,7 +42626,7 @@
         }
       }
     },
-    "828:10": {
+    "829:10": {
       "preRequisites:11": [
         830
       ],
@@ -42636,7 +42696,7 @@
         }
       }
     },
-    "829:10": {
+    "830:10": {
       "preRequisites:11": [
         830
       ],
@@ -42699,7 +42759,7 @@
         }
       }
     },
-    "830:10": {
+    "831:10": {
       "preRequisites:11": [
         96
       ],
@@ -42750,7 +42810,7 @@
         }
       }
     },
-    "831:10": {
+    "832:10": {
       "preRequisites:11": [
         93
       ],
@@ -42801,7 +42861,7 @@
         }
       }
     },
-    "832:10": {
+    "833:10": {
       "preRequisites:11": [
         147,
         259
@@ -42853,7 +42913,7 @@
         }
       }
     },
-    "833:10": {
+    "834:10": {
       "preRequisites:11": [
         91,
         810,
@@ -42906,7 +42966,7 @@
         }
       }
     },
-    "834:10": {
+    "835:10": {
       "preRequisites:11": [
         194,
         526
@@ -42958,7 +43018,7 @@
         }
       }
     },
-    "835:10": {
+    "836:10": {
       "preRequisites:11": [
         325,
         904
@@ -43010,7 +43070,7 @@
         }
       }
     },
-    "836:10": {
+    "837:10": {
       "preRequisites:11": [
         323,
         791,
@@ -43063,7 +43123,7 @@
         }
       }
     },
-    "837:10": {
+    "838:10": {
       "preRequisites:11": [
         312
       ],
@@ -43114,7 +43174,7 @@
         }
       }
     },
-    "838:10": {
+    "839:10": {
       "preRequisites:11": [
         242,
         327
@@ -43166,7 +43226,7 @@
         }
       }
     },
-    "839:10": {
+    "840:10": {
       "preRequisites:11": [
         323
       ],
@@ -43218,7 +43278,7 @@
         }
       }
     },
-    "840:10": {
+    "841:10": {
       "preRequisites:11": [
         845,
         847
@@ -43270,7 +43330,7 @@
         }
       }
     },
-    "841:10": {
+    "842:10": {
       "preRequisites:11": [
         324,
         843
@@ -43322,7 +43382,7 @@
         }
       }
     },
-    "842:10": {
+    "843:10": {
       "preRequisites:11": [
         844
       ],
@@ -43373,7 +43433,7 @@
         }
       }
     },
-    "843:10": {
+    "844:10": {
       "preRequisites:11": [
         324,
         843
@@ -43425,7 +43485,7 @@
         }
       }
     },
-    "844:10": {
+    "845:10": {
       "preRequisites:11": [
         847
       ],
@@ -43476,7 +43536,7 @@
         }
       }
     },
-    "845:10": {
+    "846:10": {
       "preRequisites:11": [
         690
       ],
@@ -43527,7 +43587,7 @@
         }
       }
     },
-    "846:10": {
+    "847:10": {
       "preRequisites:11": [
         828,
         841,
@@ -43605,7 +43665,7 @@
         }
       }
     },
-    "847:10": {
+    "848:10": {
       "preRequisites:11": [
         312
       ],
@@ -43656,7 +43716,7 @@
         }
       }
     },
-    "848:10": {
+    "849:10": {
       "preRequisites:11": [
         677,
         749
@@ -43708,7 +43768,7 @@
         }
       }
     },
-    "849:10": {
+    "850:10": {
       "preRequisites:11": [
         827
       ],
@@ -43759,7 +43819,7 @@
         }
       }
     },
-    "850:10": {
+    "851:10": {
       "preRequisites:11": [
         196
       ],
@@ -43810,7 +43870,7 @@
         }
       }
     },
-    "851:10": {
+    "852:10": {
       "preRequisites:11": [
         607
       ],
@@ -43861,7 +43921,7 @@
         }
       }
     },
-    "852:10": {
+    "853:10": {
       "preRequisites:11": [
         855
       ],
@@ -43912,7 +43972,7 @@
         }
       }
     },
-    "853:10": {
+    "854:10": {
       "preRequisites:11": [
         339
       ],
@@ -43981,7 +44041,7 @@
         }
       }
     },
-    "854:10": {
+    "855:10": {
       "preRequisites:11": [
         255,
         857
@@ -44045,7 +44105,7 @@
         }
       }
     },
-    "855:10": {
+    "856:10": {
       "preRequisites:11": [
         690,
         858
@@ -44097,7 +44157,7 @@
         }
       }
     },
-    "856:10": {
+    "857:10": {
       "preRequisites:11": [
         531,
         826,
@@ -44174,7 +44234,7 @@
         }
       }
     },
-    "857:10": {
+    "858:10": {
       "preRequisites:11": [
         607,
         756
@@ -44232,7 +44292,7 @@
         }
       }
     },
-    "858:10": {
+    "859:10": {
       "preRequisites:11": [
         727
       ],
@@ -44283,7 +44343,7 @@
         }
       }
     },
-    "859:10": {
+    "860:10": {
       "preRequisites:11": [
         727
       ],
@@ -44334,7 +44394,7 @@
         }
       }
     },
-    "860:10": {
+    "861:10": {
       "preRequisites:11": [
         827
       ],
@@ -44385,7 +44445,7 @@
         }
       }
     },
-    "861:10": {
+    "862:10": {
       "preRequisites:11": [
         827
       ],
@@ -44436,7 +44496,7 @@
         }
       }
     },
-    "862:10": {
+    "863:10": {
       "preRequisites:11": [
         727
       ],
@@ -44487,7 +44547,7 @@
         }
       }
     },
-    "863:10": {
+    "864:10": {
       "preRequisites:11": [
         727
       ],
@@ -44538,7 +44598,7 @@
         }
       }
     },
-    "864:10": {
+    "865:10": {
       "preRequisites:11": [
         234
       ],
@@ -44589,7 +44649,7 @@
         }
       }
     },
-    "865:10": {
+    "866:10": {
       "preRequisites:11": [
         139
       ],
@@ -44640,7 +44700,7 @@
         }
       }
     },
-    "866:10": {
+    "867:10": {
       "preRequisites:11": [
         139
       ],
@@ -44691,7 +44751,7 @@
         }
       }
     },
-    "867:10": {
+    "868:10": {
       "preRequisites:11": [
         139
       ],
@@ -44742,7 +44802,7 @@
         }
       }
     },
-    "868:10": {
+    "869:10": {
       "preRequisites:11": [
         325
       ],
@@ -44793,7 +44853,7 @@
         }
       }
     },
-    "869:10": {
+    "870:10": {
       "preRequisites:11": [
         287
       ],
@@ -44844,7 +44904,7 @@
         }
       }
     },
-    "870:10": {
+    "871:10": {
       "preRequisites:11": [
         727
       ],
@@ -44895,7 +44955,7 @@
         }
       }
     },
-    "871:10": {
+    "872:10": {
       "preRequisites:11": [
         6
       ],
@@ -44946,7 +45006,7 @@
         }
       }
     },
-    "872:10": {
+    "873:10": {
       "preRequisites:11": [
         196
       ],
@@ -44997,7 +45057,7 @@
         }
       }
     },
-    "873:10": {
+    "874:10": {
       "preRequisites:11": [
         287
       ],
@@ -45048,7 +45108,7 @@
         }
       }
     },
-    "874:10": {
+    "875:10": {
       "preRequisites:11": [
         847
       ],
@@ -45099,7 +45159,7 @@
         }
       }
     },
-    "875:10": {
+    "876:10": {
       "preRequisites:11": [
         323
       ],
@@ -45150,7 +45210,7 @@
         }
       }
     },
-    "876:10": {
+    "877:10": {
       "preRequisites:11": [
         397
       ],
@@ -45201,7 +45261,7 @@
         }
       }
     },
-    "877:10": {
+    "878:10": {
       "preRequisites:11": [
         153
       ],
@@ -45249,7 +45309,7 @@
         }
       }
     },
-    "878:10": {
+    "879:10": {
       "preRequisites:11": [
         325,
         750
@@ -45283,7 +45343,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "879:10": {
+    "880:10": {
       "preRequisites:11": [
         885
       ],
@@ -45334,7 +45394,7 @@
         }
       }
     },
-    "880:10": {
+    "881:10": {
       "preRequisites:11": [
         288
       ],
@@ -45385,7 +45445,7 @@
         }
       }
     },
-    "881:10": {
+    "882:10": {
       "preRequisites:11": [
         749
       ],
@@ -45436,7 +45496,7 @@
         }
       }
     },
-    "882:10": {
+    "883:10": {
       "preRequisites:11": [
         89
       ],
@@ -45487,7 +45547,7 @@
         }
       }
     },
-    "883:10": {
+    "884:10": {
       "preRequisites:11": [
         165,
         546
@@ -45540,7 +45600,7 @@
         }
       }
     },
-    "884:10": {
+    "885:10": {
       "preRequisites:11": [
         161,
         166,
@@ -45594,7 +45654,7 @@
         }
       }
     },
-    "885:10": {
+    "886:10": {
       "preRequisites:11": [
         827
       ],
@@ -45627,7 +45687,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "886:10": {
+    "887:10": {
       "preRequisites:11": [
         56
       ],
@@ -45665,7 +45725,7 @@
         }
       }
     },
-    "887:10": {
+    "888:10": {
       "preRequisites:11": [
         94
       ],
@@ -45713,7 +45773,7 @@
         }
       }
     },
-    "888:10": {
+    "889:10": {
       "preRequisites:11": [
         541
       ],
@@ -45777,7 +45837,7 @@
         }
       }
     },
-    "889:10": {
+    "890:10": {
       "preRequisites:11": [
         3
       ],
@@ -45815,7 +45875,7 @@
         }
       }
     },
-    "890:10": {
+    "891:10": {
       "preRequisites:11": [
         147
       ],
@@ -45866,7 +45926,7 @@
         }
       }
     },
-    "891:10": {
+    "892:10": {
       "preRequisites:11": [
         88,
         894
@@ -45882,7 +45942,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2MV Energy Input",
@@ -45924,7 +45984,7 @@
         }
       }
     },
-    "892:10": {
+    "893:10": {
       "preRequisites:11": [
         6
       ],
@@ -45976,7 +46036,7 @@
         }
       }
     },
-    "893:10": {
+    "894:10": {
       "preRequisites:11": [
         830,
         896
@@ -46028,7 +46088,7 @@
         }
       }
     },
-    "894:10": {
+    "895:10": {
       "preRequisites:11": [
         93,
         891
@@ -46086,7 +46146,7 @@
         }
       }
     },
-    "895:10": {
+    "896:10": {
       "preRequisites:11": [
         71
       ],
@@ -46138,7 +46198,7 @@
         }
       }
     },
-    "896:10": {
+    "897:10": {
       "preRequisites:11": [
         888
       ],
@@ -46190,7 +46250,7 @@
         }
       }
     },
-    "897:10": {
+    "898:10": {
       "preRequisites:11": [
         179,
         888
@@ -46224,7 +46284,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "898:10": {
+    "899:10": {
       "preRequisites:11": [
         805
       ],
@@ -46267,7 +46327,7 @@
         }
       }
     },
-    "899:10": {
+    "900:10": {
       "preRequisites:11": [
         59,
         72
@@ -46319,7 +46379,7 @@
         }
       }
     },
-    "900:10": {
+    "901:10": {
       "preRequisites:11": [
         339
       ],
@@ -46371,7 +46431,7 @@
         }
       }
     },
-    "901:10": {
+    "902:10": {
       "preRequisites:11": [
         904
       ],
@@ -46423,7 +46483,7 @@
         }
       }
     },
-    "902:10": {
+    "903:10": {
       "preRequisites:11": [
         535
       ],
@@ -46498,7 +46558,7 @@
         }
       }
     },
-    "903:10": {
+    "904:10": {
       "preRequisites:11": [
         533,
         906
@@ -46532,7 +46592,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "904:10": {
+    "905:10": {
       "preRequisites:11": [
         196
       ],
@@ -46565,7 +46625,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "905:10": {
+    "906:10": {
       "preRequisites:11": [
         670,
         805
@@ -46629,7 +46689,7 @@
         }
       }
     },
-    "906:10": {
+    "907:10": {
       "preRequisites:11": [
         527,
         827
@@ -46681,7 +46741,7 @@
         }
       }
     },
-    "907:10": {
+    "908:10": {
       "preRequisites:11": [
         38
       ],
@@ -47296,8 +47356,8 @@
           "id:3": 52,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -592,
-          "y:3": 492
+          "x:3": -332,
+          "y:3": 312
         },
         "13:10": {
           "id:3": 55,
@@ -47562,7 +47622,7 @@
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
+          "x:3": -452,
           "y:3": 432
         },
         "51:10": {
@@ -47667,8 +47727,8 @@
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
-          "y:3": 388
+          "x:3": -192,
+          "y:3": 360
         },
         "66:10": {
           "id:3": 398,
@@ -47681,7 +47741,7 @@
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
+          "x:3": -452,
           "y:3": 388
         },
         "68:10": {
@@ -47790,174 +47850,181 @@
           "y:3": 68
         },
         "83:10": {
+          "id:3": 781,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -500,
+          "y:3": 316
+        },
+        "84:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 532
         },
-        "84:10": {
+        "85:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 140
         },
-        "85:10": {
+        "86:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -392,
           "y:3": 352
         },
-        "86:10": {
+        "87:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -616,
           "y:3": 128
         },
-        "87:10": {
+        "88:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -652,
           "y:3": 68
         },
-        "88:10": {
+        "89:10": {
           "id:3": 819,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 20
         },
-        "89:10": {
+        "90:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 20
         },
-        "90:10": {
+        "91:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": -17
         },
-        "91:10": {
+        "92:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 68
         },
-        "92:10": {
+        "93:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 48
         },
-        "93:10": {
+        "94:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 464
         },
-        "94:10": {
+        "95:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "95:10": {
+        "96:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "96:10": {
+        "97:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "97:10": {
+        "98:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "98:10": {
+        "99:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 388
         },
-        "99:10": {
+        "100:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
+          "x:3": -192,
           "y:3": 388
         },
-        "100:10": {
+        "101:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 104
         },
-        "101:10": {
+        "102:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 104
         },
-        "102:10": {
+        "103:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -552,
           "y:3": 268
         },
-        "103:10": {
+        "104:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 264
         },
-        "104:10": {
+        "105:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "105:10": {
+        "106:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
-          "y:3": 188
+          "x:3": -424,
+          "y:3": 296
         },
-        "106:10": {
+        "107:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "107:10": {
+        "108:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
