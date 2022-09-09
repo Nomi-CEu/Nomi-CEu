@@ -3015,9 +3015,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1035,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:concrete"
           },
           "ismain:1": 0,
           "issilent:1": 0,
@@ -3030,40 +3030,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 52,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1035,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 8,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "gregtech:cleanroom_casing"
-            },
-            "2:10": {
-              "Count:3": 44,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:cleanroom_casing"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
