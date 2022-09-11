@@ -386,7 +386,7 @@ cutter.recipeBuilder()
 	.duration(900)
 	.fluidInputs([<liquid:lubricant> * 84])
 	.EUt(120)
-	.outputs([<metaitem:plate.central_processing_unit>])
+	.outputs([<metaitem:plate.central_processing_unit> * 8])
 	.buildAndRegister();
 
 <recipemap:cutter>.recipeBuilder()
@@ -394,7 +394,7 @@ cutter.recipeBuilder()
 	.duration(1350)
 	.fluidInputs([<liquid:distilled_water> * 253])
 	.EUt(120)
-	.outputs([<metaitem:plate.central_processing_unit>])
+	.outputs([<metaitem:plate.central_processing_unit> * 8])
 	.buildAndRegister();
 
 <recipemap:cutter>.recipeBuilder()
@@ -402,7 +402,7 @@ cutter.recipeBuilder()
 	.duration(1800)
 	.fluidInputs([<liquid:water> * 337])
 	.EUt(120)
-	.outputs([<metaitem:plate.central_processing_unit>])
+	.outputs([<metaitem:plate.central_processing_unit> * 8])
 	.buildAndRegister();
 
 // CPU Wafer * 1
