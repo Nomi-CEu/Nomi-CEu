@@ -411,12 +411,11 @@ cutter.recipeBuilder()
 //CPU Wafer Redo
 <recipemap:laser_engraver>.recipeBuilder()
 	.inputs([<metaitem:wafer.silicon>])
-	.notConsumable([<metaitem:glass_lens.light_blue>])
+	.notConsumable([<ore:craftingLensLightBlue>])
 	.duration(900)
 	.EUt(120)
 	.outputs([<metaitem:wafer.central_processing_unit>])
 	.buildAndRegister();
-
 
 // Tooltips
 <gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
