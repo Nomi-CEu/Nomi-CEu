@@ -505,6 +505,7 @@ autoclave.recipeBuilder()
 	.chancedOutput(<metaitem:crystal.raw>, 900, 1800)
 	.duration(12000)
 	.EUt(320)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 autoclave.recipeBuilder()
@@ -513,6 +514,7 @@ autoclave.recipeBuilder()
 	.chancedOutput(<metaitem:crystal.raw>, 900, 1800)
 	.duration(12000)
 	.EUt(320)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 autoclave.recipeBuilder()
@@ -521,6 +523,7 @@ autoclave.recipeBuilder()
 	.chancedOutput(<metaitem:crystal.raw>, 8000, 250)
 	.duration(12000)
 	.EUt(320)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 // Upgrade Template
