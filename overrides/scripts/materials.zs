@@ -754,7 +754,7 @@ var darmstadtite = MaterialBuilder(32110, "darmstadtite")
     .addOreByproducts([<material:rare_earth>, <material:rhodium_sulfate>, <material:darmstadtium>])
     .build();
 
-var dulystite = MaterialBuilder(32111, "dulystite")
+var dulysite = MaterialBuilder(32111, "dulysite")
     .gem().ore(2)
     .colorAverage().iconSet("ruby")
     .components([<material:duranium> * 1, <material:chlorine> * 3])
@@ -820,6 +820,7 @@ var tributyl_phosphate = MaterialBuilder(32115, "tributyl_phosphate")
 <material:graphene>.addFlags(["generate_foil"]);
 <material:berkelium>.addFlags(["generate_frame"]);
 <material:blue_steel>.addFlags(["generate_frame"]);
+<material:ultimet>.addFlags(["generate_frame"]);
 // Prevent TE Gears from showing up
 <material:tin>.addFlags(["generate_gear"]);
 <material:copper>.addFlags(["generate_gear"]);
