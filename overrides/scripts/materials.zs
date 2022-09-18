@@ -820,6 +820,7 @@ var tributyl_phosphate = MaterialBuilder(32115, "tributyl_phosphate")
 <material:graphene>.addFlags(["generate_foil"]);
 <material:berkelium>.addFlags(["generate_frame"]);
 <material:blue_steel>.addFlags(["generate_frame"]);
+<material:ultimet>.addFlags(["generate_frame"]);
 // Prevent TE Gears from showing up
 <material:tin>.addFlags(["generate_gear"]);
 <material:copper>.addFlags(["generate_gear"]);
