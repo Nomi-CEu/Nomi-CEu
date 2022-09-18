@@ -1097,7 +1097,7 @@ microverse_projector_advanced_ii.recipeMap
         <gregtech:ore_darmstadtite_0:2> * 64)
     .buildAndRegister();
 
-// t8.5 dulystite
+// t8.5 dulysite
 microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(9000)
@@ -1107,12 +1107,12 @@ microverse_projector_advanced_ii.recipeMap
             <metaitem:blockNaquadah> * 24,
             <draconicevolution:chaos_shard>)
     .outputs(
-        <gregtech:ore_dulystite_0:2> * 64,
-        <gregtech:ore_dulystite_0:2> * 64,
-        <gregtech:ore_dulystite_0:2> * 64,
-        <gregtech:ore_dulystite_0:2> * 64,
-        <gregtech:ore_dulystite_0:2> * 64,
-        <gregtech:ore_dulystite_0:2> * 64)
+        <gregtech:ore_dulysite_0:2> * 64,
+        <gregtech:ore_dulysite_0:2> * 64,
+        <gregtech:ore_dulysite_0:2> * 64,
+        <gregtech:ore_dulysite_0:2> * 64,
+        <gregtech:ore_dulysite_0:2> * 64,
+        <gregtech:ore_dulysite_0:2> * 64)
     .buildAndRegister();
 
 // t9 nt
