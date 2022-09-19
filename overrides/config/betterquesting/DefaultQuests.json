@@ -1,5 +1,4 @@
 {
-  "build:8": "4.0.5",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -12393,7 +12392,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -61798,7 +61797,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
