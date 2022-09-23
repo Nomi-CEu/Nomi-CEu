@@ -3470,7 +3470,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§b§2GTCEu Fluid Pipes have been reworked and work much better now. There are also Quadruple and Nonuple pipes for transporting multiple fluid types through the same block. Their advantage over EnderIO Fluid Conduits is their higher throughput - 414 mB/t for a low-tier (Normal Potin) pipe.\n\n§rHowever, EnderIO Fluid Conduits still have the advantage of being EnderIO Conduits, allowing them to fit in the same block as other Conduits. Pick your poison.",
+          "desc:8": "§6Pressurized Fluid Conduits§r will be your main way of transporting fluids for now.\n\n§2GTCEu Fluid Pipes§r are also available, much improved from CE. Their advantage is higher §dthroughput§r, but they have limitations on the kinds of fluids (§eacids, gases§r, etc) they can transport safely. Check each pipe material\u0027s tooltip for details.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3536,9 +3536,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 2037,
+              "Damage:2": 324,
               "OreDict:8": "",
-              "id:8": "gregtech:fluid_pipe_small"
+              "id:8": "gregtech:fluid_pipe_normal"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -3614,7 +3614,7 @@
     },
     "52:10": {
       "preRequisites:11": [
-        98
+        93
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9013,7 +9013,8 @@
     "132:10": {
       "preRequisites:11": [
         35,
-        203
+        203,
+        52
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10360,7 +10361,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Biomass§r into §9Ethanol§r and §9Water§r. This recipe only has two outputs, so a §ethree-block-high Distillation Tower§r is just fine (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than two fluids (like §9Oil§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x3, with a hollow center. §6Fluid Input Hatch§r §emust go in the very center of the bottom 3x3 layer§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r. Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top.",
+          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Biomass§r into §9Ethanol§r and §9Water§r. This recipe only has two outputs, so a §ethree-block-high Distillation Tower§r is just fine (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than two fluids (like §9Oil§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x3, with a hollow center. §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r. Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10371,7 +10372,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Distillation Tower",
+          "name:8": "§2Distillation Tower",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -12368,7 +12369,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Petrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
+          "desc:8": "Petrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12391,7 +12392,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -12421,6 +12422,48 @@
             "0:10": {
               "Amount:3": 1000,
               "FluidName:8": "oil"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil_medium"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil_heavy"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "3:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 3,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil_light"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -12867,8 +12910,7 @@
     "192:10": {
       "preRequisites:11": [
         132,
-        532,
-        52
+        532
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -12975,7 +13017,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Glowstone§r.\n\nThese are made in an §3EBF§r with §6Nichrome§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made far more efficiently with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.",
+          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Glowstone§r.\n\nThese are made in an §3EBF§r with §2Kanthal§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made far more efficiently with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14468,7 +14510,6 @@
     "216:10": {
       "preRequisites:11": [
         89,
-        385,
         782,
         897
       ],
@@ -15757,7 +15798,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Melting §6Mana Dust§r in a §3Fluid Extractor§r produces §9Primal Mana§r, which is needed for smelting various alloys from §bThermal Expansion§r.",
+          "desc:8": "Melting §6Mana Dust§r in a §2Extractor§r produces §9Primal Mana§r, which is needed for smelting various alloys from §bThermal Expansion§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15772,7 +15813,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Primal Mana",
+          "name:8": "§2Primal Mana",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -23725,7 +23766,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 32026,
-              "OreDict:8": "",
+              "OreDict:8": "ingotInfinity",
               "id:8": "gregtech:meta_ingot"
             }
           },
@@ -37148,72 +37189,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An alloy of §6Steel§r and §6Boron§r. Pretty simple.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 6,
-            "OreDict:8": "",
-            "id:8": "nuclearcraft:alloy"
-          },
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Ferroboron",
-          "partysinglereward:1": 0,
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 610,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin25"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:alloy"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "611:10": {
-      "preRequisites:11": [
-        610
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Alloying some §6Lithium§r into your §6Ferroboron§r results in §6Tough Alloy§r, a common component in §bNuclearCraft§r blocks.",
+          "desc:8": "§6Ferroboron§r is an alloy of §6Steel§r and §6Boron§r.\n\nAlloying some §6Lithium§r into your §6Ferroboron§r results in §6Tough Alloy§r, a common component in §bNuclearCraft§r blocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37271,7 +37247,7 @@
         }
       }
     },
-    "612:10": {
+    "611:10": {
       "preRequisites:11": [
         536
       ],
@@ -37336,7 +37312,7 @@
         }
       }
     },
-    "613:10": {
+    "612:10": {
       "preRequisites:11": [
         260,
         352
@@ -37402,7 +37378,7 @@
         }
       }
     },
-    "614:10": {
+    "613:10": {
       "preRequisites:11": [
         175
       ],
@@ -37467,7 +37443,7 @@
         }
       }
     },
-    "615:10": {
+    "614:10": {
       "preRequisites:11": [
         260
       ],
@@ -37532,7 +37508,7 @@
         }
       }
     },
-    "616:10": {
+    "615:10": {
       "preRequisites:11": [
         3
       ],
@@ -37597,7 +37573,7 @@
         }
       }
     },
-    "617:10": {
+    "616:10": {
       "preRequisites:11": [
         328
       ],
@@ -37662,7 +37638,7 @@
         }
       }
     },
-    "618:10": {
+    "617:10": {
       "preRequisites:11": [
         260
       ],
@@ -37727,7 +37703,7 @@
         }
       }
     },
-    "619:10": {
+    "618:10": {
       "preRequisites:11": [
         55,
         352
@@ -37793,7 +37769,7 @@
         }
       }
     },
-    "620:10": {
+    "619:10": {
       "preRequisites:11": [
         55,
         352
@@ -37859,7 +37835,7 @@
         }
       }
     },
-    "621:10": {
+    "620:10": {
       "preRequisites:11": [
         71
       ],
@@ -37924,7 +37900,7 @@
         }
       }
     },
-    "622:10": {
+    "621:10": {
       "preRequisites:11": [
         175
       ],
@@ -37989,7 +37965,7 @@
         }
       }
     },
-    "623:10": {
+    "622:10": {
       "preRequisites:11": [
         260
       ],
@@ -38054,7 +38030,7 @@
         }
       }
     },
-    "624:10": {
+    "623:10": {
       "preRequisites:11": [
         149
       ],
@@ -38119,7 +38095,7 @@
         }
       }
     },
-    "625:10": {
+    "624:10": {
       "preRequisites:11": [
         69
       ],
@@ -38184,7 +38160,7 @@
         }
       }
     },
-    "626:10": {
+    "625:10": {
       "preRequisites:11": [
         80
       ],
@@ -38249,7 +38225,7 @@
         }
       }
     },
-    "627:10": {
+    "626:10": {
       "preRequisites:11": [
         539
       ],
@@ -38314,7 +38290,7 @@
         }
       }
     },
-    "628:10": {
+    "627:10": {
       "preRequisites:11": [
         810
       ],
@@ -38379,7 +38355,7 @@
         }
       }
     },
-    "629:10": {
+    "628:10": {
       "preRequisites:11": [
         131
       ],
@@ -38444,7 +38420,7 @@
         }
       }
     },
-    "630:10": {
+    "629:10": {
       "preRequisites:11": [
         175
       ],
@@ -38509,7 +38485,7 @@
         }
       }
     },
-    "631:10": {
+    "630:10": {
       "preRequisites:11": [
         71
       ],
@@ -38574,7 +38550,7 @@
         }
       }
     },
-    "632:10": {
+    "631:10": {
       "preRequisites:11": [
         260
       ],
@@ -38639,7 +38615,7 @@
         }
       }
     },
-    "633:10": {
+    "632:10": {
       "preRequisites:11": [
         139
       ],
@@ -38704,7 +38680,7 @@
         }
       }
     },
-    "634:10": {
+    "633:10": {
       "preRequisites:11": [
         148
       ],
@@ -38769,7 +38745,7 @@
         }
       }
     },
-    "635:10": {
+    "634:10": {
       "preRequisites:11": [
         285
       ],
@@ -38834,7 +38810,7 @@
         }
       }
     },
-    "636:10": {
+    "635:10": {
       "preRequisites:11": [
         91
       ],
@@ -38899,7 +38875,7 @@
         }
       }
     },
-    "637:10": {
+    "636:10": {
       "preRequisites:11": [
         98
       ],
@@ -38964,7 +38940,7 @@
         }
       }
     },
-    "638:10": {
+    "637:10": {
       "preRequisites:11": [
         4
       ],
@@ -39029,7 +39005,7 @@
         }
       }
     },
-    "639:10": {
+    "638:10": {
       "preRequisites:11": [
         59
       ],
@@ -39094,7 +39070,7 @@
         }
       }
     },
-    "640:10": {
+    "639:10": {
       "preRequisites:11": [
         59
       ],
@@ -39159,7 +39135,7 @@
         }
       }
     },
-    "641:10": {
+    "640:10": {
       "preRequisites:11": [
         6
       ],
@@ -39224,7 +39200,7 @@
         }
       }
     },
-    "642:10": {
+    "641:10": {
       "preRequisites:11": [
         78
       ],
@@ -39289,7 +39265,7 @@
         }
       }
     },
-    "643:10": {
+    "642:10": {
       "preRequisites:11": [
         78
       ],
@@ -39354,7 +39330,7 @@
         }
       }
     },
-    "644:10": {
+    "643:10": {
       "preRequisites:11": [
         78
       ],
@@ -39419,7 +39395,7 @@
         }
       }
     },
-    "645:10": {
+    "644:10": {
       "preRequisites:11": [
         175
       ],
@@ -39484,7 +39460,7 @@
         }
       }
     },
-    "646:10": {
+    "645:10": {
       "preRequisites:11": [
         144
       ],
@@ -39549,7 +39525,7 @@
         }
       }
     },
-    "647:10": {
+    "646:10": {
       "preRequisites:11": [
         169
       ],
@@ -39614,7 +39590,7 @@
         }
       }
     },
-    "648:10": {
+    "647:10": {
       "preRequisites:11": [
         59
       ],
@@ -39679,7 +39655,7 @@
         }
       }
     },
-    "649:10": {
+    "648:10": {
       "preRequisites:11": [
         263
       ],
@@ -39744,7 +39720,7 @@
         }
       }
     },
-    "650:10": {
+    "649:10": {
       "preRequisites:11": [
         6
       ],
@@ -39809,7 +39785,7 @@
         }
       }
     },
-    "651:10": {
+    "650:10": {
       "preRequisites:11": [
         2,
         498
@@ -39875,7 +39851,7 @@
         }
       }
     },
-    "652:10": {
+    "651:10": {
       "preRequisites:11": [
         175
       ],
@@ -39940,7 +39916,7 @@
         }
       }
     },
-    "653:10": {
+    "652:10": {
       "preRequisites:11": [
         201
       ],
@@ -40005,7 +39981,7 @@
         }
       }
     },
-    "654:10": {
+    "653:10": {
       "preRequisites:11": [
         251
       ],
@@ -40070,7 +40046,7 @@
         }
       }
     },
-    "655:10": {
+    "654:10": {
       "preRequisites:11": [
         251
       ],
@@ -40135,7 +40111,7 @@
         }
       }
     },
-    "656:10": {
+    "655:10": {
       "preRequisites:11": [
         3
       ],
@@ -40200,7 +40176,7 @@
         }
       }
     },
-    "657:10": {
+    "656:10": {
       "preRequisites:11": [
         6
       ],
@@ -40265,7 +40241,7 @@
         }
       }
     },
-    "658:10": {
+    "657:10": {
       "preRequisites:11": [
         71
       ],
@@ -40330,7 +40306,7 @@
         }
       }
     },
-    "659:10": {
+    "658:10": {
       "preRequisites:11": [
         267
       ],
@@ -40395,7 +40371,7 @@
         }
       }
     },
-    "660:10": {
+    "659:10": {
       "preRequisites:11": [
         352
       ],
@@ -40460,7 +40436,7 @@
         }
       }
     },
-    "661:10": {
+    "660:10": {
       "preRequisites:11": [
         669
       ],
@@ -40525,7 +40501,7 @@
         }
       }
     },
-    "662:10": {
+    "661:10": {
       "preRequisites:11": [
         673
       ],
@@ -40590,7 +40566,7 @@
         }
       }
     },
-    "663:10": {
+    "662:10": {
       "preRequisites:11": [
         675
       ],
@@ -40655,7 +40631,7 @@
         }
       }
     },
-    "664:10": {
+    "663:10": {
       "preRequisites:11": [
         677
       ],
@@ -40720,7 +40696,7 @@
         }
       }
     },
-    "665:10": {
+    "664:10": {
       "preRequisites:11": [
         676
       ],
@@ -40785,7 +40761,7 @@
         }
       }
     },
-    "666:10": {
+    "665:10": {
       "preRequisites:11": [
         678
       ],
@@ -40850,7 +40826,7 @@
         }
       }
     },
-    "667:10": {
+    "666:10": {
       "preRequisites:11": [
         679
       ],
@@ -40915,7 +40891,7 @@
         }
       }
     },
-    "668:10": {
+    "667:10": {
       "preRequisites:11": [
         254,
         287
@@ -40981,7 +40957,7 @@
         }
       }
     },
-    "669:10": {
+    "668:10": {
       "preRequisites:11": [
         672
       ],
@@ -41052,7 +41028,7 @@
         }
       }
     },
-    "670:10": {
+    "669:10": {
       "preRequisites:11": [
         4
       ],
@@ -41104,7 +41080,7 @@
         }
       }
     },
-    "671:10": {
+    "670:10": {
       "preRequisites:11": [
         672
       ],
@@ -41181,7 +41157,7 @@
         }
       }
     },
-    "672:10": {
+    "671:10": {
       "preRequisites:11": [
         350
       ],
@@ -41252,7 +41228,7 @@
         }
       }
     },
-    "673:10": {
+    "672:10": {
       "preRequisites:11": [
         671
       ],
@@ -41335,7 +41311,7 @@
         }
       }
     },
-    "674:10": {
+    "673:10": {
       "preRequisites:11": [
         671
       ],
@@ -41406,7 +41382,7 @@
         }
       }
     },
-    "675:10": {
+    "674:10": {
       "preRequisites:11": [
         669,
         674
@@ -41490,7 +41466,7 @@
         }
       }
     },
-    "676:10": {
+    "675:10": {
       "preRequisites:11": [
         675,
         677
@@ -41574,7 +41550,7 @@
         }
       }
     },
-    "677:10": {
+    "676:10": {
       "preRequisites:11": [
         673
       ],
@@ -41657,7 +41633,7 @@
         }
       }
     },
-    "678:10": {
+    "677:10": {
       "preRequisites:11": [
         676
       ],
@@ -41740,7 +41716,7 @@
         }
       }
     },
-    "679:10": {
+    "678:10": {
       "preRequisites:11": [
         676
       ],
@@ -41823,7 +41799,7 @@
         }
       }
     },
-    "680:10": {
+    "679:10": {
       "preRequisites:11": [
         678,
         679
@@ -41876,7 +41852,7 @@
         }
       }
     },
-    "681:10": {
+    "680:10": {
       "preRequisites:11": [
         89,
         794
@@ -41942,7 +41918,7 @@
         }
       }
     },
-    "682:10": {
+    "681:10": {
       "preRequisites:11": [
         26,
         684
@@ -42017,7 +41993,7 @@
         }
       }
     },
-    "683:10": {
+    "682:10": {
       "preRequisites:11": [
         278
       ],
@@ -42082,7 +42058,7 @@
         }
       }
     },
-    "684:10": {
+    "683:10": {
       "preRequisites:11": [
         28
       ],
@@ -42153,7 +42129,7 @@
         }
       }
     },
-    "685:10": {
+    "684:10": {
       "preRequisites:11": [
         34,
         76,
@@ -42220,7 +42196,7 @@
         }
       }
     },
-    "686:10": {
+    "685:10": {
       "preRequisites:11": [
         683
       ],
@@ -42327,7 +42303,7 @@
         }
       }
     },
-    "687:10": {
+    "686:10": {
       "preRequisites:11": [
         12
       ],
@@ -42392,7 +42368,7 @@
         }
       }
     },
-    "688:10": {
+    "687:10": {
       "preRequisites:11": [
         683
       ],
@@ -42457,7 +42433,7 @@
         }
       }
     },
-    "689:10": {
+    "688:10": {
       "preRequisites:11": [
         688
       ],
@@ -42534,7 +42510,7 @@
         }
       }
     },
-    "690:10": {
+    "689:10": {
       "preRequisites:11": [
         688
       ],
@@ -42599,7 +42575,7 @@
         }
       }
     },
-    "691:10": {
+    "690:10": {
       "preRequisites:11": [
         690
       ],
@@ -42682,7 +42658,7 @@
         }
       }
     },
-    "692:10": {
+    "691:10": {
       "preRequisites:11": [
         4,
         12
@@ -42765,7 +42741,7 @@
         }
       }
     },
-    "693:10": {
+    "692:10": {
       "preRequisites:11": [
         47,
         542
@@ -42839,7 +42815,7 @@
         }
       }
     },
-    "694:10": {
+    "693:10": {
       "preRequisites:11": [
         554,
         693
@@ -42905,7 +42881,7 @@
         }
       }
     },
-    "695:10": {
+    "694:10": {
       "preRequisites:11": [
         694,
         844
@@ -42979,7 +42955,7 @@
         }
       }
     },
-    "696:10": {
+    "695:10": {
       "preRequisites:11": [
         519
       ],
@@ -43056,7 +43032,7 @@
         }
       }
     },
-    "697:10": {
+    "696:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43093,7 +43069,7 @@
         }
       }
     },
-    "698:10": {
+    "697:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43130,7 +43106,7 @@
         }
       }
     },
-    "699:10": {
+    "698:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43167,7 +43143,7 @@
         }
       }
     },
-    "700:10": {
+    "699:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43204,7 +43180,7 @@
         }
       }
     },
-    "701:10": {
+    "700:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43241,7 +43217,7 @@
         }
       }
     },
-    "702:10": {
+    "701:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43278,7 +43254,7 @@
         }
       }
     },
-    "703:10": {
+    "702:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43315,7 +43291,7 @@
         }
       }
     },
-    "704:10": {
+    "703:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43352,7 +43328,7 @@
         }
       }
     },
-    "705:10": {
+    "704:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43389,7 +43365,7 @@
         }
       }
     },
-    "706:10": {
+    "705:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43426,7 +43402,7 @@
         }
       }
     },
-    "707:10": {
+    "706:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43463,7 +43439,7 @@
         }
       }
     },
-    "708:10": {
+    "707:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43500,7 +43476,7 @@
         }
       }
     },
-    "709:10": {
+    "708:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43537,7 +43513,7 @@
         }
       }
     },
-    "710:10": {
+    "709:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43574,7 +43550,7 @@
         }
       }
     },
-    "711:10": {
+    "710:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43611,7 +43587,7 @@
         }
       }
     },
-    "712:10": {
+    "711:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43648,7 +43624,7 @@
         }
       }
     },
-    "713:10": {
+    "712:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43685,7 +43661,7 @@
         }
       }
     },
-    "714:10": {
+    "713:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43722,7 +43698,7 @@
         }
       }
     },
-    "715:10": {
+    "714:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43759,7 +43735,7 @@
         }
       }
     },
-    "716:10": {
+    "715:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43796,7 +43772,7 @@
         }
       }
     },
-    "717:10": {
+    "716:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43833,7 +43809,7 @@
         }
       }
     },
-    "718:10": {
+    "717:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43870,7 +43846,7 @@
         }
       }
     },
-    "719:10": {
+    "718:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43907,7 +43883,7 @@
         }
       }
     },
-    "720:10": {
+    "719:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43944,7 +43920,7 @@
         }
       }
     },
-    "721:10": {
+    "720:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -43981,7 +43957,7 @@
         }
       }
     },
-    "722:10": {
+    "721:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44018,7 +43994,7 @@
         }
       }
     },
-    "723:10": {
+    "722:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44055,7 +44031,7 @@
         }
       }
     },
-    "724:10": {
+    "723:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44092,7 +44068,7 @@
         }
       }
     },
-    "725:10": {
+    "724:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44129,7 +44105,7 @@
         }
       }
     },
-    "726:10": {
+    "725:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44166,7 +44142,7 @@
         }
       }
     },
-    "727:10": {
+    "726:10": {
       "preRequisites:11": [
         260
       ],
@@ -44205,7 +44181,7 @@
         }
       }
     },
-    "728:10": {
+    "727:10": {
       "preRequisites:11": [
         227
       ],
@@ -44270,7 +44246,7 @@
         }
       }
     },
-    "729:10": {
+    "728:10": {
       "preRequisites:11": [
         102
       ],
@@ -44335,7 +44311,7 @@
         }
       }
     },
-    "730:10": {
+    "729:10": {
       "preRequisites:11": [
         227
       ],
@@ -44374,7 +44350,7 @@
         }
       }
     },
-    "731:10": {
+    "730:10": {
       "preRequisites:11": [
         227
       ],
@@ -44413,7 +44389,7 @@
         }
       }
     },
-    "732:10": {
+    "731:10": {
       "preRequisites:11": [
         19
       ],
@@ -44478,7 +44454,7 @@
         }
       }
     },
-    "733:10": {
+    "732:10": {
       "preRequisites:11": [
         336
       ],
@@ -44543,7 +44519,7 @@
         }
       }
     },
-    "734:10": {
+    "733:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44580,7 +44556,7 @@
         }
       }
     },
-    "735:10": {
+    "734:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44617,7 +44593,7 @@
         }
       }
     },
-    "736:10": {
+    "735:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44654,7 +44630,7 @@
         }
       }
     },
-    "737:10": {
+    "736:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44691,7 +44667,7 @@
         }
       }
     },
-    "738:10": {
+    "737:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44728,7 +44704,7 @@
         }
       }
     },
-    "739:10": {
+    "738:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44765,7 +44741,7 @@
         }
       }
     },
-    "740:10": {
+    "739:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44802,7 +44778,7 @@
         }
       }
     },
-    "741:10": {
+    "740:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44839,7 +44815,7 @@
         }
       }
     },
-    "742:10": {
+    "741:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -44876,7 +44852,7 @@
         }
       }
     },
-    "743:10": {
+    "742:10": {
       "preRequisites:11": [
         805
       ],
@@ -44915,7 +44891,7 @@
         }
       }
     },
-    "744:10": {
+    "743:10": {
       "preRequisites:11": [
         183
       ],
@@ -44992,7 +44968,7 @@
         }
       }
     },
-    "745:10": {
+    "744:10": {
       "preRequisites:11": [
         311
       ],
@@ -45057,7 +45033,7 @@
         }
       }
     },
-    "746:10": {
+    "745:10": {
       "preRequisites:11": [
         300
       ],
@@ -45150,7 +45126,7 @@
         }
       }
     },
-    "747:10": {
+    "746:10": {
       "preRequisites:11": [
         26,
         75
@@ -45216,7 +45192,7 @@
         }
       }
     },
-    "748:10": {
+    "747:10": {
       "preRequisites:11": [
         746
       ],
@@ -45281,7 +45257,7 @@
         }
       }
     },
-    "749:10": {
+    "748:10": {
       "preRequisites:11": [
         535,
         802,
@@ -45372,7 +45348,7 @@
         }
       }
     },
-    "750:10": {
+    "749:10": {
       "preRequisites:11": [
         324
       ],
@@ -45437,7 +45413,7 @@
         }
       }
     },
-    "751:10": {
+    "750:10": {
       "preRequisites:11": [
         299
       ],
@@ -45528,7 +45504,7 @@
         }
       }
     },
-    "752:10": {
+    "751:10": {
       "preRequisites:11": [
         19,
         24
@@ -45600,7 +45576,7 @@
         }
       }
     },
-    "753:10": {
+    "752:10": {
       "preRequisites:11": [
         750,
         799
@@ -45684,7 +45660,7 @@
         }
       }
     },
-    "754:10": {
+    "753:10": {
       "preRequisites:11": [
         219,
         510
@@ -45762,7 +45738,7 @@
         }
       }
     },
-    "755:10": {
+    "754:10": {
       "preRequisites:11": [
         3
       ],
@@ -45858,7 +45834,7 @@
         }
       }
     },
-    "756:10": {
+    "755:10": {
       "preRequisites:11": [
         270
       ],
@@ -45910,7 +45886,7 @@
         }
       }
     },
-    "757:10": {
+    "756:10": {
       "preRequisites:11": [
         116
       ],
@@ -45987,7 +45963,7 @@
         }
       }
     },
-    "758:10": {
+    "757:10": {
       "preRequisites:11": [
         757
       ],
@@ -46058,7 +46034,7 @@
         }
       }
     },
-    "759:10": {
+    "758:10": {
       "preRequisites:11": [
         511
       ],
@@ -46143,7 +46119,7 @@
         }
       }
     },
-    "760:10": {
+    "759:10": {
       "preRequisites:11": [
         757
       ],
@@ -46214,7 +46190,7 @@
         }
       }
     },
-    "761:10": {
+    "760:10": {
       "preRequisites:11": [
         760
       ],
@@ -46272,7 +46248,7 @@
         }
       }
     },
-    "762:10": {
+    "761:10": {
       "preRequisites:11": [
         754,
         761
@@ -46312,7 +46288,7 @@
         }
       }
     },
-    "763:10": {
+    "762:10": {
       "preRequisites:11": [
         542,
         754
@@ -46378,7 +46354,7 @@
         }
       }
     },
-    "764:10": {
+    "763:10": {
       "preRequisites:11": [
         86,
         133,
@@ -46414,7 +46390,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "765:10": {
+    "764:10": {
       "preRequisites:11": [
         3
       ],
@@ -46453,7 +46429,7 @@
         }
       }
     },
-    "766:10": {
+    "765:10": {
       "preRequisites:11": [
         76,
         87,
@@ -46490,7 +46466,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "767:10": {
+    "766:10": {
       "preRequisites:11": [
         8,
         89,
@@ -46527,7 +46503,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "768:10": {
+    "767:10": {
       "preRequisites:11": [
         132,
         264,
@@ -46564,7 +46540,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "769:10": {
+    "768:10": {
       "preRequisites:11": [
         155,
         192,
@@ -46601,7 +46577,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "770:10": {
+    "769:10": {
       "preRequisites:11": [
         269,
         292,
@@ -46638,7 +46614,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "771:10": {
+    "770:10": {
       "preRequisites:11": [
         333,
         531,
@@ -46674,7 +46650,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "772:10": {
+    "771:10": {
       "preRequisites:11": [
         535
       ],
@@ -46708,7 +46684,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "773:10": {
+    "772:10": {
       "preRequisites:11": [
         168,
         172
@@ -46742,7 +46718,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "774:10": {
+    "773:10": {
       "preRequisites:11": [
         145
       ],
@@ -46807,7 +46783,7 @@
         }
       }
     },
-    "775:10": {
+    "774:10": {
       "preRequisites:11": [
         3
       ],
@@ -46846,7 +46822,7 @@
         }
       }
     },
-    "776:10": {
+    "775:10": {
       "preRequisites:11": [
         258
       ],
@@ -46911,7 +46887,7 @@
         }
       }
     },
-    "777:10": {
+    "776:10": {
       "preRequisites:11": [
         344
       ],
@@ -46963,7 +46939,7 @@
         }
       }
     },
-    "778:10": {
+    "777:10": {
       "preRequisites:11": [
         776
       ],
@@ -47034,7 +47010,7 @@
         }
       }
     },
-    "779:10": {
+    "778:10": {
       "preRequisites:11": [
         21
       ],
@@ -47098,7 +47074,7 @@
         }
       }
     },
-    "780:10": {
+    "779:10": {
       "preRequisites:11": [
         107,
         688
@@ -47164,7 +47140,7 @@
         }
       }
     },
-    "781:10": {
+    "780:10": {
       "preRequisites:11": [
         35,
         296
@@ -47248,7 +47224,7 @@
         }
       }
     },
-    "782:10": {
+    "781:10": {
       "preRequisites:11": [
         214,
         400
@@ -47282,7 +47258,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "783:10": {
+    "782:10": {
       "preRequisites:11": [
         897
       ],
@@ -47320,7 +47296,7 @@
         }
       }
     },
-    "784:10": {
+    "783:10": {
       "preRequisites:11": [
         282
       ],
@@ -47384,14 +47360,14 @@
         }
       }
     },
-    "785:10": {
+    "784:10": {
       "preRequisites:11": [
         72
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n",
+          "desc:8": "§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47407,7 +47383,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2New Cable Coverings",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -47446,10 +47422,24 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "styrene_butadiene_rubber"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
-    "786:10": {
+    "785:10": {
       "preRequisites:11": [
         805
       ],
@@ -47487,7 +47477,7 @@
         }
       }
     },
-    "787:10": {
+    "786:10": {
       "preRequisites:11": [
         81,
         272,
@@ -47553,7 +47543,7 @@
         }
       }
     },
-    "788:10": {
+    "787:10": {
       "preRequisites:11": [
         3
       ],
@@ -47617,7 +47607,7 @@
         }
       }
     },
-    "789:10": {
+    "788:10": {
       "preRequisites:11": [
         3
       ],
@@ -47693,7 +47683,7 @@
         }
       }
     },
-    "790:10": {
+    "789:10": {
       "preRequisites:11": [
         69
       ],
@@ -47757,7 +47747,7 @@
         }
       }
     },
-    "791:10": {
+    "790:10": {
       "preRequisites:11": [
         524,
         798
@@ -47828,7 +47818,7 @@
         }
       }
     },
-    "792:10": {
+    "791:10": {
       "preRequisites:11": [
         172,
         177
@@ -47893,7 +47883,7 @@
         }
       }
     },
-    "793:10": {
+    "792:10": {
       "preRequisites:11": [
         27
       ],
@@ -47963,7 +47953,7 @@
         }
       }
     },
-    "794:10": {
+    "793:10": {
       "preRequisites:11": [
         792,
         793
@@ -47997,7 +47987,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "795:10": {
+    "794:10": {
       "preRequisites:11": [
         796
       ],
@@ -48061,7 +48051,7 @@
         }
       }
     },
-    "796:10": {
+    "795:10": {
       "preRequisites:11": [
         323
       ],
@@ -48125,7 +48115,7 @@
         }
       }
     },
-    "797:10": {
+    "796:10": {
       "preRequisites:11": [
         796
       ],
@@ -48189,7 +48179,7 @@
         }
       }
     },
-    "798:10": {
+    "797:10": {
       "preRequisites:11": [
         675,
         676
@@ -48254,7 +48244,7 @@
         }
       }
     },
-    "799:10": {
+    "798:10": {
       "preRequisites:11": [
         545,
         745
@@ -48324,7 +48314,7 @@
         }
       }
     },
-    "800:10": {
+    "799:10": {
       "preRequisites:11": [
         162,
         416,
@@ -48359,7 +48349,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "801:10": {
+    "800:10": {
       "preRequisites:11": [
         154
       ],
@@ -48436,7 +48426,7 @@
         }
       }
     },
-    "802:10": {
+    "801:10": {
       "preRequisites:11": [
         325
       ],
@@ -48500,7 +48490,7 @@
         }
       }
     },
-    "803:10": {
+    "802:10": {
       "preRequisites:11": [
         805
       ],
@@ -48576,7 +48566,7 @@
         }
       }
     },
-    "804:10": {
+    "803:10": {
       "preRequisites:11": [
         107,
         286
@@ -48653,7 +48643,7 @@
         }
       }
     },
-    "805:10": {
+    "804:10": {
       "preRequisites:11": [
         3
       ],
@@ -48686,7 +48676,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "806:10": {
+    "805:10": {
       "preRequisites:11": [
         166,
         226
@@ -48729,7 +48719,7 @@
         }
       }
     },
-    "807:10": {
+    "806:10": {
       "preRequisites:11": [
         163,
         413
@@ -48798,7 +48788,7 @@
         }
       }
     },
-    "808:10": {
+    "807:10": {
       "preRequisites:11": [
         805
       ],
@@ -48836,7 +48826,7 @@
         }
       }
     },
-    "809:10": {
+    "808:10": {
       "preRequisites:11": [
         367
       ],
@@ -48917,7 +48907,7 @@
         }
       }
     },
-    "810:10": {
+    "809:10": {
       "preRequisites:11": [
         260,
         278,
@@ -48984,7 +48974,7 @@
         }
       }
     },
-    "811:10": {
+    "810:10": {
       "preRequisites:11": [
         805
       ],
@@ -49080,7 +49070,7 @@
         }
       }
     },
-    "812:10": {
+    "811:10": {
       "preRequisites:11": [
         94,
         505
@@ -49114,7 +49104,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "813:10": {
+    "812:10": {
       "preRequisites:11": [
         4
       ],
@@ -49165,7 +49155,7 @@
         }
       }
     },
-    "814:10": {
+    "813:10": {
       "preRequisites:11": [
         21
       ],
@@ -49246,7 +49236,7 @@
         }
       }
     },
-    "815:10": {
+    "814:10": {
       "preRequisites:11": [
         145
       ],
@@ -49319,7 +49309,7 @@
         }
       }
     },
-    "816:10": {
+    "815:10": {
       "preRequisites:11": [
         76,
         818
@@ -49384,7 +49374,7 @@
         }
       }
     },
-    "817:10": {
+    "816:10": {
       "preRequisites:11": [
         752
       ],
@@ -49472,7 +49462,7 @@
         }
       }
     },
-    "818:10": {
+    "817:10": {
       "preRequisites:11": [
         530
       ],
@@ -49536,7 +49526,7 @@
         }
       }
     },
-    "819:10": {
+    "818:10": {
       "preRequisites:11": [
         70
       ],
@@ -49606,7 +49596,7 @@
         }
       }
     },
-    "820:10": {
+    "819:10": {
       "preRequisites:11": [
         72,
         78,
@@ -49672,7 +49662,7 @@
         }
       }
     },
-    "821:10": {
+    "820:10": {
       "preRequisites:11": [
         27
       ],
@@ -49741,7 +49731,7 @@
         }
       }
     },
-    "822:10": {
+    "821:10": {
       "preRequisites:11": [
         82
       ],
@@ -49805,7 +49795,7 @@
         }
       }
     },
-    "823:10": {
+    "822:10": {
       "preRequisites:11": [
         727
       ],
@@ -49869,7 +49859,7 @@
         }
       }
     },
-    "824:10": {
+    "823:10": {
       "preRequisites:11": [
         95
       ],
@@ -49933,7 +49923,7 @@
         }
       }
     },
-    "825:10": {
+    "824:10": {
       "preRequisites:11": [
         153,
         899
@@ -49999,7 +49989,7 @@
         }
       }
     },
-    "826:10": {
+    "825:10": {
       "preRequisites:11": [
         825
       ],
@@ -50081,7 +50071,7 @@
         }
       }
     },
-    "827:10": {
+    "826:10": {
       "preRequisites:11": [
         177
       ],
@@ -50151,7 +50141,7 @@
         }
       }
     },
-    "828:10": {
+    "827:10": {
       "preRequisites:11": [
         198
       ],
@@ -50216,7 +50206,7 @@
         }
       }
     },
-    "829:10": {
+    "828:10": {
       "preRequisites:11": [
         779
       ],
@@ -50280,7 +50270,7 @@
         }
       }
     },
-    "830:10": {
+    "829:10": {
       "preRequisites:11": [
         93
       ],
@@ -50344,7 +50334,7 @@
         }
       }
     },
-    "831:10": {
+    "830:10": {
       "preRequisites:11": [
         830
       ],
@@ -50408,7 +50398,7 @@
         }
       }
     },
-    "832:10": {
+    "831:10": {
       "preRequisites:11": [
         830
       ],
@@ -50472,7 +50462,7 @@
         }
       }
     },
-    "833:10": {
+    "832:10": {
       "preRequisites:11": [
         830
       ],
@@ -50548,7 +50538,7 @@
         }
       }
     },
-    "834:10": {
+    "833:10": {
       "preRequisites:11": [
         96
       ],
@@ -50612,7 +50602,7 @@
         }
       }
     },
-    "835:10": {
+    "834:10": {
       "preRequisites:11": [
         93
       ],
@@ -50676,7 +50666,7 @@
         }
       }
     },
-    "836:10": {
+    "835:10": {
       "preRequisites:11": [
         147,
         259
@@ -50741,7 +50731,7 @@
         }
       }
     },
-    "837:10": {
+    "836:10": {
       "preRequisites:11": [
         91,
         836
@@ -50806,7 +50796,7 @@
         }
       }
     },
-    "838:10": {
+    "837:10": {
       "preRequisites:11": [
         194,
         526
@@ -50871,7 +50861,7 @@
         }
       }
     },
-    "839:10": {
+    "838:10": {
       "preRequisites:11": [
         750,
         904
@@ -50936,7 +50926,7 @@
         }
       }
     },
-    "840:10": {
+    "839:10": {
       "preRequisites:11": [
         323,
         791,
@@ -51002,7 +50992,7 @@
         }
       }
     },
-    "841:10": {
+    "840:10": {
       "preRequisites:11": [
         312
       ],
@@ -51066,7 +51056,7 @@
         }
       }
     },
-    "842:10": {
+    "841:10": {
       "preRequisites:11": [
         242,
         327
@@ -51131,7 +51121,7 @@
         }
       }
     },
-    "843:10": {
+    "842:10": {
       "preRequisites:11": [
         323
       ],
@@ -51183,7 +51173,7 @@
         }
       }
     },
-    "844:10": {
+    "843:10": {
       "preRequisites:11": [
         845,
         847
@@ -51248,7 +51238,7 @@
         }
       }
     },
-    "845:10": {
+    "844:10": {
       "preRequisites:11": [
         324,
         843
@@ -51313,7 +51303,7 @@
         }
       }
     },
-    "846:10": {
+    "845:10": {
       "preRequisites:11": [
         844
       ],
@@ -51377,7 +51367,7 @@
         }
       }
     },
-    "847:10": {
+    "846:10": {
       "preRequisites:11": [
         324,
         843
@@ -51442,7 +51432,7 @@
         }
       }
     },
-    "848:10": {
+    "847:10": {
       "preRequisites:11": [
         847
       ],
@@ -51506,7 +51496,7 @@
         }
       }
     },
-    "849:10": {
+    "848:10": {
       "preRequisites:11": [
         198
       ],
@@ -51570,7 +51560,7 @@
         }
       }
     },
-    "850:10": {
+    "849:10": {
       "preRequisites:11": [
         828,
         841,
@@ -51661,7 +51651,7 @@
         }
       }
     },
-    "851:10": {
+    "850:10": {
       "preRequisites:11": [
         312
       ],
@@ -51725,7 +51715,7 @@
         }
       }
     },
-    "852:10": {
+    "851:10": {
       "preRequisites:11": [
         677,
         749
@@ -51790,7 +51780,7 @@
         }
       }
     },
-    "853:10": {
+    "852:10": {
       "preRequisites:11": [
         827
       ],
@@ -51854,7 +51844,7 @@
         }
       }
     },
-    "854:10": {
+    "853:10": {
       "preRequisites:11": [
         196
       ],
@@ -51918,7 +51908,7 @@
         }
       }
     },
-    "855:10": {
+    "854:10": {
       "preRequisites:11": [
         607
       ],
@@ -51982,7 +51972,7 @@
         }
       }
     },
-    "856:10": {
+    "855:10": {
       "preRequisites:11": [
         855
       ],
@@ -52046,7 +52036,7 @@
         }
       }
     },
-    "857:10": {
+    "856:10": {
       "preRequisites:11": [
         339
       ],
@@ -52128,7 +52118,7 @@
         }
       }
     },
-    "858:10": {
+    "857:10": {
       "preRequisites:11": [
         255,
         857
@@ -52205,7 +52195,7 @@
         }
       }
     },
-    "859:10": {
+    "858:10": {
       "preRequisites:11": [
         198,
         858
@@ -52270,7 +52260,7 @@
         }
       }
     },
-    "860:10": {
+    "859:10": {
       "preRequisites:11": [
         531,
         826,
@@ -52360,7 +52350,7 @@
         }
       }
     },
-    "861:10": {
+    "860:10": {
       "preRequisites:11": [
         607
       ],
@@ -52430,7 +52420,7 @@
         }
       }
     },
-    "862:10": {
+    "861:10": {
       "preRequisites:11": [
         727
       ],
@@ -52494,7 +52484,7 @@
         }
       }
     },
-    "863:10": {
+    "862:10": {
       "preRequisites:11": [
         727
       ],
@@ -52558,7 +52548,7 @@
         }
       }
     },
-    "864:10": {
+    "863:10": {
       "preRequisites:11": [
         827
       ],
@@ -52622,7 +52612,7 @@
         }
       }
     },
-    "865:10": {
+    "864:10": {
       "preRequisites:11": [
         827
       ],
@@ -52686,7 +52676,7 @@
         }
       }
     },
-    "866:10": {
+    "865:10": {
       "preRequisites:11": [
         727
       ],
@@ -52750,7 +52740,7 @@
         }
       }
     },
-    "867:10": {
+    "866:10": {
       "preRequisites:11": [
         727
       ],
@@ -52814,7 +52804,7 @@
         }
       }
     },
-    "868:10": {
+    "867:10": {
       "preRequisites:11": [
         234
       ],
@@ -52878,7 +52868,7 @@
         }
       }
     },
-    "869:10": {
+    "868:10": {
       "preRequisites:11": [
         139
       ],
@@ -52942,7 +52932,7 @@
         }
       }
     },
-    "870:10": {
+    "869:10": {
       "preRequisites:11": [
         139
       ],
@@ -53006,7 +52996,7 @@
         }
       }
     },
-    "871:10": {
+    "870:10": {
       "preRequisites:11": [
         139
       ],
@@ -53070,7 +53060,7 @@
         }
       }
     },
-    "872:10": {
+    "871:10": {
       "preRequisites:11": [
         325
       ],
@@ -53134,7 +53124,7 @@
         }
       }
     },
-    "873:10": {
+    "872:10": {
       "preRequisites:11": [
         287
       ],
@@ -53198,7 +53188,7 @@
         }
       }
     },
-    "874:10": {
+    "873:10": {
       "preRequisites:11": [
         727
       ],
@@ -53262,7 +53252,7 @@
         }
       }
     },
-    "875:10": {
+    "874:10": {
       "preRequisites:11": [
         6
       ],
@@ -53326,7 +53316,7 @@
         }
       }
     },
-    "876:10": {
+    "875:10": {
       "preRequisites:11": [
         196
       ],
@@ -53390,7 +53380,7 @@
         }
       }
     },
-    "877:10": {
+    "876:10": {
       "preRequisites:11": [
         287
       ],
@@ -53454,7 +53444,7 @@
         }
       }
     },
-    "878:10": {
+    "877:10": {
       "preRequisites:11": [
         847
       ],
@@ -53518,7 +53508,7 @@
         }
       }
     },
-    "879:10": {
+    "878:10": {
       "preRequisites:11": [
         323
       ],
@@ -53582,7 +53572,7 @@
         }
       }
     },
-    "880:10": {
+    "879:10": {
       "preRequisites:11": [
         397
       ],
@@ -53633,7 +53623,7 @@
         }
       }
     },
-    "881:10": {
+    "880:10": {
       "preRequisites:11": [
         153
       ],
@@ -53694,7 +53684,7 @@
         }
       }
     },
-    "882:10": {
+    "881:10": {
       "preRequisites:11": [
         325,
         750
@@ -53728,7 +53718,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "883:10": {
+    "882:10": {
       "preRequisites:11": [
         885
       ],
@@ -53792,7 +53782,7 @@
         }
       }
     },
-    "884:10": {
+    "883:10": {
       "preRequisites:11": [
         288
       ],
@@ -53856,7 +53846,7 @@
         }
       }
     },
-    "885:10": {
+    "884:10": {
       "preRequisites:11": [
         749
       ],
@@ -53920,7 +53910,7 @@
         }
       }
     },
-    "886:10": {
+    "885:10": {
       "preRequisites:11": [
         89
       ],
@@ -53984,7 +53974,7 @@
         }
       }
     },
-    "887:10": {
+    "886:10": {
       "preRequisites:11": [
         165,
         546
@@ -54050,7 +54040,7 @@
         }
       }
     },
-    "888:10": {
+    "887:10": {
       "preRequisites:11": [
         161,
         166,
@@ -54117,7 +54107,7 @@
         }
       }
     },
-    "889:10": {
+    "888:10": {
       "preRequisites:11": [
         827
       ],
@@ -54150,7 +54140,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "890:10": {
+    "889:10": {
       "preRequisites:11": [
         56
       ],
@@ -54188,7 +54178,7 @@
         }
       }
     },
-    "891:10": {
+    "890:10": {
       "preRequisites:11": [
         94
       ],
@@ -54249,7 +54239,7 @@
         }
       }
     },
-    "892:10": {
+    "891:10": {
       "preRequisites:11": [
         541
       ],
@@ -54326,7 +54316,7 @@
         }
       }
     },
-    "893:10": {
+    "892:10": {
       "preRequisites:11": [
         3
       ],
@@ -54364,7 +54354,7 @@
         }
       }
     },
-    "894:10": {
+    "893:10": {
       "preRequisites:11": [
         147
       ],
@@ -54428,7 +54418,7 @@
         }
       }
     },
-    "895:10": {
+    "894:10": {
       "preRequisites:11": [
         88,
         894
@@ -54499,7 +54489,7 @@
         }
       }
     },
-    "896:10": {
+    "895:10": {
       "preRequisites:11": [
         6
       ],
@@ -54564,7 +54554,7 @@
         }
       }
     },
-    "897:10": {
+    "896:10": {
       "preRequisites:11": [
         830,
         896
@@ -54629,7 +54619,7 @@
         }
       }
     },
-    "898:10": {
+    "897:10": {
       "preRequisites:11": [
         93,
         891
@@ -54700,7 +54690,7 @@
         }
       }
     },
-    "899:10": {
+    "898:10": {
       "preRequisites:11": [
         71
       ],
@@ -54765,7 +54755,7 @@
         }
       }
     },
-    "900:10": {
+    "899:10": {
       "preRequisites:11": [
         888
       ],
@@ -54830,7 +54820,7 @@
         }
       }
     },
-    "901:10": {
+    "900:10": {
       "preRequisites:11": [
         179,
         888
@@ -54864,7 +54854,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "902:10": {
+    "901:10": {
       "preRequisites:11": [
         805
       ],
@@ -54907,7 +54897,7 @@
         }
       }
     },
-    "903:10": {
+    "902:10": {
       "preRequisites:11": [
         59,
         72
@@ -54972,7 +54962,7 @@
         }
       }
     },
-    "904:10": {
+    "903:10": {
       "preRequisites:11": [
         339,
         914
@@ -55038,7 +55028,7 @@
         }
       }
     },
-    "905:10": {
+    "904:10": {
       "preRequisites:11": [
         904
       ],
@@ -55103,7 +55093,7 @@
         }
       }
     },
-    "906:10": {
+    "905:10": {
       "preRequisites:11": [
         535
       ],
@@ -55191,7 +55181,7 @@
         }
       }
     },
-    "907:10": {
+    "906:10": {
       "preRequisites:11": [
         533,
         906
@@ -55225,7 +55215,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "908:10": {
+    "907:10": {
       "preRequisites:11": [
         196
       ],
@@ -55258,7 +55248,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "909:10": {
+    "908:10": {
       "preRequisites:11": [
         805
       ],
@@ -55334,7 +55324,7 @@
         }
       }
     },
-    "910:10": {
+    "909:10": {
       "preRequisites:11": [
         527,
         827
@@ -55399,7 +55389,7 @@
         }
       }
     },
-    "911:10": {
+    "910:10": {
       "preRequisites:11": [
         38
       ],
@@ -55463,7 +55453,7 @@
         }
       }
     },
-    "912:10": {
+    "911:10": {
       "preRequisites:11": [
         3
       ],
@@ -55501,7 +55491,7 @@
         }
       }
     },
-    "913:10": {
+    "912:10": {
       "preRequisites:11": [
         401
       ],
@@ -55539,7 +55529,7 @@
         }
       }
     },
-    "914:10": {
+    "913:10": {
       "preRequisites:11": [
         255
       ],
@@ -56146,717 +56136,724 @@
           "id:3": 31,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -212,
+          "x:3": -108,
           "y:3": 528
         },
         "4:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -208,
+          "x:3": -104,
           "y:3": 460
         },
         "5:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
+          "x:3": -144,
           "y:3": 496
         },
         "6:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -288,
+          "x:3": -184,
           "y:3": 532
         },
         "7:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -164,
-          "y:3": 460
+          "x:3": -104,
+          "y:3": 420
         },
         "8:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 496
+          "x:3": -144,
+          "y:3": 388
         },
         "9:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 460
+          "x:3": -104,
+          "y:3": 388
         },
         "10:10": {
+          "id:3": 52,
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -256,
+          "y:3": 424
+        },
+        "11:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 20
         },
-        "11:10": {
+        "12:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
+          "x:3": -144,
           "y:3": 532
         },
-        "12:10": {
+        "13:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -164,
-          "y:3": 496
+          "x:3": -144,
+          "y:3": 420
         },
-        "13:10": {
+        "14:10": {
           "id:3": 70,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": -16
         },
-        "14:10": {
+        "15:10": {
           "id:3": 71,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 68
         },
-        "15:10": {
+        "16:10": {
           "id:3": 72,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -656,
           "y:3": 16
         },
-        "16:10": {
+        "17:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 104
         },
-        "17:10": {
+        "18:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 68
         },
-        "18:10": {
+        "19:10": {
           "id:3": 76,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 68
         },
-        "19:10": {
+        "20:10": {
           "id:3": 78,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": 20
         },
-        "20:10": {
+        "21:10": {
           "id:3": 79,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 104
         },
-        "21:10": {
+        "22:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": 68
         },
-        "22:10": {
+        "23:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": 104
         },
-        "23:10": {
+        "24:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 20
         },
-        "24:10": {
+        "25:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 140
         },
-        "25:10": {
+        "26:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": 140
         },
-        "26:10": {
+        "27:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 140
         },
-        "27:10": {
+        "28:10": {
           "id:3": 87,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 180
         },
-        "28:10": {
+        "29:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -424,
           "y:3": 140
         },
-        "29:10": {
+        "30:10": {
           "id:3": 89,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -532,
           "y:3": 224
         },
-        "30:10": {
+        "31:10": {
           "id:3": 90,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -540,
           "y:3": 364
         },
-        "31:10": {
+        "32:10": {
           "id:3": 91,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 104
         },
-        "32:10": {
+        "33:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 188
         },
-        "33:10": {
+        "34:10": {
           "id:3": 93,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -260,
           "y:3": 328
         },
-        "34:10": {
+        "35:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 264
         },
-        "35:10": {
+        "36:10": {
           "id:3": 95,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -412,
           "y:3": 332
         },
-        "36:10": {
+        "37:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 388
         },
-        "37:10": {
+        "38:10": {
           "id:3": 98,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -254,
           "y:3": 222
         },
-        "38:10": {
+        "39:10": {
           "id:3": 104,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -316,
           "y:3": 380
         },
-        "39:10": {
+        "40:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 104
         },
-        "40:10": {
+        "41:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 104
         },
-        "41:10": {
+        "42:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 340
         },
-        "42:10": {
+        "43:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 88
         },
-        "43:10": {
+        "44:10": {
           "id:3": 130,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -592,
           "y:3": 336
         },
-        "44:10": {
+        "45:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 432
         },
-        "45:10": {
-          "id:3": 132,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 496
-        },
         "46:10": {
+          "id:3": 132,
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -256,
+          "y:3": 488
+        },
+        "47:10": {
           "id:3": 133,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -532,
           "y:3": 428
         },
-        "47:10": {
+        "48:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 432
         },
-        "48:10": {
+        "49:10": {
           "id:3": 135,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -536,
           "y:3": 488
         },
-        "49:10": {
+        "50:10": {
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -208,
           "y:3": 220
         },
-        "50:10": {
+        "51:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 192
         },
-        "51:10": {
+        "52:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 192
         },
-        "52:10": {
+        "53:10": {
           "id:3": 187,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -254,
           "y:3": 14
         },
-        "53:10": {
+        "54:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 496
         },
-        "54:10": {
+        "55:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -288,
+          "x:3": -184,
           "y:3": 460
         },
-        "55:10": {
+        "56:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": -16
         },
-        "56:10": {
+        "57:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 136
         },
-        "57:10": {
+        "58:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 284
         },
-        "58:10": {
+        "59:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 140
         },
-        "59:10": {
+        "60:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
           "y:3": 312
         },
-        "60:10": {
+        "61:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 388
         },
-        "61:10": {
+        "62:10": {
           "id:3": 398,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -594,
           "y:3": 222
         },
-        "62:10": {
+        "63:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 388
         },
-        "63:10": {
+        "64:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -444,
           "y:3": 264
         },
-        "64:10": {
+        "65:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 264
         },
-        "65:10": {
+        "66:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 432
         },
-        "66:10": {
+        "67:10": {
           "id:3": 509,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": -16
         },
-        "67:10": {
+        "68:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 140
         },
-        "68:10": {
+        "69:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
           "y:3": 356
         },
-        "69:10": {
+        "70:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 192
         },
-        "70:10": {
+        "71:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 68
         },
-        "71:10": {
+        "72:10": {
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -184,
           "y:3": 140
         },
-        "72:10": {
+        "73:10": {
           "id:3": 556,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
           "y:3": 268
         },
-        "73:10": {
+        "74:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
           "y:3": 224
         },
-        "74:10": {
+        "75:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 20
         },
-        "75:10": {
+        "76:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -112,
           "y:3": 20
         },
-        "76:10": {
+        "77:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 20
         },
-        "77:10": {
+        "78:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 20
         },
-        "78:10": {
+        "79:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 68
         },
-        "79:10": {
+        "80:10": {
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -252,
+          "x:3": -148,
           "y:3": 456
         },
-        "80:10": {
+        "81:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -424,
           "y:3": 88
         },
-        "81:10": {
+        "82:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 188
         },
-        "82:10": {
+        "83:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -284,
           "y:3": 264
         },
-        "83:10": {
+        "84:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -392,
           "y:3": 352
         },
-        "84:10": {
+        "85:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -616,
           "y:3": 128
         },
-        "85:10": {
+        "86:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -652,
           "y:3": 68
         },
-        "86:10": {
+        "87:10": {
           "id:3": 819,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 20
         },
-        "87:10": {
+        "88:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 20
         },
-        "88:10": {
+        "89:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": -17
         },
-        "89:10": {
+        "90:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 68
         },
-        "90:10": {
+        "91:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 48
         },
-        "91:10": {
+        "92:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 464
         },
-        "92:10": {
+        "93:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "93:10": {
+        "94:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "94:10": {
+        "95:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "95:10": {
+        "96:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "96:10": {
+        "97:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 388
         },
-        "97:10": {
+        "98:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 388
+          "x:3": -284,
+          "y:3": 296
         },
-        "98:10": {
+        "99:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 140
         },
-        "99:10": {
+        "100:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 104
         },
-        "100:10": {
+        "101:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -556,
           "y:3": 264
         },
-        "101:10": {
+        "102:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 264
         },
-        "102:10": {
+        "103:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "103:10": {
+        "104:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 180
         },
-        "104:10": {
+        "105:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "105:10": {
+        "106:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -56900,10 +56897,10 @@
         },
         "2:10": {
           "id:3": 52,
-          "sizeX:3": 40,
-          "sizeY:3": 40,
-          "x:3": -724,
-          "y:3": 32
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -568,
+          "y:3": -52
         },
         "3:10": {
           "id:3": 54,
@@ -57571,328 +57568,321 @@
           "y:3": 368
         },
         "98:10": {
-          "id:3": 610,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 168
-        },
-        "99:10": {
           "id:3": 611,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 168
         },
-        "100:10": {
+        "99:10": {
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 276
         },
-        "101:10": {
+        "100:10": {
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 276
         },
-        "102:10": {
+        "101:10": {
           "id:3": 672,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 276
         },
-        "103:10": {
+        "102:10": {
           "id:3": 673,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 312
         },
-        "104:10": {
+        "103:10": {
           "id:3": 674,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 312
         },
-        "105:10": {
+        "104:10": {
           "id:3": 675,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 312
         },
-        "106:10": {
+        "105:10": {
           "id:3": 676,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 348
         },
-        "107:10": {
+        "106:10": {
           "id:3": 677,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 348
         },
-        "108:10": {
+        "107:10": {
           "id:3": 678,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 396
         },
-        "109:10": {
+        "108:10": {
           "id:3": 679,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 348
         },
-        "110:10": {
+        "109:10": {
           "id:3": 680,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -168,
           "y:3": 384
         },
-        "111:10": {
+        "110:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -492,
           "y:3": 276
         },
-        "112:10": {
+        "111:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -524,
           "y:3": 276
         },
-        "113:10": {
+        "112:10": {
           "id:3": 732,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 168
         },
-        "114:10": {
+        "113:10": {
           "id:3": 745,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 240
         },
-        "115:10": {
+        "114:10": {
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -852,
           "y:3": 216
         },
-        "116:10": {
+        "115:10": {
           "id:3": 748,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -852,
           "y:3": 252
         },
-        "117:10": {
+        "116:10": {
           "id:3": 751,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -852,
           "y:3": 180
         },
-        "118:10": {
+        "117:10": {
           "id:3": 756,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": -48
         },
-        "119:10": {
+        "118:10": {
           "id:3": 773,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -144,
           "y:3": 84
         },
-        "120:10": {
+        "119:10": {
           "id:3": 783,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -340,
           "y:3": 368
         },
-        "121:10": {
+        "120:10": {
           "id:3": 785,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -420,
           "y:3": 180
         },
-        "122:10": {
+        "121:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 348
         },
-        "123:10": {
+        "122:10": {
           "id:3": 799,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 276
         },
-        "124:10": {
+        "123:10": {
           "id:3": 800,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -264,
           "y:3": 84
         },
-        "125:10": {
+        "124:10": {
           "id:3": 806,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -56,
           "y:3": 108
         },
-        "126:10": {
+        "125:10": {
           "id:3": 807,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 40
         },
-        "127:10": {
+        "126:10": {
           "id:3": 825,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -684,
           "y:3": -100
         },
-        "128:10": {
+        "127:10": {
           "id:3": 826,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -64,
           "y:3": -108
         },
-        "129:10": {
+        "128:10": {
           "id:3": 827,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -258,
           "y:3": -79
         },
-        "130:10": {
+        "129:10": {
           "id:3": 828,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -384,
           "y:3": 272
         },
-        "131:10": {
+        "130:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": -48
         },
-        "132:10": {
+        "131:10": {
           "id:3": 838,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -600,
           "y:3": 156
         },
-        "133:10": {
+        "132:10": {
           "id:3": 841,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 312
         },
-        "134:10": {
+        "133:10": {
           "id:3": 849,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -380,
           "y:3": 240
         },
-        "135:10": {
+        "134:10": {
           "id:3": 850,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -384,
           "y:3": 308
         },
-        "136:10": {
+        "135:10": {
           "id:3": 851,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 276
         },
-        "137:10": {
+        "136:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -56,
           "y:3": 348
         },
-        "138:10": {
+        "137:10": {
           "id:3": 857,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -720,
           "y:3": 312
         },
-        "139:10": {
+        "138:10": {
           "id:3": 858,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -552,
           "y:3": 308
         },
-        "140:10": {
+        "139:10": {
           "id:3": 859,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -424,
           "y:3": 308
         },
-        "141:10": {
+        "140:10": {
           "id:3": 888,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -60,
           "y:3": 68
         },
-        "142:10": {
+        "141:10": {
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -400,
           "y:3": 368
         },
-        "143:10": {
+        "142:10": {
           "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -888,
           "y:3": -100
         },
-        "144:10": {
+        "143:10": {
           "id:3": 900,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -57913,7 +57903,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "questbook:itemquestbook"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "questbook:itemquestbook",
+              "orig_meta:3": 0
+            }
           },
           "name:8": "Progression",
           "visibility:8": "ALWAYS"
@@ -61803,7 +61797,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
