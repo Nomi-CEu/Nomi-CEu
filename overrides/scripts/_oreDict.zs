@@ -287,7 +287,8 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 		<enderio:item_material:23>,
 		<actuallyadditions:item_dust:6>,
 		<thermalfoundation:material:768>,
-		<nuclearcraft:gem_dust:7>
+		<nuclearcraft:gem_dust:7>,
+		<threng:material:3>
 	],
 
 	#dustCobalt
