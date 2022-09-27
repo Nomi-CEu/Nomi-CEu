@@ -205,6 +205,7 @@ recipes.addShaped(<actuallyadditions:block_lava_factory_controller>, [
 recipes.remove(<actuallyadditions:block_fluid_collector>);
 recipes.remove(<actuallyadditions:block_placer>);
 recipes.remove(<actuallyadditions:block_fluid_placer>);
+recipes.remove(<actuallyadditions:block_breaker>);
 
 recipes.addShaped(<actuallyadditions:block_breaker>, [[<actuallyadditions:item_misc:7>, <metaitem:electric.piston.lv>]]);
 recipes.addShaped(<actuallyadditions:block_placer>, [[<metaitem:electric.piston.lv>,<actuallyadditions:item_misc:7>]]);
