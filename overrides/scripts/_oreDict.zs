@@ -237,6 +237,8 @@ for oreDictEntry, items in blocksDisabled {
 	oreDictEntry.removeItems(items);
 }
 
+<ore:blockWarpCoreRim>.add(<gregtech:meta_block_compressed_7:1>);
+
 	#crop flax
 <ore:cropFlax>.remove(<minecraft:string>);
 
