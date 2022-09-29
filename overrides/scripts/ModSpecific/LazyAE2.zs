@@ -14,6 +14,14 @@ mods.jei.JEI.hideCategory("threng.energize");
 
 recipes.removeByRecipeName("threng:machine_core");
 recipes.removeByRecipeName("threng:spec_core_64");
+recipes.removeByRecipeName("threng:ma_frame");
+recipes.removeByRecipeName("threng:spec_core_64");
+recipes.removeByRecipeName("threng:spec_core_64");
+recipes.removeByRecipeName("threng:ma_io_port");
+recipes.removeByRecipeName("threng:ma_vent");
+recipes.removeByRecipeName("threng:ma_controller");
+recipes.removeByRecipeName("threng:ma_mod_cpu");
+recipes.removeByRecipeName("threng:ma_mod_pattern");
 
 // Materials
 // Fluix Steel
@@ -46,6 +54,47 @@ assembler.recipeBuilder()
     .inputs(<metaitem:frameBlackSteel>, <ore:circuitIv>, <threng:material:6>, <metaitem:sensor.ev> * 4, <appliedenergistics2:part:16> * 16, <appliedenergistics2:material:6> * 64)
     .outputs(<threng:material:13>)
     .duration(600).EUt(1920).buildAndRegister();
+
+// MA Frame
+assembler.recipeBuilder()
+    .inputs(<threng:material:5> * 4, <metaitem:frameBlueSteel> * 4, <extrautils2:crafter>, <ore:circuitHv>)
+    .fluidInputs(<liquid:plastic> * 288)
+    .outputs(<threng:big_assembler> * 4)
+    .duration(150).EUt(1920).buildAndRegister();
+
+// MA Vent
+assembler.recipeBuilder()
+    .inputs(<threng:big_assembler>, <metaitem:electric.motor.hv>)
+    .outputs(<threng:big_assembler:1>)
+    .duration(100).EUt(1920).buildAndRegister();
+
+// MA IO Port
+assembler.recipeBuilder()
+    .inputs(<threng:big_assembler> * 4, <metaitem:pipeNormalItemPlatinum> * 4, <appliedenergistics2:interface> * 4)
+    .fluidInputs(<liquid:plastic> * 288)
+    .outputs(<threng:big_assembler:5>)
+    .duration(150).EUt(1920).buildAndRegister();
+
+// MA Pattern Provider
+assembler.recipeBuilder()
+    .inputs(<threng:big_assembler> * 4, <appliedenergistics2:material:24> * 4, <appliedenergistics2:interface> * 4, <appliedenergistics2:molecular_assembler>)
+    .fluidInputs(<liquid:plastic> * 288)
+    .outputs(<threng:big_assembler:3>)
+    .duration(150).EUt(1920).buildAndRegister();
+
+// MA Coprocessor
+assembler.recipeBuilder()
+    .inputs(<threng:big_assembler> * 4, <threng:material:6> * 4, <appliedenergistics2:crafting_accelerator> * 4, <appliedenergistics2:interface> * 4, <appliedenergistics2:molecular_assembler>)
+    .fluidInputs(<liquid:plastic> * 288)
+    .outputs(<threng:big_assembler:4>)
+    .duration(150).EUt(1920).buildAndRegister();
+
+// MA Controller
+assembler.recipeBuilder()
+    .inputs(<threng:big_assembler> * 4, <threng:material:4> * 4, <appliedenergistics2:interface> * 4, <appliedenergistics2:part:16> * 4, <appliedenergistics2:molecular_assembler> * 4, <threng:material:14> * 4, <metaitem:field.generator.iv> * 4, <ore:circuitIv> * 4)
+    .fluidInputs(<liquid:plastic> * 288)
+    .outputs(<threng:big_assembler:2>)
+    .duration(400).EUt(1920).buildAndRegister();
 
 // Circuit Etcher
 mods.threng.Etcher.removeRecipe(<appliedenergistics2:material:22>);
