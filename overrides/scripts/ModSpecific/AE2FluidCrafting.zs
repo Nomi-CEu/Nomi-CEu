@@ -21,7 +21,7 @@ recipes.addShaped(<ae2fc:fluid_pattern_encoder>, [
 ]);
 
 assembler.recipeBuilder()
-    .inputs(<metaitem:hull.mv>, <metaitem:sensor.mv>, <metaitem:fluid_cell.glass_vial>, <appliedenergistics2:material:23>, <appliedenergistics2:quartz_vibrant_glass> * 4)
+    .inputs(<metaitem:hull.mv>, <metaitem:sensor.mv>, <metaitem:fluid_cell.glass_vial> * 2, <appliedenergistics2:material:23> * 2, <appliedenergistics2:quartz_vibrant_glass> * 4)
     .outputs(<ae2fc:burette>)
     .duration(100).EUt(30).buildAndRegister();
 
@@ -30,7 +30,7 @@ recipes.addShapeless(<ae2fc:dual_interface>, [<appliedenergistics2:interface>, <
 recipes.addShaped(<ae2fc:fluid_level_maintainer>, [
     [<ore:ingotVibrantAlloy>, <appliedenergistics2:part:281>, <ore:ingotVibrantAlloy>],
     [<appliedenergistics2:material:24>, <appliedenergistics2:crafting_monitor>, <appliedenergistics2:material:24>],
-    [<ore:ingotVibrantAlloy>, <ore:electric.pump.hv>, <ore:ingotVibrantAlloy>]
+    [<ore:ingotVibrantAlloy>, <metaitem:electric.pump.hv>, <ore:ingotVibrantAlloy>]
 ]);
 
 recipes.addShaped(<ae2fc:part_fluid_pattern_ex_terminal>, [
