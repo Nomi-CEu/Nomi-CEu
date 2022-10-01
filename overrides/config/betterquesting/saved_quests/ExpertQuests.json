@@ -45,9 +45,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 214,
               "OreDict:8": "",
-              "id:8": "appliedenergistics2:material"
+              "id:8": "gregtech:meta_gem"
             },
             "1:10": {
               "Count:3": 1,
@@ -10152,7 +10152,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Petrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
+          "desc:8": "Petrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n\n\n(Either oil type will complete this quest)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10192,6 +10192,20 @@
             "0:10": {
               "Amount:3": 1000,
               "FluidName:8": "oil"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil_medium"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -41818,6 +41832,30 @@
               "Damage:2": 1025,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1652,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1651,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1653,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "4:10": {
+              "Count:3": 22,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:steam_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -48968,7 +49006,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "questbook:itemquestbook"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "questbook:itemquestbook",
+              "orig_meta:3": 0
+            }
           },
           "name:8": "Progression",
           "visibility:8": "ALWAYS"
