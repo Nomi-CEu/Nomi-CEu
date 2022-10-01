@@ -674,3 +674,7 @@ var magnetron = VanillaFactory.createItem("magnetron");
 magnetron.rarity = "rare";
 magnetron.maxStackSize = 64;
 magnetron.register();
+
+var dark_red_coal = VanillaFactory.createItem("dark_red_coal");
+dark_red_coal.maxStackSize = 64;
+dark_red_coal.register();

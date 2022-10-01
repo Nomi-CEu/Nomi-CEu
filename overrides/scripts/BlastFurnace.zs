@@ -71,6 +71,26 @@ alloy_blast_smelter.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister();
 
+// Temporary Black Steel fix
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <contenttweaker:dark_red_coal> * 4])
+	.circuit(3)
+	.fluidOutputs([<liquid:black_steel> * 1296])
+	.property("temperature", 1000)
+	.duration(2880)
+	.EUt(120)
+	.buildAndRegister();
+
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <contenttweaker:dark_red_coal> * 4])
+	.fluidInputs([<liquid:nitrogen> * 9000])
+	.circuit(13)
+	.fluidOutputs([<liquid:black_steel> * 1296])
+	.property("temperature", 1000)
+	.duration(1929)
+	.EUt(120)
+	.buildAndRegister();
+
 //Aluminium [tier 2]
 // Aluminium Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustAluminium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:nitrogen> * 1000]).remove();
