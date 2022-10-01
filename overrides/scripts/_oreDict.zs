@@ -239,6 +239,8 @@ for oreDictEntry, items in blocksDisabled {
 
 <ore:blockWarpCoreRim>.add(<gregtech:meta_block_compressed_7:1>);
 
+<ore:fusedGlass>.add(<gregtech:transparent_casing:0>);
+
 	#crop flax
 <ore:cropFlax>.remove(<minecraft:string>);
 
