@@ -311,6 +311,17 @@ assembly_line.recipeBuilder()
     .outputs(<metaitem:world_accelerator.iv>)
     .duration(900).EUt(491520).buildAndRegister();
 
+// Temporary UHV Multiblocks Fix
+assembler.recipeBuilder()
+    .inputs(<metaitem:electric_blast_furnace>, <metaitem:plateDenseNeutronium> * 2, <metaitem:field.generator.uv> * 2, <metaitem:wireGtQuadrupleRutheniumTriniumAmericiumNeutronate>, <metaitem:springNeutronium> * 2, <ore:circuitUhv>)
+    .outputs(<metaitem:gcym:mega_blast_furnace>)
+    .duration(100).EUt(30).buildAndRegister();
+
+assembler.recipeBuilder()
+    .inputs(<metaitem:vacuum_freezer>, <metaitem:plateDenseNeutronium> * 2, <metaitem:field.generator.uv> * 2, <metaitem:wireGtQuadrupleRutheniumTriniumAmericiumNeutronate>, <metaitem:pipeNormalFluidNeutronium> * 2, <ore:circuitUhv>)
+    .outputs(<metaitem:gcym:mega_vacuum_freezer>)
+    .duration(100).EUt(30).buildAndRegister();
+
 // Stabilized Miners Tooltips
 <contenttweaker:tiereightship_stabilized>.addTooltip(format.italic(
 	format.white("A stabilized version, injected with a Heart of a Universe.")));
