@@ -12,7 +12,7 @@ furnace.remove(<threng:material>);
 mods.jei.JEI.hideCategory("threng.agg");
 mods.jei.JEI.hideCategory("threng.energize");
 
-<ore:dustCoal>.remove(<threng:material:3>)
+<ore:dustCoal>.remove(<threng:material:3>);
 mods.jei.JEI.removeAndHide(<threng:material:3>);
 
 recipes.removeByRecipeName("threng:machine_core");
