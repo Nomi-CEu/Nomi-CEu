@@ -977,7 +977,13 @@ var smingots as IItemStack[] = [
     <contenttweaker:eightsmore>,
     <contenttweaker:sixteensmore>,
     <contenttweaker:thirtytwosmore>,
-    <contenttweaker:sixtyfoursmore>
+    <contenttweaker:sixtyfoursmore>,
+    <contenttweaker:onetwentyeightsmore>,
+    <contenttweaker:twofiftysixsmore>,
+    <contenttweaker:fivetwelvesmore>,
+    <contenttweaker:onetwentyfoursmore>,
+    <contenttweaker:twofortyeightsmore>,
+    <contenttweaker:fourninetysixsmore>
 ] as IItemStack[];
 
 var i = 1;
