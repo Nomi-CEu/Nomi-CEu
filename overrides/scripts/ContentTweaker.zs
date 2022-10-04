@@ -504,7 +504,13 @@ var smingots as string[] = [
     "eightsmore",
     "sixteensmore",
     "thirtytwosmore",
-    "sixtyfoursmore"
+    "sixtyfoursmore",
+    "onetwentyeightsmore",
+    "twofiftysixsmore",
+    "fivetwelvesmore",
+    "onetwentyfoursmore",
+    "twofortyeightsmore",
+    "fourninetysixsmore"
 ] as string[];
 
 function getItemFoodEaten(duration as int) as IItemFoodEaten {
