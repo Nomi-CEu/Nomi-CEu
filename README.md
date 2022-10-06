@@ -11,11 +11,13 @@ Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [Gr
 
 ## Mod compatibility info
 nomi-ceu comes with compatibility scripts for the following mods. You can drop them into the mods folder and their recipes will be adjusted accordingly.  
-- [AE2 Fluid Crafting](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-crafting)
+- [AE2 Fluid Crafting Rework](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-crafting-rework)
 - [Compact Machines](https://www.curseforge.com/minecraft/mc-mods/compact-machines)
 - [Flux Networks](https://www.curseforge.com/minecraft/mc-mods/flux-networks)
 - [Lazy AE2](https://www.curseforge.com/minecraft/mc-mods/lazy-ae2)
-- [Project Red - Illumination](https://www.curseforge.com/minecraft/mc-mods/project-red-illumination)
+- [Project Red - Illumination](https://www.curseforge.com/minecraft/mc-mods/project-red-illumination)  
+
+\* Note: If you are adding these mods via the CurseForge app, remove the copy of non-Extended Life AE2 it might automatically download.
 
 ## Hard mode info
 If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack. Highlights include:
@@ -38,5 +40,5 @@ GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.co
 Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/). ([Permission](https://ibb.co/bBpksq0) at [this message](https://discord.com/channels/771187253937438762/774353150278369351/938438074503942184) in [FurfSky Reborn server](https://discord.gg/fsr))  
 Certain hard mode recipe chains and Magnetron texture from [GCY Science](https://github.com/GregTechCEu/gregicality-science).  
 Stabilized miner textures from [Self-Torture Edition](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition).  
-Flux Networks compatibility recipes from [smudgerox](https://github.com/smudgerox).
+Flux Networks compatibility recipes from [smudgerox](https://github.com/smudgerox).  
 Thank you!
