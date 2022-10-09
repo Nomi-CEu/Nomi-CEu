@@ -6,8 +6,12 @@ NORMAL_CFG=./config-overrides/normal
 EXPERT_CFG=./config-overrides/expert
 TARGET=./config
 
-echo -en "Set pack mode (Normal / Expert): "
-read MODE
+if [ -z "$1" ]; then
+  echo -en "Set pack mode (Normal / Expert): "
+  read MODE
+else
+  MODE="$1"
+fi
 
 case $MODE in
   N|n|normal)
