@@ -11,12 +11,12 @@ read MODE
 
 case $MODE in
   N|n|normal)
-    cp -rf "$NORMAL_CFG" "$TARGET"
+    cp -rf "$NORMAL_CFG"/* "$TARGET"
     rm -f "$TARGET/globalgamerules.cfg"
   ;;
 
   E|e|expert)
-    cp -rf "$EXPERT_CFG" "$TARGET"
+    cp -rf "$EXPERT_CFG"/* "$TARGET"
   ;;
 
   *)
