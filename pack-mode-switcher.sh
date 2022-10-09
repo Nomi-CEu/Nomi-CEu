@@ -13,7 +13,7 @@ else
   MODE="$1"
 fi
 
-case $MODE in
+case "$MODE" in
   N|n|normal)
     cp -rf "$NORMAL_CFG"/* "$TARGET"
     rm -f "$TARGET/globalgamerules.cfg"
