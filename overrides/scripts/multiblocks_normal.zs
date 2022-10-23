@@ -189,7 +189,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('V', <blockstate:gregtech:multiblock_casing>)
             .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, true))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
