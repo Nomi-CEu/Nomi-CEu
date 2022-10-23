@@ -99,7 +99,6 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .maxInputs(4)
             .minOutputs(1)
             .maxOutputs(16)
-            .maxFluidInputs(1)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
     .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
