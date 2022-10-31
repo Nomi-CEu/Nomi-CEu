@@ -117,7 +117,7 @@ alloy_smelter.recipeBuilder().inputs([<minecraft:glass>, <ore:dustCertusQuartz>]
 recipes.removeByRecipeName("enderstorage:ender_chest");
 recipes.addShaped(<enderstorage:ender_storage>, [
 	[<minecraft:blaze_rod>, <minecraft:wool>, <minecraft:blaze_rod>],
-	[<ore:obsidian>, <meta_tile_entity:steel_chest>, <ore:obsidian>],
+	[<ore:obsidian>, <meta_tile_entity:crate.steel>, <ore:obsidian>],
 	[<minecraft:blaze_rod>, <ore:enderpearl>, <minecraft:blaze_rod>]]);
 
 //Blaze Rod
