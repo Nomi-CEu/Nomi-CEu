@@ -27,8 +27,8 @@ recipes.removeByRecipeName("threng:ma_mod_cpu");
 recipes.removeByRecipeName("threng:ma_mod_pattern");
 
 // Use Greg Certus
-mods.threng.Centrifuge.removeRecipe(appliedenergistics2:material:10);
-mods.threng.Centrifuge.addRecipe(appliedenergistics2:material:10 * 2, metaitem:gemCertusQuartz);
+mods.threng.Centrifuge.removeRecipe(<appliedenergistics2:material:10>);
+mods.threng.Centrifuge.addRecipe(<appliedenergistics2:material:10> * 2, <metaitem:gemCertusQuartz>);
 
 // Materials
 // Fluix Steel
