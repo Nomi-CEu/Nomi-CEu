@@ -166,8 +166,9 @@ furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc
 
 // Temporary Black Steel fix
 recipes.addShapeless(<contenttweaker:dark_red_coal> * 2, [<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>]);
+mods.jei.JEI.hide(<contenttweaker:dark_red_coal>);
 
-mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <contenttweaker:dark_red_coal> * 4]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
+mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <contenttweaker:dark_red_coal> * 4]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).hidden().buildAndRegister();
 
 
 // Clathrates
