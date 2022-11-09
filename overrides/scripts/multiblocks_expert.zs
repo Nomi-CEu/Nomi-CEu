@@ -26,14 +26,13 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start()
                           .aisle("CCC", "CVC", "CCC")
-                          .aisle("CCC", "GDG", "CMC")
+                          .aisle("CCC", "GDG", "CCC")
                           .aisle("CSC", "CGC", "CCC")
                           .where('S', controller.self())
                           .where('G', <blockstate:gregtech:transparent_casing>)
                           .where('V', <metastate:gregtech:multiblock_casing:2>)
                           .where('D', <metastate:chisel:diamond:3>)
-                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
-                          .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
+                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, true))
                           .build();
                  } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -42,7 +41,7 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
             .maxInputs(4)
             .minOutputs(1)
             .maxOutputs(16)
-            .maxFluidInputs(2)
+            .maxFluidInputs(1)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
     .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
@@ -57,7 +56,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
         return FactoryBlockPattern.start()
             .aisle(
-                    "CCMCC",
+                    "CCCCC",
                     "CGGGC",
                     "CGGGC",
                     "CGGGC",
@@ -91,8 +90,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
             .where(' ', CTPredicate.getAny())
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
-            .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -101,7 +99,6 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .maxInputs(4)
             .minOutputs(1)
             .maxOutputs(16)
-            .maxFluidInputs(1)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
     .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
@@ -120,7 +117,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
                 "         ",
                 "  CCCCC  ",
                 "  CVCVC  ",
-                "  CCMCC  ",
+                "  CCCCC  ",
                 "  CVCVC  ",
                 "  CCCCC  ",
                 "         ",
@@ -191,8 +188,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('V', <blockstate:gregtech:multiblock_casing>)
             .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, false))
-            .where('M', controller.autoAbilities(false, false, false, false, false, false, true)) // same as CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>)
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(

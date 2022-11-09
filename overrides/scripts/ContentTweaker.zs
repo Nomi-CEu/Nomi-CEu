@@ -495,8 +495,9 @@ ultradensehydrogen.register();
 var microverse_casing = VanillaFactory.createBlock("microverse_casing", <blockmaterial:iron>);
 microverse_casing.register();
 
-var microverse_vent = VanillaFactory.createBlock("microverse_vent", <blockmaterial:iron>);
-microverse_vent.register();
+// Vents are useless...
+// var microverse_vent = VanillaFactory.createBlock("microverse_vent", <blockmaterial:iron>);
+// microverse_vent.register();
 
 //Smores
 
