@@ -344,6 +344,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.crystal_computer>)
 	.duration(400)
 	.EUt(9600)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
@@ -352,6 +353,7 @@ circuit_assembler.recipeBuilder()
 	.outputs(<metaitem:circuit.crystal_computer>)
 	.duration(400)
 	.EUt(9600)
+	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
 // wetware
