@@ -250,34 +250,40 @@ blast_furnace.recipeBuilder()
     .duration(200).EUt(120).buildAndRegister();
 
 // Vanadium
-// Magnetite Dust * 1
-<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustVanadiumMagnetite> * 2], null).remove();
+//// Magnetite Dust * 1
+//<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustVanadiumMagnetite> * 2], null).remove();
+//
+//chemical_reactor.recipeBuilder()
+//    .fluidInputs(<liquid:ammonia> * 1000, <liquid:hydrochloric_acid> * 1000)
+//    .circuit(5)
+//    .outputs(<metaitem:dustAmmoniumChloride> * 2)
+//    .duration(120).EUt(7).buildAndRegister();
+//
+//blast_furnace.recipeBuilder()
+//    .inputs(<metaitem:dustVanadiumMagnetite> * 6, <metaitem:dustSalt> * 6)
+//    .fluidInputs(<liquid:oxygen> * 8000)
+//    .outputs(<metaitem:dustSodiumMetavanadate> * 15)
+//    .fluidOutputs(<liquid:iron_iii_chloride> * 1000)
+//    .property("temperature", 1150)
+//    .duration(450).EUt(120).buildAndRegister();
+//
+//chemical_reactor.recipeBuilder()
+//    .inputs(<metaitem:dustSodiumMetavanadate> * 5, <metaitem:dustAmmoniumChloride> * 2)
+//    .outputs(<metaitem:dustAmmoniumMetavanadate> * 9, <metaitem:dustSalt> * 2)
+//    .duration(150).EUt(30).buildAndRegister();
+//
+//chemical_reactor.recipeBuilder()
+//    .inputs(<metaitem:dustAmmoniumMetavanadate> * 18)
+//    .circuit(1)
+//    .outputs(<metaitem:dustVanadiumPentoxide> * 7)
+//    .fluidOutputs(<liquid:ammonia> * 2000, <liquid:water> * 1000)
+//    .duration(300).EUt(30).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
-    .fluidInputs(<liquid:ammonia> * 1000, <liquid:hydrochloric_acid> * 1000)
-    .circuit(5)
-    .outputs(<metaitem:dustAmmoniumChloride> * 2)
-    .duration(120).EUt(7).buildAndRegister();
-
-blast_furnace.recipeBuilder()
-    .inputs(<metaitem:dustVanadiumMagnetite> * 6, <metaitem:dustSalt> * 6)
-    .fluidInputs(<liquid:oxygen> * 8000)
-    .outputs(<metaitem:dustSodiumMetavanadate> * 15)
-    .fluidOutputs(<liquid:iron_iii_chloride> * 1000)
-    .property("temperature", 1150)
-    .duration(450).EUt(120).buildAndRegister();
-
-chemical_reactor.recipeBuilder()
-    .inputs(<metaitem:dustSodiumMetavanadate> * 5, <metaitem:dustAmmoniumChloride> * 2)
-    .outputs(<metaitem:dustAmmoniumMetavanadate> * 9, <metaitem:dustSalt> * 2)
-    .duration(150).EUt(30).buildAndRegister();
-
-chemical_reactor.recipeBuilder()
-    .inputs(<metaitem:dustAmmoniumMetavanadate> * 18)
-    .circuit(1)
+    .inputs(<metaitem:dustVanadium> * 2)
+    .fluidInputs(<liquid:oxygen> * 5000)
     .outputs(<metaitem:dustVanadiumPentoxide> * 7)
-    .fluidOutputs(<liquid:ammonia> * 2000, <liquid:water> * 1000)
-    .duration(300).EUt(30).buildAndRegister();
+    .duration(600).EUt(7).buildAndRegister();
 
 // H2SO4 require V2O5
 // Sulfur Trioxide * 1000
