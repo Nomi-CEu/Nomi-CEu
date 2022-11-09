@@ -186,7 +186,8 @@ solidifier.recipeBuilder()
 
 // Draconium Freezing
 // Draconium Ingot * 1
-<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotDraconium>], null).remove();
+<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotDraconium>], [<liquid:liquid_helium> * 500]).remove();
+
 freezer.recipeBuilder()
     .inputs([<metaitem:ingotHotDraconium>])
     .fluidInputs([<liquid:cryotheum> * 2000])
