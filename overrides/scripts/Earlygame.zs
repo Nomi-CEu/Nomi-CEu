@@ -388,49 +388,6 @@ cutter.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister();
 
-//Make the CPU recipes not require cleanroom
-// CPU disable cleanroom
-<recipemap:cutter>.findRecipe(120, [<metaitem:wafer.central_processing_unit>], [<liquid:lubricant> * 84]).remove();
-<recipemap:cutter>.findRecipe(120, [<metaitem:wafer.central_processing_unit>], [<liquid:distilled_water> * 253]).remove();
-<recipemap:cutter>.findRecipe(120, [<metaitem:wafer.central_processing_unit>], [<liquid:water> * 337]).remove();
-
-//CPU circuit redo
-<recipemap:cutter>.recipeBuilder()
-	.inputs([<metaitem:wafer.central_processing_unit>])
-	.duration(900)
-	.fluidInputs([<liquid:lubricant> * 84])
-	.EUt(120)
-	.outputs([<metaitem:plate.central_processing_unit> * 8])
-	.buildAndRegister();
-
-<recipemap:cutter>.recipeBuilder()
-	.inputs([<metaitem:wafer.central_processing_unit>])
-	.duration(1350)
-	.fluidInputs([<liquid:distilled_water> * 253])
-	.EUt(120)
-	.outputs([<metaitem:plate.central_processing_unit> * 8])
-	.buildAndRegister();
-
-<recipemap:cutter>.recipeBuilder()
-	.inputs([<metaitem:wafer.central_processing_unit>])
-	.duration(1800)
-	.fluidInputs([<liquid:water> * 337])
-	.EUt(120)
-	.outputs([<metaitem:plate.central_processing_unit> * 8])
-	.buildAndRegister();
-
-// CPU Wafer * 1
-<recipemap:laser_engraver>.findRecipe(120, [<metaitem:wafer.silicon>, <metaitem:glass_lens.light_blue>], null).remove();
-
-//CPU Wafer Redo
-<recipemap:laser_engraver>.recipeBuilder()
-	.inputs([<metaitem:wafer.silicon>])
-	.notConsumable([<ore:craftingLensLightBlue>])
-	.duration(900)
-	.EUt(120)
-	.outputs([<metaitem:wafer.central_processing_unit>])
-	.buildAndRegister();
-
 // Tooltips
 <gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
 <thermalexpansion:capacitor>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
