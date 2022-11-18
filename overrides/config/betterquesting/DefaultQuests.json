@@ -10459,7 +10459,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your §6Crystal CPUs§r and the §3LuV Assembling Machine§r crafted, you can make the final type of Tier Five Circuit: the §6Crystal Circuit§r.\n\n§2This is the first Circuit which strictly requires Advanced SMD components. All of them will from now on.§r\n\nAs the best form of Tier Five circuit, these should be automated and stockpiled. The variant recipe requiring §6Crystal System-on-Chip§r won\u0027t be available until you can make a §3ZPM Assembling Machine§r.",
+          "desc:8": "With your §6Crystal CPUs§r and the §3LuV Assembling Machine§r crafted, you can make the final type of Tier Five Circuit: the §6Crystal Circuit§r.\n\n§2This is the first Circuit which strictly requires Advanced SMD components. All of them will from now on.§r\n\nAs the best form of Tier Five circuit, these should be automated and stockpiled. The variant recipe requiring §6Crystal System-on-Chip§r won\u0027t be available until you can make a §2ZPM Circuit Assembling Machine§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11761,7 +11761,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll be needing large quantities of the various Noble Gasses so you should get this automated and running continuously. \n\n§9Argon§r, for example, is important for production of advanced §6Silicon Boules§r.\n\n§2After liquefication, Overworld Air grants Helium and Argon; Nether Air grants Helium-3 and Neon; Ender Air grants Helium, Krypton, Xenon, and Radon.\n\n§2Certain Noble Gases can also boost the speed of EBF processes.",
+          "desc:8": "You\u0027ll be needing large quantities of the various Noble Gasses so you should get this automated and running continuously. \n\n§2After liquefication, Overworld Air grants Helium and Argon; Nether Air grants Helium-3 and Neon; Ender Air grants Helium, Krypton, Xenon, and Radon.\n\n§2Certain Noble Gases can also boost the speed of EBF processes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12027,7 +12027,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r produces §9Nitro Diesel§r, an extremely potent fuel needed later for §6Draconium§r production.\n\nIf you have a very robust petrochemical infrastructure and can afford to burn it, this fuel along with proper oxygenation §2is a potent fuel in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.",
+          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r §2or Large Chemical Reactor§r produces §9Nitro Diesel§r, an extremely potent fuel needed later for §6Draconium§r production.\n\nIf you have a very robust petrochemical infrastructure and can afford to burn it, this fuel along with proper oxygenation §2is a potent fuel in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
