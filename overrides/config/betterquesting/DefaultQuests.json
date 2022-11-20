@@ -10459,7 +10459,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your §6Crystal CPUs§r and the §3LuV Assembling Machine§r crafted, you can make the final type of Tier Five Circuit: the §6Crystal Circuit§r.\n\n§2This is the first Circuit which strictly requires Advanced SMD components. All of them will from now on.§r\n\nAs the best form of Tier Five circuit, these should be automated and stockpiled. The variant recipe requiring §6Crystal System-on-Chip§r won\u0027t be available until you can make a §2ZPM Circuit Assembling Machine§r.",
+          "desc:8": "With your §6Crystal CPUs§r and the §3LuV Assembling Machine§r crafted, you can make the final type of Tier Five Circuit: the §6Crystal Circuit§r.\n\n§2This is the first Circuit which strictly requires Advanced SMD components. All of them will from now on.§r\n\nAs the best form of Tier Five circuit, these should be automated and stockpiled. The variant recipe requiring §6Crystal System-on-Chip§r won\u0027t be available until you can make a §3ZPM Circuit Assembling Machine§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22188,7 +22188,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The final form of Tier Six circuits, and the final circuit theme.\n\nUsing your §2Neuro Processing Units§r, you can craft (grow?) these circuits in a ZPM or better §3Assembling Machine§r.\n\nThese are fairly slow to craft and you\u0027re going to need considerable quantities, so make sure you have a good parallelized infrastructure for keeping these stocked.",
+          "desc:8": "The final form of Tier Six circuits, and the final circuit theme.\n\nUsing your §2Neuro Processing Units§r, you can craft (grow?) these circuits in a ZPM or better §3Circuit Assembling Machine§r.\n\nThese are fairly slow to craft and you\u0027re going to need considerable quantities, so make sure you have a good parallelized infrastructure for keeping these stocked.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
