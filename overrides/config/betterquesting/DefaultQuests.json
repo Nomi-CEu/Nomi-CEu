@@ -2490,7 +2490,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This alloy is made from §2mixing§r §22 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust in a mixer, creating Energetic Alloy Dust,§r §2and putting it §rin your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
+          "desc:8": "This alloy is made from §2mixing 2 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust in a Mixer, creating Energetic Alloy Dust,§r and putting it in your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18345,7 +18345,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Mixes two dusts to make a third.\n\nFor now, you\u0027ll be using it to make §6Glowstone Dust§r.\n\nGlowstone Dust is made from §6Tricalcium Phosphate Dust§r and §6Gold Dust§r, or you could eventually gather it from the Nether.",
+          "desc:8": "Mixes two dusts to make a third.\n\nFor now, you\u0027ll be using it to make §2Energetic Alloy Dust§r and §6Glowstone Dust§r.\n\nGlowstone Dust is made from §6Tricalcium Phosphate Dust§r and §6Gold Dust§r, or you could eventually gather it from the Nether.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
