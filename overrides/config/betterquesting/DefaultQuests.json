@@ -1948,10 +1948,10 @@
           "desc:8": "§6Steel§r alloyed with §6Obsidian§r makes §6Dark Steel§r, which is needed for many of the machines in §bEnderIO§r and §bApplied Energistics§r.\n\nLater, you can use §6Void Crystal§r instead of Obsidian.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 6,
-            "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+              "Count:3": 12,
+              "Damage:2": 32003,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
           "issilent:1": 0,
@@ -2146,13 +2146,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §bEnder IO§r alloy.\n\nMade from §6Pulsating Dust§r and an §6Iron Ingot§r.\n\nIf you can\u0027t find one otherwise, §6Ender Pearls§r can be crafted using Pulsating Dust and a §6Diamond§r in an §3Alloy Smelter§r.",
+          "desc:8": "A mysterious alloy, made from §6Pulsating Dust§r and an §6Iron Ingot§r.\n\nIf you can\u0027t find one otherwise, §6Ender Pearls§r can be crafted using Pulsating Dust and a §6Diamond§r in an §3Alloy Smelter§r.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 5,
-            "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+              "Count:3": 1,
+              "Damage:2": 32014,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
           "issilent:1": 0,
@@ -2218,13 +2218,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §bEnderIO§r alloy, made from §6Silicon Dust§r and a §6Steel Ingot§r.\n\nThis material is frequently used in electronics and digital equipment.",
+          "desc:8": "A refined type of steel, made from §6Silicon Dust§r and a §6Steel Ingot§r.\n\nThis material is frequently used in electronics and digital equipment.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+              "Count:3": 1,
+              "Damage:2": 32015,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
           "issilent:1": 0,
@@ -2490,13 +2490,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §bEnderIO§r alloy, made from §2mixing§r §22 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust§r §2and putting it §rin your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
+          "desc:8": "This alloy is made from §2mixing§r §22 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust in a mixer, creating Energetic Alloy Dust,§r §2and putting it §rin your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 32012,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
           "issilent:1": 0,
@@ -2555,13 +2555,14 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An EnderIO alloy.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
+          "desc:8": "Another alloy.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 2,
-            "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+              "Count:3": 1,
+              "Damage:2": 32013,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            
           },
           "ismain:1": 1,
           "issilent:1": 0,
@@ -5127,7 +5128,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types. Oh, and they\u0027re relatively cheaper to make.\n\nThe only downside is that §ethey will not connect to §bApplied Energistics§r §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use AE cables like §6Fluix Cable§r for those.",
+          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types. Oh, and they\u0027re relatively cheaper to make.\n\nThe only downside is that §ethey will not connect to §bApplied Energistics§r §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use AE cables like §6Fluix Cables§r for those. §2Furthermore, they are known to sometimes disconnect from machine hulls and full-block interfaces, so use AE cables like §6Fluix Cables§r for those.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5263,7 +5264,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Machine Block§r is the first step into a mod called §bExtra Utilities 2§r.",
+          "desc:8": "The §6Machine Block§r is the first step into a mod called §bExtra Utilities 2§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7203,7 +7204,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aPatterns§r are used to encode a single crafting table or processing recipe for on-demand automation with §bApplied Energistics§r.\n\nEncode them in a §aPattern Terminal§r.\n\nNote that recipes encoded with Substitutions on will use existing equivalent items, but §ewill only automatically craft the exact item specified in the recipe.§r\n\nIt is also a §cvery bad idea§r to encode recipes that require GregTech hand tools (even worse with Substitutions on). They are not handled gracefully, causing your crafting computations to explode in complexity and memory requirement.\n\nUse recipes that use machines instead!\n\n",
+          "desc:8": "§aPatterns§r are used to encode a single crafting table or processing recipe for on-demand automation with §bApplied Energistics§r.\n\nEncode them in a §aPattern Terminal§r.\n\nNote that recipes encoded with Substitutions on will use existing equivalent items, but §ewill only automatically craft the exact item specified in the recipe.§r\n\n§2With PAE2, recipes with tools have been improved by a huge amount. However, still aim for recipes without tools.§r\n\nUse recipes that use machines instead!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7529,7 +7530,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to 9 stacks of items for passive autocrafting, Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\n",
+          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to §29 stacks of 512 items (or 4608 items)§r for passive autocrafting and to push into other inventories. Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7540,7 +7541,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "ME Interfaces",
+          "name:8": "§2ME Interfaces",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
