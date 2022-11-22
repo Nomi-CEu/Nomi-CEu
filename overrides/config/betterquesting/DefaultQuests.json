@@ -6510,7 +6510,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Sulfuric Acid is mainly produced in a 3-step process:\n- Sulfur added to Oxygen to produce Sulfur Dioxide. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing Nether Air.\n- Sulfur Dioxide added to more Oxygen, to produce Sulfur Trioxide.\n- Sulfur Trioxide added to Water, to produce Sulfuric Acid.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at EV.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeep Mob Learning§r\u0027s §aBlaze Model§r.",
+          "desc:8": "§2Sulfuric Acid is mainly produced in a 3-step process:\n- Sulfur added to Oxygen to produce Sulfur Dioxide. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing Nether Air.\n- Sulfur Dioxide added to more Oxygen, to produce Sulfur Trioxide.\n- Sulfur Trioxide added to Water, to produce Sulfuric Acid.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at HV.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeep Mob Learning§r\u0027s §aBlaze Model§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
