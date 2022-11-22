@@ -11631,7 +11631,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Because of this, after the first few processes of §9Liquid Air§r, you\u0027ll probably have more Nitrogen than you know what to do with.\n\nIf you got here centrifuging air, then it\u0027s gonna take you longer to get to that point.\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, one of which you\u0027ll be needing very soon.",
+          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Because of this, after the first few processes of §9Liquid Air§r, you\u0027ll probably have more Nitrogen than you know what to do with.\n\nIf you got here centrifuging air, then it\u0027s gonna take you longer to get to that point.\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, such as §2speeding up some Electric Blast Furnace recipes§r, and §9Nitro Diesel§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11646,7 +11646,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Nitrogen",
+          "name:8": "§2Nitrogen",
           "partysinglereward:1": 0,
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
