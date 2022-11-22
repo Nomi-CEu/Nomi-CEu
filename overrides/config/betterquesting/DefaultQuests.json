@@ -9153,7 +9153,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Better substrates. Using §6Polyvinyl Chloride§r (PVC) instead of §6Polyethylene§r (PE) doubles your yield.\n\nThe third §2and fourth material options§r are§r much more difficult to make and probably not worth considering for now.",
+          "desc:8": "Better substrates. Using §6Polyvinyl Chloride§r (PVC) instead of §6Polyethylene§r (PE) doubles your yield.\n\nThe third §2and fourth material options§r are much more difficult to make and probably not worth considering for now.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10039,7 +10039,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first Titanium.\n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nIf you are autocrafting on-demand, it\u0027s better to not have your ME network know about this intermediate state. Outputting the §6Hot Titanium Ingot§r directly into a Vacuum Freezer avoids extra computations and item types.\n\nIf you absolutely insist on putting hot ingots in your network, you\u0027ll have to manually encode the §aPattern§r with an ingot that §cdamages you while you hold it§r. Your call.\n\n",
+          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first Titanium. This process is a loop, and therefore will not cost you any resources apart from §6Rutile§r if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nYou should have set up a §3Vaccum Freezer§r for §6Kanthal§r, but if you haven\u0027t done it yet or want to improve you\u0027re setup, routing through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering you\u0027re system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
