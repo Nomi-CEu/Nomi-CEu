@@ -11697,7 +11697,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts LV/MV/HV/EV §3Gas Collectors§r.\n\nA §3Gas Collector§r will suck up air at a decent rate, provided the top side is unobstructed. The collected Air is automatically ejected into an adjacent tank via the output face.\n\n§2Gas Collectors in the Nether and End will collect Nether Air and Ender Air respectively, which yield different products.§r\n\nIV+ air collectors are not part of this quest, but for reference they exist and are called §3Atmosphere Collectors§r.\n\n",
+          "desc:8": "Note: this quest accepts LV/MV/HV/EV §3Gas Collectors§r.\n\nA §3Gas Collector§r will suck up air at a decent rate, provided the top side is unobstructed. The collected Air is automatically ejected into an adjacent tank via the output face.\n\n§2Gas Collectors in the Nether and End will collect Nether Air and Ender Air respectively, which yield different products. Make sure you set the correct circuit configuration for the dimension you are in.§r\n\nIV+ air collectors are not part of this quest, but for reference they exist and are called §3Atmosphere Collectors§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
