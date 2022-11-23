@@ -15688,7 +15688,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Barium§r is an element found in §6Barite§r, which may be found as §6Barite Ore§r, inside §6Quartz§r veins.\n\nBarite can also be extracted from other Quartz ores via ore processing.",
+          "desc:8": "§6Barium§r is an element found in §6Barite§r, which may be found as §6Barite Ore§r, inside §6Quartz§r veins.\n\nBarite can also be extracted from other Quartz ores via ore processing, §2and Naquadah Processing, available in LuV.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15699,7 +15699,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Barium",
+          "name:8": "§2Barium",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
