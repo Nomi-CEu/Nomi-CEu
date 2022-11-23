@@ -17031,7 +17031,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Sixth Micro Miner.\n\nThe first decent source of §6Dragon Eggs§r and §6Stabilized Einsteinium§r.\n\nIs also useful for:\n§6§2* Uraninite Ore\n* Iridosmine 80/20 Ore\n* Osmiridium 80/20 Ore",
+          "desc:8": "The Sixth Micro Miner.\n\nThe first decent source of §6Dragon Eggs§r and §6Stabilized Einsteinium§r.\n\nIs also useful for:\n§2* Uraninite Ore\n* Iridosmine 80/20 Ore\n* Osmiridium 80/20 Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17239,7 +17239,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Draconium Heavy Plating",
+          "name:8": "Draconium Heavy Plating",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -17293,7 +17293,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Awakened Draconium§r is a powerful material used for crafting high-grade components, items, and machines from §bDraconic Evolution§r.\n\nFive §6§6Draconium Blocks§r can be processed in a Wyvern Tier fusion crafting setup to create an equal output of five §6Awakened Draconium Blocks§r. At §e24 Billion RF per craft§r, you better have a handle on your power infrastructure.",
+          "desc:8": "§6Awakened Draconium§r is a powerful material used for crafting high-grade components, items, and machines from §bDraconic Evolution§r.\n\nFive §6Draconium Blocks§r can be processed in a Wyvern Tier fusion crafting setup to create an equal output of five §6Awakened Draconium Blocks§r. At §e24 Billion RF per craft§r, you better have a handle on your power infrastructure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17712,7 +17712,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your new §6§6§ §6Epoxy Circuit Boards§r, §6QBit CPUs§r, and some standard components, you can make the final type of Tier Four Circuit: the §6Quantum Circuit§r.\n\nAs the best form of Tier Four circuit, these should be automated and stockpiled. The variant recipe requiring §6Advanced System-on-Chip§r won\u0027t be available until ZPM.",
+          "desc:8": "With your new §6Epoxy Circuit Boards, §6QBit CPUs§r, and some standard components, you can make the final type of Tier Four Circuit: the §6Quantum Circuit§r.\n\nAs the best form of Tier Four circuit, these should be automated and stockpiled. The variant recipe requiring §6Advanced System-on-Chip§r won\u0027t be available until ZPM.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17723,7 +17723,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2The Third And Final Tier Four Circuits",
+          "name:8": "The Third And Final Tier Four Circuits",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -17907,7 +17907,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Radon§r will be needed in large quantities.\n\nFor now, you\u0027ll need to obtain it from Tier Two Micro Miner missions, in the form of §6Radium Salt§r. Electrolyze it for Radon and §6Rock Salt§r. §2You can also get it from distilling liquid Ender Air.§r\n\nLater it will be possible to make Radon using a §bGregTech§r §3Fusion Reactor§r.",
+          "desc:8": "§9Radon§r will be needed in large quantities.\n\nFor now, you\u0027ll need to obtain it from Tier Two Micro Miner missions, in the form of §6Radium Salt§r. Electrolyze it for Radon and §6Rock Salt§r. §2You can also get it from distilling liquid Ender Air.§r\n\nLater it will be possible to make Radon using a §bGregTech §3Fusion Reactor§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18038,7 +18038,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Nothing special about this tier either.",
+          "desc:8": "Nothing special about this tier either.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18049,7 +18049,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2The Second Tier Six Circuits",
+          "name:8": "The Second Tier Six Circuits",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -18103,7 +18103,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§f.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.§r\n\n§2Macerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
+          "desc:8": "§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§f.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.\n\nMacerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
