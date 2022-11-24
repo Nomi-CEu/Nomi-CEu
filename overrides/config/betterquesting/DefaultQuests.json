@@ -30384,7 +30384,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Great for automatically converting between Nuggets, Ingots, and Blocks of metals, or simply storing massive amounts of things. Also works with §dOmnicoins§r.\n\nThe appearance can be customized by crafting the drawer into §aFramed Compacting Drawer§r and putting it into a §aFraming Table§r.",
+          "desc:8": "Great for automatically converting between Nuggets, Ingots, and Blocks of metals, or simply storing massive amounts of things. Also works with §dNomicoins§r.\n\nThe appearance can be customized by crafting the drawer into §aFramed Compacting Drawer§r and putting it into a §aFraming Table§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30449,7 +30449,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "When making circuits, you\u0027ll need either molten §9Tin§r, or molten §9Soldering Alloy§r§r§r. §2Soldering Alloy is made in the Mixer with 6 parts Tin Dust, 3 parts Lead Dust and 1 part Antimony Dust.§r You then process it in an §3Extractor §rfor the usual 144mB of fluid per unit.\n\nThe §2Circuit Assembler§r will only consume half as much Soldering Alloy as it would have consumed molten Tin per craft (72mB vs 144mB), so it\u0027s very efficient to use this stuff.\n\n§2Antimony can be directly smelted from Stibnite Ore, allowing you to skip ore processing for this.",
+          "desc:8": "When making circuits, you\u0027ll need either molten §9Tin§r, or molten §9Soldering Alloy§r. §2Soldering Alloy is made in the Mixer with 6 parts Tin Dust, 3 parts Lead Dust and 1 part Antimony Dust.§r You then process it in an §3Extractor §rfor the usual 144mB of fluid per unit.\n\nThe §2Circuit Assembler§r will only consume half as much Soldering Alloy as it would have consumed molten Tin per craft (72mB vs 144mB), so it\u0027s very efficient to use this stuff, however, it is probably not worth it, due to the lack of antimony, whilst tin is infinite from DML, available later. However, you'll still need §9Soldering Alloy§r much later on for §3Assembly Lines§r.\n\n§2Antimony can be directly smelted from Stibnite Ore, allowing you to skip ore processing for this.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30793,7 +30793,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "An advanced alloy, needing a lot of heat to forge. Ensure your §3Electric Blast Furnace§r has your new §2Trinium Coils§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30804,7 +30804,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Dark Soularium Ingots",
+          "name:8": "§2Dark Soularium Ingots",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -30858,7 +30858,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts both LV and MV Brewery.\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power. Building §2many Breweries§r is necessary to brew enough Biomass for plastics. §2An alternative and better way of making biomass is with a Pyrolyse Oven, Water, and Bio Chaff.",
+          "desc:8": "Note: this quest accepts both LV and MV Brewery.\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power. Building §2many Breweries§r is necessary to brew enough Biomass for plastics. §2An alternative and more resource efficient way of making biomass is with a Pyrolyse Oven, Water, and Bio Chaff.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30869,7 +30869,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Brewery",
+          "name:8": "§2Brewery",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -31158,7 +31158,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §e§2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV   - Signalum \nZPM - Enderium \nUV     - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2There are an additional set of superconductors, one for each tier, which are the CEu default superconductors. Their advantage is their higher amperage rating, reaching the hundreds of amps for higher tier 16x wires. They are also used in crafting Field Generators.§,§r\n\nMV and higher cables are made in an §3Assembling Machine§r. They\u0027re made with liquid §9Rubber§r and §6Wires§r, plus a reusable §6Programmed Circuit§r that tells it what thickness of wire to make.\n\nYou can use Wires, and for these materials they\u0027ll conduct just as well as if they were covered. §2Superconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!",
+          "desc:8": "§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV   - Signalum \nZPM - Enderium \nUV     - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2There are an additional set of superconductors, one for each tier, which are the CEu default superconductors. Their advantage is their higher amperage rating, reaching the hundreds of amps for higher tier 16x wires. They are also used in crafting Field Generators.§,§r\n\nMV and higher cables are made in an §3Assembling Machine§r. They\u0027re made with liquid §9Rubber§r and §6Wires§r, plus a reusable §6Programmed Circuit§r that tells it what thickness of wire to make.\n\nYou can use Wires, and for these materials they\u0027ll conduct just as well as if they were covered. §2Superconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54860,7 +54860,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The coil recipes are harder in CEu, not only do they require their base material, they also need some extra material types and they must be made in Assembling Machines of their tier.\n\nFor Cupronickel Coils, you will need 8 Cupronickel, 2 Bronze, and 1 Tin Alloy for each coil. You need 16 for the Electric Blast Furnace and 16 for the Pyrolyse Oven. That totals to 176 Copper, 128 Nickel, 32 Tin, and 16 Iron.",
+          "desc:8": "§2The coil recipes are harder in CEu, not only do they require their base material, they also need some extra material types and they must be made in Assembling Machines of their tier.\n\nFor Cupronickel Coils, you will need 8 Cupronickel, 2 Bronze, and 1 Tin Alloy for each coil. You need 16 for the §3Electric Blast Furnace§r and 16 for the §3Pyrolyse Oven§r. That totals to 176 Copper, 128 Nickel, 32 Tin, and 16 Iron.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
