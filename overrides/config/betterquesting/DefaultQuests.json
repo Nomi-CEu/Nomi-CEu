@@ -24174,7 +24174,7 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
+          "\`autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
@@ -24191,7 +24191,7 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
-    },
+    },3213123123
     "367:10": {
       "preRequisites:11": [
         604
@@ -24199,14 +24199,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.\n\nThe GT Creative Tank has been enhanced. You can turn it on and off, configure exactly how much fluid you want it to push and how often, and change which direction the fluid is pushed out. You can even configure the fluid you want directly from JEI!§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Chest§r!\n\n",
-          "globalshare:1": 0,
+14          "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1669,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
-          },
+          },1234
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
@@ -30793,7 +30792,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An advanced alloy, needing a lot of heat to forge. Ensure your §3Electric Blast Furnace§r has your new §2Trinium Coils§r!",
+          "desc:8": "",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30804,7 +30803,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Dark Soularium Ingots",
+          "name:8": "Dark Soularium Ingots",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -31158,7 +31157,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV   - Signalum \nZPM - Enderium \nUV     - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2There are an additional set of superconductors, one for each tier, which are the CEu default superconductors. Their advantage is their higher amperage rating, reaching the hundreds of amps for higher tier 16x wires. They are also used in crafting Field Generators.§,§r\n\nMV and higher cables are made in an §3Assembling Machine§r. They\u0027re made with liquid §9Rubber§r and §6Wires§r, plus a reusable §6Programmed Circuit§r that tells it what thickness of wire to make.\n\nYou can use Wires, and for these materials they\u0027ll conduct just as well as if they were covered. §2Superconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!",
+          "desc:8": "§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV - Signalum \nZPM - Enderium \nUV - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2There are an additional set of superconductors, one for each tier, which are the CEu default superconductors. Their advantage is their higher amperage rating, reaching the hundreds of amps for higher tier 16x wires. They are also used in crafting Field Generators. They are:\n\nLV - Manganese Phosphide\nMV - Magnesium Diboride\nHV - Mercury Barium Calcium Cuprate\nEV - Uranium Triplatinum\nIV - Samarium Iron Arsenic Oxide\nLuV - Indium Tin Barium Titanium Cuprate\nZPM - Uranium Rhodium Dinaquadide\nUV - Enriched Naquadah Trinium Europium Duranide\nUHV - Ruthenium Trinium Americium Neutronate§r\n\n§2Superconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!\n\nMV and higher cables are made in an §3Assembling Machine§r, with liquid §9Rubber§r and §6Wires§r. §2Keep in mind that you can't combine wires into thicker wires, so you have to make the thickness of wire that you will use.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32329,7 +32328,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Lumium",
+          "name:8": "§2Lumium",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -33213,7 +33212,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Overclocking aside, as you continue to progress in §5Nomifactory§f, materials made in the §3Electric Blast Furnace§f will take longer to complete. §eMore advanced coils do not give speed bonuses§f §2directly§r; they mainly allow for the furnace to §eget hot enough to process more advanced materials§f, §2and they also granting energy efficiency bonuses and speed bonuses to overclocking.§r\n\nConsequently, you\u0027ll need to continually expand your smelting and power generation infrastructure.\n\nYou don\u0027t have to get all four of these Electric Blast Furnaces completed and running just yet, but be prepared to make many of them over the course of the pack.\n\n§2As a reminder, all blocks and hatches can be shared across EBFs, except Maintenance!",
+          "desc:8": "Overclocking aside, as you continue to progress in §5Nomifactory§f, materials made in the §3Electric Blast Furnace§f will take longer to complete. §eMore advanced coils allow for the furnace to §eget hot enough to process more advanced materials§f, §2and they also granting energy efficiency bonuses and speed bonuses to overclocking.§r\n\nDespite this, you\u0027ll still need to continually expand your smelting and power generation infrastructure.\n\nYou don\u0027t have to get all four of these Electric Blast Furnaces completed and running just yet, but be prepared to make many of them over the course of the pack.\n\n§2As a reminder, all blocks and hatches can be shared across EBFs, except Maintenance!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33577,7 +33576,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts both LV and MV Distillery. §2If you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r.§r \n\nHowever, the Distillation Tower is mandatory for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nCan\u0027t avoid it forever!\n\n",
+          "desc:8": "Note: this quest accepts both LV and MV Distillery. §2If you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r. Therefore, it is recommended for fluids with only one useful output, like §9Biomass§r, §9Diluted Sulfuric Acid§r, and §9Diluted Hydrochloric Acid§r.\n\nHowever, the Distillation Tower is recommended for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nYou\u0027re going to need it soon!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33799,7 +33798,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nUse your §3Prospector\u0027s Scanner§r to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. \n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas, Salt Water§r\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nThe first tier of Fluid Rig is good for §d100,000 operations§r. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.",
+          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\Shift-right-click to set your §3Prospector\u0027s Scanner§r to fluid mode, in order to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. \n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas, Salt Water§r\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nThe first tier of Fluid Rig is good for §d100,000 operations§r. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34299,7 +34298,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have a §3Wiremill§f and a §3Compressor§f, you can consider starting to do §eBounties§f. The §6Bounty Board§f has a global inventory containing quests to turn in specific items in exchange for §dOmnicoins§f. These quests have a fairly short duration, so make sure to §estockpile the items§f that come up on them or else they\u0027ll §cexpire before you can complete them§f.\n\nWith renewable §dOmnicoins§f, you should feel free to spend the ones you have on whatever you need. §aSpend your coins!",
+          "desc:8": "Now that you have a §3Wiremill§f and a §2Bending Machine§f, you can consider starting to do §eBounties§f. The §6Bounty Board§f has a global inventory containing quests to turn in specific items in exchange for §dNomicoins§f. These quests have a fairly short duration, so make sure to §estockpile the items§f that come up on them or else they\u0027ll §cexpire before you can complete them§f.\n\nWith renewable §Nomicoins§f, you should feel free to spend the ones you have on whatever you need. §aSpend your coins!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34310,7 +34309,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Bounties For Omnicoins!",
+          "name:8": "§2Bounties For Nomicoins!",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -35274,7 +35273,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you continue to progress, crafting times for more advanced §3Electric Blast Furnace§r recipes will continue to increase. More advanced coils do not give speed bonuses, they just increase the operating temperature so you can smelt more advanced materials, §2and they also grant energy efficiency bonuses and speed bonuses to overclocking.§r\n\nTo compensate, you\u0027ll need to get your infrastructure for smelting, as well as for power generation, up to snuff.\n\nYou don\u0027t need to get all eight of these completed and running just yet, but plan to at some point in the future. Instead of upgrading existing EBFs, have them passively automating a stock of materials and build new EBFs with higher specifications for new materials.\n\n",
+          "desc:8": "As you continue to progress, crafting times for more advanced §3Electric Blast Furnace§r recipes will continue to increase. More advanced coils increase the operating temperature so you can smelt more advanced materials, §2and they also grant energy efficiency bonuses and speed bonuses to overclocking.§r\n\nDespite this, you\u0027ll still need to get your infrastructure for smelting, as well as for power generation, up to snuff.\n\nYou don\u0027t need to get all eight of these completed and running just yet, but plan to at some point in the future. Instead of upgrading existing EBFs, have them passively automating a stock of materials and build new EBFs with higher specifications for new materials.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36837,7 +36836,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You are become Death, destroyer of Universes.\n\nMight probably be obvious, but this miner gathers §6Heart of a Universe§r.",
+          "desc:8": "You have become Death, destroyer of Universes.\n\nMight probably be obvious, but this miner gathers a §6Heart of a Universe§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36900,7 +36899,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Neutronium Heavy Plating",
+          "name:8": "Neutronium Heavy Plating",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37007,7 +37006,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Coating §6Draconium Wire§r with §9Molten Nether Star§r and freezing it solid results in a superconductive material capable of transmitting enormous amounts of energy.\n\nThese wires losslessly transmit \"MAX\" tier, which is effectively infinite transfer rate. This means they will work for any tier of power. 1x wires handle 4 amps, meaning 4x wires can handle 16 amps.\n\nThese can also be made into RF conduits that can transmit a whopping 134 Million RF/t.",
+          "desc:8": "Coating §6Draconium Wire§r with §9Molten Nether Star§r and freezing it solid results in a superconductive material capable of transmitting enormous amounts of energy.\n\nThese wires losslessly transmit \"MAX\" tier, which is effectively infinite transfer rate. This means they will work for any tier of power. 1x wires handle 4 amps, meaning 4x wires can handle 16 amps, and 16x wires can handle 64 amps.\n\nThese can also be made into the final form of RF conduits that can transmit a whopping 134 Million RF/t.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37932,7 +37931,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Element 011: Sodium",
+          "name:8": "Element 011: Sodium",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37997,7 +37996,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Element 012: Magnesium",
+          "name:8": "Element 012: Magnesium",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
