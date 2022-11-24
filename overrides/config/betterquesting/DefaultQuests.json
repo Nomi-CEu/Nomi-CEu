@@ -24174,7 +24174,7 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "\`autoConsume:1": 0,
+          "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
@@ -24191,7 +24191,7 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
-    },3213123123
+    },
     "367:10": {
       "preRequisites:11": [
         604
@@ -24199,13 +24199,14 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-14          "globalshare:1": 0,
+          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §d§dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.\n\nThe GT Creative Tank has been enhanced. You can turn it on and off, configure exactly how much fluid you want it to push and how often, and change which direction the fluid is pushed out. You can even configure the fluid you want directly from JEI!§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Vending Upgrade§r!\n\n",
+          "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1669,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
-          },1234
+          },
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
