@@ -1948,7 +1948,7 @@
           "desc:8": "§6Steel§r alloyed with §6Obsidian§r makes §6Dark Steel§r, which is needed for many of the machines in §bEnderIO§r and §bApplied Energistics§r.\n\nLater, you can use §6Void Crystal§r instead of Obsidian.",
           "globalshare:1": 0,
           "icon:10": {
-              "Count:3": 12,
+              "Count:3": 1,
               "Damage:2": 32003,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
@@ -3639,7 +3639,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 52,
@@ -5128,7 +5128,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types. Oh, and they\u0027re relatively cheaper to make.\n\nThe only downside is that §ethey will not connect to §bApplied Energistics§r §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use AE cables like §6Fluix Cables§r for those. §2Furthermore, they are known to sometimes disconnect from machine hulls and full-block interfaces, so use AE cables like §6Fluix Cables§r for those.§r",
+          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types. Oh, and they\u0027re relatively cheaper to make.\n\nThe only downside is that §ethey will not connect to §bApplied Energistics§r §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use AE cables like §6Fluix Cables§r for those. §2Furthermore, they are known to sometimes disconnect from machine hulls and full-block interfaces, so use AE cables like §6Fluix Cables§r for those.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8836,7 +8836,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 129,
@@ -14878,7 +14878,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Dimethylamine§r and §9Chloramine§r combine together into §91,1-Dimethylhydrazine§r. §2Or, combine Methanol, Ammonia and Hypochlorous Acid in a LCR.§r",
+          "desc:8": "§9Dimethylamine§r and §9Chloramine§r combine together into §91,1-Dimethylhydrazine§r. §2Or, combine Methanol, Ammonia and Hypochlorous Acid in a LCR.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14893,7 +14893,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "1,1-Dimethylhydrazine",
+          "name:8": "§21,1-Dimethylhydrazine",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14945,7 +14945,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Methanol§r and §9Ammonia§r combine together to make §9Dimethylamine§r.\n\nI know you\u0027re expecting a Breaking Bad joke here, but I don\u0027t walt to go for such low hanging fruit. §2This step can be skipped with LCRs.§r",
+          "desc:8": "§9Methanol§r and §9Ammonia§r combine together to make §9Dimethylamine§r.\n\nI know you\u0027re expecting a Breaking Bad joke here, but I don\u0027t walt to go for such low hanging fruit. §2This step can be skipped with LCRs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14989,7 +14989,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hypochlorous Acid§r and §9Ammonia§r combine together to make §9Chloramine§r. §2This step can be skipped with LCRs.§r",
+          "desc:8": "§9Hypochlorous Acid§r and §9Ammonia§r combine together to make §9Chloramine§r. §2This step can be skipped with LCRs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17862,7 +17862,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 266,
@@ -19249,7 +19249,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Time to get fusing!\n\nThe §3Fusion Reactor§r is a multiblock that uses enormous amounts of energy to fuse fluids into new elements. This one is less flexible than the previous GregTech multiblocks, as you can only put hatches where the preview shows. §6Sneak-right click§r the controller to enable the in-world preview.\n\nThe §bJEI§r preview shows §eall valid hatch locations§r, but you don\u0027t actually need that many fluid hatches. You can replace any of the hatch positions in the structure with §2Fusion Machine Casings§r as long as you have at least §atwo Fluid Input Hatches§r and §aone Fluid Output Hatch§r. It\u0027s possible to use input/output hatches in every valid location, if you prefer.\n\nBecause of this, the quest only asks for §248 Fusion Machine Casings, 31 Fusion Glass§r. If you want to use the minimum number of fluid hatches, you\u0027ll need to craft an additional §231 Fusion Machine Casings§r.\n\nEach §aEnergy Input Hatch§r increases the reactor\u0027s power buffer. §2You cannot use 4x or 16x Energy Input Hatches in Fusion Reactors.§r §aAll 16 Energy Input Hatches§r are required to be able to process all Mark 1 recipes and give a power buffer of §e160M EU§r.\n\nIn addition to the recipe power drain, Fusion Reactors have a §eheat§r mechanic related to the recipe\u0027s §e\"Eu to Start\"§r. This amount of power is drained from the reactor\u0027s buffer before starting the recipe to heat up the reactor to the necessary temperature, and is independent of the recipe\u0027s EU/t cost. As such, this determines the minimum tier of reactor you need for a recipe.\n\nIf the reactor stops processing, it will §erapidly lose heat§r, even if you pause it with a soft hammer. On the other hand, if the reactor is already at the required temperature for a recipe, §eno additional power§r is required to heat up the reactor! This is true even if you switch between different recipes. This mechanic incentivizes continuous use of the reactor.\n\nIf you switch to a recipe that requires more heat, §eonly the difference§r in heat values is consumed as EU to reach the target heat (up to a maximum heat equal to the reactor\u0027s current buffer).\n\nFusion Reactors §2now overclock§r, but they gate the next tier of materials, so you will eventually want to make more than one.",
+          "desc:8": "Time to get fusing!\n\nThe §3Fusion Reactor§r is a multiblock that uses enormous amounts of energy to fuse fluids into new elements. This one is less flexible than the previous GregTech multiblocks, as you can only put hatches where the preview shows. §6Sneak-right click§r the controller to enable the in-world preview.\n\nThe §bJEI§r preview shows §eall valid hatch locations§r, but you don\u0027t actually need that many fluid hatches. You can replace any of the hatch positions in the structure with §2Fusion Machine Casings§r as long as you have at least §atwo Fluid Input Hatches§r and §aone Fluid Output Hatch§r. It\u0027s possible to use input/output hatches in every valid location, if you prefer.\n\nBecause of this, the quest only asks for §248 Fusion Machine Casings, 31 Fusion Glass§r. If you want to use the minimum number of fluid hatches, you\u0027ll need to craft an additional §231 Fusion Machine Casings§r.\n\nEach §aEnergy Input Hatch§r increases the reactor\u0027s power buffer. §2You cannot use 4x or 16x Energy Input Hatches in Fusion Reactors. §aAll 16 Energy Input Hatches§r are required to be able to process all Mark 1 recipes and give a power buffer of §e160M EU§r.\n\nIn addition to the recipe power drain, Fusion Reactors have a §eheat§r mechanic related to the recipe\u0027s §e\"Eu to Start\"§r. This amount of power is drained from the reactor\u0027s buffer before starting the recipe to heat up the reactor to the necessary temperature, and is independent of the recipe\u0027s EU/t cost. As such, this determines the minimum tier of reactor you need for a recipe.\n\nIf the reactor stops processing, it will §erapidly lose heat§r, even if you pause it with a soft hammer. On the other hand, if the reactor is already at the required temperature for a recipe, §eno additional power§r is required to heat up the reactor! This is true even if you switch between different recipes. This mechanic incentivizes continuous use of the reactor.\n\nIf you switch to a recipe that requires more heat, §eonly the difference§r in heat values is consumed as EU to reach the target heat (up to a maximum heat equal to the reactor\u0027s current buffer).\n\nFusion Reactors §2now overclock§r, but they gate the next tier of materials, so you will eventually want to make more than one.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23220,7 +23220,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. For the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. This reactor is capable of running any LEU fuel realtively quickly. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
+          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. For the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. This reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24199,7 +24199,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.\n\nThe GT Creative Tank has been enhanced. You can turn it on and off, configure exactly how much fluid you want it to push and how often, and change which direction the fluid is pushed out. You can even configure the fluid you want directly from JEI!§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Vending Upgrade§r!\n\n",
+          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.\n\nThe GT Creative Tank has been enhanced. You can turn it on and off, configure exactly how much fluid you want it to push and how often, and change which direction the fluid is pushed out. You can even configure the fluid you want directly from JEI!§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Chest§r!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26111,7 +26111,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§2: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §2§lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§2: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lDigital Interface§r: §2A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.§r\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54121,7 +54121,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 890,
@@ -54159,7 +54159,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 891,
@@ -54335,7 +54335,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 894,
@@ -54474,7 +54474,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 896,
