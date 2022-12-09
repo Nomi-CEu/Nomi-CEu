@@ -14521,7 +14521,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Holding one of these reveals §aTravel Anchors§r and §aTelepads§r in range.\n\nShift + right-click after aiming to warp to one, or point it anywhere to teleport forward a short distance (works through walls).\n\nThese are powered with RF, and can be further enchanted through §bEnderIO§r\u0027s enchanting mechanics.\n\nThe §6Vibrant Crystal§r will require an §3Autoclave§r.",
+          "desc:8": "Holding one of these reveals §aTravel Anchors§r and §aTelepads§r in range.\n\nShift + right-click after aiming to warp to one, or point it anywhere to teleport forward a short distance (works through walls).\n\nThese are powered with RF, and can be further enchanted through §bEnderIO§r\u0027s enchanting mechanics.\n\nAlternatively, you can search the §eLost Cities§r or make a Travel §6Dark Steel§r Upgrade, and apply it to your §\n§bEnderIO §rtools.\n\nThe §6Vibrant Crystal§r will require an §3Autoclave§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14539,7 +14539,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Staff of Traveling",
+          "name:8": "Travelling Around in Style",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14547,7 +14547,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -14585,6 +14585,27 @@
                   "energy:3": 1000000,
                   "level:3": 3
                 }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "enderio:item_dark_steel_upgrade",
+              "tag:10": {
+                "enderio:dsu:8": "enderio:travel",
+                "enderio:enabled:1": 1
               }
             }
           },
@@ -15869,7 +15890,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There\u0027s a great deal of interesting content within §bActually Additions§r, and although most of it is not strictly required for progression, you should still look through what it offers and build what interests you.\n\nIn particular, the §aDrill§r with all the upgrades is a fantastically powerful mining tool, and the §3Vertical Digger§r is a machine which can be placed to automate mining an entire vein for you.\n\n§3Phantomfaces§r, §3Auto Placers/Breakers§r, §3Lava Factories§r, and much more can be utilized at your discretion to supplement and refine your automation techniques.",
+          "desc:8": "There\u0027s a great deal of interesting content within §bActually Additions§r, and although most of it is not strictly required for progression, you should still look through what it offers and build what interests you.\n\n§2The Drill is overpowered by the GT Drill, however it is still an option, as AA Drills do not have or lose durability. The Vertical Digger has been completely removed, as it is replaced by the GT single-block and multi-block chunk miners.\n\n§3Phantomfaces§r, §3Auto Placers/Breakers§r, §3Lava Factories§r, and much more can be utilized at your discretion to supplement and refine your automation techniques.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16251,8 +16272,7 @@
     },
     "239:10": {
       "preRequisites:11": [
-        238,
-        256
+        238
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -48123,7 +48143,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2New Cable Coverings",
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
