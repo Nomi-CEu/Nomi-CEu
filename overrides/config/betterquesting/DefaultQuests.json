@@ -15890,7 +15890,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There\u0027s a great deal of interesting content within §bActually Additions§r, and although most of it is not strictly required for progression, you should still look through what it offers and build what interests you.\n\n§2The Drill is overpowered by the GregTech Drill, however it is still an option, as AA Drills do not have or lose durability. The Vertical Digger has been completely removed, as it is replaced by the GT single-block and multi-block chunk miners.\n\n§3Phantomfaces§r, §3Auto Placers/Breakers§r, §3Lava Factories§r, and much more can be utilized at your discretion to supplement and refine your automation techniques.",
+          "desc:8": "There\u0027s a great deal of interesting content within §bActually Additions§r, and although most of it is not strictly required for progression, you should still look through what it offers and build what interests you.\n\n§2The Drill is overpowered by the GregTech Drill, however it is still an option, as AA Drills do not have or lose durability. The Vertical Digger has been completely removed, as it is replaced by the GregTech single-block miners, and multi-block Ore Drilling Plants.\n\n§3Phantomfaces§r, §3Auto Placers/Breakers§r, §3Lava Factories§r, and much more can be utilized at your discretion to supplement and refine your automation techniques.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16204,6 +16204,7 @@
     },
     "238:10": {
       "preRequisites:11": [
+        250,
         241,
         330,
         411
@@ -16211,7 +16212,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Eighth Micro Miner.\n\nThe main source of §6Chaos Shards§r.\n\nThe other mission gives negligible amounts of §6Neutronium§r and some other moderately useful things, but you\u0027re better off making Neutronium in the §3Fusion Reactor Mark 3§r§r and the other items are otherwise craftable.",
+          "desc:8": "The Eighth Micro Miner.\n\nThe only source of §6Chaos Shards§r.\n\nThe other mission gives negligible amounts of §6Neutronium§r and some other moderately useful things, but you\u0027re better off making Neutronium in the §3Fusion Reactor Mark 3§r§r and the other items are otherwise craftable.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17432,6 +17433,7 @@
     },
     "256:10": {
       "preRequisites:11": [
+        250,
         257,
         330,
         411
@@ -37793,7 +37795,20 @@
         }
       },
       "questID:3": 610,
-      "rewards:9": {},
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -59819,8 +59834,8 @@
           "id:3": 287,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 204
+          "x:3": -27,
+          "y:3": 192
         },
         "34:10": {
           "id:3": 288,
@@ -59854,8 +59869,8 @@
           "id:3": 295,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 116,
-          "y:3": 108
+          "x:3": 73,
+          "y:3": 150
         },
         "39:10": {
           "id:3": 312,
@@ -59917,8 +59932,8 @@
           "id:3": 325,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 168
+          "x:3": -14,
+          "y:3": 152
         },
         "48:10": {
           "id:3": 327,
@@ -59931,7 +59946,7 @@
           "id:3": 329,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 164,
+          "x:3": 117,
           "y:3": 220
         },
         "50:10": {
@@ -59987,22 +60002,22 @@
           "id:3": 337,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 108
+          "x:3": 73,
+          "y:3": 107
         },
         "58:10": {
           "id:3": 342,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 148
+          "x:3": -14,
+          "y:3": 78
         },
         "59:10": {
           "id:3": 345,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 164,
-          "y:3": 108
+          "x:3": 117,
+          "y:3": 150
         },
         "60:10": {
           "id:3": 351,
@@ -62753,7 +62768,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
