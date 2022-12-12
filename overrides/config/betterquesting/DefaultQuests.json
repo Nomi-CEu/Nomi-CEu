@@ -4469,7 +4469,8 @@
     },
     "63:10": {
       "preRequisites:11": [
-        62
+        62,
+        1
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7303,7 +7304,8 @@
       "preRequisites:11": [
         96,
         109,
-        110
+        110,
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7436,7 +7438,8 @@
     "106:10": {
       "preRequisites:11": [
         100,
-        104
+        104,
+        62
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7568,7 +7571,8 @@
     },
     "108:10": {
       "preRequisites:11": [
-        109
+        109,
+        100
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7774,7 +7778,8 @@
     },
     "111:10": {
       "preRequisites:11": [
-        105
+        105,
+        62
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -30695,7 +30700,8 @@
     },
     "494:10": {
       "preRequisites:11": [
-        102
+        102,
+        62
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -56662,6 +56668,138 @@
       "questID:3": 917,
       "rewards:9": {},
       "tasks:9": {}
+    },
+    "918:10": {
+      "preRequisites:11": [
+        729,
+        494,
+        100
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A variant of the §aConfiguration Interface Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 522,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Configuration Fluid Interface Terminal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 918,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 522,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "919:10": {
+      "preRequisites:11": [
+        108
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A variant of the §aInterface Terminal§r which allows you to view and edit the stocking slots of interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 521,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Configuration Interface Terminal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 919,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 521,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -62607,267 +62745,281 @@
           "id:3": 0,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 432
+          "x:3": -247,
+          "y:3": 430
         },
         "1:10": {
           "id:3": 1,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": 384
+          "x:3": -230,
+          "y:3": 469
         },
         "2:10": {
           "id:3": 51,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 92,
-          "y:3": 420
+          "x:3": -47,
+          "y:3": 394
         },
         "3:10": {
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 480
+          "x:3": -93,
+          "y:3": 451
         },
         "4:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 520
+          "x:3": -163,
+          "y:3": 518
         },
         "5:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 352
+          "x:3": -164,
+          "y:3": 308
         },
         "6:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": 522
+          "x:3": -105,
+          "y:3": 331
         },
         "7:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": 568
+          "x:3": -55,
+          "y:3": 606
         },
         "8:10": {
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 40,
-          "y:3": 480
+          "x:3": -36,
+          "y:3": 537
         },
         "9:10": {
           "id:3": 101,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -56,
-          "y:3": 560
+          "x:3": -171,
+          "y:3": 558
         },
         "10:10": {
           "id:3": 102,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 480
+          "x:3": 59,
+          "y:3": 482
         },
         "11:10": {
           "id:3": 103,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": 392
+          "x:3": -34,
+          "y:3": 359
         },
         "12:10": {
           "id:3": 104,
           "sizeX:3": 42,
           "sizeY:3": 42,
-          "x:3": 95,
-          "y:3": 559
+          "x:3": -6,
+          "y:3": 577
         },
         "13:10": {
           "id:3": 105,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 480
+          "x:3": -35,
+          "y:3": 482
         },
         "14:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 40,
-          "y:3": 616
+          "x:3": -93,
+          "y:3": 568
         },
         "15:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 568
+          "x:3": 112,
+          "y:3": 585
         },
         "16:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 568
+          "x:3": 61,
+          "y:3": 570
         },
         "17:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 520
+          "x:3": 4,
+          "y:3": 482
         },
         "18:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": 520
+          "x:3": -93,
+          "y:3": 502
         },
         "19:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 440
+          "x:3": 22,
+          "y:3": 405
         },
         "20:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 352
+          "x:3": 154,
+          "y:3": 308
         },
         "21:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 200,
-          "y:3": 352
+          "x:3": 154,
+          "y:3": 365
         },
         "22:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 232,
-          "y:3": 352
+          "x:3": 154,
+          "y:3": 416
         },
         "23:10": {
           "id:3": 122,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 472
+          "x:3": 64,
+          "y:3": 405
         },
         "24:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 504
+          "x:3": 64,
+          "y:3": 369
         },
         "25:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 536
+          "x:3": 22,
+          "y:3": 370
         },
         "26:10": {
           "id:3": 140,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": 520
+          "x:3": -73,
+          "y:3": 534
         },
         "27:10": {
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": 384
+          "x:3": -211,
+          "y:3": 382
         },
         "28:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 384
+          "x:3": -66,
+          "y:3": 327
         },
         "29:10": {
           "id:3": 259,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 392
+          "x:3": -66,
+          "y:3": 362
         },
         "30:10": {
           "id:3": 282,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -60,
-          "y:3": 420
+          "x:3": -175,
+          "y:3": 395
         },
         "31:10": {
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 616
+          "x:3": 55,
+          "y:3": 612
         },
         "32:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 656
+          "x:3": 54,
+          "y:3": 646
         },
         "33:10": {
           "id:3": 408,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 616
+          "x:3": 1,
+          "y:3": 646
         },
         "34:10": {
           "id:3": 494,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 440
+          "x:3": 22,
+          "y:3": 450
         },
         "35:10": {
           "id:3": 729,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 480
+          "x:3": 93,
+          "y:3": 537
         },
         "36:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 520
+          "x:3": 21,
+          "y:3": 337
         },
         "37:10": {
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": 480
+          "x:3": -104,
+          "y:3": 374
+        },
+        "38:10": {
+          "id:3": 918,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 22,
+          "y:3": 537
+        },
+        "39:10": {
+          "id:3": 919,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 160,
+          "y:3": 585
         }
       }
     }
