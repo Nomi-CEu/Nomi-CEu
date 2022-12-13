@@ -11478,7 +11478,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r.\n\nThe primary use is for making §9Nitro Diesel§r, which you will want to stockpile in large quantities for the later production of §6Draconium§r §2(unless you use Gasoline instead).\n\nThe performance of Combustion Generators is also improved, but you probably want to refine Diesel anyway.\n\n§2It\u0027s more power efficient to use singleblock Distilleries over a Distillation Tower for Oil, due to the overclocking mechanics being different. However, it is still recommended to use Distillation Towers, to get the other useful byproducts too. For Diesel, the correct ratio is 3 Distilleries for Light Oil and 2 Distilleries for Heavy Oil.",
+          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r.\n\nThe primary use is for making §2Cetane-Boosted Diesel§r, which you will want to stockpile in large quantities for the later production of §6Draconium §2(unless you use Gasoline instead).\n\nThe performance of Combustion Generators is also improved, but you probably want to refine Diesel anyway.\n\n§2It\u0027s more power efficient to use singleblock Distilleries over a Distillation Tower for Oil, due to the overclocking mechanics being different. However, it is still recommended to use Distillation Towers, to get the other useful byproducts too. For Diesel, the correct ratio is 3 Distilleries for Light Oil and 2 Distilleries for Heavy Oil.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11742,7 +11742,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The reaction that produces §9Bio Diesel§r is also the only source of §9Glycerol§r, which is an easy way to make §9Epichlorohydrin§r, an important ingredient of §9Epoxy§r.\n\n§9Glycerol§r is also used in the production of §9Glyceryl Trinitrate§r, an important step in making §6Dynamite§r, which can be used later in the §3Implosion Compressor§r.\n\nEven if you\u0027re otherwise going all in on petrochemistry for Epoxy, you\u0027ll probably end up with some Bio Diesel as a result of making Glycerol, unless your\u0027re using §6TNT§r.\n\nBio Diesel can be used for power, but is probably better to convert it to §9Nitro Diesel§r.",
+          "desc:8": "The reaction that produces §9Bio Diesel§r is also the only source of §9Glycerol§r, which is an easy way to make §9Epichlorohydrin§r, an important ingredient of §9Epoxy§r.\n\n§9Glycerol§r is also used in the production of §9Glyceryl Trinitrate§r, an important step in making §6Dynamite§r, which can be used later in the §3Implosion Compressor§r.\n\nEven if you\u0027re otherwise going all in on petrochemistry for Epoxy, you\u0027ll probably end up with some Bio Diesel as a result of making Glycerol, unless your\u0027re using §6TNT§r.\n\nBio Diesel can be used for power, but is probably better to convert it to §2Cetane-Boosted Diesel§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11810,7 +11810,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Because of this, after the first few processes of §9Liquid Air§r, you\u0027ll probably have more Nitrogen than you know what to do with.\n\nIf you got here centrifuging air, then it\u0027s gonna take you longer to get to that point.\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, such as §2speeding up some Electric Blast Furnace recipes§r, and §9Nitro Diesel§r",
+          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Because of this, after the first few processes of §9Liquid Air§r, you\u0027ll probably have more Nitrogen than you know what to do with.\n\nIf you got here centrifuging air, then it\u0027s gonna take you longer to get to that point.\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, such as §2speeding up some Electric Blast Furnace recipes§r, and §2Cetane-Boosted Diesel§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12213,7 +12213,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r §2or Large Chemical Reactor§r produces §9Nitro Diesel§r, an extremely potent fuel needed later for §6Draconium§r production.\n\nIf you have a very robust petrochemical infrastructure and can afford to burn it, this fuel along with proper oxygenation §2is a potent fuel in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.",
+          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r §2or Large Chemical Reactor§r produces §2Cetane-Boosted Diesel§r, an extremely potent fuel needed later for §6Draconium§r production.\n\nIf you have a very robust petrochemical infrastructure and can afford to burn it, this fuel along with proper oxygenation §2is a potent fuel in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12229,7 +12229,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2NITRO DIESEL!!",
+          "name:8": "§2CETANE-BOOSTED DIESEL!!",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -16422,7 +16422,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating used exclusively for the Tier Eight Micro Miner. ",
+          "desc:8": "§2Double Plates§r used exclusively for the Tier Eight Micro Miner. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16434,7 +16434,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Crystal Matrix Heavy Plating",
+          "name:8": "§2Crystal Matrix Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -16706,7 +16706,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Titanium Heavy Plating",
+          "name:8": "Titanium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -16760,7 +16760,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy Plating for Micro Miners made from §6Tungsten Carbide§r.\n\nYou §2no longer need high tier Compressors to make these.",
+          "desc:8": "§2Double Plates§r for Micro Miners made from §6Tungsten Carbide§r.\n\nYou §2no longer need high tier Compressors to make these.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16772,7 +16772,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Tungsten Carbide Heavy Plating",
+          "name:8": "§2Tungsten Carbide Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -17515,7 +17515,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating used exclusively for the Tier Seven Micro Miner. ",
+          "desc:8": "§2Double Plates§r used exclusively for the Tier Seven Micro Miner. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17527,7 +17527,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Draconium Heavy Plating",
+          "name:8": "§2Draconium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -19670,7 +19670,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need at least §6Naquadah Coil Blocks§r in your blast furnace to smelt §6Draconium§r, as well as a healthy supply of §9Nitro Diesel §2or Gasoline§r to reach the immense heat it takes to liquefy.\n\nDraconium gets so hot that it requires the potent coolant §9Gelid Cryotheum§r to aid your §3Vacuum Freezer§r in turning it into usable ingots.\n\nThere are several ways to make Draconium: dust can be smelted into ingots, but you can also turn §6Ender Dragon Scales§r, which contain Draconium, directly into ingots. It uses a lot of§2 combustion fuel§r, but is the most efficient way to craft Draconium.\n\nYou\u0027ve been stockpiling fuel, right?",
+          "desc:8": "You\u0027ll need at least §6Naquadah Coil Blocks§r in your blast furnace to smelt §6Draconium§r, as well as a healthy supply of §2Cetane-Boosted Diesel §2or Gasoline§r to reach the immense heat it takes to liquefy.\n\nDraconium gets so hot that it requires the potent coolant §9Gelid Cryotheum§r to aid your §3Vacuum Freezer§r in turning it into usable ingots.\n\nThere are several ways to make Draconium: dust can be smelted into ingots, but you can also turn §6Ender Dragon Scales§r, which contain Draconium, directly into ingots. It uses a lot of§2 combustion fuel§r, but is the most efficient way to craft Draconium.\n\nYou\u0027ve been stockpiling fuel, right?",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21392,7 +21392,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating made from §6Iridium§r for Tier Five and Tier Eight Micro Miners.",
+          "desc:8": "§2Double Plates§r made from §6Iridium§r for Tier Five and Tier Eight Micro Miners.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21404,9 +21404,9 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Iridium Heavy Plating",
+          "name:8": "§2Iridium Double Plates",
           "partysinglereward:1": 0,
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -21459,7 +21459,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A heavy plating material required for the next two tiers of Micro Miners.",
+          "desc:8": "§2Double Plates§r required for the next two tiers of Micro Miners.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21471,7 +21471,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Signalum Heavy Plating",
+          "name:8": "§2Signalum Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -21525,7 +21525,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating made from §6Enderium§r used for the Tier Six Micro Miner.",
+          "desc:8": "§2Double Plates§r made from §6Enderium§r used for the Tier Six Micro Miner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21537,7 +21537,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Enderium Heavy Plating",
+          "name:8": "§2Enderium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -23459,7 +23459,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Steel Heavy Plating§r can be augmented with §6Tungsten Plates§r and §6Tough Alloy§r to make §6Basic Reactor Plating§r.\n\nThat\u0027s right-- it\u0027s time to get into §bNuclearCraft§r.\n\nEnhancing basic plating with §6YBCO§r and §6Hard Carbon alloy§r results in a better plating material for more advanced §bNuclearCraft§r blocks.",
+          "desc:8": "§6Steel §2Double Plates§r can be augmented with §6Tungsten Plates§r and §6Tough Alloy§r to make §6Basic Reactor Plating§r.\n\nThat\u0027s right-- it\u0027s time to get into §bNuclearCraft§r.\n\nEnhancing basic plating with §6YBCO§r and §6Hard Carbon alloy§r results in a better plating material for more advanced §bNuclearCraft§r blocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23471,7 +23471,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "NuclearCraft Platings",
+          "name:8": "§2NuclearCraft Platings",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37527,7 +37527,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Kind of redundant, really.\n\nThis plating is used exclusively for the Tier Ten Micro Miner. You need some serious protection from forces when harvesting a whole microverse.",
+          "desc:8": "Kind of redundant, really.\n\nThese plates are used exclusively for the Tier Ten Micro Miner. You need some serious protection from forces when harvesting a whole microverse.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37539,7 +37539,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Neutronium Heavy Plating",
+          "name:8": "§2Neutronium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -54995,7 +54995,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Gasoline is a powerful combustion fuel, generating 1600 EU per mB of fluid. It can also be substituted for Nitro Diesel in Draconium production.\n\nGasoline is made of:\n- 16 parts Naphtha\n- 2 parts Refinery Gas\n- 1 part Toluene\n- 1 part Methanol\n- 1 part Acetone\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
+          "desc:8": "§2Gasoline is a powerful combustion fuel, generating 1600 EU per mB of fluid. It can also be substituted for Cetane-Boosted Diesel in Draconium production.\n\nGasoline is made of:\n- 16 parts Naphtha\n- 2 parts Refinery Gas\n- 1 part Toluene\n- 1 part Methanol\n- 1 part Acetone\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55720,7 +55720,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fuel. It can also be used in Draconium production, using 75% less fuel than Nitro Diesel or normal Gasoline. The trade-off is the very complex processing lines you must set up for it.\n\nTo refine Gasoline to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
+          "desc:8": "§2High-Octane Gasoline is the most powerful combustion fuel, generating 3200 EU per mB of fuel. It can also be used in Draconium production, using 75% less fuel than Cetane-Boosted Diesel or normal Gasoline. The trade-off is the very complex processing lines you must set up for it.\n\nTo refine Gasoline to High-Octane Gasoline, you will need:\n- 20 parts Gasoline\n- 2 parts Octane\n- 2 parts Nitrous Oxide\n- 1 part Toluene\n- 1 part Ethyl Tert-Butyl Ether\n\nTo get the most out of this, run it in an Extreme Combustion Engine with Liquid Oxygen.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55799,7 +55799,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "\"Nitro Diesel\" or \"Gasoline\"",
+          "name:8": "\"Cetane-Boosted Diesel\" or \"Gasoline\"",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -58107,7 +58107,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "GregTech §6High Voltage§r, §5Extreme Voltage§r, and §1Insane Voltage§r tiers:\n\n§3Cryogenic Distillation§r, and petrochemistry for §6Epoxy§r and §9Nitro Diesel§r.\n\nCraft §6Nether Stars§r and unlock §bThermal Expansion§r machines.\n\nBuild a§b NuclearCraft§r fission reactor to obtain new materials.\n\nBuild a Space Station and Warp Core.",
+          "desc:8": "GregTech §6High Voltage§r, §5Extreme Voltage§r, and §1Insane Voltage§r tiers:\n\n§3Cryogenic Distillation§r, and petrochemistry for §6Epoxy§r and §2Cetane-Boosted Diesel§r.\n\nCraft §6Nether Stars§r and unlock §bThermal Expansion§r machines.\n\nBuild a§b NuclearCraft§r fission reactor to obtain new materials.\n\nBuild a Space Station and Warp Core.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
@@ -60612,8 +60612,8 @@
           "id:3": 843,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -216,
-          "y:3": 168
+          "x:3": -220,
+          "y:3": 171
         },
         "105:10": {
           "id:3": 844,
