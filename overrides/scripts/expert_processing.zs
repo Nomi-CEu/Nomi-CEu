@@ -252,13 +252,13 @@ blast_furnace.recipeBuilder()
 // Vanadium
 //// Magnetite Dust * 1
 //<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustVanadiumMagnetite> * 2], null).remove();
-//
-//chemical_reactor.recipeBuilder()
-//    .fluidInputs(<liquid:ammonia> * 1000, <liquid:hydrochloric_acid> * 1000)
-//    .circuit(5)
-//    .outputs(<metaitem:dustAmmoniumChloride> * 2)
-//    .duration(120).EUt(7).buildAndRegister();
-//
+
+chemical_reactor.recipeBuilder()
+    .fluidInputs(<liquid:ammonia> * 1000, <liquid:hydrochloric_acid> * 1000)
+    .circuit(5)
+    .outputs(<metaitem:dustAmmoniumChloride> * 2)
+    .duration(120).EUt(7).buildAndRegister();
+
 //blast_furnace.recipeBuilder()
 //    .inputs(<metaitem:dustVanadiumMagnetite> * 6, <metaitem:dustSalt> * 6)
 //    .fluidInputs(<liquid:oxygen> * 8000)
