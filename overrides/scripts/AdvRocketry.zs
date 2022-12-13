@@ -976,6 +976,3 @@ centrifuge.recipeBuilder()
 	.inputs(<advancedrocketry:hotturf>)
 	.chancedOutput(<metaitem:crushedBandedIron>, 5000, 500)
 	.duration(20).EUt(480).buildAndRegister();
-
-// Tooltips
-<advancedrocketry:oxygencharger>.addTooltip(format.red("Do not use the GUI! It will cause a crash. Pipe fluids in"));
