@@ -3060,17 +3060,19 @@
       }
     },
     "52:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        93
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Coming soon!",
+          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with Maintenance, it won\u0027t be as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, and the rest of the top face is built from §3Filter Casings§r. The rest of the wall space is filled with §3Plascrete§r.\n\nFor transfer between the clean environment and the outside world:\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n- Energy through §3Hulls§r or §3Diodes§r (of any tier).\n- AE2 channels through §3Hulls§r.\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective.\n\nYou will also need an §3Energy §rand §3Maintenance Hatch §rfor cleaning. §3Cleanroom Glass§r can replace any §3Plascrete§r, except in the edges.\n\nIf you\u0027re facing issues forming the Cleanroom:\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r. The floor block directly under the controller must also be §3Plascrete§r or §3Cleanroom Glass§r.\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.\n- Try rotating the controller with a wrench, or for even side lengths, try the other central positions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1035,
             "OreDict:8": "",
-            "id:8": "minecraft:concrete"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -3091,8 +3093,33 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1035,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:cleanroom_casing"
+            },
+            "2:10": {
+              "Count:3": 44,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:cleanroom_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -7513,7 +7540,8 @@
     "132:10": {
       "preRequisites:11": [
         35,
-        203
+        203,
+        52
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9675,7 +9703,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The reaction that produces §9Bio Diesel§r is also the only source of §9Glycerol§r, which is an easy way to make §9Epichlorohydrin§r, an important ingredient of §9Epoxy§r.\n\n§9Glycerol§r is also used in the production of §9§9Glyceryl Trinitrate§r, an important step in making §6Dynamite§r, which can be used later in the §9§r§3Implosion Compressor§r.\n\nEven if you\u0027re otherwise going all in on petrochemistry for Epoxy, you\u0027ll probably end up with some Bio Diesel as a result of making Glycerol.\n\nBio Diesel can be used for power, but is probably better to convert to §9Nitro Diesel§r§r.",
+          "desc:8": "The reaction that produces §9Bio Diesel§r is also the only source of §9Glycerol§r, which is an easy way to make §9Epichlorohydrin§r, an important ingredient of §9Epoxy§r.\n\n§9Glycerol§r is also used in the production of §9§9Glyceryl Trinitrate§r, an important step in making §6Dynamite§r, which can be used later in the §9§r§3Implosion Compressor§r.\n\nEven if you\u0027re otherwise going all in on petrochemistry for Epoxy, you\u0027ll probably end up with some Bio Diesel as a result of making Glycerol.\n\nBio Diesel can be used for power, but is probably better to convert to §2Cetane-Boosted Diesel§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10055,7 +10083,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r produces §9Nitro Diesel§r, an extremely potent fuel. Burn it in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.",
+          "desc:8": "Mixing §9Diesel§r (or less efficiently, §9Bio Diesel§r) with §9Tetranitromethane§r in an §3HV Mixer§r produces §9Cetane-Boosted Diesel§r, an extremely potent fuel. Burn it in the Large Combustion Engine and Extreme Combustion Engine, producing §2720 EU/mB of fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10071,7 +10099,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2NITRO DIESEL!!",
+          "name:8": "§2CETANE-BOOSTED DIESEL!!",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -12105,7 +12133,6 @@
     "216:10": {
       "preRequisites:11": [
         89,
-        385,
         782,
         897
       ],
@@ -12426,7 +12453,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Dimethylamine§r and §9Chloramine§r combine together into §91,1-Dimethylhydrazine§r.",
+          "desc:8": "§9Dimethylamine§r and §9Chloramine§r combine together into §91,1-Dimethylhydrazine§r.\n\n§2Or, combine Methanol, Ammonia and Hypochlorous Acid in an LCR.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12481,7 +12508,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Methanol§r and §9Ammonia§r combine together to make §9Dimethylamine§r.\n\nI know you\u0027re expecting a Breaking Bad joke here, but I don\u0027t walt to go for such low hanging fruit.",
+          "desc:8": "§9Methanol§r and §9Ammonia§r combine together to make §9Dimethylamine§r.\n\nI know you\u0027re expecting a Breaking Bad joke here, but I don\u0027t walt to go for such low hanging fruit.\n\n§2This step can be skipped with LCRs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12513,18 +12540,8 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "dimethylamine"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -12536,7 +12553,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hypochlorous Acid§r and §9Ammonia§r combine together to make §9Chloramine§r.",
+          "desc:8": "§9Hypochlorous Acid§r and §9Ammonia§r combine together to make §9Chloramine§r.\n\n§2This step can skip with LCRs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12568,18 +12585,8 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "monochloramine"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -13500,7 +13507,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating used exclusively for the Tier Eight Micro Miner. ",
+          "desc:8": "§2Double Plates§r used exclusively for the Tier Eight Micro Miner. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13512,7 +13519,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Crystal Matrix Heavy Plating",
+          "name:8": "§2Crystal Matrix Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -13623,9 +13630,9 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 1,
-          "name:8": "Superconducting Coil Block",
+          "name:8": "Tritanium Coil Block",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -13721,7 +13728,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy: avoid dropping it on your foot.\n\nThis special plating is used for two things-- §6Tier Two Micro Miners§r and the §3Space Station Assembler§r.",
+          "desc:8": "Heavy: avoid dropping it on your foot.\n\nThese §2double plates§r are used for two things-- §6Tier Two Micro Miners§r and the §3Space Station Assembler§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13733,7 +13740,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Titanium Heavy Plating",
+          "name:8": "§2Titanium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -13774,7 +13781,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy Plating for Micro Miners made from §6Tungsten Carbide§r.\n\nYou §2no longer need high tier Compressors to make these.",
+          "desc:8": "§2Double Plates§r for Micro Miners made from §6Tungsten Carbide§r.\n\nYou §2no longer need high tier Compressors to make these.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13786,7 +13793,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Tungsten Carbide Heavy Plating",
+          "name:8": "§2Tungsten Carbide Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14184,7 +14191,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Iridium§r is an advanced material used for Micro Miner plating, §6§rand for alloying with §6Osmium§r into §6Osmiridium§r.\n\n§6Iridium Ore§r is available renewably from the Tier Four and Tier Six micro miners.",
+          "desc:8": "§6Iridium§r is an advanced material used for Micro Miner plating, and for alloying with §6Osmium§r into §6Osmiridium§r.\n\n§2Osmiridium 80/20 Ore and Iridosmine 20/80 Ore, the two ore sources of Iridium§r, are available renewably from the Tier Six micro miner, and semi-renewably from the Tier Five micro miner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14398,7 +14405,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating used exclusively for the Tier Seven Micro Miner. ",
+          "desc:8": "§2Double Plates§r used exclusively for the Tier Seven Micro Miner. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14410,7 +14417,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Draconium Heavy Plating",
+          "name:8": "§2Draconium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -17595,7 +17602,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating made from §6Iridium§r for Tier Five and Tier Eight Micro Miners.",
+          "desc:8": "§2Double Plates§r made from §6Iridium§r for Tier Five and Tier Eight Micro Miners.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17607,9 +17614,9 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Iridium Heavy Plating",
+          "name:8": "§2Iridium Double Plates",
           "partysinglereward:1": 0,
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -17649,7 +17656,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A heavy plating material required for the next two tiers of Micro Miners.",
+          "desc:8": "§2Double Plates§r required for the next two tiers of Micro Miners.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17661,7 +17668,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Signalum Heavy Plating",
+          "name:8": "§2Signalum Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -17702,7 +17709,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy plating made from §6Enderium§r used for the Tier Six Micro Miner.",
+          "desc:8": "§2Double Plates§r made from §6Enderium§r used for the Tier Six Micro Miner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17714,7 +17721,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Enderium Heavy Plating",
+          "name:8": "§2Enderium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -19322,7 +19329,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Steel Heavy Plating§r can be augmented with §6Tungsten Plates§r and §6Tough Alloy§r to make §6Basic Reactor Plating§r.\n\nThat\u0027s right-- it\u0027s time to get into §bNuclearCraft§r.\n\nEnhancing basic plating with §6YBCO§r and §6Hard Carbon alloy§r results in a better plating material for more advanced §bNuclearCraft§r blocks.",
+          "desc:8": "§6Steel §2Double Plates§r can be augmented with §6Tungsten Plates§r and §6Tough Alloy§r to make §6Basic Reactor Plating§r.\n\nThat\u0027s right-- it\u0027s time to get into §bNuclearCraft§r.\n\nEnhancing basic plating with §6YBCO§r and §6Hard Carbon alloy§r results in a better plating material for more advanced §bNuclearCraft§r blocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27067,19 +27074,23 @@
               "Damage:2": 35,
               "OreDict:8": "",
               "id:8": "enderio:item_material"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "ender_distillation"
-              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ender_distillation"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -31912,7 +31923,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Kind of redundant, really.\n\nThis plating is used exclusively for the Tier Ten Micro Miner. You need some serious protection from forces when harvesting a whole microverse.",
+          "desc:8": "Kind of redundant, really.\n\nThese §2Double Plates§r are used exclusively for the Tier Ten Micro Miner. You need some serious protection from forces when harvesting a whole microverse.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31924,7 +31935,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Neutronium Heavy Plating",
+          "name:8": "§2Neutronium Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -39922,22 +39933,12 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "fire_water"
-              }
-            },
-            "1:10": {
               "Count:3": 2,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "enderstorage:ender_storage"
             },
-            "2:10": {
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
@@ -39945,6 +39946,20 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "fire_water"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -40923,6 +40938,59 @@
     },
     "781:10": {
       "preRequisites:11": [
+        196,
+        535
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Wetware and crystal-related processes require some stronger sterilisation.§r\n\nYou will need to build another §3Cleanroom§r to run these recipes inside. Instead of §3Filter Casings§r, use §3Sterilizing Filter Casings§r in the top face.\n\nNote that a Sterile Cleanroom cannot handle recipes which require regular Cleanrooms.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "gregtech:cleanroom_casing"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Cleaner Room",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 781,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 8,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:cleanroom_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "782:10": {
+      "preRequisites:11": [
         214,
         400
       ],
@@ -40956,7 +41024,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "782:10": {
+    "783:10": {
       "preRequisites:11": [
         897
       ],
@@ -40995,7 +41063,7 @@
         }
       }
     },
-    "783:10": {
+    "784:10": {
       "preRequisites:11": [
         282
       ],
@@ -41047,7 +41115,7 @@
         }
       }
     },
-    "784:10": {
+    "785:10": {
       "preRequisites:11": [
         72
       ],
@@ -41100,7 +41168,7 @@
         }
       }
     },
-    "785:10": {
+    "786:10": {
       "preRequisites:11": [
         805
       ],
@@ -41139,7 +41207,7 @@
         }
       }
     },
-    "786:10": {
+    "787:10": {
       "preRequisites:11": [
         272,
         296,
@@ -41193,7 +41261,7 @@
         }
       }
     },
-    "787:10": {
+    "788:10": {
       "preRequisites:11": [
         3
       ],
@@ -41245,7 +41313,7 @@
         }
       }
     },
-    "788:10": {
+    "789:10": {
       "preRequisites:11": [
         3
       ],
@@ -41309,7 +41377,7 @@
         }
       }
     },
-    "789:10": {
+    "790:10": {
       "preRequisites:11": [
         69
       ],
@@ -41361,7 +41429,7 @@
         }
       }
     },
-    "790:10": {
+    "791:10": {
       "preRequisites:11": [
         524,
         798
@@ -41420,7 +41488,7 @@
         }
       }
     },
-    "791:10": {
+    "792:10": {
       "preRequisites:11": [
         172,
         177
@@ -41473,7 +41541,7 @@
         }
       }
     },
-    "792:10": {
+    "793:10": {
       "preRequisites:11": [
         27
       ],
@@ -41531,7 +41599,7 @@
         }
       }
     },
-    "793:10": {
+    "794:10": {
       "preRequisites:11": [
         792,
         793
@@ -41566,7 +41634,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "794:10": {
+    "795:10": {
       "preRequisites:11": [
         796
       ],
@@ -41618,7 +41686,7 @@
         }
       }
     },
-    "795:10": {
+    "796:10": {
       "preRequisites:11": [
         323
       ],
@@ -41670,7 +41738,7 @@
         }
       }
     },
-    "796:10": {
+    "797:10": {
       "preRequisites:11": [
         796
       ],
@@ -41722,7 +41790,7 @@
         }
       }
     },
-    "797:10": {
+    "798:10": {
       "preRequisites:11": [
         675,
         676
@@ -41775,7 +41843,7 @@
         }
       }
     },
-    "798:10": {
+    "799:10": {
       "preRequisites:11": [
         545,
         745
@@ -41846,7 +41914,7 @@
         }
       }
     },
-    "799:10": {
+    "800:10": {
       "preRequisites:11": [
         162,
         416,
@@ -41882,7 +41950,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "800:10": {
+    "801:10": {
       "preRequisites:11": [
         154
       ],
@@ -41947,7 +42015,7 @@
         }
       }
     },
-    "801:10": {
+    "802:10": {
       "preRequisites:11": [
         325
       ],
@@ -41999,7 +42067,7 @@
         }
       }
     },
-    "802:10": {
+    "803:10": {
       "preRequisites:11": [
         805
       ],
@@ -42063,7 +42131,7 @@
         }
       }
     },
-    "803:10": {
+    "804:10": {
       "preRequisites:11": [
         107,
         286
@@ -42128,7 +42196,7 @@
         }
       }
     },
-    "804:10": {
+    "805:10": {
       "preRequisites:11": [
         3
       ],
@@ -42162,7 +42230,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "805:10": {
+    "806:10": {
       "preRequisites:11": [
         166,
         226
@@ -42206,7 +42274,7 @@
         }
       }
     },
-    "806:10": {
+    "807:10": {
       "preRequisites:11": [
         163,
         413
@@ -42263,7 +42331,7 @@
         }
       }
     },
-    "807:10": {
+    "808:10": {
       "preRequisites:11": [
         805
       ],
@@ -42302,7 +42370,7 @@
         }
       }
     },
-    "808:10": {
+    "809:10": {
       "preRequisites:11": [
         60
       ],
@@ -42355,7 +42423,7 @@
         }
       }
     },
-    "809:10": {
+    "810:10": {
       "preRequisites:11": [
         94,
         505
@@ -42390,7 +42458,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "810:10": {
+    "811:10": {
       "preRequisites:11": [
         4
       ],
@@ -42429,7 +42497,7 @@
         }
       }
     },
-    "811:10": {
+    "812:10": {
       "preRequisites:11": [
         21
       ],
@@ -42481,7 +42549,7 @@
         }
       }
     },
-    "812:10": {
+    "813:10": {
       "preRequisites:11": [
         145
       ],
@@ -42549,7 +42617,7 @@
         }
       }
     },
-    "813:10": {
+    "814:10": {
       "preRequisites:11": [
         76,
         818
@@ -42602,7 +42670,7 @@
         }
       }
     },
-    "814:10": {
+    "815:10": {
       "preRequisites:11": [
         141
       ],
@@ -42678,7 +42746,7 @@
         }
       }
     },
-    "815:10": {
+    "816:10": {
       "preRequisites:11": [
         530
       ],
@@ -42730,7 +42798,7 @@
         }
       }
     },
-    "816:10": {
+    "817:10": {
       "preRequisites:11": [
         70
       ],
@@ -42788,7 +42856,7 @@
         }
       }
     },
-    "817:10": {
+    "818:10": {
       "preRequisites:11": [
         72,
         78,
@@ -42842,7 +42910,7 @@
         }
       }
     },
-    "818:10": {
+    "819:10": {
       "preRequisites:11": [
         27
       ],
@@ -42899,7 +42967,7 @@
         }
       }
     },
-    "819:10": {
+    "820:10": {
       "preRequisites:11": [
         82
       ],
@@ -42951,7 +43019,7 @@
         }
       }
     },
-    "820:10": {
+    "821:10": {
       "preRequisites:11": [
         727
       ],
@@ -43003,7 +43071,7 @@
         }
       }
     },
-    "821:10": {
+    "822:10": {
       "preRequisites:11": [
         95
       ],
@@ -43055,7 +43123,7 @@
         }
       }
     },
-    "822:10": {
+    "823:10": {
       "preRequisites:11": [
         153,
         899
@@ -43109,7 +43177,7 @@
         }
       }
     },
-    "823:10": {
+    "824:10": {
       "preRequisites:11": [
         825
       ],
@@ -43179,7 +43247,7 @@
         }
       }
     },
-    "824:10": {
+    "825:10": {
       "preRequisites:11": [
         177
       ],
@@ -43237,7 +43305,7 @@
         }
       }
     },
-    "825:10": {
+    "826:10": {
       "preRequisites:11": [
         198
       ],
@@ -43290,7 +43358,7 @@
         }
       }
     },
-    "826:10": {
+    "827:10": {
       "preRequisites:11": [
         93
       ],
@@ -43342,7 +43410,7 @@
         }
       }
     },
-    "827:10": {
+    "828:10": {
       "preRequisites:11": [
         830
       ],
@@ -43394,7 +43462,7 @@
         }
       }
     },
-    "828:10": {
+    "829:10": {
       "preRequisites:11": [
         830
       ],
@@ -43465,7 +43533,7 @@
         }
       }
     },
-    "829:10": {
+    "830:10": {
       "preRequisites:11": [
         830
       ],
@@ -43529,7 +43597,7 @@
         }
       }
     },
-    "830:10": {
+    "831:10": {
       "preRequisites:11": [
         96
       ],
@@ -43581,7 +43649,7 @@
         }
       }
     },
-    "831:10": {
+    "832:10": {
       "preRequisites:11": [
         93
       ],
@@ -43633,7 +43701,7 @@
         }
       }
     },
-    "832:10": {
+    "833:10": {
       "preRequisites:11": [
         147,
         259
@@ -43686,7 +43754,7 @@
         }
       }
     },
-    "833:10": {
+    "834:10": {
       "preRequisites:11": [
         91,
         810,
@@ -43740,7 +43808,7 @@
         }
       }
     },
-    "834:10": {
+    "835:10": {
       "preRequisites:11": [
         194,
         526
@@ -43793,7 +43861,7 @@
         }
       }
     },
-    "835:10": {
+    "836:10": {
       "preRequisites:11": [
         325,
         904
@@ -43846,7 +43914,7 @@
         }
       }
     },
-    "836:10": {
+    "837:10": {
       "preRequisites:11": [
         323,
         791,
@@ -43900,7 +43968,7 @@
         }
       }
     },
-    "837:10": {
+    "838:10": {
       "preRequisites:11": [
         312
       ],
@@ -43952,7 +44020,7 @@
         }
       }
     },
-    "838:10": {
+    "839:10": {
       "preRequisites:11": [
         242,
         327
@@ -44005,7 +44073,7 @@
         }
       }
     },
-    "839:10": {
+    "840:10": {
       "preRequisites:11": [
         323
       ],
@@ -44058,7 +44126,7 @@
         }
       }
     },
-    "840:10": {
+    "841:10": {
       "preRequisites:11": [
         845,
         847
@@ -44111,7 +44179,7 @@
         }
       }
     },
-    "841:10": {
+    "842:10": {
       "preRequisites:11": [
         324,
         843
@@ -44164,7 +44232,7 @@
         }
       }
     },
-    "842:10": {
+    "843:10": {
       "preRequisites:11": [
         844
       ],
@@ -44216,7 +44284,7 @@
         }
       }
     },
-    "843:10": {
+    "844:10": {
       "preRequisites:11": [
         324,
         843
@@ -44269,7 +44337,7 @@
         }
       }
     },
-    "844:10": {
+    "845:10": {
       "preRequisites:11": [
         847
       ],
@@ -44321,7 +44389,7 @@
         }
       }
     },
-    "845:10": {
+    "846:10": {
       "preRequisites:11": [
         690
       ],
@@ -44373,7 +44441,7 @@
         }
       }
     },
-    "846:10": {
+    "847:10": {
       "preRequisites:11": [
         828,
         841,
@@ -44452,7 +44520,7 @@
         }
       }
     },
-    "847:10": {
+    "848:10": {
       "preRequisites:11": [
         312
       ],
@@ -44504,7 +44572,7 @@
         }
       }
     },
-    "848:10": {
+    "849:10": {
       "preRequisites:11": [
         677,
         749
@@ -44557,7 +44625,7 @@
         }
       }
     },
-    "849:10": {
+    "850:10": {
       "preRequisites:11": [
         827
       ],
@@ -44609,7 +44677,7 @@
         }
       }
     },
-    "850:10": {
+    "851:10": {
       "preRequisites:11": [
         196
       ],
@@ -44661,7 +44729,7 @@
         }
       }
     },
-    "851:10": {
+    "852:10": {
       "preRequisites:11": [
         607
       ],
@@ -44713,7 +44781,7 @@
         }
       }
     },
-    "852:10": {
+    "853:10": {
       "preRequisites:11": [
         855
       ],
@@ -44765,7 +44833,7 @@
         }
       }
     },
-    "853:10": {
+    "854:10": {
       "preRequisites:11": [
         339
       ],
@@ -44835,7 +44903,7 @@
         }
       }
     },
-    "854:10": {
+    "855:10": {
       "preRequisites:11": [
         255,
         857
@@ -44900,7 +44968,7 @@
         }
       }
     },
-    "855:10": {
+    "856:10": {
       "preRequisites:11": [
         690,
         858
@@ -44953,7 +45021,7 @@
         }
       }
     },
-    "856:10": {
+    "857:10": {
       "preRequisites:11": [
         531,
         826,
@@ -45031,7 +45099,7 @@
         }
       }
     },
-    "857:10": {
+    "858:10": {
       "preRequisites:11": [
         607,
         756
@@ -45090,7 +45158,7 @@
         }
       }
     },
-    "858:10": {
+    "859:10": {
       "preRequisites:11": [
         727
       ],
@@ -45142,7 +45210,7 @@
         }
       }
     },
-    "859:10": {
+    "860:10": {
       "preRequisites:11": [
         727
       ],
@@ -45194,7 +45262,7 @@
         }
       }
     },
-    "860:10": {
+    "861:10": {
       "preRequisites:11": [
         827
       ],
@@ -45246,7 +45314,7 @@
         }
       }
     },
-    "861:10": {
+    "862:10": {
       "preRequisites:11": [
         827
       ],
@@ -45298,7 +45366,7 @@
         }
       }
     },
-    "862:10": {
+    "863:10": {
       "preRequisites:11": [
         727
       ],
@@ -45350,7 +45418,7 @@
         }
       }
     },
-    "863:10": {
+    "864:10": {
       "preRequisites:11": [
         727
       ],
@@ -45402,7 +45470,7 @@
         }
       }
     },
-    "864:10": {
+    "865:10": {
       "preRequisites:11": [
         234
       ],
@@ -45454,7 +45522,7 @@
         }
       }
     },
-    "865:10": {
+    "866:10": {
       "preRequisites:11": [
         139
       ],
@@ -45506,7 +45574,7 @@
         }
       }
     },
-    "866:10": {
+    "867:10": {
       "preRequisites:11": [
         139
       ],
@@ -45558,7 +45626,7 @@
         }
       }
     },
-    "867:10": {
+    "868:10": {
       "preRequisites:11": [
         139
       ],
@@ -45610,7 +45678,7 @@
         }
       }
     },
-    "868:10": {
+    "869:10": {
       "preRequisites:11": [
         325
       ],
@@ -45662,7 +45730,7 @@
         }
       }
     },
-    "869:10": {
+    "870:10": {
       "preRequisites:11": [
         287
       ],
@@ -45714,7 +45782,7 @@
         }
       }
     },
-    "870:10": {
+    "871:10": {
       "preRequisites:11": [
         727
       ],
@@ -45766,7 +45834,7 @@
         }
       }
     },
-    "871:10": {
+    "872:10": {
       "preRequisites:11": [
         6
       ],
@@ -45818,7 +45886,7 @@
         }
       }
     },
-    "872:10": {
+    "873:10": {
       "preRequisites:11": [
         196
       ],
@@ -45870,7 +45938,7 @@
         }
       }
     },
-    "873:10": {
+    "874:10": {
       "preRequisites:11": [
         287
       ],
@@ -45922,7 +45990,7 @@
         }
       }
     },
-    "874:10": {
+    "875:10": {
       "preRequisites:11": [
         847
       ],
@@ -45974,7 +46042,7 @@
         }
       }
     },
-    "875:10": {
+    "876:10": {
       "preRequisites:11": [
         323
       ],
@@ -46026,7 +46094,7 @@
         }
       }
     },
-    "876:10": {
+    "877:10": {
       "preRequisites:11": [
         397
       ],
@@ -46078,7 +46146,7 @@
         }
       }
     },
-    "877:10": {
+    "878:10": {
       "preRequisites:11": [
         153
       ],
@@ -46127,7 +46195,7 @@
         }
       }
     },
-    "878:10": {
+    "879:10": {
       "preRequisites:11": [
         325,
         750
@@ -46162,7 +46230,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "879:10": {
+    "880:10": {
       "preRequisites:11": [
         885
       ],
@@ -46214,7 +46282,7 @@
         }
       }
     },
-    "880:10": {
+    "881:10": {
       "preRequisites:11": [
         288
       ],
@@ -46266,7 +46334,7 @@
         }
       }
     },
-    "881:10": {
+    "882:10": {
       "preRequisites:11": [
         749
       ],
@@ -46318,7 +46386,7 @@
         }
       }
     },
-    "882:10": {
+    "883:10": {
       "preRequisites:11": [
         89
       ],
@@ -46370,7 +46438,7 @@
         }
       }
     },
-    "883:10": {
+    "884:10": {
       "preRequisites:11": [
         165,
         546
@@ -46424,7 +46492,7 @@
         }
       }
     },
-    "884:10": {
+    "885:10": {
       "preRequisites:11": [
         161,
         166,
@@ -46479,7 +46547,7 @@
         }
       }
     },
-    "885:10": {
+    "886:10": {
       "preRequisites:11": [
         827
       ],
@@ -46513,7 +46581,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "886:10": {
+    "887:10": {
       "preRequisites:11": [
         56
       ],
@@ -46552,7 +46620,7 @@
         }
       }
     },
-    "887:10": {
+    "888:10": {
       "preRequisites:11": [
         94
       ],
@@ -46601,7 +46669,7 @@
         }
       }
     },
-    "888:10": {
+    "889:10": {
       "preRequisites:11": [
         541
       ],
@@ -46666,7 +46734,7 @@
         }
       }
     },
-    "889:10": {
+    "890:10": {
       "preRequisites:11": [
         3
       ],
@@ -46705,7 +46773,7 @@
         }
       }
     },
-    "890:10": {
+    "891:10": {
       "preRequisites:11": [
         147
       ],
@@ -46757,7 +46825,7 @@
         }
       }
     },
-    "891:10": {
+    "892:10": {
       "preRequisites:11": [
         88,
         894
@@ -46816,7 +46884,7 @@
         }
       }
     },
-    "892:10": {
+    "893:10": {
       "preRequisites:11": [
         6
       ],
@@ -46869,7 +46937,7 @@
         }
       }
     },
-    "893:10": {
+    "894:10": {
       "preRequisites:11": [
         830,
         896
@@ -46922,7 +46990,7 @@
         }
       }
     },
-    "894:10": {
+    "895:10": {
       "preRequisites:11": [
         93,
         891
@@ -46981,7 +47049,7 @@
         }
       }
     },
-    "895:10": {
+    "896:10": {
       "preRequisites:11": [
         71
       ],
@@ -47034,7 +47102,7 @@
         }
       }
     },
-    "896:10": {
+    "897:10": {
       "preRequisites:11": [
         888
       ],
@@ -47087,7 +47155,7 @@
         }
       }
     },
-    "897:10": {
+    "898:10": {
       "preRequisites:11": [
         179,
         888
@@ -47107,7 +47175,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "\"Nitro Diesel\" or \"Gasoline\"",
+          "name:8": "\"Cetane-Boosted Diesel\" or \"Gasoline\"",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -47122,7 +47190,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "898:10": {
+    "899:10": {
       "preRequisites:11": [
         805
       ],
@@ -47166,7 +47234,7 @@
         }
       }
     },
-    "899:10": {
+    "900:10": {
       "preRequisites:11": [
         59,
         72
@@ -47219,9 +47287,9 @@
         }
       }
     },
-    "900:10": {
+    "901:10": {
       "preRequisites:11": [
-        339
+        781
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47272,7 +47340,7 @@
         }
       }
     },
-    "901:10": {
+    "902:10": {
       "preRequisites:11": [
         904
       ],
@@ -47325,7 +47393,7 @@
         }
       }
     },
-    "902:10": {
+    "903:10": {
       "preRequisites:11": [
         535
       ],
@@ -47401,7 +47469,7 @@
         }
       }
     },
-    "903:10": {
+    "904:10": {
       "preRequisites:11": [
         533,
         906
@@ -47436,7 +47504,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "904:10": {
+    "905:10": {
       "preRequisites:11": [
         196
       ],
@@ -47470,7 +47538,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "905:10": {
+    "906:10": {
       "preRequisites:11": [
         670,
         805
@@ -47535,7 +47603,7 @@
         }
       }
     },
-    "906:10": {
+    "907:10": {
       "preRequisites:11": [
         527,
         827
@@ -47588,7 +47656,7 @@
         }
       }
     },
-    "907:10": {
+    "908:10": {
       "preRequisites:11": [
         38
       ],
@@ -48155,7 +48223,7 @@
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -208,
+          "x:3": -200,
           "y:3": 532
         },
         "6:10": {
@@ -48169,15 +48237,15 @@
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 464
+          "x:3": -456,
+          "y:3": 468
         },
         "8:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": 532
+          "x:3": -292,
+          "y:3": 520
         },
         "9:10": {
           "id:3": 44,
@@ -48204,8 +48272,8 @@
           "id:3": 52,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -592,
-          "y:3": 492
+          "x:3": -312,
+          "y:3": 456
         },
         "13:10": {
           "id:3": 55,
@@ -48485,7 +48553,7 @@
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -368,
-          "y:3": 524
+          "y:3": 540
         },
         "53:10": {
           "id:3": 164,
@@ -48533,8 +48601,8 @@
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": 460
+          "x:3": -204,
+          "y:3": 468
         },
         "60:10": {
           "id:3": 227,
@@ -48575,8 +48643,8 @@
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
-          "y:3": 388
+          "x:3": -192,
+          "y:3": 360
         },
         "66:10": {
           "id:3": 398,
@@ -48701,8 +48769,8 @@
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 532
+          "x:3": -312,
+          "y:3": 548
         },
         "84:10": {
           "id:3": 810,
@@ -48813,8 +48881,8 @@
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 388
+          "x:3": -288,
+          "y:3": 288
         },
         "100:10": {
           "id:3": 836,
@@ -48881,7 +48949,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "GregTech §6High Voltage§r, §5Extreme Voltage§r, and §1Insane Voltage§r tiers:\n\n§6§3Cryogenic Distillation§r, and petrochemistry for §6Epoxy§r and §9Nitro Diesel§r.\n\nCraft §6Nether Stars§r and unlock §bThermal Expansion§r machines.\n\nBuild a§b NuclearCraft§r fission reactor to obtain new materials.\n\nBuild a Space Station and Warp Core.",
+          "desc:8": "GregTech §6High Voltage§r, §5Extreme Voltage§r, and §1Insane Voltage§r tiers:\n\n§3Cryogenic Distillation§r, and petrochemistry for §6Epoxy§r and §9Cetane-Boosted Diesel§r.\n\nCraft §6Nether Stars§r and unlock §bThermal Expansion§r machines.\n\nBuild a§b NuclearCraft§r fission reactor to obtain new materials.\n\nBuild a Space Station and Warp Core.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
@@ -50305,291 +50373,291 @@
           "y:3": 60
         },
         "54:10": {
-          "id:3": 492,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 396
-        },
-        "55:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 188
         },
-        "56:10": {
+        "55:10": {
           "id:3": 521,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 168
         },
-        "57:10": {
+        "56:10": {
           "id:3": 523,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 244
         },
-        "58:10": {
+        "57:10": {
           "id:3": 524,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 272
         },
-        "59:10": {
+        "58:10": {
           "id:3": 525,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 216
         },
-        "60:10": {
+        "59:10": {
           "id:3": 526,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 96
         },
-        "61:10": {
+        "60:10": {
           "id:3": 528,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 60
         },
-        "62:10": {
+        "61:10": {
           "id:3": 529,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 96
         },
-        "63:10": {
+        "62:10": {
           "id:3": 530,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 132
         },
-        "64:10": {
+        "63:10": {
           "id:3": 531,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 300
         },
-        "65:10": {
+        "64:10": {
           "id:3": 532,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 96
         },
-        "66:10": {
+        "65:10": {
           "id:3": 533,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": 96
         },
-        "67:10": {
+        "66:10": {
           "id:3": 534,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 300
         },
-        "68:10": {
+        "67:10": {
           "id:3": 535,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 328
         },
-        "69:10": {
+        "68:10": {
           "id:3": 544,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 96
         },
-        "70:10": {
+        "69:10": {
           "id:3": 545,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 132
         },
-        "71:10": {
+        "70:10": {
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 60
         },
-        "72:10": {
+        "71:10": {
           "id:3": 553,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 96
         },
-        "73:10": {
+        "72:10": {
           "id:3": 554,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 132
         },
-        "74:10": {
+        "73:10": {
           "id:3": 556,
           "sizeX:3": 35,
           "sizeY:3": 30,
           "x:3": 359,
           "y:3": 163
         },
-        "75:10": {
+        "74:10": {
           "id:3": 605,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
           "y:3": 388
         },
-        "76:10": {
+        "75:10": {
           "id:3": 609,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 96
         },
-        "77:10": {
+        "76:10": {
           "id:3": 692,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 396
         },
-        "78:10": {
+        "77:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 192,
           "y:3": 168
         },
-        "79:10": {
+        "78:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 168
         },
-        "80:10": {
+        "79:10": {
           "id:3": 695,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 240,
           "y:3": 204
         },
-        "81:10": {
+        "80:10": {
           "id:3": 744,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 60
         },
-        "82:10": {
+        "81:10": {
           "id:3": 753,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 204
         },
-        "83:10": {
+        "82:10": {
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 192,
           "y:3": 396
         },
-        "84:10": {
+        "83:10": {
           "id:3": 764,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -264,
           "y:3": 134
         },
-        "85:10": {
+        "84:10": {
           "id:3": 765,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 60
         },
-        "86:10": {
+        "85:10": {
           "id:3": 766,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -264,
           "y:3": 162
         },
-        "87:10": {
+        "86:10": {
           "id:3": 767,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -226,
           "y:3": 190
         },
-        "88:10": {
+        "87:10": {
           "id:3": 768,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -190,
           "y:3": 218
         },
-        "89:10": {
+        "88:10": {
           "id:3": 769,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -154,
           "y:3": 246
         },
-        "90:10": {
+        "89:10": {
           "id:3": 770,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -118,
           "y:3": 274
         },
-        "91:10": {
+        "90:10": {
           "id:3": 771,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -82,
           "y:3": 302
         },
-        "92:10": {
+        "91:10": {
           "id:3": 772,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -46,
           "y:3": 330
         },
-        "93:10": {
+        "92:10": {
           "id:3": 799,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 168
         },
-        "94:10": {
+        "93:10": {
           "id:3": 816,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 96
+        },
+        "94:10": {
+          "id:3": 819,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 396
         },
         "95:10": {
           "id:3": 822,
@@ -51292,230 +51360,237 @@
           "y:3": 348
         },
         "93:10": {
+          "id:3": 781,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -316,
+          "y:3": 244
+        },
+        "94:10": {
           "id:3": 791,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -438,
           "y:3": -6
         },
-        "94:10": {
+        "95:10": {
           "id:3": 792,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -12
         },
-        "95:10": {
+        "96:10": {
           "id:3": 793,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 56,
           "y:3": -12
         },
-        "96:10": {
+        "97:10": {
           "id:3": 794,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 48,
           "y:3": 36
         },
-        "97:10": {
+        "98:10": {
           "id:3": 795,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -172,
           "y:3": 92
         },
-        "98:10": {
+        "99:10": {
           "id:3": 796,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -172,
           "y:3": 60
         },
-        "99:10": {
+        "100:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
           "y:3": -48
         },
-        "100:10": {
+        "101:10": {
           "id:3": 804,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 348
         },
-        "101:10": {
+        "102:10": {
           "id:3": 827,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -580,
           "y:3": 172
         },
-        "102:10": {
+        "103:10": {
           "id:3": 828,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -444,
           "y:3": -112
         },
-        "103:10": {
+        "104:10": {
           "id:3": 839,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 204
         },
-        "104:10": {
+        "105:10": {
           "id:3": 840,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -168,
           "y:3": 0
         },
-        "105:10": {
+        "106:10": {
           "id:3": 841,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -168,
           "y:3": -48
         },
-        "106:10": {
+        "107:10": {
           "id:3": 842,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 384
         },
-        "107:10": {
+        "108:10": {
           "id:3": 843,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
           "y:3": 172
         },
-        "108:10": {
+        "109:10": {
           "id:3": 844,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 176
         },
-        "109:10": {
+        "110:10": {
           "id:3": 845,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 176
         },
-        "110:10": {
+        "111:10": {
           "id:3": 846,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 264
         },
-        "111:10": {
+        "112:10": {
           "id:3": 847,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -112,
           "y:3": 172
         },
-        "112:10": {
+        "113:10": {
           "id:3": 848,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 220
         },
-        "113:10": {
+        "114:10": {
           "id:3": 850,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -436,
           "y:3": -52
         },
-        "114:10": {
+        "115:10": {
           "id:3": 851,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": -48
         },
-        "115:10": {
+        "116:10": {
           "id:3": 853,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 216
         },
-        "116:10": {
+        "117:10": {
           "id:3": 855,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 220,
           "y:3": 348
         },
-        "117:10": {
+        "118:10": {
           "id:3": 856,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 220,
           "y:3": 384
         },
-        "118:10": {
+        "119:10": {
           "id:3": 861,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 140,
           "y:3": 348
         },
-        "119:10": {
+        "120:10": {
           "id:3": 881,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 308
         },
-        "120:10": {
+        "121:10": {
           "id:3": 904,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 244
         },
-        "121:10": {
+        "122:10": {
           "id:3": 905,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 288
         },
-        "122:10": {
+        "123:10": {
           "id:3": 906,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 348
         },
-        "123:10": {
+        "124:10": {
           "id:3": 907,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -204,
           "y:3": 396
         },
-        "124:10": {
+        "125:10": {
           "id:3": 908,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -96,
           "y:3": 368
         },
-        "125:10": {
+        "126:10": {
           "id:3": 910,
           "sizeX:3": 24,
           "sizeY:3": 24,
