@@ -185,7 +185,7 @@ var microversium = MaterialBuilder(32027, "microversium")
 var draconic_superconductor = MaterialBuilder(32028, "draconic_superconductor")
     .ingot()
     .color(0xf5f0f4).iconSet("shiny")
-    .flags(["no_working", "no_smashing"])
+    .flags([])
     .cableProperties(2147483647, 4, 0, true)
     .build();
 
