@@ -16570,9 +16570,9 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 1,
-          "name:8": "Superconducting Coil Block",
+          "name:8": "Tritanium Coils",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -22499,7 +22499,6 @@
     },
     "332:10": {
       "preRequisites:11": [
-        242,
         842,
         907
       ],
@@ -31828,19 +31827,23 @@
               "Damage:2": 35,
               "OreDict:8": "",
               "id:8": "enderio:item_material"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "ender_distillation"
-              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ender_distillation"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -37581,7 +37584,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Neutronium§r is a hyper-dense material normally found in the hearts of neutron stars: the collapsed cores of stars between ten and thirty times the size of the sun.\n\nFun fact: a single neutronium block is approximately 2884 million metric tons and somewhere around 600000K, yet you\u0027re somehow capable of holding one with your bare hands. Don\u0027t think about it too much.\n\nNeutronium is made from fusing molten §9Naquadria§r, a super-enriched form of §6Naquadah§r, with molten §9Americium§r. \n\nAfter getting §6Chaotic Fusion Injectors§r, you might consider using Tier Nine Micro Miners to supplement the fusion, as it is net-positive for Neutronium. These miners are expensive though, so it\u0027s up to you.\n",
+          "desc:8": "§6Neutronium§r is a hyper-dense material normally found in the hearts of neutron stars: the collapsed cores of stars between ten and thirty times the size of the sun.\n\nFun fact: a single neutronium block is approximately 2884 million metric tons and somewhere around 600000K, yet you\u0027re somehow capable of holding one with your bare hands. Don\u0027t think about it too much.\n\nNeutronium is made from fusing molten §9Naquadria§r, a super-enriched form of §6Naquadah§r, with molten §9Americium§r, §2or from the Tier Eight Micro Miner.§r\n\nAfter getting §6Chaotic Fusion Injectors§r, you might consider using Tier Nine Micro Miners to supplement the fusion, as it is net-positive for Neutronium. These miners are expensive though, so it\u0027s up to you.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46073,7 +46076,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Upgrade time! \n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra 28 if you don\u0027t want more than §a2 Fluid Inputs§r§r and §a1 Fluid Output§r.\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
+          "desc:8": "Upgrade time! \n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra §231§r if you don\u0027t want more than §a2 Fluid Inputs§r§r and §a1 Fluid Output§r.\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46911,22 +46914,12 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "fire_water"
-              }
-            },
-            "1:10": {
               "Count:3": 2,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "enderstorage:ender_storage"
             },
-            "2:10": {
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
@@ -46934,6 +46927,20 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "fire_water"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -47782,7 +47789,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§2You cannot use regular Draconium Blocks to build this structure. You must treat it with Enriched Naquadah to make Activated Draconium before it can be used in the Energy Storage Core.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §2Activated §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§2You cannot use regular Draconium Blocks to build this structure. You must treat it with Americium to make Activated Draconium before it can be used in the Energy Storage Core.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §2Activated §6Awakened Draconium§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56198,7 +56205,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Tritanium Ingot",
           "questlogic:8": "AND",
