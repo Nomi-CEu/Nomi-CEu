@@ -30841,7 +30841,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bStorage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the default appearances aren\u0027t your style, the §3Framing Table§f is useful for making custom drawers out of §6Framed Drawers§f and up to three additional items which define how the resulting drawer will look.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to reframe your drawers in world, and convert default drawers into Framed Drawers§r in-world. See the §eJEI Information Page§r of the Hand Framing Tool§r for more information.",
+          "desc:8": "§bStorage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§f is useful for making custom drawers out of §6Framed Drawers§f, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to reframe your drawers in world, and convert default drawers into Framed Drawers§r in-world. See the §eJEI Information Page§r of the Hand Framing Tool§r for more information.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30892,14 +30892,34 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
+              "OreDict:8": "drawerBasic",
+              "id:8": "storagedrawers:basicdrawers",
+              "tag:10": {
+                "material:8": "oak"
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "storagedrawers:framingtable"
+              "id:8": "storagedrawers:customdrawers"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "storagedrawers:customdrawers"
+              "id:8": "storagedrawers:framingtable"
             }
           },
           "taskID:8": "bq_standard:retrieval"
