@@ -56979,6 +56979,40 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "923:10": {
+      "preRequisites:11": [
+        805
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 215,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Processing Lines Tab",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 923,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -59287,7 +59321,7 @@
     },
     "3:10": {
       "lineID:3": 3,
-      "order:3": 10,
+      "order:3": 11,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -62226,6 +62260,13 @@
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 132
+        },
+        "56:10": {
+          "id:3": 923,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -228,
+          "y:3": 168
         }
       }
     },
@@ -63201,11 +63242,31 @@
           "y:3": 585
         }
       }
+    },
+    "11:10": {
+      "lineID:3": 11,
+      "order:3": 10,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "A chapter to help you with processing, both complex and straightforward!",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:book"
+          },
+          "name:8": "Processing Lines",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {}
     }
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
