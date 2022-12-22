@@ -56993,7 +56993,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§nYou may have to hold the item for a few seconds for the whole line to auto-complete.",
+          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage  required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§nYou may have to hold the item for a few seconds for the whole line to auto-complete.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57023,8 +57023,8 @@
     "924:10": {
       "preRequisites:11": [
         925,
-        926,
-        728
+        728,
+        936
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57481,7 +57481,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis step requires a Furnace or an upgraded Furnace, a Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57677,6 +57677,63 @@
         }
       },
       "questID:3": 935,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 895,
+              "OreDict:8": "",
+              "id:8": "thermalfoundation:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "936:10": {
+      "preRequisites:11": [
+        926,
+        728
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§n or higher.§r§r§r\n\nSmelt your §6Resonant Clathrate§r into §6Pulsating Dust§r. If you\u0027re using a §3Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. You might want to keep it as a §3Electric Furnace§r, depending on your circumstance. \n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "contenttweaker:pulsatingdust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Pulsating Dust",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 936,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
@@ -63954,85 +64011,92 @@
           "id:3": 924,
           "sizeX:3": 72,
           "sizeY:3": 72,
-          "x:3": -24,
-          "y:3": -72
+          "x:3": -60,
+          "y:3": -168
         },
         "1:10": {
           "id:3": 925,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": -120
+          "x:3": -36,
+          "y:3": -204
         },
         "2:10": {
           "id:3": 926,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -84,
-          "y:3": -60
+          "x:3": -120,
+          "y:3": -96
         },
         "3:10": {
           "id:3": 927,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": -168
+          "x:3": -72,
+          "y:3": -204
         },
         "4:10": {
           "id:3": 928,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": -168
+          "x:3": -108,
+          "y:3": -204
         },
         "5:10": {
           "id:3": 929,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": -168
+          "x:3": -144,
+          "y:3": -204
         },
         "6:10": {
           "id:3": 930,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": -120
+          "x:3": 0,
+          "y:3": -204
         },
         "7:10": {
           "id:3": 931,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": -168
+          "x:3": -180,
+          "y:3": -204
         },
         "8:10": {
           "id:3": 932,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": -132
+          "x:3": -108,
+          "y:3": -168
         },
         "9:10": {
           "id:3": 933,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": -96
+          "x:3": -108,
+          "y:3": -132
         },
         "10:10": {
           "id:3": 934,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": -48
+          "x:3": -156,
+          "y:3": -84
         },
         "11:10": {
           "id:3": 935,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": -48
+          "x:3": -192,
+          "y:3": -84
+        },
+        "12:10": {
+          "id:3": 936,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": -84
         }
       }
     }
