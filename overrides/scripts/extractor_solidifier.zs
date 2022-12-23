@@ -184,6 +184,22 @@ solidifier.recipeBuilder()
     .outputs(<contenttweaker:solidifiedhydrogen>)
     .duration(500).EUt(16).buildAndRegister();
 
+// Special cases
+extractor.recipeBuilder()
+    .inputs(<contenttweaker:solidifiedneon>)
+    .fluidOutputs(<liquid:neon> * 1000)
+    .duration(200).EUt(120).buildAndRegister();
+
+extractor.recipeBuilder()
+    .inputs(<contenttweaker:solidifiedkrypton>)
+    .fluidOutputs(<liquid:krypton> * 1000)
+    .duration(200).EUt(120).buildAndRegister();
+
+extractor.recipeBuilder()
+    .inputs(<contenttweaker:solidifiedxenon>)
+    .fluidOutputs(<liquid:xenon> * 1000)
+    .duration(200).EUt(120).buildAndRegister();
+
 // Draconium Freezing
 // Draconium Ingot * 1
 <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotDraconium>], [<liquid:liquid_helium> * 500]).remove();

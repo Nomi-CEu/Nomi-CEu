@@ -485,6 +485,20 @@ microverse_projector_basic.recipeMap
     .outputs(<contenttweaker:stellarcreationdata> * 4)
     .buildAndRegister();
 
+// t2 gases
+microverse_projector_basic.recipeMap
+    .recipeBuilder()
+    .duration(700)
+    .EUt(2000)
+    .inputs(<contenttweaker:tiertwoship>,
+            <metaitem:electric.pump.hv> * 4,
+            <thermalfoundation:material:1025> * 64)
+    .fluidInputs(<liquid:rocket_fuel> * 12000)
+    .outputs(<contenttweaker:solidifiedneon> * 10,
+            <contenttweaker:solidifiedkrypton> * 10,
+            <contenttweaker:solidifiedxenon> * 10)
+    .buildAndRegister();
+
 // t3 gems
 microverse_projector_basic.recipeMap
     .recipeBuilder()
