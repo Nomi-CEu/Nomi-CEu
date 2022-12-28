@@ -4,7 +4,7 @@
     "displayName": "Basic",
     "displayColor": "green",
     "killMultiplier": 4,
-    "dataToNext": 48,
+    "dataToNext": 50,
     "pristineChance": 5,
     "trial": {
       "pristine": 5,
@@ -18,8 +18,8 @@
     "displayName": "Advanced",
     "displayColor": "blue",
     "killMultiplier": 10,
-    "dataToNext": 300,
-    "pristineChance": 11,
+    "dataToNext": 250,
+    "pristineChance": 10,
     "trial": {
       "pristine": 8,
       "maxWave": 4,
@@ -32,8 +32,8 @@
     "displayName": "Superior",
     "displayColor": "light_purple",
     "killMultiplier": 18,
-    "dataToNext": 900,
-    "pristineChance": 24,
+    "dataToNext": 500,
+    "pristineChance": 20,
     "trial": {
       "pristine": 12,
       "maxWave": 5,
@@ -45,7 +45,7 @@
     "tier": 3,
     "displayName": "Self-Aware",
     "displayColor": "gold",
-    "pristineChance": 42,
+    "pristineChance": 30,
     "trial": {
       "pristine": 18,
       "maxWave": 7,

@@ -3,7 +3,7 @@
     "id": "blaze",
     "displayName": "Blaze",
     "livingMatter": "hellish",
-    "simulationRFCost": 256,
+    "simulationRFCost": 1024,
     "craftingIngredients": [
       "minecraft:blaze_powder",
 	  "deepmoblearning:living_matter_hellish",
@@ -39,7 +39,7 @@
     "id": "creeper",
     "displayName": "Creeper",
     "livingMatter": "overworldian",
-    "simulationRFCost": 80,
+    "simulationRFCost": 64,
     "craftingIngredients": [
       "minecraft:gunpowder",
 	  "deepmoblearning:living_matter_overworldian",
@@ -74,7 +74,7 @@
     "id": "dragon",
     "displayName": "Ender Dragon",
     "livingMatter": "extraterrestrial",
-    "simulationRFCost": 2560,
+    "simulationRFCost": 6666,
     "craftingIngredients": [
       "contenttweaker:dragonlairdata",
 	  "deepmoblearning:living_matter_extraterrestrial",
@@ -110,7 +110,7 @@
     "displayName": "Enderman",
     "displayNamePlural": "Endermen",
     "livingMatter": "extraterrestrial",
-    "simulationRFCost": 512,
+    "simulationRFCost": 2048,
     "craftingIngredients": [
       "minecraft:ender_pearl",
 	  "deepmoblearning:living_matter_extraterrestrial",
@@ -154,7 +154,7 @@
     "id": "ghast",
     "displayName": "Ghast",
     "livingMatter": "hellish",
-    "simulationRFCost": 372,
+    "simulationRFCost": 1024,
     "craftingIngredients": [
       "minecraft:ghast_tear",
 	  "deepmoblearning:living_matter_hellish",
@@ -188,7 +188,7 @@
     "id": "guardian",
     "displayName": "Guardian",
     "livingMatter": "overworldian",
-    "simulationRFCost": 340,
+    "simulationRFCost": 1024,
     "craftingIngredients": [
       "minecraft:prismarine_shard",
 	  "deepmoblearning:living_matter_overworldian",
@@ -228,7 +228,7 @@
     "id": "shulker",
     "displayName": "Shulker",
     "livingMatter": "extraterrestrial",
-    "simulationRFCost": 256,
+    "simulationRFCost": 512,
     "craftingIngredients": [
       "minecraft:diamond",
 	  "deepmoblearning:living_matter_extraterrestrial",
@@ -262,7 +262,7 @@
     "id": "skeleton",
     "displayName": "Skeleton",
     "livingMatter": "overworldian",
-    "simulationRFCost": 80,
+    "simulationRFCost": 64,
     "craftingIngredients": [
       "minecraft:bone"
     ],
@@ -304,7 +304,7 @@
     "id": "slime",
     "displayName": "Slime",
     "livingMatter": "overworldian",
-    "simulationRFCost": 150,
+    "simulationRFCost": 64,
     "craftingIngredients": [
       "minecraft:slime_ball"
     ],
@@ -344,7 +344,7 @@
     "id": "spider",
     "displayName": "Spider",
     "livingMatter": "overworldian",
-    "simulationRFCost": 80,
+    "simulationRFCost": 64,
     "craftingIngredients": [
       "minecraft:spider_eye",
 	  "deepmoblearning:living_matter_overworldian",
@@ -396,7 +396,7 @@
     "displayName": "Witch",
     "displayNamePlural": "Witches",
     "livingMatter": "overworldian",
-    "simulationRFCost": 120,
+    "simulationRFCost": 512,
     "craftingIngredients": [
       "minecraft:glass_bottle",
 	  "deepmoblearning:living_matter_overworldian",
@@ -439,7 +439,7 @@
     "id": "wither",
     "displayName": "Wither",
     "livingMatter": "extraterrestrial",
-    "simulationRFCost": 2048,
+    "simulationRFCost": 6666,
     "craftingIngredients": [
       "minecraft:nether_star"
     ],
@@ -468,7 +468,7 @@
     "id": "wither_skeleton",
     "displayName": "Wither Skeleton",
     "livingMatter": "hellish",
-    "simulationRFCost": 880,
+    "simulationRFCost": 1024,
     "craftingIngredients": [
       "minecraft:skull,1,1",
 	  "deepmoblearning:living_matter_hellish",
@@ -510,7 +510,7 @@
     "id": "zombie",
     "displayName": "Zombie",
     "livingMatter": "overworldian",
-    "simulationRFCost": 80,
+    "simulationRFCost": 64,
     "craftingIngredients": [
       "minecraft:rotten_flesh"
     ],
@@ -560,7 +560,7 @@
     "mod": "thermalfoundation",
     "displayName": "Thermal Elemental",
     "livingMatter": "overworldian",
-    "simulationRFCost": 256,
+    "simulationRFCost": 1024,
     "craftingIngredients": [
       "thermalfoundation:material,1,1026",
 	  "deepmoblearning:living_matter_overworldian",
