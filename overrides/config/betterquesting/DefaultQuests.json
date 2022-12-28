@@ -1,4 +1,5 @@
 {
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -6604,7 +6605,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Sulfuric Acid is mainly produced in a 3-step process:\n- Sulfur added to Oxygen to produce Sulfur Dioxide. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing Nether Air.\n- Sulfur Dioxide added to more Oxygen, to produce Sulfur Trioxide.\n- Sulfur Trioxide added to Water, to produce Sulfuric Acid.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at HV.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeep Mob Learning§r\u0027s §aBlaze Model§r.",
+          "desc:8": "§2Sulfuric Acid is mainly produced in a 3-step process:\n- Sulfur added to Oxygen to produce Sulfur Dioxide. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing Nether Air.\n- Sulfur Dioxide added to more Oxygen, to produce Sulfur Trioxide.\n- Sulfur Trioxide added to Water, to produce Sulfuric Acid.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at HV.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeep Mob Evolution§r\u0027s §aBlaze Model§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11164,7 +11165,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nFish Oil and Canola Oil are probably the easiest, but it\u0027s up to you to choose.\n\nFish are easiest to get from §aGuardian Models§r from §bDML§r.",
+          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nFish Oil and Canola Oil are probably the easiest, but it\u0027s up to you to choose.\n\nFish are easiest to get from §aGuardian Models§r from §bDME§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21032,7 +21033,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you don\u0027t feel like searching for a Thermal Elemental, or can\u0027t because you\u0027re playing on Peaceful, you will need to make §eone§r batch of §9Elemental Reduction Fluid§r.\n\nThis will bootstrap being able to craft a §aThermal Elemental Model§r for DML, and you can get all of the rods from §6Thermal Elemental Pristine Matter§r going forward.",
+          "desc:8": "If you don\u0027t feel like searching for a Thermal Elemental, or can\u0027t because you\u0027re playing on Peaceful, you will need to make §eone§r batch of §9Elemental Reduction Fluid§r.\n\nThis will bootstrap being able to craft a §aThermal Elemental Model§r for DME, and you can get all of the rods from §6Thermal Elemental Pristine Matter§r going forward.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30997,7 +30998,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "When making circuits, you\u0027ll need either molten §9Tin§r, or molten §9Soldering Alloy§r. §2Soldering Alloy is made in the Mixer with 6 parts Tin Dust, 3 parts Lead Dust and 1 part Antimony Dust.§r You then process it in an §3Extractor §rfor the usual 144mB of fluid per unit.\n\nThe §2Circuit Assembler§r will only consume half as much Soldering Alloy as it would have consumed molten Tin per craft (72mB vs 144mB), so it\u0027s very efficient to use this stuff, however, it is probably not worth it, due to the lack of antimony, whilst tin is infinite from DML, available later. However, you\u0027ll still need §9Soldering Alloy§r much later on for §3Assembly Lines§r.\n\n§2Antimony can be directly smelted from Stibnite Ore, allowing you to skip ore processing for this.",
+          "desc:8": "When making circuits, you\u0027ll need either molten §9Tin§r, or molten §9Soldering Alloy§r. §2Soldering Alloy is made in the Mixer with 6 parts Tin Dust, 3 parts Lead Dust and 1 part Antimony Dust.§r You then process it in an §3Extractor §rfor the usual 144mB of fluid per unit.\n\nThe §2Circuit Assembler§r will only consume half as much Soldering Alloy as it would have consumed molten Tin per craft (72mB vs 144mB), so it\u0027s very efficient to use this stuff, however, it is probably not worth it, due to the lack of antimony, whilst tin is infinite from DME, available later. However, you\u0027ll still need §9Soldering Alloy§r much later on for §3Assembly Lines§r.\n\n§2Antimony can be directly smelted from Stibnite Ore, allowing you to skip ore processing for this.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42682,7 +42683,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §3Simulation Chamber§r from §bDeep Mob Learning§r (§bDML§r, for short) allows you to farm mobs in a totally environmentally (and server) friendly way!\n\nSimulated mobs can even be used to provide you with many of the basic resources you\u0027ll need (such as §6iron, gold, tin, copper, diamonds§r and many more!), through pristine matter.\n\nSetting up DML automation during the early game is §avery important§r as it gives you access to infinite quantities of many resources!\n\nAn important thing to know is that Deep Mob Learning machines are §asided§r, thus they only accept §6Pulsating Polymer Clay§r through §athe top side§r and output products through §aall other sides§r. It\u0027s worth noting that you can also extract models through the top side.\n\nConsider reading the §bDeep Mob Learning§r book for more info.\n\nYes, you can also use it for generating power... §owith Diamonds.",
+          "desc:8": "A §3Simulation Chamber§r from §bDeep Mob Evolution§r (§bDME§r, for short) allows you to farm mobs in a totally environmentally (and server) friendly way!\n\nSimulated mobs can even be used to provide you with many of the basic resources you\u0027ll need (such as §6iron, gold, tin, copper, diamonds§r and many more!), through pristine matter.\n\nSetting up DME automation during the early game is §avery important§r as it gives you access to infinite quantities of many resources!\n\nConsider reading the §bDeep Mob Evolution§r book for more info.\n\nYes, you can also use it for generating power... §owith Diamonds.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44996,7 +44997,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Uraninite Ore§r is the first source of §6Pulsating Dust§r but is not a very good one in the long term. Instead you should make §6Resonant Clathrates§r, which are an infinitely-renewable and effective source of Pulsating Dust.\n\nResonant Clathrates are made by melting §6Ender Pearls§r with a §3Fluid Extractor§r into §9Resonant Ender§r, then mixing that with §6Nether Quartz§r in an MV or better §3Chemical Reactor§r. Smelting this clathrate gives Pulsating Dust.\n\nWith Resonant Clathrates now accessible, everything you need for crafting §6Pulsating Polymer Clay§r can be automated in a net-positive loop.§r Doing so is the first step in automation of §bDeep Mob Learning§r, which is §ea primary source of important materials for the rest of the pack§r.\n\nThe exact implementation is up to you. Make use of the various LV and MV machines you have, and look through §bJEI§r for the automatable infinite sources of each ingredient (like §aEnderman Models§r for pearls).\n\n",
+          "desc:8": "§6Uraninite Ore§r is the first source of §6Pulsating Dust§r but is not a very good one in the long term. Instead you should make §6Resonant Clathrates§r, which are an infinitely-renewable and effective source of Pulsating Dust.\n\nResonant Clathrates are made by melting §6Ender Pearls§r with a §3Fluid Extractor§r into §9Resonant Ender§r, then mixing that with §6Nether Quartz§r in an MV or better §3Chemical Reactor§r. Smelting this clathrate gives Pulsating Dust.\n\nWith Resonant Clathrates now accessible, everything you need for crafting §6Pulsating Polymer Clay§r can be automated in a net-positive loop.§r Doing so is the first step in automation of §bDeep Mob Evolution§r, which is §ea primary source of important materials for the rest of the pack§r.\n\nThe exact implementation is up to you. Make use of the various LV and MV machines you have, and look through §bJEI§r for the automatable infinite sources of each ingredient (like §aEnderman Models§r for pearls).\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47880,7 +47881,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have acquired §6Steel§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Learning§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n",
+          "desc:8": "Now that you have acquired §6Steel§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Evolution§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48013,7 +48014,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Numismatic Dynamo§r is the main source of power through the Mid Game of the pack. Paired with a §aLapidary Calibration Augment§r and a self-sustaining §bDeep Mob Learning§r setup, this dynamo can burn through §6Diamonds§r to produce large amounts of §eRF power§r.\n\nJust like other §bThermal Expansion§r dynamos, the §6Numismatic Dynamo§r can be given tier upgrades to produce more power and gain access to more §aAugment Slots§r.",
+          "desc:8": "The §6Numismatic Dynamo§r is the main source of power through the Mid Game of the pack. Paired with a §aLapidary Calibration Augment§r and a self-sustaining §bDeep Mob Evolution§r setup, this dynamo can burn through §6Diamonds§r to produce large amounts of §eRF power§r.\n\nJust like other §bThermal Expansion§r dynamos, the §6Numismatic Dynamo§r can be given tier upgrades to produce more power and gain access to more §aAugment Slots§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48357,7 +48358,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Farming Station§r is a machine that automates growing and harvesting trees and crops around it, based on what items you put in it.\n\nThe Farming Station will principally collect crops, saplings, and wood, but it will also collect things like §6Apples§r from Oak Trees and §6Sticky Resin§r from Rubber Trees. It can also collect leaves if you want it to.\n\nLike other §bEnderIO§r machines, it requires an §6RF capacitor§r. The quality of capacitor affects the overall size of the farm as well as the speed and energy at which it operates.\n\nYou can configure which crops or tree types will be planted relative to the Farming Station by placing the crop or sapling in the various quadrants in the GUI. Clicking the lock button will ensure that the stack placed there won\u0027t be completely consumed, as that could lead to plants migrating to other quadrants.\n\nIn addition to power, the Farming Station§r requires specific §etools§r (and usually a supply of §9Water§r) to operate. If you\u0027re missing anything, the machine will refuse to operate and displays a message over itself to let you know.\n\nFor planting §6crops§r or §6saplings§r, you need a §aHoe§r.\nFor chopping §6trees§r, you need an §aAxe§r. To collect §6leaves§r, you also need §aShears§r.\n\nTool durability is consumed as the farm performs work, so the tools will eventually break. You can make §aStone Tools§r from a cobblestone generator and some sticks, or even §aDiamond Tools§r using diamonds from your §3Deep Mob Learning§r setup.\n\nAlternately, you can invest in fancier tools such as th§re §aDark Backhoe§r (which is designed for use in the Farming Station), or even unbreakable tools much later like the §aFlux Infused Axe§r and §aOmniwrench§r (shears).\n\nThe Farming Station also has a lesser-known feature: it respects enchantments and upgrades on your tools. Tools with §eEmpowered§r upgrades will be ejected into the output slots when they run out of charge (if they don\u0027t break first). Tools with the §eMending§r enchantment are similarly ejected when they are about to break.\n\nYou can use these properties to your advantage.\n\n",
+          "desc:8": "The §3Farming Station§r is a machine that automates growing and harvesting trees and crops around it, based on what items you put in it.\n\nThe Farming Station will principally collect crops, saplings, and wood, but it will also collect things like §6Apples§r from Oak Trees and §6Sticky Resin§r from Rubber Trees. It can also collect leaves if you want it to.\n\nLike other §bEnderIO§r machines, it requires an §6RF capacitor§r. The quality of capacitor affects the overall size of the farm as well as the speed and energy at which it operates.\n\nYou can configure which crops or tree types will be planted relative to the Farming Station by placing the crop or sapling in the various quadrants in the GUI. Clicking the lock button will ensure that the stack placed there won\u0027t be completely consumed, as that could lead to plants migrating to other quadrants.\n\nIn addition to power, the Farming Station§r requires specific §etools§r (and usually a supply of §9Water§r) to operate. If you\u0027re missing anything, the machine will refuse to operate and displays a message over itself to let you know.\n\nFor planting §6crops§r or §6saplings§r, you need a §aHoe§r.\nFor chopping §6trees§r, you need an §aAxe§r. To collect §6leaves§r, you also need §aShears§r.\n\nTool durability is consumed as the farm performs work, so the tools will eventually break. You can make §aStone Tools§r from a cobblestone generator and some sticks, or even §aDiamond Tools§r using diamonds from your §3Deep Mob Evolution§r setup.\n\nAlternately, you can invest in fancier tools such as th§re §aDark Backhoe§r (which is designed for use in the Farming Station), or even unbreakable tools much later like the §aFlux Infused Axe§r and §aOmniwrench§r (shears).\n\nThe Farming Station also has a lesser-known feature: it respects enchantments and upgrades on your tools. Tools with §eEmpowered§r upgrades will be ejected into the output slots when they run out of charge (if they don\u0027t break first). Tools with the §eMending§r enchantment are similarly ejected when they are about to break.\n\nYou can use these properties to your advantage.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49726,7 +49727,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Simulation Supercomputer§r is a multiblock structure that performs §bDeep Mob Learning§r simulations like the §3Simulation Chamber§r, but is capable of overclocking these simulations to incredible speeds.\n\nOne of these structures can perform the equivalent work of hundreds of individual Simulation Chambers more efficiently. This will make it far easier to generate pristine matter you\u0027ll need for things like §6Dragon Lair Data§r. You\u0027ll probably need several §3Loot Fabricators§r to keep up with it.\n\nThe data model you place in the input bus will §2have a fixed 30% chance of producing Pristine matter regardless of its tier. §eOverclocking does not alter the chances of pristines§r: those come at fixed rates per iteration.\n\nAs a §dCreative Tier§r structure, it is rather expensive to make. However, it is an investment that will easily pay for itself as you progress through the endgame. You should strongly consider making one of these with your second §dHeart of a Universe§r.\n",
+          "desc:8": "The §3Simulation Supercomputer§r is a multiblock structure that performs §bDeep Mob Evolution§r simulations like the §3Simulation Chamber§r, but is capable of overclocking these simulations to incredible speeds.\n\nOne of these structures can perform the equivalent work of hundreds of individual Simulation Chambers more efficiently. This will make it far easier to generate pristine matter you\u0027ll need for things like §6Dragon Lair Data§r. You\u0027ll probably need several §3Loot Fabricators§r to keep up with it.\n\nThe data model you place in the input bus will §2have a fixed 30% chance of producing Pristine matter regardless of its tier. §eOverclocking does not alter the chances of pristines§r: those come at fixed rates per iteration.\n\nAs a §dCreative Tier§r structure, it is rather expensive to make. However, it is an investment that will easily pay for itself as you progress through the endgame. You should strongly consider making one of these with your second §dHeart of a Universe§r.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49810,7 +49811,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Sulfur§r will be used in a variety of upcoming chemical reactions.\n\nIt can be electrolyzed easily from §6Sphalerite§r (which also provides §6Gallium§r), §6Cinnabar§r, and §6Pyrite§r. Alternately, Sulfur can be acquired through §bDeep Mob Learning§r- look into that quest line if you haven\u0027t already.",
+          "desc:8": "§6Sulfur§r will be used in a variety of upcoming chemical reactions.\n\nIt can be electrolyzed easily from §6Sphalerite§r (which also provides §6Gallium§r), §6Cinnabar§r, and §6Pyrite§r. Alternately, Sulfur can be acquired through §bDeep Mob Evolution§r- look into that quest line if you haven\u0027t already.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56466,7 +56467,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §2CEu§r§r version of Nomi is already slightly harder than the original, due to various progression changes CEu makes.\n\nBut if you want a §charder§r, or perhaps a more \"§5true§r\" §dGregTech§r experience, check out the §cExpert§r mode. This pack mode is based on the §bSelf-Torture Edition fork§r of the original pack.\n\nHighlights include:\n\n- No §bDML§r for easy infinite resources\n- §6Nomicoins§r don\u0027t exist\n- The §7Steam Age§r\n- No §3Creative Tank§r; instead...\n- §6Stabilized Micro Miners§r for late-game infinite resources\n- Harder recipes for assorted things like §6Iridium§r, §3Numismatic Dynamos§r, and more\n\nTo enable §cExpert§r mode, change the pack mode (Options -\u003e Pack Mode) to Expert, then run §e/bq_admin default load ExpertQuests§r. The same command should be used for updating the quest book on Expert mode.\nTo go back, change the pack mode to §aNormal§r and run §e/bq_admin default load§r.\n\nTo tune your challenge even further, check out the various recipe configs in the GregTech config file.",
+          "desc:8": "The §2CEu§r§r version of Nomi is already slightly harder than the original, due to various progression changes CEu makes.\n\nBut if you want a §charder§r, or perhaps a more \"§5true§r\" §dGregTech§r experience, check out the §cExpert§r mode. This pack mode is based on the §bSelf-Torture Edition fork§r of the original pack.\n\nHighlights include:\n\n- No §bDME§r for easy infinite resources\n- §6Nomicoins§r don\u0027t exist\n- The §7Steam Age§r\n- No §3Creative Tank§r; instead...\n- §6Stabilized Micro Miners§r for late-game infinite resources\n- Harder recipes for assorted things like §6Iridium§r, §3Numismatic Dynamos§r, and more\n\nTo enable §cExpert§r mode, change the pack mode (Options -\u003e Pack Mode) to Expert, then run §e/bq_admin default load ExpertQuests§r. The same command should be used for updating the quest book on Expert mode.\nTo go back, change the pack mode to §aNormal§r and run §e/bq_admin default load§r.\n\nTo tune your challenge even further, check out the various recipe configs in the GregTech config file.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56987,7 +56988,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "GregTech §7Low Voltage§r Tier: start building a factory!\n\nUnlock access to §bDeep Mob Learning§r, early §bEnderIO§r tech, and §bApplied Energistics 2§r Digital Storage.\n\nBuild an §3Electric Blast Furnace§r for smelting advanced materials and alloys.",
+          "desc:8": "GregTech §7Low Voltage§r Tier: start building a factory!\n\nUnlock access to §bDeep Mob Evolution§r, early §bEnderIO§r tech, and §bApplied Energistics 2§r Digital Storage.\n\nBuild an §3Electric Blast Furnace§r for smelting advanced materials and alloys.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1001,
@@ -62776,7 +62777,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Generate resources with §bDeep Mob Learning§r!\n\nClose the production loop in MV for 100% renewable resources!",
+          "desc:8": "Generate resources with §bDeep Mob Evolution§r!\n\nClose the production loop in MV for 100% renewable resources!",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
@@ -63199,7 +63200,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
