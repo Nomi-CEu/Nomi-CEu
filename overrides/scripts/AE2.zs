@@ -89,19 +89,19 @@ assembler.recipeBuilder()
 	.inputs([<appliedenergistics2:part:16>])
 	.fluidInputs(<liquid:rubber> * 144)
 	.outputs(<appliedenergistics2:part:36>)
-	.duration(20).EUt(16).buildAndRegister();
+	.duration(100).EUt(7).buildAndRegister();
 
 assembler.recipeBuilder()
 	.inputs([<appliedenergistics2:part:16>])
 	.fluidInputs(<liquid:styrene_butadiene_rubber> * 36)
 	.outputs(<appliedenergistics2:part:36>)
-	.duration(20).EUt(16).buildAndRegister();
+	.duration(100).EUt(7).buildAndRegister();
 
 assembler.recipeBuilder()
 	.inputs([<appliedenergistics2:part:16>])
 	.fluidInputs(<liquid:silicone_rubber> * 72)
 	.outputs(<appliedenergistics2:part:36>)
-	.duration(20).EUt(16).buildAndRegister();
+	.duration(100).EUt(7).buildAndRegister();
 	
 //ME Conduit
 recipes.remove(<enderio:item_me_conduit>);	
@@ -389,6 +389,14 @@ recipes.addShaped("nf_terminal_expanded_processing", <appliedenergistics2:part:3
     [null, <appliedenergistics2:part:340>, null],
     [null, <ore:circuitEv>, null],
     [null, <packagedauto:encoder>, null]
+]);
+
+// Configuration Fluid Interface Terminal (From dev)
+recipes.removeByRecipeName("appliedenergistics2:network/parts/terminals_fluid_interface_configuration");
+recipes.addShapeless("nf_configuration_fluid_interface_terminal", <appliedenergistics2:part:522>, [
+    <appliedenergistics2:part:520>,
+    <appliedenergistics2:material:24>,
+    <appliedenergistics2:fluid_interface>.or(<appliedenergistics2:part:441>)
 ]);
 
 // GT certus quartz

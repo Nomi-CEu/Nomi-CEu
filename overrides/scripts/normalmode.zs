@@ -643,6 +643,25 @@ recipes.addShaped(<gregtech:cleanroom_casing:2>, [
 	[<metaitem:electric.motor.luv>, <ore:frameGtBlackSteel>, <metaitem:rotorIridium>]
 ]);
 
+// Replace recycling recipes
+<recipemap:arc_furnace>.findRecipe(30, [<gregtech:cleanroom_casing:2>], [<liquid:oxygen> * 691]).remove();
+<recipemap:macerator>.findRecipe(32, [<gregtech:cleanroom_casing:2>], null).remove();
+
+arc_furnace.recipeBuilder()
+	.inputs([<gregtech:cleanroom_casing:2>])
+	.fluidInputs([<liquid:oxygen> * 691])
+	.outputs([<metaitem:ingotIridium> * 4, <metaitem:ingotBlackSteel> * 2, <metaitem:dustSmallAsh> * 6])
+	.duration(691)
+	.EUt(30)
+	.buildAndRegister();
+	
+macerator.recipeBuilder()
+	.inputs([<gregtech:cleanroom_casing:2>])
+	.outputs([<metaitem:dustPolybenzimidazole> * 12, <metaitem:dustIridium> * 4, <metaitem:dustBlackSteel> * 2])
+	.duration(696)
+	.EUt(32)
+	.buildAndRegister();
+
 // Butadiene
 large_chemical_reactor.recipeBuilder()
 	.fluidInputs(<liquid:ethanol> * 2000)
