@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -52081,7 +52080,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. It is also the most efficient way, in terms of §6Naquadah Dust§r to §6Naquadria§r and §6Enriched Naquadah§r.",
+          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52130,28 +52129,13 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 125,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 126,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 130,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "Amount:3": 1000,
+              "FluidName:8": "fluoroantimonic_acid"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -63011,14 +62995,14 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
-          "y:3": 171
+          "y:3": 172
         },
         "105:10": {
           "id:3": 844,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -59,
-          "y:3": 175
+          "x:3": -60,
+          "y:3": 176
         },
         "106:10": {
           "id:3": 845,
@@ -65313,7 +65297,7 @@
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 6,
+          "x:3": -4,
           "y:3": 528
         },
         "16:10": {
@@ -65481,8 +65465,8 @@
           "id:3": 919,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 160,
-          "y:3": 585
+          "x:3": 60,
+          "y:3": 528
         }
       }
     },
