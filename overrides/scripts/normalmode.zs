@@ -749,6 +749,10 @@ removeMaterialFluid(32063, [<liquid:naquadah_oxide_petro_solution>]);
 removeMaterialFluid(32064, [<liquid:naquadah_oxide_aero_solution>]);
 removeMaterialFluid(32065, [<liquid:hot_naquadah_oxide_neocryolite_solution>]);
 
+// Half Ships
+mods.jei.JEI.removeAndHide(<contenttweaker:tierfourandhalfship>);
+mods.jei.JEI.removeAndHide(<contenttweaker:tiereightandhalfship>);
+
 // Stabilized Miners
 mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized>);
 mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized_matter>);
