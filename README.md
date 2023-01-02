@@ -22,7 +22,7 @@ nomi-ceu comes with compatibility scripts for the following mods. You can drop t
 ## Hard mode info
 If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack. Highlights include:
 
-- No DML for easy infinite resources   
+- No DME for easy infinite resources   
 - Nomicoins can't be spent  
 - The Steam Age  
 - No Creative Tank; instead...  
