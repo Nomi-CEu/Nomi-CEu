@@ -6,7 +6,7 @@ Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [Gr
 - New processing chains for Naquadah, Advanced SMDs, Crystal Chips, and more  
 - Fixed lots of unpleasant CE-ness - fixed infinite Amp bug, different ore stone types don't clog up your inventory, etc.   
 - Super-performant emissive effects on machines, coil blocks, the Fusion Reactor, and more  
-- Updated questbook to guide you through all the new stuff  
+- Updated questbook to guide you through all the new stuff, including a completely new chapter, the Processing Lines Tab, to give you more info, useful tips and a visual representation of different processing lines, both new and old  
 - lots more...   
 
 ## Mod compatibility info
