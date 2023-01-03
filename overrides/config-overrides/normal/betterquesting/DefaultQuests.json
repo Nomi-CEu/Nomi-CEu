@@ -57065,7 +57065,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 1,
+          "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Pulsating Polymer Clay",
           "questlogic:8": "OR",
@@ -57799,7 +57799,7 @@
             "id:8": "minecraft:cobblestone"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Cobblestone",
@@ -58078,7 +58078,7 @@
             "id:8": "minecraft:water_bucket"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Water",
@@ -58129,7 +58129,7 @@
             "id:8": "minecraft:lava_bucket"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Lava",
@@ -58286,7 +58286,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay Balls.§r\n\n§nThis step requires a Extractor at voltage §lLV§r§n or higher.§r\n\nExtract your §6Clay§r to make §6Clay Balls§r.§r Probably easier to automate than placing and then breaking §6Clay§r. Used for §6Conduit Binder§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay Balls.§r\n\n§nThis step requires a Extractor at voltage §lLV§r§n or higher.§r\n\nExtract your §6Clay§r to make §6Clay Balls§r.§r Probably easier to automate than placing and then breaking §6Clay§r. Used for §6Conduit Binders§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59512,7 +59512,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Stone Dust.\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Cobblestone§r into §6Stone Dust§r. You\u0027ll actually get a lot of §6Stone Dust§r from §eOre Processing§r, but this could be your backup source. You\u0027ll need this for §6Concrete§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Stone Dust.\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Cobblestone§r into §6Stone Dust§r. You\u0027ll actually get a lot of §6Stone Dust§r from §eOre Processing§r, but this could be your backup source. You\u0027ll need this for §6Concrete§r. You can also centrifuge this, although the resources gained are not very useful, and are in very small amounts.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59569,7 +59569,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Concrete.\n\n§nThis step requires a Mixer at voltage §lLV§r§n or higher.§r\n\nMix §6Stone Dust§r, §6Clay Dust§r and some §9Water§r to make §6Concrete§r. This is probably the easiest way to get §6Concrete§r. You\u0027ll need this for §6Plascrete§r, used in §2Cleanrooms§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Concrete.\n\n§nThis step requires a Mixer at voltage §lLV§r§n or higher.§r\n\nMix §6Stone Dust§r, §6Clay Dust§r and some §9Water§r to make §6Concrete§r. This is probably the easiest way to get §6Concrete§r. You\u0027ll need this for §6Plascrete§r, used in §2Cleanrooms§r, and a tiny amount for §6Launch Pads§r.§o\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59582,7 +59582,7 @@
             }
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Concrete",
@@ -65986,183 +65986,183 @@
           "id:3": 938,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": -288
+          "x:3": 60,
+          "y:3": -216
         },
         "15:10": {
           "id:3": 939,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": -288
+          "x:3": 60,
+          "y:3": -144
         },
         "16:10": {
           "id:3": 940,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -252
+          "x:3": 96,
+          "y:3": -144
         },
         "17:10": {
           "id:3": 941,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": -216
+          "y:3": -180
         },
         "18:10": {
           "id:3": 942,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": -216
+          "y:3": -180
         },
         "19:10": {
           "id:3": 943,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -216
+          "x:3": 96,
+          "y:3": -108
         },
         "20:10": {
           "id:3": 944,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -180
+          "x:3": 132,
+          "y:3": -108
         },
         "21:10": {
           "id:3": 945,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": -144
+          "y:3": -108
         },
         "22:10": {
           "id:3": 946,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": -180
+          "x:3": 168,
+          "y:3": -144
         },
         "23:10": {
           "id:3": 947,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": -180
+          "x:3": 168,
+          "y:3": -216
         },
         "24:10": {
           "id:3": 948,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": -144
+          "x:3": 204,
+          "y:3": -216
         },
         "25:10": {
           "id:3": 949,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
-          "y:3": -252
+          "y:3": -288
         },
         "26:10": {
           "id:3": 950,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -288
+          "x:3": 60,
+          "y:3": 36
         },
         "27:10": {
           "id:3": 951,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": -288
+          "x:3": 60,
+          "y:3": 72
         },
         "28:10": {
           "id:3": 957,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -252
+          "x:3": 96,
+          "y:3": 36
         },
         "29:10": {
           "id:3": 958,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -216
+          "x:3": 132,
+          "y:3": 36
         },
         "30:10": {
           "id:3": 959,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -252
+          "x:3": 60,
+          "y:3": 0
         },
         "31:10": {
           "id:3": 960,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": -216
+          "x:3": 96,
+          "y:3": 0
         },
         "32:10": {
           "id:3": 961,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -180
+          "x:3": 168,
+          "y:3": 36
         },
         "33:10": {
           "id:3": 963,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": -180
+          "x:3": 96,
+          "y:3": -72
         },
         "34:10": {
           "id:3": 964,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": -144
+          "x:3": 132,
+          "y:3": -72
         },
         "35:10": {
           "id:3": 965,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": -252
+          "x:3": 60,
+          "y:3": -36
         },
         "36:10": {
           "id:3": 966,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 204,
-          "y:3": -216
+          "x:3": 96,
+          "y:3": -36
         },
         "37:10": {
           "id:3": 968,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": -252
+          "x:3": 96,
+          "y:3": -216
         },
         "38:10": {
           "id:3": 969,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
+          "x:3": 96,
           "y:3": -252
         },
         "39:10": {
           "id:3": 970,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -180
+          "x:3": 168,
+          "y:3": -252
         }
       }
     }
