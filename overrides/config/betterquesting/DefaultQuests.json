@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -762,7 +761,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n* Copper Ore\n* Tungstate Ore\n* Scheelite Ore\n* Cassiterite Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.",
+          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n* Copper Ore\n* Tungstate Ore\n* Scheelite Ore\n* Cassiterite Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.\n\n§2A new mission is available in CEu. This mission costs HV Electric Pumps and Cryotheum Dust. This nets you Solidified Neon, Xenon and Krypton, although it is better to get those from distilling Liquid Nether and Ender Air, as of the useful byproducts you get, and the tiny amount of each element you get in this mission.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38614,7 +38613,8 @@
     },
     "622:10": {
       "preRequisites:11": [
-        175
+        953,
+        10
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -38633,7 +38633,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 010: Neon",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -40132,7 +40132,8 @@
     },
     "645:10": {
       "preRequisites:11": [
-        175
+        952,
+        10
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -40151,7 +40152,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 036: Krypton",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -40595,7 +40596,8 @@
     },
     "652:10": {
       "preRequisites:11": [
-        175
+        10,
+        952
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -40614,7 +40616,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 054: Xenon",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -66169,7 +66171,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
