@@ -9231,7 +9231,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nFish Oil and Canola Oil are probably the easiest, but it\u0027s up to you to choose.\n\nFish are easiest to get from §aGuardian Models§r from §bDML§r.",
+          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nFish Oil and Canola Oil are probably the easiest, but it\u0027s up to you to choose.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23071,7 +23071,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Fish Oil, surprisingly, comes from fish.",
+          "desc:8": "Fish Oil, surprisingly, comes from fish.\n\nYou can get fish from §bGregTech\u0027s §3Fishers§r, which consume §6String§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
