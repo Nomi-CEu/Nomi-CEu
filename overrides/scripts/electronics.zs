@@ -158,7 +158,7 @@ assembler.recipeBuilder()
 //	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 
 //Wood Pulp
-recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<gregtech:meta_tool:12>]);	
+recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:craftingToolMortar>]);	
 
 //Pyrolyse Oven
 recipes.removeByRecipeName("gregtech:pyrolyse_oven");	

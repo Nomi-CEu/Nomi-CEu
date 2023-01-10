@@ -389,7 +389,10 @@ cutter.recipeBuilder()
 	.buildAndRegister();
 
 // Tooltips
-<gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
+
+// Not needed because of better tooltips.
+//<gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
+
 <thermalexpansion:capacitor>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
 <thermalexpansion:capacitor:1>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
 <thermalexpansion:capacitor:2>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
