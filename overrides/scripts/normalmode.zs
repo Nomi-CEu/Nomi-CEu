@@ -644,12 +644,12 @@ recipes.addShaped(<gregtech:cleanroom_casing:2>, [
 ]);
 
 // Replace recycling recipes
-<recipemap:arc_furnace>.findRecipe(30, [<gregtech:cleanroom_casing:2>], [<liquid:oxygen> * 691]).remove();
+<recipemap:arc_furnace>.findRecipe(30, [<gregtech:cleanroom_casing:2>], [<liquid:oxygen> * 1265]).remove();
 <recipemap:macerator>.findRecipe(32, [<gregtech:cleanroom_casing:2>], null).remove();
 
 arc_furnace.recipeBuilder()
 	.inputs([<gregtech:cleanroom_casing:2>])
-	.fluidInputs([<liquid:oxygen> * 691])
+	.fluidInputs([<liquid:oxygen> * 1265])
 	.outputs([<metaitem:ingotIridium> * 4, <metaitem:ingotBlackSteel> * 2, <metaitem:dustSmallAsh> * 6])
 	.duration(691)
 	.EUt(30)
