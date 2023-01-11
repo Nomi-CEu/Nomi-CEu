@@ -306,13 +306,30 @@
           "rewards:9": {
             "0:10": {
               "Count:3": 4,
-              "Damage:2": 19,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:mining_hammer",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "diamond"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "AoEColumn:3": 1,
+                  "AoELayer:3": 0,
+                  "AoERow:3": 1,
+                  "MaxAoEColumn:3": 1,
+                  "MaxAoELayer:3": 0,
+                  "MaxAoERow:3": 1,
+                  "TorchPlacing:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.5,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "diamond",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 4.8
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
@@ -429,17 +446,34 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly, so they\u0027re absolutely worth investing your first few ingots of metal into§..\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material.",
+          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly, so they\u0027re absolutely worth investing your first few ingots of metal into§..\n\nHowever, your free 4 Diamond Mining Hammers should last you a while, and you can always fix them using an anvil and some diamonds.\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 19,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:mining_hammer",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "diamond"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "AoEColumn:3": 1,
+                "AoELayer:3": 0,
+                "AoERow:3": 1,
+                "MaxAoEColumn:3": 1,
+                "MaxAoELayer:3": 0,
+                "MaxAoERow:3": 1,
+                "TorchPlacing:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.5,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.8
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -907,17 +941,26 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Neutronium tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress.",
+          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not plates). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress. Technically, this quest accepts tools made of any material, but it is still highly recommended you use §6Wrought Iron§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 13,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:wire_cutter",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "neutronium"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 1.0,
+                "AttackSpeed:5": -2.4,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 6.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -962,79 +1005,136 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "craftingToolHardHammer",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:hammer",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 9,
-              "OreDict:8": "craftingToolFile",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:file",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 5,
-              "OreDict:8": "craftingToolSaw",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:saw",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "HarvestIce:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.6,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "3:10": {
               "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "craftingToolWrench",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "4:10": {
               "Count:3": 1,
-              "Damage:2": 11,
-              "OreDict:8": "craftingToolScrewdriver",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:screwdriver",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "5:10": {
               "Count:3": 1,
-              "Damage:2": 13,
-              "OreDict:8": "craftingToolWireCutter",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_cutter",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "6:10": {
               "Count:3": 1,
-              "Damage:2": 12,
-              "OreDict:8": "craftingToolMortar",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:mortar",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -5409,7 +5509,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first §6Tier Two Circuits§r will require §2two §6Tier One Circuits§r plus §2two §6Diodes§r.\n\nThese are rather expensive... Always be on the lookout for a cheaper way to make your circuits - new sets of recipes become available each time you make a new tier of §2Circuit Assembler§r. Conveniently, this tier of Circuit unlocks one now!",
+          "desc:8": "Your first §6Tier Two Circuits§r will require §2three §6Tier One Circuits§r plus §2two §6Diodes§r.\n\nThese are rather expensive... Always be on the lookout for a cheaper way to make your circuits - new sets of recipes become available each time you make a new tier of §2Circuit Assembler§r. Conveniently, this tier of Circuit unlocks one now!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5623,7 +5723,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Metal Bender §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n",
+          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Metal Bender §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r once you get §9Polyethylene (PE)§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6067,7 +6167,8 @@
     "86:10": {
       "preRequisites:11": [
         84,
-        816
+        816,
+        822
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6267,7 +6368,8 @@
     "89:10": {
       "preRequisites:11": [
         87,
-        236
+        236,
+        130
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6533,8 +6635,8 @@
     },
     "93:10": {
       "preRequisites:11": [
-        95,
-        98
+        98,
+        96
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6667,13 +6769,13 @@
     },
     "95:10": {
       "preRequisites:11": [
-        812,
-        887
+        973,
+        184
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Ethylene§r is a hydrocarbon made from §2either cracking and distilling Light Fuel, or§r dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. It is an extremely important chemical in the production of plastics.\n\n§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.",
+          "desc:8": "§nThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Ethylene§r is a hydrocarbon made from §2through Petroleum or§r dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. §2Petroleum is a faster way of making Ethylene, while also requiring only LV machines. If you do this, Ethylene is best gotten through distilling Severly-Steam Cracked Naphtha.§r However, the latter way uses chemicals that you\u0027ll need later anyways, so that might be your first setup, if you have the infrastructure to do so. §2However, it is highly recommended to use Petroleum, especially once you have unlocked Distillation Towers at HV.§r\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6689,7 +6791,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Ethylene and Polyethylene",
+          "name:8": "§2Ethylene",
           "partysinglereward:1": 0,
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
@@ -6711,7 +6813,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
+              "id:8": "contenttweaker:omnicoin25"
             }
           }
         }
@@ -6726,7 +6828,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "plastic"
+              "FluidName:8": "ethylene"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -6740,7 +6842,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Form §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components.",
+          "desc:8": "§nThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6752,7 +6854,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Plastic Sheets",
+          "name:8": "Polyethylene",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -6786,7 +6888,21 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "plastic"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 0,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
@@ -8779,8 +8895,6 @@
     },
     "126:10": {
       "preRequisites:11": [
-        95,
-        130,
         830
       ],
       "properties:10": {
@@ -9090,7 +9204,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC.\n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.\n\n",
+          "desc:8": "§nThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9124,7 +9238,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
+              "id:8": "contenttweaker:omnicoin25"
             }
           }
         }
@@ -15551,7 +15665,8 @@
     },
     "228:10": {
       "preRequisites:11": [
-        490
+        490,
+        29
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24826,28 +24941,32 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aSoft Hammer§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the hammer.\n\nThis quest accepts a §aSoft Hammer§r made from any material.",
+          "desc:8": "A §aSoft Mallet§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the mallet.\n\nAlthough you can make it out of §6Wood§r, it is probably better to make it out of §6Rubber§r.\n\nThis quest accepts a §aSoft Mallet§r made from any material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 7,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:mallet",
             "tag:10": {
-              "GT.ToolStats:10": {
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
                 "AttackDamage:5": 1.0,
-                "DigSpeed:5": 4.0,
+                "AttackSpeed:5": -2.4,
+                "Durability:3": 0,
                 "HarvestLevel:3": 1,
-                "Material:8": "wood",
-                "MaxDurability:3": 48
-              }
+                "Material:8": "rubber",
+                "MaxDurability:3": 48,
+                "ToolSpeed:5": 4.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Soft Hammer",
+          "name:8": "Soft Mallet",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -24885,17 +25004,21 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 7,
-              "OreDict:8": "gtceSoftHammers",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:mallet",
               "tag:10": {
-                "GT.ToolStats:10": {
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
                   "AttackDamage:5": 1.0,
-                  "DigSpeed:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
                   "HarvestLevel:3": 1,
-                  "Material:8": "wood",
-                  "MaxDurability:3": 48
-                }
+                  "Material:8": "rubber",
+                  "MaxDurability:3": 48,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -26268,8 +26391,7 @@
     },
     "398:10": {
       "preRequisites:11": [
-        89,
-        130
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26491,7 +26613,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Anvils§f can be used to repair almost all §bGregTech tools§f!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§f spawn abundantly in §bLost Cities§f buildings, so go and snatch one!\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§f to repair tools made of §6Wrought Iron§f. The only tools unable to be repaired are the mortar and the plunger.",
+          "desc:8": "§3Anvils§f can be used to repair almost all §bGregTech tools§f!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§f spawn abundantly in §bLost Cities§f buildings, so go and snatch one!\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§f to repair tools made of §6Wrought Iron§f. The only tools unable to be repaired are the mortar and the plunger.\n\nAlso, you can now repair your free §6Mining Hammers§r with some §6Diamonds§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26557,7 +26679,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§2: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lDigital Interface§r: §2A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.§r\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine. This quest accepts a §aScrewdriver§r and §aCrowbar§r made from any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§2: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lDigital Interface§r: §2A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.§r\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26588,30 +26710,46 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 11,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:screwdriver",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 10,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:crowbar",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -26630,13 +26768,20 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 11,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:screwdriver",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "wrought_iron"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 1.0,
+                "AttackSpeed:5": 3.0,
+                "Durability:3": 0,
+                "Material:8": "iron",
+                "MaxDurability:3": 256
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -30530,7 +30675,7 @@
     },
     "491:10": {
       "preRequisites:11": [
-        4
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -30539,13 +30684,25 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 3,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:axe",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "iron"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "DisableShields:1": 1,
+                "TreeFelling:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 7.0,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -30584,19 +30741,31 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 3,
+              "Damage:2": 0,
               "OreDict:8": "craftingToolAxe",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:axe",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "DisableShields:1": 1,
+                  "TreeFelling:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 7.0,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 32767,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -43512,13 +43681,22 @@
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "craftingToolWrench",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "PrimaryMaterial:8": "darmstadtium"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -46593,7 +46771,8 @@
     },
     "755:10": {
       "preRequisites:11": [
-        3
+        3,
+        394
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49681,20 +49860,13 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "seed_oil"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "seed_oil"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -50458,14 +50630,32 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 21,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:drill_mv",
             "tag:10": {
-              "Charge:4": 400000,
-              "GT.ToolStats:10": {
-                "Material:8": "neutronium"
-              }
+              "Charge:4": 2147483647,
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "AoEColumn:3": 1,
+                "AoELayer:3": 2,
+                "AoERow:3": 1,
+                "MaxAoEColumn:3": 1,
+                "MaxAoELayer:3": 2,
+                "MaxAoERow:3": 1,
+                "TorchPlacing:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.0,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 6.0
+              },
+              "HideFlags:3": 2,
+              "MaxCharge:4": 2147483647
             }
           },
           "ignoresview:1": 0,
@@ -50527,7 +50717,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic.\n\nLater, you will unlock better recipes for this.",
+          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic. There is also a more recommended and efficient way, using Fine Annealed Copper Wire instead, which yields double the diodes.\n\nLater, you will unlock better recipes for this.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51214,7 +51404,8 @@
     },
     "830:10": {
       "preRequisites:11": [
-        93
+        93,
+        974
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -59485,7 +59676,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6§6§6Interfaces§r§r§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 45.\n\n",
+          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online. Just remember that channels are disabled by default in this pack.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6§6§6Interfaces§r§r§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 45.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59721,6 +59912,134 @@
       "questID:3": 971,
       "rewards:9": {},
       "tasks:9": {}
+    },
+    "972:10": {
+      "preRequisites:11": [
+        95
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Ethylene.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethylene"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Ethylene",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 972,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "973:10": {
+      "preRequisites:11": [
+        227,
+        810,
+        504,
+        546
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:air"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "MV Chemical Reactor, Sulfur, Brewery and Distillery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 973,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "974:10": {
+      "preRequisites:11": [
+        89
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Hidden Quest for HV Assembler",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "The First Tier Three Circuits",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 974,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -59916,7 +60235,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
-          "y:3": 40
+          "y:3": 8
         },
         "25:10": {
           "id:3": 231,
@@ -60426,7 +60745,7 @@
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
+          "x:3": -364,
           "y:3": 160
         },
         "26:10": {
@@ -60493,501 +60812,473 @@
           "y:3": 328
         },
         "35:10": {
-          "id:3": 94,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 264
-        },
-        "36:10": {
           "id:3": 95,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -412,
           "y:3": 332
         },
-        "37:10": {
+        "36:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 400
         },
-        "38:10": {
+        "37:10": {
           "id:3": 98,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -252,
           "y:3": 196
         },
-        "39:10": {
+        "38:10": {
           "id:3": 104,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -336,
           "y:3": 392
         },
-        "40:10": {
+        "39:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
           "y:3": 124
         },
-        "41:10": {
+        "40:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 124
         },
-        "42:10": {
+        "41:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 340
         },
-        "43:10": {
+        "42:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
-          "y:3": 108
+          "x:3": -364,
+          "y:3": 112
         },
-        "44:10": {
+        "43:10": {
           "id:3": 130,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -592,
-          "y:3": 336
+          "x:3": -604,
+          "y:3": 208
         },
-        "45:10": {
+        "44:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 444
         },
-        "46:10": {
+        "45:10": {
           "id:3": 132,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -256,
           "y:3": 500
         },
-        "47:10": {
+        "46:10": {
           "id:3": 133,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -532,
           "y:3": 440
         },
-        "48:10": {
+        "47:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 444
         },
-        "49:10": {
+        "48:10": {
           "id:3": 135,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -536,
           "y:3": 500
         },
-        "50:10": {
+        "49:10": {
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -208,
           "y:3": 232
         },
-        "51:10": {
-          "id:3": 165,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 216
-        },
-        "52:10": {
+        "50:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -364,
-          "y:3": 216
+          "x:3": -404,
+          "y:3": 284
         },
-        "53:10": {
+        "51:10": {
           "id:3": 187,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -252,
           "y:3": 36
         },
-        "54:10": {
+        "52:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 508
         },
-        "55:10": {
+        "53:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -184,
           "y:3": 472
         },
-        "56:10": {
+        "54:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -148,
-          "y:3": 4
+          "x:3": -404,
+          "y:3": 188
         },
-        "57:10": {
+        "55:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -154,
           "y:3": 156
         },
-        "58:10": {
+        "56:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 284
         },
-        "59:10": {
+        "57:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 160
         },
-        "60:10": {
+        "58:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 312
+          "x:3": -696,
+          "y:3": 304
         },
-        "61:10": {
+        "59:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 396
         },
-        "62:10": {
+        "60:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -592,
-          "y:3": 236
+          "x:3": -604,
+          "y:3": 268
         },
-        "63:10": {
+        "61:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 400
         },
-        "64:10": {
+        "62:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -444,
-          "y:3": 264
+          "x:3": -372,
+          "y:3": 284
         },
-        "65:10": {
-          "id:3": 505,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 264
-        },
-        "66:10": {
+        "63:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -372,
           "y:3": 444
         },
-        "67:10": {
+        "64:10": {
           "id:3": 509,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 4
         },
-        "68:10": {
+        "65:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -334,
           "y:3": 160
         },
-        "69:10": {
+        "66:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 356
+          "x:3": -696,
+          "y:3": 348
         },
-        "70:10": {
+        "67:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 216
+          "x:3": -436,
+          "y:3": 284
         },
-        "71:10": {
+        "68:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 88
         },
-        "72:10": {
+        "69:10": {
           "id:3": 556,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 268
+          "x:3": -696,
+          "y:3": 260
         },
-        "73:10": {
+        "70:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 224
+          "x:3": -696,
+          "y:3": 216
         },
-        "74:10": {
+        "71:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
+          "x:3": -364,
           "y:3": 40
         },
-        "75:10": {
+        "72:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 40
+          "x:3": -368,
+          "y:3": 216
         },
-        "76:10": {
+        "73:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -148,
-          "y:3": 40
+          "x:3": -404,
+          "y:3": 216
         },
-        "77:10": {
+        "74:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -190,
-          "y:3": 40
+          "x:3": -440,
+          "y:3": 216
         },
-        "78:10": {
+        "75:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
           "y:3": 88
         },
-        "79:10": {
+        "76:10": {
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -148,
           "y:3": 468
         },
-        "80:10": {
+        "77:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -422,
           "y:3": 108
         },
-        "81:10": {
+        "78:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 200
         },
-        "82:10": {
+        "79:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -284,
-          "y:3": 264
+          "x:3": -336,
+          "y:3": 284
         },
-        "83:10": {
-          "id:3": 812,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": -392,
-          "y:3": 352
-        },
-        "84:10": {
+        "80:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -614,
           "y:3": 148
         },
-        "85:10": {
+        "81:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -650,
           "y:3": 88
         },
-        "86:10": {
+        "82:10": {
           "id:3": 819,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 40
         },
-        "87:10": {
+        "83:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -602,
           "y:3": 40
         },
-        "88:10": {
+        "84:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -462,
           "y:3": 3
         },
-        "89:10": {
+        "85:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 88
         },
-        "90:10": {
+        "86:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
-          "y:3": 68
+          "x:3": -364,
+          "y:3": 72
         },
-        "91:10": {
+        "87:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 476
         },
-        "92:10": {
+        "88:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "93:10": {
+        "89:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "94:10": {
+        "90:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "95:10": {
+        "91:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "96:10": {
+        "92:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -372,
+          "x:3": -288,
           "y:3": 400
         },
-        "97:10": {
+        "93:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -284,
           "y:3": 296
         },
-        "98:10": {
+        "94:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 160
         },
-        "99:10": {
+        "95:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 124
         },
-        "100:10": {
+        "96:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -555,
-          "y:3": 284
+          "x:3": -564,
+          "y:3": 300
         },
-        "101:10": {
-          "id:3": 887,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -364,
-          "y:3": 264
-        },
-        "102:10": {
+        "97:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "103:10": {
+        "98:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 216
         },
-        "104:10": {
+        "99:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "105:10": {
+        "100:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 256
+        },
+        "101:10": {
+          "id:3": 973,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -392,
+          "y:3": 352
         }
       }
     },
@@ -64766,7 +65057,7 @@
           "id:3": 353,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -132,
           "y:3": 108
         },
         "27:10": {
@@ -64843,8 +65134,8 @@
           "id:3": 491,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 60
+          "x:3": -44,
+          "y:3": 144
         },
         "38:10": {
           "id:3": 495,
@@ -64892,8 +65183,8 @@
           "id:3": 687,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 132
+          "x:3": -72,
+          "y:3": 120
         },
         "45:10": {
           "id:3": 692,
@@ -66087,10 +66378,10 @@
         },
         "13:10": {
           "id:3": 937,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -288
+          "sizeX:3": 72,
+          "sizeY:3": 72,
+          "x:3": 36,
+          "y:3": -300
         },
         "14:10": {
           "id:3": 938,
@@ -66173,8 +66464,8 @@
           "id:3": 949,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": -288
+          "x:3": 120,
+          "y:3": -300
         },
         "26:10": {
           "id:3": 950,
@@ -66264,7 +66555,7 @@
           "id:3": 969,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 120,
           "y:3": -252
         },
         "39:10": {
@@ -66280,13 +66571,20 @@
           "sizeY:3": 0,
           "x:3": -24,
           "y:3": -136
+        },
+        "41:10": {
+          "id:3": 972,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -120,
+          "y:3": 132
         }
       }
     }
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,

@@ -269,21 +269,7 @@ function removeMaterialSolid(materialId as int) {
         "meta_wire_fine",
         "meta_rotor",
         "meta_lens",
-        "meta_turbine_blade",
-        "meta_tool_head_sword",
-        "meta_tool_head_pickaxe",
-        "meta_tool_head_shovel",
-        "meta_tool_head_axe",
-        "meta_tool_head_hoe",
-        "meta_tool_head_hammer",
-        "meta_tool_head_file",
-        "meta_tool_head_saw",
-        "meta_tool_head_drill",
-        "meta_tool_head_chainsaw",
-        "meta_tool_head_wrench",
-        "meta_tool_head_sense",
-        "meta_tool_head_buzz_saw",
-        "meta_tool_head_screwdriver"
+        "meta_turbine_blade"
     ];
     val materialWireCableParts as string[] = [
         "wire_single",
@@ -356,21 +342,7 @@ function removeMaterialFluid(materialId as int, materialFluids as ILiquidStack[]
         "meta_wire_fine",
         "meta_rotor",
         "meta_lens",
-        "meta_turbine_blade",
-        "meta_tool_head_sword",
-        "meta_tool_head_pickaxe",
-        "meta_tool_head_shovel",
-        "meta_tool_head_axe",
-        "meta_tool_head_hoe",
-        "meta_tool_head_hammer",
-        "meta_tool_head_file",
-        "meta_tool_head_saw",
-        "meta_tool_head_drill",
-        "meta_tool_head_chainsaw",
-        "meta_tool_head_wrench",
-        "meta_tool_head_sense",
-        "meta_tool_head_buzz_saw",
-        "meta_tool_head_screwdriver"
+        "meta_turbine_blade"
     ];
     val materialWireCableParts as string[] = [
         "wire_single",
@@ -446,21 +418,7 @@ function removeMaterial(material as Material, materialId as int, materialFluids 
         "meta_wire_fine",
         "meta_rotor",
         "meta_lens",
-        "meta_turbine_blade",
-        "meta_tool_head_sword",
-        "meta_tool_head_pickaxe",
-        "meta_tool_head_shovel",
-        "meta_tool_head_axe",
-        "meta_tool_head_hoe",
-        "meta_tool_head_hammer",
-        "meta_tool_head_file",
-        "meta_tool_head_saw",
-        "meta_tool_head_drill",
-        "meta_tool_head_chainsaw",
-        "meta_tool_head_wrench",
-        "meta_tool_head_sense",
-        "meta_tool_head_buzz_saw",
-        "meta_tool_head_screwdriver"
+        "meta_turbine_blade"
     ];
     val materialWireCableParts as string[] = [
         "wire_single",
