@@ -268,17 +268,30 @@
           "rewards:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 19,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
+              "id:8": "gregtech:mining_hammer",
               "tag:10": {
-                "orig_id:8": "gregtech:meta_tool",
-                "orig_meta:3": 19,
-                "orig_tag:10": {
-                  "GT.ToolStats:10": {
-                    "Material:8": "diamond"
-                  }
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "AoEColumn:3": 1,
+                  "AoELayer:3": 0,
+                  "AoERow:3": 1,
+                  "MaxAoEColumn:3": 1,
+                  "MaxAoELayer:3": 0,
+                  "MaxAoERow:3": 1,
+                  "TorchPlacing:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.5,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 3,
+                  "Material:8": "diamond",
+                  "MaxDurability:3": 768,
+                  "ToolSpeed:5": 6.4
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
@@ -5278,7 +5291,8 @@
     "89:10": {
       "preRequisites:11": [
         87,
-        236
+        236,
+        130
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -22049,8 +22063,7 @@
     },
     "398:10": {
       "preRequisites:11": [
-        89,
-        130
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -43062,7 +43075,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic.\n\nLater, you will unlock better recipes for this.",
+          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic. \n\nYou can also use Fine Annealed Copper Wire instead of Fine Copper Wire, which doubles your output. This is highly recommended.\n\nLater, you will unlock better recipes for this.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48707,7 +48720,7 @@
           "id:3": 130,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -576,
+          "x:3": -596,
           "y:3": 340
         },
         "47:10": {
