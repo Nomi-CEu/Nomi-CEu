@@ -324,10 +324,10 @@
                   "AttackDamage:5": 3.5,
                   "AttackSpeed:5": -3.2,
                   "Durability:3": 0,
-                  "HarvestLevel:3": 2,
+                  "HarvestLevel:3": 3,
                   "Material:8": "diamond",
-                  "MaxDurability:3": 256,
-                  "ToolSpeed:5": 4.8
+                  "MaxDurability:3": 768,
+                  "ToolSpeed:5": 6.4
                 },
                 "HideFlags:3": 2
               }
@@ -10636,7 +10636,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9Oil§r distillation will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than two fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
+          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9 Oil§r distillation will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than five fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2 You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -66584,7 +66584,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
