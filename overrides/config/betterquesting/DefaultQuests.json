@@ -445,7 +445,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly, so they\u0027re absolutely worth investing your first few ingots of metal into§..\n\nHowever, your free 4 Diamond Mining Hammers should last you a while, and you can always fix them using an anvil and some diamonds.\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material.",
+          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly.\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material. §rYour free 4 Diamond Mining Hammers should last you a while, and you can always fix them using an anvil and some diamonds.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -940,7 +940,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not plates). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress. Technically, this quest accepts tools made of any material, but it is still highly recommended you use §6Wrought Iron§r.",
+          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not plates). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress. This quest accepts any tool material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6774,7 +6774,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Ethylene§r is a hydrocarbon made from §2through Petroleum or§r dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. §2Petroleum is a faster way of making Ethylene, while also requiring only LV machines. If you do this, Ethylene is best gotten through distilling Severly-Steam Cracked Naphtha.§r However, the latter way uses chemicals that you\u0027ll need later anyways, so that might be your first setup, if you have the infrastructure to do so. §2However, it is highly recommended to use Petroleum, especially once you have unlocked Distillation Towers at HV.§r\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
+          "desc:8": "§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r from somewhere. §2Severely Steam-Cracked Naphtha§r is most efficient with respect to §9Ethylene§r, but §2Severely Steam-Cracked Light Fuel§r gives a better mix of products once you have a §3Distillation Tower§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50716,7 +50716,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic. There is also a more recommended and efficient way, using Fine Annealed Copper Wire instead, which yields double the diodes.\n\nLater, you will unlock better recipes for this.",
+          "desc:8": "§6Diodes§r are a component in the next Circuit tiers. They are made in an §3Assembler§r from liquid §9Glass§r, §6Fine Copper Wire§r and §6Gallium Arsenide§r. \n\nAlways be on the lookout for §ebetter recipes§r! §6Fine Annealed Copper Wire§r doubles your yield, and §9Polyethylene§r unlocks a few more efficient recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
