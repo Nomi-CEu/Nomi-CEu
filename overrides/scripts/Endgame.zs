@@ -195,7 +195,7 @@ makeShaped("of_processing_array", <metaitem:processing_array>,
        B : <metaitem:tool.dataorb>}); //dataorb
 
 // Titanium Ingot * 26
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:processing_array>], [<liquid:oxygen> * 381]).remove();
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:processing_array>], [<liquid:oxygen> * 3102]).remove();
 // Titanium Dust * 26
 <recipemap:macerator>.findRecipe(8, [<metaitem:processing_array>], null).remove();
 
@@ -280,15 +280,15 @@ recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.zpm");
 recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.uv");
 
 // Mercury Barium Calcium Cuprate Ingot * 32
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.hv>], [<liquid:oxygen> * 357]).remove();
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.hv>], [<liquid:oxygen> * 3896]).remove();
 // Mercury Barium Calcium Cuprate Dust * 32
 <recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.hv>], null).remove();
 // Uranium Triplatinum Ingot * 32
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.ev>], [<liquid:oxygen> * 474]).remove();
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.ev>], [<liquid:oxygen> * 9149]).remove();
 // Uranium Triplatinum Dust * 32
 <recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.ev>], null).remove();
 // Tungstensteel Ingot * 32
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.iv>], [<liquid:oxygen> * 568]).remove();
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.iv>], [<liquid:oxygen> * 7502]).remove();
 // Tungstensteel Dust * 32
 <recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.iv>], null).remove();
 

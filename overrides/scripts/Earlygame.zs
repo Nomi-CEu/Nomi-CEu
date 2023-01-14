@@ -21,9 +21,6 @@ furnace.addRecipe(<minecraft:slime_ball> * 2, <metaitem:plant_ball>, 0.0);
 //Ender Pearls
 alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs([<minecraft:ender_pearl>]).duration(300).EUt(16).buildAndRegister();
 
-//Wood Pulp
-recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:gtceMortars>]);
-
 //Dusts
 
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
@@ -389,7 +386,10 @@ cutter.recipeBuilder()
 	.buildAndRegister();
 
 // Tooltips
-<gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
+
+// Not needed because of better tooltips.
+//<gregtech:meta_tool:3>.addTooltip(format.yellow("All GT Axes have Lumberaxe Functionality"));
+
 <thermalexpansion:capacitor>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
 <thermalexpansion:capacitor:1>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));
 <thermalexpansion:capacitor:2>.addTooltip(format.red("Cannot be discharged in GT Battery Buffers"));

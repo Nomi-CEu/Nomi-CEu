@@ -305,13 +305,30 @@
           "rewards:9": {
             "0:10": {
               "Count:3": 4,
-              "Damage:2": 19,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:mining_hammer",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "diamond"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "AoEColumn:3": 1,
+                  "AoELayer:3": 0,
+                  "AoERow:3": 1,
+                  "MaxAoEColumn:3": 1,
+                  "MaxAoELayer:3": 0,
+                  "MaxAoERow:3": 1,
+                  "TorchPlacing:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.5,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 3,
+                  "Material:8": "diamond",
+                  "MaxDurability:3": 768,
+                  "ToolSpeed:5": 6.4
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
@@ -428,17 +445,34 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly, so they\u0027re absolutely worth investing your first few ingots of metal into§..\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material.",
+          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly.\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material. §rYour free 4 Diamond Mining Hammers should last you a while, and you can always fix them using an anvil and some diamonds.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 19,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:mining_hammer",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "diamond"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "AoEColumn:3": 1,
+                "AoELayer:3": 0,
+                "AoERow:3": 1,
+                "MaxAoEColumn:3": 1,
+                "MaxAoELayer:3": 0,
+                "MaxAoERow:3": 1,
+                "TorchPlacing:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.5,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.8
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -761,7 +795,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n* Copper Ore\n* Tungstate Ore\n* Scheelite Ore\n* Cassiterite Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.",
+          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n* Copper Ore\n* Tungstate Ore\n* Scheelite Ore\n* Cassiterite Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.\n\n§2A new mission is available in CEu. This mission costs HV Electric Pumps and Cryotheum Dust. This nets you Solidified Neon, Xenon and Krypton, although it is better to get those from distilling Liquid Nether and Ender Air, as of the useful byproducts you get, and the tiny amount of each element you get in this mission.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -906,17 +940,26 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Neutronium tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress.",
+          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not plates). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress. This quest accepts any tool material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 13,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:wire_cutter",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "neutronium"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 1.0,
+                "AttackSpeed:5": -2.4,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 6.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -961,79 +1004,136 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "craftingToolHardHammer",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:hammer",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 9,
-              "OreDict:8": "craftingToolFile",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:file",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 5,
-              "OreDict:8": "craftingToolSaw",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:saw",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "HarvestIce:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.6,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "3:10": {
               "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "craftingToolWrench",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "4:10": {
               "Count:3": 1,
-              "Damage:2": 11,
-              "OreDict:8": "craftingToolScrewdriver",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:screwdriver",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "5:10": {
               "Count:3": 1,
-              "Damage:2": 13,
-              "OreDict:8": "craftingToolWireCutter",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_cutter",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "6:10": {
               "Count:3": 1,
-              "Damage:2": 12,
-              "OreDict:8": "craftingToolMortar",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:mortar",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -1642,7 +1742,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into §6Coal Coke§r will not only make it more useful as fuel, but will also produce §9Phenol§r, which you\u0027ll need for circuits.\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nYou can §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.\n",
+          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into §6Coal Coke§r will not only make it more useful as fuel, but will also produce §9Phenol§r, which you\u0027ll need for circuits.\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nRemember that Hatches and Buses can be replaced by Hatches and Buses of any tier, although the Input Bus must be at least LV, as there are 2 inputs, and that you can  §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4222,7 +4322,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials. The first of which, §6Aluminium§r, is going to be important in the immediate future.\n\nThere is a diagram of how to build the EBF in §bJEI§r. The second and third levels must be a 3x3 square shape of Coil Blocks (§6Cupronickel§r is the only type of coil block you have access to for now) with an empty center. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nHowever, the bottom and top layers are very flexible. The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least §29§e Heatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches except Maintenance can be shared between Multiblocks!",
+          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials. The first of which, §6Aluminium§r, is going to be important in the immediate future.\n\nSince smelting §6Aluminium§r requires MV power, you\u0027re going to have to power this with 2 LV Energy Input Hatches.\n\nThere is a diagram of how to build the EBF in §bJEI§r. The second and third levels must be a 3x3 square shape of Coil Blocks (§6Cupronickel§r is the only type of coil block you have access to for now) with an empty center. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nHowever, the bottom and top layers are very flexible. The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least §29§e Heatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\nHatches and Buses can be replaced by Hatches and Buses of any tier, although the Input Bus must be at least LV, as there are 2 inputs.\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches except Maintenance can be shared between Multiblocks!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5408,7 +5508,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first §6Tier Two Circuits§r will require §2two §6Tier One Circuits§r plus §2two §6Diodes§r.\n\nThese are rather expensive... Always be on the lookout for a cheaper way to make your circuits - new sets of recipes become available each time you make a new tier of §2Circuit Assembler§r. Conveniently, this tier of Circuit unlocks one now!",
+          "desc:8": "Your first §6Tier Two Circuits§r will require §2three §6Tier One Circuits§r plus §2two §6Diodes§r.\n\nThese are rather expensive... Always be on the lookout for a cheaper way to make your circuits - new sets of recipes become available each time you make a new tier of §2Circuit Assembler§r. Conveniently, this tier of Circuit unlocks one now!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5622,7 +5722,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Metal Bender §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n",
+          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Metal Bender §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r once you get §9Polyethylene (PE)§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6066,7 +6166,8 @@
     "86:10": {
       "preRequisites:11": [
         84,
-        816
+        816,
+        822
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6266,7 +6367,8 @@
     "89:10": {
       "preRequisites:11": [
         87,
-        236
+        236,
+        130
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6532,8 +6634,8 @@
     },
     "93:10": {
       "preRequisites:11": [
-        95,
-        98
+        98,
+        96
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6599,7 +6701,6 @@
     },
     "94:10": {
       "preRequisites:11": [
-        184,
         810
       ],
       "properties:10": {
@@ -6667,13 +6768,13 @@
     },
     "95:10": {
       "preRequisites:11": [
-        812,
-        887
+        973,
+        184
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Ethylene§r is a hydrocarbon made from §2either cracking and distilling Light Fuel, or§r dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. It is an extremely important chemical in the production of plastics.\n\n§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.",
+          "desc:8": "§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r from somewhere. §2Severely Steam-Cracked Naphtha§r is most efficient with respect to §9Ethylene§r, but §2Severely Steam-Cracked Light Fuel§r gives a better mix of products once you have a §3Distillation Tower§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6689,7 +6790,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Ethylene and Polyethylene",
+          "name:8": "§2Ethylene",
           "partysinglereward:1": 0,
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
@@ -6711,7 +6812,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
+              "id:8": "contenttweaker:omnicoin25"
             }
           }
         }
@@ -6726,7 +6827,7 @@
           "requiredFluids:9": {
             "0:10": {
               "Amount:3": 1000,
-              "FluidName:8": "plastic"
+              "FluidName:8": "ethylene"
             }
           },
           "taskID:8": "bq_standard:fluid"
@@ -6740,7 +6841,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Form §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components.",
+          "desc:8": "§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6752,7 +6853,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Plastic Sheets",
+          "name:8": "Polyethylene",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -6786,7 +6887,21 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "plastic"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 0,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
@@ -7712,7 +7827,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Autocrafting at last.\n\nWell, you need patterns too I guess.",
+          "desc:8": "Autocrafting at last.\n\nWell, you need patterns too I guess.\n\nThe details of autocrafting will be explained in a later quest.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8779,8 +8894,6 @@
     },
     "126:10": {
       "preRequisites:11": [
-        95,
-        130,
         830
       ],
       "properties:10": {
@@ -9090,7 +9203,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC.\n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.\n\n",
+          "desc:8": "§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9124,7 +9237,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
+              "id:8": "contenttweaker:omnicoin25"
             }
           }
         }
@@ -10522,7 +10635,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9Oil§r distillation will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than two fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
+          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9 Oil§r distillation will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than five fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2 You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12564,7 +12677,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Petrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
+          "desc:8": "§nThis quest takes either Oil, Raw Oil, Light Oil or Heavy Oil to complete§r.\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15551,7 +15664,8 @@
     },
     "228:10": {
       "preRequisites:11": [
-        490
+        490,
+        29
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24826,28 +24940,32 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aSoft Hammer§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the hammer.",
+          "desc:8": "A §aSoft Mallet§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the mallet.\n\nAlthough you can make it out of §6Wood§r, it is probably better to make it out of §6Rubber§r.\n\nThis quest accepts a §aSoft Mallet§r made from any material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 7,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:mallet",
             "tag:10": {
-              "GT.ToolStats:10": {
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
                 "AttackDamage:5": 1.0,
-                "DigSpeed:5": 4.0,
+                "AttackSpeed:5": -2.4,
+                "Durability:3": 0,
                 "HarvestLevel:3": 1,
-                "Material:8": "wood",
-                "MaxDurability:3": 48
-              }
+                "Material:8": "rubber",
+                "MaxDurability:3": 48,
+                "ToolSpeed:5": 4.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Soft Hammer",
+          "name:8": "Soft Mallet",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -24885,17 +25003,21 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 7,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:mallet",
               "tag:10": {
-                "GT.ToolStats:10": {
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
                   "AttackDamage:5": 1.0,
-                  "DigSpeed:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
                   "HarvestLevel:3": 1,
-                  "Material:8": "wood",
-                  "MaxDurability:3": 48
-                }
+                  "Material:8": "rubber",
+                  "MaxDurability:3": 48,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -26268,8 +26390,7 @@
     },
     "398:10": {
       "preRequisites:11": [
-        89,
-        130
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26491,7 +26612,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Anvils§f can be used to repair almost all §bGregTech tools§f!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§f spawn abundantly in §bLost Cities§f buildings, so go and snatch one!\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§f to repair tools made of §6Wrought Iron§f. The only tools unable to be repaired are the mortar and the plunger.",
+          "desc:8": "§3Anvils§f can be used to repair almost all §bGregTech tools§f!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§f spawn abundantly in §bLost Cities§f buildings, so go and snatch one!\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§f to repair tools made of §6Wrought Iron§f. The only tools unable to be repaired are the mortar and the plunger.\n\nAlso, you can now repair your free §6Mining Hammers§r with some §6Diamonds§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26557,7 +26678,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§2: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lDigital Interface§r: §2A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.§r\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine. This quest accepts a §aScrewdriver§r and §aCrowbar§r made from any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§2: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lDigital Interface§r: §2A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.§r\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26588,30 +26709,46 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 11,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:screwdriver",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 10,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:crowbar",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -26630,13 +26767,20 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 11,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:screwdriver",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "wrought_iron"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 1.0,
+                "AttackSpeed:5": 3.0,
+                "Durability:3": 0,
+                "Material:8": "iron",
+                "MaxDurability:3": 256
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -26666,8 +26810,8 @@
     },
     "404:10": {
       "preRequisites:11": [
-        104,
-        403
+        403,
+        967
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -30530,22 +30674,34 @@
     },
     "491:10": {
       "preRequisites:11": [
-        4
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No need for Lumberaxes anymore, §dGregTech Axes§r will cut down entire trees for you. They won\u0027t destroy your Storage Drawer networks, too.",
+          "desc:8": "No need for Lumberaxes anymore, §dGregTech Axes§r will cut down entire trees for you. They won\u0027t destroy your Storage Drawer networks, too.\n\nThis quest accepts a §dGregTech Axe§r made from any material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 3,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:axe",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "iron"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "DisableShields:1": 1,
+                "TreeFelling:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 7.0,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -30584,19 +30740,31 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 3,
+              "Damage:2": 0,
               "OreDict:8": "craftingToolAxe",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:axe",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "DisableShields:1": 1,
+                  "TreeFelling:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 7.0,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 32767,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -38613,7 +38781,8 @@
     },
     "622:10": {
       "preRequisites:11": [
-        175
+        953,
+        10
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -38632,7 +38801,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 010: Neon",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -40131,7 +40300,8 @@
     },
     "645:10": {
       "preRequisites:11": [
-        175
+        952,
+        10
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -40150,7 +40320,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 036: Krypton",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -40594,7 +40764,8 @@
     },
     "652:10": {
       "preRequisites:11": [
-        175
+        10,
+        952
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -40613,7 +40784,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 054: Xenon",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -43509,13 +43680,22 @@
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "craftingToolWrench",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "PrimaryMaterial:8": "darmstadtium"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -45697,7 +45877,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§eUSE JEI!!!§r\n\n§bJEI§r stands for §bJust Enough Items§r. It\u0027s the list of all items that you see every time you open your inventory. It\u0027s the better(tm) recipe book that shows you all available items and recipes in the modpack.\n\nTo see it in action, pull up a quest that requires an item of some sort and just click the item!\n\nIf you want to know how to craft an item, just hover your mouse over it and press §6R§r. JEI will list all available recipes.\n\nIf you instead want to know what recipes use an item, hover over it and press §6U§r.\n\nHover over an item and press §6A§r to bookmark it. To remove a bookmarked item from the list, press A on the bookmark.\n\nOne of the remarkable features of JEI is that it\u0027s also capable of helping you with recipes. Right-click a crafting table, look up the recipe you need and press the §a[+]§r button: if you have all required items for the recipe, this will put them all into the crafting table for you.",
+          "desc:8": "§eUSE JEI!!!§r\n\n§bJEI§r stands for §bJust Enough Items§r. It\u0027s the list of all items that you see every time you open your inventory. It\u0027s the better(tm) recipe book that shows you all available items and recipes in the modpack.\n\nTo see it in action, pull up a quest that requires an item of some sort and just click the item!\n\nIf you want to know how to craft an item, just hover your mouse over it and press §6R§r. JEI will list all available recipes.\n\nIf you instead want to know what recipes use an item, hover over it and press §6U§r.\n\nHover over an item and press §6A§r to bookmark it. To remove a bookmarked item from the list, press A on the bookmark.\n\nOne of the remarkable features of JEI is that it\u0027s also capable of helping you with recipes. Right-click a crafting table, look up the recipe you need and press the §a[+]§r button: if you have all required items for the recipe, this will put them all into the crafting table for you.\n\n§2A new mod has been added: JEI Utilities.§r\nThis mod stores your 20 most recently seen recipes, and you can use the middle mouse button to move bookmarks around. There are some other features, but these features are probably the most notable and useful.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46590,7 +46770,8 @@
     },
     "755:10": {
       "preRequisites:11": [
-        3
+        3,
+        394
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -48251,7 +48432,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
+          "desc:8": "§nThis quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49678,20 +49859,13 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "seed_oil"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "seed_oil"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -50451,25 +50625,43 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With MV Batteries unlocked, you can make Power Units for electric GT tools. Most notable among them is the Drill, which at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.\n\nCharge these with a Battery of appropriate tier, or in an appropriately tiered machine.\n\nYou may want to look into Chainsaws for mass tree felling as well, or a wrench, for breaking machines very quickly. The other electric tools are probably not worth making.",
+          "desc:8": "§2With MV Batteries unlocked, you can make Power Units for electric GT tools. Most notable among them is the Drill, which at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.\n\nCharge these with a Battery of appropriate tier, or in an appropriately tiered machine.\n\nYou may want to look into Chainsaws for mass tree felling as well, or a Wrench, for breaking machines very quickly. The other electric tools are probably not worth making.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 21,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:drill_mv",
             "tag:10": {
-              "Charge:4": 400000,
-              "GT.ToolStats:10": {
-                "Material:8": "neutronium"
-              }
+              "Charge:4": 2147483647,
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "AoEColumn:3": 1,
+                "AoELayer:3": 2,
+                "AoERow:3": 1,
+                "MaxAoEColumn:3": 1,
+                "MaxAoELayer:3": 2,
+                "MaxAoERow:3": 1,
+                "TorchPlacing:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.0,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 6.0
+              },
+              "HideFlags:3": 2,
+              "MaxCharge:4": 2147483647
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2GregTech Drill",
+          "name:8": "§2GregTech Electric Tools",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -50501,7 +50693,7 @@
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 1,
-          "index:3": 0,
+          "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
@@ -50524,7 +50716,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic.\n\nLater, you will unlock better recipes for this.",
+          "desc:8": "§6Diodes§r are a component in the next Circuit tiers. They are made in an §3Assembler§r from liquid §9Glass§r, §6Fine Copper Wire§r and §6Gallium Arsenide§r. \n\nAlways be on the lookout for §ebetter recipes§r! §6Fine Annealed Copper Wire§r doubles your yield, and §9Polyethylene§r unlocks a few more efficient recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50931,7 +51123,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Large Chemical Reactor (LCR) is a multiblock Chemical Reactor with more input/output slots.§r\n\nThe §3LCR§r can also perform some exclusive reactions which allow you to combine multiple normal §3Chemical Reactor§r steps into a §6single step§r, such as:\n- §aNitrogen Dioxide§r\n- §aSulfuric Acid§r\n- §aEpichlorohydrin§r, needed for...\n- §aEpoxy§r\n\nThe §3LCR§r also is required to perform some recipes, such as §aRaw Gasoline§r production.\n\nAny other recipe which could be done in a normal §9Chemical Reactor§r, as well as certain §9Mixer§r recipes, can also be done in an §3LCR§r.\n\nAll §dOverclocks§r in the §3LCR§r are §6100% efficient§r; each overclock will §5quadruple the speed§r, as opposed to doubling it.",
+          "desc:8": "§2The Large Chemical Reactor (LCR) is a multiblock Chemical Reactor with more input/output slots.§r\n\nThe §3LCR§r can also perform some exclusive reactions which allow you to combine multiple normal §3Chemical Reactor§r steps into a §6single step§r, such as:\n- §aTetrafluoroethylene§r\n- §aNitrogen Dioxide§r\n- §aSulfuric Acid§r\n- §aEpichlorohydrin§r, needed for...\n- §aEpoxy§r\n\nThe §3LCR§r also is required to perform some recipes, such as §aRaw Gasoline§r production, and §aPolybenzimidazole§r.\n\nAny other recipe which could be done in a normal §9Chemical Reactor§r, as well as certain §9Mixer§r recipes, can also be done in an §3LCR§r.\n\nAll §dOverclocks§r in the §3LCR§r are §6100% efficient§r; each overclock will §5quadruple the speed§r, as opposed to doubling it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51211,7 +51403,8 @@
     },
     "830:10": {
       "preRequisites:11": [
-        93
+        93,
+        974
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -52080,7 +52273,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. ",
+          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\n§nThis quest completes via Fluoroantimonic Acid, or Trinium Dust, Enriched Naquadah Dust and Naquadria Dust.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. \n\nThis quest accepts either §6Fluoroantimonic Acid§r, for those doing the recommended full processing, or §6Trinium Dust, Enriched Naquadah Dust§r and §6Naquadria Dust§r, for those doing the mixer recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52136,6 +52329,35 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 130,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 125,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 126,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -54985,8 +55207,7 @@
     },
     "887:10": {
       "preRequisites:11": [
-        165,
-        546
+        165
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57013,7 +57234,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§nYou may have to hold the item for a few seconds for the whole line to auto-complete.",
+          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§nYou may have to hold the item for a few seconds for the whole line to auto-complete.\n\nThis is not complete, and is published out for testing purposes. Currently, only Pulsating Polymer Clay and Cobbleworks are implemented, but more chains are to come. These are Polyethylene and Polyvinyl Chloride, Oil Processing, Epoxy Resin, Rocket Fuel, Polytetrafluoroethylene, High-Octane Gasoline, Cetane-Boosted Diesel, Polybenzimidazole, Naquadah Processing and Platinum Group Processing. If you have any suggestions on other chains or on how to improve this tab, feel free to DM Integer Limit#0458 on Discord or create an issue on GitHub.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57047,14 +57268,13 @@
     },
     "924:10": {
       "preRequisites:11": [
-        925,
-        728,
-        936
+        971,
+        728
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Alloy Smelter at voltage §lLV§r§n or higher.§r\n\nThe final step. Combine §6Pulsating Dust§r and §6Resonant Clathrate§r to make §6Pulsating Polymer Clay§r. \n\nTake note that a §3§3Chemical Reactor§r making §6Resonant Clathrate§r will supply 1 §3Alloy Smelter§r of the same tier, and that one §bMV §3Alloy Smelter§r making §6Pulsating Polymer Clay§r supports 10.03 §3Simulation Chambers§r, with each higher tier doubling the amount of §3Simulation Chambers§r it supports.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Alloy Smelter at voltage §lLV§r§n or higher.§r\n\nThe final step. Combine §6Pulsating Dust§r and §6Resonant Clathrate§r to make §6Pulsating Polymer Clay§r. \n\nTake note that a §3§3Chemical Reactor§r making §6Resonant Clathrate§r will supply 1 §3Alloy Smelter§r of the same tier, and that one §bMV §3Alloy Smelter§r making §6Pulsating Polymer Clay§r supports 10.03 §3Simulation Chambers§r, with each higher tier doubling the amount of §3Simulation Chambers§r it supports.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57064,7 +57284,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 1,
+          "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Pulsating Polymer Clay",
           "questlogic:8": "OR",
@@ -57112,7 +57332,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57170,7 +57390,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Chemical Reactor at voltage §lMV§r§n or higher.§r\n\nCombine your §6Quartz§r and §6Resonant Ender§r to make §6Resonant Clathrate§r. One §3Electrolyser§r making §6Quartz§r supports one §3Chemical Reactor §rof the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Chemical Reactor at voltage §lMV§r§n or higher.§r\n\nCombine your §6Quartz§r and §6Resonant Ender§r to make §6Resonant Clathrate§r. One §3Electrolyser§r making §6Quartz§r supports one §3Chemical Reactor §rof the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57227,7 +57447,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57284,7 +57504,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57341,7 +57561,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57395,7 +57615,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§You might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§You might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57449,7 +57669,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57506,7 +57726,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57563,7 +57783,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Quartz§r. An §3Arc Furnace§r making §6Glass§r supports 2.5 §3Electrolysers§r of the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Quartz§r. An §3Arc Furnace§r making §6Glass§r supports 2.5 §3Electrolysers§r of the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57620,7 +57840,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires an Extractor of tier §lLV§r§n or higher.§r\n\nMelt your §6Ender Pearls§r into §6Resonant Ender§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires an Extractor of tier §lLV§r§n or higher.§r\n\nMelt your §6Ender Pearls§r into §6Resonant Ender§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57678,7 +57898,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\nYour first source of §6Ender Pearls§r could be §6Ender Lillies§r. However, that is too manual and slow for the purpose §6Ender Pearls§r are needed for here. Instead, you can make a net-positive §6Pulsating Polymer Clay§r setup that uses §6Enderman Data Models§r to produce §6Ender Pearls§r. A Self-Aware §6Enderman Data Model§r can supply enough §6Ender Pearls§r to support the running of 6.2 other models.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYour first source of §6Ender Pearls§r could be §6Ender Lillies§r. However, that is too manual and slow for the purpose §6Ender Pearls§r are needed for here. Instead, you can make a net-positive §6Pulsating Polymer Clay§r setup that uses §6Enderman Data Models§r to produce §6Ender Pearls§r. A Self-Aware §6Enderman Data Model§r can supply enough §6Ender Pearls§r to support the running of 6.2 other models.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57735,7 +57955,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Resonant Clathrate.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§n or higher.§r§r§r\n\nSmelt your §6Resonant Clathrate§r into §6Pulsating Dust§r. If you\u0027re using a §3Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. You might want to keep it as a §3Electric Furnace§r, depending on your circumstance. \n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§n or higher.§r§r§r\n\nSmelt your §6Resonant Clathrate§r into §6Pulsating Dust§r. If you\u0027re using a §3Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. You might want to keep it as a §3Electric Furnace§r, depending on your circumstance. \n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57789,7 +58009,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Cobblestone.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r This is the starting point of your §eCobbleworks§r. Also a cheap building block.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important in or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Cobblestone.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r This is the starting point of your §eCobbleworks§r. Also a cheap building block.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important in or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57798,7 +58018,7 @@
             "id:8": "minecraft:cobblestone"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Cobblestone",
@@ -57845,7 +58065,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Gravel.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r. Pretty much just another step of the §eCobbleworks§r, although it is used in §6Conduit Binders§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Gravel.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r. Pretty much just another step of the §eCobbleworks§r, although it is used in §6Conduit Binders§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57901,7 +58121,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or achieving Sand.\n\nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r. Used for §6Conduit Binders§r, and to continue with the §6Cobbleworks§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Sand.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r. Pretty much just another step of the §eCobbleworks§r, although it is used in §6Conduit Binders§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57957,7 +58177,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Dust.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r. Used for nothing, apart from turning into §6Clay§r and §6Netherrack§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Dust.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r. Used for nothing, apart from turning into §6Clay§r and §6Netherrack§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58014,7 +58234,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Clay.§r\n\n§nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay.§r\n\n§nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58068,7 +58288,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Water.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\nIn this case, you\u0027ll need §9Water§r for §6Clay§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Water.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\nIn this case, you\u0027ll need §9Water§r for §6Clay§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58077,7 +58297,7 @@
             "id:8": "minecraft:water_bucket"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Water",
@@ -58119,7 +58339,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Lava.§r\n\n§6Lava§r can be achieved in three main ways. The first is using a §3Chemical Reactor§r to turn §6Magma Blocks§r into §6Lava§r. The second is using §bActually Additions §6Lava Factories§r. These are quite slow. The final notable way is using a §bGregTech §6Fluid Drill§r in the Nether above a §6Lava§r vein.\n\nIn this case, you\u0027ll need §6Lava§r for §6Netherrack§r. You won\u0027t need much, although §6Lava§r can also be centrifuged for useful resources, and will be used heavily in the End Game for §6Lava Infused Crystals§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Lava.§r\n\n§6Lava§r can be achieved in three main ways. The first is using a §3Chemical Reactor§r to turn §6Magma Blocks§r into §6Lava§r. The second is using §bActually Additions §6Lava Factories§r. These are quite slow. The final notable way is using a §bGregTech §6Fluid Drill§r in the Nether above a §6Lava§r vein.\n\nIn this case, you\u0027ll need §6Lava§r for §6Netherrack§r. You won\u0027t need much, although §6Lava§r can also be centrifuged for useful resources, and will be used heavily in the End Game for §6Lava Infused Crystals§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58128,7 +58348,7 @@
             "id:8": "minecraft:lava_bucket"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Lava",
@@ -58173,7 +58393,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or achieving Netherrack.\n\nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and §6Lava§r into §6Netherrack§r. Pretty much used for nothing, apart from your first §6Hellish Matter§r and §6Netherrack Dust§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Netherrack.\n\nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and §6Lava§r into §6Netherrack§r. Pretty much used for nothing, apart from your first §6Hellish Matter§r and §6Netherrack Dust§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58229,7 +58449,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Netherrack Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Netherrack§r into §6Netherrack Dust§r. Used for nothing apart from §6Nether Cakes§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Netherrack Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Netherrack§r into §6Netherrack Dust§r. Used for nothing apart from §6Nether Cakes§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58285,7 +58505,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Clay Balls.§r\n\n§nThis step requires a Extractor at voltage §lLV§r§n or higher.§r\n\nExtract your §6Clay§r to make §6Clay Balls§r.§r Probably easier to automate than placing and then breaking §6Clay§r. Used for §6Conduit Binder§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay Balls.§r\n\n§nThis step requires a Extractor at voltage §lLV§r§n or higher.§r\n\nExtract your §6Clay§r to make §6Clay Balls§r.§r Probably easier to automate than placing and then breaking §6Clay§r. Used for §6Conduit Binders§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58341,7 +58561,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Clay Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Clay§r to make §6Clay Dust§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Clay§r to make §6Clay Dust§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58397,7 +58617,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Sodium, Silicon, Lithium and Aluminium.§r\n\n§nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nSplit your §6Clay Dust§r to make §6Sodium Dust§r, §6Silicon Dust§r, §6Lithium Dust§r, and §6Aluminium Dust§r.§r This is extremely important to passive, as you will need a lot of these resources, and this is the best way to get them.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Sodium, Silicon, Lithium and Aluminium.§r\n\n§nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nSplit your §6Clay Dust§r to make §6Sodium Dust§r, §6Silicon Dust§r, §6Lithium Dust§r, and §6Aluminium Dust§r.§r This is extremely important to passive, as you will need a lot of these resources, and this is the best way to get them.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 0,
@@ -58471,7 +58691,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Stone.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§n or higher.§r\n\nMainly used for decorational blocks. Still a part of §eCobbleworks§r I guess.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Stone.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§n or higher.§r\n\nMainly used for decorational blocks. Still part of §eCobbleworks§r I guess.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58527,7 +58747,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Glass.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Glass.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58878,7 +59098,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or achieving Glass Dust.\n\nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Glass§r into §6Glass Dust§r. Used for nothing, apart from §6Silicon Dioxide Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Glass Dust.\n\nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Glass§r into §6Glass Dust§r. Used for nothing, apart from §6Silicon Dioxide Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58934,7 +59154,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or achieving Silicon Dioxide Dust.\n\nThis step requires a Centrifuge at voltage §lLV§r§n or higher.§r\n\nSeperate your §6Glass Dust§r into §6Silicon Dioxide Dust§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Silicon Dioxide Dust.\n\nThis step requires a Centrifuge at voltage §lLV§r§n or higher.§r\n\nSeperate your §6Glass Dust§r into §6Silicon Dioxide Dust§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58990,7 +59210,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or achieving Quartz Sand.\n\nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Sand§r into §6Quartz Sand§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Quartz Sand.\n\nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Sand§r into §6Quartz Sand§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59046,7 +59266,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or achieving Sand.\n\nThis step requires a Centrifuge at voltage §lLV§r§n or higher.§r\n\nSeperate your §6Quartz Sand§r into §6Quartzite Dust§r and §6Certus Quartz Dust§r. This is a good renewable source of §6Certus Quartz§r, which you need for §bApplied Energistics 2§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Sand.\n\nThis step requires a Centrifuge at voltage §lLV§r§n or higher.§r\n\nSeperate your §6Quartz Sand§r into §6Quartzite Dust§r and §6Certus Quartz Dust§r. This is a good renewable source of §6Certus Quartz§r, which you need for §bApplied Energistics 2§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59108,7 +59328,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or achieving Oxygen.\n\nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nSplit your §6Silicon Dioxide Dust§r into §6Silicon Dust and Oxygen§r. This is the best source of Early Game §6Oxygen§r, although distilling §6Liquid Air§r may be better later, depending on your situation.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Oxygen.\n\nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nSplit your §6Silicon Dioxide Dust§r into §6Silicon Dust and Oxygen§r. This is the best source of Early Game §6Oxygen§r, although distilling §6Liquid Air§r may be better later, depending on your situation.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59223,6 +59443,602 @@
           "taskID:8": "bq_standard:fluid"
         }
       }
+    },
+    "963:10": {
+      "preRequisites:11": [
+        943
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or achieving Obsidian.§r\n\n§nThis step requires a Fluid Solidifier at voltage §lLV§r§n or higher, or a Rock Breaker at voltage §lHV§r§n or higher.§r\n\nCool down your §6Lava§r into §6Obsidian§r. You\u0027ll need a lot of this, so it\u0027s probably wise to use §3Rock Breakers§r once you hit §6HV§r, as they don\u0027t consume anything to produce §6Obsidian§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:obsidian"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Obsidian",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 963,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:obsidian"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "964:10": {
+      "preRequisites:11": [
+        963
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Obsidian Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Obsidian§r into §6Obsidian Dust§r. You\u0027ll need a lot of this for §6Petrotheum Dust§r.\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 297,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Obsidian Dust",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 964,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 297,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "965:10": {
+      "preRequisites:11": [
+        939
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Sandstone.§r\n\nCompact your §6Sand§r into §6Sandstone§r. It is recommended to use §3Mechanical Crafters§r or §6Compacting Drawers§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:sandstone"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Sandstone",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 965,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:sandstone"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "966:10": {
+      "preRequisites:11": [
+        965
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Saltpeter.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sandstone§r into §6Saltpeter§r. This is probably the best way to get §6Saltpeter§r, which you\u0027ll need a lot for §6Aerotheum Dust§r. You can also get §6Saltpeter§r from §bDeep Mob Evolution§r.\n\nYou can also electrolyse it for §6Potassium§r, although it isn\u0027t recommended because of how easily you can get §6Potassium§r, such as from §6Black Granite §3Processing§r, and how much §6Saltpeter§r it costs.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 313,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Saltpeter",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 966,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 313,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "967:10": {
+      "preRequisites:11": [
+        104
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online. Just remember that channels are disabled by default in this pack.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6§6§6Interfaces§r§r§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 45.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:crafting_monitor"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Setting up Autocrafting",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 967,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "968:10": {
+      "preRequisites:11": [
+        938
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Flint.§r\n\n§nThis step requires a Sifter at voltage §lLV§r§n or higher.§r\n\nSearch your §6Gravel§r for §6Flint§r. The only main thing you\u0027ll need this for is §6Storage Downgrades§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:flint"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Flint",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 968,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:flint"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "969:10": {
+      "preRequisites:11": [
+        937
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Stone Dust.\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Cobblestone§r into §6Stone Dust§r. You\u0027ll actually get a lot of §6Stone Dust§r from §eOre Processing§r, but this could be your backup source. You\u0027ll need this for §6Concrete§r. You can also centrifuge this, although the resources gained are not very useful, and are in very small amounts.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1599,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Stone Dust",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 969,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1599,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "970:10": {
+      "preRequisites:11": [
+        947,
+        969
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Concrete.\n\n§nThis step requires a Mixer at voltage §lLV§r§n or higher.§r\n\nMix §6Stone Dust§r, §6Clay Dust§r and some §9Water§r to make §6Concrete§r. This is probably the easiest way to get §6Concrete§r. You\u0027ll need this for §6Plascrete§r, used in §2Cleanrooms§r, and a tiny amount for §6Launch Pads§r.§o\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "concrete"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Concrete",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 970,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "concrete"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "971:10": {
+      "preRequisites:11": [
+        936,
+        925
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Hidden quest for Pulsating Polymer Clay Processing Line.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:air"
+          },
+          "ignoresview:1": 1,
+          "ismain:1": 1,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "\u0027Clay\u0027 and \u0027Pulsating Dust\u0027",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 971,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "972:10": {
+      "preRequisites:11": [
+        95
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§nThis quest completes via checkbox or upon achieving Ethylene.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethylene"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Ethylene",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 972,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "973:10": {
+      "preRequisites:11": [
+        227,
+        810,
+        504,
+        546
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:air"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "MV Chemical Reactor, Sulfur, Brewery and Distillery",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 973,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "974:10": {
+      "preRequisites:11": [
+        89
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Hidden Quest for HV Assembler",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "The First Tier Three Circuits",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 974,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -59418,7 +60234,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
-          "y:3": 40
+          "y:3": 8
         },
         "25:10": {
           "id:3": 231,
@@ -59928,7 +60744,7 @@
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
+          "x:3": -364,
           "y:3": 160
         },
         "26:10": {
@@ -59995,501 +60811,473 @@
           "y:3": 328
         },
         "35:10": {
-          "id:3": 94,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 264
-        },
-        "36:10": {
           "id:3": 95,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -412,
           "y:3": 332
         },
-        "37:10": {
+        "36:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 400
         },
-        "38:10": {
+        "37:10": {
           "id:3": 98,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -252,
           "y:3": 196
         },
-        "39:10": {
+        "38:10": {
           "id:3": 104,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -336,
           "y:3": 392
         },
-        "40:10": {
+        "39:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
           "y:3": 124
         },
-        "41:10": {
+        "40:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 124
         },
-        "42:10": {
+        "41:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 340
         },
-        "43:10": {
+        "42:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
-          "y:3": 108
+          "x:3": -364,
+          "y:3": 112
         },
-        "44:10": {
+        "43:10": {
           "id:3": 130,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -592,
-          "y:3": 336
+          "x:3": -604,
+          "y:3": 208
         },
-        "45:10": {
+        "44:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 444
         },
-        "46:10": {
+        "45:10": {
           "id:3": 132,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -256,
           "y:3": 500
         },
-        "47:10": {
+        "46:10": {
           "id:3": 133,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -532,
           "y:3": 440
         },
-        "48:10": {
+        "47:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 444
         },
-        "49:10": {
+        "48:10": {
           "id:3": 135,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -536,
           "y:3": 500
         },
-        "50:10": {
+        "49:10": {
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -208,
           "y:3": 232
         },
-        "51:10": {
-          "id:3": 165,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 216
-        },
-        "52:10": {
+        "50:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -364,
-          "y:3": 216
+          "x:3": -404,
+          "y:3": 284
         },
-        "53:10": {
+        "51:10": {
           "id:3": 187,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -252,
           "y:3": 36
         },
-        "54:10": {
+        "52:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 508
         },
-        "55:10": {
+        "53:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -184,
           "y:3": 472
         },
-        "56:10": {
+        "54:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -148,
-          "y:3": 4
+          "x:3": -404,
+          "y:3": 188
         },
-        "57:10": {
+        "55:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -154,
           "y:3": 156
         },
-        "58:10": {
+        "56:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 284
         },
-        "59:10": {
+        "57:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 160
         },
-        "60:10": {
+        "58:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 312
+          "x:3": -696,
+          "y:3": 304
         },
-        "61:10": {
+        "59:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 396
         },
-        "62:10": {
+        "60:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -592,
-          "y:3": 236
+          "x:3": -604,
+          "y:3": 268
         },
-        "63:10": {
+        "61:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 400
         },
-        "64:10": {
+        "62:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -444,
-          "y:3": 264
+          "x:3": -372,
+          "y:3": 284
         },
-        "65:10": {
-          "id:3": 505,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 264
-        },
-        "66:10": {
+        "63:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -372,
           "y:3": 444
         },
-        "67:10": {
+        "64:10": {
           "id:3": 509,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 4
         },
-        "68:10": {
+        "65:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -334,
           "y:3": 160
         },
-        "69:10": {
+        "66:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 356
+          "x:3": -696,
+          "y:3": 348
         },
-        "70:10": {
+        "67:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 216
+          "x:3": -436,
+          "y:3": 284
         },
-        "71:10": {
+        "68:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 88
         },
-        "72:10": {
+        "69:10": {
           "id:3": 556,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 268
+          "x:3": -696,
+          "y:3": 260
         },
-        "73:10": {
+        "70:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 224
+          "x:3": -696,
+          "y:3": 216
         },
-        "74:10": {
+        "71:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
+          "x:3": -364,
           "y:3": 40
         },
-        "75:10": {
+        "72:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 40
+          "x:3": -368,
+          "y:3": 216
         },
-        "76:10": {
+        "73:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -148,
-          "y:3": 40
+          "x:3": -404,
+          "y:3": 216
         },
-        "77:10": {
+        "74:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -190,
-          "y:3": 40
+          "x:3": -440,
+          "y:3": 216
         },
-        "78:10": {
+        "75:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
           "y:3": 88
         },
-        "79:10": {
+        "76:10": {
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -148,
           "y:3": 468
         },
-        "80:10": {
+        "77:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -422,
           "y:3": 108
         },
-        "81:10": {
+        "78:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 200
         },
-        "82:10": {
+        "79:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -284,
-          "y:3": 264
+          "x:3": -336,
+          "y:3": 284
         },
-        "83:10": {
-          "id:3": 812,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": -392,
-          "y:3": 352
-        },
-        "84:10": {
+        "80:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -614,
           "y:3": 148
         },
-        "85:10": {
+        "81:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -650,
           "y:3": 88
         },
-        "86:10": {
+        "82:10": {
           "id:3": 819,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 40
         },
-        "87:10": {
+        "83:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -602,
           "y:3": 40
         },
-        "88:10": {
+        "84:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -462,
           "y:3": 3
         },
-        "89:10": {
+        "85:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 88
         },
-        "90:10": {
+        "86:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -382,
-          "y:3": 68
+          "x:3": -364,
+          "y:3": 72
         },
-        "91:10": {
+        "87:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 476
         },
-        "92:10": {
+        "88:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "93:10": {
+        "89:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "94:10": {
+        "90:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "95:10": {
+        "91:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "96:10": {
+        "92:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -372,
+          "x:3": -288,
           "y:3": 400
         },
-        "97:10": {
+        "93:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -284,
           "y:3": 296
         },
-        "98:10": {
+        "94:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 160
         },
-        "99:10": {
+        "95:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 124
         },
-        "100:10": {
+        "96:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -555,
-          "y:3": 284
+          "x:3": -564,
+          "y:3": 300
         },
-        "101:10": {
-          "id:3": 887,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -364,
-          "y:3": 264
-        },
-        "102:10": {
+        "97:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "103:10": {
+        "98:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 216
         },
-        "104:10": {
+        "99:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "105:10": {
+        "100:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 256
+        },
+        "101:10": {
+          "id:3": 973,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -392,
+          "y:3": 352
         }
       }
     },
@@ -64268,7 +65056,7 @@
           "id:3": 353,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -132,
           "y:3": 108
         },
         "27:10": {
@@ -64345,8 +65133,8 @@
           "id:3": 491,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 60
+          "x:3": -44,
+          "y:3": 144
         },
         "38:10": {
           "id:3": 495,
@@ -64394,8 +65182,8 @@
           "id:3": 687,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 132
+          "x:3": -72,
+          "y:3": 120
         },
         "45:10": {
           "id:3": 692,
@@ -65409,7 +66197,7 @@
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
+          "x:3": -120,
           "y:3": 624
         },
         "32:10": {
@@ -65467,6 +66255,13 @@
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 528
+        },
+        "40:10": {
+          "id:3": 967,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 624
         }
       }
     },
@@ -65582,150 +66377,206 @@
         },
         "13:10": {
           "id:3": 937,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -144
+          "sizeX:3": 72,
+          "sizeY:3": 72,
+          "x:3": 36,
+          "y:3": -300
         },
         "14:10": {
           "id:3": 938,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": -144
+          "x:3": 60,
+          "y:3": -216
         },
         "15:10": {
           "id:3": 939,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
+          "x:3": 60,
           "y:3": -144
         },
         "16:10": {
           "id:3": 940,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
+          "x:3": 96,
           "y:3": -144
         },
         "17:10": {
           "id:3": 941,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": -108
+          "x:3": 132,
+          "y:3": -180
         },
         "18:10": {
           "id:3": 942,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": -108
+          "x:3": 96,
+          "y:3": -180
         },
         "19:10": {
           "id:3": 943,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": -180
+          "x:3": 96,
+          "y:3": -108
         },
         "20:10": {
           "id:3": 944,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": -180
+          "x:3": 132,
+          "y:3": -108
         },
         "21:10": {
           "id:3": 945,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": -180
+          "x:3": 168,
+          "y:3": -108
         },
         "22:10": {
           "id:3": 946,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": -72
+          "x:3": 168,
+          "y:3": -144
         },
         "23:10": {
           "id:3": 947,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": -108
+          "x:3": 168,
+          "y:3": -216
         },
         "24:10": {
           "id:3": 948,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 300,
-          "y:3": -108
+          "x:3": 204,
+          "y:3": -216
         },
         "25:10": {
           "id:3": 949,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -108
+          "x:3": 120,
+          "y:3": -300
         },
         "26:10": {
           "id:3": 950,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -180
+          "x:3": 60,
+          "y:3": 36
         },
         "27:10": {
           "id:3": 951,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": -180
+          "x:3": 60,
+          "y:3": 72
         },
         "28:10": {
           "id:3": 957,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -216
+          "x:3": 96,
+          "y:3": 36
         },
         "29:10": {
           "id:3": 958,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -252
+          "x:3": 132,
+          "y:3": 36
         },
         "30:10": {
           "id:3": 959,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -108
+          "x:3": 60,
+          "y:3": 0
         },
         "31:10": {
           "id:3": 960,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -72
+          "x:3": 96,
+          "y:3": 0
         },
         "32:10": {
           "id:3": 961,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": -288
+          "x:3": 168,
+          "y:3": 36
+        },
+        "33:10": {
+          "id:3": 963,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": -72
+        },
+        "34:10": {
+          "id:3": 964,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": -72
+        },
+        "35:10": {
+          "id:3": 965,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -36
+        },
+        "36:10": {
+          "id:3": 966,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": -36
+        },
+        "37:10": {
+          "id:3": 968,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 96,
+          "y:3": -216
+        },
+        "38:10": {
+          "id:3": 969,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 120,
+          "y:3": -252
+        },
+        "39:10": {
+          "id:3": 970,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": -252
+        },
+        "40:10": {
+          "id:3": 971,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -24,
+          "y:3": -136
         }
       }
     }
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,

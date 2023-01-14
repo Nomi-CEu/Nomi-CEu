@@ -268,13 +268,30 @@
           "rewards:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 19,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:mining_hammer",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "diamond"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "AoEColumn:3": 1,
+                  "AoELayer:3": 0,
+                  "AoERow:3": 1,
+                  "MaxAoEColumn:3": 1,
+                  "MaxAoELayer:3": 0,
+                  "MaxAoERow:3": 1,
+                  "TorchPlacing:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.5,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 3,
+                  "Material:8": "diamond",
+                  "MaxDurability:3": 768,
+                  "ToolSpeed:5": 6.4
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
@@ -382,13 +399,30 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 19,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:mining_hammer",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "diamond"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "AoEColumn:3": 1,
+                "AoELayer:3": 0,
+                "AoERow:3": 1,
+                "MaxAoEColumn:3": 1,
+                "MaxAoELayer:3": 0,
+                "MaxAoERow:3": 1,
+                "TorchPlacing:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.5,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.8
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -778,17 +812,26 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Neutronium tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress.",
+          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron Tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress. \n\nThis quest technically accepts any tool material, but it is highly recommended to use §6Wrought Iron§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 13,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:wrench",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "neutronium"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.0,
+                "AttackSpeed:5": -2.8,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "wrought_iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 6.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -820,79 +863,136 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "craftingToolHardHammer",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:hammer",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 9,
-              "OreDict:8": "craftingToolFile",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:file",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 5,
-              "OreDict:8": "craftingToolSaw",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:saw",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "HarvestIce:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.6,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "3:10": {
               "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "craftingToolWrench",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "4:10": {
               "Count:3": 1,
-              "Damage:2": 11,
-              "OreDict:8": "craftingToolScrewdriver",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:screwdriver",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "5:10": {
               "Count:3": 1,
-              "Damage:2": 13,
-              "OreDict:8": "craftingToolWireCutter",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_cutter",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             },
             "6:10": {
               "Count:3": 1,
-              "Damage:2": 12,
-              "OreDict:8": "craftingToolMortar",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:mortar",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -5191,7 +5291,8 @@
     "89:10": {
       "preRequisites:11": [
         87,
-        236
+        236,
+        130
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9231,7 +9332,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nFish Oil and Canola Oil are probably the easiest, but it\u0027s up to you to choose.\n\nFish are easiest to get from §aGuardian Models§r from §bDML§r.",
+          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nFish Oil and Canola Oil are probably the easiest, but it\u0027s up to you to choose.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14592,7 +14693,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Electrolyzers§r use electricity to separate items into their more basic components.\n\nFor example, you can break down Water into §9Hydrogen Gas§r and §9Oxygen Gas§r, or break down §6Clay Dust§r into §6Sodium Dust§r, §6Silicon Dust§r, §6Lithium Dust§r, and §6Aluminium Dust§r.",
+          "desc:8": "§3Electrolyzers§r use electricity to separate items into their more basic components.\n\nFor example, you can break down §9Water§r into §9Hydrogen Gas§r and §9Oxygen Gas§r, or break down §6Silicon Dioxide Dust§r, which you can get from processing §6Sand§r, into §6Sodium Dust§r and §9Oxygen Gas§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20656,28 +20757,32 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aSoft Hammer§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the hammer.",
+          "desc:8": "A §aSoft Mallet§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the mallet.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 7,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:mallet",
             "tag:10": {
-              "GT.ToolStats:10": {
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
                 "AttackDamage:5": 1.0,
-                "DigSpeed:5": 4.0,
+                "AttackSpeed:5": -2.4,
+                "Durability:3": 0,
                 "HarvestLevel:3": 1,
                 "Material:8": "wood",
-                "MaxDurability:3": 48
-              }
+                "MaxDurability:3": 48,
+                "ToolSpeed:5": 4.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Soft Hammer",
+          "name:8": "Soft Mallet",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -20702,17 +20807,21 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 7,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:mallet",
               "tag:10": {
-                "GT.ToolStats:10": {
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
                   "AttackDamage:5": 1.0,
-                  "DigSpeed:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
                   "HarvestLevel:3": 1,
                   "Material:8": "wood",
-                  "MaxDurability:3": 48
-                }
+                  "MaxDurability:3": 48,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -21954,8 +22063,7 @@
     },
     "398:10": {
       "preRequisites:11": [
-        89,
-        130
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -22191,7 +22299,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §a§lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §a§lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §a§lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §a§lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §a§lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §2§lDetector§r: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §2§lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nThis quest accepts a §aScrewdriver§r and a §aCrowbar§r made of any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §a§lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §a§lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §a§lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §a§lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §a§lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §2§lDetector§r: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §2§lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22222,30 +22330,46 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 11,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:screwdriver",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
               }
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 10,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:crowbar",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -22264,13 +22388,20 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 11,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:screwdriver",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "wrought_iron"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 1.0,
+                "AttackSpeed:5": 3.0,
+                "Durability:3": 0,
+                "Material:8": "iron",
+                "MaxDurability:3": 256
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -23071,7 +23202,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Fish Oil, surprisingly, comes from fish.",
+          "desc:8": "Fish Oil, surprisingly, comes from fish.\n\nYou can get fish from §bGregTech\u0027s §3Fishers§r, which consume §6String§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26019,17 +26150,29 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No need for Lumberaxes anymore, §dGregTech Axes§r will cut down entire trees for you. They won\u0027t destroy your Storage Drawer networks, too.",
+          "desc:8": "No need for Lumberaxes anymore, §dGregTech Axes§r will cut down entire trees for you. They won\u0027t destroy your Storage Drawer networks, too.\n\nThis quest accepts a §dGregTech Axe§r made from any material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 3,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:axe",
             "tag:10": {
-              "GT.ToolStats:10": {
-                "Material:8": "iron"
-              }
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "DisableShields:1": 1,
+                "TreeFelling:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 7.0,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.0
+              },
+              "HideFlags:3": 2
             }
           },
           "ignoresview:1": 0,
@@ -26055,19 +26198,31 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 3,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_tool",
+              "id:8": "gregtech:axe",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "iron"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "DisableShields:1": 1,
+                  "TreeFelling:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 7.0,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -36793,13 +36948,22 @@
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 8,
-              "OreDict:8": "craftingToolWrench",
-              "id:8": "gregtech:meta_tool",
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench",
               "tag:10": {
-                "GT.ToolStats:10": {
-                  "PrimaryMaterial:8": "darmstadtium"
-                }
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "wrought_iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
               }
             }
           },
@@ -42767,7 +42931,7 @@
               "Count:3": 22,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:steam_casing"
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42837,14 +43001,32 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 21,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_tool",
+            "id:8": "gregtech:drill_mv",
             "tag:10": {
-              "Charge:4": 400000,
-              "GT.ToolStats:10": {
-                "Material:8": "neutronium"
-              }
+              "Charge:4": 2147483647,
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "AoEColumn:3": 1,
+                "AoELayer:3": 2,
+                "AoERow:3": 1,
+                "MaxAoEColumn:3": 1,
+                "MaxAoELayer:3": 2,
+                "MaxAoERow:3": 1,
+                "TorchPlacing:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.0,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 6.0
+              },
+              "HideFlags:3": 2,
+              "MaxCharge:4": 2147483647
             }
           },
           "ignoresview:1": 0,
@@ -42893,7 +43075,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic.\n\nLater, you will unlock better recipes for this.",
+          "desc:8": "§2Diodes are a component in the next Circuit tiers. They are made from liquid Glass, Fine Copper Wire and Gallium Arsenide, which is made in a Mixer with Gallium and Arsenic. \n\nYou can also use Fine Annealed Copper Wire instead of Fine Copper Wire, which doubles your output. This is highly recommended.\n\nLater, you will unlock better recipes for this.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48538,7 +48720,7 @@
           "id:3": 130,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -576,
+          "x:3": -596,
           "y:3": 340
         },
         "47:10": {
@@ -53814,7 +53996,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
