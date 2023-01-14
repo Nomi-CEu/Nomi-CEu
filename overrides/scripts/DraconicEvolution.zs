@@ -105,6 +105,8 @@ recipes.addShaped(<draconicevolution:energy_storage_core>, [
 	[<ore:ingotDraconium>,<ore:ingotDraconium>,<ore:ingotDraconium>]
 ]);
 
+recipes.addShapeless(<metaitem:dustDraconium>, [<draconicevolution:draconium_dust>]);
+
 // Hacky fix for broken DE stuff
 //<ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
 
