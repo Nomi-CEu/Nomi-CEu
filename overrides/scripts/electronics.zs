@@ -127,7 +127,7 @@ mods.jei.JEI.removeAndHide(<enderio:item_endergy_conduit:8>);
 mods.jei.JEI.removeAndHide(<enderio:item_endergy_conduit:9>);
 
 
-val wrench = <ore:craftingToolWrench>;
+val wrench = <ore:gtceWrenches>;
 
 // Microversium Machine Casing
 makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
@@ -158,7 +158,7 @@ assembler.recipeBuilder()
 //	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 
 //Wood Pulp
-recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:craftingToolMortar>]);	
+recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:gtceMortars>]);	
 
 //Pyrolyse Oven
 recipes.removeByRecipeName("gregtech:pyrolyse_oven");	
