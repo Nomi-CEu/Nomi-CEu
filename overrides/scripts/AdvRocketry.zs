@@ -923,6 +923,13 @@ makeExtremeRecipe5(<advancedrocketry:spacelaser>,
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Consult the AR Wiki for building instructions."));
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Consumes ") + format.yellow("1,000,000") + format.gray(" RF/t"));
 
+// Force Field Projector
+recipes.addShaped(<advancedrocketry:forcefieldprojector>, [
+	[<metaitem:plateAluminium>, <gregtech:transparent_casing>, <metaitem:plateAluminium>],
+	[<metaitem:plateAluminium>, <metaitem:emitter.lv>, <metaitem:plateAluminium>],
+	[<metaitem:plateAluminium>, <ore:circuitLv>, <metaitem:plateAluminium>]
+]);
+
 /*
 
   Removals

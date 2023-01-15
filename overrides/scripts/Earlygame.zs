@@ -21,9 +21,6 @@ furnace.addRecipe(<minecraft:slime_ball> * 2, <metaitem:plant_ball>, 0.0);
 //Ender Pearls
 alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs([<minecraft:ender_pearl>]).duration(300).EUt(16).buildAndRegister();
 
-//Wood Pulp
-recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:gtceMortars>]);
-
 //Dusts
 
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
