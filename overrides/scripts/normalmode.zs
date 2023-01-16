@@ -304,7 +304,7 @@ makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
 
 
 //Rubber by hand
-recipes.addShaped(<metaitem:plateRubber>,[[<ore:craftingToolHammer>],[<metaitem:rubber_drop>],[<metaitem:rubber_drop>]]);	
+recipes.addShaped(<metaitem:plateRubber>,[[<gtceHammers>],[<metaitem:rubber_drop>],[<metaitem:rubber_drop>]]);	
 
 //Rubber Sheet
 compressor.recipeBuilder().inputs(<metaitem:rubber_drop>).outputs(<metaitem:plateRubber>).duration(20).EUt(8).buildAndRegister();
