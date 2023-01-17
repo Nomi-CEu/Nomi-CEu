@@ -1,0 +1,331 @@
+[
+  {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " O ",
+      "ONO",
+      " O "
+    ],
+    "key": {
+      "O": {
+        "item": "deepmoblearning:living_matter_overworldian",
+        "data": 0
+      },
+      "N": {
+        "item": "minecraft:netherrack"
+      }
+    },
+    "result": {
+      "item": "deepmoblearning:living_matter_hellish",
+      "data": 0
+    }
+  },
+  {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " H ",
+      "HEH",
+      " H "
+    ],
+    "key": {
+      "H": {
+        "item": "deepmoblearning:living_matter_hellish",
+        "data": 0
+      },
+      "E": {
+        "item": "minecraft:end_stone"
+      }
+    },
+    "result": {
+      "item": "deepmoblearning:living_matter_extraterrestrial",
+      "data": 0
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "type": "forge:ore_dict", "ore": "dirt" },
+      { "type": "forge:ore_dict", "ore": "treeLeaves" },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:grass",
+      "count": 4
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "minecraft:wheat_seeds", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:carrot",
+      "count": 2
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "type": "forge:ore_dict", "ore": "cropCarrot" }
+    ],
+    "result": {
+      "item": "minecraft:potato",
+      "count": 2
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "minecraft:porkchop", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:rotten_flesh",
+      "count": 16
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "minecraft:rotten_flesh", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:iron_ingot",
+      "count": 8
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "minecraft:dye", "data": 15 }
+    ],
+    "result": {
+      "item": "minecraft:bone",
+      "count": 22
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "type": "forge:ore_dict", "ore": "stickWood" },
+      { "item": "minecraft:flint", "data": 0 },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:arrow",
+      "count": 12
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "minecraft:rotten_flesh", "data": 0 },
+      { "item": "minecraft:apple", "data": 0 },
+      { "item": "minecraft:red_mushroom", "data": 0 },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:spider_eye",
+      "count": 2
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "minecraft:coal", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:gunpowder",
+      "count": 16
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "type": "forge:ore_dict", "ore": "string" },
+      { "type": "forge:ore_dict", "ore": "slimeball" },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:web",
+      "count": 4
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_overworldian", "data": 0 },
+      { "type": "forge:ore_dict", "ore": "gemQuartz" }
+    ],
+    "result": {
+      "item": "minecraft:prismarine_shard",
+      "count": 2
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 },
+      { "type": "forge:ore_dict", "ore": "sand" }
+    ],
+    "result": {
+      "item": "minecraft:soul_sand",
+      "count": 4
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 },
+      { "type": "forge:ore_dict", "ore": "gunpowder" }
+    ],
+    "result": {
+      "item": "minecraft:blaze_powder",
+      "count": 2
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "type": "forge:ore_dict", "ore": "bone" },
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 },
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:blaze_rod",
+      "count": 1
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "minecraft:spider_eye", "data": 0 },
+      { "item": "minecraft:sugar", "data": 0 },
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 },
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:ghast_tear",
+      "count": 3
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "type": "forge:ore_dict", "ore": "dustGlowstone" },
+      { "type": "forge:ore_dict", "ore": "ingotIron" },
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:gold_ingot",
+      "count": 6
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_hellish", "data": 0 },
+      { "item": "minecraft:red_mushroom", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:nether_wart",
+      "count": 4
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "type": "forge:ore_dict", "ore": "sandstone" },
+      { "type": "forge:ore_dict", "ore": "sandstone" },
+      { "item": "minecraft:ender_pearl", "data": 0 },
+      { "item": "deepmoblearning:living_matter_extraterrestrial", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:end_stone",
+      "count": 8
+    }
+  },
+  {
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_extraterrestrial", "data": 0 },
+      { "item": "minecraft:emerald", "data": 0 },
+      { "item": "minecraft:snowball", "data": 0 },
+      { "type": "forge:ore_dict", "ore": "slimeball" }
+    ],
+    "result": {
+      "item": "minecraft:ender_pearl",
+      "count": 1
+    }
+  },
+  {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "WLW",
+      "SSS",
+      " S "
+    ],
+    "key": {
+      "L": { "item": "deepmoblearning:living_matter_extraterrestrial", "data": 0 },
+      "S": { "item": "minecraft:soul_sand", "data": 0 },
+      "W": { "item": "minecraft:skull", "data": 1 }
+    },
+    "result": {
+      "item": "minecraft:nether_star",
+      "count": 1
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_extraterrestrial", "data": 0 },
+      { "item": "minecraft:apple", "data": 0 }
+    ],
+    "result": {
+      "item": "minecraft:chorus_fruit",
+      "count": 1
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_twilight", "data": 0 },
+      { "item": "minecraft:feather", "data": 0 }
+    ],
+    "result": {
+      "item": "twilightforest:raven_feather",
+      "count": 1
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_twilight", "data": 0 },
+      { "item": "minecraft:torch", "data": 0 }
+    ],
+    "result": {
+      "item": "twilightforest:torchberries",
+      "count": 16
+    }
+  },
+  {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "deepmoblearning:living_matter_twilight", "data": 0 },
+      { "item": "minecraft:beef", "data": 0 }
+    ],
+    "result": {
+      "item": "twilightforest:raw_venison",
+      "count": 8
+    }
+  }
+]
