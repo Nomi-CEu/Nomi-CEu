@@ -33926,7 +33926,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Extruder§r is a universal metalworking machine. §aExtruder Shapes§r are used for telling an Extruder which shape to make.\n\nExtruders are §2no longer strictly needed for Large Pipes.§r Extruders use ingots, but are as efficient for making §6Gears§r as melting and solidifying. They are also the most efficient way to make §6Bolts§r, §6Small Gears§r, and §6Rings§r.\n\nYou can also use Extruders to make things from other machines like plates and wires, but they are less efficient than using the dedicated machines for these purposes.",
+          "desc:8": "The §3Extruder§r is a universal metalworking machine. §aExtruder Shapes§r are used for telling an Extruder which shape to make.\n\nExtruders are §2no longer strictly needed for Large Pipes.§r Extruders use ingots, but are as efficient for making §6Gears§r as melting and solidifying. They are also the most efficient way to make §6Bolts§r, §6Small Gears§r, and §6Rings§r.\n\n§2An LV version does exist, but it can run basically no recipes.§r\n\nYou can also use Extruders to make things from other machines like plates and wires, but they are less efficient than using the dedicated machines for these purposes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
