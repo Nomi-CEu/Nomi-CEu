@@ -753,7 +753,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§f. Ore veins are massive, and mining is extremely fast with §aMining Hammers§f. What\u0027s more, even once you get access to §3Macerators§f, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials or anything you buy with §dOmnicoins §fbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have the §2Steam Grinder§r§e, or Medium Voltage machines or even later.§r",
+          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§f. Ore veins are massive, and mining is extremely fast with §aMining Hammers§f. What\u0027s more, even once you get access to §3Macerators§f, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials or anything you buy with §dNomicoins §fbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have the §2Steam Grinder§r§e, or Medium Voltage machines or even later.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1930,7 +1930,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nYou\u0027ll need a small bit of §6Silver§f for this dynamo. If you haven\u0027t found a §6Galena vein§f yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dOmnicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§f.",
+          "desc:8": "Your first major crafting project!\n\nYou\u0027ll need a small bit of §6Silver§f for this dynamo. If you haven\u0027t found a §6Galena vein§f yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §Nomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§f.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4173,7 +4173,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §2Lithium Batteries§r are the best ones, and the only ones you should really consider making.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they are fairly rare. Consider \"buying\" some Lithium with §dOmnicoins§r.",
+          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §2Lithium Batteries§r are the best ones, and the only ones you should really consider making.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they are fairly rare. Consider \"buying\" some Lithium with §dNomicoins§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8899,7 +8899,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Surface Mounted Devices§r, or §6SMD§rs for short, are §2more efficient ways to produce the Circuit components you\u0027ve been making. They will be used until the second-to-last theme of circuits.§r\n\nAll SMD components must be produced in at least a §2HV Assembling Machine§r, and they all will require liquid §9Polyethylene§r.\n\nStart off with the §6SMD Transistor§r. These are simply a §6Gallium §2Foil§r and §6Fine Annealed Copper Wire§r.\n\nNext up are §6SMD Resistors§r, which are also simple: §6Carbon Dust§r and §6Fine Electrum Wire§r.\n\nNext up are §6SMD Diodes§r, which are fairly simple. §2Gallium Arsenide Dust§r and §6Fine Platinum Wire§r net you half a stack. §2If you can\u0027t go to the End to mine Platinum there yet, buy some with Omnicoins.§r\n\nThen are §6SMD Capacitors§r. You\u0027ll need sheets of §6Polyvinyl Chloride§r to make these, or they can also be made more slowly with §6Silicone Rubber§r. §2Using Tantalum Foil in place of Aluminium doubles your yield.\n\nFinally, and new to CEu, SMD Inductors. Made with Nickel Zinc Ferrite and Fine Cupronickel Wire.§r\n\nInvest in a robust system of automation for SMD components and all of their ingredients, since you\u0027ll never stop needing them. They will also work in place of the non-SMD versions you\u0027ve been using in all but the simplest of recipes.",
+          "desc:8": "§6Surface Mounted Devices§r, or §6SMD§rs for short, are §2more efficient ways to produce the Circuit components you\u0027ve been making. They will be used until the second-to-last theme of circuits.§r\n\nAll SMD components must be produced in at least a §2HV Assembling Machine§r, and they all will require liquid §9Polyethylene§r.\n\nStart off with the §6SMD Transistor§r. These are simply a §6Gallium §2Foil§r and §6Fine Annealed Copper Wire§r.\n\nNext up are §6SMD Resistors§r, which are also simple: §6Carbon Dust§r and §6Fine Electrum Wire§r.\n\nNext up are §6SMD Diodes§r, which are fairly simple. §2Gallium Arsenide Dust§r and §6Fine Platinum Wire§r net you half a stack. §2If you can\u0027t go to the End to mine Platinum there yet, buy some with Nomicoins.§r\n\nThen are §6SMD Capacitors§r. You\u0027ll need sheets of §6Polyvinyl Chloride§r to make these, or they can also be made more slowly with §6Silicone Rubber§r. §2Using Tantalum Foil in place of Aluminium doubles your yield.\n\nFinally, and new to CEu, SMD Inductors. Made with Nickel Zinc Ferrite and Fine Cupronickel Wire.§r\n\nInvest in a robust system of automation for SMD components and all of their ingredients, since you\u0027ll never stop needing them. They will also work in place of the non-SMD versions you\u0027ve been using in all but the simplest of recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9860,7 +9860,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "While there are no types of veins that are extremely rare, you\u0027re likely to struggle with finding at least one of the less common vein types. This isn\u0027t really avoidable.\n\nYou will accumulate a lot of §dOmnicoins§f from quest turn-ins while playing Nomifactory. Do not be hesitant to spend them on things you need! \n\nSearch for various ores (generally the first one listed in §bJEI§f) to find the coin recipes for them. Alternatively, hover your cursor over a coin and press §6U§f to see what you can buy with it.\n\n§aDon\u0027t be a hoarder!",
+          "desc:8": "While there are no types of veins that are extremely rare, you\u0027re likely to struggle with finding at least one of the less common vein types. This isn\u0027t really avoidable.\n\nYou will accumulate a lot of §dNomicoins§f from quest turn-ins while playing Nomifactory. Do not be hesitant to spend them on things you need! \n\nSearch for various ores (generally the first one listed in §bJEI§f) to find the coin recipes for them. Alternatively, hover your cursor over a coin and press §6U§f to see what you can buy with it.\n\n§aDon\u0027t be a hoarder!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41965,7 +41965,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Take a peek at The §eEnd Game quest book tab§f. This might seem a bit premature to suggest, but it has a reason.\n\nThese are quests for a full stack of many of the materials in the game. Those are the materials you\u0027ll need to synthesize §5Omnium§r, the basic end game resource. It\u0027s the pack\u0027s way of letting you know what materials you should be prepared to mass produce as you approach the end.\n\nOf course, it\u0027s not necessary or even advisable to try to finish up all of these quests the moment they become available. Some will be incredibly easy (like §6Iron§f and §6Copper§f), others will be brutally grindy at early tech levels. The rewards are all the same: §d25 Omnicoins each§f, so use your best judgement on which ones to complete and which to ignore for later.",
+          "desc:8": "Take a peek at The §eEnd Game quest book tab§f. This might seem a bit premature to suggest, but it has a reason.\n\nThese are quests for a full stack of many of the materials in the game. Those are the materials you\u0027ll need to synthesize §5Omnium§r, the basic end game resource. It\u0027s the pack\u0027s way of letting you know what materials you should be prepared to mass produce as you approach the end.\n\nOf course, it\u0027s not necessary or even advisable to try to finish up all of these quests the moment they become available. Some will be incredibly easy (like §6Iron§f and §6Copper§f), others will be brutally grindy at early tech levels. The rewards are all the same: §d25 Nomicoins each§f, so use your best judgement on which ones to complete and which to ignore for later.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50065,7 +50065,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 1,
-          "desc:8": "§6Sulfur Ore§r is the only source of §6Sulfur Dust§r that\u0027s currently available to you.\n\nYou may want to spend a few §dOmnicoins§r on the ore to jumpstart your power storage.\n\nOtherwise the ore is only available in §athe Nether§r, and the only way to get there is with a §6Nether Cake§r. Oh no!",
+          "desc:8": "§6Sulfur Ore§r is the only source of §6Sulfur Dust§r that\u0027s currently available to you.\n\nYou may want to spend a few §dNomicoins§r on the ore to jumpstart your power storage.\n\nOtherwise the ore is only available in §athe Nether§r, and the only way to get there is with a §6Nether Cake§r. Oh no!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50111,7 +50111,7 @@
                   }
                 },
                 "display:10": {
-                  "Name:8": "I bought ore with Omnicoins"
+                  "Name:8": "I bought ore with Nomicoins"
                 }
               }
             }
