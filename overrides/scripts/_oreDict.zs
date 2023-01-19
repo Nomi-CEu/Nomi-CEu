@@ -2567,6 +2567,13 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.hv>); // HV Fluid Extractor
 
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.lv>); // LV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.mv>); // MV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.hv>); // HV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.ev>); // EV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.iv>); // IV Power Unit
+
+
 // GTCE Conductive Iron
 //mods.jei.JEI.removeAndHide(<metaitem:nuggetConductiveIron>);
 //mods.jei.JEI.removeAndHide(<metaitem:ingotConductiveIron>);

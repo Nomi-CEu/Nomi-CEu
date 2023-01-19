@@ -1,4 +1,5 @@
 {
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -1930,7 +1931,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nYou\u0027ll need a small bit of §6Silver§f for this dynamo. If you haven\u0027t found a §6Galena vein§f yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §Nomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§f.",
+          "desc:8": "Your first major crafting project!\n\nYou\u0027ll need a small bit of §6Silver§f for this dynamo. If you haven\u0027t found a §6Galena vein§f yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§f.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46770,7 +46771,6 @@
     },
     "755:10": {
       "preRequisites:11": [
-        3,
         394
       ],
       "properties:10": {
@@ -46794,7 +46794,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Inspector Gadget",
+          "name:8": "Building Gadgets",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -47845,7 +47845,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2GregTechCEu§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller §2with an empty hand§r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
+          "desc:8": "§2GregTech CEu§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller §2with an empty hand§r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50620,12 +50620,12 @@
     },
     "819:10": {
       "preRequisites:11": [
-        70
+        58
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With MV Batteries unlocked, you can make Power Units for electric GT tools. Most notable among them is the Drill, which at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.\n\nCharge these with a Battery of appropriate tier, or in an appropriately tiered machine.\n\nYou may want to look into Chainsaws for mass tree felling as well, or a Wrench, for breaking machines very quickly. The other electric tools are probably not worth making.",
+          "desc:8": "This quest accepts a §6Power Unit§r of any voltage. \n\nWith GT Batteries unlocked, you can make Power Units for electric GT tools. \n\n§2A new addition among them is the Drill, which at LV tier can mine a 3x3x1 area of blocks, and at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.§r\n\nCharge these with a §6Battery§r of appropriate tier, or in an appropriately tiered machine. \n\nYou may want to look into §6Chainsaws§r for mass tree felling as well, or a §6Wrench§r, for breaking machines very quickly. The other electric tools are probably not worth making.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50699,7 +50699,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 447,
-              "OreDict:8": "",
+              "OreDict:8": "questbookPowerUnit",
               "id:8": "gregtech:meta_item_1"
             }
           },
@@ -59381,7 +59381,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. The first way that comes to mind is electrolysing §9Water§r, but that is slow. Instead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r. §6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be achieved by centrifuging §6Food§r and §6Wood§r, processing §6Pyroluse Byproducts§r, or through §6Petroleum§r. \n\nRight now, for the small quantities you need, you can simply electrolyse §9Water§r. Just keep those other ways in mind.",
+          "desc:8": "§nSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. \n\nThe first way that comes to mind is electrolysing §9Water§r, but that is slow. \n\nInstead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be achieved by centrifuging §6Food§r and §6Wood§r, processing §6Pyroluse Byproducts§r, or through §6Petroleum§r. \n\nRight now, for the small quantities you need, you can simply electrolyse §9Water§r. Just keep those other ways in mind, for later in the game.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61177,74 +61177,74 @@
           "y:3": 220
         },
         "53:10": {
-          "id:3": 755,
-          "sizeX:3": 35,
-          "sizeY:3": 35,
-          "x:3": -516,
-          "y:3": 416
-        },
-        "54:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 184
         },
-        "55:10": {
+        "54:10": {
           "id:3": 775,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
           "y:3": 416
         },
-        "56:10": {
+        "55:10": {
           "id:3": 779,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 88
         },
-        "57:10": {
+        "56:10": {
           "id:3": 788,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
           "y:3": 416
         },
-        "58:10": {
+        "57:10": {
           "id:3": 789,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
           "y:3": 368
         },
-        "59:10": {
+        "58:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 340
         },
-        "60:10": {
+        "59:10": {
           "id:3": 814,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 117
         },
-        "61:10": {
+        "60:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 232
         },
-        "62:10": {
+        "61:10": {
           "id:3": 817,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 260
+        },
+        "62:10": {
+          "id:3": 819,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -516,
+          "y:3": 416
         },
         "63:10": {
           "id:3": 829,
@@ -61884,139 +61884,132 @@
           "y:3": 88
         },
         "82:10": {
-          "id:3": 819,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": 40
-        },
-        "83:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -602,
           "y:3": 40
         },
-        "84:10": {
+        "83:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -462,
           "y:3": 3
         },
-        "85:10": {
+        "84:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 88
         },
-        "86:10": {
+        "85:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 72
         },
-        "87:10": {
+        "86:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 476
         },
-        "88:10": {
+        "87:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "89:10": {
+        "88:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "90:10": {
+        "89:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "91:10": {
+        "90:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "92:10": {
+        "91:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 400
         },
-        "93:10": {
+        "92:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -284,
           "y:3": 296
         },
-        "94:10": {
+        "93:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 160
         },
-        "95:10": {
+        "94:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 124
         },
-        "96:10": {
+        "95:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -564,
           "y:3": 300
         },
-        "97:10": {
+        "96:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "98:10": {
+        "97:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 216
         },
-        "99:10": {
+        "98:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "100:10": {
+        "99:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 256
         },
-        "101:10": {
+        "100:10": {
           "id:3": 973,
           "sizeX:3": 0,
           "sizeY:3": 0,
@@ -65766,7 +65759,7 @@
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -36,
-          "y:3": 366
+          "y:3": 402
         },
         "22:10": {
           "id:3": 58,
@@ -65857,7 +65850,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 330
+          "y:3": 366
         },
         "35:10": {
           "id:3": 415,
@@ -65944,69 +65937,76 @@
           "y:3": -12
         },
         "47:10": {
+          "id:3": 755,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 366
+        },
+        "48:10": {
           "id:3": 786,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 60
         },
-        "48:10": {
+        "49:10": {
           "id:3": 803,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96
         },
-        "49:10": {
+        "50:10": {
           "id:3": 808,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 96
         },
-        "50:10": {
+        "51:10": {
           "id:3": 811,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
           "y:3": 294
         },
-        "51:10": {
+        "52:10": {
           "id:3": 813,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 60
         },
-        "52:10": {
+        "53:10": {
           "id:3": 902,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 132
         },
-        "53:10": {
+        "54:10": {
           "id:3": 909,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 67,
           "y:3": 288
         },
-        "54:10": {
+        "55:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 294
         },
-        "55:10": {
+        "56:10": {
           "id:3": 921,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 132
         },
-        "56:10": {
+        "57:10": {
           "id:3": 923,
           "sizeX:3": 24,
           "sizeY:3": 24,
