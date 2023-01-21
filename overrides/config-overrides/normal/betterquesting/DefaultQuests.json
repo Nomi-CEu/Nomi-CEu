@@ -18262,11 +18262,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\n§rTheir advantage over §5EnderIO §3Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §d8 items per second§r, and up to §d128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §d64 items per second§r, and those made from later materials can transfer §dmultiple stacks per second§r.\n\nThey don\u0027t auto-extract by themselves, so you have to use §3Conveyor covers§r etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value.",
+          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\n§rTheir advantage over §5EnderIO §3Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §d8 items per second§r, and up to §d128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §d64 items per second§r, and those made from later materials can transfer §dmultiple stacks per second§r.\n\nThey don\u0027t auto-extract by themselves, so you have to use §3Conveyor covers§r etc. with them.\n\nThe best material to make these pipes out of in terms of throughput is §6Americium§r, but you don\u0027t have access to that yet, so you should probably use §6Tin§r.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 23,
+            "Damage:2": 112,
             "OreDict:8": "",
             "id:8": "gregtech:item_pipe_small"
           },
@@ -18305,13 +18305,13 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 23,
+              "Damage:2": 112,
               "OreDict:8": "",
               "id:8": "gregtech:item_pipe_small"
             }
