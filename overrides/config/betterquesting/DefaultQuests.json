@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -18262,7 +18261,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\n§rTheir advantage over §5EnderIO §3Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §d8 items per second§r, and up to §d128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §d64 items per second§r, and those made from later materials can transfer §dmultiple stacks per second§r.\n\nThey don\u0027t auto-extract by themselves, so you have to use §3Conveyor covers§r etc. with them.\n\nThe best material to make these pipes out of in terms of throughput is §6Americium§r, but you don\u0027t have access to that yet, so you should probably use §6Tin§r.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value.",
+          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\n§rThis quest accepts a item pipe of any material, any size, whether restrictive or normal.\n\nFor now, the best material to make these pipes out of is probably §6Tin§r.\n\nTheir advantage over §5EnderIO §3Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §d8 items per second§r, and up to §d128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §d64 items per second§r, and those made from later materials can transfer §dmultiple stacks per second§r.\n\nThey don\u0027t auto-extract by themselves, so you have to use §3Conveyor covers§r etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18312,7 +18311,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 112,
-              "OreDict:8": "",
+              "OreDict:8": "questbookItemPipes",
               "id:8": "gregtech:item_pipe_small"
             }
           },
@@ -52919,7 +52918,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can get Americium from NuclearCraft progression, but you can also fuse it. First combine Lanthanum with Silicon to make Lutetium, then combine it with Chrome to get Americium.\n\n§2Americium is used in larger quantities in CEu progression. You cannot convert this form of Americium to NuclearCraft Americium isotopes.",
+          "desc:8": "You can get Americium from NuclearCraft progression, but you can also fuse it. First combine Lanthanum with Silicon to make Lutetium, then combine it with Chrome to get Americium.\n\n§2Americium is used in larger quantities in CEu progression. You cannot convert this form of Americium to NuclearCraft Americium isotopes. These are also the best Item Pipe material, in terms of throughput.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57615,7 +57614,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§You might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

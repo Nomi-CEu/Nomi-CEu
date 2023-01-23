@@ -2573,6 +2573,16 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookPowerUnit>.add(<metaitem:power_unit.ev>); // EV Power Unit
 <ore:questbookPowerUnit>.add(<metaitem:power_unit.iv>); // IV Power Unit
 
+// Add all GT Item Pipes
+for pipe in <ore:pipe*Item*>{
+    <ore:questbookItemPipes>.add(pipe.firstItem);
+
+}
+
+for restrictivePipe in <ore:pipe*Restrictive*>{
+    <ore:questbookItemPipes>.add(restrictivePipe.firstItem);
+
+}
 
 // GTCE Conductive Iron
 //mods.jei.JEI.removeAndHide(<metaitem:nuggetConductiveIron>);
