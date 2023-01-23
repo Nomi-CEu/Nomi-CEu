@@ -12936,7 +12936,8 @@
     },
     "228:10": {
       "preRequisites:11": [
-        490
+        490,
+        29
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15017,11 +15018,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\nTheir advantage over EnderIO Item Conduits is their far higher throughput. An unupgraded EIO Item Conduit transports 8 items per second, and up to 128 when upgraded. In comparison, small low-tier Item Pipes can transfer 64 items per second, and those made from later materials can transfer multiple stacks per second.\n\nThey don\u0027t auto-extract by themselves, so you have to use Conveyor covers etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value.",
+          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.§r\n\nThis quest accepts a §bGregTech §6Item Pipe§r of any material, and size and of both normal and restrictive variants.\n\nTheir advantage over §bEnderIO§r §6Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §2§r§38 items per second§r, and up to §3128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §364 items per second§r, and those made from later materials can transfer multiple stacks per second.\n\nFurthermore, with a §6Robot Arm§r cover, these can do perfect §3Round-Robin§r, equally spliiting the items between the §eDestinations§r.\n\nFor now, the recommended material to use for these is §6Tin§r.\n\nThey don\u0027t §3auto-extract§r by themselves, so you have to use §6Conveyor§r covers etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA §eDestination§r will have a §3Routing Value§r calculated, which is the sum of all §3Routing Values§r of the individual Pipes to that §eDestination§r. Whichever §eDestination§r has the lowest §3Routing Value§r will be the one selected for Insertion.\n§6Restrictive Pipes§r typically have the lowest §3Priority§r for insertion due to their higher §3Routing Value§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 23,
+            "Damage:2": 112,
             "OreDict:8": "",
             "id:8": "gregtech:item_pipe_small"
           },
@@ -15053,8 +15054,8 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 23,
-              "OreDict:8": "",
+              "Damage:2": 112,
+              "OreDict:8": "questbookItemPipes",
               "id:8": "gregtech:item_pipe_small"
             }
           },
@@ -28822,7 +28823,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Extruder§r is an alternative way to form shapes from metal. §aExtruder Shapes§r are used for telling an Extruder which shape to make.\n\nExtruders are §2no longer strictly needed for Large Pipes.§r Extruders use ingots, but are as efficient for making §6Gears§r as melting and solidifying. They are also the most efficient way to make §6Bolts§r, §6Small Gears§r, and §6Rings§r.\n\nYou can also use Extruders to make things from other machines like plates and wires, but they are less efficient than using the dedicated machines for these purposes.",
+          "desc:8": "The §3Extruder§r is an alternative way to form shapes from metal. §aExtruder Shapes§r are used for telling an Extruder which shape to make.\n\nExtruders are §2no longer strictly needed for Large Pipes.§r Extruders use ingots, but are as efficient for making §6Gears§r as melting and solidifying. They are also the most efficient way to make §6Bolts§r, §6Small Gears§r, and §6Rings§r.\n\nYou can also use Extruders to make things from other machines like plates and wires, but they are less efficient than using the dedicated machines for these purposes.\n\n§2There is also an LV version, but most of the Extruder\u0027s recipes must be run at MV or higher.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29489,7 +29490,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These are useful for extending the range of other \"Phantom\" machines and devices from §bActually Additions§r.",
+          "desc:8": "These are useful for extending the range of other \"Phantom\" machines and devices from §bActually Additions§r.\n\nPlace up to three on top of a Phantom machine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39819,7 +39820,7 @@
     },
     "755:10": {
       "preRequisites:11": [
-        3
+        394
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42992,12 +42993,12 @@
     },
     "817:10": {
       "preRequisites:11": [
-        70
+        58
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With MV Batteries unlocked, you can make Power Units for electric GT tools. Most notable among them is the Drill, which at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.\n\nCharge these with a Battery of appropriate tier, or in an appropriately tiered machine.\n\nYou may want to look into Chainsaws for mass tree felling as well. The other electric tools are probably not worth making.",
+          "desc:8": "This quest accepts a §6Power Unit§r of any tier.\n\nWith §bGregTech §6Power Storage§r unlocked, you can make §6Power Units§r for electric GT tools. \n\n§2The most notable among them is the Drill, which at LV tier can mine a 3x3x1 area of blocks.\n\nHigher tier drills can mine 3x3x3 (MV), 5x5x5 (HV), 7x7x7 (EV) and 9x9x9 (IV) areas! Shift-right-click to change the breaking area.§r\n\nCharge these with a §6Battery§r of appropriate tier, or in an appropriately tiered §3Machine§r, §3Battery Buffer§r or §3Turbo Charger§r.\n\nYou may want to look into §6Chainsaws§r for mass tree felling, as well as a §6Wrench§r for mass breaking GT machines. The other electric tools are probably not worth making.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43033,7 +43034,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2GregTech Drill",
+          "name:8": "§2GregTech Electric Tools",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -43057,9 +43058,12 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 447,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
+              "Damage:2": 446,
+              "OreDict:8": "questbookPowerUnit",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 100000
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -47978,15 +47982,15 @@
           "id:3": 28,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -736,
-          "y:3": 40
+          "x:3": -504,
+          "y:3": 44
         },
         "6:10": {
           "id:3": 29,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -792,
-          "y:3": 40
+          "x:3": -560,
+          "y:3": 44
         },
         "7:10": {
           "id:3": 30,
@@ -48279,78 +48283,78 @@
           "id:3": 684,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -648,
-          "y:3": 40
+          "x:3": -504,
+          "y:3": 88
         },
         "49:10": {
-          "id:3": 755,
-          "sizeX:3": 35,
-          "sizeY:3": 35,
-          "x:3": -516,
-          "y:3": 416
-        },
-        "50:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 184
         },
-        "51:10": {
+        "50:10": {
           "id:3": 775,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
           "y:3": 416
         },
-        "52:10": {
+        "51:10": {
           "id:3": 779,
           "sizeX:3": 28,
           "sizeY:3": 28,
           "x:3": -704,
           "y:3": 200
         },
-        "53:10": {
+        "52:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -560,
           "y:3": 172
         },
-        "54:10": {
+        "53:10": {
           "id:3": 788,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
           "y:3": 416
         },
-        "55:10": {
+        "54:10": {
           "id:3": 789,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
           "y:3": 368
         },
-        "56:10": {
+        "55:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 340
         },
-        "57:10": {
+        "56:10": {
           "id:3": 814,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 88
         },
-        "58:10": {
+        "57:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 232
+        },
+        "58:10": {
+          "id:3": 819,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -516,
+          "y:3": 416
         },
         "59:10": {
           "id:3": 890,
@@ -49011,139 +49015,132 @@
           "y:3": 68
         },
         "88:10": {
-          "id:3": 819,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -292,
-          "y:3": 20
-        },
-        "89:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 20
         },
-        "90:10": {
+        "89:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": -17
         },
-        "91:10": {
+        "90:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 68
         },
-        "92:10": {
+        "91:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 48
         },
-        "93:10": {
+        "92:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 464
         },
-        "94:10": {
+        "93:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "95:10": {
+        "94:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "96:10": {
+        "95:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "97:10": {
+        "96:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "98:10": {
+        "97:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 388
         },
-        "99:10": {
+        "98:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 288
         },
-        "100:10": {
+        "99:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 104
         },
-        "101:10": {
+        "100:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 104
         },
-        "102:10": {
+        "101:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -552,
           "y:3": 268
         },
-        "103:10": {
+        "102:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 264
         },
-        "104:10": {
+        "103:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "105:10": {
+        "104:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 188
         },
-        "106:10": {
+        "105:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "107:10": {
+        "106:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -52890,7 +52887,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 356
+          "y:3": 354
         },
         "19:10": {
           "id:3": 40,
@@ -52911,14 +52908,14 @@
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -36,
-          "y:3": 428
+          "y:3": 468
         },
         "22:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
-          "y:3": 356
+          "y:3": 354
         },
         "23:10": {
           "id:3": 66,
@@ -53009,7 +53006,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
-          "y:3": 428
+          "y:3": 432
         },
         "36:10": {
           "id:3": 488,
@@ -53089,67 +53086,74 @@
           "y:3": -12
         },
         "47:10": {
+          "id:3": 755,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 432
+        },
+        "48:10": {
           "id:3": 780,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": 200
         },
-        "48:10": {
+        "49:10": {
           "id:3": 786,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 60
         },
-        "49:10": {
+        "50:10": {
           "id:3": 803,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96
         },
-        "50:10": {
+        "51:10": {
           "id:3": 808,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 96
         },
-        "51:10": {
+        "52:10": {
           "id:3": 813,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 60
         },
-        "52:10": {
+        "53:10": {
           "id:3": 817,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 200
         },
-        "53:10": {
+        "54:10": {
           "id:3": 902,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 24
         },
-        "54:10": {
+        "55:10": {
           "id:3": 909,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 64,
           "y:3": 192
         },
-        "55:10": {
+        "56:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 356
+          "y:3": 354
         }
       }
     },
@@ -53996,7 +54000,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
