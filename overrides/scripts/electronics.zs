@@ -356,6 +356,18 @@ circuit_assembler.recipeBuilder()
 	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 
+// Voltage Control Unit recipes
+recipes.remove(<metaitem:gcym:tiered_hatch.ulv>);
+recipes.remove(<metaitem:gcym:tiered_hatch.lv>);
+recipes.remove(<metaitem:gcym:tiered_hatch.mv>);
+recipes.remove(<metaitem:gcym:tiered_hatch.hv>);
+recipes.remove(<metaitem:gcym:tiered_hatch.ev>);
+recipes.remove(<metaitem:gcym:tiered_hatch.iv>);
+recipes.remove(<metaitem:gcym:tiered_hatch.luv>);
+recipes.remove(<metaitem:gcym:tiered_hatch.zpm>);
+recipes.remove(<metaitem:gcym:tiered_hatch.uv>);
+recipes.remove(<metaitem:gcym:tiered_hatch.uhv>);
+
 // wetware
 // Stem Cells * 32
 <recipemap:chemical_reactor>.findRecipe(30720, [<metaitem:dustOsmiridium>], [<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500]).remove();

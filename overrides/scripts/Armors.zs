@@ -41,11 +41,14 @@ recipes.remove(<minecraft:diamond_boots>);
 recipes.addShaped(<minecraft:diamond_boots>, [
 	[<metaitem:plateDiamond>, null, <metaitem:plateDiamond>], 
 	[<metaitem:plateTitanium>, <minecraft:golden_boots>, <metaitem:plateTitanium>]]);
-recipes.remove(<minecraft:diamond_sword>);
-recipes.addShaped(<minecraft:diamond_sword>, [
-	[null, <metaitem:plateDiamond>, null], 
-	[null, <metaitem:plateDiamond>, null], 
-	[null, <minecraft:stick>, null]]);	
+	
+// This conflicts with Diamond File recipe, so it has been reset back to vanilla.
+// recipes.remove(<minecraft:diamond_sword>);
+// recipes.addShaped(<minecraft:diamond_sword>, [
+//	[null, <metaitem:plateDiamond>, null], 
+//	[null, <metaitem:plateDiamond>, null], 
+//	[null, <minecraft:stick>, null]]);	
+	
 furnace.addRecipe(<thermalfoundation:material:833>, <metaitem:rubber_drop>, 0.0);
 
 //Redstone Armor

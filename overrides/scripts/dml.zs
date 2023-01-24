@@ -62,3 +62,12 @@ recipes.addShapeless(<minecraft:dirt> * 16, [
 
 recipes.remove(<deepmoblearning:data_model_thermal_elemental>);
 recipes.addShapeless(<deepmoblearning:data_model_thermal_elemental>.withTag({simulationCount: 0, tier: 0, killCount: 0, totalKillCount: 0}), [<deepmoblearning:data_model_blank>, <thermalfoundation:material:1025> | <thermalfoundation:material:1026> | <thermalfoundation:material:1027>, <deepmoblearning:living_matter_overworldian>, <deepmoblearning:living_matter_overworldian>, <deepmoblearning:living_matter_overworldian>, <deepmoblearning:living_matter_overworldian>, <deepmoblearning:living_matter_overworldian>, <deepmoblearning:living_matter_overworldian>, <deepmoblearning:living_matter_overworldian>]);
+
+
+// Deep Learner
+recipes.remove(<deepmoblearning:deep_learner>);
+recipes.addShaped(<deepmoblearning:deep_learner>, [
+    [null,null,null],
+    [<metaitem:sensor.lv>,<metaitem:tricorder_scanner>,<metaitem:sensor.lv>],
+    [null,null,null]]);
+

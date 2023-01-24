@@ -630,7 +630,9 @@ if(!isNull(dml)) {
 	
 	mods.jei.JEI.hideCategory("deepmoblearning.simulation_chamber");
 	mods.jei.JEI.hideCategory("deepmoblearning.extraction_chamber");
-	mods.jei.JEI.hideCategory("deepmoblearning.trial_keystone");
+    
+    // No JEI recipes for Trial Keystones yet
+	// mods.jei.JEI.hideCategory("deepmoblearning.trial_keystone");
 
 	//remove everything
     for item in dmlItems {
