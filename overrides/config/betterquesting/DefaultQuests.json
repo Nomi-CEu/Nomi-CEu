@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -754,7 +753,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§f. Ore veins are massive, and mining is extremely fast with §aMining Hammers§f. What\u0027s more, even once you get access to §3Macerators§f, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials or anything you buy with §dNomicoins §fbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have the §2Steam Grinder§r§e, or Medium Voltage machines or even later.§r",
+          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§f. Ore veins are massive, and mining is extremely fast with §aMining Hammers§f. What\u0027s more, even once you get access to §3Macerators§f, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials or anything you buy with §dOmnicoins §fbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have the §2Steam Grinder§r§e, or Medium Voltage machines or even later.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1931,7 +1930,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nYou\u0027ll need a small bit of §6Silver§f for this dynamo. If you haven\u0027t found a §6Galena vein§f yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§f.",
+          "desc:8": "Your first major crafting project!\n\nYou\u0027ll need a small bit of §6Silver§f for this dynamo. If you haven\u0027t found a §6Galena vein§f yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dOmnicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§f.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4174,7 +4173,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §2Lithium Batteries§r are the best ones, and the only ones you should really consider making.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they are fairly rare. Consider \"buying\" some Lithium with §dNomicoins§r.",
+          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §2Lithium Batteries§r are the best ones, and the only ones you should really consider making.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they are fairly rare. Consider \"buying\" some Lithium with §dOmnicoins§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6775,7 +6774,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r from somewhere. §2Severely Steam-Cracked Naphtha§r is most efficient with respect to §9Ethylene§r, but §2Severely Steam-Cracked Light Fuel§r gives a better mix of products once you have a §3Distillation Tower§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
+          "desc:8": "§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r from somewhere. §2Severely Steam-Cracked Naphtha§r is most efficient with respect to §9Ethylene§r, but §2Severely Steam-Cracked Light Fuel§r gives a better mix of products once you have a §3Distillation Tower§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6842,7 +6841,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
+          "desc:8": "§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8900,7 +8899,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Surface Mounted Devices§r, or §6SMD§rs for short, are §2more efficient ways to produce the Circuit components you\u0027ve been making. They will be used until the second-to-last theme of circuits.§r\n\nAll SMD components must be produced in at least a §2HV Assembling Machine§r, and they all will require liquid §9Polyethylene§r.\n\nStart off with the §6SMD Transistor§r. These are simply a §6Gallium §2Foil§r and §6Fine Annealed Copper Wire§r.\n\nNext up are §6SMD Resistors§r, which are also simple: §6Carbon Dust§r and §6Fine Electrum Wire§r.\n\nNext up are §6SMD Diodes§r, which are fairly simple. §2Gallium Arsenide Dust§r and §6Fine Platinum Wire§r net you half a stack. §2If you can\u0027t go to the End to mine Platinum there yet, buy some with Nomicoins.§r\n\nThen are §6SMD Capacitors§r. You\u0027ll need sheets of §6Polyvinyl Chloride§r to make these, or they can also be made more slowly with §6Silicone Rubber§r. §2Using Tantalum Foil in place of Aluminium doubles your yield.\n\nFinally, and new to CEu, SMD Inductors. Made with Nickel Zinc Ferrite and Fine Cupronickel Wire.§r\n\nInvest in a robust system of automation for SMD components and all of their ingredients, since you\u0027ll never stop needing them. They will also work in place of the non-SMD versions you\u0027ve been using in all but the simplest of recipes.",
+          "desc:8": "§6Surface Mounted Devices§r, or §6SMD§rs for short, are §2more efficient ways to produce the Circuit components you\u0027ve been making. They will be used until the second-to-last theme of circuits.§r\n\nAll SMD components must be produced in at least a §2HV Assembling Machine§r, and they all will require liquid §9Polyethylene§r.\n\nStart off with the §6SMD Transistor§r. These are simply a §6Gallium §2Foil§r and §6Fine Annealed Copper Wire§r.\n\nNext up are §6SMD Resistors§r, which are also simple: §6Carbon Dust§r and §6Fine Electrum Wire§r.\n\nNext up are §6SMD Diodes§r, which are fairly simple. §2Gallium Arsenide Dust§r and §6Fine Platinum Wire§r net you half a stack. §2If you can\u0027t go to the End to mine Platinum there yet, buy some with Omnicoins.§r\n\nThen are §6SMD Capacitors§r. You\u0027ll need sheets of §6Polyvinyl Chloride§r to make these, or they can also be made more slowly with §6Silicone Rubber§r. §2Using Tantalum Foil in place of Aluminium doubles your yield.\n\nFinally, and new to CEu, SMD Inductors. Made with Nickel Zinc Ferrite and Fine Cupronickel Wire.§r\n\nInvest in a robust system of automation for SMD components and all of their ingredients, since you\u0027ll never stop needing them. They will also work in place of the non-SMD versions you\u0027ve been using in all but the simplest of recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9204,7 +9203,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.",
+          "desc:8": "§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9861,7 +9860,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "While there are no types of veins that are extremely rare, you\u0027re likely to struggle with finding at least one of the less common vein types. This isn\u0027t really avoidable.\n\nYou will accumulate a lot of §dNomicoins§f from quest turn-ins while playing Nomifactory. Do not be hesitant to spend them on things you need! \n\nSearch for various ores (generally the first one listed in §bJEI§f) to find the coin recipes for them. Alternatively, hover your cursor over a coin and press §6U§f to see what you can buy with it.\n\n§aDon\u0027t be a hoarder!",
+          "desc:8": "While there are no types of veins that are extremely rare, you\u0027re likely to struggle with finding at least one of the less common vein types. This isn\u0027t really avoidable.\n\nYou will accumulate a lot of §dOmnicoins§f from quest turn-ins while playing Nomifactory. Do not be hesitant to spend them on things you need! \n\nSearch for various ores (generally the first one listed in §bJEI§f) to find the coin recipes for them. Alternatively, hover your cursor over a coin and press §6U§f to see what you can buy with it.\n\n§aDon\u0027t be a hoarder!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18262,11 +18261,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\n§rThis quest accepts a item pipe of any material, any size, whether restrictive or normal.\n\nFor now, the best material to make these pipes out of is probably §6Tin§r.\n\nTheir advantage over §5EnderIO §3Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §d8 items per second§r, and up to §d128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §d64 items per second§r, and those made from later materials can transfer §dmultiple stacks per second§r.\n\nThey don\u0027t auto-extract by themselves, so you have to use §3Conveyor covers§r etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value.",
+          "desc:8": "§2Item Pipes are back in GTCEu! They will transport items instantly through them.\n\n§rTheir advantage over §5EnderIO §3Item Conduits§r is their far higher §6throughput§r. An unupgraded EIO Item Conduit transports §d8 items per second§r, and up to §d128§r when upgraded. In comparison, small low-tier Item Pipes can transfer §d64 items per second§r, and those made from later materials can transfer §dmultiple stacks per second§r.\n\nThey don\u0027t auto-extract by themselves, so you have to use §3Conveyor covers§r etc. with them.\n\nThe priority mechanics are more complicated, so skip ahead if you are not interested:\nA Destination will have a Routing Value calculated, which is the sum of all Routing Values of the individual Pipes to that Destination. Whichever Destination has the lowest Routing Value will be the one selected for Insertion.\nRestrictive Pipes typically have the lowest Priority for insertion due to their higher Routing Value.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 112,
+            "Damage:2": 23,
             "OreDict:8": "",
             "id:8": "gregtech:item_pipe_small"
           },
@@ -18305,14 +18304,14 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
+          "ignoreNBT:1": 0,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 112,
-              "OreDict:8": "questbookItemPipes",
+              "Damage:2": 23,
+              "OreDict:8": "",
               "id:8": "gregtech:item_pipe_small"
             }
           },
@@ -30609,7 +30608,7 @@
     },
     "490:10": {
       "preRequisites:11": [
-        413
+        146
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -31023,7 +31022,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bStorage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§f is useful for making custom drawers out of §6Framed Drawers§f, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers§r in-world, with the cost of some sticks. \n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free! \n\nSee the uses of the framing tool in §eJEI§r for more information.",
+          "desc:8": "§bStorage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§f is useful for making custom drawers out of §6Framed Drawers§f, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers§r in-world, with the cost of some sticks. In fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free! See the uses of the framing tool in §eJEI§r for more information.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33926,7 +33925,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Extruder§r is a universal metalworking machine. §aExtruder Shapes§r are used for telling an Extruder which shape to make.\n\nExtruders are §2no longer strictly needed for Large Pipes.§r Extruders use ingots, but are as efficient for making §6Gears§r as melting and solidifying. They are also the most efficient way to make §6Bolts§r, §6Small Gears§r, and §6Rings§r.\n\n§2An LV version does exist, but it can run basically no recipes.§r\n\nYou can also use Extruders to make things from other machines like plates and wires, but they are less efficient than using the dedicated machines for these purposes.",
+          "desc:8": "The §3Extruder§r is a universal metalworking machine. §aExtruder Shapes§r are used for telling an Extruder which shape to make.\n\nExtruders are §2no longer strictly needed for Large Pipes.§r Extruders use ingots, but are as efficient for making §6Gears§r as melting and solidifying. They are also the most efficient way to make §6Bolts§r, §6Small Gears§r, and §6Rings§r.\n\nYou can also use Extruders to make things from other machines like plates and wires, but they are less efficient than using the dedicated machines for these purposes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34586,7 +34585,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nShift-right-click while holding the §3Prospector\u0027s Scanner§r to set it to fluid mode, then right click it in order to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. \n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas, Salt Water§r\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nThe first tier of Fluid Rig is good for §d100,000 operations§r. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.",
+          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nShift-right-click to set your §3Prospector\u0027s Scanner§r to fluid mode, in order to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. \n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas, Salt Water§r\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nThe first tier of Fluid Rig is good for §d100,000 operations§r. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41966,7 +41965,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Take a peek at The §eEnd Game quest book tab§f. This might seem a bit premature to suggest, but it has a reason.\n\nThese are quests for a full stack of many of the materials in the game. Those are the materials you\u0027ll need to synthesize §5Omnium§r, the basic end game resource. It\u0027s the pack\u0027s way of letting you know what materials you should be prepared to mass produce as you approach the end.\n\nOf course, it\u0027s not necessary or even advisable to try to finish up all of these quests the moment they become available. Some will be incredibly easy (like §6Iron§f and §6Copper§f), others will be brutally grindy at early tech levels. The rewards are all the same: §d25 Nomicoins each§f, so use your best judgement on which ones to complete and which to ignore for later.",
+          "desc:8": "Take a peek at The §eEnd Game quest book tab§f. This might seem a bit premature to suggest, but it has a reason.\n\nThese are quests for a full stack of many of the materials in the game. Those are the materials you\u0027ll need to synthesize §5Omnium§r, the basic end game resource. It\u0027s the pack\u0027s way of letting you know what materials you should be prepared to mass produce as you approach the end.\n\nOf course, it\u0027s not necessary or even advisable to try to finish up all of these quests the moment they become available. Some will be incredibly easy (like §6Iron§f and §6Copper§f), others will be brutally grindy at early tech levels. The rewards are all the same: §d25 Omnicoins each§f, so use your best judgement on which ones to complete and which to ignore for later.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46771,6 +46770,7 @@
     },
     "755:10": {
       "preRequisites:11": [
+        3,
         394
       ],
       "properties:10": {
@@ -47845,7 +47845,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2GregTech CEu§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller §2with an empty hand§r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
+          "desc:8": "§2GregTechCEu§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller §2with an empty hand§r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50065,7 +50065,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 1,
-          "desc:8": "§6Sulfur Ore§r is the only source of §6Sulfur Dust§r that\u0027s currently available to you.\n\nYou may want to spend a few §dNomicoins§r on the ore to jumpstart your power storage.\n\nOtherwise the ore is only available in §athe Nether§r, and the only way to get there is with a §6Nether Cake§r. Oh no!",
+          "desc:8": "§6Sulfur Ore§r is the only source of §6Sulfur Dust§r that\u0027s currently available to you.\n\nYou may want to spend a few §dOmnicoins§r on the ore to jumpstart your power storage.\n\nOtherwise the ore is only available in §athe Nether§r, and the only way to get there is with a §6Nether Cake§r. Oh no!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50111,7 +50111,7 @@
                   }
                 },
                 "display:10": {
-                  "Name:8": "I bought ore with Nomicoins"
+                  "Name:8": "I bought ore with Omnicoins"
                 }
               }
             }
@@ -50620,12 +50620,12 @@
     },
     "819:10": {
       "preRequisites:11": [
-        58
+        70
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This quest accepts a §6Power Unit§r of any voltage. \n\nWith GT Batteries unlocked, you can make Power Units for electric GT tools. \n\n§2A new addition among them is the Drill, which at LV tier can mine a 3x3x1 area of blocks, and at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.§r\n\nCharge these with a §6Battery§r of appropriate tier, or in an appropriately tiered machine. \n\nYou may want to look into §6Chainsaws§r for mass tree felling as well, or a §6Wrench§r, for breaking machines very quickly. The other electric tools are probably not worth making.",
+          "desc:8": "§2With MV Batteries unlocked, you can make Power Units for electric GT tools. Most notable among them is the Drill, which at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.\n\nCharge these with a Battery of appropriate tier, or in an appropriately tiered machine.\n\nYou may want to look into Chainsaws for mass tree felling as well, or a Wrench, for breaking machines very quickly. The other electric tools are probably not worth making.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50699,7 +50699,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 447,
-              "OreDict:8": "questbookPowerUnit",
+              "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
             }
           },
@@ -52919,7 +52919,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can get Americium from NuclearCraft progression, but you can also fuse it. First combine Lanthanum with Silicon to make Lutetium, then combine it with Chrome to get Americium.\n\n§2Americium is used in larger quantities in CEu progression. You cannot convert this form of Americium to NuclearCraft Americium isotopes. These are also the best Item Pipe material, in terms of throughput.",
+          "desc:8": "You can get Americium from NuclearCraft progression, but you can also fuse it. First combine Lanthanum with Silicon to make Lutetium, then combine it with Chrome to get Americium.\n\n§2Americium is used in larger quantities in CEu progression. You cannot convert this form of Americium to NuclearCraft Americium isotopes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57286,7 +57286,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Processing Lines: Pulsating Polymer Clay",
+          "name:8": "Pulsating Polymer Clay",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -57615,7 +57615,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§You might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59381,7 +59381,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. \n\nThe first way that comes to mind is electrolysing §9Water§r, but that is slow. \n\nInstead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be achieved by centrifuging §6Food§r and §6Wood§r, processing §6Pyroluse Byproducts§r, or through §6Petroleum§r. \n\nRight now, for the small quantities you need, you can simply electrolyse §9Water§r. Just keep those other ways in mind, for later in the game.",
+          "desc:8": "§nSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. The first way that comes to mind is electrolysing §9Water§r, but that is slow. Instead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r. §6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be achieved by centrifuging §6Food§r and §6Wood§r, processing §6Pyroluse Byproducts§r, or through §6Petroleum§r. \n\nRight now, for the small quantities you need, you can simply electrolyse §9Water§r. Just keep those other ways in mind.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59933,9 +59933,9 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Processing Lines: Ethylene",
+          "name:8": "Ethylene",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60037,750 +60037,6 @@
         }
       },
       "questID:3": 974,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "975:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Petrochem or Ethanol?",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 975,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "976:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Sulfuric Naphtha Distillery",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 976,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "977:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Naphtha Chemical Reactor",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 977,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "978:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Severely Steam-cracked Naphtha Chemical Reactor",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 978,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "979:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Ethylene Distillery",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 979,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "980:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Biomass Brewery",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 980,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "981:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Ethanol Distillery",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 981,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "982:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Ethylene Chemical Reactor",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 982,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "983:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Sulfur Dioxide Chemical Reactor",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 983,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "984:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Sulfur Trioxide Chemical Reactor",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 984,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "985:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Sulfuric Acid Chemical Reactor",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 985,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "986:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Plant Balls Compactor",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 986,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "987:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Bio Chaff Macerator",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 987,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "988:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Steam?",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 988,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "989:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Mention SiO2, tell them to use cobbleworks chain nearby if they need help",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Oxygen",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 989,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "990:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Sulfur",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 990,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "991:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "plastic"
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Processing Lines: Polyethylene",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 991,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "992:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Vinyl Chloride",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 992,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "993:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Chlorine",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 993,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "994:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Mention how you need both the fluid and plates, and you can either pulverise sheets for dust to make pipes, or seperately solidify ingots",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1012,
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_plate"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Polyethylene Sheets",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 994,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "995:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "polyvinyl_chloride"
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Processing Lines: Polyvinyl Chloride",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 995,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "996:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "\u0027Ethylene\u0027 and \u0027Chlorine\u0027",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 996,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "997:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Mention how you don\u0027t need to keep the fluid, and how you can either pulverise sheets for dust to make pipes, or seperately solidify ingots",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1007,
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_plate"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Polyvinyl Chloride Sheets",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 997,
       "rewards:9": {},
       "tasks:9": {}
     }
@@ -61177,74 +60433,74 @@
           "y:3": 220
         },
         "53:10": {
+          "id:3": 755,
+          "sizeX:3": 35,
+          "sizeY:3": 35,
+          "x:3": -516,
+          "y:3": 416
+        },
+        "54:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 184
         },
-        "54:10": {
+        "55:10": {
           "id:3": 775,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
           "y:3": 416
         },
-        "55:10": {
+        "56:10": {
           "id:3": 779,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 88
         },
-        "56:10": {
+        "57:10": {
           "id:3": 788,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
           "y:3": 416
         },
-        "57:10": {
+        "58:10": {
           "id:3": 789,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
           "y:3": 368
         },
-        "58:10": {
+        "59:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 340
         },
-        "59:10": {
+        "60:10": {
           "id:3": 814,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 117
         },
-        "60:10": {
+        "61:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 232
         },
-        "61:10": {
+        "62:10": {
           "id:3": 817,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 260
-        },
-        "62:10": {
-          "id:3": 819,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -516,
-          "y:3": 416
         },
         "63:10": {
           "id:3": 829,
@@ -61884,132 +61140,139 @@
           "y:3": 88
         },
         "82:10": {
+          "id:3": 819,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -288,
+          "y:3": 40
+        },
+        "83:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -602,
           "y:3": 40
         },
-        "83:10": {
+        "84:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -462,
           "y:3": 3
         },
-        "84:10": {
+        "85:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 88
         },
-        "85:10": {
+        "86:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 72
         },
-        "86:10": {
+        "87:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 476
         },
-        "87:10": {
+        "88:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "88:10": {
+        "89:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "89:10": {
+        "90:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "90:10": {
+        "91:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "91:10": {
+        "92:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 400
         },
-        "92:10": {
+        "93:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -284,
           "y:3": 296
         },
-        "93:10": {
+        "94:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 160
         },
-        "94:10": {
+        "95:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 124
         },
-        "95:10": {
+        "96:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -564,
           "y:3": 300
         },
-        "96:10": {
+        "97:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "97:10": {
+        "98:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 216
         },
-        "98:10": {
+        "99:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "99:10": {
+        "100:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 256
         },
-        "100:10": {
+        "101:10": {
           "id:3": 973,
           "sizeX:3": 0,
           "sizeY:3": 0,
@@ -65759,7 +65022,7 @@
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -36,
-          "y:3": 402
+          "y:3": 366
         },
         "22:10": {
           "id:3": 58,
@@ -65850,7 +65113,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 366
+          "y:3": 330
         },
         "35:10": {
           "id:3": 415,
@@ -65937,76 +65200,69 @@
           "y:3": -12
         },
         "47:10": {
-          "id:3": 755,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 366
-        },
-        "48:10": {
           "id:3": 786,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 60
         },
-        "49:10": {
+        "48:10": {
           "id:3": 803,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96
         },
-        "50:10": {
+        "49:10": {
           "id:3": 808,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 96
         },
-        "51:10": {
+        "50:10": {
           "id:3": 811,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
           "y:3": 294
         },
-        "52:10": {
+        "51:10": {
           "id:3": 813,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 60
         },
-        "53:10": {
+        "52:10": {
           "id:3": 902,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 132
         },
-        "54:10": {
+        "53:10": {
           "id:3": 909,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 67,
           "y:3": 288
         },
-        "55:10": {
+        "54:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
           "y:3": 294
         },
-        "56:10": {
+        "55:10": {
           "id:3": 921,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 132
         },
-        "57:10": {
+        "56:10": {
           "id:3": 923,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -67314,174 +66570,6 @@
           "sizeY:3": 0,
           "x:3": -24,
           "y:3": -136
-        },
-        "41:10": {
-          "id:3": 972,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -120,
-          "y:3": 132
-        },
-        "42:10": {
-          "id:3": 975,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -348,
-          "y:3": 48
-        },
-        "43:10": {
-          "id:3": 976,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 12
-        },
-        "44:10": {
-          "id:3": 977,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 12
-        },
-        "45:10": {
-          "id:3": 978,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 12
-        },
-        "46:10": {
-          "id:3": 979,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 12
-        },
-        "47:10": {
-          "id:3": 980,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 72
-        },
-        "48:10": {
-          "id:3": 981,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 72
-        },
-        "49:10": {
-          "id:3": 982,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 72
-        },
-        "50:10": {
-          "id:3": 983,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 108
-        },
-        "51:10": {
-          "id:3": 984,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 108
-        },
-        "52:10": {
-          "id:3": 985,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 108
-        },
-        "53:10": {
-          "id:3": 986,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 144
-        },
-        "54:10": {
-          "id:3": 987,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 144
-        },
-        "55:10": {
-          "id:3": 988,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 36
-        },
-        "56:10": {
-          "id:3": 989,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 96
-        },
-        "57:10": {
-          "id:3": 990,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 144
-        },
-        "58:10": {
-          "id:3": 991,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -168,
-          "y:3": 228
-        },
-        "59:10": {
-          "id:3": 992,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 192
-        },
-        "60:10": {
-          "id:3": 993,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 120
-        },
-        "61:10": {
-          "id:3": 994,
-          "sizeX:3": 72,
-          "sizeY:3": 72,
-          "x:3": -180,
-          "y:3": 336
-        },
-        "62:10": {
-          "id:3": 995,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -60,
-          "y:3": 240
-        },
-        "63:10": {
-          "id:3": 996,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": 192
-        },
-        "64:10": {
-          "id:3": 997,
-          "sizeX:3": 72,
-          "sizeY:3": 72,
-          "x:3": -48,
-          "y:3": 360
         }
       }
     }
