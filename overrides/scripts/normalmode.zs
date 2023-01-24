@@ -289,11 +289,6 @@ makeShaped("of_dml_living_matter_extraterrestrial",
 	  E : <minecraft:ender_pearl> }
 );
 
-// Deep Learner
-
-recipes.removeByRecipeName("deepmoblearning:recipe1_deep_learner");
-recipes.addShaped(<deepmoblearning:deep_learner>, [[null,null,null],[<metaitem:sensor.lv>,<metaitem:tricorder_scanner>,<metaitem:sensor.lv>],[null,null,null]]);
-
 recipes.remove(<nuclearcraft:water_source>);
 makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
     ["AAA",
