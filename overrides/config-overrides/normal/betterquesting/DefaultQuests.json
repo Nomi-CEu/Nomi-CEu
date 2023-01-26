@@ -60797,7 +60797,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -60829,9 +60833,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1016,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:meta_plate"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -60996,7 +61000,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "tetrafluoroethylene"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61031,7 +61039,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chloroform"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61066,7 +61078,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrofluoric_acid"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61098,7 +61114,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "fluorine"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61130,7 +61150,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "hydrogen"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61162,7 +61186,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chlorine"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61194,7 +61222,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "methane"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61229,7 +61261,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chlorine"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
