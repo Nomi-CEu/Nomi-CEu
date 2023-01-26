@@ -2190,6 +2190,11 @@ mods.jei.JEI.removeAndHide(<libvulpes:productsheet:6>);
 mods.jei.JEI.removeAndHide(<libvulpes:productsheet:4>);
 mods.jei.JEI.removeAndHide(<libvulpes:productsheet:1>);
 
+// Better Questing Removals
+mods.jei.JEI.removeAndHide(<betterquesting:extra_life>);
+mods.jei.JEI.removeAndHide(<betterquesting:extra_life:1>);
+mods.jei.JEI.removeAndHide(<betterquesting:extra_life:2>);
+
 
 //                 XXXXXXXXXX                            XXXXXXXXXX
 //              XXXXXXXXXXXXXXX                        XXXXXXXXXXXXXXX
