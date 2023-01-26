@@ -34735,7 +34735,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These are useful for extending the range of §6Phantom Blocks§r and other devices from §bActually Additions§r.",
+          "desc:8": "These are useful for extending the range of §6Phantom Blocks§r and other devices from §bActually Additions§r.\n\nPlace up to three on top of a §6Phantom Block§r to extend its range.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -68301,92 +68301,92 @@
           "id:3": 998,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 372,
-          "y:3": 48
+          "x:3": 132,
+          "y:3": 204
         },
         "66:10": {
           "id:3": 999,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 384,
-          "y:3": 108
+          "x:3": 144,
+          "y:3": 264
         },
         "67:10": {
           "id:3": 1002,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 348,
-          "y:3": 12
+          "x:3": 108,
+          "y:3": 168
         },
         "68:10": {
           "id:3": 1003,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": 12
+          "x:3": 72,
+          "y:3": 168
         },
         "69:10": {
           "id:3": 1004,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 384,
-          "y:3": 12
+          "x:3": 144,
+          "y:3": 168
         },
         "70:10": {
           "id:3": 1005,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
-          "y:3": -24
+          "x:3": 180,
+          "y:3": 132
         },
         "71:10": {
           "id:3": 1006,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 420,
-          "y:3": 12
+          "x:3": 180,
+          "y:3": 168
         },
         "72:10": {
           "id:3": 1007,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -24
+          "x:3": 36,
+          "y:3": 132
         },
         "73:10": {
           "id:3": 1008,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": 12
+          "x:3": 36,
+          "y:3": 168
         },
         "74:10": {
           "id:3": 1009,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": 48
+          "x:3": 72,
+          "y:3": 204
         },
         "75:10": {
           "id:3": 1010,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 360,
-          "y:3": 24
+          "x:3": 120,
+          "y:3": 180
         },
         "76:10": {
           "id:3": 1011,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 396,
-          "y:3": 24
+          "x:3": 156,
+          "y:3": 180
         },
         "77:10": {
           "id:3": 1012,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 324,
-          "y:3": 24
+          "x:3": 84,
+          "y:3": 180
         }
       }
     }
