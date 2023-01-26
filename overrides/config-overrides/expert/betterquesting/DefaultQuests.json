@@ -22432,8 +22432,8 @@
     },
     "404:10": {
       "preRequisites:11": [
-        104,
-        403
+        403,
+        809
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42565,6 +42565,45 @@
     },
     "809:10": {
       "preRequisites:11": [
+        104
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online. Just remember that channels are disabled by default in this pack.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6§6§6Interfaces§r§r§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 36.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:crafting_monitor"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Setting Up Autocrafting",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 809,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "810:10": {
+      "preRequisites:11": [
         60
       ],
       "properties:10": {
@@ -42616,7 +42655,60 @@
         }
       }
     },
-    "810:10": {
+    "811:10": {
+      "preRequisites:11": [
+        106,
+        408
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§bPackagedAuto§r is cool, but check this out!\n\nThe §6Extended Processing Pattern Terminal§r is a new device which allows you to encode regular §bApplied Energistics§r patterns with processing recipes that have up to 16 ingredients and 6 outputs.\n\nThese are extremely useful for automating recipes for complex multiblocks like the §3Assembly Line§r, while avoiding PackagedAuto§r pitfalls like round-robin being really awkward, since §6Unpackagers§r have internal buffers, as well as being able to use the §6Interface Terminal§r, instead of running around your base.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 341,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Extended Processing Pattern Terminal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 811,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 341,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "812:10": {
       "preRequisites:11": [
         94,
         505
@@ -42651,7 +42743,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "811:10": {
+    "813:10": {
       "preRequisites:11": [
         4
       ],
@@ -42690,7 +42782,7 @@
         }
       }
     },
-    "812:10": {
+    "814:10": {
       "preRequisites:11": [
         21
       ],
@@ -42742,7 +42834,7 @@
         }
       }
     },
-    "813:10": {
+    "815:10": {
       "preRequisites:11": [
         145
       ],
@@ -42810,7 +42902,7 @@
         }
       }
     },
-    "814:10": {
+    "816:10": {
       "preRequisites:11": [
         76,
         818
@@ -42863,7 +42955,7 @@
         }
       }
     },
-    "815:10": {
+    "817:10": {
       "preRequisites:11": [
         141
       ],
@@ -42939,7 +43031,7 @@
         }
       }
     },
-    "816:10": {
+    "818:10": {
       "preRequisites:11": [
         530
       ],
@@ -42991,7 +43083,7 @@
         }
       }
     },
-    "817:10": {
+    "819:10": {
       "preRequisites:11": [
         58
       ],
@@ -43070,7 +43162,7 @@
         }
       }
     },
-    "818:10": {
+    "820:10": {
       "preRequisites:11": [
         72,
         78,
@@ -43124,7 +43216,7 @@
         }
       }
     },
-    "819:10": {
+    "821:10": {
       "preRequisites:11": [
         27
       ],
@@ -43181,7 +43273,7 @@
         }
       }
     },
-    "820:10": {
+    "822:10": {
       "preRequisites:11": [
         82
       ],
@@ -43233,7 +43325,7 @@
         }
       }
     },
-    "821:10": {
+    "823:10": {
       "preRequisites:11": [
         727
       ],
@@ -43285,7 +43377,7 @@
         }
       }
     },
-    "822:10": {
+    "824:10": {
       "preRequisites:11": [
         95
       ],
@@ -43337,7 +43429,7 @@
         }
       }
     },
-    "823:10": {
+    "825:10": {
       "preRequisites:11": [
         153,
         899
@@ -43391,7 +43483,7 @@
         }
       }
     },
-    "824:10": {
+    "826:10": {
       "preRequisites:11": [
         825
       ],
@@ -43461,7 +43553,7 @@
         }
       }
     },
-    "825:10": {
+    "827:10": {
       "preRequisites:11": [
         177
       ],
@@ -43519,7 +43611,7 @@
         }
       }
     },
-    "826:10": {
+    "828:10": {
       "preRequisites:11": [
         198
       ],
@@ -43572,7 +43664,59 @@
         }
       }
     },
-    "827:10": {
+    "829:10": {
+      "preRequisites:11": [
+        109
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A very useful upgrade card that can be applied to §6Interfaces§r. Saves having many interfaces crowded around a machine or multiblock.\n\nYou can have up to §33 §6Pattern Expansion Cards§r installed per interface, bringing the amount of pattern slots from 9 to 36.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 58,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Pattern Expansion Cards",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 829,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 58,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "830:10": {
       "preRequisites:11": [
         93
       ],
@@ -43624,7 +43768,7 @@
         }
       }
     },
-    "828:10": {
+    "831:10": {
       "preRequisites:11": [
         830
       ],
@@ -43676,7 +43820,7 @@
         }
       }
     },
-    "829:10": {
+    "832:10": {
       "preRequisites:11": [
         830
       ],
@@ -43747,7 +43891,7 @@
         }
       }
     },
-    "830:10": {
+    "833:10": {
       "preRequisites:11": [
         830
       ],
@@ -43811,7 +43955,7 @@
         }
       }
     },
-    "831:10": {
+    "834:10": {
       "preRequisites:11": [
         96
       ],
@@ -43863,7 +44007,7 @@
         }
       }
     },
-    "832:10": {
+    "835:10": {
       "preRequisites:11": [
         93
       ],
@@ -43915,7 +44059,7 @@
         }
       }
     },
-    "833:10": {
+    "836:10": {
       "preRequisites:11": [
         147,
         259
@@ -43968,7 +44112,7 @@
         }
       }
     },
-    "834:10": {
+    "837:10": {
       "preRequisites:11": [
         91,
         810,
@@ -44022,7 +44166,7 @@
         }
       }
     },
-    "835:10": {
+    "838:10": {
       "preRequisites:11": [
         194,
         526
@@ -44075,7 +44219,7 @@
         }
       }
     },
-    "836:10": {
+    "839:10": {
       "preRequisites:11": [
         325,
         904
@@ -44128,7 +44272,7 @@
         }
       }
     },
-    "837:10": {
+    "840:10": {
       "preRequisites:11": [
         323,
         791,
@@ -44182,7 +44326,7 @@
         }
       }
     },
-    "838:10": {
+    "841:10": {
       "preRequisites:11": [
         312
       ],
@@ -44234,7 +44378,7 @@
         }
       }
     },
-    "839:10": {
+    "842:10": {
       "preRequisites:11": [
         242,
         327
@@ -44287,7 +44431,7 @@
         }
       }
     },
-    "840:10": {
+    "843:10": {
       "preRequisites:11": [
         323
       ],
@@ -44340,7 +44484,7 @@
         }
       }
     },
-    "841:10": {
+    "844:10": {
       "preRequisites:11": [
         845,
         847
@@ -44393,7 +44537,7 @@
         }
       }
     },
-    "842:10": {
+    "845:10": {
       "preRequisites:11": [
         324,
         843
@@ -44446,7 +44590,7 @@
         }
       }
     },
-    "843:10": {
+    "846:10": {
       "preRequisites:11": [
         844
       ],
@@ -44498,7 +44642,7 @@
         }
       }
     },
-    "844:10": {
+    "847:10": {
       "preRequisites:11": [
         324,
         843
@@ -44551,7 +44695,7 @@
         }
       }
     },
-    "845:10": {
+    "848:10": {
       "preRequisites:11": [
         847
       ],
@@ -44603,7 +44747,7 @@
         }
       }
     },
-    "846:10": {
+    "849:10": {
       "preRequisites:11": [
         690
       ],
@@ -44655,7 +44799,7 @@
         }
       }
     },
-    "847:10": {
+    "850:10": {
       "preRequisites:11": [
         828,
         841,
@@ -44734,7 +44878,7 @@
         }
       }
     },
-    "848:10": {
+    "851:10": {
       "preRequisites:11": [
         312
       ],
@@ -44786,7 +44930,7 @@
         }
       }
     },
-    "849:10": {
+    "852:10": {
       "preRequisites:11": [
         677,
         749
@@ -44839,7 +44983,7 @@
         }
       }
     },
-    "850:10": {
+    "853:10": {
       "preRequisites:11": [
         827
       ],
@@ -44891,7 +45035,7 @@
         }
       }
     },
-    "851:10": {
+    "854:10": {
       "preRequisites:11": [
         196
       ],
@@ -44943,7 +45087,7 @@
         }
       }
     },
-    "852:10": {
+    "855:10": {
       "preRequisites:11": [
         607
       ],
@@ -44995,7 +45139,7 @@
         }
       }
     },
-    "853:10": {
+    "856:10": {
       "preRequisites:11": [
         855
       ],
@@ -45047,7 +45191,7 @@
         }
       }
     },
-    "854:10": {
+    "857:10": {
       "preRequisites:11": [
         339
       ],
@@ -45117,7 +45261,7 @@
         }
       }
     },
-    "855:10": {
+    "858:10": {
       "preRequisites:11": [
         255,
         857
@@ -45182,7 +45326,7 @@
         }
       }
     },
-    "856:10": {
+    "859:10": {
       "preRequisites:11": [
         690,
         858
@@ -45235,7 +45379,7 @@
         }
       }
     },
-    "857:10": {
+    "860:10": {
       "preRequisites:11": [
         531,
         826,
@@ -45313,7 +45457,7 @@
         }
       }
     },
-    "858:10": {
+    "861:10": {
       "preRequisites:11": [
         607,
         756
@@ -45372,7 +45516,7 @@
         }
       }
     },
-    "859:10": {
+    "862:10": {
       "preRequisites:11": [
         727
       ],
@@ -45424,7 +45568,7 @@
         }
       }
     },
-    "860:10": {
+    "863:10": {
       "preRequisites:11": [
         727
       ],
@@ -45476,7 +45620,7 @@
         }
       }
     },
-    "861:10": {
+    "864:10": {
       "preRequisites:11": [
         827
       ],
@@ -45528,7 +45672,7 @@
         }
       }
     },
-    "862:10": {
+    "865:10": {
       "preRequisites:11": [
         827
       ],
@@ -45580,7 +45724,7 @@
         }
       }
     },
-    "863:10": {
+    "866:10": {
       "preRequisites:11": [
         727
       ],
@@ -45632,7 +45776,7 @@
         }
       }
     },
-    "864:10": {
+    "867:10": {
       "preRequisites:11": [
         727
       ],
@@ -45684,7 +45828,7 @@
         }
       }
     },
-    "865:10": {
+    "868:10": {
       "preRequisites:11": [
         234
       ],
@@ -45736,7 +45880,7 @@
         }
       }
     },
-    "866:10": {
+    "869:10": {
       "preRequisites:11": [
         139
       ],
@@ -45788,7 +45932,7 @@
         }
       }
     },
-    "867:10": {
+    "870:10": {
       "preRequisites:11": [
         139
       ],
@@ -45840,7 +45984,7 @@
         }
       }
     },
-    "868:10": {
+    "871:10": {
       "preRequisites:11": [
         139
       ],
@@ -45892,7 +46036,7 @@
         }
       }
     },
-    "869:10": {
+    "872:10": {
       "preRequisites:11": [
         325
       ],
@@ -45944,7 +46088,7 @@
         }
       }
     },
-    "870:10": {
+    "873:10": {
       "preRequisites:11": [
         287
       ],
@@ -45996,7 +46140,7 @@
         }
       }
     },
-    "871:10": {
+    "874:10": {
       "preRequisites:11": [
         727
       ],
@@ -46048,7 +46192,7 @@
         }
       }
     },
-    "872:10": {
+    "875:10": {
       "preRequisites:11": [
         6
       ],
@@ -46100,7 +46244,7 @@
         }
       }
     },
-    "873:10": {
+    "876:10": {
       "preRequisites:11": [
         196
       ],
@@ -46152,7 +46296,7 @@
         }
       }
     },
-    "874:10": {
+    "877:10": {
       "preRequisites:11": [
         287
       ],
@@ -46204,7 +46348,7 @@
         }
       }
     },
-    "875:10": {
+    "878:10": {
       "preRequisites:11": [
         847
       ],
@@ -46256,7 +46400,7 @@
         }
       }
     },
-    "876:10": {
+    "879:10": {
       "preRequisites:11": [
         323
       ],
@@ -46308,7 +46452,7 @@
         }
       }
     },
-    "877:10": {
+    "880:10": {
       "preRequisites:11": [
         397
       ],
@@ -46360,7 +46504,7 @@
         }
       }
     },
-    "878:10": {
+    "881:10": {
       "preRequisites:11": [
         153
       ],
@@ -46409,7 +46553,7 @@
         }
       }
     },
-    "879:10": {
+    "882:10": {
       "preRequisites:11": [
         325,
         750
@@ -46444,7 +46588,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "880:10": {
+    "883:10": {
       "preRequisites:11": [
         885
       ],
@@ -46496,7 +46640,7 @@
         }
       }
     },
-    "881:10": {
+    "884:10": {
       "preRequisites:11": [
         288
       ],
@@ -46548,7 +46692,7 @@
         }
       }
     },
-    "882:10": {
+    "885:10": {
       "preRequisites:11": [
         749
       ],
@@ -46600,7 +46744,7 @@
         }
       }
     },
-    "883:10": {
+    "886:10": {
       "preRequisites:11": [
         89
       ],
@@ -46652,7 +46796,7 @@
         }
       }
     },
-    "884:10": {
+    "887:10": {
       "preRequisites:11": [
         165,
         546
@@ -46706,7 +46850,7 @@
         }
       }
     },
-    "885:10": {
+    "888:10": {
       "preRequisites:11": [
         161,
         166,
@@ -46761,7 +46905,7 @@
         }
       }
     },
-    "886:10": {
+    "889:10": {
       "preRequisites:11": [
         827
       ],
@@ -46795,7 +46939,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "887:10": {
+    "890:10": {
       "preRequisites:11": [
         56
       ],
@@ -46834,7 +46978,7 @@
         }
       }
     },
-    "888:10": {
+    "891:10": {
       "preRequisites:11": [
         94
       ],
@@ -46883,7 +47027,7 @@
         }
       }
     },
-    "889:10": {
+    "892:10": {
       "preRequisites:11": [
         541
       ],
@@ -46948,7 +47092,7 @@
         }
       }
     },
-    "890:10": {
+    "893:10": {
       "preRequisites:11": [
         3
       ],
@@ -46987,7 +47131,7 @@
         }
       }
     },
-    "891:10": {
+    "894:10": {
       "preRequisites:11": [
         147
       ],
@@ -47039,7 +47183,7 @@
         }
       }
     },
-    "892:10": {
+    "895:10": {
       "preRequisites:11": [
         88,
         894
@@ -47098,7 +47242,7 @@
         }
       }
     },
-    "893:10": {
+    "896:10": {
       "preRequisites:11": [
         6
       ],
@@ -47151,7 +47295,7 @@
         }
       }
     },
-    "894:10": {
+    "897:10": {
       "preRequisites:11": [
         830,
         896
@@ -47204,7 +47348,7 @@
         }
       }
     },
-    "895:10": {
+    "898:10": {
       "preRequisites:11": [
         93,
         891
@@ -47263,7 +47407,7 @@
         }
       }
     },
-    "896:10": {
+    "899:10": {
       "preRequisites:11": [
         71
       ],
@@ -47316,7 +47460,7 @@
         }
       }
     },
-    "897:10": {
+    "900:10": {
       "preRequisites:11": [
         888
       ],
@@ -47369,7 +47513,7 @@
         }
       }
     },
-    "898:10": {
+    "901:10": {
       "preRequisites:11": [
         179,
         888
@@ -47404,7 +47548,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "899:10": {
+    "902:10": {
       "preRequisites:11": [
         805
       ],
@@ -47448,7 +47592,7 @@
         }
       }
     },
-    "900:10": {
+    "903:10": {
       "preRequisites:11": [
         59,
         72
@@ -47501,7 +47645,7 @@
         }
       }
     },
-    "901:10": {
+    "904:10": {
       "preRequisites:11": [
         781
       ],
@@ -47554,7 +47698,7 @@
         }
       }
     },
-    "902:10": {
+    "905:10": {
       "preRequisites:11": [
         904
       ],
@@ -47607,7 +47751,7 @@
         }
       }
     },
-    "903:10": {
+    "906:10": {
       "preRequisites:11": [
         535
       ],
@@ -47683,7 +47827,7 @@
         }
       }
     },
-    "904:10": {
+    "907:10": {
       "preRequisites:11": [
         533,
         906
@@ -47718,7 +47862,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "905:10": {
+    "908:10": {
       "preRequisites:11": [
         196
       ],
@@ -47752,7 +47896,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "906:10": {
+    "909:10": {
       "preRequisites:11": [
         670,
         805
@@ -47817,7 +47961,7 @@
         }
       }
     },
-    "907:10": {
+    "910:10": {
       "preRequisites:11": [
         527,
         827
@@ -47870,7 +48014,7 @@
         }
       }
     },
-    "908:10": {
+    "911:10": {
       "preRequisites:11": [
         38
       ],
@@ -53832,7 +53976,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
-          "y:3": 568
+          "y:3": 592
         },
         "16:10": {
           "id:3": 109,
@@ -53950,22 +54094,22 @@
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 616
+          "x:3": 168,
+          "y:3": 656
         },
         "33:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 656
+          "x:3": 104,
+          "y:3": 696
         },
         "34:10": {
           "id:3": 408,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 616
+          "x:3": 104,
+          "y:3": 656
         },
         "35:10": {
           "id:3": 494,
@@ -53994,6 +54138,27 @@
           "sizeY:3": 24,
           "x:3": -96,
           "y:3": 480
+        },
+        "39:10": {
+          "id:3": 809,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": 616
+        },
+        "40:10": {
+          "id:3": 811,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 40,
+          "y:3": 656
+        },
+        "41:10": {
+          "id:3": 829,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 208,
+          "y:3": 556
         }
       }
     }
