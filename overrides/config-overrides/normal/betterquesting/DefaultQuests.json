@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -60786,7 +60785,8 @@
     },
     "998:10": {
       "preRequisites:11": [
-        1002
+        1002,
+        825
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -60820,11 +60820,31 @@
       },
       "questID:3": 998,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "999:10": {
       "preRequisites:11": [
-        998
+        998,
+        825
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -60854,7 +60874,26 @@
       },
       "questID:3": 999,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1000:10": {
       "preRequisites:11": [
@@ -60989,7 +61028,8 @@
     },
     "1002:10": {
       "preRequisites:11": [
-        1010
+        1010,
+        825
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61023,12 +61063,31 @@
       },
       "questID:3": 1002,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1003:10": {
       "preRequisites:11": [
-        1007,
-        1008
+        1012,
+        825
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61062,12 +61121,31 @@
       },
       "questID:3": 1003,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1004:10": {
       "preRequisites:11": [
-        1005,
-        1006
+        1011,
+        825
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61101,7 +61179,26 @@
       },
       "questID:3": 1004,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1005:10": {
       "preRequisites:11": [],
@@ -61137,7 +61234,26 @@
       },
       "questID:3": 1005,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1006:10": {
       "preRequisites:11": [],
@@ -61173,7 +61289,26 @@
       },
       "questID:3": 1006,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1007:10": {
       "preRequisites:11": [],
@@ -61209,7 +61344,26 @@
       },
       "questID:3": 1007,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1008:10": {
       "preRequisites:11": [],
@@ -61245,12 +61399,32 @@
       },
       "questID:3": 1008,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1009:10": {
       "preRequisites:11": [
         1002,
-        1003
+        1003,
+        825
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61284,7 +61458,26 @@
       },
       "questID:3": 1009,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     },
     "1010:10": {
       "preRequisites:11": [
@@ -61294,7 +61487,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Hidden quest for PTFE processing line",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61318,6 +61511,76 @@
         }
       },
       "questID:3": 1010,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1011:10": {
+      "preRequisites:11": [
+        1006,
+        1005
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Hidden quest for PTFE processing line",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "\u0027Hydrogen\u0027 and \u0027Fluorine\u0027",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1011,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1012:10": {
+      "preRequisites:11": [
+        1007,
+        1008
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Hidden quest for PTFE processing line",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "\u0027Chlorine\u0027 and \u0027Methane\u0027",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1012,
       "rewards:9": {},
       "tasks:9": {}
     }
@@ -68109,6 +68372,20 @@
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 360,
+          "y:3": 24
+        },
+        "76:10": {
+          "id:3": 1011,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": 396,
+          "y:3": 24
+        },
+        "77:10": {
+          "id:3": 1012,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": 324,
           "y:3": 24
         }
       }
