@@ -8,11 +8,12 @@ import crafttweaker.event.PlayerInteractBlockEvent;
                        <redstonearsenal:tool.wrench_flux>,
                        <redstonearsenal:tool.battlewrench_flux>);
 
-static wrenchables as IBlockPattern = <thermalexpansion:tank> as IBlock |
-                                      <thermalexpansion:cell> as IBlock |
-                                      <extrautils2:creativeenergy> as IBlock |
+<ore:wrenchCustom>.addAll(<ore:gtceWrenches>);
+
+static wrenchables as IBlockPattern = <extrautils2:creativeenergy> as IBlock |
                                       <extrautils2:passivegenerator:6> as IBlock |
-                                      <extrautils2:drum:4> as IBlock;
+                                      <extrautils2:drum:4> as IBlock |
+                                      <draconicevolution:creative_rf_source> as IBlock;
 
 function isNotWrenchable(block as IBlock) as bool {
 	return isNull(block) || // no block
