@@ -1863,7 +1863,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need §6Obsidian§r to make §6Dark Steel§r. Most of the tools you can make cannot mine Obsidian, but you do have a few potential options for ones that will work. The options you\u0027re most likely to have access to at this point are:\n\n1) A §aDiamond Pickaxe§r or §aDiamond Mining Hammer§r.\n\n2) A §aPlatinum Mining Hammer§r (not pickaxe though).",
+          "desc:8": "You\u0027ll need §6Obsidian§r to make §6Dark Steel§r. Most of the tools you can make cannot mine Obsidian, but you do have a few potential options for ones that will work. The options you\u0027re most likely to have access to at this point are:\n\n1) A §aDiamond Pickaxe§r or §aDiamond Mining Hammer§r.\n\n2) A §aPlatinum Mining Hammer§r (not pickaxe though).\n\nLater. you can use a §3Rock Breaker§r at voltage §aHV§r or higher to make §6Obsidian§r without spending §6Lava§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5031,7 +5031,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your EBF running, start to create a supply of §6Aluminium Ingots§r. These are crucial ingredients for MV machines, including §bApplied Energistics§r.\n\n§2With LV power, you can only get Aluminium Dust from electrolyzing Clay Dust, Sapphire Dust or Green Sapphire Dust. Once you make an MV Electrolyzer, you can get it from a plethora of other raw resources.§r\n\nIf you find your power supply is faltering, you may want to make additional dynamos and turn them into steam boilers and turbines. Upgrading your dynamos is also advisable.\n\nHowever, you\u0027re also about to reach MV. You\u0027re bound to discover a better power source than steam before long.\n\n§2You can cut by a third the smelting time of Aluminium and some other smelting processes with Nitrogen gas. Higher-tier processes may take different gases.",
+          "desc:8": "With your EBF running, start to create a supply of §6Aluminium Ingots§r. These are crucial ingredients for MV machines, including §bApplied Energistics§r.\n\n§2With LV power, you can only get Aluminium Dust from electrolyzing Clay Dust, Sapphire Dust or Green Sapphire Dust. Clay Dust is recommended. Once you make an MV Electrolyzer, you can get it from a plethora of other raw resources.§r\n\nIf you find your power supply is faltering, you may want to make additional dynamos and turn them into steam boilers and turbines. Upgrading your dynamos is also advisable.\n\nHowever, you\u0027re also about to reach MV. You\u0027re bound to discover a better power source than steam before long.\n\n§2You can cut by a third the smelting time of Aluminium and some other smelting processes with Nitrogen gas. Higher-tier processes may take different gases.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31115,7 +31115,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Great for automatically converting between Nuggets, Ingots, and Blocks of metals, or simply storing massive amounts of things. Also works with §dNomicoins§r.\n\nThe appearance can be customized by crafting the drawer into §aFramed Compacting Drawer§r and putting it into a §aFraming Table§r.",
+          "desc:8": "Great for automatically converting between Nuggets, Ingots, and Blocks of metals, or simply storing massive amounts of things. Also works with §dNomicoins§r.\n\nThe appearance can be customized by crafting the drawer into §aFramed Compacting Drawer§r and putting it into a §aFraming Table§r, or using a §aHand Framing Tool§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32395,7 +32395,6 @@
     },
     "517:10": {
       "preRequisites:11": [
-        21,
         145
       ],
       "properties:10": {
@@ -61619,7 +61618,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 188
+          "y:3": 184
         },
         "2:10": {
           "id:3": 21,
@@ -61724,7 +61723,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 260
+          "y:3": 240
         },
         "17:10": {
           "id:3": 60,
@@ -61744,8 +61743,8 @@
           "id:3": 72,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -844,
-          "y:3": 180
+          "x:3": -896,
+          "y:3": 288
         },
         "20:10": {
           "id:3": 145,
@@ -61765,8 +61764,8 @@
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": 292
+          "x:3": -848,
+          "y:3": 240
         },
         "23:10": {
           "id:3": 215,
@@ -61779,7 +61778,7 @@
           "id:3": 228,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -892,
           "y:3": 8
         },
         "25:10": {
@@ -61787,7 +61786,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
-          "y:3": 188
+          "y:3": 184
         },
         "26:10": {
           "id:3": 259,
@@ -61863,29 +61862,29 @@
           "id:3": 413,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -892,
           "y:3": 136
         },
         "37:10": {
           "id:3": 489,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -892,
-          "y:3": 292
+          "x:3": -988,
+          "y:3": 184
         },
         "38:10": {
           "id:3": 490,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": 88
+          "x:3": -892,
+          "y:3": 68
         },
         "39:10": {
           "id:3": 497,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
-          "y:3": 232
+          "y:3": 236
         },
         "40:10": {
           "id:3": 498,
@@ -61899,14 +61898,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -792,
-          "y:3": 184
+          "y:3": 292
         },
         "42:10": {
           "id:3": 517,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
-          "y:3": 136
+          "y:3": 236
         },
         "43:10": {
           "id:3": 528,
@@ -61975,14 +61974,14 @@
           "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -692,
-          "y:3": 220
+          "x:3": -708,
+          "y:3": 216
         },
         "53:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -940,
+          "x:3": -848,
           "y:3": 184
         },
         "54:10": {
@@ -62031,15 +62030,15 @@
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -892,
-          "y:3": 232
+          "x:3": -940,
+          "y:3": 184
         },
         "61:10": {
           "id:3": 817,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -692,
-          "y:3": 260
+          "x:3": -676,
+          "y:3": 216
         },
         "62:10": {
           "id:3": 819,
