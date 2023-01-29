@@ -10308,7 +10308,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first Titanium. This process is a loop, and therefore will not cost you any resources apart from §6Rutile§r if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nYou should have set up a §3Vaccum Freezer§r for §6Kanthal§r, but if you haven\u0027t done it yet or want to improve you\u0027re setup, routing through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering you\u0027re system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
+          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r. \n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nYou should have set up a §3Vaccum Freezer§r for §6Kanthal§r, but if you haven\u0027t done it yet or want to improve you\u0027re setup, routing through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering you\u0027re system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11928,7 +11928,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Because of this, after the first few processes of §9Liquid Air§r, you\u0027ll probably have more Nitrogen than you know what to do with.\n\nIf you got here centrifuging air, then it\u0027s gonna take you longer to get to that point.\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, such as §2speeding up some Electric Blast Furnace recipes§r, and §2Cetane-Boosted Diesel§r",
+          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Because of this, after the first few processes of §9Liquid Air§r, you\u0027ll probably have more Nitrogen than you know what to do with.\n\nIf you got here centrifuging air, then it\u0027s gonna take you longer to get to that point.\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, such as §2speeding up some Electric Blast Furnace recipes§r, §2making Glowstone-Doped Silicon Boules§r, and §2making Cetane-Boosted Diesel§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23049,7 +23049,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2HV Power Storage",
+          "name:8": "§2Good HV Power Storage",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -31525,7 +31525,7 @@
     },
     "503:10": {
       "preRequisites:11": [
-        243
+        844
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51741,7 +51741,8 @@
     },
     "835:10": {
       "preRequisites:11": [
-        93
+        93,
+        974
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62185,7 +62186,7 @@
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -256,
-          "y:3": 424
+          "y:3": 448
         },
         "11:10": {
           "id:3": 55,
@@ -62322,10 +62323,10 @@
         },
         "30:10": {
           "id:3": 89,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -532,
-          "y:3": 236
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -536,
+          "y:3": 232
         },
         "31:10": {
           "id:3": 90,
@@ -62353,7 +62354,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -260,
-          "y:3": 328
+          "y:3": 388
         },
         "35:10": {
           "id:3": 95,
@@ -62374,7 +62375,7 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -252,
-          "y:3": 196
+          "y:3": 236
         },
         "38:10": {
           "id:3": 104,
@@ -62401,8 +62402,8 @@
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 340
+          "x:3": -172,
+          "y:3": 364
         },
         "42:10": {
           "id:3": 129,
@@ -62415,8 +62416,8 @@
           "id:3": 130,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -604,
-          "y:3": 208
+          "x:3": -608,
+          "y:3": 236
         },
         "44:10": {
           "id:3": 131,
@@ -62528,14 +62529,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
-          "y:3": 396
+          "y:3": 400
         },
         "60:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -604,
-          "y:3": 268
+          "x:3": -576,
+          "y:3": 276
         },
         "61:10": {
           "id:3": 502,
@@ -62660,8 +62661,8 @@
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
-          "y:3": 200
+          "x:3": -160,
+          "y:3": 240
         },
         "79:10": {
           "id:3": 810,
@@ -62723,29 +62724,29 @@
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -156,
-          "y:3": 292
+          "x:3": -176,
+          "y:3": 316
         },
         "88:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
-          "y:3": 296
+          "x:3": -220,
+          "y:3": 320
         },
         "89:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -104,
-          "y:3": 296
+          "x:3": -124,
+          "y:3": 320
         },
         "90:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -104,
-          "y:3": 340
+          "x:3": -124,
+          "y:3": 364
         },
         "91:10": {
           "id:3": 834,
@@ -62758,8 +62759,8 @@
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -284,
-          "y:3": 296
+          "x:3": -288,
+          "y:3": 348
         },
         "93:10": {
           "id:3": 836,
@@ -62779,8 +62780,8 @@
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -564,
-          "y:3": 300
+          "x:3": -572,
+          "y:3": 200
         },
         "96:10": {
           "id:3": 894,
@@ -62800,15 +62801,15 @@
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -104,
-          "y:3": 256
+          "x:3": -124,
+          "y:3": 280
         },
         "99:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 256
+          "x:3": -172,
+          "y:3": 280
         },
         "100:10": {
           "id:3": 973,
@@ -63423,8 +63424,8 @@
           "id:3": 344,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -508,
-          "y:3": 180
+          "x:3": -512,
+          "y:3": 176
         },
         "84:10": {
           "id:3": 347,
@@ -63514,8 +63515,8 @@
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -499,
-          "y:3": 207
+          "x:3": -496,
+          "y:3": 208
         },
         "97:10": {
           "id:3": 555,
@@ -63535,8 +63536,8 @@
           "id:3": 610,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -477,
-          "y:3": 173
+          "x:3": -480,
+          "y:3": 176
         },
         "100:10": {
           "id:3": 611,
