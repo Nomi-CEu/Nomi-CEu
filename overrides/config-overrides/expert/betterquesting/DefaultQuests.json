@@ -13217,7 +13217,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There\u0027s a great deal of interesting content within §bActually Additions§r, and although most of it is not strictly required for progression, you should still look through what it offers and build what interests you.\n\nIn particular, the §aDrill§r with all the upgrades is a fantastically powerful mining tool, and the §3Vertical Digger§r is a machine which can be placed to automate mining an entire vein for you.\n\n§3Phantomfaces§r, §3Auto Placers/Breakers§r, §3Lava Factories§r, and much more can be utilized at your discretion to supplement and refine your automation techniques.",
+          "desc:8": "There\u0027s a great deal of interesting content within §bActually Additions§r, and although most of it is not strictly required for progression, you should still look through what it offers and build what interests you.\n\n§2The Drill is overpowered by the GregTech Drill, however it is still an option, as AA Drills do not have or lose durability. The Vertical Digger has been completely removed, as it is replaced by the GregTech single-block miners, and multi-block Ore Drilling Plants.\n\n§3Phantomfaces§r, §3Auto Placers/Breakers§r, §3Lava Factories§r, and much more can be utilized at your discretion to supplement and refine your automation techniques.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26844,7 +26844,7 @@
     },
     "503:10": {
       "preRequisites:11": [
-        243
+        844
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29485,7 +29485,8 @@
     },
     "551:10": {
       "preRequisites:11": [
-        233
+        233,
+        912
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -48065,6 +48066,65 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "912:10": {
+      "preRequisites:11": [
+        344,
+        233
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Phantomfaces§r are powerful blocks added by §bActually Additions§r. They work by connecting to an inventory. \n\nIn order to do this, grab a §6Phantom Connector§r and shift-right click the inventory which you want to connect to, and then shift-right clicking on the §6Phantomface§r. You should see a message saying that it has been successfully connected. Keep in mind that these have a range, so don\u0027t put your inventories too far away.\n\nNow, whenever an item goes into that inventory, it will go into the §6Phantomface§r. This also works the other way around. §6\n\nPhantomfaces§r can also be crafted into other variants, such as §6Phantom Breakers§r and §6Phantom Placers§r. These work just like the §6Phantomface§r, but with a slight variation. For example, §6Phantom Breakers§r would put the item they broke into the inventory it is connected to.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "actuallyadditions:block_phantomface"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Phantomfaces",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 912,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:block_phantomface"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:item_phantom_connector"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -48791,8 +48851,8 @@
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 188
+          "x:3": -200,
+          "y:3": 140
         },
         "36:10": {
           "id:3": 93,
@@ -49075,216 +49135,209 @@
           "y:3": 68
         },
         "76:10": {
-          "id:3": 551,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -184,
-          "y:3": 140
-        },
-        "77:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
           "y:3": 224
         },
-        "78:10": {
+        "77:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 20
         },
-        "79:10": {
+        "78:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -112,
           "y:3": 20
         },
-        "80:10": {
+        "79:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 20
         },
-        "81:10": {
+        "80:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 20
         },
-        "82:10": {
+        "81:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 68
         },
-        "83:10": {
+        "82:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 548
         },
-        "84:10": {
+        "83:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 140
         },
-        "85:10": {
+        "84:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -392,
           "y:3": 352
         },
-        "86:10": {
+        "85:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -616,
           "y:3": 128
         },
-        "87:10": {
+        "86:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -652,
           "y:3": 68
         },
-        "88:10": {
+        "87:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 20
         },
-        "89:10": {
+        "88:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": -17
         },
-        "90:10": {
+        "89:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 68
         },
-        "91:10": {
+        "90:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 48
         },
-        "92:10": {
+        "91:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 464
         },
-        "93:10": {
+        "92:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "94:10": {
+        "93:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "95:10": {
+        "94:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "96:10": {
+        "95:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "97:10": {
+        "96:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 388
         },
-        "98:10": {
+        "97:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 288
         },
-        "99:10": {
+        "98:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 104
         },
-        "100:10": {
+        "99:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 104
         },
-        "101:10": {
+        "100:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -552,
           "y:3": 268
         },
-        "102:10": {
+        "101:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 264
         },
-        "103:10": {
+        "102:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "104:10": {
+        "103:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 188
         },
-        "105:10": {
+        "104:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "106:10": {
+        "105:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -49890,8 +49943,8 @@
           "id:3": 344,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -508,
-          "y:3": 180
+          "x:3": -510,
+          "y:3": 174
         },
         "83:10": {
           "id:3": 347,
@@ -49978,347 +50031,361 @@
           "y:3": 368
         },
         "95:10": {
+          "id:3": 551,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -492,
+          "y:3": 204
+        },
+        "96:10": {
           "id:3": 555,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -924,
           "y:3": 252
         },
-        "96:10": {
+        "97:10": {
           "id:3": 580,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -460,
           "y:3": 368
         },
-        "97:10": {
+        "98:10": {
           "id:3": 610,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 168
         },
-        "98:10": {
+        "99:10": {
           "id:3": 611,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 168
         },
-        "99:10": {
+        "100:10": {
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 276
         },
-        "100:10": {
+        "101:10": {
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 276
         },
-        "101:10": {
+        "102:10": {
           "id:3": 672,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 276
         },
-        "102:10": {
+        "103:10": {
           "id:3": 673,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 312
         },
-        "103:10": {
+        "104:10": {
           "id:3": 674,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 312
         },
-        "104:10": {
+        "105:10": {
           "id:3": 675,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 312
         },
-        "105:10": {
+        "106:10": {
           "id:3": 676,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 348
         },
-        "106:10": {
+        "107:10": {
           "id:3": 677,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 348
         },
-        "107:10": {
+        "108:10": {
           "id:3": 678,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -204,
           "y:3": 396
         },
-        "108:10": {
+        "109:10": {
           "id:3": 679,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 348
         },
-        "109:10": {
+        "110:10": {
           "id:3": 680,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -168,
           "y:3": 384
         },
-        "110:10": {
+        "111:10": {
           "id:3": 690,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -420,
           "y:3": 276
         },
-        "111:10": {
+        "112:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -492,
           "y:3": 276
         },
-        "112:10": {
+        "113:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -524,
           "y:3": 276
         },
-        "113:10": {
+        "114:10": {
           "id:3": 732,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 168
         },
-        "114:10": {
+        "115:10": {
           "id:3": 745,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 240
         },
-        "115:10": {
+        "116:10": {
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -852,
           "y:3": 216
         },
-        "116:10": {
+        "117:10": {
           "id:3": 748,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -852,
           "y:3": 252
         },
-        "117:10": {
+        "118:10": {
           "id:3": 751,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -852,
           "y:3": 180
         },
-        "118:10": {
+        "119:10": {
           "id:3": 773,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -144,
           "y:3": 84
         },
-        "119:10": {
+        "120:10": {
           "id:3": 783,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -340,
           "y:3": 368
         },
-        "120:10": {
+        "121:10": {
           "id:3": 785,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -420,
           "y:3": 180
         },
-        "121:10": {
+        "122:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 348
         },
-        "122:10": {
+        "123:10": {
           "id:3": 799,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 276
         },
-        "123:10": {
+        "124:10": {
           "id:3": 800,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -264,
           "y:3": 84
         },
-        "124:10": {
+        "125:10": {
           "id:3": 806,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -56,
           "y:3": 108
         },
-        "125:10": {
+        "126:10": {
           "id:3": 807,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 40
         },
-        "126:10": {
+        "127:10": {
           "id:3": 825,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -684,
           "y:3": -100
         },
-        "127:10": {
+        "128:10": {
           "id:3": 826,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -64,
           "y:3": -108
         },
-        "128:10": {
+        "129:10": {
           "id:3": 827,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -258,
           "y:3": -79
         },
-        "129:10": {
+        "130:10": {
           "id:3": 828,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -384,
           "y:3": 236
         },
-        "130:10": {
+        "131:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": -48
         },
-        "131:10": {
+        "132:10": {
           "id:3": 838,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -600,
           "y:3": 156
         },
-        "132:10": {
+        "133:10": {
           "id:3": 841,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 312
         },
-        "133:10": {
+        "134:10": {
           "id:3": 849,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -380,
           "y:3": 276
         },
-        "134:10": {
+        "135:10": {
           "id:3": 850,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -384,
           "y:3": 308
         },
-        "135:10": {
+        "136:10": {
           "id:3": 851,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 276
         },
-        "136:10": {
+        "137:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -56,
           "y:3": 348
         },
-        "137:10": {
+        "138:10": {
           "id:3": 857,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -720,
           "y:3": 312
         },
-        "138:10": {
+        "139:10": {
           "id:3": 858,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -552,
           "y:3": 308
         },
-        "139:10": {
+        "140:10": {
           "id:3": 859,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -424,
           "y:3": 308
         },
-        "140:10": {
+        "141:10": {
           "id:3": 888,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -56,
           "y:3": 72
         },
-        "141:10": {
+        "142:10": {
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -400,
           "y:3": 368
         },
-        "142:10": {
+        "143:10": {
           "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -864,
           "y:3": -100
         },
-        "143:10": {
+        "144:10": {
           "id:3": 900,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -108,
           "y:3": 68
+        },
+        "145:10": {
+          "id:3": 912,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -474,
+          "y:3": 174
         }
       }
     },
