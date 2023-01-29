@@ -23103,7 +23103,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With §6Titanium§r smelting automated, you can now build Machine Hulls for Extreme Voltage machines.\n\n§2Starting at EV, 4A Energy and Dynamo hatches are available at each tier.",
+          "desc:8": "With §6Titanium§r smelting automated, you can now build Machine Hulls for Extreme Voltage machines.\n\nEV motors require a better material than §6Steel§r for its magnetism. §6\n\nNeodynium§r is required, which is mainly achieved from §6Rare Earth§r. The main sources of this are §6Redstone§r, and everything inside of §6Bastnasite§r veins.\n\n§2Starting at EV, 4A Energy and Dynamo hatches are available at each tier.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55939,7 +55939,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Microminer missions, or in small amounts from renewable Black Granite.",
+          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Microminer missions, and from processing renewable Black Granite.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -60013,7 +60013,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Hidden Quest for HV Assembler",
+          "desc:8": "Hidden Quest for HV Machines",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61584,6 +61584,136 @@
       "questID:3": 1012,
       "rewards:9": {},
       "tasks:9": {}
+    },
+    "1013:10": {
+      "preRequisites:11": [
+        93
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r, §6Granite§r and §6Obsidian§r. \n\nIn order to set this up, §6Lava§r and §6Water§r must be placed §ahorizontally adjacent§r. \n\nMaking §6Cobblestone§r this way is not a good idea, due to §bNuclearCraft§r §6Cobblestone Generators§r, which don\u0027t cost any power. However, with §aHV §3Rock Breakers§r, you can make §6Obsidian§r, without spending lots of §6Lava§r!\n\n§aLV§r and §aMV§r ones also exist, however, they aren\u0027t very useful.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 667,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "HV Rock Breaker",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1013,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 667,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1014:10": {
+      "preRequisites:11": [
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.§r\n\n§6Fluorine§r is needed in §6Polytetrafluoroethylene (PTFE)§r, and §6Thorium§r is used in §bNuclearCraft §3Fission Reactors§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust §ris then finally put into a §3Electrolyser§r. This yeilds §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtech:stone_smooth"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Black Granite Processing",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1014,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2019,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -62816,6 +62946,13 @@
           "sizeY:3": 0,
           "x:3": -392,
           "y:3": 352
+        },
+        "101:10": {
+          "id:3": 1013,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -288,
+          "y:3": 456
         }
       }
     },
@@ -62941,7 +63078,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -684,
-          "y:3": -48
+          "y:3": 0
         },
         "15:10": {
           "id:3": 156,
@@ -63859,6 +63996,13 @@
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 72
+        },
+        "146:10": {
+          "id:3": 1014,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -720,
+          "y:3": 240
         }
       }
     },
