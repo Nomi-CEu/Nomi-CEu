@@ -168,7 +168,7 @@ recipes.addShaped(<contenttweaker:omnicoin25>, [[null, <contenttweaker:omnicoin5
 recipes.addShaped(<contenttweaker:omnicoin5>, [[null, <contenttweaker:omnicoin>, null],[<contenttweaker:omnicoin>, <contenttweaker:omnicoin>, <contenttweaker:omnicoin>], [null, <contenttweaker:omnicoin>, null]]);
 
 /*
-    Airtight Seal books for the low price of 900 omnicoins!
+    Airtight Seal books for the low price of 900 Nomicoins!
  */
 recipes.addShaped("of_craft_airtight_seal",
     <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 12 as short}]}),
