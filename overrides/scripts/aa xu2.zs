@@ -384,7 +384,8 @@ recipes.addShaped(<actuallyadditions:block_furnace_solar>, [
 	
 	
 	
-mods.jei.JEI.addDescription(<actuallyadditions:item_misc:13>, "Canola can be turned into Canola Oil via a Canola Press. This is a somewhat slow machine and requres RF to function");
-	
+<actuallyadditions:item_misc:13>.addTooltip(format.green("Canola can be turned into Canola Oil via a Canola Press. This is a somewhat slow machine and requres RF to function."));
+
+<actuallyadditions:item_knife>.addTooltip(format.red("When making Hamburgers, make sure to place this in the Crafting Table last! Otherwise, Bio Mash will be created."));
 	
 print("--- ActuallyAdditions.zs initialized ---");
