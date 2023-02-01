@@ -10,10 +10,13 @@ import crafttweaker.event.PlayerInteractBlockEvent;
 
 <ore:wrenchCustom>.addAll(<ore:gtceWrenches>);
 
-static wrenchables as IBlockPattern = <extrautils2:creativeenergy> as IBlock |
+static wrenchables as IBlockPattern = <thermalexpansion:tank> as IBlock |
+                                      <thermalexpansion:cell> as IBlock |
+                                      <extrautils2:creativeenergy> as IBlock |
                                       <extrautils2:passivegenerator:6> as IBlock |
                                       <extrautils2:drum:4> as IBlock |
-                                      <draconicevolution:creative_rf_source> as IBlock;
+                                      <draconicevolution:creative_rf_source> as IBlock |
+                                      <appliedenergistics2:creative_energy_cell> as IBlock;
 
 function isNotWrenchable(block as IBlock) as bool {
 	return isNull(block) || // no block
