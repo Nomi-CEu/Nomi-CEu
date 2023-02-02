@@ -62,11 +62,6 @@ recipes.addShaped(<storagedrawers:controllerslave>, [
 	[<ore:circuitLv>, <storagedrawers:customdrawers>, <ore:circuitLv>],
 	[<ore:plateIron>, <minecraft:gold_block>, <ore:plateIron>]]);
 
-
-//Black Quartz
-electrolyzer.recipeBuilder().inputs([<metaitem:dustQuartzite> * 4]).outputs([<actuallyadditions:item_dust:7>]).duration(400).EUt(90).buildAndRegister();
-autoclave.recipeBuilder().inputs([<actuallyadditions:item_dust:7>]).fluidInputs(<liquid:water> * 1000).outputs([<actuallyadditions:item_misc:5>]).duration(150).EUt(16).buildAndRegister();
-
 //Mechanical Crafter
 recipes.remove(<extrautils2:crafter>);
 recipes.addShaped(<extrautils2:crafter>, [[<extrautils2:ingredients>, <metaitem:gearSmallSteel>, <extrautils2:ingredients>],[<metaitem:gearSmallSteel>, <metaitem:workbench>, <metaitem:gearSmallSteel>], [<extrautils2:ingredients>, <metaitem:gearSmallSteel>, <extrautils2:ingredients>]]);
@@ -340,10 +335,6 @@ electrolyzer.recipeBuilder()
 	.outputs(<metaitem:dustCarbon> * 6, <metaitem:dustSulfur>)
 	.fluidOutputs(<liquid:hydrogen> * 4000)
 	.duration(288).EUt(128).buildAndRegister();
-
-
-// remove xu2 shortcut hopper
-recipes.removeByRecipeName("extrautils2:shortcut_hopper");
 
 // Crafting Station
 assembler.recipeBuilder()

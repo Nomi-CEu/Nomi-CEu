@@ -1,3 +1,5 @@
+import mods.gregtech.recipe.RecipeMap;
+
 print("--- loading aa xu2.zs ---");
 	
 # *======= Empowerer =======*
@@ -59,7 +61,23 @@ recipes.remove(<snad:snad>);
 recipes.remove(<snad:snad:1>);
 recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>],[<extrautils2:compressedsand:1>]]);
 
-	
+//Black Quartz
+electrolyzer.recipeBuilder()
+	.inputs([<metaitem:dustQuartzite> * 4])
+	.outputs([<actuallyadditions:item_dust:7>])
+	.duration(400).EUt(90).buildAndRegister();
+
+autoclave.recipeBuilder()
+	.inputs([<actuallyadditions:item_dust:7>])
+	.fluidInputs(<liquid:water> * 250)
+	.chancedOutput(<actuallyadditions:item_misc:5>, 7000, 1000)
+	.duration(1200).EUt(24).buildAndRegister();
+
+autoclave.recipeBuilder()
+	.inputs([<actuallyadditions:item_dust:7>])
+	.fluidInputs(<liquid:distilled_water> * 50)
+	.outputs(<actuallyadditions:item_misc:5>)
+	.duration(600).EUt(24).buildAndRegister();		
 	
 //Long Range Breaker
 recipes.remove(<actuallyadditions:block_directional_breaker>);
@@ -128,6 +146,23 @@ recipes.addShaped(<extrautils2:machine>, [
 	
 var furnGen = <extrautils2:machine>.withTag({Type: "extrautils2:generator"});
 var redPlate = <metaitem:plateRedAlloy>;
+
+// Polished Stone
+recipes.remove(<extrautils2:decorativesolid:2>);
+autoclave.recipeBuilder()
+    .inputs([<minecraft:stone>])
+    .fluidInputs([<liquid:water> * 200])
+    .outputs([<extrautils2:decorativesolid:2>])
+    .duration(100).EUt(7).buildAndRegister();
+
+autoclave.recipeBuilder()
+    .inputs([<minecraft:stone>])
+    .fluidInputs([<liquid:distilled_water> * 36])
+    .outputs([<extrautils2:decorativesolid:2>])
+    .duration(100).EUt(7).buildAndRegister();
+
+// remove xu2 shortcut hopper
+recipes.removeByRecipeName("extrautils2:shortcut_hopper");
 
 //XU2 Generators
 recipes.remove(furnGen);
@@ -381,8 +416,6 @@ recipes.remove(<actuallyadditions:block_furnace_solar>);
 recipes.addShaped(<actuallyadditions:block_furnace_solar>, [
 	[<extrautils2:ingredients>, <solarflux:solar_panel_1>, <extrautils2:ingredients>],
 	[null,<extrautils2:decorativesolid:3>,null]]);
-	
-	
 	
 <actuallyadditions:item_misc:13>.addTooltip(format.green("Canola can be turned into Canola Oil via a Canola Press. This is a somewhat slow machine and requres RF to function."));
 

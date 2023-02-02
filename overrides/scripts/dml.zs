@@ -71,3 +71,6 @@ recipes.addShaped(<deepmoblearning:deep_learner>, [
     [<metaitem:sensor.lv>,<metaitem:tricorder_scanner>,<metaitem:sensor.lv>],
     [null,null,null]]);
 
+<deepmoblearning:glitch_fragment>.addTooltip(format.aqua(format.italic(
+    "Obtained by crushing Glitch Hearts against Obsidian.")));
+

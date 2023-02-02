@@ -409,3 +409,6 @@ recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:quart
 recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:chiseled_quartz_block>]);
 
 mods.jei.JEI.removeAndHide(<appliedenergistics2:material:0>);
+
+<appliedenergistics2:material:1>.addTooltip(format.aqua(format.italic(
+    "Obtained by charging with RF power in the AE2 Charger.")));

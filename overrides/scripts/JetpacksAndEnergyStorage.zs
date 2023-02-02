@@ -455,12 +455,9 @@ recipes.remove(<enderio:item_material:13>); // vibrant bimetal gear
 recipes.remove(<enderio:item_material:14>); // pulsating crystal
 recipes.remove(<enderio:item_material:15>); // vibrant crystal
 recipes.remove(<enderio:item_material:73>); // dark bimetal gear
-
 recipes.remove(<minecraft:stone:2>);
 recipes.remove(<minecraft:stone:4>);
 recipes.remove(<minecraft:stone:6>);
-
-recipes.remove(<extrautils2:decorativesolid:2>); // polished stone
 
 // pulsating crystal
 autoclave.recipeBuilder()
@@ -474,12 +471,6 @@ autoclave.recipeBuilder()
     .inputs([<minecraft:emerald>]).fluidInputs([<liquid:vibrant_alloy> * 144])
     .outputs([<enderio:item_material:15>])
     .duration(200).EUt(30).buildAndRegister();
-
-// polished stone
-autoclave.recipeBuilder()
-    .inputs([<minecraft:stone>]).fluidInputs([<liquid:water> * 250])
-    .outputs([<extrautils2:decorativesolid:2>])
-    .duration(100).EUt(4).buildAndRegister();
 
 recipes.remove(<appliedenergistics2:quartz_vibrant_glass>);
 
