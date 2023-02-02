@@ -291,11 +291,6 @@ recipes.addShaped(<actuallyadditions:item_drill:3>, [
 	[<actuallyadditions:block_crystal:3>, <actuallyadditions:block_crystal:2>, <metaitem:toolHeadDrillDiamond>], 
 	[<metaitem:gearEnergeticAlloy>, <actuallyadditions:item_misc:16>, <actuallyadditions:block_crystal:2>], 
 	[<metaitem:blockEnergeticAlloy>, <metaitem:gearEnergeticAlloy>, <actuallyadditions:block_crystal:3>]]);	
-	
-//Drill Core
-recipes.remove(<actuallyadditions:item_misc:16>);
-<actuallyadditions:item_misc:16>.addTooltip(format.red("Acquired by exploration of Lost Cities buildings or vanilla dungeons."));
-<actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
 
 //Vertical Digger	
 recipes.remove(<actuallyadditions:block_miner>);
@@ -410,12 +405,30 @@ mods.extendedcrafting.TableCrafting.addShaped(<extrautils2:drum:3>,[
 	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:drum:2>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
 	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
 	[<extrautils2:simpledecorative:1>,<moreplates:demon_plate>,<moreplates:demon_plate>,<moreplates:demon_plate>,<extrautils2:simpledecorative:1>]]);		
+recipes.remove(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}));
+recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}), [
+	[null, <minecraft:writable_book>, null],
+	[<ore:gemDiamond>, <extrautils2:machine>, <ore:gemDiamond>],
+	[<metaitem:plateSteel>,<metaitem:plateSteel>,<metaitem:plateSteel>]]);
 	
 //Solar
 recipes.remove(<actuallyadditions:block_furnace_solar>);
 recipes.addShaped(<actuallyadditions:block_furnace_solar>, [
 	[<extrautils2:ingredients>, <solarflux:solar_panel_1>, <extrautils2:ingredients>],
 	[null,<extrautils2:decorativesolid:3>,null]]);
+
+//Drill Core
+recipes.remove(<actuallyadditions:item_misc:16>);
+<actuallyadditions:item_misc:16>.addTooltip(format.red("Acquired by exploration of Lost Cities buildings or vanilla dungeons."));
+<actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
+
+recipes.removeByRecipeName("actuallyadditions:recipes132");
+recipes.addShaped(<actuallyadditions:block_canola_press>, [
+	[<metaitem:plateSteel>, <actuallyadditions:block_crystal:5>, <metaitem:plateSteel>], 
+	[<metaitem:electric.piston.mv>, null, <metaitem:electric.piston.mv>], 
+	[<metaitem:plateSteel>, <actuallyadditions:item_misc:8>, <metaitem:plateSteel>]]);
+<actuallyadditions:block_canola_press>.addTooltip(format.green("Turns Canola into Canola Oil. Requires RF."));  
+
 	
 <actuallyadditions:item_misc:13>.addTooltip(format.green("Canola can be turned into Canola Oil via a Canola Press. This is a somewhat slow machine and requres RF to function."));
 
