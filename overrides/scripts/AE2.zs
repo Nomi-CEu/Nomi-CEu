@@ -414,6 +414,9 @@ recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:quart
 recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:quartz_pillar>]);
 recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:chiseled_quartz_block>]);
 
+// Temporary Conversion Recipe
+recipes.addShapeless(<metaitem:dustCertusQuartz>, [<appliedenergistics2:material:2>]);
+
 mods.jei.JEI.removeAndHide(<appliedenergistics2:material:0>);
 
 
