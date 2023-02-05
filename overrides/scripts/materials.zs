@@ -143,7 +143,7 @@ var electrum_flux = MaterialBuilder(32019, "electrum_flux")
 var mithril = MaterialBuilder(32021, "mithril")
     .ingot()
     .color(0x428fdb).iconSet("dull")
-    .flags("generate_plate", "generate_gear")
+    .flags("generate_plate", "generate_gear", "no_unification")
     .components([<material:titanium> * 1, <material:mana> * 1])
     .build();
 

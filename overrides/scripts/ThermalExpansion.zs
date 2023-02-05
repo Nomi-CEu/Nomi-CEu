@@ -405,6 +405,13 @@ mixer.recipeBuilder()
     .inputs([<thermalfoundation:material:1028>, <metaitem:dustTitanium>])
     .duration(200).EUt(30).buildAndRegister();
 
+// Temporary Conversion recipe between gt and thermal mana infused
+recipes.addShapeless(<thermalfoundation:material:136>, [<gregtech:meta_ingot:32021>]);
+recipes.addShapeless(<thermalfoundation:material:72>, [<gregtech:meta_dust:32021>]);
+
+// Hide GT Mana infused
+scripts.common.removeMaterialSolid(32021);
+
 //Remove Unobtainable Satchel and Void Satchel Recipe
 
 //Remove Rockwool smelting recipe
