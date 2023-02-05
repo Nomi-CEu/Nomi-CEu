@@ -55,12 +55,6 @@ mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_e
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_emeradic_gear>);
 mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:4>, <actuallyadditions:block_crystal:4>, <contenttweaker:stabilizeduranium>, <metaitem:ingotVibrantAlloy>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <extendedcrafting:material:17>, 1000000, 400);
 
-	
-//Snad	
-recipes.remove(<snad:snad>);
-recipes.remove(<snad:snad:1>);
-recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>],[<extrautils2:compressedsand:1>]]);
-
 //Black Quartz
 electrolyzer.recipeBuilder()
 	.inputs([<metaitem:dustQuartzite> * 4])
@@ -313,7 +307,7 @@ recipes.addShapeless(<thermalfoundation:material:640>, [<actuallyadditions:item_
 recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillStainlessSteel>]);
 	
 	
-//medium crate
+//medium and large crate
 recipes.remove(<actuallyadditions:block_giant_chest_medium>);
 recipes.remove(<actuallyadditions:block_giant_chest_large>);
 recipes.addShaped(<actuallyadditions:block_giant_chest_medium>, [
@@ -326,7 +320,7 @@ recipes.addShaped(<actuallyadditions:block_giant_chest_large>, [
 	[<actuallyadditions:block_giant_chest_medium>,<actuallyadditions:block_giant_chest_medium>,<actuallyadditions:block_giant_chest_medium>], 
 	[<actuallyadditions:block_crystal_empowered:2>, <ore:plankWood>, <actuallyadditions:block_crystal_empowered:2>]]);
 	
-	
+// Remove existing xu2 mill recipes	
 recipes.remove(<extrautils2:passivegenerator>);	
 recipes.remove(<extrautils2:passivegenerator:1>);	
 recipes.remove(<extrautils2:passivegenerator:2>);	
@@ -422,6 +416,8 @@ recipes.remove(<actuallyadditions:item_misc:16>);
 <actuallyadditions:item_misc:16>.addTooltip(format.red("Acquired by exploration of Lost Cities buildings or vanilla dungeons."));
 <actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
 
+
+// Canola Press
 recipes.removeByRecipeName("actuallyadditions:recipes132");
 recipes.addShaped(<actuallyadditions:block_canola_press>, [
 	[<metaitem:plateSteel>, <actuallyadditions:block_crystal:5>, <metaitem:plateSteel>], 

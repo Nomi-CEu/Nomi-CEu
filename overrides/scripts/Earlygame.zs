@@ -29,7 +29,10 @@ recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:gtceHa
 furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
 
-
+//Snad	
+recipes.remove(<snad:snad>);
+recipes.remove(<snad:snad:1>);
+recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>],[<extrautils2:compressedsand:1>]]);
 
 //Photovoltaic Cells
 alloy_smelter.recipeBuilder().inputs([<enderio:item_material:38> * 2, <metaitem:plateElectricalSteel>]).outputs([<enderio:item_material:3>]).duration(180).EUt(16).buildAndRegister();
@@ -157,7 +160,7 @@ recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustB
 furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>, 0.0);
 
 // Temporary Black Steel fix
-recipes.addShapeless(<contenttweaker:dark_red_coal> * 2, [<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>]);
+//recipes.addShapeless(<contenttweaker:dark_red_coal> * 2, [<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>]);
 mods.jei.JEI.hide(<contenttweaker:dark_red_coal>);
 
 mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <contenttweaker:dark_red_coal> * 4]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).hidden().buildAndRegister();
@@ -278,7 +281,9 @@ centrifuge.findRecipe(30, [<metaitem:dustBlackSteel> * 5], [null]).remove();
 
 furnace.setFuel(<metaitem:dustGraphite>, 1200);
 
-recipes.removeByRecipeName("gregtech:block_decompress_clay");
+// recipes.removeByRecipeName("gregtech:block_decompress_clay");
+// Clay Block into Clay Ball by hand
+recipes.addShapeless(<minecraft:clay_ball> * 4, [<minecraft:clay>]);
 
 
 recipes.remove(<thermalfoundation:fertilizer>);
