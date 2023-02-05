@@ -2156,6 +2156,9 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:tool.hammer_diamond>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:rockwool:*>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:864>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:865>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:ore:8>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:glass:*>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:glass_alloy:*>);
 
 
 //Custom Materials Removals
@@ -2640,7 +2643,7 @@ for restrictivePipe in <ore:pipe*Restrictive*>{
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:193>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:194>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:195>);
-mods.jei.JEI.removeAndHide(<thermalfoundation:material:200>);
+//mods.jei.JEI.removeAndHide(<thermalfoundation:material:200>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:228>);
 mods.jei.JEI.removeAndHide(<extendedcrafting:material:1>);
 mods.jei.JEI.removeAndHide(<libvulpes:productnugget:3>);

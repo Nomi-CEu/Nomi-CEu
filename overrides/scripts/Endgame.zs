@@ -2,12 +2,6 @@ import crafttweaker.item.IIngredient;
 import mods.gregtech.recipe.RecipeMap;
 import scripts.common.makeShaped as makeShaped;
 
-<deepmoblearning:glitch_fragment>.addTooltip(format.aqua(format.italic(
-    "Obtained by crushing Glitch Hearts against Obsidian.")));
-
-<appliedenergistics2:material:1>.addTooltip(format.aqua(format.italic(
-    "Obtained by charging with RF power in the AE2 Charger.")));
-
 //Gravistar
 // Gravi Star * 1
 <recipemap:autoclave>.findRecipe(7680, [<metaitem:quantumstar>], [<liquid:neutronium> * 288]).remove();
@@ -201,10 +195,25 @@ makeShaped("of_processing_array", <metaitem:processing_array>,
 
 
 
-// UHV 16x Batbuf
+// UHV Batbufs
+recipes.addShaped(<metaitem:battery_buffer.uhv.4>, [
+    [<metaitem:wireGtQuadrupleEuropium>, <ore:chestWood>, <metaitem:wireGtQuadrupleEuropium>],
+    [<metaitem:wireGtQuadrupleEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtQuadrupleEuropium>]
+]);
+recipes.addShaped(<metaitem:battery_buffer.uhv.8>, [
+    [<metaitem:wireGtOctalEuropium>, <ore:chestWood>, <metaitem:wireGtOctalEuropium>],
+    [<metaitem:wireGtOctalEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtOctalEuropium>]
+]);
 recipes.addShaped(<metaitem:battery_buffer.uhv.16>, [
-    [<metaitem:wireGtHexOmnium>, <metaitem:hull.uhv>, <metaitem:wireGtHexOmnium>],
-    [<metaitem:wireGtHexOmnium>, <minecraft:chest>, <metaitem:wireGtHexOmnium>]
+    [<metaitem:wireGtHexEuropium>, <ore:chestWood>, <metaitem:wireGtHexEuropium>],
+    [<metaitem:wireGtHexEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtHexEuropium>]
+]);
+
+// UHV Turbo Charger
+recipes.addShaped(<metaitem:charger.uhv>, [
+    [<metaitem:wireGtQuadrupleEuropium>, <ore:chestWood>, <metaitem:wireGtQuadrupleEuropium>], 
+    [<metaitem:wireGtQuadrupleEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtQuadrupleEuropium>],
+    [<metaitem:cableGtSingleEuropium>, <ore:circuitUhv>, <metaitem:cableGtSingleEuropium>]
 ]);
 
 // Assembly Line

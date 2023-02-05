@@ -1,3 +1,5 @@
+import mods.gregtech.recipe.RecipeMap;
+
 print("--- loading aa xu2.zs ---");
 	
 # *======= Empowerer =======*
@@ -53,13 +55,23 @@ mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_e
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_emeradic_gear>);
 mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:4>, <actuallyadditions:block_crystal:4>, <contenttweaker:stabilizeduranium>, <metaitem:ingotVibrantAlloy>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <extendedcrafting:material:17>, 1000000, 400);
 
-	
-//Snad	
-recipes.remove(<snad:snad>);
-recipes.remove(<snad:snad:1>);
-recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>],[<extrautils2:compressedsand:1>]]);
+//Black Quartz
+electrolyzer.recipeBuilder()
+	.inputs([<metaitem:dustQuartzite> * 4])
+	.outputs([<actuallyadditions:item_dust:7>])
+	.duration(400).EUt(90).buildAndRegister();
 
-	
+autoclave.recipeBuilder()
+	.inputs([<actuallyadditions:item_dust:7>])
+	.fluidInputs(<liquid:water> * 250)
+	.chancedOutput(<actuallyadditions:item_misc:5>, 7000, 1000)
+	.duration(1200).EUt(24).buildAndRegister();
+
+autoclave.recipeBuilder()
+	.inputs([<actuallyadditions:item_dust:7>])
+	.fluidInputs(<liquid:distilled_water> * 50)
+	.outputs(<actuallyadditions:item_misc:5>)
+	.duration(600).EUt(24).buildAndRegister();		
 	
 //Long Range Breaker
 recipes.remove(<actuallyadditions:block_directional_breaker>);
@@ -128,6 +140,23 @@ recipes.addShaped(<extrautils2:machine>, [
 	
 var furnGen = <extrautils2:machine>.withTag({Type: "extrautils2:generator"});
 var redPlate = <metaitem:plateRedAlloy>;
+
+// Polished Stone
+recipes.remove(<extrautils2:decorativesolid:2>);
+autoclave.recipeBuilder()
+    .inputs([<minecraft:stone>])
+    .fluidInputs([<liquid:water> * 200])
+    .outputs([<extrautils2:decorativesolid:2>])
+    .duration(100).EUt(7).buildAndRegister();
+
+autoclave.recipeBuilder()
+    .inputs([<minecraft:stone>])
+    .fluidInputs([<liquid:distilled_water> * 36])
+    .outputs([<extrautils2:decorativesolid:2>])
+    .duration(100).EUt(7).buildAndRegister();
+
+// remove xu2 shortcut hopper
+recipes.removeByRecipeName("extrautils2:shortcut_hopper");
 
 //XU2 Generators
 recipes.remove(furnGen);
@@ -256,11 +285,6 @@ recipes.addShaped(<actuallyadditions:item_drill:3>, [
 	[<actuallyadditions:block_crystal:3>, <actuallyadditions:block_crystal:2>, <metaitem:toolHeadDrillDiamond>], 
 	[<metaitem:gearEnergeticAlloy>, <actuallyadditions:item_misc:16>, <actuallyadditions:block_crystal:2>], 
 	[<metaitem:blockEnergeticAlloy>, <metaitem:gearEnergeticAlloy>, <actuallyadditions:block_crystal:3>]]);	
-	
-//Drill Core
-recipes.remove(<actuallyadditions:item_misc:16>);
-<actuallyadditions:item_misc:16>.addTooltip(format.red("Acquired by exploration of Lost Cities buildings or vanilla dungeons."));
-<actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
 
 //Vertical Digger	
 recipes.remove(<actuallyadditions:block_miner>);
@@ -283,7 +307,7 @@ recipes.addShapeless(<thermalfoundation:material:640>, [<actuallyadditions:item_
 recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillStainlessSteel>]);
 	
 	
-//medium crate
+//medium and large crate
 recipes.remove(<actuallyadditions:block_giant_chest_medium>);
 recipes.remove(<actuallyadditions:block_giant_chest_large>);
 recipes.addShaped(<actuallyadditions:block_giant_chest_medium>, [
@@ -296,7 +320,7 @@ recipes.addShaped(<actuallyadditions:block_giant_chest_large>, [
 	[<actuallyadditions:block_giant_chest_medium>,<actuallyadditions:block_giant_chest_medium>,<actuallyadditions:block_giant_chest_medium>], 
 	[<actuallyadditions:block_crystal_empowered:2>, <ore:plankWood>, <actuallyadditions:block_crystal_empowered:2>]]);
 	
-	
+// Remove existing xu2 mill recipes	
 recipes.remove(<extrautils2:passivegenerator>);	
 recipes.remove(<extrautils2:passivegenerator:1>);	
 recipes.remove(<extrautils2:passivegenerator:2>);	
@@ -375,14 +399,32 @@ mods.extendedcrafting.TableCrafting.addShaped(<extrautils2:drum:3>,[
 	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:drum:2>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
 	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
 	[<extrautils2:simpledecorative:1>,<moreplates:demon_plate>,<moreplates:demon_plate>,<moreplates:demon_plate>,<extrautils2:simpledecorative:1>]]);		
+recipes.remove(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}));
+recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}), [
+	[null, <minecraft:writable_book>, null],
+	[<ore:gemDiamond>, <extrautils2:machine>, <ore:gemDiamond>],
+	[<metaitem:plateSteel>,<metaitem:plateSteel>,<metaitem:plateSteel>]]);
 	
 //Solar
 recipes.remove(<actuallyadditions:block_furnace_solar>);
 recipes.addShaped(<actuallyadditions:block_furnace_solar>, [
 	[<extrautils2:ingredients>, <solarflux:solar_panel_1>, <extrautils2:ingredients>],
 	[null,<extrautils2:decorativesolid:3>,null]]);
-	
-	
+
+//Drill Core
+recipes.remove(<actuallyadditions:item_misc:16>);
+<actuallyadditions:item_misc:16>.addTooltip(format.red("Acquired by exploration of Lost Cities buildings or vanilla dungeons."));
+<actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
+
+
+// Canola Press
+recipes.removeByRecipeName("actuallyadditions:recipes132");
+recipes.addShaped(<actuallyadditions:block_canola_press>, [
+	[<metaitem:plateSteel>, <actuallyadditions:block_crystal:5>, <metaitem:plateSteel>], 
+	[<metaitem:electric.piston.mv>, null, <metaitem:electric.piston.mv>], 
+	[<metaitem:plateSteel>, <actuallyadditions:item_misc:8>, <metaitem:plateSteel>]]);
+<actuallyadditions:block_canola_press>.addTooltip(format.green("Turns Canola into Canola Oil. Requires RF."));  
+
 	
 <actuallyadditions:item_misc:13>.addTooltip(format.green("Canola can be turned into Canola Oil via a Canola Press. This is a somewhat slow machine and requres RF to function."));
 

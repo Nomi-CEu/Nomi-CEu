@@ -107,6 +107,15 @@ assembler.recipeBuilder()
 recipes.remove(<enderio:item_me_conduit>);	
 assembler.recipeBuilder().inputs([<appliedenergistics2:part:36> * 3, <enderio:item_material:4> * 6]).outputs(<enderio:item_me_conduit> * 8).duration(100).EUt(16).buildAndRegister();	
 
+// Vibrant Quartz Glass
+recipes.remove(<appliedenergistics2:quartz_vibrant_glass>);
+
+alloy.recipeBuilder()
+    .inputs([<appliedenergistics2:quartz_glass>,<ore:ingotVibrantAlloy>])
+    .outputs([<appliedenergistics2:quartz_vibrant_glass>])
+    .duration(80).EUt(16).buildAndRegister();
+
+// Meteorite Compass
 recipes.remove(<appliedenergistics2:sky_compass>);
 recipes.addShaped(<appliedenergistics2:sky_compass>,[
 	[<actuallyadditions:item_crystal:3>,<metaitem:plateDarkSteel>,<actuallyadditions:item_crystal:3>],
@@ -221,6 +230,7 @@ Inscriber.removeRecipe(<appliedenergistics2:material:14>);
 Inscriber.removeRecipe(<appliedenergistics2:material:13>); 	
 Inscriber.removeRecipe(<appliedenergistics2:material:19>); 	
 Inscriber.removeRecipe(<appliedenergistics2:material:15>); 	
+
 // Presses
 laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensRed>).outputs([<appliedenergistics2:material:14>]).EUt(120).duration(1600).buildAndRegister();
 laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensBlue>).outputs([<appliedenergistics2:material:13>]).EUt(120).duration(1600).buildAndRegister();
@@ -318,10 +328,6 @@ recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_cell
 recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_cell_4k");
 recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_cell_16k");
 recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_cell_64k");
-
-<appliedenergistics2:material:10>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Certus Quartz Seed."));
-<appliedenergistics2:material:11>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Nether Quartz Seed."));
-<appliedenergistics2:material:12>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Fluix Seed."));
 	
 // 1k Storage
 recipes.remove(<appliedenergistics2:material:35>);	
@@ -408,4 +414,14 @@ recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:quart
 recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:quartz_pillar>]);
 recipes.addShapeless(<metaitem:gemCertusQuartz> * 4, [<appliedenergistics2:chiseled_quartz_block>]);
 
+// Temporary Conversion Recipe
+recipes.addShapeless(<metaitem:dustCertusQuartz>, [<appliedenergistics2:material:2>]);
+
 mods.jei.JEI.removeAndHide(<appliedenergistics2:material:0>);
+
+
+<appliedenergistics2:material:10>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Certus Quartz Seed."));
+<appliedenergistics2:material:11>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Nether Quartz Seed."));
+<appliedenergistics2:material:12>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Fluix Seed."));
+<appliedenergistics2:material:1>.addTooltip(format.aqua(format.italic(
+    "Obtained by charging with RF power in the AE2 Charger.")));

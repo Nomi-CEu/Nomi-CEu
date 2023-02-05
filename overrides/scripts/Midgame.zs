@@ -53,13 +53,6 @@ large_chemical_reactor.recipeBuilder().inputs(<metaitem:dustSodiumHydroxide>).fl
 chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:23>).fluidInputs([<liquid:canolaoil> * 1000]).fluidOutputs([<liquid:crystaloil> * 1000]).duration(100).EUt(120).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:24>).fluidInputs([<liquid:canolaoil> * 1000]).fluidOutputs([<liquid:empoweredoil> * 1000]).duration(100).EUt(500).buildAndRegister();
 
-recipes.removeByRecipeName("actuallyadditions:recipes132");
-recipes.addShaped(<actuallyadditions:block_canola_press>, [
-	[<metaitem:plateSteel>, <actuallyadditions:block_crystal:5>, <metaitem:plateSteel>], 
-	[<metaitem:electric.piston.mv>, null, <metaitem:electric.piston.mv>], 
-	[<metaitem:plateSteel>, <actuallyadditions:item_misc:8>, <metaitem:plateSteel>]]);
-<actuallyadditions:block_canola_press>.addTooltip(format.green("Turns Canola into Canola Oil. Requires RF."));  
-
 //Moon Materials
 macerator.recipeBuilder().inputs([<advancedrocketry:moonturf>]).outputs([<contenttweaker:moondust>]).duration(200).EUt(400).buildAndRegister();
 macerator.recipeBuilder().inputs([<advancedrocketry:moonturf_dark>]).outputs([<contenttweaker:moondust>]).duration(200).EUt(400).buildAndRegister();
@@ -71,6 +64,25 @@ macerator.recipeBuilder().inputs([<thermalfoundation:material:2052>]).outputs([<
 centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
 centrifuge.recipeBuilder().inputs(<contenttweaker:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
+
+// Fluxed electrum blend
+recipes.remove(<redstonearsenal:material>);
+
+// Replaces default flux crystal recipe with one for autoclave
+recipes.remove(<redstonearsenal:material:160>);
+autoclave.recipeBuilder()
+    .inputs([<minecraft:diamond>])
+    .fluidInputs([<liquid:redstone> * 720])
+    .outputs([<redstonearsenal:material:160>])
+    .duration(200).EUt(400).buildAndRegister();
+
+// Flux Armour Plating    
+recipes.remove(<redstonearsenal:material:224>);
+recipes.addShaped(<redstonearsenal:material:224> * 4, [
+	[null, <ore:plateElectrumFlux>, null],
+	[<ore:plateElectrumFlux>, <ore:gemCrystalFlux>, <ore:plateElectrumFlux>],
+	[null, <ore:plateElectrumFlux>, null]]);
+
 
 //Manyullyn
 mixer.recipeBuilder()
