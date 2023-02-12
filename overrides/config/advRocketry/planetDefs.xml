@@ -19,6 +19,16 @@
 				<rotationalPeriod>128000</rotationalPeriod>
 				<atmosphereDensity>0</atmosphereDensity>
 			</planet>
+            <planet name="Void" DIMID="119" dimMapping="" customIcon="Moon">
+				<isKnown>true</isKnown>
+				<fogColor>1.0,1.0,1.0</fogColor>
+				<skyColor>1.0,1.0,1.0</skyColor>
+				<gravitationalMultiplier>100</gravitationalMultiplier>
+				<orbitalDistance>110</orbitalDistance>
+				<orbitalPhi>0</orbitalPhi>
+				<rotationalPeriod>24000</rotationalPeriod>
+				<atmosphereDensity>100</atmosphereDensity>
+			</planet>
 		</planet>
 		<planet name="Mercury" DIMID="101" customIcon="lava">
 		    <biomeIds>biomesoplenty:volcanic_island</biomeIds>

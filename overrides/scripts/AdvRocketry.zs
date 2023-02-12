@@ -823,6 +823,8 @@ makeShaped("ar_advanced_structure",
 
 // Space Suit Upgrades
 // Hover Upgrade
+
+/* Old GT Recipe:
 assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
@@ -834,8 +836,14 @@ assembler.recipeBuilder()
 	.duration(400)
 	.EUt(100)
 	.buildAndRegister();
+*/
+recipes.addShaped(<advancedrocketry:itemupgrade>, [
+	[<contenttweaker:radiationlayer>, <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:glide", "enderio:enabled": 1 as byte}), <contenttweaker:pressurelayer>]
+]);
 
 // Bionic Leg upgrade
+
+/* Old GT Recipe:
 assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
@@ -847,8 +855,14 @@ assembler.recipeBuilder()
 	.duration(400)
 	.EUt(100)
 	.buildAndRegister();
+*/
+recipes.addShaped(<advancedrocketry:itemupgrade:2>, [
+	[<contenttweaker:radiationlayer>, <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:speedboost3", "enderio:enabled": 1 as byte}), <contenttweaker:pressurelayer>]
+]);
 
 // Flight Speed Control Upgrade
+
+/* Old GT Recipe:
 assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
@@ -860,8 +874,14 @@ assembler.recipeBuilder()
 	.duration(400)
 	.EUt(100)
 	.buildAndRegister();
+*/
+recipes.addShaped(<advancedrocketry:itemupgrade:1>, [
+	[<contenttweaker:radiationlayer>, <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:travel", "enderio:enabled": 1 as byte}), <contenttweaker:pressurelayer>]
+]);
 
 // Anti Fog visor
+
+/* Old GT Recipe:
 assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
@@ -873,8 +893,14 @@ assembler.recipeBuilder()
 	.duration(400)
 	.EUt(100)
 	.buildAndRegister();
+*/
+recipes.addShaped(<advancedrocketry:itemupgrade:4>, [
+	[<contenttweaker:radiationlayer>, <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:nightvision", "enderio:enabled": 1 as byte}), <contenttweaker:pressurelayer>]
+]);
 
 // Padded Landing Boots
+
+/* Old GT Recipe:
 assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
@@ -886,8 +912,13 @@ assembler.recipeBuilder()
 	.duration(400)
 	.EUt(100)
 	.buildAndRegister();
+*/
+recipes.addShaped(<advancedrocketry:itemupgrade:3>, [
+	[<contenttweaker:radiationlayer>, <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:energyupgrade4", "enderio:enabled": 1 as byte}), <contenttweaker:pressurelayer>]
+]);
 
 // Atmospheric sensor
+
 assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade>,
@@ -897,6 +928,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.EUt(100)
 	.buildAndRegister();
+
 
 // Orbital Laser Drill
 recipes.removeByRecipeName("advancedrocketry:spacelaser");
@@ -922,6 +954,13 @@ makeExtremeRecipe5(<advancedrocketry:spacelaser>,
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Glory to the PGS!"));
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Consult the AR Wiki for building instructions."));
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Consumes ") + format.yellow("1,000,000") + format.gray(" RF/t"));
+<advancedrocketry:spacelaser>.addTooltip(format.red("Extremely finicky. Use at your own risk. Try restarting your world if it isn't working."));
+
+// Lens (for the drill)
+recipes.remove(<advancedrocketry:lens>);
+recipes.addShapeless(<advancedrocketry:lens>, [<ore:craftingLensGlass>]);
+<advancedrocketry:lens>.addTooltip(format.gray("A basic lens, used for the Orbital Laser Drill."));
+<advancedrocketry:lens>.displayName = "Orbital Laser Drill Lens";
 
 // Force Field Projector
 recipes.addShaped(<advancedrocketry:forcefieldprojector>, [

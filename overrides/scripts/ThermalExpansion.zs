@@ -347,27 +347,6 @@ recipes.addShaped(<thermalexpansion:augment:336>, [
 	[<thermalfoundation:material:328>, <minecraft:gold_block>, <thermalfoundation:material:328>],
 	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
 
-//Trash Can (Items)
-recipes.remove(<extrautils2:trashcan>);
-recipes.addShaped(<extrautils2:trashcan>, [
-	[null, <minecraft:iron_trapdoor>, null],
-	[<metaitem:plateIron>, <minecraft:chest>, <metaitem:plateIron>],
-	[null, <metaitem:plateIron>, null]]);
-
-//Trash Can (Fluid)
-recipes.remove(<extrautils2:trashcanfluid>);
-recipes.addShaped(<extrautils2:trashcanfluid>, [
-	[null, <minecraft:iron_trapdoor>, null],
-	[<metaitem:plateIron>, <minecraft:bucket>, <metaitem:plateIron>],
-	[null, <metaitem:plateIron>, null]]);
-
-//Trash Can (Energy)
-recipes.remove(<extrautils2:trashcanenergy>);
-recipes.addShaped(<extrautils2:trashcanenergy>, [
-	[null, <minecraft:iron_trapdoor>, null],
-	[<metaitem:plateIron>, <minecraft:redstone_block>, <metaitem:plateIron>],
-	[null, <metaitem:plateIron>, null]]);
-
 //Mana Powder
 recipes.addShaped(<thermalfoundation:material:1028> * 4,[
 	[<thermalfoundation:material:1026>, <thermalfoundation:material:1026>, <thermalfoundation:material:1024>],
@@ -392,12 +371,19 @@ recipes.addShaped(<thermalexpansion:frame:64>, [
 	[<thermalfoundation:material:136>,<thermalfoundation:material:136>,<thermalfoundation:material:136>]]);
 <thermalexpansion:frame:64>.displayName = "Thermal Device Casing";
 
+// Fluxbore Core
+recipes.addShapeless(<thermalfoundation:material:640>, [<actuallyadditions:item_misc:16>]);
+
+// Fluxbore Head
+recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillStainlessSteel>]);
 
 //Add Black Lotus to Phytogenic Insolator for black dye
 mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*3,<actuallyadditions:block_black_lotus>, <thermalfoundation:fertilizer:0>, 4800);
 mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*6,<actuallyadditions:block_black_lotus>, <thermalfoundation:fertilizer:1>, 7200);
 mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*9,<actuallyadditions:block_black_lotus>, <thermalfoundation:fertilizer:2>, 9600);
 
+// Remove Arcane Ensorcellator Recipes
+mods.jei.JEI.hideCategory("thermalexpansion.enchanter");
 
 //Mana Infused
 mixer.recipeBuilder()

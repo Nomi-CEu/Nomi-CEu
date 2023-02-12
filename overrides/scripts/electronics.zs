@@ -298,7 +298,7 @@ assembler.recipeBuilder()
 <recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:soldering_alloy> * 144]).remove();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:tin> * 288)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
@@ -307,7 +307,7 @@ circuit_assembler.recipeBuilder()
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:soldering_alloy> * 144)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
@@ -316,7 +316,7 @@ circuit_assembler.recipeBuilder()
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:tin> * 288)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
@@ -325,7 +325,7 @@ circuit_assembler.recipeBuilder()
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireGtSingleLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:soldering_alloy> * 144)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)

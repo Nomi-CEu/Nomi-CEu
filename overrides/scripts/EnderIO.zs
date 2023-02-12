@@ -152,7 +152,7 @@ recipes.addShapeless(
 
 // Enlightened Clear Glass
 alloy.recipeBuilder()
-    .inputs([<enderio:block_fused_glass:*>, <minecraft:glowstone>])
+    .inputs([<ore:fusedGlass>, <minecraft:glowstone>])
     .outputs([<enderio:block_enlightened_fused_glass:0>])
     .duration(160)
     .EUt(16)
@@ -160,7 +160,7 @@ alloy.recipeBuilder()
 
 //Dark Clear Glass
 alloy.recipeBuilder()
-    .inputs([<enderio:block_fused_glass:*>, <actuallyadditions:item_misc:5>])
+    .inputs([<ore:fusedGlass>, <actuallyadditions:item_misc:5>])
     .outputs(<enderio:block_dark_fused_glass>)
     .duration(200).EUt(32).buildAndRegister();
 
@@ -173,15 +173,15 @@ alloy.recipeBuilder()
 
 // Enlightened Fused Quartz
 alloy.recipeBuilder()
-    .inputs([<enderio:block_fused_quartz:*>, <minecraft:glowstone>])
+    .inputs([<ore:fusedQuartz>, <minecraft:glowstone>])
     .outputs([<enderio:block_enlightened_fused_quartz:0>])
     .duration(160)
     .EUt(16)
     .buildAndRegister();
 
-//Dark Fused Quarz
+//Dark Fused Quartz
 alloy.recipeBuilder()
-    .inputs([<actuallyadditions:item_misc:5>, <enderio:block_fused_quartz:*>])
+    .inputs([<ore:fusedQuartz>, <actuallyadditions:item_misc:5>])
     .outputs([<enderio:block_dark_fused_quartz:0>])
     .duration(200)
     .EUt(32)
