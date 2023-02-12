@@ -1559,7 +1559,7 @@ mods.jei.JEI.removeAndHide(<advancedrocketry:sawbladeiron>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:jackhammer>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:asteroidchip>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:elevatorchip>);
-mods.jei.JEI.removeAndHide(<advancedrocketry:lens>);
+// mods.jei.JEI.removeAndHide(<advancedrocketry:lens>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:basiclasergun>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:beaconfinder>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:thermite>);
@@ -1782,7 +1782,7 @@ mods.jei.JEI.removeAndHide(<avaritia:neutronium_compressor>);
 mods.jei.JEI.removeAndHide(<avaritia:matter_cluster>);
 
 
-//Deep Mob Learning Removals
+//Deep Mob Evolution Removals
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_plate>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_redstone>);
 
@@ -2156,9 +2156,11 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:tool.hammer_diamond>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:rockwool:*>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:864>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:material:865>);
-mods.jei.JEI.removeAndHide(<thermalfoundation:ore:8>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:ore:*>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:ore_fluid:*>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:glass:*>);
 mods.jei.JEI.removeAndHide(<thermalfoundation:glass_alloy:*>);
+mods.jei.JEI.removeAndHide(<thermalfoundation:dye:*>);
 
 
 //Custom Materials Removals

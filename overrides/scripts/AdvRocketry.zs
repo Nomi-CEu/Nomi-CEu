@@ -922,6 +922,13 @@ makeExtremeRecipe5(<advancedrocketry:spacelaser>,
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Glory to the PGS!"));
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Consult the AR Wiki for building instructions."));
 <advancedrocketry:spacelaser>.addTooltip(format.gray("Consumes ") + format.yellow("1,000,000") + format.gray(" RF/t"));
+<advancedrocketry:spacelaser>.addTooltip(format.red("Extremely finicky. Use at your own risk. Try restarting your world if it isn't working."));
+
+// Lens (for the drill)
+recipes.remove(<advancedrocketry:lens>);
+recipes.addShapeless(<advancedrocketry:lens>, [<ore:craftingLensGlass>]);
+<advancedrocketry:lens>.addTooltip(format.gray("A basic lens, used for the Orbital Laser Drill."));
+<advancedrocketry:lens>.displayName = "Orbital Laser Drill Lens";
 
 // Force Field Projector
 recipes.addShaped(<advancedrocketry:forcefieldprojector>, [

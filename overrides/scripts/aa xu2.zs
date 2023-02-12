@@ -299,12 +299,27 @@ recipes.addShaped(<actuallyadditions:block_misc:8>, [
 	[<metaitem:plateEnderPearl>, <metaitem:platePulsatingIron>, <metaitem:plateEnderPearl>],
 	[<metaitem:platePulsatingIron>, <actuallyadditions:block_misc:2>, <metaitem:platePulsatingIron>], 
 	[<metaitem:plateEnderPearl>, <metaitem:platePulsatingIron>, <metaitem:plateEnderPearl>]]);
-	
-	
-	
-//TE Drill
-recipes.addShapeless(<thermalfoundation:material:640>, [<actuallyadditions:item_misc:16>]);
-recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillStainlessSteel>]);
+
+//Trash Can (Items)
+recipes.remove(<extrautils2:trashcan>);
+recipes.addShaped(<extrautils2:trashcan>, [
+	[null, <minecraft:iron_trapdoor>, null],
+	[<metaitem:plateIron>, <minecraft:chest>, <metaitem:plateIron>],
+	[null, <metaitem:plateIron>, null]]);
+
+//Trash Can (Fluid)
+recipes.remove(<extrautils2:trashcanfluid>);
+recipes.addShaped(<extrautils2:trashcanfluid>, [
+	[null, <minecraft:iron_trapdoor>, null],
+	[<metaitem:plateIron>, <minecraft:bucket>, <metaitem:plateIron>],
+	[null, <metaitem:plateIron>, null]]);
+
+//Trash Can (Energy)
+recipes.remove(<extrautils2:trashcanenergy>);
+recipes.addShaped(<extrautils2:trashcanenergy>, [
+	[null, <minecraft:iron_trapdoor>, null],
+	[<metaitem:plateIron>, <minecraft:redstone_block>, <metaitem:plateIron>],
+	[null, <metaitem:plateIron>, null]]);
 	
 	
 //medium and large crate
