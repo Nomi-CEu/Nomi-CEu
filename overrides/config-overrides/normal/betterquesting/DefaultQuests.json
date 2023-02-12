@@ -320,12 +320,12 @@
                   "TorchPlacing:1": 1
                 },
                 "GT.Tool:10": {
-                  "AttackDamage:5": 3.5,
-                  "AttackSpeed:5": -3.2,
+                  "AttackDamage:5": 8.5,
+                  "AttackSpeed:5": -3.1000001,
                   "Durability:3": 0,
                   "HarvestLevel:3": 3,
                   "Material:8": "diamond",
-                  "MaxDurability:3": 768,
+                  "MaxDurability:3": 2304,
                   "ToolSpeed:5": 6.4
                 },
                 "HideFlags:3": 2
