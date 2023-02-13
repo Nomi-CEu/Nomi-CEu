@@ -6775,7 +6775,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r from somewhere. §2Severely Steam-Cracked Naphtha§r is most efficient with respect to §9Ethylene§r, but §2Severely Steam-Cracked Light Fuel§r gives a better mix of products once you have a §3Distillation Tower§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
+          "desc:8": "§oThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r, or its variants, from somewhere. §2Severely Steam-Cracked Light Fuel§r is most efficient with §9Raw Oil, Oil and Heavy Oil§r. §2Severely Steam-Cracked Naphtha§r is more efficient when you are using §9Light Oil§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6842,7 +6842,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
+          "desc:8": "§oThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9204,7 +9204,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.",
+          "desc:8": "§oThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10109,7 +10109,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Another common component of any machine that uses fluids. Also usable as a cover for moving fluids between §bGregTech§r machines and adjacent tanks or machines.\n\nYou can use §6Paper Rings§r or §6Rubber Rings§r, but both will require a §aKnife§r to craft. A stick and a piece of flint will make a Knife with low durability, or check the recipe for metal ones.",
+          "desc:8": "Another common component of any machine that uses fluids. Also usable as a cover for moving fluids between §bGregTech§r machines and adjacent tanks or machines.\n\nYou must use §6 §6Rubber Rings§r, which requires a §aKnife§r to craft. A stick and a piece of flint will make a Knife with low durability, or check the recipe for metal ones.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12678,7 +12678,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest takes either Oil, Raw Oil, Light Oil or Heavy Oil to complete§r.\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
+          "desc:8": "§oThis quest takes either Oil, Raw Oil, Light Oil or Heavy Oil to complete§r.\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12696,7 +12696,7 @@
           "lockedprogress:1": 1,
           "name:8": "§2Navigating Petrochem",
           "partysinglereward:1": 0,
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -26913,7 +26913,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Osmium§r and §6Iridium§r from the §6Tier Four Micro Miner§r or §6Platinum Group Processing§r, you can begin automating §bExtended Crafting§r recipes. While it is possible to use §6Automation Interfaces§r for this task, you have access to something §nvastly§r better§r: §bPackagedExCrafting§r.\n\nTo begin, you\u0027ll need to craft one of each extended §3Package Crafter§r listed on the right. Put an §3Unpackager§r on top of each one, and then a §3Packager§r anywhere you want. These are all AE2 devices, so you\u0027ll need to connect them to an ME Network.\n\nNext, right-click the §3Package Recipe Encoder§r, and you should see a button saying \"Processing\": this button cycles through recipe types, including the various Extended Crafting tables. You\u0027ll have to choose the appropriate table for the recipe you want to encode.\n\n§6Holders§r must be encoded in pairs: one for the Packager, and one for the Unpackager. Select the appropriate table for the recipe, look up the recipe you want to encode, and press §6[+]§r in §bJEI§r to fill it in. Put two Holders in the top-left slot and press Save to encode the recipe to both of them. Finally, put each Holder into the respective machines.\n\nIf you\u0027ve done everything correctly, you should see the item appear as craftable in a Terminal.\n\nWhile it might seem that the crafting process is slow, §ePackagedAuto is excellent at parallelizing§r. You can surround an Unpackager with Crafters and it will use all of them. It\u0027s also possible to add more Unpackagers with Crafters to keep up with the Packager, as long as the Holders are all the same.\n\n",
+          "desc:8": "Now that you have §6Osmium§r and §6Iridium§r from the §6Tier Four Micro Miner§r or §6Platinum Group Processing§r, you can begin automating §bExtended Crafting§r recipes. While it is possible to use §6Automation Interfaces§r for this task, you have access to something §ovastly§r better§r: §bPackagedExCrafting§r.\n\nTo begin, you\u0027ll need to craft one of each extended §3Package Crafter§r listed on the right. Put an §3Unpackager§r on top of each one, and then a §3Packager§r anywhere you want. These are all AE2 devices, so you\u0027ll need to connect them to an ME Network.\n\nNext, right-click the §3Package Recipe Encoder§r, and you should see a button saying \"Processing\": this button cycles through recipe types, including the various Extended Crafting tables. You\u0027ll have to choose the appropriate table for the recipe you want to encode.\n\n§6Holders§r must be encoded in pairs: one for the Packager, and one for the Unpackager. Select the appropriate table for the recipe, look up the recipe you want to encode, and press §6[+]§r in §bJEI§r to fill it in. Put two Holders in the top-left slot and press Save to encode the recipe to both of them. Finally, put each Holder into the respective machines.\n\nIf you\u0027ve done everything correctly, you should see the item appear as craftable in a Terminal.\n\nWhile it might seem that the crafting process is slow, §ePackagedAuto is excellent at parallelizing§r. You can surround an Unpackager with Crafters and it will use all of them. It\u0027s also possible to add more Unpackagers with Crafters to keep up with the Packager, as long as the Holders are all the same.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34360,7 +34360,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts both LV and MV Distillery. §2If you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r. Therefore, it is recommended for fluids with only one useful output, like §9Biomass§r, §9Diluted Sulfuric Acid§r, and §9Diluted Hydrochloric Acid§r.\n\nHowever, the Distillation Tower is recommended for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nYou\u0027re going to need it soon!\n\n",
+          "desc:8": "§oNote: this quest accepts both LV and MV Distillery. §2If you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r. Therefore, it is recommended for fluids with only one useful output, like §9Biomass§r, §9Diluted Sulfuric Acid§r, and §9Diluted Hydrochloric Acid§r.\n\nHowever, the Distillation Tower is recommended for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nYou\u0027re going to need it soon!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42801,7 +42801,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aImplosion Compressor§f is like an autoclave that uses explosions instead of water. It is the only way to turn most gem dusts into gemstones.\n\nIt will also be vital for processing §5Motes of Omnium§f.\n\nIn addition to the controller and casings, you will need one §eLV or better§r §6Item Input Bus§r, §6Item Output Bus§r, and §6Energy Input Hatch§r.\n\n§2If desired, you may upgrade this directly to an Electric Implosion Compressor, which can accept Parallel Control hatches.",
+          "desc:8": "The §aImplosion Compressor§f is like an autoclave that uses explosions instead of water. \n\nIt is the only way to turn some gem dusts into gemstones. However, for some gemstones, like §6Apatite§r, it is much more efficient to use an §3Autoclave§r§r with §9Distilled Water§r.\n\nIt will also be vital for processing §5Motes of Omnium§f.\n\nIn addition to the controller and casings, you will need one §eLV or better§r §6Item Input Bus§r, §6Item Output Bus§r, and §6Energy Input Hatch§r.\n\n§2If desired, you may upgrade this directly to an Electric Implosion Compressor, which has no improvements over the base multi for now.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45191,7 +45191,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§6Uraninite Ore§r is the first source of §6Pulsating Dust§r but is not a very good one in the long term. Instead you should make §6Resonant Clathrates§r, which are an infinitely-renewable and effective source of Pulsating Dust.\n\nResonant Clathrates are made by melting §6Ender Pearls§r with a §3Fluid Extractor§r into §9Resonant Ender§r, then mixing that with §6Nether Quartz§r in an MV or better §3Chemical Reactor§r. Smelting this clathrate gives Pulsating Dust.\n\nWith Resonant Clathrates now accessible, everything you need for crafting §6Pulsating Polymer Clay§r can be automated in a net-positive loop.§r Doing so is the first step in automation of §bDeep Mob Evolution§r, which is §ea primary source of important materials for the rest of the pack§r.\n\nThe exact implementation is up to you. Make use of the various LV and MV machines you have, and look through §bJEI§r and the Processing Lines Tab for the ways to get infinite sources of each ingredient (like §aEnderman Models§r for pearls).\n\n",
+          "desc:8": "§oThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§6Uraninite Ore§r is the first source of §6Pulsating Dust§r but is not a very good one in the long term. Instead you should make §6Resonant Clathrates§r, which are an infinitely-renewable and effective source of Pulsating Dust.\n\nResonant Clathrates are made by melting §6Ender Pearls§r with a §3Fluid Extractor§r into §9Resonant Ender§r, then mixing that with §6Nether Quartz§r in an MV or better §3Chemical Reactor§r. Smelting this clathrate gives Pulsating Dust.\n\nWith Resonant Clathrates now accessible, everything you need for crafting §6Pulsating Polymer Clay§r can be automated in a net-positive loop.§r Doing so is the first step in automation of §bDeep Mob Evolution§r, which is §ea primary source of important materials for the rest of the pack§r.\n\nThe exact implementation is up to you. Make use of the various LV and MV machines you have, and look through §bJEI§r and the Processing Lines Tab for the ways to get infinite sources of each ingredient (like §aEnderman Models§r for pearls).\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46446,7 +46446,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Aqueous Accumulators§r in §5Nomifactory§r are infinite water sources; they §ndo not§r require any water blocks nearby.\n\nThis machine can produce §9Water§r as fast as you can extract it (the only downside being that it makes some annoying noises).\n\nFriendship with §aEndervoirs§r ended.",
+          "desc:8": "§3Aqueous Accumulators§r in §5Nomifactory§r are infinite water sources; they §odo not§r require any water blocks nearby.\n\nThis machine can produce §9Water§r as fast as you can extract it (the only downside being that it makes some annoying noises).\n\nFriendship with §aEndervoirs§r ended.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48075,7 +48075,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis is represented in a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation.§r\n\nNow that you have acquired §6Steel§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Evolution§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n",
+          "desc:8": "§oThis is represented in a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation.§r\n\nNow that you have acquired §6Steel§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Evolution§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48431,7 +48431,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
+          "desc:8": "§oThis quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52273,7 +52273,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\n§nThis quest completes via Fluoroantimonic Acid, or Trinium Dust, Enriched Naquadah Dust and Naquadria Dust.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. \n\nThis quest accepts either §6Fluoroantimonic Acid§r, for those doing the recommended full processing, or §6Trinium Dust, Enriched Naquadah Dust§r and §6Naquadria Dust§r, for those doing the mixer recipes.",
+          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\n§oThis quest completes via Fluoroantimonic Acid, §eor§r §oTrinium Dust, Enriched Naquadah Dust and Naquadria Dust.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. \n\nThis quest accepts either §6Fluoroantimonic Acid§r, for those doing the recommended full processing, or §6Trinium Dust, Enriched Naquadah Dust§r and §6Naquadria Dust§r, for those doing the mixer recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52296,7 +52296,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -56101,12 +56101,12 @@
     },
     "902:10": {
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Tablet device you spawned with is very valuable to do plenty of tasks in GregTech.§r\n\nThis Quest explains how you can use the §4Terminal§.. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",\n",
+          "desc:8": "§2The Tablet device you get now is very valuable to do plenty of tasks in GregTech.§r\n\n§oBe careful with removing the battery. Removing it will cause it to become a normal HV battery, and will no longer have 6.4m EU.\n\nThis Quest explains how you can use the §4Terminal§.. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56131,11 +56131,78 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 902,
-      "rewards:9": {},
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 465,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "terminal:10": {
+                  "_hw:10": {
+                    "battery:10": {
+                      "charge:4": 6400000,
+                      "item:10": {
+                        "Count:3": 1,
+                        "Damage:2": 734,
+                        "OreDict:8": "",
+                        "id:8": "gregtech:meta_item_1",
+                        "tag:10": {
+                          "Charge:4": 1200000
+                        }
+                      },
+                      "maxCharge:4": 6400000,
+                      "tier:3": 3
+                    },
+                    "device1:10": {
+                      "d:3": 1,
+                      "item:10": {
+                        "Count:3": 1,
+                        "Damage:2": 467,
+                        "id:8": "gregtech:meta_item_1",
+                        "tag:10": {
+                          "Charge:4": 6400000
+                        }
+                      }
+                    },
+                    "device2:10": {
+                      "d:3": 3,
+                      "item:10": {
+                        "Count:3": 1,
+                        "Damage:2": 504,
+                        "id:8": "gregtech:meta_item_1"
+                      }
+                    }
+                  },
+                  "_installed:9": {
+                    "0:8": "ore_prospector",
+                    "1:8": "world_prospector",
+                    "2:8": "fluid_prospector"
+                  },
+                  "fluid_prospector:10": {
+                    "_tier:3": 3
+                  },
+                  "ore_prospector:10": {
+                    "_tier:3": 3
+                  },
+                  "world_prospector:10": {
+                    "_tier:3": 2,
+                    "slots:10": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "tasks:9": {
         "0:10": {
           "index:3": 0,
@@ -57234,7 +57301,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§nYou may have to hold the item for a few seconds for the whole line to auto-complete.\n\nThis is not complete, and is published out for testing purposes. Currently, only Pulsating Polymer Clay and Cobbleworks are implemented, but more chains are to come. These are Polyethylene and Polyvinyl Chloride, Oil Processing, Epoxy Resin, Rocket Fuel, Polytetrafluoroethylene, High-Octane Gasoline, Cetane-Boosted Diesel, Polybenzimidazole, Naquadah Processing and Platinum Group Processing. If you have any suggestions on other chains or on how to improve this tab, feel free to DM Integer Limit#0458 on Discord or create an issue on GitHub.",
+          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§oYou may have to hold the item for a few seconds for the whole line to auto-complete.\n\nThis is not complete, and is published out for testing purposes. Currently, only Pulsating Polymer Clay and Cobbleworks are implemented, but more chains are to come. These are Polyethylene and Polyvinyl Chloride, Oil Processing, Epoxy Resin, Rocket Fuel, Polytetrafluoroethylene, High-Octane Gasoline, Cetane-Boosted Diesel, Polybenzimidazole, Naquadah Processing and Platinum Group Processing. If you have any suggestions on other chains or on how to improve this tab, feel free to DM Integer Limit#0458 on Discord or create an issue on GitHub.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57274,7 +57341,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Alloy Smelter at voltage §lLV§r§n or higher.§r\n\nThe final step. Combine §6Pulsating Dust§r and §6Resonant Clathrate§r to make §6Pulsating Polymer Clay§r. \n\nTake note that a §3§3Chemical Reactor§r making §6Resonant Clathrate§r will supply 1 §3Alloy Smelter§r of the same tier, and that one §bMV §3Alloy Smelter§r making §6Pulsating Polymer Clay§r supports 10.03 §3Simulation Chambers§r, with each higher tier doubling the amount of §3Simulation Chambers§r it supports.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Alloy Smelter at voltage §lLV§r§o or higher.§r\n\nThe final step. Combine §6Pulsating Dust§r and §6Resonant Clathrate§r to make §6Pulsating Polymer Clay§r. \n\nTake note that a §3§3Chemical Reactor§r making §6Resonant Clathrate§r will supply 1 §3Alloy Smelter§r of the same tier, and that one §bMV §3Alloy Smelter§r making §6Pulsating Polymer Clay§r supports 10.03 §3Simulation Chambers§r, with each higher tier doubling the amount of §3Simulation Chambers§r it supports.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57332,7 +57399,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Chemical Reactor at voltage §lLV§r§o or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57390,7 +57457,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Chemical Reactor at voltage §lMV§r§n or higher.§r\n\nCombine your §6Quartz§r and §6Resonant Ender§r to make §6Resonant Clathrate§r. One §3Electrolyser§r making §6Quartz§r supports one §3Chemical Reactor §rof the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Chemical Reactor at voltage §lMV§r§o or higher.§r\n\nCombine your §6Quartz§r and §6Resonant Ender§r to make §6Resonant Clathrate§r. One §3Electrolyser§r making §6Quartz§r supports one §3Chemical Reactor §rof the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57447,7 +57514,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Forge Hammer at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57504,7 +57571,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Forge Hammer at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57561,7 +57628,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Forge Hammer at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57615,7 +57682,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57669,7 +57736,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57726,7 +57793,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§o or higher, or an Arc Furnace at voltage §lLV§r§o or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57783,7 +57850,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Quartz§r. An §3Arc Furnace§r making §6Glass§r supports 2.5 §3Electrolysers§r of the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Electrolyser at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Sand§r into §6Quartz§r. An §3Arc Furnace§r making §6Glass§r supports 2.5 §3Electrolysers§r of the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57840,7 +57907,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires an Extractor of tier §lLV§r§n or higher.§r\n\nMelt your §6Ender Pearls§r into §6Resonant Ender§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires an Extractor of tier §lLV§r§o or higher.§r\n\nMelt your §6Ender Pearls§r into §6Resonant Ender§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57898,7 +57965,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYour first source of §6Ender Pearls§r could be §6Ender Lillies§r. However, that is too manual and slow for the purpose §6Ender Pearls§r are needed for here. Instead, you can make a net-positive §6Pulsating Polymer Clay§r setup that uses §6Enderman Data Models§r to produce §6Ender Pearls§r. A Self-Aware §6Enderman Data Model§r can supply enough §6Ender Pearls§r to support the running of 6.2 other models.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYour first source of §6Ender Pearls§r could be §6Ender Lillies§r. However, that is too manual and slow for the purpose §6Ender Pearls§r are needed for here. Instead, you can make a net-positive §6Pulsating Polymer Clay§r setup that uses §6Enderman Data Models§r to produce §6Ender Pearls§r. A Self-Aware §6Enderman Data Model§r can supply enough §6Ender Pearls§r to support the running of 6.2 other models.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57955,7 +58022,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§n or higher.§r§r§r\n\nSmelt your §6Resonant Clathrate§r into §6Pulsating Dust§r. If you\u0027re using a §3Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. You might want to keep it as a §3Electric Furnace§r, depending on your circumstance. \n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§o or higher.§r§r§r\n\nSmelt your §6Resonant Clathrate§r into §6Pulsating Dust§r. If you\u0027re using a §3Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. You might want to keep it as a §3Electric Furnace§r, depending on your circumstance. \n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58009,7 +58076,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Cobblestone.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r This is the starting point of your §eCobbleworks§r. Also a cheap building block.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important in or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Cobblestone.§r\n\nThe best source of §6Cobblestone§r is §bNuclearCraft §6Cobblestone Generator§r. If the first one isn\u0027t enough, you can always upgrade and make more of them.§r This is the starting point of your §eCobbleworks§r. Also a cheap building block.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important in or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58065,7 +58132,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Gravel.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r. Pretty much just another step of the §eCobbleworks§r, although it is used in §6Conduit Binders§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Gravel.§r\n\n§oThis step requires a Forge Hammer at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Cobblestone§r into §6Gravel§r. Pretty much just another step of the §eCobbleworks§r, although it is used in §6Conduit Binders§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58121,7 +58188,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Sand.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r. Pretty much just another step of the §eCobbleworks§r, although it is used in §6Conduit Binders§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Sand.§r\n\n§oThis step requires a Forge Hammer at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Gravel§r into §6Sand§r. Pretty much just another step of the §eCobbleworks§r, although it is used in §6Conduit Binders§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58177,7 +58244,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Dust.§r\n\n§nThis step requires a Forge Hammer at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r. Used for nothing, apart from turning into §6Clay§r and §6Netherrack§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Dust.§r\n\n§oThis step requires a Forge Hammer at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Sand§r into §6Dust§r. Used for nothing, apart from turning into §6Clay§r and §6Netherrack§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58234,7 +58301,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay.§r\n\n§nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Clay.§r\n\n§oThis step requires a Chemical Reactor at voltage §lLV§r§o or higher.§r\n\nCombine your §6Dust§r and some §6Water§r to make §6Clay§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58288,7 +58355,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Water.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\nIn this case, you\u0027ll need §9Water§r for §6Clay§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Water.§r\n\nYes, there\u0027s a quest for §9Water§r.\n\n§9Water§r can be achieved in many ways, but the most notable are: §bNuclearCraft §6Infinite Water Sources§r, which are very slow, but cheap, §bEIO §6Endervoirs§r, which are a bit more expensive but way faster, §bGregTech §6Infinite Water Covers§r, which is much more expensive, but is a cover, therefore saving space, and makes water 16x faster than §6Endervoirs§r, and §bThermal §6Aqueous Accumulators§r, which are more expensive, and are similar to §6Infinite Water Covers§r, but is a block, meaning you can use it for other mod\u0027s machines, not just §bGregTech§r.\n\nRight now, you should probably use the §6Endervoirs§r.\n\nIn this case, you\u0027ll need §9Water§r for §6Clay§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58339,7 +58406,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Lava.§r\n\n§6Lava§r can be achieved in three main ways. The first is using a §3Chemical Reactor§r to turn §6Magma Blocks§r into §6Lava§r. The second is using §bActually Additions §6Lava Factories§r. These are quite slow. The final notable way is using a §bGregTech §6Fluid Drill§r in the Nether above a §6Lava§r vein.\n\nIn this case, you\u0027ll need §6Lava§r for §6Netherrack§r. You won\u0027t need much, although §6Lava§r can also be centrifuged for useful resources, and will be used heavily in the End Game for §6Lava Infused Crystals§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Lava.§r\n\n§6Lava§r can be achieved in three main ways. The first is using a §3Chemical Reactor§r to turn §6Magma Blocks§r into §6Lava§r. The second is using §bActually Additions §6Lava Factories§r. These are quite slow. The final notable way is using a §bGregTech §6Fluid Drill§r in the Nether above a §6Lava§r vein.\n\nIn this case, you\u0027ll need §6Lava§r for §6Netherrack§r. You won\u0027t need much, although §6Lava§r can also be centrifuged for useful resources, and will be used heavily in the End Game for §6Lava Infused Crystals§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58393,7 +58460,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Netherrack.\n\nThis step requires a Chemical Reactor at voltage §lLV§r§n or higher.§r\n\nCombine your §6Dust§r and §6Lava§r into §6Netherrack§r. Pretty much used for nothing, apart from your first §6Hellish Matter§r and §6Netherrack Dust§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Netherrack.\n\nThis step requires a Chemical Reactor at voltage §lLV§r§o or higher.§r\n\nCombine your §6Dust§r and §6Lava§r into §6Netherrack§r. Pretty much used for nothing, apart from your first §6Hellish Matter§r and §6Netherrack Dust§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58449,7 +58516,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Netherrack Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Netherrack§r into §6Netherrack Dust§r. Used for nothing apart from §6Nether Cakes§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Netherrack Dust.§r\n\n§oThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Netherrack§r into §6Netherrack Dust§r. Used for nothing apart from §6Nether Cakes§r. No need to passive this.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58505,7 +58572,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay Balls.§r\n\n§nThis step requires a Extractor at voltage §lLV§r§n or higher.§r\n\nExtract your §6Clay§r to make §6Clay Balls§r.§r Probably easier to automate than placing and then breaking §6Clay§r. Used for §6Conduit Binders§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Clay Balls.§r\n\nCraft your §6Clay§r to make §6Clay Balls§r.§r You can also use §3Compacting Drawers§r. Used for §6Conduit Binders§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58561,7 +58628,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Clay Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Clay§r to make §6Clay Dust§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Clay Dust.§r\n\n§oThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Clay§r to make §6Clay Dust§r.§r Turns into many useful resources.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58617,7 +58684,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Sodium, Silicon, Lithium and Aluminium.§r\n\n§nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nSplit your §6Clay Dust§r to make §6Sodium Dust§r, §6Silicon Dust§r, §6Lithium Dust§r, and §6Aluminium Dust§r.§r This is extremely important to passive, as you will need a lot of these resources, and this is the best way to get them.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Sodium, Silicon, Lithium and Aluminium.§r\n\n§oThis step requires a Electrolyser at voltage §lLV§r§o or higher.§r\n\nSplit your §6Clay Dust§r to make §6Sodium Dust§r, §6Silicon Dust§r, §6Lithium Dust§r, and §6Aluminium Dust§r.§r This is extremely important to passive, as you will need a lot of these resources, and this is the best way to get them.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 0,
@@ -58691,7 +58758,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Stone.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§n or higher.§r\n\nMainly used for decorational blocks. Still part of §eCobbleworks§r I guess.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Stone.§r\n\n§oThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§r§o or higher.§r\n\nMainly used for decorational blocks. Still part of §eCobbleworks§r I guess.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58747,7 +58814,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Glass.§r\n\n§nThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§n or higher, or an Arc Furnace at voltage §lLV§r§n or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Glass.§r\n\n§oThis step requires a Furnace or an upgraded Furnace, a Electric Furnace at voltage §lLV§r§o or higher, or an Arc Furnace at voltage §lLV§r§o or higher.§r\n\nSmelt your §6Sand§r into §6Glass§r. If you\u0027re using a §3Electric Furnace§r to smelt it, it\u0027s more efficient to use the upgraded §3Furnaces§r, such as §3Iron Furnaces§r. You can fuel them with §6Sugar Cane§r. The §3Arc Furnace§r doubles your glass though. Later, once you unlock them, §3Multi Smelters§r will be the best for this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58803,7 +58870,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Quartz.§r\n\n§nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sand§r into §6Quartz§r. An §3Arc Furnace§r making §6Glass§r supports 2.5 §3Electrolysers§r of the same tier. You will need a lot of §6Quartz§r, so its crucial that you passive this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or achieving Quartz.§r\n\n§oThis step requires a Electrolyser at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Sand§r into §6Quartz§r. An §3Arc Furnace§r making §6Glass§r supports 2.5 §3Electrolysers§r of the same tier. You will need a lot of §6Quartz§r, so its crucial that you passive this.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59098,7 +59165,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Glass Dust.\n\nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Glass§r into §6Glass Dust§r. Used for nothing, apart from §6Silicon Dioxide Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Glass Dust.\n\nThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Glass§r into §6Glass Dust§r. Used for nothing, apart from §6Silicon Dioxide Dust§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59154,7 +59221,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Silicon Dioxide Dust.\n\nThis step requires a Centrifuge at voltage §lLV§r§n or higher.§r\n\nSeperate your §6Glass Dust§r into §6Silicon Dioxide Dust§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Silicon Dioxide Dust.\n\nThis step requires a Centrifuge at voltage §lLV§r§o or higher.§r\n\nSeperate your §6Glass Dust§r into §6Silicon Dioxide Dust§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59210,7 +59277,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Quartz Sand.\n\nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Sand§r into §6Quartz Sand§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Quartz Sand.\n\nThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Sand§r into §6Quartz Sand§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59266,7 +59333,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Sand.\n\nThis step requires a Centrifuge at voltage §lLV§r§n or higher.§r\n\nSeperate your §6Quartz Sand§r into §6Quartzite Dust§r and §6Certus Quartz Dust§r. This is a good renewable source of §6Certus Quartz§r, which you need for §bApplied Energistics 2§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Sand.\n\nThis step requires a Centrifuge at voltage §lLV§r§o or higher.§r\n\nSeperate your §6Quartz Sand§r into §6Quartzite Dust§r and §6Certus Quartz Dust§r. This is a good renewable source of §6Certus Quartz§r, which you need for §bApplied Energistics 2§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59328,7 +59395,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Oxygen.\n\nThis step requires a Electrolyser at voltage §lLV§r§n or higher.§r\n\nSplit your §6Silicon Dioxide Dust§r into §6Silicon Dust and Oxygen§r. This is the best source of Early Game §6Oxygen§r, although distilling §6Liquid Air§r may be better later, depending on your situation.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Oxygen.\n\nThis step requires a Electrolyser at voltage §lLV§r§o or higher.§r\n\nSplit your §6Silicon Dioxide Dust§r into §6Silicon Dust and Oxygen§r. This is the best source of Early Game §6Oxygen§r, although distilling §6Liquid Air§r may be better later, depending on your situation.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59381,7 +59448,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. \n\nThe first way that comes to mind is electrolysing §9Water§r, but that is slow. \n\nInstead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be achieved by centrifuging §6Food§r and §6Wood§r, processing §6Pyroluse Byproducts§r, or through §6Petroleum§r. \n\nRight now, for the small quantities you need, you can simply electrolyse §9Water§r. Just keep those other ways in mind, for later in the game.",
+          "desc:8": "§oSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. \n\nThe first way that comes to mind is electrolysing §9Water§r, but that is slow. \n\nInstead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be achieved by centrifuging §6Food§r and §6Wood§r, processing §6Pyroluse Byproducts§r, or through §6Petroleum§r. \n\nRight now, for the small quantities you need, you can simply electrolyse §9Water§r. Just keep those other ways in mind, for later in the game.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59451,7 +59518,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or achieving Obsidian.§r\n\n§nThis step requires a Fluid Solidifier at voltage §lLV§r§n or higher, or a Rock Breaker at voltage §lHV§r§n or higher.§r\n\nCool down your §6Lava§r into §6Obsidian§r. You\u0027ll need a lot of this, so it\u0027s probably wise to use §3Rock Breakers§r once you hit §6HV§r, as they don\u0027t consume anything to produce §6Obsidian§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or achieving Obsidian.§r\n\n§oThis step requires a Fluid Solidifier at voltage §lLV§r§o or higher, or a Rock Breaker at voltage §lHV§r§o or higher.§r\n\nCool down your §6Lava§r into §6Obsidian§r. You\u0027ll need a lot of this, so it\u0027s probably wise to use §3Rock Breakers§r once you hit §6HV§r, as they don\u0027t consume anything to produce §6Obsidian§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59507,7 +59574,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Obsidian Dust.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Obsidian§r into §6Obsidian Dust§r. You\u0027ll need a lot of this for §6Petrotheum Dust§r.\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Obsidian Dust.§r\n\n§oThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Obsidian§r into §6Obsidian Dust§r. You\u0027ll need a lot of this for §6Petrotheum Dust§r.\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59563,7 +59630,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§n§nThis quest completes via checkbox or upon achieving Sandstone.§r\n\nCompact your §6Sand§r into §6Sandstone§r. It is recommended to use §3Mechanical Crafters§r or §6Compacting Drawers§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Sandstone.§r\n\nCompact your §6Sand§r into §6Sandstone§r. It is recommended to use §3Mechanical Crafters§r or §6Compacting Drawers§r.\n\n\n\n§YYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59619,7 +59686,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Saltpeter.§r\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nBreak up your §6Sandstone§r into §6Saltpeter§r. This is probably the best way to get §6Saltpeter§r, which you\u0027ll need a lot for §6Aerotheum Dust§r. You can also get §6Saltpeter§r from §bDeep Mob Evolution§r.\n\nYou can also electrolyse it for §6Potassium§r, although it isn\u0027t recommended because of how easily you can get §6Potassium§r, such as from §6Black Granite §3Processing§r, and how much §6Saltpeter§r it costs.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Saltpeter.§r\n\n§oThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nBreak up your §6Sandstone§r into §6Saltpeter§r. This is probably the best way to get §6Saltpeter§r, which you\u0027ll need a lot for §6Aerotheum Dust§r. You can also get §6Saltpeter§r from §bDeep Mob Evolution§r.\n\nYou can also electrolyse it for §6Potassium§r, although it isn\u0027t recommended because of how easily you can get §6Potassium§r, such as from §6Black Granite §3Processing§r, and how much §6Saltpeter§r it costs.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59714,7 +59781,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Flint.§r\n\n§nThis step requires a Sifter at voltage §lLV§r§n or higher.§r\n\nSearch your §6Gravel§r for §6Flint§r. The only main thing you\u0027ll need this for is §6Storage Downgrades§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Flint.§r\n\n§oThis step requires a Sifter at voltage §lLV§r§o or higher.§r\n\nSearch your §6Gravel§r for §6Flint§r. The only main thing you\u0027ll need this for is §6Storage Downgrades§r.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59770,7 +59837,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Stone Dust.\n\n§nThis step requires a Macerator at voltage §lLV§r§n or higher.§r\n\nCrush your §6Cobblestone§r into §6Stone Dust§r. You\u0027ll actually get a lot of §6Stone Dust§r from §eOre Processing§r, but this could be your backup source. You\u0027ll need this for §6Concrete§r. You can also centrifuge this, although the resources gained are not very useful, and are in very small amounts.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Stone Dust.\n\n§oThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Cobblestone§r into §6Stone Dust§r. You\u0027ll actually get a lot of §6Stone Dust§r from §eOre Processing§r, but this could be your backup source. You\u0027ll need this for §6Concrete§r. You can also centrifuge this, although the resources gained are not very useful, and are in very small amounts.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59827,7 +59894,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Concrete.\n\n§nThis step requires a Mixer at voltage §lLV§r§n or higher.§r\n\nMix §6Stone Dust§r, §6Clay Dust§r and some §9Water§r to make §6Concrete§r. This is probably the easiest way to get §6Concrete§r. You\u0027ll need this for §6Plascrete§r, used in §2Cleanrooms§r, and a tiny amount for §6Launch Pads§r.§o\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Concrete.\n\n§oThis step requires a Mixer at voltage §lLV§r§o or higher.§r\n\nMix §6Stone Dust§r, §6Clay Dust§r and some §9Water§r to make §6Concrete§r. This is probably the easiest way to get §6Concrete§r. You\u0027ll need this for §6Plascrete§r, used in §2Cleanrooms§r, and a tiny amount for §6Launch Pads§r.§o\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59919,7 +59986,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§nThis quest completes via checkbox or upon achieving Ethylene.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Ethylene.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61709,6 +61776,80 @@
               "Damage:2": 2019,
               "OreDict:8": "",
               "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1015:10": {
+      "preRequisites:11": [
+        805
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "If you §osomehow§r run out of charge on your prospector. Simply submit it back in, and we\u0027ll give you a fresh one!\n\nAvailable once per hour.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 467,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Charge:4": 1600000
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Recharge Your Prospector!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": 72000,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1015,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 467,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 1600000
+              }
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 467,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Charge:4": 1600000
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -66925,10 +67066,10 @@
         },
         "53:10": {
           "id:3": 902,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 132
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 36,
+          "y:3": -30
         },
         "54:10": {
           "id:3": 909,
@@ -66957,6 +67098,13 @@
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 168
+        },
+        "58:10": {
+          "id:3": 1015,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -228,
+          "y:3": 132
         }
       }
     },
