@@ -6775,7 +6775,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r, or its variants, from somewhere. §2Severely Steam-Cracked Light Fuel§r is most efficient with §9Raw Oil, Oil and Heavy Oil§r. §2Severely Steam-Cracked Naphtha§r is more efficient when you are using §9Light Oil§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
+          "desc:8": "§9Ethylene§r is a hydrocarbon obtained from §dOil Processing§r, or by dehydrating §9Ethanol§r with §9Sulfuric Acid§r in a §3Chemical Reactor§r. Choose a method that works for you:\n\n- The §9Ethanol§r route allows you to use your existing §6Sugarcane§r farm to produce §9Ethylene§r. However, the recipes require §bMedium Voltage§r machines to run.\n\n- The §dOil Processing§r route requires §2only LV machines§r, but you will have to source §9Oil§r, or its variants, from somewhere. §2Severely Steam-Cracked Light Fuel§r is most efficient with §9Raw Oil, Oil and Heavy Oil§r. §2Severely Steam-Cracked Naphtha§r is more efficient when you are using §9Light Oil§r.\n\nIt is an extremely important chemical in the production of plastics, as you\u0027ll need §9Ethylene§r in your production of §9Polyethylene (PE)§r, §9Polyvinyl Chloride (PVC)§r, and can be used in the production of §9Styrene-Butadiene Rubber (SBR)§r, the best form of rubber.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6842,7 +6842,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
+          "desc:8": "§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9204,7 +9204,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis is an end of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.",
+          "desc:8": "§9Vinyl Chloride§r is an industrial chemical made from chlorinating §9Ethylene§r (adding §9Chlorine§r at high temperature) in a §3Chemical Reactor§r. §9Ethane§r can be used as an alternative reagent.\n\nIt is used to create the plastic §9Polyvinyl Chloride§r, most well known as PVC. While it deviates from reality, in GregTech you chemically react Vinyl Chloride and §9Oxygen§r to polymerize it into PVC. \n\nLater, you can use §9Titanium Tetrachloride§r to catalyze this reaction as well for greater yield.\n\nYou\u0027ll only need to solidify this into sheet form. If you want PVC pipes too, you can pulverise the sheet into dust and use that in the extruder, or you can solidify it into bars seperately.\n\n§6PVC Sheets§r are superior to §6Polyethylene Sheets§r for making plastic substrates, producing twice as many §6Plastic Boards§r per craft.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31768,7 +31768,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\n§2Later, you can use Fluid Rigs or break down Ghast Tears to obtain Salt Water, and electrolyze it to Chlorine.",
+          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\n§2Later, you can use Fluid Rigs or break down Ghast Tears to obtain Salt Water, and electrolyze it to Chlorine. \n\n§rUsing Fluid Rigs is the best way to obtain mass amounts of Chlorine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -60000,7 +60000,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Processing Lines: Ethylene",
           "questlogic:8": "OR",
@@ -60638,7 +60638,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Processing Lines: Polyethylene",
           "questlogic:8": "OR",
@@ -60770,7 +60770,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Processing Lines: Polyvinyl Chloride",
           "questlogic:8": "OR",
@@ -60873,7 +60873,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Processing Lines: Polytetrafluoroethylene",
           "questlogic:8": "OR",
@@ -68421,265 +68421,6 @@
           "sizeY:3": 0,
           "x:3": -24,
           "y:3": -136
-        },
-        "41:10": {
-          "id:3": 972,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -120,
-          "y:3": 132
-        },
-        "42:10": {
-          "id:3": 975,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -348,
-          "y:3": 48
-        },
-        "43:10": {
-          "id:3": 976,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 12
-        },
-        "44:10": {
-          "id:3": 977,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 12
-        },
-        "45:10": {
-          "id:3": 978,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 12
-        },
-        "46:10": {
-          "id:3": 979,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 12
-        },
-        "47:10": {
-          "id:3": 980,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 72
-        },
-        "48:10": {
-          "id:3": 981,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 72
-        },
-        "49:10": {
-          "id:3": 982,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 72
-        },
-        "50:10": {
-          "id:3": 983,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 108
-        },
-        "51:10": {
-          "id:3": 984,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 108
-        },
-        "52:10": {
-          "id:3": 985,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 108
-        },
-        "53:10": {
-          "id:3": 986,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 144
-        },
-        "54:10": {
-          "id:3": 987,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 144
-        },
-        "55:10": {
-          "id:3": 988,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 36
-        },
-        "56:10": {
-          "id:3": 989,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 96
-        },
-        "57:10": {
-          "id:3": 990,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 144
-        },
-        "58:10": {
-          "id:3": 991,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -168,
-          "y:3": 228
-        },
-        "59:10": {
-          "id:3": 992,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 192
-        },
-        "60:10": {
-          "id:3": 993,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 120
-        },
-        "61:10": {
-          "id:3": 994,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -156,
-          "y:3": 300
-        },
-        "62:10": {
-          "id:3": 995,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -60,
-          "y:3": 240
-        },
-        "63:10": {
-          "id:3": 996,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": 192
-        },
-        "64:10": {
-          "id:3": 997,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -48,
-          "y:3": 312
-        },
-        "65:10": {
-          "id:3": 998,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": 132,
-          "y:3": 204
-        },
-        "66:10": {
-          "id:3": 999,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 264
-        },
-        "67:10": {
-          "id:3": 1002,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 168
-        },
-        "68:10": {
-          "id:3": 1003,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 168
-        },
-        "69:10": {
-          "id:3": 1004,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 168
-        },
-        "70:10": {
-          "id:3": 1005,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 132
-        },
-        "71:10": {
-          "id:3": 1006,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 168
-        },
-        "72:10": {
-          "id:3": 1007,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 132
-        },
-        "73:10": {
-          "id:3": 1008,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 168
-        },
-        "74:10": {
-          "id:3": 1009,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 204
-        },
-        "75:10": {
-          "id:3": 1010,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": 120,
-          "y:3": 180
-        },
-        "76:10": {
-          "id:3": 1011,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": 156,
-          "y:3": 180
-        },
-        "77:10": {
-          "id:3": 1012,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": 84,
-          "y:3": 180
         }
       }
     }
