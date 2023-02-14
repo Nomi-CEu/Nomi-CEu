@@ -3,12 +3,12 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.block.IBlockPattern;
 import crafttweaker.event.PlayerInteractBlockEvent;
 
-<ore:wrenchCustom>.add(<thermalfoundation:wrench>,
+<ore:wrenches>.add(<thermalfoundation:wrench>,
                        <enderio:item_yeta_wrench>,
                        <redstonearsenal:tool.wrench_flux>,
                        <redstonearsenal:tool.battlewrench_flux>);
 
-<ore:wrenchCustom>.addAll(<ore:toolWrench>);
+<ore:wrenches>.addAll(<ore:toolWrench>);
 
 static wrenchables as IBlockPattern = <thermalexpansion:tank> as IBlock |
                                       <thermalexpansion:cell> as IBlock |
@@ -27,7 +27,7 @@ function isNotWrenching(player as IPlayer) as bool {
 	return isNull(player) || // no player
 		!player.isSneaking || // not sneaking
 		isNull(player.currentItem) || // no item is held
-		!(<ore:wrenchCustom> has player.currentItem); // not a wrench
+		!(<ore:wrenches> has player.currentItem); // not a wrench
 }
 
 function playerIsNotWrenchingWrenchable(evt as PlayerInteractBlockEvent) as bool {
