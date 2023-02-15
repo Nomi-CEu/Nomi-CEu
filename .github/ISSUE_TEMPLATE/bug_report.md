@@ -3,7 +3,7 @@ name: Bug report
 about: Crashes or unintended behaviors arising from Nomifactory's mods, configurations,
   or custom scripts
 title: ''
-labels: ''
+labels: bug
 assignees: ''
 
 ---
@@ -11,6 +11,9 @@ assignees: ''
 Note: if you need general tech support for things like server configuration, Discord is a better venue. Please open an issue only if there is a clear bug with the pack or if you have been asked to by one of the Discord staff.
 
 **Pack Version:**
+
+Check if the bug is fixed on the latest version before submitting. The latest version is v1.5.
+
 Replace this text with the version number of the pack, or the commit hash (the letters and numbers between "dev-" and "-snapshot" in the zip you downloaded) if you are doing development testing. If you added any additional mods, or changed any configurations from their defaults, please also note that information here.
 
 **Description:**
