@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -10175,7 +10174,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts both LV and MV Polarizer.\n\nAlthough you could §emagnetize§r §6Iron Ingots§r by hand using §6Redstone§r, doing that consumes considerable amounts of dust and that\u0027s not an option for more advanced materials. This machine will let you magnetize §6Steel Rods§r, as well as even more advanced materials later.\n\n§2Polarizer recipes in GTCEu go up to HV.",
+          "desc:8": "§oNote: this quest accepts both LV and MV Polarizer.§r\n\nAlthough you could §emagnetize§r §6Iron Ingots§r by hand using §6Redstone§r, doing that consumes considerable amounts of dust and that\u0027s not an option for more advanced materials. This machine will let you magnetize §6Steel Rods§r, as well as even more advanced materials later.\n\n§2Polarizer recipes in GTCEu go up to HV.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12678,7 +12677,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest takes either Oil, Raw Oil, Light Oil or Heavy Oil to complete§r.\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
+          "desc:8": "§oNote: this quest accepts either Oil, Raw Oil, Light Oil or Heavy Oil.§r\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14811,7 +14810,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Pumps are now available in GT. Useful for gathering Oil or perhaps Lava from the Nether.",
+          "desc:8": "§2Pumps are now available in GT.§r\n\nUseful for gathering §6Oil§r or perhaps §6Lava§r from the §cNether§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34360,7 +34359,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts both LV and MV Distillery. §2If you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r. Therefore, it is recommended for fluids with only one useful output, like §9Biomass§r, §9Diluted Sulfuric Acid§r, and §9Diluted Hydrochloric Acid§r.\n\nHowever, the Distillation Tower is recommended for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nYou\u0027re going to need it soon!\n\n",
+          "desc:8": "§oNote: this quest accepts both LV and MV Distillery. §2\n\nIf you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r. Therefore, it is recommended for fluids with only one useful output, like §9Biomass§r, §9Diluted Sulfuric Acid§r, and §9Diluted Hydrochloric Acid§r.\n\nHowever, the Distillation Tower is recommended for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nYou\u0027re going to need it soon!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42868,7 +42867,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §3Simulation Chamber§r from §bDeep Mob Evolution§r (§bDME§r, for short) allows you to farm mobs in a totally environmentally (and server) friendly way!\n\nSimulated mobs can even be used to provide you with many of the basic resources you\u0027ll need (such as §6iron, gold, tin, copper, diamonds§r and many more!), through pristine matter.\n\nSetting up DME automation during the early game is §avery important§r as it gives you access to infinite quantities of many resources!\n\nDME changes machines, making them no longer sided, so you can input and output from any side, as well as allowing them to be controlled by redstone.\n\nConsider reading the §bDeep Mob Evolution§r book for more info.\n\nYes, you can also use it for generating power... §owith Diamonds.",
+          "desc:8": "A §3Simulation Chamber§r from §bDeep Mob Evolution§r (§bDME§r) allows you to farm mobs in a totally environmentally (and server) friendly way!\n\nSimulated mobs can even be used to provide you with many of the basic resources you\u0027ll need (such as §6iron, gold, tin, copper, diamonds§r and many more!), through pristine matter.\n\nSetting up DME automation during the early game is §avery important§r as it gives you access to infinite quantities of many resources!\n\nDME changes machines, making them no longer sided, so you can input and output from any side, as well as allowing them to be controlled by redstone.\n\nConsider reading the §bDeep Mob Evolution§r book for more info.\n\nYes, you can also use it for generating power... §owith Diamonds.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48431,7 +48430,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
+          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§9§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50624,7 +50623,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This quest accepts a §6Power Unit§r of any voltage. \n\nWith GT Batteries unlocked, you can make Power Units for electric GT tools. \n\n§2A new addition among them is the Drill, which at LV tier can mine a 3x3x1 area of blocks, and at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.§r\n\nCharge these with a §6Battery§r of appropriate tier, or in an appropriately tiered machine. \n\nYou may want to look into §6Chainsaws§r for mass tree felling as well, or a §6Wrench§r, for breaking machines very quickly. The other electric tools are probably not worth making.",
+          "desc:8": "§oNote: this quest accepts a Power Unit of any voltage (LV, MV, HV, EV \u0026 IV). §r\n\nWith §bGregTech §6Power Storage§r unlocked, you can make §aPower Units§r for electric GT tools.\n\nCheck if that tool has that tier first! §6Drills§r are available at all tiers, the §6Wrench§r is available at §7LV§r, §6HV§r and §1IV§r, and the other electric tools, such as §6Chainsaws§r and §6Screwdrivers§r are only available at §7LV§r. \n\n§2A new addition among them is the Drill, which at LV tier can mine a 3x3x1 area of blocks, and at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.§r\n\nCharge these with a §6Battery§r of appropriate tier, or in an appropriately tiered §3Machine§r, §3Battery Buffer§r or §3Turbo Charger§r. \n\nYou may want to look into §6Chainsaws§r for mass tree felling as well, or a §6Wrench§r, for breaking machines very quickly. The other electric tools are probably not worth making.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52273,7 +52272,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2There are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). And there are 3 different ways to process Naquadah, each resulting in different materials.§r\n\n§oThis quest completes via Fluoroantimonic Acid, §eor§r §oTrinium Dust, Enriched Naquadah Dust and Naquadria Dust.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. \n\nThis quest accepts either §6Fluoroantimonic Acid§r, for those doing the recommended full processing, or §6Trinium Dust, Enriched Naquadah Dust§r and §6Naquadria Dust§r, for those doing the mixer recipes.",
+          "desc:8": "§oNote: this quest completes via:\nFluoroantimonic Acid, \nor\nTrinium Dust, Enriched Naquadah Dust and Naquadria Dust.\n§2\nThere are 3 materials you will need from processing Naquadah: Enriched Naquadah (Nq+), Naquadria (Nq*), and Trinium (Ke). \n\nThere are 3 different ways to process Naquadah, each resulting in different materials.§r\n\nFirst is by §dprocessing ores§r from the §6Tier Five Micro Miner§r. §6Naquadah Ore§r yields §6Enriched Naquadah§r (through the §3Magnetic Separator§r) and §6Kaemanite Ore§r yields §6Trinium§r.\n\nSecond is by combining §6Naquadah Dust§r with certain heavy elements and EnderIO crystal grains. This can provide §6Enriched Naquadah§r and §6Naquadria§r.\n\nFinally, you can do the full CEu processing of §6Naquadah Dust§r with §9Fluoroantimonic Acid§r, the strongest acid known to man. This is a decently involved process, but not only does it yield all 2 other Nq materials, it also grants byproducts of §6Titanium, Sulfur, Indium, Phosphorus, Barium, and Gallium§r. \n\nThis quest accepts either §6Fluoroantimonic Acid§r, for those doing the recommended full processing, or §6Trinium Dust, Enriched Naquadah Dust§r and §6Naquadria Dust§r, for those doing the mixer recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55598,7 +55597,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With the MV Assembling Machine, you can assemble a few necessary parts for the next Circuit tier.",
+          "desc:8": "With the §2MV Assembling Machine§r, you can assemble a few necessary parts for the next §eCircuit§r tier.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
