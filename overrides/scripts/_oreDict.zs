@@ -2129,6 +2129,9 @@ mods.jei.JEI.removeAndHide(<theoneprobe:diamond_helmet_probe>);
 //mods.jei.JEI.removeAndHide(<theoneprobe:probenote>);
 mods.jei.JEI.removeAndHide(<theoneprobe:creativeprobe>);
 
+// Extended Crafting Removals
+mods.jei.JEI.removeAndHide(<extendedcrafting:crafting_table>);
+
 
 //Thermal Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:satchel:32000>);

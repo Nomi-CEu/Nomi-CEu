@@ -594,17 +594,6 @@ tierfourship_stabilized_matter.glowing = true;
 tierfourship_stabilized_matter.maxStackSize = 64;
 tierfourship_stabilized_matter.register();
 
-var tiernineship_stabilized = VanillaFactory.createItem("tiernineship_stabilized");
-tiernineship_stabilized.rarity = "epic";
-tiernineship_stabilized.maxStackSize = 1;
-tiernineship_stabilized.register();
-
-var tiernineship_stabilized_matter = VanillaFactory.createItem("tiernineship_stabilized_matter");
-tiernineship_stabilized_matter.rarity = "epic";
-tiernineship_stabilized_matter.glowing = true;
-tiernineship_stabilized_matter.maxStackSize = 64;
-tiernineship_stabilized_matter.register();
-
 var tieroneship_stabilized = VanillaFactory.createItem("tieroneship_stabilized");
 tieroneship_stabilized.rarity = "epic";
 tieroneship_stabilized.maxStackSize = 1;
@@ -637,17 +626,6 @@ tiersixship_stabilized_matter.rarity = "epic";
 tiersixship_stabilized_matter.glowing = true;
 tiersixship_stabilized_matter.maxStackSize = 64;
 tiersixship_stabilized_matter.register();
-
-var tiertenship_stabilized = VanillaFactory.createItem("tiertenship_stabilized");
-tiertenship_stabilized.rarity = "epic";
-tiertenship_stabilized.maxStackSize = 1;
-tiertenship_stabilized.register();
-
-var tiertenship_stabilized_matter = VanillaFactory.createItem("tiertenship_stabilized_matter");
-tiertenship_stabilized_matter.rarity = "epic";
-tiertenship_stabilized_matter.glowing = true;
-tiertenship_stabilized_matter.maxStackSize = 64;
-tiertenship_stabilized_matter.register();
 
 var tierthreeship_stabilized = VanillaFactory.createItem("tierthreeship_stabilized");
 tierthreeship_stabilized.rarity = "epic";

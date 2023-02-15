@@ -1215,6 +1215,7 @@ actualization_chamber.recipeMap
     .outputs(<gregtech:ore_bauxite_0:2> * 64,
              <gregtech:ore_pyrochlore_0:2> * 64,
              <gregtech:ore_pyrochlore_0:2> * 64,
+             <gregtech:ore_tantalite_0:2> * 64,
              <gregtech:ore_copper_0:2> * 64,
              <gregtech:ore_copper_0:2> * 64,
              <gregtech:ore_copper_0:2> * 64,
@@ -1225,6 +1226,17 @@ actualization_chamber.recipeMap
              <gregtech:ore_tungstate_0:2> * 64,
              <contenttweaker:radiumsalt> * 64,
              <contenttweaker:radiumsalt> * 64)
+    .buildAndRegister();
+
+
+// t2 stellar creation data
+actualization_chamber.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiertwoship_stabilized_matter>)
+    .circuit(2)
+    .outputs(<contenttweaker:stellarcreationdata> * 4)
     .buildAndRegister();
 
 
@@ -1352,8 +1364,14 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
     .circuit(2)
-    .outputs(<minecraft:blaze_rod> * 64,
-             <minecraft:blaze_rod> * 64,
+    .outputs(<minecraft:blaze_rod> * 50,
+             <minecraft:blaze_rod> * 50,
+             <thermalfoundation:material:2048> * 50,
+             <thermalfoundation:material:2048> * 50,
+             <thermalfoundation:material:2050> * 50,
+             <thermalfoundation:material:2050> * 50,
+             <thermalfoundation:material:2052> * 50,
+             <thermalfoundation:material:2052> * 50,
              <minecraft:ghast_tear> * 64,
              <minecraft:skull:1>* 48,
              <armorplus:material:2> * 64,
@@ -1487,7 +1505,7 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
     .circuit(1)
-    .outputs(<draconicevolution:dragon_heart> * 4,
+    .outputs(<draconicevolution:dragon_heart> * 32,
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_breath> * 64,
