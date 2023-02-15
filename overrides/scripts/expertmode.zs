@@ -111,18 +111,38 @@ makeExtremeRecipe7(<contenttweaker:tierfourandhalfship>,
 	  I : <redstonearsenal:tool.sword_flux> }
 );
 
-// t8.5 mm
-mods.extendedcrafting.TableCrafting.addShaped(<contenttweaker:tiereightandhalfship>, [
-	[null, null, null, <contenttweaker:t3laser>, <contenttweaker:t3laser>, <contenttweaker:t3laser>, null, null, null], 
-	[null, null, <contenttweaker:t3laser>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <contenttweaker:t3laser>, null, null], 
-	[null, <contenttweaker:t2guidance>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, <contenttweaker:t2guidance>, null], 
-	[null, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <gregtech:meta_item_1:208>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, null], 
-	[null, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <gregtech:meta_item_1:223>, <draconicevolution:draconic_energy_core>, <gregtech:meta_item_1:223>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, null], 
-	[<ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <draconicevolution:reactor_part>, <gregtech:meta_item_1:208>, <draconicevolution:reactor_part>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleNaquadahAlloy>], 
-	[<ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <gregtech:machine:1571>, <advancedrocketry:warpcore>, <gregtech:machine:1571>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>], 
-	[<ore:plateDoubleNaquadahAlloy>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <advancedrocketry:warpmonitor>, <advancedrocketry:warpcore>, <advancedrocketry:warpmonitor>, <ore:plateDoubleTrinium>, <ore:plateDoubleTrinium>, <ore:plateDoubleNaquadahAlloy>], 
-	[null, <contenttweaker:warpengine>, <contenttweaker:warpengine>, <contenttweaker:warpengine>, null, <contenttweaker:warpengine>, <contenttweaker:warpengine>, <contenttweaker:warpengine>, null]
-]);
+<contenttweaker:tierfourandhalfship>.addTooltip(
+	format.white(
+		format.italic("Kills mobs in dangerous microverses and collects their highly prized skeletons and parts.")));
+
+/////////////	 Tier Eight and Half Space Ship  	  //////////////////
+makeExtremeRecipe9(<contenttweaker:tiereightandhalfship>,
+	["   LLL   ",
+	 "  LNNNL  ",
+	 " GNTTTNG ",
+	 " NNTFTNN ",
+	 " NTECETN ",
+	 "NNTSFSTNN",
+	 "NTTQAQTTN",
+	 "NTTBABTTN",
+	 " DDD DDD "],
+	{ L : <contenttweaker:t3laser>,
+	  N : <metaitem:plateDoubleNaquadahAlloy>,
+	  G : <contenttweaker:t2guidance>,
+	  T : <metaitem:plateDoubleTrinium>,
+	  F : <metaitem:field.generator.zpm>,
+	  E : <metaitem:emitter.zpm>,
+	  C : <draconicevolution:draconic_energy_core>,
+	  S : <draconicevolution:reactor_part>,
+	  Q : <metaitem:quantum_chest.luv>,
+	  A : <advancedrocketry:warpcore>,
+	  B : <advancedrocketry:warpmonitor>,
+	  D : <contenttweaker:warpengine>}
+);
+
+<contenttweaker:tiereightandhalfship>.addTooltip(
+	format.white(
+		format.italic("Harvests exclusive Gems and Metals from unexplored corners, from beyond the microverse.")));
 
 // Exchanging Gadget
 recipes.removeByRecipeName("buildinggadgets:exchangingtool");

@@ -424,4 +424,4 @@ mods.jei.JEI.removeAndHide(<appliedenergistics2:material:0>);
 <appliedenergistics2:material:11>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Nether Quartz Seed."));
 <appliedenergistics2:material:12>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Fluix Seed."));
 <appliedenergistics2:material:1>.addTooltip(format.aqua(format.italic(
-    "Obtained by charging with RF power in the AE2 Charger.")));
+    "Obtained by charging with RF power in the AE2 Charger, or the Energetic Infuser.")));

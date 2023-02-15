@@ -2129,6 +2129,9 @@ mods.jei.JEI.removeAndHide(<theoneprobe:diamond_helmet_probe>);
 //mods.jei.JEI.removeAndHide(<theoneprobe:probenote>);
 mods.jei.JEI.removeAndHide(<theoneprobe:creativeprobe>);
 
+// Extended Crafting Removals
+mods.jei.JEI.removeAndHide(<extendedcrafting:crafting_table>);
+
 
 //Thermal Removals
 mods.jei.JEI.removeAndHide(<thermalexpansion:satchel:32000>);
@@ -2586,6 +2589,23 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.lv>); // LV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.hv>); // HV Fluid Extractor
+
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.lv>); // LV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.mv>); // MV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.hv>); // HV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.ev>); // EV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.iv>); // IV Power Unit
+
+// Add all GT Item Pipes
+for pipe in <ore:pipe*Item*>{
+    <ore:questbookItemPipes>.add(pipe.firstItem);
+
+}
+
+for restrictivePipe in <ore:pipe*Restrictive*>{
+    <ore:questbookItemPipes>.add(restrictivePipe.firstItem);
+
+}
 
 // GTCE Conductive Iron
 //mods.jei.JEI.removeAndHide(<metaitem:nuggetConductiveIron>);

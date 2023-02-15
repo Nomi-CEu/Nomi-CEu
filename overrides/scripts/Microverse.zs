@@ -24,8 +24,8 @@ makeShaped("of_tieroneship", <contenttweaker:tieroneship>,
 );
 
 <contenttweaker:tieroneship>.addTooltip(
-	format.italic(
-		format.white("Harvests Titanium and other light metals from asteroids in the microverse.")));
+	format.white(
+		format.italic("Harvests Titanium and other light metals from asteroids in the microverse.")));
 
 // Tier 1 Guidance
 makeShaped("of_t1guidance", <contenttweaker:t1guidance>,
@@ -364,22 +364,22 @@ fluid_extractor.recipeBuilder()
 	format.italic("Harvests ultra cold materials from the deepest parts of empty space.")));
 <contenttweaker:tierfiveship>.addTooltip(format.white(
 	format.italic("Harvests strange materials from End microverses.")));
-<contenttweaker:tiersixship>.addTooltip(format.italic(
-	format.white("Harvests extremely rare materials from every concievable reality.")));
+<contenttweaker:tiersixship>.addTooltip(format.white(
+	format.italic("Harvests extremely rare materials from every concievable reality.")));
 <contenttweaker:tiersevenship>.addTooltip(format.white(
 	format.italic("Hunts Wyrms and End Dragons from the microverse")));
 <contenttweaker:tiersevenship>.addTooltip(format.white(
 	format.italic("and returns with parts from their carapaces.")));
-<contenttweaker:tiereightship>.addTooltip(format.italic(
-	format.white("Hunts inconcievable monstrosities from beyond the End")));
-<contenttweaker:tiereightship>.addTooltip(format.italic(
-	format.white("and returns with bizzare trinkets.")));
-<contenttweaker:tiernineship>.addTooltip(format.italic(
-	format.white("Collapses microverse stars and harvests their delicious neutronium cores.")));
-<contenttweaker:tiertenship>.addTooltip(format.italic(
-	format.white("Collapses an entire microverse and harvests it whole.")));
-<contenttweaker:tiertenship>.addTooltip(format.italic(
-	format.white("Try to aim for uninhabited ones.")));
+<contenttweaker:tiereightship>.addTooltip(format.white(
+	format.italic("Hunts inconcievable monstrosities from beyond the End")));
+<contenttweaker:tiereightship>.addTooltip(format.white(
+	format.italic("and returns with bizzare trinkets.")));
+<contenttweaker:tiernineship>.addTooltip(format.white(
+	format.italic("Collapses microverse stars and harvests their delicious neutronium cores.")));
+<contenttweaker:tiertenship>.addTooltip(format.white(
+	format.italic("Collapses an entire microverse and harvests it whole.")));
+<contenttweaker:tiertenship>.addTooltip(format.white(
+	format.italic("Try to aim for uninhabited ones.")));
 
 
 // Dense Hydrogen
