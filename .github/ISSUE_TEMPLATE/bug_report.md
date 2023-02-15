@@ -19,7 +19,6 @@ Replace this text with the version number of the pack, or the commit hash, if yo
 **Launcher:**
 
 Replace this text with your launcher. If you are using the CurseForge Launcher, please try to see if the issue applies on a different launcher. 
-![Nomifactory_Infographics_-_Launcher_Import_Zip6](https://user-images.githubusercontent.com/103940576/219018158-7357d4ff-195b-4a8d-ad3f-4d7c7f07fef4.jpg)
 
 **Description:**
 
