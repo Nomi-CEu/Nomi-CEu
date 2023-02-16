@@ -1,4 +1,5 @@
 {
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -7348,7 +7349,7 @@
             "id:8": "appliedenergistics2:material"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Inscription Plates",
@@ -7569,7 +7570,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Pattern Terminal",
@@ -7702,7 +7703,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Interface Terminal",
@@ -7821,8 +7822,7 @@
     "110:10": {
       "preRequisites:11": [
         102,
-        105,
-        296
+        105
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7909,7 +7909,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Crafting Terminal",
@@ -9793,7 +9793,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Advanced Inscribers§r are much easier to work with for automation purposes, since you can insert more than a single item at a time and you can lock §aPresses§r in place.\n\nYou can automate these nicely with processing patterns in an §aME Interface§r. They don\u0027t auto-eject items though, so you will need to pull the finished items out.",
+          "desc:8": "§3Advanced Inscribers§r are much easier to work with for automation purposes, since you can insert more than a single item at a time and you can lock §aPresses§r in place.\n\nYou can automate these nicely with processing patterns in an §aME Interface§r. They don\u0027t auto-eject items though, so you will need to pull the finished items out.\n\nThese can do any recipe that normal §3Inscribers§r can.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18526,7 +18526,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§f.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.\n\nMacerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
+          "desc:8": "§oNote: this quest accepts LV, MV and HV Macerators.\n\n§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nYou don\u0027t really need a LV one, as you can use the superior §3Steam Grinder§r. LV or MV ones could be used for automation. However, HV ones provide chanced output, extremely important for §eOre Processing§r and other processes.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§f.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.\n\nMacerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18538,7 +18538,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2LV Macerator",
+          "name:8": "§2Macerator",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -18577,7 +18577,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 65,
-              "OreDict:8": "",
+              "OreDict:8": "questbookMacerator",
               "id:8": "gregtech:machine"
             }
           },
@@ -26825,7 +26825,7 @@
             "id:8": "minecraft:book"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Simple GregTech Automation",
@@ -50469,7 +50469,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This Steam multiblock was intended for use in the Steam Age. This pack skips the Steam Age, but it may still be worth using.\n\nThe Steam Grinder functions as 5.3 LV Macerators in parallel. It requires an input of Steam through a Steam Hatch, but it uses very little Steam.\n\nYou may want to consider setting up a rudimentary ore-doubling setup with it. Point the output in the direction of several upgraded Furnaces.",
+          "desc:8": "§2This Steam multiblock was intended for use in the Steam Age. This pack skips the Steam Age, but it may still be worth using.§r\n\nThe §6Steam Grinder§r functions as 5.3 §7LV §3Macerators§r in parallel! It requires an input of §9Steam§r through a §eSteam Hatch§r, but it uses very little Steam.\n\nYou may want to consider setting up a rudimentary §eore-doubling§r setup with it. Point the output in the direction of several upgraded §3Furnaces§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57032,7 +57032,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A variant of the §aConfiguration Interface Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "desc:8": "A variant of the §aInterface Configuration Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57041,10 +57041,10 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Configuration Fluid Interface Terminal",
+          "name:8": "Fluid Interface Configuration Terminal",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -57106,10 +57106,10 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Configuration Interface Terminal",
+          "name:8": "Interface Configuration Terminal",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -59750,7 +59750,7 @@
             "id:8": "appliedenergistics2:crafting_monitor"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Setting up Autocrafting",
@@ -60979,7 +60979,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Extended Processing Pattern Terminal",
@@ -61854,6 +61854,173 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1016:10": {
+      "preRequisites:11": [
+        62,
+        230,
+        148,
+        54,
+        132
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system. You can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away... for now!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:wireless_terminal",
+            "tag:10": {}
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "AE2 From Anywhere... Almost",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1016,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:security_station"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:wireless_access_point"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "questbookWirelessTerminals",
+              "id:8": "appliedenergistics2:wireless_terminal",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1017:10": {
+      "preRequisites:11": [
+        1016,
+        391
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §6ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. You might want to surround it with §6Dense Cobblestone Generators§r.\n\nWhile you are waiting for the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, and you should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 59,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "AE2 Everywhere!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1017,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:condenser"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:quantum_ring"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:quantum_link"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 59,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -62055,7 +62222,7 @@
           "id:3": 231,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -692,
+          "x:3": -772,
           "y:3": 184
         },
         "26:10": {
@@ -62244,8 +62411,8 @@
           "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -708,
-          "y:3": 216
+          "x:3": -688,
+          "y:3": 164
         },
         "53:10": {
           "id:3": 774,
@@ -62305,10 +62472,10 @@
         },
         "61:10": {
           "id:3": 817,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -676,
-          "y:3": 216
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -696,
+          "y:3": 200
         },
         "62:10": {
           "id:3": 819,
@@ -63203,22 +63370,22 @@
           "id:3": 151,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -756,
-          "y:3": -48
+          "x:3": -720,
+          "y:3": 36
         },
         "13:10": {
           "id:3": 152,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -756,
-          "y:3": 0
+          "y:3": 36
         },
         "14:10": {
           "id:3": 153,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -684,
-          "y:3": 0
+          "y:3": 36
         },
         "15:10": {
           "id:3": 156,
@@ -63483,7 +63650,7 @@
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -864,
           "y:3": 108
         },
         "53:10": {
@@ -63546,35 +63713,35 @@
           "id:3": 275,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
-          "y:3": 60
+          "x:3": -972,
+          "y:3": -12
         },
         "62:10": {
           "id:3": 297,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 108
         },
         "63:10": {
           "id:3": 298,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -864,
           "y:3": 60
         },
         "64:10": {
           "id:3": 299,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 144
         },
         "65:10": {
           "id:3": 300,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 180
         },
         "66:10": {
@@ -63637,14 +63804,14 @@
           "id:3": 309,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -864,
           "y:3": -48
         },
         "75:10": {
           "id:3": 310,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 216
         },
         "76:10": {
@@ -63721,15 +63888,15 @@
           "id:3": 390,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
+          "x:3": -948,
           "y:3": 216
         },
         "87:10": {
           "id:3": 391,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
-          "y:3": 60
+          "x:3": -972,
+          "y:3": 24
         },
         "88:10": {
           "id:3": 416,
@@ -63798,7 +63965,7 @@
           "id:3": 555,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
+          "x:3": -948,
           "y:3": 252
         },
         "98:10": {
@@ -63931,29 +64098,29 @@
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -852,
+          "x:3": -876,
           "y:3": 216
         },
         "117:10": {
           "id:3": 748,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -852,
+          "x:3": -876,
           "y:3": 252
         },
         "118:10": {
           "id:3": 751,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -852,
+          "x:3": -876,
           "y:3": 180
         },
         "119:10": {
           "id:3": 756,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": -48
+          "x:3": -768,
+          "y:3": -12
         },
         "120:10": {
           "id:3": 773,
@@ -64127,7 +64294,7 @@
           "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -864,
           "y:3": -100
         },
         "145:10": {
@@ -67817,7 +67984,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -222,
-          "y:3": 408
+          "y:3": 372
         },
         "1:10": {
           "id:3": 1,
@@ -67865,8 +68032,8 @@
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
-          "y:3": 546
+          "x:3": -36,
+          "y:3": 528
         },
         "8:10": {
           "id:3": 100,
@@ -67907,7 +68074,7 @@
           "id:3": 105,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
+          "x:3": -78,
           "y:3": 456
         },
         "14:10": {
@@ -67921,28 +68088,28 @@
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -4,
-          "y:3": 528
+          "x:3": 36,
+          "y:3": 536
         },
         "16:10": {
           "id:3": 109,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 576
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 30,
+          "y:3": 570
         },
         "17:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
-          "y:3": 528
+          "y:3": 456
         },
         "18:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
+          "x:3": -120,
           "y:3": 456
         },
         "19:10": {
@@ -67999,14 +68166,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": 474
+          "y:3": 492
         },
         "27:10": {
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 372
+          "x:3": -276,
+          "y:3": 408
         },
         "28:10": {
           "id:3": 237,
@@ -68019,7 +68186,7 @@
           "id:3": 259,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -66,
+          "x:3": -72,
           "y:3": 360
         },
         "30:10": {
@@ -68033,8 +68200,8 @@
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 624
+          "x:3": 36,
+          "y:3": 672
         },
         "32:10": {
           "id:3": 406,
@@ -68089,14 +68256,14 @@
           "id:3": 919,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 528
+          "x:3": 72,
+          "y:3": 536
         },
         "40:10": {
           "id:3": 967,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
+          "x:3": 36,
           "y:3": 624
         },
         "41:10": {
@@ -68112,6 +68279,20 @@
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 576
+        },
+        "43:10": {
+          "id:3": 1016,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -276,
+          "y:3": 492
+        },
+        "44:10": {
+          "id:3": 1017,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -324,
+          "y:3": 492
         }
       }
     },
