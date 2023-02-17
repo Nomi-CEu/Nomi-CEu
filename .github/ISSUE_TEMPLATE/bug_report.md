@@ -12,7 +12,7 @@ Note: if you need general tech support for things like server configuration, Dis
 
 **Pack Version:**
 
-Check if the bug is fixed on the latest version before submitting. The latest version is v1.5.
+Check if the bug is fixed on the latest version before submitting. The latest version is v1.5.1.
 
 Replace this text with the version number of the pack, or the commit hash, if you downloaded from GitHub. If you added any additional mods, or changed any configurations from their defaults, please also note that information here.
 
