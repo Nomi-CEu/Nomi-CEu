@@ -6255,7 +6255,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Pattern Terminal",
@@ -6361,7 +6361,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Interface Terminal",
@@ -15063,7 +15063,8 @@
     },
     "267:10": {
       "preRequisites:11": [
-        10
+        10,
+        757
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15086,7 +15087,7 @@
           "lockedprogress:1": 1,
           "name:8": "§2Radon",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -39824,7 +39825,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This pack has §bBuilding Gadgets§r.\n\nThese devices can help you build, swap blocks, destroy massive areas, or even copy-paste regions. You need the blocks you plan to paste in your inventory though; it doesn\u0027t make them from nothing.\n\nAlso important to note that it won\u0027t work with TileEntities, so it pretty much only works with simple blocks (not stuff like machines).\n\nBy default, the config GUI is bound to §6G§r.",
+          "desc:8": "§oNote: the Exchanging Gadget listed in the tasklist is optional, and is there for a `good to know\u0027 purpose.§r\n\nThis pack has §bBuilding Gadgets§r.\n\nThese devices can help you build, swap blocks, destroy massive areas, or even copy-paste regions. You need the blocks you plan to paste in your inventory though; it doesn\u0027t make them from nothing.\n\nAlso important to note that it won\u0027t work with TileEntities, so it pretty much only works with simple blocks (not stuff like machines).\n\nBy default, the config GUI is bound to §6G§r.\n\n§2The Exchanging Gadget is locked to IV in HM. Because of this, it is added as an optional task.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39850,7 +39851,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39881,25 +39882,12 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "buildinggadgets:exchangertool",
-              "tag:10": {
-                "blockstate:10": {
-                  "Name:8": "minecraft:air"
-                },
-                "mode:8": "Surface",
-                "range:3": 1
-              }
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
               "id:8": "buildinggadgets:copypastetool",
               "tag:10": {
                 "mode:8": "Copy"
               }
             },
-            "3:10": {
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
@@ -39907,6 +39895,28 @@
               "tag:10": {
                 "fuzzy:1": 1,
                 "overlay:1": 1
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:exchangertool",
+              "tag:10": {
+                "blockstate:10": {
+                  "Name:8": "minecraft:air"
+                }
               }
             }
           },
@@ -42578,7 +42588,7 @@
             "id:8": "appliedenergistics2:crafting_monitor"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Setting Up Autocrafting",
@@ -42671,7 +42681,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Extended Processing Pattern Terminal",
@@ -48321,7 +48331,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Fluid Interface Configuration Terminal",
@@ -48373,7 +48383,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Interface Configuration Terminal",
@@ -48420,7 +48430,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system. You can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away... for now!",
+          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system. \n\nYou can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away. However, you can put §6Wireless Boosters§r into the §6Wireless Access Point§r to increase the range. A better, but more expensive solution, that allows access from anyhere, will be explained in the following quest, \u0027AE2 Everywhere!\u0027.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48430,7 +48440,7 @@
             "tag:10": {}
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "AE2 From Anywhere... Almost",
@@ -48547,6 +48557,45 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "919:10": {
+      "preRequisites:11": [
+        401
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "As you expand your production lines, it can get confusing where everything is real quickly.\n\nNew in GTCEu, you can §2name machines in an Anvil§r in order to display a hologram above them. This hologram can\u0027t be seen through walls, so you needn\u0027t worry about clogging your view with names.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:name_tag"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Machine Naming",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 919,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -49004,6 +49053,13 @@
           "sizeY:3": 24,
           "x:3": -736,
           "y:3": 292
+        },
+        "62:10": {
+          "id:3": 919,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -468,
+          "y:3": 276
         }
       }
     },
