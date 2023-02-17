@@ -20,6 +20,10 @@ Replace this text with the version number of the pack, or the commit hash, if yo
 
 Replace this text with your launcher. If you are using the CurseForge Launcher, please try to see if the issue applies on a different launcher. 
 
+**Mode:**
+
+Replace this text with your mode (Normal Mode, Hard Mode or Both Modes).
+
 **Description:**
 
 Replace this text with a clear and concise description of what the bug is, so we know what the problem is.
