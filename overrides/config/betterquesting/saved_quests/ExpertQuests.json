@@ -3343,7 +3343,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Centrifuges§r provide you with §21 tiny pile§r of additional materials when processing ore dusts (§e9 tiny piles \u003d 1 dust§r). Sometimes it\u0027s the main dust, but often it\u0027s a different useful material that is otherwise unobtainable.\n\nInstead of washing §6impure dusts§r (made from macerating or hammering ores) in a cauldron, you can get more out of each dust by centrifuging it. The same is true of §6pure dusts§r, when you eventually make a §3Washer§r or §3Chemical Bath§r. Note however that pure and impure dusts will usually give different byproducts (always check in §bJEI§r).\n\nCentrifuges also have other uses like unmixing compound dusts and fluids, or getting §6Rubber Pulp§r, which can be chemically reacted with §6Sulfur§r to efficiently make §9liquid Rubber§r.\n\n",
+          "desc:8": "§3Centrifuges§r provide you with §21 tiny pile§r of additional materials when processing ore dusts (§e9 tiny piles \u003d 1 dust§r). Sometimes it\u0027s the main dust, but often it\u0027s a different useful material that is otherwise unobtainable.\n\nInstead of washing §6impure dusts§r (made from macerating or hammering ores) in a cauldron, you can get more out of each dust by centrifuging it. The same is true of §6pure dusts§r, when you eventually make a §3Washer§r or §3Chemical Bath§r. Note however that pure and impure dusts will usually give different byproducts (always check in §bJEI§r).\n\nCentrifuges also have other uses like unmixing compound dusts and fluids, or getting §6Rubber Pulp§r, which can be chemically reacted with §6Sulfur§r to efficiently make §9Liquid Rubber§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4234,13 +4234,12 @@
     },
     "70:10": {
       "preRequisites:11": [
-        2,
-        187
+        2
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aMV Batteries§r function essentially the same as §aLV Batteries§r, only stronger. They also need to be put into an §3MV Machine§r or §3MV Battery Buffer§r.",
+          "desc:8": "§aMV Batteries§r function essentially the same as §aLV Batteries§r, only stronger. They also need to be put into an §3MV Machines, MV Battery Buffers§r or §3MV Turbo Chargers§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6256,7 +6255,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Pattern Terminal",
@@ -6362,7 +6361,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Interface Terminal",
@@ -6455,8 +6454,7 @@
     "110:10": {
       "preRequisites:11": [
         102,
-        105,
-        296
+        105
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15065,7 +15063,8 @@
     },
     "267:10": {
       "preRequisites:11": [
-        10
+        10,
+        757
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15088,7 +15087,7 @@
           "lockedprogress:1": 1,
           "name:8": "§2Radon",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -15230,7 +15229,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§f.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.§r\n\n§2Macerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
+          "desc:8": "§oNote: this quest accepts LV, MV and HV Macerators.\n\n§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nYou don\u0027t really need a LV one, as you can use the superior §3Steam Grinder§r. LV or MV ones could be used for automation. However, HV ones provide chanced output, extremely important for §eOre Processing§r and other processes.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§f.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.§r\n\n§2Macerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15242,7 +15241,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2LV Macerator",
+          "name:8": "§2Macerator",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -15268,7 +15267,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 65,
-              "OreDict:8": "",
+              "OreDict:8": "questbookMacerator",
               "id:8": "gregtech:machine"
             }
           },
@@ -21701,7 +21700,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "ASSEMBLE... TOO!\n\nYeah you get to craft §6Nether Stars§r. Cool huh?\n\nOver the course of the pack, Nether Stars are going to be needed in quantities that far exceed a reasonable player\u0027s ability to farm Withers. §eCraft them, don\u0027t bother trying to farm them.§r\n\nOnce you gain access to §6Tier 4.5 Micro Miners§r, they will become your best§6 Nether Star§r source.",
+          "desc:8": "ASSEMBLE... TOO!\n\nYeah you get to craft §6Nether Stars§r. Cool huh?\n\nAs you are in peaceful, you can\u0027t farm §eWithers§r. \n\nOnce you gain access to §6Tier 4.5 Micro Miners§r, they will become your best§6 Nether Star§r source.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39826,7 +39825,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This pack has §bBuilding Gadgets§r.\n\nThese devices can help you build, swap blocks, destroy massive areas, or even copy-paste regions. You need the blocks you plan to paste in your inventory though; it doesn\u0027t make them from nothing.\n\nAlso important to note that it won\u0027t work with TileEntities, so it pretty much only works with simple blocks (not stuff like machines).\n\nBy default, the config GUI is bound to §6G§r.",
+          "desc:8": "§oNote: the Exchanging Gadget listed in the tasklist is optional, and is there for a `good to know\u0027 purpose.§r\n\nThis pack has §bBuilding Gadgets§r.\n\nThese devices can help you build, swap blocks, destroy massive areas, or even copy-paste regions. You need the blocks you plan to paste in your inventory though; it doesn\u0027t make them from nothing.\n\nAlso important to note that it won\u0027t work with TileEntities, so it pretty much only works with simple blocks (not stuff like machines).\n\nBy default, the config GUI is bound to §6G§r.\n\n§2The Exchanging Gadget is locked to IV in HM. Because of this, it is added as an optional task.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39852,7 +39851,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39883,25 +39882,12 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "buildinggadgets:exchangertool",
-              "tag:10": {
-                "blockstate:10": {
-                  "Name:8": "minecraft:air"
-                },
-                "mode:8": "Surface",
-                "range:3": 1
-              }
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
               "id:8": "buildinggadgets:copypastetool",
               "tag:10": {
                 "mode:8": "Copy"
               }
             },
-            "3:10": {
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
@@ -39909,6 +39895,28 @@
               "tag:10": {
                 "fuzzy:1": 1,
                 "overlay:1": 1
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "buildinggadgets:exchangertool",
+              "tag:10": {
+                "blockstate:10": {
+                  "Name:8": "minecraft:air"
+                }
               }
             }
           },
@@ -42580,7 +42588,7 @@
             "id:8": "appliedenergistics2:crafting_monitor"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Setting Up Autocrafting",
@@ -42673,7 +42681,7 @@
             "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Extended Processing Pattern Terminal",
@@ -43963,7 +43971,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Super Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64,000 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Microminer§r recipes. Higher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft.",
+          "desc:8": "§2Super Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64,000 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Micro Miner§r recipes. Higher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47415,7 +47423,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Microminer missions, or in small amounts from renewable Black Granite.",
+          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Micro Miner missions, or in small amounts from renewable Black Granite.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48305,6 +48313,291 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "915:10": {
+      "preRequisites:11": [
+        494,
+        729
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A variant of the §aConfiguration Interface Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 522,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fluid Interface Configuration Terminal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 915,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 522,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "916:10": {
+      "preRequisites:11": [
+        108
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A variant of the §aInterface Terminal§r which allows you to view and edit the stocking slots of interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 521,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Interface Configuration Terminal",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 916,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 521,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "917:10": {
+      "preRequisites:11": [
+        62,
+        230,
+        148,
+        54,
+        132
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system. \n\nYou can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away. However, you can put §6Wireless Boosters§r into the §6Wireless Access Point§r to increase the range. A better, but more expensive solution, that allows access from anyhere, will be explained in the following quest, \u0027AE2 Everywhere!\u0027.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:wireless_terminal",
+            "tag:10": {}
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "AE2 From Anywhere... Almost",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 917,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:security_station"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:wireless_access_point"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "questbookWirelessTerminals",
+              "id:8": "appliedenergistics2:wireless_terminal",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "918:10": {
+      "preRequisites:11": [
+        917,
+        391
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §6ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. You might want to surround it with §6Dense Cobblestone Generators§r.\n\nWhile you are waiting for the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, and you should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 59,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "AE2 Everywhere!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 918,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:condenser"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:quantum_ring"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:quantum_link"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 59,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "919:10": {
+      "preRequisites:11": [
+        401
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "As you expand your production lines, it can get confusing where everything is real quickly.\n\nNew in GTCEu, you can §2name machines in an Anvil§r in order to display a hologram above them. This hologram can\u0027t be seen through walls, so you needn\u0027t worry about clogging your view with names.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:name_tag"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Machine Naming",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 919,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -48760,6 +49053,13 @@
           "sizeY:3": 24,
           "x:3": -736,
           "y:3": 292
+        },
+        "62:10": {
+          "id:3": 919,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -468,
+          "y:3": 276
         }
       }
     },
@@ -48786,8 +49086,8 @@
           "id:3": 2,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -336,
-          "y:3": -16
+          "x:3": -292,
+          "y:3": 20
         },
         "1:10": {
           "id:3": 19,
@@ -49641,7 +49941,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -684,
-          "y:3": -48
+          "y:3": 0
         },
         "14:10": {
           "id:3": 156,
@@ -49906,7 +50206,7 @@
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -864,
           "y:3": 108
         },
         "52:10": {
@@ -49969,35 +50269,35 @@
           "id:3": 275,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
-          "y:3": 60
+          "x:3": -972,
+          "y:3": -12
         },
         "61:10": {
           "id:3": 297,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 108
         },
         "62:10": {
           "id:3": 298,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -864,
           "y:3": 60
         },
         "63:10": {
           "id:3": 299,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 144
         },
         "64:10": {
           "id:3": 300,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 180
         },
         "65:10": {
@@ -50067,7 +50367,7 @@
           "id:3": 310,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -912,
           "y:3": 216
         },
         "75:10": {
@@ -50144,15 +50444,15 @@
           "id:3": 390,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
+          "x:3": -948,
           "y:3": 216
         },
         "86:10": {
           "id:3": 391,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
-          "y:3": 60
+          "x:3": -972,
+          "y:3": 24
         },
         "87:10": {
           "id:3": 416,
@@ -50221,7 +50521,7 @@
           "id:3": 555,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
+          "x:3": -948,
           "y:3": 252
         },
         "97:10": {
@@ -50361,21 +50661,21 @@
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -852,
+          "x:3": -876,
           "y:3": 216
         },
         "117:10": {
           "id:3": 748,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -852,
+          "x:3": -876,
           "y:3": 252
         },
         "118:10": {
           "id:3": 751,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -852,
+          "x:3": -876,
           "y:3": 180
         },
         "119:10": {
@@ -54124,8 +54424,8 @@
           "id:3": 0,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 432
+          "x:3": -96,
+          "y:3": 384
         },
         "1:10": {
           "id:3": 1,
@@ -54257,8 +54557,8 @@
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 440
+          "x:3": 284,
+          "y:3": 480
         },
         "20:10": {
           "id:3": 118,
@@ -54285,29 +54585,29 @@
           "id:3": 122,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 472
+          "x:3": 284,
+          "y:3": 516
         },
         "24:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 504
+          "x:3": 284,
+          "y:3": 556
         },
         "25:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 248,
-          "y:3": 536
+          "y:3": 556
         },
         "26:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 248,
-          "y:3": 408
+          "y:3": 480
         },
         "27:10": {
           "id:3": 140,
@@ -54320,8 +54620,8 @@
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": 384
+          "x:3": -144,
+          "y:3": 432
         },
         "29:10": {
           "id:3": 237,
@@ -54369,22 +54669,22 @@
           "id:3": 494,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 440
+          "x:3": 210,
+          "y:3": 480
         },
         "36:10": {
           "id:3": 729,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 480
+          "x:3": 210,
+          "y:3": 432
         },
         "37:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 520
+          "x:3": 248,
+          "y:3": 516
         },
         "38:10": {
           "id:3": 784,
@@ -54413,6 +54713,34 @@
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": 556
+        },
+        "42:10": {
+          "id:3": 915,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 246,
+          "y:3": 432
+        },
+        "43:10": {
+          "id:3": 916,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 248,
+          "y:3": 592
+        },
+        "44:10": {
+          "id:3": 917,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 480
+        },
+        "45:10": {
+          "id:3": 918,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 522
         }
       }
     }
