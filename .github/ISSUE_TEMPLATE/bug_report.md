@@ -14,8 +14,7 @@ Note: if you need general tech support for things like server configuration, Dis
 
 Check if the bug is fixed on the latest version before submitting. The latest version is v1.5.1.
 
-Replace this text with the version number of the pack, or the commit hash, if you downloaded from GitHub. If you added any additional mods, or changed any configurations from their defaults, please also note that information here.
-
+Replace this text with the version number of the pack, or the commit hash, if you downloaded from GitHub.
 **Launcher:**
 
 Replace this text with your launcher. If you are using the CurseForge Launcher, please try to see if the issue applies on a different launcher. 
@@ -23,6 +22,10 @@ Replace this text with your launcher. If you are using the CurseForge Launcher, 
 **Mode:**
 
 Replace this text with your mode (Normal Mode, Hard Mode or Both Modes).
+
+**Environment:**
+
+Replace this text with your environment. This is whether you are in Singleplayer or Multiplayer, any additional mods you added, and any configurations that were changed from their defaults.
 
 **Description:**
 
