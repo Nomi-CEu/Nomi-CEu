@@ -357,12 +357,20 @@ recipes.addShaped(<appliedenergistics2:material:38>, [
 	[<appliedenergistics2:material:37>, <ore:circuitEv>, <appliedenergistics2:material:37>],
 	[<appliedenergistics2:material:22>, <appliedenergistics2:material:37>, <appliedenergistics2:material:22>]]);
 	
-//AE2 Wireless Terminal, Infinity Booster Card
-recipes.removeByRecipeName("ae2wtlib:booster_card_old");
-recipes.addShaped(<ae2wtlib:infinity_booster_card>, [
-	[<metaitem:quantumeye>, null, <metaitem:quantumeye>],
-	[null, <appliedenergistics2:material:41>, null],
-	[null, null, null]]);
+// Remove Wireless Terminal Recipes
+recipes.remove(<ae2wtlib:infinity_booster_card>); // Infinity Booster Card
+recipes.remove(<wct:wct>); // Crafting Terminal
+recipes.remove(<wct:magnet_card>); // Magnet Card
+
+// Add Tooltips
+<ae2wtlib:infinity_booster_card>.addTooltip(format.red("This is being removed. A temperary conversion recipe has been added. Check JEI for more details."));
+<wct:wct>.addTooltip(format.red("This is being removed. A temperary conversion recipe has been added. Check JEI for more details."));
+<wct:magnet_card>.addTooltip(format.red("This is being removed. A temperary conversion recipe has been added. Check JEI for more details."));
+
+// Add Conversion Recipes
+recipes.addShapeless(<appliedenergistics2:material:59>, [<ae2wtlib:infinity_booster_card>]);
+recipes.addShapeless(<appliedenergistics2:wireless_crafting_terminal>, [<wct:wct>]);
+recipes.addShapeless(<appliedenergistics2:material:60>, [<wct:magnet_card>]);
 
 //skystone and skystone dust
 alloy_smelter.recipeBuilder()
@@ -419,9 +427,10 @@ recipes.addShapeless(<metaitem:dustCertusQuartz>, [<appliedenergistics2:material
 
 mods.jei.JEI.removeAndHide(<appliedenergistics2:material:0>);
 
+<appliedenergistics2:material:59>.addTooltip(format.yellow("Used with the Quantum Ring multiblock. Allows wireless access from anywhere. Check the Quest Book for more information."));
 
 <appliedenergistics2:material:10>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Certus Quartz Seed."));
 <appliedenergistics2:material:11>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Nether Quartz Seed."));
 <appliedenergistics2:material:12>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Fluix Seed."));
 <appliedenergistics2:material:1>.addTooltip(format.aqua(format.italic(
-    "Obtained by charging with RF power in the AE2 Charger.")));
+    "Obtained by charging with RF power in the AE2 Charger, or the Energetic Infuser.")));

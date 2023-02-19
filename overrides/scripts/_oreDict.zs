@@ -1899,6 +1899,11 @@ mods.jei.JEI.removeAndHide(<extrautils2:book>);
 mods.jei.JEI.removeAndHide(<extrautils2:minichest>);
 mods.jei.JEI.removeAndHide(<extrautils2:analogcrafter>);
 
+// Wireless Terminals Removals
+mods.jei.JEI.removeAndHide(<ae2wtlib:infinity_booster_card>);
+mods.jei.JEI.removeAndHide(<wct:wct>);
+mods.jei.JEI.removeAndHide(<wct:wct_creative>);
+mods.jei.JEI.removeAndHide(<wct:magnet_card>);
 
 //Gregtech Removals
 mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.lv>);
@@ -2128,6 +2133,9 @@ mods.jei.JEI.removeAndHide(<theoneprobe:gold_helmet_probe>);
 mods.jei.JEI.removeAndHide(<theoneprobe:diamond_helmet_probe>);
 //mods.jei.JEI.removeAndHide(<theoneprobe:probenote>);
 mods.jei.JEI.removeAndHide(<theoneprobe:creativeprobe>);
+
+// Extended Crafting Removals
+mods.jei.JEI.removeAndHide(<extendedcrafting:crafting_table>);
 
 
 //Thermal Removals
@@ -2586,6 +2594,32 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.lv>); // LV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.hv>); // HV Fluid Extractor
+
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.lv>); // LV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.mv>); // MV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.hv>); // HV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.ev>); // EV Power Unit
+<ore:questbookPowerUnit>.add(<metaitem:power_unit.iv>); // IV Power Unit
+
+<ore:questbookMacerator>.add(<metaitem:macerator.lv>); // LV Macerator
+<ore:questbookMacerator>.add(<metaitem:macerator.mv>); // MV Macerator
+<ore:questbookMacerator>.add(<metaitem:macerator.hv>); // HV Macerator
+
+<ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_terminal>); // Normal Wireless
+<ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_crafting_terminal>); // Crafting Wireless
+<ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_pattern_terminal>); // Pattern Wireless
+<ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_fluid_terminal>); // Fluid Wireless
+
+// Add all GT Item Pipes
+for pipe in <ore:pipe*Item*>{
+    <ore:questbookItemPipes>.add(pipe.firstItem);
+
+}
+
+for restrictivePipe in <ore:pipe*Restrictive*>{
+    <ore:questbookItemPipes>.add(restrictivePipe.firstItem);
+
+}
 
 // GTCE Conductive Iron
 //mods.jei.JEI.removeAndHide(<metaitem:nuggetConductiveIron>);
