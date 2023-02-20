@@ -796,7 +796,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n* Copper Ore\n* Tungstate Ore\n* Scheelite Ore\n* Cassiterite Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.\n\n§2A new mission is available in CEu. This mission costs HV Electric Pumps and Cryotheum Dust. This nets you Solidified Neon, Xenon and Krypton, although it is better to get those from distilling Liquid Nether and Ender Air, as of the useful byproducts you get, and the tiny amount of each element you get in this mission.",
+          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n* Copper Ore\n§2* Sphalerite Ore§r\n§6* Cassiterite Ore\n* Scheelite Ore\n* Tungstate Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.\n\n§2A new mission is available in CEu. This mission costs HV Electric Pumps and Cryotheum Dust. This nets you Solidified Neon, Xenon and Krypton, although it is better to get those from distilling Liquid Nether and Ender Air, as of the useful byproducts you get, and the tiny amount of each element you get in this mission.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4722,7 +4722,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Tetrahedrite Ore\n* Cassiterite Ore\n* Tungstate Ore\n* Scheelite Ore\n* Redstone Ore\n* Quartz Ore\n* Vanadium Magnetite Ore\n§2* Ilmenite Ore§6\n* Tin Ore\n* Sapphire Ore§r\n§6* Almandine Ore§r\n\nWhen equipped with Gemstone Sensor:\n§6§2* Perfect Emeralds\n* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n§6* Silver Ore\n* Gold Ore",
+          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15006,7 +15006,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is your first Micro Miner ever.\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Cassiterite Ore\n* Dense Iron Ore\n* Uraninite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Bauxite Ore\n§6* Galena Ore\n* Moon Turf\n* Dilithium\n* Salt Ore§r\n§2* Molybdenum Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
+          "desc:8": "This is your first Micro Miner ever.\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n§\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17234,7 +17234,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §264§r stacks of §6Oilsands Ore§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Redstone Ore\n* Dense Emerald Ore\n* Dense Diamond Ore\n* Dense Lapis Ore\n* Dense Coal Ore§r",
+          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §232§r stacks of §6End Oilsands Ore§r, and 16 §6Compressed Infinity Dust Blocks§r, equivalent to 1296 §6Infinity Dust§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Lapis Ore\n* Dense Diamond Ore\n* Dense Coal Ore\n* Dense Emerald Ore\n* Dense Redstone Ore§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17300,7 +17300,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah §2Ore§r. Along with it, §2Sheldonite Ore§r (for §6PGS§r) and §2Kaemanite Ore§r (for §6Trinium§r), via a mission with §6Stabilized Plutonium§r.\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§2* Uraninite Ore§6\n* Molybdenite Ore\n* Bastnasite Ore\n* Sphalerite Ore\n* Palladium Ore\n* Beryllium Ore\n* Monazite Ore\n§2* Osmiridium 80/20 Ore\n* Realgar Ore\n§6* Enderpearl Blocks\n* Boron Dust§r",
+          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah §2Ore§r. Along with it, §2Sheldonite Ore§r (for §6PGS§r) and §2Kaemanite Ore§r (for §6Trinium§r), via a mission with §6Stabilized Plutonium§r.\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§2* Uraninite Ore§6\n* Palladium Ore\n§2* Realgar Ore\n§6* Bastnasite Ore\n* Sphalerite Ore\n* Monazite Ore\n§2* Enderpearl Blocks\n* Osmiridium 80/20 Ore\n§6* Boron Dust\n* Molybdenite Ore\n* Beryllium Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17568,7 +17568,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Seventh Micro Miner.\n\nThe source of §6Dragon Hearts§r and the valuable §6Lair of The Chaos Guardian Data§r.\n\nAs a bonus, brings §6Dragon Eggs, Dragon\u0027s Breath, Ender Dragon Scales§r, §2Americium Blocks§r and a plenty of different precious metals and gems.",
+          "desc:8": "The Seventh Micro Miner.\n\nThe source of §6Dragon Hearts§r and the valuable §6Lair of The Chaos Guardian Data§r.\n\nAs a bonus, brings §6Dragon Eggs, Dragon\u0027s Breath, Ender Dragon Scales§r, §2Ruthenium Blocks§r and a plenty of different precious metals and gems.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23727,7 +23727,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. For the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. This reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
+          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. \n\nFor the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. This reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33418,7 +33418,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3HV Circuit Assembling Machine§r unlocks §2the Mainframe§r, as well as handling crafting recipes that consume up to 512 EU/t.\n\nIt can also optionally overclock recipes up to 128 EU/t, gaining additional speed for relatively more power.",
+          "desc:8": "The §3HV Circuit Assembling Machine§r unlocks §2the Mainframe. That\u0027s it.§r\n\nIt can also optionally overclock recipes up to 128 EU/t, gaining additional speed for relatively more power.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42745,7 +42745,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have all the basic building blocks of nuclear fission, you\u0027ll need to start creating breeding chains to mass produced stabilized versions of each element, for the synthesis of §dOmnium§r. Please note that stabilized versions of each element cannot be turned back into fluids, nor turned back into their original §bNuclearCraft§r isotopes.\n\nExperiment around with larger breeder reactors that can handle highly enriched fuels. The cryolattice you have built can be easily expanded, and is a great reactor to process through all LEU fuels quickly.\n\nYou\u0027ll probably want to build multiple reactors to make all the fissile elements in any reasonable amount of time, and have them passively running.",
+          "desc:8": "Now that you have all the basic building blocks of nuclear fission, you\u0027ll need to start creating breeding chains to mass produced stabilized versions of each element, for the synthesis of §dOmnium§r. \n\nPlease note that stabilized versions of each element cannot be turned back into fluids, nor turned back into their original §bNuclearCraft§r isotopes.\n\nExperiment around with larger breeder reactors that can handle highly enriched fuels. The cryolattice you have built can be easily expanded, and is a great reactor to process through all LEU fuels quickly.\n\nYou\u0027ll probably want to build multiple reactors to make all the fissile elements in any reasonable amount of time, and have them passively running.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49656,7 +49656,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly line, since it has a whole bunch of ULV inputs buses that hold one item stack each.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nIf you\u0027ve unlocked §3The Empowerer§r, you might have considered §aPhantomfaces§r. These would certainly be an improvement over item conduits, but there\u0027s an even better solution.\n\nEnter §aItem Laser Relays§r§r: these handy tools from §bActually Additions§r allow you to create a virtual inventory out of multiple real ones; that is, you can use them to make other automation think that all of the input buses are the same inventory.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r Take this into account when placing them.\n\nTo start, place a laser on each of the input buses. Then, place the §aItem Interface§r adjacent to the laser on the first input bus. This will serve as the access point to the virtual inventory where you can connect things like an §3Unpackager§r or §aME Interface§r.\n\nTake your §aLaser Wrench§r and right click the first laser relay, then the second laser relay, to link them together. Repeat this with the second and third relays, third and fourth relays, etc. until they have all been linked together. Now you have a laser network virtualizing all of the input buses!\n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nRemember to always use §eBlocking Mode§r when connecting the laser network to on-demand crafting. If you don\u0027t use Blocking Mode, you are likely to accidentally craft something else and jam your Assembly Line.",
+          "desc:8": "The §3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly line, since it has a whole bunch of ULV inputs buses that hold one item stack each.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nIf you\u0027ve unlocked §3The Empowerer§r, you might have considered §aPhantomfaces§r. These would certainly be an improvement over item conduits, but there\u0027s an even better solution.\n\nEnter §aItem Laser Relays§r§r: these handy tools from §bActually Additions§r allow you to create a virtual inventory out of multiple real ones; that is, you can use them to make other automation think that all of the input buses are the same inventory.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r Take this into account when placing them.\n\nTo start, place a laser on each of the input buses. Then, place the §aItem Interface§r adjacent to the laser on the first input bus. This will serve as the access point to the virtual inventory where you can connect things like an § §aME Interface§r.\n\nIf you don\u0027t have enough space in a normal pattern, try using the §6Extended Processing Pattern Terminal§r!\n\nTake your §aLaser Wrench§r and right click the first laser relay, then the second laser relay, to link them together. Repeat this with the second and third relays, third and fourth relays, etc. until they have all been linked together. Now you have a laser network virtualizing all of the input buses!\n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nRemember to always use §eBlocking Mode§r when connecting the laser network to on-demand crafting. If you don\u0027t use Blocking Mode, you are likely to accidentally craft something else and jam your Assembly Line.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61947,7 +61947,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §6ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. You might want to surround it with §6Dense Cobblestone Generators§r.\n\nWhile you are waiting for the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, and you should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §6ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. \n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nWhile you are after you have made the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, NOT the §6Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -65073,7 +65073,7 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -532,
-          "y:3": 260
+          "y:3": 308
         },
         "5:10": {
           "id:3": 155,
@@ -65220,14 +65220,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 136
+          "y:3": 132
         },
         "26:10": {
           "id:3": 269,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 176
+          "y:3": 168
         },
         "27:10": {
           "id:3": 271,
@@ -65262,21 +65262,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 308
+          "y:3": 356
         },
         "32:10": {
           "id:3": 286,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -492,
-          "y:3": 339
+          "x:3": -588,
+          "y:3": 152
         },
         "33:10": {
           "id:3": 287,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -24,
-          "y:3": 204
+          "x:3": -28,
+          "y:3": 164
         },
         "34:10": {
           "id:3": 288,
@@ -65290,14 +65290,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -432,
-          "y:3": 136
+          "y:3": 208
         },
         "36:10": {
           "id:3": 291,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -432,
-          "y:3": 176
+          "y:3": 256
         },
         "37:10": {
           "id:3": 292,
@@ -65373,8 +65373,8 @@
           "id:3": 325,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 148
+          "x:3": 24,
+          "y:3": 220
         },
         "48:10": {
           "id:3": 327,
@@ -65450,8 +65450,8 @@
           "id:3": 342,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 76
+          "x:3": 72,
+          "y:3": 184
         },
         "59:10": {
           "id:3": 345,
@@ -65542,7 +65542,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 216
+          "y:3": 264
         },
         "72:10": {
           "id:3": 529,
@@ -65556,7 +65556,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 216
+          "y:3": 208
         },
         "74:10": {
           "id:3": 533,
@@ -65723,15 +65723,15 @@
           "id:3": 804,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 351
+          "x:3": -624,
+          "y:3": 164
         },
         "98:10": {
           "id:3": 827,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -580,
-          "y:3": 172
+          "y:3": 220
         },
         "99:10": {
           "id:3": 828,
@@ -65744,8 +65744,8 @@
           "id:3": 839,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 137
+          "x:3": -396,
+          "y:3": 208
         },
         "101:10": {
           "id:3": 840,
@@ -65829,7 +65829,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
-          "y:3": 216
+          "y:3": 264
         },
         "113:10": {
           "id:3": 855,
@@ -65857,14 +65857,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
-          "y:3": 308
+          "y:3": 356
         },
         "117:10": {
           "id:3": 904,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
-          "y:3": 204
+          "y:3": 208
         },
         "118:10": {
           "id:3": 905,
@@ -65899,14 +65899,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 264
+          "y:3": 312
         },
         "123:10": {
           "id:3": 914,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 204
+          "x:3": -360,
+          "y:3": 164
         }
       }
     },
