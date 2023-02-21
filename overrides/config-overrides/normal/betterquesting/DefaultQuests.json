@@ -4513,7 +4513,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 180,
+            "Damage:2": 380,
             "OreDict:8": "",
             "id:8": "appliedenergistics2:part"
           },
@@ -4717,7 +4717,8 @@
     },
     "65:10": {
       "preRequisites:11": [
-        246
+        246,
+        386
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -13774,13 +13775,18 @@
       }
     },
     "201:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        159
+        159,
+        339
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungsten§r is a material that requires an §3EV Electrolyzer §2and Chemical Bath§r and an §3Electric Blast Furnace§r with at least §6Nichrome Coils§r.\n\nIt is only found from §6Tungstate§r §2Dust and Scheelite Dust, obtained from their respective ores.§r Tungstate is also obtainable in small quantities from centrifuging §6Endstone Dust§r.\n\nScheelite and Tungstate needs to be §2bathed in Hydrochloric Acid to make Tungstic Acid, then electrolyzed§r to get to the Tungsten, which then needs to be cooked in the EBF for Tungsten ingots.",
+          "desc:8": "§6Tungsten§r is a material that requires an §3EV Electrolyzer,§2 Chemical Bath§r and an §3Electric Blast Furnace§r with at least §6Nichrome Coils§r.\n\nIt is only found from §6Tungstate§r §2Dust and Scheelite Dust, obtained from their respective ores.§r Tungstate is also obtainable in small quantities from centrifuging §6Endstone Dust§r.\n\nScheelite and Tungstate needs to be §2bathed in Hydrochloric Acid to make Tungstic Acid, then electrolyzed§r to get to the Tungsten, which then needs to be cooked in the EBF for Tungsten ingots.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13832,7 +13838,7 @@
               "Count:3": 1,
               "Damage:2": 115,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -17367,7 +17373,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Iridium§r is an advanced material used for Micro Miner plating, §rand for alloying with §6Osmium§r into §6Osmiridium§r.\n\n§2Osmiridium 80/20 Ore and Iridosmine 80/20 Ore§r is available renewably from the Tier Four and Tier Six micro miners, as well as semi-renewably from the Tier Five micro miner.",
+          "desc:8": "§6Iridium§r is an advanced material used for Micro Miners, and for alloying with §6Osmium§r into §6Osmiridium§r.\n\nYou can also get tons of these from §6Platinum Group Sludge§r.\n\n§2Osmiridium 80/20 Ore and Iridosmine 80/20 Ore§r is available renewably from the Tier Four and Tier Six micro miners, as well as semi-renewably from the Tier Five micro miner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17893,20 +17899,26 @@
               "id:8": "gregtech:meta_dust"
             },
             "2:10": {
-              "Count:3": 1,
-              "Damage:2": 2,
+              "Count:3": 2,
+              "Damage:2": 101,
               "OreDict:8": "",
               "id:8": "gregtech:meta_dust"
             },
             "3:10": {
-              "Count:3": 1,
-              "Damage:2": 56,
+              "Count:3": 2,
+              "Damage:2": 99,
               "OreDict:8": "",
               "id:8": "gregtech:meta_dust"
             },
             "4:10": {
               "Count:3": 1,
-              "Damage:2": 99,
+              "Damage:2": 56,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "5:10": {
+              "Count:3": 2,
+              "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:meta_dust"
             }
@@ -19024,7 +19036,8 @@
     },
     "278:10": {
       "preRequisites:11": [
-        682
+        682,
+        30
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -19858,8 +19871,13 @@
       }
     },
     "289:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        839
+        839,
+        313
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -22057,7 +22075,8 @@
     "323:10": {
       "preRequisites:11": [
         252,
-        313
+        313,
+        350
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27113,7 +27132,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bPackagedAuto§r is an addon for §bApplied Energistics 2§r. Its main purpose in §5Nomifactory§r is to allow you to automate extended crafting recipes and §aGregTech Assembly Lines§r.\n\nApplied Energistics 2 stores recipes in §aPatterns§r, but they are limited to at most 9 stacks of items (a standard 3x3 crafting grid). PackagedAuto stores recipes in §aPackage Recipe Holders§r, which don\u0027t have this limitation. Additionally, each Holder can store up to §e20 different recipes§r. Holders must be encoded in the §3Package Recipe Encoder§r.\n\nIn the vast majority of situations you\u0027ll need two identically-encoded Holders, as the following machines work together.\n\nThe §3Packager§r is a machine that compresses ingredients for a specific recipe into a set of §6Recipe Packages§r. Each package in a set can hold up to 9 stacks of ingredient items. A simple recipe might consist of one package, but a complex recipe can have up to 9 packages in its set (for 81 total item stacks).\n\nThe §3Unpackager§r is a machine that extracts ingredient items from complete sets of Recipe Packages made in a Packager, ejecting the items into an adjacent inventory. It will only extract the items if §eall packages in a set are present§r.\n\nWhen both a Packager and Unpackager are connected to an ME Network and have the same recipe, the resulting item will appear as craftable in your §aTerminal§r.\n\nUp to 8 §3Packager Extensions§r can optionally be added to the Packager to speed up package creation. Place the Packager Extensions in a plane surrounding the Packager, creating a 3 by 3 structure with the Packager in the center when all 8 Packager Extensions are placed.",
+          "desc:8": "§bPackagedAuto§r is an addon for §bApplied Energistics 2§r. Its main purpose in §5Nomifactory§r is to allow you to eventually automate §bExtended Crafting§r recipes, but you may come up with other fun uses for it as well.\n\n§bApplied Energistics 2§r stores recipes in §aPatterns§r, but so far they have been limited to at most 9 stacks of items as input (a standard 3x3 crafting grid). PackagedAuto stores recipes in §aPackage Recipe Holders§r, which don\u0027t have this limitation. Additionally, each Holder can store up to §e20 different recipes§r. Holders must be encoded in the §3Package Recipe Encoder§r.\n\nIn the vast majority of situations you\u0027ll need two identically-encoded Holders, as the following machines work together.\n\nThe §3Packager§r is a machine that compresses ingredients for a specific recipe into a set of §6Recipe Packages§r. Each package in a set can hold up to 9 stacks of ingredient items. A simple recipe might consist of one package, but a complex recipe can have up to 9 packages in its set (for 81 total item stacks).\n\nThe §3Unpackager§r is a machine that extracts ingredient items from complete sets of Recipe Packages made in a Packager, ejecting the items into an adjacent inventory. It will only extract the items if §eall packages in a set are present§r.\n\nWhen both a Packager and Unpackager are connected to an ME Network and have the same recipe, the resulting item will appear as craftable in your §aTerminal§r.\n\n§3Packager Extensions§r will act like a clone of an adjacent Packager - including access to patterns in its Package Recipe Holder - allowing you to craft recipe packages faster. Simply place the Packager Extensions around the Packager. Up to 26 extensions in a 3x3x3 cube around the Packager are supported.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32118,7 +32137,6 @@
     "512:10": {
       "preRequisites:11": [
         197,
-        209,
         296
       ],
       "properties:10": {
@@ -32496,8 +32514,13 @@
       }
     },
     "519:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        99
+        99,
+        287
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32582,9 +32605,9 @@
             },
             "5:10": {
               "Count:3": 14,
-              "Damage:2": 0,
+              "Damage:2": 9,
               "OreDict:8": "",
-              "id:8": "contenttweaker:microverse_casing"
+              "id:8": "gcym:large_multiblock_casing"
             },
             "6:10": {
               "Count:3": 1,
@@ -33074,8 +33097,15 @@
       }
     },
     "527:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2,
+        2
+      ],
       "preRequisites:11": [
-        311
+        311,
+        275,
+        235
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34051,7 +34081,8 @@
     "542:10": {
       "preRequisites:11": [
         197,
-        296
+        296,
+        209
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -45988,8 +46019,13 @@
       }
     },
     "745:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        311
+        311,
+        235
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -48753,7 +48789,8 @@
     },
     "790:10": {
       "preRequisites:11": [
-        69
+        69,
+        72
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62022,6 +62059,161 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1018:10": {
+      "preRequisites:11": [
+        282
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §aME Controller§r acts as the `brain\u0027 and a bit of power storage for an §eME Network§r.\n\nNormally, this block acts as a source of §echannels§r, but those mechanics are disabled by default in §5Nomifactory§r.\n\nYou don\u0027t have to make this to operate a network when channels are disabled, but if you do, §eyour network will consume less power§r than if it did not have a Controller. Plus, they look kind of cool.\n\nMake sure you craft the AE2 one though, and not the one from §bChisel§r!\n\nFood for thought.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "chisel:futura"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ME Controller",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1018,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:controller"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1019:10": {
+      "preRequisites:11": [
+        295,
+        107
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You\u0027re going to craft a LOT of stuff using §bDraconic Evolution §6Fusion§r. Therefore, a way to automate it is crucial.\n\nFirst, place an §6Item Laser Relay§r on each §aInjector§r, one on the §aCore§r, and one on an §aItem Interface§r. You\u0027ll notice that you will need 2 more item lasers than your amount of Injectors.\n\nConnect them all to the Item Interface with your §6Laser Wrench§r. Pretty much, just click on one of the lasers, and click on your Item Interface.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r \n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r§r\n\nUse the §6Compass§r to change the Laser on the core\u0027s piority to 1. \n\nFinally, place the §aRedstone Clock§r next to the core. \n\nYou also need to setup some mechanism to take the finished item out of the core. A Phantomface works well here, as it will only output the output item, and not the input item.\n\nImport into the Item Interface. You can use the Extended Processing Pattern Terminal and an Interface with Blocking Mode to do this. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "actuallyadditions:block_laser_relay_item"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Automating Draconic Evolution Fusion",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1019,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 10,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:block_laser_relay_item"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:block_item_viewer"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:item_laser_wrench"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:compass"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "extrautils2:redstoneclock"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -62179,10 +62371,10 @@
         },
         "19:10": {
           "id:3": 72,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -896,
-          "y:3": 288
+          "sizeX:3": 56,
+          "sizeY:3": 56,
+          "x:3": -908,
+          "y:3": 276
         },
         "20:10": {
           "id:3": 145,
@@ -62451,76 +62643,69 @@
           "y:3": 368
         },
         "58:10": {
-          "id:3": 790,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -604,
-          "y:3": 340
-        },
-        "59:10": {
           "id:3": 814,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 117
         },
-        "60:10": {
+        "59:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 184
         },
-        "61:10": {
+        "60:10": {
           "id:3": 817,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -696,
           "y:3": 200
         },
-        "62:10": {
+        "61:10": {
           "id:3": 819,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -516,
           "y:3": 416
         },
-        "63:10": {
+        "62:10": {
           "id:3": 829,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 60
         },
-        "64:10": {
+        "63:10": {
           "id:3": 890,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
           "y:3": 320
         },
-        "65:10": {
+        "64:10": {
           "id:3": 893,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -516,
           "y:3": 320
         },
-        "66:10": {
+        "65:10": {
           "id:3": 903,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
           "y:3": 292
         },
-        "67:10": {
+        "66:10": {
           "id:3": 913,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
           "y:3": 272
         },
-        "68:10": {
+        "67:10": {
           "id:3": 962,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -63095,167 +63280,174 @@
           "y:3": 108
         },
         "78:10": {
+          "id:3": 790,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -696,
+          "y:3": 40
+        },
+        "79:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -160,
           "y:3": 240
         },
-        "79:10": {
+        "80:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 284
         },
-        "80:10": {
+        "81:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -614,
           "y:3": 148
         },
-        "81:10": {
+        "82:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -650,
           "y:3": 88
         },
-        "82:10": {
+        "83:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -602,
           "y:3": 40
         },
-        "83:10": {
+        "84:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -462,
           "y:3": 3
         },
-        "84:10": {
+        "85:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 88
         },
-        "85:10": {
+        "86:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 72
         },
-        "86:10": {
+        "87:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 476
         },
-        "87:10": {
+        "88:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -176,
           "y:3": 316
         },
-        "88:10": {
+        "89:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -220,
           "y:3": 320
         },
-        "89:10": {
+        "90:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -124,
           "y:3": 320
         },
-        "90:10": {
+        "91:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -124,
           "y:3": 364
         },
-        "91:10": {
+        "92:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 400
         },
-        "92:10": {
+        "93:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 348
         },
-        "93:10": {
+        "94:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 160
         },
-        "94:10": {
+        "95:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -290,
           "y:3": 124
         },
-        "95:10": {
+        "96:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -572,
           "y:3": 200
         },
-        "96:10": {
+        "97:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "97:10": {
+        "98:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 216
         },
-        "98:10": {
+        "99:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -124,
           "y:3": 280
         },
-        "99:10": {
+        "100:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -172,
           "y:3": 280
         },
-        "100:10": {
+        "101:10": {
           "id:3": 973,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -392,
           "y:3": 352
         },
-        "101:10": {
+        "102:10": {
           "id:3": 1013,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -65310,8 +65502,8 @@
           "id:3": 295,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 148
+          "x:3": 120,
+          "y:3": 108
         },
         "39:10": {
           "id:3": 312,
@@ -65374,7 +65566,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 220
+          "y:3": 228
         },
         "48:10": {
           "id:3": 327,
@@ -65388,14 +65580,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
-          "y:3": 220
+          "y:3": 228
         },
         "50:10": {
           "id:3": 330,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 220
+          "y:3": 228
         },
         "51:10": {
           "id:3": 331,
@@ -65443,22 +65635,22 @@
           "id:3": 337,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 73,
-          "y:3": 107
+          "x:3": 72,
+          "y:3": 108
         },
         "58:10": {
           "id:3": 342,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 184
+          "x:3": -16,
+          "y:3": 228
         },
         "59:10": {
           "id:3": 345,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
-          "y:3": 148
+          "y:3": 162
         },
         "60:10": {
           "id:3": 351,
@@ -65907,6 +66099,13 @@
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 164
+        },
+        "124:10": {
+          "id:3": 1019,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": 108
         }
       }
     },
@@ -68294,6 +68493,13 @@
           "sizeY:3": 24,
           "x:3": -22,
           "y:3": 216
+        },
+        "45:10": {
+          "id:3": 1018,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 444
         }
       }
     },
