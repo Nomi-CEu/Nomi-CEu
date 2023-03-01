@@ -50192,8 +50192,8 @@
     },
     "812:10": {
       "preRequisites:11": [
-        94,
-        505
+        988,
+        977
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -50210,15 +50210,15 @@
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "\"Ethanol\" and \"Sulfuric Acid\"",
+          "name:8": "\u0027Steam\u0027 and \u0027Naphtha\u0027",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "HIDDEN"
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 812,
@@ -60017,6 +60017,9 @@
     },
     "972:10": {
       "preRequisites:11": [
+        982,
+        978,
+        975,
         95
       ],
       "properties:10": {
@@ -60144,7 +60147,9 @@
       "tasks:9": {}
     },
     "975:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        812
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60154,13 +60159,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "severely_steamcracked_naphtha"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Petrochem or Ethanol?",
+          "name:8": "Severly Steam-Cracked Naphtha",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60176,7 +60185,9 @@
       "tasks:9": {}
     },
     "976:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        1023
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60186,13 +60197,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfuric_naphtha"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Sulfuric Naphtha Distillery",
+          "name:8": "Sulfuric Naphtha",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60208,7 +60223,9 @@
       "tasks:9": {}
     },
     "977:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        976
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60218,13 +60235,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "naphtha"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Naphtha Chemical Reactor",
+          "name:8": "Naphtha",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60240,7 +60261,9 @@
       "tasks:9": {}
     },
     "978:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        979
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60250,13 +60273,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "severely_steamcracked_light_fuel"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Severely Steam-cracked Naphtha Chemical Reactor",
+          "name:8": "Severely Steam-Cracked Light Fuel",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60272,7 +60299,10 @@
       "tasks:9": {}
     },
     "979:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        988,
+        1020
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60288,7 +60318,7 @@
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Ethylene Distillery",
+          "name:8": "\u0027Steam\u0027 and \u0027Light Fuel\u0027",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60304,7 +60334,10 @@
       "tasks:9": {}
     },
     "980:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        986,
+        987
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60314,13 +60347,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "biomass"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Biomass Brewery",
+          "name:8": "Biomass",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60336,7 +60373,9 @@
       "tasks:9": {}
     },
     "981:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        980
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60346,13 +60385,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "ethanol"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Ethanol Distillery",
+          "name:8": "Ethanol",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60368,7 +60411,10 @@
       "tasks:9": {}
     },
     "982:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        981,
+        985
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60384,8 +60430,8 @@
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Ethylene Chemical Reactor",
-          "questlogic:8": "OR",
+          "name:8": "\u0027Sulfuric Acid\u0027 and \u0027Ethanol\u0027",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -60400,7 +60446,9 @@
       "tasks:9": {}
     },
     "983:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        1024
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60410,13 +60458,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfur_dioxide"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Sulfur Dioxide Chemical Reactor",
+          "name:8": "Sulfur Dioxide",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60432,7 +60484,9 @@
       "tasks:9": {}
     },
     "984:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        983
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60442,13 +60496,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfur_trioxide"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Sulfur Trioxide Chemical Reactor",
+          "name:8": "Sulfur Trioxide",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60464,7 +60522,9 @@
       "tasks:9": {}
     },
     "985:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        984
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60474,13 +60534,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfuric_acid"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Sulfuric Acid Chemical Reactor",
+          "name:8": "Sulfuric Acid",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60496,7 +60560,9 @@
       "tasks:9": {}
     },
     "986:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        1025
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60504,15 +60570,15 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 439,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Plant Balls Compactor",
+          "name:8": "Plant Balls",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60528,7 +60594,9 @@
       "tasks:9": {}
     },
     "987:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        986
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60536,15 +60604,15 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 440,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Bio Chaff Macerator",
+          "name:8": "Bio Chaff",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60570,13 +60638,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "steam"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Steam?",
+          "name:8": "Steam",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -60602,7 +60674,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oxygen"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -60632,9 +60708,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 103,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -60656,7 +60732,9 @@
       "tasks:9": {}
     },
     "991:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        972
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60692,7 +60770,9 @@
       "tasks:9": {}
     },
     "992:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        996
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60702,7 +60782,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "vinyl_chloride"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -60734,7 +60818,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "chlorine"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -60756,7 +60844,9 @@
       "tasks:9": {}
     },
     "994:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        991
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60788,7 +60878,9 @@
       "tasks:9": {}
     },
     "995:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        992
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60824,7 +60916,10 @@
       "tasks:9": {}
     },
     "996:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        972,
+        993
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -60841,7 +60936,7 @@
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "\u0027Ethylene\u0027 and \u0027Chlorine\u0027",
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -60856,7 +60951,9 @@
       "tasks:9": {}
     },
     "997:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        995
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -62214,6 +62311,221 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1020:10": {
+      "preRequisites:11": [
+        1021
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "light_fuel"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Light Fuel",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1020,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1021:10": {
+      "preRequisites:11": [
+        1022
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfuric_light_fuel"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Sulfuric Light Fuel",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1021,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1022:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Oil, Raw Oil or Heavy Oil",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1022,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1023:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil_light"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Light Oil",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1023,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1024:10": {
+      "preRequisites:11": [
+        990,
+        989
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "\u0027Oxygen\u0027 and \u0027Sulfur\u0027",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1024,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1025:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:reeds"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Plant Matter",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1025,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -68523,550 +68835,599 @@
       },
       "quests:9": {
         "0:10": {
+          "id:3": 812,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -24,
+          "y:3": 108
+        },
+        "1:10": {
           "id:3": 924,
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -60,
           "y:3": -168
         },
-        "1:10": {
+        "2:10": {
           "id:3": 925,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -204
         },
-        "2:10": {
+        "3:10": {
           "id:3": 926,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -120,
           "y:3": -96
         },
-        "3:10": {
+        "4:10": {
           "id:3": 927,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": -204
         },
-        "4:10": {
+        "5:10": {
           "id:3": 928,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": -204
         },
-        "5:10": {
+        "6:10": {
           "id:3": 929,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": -204
         },
-        "6:10": {
+        "7:10": {
           "id:3": 930,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 0,
           "y:3": -204
         },
-        "7:10": {
+        "8:10": {
           "id:3": 931,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": -204
         },
-        "8:10": {
+        "9:10": {
           "id:3": 932,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": -168
         },
-        "9:10": {
+        "10:10": {
           "id:3": 933,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": -132
         },
-        "10:10": {
+        "11:10": {
           "id:3": 934,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": -84
         },
-        "11:10": {
+        "12:10": {
           "id:3": 935,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": -84
         },
-        "12:10": {
+        "13:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -84
         },
-        "13:10": {
+        "14:10": {
           "id:3": 937,
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": 36,
           "y:3": -300
         },
-        "14:10": {
+        "15:10": {
           "id:3": 938,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -216
         },
-        "15:10": {
+        "16:10": {
           "id:3": 939,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -144
         },
-        "16:10": {
+        "17:10": {
           "id:3": 940,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -144
         },
-        "17:10": {
+        "18:10": {
           "id:3": 941,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -180
         },
-        "18:10": {
+        "19:10": {
           "id:3": 942,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -180
         },
-        "19:10": {
+        "20:10": {
           "id:3": 943,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -108
         },
-        "20:10": {
+        "21:10": {
           "id:3": 944,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -108
         },
-        "21:10": {
+        "22:10": {
           "id:3": 945,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -108
         },
-        "22:10": {
+        "23:10": {
           "id:3": 946,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -144
         },
-        "23:10": {
+        "24:10": {
           "id:3": 947,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -216
         },
-        "24:10": {
+        "25:10": {
           "id:3": 948,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -216
         },
-        "25:10": {
+        "26:10": {
           "id:3": 949,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": -300
         },
-        "26:10": {
+        "27:10": {
           "id:3": 950,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 36
         },
-        "27:10": {
+        "28:10": {
           "id:3": 951,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 72
         },
-        "28:10": {
+        "29:10": {
           "id:3": 957,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 36
         },
-        "29:10": {
+        "30:10": {
           "id:3": 958,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 36
         },
-        "30:10": {
+        "31:10": {
           "id:3": 959,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 0
         },
-        "31:10": {
+        "32:10": {
           "id:3": 960,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 0
         },
-        "32:10": {
+        "33:10": {
           "id:3": 961,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 36
         },
-        "33:10": {
+        "34:10": {
           "id:3": 963,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -72
         },
-        "34:10": {
+        "35:10": {
           "id:3": 964,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -72
         },
-        "35:10": {
+        "36:10": {
           "id:3": 965,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -36
         },
-        "36:10": {
+        "37:10": {
           "id:3": 966,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -36
         },
-        "37:10": {
+        "38:10": {
           "id:3": 968,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -216
         },
-        "38:10": {
+        "39:10": {
           "id:3": 969,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
           "y:3": -252
         },
-        "39:10": {
+        "40:10": {
           "id:3": 970,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -252
         },
-        "40:10": {
+        "41:10": {
           "id:3": 971,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -24,
           "y:3": -136
         },
-        "41:10": {
+        "42:10": {
           "id:3": 972,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -120,
           "y:3": 132
         },
-        "42:10": {
+        "43:10": {
           "id:3": 975,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -348,
-          "y:3": 48
+          "x:3": -36,
+          "y:3": 96
         },
-        "43:10": {
+        "44:10": {
           "id:3": 976,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 12
+          "x:3": -36,
+          "y:3": 24
         },
-        "44:10": {
+        "45:10": {
           "id:3": 977,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 12
+          "x:3": -36,
+          "y:3": 60
         },
-        "45:10": {
+        "46:10": {
           "id:3": 978,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 12
-        },
-        "46:10": {
-          "id:3": 979,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 12
+          "x:3": -108,
+          "y:3": 96
         },
         "47:10": {
+          "id:3": 979,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -96,
+          "y:3": 108
+        },
+        "48:10": {
           "id:3": 980,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 72
+          "x:3": -192,
+          "y:3": 60
         },
-        "48:10": {
+        "49:10": {
           "id:3": 981,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 72
-        },
-        "49:10": {
-          "id:3": 982,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 72
+          "x:3": -192,
+          "y:3": 96
         },
         "50:10": {
+          "id:3": 982,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -96,
+          "y:3": 156
+        },
+        "51:10": {
           "id:3": 983,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 108
+          "x:3": -156,
+          "y:3": 24
         },
-        "51:10": {
+        "52:10": {
           "id:3": 984,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 108
+          "x:3": -156,
+          "y:3": 60
         },
-        "52:10": {
+        "53:10": {
           "id:3": 985,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 108
+          "x:3": -156,
+          "y:3": 96
         },
-        "53:10": {
+        "54:10": {
           "id:3": 986,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 144
+          "x:3": -240,
+          "y:3": 60
         },
-        "54:10": {
+        "55:10": {
           "id:3": 987,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -276,
-          "y:3": 144
+          "x:3": -216,
+          "y:3": 30
         },
-        "55:10": {
+        "56:10": {
           "id:3": 988,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 36
+          "x:3": -72,
+          "y:3": 60
         },
-        "56:10": {
+        "57:10": {
           "id:3": 989,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 96
+          "x:3": -192,
+          "y:3": -12
         },
-        "57:10": {
+        "58:10": {
           "id:3": 990,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 144
+          "x:3": -156,
+          "y:3": -12
         },
-        "58:10": {
+        "59:10": {
           "id:3": 991,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -168,
           "y:3": 228
         },
-        "59:10": {
+        "60:10": {
           "id:3": 992,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
           "y:3": 192
         },
-        "60:10": {
-          "id:3": 993,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 120
-        },
         "61:10": {
-          "id:3": 994,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -156,
-          "y:3": 300
-        },
-        "62:10": {
-          "id:3": 995,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -60,
-          "y:3": 240
-        },
-        "63:10": {
-          "id:3": 996,
+          "id:3": 993,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -24,
           "y:3": 192
         },
+        "62:10": {
+          "id:3": 994,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -162,
+          "y:3": 300
+        },
+        "63:10": {
+          "id:3": 995,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -72,
+          "y:3": 228
+        },
         "64:10": {
+          "id:3": 996,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -48,
+          "y:3": 204
+        },
+        "65:10": {
           "id:3": 997,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -48,
-          "y:3": 312
+          "x:3": -66,
+          "y:3": 300
         },
-        "65:10": {
+        "66:10": {
           "id:3": 998,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 132,
-          "y:3": 204
+          "x:3": 156,
+          "y:3": 228
         },
-        "66:10": {
+        "67:10": {
           "id:3": 999,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 264
+          "x:3": 168,
+          "y:3": 288
         },
-        "67:10": {
+        "68:10": {
           "id:3": 1002,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 168
+          "x:3": 132,
+          "y:3": 192
         },
-        "68:10": {
+        "69:10": {
           "id:3": 1003,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 168
+          "x:3": 96,
+          "y:3": 192
         },
-        "69:10": {
+        "70:10": {
           "id:3": 1004,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 168
+          "x:3": 168,
+          "y:3": 192
         },
-        "70:10": {
+        "71:10": {
           "id:3": 1005,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 132
+          "x:3": 204,
+          "y:3": 156
         },
-        "71:10": {
+        "72:10": {
           "id:3": 1006,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 180,
-          "y:3": 168
+          "x:3": 204,
+          "y:3": 192
         },
-        "72:10": {
+        "73:10": {
           "id:3": 1007,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 132
+          "x:3": 60,
+          "y:3": 156
         },
-        "73:10": {
+        "74:10": {
           "id:3": 1008,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 168
+          "x:3": 60,
+          "y:3": 192
         },
-        "74:10": {
+        "75:10": {
           "id:3": 1009,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 204
+          "x:3": 96,
+          "y:3": 228
         },
-        "75:10": {
+        "76:10": {
           "id:3": 1010,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 120,
-          "y:3": 180
+          "x:3": 144,
+          "y:3": 204
         },
-        "76:10": {
+        "77:10": {
           "id:3": 1011,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 156,
-          "y:3": 180
+          "x:3": 180,
+          "y:3": 204
         },
-        "77:10": {
+        "78:10": {
           "id:3": 1012,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 84,
-          "y:3": 180
+          "x:3": 108,
+          "y:3": 204
+        },
+        "79:10": {
+          "id:3": 1020,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 60
+        },
+        "80:10": {
+          "id:3": 1021,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 24
+        },
+        "81:10": {
+          "id:3": 1022,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": -12
+        },
+        "82:10": {
+          "id:3": 1023,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": -12
+        },
+        "83:10": {
+          "id:3": 1024,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -144,
+          "y:3": 36
+        },
+        "84:10": {
+          "id:3": 1025,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -276,
+          "y:3": 60
         }
       }
     }
