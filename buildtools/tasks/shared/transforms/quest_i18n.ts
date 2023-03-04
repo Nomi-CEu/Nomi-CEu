@@ -70,6 +70,7 @@ const uselessProps = {
 	"ignoreNBT:1": 0,
 	"index:3": 0,
 	"partialMatch:1": 1,
+	"ignoresview:1": 0,
 };
 
 function stripUselessMetadata(object: unknown) {

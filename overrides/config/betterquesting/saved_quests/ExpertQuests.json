@@ -692,7 +692,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n§c* Tantalite Ore§2\n* Copper Ore\n* Tungstate Ore\n* Scheelite Ore\n* Cassiterite Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.",
+          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n§c* Tantalite Ore§2\n* Copper Ore\n* Sphalerite Ore\n* Cassiterite Ore\n* Scheelite Ore\n* Tungstate Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3777,7 +3777,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 180,
+            "Damage:2": 380,
             "OreDict:8": "",
             "id:8": "appliedenergistics2:part"
           },
@@ -3821,7 +3821,8 @@
     },
     "63:10": {
       "preRequisites:11": [
-        62
+        62,
+        1
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -3941,12 +3942,13 @@
     },
     "65:10": {
       "preRequisites:11": [
-        246
+        246,
+        386
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Tetrahedrite Ore\n* Cassiterite Ore\n* Tungstate Ore\n* Scheelite Ore\n* Redstone Ore\n* Quartz Ore\n* Vanadium Magnetite Ore\n§2* Ilmenite Ore§6\n* Tin Ore\n* Sapphire Ore§r\n§6* Almandine Ore§r\n\nor:\n§6* Dense Magma Block§r\n\nWhen equipped with Gemstone Sensor:\n§6§2* Perfect Emeralds\n* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n§6* Silver Ore\n* Gold Ore",
+          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore§r\n§\n\nor:\n§6* Dense Magma Block§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6240,8 +6242,8 @@
     },
     "106:10": {
       "preRequisites:11": [
-        100,
-        104
+        104,
+        62
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6347,7 +6349,8 @@
     },
     "108:10": {
       "preRequisites:11": [
-        109
+        109,
+        100
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6513,7 +6516,8 @@
     },
     "111:10": {
       "preRequisites:11": [
-        105
+        105,
+        62
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6840,7 +6844,7 @@
     "117:10": {
       "preRequisites:11": [
         132,
-        494
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9751,19 +9755,23 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Air§r can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Air§r.\n\nLiquid Air can be sent into a §2normal Distillation Tower§r to break it down into its components.\n\n§2Liquid Nether Air and Liquid Ender Air give different useful components.\n",
+          "desc:8": "§9Air§r can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Air§r.\n\n§9Liquid Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Nether Air and Liquid Ender Air give different useful components too.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1005,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_air"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Cryogenic Air Distillation",
+          "name:8": "§2Distilling Liquid Air",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -9964,7 +9972,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll be needing large quantities of the various Noble Gasses so you should get this automated and running continuously. \n\n§9Argon§r, for example, is important for production of advanced §6Silicon Boules§r.\n\n§2After liquefication, Overworld Air grants Helium and Argon; Nether Air grants Helium-3 and Neon; Ender Air grants Helium, Krypton, Xenon, and Radon.\n\n§2Certain Noble Gases can also boost the speed of EBF processes.",
+          "desc:8": "You\u0027ll be needing large quantities of the various Noble Gasses so you should get this automated and running continuously. \n\n§2After liquefication, Overworld Air grants Helium and Argon; Nether Air grants Helium-3 and Neon; Ender Air grants Helium, Krypton, Xenon, and Radon.\n\nCertain Noble Gases can also boost the speed of EBF processes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11018,7 +11026,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Glowstone§r.\n\nThese are made in an §3EBF§r with §6Nichrome§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made far more efficiently with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.",
+          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Glowstone§r.\n\nThese are made in an §3EBF§r with §2Kanthal§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made far more efficiently with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11379,13 +11387,18 @@
       }
     },
     "201:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        159
+        159,
+        339
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungsten§r is a material that requires an §3EV Electrolyzer §2and Chemical Bath§r and an §3Electric Blast Furnace§r with at least §6Nichrome Coils§r.\n\nIt is only found from §6Tungstate§r §2Dust and Scheelite Dust, obtained from their respective ores.§r Tungstate is also obtainable in small quantities from centrifuging §6Endstone Dust§r.\n\nScheelite and Tungstate needs to be §2bathed in Hydrochloric Acid to make Tungstic Acid, then electrolyzed§r to get to the Tungsten, which then needs to be cooked in the EBF for Tungsten ingots.",
+          "desc:8": "§6Tungsten§r is a material that requires an §3EV Electrolyzer, §ca LV Extractor§r and an §3Electric Blast Furnace§r with at least §6Nichrome Coils§r. §cAn EV Chemical Reactor can also be used, if you want Tungsten Dust§r.\n\nIt is only found from §6Tungstate§r §2Dust and Scheelite Dust, obtained from their respective ores.§r Tungstate is also obtainable in small quantities from centrifuging §6Endstone Dust§r.\n\nScheelite and Tungstate needs to be §2bathed in Hydrochloric Acid to make Tungstic Acid, then §cextracted§r to get to §cTungsten Trioxide. \n\nThis can either be cooked in an EBF with Carbon to get Tungsten, or chemically reacted with Hydrogen to achieve Tungsten Dust. \n\nThe first option is recommended, as it saves Hydrogen, and takes less time to cook in the EBF than the latter option.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11424,7 +11437,7 @@
               "Count:3": 1,
               "Damage:2": 115,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -12381,7 +12394,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is your first Micro Miner ever.\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Cassiterite Ore\n* Dense Iron Ore\n* Uraninite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Bauxite Ore\n§6* Galena Ore\n* Moon Turf\n* Dilithium\n* Salt Ore§r\n§2* Molybdenum Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
+          "desc:8": "This is your first Micro Miner ever.\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n§\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14212,7 +14225,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner brings §cPlatinum Group Sludge-bearing ores, sources of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §264§r stacks of §6Oilsands Ore§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Redstone Ore\n* Dense Emerald Ore\n* Dense Diamond Ore\n* Dense Lapis Ore\n* Dense Coal Ore§r",
+          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner brings §cPlatinum Group Sludge-bearing ores, sources of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §232§r stacks of §6End Oilsands Ore§r, and 32 §6Compressed Infinity Dust Blocks§r, equivalent to 2592 §6Infinity Dust§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Lapis Ore\n* Dense Diamond Ore\n* Dense Coal Ore\n* Dense Emerald Ore\n* Dense Redstone Ore§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14265,7 +14278,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah§r, in the form of §cSnowchestite Ore§r. Along with it, § §2Kaemanite Ore§r (for §6Trinium§r).\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§6§2* Uraninite Ore§6\n* Molybdenite Ore\n* Bastnasite Ore\n* Sphalerite Ore\n* Palladium Ore\n* Beryllium Ore\n* Monazite Ore\n§2* Osmiridium 80/20 Ore\n* Realgar Ore§6§r\n§6* Enderpearl Blocks\n* Boron Dust§r",
+          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah§r, in the form of §cSnowchestite Ore§r. Along with it, § §2Kaemanite Ore§r (for §6Trinium§r).\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§6§2* Uraninite Ore§6\n* Palladium Ore\n§2* Realgar Ore\n§6* Bastnasite Ore\n* Sphalerite Ore\n* Monazite Ore\n§2* Enderpearl Blocks\n* Osmiridium 80/20 Ore\n* Iridosmine 80/20 Ore\n§6* Boron Dust\n* Molybdenite Ore\n* Beryllium Ore\n* Fluorite Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14319,7 +14332,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Iridium§r is an advanced material used for Micro Miner plating, and for alloying with §6Osmium§r into §6Osmiridium§r.\n\n§2Osmiridium 80/20 Ore and Iridosmine 20/80 Ore, the two ore sources of Iridium§r, are available renewably from the Tier Six micro miner, and semi-renewably from the Tier Five micro miner.",
+          "desc:8": "§6Iridium§r is an advanced material used for Micro Miners, and for alloying with §6Osmium§r into §6Osmiridium§r.\n\n§2Osmiridium 80/20 Ore and Iridosmine 20/80 Ore, the two ore sources of Iridium§r, are available renewably from the Tier Six micro miner, and semi-renewably from the Tier Five micro miner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14480,7 +14493,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Seventh Micro Miner.\n\nThe source of §6Dragon Hearts§r and the valuable §6Lair of The Chaos Guardian Data§r.\n\nAs a bonus, brings §6Dragon Eggs, Dragon\u0027s Breath, Ender Dragon Scales§r, §2Americium Blocks§r and a plenty of different precious metals and gems.",
+          "desc:8": "The Seventh Micro Miner.\n\nThe source of §6Dragon Hearts§r and the valuable §6Lair of The Chaos Guardian Data§r.\n\nAs a bonus, brings §6Dragon Eggs, Dragon\u0027s Breath, Ender Dragon Scales§r, §2Ruthenium Blocks§r and a plenty of different precious metals and gems.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16359,8 +16372,13 @@
       }
     },
     "289:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        839
+        839,
+        313
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -18203,7 +18221,8 @@
     "323:10": {
       "preRequisites:11": [
         252,
-        313
+        313,
+        350
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -18829,8 +18848,7 @@
     },
     "335:10": {
       "preRequisites:11": [
-        334,
-        908
+        334
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -19587,7 +19605,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. For the purposes of this particular quest, you\u0027ll be building a cheap breeder reactor to make §6Plutonium§r. This is a very basic reactor and can be changed to run faster and safer. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 54 §6Reactor Casings§r to encase a 3x3 cube shape of empty air. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 3x3 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in all 8 corners. Then the §6Lapis Coolers§r will go between them: 4 on the top layer and 4 on the bottom layer. At this point, the top and bottom layers should have eight blocks each with an empty middle, and the middle layer is fully empty. In the middle layer, place the 4 §6Graphite Blocks§r on the corners, and the 4 §6Glowstone Coolers§r on the sides (so they touch both Lapis Coolers). Now the cube should be full, except for an empty column in the middle. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
+          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. \n\nFor the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. This reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19629,36 +19647,24 @@
               "id:8": "nuclearcraft:fission_controller_new_fixed"
             },
             "1:10": {
-              "Count:3": 8,
+              "Count:3": 63,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "nuclearcraft:cell_block"
             },
             "2:10": {
-              "Count:3": 8,
-              "Damage:2": 6,
+              "Count:3": 62,
+              "Damage:2": 10,
               "OreDict:8": "",
               "id:8": "nuclearcraft:cooler"
             },
             "3:10": {
-              "Count:3": 4,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:cooler"
-            },
-            "4:10": {
-              "Count:3": 4,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_21"
-            },
-            "5:10": {
-              "Count:3": 54,
+              "Count:3": 150,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "nuclearcraft:fission_block"
             },
-            "6:10": {
+            "4:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
@@ -22700,15 +22706,22 @@
       }
     },
     "408:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
         104,
         148,
-        386
+        386,
+        132
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bPackagedAuto§r is an addon for §bApplied Energistics 2§r. Its main purpose in §5Nomifactory§r is to allow you to automate extended crafting recipes.\n\nApplied Energistics 2 stores recipes in §aPatterns§r, but they are limited to at most 9 stacks of items (a standard 3x3 crafting grid). PackagedAuto stores recipes in §aPackage Recipe Holders§r, which don\u0027t have this limitation. Additionally, each Holder can store up to §e20 different recipes§r. Holders must be encoded in the §3Package Recipe Encoder§r.\n\nIn the vast majority of situations you\u0027ll need two identically-encoded Holders, as the following machines work together.\n\nThe §3Packager§r is a machine that compresses ingredients for a specific recipe into a set of §6Recipe Packages§r. Each package in a set can hold up to 9 stacks of ingredient items. A simple recipe might consist of one package, but a complex recipe can have up to 9 packages in its set (for 81 total item stacks).\n\nThe §3Unpackager§r is a machine that extracts ingredient items from complete sets of Recipe Packages made in a Packager, ejecting the items into an adjacent inventory. It will only extract the items if §eall packages in a set are present§r.\n\nWhen both a Packager and Unpackager are connected to an ME Network and have the same recipe, the resulting item will appear as craftable in your §aTerminal§r.\n\nUp to 8 §3Packager Extensions§r can optionally be added to the Packager to speed up package creation. Place the Packager Extensions in a plane surrounding the Packager, creating a 3 by 3 structure with the Packager in the center when all 8 Packager Extensions are placed.",
+          "desc:8": "§bPackagedAuto§r is an addon for §bApplied Energistics 2§r. Its main purpose in §5Nomifactory§r is to allow you to eventually automate §bExtended Crafting§r recipes, but you may come up with other fun uses for it as well.\n\n§bApplied Energistics 2§r stores recipes in §aPatterns§r, but so far they have been limited to at most 9 stacks of items as input (a standard 3x3 crafting grid). PackagedAuto stores recipes in §aPackage Recipe Holders§r, which don\u0027t have this limitation. Additionally, each Holder can store up to §e20 different recipes§r. Holders must be encoded in the §3Package Recipe Encoder§r.\n\nIn the vast majority of situations you\u0027ll need two identically-encoded Holders, as the following machines work together.\n\nThe §3Packager§r is a machine that compresses ingredients for a specific recipe into a set of §6Recipe Packages§r. Each package in a set can hold up to 9 stacks of ingredient items. A simple recipe might consist of one package, but a complex recipe can have up to 9 packages in its set (for 81 total item stacks).\n\nThe §3Unpackager§r is a machine that extracts ingredient items from complete sets of Recipe Packages made in a Packager, ejecting the items into an adjacent inventory. It will only extract the items if §eall packages in a set are present§r.\n\nWhen both a Packager and Unpackager are connected to an ME Network and have the same recipe, the resulting item will appear as craftable in your §aTerminal§r.\n\n§3Packager Extensions§r will act like a clone of an adjacent Packager - including access to patterns in its Package Recipe Holder - allowing you to craft recipe packages faster. Simply place the Packager Extensions around the Packager. Up to 26 extensions in a 3x3x3 cube around the Packager are supported.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26329,7 +26342,8 @@
     },
     "494:10": {
       "preRequisites:11": [
-        102
+        102,
+        62
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27334,7 +27348,6 @@
     "512:10": {
       "preRequisites:11": [
         197,
-        209,
         296
       ],
       "properties:10": {
@@ -27662,7 +27675,8 @@
     },
     "519:10": {
       "preRequisites:11": [
-        99
+        99,
+        923
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27671,9 +27685,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 32003,
             "OreDict:8": "",
-            "id:8": "appliedenergistics2:spatial_pylon"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -27709,30 +27723,36 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
-              "Count:3": 3,
+              "Count:3": 1,
               "Damage:2": 5,
               "OreDict:8": "",
               "id:8": "extendedcrafting:trimmed"
             },
             "2:10": {
-              "Count:3": 12,
-              "Damage:2": 0,
+              "Count:3": 2,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "appliedenergistics2:spatial_pylon"
+              "id:8": "gregtech:meta_block_compressed_8"
             },
             "3:10": {
               "Count:3": 12,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "nuclearcraft:reactor_casing_transparent"
+              "id:8": "appliedenergistics2:spatial_pylon"
             },
             "4:10": {
-              "Count:3": 14,
-              "Damage:2": 0,
+              "Count:3": 12,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "contenttweaker:microverse_casing"
+              "id:8": "gregtech:transparent_casing"
             },
             "5:10": {
+              "Count:3": 14,
+              "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gcym:large_multiblock_casing"
+            },
+            "6:10": {
               "Count:3": 1,
               "Damage:2": 1231,
               "OreDict:8": "",
@@ -28129,8 +28149,15 @@
       }
     },
     "527:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2,
+        2
+      ],
       "preRequisites:11": [
-        311
+        311,
+        275,
+        235
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -28408,7 +28435,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3HV Circuit Assembling Machine§r unlocks §2the Mainframe§r, as well as handling crafting recipes that consume up to 512 EU/t.\n\nIt can also optionally overclock recipes up to 128 EU/t, gaining additional speed for relatively more power.",
+          "desc:8": "The §3HV Circuit Assembling Machine§r unlocks §2the Mainframe. That\u0027s it.§r\n\nIt can also optionally overclock recipes up to 128 EU/t, gaining additional speed for relatively more power.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28924,7 +28951,8 @@
     "542:10": {
       "preRequisites:11": [
         197,
-        296
+        296,
+        209
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29781,7 +29809,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The 4.5th Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Aerotheum Dust§r.\n\nThis miner will be your primary source of mob drops all the way until the end\n\nWhen equipped with a §6Sapling§r:\n§6* Creeper, Skeleton and Zombie skulls\n* Bone\n* Rotten Flesh\n* Gunpowder\n* Slime Block\n* Guardian Scale§r\n\nWhen equipped with a §6Block of Netherrack:\n* Wither Skeleton Skull and Bones\n* Blaze Rod\n* Ghast Tear\n* Magma Cream§r\n\nWhen equipped with a §6Block of Endstone:\n* Enderman Skull\n* Enderpearl Block\n* Shulker Shell§r\n\nWhen equipped with §6Ender Eyes:\n* Dragon Lair Data\n* Ender Dragon Head§r\n\nWhen equipped with §6Wither Bones§r:\n§6* Wither Realm Data\n* Nether Star Block\n",
+          "desc:8": "§cThe 4.5th Micro Miner.§r\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Aerotheum Dust§r.\n\nThis miner will be your primary source of mob drops, for all, if not most, of your game.\n\nWhen equipped with a §6Sapling§r:\n§6* Creeper, Skeleton and Zombie skulls\n* Bone\n* Rotten Flesh\n* Gunpowder\n* Slime Block\n* Guardian Scale§r\n\nWhen equipped with a §6Block of Netherrack:\n* Wither Skeleton Skull and Bones\n* Blaze Rod\n* Blizz, Blitz and Basalz Rods\n* Ghast Tear\n* Magma Cream\n* Drop of Evil§r\n\nWhen equipped with a §6Block of Endstone:\n* Enderman Skull\n* Enderpearl Block\n* Shulker Shell\n* Shulker Pearl§r\n\nWhen equipped with §6Ender Eyes:\n* Dragon Lair Data\n* Ender Dragon Head§r\n\nWhen equipped with §6Wither Bones§r:\n§6* Wither Realm Data\n* Nether Star Block\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29793,7 +29821,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Tier 4.5 Micro Miner",
+          "name:8": "Tier Four and Half Micro Miner",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -35874,9 +35902,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 4,
+              "Damage:2": 81,
               "OreDict:8": "",
-              "id:8": "nuclearcraft:plutonium"
+              "id:8": "gregtech:meta_ingot"
             },
             "1:10": {
               "Count:3": 8,
@@ -36194,7 +36222,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have all the basic building blocks of nuclear fission, you\u0027ll need to start creating breeding chains to mass produced stabilized versions of each element, for the synthesis of §dOmnium§r.\n\nExperiment around with larger breeder reactors that can handle highly enriched fuels.\n\nYou\u0027ll probably want to build multiple reactors to make all the fissile elements in any reasonable amount of time.",
+          "desc:8": "Now that you have all the basic building blocks of nuclear fission, you\u0027ll need to start creating breeding chains to mass produced stabilized versions of each element, for the synthesis of §dOmnium§r.\n\nPlease note that stabilized versions of each element cannot be turned back into fluids, nor turned back into their original §bNuclearCraft§r isotopes.\n\nExperiment around with larger breeder reactors that can handle highly enriched fuels.\n\nYou\u0027ll probably want to build multiple reactors to make all the fissile elements in any reasonable amount of time.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37157,13 +37185,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Naquadah Reactor Mk2§r is an upgraded reactor that can generate immense amounts of EU energy from the same types of fuels as the Mk1. The materials it requires are similar to the Mk1, and you can almost reuse the same structure. Make sure you are prepared for the UV power output by adding a §6UV Energy Output Hatch§r.\n\nThis is a pretty expensive structure though, as it needs blocks of §dOmnium§r. Maybe wait until after you get the §dCreative Tank§r?\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
+          "desc:8": "The §3Naquadah Reactor Mk2§r is an upgraded reactor that can generate immense amounts of EU energy from the same types of fuels as the Mk1. The materials it requires are similar to the Mk1, and you can almost reuse the same structure. Make sure you are prepared for the UV power output by adding a §6UV Energy Output Hatch§r.\n\nThis is a pretty expensive structure though, as it needs blocks of §dOmnium§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 4,
+            "Damage:2": 32004,
             "OreDict:8": "",
-            "id:8": "extendedcrafting:storage"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37193,18 +37221,24 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 5,
+              "Count:3": 1,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "extendedcrafting:storage"
             },
             "1:10": {
+              "Count:3": 3,
+              "Damage:2": 13,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_compressed_2006"
+            },
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 32004,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "2:10": {
+            "3:10": {
               "Count:3": 1,
               "Damage:2": 1233,
               "OreDict:8": "",
@@ -38503,7 +38537,8 @@
     },
     "730:10": {
       "preRequisites:11": [
-        227
+        227,
+        809
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -39135,8 +39170,13 @@
       }
     },
     "745:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        311
+        311,
+        235
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -40958,7 +40998,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§2You cannot use regular Draconium Blocks to build this structure. You must treat it with Enriched Naquadah to make Activated Draconium before it can be used in the Energy Storage Core.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Portable Tank§r, as it requires large amounts of §2Activated §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§2You cannot use regular Draconium Blocks to build this structure. You must treat it with Enriched Naquadah to make Activated Draconium before it can be used in the Energy Storage Core.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nYou might want to postpone the t8 until after you reach the §dStabilized Miners§r, as it requires large amounts of §2Activated §6Awakened Draconium§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41139,9 +41179,17 @@
       }
     },
     "781:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2,
+        0
+      ],
       "preRequisites:11": [
         196,
-        535
+        531,
+        828,
+        286
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41581,7 +41629,8 @@
     },
     "790:10": {
       "preRequisites:11": [
-        69
+        69,
+        72
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42341,7 +42390,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §a§r§3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly line, since it has a whole bunch of ULV inputs buses that hold one item stack each.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nIf you\u0027ve unlocked §3§3The Empowerer§r§r, you might have considered §aPhantomfaces§r. These would certainly be an improvement over item conduits, but there\u0027s an even better solution.\n\nEnter §aItem Laser Relays§r§r: these handy tools from §bActually Additions§r allow you to create a virtual inventory out of multiple real ones; that is, you can use them to make other automation think that all of the input buses are the same inventory.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r Take this into account when placing them.\n\nTo start, place a laser on each of the input buses. Then, place the §a§aItem Interface§r adjacent to the laser on the first input bus. This will serve as the access point to the virtual inventory where you can connect things like an §3Unpackager§r or §aME Interface§r.\n\nTake your §aLaser Wrench§r and right click the first laser relay, then the second laser relay, to link them together. Repeat this with the second and third relays, third and fourth relays, etc. until they have all been linked together. Now you have a laser network virtualizing all of the input buses!\n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nIf you need to do recipes with an §6§6Integrated Circuit§r, you can leave it in an input bus and skip placing a laser there. Remember to always use §eBlocking Mode§r when connecting the laser network to on-demand crafting. As long as you do, you can have §edifferent circuits in the Assembly Line without recipe conflicts§r. If you don\u0027t use Blocking Mode, you are likely to accidentally craft something else and jam your Assembly Line.",
+          "desc:8": "The §3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly line, since it has a whole bunch of ULV inputs buses that hold one item stack each.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nIf you\u0027ve unlocked §3The Empowerer§r, you might have considered §aPhantomfaces§r. These would certainly be an improvement over item conduits, but there\u0027s an even better solution.\n\nEnter §aItem Laser Relays§r§r: these handy tools from §bActually Additions§r allow you to create a virtual inventory out of multiple real ones; that is, you can use them to make other automation think that all of the input buses are the same inventory.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r Take this into account when placing them.\n\nTo start, place a laser on each of the input buses. Then, place the §aItem Interface§r adjacent to the laser on the first input bus. This will serve as the access point to the virtual inventory where you can connect things like an § §aME Interface§r.\n\nIf you don\u0027t have enough space in a normal pattern, try using the §6Extended Processing Pattern Terminal§r!\n\nTake your §aLaser Wrench§r and right click the first laser relay, then the second laser relay, to link them together. Repeat this with the second and third relays, third and fourth relays, etc. until they have all been linked together. Now you have a laser network virtualizing all of the input buses!\n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nRemember to always use §eBlocking Mode§r when connecting the laser network to on-demand crafting. If you don\u0027t use Blocking Mode, you are likely to accidentally craft something else and jam your Assembly Line.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44229,9 +44278,11 @@
       }
     },
     "839:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        325,
-        904
+        325
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47955,7 +48006,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "Tritanium Ingot",
           "questlogic:8": "AND",
@@ -48317,7 +48368,8 @@
     "915:10": {
       "preRequisites:11": [
         494,
-        729
+        729,
+        62
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -48497,7 +48549,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §6ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. You might want to surround it with §6Dense Cobblestone Generators§r.\n\nWhile you are waiting for the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, and you should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §6ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. \n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nWhile you are after you have made the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, NOT the §6Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48596,6 +48648,338 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "920:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0,
+        0
+      ],
+      "preRequisites:11": [
+        848,
+        239,
+        776
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The Eighth and a Half Micro Miner.\n\nAn alternative source for §6Duranium§r (via §6Dulysite Ore§r, mission with §aGemstone Sensors§r), and an alternative source for §6Darmstadtium§r (via §6Darmstadtite Ore§r, mission with §aIridium Neutron Reflectors§r).\n\nMinimizes waiting for the §3Fusion Reactor§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "contenttweaker:tiereightandhalfship"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tier Eight and a Half Micro Miner",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 920,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:tiereightandhalfship"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "921:10": {
+      "preRequisites:11": [
+        150,
+        174,
+        780
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2This is new to CEu! Before, you could only distil Liquid Air.\n\n§9Nether Air§r, collected from §3Gas Collectors§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Nether Air§r.\n\n§9Liquid Nether Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Ender Air give different useful components too.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_nether_air"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Distilling Liquid Nether Air",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 921,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_nether_air"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "922:10": {
+      "preRequisites:11": [
+        757,
+        174,
+        150
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2This is new to CEu! Before, you could only distil Liquid Air.\n\n§9Ender Air§r, collected from a §3Gas Collector§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Ender Air§r.\n\n§9Liquid Ender Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Nether Air give different useful components too.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_ender_air"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Distilling Liquid Ender Air",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 922,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "liquid_ender_air"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "923:10": {
+      "preRequisites:11": [
+        287,
+        920
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "\u0027Fusion Reactor MK1\u0027 or \u0027Tier Eight and a Half Micro Miner\u0027",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 923,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "924:10": {
+      "preRequisites:11": [
+        282
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §aME Controller§r acts as the `brain\u0027 and a bit of power storage for an §eME Network§r.\n\nNormally, this block acts as a source of §echannels§r, but those mechanics are disabled by default in §5Nomifactory§r.\n\nYou don\u0027t have to make this to operate a network when channels are disabled, but if you do, §eyour network will consume less power§r than if it did not have a Controller. Plus, they look kind of cool.\n\nMake sure you craft the AE2 one though, and not the one from §bChisel§r!\n\nFood for thought.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "chisel:futura"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ME Controller",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 924,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:controller"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "925:10": {
+      "preRequisites:11": [
+        295
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You\u0027re going to craft a LOT of stuff using §bDraconic Evolution §6Fusion§r. Therefore, a way to automate it is crucial.\n\nFirst, place an §6Item Laser Relay§r on each §aInjector§r, one on the §aCore§r, and one on an §aItem Interface§r. You\u0027ll notice that you will need 2 more item lasers than your amount of Injectors.\n\nConnect them all to the Item Interface with your §6Laser Wrench§r. Pretty much, just click on one of the lasers, and click on your Item Interface.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r \n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r§r\n\nUse the §6Compass§r to change the Laser on the core\u0027s piority to 1. \n\nFinally, place the §aRedstone Clock§r next to the core. \n\nYou also need to setup some mechanism to take the finished item out of the core. A Phantomface works well here, as it will only output the output item, and not the input item.\n\nImport into the Item Interface. You can use the Extended Processing Pattern Terminal and an Interface with Blocking Mode to do this. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "actuallyadditions:block_laser_relay_item"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Automating Draconic Evolution Fusion",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 925,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 10,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:block_laser_relay_item"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:block_item_viewer"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:item_laser_wrench"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:compass"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "extrautils2:redstoneclock"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -49006,55 +49390,48 @@
           "y:3": 368
         },
         "55:10": {
-          "id:3": 790,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -604,
-          "y:3": 340
-        },
-        "56:10": {
           "id:3": 814,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 88
         },
-        "57:10": {
+        "56:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 232
         },
-        "58:10": {
+        "57:10": {
           "id:3": 819,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -516,
           "y:3": 416
         },
-        "59:10": {
+        "58:10": {
           "id:3": 890,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
           "y:3": 320
         },
-        "60:10": {
+        "59:10": {
           "id:3": 893,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -516,
           "y:3": 320
         },
-        "61:10": {
+        "60:10": {
           "id:3": 903,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
           "y:3": 292
         },
-        "62:10": {
+        "61:10": {
           "id:3": 919,
           "sizeX:3": 36,
           "sizeY:3": 36,
@@ -49657,167 +50034,174 @@
           "y:3": 68
         },
         "82:10": {
+          "id:3": 790,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -696,
+          "y:3": 20
+        },
+        "83:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 548
         },
-        "83:10": {
+        "84:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 140
         },
-        "84:10": {
+        "85:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -392,
           "y:3": 352
         },
-        "85:10": {
+        "86:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -616,
           "y:3": 128
         },
-        "86:10": {
+        "87:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -652,
           "y:3": 68
         },
-        "87:10": {
+        "88:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 20
         },
-        "88:10": {
+        "89:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -464,
           "y:3": -17
         },
-        "89:10": {
+        "90:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
           "y:3": 68
         },
-        "90:10": {
+        "91:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -384,
           "y:3": 48
         },
-        "91:10": {
+        "92:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -404,
           "y:3": 464
         },
-        "92:10": {
+        "93:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -156,
           "y:3": 292
         },
-        "93:10": {
+        "94:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -200,
           "y:3": 296
         },
-        "94:10": {
+        "95:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 296
         },
-        "95:10": {
+        "96:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 340
         },
-        "96:10": {
+        "97:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 388
         },
-        "97:10": {
+        "98:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 288
         },
-        "98:10": {
+        "99:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 104
         },
-        "99:10": {
+        "100:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -292,
           "y:3": 104
         },
-        "100:10": {
+        "101:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -552,
           "y:3": 268
         },
-        "101:10": {
+        "102:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 264
         },
-        "102:10": {
+        "103:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 340
         },
-        "103:10": {
+        "104:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 188
         },
-        "104:10": {
+        "105:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
           "y:3": 256
         },
-        "105:10": {
+        "106:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -50866,6 +51250,13 @@
           "sizeY:3": 24,
           "x:3": -474,
           "y:3": 174
+        },
+        "146:10": {
+          "id:3": 921,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -504,
+          "y:3": -60
         }
       }
     },
@@ -51604,7 +51995,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 96
+          "y:3": 73
         },
         "1:10": {
           "id:3": 61,
@@ -51632,7 +52023,7 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -532,
-          "y:3": 260
+          "y:3": 308
         },
         "5:10": {
           "id:3": 155,
@@ -51653,14 +52044,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -432,
-          "y:3": 96
+          "y:3": 73
         },
         "8:10": {
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 356
+          "x:3": -320,
+          "y:3": 160
         },
         "9:10": {
           "id:3": 238,
@@ -51758,48 +52149,48 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
-          "y:3": 60
+          "y:3": 37
         },
         "23:10": {
           "id:3": 264,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 96
+          "y:3": 73
         },
         "24:10": {
           "id:3": 265,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -534,
-          "y:3": 90
+          "y:3": 67
         },
         "25:10": {
           "id:3": 267,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 60
+          "y:3": 37
         },
         "26:10": {
           "id:3": 268,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 136
+          "y:3": 102
         },
         "27:10": {
           "id:3": 269,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 176
+          "y:3": 132
         },
         "28:10": {
           "id:3": 271,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": -12,
           "y:3": 432
         },
         "29:10": {
@@ -51828,20 +52219,20 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 308
+          "y:3": 356
         },
         "33:10": {
           "id:3": 286,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -492,
-          "y:3": 336
+          "x:3": -588,
+          "y:3": 148
         },
         "34:10": {
           "id:3": 287,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -20,
+          "x:3": -32,
           "y:3": 164
         },
         "35:10": {
@@ -51869,7 +52260,7 @@
           "id:3": 292,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -336,
+          "x:3": -316,
           "y:3": 312
         },
         "39:10": {
@@ -51939,14 +52330,14 @@
           "id:3": 325,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 116,
-          "y:3": 204
+          "x:3": 24,
+          "y:3": 176
         },
         "49:10": {
           "id:3": 327,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
+          "x:3": -316,
           "y:3": 348
         },
         "50:10": {
@@ -52016,8 +52407,8 @@
           "id:3": 342,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 148
+          "x:3": 116,
+          "y:3": 176
         },
         "60:10": {
           "id:3": 345,
@@ -52052,7 +52443,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -378,
-          "y:3": -104
+          "y:3": -126
         },
         "65:10": {
           "id:3": 408,
@@ -52108,21 +52499,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 216
+          "y:3": 264
         },
         "73:10": {
           "id:3": 529,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -486,
-          "y:3": 53
+          "y:3": 30
         },
         "74:10": {
           "id:3": 531,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 216
+          "y:3": 160
         },
         "75:10": {
           "id:3": 533,
@@ -52168,10 +52559,10 @@
         },
         "81:10": {
           "id:3": 556,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -272,
-          "y:3": -104
+          "sizeX:3": 60,
+          "sizeY:3": 60,
+          "x:3": -258,
+          "y:3": -138
         },
         "82:10": {
           "id:3": 607,
@@ -52240,22 +52631,22 @@
           "id:3": 776,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": -12,
           "y:3": 348
         },
         "92:10": {
           "id:3": 778,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
+          "x:3": -42,
           "y:3": 348
         },
         "93:10": {
           "id:3": 781,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -316,
-          "y:3": 244
+          "x:3": -360,
+          "y:3": 160
         },
         "94:10": {
           "id:3": 791,
@@ -52310,15 +52701,15 @@
           "id:3": 804,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 348
+          "x:3": -624,
+          "y:3": 160
         },
         "102:10": {
           "id:3": 827,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -580,
-          "y:3": 172
+          "y:3": 220
         },
         "103:10": {
           "id:3": 828,
@@ -52352,7 +52743,7 @@
           "id:3": 842,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
+          "x:3": -316,
           "y:3": 384
         },
         "108:10": {
@@ -52416,7 +52807,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
-          "y:3": 216
+          "y:3": 264
         },
         "117:10": {
           "id:3": 855,
@@ -52444,7 +52835,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -528,
-          "y:3": 308
+          "y:3": 356
         },
         "121:10": {
           "id:3": 904,
@@ -52475,18 +52866,25 @@
           "y:3": 396
         },
         "125:10": {
-          "id:3": 908,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": -96,
-          "y:3": 368
-        },
-        "126:10": {
           "id:3": 910,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 264
+          "y:3": 312
+        },
+        "126:10": {
+          "id:3": 920,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": 56,
+          "y:3": 380
+        },
+        "127:10": {
+          "id:3": 925,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 116,
+          "y:3": 72
         }
       }
     },
@@ -54265,6 +54663,13 @@
           "sizeY:3": 0,
           "x:3": 612,
           "y:3": 612
+        },
+        "56:10": {
+          "id:3": 922,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 288,
+          "y:3": 696
         }
       }
     },
@@ -54431,14 +54836,14 @@
           "id:3": 1,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": 384
+          "x:3": -88,
+          "y:3": 476
         },
         "2:10": {
           "id:3": 51,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 92,
+          "x:3": 90,
           "y:3": 420
         },
         "3:10": {
@@ -54446,196 +54851,196 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
-          "y:3": 480
+          "y:3": 516
         },
         "4:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 520
+          "x:3": -88,
+          "y:3": 516
         },
         "5:10": {
           "id:3": 64,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 352
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 12,
+          "y:3": 360
         },
         "6:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": 522
+          "x:3": -150,
+          "y:3": 432
         },
         "7:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": 568
+          "x:3": 102,
+          "y:3": 552
         },
         "8:10": {
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 40,
-          "y:3": 480
+          "x:3": 102,
+          "y:3": 516
         },
         "9:10": {
           "id:3": 101,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -56,
-          "y:3": 560
+          "x:3": -96,
+          "y:3": 552
         },
         "10:10": {
           "id:3": 102,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 144,
           "y:3": 480
         },
         "11:10": {
           "id:3": 103,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": 392
+          "x:3": 102,
+          "y:3": 390
         },
         "12:10": {
           "id:3": 104,
-          "sizeX:3": 42,
-          "sizeY:3": 42,
-          "x:3": 95,
-          "y:3": 559
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 96,
+          "y:3": 594
         },
         "13:10": {
           "id:3": 105,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
+          "x:3": 60,
           "y:3": 480
         },
         "14:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 40,
-          "y:3": 616
+          "x:3": -48,
+          "y:3": 600
         },
         "15:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 592
+          "x:3": 144,
+          "y:3": 552
         },
         "16:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 568
+          "x:3": 144,
+          "y:3": 600
         },
         "17:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 520
+          "x:3": 102,
+          "y:3": 480
         },
         "18:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": 520
+          "x:3": 60,
+          "y:3": 516
         },
         "19:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 284,
+          "x:3": 228,
           "y:3": 480
         },
         "20:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 352
+          "x:3": 144,
+          "y:3": 312
         },
         "21:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 200,
-          "y:3": 352
+          "x:3": 96,
+          "y:3": 312
         },
         "22:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 232,
-          "y:3": 352
+          "x:3": 48,
+          "y:3": 312
         },
         "23:10": {
           "id:3": 122,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 284,
+          "x:3": 228,
           "y:3": 516
         },
         "24:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 284,
-          "y:3": 556
+          "x:3": 228,
+          "y:3": 552
         },
         "25:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 556
+          "x:3": 228,
+          "y:3": 600
         },
         "26:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 480
+          "x:3": 228,
+          "y:3": 312
         },
         "27:10": {
           "id:3": 140,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": 520
+          "x:3": 60,
+          "y:3": 552
         },
         "28:10": {
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": 432
+          "x:3": -48,
+          "y:3": 366
         },
         "29:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 384
+          "x:3": 102,
+          "y:3": 354
         },
         "30:10": {
           "id:3": 259,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 392
+          "x:3": 66,
+          "y:3": 390
         },
         "31:10": {
           "id:3": 282,
@@ -54648,99 +55053,106 @@
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 656
+          "x:3": 144,
+          "y:3": 696
         },
         "33:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
+          "x:3": 60,
           "y:3": 696
         },
         "34:10": {
           "id:3": 408,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 104,
-          "y:3": 656
+          "x:3": 60,
+          "y:3": 648
         },
         "35:10": {
           "id:3": 494,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 210,
-          "y:3": 480
+          "x:3": 144,
+          "y:3": 516
         },
         "36:10": {
           "id:3": 729,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 210,
-          "y:3": 432
+          "x:3": 186,
+          "y:3": 480
         },
         "37:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 516
+          "x:3": 186,
+          "y:3": 648
         },
         "38:10": {
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": 480
+          "x:3": -102,
+          "y:3": 432
         },
         "39:10": {
           "id:3": 809,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 616
+          "x:3": 144,
+          "y:3": 648
         },
         "40:10": {
           "id:3": 811,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 40,
-          "y:3": 656
+          "x:3": -48,
+          "y:3": 648
         },
         "41:10": {
           "id:3": 829,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
-          "y:3": 556
+          "x:3": 186,
+          "y:3": 600
         },
         "42:10": {
           "id:3": 915,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 246,
-          "y:3": 432
+          "x:3": 186,
+          "y:3": 516
         },
         "43:10": {
           "id:3": 916,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 248,
-          "y:3": 592
+          "x:3": 186,
+          "y:3": 552
         },
         "44:10": {
           "id:3": 917,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": 480
+          "x:3": -48,
+          "y:3": 312
         },
         "45:10": {
           "id:3": 918,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": 522
+          "x:3": 0,
+          "y:3": 312
+        },
+        "46:10": {
+          "id:3": 924,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": 480
         }
       }
     }
