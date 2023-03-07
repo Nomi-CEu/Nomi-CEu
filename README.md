@@ -1,5 +1,6 @@
 # nomi-ceu
-[![Curseforge](http://cf.way2muchnoise.eu/full_594351_downloads.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu)  
+[![Curseforge](http://cf.way2muchnoise.eu/full_594351_downloads.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_557242_all.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu)
+
 Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to the [GregTech CE Unofficial](https://github.com/GregTechCEu/GregTech) generation of GT mods, with updated quests, progression and minor balance changes to adapt to CEu's changes.  
 - Overhauled circuit progression closely following CEu stock   
 - Multiblock versions of nearly all machines, including EBF, Freezer and DT, processing up to 256 recipes in parallel  
@@ -34,6 +35,16 @@ Installation instructions:
   - Windows users may grab the utility [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat)(right click - save as), save it to the root directory of the pack (the same level as `\config`).   
   - MacOS and GNU/Linux users can run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` then verify the contents with your editor of choice before running `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
 - If you are on an existing world, run `/bq_admin default load` to load the hard mode questbook.
+
+## Bansoukou
+This pack uses two bansoukou patches. 
+The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft), and the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution).
+
+The two patch repos are:
+- [NuclearCraft](https://github.com/Exaxxion/NuclearCraft/tree/2.18y-ceu). This fixes GTCEu incompatability with NuclearCraft.
+- [Draconic Evolution](https://github.com/IntegerLimit/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks, in the Energy Core and Reactor.
+
+If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/IntegerLimit/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
 
 ## Credits
 Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
