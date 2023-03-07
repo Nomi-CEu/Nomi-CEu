@@ -23,11 +23,11 @@ alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs(
 
 //Dusts
 
-recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
-recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:gtceHardHammers>]);
-recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:gtceHardHammers>]);
+recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:toolMortar>]);
+recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:toolHammer>]);
+recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:toolHammer>]);
 furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
-recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:gtceMortars>]);
+recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:toolMortar>]);
 
 //Snad	
 recipes.remove(<snad:snad>);

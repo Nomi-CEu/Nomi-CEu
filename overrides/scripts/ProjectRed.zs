@@ -67,43 +67,45 @@ recipes.remove(<projectred-core:resource_item:311>);
 furnace.remove(<projectred-core:resource_item:341>);
 furnace.remove(<projectred-core:resource_item:320>);
 
+var screwdriver = <ore:toolScrewdriver>;
+
 recipes.addShaped(<projectred-core:resource_item:1>, [
 	[null, <ore:plateRedAlloy>, null],
 	[null, <projectred-core:resource_item>, null],
-	[null, <ore:gtceScrewdrivers>, null]
+	[null, screwdriver, null]
 ]);
 recipes.addShaped(<projectred-core:resource_item:4>, [
 	[null, <projectred-core:resource_item>, null],
 	[<projectred-core:resource_item:2>, <metaitem:frameWood>, <projectred-core:resource_item:2>],
-	[<projectred-core:resource_item>, <ore:gtceScrewdrivers>, <projectred-core:resource_item>]
+	[<projectred-core:resource_item>, screwdriver, <projectred-core:resource_item>]
 ]);
 recipes.addShaped(<projectred-core:resource_item:10>, [
 	[null, <ore:plateRedstone>, null],
 	[null, <projectred-core:resource_item>, null],
-	[null, <ore:gtceScrewdrivers>, null]
+	[null, screwdriver, null]
 ]);
 recipes.addShaped(<projectred-core:resource_item:12>, [
 	[null, <ore:circuitUlv>, null],
 	[null, <projectred-core:resource_item:11>, null],
-	[null, <ore:gtceScrewdrivers>, null]
+	[null, screwdriver, null]
 ]);
 recipes.addShaped(<projectred-core:resource_item:11>, [
 	[null, <ore:boltRedAlloy>, null],
 	[null, <projectred-core:resource_item>, null],
-	[null, <ore:gtceScrewdrivers>, null]
+	[null, screwdriver, null]
 ]);
 recipes.addShaped(<projectred-core:resource_item:2>, [
 	[null, <ore:wireGtSingleRedAlloy>, null],
 	[null, <projectred-core:resource_item>, null],
-	[null, <ore:gtceScrewdrivers>, null]
+	[null, screwdriver, null]
 ]);
 recipes.addShaped(<projectred-core:resource_item:3>, [
 	[null, <ore:projredBundledCable>, null],
 	[null, <projectred-core:resource_item>, null],
-	[null, <ore:gtceScrewdrivers>, null]
+	[null, screwdriver, null]
 ]);
 recipes.addShaped(<projectred-integration:gate:30>, [
-	[<projectred-core:resource_item:3>, <ore:gtceScrewdrivers>, <projectred-core:resource_item:3>],
+	[<projectred-core:resource_item:3>, screwdriver, <projectred-core:resource_item:3>],
 	[<projectred-core:resource_item:3>, <metaitem:cover.screen>, <projectred-core:resource_item:3>],
 	[<projectred-core:resource_item:3>, <ore:circuitLv>, <projectred-core:resource_item:3>],
 ]);

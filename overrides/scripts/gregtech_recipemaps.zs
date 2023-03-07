@@ -69,6 +69,8 @@ global wiremill                     as RecipeMap = RecipeMap.getByName("wiremill
 
 
 // Tools
+
+/* Depreciating, replacing with native CEu Oredicts.
 <ore:gtceWrenches>.addItems([
 	<gregtech:wrench>.withEmptyTag(), 
 	<gregtech:wrench_lv>.withEmptyTag(), 
@@ -97,3 +99,4 @@ global wiremill                     as RecipeMap = RecipeMap.getByName("wiremill
 
 <ore:gtceMortars>.addItems([
 	<gregtech:mortar>.withEmptyTag()]);
+*/

@@ -127,7 +127,7 @@ mods.jei.JEI.removeAndHide(<enderio:item_endergy_conduit:8>);
 mods.jei.JEI.removeAndHide(<enderio:item_endergy_conduit:9>);
 
 
-val wrench = <ore:gtceWrenches>;
+val wrench = <ore:toolWrench>;
 
 // Microversium Machine Casing
 makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
@@ -158,7 +158,7 @@ assembler.recipeBuilder()
 //	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 
 //Wood Pulp
-recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:gtceMortars>]);	
+recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:toolMortar>]);	
 
 //Pyrolyse Oven
 recipes.removeByRecipeName("gregtech:pyrolyse_oven");	
@@ -176,7 +176,7 @@ recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 //recipes.removeByRecipeName("gregtech:casing.lv");
 //recipes.addShaped(<gregtech:machine_casing:1>, [
 //    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>],
-//    [<ore:plateWroughtIron>, <ore:craftingToolWrench>, <ore:plateWroughtIron>],
+//    [<ore:plateWroughtIron>, <ore:toolWrench>, <ore:plateWroughtIron>],
 //    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>]
 //]);
 //// LV Machine Casing * 1
@@ -188,7 +188,7 @@ recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 //
 //recipes.addShaped(<gregtech:machine_casing>, [
 //    [<metaitem:plateIron>, <metaitem:plateIron>, <metaitem:plateIron>],
-//    [<metaitem:plateIron>, <ore:craftingToolWrench>, <metaitem:plateIron>],
+//    [<metaitem:plateIron>, <ore:toolWrench>, <metaitem:plateIron>],
 //    [<metaitem:plateIron>, <metaitem:plateIron>, <metaitem:plateIron>]
 //]);
 //// ULV Machine Casing * 1
