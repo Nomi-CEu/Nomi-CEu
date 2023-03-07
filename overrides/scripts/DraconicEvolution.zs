@@ -118,6 +118,11 @@ recipes.removeByRecipeName("draconicevolution:draconic_ingot_1");
 recipes.removeByRecipeName("draconicevolution:draconium_ingot_1");
 recipes.removeByRecipeName("draconicevolution:draconium_block");
 
+// Conversion Recipes
+recipes.addShapeless(<draconicevolution:draconium_block>, [<metaitem:blockDraconium>]);
+recipes.addShapeless(<draconicevolution:draconic_block>, [metaitem:blockAwakenedDraconium>]);
+
+/*
 chemical_bath.recipeBuilder()
 	.inputs(<metaitem:blockDraconium>)
 	.fluidInputs(<liquid:americium> * 432)
@@ -133,4 +138,4 @@ chemical_bath.recipeBuilder()
 	.duration(200)
 	.EUt(122880)
 	.buildAndRegister();
-
+*/

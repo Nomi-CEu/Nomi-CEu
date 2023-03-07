@@ -42,7 +42,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockDraconiumAwakened
 	<ore:blockDraconiumAwakened>: [
-//		<draconicevolution:draconic_block>
+		<draconicevolution:draconic_block>
 	],
 
 	#blockBeryllium
@@ -87,7 +87,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
   
 	#blockDraconium
 	<ore:blockDraconium> : [
-//		<draconicevolution:draconium_block>
+		<draconicevolution:draconium_block>
 	],
 
 	#blockElectrum
