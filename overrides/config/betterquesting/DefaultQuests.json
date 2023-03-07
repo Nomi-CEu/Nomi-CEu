@@ -48033,12 +48033,12 @@
     },
     "778:10": {
       "preRequisites:11": [
-        776
+        329
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§2You cannot use regular Draconium Blocks to build this structure. You must treat it with Americium to make Activated Draconium before it can be used in the Energy Storage Core.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §2Activated §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy.\n\nSee the §bDraconic Evolution§r manual for more information on the material requirements for each tier, and more information on the §6Stabilizers§r and §6Pylons§r.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48097,6 +48097,12 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "draconicevolution:energy_pylon"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "draconicevolution:particle_generator"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -65857,10 +65863,10 @@
         },
         "89:10": {
           "id:3": 778,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 412
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 168,
+          "y:3": 222
         },
         "90:10": {
           "id:3": 791,
@@ -68814,7 +68820,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
