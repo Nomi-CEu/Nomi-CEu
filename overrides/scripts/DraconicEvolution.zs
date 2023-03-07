@@ -119,8 +119,8 @@ recipes.removeByRecipeName("draconicevolution:draconium_ingot_1");
 recipes.removeByRecipeName("draconicevolution:draconium_block");
 
 // Conversion Recipes
-recipes.addShapeless(<draconicevolution:draconium_block>, [<metaitem:blockDraconium>]);
-recipes.addShapeless(<draconicevolution:draconic_block>, [metaitem:blockAwakenedDraconium>]);
+recipes.addShapeless(<metaitem:blockDraconium>, [<draconicevolution:draconium_block>]);
+recipes.addShapeless(<metaitem:blockAwakenedDraconium>, [<draconicevolution:draconic_block>]);
 
 /*
 chemical_bath.recipeBuilder()
