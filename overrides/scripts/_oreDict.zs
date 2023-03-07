@@ -1786,6 +1786,9 @@ mods.jei.JEI.removeAndHide(<avaritia:matter_cluster>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_plate>);
 mods.jei.JEI.removeAndHide(<deepmoblearning:soot_covered_redstone>);
 
+// Draconic Evolution Removals
+mods.jei.JEI.removeAndHide(<draconicevolution:draconium_ore:*>);
+
 //EnderIO Removals
 mods.jei.JEI.removeAndHide(<enderio:item_material:28>);
 mods.jei.JEI.removeAndHide(<enderio:item_material:39>);
@@ -2694,6 +2697,7 @@ mods.jei.JEI.removeAndHide(<thermalexpansion:machine:8>);
 //mods.jei.JEI.removeAndHide(<metaitem:cover.solar.panel.ulv>);
 //mods.jei.JEI.removeAndHide(<metaitem:cover.solar.panel.lv>);
 mods.jei.JEI.removeAndHide(<draconicevolution:draconium_block:1>);
+
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:thermal_centrifuge.lv>);		//thermal centrifuge
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:laser_engraver.lv>);		//precision
 //mods.jei.JEI.removeAndHide(<meta_tile_entity:cutter.lv>);		//cutting
