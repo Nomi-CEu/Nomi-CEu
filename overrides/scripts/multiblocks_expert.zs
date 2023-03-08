@@ -876,9 +876,7 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_fluorite_0> * 64,
-             <gregtech:ore_lepidolite_0> * 64,
-             <gregtech:ore_lepidolite_0> * 64)
+             <gregtech:ore_fluorite_0> * 64)
     .buildAndRegister();
 
 
@@ -890,7 +888,9 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
-    .outputs(<gregtech:ore_snowchestite_0> * 64,
+    .outputs(<gregtech:ore_lepidolite_0> * 64,
+             <gregtech:ore_lepidolite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
@@ -1454,7 +1454,9 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
     .circuit(2)
-    .outputs(<gregtech:ore_snowchestite_0> * 64,
+    .outputs(<gregtech:ore_lepidolite_0> * 64,
+             <gregtech:ore_lepidolite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
