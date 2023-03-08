@@ -21621,7 +21621,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Infuses things with Redstone Flux.\n\nThis is useful for charging RF-powered devices, but it also can also charge §6Rich Phyto-Gro§r into §6Fluxed Phyto-Gro§r, and charge §6Activated Certus Quartz Crystals§r into §6Charged Certus Quartz Crystals§r.",
+          "desc:8": "Infuses things with Redstone Flux.\n\nThis is useful for charging RF-powered devices, but it also can also charge §6Rich Phyto-Gro§r into §6Fluxed Phyto-Gro§r, and charge §6Certus Quartz Crystals§r into §6Charged Certus Quartz Crystals§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26110,7 +26110,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but right now you want it to make §6Activated Certus Quartz Crystals§r for §bApplied Energistics§r out of the §bGregTech§r §6Certus Quartz§r and its dust you get from mining and ore processing.",
+          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but right now you want it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36263,7 +36263,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aImplosion Compressor§f is like an autoclave that uses explosions instead of water. It is the only way to turn most gem dusts into gemstones.\n\nIt will also be vital for processing §5Motes of Omnium§f.\n\nIn addition to the controller and casings, you will need one §eLV or better§r §6Item Input Bus§r, §6Item Output Bus§r, and §6Energy Input Hatch§r.\n\n§2If desired, you may upgrade this directly to an Electric Implosion Compressor, which can accept Parallel Control hatches.",
+          "desc:8": "The §aImplosion Compressor§f is like an autoclave that uses explosions instead of water. It is the only way to turn most gem dusts into gemstones.\n\nPlease note that for recipes, like §6Apatite Dust -\u003e Apatite§r, an §3Autoclave§r with §6Distilled Water§r is more efficient than the Implosion Compressor.\n\nIt will also be vital for processing §5Motes of Omnium§f.\n\nIn addition to the controller and casings, you will need one §eLV or better§r §6Item Input Bus§r, §6Item Output Bus§r, and §6Energy Input Hatch§r.\n\n§2If desired, you may upgrade this directly to an Electric Implosion Compressor, which is no different than an Implosion Compressor at the moment.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40993,12 +40993,12 @@
     },
     "778:10": {
       "preRequisites:11": [
-        776
+        329
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§2You cannot use regular Draconium Blocks to build this structure. You must treat it with Enriched Naquadah to make Activated Draconium before it can be used in the Energy Storage Core.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nYou might want to postpone the t8 until after you reach the §dStabilized Miners§r, as it requires large amounts of §2Activated §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Wyvern Fusion Injectors§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. \n\nSee the §bDraconic Evolution§r manual for more information on the material requirements for each tier, and information on how to setup the §6Pylons§r and §6Stabilizers§r.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nYou might want to postpone the Tier 8 until after you reach the §dStabilized Miners§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41044,6 +41044,12 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "draconicevolution:energy_pylon"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "draconicevolution:particle_generator"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -52636,10 +52642,10 @@
         },
         "92:10": {
           "id:3": 778,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -42,
-          "y:3": 348
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": 204,
+          "y:3": 212
         },
         "93:10": {
           "id:3": 781,
