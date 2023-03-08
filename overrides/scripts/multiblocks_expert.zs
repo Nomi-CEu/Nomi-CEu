@@ -876,7 +876,9 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_fluorite_0> * 64)
+             <gregtech:ore_fluorite_0> * 64,
+             <gregtech:ore_lepidolite_0> * 64,
+             <gregtech:ore_lepidolite_0> * 64)
     .buildAndRegister();
 
 
