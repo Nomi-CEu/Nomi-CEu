@@ -1317,6 +1317,11 @@ for oreDictEntry, items in miscDisabled {
 <ore:dustQuartz>.add(<metaitem:dustNetherQuartz>);
 <ore:dustBone>.add(<minecraft:dye:15>);
 
+// Awakened Draconium Fix
+<ore:blockDraconiumAwakened>.add(<metaitem:blockAwakenedDraconium>);
+<ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
+<ore:nuggetDraconiumAwakened>.add(<metaitem:nuggetAwakenedDraconium>);
+
 //Ores
 <ore:oreIron>.add(<minecraft:iron_ore>);
 <ore:oreCoal>.add(<minecraft:coal_ore>);
