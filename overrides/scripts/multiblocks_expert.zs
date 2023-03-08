@@ -876,7 +876,9 @@ microverse_projector_advanced.recipeMap
              <gregtech:ore_molybdenite_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
              <gregtech:ore_beryllium_0> * 64,
-             <gregtech:ore_fluorite_0> * 64)
+             <gregtech:ore_fluorite_0> * 64,
+             <gregtech:ore_lepidolite_0> * 64,
+             <gregtech:ore_lepidolite_0> * 64)
     .buildAndRegister();
 
 
@@ -1302,7 +1304,7 @@ actualization_chamber.recipeMap
     .circuit(1)
     .outputs(<contenttweaker:denseoilshale> * 64,
              <contenttweaker:denseoilshale> * 64,
-             <ore:compressed2xDustBedrock>.firstItem * 16)
+             <ore:compressed2xDustBedrock>.firstItem * 32)
     .buildAndRegister();
 
 // t4 ores
