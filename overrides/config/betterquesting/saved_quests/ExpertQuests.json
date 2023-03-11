@@ -14278,7 +14278,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah§r, in the form of §cSnowchestite Ore§r. Along with it, § §2Kaemanite Ore§r (for §6Trinium§r), and §cLepidolite Ore§r (for §6Caesium§r).\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§6§2* Uraninite Ore§6\n* Palladium Ore\n§2* Realgar Ore\n§6* Bastnasite Ore\n* Sphalerite Ore\n* Monazite Ore\n§2* Enderpearl Blocks\n* Osmiridium 80/20 Ore\n* Iridosmine 80/20 Ore\n§6* Boron Dust\n* Molybdenite Ore\n* Beryllium Ore\n* Fluorite Ore",
+          "desc:8": "The Fifth Micro Miner.\n\nThe only source of §6Naquadah§r, in the form of §cSnowchestite Ore§r. Along with it, § §2Kaemanite Ore§r (for §6Trinium§r), and §cPollucite Ore§r (for §6Caesium§r).\n\nWhen provided with §6Stabilized Uranium§r, brings:\n§6§2* Uraninite Ore§6\n* Palladium Ore\n§2* Realgar Ore\n§6* Bastnasite Ore\n* Sphalerite Ore\n* Monazite Ore\n§2* Enderpearl Blocks\n* Osmiridium 80/20 Ore\n* Iridosmine 80/20 Ore\n§6* Boron Dust\n* Molybdenite Ore\n* Beryllium Ore\n* Fluorite Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18227,7 +18227,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An otherworldly material exclusive to Microverses, §6Naquadah§r is an important material in the late game.\n\nFor its processing, you will need §9Aerotheum§r and §9Petrotheum§r to separate the §6Naquadah Oxide§r, and §9Neocryolite§r as the electrolyte to get the §6Naquadah§r out.\n\nIt can be alloyed and enriched to various forms, and is the eventual source of §6Neutronium§r in a §3Mark Three Fusion Reactor§r.",
+          "desc:8": "An otherworldly material exclusive to Microverses, §6Naquadah§r is an important material in the late game.\n\n§cYou must process your Snowchestite into Naquadah through a series of steps.§r\n\nYou will need §9Aerotheum§r and §9Petrotheum§r to separate the §6Naquadah Oxide§r, and §9Neocryolite§r as the electrolyte to get the §6Naquadah§r out.\n\nIt can be alloyed and enriched to various forms, and is the eventual source of §6Neutronium§r in a §3Mark Three Fusion Reactor§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18239,7 +18239,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Naquadah Ingots",
+          "name:8": "§2Naquadah Ingots",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -28794,7 +28794,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Phosphorus§r can be obtained by processing §6Tricalcium Phosphate§r or §6Apatite§r with §6Sand§r and §6Coke§r in the §3Blast Furnace§r.",
+          "desc:8": "§6Phosphorus§r can be obtained by processing §6Tricalcium Phosphate Ore§r or §6Apatite Ore§r into dust and electrolyzing several times. \n\nBoth ores are found in §6Apatite§r veins.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
