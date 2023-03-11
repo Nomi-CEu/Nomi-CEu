@@ -2618,6 +2618,11 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_pattern_terminal>); // Pattern Wireless
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_fluid_terminal>); // Fluid Wireless
 
+<ore:questbookChisels>.add(<chisel:chisel_iron>);
+<ore:questbookChisels>.add(<chisel:chisel_diamond>);
+<ore:questbookChisels>.add(<chisel:chisel_hitech>);
+
+
 // Add all GT Item Pipes
 for pipe in <ore:pipe*Item*>{
     <ore:questbookItemPipes>.add(pipe.firstItem);
