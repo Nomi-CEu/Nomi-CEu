@@ -888,8 +888,8 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
-    .outputs(<gregtech:ore_lepidolite_0> * 64,
-             <gregtech:ore_lepidolite_0> * 64,
+    .outputs(<gregtech:ore_pollucite_0> * 64,
+             <gregtech:ore_pollucite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
