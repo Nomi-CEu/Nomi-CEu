@@ -273,9 +273,73 @@ alloy_blast_smelter.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister();
 
+/* Custom Alloys in ABS */
 
-//EnderIO Alloys
-alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>,<minecraft:redstone>]).outputs([<metaitem:ingotConductiveIron>]).duration(150).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>,<ore:dustPulsating>]).outputs([<metaitem:ingotPulsatingIron>]).duration(150).EUt(16).buildAndRegister();
+// Dark Steel
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustSteel>, <minecraft:obsidian>])
+	.fluidOutputs(<liquid:dark_steel> * 144)
+	.circuit(2)
+	.property("temperature", 1200)
+	.duration(180)
+	.EUt(16)
+	.buildAndRegister();
 
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustSteel>, <actuallyadditions:item_crystal:3>])
+	.fluidOutputs(<liquid:dark_steel> * 144)
+	.circuit(2)
+	.property("temperature", 1200)
+	.duration(180)
+	.EUt(16)
+	.buildAndRegister();
 
+// Electrical Steel
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustSteel>, <metaitem:dustSilicon>])
+	.fluidOutputs(<liquid:electrical_steel> * 144)
+	.circuit(2)
+	.property("temperature", 1200)
+	.duration(90)
+	.EUt(16)
+	.buildAndRegister();
+
+// End Steel
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustDarkSteel>, <ore:dustEndstone>])
+	.fluidOutputs(<liquid:end_steel> * 144)
+	.circuit(2)
+	.property("temperature", 1200)
+	.duration(225)
+	.EUt(120)
+	.buildAndRegister();
+
+// Soularium
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustGold>, <minecraft:soul_sand>])
+	.fluidOutputs(<liquid:soularium> * 144)
+	.circuit(2)
+	.property("temperature", 1200)
+	.duration(90)
+	.EUt(16)
+	.buildAndRegister();
+
+// Conductive Iron
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<metaitem:dustIron>, <minecraft:redstone>])
+	.fluidOutputs(<liquid:conductive_iron> * 144)
+	.circuit(2)
+	.property("temperature", 1200)
+	.duration(112)
+	.EUt(16)
+	.buildAndRegister();
+
+// Pulsating Iron
+alloy_blast_smelter.recipeBuilder()
+	.inputs([<liquid:pulsating_iron>, <ore:dustPulsating>])
+	.fluidOutputs(<liquid:soularium> * 144)
+	.circuit(2)
+	.property("temperature", 1200)
+	.duration(112)
+	.EUt(16)
+	.buildAndRegister();
