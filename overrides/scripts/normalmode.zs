@@ -180,45 +180,138 @@ recipes.addShapeless("fireclay_dust", <metaitem:dustFireclay> * 16, [<metaitem:d
 // Block of Steel * 1
 <recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_block:0>, <metaitem:blockCharcoal> * 2], null).remove();
 
-// PBF recipes
+/* Start PBF Recipes */
 
-primitive_blast_furnace.recipeBuilder()
-	.inputs([<metaitem:ingotWroughtIron>, <minecraft:coal>])
-	.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh> * 2])
-	.duration(400)
-	.EUt(1)
-	.buildAndRegister();
-primitive_blast_furnace.recipeBuilder()
-	.inputs([<metaitem:ingotWroughtIron>, <minecraft:coal:1>])
-	.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh> * 2])
-	.duration(400)
-	.EUt(1)
-	.buildAndRegister();
-primitive_blast_furnace.recipeBuilder()
-	.inputs([<metaitem:ingotWroughtIron>, <metaitem:dustCoal>])
-	.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh> * 2])
-	.duration(400)
-	.EUt(1)
-	.buildAndRegister();
-primitive_blast_furnace.recipeBuilder()
-	.inputs([<metaitem:ingotWroughtIron>, <metaitem:dustCharcoal>])
-	.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh> * 2])
-	.duration(400)
-	.EUt(1)
-	.buildAndRegister();
+/* Wrought Iron */
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<metaitem:ingotWroughtIron>, <minecraft:coal>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(400)
+		.EUt(1)
+		.buildAndRegister();
 
-primitive_blast_furnace.recipeBuilder()
-	.inputs([<metaitem:ingotWroughtIron> * 2, <metaitem:gemCoke>])
-	.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyDarkAsh> * 4])
-	.duration(800)
-	.EUt(1)
-	.buildAndRegister();
-primitive_blast_furnace.recipeBuilder()
-	.inputs([<metaitem:ingotWroughtIron> * 2, <metaitem:dustCoke>])
-	.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyDarkAsh> * 4])
-	.duration(800)
-	.EUt(1)
-	.buildAndRegister();
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<metaitem:ingotWroughtIron>, <minecraft:coal:1>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(400)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<metaitem:ingotWroughtIron>, <metaitem:dustCoal>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(400)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<metaitem:ingotWroughtIron>, <metaitem:dustCharcoal>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(400)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<metaitem:ingotWroughtIron> * 2, <metaitem:gemCoke>])
+		.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyAsh>])
+		.duration(600)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<metaitem:ingotWroughtIron> * 2, <metaitem:dustCoke>])
+		.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyAsh>])
+		.duration(600)
+		.EUt(1)
+		.buildAndRegister();
+
+/* Iron */
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<minecraft:iron_ingot>, <minecraft:coal>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(900)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<minecraft:iron_ingot>, <minecraft:coal:1>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(900)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<minecraft:iron_ingot>, <metaitem:dustCoal>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(900)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<minecraft:iron_ingot>, <metaitem:dustCharcoal>])
+		.outputs([<metaitem:ingotSteel>, <metaitem:dustTinyDarkAsh>])
+		.duration(900)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<minecraft:iron_ingot> * 2, <metaitem:gemCoke>])
+		.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyAsh>])
+		.duration(1500)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<minecraft:iron_ingot> * 2, <metaitem:dustCoke>])
+		.outputs([<metaitem:ingotSteel> * 2, <metaitem:dustTinyAsh>])
+		.duration(1500)
+		.EUt(1)
+		.buildAndRegister();
+
+/* Block Recipes */
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<ore:blockWroughtIron>, <ore:blockCoal>])
+		.outputs([<metaitem:blockSteel>, <metaitem:dustDarkAsh>])
+		.duration(3600)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<ore:blockWroughtIron>, <ore:blockCharcoal>])
+		.outputs([<metaitem:blockSteel>, <metaitem:dustDarkAsh>])
+		.duration(3600)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<ore:blockWroughtIron> * 2, <ore:blockFuelCoke>])
+		.outputs([<metaitem:blockSteel> * 2, <metaitem:dustAsh>])
+		.duration(5400)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<ore:blockIron>, <ore:blockCoal>])
+		.outputs([<metaitem:blockSteel>, <metaitem:dustDarkAsh>])
+		.duration(8100)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<ore:blockIron>, <ore:blockCharcoal>])
+		.outputs([<metaitem:blockSteel>, <metaitem:dustDarkAsh>])
+		.duration(8100)
+		.EUt(1)
+		.buildAndRegister();
+
+	primitive_blast_furnace.recipeBuilder()
+		.inputs([<ore:blockIron> * 2, <ore:blockFuelCoke>])
+		.outputs([<metaitem:blockSteel> * 2, <metaitem:dustAsh>])
+		.duration(13500)
+		.EUt(1)
+		.buildAndRegister();
+
+/* End PBF Recipes */
 
 // Creative Tank Data
 extractor.recipeBuilder()
