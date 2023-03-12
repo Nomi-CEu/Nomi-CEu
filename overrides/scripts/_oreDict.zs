@@ -2622,6 +2622,21 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookChisels>.add(<chisel:chisel_diamond>);
 <ore:questbookChisels>.add(<chisel:chisel_hitech>);
 
+// Add All GT Super and Quantum Tanks (apart from creative)
+// Super Tanks
+<ore:questbookTanks>.add(<metaitem:super_tank.lv>);
+<ore:questbookTanks>.add(<metaitem:super_tank.mv>);
+<ore:questbookTanks>.add(<metaitem:super_tank.hv>);
+<ore:questbookTanks>.add(<metaitem:super_tank.ev>);
+<ore:questbookTanks>.add(<metaitem:super_tank.iv>);
+
+// Quantum Tanks
+<ore:questbookTanks>.add(<metaitem:quantum_tank.iv>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.luv>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.zpm>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.uv>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.uhv>);
+
 
 // Add all GT Item Pipes
 for pipe in <ore:pipe*Item*>{

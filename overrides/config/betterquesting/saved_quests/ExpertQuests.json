@@ -44026,7 +44026,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Super Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64,000 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Micro Miner§r recipes. Higher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft.",
+          "desc:8": "§oNote: This quest accepts any Super or Quantum Tank.\n\n§2Super and Quantum Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64,000 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Micro Miner§r recipes.\n\nHigher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44038,7 +44038,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Super Tanks",
+          "name:8": "§2Super and Quantum Tanks",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -44063,7 +44063,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1575,
-              "OreDict:8": "",
+              "OreDict:8": "questbookTanks",
               "id:8": "gregtech:machine"
             }
           },
@@ -45335,7 +45335,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Alloy Blast Smelter directly smelts dust combinations into molten Alloys, skipping the Mixer step. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\n§rThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for most normal alloys if you want. In particular, the yield of §6Energetic Alloy§r and §6Vibrant Alloy§r is §ddoubled§r.",
+          "desc:8": "§2The Alloy Blast Smelter directly smelts dust combinations into molten Alloys, skipping the Mixer step, and applying a 3/4 discount to your EBF time. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\n§rThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for most normal alloys if you want. In particular, the yield of §6Energetic Alloy§r and §6Vibrant Alloy§r is §ddoubled§r.\n\nYou can also use the ABS for most Alloy Smelter alloys, apart from §6Steel§r, like §eInvar§r, §e§eConductive Iron§r§r, and §e§eDark Steel§r§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48680,7 +48680,7 @@
             "id:8": "contenttweaker:tiereightandhalfship"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Tier Eight and a Half Micro Miner",
@@ -51867,10 +51867,10 @@
         },
         "73:10": {
           "id:3": 556,
-          "sizeX:3": 35,
-          "sizeY:3": 30,
-          "x:3": 359,
-          "y:3": 163
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 448,
+          "y:3": 180
         },
         "74:10": {
           "id:3": 605,
@@ -52039,6 +52039,13 @@
           "sizeY:3": 24,
           "x:3": 288,
           "y:3": 312
+        },
+        "98:10": {
+          "id:3": 920,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 448,
+          "y:3": 332
         }
       }
     },
