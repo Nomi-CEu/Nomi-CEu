@@ -31,7 +31,6 @@ recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:toolMort
 recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:toolHammer>]);
 recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:toolHammer>]);
 furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
-recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:toolMortar>]);
 
 //Snad	
 recipes.remove(<snad:snad>);
