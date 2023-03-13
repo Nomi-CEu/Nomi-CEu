@@ -19605,7 +19605,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. \n\nFor the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. This reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
+          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. \n\nFor the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. \n\nThis reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32343,9 +32343,7 @@
       }
     },
     "610:10": {
-      "preRequisites:11": [
-        328
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -32359,7 +32357,7 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 1,
           "name:8": "Ferroboron",
           "partysinglereward:1": 0,
@@ -32397,12 +32395,12 @@
     },
     "611:10": {
       "preRequisites:11": [
-        610
+        328
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Alloying some §6Lithium§r into your §6Ferroboron§r results in §6Tough Alloy§r, a common component in §bNuclearCraft§r blocks.",
+          "desc:8": "§6Ferroboron§r is an alloy of §6Steel§r and §6Boron§r.\n\nAlloying some §6Lithium§r into your §6Ferroboron§r results in §6Tough Alloy§r, a common component in §bNuclearCraft§r blocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35490,7 +35488,7 @@
             "id:8": "nuclearcraft:fuel_uranium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Uranium Fission",
@@ -35521,12 +35519,6 @@
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "nuclearcraft:fuel_uranium"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_uranium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35605,12 +35597,12 @@
     },
     "671:10": {
       "preRequisites:11": [
-        672
+        350
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Thorium is another basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2Black Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium 232§r enriched in a §3Thermal Centrifuge§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium 233§r, §6Uranium 235§r, §6§6Neptunium 236§r, and §6Neptunium 237§r.",
+          "desc:8": "Thorium is a basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2Black Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium 232§r enriched in a §3Thermal Centrifuge§r.\n\nThis fuel is processed in your §3Fission Reactor§r by placing it in the controller. When a redstone signal is applied it will burn the fuel, generating some power from the reactor and after a while you\u0027ll get a §6Depleted TBU Fuel§r§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium 233§r, §6Uranium 235§r, §6§6Neptunium 236§r, and §6Neptunium 237§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35619,7 +35611,7 @@
             "id:8": "nuclearcraft:fuel_thorium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2Thorium Fission",
@@ -35647,21 +35639,15 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 9,
-              "Damage:2": 109,
+              "Damage:2": 4,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "nuclearcraft:thorium"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "nuclearcraft:fuel_thorium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_thorium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35679,15 +35665,15 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8,
+            "Damage:2": 116,
             "OreDict:8": "",
-            "id:8": "nuclearcraft:uranium"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Nuclear Fuel Infrastructure",
+          "name:8": "§2Uranium Fuel Infrastructure",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -35713,13 +35699,13 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 116,
-              "OreDict:8": "ingotUranium238",
+              "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 117,
-              "OreDict:8": "ingotUranium235",
+              "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             }
           },
@@ -35734,7 +35720,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Low-Enriched Neptunium 236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium 237§r to §6Neptunium 236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN 236§r gives a small bit of Neptunium 237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.\n",
+          "desc:8": "§oNote: this quest accepts Neptunium 236 or 237.§r\n\nLow-Enriched Neptunium 236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium 237§r to §6Neptunium 236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN 236§r gives a small bit of Neptunium 237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35743,7 +35729,7 @@
             "id:8": "nuclearcraft:fuel_neptunium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Neptunium Fission",
@@ -35771,27 +35757,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:neptunium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 4,
-              "OreDict:8": "",
+              "OreDict:8": "questbookNeptunium",
               "id:8": "nuclearcraft:neptunium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_neptunium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_neptunium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35800,7 +35768,8 @@
     },
     "674:10": {
       "preRequisites:11": [
-        671
+        671,
+        672
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -35814,7 +35783,7 @@
             "id:8": "nuclearcraft:uranium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "LEU-233",
@@ -35844,13 +35813,13 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_uranium"
+              "id:8": "nuclearcraft:uranium"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_uranium"
+              "id:8": "nuclearcraft:fuel_uranium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35860,12 +35829,13 @@
     "675:10": {
       "preRequisites:11": [
         669,
-        674
+        674,
+        673
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Low-Enriched Plutonium 239, or §6LEP-239§r, is made from the usual 8:1 ratio of two isotopes of §6Plutonium§r acquired from earlier depleted fuels.\n\n§6Depleted LEP-239§r will give you some §6Curium§r for further enrichment.\n\nHigh-Enriched Plutonium fuels will give better results, but §cgenerate a lot more heat§r. Make sure your reactor cooling is up to the task.",
+          "desc:8": "§oNote: this quest accepts Plutonium 238, 239, 241 or 242.§r\n\nLow-Enriched Plutonium 239, or §6LEP-239§r, is made from the usual 8:1 ratio of two isotopes of §6Plutonium§r, 242 and 239, acquired from earlier depleted fuels. You will also need §6Plutonium§r in large amounts for §eSunnarium§r.\n\nThe two sources of Plutonium are Uranium-based fuels and Neptunium-based fuels.\n\n§6Depleted LEP-239§r will give you two different isotopes of §6Curium§r for further enrichment.\n\nHigh-Enriched Plutonium fuels will give better results, but §cgenerate a lot more heat§r. Make sure your reactor cooling is up to the task.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35874,7 +35844,7 @@
             "id:8": "nuclearcraft:fuel_plutonium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Plutonium Fission",
@@ -35902,27 +35872,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 81,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 12,
-              "OreDict:8": "",
+              "OreDict:8": "questbookPlutonium",
               "id:8": "nuclearcraft:plutonium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_plutonium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_plutonium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35937,7 +35889,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Low-Enriched Curium 243, or §6LECm-243§r, is made from §6Curium-243§r and §6Curium-246§r.\n\n§6Depleted LECm-243 Fuel§r gives mostly Curium-246 back, but also small quantities of §6Berkelium§r and §6Californium§r isotopes.\n\n§6HECm-247§r is a better alternative for strictly Californium, if your reactor can withstand the heat.",
+          "desc:8": "§oNote: this quest accepts Curium 243, 245, 246 or 247.§r\n\nLow-Enriched Curium 243, or §6LECm-243§r, is made from §6Curium-243§r and §6Curium-246§r. You will also need §6Curium§r in large amounts for §eSunnarium§r.\n\n§6Depleted LECm-243 Fuel§r gives mostly Curium-246 back, but also small quantities of §6Berkelium§r and §6Californium§r isotopes.\n\n§6HECm-247§r is a better alternative for strictly Californium, if your reactor can withstand the heat.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35946,7 +35898,7 @@
             "id:8": "nuclearcraft:fuel_curium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Curium Fission",
@@ -35974,27 +35926,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:curium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 8,
-              "OreDict:8": "",
+              "OreDict:8": "questbookCurium",
               "id:8": "nuclearcraft:curium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_curium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_curium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36002,13 +35936,18 @@
       }
     },
     "677:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        673
+        673,
+        674
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Americium 242§r and §6Americium 243§r are used to make §6LEA-242 Fuel§r.\n\nThere\u0027s also §6Americium 241§r, but this is only useful for making RTGs (which produce small amounts of RF continuously) or decaying down into §6Neptunium§r.\n\n§6Depleted LEA 242 Fuels§r§r will return large amounts of §6Curium 246§r and small amounts of other isotopes.",
+          "desc:8": "§oNote: this quest accepts Americium 241, 242, or 243.\n\n§6Americium 242§r and §6Americium 243§r are used to make §6LEA-242 Fuel§r.\n\nThere\u0027s also §6Americium 241§r, but this is only useful for making RTGs (which produce small amounts of RF continuously) or decaying down into §6Neptunium§r.\n\n§6Depleted LEA 242 Fuels§r§r will return a lot of §6Curium 246§r, and small amounts of the other three isotopes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36017,12 +35956,12 @@
             "id:8": "nuclearcraft:fuel_americium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Americium Fission",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -36045,27 +35984,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:americium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 8,
-              "OreDict:8": "",
+              "OreDict:8": "questbookAmericium",
               "id:8": "nuclearcraft:americium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_americium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_americium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36079,7 +36000,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Depleted LEB-248 Fuel§r results in several different isotopes of §6§6Californium§r.",
+          "desc:8": "§oNote: this quest accepts Berkelium 247 or 248.\n\n§6LEB-248 Fuel§r is made with §e8 §6Berkelium-247§r and §e1 §6Berkelium 248§r. When depleted, it results in several different isotopes of §6Californium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36088,7 +36009,7 @@
             "id:8": "nuclearcraft:fuel_berkelium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Berkelium Fission",
@@ -36116,27 +36037,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 4,
-              "OreDict:8": "",
+              "Damage:2": 0,
+              "OreDict:8": "questbookBerkelium",
               "id:8": "nuclearcraft:berkelium"
-            },
-            "1:10": {
-              "Count:3": 8,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:berkelium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_berkelium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_berkelium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36150,7 +36053,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Californium§r is the final fissile material in the NuclearCraft processing chain.\n\n§6Depleted LECf-249 Fuel§r results in... different isotopes of Californium.\n\nUnless you want §6Californium RTGs§r or are experimenting with further fission routes, this step is probably unnecessary for general materials processing.",
+          "desc:8": "§oNote: this quest accepts Californium 249, 250, 251 or 252.\n\n§6Californium§r is the final fissile material in the NuclearCraft processing chain.\n\n§6LECf-249 Fuel§r is made with the 8:1 ratio of §6Californium-252§r and §6Californium-249§r. When depleted, it results in... different isotopes of Californium.\n\nUnless you want §6Californium RTGs§r or are experimenting with further fission routes, this step is probably unnecessary for general materials processing.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36159,7 +36062,7 @@
             "id:8": "nuclearcraft:fuel_californium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Californium Fission",
@@ -36187,27 +36090,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:californium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 12,
-              "OreDict:8": "",
+              "OreDict:8": "questbookCalifornium",
               "id:8": "nuclearcraft:californium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_californium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_californium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -50325,7 +50210,7 @@
           "id:3": 65,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -560,
+          "x:3": -564,
           "y:3": 216
         },
         "4:10": {
@@ -50675,7 +50560,7 @@
           "id:3": 246,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -548,
+          "x:3": -552,
           "y:3": 180
         },
         "54:10": {
@@ -50703,7 +50588,7 @@
           "id:3": 255,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -548,
+          "x:3": -552,
           "y:3": 144
         },
         "58:10": {
@@ -50871,15 +50756,15 @@
           "id:3": 341,
           "sizeX:3": 20,
           "sizeY:3": 20,
-          "x:3": -380,
-          "y:3": 184
+          "x:3": -388,
+          "y:3": 260
         },
         "82:10": {
           "id:3": 344,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -510,
-          "y:3": 174
+          "x:3": -522,
+          "y:3": 168
         },
         "83:10": {
           "id:3": 347,
@@ -50962,15 +50847,15 @@
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -520,
-          "y:3": 368
+          "x:3": -528,
+          "y:3": 414
         },
         "95:10": {
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -492,
-          "y:3": 204
+          "x:3": -504,
+          "y:3": 198
         },
         "96:10": {
           "id:3": 555,
@@ -50983,346 +50868,339 @@
           "id:3": 580,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -460,
-          "y:3": 368
+          "x:3": -468,
+          "y:3": 414
         },
         "98:10": {
-          "id:3": 610,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 168
-        },
-        "99:10": {
           "id:3": 611,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 168
         },
-        "100:10": {
+        "99:10": {
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
+          "x:3": -192,
           "y:3": 276
         },
-        "101:10": {
+        "100:10": {
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 276
+          "x:3": -120,
+          "y:3": 240
+        },
+        "101:10": {
+          "id:3": 672,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -192,
+          "y:3": 240
         },
         "102:10": {
-          "id:3": 672,
+          "id:3": 673,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 276
+        },
+        "103:10": {
+          "id:3": 674,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 276
         },
-        "103:10": {
-          "id:3": 673,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 312
-        },
         "104:10": {
-          "id:3": 674,
+          "id:3": 675,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 312
         },
         "105:10": {
-          "id:3": 675,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 312
-        },
-        "106:10": {
           "id:3": 676,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 348
-        },
-        "107:10": {
-          "id:3": 677,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 348
-        },
-        "108:10": {
-          "id:3": 678,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 396
-        },
-        "109:10": {
-          "id:3": 679,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 348
         },
-        "110:10": {
+        "106:10": {
+          "id:3": 677,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 312
+        },
+        "107:10": {
+          "id:3": 678,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -192,
+          "y:3": 348
+        },
+        "108:10": {
+          "id:3": 679,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 348
+        },
+        "109:10": {
           "id:3": 680,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -168,
           "y:3": 384
         },
-        "111:10": {
+        "110:10": {
           "id:3": 690,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -420,
           "y:3": 276
         },
-        "112:10": {
+        "111:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -492,
           "y:3": 276
         },
-        "113:10": {
+        "112:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -524,
+          "x:3": -528,
           "y:3": 276
         },
-        "114:10": {
+        "113:10": {
           "id:3": 732,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 168
         },
-        "115:10": {
+        "114:10": {
           "id:3": 745,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 240
         },
-        "116:10": {
+        "115:10": {
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -876,
           "y:3": 216
         },
-        "117:10": {
+        "116:10": {
           "id:3": 748,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -876,
           "y:3": 252
         },
-        "118:10": {
+        "117:10": {
           "id:3": 751,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -876,
           "y:3": 180
         },
-        "119:10": {
+        "118:10": {
           "id:3": 773,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -144,
           "y:3": 84
         },
-        "120:10": {
+        "119:10": {
           "id:3": 783,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -340,
-          "y:3": 368
+          "x:3": -348,
+          "y:3": 414
+        },
+        "120:10": {
+          "id:3": 785,
+          "sizeX:3": 22,
+          "sizeY:3": 22,
+          "x:3": -390,
+          "y:3": 222
         },
         "121:10": {
-          "id:3": 785,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -420,
-          "y:3": 180
-        },
-        "122:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 348
+          "x:3": -192,
+          "y:3": 312
         },
-        "123:10": {
+        "122:10": {
           "id:3": 799,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 276
         },
-        "124:10": {
+        "123:10": {
           "id:3": 800,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -264,
           "y:3": 84
         },
-        "125:10": {
+        "124:10": {
           "id:3": 806,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -56,
           "y:3": 108
         },
-        "126:10": {
+        "125:10": {
           "id:3": 807,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 40
         },
-        "127:10": {
+        "126:10": {
           "id:3": 825,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -684,
           "y:3": -100
         },
-        "128:10": {
+        "127:10": {
           "id:3": 826,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -64,
           "y:3": -108
         },
-        "129:10": {
+        "128:10": {
           "id:3": 827,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -258,
           "y:3": -79
         },
-        "130:10": {
+        "129:10": {
           "id:3": 828,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -384,
+          "x:3": -364,
           "y:3": 236
         },
-        "131:10": {
+        "130:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": -48
         },
-        "132:10": {
+        "131:10": {
           "id:3": 838,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -600,
           "y:3": 156
         },
-        "133:10": {
+        "132:10": {
           "id:3": 841,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 312
         },
-        "134:10": {
+        "133:10": {
           "id:3": 849,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -380,
+          "x:3": -360,
           "y:3": 276
         },
-        "135:10": {
+        "134:10": {
           "id:3": 850,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -384,
+          "x:3": -364,
           "y:3": 308
         },
-        "136:10": {
+        "135:10": {
           "id:3": 851,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 276
         },
-        "137:10": {
+        "136:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -56,
-          "y:3": 348
+          "x:3": -84,
+          "y:3": 312
         },
-        "138:10": {
+        "137:10": {
           "id:3": 857,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -720,
-          "y:3": 312
+          "y:3": 342
+        },
+        "138:10": {
+          "id:3": 858,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -558,
+          "y:3": 336
         },
         "139:10": {
-          "id:3": 858,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -552,
-          "y:3": 308
+          "id:3": 859,
+          "sizeX:3": 72,
+          "sizeY:3": 72,
+          "x:3": -444,
+          "y:3": 318
         },
         "140:10": {
-          "id:3": 859,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -424,
-          "y:3": 308
-        },
-        "141:10": {
           "id:3": 888,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -56,
           "y:3": 72
         },
-        "142:10": {
+        "141:10": {
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -400,
-          "y:3": 368
+          "x:3": -408,
+          "y:3": 414
         },
-        "143:10": {
+        "142:10": {
           "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -864,
           "y:3": -100
         },
-        "144:10": {
+        "143:10": {
           "id:3": 900,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -108,
           "y:3": 68
         },
-        "145:10": {
+        "144:10": {
           "id:3": 912,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -474,
-          "y:3": 174
+          "x:3": -486,
+          "y:3": 168
         },
-        "146:10": {
+        "145:10": {
           "id:3": 921,
           "sizeX:3": 48,
           "sizeY:3": 48,
