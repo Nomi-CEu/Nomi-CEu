@@ -277,7 +277,7 @@ alloy_blast_smelter.recipeBuilder()
 
 // Dark Steel
 alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustSteel>, <minecraft:obsidian>])
+	.inputs([<metaitem:dustSteel>, <metaitem:dustObsidian>])
 	.fluidOutputs(<liquid:dark_steel> * 144)
 	.circuit(2)
 	.property("temperature", 1200)

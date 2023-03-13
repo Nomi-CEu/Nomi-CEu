@@ -104,8 +104,10 @@ recipes.addShaped(<simplyjetpacks:metaitem:4>, [[<minecraft:leather>, <ore:plate
 //EIO Alloys
 // Dark steel
 alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <minecraft:obsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <actuallyadditions:item_crystal:3>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
 alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <minecraft:obsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <metaitem:dustObsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <metaitem:dustObsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <actuallyadditions:item_crystal:3>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
 alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <actuallyadditions:item_crystal:3>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
 
 // Electrical Steel
