@@ -26,6 +26,13 @@ recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 1 as byt
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 2 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>, <minecraft:gunpowder>]);
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 3 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>, <minecraft:gunpowder>, <minecraft:gunpowder>]);
 
+/* Tool Belt */
+recipes.remove(<toolbelt:pouch>);
+recipes.addShaped(<toolbelt:pouch>, [
+	[null, <minecraft:gold_ingot>, null],
+	[<minecraft:leather>, <simplyjetpacks:metaitem:4>, <minecraft:leather>],
+	[null, <minecraft:leather>, null]]);
+
 //Dusts
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:toolMortar>]);
 recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:toolHammer>]);
