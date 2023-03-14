@@ -12,7 +12,7 @@ Thanks for taking the time to fill out this report!
 
 Note: if you need general tech support for things like server configuration, or general game support (how to I make this?), Discord is a better venue. Please open an issue only if there is a clear bug with the pack or if you have been asked to by one of the Discord staff.
 
-Check if the bug is fixed on the latest version before submitting. The latest version is v1.5.1.
+Check if the bug is fixed on the latest version before submitting. The latest version is v1.5.2.
 
 **Pack Version:**
 Replace this text with the version number of the pack, or the commit hash, if you downloaded from GitHub.

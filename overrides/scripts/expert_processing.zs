@@ -223,6 +223,8 @@ chemical_reactor.recipeBuilder()
     .duration(200).EUt(480).buildAndRegister();
 
 // Phosphorus
+
+/* Old Expert Phosphorous (removed in 1.5.2)
 // Calcium Dust * 5
 <recipemap:electrolyzer>.findRecipe(60, [<metaitem:dustApatite> * 9], null).remove();
 // Calcium Dust * 3
@@ -248,6 +250,14 @@ blast_furnace.recipeBuilder()
     .fluidOutputs(<liquid:carbon_monoxide> * 8000)
     .property("temperature", 1650)
     .duration(200).EUt(120).buildAndRegister();
+*/
+
+// Add recipe from pyromorphite to phosphate, similar to apatite recipe
+electrolyzer.recipeBuilder()
+    .inputs(<metaitem:dustPyromorphite> * 9)
+    .outputs(<metaitem:dustLead> * 5, <metaitem:dustPhosphate> * 3)
+    .fluidOutputs(<liquid:chlorine> * 1000)
+    .duration(288).EUt(60).buildAndRegister();
 
 // Vanadium
 //// Magnetite Dust * 1

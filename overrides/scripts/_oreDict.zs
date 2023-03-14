@@ -1322,6 +1322,13 @@ for oreDictEntry, items in miscDisabled {
 <ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
 <ore:nuggetDraconiumAwakened>.add(<metaitem:nuggetAwakenedDraconium>);
 
+// Chisel Blocks fix
+// Aluminium (not aluminum)
+<ore:blockAluminum>.add(<metaitem:blockAluminium>);
+
+// Coal Coke (not fuelCoke)
+<ore:blockCoalCoke>.add(<metaitem:blockCoke>);
+
 //Ores
 <ore:oreIron>.add(<minecraft:iron_ore>);
 <ore:oreCoal>.add(<minecraft:coal_ore>);
@@ -2617,6 +2624,59 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_crafting_terminal>); // Crafting Wireless
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_pattern_terminal>); // Pattern Wireless
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_fluid_terminal>); // Fluid Wireless
+
+<ore:questbookChisels>.add(<chisel:chisel_iron>);
+<ore:questbookChisels>.add(<chisel:chisel_diamond>);
+<ore:questbookChisels>.add(<chisel:chisel_hitech>);
+
+// Add All GT Super and Quantum Tanks (apart from creative)
+// Super Tanks
+<ore:questbookTanks>.add(<metaitem:super_tank.lv>);
+<ore:questbookTanks>.add(<metaitem:super_tank.mv>);
+<ore:questbookTanks>.add(<metaitem:super_tank.hv>);
+<ore:questbookTanks>.add(<metaitem:super_tank.ev>);
+<ore:questbookTanks>.add(<metaitem:super_tank.iv>);
+
+// Quantum Tanks
+<ore:questbookTanks>.add(<metaitem:quantum_tank.iv>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.luv>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.zpm>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.uv>);
+<ore:questbookTanks>.add(<metaitem:quantum_tank.uhv>);
+
+/* Nuclearcraft Quests: */
+// Neptunium
+<ore:questbookNeptunium>.add(<nuclearcraft:neptunium>);
+<ore:questbookNeptunium>.add(<nuclearcraft:neptunium:4>);
+
+// Plutonium
+<ore:questbookPlutonium>.add(<nuclearcraft:plutonium>);
+<ore:questbookPlutonium>.add(<nuclearcraft:plutonium:12>);
+<ore:questbookPlutonium>.add(<metaitem:ingotPlutonium>);
+<ore:questbookPlutonium>.add(<metaitem:ingotPlutonium241>);
+
+// Americium
+<ore:questbookAmericium>.add(<nuclearcraft:americium>);
+<ore:questbookAmericium>.add(<nuclearcraft:americium:4>);
+<ore:questbookAmericium>.add(<nuclearcraft:americium:8>);
+
+// Curium
+<ore:questbookCurium>.add(<nuclearcraft:curium>);
+<ore:questbookCurium>.add(<nuclearcraft:curium:4>);
+<ore:questbookCurium>.add(<nuclearcraft:curium:8>);
+<ore:questbookCurium>.add(<nuclearcraft:curium:12>);
+
+// Berkelium
+<ore:questbookBerkelium>.add(<nuclearcraft:berkelium>);
+<ore:questbookBerkelium>.add(<nuclearcraft:berkelium:4>);
+
+// Californium
+<ore:questbookCalifornium>.add(<nuclearcraft:californium>);
+<ore:questbookCalifornium>.add(<nuclearcraft:californium:4>);
+<ore:questbookCalifornium>.add(<nuclearcraft:californium:8>);
+<ore:questbookCalifornium>.add(<nuclearcraft:californium:12>);
+
+/* End NC quests */
 
 // Add all GT Item Pipes
 for pipe in <ore:pipe*Item*>{
