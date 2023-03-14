@@ -1322,6 +1322,13 @@ for oreDictEntry, items in miscDisabled {
 <ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
 <ore:nuggetDraconiumAwakened>.add(<metaitem:nuggetAwakenedDraconium>);
 
+// Chisel Blocks fix
+// Aluminium (not aluminum)
+<ore:blockAluminum>.add(<metaitem:blockAluminium>);
+
+// Coal Coke (not fuelCoke)
+<ore:blockCoalCoke>.add(<metaitem:blockCoke>);
+
 //Ores
 <ore:oreIron>.add(<minecraft:iron_ore>);
 <ore:oreCoal>.add(<minecraft:coal_ore>);
