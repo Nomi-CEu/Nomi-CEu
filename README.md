@@ -38,7 +38,7 @@ Installation instructions:
 
 ## Bansoukou
 This pack uses four bansoukou patches. 
-The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/tree/1.12.2), the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution/tree/1.12.2), the third one is for [Tool Belt](hhttps://github.com/gigaherz/ToolBelt/tree/1.12.x), and the fourth one is for [GregTech](https://github.com/GregTechCEu/GregTech).
+The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/tree/1.12.2), the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution/tree/1.12.2), the third one is for [Tool Belt](https://github.com/gigaherz/ToolBelt/tree/1.12.x), and the fourth one is for [GregTech](https://github.com/GregTechCEu/GregTech).
 
 The four patch repos are:
 - [NuclearCraft](https://github.com/Exaxxion/NuclearCraft/tree/2.18y-ceu). This fixes GTCEu incompatability with NuclearCraft.
