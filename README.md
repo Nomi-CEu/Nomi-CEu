@@ -37,12 +37,13 @@ Installation instructions:
 - If you are on an existing world, run `/bq_admin default load` to load the hard mode questbook.
 
 ## Bansoukou
-This pack uses three bansoukou patches. 
-The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft), the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution), and the third one is for [GregTech](https://github.com/GregTechCEu/GregTech).
+This pack uses four bansoukou patches. 
+The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/tree/1.12.2), the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution/tree/1.12.2), the third one is for [Tool Belt](hhttps://github.com/gigaherz/ToolBelt/tree/1.12.x), and the fourth one is for [GregTech](https://github.com/GregTechCEu/GregTech).
 
-The three patch repos are:
+The four patch repos are:
 - [NuclearCraft](https://github.com/Exaxxion/NuclearCraft/tree/2.18y-ceu). This fixes GTCEu incompatability with NuclearCraft.
 - [Draconic Evolution](https://github.com/IntegerLimit/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks, in the Energy Core and Reactor.
+- [Tool Belt](https://github.com/gigaherz/ToolBelt/tree/1.12.x). This simply adds changes to the lang, in [this PR](https://github.com/gigaherz/ToolBelt/pull/132), to the mod, because of a lack of a update.
 - [Gregtech](https://github.com/IntegerLimit/GregTech/tree/remove-small-storage-cover). This fixes the incompatibility between latest GregTech and latest ULV covers. This patch is to be removed when this incompatibility is fixed in a future GT update.
 
 If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/IntegerLimit/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
