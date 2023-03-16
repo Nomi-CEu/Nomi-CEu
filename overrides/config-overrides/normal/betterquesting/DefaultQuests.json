@@ -56503,7 +56503,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A mixture of Clay and Brick produces large quantities of §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r, which §2forms the basis of LV Machine Hulls.§r\n\nThe §3PBF§r has been changed to be blazing fast - just 20 seconds per §6Steel Ingot§r! You will still want to keep it running, as you won\u0027t stop needing Steel.",
+          "desc:8": "A mixture of Clay and Brick produces large quantities of §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r, which §2forms the basis of LV Machine Hulls§r, and allows you to make §6Belt Pouches§r, for upgrading your §eTool Belt§r.\n\nThe §3PBF§r has been changed to be blazing fast - just 20 seconds per §6Steel Ingot§r! You will still want to keep it running, as you won\u0027t stop needing Steel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62178,6 +62178,71 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1021:10": {
+      "preRequisites:11": [
+        4
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is `R\u0027), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "toolbelt:belt"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tool Belt",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1021,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "toolbelt:belt"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -67442,6 +67507,13 @@
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 132
+        },
+        "59:10": {
+          "id:3": 1021,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 60
         }
       }
     },

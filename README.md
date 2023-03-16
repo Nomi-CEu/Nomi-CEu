@@ -37,12 +37,13 @@ Installation instructions:
 - If you are on an existing world, run `/bq_admin default load` to load the hard mode questbook.
 
 ## Bansoukou
-This pack uses two bansoukou patches. 
-The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft), and the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution).
+This pack uses three bansoukou patches. 
+The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/tree/1.12.2), the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution/tree/1.12.2), and the third one is for [Tool Belt](https://github.com/gigaherz/ToolBelt/tree/1.12.x).
 
-The two patch repos are:
+The three patch repos are:
 - [NuclearCraft](https://github.com/Exaxxion/NuclearCraft/tree/2.18y-ceu). This fixes GTCEu incompatability with NuclearCraft.
 - [Draconic Evolution](https://github.com/IntegerLimit/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks, in the Energy Core and Reactor.
+- [Tool Belt](https://github.com/gigaherz/ToolBelt/tree/1.12.x). This simply adds changes to the lang, in [this PR](https://github.com/gigaherz/ToolBelt/pull/132), to the mod, because of a lack of a update.
 
 If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/IntegerLimit/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
 
