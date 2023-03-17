@@ -17,10 +17,18 @@ case "$MODE" in
   N|n|normal)
     cp -rf "$NORMAL_CFG"/* "$TARGET"
     rm -f "$TARGET/globalgamerules.cfg"
+    if [ -f "server.properties" ] && [ -f "server.properties.normal" ]; then
+        mv "server.properties" "server.properties.expert"
+        mv "server.properties.normal" "server.properties"
+    fi
   ;;
 
   E|e|expert)
     cp -rf "$EXPERT_CFG"/* "$TARGET"
+    if [ -f "server.properties" ] && [ -f "server.properties.expert" ]; then
+        mv "server.properties" "server.properties.normal"
+        mv "server.properties.expert" "server.properties"
+    fi
   ;;
 
   *)

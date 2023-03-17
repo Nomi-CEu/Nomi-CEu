@@ -17,9 +17,21 @@ if "%errorlevel%" == "2" goto copyExpert
 :copyNormal
 robocopy "%normalCfgPath%" "%targetPath%" *.* /e /nfl /ndl
 del "%targetPath%\globalgamerules.cfg"
+if exist server.properties.normal (
+    move server.properties server.properties.expert
+    move server.properties.normal server.properties
+) else (
+    echo Server.properties file not moved
+)
 goto end
 :copyExpert
 robocopy "%expertCfgPath%" "%targetPath%" *.* /e /nfl /ndl
+if exist server.properties.expert (
+    move server.properties server.properties.normal
+    move server.properties.expert server.properties
+) else (
+    echo Server.properties file not moved
+)
 goto end
 
 :end
