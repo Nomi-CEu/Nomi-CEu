@@ -24,9 +24,7 @@
 		"projectID": 60089,
 		"fileID": 2671937,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 64578,
@@ -102,17 +100,13 @@
 		"projectID": 226406,
 		"fileID": 2857869,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 226447,
 		"fileID": 2477566,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 227083,
@@ -213,9 +207,7 @@
 		"projectID": 238747,
 		"fileID": 2739582,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 239197,
@@ -256,9 +248,7 @@
 		"projectID": 243478,
 		"fileID": 2745657,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 244559,
@@ -314,9 +304,7 @@
 		"projectID": 250398,
 		"fileID": 3025548,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 250419,
@@ -332,9 +320,7 @@
 		"projectID": 251407,
 		"fileID": 2624712,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 251792,
@@ -401,7 +387,7 @@
 		"fileID": 2512758,
 		"required": true
 	},
-    {
+    	{
 		"projectID": 260262,
 		"fileID": 3459767,
 		"required": true
@@ -425,9 +411,7 @@
 		"projectID": 267602,
 		"fileID": 2915363,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 269024,
@@ -453,17 +437,13 @@
 		"projectID": 271492,
 		"fileID": 2469710,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 271740,
 		"fileID": 2707353,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 271835,
@@ -519,9 +499,7 @@
 		"projectID": 282313,
 		"fileID": 2689835,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 283644,
@@ -532,9 +510,7 @@
 		"projectID": 284904,
 		"fileID": 2568865,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 285612,
@@ -591,7 +567,7 @@
 		"fileID": 2669468,
 		"required": true
 	},
-    {
+    	{
 		"projectID": 306028,
 		"fileID": 2833640,
 		"required": true
@@ -655,9 +631,7 @@
 		"projectID": 383632,
 		"fileID": 3056455,
 		"required": true,
-		"sides": [
-			"client"
-		]
+		"sides": ["client"]
 	},
 	{
 		"projectID": 386188,
@@ -757,6 +731,11 @@
 	{
 		"projectID": 635555,
 		"fileID": 4345324,
+		"required": true
+	},
+	{
+		"projectID": 687577,
+		"fileID": 4405662,
 		"required": true
 	},
 	{
