@@ -1,0 +1,1 @@
+println("[Materials.groovy] Start GT Materials Registration")

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "contenttweaker:blocks/denseoilshaleup",
+    "down":  "contenttweaker:blocks/denseoilshaleup",
+    "up":    "contenttweaker:blocks/denseoilshaleup",
+    "north": "contenttweaker:blocks/denseoilshalenorth",
+    "south": "contenttweaker:blocks/denseoilshalenorth",
+    "west":  "contenttweaker:blocks/denseoilshaleeast",
+    "east":  "contenttweaker:blocks/denseoilshaleeast"
+  }
+}
