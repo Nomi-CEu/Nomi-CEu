@@ -8,3 +8,5 @@ overrides/resources/.DS_Store
 .DS_Store
 buildtools/build.bat
 /.idea
+/lib
+*.iml
