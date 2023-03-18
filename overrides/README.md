@@ -3,7 +3,7 @@ Config files for normal and hard modes are found in `\config-overrides\normal` a
 
 Users can use any of the below methods to repalace configs: 
 - Manual: 
-    - drag the files inside `\config-overrides\expert` into the main `config` folder, as shown in image:
+    - Drag the files inside `\config-overrides\expert` into the main `config` folder, as shown in image:
 
 ![image](https://user-images.githubusercontent.com/61507029/168111281-65006a94-4b4d-4255-aca1-1f5039eec705.png)
     - Following this
@@ -15,5 +15,5 @@ Users can use any of the below methods to repalace configs:
         - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
     - Any GNU/Linux (Mac and Linux) System:
         - Run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` to download the file.
-        - verify the contents with your editor of choice.
-        - run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
+        - Verify the contents with your editor of choice.
+        - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
