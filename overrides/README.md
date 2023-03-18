@@ -1,5 +1,5 @@
-# Hard mode config files
-Config files for normal and hard modes are found in `\config-overrides\normal` and `\config-overrides\expert` respectively.
+# Expert Mode config files
+Config files for normal and expert mode are found in `\config-overrides\normal` and `\config-overrides\expert` respectively.
 
 Users can use any of the below methods to replace configs: 
 - Manual: 
