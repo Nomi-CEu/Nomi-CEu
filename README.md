@@ -31,7 +31,16 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
     - Stabilized Micro Miners for late-game infinite resources  
 - Harder recipes for assorted things like Iridium, Graphene, Numismatic Dynamos, and more  
 
-installation instructions: [here](overrides/README.md)
+Installation:
+    - Windows: 
+        - Download [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat)(right click - save as) save it to the root directory of the pack (the same level as `\config`).
+        - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
+    - Any GNU/Linux (Mac and Linux):
+        - Run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` to download the file.
+        - Verify the contents with your editor of choice.
+        - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
+
+Manual installation instructions: [here](overrides/README.md)
 
 ## Bansoukou
 This pack uses three bansoukou patches. 
@@ -46,7 +55,7 @@ If there are issues or crashes with Draconic Evolution, please report them to [h
 
 ## Credits
 Original pack by [Exaxxion](https://github.com/Exaxxion).  
-Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).
+Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
 GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).   
 Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/). ([Permission](https://ibb.co/bBpksq0) at [this message](https://discord.com/channels/771187253937438762/774353150278369351/938438074503942184) in [FurfSky Reborn server](https://discord.gg/fsr)).  
 Certain hard mode recipe chains and Magnetron texture from [GCY Science](https://github.com/GregTechCEu/gregicality-science).  
