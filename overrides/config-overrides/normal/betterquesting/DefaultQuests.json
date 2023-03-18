@@ -748,8 +748,7 @@
     },
     "9:10": {
       "preRequisites:11": [
-        141,
-        805
+        141
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -2122,7 +2121,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 12,
+              "Count:3": 1,
               "Damage:2": 32003,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
@@ -2277,7 +2276,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A mysterious alloy, made from §6Pulsating Dust§r and an §6Iron Ingot§r.\n\nIf you can\u0027t find one otherwise, §6Ender Pearls§r can be crafted using Pulsating Dust and a §6Diamond§r in an §3Alloy Smelter§r.",
+          "desc:8": "A mysterious alloy, made from §6Pulsating Dust§r and §6Iron§r.\n\nIf you can\u0027t find one otherwise, §6Ender Pearls§r can be crafted using Pulsating Dust and a §6Diamond§r in an §3Alloy Smelter§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2350,7 +2349,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A refined type of steel, made from §6Silicon Dust§r and a §6Steel Ingot§r.\n\nThis material is frequently used in electronics and digital equipment.",
+          "desc:8": "A refined type of steel, made from §6Silicon Dust§r and §6Steel§r.\n\nThis material is frequently used in electronics and digital equipment.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7760,7 +7759,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to §29 stacks of 512 items (or 4608 items)§r for passive autocrafting and to push into other inventories. Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\n",
+          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to §29 stacks of 512 items (or 4608 items)§r for passive autocrafting and to push into other inventories. Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\nAlso, if you connect a gadget from §bBuilding Gadgets§r to the Interface, the gadget will pull materials straight from the attached AE2 network, §aNOT§r the Interface. Particularly useful with the §6Auto Chisel§r. \n\nThere is information of the Gadgets, and how to connect them to inventories, in the §eInspector Gadget§r quest in §cGenesis§r, and information of the Auto Chisel in the §eAuto Chisel§r quest in §cMatter Energy§r or §cThe Beginning§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9854,8 +9853,7 @@
     },
     "141:10": {
       "preRequisites:11": [
-        4,
-        805
+        4
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10635,7 +10633,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9 Oil§r distillation will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than five fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2 You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
+          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9 Oil§r distillation, with its four outputs, will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than four output fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r. Also, any recipe that has an item output will need an §6Output Bus§r, anywhere on the bottom layer.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The § §6Energy Input Hatch§r can go wherever you can fit it on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2 You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10702,18 +10700,12 @@
               "id:8": "gregtech:machine"
             },
             "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
               "Count:3": 4,
               "Damage:2": 1196,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "5:10": {
+            "4:10": {
               "Count:3": 34,
               "Damage:2": 5,
               "OreDict:8": "",
@@ -16405,8 +16397,7 @@
     },
     "239:10": {
       "preRequisites:11": [
-        238,
-        256
+        238
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -17240,7 +17231,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §232§r stacks of §6End Oilsands Ore§r, and 16 §6Compressed Infinity Dust Blocks§r, equivalent to 1296 §6Infinity Dust§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Lapis Ore\n* Dense Diamond Ore\n* Dense Coal Ore\n* Dense Emerald Ore\n* Dense Redstone Ore§r",
+          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §232§r stacks of §6End Oilsands Ore§r, and 32 §6Compressed Infinity Dust Blocks§r, equivalent to 2592 §6Infinity Dust§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Lapis Ore\n* Dense Diamond Ore\n* Dense Coal Ore\n* Dense Emerald Ore\n* Dense Redstone Ore§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22922,9 +22913,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 32001,
             "OreDict:8": "",
-            "id:8": "draconicevolution:draconium_dust"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -23746,7 +23737,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. \n\nFor the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. This reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
+          "desc:8": "The full complexity of §bNuclearCraft§r is far too much for the scope of this quest guide, so §eyou\u0027re encouraged to watch a tutorial or read a guide online§r. \n\nFor the purposes of this particular quest, you\u0027ll be building a breeder reactor to make §6Plutonium§r, and other nuclear elements. While this reactor may seem very expensive, it will be worth it, and you will probably expand it soon. \n\nThis reactor is capable of running any Low-Enriched fuel, such as TBU and LEU-235. This is a basic reactor and can be expanded, following the same pattern, to run faster. Alternatively, reactors can be designed to produce a decent amount of power for the mid game of the pack.\n\nFirst, set up your 150 §6Fission Reactor Casings§r to encase a 5x5x5 cube shape of empty air. Any of these reactor casings can be changed to §6Transparent Fission Reactor Casings§r. The Casings should only cover the faces of the interior cube, not the edges or corners. You should have exactly the right number of Casings to encase a 5x5x5 space.\n\nNext, create a hole so you can get inside the cube. Place the §6Reactor Cells§r in an alternating pattern, with the reactor cells at the corners, and spaces between each one. Alternate between each row, creating a grid pattern. Fill in the §6Cryotheum Coolers§r between, in the empty holes. Do this for every layer, alternating between §6Cryotheum Coolers§r on the corners and §6Reactor Cells§r on the corners. You should have the perfect amount of §6Reactor Cells§r and §6Cryotheum Coolers§r for this, and the third and final layers should be the same as the first one. The reactor will now be complete when you reseal it up with the Casings you removed to access the interior.\n\nFinally, place the §3Fission Reactor Controller§r along any edge or corner of the reactor. Opening the Reactor Controller GUI should let you know that the structure was properly formed; if not, go back and check what you did wrong.\n\nThe lever is placed on the reactor, as a redstone signal is required for it to start working. §cReactors can overheat and melt if the temperature exceeds its ability to cool.§r You can make a safety loop on the controller (instead of the lever) to automatically shut off the reactor when it starts getting hot using a §aRedstone Conduit§r, a §aRedstone Sensor Filter§r (on the input channel), and a §aRedstone NOT Filter§r (on the output channel). Make sure input and output are on the same channel color.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24242,9 +24233,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32026,
-              "OreDict:8": "ingotInfinity",
-              "id:8": "gregtech:meta_ingot"
+              "Damage:2": 6,
+              "OreDict:8": "",
+              "id:8": "avaritia:resource"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -26130,8 +26121,11 @@
       "tasks:9": {}
     },
     "393:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26868,8 +26862,11 @@
       }
     },
     "405:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -30631,7 +30628,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystal§r and §6Vibrant Crystal§r from EnderIO.",
+          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33114,9 +33111,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 166,
+            "Damage:2": 32017,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -33885,7 +33882,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Phosphorus§r can be obtained by processing §6Tricalcium Phosphate Ore§r into dust and electrolyzing several times. This ore is found in §6Apatite§r veins.",
+          "desc:8": "§6Phosphorus§r can be obtained by processing §6Tricalcium Phosphate Ore§r or §6Apatite Ore§r into dust and electrolyzing several times. \n\nBoth ores are found in §6Apatite§r veins.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36228,9 +36225,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32,
+            "Damage:2": 32019,
             "OreDict:8": "",
-            "id:8": "redstonearsenal:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36274,9 +36271,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32,
-              "OreDict:8": "ingotElectrumFlux",
-              "id:8": "redstonearsenal:material"
+              "Damage:2": 32019,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36294,9 +36291,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 165,
+            "Damage:2": 32010,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36360,9 +36357,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 167,
+            "Damage:2": 32018,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36426,15 +36423,15 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 5,
+            "Damage:2": 2062,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Pulsating Iron Ingots",
+          "name:8": "§2Rhodium Plated Lumium-Palladium",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -36472,7 +36469,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32014,
+              "Damage:2": 2062,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             }
@@ -36692,9 +36689,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 32023,
             "OreDict:8": "",
-            "id:8": "avaritia:resource"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36862,9 +36859,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 32015,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36928,9 +36925,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8,
+            "Damage:2": 32025,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37127,9 +37124,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 6,
+            "Damage:2": 32003,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37193,9 +37190,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 2,
+            "Damage:2": 32013,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37259,9 +37256,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 32012,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37326,9 +37323,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 7,
+            "Damage:2": 32024,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -41931,7 +41928,7 @@
             "id:8": "nuclearcraft:fuel_uranium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Uranium Fission",
@@ -41975,12 +41972,6 @@
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "nuclearcraft:fuel_uranium"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_uranium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42042,12 +42033,12 @@
     },
     "671:10": {
       "preRequisites:11": [
-        672
+        350
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Thorium is another basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2(Black) Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium 232§r, made from Thorium enriched in a §3Thermal Centrifuge§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium 233§r, §6Uranium 235§r, §6§6Neptunium 236§r, and §6Neptunium 237§r.",
+          "desc:8": "Thorium is a basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2Black Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium 232§r, made from Thorium enriched in a §3Thermal Centrifuge§r.\n\nThis fuel is processed in your §3Fission Reactor§r by placing it in the controller. When a redstone signal is applied it will burn the fuel, generating some power from the reactor and after a while you\u0027ll get a §6Depleted TBU Fuel§r§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium 233§r, §6Uranium 235§r, §6§6Neptunium 236§r, and §6Neptunium 237§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42056,7 +42047,7 @@
             "id:8": "nuclearcraft:fuel_thorium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "§2Thorium Fission",
@@ -42097,21 +42088,15 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 9,
-              "Damage:2": 109,
+              "Damage:2": 4,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "nuclearcraft:thorium"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "nuclearcraft:fuel_thorium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_thorium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42129,15 +42114,15 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8,
+            "Damage:2": 116,
             "OreDict:8": "",
-            "id:8": "nuclearcraft:uranium"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Nuclear Fuel Infrastructure",
+          "name:8": "§2Uranium Fuel Infrastructure",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -42176,7 +42161,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 116,
-              "OreDict:8": "ingotUranium",
+              "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             },
             "1:10": {
@@ -42197,7 +42182,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Low-Enriched Neptunium 236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium 237§r to §6Neptunium 236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN 236§r gives a small bit of Neptunium 237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.\n",
+          "desc:8": "§oNote: this quest accepts Neptunium 236 or 237.§r\n\nLow-Enriched Neptunium 236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium 237§r to §6Neptunium 236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN 236§r gives a small bit of Neptunium 237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42206,7 +42191,7 @@
             "id:8": "nuclearcraft:fuel_neptunium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Neptunium Fission",
@@ -42247,27 +42232,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:neptunium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 4,
-              "OreDict:8": "",
+              "OreDict:8": "questbookNeptunium",
               "id:8": "nuclearcraft:neptunium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_neptunium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_neptunium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42276,7 +42243,8 @@
     },
     "674:10": {
       "preRequisites:11": [
-        671
+        671,
+        672
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42290,7 +42258,7 @@
             "id:8": "nuclearcraft:uranium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "LEU-233",
@@ -42333,13 +42301,13 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_uranium"
+              "id:8": "nuclearcraft:uranium"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_uranium"
+              "id:8": "nuclearcraft:fuel_uranium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42349,12 +42317,13 @@
     "675:10": {
       "preRequisites:11": [
         669,
-        674
+        674,
+        673
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Low-Enriched Plutonium 239, or §6LEP-239§r, is made from the usual 8:1 ratio of two isotopes of §6Plutonium§r acquired from earlier depleted fuels.\n\n§6Depleted LEP-239§r will give you some §6Curium§r for further enrichment.\n\nHigh-Enriched Plutonium fuels will give better results, but §cgenerate a lot more heat§r. Make sure your reactor cooling is up to the task.",
+          "desc:8": "§oNote: this quest accepts Plutonium 238, 239, 241 or 242.§r\n\nLow-Enriched Plutonium 239, or §6LEP-239§r, is made from the usual 8:1 ratio of two isotopes of §6Plutonium§r, 242 and 239, acquired from earlier depleted fuels. You will also need §6Plutonium§r in large amounts for §eSunnarium§r.\n\nThe two sources of Plutonium are Uranium-based fuels and Neptunium-based fuels.\n\n§6Depleted LEP-239§r will give you some different isotopes of §6Curium§r for further enrichment.\n\nHigh-Enriched Plutonium fuels will give better results, but §cgenerate a lot more heat§r. Make sure your reactor cooling is up to the task.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42363,7 +42332,7 @@
             "id:8": "nuclearcraft:fuel_plutonium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Plutonium Fission",
@@ -42404,27 +42373,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 81,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 12,
-              "OreDict:8": "",
+              "OreDict:8": "questbookPlutonium",
               "id:8": "nuclearcraft:plutonium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_plutonium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_plutonium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42439,7 +42390,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Low-Enriched Curium 243, or §6LECm-243§r, is made from §6Curium-243§r and §6Curium-246§r.\n\n§6Depleted LECm-243 Fuel§r gives mostly Curium-246 back, but also small quantities of §6Berkelium§r and §6Californium§r isotopes.\n\n§6HECm-247§r is a better alternative for strictly Californium, if your reactor can withstand the heat.",
+          "desc:8": "§oNote: this quest accepts Curium 243, 245, 246 or 247.§r\n\nLow-Enriched Curium 243, or §6LECm-243§r, is made from §6Curium-243§r and §6Curium-246§r. You will also need §6Curium§r in large amounts for §eSunnarium§r.\n\n§6Depleted LECm-243 Fuel§r gives mostly Curium-246 back, but also small quantities of §6Berkelium§r and §6Californium§r isotopes.\n\n§6HECm-247§r is a better alternative for strictly Californium, if your reactor can withstand the heat.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42448,7 +42399,7 @@
             "id:8": "nuclearcraft:fuel_curium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Curium Fission",
@@ -42489,27 +42440,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:curium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 8,
-              "OreDict:8": "",
+              "OreDict:8": "questbookCurium",
               "id:8": "nuclearcraft:curium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_curium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_curium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42517,13 +42450,18 @@
       }
     },
     "677:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        673
+        673,
+        674
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Americium 242§r and §6Americium 243§r are used to make §6LEA-242 Fuel§r.\n\nThere\u0027s also §6Americium 241§r, but this is only useful for making RTGs (which produce small amounts of RF continuously) or decaying down into §6Neptunium§r.\n\n§6Depleted LEA 242 Fuels§r§r will return large amounts of §6Curium 246§r and small amounts of other isotopes.",
+          "desc:8": "§oNote: this quest accepts Americium 241, 242, or 243.\n\n§6Americium 242§r and §6Americium 243§r are used to make §6LEA-242 Fuel§r.\n\nThere\u0027s also §6Americium 241§r, but this is only useful for making RTGs (which produce small amounts of RF continuously) or decaying down into §6Neptunium§r.\n\n§6Depleted LEA 242 Fuels§r§r will return a lot of §6Curium 246§r, and small amounts of the other three isotopes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42532,12 +42470,12 @@
             "id:8": "nuclearcraft:fuel_americium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Americium Fission",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -42573,27 +42511,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:americium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 8,
-              "OreDict:8": "",
+              "OreDict:8": "questbookAmericium",
               "id:8": "nuclearcraft:americium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_americium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_americium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42607,7 +42527,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Depleted LEB-248 Fuel§r results in several different isotopes of §6Californium§r.",
+          "desc:8": "§oNote: this quest accepts Berkelium 247 or 248.\n\n§6LEB-248 Fuel§r is made with §e8 §6Berkelium-247§r and §e1 §6Berkelium 248§r. When depleted, it results in several different isotopes of §6Californium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42616,7 +42536,7 @@
             "id:8": "nuclearcraft:fuel_berkelium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Berkelium Fission",
@@ -42657,27 +42577,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 4,
-              "OreDict:8": "",
+              "Damage:2": 0,
+              "OreDict:8": "questbookBerkelium",
               "id:8": "nuclearcraft:berkelium"
-            },
-            "1:10": {
-              "Count:3": 8,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:berkelium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_berkelium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_berkelium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42691,7 +42593,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Californium§r is the final fissile material in the NuclearCraft processing chain.\n\n§6Depleted LECf-249 Fuel§r results in... different isotopes of Californium.\n\nUnless you want §6Californium RTGs§r or are experimenting with further fission routes, this step is probably unnecessary for general materials processing.",
+          "desc:8": "§oNote: this quest accepts Californium 249, 250, 251 or 252.\n\n§6Californium§r is the final fissile material in the NuclearCraft processing chain.\n\n§6LECf-249 Fuel§r is made with the 8:1 ratio of §6Californium-252§r and §6Californium-249§r. When depleted, it results in... different isotopes of Californium.\n\nUnless you want §6Californium RTGs§r or are experimenting with further fission routes, this step is probably unnecessary for general materials processing.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42700,7 +42602,7 @@
             "id:8": "nuclearcraft:fuel_californium"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Californium Fission",
@@ -42741,27 +42643,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:californium"
-            },
-            "1:10": {
-              "Count:3": 8,
               "Damage:2": 12,
-              "OreDict:8": "",
+              "OreDict:8": "questbookCalifornium",
               "id:8": "nuclearcraft:californium"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fuel_californium"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:depleted_fuel_californium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -45901,8 +45785,11 @@
       }
     },
     "743:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -46034,9 +45921,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 165,
+            "Damage:2": 32010,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -46810,7 +46697,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This pack has §bBuilding Gadgets§r.\n\nThese devices can help you build, swap blocks, destroy massive areas, or even copy-paste regions. You need the blocks you plan to paste in your inventory though; it doesn\u0027t make them from nothing.\n\nAlso important to note that it won\u0027t work with TileEntities, so it pretty much only works with simple blocks (not stuff like machines).\n\nBy default, the config GUI is bound to §6G§r.",
+          "desc:8": "This pack has §bBuilding Gadgets§r.\n\nThese devices can help you build, swap blocks, destroy massive areas, or even copy-paste regions. You need the blocks you plan to paste in your inventory though; it doesn\u0027t make them from nothing.\n\nAlso important to note that it won\u0027t work with TileEntities, so it pretty much only works with simple blocks (not stuff like machines).\n\nA very cool feature of this mod is how you can §dshift-right click§r an §ainventory§r with any gadget (if you are using a §6Copy-Paste Gadget§r to do this, it must be on §ePaste§r mode) and the gadget will §dpull items from the inventory§r, `connecting\u0027 the gadget to the inventory.\n\nFor example, if you shift-right click a chest full of cobblestone, the gadget will use cobblestone from that chest to place blocks.\n\nBy default, the config GUI is bound to §6G§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48033,12 +47920,12 @@
     },
     "778:10": {
       "preRequisites:11": [
-        776
+        329
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§2You cannot use regular Draconium Blocks to build this structure. You must treat it with Americium to make Activated Draconium before it can be used in the Energy Storage Core.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §2Activated §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Wyvern Fusion Injectors§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy.\n\nSee the §bDraconic Evolution§r manual for more information on the material requirements for each tier, and more information on the §6Stabilizers§r and §6Pylons§r.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48097,6 +47984,12 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "draconicevolution:energy_pylon"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "draconicevolution:particle_generator"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -48540,8 +48433,11 @@
       }
     },
     "786:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49609,8 +49505,11 @@
       }
     },
     "803:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49765,40 +49664,6 @@
     },
     "805:10": {
       "preRequisites:11": [
-        3
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 1,
-          "desc:8": "a quest",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 1,
-          "name:8": "Genesis",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "",
-          "snd_update:8": "",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 805,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "806:10": {
-      "preRequisites:11": [
         166,
         226
       ],
@@ -49841,7 +49706,7 @@
         }
       }
     },
-    "807:10": {
+    "806:10": {
       "preRequisites:11": [
         163,
         413
@@ -49904,9 +49769,12 @@
         }
       }
     },
-    "808:10": {
+    "807:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49943,7 +49811,7 @@
         }
       }
     },
-    "809:10": {
+    "808:10": {
       "preRequisites:11": [
         367
       ],
@@ -50025,7 +49893,7 @@
         }
       }
     },
-    "810:10": {
+    "809:10": {
       "preRequisites:11": [
         260,
         278,
@@ -50093,9 +49961,12 @@
         }
       }
     },
-    "811:10": {
+    "810:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -50190,7 +50061,7 @@
         }
       }
     },
-    "812:10": {
+    "811:10": {
       "preRequisites:11": [
         988,
         977
@@ -50225,7 +50096,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "813:10": {
+    "812:10": {
       "preRequisites:11": [
         4
       ],
@@ -50277,7 +50148,7 @@
         }
       }
     },
-    "814:10": {
+    "813:10": {
       "preRequisites:11": [
         21
       ],
@@ -50359,7 +50230,7 @@
         }
       }
     },
-    "815:10": {
+    "814:10": {
       "preRequisites:11": [
         145
       ],
@@ -50433,7 +50304,7 @@
         }
       }
     },
-    "816:10": {
+    "815:10": {
       "preRequisites:11": [
         76,
         818
@@ -50499,7 +50370,7 @@
         }
       }
     },
-    "817:10": {
+    "816:10": {
       "preRequisites:11": [
         752
       ],
@@ -50588,7 +50459,7 @@
         }
       }
     },
-    "818:10": {
+    "817:10": {
       "preRequisites:11": [
         530
       ],
@@ -50653,7 +50524,7 @@
         }
       }
     },
-    "819:10": {
+    "818:10": {
       "preRequisites:11": [
         58
       ],
@@ -50742,7 +50613,7 @@
         }
       }
     },
-    "820:10": {
+    "819:10": {
       "preRequisites:11": [
         72,
         78,
@@ -50809,7 +50680,7 @@
         }
       }
     },
-    "821:10": {
+    "820:10": {
       "preRequisites:11": [
         27
       ],
@@ -50889,7 +50760,7 @@
         }
       }
     },
-    "822:10": {
+    "821:10": {
       "preRequisites:11": [
         82
       ],
@@ -50954,7 +50825,7 @@
         }
       }
     },
-    "823:10": {
+    "822:10": {
       "preRequisites:11": [
         727
       ],
@@ -51019,7 +50890,7 @@
         }
       }
     },
-    "824:10": {
+    "823:10": {
       "preRequisites:11": [
         95
       ],
@@ -51084,7 +50955,7 @@
         }
       }
     },
-    "825:10": {
+    "824:10": {
       "preRequisites:11": [
         153,
         899
@@ -51151,7 +51022,7 @@
         }
       }
     },
-    "826:10": {
+    "825:10": {
       "preRequisites:11": [
         825
       ],
@@ -51234,7 +51105,7 @@
         }
       }
     },
-    "827:10": {
+    "826:10": {
       "preRequisites:11": [
         177
       ],
@@ -51305,7 +51176,7 @@
         }
       }
     },
-    "828:10": {
+    "827:10": {
       "preRequisites:11": [
         198
       ],
@@ -51371,7 +51242,7 @@
         }
       }
     },
-    "829:10": {
+    "828:10": {
       "preRequisites:11": [
         779
       ],
@@ -51436,7 +51307,7 @@
         }
       }
     },
-    "830:10": {
+    "829:10": {
       "preRequisites:11": [
         93,
         974
@@ -51502,7 +51373,7 @@
         }
       }
     },
-    "831:10": {
+    "830:10": {
       "preRequisites:11": [
         830
       ],
@@ -51567,7 +51438,7 @@
         }
       }
     },
-    "832:10": {
+    "831:10": {
       "preRequisites:11": [
         830
       ],
@@ -51632,7 +51503,7 @@
         }
       }
     },
-    "833:10": {
+    "832:10": {
       "preRequisites:11": [
         830
       ],
@@ -51709,14 +51580,14 @@
         }
       }
     },
-    "834:10": {
+    "833:10": {
       "preRequisites:11": [
         96
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Super Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64,000 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Micro Miner§r recipes. Higher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft.",
+          "desc:8": "§oNote: This quest accepts any Super or Quantum Tank.\n\n§2Super and Quantum Tanks are the high-tier GT Fluid storage solution.§r\n\nThe first tier holds §64,000 buckets§r, and higher tiers hold more. They can also be used like Drums to put fluids in and out of machines.\n\nYou can conveniently configure §cvoiding§r for them to always void, start voiding at 95% capacity, or never void.\n\nThe item equivalent are §3Super Chests§r, which are used in certain §6Micro Miner§r recipes.\n\nHigher-tier versions of these are called §3Quantum Tanks§r and §3Quantum Chests§r. They all require their respective tier §3Hermetic Casings§r to craft.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51728,7 +51599,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Super Tanks",
+          "name:8": "§2Super and Quantum Tanks",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -51766,7 +51637,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1575,
-              "OreDict:8": "",
+              "OreDict:8": "questbookTanks",
               "id:8": "gregtech:machine"
             }
           },
@@ -51774,7 +51645,7 @@
         }
       }
     },
-    "835:10": {
+    "834:10": {
       "preRequisites:11": [
         93,
         974
@@ -51840,7 +51711,7 @@
         }
       }
     },
-    "836:10": {
+    "835:10": {
       "preRequisites:11": [
         147,
         259
@@ -51906,7 +51777,7 @@
         }
       }
     },
-    "837:10": {
+    "836:10": {
       "preRequisites:11": [
         91,
         836
@@ -51972,7 +51843,7 @@
         }
       }
     },
-    "838:10": {
+    "837:10": {
       "preRequisites:11": [
         194,
         526
@@ -52038,7 +51909,7 @@
         }
       }
     },
-    "839:10": {
+    "838:10": {
       "preRequisites:11": [
         904,
         882
@@ -52104,7 +51975,7 @@
         }
       }
     },
-    "840:10": {
+    "839:10": {
       "preRequisites:11": [
         323,
         791,
@@ -52171,7 +52042,7 @@
         }
       }
     },
-    "841:10": {
+    "840:10": {
       "preRequisites:11": [
         312
       ],
@@ -52236,7 +52107,7 @@
         }
       }
     },
-    "842:10": {
+    "841:10": {
       "preRequisites:11": [
         242,
         327
@@ -52302,7 +52173,7 @@
         }
       }
     },
-    "843:10": {
+    "842:10": {
       "preRequisites:11": [
         323
       ],
@@ -52397,7 +52268,7 @@
         }
       }
     },
-    "844:10": {
+    "843:10": {
       "preRequisites:11": [
         845,
         847
@@ -52463,7 +52334,7 @@
         }
       }
     },
-    "845:10": {
+    "844:10": {
       "preRequisites:11": [
         324,
         843
@@ -52529,7 +52400,7 @@
         }
       }
     },
-    "846:10": {
+    "845:10": {
       "preRequisites:11": [
         844
       ],
@@ -52594,7 +52465,7 @@
         }
       }
     },
-    "847:10": {
+    "846:10": {
       "preRequisites:11": [
         324,
         843
@@ -52660,7 +52531,7 @@
         }
       }
     },
-    "848:10": {
+    "847:10": {
       "preRequisites:11": [
         847
       ],
@@ -52725,7 +52596,7 @@
         }
       }
     },
-    "849:10": {
+    "848:10": {
       "preRequisites:11": [
         198
       ],
@@ -52790,7 +52661,7 @@
         }
       }
     },
-    "850:10": {
+    "849:10": {
       "preRequisites:11": [
         828,
         841,
@@ -52882,7 +52753,7 @@
         }
       }
     },
-    "851:10": {
+    "850:10": {
       "preRequisites:11": [
         312
       ],
@@ -52947,7 +52818,7 @@
         }
       }
     },
-    "852:10": {
+    "851:10": {
       "preRequisites:11": [
         677,
         749
@@ -53013,7 +52884,7 @@
         }
       }
     },
-    "853:10": {
+    "852:10": {
       "preRequisites:11": [
         827
       ],
@@ -53078,7 +52949,7 @@
         }
       }
     },
-    "854:10": {
+    "853:10": {
       "preRequisites:11": [
         196
       ],
@@ -53143,7 +53014,7 @@
         }
       }
     },
-    "855:10": {
+    "854:10": {
       "preRequisites:11": [
         607
       ],
@@ -53208,7 +53079,7 @@
         }
       }
     },
-    "856:10": {
+    "855:10": {
       "preRequisites:11": [
         855
       ],
@@ -53273,7 +53144,7 @@
         }
       }
     },
-    "857:10": {
+    "856:10": {
       "preRequisites:11": [
         339
       ],
@@ -53356,7 +53227,7 @@
         }
       }
     },
-    "858:10": {
+    "857:10": {
       "preRequisites:11": [
         255,
         857
@@ -53364,7 +53235,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Alloy Blast Smelter directly smelts dust combinations into molten Alloys, skipping the Mixer step. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\n§rThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for most normal alloys if you want. In particular, the yield of §6Energetic Alloy§r and §6Vibrant Alloy§r is §ddoubled§r.",
+          "desc:8": "§2The Alloy Blast Smelter directly smelts dust combinations into molten Alloys, skipping the Mixer step, and applying a 3/4 discount to your EBF time. Some molten alloys may need to be cooled in a Vacuum Freezer before being usable.\n\n§rThis is the only way to create some of the advanced alloys used in multiblock machines. You can also use it for most normal alloys if you want. In particular, the yield of §6Energetic Alloy§r and §6Vibrant Alloy§r is §ddoubled§r, and §6Red Alloy§r has a discount from 4 redstone per alloy, to 1 and a half.\n\nYou can also use the ABS for most Alloy Smelter alloys, apart from §6Steel§r, like §eInvar§r, §e§eConductive Iron§r§r, and §e§eDark Steel§r§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53434,7 +53305,7 @@
         }
       }
     },
-    "859:10": {
+    "858:10": {
       "preRequisites:11": [
         198,
         858
@@ -53500,7 +53371,7 @@
         }
       }
     },
-    "860:10": {
+    "859:10": {
       "preRequisites:11": [
         531,
         826,
@@ -53591,7 +53462,7 @@
         }
       }
     },
-    "861:10": {
+    "860:10": {
       "preRequisites:11": [
         607
       ],
@@ -53662,7 +53533,7 @@
         }
       }
     },
-    "862:10": {
+    "861:10": {
       "preRequisites:11": [
         727
       ],
@@ -53727,7 +53598,7 @@
         }
       }
     },
-    "863:10": {
+    "862:10": {
       "preRequisites:11": [
         727
       ],
@@ -53792,7 +53663,7 @@
         }
       }
     },
-    "864:10": {
+    "863:10": {
       "preRequisites:11": [
         827
       ],
@@ -53857,7 +53728,7 @@
         }
       }
     },
-    "865:10": {
+    "864:10": {
       "preRequisites:11": [
         827
       ],
@@ -53922,7 +53793,7 @@
         }
       }
     },
-    "866:10": {
+    "865:10": {
       "preRequisites:11": [
         727
       ],
@@ -53987,7 +53858,7 @@
         }
       }
     },
-    "867:10": {
+    "866:10": {
       "preRequisites:11": [
         727
       ],
@@ -54052,7 +53923,7 @@
         }
       }
     },
-    "868:10": {
+    "867:10": {
       "preRequisites:11": [
         234
       ],
@@ -54117,7 +53988,7 @@
         }
       }
     },
-    "869:10": {
+    "868:10": {
       "preRequisites:11": [
         139
       ],
@@ -54182,7 +54053,7 @@
         }
       }
     },
-    "870:10": {
+    "869:10": {
       "preRequisites:11": [
         139
       ],
@@ -54247,7 +54118,7 @@
         }
       }
     },
-    "871:10": {
+    "870:10": {
       "preRequisites:11": [
         139
       ],
@@ -54312,7 +54183,7 @@
         }
       }
     },
-    "872:10": {
+    "871:10": {
       "preRequisites:11": [
         325
       ],
@@ -54377,7 +54248,7 @@
         }
       }
     },
-    "873:10": {
+    "872:10": {
       "preRequisites:11": [
         287
       ],
@@ -54442,7 +54313,7 @@
         }
       }
     },
-    "874:10": {
+    "873:10": {
       "preRequisites:11": [
         727
       ],
@@ -54507,7 +54378,7 @@
         }
       }
     },
-    "875:10": {
+    "874:10": {
       "preRequisites:11": [
         6
       ],
@@ -54572,7 +54443,7 @@
         }
       }
     },
-    "876:10": {
+    "875:10": {
       "preRequisites:11": [
         196
       ],
@@ -54637,7 +54508,7 @@
         }
       }
     },
-    "877:10": {
+    "876:10": {
       "preRequisites:11": [
         287
       ],
@@ -54702,7 +54573,7 @@
         }
       }
     },
-    "878:10": {
+    "877:10": {
       "preRequisites:11": [
         847
       ],
@@ -54767,7 +54638,7 @@
         }
       }
     },
-    "879:10": {
+    "878:10": {
       "preRequisites:11": [
         323
       ],
@@ -54832,7 +54703,7 @@
         }
       }
     },
-    "880:10": {
+    "879:10": {
       "preRequisites:11": [
         397
       ],
@@ -54884,7 +54755,7 @@
         }
       }
     },
-    "881:10": {
+    "880:10": {
       "preRequisites:11": [
         153
       ],
@@ -54946,7 +54817,7 @@
         }
       }
     },
-    "882:10": {
+    "881:10": {
       "preRequisites:11": [
         325,
         750
@@ -54981,7 +54852,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "883:10": {
+    "882:10": {
       "preRequisites:11": [
         885
       ],
@@ -55046,7 +54917,7 @@
         }
       }
     },
-    "884:10": {
+    "883:10": {
       "preRequisites:11": [
         288
       ],
@@ -55111,7 +54982,7 @@
         }
       }
     },
-    "885:10": {
+    "884:10": {
       "preRequisites:11": [
         749
       ],
@@ -55176,7 +55047,7 @@
         }
       }
     },
-    "886:10": {
+    "885:10": {
       "preRequisites:11": [
         89
       ],
@@ -55241,7 +55112,7 @@
         }
       }
     },
-    "887:10": {
+    "886:10": {
       "preRequisites:11": [
         165
       ],
@@ -55307,7 +55178,7 @@
         }
       }
     },
-    "888:10": {
+    "887:10": {
       "preRequisites:11": [
         161,
         166,
@@ -55375,7 +55246,7 @@
         }
       }
     },
-    "889:10": {
+    "888:10": {
       "preRequisites:11": [
         827
       ],
@@ -55409,7 +55280,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "890:10": {
+    "889:10": {
       "preRequisites:11": [
         56
       ],
@@ -55448,7 +55319,7 @@
         }
       }
     },
-    "891:10": {
+    "890:10": {
       "preRequisites:11": [
         94
       ],
@@ -55510,7 +55381,7 @@
         }
       }
     },
-    "892:10": {
+    "891:10": {
       "preRequisites:11": [
         541
       ],
@@ -55588,7 +55459,7 @@
         }
       }
     },
-    "893:10": {
+    "892:10": {
       "preRequisites:11": [
         3
       ],
@@ -55627,7 +55498,7 @@
         }
       }
     },
-    "894:10": {
+    "893:10": {
       "preRequisites:11": [
         147
       ],
@@ -55692,7 +55563,7 @@
         }
       }
     },
-    "895:10": {
+    "894:10": {
       "preRequisites:11": [
         88,
         894
@@ -55764,7 +55635,7 @@
         }
       }
     },
-    "896:10": {
+    "895:10": {
       "preRequisites:11": [
         6
       ],
@@ -55830,7 +55701,7 @@
         }
       }
     },
-    "897:10": {
+    "896:10": {
       "preRequisites:11": [
         830,
         896
@@ -55896,7 +55767,7 @@
         }
       }
     },
-    "898:10": {
+    "897:10": {
       "preRequisites:11": [
         93,
         891
@@ -55968,7 +55839,7 @@
         }
       }
     },
-    "899:10": {
+    "898:10": {
       "preRequisites:11": [
         71
       ],
@@ -56034,7 +55905,7 @@
         }
       }
     },
-    "900:10": {
+    "899:10": {
       "preRequisites:11": [
         888
       ],
@@ -56100,7 +55971,7 @@
         }
       }
     },
-    "901:10": {
+    "900:10": {
       "preRequisites:11": [
         179,
         888
@@ -56135,14 +56006,14 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "902:10": {
+    "901:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Tablet device you get now is very valuable to do plenty of tasks in GregTech.§r\n\n§oBe careful with removing the battery. Removing it will cause it to become a normal HV battery, and will no longer have 6.4m EU.§r\n\nThis Quest explains how you can use the §4Terminal§r. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",\n",
+          "desc:8": "§2The Tablet device you get now is very valuable to do plenty of tasks in GregTech.§r\n\n§oBe careful with removing the battery. Removing it will cause it to become a normal HV battery, and will no longer have 6.4m EU.§r\n\nThis Quest explains how you can use the §4Terminal§r. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\n§4IMPORTANT:§r If you the terminal freezes, you can press §eControl + E§r to force exit it.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56246,7 +56117,7 @@
         }
       }
     },
-    "903:10": {
+    "902:10": {
       "preRequisites:11": [
         59,
         72
@@ -56312,7 +56183,7 @@
         }
       }
     },
-    "904:10": {
+    "903:10": {
       "preRequisites:11": [
         339,
         914
@@ -56379,7 +56250,7 @@
         }
       }
     },
-    "905:10": {
+    "904:10": {
       "preRequisites:11": [
         904
       ],
@@ -56445,7 +56316,7 @@
         }
       }
     },
-    "906:10": {
+    "905:10": {
       "preRequisites:11": [
         535
       ],
@@ -56534,7 +56405,7 @@
         }
       }
     },
-    "907:10": {
+    "906:10": {
       "preRequisites:11": [
         533,
         906
@@ -56569,7 +56440,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "908:10": {
+    "907:10": {
       "preRequisites:11": [
         196
       ],
@@ -56603,14 +56474,17 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "909:10": {
+    "908:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A mixture of Clay and Brick produces large quantities of §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r, which §2forms the basis of LV Machine Hulls.§r\n\nThe §3PBF§r has been changed to be blazing fast - just 20 seconds per §6Steel Ingot§r! You will still want to keep it running, as you won\u0027t stop needing Steel.",
+          "desc:8": "A mixture of Clay and Brick produces large quantities of §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r, which §2forms the basis of LV Machine Hulls§r, and allows you to make §6Belt Pouches§r, for upgrading your §eTool Belt§r.\n\nThe §3PBF§r has been changed to be blazing fast - just 20 seconds per §6Steel Ingot§r! You will still want to keep it running, as you won\u0027t stop needing Steel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56680,7 +56554,7 @@
         }
       }
     },
-    "910:10": {
+    "909:10": {
       "preRequisites:11": [
         527,
         827
@@ -56746,7 +56620,7 @@
         }
       }
     },
-    "911:10": {
+    "910:10": {
       "preRequisites:11": [
         38
       ],
@@ -56811,7 +56685,7 @@
         }
       }
     },
-    "912:10": {
+    "911:10": {
       "preRequisites:11": [
         3
       ],
@@ -56850,7 +56724,7 @@
         }
       }
     },
-    "913:10": {
+    "912:10": {
       "preRequisites:11": [
         401
       ],
@@ -56889,7 +56763,7 @@
         }
       }
     },
-    "914:10": {
+    "913:10": {
       "preRequisites:11": [
         255,
         286,
@@ -56958,7 +56832,7 @@
         }
       }
     },
-    "915:10": {
+    "914:10": {
       "preRequisites:11": [
         828
       ],
@@ -56992,7 +56866,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "916:10": {
+    "915:10": {
       "preRequisites:11": [
         253
       ],
@@ -57026,7 +56900,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "917:10": {
+    "916:10": {
       "preRequisites:11": [
         524
       ],
@@ -57060,7 +56934,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "918:10": {
+    "917:10": {
       "preRequisites:11": [
         729,
         494,
@@ -57127,7 +57001,7 @@
         }
       }
     },
-    "919:10": {
+    "918:10": {
       "preRequisites:11": [
         108
       ],
@@ -57192,7 +57066,7 @@
         }
       }
     },
-    "920:10": {
+    "919:10": {
       "preRequisites:11": [
         279
       ],
@@ -57226,9 +57100,12 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "921:10": {
+    "920:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57265,7 +57142,7 @@
         }
       }
     },
-    "922:10": {
+    "921:10": {
       "preRequisites:11": [
         885
       ],
@@ -57330,9 +57207,12 @@
         }
       }
     },
-    "923:10": {
+    "922:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57369,7 +57249,7 @@
         }
       }
     },
-    "924:10": {
+    "923:10": {
       "preRequisites:11": [
         971,
         728
@@ -57426,7 +57306,7 @@
         }
       }
     },
-    "925:10": {
+    "924:10": {
       "preRequisites:11": [
         930,
         927,
@@ -57484,7 +57364,7 @@
         }
       }
     },
-    "926:10": {
+    "925:10": {
       "preRequisites:11": [
         933,
         934,
@@ -57542,7 +57422,7 @@
         }
       }
     },
-    "927:10": {
+    "926:10": {
       "preRequisites:11": [
         928,
         728
@@ -57599,7 +57479,7 @@
         }
       }
     },
-    "928:10": {
+    "927:10": {
       "preRequisites:11": [
         929,
         728
@@ -57656,7 +57536,7 @@
         }
       }
     },
-    "929:10": {
+    "928:10": {
       "preRequisites:11": [
         931,
         728
@@ -57713,7 +57593,7 @@
         }
       }
     },
-    "930:10": {
+    "929:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -57767,7 +57647,7 @@
         }
       }
     },
-    "931:10": {
+    "930:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -57821,7 +57701,7 @@
         }
       }
     },
-    "932:10": {
+    "931:10": {
       "preRequisites:11": [
         928,
         728
@@ -57878,7 +57758,7 @@
         }
       }
     },
-    "933:10": {
+    "932:10": {
       "preRequisites:11": [
         932,
         728
@@ -57935,7 +57815,7 @@
         }
       }
     },
-    "934:10": {
+    "933:10": {
       "preRequisites:11": [
         935,
         728
@@ -57996,7 +57876,7 @@
         }
       }
     },
-    "935:10": {
+    "934:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -58050,7 +57930,7 @@
         }
       }
     },
-    "936:10": {
+    "935:10": {
       "preRequisites:11": [
         926,
         728
@@ -58107,7 +57987,7 @@
         }
       }
     },
-    "937:10": {
+    "936:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -58161,7 +58041,7 @@
         }
       }
     },
-    "938:10": {
+    "937:10": {
       "preRequisites:11": [
         937
       ],
@@ -58217,7 +58097,7 @@
         }
       }
     },
-    "939:10": {
+    "938:10": {
       "preRequisites:11": [
         938
       ],
@@ -58273,7 +58153,7 @@
         }
       }
     },
-    "940:10": {
+    "939:10": {
       "preRequisites:11": [
         939
       ],
@@ -58329,7 +58209,7 @@
         }
       }
     },
-    "941:10": {
+    "940:10": {
       "preRequisites:11": [
         940,
         942
@@ -58386,7 +58266,7 @@
         }
       }
     },
-    "942:10": {
+    "941:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -58437,7 +58317,7 @@
         }
       }
     },
-    "943:10": {
+    "942:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -58488,7 +58368,7 @@
         }
       }
     },
-    "944:10": {
+    "943:10": {
       "preRequisites:11": [
         940,
         943
@@ -58545,7 +58425,7 @@
         }
       }
     },
-    "945:10": {
+    "944:10": {
       "preRequisites:11": [
         944
       ],
@@ -58601,7 +58481,7 @@
         }
       }
     },
-    "946:10": {
+    "945:10": {
       "preRequisites:11": [
         941
       ],
@@ -58657,7 +58537,7 @@
         }
       }
     },
-    "947:10": {
+    "946:10": {
       "preRequisites:11": [
         941
       ],
@@ -58713,7 +58593,7 @@
         }
       }
     },
-    "948:10": {
+    "947:10": {
       "preRequisites:11": [
         947
       ],
@@ -58787,7 +58667,7 @@
         }
       }
     },
-    "949:10": {
+    "948:10": {
       "preRequisites:11": [
         937
       ],
@@ -58843,7 +58723,7 @@
         }
       }
     },
-    "950:10": {
+    "949:10": {
       "preRequisites:11": [
         939
       ],
@@ -58899,7 +58779,7 @@
         }
       }
     },
-    "951:10": {
+    "950:10": {
       "preRequisites:11": [
         950
       ],
@@ -58955,7 +58835,7 @@
         }
       }
     },
-    "952:10": {
+    "951:10": {
       "preRequisites:11": [
         757,
         174,
@@ -59023,7 +58903,7 @@
         }
       }
     },
-    "953:10": {
+    "952:10": {
       "preRequisites:11": [
         780,
         150,
@@ -59091,7 +58971,7 @@
         }
       }
     },
-    "954:10": {
+    "953:10": {
       "preRequisites:11": [
         263,
         267
@@ -59126,7 +59006,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "955:10": {
+    "954:10": {
       "preRequisites:11": [
         539
       ],
@@ -59160,7 +59040,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "956:10": {
+    "955:10": {
       "preRequisites:11": [
         328
       ],
@@ -59194,7 +59074,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "957:10": {
+    "956:10": {
       "preRequisites:11": [
         950
       ],
@@ -59250,7 +59130,7 @@
         }
       }
     },
-    "958:10": {
+    "957:10": {
       "preRequisites:11": [
         957
       ],
@@ -59306,7 +59186,7 @@
         }
       }
     },
-    "959:10": {
+    "958:10": {
       "preRequisites:11": [
         939
       ],
@@ -59362,7 +59242,7 @@
         }
       }
     },
-    "960:10": {
+    "959:10": {
       "preRequisites:11": [
         959
       ],
@@ -59424,7 +59304,7 @@
         }
       }
     },
-    "961:10": {
+    "960:10": {
       "preRequisites:11": [
         958
       ],
@@ -59477,7 +59357,7 @@
         }
       }
     },
-    "962:10": {
+    "961:10": {
       "preRequisites:11": [
         260
       ],
@@ -59547,7 +59427,7 @@
         }
       }
     },
-    "963:10": {
+    "962:10": {
       "preRequisites:11": [
         943
       ],
@@ -59603,7 +59483,7 @@
         }
       }
     },
-    "964:10": {
+    "963:10": {
       "preRequisites:11": [
         963
       ],
@@ -59659,7 +59539,7 @@
         }
       }
     },
-    "965:10": {
+    "964:10": {
       "preRequisites:11": [
         939
       ],
@@ -59715,7 +59595,7 @@
         }
       }
     },
-    "966:10": {
+    "965:10": {
       "preRequisites:11": [
         965
       ],
@@ -59771,7 +59651,7 @@
         }
       }
     },
-    "967:10": {
+    "966:10": {
       "preRequisites:11": [
         104
       ],
@@ -59810,7 +59690,7 @@
         }
       }
     },
-    "968:10": {
+    "967:10": {
       "preRequisites:11": [
         938
       ],
@@ -59866,7 +59746,7 @@
         }
       }
     },
-    "969:10": {
+    "968:10": {
       "preRequisites:11": [
         937
       ],
@@ -59922,7 +59802,7 @@
         }
       }
     },
-    "970:10": {
+    "969:10": {
       "preRequisites:11": [
         947,
         969
@@ -59980,7 +59860,7 @@
         }
       }
     },
-    "971:10": {
+    "970:10": {
       "preRequisites:11": [
         936,
         925
@@ -60015,7 +59895,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "972:10": {
+    "971:10": {
       "preRequisites:11": [
         982,
         978,
@@ -60075,7 +59955,7 @@
         }
       }
     },
-    "973:10": {
+    "972:10": {
       "preRequisites:11": [
         227,
         810,
@@ -60112,7 +59992,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "974:10": {
+    "973:10": {
       "preRequisites:11": [
         89
       ],
@@ -60146,7 +60026,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "975:10": {
+    "974:10": {
       "preRequisites:11": [
         812
       ],
@@ -60184,7 +60064,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "976:10": {
+    "975:10": {
       "preRequisites:11": [
         1023
       ],
@@ -60222,7 +60102,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "977:10": {
+    "976:10": {
       "preRequisites:11": [
         976
       ],
@@ -60260,7 +60140,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "978:10": {
+    "977:10": {
       "preRequisites:11": [
         979
       ],
@@ -60298,7 +60178,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "979:10": {
+    "978:10": {
       "preRequisites:11": [
         988,
         1020
@@ -60333,7 +60213,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "980:10": {
+    "979:10": {
       "preRequisites:11": [
         986,
         987
@@ -60372,7 +60252,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "981:10": {
+    "980:10": {
       "preRequisites:11": [
         980
       ],
@@ -60410,7 +60290,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "982:10": {
+    "981:10": {
       "preRequisites:11": [
         981,
         985
@@ -60445,7 +60325,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "983:10": {
+    "982:10": {
       "preRequisites:11": [
         1024
       ],
@@ -60483,7 +60363,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "984:10": {
+    "983:10": {
       "preRequisites:11": [
         983
       ],
@@ -60521,7 +60401,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "985:10": {
+    "984:10": {
       "preRequisites:11": [
         984
       ],
@@ -60559,7 +60439,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "986:10": {
+    "985:10": {
       "preRequisites:11": [
         1025
       ],
@@ -60593,7 +60473,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "987:10": {
+    "986:10": {
       "preRequisites:11": [
         986
       ],
@@ -60627,7 +60507,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "988:10": {
+    "987:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60663,7 +60543,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "989:10": {
+    "988:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60699,7 +60579,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "990:10": {
+    "989:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60731,7 +60611,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "991:10": {
+    "990:10": {
       "preRequisites:11": [
         972
       ],
@@ -60769,7 +60649,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "992:10": {
+    "991:10": {
       "preRequisites:11": [
         996
       ],
@@ -60807,7 +60687,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "993:10": {
+    "992:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60843,7 +60723,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "994:10": {
+    "993:10": {
       "preRequisites:11": [
         991
       ],
@@ -60877,7 +60757,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "995:10": {
+    "994:10": {
       "preRequisites:11": [
         992
       ],
@@ -60915,7 +60795,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "996:10": {
+    "995:10": {
       "preRequisites:11": [
         972,
         993
@@ -60950,7 +60830,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "997:10": {
+    "996:10": {
       "preRequisites:11": [
         995
       ],
@@ -60984,7 +60864,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "998:10": {
+    "997:10": {
       "preRequisites:11": [
         1002,
         825
@@ -61042,7 +60922,7 @@
         }
       }
     },
-    "999:10": {
+    "998:10": {
       "preRequisites:11": [
         998,
         825
@@ -61096,7 +60976,7 @@
         }
       }
     },
-    "1000:10": {
+    "999:10": {
       "preRequisites:11": [
         408,
         106
@@ -61162,7 +61042,7 @@
         }
       }
     },
-    "1001:10": {
+    "1000:10": {
       "preRequisites:11": [
         109
       ],
@@ -61227,7 +61107,7 @@
         }
       }
     },
-    "1002:10": {
+    "1001:10": {
       "preRequisites:11": [
         1010,
         825
@@ -61285,7 +61165,7 @@
         }
       }
     },
-    "1003:10": {
+    "1002:10": {
       "preRequisites:11": [
         1012,
         825
@@ -61343,7 +61223,7 @@
         }
       }
     },
-    "1004:10": {
+    "1003:10": {
       "preRequisites:11": [
         1011,
         825
@@ -61401,7 +61281,7 @@
         }
       }
     },
-    "1005:10": {
+    "1004:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61456,7 +61336,7 @@
         }
       }
     },
-    "1006:10": {
+    "1005:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61511,7 +61391,7 @@
         }
       }
     },
-    "1007:10": {
+    "1006:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61566,7 +61446,7 @@
         }
       }
     },
-    "1008:10": {
+    "1007:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61621,7 +61501,7 @@
         }
       }
     },
-    "1009:10": {
+    "1008:10": {
       "preRequisites:11": [
         1002,
         1003,
@@ -61680,7 +61560,7 @@
         }
       }
     },
-    "1010:10": {
+    "1009:10": {
       "preRequisites:11": [
         1003,
         1004
@@ -61715,7 +61595,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1011:10": {
+    "1010:10": {
       "preRequisites:11": [
         1006,
         1005
@@ -61750,7 +61630,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1012:10": {
+    "1011:10": {
       "preRequisites:11": [
         1007,
         1008
@@ -61785,7 +61665,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1013:10": {
+    "1012:10": {
       "preRequisites:11": [
         93
       ],
@@ -61850,7 +61730,7 @@
         }
       }
     },
-    "1014:10": {
+    "1013:10": {
       "preRequisites:11": [
         339
       ],
@@ -61915,9 +61795,12 @@
         }
       }
     },
-    "1015:10": {
+    "1014:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61989,7 +61872,7 @@
         }
       }
     },
-    "1016:10": {
+    "1015:10": {
       "preRequisites:11": [
         62,
         230,
@@ -62072,7 +61955,7 @@
         }
       }
     },
-    "1017:10": {
+    "1016:10": {
       "preRequisites:11": [
         1016,
         391,
@@ -62157,7 +62040,7 @@
         }
       }
     },
-    "1018:10": {
+    "1017:10": {
       "preRequisites:11": [
         282
       ],
@@ -62222,7 +62105,7 @@
         }
       }
     },
-    "1019:10": {
+    "1018:10": {
       "preRequisites:11": [
         295,
         107
@@ -62312,9 +62195,145 @@
         }
       }
     },
+    "1019:10": {
+      "preRequisites:11": [
+        4
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oNote: This quest accepts a Chisel of any type (Normal, Diamond or IChisel).\n\nThe §6Auto Chisel§r is a block added by... §bChisel§r, to automate all your chiseled block needs. Great for building big bases!\n\nFirst, you need a §eChisel§r, and the Auto Chisel. All three chisels will act the same in the Auto Chisel.\n\nPlace the chisel in the Auto Chisel. If you are confused of where to place it, it\u0027s the slot with a Chisel ghost image, or at the middle-top of the GUI.\n\nRight below the Chisel spot, in the middle-bottom of the GUI, place the block you \nwould like to chisel into.\n\nYou can also connect the Auto Chisel to power. This is optional, but will speed the process up by a lot.\n\nNow you can simply access the Auto Chisel by means of item transport, like §6Item Conduits§r or §6Item Pipes§r. \n\nPlease note that you can only extract or insert items at the top or bottom of the Auto Chisel.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "chisel:auto_chisel"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Auto Chisel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1020,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "questbookChisels",
+              "id:8": "chisel:chisel_iron"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "chisel:auto_chisel"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
     "1020:10": {
       "preRequisites:11": [
-        1021
+        4
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is `R\u0027), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nThe Tool Belt can store anything with a stack size of 1, like swords, pickaxes, §bGregTech§r tools, and the §6Terminal§r. It has also been modified a bit, so it also allows any §bStorage Drawers§r key, and §cdoesn\u0027t allow any Thermal Satchel§r.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "toolbelt:belt"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Tool Belt",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1021,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "toolbelt:belt"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1021:10": {
+      "preRequisites:11": [
+        1023
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62346,13 +62365,13 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1020,
+      "questID:3": 1022,
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1021:10": {
+    "1022:10": {
       "preRequisites:11": [
-        1022
+        1024
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62384,11 +62403,11 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1021,
+      "questID:3": 1023,
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1022:10": {
+    "1023:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -62420,11 +62439,11 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1022,
+      "questID:3": 1024,
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1023:10": {
+    "1024:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -62456,11 +62475,11 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1023,
+      "questID:3": 1025,
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1024:10": {
+    "1025:10": {
       "preRequisites:11": [
         990,
         989
@@ -62491,11 +62510,11 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1024,
+      "questID:3": 1026,
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1025:10": {
+    "1026:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -62523,7 +62542,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1025,
+      "questID:3": 1027,
       "rewards:9": {},
       "tasks:9": {}
     }
@@ -62658,14 +62677,14 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -804,
-          "y:3": 228
+          "y:3": 224
         },
         "16:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 240
+          "y:3": 236
         },
         "17:10": {
           "id:3": 60,
@@ -62706,8 +62725,8 @@
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -848,
-          "y:3": 240
+          "x:3": -840,
+          "y:3": 236
         },
         "23:10": {
           "id:3": 215,
@@ -62742,7 +62761,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -648,
-          "y:3": 240
+          "y:3": 236
         },
         "28:10": {
           "id:3": 270,
@@ -62916,14 +62935,14 @@
           "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -688,
-          "y:3": 164
+          "x:3": -692,
+          "y:3": 160
         },
         "53:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -848,
+          "x:3": -840,
           "y:3": 184
         },
         "54:10": {
@@ -62972,8 +62991,8 @@
           "id:3": 817,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -696,
-          "y:3": 200
+          "x:3": -700,
+          "y:3": 192
         },
         "61:10": {
           "id:3": 819,
@@ -63022,7 +63041,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
-          "y:3": 240
+          "y:3": 236
+        },
+        "68:10": {
+          "id:3": 1020,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -468,
+          "y:3": 228
         }
       }
     },
@@ -64365,8 +64391,8 @@
           "id:3": 341,
           "sizeX:3": 20,
           "sizeY:3": 20,
-          "x:3": -418,
-          "y:3": 279
+          "x:3": -392,
+          "y:3": 280
         },
         "83:10": {
           "id:3": 344,
@@ -64456,8 +64482,8 @@
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -520,
-          "y:3": 368
+          "x:3": -546,
+          "y:3": 420
         },
         "96:10": {
           "id:3": 551,
@@ -64477,8 +64503,8 @@
           "id:3": 580,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -460,
-          "y:3": 368
+          "x:3": -486,
+          "y:3": 420
         },
         "99:10": {
           "id:3": 610,
@@ -64498,70 +64524,70 @@
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
+          "x:3": -192,
           "y:3": 276
         },
         "102:10": {
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 276
+          "x:3": -120,
+          "y:3": 240
         },
         "103:10": {
           "id:3": 672,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 276
+          "x:3": -192,
+          "y:3": 240
         },
         "104:10": {
           "id:3": 673,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 312
+          "x:3": -120,
+          "y:3": 276
         },
         "105:10": {
           "id:3": 674,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
-          "y:3": 312
+          "y:3": 276
         },
         "106:10": {
           "id:3": 675,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
+          "x:3": -156,
           "y:3": 312
         },
         "107:10": {
           "id:3": 676,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
+          "x:3": -156,
           "y:3": 348
         },
         "108:10": {
           "id:3": 677,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 348
+          "x:3": -120,
+          "y:3": 312
         },
         "109:10": {
           "id:3": 678,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 396
+          "x:3": -192,
+          "y:3": 348
         },
         "110:10": {
           "id:3": 679,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -120,
           "y:3": 348
         },
         "111:10": {
@@ -64638,22 +64664,22 @@
           "id:3": 783,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -340,
-          "y:3": 368
+          "x:3": -366,
+          "y:3": 420
         },
         "122:10": {
           "id:3": 785,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -420,
-          "y:3": 180
+          "sizeX:3": 20,
+          "sizeY:3": 20,
+          "x:3": -392,
+          "y:3": 220
         },
         "123:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 348
+          "x:3": -192,
+          "y:3": 312
         },
         "124:10": {
           "id:3": 799,
@@ -64708,8 +64734,8 @@
           "id:3": 828,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -384,
-          "y:3": 272
+          "x:3": -364,
+          "y:3": 236
         },
         "132:10": {
           "id:3": 835,
@@ -64736,14 +64762,14 @@
           "id:3": 849,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -380,
-          "y:3": 240
+          "x:3": -360,
+          "y:3": 276
         },
         "136:10": {
           "id:3": 850,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -384,
+          "x:3": -364,
           "y:3": 308
         },
         "137:10": {
@@ -64757,29 +64783,29 @@
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -56,
-          "y:3": 348
+          "x:3": -84,
+          "y:3": 312
         },
         "139:10": {
           "id:3": 857,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -720,
-          "y:3": 312
+          "y:3": 352
         },
         "140:10": {
           "id:3": 858,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -552,
-          "y:3": 308
+          "y:3": 348
         },
         "141:10": {
           "id:3": 859,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -424,
-          "y:3": 308
+          "sizeX:3": 72,
+          "sizeY:3": 72,
+          "x:3": -444,
+          "y:3": 330
         },
         "142:10": {
           "id:3": 888,
@@ -64792,8 +64818,8 @@
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -400,
-          "y:3": 368
+          "x:3": -426,
+          "y:3": 420
         },
         "144:10": {
           "id:3": 899,
@@ -65689,7 +65715,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
-          "y:3": 322
+          "y:3": 324
         },
         "21:10": {
           "id:3": 263,
@@ -65724,20 +65750,20 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 132
+          "y:3": 128
         },
         "26:10": {
           "id:3": 269,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 168
+          "y:3": 164
         },
         "27:10": {
           "id:3": 271,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": 72,
           "y:3": 432
         },
         "28:10": {
@@ -65745,7 +65771,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 308
+          "y:3": 330
         },
         "29:10": {
           "id:3": 279,
@@ -65857,7 +65883,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 328
+          "y:3": 330
         },
         "45:10": {
           "id:3": 323,
@@ -65968,8 +65994,8 @@
           "id:3": 351,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 308
+          "x:3": -24,
+          "y:3": 294
         },
         "61:10": {
           "id:3": 389,
@@ -66165,14 +66191,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 380
+          "y:3": 384
         },
         "89:10": {
           "id:3": 778,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 412
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 168,
+          "y:3": 222
         },
         "90:10": {
           "id:3": 791,
@@ -66248,8 +66274,8 @@
           "id:3": 839,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -396,
-          "y:3": 208
+          "x:3": -432,
+          "y:3": 164
         },
         "101:10": {
           "id:3": 840,
@@ -66375,7 +66401,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
-          "y:3": 276
+          "y:3": 256
         },
         "119:10": {
           "id:3": 906,
@@ -66605,8 +66631,8 @@
           "id:3": 508,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -540,
-          "y:3": 72
+          "x:3": -612,
+          "y:3": 180
         },
         "24:10": {
           "id:3": 513,
@@ -66619,7 +66645,7 @@
           "id:3": 543,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -468,
+          "x:3": -540,
           "y:3": 72
         },
         "26:10": {
@@ -66640,21 +66666,21 @@
           "id:3": 583,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -540,
+          "x:3": -504,
           "y:3": 108
         },
         "29:10": {
           "id:3": 584,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -468,
           "y:3": 108
         },
         "30:10": {
           "id:3": 585,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -468,
+          "x:3": -540,
           "y:3": 108
         },
         "31:10": {
@@ -66752,8 +66778,8 @@
           "id:3": 600,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -612,
-          "y:3": 180
+          "x:3": -468,
+          "y:3": 72
         },
         "45:10": {
           "id:3": 601,
@@ -67783,6 +67809,13 @@
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 132
+        },
+        "59:10": {
+          "id:3": 1021,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 60
         }
       }
     },
@@ -68229,7 +68262,7 @@
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 140,
+          "x:3": 128,
           "y:3": 0
         },
         "1:10": {
@@ -68243,7 +68276,7 @@
           "id:3": 258,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 140,
+          "x:3": 128,
           "y:3": -36
         },
         "3:10": {
@@ -68264,7 +68297,7 @@
           "id:3": 335,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 92,
           "y:3": 36
         },
         "6:10": {
@@ -68278,7 +68311,7 @@
           "id:3": 607,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 140,
+          "x:3": 128,
           "y:3": 36
         },
         "8:10": {
@@ -68313,7 +68346,7 @@
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 76,
+          "x:3": 72,
           "y:3": -36
         },
         "13:10": {
@@ -68334,7 +68367,7 @@
           "id:3": 922,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 92,
           "y:3": 0
         }
       }
@@ -68812,6 +68845,13 @@
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 444
+        },
+        "46:10": {
+          "id:3": 1020,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 612
         }
       }
     },
@@ -69388,42 +69428,42 @@
           "y:3": 204
         },
         "79:10": {
-          "id:3": 1020,
+          "id:3": 1022,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 60
         },
         "80:10": {
-          "id:3": 1021,
+          "id:3": 1023,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 24
         },
         "81:10": {
-          "id:3": 1022,
+          "id:3": 1024,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": -12
         },
         "82:10": {
-          "id:3": 1023,
+          "id:3": 1025,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -12
         },
         "83:10": {
-          "id:3": 1024,
+          "id:3": 1026,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -144,
           "y:3": 36
         },
         "84:10": {
-          "id:3": 1025,
+          "id:3": 1027,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,

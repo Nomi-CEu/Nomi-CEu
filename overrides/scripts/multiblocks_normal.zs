@@ -556,7 +556,7 @@ microverse_projector_advanced.recipeMap
             <ore:dustPetrotheum> * 64)
     .outputs(<contenttweaker:denseoilshale> * 64,
              <contenttweaker:denseoilshale> * 64,
-             <ore:compressed2xDustBedrock>.firstItem * 16)
+             <ore:compressed2xDustBedrock>.firstItem * 32)
     .buildAndRegister();
 
 // t4 dense gem ores

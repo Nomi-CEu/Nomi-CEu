@@ -691,7 +691,7 @@ microverse_projector_advanced.recipeMap
             <ore:dustPetrotheum> * 64)
     .outputs(<contenttweaker:denseoilshale> * 64,
              <contenttweaker:denseoilshale> * 64,
-             <ore:compressed2xDustBedrock>.firstItem * 16)
+             <ore:compressed2xDustBedrock>.firstItem * 32)
     .buildAndRegister();
 
 
@@ -888,7 +888,9 @@ microverse_projector_advanced.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizedplutonium> * 32)
-    .outputs(<gregtech:ore_snowchestite_0> * 64,
+    .outputs(<gregtech:ore_pollucite_0> * 64,
+             <gregtech:ore_pollucite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
@@ -1302,7 +1304,7 @@ actualization_chamber.recipeMap
     .circuit(1)
     .outputs(<contenttweaker:denseoilshale> * 64,
              <contenttweaker:denseoilshale> * 64,
-             <ore:compressed2xDustBedrock>.firstItem * 16)
+             <ore:compressed2xDustBedrock>.firstItem * 32)
     .buildAndRegister();
 
 // t4 ores
@@ -1452,7 +1454,9 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
     .circuit(2)
-    .outputs(<gregtech:ore_snowchestite_0> * 64,
+    .outputs(<gregtech:ore_pollucite_0> * 64,
+             <gregtech:ore_pollucite_0> * 64,
+             <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,
              <gregtech:ore_snowchestite_0> * 64,

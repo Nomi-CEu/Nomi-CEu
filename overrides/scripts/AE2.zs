@@ -263,11 +263,11 @@ recipes.addShaped(<appliedenergistics2:energy_acceptor>, [
 //Fluix Plate
 recipes.remove(<ore:plateFluix>);
 //recipes.addShaped(<ore:plateFluix>, [
-//	[<ore:craftingToolHardHammer>], 
+//	[<ore:toolHammer>], 
 //	[<appliedenergistics2:material:7>], 
 //	[<appliedenergistics2:material:7>]]);	
 //recipes.addShaped(<ore:plateFluix>, [
-//	[<ore:craftingToolHardHammer>], 
+//	[<ore:toolHammer>], 
 //	[<appliedenergistics2:material:12>], 
 //	[<appliedenergistics2:material:12>]]);	
 	
