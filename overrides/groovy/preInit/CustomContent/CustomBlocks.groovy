@@ -1,5 +1,6 @@
 import net.minecraft.item.EnumRarity
-import net.minecraft.item.ItemStack
+import net.minecraft.block.SoundType
+import net.minecraft.block.material.Material
 
 println("[CustomBlocks.groovy] Start Custom Blocks Registration.")
 
