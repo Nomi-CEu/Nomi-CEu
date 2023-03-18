@@ -1,38 +1,55 @@
 #!/usr/bin/env sh
+touch .mode
 set -e
-echo -e "Nomifactory GTCEu Port / Pack mode switcher"
+echo "Nomifactory GTCEu Port / Pack mode switcher"
 
-NORMAL_CFG=./config-overrides/normal
-EXPERT_CFG=./config-overrides/expert
+NORMAL_CFG=config-overrides/normal
+EXPERT_CFG=config-overrides/expert
 TARGET=./config
+CURRENT_MODE="$(head .mode)"
+CURRENT_MODE=${CURRENT_MODE:="normal"}
+
+echo "Current Mode: $CURRENT_MODE"
 
 if [ -z "$1" ]; then
-  echo -en "Set pack mode (Normal / Expert): "
+  echo -n "Set pack mode (Normal / Expert): "
   read MODE
 else
   MODE="$1"
 fi
 
-case "$MODE" in
-  N|n|normal)
-    cp -rf "$NORMAL_CFG"/* "$TARGET"
-    rm -f "$TARGET/globalgamerules.cfg"
-    if [ -f "server.properties" ] && [ -f "server.properties.normal" ]; then
-        mv "server.properties" "server.properties.expert"
-        mv "server.properties.normal" "server.properties"
+case $MODE in
+    N|n|normal)
+
+    cp -rf "$NORMAL_CFG/." ${TARGET} 
+
+    # Only copy server.properties if it exists.
+    if [ -f "server.properties" ]; then
+        mv "${TARGET}/server.properties" ./
+    else
+        rm "${TARGET}/server.properties"
     fi
+
+    # Update Mode
+    echo normal > .mode
   ;;
 
   E|e|expert)
-    cp -rf "$EXPERT_CFG"/* "$TARGET"
-    if [ -f "server.properties" ] && [ -f "server.properties.expert" ]; then
-        mv "server.properties" "server.properties.normal"
-        mv "server.properties.expert" "server.properties"
+
+    cp -rf "$EXPERT_CFG/." ${TARGET}
+
+    if [ -f "server.properties" ]; then
+        mv "${TARGET}/server.properties" ./
+    else
+        rm "${TARGET}/server.properties"
     fi
+
+    # Update Mode
+    echo expert > .mode
   ;;
 
   *)
-    echo -e "Error: Invalid mode $MODE"
+    echo -e "Error: Invalid input $MODE"
     exit 1
   ;;
 esac
