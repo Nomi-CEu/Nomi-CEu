@@ -748,8 +748,7 @@
     },
     "9:10": {
       "preRequisites:11": [
-        141,
-        805
+        141
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -2122,7 +2121,7 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 12,
+              "Count:3": 1,
               "Damage:2": 32003,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
@@ -2277,7 +2276,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A mysterious alloy, made from §6Pulsating Dust§r and an §6Iron Ingot§r.\n\nIf you can\u0027t find one otherwise, §6Ender Pearls§r can be crafted using Pulsating Dust and a §6Diamond§r in an §3Alloy Smelter§r.",
+          "desc:8": "A mysterious alloy, made from §6Pulsating Dust§r and §6Iron§r.\n\nIf you can\u0027t find one otherwise, §6Ender Pearls§r can be crafted using Pulsating Dust and a §6Diamond§r in an §3Alloy Smelter§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2350,7 +2349,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A refined type of steel, made from §6Silicon Dust§r and a §6Steel Ingot§r.\n\nThis material is frequently used in electronics and digital equipment.",
+          "desc:8": "A refined type of steel, made from §6Silicon Dust§r and §6Steel§r.\n\nThis material is frequently used in electronics and digital equipment.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9854,8 +9853,7 @@
     },
     "141:10": {
       "preRequisites:11": [
-        4,
-        805
+        4
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10635,7 +10633,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9 Oil§r distillation will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than five fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Output Bus§r and an §6Energy Input Hatch§r can go wherever you can fit them on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2 You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
+          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r. \n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources.§9 Oil§r distillation, with its four outputs, will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than four output fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r. Also, any recipe that has an item output will need an §6Output Bus§r, anywhere on the bottom layer.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch§r §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The § §6Energy Input Hatch§r can go wherever you can fit it on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r.§2 You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top. \n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10702,18 +10700,12 @@
               "id:8": "gregtech:machine"
             },
             "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
               "Count:3": 4,
               "Damage:2": 1196,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "5:10": {
+            "4:10": {
               "Count:3": 34,
               "Damage:2": 5,
               "OreDict:8": "",
@@ -16405,8 +16397,7 @@
     },
     "239:10": {
       "preRequisites:11": [
-        238,
-        256
+        238
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -22922,9 +22913,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 32001,
             "OreDict:8": "",
-            "id:8": "draconicevolution:draconium_dust"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -26130,8 +26121,11 @@
       "tasks:9": {}
     },
     "393:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26868,8 +26862,11 @@
       }
     },
     "405:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33114,9 +33111,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 166,
+            "Damage:2": 32017,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -36228,9 +36225,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32,
+            "Damage:2": 32019,
             "OreDict:8": "",
-            "id:8": "redstonearsenal:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36274,9 +36271,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32,
-              "OreDict:8": "ingotElectrumFlux",
-              "id:8": "redstonearsenal:material"
+              "Damage:2": 32019,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36294,9 +36291,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 165,
+            "Damage:2": 32010,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36360,9 +36357,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 167,
+            "Damage:2": 32018,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36692,9 +36689,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 32023,
             "OreDict:8": "",
-            "id:8": "avaritia:resource"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36862,9 +36859,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 32015,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36928,9 +36925,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 8,
+            "Damage:2": 32025,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37127,9 +37124,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 6,
+            "Damage:2": 32003,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37193,9 +37190,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 2,
+            "Damage:2": 32013,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37259,9 +37256,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 32012,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -37326,9 +37323,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 7,
+            "Damage:2": 32024,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -45788,8 +45785,11 @@
       }
     },
     "743:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -45921,9 +45921,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 165,
+            "Damage:2": 32010,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "gregtech:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -48433,8 +48433,11 @@
       }
     },
     "786:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49502,8 +49505,11 @@
       }
     },
     "803:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49658,40 +49664,6 @@
     },
     "805:10": {
       "preRequisites:11": [
-        3
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 1,
-          "desc:8": "a quest",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 1,
-          "name:8": "Genesis",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "",
-          "snd_update:8": "",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 805,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "806:10": {
-      "preRequisites:11": [
         166,
         226
       ],
@@ -49734,7 +49706,7 @@
         }
       }
     },
-    "807:10": {
+    "806:10": {
       "preRequisites:11": [
         163,
         413
@@ -49797,9 +49769,12 @@
         }
       }
     },
-    "808:10": {
+    "807:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49836,7 +49811,7 @@
         }
       }
     },
-    "809:10": {
+    "808:10": {
       "preRequisites:11": [
         367
       ],
@@ -49918,7 +49893,7 @@
         }
       }
     },
-    "810:10": {
+    "809:10": {
       "preRequisites:11": [
         260,
         278,
@@ -49986,9 +49961,12 @@
         }
       }
     },
-    "811:10": {
+    "810:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -50083,7 +50061,7 @@
         }
       }
     },
-    "812:10": {
+    "811:10": {
       "preRequisites:11": [
         94,
         505
@@ -50118,7 +50096,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "813:10": {
+    "812:10": {
       "preRequisites:11": [
         4
       ],
@@ -50170,7 +50148,7 @@
         }
       }
     },
-    "814:10": {
+    "813:10": {
       "preRequisites:11": [
         21
       ],
@@ -50252,7 +50230,7 @@
         }
       }
     },
-    "815:10": {
+    "814:10": {
       "preRequisites:11": [
         145
       ],
@@ -50326,7 +50304,7 @@
         }
       }
     },
-    "816:10": {
+    "815:10": {
       "preRequisites:11": [
         76,
         818
@@ -50392,7 +50370,7 @@
         }
       }
     },
-    "817:10": {
+    "816:10": {
       "preRequisites:11": [
         752
       ],
@@ -50481,7 +50459,7 @@
         }
       }
     },
-    "818:10": {
+    "817:10": {
       "preRequisites:11": [
         530
       ],
@@ -50546,7 +50524,7 @@
         }
       }
     },
-    "819:10": {
+    "818:10": {
       "preRequisites:11": [
         58
       ],
@@ -50635,7 +50613,7 @@
         }
       }
     },
-    "820:10": {
+    "819:10": {
       "preRequisites:11": [
         72,
         78,
@@ -50702,7 +50680,7 @@
         }
       }
     },
-    "821:10": {
+    "820:10": {
       "preRequisites:11": [
         27
       ],
@@ -50782,7 +50760,7 @@
         }
       }
     },
-    "822:10": {
+    "821:10": {
       "preRequisites:11": [
         82
       ],
@@ -50847,7 +50825,7 @@
         }
       }
     },
-    "823:10": {
+    "822:10": {
       "preRequisites:11": [
         727
       ],
@@ -50912,7 +50890,7 @@
         }
       }
     },
-    "824:10": {
+    "823:10": {
       "preRequisites:11": [
         95
       ],
@@ -50977,7 +50955,7 @@
         }
       }
     },
-    "825:10": {
+    "824:10": {
       "preRequisites:11": [
         153,
         899
@@ -51044,7 +51022,7 @@
         }
       }
     },
-    "826:10": {
+    "825:10": {
       "preRequisites:11": [
         825
       ],
@@ -51127,7 +51105,7 @@
         }
       }
     },
-    "827:10": {
+    "826:10": {
       "preRequisites:11": [
         177
       ],
@@ -51198,7 +51176,7 @@
         }
       }
     },
-    "828:10": {
+    "827:10": {
       "preRequisites:11": [
         198
       ],
@@ -51264,7 +51242,7 @@
         }
       }
     },
-    "829:10": {
+    "828:10": {
       "preRequisites:11": [
         779
       ],
@@ -51329,7 +51307,7 @@
         }
       }
     },
-    "830:10": {
+    "829:10": {
       "preRequisites:11": [
         93,
         974
@@ -51395,7 +51373,7 @@
         }
       }
     },
-    "831:10": {
+    "830:10": {
       "preRequisites:11": [
         830
       ],
@@ -51460,7 +51438,7 @@
         }
       }
     },
-    "832:10": {
+    "831:10": {
       "preRequisites:11": [
         830
       ],
@@ -51525,7 +51503,7 @@
         }
       }
     },
-    "833:10": {
+    "832:10": {
       "preRequisites:11": [
         830
       ],
@@ -51602,7 +51580,7 @@
         }
       }
     },
-    "834:10": {
+    "833:10": {
       "preRequisites:11": [
         96
       ],
@@ -51667,7 +51645,7 @@
         }
       }
     },
-    "835:10": {
+    "834:10": {
       "preRequisites:11": [
         93,
         974
@@ -51733,7 +51711,7 @@
         }
       }
     },
-    "836:10": {
+    "835:10": {
       "preRequisites:11": [
         147,
         259
@@ -51799,7 +51777,7 @@
         }
       }
     },
-    "837:10": {
+    "836:10": {
       "preRequisites:11": [
         91,
         836
@@ -51865,7 +51843,7 @@
         }
       }
     },
-    "838:10": {
+    "837:10": {
       "preRequisites:11": [
         194,
         526
@@ -51931,7 +51909,7 @@
         }
       }
     },
-    "839:10": {
+    "838:10": {
       "preRequisites:11": [
         904,
         882
@@ -51997,7 +51975,7 @@
         }
       }
     },
-    "840:10": {
+    "839:10": {
       "preRequisites:11": [
         323,
         791,
@@ -52064,7 +52042,7 @@
         }
       }
     },
-    "841:10": {
+    "840:10": {
       "preRequisites:11": [
         312
       ],
@@ -52129,7 +52107,7 @@
         }
       }
     },
-    "842:10": {
+    "841:10": {
       "preRequisites:11": [
         242,
         327
@@ -52195,7 +52173,7 @@
         }
       }
     },
-    "843:10": {
+    "842:10": {
       "preRequisites:11": [
         323
       ],
@@ -52290,7 +52268,7 @@
         }
       }
     },
-    "844:10": {
+    "843:10": {
       "preRequisites:11": [
         845,
         847
@@ -52356,7 +52334,7 @@
         }
       }
     },
-    "845:10": {
+    "844:10": {
       "preRequisites:11": [
         324,
         843
@@ -52422,7 +52400,7 @@
         }
       }
     },
-    "846:10": {
+    "845:10": {
       "preRequisites:11": [
         844
       ],
@@ -52487,7 +52465,7 @@
         }
       }
     },
-    "847:10": {
+    "846:10": {
       "preRequisites:11": [
         324,
         843
@@ -52553,7 +52531,7 @@
         }
       }
     },
-    "848:10": {
+    "847:10": {
       "preRequisites:11": [
         847
       ],
@@ -52618,7 +52596,7 @@
         }
       }
     },
-    "849:10": {
+    "848:10": {
       "preRequisites:11": [
         198
       ],
@@ -52683,7 +52661,7 @@
         }
       }
     },
-    "850:10": {
+    "849:10": {
       "preRequisites:11": [
         828,
         841,
@@ -52775,7 +52753,7 @@
         }
       }
     },
-    "851:10": {
+    "850:10": {
       "preRequisites:11": [
         312
       ],
@@ -52840,7 +52818,7 @@
         }
       }
     },
-    "852:10": {
+    "851:10": {
       "preRequisites:11": [
         677,
         749
@@ -52906,7 +52884,7 @@
         }
       }
     },
-    "853:10": {
+    "852:10": {
       "preRequisites:11": [
         827
       ],
@@ -52971,7 +52949,7 @@
         }
       }
     },
-    "854:10": {
+    "853:10": {
       "preRequisites:11": [
         196
       ],
@@ -53036,7 +53014,7 @@
         }
       }
     },
-    "855:10": {
+    "854:10": {
       "preRequisites:11": [
         607
       ],
@@ -53101,7 +53079,7 @@
         }
       }
     },
-    "856:10": {
+    "855:10": {
       "preRequisites:11": [
         855
       ],
@@ -53166,7 +53144,7 @@
         }
       }
     },
-    "857:10": {
+    "856:10": {
       "preRequisites:11": [
         339
       ],
@@ -53249,7 +53227,7 @@
         }
       }
     },
-    "858:10": {
+    "857:10": {
       "preRequisites:11": [
         255,
         857
@@ -53327,7 +53305,7 @@
         }
       }
     },
-    "859:10": {
+    "858:10": {
       "preRequisites:11": [
         198,
         858
@@ -53393,7 +53371,7 @@
         }
       }
     },
-    "860:10": {
+    "859:10": {
       "preRequisites:11": [
         531,
         826,
@@ -53484,7 +53462,7 @@
         }
       }
     },
-    "861:10": {
+    "860:10": {
       "preRequisites:11": [
         607
       ],
@@ -53555,7 +53533,7 @@
         }
       }
     },
-    "862:10": {
+    "861:10": {
       "preRequisites:11": [
         727
       ],
@@ -53620,7 +53598,7 @@
         }
       }
     },
-    "863:10": {
+    "862:10": {
       "preRequisites:11": [
         727
       ],
@@ -53685,7 +53663,7 @@
         }
       }
     },
-    "864:10": {
+    "863:10": {
       "preRequisites:11": [
         827
       ],
@@ -53750,7 +53728,7 @@
         }
       }
     },
-    "865:10": {
+    "864:10": {
       "preRequisites:11": [
         827
       ],
@@ -53815,7 +53793,7 @@
         }
       }
     },
-    "866:10": {
+    "865:10": {
       "preRequisites:11": [
         727
       ],
@@ -53880,7 +53858,7 @@
         }
       }
     },
-    "867:10": {
+    "866:10": {
       "preRequisites:11": [
         727
       ],
@@ -53945,7 +53923,7 @@
         }
       }
     },
-    "868:10": {
+    "867:10": {
       "preRequisites:11": [
         234
       ],
@@ -54010,7 +53988,7 @@
         }
       }
     },
-    "869:10": {
+    "868:10": {
       "preRequisites:11": [
         139
       ],
@@ -54075,7 +54053,7 @@
         }
       }
     },
-    "870:10": {
+    "869:10": {
       "preRequisites:11": [
         139
       ],
@@ -54140,7 +54118,7 @@
         }
       }
     },
-    "871:10": {
+    "870:10": {
       "preRequisites:11": [
         139
       ],
@@ -54205,7 +54183,7 @@
         }
       }
     },
-    "872:10": {
+    "871:10": {
       "preRequisites:11": [
         325
       ],
@@ -54270,7 +54248,7 @@
         }
       }
     },
-    "873:10": {
+    "872:10": {
       "preRequisites:11": [
         287
       ],
@@ -54335,7 +54313,7 @@
         }
       }
     },
-    "874:10": {
+    "873:10": {
       "preRequisites:11": [
         727
       ],
@@ -54400,7 +54378,7 @@
         }
       }
     },
-    "875:10": {
+    "874:10": {
       "preRequisites:11": [
         6
       ],
@@ -54465,7 +54443,7 @@
         }
       }
     },
-    "876:10": {
+    "875:10": {
       "preRequisites:11": [
         196
       ],
@@ -54530,7 +54508,7 @@
         }
       }
     },
-    "877:10": {
+    "876:10": {
       "preRequisites:11": [
         287
       ],
@@ -54595,7 +54573,7 @@
         }
       }
     },
-    "878:10": {
+    "877:10": {
       "preRequisites:11": [
         847
       ],
@@ -54660,7 +54638,7 @@
         }
       }
     },
-    "879:10": {
+    "878:10": {
       "preRequisites:11": [
         323
       ],
@@ -54725,7 +54703,7 @@
         }
       }
     },
-    "880:10": {
+    "879:10": {
       "preRequisites:11": [
         397
       ],
@@ -54777,7 +54755,7 @@
         }
       }
     },
-    "881:10": {
+    "880:10": {
       "preRequisites:11": [
         153
       ],
@@ -54839,7 +54817,7 @@
         }
       }
     },
-    "882:10": {
+    "881:10": {
       "preRequisites:11": [
         325,
         750
@@ -54874,7 +54852,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "883:10": {
+    "882:10": {
       "preRequisites:11": [
         885
       ],
@@ -54939,7 +54917,7 @@
         }
       }
     },
-    "884:10": {
+    "883:10": {
       "preRequisites:11": [
         288
       ],
@@ -55004,7 +54982,7 @@
         }
       }
     },
-    "885:10": {
+    "884:10": {
       "preRequisites:11": [
         749
       ],
@@ -55069,7 +55047,7 @@
         }
       }
     },
-    "886:10": {
+    "885:10": {
       "preRequisites:11": [
         89
       ],
@@ -55134,7 +55112,7 @@
         }
       }
     },
-    "887:10": {
+    "886:10": {
       "preRequisites:11": [
         165
       ],
@@ -55200,7 +55178,7 @@
         }
       }
     },
-    "888:10": {
+    "887:10": {
       "preRequisites:11": [
         161,
         166,
@@ -55268,7 +55246,7 @@
         }
       }
     },
-    "889:10": {
+    "888:10": {
       "preRequisites:11": [
         827
       ],
@@ -55302,7 +55280,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "890:10": {
+    "889:10": {
       "preRequisites:11": [
         56
       ],
@@ -55341,7 +55319,7 @@
         }
       }
     },
-    "891:10": {
+    "890:10": {
       "preRequisites:11": [
         94
       ],
@@ -55403,7 +55381,7 @@
         }
       }
     },
-    "892:10": {
+    "891:10": {
       "preRequisites:11": [
         541
       ],
@@ -55481,7 +55459,7 @@
         }
       }
     },
-    "893:10": {
+    "892:10": {
       "preRequisites:11": [
         3
       ],
@@ -55520,7 +55498,7 @@
         }
       }
     },
-    "894:10": {
+    "893:10": {
       "preRequisites:11": [
         147
       ],
@@ -55585,7 +55563,7 @@
         }
       }
     },
-    "895:10": {
+    "894:10": {
       "preRequisites:11": [
         88,
         894
@@ -55657,7 +55635,7 @@
         }
       }
     },
-    "896:10": {
+    "895:10": {
       "preRequisites:11": [
         6
       ],
@@ -55723,7 +55701,7 @@
         }
       }
     },
-    "897:10": {
+    "896:10": {
       "preRequisites:11": [
         830,
         896
@@ -55789,7 +55767,7 @@
         }
       }
     },
-    "898:10": {
+    "897:10": {
       "preRequisites:11": [
         93,
         891
@@ -55861,7 +55839,7 @@
         }
       }
     },
-    "899:10": {
+    "898:10": {
       "preRequisites:11": [
         71
       ],
@@ -55927,7 +55905,7 @@
         }
       }
     },
-    "900:10": {
+    "899:10": {
       "preRequisites:11": [
         888
       ],
@@ -55993,7 +55971,7 @@
         }
       }
     },
-    "901:10": {
+    "900:10": {
       "preRequisites:11": [
         179,
         888
@@ -56028,7 +56006,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "902:10": {
+    "901:10": {
       "preRequisites:11": [
         3
       ],
@@ -56139,7 +56117,7 @@
         }
       }
     },
-    "903:10": {
+    "902:10": {
       "preRequisites:11": [
         59,
         72
@@ -56205,7 +56183,7 @@
         }
       }
     },
-    "904:10": {
+    "903:10": {
       "preRequisites:11": [
         339,
         914
@@ -56272,7 +56250,7 @@
         }
       }
     },
-    "905:10": {
+    "904:10": {
       "preRequisites:11": [
         904
       ],
@@ -56338,7 +56316,7 @@
         }
       }
     },
-    "906:10": {
+    "905:10": {
       "preRequisites:11": [
         535
       ],
@@ -56427,7 +56405,7 @@
         }
       }
     },
-    "907:10": {
+    "906:10": {
       "preRequisites:11": [
         533,
         906
@@ -56462,7 +56440,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "908:10": {
+    "907:10": {
       "preRequisites:11": [
         196
       ],
@@ -56496,9 +56474,12 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "909:10": {
+    "908:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -56573,7 +56554,7 @@
         }
       }
     },
-    "910:10": {
+    "909:10": {
       "preRequisites:11": [
         527,
         827
@@ -56639,7 +56620,7 @@
         }
       }
     },
-    "911:10": {
+    "910:10": {
       "preRequisites:11": [
         38
       ],
@@ -56704,7 +56685,7 @@
         }
       }
     },
-    "912:10": {
+    "911:10": {
       "preRequisites:11": [
         3
       ],
@@ -56743,7 +56724,7 @@
         }
       }
     },
-    "913:10": {
+    "912:10": {
       "preRequisites:11": [
         401
       ],
@@ -56782,7 +56763,7 @@
         }
       }
     },
-    "914:10": {
+    "913:10": {
       "preRequisites:11": [
         255,
         286,
@@ -56851,7 +56832,7 @@
         }
       }
     },
-    "915:10": {
+    "914:10": {
       "preRequisites:11": [
         828
       ],
@@ -56885,7 +56866,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "916:10": {
+    "915:10": {
       "preRequisites:11": [
         253
       ],
@@ -56919,7 +56900,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "917:10": {
+    "916:10": {
       "preRequisites:11": [
         524
       ],
@@ -56953,7 +56934,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "918:10": {
+    "917:10": {
       "preRequisites:11": [
         729,
         494,
@@ -57020,7 +57001,7 @@
         }
       }
     },
-    "919:10": {
+    "918:10": {
       "preRequisites:11": [
         108
       ],
@@ -57085,7 +57066,7 @@
         }
       }
     },
-    "920:10": {
+    "919:10": {
       "preRequisites:11": [
         279
       ],
@@ -57119,9 +57100,12 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "921:10": {
+    "920:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57158,7 +57142,7 @@
         }
       }
     },
-    "922:10": {
+    "921:10": {
       "preRequisites:11": [
         885
       ],
@@ -57223,9 +57207,12 @@
         }
       }
     },
-    "923:10": {
+    "922:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57262,7 +57249,7 @@
         }
       }
     },
-    "924:10": {
+    "923:10": {
       "preRequisites:11": [
         971,
         728
@@ -57319,7 +57306,7 @@
         }
       }
     },
-    "925:10": {
+    "924:10": {
       "preRequisites:11": [
         930,
         927,
@@ -57377,7 +57364,7 @@
         }
       }
     },
-    "926:10": {
+    "925:10": {
       "preRequisites:11": [
         933,
         934,
@@ -57435,7 +57422,7 @@
         }
       }
     },
-    "927:10": {
+    "926:10": {
       "preRequisites:11": [
         928,
         728
@@ -57492,7 +57479,7 @@
         }
       }
     },
-    "928:10": {
+    "927:10": {
       "preRequisites:11": [
         929,
         728
@@ -57549,7 +57536,7 @@
         }
       }
     },
-    "929:10": {
+    "928:10": {
       "preRequisites:11": [
         931,
         728
@@ -57606,7 +57593,7 @@
         }
       }
     },
-    "930:10": {
+    "929:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -57660,7 +57647,7 @@
         }
       }
     },
-    "931:10": {
+    "930:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -57714,7 +57701,7 @@
         }
       }
     },
-    "932:10": {
+    "931:10": {
       "preRequisites:11": [
         928,
         728
@@ -57771,7 +57758,7 @@
         }
       }
     },
-    "933:10": {
+    "932:10": {
       "preRequisites:11": [
         932,
         728
@@ -57828,7 +57815,7 @@
         }
       }
     },
-    "934:10": {
+    "933:10": {
       "preRequisites:11": [
         935,
         728
@@ -57889,7 +57876,7 @@
         }
       }
     },
-    "935:10": {
+    "934:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -57943,7 +57930,7 @@
         }
       }
     },
-    "936:10": {
+    "935:10": {
       "preRequisites:11": [
         926,
         728
@@ -58000,7 +57987,7 @@
         }
       }
     },
-    "937:10": {
+    "936:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -58054,7 +58041,7 @@
         }
       }
     },
-    "938:10": {
+    "937:10": {
       "preRequisites:11": [
         937
       ],
@@ -58110,7 +58097,7 @@
         }
       }
     },
-    "939:10": {
+    "938:10": {
       "preRequisites:11": [
         938
       ],
@@ -58166,7 +58153,7 @@
         }
       }
     },
-    "940:10": {
+    "939:10": {
       "preRequisites:11": [
         939
       ],
@@ -58222,7 +58209,7 @@
         }
       }
     },
-    "941:10": {
+    "940:10": {
       "preRequisites:11": [
         940,
         942
@@ -58279,7 +58266,7 @@
         }
       }
     },
-    "942:10": {
+    "941:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -58330,7 +58317,7 @@
         }
       }
     },
-    "943:10": {
+    "942:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -58381,7 +58368,7 @@
         }
       }
     },
-    "944:10": {
+    "943:10": {
       "preRequisites:11": [
         940,
         943
@@ -58438,7 +58425,7 @@
         }
       }
     },
-    "945:10": {
+    "944:10": {
       "preRequisites:11": [
         944
       ],
@@ -58494,7 +58481,7 @@
         }
       }
     },
-    "946:10": {
+    "945:10": {
       "preRequisites:11": [
         941
       ],
@@ -58550,7 +58537,7 @@
         }
       }
     },
-    "947:10": {
+    "946:10": {
       "preRequisites:11": [
         941
       ],
@@ -58606,7 +58593,7 @@
         }
       }
     },
-    "948:10": {
+    "947:10": {
       "preRequisites:11": [
         947
       ],
@@ -58680,7 +58667,7 @@
         }
       }
     },
-    "949:10": {
+    "948:10": {
       "preRequisites:11": [
         937
       ],
@@ -58736,7 +58723,7 @@
         }
       }
     },
-    "950:10": {
+    "949:10": {
       "preRequisites:11": [
         939
       ],
@@ -58792,7 +58779,7 @@
         }
       }
     },
-    "951:10": {
+    "950:10": {
       "preRequisites:11": [
         950
       ],
@@ -58848,7 +58835,7 @@
         }
       }
     },
-    "952:10": {
+    "951:10": {
       "preRequisites:11": [
         757,
         174,
@@ -58916,7 +58903,7 @@
         }
       }
     },
-    "953:10": {
+    "952:10": {
       "preRequisites:11": [
         780,
         150,
@@ -58984,7 +58971,7 @@
         }
       }
     },
-    "954:10": {
+    "953:10": {
       "preRequisites:11": [
         263,
         267
@@ -59019,7 +59006,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "955:10": {
+    "954:10": {
       "preRequisites:11": [
         539
       ],
@@ -59053,7 +59040,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "956:10": {
+    "955:10": {
       "preRequisites:11": [
         328
       ],
@@ -59087,7 +59074,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "957:10": {
+    "956:10": {
       "preRequisites:11": [
         950
       ],
@@ -59143,7 +59130,7 @@
         }
       }
     },
-    "958:10": {
+    "957:10": {
       "preRequisites:11": [
         957
       ],
@@ -59199,7 +59186,7 @@
         }
       }
     },
-    "959:10": {
+    "958:10": {
       "preRequisites:11": [
         939
       ],
@@ -59255,7 +59242,7 @@
         }
       }
     },
-    "960:10": {
+    "959:10": {
       "preRequisites:11": [
         959
       ],
@@ -59317,7 +59304,7 @@
         }
       }
     },
-    "961:10": {
+    "960:10": {
       "preRequisites:11": [
         958
       ],
@@ -59370,7 +59357,7 @@
         }
       }
     },
-    "962:10": {
+    "961:10": {
       "preRequisites:11": [
         260
       ],
@@ -59440,7 +59427,7 @@
         }
       }
     },
-    "963:10": {
+    "962:10": {
       "preRequisites:11": [
         943
       ],
@@ -59496,7 +59483,7 @@
         }
       }
     },
-    "964:10": {
+    "963:10": {
       "preRequisites:11": [
         963
       ],
@@ -59552,7 +59539,7 @@
         }
       }
     },
-    "965:10": {
+    "964:10": {
       "preRequisites:11": [
         939
       ],
@@ -59608,7 +59595,7 @@
         }
       }
     },
-    "966:10": {
+    "965:10": {
       "preRequisites:11": [
         965
       ],
@@ -59664,7 +59651,7 @@
         }
       }
     },
-    "967:10": {
+    "966:10": {
       "preRequisites:11": [
         104
       ],
@@ -59703,7 +59690,7 @@
         }
       }
     },
-    "968:10": {
+    "967:10": {
       "preRequisites:11": [
         938
       ],
@@ -59759,7 +59746,7 @@
         }
       }
     },
-    "969:10": {
+    "968:10": {
       "preRequisites:11": [
         937
       ],
@@ -59815,7 +59802,7 @@
         }
       }
     },
-    "970:10": {
+    "969:10": {
       "preRequisites:11": [
         947,
         969
@@ -59873,7 +59860,7 @@
         }
       }
     },
-    "971:10": {
+    "970:10": {
       "preRequisites:11": [
         936,
         925
@@ -59908,7 +59895,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "972:10": {
+    "971:10": {
       "preRequisites:11": [
         95
       ],
@@ -59965,7 +59952,7 @@
         }
       }
     },
-    "973:10": {
+    "972:10": {
       "preRequisites:11": [
         227,
         810,
@@ -60002,7 +59989,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "974:10": {
+    "973:10": {
       "preRequisites:11": [
         89
       ],
@@ -60036,7 +60023,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "975:10": {
+    "974:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60068,7 +60055,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "976:10": {
+    "975:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60100,7 +60087,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "977:10": {
+    "976:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60132,7 +60119,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "978:10": {
+    "977:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60164,7 +60151,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "979:10": {
+    "978:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60196,7 +60183,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "980:10": {
+    "979:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60228,7 +60215,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "981:10": {
+    "980:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60260,7 +60247,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "982:10": {
+    "981:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60292,7 +60279,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "983:10": {
+    "982:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60324,7 +60311,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "984:10": {
+    "983:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60356,7 +60343,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "985:10": {
+    "984:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60388,7 +60375,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "986:10": {
+    "985:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60420,7 +60407,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "987:10": {
+    "986:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60452,7 +60439,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "988:10": {
+    "987:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60484,7 +60471,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "989:10": {
+    "988:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60516,7 +60503,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "990:10": {
+    "989:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60548,7 +60535,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "991:10": {
+    "990:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60584,7 +60571,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "992:10": {
+    "991:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60616,7 +60603,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "993:10": {
+    "992:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60648,7 +60635,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "994:10": {
+    "993:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60680,7 +60667,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "995:10": {
+    "994:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60716,7 +60703,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "996:10": {
+    "995:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60748,7 +60735,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "997:10": {
+    "996:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -60780,7 +60767,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "998:10": {
+    "997:10": {
       "preRequisites:11": [
         1002,
         825
@@ -60838,7 +60825,7 @@
         }
       }
     },
-    "999:10": {
+    "998:10": {
       "preRequisites:11": [
         998,
         825
@@ -60892,7 +60879,7 @@
         }
       }
     },
-    "1000:10": {
+    "999:10": {
       "preRequisites:11": [
         408,
         106
@@ -60958,7 +60945,7 @@
         }
       }
     },
-    "1001:10": {
+    "1000:10": {
       "preRequisites:11": [
         109
       ],
@@ -61023,7 +61010,7 @@
         }
       }
     },
-    "1002:10": {
+    "1001:10": {
       "preRequisites:11": [
         1010,
         825
@@ -61081,7 +61068,7 @@
         }
       }
     },
-    "1003:10": {
+    "1002:10": {
       "preRequisites:11": [
         1012,
         825
@@ -61139,7 +61126,7 @@
         }
       }
     },
-    "1004:10": {
+    "1003:10": {
       "preRequisites:11": [
         1011,
         825
@@ -61197,7 +61184,7 @@
         }
       }
     },
-    "1005:10": {
+    "1004:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61252,7 +61239,7 @@
         }
       }
     },
-    "1006:10": {
+    "1005:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61307,7 +61294,7 @@
         }
       }
     },
-    "1007:10": {
+    "1006:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61362,7 +61349,7 @@
         }
       }
     },
-    "1008:10": {
+    "1007:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -61417,7 +61404,7 @@
         }
       }
     },
-    "1009:10": {
+    "1008:10": {
       "preRequisites:11": [
         1002,
         1003,
@@ -61476,7 +61463,7 @@
         }
       }
     },
-    "1010:10": {
+    "1009:10": {
       "preRequisites:11": [
         1003,
         1004
@@ -61511,7 +61498,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1011:10": {
+    "1010:10": {
       "preRequisites:11": [
         1006,
         1005
@@ -61546,7 +61533,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1012:10": {
+    "1011:10": {
       "preRequisites:11": [
         1007,
         1008
@@ -61581,7 +61568,7 @@
       "rewards:9": {},
       "tasks:9": {}
     },
-    "1013:10": {
+    "1012:10": {
       "preRequisites:11": [
         93
       ],
@@ -61646,7 +61633,7 @@
         }
       }
     },
-    "1014:10": {
+    "1013:10": {
       "preRequisites:11": [
         339
       ],
@@ -61711,9 +61698,12 @@
         }
       }
     },
-    "1015:10": {
+    "1014:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
-        805
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61785,7 +61775,7 @@
         }
       }
     },
-    "1016:10": {
+    "1015:10": {
       "preRequisites:11": [
         62,
         230,
@@ -61868,7 +61858,7 @@
         }
       }
     },
-    "1017:10": {
+    "1016:10": {
       "preRequisites:11": [
         1016,
         391,
@@ -61953,7 +61943,7 @@
         }
       }
     },
-    "1018:10": {
+    "1017:10": {
       "preRequisites:11": [
         282
       ],
@@ -62018,7 +62008,7 @@
         }
       }
     },
-    "1019:10": {
+    "1018:10": {
       "preRequisites:11": [
         295,
         107
@@ -62108,7 +62098,7 @@
         }
       }
     },
-    "1020:10": {
+    "1019:10": {
       "preRequisites:11": [
         4
       ],
@@ -62179,14 +62169,14 @@
         }
       }
     },
-    "1021:10": {
+    "1020:10": {
       "preRequisites:11": [
         4
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is `R\u0027), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
+          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is `R\u0027), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nThe Tool Belt can store anything with a stack size of 1, like swords, pickaxes, §bGregTech§r tools, and the §6Terminal§r. It has also been modified a bit, so it also allows any §bStorage Drawers§r key, and §cdoesn\u0027t allow any Thermal Satchel§r.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62198,7 +62188,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Tool Belt",
+          "name:8": "§2Tool Belt",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -62375,14 +62365,14 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -804,
-          "y:3": 228
+          "y:3": 224
         },
         "16:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 240
+          "y:3": 236
         },
         "17:10": {
           "id:3": 60,
@@ -62423,8 +62413,8 @@
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -848,
-          "y:3": 240
+          "x:3": -840,
+          "y:3": 236
         },
         "23:10": {
           "id:3": 215,
@@ -62459,7 +62449,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -648,
-          "y:3": 240
+          "y:3": 236
         },
         "28:10": {
           "id:3": 270,
@@ -62633,14 +62623,14 @@
           "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -688,
-          "y:3": 164
+          "x:3": -692,
+          "y:3": 160
         },
         "53:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -848,
+          "x:3": -840,
           "y:3": 184
         },
         "54:10": {
@@ -62689,8 +62679,8 @@
           "id:3": 817,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -696,
-          "y:3": 200
+          "x:3": -700,
+          "y:3": 192
         },
         "61:10": {
           "id:3": 819,
@@ -62739,7 +62729,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
-          "y:3": 240
+          "y:3": 236
         },
         "68:10": {
           "id:3": 1020,
@@ -65413,7 +65403,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 66,
-          "y:3": 322
+          "y:3": 324
         },
         "21:10": {
           "id:3": 263,
@@ -65448,20 +65438,20 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 132
+          "y:3": 128
         },
         "26:10": {
           "id:3": 269,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -480,
-          "y:3": 168
+          "y:3": 164
         },
         "27:10": {
           "id:3": 271,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": 72,
           "y:3": 432
         },
         "28:10": {
@@ -65469,7 +65459,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 308
+          "y:3": 330
         },
         "29:10": {
           "id:3": 279,
@@ -65581,7 +65571,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 328
+          "y:3": 330
         },
         "45:10": {
           "id:3": 323,
@@ -65692,8 +65682,8 @@
           "id:3": 351,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 308
+          "x:3": -24,
+          "y:3": 294
         },
         "61:10": {
           "id:3": 389,
@@ -65889,7 +65879,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": 380
+          "y:3": 384
         },
         "89:10": {
           "id:3": 778,
@@ -65972,8 +65962,8 @@
           "id:3": 839,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -396,
-          "y:3": 208
+          "x:3": -432,
+          "y:3": 164
         },
         "101:10": {
           "id:3": 840,
@@ -66099,7 +66089,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
-          "y:3": 276
+          "y:3": 256
         },
         "119:10": {
           "id:3": 906,
@@ -66329,8 +66319,8 @@
           "id:3": 508,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -540,
-          "y:3": 72
+          "x:3": -612,
+          "y:3": 180
         },
         "24:10": {
           "id:3": 513,
@@ -66343,7 +66333,7 @@
           "id:3": 543,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -468,
+          "x:3": -540,
           "y:3": 72
         },
         "26:10": {
@@ -66364,21 +66354,21 @@
           "id:3": 583,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -540,
+          "x:3": -504,
           "y:3": 108
         },
         "29:10": {
           "id:3": 584,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -468,
           "y:3": 108
         },
         "30:10": {
           "id:3": 585,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -468,
+          "x:3": -540,
           "y:3": 108
         },
         "31:10": {
@@ -66476,8 +66466,8 @@
           "id:3": 600,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -612,
-          "y:3": 180
+          "x:3": -468,
+          "y:3": 72
         },
         "45:10": {
           "id:3": 601,
@@ -67960,7 +67950,7 @@
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 140,
+          "x:3": 128,
           "y:3": 0
         },
         "1:10": {
@@ -67974,7 +67964,7 @@
           "id:3": 258,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 140,
+          "x:3": 128,
           "y:3": -36
         },
         "3:10": {
@@ -67995,7 +67985,7 @@
           "id:3": 335,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 92,
           "y:3": 36
         },
         "6:10": {
@@ -68009,7 +67999,7 @@
           "id:3": 607,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 140,
+          "x:3": 128,
           "y:3": 36
         },
         "8:10": {
@@ -68044,7 +68034,7 @@
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 76,
+          "x:3": 72,
           "y:3": -36
         },
         "13:10": {
@@ -68065,7 +68055,7 @@
           "id:3": 922,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 96,
+          "x:3": 92,
           "y:3": 0
         }
       }
