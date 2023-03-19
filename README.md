@@ -32,17 +32,15 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 - Harder recipes for assorted things like Iridium, Graphene, Numismatic Dynamos, and more  
 
 Installation:
-    NOTE: Scripts may not fully work on versions <1.5.3, thus manual installation may be necessary. 
-    - Windows: 
-    
-        - Download [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat)(right click - save as) save it to the root directory of the pack (the same level as `\config`).
-        - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
+NOTE: Scripts may not fully work on versions <1.5.3, thus manual installation may be necessary. 
+- Windows: 
+    - Download [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat)(right click - save as) save it to the root directory of the pack (the same level as `\config`).
+    - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
         
-    - Any GNU/Linux (Mac and Linux):
-    
-        - Run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` to download the file.
-        - Verify the contents with your editor of choice.
-        - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
+- Any GNU/Linux (Mac and Linux):
+    - Run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` to download the file.
+    - Verify the contents with your editor of choice.
+    - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
 
 Manual installation instructions: [here](overrides/README.md)
 
