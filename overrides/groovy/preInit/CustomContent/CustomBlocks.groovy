@@ -5,7 +5,7 @@ println("[CustomBlocks.groovy] Start Custom Blocks Registration.")
 /* Custom Behaviour Blocks:
 Excitation Coil and Dust Block have special behaviours, and are found in /classes/blocks. 
 All further special behaviour blocks should go there too.*/
-//content.registerBlock("excitationcoil", new ExcitationCoil(content.getDefaultTab())) // Right now is bugged.
+content.registerBlock("excitationcoil", new ExcitationCoil(content.getDefaultTab()))
 content.registerBlock("block_dust", new DustBlock(content.getDefaultTab()))
 
 /* Normal Blocks */

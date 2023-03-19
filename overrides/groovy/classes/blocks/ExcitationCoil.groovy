@@ -6,9 +6,11 @@ import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.util.math.BlockPos
 import net.minecraft.block.state.IBlockState
 import net.minecraft.world.IBlockAccess
+import net.minecraft.util.EnumFacing
+import net.minecraft.block.state.BlockFaceShape
 
 class ExcitationCoil extends Block {
-    private AxisAlignedBB AABB
+    private static final AxisAlignedBB AABB = new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 0.5625D, 0.75D)
 
 	ExcitationCoil(CreativeTabs tab) {
 		super(Material.IRON)
@@ -17,10 +19,9 @@ class ExcitationCoil extends Block {
 		if (tab != null) {
             setCreativeTab(tab)
         }
-        AABB = new AxisAlignedBB(0.25, 0.0, 0.25, 0.75, 0.5625, 0.75)
-        setHardness(5.0 as float)
-        setResistance(5.0 as float)
-        setLightLevel(1.0 as float)
+        setHardness(5.0F)
+        setResistance(5.0F)
+        setLightLevel(1.0F)
         setHarvestLevel("pickaxe", 2)
 	}
 
@@ -31,6 +32,11 @@ class ExcitationCoil extends Block {
 
     @Override
     public boolean isSideSolid(IBlockState baseState, IBlockAccess world, BlockPos pos, EnumFacing side) {
+        return false
+    }
+
+    @Override
+    public boolean isTopSolid(IBlockState state){
         return false
     }
 
@@ -49,4 +55,13 @@ class ExcitationCoil extends Block {
         return false
     }
 
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+        return BlockFaceShape.UNDEFINED
+    }
+
+    @Override
+    public boolean doesSideBlockRendering(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing face){
+        return false
+    }
 }

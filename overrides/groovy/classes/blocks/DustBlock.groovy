@@ -10,8 +10,8 @@ class DustBlock extends BlockFalling {
 		if (tab != null) {
             setCreativeTab(tab)
         }
-        setHardness(0.4 as float)
-        setResistance(0.4 as float)
+        setHardness(0.4F)
+        setResistance(0.4F)
         setHarvestLevel("shovel", 0)
 	}
 }
