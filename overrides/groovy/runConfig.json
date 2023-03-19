@@ -2,13 +2,13 @@
   "packName": "Nomifactory",
   "packId": "contenttweaker",
   "version": "1.0.0",
-  "debug": false,
+  "debug": true,
   "classes": [
     "classes/"
   ],
   "loaders": {
     "preInit": [
-      "preInit/CustomContent/CustomItems.groovy",
+      "preInit/customContent/CustomItems.groovy",
       "preInit/"
     ],
     "postInit": [
