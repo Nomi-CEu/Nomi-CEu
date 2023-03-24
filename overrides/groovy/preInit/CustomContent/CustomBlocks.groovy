@@ -12,5 +12,7 @@ content.registerBlock("block_dust", new DustBlock(content.getDefaultTab()))
 content.createBlock("densemagma").register()
 content.createBlock("denseoilshale").register()
 content.createBlock("microverse_casing").register()
+content.createBlock("ultimate_power_storage").register()
+content.createBlock("ultimate_generator").register()
 
 println("[CustomBlocks.groovy] End Custom Blocks Registration.")

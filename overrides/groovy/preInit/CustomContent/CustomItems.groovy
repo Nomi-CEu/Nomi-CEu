@@ -144,8 +144,6 @@ cf.createItem("creativeportabletankmold", EnumRarity.EPIC)
 cf.createItem("exoticmaterialscatalyst", EnumRarity.RARE)
 cf.createItem("eternalcatalyst", EnumRarity.EPIC)
 cf.createItem("ultimate_gem", EnumRarity.EPIC)
-cf.createItem("ultimate_power_storage", EnumRarity.EPIC)
-cf.createItem("ultimate_generator", EnumRarity.EPIC)
 
 
 /* Misc Items */
