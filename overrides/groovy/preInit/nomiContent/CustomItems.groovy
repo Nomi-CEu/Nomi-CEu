@@ -5,7 +5,7 @@ import net.minecraft.potion.PotionEffect
 import net.minecraft.potion.Potion
 import net.minecraft.item.Item
 
-import CommonFunctions as cf
+import CommonFunctions.createItem
 
 println("[CustomItems.groovy] Start Creative Tab Init.")
 
@@ -25,120 +25,120 @@ println("[CustomItems.groovy] Start Custom Items Registration.")
 /* --------------------------------- Custom Items ----------------------------------------- */
 
 /* Temporary Items (To be removed) */
-cf.createItem("blazepowder")
-cf.createItem("dark_red_coal")
+createItem("blazepowder")
+createItem("dark_red_coal")
 
 
 /* Coins */
-cf.createItem("omnicoin")
-cf.createItem("omnicoin5", EnumRarity.UNCOMMON)
-cf.createItem("omnicoin25", EnumRarity.RARE)
-cf.createItem("omnicoin100", EnumRarity.EPIC)
+createItem("omnicoin")
+createItem("omnicoin5", EnumRarity.UNCOMMON)
+createItem("omnicoin25", EnumRarity.RARE)
+createItem("omnicoin100", EnumRarity.EPIC)
 
 
 /* Widgets */
-cf.createItem("woodenwidget")
-cf.createItem("woodwidgetleft")
-cf.createItem("woodwidgetright")
-cf.createItem("stonewidget")
-cf.createItem("stonewidgetup")
-cf.createItem("stonewidgetdown")
-cf.createItem("alloywidget")
-cf.createItem("enderwidget")
+createItem("woodenwidget")
+createItem("woodwidgetleft")
+createItem("woodwidgetright")
+createItem("stonewidget")
+createItem("stonewidgetup")
+createItem("stonewidgetdown")
+createItem("alloywidget")
+createItem("enderwidget")
 
 
 /* Space Items */
-cf.createItem("radiationlayer")
-cf.createItem("pressurelayer")
-cf.createItem("cloth")
-cf.createItem("thermalcloth")
-cf.createItem("unpreparedspacehelmet")
-cf.createItem("unpreparedspacechestpiece")
-cf.createItem("unpreparedspaceleggings")
-cf.createItem("unpreparedspaceboots")
+createItem("radiationlayer")
+createItem("pressurelayer")
+createItem("cloth")
+createItem("thermalcloth")
+createItem("unpreparedspacehelmet")
+createItem("unpreparedspacechestpiece")
+createItem("unpreparedspaceleggings")
+createItem("unpreparedspaceboots")
 
 
 /* Micro Miner Items */
-cf.createItem("quantumflux", EnumRarity.EPIC)
-cf.createItem("gemsensor", EnumRarity.EPIC)
-cf.createItem("warpengine", EnumRarity.EPIC)
-cf.createItem("universalnavigator", EnumRarity.EPIC)
-cf.createItem("quantumfluxedeterniumplating", EnumRarity.EPIC)
-cf.createItem("t1guidance", EnumRarity.UNCOMMON)
-cf.createItem("t2guidance", EnumRarity.RARE)
-cf.createItem("t1laser", EnumRarity.UNCOMMON)
-cf.createItem("t2laser", EnumRarity.RARE)
-cf.createItem("t3laser", EnumRarity.EPIC)
+createItem("quantumflux", EnumRarity.EPIC)
+createItem("gemsensor", EnumRarity.EPIC)
+createItem("warpengine", EnumRarity.EPIC)
+createItem("universalnavigator", EnumRarity.EPIC)
+createItem("quantumfluxedeterniumplating", EnumRarity.EPIC)
+createItem("t1guidance", EnumRarity.UNCOMMON)
+createItem("t2guidance", EnumRarity.RARE)
+createItem("t1laser", EnumRarity.UNCOMMON)
+createItem("t2laser", EnumRarity.RARE)
+createItem("t3laser", EnumRarity.EPIC)
 
 
 /* Micro Miners, Stabilized Micro Miners & Matter */
-cf.createItem("tieroneship", EnumRarity.UNCOMMON, 16)
-cf.createItem("tiertwoship", EnumRarity.UNCOMMON, 16)
-cf.createItem("tierthreeship", EnumRarity.UNCOMMON, 16)
-cf.createItem("tierfourship", EnumRarity.UNCOMMON, 16)
-cf.createItem("tierfourandhalfship", EnumRarity.UNCOMMON, 16)
-cf.createItem("tierfiveship", EnumRarity.RARE, 16)
-cf.createItem("tiersixship", EnumRarity.RARE, 16)
-cf.createItem("tiersevenship", EnumRarity.RARE, 16)
-cf.createItem("tiereightship", EnumRarity.EPIC, 16)
-cf.createItem("tiereightandhalfship", EnumRarity.EPIC, 16)
-cf.createItem("tiernineship", EnumRarity.EPIC, 16)
-cf.createItem("tiertenship", EnumRarity.EPIC, 16)
+createItem("tieroneship", EnumRarity.UNCOMMON, 16)
+createItem("tiertwoship", EnumRarity.UNCOMMON, 16)
+createItem("tierthreeship", EnumRarity.UNCOMMON, 16)
+createItem("tierfourship", EnumRarity.UNCOMMON, 16)
+createItem("tierfourandhalfship", EnumRarity.UNCOMMON, 16)
+createItem("tierfiveship", EnumRarity.RARE, 16)
+createItem("tiersixship", EnumRarity.RARE, 16)
+createItem("tiersevenship", EnumRarity.RARE, 16)
+createItem("tiereightship", EnumRarity.EPIC, 16)
+createItem("tiereightandhalfship", EnumRarity.EPIC, 16)
+createItem("tiernineship", EnumRarity.EPIC, 16)
+createItem("tiertenship", EnumRarity.EPIC, 16)
 
-cf.createItem("tieroneship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tiertwoship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tierthreeship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tierfourship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tierfourandhalfship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tierfiveship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tiersixship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tiersevenship_stabilized", EnumRarity.EPIC, 1)
-cf.createItem("tiereightship_stabilized", EnumRarity.EPIC, 1)
+createItem("tieroneship_stabilized", EnumRarity.EPIC, 1)
+createItem("tiertwoship_stabilized", EnumRarity.EPIC, 1)
+createItem("tierthreeship_stabilized", EnumRarity.EPIC, 1)
+createItem("tierfourship_stabilized", EnumRarity.EPIC, 1)
+createItem("tierfourandhalfship_stabilized", EnumRarity.EPIC, 1)
+createItem("tierfiveship_stabilized", EnumRarity.EPIC, 1)
+createItem("tiersixship_stabilized", EnumRarity.EPIC, 1)
+createItem("tiersevenship_stabilized", EnumRarity.EPIC, 1)
+createItem("tiereightship_stabilized", EnumRarity.EPIC, 1)
 
-cf.createItem("tieroneship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tiertwoship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tierthreeship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tierfourship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tierfourandhalfship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tierfiveship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tiersixship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tiersevenship_stabilized_matter", EnumRarity.EPIC)
-cf.createItem("tiereightship_stabilized_matter", EnumRarity.EPIC)
+createItem("tieroneship_stabilized_matter", EnumRarity.EPIC)
+createItem("tiertwoship_stabilized_matter", EnumRarity.EPIC)
+createItem("tierthreeship_stabilized_matter", EnumRarity.EPIC)
+createItem("tierfourship_stabilized_matter", EnumRarity.EPIC)
+createItem("tierfourandhalfship_stabilized_matter", EnumRarity.EPIC)
+createItem("tierfiveship_stabilized_matter", EnumRarity.EPIC)
+createItem("tiersixship_stabilized_matter", EnumRarity.EPIC)
+createItem("tiersevenship_stabilized_matter", EnumRarity.EPIC)
+createItem("tiereightship_stabilized_matter", EnumRarity.EPIC)
 
 
 /* Data */
-cf.createItem("dragonlairdata", EnumRarity.EPIC)
-cf.createItem("witherrealmdata", EnumRarity.EPIC)
-cf.createItem("impossiblerealmdata", EnumRarity.RARE)
-cf.createItem("universecreationdata", EnumRarity.EPIC, 1)
-cf.createItem("stellarcreationdata", EnumRarity.RARE)
-cf.createItem("lairofthechaosguardiandata", EnumRarity.EPIC, 1)
+createItem("dragonlairdata", EnumRarity.EPIC)
+createItem("witherrealmdata", EnumRarity.EPIC)
+createItem("impossiblerealmdata", EnumRarity.RARE)
+createItem("universecreationdata", EnumRarity.EPIC, 1)
+createItem("stellarcreationdata", EnumRarity.RARE)
+createItem("lairofthechaosguardiandata", EnumRarity.EPIC, 1)
 
 
 /* Solidified Items */
-cf.createItem("solidifiedargon")
-cf.createItem("solidifiedchlorine")
-cf.createItem("solidifiedfluorine")
-cf.createItem("solidifiedhelium")
-cf.createItem("solidifiedhydrogen")
-cf.createItem("solidifiedkrypton")
-cf.createItem("solidifiedmercury")
-cf.createItem("solidifiedneon")
-cf.createItem("solidifiednitrogen")
-cf.createItem("solidifiedoxygen")
-cf.createItem("solidifiedradon")
-cf.createItem("solidifiedxenon")
+createItem("solidifiedargon")
+createItem("solidifiedchlorine")
+createItem("solidifiedfluorine")
+createItem("solidifiedhelium")
+createItem("solidifiedhydrogen")
+createItem("solidifiedkrypton")
+createItem("solidifiedmercury")
+createItem("solidifiedneon")
+createItem("solidifiednitrogen")
+createItem("solidifiedoxygen")
+createItem("solidifiedradon")
+createItem("solidifiedxenon")
 
 
 /* Stabilized Items */
-cf.createItem("stabilizedeinsteinium")
-cf.createItem("stabilizedberkelium")
-cf.createItem("stabilizedneptunium")
-cf.createItem("stabilizedplutonium")
-cf.createItem("stabilizeduranium")
-cf.createItem("stabilizedcurium")
-cf.createItem("stabilizedcalifornium")
-cf.createItem("stabilizedamericium")
+createItem("stabilizedeinsteinium")
+createItem("stabilizedberkelium")
+createItem("stabilizedneptunium")
+createItem("stabilizedplutonium")
+createItem("stabilizeduranium")
+createItem("stabilizedcurium")
+createItem("stabilizedcalifornium")
+createItem("stabilizedamericium")
 
 
 /* Endgame Items */
@@ -146,35 +146,35 @@ cf.createItem("stabilizedamericium")
 HOAU.setCreativeTab(creativeTab).register()
 
 // Other Endgame Items
-cf.createItem("creativeportabletankmold", EnumRarity.EPIC)
-cf.createItem("exoticmaterialscatalyst", EnumRarity.RARE)
-cf.createItem("eternalcatalyst", EnumRarity.EPIC)
-cf.createItem("ultimate_gem", EnumRarity.EPIC, 1)
+createItem("creativeportabletankmold", EnumRarity.EPIC)
+createItem("exoticmaterialscatalyst", EnumRarity.RARE)
+createItem("eternalcatalyst", EnumRarity.EPIC)
+createItem("ultimate_gem", EnumRarity.EPIC, 1)
 
 
 /* Misc Items */
-cf.createItem("grainsofinnocence")
+createItem("grainsofinnocence")
 
-cf.createItem("radiumsalt")
-cf.createItem("moondust")
+createItem("radiumsalt")
+createItem("moondust")
 
-cf.createItem("redstonearmorplate")
-cf.createItem("carbonarmorplate")
-cf.createItem("lapisarmorplate")
+createItem("redstonearmorplate")
+createItem("carbonarmorplate")
+createItem("lapisarmorplate")
 
-cf.createItem("compressedoctadiccapacitor")
-cf.createItem("doublecompressedoctadiccapacitor")
+createItem("compressedoctadiccapacitor")
+createItem("doublecompressedoctadiccapacitor")
 
 // Core and North are part of the Crafting Nether Star mod.
-cf.createItem("netherstarsouth")
-cf.createItem("netherstareast")
-cf.createItem("netherstarwest")
+createItem("netherstarsouth")
+createItem("netherstareast")
+createItem("netherstarwest")
 
 // Hydrogen is part of Solidified Items section.
-cf.createItem("densehydrogen")
-cf.createItem("ultradensehydrogen")
+createItem("densehydrogen")
+createItem("ultradensehydrogen")
 
-cf.createItem("magnetron")
+createItem("magnetron")
 
 /* Smores */
 String [] smores = [
