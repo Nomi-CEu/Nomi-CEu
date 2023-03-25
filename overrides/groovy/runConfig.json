@@ -8,7 +8,7 @@
   ],
   "loaders": {
     "preInit": [
-      "preInit/customContent/CustomItems.groovy",
+      "preInit/nomiContent/CustomItems.groovy",
       "preInit/"
     ],
     "postInit": [

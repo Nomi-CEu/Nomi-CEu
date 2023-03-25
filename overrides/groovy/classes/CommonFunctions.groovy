@@ -5,24 +5,24 @@ import net.minecraftforge.common.IRarity
 
 class CommonFunctions {
     /* Items */
-    def static createItem(String name){
+    static void createItem(String name){
         content.createItem(name)
             .register()
     }
 
-    def static createItem(String name, IRarity rarity){
+    static void createItem(String name, IRarity rarity){
         content.createItem(name)
             .setRarity(rarity)
             .register()
     }
 
-    def static createItem(String name, int maxStackSize){
+    static void createItem(String name, int maxStackSize){
         content.createItem(name)
             .setMaxStackSize(maxStackSize)
             .register()
     }
 
-    def static createItem(String name, IRarity rarity, int maxStackSize){
+    static void createItem(String name, IRarity rarity, int maxStackSize){
         content.createItem(name)
             .setRarity(rarity)
             .setMaxStackSize(maxStackSize)

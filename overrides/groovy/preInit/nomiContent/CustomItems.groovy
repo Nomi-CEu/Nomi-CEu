@@ -18,13 +18,11 @@ content.setDefaultCreativeTab(creativeTab)
 
 println("[CustomItems.groovy] End Creative Tab Init.")
 
+// HOAU is registered later, with the rest of the endgame items
+
 println("[CustomItems.groovy] Start Custom Items Registration.")
 
 /* --------------------------------- Custom Items ----------------------------------------- */
-
-/* Register HOAU, in new creative tab */
-HOAU.setCreativeTab(creativeTab).register()
-
 
 /* Temporary Items (To be removed) */
 cf.createItem("blazepowder")
@@ -144,6 +142,10 @@ cf.createItem("stabilizedamericium")
 
 
 /* Endgame Items */
+// Register HOAU, in new creative tab
+HOAU.setCreativeTab(creativeTab).register()
+
+// Other Endgame Items
 cf.createItem("creativeportabletankmold", EnumRarity.EPIC)
 cf.createItem("exoticmaterialscatalyst", EnumRarity.RARE)
 cf.createItem("eternalcatalyst", EnumRarity.EPIC)

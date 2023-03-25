@@ -18,7 +18,7 @@ public class Smore extends ItemFood {
         potionEffects = new ArrayList<>()
     }
 
-    def public addPotionEffect(Potion potion, int potionDuration, int amplifier) {
+    public void addPotionEffect(Potion potion, int potionDuration, int amplifier) {
         if (potion == null)
             return this
 
