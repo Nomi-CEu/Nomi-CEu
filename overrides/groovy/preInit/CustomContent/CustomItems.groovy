@@ -1,5 +1,9 @@
 import net.minecraft.item.EnumRarity
 import net.minecraft.item.ItemStack
+import net.minecraft.init.MobEffects
+import net.minecraft.potion.PotionEffect
+import net.minecraft.potion.Potion
+import net.minecraft.item.Item
 
 import CommonFunctions as cf
 
@@ -169,5 +173,55 @@ cf.createItem("densehydrogen")
 cf.createItem("ultradensehydrogen")
 
 cf.createItem("magnetron")
+
+/* Smores */
+String [] smores = [
+    "eightsmore",
+    "sixteensmore",
+    "thirtytwosmore",
+    "sixtyfoursmore"
+]
+
+Potion [] potions = [
+    MobEffects.ABSORPTION,
+    MobEffects.SPEED,
+    MobEffects.HASTE,
+    MobEffects.SATURATION,
+    MobEffects.HEALTH_BOOST,
+    MobEffects.REGENERATION
+]
+
+EnumRarity [] rarities = [
+    EnumRarity.COMMON,
+    EnumRarity.UNCOMMON,
+    EnumRarity.RARE,
+    EnumRarity.EPIC
+]
+
+int heal = 44
+float saturation = 8.6F
+int potionDuration = 1200
+int potionAmplifier = 0
+int index = 0
+
+for (String smoreName : smores) {
+    heal *= 2
+    heal += 4
+
+    saturation *= 2
+    saturation++
+
+    potionDuration *= 2
+
+    Item smore = new Smore(heal, saturation, content.getDefaultTab()).setRarity(rarities[index])
+
+    for (Potion potion : potions)
+        smore.addPotionEffect(potion, potionDuration, potionAmplifier)
+
+    content.registerItem(smoreName, smore)
+
+    potionAmplifier++
+    index++
+}
 
 println("[CustomItems.groovy] End Custom Items Registration.")
