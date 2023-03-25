@@ -6,7 +6,7 @@ import CommonFunctions as cf
 println("[CustomItems.groovy] Start Creative Tab Init.")
 
 /* Define HOAU first for use in creative tab logo */
-def HOAU = content.createItem("heartofauniverse").setRarity(EnumRarity.EPIC)
+def HOAU = content.createItem("heartofauniverse").setRarity(EnumRarity.EPIC).setMaxStackSize(1)
 
 /* Define a Default Creative Tab */
 def creativeTab = content.createCreativeTab("nomifactory.creative_tab", new ItemStack(HOAU))
@@ -70,28 +70,28 @@ cf.createItem("t3laser", EnumRarity.EPIC)
 
 
 /* Micro Miners, Stabilized Micro Miners & Matter */
-cf.createItem("tieroneship", EnumRarity.UNCOMMON)
-cf.createItem("tiertwoship", EnumRarity.UNCOMMON)
-cf.createItem("tierthreeship", EnumRarity.UNCOMMON)
-cf.createItem("tierfourship", EnumRarity.UNCOMMON)
-cf.createItem("tierfourandhalfship", EnumRarity.UNCOMMON)
-cf.createItem("tierfiveship", EnumRarity.RARE)
-cf.createItem("tiersixship", EnumRarity.RARE)
-cf.createItem("tiersevenship", EnumRarity.RARE)
-cf.createItem("tiereightship", EnumRarity.EPIC)
-cf.createItem("tiereightandhalfship", EnumRarity.EPIC)
-cf.createItem("tiernineship", EnumRarity.EPIC)
-cf.createItem("tiertenship", EnumRarity.EPIC)
+cf.createItem("tieroneship", EnumRarity.UNCOMMON, 16)
+cf.createItem("tiertwoship", EnumRarity.UNCOMMON, 16)
+cf.createItem("tierthreeship", EnumRarity.UNCOMMON, 16)
+cf.createItem("tierfourship", EnumRarity.UNCOMMON, 16)
+cf.createItem("tierfourandhalfship", EnumRarity.UNCOMMON, 16)
+cf.createItem("tierfiveship", EnumRarity.RARE, 16)
+cf.createItem("tiersixship", EnumRarity.RARE, 16)
+cf.createItem("tiersevenship", EnumRarity.RARE, 16)
+cf.createItem("tiereightship", EnumRarity.EPIC, 16)
+cf.createItem("tiereightandhalfship", EnumRarity.EPIC, 16)
+cf.createItem("tiernineship", EnumRarity.EPIC, 16)
+cf.createItem("tiertenship", EnumRarity.EPIC, 16)
 
-cf.createItem("tieroneship_stabilized", EnumRarity.EPIC)
-cf.createItem("tiertwoship_stabilized", EnumRarity.EPIC)
-cf.createItem("tierthreeship_stabilized", EnumRarity.EPIC)
-cf.createItem("tierfourship_stabilized", EnumRarity.EPIC)
-cf.createItem("tierfourandhalfship_stabilized", EnumRarity.EPIC)
-cf.createItem("tierfiveship_stabilized", EnumRarity.EPIC)
-cf.createItem("tiersixship_stabilized", EnumRarity.EPIC)
-cf.createItem("tiersevenship_stabilized", EnumRarity.EPIC)
-cf.createItem("tiereightship_stabilized", EnumRarity.EPIC)
+cf.createItem("tieroneship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tiertwoship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tierthreeship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tierfourship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tierfourandhalfship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tierfiveship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tiersixship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tiersevenship_stabilized", EnumRarity.EPIC, 1)
+cf.createItem("tiereightship_stabilized", EnumRarity.EPIC, 1)
 
 cf.createItem("tieroneship_stabilized_matter", EnumRarity.EPIC)
 cf.createItem("tiertwoship_stabilized_matter", EnumRarity.EPIC)
@@ -108,9 +108,9 @@ cf.createItem("tiereightship_stabilized_matter", EnumRarity.EPIC)
 cf.createItem("dragonlairdata", EnumRarity.EPIC)
 cf.createItem("witherrealmdata", EnumRarity.EPIC)
 cf.createItem("impossiblerealmdata", EnumRarity.RARE)
-cf.createItem("universecreationdata", EnumRarity.EPIC)
+cf.createItem("universecreationdata", EnumRarity.EPIC, 1)
 cf.createItem("stellarcreationdata", EnumRarity.RARE)
-cf.createItem("lairofthechaosguardiandata", EnumRarity.EPIC)
+cf.createItem("lairofthechaosguardiandata", EnumRarity.EPIC, 1)
 
 
 /* Solidified Items */
@@ -143,7 +143,7 @@ cf.createItem("stabilizedamericium")
 cf.createItem("creativeportabletankmold", EnumRarity.EPIC)
 cf.createItem("exoticmaterialscatalyst", EnumRarity.RARE)
 cf.createItem("eternalcatalyst", EnumRarity.EPIC)
-cf.createItem("ultimate_gem", EnumRarity.EPIC)
+cf.createItem("ultimate_gem", EnumRarity.EPIC, 1)
 
 
 /* Misc Items */
