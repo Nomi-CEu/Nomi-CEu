@@ -5,7 +5,7 @@ import net.minecraft.potion.PotionEffect
 import net.minecraft.potion.Potion
 import net.minecraft.item.Item
 
-import CommonFunctions.createItem
+import static CommonFunctions.createItem
 
 println("[CustomItems.groovy] Start Creative Tab Init.")
 
