@@ -18,11 +18,16 @@ public class Smore extends ItemFood {
         potionEffects = new ArrayList<>()
     }
 
-    public void addPotionEffect(Potion potion, int potionDuration, int amplifier) {
+    public Smore addPotionEffect(Potion potion, int potionDuration, int amplifier) {
         if (potion == null)
             return this
 
         potionEffects.add(new PotionEffect(potion, potionDuration, amplifier))
+        return this
+    }
+
+    public Smore setRarity(IRarity rarity) {
+        this.rarity = rarity
         return this
     }
 
@@ -36,11 +41,6 @@ public class Smore extends ItemFood {
                     player.addPotionEffect(new PotionEffect(potionAdd))
             }
         }
-    }
-
-    public Smore setRarity(IRarity rarity) {
-        this.rarity = rarity
-        return this
     }
 
     @Override
