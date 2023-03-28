@@ -3,8 +3,8 @@ import net.minecraft.block.material.Material
 import net.minecraft.block.SoundType
 import net.minecraft.creativetab.CreativeTabs
 
-class DustBlock extends BlockFalling {
-	def DustBlock(CreativeTabs tab) {
+class BlockDust extends BlockFalling {
+	def BlockDust(CreativeTabs tab) {
 		super(Material.SAND)
 		setSoundType(SoundType.SAND)
 		if (tab != null) {

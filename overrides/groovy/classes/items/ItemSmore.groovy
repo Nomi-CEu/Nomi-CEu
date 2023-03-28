@@ -7,18 +7,18 @@ import net.minecraft.potion.PotionEffect
 import net.minecraft.world.World
 import net.minecraftforge.common.IRarity
 
-public class Smore extends ItemFood {
+public class ItemSmore extends ItemFood {
     List<PotionEffect> potionEffects
         private IRarity rarity = null
 
-    public Smore(int healAmount, float saturation, CreativeTabs creativeTab) {
+    public ItemSmore(int healAmount, float saturation, CreativeTabs creativeTab) {
         super(healAmount, saturation, true)
         setAlwaysEdible()
         setCreativeTab(creativeTab)
         potionEffects = new ArrayList<>()
     }
 
-    public Smore addPotionEffect(Potion potion, int potionDuration, int amplifier) {
+    public ItemSmore addPotionEffect(Potion potion, int potionDuration, int amplifier) {
         if (potion == null)
             return this
 
@@ -26,7 +26,7 @@ public class Smore extends ItemFood {
         return this
     }
 
-    public Smore setRarity(IRarity rarity) {
+    public ItemSmore setRarity(IRarity rarity) {
         this.rarity = rarity
         return this
     }

@@ -15,7 +15,7 @@ import net.minecraft.util.EnumFacing
 import net.minecraft.block.state.BlockFaceShape
 import net.minecraft.world.World
 
-public class ExcitationCoil extends BlockDirectional {
+public class BlockExcitationCoil extends BlockDirectional {
     private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.0 / 16.0, 4.0 / 16.0,
                                                                      4.0 / 16.0, 9.0 / 16.0,
                                                                      12.0 / 16.0, 12.0 / 16.0)
@@ -40,7 +40,7 @@ public class ExcitationCoil extends BlockDirectional {
                                                                      4.0 / 16.0, 12.0 / 16.0,
                                                                      16.0 / 16.0, 12.0 / 16.0)
 
-	public ExcitationCoil(CreativeTabs tab) {
+	public BlockExcitationCoil(CreativeTabs tab) {
 		super(Material.IRON)
         fullBlock = false
 		setSoundType(SoundType.METAL)

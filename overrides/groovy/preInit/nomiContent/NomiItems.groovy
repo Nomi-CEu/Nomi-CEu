@@ -215,7 +215,7 @@ for (String smoreName : smores) {
 
     potionDuration *= 2
 
-    Item smore = new Smore(heal, saturation, content.getDefaultTab()).setRarity(rarities[index])
+    Item smore = new ItemSmore(heal, saturation, content.getDefaultTab()).setRarity(rarities[index])
 
     for (Potion potion : potions)
         smore.addPotionEffect(potion, potionDuration, potionAmplifier)
