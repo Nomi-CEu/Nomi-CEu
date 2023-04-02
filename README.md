@@ -42,10 +42,10 @@ The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/
 
 The three patch repos are:
 - [NuclearCraft](https://github.com/Exaxxion/NuclearCraft/tree/2.18y-ceu). This fixes GTCEu incompatability with NuclearCraft.
-- [Draconic Evolution](https://github.com/IntegerLimit/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks, in the Energy Core and Reactor.
+- [Draconic Evolution](https://github.com/Nomi-CEU/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks, in the Energy Core and Reactor.
 - [Gregtech](https://github.com/IntegerLimit/GregTech/tree/remove-small-storage-cover). This fixes the incompatibility between latest GregTech and latest ULV covers. This patch is to be removed when this incompatibility is fixed in a future GT update.
 
-If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/IntegerLimit/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
+If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/Nomi-CEU/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
 
 ## Credits
 Original pack by [Exaxxion](https://github.com/Exaxxion).  
