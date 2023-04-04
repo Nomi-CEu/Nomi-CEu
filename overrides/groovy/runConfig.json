@@ -8,10 +8,12 @@
   ],
   "loaders": {
     "preInit": [
-      "preInit/nomiContent/CustomItems.groovy",
+      "preInit/nomiContent/NomiItems.groovy",
       "preInit/"
     ],
     "postInit": [
+      "postInit/OreDict.groovy",
+      "postInit/JEI.groovy",
       "postInit/"
     ]
   }
