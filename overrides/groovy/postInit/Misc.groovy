@@ -63,40 +63,6 @@ mods.chisel.Carving.addVariation("marble", item('gregtech:stone_smooth:2'));
 //GTCE Basalt
 mods.chisel.Carving.addVariation("basalt", item('gregtech:stone_smooth:3'));
 */
-//Create Universal GTCE Oredict for tools that can be used to reference by oredict and encapsulates all tools.
-//Works for any material tool, any damage tool, electric or non-electric
-
-//GTCE Tools
-//ore('gtceWrenches').addItems([
-//	item('gregtech:meta_tool:8').withEmptyTag(),
-//	item('gregtech:meta_tool:29').withEmptyTag(),
-//	item('gregtech:meta_tool:30').withEmptyTag(),
-//	item('gregtech:meta_tool:31').withEmptyTag()]);
-//
-//ore('gtceScrewdrivers').addItems([
-//	item('gregtech:meta_tool:11').withEmptyTag(),
-//	item('gregtech:meta_tool:34').withEmptyTag()]);
-//
-//ore('gtceHardHammers').addItems([
-//	item('gregtech:meta_tool:6').withEmptyTag()]);
-//
-//ore('gtceSaws').addItems([
-//	item('gregtech:meta_tool:5').withEmptyTag(),
-//	item('gregtech:meta_tool:16').withEmptyTag(),
-//	item('gregtech:meta_tool:26').withEmptyTag(),
-//	item('gregtech:meta_tool:27').withEmptyTag(),
-//	item('gregtech:meta_tool:28').withEmptyTag(),
-//	item('gregtech:meta_tool:33').withEmptyTag()]);
-//
-//ore('gtceFiles').addItems([
-//	item('gregtech:meta_tool:9').withEmptyTag()]);
-//
-//ore('gtceMortars').addItems([
-//	item('gregtech:meta_tool:12').withEmptyTag()]);
-//
-//ore('gtceWireCutters').addItems([
-//	item('gregtech:meta_tool:13').withEmptyTag()]);
-
 
 //Setting Item Max Stacksize
 item('minecraft:snowball').Item.setMaxStackSize(64)
