@@ -28,7 +28,9 @@ function isFrameable(block as IBlockDefinition) as bool {
 
         || block.id == "storagedrawers:compdrawers"
         || block.id == "storagedrawers:controller"
-        || block.id == "storagedrawers:controllerslave";
+        || block.id == "storagedrawers:controllerslave"
+
+        || block.id.startsWith("gregtechdrawers");
 }
 
 function isReframing(block as IBlockDefinition) as bool {
