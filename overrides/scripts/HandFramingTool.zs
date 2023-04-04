@@ -49,7 +49,7 @@ function makeFramedState(state as IBlockState) as IBlockState {
     if id == "storagedrawers:trim" {
         return <block:storagedrawers:customtrim>.block.definition.defaultState;
     }
-    return (id == "storagedrawers:basicdrawers" ? <block:storagedrawers:customdrawers> :
+    return (id == "storagedrawers:basicdrawers" || id.startsWith("gregtechdrawers") ? <block:storagedrawers:customdrawers> :
             id == "storagedrawers:compdrawers" ? <block:framedcompactdrawers:framed_compact_drawer> :
             id == "storagedrawers:controllerslave" ? <block:framedcompactdrawers:framed_slave> :
             <block:framedcompactdrawers:framed_drawer_controller>)
