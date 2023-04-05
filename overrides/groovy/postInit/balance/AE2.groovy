@@ -1,13 +1,17 @@
-// import mods.appliedenergistics2.Inscriber
+import static NomiUtil.getInscriberBuilder
+import static NomiUtil.registerInscriberRecipe
+import static NomiUtil.removeInscriberRecipie
 
 println("[AE2.groovy] Start AE2 Changes")
 
 ore('dustFluix').add(item('appliedenergistics2:material:8'))
+
 /*
-TODO FIXME import broken
+TODO need appengi builder; no groovy things
+
 //Silicon
-Inscriber.removeRecipe(item('appliedenergistics2:material:20'));
-Inscriber.addRecipe(item('appliedenergistics2:material:20'), metaitem('plateSilicon'), true, item('appliedenergistics2:material:19'));
+removeInscriberRecipie(item('appliedenergistics2:material:20'));
+InscriberRecipes.addRecipe(item('appliedenergistics2:material:20'), metaitem('plateSilicon'), true, item('appliedenergistics2:material:19'));
 
 //Engineering Processor
 Inscriber.removeRecipe(item('appliedenergistics2:material:24'));

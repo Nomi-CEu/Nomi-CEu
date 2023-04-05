@@ -1,7 +1,13 @@
 import net.minecraft.block.material.Material
 import net.minecraft.block.SoundType
 import net.minecraft.block.Block
+import net.minecraft.item.ItemStack
 import net.minecraftforge.common.IRarity
+import appeng.api.AEApi
+import appeng.api.features.IInscriberRecipe
+import appeng.api.features.IInscriberRecipeBuilder
+import appeng.api.features.IInscriberRegistry
+import appeng.api.features.InscriberProcessType
 
 class NomiUtil {
     /* Items */
@@ -40,4 +46,23 @@ class NomiUtil {
             .setCreativeTab(content.getDefaultTab())
     }
     /* ---------------------------------------------------------------- */
+
+	// AE Compat
+	static IInscriberRecipeBuilder getInscriberBuilder(boolean inscribe) {
+		return AEApi.instance().registries().inscriber().builder().withProcessType(inscribe ? InscriberProcessType.INSCRIBE : InscriberProcessType.PRESS)
+	}
+
+	static void registerInscriberRecipe(IInscriberRecipe therecipie) {
+		AEApi.instance().registries().inscriber().addRecipe(therecipie)
+	}
+
+	static void removeInscriberRecipie(ItemStack thething) {
+		// TODO please implement me D:
+        // def inscriberReg = AEApi.instance().registries().inscriber()
+		// inscriberReg.getRecipes()
+        //     .stream()
+        //     .filter(r -> r.getOutput().isItemEqual(thething))
+        //     .collect(Collectors.toList())
+        //     .forEach(r -> inscriberReg.removeRecipe(r))
+	}
 }
