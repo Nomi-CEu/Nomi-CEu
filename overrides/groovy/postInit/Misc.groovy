@@ -6,31 +6,28 @@ println("[Misc.groovy] Start GT - Misc Changes")
 crafting.shapelessBuilder()
 	.name("contenttweaker:infinity_ingot")
 	.output(item('avaritia:resource:6'))
-	.input(material('ingotInfinity'))
+	.input(metaitem('ingotInfinity'))
 	.register()
 crafting.shapelessBuilder()
 	.name("contenttweaker:infinity_plate")
 	.output(item('moreplates:infinity_plate'))
-	.input(material('ingotInfinity'))
+	.input(metaitem('ingotInfinity'))
 	.register()
 
-/*
-TODO IMPLEMENT THESE COMMENTED ONES
-mods.jei.JEI.removeAndHide(item('metaitem:ingotInfinity'));
-mods.jei.JEI.removeAndHide(item('metaitem:plateInfinity'));
-mods.jei.JEI.removeAndHide(item('metaitem:plateDoubleInfinity'));
-mods.jei.JEI.removeAndHide(item('metaitem:blockInfinity'));
-mods.jei.JEI.removeAndHide(item('metaitem:nuggetInfinity'));
-mods.jei.JEI.removeAndHide(item('metaitem:dustInfinity'));
-mods.jei.JEI.removeAndHide(item('metaitem:dustSmallInfinity'));
-mods.jei.JEI.removeAndHide(item('metaitem:dustTinyInfinity'));
-
+// mods.jei.removeAndHide(metaitem('ingotInfinity'));
+// mods.jei.hideCategory(metaitem('plateInfinity'));
+// mods.jei.hideCategory(metaitem('plateDoubleInfinity'));
+// mods.jei.hideCategory(metaitem('blockInfinity'));
+// mods.jei.hideCategory(metaitem('nuggetInfinity'));
+// mods.jei.hideCategory(metaitem('dustInfinity'));
+// mods.jei.hideCategory(metaitem('dustSmallInfinity'));
+// mods.jei.hideCategory(metaitem('dustTinyInfinity'));
 
 // Infinity Plate * 1
-item('recipemap:bender').findRecipe(24, [item('metaitem:ingotInfinity'), <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+// item('recipemap:bender').findRecipe(24, [metaitem('ingotInfinity'), <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 // Double Infinity Plate * 1
-item('recipemap:bender').findRecipe(96, [item('metaitem:ingotInfinity') * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
-*/
+// item('recipemap:bender').findRecipe(96, [metaitem('ingotInfinity') * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
+
 mods.gregtech.bender.recipeBuilder()
 	.inputs(item('avaritia:resource:6'))
 	.circuitMeta(1)

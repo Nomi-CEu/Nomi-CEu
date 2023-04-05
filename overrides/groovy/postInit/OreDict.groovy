@@ -162,7 +162,7 @@ def blocksDisabled = [
 	],
 
 	'blockPlutonium': [
-		item('metaitem:blockPlutonium')
+		metaitem('blockPlutonium')
 	],
 
 	'blockPulsatingIron': [
@@ -362,7 +362,7 @@ def dustsDisabled = [
 	],
 
 	// 'dustPlutonium': [
-	// 	item('metaitem:dustPlutonium')
+	// 	metaitem('dustPlutonium')
 	// ],
 
 	'dustSaltpeter': [
@@ -581,7 +581,7 @@ def ingotsDisabled = [
 	],
 
 	// 'ingotPlutonium': [
-	// 	item('metaitem:ingotPlutonium')
+	// 	metaitem('ingotPlutonium')
 	// ],
 
 	'ingotPulsatingIron': [
@@ -716,7 +716,7 @@ def platesDisabled = [
 	],
 
 	// 'platePlutonium': [
-	// 	item('metaitem:platePlutonium')
+	// 	metaitem('platePlutonium')
 	// ],
 
 	'plateSignalum': [
@@ -746,7 +746,7 @@ def platesDisabled = [
 	],
 
 	// 'plateNeutronium': [
-	// 	item('metaitem:plateNeutronium')
+	// 	metaitem('plateNeutronium')
 	// ]
 ]
 
@@ -915,7 +915,7 @@ def nuggetsDisabled = [
 	],
 
 	// 'nuggetPlutonium': [
-	// 	item('metaitem:nuggetPlutonium')
+	// 	metaitem('nuggetPlutonium')
 	// ],
 
 	'nuggetSignalum': [
@@ -967,7 +967,7 @@ def sticksDisabled = [
 	],
 
 	'stickPlutonium': [
-		// item('metaitem:stickPlutonium')
+		// metaitem('stickPlutonium')
 	],
 
 	'stickSteel': [
@@ -1036,21 +1036,21 @@ def oresDisabled = [
 hideItems(oresDisabled)
 
 
-ore('itemSilicon').add(material('wafer.silicon'));
-ore('dustQuartz').add(material('dustNetherQuartz'));
+ore('itemSilicon').add(metaitem('wafer.silicon'));
+ore('dustQuartz').add(metaitem('dustNetherQuartz'));
 ore('dustBone').add(item('minecraft:dye:15'));
 
 // Awakened Draconium Fix
-ore('blockDraconiumAwakened').add(material('blockAwakenedDraconium'));
-ore('ingotDraconiumAwakened').add(material('ingotAwakenedDraconium'));
-ore('nuggetDraconiumAwakened').add(material('nuggetAwakenedDraconium'));
+ore('blockDraconiumAwakened').add(metaitem('blockAwakenedDraconium'));
+ore('ingotDraconiumAwakened').add(metaitem('ingotAwakenedDraconium'));
+ore('nuggetDraconiumAwakened').add(metaitem('nuggetAwakenedDraconium'));
 
 // Chisel Blocks fix
 // Aluminium (not aluminum)
-ore('blockAluminum').add(material('blockAluminium'));
+ore('blockAluminum').add(metaitem('blockAluminium'));
 
 // Coal Coke (not fuelCoke)
-ore('blockCoalCoke').add(material('blockCoke'));
+ore('blockCoalCoke').add(metaitem('blockCoke'));
 
 //Ores
 ore('oreIron').add(item('minecraft:iron_ore'));
