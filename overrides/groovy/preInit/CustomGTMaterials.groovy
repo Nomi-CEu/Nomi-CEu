@@ -800,6 +800,57 @@ event_manager.listen { MaterialEvent event ->
 		.color(0xe8c4a0)
 		.components(material('carbon')* 12, material('hydrogen')* 27, material('oxygen')* 4, material('phosphorus')* 1)
 		.build()
+
+	material('tributyl_phosphate').setFormula("(C4H9O)3PO", true);
+
+	material('rhodium_sulfate').addDust(0, 0);
+
+	material('lutetium').addIngot();
+	material('neptunium').addIngot();
+	material('curium').addIngot();
+	material('berkelium').addIngot();
+	material('californium').addIngot();
+	material('einsteinium').addIngot();
+	material('graphite').addIngot();
+
+	material('neptunium').addFluid();
+	material('curium').addFluid();
+	material('berkelium').addFluid();
+	material('californium').addFluid();
+	material('einsteinium').addFluid();
+	material('nether_star').addFluid();
+
+	material('topaz').addFlags("generate_lens")
+	material('blue_topaz').addFlags("generate_lens")
+	material('ender_pearl').addFlags("generate_lens")
+	material('electrum').addFlags("generate_gear")
+	material('neutronium').addFlags("generate_round")
+	material('titanium').addFlags("generate_foil", "generate_fine_wire")
+	material('stainless_steel').addFlags("generate_foil", "generate_fine_wire")
+	material('naquadah_enriched').addFlags("generate_bolt_screw")
+	material('naquadria').addFlags("generate_bolt_screw")
+	material('redstone').addFlags("generate_dense")
+	material('trinium').addFlags("generate_dense")
+	material('iridium').addFlags("generate_dense")
+	material('lapis').addFlags("generate_dense")
+	material('graphene').addFlags("generate_foil")
+	material('berkelium').addFlags("generate_frame")
+	material('blue_steel').addFlags("generate_frame")
+	material('ultimet').addFlags("generate_frame")
+	// Prevent TE Gears from showing up
+	material('tin').addFlags("generate_gear")
+	material('copper').addFlags("generate_gear")
+	material('gold').addFlags("generate_gear")
+	material('lead').addFlags("generate_gear")
+	material('nickel').addFlags("generate_gear")
+	material('platinum').addFlags("generate_gear")
+	material('silver').addFlags("generate_gear")
+	material('emerald').addFlags("generate_gear")
+
+	material('rhodium_sulfate').setIconSet("rough")
+
+	material('black_steel').setFormula("(AuAgCu3)2Fe3?4", true)
+	material('rhodium_plated_palladium').setFormula("((SnFe)4(CuAg4)2)2Pd3Rh", true)
 }
 
 

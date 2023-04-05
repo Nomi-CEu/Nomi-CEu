@@ -34,15 +34,14 @@ Inscriber.removeRecipe(item('appliedenergistics2:material:18'));
 Inscriber.addRecipe(item('appliedenergistics2:material:18'), metaitem('plateGold'), true, item('appliedenergistics2:material:15'));
 */
 
-//ME Drive
-crafting.remove('appliedenergistics2:drive')
+// ME Drive
+crafting.remove('appliedenergistics2:network/blocks/drive')
 crafting.shapedBuilder()
     .name('contenttweaker:appliedenergistics2_drive')
     .output(item('appliedenergistics2:drive'))
     .matrix('AEA',
             'CcC',
-			'AsA')
-	// should this be paneglass?
+			'ASA')
     .key('A', metaitem('plateAluminium'))
     .key('E', metaitem('emitter.mv'))
     .key('C', ore('circuitLv'))
@@ -50,55 +49,78 @@ crafting.shapedBuilder()
     .key('S', metaitem('sensor.mv'))
     .register()
 
-//ME Inscriber
-crafting.remove('appliedenergistics2:inscriber')
+// ME Inscriber
+crafting.remove('appliedenergistics2:network/blocks/inscriber')
 crafting.shapedBuilder()
     .name('contenttweaker:appliedenergistics2_inscriber')
     .output(item('appliedenergistics2:inscriber'))
     .matrix('DPD',
             'MHD',
 			'DPD')
-	// should this be paneglass?
     .key('D', metaitem('plateDarkSteel'))
     .key('P', metaitem('electric.piston.mv'))
     .key('M', item('appliedenergistics2:material:7'))
     .key('H', metaitem('hull.mv'))
     .register()
 
-//Pattern
-crafting.remove('appliedenergistics2:material:52')
+// Pattern
+crafting.remove('appliedenergistics2:network/crafting/patterns_blank')
 crafting.shapedBuilder()
-    .name('contenttweaker:appliedenergistics2_material_52')
+    .name('contenttweaker:appliedenergistics2_pattern')
     .output(item('appliedenergistics2:material:52'))
     .matrix('WWW',
             'PCP',
 			'PPP')
-	// should this be paneglass?
     .key('W', metaitem('wireFineSilver'))
     .key('P', metaitem('platePlastic'))
     .key('C', ore('circuitHv'))
     .register()
 
-//Crafting CPU
-// crafting.remove(item('appliedenergistics2:crafting_unit'));
-// crafting.addShaped(item('appliedenergistics2:crafting_unit'), [
-// 	[item('metaitem:plateAluminium'), item('appliedenergistics2:material:23'), item('metaitem:plateAluminium')],
-// 	[item('appliedenergistics2:part:16'), item('appliedenergistics2:material:22'), item('appliedenergistics2:part:16')],
-// 	[item('metaitem:plateAluminium'), item('appliedenergistics2:material:23'), item('metaitem:plateAluminium')]]);
+// Crafting CPU
+crafting.remove('appliedenergistics2:network/crafting/cpu_crafting_unit')
+crafting.shapedBuilder()
+    .name('contenttweaker:appliedenergistics2_crafting_unit')
+    .output(item('appliedenergistics2:crafting_unit'))
+    .matrix('ACA',
+            'cLc',
+			'ACA')
+    .key('A', metaitem('plateAluminium'))
+    .key('C', item('appliedenergistics2:material:23')) // processor
+    .key('c', item('appliedenergistics2:part:16')) // calculation
+    .key('L', item('appliedenergistics2:part:22')) // logic
+    .register()
 
-//Molecular Assembler
-// crafting.remove(item('appliedenergistics2:molecular_assembler'));
-// crafting.addShaped(item('appliedenergistics2:molecular_assembler'), [
-// 	[item('metaitem:plateAluminium'), item('appliedenergistics2:quartz_glass'), item('metaitem:plateAluminium')],
-// 	[item('appliedenergistics2:material:44'), item('metaitem:workbench'), item('appliedenergistics2:material:43')],
-// 	[item('metaitem:plateAluminium'), item('appliedenergistics2:quartz_glass'), item('metaitem:plateAluminium')]]);
+// Molecular Assembler
+crafting.remove('appliedenergistics2:network/crafting/molecular_assembler')
+crafting.shapedBuilder()
+    .name('contenttweaker:appliedenergistics2_molecular_assembler')
+    .output(item('appliedenergistics2:molecular_assembler'))
+    .matrix('AQA',
+            'aCF',
+			'AQA')
+    .key('A', metaitem('plateAluminium'))
+    .key('Q', item('appliedenergistics2:quartz_glass'))
+    .key('a', item('appliedenergistics2:material:44')) // anhiliation core
+    .key('C', metaitem('workbench'))
+    .key('F', item('appliedenergistics2:material:43')) // formation core
+    .register()
 
-// //Quartz Fiber
-// crafting.remove(item('appliedenergistics2:part:140'));
-// wiremill.recipeBuilder().inputs([item('appliedenergistics2:material:11')]).outputs(item('appliedenergistics2:part:140') * 2).duration(100).EUt(16).buildAndRegister();
+// Quartz Fiber
+crafting.remove('appliedenergistics2:network/parts/quartz_fiber_part')
+mods.gregtech.wiremill.recipeBuilder()
+	.inputs([item('appliedenergistics2:material:11')])
+	.outputs(item('appliedenergistics2:part:140') * 2)
+	.duration(100)
+	.EUt(16)
+	.buildAndRegister()
 
-// //Glass Cable
-// crafting.remove(item('appliedenergistics2:part:16'));
-// alloy_smelter.recipeBuilder().inputs([item('ore:dustFluix'), item('appliedenergistics2:part:140')]).outputs(item('appliedenergistics2:part:16') * 2).duration(50).EUt(16).buildAndRegister();
+// Glass Cable
+crafting.remove('appliedenergistics2:network/cables/glass_fluix')
+mods.gregtech.wiremill.alloy_smelter.recipeBuilder()
+	.inputs([item('ore:dustFluix'), item('appliedenergistics2:part:140')])
+	.outputs(item('appliedenergistics2:part:16') * 2)
+	.duration(50)
+	.EUt(16)
+	.buildAndRegister()
 
 println("[AE2.groovy] End AE2 Changes")
