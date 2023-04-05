@@ -4,10 +4,12 @@
   "version": "1.0.0",
   "debug": true,
   "classes": [
+    "classes/NomiUtil.groovy",
     "classes/"
   ],
   "loaders": {
     "preInit": [
+			"preInit/nomiContent/CustomGTMaterials.groovy",
       "preInit/nomiContent/NomiItems.groovy",
       "preInit/"
     ],
@@ -15,6 +17,14 @@
       "postInit/OreDict.groovy",
       "postInit/JEI.groovy",
       "postInit/"
+    ]
+  },
+  "packmodes": {
+    "normal": [
+      "normal/"
+    ],
+    "expert": [
+      "expert"
     ]
   }
 }

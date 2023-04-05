@@ -1,0 +1,54 @@
+import gregtech.api.GregTechAPI.MaterialEvent
+import gregtech.api.unification.material.Material
+import gregtech.api.unification.Elements
+import gregtech.api.unification.material.properties.BlastProperty
+
+println("[Materials.groovy] Start GT Materials Registration")
+
+Elements.add(130, 234, -1, null, "Omnium", "Nm", false);
+Elements.add(149, 264, -1, null, "Draconium", "Dc", false);
+Elements.add(149, 267, -1, null, "AwakenedDraconium", "Dc*", false);
+
+// you *MUST* do it inside the event
+event_manager.listen { MaterialEvent event ->
+
+	new Material.Builder(32001, "draconium")
+		.element("Draconium")
+		.ingot().fluid().ore()
+		.color(0xbe49ed).iconSet("metallic")
+		.blastTemp(6800, BlastProperty.GasTier.HIGHER)
+		.cableProperties(524288, 1, 0, true)
+		.flags(["generate_plate", "generate_rod", "generate_gear", "generate_dense"])
+		.build()
+
+	new Material.Builder(32002, "awakened_draconium")
+		.element("AwakenedDraconium")
+		.ingot().fluid()
+		.color(0xf58742).iconSet("metallic")
+		.flags(["no_smelting", "generate_plate", "generate_rod", "generate_gear"])
+		.build()
+
+	new Material.Builder(32003, "dark_steel")
+		.ingot().fluid()
+		.color(0x414751).iconSet("dull")
+		.flags(["generate_plate", "generate_rod", "generate_frame", "disable_decomposition"])
+		.components([material('iron') * 1])
+		.build();
+
+	new Material.Builder(32004, "omnium")
+		.ingot().fluid()
+		.element("Omnium")
+		.color(0x84053e).iconSet("shiny")
+		.cableProperties(2147483647, 64, 0, true)
+		.build();
+
+	new Material.Builder(32006, "ardite")
+		.ingot().fluid()
+		.color(0xad2f05).iconSet("dull")
+		.flags(["generate_plate"])
+		.components([material('red_steel') * 3, material('blaze') * 1])
+		.build();
+}
+
+
+println("[Materials.groovy] End GT Materials Registration")

@@ -3,7 +3,7 @@ import net.minecraft.block.SoundType
 import net.minecraft.block.Block
 import net.minecraftforge.common.IRarity
 
-class CommonFunctions {
+class NomiUtil {
     /* Items */
     static void createItem(String name){
         content.createItem(name)
@@ -28,8 +28,9 @@ class CommonFunctions {
             .setMaxStackSize(maxStackSize)
             .register()
     }
-    /* ---------------------------------------------------------------- */
 
+
+    /* ---------------------------------------------------------------- */
     /* Blocks */
     static Block createBaseBlock(Material material, SoundType soundType){
         return new Block(material)

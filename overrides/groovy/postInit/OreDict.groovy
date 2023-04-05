@@ -1,4 +1,3 @@
-
 println("[OreDict.groovy] Loading OreDict Changes Start")
 
 def hideItems(bucket) {
@@ -1037,21 +1036,21 @@ def oresDisabled = [
 hideItems(oresDisabled)
 
 
-ore('itemSilicon').add(item('metaitem:wafer.silicon'));
-ore('dustQuartz').add(item('metaitem:dustNetherQuartz'));
+ore('itemSilicon').add(material('wafer.silicon'));
+ore('dustQuartz').add(material('dustNetherQuartz'));
 ore('dustBone').add(item('minecraft:dye:15'));
 
 // Awakened Draconium Fix
-ore('blockDraconiumAwakened').add(item('metaitem:blockAwakenedDraconium'));
-ore('ingotDraconiumAwakened').add(item('metaitem:ingotAwakenedDraconium'));
-ore('nuggetDraconiumAwakened').add(item('metaitem:nuggetAwakenedDraconium'));
+ore('blockDraconiumAwakened').add(material('blockAwakenedDraconium'));
+ore('ingotDraconiumAwakened').add(material('ingotAwakenedDraconium'));
+ore('nuggetDraconiumAwakened').add(material('nuggetAwakenedDraconium'));
 
 // Chisel Blocks fix
 // Aluminium (not aluminum)
-ore('blockAluminum').add(item('metaitem:blockAluminium'));
+ore('blockAluminum').add(material('blockAluminium'));
 
 // Coal Coke (not fuelCoke)
-ore('blockCoalCoke').add(item('metaitem:blockCoke'));
+ore('blockCoalCoke').add(material('blockCoke'));
 
 //Ores
 ore('oreIron').add(item('minecraft:iron_ore'));
