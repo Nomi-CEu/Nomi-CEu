@@ -175,3 +175,6 @@ gemPerfect.generateRecipes(function(orePrefix as OrePrefix, material as Material
         .outputs(Utils.item("gemExquisite", material) * 2)
         .duration(100).EUt(1920).buildAndRegister();
 } as IOreRecipeHandler);
+
+// Cow Egg
+recipes.addShapeless(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:cow"}}), [<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:cow"})]);

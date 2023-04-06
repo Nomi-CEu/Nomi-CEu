@@ -391,6 +391,19 @@ mixer.recipeBuilder()
     .inputs([<thermalfoundation:material:1028>, <metaitem:dustTitanium>])
     .duration(200).EUt(30).buildAndRegister();
 
+// Change drops of pulverised obsidian and niter, add (temporary) conversion recipes
+val basalzEntity = <entity:thermalfoundation:basalz>;
+basalzEntity.removeDrop(<thermalfoundation:material:770>);
+basalzEntity.addPlayerOnlyDrop(<metaitem:dustObsidian> % 80, 0, 2); // 80% is around the rate observed.
+
+recipes.addShapeless(<metaitem:dustObsidian>, [<thermalfoundation:material:770>]);
+
+val blitzEntity = <entity:thermalfoundation:blitz>;
+blitzEntity.removeDrop(<thermalfoundation:material:772>);
+blitzEntity.addPlayerOnlyDrop(<metaitem:dustSaltpeter> % 80, 0, 2); // 80% is around the rate observed.
+
+recipes.addShapeless(<metaitem:dustSaltpeter>, [<thermalfoundation:material:772>]);
+
 // Temporary Conversion recipe between gt and thermal mana infused
 recipes.addShapeless(<thermalfoundation:material:136>, [<gregtech:meta_ingot:32021>]);
 recipes.addShapeless(<thermalfoundation:material:72>, [<gregtech:meta_dust:32021>]);
