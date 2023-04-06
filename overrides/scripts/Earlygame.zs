@@ -418,6 +418,19 @@ cutter.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister();
 
+// Change drops of pulverised obsidian and niter, add (temporary) conversion recipes
+val basalzEntity = <entity:thermalfoundation:basalz>;
+basalzEntity.removeDrop(<thermalfoundation:material:770>);
+basalzEntity.addPlayerOnlyDrop(<metaitem:dustObsidian> % 80, 0, 2); // 80% is around the rate observed.
+
+recipes.addShapeless(<metaitem:dustObsidian>, [<thermalfoundation:material:770>]);
+
+val blitzEntity = <entity:thermalfoundation:blitz>;
+blitzEntity.removeDrop(<thermalfoundation:material:772>);
+blitzEntity.addPlayerOnlyDrop(<metaitem:dustSaltpeter> % 80, 0, 2); // 80% is around the rate observed.
+
+recipes.addShapeless(<metaitem:dustSaltpeter>, [<thermalfoundation:material:772>]);
+
 // Tooltips
 
 // Not needed because of better tooltips.
