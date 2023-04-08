@@ -46,7 +46,7 @@ crafting.shapedBuilder()
 // Cell 1
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_photovoltaic_cell_1')
-    .output(item("solarflux:photovoltaic_cell_1"))
+    .output(item("solarflux:photovoltaic_cell_1") * 6)
     .matrix('LLL',
             'MMM',
 			'FFF')
@@ -58,7 +58,7 @@ crafting.shapedBuilder()
 // Cell 2
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_photovoltaic_cell_2')
-    .output(item("solarflux:photovoltaic_cell_2"))
+    .output(item("solarflux:photovoltaic_cell_2") * 6)
     .matrix('PPP',
             'CCC',
 			'BBB')
@@ -70,7 +70,7 @@ crafting.shapedBuilder()
 // Cell 3
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_photovoltaic_cell_3')
-    .output(item("solarflux:photovoltaic_cell_3"))
+    .output(item("solarflux:photovoltaic_cell_3") * 6)
     .matrix('PPP',
             'CCC',
 			'BBB')
@@ -82,7 +82,7 @@ crafting.shapedBuilder()
 // Cell 4
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_photovoltaic_cell_4')
-    .output(item("solarflux:photovoltaic_cell_4"))
+    .output(item("solarflux:photovoltaic_cell_4") * 6)
     .matrix('PPP',
             'CCC',
 			'BBB')
@@ -105,7 +105,7 @@ crafting.shapedBuilder()
 // Cell 6
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_photovoltaic_cell_6')
-    .output(item("solarflux:photovoltaic_cell_6"))
+    .output(item("solarflux:photovoltaic_cell_6") * 6)
     .matrix('SSS',
             'CCC',
 			'SSS')
@@ -157,7 +157,7 @@ crafting.shapedBuilder()
 // Solar 4
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_solar_panel_4')
-    .output(item("solarflux:solar_panel_4"))
+    .output(item("solarflux:solar_panel_4") * 2)
     .matrix('SPS',
             'MEM',
 			'MWM')
@@ -171,7 +171,7 @@ crafting.shapedBuilder()
 // Solar 5
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_solar_panel_5')
-    .output(item("solarflux:solar_panel_5"))
+    .output(item("solarflux:solar_panel_5") * 4)
     .matrix('SPS',
             'LNL',
 			'LWL')
@@ -185,7 +185,7 @@ crafting.shapedBuilder()
 // Solar 6
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_solar_panel_6')
-    .output(item("solarflux:solar_panel_6"))
+    .output(item("solarflux:solar_panel_6") * 4)
     .matrix('SPS',
             'LNL',
 			'LWL')
@@ -199,11 +199,11 @@ crafting.shapedBuilder()
 // Solar 7
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_solar_panel_7')
-    .output(item("solarflux:solar_panel_7"))
+    .output(item("solarflux:solar_panel_7") * 4)
     .matrix('PPP',
             'SsS',
 			'OWO')
-    .key('P', item("solarflux:photovoltaic_cell_5"))
+    .key('P', item("solarflux:photovoltaic_cell_5") * 6)
     .key('S', item("solarflux:solar_panel_6"))
     .key('s', ore("blockSignalum"))
     .key('O', metaitem("plateOsmium"))
@@ -213,7 +213,7 @@ crafting.shapedBuilder()
 // Solar 8
 crafting.shapedBuilder()
     .name('contenttweaker:solarflux_solar_panel_8')
-    .output(item("solarflux:solar_panel_8"))
+    .output(item("solarflux:solar_panel_8") * 4)
     .matrix('PPP',
             'SES',
 			'OWO')
