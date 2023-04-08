@@ -21,7 +21,7 @@ Replace this text with the version number of the pack, or the commit hash, if yo
 Replace this text with your launcher. If you are using the CurseForge Launcher, please try to see if the issue applies on a different launcher. 
 
 **Mode:**
-Replace this text with your mode (Normal Mode, Hard Mode or Both Modes).
+Replace this text with your mode (Normal Mode, Expert Mode or Both Modes).
 
 **Environment:**
 Replace this text with your environment. This is whether you are in Singleplayer or Multiplayer, any additional mods you added, and any configurations that were changed from their defaults.

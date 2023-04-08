@@ -5,7 +5,7 @@
       "posX": -150,
       "posY": 4,
       "width": 300,
-      "height": 77,
+      "height": 79,
       "alignment": "top_center"
     }
   },
@@ -70,7 +70,7 @@
       }
     },
     "update": {
-      "text": "Update Notes",
+      "text": "Update Changes",
       "posX": 125,
       "posY": 26,
       "width": 120,
@@ -78,7 +78,7 @@
       "alignment": "left_center",
       "action": {
         "type": "openLink",
-        "link": "https://github.com/Nomifactory/Nomifactory/blob/dev/UPDATENOTES.md"
+        "link": "https://github.com/Nomi-CEu/nomi-ceu/releases/tag/1.5.2"
       }
     },
     "discord": {

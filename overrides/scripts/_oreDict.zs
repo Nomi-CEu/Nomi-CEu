@@ -2222,6 +2222,7 @@ mods.jei.JEI.removeAndHide(<libvulpes:productsheet:1>);
 mods.jei.JEI.removeAndHide(<betterquesting:extra_life>);
 mods.jei.JEI.removeAndHide(<betterquesting:extra_life:1>);
 mods.jei.JEI.removeAndHide(<betterquesting:extra_life:2>);
+mods.jei.JEI.removeAndHide(<betterquesting:guide_book>);
 
 
 //                 XXXXXXXXXX                            XXXXXXXXXX
@@ -2624,6 +2625,9 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_crafting_terminal>); // Crafting Wireless
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_pattern_terminal>); // Pattern Wireless
 <ore:questbookWirelessTerminals>.add(<appliedenergistics2:wireless_fluid_terminal>); // Fluid Wireless
+
+<ore:questbookCards>.add(<appliedenergistics2:memory_card>);
+<ore:questbookCards>.add(<betterp2p:advanced_memory_card>);
 
 <ore:questbookChisels>.add(<chisel:chisel_iron>);
 <ore:questbookChisels>.add(<chisel:chisel_diamond>);

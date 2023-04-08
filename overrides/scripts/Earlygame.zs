@@ -418,6 +418,13 @@ cutter.recipeBuilder()
 	.EUt(30)
 	.buildAndRegister();
 
+// Nature's Compass
+recipes.remove(<naturescompass:naturescompass>);
+recipes.addShaped(<naturescompass:naturescompass>, 
+	[[<ore:treeSapling>, <minecraft:compass>, <ore:treeSapling>],
+	[<ore:logWood>, <metaitem:prospector.lv>, <ore:logWood>],
+	[<ore:treeSapling>, <ore:logWood>, <ore:treeSapling>]]);
+
 // Tooltips
 
 // Not needed because of better tooltips.
