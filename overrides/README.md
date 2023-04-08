@@ -11,7 +11,7 @@ Manual (All versions):
         
 Automatic Installation (>1.6)
 - Windows: 
-     - Download [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat)(right click - save as) save it to the root directory of the pack (the same level as `\config`).
+     - Download [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat) (right click - save as) save it to the root directory of the pack (the same level as `\config`).
     - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
  - Any GNU/Linux (Mac and Linux) System:
     - Run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` to download the file.
