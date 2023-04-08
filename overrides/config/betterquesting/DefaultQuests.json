@@ -50303,7 +50303,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Bending Machine makes, depending on what Programmable Circuit it\u0027s given:\n- Plates from a single ingot (instead of the Compressor)\n- 4 Foils from a Plate (instead of the Cluster Mill, which is no more)\n- Double Plates from two Plates\n- Dense Plates from nine Plates\n- Small Springs from one Rod\n- Springs from one Long Rod. \n\nWhy was this removed?!",
+          "desc:8": "§2The Bending Machine makes, depending on what Programmable Circuit it\u0027s given:\n- Plates from a single ingot (instead of the Compressor)\n- 4 Foils from a Plate (instead of the Cluster Mill, which is no more)\n- Double Plates from two Plates\n- Dense Plates from nine Plates\n- Small Springs from one Rod\n- Springs from one Long Rod. \n§r\nWhy was this removed?!\n\nNote that circuits can be placed in the circuit slot instead of the input of the bender, which creates a \u0027Ghost Circuit\u0027, which doesn\u0027t take up the circuit. This means you only have to use 1 circuit! (Except in Input Buses of Multiblocks)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63199,15 +63199,15 @@
           "id:3": 22,
           "sizeX:3": 28,
           "sizeY:3": 28,
-          "x:3": -132,
-          "y:3": 216
+          "x:3": -136,
+          "y:3": 212
         },
         "2:10": {
           "id:3": 27,
           "sizeX:3": 28,
           "sizeY:3": 28,
-          "x:3": -80,
-          "y:3": 216
+          "x:3": -76,
+          "y:3": 212
         },
         "3:10": {
           "id:3": 31,
@@ -63340,7 +63340,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
-          "y:3": 316
+          "y:3": 320
         },
         "22:10": {
           "id:3": 80,
@@ -63354,14 +63354,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
-          "y:3": 316
+          "y:3": 320
         },
         "24:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
-          "y:3": 248
+          "y:3": 244
         },
         "25:10": {
           "id:3": 83,
@@ -63647,7 +63647,7 @@
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
+          "x:3": -64,
           "y:3": 332
         },
         "66:10": {

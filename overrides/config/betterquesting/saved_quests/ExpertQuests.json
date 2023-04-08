@@ -529,8 +529,7 @@
     "7:10": {
       "preRequisites:11": [
         37,
-        66,
-        670
+        66
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -743,7 +742,6 @@
     "11:10": {
       "preRequisites:11": [
         66,
-        670,
         909
       ],
       "properties:10": {
@@ -2426,8 +2424,7 @@
       "preRequisites:11": [
         24,
         40,
-        530,
-        909
+        530
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4745,12 +4742,13 @@
     "79:10": {
       "preRequisites:11": [
         147,
-        259
+        259,
+        837
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates is much faster than using a §2Bending Machine §rto make them one at a time.\n\nThis quest accepts the LV or MV version. The LV version can cut §6Silicon Boules§r for easier §6Diodes§r, and can also cut plates and other components. The MV version is required for cutting §6Wafers§r.\n\nThe blade will require you to make §2Cobalt Brass§r (for LV) or §2Vanadiumsteel§r (for MV).\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n\nYou might consider waiting until you have §2Integrated Circuits§r before progressing too far down the path of MV machines, since these circuits are much easier to make than §2Electronic Circuits§r.",
+          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Bending Machine §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r once you get §9Polyethylene (PE)§r, and for cutting §6Wafers§r into usable components. \nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4770,7 +4768,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
+          "tasklogic:8": "AND",
           "visibility:8": "ALWAYS"
         }
       },
@@ -4778,23 +4776,6 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 245,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
@@ -5569,7 +5550,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Sulfuric Acid is mainly produced in a 3-step process:§r\n-§6 Sulfur§o§r added to §9Oxygen§r to produce §9Sulfur Dioxide§r. §9SO₂§r also can come from treating certain §6Sulfur-containing Dusts§r with §9Oxygen§r in the EBF, or by processing §eNether Air§r.\n- §9Sulfur Dioxide§r added to more §9Oxygen§r, with §cVanadium Pentoxide§r catalyst, to produce §9Sulfur Trioxide§r.\n- §9Sulfur Trioxide§r added to §9Water§r, to produce §eSulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at EV.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things.",
+          "desc:8": "§2Sulfuric Acid is mainly produced in a 3-step process:§r\n-§6 Sulfur§o§r added to §9Oxygen§r to produce §9Sulfur Dioxide§r. §9SO₂§r also can come from treating certain §6Sulfur-containing Dusts§r with §9Oxygen§r in the EBF, or by processing §eNether Air§r.\n- §9Sulfur Dioxide§r added to more §9Oxygen§r, with §cVanadium Pentoxide§r catalyst, to produce §9Sulfur Trioxide§r.\n- §9Sulfur Trioxide§r added to §9Water§r, to produce §eSulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at EV.\n\nYou can also get Sulfuric Acid by adding §9Oxygen§r to §9Hydrogen Sulfide§r, which can be obtained via Petroleum, or by combining §9Hydrogen§r and §6Sulfur§r.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5790,7 +5771,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Stainless Steel§r will be your primary material for HV, in the same way that §6Aluminium§r was for MV and §6Wrought Iron§r was for LV.\n\n§6Manganese§r comes from electrolyzing §6Tantalite§r, §6Pyrolusite§r, or §6Spessartine Dusts§r. You already have §6Chrome§r.\n\nMix up a bunch of the dust in a §3Mixer§r and begin processing it through the §3Electric Blast Furnace§r. This may be a good time to reevaluate your power generation and storage infrastructure.",
+          "desc:8": "§6Stainless Steel§r will be your primary material for HV, in the same way that §6Aluminium§r was for MV and §6Wrought Iron§r was for LV.\n\n§6Manganese§r comes from electrolyzing §6Tantalite§r, §6Pyrolusite§r, or §6Spessartine Dusts§r. You already have §6Chrome§r.\n\nMix up a bunch of the dust in a MV §3Mixer§r and begin processing it through the §3Electric Blast Furnace§r. This may be a good time to reevaluate your power generation and storage infrastructure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7325,7 +7306,6 @@
     "126:10": {
       "preRequisites:11": [
         95,
-        130,
         830
       ],
       "properties:10": {
@@ -26403,7 +26383,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aStorage Drawer Controllers§r are the central hub of any good storage system. They can pull from any drawers they are connected to (via other drawers, or drawer trims) within a 12 block cubic radius. This leads to a potential 25x25x25 area to connect drawers, centered on the controller.\n\nThe appearance can be customized by crafting the controller into §aFramed Controller§r and putting it into a §aFraming Table§r.\n\n§aController Slaves§r do not extend the range, but rather act as another access point to that controller - allowing you to push/pull from any of the drawers within range of the local Drawer Controller.\n\nConnecting an §6ME Storage Bus§f to a controller exposes all of the drawers to §bApplied Energistics§f. Particularly large networks can be laggy though, so keep your drawer networks a manageable size.\n",
+          "desc:8": "§aStorage Drawer Controllers§r are the central hub of any good storage system. They can pull from any drawers they are connected to (via other drawers, or drawer trims) within a 12 block cubic radius. This leads to a potential 25x25x25 area to connect drawers, centered on the controller.\n\nThe appearance can be customized by crafting the controller into §aFramed Controller§r and putting it into a §aFraming Table§r.\n\n§aController Slaves§r do not extend the range, but rather act as another access point to that controller - allowing you to push/pull from any of the drawers within range of the local Drawer Controller.\n\nConnecting an §6ME Storage Bus§f to a controller exposes all of the drawers to §bApplied Energistics§f. Particularly large networks can be laggy though, so keep your drawer networks a manageable size.\n\nAnother cool thing about controllers is that when §bStorage Drawers§r §6Keys§r are used on a drawer controller, they affect the whole system!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26456,7 +26436,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bStorage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the default appearances aren\u0027t your style, the §3Framing Table§f is useful for making custom drawers out of §6Framed Drawers§f and up to three additional items which define how the resulting drawer will look.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to reframe your drawers in world, and convert default drawers into Framed Drawers§r in-world. See the §eJEI Information Page§r of the Hand Framing Tool§r for more information.",
+          "desc:8": "§oThis quest completes with any wood-type drawer, or a Framed Drawer and a Framing Table.\n\n§bStorage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§f is useful for making custom drawers out of §6Framed Drawers§f, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers§r in-world, with the cost of some sticks. \n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free! \n\nSee the uses of the framing tool in §eJEI§r and the §eJEI Information Page§r of the Hand Framing Tool§r for more information.\n\nFurthermore, you can do special stuff with your drawers, with §6Keys§r! Search §e@StorageDrawers Keys§r in §bJEI§r to see them! You can do things from \u0027locking\u0027 the drawer, meaning only that item can enter the drawer, show how many items are in the drawer, and even remove the display of items! \n\n§cPlease note that excessive use of the Quantify Key may lead to lag.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26494,14 +26474,34 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
+              "OreDict:8": "drawerBasic",
+              "id:8": "storagedrawers:basicdrawers",
+              "tag:10": {
+                "material:8": "oak"
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "storagedrawers:framingtable"
+              "id:8": "storagedrawers:customdrawers"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "storagedrawers:customdrawers"
+              "id:8": "storagedrawers:framingtable"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -27063,7 +27063,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\n§2Later, you can use Fluid Rigs or break down Ghast Tears to obtain Salt Water, and electrolyze it to Chlorine.",
+          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\n§2Later, you can use Fluid Rigs or break down Ghast Tears to obtain Salt Water, and electrolyze it to Chlorine. \n\n§rUsing Fluid Rigs is the best way to obtain mass amounts of Chlorine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27170,13 +27170,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §e§2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV   - Signalum \nZPM - Enderium \nUV     - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2There are an additional set of superconductors, one for each tier, which are the CEu default superconductors. Their advantage is their higher amperage rating, reaching the hundreds of amps for higher tier 16x wires. They are also used in crafting Field Generators.§,§r\n\nMV and higher cables are made in an §3Assembling Machine§r. They\u0027re made with liquid §9Rubber§r and §6Wires§r, plus a reusable §6Programmed Circuit§r that tells it what thickness of wire to make.\n\nYou can use Wires, and for these materials they\u0027ll conduct just as well as if they were covered. §2Superconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!",
+          "desc:8": "§eSuperconductor wires also won\u0027t kill you when touched now. In fact, you have to use Wires for Superconductors, because they don\u0027t even have cables!\n\n§bEnderIO§r and §bThermal§r alloys are a bit more expensive than the normal wires, but they come with the huge advantage of being §2superconductors§r. Lossy cables like §6Tin§r and §6Copper§r will bleed out energy for every block they travel, but §2superconductors§r do not.\n\nThe §2cheap superconductors§r for each tier are:\n\nLV - Conductive Iron\nMV - Energetic Alloy\nHV - Vibrant Alloy\nEV - End Steel\nIV - Lumium \nLuV - Signalum \nZPM - Enderium \nUV - Draconium \nMAX - §2Draconic Superconductor§r, Omnium\n\n§2There are an additional set of superconductors, one for each tier, which are the CEu default superconductors. Their advantage is their higher amperage rating, reaching the hundreds of amps for higher tier 16x wires. They are also used in crafting Field Generators. They are:\n\nLV - Manganese Phosphide\nMV - Magnesium Diboride\nHV - Mercury Barium Calcium Cuprate\nEV - Uranium Triplatinum\nIV - Samarium Iron Arsenic Oxide\nLuV - Indium Tin Barium Titanium Cuprate\nZPM - Uranium Rhodium Dinaquadide\nUV - Enriched Naquadah Trinium Europium Duranide\nUHV - Ruthenium Trinium Americium Neutronate§r\n§r\nMV and higher cables are made in an §3Assembling Machine§r, with liquid §9Rubber§r and §6Wires§r. §2Keep in mind that you can\u0027t combine cables into thicker cables, so you have to make the thickness of cables that you will use.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 32012,
             "OreDict:8": "",
-            "id:8": "gregtech:wire_single"
+            "id:8": "gregtech:wire_octal"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -28846,7 +28846,8 @@
       "preRequisites:11": [
         21,
         147,
-        259
+        259,
+        76
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29390,7 +29391,6 @@
     },
     "549:10": {
       "preRequisites:11": [
-        76,
         837
       ],
       "properties:10": {
@@ -36296,7 +36296,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6§6String§r and §6Coal Dust§r can be baked together into a §6Carbon Mesh§r in an §3Alloy Furnace§r.\n\nCombine that with §6Pulsating Dust§r to get a §6Pulsating Mesh§r.\n\n",
+          "desc:8": "§6§6String§r and §6Coal Dust§r can be baked together into a §6Carbon Mesh§r in an §3Alloy Furnace§r.\n\nCombine that with §6Pulsating Dust§r to get a §6Pulsating Mesh§r.\n\nThis will not be needed now. In fact, its only use is for §6Solar Panels§r. The §6Carbon Mesh§r has some uses though.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42828,7 +42828,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Bending Machine makes, depending on what Programmable Circuit it\u0027s given:\n- Plates from a single ingot (instead of the Compressor)\n- 4 Foils from a Plate (instead of the Cluster Mill, which is no more)\n- Double Plates from two Plates\n- Dense Plates from nine Plates\n- Small Springs from one Rod\n- Springs from one Long Rod. \n\nWhy was this removed?!",
+          "desc:8": "§2The Bending Machine makes, depending on what Programmable Circuit it\u0027s given:\n- Plates from a single ingot (instead of the Compressor)\n- 4 Foils from a Plate (instead of the Cluster Mill, which is no more)\n- Double Plates from two Plates\n- Dense Plates from nine Plates\n- Small Springs from one Rod\n- Springs from one Long Rod. §r\n\nWhy was this removed?!\n\nNote that circuits can be placed in the circuit slot instead of the input of the bender, which creates a \u0027Ghost Circuit\u0027, which doesn\u0027t take up the circuit. This means you only have to use 1 circuit! (Except in Input Buses of Multiblocks)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43704,8 +43704,13 @@
       }
     },
     "830:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        93
+        93,
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -44108,7 +44113,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A bit of Vanadiumsteel is used for progression. It\u0027s also a very strong tool material.\n\n§6Vanadium§r is an element acquired by processing §6Vanadium Magnetite Ore§r.",
+          "desc:8": "§2A bit of Vanadiumsteel is used for progression. It\u0027s also a very strong tool material.\n\n§6Vanadium§r is an element acquired by §celectrolysing Vanadium Pentoxide.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49195,6 +49200,407 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "931:10": {
+      "preRequisites:11": [
+        556,
+        604
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Neeve, the master of Leveret. Summon him, and then bless him with your presents, and you shall gain access to his all-powerful rabbit.\n\nAll 5 tasks must be done to complete this secret quest!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:rabbit_hide"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Neeve",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "HIDDEN"
+        }
+      },
+      "questID:3": 931,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:spawn_egg",
+              "tag:10": {
+                "EntityTag:10": {
+                  "id:8": "minecraft:rabbit"
+                },
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Rabbit (Leveret)"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 40,
+              "OreDict:8": "",
+              "id:8": "gregtech:gt_armor",
+              "tag:10": {
+                "Charge:4": 100000000,
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Head and Head Muscles"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 50,
+              "OreDict:8": "",
+              "id:8": "gregtech:gt_armor",
+              "tag:10": {
+                "Charge:4": 1000000000,
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Body and Body Muscles"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 42,
+              "OreDict:8": "",
+              "id:8": "gregtech:gt_armor",
+              "tag:10": {
+                "Charge:4": 100000000,
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Legs and Leg Muscles"
+                }
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 43,
+              "OreDict:8": "",
+              "id:8": "gregtech:gt_armor",
+              "tag:10": {
+                "Charge:4": 100000000,
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Feet and Foot Muscles"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 64,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:rotten_flesh",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Body"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 32,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:bone",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Bones"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "forge:bucketfilled",
+              "tag:10": {
+                "Amount:3": 1000,
+                "FluidName:8": "air",
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Lungs"
+                }
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:heartofauniverse",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Heart"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:magnetron",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve Attracter"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:universecreationdata",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve Finder"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:tierfourandhalfship_stabilized",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve Traveller"
+                }
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:tiertenship",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve Retriever"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "3:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 3,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:tierfourandhalfship",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Past"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:tiereightandhalfship",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Future"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "betterquesting:quest_book",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Work"
+                }
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:block_empowerer",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Enemy"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "4:10": {
+          "autoConsume:1": 0,
+          "consume:1": 1,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 4,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 64,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:sixtyfoursmore",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve Feeder"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 8,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve Negotiating Chip"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "minecraft:bed",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Neeve\u0027s Bed"
+                }
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 292,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "RepairCost:3": 0,
+                "display:10": {
+                  "Name:8": "Glob"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "932:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
+      "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default key is §aMiddle Click§r, §cbut that keybind is currently broken§r. Change the sort key to a keybind with no conflicts.\n\nYou can also configure how it is sorted, within the GUI. The default key is §aK§r, but you may have to change this.\n\nSimply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nInventory Bogo Sorter by default also replaces stacks of items, like blocks, tools and food in your hotbar. So you can build a pillar to y-256 without opening your inventory!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:chest"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Inventory Sorting",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 932,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -49690,757 +50096,757 @@
           "id:3": 2,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -292,
-          "y:3": 20
+          "x:3": -360,
+          "y:3": -56
         },
         "1:10": {
           "id:3": 19,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -444,
-          "y:3": 228
+          "x:3": -68,
+          "y:3": 208
         },
         "2:10": {
           "id:3": 22,
-          "sizeX:3": 30,
-          "sizeY:3": 30,
-          "x:3": -558,
-          "y:3": -20
+          "sizeX:3": 28,
+          "sizeY:3": 28,
+          "x:3": -60,
+          "y:3": 12
         },
         "3:10": {
           "id:3": 27,
-          "sizeX:3": 30,
-          "sizeY:3": 30,
-          "x:3": -504,
-          "y:3": -20
+          "sizeX:3": 28,
+          "sizeY:3": 28,
+          "x:3": -8,
+          "y:3": 12
         },
         "4:10": {
           "id:3": 31,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -408,
-          "y:3": 528
+          "x:3": -488,
+          "y:3": 584
         },
         "5:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -452,
-          "y:3": 532
+          "x:3": -484,
+          "y:3": 556
         },
         "6:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 496
+          "x:3": -372,
+          "y:3": 588
         },
         "7:10": {
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -452,
-          "y:3": 464
+          "x:3": -180,
+          "y:3": 556
         },
         "8:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 532
+          "x:3": -336,
+          "y:3": 608
         },
         "9:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -452,
-          "y:3": 572
+          "x:3": -416,
+          "y:3": 556
         },
         "10:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 612
+          "x:3": -448,
+          "y:3": 588
         },
         "11:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -452,
-          "y:3": 612
+          "x:3": -448,
+          "y:3": 556
         },
         "12:10": {
           "id:3": 52,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -252,
-          "y:3": 416
+          "x:3": -232,
+          "y:3": 624
         },
         "13:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -336,
-          "y:3": 20
+          "x:3": -360,
+          "y:3": -20
         },
         "14:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 464
+          "x:3": -228,
+          "y:3": 588
         },
         "15:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 572
+          "x:3": -416,
+          "y:3": 588
         },
         "16:10": {
           "id:3": 70,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -292,
-          "y:3": -16
+          "x:3": -404,
+          "y:3": -20
         },
         "17:10": {
           "id:3": 71,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 68
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -232,
+          "y:3": 100
         },
         "18:10": {
           "id:3": 72,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -656,
-          "y:3": 16
+          "x:3": -148,
+          "y:3": -20
         },
         "19:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
-          "y:3": 104
+          "x:3": -176,
+          "y:3": 132
         },
         "20:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
+          "x:3": -228,
           "y:3": 68
         },
         "21:10": {
           "id:3": 76,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -604,
-          "y:3": 68
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -36,
+          "y:3": 100
         },
         "22:10": {
           "id:3": 78,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -464,
-          "y:3": 20
+          "x:3": -316,
+          "y:3": 16
         },
         "23:10": {
           "id:3": 79,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -424,
-          "y:3": 104
+          "x:3": -276,
+          "y:3": 92
         },
         "24:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -464,
-          "y:3": 68
+          "x:3": -316,
+          "y:3": 52
         },
         "25:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -464,
-          "y:3": 104
+          "x:3": -316,
+          "y:3": 92
         },
         "26:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 20
+          "x:3": -32,
+          "y:3": 44
         },
         "27:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -384,
-          "y:3": 140
+          "x:3": -448,
+          "y:3": 280
         },
         "28:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -464,
-          "y:3": 140
+          "x:3": -316,
+          "y:3": 280
         },
         "29:10": {
           "id:3": 86,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -540,
-          "y:3": 128
+          "x:3": -328,
+          "y:3": 312
         },
         "30:10": {
           "id:3": 87,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 188
+          "x:3": -484,
+          "y:3": 324
         },
         "31:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -424,
-          "y:3": 140
+          "x:3": -388,
+          "y:3": 280
         },
         "32:10": {
           "id:3": 89,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 228
+          "x:3": -520,
+          "y:3": 324
         },
         "33:10": {
           "id:3": 90,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -540,
-          "y:3": 364
+          "x:3": -532,
+          "y:3": 504
         },
         "34:10": {
           "id:3": 91,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 104
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -232,
+          "y:3": 144
         },
         "35:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
-          "y:3": 140
+          "x:3": -104,
+          "y:3": 132
         },
         "36:10": {
           "id:3": 93,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -260,
-          "y:3": 328
+          "x:3": -240,
+          "y:3": 392
         },
         "37:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 188
+          "x:3": -228,
+          "y:3": 208
         },
         "38:10": {
           "id:3": 95,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -412,
-          "y:3": 332
+          "x:3": -236,
+          "y:3": 276
         },
         "39:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 388
+          "x:3": -228,
+          "y:3": 480
         },
         "40:10": {
           "id:3": 98,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -254,
-          "y:3": 217
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -232,
+          "y:3": 356
         },
         "41:10": {
           "id:3": 104,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -316,
-          "y:3": 380
+          "x:3": -292,
+          "y:3": 432
         },
         "42:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 104
+          "x:3": -176,
+          "y:3": 164
         },
         "43:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -104,
-          "y:3": 104
+          "x:3": -140,
+          "y:3": 164
         },
         "44:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 340
+          "x:3": -228,
+          "y:3": 448
         },
         "45:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -384,
-          "y:3": 88
+          "x:3": -448,
+          "y:3": 16
         },
         "46:10": {
           "id:3": 130,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -596,
-          "y:3": 340
+          "x:3": -520,
+          "y:3": 280
         },
         "47:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 432
+          "x:3": -228,
+          "y:3": 512
         },
         "48:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 496
+          "x:3": -372,
+          "y:3": 628
         },
         "49:10": {
           "id:3": 133,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -532,
-          "y:3": 428
+          "x:3": -452,
+          "y:3": 512
         },
         "50:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
-          "y:3": 432
+          "x:3": -272,
+          "y:3": 512
         },
         "51:10": {
           "id:3": 135,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -536,
-          "y:3": 488
+          "x:3": -380,
+          "y:3": 508
         },
         "52:10": {
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -256,
-          "y:3": 564
+          "x:3": -424,
+          "y:3": 620
         },
         "53:10": {
           "id:3": 164,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 224
+          "x:3": -228,
+          "y:3": 244
         },
         "54:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 264
+          "x:3": -176,
+          "y:3": 244
         },
         "55:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -292,
+          "x:3": -276,
           "y:3": 244
         },
         "56:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -364,
-          "y:3": 188
+          "x:3": -140,
+          "y:3": 208
         },
         "57:10": {
           "id:3": 187,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -254,
-          "y:3": 14
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -408,
+          "y:3": -60
         },
         "58:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 496
+          "x:3": -372,
+          "y:3": 556
         },
         "59:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -312,
-          "y:3": 532
+          "x:3": -336,
+          "y:3": 572
         },
         "60:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": -16
+          "x:3": -388,
+          "y:3": 52
         },
         "61:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -156,
-          "y:3": 136
+          "x:3": -144,
+          "y:3": 128
         },
         "62:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
-          "y:3": 284
+          "x:3": -228,
+          "y:3": 324
         },
         "63:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -104,
-          "y:3": 140
+          "y:3": 164
         },
         "64:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 268
+          "x:3": -392,
+          "y:3": 176
         },
         "65:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 360
+          "x:3": -284,
+          "y:3": 404
         },
         "66:10": {
           "id:3": 398,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -582,
-          "y:3": 222
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -488,
+          "y:3": 364
         },
         "67:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
-          "y:3": 388
+          "x:3": -448,
+          "y:3": 480
         },
         "68:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -444,
-          "y:3": 264
+          "x:3": -68,
+          "y:3": 244
         },
         "69:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 264
+          "x:3": -104,
+          "y:3": 284
         },
         "70:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 416
+          "x:3": -180,
+          "y:3": 512
         },
         "71:10": {
           "id:3": 509,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": -16
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -36,
+          "y:3": -24
         },
         "72:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -424,
-          "y:3": 48
+          "x:3": 24,
+          "y:3": 104
         },
         "73:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 312
+          "x:3": -392,
+          "y:3": 220
         },
         "74:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 188
+          "x:3": -104,
+          "y:3": 208
         },
         "75:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -292,
-          "y:3": 68
+          "x:3": -276,
+          "y:3": 176
         },
         "76:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -640,
-          "y:3": 224
+          "x:3": -392,
+          "y:3": 132
         },
         "77:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -384,
-          "y:3": 20
+          "x:3": -360,
+          "y:3": 16
         },
         "78:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -112,
-          "y:3": 20
+          "x:3": -420,
+          "y:3": 92
         },
         "79:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 20
+          "x:3": -388,
+          "y:3": 92
         },
         "80:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 20
+          "x:3": -356,
+          "y:3": 92
         },
         "81:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 68
+          "x:3": -228,
+          "y:3": 36
         },
         "82:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -696,
-          "y:3": 20
+          "x:3": -124,
+          "y:3": 16
         },
         "83:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 612
+          "x:3": -484,
+          "y:3": 628
         },
         "84:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -292,
-          "y:3": 140
+          "x:3": -276,
+          "y:3": 208
         },
         "85:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": -392,
-          "y:3": 352
+          "x:3": -216,
+          "y:3": 296
         },
         "86:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -616,
-          "y:3": 128
+          "x:3": -44,
+          "y:3": 312
         },
         "87:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -652,
-          "y:3": 68
+          "x:3": 8,
+          "y:3": 276
         },
         "88:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -604,
-          "y:3": 20
+          "x:3": -164,
+          "y:3": 16
         },
         "89:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -464,
-          "y:3": -17
+          "x:3": 24,
+          "y:3": 44
         },
         "90:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 68
+          "x:3": -32,
+          "y:3": 72
         },
         "91:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -384,
-          "y:3": 48
+          "x:3": -404,
+          "y:3": 16
         },
         "92:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -404,
-          "y:3": 464
+          "x:3": -228,
+          "y:3": 556
         },
         "93:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -156,
-          "y:3": 292
+          "x:3": -184,
+          "y:3": 444
         },
         "94:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
-          "y:3": 296
+          "x:3": -136,
+          "y:3": 448
         },
         "95:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -104,
-          "y:3": 296
+          "x:3": -136,
+          "y:3": 480
         },
         "96:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -104,
-          "y:3": 340
+          "x:3": -136,
+          "y:3": 404
         },
         "97:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 388
+          "x:3": -180,
+          "y:3": 480
         },
         "98:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": 288
+          "x:3": -268,
+          "y:3": 364
         },
         "99:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -336,
-          "y:3": 104
+          "x:3": -276,
+          "y:3": 120
         },
         "100:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -292,
-          "y:3": 104
+          "x:3": -276,
+          "y:3": 148
         },
         "101:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -552,
-          "y:3": 268
+          "y:3": 368
         },
         "102:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -364,
+          "x:3": -140,
           "y:3": 264
         },
         "103:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
-          "y:3": 340
+          "x:3": -448,
+          "y:3": 324
         },
         "104:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -472,
-          "y:3": 188
+          "x:3": -388,
+          "y:3": 324
         },
         "105:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -104,
-          "y:3": 256
+          "x:3": -180,
+          "y:3": 372
         },
         "106:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -152,
-          "y:3": 256
+          "x:3": -180,
+          "y:3": 404
         },
         "107:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -656,
-          "y:3": 136
+          "x:3": 48,
+          "y:3": 272
         }
       }
     },
@@ -50776,7 +51182,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -636,
-          "y:3": 88
+          "y:3": 72
         },
         "45:10": {
           "id:3": 194,
@@ -52202,6 +52608,13 @@
           "sizeY:3": 36,
           "x:3": 448,
           "y:3": 332
+        },
+        "99:10": {
+          "id:3": 931,
+          "sizeX:3": 28,
+          "sizeY:3": 28,
+          "x:3": 452,
+          "y:3": 240
         }
       }
     },
@@ -54104,8 +54517,8 @@
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 248
+          "x:3": 32,
+          "y:3": 256
         },
         "5:10": {
           "id:3": 9,
@@ -54118,7 +54531,7 @@
           "id:3": 11,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
+          "x:3": 32,
           "y:3": 288
         },
         "7:10": {
@@ -54182,7 +54595,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 248
+          "y:3": 256
         },
         "16:10": {
           "id:3": 25,
@@ -54195,15 +54608,15 @@
           "id:3": 37,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 248
+          "x:3": 76,
+          "y:3": 256
         },
         "18:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 354
+          "y:3": 324
         },
         "19:10": {
           "id:3": 40,
@@ -54223,29 +54636,29 @@
           "id:3": 56,
           "sizeX:3": 72,
           "sizeY:3": 72,
-          "x:3": -36,
-          "y:3": 468
+          "x:3": -38,
+          "y:3": 438
         },
         "22:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 354
+          "x:3": -92,
+          "y:3": 324
         },
         "23:10": {
           "id:3": 66,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 248
+          "y:3": 256
         },
         "24:10": {
           "id:3": 141,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -40,
-          "y:3": 200
+          "x:3": -12,
+          "y:3": 184
         },
         "25:10": {
           "id:3": 266,
@@ -54293,8 +54706,8 @@
           "id:3": 394,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 392
+          "x:3": -56,
+          "y:3": 362
         },
         "32:10": {
           "id:3": 401,
@@ -54314,15 +54727,15 @@
           "id:3": 409,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 392
+          "x:3": -14,
+          "y:3": 362
         },
         "35:10": {
           "id:3": 415,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 432
+          "x:3": -92,
+          "y:3": 402
         },
         "36:10": {
           "id:3": 488,
@@ -54342,8 +54755,8 @@
           "id:3": 495,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 320
+          "x:3": 76,
+          "y:3": 324
         },
         "39:10": {
           "id:3": 496,
@@ -54356,29 +54769,29 @@
           "id:3": 530,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 320
+          "x:3": 32,
+          "y:3": 324
         },
         "41:10": {
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 392
+          "x:3": -92,
+          "y:3": 362
         },
         "42:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
-          "y:3": 248
+          "y:3": 256
         },
         "43:10": {
           "id:3": 670,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 16,
-          "y:3": 200
+          "x:3": -12,
+          "y:3": 220
         },
         "44:10": {
           "id:3": 687,
@@ -54405,15 +54818,15 @@
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 432
+          "x:3": -56,
+          "y:3": 402
         },
         "48:10": {
           "id:3": 780,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 200
+          "x:3": 76,
+          "y:3": 220
         },
         "49:10": {
           "id:3": 786,
@@ -54447,8 +54860,8 @@
           "id:3": 817,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 200
+          "x:3": -44,
+          "y:3": 220
         },
         "54:10": {
           "id:3": 902,
@@ -54461,15 +54874,15 @@
           "id:3": 909,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": 64,
-          "y:3": 192
+          "x:3": 24,
+          "y:3": 212
         },
         "56:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 354
+          "x:3": -56,
+          "y:3": 324
         },
         "57:10": {
           "id:3": 913,
@@ -54491,6 +54904,13 @@
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 24
+        },
+        "60:10": {
+          "id:3": 932,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -192,
+          "y:3": 132
         }
       }
     },
