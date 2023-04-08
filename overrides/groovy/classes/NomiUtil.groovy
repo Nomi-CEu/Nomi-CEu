@@ -56,13 +56,13 @@ class NomiUtil {
 		AEApi.instance().registries().inscriber().addRecipe(therecipie)
 	}
 
-	static void removeInscriberRecipie(ItemStack thething) {
-		// TODO please implement me D:
-        // def inscriberReg = AEApi.instance().registries().inscriber()
-		// inscriberReg.getRecipes()
-        //     .stream()
-        //     .filter(r -> r.getOutput().isItemEqual(thething))
-        //     .collect(Collectors.toList())
-        //     .forEach(r -> inscriberReg.removeRecipe(r))
+	static void removeInscriberRecipe(ItemStack thething) {
+        def inscriberReg = AEApi.instance().registries().inscriber()
+		inscriberReg.getRecipes()
+            .toList() // this make a new list, cant mutate the list foreach is iterating
+			.forEach(r -> {
+				if (!r.getOutput().isItemEqual(thething)) return
+				inscriberReg.removeRecipe(r)
+			})
 	}
 }

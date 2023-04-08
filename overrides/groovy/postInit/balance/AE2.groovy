@@ -1,42 +1,85 @@
 import static NomiUtil.getInscriberBuilder
 import static NomiUtil.registerInscriberRecipe
-import static NomiUtil.removeInscriberRecipie
-
+import static NomiUtil.removeInscriberRecipe
 println("[AE2.groovy] Start AE2 Changes")
 
 ore('dustFluix').add(item('appliedenergistics2:material:8'))
 
-/*
-TODO need appengi builder; no groovy things
-
 //Silicon
-removeInscriberRecipie(item('appliedenergistics2:material:20'));
-InscriberRecipes.addRecipe(item('appliedenergistics2:material:20'), metaitem('plateSilicon'), true, item('appliedenergistics2:material:19'));
+removeInscriberRecipe(item('appliedenergistics2:material:20'))
+registerInscriberRecipe(
+	getInscriberBuilder(true)
+		.withOutput(item('appliedenergistics2:material:20'))
+		// Collection<ItemStack>
+		.withInputs([metaitem('plateSilicon')])
+		.withTopOptional(item('appliedenergistics2:material:19'))
+		.build()
+	)
 
 //Engineering Processor
-Inscriber.removeRecipe(item('appliedenergistics2:material:24'));
-Inscriber.addRecipe(item('appliedenergistics2:material:24'), item('ore:circuitLv'), false, item('appliedenergistics2:material:17'), item('appliedenergistics2:material:20'));
-//Inscriber.addRecipe(item('appliedenergistics2:material:24'), <metaitem:circuit.basic_electronic>, false, item('appliedenergistics2:material:17'),item('appliedenergistics2:material:20'));
-//Inscriber.addRecipe(item('appliedenergistics2:material:24'), item('contenttweaker:refinedcircuit'), false, item('appliedenergistics2:material:17'),item('appliedenergistics2:material:20'));
-Inscriber.removeRecipe(item('appliedenergistics2:material:17'));
-Inscriber.addRecipe(item('appliedenergistics2:material:17'), metaitem('plateDiamond'), true, item('appliedenergistics2:material:14'));
+removeInscriberRecipe(item('appliedenergistics2:material:24'))
+registerInscriberRecipe(
+	getInscriberBuilder(false)
+		.withOutput(item('appliedenergistics2:material:24'))
+		.withInputs([ore('circuitLv')])
+		.withTopOptional(item('appliedenergistics2:material:17'))
+		.withBottomOptional(item('appliedenergistics2:material:20'))
+		.build()
+	)
+
+//Inscriber.addRecipe(item('appliedenergistics2:material:24'), <metaitem:circuit.basic_electronic>, false, item('appliedenergistics2:material:17'),item('appliedenergistics2:material:20'))
+//Inscriber.addRecipe(item('appliedenergistics2:material:24'), item('contenttweaker:refinedcircuit'), false, item('appliedenergistics2:material:17'),item('appliedenergistics2:material:20'))
+removeInscriberRecipe(item('appliedenergistics2:material:17'))
+registerInscriberRecipe(
+	getInscriberBuilder(true)
+		.withOutput(item('appliedenergistics2:material:17'))
+		.withInputs([metaitem('plateDiamond')])
+		.withTopOptional(item('appliedenergistics2:material:14'))
+		.build()
+	)
 
 //Calculation Processor
-Inscriber.removeRecipe(item('appliedenergistics2:material:23'));
-Inscriber.addRecipe(item('appliedenergistics2:material:23'), item('ore:circuitLv'), false, item('appliedenergistics2:material:16'), item('appliedenergistics2:material:20'));
-//Inscriber.addRecipe(item('appliedenergistics2:material:23'), <metaitem:circuit.basic_electronic>, false, item('appliedenergistics2:material:16'),item('appliedenergistics2:material:20'));
-//Inscriber.addRecipe(item('appliedenergistics2:material:23'), item('contenttweaker:refinedcircuit'), false, item('appliedenergistics2:material:16'),item('appliedenergistics2:material:20'));
-Inscriber.removeRecipe(item('appliedenergistics2:material:16'));
-Inscriber.addRecipe(item('appliedenergistics2:material:16'), metaitem('plateCertusQuartz'), true, item('appliedenergistics2:material:13'));
+removeInscriberRecipe(item('appliedenergistics2:material:23'))
+registerInscriberRecipe(
+	getInscriberBuilder(false)
+		.withOutput(item('appliedenergistics2:material:23'))
+		.withInputs([ore('circuitLv')])
+		.withTopOptional(item('appliedenergistics2:material:16'))
+		.withBottomOptional(item('appliedenergistics2:material:20'))
+		.build()
+	)
+//Inscriber.addRecipe(item('appliedenergistics2:material:23'), <metaitem:circuit.basic_electronic>, false, item('appliedenergistics2:material:16'),item('appliedenergistics2:material:20'))
+//Inscriber.addRecipe(item('appliedenergistics2:material:23'), item('contenttweaker:refinedcircuit'), false, item('appliedenergistics2:material:16'),item('appliedenergistics2:material:20'))
+removeInscriberRecipe(item('appliedenergistics2:material:16'))
+registerInscriberRecipe(
+	getInscriberBuilder(true)
+		.withOutput(item('appliedenergistics2:material:16'))
+		.withInputs([metaitem('plateCertusQuartz')])
+		.withTopOptional(item('appliedenergistics2:material:13'))
+		.build()
+	)
 
 //Logic Processor
-Inscriber.removeRecipe(item('appliedenergistics2:material:22'));
-Inscriber.addRecipe(item('appliedenergistics2:material:22'), item('ore:circuitLv'), false, item('appliedenergistics2:material:18'), item('appliedenergistics2:material:20'));
-//Inscriber.addRecipe(item('appliedenergistics2:material:22'), <metaitem:circuit.basic_electronic>, false, item('appliedenergistics2:material:18'),item('appliedenergistics2:material:20'));
-//Inscriber.addRecipe(item('appliedenergistics2:material:22'), item('contenttweaker:refinedcircuit'), false, item('appliedenergistics2:material:18'),item('appliedenergistics2:material:20'));
-Inscriber.removeRecipe(item('appliedenergistics2:material:18'));
-Inscriber.addRecipe(item('appliedenergistics2:material:18'), metaitem('plateGold'), true, item('appliedenergistics2:material:15'));
-*/
+removeInscriberRecipe(item('appliedenergistics2:material:22'))
+registerInscriberRecipe(
+	getInscriberBuilder(false)
+		.withOutput(item('appliedenergistics2:material:22'))
+		.withInputs([ore('circuitLv')])
+		.withTopOptional(item('appliedenergistics2:material:18'))
+		.withBottomOptional(item('appliedenergistics2:material:20'))
+		.build()
+	)
+//Inscriber.addRecipe(item('appliedenergistics2:material:22'), <metaitem:circuit.basic_electronic>, false, item('appliedenergistics2:material:18'),item('appliedenergistics2:material:20'))
+//Inscriber.addRecipe(item('appliedenergistics2:material:22'), item('contenttweaker:refinedcircuit'), false, item('appliedenergistics2:material:18'),item('appliedenergistics2:material:20'))
+removeInscriberRecipe(item('appliedenergistics2:material:18'))
+registerInscriberRecipe(
+	getInscriberBuilder(true)
+		.withOutput(item('appliedenergistics2:material:18'))
+		// Collection<ItemStack>
+		.withInputs([metaitem('plateGold')])
+		.withTopOptional(item('appliedenergistics2:material:15'))
+		.build()
+	)
 
 // ME Drive
 crafting.remove('appliedenergistics2:network/blocks/drive')
@@ -120,8 +163,8 @@ mods.gregtech.wiremill.recipeBuilder()
 
 // Glass Cable
 crafting.remove('appliedenergistics2:network/cables/glass_fluix')
-mods.gregtech.wiremill.alloy_smelter.recipeBuilder()
-	.inputs([item('ore:dustFluix'), item('appliedenergistics2:part:140')])
+mods.gregtech.wiremill.recipeBuilder()
+	.inputs([ore('dustFluix'), item('appliedenergistics2:part:140')])
 	.outputs(item('appliedenergistics2:part:16') * 2)
 	.duration(50)
 	.EUt(16)
