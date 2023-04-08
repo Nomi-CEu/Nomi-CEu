@@ -32,7 +32,7 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 - Harder recipes for assorted things like Iridium, Graphene, Numismatic Dynamos, and more  
 
 Installation:
-NOTE: Scripts may not fully work on versions <1.5.3, thus manual installation may be necessary. 
+NOTE: Scripts will not work on versions <1.6, thus manual installation may be necessary. 
 - Windows: 
     - Download [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat) (right click - save as) save it to the root directory of the pack (the same level as `\config`).
     - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
