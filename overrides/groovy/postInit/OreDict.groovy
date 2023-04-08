@@ -19,6 +19,12 @@ def hideItems(bucket) {
 // key: <ore:(\w*)> :
 // values: <((\w*:\w*)|(\w*:\w*:\d*))>
 
+
+//Ender IO was being annoying
+ore("ingotRedstoneAlloy").add(metaitem("ingotRedAlloy"))
+ore("nuggetRedstoneAlloy").add(metaitem("nuggetRedAlloy"))
+ore("blockRedstoneAlloy").add(metaitem("blockRedAlloy"))
+
 println("[OreDict.groovy] Now disabling: Blocks")
 /**
  * ======== *
@@ -1065,5 +1071,120 @@ ore('oreNetherQuartz').add(item('minecraft:quartz_ore'));
 ore('blockAluminum').add(item('gregtech:meta_block_compressed_0:1'));
 
 ore('blockCoalCoke').add(item('gregtech:meta_block_compressed_22:5'));
+
+
+//Questbook things
+/*
+TODO Implemenet
+ore('questbookBrewery').add(<meta_tile_entity:brewery.lv>) // LV Brewery
+ore('questbookBrewery').add(<meta_tile_entity:brewery.mv>) // MV Brewery
+//
+ore('questbookDistillery').add(<meta_tile_entity:distillery.lv>) // LV Distillery
+ore('questbookDistillery').add(<meta_tile_entity:distillery.mv>) // MV Distillery
+//
+//ore('questbookCentrifuge').add(<meta_tile_entity:centrifuge.lv>) // LV Centrifuge
+//ore('questbookCentrifuge').add(<meta_tile_entity:centrifuge.mv>) // MV Centrifuge
+//ore('questbookCentrifuge').add(<meta_tile_entity:centrifuge.hv>) // HV Centrifuge
+//
+ore('questbookPolarizer').add(<meta_tile_entity:polarizer.lv>) // LV Polarizer
+ore('questbookPolarizer').add(<meta_tile_entity:polarizer.mv>) // MV Polarizer (why)
+//
+ore('questbookAirCollector').add(<meta_tile_entity:gas_collector.lv>) // LV Air Succ
+ore('questbookAirCollector').add(<meta_tile_entity:gas_collector.mv>) // MV Air Succ
+ore('questbookAirCollector').add(<meta_tile_entity:gas_collector.hv>) // HV Air Succ
+ore('questbookAirCollector').add(<meta_tile_entity:gas_collector.ev>) // EV Air Succ
+//
+ore('questbookCanning').add(<meta_tile_entity:canner.lv>) // LV Canning
+ore('questbookCanning').add(<meta_tile_entity:canner.mv>) // MV Canning
+*/
+ore('questbookSifter').add(metaitem('sifter.lv'))
+ore('questbookSifter').add(metaitem('sifter.mv'))
+
+ore('questbookLvCef').add(metaitem('energy_converter.lv.1'))
+ore('questbookLvCef').add(metaitem('energy_converter.lv.4'))
+ore('questbookLvCef').add(metaitem('energy_converter.lv.8'))
+ore('questbookLvCef').add(metaitem('energy_converter.lv.16'))
+
+ore('questbookMvCef').add(metaitem('energy_converter.mv.1'))
+ore('questbookMvCef').add(metaitem('energy_converter.mv.4'))
+ore('questbookMvCef').add(metaitem('energy_converter.mv.8'))
+ore('questbookMvCef').add(metaitem('energy_converter.mv.16'))
+
+ore('questbookParallelControlHatch').add(metaitem("gcym:parallel_hatch.iv"))
+ore('questbookParallelControlHatch').add(metaitem("gcym:parallel_hatch.luv"))
+ore('questbookParallelControlHatch').add(metaitem("gcym:parallel_hatch.zpm"))
+ore('questbookParallelControlHatch').add(metaitem("gcym:parallel_hatch.uv"))
+
+//ore('questbookFluidExtractor').add(<meta_tile_entity:fluid_extractor.lv>) // LV Fluid Extractor
+//ore('questbookFluidExtractor').add(<meta_tile_entity:fluid_extractor.mv>) // MV Fluid Extractor
+//ore('questbookFluidExtractor').add(<meta_tile_entity:fluid_extractor.hv>) // HV Fluid Extractor
+
+ore('questbookPowerUnit').add(metaitem('power_unit.lv')) // LV Power Unit
+ore('questbookPowerUnit').add(metaitem('power_unit.mv')) // MV Power Unit
+ore('questbookPowerUnit').add(metaitem('power_unit.hv')) // HV Power Unit
+ore('questbookPowerUnit').add(metaitem('power_unit.ev')) // EV Power Unit
+ore('questbookPowerUnit').add(metaitem('power_unit.iv')) // IV Power Unit
+
+ore('questbookMacerator').add(metaitem('macerator.lv')) // LV Macerator
+ore('questbookMacerator').add(metaitem('macerator.mv')) // MV Macerator
+ore('questbookMacerator').add(metaitem('macerator.hv')) // HV Macerator
+
+ore('questbookWirelessTerminals').add(item('appliedenergistics2:wireless_terminal')) // Normal Wireless
+ore('questbookWirelessTerminals').add(item('appliedenergistics2:wireless_crafting_terminal')) // Crafting Wireless
+ore('questbookWirelessTerminals').add(item('appliedenergistics2:wireless_pattern_terminal')) // Pattern Wireless
+ore('questbookWirelessTerminals').add(item('appliedenergistics2:wireless_fluid_terminal')) // Fluid Wireless
+
+ore('questbookChisels').add(item('chisel:chisel_iron'))
+ore('questbookChisels').add(item('chisel:chisel_diamond'))
+ore('questbookChisels').add(item('chisel:chisel_hitech'))
+
+// Add All GT Super and Quantum Tanks (apart from creative)
+// Super Tanks
+ore('questbookTanks').add(metaitem('super_tank.lv'))
+ore('questbookTanks').add(metaitem('super_tank.mv'))
+ore('questbookTanks').add(metaitem('super_tank.hv'))
+ore('questbookTanks').add(metaitem('super_tank.ev'))
+ore('questbookTanks').add(metaitem('super_tank.iv'))
+
+// Quantum Tanks
+ore('questbookTanks').add(metaitem('quantum_tank.iv'))
+ore('questbookTanks').add(metaitem('quantum_tank.luv'))
+ore('questbookTanks').add(metaitem('quantum_tank.zpm'))
+ore('questbookTanks').add(metaitem('quantum_tank.uv'))
+ore('questbookTanks').add(metaitem('quantum_tank.uhv'))
+
+/* Nuclearcraft Quests: */
+// Neptunium
+ore('questbookNeptunium').add(item('nuclearcraft:neptunium'))
+ore('questbookNeptunium').add(item('nuclearcraft:neptunium:4'))
+
+// Plutonium
+ore('questbookPlutonium').add(item('nuclearcraft:plutonium'))
+ore('questbookPlutonium').add(item('nuclearcraft:plutonium:12'))
+ore('questbookPlutonium').add(metaitem('ingotPlutonium'))
+ore('questbookPlutonium').add(metaitem('ingotPlutonium241'))
+
+// Americium
+ore('questbookAmericium').add(item('nuclearcraft:americium'))
+ore('questbookAmericium').add(item('nuclearcraft:americium:4'))
+ore('questbookAmericium').add(item('nuclearcraft:americium:8'))
+
+// Curium
+ore('questbookCurium').add(item('nuclearcraft:curium'))
+ore('questbookCurium').add(item('nuclearcraft:curium:4'))
+ore('questbookCurium').add(item('nuclearcraft:curium:8'))
+ore('questbookCurium').add(item('nuclearcraft:curium:12'))
+
+// Berkelium
+ore('questbookBerkelium').add(item('nuclearcraft:berkelium'))
+ore('questbookBerkelium').add(item('nuclearcraft:berkelium:4'))
+
+// Californium
+ore('questbookCalifornium').add(item('nuclearcraft:californium'))
+ore('questbookCalifornium').add(item('nuclearcraft:californium:4'))
+ore('questbookCalifornium').add(item('nuclearcraft:californium:8'))
+ore('questbookCalifornium').add(item('nuclearcraft:californium:12'))
+
+/* End NC quests */
 
 println("[OreDict.groovy] Loading OreDict Changes End")
