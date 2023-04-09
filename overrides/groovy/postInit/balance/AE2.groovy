@@ -170,4 +170,163 @@ mods.gregtech.wiremill.recipeBuilder()
 	.EUt(16)
 	.buildAndRegister()
 
+/*
+ *  ************************
+ *  ===> AE2 EXTENSIONS <===
+ *  ************************
+ */
+
+/*
+ * PackagedAuto!
+ */
+
+// Package Component
+crafting.removeByOutput(item('packagedauto:package_component'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pauto_package_component')
+    .output(item('packagedauto:package_component'))
+    .matrix('VTV',
+            'TXT',
+			'VTV')
+    .key('V', ore('plateVibrantAlloy'))
+    .key('T', ore('plateTitanium'))
+    .key('X', item('minecraft:ender_eye'))
+    .register()
+
+crafting.removeByOutput(item('packagedauto:recipe_holder'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pauto_recipe_holder')
+    .output(item('packagedauto:recipe_holder'))
+    .matrix('GPG',
+            'PBP',
+			'TMT')
+    .key('G', item('appliedenergistics2:quartz_glass'))
+    .key('P', item('appliedenergistics2:material:52')) // Blank Pattern
+    .key('M', item('packagedauto:me_package_component'))
+    .key('B', ore('blockCrystaltine'))
+    .key('T', ore('plateTitanium'))
+    .register()
+
+crafting.removeByOutput(item('packagedauto:packager'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pauto_packager')
+    .output(item('packagedauto:packager'))
+    .matrix('TMT',
+            'CXC',
+			'TIT')
+    .key('M', item('packagedauto:me_package_component'))
+    .key('I', item('appliedenergistics2:part:240')) // ME Import Bus
+    .key('T', ore('plateTitanium'))
+    .key('C', ore('circuitEv'))
+    .key('X', item('extrautils2:crafter'))
+    .register()
+
+crafting.removeByOutput(item('packagedauto:unpackager'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pauto_unpackager')
+    .output(item('packagedauto:unpackager'))
+    .matrix('TMT',
+            'CXC',
+			'TET')
+    .key('M', item('packagedauto:me_package_component'))
+    .key('E', item('appliedenergistics2:part:260')) // ME Export Bus
+    .key('T', ore('plateTitanium'))
+    .key('C', ore('circuitEv'))
+    .key('X', item('extrautils2:crafter'))
+    .register()
+
+crafting.removeByOutput(item('packagedauto:encoder'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pauto_encoder')
+    .output(item('packagedauto:encoder'))
+    .matrix('TMT',
+            'HXH',
+			'TCT')
+    .key('M', item('packagedauto:me_package_component'))
+    .key('H', item('packagedauto:recipe_holder'))
+    .key('T', ore('plateTitanium'))
+    .key('C', ore('circuitEv'))
+    .key('X', item('ae2stuff:encoder'))
+    .register()
+
+crafting.removeByOutput(item('ae2stuff:encoder'))
+crafting.shapedBuilder()
+    .name('contenttweaker:ae2stuff_encoder')
+    .output(item('ae2stuff:encoder'))
+    .matrix('STS',
+            'AXF',
+			'SCS')
+    .key('S', ore('plateStainlessSteel'))
+    .key('T', item('appliedenergistics2:part:340')) // ME Pattern Terminal
+    .key('F', item('appliedenergistics2:material:43')) // Formation Core
+    .key('A', item('appliedenergistics2:material:44')) // Annihilation Core
+    .key('M', item('packagedauto:me_package_component'))
+    .key('C', ore('circuitHv'))
+    .key('X', metaitem('hull.hv'))
+    .register()
+
+crafting.removeByOutput(item('packagedauto:me_package_component'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pauto_me_package_component')
+    .output(item('packagedauto:me_package_component'))
+    .matrix('PGP',
+            'AXF',
+			'PGP')
+    .key('P', ore('plateTitanium'))
+    .key('G', item('appliedenergistics2:quartz_glass'))
+    .key('F', item('appliedenergistics2:material:43')) // Formation Core
+    .key('A', item('appliedenergistics2:material:44')) // Annihilation Core
+    .key('X', item('packagedauto:package_component'))
+    .register()
+
+/**
+ * PackagedExCrafting
+ */
+
+// Advanced Crafter
+crafting.removeByOutput(item('packagedexcrafting:advanced_crafter'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pexc_advanced_crafter')
+    .output(item('packagedexcrafting:advanced_crafter'))
+    .matrix('CIC',
+			'BTB',
+			'CMC')
+    .key('C', item('extendedcrafting:material:15')) // Advanced Catalyst
+    .key('I', item('extendedcrafting:interface')) // Automation Interface
+    .key('M', item('packagedauto:me_package_component'))
+    .key('B', ore('plateBlackSteel'))
+    .key('T', item('extendedcrafting:table_advanced')) // Advanced Crafting Table
+    .register()
+
+// Elite Crafter
+crafting.removeByOutput(item('packagedexcrafting:elite_crafter'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pexc_elite_crafter')
+    .output(item('packagedexcrafting:elite_crafter'))
+    .matrix('CIC',
+			'BTB',
+			'CMC')
+    .key('C', item('extendedcrafting:material:16')) // Elite Catalyst
+    .key('I', item('extendedcrafting:interface')) // Automation Interface
+    .key('M', item('packagedauto:me_package_component'))
+    .key('B', ore('plateBlackSteel'))
+    .key('T', item('extendedcrafting:table_elite')) // Advanced Crafting Table
+    .register()
+
+// Ultimate Crafter
+crafting.removeByOutput(item('packagedexcrafting:ultimate_crafter'))
+crafting.shapedBuilder()
+    .name('contenttweaker:pexc_ultimate_crafter')
+    .output(item('packagedexcrafting:ultimate_crafter'))
+    .matrix('CIC',
+			'BTB',
+			'CMC')
+    .key('C', item('extendedcrafting:material:17')) // Ultimate Catalyst
+    .key('I', item('extendedcrafting:interface')) // Automation Interface
+    .key('M', item('packagedauto:me_package_component'))
+    .key('B', ore('plateBlackSteel'))
+    .key('T', item('extendedcrafting:table_ultimate')) // Ultimate Crafting Table
+    .register()
+
+
 println("[AE2.groovy] End AE2 Changes")

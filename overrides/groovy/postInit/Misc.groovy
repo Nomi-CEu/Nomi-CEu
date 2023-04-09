@@ -108,3 +108,12 @@ crafting.addShapeless(metaitem('gemCoke') * 9, [item('thermalfoundation:storage_
 //    item('moreplates:neutronium_plate'),
 //    [metaitem('plateNeutronium')])
 
+// TODO move me on ThermalExpansion.groovy @ balance folder
+
+// Hardened Glass
+mods.gregtech.alloy_smelter.recipeBuilder()
+	.inputs(ore("dustLead"), ore("dustObsidian") * 4)
+	.outputs(item("thermalfoundation:glass:3"))
+	.duration(100)
+	.EUt(30)
+	.buildAndRegister()

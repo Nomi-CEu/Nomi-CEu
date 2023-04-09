@@ -1083,4 +1083,26 @@ pulsatingMeshOre.add(item('contenttweaker:pulsatingmesh'))
 // GT Fluix
 ore('gemFluix').add(item('appliedenergistics2:material:7'))
 
+// AdvRocketry
+mods.jei.removeAndHide(item('advancedrocketry:blockpump'))    // Fluid Pump
+mods.jei.removeAndHide(item('advancedrocketry:centrifuge'))   // Centrifuge
+mods.jei.removeAndHide(item('advancedrocketry:basalt'))       // Basalt
+mods.jei.removeAndHide(item('advancedrocketry:landingfloat')) // Landing Float
+mods.jei.removeAndHide(item('advancedrocketry:airlock_door')) // Airlock Door (Technical Block)
+mods.jei.removeAndHide(item('advancedrocketry:lightsource'))  // Light source (Technical Block)
+mods.jei.removeAndHide(item('advancedrocketry:astrobed'))     // Astrobed     (Technical Block)
+
+//AR Rocket fuel, unusable
+mods.jei.removeAndHide(item('forge:bucketfilled').withTag([FluidName: "rocketfuel", Amount: 1000]))
+
+// Various unused satellite sensors
+mods.jei.removeAndHide(item('advancedrocketry:satelliteprimaryfunction:2'))
+mods.jei.removeAndHide(item('advancedrocketry:satelliteprimaryfunction:3'))
+mods.jei.removeAndHide(item('advancedrocketry:satelliteprimaryfunction:4'))
+mods.jei.removeAndHide(item('advancedrocketry:satelliteprimaryfunction:5'))
+
+// Unused Chips
+mods.jei.removeAndHide(item('advancedrocketry:ic:1'))
+mods.jei.removeAndHide(item('advancedrocketry:satelliteidchip'))
+
 println("[JEI.groovy] End Hiding objects from JEI")
