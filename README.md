@@ -20,32 +20,39 @@ nomi-ceu comes with compatibility scripts for the following mods. You can drop t
 
 \* Note: If you are adding these mods via the CurseForge app, remove the copy of non-Extended Life AE2 it might automatically download.
 
-## Hard mode info
+## Expert Mode 
 If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack. Highlights include:
 
-- No DME for easy infinite resources   
-- Nomicoins can't be spent  
-- The Steam Age  
-- No Creative Tank; instead...  
-- Stabilized Micro Miners for late-game infinite resources  
+- Forced Peaceful Mode
+- No DME for easy infinite resources
+- Nomicoins can't be spent
+- The Steam Age
+- No Creative Tank; instead...
+    - Stabilized Micro Miners for late-game infinite resources  
 - Harder recipes for assorted things like Iridium, Graphene, Numismatic Dynamos, and more  
 
-Installation instructions:
-- Install the hardmode config files from [here](https://github.com/tracer4b/nomi-ceu/tree/main/overrides). Restart the pack for this to take effect. 
-  - Windows users may grab the utility [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat)(right click - save as), save it to the root directory of the pack (the same level as `\config`).   
-  - MacOS and GNU/Linux users can run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` then verify the contents with your editor of choice before running `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
-- If you are on an existing world, run `/bq_admin default load` to load the hard mode questbook.
+Installation:
+NOTE: Scripts will not work on versions <1.6, thus manual installation may be necessary. 
+- Windows: 
+    - Download [here](https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.bat) (right click - save as) save it to the root directory of the pack (the same level as `\config`).
+    - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
+        
+- Any GNU/Linux (Mac and Linux):
+    - Run `curl -O https://raw.githubusercontent.com/tracer4b/nomi-ceu/main/pack-mode-switcher.sh` to download the file.
+    - Verify the contents with your editor of choice.
+    - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
+
+Manual installation instructions: [here](overrides/README.md).
 
 ## Bansoukou
-This pack uses three bansoukou patches. 
-The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/tree/1.12.2), the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution/tree/1.12.2), and the third one is for [GregTech](https://github.com/GregTechCEu/GregTech).
+This pack uses two bansoukou patches. 
+The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/tree/1.12.2), and the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution/tree/1.12.2).
 
-The three patch repos are:
+The two patch repos are:
 - [NuclearCraft](https://github.com/Exaxxion/NuclearCraft/tree/2.18y-ceu). This fixes GTCEu incompatability with NuclearCraft.
-- [Draconic Evolution](https://github.com/IntegerLimit/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks, in the Energy Core and Reactor.
-- [Gregtech](https://github.com/IntegerLimit/GregTech/tree/remove-small-storage-cover). This fixes the incompatibility between latest GregTech and latest ULV covers. This patch is to be removed when this incompatibility is fixed in a future GT update.
+- [Draconic Evolution](https://github.com/Nomi-CEu/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks, in the Energy Core and Reactor.
 
-If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/IntegerLimit/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
+If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/Nomi-CEu/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
 
 ## Credits
 Original pack by [Exaxxion](https://github.com/Exaxxion).  
