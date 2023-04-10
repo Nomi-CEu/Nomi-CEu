@@ -3,11 +3,14 @@ import net.minecraft.block.SoundType
 import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 import net.minecraftforge.common.IRarity
+
+/*
 import appeng.api.AEApi
 import appeng.api.features.IInscriberRecipe
 import appeng.api.features.IInscriberRecipeBuilder
 import appeng.api.features.IInscriberRegistry
 import appeng.api.features.InscriberProcessType
+*/
 
 class NomiUtil {
     /* Items */
@@ -47,7 +50,7 @@ class NomiUtil {
     }
     /* ---------------------------------------------------------------- */
 
-	// AE Compat
+	/* AE Compat
 	static IInscriberRecipeBuilder getInscriberBuilder(boolean inscribe) {
 		return AEApi.instance().registries().inscriber().builder().withProcessType(inscribe ? InscriberProcessType.INSCRIBE : InscriberProcessType.PRESS)
 	}
@@ -65,4 +68,5 @@ class NomiUtil {
 				inscriberReg.removeRecipe(r)
 			})
 	}
+    */
 }

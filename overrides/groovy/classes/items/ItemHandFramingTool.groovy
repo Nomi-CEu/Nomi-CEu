@@ -1,5 +1,8 @@
 import com.jaquadro.minecraft.storagedrawers.api.storage.INetworked
-import com.jaquadro.minecraft.storagedrawers.block.*
+import com.jaquadro.minecraft.storagedrawers.block.BlockDrawers
+import com.jaquadro.minecraft.storagedrawers.block.BlockCompDrawers
+import com.jaquadro.minecraft.storagedrawers.block.BlockController
+import com.jaquadro.minecraft.storagedrawers.block.BlockSlave
 import com.jaquadro.minecraft.storagedrawers.block.tile.TileEntityDrawers
 import com.jaquadro.minecraft.storagedrawers.block.tile.tiledata.MaterialData
 import eutros.framedcompactdrawers.block.BlockControllerCustom
@@ -108,7 +111,7 @@ public class ItemHandFramingTool extends Item {
                || registryString.equals("storagedrawers:customtrim")
     }
 
-    private Block makeFramedState(World world, BlockPos pos) {
+    private void makeFramedState(World world, BlockPos pos) {
         IBlockState state = world.getBlockState(pos)
         Block block = state.getBlock()
         NBTTagCompound tag = new NBTTagCompound()
@@ -130,15 +133,15 @@ public class ItemHandFramingTool extends Item {
         }
 
         if (block instanceof BlockController){
-            world.setBlockState(pos, FCDModBlocks.framedDrawerController.getDefaultState)
+            world.setBlockState(pos, FCDModBlocks.framedDrawerController.getDefaultState())
         }
 
         if (block instanceof BlockSlave){
-            world.setBlockState(pos, FCDModBlocks.framedSlave.getDefaultState)
+            world.setBlockState(pos, FCDModBlocks.framedSlave.getDefaultState())
         }
 
         // Only thing that and extends INetworked at this point is trims
-        world.setBlockState(pos, SDModBlocks.customTrim.getDefaultState)
+        world.setBlockState(pos, SDModBlocks.customTrim.getDefaultState())
     }
 
     private ItemStack getItemStackFromKey(NBTTagCompound tagCompound, String key) {

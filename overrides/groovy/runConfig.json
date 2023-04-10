@@ -10,14 +10,12 @@
   "loaders": {
     "preInit": [
       "classes/",
-      "preInit/nomiContent/NomiItems.groovy",
       "preInit/nomiContent/CustomGTMaterials.groovy",
+      "preInit/nomiContent/NomiItems.groovy",
       "preInit/"
     ],
     "postInit": [
-      "postInit/OreDict.groovy",
-      "postInit/JEI.groovy",
-      "postInit/"
+      "postInit/HandFramingRecipes.groovy"
     ]
   }
 }
