@@ -1,9 +1,15 @@
 import net.minecraft.block.material.Material
 import net.minecraft.block.SoundType
 import net.minecraft.block.Block
+import net.minecraft.item.ItemStack
 import net.minecraftforge.common.IRarity
+import appeng.api.AEApi
+import appeng.api.features.IInscriberRecipe
+import appeng.api.features.IInscriberRecipeBuilder
+import appeng.api.features.IInscriberRegistry
+import appeng.api.features.InscriberProcessType
 
-class CommonFunctions {
+class NomiUtil {
     /* Items */
     static void createItem(String name){
         content.createItem(name)
@@ -28,8 +34,9 @@ class CommonFunctions {
             .setMaxStackSize(maxStackSize)
             .register()
     }
-    /* ---------------------------------------------------------------- */
 
+
+    /* ---------------------------------------------------------------- */
     /* Blocks */
     static Block createBaseBlock(Material material, SoundType soundType){
         return new Block(material)
@@ -39,4 +46,23 @@ class CommonFunctions {
             .setCreativeTab(content.getDefaultTab())
     }
     /* ---------------------------------------------------------------- */
+
+	// AE Compat
+	static IInscriberRecipeBuilder getInscriberBuilder(boolean inscribe) {
+		return AEApi.instance().registries().inscriber().builder().withProcessType(inscribe ? InscriberProcessType.INSCRIBE : InscriberProcessType.PRESS)
+	}
+
+	static void registerInscriberRecipe(IInscriberRecipe therecipie) {
+		AEApi.instance().registries().inscriber().addRecipe(therecipie)
+	}
+
+	static void removeInscriberRecipe(ItemStack thething) {
+        def inscriberReg = AEApi.instance().registries().inscriber()
+		inscriberReg.getRecipes()
+            .toList() // this make a new list, cant mutate the list foreach is iterating
+			.forEach(r -> {
+				if (!r.getOutput().isItemEqual(thething)) return
+				inscriberReg.removeRecipe(r)
+			})
+	}
 }

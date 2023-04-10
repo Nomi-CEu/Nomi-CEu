@@ -6,8 +6,9 @@ println("[CustomBlocks.groovy] Start Custom Blocks Registration.")
 
 /* --------------------------------- Custom Blocks ----------------------------------------- */
 
+
 /* Custom Behaviour Blocks:
-Excitation Coil and Dust Block have special behaviours, and are found in /classes/blocks. 
+Excitation Coil and Dust Block have special behaviours, and are found in /classes/blocks.
 All further special behaviour blocks should go there too.*/
 content.registerBlock("excitationcoil", new BlockExcitationCoil(content.getDefaultTab()))
 content.registerBlock("block_dust", new BlockDust(content.getDefaultTab()))
@@ -19,8 +20,8 @@ content.createBlock("microverse_casing").register()
 
 // Blocks with Rarity. RarityItemBlock class is defined in /classes.
 // Make blocks
-def powerStorage = CommonFunctions.createBaseBlock(Material.IRON, SoundType.METAL)
-def generator = CommonFunctions.createBaseBlock(Material.IRON, SoundType.METAL)
+def powerStorage = NomiUtil.createBaseBlock(Material.IRON, SoundType.METAL)
+def generator = NomiUtil.createBaseBlock(Material.IRON, SoundType.METAL)
 
 // Register Blocks
 content.registerBlock("ultimate_power_storage", powerStorage, new RarityItemBlock(powerStorage, EnumRarity.EPIC).setMaxStackSize(1))

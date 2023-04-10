@@ -5,7 +5,7 @@ import net.minecraft.potion.PotionEffect
 import net.minecraft.potion.Potion
 import net.minecraft.item.Item
 
-import static CommonFunctions.createItem
+import static NomiUtil.createItem
 
 println("[CustomItems.groovy] Start Creative Tab Init.")
 
@@ -34,7 +34,6 @@ createItem("omnicoin")
 createItem("omnicoin5", EnumRarity.UNCOMMON)
 createItem("omnicoin25", EnumRarity.RARE)
 createItem("omnicoin100", EnumRarity.EPIC)
-
 
 /* Widgets */
 createItem("woodenwidget")
