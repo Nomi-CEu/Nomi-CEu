@@ -225,4 +225,7 @@ for (String smoreName : smores) {
     index++
 }
 
+// Hand Framing Tool
+content.registerItem("hand_framing_tool", new ItemHandFramingTool())
+
 println("[CustomItems.groovy] End Custom Items Registration.")

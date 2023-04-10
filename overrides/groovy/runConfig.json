@@ -9,8 +9,9 @@
   ],
   "loaders": {
     "preInit": [
-			"preInit/nomiContent/CustomGTMaterials.groovy",
+      "classes/",
       "preInit/nomiContent/NomiItems.groovy",
+      "preInit/nomiContent/CustomGTMaterials.groovy",
       "preInit/"
     ],
     "postInit": [
