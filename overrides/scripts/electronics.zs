@@ -206,7 +206,7 @@ recipes.addShaped(<meta_tile_entity:hull.ulv>, [
 //Phenol and Coke
 pyrolyse_oven.recipeBuilder()
 	.inputs([<minecraft:coal> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 14}))
+	.circuit(14)
 	.fluidInputs([<liquid:steam> * 4000])
 	.outputs([<metaitem:gemCoke> * 20])
 	.fluidOutputs([<liquid:phenol> * 1000])
@@ -215,7 +215,7 @@ pyrolyse_oven.recipeBuilder()
 //Phenol and Coke dust
 pyrolyse_oven.recipeBuilder()
 	.inputs([<metaitem:dustCoal> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 11}))
+	.circuit(11)
 	.fluidInputs([<liquid:steam> * 4000])
 	.outputs([<metaitem:dustCoke> * 20])
 	.fluidOutputs([<liquid:phenol> * 1000])

@@ -335,7 +335,7 @@ recipes.addShapeless(<thermalfoundation:fertilizer> * 16, [<ore:dustWood>, <ore:
 //Add recipe for Iron Trapdoor
 assembler.recipeBuilder()
 	.inputs(<ore:plateIron> * 4)
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 6}))
+	.circuit(6)
 	.outputs(<minecraft:iron_trapdoor>)
 	.duration(200).EUt(16).buildAndRegister();
 
