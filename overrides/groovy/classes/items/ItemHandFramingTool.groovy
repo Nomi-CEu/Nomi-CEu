@@ -98,8 +98,8 @@ public class ItemHandFramingTool extends Item {
         if (matS.isEmpty())
             return actionResult
 
-        matF = getItemStackFromKey(tagCompound, "MatT")
-        matT = getItemStackFromKey(tagCompound, "MatF")
+        matT= getItemStackFromKey(tagCompound, "MatT")
+        matF = getItemStackFromKey(tagCompound, "MatF")
 
         // Decorate
         var tile = worldIn.getTileEntity(pos)
@@ -113,6 +113,9 @@ public class ItemHandFramingTool extends Item {
         handFramingTool.setTagCompound(tagCompound)
 
         player.setHeldItem(hand, handFramingTool)
+
+        // Reload Block
+        worldIn.markBlockRangeForRenderUpdate(pos, pos)
 
         return EnumActionResult.SUCCESS
     }
