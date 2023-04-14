@@ -13,6 +13,7 @@ import eutros.framedcompactdrawers.registry.ModBlocks as FCDModBlocks
 import com.jaquadro.minecraft.storagedrawers.core.ModBlocks as SDModBlocks
 import net.minecraft.block.Block
 import net.minecraft.block.state.IBlockState
+import net.minecraft.block.properties.PropertyDirection
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.init.Blocks
@@ -60,16 +61,18 @@ public class ItemHandFramingTool extends Item {
 
         // Check if we should make this block a framed one
         if (!isDecorating(Objects.requireNonNull(block.getRegistryName()))){
-            if (!tagCompound.hasKey("sticks"))
-                return actionResult
+            if (!player.capabilities.isCreativeMode) {
+                if (!tagCompound.hasKey("sticks"))
+                    return actionResult
 
-            int stickCount = tagCompound.getInteger("sticks")
+                int stickCount = tagCompound.getInteger("sticks")
 
-            if (stickCount < 8)
-                return actionResult
+                if (stickCount < 8)
+                    return actionResult
 
-            tagCompound.setInteger("sticks", stickCount - 8)
-
+                tagCompound.setInteger("sticks", stickCount - 8)
+            }
+            
             // Make it framed
             makeFramedState(worldIn, pos)
 
@@ -116,32 +119,42 @@ public class ItemHandFramingTool extends Item {
         Block block = state.getBlock()
         NBTTagCompound tag = new NBTTagCompound()
 
-        // Other stuff extend drawers, but not in this case, apart from compacting drawers
+        IBlockState newState
+
+        // Special Case for drawers, to transfer items
         if (block instanceof BlockDrawers){
             TileEntityDrawers tile = Objects.requireNonNull((TileEntityDrawers) world.getTileEntity(pos))
+
+            // Get nbt (items stored, locked, etc.) + direction
             tile.writeToPortableNBT(tag)
+            int direction = tile.getDirection()
 
-            if (block instanceof BlockCompDrawers){
-                world.setBlockState(pos, FCDModBlocks.framedCompactDrawer.getDefaultState())
-                tile = Objects.requireNonNull((TileEntityDrawers) world.getTileEntity(pos))
-                tile.readFromPortableNBT(tag)
-            }
+            // Only block that extends BlockDrawers at this point is drawers and framed drawers
+            newState = block instanceof BlockCompDrawers ? FCDModBlocks.framedCompactDrawer.getDefaultState() 
+                        : SDModBlocks.customDrawers.getStateFromMeta(block.getMetaFromState(state))
 
-            world.setBlockState(pos, SDModBlocks.customDrawers.getStateFromMeta(block.getMetaFromState(state)))
+            // Set new BlockState
+            world.setBlockState(pos, newState)
+
+            // Reload tile, to the new block
             tile = Objects.requireNonNull((TileEntityDrawers) world.getTileEntity(pos))
+
+            // Load back nbt + direction
             tile.readFromPortableNBT(tag)
+            tile.setDirection(direction)
+            return
         }
 
-        if (block instanceof BlockController){
-            world.setBlockState(pos, FCDModBlocks.framedDrawerController.getDefaultState())
-        }
+        // Only block that and extends INetworked at this point is controllers, slaves, and trims
+        Block newBlock = block instanceof BlockController ? FCDModBlocks.framedDrawerController :
+                        block instanceof BlockSlave ? FCDModBlocks.framedSlave :
+                        SDModBlocks.customTrim
 
-        if (block instanceof BlockSlave){
-            world.setBlockState(pos, FCDModBlocks.framedSlave.getDefaultState())
-        }
+        // Meta for controllers are their direction, so read that (Custom Controller's meta is a bit different to normal controller, so -2 to meta is needed)
+        newState = block instanceof BlockController ? newBlock.getStateFromMeta(block.getMetaFromState(state) - 2) : newBlock.getDefaultState()
 
-        // Only thing that and extends INetworked at this point is trims
-        world.setBlockState(pos, SDModBlocks.customTrim.getDefaultState())
+        world.setBlockState(pos, newState)
+        
     }
 
     private ItemStack getItemStackFromKey(NBTTagCompound tagCompound, String key) {
