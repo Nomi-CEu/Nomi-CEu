@@ -3,6 +3,10 @@ import net.minecraft.block.SoundType
 import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 import net.minecraftforge.common.IRarity
+import net.minecraft.util.ResourceLocation
+import net.minecraftforge.fluids.Fluid
+import net.minecraftforge.fluids.FluidRegistry
+import com.cleanroommc.groovyscript.GroovyScript
 
 /*
 import appeng.api.AEApi
@@ -38,8 +42,6 @@ class NomiUtil {
             .register()
     }
 
-
-    /* ---------------------------------------------------------------- */
     /* Blocks */
     static Block createBaseBlock(Material material, SoundType soundType){
         return new Block(material)
@@ -48,7 +50,21 @@ class NomiUtil {
             .setResistance(10.0F)
             .setCreativeTab(content.getDefaultTab())
     }
-    /* ---------------------------------------------------------------- */
+
+    /* Fluids */
+    static void createFluid(String name, int color, int viscosity, int luminosity) {
+        String id = GroovyScript.getRunConfig().getPackId()
+
+        ResourceLocation stillTexture = new ResourceLocation(id, name)
+        ResourceLocation flowingTexture = new ResourceLocation(id, name)
+
+        Fluid newFluid = new Fluid(name, stillTexture, flowingTexture, color)
+
+        newFluid.setViscosity(viscosity);
+        newFluid.setLuminosity(luminosity);
+
+        FluidRegistry.registerFluid(newFluid);
+    }
 
 	/* AE Compat
 	static IInscriberRecipeBuilder getInscriberBuilder(boolean inscribe) {
