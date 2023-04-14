@@ -332,14 +332,13 @@ recipes.addShapeless(<thermalfoundation:fertilizer> * 16, [<ore:dustWood>, <ore:
 //furnace.addRecipe(<minecraft:iron_nugget> * 2, <metaitem:dustImpureVanadiumMagnetite>, 0.0);
 
 
-//Add recipe for Iron Trapdoor
+/* Old Recipe for Iron Trapdoor
 assembler.recipeBuilder()
 	.inputs(<ore:plateIron> * 4)
 	.circuit(6)
 	.outputs(<minecraft:iron_trapdoor>)
 	.duration(200).EUt(16).buildAndRegister();
-
-
+*/
 
 //Vinyl Acetate
 electrolyzer.recipeBuilder()
