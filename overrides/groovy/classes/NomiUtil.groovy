@@ -17,6 +17,9 @@ import appeng.api.features.InscriberProcessType
 */
 
 class NomiUtil {
+
+    public static String packID = "contenttweaker"
+
     /* Items */
     static void createItem(String name){
         content.createItem(name)
@@ -53,10 +56,8 @@ class NomiUtil {
 
     /* Fluids */
     static void createFluid(String name, int color, int viscosity, int luminosity) {
-        String id = GroovyScript.getRunConfig().getPackId()
-
-        ResourceLocation stillTexture = new ResourceLocation(id, name)
-        ResourceLocation flowingTexture = new ResourceLocation(id, name)
+        ResourceLocation stillTexture = new ResourceLocation(packID, name)
+        ResourceLocation flowingTexture = new ResourceLocation(packID, name)
 
         Fluid newFluid = new Fluid(name, stillTexture, flowingTexture, color)
 
