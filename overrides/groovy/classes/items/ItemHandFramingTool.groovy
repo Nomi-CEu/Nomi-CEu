@@ -54,14 +54,22 @@ public class ItemHandFramingTool extends Item {
 
         ItemStack tool = player.getHeldItem(hand)
 
-        if (!tool.hasTagCompound() || tool.getTagCompound() == null)
-            return actionResult
+        boolean creative = player.capabilities.isCreativeMode
+
+        boolean noTag = false
+
+        if (!tool.hasTagCompound() || tool.getTagCompound() == null){
+            if (creative)
+                noTag = true
+            else
+                return actionResult 
+        }
 
         NBTTagCompound tagCompound = tool.getTagCompound()
 
         // Check if we should make this block a framed one
         if (!isDecorating(Objects.requireNonNull(block.getRegistryName()))){
-            if (!player.capabilities.isCreativeMode) {
+            if (!creative) {
                 if (!tagCompound.hasKey("sticks"))
                     return actionResult
 
@@ -80,6 +88,9 @@ public class ItemHandFramingTool extends Item {
             actionResult = EnumActionResult.SUCCESS
         }
         
+        if (noTag)
+            return actionResult
+
         // Get Decorate Info
         ItemStack matS, matF, matT
 
