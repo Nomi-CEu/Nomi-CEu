@@ -6,7 +6,7 @@ import net.minecraftforge.common.IRarity
 import net.minecraft.util.ResourceLocation
 import net.minecraftforge.fluids.Fluid
 import net.minecraftforge.fluids.FluidRegistry
-import com.cleanroommc.groovyscript.GroovyScript
+import net.minecraftforge.fluids.BlockFluidClassic
 
 /*
 import appeng.api.AEApi
@@ -17,8 +17,8 @@ import appeng.api.features.InscriberProcessType
 */
 
 class NomiUtil {
-
     public final static String packID = "contenttweaker"
+    private static Map<String, Fluid> fluidRegistry = new HashMap<>()
 
     /* Items */
     static void createItem(String name){
@@ -55,17 +55,42 @@ class NomiUtil {
     }
 
     /* Fluids */
+    // Creating the blocks and the fluid must be split up. Blocks should be created in PreInit, whilst fluids are created in TextureStitchEvent.Pre
     static void createFluid(String name, int color, int viscosity, int luminosity) {
         ResourceLocation stillTexture = new ResourceLocation(packID, name)
         ResourceLocation flowingTexture = new ResourceLocation(packID, name)
 
-        Fluid newFluid = new Fluid(name, stillTexture, flowingTexture, color)
+        Fluid fluid = new Fluid(name, stillTexture, flowingTexture, color)
 
-        newFluid.setViscosity(viscosity)
-        newFluid.setLuminosity(luminosity)
+        fluid.setViscosity(viscosity)
+        fluid.setLuminosity(luminosity)
 
-        FluidRegistry.registerFluid(newFluid)
-        FluidRegistry.addBucketForFluid(newFluid)
+        fluidRegistry.put(name, fluid)
+    }
+
+    static void createFluidBlocks() {
+        if (fluidRegistry.isEmpty()){
+            println("[NomiUtil] Error occurred creating Fluid Blocks: No fluids created!")
+            return
+        }
+
+        for (var name : fluidRegistry.keySet()) {
+            content.registerBlock(name, new BlockFluidClassic(fluidRegistry.get(name), Material.WATER))
+        }
+    }
+
+    static void registerFluids() {
+        if (fluidRegistry.isEmpty()){
+            println("[NomiUtil] Error occurred registering Fluids: No fluids created!")
+            return
+        }
+
+        for (var name : fluidRegistry.keySet()){
+            Fluid fluid = fluidRegistry.get(name)
+
+            FluidRegistry.registerFluid(fluid)
+            FluidRegistry.addBucketForFluid(fluid)
+        }
     }
 
 	/* AE Compat
