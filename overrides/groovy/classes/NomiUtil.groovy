@@ -18,7 +18,7 @@ import appeng.api.features.InscriberProcessType
 
 class NomiUtil {
 
-    public static String packID = "contenttweaker"
+    public final static String packID = "contenttweaker"
 
     /* Items */
     static void createItem(String name){
@@ -61,10 +61,11 @@ class NomiUtil {
 
         Fluid newFluid = new Fluid(name, stillTexture, flowingTexture, color)
 
-        newFluid.setViscosity(viscosity);
-        newFluid.setLuminosity(luminosity);
+        newFluid.setViscosity(viscosity)
+        newFluid.setLuminosity(luminosity)
 
-        FluidRegistry.registerFluid(newFluid);
+        FluidRegistry.registerFluid(newFluid)
+        FluidRegistry.addBucketForFluid(newFluid)
     }
 
 	/* AE Compat
