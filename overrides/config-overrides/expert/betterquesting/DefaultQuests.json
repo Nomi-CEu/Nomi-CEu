@@ -688,12 +688,13 @@
     "10:10": {
       "preRequisites:11": [
         209,
-        245
+        245,
+        539
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Second Micro Miner!\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n§c* Tantalite Ore§2\n* Copper Ore\n* Sphalerite Ore\n* Cassiterite Ore\n* Scheelite Ore\n* Tungstate Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.",
+          "desc:8": "The Second Micro Miner! §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:§6\n* Bauxite Ore\n§2* Pyrochlore Ore§6\n§c* Tantalite Ore§2\n* Copper Ore\n* Sphalerite Ore\n* Cassiterite Ore\n* Scheelite Ore\n* Tungstate Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3940,14 +3941,20 @@
       }
     },
     "65:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
         246,
-        386
+        386,
+        328
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Third Micro Miner.\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore§r\n§\n\nor:\n§6* Dense Magma Block§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore",
+          "desc:8": "The Third Micro Miner. §2You\u0027ll need that Boron in the MV Field Generators.§r\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore§r\n§\n\nor:\n§6* Dense Magma Block§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12369,15 +12376,22 @@
       }
     },
     "217:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
         216,
         220,
-        395
+        395,
+        539
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is your first Micro Miner ever.\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n§\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
+          "desc:8": "This is your first Micro Miner ever. §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n§\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
