@@ -3844,12 +3844,12 @@
     },
     "53:10": {
       "preRequisites:11": [
-        56
+        1026
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Wiremill§r is a major efficiency boost, giving you a much greater yield of §6wires§r for your ingots. But first, you\u0027ll need to make some §6Motors§r.\n\n§bGregTech§r machines are built from a number of components, many of which are shared between the machines. Motors§r are used in a great number of recipes, even including other components.\n\nMake sure to encode the recipes needed for motors into a §3Crafting Station§r. You\u0027ll need quite a lot of them.\n\nAfter you make the Wiremill, §econsider making a few stacks§r of LV motors. This might sound extreme, but §ebatch crafting§r in this manner is an important habit to pick up. This way you won\u0027t have to craft more for a while, and you §owill §ruse all those motors eventually, so you\u0027re not wasting materials.\n\nAs you get access to more machinery you will no longer need to craft things manually. Instead, you will engineer factories to automate the production for you. It is useful to keep a stockpile of frequently used things like circuits and components crafted so you don\u0027t have to wait for them when you need them.\n\n§2If the machine sounds start to get on your nerves, you can mute GT machines with a GT Hammer.",
+          "desc:8": "The §3Wiremill§r is a major efficiency boost, giving you a much greater yield of §6wires§r for your ingots. But first, you\u0027ll need to make some §6Motors§r.\n\n§bGregTech§r machines are built from a number of components, many of which are shared between the machines. Motors§r are used in a great number of recipes, even including other components.\n\nMake sure to encode the recipes needed for motors into a §3Crafting Station§r. You\u0027ll need quite a lot of them.\n\nAfter you make the Wiremill, §econsider making a few stacks§r of LV motors. This might sound extreme, but §ebatch crafting§r in this manner is an important habit to pick up. This way you won\u0027t have to craft more for a while, and you §owill §ruse all those motors eventually, so you\u0027re not wasting materials.\n\nAs you get access to more machinery you will no longer need to craft things manually. Instead, you will engineer factories to automate the production for you. It is useful to keep a stockpile of frequently used things like circuits and components crafted so you don\u0027t have to wait for them when you need them.\n\n§2If the machine sounds start to get on your nerves, you can mute GT machines with a GT Hammer.\n\nAlso, note that all Wiremill recipes requires a Programmed Circuit.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13395,7 +13395,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "FUSION!\n\nThis baby can do any fusion recipe, notably giving you access to §6Neutronium§r.\n\nThe multiblock layout is the same as the Mark 1 and Mark 2, with the same hatch and casing substitutions permitted.\n\nObviously though, this one uses §6Fusion Machine Casing Mk §2III§r and only works with §aUV Energy Input Hatches§r.\n\nThe §3Mark 3 Fusion Reactor§r has an energy buffer of §e640M EU§r.",
+          "desc:8": "FUSION!\n\nThis baby can do any fusion recipe, notably giving you access to §6Neutronium§r.\n\nThe multiblock layout is the same as the Mark 1 and Mark 2, with the same hatch and casing substitutions permitted.\n\nObviously though, this one uses §6Fusion Machine Casing Mk §2III§r and only works with §aUV Energy Hatches§r.\n\nThe §3Mark 3 Fusion Reactor§r has an energy buffer of §e640M EU§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13454,6 +13454,12 @@
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:fusion_casing"
+            },
+            "2:10": {
+              "Count:3": 16,
+              "Damage:2": 1218,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -19697,7 +19703,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Time to get fusing!\n\nThe §3Fusion Reactor§r is a multiblock that uses enormous amounts of energy to fuse fluids into new elements. This one is less flexible than the previous GregTech multiblocks, as you can only put hatches where the preview shows. §6Sneak-right click§r the controller to enable the in-world preview.\n\nThe §bJEI§r preview shows §eall valid hatch locations§r, but you don\u0027t actually need that many fluid hatches. You can replace any of the hatch positions in the structure with §2Fusion Machine Casings§r as long as you have at least §atwo Fluid Input Hatches§r and §aone Fluid Output Hatch§r. It\u0027s possible to use input/output hatches in every valid location, if you prefer.\n\nBecause of this, the quest only asks for §248 Fusion Machine Casings, 31 Fusion Glass§r. If you want to use the minimum number of fluid hatches, you\u0027ll need to craft an additional §231 Fusion Machine Casings§r.\n\nEach §aEnergy Input Hatch§r increases the reactor\u0027s power buffer. §2You cannot use 4x or 16x Energy Input Hatches in Fusion Reactors. §aAll 16 Energy Input Hatches§r are required to be able to process all Mark 1 recipes and give a power buffer of §e160M EU§r. §2However, not all energy hatches are needed to be connected to power. For example, a recipe that requires LuV power draw would only need one or more hatches connected to power, but a recipe that needs ZPM power draw would need two hatches connected to power.§r\n\nIn addition to the recipe power drain, Fusion Reactors have a §eheat§r mechanic related to the recipe\u0027s §e\"Eu to Start\"§r. This amount of power is drained from the reactor\u0027s buffer before starting the recipe to heat up the reactor to the necessary temperature, and is independent of the recipe\u0027s EU/t cost. As such, this determines the minimum tier of reactor you need for a recipe.\n\nIf the reactor stops processing, it will §erapidly lose heat§r, even if you pause it with a soft hammer. On the other hand, if the reactor is already at the required temperature for a recipe, §eno additional power§r is required to heat up the reactor! This is true even if you switch between different recipes. This mechanic incentivizes continuous use of the reactor.\n\nIf you switch to a recipe that requires more heat, §eonly the difference§r in heat values is consumed as EU to reach the target heat (up to a maximum heat equal to the reactor\u0027s current buffer).\n\nFusion Reactors §2now overclock§r, but they gate the next tier of materials, so you will eventually want to make more than one.",
+          "desc:8": "Time to get fusing!\n\nThe §3Fusion Reactor§r is a multiblock that uses enormous amounts of energy to fuse fluids into new elements. This one is less flexible than the previous GregTech multiblocks, as you can only put hatches where the preview shows. §6Sneak-right click§r the controller to enable the in-world preview.\n\nThe §bJEI§r preview shows §eall valid hatch locations§r, but you don\u0027t actually need that many fluid hatches. You can replace any of the hatch positions in the structure with §2Fusion Machine Casings§r as long as you have at least §atwo Fluid Input Hatches§r and §aone Fluid Output Hatch§r. It\u0027s possible to use input/output hatches in every valid location, if you prefer.\n\nBecause of this, the quest only asks for §248 Fusion Machine Casings§r. If you want to use the minimum number of fluid hatches, you\u0027ll need to craft an additional §229 Fusion Machine Casings§r. In addition to the §a48 Fusion Machine Casings§r, you will also need §631 Fusion Glass§r or §631 Fusion Machne Casings§r. §bFusion Glass is cheaper, and looks cooler§r, but its your choice.\n\nEach §aEnergy Hatch§r increases the reactor\u0027s power buffer. §2You cannot use 4x or 16x Energy Hatches in Fusion Reactors. §aAll 16 Energy Hatches§r are required to be able to process all Mark 1 recipes and give a power buffer of §e160M EU§r. §2However, not all energy hatches are needed to be connected to power. For example, a recipe that requires LuV power draw would only need one or more hatches connected to power, but a recipe that needs ZPM power draw would need two hatches connected to power.§r §cThey still need to be present on the structure!§r\n\nIn addition to the recipe power drain, Fusion Reactors have a §eheat§r mechanic related to the recipe\u0027s §e\"Eu to Start\"§r. This amount of power is drained from the reactor\u0027s buffer before starting the recipe to heat up the reactor to the necessary temperature, and is independent of the recipe\u0027s EU/t cost. As such, this determines the minimum tier of reactor you need for a recipe.\n\nIf the reactor stops processing, it will §erapidly lose heat§r, even if you pause it with a soft hammer. On the other hand, if the reactor is already at the required temperature for a recipe, §eno additional power§r is required to heat up the reactor! This is true even if you switch between different recipes. This mechanic incentivizes continuous use of the reactor.\n\nIf you switch to a recipe that requires more heat, §eonly the difference§r in heat values is consumed as EU to reach the target heat (up to a maximum heat equal to the reactor\u0027s current buffer).\n\nFusion Reactors §2overclock, but only once per fusion tier, instead of based on energy input.§r They gate the next tier of materials, so you will eventually want to make more than one.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19780,12 +19786,6 @@
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:fusion_casing"
-            },
-            "6:10": {
-              "Count:3": 31,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "gregtech:transparent_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -30561,7 +30561,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Most plates are made in the Bending Machine instead of here. (Technically this was the case in CE, but this modpack transferred its recipes to the Compressor.)\n\nHowever, this machine will still see use for compressing Nuggets into Ingots, Ingots into Blocks, and gem Dusts into Plates (such as Certus).",
+          "desc:8": "§2§2Most plates are made in the Bending Machine instead of here. (Technically this was the case in CE, but this modpack transferred its recipes to the Compressor.)§r\n\nHowever, this machine will still see use for compressing §eNuggets§r into§e Ingots§r, §eIngots§r into §eBlocks§r, §eGem Dusts§r into §ePlates§r (such as §6Certus Quartz§r), as well as various other useful recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46211,7 +46211,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Upgrade time! \n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra §231§r if you don\u0027t want more than §a2 Fluid Inputs§r§r and §a1 Fluid Output§r.\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
+          "desc:8": "Upgrade time! \n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra §229§r if you don\u0027t want more than §a2 Fluid Inputs§r§r and §a1 Fluid Output§r. Don\u0027t forget the extra §e31 Fusion Glass§r or §6Fusion Machine Casings§r!\n\n§bYes, the Fusion Glass is the same tier as last time, but the Fusion Machine Casings are more expensive.§r\n\nMake sure your using §6ZPM Energy Hatches§r!\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46278,12 +46278,6 @@
               "id:8": "gregtech:fusion_casing"
             },
             "3:10": {
-              "Count:3": 31,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "gregtech:transparent_casing"
-            },
-            "4:10": {
               "Count:3": 4,
               "Damage:2": 1,
               "OreDict:8": "",
@@ -50303,7 +50297,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Bending Machine makes, depending on what Programmable Circuit it\u0027s given:\n- Plates from a single ingot (instead of the Compressor)\n- 4 Foils from a Plate (instead of the Cluster Mill, which is no more)\n- Double Plates from two Plates\n- Dense Plates from nine Plates\n- Small Springs from one Rod\n- Springs from one Long Rod. \n§r\nWhy was this removed?!\n\nNote that circuits can be placed in the circuit slot instead of the input of the bender, which creates a \u0027Ghost Circuit\u0027, which doesn\u0027t take up the circuit. This means you only have to use 1 circuit! (Except in Input Buses of Multiblocks)",
+          "desc:8": "§2The Bending Machine makes, depending on what Programmable Circuit it\u0027s given:\n- Plates from a single ingot (instead of the Compressor)\n- 4 Foils from a Plate (instead of the Cluster Mill, which is no more)\n- Double Plates from two Plates\n- Dense Plates from nine Plates\n- Small Springs from one Rod\n- Springs from one Long Rod. \n§r\n§eWhy was this removed?!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50337,15 +50331,6 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "contenttweaker:omnicoin5"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 461,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1",
-              "tag:10": {
-                "Configuration:3": 0
-              }
             }
           }
         }
@@ -53530,7 +53515,8 @@
     },
     "861:10": {
       "preRequisites:11": [
-        607
+        535,
+        848
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62662,6 +62648,129 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1025:10": {
+      "preRequisites:11": [
+        542
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Powered Spawner§r is a machine from §bEnderIO§r.\n\nIt is used to automate the spawning and capture of mobs. As with all §bEnderIO§r machines, it requires a capacitor, with a higher tier capacitor increasing the range, spawning rate, and capture rate.\n\nIn order to set a §6Powered Spawner§r to the mob type that you want, you must combine it with a §6Broken Spawner§r, set to your specified mob type, in an anvil. \n\nThis §6Broken Spawner§r is set by putting a §6Broken Spawner§r, of any mob type, and a §6Soul Vial§r, of the specified mob, into a §aSoul Binder§r, with a few dashes of §aXP§r. Broken Spawners can be obtained by breaking a mob spawner. §eTIP: Spawners are all over the Lost Cities!§r\n\nThe spawner has two modes: Capture and Spawn.\n\nIn capture mode, you insert a §6Soul Vial§r into the machine, and the soul vial captures the §asoul§r of the set mob. This does not spawn any mobs, and thus works with any mob, even on peaceful.\n\nIn spawn mode, the spawner will spawn the mob that it is set to, until there is no space for them, or there are too many mobs in the area.\n\nNow you don\u0027t have to craft Soul Vials, but simply make them! It is also useful in certain crafts, such as the §aFlight Control Unit§r, in saving you a ton of XP.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "enderio:block_powered_spawner"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Powered Spawner",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1025,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "enderio:block_powered_spawner"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1026:10": {
+      "preRequisites:11": [
+        56
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Programmed Circuits§r is a item used to configure machines. This controls what gets produced, and at what speed.\n\nSimply set the circuit\u0027s value by either:\n1. Shift-right click whilst holding the circuit\n2. Using the up and down arrows in a §bcircuit slot§r of a machine, which is at the §abottom-right§r of the machine\u0027s §bGUI§r.\n\nSome tips when setting the circuit\u0027s value in a §bcircuit slot§r:\n1. Shift to increase/decrease by 5, instead of 1\n2. Scroll to increase/decrease very quickly\n3. Shift and Scroll to increase/decrease even quicker!\n\n§2New to CEu! Ghost Circuits!§r\nThis means that circuits can be placed in the circuit slot instead of the input of the machine, which creates a §b\u0027Ghost Circuit\u0027§r, which doesn\u0027t take up the circuit. §aThis means you only have to use 1 circuit!§r (Except in §6Input Buses§r of §5Multiblocks§r, where Ghost Circuits haven\u0027t been implemented... yet)\n\n§2New to CEu! Quick Circuit Setting!§r\nWhilst holding a programmed circuit, simply shift-right click the machine to set a §bGhost Circuit§r in the machine\u0027s cicuit slot. (Except in §6Input Buses§r of §5Multiblocks§r, where Quick Circuit Setting haven\u0027t been implemented... yet)",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 461,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "Configuration:3": 0
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Programmed Circuits",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1026,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 461,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1",
+              "tag:10": {
+                "Configuration:3": 0
+              }
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -62710,7 +62819,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -572,
-          "y:3": 280
+          "y:3": 296
         },
         "4:10": {
           "id:3": 23,
@@ -62759,14 +62868,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 388
+          "y:3": 404
         },
         "11:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 424
+          "y:3": 440
         },
         "12:10": {
           "id:3": 39,
@@ -62780,7 +62889,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -772,
-          "y:3": 424
+          "y:3": 440
         },
         "14:10": {
           "id:3": 45,
@@ -62808,21 +62917,21 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -748,
-          "y:3": 328
+          "y:3": 344
         },
         "18:10": {
           "id:3": 69,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -648,
-          "y:3": 340
+          "y:3": 356
         },
         "19:10": {
           "id:3": 72,
           "sizeX:3": 56,
           "sizeY:3": 56,
           "x:3": -908,
-          "y:3": 276
+          "y:3": 292
         },
         "20:10": {
           "id:3": 145,
@@ -62871,7 +62980,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -660,
-          "y:3": 376
+          "y:3": 392
         },
         "27:10": {
           "id:3": 260,
@@ -62899,7 +63008,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -792,
-          "y:3": 388
+          "y:3": 404
         },
         "31:10": {
           "id:3": 282,
@@ -62927,14 +63036,14 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
-          "y:3": 368
+          "y:3": 356
         },
         "35:10": {
           "id:3": 403,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -516,
-          "y:3": 368
+          "y:3": 356
         },
         "36:10": {
           "id:3": 413,
@@ -62969,14 +63078,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
-          "y:3": 388
+          "y:3": 404
         },
         "41:10": {
           "id:3": 516,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -792,
-          "y:3": 292
+          "y:3": 308
         },
         "42:10": {
           "id:3": 517,
@@ -62997,14 +63106,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
-          "y:3": 292
+          "y:3": 272
         },
         "45:10": {
           "id:3": 545,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -648,
-          "y:3": 292
+          "y:3": 308
         },
         "46:10": {
           "id:3": 548,
@@ -63032,7 +63141,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -700,
-          "y:3": 424
+          "y:3": 440
         },
         "50:10": {
           "id:3": 682,
@@ -63067,7 +63176,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
-          "y:3": 416
+          "y:3": 404
         },
         "55:10": {
           "id:3": 779,
@@ -63081,14 +63190,14 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
-          "y:3": 416
+          "y:3": 404
         },
         "57:10": {
           "id:3": 789,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -564,
-          "y:3": 368
+          "y:3": 356
         },
         "58:10": {
           "id:3": 814,
@@ -63116,7 +63225,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -516,
-          "y:3": 416
+          "y:3": 404
         },
         "62:10": {
           "id:3": 829,
@@ -63130,28 +63239,28 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
-          "y:3": 320
+          "y:3": 308
         },
         "64:10": {
           "id:3": 893,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -516,
-          "y:3": 320
+          "y:3": 308
         },
         "65:10": {
           "id:3": 903,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
-          "y:3": 292
+          "y:3": 308
         },
         "66:10": {
           "id:3": 913,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
-          "y:3": 272
+          "y:3": 260
         },
         "67:10": {
           "id:3": 962,
@@ -63165,7 +63274,14 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -468,
-          "y:3": 228
+          "y:3": 216
+        },
+        "69:10": {
+          "id:3": 1026,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -840,
+          "y:3": 276
         }
       }
     },
@@ -63536,7 +63652,7 @@
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -364,
-          "y:3": 468
+          "y:3": 476
         },
         "50:10": {
           "id:3": 184,
@@ -63745,8 +63861,8 @@
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 516
+          "x:3": -320,
+          "y:3": 484
         },
         "80:10": {
           "id:3": 805,
@@ -63976,8 +64092,8 @@
           "id:3": 68,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -456,
-          "y:3": 276
+          "x:3": -492,
+          "y:3": 312
         },
         "6:10": {
           "id:3": 132,
@@ -64732,7 +64848,7 @@
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -524,
+          "x:3": -528,
           "y:3": 276
         },
         "114:10": {
@@ -64965,6 +65081,13 @@
           "sizeY:3": 24,
           "x:3": -720,
           "y:3": 240
+        },
+        "147:10": {
+          "id:3": 1025,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -456,
+          "y:3": 276
         }
       }
     },
@@ -66501,10 +66624,10 @@
         },
         "115:10": {
           "id:3": 861,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 220,
-          "y:3": 332
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -188,
+          "y:3": 212
         },
         "116:10": {
           "id:3": 881,
@@ -67553,8 +67676,8 @@
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 73,
-          "y:3": 186
+          "x:3": 72,
+          "y:3": 192
         },
         "5:10": {
           "id:3": 9,
@@ -67568,7 +67691,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 73,
-          "y:3": 222
+          "y:3": 228
         },
         "7:10": {
           "id:3": 12,
@@ -67603,35 +67726,35 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 144
+          "y:3": 150
         },
         "12:10": {
           "id:3": 17,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 186
+          "y:3": 192
         },
         "13:10": {
           "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 258
+          "y:3": 260
         },
         "14:10": {
           "id:3": 20,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 222
+          "y:3": 228
         },
         "15:10": {
           "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 186
+          "y:3": 192
         },
         "16:10": {
           "id:3": 25,
@@ -67652,14 +67775,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 294
+          "y:3": 300
         },
         "19:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 222
+          "y:3": 228
         },
         "20:10": {
           "id:3": 50,
@@ -67673,21 +67796,21 @@
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -36,
-          "y:3": 402
+          "y:3": 408
         },
         "22:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 258
+          "y:3": 264
         },
         "23:10": {
           "id:3": 66,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 186
+          "y:3": 192
         },
         "24:10": {
           "id:3": 141,
@@ -67700,14 +67823,14 @@
           "id:3": 266,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
+          "x:3": 72,
           "y:3": 150
         },
         "26:10": {
           "id:3": 353,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
+          "x:3": -138,
           "y:3": 108
         },
         "27:10": {
@@ -67743,7 +67866,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 330
+          "y:3": 336
         },
         "32:10": {
           "id:3": 401,
@@ -67764,14 +67887,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 366
+          "y:3": 372
         },
         "35:10": {
           "id:3": 415,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
-          "y:3": 366
+          "y:3": 372
         },
         "36:10": {
           "id:3": 488,
@@ -67792,7 +67915,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
-          "y:3": 222
+          "y:3": 260
         },
         "39:10": {
           "id:3": 496,
@@ -67806,21 +67929,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 73,
-          "y:3": 255
+          "y:3": 261
         },
         "41:10": {
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
-          "y:3": 330
+          "y:3": 336
         },
         "42:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
-          "y:3": 186
+          "y:3": 192
         },
         "43:10": {
           "id:3": 670,
@@ -67834,7 +67957,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 124
+          "y:3": 108
         },
         "45:10": {
           "id:3": 692,
@@ -67855,7 +67978,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 366
+          "y:3": 372
         },
         "48:10": {
           "id:3": 786,
@@ -67883,7 +68006,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -90,
-          "y:3": 294
+          "y:3": 300
         },
         "52:10": {
           "id:3": 813,
@@ -67904,14 +68027,14 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 67,
-          "y:3": 288
+          "y:3": 294
         },
         "55:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 294
+          "y:3": 300
         },
         "56:10": {
           "id:3": 921,
