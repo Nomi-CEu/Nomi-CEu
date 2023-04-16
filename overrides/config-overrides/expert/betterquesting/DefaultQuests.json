@@ -11059,7 +11059,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "FUSION!\n\nThis baby can do any fusion recipe, notably giving you access to §6Neutronium§r.\n\nThe multiblock layout is the same as the Mark 1 and Mark 2, with the same hatch and casing substitutions permitted.\n\nObviously though, this one uses §6Fusion Machine Casing Mk §2III§r and only works with §aUV Energy Input Hatches§r.\n\nThe §3Mark 3 Fusion Reactor§r has an energy buffer of §e640M EU§r.",
+          "desc:8": "FUSION!\n\nThis baby can do any fusion recipe, notably giving you access to §6Neutronium§r.\n\nThe multiblock layout is the same as the Mark 1 and Mark 2, with the same hatch and casing substitutions permitted.\n\nObviously though, this one uses §6Fusion Machine Casing Mk §2III§r and only works with §aUV Energy Hatches§r.\n\nThe §3Mark 3 Fusion Reactor§r has an energy buffer of §e640M EU§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11105,6 +11105,12 @@
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:fusion_casing"
+            },
+            "2:10": {
+              "Count:3": 16,
+              "Damage:2": 1218,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -39308,14 +39314,14 @@
     },
     "749:10": {
       "preRequisites:11": [
-        332,
         802,
-        846
+        846,
+        535
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Upgrade time! \n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra 28 if you don\u0027t want more than §a2 Fluid Inputs§r§r and §a1 Fluid Output§r.\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
+          "desc:8": "Upgrade time! \n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra 28 if you don\u0027t want more than §a2 Fluid Inputs§r§r and §a1 Fluid Output§r.\n\nMake sure your using §6ZPM Energy Hatches§r!\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52957,7 +52963,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 330
+          "y:3": 324
         },
         "46:10": {
           "id:3": 323,
@@ -53411,7 +53417,7 @@
           "id:3": 845,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -172,
           "y:3": 176
         },
         "111:10": {
