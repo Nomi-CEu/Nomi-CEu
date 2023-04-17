@@ -9,24 +9,30 @@ import { makeArtifactNameBody } from "../../util/util";
 import sanitize from "sanitize-filename";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
-const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID", "GITHUB_TAG"];
+const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID"];
+
+interface CFUploadOptions {
+	releaseType?: "release" | "beta";
+}
 
 /**
- * Uploads build artifacts to CurseForge.
+ * Uploads beta artifacts to CurseForge.
  */
-async function deployCurseForge(): Promise<void> {
+export async function deployCurseForgeBeta(): Promise<void> {
 	/**
 	 * Obligatory variable check.
 	 */
-	variablesToCheck.forEach((vari) => {
+	["RC_VERSION", ...variablesToCheck].forEach((vari) => {
 		if (!process.env[vari]) {
 			throw new Error(`Environmental variable ${vari} is unset.`);
 		}
 	});
 
-	const tag = process.env.GITHUB_TAG;
+	const version = process.env.RC_VERSION;
 	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
-	const displayName = [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - ");
+	const displayName = [modpackManifest.name, [version.replace(/^v/, ""), "Release Candidate"].join(" "), flavorTitle]
+		.filter(Boolean)
+		.join(" - ");
 
 	const files = [
 		{
@@ -42,6 +48,14 @@ async function deployCurseForge(): Promise<void> {
 	/**
 	 * Obligatory file check.
 	 */
+	await upload(files, {
+		releaseType: "beta",
+	});
+}
+
+async function upload(files: { name: string; displayName: string }[], opts?: CFUploadOptions) {
+	opts = opts || {};
+
 	files.forEach((file) => {
 		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
 		if (!fs.existsSync(path)) {
@@ -71,6 +85,10 @@ async function deployCurseForge(): Promise<void> {
 			maxAttempts: 5,
 		})) || [];
 
+	if (!versionsManifest) {
+		throw new Error("Failed to fetch CurseForge version manifest.");
+	}
+
 	const version = versionsManifest.find((m) => m.name == modpackManifest.minecraft.version);
 
 	if (!version) {
@@ -92,7 +110,7 @@ async function deployCurseForge(): Promise<void> {
 				metadata: JSON.stringify({
 					changelog: changelog,
 					changelogType: "markdown",
-					releaseType: "release",
+					releaseType: opts.releaseType || "release",
 					parentFileID: clientFileID,
 					gameVersions: clientFileID ? undefined : [version.id],
 					displayName: file.displayName,
@@ -117,4 +135,33 @@ async function deployCurseForge(): Promise<void> {
 	}
 }
 
-export default deployCurseForge;
+/**
+ * Uploads build artifacts to CurseForge.
+ */
+export async function deployCurseForge(): Promise<void> {
+	/**
+	 * Obligatory variable check.
+	 */
+	["GITHUB_TAG", ...variablesToCheck].forEach((vari) => {
+		if (!process.env[vari]) {
+			throw new Error(`Environmental variable ${vari} is unset.`);
+		}
+	});
+
+	const tag = process.env.GITHUB_TAG;
+	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
+	const displayName = [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - ");
+
+	const files = [
+		{
+			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-client.zip").toLowerCase()),
+			displayName: displayName,
+		},
+		{
+			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-server.zip").toLowerCase()),
+			displayName: `${displayName} Server`,
+		},
+	];
+
+	upload(files);
+}
