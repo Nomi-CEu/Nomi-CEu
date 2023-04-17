@@ -54,45 +54,6 @@ class NomiUtil {
             .setCreativeTab(content.getDefaultTab())
     }
 
-    /* Fluids */
-    // Creating the blocks and the fluid must be split up. Blocks should be created in PreInit, whilst fluids are created in TextureStitchEvent.Pre
-    static void createFluid(String name, int color, int viscosity, int luminosity) {
-        ResourceLocation stillTexture = new ResourceLocation(packID, name)
-        ResourceLocation flowingTexture = new ResourceLocation(packID, name)
-
-        Fluid fluid = new Fluid(name, stillTexture, flowingTexture, color)
-
-        fluid.setViscosity(viscosity)
-        fluid.setLuminosity(luminosity)
-
-        fluidRegistry.put(name, fluid)
-    }
-
-    static void createFluidBlocks() {
-        if (fluidRegistry.isEmpty()){
-            println("[NomiUtil] Error occurred creating Fluid Blocks: No fluids created!")
-            return
-        }
-
-        for (var name : fluidRegistry.keySet()) {
-            content.registerBlock(name, new BlockFluidClassic(fluidRegistry.get(name), Material.WATER))
-        }
-    }
-
-    static void registerFluids() {
-        if (fluidRegistry.isEmpty()){
-            println("[NomiUtil] Error occurred registering Fluids: No fluids created!")
-            return
-        }
-
-        for (var name : fluidRegistry.keySet()){
-            Fluid fluid = fluidRegistry.get(name)
-
-            FluidRegistry.registerFluid(fluid)
-            FluidRegistry.addBucketForFluid(fluid)
-        }
-    }
-
 	/* AE Compat
 	static IInscriberRecipeBuilder getInscriberBuilder(boolean inscribe) {
 		return AEApi.instance().registries().inscriber().builder().withProcessType(inscribe ? InscriberProcessType.INSCRIBE : InscriberProcessType.PRESS)
