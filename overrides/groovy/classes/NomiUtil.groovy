@@ -3,10 +3,6 @@ import net.minecraft.block.SoundType
 import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 import net.minecraftforge.common.IRarity
-import net.minecraft.util.ResourceLocation
-import net.minecraftforge.fluids.Fluid
-import net.minecraftforge.fluids.FluidRegistry
-import net.minecraftforge.fluids.BlockFluidClassic
 
 /*
 import appeng.api.AEApi
