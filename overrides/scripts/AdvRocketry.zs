@@ -423,7 +423,7 @@ makeShaped("ar_fuel_tank",
 		"PTP",
 	], {
 		P: <ore:plateStainlessSteel>,
-		T: <thermalexpansion:tank>,
+		T: <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Level: 0 as byte}),
 	});
 
 // Concrete
