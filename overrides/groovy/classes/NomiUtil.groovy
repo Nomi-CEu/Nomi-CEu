@@ -13,8 +13,6 @@ import appeng.api.features.InscriberProcessType
 */
 
 class NomiUtil {
-    public final static String packID = "contenttweaker"
-    private static Map<String, Fluid> fluidRegistry = new HashMap<>()
 
     /* Items */
     static void createItem(String name){

@@ -9,7 +9,7 @@ import net.minecraftforge.common.IRarity
 
 public class ItemSmore extends ItemFood {
     List<PotionEffect> potionEffects
-        private IRarity rarity = null
+    private IRarity rarity = null
 
     public ItemSmore(int healAmount, float saturation, CreativeTabs creativeTab) {
         super(healAmount, saturation, true)
