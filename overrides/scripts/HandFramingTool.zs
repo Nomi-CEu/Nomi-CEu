@@ -46,9 +46,10 @@ function orElse(tag as IData, other as IData) as IData {
 
 function makeFramedState(state as IBlockState) as IBlockState {
     val id as string = state.block.definition.id;
-    if id == "storagedrawers:trim" {
+    if id == "storagedrawers:trim" || id.startsWith("gregtechdrawers:trim") {
         return <block:storagedrawers:customtrim>.block.definition.defaultState;
     }
+    // GT drawers only adds trims and drawers, so if it isn't a trim (checked above), its a drawer
     return (id == "storagedrawers:basicdrawers" || id.startsWith("gregtechdrawers") ? <block:storagedrawers:customdrawers> :
             id == "storagedrawers:compdrawers" ? <block:framedcompactdrawers:framed_compact_drawer> :
             id == "storagedrawers:controllerslave" ? <block:framedcompactdrawers:framed_slave> :
