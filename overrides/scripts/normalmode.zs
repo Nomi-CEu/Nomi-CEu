@@ -728,7 +728,7 @@ large_chemical_reactor.recipeBuilder()
 	.circuit(25)
 	.duration(300).EUt(7680).buildAndRegister();
 
-/* UHV Multis, make unlocked with zpm */
+/* UHV Multis, move to zpm (used to be UHV) */
 // Rotary Hearth Furnace
 recipes.remove(<metaitem:gcym:mega_blast_furnace>);
 recipes.addShaped(<metaitem:gcym:mega_blast_furnace>,
@@ -742,6 +742,43 @@ recipes.addShaped(<metaitem:gcym:mega_vacuum_freezer>,
 	[[<ore:pipeNormalFluidNaquadah>, <ore:circuitUv>, <ore:pipeNormalFluidNaquadah>],
 	[<metaitem:field.generator.luv>, <metaitem:vacuum_freezer>, <metaitem:field.generator.luv>],
 	[<ore:plateDenseNaquadahAlloy>, <ore:wireGtQuadrupleUraniumRhodiumDinaquadide>, <ore:plateDenseNaquadahAlloy>]]);
+
+// Recycling recipe replacements
+// RHF
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_blast_furnace>], [<liquid:oxygen> * 20786]).remove();
+<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_blast_furnace>], null).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_blast_furnace>)
+	.fluidInputs(<liquid:oxygen> * 20786)
+	.outputs(<metaitem:ingotNaquadahAlloy> * 20, <metaitem:ingotInvar> * 4, <metaitem:ingotUraniumRhodiumDinaquadide> * 2, <metaitem:ingotTin>)
+	.duration(20786)
+	.EUt(30)
+	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_blast_furnace>)
+	.outputs(<metaitem:dustStone> * 24, <metaitem:dustNaquadahAlloy> * 20, <metaitem:dustInvar> * 4, <metaitem:dustRubber> * 2)
+	.duration(20786)
+	.EUt(30)
+	.buildAndRegister();
+
+// BBC
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_vacuum_freezer>], [<liquid:oxygen> * 26976]).remove();
+<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_vacuum_freezer>], null).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
+	.fluidInputs(<liquid:oxygen> * 26976)
+	.outputs(<metaitem:ingotNaquadahAlloy> * 18, <metaitem:ingotStainlessSteel> * 12, <metaitem:ingotElectrum> * 12, <metaitem:blockSteel>)
+	.duration(26976)
+	.EUt(30)
+	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
+	.outputs(<metaitem:dustNaquadahAlloy> * 18, <metaitem:dustSmallRubber> * 50, <metaitem:dustSmallSteel> * 49, <metaitem:dustStainlessSteel> * 12)
+	.duration(25408)
+	.EUt(32)
+	.buildAndRegister();
 
 // Removals
 // GT
