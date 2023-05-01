@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea, including mod additions, for Nomifactory.
+about: Suggest an idea, including mod additions, for Nomi-CEu.
 title: ''
 labels: enhancement
 assignees: ''
