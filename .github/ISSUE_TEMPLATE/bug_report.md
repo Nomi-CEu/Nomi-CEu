@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Crashes or unintended behaviors arising from Nomifactory's mods, configurations,
+about: Crashes or unintended behaviors arising from Nomi-CEu's mods, configurations,
   or custom scripts
 title: ''
 labels: bug
