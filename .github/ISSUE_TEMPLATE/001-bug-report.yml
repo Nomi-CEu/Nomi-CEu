@@ -77,7 +77,7 @@ body:
     attributes:
       label: Reproduction steps
       description: "How do you trigger this bug? Please walk us through it step by step."
-      value: |
+      placeholder: |
         1.
         2.
         3.
