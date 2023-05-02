@@ -8,12 +8,22 @@ body:
         Thanks for taking the time to fill out this report! 
 
         Note: If you need general tech support for things like server configuration, or general game support (how to I make this?), Discord is a better venue. Please open an issue only if there is a clear bug with the pack or if you have been asked to by one of the Discord staff.
-  - type: input
+  - type: dropdown
     id: version
     attributes:
-      label: GregTech CEu Version
-      description: The version of Gregtech CEu you were using when this bug was encountered. If you do not know where to find this, look for the mod jar file in the mods folder, or in the mods viewer in-game.
-      placeholder: "Example: v2.3.4"
+      label: Nomi-CEu Version
+      description: The version of Nomi-CEu you were using when this bug was encountered. If you do not know what this is, check the tile of your instance window. If you do not see your version here, please update to a newest version of the pack.
+      options:
+        - "1.6.1-alpha-1"
+        - "1.6"
+        - "1.5.2"
+        - "1.5.1"
+        - "1.5"
+        - "1.4.3"
+        - "1.4.2"
+        - "1.4.1a"
+        - "1.4"
+        
     validations:
       required: true
   - type: input
