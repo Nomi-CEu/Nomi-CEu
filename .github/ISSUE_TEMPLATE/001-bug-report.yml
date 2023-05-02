@@ -86,8 +86,10 @@ body:
     attributes:
       label: Logs
       description: "If your client crashed as a result of this bug, please upload the generated crash log. This is found in your launcher's Nomifactory CEu profile (aka instance) in a folder called `crash-reports`. If there was no crash, but instead an error screen, please upload your `latest.log` instead. If there was a script error, please upload your `crafttweaker.log` instead. Otherwise, please leave this field blank."
+      placeholder: | 
+        You can upload into a external site like paste-bin, and send the link, or just drag the file into this text field. 
     validations:
-      required: true
+      required: false
   - type: textarea
     id: additional-info
     attributes:
