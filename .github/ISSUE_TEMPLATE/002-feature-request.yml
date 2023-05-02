@@ -9,7 +9,7 @@ body:
     id: version
     attributes:
       label: Nomi CEu Version
-      description: The version of Nomi CEu you were using when this bug was encountered. If you do not know what this is, check the title of your instance window. If you do not see your version here, please update to the newest version of the pack, which currently is 1.6, or the newest alpha/beta, which currently is 1.6.1-alpha-1. 
+      description: The version of Nomi CEu you are using as the basis for this feature request. If you do not know what it is, check the title of your instance window. If you do not see your version here, please update to the newest version of the pack, which currently is 1.6, or the newest alpha/beta, which currently is 1.6.1-alpha-1. 
       options:
         - "1.6.1-alpha-1"
         - "1.6"
@@ -39,11 +39,29 @@ body:
     validations:
       required: true
   - type: textarea
+    id: work
+    attributes:
+      label: How Will Your Solution Work
+      description: |
+        Describe how the solution will fix the problem, or add to the pack. 
+        If you are suggesting a mod, please describe what the mod does, and how it will add to the pack.
+      placeholder: "Example: If X was done, than Y will get a use, and..."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives You've Considered"
+      description: "What alternatives have you considered that might help solve the problem? If you aren't sure, or this is not related to a problem, please leave this field blank."
+      placeholder: "Example: Otherwise, we can also do Z..."
+    validations:
+      required: true
+  - type: textarea
     id: additional-info
     attributes:
       label: Additional Information
-      description: Any additional information you wish to provide. Please add anything which did not fit into the other sections here.
-      placeholder: "Example: This is likely achieveable by doing X because..."
+      description: "Add any other context or screenshots about the feature request here. If you are suggesting a mod, please also add a link to the mod's CurseForge page."
+      placeholder: "Example: This main motive for this idea is because X..."
     validations:
       required: false
   - type: markdown
