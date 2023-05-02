@@ -79,8 +79,8 @@ body:
         2.
         3.
         ...
-    validations:
-      required: true
+      validations:
+        required: true
   - type: textarea
     id: logs
     attributes:
