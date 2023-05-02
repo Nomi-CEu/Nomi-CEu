@@ -26,20 +26,14 @@ body:
         
     validations:
       required: true
-  - type: input
-    id: modpack
-    attributes:
-      label: Modpack Used
-      description: The modpack and its version used when this bug was encountered. If you were not using a modpack, please leave this field blank.
-      placeholder: "Example: GregTech Community Modpack v1.2.1"
-    validations:
-      required: false
   - type: textarea
-    id: addons
+    id: changed
     attributes:
-      label: Addons Installed
-      description: The addons and their respective versions used when this bug was encountered. If you were not using addons, or do not know which are present (i.e. in a modpack), please leave this field blank.
-      placeholder: "Example: Gregicality Multiblocks v1.1.3"
+      label: Configurations or Mods Changed
+      description: Any changed configs, and removed or added mods. Make sure to also include the version of any mods you have added. If you have not changed any configurations, and not removed or added any mods, please leave this field blank.
+      placeholder: |
+        Changed Loliasm Config: B:onDemandAnimatedTextures to false.
+        Added AE2 Fluid Crafting Rework: Version 2.4.18-r.
     validations:
       required: false
   - type: input
