@@ -4,10 +4,7 @@ labels: bug
 body:
   - type: markdown
     attributes:
-      value: |
-        Thanks for taking the time to fill out this report! 
-
-        Note: If you need general tech support for things like server configuration, or general game support (how to I make this?), Discord is a better venue. Please open an issue only if there is a clear bug with the pack or if you have been asked to by one of the Discord staff.
+      value: "Note: If you need general tech support for things like server configuration, or general game support (how to I make this?), Discord is a better venue. Please open an issue only if there is a clear bug with the pack or if you have been asked to by one of the Discord staff."
   - type: dropdown
     id: version
     attributes:
@@ -72,7 +69,7 @@ body:
   - type: textarea
     id: reproduction
     attributes:
-      label: Reproduction steps
+      label: Reproduction Steps
       description: "How do you trigger this bug? Please walk us through it step by step."
       placeholder: |
         1.
