@@ -94,8 +94,8 @@ body:
       label: Additional Information
       description: Any additional information you wish to provide. Please add anything which did not fit into the other sections here.
       placeholder: "Example: This is likely caused by X because..."
-    validations:
-      required: false
+      validations:
+        required: false
   - type: markdown
     attributes:
       value: Thank you for taking the time to fill out this bug report.
