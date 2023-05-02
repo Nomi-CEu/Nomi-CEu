@@ -32,6 +32,7 @@ body:
       label: Configurations or Mods Changed
       description: Any changed configs, and removed or added mods. Make sure to also include the version of any mods you have added. If you have not changed any configurations, and not removed or added any mods, please leave this field blank.
       placeholder: |
+        Example:
         Changed Loliasm Config: B:onDemandAnimatedTextures to false.
         Added AE2 Fluid Crafting Rework: Version 2.4.18-r.
     validations:
