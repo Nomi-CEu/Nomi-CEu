@@ -1,6 +1,6 @@
 name: Bug Report
-description: Report a bug where something is not working as expected, which does not crash the game.
-labels: [ "status: unverified", "bug: gameplay" ]
+description: Crashes or unintended behaviors arising from Nomi-CEu's mods, configurations, or custom scripts
+labels: bug
 body:
   - type: markdown
     attributes:
