@@ -79,23 +79,23 @@ body:
         2.
         3.
         ...
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
       label: Logs
       description: "If your client crashed as a result of this bug, please upload the generated crash log. This is found in your launcher's Nomifactory CEu profile (aka instance) in a folder called `crash-reports`. If there was no crash, but instead an error screen, please upload your `latest.log` instead. If there was a script error, please upload your `crafttweaker.log` instead. Otherwise, please leave this field blank."
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: additional-info
     attributes:
       label: Additional Information
       description: Any additional information you wish to provide. Please add anything which did not fit into the other sections here.
       placeholder: "Example: This is likely caused by X because..."
-      validations:
-        required: false
+    validations:
+      required: false
   - type: markdown
     attributes:
       value: Thank you for taking the time to fill out this bug report.
