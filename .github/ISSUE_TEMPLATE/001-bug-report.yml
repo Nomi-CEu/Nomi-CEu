@@ -26,6 +26,14 @@ body:
         
     validations:
       required: true
+  - type: input
+    id: launcher
+    attributes:
+      label: Launcher
+      description: "What launcher you were using when you experienced this issue. If you were using the CurseForge Launcher, please try to see if the issue occurs on a different launcher."
+      placeholder: "Example: Prism Launcher"
+    validations:
+      required: true
   - type: textarea
     id: changed
     attributes:
@@ -43,28 +51,6 @@ body:
       label: Environment
       description: "How you were playing on the world. Typical answers include: Singleplayer, Open to LAN, Forge Server, Sponge Server, or Mohist Server."
       placeholder: "Example: Singleplayer"
-    validations:
-      required: true
-  - type: dropdown
-    id: world
-    attributes:
-      label: New Worlds
-      description: Does this bug occur on a newly generated world?
-      options:
-        - "Yes"
-        - "No"
-        - "Unsure"
-    validations:
-      required: true
-  - type: dropdown
-    id: cross-mod
-    attributes:
-      label: Cross-Mod Interaction
-      description: Does this bug occur because of another mod installed alongside GregTech CEu?
-      options:
-        - "Yes"
-        - "No"
-        - "Unsure"
     validations:
       required: true
   - type: textarea
