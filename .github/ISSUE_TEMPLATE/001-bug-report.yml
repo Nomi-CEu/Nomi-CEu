@@ -2,6 +2,12 @@ name: Bug Report
 description: Report a bug where something is not working as expected, which does not crash the game.
 labels: [ "status: unverified", "bug: gameplay" ]
 body:
+  - type: markdown
+      attributes:
+        value: |
+        Thanks for taking the time to fill out this report! 
+     
+        Note: if you need general tech support for things like server configuration, or general game support (how to I make this?), Discord is a better venue. Please open an issue only if there is a clear bug with the pack or if you have been asked to by one of the Discord staff.
   - type: input
     id: version
     attributes:
