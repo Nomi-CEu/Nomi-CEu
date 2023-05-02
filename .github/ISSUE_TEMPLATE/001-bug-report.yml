@@ -50,6 +50,18 @@ body:
       placeholder: "Example: Singleplayer"
     validations:
       required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      description: "What pack mode were you using when you came across this error? 
+      options:
+        - "Normal Mode"
+        - "Expert Mode"
+        - "Both Modes"
+        - "N/A"
+      validations:
+        required: true
   - type: textarea
     id: problem
     attributes:
