@@ -12,7 +12,7 @@ body:
     id: version
     attributes:
       label: Nomi-CEu Version
-      description: The version of Nomi-CEu you were using when this bug was encountered. If you do not know what this is, check the tile of your instance window. If you do not see your version here, please update to a newest version of the pack.
+      description: The version of Nomi-CEu you were using when this bug was encountered. If you do not know what this is, check the title of your instance window. Also, check if the issue happens on the newest version before making this bug report. The newest version is 1.6, and the newest alpha/beta is 1.6.1-alpha-1. If you do not see your version here, please update to the newest version of the pack. 
       options:
         - "1.6.1-alpha-1"
         - "1.6"
