@@ -51,19 +51,19 @@ body:
     validations:
       required: true
   - type: textarea
+    id: problem
+    attributes:
+      label: What Happened
+      description: What happened, of which you believe is a bug. Attach screenshots here as necessary.
+      placeholder: "Example: Produced one X but Y was not consumed."
+    validations:
+      required: true
+  - type: textarea
     id: expected
     attributes:
       label: Expected Behavior
       description: What you expected to happen. Attach screenshots here as necessary.
       placeholder: "Example: Expected to produce X by consuming Y."
-    validations:
-      required: true
-  - type: textarea
-    id: result
-    attributes:
-      label: Actual Behavior
-      description: What happened despite your expectations. Attach screenshots here as necessary.
-      placeholder: "Example: Produced one X but Y was not consumed."
     validations:
       required: true
   - type: textarea
