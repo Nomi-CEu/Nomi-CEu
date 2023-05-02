@@ -1,5 +1,5 @@
 name: Bug Report
-description: Crashes or unintended behaviors arising from Nomi-CEu's mods, configurations, or custom scripts
+description: "Crashes or unintended behaviors arising from Nomi CEu's mods, configurations, or custom scripts."
 labels: bug
 body:
   - type: markdown
@@ -11,8 +11,8 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: Nomi-CEu Version
-      description: The version of Nomi-CEu you were using when this bug was encountered. If you do not know what this is, check the title of your instance window. If you do not see your version here, please update to the newest version of the pack, which currently is 1.6, or the newest alpha/beta, which currently is 1.6.1-alpha-1. 
+      label: Nomi CEu Version
+      description: The version of Nomi CEu you were using when this bug was encountered. If you do not know what this is, check the title of your instance window. If you do not see your version here, please update to the newest version of the pack, which currently is 1.6, or the newest alpha/beta, which currently is 1.6.1-alpha-1. 
       options:
         - "1.6.1-alpha-1"
         - "1.6"
@@ -86,8 +86,7 @@ body:
     attributes:
       label: Logs
       description: "If your client crashed as a result of this bug, please upload the generated crash log. This is found in your launcher's Nomifactory CEu profile (aka instance) in a folder called `crash-reports`. If there was no crash, but instead an error screen, please upload your `latest.log` instead. If there was a script error, please upload your `crafttweaker.log` instead. Otherwise, please leave this field blank."
-      placeholder: | 
-        You can upload into a external site like paste-bin, and send the link, or just drag the file into this text field. 
+      placeholder: "You can upload into a external site like paste-bin, and send the link, or just drag the file into this text field."
     validations:
       required: false
   - type: textarea
