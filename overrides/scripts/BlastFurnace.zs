@@ -59,7 +59,10 @@ blast_furnace.recipeBuilder()
 	.property("temperature", 1000)
 	.duration(135).EUt(120).buildAndRegister();
 
-// Black Steel
+// Black Steel * 720
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:nitrogen> * 5000]).remove();
+// Black Steel * 720
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2])
@@ -259,7 +262,8 @@ mixer.recipeBuilder()
 <recipemap:centrifuge>.findRecipe(30, [<metaitem:dustElectrumFlux> * 8], null).remove();
 
 
-// Fluxed Electrum
+// Fluxed Electrum * 1152
+<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustElectrum> * 6, <metaitem:dustLumium>, <metaitem:dustSignalum>, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<metaitem:dustElectrum> * 6, <metaitem:dustLumium>, <metaitem:dustSignalum>, <ore:dustMana>])
 	.fluidOutputs(<liquid:electrum_flux> * 1296)
