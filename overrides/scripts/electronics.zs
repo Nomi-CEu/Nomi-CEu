@@ -195,11 +195,13 @@ recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 //<recipemap:assembler>.findRecipe(16, [<metaitem:plateWroughtIron> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
 //
 //assembler.recipeBuilder().inputs(<ore:plateIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing>]).duration(30).EUt(16).buildAndRegister();
+/*
 //ULV Hull
 recipes.remove(<meta_tile_entity:hull.ulv>);	
 recipes.addShaped(<meta_tile_entity:hull.ulv>, [
 	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], 
 	[<ore:cableGtSingleLead>, <gregtech:machine_casing>, <ore:cableGtSingleLead>]]);	
+*/
 
 // pyro
 
