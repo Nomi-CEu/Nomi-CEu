@@ -95,7 +95,7 @@ chemical_reactor.recipeBuilder()
     .duration(30).EUt(30).buildAndRegister();
 
 // Hydrazine Rocket Fuel
-chemical_reactor.recipeBuilder()
+large_chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:hydrazine> * 1000, <liquid:dimethylhydrazine> * 1000, <liquid:dinitrogen_tetroxide> * 2000)
     .fluidOutputs(<liquid:rocket_fuel> * 18000)
     .duration(60).EUt(16).buildAndRegister();
