@@ -5,7 +5,7 @@ on:
       branch:
         description: 'Branch to checkout'
         required: true
-        default: 'dev'
+        default: 'main'
       version:
         description: 'RC version to deploy (e. g. "v1.3")'
         required: true
