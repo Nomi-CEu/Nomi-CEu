@@ -42747,7 +42747,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Check out the new Material Tree tab! It will show you nearly all the different forms of a GregTech material (Plates, Rods, Screws, Dusts...) on a single page. You can then click on those to see their recipes.",
+          "desc:8": "§2Check out the new Material Tree tab!§r\n\nThis tab can be accessed in §bJEI§r, when finding the §ausages or recipes§r of §aany form§r of a §bGregTech§r material!§r\n\nIt will show you nearly all the different forms of a §bGregTech§r material (§ePlates, Rods, Screws, Dusts...§r) on a single page, as well as showing what can be turned into what. You can then click on those to see their recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45469,7 +45469,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer. Can run up to 2,048 recipes in parallel.\n\nThe Rotary Hearth Furnace is quite big!",
+          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer.§r\n\nAccepts any §6Parallel Control Hatch§r, parallelizing up to §e256x§r with the best hatch!.\n\nThe §aRotary Hearth Furnace§r is quite big!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
