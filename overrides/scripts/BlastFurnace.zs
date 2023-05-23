@@ -336,8 +336,8 @@ alloy_blast_smelter.recipeBuilder()
 
 // Pulsating Iron
 alloy_blast_smelter.recipeBuilder()
-	.inputs([<liquid:pulsating_iron>, <ore:dustPulsating>])
-	.fluidOutputs(<liquid:soularium> * 144)
+	.inputs([<metaitem:dustIron>, <ore:dustPulsating>])
+	.fluidOutputs(<liquid:pulsating_iron> * 144)
 	.circuit(2)
 	.property("temperature", 1200)
 	.duration(112)
