@@ -33512,9 +33512,15 @@
       }
     },
     "533:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
         535,
-        536
+        536,
+        325
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -52035,15 +52041,20 @@
       }
     },
     "840:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
-        323,
         791,
-        841
+        841,
+        325
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Advanced Processing Array can handle up to 64 parallel recipes at once.\n\nYou may need some 4A or 16A Energy Hatches to keep up with its power draw.",
+          "desc:8": "§2The Advanced Processing Array can handle up to 64 parallel recipes at once.§r\n\nYou may need some §64A or 16A Energy Hatches§r to keep up with its power draw.\n\nYou\u0027ll need that §6Europium§r in the casings for the §aAdvanced Processing Array§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -66159,7 +66170,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 228
+          "y:3": 176
         },
         "48:10": {
           "id:3": 327,
@@ -66235,15 +66246,15 @@
           "id:3": 342,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -16,
-          "y:3": 228
+          "x:3": 76,
+          "y:3": 176
         },
         "59:10": {
           "id:3": 345,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
-          "y:3": 162
+          "y:3": 176
         },
         "60:10": {
           "id:3": 351,
