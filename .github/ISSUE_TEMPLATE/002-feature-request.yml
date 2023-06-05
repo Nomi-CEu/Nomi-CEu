@@ -11,6 +11,7 @@ body:
       label: Nomi CEu Version
       description: The version of Nomi CEu you are using as the basis for this feature request. If you do not know what it is, check the title of your instance window. If you do not see your version here, please update to the newest version of the pack, which currently is 1.6, or the newest alpha/beta, which currently is 1.6.1-beta-2. 
       options:
+        - "1.6.1-beta-3"
         - "1.6.1-beta-2"
         - "1.6.1-alpha-1"
         - "1.6"
