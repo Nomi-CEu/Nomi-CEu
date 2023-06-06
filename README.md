@@ -1,9 +1,9 @@
 # Nomi-CEu
-[![Downloads](http://cf.way2muchnoise.eu/full_594351_downloads.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu) [![MC Version](http://cf.way2muchnoise.eu/versions/For%20MC_557242_all.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu)
+[![Downloads](http://cf.way2muchnoise.eu/full_594351_downloads.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu) [![MC Version](http://cf.way2muchnoise.eu/versions/nomi-ceu.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu)
 
-[![GitHub Issues](https://img.shields.io/github/issues/Nomi-CEu/nomi-ceu.svg)](https://github.com/Nomi-CEu/nomi-ceu/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Nomi-CEu/nomi-ceu.svg)](https://github.com/Nomi-CEu/nomi-ceu/pulls) [![License](https://img.shields.io/github/license/Nomi-CEu/nomi-ceu.svg)](../main/LICENSE.md)
+[![GitHub Issues](https://img.shields.io/github/issues/Nomi-CEu/nomi-ceu?color=informational&label=Issues&logo=github)](https://github.com/Nomi-CEu/nomi-ceu/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Nomi-CEu/nomi-ceu?color=informational&label=Pull%20Requests&logo=github)](https://github.com/Nomi-CEu/nomi-ceu/pulls) [![License](https://img.shields.io/github/license/Nomi-CEu/nomi-ceu?color=informational&label=License&logo=github)](https://github.com/Nomi-CEu/nomi-ceu/blob/main/LICENSE.md)
 
-### Join our [Discord!](https://discord.com/invite/zwQzqP8b6q)
+[![Discord](https://img.shields.io/discord/927050775073534012?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.com/invite/zwQzqP8b6q)
 
 Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to [GregTech CEu](https://github.com/GregTechCEu/GregTech) and its related mods, with updated quests, progression and balance changes to adapt to CEu's changes, and to extend on the pack.  
 
