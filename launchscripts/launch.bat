@@ -11,11 +11,12 @@
 SET FORGEJAR={{{forgeJar}}}
 SET JAVA_PARAMETERS={{{jvmArgs}}}
 
+:: Empty line to align with sh file
 :: these you can edit
 SET MIN_RAM={{{minRAM}}}
 SET MAX_RAM={{{maxRAM}}}
 
-:: DO NOT EDIT ANYTHING PAST THIS LINE
+:: DO NOT EDIT ANYTHING PAST THIS LINE, except to remove the nogui
 SET LAUNCHPARAMS=-server -Xms%MIN_RAM% -Xmx%MAX_RAM% %JAVA_PARAMETERS% -Dlog4j.configurationFile=log4j2_112-116.xml -jar %FORGEJAR% nogui
 echo Checking java version...
 echo.
