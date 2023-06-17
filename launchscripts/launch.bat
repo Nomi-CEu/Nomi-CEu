@@ -11,6 +11,7 @@
 SET FORGEJAR={{{forgeJar}}}
 SET JAVA_PARAMETERS={{{jvmArgs}}}
 
+:: Empty line to align with sh file
 :: these you can edit
 SET MIN_RAM={{{minRAM}}}
 SET MAX_RAM={{{maxRAM}}}

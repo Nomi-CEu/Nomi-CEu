@@ -28,6 +28,8 @@ recipes.remove(<dimensionaledibles:custom_cake>);
 recipes.remove(<minecraft:cake>);
 recipes.remove(<enderio:item_material:70>);
 
+<dimensionaledibles:island_cake>.addTooltip(format.green("Used by Server Owners to send FTB Teams and Individuals to their Personal Islands! View the Server Information File on GitHub for more information!"));
+
 //Cake Base
 recipes.addShaped(<enderio:item_material:70>, [[<minecraft:sugar>, <minecraft:milk_bucket> | <minecraft:bucket>, <minecraft:sugar>], [<actuallyadditions:item_misc:4> | <actuallyadditions:item_misc:9>, <actuallyadditions:item_misc:4> | <actuallyadditions:item_misc:9>, <actuallyadditions:item_misc:4> | <actuallyadditions:item_misc:9>]]);
 
