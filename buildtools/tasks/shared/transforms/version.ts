@@ -10,6 +10,8 @@ const randomPatchesConfigFile = "config/randompatches.cfg";
  */
 export default async function transformManifestVersion(): Promise<void> {
 	let versionTitle;
+
+	// We're building a tag.
 	if (process.env.GITHUB_TAG) {
 		const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
 		const tag = process.env.GITHUB_TAG.replace(/^v/, "");
@@ -17,6 +19,18 @@ export default async function transformManifestVersion(): Promise<void> {
 		versionTitle = [modpackManifest.name, tag, flavorTitle].filter(Boolean).join(" - ");
 
 		modpackManifest.version = tag;
+	}
+	// If we're buildig a release candidate, transform it appropriately.
+	else if (process.env.RC_VERSION) {
+		const rcVer = process.env.RC_VERSION;
+		const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
+		const tag = rcVer.replace(/^v/, "");
+
+		versionTitle = [modpackManifest.name, [tag, "Release Candidate"].join(" "), flavorTitle]
+			.filter(Boolean)
+			.join(" - ");
+
+		modpackManifest.version = [rcVer, "rc"].join("-");
 	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {

@@ -1,0 +1,113 @@
+name: Bug Report
+description: "Crashes or unintended behaviors arising from Nomi CEu's mods, configurations, or custom scripts."
+labels: bug
+body:
+  - type: markdown
+    attributes:
+      value: "Note: If you need general tech support for things like server configuration, or general game support (how to I make this?), Discord is a better venue. Please open an issue only if there is a clear bug with the pack or if you have been asked to by one of the Discord staff."
+  - type: dropdown
+    id: version
+    attributes:
+      label: Nomi CEu Version
+      description: The version of Nomi CEu you were using when this bug was encountered. If you do not know what it is, check the title of your instance window. If you do not see your version here, please update to the newest version of the pack, which currently is 1.6, or the newest alpha/beta, which currently is 1.6.1-beta-2. 
+      options:
+        - "1.6.1-beta-3a"
+        - "1.6.1-beta-2"
+        - "1.6.1-alpha-1"
+        - "1.6"
+        - "1.5.2"
+        - "1.5.1"
+        - "1.5"
+        - "1.4.3"
+        - "1.4.2"
+        - "1.4.1a"
+        - "1.4"
+        
+    validations:
+      required: true
+  - type: input
+    id: launcher
+    attributes:
+      label: Launcher
+      description: "What launcher you were using when you experienced this issue. If you were using the CurseForge Launcher, please try to see if the issue occurs on a different launcher."
+      placeholder: "Example: Prism Launcher"
+    validations:
+      required: true
+  - type: textarea
+    id: changed
+    attributes:
+      label: Configurations or Mods Changed
+      description: Any changed configs, and removed or added mods. Make sure to also include the version of any mods you have added. If you have not changed any configurations, and not removed or added any mods, please leave this field blank.
+      placeholder: |
+        Example:
+        Changed Loliasm Config: B:onDemandAnimatedTextures to false.
+        Added AE2 Fluid Crafting Rework: Version 2.4.18-r.
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: "How you were playing on the world. Typical answers include: Singleplayer, Open to LAN, Forge Server, Sponge Server, or Mohist Server."
+      placeholder: "Example: Singleplayer"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      description: "What pack mode were you using when you came across this error?"
+      options:
+        - "Normal Mode"
+        - "Expert Mode"
+        - "Both Modes"
+        - "N/A"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What Happened
+      description: What happened, of which you believe is a bug. Attach screenshots here as necessary.
+      placeholder: "Example: Produced one X but Y was not consumed."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen. Attach screenshots here as necessary.
+      placeholder: "Example: Expected to produce X by consuming Y."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: "How do you trigger this bug? Please walk us through it step by step."
+      placeholder: |
+        1.
+        2.
+        3.
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: "If your client crashed as a result of this bug, please upload the generated crash log. This is found in your launcher's Nomi CEu instance, in a folder called `crash-reports`. If there was no crash, but instead an error screen, please upload your `latest.log`, found in a folder called `logs`. If there was a script error, please upload your `crafttweaker.log`, found in your base instance folder, instead. Otherwise, please leave this field blank."
+      placeholder: "You can upload into a external site like paste-bin, and send the link, or just drag the file into this text field."
+    validations:
+      required: false
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any additional information you wish to provide. Please add anything which did not fit into the other sections here.
+      placeholder: "Example: This is likely caused by X because..."
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: Thank you for taking the time to fill out this bug report.

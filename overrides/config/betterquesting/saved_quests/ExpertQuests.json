@@ -69,7 +69,8 @@
     },
     "1:10": {
       "preRequisites:11": [
-        282
+        282,
+        116
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -2423,9 +2424,9 @@
     },
     "38:10": {
       "preRequisites:11": [
-        24,
         40,
-        530
+        530,
+        24
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -2442,7 +2443,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2LV Power",
+          "name:8": "§2LV Energy Converter",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -3166,7 +3167,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with Maintenance, it won\u0027t be as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, and the rest of the top face is built from §3Filter Casings§r. The rest of the wall space is filled with §3Plascrete§r.\n\nFor transfer between the clean environment and the outside world:\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n- Energy through §3Hulls§r or §3Diodes§r (of any tier).\n- AE2 channels through §3Hulls§r.\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective.\n\nYou will also need an §3Energy §rand §3Maintenance Hatch §rfor cleaning. §3Cleanroom Glass§r can replace any §3Plascrete§r, except in the edges.\n\nIf you\u0027re facing issues forming the Cleanroom:\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r. The floor block directly under the controller must also be §3Plascrete§r or §3Cleanroom Glass§r.\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.\n- Try rotating the controller with a wrench, or for even side lengths, try the other central positions.",
+          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with §aMaintenance§r, it won\u0027t be nearly as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, and the rest of the top face is built from §3Filter Casings§r. The rest of the wall space is filled with §3Plascrete§r.\n\nFor transfer between the clean environment and the outside world:\n\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n\n- Energy through §bGregTech §3Hulls§r or §3Diodes§r (of any tier). Note that Diodes can transport up to §e16 amps§r, whilst Hulls can only transport §e1 amp§r.\n\n- Your AE network through §bGregTech§r §3Hulls§r (of any tier).\n\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective. §bApplied Energistics§r §3P2P Tunnels§r may also fit your liking.\n\nYou will also need an §3Energy §rand §3Maintenance Hatch §rfor cleaning. §3Cleanroom Glass§r can replace any §3Plascrete§r, apart from the edges.\n\nIf you\u0027re facing issues forming the Cleanroom:\n\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r. The floor block directly under the controller must also be §3Plascrete§r or §3Cleanroom Glass§r.\n\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.\n\n- Try rotating the controller with a wrench, or for even side lengths, try the other central positions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3175,7 +3176,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Cleanroom",
@@ -8535,7 +8536,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first Titanium.\n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nIf you are autocrafting on-demand, it\u0027s better to not have your ME network know about this intermediate state. Outputting the §6Hot Titanium Ingot§r directly into a Vacuum Freezer avoids extra computations and item types.\n\nIf you absolutely insist on putting hot ingots in your network, you\u0027ll have to manually encode the §aPattern§r with an ingot that §cdamages you while you hold it§r. Your call.\n\n",
+          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first Titanium.\n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nCombining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r. \n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nYou should have set up a §3Vaccum Freezer§r for §6Kanthal§r, but if you haven\u0027t done it yet or want to improve your setup, routing through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering you\u0027re system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11930,7 +11931,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Even simple rockets demand §6Heavy Plates§r for their construction. In this case, made out of §6Steel§r. ",
+          "desc:8": "Even simple rockets demand §6Double Plates§r for their construction. In this case, made out of §6Steel§r. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11942,7 +11943,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Steel Heavy Plates",
+          "name:8": "Steel Double Plates",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -12645,7 +12646,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Methanol§r and §9Ammonia§r combine together to make §9Dimethylamine§r.\n\nI know you\u0027re expecting a Breaking Bad joke here, but I don\u0027t walt to go for such low hanging fruit.\n\n§2This step can be skipped with LCRs.",
+          "desc:8": "§9Methanol§r and §9Ammonia§r combine together to make §9Dimethylamine§r.\n\nI know you\u0027re expecting a Breaking Bad joke here, but I don\u0027t walt to go for such low hanging fruit.\n\n§2This step can be skipped with a Large Chemical Reactor.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12661,7 +12662,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Dimethylamine",
+          "name:8": "§2Dimethylamine",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -12734,7 +12735,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hydrogen§r and §9Nitrogen§r combine together to make §9Ammonia§r.\n\nAn easy way to get Nitrogen is to centrifuge §9Air§r, which will require you to build an §3Air Collector§r. You could also electrolyze §6Saltpeter§r, distill §9Fermented Biomass§r in a §3Distillation Tower§r, or get huge amounts from a §3Cryogenic Air Distillation§r Tower§r.",
+          "desc:8": "§9Hydrogen§r and §9Nitrogen§r combine together to make §9Ammonia§r.\n\nAn easy way to get Nitrogen is to centrifuge §9Air§r, which will require you to build an §3Air Collector§r. You could also electrolyze §6Saltpeter§r, distill §9Fermented Biomass§r in a §3Distillation Tower§r, or get huge amounts from §2distlling Liquid Air in a Distillation Tower.§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12750,7 +12751,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Ammonia",
+          "name:8": "§2Ammonia",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -22782,7 +22783,7 @@
     },
     "409:10": {
       "preRequisites:11": [
-        38
+        530
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27308,13 +27309,15 @@
     },
     "511:10": {
       "preRequisites:11": [
-        67,
-        296
+        296,
+        272,
+        26,
+        18
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bEnderIO§r\u0027s equivalent of a §3Chemical Reactor§r, roughly speaking.\n\nThe only way to make several important liquids from EnderIO.",
+          "desc:8": "§bEnderIO§r\u0027s equivalent of a §3Chemical Reactor§r, roughly speaking.\n\nThe only way to make several important liquids from EnderIO.\n\nLike all other EnderIO machines, any tier of EnderIO §6Capacitor§r is needed for it to work, but higher tier capacitors increase the operating speed.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28497,9 +28500,15 @@
       }
     },
     "533:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
         535,
-        536
+        536,
+        325
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42744,7 +42753,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Check out the new Material Tree tab! It will show you nearly all the different forms of a GregTech material (Plates, Rods, Screws, Dusts...) on a single page. You can then click on those to see their recipes.",
+          "desc:8": "§2Check out the new Material Tree tab!§r\n\nThis tab can be accessed in §bJEI§r, when finding the §ausages or recipes§r of §aany form§r of a §bGregTech§r material!§r\n\nIt will show you nearly all the different forms of a §bGregTech§r material (§ePlates, Rods, Screws, Dusts...§r) on a single page, as well as showing what can be turned into what. You can then click on those to see their recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44274,15 +44283,20 @@
       }
     },
     "840:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
-        323,
         791,
-        841
+        841,
+        325
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Advanced Processing Array can handle up to 64 parallel recipes at once.\n\nYou may need some 4A or 16A Energy Hatches to keep up with its power draw.",
+          "desc:8": "§2The Advanced Processing Array can handle up to 64 parallel recipes at once.§r\n\nYou may need some §64A or 16A Energy Hatches§r to keep up with its power draw.\n\nYou\u0027ll need that §6Europium§r in the casings for the §aAdvanced Processing Array§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45466,7 +45480,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer. Can run up to 2,048 recipes in parallel.\n\nThe Rotary Hearth Furnace is quite big!",
+          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer.§r\n\nAccepts any §6Parallel Control Hatch§r, parallelizing up to §e256x§r with the best hatch!.\n\nThe §aRotary Hearth Furnace§r is quite big!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47970,7 +47984,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A mixture of §6Clay, Brick, §cQuartz Sand, Calcite, Gypsum, Stone Dust§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r, which forms the basis of LV Machine Hulls.\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
+          "desc:8": "A mixture of §6Clay, Brick, §cGypsum and Concrete§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. §c\n\nSo far, your only available route for Concrete is adding Stone Dust, Quartz Sand, Clay and Calcite to a bucket of Water.§r\n\nThis allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower). Now you can make §7LV §6Machine Hulls§r!\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48082,7 +48096,7 @@
     },
     "911:10": {
       "preRequisites:11": [
-        38
+        409
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49227,7 +49241,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Neeve",
+          "name:8": "[EASTER EGG] Neeve",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -49576,7 +49590,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default key is §aMiddle Click§r, §cbut that keybind is currently broken§r. Change the sort key to a keybind with no conflicts.\n\nYou can also configure how it is sorted, within the GUI. The default key is §aK§r, but you may have to change this.\n\nSimply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nInventory Bogo Sorter by default also replaces stacks of items, like blocks, tools and food in your hotbar. So you can build a pillar to y-256 without opening your inventory!",
+          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default sort keybind is §aMiddle Click§r, §cbut you can always change the keybind. Simply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nYou can also configure how it is sorted, within the GUI. The default key to open the GUI is §aK§r.\n\nInventory Bogo Sorter, by default, also replaces stacks of items, like blocks, tools and food in your hotbar. For tools, it even replaces it just before it breaks, so you can repair it! Now, you can build a pillar to y-256 without opening your inventory, or changing hotbar slots!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54647,8 +54661,8 @@
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 32,
-          "y:3": 256
+          "x:3": -12,
+          "y:3": 296
         },
         "5:10": {
           "id:3": 9,
@@ -54662,7 +54676,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 32,
-          "y:3": 288
+          "y:3": 264
         },
         "7:10": {
           "id:3": 12,
@@ -54704,28 +54718,28 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 188
+          "y:3": 180
         },
         "13:10": {
           "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 260
+          "y:3": 252
         },
         "14:10": {
           "id:3": 20,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 224
+          "y:3": 216
         },
         "15:10": {
           "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 256
+          "y:3": 264
         },
         "16:10": {
           "id:3": 25,
@@ -54738,50 +54752,50 @@
           "id:3": 37,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 76,
-          "y:3": 256
+          "x:3": 72,
+          "y:3": 296
         },
         "18:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 324
+          "x:3": -108,
+          "y:3": 296
         },
         "19:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 288
+          "x:3": -72,
+          "y:3": 296
         },
         "20:10": {
           "id:3": 50,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 66
+          "y:3": 68
         },
         "21:10": {
           "id:3": 56,
           "sizeX:3": 72,
           "sizeY:3": 72,
-          "x:3": -38,
-          "y:3": 438
+          "x:3": -36,
+          "y:3": 436
         },
         "22:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -92,
-          "y:3": 324
+          "x:3": -108,
+          "y:3": 332
         },
         "23:10": {
           "id:3": 66,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 256
+          "y:3": 264
         },
         "24:10": {
           "id:3": 141,
@@ -54794,8 +54808,8 @@
           "id:3": 266,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 150
+          "x:3": -48,
+          "y:3": 184
         },
         "26:10": {
           "id:3": 353,
@@ -54822,8 +54836,8 @@
           "id:3": 371,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 108
+          "x:3": -48,
+          "y:3": 140
         },
         "30:10": {
           "id:3": 393,
@@ -54836,15 +54850,15 @@
           "id:3": 394,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -56,
-          "y:3": 362
+          "x:3": -72,
+          "y:3": 372
         },
         "32:10": {
           "id:3": 401,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 30,
-          "y:3": 132
+          "x:3": 24,
+          "y:3": 140
         },
         "33:10": {
           "id:3": 405,
@@ -54857,22 +54871,22 @@
           "id:3": 409,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -14,
-          "y:3": 362
+          "x:3": -12,
+          "y:3": 332
         },
         "35:10": {
           "id:3": 415,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -92,
-          "y:3": 402
+          "x:3": -108,
+          "y:3": 412
         },
         "36:10": {
           "id:3": 488,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 30,
-          "y:3": 168
+          "x:3": 24,
+          "y:3": 184
         },
         "37:10": {
           "id:3": 491,
@@ -54885,8 +54899,8 @@
           "id:3": 495,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 76,
-          "y:3": 324
+          "x:3": 32,
+          "y:3": 328
         },
         "39:10": {
           "id:3": 496,
@@ -54900,35 +54914,35 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 32,
-          "y:3": 324
+          "y:3": 296
         },
         "41:10": {
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -92,
-          "y:3": 362
+          "x:3": -108,
+          "y:3": 372
         },
         "42:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
-          "y:3": 256
+          "y:3": 264
         },
         "43:10": {
           "id:3": 670,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 220
+          "y:3": 224
         },
         "44:10": {
           "id:3": 687,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 120,
-          "y:3": 78
+          "y:3": 108
         },
         "45:10": {
           "id:3": 692,
@@ -54948,15 +54962,15 @@
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -56,
-          "y:3": 402
+          "x:3": -72,
+          "y:3": 412
         },
         "48:10": {
           "id:3": 780,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 76,
-          "y:3": 220
+          "x:3": 72,
+          "y:3": 224
         },
         "49:10": {
           "id:3": 786,
@@ -54990,8 +55004,8 @@
           "id:3": 817,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -44,
-          "y:3": 220
+          "x:3": -48,
+          "y:3": 224
         },
         "54:10": {
           "id:3": 902,
@@ -55005,14 +55019,14 @@
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 24,
-          "y:3": 212
+          "y:3": 216
         },
         "56:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -56,
-          "y:3": 324
+          "x:3": -72,
+          "y:3": 332
         },
         "57:10": {
           "id:3": 913,
@@ -55064,101 +55078,101 @@
       },
       "quests:9": {
         "0:10": {
-          "id:3": 67,
+          "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 504,
-          "y:3": 300
+          "x:3": 708,
+          "y:3": 348
         },
         "1:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 408
+          "x:3": 168,
+          "y:3": 450
         },
         "2:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 246,
-          "y:3": 456
+          "x:3": 360,
+          "y:3": 444
         },
         "3:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 552
+          "x:3": 168,
+          "y:3": 594
         },
         "4:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 456
+          "x:3": 168,
+          "y:3": 498
         },
         "5:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": 600
+          "x:3": 216,
+          "y:3": 546
         },
         "6:10": {
           "id:3": 116,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 282,
-          "y:3": 594
+          "x:3": 258,
+          "y:3": 540
         },
         "7:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 600
+          "x:3": 216,
+          "y:3": 594
         },
         "8:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
-          "y:3": 420
+          "x:3": 564,
+          "y:3": 456
         },
         "9:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 672,
+          "x:3": 600,
           "y:3": 456
         },
         "10:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 672,
+          "x:3": 600,
           "y:3": 420
         },
         "11:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": 504
+          "x:3": 264,
+          "y:3": 420
         },
         "12:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
+          "x:3": 408,
           "y:3": 420
         },
         "13:10": {
           "id:3": 208,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 600,
+          "x:3": 528,
           "y:3": 420
         },
         "14:10": {
@@ -55172,126 +55186,126 @@
           "id:3": 210,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
+          "x:3": 564,
           "y:3": 384
         },
         "16:10": {
           "id:3": 211,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 600,
+          "x:3": 528,
           "y:3": 456
         },
         "17:10": {
           "id:3": 212,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
-          "y:3": 456
+          "x:3": 564,
+          "y:3": 420
         },
         "18:10": {
           "id:3": 214,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
-          "y:3": 552
+          "x:3": 564,
+          "y:3": 588
         },
         "19:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 600,
-          "y:3": 600
+          "x:3": 528,
+          "y:3": 588
         },
         "20:10": {
           "id:3": 217,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 624,
-          "y:3": 636
+          "x:3": 552,
+          "y:3": 624
         },
         "21:10": {
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 576,
-          "y:3": 372
+          "x:3": 636,
+          "y:3": 420
         },
         "22:10": {
           "id:3": 220,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
+          "x:3": 564,
           "y:3": 336
         },
         "23:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 684,
+          "x:3": 528,
           "y:3": 336
         },
         "24:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 708,
+          "x:3": 504,
           "y:3": 300
         },
         "25:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 708,
+          "x:3": 504,
           "y:3": 372
         },
         "26:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 732,
+          "x:3": 480,
           "y:3": 336
         },
         "27:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 756,
+          "x:3": 456,
           "y:3": 300
         },
         "28:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 756,
+          "x:3": 456,
           "y:3": 372
         },
         "29:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 780,
+          "x:3": 432,
           "y:3": 336
         },
         "30:10": {
           "id:3": 229,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 504
+          "x:3": 168,
+          "y:3": 546
         },
         "31:10": {
           "id:3": 232,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 624,
+          "x:3": 552,
           "y:3": 492
         },
         "32:10": {
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 672,
+          "x:3": 600,
           "y:3": 552
         },
         "33:10": {
@@ -55299,168 +55313,168 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
-          "y:3": 552
+          "y:3": 546
         },
         "34:10": {
           "id:3": 275,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 282,
-          "y:3": 498
+          "x:3": 306,
+          "y:3": 474
         },
         "35:10": {
           "id:3": 276,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 456
+          "x:3": 360,
+          "y:3": 480
         },
         "36:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": 600
+          "x:3": 312,
+          "y:3": 594
         },
         "37:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
-          "y:3": 600
+          "y:3": 594
         },
         "38:10": {
           "id:3": 386,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 468,
-          "y:3": 492
+          "y:3": 486
         },
         "39:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
-          "y:3": 552
+          "x:3": 360,
+          "y:3": 546
         },
         "40:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": 552
+          "x:3": 312,
+          "y:3": 546
         },
         "41:10": {
           "id:3": 389,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
-          "y:3": 492
+          "y:3": 486
         },
         "42:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 672,
-          "y:3": 600
+          "x:3": 600,
+          "y:3": 588
         },
         "43:10": {
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 600,
+          "x:3": 528,
           "y:3": 552
         },
         "44:10": {
           "id:3": 510,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": 372
+          "x:3": 684,
+          "y:3": 420
         },
         "45:10": {
           "id:3": 511,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 504,
-          "y:3": 336
+          "x:3": 708,
+          "y:3": 384
         },
         "46:10": {
           "id:3": 539,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 416
+          "x:3": 360,
+          "y:3": 516
         },
         "47:10": {
           "id:3": 754,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 552,
+          "x:3": 660,
           "y:3": 456
         },
         "48:10": {
           "id:3": 757,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 648
+          "x:3": 264,
+          "y:3": 672
         },
         "49:10": {
           "id:3": 758,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
-          "y:3": 648
+          "x:3": 216,
+          "y:3": 672
         },
         "50:10": {
           "id:3": 759,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 480,
-          "y:3": 372
+          "x:3": 732,
+          "y:3": 420
         },
         "51:10": {
           "id:3": 760,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 552,
-          "y:3": 648
+          "x:3": 660,
+          "y:3": 672
         },
         "52:10": {
           "id:3": 761,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 552,
+          "x:3": 660,
           "y:3": 552
         },
         "53:10": {
           "id:3": 762,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 546,
+          "x:3": 654,
           "y:3": 498
         },
         "54:10": {
           "id:3": 763,
           "sizeX:3": 18,
           "sizeY:3": 18,
-          "x:3": 529,
+          "x:3": 637,
           "y:3": 459
         },
         "55:10": {
           "id:3": 782,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 612,
-          "y:3": 612
+          "x:3": 540,
+          "y:3": 600
         },
         "56:10": {
           "id:3": 922,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 696
+          "x:3": 264,
+          "y:3": 720
         }
       }
     },
@@ -55620,14 +55634,14 @@
           "id:3": 0,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -96,
-          "y:3": 384
+          "x:3": -100,
+          "y:3": 366
         },
         "1:10": {
           "id:3": 1,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -88,
+          "x:3": -100,
           "y:3": 476
         },
         "2:10": {
@@ -55648,7 +55662,7 @@
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -88,
+          "x:3": -100,
           "y:3": 516
         },
         "5:10": {
@@ -55662,7 +55676,7 @@
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -150,
+          "x:3": -140,
           "y:3": 432
         },
         "7:10": {
@@ -55683,8 +55697,8 @@
           "id:3": 101,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -96,
-          "y:3": 552
+          "x:3": -108,
+          "y:3": 556
         },
         "10:10": {
           "id:3": 102,
@@ -55750,209 +55764,216 @@
           "y:3": 516
         },
         "19:10": {
+          "id:3": 116,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -140,
+          "y:3": 476
+        },
+        "20:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 480
         },
-        "20:10": {
+        "21:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 312
         },
-        "21:10": {
+        "22:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": 312
         },
-        "22:10": {
+        "23:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 312
         },
-        "23:10": {
+        "24:10": {
           "id:3": 122,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 516
         },
-        "24:10": {
+        "25:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 552
         },
-        "25:10": {
+        "26:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 588
         },
-        "26:10": {
+        "27:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 228,
           "y:3": 312
         },
-        "27:10": {
+        "28:10": {
           "id:3": 140,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 552
         },
-        "28:10": {
+        "29:10": {
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 366
         },
-        "29:10": {
+        "30:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": 354
         },
-        "30:10": {
+        "31:10": {
           "id:3": 259,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 66,
           "y:3": 390
         },
-        "31:10": {
+        "32:10": {
           "id:3": 282,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -60,
           "y:3": 420
         },
-        "32:10": {
+        "33:10": {
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 726
         },
-        "33:10": {
+        "34:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 726
         },
-        "34:10": {
+        "35:10": {
           "id:3": 408,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": 678
         },
-        "35:10": {
+        "36:10": {
           "id:3": 494,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 516
         },
-        "36:10": {
+        "37:10": {
           "id:3": 729,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 480
         },
-        "37:10": {
+        "38:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 678
         },
-        "38:10": {
+        "39:10": {
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -102,
+          "x:3": -100,
           "y:3": 432
         },
-        "39:10": {
+        "40:10": {
           "id:3": 809,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 678
         },
-        "40:10": {
+        "41:10": {
           "id:3": 811,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 678
         },
-        "41:10": {
+        "42:10": {
           "id:3": 829,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 588
         },
-        "42:10": {
+        "43:10": {
           "id:3": 915,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 516
         },
-        "43:10": {
+        "44:10": {
           "id:3": 916,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 552
         },
-        "44:10": {
+        "45:10": {
           "id:3": 917,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 312
         },
-        "45:10": {
+        "46:10": {
           "id:3": 918,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 0,
           "y:3": 312
         },
-        "46:10": {
+        "47:10": {
           "id:3": 924,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 12,
           "y:3": 480
         },
-        "47:10": {
+        "48:10": {
           "id:3": 926,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": 678
         },
-        "48:10": {
+        "49:10": {
           "id:3": 930,
           "sizeX:3": 24,
           "sizeY:3": 24,
