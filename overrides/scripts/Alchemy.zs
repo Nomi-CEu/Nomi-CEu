@@ -23,6 +23,7 @@ recipes.addShaped("actuallyadditions_fertilizer", <actuallyadditions:item_fertil
 recipes.remove(<dimensionaledibles:overworld_cake>);
 recipes.remove(<dimensionaledibles:nether_cake>);
 recipes.remove(<dimensionaledibles:end_cake>);
+recipes.remove(<dimensionaledibles:island_cake>);
 recipes.remove(<dimensionaledibles:custom_cake>);
 recipes.remove(<minecraft:cake>);
 recipes.remove(<enderio:item_material:70>);
