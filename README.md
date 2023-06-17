@@ -17,6 +17,9 @@ Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to [GregTe
 - Many QoL features - Wiremill can produce any wire, Creative Tank no longer uses fluids, new creative chests and tanks from CEu, etc.
 - And more...  
 
+## Server Setup and Information
+Details on how to setup a basic server, and some important server admin information, are listed [here.](https://github.com/Nomi-CEu/nomi-ceu/blob/main/serverfiles/README.md)
+
 ## Addon Mods
 Nomi-CEu comes with addon scripts for the following mods. You can drop them into the mods folder, and their recipes will be adjusted accordingly.  
 - [AE2 Fluid Crafting Rework](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-crafting-rework)  
@@ -55,7 +58,7 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
  - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
 ------
 
-#### Manual installation instructions are available [here](overrides/README.md).
+#### Manual installation instructions are available [here](https://github.com/Nomi-CEu/nomi-ceu/blob/main/overrides/README.md).
 
 ## Bansoukou
 This pack uses two bansoukou patches. 

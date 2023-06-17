@@ -16,7 +16,7 @@ JAVA_PARAMETERS='{{{jvmArgs}}}'
 MIN_RAM='{{{minRAM}}}'
 MAX_RAM='{{{maxRAM}}}'
 
-# DO NOT EDIT ANYTHING PAST THIS LINE
+# DO NOT EDIT ANYTHING PAST THIS LINE, except to remove the nogui
 LAUNCHPARAMS="-server -Xms$MIN_RAM -Xmx$MAX_RAM $JAVA_PARAMETERS -Dlog4j.configurationFile=log4j2_112-116.xml -jar $FORGEJAR nogui"
 
 echo "Checking java version..."
