@@ -18629,7 +18629,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The highest tier of fusion crafting injectors. You will need at least ten of these to reach the §dCreative Portable Tank§r.\n\nEach injector requires four ingots of §6Neutronium§r and four §6Chaos Shards§r, as well as two §6Crystal Matrix§r blocks.\n\nHope you\u0027ve got those Tier Eight Micro Miners automated.",
+          "desc:8": "The highest tier of fusion crafting injectors. You will need at least ten of these to reach the §dStabilized Micro Miners§r.\n\nEach injector requires four ingots of §6Neutronium§r and four §6Chaos Shards§r, as well as two §6Crystal Matrix§r blocks.\n\nHope you\u0027ve got those Tier Eight Micro Miners automated.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20001,7 +20001,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This ingot is the most advanced basic material.\n\nWith all the automation you hopefully set up for your first §c§cInfinity Catalyst§r, these ingots should be easy.\n\nWell, not easy. But... Reasonable.\n\nFrom here, you are going to be crafting a multitude of Creative-Tier items from various mods. In addition to being useful for their regular functionality, they are needed for the final goal: the §dCreative Vending Upgrade§r.\n\n§bJEI§r is your friend: beyond noting a few more items, I will not be holding your hand anymore. I\u0027ve taught you everything you need to know to beat the pack.\n\nYou can do it!",
+          "desc:8": "This ingot is the most advanced basic material.\n\nWith all the automation you hopefully set up for your first §c§cInfinity Catalyst§r, these ingots should be easy.\n\nWell, not easy. But... Reasonable.\n\nFrom here, you are going to be crafting a multitude of Creative-Tier items from various mods. In addition to being useful for their regular functionality, they are needed for the final goal: the §dCreative Chest§r.\n\n§bJEI§r is your friend: beyond noting a few more items, I will not be holding your hand anymore. I\u0027ve taught you everything you need to know to beat the pack.\n\nYou can do it!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20485,7 +20485,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You win.\n\nCongratulations.\n\nI hope you enjoyed playing §5Nomifactory§r.",
+          "desc:8": "You win.\n\nCongratulations.\n\nI hope you enjoyed playing §5Nomi-CEu Expert Mode§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20497,7 +20497,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Creative Vending Upgrade",
+          "name:8": "§2Creative Chest",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -28673,7 +28673,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6ZPM Machine Hulls§r are made with §2Naquadah Alloy Plates,§r but you\u0027ll notice they also need §2Polybenzimidazole§r.\n\nZPM stands for Zero Point Module.\n\nThis is the last tier of machine that\u0027s sensible to produce before you reach the §dCreative Tank§r. Multiblock hatches are a different matter: feel free to upgrade your §3EBF§rs to Ultimate Voltage, if you can handle the power drain.\n",
+          "desc:8": "§6ZPM Machine Hulls§r are made with §2Naquadah Alloy Plates,§r but you\u0027ll notice they also need §2Polybenzimidazole§r.\n\nZPM stands for Zero Point Module.\n\nThis is the last tier of machine that\u0027s sensible to produce before you reach the §dStabilized Miners§r. Multiblock hatches are a different matter: feel free to upgrade your Multiblocks to Ultimate Voltage, or even higher, if you can handle the power drain.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40905,7 +40905,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Wyvern Fusion Injectors§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. \n\nSee the §bDraconic Evolution§r manual for more information on the material requirements for each tier, and information on how to setup the §6Pylons§r and §6Stabilizers§r.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nYou might want to postpone the Tier 8 until after you reach the §dStabilized Miners§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Wyvern Fusion Injectors§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. \n\nSee the §bDraconic Evolution§r manual for more information on the material requirements for each tier, and information on how to setup the §6Pylons§r and §6Stabilizers§r.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nYou might want to postpone the Tier 8 until after you reach the §dStabilized Micro Miners§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53686,7 +53686,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "You\u0027re in the endgame now...\n\nHarvest entire microverses and unlock the §dCreative Portable Tank§r.\n\nPut your automation to the ultimate test as you progress towards the final goal: the §dCreative Vending Upgrade§r.",
+          "desc:8": "You\u0027re in the endgame now...\n\nHarvest entire microverses and unlock §dStabilized Micro Miners.§r.\n\nPut your automation to the ultimate test as you progress towards the final goal: the §dCreative Chest§r.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
