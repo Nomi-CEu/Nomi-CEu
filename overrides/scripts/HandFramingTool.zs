@@ -105,9 +105,6 @@ hft.onItemUse = function(player as Player,
         if (isNull(tag) || isNull(tag.MatS)) return ActionResult.fail();
 
         if !isReframing(definition) {
-            val stickCount = orElse(tag.sticks, 0) as int;
-            if (stickCount < 8) return ActionResult.fail();
-            tag += { "sticks": stickCount - 8 } as IData;
             state = makeFramedState(state);
         }
 
