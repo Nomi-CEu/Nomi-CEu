@@ -5,7 +5,7 @@
       "posX": -150,
       "posY": 4,
       "width": 300,
-      "height": 77,
+      "height": 79,
       "alignment": "top_center"
     }
   },
@@ -70,7 +70,7 @@
       }
     },
     "update": {
-      "text": "Update Notes",
+      "text": "Update Changes",
       "posX": 125,
       "posY": 26,
       "width": 120,
@@ -78,7 +78,7 @@
       "alignment": "left_center",
       "action": {
         "type": "openLink",
-        "link": "https://github.com/Nomifactory/Nomifactory/blob/dev/UPDATENOTES.md"
+        "link": "https://github.com/Nomi-CEu/nomi-ceu/releases/tag/1.6"
       }
     },
     "discord": {
@@ -122,18 +122,28 @@
         "displayDuration": 100,
         "fadeDuration": 40,
         "images": [
-          "minecraft:textures/gui/title/background/01_koslow#5221_2020-07-13_18.29.23.png",
-          "minecraft:textures/gui/title/background/02_zefenglin#4068_unknown.png",
-          "minecraft:textures/gui/title/background/03_koslow#5221_2020-07-15_12.47.13.png",
-          "minecraft:textures/gui/title/background/04_twgecko#4094_2020-07-23_23.52.42.png",
-          "minecraft:textures/gui/title/background/05_misterpemodder#0404_2020-04-16_00.02.35.png",
-          "minecraft:textures/gui/title/background/07_sjihttam#1781_2020-01-16_13.41.00.png",
-          "minecraft:textures/gui/title/background/06_koslow#5221_2020-07-22_15.51.02.png",
-          "minecraft:textures/gui/title/background/08_immow#9906_unknown.png",
-          "minecraft:textures/gui/title/background/10_twgecko#4094_2020-07-28_01.02.15.png",
-          "minecraft:textures/gui/title/background/09_max the potato#6258_2020-07-14_18.16.47.png",
-          "minecraft:textures/gui/title/background/11_thatguy#6588_2020-02-11_23.31.02.png",
-          "minecraft:textures/gui/title/background/12_misterpemodder#0404_2020-07-14_00.47.49.png"
+          "minecraft:textures/gui/title/background/01_extra cool cat#2192.png",
+          "minecraft:textures/gui/title/background/02_extra cool cat#2192.png",
+          "minecraft:textures/gui/title/background/03_extra cool cat#2192.png",
+          "minecraft:textures/gui/title/background/04_extra cool cat#2192.png",
+          "minecraft:textures/gui/title/background/05_extra cool cat#2192.png",
+          "minecraft:textures/gui/title/background/06_extra cool cat#2192.png",
+          "minecraft:textures/gui/title/background/07_extra cool cat#2192.png",
+          "minecraft:textures/gui/title/background/08_gaboggamer#7202.png",
+          "minecraft:textures/gui/title/background/09_scaatis#5969.png",
+          "minecraft:textures/gui/title/background/10_akaash#2394.png",
+          "minecraft:textures/gui/title/background/11______________#2028.png",
+          "minecraft:textures/gui/title/background/12______________#2028.png",
+          "minecraft:textures/gui/title/background/13_pent#7534.png",
+          "minecraft:textures/gui/title/background/14_doniazade#5149.png",
+          "minecraft:textures/gui/title/background/15_doniazade#5149.png",
+          "minecraft:textures/gui/title/background/16_dashin#9978.png",
+          "minecraft:textures/gui/title/background/17_besoiobiycrazy designer#0516.png",
+          "minecraft:textures/gui/title/background/18_besoiobiycrazy designer#0516.png",
+          "minecraft:textures/gui/title/background/19_besoiobiycrazy designer#0516.png",
+          "minecraft:textures/gui/title/background/20_gaboggamer#7202.png",
+          "minecraft:textures/gui/title/background/21_darkarkangel#1961.png",
+          "minecraft:textures/gui/title/background/22_darkarkangel#1961.png"
         ]
       }
     }

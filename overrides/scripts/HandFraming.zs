@@ -140,37 +140,6 @@ function getNested(inTag as IData, keys as string[], alt as IData) as IData {
     return isNull(tag) ? alt : tag;
 }
 
-val sticksIngredient = <ore:stickWood>.transformConsume(64);
-val sticksRecipeFunction = function(out, ins, cinfo) {
-    var sticks as int = getNested(ins.hft.tag, ["sticks"], 0) as int;
-    for k, v in ins {
-        if k != "hft" {
-            sticks += v.amount;
-        }
-    }
-    return ins.hft.updateTag({ "sticks": sticks });
-} as IRecipeFunction;
-val hftIngredient = <contenttweaker:hand_framing_tool>.marked("hft");
-
-for stickStacks in 1 .. 9 {
-    var ingredients = [hftIngredient] as IIngredient[];
-    for i in 0 .. stickStacks {
-        ingredients += sticksIngredient.marked("stick" + i);
-    }
-    recipes.addShapeless(
-        "hand_framing_tool_sticks_" + stickStacks,
-        <contenttweaker:hand_framing_tool>.withTag({sticks: stickStacks}),
-        ingredients,
-        sticksRecipeFunction
-    );
-}
-
-<contenttweaker:hand_framing_tool>.addAdvancedTooltip(
-    function(stack as IItemStack) {
-        return "Sticks: " + (isNull(stack) ? "0" : getNested(stack.tag, ["sticks"], 0));
-    } as ITooltipFunction
-);
-
 function makeTagFunc(name as string) as ITooltipFunction {
     val matTag = "Mat" + name[0];
     return function(stack as IItemStack) as string {

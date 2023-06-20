@@ -195,18 +195,20 @@ recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
 //<recipemap:assembler>.findRecipe(16, [<metaitem:plateWroughtIron> * 8, <metaitem:circuit.integrated>.withTag({Configuration: 8})], null).remove();
 //
 //assembler.recipeBuilder().inputs(<ore:plateIron> * 8).notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing>]).duration(30).EUt(16).buildAndRegister();
+/*
 //ULV Hull
 recipes.remove(<meta_tile_entity:hull.ulv>);	
 recipes.addShaped(<meta_tile_entity:hull.ulv>, [
 	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], 
 	[<ore:cableGtSingleLead>, <gregtech:machine_casing>, <ore:cableGtSingleLead>]]);	
+*/
 
 // pyro
 
 //Phenol and Coke
 pyrolyse_oven.recipeBuilder()
 	.inputs([<minecraft:coal> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 14}))
+	.circuit(14)
 	.fluidInputs([<liquid:steam> * 4000])
 	.outputs([<metaitem:gemCoke> * 20])
 	.fluidOutputs([<liquid:phenol> * 1000])
@@ -215,7 +217,7 @@ pyrolyse_oven.recipeBuilder()
 //Phenol and Coke dust
 pyrolyse_oven.recipeBuilder()
 	.inputs([<metaitem:dustCoal> * 16])
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 11}))
+	.circuit(11)
 	.fluidInputs([<liquid:steam> * 4000])
 	.outputs([<metaitem:dustCoke> * 20])
 	.fluidOutputs([<liquid:phenol> * 1000])
@@ -284,6 +286,61 @@ assembler.recipeBuilder()
 	.outputs(<metaitem:voltage_coil.hv>)
 	.duration(200)
 	.EUt(480)
+	.buildAndRegister();
+
+// Replace Recycling Recipes
+// Coil
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:voltage_coil.hv>], [<liquid:oxygen> * 152]).remove();
+<recipemap:macerator>.findRecipe(8, [<metaitem:voltage_coil.hv>], null).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:voltage_coil.hv>)
+	.fluidInputs(<liquid:oxygen> * 152)
+	.outputs(<metaitem:ingotSilver> * 2, <metaitem:nuggetSteel> * 4)
+	.duration(152)
+	.EUt(30)
+	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<metaitem:voltage_coil.hv>)
+	.outputs(<metaitem:dustSilver> * 2, <metaitem:dustSmallSteelMagnetic> * 2)
+	.duration(156)
+	.EUt(8)
+	.buildAndRegister();
+
+// Energy Hatch
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:energy_hatch.input.hv>], [<liquid:oxygen> * 984]).remove();
+<recipemap:macerator>.findRecipe(8, [<metaitem:energy_hatch.input.hv>], null).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:energy_hatch.input.hv>)
+	.fluidInputs(<liquid:oxygen> * 984)
+	.outputs(<metaitem:ingotStainlessSteel> * 8, <metaitem:ingotSilver> * 2, <minecraft:gold_ingot> * 2, <metaitem:nuggetSteel> * 4)
+	.duration(984)
+	.EUt(30)
+	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<metaitem:energy_hatch.input.hv>)
+	.outputs(<metaitem:dustStainlessSteel> * 8, <metaitem:dustRubber> * 4, <metaitem:dustSilver> * 2, <metaitem:dustGold> * 2)
+	.duration(980)
+	.EUt(8)
+	.buildAndRegister();
+
+// Dynamo Hatch
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:energy_hatch.output.hv>], [<liquid:oxygen> * 1180]).remove();
+<recipemap:macerator>.findRecipe(8, [<metaitem:energy_hatch.output.hv>], null).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:energy_hatch.output.hv>)
+	.fluidInputs(<liquid:oxygen> * 1180)
+	.outputs(<metaitem:ingotStainlessSteel> * 8, <minecraft:gold_ingot> * 3, <metaitem:ingotSilver> * 2, <metaitem:nuggetSteel> * 4)
+	.duration(1180)
+	.EUt(30)
+	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<metaitem:energy_hatch.output.hv>)
+	.outputs(<metaitem:dustStainlessSteel> * 8, <metaitem:dustGold> * 3, <metaitem:dustSilver> * 2, <metaitem:dustRubber> * 2)
+	.duration(1166)
+	.EUt(8)
 	.buildAndRegister();
 
 // high tier circuit progression changes

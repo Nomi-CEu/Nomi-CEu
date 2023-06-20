@@ -410,7 +410,7 @@ var snowchestite = MaterialBuilder(32060, "snowchestite")
     .flags("disable_decomposition")
     .color(0x274c9f).iconSet("shiny")
     .components([<material:naquadah_oxide> * 3, <material:pyromorphite> * 1])
-    .addOreByproducts(<material:chalcopyrite>, <material:vanadium_magnetite>, <material:naquadah_hydroxide>)
+    .addOreByproducts(<material:caesium>, <material:vanadium_magnetite>, <material:naquadah_hydroxide>)
     .build();
 
 var caesium_hydroxide = MaterialBuilder(32061, "caesium_hydroxide")

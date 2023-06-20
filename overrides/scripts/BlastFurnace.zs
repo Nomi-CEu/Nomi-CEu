@@ -65,7 +65,7 @@ blast_furnace.recipeBuilder()
 <recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 
 alloy_blast_smelter.recipeBuilder()
-	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2])
+	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2])
 	.circuit(3)
 	.fluidOutputs([<liquid:black_steel> * 1296])
 	.property("temperature", 1000)
@@ -74,7 +74,7 @@ alloy_blast_smelter.recipeBuilder()
 	.buildAndRegister();
 
 alloy_blast_smelter.recipeBuilder()
-	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2])
+	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2])
 	.fluidInputs([<liquid:nitrogen> * 9000])
 	.circuit(13)
 	.fluidOutputs([<liquid:black_steel> * 1296])
@@ -336,8 +336,8 @@ alloy_blast_smelter.recipeBuilder()
 
 // Pulsating Iron
 alloy_blast_smelter.recipeBuilder()
-	.inputs([<liquid:pulsating_iron>, <ore:dustPulsating>])
-	.fluidOutputs(<liquid:soularium> * 144)
+	.inputs([<metaitem:dustIron>, <ore:dustPulsating>])
+	.fluidOutputs(<liquid:pulsating_iron> * 144)
 	.circuit(2)
 	.property("temperature", 1200)
 	.duration(112)

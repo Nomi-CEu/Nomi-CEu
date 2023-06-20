@@ -156,6 +156,10 @@ export function makeArtifactNameBody(baseName: string): string {
 	if (process.env.GITHUB_TAG) {
 		return `${baseName}-${process.env.GITHUB_TAG}`;
 	}
+	// RC.
+	else if (process.env.RC_VERSION) {
+		return `${baseName}-${process.env.RC_VERSION.replace(/^v/, "")}-rc`;
+	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
 		const shortCommit = process.env.GITHUB_SHA.substr(0, 7);

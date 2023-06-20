@@ -13,6 +13,7 @@ import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.functions.IRunOverclockingLogicFunction;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.IRecipe;
+import mods.gregtech.recipe.helpers;
 
 import scripts.common.makeShaped as makeShaped;
 import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
@@ -136,49 +137,16 @@ furnace.remove(<metaitem:brick.fireclay>);
 furnace.addRecipe(<metaitem:brick.fireclay>, <metaitem:dustFireclay>, 0.5);
 recipes.removeByRecipeName("gregtech:fireclay_dust");
 recipes.addShapeless("fireclay_dust", <metaitem:dustFireclay> * 16, [<metaitem:dustClay>, <metaitem:dustBrick>]);
+
 // Compressed Fireclay * 1
 <recipemap:compressor>.findRecipe(4, [<metaitem:dustFireclay>], null).remove();
+
 // Clay Dust * 1
 <recipemap:centrifuge>.findRecipe(30, [<metaitem:dustFireclay> * 2], null).remove();
 
 
 // PBF recipe removals
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:ingotWroughtIron>, <metaitem:dustCoke>], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:ingotWroughtIron>, <metaitem:gemCoke>], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:ingotWroughtIron>, <minecraft:coal:1> * 2], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:ingotWroughtIron>, <metaitem:dustCoal> * 2], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:ingotWroughtIron>, <minecraft:coal:0> * 2], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:ingotWroughtIron>, <metaitem:dustCharcoal> * 2], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_ingot:0>, <metaitem:dustCoke>], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_ingot:0>, <metaitem:gemCoke>], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_ingot:0>, <minecraft:coal:1> * 2], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_ingot:0>, <metaitem:dustCoal> * 2], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_ingot:0>, <minecraft:coal:0> * 2], null).remove();
-// Steel Ingot * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_ingot:0>, <metaitem:dustCharcoal> * 2], null).remove();
-// Block of Steel * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:blockWroughtIron>, <metaitem:blockCoke>], null).remove();
-// Block of Steel * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:blockWroughtIron>, <metaitem:blockCharcoal> * 2], null).remove();
-// Block of Steel * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<metaitem:blockWroughtIron>, <minecraft:coal_block:0> * 2], null).remove();
-// Block of Steel * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_block:0>, <metaitem:blockCoke>], null).remove();
-// Block of Steel * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_block:0>, <minecraft:coal_block:0> * 2], null).remove();
-// Block of Steel * 1
-<recipemap:primitive_blast_furnace>.findRecipe(1, [<minecraft:iron_block:0>, <metaitem:blockCharcoal> * 2], null).remove();
+helpers.clear(primitive_blast_furnace);
 
 /* Start PBF Recipes */
 
@@ -759,6 +727,58 @@ large_chemical_reactor.recipeBuilder()
 	.fluidOutputs(<liquid:butadiene> * 1000)
 	.circuit(25)
 	.duration(300).EUt(7680).buildAndRegister();
+
+/* UHV Multis, move to zpm (used to be UHV) */
+// Rotary Hearth Furnace
+recipes.remove(<metaitem:gcym:mega_blast_furnace>);
+recipes.addShaped(<metaitem:gcym:mega_blast_furnace>,
+	[[<ore:springNaquadahAlloy>, <ore:circuitUv>, <ore:springNaquadahAlloy>],
+	[<metaitem:field.generator.luv>, <metaitem:electric_blast_furnace>, <metaitem:field.generator.luv>],
+	[<ore:plateDenseNaquadahAlloy>, <ore:wireGtQuadrupleUraniumRhodiumDinaquadide>, <ore:plateDenseNaquadahAlloy>]]);
+
+// Bulk Blast Chiller
+recipes.remove(<metaitem:gcym:mega_vacuum_freezer>);
+recipes.addShaped(<metaitem:gcym:mega_vacuum_freezer>,
+	[[<ore:pipeNormalFluidNaquadah>, <ore:circuitUv>, <ore:pipeNormalFluidNaquadah>],
+	[<metaitem:field.generator.luv>, <metaitem:vacuum_freezer>, <metaitem:field.generator.luv>],
+	[<ore:plateDenseNaquadahAlloy>, <ore:wireGtQuadrupleUraniumRhodiumDinaquadide>, <ore:plateDenseNaquadahAlloy>]]);
+
+// Recycling recipe replacements
+// RHF
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_blast_furnace>], [<liquid:oxygen> * 20786]).remove();
+<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_blast_furnace>], null).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_blast_furnace>)
+	.fluidInputs(<liquid:oxygen> * 20786)
+	.outputs(<metaitem:ingotNaquadahAlloy> * 20, <metaitem:ingotInvar> * 4, <metaitem:ingotUraniumRhodiumDinaquadide> * 2, <metaitem:ingotTin>)
+	.duration(20786)
+	.EUt(30)
+	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_blast_furnace>)
+	.outputs(<metaitem:dustStone> * 24, <metaitem:dustNaquadahAlloy> * 20, <metaitem:dustInvar> * 4, <metaitem:dustRubber> * 2)
+	.duration(20786)
+	.EUt(30)
+	.buildAndRegister();
+
+// BBC
+<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_vacuum_freezer>], [<liquid:oxygen> * 26976]).remove();
+<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_vacuum_freezer>], null).remove();
+arc_furnace.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
+	.fluidInputs(<liquid:oxygen> * 26976)
+	.outputs(<metaitem:ingotNaquadahAlloy> * 18, <metaitem:ingotStainlessSteel> * 12, <metaitem:ingotElectrum> * 12, <metaitem:blockSteel>)
+	.duration(26976)
+	.EUt(30)
+	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
+	.outputs(<metaitem:dustNaquadahAlloy> * 18, <metaitem:dustSmallRubber> * 50, <metaitem:dustSmallSteel> * 49, <metaitem:dustStainlessSteel> * 12)
+	.duration(25408)
+	.EUt(32)
+	.buildAndRegister();
 
 // Removals
 // GT

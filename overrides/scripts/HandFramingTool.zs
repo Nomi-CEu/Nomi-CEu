@@ -28,7 +28,9 @@ function isFrameable(block as IBlockDefinition) as bool {
 
         || block.id == "storagedrawers:compdrawers"
         || block.id == "storagedrawers:controller"
-        || block.id == "storagedrawers:controllerslave";
+        || block.id == "storagedrawers:controllerslave"
+
+        || block.id.startsWith("gregtechdrawers");
 }
 
 function isReframing(block as IBlockDefinition) as bool {
@@ -44,10 +46,11 @@ function orElse(tag as IData, other as IData) as IData {
 
 function makeFramedState(state as IBlockState) as IBlockState {
     val id as string = state.block.definition.id;
-    if id == "storagedrawers:trim" {
+    if id == "storagedrawers:trim" || id.startsWith("gregtechdrawers:trim") {
         return <block:storagedrawers:customtrim>.block.definition.defaultState;
     }
-    return (id == "storagedrawers:basicdrawers" ? <block:storagedrawers:customdrawers> :
+    // GT drawers only adds trims and drawers, so if it isn't a trim (checked above), its a drawer
+    return (id == "storagedrawers:basicdrawers" || id.startsWith("gregtechdrawers") ? <block:storagedrawers:customdrawers> :
             id == "storagedrawers:compdrawers" ? <block:framedcompactdrawers:framed_compact_drawer> :
             id == "storagedrawers:controllerslave" ? <block:framedcompactdrawers:framed_slave> :
             <block:framedcompactdrawers:framed_drawer_controller>)
@@ -102,9 +105,6 @@ hft.onItemUse = function(player as Player,
         if (isNull(tag) || isNull(tag.MatS)) return ActionResult.fail();
 
         if !isReframing(definition) {
-            val stickCount = orElse(tag.sticks, 0) as int;
-            if (stickCount < 8) return ActionResult.fail();
-            tag += { "sticks": stickCount - 8 } as IData;
             state = makeFramedState(state);
         }
 

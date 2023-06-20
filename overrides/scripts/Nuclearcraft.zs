@@ -823,7 +823,7 @@ thermal_sep.recipeBuilder()
     .inputs([<metaitem:ingotUranium235>])
     .duration(3200).EUt(48).buildAndRegister();
 
-// Add tiny fuel clumps to the GTCE Packager
+// Add tiny fuel clumps to the Packager (GTCEu)
 var clumps = [
 
     [<nuclearcraft:thorium:2> , <nuclearcraft:thorium>],
@@ -857,8 +857,8 @@ var clumps = [
 for iso in clumps {
 
     packager.recipeBuilder()
-        .inputs(iso[0]*9)
-        .notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 1}))
+        .inputs(iso[0] * 9)
+        .circuit(1)
         .outputs(iso[1])
         .duration(10).EUt(12).buildAndRegister();
 

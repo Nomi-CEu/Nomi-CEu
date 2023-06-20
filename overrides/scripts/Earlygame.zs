@@ -192,7 +192,7 @@ mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
 
 // Black Steel
-mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
+mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
 recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustBlackBronze>, <ore:dustSteel>, <ore:dustSteel>, <ore:dustSteel>]);
 furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>, 0.0);
 
@@ -332,14 +332,13 @@ recipes.addShapeless(<thermalfoundation:fertilizer> * 16, [<ore:dustWood>, <ore:
 //furnace.addRecipe(<minecraft:iron_nugget> * 2, <metaitem:dustImpureVanadiumMagnetite>, 0.0);
 
 
-//Add recipe for Iron Trapdoor
+/* Old Recipe for Iron Trapdoor
 assembler.recipeBuilder()
 	.inputs(<ore:plateIron> * 4)
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration: 6}))
+	.circuit(6)
 	.outputs(<minecraft:iron_trapdoor>)
 	.duration(200).EUt(16).buildAndRegister();
-
-
+*/
 
 //Vinyl Acetate
 electrolyzer.recipeBuilder()
@@ -417,6 +416,13 @@ cutter.recipeBuilder()
 	.duration(784)
 	.EUt(30)
 	.buildAndRegister();
+
+// Nature's Compass
+recipes.remove(<naturescompass:naturescompass>);
+recipes.addShaped(<naturescompass:naturescompass>, 
+	[[<ore:treeSapling>, <minecraft:compass>, <ore:treeSapling>],
+	[<ore:logWood>, <metaitem:prospector.lv>, <ore:logWood>],
+	[<ore:treeSapling>, <ore:logWood>, <ore:treeSapling>]]);
 
 // Tooltips
 
