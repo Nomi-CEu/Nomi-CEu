@@ -60137,7 +60137,7 @@
     },
     "976:10": {
       "preRequisites:11": [
-        1023
+        1028
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -60252,7 +60252,7 @@
     "979:10": {
       "preRequisites:11": [
         988,
-        1020
+        1027
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -60398,7 +60398,7 @@
     },
     "983:10": {
       "preRequisites:11": [
-        1024
+        1029
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -60512,7 +60512,7 @@
     },
     "986:10": {
       "preRequisites:11": [
-        1025
+        1032
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62887,6 +62887,221 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1027:10": {
+      "preRequisites:11": [
+        1028
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "light_fuel"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Light Fuel",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1027,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1028:10": {
+      "preRequisites:11": [
+        1029
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "sulfuric_light_fuel"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Sulfuric Light Fuel",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1028,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1029:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Oil, Raw Oil or Heavy Oil",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1029,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1030:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "oil_light"
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Light Oil",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1030,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1031:10": {
+      "preRequisites:11": [
+        990,
+        989
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "\u0027Oxygen\u0027 and \u0027Sulfur\u0027",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1031,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "1032:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:reeds"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Plant Matter",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1032,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -69812,42 +70027,42 @@
           "y:3": 204
         },
         "79:10": {
-          "id:3": 1022,
+          "id:3": 1027,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 60
         },
         "80:10": {
-          "id:3": 1023,
+          "id:3": 1028,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 24
         },
         "81:10": {
-          "id:3": 1024,
+          "id:3": 1029,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": -12
         },
         "82:10": {
-          "id:3": 1025,
+          "id:3": 1030,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": -12
         },
         "83:10": {
-          "id:3": 1026,
+          "id:3": 1031,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -144,
           "y:3": 36
         },
         "84:10": {
-          "id:3": 1027,
+          "id:3": 1032,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
