@@ -378,12 +378,12 @@ item.contenttweaker.dark_red_coal.name=Dark Red Coal
 
 item.contenttweaker.hand_framing_tool.name=Hand Framing Tool
 
-item.contenttweaker.hand_framing_tool.desc1=Frame your tools by hand!
+item.contenttweaker.hand_framing_tool.desc1=Frame your drawers by hand!
 item.contenttweaker.hand_framing_tool.desc2=The Hand Framing Tool lets you frame drawers already placed in the world.
 item.contenttweaker.hand_framing_tool.desc3=To do this, the tool itself needs to be framed in a crafting table. See the item's crafting table recipes in JEI.
 item.contenttweaker.hand_framing_tool.desc4=Then, once the tool is framed, right clicking any drawers in-world will frame them.
-item.contenttweaker.hand_framing_tool.desc5=Optionally, the tool can be filled with sticks using the crafting table recipe. Up to a stack of sticks will be consumed from each slot.
-item.contenttweaker.hand_framing_tool.desc6=The tool can then be used to convert existing unframed drawers into framed drawers, consuming 8 sticks to do so.
+item.contenttweaker.hand_framing_tool.desc5=When right clicking any wood-type drawers in world, they will be turned into framed drawers. 
+item.contenttweaker.hand_framing_tool.desc6=The frames/decorations will also be applied to them.
 
 item.contenttweaker.pulsatingdust.name=Pulsating Dust
 item.contenttweaker.pulsatingmesh.name=Pulsating Mesh
