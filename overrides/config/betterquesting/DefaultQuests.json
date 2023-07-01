@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -3700,25 +3699,24 @@
     "51:10": {
       "preRequisites:11": [
         103,
-        259,
-        282
+        259
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Inscribers§r are machines used to make §6inscribed circuits§r for §bApplied Energistics§r.",
+          "desc:8": "§3Forming Presses§r are machines used to make §6inscribed circuits§r for §bApplied Energistics§r. Later on, they\u0027re used for §6Laminated Glass§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 426,
             "OreDict:8": "",
-            "id:8": "appliedenergistics2:inscriber"
+            "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Inscriber",
+          "name:8": "Forming Press",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -3756,9 +3754,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 426,
               "OreDict:8": "",
-              "id:8": "appliedenergistics2:inscriber"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -4641,7 +4639,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bApplied Energistics§r uses §6Storage Cells§r as its primary means of digital item and fluid storage.\n\nAll unformatted Storage Cells are limited to at most 63 distinct item types, with the first item of each new type taking up a chunk of the total bytes of cell storage, and subsequent items of existing types taking a small number of bytes thereafter.\n\nA §61k ME Storage Cell§r is the first and smallest cell for storing items. If you are going to be storing many different kinds of items in your network, you will need to make an §6ME Drive§r and fill it with multiple Storage Cells.\n\nThe §64k ME Storage Cell§r is the next size up. With four times the bytes it holds substantially more items per type, but it requires a more advanced technology than you currently have available: AE §6Processors§r made in an §3Inscriber§r.",
+          "desc:8": "§bApplied Energistics§r uses §6Storage Cells§r as its primary means of digital item and fluid storage.\n\nAll unformatted Storage Cells are limited to at most 63 distinct item types, with the first item of each new type taking up a chunk of the total bytes of cell storage, and subsequent items of existing types taking a small number of bytes thereafter.\n\nA §61k ME Storage Cell§r is the first and smallest cell for storing items. If you are going to be storing many different kinds of items in your network, you will need to make an §6ME Drive§r and fill it with multiple Storage Cells.\n\nThe §64k ME Storage Cell§r is the next size up. With four times the bytes it holds substantially more items per type, but it requires a more advanced technology than you currently have available: AE §6Processors§r made in §3Circuit Assemblers§r, requiring §6Printed Circuits§r made in §3Forming Presses§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7144,7 +7142,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Engineering Processors§r are made from a §6Diamond Plate§r, a §6Silicon Plate§r, and any tier one circuit.\n\nRun the plates through the respective §3Inscribers§r with §aPresses§r to make the printed plates, then combine the plates and circuit to form the Engineering Processor.",
+          "desc:8": "§6Engineering Processors§r are made from a §6Diamond Plate§r, a §6Silicon Plate§r, and any tier one circuit.\n\nRun the plates through the respective §3Forming Presses§r with §aInscriber Presses§r to make the printed plates, then combine the plates and circuit in §6Circuit Assembler§r to form the Engineering Processor.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7278,7 +7276,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Logic Processors§r are made from a §6Gold Plate§r, a §6Silicon Plate§r, and any tier one circuit.\n\nRun the plates through the respective §3Inscribers§r with §aPresses§r to make the printed plates, then combine the plates and circuit to form the Logic Processor.",
+          "desc:8": "§6Logic Processors§r are made from a §6Gold Plate§r, a §6Silicon Plate§r, and any tier one circuit.\n\nRun the plates through the respective §3Forming Presses§r with §aInscriber Presses§r to make the printed plates, then combine the plates and circuit in §6Circuit Assembler§r to form the Logic Processor.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7345,7 +7343,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aPresses§r are needed for §3Inscribers§r.\n\nIf you like exploring you can find them in meteors with a §aMeteor Compass§r.\n\nIf you don\u0027t want to do that, or are having trouble finding one you need, feel free to etch them yourself with a §3Precision Laser Engraver§r.",
+          "desc:8": "§aPresses§r are needed for §3Forming Presses§r.\n\nIf you like exploring you can find them in meteors with a §aMeteor Compass§r.\n\nIf you don\u0027t want to do that, or are having trouble finding one you need, feel free to etch them yourself with a §3Precision Laser Engraver§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7498,7 +7496,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Calculation Processors§r are made from a §6Certus Plate§r, a §6Silicon Plate§r, and any §6tier one circuit§r.\n\nRun the plates through the respective §3Inscribers§r with §aPresses§r to make the printed plates, then combine the plates and circuit to form the Calculation Processor.",
+          "desc:8": "§6Calculation Processors§r are made from a §6Certus Plate§r, a §6Silicon Plate§r, and any §6tier one circuit§r.\n\nRun the plates through the respective §3Forming Presses§r with §aInscriber Presses§r to make the printed plates, then combine the plates and circuit in §6Circuit Assembler§r to form the Calculation Processor.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9791,25 +9789,23 @@
       }
     },
     "140:10": {
-      "preRequisites:11": [
-        100
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Advanced Inscribers§r are much easier to work with for automation purposes, since you can insert more than a single item at a time and you can lock §aPresses§r in place.\n\nYou can automate these nicely with processing patterns in an §aME Interface§r. They don\u0027t auto-eject items though, so you will need to pull the finished items out.\n\nThese can do any recipe that normal §3Inscribers§r can.",
+          "desc:8": "",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "ae2stuff:inscriber"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Advanced Inscriber",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -9818,41 +9814,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 140,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "ae2stuff:inscriber"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -16277,7 +16247,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bApplied Energistics§r uses §aPresses§r found in chests at the heart of meteors as templates for §3Inscribers§r to make §6inscribed circuits§r.\n\nThis compass will lead you to the nearest meteor impact. Use your favorite mining tools to smash through the §6Skystone§r shell and get to the juicy center where the §6Skystone Chest§r with the plate is found.\n\nPlease note that while they\u0027re often in a big crater, the meteors might be buried underground; when the compass is spinning wildly, you\u0027re right on top of one.",
+          "desc:8": "§bApplied Energistics§r uses §aPresses§r found in chests at the heart of meteors as templates for §3Forming Presses§r to make §6inscribed circuits§r.\n\nThis compass will lead you to the nearest meteor impact. Use your favorite mining tools to smash through the §6Skystone§r shell and get to the juicy center where the §6Skystone Chest§r with the plate is found.\n\nPlease note that while they\u0027re often in a big crater, the meteors might be buried underground; when the compass is spinning wildly, you\u0027re right on top of one.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61938,7 +61908,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §664k ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. \n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nAfter you have made the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring Multiblock§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, §cNOT the Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §664k ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. \n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nAfter you have made the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring Multiblock§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into a §3Circuit Assembler§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, §cNOT the Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -68987,153 +68957,146 @@
           "y:3": 552
         },
         "26:10": {
-          "id:3": 140,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 6,
-          "y:3": 516
-        },
-        "27:10": {
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 276
         },
-        "28:10": {
+        "27:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 312
         },
-        "29:10": {
+        "28:10": {
           "id:3": 259,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 6,
           "y:3": 348
         },
-        "30:10": {
+        "29:10": {
           "id:3": 282,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -90,
           "y:3": 384
         },
-        "31:10": {
+        "30:10": {
           "id:3": 404,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
           "y:3": 690
         },
-        "32:10": {
+        "31:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 6,
           "y:3": 690
         },
-        "33:10": {
+        "32:10": {
           "id:3": 408,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 6,
           "y:3": 642
         },
-        "34:10": {
+        "33:10": {
           "id:3": 494,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
           "y:3": 480
         },
-        "35:10": {
+        "34:10": {
           "id:3": 729,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 444
         },
-        "36:10": {
+        "35:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 642
         },
-        "37:10": {
+        "36:10": {
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -138,
           "y:3": 396
         },
-        "38:10": {
+        "37:10": {
           "id:3": 918,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 480
         },
-        "39:10": {
+        "38:10": {
           "id:3": 919,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 516
         },
-        "40:10": {
+        "39:10": {
           "id:3": 967,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
           "y:3": 642
         },
-        "41:10": {
+        "40:10": {
           "id:3": 1000,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 642
         },
-        "42:10": {
+        "41:10": {
           "id:3": 1001,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 552
         },
-        "43:10": {
+        "42:10": {
           "id:3": 1016,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
           "y:3": 216
         },
-        "44:10": {
+        "43:10": {
           "id:3": 1017,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -22,
           "y:3": 216
         },
-        "45:10": {
+        "44:10": {
           "id:3": 1018,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 444
         },
-        "46:10": {
+        "45:10": {
           "id:3": 1020,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 642
         },
-        "47:10": {
+        "46:10": {
           "id:3": 1022,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -69463,7 +69426,7 @@
       "livesdef:3": 3,
       "livesmax:3": 10,
       "pack_name:8": "Nomifactory",
-      "pack_version:3": 13,
+      "pack_version:3": 14,
       "party_enable:1": 1
     }
   }

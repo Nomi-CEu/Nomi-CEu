@@ -47,14 +47,7 @@ recipes.addShaped(<appliedenergistics2:drive>, [
 	[<metaitem:plateAluminium>,<metaitem:emitter.mv>,<metaitem:plateAluminium>],
 	[<ore:circuitLv>,<appliedenergistics2:chest>,<ore:circuitLv>],
 	[<metaitem:plateAluminium>,<metaitem:sensor.mv>,<metaitem:plateAluminium>]]);	
-	
-//ME Inscriber
-recipes.remove(<appliedenergistics2:inscriber>);
-recipes.addShaped(<appliedenergistics2:inscriber>, [
-	[<metaitem:plateDarkSteel>,<metaitem:electric.piston.mv>,<metaitem:plateDarkSteel>],
-	[<appliedenergistics2:material:7>,<meta_tile_entity:hull.mv>,<metaitem:plateDarkSteel>],
-	[<metaitem:plateDarkSteel>,<metaitem:electric.piston.mv>,<metaitem:plateDarkSteel>]]);		
-	
+
 //Pattern
 recipes.remove(<appliedenergistics2:material:52>);
 recipes.addShaped(<appliedenergistics2:material:52> * 8, [
@@ -437,3 +430,73 @@ mods.jei.JEI.removeAndHide(<appliedenergistics2:material:0>);
 
 <appliedenergistics2:part:470>.addTooltip(format.green(format.italic("Made by right-clicking ME P2P Tunnel with any GregTech wire or cable.")));
 <appliedenergistics2:part:460>.addTooltip(format.green(format.italic("The basis for all other P2P Tunnels.")));
+
+//ME Inscriber
+recipes.remove(<appliedenergistics2:inscriber>);
+recipes.remove(<ae2stuff:inscriber>);
+
+<appliedenergistics2:inscriber>.addTooltip(format.green(format.italic("Deprecated. Use GT Forming Presses.")));
+<ae2stuff:inscriber>.addTooltip(format.green(format.italic("Deprecated. Use GT Forming Presses.")));
+
+// Printed Silicon
+forming_press
+	.recipeBuilder()
+	.inputs([<ore:plateSilicon>])
+	.notConsumable(<appliedenergistics2:material:19>)
+	.outputs([<appliedenergistics2:material:20>]).EUt(120).duration(20 * 5).buildAndRegister();
+
+// Printed Engineering
+forming_press
+	.recipeBuilder()
+	.inputs([<ore:plateDiamond>])
+	.notConsumable(<appliedenergistics2:material:14>)
+	.outputs([<appliedenergistics2:material:17>]).EUt(120).duration(20 * 5).buildAndRegister();
+
+// Printed Logic
+forming_press
+	.recipeBuilder()
+	.inputs([<ore:plateGold>])
+	.notConsumable(<appliedenergistics2:material:15>)
+	.outputs([<appliedenergistics2:material:18>]).EUt(120).duration(20 * 5).buildAndRegister();
+
+// Printed Calculation
+forming_press
+	.recipeBuilder()
+	.inputs([<ore:plateCertusQuartz>])
+	.notConsumable(<appliedenergistics2:material:13>)
+	.outputs([<appliedenergistics2:material:16>]).EUt(120).duration(20 * 5).buildAndRegister();
+
+// Magnet Card
+polarizer
+	.recipeBuilder()
+	.inputs([<appliedenergistics2:material:25>])
+	.outputs([<appliedenergistics2:material:60>]).EUt(120).duration(20 * 5).buildAndRegister();
+
+// Quantum Card
+Inscriber.removeRecipe(<appliedenergistics2:material:59>);
+
+// Processors
+val fluidInputs as ILiquidStack[] = [<liquid:soldering_alloy> * 72, <liquid:tin> * 144];
+val processorRecipes as IItemStack[IIngredient]  = {
+	<appliedenergistics2:material:17>: <appliedenergistics2:material:24>,
+	<appliedenergistics2:material:18>: <appliedenergistics2:material:22>,
+	<appliedenergistics2:material:16>: <appliedenergistics2:material:23>,
+};
+
+for fluidInput in fluidInputs {
+	// Processors
+    for input, output in processorRecipes {
+		circuit_assembler.recipeBuilder()
+			.inputs([<appliedenergistics2:material:20>, <ore:circuitLv>, input as IIngredient])
+			.fluidInputs([fluidInput])
+			.outputs([output as IItemStack])
+			.duration(20 * 10).EUt(16).buildAndRegister();
+	}
+
+	// Quantum Card
+	circuit_assembler.recipeBuilder()
+		.inputs([<appliedenergistics2:material:47> * 2, <appliedenergistics2:material:28>])
+		.fluidInputs([fluidInput])
+		.outputs([<appliedenergistics2:material:59>])
+		.duration(20 * 10).EUt(16).buildAndRegister();
+}
