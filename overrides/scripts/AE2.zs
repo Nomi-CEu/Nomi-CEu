@@ -1,5 +1,8 @@
 import mods.gregtech.recipe.RecipeMap;
 import mods.appliedenergistics2.Inscriber;
+import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
+import crafttweaker.liquid.ILiquidStack;
 
 // standardise fluix dust
 <ore:dustFluix>.add(<appliedenergistics2:material:8>);
