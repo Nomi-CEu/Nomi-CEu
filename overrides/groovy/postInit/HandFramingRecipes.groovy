@@ -13,19 +13,4 @@ tagCompound.setTag("MatF", item('minecraft:sea_lantern').writeToNBT(new NBTTagCo
 var result = item('contenttweaker:hand_framing_tool')
 result.setTagCompound(tagCompound)
 
-crafting.shapelessBuilder()
-        .name("contenttweaker:hft_decorate")
-        .output(item('contenttweaker:hand_framing_tool'))
-        .input(item('contenttweaker:hand_framing_tool'))
-        .input(new IngredientFrame())
-        .input(new IngredientFrame())
-        .input(new IngredientFrame())
-        .recipeFunction({stack, map, info ->
-           for (var key : map.keySet()) {
-                println(key + " : " + map.get(key).getDisplayName())
-           }
-
-           println()
-           println(stack.getDisplayName())
-        })
-        .register()
+crafting.addShapeless("contenttweaker:hft_decorate", result, [item('contenttweaker:hand_framing_tool'), item('minecraft:stick'), item('minecraft:wool', 7)])
