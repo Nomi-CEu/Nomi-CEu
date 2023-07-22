@@ -3059,7 +3059,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§b§2GTCEu Fluid Pipes have been reworked and work much better now. There are also Quadruple and Nonuple pipes for transporting multiple fluid types through the same block. Their advantage over EnderIO Fluid Conduits is their higher throughput - 414 mB/t for a low-tier (Normal Potin) pipe.\n\n§rHowever, EnderIO Fluid Conduits still have the advantage of being EnderIO Conduits, allowing them to fit in the same block as other Conduits. Pick your poison.",
+          "desc:8": "§b§2GTCEu Fluid Pipes have been reworked and work much better now. There are also Quadruple and Nonuple pipes for transporting multiple fluid types through the same block. Their advantage over EnderIO Fluid Conduits is their higher throughput - 192 L/t for a low-tier (Normal Potin) pipe.\n\n§rHowever, EnderIO Fluid Conduits still have the advantage of being EnderIO Conduits, allowing them to fit in the same block as other Conduits. Pick your poison.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
