@@ -62790,6 +62790,71 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1027:10": {
+      "preRequisites:11": [
+        967
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Handling §6Patterns§r gets tedious pretty quickly, from not having enough slots to move tens of them at a time, to having to multiply them when upgrading your §3Large Machines§r, which, when equipped with §3Parallel Control Hatches§r, may require you to supply more than one item at a time to utilize them to their fullest.\n\nYou don\u0027t want to supply one ingot and get two wires when your §3Large Wire Factory§r can take §e64 ingots§r and make §e128 wires§r at a time, right?\n\nThat\u0027s where the the §6Pattern Multi-Tool§r comes into play. Granted, multiplying patterns early on is not something that you need right away, but there\u0027s more to this little thing.\n\nThe base functionalidy it provides is its UI, which makes it possible to §emove, multiply, divide and clear patterns in bulk§r. When an §3ME Interface§r is right-clicked, the multi-tool directly interfaces with it as well.\n\nMuch like the §eNetwork Tool§r, the multi-tool is capable of adding its own UI to all relevant §3Terminals§r where patterns can be utilized, most notably §3ME Interface Terminals§r, allowing you to adjust your patterns on the fly.\n\nAs a bonus, it can also hold §6Blank Patterns§r, injecting them into your §3Pattern Terminals§r may you ever run out of them. Fill this thing with blanks!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:pattern_multiplier"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Mastering Patterns",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1027,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:pattern_multiplier"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -69139,6 +69204,13 @@
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 516
+        },
+        "48:10": {
+          "id:3": 1027,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 690
         }
       }
     },
