@@ -3621,7 +3621,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pressurized Fluid Conduits§r will be your main way of transporting fluids for now.\n\n§2GTCEu Fluid Pipes§r are also available, much improved from CE. Their advantage is higher §dthroughput§r, but they have limitations on the kinds of fluids (§eacids, gases§r, etc) they can transport safely. Check each pipe material\u0027s tooltip for details.",
+          "desc:8": "§6Pressurized Fluid Conduits§r will be your main way of transporting fluids for now. They have the advantage of being §6Conduits§r, allowing them to fit in the same block as other §6Conduits§r. \n\n§2GTCEu Fluid Pipes§r are also available, much improved from CE. Their advantage is higher §dthroughput§r, but they have limitations on the kinds of fluids (§eacids, gases§r, etc) they can transport safely. Check each pipe material\u0027s tooltip for details.\n\nThere are also §6Quadruple and Nonuple Pipes§r for transporting multiple fluid types through the same block.\n\nPick your poison.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3688,7 +3688,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 324,
+              "Damage:2": 2037,
               "OreDict:8": "",
               "id:8": "gregtech:fluid_pipe_normal"
             }
