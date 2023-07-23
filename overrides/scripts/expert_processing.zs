@@ -365,7 +365,7 @@ large_chemical_reactor.recipeBuilder()
 chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:naquadah_oxide_petro_solution> * 1000)
     .inputs(<ore:dustAerotheum> * 4)
-    .outputs(<ore:dustBasalz>.firstItem * 8)
+    .outputs(<ore:dustBasalz>.firstItem * 4)
     .fluidOutputs(<liquid:naquadah_oxide_aero_solution> * 1000)
     .duration(300).EUt(240).buildAndRegister();
 
