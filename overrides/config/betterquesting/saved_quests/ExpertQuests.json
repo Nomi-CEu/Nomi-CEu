@@ -43906,7 +43906,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Central Monitor allows you to... monitor... parts of your factory. Coupled with Wireless Digital Interface Covers, you can see the status, capacity, and more of machines, and even access their GUI remotely!\n\nCheck out the GTCEu wiki on GitHub for more of its details.",
+          "desc:8": "The §3Central Monitor§r enables you to oversee sections of your factory §eremotely§r! When paired with the §aWireless Digital Interface covers§r, it becomes possible for you to not only view §ethe status and capacity of your machines, but also access their GUIs and display the entirety of your §3multi-blocks§e right on the screen§r, providing §econvenient access to all relevant parts without leaving your seat§r!\n\nThe Central Monitor itself is a multi-block, capable of supporting a screen ranging §ein size from 3x2 to 14x9§r. Do remember to configure it to the correct size before building.\n\nSetting it up is straightforward. Start by crafting a Wireless Digital Interface. Once it\u0027s ready and in your hand, sneak-right click on the Central Monitor, then place it on any machine, be it a single- or multi-block, just like any other cover. After installation, right-click the Central Monitor and navigate to an available slot. The quantity of slots will depend on the Central Monitor\u0027s size.\n\nOnce in the slot menu, you\u0027ll see §ethe selected machine appearing on the right side of the screen§r. You can now choose the machine and, subject to the §aPlugin§r installed, exhibit pertinent information on the display. Most plugins offer the luxury of §eaccessing the chosen machine directly from the screen§r.\n\nHere\u0027s a snapshot of what different Plugins can do:\n\n- §a§lText Plugin§r: as the name suggests, it enables you to §ehave 16 different strings per Plugin§r, each having its own color.\n\n- §a§lOnline Picture Plugin§r: ideal for showcasing your favorite memes. Simply feed it a direct link to an image, and it will display it for all to see.\n\n- §a§lGUI Proxy Plugin§r: attaches the GUI of a selected machine to the screen, allowing direct machine access with a simple right-click. §cDon\u0027t forget to activate Proxy Mode on the right side of the menu!§r\n\n- §a§lAdvanced Monitor Proxy Plugin§r: this one takes the cake. It enables you to project entire multi-blocks onto the screen, giving you direct access to any visible part of the multi-block. This can all be done without ever needing to return to the actual machine.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49783,6 +49783,69 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "936:10": {
+      "preRequisites:11": [
+        132
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Did you know that you now have the ability to build §3multi-block machines§r automatically? If you weren\u0027t aware, you\u0027re in for a surprise!\n\nTo get started, navigate to your §6Terminal§r, select §eApp Store§r, and scroll down until you locate §eMultiblock Helper§r. Inside, you\u0027ll discover an upgrade point titled §e\"3D Builder\"§r that\u0027s waiting for your attention. You can activate this upgrade by submitting §6two Workstations§r and §6four HV Emitters§r.\n\nOnce activated, sneak-right click on any multi-block controller with the Terminal in your hand to establish a connection. From the main screen, enter the Multiblock Helper app and you\u0027ll find that the 3D Builder has now been unlocked. Click on §e\"Automatic Build\"§r and watch as your Terminal takes blocks from your inventory and places them in the correct spots.\n\nBe aware, however, that the placements might not always match your expectations, especially when using §3Buses§r and §3Hatches§r. As a precaution, you might want to avoid having these in your inventory during the build process.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 465,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1",
+            "tag:10": {
+              "terminal:10": {
+                "_creative:1": 1
+              }
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Auto-Build Your Multi-Blocks!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 936,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 630,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            },
+            "1:10": {
+              "Count:3": 4,
+              "Damage:2": 219,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -51036,6 +51099,13 @@
           "sizeY:3": 32,
           "x:3": 272,
           "y:3": 20
+        },
+        "108:10": {
+          "id:3": 936,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 696,
+          "y:3": -420
         }
       }
     },
