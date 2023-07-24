@@ -20,7 +20,7 @@ export default async function transformManifestVersion(): Promise<void> {
 
 		modpackManifest.version = tag;
 	}
-	// If we're buildig a release candidate, transform it appropriately.
+	// If we're building a release candidate, transform it appropriately.
 	else if (process.env.RC_VERSION) {
 		const rcVer = process.env.RC_VERSION;
 		const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
@@ -30,7 +30,8 @@ export default async function transformManifestVersion(): Promise<void> {
 			.filter(Boolean)
 			.join(" - ");
 
-		modpackManifest.version = [rcVer, "rc"].join("-");
+		modpackManifest.version = rcVer;
+		// modpackManifest.version = [rcVer, "rc"].join("-"); // No need for rc at end of name
 	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
