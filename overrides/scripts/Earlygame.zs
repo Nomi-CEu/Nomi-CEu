@@ -420,6 +420,25 @@ recipes.addShaped(<naturescompass:naturescompass>,
 	[<ore:logWood>, <metaitem:prospector.lv>, <ore:logWood>],
 	[<ore:treeSapling>, <ore:logWood>, <ore:treeSapling>]]);
 
+// Temp Iron Door Dupe Fix
+<recipemap:arc_furnace>.findRecipe(30, [<minecraft:iron_door>], [<liquid:oxygen> * 236]).remove();
+<recipemap:macerator>.findRecipe(8, [<minecraft:iron_door>], null).remove();
+
+arc_furnace.recipeBuilder()
+    .inputs(<minecraft:iron_door>)
+    .fluidInputs(<liquid:oxygen> * 236)
+    .outputs(<metaitem:ingotWroughtIron> * 2)
+    .duration(236)
+    .EUt(32)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<minecraft:iron_door>)
+    .outputs(<metaitem:dustIron> * 2)
+    .duration(236)
+    .EUt(8)
+    .buildAndRegister();
+
 // Tooltips
 
 // Not needed because of better tooltips.
