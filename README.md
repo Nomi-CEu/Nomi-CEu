@@ -1,13 +1,19 @@
-# Nomi-CEu
-[![Downloads](http://cf.way2muchnoise.eu/full_594351_downloads.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu) [![MC Version](http://cf.way2muchnoise.eu/versions/nomi-ceu.svg)](https://www.curseforge.com/minecraft/modpacks/nomi-ceu)
+<p align="center"><img src="https://github.com/Nomi-CEu/nomi-ceu/assets/103940576/672808a8-0ad0-4d07-809e-08336a928909" alt="Logo"></p>
+<h1 align="center">Nomifactory CEu</h1>
+<p align="center"><b><i>Fork of <a href="https://github.com/Nomifactory/Nomifactory"> Nomifactory</a>, using <a href="https://github.com/GregTechCEu/GregTech"> GregTech CEu</a> and its related mods.</i></b></p>
+<h1 align="center">
+    <a href="https://github.com/Nomi-CEu/nomi-ceu/issues"><img src="https://img.shields.io/github/issues/Nomi-CEu/nomi-ceu?style=for-the-badge&color=orange" alt="Issues"></a>
+    <a href="https://github.com/Nomi-CEu/nomi-ceu/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/nomi-ceu?style=for-the-badge" alt="License"></a>
+    <a href="https://discord.com/invite/zwQzqP8b6q"><img src="https://img.shields.io/discord/927050775073534012?color=5464ec&label=Discord&style=for-the-badge" alt="Discord"></a>
+    <br>
+    <a href="https://www.curseforge.com/minecraft/modpacks/nomi-ceu"><img src="https://cf.way2muchnoise.eu/594351.svg?badge_style=for_the_badge" alt="CurseForge"></a>
+    <a href="https://www.curseforge.com/minecraft/modpacks/nomi-ceu"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_594351_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
+    <a href="https://github.com/Nomi-CEu/nomi-ceu/releases"><img src="https://img.shields.io/github/downloads/Nomi-CEu/nomi-ceu/total?sort=semver&logo=github&label=&style=for-the-badge&color=2d2d2d&labelColor=545454&logoColor=FFFFFF" alt="GitHub"></a>
+</h1>
 
-[![GitHub Issues](https://img.shields.io/github/issues/Nomi-CEu/nomi-ceu?color=informational&label=Issues&logo=github)](https://github.com/Nomi-CEu/nomi-ceu/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Nomi-CEu/nomi-ceu?color=informational&label=Pull%20Requests&logo=github)](https://github.com/Nomi-CEu/nomi-ceu/pulls) [![License](https://img.shields.io/github/license/Nomi-CEu/nomi-ceu?color=informational&label=License&logo=github)](https://github.com/Nomi-CEu/nomi-ceu/blob/main/LICENSE.md)
-
-[![Discord](https://img.shields.io/discord/927050775073534012?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.com/invite/zwQzqP8b6q)
-
-Port of [Nomifactory](https://github.com/Nomifactory/Nomifactory) 1.3 to [GregTech CEu](https://github.com/GregTechCEu/GregTech) and its related mods, with updated quests, progression and balance changes to adapt to CEu's changes, and to extend on the pack.  
-
-## Featuring:
+## Features:
+- GregTech Community Edition Unofficial, and its related mods, which are actively developed
+- Updated quests, progression and balance changes
 - Overhauled circuit progression closely following CEu stock   
 - Multiblock versions of nearly all machines, including EBF, Freezer and DT, processing up to 256 recipes in parallel  
 - New processing chains for Naquadah, Advanced SMDs, Crystal Chips, and more  
@@ -72,6 +78,7 @@ If there are issues or crashes with Draconic Evolution, please report them to [h
 
 ## Credits
 Original pack by [Exaxxion](https://github.com/Exaxxion).  
+README.md base from [Gregtech CEu](https://github.com/GregTechCEu/GregTech).  
 Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
 GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).   
 Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/). ([Permission](https://ibb.co/bBpksq0) at [this message](https://discord.com/channels/771187253937438762/774353150278369351/938438074503942184) in [FurfSky Reborn server](https://discord.gg/fsr)).  
