@@ -158,7 +158,7 @@ export function makeArtifactNameBody(baseName: string): string {
 	}
 	// RC.
 	else if (process.env.RC_VERSION) {
-		return `${baseName}-${process.env.RC_VERSION.replace(/^v/, "")}-rc`;
+		return `${baseName}-${process.env.RC_VERSION.replace(/^v/, "")}`;
 	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
