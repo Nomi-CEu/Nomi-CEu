@@ -1,14 +1,14 @@
-<p align="center"><img src="https://github.com/Nomi-CEu/nomi-ceu/assets/103940576/672808a8-0ad0-4d07-809e-08336a928909" alt="Logo"></p>
+<p align="center"><img src="https://github.com/Nomi-CEu/Nomi-CEu/assets/103940576/672808a8-0ad0-4d07-809e-08336a928909" alt="Logo"></p>
 <h1 align="center">Nomifactory CEu</h1>
 <p align="center"><b><i>Fork of <a href="https://github.com/Nomifactory/Nomifactory"> Nomifactory</a>, using <a href="https://github.com/GregTechCEu/GregTech"> GregTech CEu</a> and its related mods.</i></b></p>
 <h1 align="center">
-    <a href="https://github.com/Nomi-CEu/nomi-ceu/issues"><img src="https://img.shields.io/github/issues/Nomi-CEu/nomi-ceu?style=for-the-badge&color=orange" alt="Issues"></a>
-    <a href="https://github.com/Nomi-CEu/nomi-ceu/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/nomi-ceu?style=for-the-badge" alt="License"></a>
+    <a href="https://github.com/Nomi-CEu/Nomi-CEu/issues"><img src="https://img.shields.io/github/issues/Nomi-CEu/Nomi-CEu?style=for-the-badge&color=orange" alt="Issues"></a>
+    <a href="https://github.com/Nomi-CEu/Nomi-CEu/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/Nomi-CEu?style=for-the-badge" alt="License"></a>
     <a href="https://discord.com/invite/zwQzqP8b6q"><img src="https://img.shields.io/discord/927050775073534012?color=5464ec&label=Discord&style=for-the-badge" alt="Discord"></a>
     <br>
-    <a href="https://www.curseforge.com/minecraft/modpacks/nomi-ceu"><img src="https://cf.way2muchnoise.eu/594351.svg?badge_style=for_the_badge" alt="CurseForge"></a>
-    <a href="https://www.curseforge.com/minecraft/modpacks/nomi-ceu"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_594351_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
-    <a href="https://github.com/Nomi-CEu/nomi-ceu/releases"><img src="https://img.shields.io/github/downloads/Nomi-CEu/nomi-ceu/total?sort=semver&logo=github&label=&style=for-the-badge&color=2d2d2d&labelColor=545454&logoColor=FFFFFF" alt="GitHub"></a>
+    <a href="https://www.curseforge.com/minecraft/modpacks/Nomi-CEu"><img src="https://cf.way2muchnoise.eu/594351.svg?badge_style=for_the_badge" alt="CurseForge"></a>
+    <a href="https://www.curseforge.com/minecraft/modpacks/Nomi-CEu"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_594351_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
+    <a href="https://github.com/Nomi-CEu/Nomi-CEu/releases"><img src="https://img.shields.io/github/downloads/Nomi-CEu/Nomi-CEu/total?sort=semver&logo=github&label=&style=for-the-badge&color=2d2d2d&labelColor=545454&logoColor=FFFFFF" alt="GitHub"></a>
 </h1>
 
 ## Features:
@@ -24,7 +24,7 @@
 - And more...  
 
 ## Server Setup and Information
-Details on how to setup a basic server, and some important server admin information, are listed [here.](https://github.com/Nomi-CEu/nomi-ceu/blob/main/serverfiles/README.md)
+Details on how to setup a basic server, and some important server admin information, are listed [here.](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/serverfiles/README.md)
 
 ## Addon Mods
 Nomi-CEu comes with addon scripts for the following mods. You can drop them into the mods folder, and their recipes will be adjusted accordingly.  
@@ -55,16 +55,16 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 #### Script Installation Instructions:
 ------
 ##### Windows:   
- - Download the script [here](https://raw.githubusercontent.com/Nomi-CEu/nomi-ceu/main/pack-mode-switcher.bat), and save it to the root directory of the pack (the same level as `\config`).
+ - Download the script [here](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.bat), and save it to the root directory of the pack (the same level as `\config`).
  - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
 
 ##### Apple/GNU/Linux:    
- - Run `curl -O https://raw.githubusercontent.com/Nomi-CEu/nomi-ceu/main/pack-mode-switcher.sh` to download the file.
+ - Run `curl -O https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh` to download the file.
  - Verify the contents with your editor of choice.
  - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
 ------
 
-#### Manual installation instructions are available [here](https://github.com/Nomi-CEu/nomi-ceu/blob/main/overrides/README.md).
+#### Manual installation instructions are available [here](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/overrides/README.md).
 
 ## Bansoukou
 This pack uses two bansoukou patches. 
