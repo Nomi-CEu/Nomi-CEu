@@ -37,7 +37,7 @@ Nomi-CEu comes with addon scripts for the following mods. You can drop them into
 \* Note: If you are adding these mods via the CurseForge app, remove the extra copy of AE2 (non-extended life), of which it might automatically download.
 
 ## Expert Mode 
-If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack. 
+If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition Fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack. 
 
 ### Highlights include:
 - Forced Peaceful Mode
