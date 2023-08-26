@@ -4009,7 +4009,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Alloy Smelter§f\n\n§3Smelt§f it into ingots, §ahammer§f it into §6Plates§f, and §acut§f them into §6Wires§f.",
+          "desc:8": "Use your newly acquired §3Alloy Smelter§f§  to make some new alloys!\n\n§eCopper§r alloyed with §eRedstone§r makes §6Red Alloy Ingots§r.\n\n§e§eIron§r alloyed with §eRedstone§r makes §6Conductive Iron Ingots§\n.\n\n§aHammer§r them into §6Plates§r, and §acut§r them into §6Wires§r.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4021,9 +4021,9 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "From Dusts To Wires",
+          "name:8": "From Ingots To Wires",
           "partysinglereward:1": 0,
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -4047,7 +4047,7 @@
             "0:10": {
               "Count:3": 16,
               "Damage:2": 2517,
-              "OreDict:8": "ingotRedAlloy",
+              "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             },
             "1:10": {
