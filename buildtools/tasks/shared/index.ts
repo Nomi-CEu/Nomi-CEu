@@ -106,7 +106,7 @@ async function makeChangelog() {
 
 	const old = JSON.parse(getFileAtRevision("manifest.json", since)) as ModpackManifest;
 	const current = modpackManifest;
-	const commitList = getChangeLog(since, to, [upath.join("..", modpackManifest.overrides)]);
+	const commitList = getChangeLog(since, to, [upath.join("..", modpackManifest.overrides), "manifest.json"]);
 
 	const builder: string[] = [];
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
