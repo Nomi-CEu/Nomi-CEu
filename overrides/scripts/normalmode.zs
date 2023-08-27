@@ -784,6 +784,9 @@ macerator.recipeBuilder()
 	.duration(25408)
 	.EUt(32)
 	.buildAndRegister();
+	
+// AA Drill Core Coin Tooltip
+<actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
 
 // Removals
 // GT
