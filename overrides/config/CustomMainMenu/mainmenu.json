@@ -121,6 +121,7 @@
       "slideshow": {
         "displayDuration": 100,
         "fadeDuration": 40,
+        "shuffle" : true,
         "images": [
           "minecraft:textures/gui/title/background/besoiobiy_1.png",
           "minecraft:textures/gui/title/background/besoiobiy_2.png",
