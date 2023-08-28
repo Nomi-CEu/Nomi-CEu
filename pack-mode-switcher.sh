@@ -1,7 +1,16 @@
 #!/usr/bin/env sh
+
+# Colors
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+POWDER_BLUE=$(tput setaf 153)
+MAGENTA=$(tput setaf 5)
+NORMAL=$(tput sgr0)
+
 touch .mode
 set -e
-echo "Nomifactory GTCEu Port / Pack mode switcher"
+printf "${MAGENTA}Nomifactory CEu | Pack Mode Switcher${NORMAL}"
 
 NORMAL_CFG=config-overrides/normal
 EXPERT_CFG=config-overrides/expert
@@ -9,17 +18,27 @@ TARGET=./config
 CURRENT_MODE="$(head .mode)"
 CURRENT_MODE=${CURRENT_MODE:="normal"}
 
-echo "Current Mode: $CURRENT_MODE"
+# Check if config-overrides dir exists
+if [[ ! -d "${NORMAL_CFG}" ]] || [[ ! -d "${EXPERT_CFG}" ]]; then
+  printf "\n\n${RED}Could not find \`config-overrides\` directory! \nMake sure you are in the \`/minecraft\` directory of your instance! (The one containing \`/config\`)${NORMAL}\n"
+  printf "${YELLOW}Otherwise, if you are in the \`/minecraft\` directory, please try reinstalling the pack.${NORMAL}\n"
+  exit 1
+fi
+
+# Capitalise First Letter (only works in bash 4+)
+[ "${BASH_VERSINFO:-0}" -ge 4 ] && CURRENT_MODE=${CURRENT_MODE^}
+
+printf "\n\n${YELLOW}Current Mode: ${CURRENT_MODE}${NORMAL}\n"
 
 if [ -z "$1" ]; then
-  echo -n "Set pack mode (Normal / Expert): "
+  printf "${POWDER_BLUE}Set Pack Mode: [Normal / Expert]: ${NORMAL}"
   read MODE
 else
   MODE="$1"
 fi
 
 case $MODE in
-    N|n|normal)
+    N|n|normal|Normal)
 
     cp -rf "$NORMAL_CFG/." ${TARGET} 
 
@@ -34,7 +53,7 @@ case $MODE in
     echo normal > .mode
   ;;
 
-  E|e|expert)
+  E|e|expert|Expert)
 
     cp -rf "$EXPERT_CFG/." ${TARGET}
 
@@ -49,9 +68,10 @@ case $MODE in
   ;;
 
   *)
-    echo -e "Error: Invalid input $MODE"
+    printf "\n${RED}Error: Invalid input ${MODE}!${NORMAL}\n"
+    printf "\n${POWDER_BLUE}Accepted Inputs:\n${YELLOW}- [Normal, normal, N, n]\n- [Expert, expert, E, e]${NORMAL}\n"
     exit 1
   ;;
 esac
 
-echo "Done!"
+printf "\n${GREEN}Complete!${NORMAL}\n"
