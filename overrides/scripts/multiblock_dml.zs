@@ -159,7 +159,7 @@ for mob, cost in mobs {
         .duration(301)
         .EUt(cost / 4 as int)
         .inputs(<deepmoblearning:polymer_clay>)
-        .notConsumable(itemUtils.getItem(model_prefix + mob))
+        .notConsumable(itemUtils.getItem(model_prefix + mob).withEmptyTag())
         .outputs(pristine_types[mob])
         .chancedOutput(itemUtils.getItem(pristine_prefix + mob), PRISTINE_CHANCE_FIXED * 100, 0)
         .buildAndRegister();
