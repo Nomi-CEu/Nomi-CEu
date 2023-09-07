@@ -40755,13 +40755,16 @@
       }
     },
     "775:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2GregTechCEu§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller §2with an empty hand§r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
+          "desc:8": "§bGregTech§r adds an §einteractive in-world preview§r for all §bGregTech§r multiblocks! §6Shift-right-click§r a placed controller §ewith an empty hand§r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the §efirst incorrect block§r it detects will be highlighted in red.\n\n§6Sneak-right-click§r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview.\n\n§6Sneak-left-click§r to go back to the previous layer, or close the preview from the full view.\n\nIn the §eJEI previews§r for multiblocks, §6left-click§r and drag the mouse to rotate the preview.\n\nAdditionally, you can §6right-click§r and drag the mouse to pan the preview or §6shift-right-click§r and drag to zoom in or out.\n\nSome blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50279,104 +50282,97 @@
           "y:3": 184
         },
         "50:10": {
-          "id:3": 775,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -444,
-          "y:3": 402
-        },
-        "51:10": {
           "id:3": 779,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -588,
           "y:3": 402
         },
-        "52:10": {
+        "51:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -560,
           "y:3": 160
         },
-        "53:10": {
+        "52:10": {
           "id:3": 788,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -540,
           "y:3": 402
         },
-        "54:10": {
+        "53:10": {
           "id:3": 789,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -540,
           "y:3": 354
         },
-        "55:10": {
+        "54:10": {
           "id:3": 805,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 232
         },
-        "56:10": {
+        "55:10": {
           "id:3": 814,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 80
         },
-        "57:10": {
+        "56:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 184
         },
-        "58:10": {
+        "57:10": {
           "id:3": 819,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -492,
           "y:3": 402
         },
-        "59:10": {
+        "58:10": {
           "id:3": 890,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -444,
           "y:3": 306
         },
-        "60:10": {
+        "59:10": {
           "id:3": 893,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -492,
           "y:3": 306
         },
-        "61:10": {
+        "60:10": {
           "id:3": 903,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
           "y:3": 304
         },
-        "62:10": {
+        "61:10": {
           "id:3": 919,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -444,
           "y:3": 258
         },
-        "63:10": {
+        "62:10": {
           "id:3": 926,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -444,
-          "y:3": 210
+          "y:3": 400
         },
-        "64:10": {
+        "63:10": {
           "id:3": 933,
           "sizeX:3": 32,
           "sizeY:3": 32,
@@ -55155,97 +55151,104 @@
           "y:3": 412
         },
         "49:10": {
+          "id:3": 775,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -228,
+          "y:3": 168
+        },
+        "50:10": {
           "id:3": 780,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": 224
         },
-        "50:10": {
+        "51:10": {
           "id:3": 786,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 60
         },
-        "51:10": {
+        "52:10": {
           "id:3": 803,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 96
         },
-        "52:10": {
+        "53:10": {
           "id:3": 808,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 96
         },
-        "53:10": {
+        "54:10": {
           "id:3": 813,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
           "y:3": 60
         },
-        "54:10": {
+        "55:10": {
           "id:3": 817,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 224
         },
-        "55:10": {
+        "56:10": {
           "id:3": 902,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 36,
           "y:3": -30
         },
-        "56:10": {
+        "57:10": {
           "id:3": 909,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 24,
           "y:3": 216
         },
-        "57:10": {
+        "58:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 332
         },
-        "58:10": {
+        "59:10": {
           "id:3": 913,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 24
         },
-        "59:10": {
+        "60:10": {
           "id:3": 914,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
           "y:3": 132
         },
-        "60:10": {
+        "61:10": {
           "id:3": 927,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 24
         },
-        "61:10": {
+        "62:10": {
           "id:3": 932,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 132
         },
-        "62:10": {
+        "63:10": {
           "id:3": 937,
           "sizeX:3": 24,
           "sizeY:3": 24,
