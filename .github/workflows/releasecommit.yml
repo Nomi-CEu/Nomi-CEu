@@ -1,4 +1,4 @@
-name: Generate Release Commit
+name: Create Release Commit
 
 on:
   workflow_dispatch:
@@ -13,9 +13,43 @@ on:
       release_type:
         description: 'Release Type'
         type: choice
-        default: 'release'
+        default: 'Release'
         options:
-          - 'release'
-          - 'beta'
-          - 'alpha'
+          - 'Release'
+          - 'Beta Release'
+          - 'Alpha Release'
+jobs:
+  deploy:
+    name: Create Release Commit (${{ github.event.inputs.version }})
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_BRANCH: ${{ github.event.inputs.branch }}
+      VERSION: ${{ github.event.inputs.version }}
+      RELEASE_TYPE: ${{ github.event.inputs.release_type }}
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.inputs.tag }}
+          
+      - name: Check For Existing Tag
+        run: |
+            if git rev-parse --verify --quiet "v${{ github.event.inputs.version }}"; then
+              echo "Version ${{ github.event.inputs.version }} already exists, aborting workflow."
+              exit 1
+            fi
+
+      - name: Set Version
+        run: |
+          sed -i "13 a - ${{ github.events.input.version }}" /.github/ISSUE_TEMPLATE/001-bug-report.yml
+
+      - name: Commit and Push Version Change
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "${{ github.event.inputs.release_type}} ${{ github.event.inputs.version }}"
+          commit_options: "--no-verify"
+          file_pattern: "/.github/ISSUE_TEMPLATE/001-bug-report.yml"
+          tagging_message: "v${{ github.event.inputs.version }}"
+            
     
