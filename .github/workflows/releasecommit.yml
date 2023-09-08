@@ -1,0 +1,21 @@
+name: Generate Release Commit
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to Checkout'
+        required: true
+        default: 'main'
+      version:
+        description: 'Release Version (aka 1.6.1a, 1.6.1-beta-3, etc.)'
+        required: true
+      release_type:
+        description: 'Release Type'
+        type: choice
+        default: 'release'
+        options:
+          - 'release'
+          - 'beta'
+          - 'alpha'
+    
