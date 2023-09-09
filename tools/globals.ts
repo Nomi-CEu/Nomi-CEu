@@ -11,3 +11,5 @@ export const langDestDirectory = upath.join(buildConfig.buildDestinationDirector
 export const tempDirectory = upath.join(buildConfig.buildDestinationDirectory, "temp");
 export const modpackManifest = manifest as ModpackManifest;
 export const overridesFolder = modpackManifest.overrides || "overrides";
+export const configFolder = upath.join(overridesFolder, "config");
+export const configOverridesFolder = upath.join(overridesFolder, "config-overrides");

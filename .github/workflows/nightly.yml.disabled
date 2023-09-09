@@ -27,7 +27,7 @@ jobs:
           path: |
             ~/.npm
             ./.cache
-            ./buildtools/node_modules
+            ./tools/node_modules
           key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
           restore-keys: ${{ runner.os }}-bunny-
 
@@ -38,11 +38,11 @@ jobs:
           check-latest: true
 
       - name: "Download NPM packages"
-        working-directory: ./buildtools
+        working-directory: ./tools
         run: npm ci
 
       - name: "Check environmental variables"
-        working-directory: ./buildtools
+        working-directory: ./tools
         run: npx gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,13 +51,13 @@ jobs:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: "Build everything"
-        working-directory: ./buildtools
+        working-directory: ./tools
         run: npx gulp buildAll
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: "Prune cache"
-        working-directory: ./buildtools
+        working-directory: ./tools
         run: npx gulp pruneCache
 
       ##
@@ -65,7 +65,7 @@ jobs:
       ##
       - name: "Make artifact names"
         id: artifactNames
-        working-directory: ./buildtools
+        working-directory: ./tools
         run: npx gulp makeArtifactNames
 
       - name: "Upload client artifact"
@@ -97,7 +97,7 @@ jobs:
             build/shared/CHANGELOG.md
 
       - name: "Fire Discord webhook"
-        working-directory: ./buildtools
+        working-directory: ./tools
         run: npx gulp fireNightlyWebhook
         env:
           GITHUB_RUN_ID: ${{ github.run_id }}
