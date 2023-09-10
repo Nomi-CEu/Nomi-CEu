@@ -53,9 +53,4 @@ jobs:
         with:
           commit_message: "Update Quest Book Jsons and Lang ${{ github.event.inputs.push }}"
           commit_options: "--no-verify"
-          file_pattern: |
-            overrides/config/betterquesting/DefaultQuests.json
-            overrides/config/betterquesting/saved_quests/ExpertQuests.json
-            overrides/config-overrides/normal/betterquesting/DefaultQuests.json
-            overrides/config-overrides/expert/betterquesting/DefaultQuests.json
-            overrides/resources/questbook/lang/en_us.lang
+          file_pattern: ./overrides/resources/questbook/lang/en_us.lang
