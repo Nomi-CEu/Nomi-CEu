@@ -13,7 +13,7 @@ on:
 
 jobs:
   updateQB:
-    name: Update Quest Book Jsons and Lang (${{ github.event.inputs.commit }})
+    name: Update Quest Book Jsons and Lang (${{ github.event.inputs.tag }})
     runs-on: ubuntu-latest
     
     steps:
@@ -49,8 +49,15 @@ jobs:
         run: npx gulp transformQB
 
       - name: "Commit and push QB Changes"
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Update Quest Book Jsons and Lang ${{ github.event.inputs.push }}"
-          commit_options: "--no-verify"
-          file_pattern: ./overrides/resources/questbook/lang/en_us.lang
+        run: |
+          # Define all paths to push
+          PATHS="./overrides/resources/questbook/lang/en_us.lang
+          ./overrides/config/betterquesting/saved_quests/ExpertQuests.json
+          ./overrides/config-overrides/normal/betterquesting/DefaultQuests.json
+          ./overrides/config-overrides/expert/betterquesting/DefaultQuests.json"
+            
+          git config user.name github-actions
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git pull origin main
+          git commit $PATHS --message "Update Quest Book Jsons and Lang" || echo "No QB Changes Detected. This may be intended, or an error."; exit 1
+          git push origin main
