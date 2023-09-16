@@ -3,11 +3,6 @@ name: Update Quest Book Jsons and Lang
 
 on:
   workflow_dispatch:
-      inputs:
-        branch:
-          description: 'Branch to checkout'
-          required: true
-          default: 'main'
   push:
     branches:
       - main
@@ -22,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_BRANCH: ${{ github.event.inputs.branch }}
+    permissions:
+      contents: write
     
     steps:
       - name: "Checkout code"
@@ -56,17 +53,13 @@ jobs:
         run: npx gulp transformQB
 
       - name: "Commit and push QB Changes"
-        run: |
-          # Define all paths to push
-          PATHS="./overrides/resources/questbook/lang/en_us.lang
-          ./overrides/config/betterquesting/saved_quests/ExpertQuests.json
-          ./overrides/config-overrides/normal/betterquesting/DefaultQuests.json
-          ./overrides/config-overrides/expert/betterquesting/DefaultQuests.json"
+        uses: "stefanzweifel/git-auto-commit-action@v4"
+        id: "commit"
+        with:
+          commit_message: "Update Quest Book Jsons and Lang\n[SKIP]"
 
-          echo $PATHS
-            
-          git config user.name github-actions
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git pull origin main
-          git commit $PATHS --message "Update Quest Book Jsons and Lang" || echo "No QB Changes Detected. This may be intended, or an error."; exit 1
-          git push origin main
+      - name: "Throw Error if No Changes were Detected"
+        if: steps.commit.outputs.changes_detected == 'false'
+        run: |
+          echo "No QB Changes Detected. This may be intended, or an error."
+          exit 1
