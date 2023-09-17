@@ -27,3 +27,7 @@ You can either make a resource pack, with a lang file located in `/questbook/lan
 - The localization entries for normal and expert are seperated by a comment.
 - `line` notes above localization keys are for chapters.
 - `db` notes above localization keys are for quests.
+
+## Info for Maintainers:
+Here are some basic notes. I hope that you were explained the basic gist of this project, but here are some finer details:
+- If you want the QB Transform Workflow to run on your branch, that isn't `main`, prefix the branch with `test_buildscript`
