@@ -1,0 +1,67 @@
+# This workflow updates the main json files, and the en_us.lang, after a Quest Book change.
+name: Update Quest Book Jsons and Lang
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - test_buildscript*
+    paths:
+      - "overrides/config/betterquesting/saved_quests/NormalQuestsDev.json" # Normal QB Developer Json
+      - "overrides/config/betterquesting/saved_quests/ExpertQuestsDev.json" # Expert QB Developer Json
+
+jobs:
+  updateQB:
+    if: "${{ github.repository_owner == 'Nomi-CEu' }}"
+    name: Update Quest Book Jsons and Lang (${{ github.event.inputs.tag }})
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_BRANCH: ${{ github.event.inputs.branch }}
+    permissions:
+      contents: write
+    
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.inputs.tag }}
+
+      - name: "Restore cached files"
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            ~/.npm
+            ./.cache
+            ./tools/node_modules
+          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          restore-keys: ${{ runner.os }}-bunny-
+
+      - name: "Setup NodeJS v16"
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          check-latest: true
+
+      - name: "Download NPM packages"
+        working-directory: ./tools
+        run: npm ci
+
+      - name: "Transform QB"
+        working-directory: ./tools
+        run: npx gulp transformQB
+
+      - name: "Commit and push QB Changes"
+        uses: "stefanzweifel/git-auto-commit-action@v4"
+        id: "commit"
+        with:
+          commit_message: "Update Quest Book Jsons and Lang\n[SKIP]"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+
+      - name: "Throw Error if No Changes were Detected"
+        if: steps.commit.outputs.changes_detected == 'false'
+        run: |
+          echo "No QB Changes Detected. This may be intended, or an error."
+          exit 1
