@@ -26,13 +26,14 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start()
                           .aisle("CCC", "CVC", "CCC")
-                          .aisle("CCC", "GDG", "CCC")
+                          .aisle("CCC", "GDG", "CMC")
                           .aisle("CSC", "CGC", "CCC")
                           .where('S', controller.self())
                           .where('G', <blockstate:gregtech:transparent_casing>)
                           .where('V', <metastate:gregtech:multiblock_casing:2>)
                           .where('D', <metastate:chisel:diamond:3>)
-                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, true))
+                          .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
+                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(12) | controller.autoAbilities(true, true, true, true, true, false, false))
                           .build();
                  } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -68,7 +69,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
                     "GDDDG",
                     "CVCVC")
             .aisle(
-                    "CCCCC",
+                    "CCMCC",
                     "GDDDG",
                     "GD DG",
                     "GDDDG",
@@ -90,7 +91,8 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
             .where(' ', CTPredicate.getAny())
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, false, true))
+            .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(45) | controller.autoAbilities(true, true, true, true, false, false, false))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -117,7 +119,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
                 "         ",
                 "  CCCCC  ",
                 "  CVCVC  ",
-                "  CCCCC  ",
+                "  CCMCC  ",
                 "  CVCVC  ",
                 "  CCCCC  ",
                 "         ",
@@ -188,7 +190,8 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('V', <blockstate:gregtech:multiblock_casing>)
             .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, false, true))
+            .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(115) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
