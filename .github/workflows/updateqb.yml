@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - main
-      - qb-lang-revamp # Temp, for testing
+      - test_buildscript*
     paths:
       - "overrides/config/betterquesting/saved_quests/NormalQuestsDev.json" # Normal QB Developer Json
       - "overrides/config/betterquesting/saved_quests/ExpertQuestsDev.json" # Expert QB Developer Json
@@ -57,6 +57,7 @@ jobs:
         id: "commit"
         with:
           commit_message: "Update Quest Book Jsons and Lang\n[SKIP]"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
 
       - name: "Throw Error if No Changes were Detected"
         if: steps.commit.outputs.changes_detected == 'false'
