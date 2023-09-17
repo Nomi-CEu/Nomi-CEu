@@ -31,3 +31,4 @@ You can either make a resource pack, with a lang file located in `/questbook/lan
 ## Info for Maintainers:
 Here are some basic notes. I hope that you were explained the basic gist of this project, but here are some finer details:
 - If you want the QB Transform Workflow to run on your branch, that isn't `main`, prefix the branch with `test_buildscript`
+- If you want the QB Transform Workflow to run on your fork, remove or comment out `if: "${{ github.repository_owner == 'Nomi-CEu' }}"` in `/.github/workflows/updateqb.yml` (in your fork)
