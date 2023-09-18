@@ -57,7 +57,7 @@ jobs:
         uses: "stefanzweifel/git-auto-commit-action@v4"
         id: "commit"
         with:
-          commit_message: "Update Quest Book Jsons and Lang\n[SKIP]"
+          commit_message: "Update Quest Book Jsons and Lang\n\n[SKIP]"
           commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
 
       - name: "Throw Error if No Changes were Detected"
