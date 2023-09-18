@@ -226,7 +226,7 @@ pyrolyse_oven.recipeBuilder()
 // force phenol for phenolic circuit board
 chemical_reactor.recipeBuilder().inputs(<metaitem:board.coated>).fluidInputs([<liquid:phenol> * 100]).outputs([<metaitem:board.phenolic>]).duration(100).EUt(8).buildAndRegister();
 // remove Phenolic Circuit Board * 1
-<recipemap:assembler>.findRecipe(7, [<metaitem:dustWood>, <metaitem:shape.mold.plate>], [<liquid:glue> * 50]).remove();
+<recipemap:assembler>.findRecipe(30, [<metaitem:dustWood>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], [<liquid:glue> * 50]).remove();
 
 // make t1 circuits craftable w/o steam
 //recipes.removeByRecipeName("gregtech:electronic_circuit_lv");

@@ -535,7 +535,7 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux>,
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
              <gregtech:ore_apatite_0> * 64,
              <gregtech:ore_tricalcium_phosphate_0> * 64,
              <gregtech:ore_quartzite_0> * 64)
@@ -621,11 +621,11 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux> * 4,
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
-             <metaitem:gemPerfectDiamond> * 32,
-             <metaitem:gemPerfectRuby> * 64,
-             <metaitem:gemPerfectTopaz> * 48,
-             <metaitem:gemPerfectEmerald> * 32,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
+             <metaitem:devtech:gemPerfectDiamond> * 32,
+             <metaitem:devtech:gemPerfectRuby> * 64,
+             <metaitem:devtech:gemPerfectTopaz> * 48,
+             <metaitem:devtech:gemPerfectEmerald> * 32,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
              <gregtech:ore_silver_0:1> * 64)
@@ -1193,7 +1193,7 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tieroneship_stabilized_matter>)
     .circuit(2)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
              <gregtech:ore_apatite_0> * 64,
              <gregtech:ore_tricalcium_phosphate_0> * 64,
              <gregtech:ore_quartzite_0> * 64)
@@ -1252,11 +1252,11 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
     .circuit(1)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
-             <metaitem:gemPerfectDiamond> * 32,
-             <metaitem:gemPerfectRuby> * 64,
-             <metaitem:gemPerfectTopaz> * 48,
-             <metaitem:gemPerfectEmerald> * 32,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
+             <metaitem:devtech:gemPerfectDiamond> * 32,
+             <metaitem:devtech:gemPerfectRuby> * 64,
+             <metaitem:devtech:gemPerfectTopaz> * 48,
+             <metaitem:devtech:gemPerfectEmerald> * 32,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
              <gregtech:ore_silver_0:1> * 64)

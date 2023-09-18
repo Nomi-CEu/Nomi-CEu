@@ -1349,7 +1349,6 @@ recipes.addShapeless(<moreplates:infinity_plate>, [<metaitem:plateInfinity>]);
 
 mods.jei.JEI.removeAndHide(<metaitem:ingotInfinity>);
 mods.jei.JEI.removeAndHide(<metaitem:plateInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:plateDoubleInfinity>);
 mods.jei.JEI.removeAndHide(<metaitem:blockInfinity>);
 mods.jei.JEI.removeAndHide(<metaitem:nuggetInfinity>);
 mods.jei.JEI.removeAndHide(<metaitem:dustInfinity>);
@@ -1357,8 +1356,6 @@ mods.jei.JEI.removeAndHide(<metaitem:dustSmallInfinity>);
 mods.jei.JEI.removeAndHide(<metaitem:dustTinyInfinity>);
 // Infinity Plate * 1
 <recipemap:bender>.findRecipe(24, [<metaitem:ingotInfinity>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
-// Double Infinity Plate * 1
-<recipemap:bender>.findRecipe(96, [<metaitem:ingotInfinity> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 
 bender.recipeBuilder()
 	.inputs(<avaritia:resource:6>)
