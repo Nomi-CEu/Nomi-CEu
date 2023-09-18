@@ -30,7 +30,7 @@ jobs:
           ref: ${{ github.event.inputs.tag }}
 
       - name: "Restore cached files"
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache
         with:
           path: |
@@ -41,7 +41,7 @@ jobs:
           restore-keys: ${{ runner.os }}-bunny-
 
       - name: "Setup NodeJS v16"
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
           check-latest: true
