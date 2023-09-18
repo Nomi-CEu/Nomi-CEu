@@ -1,5 +1,4 @@
 import fs from "fs";
-import gulp from "gulp";
 import upath from "upath";
 import { overridesFolder, configFolder, configOverridesFolder } from "../../globals";
 import buildConfig from "../../buildConfig";
@@ -151,7 +150,7 @@ export async function transformQuestBook(): Promise<void> {
 
 	// Strip useless metadata.
 	stripUselessMetadata(questBookNormal);
-	stripUselessMetadata(questBookNormal);
+	stripUselessMetadata(questBookExpert);
 	
 	// Write QB files.
 	fs.promises.writeFile(questPathNormalDefault, JSON.stringify(questBookNormal, null, 2));
