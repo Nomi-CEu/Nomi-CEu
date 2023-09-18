@@ -6,6 +6,9 @@ export const pruneCache = pruneCacheTask;
 import * as quest from "./tasks/github/quest";
 export const transformQB = quest.transformQuestBook;
 
+import * as releaseCommit from "./tasks/misc/releaseCommit";
+export const updateIssueTemplates = releaseCommit.updateIssueTemplates;
+
 import sharedTasks from "./tasks/shared";
 import clientTasks from "./tasks/client";
 import serverTasks from "./tasks/server";
