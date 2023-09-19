@@ -6,14 +6,7 @@ import { modpackManifest, overridesFolder, sharedDestDirectory, tempDirectory } 
 import del from "del";
 import { FileDef } from "../../types/fileDef";
 import Bluebird from "bluebird";
-import {
-	compareAndExpandManifestDependencies,
-	downloadOrRetrieveFileDef,
-	getChangeLog,
-	getFileAtRevision,
-	getLastGitTag,
-	relative,
-} from "../../util/util";
+import { downloadOrRetrieveFileDef, relative } from "../../util/util";
 
 async function sharedCleanUp() {
 	await del(upath.join(sharedDestDirectory, "*"), { force: true });
@@ -87,91 +80,5 @@ async function fetchExternalDependencies() {
 	}
 }
 
-/**
- * Generates a changelog based on environmental variables.
- */
-async function makeChangelog() {
-	let since = getLastGitTag(),
-		to: string;
-
-	// If this is a tagged build, fetch the tag before last.
-	if (process.env.GITHUB_TAG) {
-		since = getLastGitTag(process.env.GITHUB_TAG);
-		to = process.env.GITHUB_TAG;
-	}
-	// Back-compat in case this crap is still around.
-	else if (since == "latest-dev-preview") {
-		since = getLastGitTag(since);
-	}
-
-	const old = JSON.parse(getFileAtRevision("manifest.json", since)) as ModpackManifest;
-	const current = modpackManifest;
-	const commitList = getChangeLog(since, to, [upath.join("..", modpackManifest.overrides), "manifest.json"]);
-
-	const builder: string[] = [];
-	// If the UPDATENOTES.md file is present, prepend it verbatim.
-	if (fs.existsSync("../UPDATENOTES.md")) {
-		builder.push((await fs.promises.readFile("../UPDATENOTES.md")).toString());
-	}
-
-	// Push the title.
-	builder.push(`# Changes since ${since}`);
-
-	const comparisonResult = await compareAndExpandManifestDependencies(old, current);
-
-	// Push mod update blocks.
-	[
-		{
-			name: "## New mods",
-			list: comparisonResult.added,
-		},
-		{
-			name: "## Updated mods",
-			list: comparisonResult.modified,
-		},
-		{
-			name: "## Removed mods",
-			list: comparisonResult.removed,
-		},
-	].forEach((block) => {
-		if (block.list.length == 0) {
-			return;
-		}
-
-		builder.push("");
-		builder.push(block.name);
-		builder.push(
-			...block.list
-				// Yeet invalid project names.
-				.filter((project) => !/project-\d*/.test(project))
-				.sort()
-				.map((name) => `* ${name}`),
-		);
-	});
-
-	// Push the changelog itself.
-	if (commitList) {
-		builder.push("");
-		builder.push("## Commits");
-		builder.push(commitList);
-	}
-
-	// Check if the builder only contains the title.
-	if (builder.length == 1) {
-		builder.push("");
-		builder.push("There haven't been any changes.");
-	}
-
-	return fs.promises.writeFile(upath.join(sharedDestDirectory, "CHANGELOG.md"), builder.join("\n"));
-}
-
 import transforms from "./transforms";
-import { ModpackManifest } from "../../types/modpackManifest";
-export default gulp.series(
-	sharedCleanUp,
-	createSharedDirs,
-	copyOverrides,
-	makeChangelog,
-	fetchExternalDependencies,
-	...transforms,
-);
+export default gulp.series(sharedCleanUp, createSharedDirs, copyOverrides, fetchExternalDependencies, ...transforms);

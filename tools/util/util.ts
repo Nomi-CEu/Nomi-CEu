@@ -40,10 +40,29 @@ export const libraryToPath = (library: string): string => {
  */
 export const checkEnvironmentalVariables = (vars: string[]): void => {
 	vars.forEach((vari) => {
-		if (!process.env[vari] || process.env[vari] == "") {
+		if (!isEnvVariableSet(vari)) {
 			throw new Error(`Environmental variable ${vari} is unset.`);
 		}
 	});
+};
+
+/**
+ * Returns true if given variable set, false otherwise.
+ */
+const isEnvVariableSet = (env: string): boolean => {
+	return process.env[env] && process.env[env] != "";
+};
+
+/**
+ * Check if given git tag exists. Throws otherwise.
+ */
+export const checkGitTag = (tag: string): void => {
+	// The below command returns an empty buffer if the given tag does not exist.
+	const tagBuffer = execSync(`git tag --list ${tag}`);
+
+	if (!tagBuffer || tagBuffer.toString().trim() != tag) {
+		throw new Error(`Tag ${tag} could not be found.`);
+	}
 };
 
 export enum RetrievedFileDefReason {
@@ -171,12 +190,18 @@ export function makeArtifactNameBody(baseName: string): string {
 }
 
 /**
- * Fetches the last tag known to Git using the current branch.
+ * Returns the COMPARE_TAG env if set, else fetches the last tag known to Git using the current branch.
  * @param {string | nil} before Tag to get the tag before.
  * @returns string Git tag.
  * @throws
  */
 export function getLastGitTag(before?: string): string {
+	if (isEnvVariableSet("COMPARE_TAG")) {
+		checkGitTag(process.env["COMPARE_TAG"]);
+
+		return process.env["COMPARE_TAG"];
+	}
+
 	if (before) {
 		before = `"${before}^"`;
 	}
@@ -187,12 +212,12 @@ export function getLastGitTag(before?: string): string {
 }
 
 /**
- * Generates a changelog based on the two provided Git refs.
- * @param {string} since Lower boundary Git ref.
- * @param {string} to Upper boundary Git ref.
- * @param {string[]} dirs Optional scopes.
+ * Generates a formatted changelog based on the two provided Git refs.
+ * @param since Lower boundary Git ref.
+ * @param to Upper boundary Git ref.
+ * @param dirs Optional scopes.
  */
-export function getChangeLog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): string {
+export function getFormattedChangeLog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): string {
 	const command = [
 		"git log",
 		"--no-merges",
