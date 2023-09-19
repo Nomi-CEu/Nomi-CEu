@@ -93,9 +93,6 @@ async function checkRelease(versionsFilePath: string) {
  * @param replacementObject A record, of type string to type unknown, containing the keys, and replacement for those keys
  * <p>
  * <p>
- * Pattern regExps[0] will be replaced by replacements[0], etc.
- * <p>
- * <p>
  * A warning not to edit the file will also be added to the start of the file.
  */
 async function modifyFile(readPath: string, writePaths: string[], replacementObject: Record<string, unknown>) {
