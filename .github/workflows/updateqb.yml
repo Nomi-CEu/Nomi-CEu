@@ -16,8 +16,6 @@ jobs:
     if: "${{ github.repository_owner == 'Nomi-CEu' }}"
     name: Update Quest Book Jsons and Lang (${{ github.event.inputs.tag }})
     runs-on: ubuntu-latest
-    env:
-      GITHUB_BRANCH: ${{ github.event.inputs.branch }}
     permissions:
       contents: write
     
