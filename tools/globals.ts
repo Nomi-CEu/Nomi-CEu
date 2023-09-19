@@ -13,6 +13,5 @@ export const modpackManifest = manifest as ModpackManifest;
 export const overridesFolder = modpackManifest.overrides || "overrides";
 export const configFolder = upath.join(overridesFolder, "config");
 export const configOverridesFolder = upath.join(overridesFolder, "config-overrides");
-
+export const rootDirectory = "..";
 export const templatesFolder = "templates";
-export const issueTemplatesFolder = upath.join("..", ".github", "ISSUE_TEMPLATE");

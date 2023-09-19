@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import * as gulp from "gulp";
 
 import pruneCacheTask from "./tasks/misc/pruneCache";
@@ -5,6 +7,13 @@ export const pruneCache = pruneCacheTask;
 
 import * as quest from "./tasks/github/quest";
 export const transformQB = quest.transformQuestBook;
+
+import * as releaseCommit from "./tasks/misc/releaseCommit";
+export const checkReleaseEnv = releaseCommit.checkEnv;
+export const updateIssueTemplates = gulp.series(checkReleaseEnv, releaseCommit.updateIssueTemplates);
+export const updateRandomPatchesConfig = gulp.series(checkReleaseEnv, releaseCommit.updateRandomPatchesConfig);
+export const updateServerProperties = gulp.series(checkReleaseEnv, releaseCommit.updateServerProperties);
+export const updateAll = gulp.series(checkReleaseEnv, releaseCommit.updateAll);
 
 import sharedTasks from "./tasks/shared";
 import clientTasks from "./tasks/client";
