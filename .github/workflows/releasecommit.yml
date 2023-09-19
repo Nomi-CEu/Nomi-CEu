@@ -3,31 +3,38 @@ name: Create Release Commit
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: 'Branch to Checkout'
-        required: true
-        default: 'main'
       version:
-        description: 'Release Version (aka 1.6.1a, 1.6.1-beta-3, etc.)'
+        description: |
+          Release Version (aka 1.6.1a, 1.6.1-beta-3, 2.0, etc.). 
+          
+          Still important if not a release, and will be used to replace all version fields.
         required: true
       release_type:
-        description: 'Release Type'
+        description: 'Release Type. Will be ignored if not a release.'
         type: choice
+        required: true
         default: 'Release'
         options:
           - 'Release'
           - 'Beta Release'
           - 'Alpha Release'
+      not_release:
+        description: |
+          Whether this commit is **NOT** a release. See CONTRIBUTING.md for more details.
+        type: boolean
+        required: true
+        default: false
 jobs:
   deploy:
     name: Create Release Commit (${{ github.event.inputs.version }})
     runs-on: ubuntu-latest
     env:
-      GITHUB_BRANCH: ${{ github.event.inputs.branch }}
       VERSION: ${{ github.event.inputs.version }}
       RELEASE_TYPE: ${{ github.event.inputs.release_type }}
+    permissions:
+      contents: write
     steps:
-      - name: "Checkout code"
+      - name: Checkout code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -40,16 +47,65 @@ jobs:
               exit 1
             fi
 
-      - name: Set Version
-        run: |
-          sed -i "13 a - ${{ github.events.input.version }}" /.github/ISSUE_TEMPLATE/001-bug-report.yml
-
-      - name: Commit and Push Version Change
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Restore cached files
+        uses: actions/cache@v3
+        id: cache
         with:
-          commit_message: "${{ github.event.inputs.release_type}} ${{ github.event.inputs.version }}"
-          commit_options: "--no-verify"
-          file_pattern: "/.github/ISSUE_TEMPLATE/001-bug-report.yml"
-          tagging_message: "v${{ github.event.inputs.version }}"
-            
-    
+          path: |
+            ~/.npm
+            ./.cache
+            ./tools/node_modules
+          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          restore-keys: ${{ runner.os }}-bunny-
+
+      - name: Setup NodeJS v16
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          check-latest: true
+
+      - name: Download NPM packages
+        working-directory: ./tools
+        run: npm ci
+
+      # Release Commit Steps
+      - name: Set Release Version
+        if: github.event.inputs.not_release == 'false'
+        working-directory: ./tools
+        run: |
+          npx gulp addVersionAll
+
+      - name: Commit and Push Release Changes
+        if: github.event.inputs.not_release == 'false'
+        uses: "stefanzweifel/git-auto-commit-action@v4"
+        id: "commit-release"
+        with:
+          commit_message: "${{ github.event.inputs.release_type }} ${{ github.event.inputs.version }}"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+
+      - name: Throw Error if No Release Changes were Detected
+        if: github.event.inputs.not_release == 'false' && steps.commit-release.outputs.changes_detected == 'false'
+        run: |
+          echo "No Changes were Made."
+          exit 1
+
+      # Non-Release Commit Steps
+      - name: Update Files from Templates
+        if: github.event.inputs.not_release == 'true'
+        working-directory: ./tools
+        run: |
+          npx gulp updateAll
+
+      - name: Commit and Push Template Changes
+        if: github.event.inputs.not_release == 'true'
+        uses: "stefanzweifel/git-auto-commit-action@v4"
+        id: "commit-template"
+        with:
+          commit_message: "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          
+      - name: Throw Error if No Template Changes were Detected
+        if: github.event.inputs.not_release == 'true' && steps.commit-template.outputs.changes_detected == 'false'
+        run: |
+          echo "No Template Changes were detected. This may be an error."
+          exit 1
