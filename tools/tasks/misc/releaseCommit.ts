@@ -56,11 +56,14 @@ async function checkNotRelease(versionsFilePath: string) {
 		await fs.promises.writeFile(versionsFilePath, `        - ${version}`);
 	} else {
 		// Check for duplicate entries
-		const versionList = await fs.promises.readFile(versionsFilePath, "utf8");
+		let versionList = await fs.promises.readFile(versionsFilePath, "utf8");
 
 		// No Duplicate Key
 		if (!versionList.includes(version)) {
 			console.error(`Version is not in version.txt. Adding ${version} to version.txt. This may be an error.`);
+
+			versionList = `        - ${version}\n${versionList}`;
+			await fs.promises.writeFile(versionsFilePath, versionList);
 		}
 	}
 }

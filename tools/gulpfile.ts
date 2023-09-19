@@ -9,13 +9,13 @@ import * as quest from "./tasks/github/quest";
 export const transformQB = quest.transformQuestBook;
 
 import * as releaseCommit from "./tasks/misc/releaseCommit";
-export const checkReleaseEnv = releaseCommit.check;
+export const checkRelease = releaseCommit.check;
 
 // Normal Tasks
-export const addVersionIssue = gulp.series(checkReleaseEnv, releaseCommit.updateIssueTemplates);
-export const addVersionRandomPatches = gulp.series(checkReleaseEnv, releaseCommit.updateRandomPatchesConfig);
-export const addVersionServer = gulp.series(checkReleaseEnv, releaseCommit.updateServerProperties);
-export const addVersionAll = gulp.series(checkReleaseEnv, releaseCommit.updateAll);
+export const addVersionIssue = gulp.series(checkRelease, releaseCommit.updateIssueTemplates);
+export const addVersionRandomPatches = gulp.series(checkRelease, releaseCommit.updateRandomPatchesConfig);
+export const addVersionServer = gulp.series(checkRelease, releaseCommit.updateServerProperties);
+export const addVersionAll = gulp.series(checkRelease, releaseCommit.updateAll);
 
 // Non Release Tasks
 const setNotRelease = releaseCommit.setNotRelease;
