@@ -11,11 +11,76 @@ import { checkEnvironmentalVariables } from "../../util/util";
 // Change debug value to true
 // Change version to a string
 const debug = false;
-const version = process.env.VERSION;
+const version: string = process.env.VERSION;
 
-export async function checkEnv(): Promise<void> {
+// If it is not a release, and thus no changes to versions need to be made.
+// This occurs when the files are to be updated from the templates outside of a release.
+// Optional variable to set.
+let notRelease = false;
+
+/**
+ * Checks if env variable are set, creates versions.txt if file does not exist, and checks if new version already exists in versions.txt.
+ */
+export async function check(): Promise<void> {
 	if (!debug) {
 		checkEnvironmentalVariables(["VERSION"]);
+	}
+	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
+
+	if (notRelease) {
+		console.log("Detected that this is not a release commit.");
+		console.log("Version info will not change, but the files will be updated from the template.");
+		await checkNotRelease(versionsFilePath);
+	} else {
+		console.log("Detected that this is a release commit.");
+		await checkRelease(versionsFilePath);
+	}
+}
+
+/**
+ * Sets this workflow as a non-release.
+ */
+export async function setNotRelease(): Promise<void> {
+	notRelease = true;
+}
+
+// Checks for non-release commits
+async function checkNotRelease(versionsFilePath: string) {
+	// Check if versions.txt exists
+	if (!fs.existsSync(versionsFilePath)) {
+		console.error(
+			`Version.txt does not exist. Creating empty file, and adding ${version} to it. This may be an error.`,
+		);
+
+		// Create Versions.txt, with version
+		await fs.promises.writeFile(versionsFilePath, `        - ${version}`);
+	} else {
+		// Check for duplicate entries
+		const versionList = await fs.promises.readFile(versionsFilePath, "utf8");
+
+		// No Duplicate Key
+		if (!versionList.includes(version)) {
+			console.error(`Version is not in version.txt. Adding ${version} to version.txt. This may be an error.`);
+		}
+	}
+}
+
+// Checks for release Commits
+async function checkRelease(versionsFilePath: string) {
+	// Check if versions.txt exists
+	if (!fs.existsSync(versionsFilePath)) {
+		console.error("Version.txt does not exist. Creating empty file. This may be an error.");
+
+		// Create Versions.txt
+		fs.closeSync(fs.openSync(versionsFilePath, "w"));
+	} else {
+		// Check for duplicate entries
+		const versionList = await fs.promises.readFile(versionsFilePath, "utf8");
+
+		// Duplicate Key
+		if (versionList.includes(version)) {
+			throw new Error("Version already exists in version.txt. Exiting...");
+		}
 	}
 }
 
@@ -52,22 +117,24 @@ export async function updateIssueTemplates(): Promise<void> {
 	// Filenames
 	const fileNames: string[] = ["001-bug-report.yml", "002-feature-request.yml"];
 
-	// Paths, and load version list
 	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
-	const versionList: string = await fs.promises.readFile(versionsFilePath, "utf8");
 
-	// Add new version to list, with indent
-	const newVersionList = `        - ${version}\n${versionList}`;
+	let versionList: string = await fs.promises.readFile(versionsFilePath, "utf8");
 
-	const issueTemplatesFolder: string = upath.join(rootDirectory, ".github", "ISSUE_TEMPLATE");
+	if (!notRelease) {
+		// Add new version to list, with indent
+		versionList = `        - ${version}\n${versionList}`;
+	}
 
 	// Replacement Object
 	const replacementObject: Record<string, unknown> = {
-		versions: newVersionList,
+		versions: versionList,
 	};
 
 	// Write updated Version List
-	await fs.promises.writeFile(versionsFilePath, newVersionList);
+	await fs.promises.writeFile(versionsFilePath, versionList);
+
+	const issueTemplatesFolder: string = upath.join(rootDirectory, ".github", "ISSUE_TEMPLATE");
 
 	// Write to issue templates
 	for (const fileName of fileNames) {

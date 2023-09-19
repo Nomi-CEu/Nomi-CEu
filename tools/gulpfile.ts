@@ -9,11 +9,20 @@ import * as quest from "./tasks/github/quest";
 export const transformQB = quest.transformQuestBook;
 
 import * as releaseCommit from "./tasks/misc/releaseCommit";
-export const checkReleaseEnv = releaseCommit.checkEnv;
-export const updateIssueTemplates = gulp.series(checkReleaseEnv, releaseCommit.updateIssueTemplates);
-export const updateRandomPatchesConfig = gulp.series(checkReleaseEnv, releaseCommit.updateRandomPatchesConfig);
-export const updateServerProperties = gulp.series(checkReleaseEnv, releaseCommit.updateServerProperties);
-export const updateAll = gulp.series(checkReleaseEnv, releaseCommit.updateAll);
+export const checkReleaseEnv = releaseCommit.check;
+
+// Normal Tasks
+export const addVersionIssue = gulp.series(checkReleaseEnv, releaseCommit.updateIssueTemplates);
+export const addVersionRandomPatches = gulp.series(checkReleaseEnv, releaseCommit.updateRandomPatchesConfig);
+export const addVersionServer = gulp.series(checkReleaseEnv, releaseCommit.updateServerProperties);
+export const addVersionAll = gulp.series(checkReleaseEnv, releaseCommit.updateAll);
+
+// Non Release Tasks
+const setNotRelease = releaseCommit.setNotRelease;
+export const updateIssue = gulp.series(setNotRelease, addVersionIssue);
+export const updateRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
+export const updateServer = gulp.series(setNotRelease, addVersionServer);
+export const updateAll = gulp.series(setNotRelease, addVersionAll);
 
 import sharedTasks from "./tasks/shared";
 import clientTasks from "./tasks/client";
