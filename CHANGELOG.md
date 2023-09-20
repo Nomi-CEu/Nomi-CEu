@@ -4,7 +4,7 @@
 * Neeve's AE2: Extended Life Additions
 
 ## Commits
-* https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f: Update Files - **IntegerLimit** (Sep 19, 2023)
+* https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f : Update Files - **IntegerLimit** (Sep 19, 2023)
 * https://github.com/Nomi-CEu/Nomi-CEu/commit/780e725e8c08bcbf8950bf25b3b547e450ae099a: Buff NC Fission Reactors' power output by 1.4x - **IntegerLimit** (Sep 18, 2023)
 * https://github.com/Nomi-CEu/Nomi-CEu/commit/26120dc6d310041eaa22dbd3262ad5a1589677f2: Rebalance ULV Covers - **IntegerLimit** (Sep 18, 2023)
 * https://github.com/Nomi-CEu/Nomi-CEu/commit/1a40bd87f9c648429059c77a90470e55e0e39c5e: Update Quest Book Jsons and Lang [SKIP] - **github-actions[bot]** (Sep 18, 2023)
