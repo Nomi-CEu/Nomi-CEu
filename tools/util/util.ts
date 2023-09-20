@@ -4,18 +4,25 @@ import fs from "fs";
 import buildConfig from "../buildConfig";
 import upath from "upath";
 import requestretry from "requestretry";
+import request from "requestretry";
 import http from "http";
 import { compareBufferToHashDef } from "./hashes";
 import { execSync } from "child_process";
-import { ModpackManifest, ModpackManifestFile, ExternalDependency } from "../types/modpackManifest";
+import { ExternalDependency, ModpackManifest, ModpackManifestFile } from "../types/modpackManifest";
 import { fetchProject, fetchProjectsBulk } from "./curseForgeAPI";
 import Bluebird from "bluebird";
 import { VersionManifest } from "../types/versionManifest";
 import { VersionsManifest } from "../types/versionsManifest";
-import request from "requestretry";
 import log from "fancy-log";
+import { simpleGit, SimpleGit, pathspec  } from "simple-git";
+import { Commit } from "../types/commit";
+import { rootDirectory } from "../globals";
+import * as path from "path";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
+
+// Make git commands run in root dir
+const git: SimpleGit = simpleGit(rootDirectory);
 
 /**
  * Parses the library name into path following the standard package naming convention.
@@ -212,10 +219,40 @@ export function getLastGitTag(before?: string): string {
 }
 
 /**
+ * Generates a changelog based on the two provided Git refs.
+ * @param since Lower boundary Git ref.
+ * @param to Upper boundary Git ref.
+ * @param dirs Optional scopes. These are of the perspective of the root dir.
+ * @returns changelog Object Array of Changelog
+ */
+export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): Promise<Commit[]> {
+	const options: string[] = ["--no-merges", `${since}..${to}`];
+	if (dirs) {
+		dirs.forEach((dir) => {
+			options.push(pathspec(dir));
+		});
+	}
+
+	const commitList: Commit[] = [];
+	await git.log(options, (err, output) => {
+		if (err) {
+			console.error(err);
+			throw new Error();
+		}
+
+		// Cannot simply set commitList as output.all as is read only, must do this
+		output.all.forEach((commit) => commitList.push(commit));
+	});
+	console.log(commitList);
+
+	return commitList;
+}
+
+/**
  * Generates a formatted changelog based on the two provided Git refs.
  * @param since Lower boundary Git ref.
  * @param to Upper boundary Git ref.
- * @param dirs Optional scopes.
+ * @param dirs Optional scopes. Of the perspective of the `/tools` dir
  */
 export function getFormattedChangeLog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): string {
 	const command = [

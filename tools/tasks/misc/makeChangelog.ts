@@ -6,8 +6,25 @@ import {
 	getFormattedChangeLog,
 	getFileAtRevision,
 	getLastGitTag,
+	getChangelog,
 } from "../../util/util";
 import { ModpackManifest } from "../../types/modpackManifest";
+import { Commit } from "../../types/commit";
+import marked from "marked";
+
+const mdOptions = {
+	pedantic: false,
+	gfm: true,
+	smartLists: true,
+	smartypants: true,
+	sanitize: true,
+};
+
+marked.setOptions(mdOptions);
+
+// Final Builders
+let builderGH: string[];
+let builderCF: string[];
 
 /**
  * Generates a changelog based on environmental variables.
@@ -26,38 +43,124 @@ export async function makeChangelog(): Promise<void> {
 		since = getLastGitTag(since);
 	}
 
-	// Get formatted commit log, which change overrides and/or manifest file
-	const commitList = getFormattedChangeLog(since, to, [upath.join("..", modpackManifest.overrides), "manifest.json"]);
+	// Get commit log of commits which change overrides and/or manifest file
+	const commitList: Commit[] = await getChangelog(since, to, [modpackManifest.overrides, "manifest.json"]);
 
-	const builder: string[] = [];
+	// Final Builders
+	builderGH = [];
+	builderCF = [];
+
+	// Balancing Changes
+	const balancing: string[] = [];
+
+	// Bug Fixes
+	const bug: string[] = [];
+
+	// Feature Additions
+	const features: string[] = [];
+
+	// Formatted Commit Lists
+	const formattedCommitsGH: string[] = [];
+	const formattedCommitsCF: string[] = [];
+
+	commitList.forEach((commit) => {
+		console.log(commit.message);
+		if (commit.body) {
+			console.log(commit.body);
+			if (commit.body.includes("[SKIP]")) {
+				console.log("SKIP THIS COMMIT");
+			}
+		}
+
+		/* TODO Remove this after 1.7, when its no longer needed */
+		if (commit.message) {
+			if (commit.message.includes("[SKIP]")) {
+				console.warn("SKIP THIS COMMIT");
+			}
+		}
+
+		formatCommitCF(commit);
+	});
+
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
-		builder.push((await fs.promises.readFile("../UPDATENOTES.md")).toString());
+		pushToBuilders((await fs.promises.readFile("../UPDATENOTES.md")).toString());
 	}
 
 	// Push the title.
-	builder.push(`# Changes since ${since}`);
+	pushToBuilders(`# Changes since ${since}`);
 
 	// Push mod update blocks.
-	await addModUpdatesToBuilder(builder, since);
+	await addModChangesToBuilders(since);
+
+	// Get formatted commit log, which change overrides and/or manifest file
+	const formattedCommitList = getFormattedChangeLog(since, to, [
+		upath.join("..", modpackManifest.overrides),
+		"manifest.json",
+	]);
 
 	// Push the changelog itself.
-	if (commitList) {
-		builder.push("");
-		builder.push("## Commits");
-		builder.push(commitList);
+	if (formattedCommitList) {
+		pushToBuilders("");
+		pushToBuilders("## Commits");
+		pushToBuilders(formattedCommitList);
 	}
 
 	// Check if the builder only contains the title.
-	if (builder.length == 1) {
-		builder.push("");
-		builder.push("There haven't been any changes.");
+	if (builderGH.length == 1) {
+		pushToBuilders("");
+		pushToBuilders("There haven't been any changes.");
 	}
 
-	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builder.join("\n"));
+	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builderGH.join("\n"));
+	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), builderCF.join("\n"));
 }
 
-async function addModUpdatesToBuilder(builder: string[], since: string) {
+/**
+ * Adds the strings to both builders, in the correct format.
+ * @param markdownStrings The strings to add, formatted in markdown.
+ */
+function pushToBuilders(...markdownStrings: string[]) {
+	let htmlString: string;
+	markdownStrings.forEach((markdownString) => {
+		htmlString = marked.parse(markdownString);
+		builderGH.push(markdownString);
+		builderCF.push(htmlString);
+	});
+}
+
+function addChangeToCategory() {}
+
+/**
+ * The link to a commit, without the commit hash itself
+ */
+const commitLinkFormat = "https://github.com/Nomi-CEu/Nomi-CEu/commit/";
+
+/**
+ * Returns a formatted commit for GH (just the link, gh formats it, with list dot)
+ */
+function formatCommitGH(commit: Commit): string {
+	return `* ${commitLinkFormat}${commit.hash}: ${formatCommit(commit)}`;
+}
+
+/**
+ * Returns a formatted commit for CF (link for cf, with list dot)
+ */
+function formatCommitCF(commit: Commit): string {
+	const shortSHA = commit.hash.substring(0, 7);
+
+	return `* [${shortSHA}](${commitLinkFormat}${commit.hash}): ${formatCommit(commit)}`;
+}
+
+/**
+ * Returns a formatted commit (no link, list dot, or sha)
+ */
+function formatCommit(commit: Commit): string {
+	const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
+	return `${commit.message} - **${commit.author_name}** (${date})`;
+}
+
+async function addModChangesToBuilders(since: string) {
 	const old = JSON.parse(getFileAtRevision("manifest.json", since)) as ModpackManifest;
 	const comparisonResult = await compareAndExpandManifestDependencies(old, modpackManifest);
 	[
@@ -78,9 +181,9 @@ async function addModUpdatesToBuilder(builder: string[], since: string) {
 			return;
 		}
 
-		builder.push("");
-		builder.push(block.name);
-		builder.push(
+		pushToBuilders("");
+		pushToBuilders(block.name);
+		pushToBuilders(
 			...block.list
 				// Yeet invalid project names.
 				.filter((project) => !/project-\d*/.test(project))

@@ -32,6 +32,8 @@
 		"gulp-imagemin": "^7.1.0",
 		"gulp-rename": "^2.0.0",
 		"gulp-zip": "^5.1.0",
+		"marked": "^9.0.3",
+		"md5": "^2.3.0",
 		"merge-stream": "^2.0.0",
 		"mustache": "^4.1.0",
 		"png-to-jpeg": "^1.0.1",
@@ -40,12 +42,10 @@
 		"requestretry": "^5.0.0",
 		"sanitize-filename": "^1.6.3",
 		"sha1": "^1.1.1",
+		"simple-git": "^3.19.1",
 		"ts-node": "^10.9.1",
 		"typescript": "^4.8.4",
 		"unzipper": "^0.10.11",
 		"upath": "^2.0.1"
-	},
-	"dependencies": {
-		"md5": "^2.3.0"
 	}
 }
