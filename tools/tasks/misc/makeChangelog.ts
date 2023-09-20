@@ -139,7 +139,7 @@ const commitLinkFormat = "https://github.com/Nomi-CEu/Nomi-CEu/commit/";
  * Returns a formatted commit for GH (just the link, gh formats it, with html list)
  */
 function formatCommitGH(commit: Commit): string {
-	return `* ${commitLinkFormat}${commit.hash}: ${formatCommit(commit)}`;
+	return `* ${commitLinkFormat}${commit.hash} : ${formatCommit(commit)}`;
 }
 
 /**
@@ -148,7 +148,7 @@ function formatCommitGH(commit: Commit): string {
 function formatCommitCF(commit: Commit): string {
 	const shortSHA = commit.hash.substring(0, 7);
 
-	return `<li>[${shortSHA}](${commitLinkFormat}${commit.hash}): ${formatCommit(commit)}`;
+	return `<li><a href="${commitLinkFormat}${commit.hash}">${shortSHA}</a>: ${formatCommit(commit)}`;
 }
 
 /**
