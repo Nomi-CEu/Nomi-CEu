@@ -17,7 +17,6 @@ import log from "fancy-log";
 import { simpleGit, SimpleGit, pathspec  } from "simple-git";
 import { Commit } from "../types/commit";
 import { rootDirectory } from "../globals";
-import * as path from "path";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
@@ -246,28 +245,6 @@ export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] =
 	console.log(commitList);
 
 	return commitList;
-}
-
-/**
- * Generates a formatted changelog based on the two provided Git refs.
- * @param since Lower boundary Git ref.
- * @param to Upper boundary Git ref.
- * @param dirs Optional scopes. Of the perspective of the `/tools` dir
- */
-export function getFormattedChangeLog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): string {
-	const command = [
-		"git log",
-		"--no-merges",
-		'--date="format:%d %b %Y"',
-		'--pretty="* %s - **%an** (%ad)"',
-		`${since}..${to}`,
-	];
-
-	if (dirs) {
-		command.push("--", dirs.join(" -- "));
-	}
-
-	return execSync(command.join(" ")).toString().trim();
 }
 
 /**

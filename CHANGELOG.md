@@ -1,9 +1,11 @@
-# Changes since 1.6.1
+# Changes since 1.6.1a
 
 ## Updated mods
 * Neeve's AE2: Extended Life Additions
 
 ## Commits
+* [`479d1b2`](https://github.com/Nomi-CEu/Nomi-CEu/commit/479d1b20c458365acccd3de1165747b7fb678112): Update Quest Book Jsons and Lang - **github-actions[bot]** (Sep 21, 2023)
+* [`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5): Update Discord & Github Quest - **IntegerLimit** (Sep 21, 2023)
 * [`72fbe09`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f): Update Files - **IntegerLimit** (Sep 19, 2023)
 * [`780e725`](https://github.com/Nomi-CEu/Nomi-CEu/commit/780e725e8c08bcbf8950bf25b3b547e450ae099a): Buff NC Fission Reactors' power output by 1.4x - **IntegerLimit** (Sep 18, 2023)
 * [`26120dc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/26120dc6d310041eaa22dbd3262ad5a1589677f2): Rebalance ULV Covers - **IntegerLimit** (Sep 18, 2023)

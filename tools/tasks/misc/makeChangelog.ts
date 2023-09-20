@@ -1,13 +1,7 @@
 import fs from "fs";
 import upath from "upath";
 import { modpackManifest, rootDirectory } from "../../globals";
-import {
-	compareAndExpandManifestDependencies,
-	getFormattedChangeLog,
-	getFileAtRevision,
-	getLastGitTag,
-	getChangelog,
-} from "../../util/util";
+import { compareAndExpandManifestDependencies, getFileAtRevision, getLastGitTag, getChangelog } from "../../util/util";
 import { ModpackManifest } from "../../types/modpackManifest";
 import { Commit } from "../../types/commit";
 import marked from "marked";
