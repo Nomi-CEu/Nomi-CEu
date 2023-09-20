@@ -59,11 +59,8 @@ export async function makeChangelog(): Promise<void> {
 	// Feature Additions
 	const features: string[] = [];
 
-	// Formatted Commit Lists
-	const formattedCommitsGH: string[] = [];
-	const formattedCommitsCF: string[] = [];
-
-	formattedCommitsCF.push("<ul>");
+	// Formatted Commit List
+	const formattedCommits: string[] = [];
 
 	commitList.forEach((commit) => {
 		console.log(commit.message);
@@ -80,11 +77,8 @@ export async function makeChangelog(): Promise<void> {
 				console.warn("SKIP THIS COMMIT");
 			}
 		}
-		formattedCommitsGH.push(formatCommitGH(commit));
-		formattedCommitsCF.push(formatCommitCF(commit));
+		formattedCommits.push(formatCommit(commit));
 	});
-
-	formattedCommitsCF.push("<ul>");
 
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
@@ -98,11 +92,10 @@ export async function makeChangelog(): Promise<void> {
 	await addModChangesToBuilders(since);
 
 	// Push the commit log
-	if (formattedCommitsGH) {
+	if (formattedCommits) {
 		pushToBuilders("");
 		pushToBuilders("## Commits");
-		builderGH.push(formattedCommitsGH.join("\n"));
-		builderCF.push(formattedCommitsCF.join("\n"));
+		pushToBuilders(formattedCommits.join("\n"));
 	}
 
 	// Check if the builder only contains the title.
@@ -136,27 +129,15 @@ function addChangeToCategory() {}
 const commitLinkFormat = "https://github.com/Nomi-CEu/Nomi-CEu/commit/";
 
 /**
- * Returns a formatted commit for GH (just the link, gh formats it, with html list)
- */
-function formatCommitGH(commit: Commit): string {
-	return `* ${commitLinkFormat}${commit.hash} : ${marked.parse(formatCommit(commit))}`;
-}
-
-/**
- * Returns a formatted commit for CF (link for cf, with list dot)
- */
-function formatCommitCF(commit: Commit): string {
-	const shortSHA = commit.hash.substring(0, 7);
-
-	return `<li><a href="${commitLinkFormat}${commit.hash}">${shortSHA}</a>: ${formatCommit(commit)}`;
-}
-
-/**
- * Returns a formatted commit (no link, list dot, or sha)
+ * Returns a formatted commit
  */
 function formatCommit(commit: Commit): string {
 	const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
-	return `${commit.message} - **${commit.author_name}** (${date})`;
+	const formattedCommit = `${commit.message} - **${commit.author_name}** (${date})`;
+
+	const shortSHA = commit.hash.substring(0, 7);
+
+	return `* [\`${shortSHA}\`](${commitLinkFormat}${commit.hash}): ${formattedCommit}`;
 }
 
 async function addModChangesToBuilders(since: string) {
