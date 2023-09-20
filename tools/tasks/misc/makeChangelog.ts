@@ -63,6 +63,8 @@ export async function makeChangelog(): Promise<void> {
 	const formattedCommitsGH: string[] = [];
 	const formattedCommitsCF: string[] = [];
 
+	formattedCommitsCF.push("<ul>");
+
 	commitList.forEach((commit) => {
 		console.log(commit.message);
 		if (commit.body) {
@@ -78,9 +80,11 @@ export async function makeChangelog(): Promise<void> {
 				console.warn("SKIP THIS COMMIT");
 			}
 		}
-
-		formatCommitCF(commit);
+		formattedCommitsGH.push(formatCommitGH(commit));
+		formattedCommitsCF.push(formatCommitCF(commit));
 	});
+
+	formattedCommitsCF.push("<ul>");
 
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
@@ -93,17 +97,12 @@ export async function makeChangelog(): Promise<void> {
 	// Push mod update blocks.
 	await addModChangesToBuilders(since);
 
-	// Get formatted commit log, which change overrides and/or manifest file
-	const formattedCommitList = getFormattedChangeLog(since, to, [
-		upath.join("..", modpackManifest.overrides),
-		"manifest.json",
-	]);
-
-	// Push the changelog itself.
-	if (formattedCommitList) {
+	// Push the commit log
+	if (formattedCommitsGH) {
 		pushToBuilders("");
 		pushToBuilders("## Commits");
-		pushToBuilders(formattedCommitList);
+		builderGH.push(formattedCommitsGH.join("\n"));
+		builderCF.push(formattedCommitsCF.join("\n"));
 	}
 
 	// Check if the builder only contains the title.
@@ -137,7 +136,7 @@ function addChangeToCategory() {}
 const commitLinkFormat = "https://github.com/Nomi-CEu/Nomi-CEu/commit/";
 
 /**
- * Returns a formatted commit for GH (just the link, gh formats it, with list dot)
+ * Returns a formatted commit for GH (just the link, gh formats it, with html list)
  */
 function formatCommitGH(commit: Commit): string {
 	return `* ${commitLinkFormat}${commit.hash}: ${formatCommit(commit)}`;
@@ -149,7 +148,7 @@ function formatCommitGH(commit: Commit): string {
 function formatCommitCF(commit: Commit): string {
 	const shortSHA = commit.hash.substring(0, 7);
 
-	return `* [${shortSHA}](${commitLinkFormat}${commit.hash}): ${formatCommit(commit)}`;
+	return `<li>[${shortSHA}](${commitLinkFormat}${commit.hash}): ${formatCommit(commit)}`;
 }
 
 /**
