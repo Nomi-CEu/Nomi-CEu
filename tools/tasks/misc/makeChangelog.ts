@@ -136,16 +136,20 @@ export async function makeChangelog(): Promise<void> {
 
 	// Parse Commit List
 	commitList.forEach((commit) => {
+		let skipMessage = false;
 		if (commit.body) {
 			if (!commit.body.includes(skipKey)) {
 				parseCommit(commit);
 				formattedCommits.push(formatCommit(commit));
 			}
+			else {
+				skipMessage = true;
+			}
 		}
 
 		/* TODO Remove this after 1.7, when its no longer needed */
 		// TODO Simply add the commit to formattedCommits
-		if (commit.message) {
+		if (commit.message && !skipMessage) {
 			if (!commit.message.includes(skipKey)) {
 				if (!commit.body.includes(noCategoryKey)) {
 					// If does not contain any keys
@@ -158,6 +162,7 @@ export async function makeChangelog(): Promise<void> {
 		}
 	});
 
+	/*
 	// Get all commit lists
 	const secondaryCommitList: Commit[] = await getChangelog(since, to);
 
@@ -176,6 +181,7 @@ export async function makeChangelog(): Promise<void> {
 			}
 		}
 	});
+	 */
 
 	// Push mod update blocks to General Changes.
 	await pushModChangesToGenerals(since);
@@ -192,7 +198,7 @@ export async function makeChangelog(): Promise<void> {
 	categories.forEach((category) => {
 		const categoryLog: string[] = [];
 		let hasValues = false;
-
+		
 		// Push All Sub Categories
 		category.subCategories.forEach((subCategory) => {
 			// Loop through key list instead of map to produce correct order
@@ -204,9 +210,7 @@ export async function makeChangelog(): Promise<void> {
 				}
 
 				// Push Log
-				categoryLog.push(list.join("\n"));
-				categoryLog.push("");
-
+				categoryLog.push(list.join("\n"), "");
 				hasValues = true;
 			}
 		});
@@ -215,7 +219,7 @@ export async function makeChangelog(): Promise<void> {
 			pushToBuilders(`## ${category.categoryName}:`);
 
 			// Push previously made log
-			pushToBuilders(categoryLog.join("\n"))
+			pushToBuilders(categoryLog.join("\n"));
 		}
 	});
 
@@ -345,27 +349,24 @@ async function pushModChangesToGenerals(since: string) {
 	// TODO add version of mods, and commit SHAs?
 	[
 		{
-			name: "### New mods",
+			subCategory: modAdditions,
 			list: comparisonResult.added,
 		},
 		{
-			name: "### Updated mods",
+			subCategory: modUpdates,
 			list: comparisonResult.modified,
 		},
 		{
-			name: "### Removed mods",
+			subCategory: modRemovals,
 			list: comparisonResult.removed,
 		},
 	].forEach((block) => {
 		if (block.list.length == 0) {
 			return;
 		}
-
-		pushToSection(generalCategory, other, "\n");
-		pushToSection(generalCategory, other, block.name);
 		pushToSection(
 			generalCategory,
-			other,
+			block.subCategory,
 			...block.list
 				// Yeet invalid project names.
 				.filter((project) => !/project-\d*/.test(project))

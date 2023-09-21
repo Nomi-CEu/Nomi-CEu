@@ -2,9 +2,12 @@
 
 <h2>General Changes:</h2>
 
+<h3>Mod Updates:</h3>
+<ul>
+<li>Neeve&#39;s AE2: Extended Life Additions</li>
+</ul>
 <h3>Other:</h3>
 <ul>
-<li>Update Quest Book Jsons and Lang - **github-actions<a href="%5B%60479d1b2%60%5D(https://github.com/Nomi-CEu/Nomi-CEu/commit/479d1b20c458365acccd3de1165747b7fb678112">bot</a>, Sep 21, 2023)</li>
 <li>Update Discord &amp; Github Quest - **IntegerLimit(<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5"><code>04edcfc</code></a>, Sep 21, 2023)</li>
 <li>Update Files - **IntegerLimit(<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f"><code>72fbe09</code></a>, Sep 19, 2023)</li>
 <li>Buff NC Fission Reactors&#39; power output by 1.4x - **IntegerLimit(<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/780e725e8c08bcbf8950bf25b3b547e450ae099a"><code>780e725</code></a>, Sep 18, 2023)</li>
@@ -30,16 +33,11 @@
 <li>[FEATURE] Enable shufflemode on main menu (#414) - **Pansmith(<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5538fe4524dcb0b64a333b756bfeeec34e12661c"><code>5538fe4</code></a>, Aug 28, 2023)</li>
 <li>Release 1.6.1a - **IntegerLimit(<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/644491a9f53c0ee300dbaf345f23e5b3f08b3c8a"><code>644491a</code></a>, Aug 27, 2023)</li>
 </ul>
-<h3>Updated mods</h3>
-<ul>
-<li>Neeve&#39;s AE2: Extended Life Additions</li>
-</ul>
 
 
 <h2>Commits</h2>
 
 <ul>
-<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/479d1b20c458365acccd3de1165747b7fb678112"><code>479d1b2</code></a>: Update Quest Book Jsons and Lang - <strong>github-actions[bot]</strong> (Sep 21, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5"><code>04edcfc</code></a>: Update Discord &amp; Github Quest - <strong>IntegerLimit</strong> (Sep 21, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5"><code>04edcfc</code></a>: Update Discord &amp; Github Quest - <strong>IntegerLimit</strong> (Sep 21, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f"><code>72fbe09</code></a>: Update Files - <strong>IntegerLimit</strong> (Sep 19, 2023)</li>

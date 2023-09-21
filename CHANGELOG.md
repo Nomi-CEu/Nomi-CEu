@@ -1,7 +1,9 @@
 # Changes since 1.6.1a
 ## General Changes:
+### Mod Updates:
+* Neeve's AE2: Extended Life Additions
+
 ### Other:
-* Update Quest Book Jsons and Lang - **github-actions[bot]([`479d1b2`](https://github.com/Nomi-CEu/Nomi-CEu/commit/479d1b20c458365acccd3de1165747b7fb678112), Sep 21, 2023)
 * Update Discord & Github Quest - **IntegerLimit([`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5), Sep 21, 2023)
 * Update Files - **IntegerLimit([`72fbe09`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f), Sep 19, 2023)
 * Buff NC Fission Reactors' power output by 1.4x - **IntegerLimit([`780e725`](https://github.com/Nomi-CEu/Nomi-CEu/commit/780e725e8c08bcbf8950bf25b3b547e450ae099a), Sep 18, 2023)
@@ -28,12 +30,7 @@
 * Release 1.6.1a - **IntegerLimit([`644491a`](https://github.com/Nomi-CEu/Nomi-CEu/commit/644491a9f53c0ee300dbaf345f23e5b3f08b3c8a), Aug 27, 2023)
 
 
-### Updated mods
-* Neeve's AE2: Extended Life Additions
-
-
 ## Commits
-* [`479d1b2`](https://github.com/Nomi-CEu/Nomi-CEu/commit/479d1b20c458365acccd3de1165747b7fb678112): Update Quest Book Jsons and Lang - **github-actions[bot]** (Sep 21, 2023)
 * [`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5): Update Discord & Github Quest - **IntegerLimit** (Sep 21, 2023)
 * [`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5): Update Discord & Github Quest - **IntegerLimit** (Sep 21, 2023)
 * [`72fbe09`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f): Update Files - **IntegerLimit** (Sep 19, 2023)
