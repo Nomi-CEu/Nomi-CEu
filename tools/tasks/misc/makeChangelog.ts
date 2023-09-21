@@ -137,7 +137,9 @@ export async function makeChangelog(): Promise<void> {
 	// Parse Commit List
 	commitList.forEach((commit) => {
 		let skipMessage = false;
+		let addedCommit = false;
 		if (commit.body) {
+			addedCommit = true;
 			if (!commit.body.includes(skipKey)) {
 				parseCommit(commit);
 				formattedCommits.push(formatCommit(commit));
@@ -147,7 +149,7 @@ export async function makeChangelog(): Promise<void> {
 		}
 
 		/* TODO Remove this after 1.7, when its no longer needed */
-		// TODO Simply add the commit to formattedCommits
+		// TODO Simply add the commit to formattedCommits, in an else block
 		if (commit.message && !skipMessage) {
 			if (!commit.message.includes(skipKey)) {
 				if (!commit.body.includes(noCategoryKey)) {
@@ -156,12 +158,13 @@ export async function makeChangelog(): Promise<void> {
 						addMessageToCategory(commit.message, commit, generalCategory, other);
 					}
 				}
-				formattedCommits.push(formatCommit(commit));
+				if (!addedCommit) {
+					formattedCommits.push(formatCommit(commit));
+				}
 			}
 		}
 	});
 
-	/*
 	// Get all commit lists
 	const secondaryCommitList: Commit[] = await getChangelog(since, to);
 
@@ -180,7 +183,6 @@ export async function makeChangelog(): Promise<void> {
 			}
 		}
 	});
-	 */
 
 	// Push mod update blocks to General Changes.
 	await pushModChangesToGenerals(since);
