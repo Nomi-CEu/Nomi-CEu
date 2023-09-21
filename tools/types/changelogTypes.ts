@@ -18,7 +18,7 @@ export interface Category {
 	 * Optional. If not set, then commits cannot be added to this category during the parse commit task.
 	 * Can still be added manually.
 	 */
-	commitKey: string;
+	commitKey?: string;
 
 	/**
 	 * Key Name: The title of this Category in the changelog.

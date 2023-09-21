@@ -86,6 +86,12 @@ const internalCategory: Category = {
 	categoryName: "Internal Changes",
 	subCategories: [emptySubCategory],
 };
+// TODO REMOVE THIS AFTER 1.7 PLEASE
+const QBHMCompat: Category = {
+	commitKey: "[QB HM]",
+	categoryName: "QB HM Compat",
+	subCategories: [emptySubCategory],
+};
 
 /**
  * Category List
@@ -100,6 +106,7 @@ const categories: Category[] = [
 	bugCategory,
 	generalCategory,
 	internalCategory,
+	QBHMCompat,
 ];
 
 /**
@@ -136,47 +143,48 @@ export async function makeChangelog(): Promise<void> {
 
 	// Parse Commit List
 	commitList.forEach((commit) => {
-		let skipMessage = false;
-		let addedCommit = false;
-		if (commit.body) {
-			addedCommit = true;
-			if (!commit.body.includes(skipKey)) {
-				parseCommit(commit);
+		/* TODO Remove this after 1.7, when its no longer needed */
+		// TODO Simply add the commit to formattedCommits, in an else block, after checking for `if(commit.body)`
+		let skipParsingBody = false;
+
+		if (!commit.message.includes(skipKey)) {
+			// If contained keys
+			const successParsingMessage = parseCommit(commit, true);
+			if (successParsingMessage) {
+				skipParsingBody = true;
 				formattedCommits.push(formatCommit(commit));
-			} else {
-				skipMessage = true;
 			}
+		} else {
+			skipParsingBody = true;
 		}
 
-		/* TODO Remove this after 1.7, when its no longer needed */
-		// TODO Simply add the commit to formattedCommits, in an else block
-		if (commit.message && !skipMessage) {
-			if (!commit.message.includes(skipKey)) {
-				if (!commit.body.includes(noCategoryKey)) {
-					// If does not contain any keys
-					if (!parseCommit(commit)) {
-						addMessageToCategory(commit.message, commit, generalCategory, other);
-					}
+		console.log(`Commit ${commit.message}, with parsing body status ${skipParsingBody}`);
+
+		if (commit.body && !skipParsingBody) {
+			console.log("Parsing Body");
+			if (!commit.body.includes(skipKey)) {
+				if (!parseCommit(commit)) {
+					addMessageToCategory(commit.message, commit, generalCategory, other);
 				}
-				if (!addedCommit) {
-					formattedCommits.push(formatCommit(commit));
-				}
+				formattedCommits.push(formatCommit(commit));
 			}
 		}
 	});
 
-	// Get all commit lists
+	// Transform commit list into list of SHAs (to compare)
+	const SHAList: string[] = [];
+	commitList.forEach((commit) => {
+		SHAList.push(commit.hash);
+	});
+
+	// Get all commits
 	const secondaryCommitList: Commit[] = await getChangelog(since, to);
 
 	// Parse commit list
 	secondaryCommitList.forEach((commit) => {
-		// If not in other commit list, and has a body
-		if (commit.body && !commitList.includes(commit)) {
-			// TODO remove check of message after 1.7, when its no longer needed
-			if (!commit.message.includes(skipKey) && !commit.body.includes(skipKey)) {
-				if (commit.body.includes(noCategoryKey)) {
-					formattedCommits.push(formatCommit(commit));
-				}
+		// If not in parsed SHA List, and has a body
+		if (commit.body && !SHAList.includes(commit.hash)) {
+			if (!commit.body.includes(skipKey)) {
 				if (parseCommit(commit)) {
 					formattedCommits.push(formatCommit(commit));
 				}
@@ -186,6 +194,16 @@ export async function makeChangelog(): Promise<void> {
 
 	// Push mod update blocks to General Changes.
 	await pushModChangesToGenerals(since);
+
+	// TODO REMOVE THIS AFTER 1.7 PLEASE
+	// Push stupid key [QB HM] to QB's HM category
+	questBookCategory.changelogSection.get(hardMode).push(QBHMCompat.changelogSection.get(emptySubCategory).join("\n"));
+
+	// Remove QB HN Compat Category from list.
+	const index = categories.indexOf(QBHMCompat);
+	if (index > -1) {
+		categories.splice(index, 1);
+	}
 
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
@@ -209,6 +227,9 @@ export async function makeChangelog(): Promise<void> {
 				if (subCategory.keyName) {
 					categoryLog.push(`### ${subCategory.keyName}:`);
 				}
+
+				// Sort Log
+				list.sort();
 
 				// Push Log
 				categoryLog.push(list.join("\n"), "");
@@ -267,7 +288,12 @@ function pushToBuilders(...markdownStrings: string[]) {
 	});
 }
 
-function parseCommit(commit: Commit): boolean {
+// TODO remove useMessage after 1.7
+function parseCommit(commit: Commit, useMessage = false): boolean {
+	if (useMessage) {
+		const sortCommitResult = sortCommit(commit.message, commit.message, commit);
+		return sortCommitResult;
+	}
 	if (commit.body.includes(expandKey)) {
 		deCompExpand(commit.message, commit.body);
 		return true;
@@ -276,19 +302,50 @@ function parseCommit(commit: Commit): boolean {
 		deCompDetails(commit.message, commit.body);
 		return true;
 	}
+	if (commit.body.includes(noCategoryKey)) {
+		return true;
+	}
 	return sortCommit(commit.message, commit.body, commit);
 }
 
 /**
- * Adds the commit message to its correct category. DO NOT CALL! Call `parseCommit`.
- * @param commitMessage The message to add
+ * Adds the (commit) message to its correct category. DO NOT CALL! Call `parseCommit`.
+ * @param message The message to add
  * @param commitBody The body to use to sort
  * @param commit The commit object to grab date, author and SHA from
+ * @param indentation The indentation of the message, if needed. Defaults to "".
  * @return added If the commit message was added to a category
  */
-function sortCommit(commitMessage: string, commitBody: string, commit: Commit): boolean {
-	// TODO add to breaking, balancing, features,
+function sortCommit(message: string, commitBody: string, commit: Commit, indentation = ""): boolean {
+	for (const category of categories) {
+		if (category.commitKey !== undefined) {
+			if (commitBody.includes(category.commitKey)) {
+				const subCategory = findSubCategory(commitBody, category);
+				if (subCategory) {
+					addMessageToCategory(message, commit, category, subCategory, indentation);
+				}
+				return true;
+			}
+		}
+	}
 	return false;
+}
+
+/**
+ * Finds the correct Sub Category a commit should go in. Must be given the Category first!
+ */
+function findSubCategory(commitBody: string, category: Category): SubCategory | undefined {
+	for (const subCategory of category.subCategories) {
+		if (subCategory.commitKey !== undefined) {
+			if (commitBody.includes(subCategory.commitKey)) {
+				return subCategory;
+			}
+		}
+	}
+	if (category.defaultSubCategory) {
+		return category.defaultSubCategory;
+	}
+	return undefined;
 }
 
 /**
