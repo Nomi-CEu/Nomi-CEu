@@ -14,8 +14,8 @@ import Bluebird from "bluebird";
 import { VersionManifest } from "../types/versionManifest";
 import { VersionsManifest } from "../types/versionsManifest";
 import log from "fancy-log";
-import { simpleGit, SimpleGit, pathspec  } from "simple-git";
-import { Commit } from "../types/commit";
+import { pathspec, SimpleGit, simpleGit } from "simple-git";
+import { Commit } from "../types/changelogTypes";
 import { rootDirectory } from "../globals";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
@@ -35,9 +35,7 @@ export const libraryToPath = (library: string): string => {
 		const name = parsedLibrary[2];
 		const version = parsedLibrary[3];
 
-		const newURL = `${pkg}/${name}/${version}/${name}-${version}`;
-
-		return newURL;
+		return `${pkg}/${name}/${version}/${name}-${version}`;
 	}
 };
 
@@ -187,7 +185,7 @@ export function makeArtifactNameBody(baseName: string): string {
 	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
-		const shortCommit = process.env.GITHUB_SHA.substr(0, 7);
+		const shortCommit = process.env.GITHUB_SHA.substring(0, 7);
 		const branch = /refs\/heads\/(.+)/.exec(process.env.GITHUB_REF);
 		return `${baseName}-${branch[1]}-${shortCommit}`;
 	} else {
@@ -197,7 +195,7 @@ export function makeArtifactNameBody(baseName: string): string {
 
 /**
  * Returns the COMPARE_TAG env if set, else fetches the last tag known to Git using the current branch.
- * @param {string | nil} before Tag to get the tag before.
+ * @param before Tag to get the tag before.
  * @returns string Git tag.
  * @throws
  */
@@ -242,16 +240,14 @@ export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] =
 		// Cannot simply set commitList as output.all as is read only, must do this
 		output.all.forEach((commit) => commitList.push(commit));
 	});
-	console.log(commitList);
 
 	return commitList;
 }
 
 /**
- * Generates a changelog based on the two provided Git refs.
- * @param {string} since Lower boundary Git ref.
- * @param {string} to Upper boundary Git ref.
- * @param {string[]} dirs Optional scopes.
+ * Gets the file at a certain point in time.
+ * @param path The path to the file
+ * @param revision The git ref point
  */
 export function getFileAtRevision(path: string, revision = "HEAD"): string {
 	return execSync(`git show ${revision}:"${path}"`).toString().trim();
