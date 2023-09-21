@@ -141,8 +141,7 @@ export async function makeChangelog(): Promise<void> {
 			if (!commit.body.includes(skipKey)) {
 				parseCommit(commit);
 				formattedCommits.push(formatCommit(commit));
-			}
-			else {
+			} else {
 				skipMessage = true;
 			}
 		}
@@ -198,7 +197,7 @@ export async function makeChangelog(): Promise<void> {
 	categories.forEach((category) => {
 		const categoryLog: string[] = [];
 		let hasValues = false;
-		
+
 		// Push All Sub Categories
 		category.subCategories.forEach((subCategory) => {
 			// Loop through key list instead of map to produce correct order
@@ -308,7 +307,7 @@ function addMessageToCategory(
 	const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
 	const shortSHA = commit.hash.substring(0, 7);
 	const author = commit.author_name;
-	const formattedMessage = `${indentation}* ${message} - **${author}([\`${shortSHA}\`](${commitLinkFormat}${commit.hash}), ${date})`;
+	const formattedMessage = `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commit.hash}), ${date})`;
 	pushToSection(category, subCategory, formattedMessage);
 }
 
