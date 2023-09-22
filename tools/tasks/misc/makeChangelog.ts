@@ -234,15 +234,16 @@ export async function makeChangelog(): Promise<void> {
 				list.sort((messageA, messageB): number => {
 					const dateA = new Date(messageA.commitObject.date);
 					const dateB = new Date(messageB.commitObject.date);
-					console.log(dateA.getUTCSeconds());
-					console.log(dateB.getUTCSeconds());
-					return dateA.getUTCSeconds() - dateB.getUTCSeconds() !== 0
-						? dateA.getUTCSeconds() - dateB.getUTCSeconds()
+					return dateA.getTime() - dateB.getTime() !== 0
+						? dateA.getTime() - dateB.getTime()
 						: messageA.commitMessage.localeCompare(messageB.commitMessage);
 				});
 
 				// Push Log
-				categoryLog.push(list.join("\n"), "");
+				list.forEach((changelogMessage) => {
+					categoryLog.push(formatChangelogMessage(changelogMessage));
+				});
+				categoryLog.push("");
 				hasValues = true;
 			}
 		});
@@ -251,7 +252,7 @@ export async function makeChangelog(): Promise<void> {
 			pushToBuilders(`## ${category.categoryName}:`);
 
 			// Push previously made log
-			pushToBuilders(categoryLog.join("\n"));
+			pushToBuilders(...categoryLog);
 		}
 	});
 
