@@ -1,9 +1,9 @@
 import fs from "fs";
 import upath from "upath";
 import { modpackManifest, rootDirectory } from "../../globals";
-import { compareAndExpandManifestDependencies, getFileAtRevision, getLastGitTag, getChangelog } from "../../util/util";
+import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, getLastGitTag } from "../../util/util";
 import { ModpackManifest } from "../../types/modpackManifest";
-import { Commit, Category, SubCategory } from "../../types/changelogTypes";
+import { Category, Commit, SubCategory } from "../../types/changelogTypes";
 import marked from "marked";
 
 const mdOptions = {
@@ -229,7 +229,7 @@ export async function makeChangelog(): Promise<void> {
 				}
 
 				// Sort Log
-				list.sort();
+				// list.sort();
 
 				// Push Log
 				categoryLog.push(list.join("\n"), "");
@@ -291,8 +291,7 @@ function pushToBuilders(...markdownStrings: string[]) {
 // TODO remove useMessage after 1.7
 function parseCommit(commit: Commit, useMessage = false): boolean {
 	if (useMessage) {
-		const sortCommitResult = sortCommit(commit.message, commit.message, commit);
-		return sortCommitResult;
+		return sortCommit(commit.message, commit.message, commit, "", true);
 	}
 	if (commit.body.includes(expandKey)) {
 		deCompExpand(commit.message, commit.body);
@@ -308,18 +307,24 @@ function parseCommit(commit: Commit, useMessage = false): boolean {
 	return sortCommit(commit.message, commit.body, commit);
 }
 
+// TODO Remove `compat` after 1.7
 /**
  * Adds the (commit) message to its correct category. DO NOT CALL! Call `parseCommit`.
  * @param message The message to add
  * @param commitBody The body to use to sort
  * @param commit The commit object to grab date, author and SHA from
  * @param indentation The indentation of the message, if needed. Defaults to "".
+ * @param compat If tag is found in message, whether to remove. REMOVE AFTER 1.7!
  * @return added If the commit message was added to a category
  */
-function sortCommit(message: string, commitBody: string, commit: Commit, indentation = ""): boolean {
+function sortCommit(message: string, commitBody: string, commit: Commit, indentation = "", compat = false): boolean {
 	for (const category of categories) {
 		if (category.commitKey !== undefined) {
 			if (commitBody.includes(category.commitKey)) {
+				if (message.includes(category.commitKey) && compat) {
+					message = message.replace(category.commitKey, "");
+				}
+				message = message.trim();
 				const subCategory = findSubCategory(commitBody, category);
 				if (subCategory) {
 					addMessageToCategory(message, commit, category, subCategory, indentation);
