@@ -30,12 +30,9 @@ export interface Category {
 	/**
 	 * Changelog Section: The changelog section map that the key should push to.
 	 * <p>
-	 * The keys are strings instead of SubCategories, so that it is easier to add to the map,
-	 * and so that two SubCategories can point to the same key, if needed.
-	 * <p>
 	 * Will be initialized later, if put into categoryKeys.
 	 */
-	changelogSection?: Map<SubCategory, string[]>;
+	changelogSection?: Map<SubCategory, ChangelogMessage[]>;
 
 	/**
 	 * Default Sub Category. Any commits not placed into other sub-categories will be placed in here.
@@ -79,4 +76,28 @@ export interface SubCategory {
 	 * Can be set to "" to have no title.
 	 */
 	keyName: string;
+}
+
+/**
+ * A Changelog Message Object.
+ */
+export interface ChangelogMessage {
+	/**
+	 * Commit Message
+	 */
+	commitMessage: string;
+
+	/**
+	 * Commit Object
+	 * <p>
+	 * Provides the Commit SHA, the Commit Author, and the Commit Date.
+	 */
+	commitObject?: Commit;
+
+	/**
+	 * Indentation
+	 * <p>
+	 * Optional. Defaults to "".
+	 */
+	indentation?: string;
 }

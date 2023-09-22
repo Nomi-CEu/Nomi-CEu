@@ -3,7 +3,7 @@ import upath from "upath";
 import { modpackManifest, rootDirectory } from "../../globals";
 import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, getLastGitTag } from "../../util/util";
 import { ModpackManifest } from "../../types/modpackManifest";
-import { Category, Commit, SubCategory } from "../../types/changelogTypes";
+import { Category, ChangelogMessage, Commit, SubCategory } from "../../types/changelogTypes";
 import marked from "marked";
 
 const mdOptions = {
@@ -158,13 +158,13 @@ export async function makeChangelog(): Promise<void> {
 			skipParsingBody = true;
 		}
 
-		console.log(`Commit ${commit.message}, with parsing body status ${skipParsingBody}`);
-
 		if (commit.body && !skipParsingBody) {
-			console.log("Parsing Body");
 			if (!commit.body.includes(skipKey)) {
 				if (!parseCommit(commit)) {
-					addMessageToCategory(commit.message, commit, generalCategory, other);
+					generalCategory.changelogSection.get(other).push({
+						commitMessage: commit.message,
+						commitObject: commit,
+					});
 				}
 				formattedCommits.push(formatCommit(commit));
 			}
@@ -197,7 +197,9 @@ export async function makeChangelog(): Promise<void> {
 
 	// TODO REMOVE THIS AFTER 1.7 PLEASE
 	// Push stupid key [QB HM] to QB's HM category
-	questBookCategory.changelogSection.get(hardMode).push(QBHMCompat.changelogSection.get(emptySubCategory).join("\n"));
+	QBHMCompat.changelogSection.get(emptySubCategory).forEach((changelogMessage) => {
+		questBookCategory.changelogSection.get(hardMode).push(changelogMessage);
+	});
 
 	// Remove QB HN Compat Category from list.
 	const index = categories.indexOf(QBHMCompat);
@@ -229,7 +231,15 @@ export async function makeChangelog(): Promise<void> {
 				}
 
 				// Sort Log
-				// list.sort();
+				list.sort((messageA, messageB): number => {
+					const dateA = new Date(messageA.commitObject.date);
+					const dateB = new Date(messageB.commitObject.date);
+					console.log(dateA.getUTCSeconds());
+					console.log(dateB.getUTCSeconds());
+					return dateA.getUTCSeconds() - dateB.getUTCSeconds() !== 0
+						? dateA.getUTCSeconds() - dateB.getUTCSeconds()
+						: messageA.commitMessage.localeCompare(messageB.commitMessage);
+				});
 
 				// Push Log
 				categoryLog.push(list.join("\n"), "");
@@ -268,7 +278,7 @@ export async function makeChangelog(): Promise<void> {
  * @param categoryKey The Category Key to grab the Sub Categories from
  */
 function initializeCategorySection(categoryKey: Category): void {
-	const categorySection = new Map<SubCategory, string[]>();
+	const categorySection = new Map<SubCategory, ChangelogMessage[]>();
 	categoryKey.subCategories.forEach((subCategory) => {
 		categorySection.set(subCategory, []);
 	});
@@ -327,7 +337,11 @@ function sortCommit(message: string, commitBody: string, commit: Commit, indenta
 				message = message.trim();
 				const subCategory = findSubCategory(commitBody, category);
 				if (subCategory) {
-					addMessageToCategory(message, commit, category, subCategory, indentation);
+					category.changelogSection.get(subCategory).push({
+						commitMessage: message,
+						commitObject: commit,
+						indentation: indentation,
+					});
 				}
 				return true;
 			}
@@ -354,25 +368,24 @@ function findSubCategory(commitBody: string, category: Category): SubCategory | 
 }
 
 /**
- * Adds a (commit) message to a category.
- * @param message The message to add.
- * @param commit The commit object to grab date, author and SHA from.
- * @param category The category to put it into.
- * @param subCategory The sub-category to put it into.
- * @param indentation The indentation to put it in. Defaults to "".
+ * Formats a Changelog Message
+ * @param changelogMessage The message to format.
+ * @return string Formatted Changelog Message
  */
-function addMessageToCategory(
-	message: string,
-	commit: Commit,
-	category: Category,
-	subCategory: SubCategory,
-	indentation = "",
-): void {
-	const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
-	const shortSHA = commit.hash.substring(0, 7);
-	const author = commit.author_name;
-	const formattedMessage = `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commit.hash}), ${date})`;
-	pushToSection(category, subCategory, formattedMessage);
+function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
+	const indentation = changelogMessage.indentation == undefined ? "" : changelogMessage.indentation;
+	const message = changelogMessage.commitMessage;
+
+	if (changelogMessage.commitObject) {
+		const commit = changelogMessage.commitObject;
+		const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
+		const shortSHA = commit.hash.substring(0, 7);
+		const author = commit.author_name;
+
+		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commit.hash}), ${date})`;
+	}
+
+	return `${indentation}* ${message}`;
 }
 
 /**
@@ -427,26 +440,16 @@ async function pushModChangesToGenerals(since: string) {
 		if (block.list.length == 0) {
 			return;
 		}
-		pushToSection(
-			generalCategory,
-			block.subCategory,
-			...block.list
-				// Yeet invalid project names.
-				.filter((project) => !/project-\d*/.test(project))
-				.sort()
-				.map((name) => `* ${name}`),
-		);
-	});
-}
+		const list = block.list
+			// Yeet invalid project names.
+			.filter((project) => !/project-\d*/.test(project))
+			.sort()
+			.map((name) => name);
 
-/**
- * Pushes the string(s) to a Category, with a specified Sub Category.
- * @param category The category to push to
- * @param subCategory The Sub Category to push to.
- * @param strings The strings to push.
- */
-function pushToSection(category: Category, subCategory: SubCategory, ...strings: string[]) {
-	strings.forEach((string) => {
-		category.changelogSection.get(subCategory).push(string);
+		list.forEach((message) => {
+			generalCategory.changelogSection.get(block.subCategory).push({
+				commitMessage: message,
+			});
+		});
 	});
 }
