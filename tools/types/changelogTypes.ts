@@ -101,3 +101,9 @@ export interface ChangelogMessage {
 	 */
 	indentation?: string;
 }
+
+export interface ModChangeInfo {
+	modName: string;
+	oldVersion?: string;
+	newVersion?: string;
+}

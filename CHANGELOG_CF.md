@@ -116,7 +116,7 @@
 <h3>Mod Updates:</h3>
 
 <ul>
-<li>Neeve&#39;s AE2: Extended Life Additions</li>
+<li>Neeve&#39;s AE2: Extended Life Additions: Neeve&#39;s AE2: Extended Life Additions: 1.3.0 -&gt; Neeve&#39;s AE2: Extended Life Additions: 1.3.1</li>
 </ul>
 
 

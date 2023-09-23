@@ -9,13 +9,13 @@ import http from "http";
 import { compareBufferToHashDef } from "./hashes";
 import { execSync } from "child_process";
 import { ExternalDependency, ModpackManifest, ModpackManifestFile } from "../types/modpackManifest";
-import { fetchProject, fetchProjectsBulk } from "./curseForgeAPI";
+import { fetchFileInfo, fetchProject, fetchProjectsBulk } from "./curseForgeAPI";
 import Bluebird from "bluebird";
 import { VersionManifest } from "../types/versionManifest";
 import { VersionsManifest } from "../types/versionsManifest";
 import log from "fancy-log";
 import { pathspec, SimpleGit, simpleGit } from "simple-git";
-import { Commit } from "../types/changelogTypes";
+import { Commit, ModChangeInfo } from "../types/changelogTypes";
 import { rootDirectory } from "../globals";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
@@ -215,18 +215,34 @@ export function getLastGitTag(before?: string): string {
 		.trim();
 }
 
+export interface changelogSpecification {
+	lineStart: number;
+	fileName: string;
+}
+
 /**
  * Generates a changelog based on the two provided Git refs.
  * @param since Lower boundary Git ref.
  * @param to Upper boundary Git ref.
  * @param dirs Optional scopes. These are of the perspective of the root dir.
+ * @param specifications Optional specification. If specifying, recommended to set dirs to undefined.
  * @returns changelog Object Array of Changelog
  */
-export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): Promise<Commit[]> {
+export async function getChangelog(
+	since = "HEAD",
+	to = "HEAD",
+	dirs: string[] = undefined,
+	specifications: changelogSpecification[] = undefined,
+): Promise<Commit[]> {
 	const options: string[] = ["--no-merges", `${since}..${to}`];
 	if (dirs) {
 		dirs.forEach((dir) => {
 			options.push(pathspec(dir));
+		});
+	}
+	if (specifications) {
+		specifications.forEach((specification) => {
+			options.push(`-L ${specification.lineStart},+2:${specification.fileName}`);
 		});
 	}
 
@@ -254,9 +270,9 @@ export function getFileAtRevision(path: string, revision = "HEAD"): string {
 }
 
 export interface ManifestFileListComparisonResult {
-	removed: string[];
-	modified: string[];
-	added: string[];
+	removed: ModChangeInfo[];
+	modified: ModChangeInfo[];
+	added: ModChangeInfo[];
 }
 
 export async function compareAndExpandManifestDependencies(
@@ -273,9 +289,9 @@ export async function compareAndExpandManifestDependencies(
 		{},
 	);
 
-	const removed: string[] = [],
-		modified: string[] = [],
-		added: string[] = [];
+	const removed: ModChangeInfo[] = [],
+		modified: ModChangeInfo[] = [],
+		added: ModChangeInfo[] = [];
 
 	// Create a distinct map of project IDs.
 	const projectIDs = Array.from(
@@ -294,15 +310,25 @@ export async function compareAndExpandManifestDependencies(
 
 			// Doesn't exist in new, but exists in old. Removed. Left outer join.
 			if (!newFileInfo && oldFileInfo) {
-				removed.push((await fetchProject(oldFileInfo.projectID)).name);
+				removed.push({
+					modName: (await fetchProject(oldFileInfo.projectID)).name,
+					oldVersion: (await fetchFileInfo(oldFileInfo.projectID, oldFileInfo.fileID)).displayName,
+				});
 			}
 			// Doesn't exist in old, but exists in new. Added. Right outer join.
 			else if (newFileMap[projectID] && !oldFileMap[projectID]) {
-				added.push((await fetchProject(newFileInfo.projectID)).name);
+				added.push({
+					modName: (await fetchProject(newFileInfo.projectID)).name,
+					newVersion: (await fetchFileInfo(newFileInfo.projectID, newFileInfo.fileID)).displayName,
+				});
 			}
 			// Exists in both. Modified? Inner join.
 			else if (oldFileInfo.fileID != newFileInfo.fileID) {
-				modified.push((await fetchProject(newFileInfo.projectID)).name);
+				modified.push({
+					modName: (await fetchProject(newFileInfo.projectID)).name,
+					oldVersion: (await fetchFileInfo(newFileInfo.projectID, oldFileInfo.fileID)).displayName,
+					newVersion: (await fetchFileInfo(newFileInfo.projectID, newFileInfo.fileID)).displayName,
+				});
 			}
 		},
 		{ concurrency: buildConfig.downloaderConcurrency },
@@ -325,7 +351,8 @@ export async function compareAndExpandManifestDependencies(
 		]),
 	);
 
-	externalNames.forEach(async (name) => {
+	/*
+	externalNames.forEach((name) => {
 		const oldDep = oldExternalMap[name];
 		const newDep = newExternalMap[name];
 
@@ -342,6 +369,7 @@ export async function compareAndExpandManifestDependencies(
 			modified.push(newDep.name);
 		}
 	});
+	 */
 
 	return {
 		removed: removed,

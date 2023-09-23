@@ -5,6 +5,7 @@ import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, 
 import { ModpackManifest } from "../../types/modpackManifest";
 import { Category, ChangelogMessage, Commit, SubCategory } from "../../types/changelogTypes";
 import marked from "marked";
+import readline from "fs";
 
 const mdOptions = {
 	pedantic: false,
@@ -191,6 +192,15 @@ export async function makeChangelog(): Promise<void> {
 			}
 		}
 	});
+
+	console.log(
+		await getChangelog("1.5.2", to, undefined, [
+			{
+				lineStart: 783,
+				fileName: "manifest.json",
+			},
+		]),
+	);
 
 	// Push mod update blocks to General Changes.
 	await pushModChangesToGenerals(since);
@@ -423,7 +433,7 @@ function deCompDetails(commitMessage: string, commitBody: string): void {
 async function pushModChangesToGenerals(since: string) {
 	const old = JSON.parse(getFileAtRevision("manifest.json", since)) as ModpackManifest;
 	const comparisonResult = await compareAndExpandManifestDependencies(old, modpackManifest);
-	// TODO add version of mods, and commit SHAs?
+	// TODO add version of mods, and commit objects?
 	[
 		{
 			subCategory: modAdditions,
@@ -443,14 +453,24 @@ async function pushModChangesToGenerals(since: string) {
 		}
 		const list = block.list
 			// Yeet invalid project names.
-			.filter((project) => !/project-\d*/.test(project))
+			.filter((project) => !/project-\d*/.test(project.modName))
 			.sort()
 			.map((name) => name);
 
-		list.forEach((message) => {
-			generalCategory.changelogSection.get(block.subCategory).push({
-				commitMessage: message,
-			});
+		list.forEach((info) => {
+			if (info.newVersion && !info.oldVersion) {
+				generalCategory.changelogSection.get(block.subCategory).push({
+					commitMessage: `${info.modName}: ${info.newVersion}`,
+				});
+			} else if (!info.newVersion && info.oldVersion) {
+				generalCategory.changelogSection.get(block.subCategory).push({
+					commitMessage: `${info.modName}: ${info.oldVersion}`,
+				});
+			} else if (info.newVersion && info.oldVersion) {
+				generalCategory.changelogSection.get(block.subCategory).push({
+					commitMessage: `${info.modName}: ${info.oldVersion} -> ${info.newVersion}`,
+				});
+			}
 		});
 	});
 }

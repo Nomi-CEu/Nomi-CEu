@@ -37,7 +37,7 @@
 
 ## General Changes:
 ### Mod Updates:
-* Neeve's AE2: Extended Life Additions
+* Neeve's AE2: Extended Life Additions: Neeve's AE2: Extended Life Additions: 1.3.0 -> Neeve's AE2: Extended Life Additions: 1.3.1
 
 
 ## Commits
