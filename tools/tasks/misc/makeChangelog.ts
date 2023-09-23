@@ -5,7 +5,6 @@ import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, 
 import { ModpackManifest } from "../../types/modpackManifest";
 import { Category, ChangelogMessage, Commit, SubCategory } from "../../types/changelogTypes";
 import marked from "marked";
-import readline from "fs";
 
 const mdOptions = {
 	pedantic: false,
@@ -242,11 +241,14 @@ export async function makeChangelog(): Promise<void> {
 
 				// Sort Log
 				list.sort((messageA, messageB): number => {
-					const dateA = new Date(messageA.commitObject.date);
-					const dateB = new Date(messageB.commitObject.date);
-					return dateA.getTime() - dateB.getTime() !== 0
-						? dateA.getTime() - dateB.getTime()
-						: messageA.commitMessage.localeCompare(messageB.commitMessage);
+					if (messageA.commitObject && messageB.commitObject) {
+						const dateA = new Date(messageA.commitObject.date);
+						const dateB = new Date(messageB.commitObject.date);
+						return dateA.getTime() - dateB.getTime() !== 0
+							? dateA.getTime() - dateB.getTime()
+							: messageA.commitMessage.localeCompare(messageB.commitMessage);
+					}
+					return messageA.commitMessage.localeCompare(messageB.commitMessage);
 				});
 
 				// Push Log
@@ -458,19 +460,31 @@ async function pushModChangesToGenerals(since: string) {
 			.map((name) => name);
 
 		list.forEach((info) => {
-			if (info.newVersion && !info.oldVersion) {
+			if (info.oldVersion) {
+				const oldVersion = cleanupVersion(info.oldVersion);
+
+				if (info.newVersion) {
+					const newVersion = cleanupVersion(info.newVersion);
+					generalCategory.changelogSection.get(block.subCategory).push({
+						commitMessage: `${info.modName}: **v${oldVersion} -> v${newVersion}**`,
+					});
+				} else {
+					generalCategory.changelogSection.get(block.subCategory).push({
+						commitMessage: `${info.modName}: **v${oldVersion}**`,
+					});
+				}
+			} else if (info.newVersion) {
+				const newVersion = cleanupVersion(info.newVersion);
 				generalCategory.changelogSection.get(block.subCategory).push({
-					commitMessage: `${info.modName}: ${info.newVersion}`,
-				});
-			} else if (!info.newVersion && info.oldVersion) {
-				generalCategory.changelogSection.get(block.subCategory).push({
-					commitMessage: `${info.modName}: ${info.oldVersion}`,
-				});
-			} else if (info.newVersion && info.oldVersion) {
-				generalCategory.changelogSection.get(block.subCategory).push({
-					commitMessage: `${info.modName}: ${info.oldVersion} -> ${info.newVersion}`,
+					commitMessage: `${info.modName}: **v${newVersion}**`,
 				});
 			}
 		});
 	});
+}
+
+function cleanupVersion(version: string): string {
+	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
+	const list = version.match(/[\d+.?]+/g);
+	return list[list.length - 1];
 }
