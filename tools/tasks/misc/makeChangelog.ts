@@ -5,6 +5,7 @@ import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, 
 import { ModpackManifest } from "../../types/modpackManifest";
 import { Category, ChangelogMessage, Commit, ModChangeInfo, SubCategory } from "../../types/changelogTypes";
 import marked from "marked";
+import mustache from "mustache";
 
 const mdOptions = {
 	pedantic: false,
@@ -191,15 +192,6 @@ export async function makeChangelog(): Promise<void> {
 			}
 		}
 	});
-
-	console.log(
-		await getChangelog("1.5.2", to, undefined, [
-			{
-				lineStart: 783,
-				fileName: "manifest.json",
-			},
-		]),
-	);
 
 	// Push mod update blocks to General Changes.
 	await pushModChangesToGenerals(since);
@@ -438,14 +430,17 @@ async function pushModChangesToGenerals(since: string) {
 	[
 		{
 			subCategory: modAdditions,
+			template: "{{ modName }}: **v{{ newVersion }}**",
 			list: comparisonResult.added,
 		},
 		{
 			subCategory: modUpdates,
+			template: "{{ modName }}: **v{{ oldVersion }} => v{{ newVersion }}**",
 			list: comparisonResult.modified,
 		},
 		{
 			subCategory: modRemovals,
+			template: "{{ modName }}: **v{{ oldVersion }}**",
 			list: comparisonResult.removed,
 		},
 	].forEach((block) => {
@@ -460,25 +455,25 @@ async function pushModChangesToGenerals(since: string) {
 
 		list.forEach((info) => {
 			generalCategory.changelogSection.get(block.subCategory).push({
-				commitMessage: getModChangeMessage(info),
+				commitMessage: getModChangeMessage(info, block.template),
 			});
 		});
 	});
 }
 
-function getModChangeMessage(info: ModChangeInfo) {
+function getModChangeMessage(info: ModChangeInfo, template: string) {
 	const oldVersion = cleanupVersion(info.oldVersion);
 	const newVersion = cleanupVersion(info.newVersion);
 
 	// If not provided with either version, return just mod name
 	if (!oldVersion && !newVersion) return info.modName;
 
-	// If provided with one, just return mod name + version
-	// Since provided with one, can just have both versions in output
-	if (!oldVersion || !newVersion) return `${info.modName}: **v${oldVersion}${newVersion}**`;
-
-	// Provided with both: join together
-	return `${info.modName}: **v${oldVersion} -> v${newVersion}**`;
+	// Replace in template
+	return mustache.render(template, {
+		modName: info.modName,
+		oldVersion: oldVersion,
+		newVersion: newVersion,
+	});
 }
 
 function cleanupVersion(version: string): string {

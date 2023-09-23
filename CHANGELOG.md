@@ -8,31 +8,31 @@
 
 ## General Changes:
 ### Mod Updates:
-* AE2 Unofficial Extended Life: **v0.55.12 -> v0.55.21**
-* BdLib: **v1.14.3.12 -> v1.14.4.1**
-* CensoredASM: **v5.6 -> v5.14**
-* Controlling: **v3.0.10 -> v3.0.12.2**
-* CraftTweaker: **v4.1.20.687 -> v4.1.20.692**
-* CreativeCore: **v1.10.69 -> v1.10.71**
-* Ender IO Endergy: **v5.3.70 -> v5.3.72**
-* Ender IO: **v5.3.70 -> v5.3.72**
-* EnderCore: **v0.5.76 -> v0.5.78**
-* Extended Crafting: Nomifactory Edition: **v1.7.0 -> v1.7.0.6**
-* Gregicality Multiblocks: **v1.2.1 -> v1.2.3**
-* GregTech CE Unofficial: **v2.6.0 -> v2.6.2**
-* Gregtech Drawers: **v1.0.2 -> v1.0.6**
-* Had Enough Items: **v4.24.5 -> v4.25.0**
-* Inventory Bogo Sorter: **v1.2.6 -> v1.2.8**
-* JEI Utilities: **v0.2.11 -> v0.2.12**
-* LittleTiles: **v1.5.68 -> v1.5.81**
-* MixinBooter: **v7.1 -> v8.3**
-* ModularUI: **v2.0.3 -> v2.0.5**
-* Storage Drawers: **v5.4.2 -> v5.5.0**
-* ULV Covers: **v2.5.0 -> v2.6.2**
+* AE2 Unofficial Extended Life: **v0.55.12 => v0.55.21**
+* BdLib: **v1.14.3.12 => v1.14.4.1**
+* CensoredASM: **v5.6 => v5.14**
+* Controlling: **v3.0.10 => v3.0.12.2**
+* CraftTweaker: **v4.1.20.687 => v4.1.20.692**
+* CreativeCore: **v1.10.69 => v1.10.71**
+* Ender IO Endergy: **v5.3.70 => v5.3.72**
+* Ender IO: **v5.3.70 => v5.3.72**
+* EnderCore: **v0.5.76 => v0.5.78**
+* Extended Crafting: Nomifactory Edition: **v1.7.0 => v1.7.0.6**
+* Gregicality Multiblocks: **v1.2.1 => v1.2.3**
+* GregTech CE Unofficial: **v2.6.0 => v2.6.2**
+* Gregtech Drawers: **v1.0.2 => v1.0.6**
+* Had Enough Items: **v4.24.5 => v4.25.0**
+* Inventory Bogo Sorter: **v1.2.6 => v1.2.8**
+* JEI Utilities: **v0.2.11 => v0.2.12**
+* LittleTiles: **v1.5.68 => v1.5.81**
+* MixinBooter: **v7.1 => v8.3**
+* ModularUI: **v2.0.3 => v2.0.5**
+* Storage Drawers: **v5.4.2 => v5.5.0**
+* ULV Covers: **v2.5.0 => v2.6.2**
 
 ### Mod Additions:
 * Mouse Tweaks Unofficial: **v3.1.4**
-* Neeve's AE2: Extended Life Additions: **v1.3.1**
+* Neeve&#39;s AE2: Extended Life Additions: **v1.3.1**
 * No Nether Portals: **v1.1.0**
 * SerializationIsBad: **v1.4**
 

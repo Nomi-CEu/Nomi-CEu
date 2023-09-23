@@ -215,8 +215,23 @@ export function getLastGitTag(before?: string): string {
 		.trim();
 }
 
+/**
+ * Specification of log.
+ */
 export interface changelogSpecification {
+	/**
+	 * Must be in file. First line of file to include.
+	 */
 	lineStart: number;
+
+	/**
+	 * Must be in file. Last line of file to include.
+	 */
+	lineEnd: number;
+
+	/**
+	 * Path to file, from root dir.
+	 */
 	fileName: string;
 }
 
@@ -242,7 +257,7 @@ export async function getChangelog(
 	}
 	if (specifications) {
 		specifications.forEach((specification) => {
-			options.push(`-L ${specification.lineStart},+2:${specification.fileName}`);
+			options.push(`-L ${specification.lineStart},${specification.lineEnd}:${specification.fileName}`);
 		});
 	}
 

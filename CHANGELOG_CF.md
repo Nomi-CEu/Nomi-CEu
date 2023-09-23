@@ -26,87 +26,87 @@
 <h3>Mod Updates:</h3>
 
 <ul>
-<li>AE2 Unofficial Extended Life: <strong>v0.55.12 -&gt; v0.55.21</strong></li>
+<li>AE2 Unofficial Extended Life: <strong>v0.55.12 =&gt; v0.55.21</strong></li>
 </ul>
 
 <ul>
-<li>BdLib: <strong>v1.14.3.12 -&gt; v1.14.4.1</strong></li>
+<li>BdLib: <strong>v1.14.3.12 =&gt; v1.14.4.1</strong></li>
 </ul>
 
 <ul>
-<li>CensoredASM: <strong>v5.6 -&gt; v5.14</strong></li>
+<li>CensoredASM: <strong>v5.6 =&gt; v5.14</strong></li>
 </ul>
 
 <ul>
-<li>Controlling: <strong>v3.0.10 -&gt; v3.0.12.2</strong></li>
+<li>Controlling: <strong>v3.0.10 =&gt; v3.0.12.2</strong></li>
 </ul>
 
 <ul>
-<li>CraftTweaker: <strong>v4.1.20.687 -&gt; v4.1.20.692</strong></li>
+<li>CraftTweaker: <strong>v4.1.20.687 =&gt; v4.1.20.692</strong></li>
 </ul>
 
 <ul>
-<li>CreativeCore: <strong>v1.10.69 -&gt; v1.10.71</strong></li>
+<li>CreativeCore: <strong>v1.10.69 =&gt; v1.10.71</strong></li>
 </ul>
 
 <ul>
-<li>Ender IO Endergy: <strong>v5.3.70 -&gt; v5.3.72</strong></li>
+<li>Ender IO Endergy: <strong>v5.3.70 =&gt; v5.3.72</strong></li>
 </ul>
 
 <ul>
-<li>Ender IO: <strong>v5.3.70 -&gt; v5.3.72</strong></li>
+<li>Ender IO: <strong>v5.3.70 =&gt; v5.3.72</strong></li>
 </ul>
 
 <ul>
-<li>EnderCore: <strong>v0.5.76 -&gt; v0.5.78</strong></li>
+<li>EnderCore: <strong>v0.5.76 =&gt; v0.5.78</strong></li>
 </ul>
 
 <ul>
-<li>Extended Crafting: Nomifactory Edition: <strong>v1.7.0 -&gt; v1.7.0.6</strong></li>
+<li>Extended Crafting: Nomifactory Edition: <strong>v1.7.0 =&gt; v1.7.0.6</strong></li>
 </ul>
 
 <ul>
-<li>Gregicality Multiblocks: <strong>v1.2.1 -&gt; v1.2.3</strong></li>
+<li>Gregicality Multiblocks: <strong>v1.2.1 =&gt; v1.2.3</strong></li>
 </ul>
 
 <ul>
-<li>GregTech CE Unofficial: <strong>v2.6.0 -&gt; v2.6.2</strong></li>
+<li>GregTech CE Unofficial: <strong>v2.6.0 =&gt; v2.6.2</strong></li>
 </ul>
 
 <ul>
-<li>Gregtech Drawers: <strong>v1.0.2 -&gt; v1.0.6</strong></li>
+<li>Gregtech Drawers: <strong>v1.0.2 =&gt; v1.0.6</strong></li>
 </ul>
 
 <ul>
-<li>Had Enough Items: <strong>v4.24.5 -&gt; v4.25.0</strong></li>
+<li>Had Enough Items: <strong>v4.24.5 =&gt; v4.25.0</strong></li>
 </ul>
 
 <ul>
-<li>Inventory Bogo Sorter: <strong>v1.2.6 -&gt; v1.2.8</strong></li>
+<li>Inventory Bogo Sorter: <strong>v1.2.6 =&gt; v1.2.8</strong></li>
 </ul>
 
 <ul>
-<li>JEI Utilities: <strong>v0.2.11 -&gt; v0.2.12</strong></li>
+<li>JEI Utilities: <strong>v0.2.11 =&gt; v0.2.12</strong></li>
 </ul>
 
 <ul>
-<li>LittleTiles: <strong>v1.5.68 -&gt; v1.5.81</strong></li>
+<li>LittleTiles: <strong>v1.5.68 =&gt; v1.5.81</strong></li>
 </ul>
 
 <ul>
-<li>MixinBooter: <strong>v7.1 -&gt; v8.3</strong></li>
+<li>MixinBooter: <strong>v7.1 =&gt; v8.3</strong></li>
 </ul>
 
 <ul>
-<li>ModularUI: <strong>v2.0.3 -&gt; v2.0.5</strong></li>
+<li>ModularUI: <strong>v2.0.3 =&gt; v2.0.5</strong></li>
 </ul>
 
 <ul>
-<li>Storage Drawers: <strong>v5.4.2 -&gt; v5.5.0</strong></li>
+<li>Storage Drawers: <strong>v5.4.2 =&gt; v5.5.0</strong></li>
 </ul>
 
 <ul>
-<li>ULV Covers: <strong>v2.5.0 -&gt; v2.6.2</strong></li>
+<li>ULV Covers: <strong>v2.5.0 =&gt; v2.6.2</strong></li>
 </ul>
 
 
