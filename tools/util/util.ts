@@ -351,25 +351,23 @@ export async function compareAndExpandManifestDependencies(
 		]),
 	);
 
-	/*
 	externalNames.forEach((name) => {
 		const oldDep = oldExternalMap[name];
 		const newDep = newExternalMap[name];
 
 		// Doesn't exist in new, but exists in old. Removed. Left outer join.
 		if (!newDep && oldDep) {
-			removed.push(oldDep.name);
+			removed.push({ modName: oldDep.name });
 		}
 		// Doesn't exist in old, but exists in new. Added. Right outer join.
 		else if (newDep && !oldDep) {
-			added.push(newDep.name);
+			added.push({ modName: newDep.name });
 		}
 		// Exists in both. Modified? Inner join.
 		else if (oldDep.url != newDep.url || oldDep.name != newDep.name) {
-			modified.push(newDep.name);
+			modified.push({ modName: newDep.name });
 		}
 	});
-	 */
 
 	return {
 		removed: removed,
