@@ -3,7 +3,7 @@ import upath from "upath";
 import { modpackManifest, rootDirectory } from "../../globals";
 import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, getLastGitTag } from "../../util/util";
 import { ModpackManifest } from "../../types/modpackManifest";
-import { Category, ChangelogMessage, Commit, SubCategory } from "../../types/changelogTypes";
+import { Category, ChangelogMessage, Commit, ModChangeInfo, SubCategory } from "../../types/changelogTypes";
 import marked from "marked";
 
 const mdOptions = {
@@ -435,7 +435,6 @@ function deCompDetails(commitMessage: string, commitBody: string): void {
 async function pushModChangesToGenerals(since: string) {
 	const old = JSON.parse(getFileAtRevision("manifest.json", since)) as ModpackManifest;
 	const comparisonResult = await compareAndExpandManifestDependencies(old, modpackManifest);
-	// TODO add version of mods, and commit objects?
 	[
 		{
 			subCategory: modAdditions,
@@ -460,30 +459,30 @@ async function pushModChangesToGenerals(since: string) {
 			.map((name) => name);
 
 		list.forEach((info) => {
-			if (info.oldVersion) {
-				const oldVersion = cleanupVersion(info.oldVersion);
-
-				if (info.newVersion) {
-					const newVersion = cleanupVersion(info.newVersion);
-					generalCategory.changelogSection.get(block.subCategory).push({
-						commitMessage: `${info.modName}: **v${oldVersion} -> v${newVersion}**`,
-					});
-				} else {
-					generalCategory.changelogSection.get(block.subCategory).push({
-						commitMessage: `${info.modName}: **v${oldVersion}**`,
-					});
-				}
-			} else if (info.newVersion) {
-				const newVersion = cleanupVersion(info.newVersion);
-				generalCategory.changelogSection.get(block.subCategory).push({
-					commitMessage: `${info.modName}: **v${newVersion}**`,
-				});
-			}
+			generalCategory.changelogSection.get(block.subCategory).push({
+				commitMessage: getModChangeMessage(info),
+			});
 		});
 	});
 }
 
+function getModChangeMessage(info: ModChangeInfo) {
+	const oldVersion = cleanupVersion(info.oldVersion);
+	const newVersion = cleanupVersion(info.newVersion);
+
+	// If not provided with either version, return just mod name
+	if (!oldVersion && !newVersion) return info.modName;
+
+	// If provided with one, just return mod name + version
+	// Since provided with one, can just have both versions in output
+	if (!oldVersion || !newVersion) return `${info.modName}: **v${oldVersion}${newVersion}**`;
+
+	// Provided with both: join together
+	return `${info.modName}: **v${oldVersion} -> v${newVersion}**`;
+}
+
 function cleanupVersion(version: string): string {
+	if (!version) return "";
 	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
 	const list = version.match(/[\d+.?]+/g);
 	return list[list.length - 1];
