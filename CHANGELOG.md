@@ -45,12 +45,16 @@
 * Neeve&#39;s AE2: Extended Life Additions: **v1.3.0 => v1.3.1**
 
 ### Other:
+* Test - **IntegerLimit** ([`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4), Sep 25, 2023)
+  * Five Teddies - **IntegerLimit** ([`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4), Sep 25, 2023)
+  * Two Bears - **IntegerLimit** ([`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4), Sep 25, 2023)
 * done. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84), Sep 25, 2023)
 * Update Files - **IntegerLimit** ([`72fbe09`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f), Sep 19, 2023)
 * Release 1.6.1a - **IntegerLimit** ([`644491a`](https://github.com/Nomi-CEu/Nomi-CEu/commit/644491a9f53c0ee300dbaf345f23e5b3f08b3c8a), Aug 27, 2023)
 
 
 ## Commits
+* [`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4): Test - **IntegerLimit** (Sep 25, 2023)
 * [`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84): Test - **IntegerLimit** (Sep 25, 2023)
 * [`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b): Testing time - **IntegerLimit** (Sep 25, 2023)
 * [`c42ffb3`](https://github.com/Nomi-CEu/Nomi-CEu/commit/c42ffb3fea024579e4f5a48ce351435ad498fe56): Add crouching exception to Mining Hammers quest description (#437) - **Clarence "Sparr" Risher** (Sep 25, 2023)

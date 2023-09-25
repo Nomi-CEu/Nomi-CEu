@@ -39,10 +39,12 @@ export interface Category {
 	 * <p>
 	 * Should be a Sub Category added to subCategoryKeys, as otherwise the category would not appear in the changelog.
 	 * <p>
-	 * Optional. This can also be done with a SubCategoryKey placed at the end, with the commitKey set to `""`.
+	 * This can also be done with a SubCategoryKey placed at the end, with the commitKey set to `""`.
 	 * However, this is useful for places where the Default Sub Category should not be at the end.
+	 * <p>
+	 * This is also needed for certain parsing operations.
 	 */
-	defaultSubCategory?: SubCategory;
+	defaultSubCategory: SubCategory;
 
 	/**
 	 * Sub Category Keys: The list of sub-category keys.
@@ -95,6 +97,11 @@ export interface ChangelogMessage {
 	commitObject?: Commit;
 
 	/**
+	 * Sub Changelog Messages
+	 */
+	subChangelogMessages?: ChangelogMessage[];
+
+	/**
 	 * Indentation
 	 * <p>
 	 * Optional. Defaults to "".
@@ -111,5 +118,5 @@ export interface ModChangeInfo {
 
 export interface ExpandedMessage {
 	messageTitle: string;
-	messageBody: string;
+	messageBody?: string;
 }

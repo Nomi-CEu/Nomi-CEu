@@ -6,7 +6,7 @@ import {
 	getChangelog,
 	getCommitChange,
 	getFileAtRevision,
-	getLastGitTag
+	getLastGitTag,
 } from "../../util/util";
 import { ModpackManifest } from "../../types/modpackManifest";
 import {
@@ -15,7 +15,7 @@ import {
 	Commit,
 	ExpandedMessage,
 	ModChangeInfo,
-	SubCategory
+	SubCategory,
 } from "../../types/changelogTypes";
 import marked from "marked";
 import mustache from "mustache";
@@ -34,12 +34,18 @@ marked.setOptions(mdOptions);
 // Final Builders
 let builderGH: string[];
 
+/* Values */
+const defaultIndentation = "";
+const indentationLevel = "  ";
+
 /* Keys */
 
 /* Special Handling Keys */
 const skipKey = "[SKIP]";
 const expandKey = "[EXPAND]";
+const expandList = "messages";
 const detailsKey = "[DETAILS]";
+const detailsList = "details";
 const noCategoryKey = "[NO CATEGORY]";
 
 /* Sub Category Keys */
@@ -64,6 +70,7 @@ const other: SubCategory = { commitKey: "", keyName: "Other" };
 const breakingCategory: Category = {
 	commitKey: "[BREAKING]",
 	categoryName: "Breaking Changes",
+	defaultSubCategory: emptySubCategory,
 	subCategories: [emptySubCategory],
 };
 const balancingCategory: Category = {
@@ -93,17 +100,20 @@ const bugCategory: Category = {
 const generalCategory: Category = {
 	commitKey: "[GENERAL]",
 	categoryName: "General Changes",
+	defaultSubCategory: other,
 	subCategories: [modUpdates, modAdditions, modRemovals, other],
 };
 const internalCategory: Category = {
 	commitKey: "[INTERNAL]",
 	categoryName: "Internal Changes",
+	defaultSubCategory: emptySubCategory,
 	subCategories: [emptySubCategory],
 };
 // TODO REMOVE THIS AFTER 1.7 PLEASE
 const QBHMCompat: Category = {
 	commitKey: "[QB HM]",
 	categoryName: "QB HM Compat",
+	defaultSubCategory: emptySubCategory,
 	subCategories: [emptySubCategory],
 };
 
@@ -268,6 +278,11 @@ export async function makeChangelog(): Promise<void> {
 				// Push Log
 				list.forEach((changelogMessage) => {
 					categoryLog.push(formatChangelogMessage(changelogMessage));
+					if (changelogMessage.subChangelogMessages) {
+						changelogMessage.subChangelogMessages.forEach((subMessage) => {
+							categoryLog.push(formatChangelogMessage(subMessage));
+						});
+					}
 				});
 				categoryLog.push("");
 				hasValues = true;
@@ -328,7 +343,7 @@ function initializeCategorySection(categoryKey: Category): void {
 // TODO remove useMessage after 1.7
 async function parseCommit(commit: Commit, useMessage = false): Promise<boolean> {
 	if (useMessage) {
-		return sortCommit(commit.message, commit.message, commit, "", true);
+		return sortCommit(commit.message, commit.message, commit, defaultIndentation, true);
 	}
 	return await parseCommitBody(commit.message, commit.body, commit);
 }
@@ -339,7 +354,7 @@ async function parseCommitBody(commitMessage: string, commitBody: string, commit
 		return true;
 	}
 	if (commitBody.includes(detailsKey)) {
-		deCompDetails(commitMessage, commitBody);
+		await deCompDetails(commitMessage, commitBody, commitObject);
 		return true;
 	}
 	if (commitBody.includes(noCategoryKey)) {
@@ -358,34 +373,44 @@ async function parseCommitBody(commitMessage: string, commitBody: string, commit
  * @param compat If tag is found in message, whether to remove. REMOVE AFTER 1.7!
  * @return added If the commit message was added to a category
  */
-function sortCommit(message: string, commitBody: string, commit: Commit, indentation = "", compat = false): boolean {
-	let added = false;
+function sortCommit(
+	message: string,
+	commitBody: string,
+	commit: Commit,
+	indentation = defaultIndentation,
+	compat = false,
+): boolean {
+	const category = findCategory(commitBody);
+	if (!category) return false;
+
+	const subCategory = findSubCategory(commitBody, category);
+	if (message.includes(category.commitKey) && compat) {
+		message = message.replace(category.commitKey, "");
+	}
+	message = message.trim();
+	category.changelogSection.get(subCategory).push({
+		commitMessage: message,
+		commitObject: commit,
+		indentation: indentation,
+	});
+	return true;
+}
+
+function findCategory(commitBody: string): Category | undefined {
 	for (const category of categories) {
 		if (category.commitKey !== undefined) {
 			if (commitBody.includes(category.commitKey)) {
-				if (message.includes(category.commitKey) && compat) {
-					message = message.replace(category.commitKey, "");
-				}
-				message = message.trim();
-				const subCategory = findSubCategory(commitBody, category);
-				if (subCategory) {
-					category.changelogSection.get(subCategory).push({
-						commitMessage: message,
-						commitObject: commit,
-						indentation: indentation,
-					});
-				}
-				added = true;
+				return category;
 			}
 		}
 	}
-	return added;
+	return undefined;
 }
 
 /**
  * Finds the correct Sub Category a commit should go in. Must be given the Category first!
  */
-function findSubCategory(commitBody: string, category: Category): SubCategory | undefined {
+function findSubCategory(commitBody: string, category: Category): SubCategory {
 	for (const subCategory of category.subCategories) {
 		if (subCategory.commitKey !== undefined) {
 			if (commitBody.includes(subCategory.commitKey)) {
@@ -393,10 +418,7 @@ function findSubCategory(commitBody: string, category: Category): SubCategory | 
 			}
 		}
 	}
-	if (category.defaultSubCategory) {
-		return category.defaultSubCategory;
-	}
-	return undefined;
+	return category.defaultSubCategory;
 }
 
 /**
@@ -405,7 +427,7 @@ function findSubCategory(commitBody: string, category: Category): SubCategory | 
  * @return string Formatted Changelog Message
  */
 function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
-	const indentation = changelogMessage.indentation == undefined ? "" : changelogMessage.indentation;
+	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	const message = changelogMessage.commitMessage;
 
 	if (changelogMessage.commitObject) {
@@ -441,22 +463,15 @@ function formatCommit(commit: Commit): string {
  * Decompiles a commit with 'expand'.
  */
 async function deCompExpand(commitBody: string, commitObject: Commit): Promise<void> {
-	console.log(commitBody);
-	// Remove everything before first [EXPAND] in body
-	const list = commitBody.split("[EXPAND]");
-	list.shift();
-	const body = `[EXPAND] ${list.join("[EXPAND]")}`;
-
-	const parseResult = matter(body, { delimiters: "[EXPAND]" });
-
-	console.log(parseResult);
-
-	console.log(parseResult.data["messages"]);
-
-	const messages: ExpandedMessage[] = parseResult.data["messages"];
+	const messages: ExpandedMessage[] = await parse(commitBody, expandKey, expandList);
 	for (const message of messages) {
-
-		if (!(await parseCommitBody(message.messageTitle, message.messageBody, commitObject))) {
+		if (message.messageBody) {
+			if (!(await parseCommitBody(message.messageTitle, message.messageBody, commitObject))) {
+				generalCategory.changelogSection
+					.get(other)
+					.push({ commitMessage: message.messageTitle, commitObject: commitObject });
+			}
+		} else {
 			generalCategory.changelogSection
 				.get(other)
 				.push({ commitMessage: message.messageTitle, commitObject: commitObject });
@@ -467,8 +482,49 @@ async function deCompExpand(commitBody: string, commitObject: Commit): Promise<v
 /**
  * Decompiles a commit with 'details'.
  */
-function deCompDetails(commitMessage: string, commitBody: string): void {
-	//TODO This is going to be hard...
+async function deCompDetails(commitMessage: string, commitBody: string, commitObject: Commit): Promise<void> {
+	let category = findCategory(commitBody);
+	if (!category) category = generalCategory;
+
+	const subCategory = findSubCategory(commitBody, category);
+
+	category.changelogSection.get(subCategory).push({
+		commitMessage: commitMessage,
+		commitObject: commitObject,
+		subChangelogMessages: await deCompDetailsLevel(commitBody, commitObject),
+	});
+}
+
+async function deCompDetailsLevel(
+	commitBody: string,
+	commitObject: Commit,
+	indentation = indentationLevel,
+): Promise<ChangelogMessage[]> {
+	const messages: string[] = await parse(commitBody, detailsKey, detailsList);
+
+	const result: ChangelogMessage[] = [];
+
+	for (const message of messages) {
+		if (message.includes(detailsKey)) {
+			result.push(...(await deCompDetailsLevel(message, commitObject, `${indentation}${indentationLevel}`)));
+		} else {
+			result.push({ commitMessage: message, commitObject: commitObject, indentation: indentation });
+		}
+	}
+
+	return result;
+}
+
+async function parse(commitBody: string, delimiter: string, listKey: string): Promise<never[]> {
+	// Remove everything before first delimiter in body
+	const list = commitBody.split(delimiter);
+	list.shift();
+	const body = `${delimiter} ${list.join(delimiter)}`;
+
+	// Parse
+	const parseResult = matter(body, { delimiters: delimiter });
+
+	return parseResult.data[listKey];
 }
 
 async function pushModChangesToGenerals(since: string, to: string) {
