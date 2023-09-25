@@ -6,6 +6,10 @@
 <li>Rebalance ULV Covers - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/26120dc6d310041eaa22dbd3262ad5a1589677f2"><code>26120dc</code></a>, Sep 18, 2023)</li>
 </ul>
 <h2>Feature Additions:</h2>
+<h3>Quality of Life:</h3>
+<ul>
+<li>Done. OR IS IT???? - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
+</ul>
 <h3>Both Modes:</h3>
 <ul>
 <li>Allow for QB Translations of Normal and Expert Quest Books (#432) - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5aecff8b4d5a3fd45ba54d75dc5ad241ec444be5"><code>5aecff8</code></a>, Sep 17, 2023)</li>
@@ -13,9 +17,18 @@
 <li>New data textures (#419) - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a02ef21fbae24df59e5fa9a5ef4640752baf835f"><code>a02ef21</code></a>, Sep 1, 2023)</li>
 <li>Enable shufflemode on main menu (#414) - <strong>Pansmith</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5538fe4524dcb0b64a333b756bfeeec34e12661c"><code>5538fe4</code></a>, Aug 28, 2023)</li>
 </ul>
+<h3>Hard Mode:</h3>
+<ul>
+<li>Bears. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)<ul>
+<li>Five Teddies - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
+<li>Two Bears - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
+</ul>
+</li>
+</ul>
 <h2>Quest Book Changes:</h2>
 <h3>Both Modes:</h3>
 <ul>
+<li>Rids QB. AGAIN!!!! - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
 <li>Rids QB. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84"><code>0d09d86</code></a>, Sep 25, 2023)</li>
 <li>Rids QB. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b"><code>d306d14</code></a>, Sep 25, 2023)</li>
 <li>Add crouching exception to Mining Hammers quest description (#437) - <strong>Clarence &quot;Sparr&quot; Risher</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c42ffb3fea024579e4f5a48ce351435ad498fe56"><code>c42ffb3</code></a>, Sep 25, 2023)</li>
@@ -26,6 +39,7 @@
 </ul>
 <h3>Hard Mode:</h3>
 <ul>
+<li>Nothing. At least I no longer hate this. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
 <li>Everything. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84"><code>0d09d86</code></a>, Sep 25, 2023)</li>
 <li>Nothing. I hate this. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b"><code>d306d14</code></a>, Sep 25, 2023)</li>
 <li>Fix up Mixer Quest - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5b5d13710abe0f96c41ba4a3505969c0a98e23bc"><code>5b5d137</code></a>, Sep 7, 2023)</li>
@@ -63,6 +77,7 @@
 </ul>
 <h2>Commits</h2>
 <ul>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>: Big Test - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4"><code>9b8a6ad</code></a>: Test - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84"><code>0d09d86</code></a>: Test - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b"><code>d306d14</code></a>: Testing time - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>

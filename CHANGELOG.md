@@ -5,14 +5,23 @@
 * Rebalance ULV Covers - **IntegerLimit** ([`26120dc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/26120dc6d310041eaa22dbd3262ad5a1589677f2), Sep 18, 2023)
 
 ## Feature Additions:
+### Quality of Life:
+* Done. OR IS IT???? - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
+
 ### Both Modes:
 * Allow for QB Translations of Normal and Expert Quest Books (#432) - **IntegerLimit** ([`5aecff8`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5aecff8b4d5a3fd45ba54d75dc5ad241ec444be5), Sep 17, 2023)
 * Russian Content Tweaker Translation (#429) - **IntegerLimit** ([`bcae6f4`](https://github.com/Nomi-CEu/Nomi-CEu/commit/bcae6f4eebf5616766edcc3e735df7cbf6276440), Sep 12, 2023)
 * New data textures (#419) - **IntegerLimit** ([`a02ef21`](https://github.com/Nomi-CEu/Nomi-CEu/commit/a02ef21fbae24df59e5fa9a5ef4640752baf835f), Sep 1, 2023)
 * Enable shufflemode on main menu (#414) - **Pansmith** ([`5538fe4`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5538fe4524dcb0b64a333b756bfeeec34e12661c), Aug 28, 2023)
 
+### Hard Mode:
+* Bears. - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
+  * Five Teddies - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
+  * Two Bears - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
+
 ## Quest Book Changes:
 ### Both Modes:
+* Rids QB. AGAIN!!!! - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
 * Rids QB. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84), Sep 25, 2023)
 * Rids QB. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b), Sep 25, 2023)
 * Add crouching exception to Mining Hammers quest description (#437) - **Clarence "Sparr" Risher** ([`c42ffb3`](https://github.com/Nomi-CEu/Nomi-CEu/commit/c42ffb3fea024579e4f5a48ce351435ad498fe56), Sep 25, 2023)
@@ -22,6 +31,7 @@
 * Move Multiblock Machine Previews Quest - **IntegerLimit** ([`03d61c8`](https://github.com/Nomi-CEu/Nomi-CEu/commit/03d61c8d5fbaa0439fc823b5aef3a4859b17a444), Sep 7, 2023)
 
 ### Hard Mode:
+* Nothing. At least I no longer hate this. - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
 * Everything. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84), Sep 25, 2023)
 * Nothing. I hate this. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b), Sep 25, 2023)
 * Fix up Mixer Quest - **IntegerLimit** ([`5b5d137`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5b5d13710abe0f96c41ba4a3505969c0a98e23bc), Sep 7, 2023)
@@ -54,6 +64,7 @@
 
 
 ## Commits
+* [`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7): Big Test - **IntegerLimit** (Sep 25, 2023)
 * [`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4): Test - **IntegerLimit** (Sep 25, 2023)
 * [`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84): Test - **IntegerLimit** (Sep 25, 2023)
 * [`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b): Testing time - **IntegerLimit** (Sep 25, 2023)
