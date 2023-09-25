@@ -7,23 +7,18 @@ Changes all files. Yay!
 
 [EXPAND]
 messages:
-  -
-    messageTitle: Rids QB.
+  - messageTitle: Rids QB.
     messageBody: "[QB]"
-
-  -
-    messageTitle: Everything.
+  - messageTitle: Nothing. I hate this.
     messageBody: |
-        [QB]
-        [HM]
-  -
-    messageTitle: Expand Time.
+      [QB]
+      [HM]
+  - messageTitle: Expand Time.
     messageBody: |
       [EXPAND]
-        messages:
-          -
-            messageTitle: done.
-            messageBody: "[NO CATEGORY]"
+      messages:
+        - messageTitle: Done.
+          messageBody: "[NO CATEGORY]"
       [EXPAND]
 [EXPAND]
 /* Commits */

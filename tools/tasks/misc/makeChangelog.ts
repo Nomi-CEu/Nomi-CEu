@@ -241,10 +241,7 @@ export async function makeChangelog(): Promise<void> {
 	const test = await fs.promises.readFile(upath.join(rootDirectory, "test.txt"))
 
 	// TODO TEMP
-	await deCompExpand(
-		test.toString(),
-		commitList[0],
-	);
+	// await deCompExpand(test.toString(), commitList[0]);
 
 	// Push Sections of Changelog
 	categories.forEach((category) => {
@@ -487,8 +484,8 @@ async function pushModChangesToGenerals(since: string, to: string) {
 
 	const commitList = await getChangelog(since, to, ["manifest.json"]);
 	for (const commit of commitList) {
-		console.log(commit.message);
-		await getCommitChange(commit.hash);
+		//console.log(commit.message);
+		//await getCommitChange(commit.hash);
 	}
 
 	[
