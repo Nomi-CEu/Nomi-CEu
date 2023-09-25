@@ -33,7 +33,6 @@ marked.setOptions(mdOptions);
 
 // Final Builders
 let builderGH: string[];
-let builderCF: string[];
 
 /* Keys */
 
@@ -143,7 +142,6 @@ export async function makeChangelog(): Promise<void> {
 
 	// Final Builders
 	builderGH = [];
-	builderCF = [];
 
 	// Initialize Category Lists
 	categories.forEach((categoryKey) => {
@@ -232,11 +230,11 @@ export async function makeChangelog(): Promise<void> {
 
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
-		pushToBuilders((await fs.promises.readFile("../UPDATENOTES.md")).toString());
+		builderGH.push((await fs.promises.readFile("../UPDATENOTES.md")).toString());
 	}
 
 	// Push the title.
-	pushToBuilders(`# Changes since ${since}`);
+	builderGH.push(`# Changes since ${since}`);
 
 	// Push Sections of Changelog
 	categories.forEach((category) => {
@@ -277,10 +275,10 @@ export async function makeChangelog(): Promise<void> {
 		});
 		if (hasValues) {
 			// Push Title
-			pushToBuilders(`## ${category.categoryName}:`);
+			builderGH.push(`## ${category.categoryName}:`);
 
 			// Push previously made log
-			pushToBuilders(...categoryLog);
+			builderGH.push(...categoryLog);
 		}
 	});
 
@@ -297,22 +295,22 @@ export async function makeChangelog(): Promise<void> {
 
 	// Push the commit log
 	if (changelogCommitList) {
-		pushToBuilders("");
-		pushToBuilders("## Commits");
+		builderGH.push("");
+		builderGH.push("## Commits");
 		changelogCommitList.forEach((commit) => {
-			pushToBuilders(formatCommit(commit));
+			builderGH.push(formatCommit(commit));
 		});
 	}
 
 	// Check if the builder only contains the title.
 	if (builderGH.length == 1) {
-		pushToBuilders("");
-		pushToBuilders("There haven't been any changes.");
+		builderGH.push("");
+		builderGH.push("There haven't been any changes.");
 	}
 
 	// TODO allow changing of output dir
 	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builderGH.join("\n"));
-	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), builderCF.join("\n"));
+	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), marked.parse(builderGH.join("\n")));
 }
 
 /**
@@ -325,19 +323,6 @@ function initializeCategorySection(categoryKey: Category): void {
 		categorySection.set(subCategory, []);
 	});
 	categoryKey.changelogSection = categorySection;
-}
-
-/**
- * Adds the strings to both builders, in the correct format.
- * @param markdownStrings The strings to add, formatted in markdown.
- */
-function pushToBuilders(...markdownStrings: string[]) {
-	let htmlString: string;
-	markdownStrings.forEach((markdownString) => {
-		htmlString = marked.parse(markdownString);
-		builderGH.push(markdownString);
-		builderCF.push(htmlString);
-	});
 }
 
 // TODO remove useMessage after 1.7

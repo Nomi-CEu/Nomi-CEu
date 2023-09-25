@@ -15,6 +15,7 @@
 ### Both Modes:
 * Rids QB. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84), Sep 25, 2023)
 * Rids QB. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b), Sep 25, 2023)
+* Add crouching exception to Mining Hammers quest description (#437) - **Clarence "Sparr" Risher** ([`c42ffb3`](https://github.com/Nomi-CEu/Nomi-CEu/commit/c42ffb3fea024579e4f5a48ce351435ad498fe56), Sep 25, 2023)
 * Update Discord & Github Quest - **IntegerLimit** ([`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5), Sep 21, 2023)
 * Fix Description of The First Tier Two Circuits Quest - **IntegerLimit** ([`1a35ae8`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a35ae82d9830c5444c5634d93268e3b857f07bd), Sep 7, 2023)
 * Fix Neeve Quest, make it ignore NBT - **IntegerLimit** ([`c66f542`](https://github.com/Nomi-CEu/Nomi-CEu/commit/c66f5428818e02051b77d84fa01792bf2a6d9dcf), Sep 7, 2023)
@@ -52,6 +53,7 @@
 ## Commits
 * [`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84): Test - **IntegerLimit** (Sep 25, 2023)
 * [`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b): Testing time - **IntegerLimit** (Sep 25, 2023)
+* [`c42ffb3`](https://github.com/Nomi-CEu/Nomi-CEu/commit/c42ffb3fea024579e4f5a48ce351435ad498fe56): Add crouching exception to Mining Hammers quest description (#437) - **Clarence "Sparr" Risher** (Sep 25, 2023)
 * [`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5): Update Discord & Github Quest - **IntegerLimit** (Sep 21, 2023)
 * [`72fbe09`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f): Update Files - **IntegerLimit** (Sep 19, 2023)
 * [`780e725`](https://github.com/Nomi-CEu/Nomi-CEu/commit/780e725e8c08bcbf8950bf25b3b547e450ae099a): Buff NC Fission Reactors' power output by 1.4x - **IntegerLimit** (Sep 18, 2023)
