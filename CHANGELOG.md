@@ -17,7 +17,7 @@
 * Fix Neeve Quest, make it ignore NBT - **IntegerLimit** ([`c66f542`](https://github.com/Nomi-CEu/Nomi-CEu/commit/c66f5428818e02051b77d84fa01792bf2a6d9dcf), Sep 7, 2023)
 * Fix Description of The First Tier Two Circuits Quest - **IntegerLimit** ([`1a35ae8`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a35ae82d9830c5444c5634d93268e3b857f07bd), Sep 7, 2023)
 * Update Discord & Github Quest - **IntegerLimit** ([`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5), Sep 21, 2023)
-* Rids QB. - **IntegerLimit** ([`72333d9`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72333d9a0c94fc38d01bdb8bf957d1b80c45b8af), Sep 25, 2023)
+* Rids QB. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b), Sep 25, 2023)
 
 ### Hard Mode:
 * Make Drawer Quest Task Logic OR - **IntegerLimit** ([`5d51fda`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5d51fda1c6740edc5021657f90f6ecd1de954d29), Sep 2, 2023)
@@ -30,7 +30,7 @@
 * Remove Reward for Bending Machine Quest - **IntegerLimit** ([`d037ee5`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d037ee5f466cec066fac1d14a762a377426a032d), Sep 7, 2023)
 * Don't mention HV Batteries in Iron Quest - **IntegerLimit** ([`342d988`](https://github.com/Nomi-CEu/Nomi-CEu/commit/342d988e322a45e0d141227c9aa34ec8e53663e7), Sep 7, 2023)
 * Fix up Mixer Quest - **IntegerLimit** ([`5b5d137`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5b5d13710abe0f96c41ba4a3505969c0a98e23bc), Sep 7, 2023)
-* Everything. - **IntegerLimit** ([`72333d9`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72333d9a0c94fc38d01bdb8bf957d1b80c45b8af), Sep 25, 2023)
+* Nothing. I hate this. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b), Sep 25, 2023)
 
 ## Bug Fixes:
 ### Both Modes:
@@ -71,4 +71,4 @@
 * [`758f7e7`](https://github.com/Nomi-CEu/Nomi-CEu/commit/758f7e704ca8b13031f7ca859e6bc9c0f0a9e786): [BUG] Fix DML Multiblock NBT Issue - **IntegerLimit** (Aug 29, 2023)
 * [`5538fe4`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5538fe4524dcb0b64a333b756bfeeec34e12661c): [FEATURE] Enable shufflemode on main menu (#414) - **Pansmith** (Aug 28, 2023)
 * [`644491a`](https://github.com/Nomi-CEu/Nomi-CEu/commit/644491a9f53c0ee300dbaf345f23e5b3f08b3c8a): Release 1.6.1a - **IntegerLimit** (Aug 27, 2023)
-* [`72333d9`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72333d9a0c94fc38d01bdb8bf957d1b80c45b8af): Testing time - **IntegerLimit** (Sep 25, 2023)
+* [`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b): Testing time - **IntegerLimit** (Sep 25, 2023)

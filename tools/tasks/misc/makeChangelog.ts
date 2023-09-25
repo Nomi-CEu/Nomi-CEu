@@ -446,6 +446,7 @@ function formatCommit(commit: Commit): string {
  * Decompiles a commit with 'expand'.
  */
 async function deCompExpand(commitBody: string, commitObject: Commit): Promise<void> {
+	console.log(commitBody);
 	// Remove everything before first [EXPAND] in body
 	const list = commitBody.split("[EXPAND]");
 	list.shift();
