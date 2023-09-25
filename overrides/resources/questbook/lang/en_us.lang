@@ -70,7 +70,7 @@ nomifactory.quest.normal.db.4.desc=§c§rOres in §5Nomifactory§f exist in larg
 
 #db 5 of mode normal
 nomifactory.quest.normal.db.5.title=Mining Hammers
-nomifactory.quest.normal.db.5.desc=§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly.%n%n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material. §r%n%nYour free 4 Diamond Mining Hammers should last you a while, and you can always fix them using an anvil and some diamonds.
+nomifactory.quest.normal.db.5.desc=§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks (unless you're crouching) and mine quickly.%n%n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material. §r%n%nYour free 4 Diamond Mining Hammers should last you a while, and you can always fix them using an anvil and some diamonds.
 
 #db 6 of mode normal
 nomifactory.quest.normal.db.6.title=§2More Materials
@@ -3524,7 +3524,7 @@ nomifactory.quest.expert.db.4.desc=§c§rOres in §5Nomifactory§f exist in larg
 
 #db 5 of mode expert
 nomifactory.quest.expert.db.5.title=Mining Hammers
-nomifactory.quest.expert.db.5.desc=§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks and mine quickly.%n%n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material. §r%n%nYour free Diamond Mining Hammer should last you a bit, and you can always fix it using an anvil and some diamonds.
+nomifactory.quest.expert.db.5.desc=§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks (unless you're crouching) and mine quickly.%n%n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material. §r%n%nYour free Diamond Mining Hammer should last you a bit, and you can always fix it using an anvil and some diamonds.
 
 #db 6 of mode expert
 nomifactory.quest.expert.db.6.title=§2More Materials
