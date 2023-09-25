@@ -17,6 +17,7 @@ import log from "fancy-log";
 import { pathspec, SimpleGit, simpleGit } from "simple-git";
 import { Commit, ModChangeInfo } from "../types/changelogTypes";
 import { rootDirectory } from "../globals";
+import * as readline from "readline";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
@@ -276,9 +277,22 @@ export async function getChangelog(
 }
 
 /**
+ * Gets what a commit changed.
+ * @param SHA The sha of the commit
+ */
+export async function getCommitChange(SHA: string) {
+	console.log(await git.diff([`${SHA}~`, `${SHA}`]));
+	console.log(await git.diff([`${SHA}~`, `${SHA}`, "--raw"]));
+	console.log(await git.diff([`${SHA}~`, `${SHA}`, "--summary"]));
+	console.log(await git.diffSummary([`${SHA}~`, `${SHA}`]));
+	console.log(getFileAtRevision("manifest.json", SHA));
+	console.log(getFileAtRevision("manifest.json", `^${SHA}`));
+}
+
+/**
  * Gets the file at a certain point in time.
  * @param path The path to the file
- * @param revision The git ref point
+ * @param revision The git ref point. Can also be a commit SHA
  */
 export function getFileAtRevision(path: string, revision = "HEAD"): string {
 	return execSync(`git show ${revision}:"${path}"`).toString().trim();
@@ -327,6 +341,7 @@ export async function compareAndExpandManifestDependencies(
 			if (!newFileInfo && oldFileInfo) {
 				removed.push({
 					modName: (await fetchProject(oldFileInfo.projectID)).name,
+					projectID: projectID,
 					oldVersion: (await fetchFileInfo(oldFileInfo.projectID, oldFileInfo.fileID)).displayName,
 				});
 			}
@@ -334,6 +349,7 @@ export async function compareAndExpandManifestDependencies(
 			else if (newFileMap[projectID] && !oldFileMap[projectID]) {
 				added.push({
 					modName: (await fetchProject(newFileInfo.projectID)).name,
+					projectID: projectID,
 					newVersion: (await fetchFileInfo(newFileInfo.projectID, newFileInfo.fileID)).displayName,
 				});
 			}
@@ -341,6 +357,7 @@ export async function compareAndExpandManifestDependencies(
 			else if (oldFileInfo.fileID != newFileInfo.fileID) {
 				modified.push({
 					modName: (await fetchProject(newFileInfo.projectID)).name,
+					projectID: projectID,
 					oldVersion: (await fetchFileInfo(newFileInfo.projectID, oldFileInfo.fileID)).displayName,
 					newVersion: (await fetchFileInfo(newFileInfo.projectID, newFileInfo.fileID)).displayName,
 				});
@@ -348,6 +365,13 @@ export async function compareAndExpandManifestDependencies(
 		},
 		{ concurrency: buildConfig.downloaderConcurrency },
 	);
+
+	// Get Lines of each dep
+	/*
+	const rl = readline.createInterface({
+		input: fs.createReadStream(upath.join(rootDirectory, "manifest.json")),
+	});
+	 */
 
 	// Compare external dependencies the same way.
 	const oldExternalMap: { [key: string]: ExternalDependency } = (oldFiles.externalDependencies || []).reduce(
@@ -414,17 +438,12 @@ export async function getVersionManifest(minecraftVersion: string): Promise<Vers
 		return null;
 	}
 
-	/**
-	 * Fetch the version manifest file.
-	 */
-	const versionManifest: VersionManifest = await request({
+	return request({
 		uri: version.url,
 		json: true,
 		fullResponse: false,
 		maxAttempts: 5,
 	});
-
-	return versionManifest;
 }
 
 /**

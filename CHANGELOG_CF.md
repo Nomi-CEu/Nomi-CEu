@@ -2,6 +2,13 @@
 
 <h2>Quest Book Changes:</h2>
 
+<h3>Both Modes:</h3>
+
+<ul>
+<li>Rids QB. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/eb9bce5e0bebcaf3e6aa03da522ef7f3cc064a4f"><code>eb9bce5</code></a>, Aug 27, 2023)</li>
+</ul>
+
+
 <h3>Hard Mode:</h3>
 
 <ul>
@@ -18,6 +25,10 @@
 
 <ul>
 <li>Clean up <code>From Ingots to Wires</code> quest - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/f66dc2b86007724312515c26e7c55bdd46e7063c"><code>f66dc2b</code></a>, Aug 26, 2023)</li>
+</ul>
+
+<ul>
+<li>Everything. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/eb9bce5e0bebcaf3e6aa03da522ef7f3cc064a4f"><code>eb9bce5</code></a>, Aug 27, 2023)</li>
 </ul>
 
 
@@ -117,7 +128,7 @@
 </ul>
 
 <ul>
-<li>Neeve&#39;s AE2: Extended Life Additions: <strong>v1.3.1</strong></li>
+<li>Neeve&#39;s AE2: Extended Life Additions: <strong>v1.3.0</strong></li>
 </ul>
 
 <ul>
@@ -139,7 +150,35 @@
 <h3>Other:</h3>
 
 <ul>
+<li>Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/314">https://github.com/Nomi-CEu/nomi-ceu/issues/314</a> , cleanup logo textures - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/292f6a838098e9868e6fdd59e65e95fa216b6c8b"><code>292f6a8</code></a>, Apr 9, 2023)</li>
+</ul>
+
+<ul>
+<li>Update GTCEu from 2.6 to 2.6.1, update GCYM from 1.2.1 to 1.2.2 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/704515e5a8a73b3e2dbea4fc31944002e505ba27"><code>704515e</code></a>, Apr 10, 2023)</li>
+</ul>
+
+<ul>
+<li>Finally fix nc packager issue - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6ed7e2528a1f662fde084a457690165f77602f97"><code>6ed7e25</code></a>, Apr 13, 2023)</li>
+</ul>
+
+<ul>
+<li>Change Remaining calls to old circuit constructor to <code>.circuit()</code> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e9b3b6b243cba23d423ae1c3b9711d5e481dd29a"><code>e9b3b6b</code></a>, Apr 13, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix BlastFurnace.zs NPE - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1bf43597de0edfbd62b68984d931fa3dd25e9e18"><code>1bf4359</code></a>, Apr 14, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix Recipe Conflict - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/bbdeea2d6ca8c0a78a74bbe4f5b668ea666d79a4"><code>bbdeea2</code></a>, Apr 14, 2023)</li>
+</ul>
+
+<ul>
 <li>Rotate HM&#39;s Early Game - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c3157c8ef6c9aec0272bb71b33a780a4d822b90b"><code>c3157c8</code></a>, Apr 16, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix Issue <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/330">https://github.com/Nomi-CEu/nomi-ceu/issues/330</a> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5b2269dc2eb3fa6bc9e92ec713bd5b8e58ca12a3"><code>5b2269d</code></a>, Apr 16, 2023)</li>
 </ul>
 
 <ul>
@@ -155,11 +194,35 @@
 </ul>
 
 <ul>
+<li>Fix Black Steel! - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/7a13c1d24b8f5aa1a5d4e3bcc35aeb3a1631fb40"><code>7a13c1d</code></a>, Apr 17, 2023)</li>
+</ul>
+
+<ul>
+<li>Update GT Drawers from v1.0.2 to v1.0.3 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5a0413945d029814aa6853a74f58b8884daa4c58"><code>5a04139</code></a>, Apr 17, 2023)</li>
+</ul>
+
+<ul>
 <li>Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/332">https://github.com/Nomi-CEu/nomi-ceu/issues/332</a> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1ccfdd31a732bd211aa36e1054d386f479b7bd9a"><code>1ccfdd3</code></a>, Apr 17, 2023)</li>
 </ul>
 
 <ul>
+<li>1.6.1-beta-1 [Beta Release] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/36dfebfcf0eec73d34e9e97283330b354cb2fcb4"><code>36dfebf</code></a>, Apr 17, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix GT Trims became Framed Drawer when framed - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1b7d45904d9643d376b64a56c43a0d867d4e8242"><code>1b7d459</code></a>, Apr 19, 2023)</li>
+</ul>
+
+<ul>
 <li>QB Fixes [NM &amp; HM] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/f13e56fb03951b05844c1931685acafe090d3680"><code>f13e56f</code></a>, Apr 22, 2023)</li>
+</ul>
+
+<ul>
+<li>Slightly improve First Micro Miner Quest Line - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/cc937ba4526dab9e613e9c37c9bf40b724e395ab"><code>cc937ba</code></a>, Apr 22, 2023)</li>
+</ul>
+
+<ul>
+<li>Slight refactor of HM&#39;s <code>Primitive Steelworks</code> Quest - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/fd29c19afcee07da534176c5ccfa39c4d3e6855c"><code>fd29c19</code></a>, Apr 23, 2023)</li>
 </ul>
 
 <ul>
@@ -171,7 +234,23 @@
 </ul>
 
 <ul>
+<li>Clearup Expert Mode transfer README - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/66ac6ee775b63a708e69dabe6c90ebcdeaf63794"><code>66ac6ee</code></a>, May 12, 2023)</li>
+</ul>
+
+<ul>
+<li>Update GT from v2.6.1 to v2.6.2 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5020546e3829eaaa0feb633a2c4062799df4c14a"><code>5020546</code></a>, May 13, 2023)</li>
+</ul>
+
+<ul>
+<li>Update GCYM from v1.2.2 to v1.2.3 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/2b0129ea43dc74a9310413d1f9e3dea061d47695"><code>2b0129e</code></a>, May 13, 2023)</li>
+</ul>
+
+<ul>
 <li>Revert &quot;Fix BlastFurnace.zs NPE&quot; - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ec5c3ad603291499af20358e80d85ecd2fea623e"><code>ec5c3ad</code></a>, May 13, 2023)</li>
+</ul>
+
+<ul>
+<li>Nothing to see here - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/848572d7afcd3c0eef76f6c185f6d14a718a3b57"><code>848572d</code></a>, May 13, 2023)</li>
 </ul>
 
 <ul>
@@ -179,7 +258,19 @@
 </ul>
 
 <ul>
+<li>Update HEI from v4.24.5 to v4.24.6 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e3ca2588d3207040cd625e56def31ac009466ef9"><code>e3ca258</code></a>, May 13, 2023)</li>
+</ul>
+
+<ul>
+<li>Update AE2 UEL from v0.55.12 to v0.55.13 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6e1fcaa03a346e9ddb40e368b3fa8faefd5424bf"><code>6e1fcaa</code></a>, May 13, 2023)</li>
+</ul>
+
+<ul>
 <li>Update GT Drawers from v1.0.3 to v1.0.4 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e6c4fdb8f47acf09a02e0548f44fe09fb183b9de"><code>e6c4fdb</code></a>, May 13, 2023)</li>
+</ul>
+
+<ul>
+<li>Update to Dan&#39;s Mouse Tweaks - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/61f0f14d1949e7fc0179487d6cf17b56841dc7b5"><code>61f0f14</code></a>, May 13, 2023)</li>
 </ul>
 
 <ul>
@@ -188,6 +279,10 @@
 
 <ul>
 <li>Update ULV Covers from v2.5.0 to v2.6.2 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0e4ca954bdf38cb2929dd5e6add0891ccaafb2d6"><code>0e4ca95</code></a>, May 19, 2023)</li>
+</ul>
+
+<ul>
+<li>Improve/Fix Material Tree Tab and RHF/BBC Quest - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9ec08b6903b02529fd7b95295636005b449818ea"><code>9ec08b6</code></a>, May 19, 2023)</li>
 </ul>
 
 <ul>
@@ -207,6 +302,14 @@
 </ul>
 
 <ul>
+<li>Server.properties default motd to include version &amp; mode - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/610daae8ec6b2a4c14132abb780015ddadda160b"><code>610daae</code></a>, May 20, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix pulsating iron ABS recipe - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a9f54c6fc8c00ac6e633548cac00ca8be9258780"><code>a9f54c6</code></a>, May 23, 2023)</li>
+</ul>
+
+<ul>
 <li>Add missing prerequisites to 2 quests, fixes <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/368">https://github.com/Nomi-CEu/nomi-ceu/issues/368</a> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/8509e540630d69705bc9987f425d371b9b1c8016"><code>8509e54</code></a>, May 25, 2023)</li>
 </ul>
 
@@ -219,7 +322,23 @@
 </ul>
 
 <ul>
+<li>1.6.1-beta-3 [BETA-RELEASE] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/504281761778f7009202152d6d1ee4dd5b3cf158"><code>5042817</code></a>, Jun 5, 2023)</li>
+</ul>
+
+<ul>
+<li>Replace No Nether Portals with No Nether Portals by NotMyWing - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e260e1f20e525404dfcd4f42263c0b7764a3722b"><code>e260e1f</code></a>, Jun 6, 2023)</li>
+</ul>
+
+<ul>
+<li>Format manifest.json - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/137f17ea50004e5d6a78b5edd4b28ef50c6b68b1"><code>137f17e</code></a>, Jun 6, 2023)</li>
+</ul>
+
+<ul>
 <li>Update NNP to 1.1.0 and add translation keys (#378) - <strong>Neeve</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4e625756798cc2a28fefd4d171983ff71788b9d4"><code>4e62575</code></a>, Jun 6, 2023)</li>
+</ul>
+
+<ul>
+<li>1.6.1-beta-3a [BETA-RELEASE, AGAIN] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/14fdc068505dcb2b64223bc9b25f952fd90dffd7"><code>14fdc06</code></a>, Jun 6, 2023)</li>
 </ul>
 
 <ul>
@@ -228,6 +347,30 @@
 
 <ul>
 <li>Added Island Cake configs (#372) - <strong>Caedis</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ee40110e5183c7f28a10bc14007f2ef3c266126a"><code>ee40110</code></a>, Jun 17, 2023)</li>
+</ul>
+
+<ul>
+<li>Remove default island cake recipe - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/b1dcbcea1983756adb2e98863bb1e212cd65d675"><code>b1dcbce</code></a>, Jun 17, 2023)</li>
+</ul>
+
+<ul>
+<li>Enable Island Cakes by default + tooltip + README - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d85d7b4a4634bc993af29b88a8f6b22ad054f47"><code>0d85d7b</code></a>, Jun 17, 2023)</li>
+</ul>
+
+<ul>
+<li>Vending -&gt; Chest, Tank -&gt; Stabilized Micro Miners [HM QB] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1182ffca79f44452122a3337794862141c21480b"><code>1182ffc</code></a>, Jun 18, 2023)</li>
+</ul>
+
+<ul>
+<li>Remove Stick Requirement for Hand Framing Tool - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4e4628f772419f2e44279d8a9603342618fd5524"><code>4e4628f</code></a>, Jun 18, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix small issues with <code>AE2 Everywhere</code> quest [NM&amp;HM QB] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9c248c09ca15e565560a53fb4c0bdf29c0db8488"><code>9c248c0</code></a>, Jun 18, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix Duplicate Lines in Hot Titanium Quest [HM QB] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/66c0fac83f8cca9846e3b392235489b1c423c11a"><code>66c0fac</code></a>, Jun 28, 2023)</li>
 </ul>
 
 <ul>
@@ -259,7 +402,67 @@
 </ul>
 
 <ul>
+<li>Remove Mixer Recipes for Nq+ and Nq* in HM - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d27bbc461bc0d6c0cb3dcab700e2f9e906d53b73"><code>d27bbc4</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
 <li>Temp Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/391">https://github.com/Nomi-CEu/nomi-ceu/issues/391</a> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/10a6ebeb5951e3505179510c38096ff323fe1a6b"><code>10a6ebe</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update StorageDrawers from v5.4.2 to v5.5.0 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/94744c02594cafb508888d03b368d84ff1d8d535"><code>94744c0</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update AE2 UEL from v0.55.13 to v0.55.19 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/f876a98810dac96874d74ab9f5fb54eb543d8f4f"><code>f876a98</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update Dan&#39;s Mouse Tweaks from v3.1.2 to v3.1.4 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9a80436940aa3a207acabe1024b08cf7c673ae98"><code>9a80436</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update Inventory Bogo Sorter from v1.2.7 to v1.2.8 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9fe11b0c9213105e6d4774416b09a04903284b23"><code>9fe11b0</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update MUI from v2.0.3 to v2.0.5 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ee8ef4c85720c873c4fe738cf444e49d5b2d0842"><code>ee8ef4c</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update HEI from v4.24.7 to v4.25.0 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/228c54ac34df7e4b837ddfc5b340712bf4f5d547"><code>228c54a</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update Extended Crafting from v1.7.0 to v1.7.0.6 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6302a32136eace447df0f36629e359ecbe0e0ae8"><code>6302a32</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update GT Drawers from v1.0.4 to v1.0.5 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c92c8b61b515bb308f24d503bdd3d5aa66bc620c"><code>c92c8b6</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update JEI Utils from v0.2.11 to v0.2.12 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/45863ed21fda9483189cb36fae7beeb8c42dcc03"><code>45863ed</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update Controlling from v3.0.10 to v3.0.12.2 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e30481e59f416aa57ad34eeccf8df22f2c5e4232"><code>e30481e</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update CraftTweaker from v4.1.20.687 to v4.1.20.690 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a0569e87328c5aafd7a529e11cb97f2dd0d700a0"><code>a0569e8</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update CensoredASM from v5.6 to v5.14 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/bf8555a86b277256bb93866147772f36b27b08d1"><code>bf8555a</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>Update GT Drawers from v1.0.5 to v1.0.6 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a3e1e6f5ccb9eb240c0940347d286df6c8b596cc"><code>a3e1e6f</code></a>, Jul 24, 2023)</li>
+</ul>
+
+<ul>
+<li>1.6.1-beta-4 [BETA RELEASE] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/56a29c021094d8c73a89a47849379ff4b3170d59"><code>56a29c0</code></a>, Jul 24, 2023)</li>
 </ul>
 
 <ul>
@@ -267,11 +470,79 @@
 </ul>
 
 <ul>
+<li>Fix server info still appearing as beta-2 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/15bcd043cc1722b0820c0fc8b790f4de273d42f9"><code>15bcd04</code></a>, Jul 30, 2023)</li>
+</ul>
+
+<ul>
+<li>Make decoration blocks not consumed in Framing Table - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/dc20c1eea3bf516792a6e23e35d6cf3d10b662f8"><code>dc20c1e</code></a>, Aug 15, 2023)</li>
+</ul>
+
+<ul>
 <li>Update AE2 UEL from v0.55.19 to v0.55.21 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/59bc49b8924641243b79755870ef2325f9728de8"><code>59bc49b</code></a>, Aug 26, 2023)</li>
 </ul>
 
 <ul>
+<li>Update NAE2 from v1.2.0 to v1.3.0 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1706927958c120fbf843647840d93b83696d6a6d"><code>1706927</code></a>, Aug 26, 2023)</li>
+</ul>
+
+<ul>
+<li>Update BD Lib from v1.14.3.12 to v1.14.4.114. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0eb86a8c0c6fd856d4cf9bcd868f1a2e03bb1e61"><code>0eb86a8</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Update EnderCore from v5.3.70 to v5.3.72 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/94bdf9ccad813b8dc8de0975bcf546ecdbe01163"><code>94bdf9c</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Update CreativeCore from v1.10 to v1.10.71 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c2290eab7573bab9dee0869be4ff274066250040"><code>c2290ea</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Update Little Tiles from v1.5.68 to v1.5.81 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/2d215e7b018a5f3af42a9a0ad076229eba8a1ac4"><code>2d215e7</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Update CraftTweaker from v4.1.20.690 to v1.20.692 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/da5244ab06b5355c5848dc24e1b122bda525a5fd"><code>da5244a</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Update Ender IO from v5.3.70 to v5.3.72 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/052a17c1ebd1780bd7b7860ba88f6c50fca37d0c"><code>052a17c</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Update Ender IO Endergy from v5.3.70 to v5.3.72 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ad65b6b135a4890efaf065b3e766c5abfc42c38d"><code>ad65b6b</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Delete mods/memory_repo dir - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c294a70b394e0e86a7bd62155b66a3ed99ec5ab1"><code>c294a70</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Update endercore.cfg - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0c7a56435ccc05394856a66a7312dc1d0eabcceb"><code>0c7a564</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Add Serialisation is Bad v1.4 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/49e08534ed4b8b0a514ef03348d5f5fee717b03b"><code>49e0853</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Fix Wrong BD Lib Version (Change to v1.14.4.1 ) - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/09b322829b5691f928be63d22de9a4dd4fae086c"><code>09b3228</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Remove Mention of Coins in Drill Core Tooltip [HM] - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/3d3f3d6cd20cd743eb0364eec6eb9b3d6888977c"><code>3d3f3d6</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
 <li>Final Main Menu Screenshots for 1.6.1 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/eb1a33aa387ced2cf8859187f95d4bd70d11886f"><code>eb1a33a</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Release 1.6.1 - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/848813b4704cc4ae198b832f29e8e06e18cc31dd"><code>848813b</code></a>, Aug 27, 2023)</li>
+</ul>
+
+<ul>
+<li>Release 1.6.1a - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/eb9bce5e0bebcaf3e6aa03da522ef7f3cc064a4f"><code>eb9bce5</code></a>, Aug 27, 2023)</li>
 </ul>
 
 
@@ -279,13 +550,45 @@
 <h2>Commits</h2>
 
 <ul>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/eb9bce5e0bebcaf3e6aa03da522ef7f3cc064a4f"><code>eb9bce5</code></a>: Release 1.6.1a - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/848813b4704cc4ae198b832f29e8e06e18cc31dd"><code>848813b</code></a>: Release 1.6.1 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/eb1a33aa387ced2cf8859187f95d4bd70d11886f"><code>eb1a33a</code></a>: Final Main Menu Screenshots for 1.6.1 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/3d3f3d6cd20cd743eb0364eec6eb9b3d6888977c"><code>3d3f3d6</code></a>: Remove Mention of Coins in Drill Core Tooltip [HM] - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/09b322829b5691f928be63d22de9a4dd4fae086c"><code>09b3228</code></a>: Fix Wrong BD Lib Version (Change to v1.14.4.1 ) - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/49e08534ed4b8b0a514ef03348d5f5fee717b03b"><code>49e0853</code></a>: Add Serialisation is Bad v1.4 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0c7a56435ccc05394856a66a7312dc1d0eabcceb"><code>0c7a564</code></a>: Update endercore.cfg - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c294a70b394e0e86a7bd62155b66a3ed99ec5ab1"><code>c294a70</code></a>: Delete mods/memory_repo dir - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ad65b6b135a4890efaf065b3e766c5abfc42c38d"><code>ad65b6b</code></a>: Update Ender IO Endergy from v5.3.70 to v5.3.72 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/052a17c1ebd1780bd7b7860ba88f6c50fca37d0c"><code>052a17c</code></a>: Update Ender IO from v5.3.70 to v5.3.72 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/da5244ab06b5355c5848dc24e1b122bda525a5fd"><code>da5244a</code></a>: Update CraftTweaker from v4.1.20.690 to v1.20.692 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/2d215e7b018a5f3af42a9a0ad076229eba8a1ac4"><code>2d215e7</code></a>: Update Little Tiles from v1.5.68 to v1.5.81 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c2290eab7573bab9dee0869be4ff274066250040"><code>c2290ea</code></a>: Update CreativeCore from v1.10 to v1.10.71 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/94bdf9ccad813b8dc8de0975bcf546ecdbe01163"><code>94bdf9c</code></a>: Update EnderCore from v5.3.70 to v5.3.72 - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0eb86a8c0c6fd856d4cf9bcd868f1a2e03bb1e61"><code>0eb86a8</code></a>: Update BD Lib from v1.14.3.12 to v1.14.4.114. - <strong>IntegerLimit</strong> (Aug 27, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1706927958c120fbf843647840d93b83696d6a6d"><code>1706927</code></a>: Update NAE2 from v1.2.0 to v1.3.0 - <strong>IntegerLimit</strong> (Aug 26, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/59bc49b8924641243b79755870ef2325f9728de8"><code>59bc49b</code></a>: Update AE2 UEL from v0.55.19 to v0.55.21 - <strong>IntegerLimit</strong> (Aug 26, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/f66dc2b86007724312515c26e7c55bdd46e7063c"><code>f66dc2b</code></a>: Clean up <code>From Ingots to Wires</code> quest [QB HM] - <strong>IntegerLimit</strong> (Aug 26, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6dbc29343e937676d65930d4f5cdd6e4279c3cb4"><code>6dbc293</code></a>: Fix up <code>From Dusts To Wires</code> Quest [QB HM] - <strong>IntegerLimit</strong> (Aug 26, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/953076857123c5254f3b867e90e5a76968dd3417"><code>9530768</code></a>: Remove mention of Coins in Hang Glider Quest [QB HM] - <strong>IntegerLimit</strong> (Aug 25, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/dc20c1eea3bf516792a6e23e35d6cf3d10b662f8"><code>dc20c1e</code></a>: Make decoration blocks not consumed in Framing Table - <strong>IntegerLimit</strong> (Aug 15, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/15bcd043cc1722b0820c0fc8b790f4de273d42f9"><code>15bcd04</code></a>: Fix server info still appearing as beta-2 - <strong>IntegerLimit</strong> (Jul 30, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/8654a825ec875c61cf4473ada820fe7dacc4314c"><code>8654a82</code></a>: Rewrite Central Monitor (833), add Auto-Building (1028) (#402) - <strong>Neeve</strong> (Jul 25, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/56a29c021094d8c73a89a47849379ff4b3170d59"><code>56a29c0</code></a>: 1.6.1-beta-4 [BETA RELEASE] - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a3e1e6f5ccb9eb240c0940347d286df6c8b596cc"><code>a3e1e6f</code></a>: Update GT Drawers from v1.0.5 to v1.0.6 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/bf8555a86b277256bb93866147772f36b27b08d1"><code>bf8555a</code></a>: Update CensoredASM from v5.6 to v5.14 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a0569e87328c5aafd7a529e11cb97f2dd0d700a0"><code>a0569e8</code></a>: Update CraftTweaker from v4.1.20.687 to v4.1.20.690 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e30481e59f416aa57ad34eeccf8df22f2c5e4232"><code>e30481e</code></a>: Update Controlling from v3.0.10 to v3.0.12.2 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/45863ed21fda9483189cb36fae7beeb8c42dcc03"><code>45863ed</code></a>: Update JEI Utils from v0.2.11 to v0.2.12 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c92c8b61b515bb308f24d503bdd3d5aa66bc620c"><code>c92c8b6</code></a>: Update GT Drawers from v1.0.4 to v1.0.5 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6302a32136eace447df0f36629e359ecbe0e0ae8"><code>6302a32</code></a>: Update Extended Crafting from v1.7.0 to v1.7.0.6 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/228c54ac34df7e4b837ddfc5b340712bf4f5d547"><code>228c54a</code></a>: Update HEI from v4.24.7 to v4.25.0 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ee8ef4c85720c873c4fe738cf444e49d5b2d0842"><code>ee8ef4c</code></a>: Update MUI from v2.0.3 to v2.0.5 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9fe11b0c9213105e6d4774416b09a04903284b23"><code>9fe11b0</code></a>: Update Inventory Bogo Sorter from v1.2.7 to v1.2.8 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9a80436940aa3a207acabe1024b08cf7c673ae98"><code>9a80436</code></a>: Update Dan&#39;s Mouse Tweaks from v3.1.2 to v3.1.4 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/f876a98810dac96874d74ab9f5fb54eb543d8f4f"><code>f876a98</code></a>: Update AE2 UEL from v0.55.13 to v0.55.19 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/94744c02594cafb508888d03b368d84ff1d8d535"><code>94744c0</code></a>: Update StorageDrawers from v5.4.2 to v5.5.0 - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/10a6ebeb5951e3505179510c38096ff323fe1a6b"><code>10a6ebe</code></a>: Temp Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/391">https://github.com/Nomi-CEu/nomi-ceu/issues/391</a> - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d27bbc461bc0d6c0cb3dcab700e2f9e906d53b73"><code>d27bbc4</code></a>: Remove Mixer Recipes for Nq+ and Nq* in HM - <strong>IntegerLimit</strong> (Jul 24, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/be460b91021cfc84eaa1608f8fb857f17d3fd7cf"><code>be460b9</code></a>: Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/393">https://github.com/Nomi-CEu/nomi-ceu/issues/393</a> [QB, NM&amp;HM] - <strong>IntegerLimit</strong> (Jul 23, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/205e2a75e0dfc83ae71c91635730549d767e8b2c"><code>205e2a7</code></a>: Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/395">https://github.com/Nomi-CEu/nomi-ceu/issues/395</a> [QB HM] - <strong>IntegerLimit</strong> (Jul 23, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/f6cdc16fb3e11eeee46a2afae236045522a8c2ed"><code>f6cdc16</code></a>: Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/390">https://github.com/Nomi-CEu/nomi-ceu/issues/390</a> - <strong>IntegerLimit</strong> (Jul 23, 2023)</li>
@@ -294,27 +597,60 @@
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/02abd4efcd42614016d2f0cc407b203dd61410d0"><code>02abd4e</code></a>: Add NAE2 and Pattern Mult-Tool quest, update MixinBooter to 8.3 (#401) - <strong>Neeve</strong> (Jul 23, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/00497554ff894b7ff172695768d714d6ec41055c"><code>0049755</code></a>: Better Chinese translation (#387) - <strong>mczph</strong> (Jul 4, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/685396da2a45be6329c0fb0877b41db86c17bd33"><code>685396d</code></a>: Revamp Hand Framing Tool&#39;s JEI Description - <strong>IntegerLimit</strong> (Jun 28, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/66c0fac83f8cca9846e3b392235489b1c423c11a"><code>66c0fac</code></a>: Fix Duplicate Lines in Hot Titanium Quest [HM QB] - <strong>IntegerLimit</strong> (Jun 28, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9c248c09ca15e565560a53fb4c0bdf29c0db8488"><code>9c248c0</code></a>: Fix small issues with <code>AE2 Everywhere</code> quest [NM&amp;HM QB] - <strong>IntegerLimit</strong> (Jun 18, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4e4628f772419f2e44279d8a9603342618fd5524"><code>4e4628f</code></a>: Remove Stick Requirement for Hand Framing Tool - <strong>IntegerLimit</strong> (Jun 18, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1182ffca79f44452122a3337794862141c21480b"><code>1182ffc</code></a>: Vending -&gt; Chest, Tank -&gt; Stabilized Micro Miners [HM QB] - <strong>IntegerLimit</strong> (Jun 18, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d85d7b4a4634bc993af29b88a8f6b22ad054f47"><code>0d85d7b</code></a>: Enable Island Cakes by default + tooltip + README - <strong>IntegerLimit</strong> (Jun 17, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/b1dcbcea1983756adb2e98863bb1e212cd65d675"><code>b1dcbce</code></a>: Remove default island cake recipe - <strong>IntegerLimit</strong> (Jun 17, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ee40110e5183c7f28a10bc14007f2ef3c266126a"><code>ee40110</code></a>: Added Island Cake configs (#372) - <strong>Caedis</strong> (Jun 17, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4a630c3e9918190c0c94e86c3da83e53750727bd"><code>4a630c3</code></a>: Extended crafting recipe tweaks (#374) - <strong>BlakeTech</strong> (Jun 17, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/14fdc068505dcb2b64223bc9b25f952fd90dffd7"><code>14fdc06</code></a>: 1.6.1-beta-3a [BETA-RELEASE, AGAIN] - <strong>IntegerLimit</strong> (Jun 6, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4e625756798cc2a28fefd4d171983ff71788b9d4"><code>4e62575</code></a>: Update NNP to 1.1.0 and add translation keys (#378) - <strong>Neeve</strong> (Jun 6, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/137f17ea50004e5d6a78b5edd4b28ef50c6b68b1"><code>137f17e</code></a>: Format manifest.json - <strong>IntegerLimit</strong> (Jun 6, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e260e1f20e525404dfcd4f42263c0b7764a3722b"><code>e260e1f</code></a>: Replace No Nether Portals with No Nether Portals by NotMyWing - <strong>IntegerLimit</strong> (Jun 6, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/504281761778f7009202152d6d1ee4dd5b3cf158"><code>5042817</code></a>: 1.6.1-beta-3 [BETA-RELEASE] - <strong>IntegerLimit</strong> (Jun 5, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ce2ecbc6aced7661cdb86438f0e3e251ae9e3b10"><code>ce2ecbc</code></a>: Add bansoukou patch for <a href="https://github.com/GregTechCEu/GregTech/commit/431fba1d251b441330d20acd77d4eab3949157a5">https://github.com/GregTechCEu/GregTech/commit/431fba1d251b441330d20acd77d4eab3949157a5</a> - <strong>IntegerLimit</strong> (Jun 5, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c18b47f8451d1a327270da17650ae5f4c9323159"><code>c18b47f</code></a>: Allow for getting Primer on Power without RF power [HM] - <strong>IntegerLimit</strong> (May 25, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/8509e540630d69705bc9987f425d371b9b1c8016"><code>8509e54</code></a>: Add missing prerequisites to 2 quests, fixes <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/368">https://github.com/Nomi-CEu/nomi-ceu/issues/368</a> - <strong>IntegerLimit</strong> (May 25, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a9f54c6fc8c00ac6e633548cac00ca8be9258780"><code>a9f54c6</code></a>: Fix pulsating iron ABS recipe - <strong>IntegerLimit</strong> (May 23, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/610daae8ec6b2a4c14132abb780015ddadda160b"><code>610daae</code></a>: Server.properties default motd to include version &amp; mode - <strong>IntegerLimit</strong> (May 20, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d1c82780d7384029a1175bee532c04b8defbe4d5"><code>d1c8278</code></a>: Update HEI from v4.24.6 to v4.24.7 - <strong>IntegerLimit</strong> (May 20, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/92be8984b7cabdb9ed7fda5387dad10df5324b5c"><code>92be898</code></a>: Add some missing HM material lang entries to zh_cn.lang (#354) - <strong>rdfchen1207</strong> (May 19, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1d56c4a4812243ba44d341fe91331726673b2ec2"><code>1d56c4a</code></a>: 1.6.1-beta-2 [BETA RELEASE] - <strong>IntegerLimit</strong> (May 19, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/51b4ca408c7b3565a347bfbc1e776bf4b8f142d8"><code>51b4ca4</code></a>: Make CR Rocket Fuel recipe (HM) LCR only - <strong>IntegerLimit</strong> (May 19, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9ec08b6903b02529fd7b95295636005b449818ea"><code>9ec08b6</code></a>: Improve/Fix Material Tree Tab and RHF/BBC Quest - <strong>IntegerLimit</strong> (May 19, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0e4ca954bdf38cb2929dd5e6add0891ccaafb2d6"><code>0e4ca95</code></a>: Update ULV Covers from v2.5.0 to v2.6.2 - <strong>IntegerLimit</strong> (May 19, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5585f73a893a312b5ca431373716192b12fde851"><code>5585f73</code></a>: Make ULV hulls use red-alloy cables - <strong>IntegerLimit</strong> (May 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/61f0f14d1949e7fc0179487d6cf17b56841dc7b5"><code>61f0f14</code></a>: Update to Dan&#39;s Mouse Tweaks - <strong>IntegerLimit</strong> (May 13, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e6c4fdb8f47acf09a02e0548f44fe09fb183b9de"><code>e6c4fdb</code></a>: Update GT Drawers from v1.0.3 to v1.0.4 - <strong>IntegerLimit</strong> (May 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6e1fcaa03a346e9ddb40e368b3fa8faefd5424bf"><code>6e1fcaa</code></a>: Update AE2 UEL from v0.55.12 to v0.55.13 - <strong>IntegerLimit</strong> (May 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e3ca2588d3207040cd625e56def31ac009466ef9"><code>e3ca258</code></a>: Update HEI from v4.24.5 to v4.24.6 - <strong>IntegerLimit</strong> (May 13, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ed67f03fff4c2a997a7e25711115dcc247136596"><code>ed67f03</code></a>: Update Bogosort from v1.2.6 to v1.2.7 - <strong>IntegerLimit</strong> (May 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/848572d7afcd3c0eef76f6c185f6d14a718a3b57"><code>848572d</code></a>: Nothing to see here - <strong>IntegerLimit</strong> (May 13, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ec5c3ad603291499af20358e80d85ecd2fea623e"><code>ec5c3ad</code></a>: Revert &quot;Fix BlastFurnace.zs NPE&quot; - <strong>IntegerLimit</strong> (May 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/2b0129ea43dc74a9310413d1f9e3dea061d47695"><code>2b0129e</code></a>: Update GCYM from v1.2.2 to v1.2.3 - <strong>IntegerLimit</strong> (May 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5020546e3829eaaa0feb633a2c4062799df4c14a"><code>5020546</code></a>: Update GT from v2.6.1 to v2.6.2 - <strong>IntegerLimit</strong> (May 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/66ac6ee775b63a708e69dabe6c90ebcdeaf63794"><code>66ac6ee</code></a>: Clearup Expert Mode transfer README - <strong>IntegerLimit</strong> (May 12, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/2f1f6d8075857b202881c2390572d4bbd4064978"><code>2f1f6d8</code></a>: Change Snowchestite&#39;s byproduct from chalcopyrite to caesium - <strong>IntegerLimit</strong> (Apr 23, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0971baab0d04ba146068427e19dd14412bb03440"><code>0971baa</code></a>: Fix recycling recipes of certain changed GT Items - <strong>IntegerLimit</strong> (Apr 23, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/fd29c19afcee07da534176c5ccfa39c4d3e6855c"><code>fd29c19</code></a>: Slight refactor of HM&#39;s <code>Primitive Steelworks</code> Quest - <strong>IntegerLimit</strong> (Apr 23, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/cc937ba4526dab9e613e9c37c9bf40b724e395ab"><code>cc937ba</code></a>: Slightly improve First Micro Miner Quest Line - <strong>IntegerLimit</strong> (Apr 22, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/f13e56fb03951b05844c1931685acafe090d3680"><code>f13e56f</code></a>: QB Fixes [NM &amp; HM] - <strong>IntegerLimit</strong> (Apr 22, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1b7d45904d9643d376b64a56c43a0d867d4e8242"><code>1b7d459</code></a>: Fix GT Trims became Framed Drawer when framed - <strong>IntegerLimit</strong> (Apr 19, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/36dfebfcf0eec73d34e9e97283330b354cb2fcb4"><code>36dfebf</code></a>: 1.6.1-beta-1 [Beta Release] - <strong>IntegerLimit</strong> (Apr 17, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1ccfdd31a732bd211aa36e1054d386f479b7bd9a"><code>1ccfdd3</code></a>: Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/332">https://github.com/Nomi-CEu/nomi-ceu/issues/332</a> - <strong>IntegerLimit</strong> (Apr 17, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5a0413945d029814aa6853a74f58b8884daa4c58"><code>5a04139</code></a>: Update GT Drawers from v1.0.2 to v1.0.3 - <strong>IntegerLimit</strong> (Apr 17, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/7a13c1d24b8f5aa1a5d4e3bcc35aeb3a1631fb40"><code>7a13c1d</code></a>: Fix Black Steel! - <strong>IntegerLimit</strong> (Apr 17, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/a2efbed8b3c289a57b7323a2bfcddee9ddcbb9f2"><code>a2efbed</code></a>: Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/313">https://github.com/Nomi-CEu/nomi-ceu/issues/313</a> - <strong>IntegerLimit</strong> (Apr 16, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/382a30b4b02b0f4030c972260cd58b88563da218"><code>382a30b</code></a>: Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/327">https://github.com/Nomi-CEu/nomi-ceu/issues/327</a> - <strong>IntegerLimit</strong> (Apr 16, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0af561e95d0ee90072a4b6fc5e10a84b6ee7a04e"><code>0af561e</code></a>: Many QB Issues [NM &amp; HM], + quest for EIO Spawner - <strong>IntegerLimit</strong> (Apr 16, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5b2269dc2eb3fa6bc9e92ec713bd5b8e58ca12a3"><code>5b2269d</code></a>: Fix Issue <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/330">https://github.com/Nomi-CEu/nomi-ceu/issues/330</a> - <strong>IntegerLimit</strong> (Apr 16, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c3157c8ef6c9aec0272bb71b33a780a4d822b90b"><code>c3157c8</code></a>: Rotate HM&#39;s Early Game - <strong>IntegerLimit</strong> (Apr 16, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/bbdeea2d6ca8c0a78a74bbe4f5b668ea666d79a4"><code>bbdeea2</code></a>: Fix Recipe Conflict - <strong>IntegerLimit</strong> (Apr 14, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1bf43597de0edfbd62b68984d931fa3dd25e9e18"><code>1bf4359</code></a>: Fix BlastFurnace.zs NPE - <strong>IntegerLimit</strong> (Apr 14, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e9b3b6b243cba23d423ae1c3b9711d5e481dd29a"><code>e9b3b6b</code></a>: Change Remaining calls to old circuit constructor to <code>.circuit()</code> - <strong>IntegerLimit</strong> (Apr 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6ed7e2528a1f662fde084a457690165f77602f97"><code>6ed7e25</code></a>: Finally fix nc packager issue - <strong>IntegerLimit</strong> (Apr 13, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/704515e5a8a73b3e2dbea4fc31944002e505ba27"><code>704515e</code></a>: Update GTCEu from 2.6 to 2.6.1, update GCYM from 1.2.1 to 1.2.2 - <strong>IntegerLimit</strong> (Apr 10, 2023)</li>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/292f6a838098e9868e6fdd59e65e95fa216b6c8b"><code>292f6a8</code></a>: Fix <a href="https://github.com/Nomi-CEu/nomi-ceu/issues/314">https://github.com/Nomi-CEu/nomi-ceu/issues/314</a> , cleanup logo textures - <strong>IntegerLimit</strong> (Apr 9, 2023)</li>
 </ul>

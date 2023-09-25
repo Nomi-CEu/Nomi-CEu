@@ -104,6 +104,12 @@ export interface ChangelogMessage {
 
 export interface ModChangeInfo {
 	modName: string;
+	projectID?: number;
 	oldVersion?: string;
 	newVersion?: string;
+}
+
+export interface ExpandedMessage {
+	messageTitle: string;
+	messageBody: string;
 }
