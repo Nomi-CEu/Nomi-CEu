@@ -150,8 +150,8 @@ export async function makeChangelog(): Promise<void> {
 		initializeCategorySection(categoryKey);
 	});
 
-	// Formatted ChangelogTypes List
-	const formattedCommits: string[] = [];
+	// List of all commits to put into changelog commit section
+	const changelogCommitList: Commit[] = [];
 
 	// Get commit log of commits which change overrides and/or manifest file
 	const commitList: Commit[] = await getChangelog(since, to, [modpackManifest.overrides, "manifest.json"]);
@@ -167,7 +167,7 @@ export async function makeChangelog(): Promise<void> {
 			const successParsingMessage = await parseCommit(commit, true);
 			if (successParsingMessage) {
 				skipParsingBody = true;
-				formattedCommits.push(formatCommit(commit));
+				changelogCommitList.push(commit);
 			}
 		} else {
 			skipParsingBody = true;
@@ -182,14 +182,14 @@ export async function makeChangelog(): Promise<void> {
 							commitObject: commit,
 						});
 					}
-					formattedCommits.push(formatCommit(commit));
+					changelogCommitList.push(commit);
 				}
 			} else {
 				generalCategory.changelogSection.get(other).push({
 					commitMessage: commit.message,
 					commitObject: commit,
 				});
-				formattedCommits.push(formatCommit(commit));
+				changelogCommitList.push(commit);
 			}
 		}
 	}
@@ -209,7 +209,7 @@ export async function makeChangelog(): Promise<void> {
 		if (commit.body && !SHAList.includes(commit.hash)) {
 			if (!commit.body.includes(skipKey)) {
 				if (await parseCommit(commit)) {
-					formattedCommits.push(formatCommit(commit));
+					changelogCommitList.push(commit);
 				}
 			}
 		}
@@ -238,11 +238,6 @@ export async function makeChangelog(): Promise<void> {
 	// Push the title.
 	pushToBuilders(`# Changes since ${since}`);
 
-	const test = await fs.promises.readFile(upath.join(rootDirectory, "test.txt"))
-
-	// TODO TEMP
-	// await deCompExpand(test.toString(), commitList[0]);
-
 	// Push Sections of Changelog
 	categories.forEach((category) => {
 		const categoryLog: string[] = [];
@@ -263,8 +258,10 @@ export async function makeChangelog(): Promise<void> {
 					if (messageA.commitObject && messageB.commitObject) {
 						const dateA = new Date(messageA.commitObject.date);
 						const dateB = new Date(messageB.commitObject.date);
-						return dateA.getTime() - dateB.getTime() !== 0
-							? dateA.getTime() - dateB.getTime()
+
+						// This is reversed, so the newest commits go on top
+						return dateB.getTime() - dateA.getTime() !== 0
+							? dateB.getTime() - dateA.getTime()
 							: messageA.commitMessage.localeCompare(messageB.commitMessage);
 					}
 					return messageA.commitMessage.localeCompare(messageB.commitMessage);
@@ -287,11 +284,24 @@ export async function makeChangelog(): Promise<void> {
 		}
 	});
 
+	// Sort the commit log
+	changelogCommitList.sort((commitA, commitB): number => {
+		const dateA = new Date(commitA.date);
+		const dateB = new Date(commitB.date);
+
+		// This is reversed, so the newest commits go on top
+		return dateB.getTime() - dateA.getTime() !== 0
+			? dateB.getTime() - dateA.getTime()
+			: commitA.message.localeCompare(commitB.message);
+	});
+
 	// Push the commit log
-	if (formattedCommits) {
+	if (changelogCommitList) {
 		pushToBuilders("");
 		pushToBuilders("## Commits");
-		pushToBuilders(formattedCommits.join("\n"));
+		changelogCommitList.forEach((commit) => {
+			pushToBuilders(formatCommit(commit));
+		});
 	}
 
 	// Check if the builder only contains the title.
