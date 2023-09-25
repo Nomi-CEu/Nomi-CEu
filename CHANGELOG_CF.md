@@ -8,6 +8,7 @@
 <h2>Feature Additions:</h2>
 <h3>Quality of Life:</h3>
 <ul>
+<li>Done. OR IS IT???? IS IT???? - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>, Sep 25, 2023)</li>
 <li>Done. OR IS IT???? - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
 </ul>
 <h3>Both Modes:</h3>
@@ -19,6 +20,14 @@
 </ul>
 <h3>Hard Mode:</h3>
 <ul>
+<li>Bears. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>, Sep 25, 2023)<ul>
+<li>Five Teddies - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>, Sep 25, 2023)</li>
+<li>Two Bears - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>, Sep 25, 2023)<ul>
+<li>BEARS WILL INVADE NOMI! - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>, Sep 25, 2023)</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Bears. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)<ul>
 <li>Five Teddies - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
 <li>Two Bears - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
@@ -28,6 +37,7 @@
 <h2>Quest Book Changes:</h2>
 <h3>Both Modes:</h3>
 <ul>
+<li>Rids QB. AGAIN!!!! - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>, Sep 25, 2023)</li>
 <li>Rids QB. AGAIN!!!! - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
 <li>Rids QB. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84"><code>0d09d86</code></a>, Sep 25, 2023)</li>
 <li>Rids QB. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b"><code>d306d14</code></a>, Sep 25, 2023)</li>
@@ -39,6 +49,7 @@
 </ul>
 <h3>Hard Mode:</h3>
 <ul>
+<li>Nothing. At least I no longer hate this. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>, Sep 25, 2023)</li>
 <li>Nothing. At least I no longer hate this. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>, Sep 25, 2023)</li>
 <li>Everything. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84"><code>0d09d86</code></a>, Sep 25, 2023)</li>
 <li>Nothing. I hate this. - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b"><code>d306d14</code></a>, Sep 25, 2023)</li>
@@ -77,6 +88,7 @@
 </ul>
 <h2>Commits</h2>
 <ul>
+<li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5"><code>1a93843</code></a>: Test nested Details - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7"><code>6598cc6</code></a>: Big Test - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4"><code>9b8a6ad</code></a>: Test - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>
 <li><a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84"><code>0d09d86</code></a>: Test - <strong>IntegerLimit</strong> (Sep 25, 2023)</li>

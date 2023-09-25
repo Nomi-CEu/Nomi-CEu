@@ -6,6 +6,7 @@
 
 ## Feature Additions:
 ### Quality of Life:
+* Done. OR IS IT???? IS IT???? - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5), Sep 25, 2023)
 * Done. OR IS IT???? - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
 
 ### Both Modes:
@@ -15,12 +16,17 @@
 * Enable shufflemode on main menu (#414) - **Pansmith** ([`5538fe4`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5538fe4524dcb0b64a333b756bfeeec34e12661c), Aug 28, 2023)
 
 ### Hard Mode:
+* Bears. - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5), Sep 25, 2023)
+  * Five Teddies - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5), Sep 25, 2023)
+  * Two Bears - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5), Sep 25, 2023)
+    * BEARS WILL INVADE NOMI! - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5), Sep 25, 2023)
 * Bears. - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
   * Five Teddies - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
   * Two Bears - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
 
 ## Quest Book Changes:
 ### Both Modes:
+* Rids QB. AGAIN!!!! - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5), Sep 25, 2023)
 * Rids QB. AGAIN!!!! - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
 * Rids QB. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84), Sep 25, 2023)
 * Rids QB. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b), Sep 25, 2023)
@@ -31,6 +37,7 @@
 * Move Multiblock Machine Previews Quest - **IntegerLimit** ([`03d61c8`](https://github.com/Nomi-CEu/Nomi-CEu/commit/03d61c8d5fbaa0439fc823b5aef3a4859b17a444), Sep 7, 2023)
 
 ### Hard Mode:
+* Nothing. At least I no longer hate this. - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5), Sep 25, 2023)
 * Nothing. At least I no longer hate this. - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7), Sep 25, 2023)
 * Everything. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84), Sep 25, 2023)
 * Nothing. I hate this. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b), Sep 25, 2023)
@@ -64,6 +71,7 @@
 
 
 ## Commits
+* [`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5): Test nested Details - **IntegerLimit** (Sep 25, 2023)
 * [`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7): Big Test - **IntegerLimit** (Sep 25, 2023)
 * [`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4): Test - **IntegerLimit** (Sep 25, 2023)
 * [`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84): Test - **IntegerLimit** (Sep 25, 2023)
