@@ -454,7 +454,7 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 				dates.push(
 					new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" }),
 				);
-				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit[0].hash}`);
+				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit.hash}`);
 			});
 			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")}), ${dates.join(
 				", ",
@@ -569,7 +569,7 @@ async function pushModChangesToGenerals(since: string, to: string) {
 		const projectIDs = getChangedProjectIDs(commit.hash);
 		projectIDs.forEach((id) => {
 			if (projectIDsToCommits.has(id)) projectIDsToCommits.get(id).push(commit);
-			projectIDsToCommits.set(id, [commit]);
+			else projectIDsToCommits.set(id, [commit]);
 		});
 		console.log(projectIDs);
 	});
@@ -606,6 +606,7 @@ async function pushModChangesToGenerals(since: string, to: string) {
 			let commits: Commit[] = undefined;
 			if (info.projectID && projectIDsToCommits.has(info.projectID)) {
 				commits = projectIDsToCommits.get(info.projectID);
+				console.log(`${info.projectID}, ${projectIDsToCommits.get(info.projectID)}`);
 			}
 			generalCategory.changelogSection.get(block.subCategory).push({
 				commitMessage: getModChangeMessage(info, block.template),
@@ -613,10 +614,6 @@ async function pushModChangesToGenerals(since: string, to: string) {
 			});
 		});
 	});
-}
-
-function findCommitsForProjectID(map: Map<number, Commit[]>) {
-
 }
 
 function getModChangeMessage(info: ModChangeInfo, template: string) {
