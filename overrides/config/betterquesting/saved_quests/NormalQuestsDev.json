@@ -87,7 +87,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nJEI doesn\u0027t show the Chamber\u0027s recipes directly, so we\u0027ll explain it here:\n\nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nFluix Crystals you\u0027ve already had to make in a pool of water by now, and it\u0027s the same ingredients here: insert one each of a §6Redstone Dust§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.",
+          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nJEI doesn\u0027t show the Chamber\u0027s recipes directly, so we\u0027ll explain it here:\n\nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nFluix Crystals you\u0027ve already had to make in a pool of water by now, and it\u0027s the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2625,7 +2625,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This alloy is made from §2mixing 2 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust in a Mixer, creating Energetic Alloy Dust,§r and putting it in your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
+          "desc:8": "This alloy is made from §2mixing 2 Gold Dust, 1 Redstone, and 1 Glowstone Dust in a Mixer, creating Energetic Alloy Dust,§r and putting it in your new §3Electric Blast Furnace§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4794,7 +4794,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Although most §ealloys§f require an §3Alloy Smelter§f, some alloys can be made simply by mixing the correct metal dusts together. \n\nCopper Dust mixed with Redstone Dust makes §6Red Alloy Dust§f.\n\nIron Dust mixed with Redstone Dust makes §6Conductive Iron Dust§f.\n\n§3Smelt§f it into ingots, §ahammer§f it into §6Plates§f, and §acut§f them into §6Wires§f.",
+          "desc:8": "Although most §ealloys§f require an §3Alloy Smelter§f, some alloys can be made simply by mixing the correct metal dusts together. \n\nCopper Dust mixed with Redstone makes §6Red Alloy Dust§f.\n\nIron Dust mixed with Redstone makes §6Conductive Iron Dust§f.\n\n§3Smelt§f it into ingots, §ahammer§f it into §6Plates§f, and §acut§f them into §6Wires§f.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19348,7 +19348,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Fluix is initially made via in-world crafting, by dropping §6Redstone Dust§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You\u0027ll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.\n\nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. \n\nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.",
+          "desc:8": "Fluix is initially made via in-world crafting, by dropping §6Redstone§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You\u0027ll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.\n\nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. \n\nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
