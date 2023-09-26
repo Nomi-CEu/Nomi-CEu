@@ -2,28 +2,28 @@
 <h2>General Changes:</h2>
 <h3>Mod Updates:</h3>
 <ul>
-<li>CraftTweaker: <em><strong>v4.1.20.684 =&gt; v4.1.20.687</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/23db4c3c21abc1f7c9588d2375a7c1ced3ab7549"><code>23db4c3</code></a>, Apr 8, 2023)</li>
-<li>Gregicality Multiblocks: <em><strong>v1.2.0 =&gt; v1.2.1</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/69c567a9236fca29372bd0baeab115ee176d1a13"><code>69c567a</code></a>, Apr 8, 2023)</li>
-<li>GregTech CE Unofficial: <em><strong>v2.5.4 =&gt; v2.6.0</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e50d68415b3352ff5bf10bcbcd6a9d230019a8ed"><code>e50d684</code></a>, Apr 8, 2023)</li>
-<li>PackagedExCrafting: <em><strong>v1.0.2.7 =&gt; v1.0.2.10</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/76b8d5d08d57dd70e340649dbaed22a8be361e52"><code>76b8d5d</code></a>, Mar 29, 2023)</li>
-<li>PackagedAuto: <em><strong>v1.0.6.27 =&gt; v1.0.8.31</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/08d7d217fcb751884892c58a49dfdacf16cc203f"><code>08d7d21</code></a>, Mar 29, 2023)</li>
-<li>MixinBooter: <em><strong>v4.2 =&gt; v7.1</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4ab06b8a842e9c5ec7a4d015be074d12bca3da9f"><code>4ab06b8</code></a>, Mar 29, 2023)</li>
-<li>Had Enough Items: <em><strong>v4.24.2 =&gt; v4.24.5</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/079d1f3851793c645fe193e2e520f318f35de3e1"><code>079d1f3</code></a>, Mar 29, 2023)</li>
-<li>ModularUI: <em><strong>v1.0.6 =&gt; v2.0.3</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ef8be05ef2c46e6ae60db22da439363997e821bc"><code>ef8be05</code></a>, Mar 29, 2023)</li>
-<li>AE2 Unofficial Extended Life: <em><strong>v0.55.10 =&gt; v0.55.12</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/7e754dc677530a17f54c9b99d706e83b130d0f32"><code>7e754dc</code></a>, Mar 21, 2023)</li>
-<li>Inventory Bogo Sorter: <em><strong>v1.2.2 =&gt; v1.2.6</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/b0c10b2c6b4d40ac22e42af83dabbfc3688cd073"><code>b0c10b2</code></a>, Mar 13, 2023)</li>
+<li>CraftTweaker: <em>v4.1.20.684 =&gt; v4.1.20.687</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/23db4c3c21abc1f7c9588d2375a7c1ced3ab7549"><code>23db4c3</code></a>, Apr 8, 2023)</li>
+<li>Gregicality Multiblocks: <em>v1.2.0 =&gt; v1.2.1</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/69c567a9236fca29372bd0baeab115ee176d1a13"><code>69c567a</code></a>, Apr 8, 2023)</li>
+<li>GregTech CE Unofficial: <em>v2.5.4 =&gt; v2.6.0</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e50d68415b3352ff5bf10bcbcd6a9d230019a8ed"><code>e50d684</code></a>, Apr 8, 2023)</li>
+<li>PackagedExCrafting: <em>v1.0.2.7 =&gt; v1.0.2.10</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/76b8d5d08d57dd70e340649dbaed22a8be361e52"><code>76b8d5d</code></a>, Mar 29, 2023)</li>
+<li>PackagedAuto: <em>v1.0.6.27 =&gt; v1.0.8.31</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/08d7d217fcb751884892c58a49dfdacf16cc203f"><code>08d7d21</code></a>, Mar 29, 2023)</li>
+<li>MixinBooter: <em>v4.2 =&gt; v7.1</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4ab06b8a842e9c5ec7a4d015be074d12bca3da9f"><code>4ab06b8</code></a>, Mar 29, 2023)</li>
+<li>Had Enough Items: <em>v4.24.2 =&gt; v4.24.5</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/079d1f3851793c645fe193e2e520f318f35de3e1"><code>079d1f3</code></a>, Mar 29, 2023)</li>
+<li>ModularUI: <em>v1.0.6 =&gt; v2.0.3</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/ef8be05ef2c46e6ae60db22da439363997e821bc"><code>ef8be05</code></a>, Mar 29, 2023)</li>
+<li>AE2 Unofficial Extended Life: <em>v0.55.10 =&gt; v0.55.12</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/7e754dc677530a17f54c9b99d706e83b130d0f32"><code>7e754dc</code></a>, Mar 21, 2023)</li>
+<li>Inventory Bogo Sorter: <em>v1.2.2 =&gt; v1.2.6</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/b0c10b2c6b4d40ac22e42af83dabbfc3688cd073"><code>b0c10b2</code></a>, Mar 13, 2023)</li>
 </ul>
 <h3>Mod Additions:</h3>
 <ul>
-<li>Gregtech Drawers: <em><strong>v1.0.2</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c0092a3a4978c478a7cf70e424b46ee4dc73f8a5"><code>c0092a3</code></a>, Apr 8, 2023)</li>
-<li>Better P2P: <em><strong>v1.2.3</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/82bf56b6ec80e174c9e5cd1b1be1a7c500fe7c3f"><code>82bf56b</code></a>, Apr 6, 2023)</li>
-<li>Nature&#39;s Compass: <em><strong>v1.8.5</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/82bf56b6ec80e174c9e5cd1b1be1a7c500fe7c3f"><code>82bf56b</code></a>, Apr 6, 2023)</li>
-<li>燐&#x2F;Hesperus: <em><strong>v0.2.9.2</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4d39d0d9eb7c448c02b6e7dd6a90f56509178af8"><code>4d39d0d</code></a>, Apr 6, 2023)</li>
-<li>Tool Belt: <em><strong>v1.9.14</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5c0dfddd74d7f6c116128b368f28b4515dc11807"><code>5c0dfdd</code></a>, Mar 14, 2023)</li>
+<li>Gregtech Drawers: <em>v1.0.2</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/c0092a3a4978c478a7cf70e424b46ee4dc73f8a5"><code>c0092a3</code></a>, Apr 8, 2023)</li>
+<li>Better P2P: <em>v1.2.3</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/82bf56b6ec80e174c9e5cd1b1be1a7c500fe7c3f"><code>82bf56b</code></a>, Apr 6, 2023)</li>
+<li>Nature&#39;s Compass: <em>v1.8.5</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/82bf56b6ec80e174c9e5cd1b1be1a7c500fe7c3f"><code>82bf56b</code></a>, Apr 6, 2023)</li>
+<li>燐&#x2F;Hesperus: <em>v0.2.9.2</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4d39d0d9eb7c448c02b6e7dd6a90f56509178af8"><code>4d39d0d</code></a>, Apr 6, 2023)</li>
+<li>Tool Belt: <em>v1.9.14</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/5c0dfddd74d7f6c116128b368f28b4515dc11807"><code>5c0dfdd</code></a>, Mar 14, 2023)</li>
 </ul>
 <h3>Mod Removals:</h3>
 <ul>
-<li>Phosphor (Forge): <em><strong>v0.2.6</strong></em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4d39d0d9eb7c448c02b6e7dd6a90f56509178af8"><code>4d39d0d</code></a>, Apr 6, 2023)</li>
+<li>Phosphor (Forge): <em>v0.2.6</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4d39d0d9eb7c448c02b6e7dd6a90f56509178af8"><code>4d39d0d</code></a>, Apr 6, 2023)</li>
 </ul>
 <h3>Other:</h3>
 <ul>
