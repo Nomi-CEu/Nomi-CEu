@@ -27,7 +27,7 @@ const mdOptions = {
 marked.setOptions(mdOptions);
 
 // Final Builders
-let builderGH: string[];
+let builder: string[];
 
 /* Values */
 const defaultIndentation = "";
@@ -153,7 +153,7 @@ export async function makeChangelog(): Promise<void> {
 	}
 
 	// Final Builders
-	builderGH = [];
+	builder = [];
 
 	// Initialize Category Lists
 	categories.forEach((categoryKey) => {
@@ -242,11 +242,11 @@ export async function makeChangelog(): Promise<void> {
 
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
-		builderGH.push((await fs.promises.readFile("../UPDATENOTES.md")).toString());
+		builder.push((await fs.promises.readFile("../UPDATENOTES.md")).toString());
 	}
 
 	// Push the title.
-	builderGH.push(`# Changes since ${since}`, "");
+	builder.push(`# Changes since ${since}`, "");
 
 	// Push Sections of Changelog
 	categories.forEach((category) => {
@@ -264,36 +264,11 @@ export async function makeChangelog(): Promise<void> {
 				}
 
 				// Sort Log
-				list.sort((messageA, messageB): number => {
-					if (messageA.commitObjects && messageB.commitObjects) {
-						messageA.commitObjects.sort((commitA, commitB): number => {
-							const dateA = new Date(commitA.date);
-							const dateB = new Date(commitB.date);
-
-							// This is reversed, so the newest commits go on top
-							return dateB.getTime() - dateA.getTime() !== 0
-								? dateB.getTime() - dateA.getTime()
-								: commitA.message.localeCompare(commitB.message);
-						});
-						messageB.commitObjects.sort((commitA, commitB): number => {
-							const dateA = new Date(commitA.date);
-							const dateB = new Date(commitB.date);
-
-							// This is reversed, so the newest commits go on top
-							return dateB.getTime() - dateA.getTime() !== 0
-								? dateB.getTime() - dateA.getTime()
-								: commitA.message.localeCompare(commitB.message);
-						});
-						const dateA = new Date(messageA.commitObjects[0].date);
-						const dateB = new Date(messageB.commitObjects[0].date);
-
-						// This is reversed, so the newest commits go on top
-						return dateB.getTime() - dateA.getTime() !== 0
-							? dateB.getTime() - dateA.getTime()
-							: messageA.commitMessage.localeCompare(messageB.commitMessage);
-					}
-					return messageA.commitMessage.localeCompare(messageB.commitMessage);
-				});
+				sortCommitList(
+					list,
+					(message) => message.commitObjects,
+					(a, b) => a.commitMessage.localeCompare(b.commitMessage),
+				);
 
 				// Push Log
 				list.forEach((changelogMessage) => {
@@ -310,41 +285,33 @@ export async function makeChangelog(): Promise<void> {
 		});
 		if (hasValues) {
 			// Push Title
-			builderGH.push(`## ${category.categoryName}:`);
+			builder.push(`## ${category.categoryName}:`);
 
 			// Push previously made log
-			builderGH.push(...categoryLog);
+			builder.push(...categoryLog);
 		}
 	});
 
 	// Sort the commit log
-	changelogCommitList.sort((commitA, commitB): number => {
-		const dateA = new Date(commitA.date);
-		const dateB = new Date(commitB.date);
-
-		// This is reversed, so the newest commits go on top
-		return dateB.getTime() - dateA.getTime() !== 0
-			? dateB.getTime() - dateA.getTime()
-			: commitA.message.localeCompare(commitB.message);
-	});
+	sortCommitList(changelogCommitList, (commit) => commit);
 
 	// Push the commit log
 	if (changelogCommitList) {
-		builderGH.push("## Commits");
+		builder.push("## Commits");
 		changelogCommitList.forEach((commit) => {
-			builderGH.push(formatCommit(commit));
+			builder.push(formatCommit(commit));
 		});
 	}
 
 	// Check if the builder only contains the title.
-	if (builderGH.length == 1) {
-		builderGH.push("");
-		builderGH.push("There haven't been any changes.");
+	if (builder.length == 1) {
+		builder.push("");
+		builder.push("There haven't been any changes.");
 	}
 
 	// TODO allow changing of output dir
-	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builderGH.join("\n"));
-	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), marked.parse(builderGH.join("\n")));
+	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builder.join("\n"));
+	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
 }
 
 /**
@@ -357,6 +324,49 @@ function initializeCategorySection(categoryKey: Category): void {
 		categorySection.set(subCategory, []);
 	});
 	categoryKey.changelogSection = categorySection;
+}
+
+function sortCommitList<T>(
+	list: T[],
+	transform: (obj: T) => Commit | Commit[] | undefined,
+	backup?: (a: T, b: T) => number,
+) {
+	list.sort((a, b): number => {
+		const commitsA = transform(a);
+		const commitsB = transform(b);
+		if (!commitsA || !commitsB) {
+			// If either commit is undefined
+			if (backup) return backup(a, b);
+			return 0;
+		}
+		let commitA: Commit, commitB: Commit;
+		if (!Array.isArray(commitsA) || !Array.isArray(commitsB)) {
+			// If given values are Commits
+			if (Array.isArray(commitsA) || Array.isArray(commitsB)) {
+				throw new Error("Transform created an array + non array!");
+			}
+			commitA = commitsA;
+			commitB = commitsB;
+		} else if (commitsA.length !== 0 && commitsB.length !== 0) {
+			// If given values are non-empty commit lists
+			sortCommitList(commitsA, (commit) => commit);
+			sortCommitList(commitsB, (commit) => commit);
+
+			commitA = commitsA[0];
+			commitB = commitsB[0];
+		} else {
+			// If some values are empty commit lists
+			if (backup) return backup(a, b);
+			return 0;
+		}
+		const dateA = new Date(commitA.date);
+		const dateB = new Date(commitB.date);
+
+		// This is reversed, so the newest commits go on top
+		if (dateB.getTime() - dateA.getTime() !== 0) return dateB.getTime() - dateA.getTime();
+		if (backup) return backup(a, b);
+		return commitA.message.localeCompare(commitB.message);
+	});
 }
 
 // TODO remove useMessage after 1.7
