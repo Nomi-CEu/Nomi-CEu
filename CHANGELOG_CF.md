@@ -37,7 +37,7 @@
 <li>SerializationIsBad: <em>v1.4</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/49e08534ed4b8b0a514ef03348d5f5fee717b03b"><code>49e0853</code></a>)</li>
 <li>Neeve&#39;s AE2: Extended Life Additions: <em>v1.3.0</em> - <strong>IntegerLimit</strong>, <strong>Neeve</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/1706927958c120fbf843647840d93b83696d6a6d"><code>1706927</code></a>, <a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/02abd4efcd42614016d2f0cc407b203dd61410d0"><code>02abd4e</code></a>)</li>
 <li>Mouse Tweaks Unofficial: <em>v3.1.4</em> - <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/9a80436940aa3a207acabe1024b08cf7c673ae98"><code>9a80436</code></a>, <a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/61f0f14d1949e7fc0179487d6cf17b56841dc7b5"><code>61f0f14</code></a>)</li>
-<li>No Nether Portals: <em>v1.1.0</em> - <strong>Neeve</strong>, <strong>IntegerLimit</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4e625756798cc2a28fefd4d171983ff71788b9d4"><code>4e62575</code></a>, <a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e260e1f20e525404dfcd4f42263c0b7764a3722b"><code>e260e1f</code></a>)</li>
+<li>No Nether Portals: <em>v1.1.0</em> - <strong>IntegerLimit</strong>, <strong>Neeve</strong> (<a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/4e625756798cc2a28fefd4d171983ff71788b9d4"><code>4e62575</code></a>, <a href="https://github.com/Nomi-CEu/Nomi-CEu/commit/e260e1f20e525404dfcd4f42263c0b7764a3722b"><code>e260e1f</code></a>)</li>
 </ul>
 <h3>Mod Removals:</h3>
 <ul>

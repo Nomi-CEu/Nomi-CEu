@@ -457,6 +457,7 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 				if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
 				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit.hash})`);
 			});
+			authors.sort();
 			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")})`;
 		}
 
