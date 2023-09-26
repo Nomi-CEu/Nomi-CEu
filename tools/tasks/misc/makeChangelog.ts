@@ -1,7 +1,13 @@
 import fs from "fs";
 import upath from "upath";
-import { modpackManifest, rootDirectory } from "../../globals";
-import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, getLastGitTag } from "../../util/util";
+import { modpackManifest, rootDirectory, sharedDestDirectory } from "../../globals";
+import {
+	compareAndExpandManifestDependencies,
+	getChangelog,
+	getFileAtRevision,
+	getLastGitTag,
+	isEnvVariableSet
+} from "../../util/util";
 import { ModpackManifest, ModpackManifestFile } from "../../types/modpackManifest";
 import {
 	Category,
@@ -309,7 +315,10 @@ export async function makeChangelog(): Promise<void> {
 		builder.push("There haven't been any changes.");
 	}
 
-	// TODO allow changing of output dir
+	if (isEnvVariableSet("CHANGELOG_BUILD")) {
+		await fs.promises.writeFile(upath.join(sharedDestDirectory, "CHANGELOG.md"), builder.join("\n"));
+		return fs.promises.writeFile(upath.join(sharedDestDirectory, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
+	}
 	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builder.join("\n"));
 	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
 }

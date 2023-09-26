@@ -53,7 +53,7 @@ export const checkEnvironmentalVariables = (vars: string[]): void => {
 /**
  * Returns true if given variable set, false otherwise.
  */
-const isEnvVariableSet = (env: string): boolean => {
+export const isEnvVariableSet = (env: string): boolean => {
 	return process.env[env] && process.env[env] != "";
 };
 
