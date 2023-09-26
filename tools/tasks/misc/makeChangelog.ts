@@ -79,7 +79,7 @@ const performanceCategory: Category = {
 	categoryName: "Performance Improvements",
 	defaultSubCategory: emptySubCategory,
 	subCategories: [emptySubCategory],
-}
+};
 const featureCategory: Category = {
 	commitKey: "[FEATURE]",
 	categoryName: "Feature Additions",
@@ -246,7 +246,7 @@ export async function makeChangelog(): Promise<void> {
 	}
 
 	// Push the title.
-	builderGH.push(`# Changes since ${since}`);
+	builderGH.push(`# Changes since ${since}`, "");
 
 	// Push Sections of Changelog
 	categories.forEach((category) => {
@@ -330,7 +330,6 @@ export async function makeChangelog(): Promise<void> {
 
 	// Push the commit log
 	if (changelogCommitList) {
-		builderGH.push("");
 		builderGH.push("## Commits");
 		changelogCommitList.forEach((commit) => {
 			builderGH.push(formatCommit(commit));
@@ -441,7 +440,6 @@ function findSubCategory(commitBody: string, category: Category): SubCategory {
 	return category.defaultSubCategory;
 }
 
-// TODO Proper handling of multi commits
 /**
  * Formats a Changelog Message
  * @param changelogMessage The message to format.
@@ -455,29 +453,18 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 		if (changelogMessage.commitObjects.length > 1) {
 			const authors: string[] = [];
 			const formattedCommits: string[] = [];
-			const dates: string[] = [];
 			changelogMessage.commitObjects.forEach((commit) => {
 				if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
-				dates.push(
-					new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" }),
-				);
 				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit.hash})`);
 			});
-			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")}, ${dates.join(
-				", ",
-			)})`;
+			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")})`;
 		}
 
-		const commits = changelogMessage.commitObjects;
-		const date = new Date(commits[0].date).toLocaleDateString("en-us", {
-			year: "numeric",
-			month: "short",
-			day: "numeric",
-		});
-		const shortSHA = commits[0].hash.substring(0, 7);
-		const author = commits[0].author_name;
+		const commit = changelogMessage.commitObjects[0];
+		const shortSHA = commit.hash.substring(0, 7);
+		const author = commit.author_name;
 
-		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commits[0].hash}), ${date})`;
+		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commit.hash}))`;
 	}
 
 	return `${indentation}* ${message}`;
@@ -582,10 +569,7 @@ async function pushModChangesToGenerals(since: string, to: string) {
 			if (projectIDsToCommits.has(id)) projectIDsToCommits.get(id).push(commit);
 			else projectIDsToCommits.set(id, [commit]);
 		});
-		console.log(projectIDs);
 	});
-
-	console.log(`ProjectIDs To Commits: ${projectIDsToCommits}`);
 
 	[
 		{
@@ -617,7 +601,6 @@ async function pushModChangesToGenerals(since: string, to: string) {
 			let commits: Commit[] = undefined;
 			if (info.projectID && projectIDsToCommits.has(info.projectID)) {
 				commits = projectIDsToCommits.get(info.projectID);
-				console.log(`${info.projectID}, ${projectIDsToCommits.get(info.projectID)}`);
 			}
 			generalCategory.changelogSection.get(block.subCategory).push({
 				commitMessage: getModChangeMessage(info, block.template),
@@ -683,9 +666,6 @@ function getCommitChange(SHA: string): CommitChange {
 
 	const differ = new ListDiffer(oldManifest.files, (e) => e.fileID);
 	const result: DiffResult<ModpackManifestFile> = differ.update(newManifest.files);
-	console.log(SHA);
-	console.log(result.added);
-	console.log(result.removed);
 
 	return {
 		diff: result,
