@@ -54,7 +54,7 @@ nomifactory.quest.normal.db.0.desc=The main purpose for this device is to turn �
 
 #db 1 of mode normal
 nomifactory.quest.normal.db.1.title=Crystal Growth Chamber
-nomifactory.quest.normal.db.1.desc=The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r's world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!%n%nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.%n%nJEI doesn't show the Chamber's recipes directly, so we'll explain it here:%n%nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can't grind down Pure Crystals to further multiply your resources. Sorry.%n%nFluix Crystals you've already had to make in a pool of water by now, and it's the same ingredients here: insert one each of a §6Redstone Dust§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.
+nomifactory.quest.normal.db.1.desc=The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r's world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!%n%nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.%n%nJEI doesn't show the Chamber's recipes directly, so we'll explain it here:%n%nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can't grind down Pure Crystals to further multiply your resources. Sorry.%n%nFluix Crystals you've already had to make in a pool of water by now, and it's the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.
 
 #db 2 of mode normal
 nomifactory.quest.normal.db.2.title=Canning Machine and Assorted Stuff
@@ -186,7 +186,7 @@ nomifactory.quest.normal.db.33.desc=Expandable multi-block storage for RF power.
 
 #db 34 of mode normal
 nomifactory.quest.normal.db.34.title=§2Energetic Alloy
-nomifactory.quest.normal.db.34.desc=This alloy is made from §2mixing 2 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust in a Mixer, creating Energetic Alloy Dust,§r and putting it in your new §3Electric Blast Furnace§r.%n%nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.%n%n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.
+nomifactory.quest.normal.db.34.desc=This alloy is made from §2mixing 2 Gold Dust, 1 Redstone, and 1 Glowstone Dust in a Mixer, creating Energetic Alloy Dust,§r and putting it in your new §3Electric Blast Furnace§r.%n%nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.%n%n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.
 
 #db 35 of mode normal
 nomifactory.quest.normal.db.35.title=§2Vibrant Alloy
@@ -302,7 +302,7 @@ nomifactory.quest.normal.db.65.desc=The Third Micro Miner. §2You'll need that B
 
 #db 66 of mode normal
 nomifactory.quest.normal.db.66.title=From Dusts To Wires
-nomifactory.quest.normal.db.66.desc=Although most §ealloys§f require an §3Alloy Smelter§f, some alloys can be made simply by mixing the correct metal dusts together. %n%nCopper Dust mixed with Redstone Dust makes §6Red Alloy Dust§f.%n%nIron Dust mixed with Redstone Dust makes §6Conductive Iron Dust§f.%n%n§3Smelt§f it into ingots, §ahammer§f it into §6Plates§f, and §acut§f them into §6Wires§f.
+nomifactory.quest.normal.db.66.desc=Although most §ealloys§f require an §3Alloy Smelter§f, some alloys can be made simply by mixing the correct metal dusts together. %n%nCopper Dust mixed with Redstone makes §6Red Alloy Dust§f.%n%nIron Dust mixed with Redstone makes §6Conductive Iron Dust§f.%n%n§3Smelt§f it into ingots, §ahammer§f it into §6Plates§f, and §acut§f them into §6Wires§f.
 
 #db 67 of mode normal
 nomifactory.quest.normal.db.67.title=Octadic Capacitor
@@ -1114,7 +1114,7 @@ nomifactory.quest.normal.db.280.desc=Man, that's a LOT of quests linked to this 
 
 #db 282 of mode normal
 nomifactory.quest.normal.db.282.title=Energy Acceptor
-nomifactory.quest.normal.db.282.desc=Fluix is initially made via in-world crafting, by dropping §6Redstone Dust§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You'll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.%n%nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. %n%nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.
+nomifactory.quest.normal.db.282.desc=Fluix is initially made via in-world crafting, by dropping §6Redstone§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You'll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.%n%nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. %n%nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.
 
 #db 283 of mode normal
 nomifactory.quest.normal.db.283.title=§2LuV Circuit Assembling Machine
@@ -3508,7 +3508,7 @@ nomifactory.quest.expert.db.0.desc=The main purpose for this device is to turn �
 
 #db 1 of mode expert
 nomifactory.quest.expert.db.1.title=Crystal Growth Chamber
-nomifactory.quest.expert.db.1.desc=The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r's world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!%n%nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.%n%nJEI doesn't show the Chamber's recipes directly, so we'll explain it here:%n%nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can't grind down Pure Crystals to further multiply your resources. Sorry.%n%nFluix Crystals you've already had to make in a pool of water by now, and it's the same ingredients here: insert one each of a §6Redstone Dust§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.
+nomifactory.quest.expert.db.1.desc=The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r's world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!%n%nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.%n%nJEI doesn't show the Chamber's recipes directly, so we'll explain it here:%n%nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can't grind down Pure Crystals to further multiply your resources. Sorry.%n%nFluix Crystals you've already had to make in a pool of water by now, and it's the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.
 
 #db 2 of mode expert
 nomifactory.quest.expert.db.2.title=Canning Machine and Assorted Stuff
@@ -3640,7 +3640,7 @@ nomifactory.quest.expert.db.33.desc=Expandable multi-block storage for RF power.
 
 #db 34 of mode expert
 nomifactory.quest.expert.db.34.title=§2Energetic Alloy
-nomifactory.quest.expert.db.34.desc=This alloy is made from §2mixing§r §22 Gold Dust, 1 Redstone Dust, and 1 Glowstone Dust§r §2and putting it §rin your new §3Electric Blast Furnace§r.%n%nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.%n%n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.
+nomifactory.quest.expert.db.34.desc=This alloy is made from §2mixing§r §22 Gold Dust, 1 Redstone, and 1 Glowstone Dust§r §2and putting it §rin your new §3Electric Blast Furnace§r.%n%nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.%n%n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.
 
 #db 35 of mode expert
 nomifactory.quest.expert.db.35.title=§2Vibrant Alloy
@@ -4540,7 +4540,7 @@ nomifactory.quest.expert.db.272.desc=The first tier of §6capacitors§r. These (
 
 #db 273 of mode expert
 nomifactory.quest.expert.db.273.title=LV Mixer
-nomifactory.quest.expert.db.273.desc=Mixes dusts together.%n%nFor now, you'll be using it to make §6Energetic Alloy Dust§r.%n%nEnergetic Alloy Dust is made from §6Redstone Dust§r, §6Gold Dust§r and §6Glowstone Dust§r. %n%nYou should have some Glowstone from your adventures in the §cNether§r, but you can also make it by mixing §6Tricalcium Phosphate Dust§r§r§r and §6§6§6Gold Dust§r§r§r.
+nomifactory.quest.expert.db.273.desc=Mixes dusts together.%n%nFor now, you'll be using it to make §6Energetic Alloy Dust§r.%n%nEnergetic Alloy Dust is made from §6Redstone§r, §6Gold Dust§r and §6Glowstone Dust§r. %n%nYou should have some Glowstone from your adventures in the §cNether§r, but you can also make it by mixing §6Tricalcium Phosphate Dust§r§r§r and §6§6§6Gold Dust§r§r§r.
 
 #db 274 of mode expert
 nomifactory.quest.expert.db.274.title=Dragon Hearts
@@ -4568,7 +4568,7 @@ nomifactory.quest.expert.db.280.desc=Man, that's a LOT of quests linked to this 
 
 #db 282 of mode expert
 nomifactory.quest.expert.db.282.title=Energy Acceptor
-nomifactory.quest.expert.db.282.desc=Fluix is initially made via in-world crafting, by dropping §6Redstone Dust§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You'll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.%n%nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. %n%nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.
+nomifactory.quest.expert.db.282.desc=Fluix is initially made via in-world crafting, by dropping §6Redstone§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You'll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.%n%nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. %n%nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.
 
 #db 283 of mode expert
 nomifactory.quest.expert.db.283.title=§2LuV Circuit Assembling Machine
