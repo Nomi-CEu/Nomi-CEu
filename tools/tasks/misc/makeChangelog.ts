@@ -454,7 +454,7 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 				dates.push(
 					new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" }),
 				);
-				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit.hash}`);
+				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit.hash})`);
 			});
 			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")}), ${dates.join(
 				", ",
@@ -462,7 +462,11 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 		}
 
 		const commits = changelogMessage.commitObjects;
-		const date = new Date(commits[0].date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
+		const date = new Date(commits[0].date).toLocaleDateString("en-us", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		});
 		const shortSHA = commits[0].hash.substring(0, 7);
 		const author = commits[0].author_name;
 
