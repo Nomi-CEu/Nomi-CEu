@@ -74,6 +74,12 @@ const balancingCategory: Category = {
 	defaultSubCategory: bothModes,
 	subCategories: [bothModes, normalMode, hardMode],
 };
+const performanceCategory: Category = {
+	commitKey: "[PERFORMANCE]",
+	categoryName: "Performance Improvements",
+	defaultSubCategory: emptySubCategory,
+	subCategories: [emptySubCategory],
+}
 const featureCategory: Category = {
 	commitKey: "[FEATURE]",
 	categoryName: "Feature Additions",
@@ -120,6 +126,7 @@ const QBHMCompat: Category = {
 const categories: Category[] = [
 	breakingCategory,
 	balancingCategory,
+	performanceCategory,
 	featureCategory,
 	questBookCategory,
 	bugCategory,
