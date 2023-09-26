@@ -445,12 +445,28 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 	const message = changelogMessage.commitMessage;
 
 	if (changelogMessage.commitObjects) {
-		const commit = changelogMessage.commitObjects;
-		const date = new Date(commit[0].date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
-		const shortSHA = commit[0].hash.substring(0, 7);
-		const author = commit[0].author_name;
+		if (changelogMessage.commitObjects.length > 1) {
+			const authors: string[] = [];
+			const formattedCommits: string[] = [];
+			const dates: string[] = [];
+			changelogMessage.commitObjects.forEach((commit) => {
+				if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
+				dates.push(
+					new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" }),
+				);
+				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit[0].hash}`);
+			});
+			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")}), ${dates.join(
+				", ",
+			)})`;
+		}
 
-		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commit[0].hash}), ${date})`;
+		const commits = changelogMessage.commitObjects;
+		const date = new Date(commits[0].date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
+		const shortSHA = commits[0].hash.substring(0, 7);
+		const author = commits[0].author_name;
+
+		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commits[0].hash}), ${date})`;
 	}
 
 	return `${indentation}* ${message}`;
