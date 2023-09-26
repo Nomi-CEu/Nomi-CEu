@@ -456,7 +456,7 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 				);
 				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${commitLinkFormat}${commit.hash})`);
 			});
-			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")}), ${dates.join(
+			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")}, ${dates.join(
 				", ",
 			)})`;
 		}
