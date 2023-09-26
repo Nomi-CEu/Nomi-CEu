@@ -1,14 +1,8 @@
 import fs from "fs";
 import upath from "upath";
 import { modpackManifest, rootDirectory } from "../../globals";
-import {
-	compareAndExpandManifestDependencies,
-	getChangelog,
-	getCommitChange,
-	getFileAtRevision,
-	getLastGitTag,
-} from "../../util/util";
-import { ModpackManifest } from "../../types/modpackManifest";
+import { compareAndExpandManifestDependencies, getChangelog, getFileAtRevision, getLastGitTag } from "../../util/util";
+import { ModpackManifest, ModpackManifestFile } from "../../types/modpackManifest";
 import {
 	Category,
 	ChangelogMessage,
@@ -20,6 +14,7 @@ import {
 import marked from "marked";
 import mustache from "mustache";
 import matter from "gray-matter";
+import ListDiffer, { DiffResult } from "@egjs/list-differ";
 
 const mdOptions = {
 	pedantic: false,
@@ -187,7 +182,7 @@ export async function makeChangelog(): Promise<void> {
 					if (!(await parseCommit(commit))) {
 						generalCategory.changelogSection.get(other).push({
 							commitMessage: commit.message,
-							commitObject: commit,
+							commitObjects: [commit],
 						});
 					}
 					changelogCommitList.push(commit);
@@ -195,7 +190,7 @@ export async function makeChangelog(): Promise<void> {
 			} else {
 				generalCategory.changelogSection.get(other).push({
 					commitMessage: commit.message,
-					commitObject: commit,
+					commitObjects: [commit],
 				});
 				changelogCommitList.push(commit);
 			}
@@ -263,9 +258,27 @@ export async function makeChangelog(): Promise<void> {
 
 				// Sort Log
 				list.sort((messageA, messageB): number => {
-					if (messageA.commitObject && messageB.commitObject) {
-						const dateA = new Date(messageA.commitObject.date);
-						const dateB = new Date(messageB.commitObject.date);
+					if (messageA.commitObjects && messageB.commitObjects) {
+						messageA.commitObjects.sort((commitA, commitB): number => {
+							const dateA = new Date(commitA.date);
+							const dateB = new Date(commitB.date);
+
+							// This is reversed, so the newest commits go on top
+							return dateB.getTime() - dateA.getTime() !== 0
+								? dateB.getTime() - dateA.getTime()
+								: commitA.message.localeCompare(commitB.message);
+						});
+						messageB.commitObjects.sort((commitA, commitB): number => {
+							const dateA = new Date(commitA.date);
+							const dateB = new Date(commitB.date);
+
+							// This is reversed, so the newest commits go on top
+							return dateB.getTime() - dateA.getTime() !== 0
+								? dateB.getTime() - dateA.getTime()
+								: commitA.message.localeCompare(commitB.message);
+						});
+						const dateA = new Date(messageA.commitObjects[0].date);
+						const dateB = new Date(messageB.commitObjects[0].date);
 
 						// This is reversed, so the newest commits go on top
 						return dateB.getTime() - dateA.getTime() !== 0
@@ -390,7 +403,7 @@ function sortCommit(
 	message = message.trim();
 	category.changelogSection.get(subCategory).push({
 		commitMessage: message,
-		commitObject: commit,
+		commitObjects: [commit],
 		indentation: indentation,
 	});
 	return true;
@@ -421,6 +434,7 @@ function findSubCategory(commitBody: string, category: Category): SubCategory {
 	return category.defaultSubCategory;
 }
 
+// TODO Proper handling of multi commits
 /**
  * Formats a Changelog Message
  * @param changelogMessage The message to format.
@@ -430,13 +444,13 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	const message = changelogMessage.commitMessage;
 
-	if (changelogMessage.commitObject) {
-		const commit = changelogMessage.commitObject;
-		const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
-		const shortSHA = commit.hash.substring(0, 7);
-		const author = commit.author_name;
+	if (changelogMessage.commitObjects) {
+		const commit = changelogMessage.commitObjects;
+		const date = new Date(commit[0].date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
+		const shortSHA = commit[0].hash.substring(0, 7);
+		const author = commit[0].author_name;
 
-		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commit.hash}), ${date})`;
+		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${commitLinkFormat}${commit[0].hash}), ${date})`;
 	}
 
 	return `${indentation}* ${message}`;
@@ -469,12 +483,12 @@ async function deCompExpand(commitBody: string, commitObject: Commit): Promise<v
 			if (!(await parseCommitBody(message.messageTitle, message.messageBody, commitObject))) {
 				generalCategory.changelogSection
 					.get(other)
-					.push({ commitMessage: message.messageTitle, commitObject: commitObject });
+					.push({ commitMessage: message.messageTitle, commitObjects: [commitObject] });
 			}
 		} else {
 			generalCategory.changelogSection
 				.get(other)
-				.push({ commitMessage: message.messageTitle, commitObject: commitObject });
+				.push({ commitMessage: message.messageTitle, commitObjects: [commitObject] });
 		}
 	}
 }
@@ -490,7 +504,7 @@ async function deCompDetails(commitMessage: string, commitBody: string, commitOb
 
 	category.changelogSection.get(subCategory).push({
 		commitMessage: commitMessage,
-		commitObject: commitObject,
+		commitObjects: [commitObject],
 		subChangelogMessages: await deCompDetailsLevel(commitBody, commitObject),
 	});
 }
@@ -508,7 +522,7 @@ async function deCompDetailsLevel(
 		if (message.includes(detailsKey)) {
 			result.push(...(await deCompDetailsLevel(message, commitObject, `${indentation}${indentationLevel}`)));
 		} else {
-			result.push({ commitMessage: message, commitObject: commitObject, indentation: indentation });
+			result.push({ commitMessage: message, commitObjects: [commitObject], indentation: indentation });
 		}
 	}
 
@@ -528,17 +542,23 @@ async function parse(commitBody: string, delimiter: string, listKey: string): Pr
 }
 
 async function pushModChangesToGenerals(since: string, to: string) {
-	const oldFile = getFileAtRevision("manifest.json", since);
-	const newFile = getFileAtRevision("manifest.json", to);
-	const oldManifest: ModpackManifest = JSON.parse(oldFile);
-	const newManifest: ModpackManifest = JSON.parse(newFile);
+	const oldManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", since));
+	const newManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", to));
 	const comparisonResult = await compareAndExpandManifestDependencies(oldManifest, newManifest);
 
 	const commitList = await getChangelog(since, to, ["manifest.json"]);
-	for (const commit of commitList) {
-		//console.log(commit.message);
-		//await getCommitChange(commit.hash);
-	}
+	const projectIDsToCommits: Map<number, Commit[]> = new Map();
+
+	commitList.forEach((commit) => {
+		const projectIDs = getChangedProjectIDs(commit.hash);
+		projectIDs.forEach((id) => {
+			if (projectIDsToCommits.has(id)) projectIDsToCommits.get(id).push(commit);
+			projectIDsToCommits.set(id, [commit]);
+		});
+		console.log(projectIDs);
+	});
+
+	console.log(`ProjectIDs To Commits: ${projectIDsToCommits}`);
 
 	[
 		{
@@ -567,21 +587,21 @@ async function pushModChangesToGenerals(since: string, to: string) {
 			.map((name) => name);
 
 		list.forEach((info) => {
-			const commits: Commit[] = undefined;
-			if (info.projectID) {
+			let commits: Commit[] = undefined;
+			if (info.projectID && projectIDsToCommits.has(info.projectID)) {
+				commits = projectIDsToCommits.get(info.projectID);
 			}
 			generalCategory.changelogSection.get(block.subCategory).push({
 				commitMessage: getModChangeMessage(info, block.template),
+				commitObjects: commits,
 			});
 		});
 	});
 }
 
-/*
-function getCommitsForProject(projectID: number) {
-	const lines = file.toString().split(/\r\n|\r|\n/);
+function findCommitsForProjectID(map: Map<number, Commit[]>) {
+
 }
- */
 
 function getModChangeMessage(info: ModChangeInfo, template: string) {
 	const oldVersion = cleanupVersion(info.oldVersion);
@@ -603,4 +623,49 @@ function cleanupVersion(version: string): string {
 	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
 	const list = version.match(/[\d+.?]+/g);
 	return list[list.length - 1];
+}
+
+function getChangedProjectIDs(SHA: string): number[] {
+	const change = getCommitChange(SHA);
+	const projectIDs: number[] = [];
+
+	// Add all unique IDs from both diff lists
+	change.diff.added.forEach((index) => {
+		const id = change.newManifest.files[index].projectID;
+		if (!projectIDs.includes(id)) projectIDs.push(id);
+	});
+
+	change.diff.removed.forEach((index) => {
+		const id = change.oldManifest.files[index].projectID;
+		if (!projectIDs.includes(id)) projectIDs.push(id);
+	});
+
+	return projectIDs;
+}
+
+interface CommitChange {
+	diff: DiffResult<ModpackManifestFile>;
+	oldManifest: ModpackManifest;
+	newManifest: ModpackManifest;
+}
+
+/**
+ * Gets what a commit changed.
+ * @param SHA The sha of the commit
+ */
+function getCommitChange(SHA: string): CommitChange {
+	const oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
+	const newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
+
+	const differ = new ListDiffer(oldManifest.files, (e) => e.fileID);
+	const result: DiffResult<ModpackManifestFile> = differ.update(newManifest.files);
+	console.log(SHA);
+	console.log(result.added);
+	console.log(result.removed);
+
+	return {
+		diff: result,
+		oldManifest: oldManifest,
+		newManifest: newManifest,
+	};
 }

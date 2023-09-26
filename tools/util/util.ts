@@ -17,7 +17,6 @@ import log from "fancy-log";
 import { pathspec, SimpleGit, simpleGit } from "simple-git";
 import { Commit, ModChangeInfo } from "../types/changelogTypes";
 import { rootDirectory } from "../globals";
-import * as readline from "readline";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
@@ -274,19 +273,6 @@ export async function getChangelog(
 	});
 
 	return commitList;
-}
-
-/**
- * Gets what a commit changed.
- * @param SHA The sha of the commit
- */
-export async function getCommitChange(SHA: string) {
-	console.log(await git.diff([`${SHA}~`, `${SHA}`]));
-	console.log(await git.diff([`${SHA}~`, `${SHA}`, "--raw"]));
-	console.log(await git.diff([`${SHA}~`, `${SHA}`, "--summary"]));
-	console.log(await git.diffSummary([`${SHA}~`, `${SHA}`]));
-	console.log(getFileAtRevision("manifest.json", SHA));
-	console.log(getFileAtRevision("manifest.json", `^${SHA}`));
 }
 
 /**

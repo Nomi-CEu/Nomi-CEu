@@ -90,11 +90,13 @@ export interface ChangelogMessage {
 	commitMessage: string;
 
 	/**
-	 * Commit Object
+	 * Commit Object(s)
 	 * <p>
 	 * Provides the Commit SHA, the Commit Author, and the Commit Date.
+	 * <p>
+	 * Multiple are allowed!
 	 */
-	commitObject?: Commit;
+	commitObjects?: Commit[];
 
 	/**
 	 * Sub Changelog Messages
