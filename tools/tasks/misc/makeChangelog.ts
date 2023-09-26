@@ -563,17 +563,17 @@ async function pushModChangesToGenerals(since: string, to: string) {
 	[
 		{
 			subCategory: modAdditions,
-			template: "{{ modName }}: **v{{ newVersion }}**",
+			template: "{{ modName }}: ***v{{ newVersion }}***",
 			list: comparisonResult.added,
 		},
 		{
 			subCategory: modUpdates,
-			template: "{{ modName }}: **v{{ oldVersion }} => v{{ newVersion }}**",
+			template: "{{ modName }}: ***v{{ oldVersion }} => v{{ newVersion }}***",
 			list: comparisonResult.modified,
 		},
 		{
 			subCategory: modRemovals,
-			template: "{{ modName }}: **v{{ oldVersion }}**",
+			template: "{{ modName }}: ***v{{ oldVersion }}***",
 			list: comparisonResult.removed,
 		},
 	].forEach((block) => {
