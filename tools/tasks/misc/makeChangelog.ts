@@ -399,31 +399,33 @@ function sortCommit(
 	indentation = defaultIndentation,
 	compat = false,
 ): boolean {
-	const category = findCategory(commitBody);
-	if (!category) return false;
+	const sortedCategories: Category[] = findCategories(commitBody);
+	if (sortedCategories.length === 0) return false;
 
-	const subCategory = findSubCategory(commitBody, category);
-	if (message.includes(category.commitKey) && compat) {
-		message = message.replace(category.commitKey, "");
-	}
-	message = message.trim();
-	category.changelogSection.get(subCategory).push({
-		commitMessage: message,
-		commitObjects: [commit],
-		indentation: indentation,
+	sortedCategories.forEach((category) => {
+		const subCategory = findSubCategory(commitBody, category);
+		if (message.includes(category.commitKey) && compat) {
+			message = message.replace(category.commitKey, "").trim();
+		}
+		category.changelogSection.get(subCategory).push({
+			commitMessage: message,
+			commitObjects: [commit],
+			indentation: indentation,
+		});
 	});
 	return true;
 }
 
-function findCategory(commitBody: string): Category | undefined {
+function findCategories(commitBody: string): Category[] | undefined {
+	const sortedCategories: Category[] = [];
 	for (const category of categories) {
 		if (category.commitKey !== undefined) {
 			if (commitBody.includes(category.commitKey)) {
-				return category;
+				sortedCategories.push(category);
 			}
 		}
 	}
-	return undefined;
+	return sortedCategories;
 }
 
 /**
@@ -512,15 +514,18 @@ async function deCompExpand(commitBody: string, commitObject: Commit): Promise<v
  * Decompiles a commit with 'details'.
  */
 async function deCompDetails(commitMessage: string, commitBody: string, commitObject: Commit): Promise<void> {
-	let category = findCategory(commitBody);
-	if (!category) category = generalCategory;
+	let sortedCategories = findCategories(commitBody);
+	if (sortedCategories.length === 0) sortedCategories = [generalCategory];
 
-	const subCategory = findSubCategory(commitBody, category);
+	const subMessages = await deCompDetailsLevel(commitBody, commitObject);
+	sortedCategories.forEach((category) => {
+		const subCategory = findSubCategory(commitBody, category);
 
-	category.changelogSection.get(subCategory).push({
-		commitMessage: commitMessage,
-		commitObjects: [commitObject],
-		subChangelogMessages: await deCompDetailsLevel(commitBody, commitObject),
+		category.changelogSection.get(subCategory).push({
+			commitMessage: commitMessage,
+			commitObjects: [commitObject],
+			subChangelogMessages: subMessages,
+		});
 	});
 }
 
