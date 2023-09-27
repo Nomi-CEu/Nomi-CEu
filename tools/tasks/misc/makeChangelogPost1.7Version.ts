@@ -511,7 +511,21 @@ async function deCompDetailsLevel(
 	commitObject: Commit,
 	indentation = indentationLevel,
 ): Promise<ChangelogMessage[]> {
-	const messages: string[] = await parse(commitBody, detailsKey, detailsList);
+	let messages: string[];
+	try {
+		messages = await parse(commitBody, detailsKey, detailsList);
+	} catch (e) {
+		console.error(
+			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Details Message List (key: '${detailsList}') is not an array.\nSkipping...`,
+		);
+		return;
+	}
+	if (!messages || !Array.isArray(messages)) {
+		console.error(
+			`Details Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...`,
+		);
+		return;
+	}
 
 	const result: ChangelogMessage[] = [];
 
