@@ -158,6 +158,9 @@ export async function makeChangelog(): Promise<void> {
 		since = getLastGitTag(since);
 	}
 
+	since = "ca0eebd7ae311990ff110589126d86a2620b0b8c";
+	to = "HEAD";
+
 	// Final Builders
 	builder = [];
 
@@ -656,6 +659,9 @@ function getChangedProjectIDs(SHA: string): number[] {
 	const change = getCommitChange(SHA);
 	const projectIDs: number[] = [];
 
+	if (!change || !change.diff) {
+		return projectIDs;
+	}
 	// Add all unique IDs from both diff lists
 	change.diff.added.forEach((index) => {
 		const id = change.newManifest.files[index].projectID;
@@ -681,11 +687,20 @@ interface CommitChange {
  * @param SHA The sha of the commit
  */
 function getCommitChange(SHA: string): CommitChange {
-	const oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
-	const newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
+	let oldManifest: ModpackManifest, newManifest: ModpackManifest;
+	try {
+		oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
+		newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
+	} catch (e) {
+		console.error(`Failed to parse the manifest.json file at commit ${SHA} or the commit before! Skipping...`);
+		return;
+	}
 
-	const differ = new ListDiffer(oldManifest.files, (e) => e.fileID);
-	const result: DiffResult<ModpackManifestFile> = differ.update(newManifest.files);
+	let result: DiffResult<ModpackManifestFile>;
+	if (oldManifest && newManifest) {
+		const differ = new ListDiffer(oldManifest.files, (e) => e.fileID);
+		result = differ.update(newManifest.files);
+	}
 
 	return {
 		diff: result,
