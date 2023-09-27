@@ -158,9 +158,6 @@ export async function makeChangelog(): Promise<void> {
 		since = getLastGitTag(since);
 	}
 
-	since = "ca0eebd7ae311990ff110589126d86a2620b0b8c";
-	to = "HEAD";
-
 	// Final Builders
 	builder = [];
 
@@ -511,7 +508,21 @@ function formatCommit(commit: Commit): string {
  * Decompiles a commit with 'expand'.
  */
 async function deCompExpand(commitBody: string, commitObject: Commit): Promise<void> {
-	const messages: ExpandedMessage[] = await parse(commitBody, expandKey, expandList);
+	let messages: ExpandedMessage[];
+	try {
+		messages = await parse(commitBody, expandKey, expandList);
+	} catch (e) {
+		console.error(
+			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Expand Message List (key: '${expandList}') is not an array.\nSkipping...`,
+		);
+		return;
+	}
+	if (!messages || !Array.isArray(messages)) {
+		console.error(
+			`Expand Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...`,
+		);
+		return;
+	}
 	for (const message of messages) {
 		if (message.messageBody) {
 			if (!(await parseCommitBody(message.messageTitle, message.messageBody, commitObject))) {

@@ -457,7 +457,21 @@ function formatCommit(commit: Commit): string {
  * Decompiles a commit with 'expand'.
  */
 async function deCompExpand(commitBody: string, commitObject: Commit): Promise<void> {
-	const messages: ExpandedMessage[] = await parse(commitBody, expandKey, expandList);
+	let messages: ExpandedMessage[];
+	try {
+		messages = await parse(commitBody, expandKey, expandList);
+	} catch (e) {
+		console.error(
+			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Expand Message List (key: '${expandList}') is not an array.\nSkipping...`,
+		);
+		return;
+	}
+	if (!messages || !Array.isArray(messages)) {
+		console.error(
+			`Expand Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...`,
+		);
+		return;
+	}
 	for (const message of messages) {
 		if (message.messageBody) {
 			if (!(await parseCommitBody(message.messageTitle, message.messageBody, commitObject))) {
@@ -605,6 +619,10 @@ function getChangedProjectIDs(SHA: string): number[] {
 	const change = getCommitChange(SHA);
 	const projectIDs: number[] = [];
 
+	if (!change || !change.diff) {
+		return projectIDs;
+	}
+
 	// Add all unique IDs from both diff lists
 	change.diff.added.forEach((index) => {
 		const id = change.newManifest.files[index].projectID;
@@ -630,11 +648,20 @@ interface CommitChange {
  * @param SHA The sha of the commit
  */
 function getCommitChange(SHA: string): CommitChange {
-	const oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
-	const newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
+	let oldManifest: ModpackManifest, newManifest: ModpackManifest;
+	try {
+		oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
+		newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
+	} catch (e) {
+		console.error(`Failed to parse the manifest.json file at commit ${SHA} or the commit before! Skipping...`);
+		return;
+	}
 
-	const differ = new ListDiffer(oldManifest.files, (e) => e.fileID);
-	const result: DiffResult<ModpackManifestFile> = differ.update(newManifest.files);
+	let result: DiffResult<ModpackManifestFile>;
+	if (oldManifest && newManifest) {
+		const differ = new ListDiffer(oldManifest.files, (e) => e.fileID);
+		result = differ.update(newManifest.files);
+	}
 
 	return {
 		diff: result,
