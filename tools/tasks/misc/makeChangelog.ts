@@ -513,17 +513,27 @@ async function deCompExpand(commitBody: string, commitObject: Commit): Promise<v
 		messages = await parse(commitBody, expandKey, expandList);
 	} catch (e) {
 		console.error(
-			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Expand Message List (key: '${expandList}') is not an array.\nSkipping...`,
+			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Expand Message List (key: '${expandList}') is not an array.\nSkipping...\n`,
 		);
 		return;
 	}
 	if (!messages || !Array.isArray(messages)) {
 		console.error(
-			`Expand Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...`,
+			`Expand Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...\n`,
 		);
 		return;
 	}
 	for (const message of messages) {
+		if (!message.messageTitle) {
+			console.error(
+				`No Message Title for expand entry ${
+					messages.indexOf(message) + 1
+				} in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${
+					commitObject.message
+				}).\nSkipping...\n`,
+			);
+			continue;
+		}
 		if (message.messageBody) {
 			if (!(await parseCommitBody(message.messageTitle, message.messageBody, commitObject))) {
 				generalCategory.changelogSection
@@ -567,13 +577,13 @@ async function deCompDetailsLevel(
 		messages = await parse(commitBody, detailsKey, detailsList);
 	} catch (e) {
 		console.error(
-			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Details Message List (key: '${detailsList}') is not an array.\nSkipping...`,
+			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Details Message List (key: '${detailsList}') is not an array.\nSkipping...\n`,
 		);
 		return;
 	}
 	if (!messages || !Array.isArray(messages)) {
 		console.error(
-			`Details Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...`,
+			`Details Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...\n`,
 		);
 		return;
 	}
@@ -581,6 +591,16 @@ async function deCompDetailsLevel(
 	const result: ChangelogMessage[] = [];
 
 	for (const message of messages) {
+		if (!message) {
+			console.error(
+				`No Message for detail entry ${
+					messages.indexOf(message) + 1
+				} in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${
+					commitObject.message
+				}).\nSkipping...\n`,
+			);
+			continue;
+		}
 		if (message.includes(detailsKey)) {
 			result.push(...(await deCompDetailsLevel(message, commitObject, `${indentation}${indentationLevel}`)));
 		} else {
@@ -717,7 +737,7 @@ function getCommitChange(SHA: string): CommitChange {
 		oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
 		newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
 	} catch (e) {
-		console.error(`Failed to parse the manifest.json file at commit ${SHA} or the commit before! Skipping...`);
+		console.error(`Failed to parse the manifest.json file at commit ${SHA} or the commit before!\nSkipping...\n`);
 		return;
 	}
 
