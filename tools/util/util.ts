@@ -295,14 +295,14 @@ export async function compareAndExpandManifestDependencies(
 	newFiles: ModpackManifest,
 ): Promise<ManifestFileListComparisonResult> {
 	// Map inputs for efficient joining.
-	const oldFileMap: { [key: number]: ModpackManifestFile } = oldFiles.files.reduce(
-		(map, file) => ((map[file.projectID] = file), map),
-		{},
-	);
-	const newFileMap: { [key: number]: ModpackManifestFile } = newFiles.files.reduce(
-		(map, file) => ((map[file.projectID] = file), map),
-		{},
-	);
+	const oldFileMap: { [key: number]: ModpackManifestFile } = oldFiles.files.reduce((map, file) => {
+		map[file.projectID] = file;
+		return map;
+	}, {});
+	const newFileMap: { [key: number]: ModpackManifestFile } = newFiles.files.reduce((map, file) => {
+		map[file.projectID] = file;
+		return map;
+	}, {});
 
 	const removed: ModChangeInfo[] = [],
 		modified: ModChangeInfo[] = [],
@@ -354,11 +354,17 @@ export async function compareAndExpandManifestDependencies(
 
 	// Compare external dependencies the same way.
 	const oldExternalMap: { [key: string]: ExternalDependency } = (oldFiles.externalDependencies || []).reduce(
-		(map, file) => ((map[file.name] = file), map),
+		(map, file) => {
+			map[file.name] = file;
+			return map;
+		},
 		{},
 	);
 	const newExternalMap: { [key: string]: ExternalDependency } = (newFiles.externalDependencies || []).reduce(
-		(map, file) => ((map[file.name] = file), map),
+		(map, file) => {
+			map[file.name] = file;
+			return map;
+		},
 		{},
 	);
 
