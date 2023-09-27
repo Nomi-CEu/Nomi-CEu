@@ -1,4 +1,3 @@
-// TODO Replace this file with the Post 1.7 Version after 1.7 Release
 import fs from "fs";
 import upath from "upath";
 import { modpackManifest, rootDirectory, sharedDestDirectory } from "../../globals";
@@ -117,12 +116,6 @@ const internalCategory: Category = {
 	defaultSubCategory: emptySubCategory,
 	subCategories: [emptySubCategory],
 };
-const QBHMCompat: Category = {
-	commitKey: "[QB HM]",
-	categoryName: "QB HM Compat",
-	defaultSubCategory: emptySubCategory,
-	subCategories: [emptySubCategory],
-};
 
 /**
  * Category List
@@ -138,7 +131,6 @@ const categories: Category[] = [
 	bugCategory,
 	generalCategory,
 	internalCategory,
-	QBHMCompat,
 ];
 
 /**
@@ -174,37 +166,22 @@ export async function makeChangelog(): Promise<void> {
 
 	// Parse Commit List
 	for (const commit of commitList) {
-		let skipParsingBody = false;
-
-		if (!commit.message.includes(skipKey)) {
-			// If contained keys
-			const successParsingMessage = await parseCommit(commit, true);
-			if (successParsingMessage) {
-				skipParsingBody = true;
+		if (commit.body) {
+			if (!commit.body.includes(skipKey)) {
+				if (!(await parseCommitBody(commit.message, commit.body, commit))) {
+					generalCategory.changelogSection.get(other).push({
+						commitMessage: commit.message,
+						commitObjects: [commit],
+					});
+				}
 				changelogCommitList.push(commit);
 			}
 		} else {
-			skipParsingBody = true;
-		}
-
-		if (!skipParsingBody) {
-			if (commit.body) {
-				if (!commit.body.includes(skipKey)) {
-					if (!(await parseCommit(commit))) {
-						generalCategory.changelogSection.get(other).push({
-							commitMessage: commit.message,
-							commitObjects: [commit],
-						});
-					}
-					changelogCommitList.push(commit);
-				}
-			} else {
-				generalCategory.changelogSection.get(other).push({
-					commitMessage: commit.message,
-					commitObjects: [commit],
-				});
-				changelogCommitList.push(commit);
-			}
+			generalCategory.changelogSection.get(other).push({
+				commitMessage: commit.message,
+				commitObjects: [commit],
+			});
+			changelogCommitList.push(commit);
 		}
 	}
 
@@ -222,7 +199,7 @@ export async function makeChangelog(): Promise<void> {
 		// If not in parsed SHA List, and has a body
 		if (commit.body && !SHAList.includes(commit.hash)) {
 			if (!commit.body.includes(skipKey)) {
-				if (await parseCommit(commit)) {
+				if (await parseCommitBody(commit.message, commit.body, commit)) {
 					changelogCommitList.push(commit);
 				}
 			}
@@ -231,17 +208,6 @@ export async function makeChangelog(): Promise<void> {
 
 	// Push mod update blocks to General Changes.
 	await pushModChangesToGenerals(since, to);
-
-	// Push key [QB HM] to QB's HM category
-	QBHMCompat.changelogSection.get(emptySubCategory).forEach((changelogMessage) => {
-		questBookCategory.changelogSection.get(hardMode).push(changelogMessage);
-	});
-
-	// Remove QB HM Compat Category from list.
-	const index = categories.indexOf(QBHMCompat);
-	if (index > -1) {
-		categories.splice(index, 1);
-	}
 
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
@@ -375,13 +341,6 @@ function sortCommitList<T>(
 	});
 }
 
-async function parseCommit(commit: Commit, useMessage = false): Promise<boolean> {
-	if (useMessage) {
-		return sortCommit(commit.message, commit.message, commit, defaultIndentation, true);
-	}
-	return await parseCommitBody(commit.message, commit.body, commit);
-}
-
 async function parseCommitBody(commitMessage: string, commitBody: string, commitObject: Commit): Promise<boolean> {
 	if (commitBody.includes(expandKey)) {
 		await deCompExpand(commitBody, commitObject);
@@ -403,24 +362,14 @@ async function parseCommitBody(commitMessage: string, commitBody: string, commit
  * @param commitBody The body to use to sort
  * @param commit The commit object to grab date, author and SHA from
  * @param indentation The indentation of the message, if needed. Defaults to "".
- * @param compat If tag is found in message, whether to remove. REMOVE AFTER 1.7!
  * @return added If the commit message was added to a category
  */
-function sortCommit(
-	message: string,
-	commitBody: string,
-	commit: Commit,
-	indentation = defaultIndentation,
-	compat = false,
-): boolean {
+function sortCommit(message: string, commitBody: string, commit: Commit, indentation = defaultIndentation): boolean {
 	const sortedCategories: Category[] = findCategories(commitBody);
 	if (sortedCategories.length === 0) return false;
 
 	sortedCategories.forEach((category) => {
 		const subCategory = findSubCategory(commitBody, category);
-		if (message.includes(category.commitKey) && compat) {
-			message = message.replace(category.commitKey, "").trim();
-		}
 		category.changelogSection.get(subCategory).push({
 			commitMessage: message,
 			commitObjects: [commit],

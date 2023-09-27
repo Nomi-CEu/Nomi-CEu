@@ -352,13 +352,6 @@ export async function compareAndExpandManifestDependencies(
 		{ concurrency: buildConfig.downloaderConcurrency },
 	);
 
-	// Get Lines of each dep
-	/*
-	const rl = readline.createInterface({
-		input: fs.createReadStream(upath.join(rootDirectory, "manifest.json")),
-	});
-	 */
-
 	// Compare external dependencies the same way.
 	const oldExternalMap: { [key: string]: ExternalDependency } = (oldFiles.externalDependencies || []).reduce(
 		(map, file) => ((map[file.name] = file), map),
