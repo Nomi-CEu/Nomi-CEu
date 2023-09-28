@@ -32,6 +32,9 @@ const mdOptions = {
 
 marked.setOptions(mdOptions);
 
+// Whether the current run is to test a commit. If this is true, then errors will be thrown, and error messages will be slightly changed.
+let isTest = false;
+
 // Final Builders
 let builder: string[];
 
@@ -141,7 +144,7 @@ export async function makeChangelog(): Promise<void> {
 		to = "HEAD";
 
 	// If this is a tagged build, fetch the tag before last.
-	if (process.env.GITHUB_TAG) {
+	if (isEnvVariableSet("GITHUB_TAG")) {
 		since = getLastGitTag(process.env.GITHUB_TAG);
 		to = process.env.GITHUB_TAG;
 	}
@@ -149,6 +152,8 @@ export async function makeChangelog(): Promise<void> {
 	else if (since == "latest-dev-preview") {
 		since = getLastGitTag(since);
 	}
+	// See if current run is test
+	if (isEnvVariableSet("TEST_CHANGELOG")) isTest = true;
 
 	// Final Builders
 	builder = [];
@@ -412,7 +417,7 @@ function findSubCategory(commitBody: string, category: Category): SubCategory {
  */
 function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
-	const message = changelogMessage.commitMessage;
+	const message = changelogMessage.commitMessage.trim();
 
 	if (changelogMessage.commitObjects) {
 		if (changelogMessage.commitObjects.length > 1) {
@@ -457,34 +462,26 @@ function formatCommit(commit: Commit): string {
  * Decompiles a commit with 'expand'.
  */
 async function deCompExpand(commitBody: string, commitObject: Commit): Promise<void> {
-	let messages: ExpandedMessage[];
-	try {
-		messages = await parse(commitBody, expandKey, expandList);
-	} catch (e) {
-		console.error(
-			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Expand Message List (key: '${expandList}') is not an array.\nSkipping...`,
-		);
-		return;
-	}
-	if (!messages || !Array.isArray(messages)) {
-		console.error(
-			`Expand Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...`,
-		);
-		return;
-	}
-	for (const message of messages) {
-		if (message.messageBody) {
-			if (!(await parseCommitBody(message.messageTitle, message.messageBody, commitObject))) {
+	await parse(
+		commitBody,
+		commitObject,
+		expandKey,
+		expandList,
+		(item: ExpandedMessage) => item.messageTitle,
+		async (item) => {
+			if (item.messageBody) {
+				if (!(await parseCommitBody(item.messageTitle, item.messageBody, commitObject))) {
+					generalCategory.changelogSection
+						.get(other)
+						.push({ commitMessage: item.messageTitle, commitObjects: [commitObject] });
+				}
+			} else {
 				generalCategory.changelogSection
 					.get(other)
-					.push({ commitMessage: message.messageTitle, commitObjects: [commitObject] });
+					.push({ commitMessage: item.messageTitle, commitObjects: [commitObject] });
 			}
-		} else {
-			generalCategory.changelogSection
-				.get(other)
-				.push({ commitMessage: message.messageTitle, commitObjects: [commitObject] });
-		}
-	}
+		},
+	);
 }
 
 /**
@@ -511,47 +508,100 @@ async function deCompDetailsLevel(
 	commitObject: Commit,
 	indentation = indentationLevel,
 ): Promise<ChangelogMessage[]> {
-	let messages: string[];
-	try {
-		messages = await parse(commitBody, detailsKey, detailsList);
-	} catch (e) {
-		console.error(
-			`Failed parsing YAML in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}).\nThis could be because of invalid syntax, or because the Details Message List (key: '${detailsList}') is not an array.\nSkipping...`,
-		);
-		return;
-	}
-	if (!messages || !Array.isArray(messages)) {
-		console.error(
-			`Details Message List (key: '${expandList}') in body:\n\`\`\`\n${commitBody}\`\`\`\nof commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.\nSkipping...`,
-		);
-		return;
-	}
-
 	const result: ChangelogMessage[] = [];
-
-	for (const message of messages) {
-		if (message.includes(detailsKey)) {
-			result.push(...(await deCompDetailsLevel(message, commitObject, `${indentation}${indentationLevel}`)));
-		} else {
-			result.push({ commitMessage: message, commitObjects: [commitObject], indentation: indentation });
-		}
-	}
-
+	await parse(
+		commitBody,
+		commitObject,
+		detailsKey,
+		detailsList,
+		(item: string) => item,
+		async (item) => {
+			if (item.includes(detailsKey)) {
+				result.push(...(await deCompDetailsLevel(item, commitObject, `${indentation}${indentationLevel}`)));
+			} else {
+				result.push({ commitMessage: item, commitObjects: [commitObject], indentation: indentation });
+			}
+		},
+	);
 	return result;
 }
 
-async function parse(commitBody: string, delimiter: string, listKey: string): Promise<never[]> {
-	// Remove everything before first delimiter in body
-	const list = commitBody.split(delimiter);
-	list.shift();
-	const body = `${delimiter} ${list.join(delimiter)}`;
+async function parse<T>(
+	commitBody: string,
+	commitObject: Commit,
+	delimiter: string,
+	listKey: string,
+	emptyCheck: (item: T) => string,
+	perItemCallback: (item: T) => void,
+): Promise<void> {
+	let messages: T[];
+	let endMessage = "Skipping...";
+	if (isTest) {
+		endMessage =
+			"Try checking the YAML syntax in https://www.yamllint.com/, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!";
+	}
 
-	// Parse
-	const parseResult = matter(body, { delimiters: delimiter });
+	try {
+		// Remove everything before first delimiter in body
+		const list = commitBody.split(delimiter);
+		list.shift();
+		const body = `${delimiter} ${list.join(delimiter)}`;
 
-	return parseResult.data[listKey];
+		// Parse
+		const parseResult = matter(body, { delimiters: delimiter });
+
+		messages = parseResult.data[listKey];
+	} catch (e) {
+		console.error(`Failed parsing YAML in body:
+\`\`\`
+${commitBody}\`\`\`
+of commit object ${commitObject.hash} (${commitObject.message}).
+This could be because of invalid syntax, or because the Message List (key: '${listKey}') is not an array.`);
+		if (commitObject.body && commitBody !== commitObject.body) {
+			console.error(`
+Original Body:
+\`\`\`
+${commitObject.body}\`\`\``);
+		}
+		console.error(`${endMessage}\n`);
+		if (isTest) throw new Error();
+		return;
+	}
+	if (!messages || !Array.isArray(messages)) {
+		console.error(`Message List (key: '${listKey}') in body:
+\`\`\`
+${commitBody}\`\`\`
+of commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.`);
+		if (commitObject.body && commitBody !== commitObject.body) {
+			console.error(`
+Original Body:
+\`\`\`
+${commitObject.body}\`\`\``);
+		}
+		console.error(`${endMessage}\n`);
+		if (isTest) throw new Error();
+		return;
+	}
+	for (let i = 0; i < messages.length; i++) {
+		const item = messages[i];
+		if (!emptyCheck(item)) {
+			console.error(`No Message Title for entry ${i + 1} in body:
+\`\`\`
+${commitBody}\`\`\`
+of commit object ${commitObject.hash} (${commitObject.message}).`);
+			if (commitObject.body && commitBody !== commitObject.body) {
+				console.error(`
+Original Body:
+\`\`\`
+${commitObject.body}\`\`\``);
+			}
+			console.error(`${endMessage}\n`);
+			if (isTest) throw new Error();
+			continue;
+		}
+		perItemCallback(item);
+	}
 }
-
 async function pushModChangesToGenerals(since: string, to: string) {
 	const oldManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", since));
 	const newManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", to));
