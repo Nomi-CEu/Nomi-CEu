@@ -60,5 +60,4 @@ jobs:
 
       - name: "Throw Error if No Changes were Detected"
         if: steps.commit.outputs.changes_detected == 'false'
-        run: |
-          echo "No QB Changes Detected. This may be intended, or an error."
+        run: echo "No QB Changes Detected. This may be intended, or an error."
