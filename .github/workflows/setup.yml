@@ -4,7 +4,6 @@ on:
   workflow_call:
     inputs:
       ref:
-        default: HEAD
         required: false
         type: string
       check:
