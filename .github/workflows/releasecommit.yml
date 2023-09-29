@@ -26,6 +26,7 @@ on:
         default: false
 jobs:
   setupEnvironment:
+    name: Setup Environment
     uses: "IntegerLimit/Nomi-CEu-Dev/.github/workflows/setup.yml@test_buildscript_gha"
     with:
       check: false
@@ -39,10 +40,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: ./.github/actions/setup.yml
-        with:
-          check: false
-
       # Release Commit Steps
       - name: Set Release Version
         if: github.event.inputs.not_release == 'false'
