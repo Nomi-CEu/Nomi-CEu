@@ -30,6 +30,7 @@ jobs:
     with:
       check: false
   deploy:
+    needs: setupEnvironment
     name: Create Release Commit (${{ github.event.inputs.version }})
     runs-on: ubuntu-latest
     env:
