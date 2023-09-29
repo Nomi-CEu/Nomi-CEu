@@ -576,10 +576,12 @@ async function parse<T>(
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
+
 		console.error(`\n${endMessage}\n`);
 		if (isTest) throw new Error("Failed Parsing TOML. See above.");
 		return;
 	}
+
 	if (!messages || !Array.isArray(messages) || messages.length === 0) {
 		console.error(dedent`
 			Message List (key: '${listKey}') in body:
@@ -621,6 +623,7 @@ async function parse<T>(
 		perItemCallback(item);
 	}
 }
+
 async function pushModChangesToGenerals(since: string, to: string) {
 	const oldManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", since));
 	const newManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", to));
@@ -736,7 +739,9 @@ function getCommitChange(SHA: string): CommitChange {
 		oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
 		newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
 	} catch (e) {
-		console.error(`Failed to parse the manifest.json file at commit ${SHA} or the commit before! Skipping...`);
+		console.error(dedent`
+			Failed to parse the manifest.json file at commit ${SHA} or the commit before!
+			Skipping...`);
 		return;
 	}
 
