@@ -591,8 +591,8 @@ async function parse<T>(
 	let endMessage = "Skipping...";
 	if (isTest) {
 		endMessage = dedent`
-		Try checking the TOML syntax in https://www.toml-lint.com/, checking https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
-		Also check that you have surrounded the TOML in ${delimiter}!`;
+			Try checking the TOML syntax in https://www.toml-lint.com/, checking https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
+			Also check that you have surrounded the TOML in ${delimiter}!`;
 	}
 
 	try {
@@ -614,11 +614,11 @@ async function parse<T>(
 		messages = parseResult.data[listKey];
 	} catch (e) {
 		console.error(dedent`
-		Failed parsing TOML in body:
-		\`\`\`
-		${commitBody}\`\`\`
-		of commit object ${commitObject.hash} (${commitObject.message}).
-		This could be because of invalid syntax, or because the Message List (key: '${listKey}') is not an array.`);
+			Failed parsing TOML in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}).
+			This could be because of invalid syntax, or because the Message List (key: '${listKey}') is not an array.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
 			console.error(dedent`
