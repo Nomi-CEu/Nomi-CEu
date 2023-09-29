@@ -26,7 +26,7 @@ on:
         default: false
 jobs:
   setupEnvironment:
-    uses: "IntegerLimit/Nomi-CEu-Dev/.github/actions/setup.yml@main"
+    uses: "IntegerLimit/Nomi-CEu-Dev/.github/workflows/setup.yml@main"
     with:
       check: false
   deploy:
