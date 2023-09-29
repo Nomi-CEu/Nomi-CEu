@@ -25,6 +25,10 @@ on:
         required: true
         default: false
 jobs:
+  setupEnvironment:
+    uses: "IntegerLimit/Nomi-CEu-Dev/.github/actions/setup.yml@main"
+    with:
+      check: false
   deploy:
     name: Create Release Commit (${{ github.event.inputs.version }})
     runs-on: ubuntu-latest
