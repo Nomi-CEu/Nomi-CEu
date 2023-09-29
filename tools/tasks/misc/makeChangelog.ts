@@ -22,6 +22,8 @@ import marked from "marked";
 import mustache from "mustache";
 import matter from "gray-matter";
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
+import toml from "@ltd/j-toml";
+import dedent from "dedent-js";
 
 const mdOptions = {
 	pedantic: false,
@@ -520,16 +522,15 @@ async function deCompExpand(commitBody: string, commitObject: Commit): Promise<v
 		expandList,
 		(item: ExpandedMessage) => item.messageTitle,
 		async (item) => {
+			const title = dedent(item.messageTitle);
+
 			if (item.messageBody) {
-				if (!(await parseCommitBody(item.messageTitle, item.messageBody, commitObject))) {
-					generalCategory.changelogSection
-						.get(other)
-						.push({ commitMessage: item.messageTitle, commitObjects: [commitObject] });
+				const body = dedent(item.messageBody);
+				if (!(await parseCommitBody(title, body, commitObject))) {
+					generalCategory.changelogSection.get(other).push({ commitMessage: title, commitObjects: [commitObject] });
 				}
 			} else {
-				generalCategory.changelogSection
-					.get(other)
-					.push({ commitMessage: item.messageTitle, commitObjects: [commitObject] });
+				generalCategory.changelogSection.get(other).push({ commitMessage: title, commitObjects: [commitObject] });
 			}
 		},
 	);
@@ -567,6 +568,7 @@ async function deCompDetailsLevel(
 		detailsList,
 		(item: string) => item,
 		async (item) => {
+			item = dedent(item);
 			if (item.includes(detailsKey)) {
 				result.push(...(await deCompDetailsLevel(item, commitObject, `${indentation}${indentationLevel}`)));
 			} else {
@@ -588,8 +590,9 @@ async function parse<T>(
 	let messages: T[];
 	let endMessage = "Skipping...";
 	if (isTest) {
-		endMessage =
-			"Try checking the YAML syntax in https://www.yamllint.com/, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!";
+		endMessage = dedent`
+		Try checking the TOML syntax in https://www.toml-lint.com/, checking https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
+		Also check that you have surrounded the TOML in ${delimiter}!`;
 	}
 
 	try {
@@ -599,55 +602,72 @@ async function parse<T>(
 		const body = `${delimiter} ${list.join(delimiter)}`;
 
 		// Parse
-		const parseResult = matter(body, { delimiters: delimiter });
-
+		const parseResult = matter(body, {
+			delimiters: delimiter,
+			engines: {
+				toml: (input): Record<string, unknown> => {
+					return toml.parse(input, "\n");
+				},
+			},
+			language: "toml",
+		});
 		messages = parseResult.data[listKey];
 	} catch (e) {
-		console.error(`Failed parsing YAML in body:
-\`\`\`
-${commitBody}\`\`\`
-of commit object ${commitObject.hash} (${commitObject.message}).
-This could be because of invalid syntax, or because the Message List (key: '${listKey}') is not an array.`);
+		console.error(dedent`
+		Failed parsing TOML in body:
+		\`\`\`
+		${commitBody}\`\`\`
+		of commit object ${commitObject.hash} (${commitObject.message}).
+		This could be because of invalid syntax, or because the Message List (key: '${listKey}') is not an array.`);
+
 		if (commitObject.body && commitBody !== commitObject.body) {
-			console.error(`
-Original Body:
-\`\`\`
-${commitObject.body}\`\`\``);
+			console.error(dedent`
+				Original Body:
+				\`\`\`
+				${commitObject.body}\`\`\``);
 		}
-		console.error(`${endMessage}\n`);
-		if (isTest) throw new Error();
+
+		console.error(`\n${endMessage}\n`);
+		if (isTest) throw new Error("Failed Parsing TOML. See above.");
 		return;
 	}
-	if (!messages || !Array.isArray(messages)) {
-		console.error(`Message List (key: '${listKey}') in body:
-\`\`\`
-${commitBody}\`\`\`
-of commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.`);
+
+	if (!messages || !Array.isArray(messages) || messages.length === 0) {
+		console.error(dedent`
+			Message List (key: '${listKey}') in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.`);
+
 		if (commitObject.body && commitBody !== commitObject.body) {
-			console.error(`
-Original Body:
-\`\`\`
-${commitObject.body}\`\`\``);
+			console.error(dedent`
+				Original Body:
+				\`\`\`
+				${commitObject.body}\`\`\``);
 		}
 		console.error(`${endMessage}\n`);
-		if (isTest) throw new Error();
+
+		if (isTest) throw new Error("Failed Parsing Message List. See Above.");
 		return;
 	}
 	for (let i = 0; i < messages.length; i++) {
 		const item = messages[i];
 		if (!emptyCheck(item)) {
-			console.error(`No Message Title for entry ${i + 1} in body:
-\`\`\`
-${commitBody}\`\`\`
-of commit object ${commitObject.hash} (${commitObject.message}).`);
+			console.error(dedent`
+				No Message Title for entry ${i + 1} in body:
+				\`\`\`
+				${commitBody}\`\`\`
+				of commit object ${commitObject.hash} (${commitObject.message}).`);
+
 			if (commitObject.body && commitBody !== commitObject.body) {
-				console.error(`
-Original Body:
-\`\`\`
-${commitObject.body}\`\`\``);
+				console.error(dedent`
+					Original Body:
+					\`\`\`
+					${commitObject.body}\`\`\``);
 			}
 			console.error(`${endMessage}\n`);
-			if (isTest) throw new Error();
+
+			if (isTest) throw new Error("Bad Entry. See Above.");
 			continue;
 		}
 		perItemCallback(item);

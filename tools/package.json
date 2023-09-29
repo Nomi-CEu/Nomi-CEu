@@ -50,6 +50,8 @@
 		"upath": "^2.0.1"
 	},
 	"dependencies": {
-		"@egjs/list-differ": "^1.0.1"
+		"@egjs/list-differ": "^1.0.1",
+		"@ltd/j-toml": "^1.38.0",
+		"dedent-js": "^1.0.1"
 	}
 }

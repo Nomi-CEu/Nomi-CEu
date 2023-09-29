@@ -7,8 +7,7 @@
 
 ## Feature Additions:
 ### Quality of Life:
-* Done. OR IS IT???? IS IT???? - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5))
-* Done. OR IS IT???? - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7))
+* Done. OR IS IT???? - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
 
 ### Both Modes:
 * Add Chisel Recipes for changing Colours of AE2 Cables (#439) - **saschahi** ([`6a7e04e`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6a7e04ea0b65420c1b94c101b36907566ea367c5))
@@ -18,21 +17,16 @@
 * Enable shufflemode on main menu (#414) - **Pansmith** ([`5538fe4`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5538fe4524dcb0b64a333b756bfeeec34e12661c))
 
 ### Hard Mode:
-* Bears. - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5))
-  * Five Teddies - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5))
-  * Two Bears - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5))
-    * BEARS WILL INVADE NOMI! - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5))
-* Bears. - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7))
-  * Five Teddies - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7))
-  * Two Bears - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7))
+* Bears. - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
+  * Five Teddies - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
+  * Two Bears - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
+    * BEARS WILL INVADE NOMI! - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
+      * BEARS WILL INVADE NOMI! - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
 
 ## Quest Book Changes:
 ### Both Modes:
+* Rids QB. AGAIN!!!! - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
 * Change references from Redstone Dust to Redstone (#440) - **Clarence "Sparr" Risher** ([`468a0e0`](https://github.com/Nomi-CEu/Nomi-CEu/commit/468a0e0d8242dabd545f687e8eee3e649df6d5a8))
-* Rids QB. AGAIN!!!! - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5))
-* Rids QB. AGAIN!!!! - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7))
-* Rids QB. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84))
-* Rids QB. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b))
 * Add crouching exception to Mining Hammers quest description (#437) - **Clarence "Sparr" Risher** ([`c42ffb3`](https://github.com/Nomi-CEu/Nomi-CEu/commit/c42ffb3fea024579e4f5a48ce351435ad498fe56))
 * Update Discord & Github Quest - **IntegerLimit** ([`04edcfc`](https://github.com/Nomi-CEu/Nomi-CEu/commit/04edcfccae1bafef1d11d51f83bc1f56a90476d5))
 * Fix Description of The First Tier Two Circuits Quest - **IntegerLimit** ([`1a35ae8`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a35ae82d9830c5444c5634d93268e3b857f07bd))
@@ -40,10 +34,7 @@
 * Move Multiblock Machine Previews Quest - **IntegerLimit** ([`03d61c8`](https://github.com/Nomi-CEu/Nomi-CEu/commit/03d61c8d5fbaa0439fc823b5aef3a4859b17a444))
 
 ### Hard Mode:
-* Nothing. At least I no longer hate this. - **IntegerLimit** ([`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5))
-* Nothing. At least I no longer hate this. - **IntegerLimit** ([`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7))
-* Everything. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84))
-* Nothing. I hate this. - **IntegerLimit** ([`d306d14`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d306d14353fa15d804c28f8c1aacbe1e58f0087b))
+* Nothing. At least I no longer hate this. - **IntegerLimit** ([`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3))
 * Fix up Mixer Quest - **IntegerLimit** ([`5b5d137`](https://github.com/Nomi-CEu/Nomi-CEu/commit/5b5d13710abe0f96c41ba4a3505969c0a98e23bc))
 * Don't mention HV Batteries in Iron Quest - **IntegerLimit** ([`342d988`](https://github.com/Nomi-CEu/Nomi-CEu/commit/342d988e322a45e0d141227c9aa34ec8e53663e7))
 * Remove Reward for Bending Machine Quest - **IntegerLimit** ([`d037ee5`](https://github.com/Nomi-CEu/Nomi-CEu/commit/d037ee5f466cec066fac1d14a762a377426a032d))
@@ -67,13 +58,11 @@
 ### Other:
 * Change references from Redstone Dust to Redstone (#440) - **Clarence "Sparr" Risher** ([`468a0e0`](https://github.com/Nomi-CEu/Nomi-CEu/commit/468a0e0d8242dabd545f687e8eee3e649df6d5a8))
 * Test - **IntegerLimit** ([`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4))
-  * Five Teddies - **IntegerLimit** ([`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4))
-  * Two Bears - **IntegerLimit** ([`9b8a6ad`](https://github.com/Nomi-CEu/Nomi-CEu/commit/9b8a6ad5975bb28721543c84ff997c4535bdb6d4))
-* done. - **IntegerLimit** ([`0d09d86`](https://github.com/Nomi-CEu/Nomi-CEu/commit/0d09d8688475eb0772a97a88abbbe3727ef45c84))
 * Update Files - **IntegerLimit** ([`72fbe09`](https://github.com/Nomi-CEu/Nomi-CEu/commit/72fbe09e0c18d139bcf0d9bfe2ecbf5dcce49f6f))
 * Release 1.6.1a - **IntegerLimit** ([`644491a`](https://github.com/Nomi-CEu/Nomi-CEu/commit/644491a9f53c0ee300dbaf345f23e5b3f08b3c8a))
 
 ## Commits
+* [`2575616`](https://github.com/Nomi-CEu/Nomi-CEu/commit/25756165bda7eee0778bb4a4c0b04e604460aef3): TOML Test - **IntegerLimit** (Sep 28, 2023)
 * [`468a0e0`](https://github.com/Nomi-CEu/Nomi-CEu/commit/468a0e0d8242dabd545f687e8eee3e649df6d5a8): Change references from Redstone Dust to Redstone (#440) - **Clarence "Sparr" Risher** (Sep 26, 2023)
 * [`1a93843`](https://github.com/Nomi-CEu/Nomi-CEu/commit/1a938430901e5640420b4cfdc0a97f83dc9684e5): Test nested Details - **IntegerLimit** (Sep 25, 2023)
 * [`6598cc6`](https://github.com/Nomi-CEu/Nomi-CEu/commit/6598cc6efc9c315cf5fefbf183800b5f6aacc8d7): Big Test - **IntegerLimit** (Sep 25, 2023)
