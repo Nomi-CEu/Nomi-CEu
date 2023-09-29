@@ -78,7 +78,7 @@ nomifactory.quest.normal.db.6.desc=Before you continue, you'll need access to so
 
 #db 7 of mode normal
 nomifactory.quest.normal.db.7.title=§2Cables
-nomifactory.quest.normal.db.7.desc=The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.%n%nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.%n%n§2CEu has GT6-style pipes and cables on by default. §rYou will need to use §aWire Cutters§r to connect each side of a cable to machines or other cables. Placing it against the machine or cable automatically connects it as well. The same behaviour follows for GT pipes, whose tool is the §aWrench§r.%nThis can save you from energy or fluids going the wrong way. But if you don't like this, disable the config option for "GT6 style pipes and cables" in the GregTech config file.%n%n§2GT cables now support RF conversion natively! §rYou can plug an §dRF§r machine into an §dEU§r cable directly and it will convert the energy.%n
+nomifactory.quest.normal.db.7.desc=The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.%n%nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.%n%n§2CEu has GT6-style pipes and cables on by default. §rYou will need to use §aWire Cutters§r to connect each side of a cable to machines or other cables. Placing it against the machine or cable automatically connects it as well. The same behaviour follows for GT pipes, whose tool is the §aWrench§r.%nThis can save you from energy or fluids going the wrong way. But if you don't like this, disable the config option for "GT6 style pipes and cables" in the GregTech config file.%n%n§2GT cables now support RF conversion natively! §rYou can plug an §dRF§r machine into an §dEU§r cable directly and it will convert the energy. You cannot, however, plug an §dRF§r power souce directly into an §dEU§r cable.
 
 #db 8 of mode normal
 nomifactory.quest.normal.db.8.title=The Third Tier Three Circuits
@@ -3532,7 +3532,7 @@ nomifactory.quest.expert.db.6.desc=Before you continue, you'll need access to so
 
 #db 7 of mode expert
 nomifactory.quest.expert.db.7.title=§2Cables
-nomifactory.quest.expert.db.7.desc=The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.%n%nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.%n%n§2GT cables now support RF conversion natively! You can plug an RF machine into an EU cable directly and it will convert the energy.
+nomifactory.quest.expert.db.7.desc=The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.%n%nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.%n%n§2GT cables now support RF conversion natively! You can plug an RF machine into an EU cable directly and it will convert the energy. You cannot, however, plug an §dRF§r power souce directly into an §dEU§r cable.
 
 #db 8 of mode expert
 nomifactory.quest.expert.db.8.title=The Third Tier Three Circuits
