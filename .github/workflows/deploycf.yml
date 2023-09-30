@@ -1,6 +1,6 @@
 name: "[NOT CALLABLE] Deploy To CurseForge"
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       tag:
         description: The Release Tag.
@@ -10,7 +10,7 @@ on:
         description: The Release Type. This is the formatted version.
         required: true
         type: string
-
+        
 jobs:
   deployCF:
     name: Deploy to GitHub Releases (${{ inputs.tag }})
