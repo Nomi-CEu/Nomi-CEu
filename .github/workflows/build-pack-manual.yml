@@ -1,0 +1,31 @@
+name: "[CALLABLE] Build Pack"
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Ref Point to Checkout. Leave unset to build HEAD.
+        required: false
+        type: string
+      changelog_url:
+        description: Where to download the Changelog File from. See CHANGELOG.md for more information.
+        required: false
+        type: string
+      changelog_cf_url:
+        description: Where to download the CF Changelog File from. See CHANGELOG.md for more information.
+        required: false
+        type: string
+      changelog_branch:
+        description: Branch to download changelog Files from. See CHANGELOG.md for more information.
+        required: false
+        type: string
+
+jobs:
+  build:
+    name: Build Pack (${{ inputs.ref }})
+    uses: ./.github/workflows/called/build-pack.yml
+    with:
+      ref: ${{ github.event.inputs.ref }}
+      changelog_url: ${{ github.event.inputs.changelog_url }}
+      changelog_cf_url: ${{ github.event.inputs.changelog_cf_url }}
+      changelog_branch: ${{ github.event.inputs.changelog_branch }}
