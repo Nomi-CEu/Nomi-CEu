@@ -1,0 +1,23 @@
+on:
+  workflow_dispatch:
+    inputs:
+      startSHA:
+        required: true
+      endSHA:
+        required: true
+  push:
+    branches:
+      - main
+      - test_buildscript*
+
+jobs:
+  check:
+    # if: "${{ github.repository_owner == 'Nomi-CEu' }}"
+    name: Update Quest Book Jsons and Lang (${{ github.event.inputs.tag }})
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo ${startSHA} -> ${endSHA}
+        env:
+          startSHA: ${{ github.ref }}
+          endSHA: ${{ github.sha }}
