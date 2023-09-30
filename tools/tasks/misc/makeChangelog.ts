@@ -24,6 +24,7 @@ import matter from "gray-matter";
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import toml from "@ltd/j-toml";
 import dedent from "dedent-js";
+import buildConfig from "../../buildConfig";
 
 const mdOptions = {
 	pedantic: false,
@@ -263,8 +264,10 @@ export async function makeChangelog(): Promise<void> {
 	}
 
 	// Push the titles.
+	// Center Align is replaced by the correct center align style in the respective deployments.
+	// Must be triple bracketed, to make mustache not html escape it.
 	// noinspection HtmlUnknownAttribute
-	builder.push(`<h1 {{ center-align }}">${releaseType} ${to}</h1>`);
+	builder.push(`<h1 {{{ center-align }}}>${releaseType} ${to}</h1>`, "");
 	builder.push(`# Changes Since ${since}`, "");
 
 	// Push Sections of Changelog
@@ -290,7 +293,10 @@ export async function makeChangelog(): Promise<void> {
 	}
 
 	// Push link
-	builder.push("", `**Full Changelog**: https://github.com/IntegerLimit/Nomi-CEu-Dev/compare/${since}...${to}`);
+	builder.push(
+		"",
+		`**Full Changelog**: [\`${since}...${to}\`](https://github.com/IntegerLimit/Nomi-CEu-Dev/compare/${since}...${to})`,
+	);
 
 	await fs.promises.writeFile(upath.join(outputDir, "CHANGELOG.md"), builder.join("\n"));
 	return fs.promises.writeFile(upath.join(outputDir, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
