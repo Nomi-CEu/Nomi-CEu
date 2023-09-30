@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Tag to make changelog at.
+        description: Tag to create changelog at.
         required: true
       release_type:
         description: Release Type.
