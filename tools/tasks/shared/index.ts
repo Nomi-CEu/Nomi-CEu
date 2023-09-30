@@ -6,7 +6,7 @@ import { modpackManifest, overridesFolder, sharedDestDirectory, tempDirectory } 
 import del from "del";
 import { FileDef } from "../../types/fileDef";
 import Bluebird from "bluebird";
-import { downloadOrRetrieveFileDef, relative } from "../../util/util";
+import { downloadOrRetrieveFileDef, isEnvVariableSet, relative } from "../../util/util";
 
 async function sharedCleanUp() {
 	await del(upath.join(sharedDestDirectory, "*"), { force: true });
@@ -80,5 +80,71 @@ async function fetchExternalDependencies() {
 	}
 }
 
+/**
+ * Either fetches the Changelog File, or makes one.
+ */
+async function fetchOrMakeChangelog() {
+	if (isEnvVariableSet("CHANGELOG_URL") && isEnvVariableSet("CHANGELOG_CF_URL")) {
+		console.log("Using Changelog Files from URL.");
+		await fs.promises.writeFile(
+			upath.join(sharedDestDirectory, "CHANGELOG.md"),
+			(
+				await downloadOrRetrieveFileDef({
+					url: process.env.CHANGELOG_URL,
+				})
+			).cachePath,
+		);
+
+		await fs.promises.writeFile(
+			upath.join(sharedDestDirectory, "CHANGELOG_CF.md"),
+			(
+				await downloadOrRetrieveFileDef({
+					url: process.env.CHANGELOG_CF_URL,
+				})
+			).cachePath,
+		);
+		return;
+	}
+	if (isEnvVariableSet("CHANGELOG_BRANCH")) {
+		console.log("Using Changelog Files from Branch.");
+		const url = "https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
+		await fs.promises.writeFile(
+			upath.join(sharedDestDirectory, "CHANGELOG.md"),
+			(
+				await downloadOrRetrieveFileDef({
+					url: mustache.render(url, {
+						branch: process.env.CHANGELOG_BRNACH,
+						filename: "CHANGELOG.md",
+					}),
+				})
+			).cachePath,
+		);
+
+		await fs.promises.writeFile(
+			upath.join(sharedDestDirectory, "CHANGELOG_CF.md"),
+			(
+				await downloadOrRetrieveFileDef({
+					url: mustache.render(url, {
+						branch: process.env.CHANGELOG_BRNACH,
+						filename: "CHANGELOG_CF.md",
+					}),
+				})
+			).cachePath,
+		);
+		return;
+	}
+	console.log("Making Changelog.");
+	await makeChangelog(true);
+}
+
 import transforms from "./transforms";
-export default gulp.series(sharedCleanUp, createSharedDirs, copyOverrides, fetchExternalDependencies, ...transforms);
+import { makeChangelog } from "../misc/makeChangelog";
+import mustache from "mustache";
+export default gulp.series(
+	sharedCleanUp,
+	createSharedDirs,
+	copyOverrides,
+	fetchOrMakeChangelog,
+	fetchExternalDependencies,
+	...transforms,
+);

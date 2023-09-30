@@ -243,21 +243,11 @@ export interface changelogSpecification {
  * @param specifications Optional specification. If specifying, recommended to set dirs to undefined.
  * @returns changelog Object Array of Changelog
  */
-export async function getChangelog(
-	since = "HEAD",
-	to = "HEAD",
-	dirs: string[] = undefined,
-	specifications: changelogSpecification[] = undefined,
-): Promise<Commit[]> {
+export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): Promise<Commit[]> {
 	const options: string[] = ["--no-merges", `${since}..${to}`];
 	if (dirs) {
 		dirs.forEach((dir) => {
 			options.push(pathspec(dir));
-		});
-	}
-	if (specifications) {
-		specifications.forEach((specification) => {
-			options.push(`-L ${specification.lineStart},${specification.lineEnd}:${specification.fileName}`);
 		});
 	}
 
