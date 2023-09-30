@@ -8,7 +8,7 @@ import Bluebird from "bluebird";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
 
-const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "VERSION", "RELEASE_TYPE"];
+const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
 
 /**
  * Uploads build artifacts to GitHub Releases.
@@ -50,7 +50,7 @@ async function deployReleases(): Promise<void> {
 		repo: parsedSlug[2],
 	};
 
-	const version = process.env.VERSION;
+	const tag = process.env.GITHUB_TAG;
 	const type = process.env.RELEASE_TYPE;
 	let prerelease = false;
 	if (type !== "Release") {
@@ -65,9 +65,9 @@ async function deployReleases(): Promise<void> {
 
 	// Create a release.
 	const release = await octokit.repos.createRelease({
-		tag_name: version || "latest-dev-preview",
+		tag_name: tag || "latest-dev-preview",
 		prerelease: prerelease,
-		name: [modpackManifest.name, version.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - "),
+		name: [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - "),
 		body: changelog,
 		...repo,
 	});
