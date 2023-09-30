@@ -1,4 +1,4 @@
-name: Make Changelog
+name: Create Changelog
 
 on:
   workflow_dispatch:
@@ -43,7 +43,7 @@ on:
       
 jobs:
   deploy:
-    name: Make Changelog (${{ inputs.tag }})
+    name: Create Changelog (${{ inputs.tag }})
     runs-on: ubuntu-latest
     env:
       GITHUB_TAG: ${{ inputs.tag }}
@@ -77,9 +77,9 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Generate Changelog
+      - name: Create Changelog
         working-directory: ./tools
-        run: npx gulp makeChangelog
+        run: npx gulp createChangelog
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           COMPARE_TAG: ${{ inputs.compare_tag }}
