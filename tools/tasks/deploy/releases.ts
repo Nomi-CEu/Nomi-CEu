@@ -54,7 +54,9 @@ async function deployReleases(): Promise<void> {
 	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
-	const changelog = await (await fs.promises.readFile(upath.join(sharedDestDirectory, "CHANGELOG.md"))).toString();
+	const changelog = (
+		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
+	).toString();
 
 	// Create a release.
 	const release = await octokit.repos.createRelease({

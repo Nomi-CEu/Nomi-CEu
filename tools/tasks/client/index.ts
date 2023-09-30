@@ -77,7 +77,7 @@ function copyClientUpdateNotes() {
  * Copies the changelog file.
  */
 function copyClientChangelog() {
-	return gulp.src(upath.join(sharedDestDirectory, "CHANGELOG.md")).pipe(gulp.dest(clientDestDirectory));
+	return gulp.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(gulp.dest(clientDestDirectory));
 }
 
 /**
