@@ -52,7 +52,7 @@ export const zipMMC = zip.zipMMC;
 import * as gha from "./tasks/misc/gha";
 export const makeArtifactNames = gha.makeArtifactNames;
 
-export { deployCurseForge, deployCurseForgeBeta } from "./tasks/deploy/curseforge";
+export { deployCurseForge } from "./tasks/deploy/curseforge";
 
 import deployReleasesTask from "./tasks/deploy/releases";
 export const deployReleases = deployReleasesTask;
