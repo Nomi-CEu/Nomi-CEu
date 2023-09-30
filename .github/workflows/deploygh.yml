@@ -10,6 +10,9 @@ on:
         description: 'Flavor title (e. g. "Community Update")'
         required: false
 
+permissions:
+      contents: write
+
 jobs:
   deploy:
     name: Deploy to GitHub Releases (${{ github.event.inputs.tag }})
