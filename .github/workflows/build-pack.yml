@@ -24,6 +24,8 @@ jobs:
   build:
     name: Build Pack (${{ inputs.tag }})
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TAG: ${{ inputs.tag }}
 
     steps:
       - name: Checkout Ref
@@ -70,7 +72,6 @@ jobs:
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
           CHANGELOG_URL: ${{ inputs.changelog_url }}
           CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
-          GITHUB_TAG: ${{ inputs.tag }}
 
       - name: Zip Pack
         working-directory: ./tools
