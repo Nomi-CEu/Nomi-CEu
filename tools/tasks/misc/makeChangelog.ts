@@ -24,6 +24,7 @@ import matter from "gray-matter";
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import toml from "@ltd/j-toml";
 import dedent from "dedent-js";
+import buildConfig from "../../buildConfig";
 
 const mdOptions = {
 	pedantic: false,
@@ -322,8 +323,11 @@ export async function makeChangelog(writeInBuildDir = false): Promise<void> {
 	}
 
 	if (writeInBuildDir) {
-		await fs.promises.writeFile(upath.join(sharedDestDirectory, "CHANGELOG.md"), builder.join("\n"));
-		return fs.promises.writeFile(upath.join(sharedDestDirectory, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
+		await fs.promises.writeFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"), builder.join("\n"));
+		return fs.promises.writeFile(
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
+			marked.parse(builder.join("\n")),
+		);
 	}
 	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builder.join("\n"));
 	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));

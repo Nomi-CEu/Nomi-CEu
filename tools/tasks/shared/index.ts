@@ -87,7 +87,7 @@ async function fetchOrMakeChangelog() {
 	if (isEnvVariableSet("CHANGELOG_URL") && isEnvVariableSet("CHANGELOG_CF_URL")) {
 		console.log("Using Changelog Files from URL.");
 		await fs.promises.writeFile(
-			upath.join(sharedDestDirectory, "CHANGELOG.md"),
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 			await fs.promises.readFile(
 				(
 					await downloadOrRetrieveFileDef({
@@ -98,7 +98,7 @@ async function fetchOrMakeChangelog() {
 		);
 
 		await fs.promises.writeFile(
-			upath.join(sharedDestDirectory, "CHANGELOG_CF.md"),
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
 			await fs.promises.readFile(
 				(
 					await downloadOrRetrieveFileDef({
@@ -124,7 +124,7 @@ async function fetchOrMakeChangelog() {
 		);
 		console.log(test.toString());
 		await fs.promises.writeFile(
-			upath.join(sharedDestDirectory, "CHANGELOG.md"),
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 			await fs.promises.readFile(
 				(
 					await downloadOrRetrieveFileDef({
@@ -138,7 +138,7 @@ async function fetchOrMakeChangelog() {
 		);
 
 		await fs.promises.writeFile(
-			upath.join(sharedDestDirectory, "CHANGELOG_CF.md"),
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
 			await fs.promises.readFile(
 				(
 					await downloadOrRetrieveFileDef({

@@ -218,7 +218,7 @@ function copyServerUpdateNotes() {
  * Copies the changelog file.
  */
 function copyServerChangelog() {
-	return src(upath.join(sharedDestDirectory, "CHANGELOG.md")).pipe(dest(serverDestDirectory));
+	return src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(dest(serverDestDirectory));
 }
 
 /**

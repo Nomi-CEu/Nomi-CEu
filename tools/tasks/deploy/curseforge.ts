@@ -64,7 +64,7 @@ async function upload(files: { name: string; displayName: string }[], opts?: CFU
 	});
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
-	const changelog = await (await fs.promises.readFile(upath.join(sharedDestDirectory, "CHANGELOG.md")))
+	const changelog = (await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md")))
 		.toString()
 		.replace(/\n/g, "  \n")
 		.replace(/\n\*/g, "\n•");
