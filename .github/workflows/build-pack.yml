@@ -19,6 +19,10 @@ on:
         description: Branch to download changelog files from.
         required: false
         type: string
+      compare_tag:
+        description: Tag to compare, to make Changelog.
+        required: false
+        type: string
       
 jobs:
   build:
@@ -32,7 +36,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ inputs.ref }}
+          ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
@@ -72,6 +76,7 @@ jobs:
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
           CHANGELOG_URL: ${{ inputs.changelog_url }}
           CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
+          COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Zip Pack
         working-directory: ./tools
