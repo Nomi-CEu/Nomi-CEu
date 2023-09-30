@@ -61,7 +61,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Built Pack
-          path: |
-            ./build/nomi-ceu-client.zip
-            ./build/nomi-ceu-server.zip
+          path: ./build/
           if-no-files-found: error
