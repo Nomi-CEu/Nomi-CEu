@@ -24,9 +24,9 @@ async function upload(files: { name: string; displayName: string }[], releaseTyp
 	});
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
-	let changelog: string = fs.promises
-		.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"))
-		.toString();
+	let changelog = (
+		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"))
+	).toString();
 
 	changelog = mustache.render(changelog, { "center-align": 'style="text-align: center;"' });
 
