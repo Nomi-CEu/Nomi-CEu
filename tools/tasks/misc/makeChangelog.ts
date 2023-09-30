@@ -148,8 +148,10 @@ const categories: Category[] = [
 
 /**
  * Generates a changelog based on environmental variables.
+ * <p>
+ * @param writeInBuildDir Whether to write the changelogs in the shared build dir. Defualts to false.
  */
-export async function makeChangelog(): Promise<void> {
+export async function makeChangelog(writeInBuildDir = false): Promise<void> {
 	let since = getLastGitTag(),
 		to = "HEAD";
 
@@ -319,7 +321,7 @@ export async function makeChangelog(): Promise<void> {
 		builder.push("There haven't been any changes.");
 	}
 
-	if (isEnvVariableSet("CHANGELOG_BUILD")) {
+	if (writeInBuildDir) {
 		await fs.promises.writeFile(upath.join(sharedDestDirectory, "CHANGELOG.md"), builder.join("\n"));
 		return fs.promises.writeFile(upath.join(sharedDestDirectory, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
 	}
