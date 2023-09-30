@@ -17,11 +17,11 @@ jobs:
     name: Deploy to GitHub Releases (${{ inputs.version }})
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Ref
+      - name: Checkout Tag
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ inputs.ref }}
+          ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
