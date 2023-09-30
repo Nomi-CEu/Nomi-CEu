@@ -1,4 +1,4 @@
-name: "[STEP] Deploy To Github Releases"
+name: "[NOT CALLABLE] Deploy To Github Releases"
 
 on:
   workflow_call:
