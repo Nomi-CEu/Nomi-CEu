@@ -91,9 +91,9 @@ jobs:
         uses: "stefanzweifel/git-auto-commit-action@v4"
         id: "commit-release"
         with:
-          commit_message: "${{ github.event.inputs.release_type }} ${{ github.event.inputs.version }}\n\n[NO CATEGORY]"
+          commit_message: "${{ inputs.release_type }} ${{ inputs.version }}\n\n[NO CATEGORY]"
           commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
-          tagging_message: "${{ github.event.inputs.version }}"
+          tagging_message: "${{ inputs.version }}"
 
       - name: Throw Error if No Release Changes were Detected
         if: ${{ !inputs.not_release && steps.commit-release.outputs.changes_detected == 'false' }}
