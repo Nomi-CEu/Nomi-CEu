@@ -15,6 +15,9 @@ on:
           - 'Release'
           - 'Beta Release'
           - 'Alpha Release'
+      compare_tag:
+        description: Tag to compare against.
+        required: false
       branch:
         description: Branch to push changelog to.
         required: true
@@ -29,8 +32,12 @@ on:
         description: Release Type.
         type: string
         required: true
+      compare_tag:
+        description: Tag to compare against.
+        type: string
+        required: false
       branch:
-        description: Branch to push changelog to. If not set, will not push, will upload instead.
+        description: Branch to push changelog to. If not set, will not push. Will still be uploaded as artifact.
         type: string
         required: false
       
@@ -73,6 +80,9 @@ jobs:
       - name: Generate Changelog
         working-directory: ./tools
         run: npx gulp makeChangelog
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+          COMPARE_TAG: ${{ inputs.compare_tag }}
         
       - name: Commit and Push Changelog
         if: ${{ inputs.branch }}
