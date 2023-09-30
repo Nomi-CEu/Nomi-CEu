@@ -1,0 +1,95 @@
+name: Make Changelog
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag to make changelog at.
+        required: true
+      release_type:
+        description: Release Type.
+        type: choice
+        required: true
+        default: 'Release'
+        options:
+          - 'Release'
+          - 'Beta Release'
+          - 'Alpha Release'
+      branch:
+        description: Branch to push changelog to.
+        required: true
+          
+  workflow_call:
+    inputs:
+      tag:
+        description: Tag to make changelog at.
+        type: string
+        required: true
+      release_type:
+        description: Release Type.
+        type: string
+        required: true
+      branch:
+        description: Branch to push changelog to. If not set, will not push, will upload instead.
+        type: string
+        required: false
+      
+jobs:
+  deploy:
+    name: Make Changelog (${{ inputs.tag }})
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TAG: ${{ inputs.tag }}
+      RELEASE_TYPE: ${{ inputs.release_type }}
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore Cached Files
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            ~/.npm
+            ./.cache
+            ./tools/node_modules
+          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          restore-keys: ${{ runner.os }}-bunny-
+
+      - name: Setup NodeJS v16
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          check-latest: true
+
+      - name: Setup NPM Packages
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Generate Changelog
+        working-directory: ./tools
+        run: npx gulp makeChangelog
+        
+      - name: Commit and Push Changelog
+        if: ${{ inputs.branch }}
+        uses: "stefanzweifel/git-auto-commit-action@v4"
+        id: "commit-template"
+        with:
+          commit_message: "Upload Changelogs for Release ${{ inputs.tag }}"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          branch: ${{ inputs.branch }}
+          create_branch: true
+
+      - name: Upload Changelog
+        uses: actions/upload-artifact@v3
+        with:
+          name: Changelogs
+          path: |
+            ./CHANGELOG.md
+            ./CHANGELOG_CF.md
+          if-no-files-found: error
+        
