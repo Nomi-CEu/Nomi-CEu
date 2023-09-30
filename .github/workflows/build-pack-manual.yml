@@ -29,3 +29,4 @@ jobs:
       changelog_url: ${{ github.event.inputs.changelog_url }}
       changelog_cf_url: ${{ github.event.inputs.changelog_cf_url }}
       changelog_branch: ${{ github.event.inputs.changelog_branch }}
+    secrets: inherit
