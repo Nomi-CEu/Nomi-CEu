@@ -295,7 +295,7 @@ export async function makeChangelog(): Promise<void> {
 	// Push link
 	builder.push(
 		"",
-		`**Full Changelog**: [\`${since}...${to}\`](https://github.com/IntegerLimit/Nomi-CEu-Dev/compare/${since}...${to})`,
+		`**Full Changelog**: [\`${since}...${to}\`](https://github.com/Nomi-CEu/Nomi-CEu/compare/${since}...${to})`,
 	);
 
 	await fs.promises.writeFile(upath.join(outputDir, "CHANGELOG.md"), builder.join("\n"));

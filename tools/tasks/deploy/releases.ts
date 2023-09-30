@@ -8,6 +8,7 @@ import Bluebird from "bluebird";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
+import { InputReleaseType } from "../../types/changelogTypes";
 
 const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
 
@@ -52,7 +53,7 @@ async function deployReleases(): Promise<void> {
 	};
 
 	const tag = process.env.GITHUB_TAG;
-	const type = process.env.RELEASE_TYPE;
+	const type: InputReleaseType = process.env.RELEASE_TYPE as InputReleaseType;
 	let prerelease = false;
 	if (type !== "Release") {
 		prerelease = true;
