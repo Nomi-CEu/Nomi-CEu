@@ -62,6 +62,6 @@ jobs:
         with:
           name: Built Pack
           path: |
-            ./build/nomi-ceu-client.zip
-            ./build/nomi-ceu-lang.zip
+            build/nomi-ceu-client.zip
+            build/nomi-ceu-lang.zip
           if-no-files-found: error
