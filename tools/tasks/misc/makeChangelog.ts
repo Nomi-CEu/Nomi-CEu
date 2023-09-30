@@ -289,6 +289,9 @@ export async function makeChangelog(): Promise<void> {
 		builder.push("There haven't been any changes.");
 	}
 
+	// Push link
+	builder.push("", `**Full Changelog**: https://github.com/IntegerLimit/Nomi-CEu-Dev/compare/${since}...${to}`);
+
 	await fs.promises.writeFile(upath.join(outputDir, "CHANGELOG.md"), builder.join("\n"));
 	return fs.promises.writeFile(upath.join(outputDir, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
 }

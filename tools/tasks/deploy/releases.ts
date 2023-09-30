@@ -1,4 +1,4 @@
-import { modpackManifest, sharedDestDirectory } from "../../globals";
+import { modpackManifest } from "../../globals";
 
 import fs from "fs";
 import upath from "upath";
@@ -57,7 +57,6 @@ async function deployReleases(): Promise<void> {
 	if (type !== "Release") {
 		prerelease = true;
 	}
-	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
 
 	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
 	let changelog = (
@@ -70,7 +69,7 @@ async function deployReleases(): Promise<void> {
 	const release = await octokit.repos.createRelease({
 		tag_name: tag || "latest-dev-preview",
 		prerelease: prerelease,
-		name: [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - "),
+		name: tag || "latest-dev-preview",
 		body: changelog,
 		...repo,
 	});
