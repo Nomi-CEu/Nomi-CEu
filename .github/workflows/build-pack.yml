@@ -1,4 +1,4 @@
-name: "[STEP] Build Pack"
+name: "Build Pack"
 
 on:
   workflow_call:
@@ -23,6 +23,28 @@ on:
         description: Tag to compare, to make Changelog.
         required: false
         type: string
+  workflow_dispatch:
+    inputs:
+        tag:
+          description: Tag to Checkout.
+          required: false
+          type: string
+        changelog_url:
+          description: Where to download the Changelog file from.
+          required: false
+          type: string
+        changelog_cf_url:
+          description: Where to download the CF Changelog file from.
+          required: false
+          type: string
+        changelog_branch:
+          description: Branch to download changelog files from.
+          required: false
+          type: string
+        compare_tag:
+          description: Tag to compare, to make Changelog.
+          required: false
+          type: string
       
 jobs:
   build:
