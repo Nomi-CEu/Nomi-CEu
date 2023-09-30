@@ -1,0 +1,41 @@
+name: Create Release Commit & Changelog
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag to Create & Create Changelog At
+        required: true
+      release_type:
+        description: Release Type.
+        type: choice
+        required: true
+        default: 'Release'
+        options:
+          - 'Release'
+          - 'Beta Release'
+          - 'Alpha Release'
+      compare_tag:
+        description: Tag to compare against.
+        required: false
+      branch:
+        description: Branch to push changelog to.
+        required: true
+
+jobs:
+  releaseCommit:
+    name: Create Release Commit (${{ inputs.tag }})
+    uses: ./.github/workflows/releasecommit.yml
+    with:
+      version: ${{ inputs.tag }}
+      release_type: ${{ inputs.release_type }}
+    
+  createChangelog:
+    name: Create Changelog (${{ inputs.tag }})
+    needs: releaseCommit
+    uses: ./.github/workflows/createchangelog.yml
+    with:
+      tag: ${{ inputs.tag }}
+      release_type: ${{ inputs.release_type }}
+      compare_tag: ${{ inputs.compare_tag }}
+    secrets: inherit
