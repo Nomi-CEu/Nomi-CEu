@@ -88,48 +88,67 @@ async function fetchOrMakeChangelog() {
 		console.log("Using Changelog Files from URL.");
 		await fs.promises.writeFile(
 			upath.join(sharedDestDirectory, "CHANGELOG.md"),
-			(
-				await downloadOrRetrieveFileDef({
-					url: process.env.CHANGELOG_URL,
-				})
-			).cachePath,
+			await fs.promises.readFile(
+				(
+					await downloadOrRetrieveFileDef({
+						url: process.env.CHANGELOG_URL,
+					})
+				).cachePath,
+			),
 		);
 
 		await fs.promises.writeFile(
 			upath.join(sharedDestDirectory, "CHANGELOG_CF.md"),
-			(
-				await downloadOrRetrieveFileDef({
-					url: process.env.CHANGELOG_CF_URL,
-				})
-			).cachePath,
+			await fs.promises.readFile(
+				(
+					await downloadOrRetrieveFileDef({
+						url: process.env.CHANGELOG_CF_URL,
+					})
+				).cachePath,
+			),
 		);
 		return;
 	}
 	if (isEnvVariableSet("CHANGELOG_BRANCH")) {
 		console.log("Using Changelog Files from Branch.");
 		const url = "https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
-		await fs.promises.writeFile(
-			upath.join(sharedDestDirectory, "CHANGELOG.md"),
+		const test = await fs.promises.readFile(
 			(
 				await downloadOrRetrieveFileDef({
 					url: mustache.render(url, {
-						branch: process.env.CHANGELOG_BRNACH,
+						branch: process.env.CHANGELOG_BRANCH,
 						filename: "CHANGELOG.md",
 					}),
 				})
 			).cachePath,
 		);
+		console.log(test.toString());
+		await fs.promises.writeFile(
+			upath.join(sharedDestDirectory, "CHANGELOG.md"),
+			await fs.promises.readFile(
+				(
+					await downloadOrRetrieveFileDef({
+						url: mustache.render(url, {
+							branch: process.env.CHANGELOG_BRANCH,
+							filename: "CHANGELOG.md",
+						}),
+					})
+				).cachePath,
+			),
+		);
 
 		await fs.promises.writeFile(
 			upath.join(sharedDestDirectory, "CHANGELOG_CF.md"),
-			(
-				await downloadOrRetrieveFileDef({
-					url: mustache.render(url, {
-						branch: process.env.CHANGELOG_BRNACH,
-						filename: "CHANGELOG_CF.md",
-					}),
-				})
-			).cachePath,
+			await fs.promises.readFile(
+				(
+					await downloadOrRetrieveFileDef({
+						url: mustache.render(url, {
+							branch: process.env.CHANGELOG_BRNACH,
+							filename: "CHANGELOG_CF.md",
+						}),
+					})
+				).cachePath,
+			),
 		);
 		return;
 	}
