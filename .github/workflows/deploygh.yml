@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       version:
-        description: The Release Version.
+        description: The Release Version. Also the Tag.
         required: true
         type: string
       release_type:
