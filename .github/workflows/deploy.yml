@@ -1,4 +1,4 @@
-name: "[CALLABLE] Deploy to GitHub Releases & CurseForge"
+name: "Deploy to GitHub Releases & CurseForge"
 
 on:
   workflow_dispatch:
