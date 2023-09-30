@@ -1,4 +1,4 @@
-name: Build Pack
+name: "[STEP] Build Pack"
 
 on:
   workflow_call:
