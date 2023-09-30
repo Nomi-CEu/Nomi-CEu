@@ -47,3 +47,5 @@ jobs:
     with:
       version: ${{ github.event.inputs.tag }}
       release_type: ${{ github.event.inputs.release_type }}
+    secrets: inherit
+
