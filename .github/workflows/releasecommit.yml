@@ -96,7 +96,7 @@ jobs:
           tagging_message: "${{ github.event.inputs.version }}"
 
       - name: Throw Error if No Release Changes were Detected
-        if: ${{ !inputs.not_release }} && steps.commit-release.outputs.changes_detected == 'false'
+        if: ${{ !inputs.not_release && steps.commit-release.outputs.changes_detected == 'false' }}
         run: |
           echo "No Changes were Made."
           exit 1
@@ -117,7 +117,7 @@ jobs:
           commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
           
       - name: Throw Error if No Template Changes were Detected
-        if: ${{ inputs.not_release }} && steps.commit-template.outputs.changes_detected == 'false'
+        if: ${{ inputs.not_release && steps.commit-template.outputs.changes_detected == 'false' }}
         run: |
           echo "No Template Changes were detected. This may be an error."
           exit 1
