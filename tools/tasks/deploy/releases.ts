@@ -7,6 +7,7 @@ import { makeArtifactNameBody } from "../../util/util";
 import Bluebird from "bluebird";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
+import mustache from "mustache";
 
 const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
 
@@ -59,9 +60,11 @@ async function deployReleases(): Promise<void> {
 	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
 
 	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
-	const changelog = (
+	let changelog = (
 		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
 	).toString();
+
+	changelog = mustache.render(changelog, { "center-align": 'align="center"' });
 
 	// Create a release.
 	const release = await octokit.repos.createRelease({

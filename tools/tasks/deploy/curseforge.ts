@@ -7,6 +7,7 @@ import upath from "upath";
 import buildConfig from "../../buildConfig";
 import { makeArtifactNameBody } from "../../util/util";
 import sanitize from "sanitize-filename";
+import mustache from "mustache";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
 const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID"];
@@ -64,10 +65,11 @@ async function upload(files: { name: string; displayName: string }[], opts?: CFU
 	});
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
-	const changelog = (await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md")))
-		.toString()
-		.replace(/\n/g, "  \n")
-		.replace(/\n\*/g, "\n•");
+	let changelog: string = fs.promises
+		.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"))
+		.toString();
+
+	changelog = mustache.render(changelog, { "center-align": 'style="text-align: center;"' });
 
 	const tokenHeaders = {
 		"X-Api-Token": process.env.CURSEFORGE_API_TOKEN,

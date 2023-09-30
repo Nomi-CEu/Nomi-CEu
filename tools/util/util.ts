@@ -216,31 +216,10 @@ export function getLastGitTag(before?: string): string {
 }
 
 /**
- * Specification of log.
- */
-export interface changelogSpecification {
-	/**
-	 * Must be in file. First line of file to include.
-	 */
-	lineStart: number;
-
-	/**
-	 * Must be in file. Last line of file to include.
-	 */
-	lineEnd: number;
-
-	/**
-	 * Path to file, from root dir.
-	 */
-	fileName: string;
-}
-
-/**
  * Generates a changelog based on the two provided Git refs.
  * @param since Lower boundary Git ref.
  * @param to Upper boundary Git ref.
  * @param dirs Optional scopes. These are of the perspective of the root dir.
- * @param specifications Optional specification. If specifying, recommended to set dirs to undefined.
  * @returns changelog Object Array of Changelog
  */
 export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): Promise<Commit[]> {
