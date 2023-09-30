@@ -31,6 +31,7 @@ jobs:
     
   build:
     name: Build Pack (${{ inputs.tag }})
+    needs: releaseCommit
     uses: ./.github/workflows/buildpack.yml
     with:
       tag: ${{ inputs.tag }}
