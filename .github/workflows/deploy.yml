@@ -35,21 +35,22 @@ on:
 
 jobs:
   build:
-    name: Build Pack (${{ github.event.inputs.tag }})
+    name: Build Pack (${{ inputs.tag }})
     uses: ./.github/workflows/build-pack.yml
     with:
-      tag: ${{ github.event.inputs.tag }}
-      changelog_url: ${{ github.event.inputs.changelog_url }}
-      changelog_cf_url: ${{ github.event.inputs.changelog_cf_url }}
-      changelog_branch: ${{ github.event.inputs.changelog_branch }}
+      tag: ${{ inputs.tag }}
+      changelog_url: ${{ inputs.changelog_url }}
+      changelog_cf_url: ${{ inputs.changelog_cf_url }}
+      changelog_branch: ${{ inputs.changelog_branch }}
+      compare_tag: ${{ inputs.compare_tag }}
     secrets: inherit
 
   deployGH:
-    name: Deploy to GitHub Releases (${{ github.event.inputs.tag }})
+    name: Deploy to GitHub Releases (${{ inputs.tag }})
     needs: build
     uses: ./.github/workflows/deploygh.yml
     with:
-      tag: ${{ github.event.inputs.tag }}
-      release_type: ${{ github.event.inputs.release_type }}
+      tag: ${{ inputs.tag }}
+      release_type: ${{ inputs.release_type }}
     secrets: inherit
 
