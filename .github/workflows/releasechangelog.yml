@@ -38,4 +38,5 @@ jobs:
       tag: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
       compare_tag: ${{ inputs.compare_tag }}
+      branch: ${{ inputs.branch }}
     secrets: inherit
