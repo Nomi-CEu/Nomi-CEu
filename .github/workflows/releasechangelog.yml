@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Tag to Create & Create Changelog At
+        description: Tag to Create & Create Changelog At.
         required: true
       release_type:
         description: Release Type.
@@ -19,8 +19,8 @@ on:
         description: Tag to compare against.
         required: false
       branch:
-        description: Branch to push changelog to.
-        required: true
+        description: Branch to push changelog to. If not set, changelog will just be uploaded as an artifact.
+        required: false
 
 jobs:
   releaseCommit:
