@@ -14,7 +14,7 @@ on:
 
 jobs:
   deployGH:
-    name: Deploy to GitHub Releases (${{ inputs.version }})
+    name: Deploy to GitHub Releases (${{ inputs.tag }})
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Tag
