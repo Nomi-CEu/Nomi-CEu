@@ -31,17 +31,17 @@ on:
 
 jobs:
   build:
-    name: Build Pack (${{ inputs.ref }})
+    name: Build Pack (${{ github.event.inputs.tag }})
     uses: ./.github/workflows/build-pack.yml
     with:
-      ref: ${{ github.event.inputs.tag }}
+      tag: ${{ github.event.inputs.tag }}
       changelog_url: ${{ github.event.inputs.changelog_url }}
       changelog_cf_url: ${{ github.event.inputs.changelog_cf_url }}
       changelog_branch: ${{ github.event.inputs.changelog_branch }}
     secrets: inherit
 
   deployGH:
-    name: Deploy to GitHub Releases (${{ inputs.version }})
+    name: Deploy to GitHub Releases (${{ github.event.inputs.tag }})
     needs: build
     uses: ./.github/workflows/deploygh.yml
     with:
