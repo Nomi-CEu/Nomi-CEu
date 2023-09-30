@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Tag to Checkout and Release.
+        description: Tag to Make and Release.
         required: true
         type: string
       release_type:
