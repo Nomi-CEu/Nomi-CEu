@@ -1,3 +1,5 @@
+name: Build Pack
+
 on:
   workflow_call:
     inputs:
