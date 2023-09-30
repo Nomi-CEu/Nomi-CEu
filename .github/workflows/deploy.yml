@@ -45,7 +45,7 @@ jobs:
     needs: build
     uses: ./.github/workflows/deploygh.yml
     with:
-      version: ${{ github.event.inputs.tag }}
+      tag: ${{ github.event.inputs.tag }}
       release_type: ${{ github.event.inputs.release_type }}
     secrets: inherit
 
