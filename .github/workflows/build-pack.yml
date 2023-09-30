@@ -4,11 +4,22 @@ on:
   workflow_call:
     inputs:
       ref:
-        description: 'Ref Point to Checkout.'
+        description: Ref Point to Checkout.
         required: false
         type: string
-  workflow_dispatch:
-
+      changelog_url:
+        description: Where to download the Changelog file from.
+        required: false
+        type: string
+      changelog_cf_url:
+        description: Where to download the CF Changelog file from.
+        required: false
+        type: string
+      changelog_branch:
+        description: Branch to download changelog files from.
+        required: false
+        type: string
+      
 jobs:
   build:
     name: Build Pack (${{ inputs.ref }})
@@ -56,12 +67,19 @@ jobs:
         run: npx gulp buildAll
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
+          CHANGELOG_URL: ${{ inputs.changelog_url }}
+          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
+
+      - name: Zip Pack
+        working-directory: ./tools
+        run: npx gulp zipAll
 
       - name: Upload Built Zips
-        uses: actions/download-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: Built Pack
           path: |
-            build/nomi-ceu-client.zip
-            build/nomi-ceu-lang.zip
+            ./build/*.zip
+            ./build/*.md
           if-no-files-found: error
