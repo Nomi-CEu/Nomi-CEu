@@ -8,7 +8,7 @@ import Bluebird from "bluebird";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
 
-const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY"];
+const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "VERSION", "RELEASE_TYPE"];
 
 /**
  * Uploads build artifacts to GitHub Releases.
@@ -50,19 +50,24 @@ async function deployReleases(): Promise<void> {
 		repo: parsedSlug[2],
 	};
 
-	const tag = process.env.GITHUB_TAG;
+	const version = process.env.VERSION;
+	const type = process.env.RELEASE_TYPE;
+	let prerelease = false;
+	if (type !== "Release") {
+		prerelease = true;
+	}
 	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
 
-	// Since we've built everything beforehand, the changelog must be available in the shared directory.
+	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
 	const changelog = (
 		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
 	).toString();
 
 	// Create a release.
 	const release = await octokit.repos.createRelease({
-		tag_name: tag || "latest-dev-preview",
-		prerelease: !tag,
-		name: [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - "),
+		tag_name: version || "latest-dev-preview",
+		prerelease: prerelease,
+		name: [modpackManifest.name, version.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - "),
 		body: changelog,
 		...repo,
 	});
