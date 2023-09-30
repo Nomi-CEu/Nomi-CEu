@@ -3,8 +3,8 @@ name: "[STEP] Deploy To Github Releases"
 on:
   workflow_call:
     inputs:
-      version:
-        description: The Release Version. Also the Tag.
+      tag:
+        description: The Release Tag.
         required: true
         type: string
       release_type:
@@ -64,7 +64,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          VERSION: ${{ inputs.version }}
+          GITHUB_TAG: ${{ inputs.tag }}
           RELEASE_TYPE: ${{ inputs.release_type }}
         working-directory: ./tools
         run: npx gulp deployReleases
