@@ -5,7 +5,7 @@ import fs from "fs";
 import log from "fancy-log";
 import upath from "upath";
 import buildConfig from "../../buildConfig";
-import { isEnvVariableSet, makeArtifactNameBody } from "../../util/util";
+import { makeArtifactNameBody } from "../../util/util";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
 import { InputReleaseType } from "../../types/changelogTypes";
