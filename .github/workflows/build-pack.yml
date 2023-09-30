@@ -58,8 +58,10 @@ jobs:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Upload Built Zips
-        uses: actions/download-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: Built Pack
-          path: ./tools/
+          path: |
+            ./build/nomi-ceu-client.zip
+            ./build/nomi-ceu-server.zip
           if-no-files-found: error
