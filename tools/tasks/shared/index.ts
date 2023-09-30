@@ -141,13 +141,13 @@ async function fetchOrMakeChangelog() {
 		);
 		return;
 	}
-	console.log("Making Changelog.");
+	console.log("Creating Changelog Files.");
 	setOutputDir(buildConfig.buildDestinationDirectory);
-	await makeChangelog();
+	await createChangelog();
 }
 
 import transforms from "./transforms";
-import { makeChangelog, setOutputDir } from "../misc/makeChangelog";
+import { createChangelog, setOutputDir } from "../misc/createChangelog";
 import mustache from "mustache";
 export default gulp.series(
 	sharedCleanUp,

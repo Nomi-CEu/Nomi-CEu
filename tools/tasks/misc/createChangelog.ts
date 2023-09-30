@@ -24,7 +24,6 @@ import matter from "gray-matter";
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import toml from "@ltd/j-toml";
 import dedent from "dedent-js";
-import buildConfig from "../../buildConfig";
 
 const mdOptions = {
 	pedantic: false,
@@ -153,7 +152,7 @@ const categories: Category[] = [
 /**
  * Generates a changelog based on environmental variables.
  */
-export async function makeChangelog(): Promise<void> {
+export async function createChangelog(): Promise<void> {
 	let since = getLastGitTag(),
 		to = "HEAD";
 
