@@ -23,7 +23,7 @@ on:
 
 jobs:
   releaseCommit:
-    name: Make Release Commit (${{ inputs.tag }})
+    name: Create Release Commit (${{ inputs.tag }})
     uses: ./.github/workflows/releasecommit.yml
     with:
       version: ${{ inputs.tag }}
