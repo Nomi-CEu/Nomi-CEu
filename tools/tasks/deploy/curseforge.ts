@@ -28,7 +28,10 @@ async function upload(files: { name: string; displayName: string }[], releaseTyp
 		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"))
 	).toString();
 
-	changelog = mustache.render(changelog, { "center-align": 'style="text-align: center;"' });
+	changelog = mustache.render(changelog, {
+		CENTER_ALIGN: 'style="text-align: center;"',
+		CF_REDIRECT: `<h4 style="text-align: center;">Looks way better <a href="https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/${process.env.GITHUB_TAG}">here.</a></h4>`,
+	});
 
 	const tokenHeaders = {
 		"X-Api-Token": process.env.CURSEFORGE_API_TOKEN,

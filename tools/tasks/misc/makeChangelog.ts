@@ -267,7 +267,8 @@ export async function makeChangelog(): Promise<void> {
 	// Center Align is replaced by the correct center align style in the respective deployments.
 	// Must be triple bracketed, to make mustache not html escape it.
 	// noinspection HtmlUnknownAttribute
-	builder.push(`<h1 {{{ center-align }}}>${releaseType} ${to}</h1>`, "");
+	builder.push(`<h1 {{{ CENTER_ALIGN }}}>${releaseType} ${to}</h1>`, "");
+	builder.push("{{{ CF_REDIRECT }}}", "");
 	builder.push(`# Changes Since ${since}`, "");
 
 	// Push Sections of Changelog
