@@ -3,8 +3,8 @@ name: "[STEP] Build Pack"
 on:
   workflow_call:
     inputs:
-      ref:
-        description: Ref Point to Checkout.
+      tag:
+        description: Tag to Checkout.
         required: false
         type: string
       changelog_url:
@@ -22,8 +22,10 @@ on:
       
 jobs:
   build:
-    name: Build Pack (${{ inputs.ref }})
+    name: Build Pack (${{ inputs.tag }})
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TAG: ${{ inputs.tag }}
 
     steps:
       - name: Checkout Ref
