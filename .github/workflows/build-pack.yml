@@ -61,5 +61,5 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Built Pack
-          path: ./build
+          path: ./tools/
           if-no-files-found: error
