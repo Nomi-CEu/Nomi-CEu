@@ -17,15 +17,19 @@ on:
           - 'Beta Release'
           - 'Alpha Release'
       changelog_url:
-        description: Where to download the Changelog File from. See CHANGELOG.md for more information.
+        description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
         required: false
         type: string
       changelog_cf_url:
-        description: Where to download the CF Changelog File from. See CHANGELOG.md for more information.
+        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
         required: false
         type: string
       changelog_branch:
-        description: Branch to download changelog Files from. See CHANGELOG.md for more information.
+        description: Branch to download changelog Files from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      compare_tag:
+        description: Tag to compare to. See CONTRIBUTING.md for more information.
         required: false
         type: string
 
