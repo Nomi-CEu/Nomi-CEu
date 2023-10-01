@@ -122,3 +122,5 @@ export interface ExpandedMessage {
 	messageTitle: string;
 	messageBody?: string;
 }
+
+export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release";

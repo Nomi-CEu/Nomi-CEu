@@ -112,17 +112,6 @@ async function fetchOrMakeChangelog() {
 	if (isEnvVariableSet("CHANGELOG_BRANCH")) {
 		console.log("Using Changelog Files from Branch.");
 		const url = "https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
-		const test = await fs.promises.readFile(
-			(
-				await downloadOrRetrieveFileDef({
-					url: mustache.render(url, {
-						branch: process.env.CHANGELOG_BRANCH,
-						filename: "CHANGELOG.md",
-					}),
-				})
-			).cachePath,
-		);
-		console.log(test.toString());
 		await fs.promises.writeFile(
 			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 			await fs.promises.readFile(
@@ -152,12 +141,13 @@ async function fetchOrMakeChangelog() {
 		);
 		return;
 	}
-	console.log("Making Changelog.");
-	await makeChangelog(true);
+	console.log("Creating Changelog Files.");
+	setOutputDir(buildConfig.buildDestinationDirectory);
+	await createChangelog();
 }
 
 import transforms from "./transforms";
-import { makeChangelog } from "../misc/makeChangelog";
+import { createChangelog, setOutputDir } from "../misc/createChangelog";
 import mustache from "mustache";
 export default gulp.series(
 	sharedCleanUp,

@@ -1,7 +1,7 @@
 // TODO Replace this file with the Post 1.7 Version after 1.7 Release
 import fs from "fs";
 import upath from "upath";
-import { modpackManifest, rootDirectory, sharedDestDirectory } from "../../globals";
+import { modpackManifest, rootDirectory } from "../../globals";
 import {
 	compareAndExpandManifestDependencies,
 	getChangelog,
@@ -24,7 +24,6 @@ import matter from "gray-matter";
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import toml from "@ltd/j-toml";
 import dedent from "dedent-js";
-import buildConfig from "../../buildConfig";
 
 const mdOptions = {
 	pedantic: false,
@@ -41,6 +40,9 @@ let isTest = false;
 
 // Final Builders
 let builder: string[];
+
+// Output Dir
+let outputDir = rootDirectory;
 
 /* Values */
 const defaultIndentation = "";
@@ -149,10 +151,8 @@ const categories: Category[] = [
 
 /**
  * Generates a changelog based on environmental variables.
- * <p>
- * @param writeInBuildDir Whether to write the changelogs in the shared build dir. Defualts to false.
  */
-export async function makeChangelog(writeInBuildDir = false): Promise<void> {
+export async function createChangelog(): Promise<void> {
 	let since = getLastGitTag(),
 		to = "HEAD";
 
@@ -165,6 +165,10 @@ export async function makeChangelog(writeInBuildDir = false): Promise<void> {
 	else if (since == "latest-dev-preview") {
 		since = getLastGitTag(since);
 	}
+	// Get Release Type
+	let releaseType = "Release";
+	if (isEnvVariableSet("RELEASE_TYPE")) releaseType = process.env.RELEASE_TYPE;
+
 	// See if current run is test
 	if (isEnvVariableSet("TEST_CHANGELOG")) isTest = true;
 
@@ -258,51 +262,17 @@ export async function makeChangelog(writeInBuildDir = false): Promise<void> {
 		builder.push((await fs.promises.readFile("../UPDATENOTES.md")).toString());
 	}
 
-	// Push the title.
-	builder.push(`# Changes since ${since}`, "");
+	// Push the titles.
+	// Center Align is replaced by the correct center align style in the respective deployments.
+	// Must be triple bracketed, to make mustache not html escape it.
+	// noinspection HtmlUnknownAttribute
+	builder.push(`<h1 {{{ CENTER_ALIGN }}}>${releaseType} ${to}</h1>`, "");
+	builder.push("{{{ CF_REDIRECT }}}", "");
+	builder.push(`# Changes Since ${since}`, "");
 
 	// Push Sections of Changelog
 	categories.forEach((category) => {
-		const categoryLog: string[] = [];
-		let hasValues = false;
-
-		// Push All Sub Categories
-		category.subCategories.forEach((subCategory) => {
-			// Loop through key list instead of map to produce correct order
-			const list = category.changelogSection.get(subCategory);
-			if (list && list.length != 0) {
-				// Push Key Name (only pushes if Key Name is not "")
-				if (subCategory.keyName) {
-					categoryLog.push(`### ${subCategory.keyName}:`);
-				}
-
-				// Sort Log
-				sortCommitList(
-					list,
-					(message) => message.commitObjects,
-					(a, b) => a.commitMessage.localeCompare(b.commitMessage),
-				);
-
-				// Push Log
-				list.forEach((changelogMessage) => {
-					categoryLog.push(formatChangelogMessage(changelogMessage));
-					if (changelogMessage.subChangelogMessages) {
-						changelogMessage.subChangelogMessages.forEach((subMessage) => {
-							categoryLog.push(formatChangelogMessage(subMessage));
-						});
-					}
-				});
-				categoryLog.push("");
-				hasValues = true;
-			}
-		});
-		if (hasValues) {
-			// Push Title
-			builder.push(`## ${category.categoryName}:`);
-
-			// Push previously made log
-			builder.push(...categoryLog);
-		}
+		pushCategory(category);
 	});
 
 	// Sort the commit log
@@ -322,27 +292,79 @@ export async function makeChangelog(writeInBuildDir = false): Promise<void> {
 		builder.push("There haven't been any changes.");
 	}
 
-	if (writeInBuildDir) {
-		await fs.promises.writeFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"), builder.join("\n"));
-		return fs.promises.writeFile(
-			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
-			marked.parse(builder.join("\n")),
-		);
+	// Push link
+	builder.push(
+		"",
+		`**Full Changelog**: [\`${since}...${to}\`](https://github.com/Nomi-CEu/Nomi-CEu/compare/${since}...${to})`,
+	);
+
+	await fs.promises.writeFile(upath.join(outputDir, "CHANGELOG.md"), builder.join("\n"));
+	return fs.promises.writeFile(upath.join(outputDir, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
+}
+
+/**
+ * Pushes a given category to the builders.
+ */
+function pushCategory(category: Category) {
+	const categoryLog: string[] = [];
+	let hasValues = false;
+
+	// Push All Sub Categories
+	category.subCategories.forEach((subCategory) => {
+		// Loop through key list instead of map to produce correct order
+		const list = category.changelogSection.get(subCategory);
+		if (list && list.length != 0) {
+			// Push Key Name (only pushes if Key Name is not "")
+			if (subCategory.keyName) {
+				categoryLog.push(`### ${subCategory.keyName}:`);
+			}
+
+			// Sort Log
+			sortCommitList(
+				list,
+				(message) => message.commitObjects,
+				(a, b) => a.commitMessage.localeCompare(b.commitMessage),
+			);
+
+			// Push Log
+			list.forEach((changelogMessage) => {
+				categoryLog.push(formatChangelogMessage(changelogMessage));
+				if (changelogMessage.subChangelogMessages) {
+					changelogMessage.subChangelogMessages.forEach((subMessage) => {
+						categoryLog.push(formatChangelogMessage(subMessage));
+					});
+				}
+			});
+			categoryLog.push("");
+			hasValues = true;
+		}
+	});
+	if (hasValues) {
+		// Push Title
+		builder.push(`## ${category.categoryName}:`);
+
+		// Push previously made log
+		builder.push(...categoryLog);
 	}
-	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builder.join("\n"));
-	return fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG_CF.md"), marked.parse(builder.join("\n")));
 }
 
 /**
  * Initializes the categorySection field of the categoryKey.
- * @param categoryKey The Category Key to grab the Sub Categories from
+ * @param category The Category to initialize the categorySection of.
  */
-function initializeCategorySection(categoryKey: Category): void {
+function initializeCategorySection(category: Category): void {
 	const categorySection = new Map<SubCategory, ChangelogMessage[]>();
-	categoryKey.subCategories.forEach((subCategory) => {
+	category.subCategories.forEach((subCategory) => {
 		categorySection.set(subCategory, []);
 	});
-	categoryKey.changelogSection = categorySection;
+	category.changelogSection = categorySection;
+}
+
+/**
+ * Changes the output dir of the changelog.
+ */
+export function setOutputDir(dir: string): void {
+	outputDir = dir;
 }
 
 function sortCommitList<T>(

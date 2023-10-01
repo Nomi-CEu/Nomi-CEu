@@ -1,0 +1,65 @@
+name: "Deploy to GitHub Releases & CurseForge"
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag to Checkout and Release.
+        required: true
+        type: string
+      release_type:
+        description: The Release Type.
+        required: true
+        type: choice
+        default: 'Release'
+        options:
+          - 'Release'
+          - 'Beta Release'
+          - 'Alpha Release'
+      changelog_url:
+        description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      changelog_cf_url:
+        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      changelog_branch:
+        description: Branch to download changelog Files from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      compare_tag:
+        description: Tag to compare to. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+
+jobs:
+  build:
+    name: Build Pack (${{ inputs.tag }})
+    uses: ./.github/workflows/buildpack.yml
+    with:
+      tag: ${{ inputs.tag }}
+      changelog_url: ${{ inputs.changelog_url }}
+      changelog_cf_url: ${{ inputs.changelog_cf_url }}
+      changelog_branch: ${{ inputs.changelog_branch }}
+      compare_tag: ${{ inputs.compare_tag }}
+    secrets: inherit
+
+  deployGH:
+    name: Deploy to GitHub Releases (${{ inputs.tag }})
+    needs: build
+    uses: ./.github/workflows/deploygh.yml
+    with:
+      tag: ${{ inputs.tag }}
+      release_type: ${{ inputs.release_type }}
+    secrets: inherit
+
+  deployCF:
+    name: Deploy to CurseForge (${{ inputs.tag }})
+    needs: build
+    uses: ./.github/workflows/deploycf.yml
+    with:
+      tag: ${{ inputs.tag }}
+      release_type: ${{ inputs.release_type }}
+    secrets: inherit
+

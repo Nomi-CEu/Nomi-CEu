@@ -1,4 +1,4 @@
-import { modpackManifest, sharedDestDirectory } from "../../globals";
+import { modpackManifest } from "../../globals";
 
 import fs from "fs";
 import upath from "upath";
@@ -7,6 +7,8 @@ import { makeArtifactNameBody } from "../../util/util";
 import Bluebird from "bluebird";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
+import mustache from "mustache";
+import { InputReleaseType } from "../../types/changelogTypes";
 
 const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
 
@@ -51,23 +53,24 @@ async function deployReleases(): Promise<void> {
 	};
 
 	const tag = process.env.GITHUB_TAG;
-	const type = process.env.RELEASE_TYPE;
+	const type: InputReleaseType = process.env.RELEASE_TYPE as InputReleaseType;
 	let prerelease = false;
 	if (type !== "Release") {
 		prerelease = true;
 	}
-	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
 
 	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
-	const changelog = (
+	let changelog = (
 		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
 	).toString();
+
+	changelog = mustache.render(changelog, { CENTER_ALIGN: 'align="center"', CF_REDIRECT: "" });
 
 	// Create a release.
 	const release = await octokit.repos.createRelease({
 		tag_name: tag || "latest-dev-preview",
 		prerelease: prerelease,
-		name: [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - "),
+		name: tag || "latest-dev-preview",
 		body: changelog,
 		...repo,
 	});

@@ -81,7 +81,7 @@ async function checkRelease(versionsFilePath: string) {
 		const versionList = await fs.promises.readFile(versionsFilePath, "utf8");
 
 		// Duplicate Key
-		if (versionList.includes(version)) {
+		if (versionList.includes(`${version}\n`)) {
 			throw new Error("Version already exists in version.txt. Exiting...");
 		}
 	}

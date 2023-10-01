@@ -24,8 +24,8 @@ export const updateRandomPatches = gulp.series(setNotRelease, addVersionRandomPa
 export const updateServer = gulp.series(setNotRelease, addVersionServer);
 export const updateAll = gulp.series(setNotRelease, addVersionAll);
 
-import * as changelog from "./tasks/misc/makeChangelog";
-export const makeChangelog = changelog.makeChangelog;
+import * as changelog from "./tasks/misc/createChangelog";
+export const createChangelog = changelog.createChangelog;
 
 import sharedTasks from "./tasks/shared";
 import clientTasks from "./tasks/client";
@@ -52,7 +52,7 @@ export const zipMMC = zip.zipMMC;
 import * as gha from "./tasks/misc/gha";
 export const makeArtifactNames = gha.makeArtifactNames;
 
-export { deployCurseForge, deployCurseForgeBeta } from "./tasks/deploy/curseforge";
+export { deployCurseForge } from "./tasks/deploy/curseforge";
 
 import deployReleasesTask from "./tasks/deploy/releases";
 export const deployReleases = deployReleasesTask;

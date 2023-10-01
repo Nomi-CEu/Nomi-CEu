@@ -1,30 +1,31 @@
-name: Deploy to CurseForge
+name: "[NOT CALLABLE] Deploy To CurseForge"
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       tag:
-        description: 'Tag to checkout and deploy'
+        description: The Release Tag.
         required: true
-      flavorTitle:
-        description: 'Flavor title (e. g. "Community Update")'
-        required: false
-
+        type: string
+      release_type:
+        description: The Release Type. This is the formatted version.
+        required: true
+        type: string
+        
 jobs:
-  deploy:
-    name: Deploy to CurseForge (${{ github.event.inputs.tag }})
+  deployCF:
+    name: Deploy to CurseForge (${{ inputs.tag }})
     runs-on: ubuntu-latest
     env:
       GITHUB_TAG: ${{ github.event.inputs.tag }}
-      BUILD_FLAVOR_TITLE: ${{ github.event.inputs.flavorTitle }}
 
     steps:
-      - name: "Checkout code"
-        uses: actions/checkout@v3
+      - name: Checkout Tag
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ github.event.inputs.tag }}
+          ref: ${{ inputs.tag }}
 
-      - name: "Restore cached files"
+      - name: Restore Cached Files
         uses: actions/cache@v3
         id: cache
         with:
@@ -35,17 +36,17 @@ jobs:
           key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
           restore-keys: ${{ runner.os }}-bunny-
 
-      - name: "Setup NodeJS v16"
+      - name: Setup NodeJS v16
         uses: actions/setup-node@v3
         with:
           node-version: "16"
           check-latest: true
 
-      - name: "Download NPM packages"
+      - name: Setup NPM Packages
         working-directory: ./tools
         run: npm ci
 
-      - name: "Check environmental variables"
+      - name: Check Environmental Variables
         working-directory: ./tools
         run: npx gulp check
         env:
@@ -54,25 +55,16 @@ jobs:
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
-      - name: "Build everything"
-        working-directory: ./tools
-        run: npx gulp buildAll
-        env:
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-
-      - name: "Prune cache"
-        working-directory: ./tools
-        run: npx gulp pruneCache
-        env:
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-
-      - name: "Zip everything"
-        working-directory: ./tools
-        run: npx gulp zipAll
-
-      - name: "Deploy to CurseForge"
+      - name: Download Built Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: Built Pack
+          path: ./build/
+          
+      - name: Deploy to CurseForge
         env:
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          RELEASE_TYPE: ${{ inputs.release_type }}
         working-directory: ./tools
         run: npx gulp deployCurseForge
