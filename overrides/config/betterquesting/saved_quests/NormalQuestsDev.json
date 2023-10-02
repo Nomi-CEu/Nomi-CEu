@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -19589,12 +19588,13 @@
     "286:10": {
       "preRequisites:11": [
         192,
-        198
+        198,
+        1029
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Assembly Line§r is a large multiblock structure that crafts complex materials, similar to an §3Assembling Machine§r. These will be crucial going forward for making a variety of components and machinery.\n\nMake sure your power generation and circuit production are up to the challenge. §2None of the Assembly Line recipes require programmed circuits anymore.§r\n\nNotice that all numbers of required items are §emultiples of 11.§r This is to make an Assembly Line that\u0027s 11 units long, allowing for 10 inputs and one output. This is a large enough Assembly Line to make a §aFusion Reactor Controller Mk1§r, but you\u0027ll need to expand to more inputs for later projects.\n\n§2You will also need a Maintenance Hatch.\n\n§aFluid Input Hatches§r can replace any of the §6Steel Casings§r along the bottom outside except for the Casings touching the §aOutput Bus§r. For the most part, ULV ones work fine, but a few recipes will need an LV one.\n\nThe §aEnergy Input Hatches§r along the top can be replaced by Steel Casings: you only need the one Energy Input Hatch (although you can add more if you want).\n\nThe §aInput Buses§r along the bottom §emust be ULV tier§r, nothing else. Make sure to spin them all so the hole is on the bottom.",
+          "desc:8": "The §3Assembly Line§r is a large multiblock structure that crafts complex materials, similar to an §3Assembling Machine§r. These will be crucial going forward for making a variety of components and machinery.\n\nMake sure your power generation and circuit production are up to the challenge. §2None of the Assembly Line recipes require programmed circuits anymore.§r\n\nNotice that all numbers of required items are §emultiples of 10.§r This is to make an Assembly Line that\u0027s 10 units long, allowing for 9 inputs and one output. This is a large enough Assembly Line to make §6LuV components§r, but you\u0027ll need to expand to more inputs for later projects.\n\nYou will also need a §2Maintenance Hatch§r, as well as a §2Data Access Hatch§r or §2Optical Data Reception Hatch§r. Refer to adjacent quests for how the Assembly Line data system works.\n\n§aFluid Input Hatches§r can replace any of the §6Steel Casings§r along the bottom outside except for the Casings touching the §aOutput Bus§r. For the most part, ULV ones work fine, but a few recipes will need an LV one.\n\nThe §aEnergy Input Hatches§r along the top can be replaced by Steel Casings: you only need the one Energy Input Hatch (although you can add more if you want).\n\nThe §aInput Buses§r along the bottom §emust be ULV tier§r, nothing else. Make sure to spin them all so the hole is on the bottom.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19643,56 +19643,50 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 30,
+              "Count:3": 27,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:metal_casing"
             },
             "1:10": {
-              "Count:3": 11,
+              "Count:3": 10,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:multiblock_casing"
             },
             "2:10": {
-              "Count:3": 11,
+              "Count:3": 10,
               "Damage:2": 3,
               "OreDict:8": "",
               "id:8": "gregtech:multiblock_casing"
             },
             "3:10": {
-              "Count:3": 21,
+              "Count:3": 18,
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:multiblock_casing"
             },
             "4:10": {
-              "Count:3": 22,
+              "Count:3": 20,
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:transparent_casing"
             },
             "5:10": {
-              "Count:3": 4,
-              "Damage:2": 1181,
+              "Count:3": 9,
+              "Damage:2": 1150,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "6:10": {
-              "Count:3": 10,
-              "Damage:2": 1150,
+              "Count:3": 1,
+              "Damage:2": 1019,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "7:10": {
               "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "8:10": {
-              "Count:3": 1,
-              "Damage:2": 1019,
+              "Damage:2": 1404,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -62934,6 +62928,77 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1029:10": {
+      "preRequisites:11": [
+        192
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Research has returned to GregTech 1.12!§r The §3Assembly Line§r needs to be provided with §edata§r on how to craft items before it can craft them. Data on how to craft each item is stored in a §6Data Stick§r and read by a §aData Access Hatch§r. This data is required to craft §6LuV components§r, the §3Fusion Reactor§r, and some parts from §dDraconic Evolution§r.\n\nTo begin, craft a §3Scanner§r and a few §6Data Sticks§r. The initial Scanner recipes run at §6HV§r, but §1IV§r is required relatively soon so might as well make that one.\n\nPress §bR§r on the item you want to craft in the and navigate to the §bScanner tab§r. This will tell you which item needs to be scanned to make the data for the new item. For example, §dLuV §6Electric Motors§r will require an §1IV§r §6Electric Motor§r to be scanned.\n\nPlace a §6Data Stick§r with the item to be scanned in the §3Scanner§r. The item will be §cconsumed§r and its data will be written to the §6Data Stick§r.\n\nFinally, place the §6Data Stick§r into the §aData Access Hatch§r of your §3Assembly Line§r. It will now be able to craft that item.\n\nLater, you will need more advanced §6Data Orbs§r and §6Data Modules§r to store data, and a §3Data Bank§r to read them.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 261,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Assembly Line Data",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1029,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 261,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 459,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -66201,8 +66266,8 @@
           "id:3": 285,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -576,
-          "y:3": 356
+          "x:3": -528,
+          "y:3": 348
         },
         "32:10": {
           "id:3": 286,
@@ -66482,7 +66547,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 264
+          "y:3": 312
         },
         "72:10": {
           "id:3": 529,
@@ -66671,7 +66736,7 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -580,
-          "y:3": 220
+          "y:3": 260
         },
         "99:10": {
           "id:3": 828,
@@ -66796,8 +66861,8 @@
           "id:3": 881,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
-          "y:3": 356
+          "x:3": -480,
+          "y:3": 312
         },
         "117:10": {
           "id:3": 904,
@@ -66839,7 +66904,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
-          "y:3": 312
+          "y:3": 348
         },
         "123:10": {
           "id:3": 914,
@@ -66854,6 +66919,13 @@
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 108
+        },
+        "125:10": {
+          "id:3": 1029,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -576,
+          "y:3": 208
         }
       }
     },
