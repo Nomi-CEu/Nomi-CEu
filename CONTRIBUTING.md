@@ -1,24 +1,25 @@
 # Contributing Information & Maintainer Documentation
 
-// TODO Update this at end
 ## Table Of Contents
-- [1. Contributing Rules and Guidelines](#section-1-contributing-rules-and-guidelines)
+- **[1. Contributing Rules and Guidelines](#section-1-contributing-rules-and-guidelines)**
   - [1.1. Introduction](#11-introduction) 
   - [1.2. Setting It Up](#12-setting-it-up)
   - [1.3. Guidelines](#13-guidelines)
-- [2. Quest Book Contributing](#section-2-quest-book-contributing)
+- **[2. Quest Book Contributing](#section-2-quest-book-contributing)**
   - [2.1. Introduction](#21-introduction)
-  - [2.2. Setting It Up](#22-setting-it-up)
-- [3. Script Contributing]
-- [4. Config Contributing]
-- [4. Translation Contributing]
-- [5. Documentation Contributing]
-- [6. Template Information]
-- [7. Maintainer Information]
-  - [7.1. Workflows: Transform QB]
-  - [7.2. Workflows: Changelog Generation]
-  - [7.3. Workflows: General & Misc]
-  - [7.4. Misc Information]
+  - [2.2. Development Json Files](#22-development-json-files)
+  - [2.3. Setting It Up](#23-setting-it-up)
+  - [2.4. Guidelines](#24-guidelines)
+- **[3. Script and Config Contributing](#section-3-script-and-config-contributing)**
+  - [3.1. Introduction](#31-introduction)
+  - [3.2. Setting It Up](#32-setting-it-up)
+- **[4. Translation Contributing]**
+- **[5. Template Information]**
+- **[6. Maintainer Information]**
+  - [6.1. Workflows: Transform QB]
+  - [6.2. Workflows: Changelog Generation]
+  - [6.3. Workflows: General & Misc]
+  - [6.4. Misc Information]
  
 
 ### More to come!
@@ -108,7 +109,7 @@ Throughout this section, the `Development Json Files` will be mentioned. These a
    - After you are done, load the json file into your instance, to let BQu format it, to validate it, to add colours and/or formatting, and to check over your changes.
 
 3. **Commit It, and PR it. For more information, see steps 4 and 5 in [1.2: Setting It Up](#12-setting-it-up).**
-   - Once the changes are committed to `main`, GH Actions will automatically update the main QB `.json` files, and the English QB lang file!
+   - Once the changes are committed to `main`, GitHub Actions will automatically update the main QB `.json` files, and the English QB lang file!
 
 ### 2.4: Guidelines
 - **Follow all guidelines in [1.3: Guidelines](#13-guidelines).**
@@ -116,6 +117,24 @@ Throughout this section, the `Development Json Files` will be mentioned. These a
   - The other json files contain translation keys.
   - Do not edit those json files, or the english lang! These are automatically updated whenever the development json files are changed in `main`.
   - You do not need to test it! If it fails to work, then it is a problem with the workflow, not your contribution.
+
+## Section 3: Script and Config Contributing
+### 3.1: Introduction
+Scripts and Configs are the lifeblood of Nomi-CEu. They provide the stitching between mods, changes in difficulty, and much more. However, these contributions require at least basic programming knowledge. If you want to start off contributing, it is highly recommended you start with [Quest Book Contributions](#section-2-quest-book-contributing).
+
+As these contributions are more varied, less information is given, although if you are doing these contributions, you should be fine.
+
+If you are contributing scripts, check if your feature or fix can be integrated with configs instead. **This does not apply to recipes for a machine, or similar, of which that mod adds!**
+
+Follow all of these [Guidelines](#13-guidelines).
+
+### 3.2: Setting It Up
+1. **Read through the steps in [1.2: Setting It Up](#12-setting-it-up). Follow those steps.**
+    - If you decide to update your instance to the current GitHub state, you will either need to update the `scripts` folder, or the `config` folder. Of course, if you are editing other files, then update those folders instead.
+    - The Random Patches config files, the Server Property files, and the Issue Template files come from templates. Do not edit them. Read [6. Template Information].
+    - Check if your config change needs to be copied over to one, or both, of the same file, in `config-overrides`.
+
+## Sec
 
 ### Translations:
 You can either make a resource pack, with a lang file located in `/questbook/lang`, or you can PR a lang file, placed in `/overrides/resources/questbook/lang`. 
