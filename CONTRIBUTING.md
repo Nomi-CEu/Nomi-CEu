@@ -13,8 +13,12 @@
 - **[3. Script and Config Contributing](#section-3-script-and-config-contributing)**
   - [3.1. Introduction](#31-introduction)
   - [3.2. Setting It Up](#32-setting-it-up)
-- **[4. Translation Contributing]**
-- **[5. Template Information]**
+- **[4. Translation Contributing](#section-4-translation-contributing)**
+  - [4.1. Introduction](#41-introduction)
+  - [4.2. Content Tweaker Translations](#42-content-tweaker-translations)
+  - [4.3. Quest Book Translations](#43-quest-book-translations)
+  - [4.4. Misc Translations](#44-misc-translations)
+- **[5. Template Information](#section-5-template-information)**
 - **[6. Maintainer Information]**
   - [6.1. Workflows: Transform QB]
   - [6.2. Workflows: Changelog Generation]
@@ -22,7 +26,7 @@
   - [6.4. Misc Information]
  
 
-### More to come!
+### More to come! Contributions to this file are extremely welcome!
 
 ## Section 1: Contributing Introduction and Guidelines
 ### 1.1: Introduction
@@ -131,20 +135,38 @@ Follow all of these [Guidelines](#13-guidelines).
 ### 3.2: Setting It Up
 1. **Read through the steps in [1.2: Setting It Up](#12-setting-it-up). Follow those steps.**
     - If you decide to update your instance to the current GitHub state, you will either need to update the `scripts` folder, or the `config` folder. Of course, if you are editing other files, then update those folders instead.
-    - The Random Patches config files, the Server Property files, and the Issue Template files come from templates. Do not edit them. Read [6. Template Information].
+    - The Random Patches config files, the Server Property files, and the Issue Template files come from templates. Do not edit them. Read [5. Template Information](#section-5-template-information) for details, and how to edit them.
     - Check if your config change needs to be copied over to one, or both, of the same file, in `config-overrides`.
 
-## Sec
+## Section 4: Translation Contributing
+### 4.1: Introduction
+Translations are an important part of Nomi-CEu. They allow us to reach to people and places that it would otherwise not. This is an especially important contribution, as we cannot do this ourselves.
 
-### Translations:
-You can either make a resource pack, with a lang file located in `/questbook/lang`, or you can PR a lang file, placed in `/overrides/resources/questbook/lang`. 
-- Note that both Normal and Expert QB translations are located there.
+We encourage you to add new translations, or improve existing ones. Simply make a PR! 
+
+As usual, read through the steps in [1.2: Setting It Up](#12-setting-it-up), and the guidelines in [1.3: Guidelines](#13-guidelines).
+
+A way to update language files, and inform translators what parts of which ones are out of date, is planned. When that is implemented, this file will be updated with the details.
+
+### 4.2: Content Tweaker Translations
+- These are in `/resources/contenttweaker/lang`, and are for our custom items and blocks.
+
+### 4.3: Quest Book Translations
+- Both Normal and Expert QB translations are located in one lang file: `/resources/questbook/lang`.
 - Each localization entry for each line or quest has a comment above, saying the quest/line id, and the mode it is related to.
 - The localization entries for normal and expert are seperated by a comment.
 - `line` notes above localization keys are for chapters.
 - `db` notes above localization keys are for quests.
 
-## Info for Maintainers:
-Here are some basic notes. I hope that you were explained the basic gist of this project, but here are some finer details:
-- If you want the QB Transform Workflow to run on your branch, that isn't `main`, prefix the branch with `test_buildscript`
-- If you want the QB Transform Workflow to run on your fork, remove or comment out `if: "${{ github.repository_owner == 'Nomi-CEu' }}"` in `/.github/workflows/updateqb.yml` (in your fork)
+### 4.4: Misc Translations
+All mods that Nomi-CEu uses can have language files changed or added. Usually, their lang paths are in `/resources/<modid>/lang`. It is recommended to ask a maintainer, on Discord or GitHub, for information on how to do this, as this can be quite difficult.
+
+## Section 5: Template Information
+The Random Patches config files, the Server Property files, and the Issue Template files come from templates. Therefore, these should not be edited, as they will be replaced by the template in the next update.
+
+Instead, change the relevant file in `/tools/templates/`. 
+- `{{ version }}` will be replaced by the new version.
+- `{{ mode }}` will be replaced by the mode that file is being made for.
+- `{{ versions }}` will be replaced by the version list. These are the versions that the user can pick from in the issue form.
+
+## Section 6: Maintainer Information
