@@ -89,9 +89,8 @@ Throughout this section, the `Development Json Files` will be mentioned. These a
    - If you decide to update your instance to the current GitHub state, you will need to update the [Development Json Files](#22-development-json-files), from the GitHub version.
 2. **Edit the QB.**    
    There are two ways to do this:    
-<hr>
 
-   ***Using BQu's Edit Mode***
+   i. ***Using BQu's Edit Mode***
    - This is the recommended way to edit the quest book.
    - Go into a world, where you have cheats enabled.
    - Load the relevant Development Json File.
@@ -101,10 +100,9 @@ Throughout this section, the `Development Json Files` will be mentioned. These a
      - See [this wiki page](https://github.com/Funwayguy/BetterQuesting/wiki/Quest-Instance) for more information on how to use edit mode, although it is pretty self-explanatory.
    - Save to the relevant Development Json File.
      - `/bq_admin default save NormalQuestsDev` for Normal Mode
-     - `/bq_admin default save ExpertQuestsDev` for Expert Mode
-<hr>
-
-   ***Editing the Quest Book Json Files:***
+     - `/bq_admin default save ExpertQuestsDev` for Expert Mode 
+   
+   ii. ***Editing the Quest Book Json Files:***
    - This is not recommended, unless you are experienced.
    - Only edit the [Development Json Files](#22-development-json-files).
    - After you are done, load the json file into your instance, to let BQu format it, to validate it, to add colours and/or formatting, and to check over your changes.
