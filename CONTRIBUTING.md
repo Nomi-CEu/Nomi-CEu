@@ -89,7 +89,8 @@ Throughout this section, the `Development Json Files` will be mentioned. These a
    - If you decide to update your instance to the current GitHub state, you will need to update the [Development Json Files](#22-development-json-files), from the GitHub version.
 2. **Edit the QB.**    
    There are two ways to do this:    
-<br>
+<hr>
+
    ***Using BQu's Edit Mode***
    - This is the recommended way to edit the quest book.
    - Go into a world, where you have cheats enabled.
@@ -101,7 +102,7 @@ Throughout this section, the `Development Json Files` will be mentioned. These a
    - Save to the relevant Development Json File.
      - `/bq_admin default save NormalQuestsDev` for Normal Mode
      - `/bq_admin default save ExpertQuestsDev` for Expert Mode
-<br>
+<hr>
 
    ***Editing the Quest Book Json Files:***
    - This is not recommended, unless you are experienced.
