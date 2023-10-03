@@ -270,7 +270,7 @@ Not needed for Secondary Commits, as this is the default behaviour, if no commit
 
 <hr>
 
-###### Skip Key  
+###### Expand Key  
 Key: `[EXPAND]`
 
 This key essentially creates more commits in the commit, while not adding the original commit to the changelog sections.
@@ -399,9 +399,17 @@ You can have multiple layers!
 
 The syntax is in [TOML](https://toml.io/en/). It is highly recommended you check the syntax [here](https://www.toml-lint.com/) first.
 
-Below is an example of a valid commit body.
+Below is an example of a valid commit body, and its output.
 
+**Commit Body:**
 ```toml
+[FEATURE]
+[HM]
+
+- Five Teddies
+- Two Bears
+  - BEARS WILL INVADE
+    - NOMI
 [DETAILS]
 details = [
 "Five Teddies",
@@ -421,7 +429,19 @@ details = [
 [DETAILS]
 BEARS WILL INVADE NOMI!
 ```
-There can also be text before and after this. It is recommended to have a 'human readable version' above.
+
+**Output (Snipped from Changelog, with Commit Authors and SHAs removed):**
+```markdown
+## Feature Additions:
+### Hard Mode:
+* Bears.
+    * Five Teddies
+    * Two Bears
+        * BEARS WILL INVADE NOMI!
+            * BEARS WILL INVADE NOMI!
+```
+
+As seen, there can also be text before and after this. It is recommended to have a 'human readable version' above.
 
 Here are some notes:
 - `[DETAILS]` which are before the ending key must be indented.
@@ -434,7 +454,7 @@ Here are some notes:
 
 <hr>
 
-*No Category Key*    
+###### No Category Key
 Key: `[NO CATEGORY]`
 
 This commit just places the commit in the changelog commit log, and does not place it in any changelog section.
@@ -459,12 +479,14 @@ If the sub category or the default sub category is `N/A`, then the category has 
 <th>Default Sub Category</th>
 <th>Sub Categories (<code>Key</code>, Description)</th>
 </tr>
+
 <tr>
 <td><code>[BREAKING]</code></td>
 <td>Breaking Changes</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
+
 <tr>
 <td><code>[BALANCING]</code></td>
 <td>Balancing Changes</td>
@@ -475,9 +497,65 @@ If the sub category or the default sub category is `N/A`, then the category has 
 <li><code>[HM]</code>, Hard Mode</li>
 </ul>
 </td>
-<td>
 </tr>
-<td></td>
+
+<tr>
+<td><code>[PERFORMANCE]</code></td>
+<td>Performance Improvements</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>[FEATURE]</code></td>
+<td>Feature Additions</td>
+<td>Both Modes</td>
+<td>
+<ul>
+<li><code>[QOL]</code>, Quality Of Life</li>
+<li><code>[NM]</code>, Normal Mode</li>
+<li><code>[HM]</code>, Hard Mode</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td><code>[QB]</code></td>
+<td>Quest Book Changes</td>
+<td>Both Modes</td>
+<td>
+<ul>
+<li><code>[NM]</code>, Normal Mode</li>
+<li><code>[HM]</code>, Hard Mode</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td><code>[BUG]</code></td>
+<td>Bug Fixes</td>
+<td>Both Modes</td>
+<td>
+<ul>
+<li><code>[NM]</code>, Normal Mode</li>
+<li><code>[HM]</code>, Hard Mode</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td><code>[GENERAL]</code></td>
+<td>General Changes</td>
+<td>N/A (Mod Changes Sub Categories are parsed separately)</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>[INTERNAL]</code></td>
+<td>Internal Changes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
 </table>
 
 
