@@ -27,9 +27,15 @@
 - **[6. Workflows Documentation](#section-6-workflows-documentation)**
   - [6.1. General Information](#61-general-information)
   - [6.2. Create Changelog](#62-create-changelog)
-  - [6.3. Workflows: Transform QB](#63-workflows-transform-qb)
-  - [6.4. Workflows: General & Misc](#64-workflows-general-and-misc)
-  - [6.5. Misc Information](#65-misc-information)
+  - [6.3. Create Release Commit](#63-create-release-commit)
+  - [6.4. Deploy to GitHub Releases & CurseForge](#64-deploy-to-github-releases-and-curseforge)
+  - [6.5. Build Pack](#65-build-pack)
+  - [6.6. Create Release Commit & Changelog](#66-create-release-commit--changelog)
+  - [6.7. Release Commit & Deploy](#67-release-commit--deploy)
+  - [6.8. Update Quest Book Jsons and Lang](#68-update-quest-book-jsons-and-lang)
+  - [6.9. Un-Callable Workflows](#69-un-callable-workflows)
+  - [6.10: Typical Usage](#610-typical-usage)
+- **[7. Misc Information](#section-7-misc-information)**
  
 
 ### More to come! Contributions to this file are extremely welcome!
@@ -185,7 +191,16 @@ If you want the workflow to run on a branch, which isn't `main`, change the top 
 This will cause the workflow to run all operations, such as build or making a release commit, on that branch.   
 Note that this will use the workflow file, and the TypeScript files, from that branch!
 
-### 6.2: `Create Changelog`
+#### Re-running jobs
+All of the combined workflows are split into jobs. If one fails, for example, when deploying the release, if deploying to CurseForge fails, then if the other jobs are allowed to run, they will continue to run.
+
+To re-run it, click the `Re-run Jobs` button. There are two options:
+- `Re-run failed jobs` will re-run all failed jobs, and their dependencies. This is useful in the example, where the pack will be built again and deployed to CurseForge, without deploying to GitHub Releases again. This is what should be used typically.
+- `Re-run all jobs` will re-run all jobs.
+
+Re running jobs uses the same workflow file, even if the file was changed, and uses the same original inputs.
+
+### 6.2: Create Changelog
 The changelog generation task allows for fast, detailed and consistent changelogs every update.
 
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
@@ -558,15 +573,36 @@ If the sub category or the default sub category is `N/A`, then the category has 
 </tr>
 </table>
 
+### 6.3: Create Release Commit
 
-### 6.3: Other Workflows
-#### `Update Quest `
+### 6.4: Deploy to GitHub Releases and CurseForge
+
+### 6.5: Build Pack
+
+### 6.6: Create Release Commit & Changelog
+
+### 6.7: Release Commit & Deploy
+
+### 6.8: Update Quest Book Jsons and Lang
 This workflow updates the QB Jsons, and the english lang, every time a commit is pushed to main, which changes one, or both, of the [Development Json Files](#22-development-json-files).
 
 This is done automatically, although you can also run it manually, if something is out of date, for some reason. Calling the workflow has no additional inputs. (Apart from the [branch selection](#activating-the-workflow-on-another-branch), present in all workflows.)
 
-- If you want the QB Transform Workflow to run on your branch, that isn't `main`, prefix the branch with `test_buildscript`
-- If you want the QB Transform Workflow to run on your fork, remove or comment out `if: "${{ github.repository_owner == 'Nomi-CEu' }}"` in `/.github/workflows/updateqb.yml` (in your fork)
+When running automatically, if you want the QB Transform Workflow to run on a branch, that isn't `main`, prefix the branch with `test_buildscript`.
 
-### 6.5: Misc Information
+This workflow is disabled, both when running automatically, and manually, on forks of this repository.
+
+If you want the QB Transform Workflow to run on your fork, remove or comment out `if: "${{ github.repository_owner == 'Nomi-CEu' }}"` in `/.github/workflows/updateqb.yml` (in your fork)
+
+### 6.9: Un-Callable Workflows
+Workflows that have their name prefixed with `[NOT CALLABLE]` are not callable. They are used as steps for other workflows.
+
+### 6.10: Typical Usage
+**Releases:**
+
+**Alpha & Beta Releases:**
+
+**'Cutting Edge' Builds:**
+
+## Section 7: Misc Information
 
