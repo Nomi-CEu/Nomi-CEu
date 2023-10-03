@@ -5241,7 +5241,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Assembling Machines come early in CEu! Circuit recipes are handled through a separate machine, the Circuit Assembler. §r\n\nAssembling Machines open up a plethora of §eequal or more efficient recipes that don\u0027t require hand tools§r. §2For example, you can make up to 6 Vacuum Tubes in a single craft! Many of its recipes will require fluids.§r Hand tool recipes also don\u0027t play nice with §bApplied Energistics§r.\n\nTake advantage of Assembling Machines: §cphase out all use of hand tools for crafting items in your automation going forward.§r Once you have all the important machines, you will never need hand tools for crafting.",
+          "desc:8": "§2Assembling Machines come early in CEu! Circuit recipes are handled through a separate machine, the Circuit Assembler. §r\n\nAssembling Machines open up a plethora of §eequal or more efficient recipes that don\u0027t require hand tools§r. §2For example, you can make up to 4 Vacuum Tubes in a single craft! Many of its recipes will require fluids.§r Hand tool recipes also don\u0027t play nice with §bApplied Energistics§r.\n\nTake advantage of Assembling Machines: §cphase out all use of hand tools for crafting items in your automation going forward.§r Once you have all the important machines, you will never need hand tools for crafting.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10176,7 +10176,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts both LV and MV Polarizer.§r\n\nAlthough you could §emagnetize§r §6Iron Ingots§r by hand using §6Redstone§r, doing that consumes considerable amounts of dust and that\u0027s not an option for more advanced materials. This machine will let you magnetize §6Steel Rods§r, as well as even more advanced materials later.\n\n§2Polarizer recipes in GTCEu go up to HV.",
+          "desc:8": "§oNote: this quest accepts both LV and MV Polarizer.§r\n\nAlthough you could §emagnetize§r §6Iron Ingots§r by hand using §6Redstone§r, doing that consumes considerable amounts of dust and that\u0027s not an option for more advanced materials. This machine will let you magnetize §6Steel Rods§r, as well as even more advanced materials later.\n\n§2Polarizer recipes in GTCEu go up to IV.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16485,7 +16485,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Ninth Micro Miner.\n\nCombines §bStellar Creation Data§r into the §dUniverse Creation Data§r, which is a crucial component for the Tier Ten Micro Miner mission.\n\nThe alternate mission brings a decent quantity of §6Neutronium§r, but you have to bootstrap it with some Neutronium from the §3Fusion Reactor Mark 3§r anyway. It might be easier to just make all your Neutronium in the reactor, but it\u0027s up to you.",
+          "desc:8": "The Ninth Micro Miner.\n\nCombines §bStellar Creation Data§r into the §dUniverse Creation Data§r, which is a crucial component for the Tier Ten Micro Miner mission.\n\nThe alternate mission brings a decent quantity of §6Neutronium§r. It might be easier to just make all your Neutronium in the reactor, but it\u0027s up to you.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23828,7 +23828,8 @@
     },
     "351:10": {
       "preRequisites:11": [
-        274
+        274,
+        1038
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -39088,7 +39089,7 @@
     },
     "626:10": {
       "preRequisites:11": [
-        80
+        1041
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62746,7 +62747,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Programmed Circuits§r is a item used to configure machines. This controls what gets produced, and at what speed.\n\nSimply set the circuit\u0027s value by either:\n1. Shift-right click whilst holding the circuit\n2. Using the up and down arrows in a §bcircuit slot§r of a machine, which is at the §abottom-right§r of the machine\u0027s §bGUI§r.\n\nSome tips when setting the circuit\u0027s value in a §bcircuit slot§r:\n1. Shift to increase/decrease by 5, instead of 1\n2. Scroll to increase/decrease very quickly\n3. Shift and Scroll to increase/decrease even quicker!\n\n§2New to CEu! Ghost Circuits!§r\nThis means that circuits can be placed in the circuit slot instead of the input of the machine, which creates a §b\u0027Ghost Circuit\u0027§r, which doesn\u0027t take up the circuit. §aThis means you only have to use 1 circuit!§r (Except in §6Input Buses§r of §5Multiblocks§r, where Ghost Circuits haven\u0027t been implemented... yet)\n\n§2New to CEu! Quick Circuit Setting!§r\nWhilst holding a programmed circuit, simply shift-right click the machine to set a §bGhost Circuit§r in the machine\u0027s cicuit slot. (Except in §6Input Buses§r of §5Multiblocks§r, where Quick Circuit Setting haven\u0027t been implemented... yet)",
+          "desc:8": "§6Programmed Circuits§r is a item used to configure machines. They control what recipe is run in a machine when there are multiple possible outputs.\n\nSimply set the circuit\u0027s value by either:\n1. Shift-right click whilst holding the circuit\n2. Using the up and down arrows in a §bcircuit slot§r of a machine, which is at the §abottom-right§r of the machine\u0027s §bGUI§r.\n\nSome tips when setting the circuit\u0027s value in a §bcircuit slot§r:\n1. Shift to increase/decrease by 5, instead of 1\n2. Scroll to increase/decrease very quickly\n3. Shift and Scroll to increase/decrease even quicker!\n\n§2New to CEu! Ghost Circuits!§r\nThis means that circuits can be placed in the circuit slot instead of the input of the machine, which creates a §b\u0027Ghost Circuit\u0027§r, which doesn\u0027t take up the circuit. §aThis means you only have to use 1 circuit!§r \n\n§2New to CEu! Quick Circuit Setting!§r\nWhilst holding a programmed circuit, simply shift-right click the machine to set a §bGhost Circuit§r in the machine\u0027s circuit slot.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63918,6 +63919,145 @@
               "Damage:2": 99,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1042:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        524
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Active Transformer§r is a device which can convert any number and type of §dGT Energy Inputs§r into any number and type of §dGT Energy Outputs§r. It can also transfer power at huge Amperage and distance with §6Laser Hatches§r. The §6Laser Source§r must be in a straight line with the §6Laser Target§r - lasers don\u0027t bend, after all.\n\nWith §dRF Conduits§r and §3Energy Converters§r in this pack, this probably has limited use, but you can build it if you want.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1042,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Active Transformer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1042,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1042,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 12,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1043:10": {
+      "preRequisites:11": [
+        286
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The 8th tier of §6Solar Panel§r, this is required for making higher tier Solar Panels for the endgame. It\u0027s also a decent power source.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "solarflux:solar_panel_8"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Solar Panel VIII",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1043,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "solarflux:solar_panel_8"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -67554,8 +67694,8 @@
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 0,
-          "y:3": -12
+          "x:3": 80,
+          "y:3": -80
         },
         "80:10": {
           "id:3": 607,
@@ -67883,14 +68023,21 @@
           "id:3": 1030,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 68,
+          "x:3": 80,
           "y:3": -12
         },
         "127:10": {
           "id:3": 1031,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 136,
+          "x:3": 12,
+          "y:3": -80
+        },
+        "128:10": {
+          "id:3": 1042,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 12,
           "y:3": -12
         }
       }
@@ -69742,192 +69889,213 @@
           "y:3": 36
         },
         "2:10": {
+          "id:3": 240,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 128,
+          "y:3": 72
+        },
+        "3:10": {
           "id:3": 258,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 128,
           "y:3": -36
         },
-        "3:10": {
+        "4:10": {
           "id:3": 271,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 92,
+          "x:3": 128,
           "y:3": 108
         },
-        "4:10": {
-          "id:3": 286,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -52,
-          "y:3": 72
-        },
         "5:10": {
+          "id:3": 286,
+          "sizeX:3": 34,
+          "sizeY:3": 34,
+          "x:3": -57,
+          "y:3": 31
+        },
+        "6:10": {
           "id:3": 287,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 0
         },
-        "6:10": {
+        "7:10": {
           "id:3": 325,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -16,
           "y:3": 0
         },
-        "7:10": {
+        "8:10": {
           "id:3": 335,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 92,
           "y:3": 36
         },
-        "8:10": {
+        "9:10": {
+          "id:3": 351,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 92,
+          "y:3": 108
+        },
+        "10:10": {
           "id:3": 399,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -88,
           "y:3": 0
         },
-        "9:10": {
+        "11:10": {
           "id:3": 533,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 20,
           "y:3": 108
         },
-        "10:10": {
+        "12:10": {
           "id:3": 535,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 20,
           "y:3": 72
         },
-        "11:10": {
+        "13:10": {
           "id:3": 607,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 128,
           "y:3": 36
         },
-        "12:10": {
+        "14:10": {
           "id:3": 749,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 20,
           "y:3": 0
         },
-        "13:10": {
+        "15:10": {
           "id:3": 802,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -16,
           "y:3": -36
         },
-        "14:10": {
+        "16:10": {
           "id:3": 804,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -88,
           "y:3": 72
         },
-        "15:10": {
+        "17:10": {
           "id:3": 846,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 20,
           "y:3": -36
         },
-        "16:10": {
+        "18:10": {
           "id:3": 847,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": -36
         },
-        "17:10": {
+        "19:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
           "y:3": -36
         },
-        "18:10": {
+        "20:10": {
           "id:3": 854,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 20,
           "y:3": 36
         },
-        "19:10": {
+        "21:10": {
           "id:3": 885,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 56,
           "y:3": 0
         },
-        "20:10": {
+        "22:10": {
           "id:3": 906,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 56,
           "y:3": 108
         },
-        "21:10": {
+        "23:10": {
           "id:3": 922,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 92,
           "y:3": 0
         },
-        "22:10": {
+        "24:10": {
           "id:3": 1029,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -88,
           "y:3": 36
         },
-        "23:10": {
+        "25:10": {
           "id:3": 1034,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 108
         },
-        "24:10": {
+        "26:10": {
           "id:3": 1035,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -16,
           "y:3": 36
         },
-        "25:10": {
+        "27:10": {
           "id:3": 1036,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -16,
           "y:3": 72
         },
-        "26:10": {
+        "28:10": {
           "id:3": 1037,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -16,
           "y:3": 108
         },
-        "27:10": {
+        "29:10": {
           "id:3": 1038,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 92,
           "y:3": 72
         },
-        "28:10": {
+        "30:10": {
           "id:3": 1039,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 56,
+          "y:3": 72
+        },
+        "31:10": {
+          "id:3": 1043,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -52,
           "y:3": 72
         }
       }
