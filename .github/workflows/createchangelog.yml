@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Tag to create changelog at.
+        description: Tag to checkout.
         required: true
       release_type:
-        description: Release Type.
+        description: Release Type
         type: choice
         required: true
         default: 'Release'
@@ -16,7 +16,7 @@ on:
           - 'Beta Release'
           - 'Alpha Release'
       compare_tag:
-        description: Tag to compare against.
+        description: Tag to compare against. If not set, will use the tag before `Tag`.
         required: false
       branch:
         description: Branch to push changelog to. If not set, changelog will just be uploaded as an artifact.

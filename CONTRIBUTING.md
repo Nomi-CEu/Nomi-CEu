@@ -1,6 +1,7 @@
 # Contributing Information & Maintainer Documentation
 
 ## Table Of Contents
+**[Part 1: Contributing Information](#part-1-contributing-information)**
 - **[1. Contributing Rules and Guidelines](#section-1-contributing-rules-and-guidelines)**
   - [1.1. Introduction](#11-introduction) 
   - [1.2. Setting It Up](#12-setting-it-up)
@@ -19,9 +20,13 @@
   - [4.3. Quest Book Translations](#43-quest-book-translations)
   - [4.4. Misc Translations](#44-misc-translations)
 - **[5. Template Information](#section-5-template-information)**
-- **[6. Maintainer Information](#section-6-maintainer-information)**
-  - [6.1. Workflows: General Information](#61-workflows-general-information)
-  - [6.2. Workflows: Changelog Generation](#62-workflows-changelog-generation)
+
+<hr>
+
+**[Part 2: Maintainer Documentation](#part-2-maintainer-documentation)**
+- **[6. Workflows Documentation](#section-6-workflows-documentation)**
+  - [6.1. General Information](#61-general-information)
+  - [6.2. Create Changelog](#62-create-changelog)
   - [6.3. Workflows: Transform QB](#63-workflows-transform-qb)
   - [6.4. Workflows: General & Misc](#64-workflows-general-and-misc)
   - [6.5. Misc Information](#65-misc-information)
@@ -29,6 +34,7 @@
 
 ### More to come! Contributions to this file are extremely welcome!
 
+# Part 1: Contributing Information
 ## Section 1: Contributing Introduction and Guidelines
 ### 1.1: Introduction
 You should have at least a basic knowledge of git, such as how to Clone & Fork Repos, make Branches, and make Pull Requests.
@@ -170,14 +176,51 @@ Instead, change the relevant file in `/tools/templates/`.
 - `{{ mode }}` will be replaced by the mode that file is being made for.
 - `{{ versions }}` will be replaced by the version list. These are the versions that the user can pick from in the issue form.
 
-## Section 6: Maintainer Information
-Most of this section is dedicated to explaining workflows.
+# Part 2: Maintainer Documentation
+## Section 6: Workflows Documentation
+### 6.1: General Information
+#### Activating the workflow on another branch
+If you want the workflow to run on a branch, which isn't `main`, change the top option (`Use workflow from...`).   
 
-### 6.1: Workflows: General Information
-If you want the workflow to run on a branch, which isn't `main`, change the top option (`Use workflow from...`). Note that this will use the workflow file, and the TypeScript files, from that branch!
+This will cause the workflow to run all operations, such as build or making a release commit, on that branch.   
+Note that this will use the workflow file, and the TypeScript files, from that branch!
 
-### 6.2: Workflows: Changelog Generation
+### 6.2: `Create Changelog`
 The changelog generation task allows for fast, detailed and consistent changelogs every update.
+
+When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
+
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Optional?</th>
+</tr>
+<tr>
+<td align="center">Tag</td>
+<td>The tag to checkout. This will be the newest commit parsed for the changelog. The TypeScript files will also be used from this tag.</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center">Release Type</td>
+<td>The Release Type of the release. This will be used in the title at the beginning of the changelog.</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center">Compare Tag</td>
+<td>Tag to compare against. The changelog will contain all commits after the <code>Compare Tag</code>, up to and including the <code>Tag</code>.</td>
+<td align="center">Yes. If not set, will use the tag before <code>Tag</code>.</td>
+</tr>
+<tr>
+<td align="center">Branch</td>
+<td>Branch to push Changelog to. They will be pushed to the Root Directory. Intended for use with the <a href="TODO">TODO Deploy Release Task</a>.</td>
+<td align="center">Yes. If not set, changelogs will just be uploaded as an artifact.</td>
+</tr>
+</table>
+
+**There are two parts to the changelog:**
+- Changelog Sections: These provide a seperated and neat list of the changes that have occurred.
+- Commit List: This is a commit list, that is sorted by date, and is filtered.
 
 There are two categories of commits:
 - Primary Commits: a commit that edits files in `/overrides` or `manifest.json`.
@@ -195,18 +238,30 @@ Mod Change Sections are calculated based on the change in `manifest.json`, not b
 
 If you would like to check your commit, you can run the `createChangelog` npx gulp task locally, with the env variable `TEST_CHANGELOG` set to a non-empty string. This will output an error if it occurred, and will otherwise output a changelog to your local repo's root directory.
 
+The output changelogs will contain two keys. These are surrounded by `{{{`. These are only replaced by their correct values once they are added to their respective release locations.
+
+You can add more of these tags, or remove them, and there can be a different amount 
+
+#### `{{{ CENTER_ALIGN }}}`
+This is replaced by the relevant html style attribute, to center text and images in both changelogs.
+Note that for some reason, currently, images cannot be center aligned in the CF changelog!
+
+#### `{{{ CF_REDIRECT }}}`
+This is replaced by nothing in the GitHub Release, and it is replaced by:   
+`Looks way better here.`   
+with the `here` linking to the GitHub Release.
+
 #### Commit Keys:
 These keys do something to the commit that they are added to. These are added to the commit's bodies/descriptions.
 
 Add the `key` part of the commit key to a commit's body to apply it to that commit!
 
-When merging PRs, make sure that no keys are present, or there may be big problems!
+When merging PRs, make sure that no keys are present, or there may be big problems, or unexpected parsing!
 
-
-***Special Effect Keys***    
+##### Special Effect Keys
 These keys are arranged in priority, as only one will take effect. Unless otherwise said, this prevents all other commit keys from taking effect.
 
-*Skip Key*    
+###### Skip Key
 Key: `[SKIP]`
 
 Prevents the commit from showing up in the changelog sections, or in the changelog commit log.
@@ -215,7 +270,7 @@ Not needed for Secondary Commits, as this is the default behaviour, if no commit
 
 <hr>
 
-*Expand Key*    
+###### Skip Key  
 Key: `[EXPAND]`
 
 This key essentially creates more commits in the commit, while not adding the original commit to the changelog sections.
@@ -228,9 +283,14 @@ The presence of this key prevents any further parsing of the original commit bod
 
 The syntax is in [TOML](https://toml.io/en/). It is highly recommended you check the syntax [here](https://www.toml-lint.com/) first.
 
-Below is an example of a valid commit body.
+Below is an example of a valid commit body, and its output.
 
+**Commit Body:**
 ```toml
+- Rids QB Again!
+- Bears
+& more!
+
 [EXPAND]
 [[messages]]
   messageTitle = "Rids QB. AGAIN!!!!"
@@ -283,8 +343,36 @@ Below is an example of a valid commit body.
   [EXPAND]
   """
 [EXPAND]
+
+/* Commits: */
+* Thyme to leave.
+* Stop Reading this
+* GReAt
+* Article
 ```
-There can also be text before and after this. It is recommended to have a 'human readable version' above.
+
+**Output (Snipped from Changelog, with Commit Authors and SHAs removed):**
+```markdown
+## Feature Additions:
+### Quality Of Life:
+* Done. OR IS IT????
+
+### Hard Mode:
+* Bears.
+    * Five Teddies
+    * Two Bears
+        * BEARS WILL INVADE NOMI!
+            * BEARS WILL INVADE NOMI!
+
+## Quest Book Changes:
+### Both Modes:
+* Rids QB. AGAIN!!!!
+
+### Hard Mode:
+* Nothing. At least I no longer hate this.
+```
+
+As seen, there can also be text before and after this. It is recommended to have a 'human readable version' above.
 
 Here are some notes:
 - `[EXPAND]` which are before the ending key must be indented. 
@@ -293,11 +381,12 @@ Here are some notes:
 - You cannot include the Skip Key anywhere, else this commit will not be parsed!
 - Every other key can be included in the subcommits.
 - Including other commit keys in the base commit body will do nothing.
-- A No Category key in a subcommit will act like a `[SKIP]` for that subcommit, as these subcommits are not added to
+- A No Category key in a subcommit will act like a `[SKIP]` for that subcommit, as these subcommits are not added to the changelog commit list
+- The base commit would still be added to the changelog commit list.
 
 <hr>
 
-*Details Key*    
+###### Details Key
 Key: `[DETAILS]`
 
 This key adds indented details beneath your commit.
@@ -387,19 +476,19 @@ If the sub category or the default sub category is `N/A`, then the category has 
 </ul>
 </td>
 <td>
-<td></td>
-</td>
 </tr>
+<td></td>
 </table>
 
 
-### 6.3: Workflows: Transform QB
+### 6.3: Other Workflows
+#### `Update Quest `
 This workflow updates the QB Jsons, and the english lang, every time a commit is pushed to main, which changes one, or both, of the [Development Json Files](#22-development-json-files).
+
+This is done automatically, although you can also run it manually, if something is out of date, for some reason. Calling the workflow has no additional inputs. (Apart from the [branch selection](#activating-the-workflow-on-another-branch), present in all workflows.)
+
 - If you want the QB Transform Workflow to run on your branch, that isn't `main`, prefix the branch with `test_buildscript`
 - If you want the QB Transform Workflow to run on your fork, remove or comment out `if: "${{ github.repository_owner == 'Nomi-CEu' }}"` in `/.github/workflows/updateqb.yml` (in your fork)
-
-### 6.4: Workflows: General and Misc
-Coming Soon!
 
 ### 6.5: Misc Information
 

@@ -329,9 +329,10 @@ function pushCategory(category: Category) {
 			// Push Log
 			list.forEach((changelogMessage) => {
 				categoryLog.push(formatChangelogMessage(changelogMessage));
+				// Push Sub Messages
 				if (changelogMessage.subChangelogMessages) {
 					changelogMessage.subChangelogMessages.forEach((subMessage) => {
-						categoryLog.push(formatChangelogMessage(subMessage));
+						categoryLog.push(formatChangelogMessage(subMessage, true));
 					});
 				}
 			});
@@ -494,13 +495,14 @@ function findSubCategory(commitBody: string, category: Category): SubCategory {
 /**
  * Formats a Changelog Message
  * @param changelogMessage The message to format.
+ * @param subMessage Whether this message is a subMessage (used in details). Set to true to make it a subMessage (different parsing). Defaults to false.
  * @return string Formatted Changelog Message
  */
-function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
+function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): string {
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	const message = changelogMessage.commitMessage.trim();
 
-	if (changelogMessage.commitObjects) {
+	if (changelogMessage.commitObjects && !subMessage) {
 		if (changelogMessage.commitObjects.length > 1) {
 			const authors: string[] = [];
 			const formattedCommits: string[] = [];
