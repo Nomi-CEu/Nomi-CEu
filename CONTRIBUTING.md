@@ -235,6 +235,11 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 </tr>
 </table>
 
+***Important Note:***   
+**The branch input cannot have the same name as the input tag, or any other tag present!**   
+This will cause the commit push to crash!   
+It is recommended to have the branch name be `<tag>-changelog` to make it easily differentiable, and to avoid problems!
+
 **There are two parts to the changelog:**
 - Changelog Sections: These provide a seperated and neat list of the changes that have occurred.
 - Commit List: This is a commit list, that is sorted by date, and is filtered.
@@ -275,19 +280,126 @@ Add the `key` part of the commit key to a commit's body to apply it to that comm
 
 When merging PRs, make sure that no keys are present, or there may be big problems, or unexpected parsing!
 
+##### List of all Keys:
+Intended for use to check for unexpected keys in commit descriptions.  
+To be safe, avoid all use of `[]`!
+
+<table>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+<tr>
+<th colspan="2">Special Effect Keys:</th>
+</tr>
+<tr>
+<td><code>[SKIP]</code></td>
+<td>Skips parsing for the commit.</td>
+</tr>
+
+<tr>
+<td><code>[EXPAND]</code></td>
+<td>Expands a commit into subcommits.</td>
+</tr>
+
+<tr>
+<td><code>[DETAILS]</code></td>
+<td>Adds submessages to a commit.</td>
+</tr>
+
+<tr>
+<td><code>[NO CATEGORY]</code></td>
+<td>Puts the commit in the changelog commit list, but not in the sections.</td>
+</tr>
+
+<tr>
+<th colspan="2">Category Keys:</th>
+</tr>
+
+<tr>
+<td><code>[BREAKING]</code></td>
+<td>Breaking Changes</td>
+</tr>
+
+<tr>
+<td><code>[BALANCING]</code></td>
+<td>Balancing Changes</td>
+</tr>
+
+<tr>
+<td><code>[PERFORMANCE]</code></td>
+<td>Performance Improvements</td>
+</tr>
+
+<tr>
+<td><code>[FEATURE]</code></td>
+<td>Feature Additions</td>
+</tr>
+
+<tr>
+<td><code>[QB]</code></td>
+<td>Quest Book Changes</td>
+</tr>
+
+<tr>
+<td><code>[BUG]</code></td>
+<td>Bug Fixes</td>
+</tr>
+
+<tr>
+<td><code>[GENERAL]</code></td>
+<td>General Changes</td>
+</tr>
+
+<tr>
+<td><code>[INTERNAL]</code></td>
+<td>Internal Changes</td>
+</tr>
+
+<tr>
+<th colspan="2">Sub Category Keys:</th>
+</tr>
+
+<tr>
+<td><code>[NM]</code></td>
+<td>Normal Mode</td>
+</tr>
+
+<tr>
+<td><code>[HM]</code></td>
+<td>Hard Mode</td>
+</tr>
+
+<tr>
+<td><code>[QOL]</code></td>
+<td>Quality Of Life</td>
+</tr>
+</table>
+
+##### Skip to:
+*[Special Effect Keys](#special-effect-keys)*
+- [[SKIP]](#skip-key)
+- [[EXPAND]](#expand-key)
+- [[DETAILS]](#details-key)
+- [[NO CATEGORY]](#no-category-key)
+
+*[Category Keys](#category-keys)*
+
+<hr>
+
 ##### Special Effect Keys
 These keys are arranged in priority, as only one will take effect. Unless otherwise said, this prevents all other commit keys from taking effect.
 
 ###### Skip Key
 Key: `[SKIP]`
 
-Prevents the commit from showing up in the changelog sections, or in the changelog commit log.
+Prevents the commit from being parsed. More simply put, it prevents the commit from showing up in the changelog sections, or in the changelog commit log.
 
 Not needed for Secondary Commits, as this is the default behaviour, if no commit keys are in the commit description.
 
 <hr>
 
-###### Expand Key  
+###### Expand Key
 Key: `[EXPAND]`
 
 This key essentially creates more commits in the commit, while not adding the original commit to the changelog sections.
