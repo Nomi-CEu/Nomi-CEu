@@ -205,6 +205,8 @@ The workflow allows for fast, detailed and consistent changelogs every update.
 
 This workflow does not run automatically.
 
+This workflow uploads both generated changelogs (GitHub & CF) as an artifact.
+
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
 
 <table>
@@ -696,6 +698,8 @@ This workflow allows for streamlined, worry free and consistent release commits.
 
 This workflow does not run automatically.
 
+This workflow uploads no artifacts.
+
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
 
 <table>
@@ -762,6 +766,8 @@ This workflow allows for a streamlined, fast and reliable way to deploy a releas
 
 This workflow does not run automatically.
 
+This workflow uploads all three built zips (client, server & lang) as an artifact.
+
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
 
 <table>
@@ -815,6 +821,14 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 - For more information about changelogs, see the [create changelog documentation](#62-create-changelog).
 
 ### 6.5: Build Pack
+This workflow builds the pack, without having to worry about setting environment variables. Useful to build a 'cutting edge release'. Usually just used as a step in other workflows.
+
+This workflow does not run automatically.
+
+This workflow uploads all three built zips (client, server & lang) as an artifact.
+
+When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
+
 
 
 ### 6.6: Create Release Commit & Changelog
