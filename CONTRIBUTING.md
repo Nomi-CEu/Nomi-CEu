@@ -230,7 +230,7 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 </tr>
 <tr>
 <td align="center">Branch</td>
-<td>Branch to push Changelog to. They will be pushed to the Root Directory. Intended for use with the <a href="TODO">TODO Deploy Release Task</a>.</td>
+<td>Branch to push Changelog to. They will be pushed to the Root Directory. Intended for use with the <code>Deploy to GitHub Releases and CurseForge</code> workflow.</td>
 <td align="center">Yes. If not set, changelogs will just be uploaded as an artifact.</td>
 </tr>
 </table>
@@ -247,6 +247,10 @@ It is recommended to have the branch name be `<tag>-changelog` to make it easily
 There are two categories of commits:
 - Primary Commits: a commit that edits files in `/overrides` or `manifest.json`.
 - Secondary Commits: a commit that does **not** edit files in `/overrides` or `manifest.json`.
+
+There are two changelogs generated:
+- CHANGELOG.md: The changelog for use in GitHub Releases, and to put into the pack. Written in markdown, and some small html (to center elements).
+- CHANGELOG_CF.md: The changelog for use in CurseForge Releases. Written in pure html.
 
 If no [Commit Keys](#commit-keys) are set, then:
 - Primary Commits: the commit message will be put into the `General` Category, and its `Other` Sub Category, and the changelog commit log.
@@ -703,13 +707,13 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 
 <tr>
 <td align="center">Release Version</td>
-<td>Will be added to the Issue Templates dropdown, and used to replace all version fields. (aka 1.6.1a, 1.6.1-beta-3, 1.7.3-alpha-5, 1.8, etc.). See version numbering below.</td>
+<td>Will be added to the Issue Templates dropdown, and used to replace all version fields. (aka 1.6.1a, 1.6.1-beta-3, 1.7.3-alpha-5, 1.8, etc.). See version numbering below. This is also the name of the tag generated.</td>
 <td align="center">No</td>
 </tr>
 
 <tr>
 <td align="center">Release Type</td>
-<td>Will be ignored if not a release. Must be one of <code>Release</code>, <code>Beta Release</code> or <code>Alpha Release</code>. Will be ignored if not a release.</td>
+<td>Must be one of <code>Release</code>, <code>Beta Release</code> or <code>Alpha Release</code>. Will be ignored if not a release.</td>
 <td align="center">No</td>
 </tr>
 
@@ -754,8 +758,64 @@ For example:
 `1.6 -> 1.6.1-alpha-1 -> 1.6.1-beta-2 -> 1.6.1-beta-3 -> 1.6.1-beta-4 -> 1.6.1 -> 1.6.1a -> 1.7-beta-1 -> ...`
 
 ### 6.4: Deploy to GitHub Releases and CurseForge
+This workflow allows for a streamlined, fast and reliable way to deploy a release to both GitHub Releases and CurseForge.
+
+This workflow does not run automatically.
+
+When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
+
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Optional?</th>
+</tr>
+
+<tr>
+<td align="center">Tag</td>
+<td>The tag to checkout. This will be the newest commit parsed for the changelog, if one is generated. This will also be the version number used for the release. The TypeScript files will also be used from this tag.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Release Type</td>
+<td>Must be one of <code>Release</code>, <code>Beta Release</code> or <code>Alpha Release</code>.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Changelog URL</td>
+<td>Where to download the Changelog File from. This must be a link to a file. (Raw file if hosted on GitHub). For this to be used, the <code>Changelog CF URL</code> input must also be filled in!</td>
+<td align="center">Yes</td>
+</tr>
+
+<tr>
+<td align="center">Changelog CF URL</td>
+<td>Where to download the CF Changelog File from. This must be a link to a file. (Raw file if hosted on GitHub). For this to be used, the <code>Changelog URL</code> input must also be filled in!</td>
+<td align="center">Yes</td>
+</tr>
+
+<tr>
+<td align="center">Changelog Branch</td>
+<td>Nomi-CEu branch to download the CF Changelog File from. On that branch, there must be <code>CHANGELOG.md</code> and <code>CHANGELOG_CF.md</code> in the root directory.</td>
+<td align="center">Yes</td>
+</tr>
+
+<tr>
+<td align="center">Compare Tag</td>
+<td>The tag to compare to, when generating a changelog. This is only used, and a new changelog only generated, if all of the above three inputs are not filled in!</td>
+<td align="center">Yes</td>
+</tr>
+</table>
+
+- The workflow generates a changelog, based on the tag and the compare tag, if the Changelog/Changelog CF URLs and the Changelog Branch inputs are not filled in.
+- The Changelog Branch input is usually more convenient than the branch input, but the URL inputs are useful when testing in a fork, or the branch input is not working.
+- The Changelog / Changelog CF URLs have a higher priority than the Changelog branch, if both inputs are filled in.
+- The Changelog Branch input is intended for use with the [create changelog](#62-create-changelog) workflow's branch input.
+- For more information about changelogs, see the [create changelog documentation](#62-create-changelog).
 
 ### 6.5: Build Pack
+
 
 ### 6.6: Create Release Commit & Changelog
 
