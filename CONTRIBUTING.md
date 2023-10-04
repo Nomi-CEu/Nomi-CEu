@@ -201,7 +201,9 @@ To re-run it, click the `Re-run Jobs` button. There are two options:
 Re running jobs uses the same workflow file, even if the file was changed, and uses the same original inputs.
 
 ### 6.2: Create Changelog
-The changelog generation task allows for fast, detailed and consistent changelogs every update.
+The workflow allows for fast, detailed and consistent changelogs every update.
+
+This workflow does not run automatically.
 
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
 
@@ -574,6 +576,70 @@ If the sub category or the default sub category is `N/A`, then the category has 
 </table>
 
 ### 6.3: Create Release Commit
+This workflow allows for streamlined, worry free and consistent release commits. These commits split up the commit logs nicely, and change relevant parts, such as window titles (in Random Patches Config) and Issue Templates to the new version.
+
+This workflow does not run automatically.
+
+When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
+
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Optional?</th>
+</tr>
+
+<tr>
+<td align="center">Release Version</td>
+<td>Will be added to the Issue Templates dropdown, and used to replace all version fields. (aka 1.6.1a, 1.6.1-beta-3, 1.7.3-alpha-5, 1.8, etc.). See version numbering below.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Release Type</td>
+<td>Will be ignored if not a release. Must be one of <code>Release</code>, <code>Beta Release</code> or <code>Alpha Release</code>. Will be ignored if not a release.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Not Release?</td>
+<td>Whether this run is not a release. If the checkbox is selected, then the version above should be the newest current version, and checks for similar version will not be conducted. Furthermore, the commit will not have a tag. Used to update the actual files from changes in the templates. <b>Note that this input is reversed! Checking it will make the commit NOT a release!</b></td>
+<td align="center">Yes</td>
+</tr>
+
+</table>
+
+
+#### Version Numbering
+Nomi-CEu uses a sequential numbering system, although the numbering system for alphas and betas are slightly different.
+
+*Releases:*   
+`<major>.<minor>.<patch> <emergency-fix>`
+
+Major versions are only changed when an extremely big release occurs. This is pretty much never changed. This is a number.
+
+Minor versions are changed every big release. This is a number.
+
+Patches are fixes between each big release. This is a number.
+
+Emergency fixes occur when a patch needs to be removed, due to an extremely large problem. These are letters, starting from `a`.
+
+For example:   
+`1.6 -> 1.6.1 -> 1.6.1a -> 1.7 -> 1.7.1 -> 1.7.2 -> 1.8 -> ...`
+
+*Alphas & Betas:*   
+`<incoming-release>-<status>-<pre-num> <emergency-fix>`
+
+The incoming release is the next release, that this beta puts out to test.
+
+The status is either `alpha` or `beta`, dependent on how stable the release is.
+
+The pre-num is a number that increases with each alpha/beta for a certain release. This is a number, starting from `1`.
+
+Emergency fixes occur when a alpha/beta needs to be removed, due to an extremely large problem. These are letters, starting from `a`.
+
+For example:   
+`1.6 -> 1.6.1-alpha-1 -> 1.6.1-beta-2 -> 1.6.1-beta-3 -> 1.6.1-beta-4 -> 1.6.1 -> 1.6.1a -> 1.7-beta-1 -> ...`
 
 ### 6.4: Deploy to GitHub Releases and CurseForge
 
