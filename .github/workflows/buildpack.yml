@@ -4,47 +4,62 @@ on:
   workflow_call:
     inputs:
       tag:
-        description: Tag to Checkout.
+        description: Tag to Checkout and Release.
         required: false
         type: string
+      release_type:
+        description: The Release Type.
+        required: true
+        type: string
       changelog_url:
-        description: Where to download the Changelog file from.
+        description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
         required: false
         type: string
       changelog_cf_url:
-        description: Where to download the CF Changelog file from.
+        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
         required: false
         type: string
       changelog_branch:
-        description: Branch to download changelog files from.
+        description: Branch to download changelog Files from. See CONTRIBUTING.md for more information.
         required: false
         type: string
       compare_tag:
-        description: Tag to compare, to make Changelog.
+        description: Tag to compare to. See CONTRIBUTING.md for more information.
         required: false
         type: string
+
   workflow_dispatch:
     inputs:
-        tag:
-          description: Tag to Checkout.
-          required: false
-          type: string
-        changelog_url:
-          description: Where to download the Changelog file from.
-          required: false
-          type: string
-        changelog_cf_url:
-          description: Where to download the CF Changelog file from.
-          required: false
-          type: string
-        changelog_branch:
-          description: Branch to download changelog files from.
-          required: false
-          type: string
-        compare_tag:
-          description: Tag to compare, to make Changelog.
-          required: false
-          type: string
+      tag:
+        description: Tag to Checkout and Release.
+        required: false
+        type: string
+      release_type:
+        description: The Release Type.
+        required: true
+        type: choice
+        default: 'Release'
+        options:
+          - 'Release'
+          - 'Beta Release'
+          - 'Alpha Release'
+          - 'Cutting Edge Build'
+      changelog_url:
+        description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      changelog_cf_url:
+        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      changelog_branch:
+        description: Branch to download changelog Files from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      compare_tag:
+        description: Tag to compare to. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
       
 jobs:
   build:

@@ -222,7 +222,7 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 </tr>
 <tr>
 <td align="center">Release Type</td>
-<td>The Release Type of the release. This will be used in the title at the beginning of the changelog.</td>
+<td>Must be one of <code>Release</code>, <code>Beta Release</code> or <code>Alpha Release</code>. The Release Type of the release. This will be used in the title at the beginning of the changelog.</td>
 <td align="center">No</td>
 </tr>
 <tr>
@@ -821,7 +821,7 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 - For more information about changelogs, see the [create changelog documentation](#62-create-changelog).
 
 ### 6.5: Build Pack
-This workflow builds the pack, without having to worry about setting environment variables. Useful to build a 'cutting edge release'. Usually just used as a step in other workflows.
+This workflow builds the pack, without having to worry about setting environment variables. Useful to make a `Cutting Edge Build`. Usually just used as a step in other workflows.
 
 This workflow does not run automatically.
 
@@ -830,31 +830,49 @@ This workflow uploads all three built zips (client, server & lang) as an artifac
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
 <table>
 <tr>
-<th>Name</th>
-<th>Description</th>
-<th>Optional?</th>
+<td align="center">Tag</td>
+<td>The tag to checkout. This will be the newest commit parsed for the changelog, if one is generated. This will also be the version number used for the release. The TypeScript files will also be used from this tag. If not provided, will just build <code>HEAD</code>.</td>
+<td align="center">Yes</td>
 </tr>
 
 <tr>
-<td style="text-align:center">Test</td>
-<td>test</td>
-<td style="text-align:center">test</td>
+<td align="center">Release Type</td>
+<td>Must be one of <code>Release</code>, <code>Beta Release</code>, <code>Alpha Release</code> or <code>Cutting Edge Build</code>.</td>
+<td align="center">No</td>
 </tr>
 
 <tr>
-<td style="text-align:center">Tester</td>
-<td>tester</td>
-<td style="text-align:center">tester</td>
+<td align="center">Changelog URL</td>
+<td>Where to download the Changelog File from. This must be a link to a file. (Raw file if hosted on GitHub). For this to be used, the <code>Changelog CF URL</code> input must also be filled in!</td>
+<td align="center">Yes</td>
 </tr>
 
 <tr>
-<td align="center">Test</td>
-<td>test</td>
-<td align="center">Test</td>
+<td align="center">Changelog CF URL</td>
+<td>Where to download the CF Changelog File from. This must be a link to a file. (Raw file if hosted on GitHub). For this to be used, the <code>Changelog URL</code> input must also be filled in!</td>
+<td align="center">Yes</td>
+</tr>
+
+<tr>
+<td align="center">Changelog Branch</td>
+<td>Nomi-CEu branch to download the CF Changelog File from. On that branch, there must be <code>CHANGELOG.md</code> and <code>CHANGELOG_CF.md</code> in the root directory.</td>
+<td align="center">Yes</td>
+</tr>
+
+<tr>
+<td align="center">Compare Tag</td>
+<td>The tag to compare to, when generating a changelog. This is only used, and a new changelog only generated, if all of the above three inputs are not filled in!</td>
+<td align="center">Yes</td>
 </tr>
 </table>
 
-// TEMPLATE
+For cutting edge builds, all of the inputs can be ignored, apart from changing the `Release Type` to `Cutting Edge Build`.
+
+When building a cutting edge build, the changelog title will not contain the default `<release-type> <tag>`, but will contain `Cutting Edge Build <time-date>`.
+
+**The Cutting Edge Build Release Type is only available for this workflow, and for the [create changelog workflow](#62-create-changelog)! It is not available for any other deploy or release related workflow!**
+
+[//]: # (TEMPLATE)
 <tr>
 <td align="center"></td>
 <td></td>
@@ -862,8 +880,10 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 </tr>
 
 ### 6.6: Create Release Commit & Changelog
+This workflow combines the [create release commit workflow] and the [create changelog workflow]. Because the create changelog workflow is usually
 
 ### 6.7: Release Commit & Deploy
+
 
 ### 6.8: Update Quest Book Jsons and Lang
 This workflow updates the QB Jsons, and the english lang, every time a commit is pushed to main, which changes one, or both, of the [Development Json Files](#22-development-json-files).

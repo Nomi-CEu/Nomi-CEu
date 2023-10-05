@@ -8,14 +8,12 @@ import buildConfig from "../../buildConfig";
 import { makeArtifactNameBody } from "../../util/util";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
-import { InputReleaseType } from "../../types/changelogTypes";
+import { DeployReleaseType, inputToDeployReleaseTypes } from "../../types/changelogTypes";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
 const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID", "RELEASE_TYPE"];
 
-type CFReleaseType = "release" | "beta" | "alpha";
-
-async function upload(files: { name: string; displayName: string }[], releaseType: CFReleaseType) {
+async function upload(files: { name: string; displayName: string }[]) {
 	files.forEach((file) => {
 		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
 		if (!fs.existsSync(path)) {
@@ -61,6 +59,8 @@ async function upload(files: { name: string; displayName: string }[], releaseTyp
 
 	let clientFileID: number | null;
 
+	const releaseType: DeployReleaseType = inputToDeployReleaseTypes[process.env.RELEASE_TYPE];
+
 	// Upload artifacts.
 	for (const file of files) {
 		const options = {
@@ -74,8 +74,8 @@ async function upload(files: { name: string; displayName: string }[], releaseTyp
 				metadata: JSON.stringify({
 					changelog: changelog,
 					changelogType: "html",
-					releaseType: releaseType,
-					parentFileID: clientFileID,
+					releaseType: releaseType ? releaseType.cfReleaseType : "release",
+					parentFileID: clientFileID ? clientFileID : undefined,
 					gameVersions: clientFileID ? undefined : [version.id],
 					displayName: file.displayName,
 				}),
@@ -113,21 +113,6 @@ export async function deployCurseForge(): Promise<void> {
 	});
 
 	const displayName = process.env.GITHUB_TAG;
-	const type: InputReleaseType = process.env.RELEASE_TYPE as InputReleaseType;
-	let releaseType: CFReleaseType;
-	switch (type) {
-		case "Release":
-		default:
-			releaseType = "release";
-			break;
-
-		case "Beta Release":
-			releaseType = "beta";
-			break;
-
-		case "Alpha Release":
-			releaseType = "alpha";
-	}
 
 	const files = [
 		{
@@ -140,5 +125,5 @@ export async function deployCurseForge(): Promise<void> {
 		},
 	];
 
-	await upload(files, releaseType);
+	await upload(files);
 }

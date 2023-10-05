@@ -265,8 +265,14 @@ export async function createChangelog(): Promise<void> {
 	// Push the titles.
 	// Center Align is replaced by the correct center align style in the respective deployments.
 	// Must be triple bracketed, to make mustache not html escape it.
-	// noinspection HtmlUnknownAttribute
-	builder.push(`<h1 {{{ CENTER_ALIGN }}}>${releaseType} ${to}</h1>`, "");
+	if (releaseType === "Cutting Edge Build") {
+		const date = new Date().toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric", hour12: true, hour: "numeric", minute: "numeric" });
+		// noinspection HtmlUnknownAttribute
+		builder.push(`<h1 {{{ CENTER_ALIGN }}}>${releaseType} (${date})</h1>`, "");
+	} else {
+		// noinspection HtmlUnknownAttribute
+		builder.push(`<h1 {{{ CENTER_ALIGN }}}>${releaseType} ${to}</h1>`, "");
+	}
 	builder.push("{{{ CF_REDIRECT }}}", "");
 	builder.push(`# Changes Since ${since}`, "");
 

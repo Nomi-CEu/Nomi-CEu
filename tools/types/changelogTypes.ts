@@ -123,4 +123,26 @@ export interface ExpandedMessage {
 	messageBody?: string;
 }
 
-export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release";
+export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release" | "Cutting Edge Build";
+
+export interface DeployReleaseType {
+	isPreRelease: boolean;
+	cfReleaseType: "release" | "beta" | "alpha";
+}
+
+// Cutting Edge Build is not needed here, as this type is only used for deploying, and not building.
+export const inputToDeployReleaseTypes: Record<InputReleaseType, DeployReleaseType> = {
+	Release: {
+		isPreRelease: false,
+		cfReleaseType: "release",
+	},
+	"Beta Release": {
+		isPreRelease: true,
+		cfReleaseType: "beta",
+	},
+	"Alpha Release": {
+		isPreRelease: true,
+		cfReleaseType: "alpha",
+	},
+	"Cutting Edge Build": undefined,
+};

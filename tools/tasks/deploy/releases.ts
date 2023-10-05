@@ -8,7 +8,7 @@ import Bluebird from "bluebird";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
-import { InputReleaseType } from "../../types/changelogTypes";
+import { DeployReleaseType, inputToDeployReleaseTypes } from "../../types/changelogTypes";
 
 const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
 
@@ -53,11 +53,8 @@ async function deployReleases(): Promise<void> {
 	};
 
 	const tag = process.env.GITHUB_TAG;
-	const type: InputReleaseType = process.env.RELEASE_TYPE as InputReleaseType;
-	let prerelease = false;
-	if (type !== "Release") {
-		prerelease = true;
-	}
+	const releaseType: DeployReleaseType = inputToDeployReleaseTypes[process.env.RELEASE_TYPE];
+	const preRelease = releaseType ? releaseType.isPreRelease : false;
 
 	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
 	let changelog = (
@@ -69,7 +66,7 @@ async function deployReleases(): Promise<void> {
 	// Create a release.
 	const release = await octokit.repos.createRelease({
 		tag_name: tag || "latest-dev-preview",
-		prerelease: prerelease,
+		prerelease: preRelease,
 		name: tag || "latest-dev-preview",
 		body: changelog,
 		...repo,
