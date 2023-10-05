@@ -828,8 +828,38 @@ This workflow does not run automatically.
 This workflow uploads all three built zips (client, server & lang) as an artifact.
 
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Optional?</th>
+</tr>
 
+<tr>
+<td style="text-align:center">Test</td>
+<td>test</td>
+<td style="text-align:center">test</td>
+</tr>
 
+<tr>
+<td style="text-align:center">Tester</td>
+<td>tester</td>
+<td style="text-align:center">tester</td>
+</tr>
+
+<tr>
+<td align="center">Test</td>
+<td>test</td>
+<td align="center">Test</td>
+</tr>
+</table>
+
+// TEMPLATE
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+</tr>
 
 ### 6.6: Create Release Commit & Changelog
 
