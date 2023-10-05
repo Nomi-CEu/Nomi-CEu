@@ -67,6 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TAG: ${{ inputs.tag }}
+      RELEASE_TYPE: ${{ inputs.release_type }}
 
     steps:
       - name: Checkout Ref
