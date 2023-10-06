@@ -35,10 +35,9 @@
   - [6.8. Update Quest Book Jsons and Lang](#68-update-quest-book-jsons-and-lang)
   - [6.9. Un-Callable Workflows](#69-un-callable-workflows)
   - [6.10: Typical Usage](#610-typical-usage)
-- **[7. Misc Information](#section-7-misc-information)**
- 
 
-### More to come! Contributions to this file are extremely welcome!
+### More to come, especially after the move to GroovyScript & Nomi Labs! 
+**Contributions to this file are extremely welcome!**
 
 # Part 1: Contributing Information
 ## Section 1: Contributing Introduction and Guidelines
@@ -185,9 +184,17 @@ Instead, change the relevant file in `/tools/templates/`.
 # Part 2: Maintainer Documentation
 ## Section 6: Workflows Documentation
 ### 6.1: General Information
-#### Activating the workflow on another branch
-If you want the workflow to run on a branch, which isn't `main`, change the top option (`Use workflow from...`).   
+#### Prerequisites:
+Most workflows require:
+- **Relevant Secrets Set (These are Environment Variables if running locally)**
+  - CFCORE_API_TOKEN (a [CurseForge API Key](https://support.curseforge.com/en/support/solutions/articles/9000208346-about-the-curseforge-api-and-how-to-apply-for-a-key))
+  - CURSEFORGE_API_TOKEN (a personal [CurseForge API Token](https://www.curseforge.com/account/api-tokens))
+  - CURSEFORGE_PROJECT_ID (the project ID of the modpack, currently `594351`).
+- **A tag before the current tag or commit (on the chosen branch).**
+  - This is needed for the changelog task, and all other workflows which have the changelog task as a step.
 
+#### Activating the workflow on another branch
+If you want the workflow to run on a branch, which isn't `main`, change the top option (`Use workflow from...`).
 This will cause the workflow to run all operations, such as build or making a release commit, on that branch.   
 Note that this will use the workflow file, and the TypeScript files, from that branch!
 
@@ -232,7 +239,7 @@ When run, the options are (excluding the [branch selection](#activating-the-work
 </tr>
 <tr>
 <td align="center">Branch</td>
-<td>Branch to push Changelog to. They will be pushed to the Root Directory. Intended for use with the <code>Deploy to GitHub Releases and CurseForge</code> workflow.</td>
+<td>Branch to push Changelog to. They will be pushed to the Root Directory. Intended for use with the <a rel="noopener" target="_blank" href="#64-deploy-to-github-releases-and-curseforge">Deploy to GitHub Releases and CurseForge</a> workflow.</td>
 <td align="center">Yes. If not set, changelogs will just be uploaded as an artifact.</td>
 </tr>
 </table>
@@ -830,6 +837,12 @@ This workflow uploads all three built zips (client, server & lang) as an artifac
 When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
 <table>
 <tr>
+<th>Name</th>
+<th>Description</th>
+<th>Optional?</th>
+</tr>
+
+<tr>
 <td align="center">Tag</td>
 <td>The tag to checkout. This will be the newest commit parsed for the changelog, if one is generated. This will also be the version number used for the release. The TypeScript files will also be used from this tag. If not provided, will just build <code>HEAD</code>.</td>
 <td align="center">Yes</td>
@@ -870,7 +883,7 @@ For cutting edge builds, all of the inputs can be ignored, apart from changing t
 
 When building a cutting edge build, the changelog title will not contain the default `<release-type> <tag>`, but will contain `Cutting Edge Build <time-date>`.
 
-**The Cutting Edge Build Release Type is only available for this workflow, and for the [create changelog workflow](#62-create-changelog)! It is not available for any other deploy or release related workflow!**
+**The Cutting Edge Build Release Type is only available for this workflow! It is not available for any other deploy or release related workflow!**
 
 [//]: # (TEMPLATE)
 <tr>
@@ -880,17 +893,101 @@ When building a cutting edge build, the changelog title will not contain the def
 </tr>
 
 ### 6.6: Create Release Commit & Changelog
-This workflow combines the [create release commit workflow] and the [create changelog workflow]. Because the create changelog workflow is usually
+This workflow combines the [create release commit workflow](#63-create-release-commit) and the [create changelog workflow](#62-create-changelog). 
+
+Because the create changelog workflow is usually called after the release commit workflow, in order to have a tag to base it off, this workflow combines the two.
+
+For more information on how to use each one, especially the create changelog workflow, go to their pages below.
+- [6.2. Create Changelog](#62-create-changelog)
+- [6.3. Create Release Commit](#63-create-release-commit)
+
+The workflow calls the create release commit workflow first, then calls the create changelog workflow.
+
+This workflow cannot be called automatically.
+
+This workflow uploads both generated changelogs (GitHub & CF) as an artifact.
+
+When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
+
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Optional?</th>
+</tr>
+
+<tr>
+<td align="center">Tag</td>
+<td>The tag to create, through the release commit workflow's version input. This will also be the version number used for the release.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Release Type</td>
+<td>Must be one of <code>Release</code>, <code>Beta Release</code> or <code>Alpha Release</code>.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Compare Tag</td>
+<td>Tag to compare against. The changelog will contain all commits after the <code>Compare Tag</code>, up to and including the <code>Tag</code>.</td>
+<td align="center">Yes. If not set, will use the tag before <code>Tag</code>.</td>
+</tr>
+
+<tr>
+<td align="center">Branch</td>
+<td>Branch to push Changelog to. They will be pushed to the Root Directory. Intended for use with the <a rel="noopener" target="_blank" href="#64-deploy-to-github-releases-and-curseforge">Deploy to GitHub Releases and CurseForge</a> workflow.</td>
+<td align="center">Yes. If not set, changelogs will just be uploaded as an artifact.</td>
+</tr>
+</table>
 
 ### 6.7: Release Commit & Deploy
+This workflow simply combines the [release commit workflow](#63-create-release-commit) and the [deploy to GitHub Releases & CurseForge workflow](#64-deploy-to-github-releases-and-curseforge), although as it does not provide any method of inputting non-generated changelogs, it could also be said to include the [create changelog workflow].
 
+This workflow is meant for releases where the changelog does not need to be edited, and provides a quick and straightforward way to make a release.
+
+For more information on how to use each one, go to their pages below.
+- [6.3. Create Release Commit](#63-create-release-commit)
+- [6.4. Deploy to GitHub Releases & CurseForge](#64-deploy-to-github-releases-and-curseforge)
+
+The workflow calls the create release commit workflow first, then calls the deploy workflow.
+
+When run, the options are (excluding the [branch selection](#activating-the-workflow-on-another-branch) available to all workflows):
+
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Optional?</th>
+</tr>
+
+<tr>
+<td align="center">Tag</td>
+<td>The tag to create, through the release commit workflow's version input. This will also be the version number used for the release.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Release Type</td>
+<td>Must be one of <code>Release</code>, <code>Beta Release</code> or <code>Alpha Release</code>.</td>
+<td align="center">No</td>
+</tr>
+
+<tr>
+<td align="center">Compare Tag</td>
+<td>Tag to compare against. The changelog will contain all commits after the <code>Compare Tag</code>, up to and including the <code>Tag</code>.</td>
+<td align="center">Yes. If not set, will use the tag before <code>Tag</code>.</td>
+</tr>
+</table>
 
 ### 6.8: Update Quest Book Jsons and Lang
 This workflow updates the QB Jsons, and the english lang, every time a commit is pushed to main, which changes one, or both, of the [Development Json Files](#22-development-json-files).
 
 This is done automatically, although you can also run it manually, if something is out of date, for some reason. Calling the workflow has no additional inputs. (Apart from the [branch selection](#activating-the-workflow-on-another-branch), present in all workflows.)
 
-When running automatically, if you want the QB Transform Workflow to run on a branch, that isn't `main`, prefix the branch with `test_buildscript`.
+This workflow uploads no artifacts.
+
+When running automatically, if you want the QB Transform Workflow to run on a branch that isn't `main`, prefix the branch with `test_buildscript`.
 
 This workflow is disabled, both when running automatically, and manually, on forks of this repository.
 
@@ -900,11 +997,20 @@ If you want the QB Transform Workflow to run on your fork, remove or comment out
 Workflows that have their name prefixed with `[NOT CALLABLE]` are not callable. They are used as steps for other workflows.
 
 ### 6.10: Typical Usage
-**Releases:**
+**Releases:**  
+Releases will usually have changes applied to the changelog, such as adding a [release picture](https://github.com/Nomi-CEu/Branding/tree/main/Nomi%20CEu/Releases), or adding notes / more information.
 
-**Alpha & Beta Releases:**
+Because of this, this is usually a four step process.
+1. Calling the [create release commit & changelog workflow](#66-create-release-commit--changelog), with the appropriate tag, release type, compare tag, and branch (as usually you want to compare to the last release, and beta/alpha releases also use tags).
+2. Editing `CHANGELOG.md` and `CHANGELOG_CF.md` in the produced branch, and committing the changelog changes to that branch.
+3. Calling the [deploy to GitHub Releases and CurseForge workflow](#64-deploy-to-github-releases-and-curseforge) with the generated tag, the appropriate release type, and the changelog branch input set to the generated branch.
+4. **AFTER** the workflow finishes, delete the generated branch.
 
-**'Cutting Edge' Builds:**
+**Alpha & Beta Releases:**  
+Alpha and Beta Releases are designed to be simple, perhaps even more than Cutting Edge Builds. There is one step to making these releases.
+1. Calling the [release commit & deploy workflow](#67-release-commit--deploy) with the appropriate tag/version, release type, and perhaps the tag to compare to (although beta/alpha releases usually compare to the newest tag).
 
-## Section 7: Misc Information
-
+**Cutting Edge Builds:**  
+This just simply builds the pack, to allow for quick and worry-free builds. This is usually a two step process:
+1. Calling the [build pack workflow](#65-build-pack) with the release type set to `Cutting Edge Build`, and no other inputs set/changed. 
+2. Linking the workflow run to users, telling them to download the pack from the artifacts section, or downloading it yourself, and uploading the zips separately somewhere. The first option is recommended, although the second option may be more convenient for users.
