@@ -63020,7 +63020,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Power Substation§r is GregTech\u0027s native mass power storage solution. At §cZPM§r tier and above, it can rival the §6Tier 7 Energy Core§r from Draconic Evolution.\n\nThe structure can accept up to 18 layers of 3x3 §aLapotronic Capacitor§r blocks. GT batteries can hold §d6x§r the EU their item counterparts can hold when crafted into a §aLapotronic Capacitor§r. The structure need not be made of all of the same tier blocks, but it must be full, so fill any empty space with §aEmpty Capacitor Blocks§r.\n\nInsert power through §6Energy Hatches§r and extract from §6Dynamo Hatches§r, each of any tier. The Power Substation can accept special §664A Substation Hatches§r.\n\nThe Power Substation will §cpassively lose 1%§r of its total capacity every 24 (real-life) hours, up to 100,000 EU/t per capacitor block. This is equivalent to §d5.8 billionths§r of its total capacity per tick, so this should not be a concern under regular operation.",
+          "desc:8": "The §3Power Substation§r is GregTech\u0027s native mass power storage solution. At §cZPM§r tier and above, it can rival the §6Tier 7 Energy Core§r from Draconic Evolution.\n\nThe structure can accept up to 18 layers of 3x3 §aLapotronic Capacitor§r blocks. GT batteries can hold §d6x§r the EU their item counterparts can hold when crafted into a §aLapotronic Capacitor§r. The structure need not be made of all of the same tier blocks, but it must be full, so fill any empty space with §aEmpty Capacitor Blocks§r.\n\nInsert power through §6Energy Hatches§r and extract from §6Dynamo Hatches§r, each of any tier. The Power Substation can accept special §664A Substation Hatches§r, as well as §aLaser Hatches§r.\n\nThe Power Substation will §cpassively lose 1%§r of its total capacity every 24 (real-life) hours, up to 100,000 EU/t per capacitor block. This is equivalent to §d5.8 billionths§r of its total capacity per tick, so this should not be a concern under regular operation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63072,6 +63072,12 @@
               "Damage:2": 1041,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 14,
+              "Damage:2": 11,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -63937,7 +63943,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Active Transformer§r is a device which can convert any number and type of §dGT Energy Inputs§r into any number and type of §dGT Energy Outputs§r. It can also transfer power at huge Amperage and distance with §6Laser Hatches§r. The §6Laser Source§r must be in a straight line with the §6Laser Target§r - lasers don\u0027t bend, after all.\n\nWith §dRF Conduits§r and §3Energy Converters§r in this pack, this probably has limited use, but you can build it if you want.",
+          "desc:8": "The §3Active Transformer§r is a device which can convert any number and type of §dGT Energy Inputs§r into any number and type of §dGT Energy Outputs§r. That includes §aLaser Hatches§r - refer to the nearby quest for more details on those.\n\nWith §dRF Conduits§r and §3Energy Converters§r in this pack, this probably has limited use, but you can build it if you want.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63995,6 +64001,12 @@
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:computer_casing"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:fusion_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -64060,6 +64072,74 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "solarflux:solar_panel_8"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1044:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        253
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aLasers§r are §dGregTech§r\u0027s native solution to high-volume power transfer. Each power tier starting at §1IV§r has §aLaser Hatches§r capable of transferring §d256A§r, §d1,024A§r and §d4,096A§r of their voltage\u0027s power!\n\nEnergy in the Laser Network flows from §aLaser Sources§r through §6Laser Transmitting Cables§r to §aLaser Targets§r. All these must be in a straight line - lasers don\u0027t bend, after all. \n\nYou can choose to use these when moving power between §3Active Transformers§r and your §3Power Substation§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Laser Network",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1044,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:laser_pipe_normal"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -68040,6 +68120,13 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 12,
+          "y:3": -12
+        },
+        "129:10": {
+          "id:3": 1044,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 148,
           "y:3": -12
         }
       }
