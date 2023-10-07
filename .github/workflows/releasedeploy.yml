@@ -20,6 +20,16 @@ on:
         description: Tag to compare to. See CONTRIBUTING.md for more information.
         required: false
         type: string
+      deploy_to_gh:
+        description: Whether to deploy to GitHub Releases.
+        required: true
+        type: boolean
+        default: true
+      deploy_to_cf:
+        description: Whether to deploy to CurseForge.
+        required: true
+        type: boolean
+        default: true
 
 jobs:
   releaseCommit:
@@ -44,6 +54,7 @@ jobs:
 
   deployGH:
     name: Deploy to GitHub Releases (${{ inputs.tag }})
+    if: ${{ inputs.deploy_to_gh }}
     needs: build
     uses: ./.github/workflows/deploygh.yml
     with:
@@ -53,6 +64,7 @@ jobs:
 
   deployCF:
     name: Deploy to CurseForge (${{ inputs.tag }})
+    if: ${{ inputs.deploy_to_cf }}
     needs: build
     uses: ./.github/workflows/deploycf.yml
     with:

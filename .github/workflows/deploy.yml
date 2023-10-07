@@ -58,6 +58,7 @@ jobs:
 
   deployGH:
     name: Deploy to GitHub Releases (${{ inputs.tag }})
+    if: ${{ inputs.deploy_to_gh }}
     needs: build
     uses: ./.github/workflows/deploygh.yml
     with:
@@ -67,6 +68,7 @@ jobs:
 
   deployCF:
     name: Deploy to CurseForge (${{ inputs.tag }})
+    if: ${{ inputs.deploy_to_cf }}
     needs: build
     uses: ./.github/workflows/deploycf.yml
     with:
