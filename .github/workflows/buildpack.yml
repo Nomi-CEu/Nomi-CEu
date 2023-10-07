@@ -127,7 +127,6 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Zip Pack
-        if: ${{ !inputs.separate_upload }}
         working-directory: ./tools
         run: npx gulp zipAll
 
@@ -146,7 +145,7 @@ jobs:
         if: ${{ inputs.separate_upload }}
         with:
           name: Client Zip
-          path: ./build/client/*
+          path: ./build/*-client.zip
           if-no-files-found: error
 
       - name: Upload Server Zip
@@ -154,7 +153,7 @@ jobs:
         if: ${{ inputs.separate_upload }}
         with:
           name: Server Zip
-          path: ./build/server/*
+          path: ./build/*-server.zip
           if-no-files-found: error
 
       - name: Upload Lang Zip
@@ -162,7 +161,7 @@ jobs:
         if: ${{ inputs.separate_upload }}
         with:
           name: Lang Zip
-          path: ./build/lang/*
+          path: ./build/*-lang.zip
           if-no-files-found: error
       
       - name: Upload MMC Zip
@@ -170,7 +169,7 @@ jobs:
         if: ${{ inputs.separate_upload }}
         with:
           name: MMC Zip
-          path: ./build/mmc/*
+          path: ./build/*-mmc.zip
           if-no-files-found: error
 
       - name: Upload Changelogs
