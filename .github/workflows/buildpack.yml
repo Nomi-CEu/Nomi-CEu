@@ -1,33 +1,6 @@
-name: "Build Pack"
+name: Build Pack
 
 on:
-  workflow_call:
-    inputs:
-      tag:
-        description: Tag to Checkout and Release.
-        required: false
-        type: string
-      release_type:
-        description: The Release Type.
-        required: true
-        type: string
-      changelog_url:
-        description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
-        required: false
-        type: string
-      changelog_cf_url:
-        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
-        required: false
-        type: string
-      changelog_branch:
-        description: Branch to download changelog Files from. See CONTRIBUTING.md for more information.
-        required: false
-        type: string
-      compare_tag:
-        description: Tag to compare to. See CONTRIBUTING.md for more information.
-        required: false
-        type: string
-
   workflow_dispatch:
     inputs:
       tag:
@@ -60,7 +33,44 @@ on:
         description: Tag to compare to. See CONTRIBUTING.md for more information.
         required: false
         type: string
+      separate_upload:
+        description: Whether to uploaed each zip (Client, Server, Lang & MMC) and the changelogs seperately. If not set, will just upload all six files into one artifact (Built Pack).
+        required: true
+        type: boolean
       
+  workflow_call:
+    inputs:
+      tag:
+        description: Tag to Checkout and Release.
+        required: false
+        type: string
+      release_type:
+        description: The Release Type.
+        required: false
+        default: Release
+        type: string
+      changelog_url:
+        description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      changelog_cf_url:
+        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      changelog_branch:
+        description: Branch to download changelog Files from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      compare_tag:
+        description: Tag to compare to. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      separate_upload:
+        description: Whether to uploaed each zip (Client, Server & Lang) and the changelogs seperately. If not set, will just upload all five files into one artifact (Built Pack).
+        required: false
+        default: false
+        type: boolean
+
 jobs:
   build:
     name: Build Pack (${{ inputs.tag }})
@@ -117,14 +127,56 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Zip Pack
+        if: ${{ !inputs.separate_upload }}
         working-directory: ./tools
         run: npx gulp zipAll
 
-      - name: Upload Built Zips
+      - name: Upload All Files
         uses: actions/upload-artifact@v3
+        if: ${{ !inputs.separate_upload }}
         with:
           name: Built Pack
           path: |
             ./build/*.zip
             ./build/*.md
+          if-no-files-found: error
+
+      - name: Upload Client Zip
+        uses: actions/upload-artifact@v3
+        if: ${{ inputs.separate_upload }}
+        with:
+          name: Client Zip
+          path: ./build/client/*
+          if-no-files-found: error
+
+      - name: Upload Server Zip
+        uses: actions/upload-artifact@v3
+        if: ${{ inputs.separate_upload }}
+        with:
+          name: Server Zip
+          path: ./build/server/*
+          if-no-files-found: error
+
+      - name: Upload Lang Zip
+        uses: actions/upload-artifact@v3
+        if: ${{ inputs.separate_upload }}
+        with:
+          name: Lang Zip
+          path: ./build/lang/*
+          if-no-files-found: error
+      
+      - name: Upload MMC Zip
+        uses: actions/upload-artifact@v3
+        if: ${{ inputs.separate_upload }}
+        with:
+          name: MMC Zip
+          path: ./build/mmc/*
+          if-no-files-found: error
+
+      - name: Upload Changelogs
+        uses: actions/upload-artifact@v3
+        if: ${{ inputs.separate_upload }}
+        with:
+          name: Changelogs
+          path: ./build/*.md
           if-no-files-found: error

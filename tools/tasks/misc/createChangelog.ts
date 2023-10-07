@@ -266,7 +266,14 @@ export async function createChangelog(): Promise<void> {
 	// Center Align is replaced by the correct center align style in the respective deployments.
 	// Must be triple bracketed, to make mustache not html escape it.
 	if (releaseType === "Cutting Edge Build") {
-		const date = new Date().toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric", hour12: true, hour: "numeric", minute: "numeric" });
+		const date = new Date().toLocaleDateString("en-us", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+			hour12: true,
+			hour: "numeric",
+			minute: "numeric",
+		});
 		// noinspection HtmlUnknownAttribute
 		builder.push(`<h1 {{{ CENTER_ALIGN }}}>${releaseType} (${date})</h1>`, "");
 	} else {
@@ -374,6 +381,12 @@ export function setOutputDir(dir: string): void {
 	outputDir = dir;
 }
 
+/**
+ * Sorts a list that contains commit data
+ * @param list A list of type T that contains commit data
+ * @param transform A function to turn each element of type T into an element of type Commit
+ * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal).
+ */
 function sortCommitList<T>(
 	list: T[],
 	transform: (obj: T) => Commit | Commit[] | undefined,
@@ -417,6 +430,11 @@ function sortCommitList<T>(
 	});
 }
 
+/**
+ * Parses a commit, using either its message, or its description. Will be removed post 1.7.
+ * @param commit The commit to parse
+ * @param useMessage Whether to use the commit message. Defaults to false
+ */
 async function parseCommit(commit: Commit, useMessage = false): Promise<boolean> {
 	if (useMessage) {
 		return sortCommit(commit.message, commit.message, commit, defaultIndentation, true);
@@ -424,6 +442,13 @@ async function parseCommit(commit: Commit, useMessage = false): Promise<boolean>
 	return await parseCommitBody(commit.message, commit.body, commit);
 }
 
+/**
+ * Parses a commit body.
+ * @param commitMessage The commit message to put into the changelog.
+ * @param commitBody The commit body to parse with.
+ * @param commitObject The commit object.
+ * @return parsed Returns true if contains parsing keys, false if not.
+ */
 async function parseCommitBody(commitMessage: string, commitBody: string, commitObject: Commit): Promise<boolean> {
 	if (commitBody.includes(expandKey)) {
 		await deCompExpand(commitBody, commitObject);
@@ -472,6 +497,11 @@ function sortCommit(
 	return true;
 }
 
+/**
+ * Finds the categories that a commit fits in.
+ * @param commitBody The commit body to sort with
+ * @return categoryList The categories that the commit belongs in. Return undefined if no category specified via keys.
+ */
 function findCategories(commitBody: string): Category[] | undefined {
 	const sortedCategories: Category[] = [];
 	for (const category of categories) {
@@ -591,6 +621,9 @@ async function deCompDetails(commitMessage: string, commitBody: string, commitOb
 	});
 }
 
+/**
+ * Decompiles a 'level' of Details.
+ */
 async function deCompDetailsLevel(
 	commitBody: string,
 	commitObject: Commit,
@@ -615,6 +648,15 @@ async function deCompDetailsLevel(
 	return result;
 }
 
+/**
+ * Parse TOML in a commit body.
+ * @param commitBody The body to parse
+ * @param commitObject The commit object to grab messages from, and to determine error messages.
+ * @param delimiter The delimiters, surrounding the TOML.
+ * @param listKey The key of the list to parse.
+ * @param emptyCheck The check to see if an item in the list is invalid.
+ * @param perItemCallback The callback to perform on each item in the list.
+ */
 async function parse<T>(
 	commitBody: string,
 	commitObject: Commit,
@@ -711,6 +753,11 @@ async function parse<T>(
 	}
 }
 
+/**
+ * Pushes the mod changes, with their relative commits, to their respective sub categories in the general category.
+ * @param since The ref compare from
+ * @param to The ref to compare to
+ */
 async function pushModChangesToGenerals(since: string, to: string) {
 	const oldManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", since));
 	const newManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", to));
@@ -766,7 +813,12 @@ async function pushModChangesToGenerals(since: string, to: string) {
 	});
 }
 
-function getModChangeMessage(info: ModChangeInfo, template: string) {
+/**
+ * Returns the message, determined by the parameters below.
+ * @param info The mod change info, containing the mod name and versions.
+ * @param template The message template to replace in.
+ */
+function getModChangeMessage(info: ModChangeInfo, template: string): string {
 	const oldVersion = cleanupVersion(info.oldVersion);
 	const newVersion = cleanupVersion(info.newVersion);
 
@@ -781,6 +833,10 @@ function getModChangeMessage(info: ModChangeInfo, template: string) {
 	});
 }
 
+/**
+ * Cleans up a file name, and returns the version. Works for all tested mods!
+ * @param version The filename/version to cleanup.
+ */
 function cleanupVersion(version: string): string {
 	if (!version) return "";
 	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
@@ -788,6 +844,10 @@ function cleanupVersion(version: string): string {
 	return list[list.length - 1];
 }
 
+/**
+ * Gets what project IDs, in manifest.json, a commit changed.
+ * @param SHA The sha of the commit
+ */
 function getChangedProjectIDs(SHA: string): number[] {
 	const change = getCommitChange(SHA);
 	const projectIDs: number[] = [];
@@ -810,6 +870,9 @@ function getChangedProjectIDs(SHA: string): number[] {
 	return projectIDs;
 }
 
+/**
+ * A storage of what parts of the 'manifest.json' file a commit changed.
+ */
 interface CommitChange {
 	diff: DiffResult<ModpackManifestFile>;
 	oldManifest: ModpackManifest;
@@ -817,7 +880,7 @@ interface CommitChange {
 }
 
 /**
- * Gets what a commit changed.
+ * Gets what parts of the 'manifest.json' file a commit changed.
  * @param SHA The sha of the commit
  */
 function getCommitChange(SHA: string): CommitChange {
