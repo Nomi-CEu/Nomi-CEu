@@ -13,7 +13,7 @@ async function mmcCleanUp(cb) {
 }
 
 /**
- * Checks and creates all necessary directories so we can build the client safely.
+ * Checks and creates all necessary directories so we can build the MMC zip safely.
  */
 async function createMMCDirs(cb) {
 	if (!fs.existsSync(mmcDestDirectory)) {

@@ -24,6 +24,7 @@ on:
         type: boolean
         required: true
         default: false
+
   workflow_call:
     inputs:
       version:
