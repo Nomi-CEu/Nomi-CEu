@@ -63392,7 +63392,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Research Station§r is an advanced Scanner which consumes §dComputation Work§r provided by connected §3High Performance Computing Arrays§r to research §cZPM§r and higher items.\n\nThe function of this multiblock is similar to the Scanner. Place the §6Data Orb§r or §6Data Module§r into the §3Object Holder§r alongside the item to be scanned. The item will be §cconsumed§r and the corresponding data will be written to the data item.\n\n§3Energy§r, §3Maintenance§r, and §3Computation Hatches§r can only replace the 9 §aComputer Casings§r between the §aComputer Heat Vents§r at the back of the structure. The §3Object Holder§r §cmust face§r the §3Research Station§r controller block.\n\nThe Research Station §cdoes not overclock§r with extra §dEU/t§r nor §dCWU/t§r. Initial recipes run on §dLuV§r power, but §cZPM§r will be required soon, and higher tiers of energy will be required for more advanced scans. As most Research scans take a long time, you should start this process early.",
+          "desc:8": "The §3Research Station§r is an advanced Scanner which consumes §dComputation Work§r provided by connected §3High Performance Computing Arrays§r to research §cZPM§r and higher items.\n\nThe function of this multiblock is similar to the Scanner. Place the §6Data Orb§r or §6Data Module§r into the §3Object Holder§r alongside the item to be scanned. After sufficient §dCWU§r has been drawn, the item will be §cconsumed§r and the corresponding data will be written to the data item. Ensure your §3HPCA§r is supplying sufficient §dCWU/t§r - check the scan recipe in §eJEI§r for how much is required.\n\n§3Energy§r, §3Maintenance§r, and §3Computation Hatches§r can only replace the 9 §aComputer Casings§r between the §aComputer Heat Vents§r at the back of the structure. The §3Object Holder§r §cmust face§r the §3Research Station§r controller block.\n\nThe Research Station can be accelerated with excess §dCWU/t§r, but it §cdoes not overclock§r with extra §dEU/t§r. Initial recipes run on §dLuV§r power, but §cZPM§r will be required soon, and higher tiers of energy will be required for more advanced scans. As most Research scans take a long time, you should start this process early.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63943,7 +63943,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Active Transformer§r is a device which can convert any number and type of §dGT Energy Inputs§r into any number and type of §dGT Energy Outputs§r. That includes §aLaser Hatches§r - refer to the nearby quest for more details on those.\n\nWith §dRF Conduits§r and §3Energy Converters§r in this pack, this probably has limited use, but you can build it if you want.",
+          "desc:8": "The §3Active Transformer§r is a device which can convert any number and type of §dGT Energy Inputs§r into any number and type of §dGT Energy Outputs§r. That includes §664A Substation Hatches§r, as well as §aLaser Hatches§r - refer to the nearby quests for more details on those.\n\nWith §dRF Conduits§r and §3Energy Converters§r in this pack, this probably has limited use, but you can build it if you want.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64088,7 +64088,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aLasers§r are §dGregTech§r\u0027s native solution to high-volume power transfer. Each power tier starting at §1IV§r has §aLaser Hatches§r capable of transferring §d256A§r, §d1,024A§r and §d4,096A§r of their voltage\u0027s power!\n\nEnergy in the Laser Network flows from §aLaser Sources§r through §6Laser Transmitting Cables§r to §aLaser Targets§r. All these must be in a straight line - lasers don\u0027t bend, after all. \n\nYou can choose to use these when moving power between §3Active Transformers§r and your §3Power Substation§r.",
+          "desc:8": "§aLasers§r are §dGregTech§r\u0027s native solution to high-volume power transfer. Each power tier starting at §1IV§r has §aLaser Hatches§r capable of transferring §d256A§r, §d1,024A§r and §d4,096A§r of their voltage\u0027s power!\n\nEnergy in the Laser Network flows from §aLaser Sources§r through §6Laser Transmitting Cables§r to §aLaser Targets§r. All these must be in a straight line - lasers don\u0027t bend, after all. Similarly to other power-related blocks, the tier of the §aLaser Target§r must not be lower than the tier of the §aLaser Source§r.\n\nYou can choose to use these when moving power between §3Active Transformers§r and your §3Power Substation§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
