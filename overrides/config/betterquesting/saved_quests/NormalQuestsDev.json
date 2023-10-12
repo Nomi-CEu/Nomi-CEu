@@ -52902,7 +52902,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can get Americium from NuclearCraft progression, but you can also fuse it. First combine Lanthanum with Silicon to make Lutetium, then combine it with Chrome to get Americium.\n\n§2Americium is used in larger quantities in CEu progression. You cannot convert this form of Americium to NuclearCraft Americium isotopes. These are also the best Item Pipe material, in terms of throughput.",
+          "desc:8": "§6Americium Ingots§r are obtained by placing §dNuclearCraft§r Americium isotopes into an §3Extractor§r and solidifying the fluid. As with other GT materials, use the ingot or fluid to forge the other forms.\n\n§2Americium is used in larger quantities in CEu progression.§r You cannot convert this form of Americium back to NuclearCraft Americium isotopes. These are also the best §aItem Pipe§r material, in terms of throughput.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53389,7 +53389,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.\n\n§rThese are formed like multiblocks. You can add a §3Parallel Control Hatch§r in order to allow them to process §dmore recipes§r at the same time, similarly to a §3Processing Array§r. The highest tier of Parallel Control Hatch can facilitate processing §d256 recipes§r at once!\n\nSearch \"@gregicality\" or look up the usages of Parallel Hatches in JEI to see details of all the multiblock machines.",
+          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.\n\n§rThese are formed like multiblocks. You can add a §3Parallel Control Hatch§r in order to allow them to process §dmore recipes§r at the same time, similarly to a §3Processing Array§r. The highest tier of Parallel Control Hatch can facilitate processing §d256 recipes§r at once!\n\nSearch \"@gregicality\" or look up the usages of Parallel Hatches in JEI to see details of all the multiblock machines.\n\nMost of the advanced alloys used to make the casings of these multiblocks are made in the §3Alloy Blast Smelter§r. If you can\u0027t seem to find the recipes for them, look for the §eMolten Fluid§r form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62946,7 +62946,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Research has returned to GregTech 1.12!§r The §3Assembly Line§r needs to be provided with §edata§r on how to craft items before it can craft them. Data on how to craft each item is stored in a §6Data Stick§r and read by a §aData Access Hatch§r. This data is required to craft §6LuV components§r, the §3Fusion Reactor§r, and some parts from §dDraconic Evolution§r.\n\nTo begin, craft a §3Scanner§r and a few §6Data Sticks§r. The initial Scanner recipes run at §6HV§r, but §1IV§r is required relatively soon so might as well make that one.\n\nPress §bR§r on the item you want to craft in the and navigate to the §bScanner tab§r. This will tell you which item needs to be scanned to make the data for the new item. For example, §dLuV §6Electric Motors§r will require an §1IV§r §6Electric Motor§r to be scanned.\n\nPlace a §6Data Stick§r with the item to be scanned in the §3Scanner§r. The item will be §cconsumed§r and its data will be written to the §6Data Stick§r. Each §6Data item§r can only hold a §csingle recipe§r.\n\nFinally, place the §6Data Stick§r into the §aData Access Hatch§r of your §3Assembly Line§r. It will now be able to craft that item.\n\nLater, you will need more advanced §6Data Orbs§r and §6Data Modules§r to store data, and a §3Data Bank§r to read them.",
+          "desc:8": "§2Research has returned to GregTech 1.12!§r The §3Assembly Line§r needs to be provided with §edata§r on how to craft items before it can craft them. Data on how to craft each item is stored in a §6Data Stick§r and read by a §aData Access Hatch§r. This data is required to craft §6LuV components§r, the §3Fusion Reactor§r, and some parts from §dDraconic Evolution§r.\n\nTo begin, craft a §3Scanner§r and a few §6Data Sticks§r. The initial Scanner recipes run at §6HV§r, but §1IV§r is required relatively soon so might as well make that one.\n\nPress §bR§r on the item you want to craft in the and navigate to the §bScanner tab§r. This will tell you which item needs to be scanned to make the data for the new item. For example, §dLuV §6Electric Motors§r will require an §1IV§r §6Electric Motor§r to be scanned.\n\nPlace a §6Data Stick§r with the item to be scanned in the §3Scanner§r. The item will be §cconsumed§r and its data will be written to the §6Data Stick§r. Each §6Data item§r can only hold a §csingle recipe§r.\n\nFinally, place the §6Data Stick§r into the §aData Access Hatch§r of your §3Assembly Line§r. It will now be able to craft that item.\n\nLater, you will need more advanced §6Data Orbs§r and §6Data Modules§r to store data, and a §3Data Bank§r to read them.\n\nIf you need to create duplicate Data items, you can copy the data to a blank data item of the same type using the Scanner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63094,7 +63094,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-GregTech machine adjacent to them. This is handy for §dDraconic Evolution Fusion§r, which is a slow process otherwise.\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 8A of their voltage tier.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
+          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-GregTech machine adjacent to them. This is handy for §dDraconic Evolution Fusion§r, which is a slow process otherwise.\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 8A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63106,7 +63106,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Kairos\u0027 Constancy",
+          "name:8": "§2Right Hand of Chronos",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
