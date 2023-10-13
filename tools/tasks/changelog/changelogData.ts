@@ -32,7 +32,13 @@ export default class ChangelogData {
 		if (isEnvVariableSet("RELEASE_TYPE")) this.releaseType = process.env.RELEASE_TYPE as InputReleaseType;
 
 		// See if current run is test
-		if (isEnvVariableSet("TEST_CHANGELOG")) this.isTest = true;
+		if (isEnvVariableSet("TEST_CHANGELOG")) {
+			try {
+				this.isTest = JSON.parse(process.env.TEST_CHANGELOG);
+			} catch (err) {
+				throw new Error("Test Changelog Env Variable set to Invalid Value.");
+			}
+		}
 
 		// Initialise Final Builder
 		this.builder = [];

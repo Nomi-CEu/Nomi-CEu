@@ -138,10 +138,11 @@ async function parse<T>(
 ): Promise<void> {
 	let messages: T[];
 	let endMessage = "Skipping...";
+
 	if (data.isTest) {
 		endMessage = dedent`
-			Try checking the TOML syntax in https://www.toml-lint.com/, checking https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
-			Also check that you have surrounded the TOML in ${delimiter}!`;
+			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
+			Also check that you have surrounded the TOML in '${delimiter}'!`;
 	}
 
 	try {
@@ -180,7 +181,7 @@ async function parse<T>(
 		}
 
 		console.error(`\n${endMessage}\n`);
-		if (data.isTest) throw new Error("Failed Parsing TOML. See above.");
+		if (data.isTest) throw e;
 		return;
 	}
 
