@@ -1,7 +1,7 @@
 name: "[NOT CALLABLE] Test Build Pack"
-
 on:
   push:
+
   pull_request:
 
 # if a second commit is pushed quickly after the first, cancel the first one's build
