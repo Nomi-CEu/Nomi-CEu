@@ -736,17 +736,11 @@ mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material
 /* UHV Multis, move to zpm (used to be UHV) */
 // Rotary Hearth Furnace
 recipes.remove(<metaitem:gcym:mega_blast_furnace>);
-recipes.addShaped(<metaitem:gcym:mega_blast_furnace>,
-	[[<ore:springNaquadahAlloy>, <ore:circuitUv>, <ore:springNaquadahAlloy>],
-	[<metaitem:field.generator.luv>, <metaitem:electric_blast_furnace>, <metaitem:field.generator.luv>],
-	[<ore:plateDenseNaquadahAlloy>, <ore:wireGtQuadrupleUraniumRhodiumDinaquadide>, <ore:plateDenseNaquadahAlloy>]]);
+// Moved to Groovy
 
 // Bulk Blast Chiller
 recipes.remove(<metaitem:gcym:mega_vacuum_freezer>);
-recipes.addShaped(<metaitem:gcym:mega_vacuum_freezer>,
-	[[<ore:pipeNormalFluidNaquadah>, <ore:circuitUv>, <ore:pipeNormalFluidNaquadah>],
-	[<metaitem:field.generator.luv>, <metaitem:vacuum_freezer>, <metaitem:field.generator.luv>],
-	[<ore:plateDenseNaquadahAlloy>, <ore:wireGtQuadrupleUraniumRhodiumDinaquadide>, <ore:plateDenseNaquadahAlloy>]]);
+// Moved to Groovy
 
 // Recycling recipe replacements
 // RHF
@@ -785,6 +779,10 @@ macerator.recipeBuilder()
 	.EUt(32)
 	.buildAndRegister();
 	
+// I/O Buses
+// Removals in Groovy
+
+
 // AA Drill Core Coin Tooltip
 <actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
 
