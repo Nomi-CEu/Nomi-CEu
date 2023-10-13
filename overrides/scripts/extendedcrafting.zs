@@ -436,7 +436,7 @@ makeExtremeRecipe9(<metaitem:ingotCrystalMatrix>,
 recipes.remove(<avaritia:resource>);
 recipes.addShaped(<avaritia:resource>, [
     [<metaitem:plateDiamond>, <minecraft:diamond_block>, <metaitem:plateDiamond>],
-    [<minecraft:diamond_block>, <metaitem:gemPerfectDiamond>, <minecraft:diamond_block>],
+    [<minecraft:diamond_block>, <metaitem:devtech:gemPerfectDiamond>, <minecraft:diamond_block>],
     [<metaitem:plateDiamond>, <minecraft:diamond_block>, <metaitem:plateDiamond>]]);
 
 

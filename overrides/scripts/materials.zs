@@ -21,14 +21,14 @@ var draconium = MaterialBuilder(32001, "draconium")
     .color(0xbe49ed).iconSet("metallic")
     .blastTemp(6800, "HIGHER")
     .cableProperties(524288, 1, 0, true)
-    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_dense"])
+    .flags(["generate_plate", "generate_double_plate", "generate_rod", "generate_gear", "generate_dense"])
     .build();
 
 var awakened_draconium = MaterialBuilder(32002, "awakened_draconium")
     .element("AwakenedDraconium")
     .ingot().fluid()
     .color(0xf58742).iconSet("metallic")
-    .flags(["no_smelting", "generate_plate", "generate_rod", "generate_gear"])
+    .flags(["no_smelting", "generate_plate", "generate_frame", "generate_double_plate", "generate_rod", "generate_ring", "generate_gear"])
     .build();
 
 var dark_steel = MaterialBuilder(32003, "dark_steel")
@@ -68,7 +68,7 @@ var signalum = MaterialBuilder(32010, "signalum")
     .ingot().fluid()
     .color(0xff7f0f).iconSet("shiny")
     .blastTemp(4000, "MID", 120, 12800)
-    .flags(["generate_plate", "generate_dense", "generate_rod", "generate_gear"])
+    .flags(["generate_plate", "generate_double_plate", "generate_dense", "generate_rod", "generate_gear"])
     .components([<material:annealed_copper> * 4, <material:ardite> * 2, <material:red_alloy> * 2])
     .cableProperties(32768, 1, 0, true)
     .build();
@@ -84,7 +84,7 @@ var conductive_iron = MaterialBuilder(32011, "conductive_iron")
 var energetic_alloy = MaterialBuilder(32012, "energetic_alloy")
     .ingot().fluid()
     .color(0xffb545).iconSet("shiny")
-    .flags("generate_plate", "generate_gear")
+    .flags("generate_plate", "generate_double_plate", "generate_gear")
     .blastTemp(1250, "LOW", 120, 400)
     .components([<material:gold> * 2, <material:redstone> * 1, <material:glowstone> * 1])
     .cableProperties(128, 1, 0, true)
@@ -93,7 +93,7 @@ var energetic_alloy = MaterialBuilder(32012, "energetic_alloy")
 var vibrant_alloy = MaterialBuilder(32013, "vibrant_alloy")
     .ingot().fluid()
     .color(0xa4ff70).iconSet("shiny")
-    .flags("generate_plate", "generate_gear", "generate_rod", "generate_bolt_screw")
+    .flags("generate_plate", "generate_double_plate", "generate_gear", "generate_rod", "generate_bolt_screw")
     .blastTemp(1350, "LOW", 120, 600)
     .components([<material:energetic_alloy> * 1, <material:ender_pearl> * 1])
     .cableProperties(512, 1, 0, true)
@@ -117,7 +117,7 @@ var electrical_steel = MaterialBuilder(32015, "electrical_steel")
 var lumium = MaterialBuilder(32017, "lumium")
     .ingot().fluid()
     .color(0xf6ff99).iconSet("bright")
-    .flags("generate_plate", "generate_gear", "generate_fine_wire")
+    .flags("generate_plate", "generate_double_plate", "generate_gear", "generate_fine_wire")
     .blastTemp(4500, "MID", 120, 14400)
     .components([<material:tin_alloy> * 4, <material:sterling_silver> * 2])
     .cableProperties(8192, 1, 0, true)
@@ -126,7 +126,7 @@ var lumium = MaterialBuilder(32017, "lumium")
 var enderium = MaterialBuilder(32018, "enderium")
     .ingot().fluid()
     .color(0x1f6b62).iconSet("shiny")
-    .flags("generate_plate", "generate_gear", "generate_fine_wire")
+    .flags("generate_plate", "generate_double_plate", "generate_gear", "generate_fine_wire")
     .blastTemp(6400, "HIGHEST", 120, 20800)
     .components([<material:lead> * 4, <material:platinum> * 2, <material:blue_steel> * 1, <material:osmium> * 1])
     .cableProperties(131072, 1, 0, true)
@@ -135,7 +135,7 @@ var enderium = MaterialBuilder(32018, "enderium")
 var electrum_flux = MaterialBuilder(32019, "electrum_flux")
     .ingot().fluid()
     .color(0xf7be20).iconSet("bright")
-    .flags("generate_plate", "generate_gear")
+    .flags("generate_plate", "generate_double_plate", "generate_gear")
     .blastTemp(1100)
     .components([<material:electrum> * 6, <material:lumium> * 1, <material:signalum> * 1]) 
     .build();
@@ -150,7 +150,7 @@ var mithril = MaterialBuilder(32021, "mithril")
 var crystal_matrix = MaterialBuilder(32023, "crystal_matrix")
     .ingot().fluid()
     .color(0x70ecff).iconSet("shiny")
-    .flags("generate_plate")
+    .flags("generate_plate", "generate_double_plate")
     .build();
 
 var soularium = MaterialBuilder(32024, "soularium")
@@ -813,13 +813,15 @@ var tributyl_phosphate = MaterialBuilder(32115, "tributyl_phosphate")
 <material:naquadah_enriched>.addFlags(["generate_bolt_screw"]);
 <material:naquadria>.addFlags(["generate_bolt_screw"]);
 <material:redstone>.addFlags(["generate_dense"]);
-<material:trinium>.addFlags(["generate_dense"]);
+<material:trinium>.addFlags(["generate_double_plate", "generate_dense"]);
 <material:iridium>.addFlags(["generate_dense"]);
 <material:lapis>.addFlags(["generate_dense"]);
 <material:graphene>.addFlags(["generate_foil"]);
 <material:berkelium>.addFlags(["generate_frame"]);
 <material:blue_steel>.addFlags(["generate_frame"]);
 <material:ultimet>.addFlags(["generate_frame"]);
+<material:incoloy_ma_956>.addFlags(["generate_double_plate"]);
+<material:watertight_steel>.addFlags(["generate_double_plate"]);
 // Prevent TE Gears from showing up
 <material:tin>.addFlags(["generate_gear"]);
 <material:copper>.addFlags(["generate_gear"]);
