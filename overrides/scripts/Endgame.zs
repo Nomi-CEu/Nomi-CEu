@@ -100,7 +100,7 @@ makeShaped("of_elytra_wing", <craftelytra:elytra_wing>,
      "PE ",
      "PP "],
     { P : <metaitem:platePalladium>,
-      E : <metaitem:gemPerfectEmerald> });
+      E : <metaitem:devtech:gemPerfectEmerald> });
 
 recipes.remove(<minecraft:elytra>);
 makeShaped("of_elytra", <minecraft:elytra>,
