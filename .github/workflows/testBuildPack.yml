@@ -1,0 +1,17 @@
+name: [NOT CALLABLE] Test Build Pack
+
+on:
+  push:
+  pull_request:
+
+# if a second commit is pushed quickly after the first, cancel the first one's build
+concurrency:
+  group: build-pack-${{github.head_ref}}
+  cancel-in-progress: true
+  
+jobs:
+  build:
+    name: Build Pack
+    uses: ./.github/workflows/buildpack.yml
+    secrets: inherit
+
