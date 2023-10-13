@@ -121,8 +121,10 @@ const defaultParsingCallback = async (
 /* Parsing Categories */
 
 const fixupParsing: Parser = {
+	reverse: true,
 	skipCallback: () => false,
-	itemCallback: (_parser, commit, _commitMessage, commitBody) => parseFixUp(commitBody, commit),
+	// No need to care about message/body, never parse expand/details commits
+	itemCallback: (_parser, commit) => parseFixUp(commit),
 	addCommitListCallback: () => false,
 	addSHACallback: () => false,
 };
@@ -155,13 +157,13 @@ const finalParsing: Parser = {
 };
 
 /**
- * Parsing Category Lists
+ * Parsers
  * <p>
  * The order that the categories appear here will be the order that they are parsed in.<p>
  * Note that unless `addSHA` of the category is set to false, a commit parsed in a previous category will not be allowed to be parsed in future categories,
  * even if they fit in the dirs.
  */
-export const parsingCategories: Parser[] = [fixupParsing, overridesParsing, manifestParsing, finalParsing];
+export const parsers: Parser[] = [fixupParsing, overridesParsing, manifestParsing, finalParsing];
 
 /* Parsing Information / Allocations for Mod Changes */
 

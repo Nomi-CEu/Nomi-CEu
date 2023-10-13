@@ -1,20 +1,33 @@
 import { ChangelogMessage, Commit, ExpandedMessage, FixUpInfo, Parser } from "../../types/changelogTypes";
 import dedent from "dedent-js";
-import matter from "gray-matter";
-import toml from "@ltd/j-toml/index";
+import matter, { GrayMatterFile } from "gray-matter";
+import toml from "@ltd/j-toml";
 import { detailsKey, detailsList, expandKey, expandList, fixUpKey, fixUpList, indentationLevel } from "./definitions";
-import { commitFixes, findCategories, findSubCategory } from "./parser";
-import { isTest } from "./createChangelog";
+import { findCategories, findSubCategory } from "./parser";
+import ChangelogData from "./changelogData";
 
-export async function parseFixUp(commitBody: string, commitObject: Commit): Promise<boolean> {
-	if (!commitBody.includes(fixUpKey)) return false;
+let data: ChangelogData;
+
+export function specialParserSetup(inputData: ChangelogData): void {
+	data = inputData;
+}
+
+export async function parseFixUp(commit: Commit): Promise<boolean> {
+	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
 	await parse(
-		commitBody,
-		commitObject,
+		commit.body,
+		commit,
 		fixUpKey,
 		fixUpList,
-		(item: FixUpInfo) => item.sha && item.newMessage,
-		(item) => commitFixes.set(item.sha, item),
+		(item: FixUpInfo) => item.sha && item.newTitle,
+		(item) => data.commitFixes.set(item.sha, item),
+		(matter) => {
+			data.commitFixes.set(commit.hash, {
+				sha: commit.hash,
+				newTitle: commit.message,
+				newBody: commit.body.replace(matter.matter.trim(), ""),
+			});
+		},
 	);
 	return true;
 }
@@ -33,7 +46,7 @@ export async function parseExpand(commitBody: string, commitObject: Commit, pars
 			const title = dedent(item.messageTitle);
 
 			if (item.messageBody) {
-				const body = dedent(item.messageBody);
+				const body = dedent(item.messageBody).trim();
 				if (!(await parser.itemCallback(parser, commitObject, title, body))) {
 					if (parser.leftOverCallback) {
 						parser.leftOverCallback(commitObject, title, body);
@@ -93,7 +106,7 @@ async function expandDetailsLevel(
 		detailsList,
 		(item: string) => item,
 		async (item) => {
-			item = dedent(item);
+			item = dedent(item).trim();
 			if (item.includes(detailsKey)) {
 				result.push(...(await expandDetailsLevel(item, commitObject, `${indentation}${indentationLevel}`)));
 			} else {
@@ -112,6 +125,7 @@ async function expandDetailsLevel(
  * @param listKey The key of the list to parse.
  * @param emptyCheck The check to see if an item in the list is invalid.
  * @param perItemCallback The callback to perform on each item in the list.
+ * @param matterCallback An optional callback to perform on the matter.
  */
 async function parse<T>(
 	commitBody: string,
@@ -120,10 +134,11 @@ async function parse<T>(
 	listKey: string,
 	emptyCheck: (item: T) => string,
 	perItemCallback: (item: T) => void,
+	matterCallback?: (matter: GrayMatterFile<string>) => void,
 ): Promise<void> {
 	let messages: T[];
 	let endMessage = "Skipping...";
-	if (isTest) {
+	if (data.isTest) {
 		endMessage = dedent`
 			Try checking the TOML syntax in https://www.toml-lint.com/, checking https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
 			Also check that you have surrounded the TOML in ${delimiter}!`;
@@ -146,6 +161,8 @@ async function parse<T>(
 			language: "toml",
 		});
 
+		if (matterCallback) matterCallback(parseResult);
+
 		messages = parseResult.data[listKey];
 	} catch (e) {
 		console.error(dedent`
@@ -163,13 +180,13 @@ async function parse<T>(
 		}
 
 		console.error(`\n${endMessage}\n`);
-		if (isTest) throw new Error("Failed Parsing TOML. See above.");
+		if (data.isTest) throw new Error("Failed Parsing TOML. See above.");
 		return;
 	}
 
 	if (!messages || !Array.isArray(messages) || messages.length === 0) {
 		console.error(dedent`
-			Message List (key: '${listKey}') in body:
+			List (key: '${listKey}') in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.`);
@@ -182,14 +199,14 @@ async function parse<T>(
 		}
 		console.error(`${endMessage}\n`);
 
-		if (isTest) throw new Error("Failed Parsing Message List. See Above.");
+		if (data.isTest) throw new Error("Failed Parsing Message List. See Above.");
 		return;
 	}
 	for (let i = 0; i < messages.length; i++) {
 		const item = messages[i];
 		if (!emptyCheck(item)) {
 			console.error(dedent`
-				No Message Title for entry ${i + 1} in body:
+				Missing Requirements for entry ${i + 1} in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
@@ -202,7 +219,7 @@ async function parse<T>(
 			}
 			console.error(`${endMessage}\n`);
 
-			if (isTest) throw new Error("Bad Entry. See Above.");
+			if (data.isTest) throw new Error("Bad Entry. See Above.");
 			continue;
 		}
 		perItemCallback(item);

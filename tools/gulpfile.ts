@@ -25,7 +25,7 @@ export const updateServer = gulp.series(setNotRelease, addVersionServer);
 export const updateAll = gulp.series(setNotRelease, addVersionAll);
 
 import * as changelog from "./tasks/changelog/createChangelog";
-export const createChangelog = changelog.createRootChangelog();
+export const createChangelog = changelog.createRootChangelog;
 
 import sharedTasks from "./tasks/shared";
 import clientTasks from "./tasks/client";

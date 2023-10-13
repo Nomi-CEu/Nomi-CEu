@@ -5,18 +5,17 @@ import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import dedent from "dedent-js";
 import mustache from "mustache";
 import { modChangesAllocations } from "./definitions";
+import ChangelogData from "./changelogData";
 
 /**
- * Pushes the mod changes, with their relative commits, to their respective sub categories in the general category.
- * @param since The ref compare from
- * @param to The ref to compare to
+ * Pushes the mod changes, with their relative commits, to their respective sub categories in the specified category.
  */
-export default async function pushModChangesToGenerals(since: string, to: string): Promise<void> {
-	const oldManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", since));
-	const newManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", to));
+export default async function generateModChanges(data: ChangelogData): Promise<void> {
+	const oldManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", data.since));
+	const newManifest: ModpackManifest = JSON.parse(getFileAtRevision("manifest.json", data.to));
 	const comparisonResult = await compareAndExpandManifestDependencies(oldManifest, newManifest);
 
-	const commitList = await getChangelog(since, to, ["manifest.json"]);
+	const commitList = await getChangelog(data.since, data.to, ["manifest.json"]);
 	const projectIDsToCommits: Map<number, Commit[]> = new Map();
 
 	commitList.forEach((commit) => {

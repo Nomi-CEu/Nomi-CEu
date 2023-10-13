@@ -1,24 +1,35 @@
-import { Category, Commit, FixUpInfo, Parser, SubCategory } from "../../types/changelogTypes";
+import { Category, Commit, Parser, SubCategory } from "../../types/changelogTypes";
 import { categories, defaultIndentation, detailsKey, expandKey, noCategoryKey } from "./definitions";
 import { parseDetails, parseExpand } from "./specialParser";
 import { getChangelog } from "../../util/util";
+import ChangelogData from "./changelogData";
 
-// A hashmap of sha to FixUpInfo. Constant access and search times.
-export let commitFixes: Map<string, FixUpInfo>;
+export default async function parseParser(data: ChangelogData, parser: Parser): Promise<void> {
+	const commits = await getChangelog(data.since, data.to, parser.dirs);
 
-// SHA List
-export let shaList: string[];
+	if (parser.reverse) commits.reverse();
 
-// Commit List
-export let changelogCommitList: Commit[];
+	for (const commit of commits) {
+		if (data.shaList.has(commit.hash)) continue;
 
-export function parserSetup() {
-	commitFixes = new Map<string, FixUpInfo>();
-	shaList = [];
-}
+		if (data.commitFixes.has(commit.hash)) {
+			const fixUpInfo = data.commitFixes.get(commit.hash);
+			commit.message = fixUpInfo.newTitle;
+			commit.body = fixUpInfo.newBody;
+		}
 
-export async function parseParser(parser: Parser, since: string, to: string) {
-	const commits = getChangelog(since, to, )
+		if (parser.skipCallback(commit, commit.message, commit.body)) {
+			if (!parser.addSHACallback || parser.addSHACallback(commit, true)) data.shaList.add(commit.hash);
+			continue;
+		}
+
+		const parsed = await parser.itemCallback(parser, commit, commit.message, commit.body);
+
+		if (!parsed && parser.leftOverCallback) parser.leftOverCallback(commit, commit.message, commit.body, []);
+		if (!parser.addSHACallback || parser.addSHACallback(commit, parsed)) data.shaList.add(commit.hash);
+
+		if (parser.addCommitListCallback(commit, parsed)) data.commitList.push(commit);
+	}
 }
 
 /**

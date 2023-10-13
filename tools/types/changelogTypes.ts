@@ -121,6 +121,12 @@ export interface Parser {
 	dirs?: string[];
 
 	/**
+	 * Whether to parse the changelog in reverse (from oldest to latest).
+	 * If not set, defaults to false.
+	 */
+	reverse?: boolean;
+
+	/**
 	 * Callback to determine whether a commit should be skipped.
 	 * <p>
 	 * If skipped, then all further parsing for the commit will stop. This condition does not include commits which are in the sha list, they are automatically skipped.
@@ -195,8 +201,8 @@ export interface ExpandedMessage {
 
 export interface FixUpInfo {
 	sha: string;
-	newMessage: string;
-	newMessageBody?: string;
+	newTitle: string;
+	newBody?: string;
 }
 
 export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release" | "Cutting Edge Build";

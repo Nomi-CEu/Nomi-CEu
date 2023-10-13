@@ -1,7 +1,7 @@
 import { categories } from "./definitions";
 import { Category, ChangelogMessage, SubCategory } from "../../types/changelogTypes";
 
-export function categoriesInit(): void {
+export function categoriesSetup(): void {
 	// Initialize Category Lists
 	categories.forEach((categoryKey) => {
 		initializeCategorySection(categoryKey);
