@@ -813,7 +813,7 @@ var tributyl_phosphate = MaterialBuilder(32115, "tributyl_phosphate")
 <material:naquadah_enriched>.addFlags(["generate_bolt_screw"]);
 <material:naquadria>.addFlags(["generate_bolt_screw"]);
 <material:redstone>.addFlags(["generate_dense"]);
-<material:trinium>.addFlags(["generate_dense"]);
+<material:trinium>.addFlags(["generate_double_plate", "generate_dense"]);
 <material:iridium>.addFlags(["generate_dense"]);
 <material:lapis>.addFlags(["generate_dense"]);
 <material:graphene>.addFlags(["generate_foil"]);
