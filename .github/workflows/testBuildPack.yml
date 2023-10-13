@@ -13,5 +13,7 @@ jobs:
   build:
     name: Build Pack
     uses: ./.github/workflows/buildpack.yml
+    with:
+      separate_upload: true
     secrets: inherit
 
