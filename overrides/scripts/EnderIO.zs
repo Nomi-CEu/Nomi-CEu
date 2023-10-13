@@ -473,7 +473,7 @@ var capacitors as IItemStack[] = [
 ];
 
 var wafers as IItemStack[] = [
-    <metaitem:wafer.glowstone>,
+    <metaitem:wafer.phosphorus>,
     <metaitem:wafer.naquadah>
 ];
 

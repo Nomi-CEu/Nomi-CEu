@@ -26,13 +26,14 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start()
                           .aisle("CCC", "CVC", "CCC")
-                          .aisle("CCC", "GDG", "CCC")
+                          .aisle("CCC", "GDG", "CMC")
                           .aisle("CSC", "CGC", "CCC")
                           .where('S', controller.self())
                           .where('G', <blockstate:gregtech:transparent_casing>)
                           .where('V', <metastate:gregtech:multiblock_casing:2>)
                           .where('D', <metastate:chisel:diamond:3>)
-                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, true, false, true))
+                          .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
+                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(12) | controller.autoAbilities(true, true, true, true, true, false, false))
                           .build();
                  } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -68,7 +69,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
                     "GDDDG",
                     "CVCVC")
             .aisle(
-                    "CCCCC",
+                    "CCMCC",
                     "GDDDG",
                     "GD DG",
                     "GDDDG",
@@ -90,7 +91,8 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
             .where(' ', CTPredicate.getAny())
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, false, true))
+            .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(45) | controller.autoAbilities(true, true, true, true, false, false, false))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -117,7 +119,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
                 "         ",
                 "  CCCCC  ",
                 "  CVCVC  ",
-                "  CCCCC  ",
+                "  CCMCC  ",
                 "  CVCVC  ",
                 "  CCCCC  ",
                 "         ",
@@ -188,7 +190,8 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('V', <blockstate:gregtech:multiblock_casing>)
             .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>) | controller.autoAbilities(true, true, true, true, false, false, true))
+            .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(115) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -532,7 +535,7 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux>,
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
              <gregtech:ore_apatite_0> * 64,
              <gregtech:ore_tricalcium_phosphate_0> * 64,
              <gregtech:ore_quartzite_0> * 64)
@@ -618,11 +621,11 @@ microverse_projector_basic.recipeMap
             <contenttweaker:quantumflux> * 4,
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
-             <metaitem:gemPerfectDiamond> * 32,
-             <metaitem:gemPerfectRuby> * 64,
-             <metaitem:gemPerfectTopaz> * 48,
-             <metaitem:gemPerfectEmerald> * 32,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
+             <metaitem:devtech:gemPerfectDiamond> * 32,
+             <metaitem:devtech:gemPerfectRuby> * 64,
+             <metaitem:devtech:gemPerfectTopaz> * 48,
+             <metaitem:devtech:gemPerfectEmerald> * 32,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
              <gregtech:ore_silver_0:1> * 64)
@@ -1190,7 +1193,7 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tieroneship_stabilized_matter>)
     .circuit(2)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
              <gregtech:ore_apatite_0> * 64,
              <gregtech:ore_tricalcium_phosphate_0> * 64,
              <gregtech:ore_quartzite_0> * 64)
@@ -1249,11 +1252,11 @@ actualization_chamber.recipeMap
     .EUt(30720)
     .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
     .circuit(1)
-    .outputs(<metaitem:gemPerfectDiamond> * 64,
-             <metaitem:gemPerfectDiamond> * 32,
-             <metaitem:gemPerfectRuby> * 64,
-             <metaitem:gemPerfectTopaz> * 48,
-             <metaitem:gemPerfectEmerald> * 32,
+    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
+             <metaitem:devtech:gemPerfectDiamond> * 32,
+             <metaitem:devtech:gemPerfectRuby> * 64,
+             <metaitem:devtech:gemPerfectTopaz> * 48,
+             <metaitem:devtech:gemPerfectEmerald> * 32,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
              <gregtech:ore_silver_0:1> * 64)
