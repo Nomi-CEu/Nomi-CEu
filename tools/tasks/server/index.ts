@@ -10,7 +10,13 @@ import Bluebird from "bluebird";
 import { ForgeProfile } from "../../types/forgeProfile";
 import { FileDef } from "../../types/fileDef";
 import { downloadOrRetrieveFileDef, getVersionManifest, libraryToPath, relative } from "../../util/util";
-import { modpackManifest, serverDestDirectory, sharedDestDirectory } from "../../globals";
+import {
+	mmcDestDirectory,
+	modDestDirectory,
+	modpackManifest,
+	serverDestDirectory,
+	sharedDestDirectory
+} from "../../globals";
 import del from "del";
 import { VersionManifest } from "../../types/versionManifest";
 import { fetchMods } from "../../util/curseForgeAPI";
@@ -25,7 +31,7 @@ async function serverCleanUp() {
 }
 
 /**
- * Checks and creates all necessary directories so we can build the client safely.
+ * Checks and creates all necessary directories so we can build the server safely.
  */
 async function createServerDirs() {
 	if (!fs.existsSync(serverDestDirectory)) {
@@ -175,13 +181,13 @@ async function downloadMinecraftServer() {
 }
 
 /**
- * Downloads mods according to manifest.json and checks hashes.
+ * Copies server & shared mods.
  */
-async function downloadMods() {
-	return fetchMods(
-		modpackManifest.files.filter((f) => !f.sides || f.sides.includes("server")),
-		serverDestDirectory,
-	);
+async function copyServerMods() {
+	return src([upath.join(modDestDirectory, "*"), upath.join(modDestDirectory, "server", "*")], {
+		nodir: true,
+		resolveSymlinks: false,
+	}).pipe(symlink(upath.join(serverDestDirectory, "mods")));
 }
 
 /**
@@ -259,7 +265,7 @@ export default gulp.series([
 	createServerDirs,
 	downloadForge,
 	downloadMinecraftServer,
-	downloadMods,
+	copyServerMods,
 	copyServerOverrides,
 	copyServerfiles,
 	copyServerLicense,

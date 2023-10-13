@@ -84,6 +84,8 @@ export interface RetrievedFileDef {
  *
  * Internally hashes the URL of the provided FileDef and looks it up in the cache directory.
  * In case of no cache hit, downloads the file and stores within the cache directory for later use.
+ * <p>
+ * @param fileDef The file def to download or retrieve.
  */
 export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<RetrievedFileDef> {
 	const fileNameSha = sha1(fileDef.url);
@@ -121,37 +123,7 @@ export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<Retri
 	try {
 		handle = await fs.promises.open(cachedFilePath, "w");
 
-		let hashFailed = false;
-		const retryStrategy = (err: Error, response: http.IncomingMessage, body: unknown) => {
-			// Verify hashes.
-			if (!err && fileDef.hashes && body) {
-				const success = fileDef.hashes.every((hashDef) => {
-					return compareBufferToHashDef(body as Buffer, hashDef);
-				});
-
-				if (!success) {
-					if (hashFailed) {
-						throw new Error(`Couldn't verify checksums of ${upath.basename(fileDef.url)}`);
-					}
-
-					hashFailed = true;
-					return true;
-				}
-			}
-			return requestretry.RetryStrategies.HTTPOrNetworkError(err, response, body);
-		};
-
-		const data: Buffer = Buffer.from(
-			await requestretry({
-				url: fileDef.url,
-				fullResponse: false,
-				encoding: null,
-				retryStrategy: retryStrategy,
-				maxAttempts: 5,
-			}),
-		);
-
-		await handle.write(data);
+		await handle.write(await downloadFileDef(fileDef));
 		await handle.close();
 
 		return {
@@ -171,6 +143,44 @@ export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<Retri
 }
 
 /**
+ * Similar to downloadOrRetrieveFileDef, but does not check cache.
+ */
+export async function downloadFileDef(fileDef: FileDef): Promise<Buffer> {
+	let hashFailed = false;
+	const retryStrategy = (err: Error, response: http.IncomingMessage, body: unknown) => {
+		if (response.statusCode === 404) {
+			throw new Error(`URL ${fileDef.url} returned status 404.`);
+		}
+		// Verify hashes.
+		if (!err && fileDef.hashes && body) {
+			const success = fileDef.hashes.every((hashDef) => {
+				return compareBufferToHashDef(body as Buffer, hashDef);
+			});
+
+			if (!success) {
+				if (hashFailed) {
+					throw new Error(`Couldn't verify checksums of ${upath.basename(fileDef.url)}`);
+				}
+
+				hashFailed = true;
+				return true;
+			}
+		}
+		return requestretry.RetryStrategies.HTTPOrNetworkError(err, response, body);
+	};
+
+	return Buffer.from(
+		await requestretry({
+			url: fileDef.url,
+			fullResponse: false,
+			encoding: null,
+			retryStrategy: retryStrategy,
+			maxAttempts: 5,
+		}),
+	);
+}
+
+/**
  * Returns artifact name body depending on environment variables.
  * Mostly intended to be called by CI/CD.
  */
@@ -178,10 +188,6 @@ export function makeArtifactNameBody(baseName: string): string {
 	// If the tag is provided by CI, simply just glue it to the base name.
 	if (process.env.GITHUB_TAG) {
 		return `${baseName}-${process.env.GITHUB_TAG}`;
-	}
-	// RC.
-	else if (process.env.RC_VERSION) {
-		return `${baseName}-${process.env.RC_VERSION.replace(/^v/, "")}`;
 	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
@@ -415,4 +421,15 @@ export function relative(from: string, to: string): string {
 	}
 
 	return upath.join(...Array(broken[0].length - 1).fill(".."), ...broken[1]);
+}
+
+/**
+ * Cleans up a file's display name, and returns the version. Works for all tested mods!
+ * @param version The filename/version to cleanup.
+ */
+export function cleanupVersion(version: string): string {
+	if (!version) return "";
+	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
+	const list = version.match(/[\d+.?]+/g);
+	return list[list.length - 1];
 }

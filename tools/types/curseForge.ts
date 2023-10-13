@@ -1,154 +1,121 @@
-interface Author {
+interface CurseForgeAuthor {
+	id: number;
 	name: string;
 	url: string;
-	projectId: number;
-	id: number;
-	projectTitleId?: number;
-	projectTitleTitle: string;
-	userId: number;
-	twitchId?: number;
-}
-
-interface Attachment {
-	id: number;
-	projectId: number;
-	description: string;
-	isDefault: boolean;
-	thumbnailUrl: string;
-	title: string;
-	url: string;
-	status: number;
 }
 
 export interface CurseForgeFileInfo {
 	id: number;
+	gameId: number;
+	modId: number;
+	isAvailable: boolean;
 	displayName: string;
 	fileName: string;
-	fileDate: Date;
-	fileLength: number;
 	releaseType: number;
 	fileStatus: number;
+	hashes: CurseForgeHash[];
+	fileDate: Date;
+	fileLength: number;
+	downloadCount: number;
+	fileSizeOnDisk: number | undefined;
 	downloadUrl: string;
-	isAlternate: boolean;
-	alternateFileId: number;
-	dependencies: Dependency[];
-	isAvailable: boolean;
-	modules: Module[];
-	gameVersion: string[];
-	sortableGameVersion: SortableGameVersion[];
-	hasInstallScript: boolean;
-	isCompatibleWithClient: boolean;
-	categorySectionPackageType: number;
-	restrictProjectFileAccess: number;
-	projectStatus: number;
-	renderCacheId: number;
-	packageFingerprintId: number;
-	gameVersionDateReleased: Date;
-	gameVersionMappingId: number;
-	gameVersionId: number;
-	gameId: number;
-	isServerPack: boolean;
+	gameVersions: string[];
+	sortableGameVersions: CurseForgeSortableGameVersion[];
+	dependencies: CurseForgeDependency[];
+	exposeAsAlternative: boolean | undefined;
+	parentProjectFileId: number | undefined;
+	alternateFileId: number | undefined;
+	isServerPack: boolean | undefined;
+	serverPackFileId: number | undefined;
+	isEarlyAccessContent: boolean | undefined;
+	earlyAccessEndDate: Date | undefined;
+	fileFingerprint: number;
+	modules: CurseForgeModule[];
 }
 
-interface Category {
-	categoryId: number;
-	name: string;
-	url: string;
-	avatarUrl: string;
-	parentId: number;
-	rootId: number;
-	projectId: number;
-	avatarId: number;
-	gameId: number;
-}
-
-interface CategorySection {
+interface CurseForgeCategory {
 	id: number;
 	gameId: number;
 	name: string;
-	packageType: number;
-	path: string;
-	initialInclusionPattern: string;
-	gameCategoryId: number;
+	slug: string;
+	url: string;
+	iconUrl: string;
+	dateModified: Date;
+	isClass: boolean;
+	classId: number;
+	parentCategoryId: number;
 }
 
-interface GameVersionLatestFile {
+interface CurseForgeFileIndex {
 	gameVersion: string;
-	projectFileId: number;
-	projectFileName: string;
-	fileType: number;
+	fileId: number;
+	fileName: string;
+	releaseType: number;
+	gameVersionTypeId: number;
+	modLoader: number;
+}
+
+interface CurseForgeLinkInfo {
+	websiteUrl: string;
+	wikiUrl: string;
+	issuesUrl: string;
+	sourceUrl: string;
+}
+
+interface CurseForgeAsset {
+	id: number;
+	modID: number;
+	title: string;
+	description: string;
+	thumbnailUrl: string;
+	url: string;
 }
 
 export interface CurseForgeModInfo {
 	id: number;
+	gameId: number;
 	name: string;
-	authors: Author[];
-	attachments: Attachment[];
-	websiteUrl: string;
-	gameId: number;
-	summary: string;
-	defaultFileId: number;
-	downloadCount: number;
-	latestFiles: CurseForgeFileInfo[];
-	categories: Category[];
-	status: number;
-	primaryCategoryId: number;
-	categorySection: CategorySection;
 	slug: string;
-	gameVersionLatestFiles: GameVersionLatestFile[];
-	isFeatured: boolean;
-	popularityScore: number;
-	gamePopularityRank: number;
-	primaryLanguage: string;
-	gameSlug: string;
-	gameName: string;
-	portalName: string;
-	dateModified: Date;
-	dateCreated: Date;
-	dateReleased: Date;
-	isAvailable: boolean;
-	isExperiemental: boolean;
-}
-
-export interface CurseForgeFetchedFileInfo {
-	id: number;
-	gameId: number;
-	modId: number;
-	isAvailable: boolean;
-	displayName: string;
-	fileName: string;
-	releaseType: number;
-	fileStatus: number;
-	hashes?: Hash[];
-	fileDate: Date;
-	fileLength: number;
+	links: CurseForgeLinkInfo;
+	summary: string;
+	status: number;
 	downloadCount: number;
-	downloadUrl?: string;
-	gameVersions: string[];
-	sortableGameVersions: SortableGameVersion[];
-	dependencies: Dependency[];
-	alternateFileId: number;
-	isServerPack: boolean;
-	fileFingerprint: number;
-	modules: Module[];
+	isFeatured: boolean;
+	primaryCategoryId: number;
+	categories: CurseForgeCategory[];
+	classId: number;
+	authors: CurseForgeAuthor[];
+	logo: CurseForgeAsset;
+	screenshots: CurseForgeAsset[];
+	mainFileId: number;
+	latestFiles: CurseForgeFileInfo[];
+	latestFilesIndexes: CurseForgeFileIndex[];
+	latestEarlyAccessFilesIndexes: CurseForgeFileIndex[];
+	dateCreated: Date;
+	dateModified: Date;
+	dateReleased: Date;
+	allowModDistribution: boolean;
+	gamePopularityRank: number;
+	isAvailable: boolean;
+	thumbsUpCount: number;
 }
 
-interface Dependency {
+interface CurseForgeDependency {
 	modId: number;
 	relationType: number;
 }
 
-interface Hash {
+interface CurseForgeHash {
 	value: string;
 	algo: number;
 }
 
-interface Module {
+interface CurseForgeModule {
 	name: string;
 	fingerprint: number;
 }
 
-interface SortableGameVersion {
+interface CurseForgeSortableGameVersion {
 	gameVersionName: string;
 	gameVersionPadded: string;
 	gameVersion: string;

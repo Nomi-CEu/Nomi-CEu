@@ -4,6 +4,7 @@ import manifest from "./../manifest.json";
 import { ModpackManifest } from "./types/modpackManifest";
 
 export const sharedDestDirectory = upath.join(buildConfig.buildDestinationDirectory, "shared");
+export const modDestDirectory = upath.join(buildConfig.buildDestinationDirectory, "mods");
 export const clientDestDirectory = upath.join(buildConfig.buildDestinationDirectory, "client");
 export const mmcDestDirectory = upath.join(buildConfig.buildDestinationDirectory, "mmc");
 export const serverDestDirectory = upath.join(buildConfig.buildDestinationDirectory, "server");

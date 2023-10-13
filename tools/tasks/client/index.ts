@@ -3,13 +3,16 @@ import { clientDestDirectory, modpackManifest, overridesFolder, sharedDestDirect
 import fs from "fs";
 import upath from "upath";
 import buildConfig from "../../buildConfig";
-import { fetchProjectsBulk } from "../../util/curseForgeAPI";
+import { fetchFileInfo, fetchFilesBulk, fetchProject, fetchProjectsBulk } from "../../util/curseForgeAPI";
 import log from "fancy-log";
 import rename from "gulp-rename";
 import imagemin from "gulp-imagemin";
 import pngToJpeg from "png-to-jpeg";
 import { MainMenuConfig } from "../../types/mainMenuConfig";
 import del from "del";
+import { cleanupVersion } from "../../util/util";
+import marked from "marked";
+import { createModList } from "../misc/createModList";
 
 async function clientCleanUp() {
 	return del(upath.join(clientDestDirectory, "*"), { force: true });
@@ -77,7 +80,9 @@ function copyClientUpdateNotes() {
  * Copies the changelog file.
  */
 function copyClientChangelog() {
-	return gulp.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(gulp.dest(clientDestDirectory));
+	return gulp
+		.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
+		.pipe(gulp.dest(clientDestDirectory));
 }
 
 /**
@@ -93,30 +98,15 @@ function copyClientOverrides() {
  * Fetches mod links and builds modlist.html.
  */
 async function fetchModList() {
-	log("Fetching mod infos...");
+	const modListOutput = await createModList();
+	const modList = modListOutput.modList;
+	modList.unshift(
+		"# Nomi-CEu Mod Information",
+		`## Number of Mods: ${modListOutput.files.length}`,
+		"## Detailed Mod List:",
+	);
 
-	// Fetch project/addon infos.
-	const modInfos = await fetchProjectsBulk(modpackManifest.files.map((mod) => mod.projectID));
-
-	log(`Fetched ${modInfos.length} mod infos`);
-
-	// Create modlist.html
-	const output = [
-		"<ul>\r\n",
-		...modInfos
-			// Sort mods by their project IDs.
-			.sort((a, b) => a.id - b.id)
-
-			// Create a <li> node for each mod.
-			.map((modInfo) => {
-				return `\t<li><a href="${modInfo.websiteUrl}">${modInfo.name || "Unknown"} (by ${modInfo.authors
-					.map((author) => author.name || "Someone")
-					.join(", ")})</a></li>\r\n`;
-			}),
-		"</ul>",
-	];
-
-	return fs.promises.writeFile(upath.join(clientDestDirectory, "modlist.html"), output.join(""));
+	return fs.promises.writeFile(upath.join(clientDestDirectory, "modlist.html"), marked.parse(modList.join("\n")));
 }
 
 const bgImageNamespace = "minecraft";

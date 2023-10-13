@@ -1,4 +1,3 @@
-// TODO Replace this file with the Post 1.7 Version after 1.7 Release
 import fs from "fs";
 import upath from "upath";
 import { modpackManifest, rootDirectory } from "../../globals";
@@ -8,6 +7,7 @@ import {
 	getFileAtRevision,
 	getLastGitTag,
 	isEnvVariableSet,
+	cleanupVersion,
 } from "../../util/util";
 import { ModpackManifest, ModpackManifestFile } from "../../types/modpackManifest";
 import {
@@ -125,12 +125,6 @@ const internalCategory: Category = {
 	defaultSubCategory: emptySubCategory,
 	subCategories: [emptySubCategory],
 };
-const QBHMCompat: Category = {
-	commitKey: "[QB HM]",
-	categoryName: "QB HM Compat",
-	defaultSubCategory: emptySubCategory,
-	subCategories: [emptySubCategory],
-};
 
 /**
  * Category List
@@ -146,7 +140,6 @@ const categories: Category[] = [
 	bugCategory,
 	generalCategory,
 	internalCategory,
-	QBHMCompat,
 ];
 
 /**
@@ -165,6 +158,7 @@ export async function createChangelog(): Promise<void> {
 	else if (since == "latest-dev-preview") {
 		since = getLastGitTag(since);
 	}
+
 	// Get Release Type
 	let releaseType = "Release";
 	if (isEnvVariableSet("RELEASE_TYPE")) releaseType = process.env.RELEASE_TYPE;
@@ -188,37 +182,22 @@ export async function createChangelog(): Promise<void> {
 
 	// Parse Commit List
 	for (const commit of commitList) {
-		let skipParsingBody = false;
-
-		if (!commit.message.includes(skipKey)) {
-			// If contained keys
-			const successParsingMessage = await parseCommit(commit, true);
-			if (successParsingMessage) {
-				skipParsingBody = true;
+		if (commit.body) {
+			if (!commit.body.includes(skipKey)) {
+				if (!(await parseCommitBody(commit.message, commit.body, commit))) {
+					generalCategory.changelogSection.get(other).push({
+						commitMessage: commit.message,
+						commitObjects: [commit],
+					});
+				}
 				changelogCommitList.push(commit);
 			}
 		} else {
-			skipParsingBody = true;
-		}
-
-		if (!skipParsingBody) {
-			if (commit.body) {
-				if (!commit.body.includes(skipKey)) {
-					if (!(await parseCommit(commit))) {
-						generalCategory.changelogSection.get(other).push({
-							commitMessage: commit.message,
-							commitObjects: [commit],
-						});
-					}
-					changelogCommitList.push(commit);
-				}
-			} else {
-				generalCategory.changelogSection.get(other).push({
-					commitMessage: commit.message,
-					commitObjects: [commit],
-				});
-				changelogCommitList.push(commit);
-			}
+			generalCategory.changelogSection.get(other).push({
+				commitMessage: commit.message,
+				commitObjects: [commit],
+			});
+			changelogCommitList.push(commit);
 		}
 	}
 
@@ -236,7 +215,7 @@ export async function createChangelog(): Promise<void> {
 		// If not in parsed SHA List, and has a body
 		if (commit.body && !SHAList.includes(commit.hash)) {
 			if (!commit.body.includes(skipKey)) {
-				if (await parseCommit(commit)) {
+				if (await parseCommitBody(commit.message, commit.body, commit)) {
 					changelogCommitList.push(commit);
 				}
 			}
@@ -245,17 +224,6 @@ export async function createChangelog(): Promise<void> {
 
 	// Push mod update blocks to General Changes.
 	await pushModChangesToGenerals(since, to);
-
-	// Push key [QB HM] to QB's HM category
-	QBHMCompat.changelogSection.get(emptySubCategory).forEach((changelogMessage) => {
-		questBookCategory.changelogSection.get(hardMode).push(changelogMessage);
-	});
-
-	// Remove QB HM Compat Category from list.
-	const index = categories.indexOf(QBHMCompat);
-	if (index > -1) {
-		categories.splice(index, 1);
-	}
 
 	// If the UPDATENOTES.md file is present, prepend it verbatim.
 	if (fs.existsSync("../UPDATENOTES.md")) {
@@ -283,7 +251,7 @@ export async function createChangelog(): Promise<void> {
 	builder.push("{{{ CF_REDIRECT }}}", "");
 	builder.push(`# Changes Since ${since}`, "");
 
-	// Push Sections of Changelog
+	// Push All Changelog Categories
 	categories.forEach((category) => {
 		pushCategory(category);
 	});
@@ -316,7 +284,7 @@ export async function createChangelog(): Promise<void> {
 }
 
 /**
- * Pushes a given category to the builders.
+ * Pushes a given category to the builder.
  */
 function pushCategory(category: Category) {
 	const categoryLog: string[] = [];
@@ -342,10 +310,9 @@ function pushCategory(category: Category) {
 			// Push Log
 			list.forEach((changelogMessage) => {
 				categoryLog.push(formatChangelogMessage(changelogMessage));
-				// Push Sub Messages
 				if (changelogMessage.subChangelogMessages) {
 					changelogMessage.subChangelogMessages.forEach((subMessage) => {
-						categoryLog.push(formatChangelogMessage(subMessage, true));
+						categoryLog.push(formatChangelogMessage(subMessage));
 					});
 				}
 			});
@@ -364,7 +331,7 @@ function pushCategory(category: Category) {
 
 /**
  * Initializes the categorySection field of the categoryKey.
- * @param category The Category to initialize the categorySection of.
+ * @param category The Category Key to grab the Sub Categories from
  */
 function initializeCategorySection(category: Category): void {
 	const categorySection = new Map<SubCategory, ChangelogMessage[]>();
@@ -431,18 +398,6 @@ function sortCommitList<T>(
 }
 
 /**
- * Parses a commit, using either its message, or its description. Will be removed post 1.7.
- * @param commit The commit to parse
- * @param useMessage Whether to use the commit message. Defaults to false
- */
-async function parseCommit(commit: Commit, useMessage = false): Promise<boolean> {
-	if (useMessage) {
-		return sortCommit(commit.message, commit.message, commit, defaultIndentation, true);
-	}
-	return await parseCommitBody(commit.message, commit.body, commit);
-}
-
-/**
  * Parses a commit body.
  * @param commitMessage The commit message to put into the changelog.
  * @param commitBody The commit body to parse with.
@@ -470,24 +425,14 @@ async function parseCommitBody(commitMessage: string, commitBody: string, commit
  * @param commitBody The body to use to sort
  * @param commit The commit object to grab date, author and SHA from
  * @param indentation The indentation of the message, if needed. Defaults to "".
- * @param compat If tag is found in message, whether to remove. REMOVE AFTER 1.7!
  * @return added If the commit message was added to a category
  */
-function sortCommit(
-	message: string,
-	commitBody: string,
-	commit: Commit,
-	indentation = defaultIndentation,
-	compat = false,
-): boolean {
+function sortCommit(message: string, commitBody: string, commit: Commit, indentation = defaultIndentation): boolean {
 	const sortedCategories: Category[] = findCategories(commitBody);
 	if (sortedCategories.length === 0) return false;
 
 	sortedCategories.forEach((category) => {
 		const subCategory = findSubCategory(commitBody, category);
-		if (message.includes(category.commitKey) && compat) {
-			message = message.replace(category.commitKey, "").trim();
-		}
 		category.changelogSection.get(subCategory).push({
 			commitMessage: message,
 			commitObjects: [commit],
@@ -531,14 +476,13 @@ function findSubCategory(commitBody: string, category: Category): SubCategory {
 /**
  * Formats a Changelog Message
  * @param changelogMessage The message to format.
- * @param subMessage Whether this message is a subMessage (used in details). Set to true to make it a subMessage (different parsing). Defaults to false.
  * @return string Formatted Changelog Message
  */
-function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): string {
+function formatChangelogMessage(changelogMessage: ChangelogMessage): string {
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	const message = changelogMessage.commitMessage.trim();
 
-	if (changelogMessage.commitObjects && !subMessage) {
+	if (changelogMessage.commitObjects) {
 		if (changelogMessage.commitObjects.length > 1) {
 			const authors: string[] = [];
 			const formattedCommits: string[] = [];
@@ -818,7 +762,7 @@ async function pushModChangesToGenerals(since: string, to: string) {
  * @param info The mod change info, containing the mod name and versions.
  * @param template The message template to replace in.
  */
-function getModChangeMessage(info: ModChangeInfo, template: string): string {
+function getModChangeMessage(info: ModChangeInfo, template: string) {
 	const oldVersion = cleanupVersion(info.oldVersion);
 	const newVersion = cleanupVersion(info.newVersion);
 
@@ -831,17 +775,6 @@ function getModChangeMessage(info: ModChangeInfo, template: string): string {
 		oldVersion: oldVersion,
 		newVersion: newVersion,
 	});
-}
-
-/**
- * Cleans up a file name, and returns the version. Works for all tested mods!
- * @param version The filename/version to cleanup.
- */
-function cleanupVersion(version: string): string {
-	if (!version) return "";
-	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
-	const list = version.match(/[\d+.?]+/g);
-	return list[list.length - 1];
 }
 
 /**

@@ -1,4 +1,4 @@
-import {modpackManifest} from "../../../globals";
+import { modpackManifest } from "../../globals";
 
 /**
  * Transform the version field of manifest.json.
@@ -7,11 +7,6 @@ export default async function transformManifestVersion(): Promise<void> {
 	// We're building a tag.
 	if (process.env.GITHUB_TAG) {
 		modpackManifest.version = process.env.GITHUB_TAG.replace(/^v/, "");
-	}
-	// If we're building a release candidate, transform it appropriately.
-	else if (process.env.RC_VERSION) {
-		modpackManifest.version = process.env.RC_VERSION;
-		// modpackManifest.version = [process.env.RC_VERSION, "rc"].join("-"); // No need for rc at end of name
 	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {

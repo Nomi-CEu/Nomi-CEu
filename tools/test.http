@@ -1,0 +1,15 @@
+POST https://api.curseforge.com/v1/mods/32274
+Content-Type:'application/json',
+Accept:'application/json',
+x-api-key:'API_KEY'
+Content-Type: application/json
+X-Api-Key: $2a$10$xRgpnbeevUa/xMIuACGE4eQgPygtB.geXWwdUbX7D1mb8Ir0J9/hC
+
+
+###
+
+POST https://api.curseforge.com/v1/mods HTTP/1.1
+
+Content-Type: application/json
+Accept: application/json
+x-api-key: $2a$10$xRgpnbeevUa/xMIuACGE4eQgPygtB.geXWwdUbX7D1mb8Ir0J9/hC
