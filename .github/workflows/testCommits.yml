@@ -9,7 +9,7 @@ on:
 
 jobs:
   testCommits:
-    if: ${{ github.repository_owner == 'Nomi-CEu' }}
+    if: "${{ github.repository_owner == 'Nomi-CEu' }}"
     name: Test Commits
     uses: ./.github/workflows/createchangelog.yml
     with:
