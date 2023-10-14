@@ -6,11 +6,12 @@ on:
 
 # if a second commit is pushed quickly after the first, cancel the first one's build
 concurrency:
-  group: build-pack-${{github.head_ref}}
+  group: "${{ github.workflow }}-${{ github.head_ref || github.run_id }}"
   cancel-in-progress: true
   
 jobs:
   build:
+    if: "${{ github.repository_owner == 'Nomi-CEu' }} || ${{ github.event_name == 'pull_request' }}"
     name: Build Pack
     uses: ./.github/workflows/buildpack.yml
     with:
