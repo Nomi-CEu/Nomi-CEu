@@ -13,15 +13,6 @@ concurrency:
   cancel-in-progress: true
   
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - 
-        run: |
-          echo ${{ github.repository_owner }}
-
-      - if: github.event_name == 'pull_request'
-        run: echo ${{ github.event.pull_request.head.repo.owner.name }}
   build:
     # Only allow runs from commits to Nomi-CEu Branches, and pull requests from Nomi-CEu base repo
     if: "${{ github.repository_owner == 'IntegerLimit' && ( !github.event.pull_request || github.event.pull_request.head.repo.owner.name == 'IntegerLimit' ) }}"
