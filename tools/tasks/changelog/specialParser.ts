@@ -20,8 +20,12 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 		fixUpKey,
 		fixUpList,
 		(item: FixUpInfo) => item.sha && item.newTitle,
-		(item) => data.commitFixes.set(item.sha, item),
+		(item) => {
+			// Only override if no other overrides, from newer commits, set
+			if (!data.commitFixes.has(item.sha)) data.commitFixes.set(item.sha, item);
+		},
 		(matter) => {
+			// Must override, even if newer commits specified changes, as need to remove fixup data
 			data.commitFixes.set(commit.hash, {
 				sha: commit.hash,
 				newTitle: commit.message,

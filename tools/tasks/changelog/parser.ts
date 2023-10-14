@@ -7,8 +7,6 @@ import ChangelogData from "./changelogData";
 export default async function parseParser(data: ChangelogData, parser: Parser): Promise<void> {
 	const commits = await getChangelog(data.since, data.to, parser.dirs);
 
-	if (parser.reverse) commits.reverse();
-
 	for (const commit of commits) {
 		if (data.shaList.has(commit.hash)) continue;
 

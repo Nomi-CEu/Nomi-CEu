@@ -121,7 +121,6 @@ const defaultParsingCallback = async (
 /* Parsing Categories */
 
 const fixupParsing: Parser = {
-	reverse: true,
 	skipCallback: () => false,
 	// No need to care about message/body, never parse expand/details commits
 	itemCallback: (_parser, commit) => parseFixUp(commit),
