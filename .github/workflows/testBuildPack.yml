@@ -15,7 +15,7 @@ concurrency:
 jobs:
   build:
     # Only allow runs from commits to Nomi-CEu Branches, and pull requests from Nomi-CEu base repo
-    if: "${{ github.repository_owner == 'Nomi-CEu' }}"
+    if: "${{ github.repository_owner == 'IntegerLimit' }}"
     name: Build Pack
     uses: ./.github/workflows/buildpack.yml
     with:
