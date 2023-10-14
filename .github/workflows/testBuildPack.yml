@@ -24,7 +24,7 @@ jobs:
         run: echo ${{ github.event.pull_request.head.repo.owner.name }}
   build:
     # Only allow runs from commits to Nomi-CEu Branches, and pull requests from Nomi-CEu base repo
-    if: github.repository_owner == 'IntegerLimit' && ( !github.event_name == 'pull_request' || github.event.pull_request.head.repo.owner.name == 'IntegerLimit' )
+    if: "${{ github.event_name == 'pull_request' && github.repository_owner == 'IntegerLimit' || ( github.event.pull_request.head.repo.owner.name == 'IntegerLimit' && github.repository_owner == 'IntegerLimit' ) }}"
     name: Build Pack
     uses: ./.github/workflows/buildpack.yml
     with:
