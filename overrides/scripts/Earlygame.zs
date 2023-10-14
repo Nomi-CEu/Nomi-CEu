@@ -419,6 +419,37 @@ recipes.addShaped(<naturescompass:naturescompass>,
 	[[<ore:treeSapling>, <minecraft:compass>, <ore:treeSapling>],
 	[<ore:logWood>, <metaitem:prospector.lv>, <ore:logWood>],
 	[<ore:treeSapling>, <ore:logWood>, <ore:treeSapling>]]);
+	
+// I/O Buses
+// Removals in Groovy
+
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ore:chest>], [<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:item_bus.import.lv>, [[<ore:chest>], [<metaitem:hull.lv>]]);
+recipes.addShaped(<metaitem:item_bus.import.mv>, [[<ore:chest>], [<metaitem:hull.mv>]]);
+recipes.addShaped(<metaitem:item_bus.import.hv>, [[<ore:chest>], [<metaitem:hull.hv>]]);
+recipes.addShaped(<metaitem:item_bus.import.ev>, [[<ore:chest>], [<metaitem:hull.ev>]]);
+recipes.addShaped(<metaitem:item_bus.import.iv>, [[<ore:chest>], [<metaitem:hull.iv>]]);
+
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.lv>, [[<metaitem:hull.lv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.mv>, [[<metaitem:hull.mv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.hv>, [[<metaitem:hull.hv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.ev>, [[<metaitem:hull.ev>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.iv>, [[<metaitem:hull.iv>], [<ore:chest>]]);
+
+recipes.addShaped(<metaitem:fluid_hatch.import.ulv>, [[<ore:blockGlass>], [<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.lv>, [[<ore:blockGlass>], [<metaitem:hull.lv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.mv>, [[<ore:blockGlass>], [<metaitem:hull.mv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.hv>, [[<ore:blockGlass>], [<metaitem:hull.hv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.ev>, [[<ore:blockGlass>], [<metaitem:hull.ev>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.iv>, [[<ore:blockGlass>], [<metaitem:hull.iv>]]);
+
+recipes.addShaped(<metaitem:fluid_hatch.export.ulv>, [[<metaitem:hull.ulv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.lv>, [[<metaitem:hull.lv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.mv>, [[<metaitem:hull.mv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.hv>, [[<metaitem:hull.hv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.ev>, [[<metaitem:hull.ev>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.iv>, [[<metaitem:hull.iv>], [<ore:blockGlass>]]);
 
 /*arc_furnace.recipeBuilder()
     .inputs(<minecraft:iron_door>)
