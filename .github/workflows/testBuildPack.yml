@@ -1,6 +1,9 @@
 name: "[NOT CALLABLE] Test Build Pack"
 on:
   push:
+    branches:
+      - main
+      - test_buildscript*
 
   pull_request:
 
