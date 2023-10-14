@@ -1,0 +1,35 @@
+[FIXUP]
+[[fixes]]
+sha = "c2771e2fcd7878354d2206e8a8d1ff563a877dc9"
+newTitle = "Test"
+newBody = """
+  [FIXUP]
+  [[fixes]]
+  sha = \"bd58b9072f45d647734ae66168cbd27bf9b2f220\"
+  newTitle = \"Update GT and Related Mods for 1.7"
+  newBody = \"\"\"
+    [EXPAND]
+    [[messages]]
+    messageTitle = \\"Update GT to 2.7.*\\"
+    messageBody = \\"\\"\\"
+      [BREAKING]
+      [DETAILS]
+      details = [
+      \\\"Adds Assembly Line Research\\\",
+      \\\"Adds ME Hatches and Buses, for combining Multiblocks with AE Networks\\\",
+      \\\"Adds EU Multiblock Power Storage\\\",
+      \\\"Adds Multiblock Transformer and Laser Power Transfer\\\",
+      \\\"Adds Long Distance Pipes\\\",
+      \\\"Reworked & Improved Multiblock UIs\\\",
+      \\\"Creating Waypoints in the Prospector\\\",
+      \\\"Fixing many bugs\\\",
+      \\\"And many more!\\\"
+      ]
+      [DETAILS]
+    \\"\\"\\"
+    [EXPAND]
+  \"\"\"
+  [FIXUP]
+"""
+[FIXUP]
+
