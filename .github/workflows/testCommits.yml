@@ -16,3 +16,5 @@ jobs:
       release_type: "Cutting Edge Build"
       test: true
     secrets: inherit
+    permissions:
+      contents: write
