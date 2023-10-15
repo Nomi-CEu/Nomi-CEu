@@ -18,12 +18,12 @@ on:
           - 'Release'
           - 'Beta Release'
           - 'Alpha Release'
-      not_release:
+      is_release:
         description: |
-          Whether this commit is **NOT** a release. See CONTRIBUTING.md for more details.
+          Whether this commit is a release. Usually, leave this set to true. See CONTRIBUTING.md for more details.
         type: boolean
         required: true
-        default: false
+        default: true
 
   workflow_call:
     inputs:
@@ -38,19 +38,21 @@ on:
         description: 'Release Type. Will be ignored if not a release.'
         type: string
         required: true
-      not_release:
+      is_release:
         description: |
-          Whether this commit is **NOT** a release. See CONTRIBUTING.md for more details.
+          Whether this commit is a release. See CONTRIBUTING.md for more details.
         type: boolean
         required: false
         default: false
 jobs:
-  deploy:
+  # Release Commit Steps
+  createReleaseCommit:
     name: Create Release Commit (${{ inputs.version }})
     runs-on: ubuntu-latest
+    if: "${{ inputs.is_release }}"
     env:
-      VERSION: ${{ inputs.version }}
-      RELEASE_TYPE: ${{ inputs.release_type }}
+      VERSION: "${{ inputs.version }}"
+      RELEASE_TYPE: "${{ inputs.release_type }}"
     permissions:
       contents: write
     steps:
@@ -79,16 +81,17 @@ jobs:
       - name: Setup NPM Packages
         working-directory: ./tools
         run: npm ci
-        
-      # Release Commit Steps
+
       - name: Set Release Version
-        if: ${{ !inputs.not_release }}
         working-directory: ./tools
         run: |
           npx gulp addVersionAll
 
+      - name: Update Mod List
+        working-directory: ./tools
+        run: npx gulp updateModList
+
       - name: Commit and Push Release Changes
-        if: ${{ !inputs.not_release }}
         uses: "stefanzweifel/git-auto-commit-action@v4"
         id: "commit-release"
         with:
@@ -97,17 +100,52 @@ jobs:
           tagging_message: "${{ inputs.version }}"
 
       - name: Throw Error if No Release Changes were Detected
-        if: ${{ !inputs.not_release && steps.commit-release.outputs.changes_detected == 'false' }}
+        if: ${{ steps.commit-release.outputs.changes_detected == 'false' }}
         run: |
           echo "No Changes were Made."
           exit 1
 
-      # Non-Release Commit Steps
+  # Non-Release Commit Steps
+  updateFilesFromTemplate:
+    name: Update Files from Templates
+    runs-on: ubuntu-latest
+    if: "${{ !inputs.is_release }}"
+    env:
+      VERSION: "${{ inputs.version }}"
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore Cached Files
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            ~/.npm
+            ./.cache
+            ./tools/node_modules
+          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          restore-keys: ${{ runner.os }}-bunny-
+
+      - name: Setup NodeJS v16
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          check-latest: true
+
+      - name: Setup NPM Packages
+        working-directory: ./tools
+        run: npm ci
+
       - name: Update Files from Templates
         if: ${{ inputs.not_release }}
         working-directory: ./tools
         run: |
-          npx gulp updateAll
+          npx gulp updateTemplatesAll
 
       - name: Commit and Push Template Changes
         if: ${{ inputs.not_release }}
