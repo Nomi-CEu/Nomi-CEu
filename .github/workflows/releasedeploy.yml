@@ -38,6 +38,7 @@ jobs:
     with:
       version: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
+    secrets: inherit
     
   build:
     name: Build Pack (${{ inputs.tag }})
