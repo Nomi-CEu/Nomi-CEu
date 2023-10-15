@@ -43,7 +43,7 @@ on:
           Whether this commit is a release. See CONTRIBUTING.md for more details.
         type: boolean
         required: false
-        default: false
+        default: true
 jobs:
   # Release Commit Steps
   createReleaseCommit:
