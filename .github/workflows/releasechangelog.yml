@@ -29,6 +29,7 @@ jobs:
     with:
       version: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
+    secrets: inherit
     
   createChangelog:
     name: Create Changelog (${{ inputs.tag }})
