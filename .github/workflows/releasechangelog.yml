@@ -30,6 +30,8 @@ jobs:
       version: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
     secrets: inherit
+    permissions:
+      contents: write
     
   createChangelog:
     name: Create Changelog (${{ inputs.tag }})
