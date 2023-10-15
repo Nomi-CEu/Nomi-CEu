@@ -43,3 +43,5 @@ jobs:
       compare_tag: ${{ inputs.compare_tag }}
       branch: ${{ inputs.branch }}
     secrets: inherit
+    permissions:
+      contents: write
