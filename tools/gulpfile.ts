@@ -19,10 +19,10 @@ export const addVersionAll = gulp.series(checkRelease, releaseCommit.updateAll);
 
 // Non Release Tasks
 const setNotRelease = releaseCommit.setNotRelease;
-export const updateIssue = gulp.series(setNotRelease, addVersionIssue);
-export const updateRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
-export const updateServer = gulp.series(setNotRelease, addVersionServer);
-export const updateAll = gulp.series(setNotRelease, addVersionAll);
+export const updateTemplatesIssue = gulp.series(setNotRelease, addVersionIssue);
+export const updateTemplatesRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
+export const updateTemplatesServer = gulp.series(setNotRelease, addVersionServer);
+export const updateTemplatesAll = gulp.series(setNotRelease, addVersionAll);
 
 import * as changelog from "./tasks/changelog/createChangelog";
 export const createChangelog = changelog.createRootChangelog;
@@ -50,8 +50,8 @@ export const zipLang = zip.zipLang;
 export const zipMMC = zip.zipMMC;
 export const zipAll = zip.zipAll;
 
-import createModList from "./tasks/misc/createModList";
-export const createModLists = createModList;
+import updateModListTask from "./tasks/misc/createModList";
+export const updateModList = updateModListTask;
 
 import * as gha from "./tasks/misc/gha";
 export const makeArtifactNames = gha.makeArtifactNames;
