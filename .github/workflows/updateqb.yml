@@ -13,7 +13,7 @@ on:
 
 jobs:
   updateQB:
-    if: "${{ github.repository_owner == 'Nomi-CEu' }}"
+    if: "${{ github.repository_owner == 'IntegerLimit' }}"
     name: Update Quest Book Jsons and Lang (${{ inputs.tag }})
     runs-on: ubuntu-latest
     permissions:
