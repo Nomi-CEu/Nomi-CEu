@@ -23,6 +23,7 @@ on:
         required: false
         default: ''
         options:
+          - ''
           - 'Release'
           - 'Beta Release'
           - 'Alpha Release'
