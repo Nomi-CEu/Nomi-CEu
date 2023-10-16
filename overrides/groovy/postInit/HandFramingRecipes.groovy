@@ -1,16 +1,25 @@
-import net.minecraft.nbt.NBTTagCompound
+// Dummy Recipes for Hand Framing Tool
 
-crafting.addShapeless("contenttweaker:hft_sticks", item('contenttweaker:hand_framing_tool').withNbt([sticks: 100]), [item('contenttweaker:hand_framing_tool'), item('minecraft:stick')])
+crafting.addShaped('hand_framing_trim_front_side', item('framedcompactdrawers:framed_compact_drawer').withNbt(["MatT": ["id": "extendedcrafting:storage", "Count": (byte) 1, "Damage": (short) 4], "MatF": ["id": "xtones:zane", "Count": (byte) 1, "Damage": (short) 15], "MatS": ["id": "xtones:zane", "Count": (byte) 1, "Damage": (short) 0]]), [
+        [item('xtones:zane', 0), item('extendedcrafting:storage', 4), null],
+        [item('xtones:zane', 15), item('contenttweaker:hand_framing_tool'), null],
+        [null, null, null]
+]);
 
-NBTTagCompound tagCompound = new NBTTagCompound()
+crafting.addShaped('hand_framing_trim_side', item('framedcompactdrawers:framed_compact_drawer').withNbt(["MatT": ["id": "extendedcrafting:storage", "Count": (byte) 1, "Damage": (short) 4], "MatS": ["id": "xtones:zane", "Count": (byte) 1, "Damage": (short) 0]]), [
+        [item('xtones:zane', 0), item('extendedcrafting:storage', 4), null],
+        [null, item('contenttweaker:hand_framing_tool'), null],
+        [null, null, null]
+]);
 
-tagCompound.setInteger("sticks", 100)
+crafting.addShaped('hand_framing_front_side', item('framedcompactdrawers:framed_compact_drawer').withNbt(["MatF": ["id": "xtones:zane", "Count": (byte) 1, "Damage": (short) 15], "MatS": ["id": "xtones:zane", "Count": (byte) 1, "Damage": (short) 0]]), [
+        [item('xtones:zane', 0), null, null],
+        [item('xtones:zane', 15), item('contenttweaker:hand_framing_tool'), null],
+        [null, null, null]
+]);
 
-tagCompound.setTag("MatS", item('minecraft:wool', 7).writeToNBT(new NBTTagCompound()))
-tagCompound.setTag("MatT", item('minecraft:stained_hardened_clay').writeToNBT(new NBTTagCompound()))
-tagCompound.setTag("MatF", item('minecraft:sea_lantern').writeToNBT(new NBTTagCompound()))
-
-var result = item('contenttweaker:hand_framing_tool')
-result.setTagCompound(tagCompound)
-
-crafting.addShapeless("contenttweaker:hft_decorate", result, [item('contenttweaker:hand_framing_tool'), item('minecraft:stick'), item('minecraft:wool', 7)])
+crafting.addShaped('hand_framing_side', item('framedcompactdrawers:framed_compact_drawer').withNbt(["MatS": ["id": "xtones:zane", "Count": (byte) 1, "Damage": (short) 0]]), [
+        [item('xtones:zane', 0), null, null],
+        [null, item('contenttweaker:hand_framing_tool'), null],
+        [null, null, null]
+]);
