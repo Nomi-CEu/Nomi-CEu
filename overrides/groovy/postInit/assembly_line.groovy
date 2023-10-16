@@ -1,4 +1,5 @@
 import gregtech.recipes.builders.*
+import io.sommers.packmode.PMConfig
 
 def assembly_line = mods.gregtech.assembly_line
 
@@ -89,7 +90,7 @@ mods.gregtech.assembly_line.recipeBuilder()
     .fluidInputs(fluid('soldering_alloy') * 1152, fluid('naquadria') * 576)
     .outputs(item('contenttweaker:universalnavigator'))
     .stationResearch(b -> b.researchStack(item('contenttweaker:stellarcreationdata')).CWUt(96).EUt(491520))
-    .duration(1200).EUt(491520)
+    .duration(6000).EUt(491520)
     .buildAndRegister()
 
 // Ultimate Material
@@ -144,3 +145,14 @@ mods.gregtech.assembly_line.recipeBuilder()
     .stationResearch(b -> b.researchStack(metaitem('world_accelerator.ev')).CWUt(128).EUt(491520))
     .duration(12000).EUt(491520)
     .buildAndRegister()
+
+// UV Field Generator (Hard mode only)
+if (PMConfig.getPackMode() == "expert") {
+    mods.gregtech.assembly_line.recipeBuilder()
+        .inputs(ore('frameGtTritanium'), ore('plateTritanium') * 6, metaitem('gravistar'), metaitem('emitter.uv') * 2, ore('circuitUv') * 2, ore('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, ore('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, ore('cableGtSingleYttriumBariumCuprate') * 4)
+        .fluidInputs(fluid('soldering_alloy') * 1728, fluid('naquadria') * 576, fluid('taranium') * 288)
+        .outputs(metaitem('field.generator.uv'))
+        .stationResearch(b -> b.researchStack(metaitem('field.generator.zpm')).CWUt(48).EUt(122880))
+        .duration(600).EUt(100000)
+        .buildAndRegister()
+}

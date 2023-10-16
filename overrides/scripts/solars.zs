@@ -77,7 +77,7 @@ assembly_line.recipeBuilder()
 	.fluidInputs([<liquid:enderium> * 1296])
 	.outputs(<solarflux:solar_panel_8> * 4)
 	.property("research", <solarflux:solar_panel_7>)
-	.duration(1600).EUt(30720)
+	.duration(4800).EUt(30720)
 	.buildAndRegister();
 
 recipes.addShaped(<solarflux:photovoltaic_cell_6> * 6, [
@@ -89,7 +89,7 @@ assembler.recipeBuilder()
 	.inputs([<solarflux:solar_panel_6> * 2, <solarflux:photovoltaic_cell_5> * 3, <metaitem:plateOsmium> * 2, <enderio:item_endergy_conduit:4>])
 	.fluidInputs([<liquid:signalum> * 1296])
 	.outputs(<solarflux:solar_panel_7> * 4)
-	.duration(800).EUt(7680)
+	.duration(2400).EUt(7680)
 	.buildAndRegister();
 
 recipes.addShaped(<solarflux:photovoltaic_cell_5> * 6, [
