@@ -1,3 +1,6 @@
+import io.sommers.packmode.PMConfig
+
+if (PMConfig.getPackMode() == "normal") {
 // Input Buses
 // ULV Input Bus * 1
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 250])
@@ -211,3 +214,22 @@ mods.gregtech.macerator.removeByInput(8, [metaitem('fluid_hatch.export.ev')], nu
 mods.gregtech.arc_furnace.removeByInput(30, [metaitem('fluid_hatch.export.iv')], [fluid('oxygen') * 1480])
 // Tungstensteel Dust * 8
 mods.gregtech.macerator.removeByInput(32, [metaitem('fluid_hatch.export.iv')], null)
+
+// 4x/9x Hatches
+// EV Quadruple Input Hatch * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('fluid_hatch.import.ev'), metaitem('pipeQuadrupleFluidTitanium'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('polytetrafluoroethylene') * 576])
+// EV Quadruple Output Hatch * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('fluid_hatch.export.ev'), metaitem('pipeQuadrupleFluidTitanium'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('polytetrafluoroethylene') * 576])
+// IV Quadruple Input Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.import.iv'), metaitem('pipeQuadrupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('polytetrafluoroethylene') * 576])
+// IV Quadruple Output Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.export.iv'), metaitem('pipeQuadrupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('polytetrafluoroethylene') * 576])
+// EV Nonuple Input Hatch * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('fluid_hatch.import.ev'), metaitem('pipeNonupleFluidTitanium'), metaitem('circuit.integrated').withNbt(["Configuration": 9])], [fluid('polytetrafluoroethylene') * 1296])
+// EV Nonuple Output Hatch * 1
+mods.gregtech.assembler.removeByInput(1920, [metaitem('fluid_hatch.export.ev'), metaitem('pipeNonupleFluidTitanium'), metaitem('circuit.integrated').withNbt(["Configuration": 9])], [fluid('polytetrafluoroethylene') * 1296])
+// IV Nonuple Input Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.import.iv'), metaitem('pipeNonupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 9])], [fluid('polytetrafluoroethylene') * 1296])
+// IV Nonuple Output Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.export.iv'), metaitem('pipeNonupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(["Configuration": 9])], [fluid('polytetrafluoroethylene') * 1296])
+} 
