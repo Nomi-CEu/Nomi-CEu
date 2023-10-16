@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -3227,7 +3226,7 @@
     },
     "53:10": {
       "preRequisites:11": [
-        933
+        56
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -8928,7 +8927,9 @@
     "156:10": {
       "preRequisites:11": [
         60,
-        150
+        1040,
+        91,
+        836
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -11059,7 +11060,6 @@
     },
     "195:10": {
       "preRequisites:11": [
-        258,
         335,
         852,
         928
@@ -13370,7 +13370,8 @@
     "236:10": {
       "preRequisites:11": [
         95,
-        894
+        894,
+        1041
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15289,7 +15290,8 @@
     "271:10": {
       "preRequisites:11": [
         331,
-        776
+        776,
+        1038
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16125,12 +16127,13 @@
     "286:10": {
       "preRequisites:11": [
         192,
-        198
+        198,
+        1029
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Assembly Line§r is a large multiblock structure that crafts complex materials, similar to an §3Assembling Machine§r. These will be crucial going forward for making a variety of components and machinery.\n\nMake sure your power generation and circuit production are up to the challenge. §2None of the Assembly Line recipes require programmed circuits anymore.§r\n\nNotice that all numbers of required items are §emultiples of 11.§r This is to make an Assembly Line that\u0027s 11 units long, allowing for 10 inputs and one output. This is a large enough Assembly Line to make a §aFusion Reactor Controller Mk1§r, but you\u0027ll need to expand to more inputs for later projects.\n\n§2You will also need a Maintenance Hatch.\n\n§aFluid Input Hatches§r can replace any of the §6Steel Casings§r along the bottom outside except for the Casings touching the §aOutput Bus§r. For the most part, ULV ones work fine, but a few recipes will need an LV one.\n\nThe §aEnergy Input Hatches§r along the top can be replaced by Steel Casings: you only need the one Energy Input Hatch (although you can add more if you want).\n\nThe §aInput Buses§r along the bottom §emust be ULV tier§r, nothing else. Make sure to spin them all so the hole is on the bottom.",
+          "desc:8": "The §3Assembly Line§r is a large multiblock structure that crafts complex materials, similar to an §3Assembling Machine§r. These will be crucial going forward for making a variety of components and machinery.\n\nMake sure your power generation and circuit production are up to the challenge. §2None of the Assembly Line recipes require programmed circuits anymore.§r It is §crequired§r to insert items in the §corder according to the JEI recipe§r, but it is §anot required§r to insert fluids in the correct order.\n\nNotice that all numbers of required items are §emultiples of 10.§r This is to make an Assembly Line that\u0027s 10 units long, allowing for 9 inputs and one output. This is a large enough Assembly Line to make §6LuV components§r, but you\u0027ll need to expand to more inputs for later projects.\n\nThe structure of the Assembly Line is a little stricter than other multiblocks:\n\n- The §aInput Buses§r can only be placed along the bottom, must all be §8ULV§r tier, and must face downwards. The §aOutput Bus§r must be placed at the very end of the row of Input Buses, and can be any tier.\n\n- §aFluid Hatches§r and the §2Maintenance Hatch§r can only replace the §6Steel Casings§r along the bottom.\n\n- §aEnergy Hatches§r can only be placed within the top row of §6Steel Casings§r.\n\n- The §2Data Access Hatch§r must replace a §6Grate Casing§r on the same side as the Assembly Line controller block. Later, you can replace this with an §2Optical Data Reception Hatch§r. Refer to adjacent quests for how the Assembly Line data system works.\n\nIf your recipe is not running, ensure you have the corresponding §edata§r for the recipe in a §2Data Access Hatch§r or connected §3Data Bank§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16155,7 +16158,20 @@
         }
       },
       "questID:3": 286,
-      "rewards:9": {},
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin100"
+            }
+          }
+        }
+      },
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -16166,56 +16182,50 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 30,
+              "Count:3": 27,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:metal_casing"
             },
             "1:10": {
-              "Count:3": 11,
+              "Count:3": 10,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "gregtech:multiblock_casing"
             },
             "2:10": {
-              "Count:3": 11,
+              "Count:3": 10,
               "Damage:2": 3,
               "OreDict:8": "",
               "id:8": "gregtech:multiblock_casing"
             },
             "3:10": {
-              "Count:3": 21,
+              "Count:3": 18,
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:multiblock_casing"
             },
             "4:10": {
-              "Count:3": 22,
+              "Count:3": 20,
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "gregtech:transparent_casing"
             },
             "5:10": {
-              "Count:3": 4,
-              "Damage:2": 1181,
+              "Count:3": 9,
+              "Damage:2": 1150,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "6:10": {
-              "Count:3": 10,
-              "Damage:2": 1150,
+              "Count:3": 1,
+              "Damage:2": 1019,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "7:10": {
               "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "8:10": {
-              "Count:3": 1,
-              "Damage:2": 1019,
+              "Damage:2": 1404,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -16227,7 +16237,8 @@
     "287:10": {
       "preRequisites:11": [
         234,
-        847
+        847,
+        286
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -18839,7 +18850,8 @@
     },
     "335:10": {
       "preRequisites:11": [
-        334
+        334,
+        1038
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -19668,7 +19680,8 @@
     },
     "351:10": {
       "preRequisites:11": [
-        274
+        274,
+        1038
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -28616,7 +28629,9 @@
     },
     "535:10": {
       "preRequisites:11": [
-        534
+        534,
+        1035,
+        1036
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42314,13 +42329,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly line, since it has a whole bunch of ULV inputs buses that hold one item stack each.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nIf you\u0027ve unlocked §3The Empowerer§r, you might have considered §aPhantomfaces§r. These would certainly be an improvement over item conduits, but there\u0027s an even better solution.\n\nEnter §aItem Laser Relays§r§r: these handy tools from §bActually Additions§r allow you to create a virtual inventory out of multiple real ones; that is, you can use them to make other automation think that all of the input buses are the same inventory.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r Take this into account when placing them.\n\nTo start, place a laser on each of the input buses. Then, place the §aItem Interface§r adjacent to the laser on the first input bus. This will serve as the access point to the virtual inventory where you can connect things like an § §aME Interface§r.\n\nIf you don\u0027t have enough space in a normal pattern, try using the §6Extended Processing Pattern Terminal§r!\n\nTake your §aLaser Wrench§r and right click the first laser relay, then the second laser relay, to link them together. Repeat this with the second and third relays, third and fourth relays, etc. until they have all been linked together. Now you have a laser network virtualizing all of the input buses!\n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nRemember to always use §eBlocking Mode§r when connecting the laser network to on-demand crafting. If you don\u0027t use Blocking Mode, you are likely to accidentally craft something else and jam your Assembly Line.",
+          "desc:8": "The §3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly Line, since you are required to insert items in the §ccorrect order§r.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nThere are several better ways to automate ordered items. Described here is an §dAE2§r-based method:\n\n- Place the §3ME Interface§r containing the patterns facing an §3Item P2P§r. (Item P2P Tunnels are made by placing an §3ME P2P Tunnel§r in-world and right-clicking with a chest.)\n\n- Connect it to two output Item P2P: one on the first Input Bus, and the other into a §3GT Item Pipe§r network.\n\n- Connect the Item Pipes to all Input Buses, including the first one.\n\nSince ME Interfaces send items in order, this can flawlessly automate ordered inputs. If you don\u0027t have enough space in a normal pattern, try using the §6Extended Processing Pattern Terminal§r!\n\nRemember to always use §eBlocking Mode§r when connecting the laser network to on-demand crafting. If you don\u0027t use Blocking Mode, you are likely to accidentally craft something else and jam your Assembly Line.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 462,
             "OreDict:8": "",
-            "id:8": "actuallyadditions:block_laser_relay_item"
+            "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -42349,22 +42364,10 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 10,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:block_laser_relay_item"
-            },
-            "1:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 460,
               "OreDict:8": "",
-              "id:8": "actuallyadditions:block_item_viewer"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:item_laser_wrench"
+              "id:8": "appliedenergistics2:part"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -44936,8 +44939,7 @@
     },
     "852:10": {
       "preRequisites:11": [
-        677,
-        749
+        677
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49613,12 +49615,13 @@
     },
     "933:10": {
       "preRequisites:11": [
-        56
+        56,
+        53
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Programmed Circuits§r is a item used to configure machines. This controls what gets produced, and at what speed.\n\nSimply set the circuit\u0027s value by either:\n1. Shift-right click whilst holding the circuit\n2. Using the up and down arrows in a §bcircuit slot§r of a machine, which is at the §abottom-right§r of the machine\u0027s §bGUI§r.\n\nSome tips when setting the circuit\u0027s value in a §bcircuit slot§r:\n1. Shift to increase/decrease by 5, instead of 1\n2. Scroll to increase/decrease very quickly\n3. Shift and Scroll to increase/decrease even quicker!\n\n§2New to CEu! Ghost Circuits!§r\nThis means that circuits can be placed in the circuit slot instead of the input of the machine, which creates a §b\u0027Ghost Circuit\u0027§r, which doesn\u0027t take up the circuit. §aThis means you only have to use 1 circuit!§r (Except in §6Input Buses§r of §5Multiblocks§r, where Ghost Circuits haven\u0027t been implemented... yet)\n\n§2New to CEu! Quick Circuit Setting!§r\nWhilst holding a programmed circuit, simply shift-right click the machine to set a §bGhost Circuit§r in the machine\u0027s cicuit slot. (Except in §6Input Buses§r of §5Multiblocks§r, where Quick Circuit Setting haven\u0027t been implemented... yet)",
+          "desc:8": "A §6Programmed Circuit§r is an item used to configure machines. In essence, they tell a machine what to make if there\u0027s multiple things it could make from a certain input.\n\nFor example, the §3Wiremill§r produces different thicknesses of §6wires§r depending on the config - §ecircuit 1§r produces §61x wires§r, §ecircuit 4§r produces §64x wires§r, etc. The §eJEI§r recipe will tell you which circuit configuration is required.\n\nEach machine and item input bus comes with a §2free \"ghost circuit\"§r. Click the circuit slot on the §dbottom right§r of the GUI to access this ghost circuit. Left- and right-click or scroll to adjust the configuration. \n\nThat said, the Programmed Circuit item (crafted from a single §6LV Circuit§r) still has its uses:\n\n- Whilst holding a programmed circuit, shift-right click the machine to set a §bGhost Circuit§r of the same configuration in the machine\u0027s circuit slot.\n\n- When you\u0027re sure that the items you put into a machine won\u0027t have any conflicts, you can put §emultiple circuit configs§r into a machine, and it will be able to handle recipes which call for any of those configs. This is useful for machines such as the §3Alloy Blast Smelter§r, but you won\u0027t encounter that for a while.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49888,6 +49891,1216 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "minecraft:glass"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "938:10": {
+      "preRequisites:11": [
+        192
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Research has returned to GregTech 1.12!§r The §3Assembly Line§r needs to be provided with §edata§r on how to craft items before it can craft them. Data on how to craft each item is stored in a §6Data Stick§r and read by a §aData Access Hatch§r. This data is required to craft §6LuV components§r, the §3Fusion Reactor§r, and some parts from §dDraconic Evolution§r.\n\nTo begin, craft a §3Scanner§r and a few §6Data Sticks§r. The initial Scanner recipes run at §6HV§r, but §1IV§r is required relatively soon so might as well make that one.\n\nPress §bR§r on the item you want to craft in the and navigate to the §bScanner tab§r. This will tell you which item needs to be scanned to make the data for the new item. For example, §dLuV §6Electric Motors§r will require an §1IV§r §6Electric Motor§r to be scanned.\n\nPlace a §6Data Stick§r with the item to be scanned in the §3Scanner§r. The item will be §cconsumed§r and its data will be written to the §6Data Stick§r. Each §6Data item§r can only hold a §csingle recipe§r.\n\nFinally, place the §6Data Stick§r into the §aData Access Hatch§r of your §3Assembly Line§r. It will now be able to craft that item.\n\nLater, you will need more advanced §6Data Orbs§r and §6Data Modules§r to store data, and a §3Data Bank§r to read them.\n\nIf you need to create duplicate Data items, you can copy the data to a blank data item of the same type using the Scanner.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 261,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Assembly Line Data",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1029,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 261,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 459,
+              "OreDict:8": "questbookScanner",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "939:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        524
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Power Substation§r is GregTech\u0027s native mass power storage solution. At §cZPM§r tier and above, it can rival the §6Tier 7 Energy Core§r from Draconic Evolution.\n\nThe structure can accept up to 18 layers of 3x3 §aLapotronic Capacitor§r blocks. GT batteries can hold §d6x§r the EU their item counterparts can hold when crafted into a §aLapotronic Capacitor§r. The structure need not be made of all of the same tier blocks, but it must be full, so fill any empty space with §aEmpty Capacitor Blocks§r.\n\nInsert power through §6Energy Hatches§r and extract from §6Dynamo Hatches§r, each of any tier. The Power Substation can accept special §664A Substation Hatches§r, as well as §aLaser Hatches§r.\n\nThe Power Substation will §cpassively lose 1%§r of its total capacity every 24 (real-life) hours, up to 100,000 EU/t per capacitor block. This is equivalent to §d5.8 billionths§r of its total capacity per tick, so this should not be a concern under regular operation.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1041,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Power Substation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1030,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1041,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 14,
+              "Damage:2": 11,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "940:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
+      "preRequisites:11": [
+        286
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-GregTech machine adjacent to them. This is handy for §dDraconic Evolution Fusion§r, which is a slow process otherwise.\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 8A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1392,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Right Hand of Chronos",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1031,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1392,
+              "OreDict:8": "questbookWA",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "941:10": {
+      "preRequisites:11": [
+        109,
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combining an §aI/O Bus§r and an §aME Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Buses§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nNote that only the Interface-textured side will connect to an ME network.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1748,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2ME Multiblock Buses",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1032,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1748,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1746,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "942:10": {
+      "preRequisites:11": [
+        102,
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Combining an §aI/O Hatch§r and an §aME Fluid Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Hatches§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nNote that only the Interface-textured side will connect to an ME network.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1747,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2ME Multiblock Hatches",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1033,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1747,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1745,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "943:10": {
+      "preRequisites:11": [
+        286,
+        1037
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Data Bank§r acts as a mass storage for §6Data Sticks§r and §6Data Orbs§r. It is also required for reading §6Data Modules§r.\n\nConnect an §3Optical Data Transmission Hatch§r on the Data Bank to an §3Optical Data Reception Hatch§r (replacing the §3Data Access Hatch§r) on your §3Assembly Line§r using §aOptical Cables§r, and it will be able to read the data of all data items within the Data Bank.\n\nYou can connect multiple §3Assembly Lines§r to a single Data Bank, but each one will need its own §3Transmission Hatch§r on the Data Bank.\n\n§3Data Access Hatches§r and §3Optical Hatches§r can replace any of the §aComputer Casings§r in the structure, but it must have a minimum of §e3§r §aComputer Casings§r. Each §3Data Access Hatch§r and §3Optical Hatch§r within the structure will consume §d1,920 EU/t§r regardless of their usage.\n\nYou will also need a §aMaintenance§r and §aEnergy Hatch§r, which can replace the §aHigh Power Casings§r in front.\n\nAlthough this is not strictly required until you need to make and read §6Data Modules§r, your single §3Data Access Hatch§r on your §3Assembly Line§r will not have space to hold all the items you need to craft otherwise.\n\nIf your Assembly Line setups grow enough, you may need to §echain§r Data Banks. Connect the §3Transmission Hatch§r on the Data Bank with data to the §3Reception Hatch§r of a second Data Bank. The §ereceiving§r Data Bank will be able to read all the data within the transmitting Data Bank, and can send that data to more Assembly Lines or more Data Banks. However, this comes at a greatly increased energy cost for the transmitting Data Bank.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1037,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Data Bank",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1034,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1037,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1408,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 18,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "3:10": {
+              "Count:3": 3,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "4:10": {
+              "Count:3": 4,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "944:10": {
+      "preRequisites:11": [
+        1037,
+        286,
+        325
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Research Station§r is an advanced Scanner which consumes §dComputation Work§r provided by connected §3High Performance Computing Arrays§r to research §cZPM§r and higher items.\n\nThe function of this multiblock is similar to the Scanner. Place the §6Data Orb§r or §6Data Module§r into the §3Object Holder§r alongside the item to be scanned. After sufficient §dCWU§r has been drawn, the item will be §cconsumed§r and the corresponding data will be written to the data item. Ensure your §3HPCA§r is supplying sufficient §dCWU/t§r - check the scan recipe in §eJEI§r for how much is required.\n\n§3Energy§r, §3Maintenance§r, and §3Computation Hatches§r can only replace the 9 §aComputer Casings§r between the §aComputer Heat Vents§r at the back of the structure. The §3Object Holder§r §cmust face§r the §3Research Station§r controller block.\n\nThe Research Station can be accelerated with excess §dCWU/t§r, but it §cdoes not overclock§r with extra §dEU/t§r. Initial recipes run on §dLuV§r power, but §cZPM§r will be required soon, and higher tiers of energy will be required for more advanced scans. As most Research scans take a long time, you should start this process early.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1038,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Research Station",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1035,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1038,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 49,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "2:10": {
+              "Count:3": 23,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "3:10": {
+              "Count:3": 14,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1411,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 1409,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "945:10": {
+      "preRequisites:11": [
+        1037,
+        286
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3High Performance Computing Array (HPCA)§r is a computer which provides §dComputation Work§r to be used in the §3Research Station§r. The amount of §dComputation Work§r it provides depends on the type of HPCA parts within it. It also needs to receive adequate §dCooling§r provided by Coolers within its structure.\n\nConnect the §3Computation Data Transmission Hatch§r to the §3Reception Hatch§r on your §3Research Station§r to transfer the §dCWU/t§r produced to it.\n\nThe HPCA accepts almost any combination of §3Computation Components§r, §3Coolers§r, §3Bridges§r and §3Empty Components§r within the 3x3 area behind the §aComputer Heat Vents§r. This quest will build a §d16 CWU/t§r HPCA, enough for scanning the §3Fusion Reactor Mk2§r, §6UV Circuits§r, and all §6ZPM Components§r. You can get away with less at first, but you will eventually need to upgrade to this computing power. Refer to §eJEI§r for some other possible setups.\n\nThe §dCWU/t§r of the HPCA is determined by the sum of the outputs of the §3HPCA Computation Components§r within it. Regular §3Computation Components§r produce §d4 CWU/t§r each, and require §d2 Cooling§r each. §3Advanced Computation Components§r, which you do not have access to yet, produce §d16 CWU/t§r each and require §d4 Cooling§r each.\n\n§dCooling§r is provided by §3Cooler§r blocks within the structure. §3Passive Coolers§r provide §d1 Cooling§r each for free, whereas §3Active Coolers§r provide §d2 Cooling§r each with a steady flow of §9Dielectric PCB Coolant§r, provided through an §3Input Hatch§r. If the Cooling within the HPCA is insufficient, the components may be §cdamaged§r from overheating. The physical position of the components within the HPCA does not matter.\n\nA §3Bridge Component§r may be installed, allowing the HPCA to connect to §3Network Switches§r.\n\nThe energy consumption of the HPCA is determined by the sum of its parts. \u0027Max Energy\u0027 refers to the power draw while the HPCA is computing, while \u0027Upkeep Energy\u0027 refers to the power draw when the HPCA is idling.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1039,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2High Performance Computing Array",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1036,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin100"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1039,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 15,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "2:10": {
+              "Count:3": 13,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "3:10": {
+              "Count:3": 5,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "4:10": {
+              "Count:3": 4,
+              "Damage:2": 1413,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "5:10": {
+              "Count:3": 4,
+              "Damage:2": 1416,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 1412,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "7:10": {
+              "Count:3": 1,
+              "Damage:2": 1410,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "946:10": {
+      "preRequisites:11": [
+        825
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Optical Fiber Cables§r are used to transfer §eResearch Data§r§r between §3Data Banks§r and §3Assembly Lines§r, or §eComputation Data§r between §3High Performance Computation Arrays§r, §3Network Switches§r, and §3Research Stations§r.\n\nNote that Optical connections are limited to one §aTransmission Hatch§r to one §aReception Hatch§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtech:optical_pipe_normal"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Optical Fiber Cables",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1037,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:optical_pipe_normal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "947:10": {
+      "preRequisites:11": [
+        1039,
+        196
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Network Switch§r combines any number of §3Computation Data Reception Hatches§r into any number of §3Computation Data Transmission Hatches§r. This will be required when the §dCWU/t§r requirements of your §3Research Station§r exceed what a single §3HPCA§r can provide.\n\nConnect the §3Computation Data Reception Hatches§r§r to your §3HPCAs§r with §3Bridge Components§r within them, and connect a single §3Computation Data Transmission Hatch§r to your §3Research Station§r, and it will receive the sum of §dCWU/t§r from all of your HPCAs!\n\nNow, all §3Assembly Line§r recipes are available to you, given you have the §dCWU/t§r to research them. The most computationally demanding scan, for the §6Ultimate Battery§r, requires §d144 CWU/t§r.\n\nThe Network Switch consumes §d7,680 EU/t§r per §3Computation Hatch§r in its structure.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1040,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Network Switch",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1038,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin100"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1040,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 5,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "2:10": {
+              "Count:3": 2,
+              "Damage:2": 1409,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1410,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "948:10": {
+      "preRequisites:11": [
+        535,
+        258
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Once you scan and make make your first §6UV Circuits§r and §6ZPM Field Generators§r, you can upgrade your §3HPCA Computing Components§r to §3Advanced Components§r. These produce §d16 CWU/t§r each and require §d4 Cooling§r each.\n\nWith them, you can upgrade a single HPCA to produce §d32 CWU/t§r total - enough for basic §6UV components§r, and the §3Network Switch§r, which will allow you to go higher.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1414,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Advanced HPCA",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1039,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1414,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "949:10": {
+      "preRequisites:11": [
+        259
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Chemical Bath§r is mainly used as an ore processing machine to extract byproducts from specific §6Crushed Ores§r with either §9Sodium Persulfate§r or §9Mercury§r. It can also dye items, as well as perform some specialised processes.\n\nFor now, you will need it to cool down §6Hot Kanthal Ingots§r and §6Hot Silicon Ingots§r with §9Water§r. §9Distilled Water§r can accelerate this process if you have it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 201,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "MV Chemical Bath",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1040,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 201,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "950:10": {
+      "preRequisites:11": [
+        157
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Silicon§r in its solid form is required to produce §6Transistors§r, which are required for §6HV Circuits§r. Notice that the recipe for a §6Hot Silicon Ingot§r calls for §d2,273 K§r. This is why we built §6Kanthal Coils§r earlier - §6Cupronickel Coils§r can\u0027t reach that temperature.\n\nDirectly heating §6Silicon Dust§r you get from Electrolyzing various materials is an option, but a slow and energy-hungry one. The better method is to obtain §6Silicon Dioxide Dust§r by repurposing the §6Glass§r you\u0027re producing for PPC, and heat it with §6Carbon Dust§r§r. This produces §6Silicon Ingots§r §dover 5x§r faster, with a side of §eCarbon Monoxide§r for use in various chemical processes.\n\nDon\u0027t forget that what comes out of the §3EBF§r is a §6Hot Ingot§r - cool it in a §6Chemical Bath§r first before using. Later, you will build a §3Vacuum Freezer§r which can do it better.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 99,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Silicon Ingots",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1041,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 99,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "951:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        524
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Active Transformer§r is a device which can convert any number and type of §dGT Energy Inputs§r into any number and type of §dGT Energy Outputs§r. That includes §664A Substation Hatches§r, as well as §aLaser Hatches§r - refer to the nearby quests for more details on those.\n\nWith §dRF Conduits§r and §3Energy Converters§r in this pack, this probably has limited use, but you can build it if you want.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1042,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Active Transformer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1042,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1042,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 12,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:fusion_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "952:10": {
+      "preRequisites:11": [
+        286
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The 8th tier of §6Solar Panel§r, this is required for making higher tier Solar Panels for the endgame. It\u0027s also a decent power source.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "solarflux:solar_panel_8"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Solar Panel VIII",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1043,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "solarflux:solar_panel_8"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "953:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        253
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aLasers§r are §dGregTech§r\u0027s native solution to high-volume power transfer. Each power tier starting at §1IV§r has §aLaser Hatches§r capable of transferring §d256A§r, §d1,024A§r and §d4,096A§r of their voltage\u0027s power!\n\nEnergy in the Laser Network flows from §aLaser Sources§r through §6Laser Transmitting Cables§r to §aLaser Targets§r. All these must be in a straight line - lasers don\u0027t bend, after all. Similarly to other power-related blocks, the tier of the §aLaser Target§r must not be lower than the tier of the §aLaser Source§r.\n\nYou can choose to use these when moving power between §3Active Transformers§r and your §3Power Substation§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Laser Network",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1044,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:laser_pipe_normal"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -50756,396 +51969,424 @@
           "y:3": -380
         },
         "53:10": {
+          "id:3": 156,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 136,
+          "y:3": -316
+        },
+        "54:10": {
+          "id:3": 157,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 244,
+          "y:3": -316
+        },
+        "55:10": {
           "id:3": 164,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -228
         },
-        "54:10": {
+        "56:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -184
         },
-        "55:10": {
+        "57:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -276
         },
-        "56:10": {
+        "58:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -184
         },
-        "57:10": {
+        "59:10": {
           "id:3": 187,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -88,
           "y:3": -408
         },
-        "58:10": {
+        "60:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 576,
           "y:3": -372
         },
-        "59:10": {
+        "61:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 620,
           "y:3": -336
         },
-        "60:10": {
+        "62:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": -388
         },
-        "61:10": {
+        "63:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 112,
           "y:3": -148
         },
-        "62:10": {
+        "64:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -228
         },
-        "63:10": {
+        "65:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -104
         },
-        "64:10": {
+        "66:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 176,
           "y:3": -392
         },
-        "65:10": {
+        "67:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 404,
           "y:3": -284
         },
-        "66:10": {
+        "68:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 364,
           "y:3": -488
         },
-        "67:10": {
+        "69:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -448
         },
-        "68:10": {
+        "70:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -104
         },
-        "69:10": {
+        "71:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -144
         },
-        "70:10": {
+        "72:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 536,
           "y:3": -180
         },
-        "71:10": {
+        "73:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -52,
           "y:3": -64
         },
-        "72:10": {
+        "74:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -4
         },
-        "73:10": {
+        "75:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 220,
           "y:3": -392
         },
-        "74:10": {
+        "76:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -144
         },
-        "75:10": {
+        "77:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -276
         },
-        "76:10": {
+        "78:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 132,
           "y:3": -392
         },
-        "77:10": {
+        "79:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -360
         },
-        "78:10": {
+        "80:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -420
         },
-        "79:10": {
+        "81:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -388
         },
-        "80:10": {
+        "82:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -356
         },
-        "81:10": {
+        "83:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -228
         },
-        "82:10": {
+        "84:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -124
         },
-        "83:10": {
+        "85:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 744,
           "y:3": -336
         },
-        "84:10": {
+        "86:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -276
         },
-        "85:10": {
+        "87:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 296,
           "y:3": -216
         },
-        "86:10": {
+        "88:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -72
         },
-        "87:10": {
+        "89:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -20
         },
-        "88:10": {
+        "90:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -164
         },
-        "89:10": {
+        "91:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -4
         },
-        "90:10": {
+        "92:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -60
         },
-        "91:10": {
+        "93:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -404
         },
-        "92:10": {
+        "94:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 576,
           "y:3": -228
         },
-        "93:10": {
+        "95:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 444,
           "y:3": -184
         },
-        "94:10": {
+        "96:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -136
         },
-        "95:10": {
+        "97:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -136
         },
-        "96:10": {
+        "98:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 404,
           "y:3": -136
         },
-        "97:10": {
+        "99:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -180
         },
-        "98:10": {
+        "100:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -268
         },
-        "99:10": {
+        "101:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -276
         },
-        "100:10": {
+        "102:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -276
         },
-        "101:10": {
+        "103:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 368,
           "y:3": -552
         },
-        "102:10": {
+        "104:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -184
         },
-        "103:10": {
+        "105:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -448
         },
-        "104:10": {
+        "106:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -388
         },
-        "105:10": {
+        "107:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -180
         },
-        "106:10": {
+        "108:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 404,
           "y:3": -180
         },
-        "107:10": {
+        "109:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 272,
           "y:3": 20
         },
-        "108:10": {
+        "110:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -420
+        },
+        "111:10": {
+          "id:3": 1040,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 136,
+          "y:3": -356
+        },
+        "112:10": {
+          "id:3": 1041,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 280,
+          "y:3": -276
         }
       }
     },
@@ -53186,7 +54427,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -32,
-          "y:3": 164
+          "y:3": 148
         },
         "35:10": {
           "id:3": 288,
@@ -53284,7 +54525,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
-          "y:3": 176
+          "y:3": 160
         },
         "49:10": {
           "id:3": 327,
@@ -53361,7 +54602,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 116,
-          "y:3": 176
+          "y:3": 160
         },
         "60:10": {
           "id:3": 345,
@@ -53507,8 +54748,8 @@
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 96,
-          "y:3": 12
+          "x:3": 84,
+          "y:3": -80
         },
         "81:10": {
           "id:3": 556,
@@ -53535,15 +54776,15 @@
           "id:3": 681,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 32,
-          "y:3": 20
+          "x:3": -56,
+          "y:3": -4
         },
         "85:10": {
           "id:3": 695,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": 148
+          "x:3": -80,
+          "y:3": 192
         },
         "86:10": {
           "id:3": 696,
@@ -53612,22 +54853,22 @@
           "id:3": 792,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 16,
-          "y:3": -12
+          "x:3": -72,
+          "y:3": -36
         },
         "96:10": {
           "id:3": 793,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 56,
-          "y:3": -12
+          "x:3": -32,
+          "y:3": -36
         },
         "97:10": {
           "id:3": 794,
           "sizeX:3": 0,
           "sizeY:3": 0,
-          "x:3": 48,
-          "y:3": 36
+          "x:3": -40,
+          "y:3": 12
         },
         "98:10": {
           "id:3": 795,
@@ -53654,8 +54895,8 @@
           "id:3": 804,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -624,
-          "y:3": 160
+          "x:3": -576,
+          "y:3": 112
         },
         "102:10": {
           "id:3": 827,
@@ -53704,21 +54945,21 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
-          "y:3": 172
+          "y:3": 156
         },
         "109:10": {
           "id:3": 844,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": 176
+          "y:3": 160
         },
         "110:10": {
           "id:3": 845,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -172,
-          "y:3": 176
+          "y:3": 160
         },
         "111:10": {
           "id:3": 846,
@@ -53732,7 +54973,7 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -112,
-          "y:3": 172
+          "y:3": 156
         },
         "113:10": {
           "id:3": 848,
@@ -53838,6 +55079,41 @@
           "sizeY:3": 24,
           "x:3": 116,
           "y:3": 72
+        },
+        "128:10": {
+          "id:3": 1029,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -624,
+          "y:3": 160
+        },
+        "129:10": {
+          "id:3": 1030,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 80,
+          "y:3": -12
+        },
+        "130:10": {
+          "id:3": 1031,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 12,
+          "y:3": -80
+        },
+        "131:10": {
+          "id:3": 1042,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 12,
+          "y:3": -12
+        },
+        "132:10": {
+          "id:3": 1044,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 148,
+          "y:3": -12
         }
       }
     },
@@ -55668,14 +56944,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Create new elements and power your base with doughnuts!",
+          "desc:8": "Create new elements and power your base with doughnuts!\n\nHarness the combined computing power of your circuits to unlock the secrets to advanced components.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1022,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "name:8": "Fun With Fusion",
+          "name:8": "Fusion \u0026 Research",
           "visibility:8": "ALWAYS"
         }
       },
@@ -55691,106 +56967,211 @@
           "id:3": 196,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 56,
+          "x:3": 20,
           "y:3": 36
         },
         "2:10": {
-          "id:3": 258,
+          "id:3": 240,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 128,
-          "y:3": -36
+          "y:3": 72
         },
         "3:10": {
+          "id:3": 258,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 56,
+          "y:3": 108
+        },
+        "4:10": {
+          "id:3": 271,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 128,
+          "y:3": 108
+        },
+        "5:10": {
+          "id:3": 286,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -52,
+          "y:3": 36
+        },
+        "6:10": {
           "id:3": 287,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
+          "x:3": -52,
           "y:3": 0
         },
-        "4:10": {
+        "7:10": {
           "id:3": 325,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -18,
-          "y:3": 36
+          "x:3": -16,
+          "y:3": 0
         },
-        "5:10": {
+        "8:10": {
           "id:3": 335,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 92,
           "y:3": 36
         },
-        "6:10": {
+        "9:10": {
+          "id:3": 351,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 92,
+          "y:3": 108
+        },
+        "10:10": {
           "id:3": 399,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 36
+          "x:3": -88,
+          "y:3": 0
         },
-        "7:10": {
+        "11:10": {
+          "id:3": 535,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 20,
+          "y:3": 72
+        },
+        "12:10": {
           "id:3": 607,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 128,
           "y:3": 36
         },
-        "8:10": {
+        "13:10": {
           "id:3": 749,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 18,
+          "x:3": 20,
           "y:3": 0
         },
-        "9:10": {
+        "14:10": {
           "id:3": 802,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -18,
-          "y:3": 0
+          "x:3": -16,
+          "y:3": -36
         },
-        "10:10": {
+        "15:10": {
+          "id:3": 804,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -88,
+          "y:3": 72
+        },
+        "16:10": {
           "id:3": 846,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 18,
+          "x:3": 20,
           "y:3": -36
         },
-        "11:10": {
+        "17:10": {
           "id:3": 847,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
+          "x:3": -52,
           "y:3": -36
         },
-        "12:10": {
+        "18:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 76,
+          "x:3": 128,
           "y:3": -36
         },
-        "13:10": {
+        "19:10": {
           "id:3": 854,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 18,
+          "x:3": 56,
           "y:3": 36
         },
-        "14:10": {
+        "20:10": {
           "id:3": 885,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 56,
           "y:3": 0
         },
-        "15:10": {
+        "21:10": {
+          "id:3": 906,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 20,
+          "y:3": 108
+        },
+        "22:10": {
           "id:3": 928,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 92,
           "y:3": 0
+        },
+        "23:10": {
+          "id:3": 1029,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -88,
+          "y:3": 36
+        },
+        "24:10": {
+          "id:3": 1034,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -52,
+          "y:3": 108
+        },
+        "25:10": {
+          "id:3": 1035,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -16,
+          "y:3": 36
+        },
+        "26:10": {
+          "id:3": 1036,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -16,
+          "y:3": 72
+        },
+        "27:10": {
+          "id:3": 1037,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -16,
+          "y:3": 108
+        },
+        "28:10": {
+          "id:3": 1038,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 92,
+          "y:3": 72
+        },
+        "29:10": {
+          "id:3": 1039,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 56,
+          "y:3": 72
+        },
+        "30:10": {
+          "id:3": 1043,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -52,
+          "y:3": 72
         }
       }
     },
@@ -56169,6 +57550,20 @@
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 726
+        },
+        "51:10": {
+          "id:3": 1032,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 186,
+          "y:3": 630
+        },
+        "52:10": {
+          "id:3": 1033,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 186,
+          "y:3": 438
         }
       }
     }
