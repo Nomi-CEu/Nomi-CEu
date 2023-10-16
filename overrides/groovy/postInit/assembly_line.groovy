@@ -129,13 +129,15 @@ mods.gregtech.assembly_line.recipeBuilder()
     .buildAndRegister()
 
 // Simulation Supercomputer
-mods.gregtech.assembly_line.recipeBuilder()
-    .inputs(item('gcym:large_multiblock_casing', 11), ore('plateTrinaquadalloy') * 6, item('deepmoblearning:simulation_chamber') * 4, item('contenttweaker:heartofauniverse'), metaitem('robot.arm.uv') * 2, metaitem('field.generator.uv') * 2, ore('circuitUhv') * 4, item('draconicevolution:draconic_energy_core'))
-    .fluidInputs(fluid('soldering_alloy') * 1152)
-    .outputs(metaitem('multiblocktweaker:dml_sim_chamber'))
-    .stationResearch(b -> b.researchStack(item('deepmoblearning:simulation_chamber')).CWUt(128).EUt(1966080))
-    .duration(1200).EUt(1966080)
-    .buildAndRegister()
+if (PMConfig.getPackMode() == "normal") {
+    mods.gregtech.assembly_line.recipeBuilder()
+        .inputs(item('gcym:large_multiblock_casing', 11), ore('plateTrinaquadalloy') * 6, item('deepmoblearning:simulation_chamber') * 4, item('contenttweaker:heartofauniverse'), metaitem('robot.arm.uv') * 2, metaitem('field.generator.uv') * 2, ore('circuitUhv') * 4, item('draconicevolution:draconic_energy_core'))
+        .fluidInputs(fluid('soldering_alloy') * 1152)
+        .outputs(metaitem('multiblocktweaker:dml_sim_chamber'))
+        .stationResearch(b -> b.researchStack(item('deepmoblearning:simulation_chamber')).CWUt(128).EUt(1966080))
+        .duration(1200).EUt(1966080)
+        .buildAndRegister()
+}
 
 // World Accelerator IV
 mods.gregtech.assembly_line.recipeBuilder()
