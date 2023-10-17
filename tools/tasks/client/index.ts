@@ -3,16 +3,16 @@ import { clientDestDirectory, modpackManifest, overridesFolder, sharedDestDirect
 import fs from "fs";
 import upath from "upath";
 import buildConfig from "../../buildConfig";
-import { fetchFileInfo, fetchFilesBulk, fetchProject, fetchProjectsBulk } from "../../util/curseForgeAPI";
-import log from "fancy-log";
 import rename from "gulp-rename";
 import imagemin from "gulp-imagemin";
 import pngToJpeg from "png-to-jpeg";
 import { MainMenuConfig } from "../../types/mainMenuConfig";
 import del from "del";
-import { cleanupVersion } from "../../util/util";
 import marked from "marked";
-import { createModList } from "../misc/createModList";
+import { createModList, ModFileInfo } from "../misc/createModList";
+import dedent from "dedent-js";
+import { CurseForgeFileInfo, CurseForgeModInfo } from "../../types/curseForge";
+import { cleanupVersion } from "../../util/util";
 
 async function clientCleanUp() {
 	return del(upath.join(clientDestDirectory, "*"), { force: true });
@@ -98,15 +98,119 @@ function copyClientOverrides() {
  * Fetches mod links and builds modlist.html.
  */
 async function fetchModList() {
-	const modListOutput = await createModList();
-	const modList = modListOutput.modList;
-	modList.unshift(
-		"# Nomi-CEu Mod Information",
-		`## Number of Mods: ${modListOutput.files.length}`,
-		"## Detailed Mod List:",
-	);
+	const modList = await createModList();
 
-	return fs.promises.writeFile(upath.join(clientDestDirectory, "modlist.html"), marked.parse(modList.join("\n")));
+	const formattedModList = dedent`
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<title>Nomi-CEu Mod Information</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link rel = "icon" href =  "https://github.com/Nomi-CEu/Nomi-CEu/assets/103940576/672808a8-0ad0-4d07-809e-08336a928909" type = "image/x-icon"> 
+				<style>
+					caption {
+						font-size: 30px;
+						color: #fff;
+						font-family: "Comic Sans MS", "sans-serif";
+						font-weight: 700;
+						border-radius: 10px;
+						border-collapse: collapse;
+						background-color: #795B97;
+					}
+					table {
+						border-collapse: collapse;
+						width: 100%;
+						color: #333;
+						font-family: "Comic Sans MS", "sans-serif";
+						font-size: 13px;
+						text-align: left;
+						border-radius: 10px;
+						overflow: hidden;
+						box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+					}
+					table th {
+						background-color: #9973BD;
+						color: #fff;
+						font-family: "Comic Sans MS", "sans-serif";
+						font-weight: bold;
+						padding: 10px;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+						border-top: 1px solid #fff;
+						border-bottom: 1px solid #ccc;
+						font-size: 15px;
+					}
+					table tr:nth-child(even) td {
+						background-color: #E7E7E7;
+					}
+					table tr:hover td {
+						background-color: rgba(160, 210, 235, 0.5);
+					}
+					table td {
+						background-color: #fff;
+						padding: 10px;
+						border-bottom: 1px solid #ccc;
+						font-weight: bold;
+					}
+					table tr:last-of-type {
+						border-bottom: 2px solid #9973BD;
+					}
+					.redCross {
+					  color: #ff0000;
+					  font-size: 20px;
+					}
+					.greenTick {
+					  color: #32cd32;
+					  font-size: 20px;
+					}
+				</style>
+			</head>
+			<body>
+				<table>
+					<caption>Nomi-CEu Mod List (${modList.length} Mods):</caption>
+					<tr>
+						<th>Mod Name</th>
+						<th>Mod Version</th>
+						<th>Client?</th>
+						<th>Server?</th>
+						<th>Author(s)</th>
+					</tr>
+					${formatModList(modList)}
+				</table>
+			</body>
+		</html>
+	`;
+
+	return fs.promises.writeFile(upath.join(clientDestDirectory, "modlist.html"), formattedModList);
+}
+
+/**
+ * Formats the mod list.
+ */
+function formatModList(modList: ModFileInfo[]): string {
+	const output: string[] = [];
+	modList.forEach((modFile) => {
+		output.push(dedent`
+			<tr>
+				<td><a href="${modFile.modInfo.links.websiteUrl}">${modFile.modInfo.name}</a></td>
+				<td><a href="${modFile.fileInfo.downloadUrl}">v${cleanupVersion(modFile.fileInfo.displayName)}</a></td>
+				${getTickCross(modFile.inClient)}
+				${getTickCross(modFile.inServer)}
+				<td>${modFile.modInfo.authors.map((author) => `<a href=${author.url}>${author.name}</a>`).join(", ")}</td>
+			</tr>
+		`);
+	});
+	return output.join("\n");
+}
+
+/**
+ * Gets the tick/cross used in the mod list.
+ */
+function getTickCross(bool: boolean): string {
+	if (bool) {
+		return '<td class="greenTick">&#10004;</td>';
+	}
+	return '<td class="redCross">&#10006;</td>';
 }
 
 const bgImageNamespace = "minecraft";
@@ -124,7 +228,7 @@ async function compressMainMenuImages() {
 	await new Promise((resolve) => {
 		gulp
 			.src(upath.join(sharedDestDirectory, overridesFolder, bgImagePathReal, "**/*"))
-			.pipe(imagemin([pngToJpeg({ quality: 80 })]))
+			.pipe(imagemin([pngToJpeg({ quality: buildConfig.screenshotsQuality })]))
 			.pipe(
 				rename((f) => {
 					// xd

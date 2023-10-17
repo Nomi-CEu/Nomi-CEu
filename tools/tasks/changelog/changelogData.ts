@@ -22,10 +22,6 @@ export default class ChangelogData {
 			this.since = getLastGitTag(process.env.GITHUB_TAG);
 			this.to = process.env.GITHUB_TAG;
 		}
-		// Back-compat in case this crap is still around.
-		else if (this.since == "latest-dev-preview") {
-			this.since = getLastGitTag(this.since);
-		}
 
 		// Get Release Type
 		this.releaseType = "Release";
