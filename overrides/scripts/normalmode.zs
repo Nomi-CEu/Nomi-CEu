@@ -733,15 +733,6 @@ mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material
 
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
 
-/* UHV Multis, move to zpm (used to be UHV) */
-// Rotary Hearth Furnace
-recipes.remove(<metaitem:gcym:mega_blast_furnace>);
-// Moved to Groovy
-
-// Bulk Blast Chiller
-recipes.remove(<metaitem:gcym:mega_vacuum_freezer>);
-// Moved to Groovy
-
 // Recycling recipe replacements
 // RHF
 <recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_blast_furnace>], [<liquid:oxygen> * 20786]).remove();

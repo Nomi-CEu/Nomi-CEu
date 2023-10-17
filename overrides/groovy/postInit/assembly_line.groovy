@@ -49,23 +49,42 @@ mods.gregtech.assembly_line.recipeBuilder()
     .buildAndRegister()
 
 // Rotary Hearth Furnace
-mods.gregtech.assembly_line.recipeBuilder()
-    .inputs(metaitem('electric_blast_furnace'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('springNaquadahAlloy') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
-    .fluidInputs(fluid('soldering_alloy') * 1152)
-    .outputs(metaitem('gcym:mega_blast_furnace'))
-    .stationResearch(b -> b.researchStack(metaitem('electric_blast_furnace')).CWUt(16))
-    .duration(1200).EUt(30720)
-    .buildAndRegister()
+if (PMConfig.getPackMode() == "normal") {
+    mods.gregtech.assembly_line.recipeBuilder()
+        .inputs(metaitem('electric_blast_furnace'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('springNaquadahAlloy') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
+        .fluidInputs(fluid('soldering_alloy') * 1152)
+        .outputs(metaitem('gcym:mega_blast_furnace'))
+        .stationResearch(b -> b.researchStack(metaitem('electric_blast_furnace')).CWUt(16))
+        .duration(1200).EUt(30720)
+        .buildAndRegister()
+} else {
+    mods.gregtech.assembly_line.recipeBuilder()
+        .inputs(metaitem('electric_blast_furnace'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('springTritanium') * 4, metaitem('plateTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
+        .fluidInputs(fluid('soldering_alloy') * 1152)
+        .outputs(metaitem('gcym:mega_blast_furnace'))
+        .stationResearch(b -> b.researchStack(metaitem('electric_blast_furnace')).CWUt(128).EUt(1966080))
+        .duration(1200).EUt(491520)
+        .buildAndRegister()
+}
 
 // Bulk Blast Chiller
-mods.gregtech.assembly_line.recipeBuilder()
-    .inputs(metaitem('vacuum_freezer'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('pipeNormalFluidNaquadah') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
-    .fluidInputs(fluid('soldering_alloy') * 1152)
-    .outputs(metaitem('gcym:mega_vacuum_freezer'))
-    .stationResearch(b -> b.researchStack(metaitem('vacuum_freezer')).CWUt(16))
-    .duration(1200).EUt(30720)
-    .buildAndRegister()
-
+if (PMConfig.getPackMode() == "normal") {
+    mods.gregtech.assembly_line.recipeBuilder()
+        .inputs(metaitem('vacuum_freezer'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('pipeNormalFluidNaquadah') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
+        .fluidInputs(fluid('soldering_alloy') * 1152)
+        .outputs(metaitem('gcym:mega_vacuum_freezer'))
+        .stationResearch(b -> b.researchStack(metaitem('vacuum_freezer')).CWUt(16))
+        .duration(1200).EUt(30720)
+        .buildAndRegister()
+} else {
+    mods.gregtech.assembly_line.recipeBuilder()
+        .inputs(metaitem('vacuum_freezer'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('pipeNormalFluidDuranium') * 4, metaitem('plateDenseTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
+        .fluidInputs(fluid('soldering_alloy') * 1152)
+        .outputs(metaitem('gcym:mega_vacuum_freezer'))
+        .stationResearch(b -> b.researchStack(metaitem('vacuum_freezer')).CWUt(128).EUt(1966080))
+        .duration(1200).EUt(491520)
+        .buildAndRegister()
+}
 // World Accelerator EV
 mods.gregtech.assembly_line.recipeBuilder()
     .inputs(metaitem('hull.zpm'), metaitem('field.generator.zpm') * 64, metaitem('field.generator.zpm') * 16, metaitem('sensor.zpm') * 20, metaitem('emitter.zpm') * 20, ore('circuitZpm') * 16, metaitem('plateDoubleEuropium') * 4, metaitem('plateDenseDraconium') * 2)

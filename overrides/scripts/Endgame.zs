@@ -305,6 +305,15 @@ recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.uv");
 
 // Moved to Groovy
 
+/* UHV Multis */
+// Rotary Hearth Furnace
+recipes.remove(<metaitem:gcym:mega_blast_furnace>);
+// Moved to Groovy
+
+// Bulk Blast Chiller
+recipes.remove(<metaitem:gcym:mega_vacuum_freezer>);
+// Moved to Groovy
+
 // Stabilized Miners Tooltips
 <contenttweaker:tieroneship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
