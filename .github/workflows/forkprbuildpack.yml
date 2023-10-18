@@ -18,7 +18,7 @@ permissions:
 jobs:
   build:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
-    if: "${{ github.repository_owner == 'IntegerLimit' && !github.event.pull_request.head.repo.owner.login == 'IntegerLimit' }}"
+    if: "${{ github.repository_owner == 'IntegerLimit' && github.event.pull_request.head.repo.owner.login != 'IntegerLimit' }}"
     name: Fork PR Build Pack
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
