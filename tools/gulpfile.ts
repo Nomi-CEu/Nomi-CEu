@@ -50,9 +50,6 @@ export const zipLang = zip.zipLang;
 export const zipMMC = zip.zipMMC;
 export const zipAll = zip.zipAll;
 
-import updateModListTask from "./tasks/misc/createModList";
-export const updateModList = updateModListTask;
-
 import * as gha from "./tasks/misc/gha";
 export const makeArtifactNames = gha.makeArtifactNames;
 

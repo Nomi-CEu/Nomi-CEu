@@ -8,10 +8,8 @@ import imagemin from "gulp-imagemin";
 import pngToJpeg from "png-to-jpeg";
 import { MainMenuConfig } from "../../types/mainMenuConfig";
 import del from "del";
-import marked from "marked";
 import { createModList, ModFileInfo } from "../misc/createModList";
 import dedent from "dedent-js";
-import { CurseForgeFileInfo, CurseForgeModInfo } from "../../types/curseForge";
 import { cleanupVersion } from "../../util/util";
 
 async function clientCleanUp() {
