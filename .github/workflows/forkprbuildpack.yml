@@ -1,0 +1,88 @@
+# This workflow file tests PRs made from forks. Disable this if it is considered too much of a security risk (although many efforts have been taken to reduce risk)
+# If workflow enabled, make sure to set the environment used to need a specific team (admin-devs), and default GITHUB_TOKEN perms to read!
+# See https://securitylab.github.com/research/github-actions-preventing-pwn-requests/ for more information!
+
+name: "[NOT CALLABLE] Fork PR Build Pack"
+
+on:
+  pull_request_target:
+
+# if a second commit is pushed quickly after the first, cancel the first one's build
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
+    if: "${{ github.repository_owner == 'IntegerLimit' && !github.event.pull_request.head.repo.owner.login == 'IntegerLimit' }}"
+    name: Fork PR Build Pack
+    runs-on: ubuntu-latest
+    environment: fork-pr-build-pack
+    steps:
+      - name: Checkout Ref
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      # Don't use cache to prevent cache poisoning
+      
+      - name: Setup NodeJS v16
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          check-latest: true
+
+      - name: Setup NPM Packages
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Build Pack
+        working-directory: ./tools
+        run: npx gulp buildAll
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      - name: Zip Pack
+        working-directory: ./tools
+        run: npx gulp zipAll
+
+      - name: Upload Client Zip
+        uses: actions/upload-artifact@v3
+        with:
+          name: Client Zip
+          path: ./build/*-client.zip
+          if-no-files-found: error
+
+      - name: Upload Server Zip
+        uses: actions/upload-artifact@v3
+        with:
+          name: Server Zip
+          path: ./build/*-server.zip
+          if-no-files-found: error
+
+      - name: Upload Lang Zip
+        uses: actions/upload-artifact@v3
+        with:
+          name: Lang Zip
+          path: ./build/*-lang.zip
+          if-no-files-found: error
+      
+      - name: Upload MMC Zip
+        uses: actions/upload-artifact@v3
+        with:
+          name: MMC Zip
+          path: ./build/*-mmc.zip
+          if-no-files-found: error
+
+      - name: Upload Changelogs
+        uses: actions/upload-artifact@v3
+        with:
+          name: Changelogs
+          path: ./build/*.md
+          if-no-files-found: error
