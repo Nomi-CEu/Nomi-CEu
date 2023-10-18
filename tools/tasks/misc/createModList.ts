@@ -13,7 +13,7 @@ export interface ModFileInfo {
 }
 
 /**
- * Fetches mod links and builds a modlist, in Markdown format.
+ * Fetches mod links and builds a modlist.
  */
 export async function createModList(tag = ""): Promise<ModFileInfo[]> {
 	log("Fetching mod & file infos...");
