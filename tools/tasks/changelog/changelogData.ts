@@ -13,6 +13,9 @@ export default class ChangelogData {
 	commitFixes: Map<string, FixUpInfo>;
 	shaList: Set<string>;
 
+	// Map of a commit SHA to the commits which need to be added to its commit list.
+	combineList: Map<string, Commit[]>;
+
 	constructor() {
 		this.since = getLastGitTag();
 		this.to = "HEAD";
@@ -44,5 +47,6 @@ export default class ChangelogData {
 
 		this.commitFixes = new Map<string, FixUpInfo>();
 		this.shaList = new Set<string>();
+		this.combineList = new Map<string, Commit[]>();
 	}
 }

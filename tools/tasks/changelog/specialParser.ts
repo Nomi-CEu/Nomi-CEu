@@ -2,7 +2,17 @@ import { ChangelogMessage, Commit, ExpandedMessage, FixUpInfo, Parser } from "..
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
 import toml from "@ltd/j-toml";
-import { detailsKey, detailsList, expandKey, expandList, fixUpKey, fixUpList, indentationLevel } from "./definitions";
+import {
+	combineKey,
+	combineList,
+	detailsKey,
+	detailsList,
+	expandKey,
+	expandList,
+	fixUpKey,
+	fixUpList,
+	indentationLevel,
+} from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
 
@@ -12,6 +22,9 @@ export function specialParserSetup(inputData: ChangelogData): void {
 	data = inputData;
 }
 
+/**
+ * Parses a commit with 'Fixup'.
+ */
 export async function parseFixUp(commit: Commit): Promise<boolean> {
 	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
 	await parse(
@@ -87,7 +100,7 @@ export async function parseDetails(
 
 			category.changelogSection.get(subCategory).push({
 				commitMessage: commitMessage,
-				commitObjects: [commitObject],
+				commitObject: commitObject,
 				subChangelogMessages: subMessages,
 			});
 		});
@@ -114,7 +127,7 @@ async function expandDetailsLevel(
 			if (item.includes(detailsKey)) {
 				result.push(...(await expandDetailsLevel(item, commitObject, `${indentation}${indentationLevel}`)));
 			} else {
-				result.push({ commitMessage: item, commitObjects: [commitObject], indentation: indentation });
+				result.push({ commitMessage: item, commitObject: commitObject, indentation: indentation });
 			}
 		},
 	);
@@ -122,7 +135,24 @@ async function expandDetailsLevel(
 }
 
 /**
- * Parse TOML in a commit body.
+ * Parses a commit with 'combine'.
+ */
+export async function parseCombine(commitBody: string, commitObject: Commit): Promise<void> {
+	await parse(
+		commitBody,
+		commitObject,
+		combineKey,
+		combineList,
+		(item: string) => item,
+		(item: string) => {
+			if (!data.combineList.has(item)) data.combineList.set(item, []);
+			data.combineList.get(item).push(commitObject);
+		},
+	);
+}
+
+/**
+ * Parse TOML in a commit body to produce a list.
  * @param commitBody The body to parse
  * @param commitObject The commit object to grab messages from, and to determine error messages.
  * @param delimiter The delimiters, surrounding the TOML.

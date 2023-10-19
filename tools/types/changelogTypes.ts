@@ -90,13 +90,11 @@ export interface ChangelogMessage {
 	commitMessage: string;
 
 	/**
-	 * Commit Object(s)
+	 * Commit Object
 	 * <p>
 	 * Provides the Commit SHA, the Commit Author, and the Commit Date.
-	 * <p>
-	 * Multiple are allowed!
 	 */
-	commitObjects?: Commit[];
+	commitObject?: Commit;
 
 	/**
 	 * Sub Changelog Messages
@@ -109,6 +107,26 @@ export interface ChangelogMessage {
 	 * Optional. Defaults to "".
 	 */
 	indentation?: string;
+
+	/**
+	 * If this changelog message is special. This is special formatting for it.
+	 */
+	specialFormatting?: SpecialChangelogFormatting<unknown>;
+}
+
+/**
+ * A special changelog message object, for special formatting.
+ */
+export interface SpecialChangelogFormatting<T> {
+	/**
+	 * Formatting Function
+	 */
+	formatting: (message: ChangelogMessage, storage?: T) => string;
+
+	/**
+	 * Storage
+	 */
+	storage: T;
 }
 
 /**

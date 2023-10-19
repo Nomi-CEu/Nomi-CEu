@@ -1,6 +1,6 @@
 import { Category, Commit, Parser, SubCategory } from "../../types/changelogTypes";
-import { categories, defaultIndentation, detailsKey, expandKey, noCategoryKey } from "./definitions";
-import { parseDetails, parseExpand } from "./specialParser";
+import { categories, combineKey, defaultIndentation, detailsKey, expandKey, noCategoryKey } from "./definitions";
+import { parseCombine, parseDetails, parseExpand } from "./specialParser";
 import { getChangelog } from "../../util/util";
 import ChangelogData from "./changelogData";
 
@@ -55,6 +55,10 @@ export async function parseCommitBody(
 	if (commitBody.includes(noCategoryKey)) {
 		return true;
 	}
+	if (commitBody.includes(combineKey)) {
+		await parseCombine(commitBody, commitObject);
+		return true;
+	}
 	return sortCommit(commitMessage, commitBody, commitObject);
 }
 
@@ -74,7 +78,7 @@ function sortCommit(message: string, commitBody: string, commit: Commit, indenta
 		const subCategory = findSubCategory(commitBody, category);
 		category.changelogSection.get(subCategory).push({
 			commitMessage: message,
-			commitObjects: [commit],
+			commitObject: commit,
 			indentation: indentation,
 		});
 	});

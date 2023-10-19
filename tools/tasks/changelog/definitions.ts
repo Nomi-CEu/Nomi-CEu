@@ -7,6 +7,12 @@ import { parseFixUp } from "./specialParser";
 export const defaultIndentation = "";
 export const indentationLevel = "  ";
 
+/*
+  Link to the repo, with a slash at the end.
+  All URLs will be appended to this.
+ */
+export const repoLink = "https://github.com/Nomi-CEu/Nomi-CEu/";
+
 /* Keys */
 
 /* Special Handling Keys */
@@ -16,6 +22,8 @@ export const expandList = "messages";
 export const detailsKey = "[DETAILS]";
 export const detailsList = "details";
 export const noCategoryKey = "[NO CATEGORY]";
+export const combineKey = "[COMBINE]";
+export const combineList = "commits";
 export const fixUpKey = "[FIXUP]";
 export const fixUpList = "fixes";
 
@@ -135,7 +143,7 @@ const overridesParsing: Parser = {
 	leftOverCallback: (commit, commitMessage, _commitBody, subMessages) => {
 		generalCategory.changelogSection.get(generalCategory.defaultSubCategory).push({
 			commitMessage: commitMessage,
-			commitObjects: [commit],
+			commitObject: commit,
 			subChangelogMessages: subMessages,
 		});
 	},

@@ -1,14 +1,9 @@
 import ChangelogData from "./changelogData";
 import { categories, defaultIndentation } from "./definitions";
 import { Category, ChangelogMessage, Commit } from "../../types/changelogTypes";
+import { repoLink } from "./definitions";
 
 let data: ChangelogData;
-
-/*
-Link to the repo, with a slash at the end.
-All URLs will be appended to this.
- */
-const repoLink = "https://github.com/Nomi-CEu/Nomi-CEu/";
 
 export default function pushAll(inputData: ChangelogData): void {
 	data = inputData;
@@ -49,7 +44,7 @@ export default function pushAll(inputData: ChangelogData): void {
 	}
 
 	// Check if the builder only contains the title.
-	if (data.builder.length == 1) {
+	if (data.builder.length <= 3) {
 		data.builder.push("");
 		data.builder.push("There haven't been any changes.");
 	}
@@ -81,7 +76,7 @@ function pushCategory(category: Category) {
 			// Sort Log
 			sortCommitList(
 				list,
-				(message) => message.commitObjects,
+				(message) => message.commitObject,
 				(a, b) => a.commitMessage.localeCompare(b.commitMessage),
 			);
 
@@ -114,36 +109,12 @@ function pushCategory(category: Category) {
  * @param transform A function to turn each element of type T into an element of type Commit
  * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal).
  */
-function sortCommitList<T>(
-	list: T[],
-	transform: (obj: T) => Commit | Commit[] | undefined,
-	backup?: (a: T, b: T) => number,
-) {
+function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined, backup?: (a: T, b: T) => number) {
 	list.sort((a, b): number => {
-		const commitsA = transform(a);
-		const commitsB = transform(b);
-		if (!commitsA || !commitsB) {
+		const commitA = transform(a);
+		const commitB = transform(b);
+		if (!commitA || !commitB) {
 			// If either commit is undefined
-			if (backup) return backup(a, b);
-			return 0;
-		}
-		let commitA: Commit, commitB: Commit;
-		if (!Array.isArray(commitsA) || !Array.isArray(commitsB)) {
-			// If given values are Commits
-			if (Array.isArray(commitsA) || Array.isArray(commitsB)) {
-				throw new Error("Transform created an array + non array!");
-			}
-			commitA = commitsA;
-			commitB = commitsB;
-		} else if (commitsA.length !== 0 && commitsB.length !== 0) {
-			// If given values are non-empty commit lists
-			sortCommitList(commitsA, (commit) => commit);
-			sortCommitList(commitsB, (commit) => commit);
-
-			commitA = commitsA[0];
-			commitB = commitsB[0];
-		} else {
-			// If some values are empty commit lists
 			if (backup) return backup(a, b);
 			return 0;
 		}
@@ -164,22 +135,32 @@ function sortCommitList<T>(
  * @return string Formatted Changelog Message
  */
 function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): string {
+	if (changelogMessage.specialFormatting)
+		return changelogMessage.specialFormatting.formatting(changelogMessage, changelogMessage.specialFormatting.storage);
+
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	const message = changelogMessage.commitMessage.trim();
 
-	if (changelogMessage.commitObjects && !subMessage) {
-		if (changelogMessage.commitObjects.length > 1) {
-			const authors: string[] = [];
+	if (changelogMessage.commitObject && !subMessage) {
+		if (data.combineList.has(changelogMessage.commitObject.hash)) {
+			const commits = data.combineList.get(changelogMessage.commitObject.hash);
+			commits.unshift(changelogMessage.commitObject);
+
 			const formattedCommits: string[] = [];
-			changelogMessage.commitObjects.forEach((commit) => {
+			const authors: string[] = [];
+			const processedSHAs: Set<string> = new Set<string>();
+
+			commits.forEach((commit) => {
+				if (processedSHAs.has(commit.hash)) return;
 				if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
 				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
+				processedSHAs.add(commit.hash);
 			});
+
 			authors.sort();
 			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")})`;
 		}
-
-		const commit = changelogMessage.commitObjects[0];
+		const commit = changelogMessage.commitObject;
 		const shortSHA = commit.hash.substring(0, 7);
 		const author = commit.author_name;
 

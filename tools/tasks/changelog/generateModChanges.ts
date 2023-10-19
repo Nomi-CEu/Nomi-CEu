@@ -4,8 +4,38 @@ import { Commit, ModChangeInfo } from "../../types/changelogTypes";
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import dedent from "dedent-js";
 import mustache from "mustache";
-import { modChangesAllocations } from "./definitions";
+import { defaultIndentation, modChangesAllocations, repoLink } from "./definitions";
 import ChangelogData from "./changelogData";
+import { SpecialChangelogFormatting } from "../../types/changelogTypes";
+
+/**
+ * Mod Changes special formatting
+ */
+const getModChangesFormatting: (commits: Commit[]) => SpecialChangelogFormatting<Commit[]> = (commits) => {
+	return {
+		formatting: (changelogMessage, commits) => {
+			const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
+			const message = changelogMessage.commitMessage.trim();
+			if (commits.length > 1) {
+				const authors: string[] = [];
+				const formattedCommits: string[] = [];
+				commits.forEach((commit) => {
+					if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
+					formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
+				});
+				authors.sort();
+				return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")})`;
+			}
+
+			const commit = commits[0];
+			const shortSHA = commit.hash.substring(0, 7);
+			const author = commit.author_name;
+
+			return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${repoLink}commit/${commit.hash}))`;
+		},
+		storage: commits,
+	} as SpecialChangelogFormatting<Commit[]>;
+};
 
 /**
  * Pushes the mod changes, with their relative commits, to their respective sub categories in the specified category.
@@ -56,7 +86,7 @@ export default async function generateModChanges(data: ChangelogData): Promise<v
 			}
 			block.allocation.category.changelogSection.get(block.allocation.subCategory).push({
 				commitMessage: getModChangeMessage(info, block.allocation.template),
-				commitObjects: commits,
+				specialFormatting: getModChangesFormatting(commits),
 			});
 		});
 	});
