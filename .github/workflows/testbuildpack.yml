@@ -1,0 +1,25 @@
+# Test Builds pack from pushes and pull requests in same repo.
+name: "[NOT CALLABLE] Test Build Pack"
+on:
+  push:
+    branches:
+      - main
+      - test_buildscript*
+
+  pull_request:
+
+# if a second commit is pushed quickly after the first, cancel the first one's build
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
+jobs:
+  build:
+    # Only allow runs from commits to Nomi-CEu Branches or from pull requests from Nomi-CEu repo
+    if: "${{ github.repository_owner == 'IntegerLimit' && ( !github.event.pull_request || github.event.pull_request.head.repo.owner.login == 'IntegerLimit' ) }}"
+    name: Test Build Pack
+    uses: ./.github/workflows/buildpack.yml
+    with:
+      separate_upload: true
+    secrets: inherit
+
