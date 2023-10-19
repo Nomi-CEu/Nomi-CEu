@@ -96,12 +96,6 @@ jobs:
         run: |
           npx gulp addVersionAll
 
-      - name: Update Mod List
-        working-directory: ./tools
-        run: npx gulp updateModList
-        env:
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-
       - name: Commit and Push Release Changes
         uses: "stefanzweifel/git-auto-commit-action@v4"
         id: "commit-release"
@@ -151,6 +145,15 @@ jobs:
       - name: Setup NPM Packages
         working-directory: ./tools
         run: npm ci
+
+      - name: Check Environmental Variables
+        working-directory: ./tools
+        run: npx gulp check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Update Files from Templates
         if: ${{ inputs.not_release }}
