@@ -45,8 +45,6 @@ case $MODE in
     # Only copy server.properties if it exists.
     if [ -f "server.properties" ]; then
         mv "${TARGET}/server.properties" ./
-    else
-        rm "${TARGET}/server.properties"
     fi
 
     # Update Mode
@@ -59,8 +57,6 @@ case $MODE in
 
     if [ -f "server.properties" ]; then
         mv "${TARGET}/server.properties" ./
-    else
-        rm "${TARGET}/server.properties"
     fi
 
     # Update Mode
