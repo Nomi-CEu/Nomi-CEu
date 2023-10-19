@@ -38,6 +38,9 @@ jobs:
     with:
       version: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
+    secrets: inherit
+    permissions:
+      contents: write
     
   build:
     name: Build Pack (${{ inputs.tag }})
@@ -61,6 +64,8 @@ jobs:
       tag: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
     secrets: inherit
+    permissions:
+      contents: write
 
   deployCF:
     name: Deploy to CurseForge (${{ inputs.tag }})

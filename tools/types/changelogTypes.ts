@@ -90,13 +90,11 @@ export interface ChangelogMessage {
 	commitMessage: string;
 
 	/**
-	 * Commit Object(s)
+	 * Commit Object
 	 * <p>
 	 * Provides the Commit SHA, the Commit Author, and the Commit Date.
-	 * <p>
-	 * Multiple are allowed!
 	 */
-	commitObjects?: Commit[];
+	commitObject?: Commit;
 
 	/**
 	 * Sub Changelog Messages
@@ -109,6 +107,96 @@ export interface ChangelogMessage {
 	 * Optional. Defaults to "".
 	 */
 	indentation?: string;
+
+	/**
+	 * If this changelog message is special. This is special formatting for it.
+	 */
+	specialFormatting?: SpecialChangelogFormatting<unknown>;
+}
+
+/**
+ * A special changelog message object, for special formatting.
+ */
+export interface SpecialChangelogFormatting<T> {
+	/**
+	 * Formatting Function
+	 */
+	formatting: (message: ChangelogMessage, storage?: T) => string;
+
+	/**
+	 * Storage
+	 */
+	storage: T;
+}
+
+/**
+ * A parsing category, which defines parsing rules and callbacks for different dirs.
+ */
+export interface Parser {
+	/**
+	 * Dirs to parse. If not set, will just parse commit list of all changes.
+	 */
+	dirs?: string[];
+
+	/**
+	 * Callback to determine whether a commit should be skipped.
+	 * <p>
+	 * If skipped, then all further parsing for the commit will stop. This condition does not include commits which are in the sha list, they are automatically skipped.
+	 * <p>
+	 * Expanded Commits from parseExpand go here too!<p><p>
+	 * commit: The commit object.<p>
+	 * commitMessage: The message of the commit.<p>
+	 * commitBody: The body of the commit. Might be undefined.<p>
+	 * return: True to skip, false to not.
+	 */
+	skipCallback: (commit: Commit, commitMessage: string, commitBody?: string) => boolean;
+
+	/**
+	 * Callback per item.
+	 * <p>
+	 * Expanded Commits from parseExpand go here too!<p><p>
+	 * parser: This parser object, for convenience of use when calling parseCommitBody.
+	 * commit: The commit object.
+	 * commitMessage: The message of the commit.<p>
+	 * commitBody: The body of the commit. Might be undefined.<p>
+	 * return: True if parsing was successful, false if not.
+	 */
+	itemCallback: (parser: Parser, commit: Commit, commitMessage: string, commitBody?: string) => Promise<boolean>;
+
+	/**
+	 * The callback to perform on any commits, which did not pass parsing. If not set, no callback will be performed, and those commits will be discarded.
+	 * <p>
+	 * Expanded Commits from parseExpand and parseDetails go here too!<p><p>
+	 * commit: The commit object.<p>
+	 * commitMessage: The message of the commit.<p>
+	 * commitBody: The body of the commit. Might be undefined.<p>
+	 * subMessages: Any sub-messages, coming from parseDetails. Might be undefined.
+	 */
+	leftOverCallback?: (
+		commit: Commit,
+		commitMessage: string,
+		commitBody?: string,
+		subMessages?: ChangelogMessage[],
+	) => void;
+
+	/**
+	 * Callback to determine whether to add the sha of that commit into the sha list, forbidding further parsing of it.
+	 * <p>
+	 * If not set, will just add SHA of every commit included in `dirs`.<p><p>
+	 * commit: The commit object.<p>
+	 * parsed: If parsing was successful. This is also true if the commit was skipped.<p>
+	 * return: True if to add sha, false if to not.<p>
+	 */
+	addSHACallback?: (commit: Commit, parsed: boolean) => boolean;
+
+	/**
+	 * Callback to determine whether or not the commit should be added to the commit list.
+	 * <p><p>
+	 * commit: The commit to determine.<p>
+	 * parsed: If parsing was successful.<p>
+	 * return: True if to add, false if not.
+	 */
+	addCommitListCallback: (commit: Commit, parsed: boolean) => boolean;
 }
 
 export interface ModChangeInfo {
@@ -121,6 +209,12 @@ export interface ModChangeInfo {
 export interface ExpandedMessage {
 	messageTitle: string;
 	messageBody?: string;
+}
+
+export interface FixUpInfo {
+	sha: string;
+	newTitle: string;
+	newBody?: string;
 }
 
 export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release" | "Cutting Edge Build";

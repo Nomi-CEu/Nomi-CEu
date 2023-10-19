@@ -21,13 +21,18 @@ on:
       branch:
         description: Branch to push changelog to. If not set, changelog will just be uploaded as an artifact.
         required: false
+      test:
+        description: Whether to test commits. If true, then any parsing errors will throw an error.
+        required: false
+        type: boolean
+        default: false
           
   workflow_call:
     inputs:
       tag:
         description: Tag to make changelog at.
         type: string
-        required: true
+        required: false
       release_type:
         description: Release Type.
         type: string
@@ -40,6 +45,11 @@ on:
         description: Branch to push changelog to. If not set, will not push. Will still be uploaded as artifact.
         type: string
         required: false
+      test:
+        description: Whether to test commits. If true, then any parsing errors will throw an error.
+        required: false
+        type: boolean
+        default: false
       
 jobs:
   deploy:
@@ -55,6 +65,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
@@ -83,6 +94,8 @@ jobs:
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           COMPARE_TAG: ${{ inputs.compare_tag }}
+          TEST_CHANGELOG: ${{ inputs.test }}
+          
         
       - name: Commit and Push Changelog
         if: ${{ inputs.branch }}

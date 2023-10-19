@@ -19,25 +19,26 @@ export const addVersionAll = gulp.series(checkRelease, releaseCommit.updateAll);
 
 // Non Release Tasks
 const setNotRelease = releaseCommit.setNotRelease;
-export const updateIssue = gulp.series(setNotRelease, addVersionIssue);
-export const updateRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
-export const updateServer = gulp.series(setNotRelease, addVersionServer);
-export const updateAll = gulp.series(setNotRelease, addVersionAll);
+export const updateTemplatesIssue = gulp.series(setNotRelease, addVersionIssue);
+export const updateTemplatesRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
+export const updateTemplatesServer = gulp.series(setNotRelease, addVersionServer);
+export const updateTemplatesAll = gulp.series(setNotRelease, addVersionAll);
 
-import * as changelog from "./tasks/misc/createChangelog";
-export const createChangelog = changelog.createChangelog;
+import * as changelog from "./tasks/changelog/createChangelog";
+export const createChangelog = changelog.createRootChangelog;
 
 import sharedTasks from "./tasks/shared";
 import clientTasks from "./tasks/client";
 import serverTasks from "./tasks/server";
 import langTasks from "./tasks/lang";
 import mmcTasks from "./tasks/mmc";
+import modTasks from "./tasks/misc/downloadMods";
 
 export const buildClient = gulp.series(sharedTasks, clientTasks);
-export const buildServer = gulp.series(sharedTasks, serverTasks);
+export const buildServer = gulp.series(sharedTasks, modTasks, serverTasks);
 export const buildLang = gulp.series(sharedTasks, langTasks);
-export const buildMMC = gulp.series(sharedTasks, clientTasks, mmcTasks);
-export const buildAll = gulp.series(sharedTasks, gulp.series(clientTasks, serverTasks, langTasks, mmcTasks));
+export const buildMMC = gulp.series(sharedTasks, modTasks, clientTasks, mmcTasks);
+export const buildAll = gulp.series(sharedTasks, modTasks, gulp.series(clientTasks, langTasks, serverTasks, mmcTasks));
 
 import checkTasks from "./tasks/checks";
 export const check = gulp.series(checkTasks);

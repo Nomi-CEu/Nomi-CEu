@@ -1,8 +1,10 @@
-import { clientDestDirectory, mmcDestDirectory, modpackManifest } from "../../globals";
+import { clientDestDirectory, mmcDestDirectory, modDestDirectory, modpackManifest } from "../../globals";
 import { fetchMods } from "../../util/curseForgeAPI";
 import * as upath from "upath";
 import { series, src, symlink } from "gulp";
 import * as fs from "fs";
+import gulp from "gulp";
+import buildConfig from "../../buildConfig";
 
 async function mmcCleanUp(cb) {
 	if (fs.existsSync(mmcDestDirectory)) {
@@ -24,6 +26,28 @@ async function createMMCDirs(cb) {
 }
 
 /**
+ * Copies the update notes file.
+ */
+function copyMMCUpdateNotes() {
+	return gulp.src("../UPDATENOTES.md", { allowEmpty: true }).pipe(gulp.dest(mmcDestDirectory));
+}
+
+
+/**
+ * Copies the license file.
+ */
+async function copyMMCLicense() {
+	return gulp.src("../LICENSE.md").pipe(gulp.dest(mmcDestDirectory));
+}
+
+/**
+ * Copies the changelog file.
+ */
+function copyMMCChangelog() {
+	return gulp.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(gulp.dest(mmcDestDirectory));
+}
+
+/**
  * Copies modpack overrides.
  */
 function copyOverrides() {
@@ -34,7 +58,7 @@ function copyOverrides() {
 }
 
 /**
- * Copies modpack overrides.
+ * Renames copied overrides to '.minecraft'.
  */
 async function renameOverrides() {
 	await fs.promises.rename(upath.join(mmcDestDirectory, "overrides"), upath.join(mmcDestDirectory, ".minecraft"));
@@ -42,13 +66,13 @@ async function renameOverrides() {
 }
 
 /**
- * Downloads client mods according to manifest.json and checks hashes.
+ * Copies client & shared mods.
  */
-async function fetchModJars() {
-	return fetchMods(
-		modpackManifest.files.filter((f) => !f.sides || f.sides.includes("client")),
-		upath.join(mmcDestDirectory, ".minecraft"),
-	);
+async function copyMMCModJars() {
+	return src([upath.join(modDestDirectory, "*"), upath.join(modDestDirectory, "client", "*")], {
+		nodir: true,
+		resolveSymlinks: false,
+	}).pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));
 }
 
 async function createMMCConfig() {
@@ -114,5 +138,5 @@ export default series(
 	renameOverrides,
 	createMMCConfig,
 	createMMCManifest,
-	fetchModJars,
+	copyMMCModJars,
 );
