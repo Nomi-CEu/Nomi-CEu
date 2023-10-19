@@ -1,11 +1,9 @@
-name: "[NOT CALLABLE] Test Build Pack"
+name: "[NOT CALLABLE] Push Build Pack"
 on:
   push:
     branches:
       - main
       - test_buildscript*
-
-  pull_request:
 
 # if a second commit is pushed quickly after the first, cancel the first one's build
 concurrency:
@@ -14,9 +12,9 @@ concurrency:
   
 jobs:
   build:
-    # Only allow runs from commits to Nomi-CEu Branches, and pull requests from Nomi-CEu base repo
-    if: "${{ github.repository_owner == 'IntegerLimit' && ( !github.event.pull_request || github.event.pull_request.head.repo.owner.login == 'IntegerLimit' ) }}"
-    name: Build Pack
+    # Only allow runs from commits to Nomi-CEu Branches
+    if: "${{ github.repository_owner == 'IntegerLimit' }}"
+    name: Push Build Pack
     uses: ./.github/workflows/buildpack.yml
     with:
       separate_upload: true
