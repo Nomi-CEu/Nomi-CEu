@@ -139,7 +139,17 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage =
 		return changelogMessage.specialFormatting.formatting(changelogMessage, changelogMessage.specialFormatting.storage);
 
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
-	const message = changelogMessage.commitMessage.trim();
+	let message = changelogMessage.commitMessage.trim();
+
+	// Transform PR tags into a link.
+	if (message.match(/(#\d+)/g)) {
+		const matched = message.match(/\(#\d+\)/g);
+		matched.forEach((match) => {
+			// Extract digits
+			const digits = match.match(/\d+/g);
+			message = message.replace(match, `([#${digits}](${repoLink}pull/${digits}))`);
+		});
+	}
 
 	if (changelogMessage.commitObject && !subMessage) {
 		if (data.combineList.has(changelogMessage.commitObject.hash)) {
