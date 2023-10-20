@@ -1,4 +1,4 @@
-import { modpackManifest, sharedDestDirectory } from "../../globals";
+import { modpackManifest } from "../../globals";
 
 import fs from "fs";
 import upath from "upath";
@@ -7,8 +7,10 @@ import { makeArtifactNameBody } from "../../util/util";
 import Bluebird from "bluebird";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
+import mustache from "mustache";
+import { DeployReleaseType, inputToDeployReleaseTypes } from "../../types/changelogTypes";
 
-const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY"];
+const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
 
 /**
  * Uploads build artifacts to GitHub Releases.
@@ -24,7 +26,7 @@ async function deployReleases(): Promise<void> {
 	});
 
 	const body = makeArtifactNameBody(modpackManifest.name);
-	const files = ["client", "server", "lang"].map((file) => sanitize(`${body}-${file}.zip`.toLowerCase()));
+	const files = ["client", "server", "lang", "mmc"].map((file) => sanitize(`${body}-${file}.zip`.toLowerCase()));
 
 	/**
 	 * Obligatory file check.
@@ -51,16 +53,21 @@ async function deployReleases(): Promise<void> {
 	};
 
 	const tag = process.env.GITHUB_TAG;
-	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
+	const releaseType: DeployReleaseType = inputToDeployReleaseTypes[process.env.RELEASE_TYPE];
+	const preRelease = releaseType ? releaseType.isPreRelease : false;
 
-	// Since we've built everything beforehand, the changelog must be available in the shared directory.
-	const changelog = await (await fs.promises.readFile(upath.join(sharedDestDirectory, "CHANGELOG.md"))).toString();
+	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
+	let changelog = (
+		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
+	).toString();
+
+	changelog = mustache.render(changelog, { CENTER_ALIGN: 'align="center"', CF_REDIRECT: "" });
 
 	// Create a release.
 	const release = await octokit.repos.createRelease({
 		tag_name: tag || "latest-dev-preview",
-		prerelease: !tag,
-		name: [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - "),
+		prerelease: preRelease,
+		name: tag || "latest-dev-preview",
 		body: changelog,
 		...repo,
 	});
