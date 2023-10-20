@@ -217,13 +217,6 @@ recipes.addShaped(<metaitem:charger.uhv>, [
 ]);
 
 // Assembly Line
-// Assembly Control Casing
-recipes.remove(<gregtech:multiblock_casing:3>);
-recipes.addShaped(<gregtech:multiblock_casing:3> * 4, [
-    [<ore:circuitLuv>, <metaitem:plate.high_power_integrated_circuit>, <ore:circuitLuv>],
-    [<metaitem:sensor.iv>, <metaitem:frameTungstenSteel>, <metaitem:emitter.iv>],
-    [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
-]);
 
 // ZPM Field Generator * 1
 <recipemap:assembly_line>.findRecipe(24000, [<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <metaitem:circuit.quantum_mainframe> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4], [<liquid:soldering_alloy> * 1152]).remove();

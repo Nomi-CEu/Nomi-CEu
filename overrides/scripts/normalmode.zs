@@ -728,6 +728,14 @@ large_chemical_reactor.recipeBuilder()
 	.circuit(25)
 	.duration(300).EUt(7680).buildAndRegister();
 
+// Assembly Control Casing
+recipes.remove(<gregtech:multiblock_casing:3>);
+recipes.addShaped(<gregtech:multiblock_casing:3> * 4, [
+    [<ore:circuitLuv>, <metaitem:plate.high_power_integrated_circuit>, <ore:circuitLuv>],
+    [<metaitem:sensor.iv>, <metaitem:frameTungstenSteel>, <metaitem:emitter.iv>],
+    [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
+]);
+
 // Nq+ and Nq*
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
 
