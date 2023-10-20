@@ -183,7 +183,7 @@ async function parse<T>(
 		// Remove everything before first delimiter in body
 		const list = commitBody.split(delimiter);
 		list.shift();
-		const body = `${delimiter} ${list.join(delimiter)}`;
+		const body = `${delimiter} ${list.join(delimiter)}`.split("\r\n").join("\n");
 
 		// Parse
 		const parseResult = matter(body, {
