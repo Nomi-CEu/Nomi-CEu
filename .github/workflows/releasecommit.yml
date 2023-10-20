@@ -156,13 +156,11 @@ jobs:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Update Files from Templates
-        if: ${{ inputs.not_release }}
         working-directory: ./tools
         run: |
           npx gulp updateTemplatesAll
 
       - name: Commit and Push Template Changes
-        if: ${{ inputs.not_release }}
         uses: "stefanzweifel/git-auto-commit-action@v4"
         id: "commit-template"
         with:
@@ -170,7 +168,7 @@ jobs:
           commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
           
       - name: Throw Error if No Template Changes were Detected
-        if: ${{ inputs.not_release && steps.commit-template.outputs.changes_detected == 'false' }}
+        if: ${{ steps.commit-template.outputs.changes_detected == 'false' }}
         run: |
           echo "No Template Changes were detected. This may be an error."
           exit 1
