@@ -1,4 +1,4 @@
-import { modpackManifest, sharedDestDirectory } from "../../globals";
+import { modpackManifest } from "../../globals";
 
 import request from "requestretry";
 import fs from "fs";
@@ -7,55 +7,13 @@ import upath from "upath";
 import buildConfig from "../../buildConfig";
 import { makeArtifactNameBody } from "../../util/util";
 import sanitize from "sanitize-filename";
+import mustache from "mustache";
+import { DeployReleaseType, inputToDeployReleaseTypes } from "../../types/changelogTypes";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
-const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID"];
+const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID", "RELEASE_TYPE"];
 
-interface CFUploadOptions {
-	releaseType?: "release" | "beta";
-}
-
-/**
- * Uploads beta artifacts to CurseForge.
- */
-export async function deployCurseForgeBeta(): Promise<void> {
-	/**
-	 * Obligatory variable check.
-	 */
-	["RC_VERSION", ...variablesToCheck].forEach((vari) => {
-		if (!process.env[vari]) {
-			throw new Error(`Environmental variable ${vari} is unset.`);
-		}
-	});
-
-	const version = process.env.RC_VERSION;
-	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
-	const displayName = [modpackManifest.name, [version.replace(/^v/, ""), "Release Candidate"].join(" "), flavorTitle]
-		.filter(Boolean)
-		.join(" - ");
-
-	const files = [
-		{
-			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-client.zip").toLowerCase()),
-			displayName: displayName,
-		},
-		{
-			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-server.zip").toLowerCase()),
-			displayName: `${displayName} Server`,
-		},
-	];
-
-	/**
-	 * Obligatory file check.
-	 */
-	await upload(files, {
-		releaseType: "beta",
-	});
-}
-
-async function upload(files: { name: string; displayName: string }[], opts?: CFUploadOptions) {
-	opts = opts || {};
-
+async function upload(files: { name: string; displayName: string }[]) {
 	files.forEach((file) => {
 		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
 		if (!fs.existsSync(path)) {
@@ -64,10 +22,14 @@ async function upload(files: { name: string; displayName: string }[], opts?: CFU
 	});
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
-	const changelog = await (await fs.promises.readFile(upath.join(sharedDestDirectory, "CHANGELOG.md")))
-		.toString()
-		.replace(/\n/g, "  \n")
-		.replace(/\n\*/g, "\n•");
+	let changelog = (
+		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"))
+	).toString();
+
+	changelog = mustache.render(changelog, {
+		CENTER_ALIGN: 'style="text-align: center;"',
+		CF_REDIRECT: `<h4 style="text-align: center;">Looks way better <a href="https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/${process.env.GITHUB_TAG}">here.</a></h4>`,
+	});
 
 	const tokenHeaders = {
 		"X-Api-Token": process.env.CURSEFORGE_API_TOKEN,
@@ -97,6 +59,8 @@ async function upload(files: { name: string; displayName: string }[], opts?: CFU
 
 	let clientFileID: number | null;
 
+	const releaseType: DeployReleaseType = inputToDeployReleaseTypes[process.env.RELEASE_TYPE];
+
 	// Upload artifacts.
 	for (const file of files) {
 		const options = {
@@ -109,9 +73,9 @@ async function upload(files: { name: string; displayName: string }[], opts?: CFU
 			formData: {
 				metadata: JSON.stringify({
 					changelog: changelog,
-					changelogType: "markdown",
-					releaseType: opts.releaseType || "release",
-					parentFileID: clientFileID,
+					changelogType: "html",
+					releaseType: releaseType ? releaseType.cfReleaseType : "release",
+					parentFileID: clientFileID ? clientFileID : undefined,
 					gameVersions: clientFileID ? undefined : [version.id],
 					displayName: file.displayName,
 				}),
@@ -148,9 +112,7 @@ export async function deployCurseForge(): Promise<void> {
 		}
 	});
 
-	const tag = process.env.GITHUB_TAG;
-	const flavorTitle = process.env.BUILD_FLAVOR_TITLE;
-	const displayName = [modpackManifest.name, tag.replace(/^v/, ""), flavorTitle].filter(Boolean).join(" - ");
+	const displayName = process.env.GITHUB_TAG;
 
 	const files = [
 		{
@@ -159,9 +121,9 @@ export async function deployCurseForge(): Promise<void> {
 		},
 		{
 			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-server.zip").toLowerCase()),
-			displayName: `${displayName} Server`,
+			displayName: `${displayName}-server`,
 		},
 	];
 
-	upload(files);
+	await upload(files);
 }
