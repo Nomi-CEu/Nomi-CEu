@@ -4,18 +4,24 @@ import fs from "fs";
 import buildConfig from "../buildConfig";
 import upath from "upath";
 import requestretry from "requestretry";
+import request from "requestretry";
 import http from "http";
 import { compareBufferToHashDef } from "./hashes";
 import { execSync } from "child_process";
-import { ModpackManifest, ModpackManifestFile, ExternalDependency } from "../types/modpackManifest";
-import { fetchProject, fetchProjectsBulk } from "./curseForgeAPI";
+import { ExternalDependency, ModpackManifest, ModpackManifestFile } from "../types/modpackManifest";
+import { fetchFileInfo, fetchProject, fetchProjectsBulk } from "./curseForgeAPI";
 import Bluebird from "bluebird";
 import { VersionManifest } from "../types/versionManifest";
 import { VersionsManifest } from "../types/versionsManifest";
-import request from "requestretry";
 import log from "fancy-log";
+import { pathspec, SimpleGit, simpleGit } from "simple-git";
+import { Commit, ModChangeInfo } from "../types/changelogTypes";
+import { rootDirectory } from "../globals";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
+
+// Make git commands run in root dir
+const git: SimpleGit = simpleGit(rootDirectory);
 
 /**
  * Parses the library name into path following the standard package naming convention.
@@ -29,9 +35,7 @@ export const libraryToPath = (library: string): string => {
 		const name = parsedLibrary[2];
 		const version = parsedLibrary[3];
 
-		const newURL = `${pkg}/${name}/${version}/${name}-${version}`;
-
-		return newURL;
+		return `${pkg}/${name}/${version}/${name}-${version}`;
 	}
 };
 
@@ -40,10 +44,29 @@ export const libraryToPath = (library: string): string => {
  */
 export const checkEnvironmentalVariables = (vars: string[]): void => {
 	vars.forEach((vari) => {
-		if (!process.env[vari] || process.env[vari] == "") {
+		if (!isEnvVariableSet(vari)) {
 			throw new Error(`Environmental variable ${vari} is unset.`);
 		}
 	});
+};
+
+/**
+ * Returns true if given variable set, false otherwise.
+ */
+export const isEnvVariableSet = (env: string): boolean => {
+	return process.env[env] && process.env[env] != "";
+};
+
+/**
+ * Check if given git tag exists. Throws otherwise.
+ */
+export const checkGitTag = (tag: string): void => {
+	// The below command returns an empty buffer if the given tag does not exist.
+	const tagBuffer = execSync(`git tag --list ${tag}`);
+
+	if (!tagBuffer || tagBuffer.toString().trim() != tag) {
+		throw new Error(`Tag ${tag} could not be found.`);
+	}
 };
 
 export enum RetrievedFileDefReason {
@@ -61,6 +84,8 @@ export interface RetrievedFileDef {
  *
  * Internally hashes the URL of the provided FileDef and looks it up in the cache directory.
  * In case of no cache hit, downloads the file and stores within the cache directory for later use.
+ * <p>
+ * @param fileDef The file def to download or retrieve.
  */
 export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<RetrievedFileDef> {
 	const fileNameSha = sha1(fileDef.url);
@@ -98,37 +123,7 @@ export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<Retri
 	try {
 		handle = await fs.promises.open(cachedFilePath, "w");
 
-		let hashFailed = false;
-		const retryStrategy = (err: Error, response: http.IncomingMessage, body: unknown) => {
-			// Verify hashes.
-			if (!err && fileDef.hashes && body) {
-				const success = fileDef.hashes.every((hashDef) => {
-					return compareBufferToHashDef(body as Buffer, hashDef);
-				});
-
-				if (!success) {
-					if (hashFailed) {
-						throw new Error(`Couldn't verify checksums of ${upath.basename(fileDef.url)}`);
-					}
-
-					hashFailed = true;
-					return true;
-				}
-			}
-			return requestretry.RetryStrategies.HTTPOrNetworkError(err, response, body);
-		};
-
-		const data: Buffer = Buffer.from(
-			await requestretry({
-				url: fileDef.url,
-				fullResponse: false,
-				encoding: null,
-				retryStrategy: retryStrategy,
-				maxAttempts: 5,
-			}),
-		);
-
-		await handle.write(data);
+		await handle.write(await downloadFileDef(fileDef));
 		await handle.close();
 
 		return {
@@ -148,6 +143,44 @@ export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<Retri
 }
 
 /**
+ * Similar to downloadOrRetrieveFileDef, but does not check cache.
+ */
+export async function downloadFileDef(fileDef: FileDef): Promise<Buffer> {
+	let hashFailed = false;
+	const retryStrategy = (err: Error, response: http.IncomingMessage, body: unknown) => {
+		if (response.statusCode === 404) {
+			throw new Error(`URL ${fileDef.url} returned status 404.`);
+		}
+		// Verify hashes.
+		if (!err && fileDef.hashes && body) {
+			const success = fileDef.hashes.every((hashDef) => {
+				return compareBufferToHashDef(body as Buffer, hashDef);
+			});
+
+			if (!success) {
+				if (hashFailed) {
+					throw new Error(`Couldn't verify checksums of ${upath.basename(fileDef.url)}`);
+				}
+
+				hashFailed = true;
+				return true;
+			}
+		}
+		return requestretry.RetryStrategies.HTTPOrNetworkError(err, response, body);
+	};
+
+	return Buffer.from(
+		await requestretry({
+			url: fileDef.url,
+			fullResponse: false,
+			encoding: null,
+			retryStrategy: retryStrategy,
+			maxAttempts: 5,
+		}),
+	);
+}
+
+/**
  * Returns artifact name body depending on environment variables.
  * Mostly intended to be called by CI/CD.
  */
@@ -156,13 +189,9 @@ export function makeArtifactNameBody(baseName: string): string {
 	if (process.env.GITHUB_TAG) {
 		return `${baseName}-${process.env.GITHUB_TAG}`;
 	}
-	// RC.
-	else if (process.env.RC_VERSION) {
-		return `${baseName}-${process.env.RC_VERSION.replace(/^v/, "")}`;
-	}
 	// If SHA is provided and the build isn't tagged, append both the branch and short SHA.
 	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
-		const shortCommit = process.env.GITHUB_SHA.substr(0, 7);
+		const shortCommit = process.env.GITHUB_SHA.substring(0, 7);
 		const branch = /refs\/heads\/(.+)/.exec(process.env.GITHUB_REF);
 		return `${baseName}-${branch[1]}-${shortCommit}`;
 	} else {
@@ -171,12 +200,18 @@ export function makeArtifactNameBody(baseName: string): string {
 }
 
 /**
- * Fetches the last tag known to Git using the current branch.
- * @param {string | nil} before Tag to get the tag before.
+ * Returns the COMPARE_TAG env if set, else fetches the last tag known to Git using the current branch.
+ * @param before Tag to get the tag before.
  * @returns string Git tag.
  * @throws
  */
 export function getLastGitTag(before?: string): string {
+	if (isEnvVariableSet("COMPARE_TAG")) {
+		checkGitTag(process.env["COMPARE_TAG"]);
+
+		return process.env["COMPARE_TAG"];
+	}
+
 	if (before) {
 		before = `"${before}^"`;
 	}
@@ -188,40 +223,46 @@ export function getLastGitTag(before?: string): string {
 
 /**
  * Generates a changelog based on the two provided Git refs.
- * @param {string} since Lower boundary Git ref.
- * @param {string} to Upper boundary Git ref.
- * @param {string[]} dirs Optional scopes.
+ * @param since Lower boundary Git ref.
+ * @param to Upper boundary Git ref.
+ * @param dirs Optional scopes. These are of the perspective of the root dir.
+ * @returns changelog Object Array of Changelog
  */
-export function getChangeLog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): string {
-	const command = [
-		"git log",
-		"--no-merges",
-		'--date="format:%d %b %Y"',
-		'--pretty="* %s - **%an** (%ad)"',
-		`${since}..${to}`,
-	];
-
+export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] = undefined): Promise<Commit[]> {
+	const options: string[] = ["--no-merges", `${since}..${to}`];
 	if (dirs) {
-		command.push("--", dirs.join(" -- "));
+		dirs.forEach((dir) => {
+			options.push(pathspec(dir));
+		});
 	}
 
-	return execSync(command.join(" ")).toString().trim();
+	const commitList: Commit[] = [];
+	await git.log(options, (err, output) => {
+		if (err) {
+			console.error(err);
+			throw new Error();
+		}
+
+		// Cannot simply set commitList as output.all as is read only, must do this
+		output.all.forEach((commit) => commitList.push(commit));
+	});
+
+	return commitList;
 }
 
 /**
- * Generates a changelog based on the two provided Git refs.
- * @param {string} since Lower boundary Git ref.
- * @param {string} to Upper boundary Git ref.
- * @param {string[]} dirs Optional scopes.
+ * Gets the file at a certain point in time.
+ * @param path The path to the file
+ * @param revision The git ref point. Can also be a commit SHA
  */
 export function getFileAtRevision(path: string, revision = "HEAD"): string {
 	return execSync(`git show ${revision}:"${path}"`).toString().trim();
 }
 
 export interface ManifestFileListComparisonResult {
-	removed: string[];
-	modified: string[];
-	added: string[];
+	removed: ModChangeInfo[];
+	modified: ModChangeInfo[];
+	added: ModChangeInfo[];
 }
 
 export async function compareAndExpandManifestDependencies(
@@ -229,18 +270,18 @@ export async function compareAndExpandManifestDependencies(
 	newFiles: ModpackManifest,
 ): Promise<ManifestFileListComparisonResult> {
 	// Map inputs for efficient joining.
-	const oldFileMap: { [key: number]: ModpackManifestFile } = oldFiles.files.reduce(
-		(map, file) => ((map[file.projectID] = file), map),
-		{},
-	);
-	const newFileMap: { [key: number]: ModpackManifestFile } = newFiles.files.reduce(
-		(map, file) => ((map[file.projectID] = file), map),
-		{},
-	);
+	const oldFileMap: { [key: number]: ModpackManifestFile } = oldFiles.files.reduce((map, file) => {
+		map[file.projectID] = file;
+		return map;
+	}, {});
+	const newFileMap: { [key: number]: ModpackManifestFile } = newFiles.files.reduce((map, file) => {
+		map[file.projectID] = file;
+		return map;
+	}, {});
 
-	const removed: string[] = [],
-		modified: string[] = [],
-		added: string[] = [];
+	const removed: ModChangeInfo[] = [],
+		modified: ModChangeInfo[] = [],
+		added: ModChangeInfo[] = [];
 
 	// Create a distinct map of project IDs.
 	const projectIDs = Array.from(
@@ -259,15 +300,28 @@ export async function compareAndExpandManifestDependencies(
 
 			// Doesn't exist in new, but exists in old. Removed. Left outer join.
 			if (!newFileInfo && oldFileInfo) {
-				removed.push((await fetchProject(oldFileInfo.projectID)).name);
+				removed.push({
+					modName: (await fetchProject(oldFileInfo.projectID)).name,
+					projectID: projectID,
+					oldVersion: (await fetchFileInfo(oldFileInfo.projectID, oldFileInfo.fileID)).displayName,
+				});
 			}
 			// Doesn't exist in old, but exists in new. Added. Right outer join.
 			else if (newFileMap[projectID] && !oldFileMap[projectID]) {
-				added.push((await fetchProject(newFileInfo.projectID)).name);
+				added.push({
+					modName: (await fetchProject(newFileInfo.projectID)).name,
+					projectID: projectID,
+					newVersion: (await fetchFileInfo(newFileInfo.projectID, newFileInfo.fileID)).displayName,
+				});
 			}
 			// Exists in both. Modified? Inner join.
 			else if (oldFileInfo.fileID != newFileInfo.fileID) {
-				modified.push((await fetchProject(newFileInfo.projectID)).name);
+				modified.push({
+					modName: (await fetchProject(newFileInfo.projectID)).name,
+					projectID: projectID,
+					oldVersion: (await fetchFileInfo(newFileInfo.projectID, oldFileInfo.fileID)).displayName,
+					newVersion: (await fetchFileInfo(newFileInfo.projectID, newFileInfo.fileID)).displayName,
+				});
 			}
 		},
 		{ concurrency: buildConfig.downloaderConcurrency },
@@ -275,11 +329,17 @@ export async function compareAndExpandManifestDependencies(
 
 	// Compare external dependencies the same way.
 	const oldExternalMap: { [key: string]: ExternalDependency } = (oldFiles.externalDependencies || []).reduce(
-		(map, file) => ((map[file.name] = file), map),
+		(map, file) => {
+			map[file.name] = file;
+			return map;
+		},
 		{},
 	);
 	const newExternalMap: { [key: string]: ExternalDependency } = (newFiles.externalDependencies || []).reduce(
-		(map, file) => ((map[file.name] = file), map),
+		(map, file) => {
+			map[file.name] = file;
+			return map;
+		},
 		{},
 	);
 
@@ -290,21 +350,21 @@ export async function compareAndExpandManifestDependencies(
 		]),
 	);
 
-	externalNames.forEach(async (name) => {
+	externalNames.forEach((name) => {
 		const oldDep = oldExternalMap[name];
 		const newDep = newExternalMap[name];
 
 		// Doesn't exist in new, but exists in old. Removed. Left outer join.
 		if (!newDep && oldDep) {
-			removed.push(oldDep.name);
+			removed.push({ modName: oldDep.name });
 		}
 		// Doesn't exist in old, but exists in new. Added. Right outer join.
 		else if (newDep && !oldDep) {
-			added.push(newDep.name);
+			added.push({ modName: newDep.name });
 		}
 		// Exists in both. Modified? Inner join.
 		else if (oldDep.url != newDep.url || oldDep.name != newDep.name) {
-			modified.push(newDep.name);
+			modified.push({ modName: newDep.name });
 		}
 	});
 
@@ -338,17 +398,12 @@ export async function getVersionManifest(minecraftVersion: string): Promise<Vers
 		return null;
 	}
 
-	/**
-	 * Fetch the version manifest file.
-	 */
-	const versionManifest: VersionManifest = await request({
+	return request({
 		uri: version.url,
 		json: true,
 		fullResponse: false,
 		maxAttempts: 5,
 	});
-
-	return versionManifest;
 }
 
 /**
@@ -366,4 +421,15 @@ export function relative(from: string, to: string): string {
 	}
 
 	return upath.join(...Array(broken[0].length - 1).fill(".."), ...broken[1]);
+}
+
+/**
+ * Cleans up a file's display name, and returns the version. Works for all tested mods!
+ * @param version The filename/version to cleanup.
+ */
+export function cleanupVersion(version: string): string {
+	if (!version) return "";
+	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
+	const list = version.match(/[\d+.?]+/g);
+	return list[list.length - 1];
 }

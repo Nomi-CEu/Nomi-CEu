@@ -1,5 +1,5 @@
 import bluebird from "bluebird";
-import { CurseForgeFetchedFileInfo, CurseForgeModInfo as CurseForgeProject } from "../types/curseForge";
+import { CurseForgeFileInfo, CurseForgeModInfo as CurseForgeProject } from "../types/curseForge";
 import log from "fancy-log";
 import request from "requestretry";
 import { ModpackManifestFile } from "../types/modpackManifest";
@@ -43,22 +43,20 @@ export async function fetchProject(toFetch: number): Promise<CurseForgeProject> 
 		throw new Error(`Failed to fetch project ${toFetch}`);
 	}
 
-	if (project) {
-		curseForgeProjectCache[toFetch] = project;
-	}
+	curseForgeProjectCache[toFetch] = project;
 
 	return project;
 }
 
-const fetchedFileInfoCache: { [key: string]: CurseForgeFetchedFileInfo } = {};
-export async function fetchFileInfo(projectID: number, fileID: number): Promise<CurseForgeFetchedFileInfo> {
+const fetchedFileInfoCache: { [key: string]: CurseForgeFileInfo } = {};
+export async function fetchFileInfo(projectID: number, fileID: number): Promise<CurseForgeFileInfo> {
 	const slug = `${projectID}/${fileID}`;
 
 	if (fetchedFileInfoCache[slug]) {
 		return fetchedFileInfoCache[slug];
 	}
 
-	const fileInfo: CurseForgeFetchedFileInfo = (
+	const fileInfo: CurseForgeFileInfo = (
 		await request({
 			uri: `${buildConfig.cfCoreApiEndpoint}/v1/mods/${projectID}/files/${fileID}`,
 			json: true,
@@ -73,17 +71,126 @@ export async function fetchFileInfo(projectID: number, fileID: number): Promise<
 		throw new Error(`Failed to download file ${projectID}/file/${fileID}`);
 	}
 
-	if (fileInfo) {
-		fetchedFileInfoCache[slug] = fileInfo;
+	fetchedFileInfoCache[slug] = fileInfo;
 
-		if (!fileInfo.downloadUrl) {
-			const fid = `${Math.floor(fileInfo.id / 1000)}/${fileInfo.id % 1000}`;
+	return fileInfo;
+}
 
-			fileInfo.downloadUrl = `https://edge.forgecdn.net/files/${fid}/${fileInfo.fileName}`;
+export interface ProjectToFileId {
+	projectID: number;
+	fileID: number;
+}
+
+/**
+ * Fetches multiple CurseForge files.
+ * Falls back to fetchFileInfo in case it's impossible to bulk-fetch some files.
+ *
+ * @param toFetch List of Project IDs to File IDs, to fetch.
+ * @returns CurseForge file infos.
+ */
+export async function fetchFilesBulk(toFetch: ProjectToFileId[]): Promise<CurseForgeFileInfo[]> {
+	const fileInfos: CurseForgeFileInfo[] = [];
+	// Map of file ids not fetched (project ID to file ID)
+	const unfetched: ProjectToFileId[] = [];
+
+	// Determine projects that have been fetched already.
+	toFetch.forEach((file) => {
+		const slug = `${file.projectID}/${file.fileID}`;
+		const cached = fetchedFileInfoCache[slug];
+		if (cached) fileInfos.push(cached);
+		else unfetched.push(file);
+	});
+
+	// Sort list (reduces risk of duplicate entries)
+	unfetched.sort((a, b) => a.fileID - b.fileID);
+
+	if (unfetched.length > 0) {
+		// Augment the array of known files with new info.
+		const fetched: CurseForgeFileInfo[] = (
+			await request.post({
+				uri: `${buildConfig.cfCoreApiEndpoint}/v1/mods/files`,
+				json: {
+					fileIds: unfetched.map((file) => file.fileID),
+				},
+				fullResponse: false,
+				maxAttempts: 5,
+				headers: {
+					"X-Api-Key": getCurseForgeToken(),
+				},
+			})
+		)?.data;
+
+		if (!fetched) {
+			throw new Error(
+				`Failed to bulk-fetch files:\n${unfetched
+					.map((file) => `File ${file.fileID} of mod ${file.projectID},`)
+					.join("\n")}`,
+			);
+		}
+
+		// Remove duplicate entries (Batch Fetch sometimes returns duplicate inputs... for some reason)
+		if (fetched.length > unfetched.length) {
+			// Can't directly use Set, as Set compares object ref, not object data
+			const uniqueFileIDs: number[] = [];
+			fetched.forEach((file) => {
+				if (!uniqueFileIDs.includes(file.id)) {
+					fileInfos.push(file);
+					uniqueFileIDs.push(file.id);
+				}
+			});
+		} else {
+			fileInfos.push(...fetched);
+		}
+
+		// Cache fetched stuff.
+		fetched.forEach((info) => {
+			fetchedFileInfoCache[`${info.modId}/${info.id}`] = info;
+		});
+
+		// In case we haven't received the proper amount of mod infos,
+		// try requesting them individually.
+		if (fileInfos.length < toFetch.length) {
+			// Set of fetched fileIDs.
+			const fileInfoIDs: Set<number> = new Set(
+				fileInfos.map((file) => {
+					return file.id;
+				}),
+			);
+			const toFetchMissing = [...new Set(toFetch.filter((x) => !fileInfoIDs.has(x.fileID)))];
+
+			if (toFetchMissing.length > 0) {
+				log.warn(
+					`Couldn't fetch next project IDs in bulk:\n${toFetchMissing
+						.map((file) => `File ${file.fileID} of mod ${file.projectID},`)
+						.join("\n")}`,
+				);
+
+				// Try fetching files individually, in case they've been deleted.
+				let count = 0;
+				const missingFileInfos: CurseForgeFileInfo[] = await bluebird.map(toFetchMissing, async (file) => {
+					log.info(
+						`Fetching file ${file.fileID} of mod ${file.projectID} directly... (${++count} / ${toFetchMissing.length})`,
+					);
+
+					try {
+						// In case something fails to download; catch, rewrite, rethrow.
+						return await fetchFileInfo(file.projectID, file.fileID);
+					} catch (err) {
+						err.message = `Couldn't fetch file ${file.fileID} of mod ${file.projectID}. ${
+							err.message || "Unknown error"
+						}`;
+						throw err;
+					}
+				});
+
+				// The code above is expected to throw and terminate the further execution,
+				// so we can just do this.
+				fileInfos.push(...missingFileInfos);
+			}
 		}
 	}
 
-	return fileInfo;
+	return fileInfos;
 }
 
 /**
@@ -136,11 +243,11 @@ export async function fetchProjectsBulk(toFetch: number[]): Promise<CurseForgePr
 
 		// In case we haven't received the proper amount of mod infos,
 		// try requesting them individually.
-		if (unfetched.length !== toFetch.length) {
+		if (modInfos.length !== toFetch.length) {
 			const modInfoIDs = new Set(modInfos.map((mi) => mi.id));
 			const toFetchMissing = [...new Set(toFetch.filter((x) => !modInfoIDs.has(x)))];
 
-			log.warn(`Couldn't fetch next project IDs in bulk: ${toFetchMissing.join(", ")}`);
+			log.warn(`Couldn't fetch some project IDs in bulk: ${toFetchMissing.join(", ")}`);
 
 			// Try fetching mods individually, in case they've been deleted.
 			let count = 0;
@@ -165,19 +272,20 @@ export async function fetchProjectsBulk(toFetch: number[]): Promise<CurseForgePr
 	return modInfos;
 }
 
+/**
+ * Downloads mods from the manifest.
+ * @param toFetch The files to fetch
+ * @param destination The dir to put all the mods in. The mods will go into that dir, and not into a sub dir!
+ */
 export async function fetchMods(toFetch: ModpackManifestFile[], destination: string): Promise<void[]> {
 	if (toFetch.length > 0) {
 		log(`Fetching ${toFetch.length} mods...`);
-
-		const modsPath = upath.join(destination, "mods");
-		await fs.promises.mkdir(modsPath, { recursive: true });
 
 		let fetched = 0;
 		return Bluebird.map(
 			toFetch,
 			async (file) => {
 				const fileInfo = await fetchFileInfo(file.projectID, file.fileID);
-
 				const fileDef: FileDef = {
 					url: fileInfo.downloadUrl,
 				};
@@ -199,7 +307,7 @@ export async function fetchMods(toFetch: ModpackManifestFile[], destination: str
 					log(`Fetched ${upath.basename(fileDef.url)} from cache... (${fetched} / ${toFetch.length})`);
 				}
 
-				const dest = upath.join(destination, "mods", fileInfo.fileName);
+				const dest = upath.join(destination, fileInfo.fileName);
 
 				await fs.promises.symlink(relative(dest, modFile.cachePath), dest);
 			},

@@ -105,7 +105,7 @@ export async function transformQuestBook(): Promise<void> {
 	// Source Quest Book File Locations
 	const questPathNormalDev = upath.join(sharedQBDefaults, "saved_quests", "NormalQuestsDev.json");
 	const questPathExpertDev = upath.join(sharedQBDefaults, "saved_quests", "ExpertQuestsDev.json");
-	
+
 	// Quest Book Objects
 	const questBookNormal: QuestBook = JSON.parse((await fs.promises.readFile(questPathNormalDev)).toString());
 	const questBookExpert: QuestBook = JSON.parse((await fs.promises.readFile(questPathExpertDev)).toString());
@@ -113,31 +113,27 @@ export async function transformQuestBook(): Promise<void> {
 	// Quest Book Paths
 	const questPathNormalDefault = upath.join(sharedQBDefaults, "DefaultQuests.json");
 	const questPathNormalOverride = upath.join(sharedConfigOverrides, "normal", "betterquesting", "DefaultQuests.json");
-	
+
 	const questPathExpertDefault = upath.join(sharedQBDefaults, "saved_quests", "ExpertQuests.json");
 	const questPathExpertOverride = upath.join(sharedConfigOverrides, "expert", "betterquesting", "DefaultQuests.json");
-	
+
 	// Quest Lang Location
 	const questLangLocation = upath.join(buildConfig.buildSourceDirectory, overridesFolder, langFileLocation);
 
 	// Traverse through the quest book and rewrite titles/descriptions.
 	// Extract title/desc pairs into a lang file.
 	const lines: string[] = [];
-	
-	lines.push("Normal Quest Lang Entries:",
-		   "",
-	);
+
+	lines.push("Normal Quest Lang Entries:", "");
 
 	// Normal Mode Quest lines.
 	transformKeyPairs(questBookNormal["questLines:9"], "normal", "line", lines);
 
 	// Normal Mode Quests themselves.
 	transformKeyPairs(questBookNormal["questDatabase:9"], "normal", "db", lines);
-	
-	lines.push("Expert Quest Lang Entries:",
-		   "",
-	);
-	
+
+	lines.push("Expert Quest Lang Entries:", "");
+
 	// Expert Mode Quest lines.
 	transformKeyPairs(questBookExpert["questLines:9"], "expert", "line", lines);
 
@@ -151,13 +147,11 @@ export async function transformQuestBook(): Promise<void> {
 	// Strip useless metadata.
 	stripUselessMetadata(questBookNormal);
 	stripUselessMetadata(questBookExpert);
-	
+
 	// Write QB files.
-	fs.promises.writeFile(questPathNormalDefault, JSON.stringify(questBookNormal, null, 2));
-	fs.promises.writeFile(questPathNormalOverride, JSON.stringify(questBookNormal, null, 2));
-	
-	fs.promises.writeFile(questPathExpertDefault, JSON.stringify(questBookExpert, null, 2));
-	fs.promises.writeFile(questPathExpertOverride, JSON.stringify(questBookExpert, null, 2));
+	await fs.promises.writeFile(questPathNormalDefault, JSON.stringify(questBookNormal, null, 2));
+	await fs.promises.writeFile(questPathNormalOverride, JSON.stringify(questBookNormal, null, 2));
+
+	await fs.promises.writeFile(questPathExpertDefault, JSON.stringify(questBookExpert, null, 2));
+	return await fs.promises.writeFile(questPathExpertOverride, JSON.stringify(questBookExpert, null, 2));
 }
-
-
