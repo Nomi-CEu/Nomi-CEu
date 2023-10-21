@@ -42,7 +42,8 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 			data.commitFixes.set(commit.hash, {
 				sha: commit.hash,
 				newTitle: commit.message,
-				newBody: commit.body.replace(matter.matter.trim(), ""),
+				// Replace "\r\n" (Caused by editing on GitHub) with "\n", as the output matter has this done.
+				newBody: commit.body.replace(/\r\n/g, "\n").replace(matter.matter.trim(), ""),
 			});
 		},
 	);
@@ -183,7 +184,8 @@ async function parse<T>(
 		// Remove everything before first delimiter in body
 		const list = commitBody.split(delimiter);
 		list.shift();
-		const body = `${delimiter} ${list.join(delimiter)}`.split("\r\n").join("\n");
+		// Replace "\r\n" (Caused by editing on GitHub) with "\n", as \r\n crashes the TOML parser.
+		const body = `${delimiter} ${list.join(delimiter)}`.replace(/\r\n/g, "\n");
 
 		// Parse
 		const parseResult = matter(body, {
