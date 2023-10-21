@@ -34028,7 +34028,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 321,
-              "OreDict:8": "",
+              "OreDict:8": "questbookExtruder",
               "id:8": "gregtech:machine"
             }
           },
@@ -52687,7 +52687,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Used for Advanced SMD components.",
+          "desc:8": "The §6IV Assembling Machine§r is required for§2 Advanced SMD components§r.\n\nConsider upgrading to a §6Large Assembling Factory§r, which is easier to upgrade and can accept Parallel Control Hatches. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52700,7 +52700,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2IV Assembling Machine",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -52737,6 +52737,23 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 114,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2003,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -56792,7 +56809,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1316,
-              "OreDict:8": "",
+              "OreDict:8": "questbookLvBatteryBuffer",
               "id:8": "gregtech:machine"
             }
           },
@@ -56846,7 +56863,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you expand your production lines, it can get confusing where everything is real quickly.\n\nNew in GTCEu, you can §2name machines in an Anvil§r in order to display a hologram above them. This hologram can\u0027t be seen through walls, so you needn\u0027t worry about clogging your view with names.",
+          "desc:8": "As you expand your production lines, it can get confusing where everything is real quickly.\n\nNew in GTCEu, you can §2name machines in an Anvil§r or shift-right-click with a §6Name Tag§r in order to display a hologram above them. This hologram can\u0027t be seen through walls, so you needn\u0027t worry about clogging your view with names.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57229,9 +57246,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 630,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder"
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -61740,7 +61757,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 667,
-              "OreDict:8": "",
+              "OreDict:8": "questbookRockBreaker",
               "id:8": "gregtech:machine"
             }
           },

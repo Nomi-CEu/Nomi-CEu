@@ -2565,11 +2565,14 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 //<ore:dustSignalum>.remove(<thermalfoundation:material:101>);
 
 //Questbook things
-<ore:questbookBrewery>.add(<meta_tile_entity:brewery.lv>); // LV Brewery
-<ore:questbookBrewery>.add(<meta_tile_entity:brewery.mv>); // MV Brewery
+<ore:questbookBrewery>.add(<meta_tile_entity:brewery.lv>); 
+<ore:questbookBrewery>.add(<meta_tile_entity:brewery.mv>); 
+<ore:questbookBrewery>.add(<meta_tile_entity:brewery.hv>); 
+<ore:questbookBrewery>.add(<meta_tile_entity:brewery.ev>); 
+<ore:questbookBrewery>.add(<meta_tile_entity:brewery.iv>); 
 //
-<ore:questbookDistillery>.add(<meta_tile_entity:distillery.lv>); // LV Distillery
-<ore:questbookDistillery>.add(<meta_tile_entity:distillery.mv>); // MV Distillery
+<ore:questbookDistillery>.add(<meta_tile_entity:distillery.lv>);
+<ore:questbookDistillery>.add(<meta_tile_entity:distillery.mv>);
 //
 //<ore:questbookCentrifuge>.add(<meta_tile_entity:centrifuge.lv>); // LV Centrifuge
 //<ore:questbookCentrifuge>.add(<meta_tile_entity:centrifuge.mv>); // MV Centrifuge
@@ -2594,6 +2597,10 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookLvCef>.add(<metaitem:energy_converter.lv.8>);
 <ore:questbookLvCef>.add(<metaitem:energy_converter.lv.16>);
 
+<ore:questbookLvBatteryBuffer>.add(<metaitem:battery_buffer.lv.4>);
+<ore:questbookLvBatteryBuffer>.add(<metaitem:battery_buffer.lv.8>);
+<ore:questbookLvBatteryBuffer>.add(<metaitem:battery_buffer.lv.16>);
+
 <ore:questbookMvCef>.add(<metaitem:energy_converter.mv.1>);
 <ore:questbookMvCef>.add(<metaitem:energy_converter.mv.4>);
 <ore:questbookMvCef>.add(<metaitem:energy_converter.mv.8>);
@@ -2603,6 +2610,13 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.luv>);
 <ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.zpm>);
 <ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.uv>);
+
+<ore:questbookSteamBoiler>.add(<gregtech:machine:1>);
+<ore:questbookSteamBoiler>.add(<gregtech:machine:2>);
+<ore:questbookSteamBoiler>.add(<gregtech:machine:3>);
+<ore:questbookSteamBoiler>.add(<gregtech:machine:4>);
+<ore:questbookSteamBoiler>.add(<gregtech:machine:5>);
+<ore:questbookSteamBoiler>.add(<gregtech:machine:6>);
 
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.lv>); // LV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor
