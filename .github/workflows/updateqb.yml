@@ -16,15 +16,14 @@ jobs:
     if: "${{ github.repository_owner == 'Nomi-CEu' }}"
     name: Update Quest Book Jsons and Lang (${{ inputs.tag }})
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
+
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
+          ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
