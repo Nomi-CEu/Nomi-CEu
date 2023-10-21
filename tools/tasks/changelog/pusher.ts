@@ -157,7 +157,7 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage =
 	let message = changelogMessage.commitMessage.trim();
 
 	// Transform PR tags into a link.
-	if (message.match(/(#\d+)/g)) {
+	if (message.match(/\(#\d+\)/g)) {
 		const matched = message.match(/\(#\d+\)/g);
 		matched.forEach((match) => {
 			// Extract digits
