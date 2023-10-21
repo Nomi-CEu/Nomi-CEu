@@ -53,13 +53,13 @@ jobs:
     env:
       VERSION: "${{ inputs.version }}"
       RELEASE_TYPE: "${{ inputs.release_type }}"
-    permissions:
-      contents: write
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
@@ -117,13 +117,13 @@ jobs:
     if: "${{ !inputs.is_release }}"
     env:
       VERSION: "${{ inputs.version }}"
-    permissions:
-      contents: write
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
