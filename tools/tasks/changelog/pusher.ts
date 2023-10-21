@@ -18,14 +18,15 @@ export default function pushAll(inputData: ChangelogData): void {
 			hour12: true,
 			hour: "numeric",
 			minute: "numeric",
+			timeZoneName: "short",
 		});
-		// noinspection HtmlUnknownAttribute
-		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} (${date})</h1>`, "");
+		// noinspection HtmlDeprecatedAttribute
+		data.builder.push(`<h1 align="center">${data.releaseType} (${date})</h1>`, "");
 	} else {
 		// noinspection HtmlUnknownAttribute
 		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`, "");
+		data.builder.push("{{{ CF_REDIRECT }}}", "");
 	}
-	data.builder.push("{{{ CF_REDIRECT }}}", "");
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
 	// Push Sections of Changelog
