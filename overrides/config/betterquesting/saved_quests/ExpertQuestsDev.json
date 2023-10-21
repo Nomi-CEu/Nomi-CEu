@@ -8722,20 +8722,13 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "titanium_tetrachloride"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "titanium_tetrachloride"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
