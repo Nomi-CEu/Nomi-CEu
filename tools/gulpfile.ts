@@ -15,6 +15,7 @@ export const checkRelease = releaseCommit.check;
 export const addVersionIssue = gulp.series(checkRelease, releaseCommit.updateIssueTemplates);
 export const addVersionRandomPatches = gulp.series(checkRelease, releaseCommit.updateRandomPatchesConfig);
 export const addVersionServer = gulp.series(checkRelease, releaseCommit.updateServerProperties);
+export const addVersionMainMenu = gulp.series(checkRelease, releaseCommit.updateMainMenuConfig);
 export const addVersionAll = gulp.series(checkRelease, releaseCommit.updateAll);
 
 // Non Release Tasks
@@ -22,6 +23,7 @@ const setNotRelease = releaseCommit.setNotRelease;
 export const updateTemplatesIssue = gulp.series(setNotRelease, addVersionIssue);
 export const updateTemplatesRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
 export const updateTemplatesServer = gulp.series(setNotRelease, addVersionServer);
+export const updateTemplatesMainMenu = gulp.series(setNotRelease, addVersionMainMenu);
 export const updateTemplatesAll = gulp.series(setNotRelease, addVersionAll);
 
 import * as changelog from "./tasks/changelog/createChangelog";
