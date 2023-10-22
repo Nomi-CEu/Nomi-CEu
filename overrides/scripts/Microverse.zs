@@ -217,17 +217,12 @@ makeExtremeRecipe9(<contenttweaker:tiersevenship>,
 	  W : <contenttweaker:warpengine> }
 );
 
-makeShaped("of_warpengine", <contenttweaker:warpengine>,
-	["PIP",
-	 "ABA",
-	 "CDC"],
-	{ A : <draconicevolution:dislocator_advanced>,
-	  B : <ore:blockEnderium>,
-	  C : <simplyjetpacks:metaitemmods:30>,
-	  D : <simplyjetpacks:metaitemmods:11>,
-	  I : <draconicevolution:item_dislocation_inhibitor>,
-	  P : <ore:plateCrystalMatrix> }
-);
+assembly_line.recipeBuilder()
+	.inputs([<metaitem:frameMicroversium>, <ore:plateEnderium> * 6, <draconicevolution:item_dislocation_inhibitor>, <draconicevolution:magnet:1>, <ore:plateCrystalMatrix> * 2, <metaitem:field.generator.iv> * 2, <simplyjetpacks:metaitemmods:30> * 2, <simplyjetpacks:metaitemmods:11>])
+	.fluidInputs(<liquid:soldering_alloy> * 1152)
+	.outputs(<contenttweaker:warpengine>)
+	.property("research", <draconicevolution:item_dislocation_inhibitor>)
+	.duration(1800).EUt(30720).buildAndRegister();
 
 
 /////////////	 Tier Eight Space Ship  	  //////////////////
@@ -277,14 +272,7 @@ makeExtremeRecipe9(<contenttweaker:tiernineship>,
 	  W : <contenttweaker:warpengine> }
 );
 
-makeShaped("of_universalnavigator", <contenttweaker:universalnavigator>,
-	["ABA",
-	 "BCB",
-	 "ABA"],
-	{ A : <metaitem:plateNaquadahAlloy>,
-	  B : <metaitem:processor.neuro>,
-	  C : <metaitem:circuit.wetware_mainframe> }
-);
+// Recipe moved to Groovy
 <contenttweaker:universalnavigator>.addTooltip(format.blue("See you later, navigator!"));
 
 /////////////	 Tier Ten Space Ship  	  //////////////////
