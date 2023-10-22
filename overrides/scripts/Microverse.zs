@@ -224,6 +224,13 @@ assembly_line.recipeBuilder()
 	.property("research", <draconicevolution:item_dislocation_inhibitor>)
 	.duration(1800).EUt(30720).buildAndRegister();
 
+recipes.remove(<draconicevolution:magnet:1>);
+
+recipes.addShaped(<draconicevolution:magnet:1>, [
+	[<ore:ingotDraconium>, null, <ore:ingotDraconium>],
+	[<ore:dustRedstone>, <draconicevolution:magnet>, <ore:dustRedstone>],
+	[<ore:ingotEuropium>, <draconicevolution:dislocator_advanced>, <ore:ingotEuropium>]
+]);
 
 /////////////	 Tier Eight Space Ship  	  //////////////////
 
