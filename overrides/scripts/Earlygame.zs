@@ -265,12 +265,25 @@ forge_hammer.recipeBuilder().inputs([<minecraft:sand>]).outputs([<contenttweaker
 
 macerator.recipeBuilder().inputs([<ore:endstone>.firstItem]).outputs([<ore:dustEndstone>.firstItem]).duration(16).EUt(10).buildAndRegister();
 
+// Iron Furnace
+assembler.recipeBuilder()
+	.inputs(<ore:craftingFurnace>, <ore:ingotIron> * 8)
+	.circuit(8)
+	.outputs(<morefurnaces:furnaceblock>)
+	.duration(100).EUt(7).buildAndRegister();
+
 //Copper Furnace
 recipes.remove(<morefurnaces:furnaceblock:5>);
 recipes.addShaped(<morefurnaces:furnaceblock:5>, [
 [<ore:ingotCopper>, <ore:ingotCopper>, <ore:ingotCopper>],
 [<ore:ingotCopper>, <morefurnaces:furnaceblock>, <ore:ingotCopper>],
 [<ore:ingotCopper>, <ore:ingotCopper>, <ore:ingotCopper>]]);
+
+assembler.recipeBuilder()
+	.inputs(<morefurnaces:furnaceblock>, <ore:ingotCopper> * 8)
+	.circuit(8)
+	.outputs(<morefurnaces:furnaceblock:5>)
+	.duration(100).EUt(7).buildAndRegister();
 
 //Silver Furnace
 recipes.remove(<morefurnaces:furnaceblock:6>);
@@ -279,12 +292,24 @@ recipes.addShaped(<morefurnaces:furnaceblock:6>, [
 	[<ore:ingotSilver>, <morefurnaces:furnaceblock:5>, <ore:ingotSilver>],
 	[<ore:ingotSilver>, <ore:ingotSilver>, <ore:ingotSilver>]]);
 
+assembler.recipeBuilder()
+	.inputs(<morefurnaces:furnaceblock:5>, <ore:ingotSilver> * 8)
+	.circuit(8)
+	.outputs(<morefurnaces:furnaceblock:6>)
+	.duration(100).EUt(7).buildAndRegister();
+
 //Gold Furnace
 recipes.remove(<morefurnaces:furnaceblock:1>);
 recipes.addShaped(<morefurnaces:furnaceblock:1>, [
 	[<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>],
 	[<minecraft:gold_ingot>, <morefurnaces:furnaceblock:6>, <minecraft:gold_ingot>],
 	[<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]]);
+
+assembler.recipeBuilder()
+	.inputs(<morefurnaces:furnaceblock:6>, <ore:ingotGold> * 8)
+	.circuit(8)
+	.outputs(<morefurnaces:furnaceblock:1>)
+	.duration(100).EUt(7).buildAndRegister();
 
 //Diamond Furnace
 recipes.remove(<morefurnaces:furnaceblock:2>);
@@ -293,6 +318,12 @@ recipes.addShaped(<morefurnaces:furnaceblock:2>, [
 	[<minecraft:diamond>, <morefurnaces:furnaceblock:1>, <minecraft:diamond>],
 	[<minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>]]);
 
+assembler.recipeBuilder()
+	.inputs(<morefurnaces:furnaceblock:1>, <ore:gemDiamond> * 8)
+	.circuit(8)
+	.outputs(<morefurnaces:furnaceblock:2>)
+	.duration(100).EUt(7).buildAndRegister();
+
 //Obsidian Furnace
 recipes.remove(<morefurnaces:furnaceblock:3>);
 recipes.addShaped(<morefurnaces:furnaceblock:3>, [
@@ -300,7 +331,11 @@ recipes.addShaped(<morefurnaces:furnaceblock:3>, [
 	[<morefurnaces:furnaceblock:2>, <minecraft:obsidian>, <morefurnaces:furnaceblock:2>],
 	[<minecraft:obsidian>, <minecraft:obsidian>, <minecraft:obsidian>]]);
 
-
+assembler.recipeBuilder()
+	.inputs(<morefurnaces:furnaceblock:2> * 2, <ore:blockObsidian> * 7)
+	.circuit(8)
+	.outputs(<morefurnaces:furnaceblock:3>)
+	.duration(100).EUt(7).buildAndRegister();
 
 // Battery Alloy
 recipes.addShapeless(<metaitem:dustBatteryAlloy> * 4, [<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustAntimony>]);
@@ -419,7 +454,7 @@ recipes.addShaped(<naturescompass:naturescompass>,
 	[[<ore:treeSapling>, <minecraft:compass>, <ore:treeSapling>],
 	[<ore:logWood>, <metaitem:prospector.lv>, <ore:logWood>],
 	[<ore:treeSapling>, <ore:logWood>, <ore:treeSapling>]]);
-
+	
 /*arc_furnace.recipeBuilder()
     .inputs(<minecraft:iron_door>)
     .fluidInputs(<liquid:oxygen> * 236)

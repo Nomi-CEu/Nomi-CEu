@@ -385,6 +385,11 @@ makeShaped("of_densehydrogen", <contenttweaker:densehydrogen>,
 	{ H : <contenttweaker:solidifiedhydrogen> }
 );
 
+compressor.recipeBuilder()
+	.inputs(<contenttweaker:solidifiedhydrogen> * 9)
+	.outputs(<contenttweaker:densehydrogen>)
+	.duration(300).EUt(2).buildAndRegister();
+
 // Dense -> Solidified decomposition
 recipes.addShapeless(<contenttweaker:solidifiedhydrogen> * 9, [<contenttweaker:densehydrogen>]);
 
@@ -395,6 +400,11 @@ makeShaped("of_ultradensehydrogen", <contenttweaker:ultradensehydrogen>,
 	 "DDD"],
 	{ D : <contenttweaker:densehydrogen> }
 );
+
+compressor.recipeBuilder()
+	.inputs(<contenttweaker:densehydrogen> * 9)
+	.outputs(<contenttweaker:ultradensehydrogen>)
+	.duration(300).EUt(2).buildAndRegister();
 
 // Ultra Dense -> Dense decomposition
 recipes.addShapeless(<contenttweaker:densehydrogen> * 9, [<contenttweaker:ultradensehydrogen>]);
