@@ -736,6 +736,8 @@ recipes.addShaped(<gregtech:multiblock_casing:3> * 4, [
     [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
 ]);
 
+// Recycling recipes in groovy
+
 // Nq+ and Nq*
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
 

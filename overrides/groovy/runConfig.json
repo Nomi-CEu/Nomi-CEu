@@ -1,6 +1,6 @@
 {
-  "packName": "PlaceHolder name",
-  "packId": "placeholdername",
+  "packName": "Nomi-CEu",
+  "packId": "nomi-ceu",
   "version": "1.0.0",
   "debug": false,
   "classes": {
@@ -9,6 +9,9 @@
   "loaders": {
     "preInit": [
       "preInit/"
+    ],
+    "init": [
+      "init/"
     ],
     "postInit": [
       "postInit/"
