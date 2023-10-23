@@ -46,7 +46,7 @@ case $MODE in
     if [ -f "server.properties" ]; then
         mv "${TARGET}/server.properties" ./
     else
-        rm "${TARGET}/server.properties"
+        rm "${TARGET}/server.properties" || true
     fi
 
     # Update Mode
@@ -60,7 +60,7 @@ case $MODE in
     if [ -f "server.properties" ]; then
         mv "${TARGET}/server.properties" ./
     else
-        rm "${TARGET}/server.properties"
+        rm "${TARGET}/server.properties" || true
     fi
 
     # Update Mode
