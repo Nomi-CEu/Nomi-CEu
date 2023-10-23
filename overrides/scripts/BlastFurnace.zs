@@ -269,7 +269,7 @@ alloy_blast_smelter.recipeBuilder()
 	.fluidOutputs(<liquid:electrum_flux> * 1296)
 	.circuit(4)
 	.property("temperature", 1100)
-	.duration(9000)
+	.duration(19602)
 	.EUt(120)
 	.buildAndRegister();
 

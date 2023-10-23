@@ -377,25 +377,8 @@ recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider
     [<ore:circuitZpm>, <metaitem:field.generator.uv>, <ore:circuitZpm>]
 ]);
 
-makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>,
-    ["NCN",
-     "GSG",
-     "PPP"],
-    { C : <ore:circuitIv>, //T5
-      G : <gregtech:transparent_casing:1>,
-      S : <metaitem:cover.screen>,
-      P : <appliedenergistics2:spatial_pylon>,
-      N : <extendedcrafting:material:33>}); //Omnium Nugget
-
-makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>,
-    ["NCN",
-     "GSG",
-     "PPP"],
-    { C : <ore:circuitLuv>, //T6
-      G : <gregtech:transparent_casing:1>,
-      S : <metaitem:cover.screen>,
-      P : <appliedenergistics2:spatial_pylon>,
-      N : <extendedcrafting:material:32>}); //Omnium Ingot
+// Naquadah Reactor
+// Moved to Groovy
 
 
 

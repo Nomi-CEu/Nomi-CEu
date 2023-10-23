@@ -68,20 +68,29 @@ mods.jei.JEI.removeAndHide(<solarflux:dispersive_upgrade>);
 mods.jei.JEI.removeAndHide(<solarflux:furnace_upgrade>);
 
 	
-recipes.addShaped(<solarflux:solar_panel_8> * 4, [
-	[<solarflux:photovoltaic_cell_6>,<solarflux:photovoltaic_cell_6>,<solarflux:photovoltaic_cell_6>],
-	[<solarflux:solar_panel_7>,<ore:blockEnderium>,<solarflux:solar_panel_7>],
-	[<metaitem:plateOsmiridium>,<enderio:item_endergy_conduit>,<metaitem:plateOsmiridium>]]);
+//recipes.addShaped(<solarflux:solar_panel_8> * 4, [
+//	[<solarflux:photovoltaic_cell_6>,<solarflux:photovoltaic_cell_6>,<solarflux:photovoltaic_cell_6>],
+//	[<solarflux:solar_panel_7>,<ore:blockEnderium>,<solarflux:solar_panel_7>],
+//	[<metaitem:plateOsmiridium>,<enderio:item_endergy_conduit>,<metaitem:plateOsmiridium>]]);
+assembly_line.recipeBuilder()
+	.inputs([<solarflux:solar_panel_7> * 2, <solarflux:photovoltaic_cell_6> * 3, <metaitem:plateOsmiridium> * 2, <enderio:item_endergy_conduit>])
+	.fluidInputs([<liquid:enderium> * 1296])
+	.outputs(<solarflux:solar_panel_8> * 4)
+	.property("research", <solarflux:solar_panel_7>)
+	.duration(4800).EUt(30720)
+	.buildAndRegister();
 
 recipes.addShaped(<solarflux:photovoltaic_cell_6> * 6, [
 	[<advsolars:sunnarium_enriched_plate>,<advsolars:sunnarium_enriched_plate>,<advsolars:sunnarium_enriched_plate>],
 	[<solarflux:photovoltaic_cell_5>,<solarflux:photovoltaic_cell_5>,<solarflux:photovoltaic_cell_5>],
 	[<advsolars:sunnarium_enriched_plate>,<advsolars:sunnarium_enriched_plate>,<advsolars:sunnarium_enriched_plate>]]);	
 	
-recipes.addShaped(<solarflux:solar_panel_7> * 4, [
-	[<solarflux:photovoltaic_cell_5>,<solarflux:photovoltaic_cell_5>,<solarflux:photovoltaic_cell_5>],
-	[<solarflux:solar_panel_6>,<ore:blockSignalum>,<solarflux:solar_panel_6>],
-	[<metaitem:plateOsmium>,<enderio:item_endergy_conduit:4>,<metaitem:plateOsmium>]]);
+assembler.recipeBuilder()
+	.inputs([<solarflux:solar_panel_6> * 2, <solarflux:photovoltaic_cell_5> * 3, <metaitem:plateOsmium> * 2, <enderio:item_endergy_conduit:4>])
+	.fluidInputs([<liquid:signalum> * 1296])
+	.outputs(<solarflux:solar_panel_7> * 4)
+	.duration(2400).EUt(7680)
+	.buildAndRegister();
 
 recipes.addShaped(<solarflux:photovoltaic_cell_5> * 6, [
 	[<advsolars:sunnarium_plate>,<advsolars:sunnarium_plate>,<advsolars:sunnarium_plate>],
