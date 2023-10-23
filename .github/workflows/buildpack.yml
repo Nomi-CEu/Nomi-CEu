@@ -70,6 +70,12 @@ on:
         required: false
         default: false
         type: boolean
+      head_ref:
+        type: string
+        required: false
+      true_sha:
+        type: string
+        required: false
 
 jobs:
   build:
@@ -78,6 +84,8 @@ jobs:
     env:
       GITHUB_TAG: ${{ inputs.tag }}
       RELEASE_TYPE: ${{ inputs.release_type }}
+      GITHUB_HEAD_REF: ${{ inputs.head_ref }}
+      TRUE_SHA: ${{ inputs.true_sha }}
 
     steps:
       - name: Checkout Ref

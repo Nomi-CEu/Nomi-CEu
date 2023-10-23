@@ -7,6 +7,7 @@ import mustache from "mustache";
 import { defaultIndentation, modChangesAllocations, repoLink } from "./definitions";
 import ChangelogData from "./changelogData";
 import { SpecialChangelogFormatting } from "../../types/changelogTypes";
+import { sortCommitListReverse } from "./pusher";
 
 /**
  * Mod Changes special formatting
@@ -83,6 +84,9 @@ export default async function generateModChanges(data: ChangelogData): Promise<v
 			let commits: Commit[] = undefined;
 			if (info.projectID && projectIDsToCommits.has(info.projectID)) {
 				commits = projectIDsToCommits.get(info.projectID);
+
+				// Sort array so newest commits appear at end instead of start of commit string
+				sortCommitListReverse(commits);
 			}
 			block.allocation.category.changelogSection.get(block.allocation.subCategory).push({
 				commitMessage: getModChangeMessage(info, block.allocation.template),
