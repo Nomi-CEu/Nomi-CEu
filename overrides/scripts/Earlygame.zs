@@ -455,6 +455,17 @@ recipes.addShaped(<naturescompass:naturescompass>,
 	[<ore:logWood>, <metaitem:prospector.lv>, <ore:logWood>],
 	[<ore:treeSapling>, <ore:logWood>, <ore:treeSapling>]]);
 	
+// Charcoal maceration
+macerator.recipeBuilder()
+	.inputs(<thermalfoundation:storage_resource>)
+	.outputs(<metaitem:dustCharcoal> * 9)
+	.duration(108).EUt(2).buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<chisel:block_charcoal:*>)
+	.outputs(<metaitem:dustCharcoal> * 9)
+	.duration(108).EUt(2).buildAndRegister();
+
 /*arc_furnace.recipeBuilder()
     .inputs(<minecraft:iron_door>)
     .fluidInputs(<liquid:oxygen> * 236)
