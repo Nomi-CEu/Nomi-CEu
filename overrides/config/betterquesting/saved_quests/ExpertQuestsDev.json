@@ -236,7 +236,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §5Nomifactory§f §2GTCEu §cHard mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§f.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§f.\n\n§fIf you wish to build your base in a skyblock world, place the §6Void World Cake§f down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§f.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
+          "desc:8": "Welcome to §5Nomifactory§f §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§f.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§f.\n\n§fIf you wish to build your base in a skyblock world, place the §6Void World Cake§f down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§f.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8124,7 +8124,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your initial method of §9Steam§r production, to fuel your first machines. They automatically output Steam on all faces except the bottom.\n\nOnce you get Steel, consider upgrading to HP Solar Boilers.",
+          "desc:8": "Your initial method of §9Steam§r production, to fuel your first machines. They automatically output Steam on all faces except the bottom.\n\nOnce you get Steel, consider investing in HP Solar Boilers.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8180,7 +8180,7 @@
             "1:10": {
               "Count:3": 1,
               "Damage:2": 1,
-              "OreDict:8": "",
+              "OreDict:8": "questbookSteamBoiler",
               "id:8": "gregtech:machine"
             }
           },
