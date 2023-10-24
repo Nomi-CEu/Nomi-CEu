@@ -217,15 +217,10 @@ recipes.addShaped(<metaitem:charger.uhv>, [
 ]);
 
 // Assembly Line
+
 // ZPM Field Generator * 1
 <recipemap:assembly_line>.findRecipe(24000, [<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <metaitem:circuit.quantum_mainframe> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4], [<liquid:soldering_alloy> * 1152]).remove();
-assembly_line.recipeBuilder()
-    .inputs([<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <ore:circuitZpm> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4])
-    .fluidInputs([<liquid:soldering_alloy> * 1152, <liquid:awakened_draconium> * 1296])
-    .outputs(<metaitem:field.generator.zpm>)
-    .duration(600)
-    .EUt(24000)
-    .buildAndRegister();
+// Moved to Groovy
 
 // Rhodium Plated Palladium
 // Rhodium Plated Palladium Dust * 4
@@ -301,24 +296,16 @@ recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.uv");
 // Tungstensteel Dust * 32
 <recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.iv>], null).remove();
 
+// Moved to Groovy
 
-assembly_line.recipeBuilder()
-    .inputs(<metaitem:sensor.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:plateDenseDraconium>, <metaitem:plateDoubleIridium> * 2, <metaitem:hull.luv>, <metaitem:plateDoubleIridium> * 2, <metaitem:plateDenseDraconium>, <metaitem:field.generator.luv> * 20, <metaitem:field.generator.luv> * 20, <metaitem:emitter.luv> * 20)
-    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152)
-    .outputs(<metaitem:world_accelerator.hv>)
-    .duration(900).EUt(30720).buildAndRegister();
+/* UHV Multis */
+// Rotary Hearth Furnace
+recipes.remove(<metaitem:gcym:mega_blast_furnace>);
+// Moved to Groovy
 
-assembly_line.recipeBuilder()
-    .inputs(<metaitem:sensor.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:plateDenseDraconium>, <metaitem:plateDoubleEuropium> * 2, <metaitem:hull.zpm>, <metaitem:plateDoubleEuropium> * 2, <metaitem:plateDenseDraconium>, <metaitem:field.generator.zpm> * 20, <metaitem:field.generator.zpm> * 20, <metaitem:emitter.zpm> * 20)
-    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152)
-    .outputs(<metaitem:world_accelerator.ev>)
-    .duration(900).EUt(122880).buildAndRegister();
-
-assembly_line.recipeBuilder()
-    .inputs(<metaitem:sensor.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:plateDenseNeutronium>, <metaitem:plateDoubleEuropium> * 2, <metaitem:hull.uv>, <metaitem:plateDoubleEuropium> * 2, <metaitem:plateDenseNeutronium>, <metaitem:field.generator.uv> * 20, <metaitem:field.generator.uv> * 20, <metaitem:emitter.uv> * 20)
-    .fluidInputs(<liquid:soldering_alloy> * 1152, <liquid:enderium> * 1152, <liquid:naquadria> * 576)
-    .outputs(<metaitem:world_accelerator.iv>)
-    .duration(900).EUt(491520).buildAndRegister();
+// Bulk Blast Chiller
+recipes.remove(<metaitem:gcym:mega_vacuum_freezer>);
+// Moved to Groovy
 
 // Stabilized Miners Tooltips
 <contenttweaker:tieroneship_stabilized>.addTooltip(format.italic(

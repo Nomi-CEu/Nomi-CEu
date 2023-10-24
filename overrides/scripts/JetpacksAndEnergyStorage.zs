@@ -215,19 +215,11 @@ recipes.addShaped(resonantjetpack, [
 
 //Dark Soularium JetPlate
 recipes.removeByRecipeName("simplyjetpacks:upgraderecipe5");
-recipes.addShaped(darksoulariumjetplate, [
-	[<enderio:item_material:16>,       <extrautils2:angelring:*>,               <enderio:item_material:16>],
-	[<simplyjetpacks:metaitemmods:4>,  armoredvibrantjetpack.marked("jetpack"), <simplyjetpacks:metaitemmods:4>],
-	[<simplyjetpacks:metaitemmods:11>, doublecompressedoctadiccap,              <simplyjetpacks:metaitemmods:11>]],
-	transferTag);
+// Moved to Groovy
 
 //Flux-Infused Jetplate
 recipes.removeByRecipeName("simplyjetpacks:upgraderecipe34");
-recipes.addShaped(fluxinfusedjetplate, [
-	[compressedoctadiccap,             <extrautils2:angelring:*>,                compressedoctadiccap],
-	[<simplyjetpacks:metaitemmods:21>, armoredresonantjetpack.marked("jetpack"), <simplyjetpacks:metaitemmods:21>],
-	[<simplyjetpacks:metaitemmods:30>, <redstonearsenal:armor.plate_flux>,       <simplyjetpacks:metaitemmods:30>]],
-	transferTag);
+// Moved to Groovy
 
 /* Fix Armored Jetpacks */
 recipes.removeByRecipeName("simplyjetpacks:upgraderecipe15"); // conductive iron

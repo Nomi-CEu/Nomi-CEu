@@ -21,5 +21,7 @@ jobs:
     uses: ./.github/workflows/buildpack.yml
     with:
       separate_upload: true
+      head_ref: ${{ github.head_ref }}
+      true_sha: ${{ github.event.pull_request.head.sha }}
     secrets: inherit
 

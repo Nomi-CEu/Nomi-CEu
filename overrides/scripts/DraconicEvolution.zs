@@ -60,18 +60,25 @@ recipes.addShaped(<draconicevolution:wyvern_sword>, [
 
 //Fusion Injector
 recipes.remove(<draconicevolution:crafting_injector>);	
-recipes.addShaped(<draconicevolution:crafting_injector>, [
-	[<enderio:item_material:16>, <metaitem:plateEuropium>, <enderio:item_material:16>], 
-	[dragcore, <actuallyadditions:block_crystal_empowered:5>, dragcore], 
-	[<enderio:item_material:16>, <gregtech:multiblock_casing:3>, <enderio:item_material:16>]]);
-	
+assembly_line.recipeBuilder()
+	.inputs(<gregtech:multiblock_casing:3>, <actuallyadditions:block_crystal_empowered:5>, <metaitem:plateEuropium>, <draconicevolution:draconic_core> * 2, <enderio:item_material:16> * 4)
+	.fluidInputs(<liquid:soldering_alloy> * 1152)
+	.outputs(<draconicevolution:crafting_injector>)
+	.property("research", <actuallyadditions:block_crystal_empowered:5>)
+	.duration(600).EUt(30720).buildAndRegister();
+
+// Fusion crafting core
+recipes.remove(<draconicevolution:fusion_crafting_core>);
+assembly_line.recipeBuilder()
+	.inputs(<metaitem:frameHsse>, <ore:plateTungstenCarbide> * 6, <draconicevolution:draconic_core> * 4, <ore:gemNetherStar> * 4, <metaitem:sensor.iv> * 2, <ore:circuitIv> * 2, <ore:blockLapis> * 8)
+	.fluidInputs(<liquid:soldering_alloy> * 1152)
+	.outputs(<draconicevolution:fusion_crafting_core>)
+	.property("research", <draconicevolution:draconic_core>)
+	.duration(1200).EUt(30720).buildAndRegister();
+
 //Reactor Stabalizer Frame
 recipes.remove(<draconicevolution:reactor_part>);	
-recipes.addShaped(<draconicevolution:reactor_part>, [
-	[<nuclearcraft:part:3>,<nuclearcraft:part:3>,<nuclearcraft:part:3>], 
-	[<draconicevolution:awakened_core:*>, <ore:gearAwakenedDraconium>, null], 
-	[<nuclearcraft:part:3>,<nuclearcraft:part:3>,<nuclearcraft:part:3>]]);
-	
+// Moved to Groovy
 
 recipes.remove(<draconicevolution:reactor_part:1>);
 recipes.addShaped(<draconicevolution:reactor_part:1>, [
@@ -86,29 +93,22 @@ recipes.addShaped(<draconicevolution:reactor_part:2>, [
 	[<ore:gearDraconium>, <ore:plateDraconium>,<ore:plateDraconium>]]);
 
 recipes.remove(<draconicevolution:reactor_part:3>);
-recipes.addShaped(<draconicevolution:reactor_part:3>, [
-	[null, <draconicevolution:reactor_part:1>, <draconicevolution:reactor_part:2>], 
-	[<ore:gearAwakenedDraconium>, <ore:plateAwakenedDraconium>,<ore:plateAwakenedDraconium>], 
-	[null, <draconicevolution:reactor_part:1>, <draconicevolution:reactor_part:2>]]);
+// Moved to Groovy
 	
 recipes.remove(<draconicevolution:reactor_part:4>);
-recipes.addShaped(<draconicevolution:reactor_part:4>, [
-	[<advsolars:sunnarium_plate>, <ore:plateCrystalMatrix>, <advsolars:sunnarium_plate>], 
-	[<ore:plateCrystalMatrix>, <draconicevolution:awakened_core:*>, <ore:plateCrystalMatrix>], 
-	[<advsolars:sunnarium_plate>, <ore:plateCrystalMatrix>, <advsolars:sunnarium_plate>]]);
+// Moved to Groovy
 	
+// Particle Generator
 recipes.remove(<draconicevolution:particle_generator>);
-recipes.addShaped(<draconicevolution:particle_generator>, [
-	[<actuallyadditions:block_crystal_empowered>, <minecraft:blaze_rod>, <actuallyadditions:block_crystal_empowered>], 
-	[<minecraft:blaze_rod>, <draconicevolution:draconic_core:*>, <minecraft:blaze_rod>], 
-	[<actuallyadditions:block_crystal_empowered>, <minecraft:blaze_rod>, <actuallyadditions:block_crystal_empowered>]]);
+assembly_line.recipeBuilder()
+	.inputs(<metaitem:frameTungstenCarbide>, <ore:plateDraconium> * 6, <draconicevolution:draconic_core>, <ore:rodBlaze> * 10, <metaitem:emitter.ev> * 3, <actuallyadditions:block_crystal_empowered> * 4)
+	.fluidInputs(<liquid:soldering_alloy> * 1152)
+	.outputs(<draconicevolution:particle_generator>)
+	.property("research", <actuallyadditions:block_crystal_empowered>)
+	.duration(1200).EUt(30720).buildAndRegister();
 
 recipes.remove(<draconicevolution:energy_storage_core>);
-recipes.addShaped(<draconicevolution:energy_storage_core>, [
-	[<ore:ingotDraconium>,<ore:ingotDraconium>,<ore:ingotDraconium>],
-	[<draconicevolution:wyvern_energy_core>,<draconicevolution:wyvern_core> ,<draconicevolution:wyvern_energy_core>],
-	[<ore:ingotDraconium>,<ore:ingotDraconium>,<ore:ingotDraconium>]
-]);
+
 // Infused Lava Crystal Blocks
 compressor.recipeBuilder()
 	.inputs(<armorplus:lava_crystal:1> * 9)
@@ -119,6 +119,14 @@ compressor.recipeBuilder()
 	.inputs(<armorplus:block_infused_lava_crystal> * 9)
 	.outputs(<armorplus:block_compressed_infused_lava_crystal>)
 	.duration(300).EUt(2).buildAndRegister();
+
+assembly_line.recipeBuilder()
+	.inputs(<metaitem:frameTungstenCarbide>, <ore:plateDraconium> * 6, <draconicevolution:wyvern_core>, <draconicevolution:wyvern_energy_core> * 4, <metaitem:field.generator.iv> * 2, <metaitem:wireGtSingleVanadiumGallium> * 12)
+	.fluidInputs(<liquid:soldering_alloy> * 1152)
+	.outputs(<draconicevolution:energy_storage_core>)
+	.property("research", <draconicevolution:wyvern_energy_core>)
+	.duration(1200).EUt(30720).buildAndRegister();
+
 
 recipes.addShapeless(<metaitem:dustDraconium>, [<draconicevolution:draconium_dust>]);
 
