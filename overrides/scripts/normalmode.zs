@@ -728,25 +728,20 @@ large_chemical_reactor.recipeBuilder()
 	.circuit(25)
 	.duration(300).EUt(7680).buildAndRegister();
 
+// Assembly Control Casing
+recipes.remove(<gregtech:multiblock_casing:3>);
+recipes.addShaped(<gregtech:multiblock_casing:3> * 4, [
+    [<ore:circuitLuv>, <metaitem:plate.high_power_integrated_circuit>, <ore:circuitLuv>],
+    [<metaitem:sensor.iv>, <metaitem:frameTungstenSteel>, <metaitem:emitter.iv>],
+    [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
+]);
+
+// Recycling recipes in groovy
+
 // Nq+ and Nq*
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
 
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
-
-/* UHV Multis, move to zpm (used to be UHV) */
-// Rotary Hearth Furnace
-recipes.remove(<metaitem:gcym:mega_blast_furnace>);
-recipes.addShaped(<metaitem:gcym:mega_blast_furnace>,
-	[[<ore:springNaquadahAlloy>, <ore:circuitUv>, <ore:springNaquadahAlloy>],
-	[<metaitem:field.generator.luv>, <metaitem:electric_blast_furnace>, <metaitem:field.generator.luv>],
-	[<ore:plateDenseNaquadahAlloy>, <ore:wireGtQuadrupleUraniumRhodiumDinaquadide>, <ore:plateDenseNaquadahAlloy>]]);
-
-// Bulk Blast Chiller
-recipes.remove(<metaitem:gcym:mega_vacuum_freezer>);
-recipes.addShaped(<metaitem:gcym:mega_vacuum_freezer>,
-	[[<ore:pipeNormalFluidNaquadah>, <ore:circuitUv>, <ore:pipeNormalFluidNaquadah>],
-	[<metaitem:field.generator.luv>, <metaitem:vacuum_freezer>, <metaitem:field.generator.luv>],
-	[<ore:plateDenseNaquadahAlloy>, <ore:wireGtQuadrupleUraniumRhodiumDinaquadide>, <ore:plateDenseNaquadahAlloy>]]);
 
 // Recycling recipe replacements
 // RHF
@@ -784,7 +779,48 @@ macerator.recipeBuilder()
 	.duration(25408)
 	.EUt(32)
 	.buildAndRegister();
-	
+
+// I/O Buses
+// Removals in Groovy
+
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ore:chest>], [<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:item_bus.import.lv>, [[<ore:chest>], [<metaitem:hull.lv>]]);
+recipes.addShaped(<metaitem:item_bus.import.mv>, [[<ore:chest>], [<metaitem:hull.mv>]]);
+recipes.addShaped(<metaitem:item_bus.import.hv>, [[<ore:chest>], [<metaitem:hull.hv>]]);
+recipes.addShaped(<metaitem:item_bus.import.ev>, [[<ore:chest>], [<metaitem:hull.ev>]]);
+recipes.addShaped(<metaitem:item_bus.import.iv>, [[<ore:chest>], [<metaitem:hull.iv>]]);
+
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.lv>, [[<metaitem:hull.lv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.mv>, [[<metaitem:hull.mv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.hv>, [[<metaitem:hull.hv>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.ev>, [[<metaitem:hull.ev>], [<ore:chest>]]);
+recipes.addShaped(<metaitem:item_bus.export.iv>, [[<metaitem:hull.iv>], [<ore:chest>]]);
+
+recipes.addShaped(<metaitem:fluid_hatch.import.ulv>, [[<ore:blockGlass>], [<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.lv>, [[<ore:blockGlass>], [<metaitem:hull.lv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.mv>, [[<ore:blockGlass>], [<metaitem:hull.mv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.hv>, [[<ore:blockGlass>], [<metaitem:hull.hv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.ev>, [[<ore:blockGlass>], [<metaitem:hull.ev>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import.iv>, [[<ore:blockGlass>], [<metaitem:hull.iv>]]);
+
+recipes.addShaped(<metaitem:fluid_hatch.export.ulv>, [[<metaitem:hull.ulv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.lv>, [[<metaitem:hull.lv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.mv>, [[<metaitem:hull.mv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.hv>, [[<metaitem:hull.hv>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.ev>, [[<metaitem:hull.ev>], [<ore:blockGlass>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export.iv>, [[<metaitem:hull.iv>], [<ore:blockGlass>]]);
+
+recipes.addShaped(<metaitem:fluid_hatch.import_4x>, [[<ore:pipeQuadrupleFluidTitanium>], [<metaitem:hull.ev>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import_4x.iv>, [[<ore:pipeQuadrupleFluidTungstensteel>], [<metaitem:hull.iv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import_9x>, [[<ore:pipeNonupleFluidTitanium>], [<metaitem:hull.ev>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import_9x.iv>, [[<ore:pipeNonupleFluidTungstensteel>], [<metaitem:hull.iv>]]);
+
+recipes.addShaped(<metaitem:fluid_hatch.export_4x>, [[<metaitem:hull.ev>], [<ore:pipeQuadrupleFluidTitanium>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export_4x.iv>, [[<metaitem:hull.iv>], [<ore:pipeQuadrupleFluidTungstensteel>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export_9x>, [[<metaitem:hull.ev>], [<ore:pipeNonupleFluidTitanium>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export_9x.iv>, [[<metaitem:hull.iv>], [<ore:pipeNonupleFluidTungstensteel>]]);
+
 // AA Drill Core Coin Tooltip
 <actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
 

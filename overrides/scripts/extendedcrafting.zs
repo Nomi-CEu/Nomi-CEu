@@ -443,16 +443,7 @@ recipes.addShaped(<avaritia:resource>, [
 
 ////////////////////////// Ultimate Material ///////////////////////
 
-makeExtremeRecipe5(<armorplus:material:4>,
-    ["BCCCB",
-     "CBABC",
-     "CADAC",
-     "CBABC",
-     "BCCCB"],
-    { A : <armorplus:material:1>,
-      B : <armorplus:material:2>,
-      C : <armorplus:material:3>,
-      D : <draconicevolution:dragon_heart> });
+// Moved to Groovy
 
 ////////////////////////// Eternal Catalyst ///////////////////////
 

@@ -495,7 +495,7 @@ chemical_reactor.recipeBuilder()
 chemical_bath.recipeBuilder()
     .inputs(<metaitem:dustPlatinumGroupSludge> * 3)
     .fluidInputs(<liquid:aqua_regia> * 2000)
-    .outputs(<metaitem:dustPlatinumGroupResidue>)
+    .outputs(<metaitem:dustPlatinumGroupResidue>, <metaitem:dustPlatinumSludgeResidue>)
     .fluidOutputs(<liquid:platinum_palladium_leachate> * 1000)
     .duration(250).EUt(30).buildAndRegister();
 
@@ -505,6 +505,15 @@ chemical_bath.recipeBuilder()
     .outputs(<metaitem:dustPlatinumGroupResidue>)
     .fluidOutputs(<liquid:platinum_palladium_leachate> * 1000)
     .duration(250).EUt(30).buildAndRegister();
+
+// Platinum Sludge Residue
+<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustPlatinumSludgeResidue> * 5], null).remove();
+
+centrifuge.recipeBuilder()
+    .inputs(<metaitem:dustPlatinumSludgeResidue> * 5)
+    .outputs(<metaitem:dustSiliconDioxide> * 2, <metaitem:dustCopper> * 2)
+    .chancedOutput(<metaitem:dustGold>, 1000, 1000)
+    .duration(938).EUt(30).buildAndRegister();
 
 // Platinum
 chemical_reactor.recipeBuilder()
@@ -731,7 +740,7 @@ centrifuge.recipeBuilder()
     .inputs(<metaitem:dustOxidisedResidue> * 10)
     .fluidInputs(<liquid:distilled_water> * 10000)
     .outputs(<metaitem:dustGarnetSand> * 12, <metaitem:dustBasalticMineralSand> * 12, <metaitem:dustBauxite> * 8, <metaitem:dustPhosphorusPentoxide> * 4, <metaitem:dustIlmenite> * 4, <metaitem:dustRefinedResidue>)
-    .fluidOutputs(<liquid:hydrofluoric_acid> * 2000, <liquid:lead_zinc_solution> * 250, <liquid:sulfuric_nickel_solution> * 250)
+    .fluidOutputs(<liquid:hydrofluoric_acid> * 2000, <liquid:sulfuric_copper_solution> * 1000, <liquid:lead_zinc_solution> * 250, <liquid:sulfuric_nickel_solution> * 250)
     .duration(1500).EUt(720).buildAndRegister();
 
 // 1/4800 scale

@@ -419,7 +419,7 @@ recipes.addShaped(<naturescompass:naturescompass>,
 	[[<ore:treeSapling>, <minecraft:compass>, <ore:treeSapling>],
 	[<ore:logWood>, <metaitem:prospector.lv>, <ore:logWood>],
 	[<ore:treeSapling>, <ore:logWood>, <ore:treeSapling>]]);
-
+	
 /*arc_furnace.recipeBuilder()
     .inputs(<minecraft:iron_door>)
     .fluidInputs(<liquid:oxygen> * 236)

@@ -18,14 +18,15 @@ export default function pushAll(inputData: ChangelogData): void {
 			hour12: true,
 			hour: "numeric",
 			minute: "numeric",
+			timeZoneName: "short",
 		});
-		// noinspection HtmlUnknownAttribute
-		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} (${date})</h1>`, "");
+		// noinspection HtmlDeprecatedAttribute
+		data.builder.push(`<h1 align="center">${data.releaseType} (${date})</h1>`, "");
 	} else {
 		// noinspection HtmlUnknownAttribute
 		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`, "");
+		data.builder.push("{{{ CF_REDIRECT }}}", "");
 	}
-	data.builder.push("{{{ CF_REDIRECT }}}", "");
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
 	// Push Sections of Changelog
@@ -107,7 +108,7 @@ function pushCategory(category: Category) {
  * Sorts a list that contains commit data
  * @param list A list of type T that contains commit data
  * @param transform A function to turn each element of type T into an element of type Commit
- * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal).
+ * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal) or will compare commit messages.
  */
 function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined, backup?: (a: T, b: T) => number) {
 	list.sort((a, b): number => {
@@ -129,6 +130,20 @@ function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined,
 }
 
 /**
+ * Sorts a commits list so that newest commits are on the bottom.
+ * @param list The commit list.
+ */
+export function sortCommitListReverse(list: Commit[]) {
+	list.sort((a, b) => {
+		const dateA = new Date(a.date);
+		const dateB = new Date(b.date);
+
+		if (dateB.getTime() - dateA.getTime() !== 0) return dateA.getTime() - dateB.getTime();
+		return a.message.localeCompare(b.message);
+	});
+}
+
+/**
  * Formats a Changelog Message
  * @param changelogMessage The message to format.
  * @param subMessage Whether this message is a subMessage (used in details). Set to true to make it a subMessage (different parsing). Defaults to false.
@@ -142,7 +157,7 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage =
 	let message = changelogMessage.commitMessage.trim();
 
 	// Transform PR tags into a link.
-	if (message.match(/(#\d+)/g)) {
+	if (message.match(/\(#\d+\)/g)) {
 		const matched = message.match(/\(#\d+\)/g);
 		matched.forEach((match) => {
 			// Extract digits
@@ -154,7 +169,10 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage =
 	if (changelogMessage.commitObject && !subMessage) {
 		if (data.combineList.has(changelogMessage.commitObject.hash)) {
 			const commits = data.combineList.get(changelogMessage.commitObject.hash);
-			commits.unshift(changelogMessage.commitObject);
+			commits.push(changelogMessage.commitObject);
+
+			// Sort original array so newest commits appear at the end instead of start of commit string
+			sortCommitListReverse(commits);
 
 			const formattedCommits: string[] = [];
 			const authors: string[] = [];

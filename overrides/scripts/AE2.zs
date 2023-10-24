@@ -16,6 +16,7 @@ import mods.appliedenergistics2.Inscriber;
 //Silicon
 Inscriber.removeRecipe(<appliedenergistics2:material:20>); 
 Inscriber.addRecipe(<appliedenergistics2:material:20>, <metaitem:plateSilicon>, true, <appliedenergistics2:material:19>);	
+Inscriber.addRecipe(<appliedenergistics2:material:20>, <ore:itemSilicon>, true, <appliedenergistics2:material:19>);	
 	
 //Engineering Processor	
 Inscriber.removeRecipe(<appliedenergistics2:material:24>); 	

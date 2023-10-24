@@ -140,16 +140,7 @@ dml_sim_chamber.hasMufflerMechanics = false;
 //dml_sim_chamber.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
 
 //Recipe for Controller
-makeShaped("simulation_controller", <metaitem:multiblocktweaker:dml_sim_chamber>,
-    ["MHM",
-     "RCR",
-     "MEM"],
-    { M : <metaitem:circuit.wetware_mainframe>,
-      R : <metaitem:robot.arm.uv>,
-      C : <gcym:large_multiblock_casing:11>,
-      E : <draconicevolution:draconic_energy_core>,
-      H : <contenttweaker:heartofauniverse>
-      });
+// Moved to Groovy
 
 val DATA_MODEL_MAXIMUM_TIER = 4;
 val PRISTINE_CHANCE_FIXED = 30; // in %
