@@ -236,7 +236,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §5Nomifactory§f §2GTCEu-§cSTE§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§f.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§f.\n\n§fIf you wish to build your base in a skyblock world, place the §6Void World Cake§f down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§f.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
+          "desc:8": "Welcome to §5Nomifactory§f §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§f.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§f.\n\n§fIf you wish to build your base in a skyblock world, place the §6Void World Cake§f down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§f.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -248,7 +248,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§cSTE-§2Genesis",
+          "name:8": "§cHard-§2Genesis",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -3492,7 +3492,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nThere are several types of rechargeable batteries you can make; §2Lithium Batteries§r are the best ones, followed by §6Cadmium§r and §6Sodium§r.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they only spawn in §eThe End§r§r. §6Cadmium§r comes from various §6Refined Ores§r, and §6Sodium§r is the easiest - from §6Salt§r, §6Clay§r, and many other minerals.",
+          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nThere are several types of rechargeable batteries you can make; §2Lithium Batteries§r are the best ones, followed by §6Cadmium§r and §6Sodium§r.\n\n§6Lithium§r is possible to find by processing §6Lepidolite§r. Later, it is found inside of §6Tungsten§r veins that only spawn in §eThe End§r§r. §6Cadmium§r comes from various §6Refined Ores§r, and §6Sodium§r is the easiest - from §6Salt§r, §6Clay§r, and many other minerals.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4361,7 +4361,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Assembling Machines come early in CEu! Circuit recipes are handled through a separate machine, the Circuit Assembler. §r\n\nAssembling Machines open up a plethora of §eequal or more efficient recipes that don\u0027t require hand tools§r. §2For example, you can make up to 6 Vacuum Tubes in a single craft! Many of its recipes will require fluids.§r Hand tool recipes also don\u0027t play nice with §bApplied Energistics§r.\n\nTake advantage of Assembling Machines: §cphase out all use of hand tools for crafting items in your automation going forward.§r Once you have all the important machines, you will never need hand tools for crafting.",
+          "desc:8": "§2Assembling Machines come early in CEu! Circuit recipes are handled through a separate machine, the Circuit Assembler. §r\n\nAssembling Machines open up a plethora of §eequal or more efficient recipes that don\u0027t require hand tools§r. §2For example, you can make up to 4 Vacuum Tubes in a single craft! §rCheck §eJEI§r for all the components you\u0027ve been making to see if the Assembler can improve their recipes.\n\nMany of the Assembler\u0027s recipes require §9fluids§r. Hence, the §3Extractor§r will be required to take full advantage of this machine. \n\nHand tool recipes also don\u0027t play nice with §bApplied Energistics§r. Take advantage of Assembling Machines: §cphase out all use of hand tools for crafting items in your automation going forward.§r Once you have all the important machines, you will never need hand tools for crafting.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5839,7 +5839,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With the §6Stabilized Einsteinium§r you harvested from a microverse, you should now have access to everything you need to synthesize your first §dMote of Omnium§r. §2Compared to the original pack, this requires 20 new elements.§r\n\nYou\u0027re gonna need to make at least 487 of these as you push into the End Game, so make sure your §eautomation is supplying you with a stock of all of the ingredients§r. That\u0027s what those quests in the End Game tab have been about all along!",
+          "desc:8": "With the §6Stabilized Einsteinium§r you harvested from a microverse, you should now have access to everything you need to synthesize your first §dMote of Omnium§r. §2Compared to the original pack, this requires 20 new elements.§r\n\nYou\u0027re gonna need to make at least 486 of these as you push into the End Game, so make sure your §eautomation is supplying you with a stock of all of the ingredients§r. That\u0027s what those quests in the End Game tab have been about all along!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8124,7 +8124,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your initial method of §9Steam§r production, to fuel your first machines. They automatically output Steam on all faces except the bottom.\n\nOnce you get Steel, consider upgrading to HP Solar Boilers.",
+          "desc:8": "Your initial method of §9Steam§r production, to fuel your first machines. They automatically output Steam on all faces except the bottom.\n\nOnce you get Steel, consider investing in HP Solar Boilers.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8180,7 +8180,7 @@
             "1:10": {
               "Count:3": 1,
               "Damage:2": 1,
-              "OreDict:8": "",
+              "OreDict:8": "questbookSteamBoiler",
               "id:8": "gregtech:machine"
             }
           },
@@ -8722,20 +8722,13 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "titanium_tetrachloride"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "titanium_tetrachloride"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -12159,18 +12152,23 @@
     },
     "214:10": {
       "preRequisites:11": [
-        232
+        232,
+        55
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. Moreover, ores generate more densely on the Moon than in other realms.\n\nIn particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Rutile Ore§r and §6Ilmenite Ore§r), §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r), §6Fluorine§r (in the form of §6Fluorite Ore§r), and §6Molybdenum§r (in the form of §6Wulfenite Ore§r and §6Molybdenite Ore§r).\n\n§2The Moon also contains fluid deposits of Deuterium and Helium-3, which you can harvest with a Fluid Rig. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n",
+          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Rutile Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:moondust"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "deuterium"
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -12178,7 +12176,7 @@
           "lockedprogress:1": 1,
           "name:8": "§2Deuterium",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -12196,17 +12194,14 @@
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "index:3": 0,
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:moondust"
+              "Amount:3": 1000,
+              "FluidName:8": "deuterium"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -12266,8 +12261,8 @@
     "216:10": {
       "preRequisites:11": [
         89,
-        782,
-        897
+        897,
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15564,7 +15559,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Phosphoric Acid§r is a key component of §6Luminessence§r, which will be used extensively for such things as §6Nether Stars§r, §6Lumium Blend§r, and §bExtended Crafting§r components.\n\nIt can be made using several equally viable recipes:\n\n§6Phosphorus§r, §9Oxygen§r, and §9Water§r can be chemically reacted to produce §9Phosphoric Acid§r.\n\nAlternatively, you can combine §6Phosphorus Pentoxide§r and Water for a much faster reaction.\n\nOtherwise, you can react §6Apatite Dust§r, §9Sulfuric Acid§r, and Water to get Phosphoric Acid, §9Hydrochloric Acid§r, and a whole bunch of §6Gypsum Dust§r.",
+          "desc:8": "§9Phosphoric Acid§r is a key component of §6Luminessence§r, which will be used extensively for such things as §6Nether Stars§r, §6Lumium Blend§r, and §bExtended Crafting§r components.\n\nIt can be made using several equally viable recipes:\n\n§6Phosphorus§r, §9Oxygen§r, and §9Water§r can be chemically reacted to produce §9Phosphoric Acid§r (Requires the §3Large Chemical Reactor§r).\n\nAlternatively, you can combine §6Phosphorus Pentoxide§r and Water for a much faster reaction.\n\nOtherwise, you can react §6Apatite Dust§r, §9Sulfuric Acid§r, and Water to get Phosphoric Acid, §9Hydrochloric Acid§r, and a whole bunch of §6Gypsum Dust§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22188,29 +22183,24 @@
     },
     "400:10": {
       "preRequisites:11": [
-        55
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Space exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\n§2In HV Age and more effectively in IV Age, you can get this from processing Ender Air.",
+          "desc:8": "The §2Multiblock Builder§r is a convenient new tool you have access to now.\n\nRight-click multiblock controllers to check what block is missing from their structure, or anything else that is making the structure not form.\n\nShift-right-click multiblock controllers to automatically build multiblocks using the items from your inventory.\n\nThis tool is functionally equivalent to the §dMultiblock Helper§r tool in your §6Terminal§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1004,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "deuterium"
-            }
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2I Don\u0027t Like Space",
-          "partysinglereward:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Multiblock Builder§r",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -22230,13 +22220,16 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "deuterium"
+              "Count:3": 1,
+              "Damage:2": 1004,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
             }
           },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -29423,7 +29416,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nShift-right-click while holding the §3Prospector\u0027s Scanner§r to set it to fluid mode, then right click it in order to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. \n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas, Salt Water§r\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nThe first tier of Fluid Rig is good for §d100,000 operations§r. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.",
+          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nShift-right-click while holding the §3Prospector\u0027s Scanner§r to set it to fluid mode, then right click it in order to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. You can also check the §eFluid Vein Information JEI§r page for information on where they spawn.\n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas\nSalt Water§r§r (only in Ocean biomes)\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nIn the §eVoid§r: §9Raw Oil§r (does not deplete)\n\nAs Fluid Rigs work, they will deplete the vein under them, reducing their yields. When a vein is depleted, it still yields a small amount of its fluid. The first tier of Fluid Rig takes §d100,000 operations§r to deplete a vein. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31520,8 +31513,7 @@
     },
     "594:10": {
       "preRequisites:11": [
-        214,
-        400
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41162,8 +41154,7 @@
     },
     "782:10": {
       "preRequisites:11": [
-        214,
-        400
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41553,7 +41544,6 @@
     },
     "790:10": {
       "preRequisites:11": [
-        69,
         72
       ],
       "properties:10": {
@@ -42608,7 +42598,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6§6Vanadium Pentoxide§r is a catalyst used in the production of §9Sulfuric Acid§r and §9Phthalic Anhydride§r. It\u0027s also the way you get §6Vanadium§r metal.\n\nYou will need §6Salt§r, §9Ammonia§r, and §9Hydrochloric Acid§r for the multi-step processing of §6Vanadium Magnetite Ore§r into §6V₂O₅§r.",
+          "desc:8": "§6§6Vanadium Pentoxide§r is a catalyst used in the production of §9Sulfuric Acid§r and §9Phthalic Anhydride§r. \n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44109,7 +44099,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A bit of Vanadiumsteel is used for progression. It\u0027s also a very strong tool material.\n\n§6Vanadium§r is an element acquired by §celectrolysing Vanadium Pentoxide.§r",
+          "desc:8": "§2A bit of Vanadiumsteel is used for progression. It\u0027s also a very strong tool material.\n\n§6Vanadium§r is obtained from §6Vanadium Magnetite Ore§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48275,9 +48265,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 630,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder"
+            "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -49887,6 +49877,58 @@
     },
     "938:10": {
       "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Don\u0027t let the name deceive you. §6Small Storage Crates§r can be crafted with just wood and can hold 117 stacks of items in a single block.\n\nThese will be your storage solution until you get your §dME System§r up and running.\n\nYou can move them with the §6Storage Crate Keeper§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "actuallyadditions:block_giant_chest"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Storage Crates",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 938,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:block_giant_chest"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "939:10": {
+      "preRequisites:11": [
         192
       ],
       "properties:10": {
@@ -49912,7 +49954,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1029,
@@ -49943,7 +49985,7 @@
         }
       }
     },
-    "939:10": {
+    "940:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -49973,7 +50015,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1030,
@@ -50017,7 +50059,7 @@
         }
       }
     },
-    "940:10": {
+    "941:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -50047,7 +50089,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1031,
@@ -50085,7 +50127,7 @@
         }
       }
     },
-    "941:10": {
+    "942:10": {
       "preRequisites:11": [
         109,
         339
@@ -50113,7 +50155,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1032,
@@ -50144,7 +50186,7 @@
         }
       }
     },
-    "942:10": {
+    "943:10": {
       "preRequisites:11": [
         102,
         339
@@ -50172,7 +50214,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1033,
@@ -50203,7 +50245,7 @@
         }
       }
     },
-    "943:10": {
+    "944:10": {
       "preRequisites:11": [
         286,
         1037
@@ -50231,7 +50273,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1034,
@@ -50280,7 +50322,7 @@
         }
       }
     },
-    "944:10": {
+    "945:10": {
       "preRequisites:11": [
         1037,
         286,
@@ -50309,7 +50351,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1035,
@@ -50364,7 +50406,7 @@
         }
       }
     },
-    "945:10": {
+    "946:10": {
       "preRequisites:11": [
         1037,
         286
@@ -50392,7 +50434,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1036,
@@ -50459,7 +50501,7 @@
         }
       }
     },
-    "946:10": {
+    "947:10": {
       "preRequisites:11": [
         825
       ],
@@ -50486,7 +50528,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1037,
@@ -50511,7 +50553,7 @@
         }
       }
     },
-    "947:10": {
+    "948:10": {
       "preRequisites:11": [
         1039,
         196
@@ -50539,7 +50581,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1038,
@@ -50582,7 +50624,7 @@
         }
       }
     },
-    "948:10": {
+    "949:10": {
       "preRequisites:11": [
         535,
         258
@@ -50610,7 +50652,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1039,
@@ -50635,14 +50677,14 @@
         }
       }
     },
-    "949:10": {
+    "950:10": {
       "preRequisites:11": [
         259
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Chemical Bath§r is mainly used as an ore processing machine to extract byproducts from specific §6Crushed Ores§r with either §9Sodium Persulfate§r or §9Mercury§r. It can also dye items, as well as perform some specialised processes.\n\nFor now, you will need it to cool down §6Hot Kanthal Ingots§r and §6Hot Silicon Ingots§r with §9Water§r. §9Distilled Water§r can accelerate this process if you have it.",
+          "desc:8": "The §3Chemical Bath§r is mainly used as an ore processing machine to extract byproducts from specific §6Crushed Ores§r with either §9Sodium Persulfate§r or §9Mercury§r. It can also dye items, as well as perform some specialised processes.\n\nFor now, you will need it to cool down §6Hot Kanthal Ingots§r and §6Hot Silicon Ingots§r with §9Water§r. §9Distilled Water§r can accelerate this process if you have it.\n\nAre you facing a shortage of §6Gold§r? This can net you some extra Gold by bathing §6Crushed Ores§r in §9Mercury§r, or §6Crushed Iron Ore§r in §9Sodium Persulfate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50662,7 +50704,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1040,
@@ -50687,7 +50729,7 @@
         }
       }
     },
-    "950:10": {
+    "951:10": {
       "preRequisites:11": [
         157
       ],
@@ -50714,7 +50756,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1041,
@@ -50739,7 +50781,7 @@
         }
       }
     },
-    "951:10": {
+    "952:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -50769,7 +50811,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1042,
@@ -50819,7 +50861,7 @@
         }
       }
     },
-    "952:10": {
+    "953:10": {
       "preRequisites:11": [
         286
       ],
@@ -50846,7 +50888,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1043,
@@ -50871,7 +50913,7 @@
         }
       }
     },
-    "953:10": {
+    "954:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -50901,7 +50943,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1044,
@@ -51755,8 +51797,8 @@
           "id:3": 130,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 280,
-          "y:3": -520
+          "x:3": 324,
+          "y:3": -556
         },
         "47:10": {
           "id:3": 131,
@@ -51913,307 +51955,314 @@
           "y:3": -488
         },
         "69:10": {
+          "id:3": 400,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 280,
+          "y:3": -484
+        },
+        "70:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -448
         },
-        "70:10": {
+        "71:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -104
         },
-        "71:10": {
+        "72:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -144
         },
-        "72:10": {
+        "73:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 536,
           "y:3": -180
         },
-        "73:10": {
+        "74:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -52,
           "y:3": -64
         },
-        "74:10": {
+        "75:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -4
         },
-        "75:10": {
+        "76:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 220,
           "y:3": -392
         },
-        "76:10": {
+        "77:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -144
         },
-        "77:10": {
+        "78:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -276
         },
-        "78:10": {
+        "79:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 132,
           "y:3": -392
         },
-        "79:10": {
+        "80:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -360
         },
-        "80:10": {
+        "81:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -420
         },
-        "81:10": {
+        "82:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -388
         },
-        "82:10": {
+        "83:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -356
         },
-        "83:10": {
+        "84:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -228
         },
-        "84:10": {
+        "85:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -124
         },
-        "85:10": {
+        "86:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 744,
           "y:3": -336
         },
-        "86:10": {
+        "87:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -276
         },
-        "87:10": {
+        "88:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 296,
           "y:3": -216
         },
-        "88:10": {
+        "89:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -72
         },
-        "89:10": {
+        "90:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -20
         },
-        "90:10": {
+        "91:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -164
         },
-        "91:10": {
+        "92:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -4
         },
-        "92:10": {
+        "93:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -60
         },
-        "93:10": {
+        "94:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -404
         },
-        "94:10": {
+        "95:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 576,
           "y:3": -228
         },
-        "95:10": {
+        "96:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 444,
           "y:3": -184
         },
-        "96:10": {
+        "97:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -136
         },
-        "97:10": {
+        "98:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -136
         },
-        "98:10": {
+        "99:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 404,
           "y:3": -136
         },
-        "99:10": {
+        "100:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -180
         },
-        "100:10": {
+        "101:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -268
         },
-        "101:10": {
+        "102:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -276
         },
-        "102:10": {
+        "103:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -276
         },
-        "103:10": {
+        "104:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 368,
-          "y:3": -552
+          "x:3": 280,
+          "y:3": -520
         },
-        "104:10": {
+        "105:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -184
         },
-        "105:10": {
+        "106:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -448
         },
-        "106:10": {
+        "107:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -388
         },
-        "107:10": {
+        "108:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -180
         },
-        "108:10": {
+        "109:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 404,
           "y:3": -180
         },
-        "109:10": {
+        "110:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 272,
           "y:3": 20
         },
-        "110:10": {
+        "111:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -420
         },
-        "111:10": {
+        "112:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -356
         },
-        "112:10": {
+        "113:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -53284,11 +53333,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "questbook:itemquestbook",
-              "orig_meta:3": 0
-            }
+            "id:8": "minecraft:writable_book"
           },
           "name:8": "Progression",
           "visibility:8": "ALWAYS"
@@ -56177,7 +56222,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": -6
+          "y:3": -4
         },
         "40:10": {
           "id:3": 530,
@@ -56293,10 +56338,10 @@
         },
         "56:10": {
           "id:3": 902,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -30
+          "y:3": -36
         },
         "57:10": {
           "id:3": 909,
@@ -56346,6 +56391,13 @@
           "sizeY:3": 24,
           "x:3": 112,
           "y:3": 296
+        },
+        "64:10": {
+          "id:3": 938,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": -4
         }
       }
     },
@@ -56376,305 +56428,305 @@
           "y:3": 348
         },
         "1:10": {
+          "id:3": 55,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 528,
+          "y:3": 552
+        },
+        "2:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 450
         },
-        "2:10": {
+        "3:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 444
         },
-        "3:10": {
+        "4:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 594
         },
-        "4:10": {
+        "5:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 498
         },
-        "5:10": {
+        "6:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 546
         },
-        "6:10": {
+        "7:10": {
           "id:3": 116,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 258,
           "y:3": 540
         },
-        "7:10": {
+        "8:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 594
         },
-        "8:10": {
+        "9:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 456
         },
-        "9:10": {
+        "10:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 456
         },
-        "10:10": {
+        "11:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 420
         },
-        "11:10": {
+        "12:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 264,
           "y:3": 420
         },
-        "12:10": {
+        "13:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 420
         },
-        "13:10": {
+        "14:10": {
           "id:3": 208,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 420
         },
-        "14:10": {
+        "15:10": {
           "id:3": 209,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 474,
           "y:3": 414
         },
-        "15:10": {
+        "16:10": {
           "id:3": 210,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 384
         },
-        "16:10": {
+        "17:10": {
           "id:3": 211,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 456
         },
-        "17:10": {
+        "18:10": {
           "id:3": 212,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 420
         },
-        "18:10": {
+        "19:10": {
           "id:3": 214,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
-          "y:3": 588
+          "y:3": 552
         },
-        "19:10": {
+        "20:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 588
         },
-        "20:10": {
+        "21:10": {
           "id:3": 217,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 624
         },
-        "21:10": {
+        "22:10": {
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 636,
           "y:3": 420
         },
-        "22:10": {
+        "23:10": {
           "id:3": 220,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 336
         },
-        "23:10": {
+        "24:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 336
         },
-        "24:10": {
+        "25:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 300
         },
-        "25:10": {
+        "26:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 372
         },
-        "26:10": {
+        "27:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 336
         },
-        "27:10": {
+        "28:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 300
         },
-        "28:10": {
+        "29:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 372
         },
-        "29:10": {
+        "30:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 336
         },
-        "30:10": {
+        "31:10": {
           "id:3": 229,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 546
         },
-        "31:10": {
+        "32:10": {
           "id:3": 232,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 492
         },
-        "32:10": {
+        "33:10": {
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 552
         },
-        "33:10": {
+        "34:10": {
           "id:3": 262,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 546
         },
-        "34:10": {
+        "35:10": {
           "id:3": 275,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 306,
           "y:3": 474
         },
-        "35:10": {
+        "36:10": {
           "id:3": 276,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 480
         },
-        "36:10": {
+        "37:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 594
         },
-        "37:10": {
+        "38:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 594
         },
-        "38:10": {
+        "39:10": {
           "id:3": 386,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 468,
           "y:3": 486
         },
-        "39:10": {
+        "40:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 546
         },
-        "40:10": {
+        "41:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 546
         },
-        "41:10": {
+        "42:10": {
           "id:3": 389,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
           "y:3": 486
         },
-        "42:10": {
+        "43:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 588
-        },
-        "43:10": {
-          "id:3": 400,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": 552
         },
         "44:10": {
           "id:3": 510,

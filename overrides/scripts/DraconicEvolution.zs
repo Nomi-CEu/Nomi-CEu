@@ -6,6 +6,11 @@ recipes.addShaped(<draconicevolution:draconic_core>, [
 	[<ore:ingotTungstenCarbide>, <actuallyadditions:block_crystal_empowered:1>, <ore:ingotTungstenCarbide>], 
 	[<metaitem:ingotDraconium>, <ore:ingotTungstenCarbide>, <metaitem:ingotDraconium>]]);
 
+assembler.recipeBuilder()
+	.inputs(<metaitem:ingotDraconium> * 4, <ore:ingotTungstenCarbide> * 4, <actuallyadditions:block_crystal_empowered:1>)
+	.outputs(<draconicevolution:draconic_core>)
+	.duration(100).EUt(16).buildAndRegister();
+
 var star = <minecraft:nether_star>;
 var dblock = <draconicevolution:draconium_block>;
 var dragcore = <draconicevolution:draconic_core>;
@@ -103,12 +108,25 @@ assembly_line.recipeBuilder()
 	.duration(1200).EUt(30720).buildAndRegister();
 
 recipes.remove(<draconicevolution:energy_storage_core>);
+
+// Infused Lava Crystal Blocks
+compressor.recipeBuilder()
+	.inputs(<armorplus:lava_crystal:1> * 9)
+	.outputs(<armorplus:block_infused_lava_crystal>)
+	.duration(300).EUt(2).buildAndRegister();
+
+compressor.recipeBuilder()
+	.inputs(<armorplus:block_infused_lava_crystal> * 9)
+	.outputs(<armorplus:block_compressed_infused_lava_crystal>)
+	.duration(300).EUt(2).buildAndRegister();
+
 assembly_line.recipeBuilder()
 	.inputs(<metaitem:frameTungstenCarbide>, <ore:plateDraconium> * 6, <draconicevolution:wyvern_core>, <draconicevolution:wyvern_energy_core> * 4, <metaitem:field.generator.iv> * 2, <metaitem:wireGtSingleVanadiumGallium> * 12)
 	.fluidInputs(<liquid:soldering_alloy> * 1152)
 	.outputs(<draconicevolution:energy_storage_core>)
 	.property("research", <draconicevolution:wyvern_energy_core>)
 	.duration(1200).EUt(30720).buildAndRegister();
+
 
 recipes.addShapeless(<metaitem:dustDraconium>, [<draconicevolution:draconium_dust>]);
 

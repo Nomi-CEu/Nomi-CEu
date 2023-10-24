@@ -218,12 +218,19 @@ makeExtremeRecipe9(<contenttweaker:tiersevenship>,
 );
 
 assembly_line.recipeBuilder()
-	.inputs([<metaitem:frameMicroversium>, <ore:plateEnderium> * 6, <draconicevolution:item_dislocation_inhibitor>, <draconicevolution:dislocator_advanced> * 2, <ore:plateCrystalMatrix> * 2, <metaitem:field.generator.iv> * 2, <simplyjetpacks:metaitemmods:30> * 2, <simplyjetpacks:metaitemmods:11>])
+	.inputs([<metaitem:frameMicroversium>, <ore:plateEnderium> * 6, <draconicevolution:item_dislocation_inhibitor>, <draconicevolution:magnet:1>, <ore:plateCrystalMatrix> * 2, <metaitem:field.generator.iv> * 2, <simplyjetpacks:metaitemmods:30> * 2, <simplyjetpacks:metaitemmods:11>])
 	.fluidInputs(<liquid:soldering_alloy> * 1152)
 	.outputs(<contenttweaker:warpengine>)
 	.property("research", <draconicevolution:item_dislocation_inhibitor>)
 	.duration(1800).EUt(30720).buildAndRegister();
 
+recipes.remove(<draconicevolution:magnet:1>);
+
+recipes.addShaped(<draconicevolution:magnet:1>, [
+	[<ore:ingotDraconium>, null, <ore:ingotDraconium>],
+	[<ore:dustRedstone>, <draconicevolution:magnet>, <ore:dustRedstone>],
+	[<ore:ingotEuropium>, <draconicevolution:dislocator_advanced>, <ore:ingotEuropium>]
+]);
 
 /////////////	 Tier Eight Space Ship  	  //////////////////
 
@@ -378,6 +385,11 @@ makeShaped("of_densehydrogen", <contenttweaker:densehydrogen>,
 	{ H : <contenttweaker:solidifiedhydrogen> }
 );
 
+compressor.recipeBuilder()
+	.inputs(<contenttweaker:solidifiedhydrogen> * 9)
+	.outputs(<contenttweaker:densehydrogen>)
+	.duration(300).EUt(2).buildAndRegister();
+
 // Dense -> Solidified decomposition
 recipes.addShapeless(<contenttweaker:solidifiedhydrogen> * 9, [<contenttweaker:densehydrogen>]);
 
@@ -388,6 +400,11 @@ makeShaped("of_ultradensehydrogen", <contenttweaker:ultradensehydrogen>,
 	 "DDD"],
 	{ D : <contenttweaker:densehydrogen> }
 );
+
+compressor.recipeBuilder()
+	.inputs(<contenttweaker:densehydrogen> * 9)
+	.outputs(<contenttweaker:ultradensehydrogen>)
+	.duration(300).EUt(2).buildAndRegister();
 
 // Ultra Dense -> Dense decomposition
 recipes.addShapeless(<contenttweaker:densehydrogen> * 9, [<contenttweaker:ultradensehydrogen>]);
