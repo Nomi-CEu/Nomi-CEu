@@ -3485,7 +3485,6 @@
     },
     "72:10": {
       "preRequisites:11": [
-        413,
         516,
         517
       ],
@@ -6933,17 +6932,13 @@
       },
       "tasks:9": {
         "0:10": {
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "titanium_tetrachloride"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "titanium_tetrachloride"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -9701,18 +9696,24 @@
     },
     "214:10": {
       "preRequisites:11": [
-        232
+        232,
+        55
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.214.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "contenttweaker:moondust"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "deuterium"
+            }
           },
           "ismain:1": 1,
           "lockedprogress:1": 1,
           "name:8": "nomifactory.quest.normal.db.214.title",
+          "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -9730,14 +9731,13 @@
       },
       "tasks:9": {
         "0:10": {
-          "index:3": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "id:8": "contenttweaker:moondust"
+              "Amount:3": 1000,
+              "FluidName:8": "deuterium"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -9786,8 +9786,8 @@
     "216:10": {
       "preRequisites:11": [
         89,
-        782,
-        897
+        897,
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -12810,7 +12810,8 @@
             "id:8": "gregtech:machine"
           },
           "name:8": "nomifactory.quest.normal.db.285.title",
-          "questlogic:8": "OR"
+          "questlogic:8": "OR",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 285,
@@ -17214,21 +17215,16 @@
     },
     "400:10": {
       "preRequisites:11": [
-        55
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.400.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "deuterium"
-            }
+            "Damage:2": 1004,
+            "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 1,
-          "lockedprogress:1": 1,
           "name:8": "nomifactory.quest.normal.db.400.title",
           "visibility:8": "ALWAYS"
         }
@@ -17247,13 +17243,14 @@
       },
       "tasks:9": {
         "0:10": {
-          "requiredFluids:9": {
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "deuterium"
+              "Count:3": 1,
+              "Damage:2": 1004,
+              "id:8": "gregtech:meta_item_1"
             }
           },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -21657,6 +21654,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 321,
+              "OreDict:8": "questbookExtruder",
               "id:8": "gregtech:machine"
             }
           },
@@ -23474,8 +23472,7 @@
     },
     "594:10": {
       "preRequisites:11": [
-        214,
-        400
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -30431,38 +30428,17 @@
     },
     "782:10": {
       "preRequisites:11": [
-        214,
-        400
+        897
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.782.desc",
           "icon:10": {
-            "id:8": "minecraft:air"
-          },
-          "ismain:1": 1,
-          "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.782.title",
-          "questlogic:8": "OR",
-          "snd_complete:8": "",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 782
-    },
-    "783:10": {
-      "preRequisites:11": [
-        897
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.783.desc",
-          "icon:10": {
             "Count:3": 1,
             "Damage:2": 711,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.783.title",
+          "name:8": "nomifactory.quest.normal.db.782.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30473,20 +30449,20 @@
         }
       }
     },
-    "784:10": {
+    "783:10": {
       "preRequisites:11": [
         282
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.784.desc",
+          "desc:8": "nomifactory.quest.normal.db.783.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 16,
             "id:8": "appliedenergistics2:part"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.784.title",
+          "name:8": "nomifactory.quest.normal.db.783.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30515,13 +30491,13 @@
         }
       }
     },
-    "785:10": {
+    "784:10": {
       "preRequisites:11": [
         72
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.785.desc",
+          "desc:8": "nomifactory.quest.normal.db.784.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -30532,7 +30508,7 @@
           },
           "ismain:1": 1,
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.785.title",
+          "name:8": "nomifactory.quest.normal.db.784.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -30571,7 +30547,7 @@
         }
       }
     },
-    "786:10": {
+    "785:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -30580,12 +30556,12 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.786.desc",
+          "desc:8": "nomifactory.quest.normal.db.785.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "effortlessbuilding:reach_upgrade1"
           },
-          "name:8": "nomifactory.quest.normal.db.786.title",
+          "name:8": "nomifactory.quest.normal.db.785.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30596,7 +30572,7 @@
         }
       }
     },
-    "787:10": {
+    "786:10": {
       "preRequisites:11": [
         81,
         272,
@@ -30604,13 +30580,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.787.desc",
+          "desc:8": "nomifactory.quest.normal.db.786.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "enderio:block_farm_station"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.787.title",
+          "name:8": "nomifactory.quest.normal.db.786.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30639,20 +30615,20 @@
         }
       }
     },
-    "788:10": {
+    "787:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.788.desc",
+          "desc:8": "nomifactory.quest.normal.db.787.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 293,
             "id:8": "gregtech:meta_item_1"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.788.title",
+          "name:8": "nomifactory.quest.normal.db.787.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30681,20 +30657,20 @@
         }
       }
     },
-    "789:10": {
+    "788:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.789.desc",
+          "desc:8": "nomifactory.quest.normal.db.788.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 291,
             "id:8": "gregtech:meta_item_1"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.789.title",
+          "name:8": "nomifactory.quest.normal.db.788.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30733,21 +30709,20 @@
         }
       }
     },
-    "790:10": {
+    "789:10": {
       "preRequisites:11": [
-        69,
         72
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.790.desc",
+          "desc:8": "nomifactory.quest.normal.db.789.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 301,
             "id:8": "gregtech:meta_item_1"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.790.title",
+          "name:8": "nomifactory.quest.normal.db.789.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30776,14 +30751,14 @@
         }
       }
     },
-    "791:10": {
+    "790:10": {
       "preRequisites:11": [
         524,
         798
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.791.desc",
+          "desc:8": "nomifactory.quest.normal.db.790.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1030,
@@ -30791,7 +30766,7 @@
           },
           "ismain:1": 1,
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.791.title",
+          "name:8": "nomifactory.quest.normal.db.790.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30825,21 +30800,21 @@
         }
       }
     },
-    "792:10": {
+    "791:10": {
       "preRequisites:11": [
         172,
         177
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.792.desc",
+          "desc:8": "nomifactory.quest.normal.db.791.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 460,
             "id:8": "gregtech:meta_item_1"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.792.title",
+          "name:8": "nomifactory.quest.normal.db.791.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30868,19 +30843,19 @@
         }
       }
     },
-    "793:10": {
+    "792:10": {
       "preRequisites:11": [
         27
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.793.desc",
+          "desc:8": "nomifactory.quest.normal.db.792.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:tnt"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.793.title",
+          "name:8": "nomifactory.quest.normal.db.792.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30913,19 +30888,19 @@
         }
       }
     },
-    "794:10": {
+    "793:10": {
       "preRequisites:11": [
         792,
         793
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.794.desc",
+          "desc:8": "nomifactory.quest.normal.db.793.desc",
           "icon:10": {
             "id:8": "minecraft:air"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.794.title",
+          "name:8": "nomifactory.quest.normal.db.793.title",
           "questlogic:8": "OR",
           "snd_complete:8": "",
           "visibility:8": "ALWAYS"
@@ -30933,13 +30908,13 @@
       },
       "questID:3": 794
     },
-    "795:10": {
+    "794:10": {
       "preRequisites:11": [
         796
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.795.desc",
+          "desc:8": "nomifactory.quest.normal.db.794.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 573,
@@ -30947,7 +30922,7 @@
           },
           "ismain:1": 1,
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.795.title",
+          "name:8": "nomifactory.quest.normal.db.794.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -30976,13 +30951,13 @@
         }
       }
     },
-    "796:10": {
+    "795:10": {
       "preRequisites:11": [
         323
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.796.desc",
+          "desc:8": "nomifactory.quest.normal.db.795.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 363,
@@ -30990,7 +30965,7 @@
           },
           "ismain:1": 1,
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.796.title",
+          "name:8": "nomifactory.quest.normal.db.795.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31019,20 +30994,20 @@
         }
       }
     },
-    "797:10": {
+    "796:10": {
       "preRequisites:11": [
         796
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.797.desc",
+          "desc:8": "nomifactory.quest.normal.db.796.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 572,
             "id:8": "gregtech:meta_item_1"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.797.title",
+          "name:8": "nomifactory.quest.normal.db.796.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31061,20 +31036,20 @@
         }
       }
     },
-    "798:10": {
+    "797:10": {
       "preRequisites:11": [
         675,
         676
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.798.desc",
+          "desc:8": "nomifactory.quest.normal.db.797.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "advsolars:sunnarium"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.798.title",
+          "name:8": "nomifactory.quest.normal.db.797.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31102,14 +31077,14 @@
         }
       }
     },
-    "799:10": {
+    "798:10": {
       "preRequisites:11": [
         545,
         745
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.799.desc",
+          "desc:8": "nomifactory.quest.normal.db.798.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3,
@@ -31118,7 +31093,7 @@
               "Accessible:1": 1
             }
           },
-          "name:8": "nomifactory.quest.normal.db.799.title",
+          "name:8": "nomifactory.quest.normal.db.798.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31150,7 +31125,7 @@
         }
       }
     },
-    "800:10": {
+    "799:10": {
       "preRequisites:11": [
         162,
         416,
@@ -31158,13 +31133,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.800.desc",
+          "desc:8": "nomifactory.quest.normal.db.799.desc",
           "icon:10": {
             "id:8": "minecraft:air"
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.800.title",
+          "name:8": "nomifactory.quest.normal.db.799.title",
           "questlogic:8": "OR",
           "snd_complete:8": "",
           "snd_update:8": "",
@@ -31173,13 +31148,13 @@
       },
       "questID:3": 800
     },
-    "801:10": {
+    "800:10": {
       "preRequisites:11": [
         154
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.801.desc",
+          "desc:8": "nomifactory.quest.normal.db.800.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -31189,7 +31164,7 @@
             }
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.801.title",
+          "name:8": "nomifactory.quest.normal.db.800.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31229,20 +31204,20 @@
         }
       }
     },
-    "802:10": {
+    "801:10": {
       "preRequisites:11": [
         325
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.802.desc",
+          "desc:8": "nomifactory.quest.normal.db.801.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1,
             "id:8": "gregtech:fusion_casing"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.802.title",
+          "name:8": "nomifactory.quest.normal.db.801.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31271,7 +31246,7 @@
         }
       }
     },
-    "803:10": {
+    "802:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -31280,13 +31255,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.803.desc",
+          "desc:8": "nomifactory.quest.normal.db.802.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 10,
             "id:8": "minecraft:bed"
           },
-          "name:8": "nomifactory.quest.normal.db.803.title",
+          "name:8": "nomifactory.quest.normal.db.802.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31325,20 +31300,20 @@
         }
       }
     },
-    "804:10": {
+    "803:10": {
       "preRequisites:11": [
         107,
         286
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.804.desc",
+          "desc:8": "nomifactory.quest.normal.db.803.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "actuallyadditions:block_laser_relay_item"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.804.title",
+          "name:8": "nomifactory.quest.normal.db.803.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31374,19 +31349,19 @@
         }
       }
     },
-    "805:10": {
+    "804:10": {
       "preRequisites:11": [
         818
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.805.desc",
+          "desc:8": "nomifactory.quest.normal.db.804.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "naturescompass:naturescompass"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.805.title",
+          "name:8": "nomifactory.quest.normal.db.804.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31414,14 +31389,14 @@
         }
       }
     },
-    "806:10": {
+    "805:10": {
       "preRequisites:11": [
         166,
         226
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.806.desc",
+          "desc:8": "nomifactory.quest.normal.db.805.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -31430,7 +31405,7 @@
               "FluidName:8": "allyl_chloride"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.806.title",
+          "name:8": "nomifactory.quest.normal.db.805.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31441,19 +31416,19 @@
         }
       }
     },
-    "807:10": {
+    "806:10": {
       "preRequisites:11": [
         163,
         413
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.807.desc",
+          "desc:8": "nomifactory.quest.normal.db.806.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:wheat_seeds"
           },
-          "name:8": "nomifactory.quest.normal.db.807.title",
+          "name:8": "nomifactory.quest.normal.db.806.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31481,7 +31456,7 @@
         }
       }
     },
-    "808:10": {
+    "807:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -31490,12 +31465,12 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.808.desc",
+          "desc:8": "nomifactory.quest.normal.db.807.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:knowledge_book"
           },
-          "name:8": "nomifactory.quest.normal.db.808.title",
+          "name:8": "nomifactory.quest.normal.db.807.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31506,19 +31481,19 @@
         }
       }
     },
-    "809:10": {
+    "808:10": {
       "preRequisites:11": [
         367
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.809.desc",
+          "desc:8": "nomifactory.quest.normal.db.808.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3100,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.809.title",
+          "name:8": "nomifactory.quest.normal.db.808.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31560,7 +31535,7 @@
         }
       }
     },
-    "810:10": {
+    "809:10": {
       "preRequisites:11": [
         260,
         278,
@@ -31568,7 +31543,7 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.810.desc",
+          "desc:8": "nomifactory.quest.normal.db.809.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 103,
@@ -31576,7 +31551,7 @@
           },
           "ismain:1": 1,
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.810.title",
+          "name:8": "nomifactory.quest.normal.db.809.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -31606,7 +31581,7 @@
         }
       }
     },
-    "811:10": {
+    "810:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -31616,13 +31591,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 1,
-          "desc:8": "nomifactory.quest.normal.db.811.desc",
+          "desc:8": "nomifactory.quest.normal.db.810.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "gregtech:ore_sulfur_0"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.811.title",
+          "name:8": "nomifactory.quest.normal.db.810.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -31680,38 +31655,38 @@
         }
       }
     },
-    "812:10": {
+    "811:10": {
       "preRequisites:11": [
         94,
         505
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.812.desc",
+          "desc:8": "nomifactory.quest.normal.db.811.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:nether_star"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.812.title",
+          "name:8": "nomifactory.quest.normal.db.811.title",
           "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 812
     },
-    "813:10": {
+    "812:10": {
       "preRequisites:11": [
         4
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.813.desc",
+          "desc:8": "nomifactory.quest.normal.db.812.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.813.title",
+          "name:8": "nomifactory.quest.normal.db.812.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31733,19 +31708,19 @@
         }
       }
     },
-    "814:10": {
+    "813:10": {
       "preRequisites:11": [
         21
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.814.desc",
+          "desc:8": "nomifactory.quest.normal.db.813.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 95,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.814.title",
+          "name:8": "nomifactory.quest.normal.db.813.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -31786,20 +31761,20 @@
         }
       }
     },
-    "815:10": {
+    "814:10": {
       "preRequisites:11": [
         145
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.815.desc",
+          "desc:8": "nomifactory.quest.normal.db.814.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 140,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.815.title",
+          "name:8": "nomifactory.quest.normal.db.814.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31828,21 +31803,21 @@
         }
       }
     },
-    "816:10": {
+    "815:10": {
       "preRequisites:11": [
         76,
         818
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.816.desc",
+          "desc:8": "nomifactory.quest.normal.db.815.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 635,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.816.title",
+          "name:8": "nomifactory.quest.normal.db.815.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31871,19 +31846,19 @@
         }
       }
     },
-    "817:10": {
+    "816:10": {
       "preRequisites:11": [
         752
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.817.desc",
+          "desc:8": "nomifactory.quest.normal.db.816.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1025,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.817.title",
+          "name:8": "nomifactory.quest.normal.db.816.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31931,19 +31906,19 @@
         }
       }
     },
-    "818:10": {
+    "817:10": {
       "preRequisites:11": [
         530
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.818.desc",
+          "desc:8": "nomifactory.quest.normal.db.817.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 217,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.818.title",
+          "name:8": "nomifactory.quest.normal.db.817.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -31972,13 +31947,13 @@
         }
       }
     },
-    "819:10": {
+    "818:10": {
       "preRequisites:11": [
         58
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.819.desc",
+          "desc:8": "nomifactory.quest.normal.db.818.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "gregtech:drill_mv",
@@ -32007,7 +31982,7 @@
               "MaxCharge:4": 2147483647
             }
           },
-          "name:8": "nomifactory.quest.normal.db.819.title",
+          "name:8": "nomifactory.quest.normal.db.818.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32039,7 +32014,7 @@
         }
       }
     },
-    "820:10": {
+    "819:10": {
       "preRequisites:11": [
         72,
         78,
@@ -32047,14 +32022,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.820.desc",
+          "desc:8": "nomifactory.quest.normal.db.819.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 521,
             "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.820.title",
+          "name:8": "nomifactory.quest.normal.db.819.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32083,13 +32058,13 @@
         }
       }
     },
-    "821:10": {
+    "820:10": {
       "preRequisites:11": [
         27
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.821.desc",
+          "desc:8": "nomifactory.quest.normal.db.820.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -32099,7 +32074,7 @@
             }
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.821.title",
+          "name:8": "nomifactory.quest.normal.db.820.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -32138,19 +32113,19 @@
         }
       }
     },
-    "822:10": {
+    "821:10": {
       "preRequisites:11": [
         82
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.822.desc",
+          "desc:8": "nomifactory.quest.normal.db.821.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 402,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.822.title",
+          "name:8": "nomifactory.quest.normal.db.821.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32179,20 +32154,20 @@
         }
       }
     },
-    "823:10": {
+    "822:10": {
       "preRequisites:11": [
         727
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.823.desc",
+          "desc:8": "nomifactory.quest.normal.db.822.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 575,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.823.title",
+          "name:8": "nomifactory.quest.normal.db.822.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32222,20 +32197,20 @@
         }
       }
     },
-    "824:10": {
+    "823:10": {
       "preRequisites:11": [
         96
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.824.desc",
+          "desc:8": "nomifactory.quest.normal.db.823.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 522,
             "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.824.title",
+          "name:8": "nomifactory.quest.normal.db.823.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -32266,14 +32241,14 @@
         }
       }
     },
-    "825:10": {
+    "824:10": {
       "preRequisites:11": [
         153,
         899
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.825.desc",
+          "desc:8": "nomifactory.quest.normal.db.824.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -32283,7 +32258,7 @@
             }
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.825.title",
+          "name:8": "nomifactory.quest.normal.db.824.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32311,20 +32286,20 @@
         }
       }
     },
-    "826:10": {
+    "825:10": {
       "preRequisites:11": [
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.826.desc",
+          "desc:8": "nomifactory.quest.normal.db.825.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1023,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.826.title",
+          "name:8": "nomifactory.quest.normal.db.825.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32367,20 +32342,20 @@
         }
       }
     },
-    "827:10": {
+    "826:10": {
       "preRequisites:11": [
         177
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.827.desc",
+          "desc:8": "nomifactory.quest.normal.db.826.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 299,
             "id:8": "gregtech:meta_dust"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.827.title",
+          "name:8": "nomifactory.quest.normal.db.826.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32414,13 +32389,13 @@
         }
       }
     },
-    "828:10": {
+    "827:10": {
       "preRequisites:11": [
         198
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.828.desc",
+          "desc:8": "nomifactory.quest.normal.db.827.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -32430,7 +32405,7 @@
             }
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.828.title",
+          "name:8": "nomifactory.quest.normal.db.827.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32458,19 +32433,19 @@
         }
       }
     },
-    "829:10": {
+    "828:10": {
       "preRequisites:11": [
         779
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.829.desc",
+          "desc:8": "nomifactory.quest.normal.db.828.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 410,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.829.title",
+          "name:8": "nomifactory.quest.normal.db.828.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32499,20 +32474,20 @@
         }
       }
     },
-    "830:10": {
+    "829:10": {
       "preRequisites:11": [
         93,
         974
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.830.desc",
+          "desc:8": "nomifactory.quest.normal.db.829.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 112,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.830.title",
+          "name:8": "nomifactory.quest.normal.db.829.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32541,19 +32516,19 @@
         }
       }
     },
-    "831:10": {
+    "830:10": {
       "preRequisites:11": [
         830
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.831.desc",
+          "desc:8": "nomifactory.quest.normal.db.830.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 310,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.831.title",
+          "name:8": "nomifactory.quest.normal.db.830.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32582,19 +32557,19 @@
         }
       }
     },
-    "832:10": {
+    "831:10": {
       "preRequisites:11": [
         830
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.832.desc",
+          "desc:8": "nomifactory.quest.normal.db.831.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 311,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.832.title",
+          "name:8": "nomifactory.quest.normal.db.831.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32623,19 +32598,19 @@
         }
       }
     },
-    "833:10": {
+    "832:10": {
       "preRequisites:11": [
         830
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.833.desc",
+          "desc:8": "nomifactory.quest.normal.db.832.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1029,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.833.title",
+          "name:8": "nomifactory.quest.normal.db.832.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32674,19 +32649,19 @@
         }
       }
     },
-    "834:10": {
+    "833:10": {
       "preRequisites:11": [
         96
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.834.desc",
+          "desc:8": "nomifactory.quest.normal.db.833.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1575,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.834.title",
+          "name:8": "nomifactory.quest.normal.db.833.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32716,20 +32691,20 @@
         }
       }
     },
-    "835:10": {
+    "834:10": {
       "preRequisites:11": [
         93,
         974
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.835.desc",
+          "desc:8": "nomifactory.quest.normal.db.834.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1009,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.835.title",
+          "name:8": "nomifactory.quest.normal.db.834.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -32759,21 +32734,21 @@
         }
       }
     },
-    "836:10": {
+    "835:10": {
       "preRequisites:11": [
         147,
         259
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.836.desc",
+          "desc:8": "nomifactory.quest.normal.db.835.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 471,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.836.title",
+          "name:8": "nomifactory.quest.normal.db.835.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32802,21 +32777,21 @@
         }
       }
     },
-    "837:10": {
+    "836:10": {
       "preRequisites:11": [
         91,
         836
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.837.desc",
+          "desc:8": "nomifactory.quest.normal.db.836.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2036,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.837.title",
+          "name:8": "nomifactory.quest.normal.db.836.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32845,20 +32820,20 @@
         }
       }
     },
-    "838:10": {
+    "837:10": {
       "preRequisites:11": [
         194,
         526
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.838.desc",
+          "desc:8": "nomifactory.quest.normal.db.837.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 597,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.838.title",
+          "name:8": "nomifactory.quest.normal.db.837.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32887,21 +32862,21 @@
         }
       }
     },
-    "839:10": {
+    "838:10": {
       "preRequisites:11": [
         904,
         882
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.839.desc",
+          "desc:8": "nomifactory.quest.normal.db.838.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 702,
             "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.839.title",
+          "name:8": "nomifactory.quest.normal.db.838.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -32931,7 +32906,7 @@
         }
       }
     },
-    "840:10": {
+    "839:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -32944,13 +32919,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.840.desc",
+          "desc:8": "nomifactory.quest.normal.db.839.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1031,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.840.title",
+          "name:8": "nomifactory.quest.normal.db.839.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -32979,20 +32954,20 @@
         }
       }
     },
-    "841:10": {
+    "840:10": {
       "preRequisites:11": [
         312
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.841.desc",
+          "desc:8": "nomifactory.quest.normal.db.840.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2519,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.841.title",
+          "name:8": "nomifactory.quest.normal.db.840.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33021,21 +32996,21 @@
         }
       }
     },
-    "842:10": {
+    "841:10": {
       "preRequisites:11": [
         242,
         327
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.842.desc",
+          "desc:8": "nomifactory.quest.normal.db.841.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 708,
             "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.842.title",
+          "name:8": "nomifactory.quest.normal.db.841.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33064,13 +33039,13 @@
         }
       }
     },
-    "843:10": {
+    "842:10": {
       "preRequisites:11": [
         323
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.843.desc",
+          "desc:8": "nomifactory.quest.normal.db.842.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -33079,7 +33054,7 @@
               "FluidName:8": "fluoroantimonic_acid"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.843.title",
+          "name:8": "nomifactory.quest.normal.db.842.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -33129,21 +33104,21 @@
         }
       }
     },
-    "844:10": {
+    "843:10": {
       "preRequisites:11": [
         845,
         847
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.844.desc",
+          "desc:8": "nomifactory.quest.normal.db.843.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 6,
             "id:8": "gregtech:wire_coil"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.844.title",
+          "name:8": "nomifactory.quest.normal.db.843.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33172,21 +33147,21 @@
         }
       }
     },
-    "845:10": {
+    "844:10": {
       "preRequisites:11": [
         324,
         843
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.845.desc",
+          "desc:8": "nomifactory.quest.normal.db.844.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 125,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.845.title",
+          "name:8": "nomifactory.quest.normal.db.844.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33215,20 +33190,20 @@
         }
       }
     },
-    "846:10": {
+    "845:10": {
       "preRequisites:11": [
         844
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.846.desc",
+          "desc:8": "nomifactory.quest.normal.db.845.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 126,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.846.title",
+          "name:8": "nomifactory.quest.normal.db.845.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33257,21 +33232,21 @@
         }
       }
     },
-    "847:10": {
+    "846:10": {
       "preRequisites:11": [
         324,
         843
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.847.desc",
+          "desc:8": "nomifactory.quest.normal.db.846.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 130,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.847.title",
+          "name:8": "nomifactory.quest.normal.db.846.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33300,20 +33275,20 @@
         }
       }
     },
-    "848:10": {
+    "847:10": {
       "preRequisites:11": [
         847
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.848.desc",
+          "desc:8": "nomifactory.quest.normal.db.847.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2042,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.848.title",
+          "name:8": "nomifactory.quest.normal.db.847.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33342,19 +33317,20 @@
         }
       }
     },
-    "849:10": {
+    "848:10": {
       "preRequisites:11": [
         198
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.849.desc",
+          "desc:8": "nomifactory.quest.normal.db.848.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 114,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.849.title",
+          "name:8": "nomifactory.quest.normal.db.848.title",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33380,10 +33356,21 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2003,
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
-    "850:10": {
+    "849:10": {
       "preRequisites:11": [
         828,
         841,
@@ -33392,14 +33379,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.850.desc",
+          "desc:8": "nomifactory.quest.normal.db.849.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 528,
             "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.850.title",
+          "name:8": "nomifactory.quest.normal.db.849.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33448,20 +33435,20 @@
         }
       }
     },
-    "851:10": {
+    "850:10": {
       "preRequisites:11": [
         312
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.851.desc",
+          "desc:8": "nomifactory.quest.normal.db.850.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2520,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.851.title",
+          "name:8": "nomifactory.quest.normal.db.850.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33490,20 +33477,20 @@
         }
       }
     },
-    "852:10": {
+    "851:10": {
       "preRequisites:11": [
         677
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.852.desc",
+          "desc:8": "nomifactory.quest.normal.db.851.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.852.title",
+          "name:8": "nomifactory.quest.normal.db.851.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -33533,20 +33520,20 @@
         }
       }
     },
-    "853:10": {
+    "852:10": {
       "preRequisites:11": [
         827,
         311
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.853.desc",
+          "desc:8": "nomifactory.quest.normal.db.852.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 310,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.853.title",
+          "name:8": "nomifactory.quest.normal.db.852.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33600,19 +33587,19 @@
         }
       }
     },
-    "854:10": {
+    "853:10": {
       "preRequisites:11": [
         196
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.854.desc",
+          "desc:8": "nomifactory.quest.normal.db.853.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 7,
             "id:8": "gregtech:wire_coil"
           },
-          "name:8": "nomifactory.quest.normal.db.854.title",
+          "name:8": "nomifactory.quest.normal.db.853.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33641,19 +33628,19 @@
         }
       }
     },
-    "855:10": {
+    "854:10": {
       "preRequisites:11": [
         607
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.855.desc",
+          "desc:8": "nomifactory.quest.normal.db.854.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 364,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.855.title",
+          "name:8": "nomifactory.quest.normal.db.854.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33682,19 +33669,19 @@
         }
       }
     },
-    "856:10": {
+    "855:10": {
       "preRequisites:11": [
         855
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.856.desc",
+          "desc:8": "nomifactory.quest.normal.db.855.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 574,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.856.title",
+          "name:8": "nomifactory.quest.normal.db.855.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33723,19 +33710,19 @@
         }
       }
     },
-    "857:10": {
+    "856:10": {
       "preRequisites:11": [
         339
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.857.desc",
+          "desc:8": "nomifactory.quest.normal.db.856.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 3008,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.857.title",
+          "name:8": "nomifactory.quest.normal.db.856.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33779,21 +33766,21 @@
         }
       }
     },
-    "858:10": {
+    "857:10": {
       "preRequisites:11": [
         255,
         857
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.858.desc",
+          "desc:8": "nomifactory.quest.normal.db.857.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2001,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.858.title",
+          "name:8": "nomifactory.quest.normal.db.857.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33832,21 +33819,21 @@
         }
       }
     },
-    "859:10": {
+    "858:10": {
       "preRequisites:11": [
         198,
         858
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.859.desc",
+          "desc:8": "nomifactory.quest.normal.db.858.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2028,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.859.title",
+          "name:8": "nomifactory.quest.normal.db.858.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33876,7 +33863,7 @@
         }
       }
     },
-    "860:10": {
+    "859:10": {
       "preRequisites:11": [
         531,
         826,
@@ -33884,13 +33871,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.860.desc",
+          "desc:8": "nomifactory.quest.normal.db.859.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2009,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.860.title",
+          "name:8": "nomifactory.quest.normal.db.859.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33938,20 +33925,20 @@
         }
       }
     },
-    "861:10": {
+    "860:10": {
       "preRequisites:11": [
         535,
         848
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.861.desc",
+          "desc:8": "nomifactory.quest.normal.db.860.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2025,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.861.title",
+          "name:8": "nomifactory.quest.normal.db.860.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -33985,19 +33972,19 @@
         }
       }
     },
-    "862:10": {
+    "861:10": {
       "preRequisites:11": [
         727
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.862.desc",
+          "desc:8": "nomifactory.quest.normal.db.861.desc",
           "icon:10": {
             "Count:3": 64,
             "Damage:2": 71,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.862.title",
+          "name:8": "nomifactory.quest.normal.db.861.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34026,19 +34013,19 @@
         }
       }
     },
-    "863:10": {
+    "862:10": {
       "preRequisites:11": [
         727
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.863.desc",
+          "desc:8": "nomifactory.quest.normal.db.862.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 64,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.863.title",
+          "name:8": "nomifactory.quest.normal.db.862.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34067,19 +34054,19 @@
         }
       }
     },
-    "864:10": {
+    "863:10": {
       "preRequisites:11": [
         827
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.864.desc",
+          "desc:8": "nomifactory.quest.normal.db.863.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 93,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.864.title",
+          "name:8": "nomifactory.quest.normal.db.863.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34108,19 +34095,19 @@
         }
       }
     },
-    "865:10": {
+    "864:10": {
       "preRequisites:11": [
         827
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.865.desc",
+          "desc:8": "nomifactory.quest.normal.db.864.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 90,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.865.title",
+          "name:8": "nomifactory.quest.normal.db.864.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34149,19 +34136,19 @@
         }
       }
     },
-    "866:10": {
+    "865:10": {
       "preRequisites:11": [
         727
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.866.desc",
+          "desc:8": "nomifactory.quest.normal.db.865.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 19,
             "id:8": "gregtech:meta_dust"
           },
-          "name:8": "nomifactory.quest.normal.db.866.title",
+          "name:8": "nomifactory.quest.normal.db.865.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34190,19 +34177,19 @@
         }
       }
     },
-    "867:10": {
+    "866:10": {
       "preRequisites:11": [
         727
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.867.desc",
+          "desc:8": "nomifactory.quest.normal.db.866.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 15,
             "id:8": "gregtech:meta_dust"
           },
-          "name:8": "nomifactory.quest.normal.db.867.title",
+          "name:8": "nomifactory.quest.normal.db.866.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34231,19 +34218,19 @@
         }
       }
     },
-    "868:10": {
+    "867:10": {
       "preRequisites:11": [
         234
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.868.desc",
+          "desc:8": "nomifactory.quest.normal.db.867.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 8,
             "id:8": "gregtech:meta_dust"
           },
-          "name:8": "nomifactory.quest.normal.db.868.title",
+          "name:8": "nomifactory.quest.normal.db.867.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34272,19 +34259,19 @@
         }
       }
     },
-    "869:10": {
+    "868:10": {
       "preRequisites:11": [
         139
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.869.desc",
+          "desc:8": "nomifactory.quest.normal.db.868.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 20,
             "id:8": "gregtech:meta_dust"
           },
-          "name:8": "nomifactory.quest.normal.db.869.title",
+          "name:8": "nomifactory.quest.normal.db.868.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34313,19 +34300,19 @@
         }
       }
     },
-    "870:10": {
+    "869:10": {
       "preRequisites:11": [
         139
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.870.desc",
+          "desc:8": "nomifactory.quest.normal.db.869.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 66,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.870.title",
+          "name:8": "nomifactory.quest.normal.db.869.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34354,19 +34341,19 @@
         }
       }
     },
-    "871:10": {
+    "870:10": {
       "preRequisites:11": [
         139
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.871.desc",
+          "desc:8": "nomifactory.quest.normal.db.870.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 95,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.871.title",
+          "name:8": "nomifactory.quest.normal.db.870.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34395,19 +34382,19 @@
         }
       }
     },
-    "872:10": {
+    "871:10": {
       "preRequisites:11": [
         325
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.872.desc",
+          "desc:8": "nomifactory.quest.normal.db.871.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 33,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.872.title",
+          "name:8": "nomifactory.quest.normal.db.871.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34436,19 +34423,19 @@
         }
       }
     },
-    "873:10": {
+    "872:10": {
       "preRequisites:11": [
         287
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.873.desc",
+          "desc:8": "nomifactory.quest.normal.db.872.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 58,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.873.title",
+          "name:8": "nomifactory.quest.normal.db.872.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34477,19 +34464,19 @@
         }
       }
     },
-    "874:10": {
+    "873:10": {
       "preRequisites:11": [
         727
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.874.desc",
+          "desc:8": "nomifactory.quest.normal.db.873.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 104,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.874.title",
+          "name:8": "nomifactory.quest.normal.db.873.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34518,19 +34505,19 @@
         }
       }
     },
-    "875:10": {
+    "874:10": {
       "preRequisites:11": [
         6
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.875.desc",
+          "desc:8": "nomifactory.quest.normal.db.874.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 55,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.875.title",
+          "name:8": "nomifactory.quest.normal.db.874.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34559,19 +34546,19 @@
         }
       }
     },
-    "876:10": {
+    "875:10": {
       "preRequisites:11": [
         196
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.876.desc",
+          "desc:8": "nomifactory.quest.normal.db.875.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 128,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.876.title",
+          "name:8": "nomifactory.quest.normal.db.875.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34600,19 +34587,19 @@
         }
       }
     },
-    "877:10": {
+    "876:10": {
       "preRequisites:11": [
         287
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.877.desc",
+          "desc:8": "nomifactory.quest.normal.db.876.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 129,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.877.title",
+          "name:8": "nomifactory.quest.normal.db.876.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34641,19 +34628,19 @@
         }
       }
     },
-    "878:10": {
+    "877:10": {
       "preRequisites:11": [
         847
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.878.desc",
+          "desc:8": "nomifactory.quest.normal.db.877.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 130,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.878.title",
+          "name:8": "nomifactory.quest.normal.db.877.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34682,19 +34669,19 @@
         }
       }
     },
-    "879:10": {
+    "878:10": {
       "preRequisites:11": [
         323
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.879.desc",
+          "desc:8": "nomifactory.quest.normal.db.878.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 124,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.879.title",
+          "name:8": "nomifactory.quest.normal.db.878.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34723,19 +34710,19 @@
         }
       }
     },
-    "880:10": {
+    "879:10": {
       "preRequisites:11": [
         397
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.880.desc",
+          "desc:8": "nomifactory.quest.normal.db.879.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1650,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.880.title",
+          "name:8": "nomifactory.quest.normal.db.879.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34753,19 +34740,19 @@
         }
       }
     },
-    "881:10": {
+    "880:10": {
       "preRequisites:11": [
         153
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.881.desc",
+          "desc:8": "nomifactory.quest.normal.db.880.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1008,
             "id:8": "gregtech:meta_foil"
           },
-          "name:8": "nomifactory.quest.normal.db.881.title",
+          "name:8": "nomifactory.quest.normal.db.880.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34793,39 +34780,39 @@
         }
       }
     },
-    "882:10": {
+    "881:10": {
       "preRequisites:11": [
         325,
         750
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.882.desc",
+          "desc:8": "nomifactory.quest.normal.db.881.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:nether_star"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.882.title",
+          "name:8": "nomifactory.quest.normal.db.881.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 882
     },
-    "883:10": {
+    "882:10": {
       "preRequisites:11": [
         885
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.883.desc",
+          "desc:8": "nomifactory.quest.normal.db.882.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 27,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.883.title",
+          "name:8": "nomifactory.quest.normal.db.882.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34854,19 +34841,19 @@
         }
       }
     },
-    "884:10": {
+    "883:10": {
       "preRequisites:11": [
         288
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.884.desc",
+          "desc:8": "nomifactory.quest.normal.db.883.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 32001,
             "id:8": "gregtech:meta_ingot"
           },
-          "name:8": "nomifactory.quest.normal.db.884.title",
+          "name:8": "nomifactory.quest.normal.db.883.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34895,20 +34882,20 @@
         }
       }
     },
-    "885:10": {
+    "884:10": {
       "preRequisites:11": [
         749
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.885.desc",
+          "desc:8": "nomifactory.quest.normal.db.884.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 27,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.885.title",
+          "name:8": "nomifactory.quest.normal.db.884.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34937,19 +34924,19 @@
         }
       }
     },
-    "886:10": {
+    "885:10": {
       "preRequisites:11": [
         89
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.886.desc",
+          "desc:8": "nomifactory.quest.normal.db.885.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 470,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.886.title",
+          "name:8": "nomifactory.quest.normal.db.885.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -34979,13 +34966,13 @@
         }
       }
     },
-    "887:10": {
+    "886:10": {
       "preRequisites:11": [
         165
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.887.desc",
+          "desc:8": "nomifactory.quest.normal.db.886.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -34995,7 +34982,7 @@
             }
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.887.title",
+          "name:8": "nomifactory.quest.normal.db.886.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35023,7 +35010,7 @@
         }
       }
     },
-    "888:10": {
+    "887:10": {
       "preRequisites:11": [
         161,
         166,
@@ -35031,7 +35018,7 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.888.desc",
+          "desc:8": "nomifactory.quest.normal.db.887.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -35041,7 +35028,7 @@
             }
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.888.title",
+          "name:8": "nomifactory.quest.normal.db.887.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35070,36 +35057,36 @@
         }
       }
     },
-    "889:10": {
+    "888:10": {
       "preRequisites:11": [
         827
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.888.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "minecraft:nether_star"
+          },
+          "name:8": "nomifactory.quest.normal.db.888.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 889
+    },
+    "889:10": {
+      "preRequisites:11": [
+        56
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.889.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "minecraft:nether_star"
-          },
-          "name:8": "nomifactory.quest.normal.db.889.title",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 889
-    },
-    "890:10": {
-      "preRequisites:11": [
-        56
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.890.desc",
-          "icon:10": {
-            "Count:3": 1,
             "Damage:2": 1272,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.890.title",
+          "name:8": "nomifactory.quest.normal.db.889.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35110,19 +35097,19 @@
         }
       }
     },
-    "891:10": {
+    "890:10": {
       "preRequisites:11": [
         94
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.891.desc",
+          "desc:8": "nomifactory.quest.normal.db.890.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 422,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.891.title",
+          "name:8": "nomifactory.quest.normal.db.890.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35150,20 +35137,20 @@
         }
       }
     },
-    "892:10": {
+    "891:10": {
       "preRequisites:11": [
         541
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.892.desc",
+          "desc:8": "nomifactory.quest.normal.db.891.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1026,
             "id:8": "gregtech:machine"
           },
           "lockedprogress:1": 1,
-          "name:8": "nomifactory.quest.normal.db.892.title",
+          "name:8": "nomifactory.quest.normal.db.891.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35202,19 +35189,19 @@
         }
       }
     },
-    "893:10": {
+    "892:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.893.desc",
+          "desc:8": "nomifactory.quest.normal.db.892.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1654,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.893.title",
+          "name:8": "nomifactory.quest.normal.db.892.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35225,20 +35212,20 @@
         }
       }
     },
-    "894:10": {
+    "893:10": {
       "preRequisites:11": [
         147
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.894.desc",
+          "desc:8": "nomifactory.quest.normal.db.893.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 111,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.894.title",
+          "name:8": "nomifactory.quest.normal.db.893.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35267,21 +35254,21 @@
         }
       }
     },
-    "895:10": {
+    "894:10": {
       "preRequisites:11": [
         88,
         894
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.895.desc",
+          "desc:8": "nomifactory.quest.normal.db.894.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1212,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.895.title",
+          "name:8": "nomifactory.quest.normal.db.894.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35315,13 +35302,13 @@
         }
       }
     },
-    "896:10": {
+    "895:10": {
       "preRequisites:11": [
         6
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.896.desc",
+          "desc:8": "nomifactory.quest.normal.db.895.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -35331,7 +35318,7 @@
             }
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.896.title",
+          "name:8": "nomifactory.quest.normal.db.895.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35359,21 +35346,21 @@
         }
       }
     },
-    "897:10": {
+    "896:10": {
       "preRequisites:11": [
         830,
         896
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.897.desc",
+          "desc:8": "nomifactory.quest.normal.db.896.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1213,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.897.title",
+          "name:8": "nomifactory.quest.normal.db.896.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35402,20 +35389,20 @@
         }
       }
     },
-    "898:10": {
+    "897:10": {
       "preRequisites:11": [
         93,
         891
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.898.desc",
+          "desc:8": "nomifactory.quest.normal.db.897.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 202,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.898.title",
+          "name:8": "nomifactory.quest.normal.db.897.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35449,13 +35436,13 @@
         }
       }
     },
-    "899:10": {
+    "898:10": {
       "preRequisites:11": [
         71
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.899.desc",
+          "desc:8": "nomifactory.quest.normal.db.898.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -35464,7 +35451,7 @@
               "FluidName:8": "hydrofluoric_acid"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.899.title",
+          "name:8": "nomifactory.quest.normal.db.898.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35492,13 +35479,13 @@
         }
       }
     },
-    "900:10": {
+    "899:10": {
       "preRequisites:11": [
         888
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.900.desc",
+          "desc:8": "nomifactory.quest.normal.db.899.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -35507,7 +35494,7 @@
               "FluidName:8": "gasoline_premium"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.900.title",
+          "name:8": "nomifactory.quest.normal.db.899.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35535,38 +35522,38 @@
         }
       }
     },
-    "901:10": {
+    "900:10": {
       "preRequisites:11": [
         179,
         888
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.901.desc",
+          "desc:8": "nomifactory.quest.normal.db.900.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:nether_star"
           },
-          "name:8": "nomifactory.quest.normal.db.901.title",
+          "name:8": "nomifactory.quest.normal.db.900.title",
           "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 901
     },
-    "902:10": {
+    "901:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.902.desc",
+          "desc:8": "nomifactory.quest.normal.db.901.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 465,
             "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.902.title",
+          "name:8": "nomifactory.quest.normal.db.901.title",
           "visibility:8": "UNLOCKED"
         }
       },
@@ -35641,20 +35628,20 @@
         }
       }
     },
-    "903:10": {
+    "902:10": {
       "preRequisites:11": [
         59,
         72
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.903.desc",
+          "desc:8": "nomifactory.quest.normal.db.902.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "gregtech:wire_coil"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.903.title",
+          "name:8": "nomifactory.quest.normal.db.902.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35682,14 +35669,14 @@
         }
       }
     },
-    "904:10": {
+    "903:10": {
       "preRequisites:11": [
         339,
         914
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.904.desc",
+          "desc:8": "nomifactory.quest.normal.db.903.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -35699,7 +35686,7 @@
             }
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.904.title",
+          "name:8": "nomifactory.quest.normal.db.903.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35727,13 +35714,13 @@
         }
       }
     },
-    "905:10": {
+    "904:10": {
       "preRequisites:11": [
         904
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.905.desc",
+          "desc:8": "nomifactory.quest.normal.db.904.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -35742,7 +35729,7 @@
               "FluidName:8": "mutagen"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.905.title",
+          "name:8": "nomifactory.quest.normal.db.904.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35771,19 +35758,19 @@
         }
       }
     },
-    "906:10": {
+    "905:10": {
       "preRequisites:11": [
         535
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.906.desc",
+          "desc:8": "nomifactory.quest.normal.db.905.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2028,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.906.title",
+          "name:8": "nomifactory.quest.normal.db.905.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35831,10 +35818,28 @@
         }
       }
     },
-    "907:10": {
+    "906:10": {
       "preRequisites:11": [
         533,
         906
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.906.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "minecraft:nether_star"
+          },
+          "name:8": "nomifactory.quest.normal.db.906.title",
+          "questlogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 907
+    },
+    "907:10": {
+      "preRequisites:11": [
+        196
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -35843,32 +35848,14 @@
             "Count:3": 1,
             "id:8": "minecraft:nether_star"
           },
-          "name:8": "nomifactory.quest.normal.db.907.title",
-          "questlogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 907
-    },
-    "908:10": {
-      "preRequisites:11": [
-        196
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.908.desc",
-          "icon:10": {
-            "Count:3": 1,
-            "id:8": "minecraft:nether_star"
-          },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.908.title",
+          "name:8": "nomifactory.quest.normal.db.907.title",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 908
     },
-    "909:10": {
+    "908:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -35877,13 +35864,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.909.desc",
+          "desc:8": "nomifactory.quest.normal.db.908.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1000,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.909.title",
+          "name:8": "nomifactory.quest.normal.db.908.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35922,21 +35909,21 @@
         }
       }
     },
-    "910:10": {
+    "909:10": {
       "preRequisites:11": [
         527,
         827
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.910.desc",
+          "desc:8": "nomifactory.quest.normal.db.909.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2062,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.910.title",
+          "name:8": "nomifactory.quest.normal.db.909.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35965,19 +35952,19 @@
         }
       }
     },
-    "911:10": {
+    "910:10": {
       "preRequisites:11": [
         38
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.911.desc",
+          "desc:8": "nomifactory.quest.normal.db.910.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1316,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.911.title",
+          "name:8": "nomifactory.quest.normal.db.910.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -35999,6 +35986,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1316,
+              "OreDict:8": "questbookLvBatteryBuffer",
               "id:8": "gregtech:machine"
             }
           },
@@ -36006,18 +35994,18 @@
         }
       }
     },
-    "912:10": {
+    "911:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.912.desc",
+          "desc:8": "nomifactory.quest.normal.db.911.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "contenttweaker:tierfourandhalfship"
           },
-          "name:8": "nomifactory.quest.normal.db.912.title",
+          "name:8": "nomifactory.quest.normal.db.911.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36028,18 +36016,18 @@
         }
       }
     },
-    "913:10": {
+    "912:10": {
       "preRequisites:11": [
         401
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.913.desc",
+          "desc:8": "nomifactory.quest.normal.db.912.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:name_tag"
           },
-          "name:8": "nomifactory.quest.normal.db.913.title",
+          "name:8": "nomifactory.quest.normal.db.912.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36050,7 +36038,7 @@
         }
       }
     },
-    "914:10": {
+    "913:10": {
       "preRequisites:11": [
         255,
         286,
@@ -36060,14 +36048,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.914.desc",
+          "desc:8": "nomifactory.quest.normal.db.913.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
             "id:8": "gregtech:cleanroom_casing"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.914.title",
+          "name:8": "nomifactory.quest.normal.db.913.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36096,9 +36084,27 @@
         }
       }
     },
-    "915:10": {
+    "914:10": {
       "preRequisites:11": [
         828
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.914.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "minecraft:nether_star"
+          },
+          "issilent:1": 1,
+          "name:8": "nomifactory.quest.normal.db.914.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 915
+    },
+    "915:10": {
+      "preRequisites:11": [
+        253
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -36112,11 +36118,11 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 915
+      "questID:3": 916
     },
     "916:10": {
       "preRequisites:11": [
-        253
+        524
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -36130,27 +36136,9 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 916
-    },
-    "917:10": {
-      "preRequisites:11": [
-        524
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.917.desc",
-          "icon:10": {
-            "Count:3": 1,
-            "id:8": "minecraft:nether_star"
-          },
-          "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.917.title",
-          "visibility:8": "ALWAYS"
-        }
-      },
       "questID:3": 917
     },
-    "918:10": {
+    "917:10": {
       "preRequisites:11": [
         729,
         494,
@@ -36158,14 +36146,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.918.desc",
+          "desc:8": "nomifactory.quest.normal.db.917.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 522,
             "id:8": "appliedenergistics2:part"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.918.title",
+          "name:8": "nomifactory.quest.normal.db.917.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36194,20 +36182,20 @@
         }
       }
     },
-    "919:10": {
+    "918:10": {
       "preRequisites:11": [
         108
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.919.desc",
+          "desc:8": "nomifactory.quest.normal.db.918.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 521,
             "id:8": "appliedenergistics2:part"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.919.title",
+          "name:8": "nomifactory.quest.normal.db.918.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36236,25 +36224,25 @@
         }
       }
     },
-    "920:10": {
+    "919:10": {
       "preRequisites:11": [
         279
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.920.desc",
+          "desc:8": "nomifactory.quest.normal.db.919.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:nether_star"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.920.title",
+          "name:8": "nomifactory.quest.normal.db.919.title",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 920
     },
-    "921:10": {
+    "920:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -36263,12 +36251,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.921.desc",
+          "desc:8": "nomifactory.quest.normal.db.920.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "betterquesting:placeholder"
+            "Damage:2": 630,
+            "id:8": "gregtech:meta_item_1"
           },
-          "name:8": "nomifactory.quest.normal.db.921.title",
+          "name:8": "nomifactory.quest.normal.db.920.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36279,19 +36268,19 @@
         }
       }
     },
-    "922:10": {
+    "921:10": {
       "preRequisites:11": [
         885
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.922.desc",
+          "desc:8": "nomifactory.quest.normal.db.921.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 993,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.922.title",
+          "name:8": "nomifactory.quest.normal.db.921.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36320,7 +36309,7 @@
         }
       }
     },
-    "923:10": {
+    "922:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -36329,13 +36318,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.923.desc",
+          "desc:8": "nomifactory.quest.normal.db.922.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 216,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.923.title",
+          "name:8": "nomifactory.quest.normal.db.922.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -36346,20 +36335,20 @@
         }
       }
     },
-    "924:10": {
+    "923:10": {
       "preRequisites:11": [
         971,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.924.desc",
+          "desc:8": "nomifactory.quest.normal.db.923.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "deepmoblearning:polymer_clay"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.924.title",
+          "name:8": "nomifactory.quest.normal.db.923.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36383,7 +36372,7 @@
         }
       }
     },
-    "925:10": {
+    "924:10": {
       "preRequisites:11": [
         930,
         927,
@@ -36391,13 +36380,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.925.desc",
+          "desc:8": "nomifactory.quest.normal.db.924.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:clay"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.925.title",
+          "name:8": "nomifactory.quest.normal.db.924.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36421,7 +36410,7 @@
         }
       }
     },
-    "926:10": {
+    "925:10": {
       "preRequisites:11": [
         933,
         934,
@@ -36429,7 +36418,7 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.926.desc",
+          "desc:8": "nomifactory.quest.normal.db.925.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 895,
@@ -36437,7 +36426,7 @@
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.926.title",
+          "name:8": "nomifactory.quest.normal.db.925.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36461,20 +36450,20 @@
         }
       }
     },
-    "927:10": {
+    "926:10": {
       "preRequisites:11": [
         928,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.927.desc",
+          "desc:8": "nomifactory.quest.normal.db.926.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "contenttweaker:block_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.927.title",
+          "name:8": "nomifactory.quest.normal.db.926.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36498,20 +36487,20 @@
         }
       }
     },
-    "928:10": {
+    "927:10": {
       "preRequisites:11": [
         929,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.928.desc",
+          "desc:8": "nomifactory.quest.normal.db.927.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:sand"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.928.title",
+          "name:8": "nomifactory.quest.normal.db.927.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36535,20 +36524,20 @@
         }
       }
     },
-    "929:10": {
+    "928:10": {
       "preRequisites:11": [
         931,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.929.desc",
+          "desc:8": "nomifactory.quest.normal.db.928.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:gravel"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.929.title",
+          "name:8": "nomifactory.quest.normal.db.928.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36572,16 +36561,16 @@
         }
       }
     },
-    "930:10": {
+    "929:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.930.desc",
+          "desc:8": "nomifactory.quest.normal.db.929.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:water_bucket"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.930.title",
+          "name:8": "nomifactory.quest.normal.db.929.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36604,16 +36593,16 @@
         }
       }
     },
-    "931:10": {
+    "930:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.931.desc",
+          "desc:8": "nomifactory.quest.normal.db.930.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:cobblestone"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.931.title",
+          "name:8": "nomifactory.quest.normal.db.930.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36636,20 +36625,20 @@
         }
       }
     },
-    "932:10": {
+    "931:10": {
       "preRequisites:11": [
         928,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.932.desc",
+          "desc:8": "nomifactory.quest.normal.db.931.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:glass"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.932.title",
+          "name:8": "nomifactory.quest.normal.db.931.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36673,20 +36662,20 @@
         }
       }
     },
-    "933:10": {
+    "932:10": {
       "preRequisites:11": [
         932,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.933.desc",
+          "desc:8": "nomifactory.quest.normal.db.932.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:quartz"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.933.title",
+          "name:8": "nomifactory.quest.normal.db.932.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36710,14 +36699,14 @@
         }
       }
     },
-    "934:10": {
+    "933:10": {
       "preRequisites:11": [
         935,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.934.desc",
+          "desc:8": "nomifactory.quest.normal.db.933.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -36727,7 +36716,7 @@
             }
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.934.title",
+          "name:8": "nomifactory.quest.normal.db.933.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36751,16 +36740,16 @@
         }
       }
     },
-    "935:10": {
+    "934:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.935.desc",
+          "desc:8": "nomifactory.quest.normal.db.934.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:ender_pearl"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.935.title",
+          "name:8": "nomifactory.quest.normal.db.934.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36783,20 +36772,20 @@
         }
       }
     },
-    "936:10": {
+    "935:10": {
       "preRequisites:11": [
         926,
         728
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.936.desc",
+          "desc:8": "nomifactory.quest.normal.db.935.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "contenttweaker:pulsatingdust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.936.title",
+          "name:8": "nomifactory.quest.normal.db.935.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -36820,17 +36809,17 @@
         }
       }
     },
-    "937:10": {
+    "936:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.937.desc",
+          "desc:8": "nomifactory.quest.normal.db.936.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:cobblestone"
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.937.title",
+          "name:8": "nomifactory.quest.normal.db.936.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36852,19 +36841,19 @@
         }
       }
     },
-    "938:10": {
+    "937:10": {
       "preRequisites:11": [
         937
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.938.desc",
+          "desc:8": "nomifactory.quest.normal.db.937.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:gravel"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.938.title",
+          "name:8": "nomifactory.quest.normal.db.937.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36886,19 +36875,19 @@
         }
       }
     },
-    "939:10": {
+    "938:10": {
       "preRequisites:11": [
         938
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.939.desc",
+          "desc:8": "nomifactory.quest.normal.db.938.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:sand"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.939.title",
+          "name:8": "nomifactory.quest.normal.db.938.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36920,19 +36909,19 @@
         }
       }
     },
-    "940:10": {
+    "939:10": {
       "preRequisites:11": [
         939
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.940.desc",
+          "desc:8": "nomifactory.quest.normal.db.939.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "contenttweaker:block_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.940.title",
+          "name:8": "nomifactory.quest.normal.db.939.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36954,20 +36943,20 @@
         }
       }
     },
-    "941:10": {
+    "940:10": {
       "preRequisites:11": [
         940,
         942
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.941.desc",
+          "desc:8": "nomifactory.quest.normal.db.940.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:clay"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.941.title",
+          "name:8": "nomifactory.quest.normal.db.940.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -36989,17 +36978,17 @@
         }
       }
     },
-    "942:10": {
+    "941:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.942.desc",
+          "desc:8": "nomifactory.quest.normal.db.941.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:water_bucket"
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.942.title",
+          "name:8": "nomifactory.quest.normal.db.941.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37021,17 +37010,17 @@
         }
       }
     },
-    "943:10": {
+    "942:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.943.desc",
+          "desc:8": "nomifactory.quest.normal.db.942.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:lava_bucket"
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.943.title",
+          "name:8": "nomifactory.quest.normal.db.942.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37053,20 +37042,20 @@
         }
       }
     },
-    "944:10": {
+    "943:10": {
       "preRequisites:11": [
         940,
         943
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.944.desc",
+          "desc:8": "nomifactory.quest.normal.db.943.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:netherrack"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.944.title",
+          "name:8": "nomifactory.quest.normal.db.943.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37088,20 +37077,20 @@
         }
       }
     },
-    "945:10": {
+    "944:10": {
       "preRequisites:11": [
         944
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.945.desc",
+          "desc:8": "nomifactory.quest.normal.db.944.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1604,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.945.title",
+          "name:8": "nomifactory.quest.normal.db.944.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37124,19 +37113,19 @@
         }
       }
     },
-    "946:10": {
+    "945:10": {
       "preRequisites:11": [
         941
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.946.desc",
+          "desc:8": "nomifactory.quest.normal.db.945.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:clay_ball"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.946.title",
+          "name:8": "nomifactory.quest.normal.db.945.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37158,20 +37147,20 @@
         }
       }
     },
-    "947:10": {
+    "946:10": {
       "preRequisites:11": [
         941
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.947.desc",
+          "desc:8": "nomifactory.quest.normal.db.946.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2063,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.947.title",
+          "name:8": "nomifactory.quest.normal.db.946.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37194,19 +37183,19 @@
         }
       }
     },
-    "948:10": {
+    "947:10": {
       "preRequisites:11": [
         947
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.948.desc",
+          "desc:8": "nomifactory.quest.normal.db.947.desc",
           "icon:10": {
             "Damage:2": 101,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.948.title",
+          "name:8": "nomifactory.quest.normal.db.947.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37244,19 +37233,19 @@
         }
       }
     },
-    "949:10": {
+    "948:10": {
       "preRequisites:11": [
         937
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.949.desc",
+          "desc:8": "nomifactory.quest.normal.db.948.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:stone"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.949.title",
+          "name:8": "nomifactory.quest.normal.db.948.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37278,19 +37267,19 @@
         }
       }
     },
-    "950:10": {
+    "949:10": {
       "preRequisites:11": [
         939
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.950.desc",
+          "desc:8": "nomifactory.quest.normal.db.949.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:glass"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.950.title",
+          "name:8": "nomifactory.quest.normal.db.949.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37312,19 +37301,19 @@
         }
       }
     },
-    "951:10": {
+    "950:10": {
       "preRequisites:11": [
         950
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.951.desc",
+          "desc:8": "nomifactory.quest.normal.db.950.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:quartz"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.951.title",
+          "name:8": "nomifactory.quest.normal.db.950.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37346,7 +37335,7 @@
         }
       }
     },
-    "952:10": {
+    "951:10": {
       "preRequisites:11": [
         757,
         174,
@@ -37354,7 +37343,7 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.952.desc",
+          "desc:8": "nomifactory.quest.normal.db.951.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -37363,7 +37352,7 @@
               "FluidName:8": "liquid_ender_air"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.952.title",
+          "name:8": "nomifactory.quest.normal.db.951.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37391,7 +37380,7 @@
         }
       }
     },
-    "953:10": {
+    "952:10": {
       "preRequisites:11": [
         780,
         150,
@@ -37399,7 +37388,7 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.953.desc",
+          "desc:8": "nomifactory.quest.normal.db.952.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -37408,7 +37397,7 @@
               "FluidName:8": "liquid_nether_air"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.953.title",
+          "name:8": "nomifactory.quest.normal.db.952.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37436,10 +37425,28 @@
         }
       }
     },
-    "954:10": {
+    "953:10": {
       "preRequisites:11": [
         263,
         267
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.953.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "minecraft:nether_star"
+          },
+          "issilent:1": 1,
+          "name:8": "nomifactory.quest.normal.db.953.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 954
+    },
+    "954:10": {
+      "preRequisites:11": [
+        539
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -37453,11 +37460,11 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 954
+      "questID:3": 955
     },
     "955:10": {
       "preRequisites:11": [
-        539
+        328
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -37471,40 +37478,22 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 955
+      "questID:3": 956
     },
     "956:10": {
       "preRequisites:11": [
-        328
+        950
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.956.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "minecraft:nether_star"
-          },
-          "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.956.title",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 956
-    },
-    "957:10": {
-      "preRequisites:11": [
-        950
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.957.desc",
-          "icon:10": {
-            "Count:3": 1,
             "Damage:2": 2000,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.957.title",
+          "name:8": "nomifactory.quest.normal.db.956.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37527,20 +37516,20 @@
         }
       }
     },
-    "958:10": {
+    "957:10": {
       "preRequisites:11": [
         957
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.958.desc",
+          "desc:8": "nomifactory.quest.normal.db.957.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 356,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.958.title",
+          "name:8": "nomifactory.quest.normal.db.957.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37563,20 +37552,20 @@
         }
       }
     },
-    "959:10": {
+    "958:10": {
       "preRequisites:11": [
         939
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.959.desc",
+          "desc:8": "nomifactory.quest.normal.db.958.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2023,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.959.title",
+          "name:8": "nomifactory.quest.normal.db.958.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37599,20 +37588,20 @@
         }
       }
     },
-    "960:10": {
+    "959:10": {
       "preRequisites:11": [
         959
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.960.desc",
+          "desc:8": "nomifactory.quest.normal.db.959.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 340,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.960.title",
+          "name:8": "nomifactory.quest.normal.db.959.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37640,20 +37629,20 @@
         }
       }
     },
-    "961:10": {
+    "960:10": {
       "preRequisites:11": [
         958
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.961.desc",
+          "desc:8": "nomifactory.quest.normal.db.960.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 99,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.961.title",
+          "name:8": "nomifactory.quest.normal.db.960.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37675,13 +37664,13 @@
         }
       }
     },
-    "962:10": {
+    "961:10": {
       "preRequisites:11": [
         260
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.962.desc",
+          "desc:8": "nomifactory.quest.normal.db.961.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -37690,7 +37679,7 @@
               "FluidName:8": "hydrogen"
             }
           },
-          "name:8": "nomifactory.quest.normal.db.962.title",
+          "name:8": "nomifactory.quest.normal.db.961.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37722,19 +37711,19 @@
         }
       }
     },
-    "963:10": {
+    "962:10": {
       "preRequisites:11": [
         943
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.963.desc",
+          "desc:8": "nomifactory.quest.normal.db.962.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:obsidian"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.963.title",
+          "name:8": "nomifactory.quest.normal.db.962.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37756,20 +37745,20 @@
         }
       }
     },
-    "964:10": {
+    "963:10": {
       "preRequisites:11": [
         963
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.964.desc",
+          "desc:8": "nomifactory.quest.normal.db.963.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 297,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.964.title",
+          "name:8": "nomifactory.quest.normal.db.963.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37792,19 +37781,19 @@
         }
       }
     },
-    "965:10": {
+    "964:10": {
       "preRequisites:11": [
         939
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.965.desc",
+          "desc:8": "nomifactory.quest.normal.db.964.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:sandstone"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.965.title",
+          "name:8": "nomifactory.quest.normal.db.964.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37826,20 +37815,20 @@
         }
       }
     },
-    "966:10": {
+    "965:10": {
       "preRequisites:11": [
         965
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.966.desc",
+          "desc:8": "nomifactory.quest.normal.db.965.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 313,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.966.title",
+          "name:8": "nomifactory.quest.normal.db.965.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37862,19 +37851,19 @@
         }
       }
     },
-    "967:10": {
+    "966:10": {
       "preRequisites:11": [
         104
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.967.desc",
+          "desc:8": "nomifactory.quest.normal.db.966.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "appliedenergistics2:crafting_monitor"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.967.title",
+          "name:8": "nomifactory.quest.normal.db.966.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -37885,19 +37874,19 @@
         }
       }
     },
-    "968:10": {
+    "967:10": {
       "preRequisites:11": [
         938
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.968.desc",
+          "desc:8": "nomifactory.quest.normal.db.967.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:flint"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.968.title",
+          "name:8": "nomifactory.quest.normal.db.967.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37919,20 +37908,20 @@
         }
       }
     },
-    "969:10": {
+    "968:10": {
       "preRequisites:11": [
         937
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.969.desc",
+          "desc:8": "nomifactory.quest.normal.db.968.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1599,
             "id:8": "gregtech:meta_dust"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.969.title",
+          "name:8": "nomifactory.quest.normal.db.968.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37955,14 +37944,14 @@
         }
       }
     },
-    "970:10": {
+    "969:10": {
       "preRequisites:11": [
         947,
         969
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.970.desc",
+          "desc:8": "nomifactory.quest.normal.db.969.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -37973,7 +37962,7 @@
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.970.title",
+          "name:8": "nomifactory.quest.normal.db.969.title",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
@@ -37995,33 +37984,33 @@
         }
       }
     },
-    "971:10": {
+    "970:10": {
       "preRequisites:11": [
         936,
         925
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.971.desc",
+          "desc:8": "nomifactory.quest.normal.db.970.desc",
           "icon:10": {
             "id:8": "minecraft:air"
           },
           "ignoresview:1": 1,
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.971.title",
+          "name:8": "nomifactory.quest.normal.db.970.title",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 971
     },
-    "972:10": {
+    "971:10": {
       "preRequisites:11": [
         95
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.972.desc",
+          "desc:8": "nomifactory.quest.normal.db.971.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38032,7 +38021,7 @@
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.972.title",
+          "name:8": "nomifactory.quest.normal.db.971.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38055,7 +38044,7 @@
         }
       }
     },
-    "973:10": {
+    "972:10": {
       "preRequisites:11": [
         227,
         810,
@@ -38064,21 +38053,36 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.973.desc",
+          "desc:8": "nomifactory.quest.normal.db.972.desc",
           "icon:10": {
             "id:8": "minecraft:air"
+          },
+          "issilent:1": 1,
+          "name:8": "nomifactory.quest.normal.db.972.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 973
+    },
+    "973:10": {
+      "preRequisites:11": [
+        89
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.973.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "minecraft:nether_star"
           },
           "issilent:1": 1,
           "name:8": "nomifactory.quest.normal.db.973.title",
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 973
+      "questID:3": 974
     },
     "974:10": {
-      "preRequisites:11": [
-        89
-      ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.974.desc",
@@ -38088,10 +38092,12 @@
           },
           "issilent:1": 1,
           "name:8": "nomifactory.quest.normal.db.974.title",
+          "questlogic:8": "OR",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 974
+      "questID:3": 975
     },
     "975:10": {
       "properties:10": {
@@ -38108,7 +38114,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 975
+      "questID:3": 976
     },
     "976:10": {
       "properties:10": {
@@ -38125,7 +38131,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 976
+      "questID:3": 977
     },
     "977:10": {
       "properties:10": {
@@ -38142,7 +38148,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 977
+      "questID:3": 978
     },
     "978:10": {
       "properties:10": {
@@ -38159,7 +38165,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 978
+      "questID:3": 979
     },
     "979:10": {
       "properties:10": {
@@ -38176,7 +38182,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 979
+      "questID:3": 980
     },
     "980:10": {
       "properties:10": {
@@ -38193,7 +38199,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 980
+      "questID:3": 981
     },
     "981:10": {
       "properties:10": {
@@ -38210,7 +38216,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 981
+      "questID:3": 982
     },
     "982:10": {
       "properties:10": {
@@ -38227,7 +38233,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 982
+      "questID:3": 983
     },
     "983:10": {
       "properties:10": {
@@ -38244,7 +38250,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 983
+      "questID:3": 984
     },
     "984:10": {
       "properties:10": {
@@ -38261,7 +38267,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 984
+      "questID:3": 985
     },
     "985:10": {
       "properties:10": {
@@ -38278,7 +38284,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 985
+      "questID:3": 986
     },
     "986:10": {
       "properties:10": {
@@ -38295,7 +38301,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 986
+      "questID:3": 987
     },
     "987:10": {
       "properties:10": {
@@ -38312,7 +38318,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 987
+      "questID:3": 988
     },
     "988:10": {
       "properties:10": {
@@ -38329,7 +38335,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 988
+      "questID:3": 989
     },
     "989:10": {
       "properties:10": {
@@ -38346,29 +38352,12 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 989
+      "questID:3": 990
     },
     "990:10": {
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.990.desc",
-          "icon:10": {
-            "Count:3": 1,
-            "id:8": "minecraft:nether_star"
-          },
-          "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.990.title",
-          "questlogic:8": "OR",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 990
-    },
-    "991:10": {
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.991.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38379,13 +38368,30 @@
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.991.title",
+          "name:8": "nomifactory.quest.normal.db.990.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 991
+    },
+    "991:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.991.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "minecraft:nether_star"
+          },
+          "issilent:1": 1,
+          "name:8": "nomifactory.quest.normal.db.991.title",
+          "questlogic:8": "OR",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 992
     },
     "992:10": {
       "properties:10": {
@@ -38402,7 +38408,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 992
+      "questID:3": 993
     },
     "993:10": {
       "properties:10": {
@@ -38410,8 +38416,10 @@
           "desc:8": "nomifactory.quest.normal.db.993.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "minecraft:nether_star"
+            "Damage:2": 1012,
+            "id:8": "gregtech:meta_plate"
           },
+          "ismain:1": 1,
           "issilent:1": 1,
           "name:8": "nomifactory.quest.normal.db.993.title",
           "questlogic:8": "OR",
@@ -38419,31 +38427,12 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 993
+      "questID:3": 994
     },
     "994:10": {
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.994.desc",
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1012,
-            "id:8": "gregtech:meta_plate"
-          },
-          "ismain:1": 1,
-          "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.994.title",
-          "questlogic:8": "OR",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 994
-    },
-    "995:10": {
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.995.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38454,7 +38443,7 @@
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.995.title",
+          "name:8": "nomifactory.quest.normal.db.994.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38462,16 +38451,16 @@
       },
       "questID:3": 995
     },
-    "996:10": {
+    "995:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.996.desc",
+          "desc:8": "nomifactory.quest.normal.db.995.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:nether_star"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.996.title",
+          "name:8": "nomifactory.quest.normal.db.995.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38479,10 +38468,10 @@
       },
       "questID:3": 996
     },
-    "997:10": {
+    "996:10": {
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.997.desc",
+          "desc:8": "nomifactory.quest.normal.db.996.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1007,
@@ -38490,7 +38479,7 @@
           },
           "ismain:1": 1,
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.997.title",
+          "name:8": "nomifactory.quest.normal.db.996.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38498,14 +38487,14 @@
       },
       "questID:3": 997
     },
-    "998:10": {
+    "997:10": {
       "preRequisites:11": [
         1002,
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.998.desc",
+          "desc:8": "nomifactory.quest.normal.db.997.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38515,7 +38504,7 @@
             }
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.998.title",
+          "name:8": "nomifactory.quest.normal.db.997.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38538,21 +38527,21 @@
         }
       }
     },
-    "999:10": {
+    "998:10": {
       "preRequisites:11": [
         998,
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.999.desc",
+          "desc:8": "nomifactory.quest.normal.db.998.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1016,
             "id:8": "gregtech:meta_plate"
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.999.title",
+          "name:8": "nomifactory.quest.normal.db.998.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38575,21 +38564,21 @@
         }
       }
     },
-    "1000:10": {
+    "999:10": {
       "preRequisites:11": [
         408,
         106
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1000.desc",
+          "desc:8": "nomifactory.quest.normal.db.999.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 341,
             "id:8": "appliedenergistics2:part"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1000.title",
+          "name:8": "nomifactory.quest.normal.db.999.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -38618,19 +38607,19 @@
         }
       }
     },
-    "1001:10": {
+    "1000:10": {
       "preRequisites:11": [
         109
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1001.desc",
+          "desc:8": "nomifactory.quest.normal.db.1000.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 58,
             "id:8": "appliedenergistics2:material"
           },
-          "name:8": "nomifactory.quest.normal.db.1001.title",
+          "name:8": "nomifactory.quest.normal.db.1000.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -38659,14 +38648,14 @@
         }
       }
     },
-    "1002:10": {
+    "1001:10": {
       "preRequisites:11": [
         1010,
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1002.desc",
+          "desc:8": "nomifactory.quest.normal.db.1001.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38676,7 +38665,7 @@
             }
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1002.title",
+          "name:8": "nomifactory.quest.normal.db.1001.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38699,14 +38688,14 @@
         }
       }
     },
-    "1003:10": {
+    "1002:10": {
       "preRequisites:11": [
         1012,
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1003.desc",
+          "desc:8": "nomifactory.quest.normal.db.1002.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38716,7 +38705,7 @@
             }
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1003.title",
+          "name:8": "nomifactory.quest.normal.db.1002.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38739,14 +38728,14 @@
         }
       }
     },
-    "1004:10": {
+    "1003:10": {
       "preRequisites:11": [
         1011,
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1004.desc",
+          "desc:8": "nomifactory.quest.normal.db.1003.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38756,13 +38745,49 @@
             }
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1004.title",
+          "name:8": "nomifactory.quest.normal.db.1003.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1004,
+      "tasks:9": {
+        "0:10": {
+          "taskID:8": "bq_standard:checkbox"
+        },
+        "1:10": {
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "polytetrafluoroethylene"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "1004:10": {
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.1004.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "fluorine"
+            }
+          },
+          "issilent:1": 1,
+          "name:8": "nomifactory.quest.normal.db.1004.title",
+          "questlogic:8": "OR",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1005,
       "tasks:9": {
         "0:10": {
           "taskID:8": "bq_standard:checkbox"
@@ -38788,7 +38813,7 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "fluorine"
+              "FluidName:8": "hydrogen"
             }
           },
           "issilent:1": 1,
@@ -38798,7 +38823,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1005,
+      "questID:3": 1006,
       "tasks:9": {
         "0:10": {
           "taskID:8": "bq_standard:checkbox"
@@ -38824,7 +38849,7 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "hydrogen"
+              "FluidName:8": "chlorine"
             }
           },
           "issilent:1": 1,
@@ -38834,7 +38859,7 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1006,
+      "questID:3": 1007,
       "tasks:9": {
         "0:10": {
           "taskID:8": "bq_standard:checkbox"
@@ -38860,47 +38885,11 @@
             "id:8": "forge:bucketfilled",
             "tag:10": {
               "Amount:3": 1000,
-              "FluidName:8": "chlorine"
-            }
-          },
-          "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1007.title",
-          "questlogic:8": "OR",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 1007,
-      "tasks:9": {
-        "0:10": {
-          "taskID:8": "bq_standard:checkbox"
-        },
-        "1:10": {
-          "index:3": 1,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "polytetrafluoroethylene"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
-        }
-      }
-    },
-    "1008:10": {
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1008.desc",
-          "icon:10": {
-            "Count:3": 1,
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
               "FluidName:8": "methane"
             }
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1008.title",
+          "name:8": "nomifactory.quest.normal.db.1007.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38923,7 +38912,7 @@
         }
       }
     },
-    "1009:10": {
+    "1008:10": {
       "preRequisites:11": [
         1002,
         1003,
@@ -38931,7 +38920,7 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1009.desc",
+          "desc:8": "nomifactory.quest.normal.db.1008.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "forge:bucketfilled",
@@ -38941,7 +38930,7 @@
             }
           },
           "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1009.title",
+          "name:8": "nomifactory.quest.normal.db.1008.title",
           "questlogic:8": "OR",
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
@@ -38964,10 +38953,30 @@
         }
       }
     },
-    "1010:10": {
+    "1009:10": {
       "preRequisites:11": [
         1003,
         1004
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.1009.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "minecraft:nether_star"
+          },
+          "issilent:1": 1,
+          "name:8": "nomifactory.quest.normal.db.1009.title",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1010
+    },
+    "1010:10": {
+      "preRequisites:11": [
+        1006,
+        1005
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -38982,12 +38991,12 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1010
+      "questID:3": 1011
     },
     "1011:10": {
       "preRequisites:11": [
-        1006,
-        1005
+        1007,
+        1008
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -39002,41 +39011,21 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 1011
+      "questID:3": 1012
     },
     "1012:10": {
       "preRequisites:11": [
-        1007,
-        1008
+        93
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.normal.db.1012.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "minecraft:nether_star"
-          },
-          "issilent:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1012.title",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 1012
-    },
-    "1013:10": {
-      "preRequisites:11": [
-        93
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1013.desc",
-          "icon:10": {
-            "Count:3": 1,
             "Damage:2": 667,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.1013.title",
+          "name:8": "nomifactory.quest.normal.db.1012.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39058,6 +39047,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 667,
+              "OreDict:8": "questbookRockBreaker",
               "id:8": "gregtech:machine"
             }
           },
@@ -39065,18 +39055,18 @@
         }
       }
     },
-    "1014:10": {
+    "1013:10": {
       "preRequisites:11": [
         339
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1014.desc",
+          "desc:8": "nomifactory.quest.normal.db.1013.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "gregtech:stone_smooth"
           },
-          "name:8": "nomifactory.quest.normal.db.1014.title",
+          "name:8": "nomifactory.quest.normal.db.1013.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39105,7 +39095,7 @@
         }
       }
     },
-    "1015:10": {
+    "1014:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -39114,7 +39104,7 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1015.desc",
+          "desc:8": "nomifactory.quest.normal.db.1014.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 467,
@@ -39123,7 +39113,7 @@
               "Charge:4": 1600000
             }
           },
-          "name:8": "nomifactory.quest.normal.db.1015.title",
+          "name:8": "nomifactory.quest.normal.db.1014.title",
           "repeattime:3": 72000,
           "visibility:8": "ALWAYS"
         }
@@ -39162,7 +39152,7 @@
         }
       }
     },
-    "1016:10": {
+    "1015:10": {
       "preRequisites:11": [
         62,
         230,
@@ -39172,13 +39162,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1016.desc",
+          "desc:8": "nomifactory.quest.normal.db.1015.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "appliedenergistics2:wireless_terminal"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1016.title",
+          "name:8": "nomifactory.quest.normal.db.1015.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39216,7 +39206,7 @@
         }
       }
     },
-    "1017:10": {
+    "1016:10": {
       "preRequisites:11": [
         1016,
         391,
@@ -39224,13 +39214,13 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1017.desc",
+          "desc:8": "nomifactory.quest.normal.db.1016.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 59,
             "id:8": "appliedenergistics2:material"
           },
-          "name:8": "nomifactory.quest.normal.db.1017.title",
+          "name:8": "nomifactory.quest.normal.db.1016.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39271,19 +39261,19 @@
         }
       }
     },
-    "1018:10": {
+    "1017:10": {
       "preRequisites:11": [
         282
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1018.desc",
+          "desc:8": "nomifactory.quest.normal.db.1017.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
             "id:8": "chisel:futura"
           },
-          "name:8": "nomifactory.quest.normal.db.1018.title",
+          "name:8": "nomifactory.quest.normal.db.1017.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39311,19 +39301,19 @@
         }
       }
     },
-    "1019:10": {
+    "1018:10": {
       "preRequisites:11": [
         295,
         107
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1019.desc",
+          "desc:8": "nomifactory.quest.normal.db.1018.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "actuallyadditions:block_laser_relay_item"
           },
-          "name:8": "nomifactory.quest.normal.db.1019.title",
+          "name:8": "nomifactory.quest.normal.db.1018.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39367,18 +39357,18 @@
         }
       }
     },
-    "1020:10": {
+    "1019:10": {
       "preRequisites:11": [
         4
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1020.desc",
+          "desc:8": "nomifactory.quest.normal.db.1019.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "chisel:auto_chisel"
           },
-          "name:8": "nomifactory.quest.normal.db.1020.title",
+          "name:8": "nomifactory.quest.normal.db.1019.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39412,18 +39402,18 @@
         }
       }
     },
-    "1021:10": {
+    "1020:10": {
       "preRequisites:11": [
         4
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1021.desc",
+          "desc:8": "nomifactory.quest.normal.db.1020.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "toolbelt:belt"
           },
-          "name:8": "nomifactory.quest.normal.db.1021.title",
+          "name:8": "nomifactory.quest.normal.db.1020.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39451,14 +39441,14 @@
         }
       }
     },
-    "1022:10": {
+    "1021:10": {
       "preRequisites:11": [
         100,
         98
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1022.desc",
+          "desc:8": "nomifactory.quest.normal.db.1021.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "betterp2p:advanced_memory_card",
@@ -39466,7 +39456,7 @@
               "selectedIndex:3": -1
             }
           },
-          "name:8": "nomifactory.quest.normal.db.1022.title",
+          "name:8": "nomifactory.quest.normal.db.1021.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39500,7 +39490,7 @@
         }
       }
     },
-    "1023:10": {
+    "1022:10": {
       "preRequisiteTypes:7": [
         2,
         0
@@ -39511,12 +39501,12 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1023.desc",
+          "desc:8": "nomifactory.quest.normal.db.1022.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:rabbit_hide"
           },
-          "name:8": "nomifactory.quest.normal.db.1023.title",
+          "name:8": "nomifactory.quest.normal.db.1022.title",
           "visibility:8": "HIDDEN"
         }
       },
@@ -39698,7 +39688,7 @@
         }
       }
     },
-    "1024:10": {
+    "1023:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -39707,12 +39697,12 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1024.desc",
+          "desc:8": "nomifactory.quest.normal.db.1023.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "minecraft:chest"
           },
-          "name:8": "nomifactory.quest.normal.db.1024.title",
+          "name:8": "nomifactory.quest.normal.db.1023.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39723,18 +39713,18 @@
         }
       }
     },
-    "1025:10": {
+    "1024:10": {
       "preRequisites:11": [
         542
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1025.desc",
+          "desc:8": "nomifactory.quest.normal.db.1024.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "enderio:block_powered_spawner"
           },
-          "name:8": "nomifactory.quest.normal.db.1025.title",
+          "name:8": "nomifactory.quest.normal.db.1024.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39763,14 +39753,14 @@
         }
       }
     },
-    "1026:10": {
+    "1025:10": {
       "preRequisites:11": [
         56,
         53
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1026.desc",
+          "desc:8": "nomifactory.quest.normal.db.1025.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 461,
@@ -39779,7 +39769,7 @@
               "Configuration:3": 0
             }
           },
-          "name:8": "nomifactory.quest.normal.db.1026.title",
+          "name:8": "nomifactory.quest.normal.db.1025.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39805,18 +39795,18 @@
         }
       }
     },
-    "1027:10": {
+    "1026:10": {
       "preRequisites:11": [
         967
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1027.desc",
+          "desc:8": "nomifactory.quest.normal.db.1026.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "nae2:pattern_multiplier"
           },
-          "name:8": "nomifactory.quest.normal.db.1027.title",
+          "name:8": "nomifactory.quest.normal.db.1026.title",
           "visibility:8": "ALWAYS"
         }
       },
@@ -39844,13 +39834,13 @@
         }
       }
     },
-    "1028:10": {
+    "1027:10": {
       "preRequisites:11": [
         132
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1028.desc",
+          "desc:8": "nomifactory.quest.normal.db.1027.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 465,
@@ -39861,7 +39851,8 @@
               }
             }
           },
-          "name:8": "nomifactory.quest.normal.db.1028.title"
+          "name:8": "nomifactory.quest.normal.db.1027.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1028,
@@ -39894,20 +39885,21 @@
         }
       }
     },
-    "1029:10": {
+    "1028:10": {
       "preRequisites:11": [
         192
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1029.desc",
+          "desc:8": "nomifactory.quest.normal.db.1028.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 261,
             "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1029.title"
+          "name:8": "nomifactory.quest.normal.db.1028.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1029,
@@ -39941,7 +39933,7 @@
         }
       }
     },
-    "1030:10": {
+    "1029:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -39950,13 +39942,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1030.desc",
+          "desc:8": "nomifactory.quest.normal.db.1029.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1041,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.1030.title"
+          "name:8": "nomifactory.quest.normal.db.1029.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1030,
@@ -39989,7 +39982,7 @@
         }
       }
     },
-    "1031:10": {
+    "1030:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -39998,13 +39991,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1031.desc",
+          "desc:8": "nomifactory.quest.normal.db.1030.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1392,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.1031.title"
+          "name:8": "nomifactory.quest.normal.db.1030.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1031,
@@ -40033,20 +40027,21 @@
         }
       }
     },
-    "1032:10": {
+    "1031:10": {
       "preRequisites:11": [
         109,
         339
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1032.desc",
+          "desc:8": "nomifactory.quest.normal.db.1031.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1748,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.1032.title"
+          "name:8": "nomifactory.quest.normal.db.1031.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1032,
@@ -40079,20 +40074,21 @@
         }
       }
     },
-    "1033:10": {
+    "1032:10": {
       "preRequisites:11": [
         102,
         339
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1033.desc",
+          "desc:8": "nomifactory.quest.normal.db.1032.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1747,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.1033.title"
+          "name:8": "nomifactory.quest.normal.db.1032.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1033,
@@ -40125,21 +40121,22 @@
         }
       }
     },
-    "1034:10": {
+    "1033:10": {
       "preRequisites:11": [
         286,
         1037
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1034.desc",
+          "desc:8": "nomifactory.quest.normal.db.1033.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1037,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1034.title"
+          "name:8": "nomifactory.quest.normal.db.1033.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1034,
@@ -40186,7 +40183,7 @@
         }
       }
     },
-    "1035:10": {
+    "1034:10": {
       "preRequisites:11": [
         1037,
         286,
@@ -40194,14 +40191,15 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1035.desc",
+          "desc:8": "nomifactory.quest.normal.db.1034.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1038,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1035.title"
+          "name:8": "nomifactory.quest.normal.db.1034.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1035,
@@ -40253,21 +40251,22 @@
         }
       }
     },
-    "1036:10": {
+    "1035:10": {
       "preRequisites:11": [
         1037,
         286
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1036.desc",
+          "desc:8": "nomifactory.quest.normal.db.1035.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1039,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1036.title"
+          "name:8": "nomifactory.quest.normal.db.1035.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1036,
@@ -40329,19 +40328,20 @@
         }
       }
     },
-    "1037:10": {
+    "1036:10": {
       "preRequisites:11": [
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1037.desc",
+          "desc:8": "nomifactory.quest.normal.db.1036.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "gregtech:optical_pipe_normal"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1037.title"
+          "name:8": "nomifactory.quest.normal.db.1036.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1037,
@@ -40368,21 +40368,22 @@
         }
       }
     },
-    "1038:10": {
+    "1037:10": {
       "preRequisites:11": [
         1039,
         196
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1038.desc",
+          "desc:8": "nomifactory.quest.normal.db.1037.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1040,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1038.title"
+          "name:8": "nomifactory.quest.normal.db.1037.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1038,
@@ -40424,21 +40425,22 @@
         }
       }
     },
-    "1039:10": {
+    "1038:10": {
       "preRequisites:11": [
         535,
         258
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1039.desc",
+          "desc:8": "nomifactory.quest.normal.db.1038.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1414,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1039.title"
+          "name:8": "nomifactory.quest.normal.db.1038.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1039,
@@ -40466,20 +40468,21 @@
         }
       }
     },
-    "1040:10": {
+    "1039:10": {
       "preRequisites:11": [
         259
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1040.desc",
+          "desc:8": "nomifactory.quest.normal.db.1039.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 201,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1040.title"
+          "name:8": "nomifactory.quest.normal.db.1039.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1040,
@@ -40507,20 +40510,21 @@
         }
       }
     },
-    "1041:10": {
+    "1040:10": {
       "preRequisites:11": [
         157
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1041.desc",
+          "desc:8": "nomifactory.quest.normal.db.1040.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 99,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.normal.db.1041.title"
+          "name:8": "nomifactory.quest.normal.db.1040.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1041,
@@ -40548,7 +40552,7 @@
         }
       }
     },
-    "1042:10": {
+    "1041:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -40557,13 +40561,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1042.desc",
+          "desc:8": "nomifactory.quest.normal.db.1041.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1042,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.normal.db.1042.title"
+          "name:8": "nomifactory.quest.normal.db.1041.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1042,
@@ -40600,18 +40605,19 @@
         }
       }
     },
-    "1043:10": {
+    "1042:10": {
       "preRequisites:11": [
         286
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1043.desc",
+          "desc:8": "nomifactory.quest.normal.db.1042.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "solarflux:solar_panel_8"
           },
-          "name:8": "nomifactory.quest.normal.db.1043.title"
+          "name:8": "nomifactory.quest.normal.db.1042.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1043,
@@ -40638,7 +40644,7 @@
         }
       }
     },
-    "1044:10": {
+    "1043:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -40647,13 +40653,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.normal.db.1044.desc",
+          "desc:8": "nomifactory.quest.normal.db.1043.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
             "id:8": "gregtech:warning_sign_1"
           },
-          "name:8": "nomifactory.quest.normal.db.1044.title"
+          "name:8": "nomifactory.quest.normal.db.1043.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1044,
@@ -40674,6 +40681,45 @@
             "0:10": {
               "Count:3": 1,
               "id:8": "gregtech:laser_pipe_normal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1044:10": {
+      "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.normal.db.1044.desc",
+          "icon:10": {
+            "Count:3": 1,
+            "id:8": "actuallyadditions:block_giant_chest"
+          },
+          "name:8": "nomifactory.quest.normal.db.1044.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1045,
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "id:8": "contenttweaker:omnicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "id:8": "actuallyadditions:block_giant_chest"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -41634,8 +41680,8 @@
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 544
+          "x:3": -248,
+          "y:3": 512
         },
         "62:10": {
           "id:3": 398,
@@ -41645,321 +41691,328 @@
           "y:3": 504
         },
         "63:10": {
+          "id:3": 400,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -368,
+          "y:3": 568
+        },
+        "64:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 656
         },
-        "64:10": {
+        "65:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -92,
           "y:3": 576
         },
-        "65:10": {
+        "66:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 612
         },
-        "66:10": {
+        "67:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 240
         },
-        "67:10": {
+        "68:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 332
         },
-        "68:10": {
+        "69:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 416
         },
-        "69:10": {
+        "70:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 656
         },
-        "70:10": {
+        "71:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 404
         },
-        "71:10": {
+        "72:10": {
           "id:3": 556,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 328
         },
-        "72:10": {
+        "73:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 284
         },
-        "73:10": {
+        "74:10": {
           "id:3": 727,
           "sizeX:3": 28,
           "sizeY:3": 28,
           "x:3": -462,
           "y:3": 242
         },
-        "74:10": {
+        "75:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 496
         },
-        "75:10": {
+        "76:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 576
         },
-        "76:10": {
+        "77:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 536
         },
-        "77:10": {
+        "78:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 172
         },
-        "78:10": {
+        "79:10": {
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -180,
           "y:3": 752
         },
-        "79:10": {
+        "80:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 280
         },
-        "80:10": {
+        "81:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 208
         },
-        "81:10": {
+        "82:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -320,
           "y:3": 484
         },
-        "82:10": {
+        "83:10": {
           "id:3": 805,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -144,
           "y:3": 420
         },
-        "83:10": {
+        "84:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -92,
           "y:3": 612
         },
-        "84:10": {
+        "85:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -228,
           "y:3": 412
         },
-        "85:10": {
+        "86:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 376
         },
-        "86:10": {
+        "87:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 244
         },
-        "87:10": {
+        "88:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -68,
           "y:3": 292
         },
-        "88:10": {
+        "89:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 292
         },
-        "89:10": {
+        "90:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 244
         },
-        "90:10": {
+        "91:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 756
         },
-        "91:10": {
+        "92:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
           "y:3": 540
         },
-        "92:10": {
+        "93:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 612
         },
-        "93:10": {
+        "94:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 580
         },
-        "94:10": {
+        "95:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 612
         },
-        "95:10": {
+        "96:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -456,
           "y:3": 696
         },
-        "96:10": {
+        "97:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 500
+          "x:3": -276,
+          "y:3": 484
         },
-        "97:10": {
+        "98:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -260,
           "y:3": 376
         },
-        "98:10": {
+        "99:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 376
         },
-        "99:10": {
+        "100:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -448,
           "y:3": 568
         },
-        "100:10": {
+        "101:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 424
         },
-        "101:10": {
+        "102:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -460,
           "y:3": 424
         },
-        "102:10": {
+        "103:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 504
         },
-        "103:10": {
+        "104:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 544
         },
-        "104:10": {
+        "105:10": {
           "id:3": 973,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -80,
           "y:3": 668
         },
-        "105:10": {
+        "106:10": {
           "id:3": 1013,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 580
         },
-        "106:10": {
+        "107:10": {
           "id:3": 1028,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 804
         },
-        "107:10": {
+        "108:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 336
         },
-        "108:10": {
+        "109:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -45999,10 +46052,10 @@
         },
         "54:10": {
           "id:3": 902,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -30
+          "y:3": -42
         },
         "55:10": {
           "id:3": 909,
@@ -46059,6 +46112,13 @@
           "sizeY:3": 24,
           "x:3": -192,
           "y:3": 168
+        },
+        "63:10": {
+          "id:3": 1045,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": -6
         }
       }
     },
@@ -46087,298 +46147,298 @@
           "y:3": 348
         },
         "1:10": {
+          "id:3": 55,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 528,
+          "y:3": 552
+        },
+        "2:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 456
         },
-        "2:10": {
+        "3:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 444
         },
-        "3:10": {
+        "4:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 600
         },
-        "4:10": {
+        "5:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 504
         },
-        "5:10": {
+        "6:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 210,
           "y:3": 552
         },
-        "6:10": {
+        "7:10": {
           "id:3": 116,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 252,
           "y:3": 546
         },
-        "7:10": {
+        "8:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 210,
           "y:3": 600
         },
-        "8:10": {
+        "9:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 456
         },
-        "9:10": {
+        "10:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 456
         },
-        "10:10": {
+        "11:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 420
         },
-        "11:10": {
+        "12:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 258,
           "y:3": 420
         },
-        "12:10": {
+        "13:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 420
         },
-        "13:10": {
+        "14:10": {
           "id:3": 208,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 420
         },
-        "14:10": {
+        "15:10": {
           "id:3": 209,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 474,
           "y:3": 414
         },
-        "15:10": {
+        "16:10": {
           "id:3": 210,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 384
         },
-        "16:10": {
+        "17:10": {
           "id:3": 211,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 456
         },
-        "17:10": {
+        "18:10": {
           "id:3": 212,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 420
         },
-        "18:10": {
+        "19:10": {
           "id:3": 214,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
-          "y:3": 588
+          "y:3": 552
         },
-        "19:10": {
+        "20:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 588
         },
-        "20:10": {
+        "21:10": {
           "id:3": 217,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 624
         },
-        "21:10": {
+        "22:10": {
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 636,
           "y:3": 420
         },
-        "22:10": {
+        "23:10": {
           "id:3": 220,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 336
         },
-        "23:10": {
+        "24:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 336
         },
-        "24:10": {
+        "25:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 300
         },
-        "25:10": {
+        "26:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 372
         },
-        "26:10": {
+        "27:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 336
         },
-        "27:10": {
+        "28:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 300
         },
-        "28:10": {
+        "29:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 372
         },
-        "29:10": {
+        "30:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 336
         },
-        "30:10": {
+        "31:10": {
           "id:3": 229,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 552
         },
-        "31:10": {
+        "32:10": {
           "id:3": 232,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 492
         },
-        "32:10": {
+        "33:10": {
           "id:3": 262,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 552
         },
-        "33:10": {
+        "34:10": {
           "id:3": 275,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 306,
           "y:3": 474
         },
-        "34:10": {
+        "35:10": {
           "id:3": 276,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 480
         },
-        "35:10": {
+        "36:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 600
         },
-        "36:10": {
+        "37:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 600
         },
-        "37:10": {
+        "38:10": {
           "id:3": 386,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 468,
           "y:3": 492
         },
-        "38:10": {
+        "39:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 552
         },
-        "39:10": {
+        "40:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 552
         },
-        "40:10": {
+        "41:10": {
           "id:3": 389,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
           "y:3": 492
         },
-        "41:10": {
+        "42:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 588
-        },
-        "42:10": {
-          "id:3": 400,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": 552
         },
         "43:10": {
           "id:3": 510,
@@ -46465,13 +46525,6 @@
           "y:3": 459
         },
         "55:10": {
-          "id:3": 782,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": 540,
-          "y:3": 600
-        },
-        "56:10": {
           "id:3": 952,
           "sizeX:3": 24,
           "sizeY:3": 24,
