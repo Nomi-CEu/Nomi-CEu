@@ -258,7 +258,7 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
     .withBaseTexture(<metastate:gcym:large_multiblock_casing:9>)
     .buildAndRegister();
 naquadah_reactor_1.hasMufflerMechanics = false;
-naquadah_reactor_1.hasMaintenanceMechanics = false;
+naquadah_reactor_1.hasMaintenanceMechanics = true;
 naquadah_reactor_1.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 
 naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
@@ -318,7 +318,7 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
     .buildAndRegister();
 
 naquadah_reactor_2.hasMufflerMechanics = false;
-naquadah_reactor_2.hasMaintenanceMechanics = false;
+naquadah_reactor_2.hasMaintenanceMechanics = true;
 naquadah_reactor_2.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 
 naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
@@ -354,7 +354,7 @@ val actualization_chamber = Builder.start("actualization_chamber")
     .buildAndRegister();
 
 actualization_chamber.hasMufflerMechanics = false;
-actualization_chamber.hasMaintenanceMechanics = false;
+actualization_chamber.hasMaintenanceMechanics = true;
 actualization_chamber.canBeDistinct = true;
 actualization_chamber.frontOverlay = <cube_renderer:ENDER_FLUID_LINK>;
 

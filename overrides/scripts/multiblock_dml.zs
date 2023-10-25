@@ -135,7 +135,7 @@ val dml_sim_chamber = Builder.start("dml_sim_chamber", 3100)
             .build())
     .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
     .buildAndRegister();
-dml_sim_chamber.hasMaintenanceMechanics = false;
+dml_sim_chamber.hasMaintenanceMechanics = true;
 dml_sim_chamber.hasMufflerMechanics = false;
 dml_sim_chamber.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 

@@ -231,7 +231,7 @@ val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
     .buildAndRegister();
 
 creative_tank_provider.hasMufflerMechanics = false;
-creative_tank_provider.hasMaintenanceMechanics = false;
+creative_tank_provider.hasMaintenanceMechanics = true;
 creative_tank_provider.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
 
 
@@ -283,7 +283,7 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
     .withBaseTexture(<metastate:gcym:large_multiblock_casing:9>)
     .buildAndRegister();
 naquadah_reactor_1.hasMufflerMechanics = false;
-naquadah_reactor_1.hasMaintenanceMechanics = false;
+naquadah_reactor_1.hasMaintenanceMechanics = true;
 naquadah_reactor_1.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 
 naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
@@ -343,7 +343,7 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
     .buildAndRegister();
 
 naquadah_reactor_2.hasMufflerMechanics = false;
-naquadah_reactor_2.hasMaintenanceMechanics = false;
+naquadah_reactor_2.hasMaintenanceMechanics = true;
 naquadah_reactor_2.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 
 naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
