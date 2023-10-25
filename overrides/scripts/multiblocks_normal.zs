@@ -519,15 +519,16 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
-             <gregtech:ore_ilmenite_0> * 64,
-             <gregtech:ore_vanadium_magnetite_0> * 64,
-             <gregtech:ore_tetrahedrite_0> * 64,
-             <gregtech:ore_cassiterite_0> * 64,
-             <gregtech:ore_tin_0> * 64,
-             <gregtech:ore_redstone_0> * 64,
-             <gregtech:ore_certus_quartz_0> * 64,
-             <gregtech:ore_almandine_0> * 64,
-             <gregtech:ore_lepidolite_0> * 64)
+             <gregtech:ore_ilmenite_0:1> * 64,
+             <gregtech:ore_vanadium_magnetite_0:1> * 64,
+             <gregtech:ore_tetrahedrite_0:1> * 64,
+             <gregtech:ore_cassiterite_0:1> * 64,
+             <gregtech:ore_tin_0:1> * 64,
+             <gregtech:ore_redstone_0:1> * 64,
+             <gregtech:ore_certus_quartz_0:1> * 64,
+             <gregtech:ore_almandine_0:1> * 64,
+             <gregtech:ore_lepidolite_0:1> * 64,
+             <gregtech:ore_cobaltite_0:1> * 64)
     .buildAndRegister();
 
 // advanced projector
