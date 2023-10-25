@@ -529,7 +529,8 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_redstone_0:1> * 64,
              <gregtech:ore_certus_quartz_0:1> * 64,
              <gregtech:ore_almandine_0:1> * 64,
-             <gregtech:ore_lepidolite_0:1> * 64)
+             <gregtech:ore_lepidolite_0:1> * 64,
+             <gregtech:ore_cobaltite_0:1> * 64)
     .buildAndRegister();
 
 
@@ -1157,7 +1158,8 @@ actualization_chamber.recipeMap
              <gregtech:ore_redstone_0:1> * 64,
              <gregtech:ore_certus_quartz_0:1> * 64,
              <gregtech:ore_almandine_0:1> * 64,
-             <gregtech:ore_lepidolite_0:1> * 64)
+             <gregtech:ore_lepidolite_0:1> * 64,
+             <gregtech:ore_cobaltite_0:1> * 64)
     .buildAndRegister();
 
 // t3 magma
