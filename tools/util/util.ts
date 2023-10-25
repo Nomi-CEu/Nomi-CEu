@@ -256,6 +256,17 @@ export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] =
 }
 
 /**
+ * Gets the list of tags that are at or before a certain ref point.
+ * @param ref The ref point. Can be a tag or a commit sha. If not set, defaults to HEAD.
+ * @returns tags An array of all the tags
+ */
+export async function getTags(ref = "HEAD"): Promise<string[]> {
+	const options: string[] = ["--merged", ref];
+	const test = await git.tags(options);
+	return test.all;
+}
+
+/**
  * Gets the file at a certain point in time.
  * @param path The path to the file
  * @param revision The git ref point. Can also be a commit SHA

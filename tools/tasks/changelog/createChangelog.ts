@@ -16,7 +16,10 @@ import pushAll from "./pusher";
  */
 async function createChangelog(): Promise<ChangelogData> {
 	const data: ChangelogData = new ChangelogData();
-	changelogSetup(data);
+
+	await data.init();
+	categoriesSetup();
+	specialParserSetup(data);
 
 	for (const parser of parsers) {
 		await parse(data, parser);
@@ -27,11 +30,6 @@ async function createChangelog(): Promise<ChangelogData> {
 	pushAll(data);
 
 	return data;
-}
-
-function changelogSetup(data: ChangelogData) {
-	categoriesSetup();
-	specialParserSetup(data);
 }
 
 /**

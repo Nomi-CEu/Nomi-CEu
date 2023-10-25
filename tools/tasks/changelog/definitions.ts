@@ -1,4 +1,4 @@
-import { Category, Commit, Parser, SubCategory } from "../../types/changelogTypes";
+import { Category, Commit, Ignored, Parser, SubCategory } from "../../types/changelogTypes";
 import { modpackManifest } from "../../globals";
 import { parseCommitBody } from "./parser";
 import { parseFixUp } from "./specialParser";
@@ -26,6 +26,7 @@ export const combineKey = "[COMBINE]";
 export const combineList = "commits";
 export const fixUpKey = "[FIXUP]";
 export const fixUpList = "fixes";
+export const ignoreKey = "[IGNORE]";
 
 /* Sub Category Keys */
 // Mode Category Keys
@@ -121,7 +122,7 @@ const defaultParsingCallback = async (
 	commit: Commit,
 	commitMessage: string,
 	commitBody: string,
-): Promise<boolean> => {
+): Promise<boolean | Ignored> => {
 	if (!commitBody) return false;
 	return parseCommitBody(commitMessage, commitBody, commit, parser);
 };
