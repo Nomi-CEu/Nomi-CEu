@@ -26,14 +26,13 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start()
                           .aisle("CCC", "CVC", "CCC")
-                          .aisle("CCC", "GDG", "CMC")
+                          .aisle("CCC", "GDG", "CCC")
                           .aisle("CSC", "CGC", "CCC")
                           .where('S', controller.self())
                           .where('G', <blockstate:gregtech:transparent_casing>)
                           .where('V', <metastate:gregtech:multiblock_casing:2>)
                           .where('D', <metastate:chisel:diamond:3>)
-                          .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
-                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(12) | controller.autoAbilities(true, true, true, true, true, false, false))
+                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(12) | controller.autoAbilities(true, true, true, true, true, false, true))
                           .build();
                  } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -50,7 +49,8 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
 
 microverse_projector_basic.hasMufflerMechanics = true;
 microverse_projector_basic.hasMaintenanceMechanics = true;
-//microverse_projector_basic.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
+microverse_projector_basic.canBeDistinct = true;
+microverse_projector_basic.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 // Advanced Microverse Projector
 val microverse_projector_advanced = Builder.start("mbt:microverse_projector_advanced")
@@ -69,7 +69,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
                     "GDDDG",
                     "CVCVC")
             .aisle(
-                    "CCMCC",
+                    "CCCCC",
                     "GDDDG",
                     "GD DG",
                     "GDDDG",
@@ -91,8 +91,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
             .where(' ', CTPredicate.getAny())
-            .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(45) | controller.autoAbilities(true, true, true, true, false, false, false))
+            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(45) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -108,7 +107,8 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
 
 microverse_projector_advanced.hasMufflerMechanics = true;
 microverse_projector_advanced.hasMaintenanceMechanics = true;
-//microverse_projector_advanced.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
+microverse_projector_advanced.canBeDistinct = true;
+microverse_projector_advanced.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 // Advanced Microverse Projector II
 val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_advanced_ii")
@@ -119,7 +119,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
                 "         ",
                 "  CCCCC  ",
                 "  CVCVC  ",
-                "  CCMCC  ",
+                "  CCCCC  ",
                 "  CVCVC  ",
                 "  CCCCC  ",
                 "         ",
@@ -190,7 +190,6 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('V', <blockstate:gregtech:multiblock_casing>)
             .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
-            .where('M', CTPredicate.abilities(<mte_ability:MUFFLER_HATCH>))
             .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(115) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
@@ -207,7 +206,8 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
 
 microverse_projector_advanced_ii.hasMufflerMechanics = true;
 microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
-//microverse_projector_advanced_ii.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
+microverse_projector_advanced_ii.canBeDistinct = true;
+microverse_projector_advanced_ii.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
 
 // Naquadah Reactor 1
@@ -259,7 +259,7 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
     .buildAndRegister();
 naquadah_reactor_1.hasMufflerMechanics = false;
 naquadah_reactor_1.hasMaintenanceMechanics = false;
-//naquadah_reactor_1.frontOverlay = <cube_renderer:CANNER_OVERLAY>;
+naquadah_reactor_1.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 
 naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
     return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
@@ -319,7 +319,7 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
 
 naquadah_reactor_2.hasMufflerMechanics = false;
 naquadah_reactor_2.hasMaintenanceMechanics = false;
-//naquadah_reactor_2.frontOverlay = <cube_renderer:CANNER_OVERLAY>;
+naquadah_reactor_2.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 
 naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
     return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
@@ -355,7 +355,8 @@ val actualization_chamber = Builder.start("actualization_chamber")
 
 actualization_chamber.hasMufflerMechanics = false;
 actualization_chamber.hasMaintenanceMechanics = false;
-//actualization_chamber.frontOverlay = <cube_renderer:ENDER_FLUID_LINK>;
+actualization_chamber.canBeDistinct = true;
+actualization_chamber.frontOverlay = <cube_renderer:ENDER_FLUID_LINK>;
 
 // Universal Crystallizer
 val universal_crystallizer = Builder.start("universal_crystallizer")
@@ -436,7 +437,8 @@ val universal_crystallizer = Builder.start("universal_crystallizer")
 
 universal_crystallizer.hasMufflerMechanics = false;
 universal_crystallizer.hasMaintenanceMechanics = true;
-//universal_crystallizer.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
+universal_crystallizer.canBeDistinct = true;
+universal_crystallizer.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
