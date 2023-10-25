@@ -11,7 +11,7 @@ body:
     id: version
     attributes:
       label: Nomi CEu Version
-      description: The version of Nomi CEu you were using when this bug was encountered. If you do not know what it is, check the title of your instance window. If you do not see your version here, please update to the newest version of the pack, which currently is 1.6, or the newest alpha/beta, which currently is 1.6.1-beta-2. 
+      description: The version of Nomi CEu you were using when this bug was encountered. If you do not know what it is, check the title of your instance window. If you do not see your version here, please update to the newest alpha, beta or release of the pack. 
       options:
         - 1.7-alpha-1
         - 1.6.1a
@@ -89,14 +89,17 @@ body:
     id: reproduction
     attributes:
       label: Reproduction Steps
-      description: "How do you trigger this bug? Please walk us through it step by step."
+      description: |
+        How do you trigger this bug? Please walk us through it step by step.
+        
+        Please leave this field blank if this is not applicable. (Quest Isuses, JEI Issues, Tooltip Issues, etc.)
       placeholder: |
         1.
         2.
         3.
         ...
     validations:
-      required: true
+      required: false
   - type: textarea
     id: logs
     attributes:
