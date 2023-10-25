@@ -1,5 +1,5 @@
 import { Commit, FixUpInfo, InputReleaseType } from "../../types/changelogTypes";
-import { getLastGitTag, isEnvVariableSet } from "../../util/util";
+import { getLastGitTag, getTags, isEnvVariableSet } from "../../util/util";
 
 export default class ChangelogData {
 	since: string;
@@ -16,7 +16,10 @@ export default class ChangelogData {
 	// Map of a commit SHA to the commits which need to be added to its commit list.
 	combineList: Map<string, Commit[]>;
 
-	constructor() {
+	// Set of tags
+	tags: Set<string>;
+
+	async init(): Promise<void> {
 		this.since = getLastGitTag();
 		this.to = "HEAD";
 
@@ -48,5 +51,7 @@ export default class ChangelogData {
 		this.commitFixes = new Map<string, FixUpInfo>();
 		this.shaList = new Set<string>();
 		this.combineList = new Map<string, Commit[]>();
+
+		this.tags = new Set<string>(await getTags(this.to));
 	}
 }

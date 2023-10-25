@@ -35,19 +35,17 @@ export default function pushAll(inputData: ChangelogData): void {
 	});
 
 	// Push the commit log
-	if (data.commitList) {
+	if (data.commitList.length > 0) {
 		sortCommitList(data.commitList, (commit) => commit);
 
 		data.builder.push("## Commits");
 		data.commitList.forEach((commit) => {
 			data.builder.push(formatCommit(commit));
 		});
-	}
-
-	// Check if the builder only contains the title.
-	if (data.builder.length <= 3) {
+	} else {
+		// No Commit List = No Changes
 		data.builder.push("");
-		data.builder.push("There haven't been any changes.");
+		data.builder.push("**There haven't been any changes.**");
 	}
 
 	// Push link
@@ -133,7 +131,7 @@ function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined,
  * Sorts a commits list so that newest commits are on the bottom.
  * @param list The commit list.
  */
-export function sortCommitListReverse(list: Commit[]) {
+export function sortCommitListReverse(list: Commit[]): void {
 	list.sort((a, b) => {
 		const dateA = new Date(a.date);
 		const dateB = new Date(b.date);

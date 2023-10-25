@@ -1,4 +1,12 @@
-import { ChangelogMessage, Commit, ExpandedMessage, FixUpInfo, Parser } from "../../types/changelogTypes";
+import {
+	ChangelogMessage,
+	Commit,
+	ExpandedMessage,
+	FixUpInfo,
+	Ignored,
+	IgnoreInfo,
+	Parser,
+} from "../../types/changelogTypes";
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
 import toml from "@ltd/j-toml";
@@ -11,6 +19,7 @@ import {
 	expandList,
 	fixUpKey,
 	fixUpList,
+	ignoreKey,
 	indentationLevel,
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
@@ -23,11 +32,45 @@ export function specialParserSetup(inputData: ChangelogData): void {
 }
 
 /**
+ * Checks a commit's ignore.
+ * @commit The Commit Body. Does check whether the ignore key is there.
+ * @return Returns undefined to continue, and an Ignored object if to skip.
+ */
+export async function parseIgnore(commitBody: string, commitObject: Commit): Promise<Ignored | undefined> {
+	if (!commitBody.includes(ignoreKey)) return undefined;
+	const info = await parseTOML<IgnoreInfo>(commitBody, commitObject, ignoreKey);
+	if (!info) return undefined;
+	if (!info.before && !info.after) {
+		console.error(dedent`
+			Ignore Info in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is missing both keys 'before' and 'after'! 
+			At least one of these values must be set!`);
+		if (data.isTest) throw new Error("Failed Parsing Ignore Info. See Above.");
+		return undefined;
+	}
+
+	let isBefore = undefined,
+		isAfter = undefined;
+
+	if (info.before) isBefore = !data.tags.has(info.before);
+	if (info.after) isAfter = data.tags.has(info.after);
+
+	// Return Ignores
+	if (isBefore === undefined || isAfter === undefined) {
+		if (isBefore || isAfter) return new Ignored(info.addCommitList);
+	} else if (isBefore && isAfter) return new Ignored(info.addCommitList);
+
+	return undefined;
+}
+
+/**
  * Parses a commit with 'Fixup'.
  */
 export async function parseFixUp(commit: Commit): Promise<boolean> {
 	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
-	await parse(
+	await parseTOMLToList(
 		commit.body,
 		commit,
 		fixUpKey,
@@ -54,7 +97,7 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
  * Parses a commit with 'expand'.
  */
 export async function parseExpand(commitBody: string, commitObject: Commit, parser: Parser): Promise<void> {
-	await parse(
+	await parseTOMLToList(
 		commitBody,
 		commitObject,
 		expandKey,
@@ -117,7 +160,7 @@ async function expandDetailsLevel(
 	indentation = indentationLevel,
 ): Promise<ChangelogMessage[]> {
 	const result: ChangelogMessage[] = [];
-	await parse(
+	await parseTOMLToList(
 		commitBody,
 		commitObject,
 		detailsKey,
@@ -139,7 +182,7 @@ async function expandDetailsLevel(
  * Parses a commit with 'combine'.
  */
 export async function parseCombine(commitBody: string, commitObject: Commit): Promise<void> {
-	await parse(
+	await parseTOMLToList(
 		commitBody,
 		commitObject,
 		combineKey,
@@ -153,32 +196,23 @@ export async function parseCombine(commitBody: string, commitObject: Commit): Pr
 }
 
 /**
- * Parse TOML in a commit body to produce a list.
+ * Parse TOML in a commit body.
  * @param commitBody The body to parse
  * @param commitObject The commit object to grab messages from, and to determine error messages.
  * @param delimiter The delimiters, surrounding the TOML.
- * @param listKey The key of the list to parse.
- * @param emptyCheck The check to see if an item in the list is invalid.
- * @param perItemCallback The callback to perform on each item in the list.
+ * @param itemKey The key of the item to parse. If not set, will just parse the main object.
  * @param matterCallback An optional callback to perform on the matter.
+ * @returns item The Item/Object. Undefined if error.
  */
-async function parse<T>(
+async function parseTOML<T>(
 	commitBody: string,
 	commitObject: Commit,
 	delimiter: string,
-	listKey: string,
-	emptyCheck: (item: T) => string,
-	perItemCallback: (item: T) => void,
+	itemKey?: string,
 	matterCallback?: (matter: GrayMatterFile<string>) => void,
-): Promise<void> {
-	let messages: T[];
-	let endMessage = "Skipping...";
-
-	if (data.isTest) {
-		endMessage = dedent`
-			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
-			Also check that you have surrounded the TOML in '${delimiter}'!`;
-	}
+): Promise<T | undefined> {
+	let item: T;
+	const endMessage = getEndMessage(delimiter);
 
 	try {
 		// Remove everything before first delimiter in body
@@ -200,14 +234,15 @@ async function parse<T>(
 
 		if (matterCallback) matterCallback(parseResult);
 
-		messages = parseResult.data[listKey];
+		if (!itemKey) item = parseResult.data as T;
+		else item = parseResult.data[itemKey];
 	} catch (e) {
 		console.error(dedent`
 			Failed parsing TOML in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}).
-			This could be because of invalid syntax, or because the Message List (key: '${listKey}') is not an array.`);
+			This could be because of invalid syntax.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
 			console.error(dedent`
@@ -218,8 +253,33 @@ async function parse<T>(
 
 		console.error(`\n${endMessage}\n`);
 		if (data.isTest) throw e;
-		return;
+		return undefined;
 	}
+
+	return item;
+}
+
+/**
+ * Parse TOML in a commit body to produce a list.
+ * @param commitBody The body to parse
+ * @param commitObject The commit object to grab messages from, and to determine error messages.
+ * @param delimiter The delimiters, surrounding the TOML.
+ * @param listKey The key of the list to parse.
+ * @param emptyCheck The check to see if an item in the list is invalid.
+ * @param perItemCallback The callback to perform on each item in the list.
+ * @param matterCallback An optional callback to perform on the matter.
+ */
+async function parseTOMLToList<T>(
+	commitBody: string,
+	commitObject: Commit,
+	delimiter: string,
+	listKey: string,
+	emptyCheck: (item: T) => string,
+	perItemCallback: (item: T) => void,
+	matterCallback?: (matter: GrayMatterFile<string>) => void,
+): Promise<void> {
+	const messages = await parseTOML<T[]>(commitBody, commitObject, delimiter, listKey, matterCallback);
+	const endMessage = getEndMessage(delimiter);
 
 	if (!messages || !Array.isArray(messages) || messages.length === 0) {
 		console.error(dedent`
@@ -261,4 +321,13 @@ async function parse<T>(
 		}
 		perItemCallback(item);
 	}
+}
+
+function getEndMessage(delimiter: string) {
+	if (data.isTest) {
+		return dedent`
+			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
+			Also check that you have surrounded the TOML in '${delimiter}'!`;
+	}
+	return "Skipping...";
 }

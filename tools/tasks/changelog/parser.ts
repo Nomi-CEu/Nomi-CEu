@@ -1,6 +1,14 @@
-import { Category, Commit, Parser, SubCategory } from "../../types/changelogTypes";
-import { categories, combineKey, defaultIndentation, detailsKey, expandKey, noCategoryKey } from "./definitions";
-import { parseCombine, parseDetails, parseExpand } from "./specialParser";
+import { Category, Commit, Ignored, Parser, SubCategory } from "../../types/changelogTypes";
+import {
+	categories,
+	combineKey,
+	defaultIndentation,
+	detailsKey,
+	expandKey,
+	ignoreKey,
+	noCategoryKey,
+} from "./definitions";
+import { parseCombine, parseDetails, parseExpand, parseIgnore } from "./specialParser";
 import { getChangelog } from "../../util/util";
 import ChangelogData from "./changelogData";
 
@@ -22,6 +30,12 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 		}
 
 		const parsed = await parser.itemCallback(parser, commit, commit.message, commit.body);
+		if (parsed instanceof Ignored) {
+			if (parsed.getCommitList() && parser.addCommitListCallback) {
+				if (parser.addCommitListCallback(commit, true)) data.commitList.push(commit);
+			}
+			continue;
+		}
 
 		if (!parsed && parser.leftOverCallback) parser.leftOverCallback(commit, commit.message, commit.body, []);
 		if (!parser.addSHACallback || parser.addSHACallback(commit, parsed)) data.shaList.add(commit.hash);
@@ -43,10 +57,16 @@ export async function parseCommitBody(
 	commitBody: string,
 	commitObject: Commit,
 	parser: Parser,
-): Promise<boolean> {
+): Promise<boolean | Ignored> {
 	if (commitBody.includes(expandKey)) {
 		await parseExpand(commitBody, commitObject, parser);
 		return true;
+	}
+	if (commitBody.includes(ignoreKey)) {
+		const ignore = await parseIgnore(commitBody, commitObject);
+
+		// Only return if ignore is not undefined
+		if (ignore) return ignore;
 	}
 	if (commitBody.includes(detailsKey)) {
 		await parseDetails(commitMessage, commitBody, commitObject, parser);
