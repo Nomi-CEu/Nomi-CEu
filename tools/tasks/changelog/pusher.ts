@@ -6,7 +6,13 @@ import { repoLink } from "./definitions";
 let data: ChangelogData;
 
 export default function pushAll(inputData: ChangelogData): void {
+	pushTitle(inputData);
+	pushChangelog(inputData);
+}
+
+export function pushTitle(inputData: ChangelogData): void {
 	data = inputData;
+
 	// Push the titles.
 	// Center Align is replaced by the correct center align style in the respective deployments.
 	// Must be triple bracketed, to make mustache not html escape it.
@@ -27,6 +33,11 @@ export default function pushAll(inputData: ChangelogData): void {
 		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`, "");
 		data.builder.push("{{{ CF_REDIRECT }}}", "");
 	}
+}
+
+export function pushChangelog(inputData: ChangelogData): void {
+	data = inputData;
+
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
 	// Push Sections of Changelog
@@ -53,6 +64,12 @@ export default function pushAll(inputData: ChangelogData): void {
 		"",
 		`**Full Changelog**: [\`${data.since}...${data.to}\`](${repoLink}compare/${data.since}...${data.to})`,
 	);
+}
+
+export function pushSeperator(inputData: ChangelogData): void {
+	data = inputData;
+
+	data.builder.push("", "<hr>", "");
 }
 
 /**

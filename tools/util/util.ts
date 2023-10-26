@@ -205,18 +205,12 @@ export function makeArtifactNameBody(baseName: string): string {
 }
 
 /**
- * Returns the COMPARE_TAG env if set, else fetches the last tag known to Git using the current branch.
+ * Returns and fetches the last tag known to Git using the current branch.
  * @param before Tag to get the tag before.
  * @returns string Git tag.
  * @throws
  */
 export function getLastGitTag(before?: string): string {
-	if (isEnvVariableSet("COMPARE_TAG")) {
-		checkGitTag(process.env["COMPARE_TAG"]);
-
-		return process.env["COMPARE_TAG"];
-	}
-
 	if (before) {
 		before = `"${before}^"`;
 	}
