@@ -9,7 +9,7 @@ import { parsers } from "./definitions";
 import parse from "./parser";
 import { specialParserSetup } from "./specialParser";
 import generateModChanges from "./generateModChanges";
-import pushAll from "./pusher";
+import pushAll, { pushChangelog, pushSeperator, pushTitle } from "./pusher";
 
 /**
  * Generates a changelog based on environmental variables, and saves it a changelog data class.
@@ -18,6 +18,32 @@ async function createChangelog(): Promise<ChangelogData> {
 	const data: ChangelogData = new ChangelogData();
 
 	await data.init();
+
+	// Handle Iterations
+	if (data.shouldIterate()) {
+		const tags = data.getIterations();
+		pushTitle(data);
+		for (const tag of tags) {
+			data.setupIteration(tag);
+			categoriesSetup();
+			specialParserSetup(data);
+
+			for (const parser of parsers) {
+				await parse(data, parser);
+			}
+
+			await generateModChanges(data);
+
+			pushChangelog(data);
+			if (tags.indexOf(tag) < tags.length - 1) {
+				// More to go
+				pushSeperator(data);
+				data.resetForIteration();
+			}
+		}
+		return data;
+	}
+
 	categoriesSetup();
 	specialParserSetup(data);
 

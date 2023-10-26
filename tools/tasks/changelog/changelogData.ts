@@ -19,6 +19,9 @@ export default class ChangelogData {
 	// Set of tags
 	tags: Set<string>;
 
+	/**
+	 * A normal initialisation.
+	 */
 	async init(): Promise<void> {
 		this.since = getLastGitTag();
 		this.to = "HEAD";
@@ -53,5 +56,39 @@ export default class ChangelogData {
 		this.combineList = new Map<string, Commit[]>();
 
 		this.tags = new Set<string>(await getTags(this.to));
+	}
+
+	shouldIterate(): boolean {
+		return isEnvVariableSet("COMPARE_TAG");
+	}
+
+	/**
+	 * Gets the compare tags, or iterations. Also sets up the iteration environment.
+	 * @return tags The Compare Tags
+	 */
+	getIterations(): string[] {
+		const iterations = process.env.COMPARE_TAG;
+		return iterations.split(",").map((tag) => tag.trim());
+	}
+
+	/**
+	 * Setups the state for a iteration. Init must be called first.
+	 */
+	setupIteration(compareTag: string): void {
+		this.since = compareTag;
+	}
+
+	/**
+	 * Resets the state for a future iteration. Init must be called first.
+	 */
+	resetForIteration(): void {
+		// Reset all lists, except builder
+		this.commitList = [];
+
+		this.commitFixes = new Map<string, FixUpInfo>();
+		this.shaList = new Set<string>();
+		this.combineList = new Map<string, Commit[]>();
+
+		// Tags list is fine because the `to` stays the same
 	}
 }
