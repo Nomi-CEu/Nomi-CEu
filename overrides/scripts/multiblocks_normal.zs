@@ -217,7 +217,7 @@ val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
             .aisle("CCC", "CSC", "CCC")
             .where('S', controller.self())
             .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
-            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>).setMinGlobalLimited(15) | controller.autoAbilities(true, false, true, true, false, false, false))
+            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>).setMinGlobalLimited(15) | controller.autoAbilities(true, true, true, true, false, false, false))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -269,7 +269,8 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
+            | CTPredicate.abilities(<mte_ability:MAINTENANCE_HATCH>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
             )
             .build();
         } as IPatternBuilderFunction)
@@ -328,7 +329,8 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
             .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>)
             | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(3).setPreviewCount(1)
+            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
+            | CTPredicate.abilities(<mte_ability:MAINTENANCE_HATCH>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
             )
             .build();
         } as IPatternBuilderFunction)
