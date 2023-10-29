@@ -191,11 +191,15 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage =
 
 			const formattedCommits: string[] = [];
 			const authors: string[] = [];
+			const authorEmails: Set<string> = new Set<string>();
 			const processedSHAs: Set<string> = new Set<string>();
 
 			commits.forEach((commit) => {
 				if (processedSHAs.has(commit.hash)) return;
-				if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
+				if (!authors.includes(commit.author_name) && !authorEmails.has(commit.author_email)) {
+					authors.push(commit.author_name);
+					authorEmails.add(commit.author_email);
+				}
 				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
 				processedSHAs.add(commit.hash);
 			});
