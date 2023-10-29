@@ -5,6 +5,7 @@ import {
 	FixUpInfo,
 	Ignored,
 	IgnoreInfo,
+	IgnoreLogic,
 	Parser,
 } from "../../types/changelogTypes";
 import dedent from "dedent-js";
@@ -13,13 +14,16 @@ import toml from "@ltd/j-toml";
 import {
 	combineKey,
 	combineList,
+	defaultIgnoreLogic,
 	detailsKey,
 	detailsList,
 	expandKey,
 	expandList,
 	fixUpKey,
 	fixUpList,
+	ignoreChecks,
 	ignoreKey,
+	ignoreLogics,
 	indentationLevel,
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
@@ -40,28 +44,77 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 	if (!commitBody.includes(ignoreKey)) return undefined;
 	const info = await parseTOML<IgnoreInfo>(commitBody, commitObject, ignoreKey);
 	if (!info) return undefined;
-	if (!info.before && !info.after) {
+
+	if (!info.checks) {
 		console.error(dedent`
 			Ignore Info in body:
 			\`\`\`
 			${commitBody}\`\`\`
-			of commit object ${commitObject.hash} (${commitObject.message}) is missing both keys 'before' and 'after'! 
-			At least one of these values must be set!`);
-		if (data.isTest) throw new Error("Failed Parsing Ignore Info. See Above.");
+			of commit object ${commitObject.hash} (${commitObject.message}) is missing checks (key 'checks')`);
 		return undefined;
 	}
 
-	let isBefore = undefined,
-		isAfter = undefined;
+	let infoKeys: string[];
+	try {
+		infoKeys = Object.keys(info.checks);
+	} catch (err) {
+		console.error(dedent`
+			Could not get the keys in Ignore Info of body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message})!`);
+		if (data.isTest) throw err;
+		return undefined;
+	}
 
-	if (info.before) isBefore = !data.tags.has(info.before);
-	if (info.after) isAfter = data.tags.has(info.after);
+	/* Find Checks */
+	const ignoreKeys = new Set<string>(Object.keys(ignoreChecks));
+	const checkResults: boolean[] = [];
+	infoKeys.forEach((key) => {
+		if (ignoreKeys.has(key)) checkResults.push(ignoreChecks[key].call(this, info.checks[key], data));
+		else {
+			console.error(dedent`
+			Ignore Check with key '${key}' in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is not accepted!
+			Only accepts keys: ${Object.keys(ignoreKeys)
+				.map((key) => `'${key}'`)
+				.join(", ")}`);
+			if (data.isTest) throw new Error("Failed Parsing Ignore Check. See Above.");
+		}
+	});
+	if (checkResults.length === 0) {
+		console.error(dedent`
+			No Ignore Checks found in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message})!
+			Only accepts keys: ${Object.keys(ignoreKeys)
+				.map((key) => `'${key}'`)
+				.join(", ")}`);
+		if (data.isTest) throw new Error("Failed Parsing Ignore Checks. See Above.");
+		return undefined;
+	}
 
-	// Return Ignores
-	if (isBefore === undefined || isAfter === undefined) {
-		if (isBefore || isAfter) return new Ignored(info.addCommitList);
-	} else if (isBefore && isAfter) return new Ignored(info.addCommitList);
+	/* Find Logic */
+	let logic: IgnoreLogic;
+	if (info.logic === undefined) logic = defaultIgnoreLogic;
+	else if (Object.keys(ignoreLogics).includes(info.logic)) logic = ignoreLogics[info.logic];
+	else {
+		console.error(dedent`
+			Ignore Logic '${info.logic}' in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message})!
+			Only accepts keys: ${Object.keys(ignoreLogics)
+				.map((key) => `'${key}'`)
+				.join(", ")}`);
+		if (data.isTest) throw new Error("Failed Parsing Ignore Logic. See Above.");
+		logic = defaultIgnoreLogic;
+	}
 
+	if (logic.call(this, checkResults)) return new Ignored(info.addCommitList);
 	return undefined;
 }
 
