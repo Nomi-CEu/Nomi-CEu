@@ -50,7 +50,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			Ignore Info in body:
 			\`\`\`
 			${commitBody}\`\`\`
-			of commit object ${commitObject.hash} (${commitObject.message}) is missing checks (key 'checks')`);
+			of commit object ${commitObject.hash} (${commitObject.message}) is missing check info (key 'checks').`);
 		return undefined;
 	}
 
@@ -78,9 +78,9 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is not accepted!
-			Only accepts keys: ${Object.keys(ignoreKeys)
+			Only accepts keys: ${Array.from(ignoreKeys)
 				.map((key) => `'${key}'`)
-				.join(", ")}`);
+				.join(", ")}.`);
 			if (data.isTest) throw new Error("Failed Parsing Ignore Check. See Above.");
 		}
 	});
@@ -90,9 +90,9 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message})!
-			Only accepts keys: ${Object.keys(ignoreKeys)
+			Only accepts keys: ${Array.from(ignoreKeys)
 				.map((key) => `'${key}'`)
-				.join(", ")}`);
+				.join(", ")}.`);
 		if (data.isTest) throw new Error("Failed Parsing Ignore Checks. See Above.");
 		return undefined;
 	}
@@ -109,7 +109,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			of commit object ${commitObject.hash} (${commitObject.message})!
 			Only accepts keys: ${Object.keys(ignoreLogics)
 				.map((key) => `'${key}'`)
-				.join(", ")}`);
+				.join(", ")}.`);
 		if (data.isTest) throw new Error("Failed Parsing Ignore Logic. See Above.");
 		logic = defaultIgnoreLogic;
 	}
