@@ -209,116 +209,16 @@ microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
 microverse_projector_advanced_ii.canBeDistinct = true;
 microverse_projector_advanced_ii.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
+<gcym:large_multiblock_casing:9>.displayName = "Reaction-Safe Casing";
 
 // Naquadah Reactor 1
-<gcym:large_multiblock_casing:9>.displayName = "Reaction-Safe Casing";
-val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle(
-                "CCC",
-                "PGP",
-                "PGP",
-                "PGP",
-                "CCC"
-            )
-            .aisle(
-                "CCC",
-                "GNG",
-                "GNG",
-                "GOG",
-                "CCC"
-            )
-            .aisle(
-                "CSC",
-                "PGP",
-                "PGP",
-                "PGP",
-                "CCC"
-            )
-            .where('S', controller.self())
-            .where('G', <metastate:gregtech:transparent_casing:1>)
-            .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
-            .where('O', <metastate:extendedcrafting:trimmed:5>)
-            .where('N', <metastate:gregtech:meta_block_compressed_8:1>)
-            .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>).setMinGlobalLimited(10)
-            | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
-            | CTPredicate.abilities(<mte_ability:MAINTENANCE_HATCH>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
-            )
-            .build();
-        } as IPatternBuilderFunction)
-    .withRecipeMap(<recipemap:naquadah_reactor_1>) // Recipe map in groovy, as it is special (generator)
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:9>)
-    .buildAndRegister();
-naquadah_reactor_1.hasMufflerMechanics = false;
-naquadah_reactor_1.hasMaintenanceMechanics = true;
-naquadah_reactor_1.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
-
-naquadah_reactor_1.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
-    return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
-} as IRunOverclockingLogicFunction;
-
-<metaitem:multiblocktweaker:naquadah_reactor_1>.addTooltip(format.yellow("Produces exactly 3A ZPM, does not overclock"));
+// Groovy (special generator)
 
 // Naquadah Reactor 2
-val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle(
-                "CCC",
-                "PGP",
-                "PGP",
-                "PGP",
-                "PGP",
-                "CCC"
-            )
-            .aisle(
-                "CCC",
-                "GNG",
-                "GNG",
-                "GNG",
-                "GOG",
-                "CCC"
-            )
-            .aisle(
-                "CSC",
-                "PGP",
-                "PGP",
-                "PGP",
-                "PGP",
-                "CCC"
-            )
-            .where('S', controller.self())
-            .where('P', <blockstate:appliedenergistics2:spatial_pylon>)
-            .where('G', <metastate:gregtech:transparent_casing:1>)
-            .where('O', <metastate:extendedcrafting:storage:4>)
-            .where('N', <metastate:gregtech:meta_block_compressed_2006:13>)
-            .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:9>).setMinGlobalLimited(10)
-            | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setPreviewCount(1)
-            | CTPredicate.abilities(<mte_ability:OUTPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
-            | CTPredicate.abilities(<mte_ability:MAINTENANCE_HATCH>).setMinGlobalLimited(1).setMaxGlobalLimited(1)
-            )
-            .build();
-        } as IPatternBuilderFunction)
-    .withRecipeMap(<recipemap:naquadah_reactor_2>) // Recipe map in groovy, as it is special (generator)
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:9>)
-    .buildAndRegister();
-
-naquadah_reactor_2.hasMufflerMechanics = false;
-naquadah_reactor_2.hasMaintenanceMechanics = true;
-naquadah_reactor_2.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
-
-naquadah_reactor_2.runOverclockingLogic = function(recipelogic as IRecipeLogic, recipe as IRecipe, negativeEU as bool, maxOverclocks as int) as int[] {
-    return IRecipeLogic.standardOverclockingLogic(recipe.getEUt() * (negativeEU ? -1 : 1), recipelogic.maxVoltage, recipe.getDuration(), 1, 1, 0); // 1x duration, 1x voltage, 0 overclocks
-} as IRunOverclockingLogicFunction;
-
-<metaitem:multiblocktweaker:naquadah_reactor_2>.addTooltip(format.yellow("Produces exactly 3A UV, does not overclock"));
+// Groovy (special generator)
 
 // Actualization Chamber
-val actualization_chamber = Builder.start("actualization_chamber")
+val actualization_chamber = Builder.start("actualization_chamber", 32005)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
         return FactoryBlockPattern.start()
             .aisle("CCC","GGG","CCC")
@@ -349,7 +249,7 @@ actualization_chamber.canBeDistinct = true;
 actualization_chamber.frontOverlay = <cube_renderer:ENDER_FLUID_LINK>;
 
 // Universal Crystallizer
-val universal_crystallizer = Builder.start("universal_crystallizer")
+val universal_crystallizer = Builder.start("universal_crystallizer", 32006)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
         return FactoryBlockPattern.start(RelativeDirection.FRONT, RelativeDirection.UP, RelativeDirection.LEFT)
             .aisle("AAAAAAA",
@@ -450,26 +350,8 @@ recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_p
 ]);
 
 
-makeShaped("naquadah_reactor_1", <metaitem:multiblocktweaker:naquadah_reactor_1>,
-    ["NCN",
-     "GSG",
-     "PPP"],
-    { C : <ore:circuitIv>, //T5
-      G : <gregtech:transparent_casing:1>,
-      S : <metaitem:cover.screen>,
-      P : <appliedenergistics2:spatial_pylon>,
-      N : <extendedcrafting:material:33>}); //Omnium Nugget
-
-makeShaped("naquadah_reactor_2", <metaitem:multiblocktweaker:naquadah_reactor_2>,
-    ["NCN",
-     "GSG",
-     "PPP"],
-    { C : <ore:circuitLuv>, //T6
-      G : <gregtech:transparent_casing:1>,
-      S : <metaitem:cover.screen>,
-      P : <appliedenergistics2:spatial_pylon>,
-      N : <extendedcrafting:material:32>}); //Omnium Ingot
-
+// Naquadah Reactor
+// Moved to Groovy
 
 makeExtremeRecipe5(<metaitem:multiblocktweaker:actualization_chamber>,
     ["PPPPP",
@@ -1562,18 +1444,15 @@ actualization_chamber.recipeMap
              <minecraft:dragon_egg> * 64)
     .buildAndRegister();
 
-
 // Naquadah Reactor Mk1 Recipes
-naquadah_reactor_1.recipeMap
-    .recipeBuilder()
+<recipemap:naquadah_reactor_1>.recipeBuilder()
     .duration(938)
     .EUt(393216)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
-naquadah_reactor_1.recipeMap
-    .recipeBuilder()
+<recipemap:naquadah_reactor_1>.recipeBuilder()
     .duration(3750)
     .EUt(393216)
     .inputs(<metaitem:boltNaquadria>)
@@ -1581,16 +1460,14 @@ naquadah_reactor_1.recipeMap
     .buildAndRegister();
 
 // Naquadah Reactor Mk2 Recipes
-naquadah_reactor_2.recipeMap
-    .recipeBuilder()
+<recipemap:naquadah_reactor_2>.recipeBuilder()
     .duration(1875)
     .EUt(1572864)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
-naquadah_reactor_2.recipeMap
-    .recipeBuilder()
+<recipemap:naquadah_reactor_2>.recipeBuilder()
     .duration(7500)
     .EUt(1572864)
     .inputs(<metaitem:boltNaquadria>)

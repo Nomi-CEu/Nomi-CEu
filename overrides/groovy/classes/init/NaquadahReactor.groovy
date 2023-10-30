@@ -24,12 +24,18 @@ import net.minecraft.util.text.event.HoverEvent
 import gregtech.api.util.TextFormattingUtil
 import gregtech.api.util.GTUtility
 import gregtech.api.GTValues
+import net.minecraft.item.ItemStack
+import net.minecraft.world.World
+import net.minecraft.client.resources.I18n
+import gregtech.client.utils.TooltipHelper
 
 public class NaquadahReactor extends FuelMultiblockController {
     public final int numSpatial
     public final IBlockState bottomFiller
     public final IBlockState topFiller
     public final int tier
+    
+    public static final int AMP = 3
 
     NaquadahReactor(ResourceLocation metaTileEntityId, RecipeMap recipeMap, int tier, int numSpatial, IBlockState bottomFiller, IBlockState topFiller) {
         super(metaTileEntityId, recipeMap, tier)
@@ -108,28 +114,33 @@ public class NaquadahReactor extends FuelMultiblockController {
     @Override
     protected void addDisplayText(List<ITextComponent> textList) {
         if (!isStructureFormed()) {
-            ITextComponent tooltip = new TextComponentTranslation("gregtech.multiblock.invalid_structure.tooltip");
-            tooltip.setStyle(new Style().setColor(TextFormatting.GRAY));
+            ITextComponent tooltip = new TextComponentTranslation("gregtech.multiblock.invalid_structure.tooltip")
+            tooltip.setStyle(new Style().setColor(TextFormatting.GRAY))
             textList.add(new TextComponentTranslation("gregtech.multiblock.invalid_structure")
                     .setStyle(new Style().setColor(TextFormatting.RED)
-                            .setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, tooltip))));
+                            .setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, tooltip))))
         }
         else {
-            long maxVoltage = getMaxVoltage();
-            if (maxVoltage != 0 && maxVoltage >= -recipeMapWorkable.getRecipeEUt()) {
-                String voltageName = GTValues.VNF[GTUtility.getFloorTierByVoltage(maxVoltage)];
-                textList.add(new TextComponentTranslation("gregtech.multiblock.max_energy_per_tick", TextFormattingUtil.formatNumbers(maxVoltage), voltageName));
-            }
+            long produces = GTValues.V[tier] * AMP
+            String voltageName = GTValues.VNF[GTUtility.getFloorTierByVoltage(produces)] + TextFormatting.RESET
+            textList.add(new TextComponentTranslation("gregtech.multiblock.max_energy_per_tick", TextFormattingUtil.formatNumbers(produces), voltageName))
 
             if (!recipeMapWorkable.isWorkingEnabled()) {
-                textList.add(new TextComponentTranslation("gregtech.multiblock.work_paused"));
+                textList.add(new TextComponentTranslation("gregtech.multiblock.work_paused"))
             } else if (recipeMapWorkable.isActive()) {
-                textList.add(new TextComponentTranslation("gregtech.multiblock.running"));
-                int currentProgress = (int) (recipeMapWorkable.getProgressPercent() * 100);
-                textList.add(new TextComponentTranslation("gregtech.multiblock.progress", currentProgress));
+                textList.add(new TextComponentTranslation("gregtech.multiblock.running"))
+                int currentProgress = (int) (recipeMapWorkable.getProgressPercent() * 100)
+                textList.add(new TextComponentTranslation("gregtech.multiblock.progress", currentProgress))
             } else {
-                textList.add(new TextComponentTranslation("gregtech.multiblock.idling"));
+                textList.add(new TextComponentTranslation("gregtech.multiblock.idling"))
             }
         }
+    }
+    
+    @Override
+    public void addInformation(ItemStack stack, World player, List<String> tooltip, boolean advanced) {
+        super.addInformation(stack, player, tooltip, advanced)
+        tooltip.add(I18n.format("tooltip.contenttweaker.naquadah_reactor.produces", AMP, GTValues.VNF[tier] + TextFormatting.RESET))
+        tooltip.add(TooltipHelper.RAINBOW_SLOW.toString() + I18n.format("gui.contenttweaker.naquadah_reactor.overclock"))
     }
 }

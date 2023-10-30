@@ -15,11 +15,6 @@ public class NaqRecipeLogic extends MultiblockFuelRecipeLogic {
     }
     
     @Override
-    public long getMaxVoltage() {
-        return this.EU_OUTPUT
-    }
-    
-    @Override
     public boolean isAllowOverclocking() {
         return false;
     }
