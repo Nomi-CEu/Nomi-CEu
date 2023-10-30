@@ -6,7 +6,13 @@ import { repoLink } from "./definitions";
 let data: ChangelogData;
 
 export default function pushAll(inputData: ChangelogData): void {
+	pushTitle(inputData);
+	pushChangelog(inputData);
+}
+
+export function pushTitle(inputData: ChangelogData): void {
 	data = inputData;
+
 	// Push the titles.
 	// Center Align is replaced by the correct center align style in the respective deployments.
 	// Must be triple bracketed, to make mustache not html escape it.
@@ -27,6 +33,11 @@ export default function pushAll(inputData: ChangelogData): void {
 		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`, "");
 		data.builder.push("{{{ CF_REDIRECT }}}", "");
 	}
+}
+
+export function pushChangelog(inputData: ChangelogData): void {
+	data = inputData;
+
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
 	// Push Sections of Changelog
@@ -53,6 +64,12 @@ export default function pushAll(inputData: ChangelogData): void {
 		"",
 		`**Full Changelog**: [\`${data.since}...${data.to}\`](${repoLink}compare/${data.since}...${data.to})`,
 	);
+}
+
+export function pushSeperator(inputData: ChangelogData): void {
+	data = inputData;
+
+	data.builder.push("", "<hr>", "");
 }
 
 /**
@@ -174,11 +191,15 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage =
 
 			const formattedCommits: string[] = [];
 			const authors: string[] = [];
+			const authorEmails: Set<string> = new Set<string>();
 			const processedSHAs: Set<string> = new Set<string>();
 
 			commits.forEach((commit) => {
 				if (processedSHAs.has(commit.hash)) return;
-				if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
+				if (!authors.includes(commit.author_name) && !authorEmails.has(commit.author_email)) {
+					authors.push(commit.author_name);
+					authorEmails.add(commit.author_email);
+				}
 				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
 				processedSHAs.add(commit.hash);
 			});

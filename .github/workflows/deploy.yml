@@ -29,7 +29,7 @@ on:
         required: false
         type: string
       compare_tag:
-        description: Tag to compare to. See CONTRIBUTING.md for more information.
+        description: Tag(s) to compare against. If specifying multiple, seperate by commas. (Spaces allowed). See CONTRIBUTING.md for more information.
         required: false
         type: string
       deploy_to_gh:

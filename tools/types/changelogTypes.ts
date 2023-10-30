@@ -1,3 +1,5 @@
+import ChangelogData from "../tasks/changelog/changelogData";
+
 export interface Commit {
 	hash: string;
 	date: string;
@@ -205,10 +207,23 @@ export interface Parser {
 }
 
 export interface IgnoreInfo {
-	before?: string;
-	after?: string;
+	checks: Record<string, string>;
+	logic?: string;
 	addCommitList?: boolean;
 }
+
+/**
+ * Check to determine whether to ignore.
+ * @return ignore True to Ignore (if check is true), False to continue
+ */
+export type IgnoreCheck = (tag: string, data: ChangelogData) => boolean;
+
+/**
+ * Ignore Logic
+ * @param checkResults The results of the checks.
+ * @return ignore True to ignore, false to continue
+ */
+export type IgnoreLogic = (checkResults: boolean[]) => boolean;
 
 export class Ignored {
 	private readonly addCommitList: boolean | undefined;
