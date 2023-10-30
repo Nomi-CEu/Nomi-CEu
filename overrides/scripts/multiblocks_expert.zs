@@ -249,13 +249,7 @@ val naquadah_reactor_1 = Builder.start("naquadah_reactor_1")
             )
             .build();
         } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("naquadah_reactor_1")
-            .minInputs(1)
-            .maxInputs(1)
-            .minOutputs(1)
-            .maxOutputs(1)
-            .build())
+    .withRecipeMap(<recipemap:naquadah_reactor_1>) // Recipe map in groovy, as it is special (generator)
     .withBaseTexture(<metastate:gcym:large_multiblock_casing:9>)
     .buildAndRegister();
 naquadah_reactor_1.hasMufflerMechanics = false;
@@ -309,13 +303,7 @@ val naquadah_reactor_2 = Builder.start("naquadah_reactor_2")
             )
             .build();
         } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("naquadah_reactor_2")
-            .minInputs(1)
-            .maxInputs(1)
-            .minOutputs(1)
-            .maxOutputs(1)
-            .build())
+    .withRecipeMap(<recipemap:naquadah_reactor_2>) // Recipe map in groovy, as it is special (generator)
     .withBaseTexture(<metastate:gcym:large_multiblock_casing:9>)
     .buildAndRegister();
 
@@ -1579,7 +1567,7 @@ actualization_chamber.recipeMap
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(938)
-    .EUt(-393216)
+    .EUt(393216)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
@@ -1587,7 +1575,7 @@ naquadah_reactor_1.recipeMap
 naquadah_reactor_1.recipeMap
     .recipeBuilder()
     .duration(3750)
-    .EUt(-393216)
+    .EUt(393216)
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
@@ -1596,7 +1584,7 @@ naquadah_reactor_1.recipeMap
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(1875)
-    .EUt(-1572864)
+    .EUt(1572864)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
@@ -1604,7 +1592,7 @@ naquadah_reactor_2.recipeMap
 naquadah_reactor_2.recipeMap
     .recipeBuilder()
     .duration(7500)
-    .EUt(-1572864)
+    .EUt(1572864)
     .inputs(<metaitem:boltNaquadria>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();

@@ -4,7 +4,13 @@
   "version": "1.0.0",
   "debug": false,
   "classes": {
-    "preInit": []
+    "preInit": [
+      "classes/shared/"
+    ],
+    "init": [
+      "classes/shared/",
+      "classes/init/"
+    ]
   },
   "loaders": {
     "preInit": [
