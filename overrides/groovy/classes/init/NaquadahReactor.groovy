@@ -23,6 +23,7 @@ import net.minecraft.util.text.TextFormatting
 import net.minecraft.util.text.event.HoverEvent
 import gregtech.api.util.TextFormattingUtil
 import gregtech.api.util.GTUtility
+import gregtech.api.GTValues
 
 public class NaquadahReactor extends FuelMultiblockController {
     public final int numSpatial
@@ -36,6 +37,7 @@ public class NaquadahReactor extends FuelMultiblockController {
         this.numSpatial = numSpatial
         this.bottomFiller = bottomFiller
         this.topFiller = topFiller
+        this.recipeMapWorkable = new NaqRecipeLogic(this)
     }
     
     @Override

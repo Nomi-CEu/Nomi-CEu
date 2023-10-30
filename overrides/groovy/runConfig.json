@@ -5,11 +5,11 @@
   "debug": false,
   "classes": {
     "preInit": [
-      "classes/shared/"
+      "classes/preInit/"
     ],
     "init": [
-      "classes/shared/",
-      "classes/init/"
+      "classes/init/NaqRecipeLogic.groovy",
+      "classes/init"
     ]
   },
   "loaders": {
