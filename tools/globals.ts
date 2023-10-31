@@ -16,3 +16,9 @@ export const configFolder = upath.join(overridesFolder, "config");
 export const configOverridesFolder = upath.join(overridesFolder, "config-overrides");
 export const rootDirectory = "..";
 export const templatesFolder = "templates";
+
+// The Repository Owner (For Issues & PR Tags Transforms in Changelog)
+export const repoOwner = "Nomi-CEu";
+
+// The Repository Name (For Issues & PR Tags Transforms in Changelog)
+export const repoName = "Nomi-CEu";

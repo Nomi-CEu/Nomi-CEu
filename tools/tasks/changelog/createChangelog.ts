@@ -10,6 +10,8 @@ import parse from "./parser";
 import { specialParserSetup } from "./specialParser";
 import generateModChanges from "./generateModChanges";
 import pushAll, { pushChangelog, pushSeperator, pushTitle } from "./pusher";
+import log from "fancy-log";
+import * as util from "util";
 
 /**
  * Generates a changelog based on environmental variables, and saves it a changelog data class.
@@ -24,6 +26,8 @@ async function createChangelog(): Promise<ChangelogData> {
 		const tags = data.getIterations();
 		pushTitle(data);
 		for (const tag of tags) {
+			const iteration = tags.indexOf(tag);
+			log(`Iteration ${iteration + 1} of Changelog.`);
 			data.setupIteration(tag);
 			categoriesSetup();
 			specialParserSetup(data);
@@ -34,8 +38,8 @@ async function createChangelog(): Promise<ChangelogData> {
 
 			await generateModChanges(data);
 
-			pushChangelog(data);
-			if (tags.indexOf(tag) < tags.length - 1) {
+			await pushChangelog(data);
+			if (iteration < tags.length - 1) {
 				// More to go
 				pushSeperator(data);
 				data.resetForIteration();
@@ -43,6 +47,7 @@ async function createChangelog(): Promise<ChangelogData> {
 		}
 		return data;
 	}
+	log("No Iterations Detected.");
 
 	categoriesSetup();
 	specialParserSetup(data);
@@ -53,7 +58,7 @@ async function createChangelog(): Promise<ChangelogData> {
 
 	await generateModChanges(data);
 
-	pushAll(data);
+	await pushAll(data);
 
 	return data;
 }
