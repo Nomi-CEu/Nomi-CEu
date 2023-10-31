@@ -6,6 +6,7 @@ import gulp from "gulp";
 import dedent from "dedent-js";
 import { checkEnvironmentalVariables } from "../../util/util";
 import sortedStringify from "json-stable-stringify-without-jsonify";
+import log, { error } from "fancy-log";
 
 // This updates all the files, for a release.
 
@@ -30,11 +31,11 @@ export async function check(): Promise<void> {
 	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
 
 	if (notRelease) {
-		console.log("Detected that this is not a release commit.");
-		console.log("Version info will not change, but the files will be updated from the template.");
+		log("Detected that this is not a release commit.");
+		log("Version info will not change, but the files will be updated from the template.");
 		await checkNotRelease(versionsFilePath);
 	} else {
-		console.log("Detected that this is a release commit.");
+		log("Detected that this is a release commit.");
 		await checkRelease(versionsFilePath);
 	}
 }
@@ -50,9 +51,7 @@ export async function setNotRelease(): Promise<void> {
 async function checkNotRelease(versionsFilePath: string) {
 	// Check if versions.txt exists
 	if (!fs.existsSync(versionsFilePath)) {
-		console.error(
-			`Version.txt does not exist. Creating empty file, and adding ${version} to it. This may be an error.`,
-		);
+		error(`Version.txt does not exist. Creating empty file, and adding ${version} to it. This may be an error.`);
 
 		// Create Versions.txt, with version
 		await fs.promises.writeFile(versionsFilePath, `        - ${version}`);
@@ -62,7 +61,7 @@ async function checkNotRelease(versionsFilePath: string) {
 
 		// No Duplicate Key
 		if (!versionList.includes(version)) {
-			console.error(`Version is not in version.txt. Adding ${version} to version.txt. This may be an error.`);
+			error(`Version is not in version.txt. Adding ${version} to version.txt. This may be an error.`);
 
 			versionList = `        - ${version}\n${versionList}`;
 			await fs.promises.writeFile(versionsFilePath, versionList);
@@ -74,7 +73,7 @@ async function checkNotRelease(versionsFilePath: string) {
 async function checkRelease(versionsFilePath: string) {
 	// Check if versions.txt exists
 	if (!fs.existsSync(versionsFilePath)) {
-		console.error("Version.txt does not exist. Creating empty file. This may be an error.");
+		error("Version.txt does not exist. Creating empty file. This may be an error.");
 
 		// Create Versions.txt
 		fs.closeSync(fs.openSync(versionsFilePath, "w"));

@@ -28,6 +28,7 @@ import {
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
+import { error } from "fancy-log";
 
 let data: ChangelogData;
 
@@ -46,7 +47,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 	if (!info) return undefined;
 
 	if (!info.checks) {
-		console.error(dedent`
+		error(dedent`
 			Ignore Info in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -58,7 +59,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 	try {
 		infoKeys = Object.keys(info.checks);
 	} catch (err) {
-		console.error(dedent`
+		error(dedent`
 			Could not get the keys in Ignore Info of body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -73,7 +74,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 	infoKeys.forEach((key) => {
 		if (ignoreKeys.has(key)) checkResults.push(ignoreChecks[key].call(this, info.checks[key], data));
 		else {
-			console.error(dedent`
+			error(dedent`
 			Ignore Check with key '${key}' in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -85,7 +86,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 		}
 	});
 	if (checkResults.length === 0) {
-		console.error(dedent`
+		error(dedent`
 			No Ignore Checks found in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -102,7 +103,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 	if (info.logic === undefined) logic = defaultIgnoreLogic;
 	else if (Object.keys(ignoreLogics).includes(info.logic)) logic = ignoreLogics[info.logic];
 	else {
-		console.error(dedent`
+		error(dedent`
 			Ignore Logic '${info.logic}' in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -290,7 +291,7 @@ async function parseTOML<T>(
 		if (!itemKey) item = parseResult.data as T;
 		else item = parseResult.data[itemKey];
 	} catch (e) {
-		console.error(dedent`
+		error(dedent`
 			Failed parsing TOML in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -298,13 +299,13 @@ async function parseTOML<T>(
 			This could be because of invalid syntax.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			console.error(dedent`
+			error(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
 
-		console.error(`\n${endMessage}\n`);
+		error(`\n${endMessage}\n`);
 		if (data.isTest) throw e;
 		return undefined;
 	}
@@ -335,19 +336,19 @@ async function parseTOMLToList<T>(
 	const endMessage = getEndMessage(delimiter);
 
 	if (!messages || !Array.isArray(messages) || messages.length === 0) {
-		console.error(dedent`
+		error(dedent`
 			List (key: '${listKey}') in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			console.error(dedent`
+			error(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
-		console.error(`${endMessage}\n`);
+		error(`${endMessage}\n`);
 
 		if (data.isTest) throw new Error("Failed Parsing Message List. See Above.");
 		return;
@@ -355,19 +356,19 @@ async function parseTOMLToList<T>(
 	for (let i = 0; i < messages.length; i++) {
 		const item = messages[i];
 		if (!emptyCheck(item)) {
-			console.error(dedent`
+			error(dedent`
 				Missing Requirements for entry ${i + 1} in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
 
 			if (commitObject.body && commitBody !== commitObject.body) {
-				console.error(dedent`
+				error(dedent`
 					Original Body:
 					\`\`\`
 					${commitObject.body}\`\`\``);
 			}
-			console.error(`${endMessage}\n`);
+			error(`${endMessage}\n`);
 
 			if (data.isTest) throw new Error("Bad Entry. See Above.");
 			continue;

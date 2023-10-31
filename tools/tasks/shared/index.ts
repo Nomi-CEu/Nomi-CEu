@@ -85,12 +85,12 @@ async function fetchExternalDependencies() {
  */
 async function fetchOrMakeChangelog() {
 	if (isEnvVariableSet("CHANGELOG_URL") && isEnvVariableSet("CHANGELOG_CF_URL")) {
-		console.log("Using Changelog Files from URL.");
+		log("Using Changelog Files from URL.");
 		await downloadChangelogs(process.env.CHANGELOG_URL, process.env.CHANGELOG_CF_URL);
 		return;
 	}
 	if (isEnvVariableSet("CHANGELOG_BRANCH")) {
-		console.log("Using Changelog Files from Branch.");
+		log("Using Changelog Files from Branch.");
 		const url = "https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
 		await downloadChangelogs(
 			mustache.render(url, { branch: process.env.CHANGELOG_BRANCH, filename: "CHANGELOG.md" }),
@@ -98,7 +98,7 @@ async function fetchOrMakeChangelog() {
 		);
 		return;
 	}
-	console.log("Creating Changelog Files.");
+	log("Creating Changelog Files.");
 	await createBuildChangelog();
 }
 

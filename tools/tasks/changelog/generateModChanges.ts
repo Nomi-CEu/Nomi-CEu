@@ -8,6 +8,7 @@ import { defaultIndentation, modChangesAllocations, repoLink } from "./definitio
 import ChangelogData from "./changelogData";
 import { SpecialChangelogFormatting } from "../../types/changelogTypes";
 import { sortCommitListReverse } from "./pusher";
+import { error } from "fancy-log";
 
 /**
  * Mod Changes special formatting
@@ -161,7 +162,7 @@ function getCommitChange(SHA: string): CommitChange {
 		oldManifest = JSON.parse(getFileAtRevision("manifest.json", `${SHA}^`)) as ModpackManifest;
 		newManifest = JSON.parse(getFileAtRevision("manifest.json", SHA)) as ModpackManifest;
 	} catch (e) {
-		console.error(dedent`
+		error(dedent`
 			Failed to parse the manifest.json file at commit ${SHA} or the commit before!
 			Skipping...`);
 		return;
