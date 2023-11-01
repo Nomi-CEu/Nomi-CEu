@@ -26,8 +26,9 @@ import gregtech.api.util.GTUtility
 import gregtech.api.GTValues
 import net.minecraft.item.ItemStack
 import net.minecraft.world.World
-import net.minecraft.client.resources.I18n
 import gregtech.client.utils.TooltipHelper
+import net.minecraftforge.fml.relauncher.Side
+import net.minecraftforge.fml.relauncher.SideOnly
 
 public class NaquadahReactor extends FuelMultiblockController {
     public final int numSpatial
@@ -93,11 +94,13 @@ public class NaquadahReactor extends FuelMultiblockController {
     }
     
     @Override
+    @SideOnly(Side.CLIENT)
     ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return GCYMTextures.MIXER_CASING
     }
     
     @Override
+    @SideOnly(Side.CLIENT)
     protected ICubeRenderer getFrontOverlay() {
         return Textures.FUSION_REACTOR_OVERLAY
     }
@@ -112,6 +115,7 @@ public class NaquadahReactor extends FuelMultiblockController {
     }
     
     @Override
+    @SideOnly(Side.CLIENT)
     protected void addDisplayText(List<ITextComponent> textList) {
         if (!isStructureFormed()) {
             ITextComponent tooltip = new TextComponentTranslation("gregtech.multiblock.invalid_structure.tooltip")
@@ -138,9 +142,12 @@ public class NaquadahReactor extends FuelMultiblockController {
     }
     
     @Override
+    @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced)
-        tooltip.add(I18n.format("tooltip.contenttweaker.naquadah_reactor.produces", AMP, GTValues.VNF[tier] + TextFormatting.RESET))
-        tooltip.add(TooltipHelper.RAINBOW_SLOW.toString() + I18n.format("gui.contenttweaker.naquadah_reactor.overclock"))
+        // Must not import I18n as not available on server
+        // Must call .toString() otherwise groovy tries to find an override for the + operator
+        tooltip.add(net.minecraft.client.resources.I18n.format("tooltip.contenttweaker.naquadah_reactor.produces", AMP, GTValues.VNF[tier] + TextFormatting.RESET.toString())) 
+        tooltip.add(TooltipHelper.RAINBOW_SLOW.toString() + net.minecraft.client.resources.I18n.format("gui.contenttweaker.naquadah_reactor.overclock"))
     }
 }
