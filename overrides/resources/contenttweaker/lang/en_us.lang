@@ -391,6 +391,9 @@ item.contenttweaker.pulsatingmesh.name=Pulsating Mesh
 tile.contenttweaker.simulation_casing.name=Naquadah-Plated Dark Steel Machine Casing
 tile.contenttweaker.simulation_casing_2.name=Naquadah Machine Casing
 
+gui.contenttweaker.naquadah_reactor.overclock=Does not overclock!
+tooltip.contenttweaker.naquadah_reactor.produces=Produces exactly %s amps of %s.
+
 multiblocktweaker.machine.microverse_projector_basic.name=Basic Microverse Projector
 multiblocktweaker.machine.microverse_projector_advanced.name=Advanced Microverse Projector
 multiblocktweaker.machine.microverse_projector_advanced_ii.name=Advanced Microverse Projector II

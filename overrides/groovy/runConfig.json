@@ -4,7 +4,13 @@
   "version": "1.0.0",
   "debug": false,
   "classes": {
-    "preInit": []
+    "preInit": [
+      "classes/preInit/"
+    ],
+    "init": [
+      "classes/init/NaqRecipeLogic.groovy",
+      "classes/init"
+    ]
   },
   "loaders": {
     "preInit": [
