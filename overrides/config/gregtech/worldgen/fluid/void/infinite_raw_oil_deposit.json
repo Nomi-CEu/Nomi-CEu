@@ -6,9 +6,8 @@
     "max": 81
   },
   "depletion": {
-    "amount": 1,
-    "chance": 1,
-    "depleted_yield": 79
+    "amount": 0,
+    "chance": 0
   },
   "dimension_filter": [
     "dimension_id:119"
