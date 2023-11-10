@@ -123,7 +123,7 @@ export interface SpecialChangelogFormatting<T> {
 	/**
 	 * Formatting Function
 	 */
-	formatting: (message: ChangelogMessage, storage?: T) => string;
+	formatting: (message: ChangelogMessage, subMessage: boolean, storage?: T) => string;
 
 	/**
 	 * Storage
@@ -254,6 +254,17 @@ export interface FixUpInfo {
 	sha: string;
 	newTitle: string;
 	newBody?: string;
+}
+
+export interface ModInfo {
+	projectID: number;
+	info?: string;
+	details?: string[];
+}
+
+export interface ParsedModInfo {
+	info?: string;
+	details?: ChangelogMessage[];
 }
 
 export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release" | "Cutting Edge Build";

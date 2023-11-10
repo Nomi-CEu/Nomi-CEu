@@ -175,7 +175,11 @@ export function sortCommitListReverse(list: Commit[]): void {
  */
 async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): Promise<string> {
 	if (changelogMessage.specialFormatting)
-		return changelogMessage.specialFormatting.formatting(changelogMessage, changelogMessage.specialFormatting.storage);
+		return changelogMessage.specialFormatting.formatting(
+			changelogMessage,
+			subMessage,
+			changelogMessage.specialFormatting.storage,
+		);
 
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	let message = changelogMessage.commitMessage.trim();

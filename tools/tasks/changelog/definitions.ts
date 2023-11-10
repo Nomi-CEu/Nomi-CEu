@@ -27,6 +27,8 @@ export const combineList = "commits";
 export const fixUpKey = "[FIXUP]";
 export const fixUpList = "fixes";
 export const ignoreKey = "[IGNORE]";
+export const modInfoKey = "[MOD INFO]";
+export const modInfoList = "infos";
 
 /* Sub Category Keys */
 // Mode Category Keys

@@ -6,6 +6,8 @@ import {
 	Ignored,
 	IgnoreInfo,
 	IgnoreLogic,
+	ModInfo,
+	ParsedModInfo,
 	Parser,
 } from "../../types/changelogTypes";
 import dedent from "dedent-js";
@@ -25,6 +27,8 @@ import {
 	ignoreKey,
 	ignoreLogics,
 	indentationLevel,
+	modInfoKey,
+	modInfoList,
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
@@ -129,7 +133,7 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 		commit,
 		fixUpKey,
 		fixUpList,
-		(item: FixUpInfo) => item.sha && item.newTitle,
+		(item: FixUpInfo) => Boolean(item.sha) && Boolean(item.newTitle),
 		(item) => {
 			// Only override if no other overrides, from newer commits, set
 			if (!data.commitFixes.has(item.sha)) data.commitFixes.set(item.sha, item);
@@ -148,6 +152,41 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 }
 
 /**
+ * Parses a commit with 'mod info'.
+ */
+export async function parseModInfo(commitBody: string, commitObject: Commit): Promise<void> {
+	await parseTOMLToList(
+		commitBody,
+		commitObject,
+		modInfoKey,
+		modInfoList,
+		(item: ModInfo) =>
+			// Accept if have project id, and has either info, or details which is an array with length > 0
+			Boolean(item.projectID) &&
+			(Boolean(item.info) || (Boolean(item.details) && Array.isArray(item.details) && item.details.length > 0)),
+		async (item) =>
+			// Must parse projectID into string then int because of weird artifacts
+			data.modInfoList.set(Number.parseInt(String(item.projectID)), await getParsedModInfo(item)),
+	);
+}
+
+/**
+ * Gets the parsed mod info of a mod info.
+ */
+async function getParsedModInfo(modInfo: ModInfo): Promise<ParsedModInfo> {
+	let subMessages: ChangelogMessage[] = undefined;
+	if (modInfo.details && modInfo.details.length > 0)
+		subMessages = modInfo.details.map((detail) => {
+			return { commitMessage: detail, indentation: indentationLevel };
+		});
+
+	return {
+		info: modInfo.info,
+		details: subMessages,
+	};
+}
+
+/**
  * Parses a commit with 'expand'.
  */
 export async function parseExpand(commitBody: string, commitObject: Commit, parser: Parser): Promise<void> {
@@ -156,7 +195,7 @@ export async function parseExpand(commitBody: string, commitObject: Commit, pars
 		commitObject,
 		expandKey,
 		expandList,
-		(item: ExpandedMessage) => item.messageTitle,
+		(item: ExpandedMessage) => Boolean(item.messageTitle),
 		async (item) => {
 			const title = dedent(item.messageTitle);
 
@@ -219,7 +258,7 @@ async function expandDetailsLevel(
 		commitObject,
 		detailsKey,
 		detailsList,
-		(item: string) => item,
+		(item: string) => Boolean(item),
 		async (item) => {
 			item = dedent(item).trim();
 			if (item.includes(detailsKey)) {
@@ -241,7 +280,7 @@ export async function parseCombine(commitBody: string, commitObject: Commit): Pr
 		commitObject,
 		combineKey,
 		combineList,
-		(item: string) => item,
+		(item: string) => Boolean(item),
 		(item: string) => {
 			if (!data.combineList.has(item)) data.combineList.set(item, []);
 			data.combineList.get(item).push(commitObject);
@@ -328,7 +367,7 @@ async function parseTOMLToList<T>(
 	commitObject: Commit,
 	delimiter: string,
 	listKey: string,
-	emptyCheck: (item: T) => string,
+	emptyCheck: (item: T) => boolean,
 	perItemCallback: (item: T) => void,
 	matterCallback?: (matter: GrayMatterFile<string>) => void,
 ): Promise<void> {
