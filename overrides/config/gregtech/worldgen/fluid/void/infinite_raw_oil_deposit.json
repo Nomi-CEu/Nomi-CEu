@@ -3,11 +3,12 @@
   "name": "Void Infinite Raw Oil Deposit",
   "yield": {
     "min": 80,
-    "max": 81
+    "max": 80
   },
   "depletion": {
     "amount": 0,
-    "chance": 0
+    "chance": 0,
+    "depleted_yield": 80
   },
   "dimension_filter": [
     "dimension_id:119"
