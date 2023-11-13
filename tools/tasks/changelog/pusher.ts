@@ -2,11 +2,20 @@ import ChangelogData from "./changelogData";
 import { categories, defaultIndentation } from "./definitions";
 import { Category, ChangelogMessage, Commit } from "../../types/changelogTypes";
 import { repoLink } from "./definitions";
+import { Octokit } from "@octokit/rest";
+import { getIssueURL, getNewestIssueURLs } from "../../util/util";
 
 let data: ChangelogData;
+let octokit: Octokit;
 
-export default function pushAll(inputData: ChangelogData): void {
+export default async function pushAll(inputData: ChangelogData): Promise<void> {
+	pushTitle(inputData);
+	await pushChangelog(inputData);
+}
+
+export function pushTitle(inputData: ChangelogData): void {
 	data = inputData;
+
 	// Push the titles.
 	// Center Align is replaced by the correct center align style in the respective deployments.
 	// Must be triple bracketed, to make mustache not html escape it.
@@ -27,27 +36,37 @@ export default function pushAll(inputData: ChangelogData): void {
 		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`, "");
 		data.builder.push("{{{ CF_REDIRECT }}}", "");
 	}
+}
+
+export async function pushChangelog(inputData: ChangelogData): Promise<void> {
+	data = inputData;
+
+	octokit = new Octokit({
+		auth: process.env.GITHUB_TOKEN,
+	});
+
+	// Save Issue/PR Info to Cache
+	await getNewestIssueURLs(octokit);
+
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
 	// Push Sections of Changelog
-	categories.forEach((category) => {
-		pushCategory(category);
-	});
+	for (const category of categories) {
+		await pushCategory(category);
+	}
 
 	// Push the commit log
-	if (data.commitList) {
+	if (data.commitList.length > 0) {
 		sortCommitList(data.commitList, (commit) => commit);
 
 		data.builder.push("## Commits");
 		data.commitList.forEach((commit) => {
 			data.builder.push(formatCommit(commit));
 		});
-	}
-
-	// Check if the builder only contains the title.
-	if (data.builder.length <= 3) {
+	} else {
+		// No Commit List = No Changes
 		data.builder.push("");
-		data.builder.push("There haven't been any changes.");
+		data.builder.push("**There haven't been any changes.**");
 	}
 
 	// Push link
@@ -57,15 +76,21 @@ export default function pushAll(inputData: ChangelogData): void {
 	);
 }
 
+export function pushSeperator(inputData: ChangelogData): void {
+	data = inputData;
+
+	data.builder.push("", "<hr>", "");
+}
+
 /**
  * Pushes a given category to the builders.
  */
-function pushCategory(category: Category) {
+async function pushCategory(category: Category) {
 	const categoryLog: string[] = [];
 	let hasValues = false;
 
 	// Push All Sub Categories
-	category.subCategories.forEach((subCategory) => {
+	for (const subCategory of category.subCategories) {
 		// Loop through key list instead of map to produce correct order
 		const list = category.changelogSection.get(subCategory);
 		if (list && list.length != 0) {
@@ -82,19 +107,18 @@ function pushCategory(category: Category) {
 			);
 
 			// Push Log
-			list.forEach((changelogMessage) => {
-				categoryLog.push(formatChangelogMessage(changelogMessage));
+			for (const changelogMessage of list) {
+				categoryLog.push(await formatChangelogMessage(changelogMessage));
 				// Push Sub Messages
 				if (changelogMessage.subChangelogMessages) {
-					changelogMessage.subChangelogMessages.forEach((subMessage) => {
-						categoryLog.push(formatChangelogMessage(subMessage, true));
-					});
+					for (const subMessage of changelogMessage.subChangelogMessages)
+						categoryLog.push(await formatChangelogMessage(subMessage, true));
 				}
-			});
+			}
 			categoryLog.push("");
 			hasValues = true;
 		}
-	});
+	}
 	if (hasValues) {
 		// Push Title
 		data.builder.push(`## ${category.categoryName}:`);
@@ -133,7 +157,7 @@ function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined,
  * Sorts a commits list so that newest commits are on the bottom.
  * @param list The commit list.
  */
-export function sortCommitListReverse(list: Commit[]) {
+export function sortCommitListReverse(list: Commit[]): void {
 	list.sort((a, b) => {
 		const dateA = new Date(a.date);
 		const dateB = new Date(b.date);
@@ -149,22 +173,15 @@ export function sortCommitListReverse(list: Commit[]) {
  * @param subMessage Whether this message is a subMessage (used in details). Set to true to make it a subMessage (different parsing). Defaults to false.
  * @return string Formatted Changelog Message
  */
-function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): string {
+async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): Promise<string> {
 	if (changelogMessage.specialFormatting)
 		return changelogMessage.specialFormatting.formatting(changelogMessage, changelogMessage.specialFormatting.storage);
 
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	let message = changelogMessage.commitMessage.trim();
 
-	// Transform PR tags into a link.
-	if (message.match(/\(#\d+\)/g)) {
-		const matched = message.match(/\(#\d+\)/g);
-		matched.forEach((match) => {
-			// Extract digits
-			const digits = match.match(/\d+/g);
-			message = message.replace(match, `([#${digits}](${repoLink}pull/${digits}))`);
-		});
-	}
+	// Transform PR and/or Issue tags into a link.
+	message = await transformTags(message);
 
 	if (changelogMessage.commitObject && !subMessage) {
 		if (data.combineList.has(changelogMessage.commitObject.hash)) {
@@ -176,11 +193,15 @@ function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage =
 
 			const formattedCommits: string[] = [];
 			const authors: string[] = [];
+			const authorEmails: Set<string> = new Set<string>();
 			const processedSHAs: Set<string> = new Set<string>();
 
 			commits.forEach((commit) => {
 				if (processedSHAs.has(commit.hash)) return;
-				if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
+				if (!authors.includes(commit.author_name) && !authorEmails.has(commit.author_email)) {
+					authors.push(commit.author_name);
+					authorEmails.add(commit.author_email);
+				}
 				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
 				processedSHAs.add(commit.hash);
 			});
@@ -208,4 +229,24 @@ function formatCommit(commit: Commit): string {
 	const shortSHA = commit.hash.substring(0, 7);
 
 	return `* [\`${shortSHA}\`](${repoLink}commit/${commit.hash}): ${formattedCommit}`;
+}
+
+/**
+ * Transforms PR/Issue Tags into Links.
+ */
+async function transformTags(message: string): Promise<string> {
+	if (message.search(/#\d+/) !== -1) {
+		const matched = message.match(/#\d+/g);
+		for (const match of matched) {
+			// Extract digits
+			const digits = Number.parseInt(match.match(/\d+/)[0]);
+
+			// Get PR/Issue Info (PRs are listed in the Issue API Endpoint)
+			const url = await getIssueURL(digits, octokit);
+			if (url) {
+				message = message.replace(match, `[#${digits}](${url})`);
+			}
+		}
+	}
+	return message;
 }

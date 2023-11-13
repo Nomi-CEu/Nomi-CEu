@@ -1,20 +1,34 @@
-import { ChangelogMessage, Commit, ExpandedMessage, FixUpInfo, Parser } from "../../types/changelogTypes";
+import {
+	ChangelogMessage,
+	Commit,
+	ExpandedMessage,
+	FixUpInfo,
+	Ignored,
+	IgnoreInfo,
+	IgnoreLogic,
+	Parser,
+} from "../../types/changelogTypes";
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
 import toml from "@ltd/j-toml";
 import {
 	combineKey,
 	combineList,
+	defaultIgnoreLogic,
 	detailsKey,
 	detailsList,
 	expandKey,
 	expandList,
 	fixUpKey,
 	fixUpList,
+	ignoreChecks,
+	ignoreKey,
+	ignoreLogics,
 	indentationLevel,
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
+import { error } from "fancy-log";
 
 let data: ChangelogData;
 
@@ -23,11 +37,94 @@ export function specialParserSetup(inputData: ChangelogData): void {
 }
 
 /**
+ * Checks a commit's ignore.
+ * @commit The Commit Body. Does check whether the ignore key is there.
+ * @return Returns undefined to continue, and an Ignored object if to skip.
+ */
+export async function parseIgnore(commitBody: string, commitObject: Commit): Promise<Ignored | undefined> {
+	if (!commitBody.includes(ignoreKey)) return undefined;
+	const info = await parseTOML<IgnoreInfo>(commitBody, commitObject, ignoreKey);
+	if (!info) return undefined;
+
+	if (!info.checks) {
+		error(dedent`
+			Ignore Info in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is missing check info (key 'checks').`);
+		return undefined;
+	}
+
+	let infoKeys: string[];
+	try {
+		infoKeys = Object.keys(info.checks);
+	} catch (err) {
+		error(dedent`
+			Could not get the keys in Ignore Info of body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message})!`);
+		if (data.isTest) throw err;
+		return undefined;
+	}
+
+	/* Find Checks */
+	const ignoreKeys = new Set<string>(Object.keys(ignoreChecks));
+	const checkResults: boolean[] = [];
+	infoKeys.forEach((key) => {
+		if (ignoreKeys.has(key)) checkResults.push(ignoreChecks[key].call(this, info.checks[key], data));
+		else {
+			error(dedent`
+			Ignore Check with key '${key}' in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is not accepted!
+			Only accepts keys: ${Array.from(ignoreKeys)
+				.map((key) => `'${key}'`)
+				.join(", ")}.`);
+			if (data.isTest) throw new Error("Failed Parsing Ignore Check. See Above.");
+		}
+	});
+	if (checkResults.length === 0) {
+		error(dedent`
+			No Ignore Checks found in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message})!
+			Only accepts keys: ${Array.from(ignoreKeys)
+				.map((key) => `'${key}'`)
+				.join(", ")}.`);
+		if (data.isTest) throw new Error("Failed Parsing Ignore Checks. See Above.");
+		return undefined;
+	}
+
+	/* Find Logic */
+	let logic: IgnoreLogic;
+	if (info.logic === undefined) logic = defaultIgnoreLogic;
+	else if (Object.keys(ignoreLogics).includes(info.logic)) logic = ignoreLogics[info.logic];
+	else {
+		error(dedent`
+			Ignore Logic '${info.logic}' in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message})!
+			Only accepts keys: ${Object.keys(ignoreLogics)
+				.map((key) => `'${key}'`)
+				.join(", ")}.`);
+		if (data.isTest) throw new Error("Failed Parsing Ignore Logic. See Above.");
+		logic = defaultIgnoreLogic;
+	}
+
+	if (logic.call(this, checkResults)) return new Ignored(info.addCommitList);
+	return undefined;
+}
+
+/**
  * Parses a commit with 'Fixup'.
  */
 export async function parseFixUp(commit: Commit): Promise<boolean> {
 	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
-	await parse(
+	await parseTOMLToList(
 		commit.body,
 		commit,
 		fixUpKey,
@@ -54,7 +151,7 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
  * Parses a commit with 'expand'.
  */
 export async function parseExpand(commitBody: string, commitObject: Commit, parser: Parser): Promise<void> {
-	await parse(
+	await parseTOMLToList(
 		commitBody,
 		commitObject,
 		expandKey,
@@ -117,7 +214,7 @@ async function expandDetailsLevel(
 	indentation = indentationLevel,
 ): Promise<ChangelogMessage[]> {
 	const result: ChangelogMessage[] = [];
-	await parse(
+	await parseTOMLToList(
 		commitBody,
 		commitObject,
 		detailsKey,
@@ -139,7 +236,7 @@ async function expandDetailsLevel(
  * Parses a commit with 'combine'.
  */
 export async function parseCombine(commitBody: string, commitObject: Commit): Promise<void> {
-	await parse(
+	await parseTOMLToList(
 		commitBody,
 		commitObject,
 		combineKey,
@@ -153,32 +250,23 @@ export async function parseCombine(commitBody: string, commitObject: Commit): Pr
 }
 
 /**
- * Parse TOML in a commit body to produce a list.
+ * Parse TOML in a commit body.
  * @param commitBody The body to parse
  * @param commitObject The commit object to grab messages from, and to determine error messages.
  * @param delimiter The delimiters, surrounding the TOML.
- * @param listKey The key of the list to parse.
- * @param emptyCheck The check to see if an item in the list is invalid.
- * @param perItemCallback The callback to perform on each item in the list.
+ * @param itemKey The key of the item to parse. If not set, will just parse the main object.
  * @param matterCallback An optional callback to perform on the matter.
+ * @returns item The Item/Object. Undefined if error.
  */
-async function parse<T>(
+async function parseTOML<T>(
 	commitBody: string,
 	commitObject: Commit,
 	delimiter: string,
-	listKey: string,
-	emptyCheck: (item: T) => string,
-	perItemCallback: (item: T) => void,
+	itemKey?: string,
 	matterCallback?: (matter: GrayMatterFile<string>) => void,
-): Promise<void> {
-	let messages: T[];
-	let endMessage = "Skipping...";
-
-	if (data.isTest) {
-		endMessage = dedent`
-			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
-			Also check that you have surrounded the TOML in '${delimiter}'!`;
-	}
+): Promise<T | undefined> {
+	let item: T;
+	const endMessage = getEndMessage(delimiter);
 
 	try {
 		// Remove everything before first delimiter in body
@@ -200,41 +288,67 @@ async function parse<T>(
 
 		if (matterCallback) matterCallback(parseResult);
 
-		messages = parseResult.data[listKey];
+		if (!itemKey) item = parseResult.data as T;
+		else item = parseResult.data[itemKey];
 	} catch (e) {
-		console.error(dedent`
+		error(dedent`
 			Failed parsing TOML in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}).
-			This could be because of invalid syntax, or because the Message List (key: '${listKey}') is not an array.`);
+			This could be because of invalid syntax.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			console.error(dedent`
+			error(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
 
-		console.error(`\n${endMessage}\n`);
+		error(`\n${endMessage}\n`);
 		if (data.isTest) throw e;
-		return;
+		return undefined;
 	}
 
+	return item;
+}
+
+/**
+ * Parse TOML in a commit body to produce a list.
+ * @param commitBody The body to parse
+ * @param commitObject The commit object to grab messages from, and to determine error messages.
+ * @param delimiter The delimiters, surrounding the TOML.
+ * @param listKey The key of the list to parse.
+ * @param emptyCheck The check to see if an item in the list is invalid.
+ * @param perItemCallback The callback to perform on each item in the list.
+ * @param matterCallback An optional callback to perform on the matter.
+ */
+async function parseTOMLToList<T>(
+	commitBody: string,
+	commitObject: Commit,
+	delimiter: string,
+	listKey: string,
+	emptyCheck: (item: T) => string,
+	perItemCallback: (item: T) => void,
+	matterCallback?: (matter: GrayMatterFile<string>) => void,
+): Promise<void> {
+	const messages = await parseTOML<T[]>(commitBody, commitObject, delimiter, listKey, matterCallback);
+	const endMessage = getEndMessage(delimiter);
+
 	if (!messages || !Array.isArray(messages) || messages.length === 0) {
-		console.error(dedent`
+		error(dedent`
 			List (key: '${listKey}') in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			console.error(dedent`
+			error(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
-		console.error(`${endMessage}\n`);
+		error(`${endMessage}\n`);
 
 		if (data.isTest) throw new Error("Failed Parsing Message List. See Above.");
 		return;
@@ -242,23 +356,32 @@ async function parse<T>(
 	for (let i = 0; i < messages.length; i++) {
 		const item = messages[i];
 		if (!emptyCheck(item)) {
-			console.error(dedent`
+			error(dedent`
 				Missing Requirements for entry ${i + 1} in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
 
 			if (commitObject.body && commitBody !== commitObject.body) {
-				console.error(dedent`
+				error(dedent`
 					Original Body:
 					\`\`\`
 					${commitObject.body}\`\`\``);
 			}
-			console.error(`${endMessage}\n`);
+			error(`${endMessage}\n`);
 
 			if (data.isTest) throw new Error("Bad Entry. See Above.");
 			continue;
 		}
 		perItemCallback(item);
 	}
+}
+
+function getEndMessage(delimiter: string) {
+	if (data.isTest) {
+		return dedent`
+			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
+			Also check that you have surrounded the TOML in '${delimiter}'!`;
+	}
+	return "Skipping...";
 }

@@ -122,8 +122,8 @@ val dml_sim_chamber = Builder.start("dml_sim_chamber", 3100)
             .where('G', <metastate:appliedenergistics2:quartz_vibrant_glass:0>)
             .where('O', <metastate:extendedcrafting:storage:4> /* omnium */)
             .where('-', CTPredicate.getAny())
-            .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>)
-            | controller.autoAbilities(true, false, true, true, false, false, false))
+            .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>).setMinGlobalLimited(30)
+            | controller.autoAbilities(true, true, true, true, false, false, false))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -135,9 +135,10 @@ val dml_sim_chamber = Builder.start("dml_sim_chamber", 3100)
             .build())
     .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
     .buildAndRegister();
-dml_sim_chamber.hasMaintenanceMechanics = false;
+dml_sim_chamber.hasMaintenanceMechanics = true;
 dml_sim_chamber.hasMufflerMechanics = false;
-//dml_sim_chamber.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
+dml_sim_chamber.canBeDistinct = true;
+dml_sim_chamber.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
 
 //Recipe for Controller
 // Moved to Groovy

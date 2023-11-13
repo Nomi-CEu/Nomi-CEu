@@ -13,10 +13,11 @@ import { fetchFileInfo, fetchProject, fetchProjectsBulk } from "./curseForgeAPI"
 import Bluebird from "bluebird";
 import { VersionManifest } from "../types/versionManifest";
 import { VersionsManifest } from "../types/versionsManifest";
-import log from "fancy-log";
+import log, { error } from "fancy-log";
 import { pathspec, SimpleGit, simpleGit } from "simple-git";
 import { Commit, ModChangeInfo } from "../types/changelogTypes";
-import { rootDirectory } from "../globals";
+import { repoName, repoOwner, rootDirectory } from "../globals";
+import { Octokit } from "@octokit/rest";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
@@ -205,18 +206,12 @@ export function makeArtifactNameBody(baseName: string): string {
 }
 
 /**
- * Returns the COMPARE_TAG env if set, else fetches the last tag known to Git using the current branch.
+ * Returns and fetches the last tag known to Git using the current branch.
  * @param before Tag to get the tag before.
  * @returns string Git tag.
  * @throws
  */
 export function getLastGitTag(before?: string): string {
-	if (isEnvVariableSet("COMPARE_TAG")) {
-		checkGitTag(process.env["COMPARE_TAG"]);
-
-		return process.env["COMPARE_TAG"];
-	}
-
 	if (before) {
 		before = `"${before}^"`;
 	}
@@ -244,7 +239,7 @@ export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] =
 	const commitList: Commit[] = [];
 	await git.log(options, (err, output) => {
 		if (err) {
-			console.error(err);
+			error(err);
 			throw new Error();
 		}
 
@@ -253,6 +248,17 @@ export async function getChangelog(since = "HEAD", to = "HEAD", dirs: string[] =
 	});
 
 	return commitList;
+}
+
+/**
+ * Gets the list of tags that are at or before a certain ref point.
+ * @param ref The ref point. Can be a tag or a commit sha. If not set, defaults to HEAD.
+ * @returns tags An array of all the tags
+ */
+export async function getTags(ref = "HEAD"): Promise<string[]> {
+	const options: string[] = ["--merged", ref];
+	const test = await git.tags(options);
+	return test.all;
 }
 
 /**
@@ -437,4 +443,58 @@ export function cleanupVersion(version: string): string {
 	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
 	const list = version.match(/[\d+.?]+/g);
 	return list[list.length - 1];
+}
+
+const issueURLCache: Map<number, string> = new Map<number, string>();
+
+/**
+ * Gets newest updated 100 closed issue/PR URLs of the repo and saves it to the cache.
+ */
+export async function getNewestIssueURLs(octokit: Octokit): Promise<void> {
+	if (issueURLCache.size > 0) return;
+	try {
+		const issues = await octokit.issues.listForRepo({
+			owner: repoOwner,
+			repo: repoName,
+			per_page: 100,
+			state: "closed",
+			sort: "updated",
+		});
+		if (issues.status !== 200) {
+			error(`Failed to get all Issue URLs of Repo. Returned Status Code ${issues.status}, expected Status 200.`);
+			return;
+		}
+		issues.data.forEach((issue) => {
+			if (!issueURLCache.has(issue.number)) issueURLCache.set(issue.number, issue.html_url);
+		});
+	} catch (e) {
+		error("Failed to get all Issue URLs of Repo. This may be because there are no issues, or because of rate limits.");
+	}
+}
+
+/**
+ * Gets the specified Issue URL from the cache, or retrieves it.
+ */
+export async function getIssueURL(issueNumber: number, octokit: Octokit): Promise<string> {
+	if (issueURLCache.has(issueNumber)) return issueURLCache.get(issueNumber);
+	try {
+		const issueInfo = await octokit.issues.get({
+			owner: repoOwner,
+			repo: repoName,
+			issue_number: issueNumber,
+		});
+		if (issueInfo.status !== 200) {
+			error(
+				`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. Returned Status Code ${issueInfo.status}, expected Status 200.`,
+			);
+			return "";
+		}
+		log(`No Issue URL Cache for Issue Number ${issueNumber}. Retrieved Specifically.`);
+		return issueInfo.data.html_url;
+	} catch (e) {
+		error(
+			`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. This may be because this is not a PR or Issue, or could be because of rate limits.`,
+		);
+		return "";
+	}
 }

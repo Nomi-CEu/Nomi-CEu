@@ -5068,6 +5068,7 @@
             "1:10": {
               "Count:3": 1,
               "Damage:2": 1,
+              "OreDict:8": "questbookSteamBoiler",
               "id:8": "gregtech:machine"
             }
           },
@@ -5392,17 +5393,13 @@
       "questID:3": 152,
       "tasks:9": {
         "0:10": {
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "id:8": "forge:bucketfilled",
-              "tag:10": {
-                "Amount:3": 1000,
-                "FluidName:8": "titanium_tetrachloride"
-              }
+              "Amount:3": 1000,
+              "FluidName:8": "titanium_tetrachloride"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -7513,32 +7510,37 @@
     },
     "214:10": {
       "preRequisites:11": [
-        232
+        232,
+        55
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.expert.db.214.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "contenttweaker:moondust"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "deuterium"
+            }
           },
           "ismain:1": 1,
           "lockedprogress:1": 1,
           "name:8": "nomifactory.quest.expert.db.214.title",
+          "questlogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 214,
       "tasks:9": {
         "0:10": {
-          "index:3": 1,
-          "requiredItems:9": {
+          "requiredFluids:9": {
             "0:10": {
-              "Count:3": 1,
-              "id:8": "contenttweaker:moondust"
+              "Amount:3": 1000,
+              "FluidName:8": "deuterium"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -7576,8 +7578,8 @@
     "216:10": {
       "preRequisites:11": [
         89,
-        782,
-        897
+        897,
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -13503,21 +13505,16 @@
     },
     "400:10": {
       "preRequisites:11": [
-        55
+        89
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.expert.db.400.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "deuterium"
-            }
+            "Damage:2": 1004,
+            "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 1,
-          "lockedprogress:1": 1,
           "name:8": "nomifactory.quest.expert.db.400.title",
           "visibility:8": "ALWAYS"
         }
@@ -13525,13 +13522,14 @@
       "questID:3": 400,
       "tasks:9": {
         "0:10": {
-          "requiredFluids:9": {
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "deuterium"
+              "Count:3": 1,
+              "Damage:2": 1004,
+              "id:8": "gregtech:meta_item_1"
             }
           },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -18820,8 +18818,7 @@
     },
     "594:10": {
       "preRequisites:11": [
-        214,
-        400
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24429,8 +24426,7 @@
     },
     "782:10": {
       "preRequisites:11": [
-        214,
-        400
+        214
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24667,7 +24663,6 @@
     },
     "790:10": {
       "preRequisites:11": [
-        69,
         72
       ],
       "properties:10": {
@@ -28766,7 +28761,8 @@
           "desc:8": "nomifactory.quest.expert.db.914.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "betterquesting:placeholder"
+            "Damage:2": 630,
+            "id:8": "gregtech:meta_item_1"
           },
           "name:8": "nomifactory.quest.expert.db.914.title",
           "visibility:8": "ALWAYS"
@@ -29796,18 +29792,47 @@
     },
     "938:10": {
       "preRequisites:11": [
-        192
+        3
       ],
       "properties:10": {
         "betterquesting:10": {
           "desc:8": "nomifactory.quest.expert.db.938.desc",
           "icon:10": {
             "Count:3": 1,
+            "id:8": "actuallyadditions:block_giant_chest"
+          },
+          "name:8": "nomifactory.quest.expert.db.938.title",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 938,
+      "tasks:9": {
+        "0:10": {
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "id:8": "actuallyadditions:block_giant_chest"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "939:10": {
+      "preRequisites:11": [
+        192
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "desc:8": "nomifactory.quest.expert.db.939.desc",
+          "icon:10": {
+            "Count:3": 1,
             "Damage:2": 261,
             "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.938.title"
+          "name:8": "nomifactory.quest.expert.db.939.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1029,
@@ -29830,7 +29855,7 @@
         }
       }
     },
-    "939:10": {
+    "940:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -29839,13 +29864,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.939.desc",
+          "desc:8": "nomifactory.quest.expert.db.940.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1041,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.expert.db.939.title"
+          "name:8": "nomifactory.quest.expert.db.940.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1030,
@@ -29878,7 +29904,7 @@
         }
       }
     },
-    "940:10": {
+    "941:10": {
       "preRequisiteTypes:7": [
         2
       ],
@@ -29887,13 +29913,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.940.desc",
+          "desc:8": "nomifactory.quest.expert.db.941.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1392,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.expert.db.940.title"
+          "name:8": "nomifactory.quest.expert.db.941.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1031,
@@ -29922,20 +29949,21 @@
         }
       }
     },
-    "941:10": {
+    "942:10": {
       "preRequisites:11": [
         109,
         339
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.941.desc",
+          "desc:8": "nomifactory.quest.expert.db.942.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1748,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.expert.db.941.title"
+          "name:8": "nomifactory.quest.expert.db.942.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1032,
@@ -29957,20 +29985,21 @@
         }
       }
     },
-    "942:10": {
+    "943:10": {
       "preRequisites:11": [
         102,
         339
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.942.desc",
+          "desc:8": "nomifactory.quest.expert.db.943.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1747,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.expert.db.942.title"
+          "name:8": "nomifactory.quest.expert.db.943.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1033,
@@ -29992,21 +30021,22 @@
         }
       }
     },
-    "943:10": {
+    "944:10": {
       "preRequisites:11": [
         286,
         1037
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.943.desc",
+          "desc:8": "nomifactory.quest.expert.db.944.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1037,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.943.title"
+          "name:8": "nomifactory.quest.expert.db.944.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1034,
@@ -30042,7 +30072,7 @@
         }
       }
     },
-    "944:10": {
+    "945:10": {
       "preRequisites:11": [
         1037,
         286,
@@ -30050,14 +30080,15 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.944.desc",
+          "desc:8": "nomifactory.quest.expert.db.945.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1038,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.944.title"
+          "name:8": "nomifactory.quest.expert.db.945.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1035,
@@ -30098,21 +30129,22 @@
         }
       }
     },
-    "945:10": {
+    "946:10": {
       "preRequisites:11": [
         1037,
         286
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.945.desc",
+          "desc:8": "nomifactory.quest.expert.db.946.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1039,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.945.title"
+          "name:8": "nomifactory.quest.expert.db.946.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1036,
@@ -30163,19 +30195,20 @@
         }
       }
     },
-    "946:10": {
+    "947:10": {
       "preRequisites:11": [
         825
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.946.desc",
+          "desc:8": "nomifactory.quest.expert.db.947.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "gregtech:optical_pipe_normal"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.946.title"
+          "name:8": "nomifactory.quest.expert.db.947.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1037,
@@ -30191,21 +30224,22 @@
         }
       }
     },
-    "947:10": {
+    "948:10": {
       "preRequisites:11": [
         1039,
         196
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.947.desc",
+          "desc:8": "nomifactory.quest.expert.db.948.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1040,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.947.title"
+          "name:8": "nomifactory.quest.expert.db.948.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1038,
@@ -30236,21 +30270,22 @@
         }
       }
     },
-    "948:10": {
+    "949:10": {
       "preRequisites:11": [
         535,
         258
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.948.desc",
+          "desc:8": "nomifactory.quest.expert.db.949.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1414,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.948.title"
+          "name:8": "nomifactory.quest.expert.db.949.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1039,
@@ -30267,20 +30302,21 @@
         }
       }
     },
-    "949:10": {
+    "950:10": {
       "preRequisites:11": [
         259
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.949.desc",
+          "desc:8": "nomifactory.quest.expert.db.950.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 201,
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.949.title"
+          "name:8": "nomifactory.quest.expert.db.950.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1040,
@@ -30297,20 +30333,21 @@
         }
       }
     },
-    "950:10": {
+    "951:10": {
       "preRequisites:11": [
         157
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.950.desc",
+          "desc:8": "nomifactory.quest.expert.db.951.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 99,
             "id:8": "gregtech:meta_ingot"
           },
           "ismain:1": 1,
-          "name:8": "nomifactory.quest.expert.db.950.title"
+          "name:8": "nomifactory.quest.expert.db.951.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1041,
@@ -30327,7 +30364,7 @@
         }
       }
     },
-    "951:10": {
+    "952:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -30336,13 +30373,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.951.desc",
+          "desc:8": "nomifactory.quest.expert.db.952.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 1042,
             "id:8": "gregtech:machine"
           },
-          "name:8": "nomifactory.quest.expert.db.951.title"
+          "name:8": "nomifactory.quest.expert.db.952.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1042,
@@ -30379,18 +30417,19 @@
         }
       }
     },
-    "952:10": {
+    "953:10": {
       "preRequisites:11": [
         286
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.952.desc",
+          "desc:8": "nomifactory.quest.expert.db.953.desc",
           "icon:10": {
             "Count:3": 1,
             "id:8": "solarflux:solar_panel_8"
           },
-          "name:8": "nomifactory.quest.expert.db.952.title"
+          "name:8": "nomifactory.quest.expert.db.953.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1043,
@@ -30406,7 +30445,7 @@
         }
       }
     },
-    "953:10": {
+    "954:10": {
       "preRequisiteTypes:7": [
         1
       ],
@@ -30415,13 +30454,14 @@
       ],
       "properties:10": {
         "betterquesting:10": {
-          "desc:8": "nomifactory.quest.expert.db.953.desc",
+          "desc:8": "nomifactory.quest.expert.db.954.desc",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 2,
             "id:8": "gregtech:warning_sign_1"
           },
-          "name:8": "nomifactory.quest.expert.db.953.title"
+          "name:8": "nomifactory.quest.expert.db.954.title",
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1044,
@@ -31262,8 +31302,8 @@
           "id:3": 130,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 280,
-          "y:3": -520
+          "x:3": 324,
+          "y:3": -556
         },
         "47:10": {
           "id:3": 131,
@@ -31420,307 +31460,314 @@
           "y:3": -488
         },
         "69:10": {
+          "id:3": 400,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 280,
+          "y:3": -484
+        },
+        "70:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -448
         },
-        "70:10": {
+        "71:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -104
         },
-        "71:10": {
+        "72:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -144
         },
-        "72:10": {
+        "73:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 536,
           "y:3": -180
         },
-        "73:10": {
+        "74:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -52,
           "y:3": -64
         },
-        "74:10": {
+        "75:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -4
         },
-        "75:10": {
+        "76:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 220,
           "y:3": -392
         },
-        "76:10": {
+        "77:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -144
         },
-        "77:10": {
+        "78:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -276
         },
-        "78:10": {
+        "79:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 132,
           "y:3": -392
         },
-        "79:10": {
+        "80:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -360
         },
-        "80:10": {
+        "81:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -420
         },
-        "81:10": {
+        "82:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -388
         },
-        "82:10": {
+        "83:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -356
         },
-        "83:10": {
+        "84:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -228
         },
-        "84:10": {
+        "85:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -124
         },
-        "85:10": {
+        "86:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 744,
           "y:3": -336
         },
-        "86:10": {
+        "87:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -276
         },
-        "87:10": {
+        "88:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 296,
           "y:3": -216
         },
-        "88:10": {
+        "89:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -72
         },
-        "89:10": {
+        "90:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 276,
           "y:3": -20
         },
-        "90:10": {
+        "91:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -164
         },
-        "91:10": {
+        "92:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -4
         },
-        "92:10": {
+        "93:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -60
         },
-        "93:10": {
+        "94:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -404
         },
-        "94:10": {
+        "95:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 576,
           "y:3": -228
         },
-        "95:10": {
+        "96:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 444,
           "y:3": -184
         },
-        "96:10": {
+        "97:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -136
         },
-        "97:10": {
+        "98:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -136
         },
-        "98:10": {
+        "99:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 404,
           "y:3": -136
         },
-        "99:10": {
+        "100:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -180
         },
-        "100:10": {
+        "101:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -268
         },
-        "101:10": {
+        "102:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -276
         },
-        "102:10": {
+        "103:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -276
         },
-        "103:10": {
+        "104:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 368,
-          "y:3": -552
+          "x:3": 280,
+          "y:3": -520
         },
-        "104:10": {
+        "105:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -184
         },
-        "105:10": {
+        "106:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -448
         },
-        "106:10": {
+        "107:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -388
         },
-        "107:10": {
+        "108:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -180
         },
-        "108:10": {
+        "109:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 404,
           "y:3": -180
         },
-        "109:10": {
+        "110:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 272,
           "y:3": 20
         },
-        "110:10": {
+        "111:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -420
         },
-        "111:10": {
+        "112:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -356
         },
-        "112:10": {
+        "113:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -32788,11 +32835,7 @@
           "desc:8": "nomifactory.quest.expert.line.3.desc",
           "icon:10": {
             "Count:3": 1,
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "questbook:itemquestbook",
-              "orig_meta:3": 0
-            }
+            "id:8": "minecraft:writable_book"
           },
           "name:8": "nomifactory.quest.expert.line.3.title",
           "visibility:8": "ALWAYS"
@@ -35676,7 +35719,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": -6
+          "y:3": -4
         },
         "40:10": {
           "id:3": 530,
@@ -35792,10 +35835,10 @@
         },
         "56:10": {
           "id:3": 902,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -30
+          "y:3": -36
         },
         "57:10": {
           "id:3": 909,
@@ -35845,6 +35888,13 @@
           "sizeY:3": 24,
           "x:3": 112,
           "y:3": 296
+        },
+        "64:10": {
+          "id:3": 938,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": -4
         }
       }
     },
@@ -35873,305 +35923,305 @@
           "y:3": 348
         },
         "1:10": {
+          "id:3": 55,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 528,
+          "y:3": 552
+        },
+        "2:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 450
         },
-        "2:10": {
+        "3:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 444
         },
-        "3:10": {
+        "4:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 594
         },
-        "4:10": {
+        "5:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 498
         },
-        "5:10": {
+        "6:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 546
         },
-        "6:10": {
+        "7:10": {
           "id:3": 116,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 258,
           "y:3": 540
         },
-        "7:10": {
+        "8:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 594
         },
-        "8:10": {
+        "9:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 456
         },
-        "9:10": {
+        "10:10": {
           "id:3": 204,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 456
         },
-        "10:10": {
+        "11:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 420
         },
-        "11:10": {
+        "12:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 264,
           "y:3": 420
         },
-        "12:10": {
+        "13:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 420
         },
-        "13:10": {
+        "14:10": {
           "id:3": 208,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 420
         },
-        "14:10": {
+        "15:10": {
           "id:3": 209,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 474,
           "y:3": 414
         },
-        "15:10": {
+        "16:10": {
           "id:3": 210,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 384
         },
-        "16:10": {
+        "17:10": {
           "id:3": 211,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 456
         },
-        "17:10": {
+        "18:10": {
           "id:3": 212,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 420
         },
-        "18:10": {
+        "19:10": {
           "id:3": 214,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
-          "y:3": 588
+          "y:3": 552
         },
-        "19:10": {
+        "20:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 588
         },
-        "20:10": {
+        "21:10": {
           "id:3": 217,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 624
         },
-        "21:10": {
+        "22:10": {
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 636,
           "y:3": 420
         },
-        "22:10": {
+        "23:10": {
           "id:3": 220,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 336
         },
-        "23:10": {
+        "24:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 336
         },
-        "24:10": {
+        "25:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 300
         },
-        "25:10": {
+        "26:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 372
         },
-        "26:10": {
+        "27:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 336
         },
-        "27:10": {
+        "28:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 300
         },
-        "28:10": {
+        "29:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 372
         },
-        "29:10": {
+        "30:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 336
         },
-        "30:10": {
+        "31:10": {
           "id:3": 229,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 546
         },
-        "31:10": {
+        "32:10": {
           "id:3": 232,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 492
         },
-        "32:10": {
+        "33:10": {
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 552
         },
-        "33:10": {
+        "34:10": {
           "id:3": 262,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 546
         },
-        "34:10": {
+        "35:10": {
           "id:3": 275,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 306,
           "y:3": 474
         },
-        "35:10": {
+        "36:10": {
           "id:3": 276,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 480
         },
-        "36:10": {
+        "37:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 594
         },
-        "37:10": {
+        "38:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 594
         },
-        "38:10": {
+        "39:10": {
           "id:3": 386,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 468,
           "y:3": 486
         },
-        "39:10": {
+        "40:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 546
         },
-        "40:10": {
+        "41:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 546
         },
-        "41:10": {
+        "42:10": {
           "id:3": 389,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
           "y:3": 486
         },
-        "42:10": {
+        "43:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 588
-        },
-        "43:10": {
-          "id:3": 400,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": 552
         },
         "44:10": {
           "id:3": 510,

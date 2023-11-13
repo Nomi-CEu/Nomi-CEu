@@ -1,4 +1,4 @@
-import { Category, Commit, Parser, SubCategory } from "../../types/changelogTypes";
+import { Category, Commit, IgnoreCheck, Ignored, IgnoreLogic, Parser, SubCategory } from "../../types/changelogTypes";
 import { modpackManifest } from "../../globals";
 import { parseCommitBody } from "./parser";
 import { parseFixUp } from "./specialParser";
@@ -26,6 +26,7 @@ export const combineKey = "[COMBINE]";
 export const combineList = "commits";
 export const fixUpKey = "[FIXUP]";
 export const fixUpList = "fixes";
+export const ignoreKey = "[IGNORE]";
 
 /* Sub Category Keys */
 // Mode Category Keys
@@ -121,7 +122,7 @@ const defaultParsingCallback = async (
 	commit: Commit,
 	commitMessage: string,
 	commitBody: string,
-): Promise<boolean> => {
+): Promise<boolean | Ignored> => {
 	if (!commitBody) return false;
 	return parseCommitBody(commitMessage, commitBody, commit, parser);
 };
@@ -217,3 +218,40 @@ export const modChangesAllocations: Record<ModChangesType, ModChangesAllocation>
 		template: "{{ modName }}: *v{{ oldVersion }}*",
 	},
 };
+
+// Ignore Allocations
+
+/* Ignore Checks */
+const beforeCheck: IgnoreCheck = (tag, data) => !data.tags.has(tag);
+const afterCheck: IgnoreCheck = (tag, data) => data.tags.has(tag);
+const compareIsCheck: IgnoreCheck = (tag, data) => data.since === tag;
+const compareNotCheck: IgnoreCheck = (tag, data) => data.since !== tag;
+const targetIsCheck: IgnoreCheck = (tag, data) => data.to === tag;
+const targetNotCheck: IgnoreCheck = (tag, data) => data.to !== tag;
+
+/* Ignore Checks Map */
+export const ignoreChecks: Record<string, IgnoreCheck> = {
+	before: beforeCheck,
+	after: afterCheck,
+	compareIs: compareIsCheck,
+	compareNot: compareNotCheck,
+	targetIs: targetIsCheck,
+	targetNot: targetNotCheck,
+};
+
+/* Ignore Logic */
+const andLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => result === false).length === 0;
+const orLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => result === true).length > 0;
+const nandLogic: IgnoreLogic = (checkResults) => !andLogic(checkResults);
+const norLogic: IgnoreLogic = (checkResults) => !orLogic(checkResults);
+
+/* Ignore Logic Map */
+export const ignoreLogics: Record<string, IgnoreLogic> = {
+	and: andLogic,
+	or: orLogic,
+	nand: nandLogic,
+	nor: norLogic,
+};
+
+/* Default Ignore Logic */
+export const defaultIgnoreLogic: IgnoreLogic = andLogic;

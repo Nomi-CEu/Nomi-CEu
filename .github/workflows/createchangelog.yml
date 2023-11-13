@@ -5,7 +5,7 @@ on:
     inputs:
       tag:
         description: Tag to checkout.
-        required: true
+        required: false
       release_type:
         description: Release Type
         type: choice
@@ -15,8 +15,9 @@ on:
           - 'Release'
           - 'Beta Release'
           - 'Alpha Release'
+          - 'Cutting Edge Build'
       compare_tag:
-        description: Tag to compare against. If not set, will use the tag before `Tag`.
+        description: Tag(s) to compare against. If not set, will use the tag before `Tag`. If specifying multiple, seperate by commas. (Spaces allowed).
         required: false
       branch:
         description: Branch to push changelog to. If not set, changelog will just be uploaded as an artifact.

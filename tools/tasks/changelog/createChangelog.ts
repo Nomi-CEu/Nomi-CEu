@@ -9,14 +9,48 @@ import { parsers } from "./definitions";
 import parse from "./parser";
 import { specialParserSetup } from "./specialParser";
 import generateModChanges from "./generateModChanges";
-import pushAll from "./pusher";
+import pushAll, { pushChangelog, pushSeperator, pushTitle } from "./pusher";
+import log from "fancy-log";
+import * as util from "util";
 
 /**
  * Generates a changelog based on environmental variables, and saves it a changelog data class.
  */
 async function createChangelog(): Promise<ChangelogData> {
 	const data: ChangelogData = new ChangelogData();
-	changelogSetup(data);
+
+	await data.init();
+
+	// Handle Iterations
+	if (data.shouldIterate()) {
+		const tags = data.getIterations();
+		pushTitle(data);
+		for (const tag of tags) {
+			const iteration = tags.indexOf(tag);
+			log(`Iteration ${iteration + 1} of Changelog.`);
+			data.setupIteration(tag);
+			categoriesSetup();
+			specialParserSetup(data);
+
+			for (const parser of parsers) {
+				await parse(data, parser);
+			}
+
+			await generateModChanges(data);
+
+			await pushChangelog(data);
+			if (iteration < tags.length - 1) {
+				// More to go
+				pushSeperator(data);
+				data.resetForIteration();
+			}
+		}
+		return data;
+	}
+	log("No Iterations Detected.");
+
+	categoriesSetup();
+	specialParserSetup(data);
 
 	for (const parser of parsers) {
 		await parse(data, parser);
@@ -24,14 +58,9 @@ async function createChangelog(): Promise<ChangelogData> {
 
 	await generateModChanges(data);
 
-	pushAll(data);
+	await pushAll(data);
 
 	return data;
-}
-
-function changelogSetup(data: ChangelogData) {
-	categoriesSetup();
-	specialParserSetup(data);
 }
 
 /**

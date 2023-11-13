@@ -151,12 +151,24 @@ recipes.addShaped(<thermalfoundation:material:514>, [
 	[<minecraft:redstone>, <metaitem:stickSilver>, <minecraft:redstone>],
 	[<metaitem:stickSilver>, <minecraft:redstone>, null]]);
 
+assembler.recipeBuilder()
+	.inputs(<ore:dustRedstone> * 3, <ore:boltSilver> * 12)
+	.circuit(16)
+	.outputs(<thermalfoundation:material:514>)
+	.duration(100).EUt(16).buildAndRegister();
+
 //Gold Reception Coil
 recipes.remove(<thermalfoundation:material:513>);
 recipes.addShaped(<thermalfoundation:material:513>, [
 	[null, <minecraft:redstone>, <metaitem:stickElectrum>],
 	[<minecraft:redstone>, <metaitem:stickElectrum>, <minecraft:redstone>],
 	[<metaitem:stickElectrum>, <minecraft:redstone>, null]]);
+
+assembler.recipeBuilder()
+	.inputs(<ore:dustRedstone> * 3, <ore:boltElectrum> * 12)
+	.circuit(16)
+	.outputs(<thermalfoundation:material:513>)
+	.duration(100).EUt(16).buildAndRegister();
 
 //Auxiliary Transmission Coil
 recipes.remove(<thermalexpansion:augment:512>);
@@ -312,6 +324,12 @@ recipes.addShaped(<contenttweaker:excitationcoil>, [
 	[<metaitem:plateRedAlloy>, <thermalfoundation:material:515>, <metaitem:plateRedAlloy>],
 	[<metaitem:plateRedAlloy>, <thermalfoundation:material:515>, <metaitem:plateRedAlloy>]]);
 
+assembler.recipeBuilder()
+	.inputs(<metaitem:plateRedAlloy> * 5, <thermalfoundation:material:515> * 2)
+	.circuit(16)
+	.outputs(<contenttweaker:excitationcoil>)
+	.duration(100).EUt(16).buildAndRegister();
+
 <contenttweaker:excitationcoil>.addTooltip(format.darkGray(format.italic("Crafting component only.")));
 
 // Boiler Conversion
@@ -322,10 +340,17 @@ recipes.addShaped(<thermalexpansion:augment:576>, [
 	[null, <ore:blockGlassHardened>, null]
 ]);
 
+// Redstone Conductance Coil
 recipes.addShaped(<thermalfoundation:material:515>, [
 	[<metaitem:stickGold>, <minecraft:redstone>, null],
 	[<minecraft:redstone>, <metaitem:stickGold>, <minecraft:redstone>],
 	[null, <minecraft:redstone>, <metaitem:stickGold>]]);
+
+assembler.recipeBuilder()
+	.inputs(<ore:dustRedstone> * 3, <ore:boltGold> * 12)
+	.circuit(16)
+	.outputs(<thermalfoundation:material:515>)
+	.duration(100).EUt(16).buildAndRegister();
 
 
 mods.jei.JEI.removeAndHide(<thermalexpansion:augment:258>);

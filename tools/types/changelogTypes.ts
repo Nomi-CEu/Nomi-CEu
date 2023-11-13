@@ -1,3 +1,5 @@
+import ChangelogData from "../tasks/changelog/changelogData";
+
 export interface Commit {
 	hash: string;
 	date: string;
@@ -159,9 +161,14 @@ export interface Parser {
 	 * commit: The commit object.
 	 * commitMessage: The message of the commit.<p>
 	 * commitBody: The body of the commit. Might be undefined.<p>
-	 * return: True if parsing was successful, false if not.
+	 * return: True if parsing was successful, false if not. Can return Ignored if commit was ignored (not skipped).
 	 */
-	itemCallback: (parser: Parser, commit: Commit, commitMessage: string, commitBody?: string) => Promise<boolean>;
+	itemCallback: (
+		parser: Parser,
+		commit: Commit,
+		commitMessage: string,
+		commitBody?: string,
+	) => Promise<boolean | Ignored>;
 
 	/**
 	 * The callback to perform on any commits, which did not pass parsing. If not set, no callback will be performed, and those commits will be discarded.
@@ -197,6 +204,38 @@ export interface Parser {
 	 * return: True if to add, false if not.
 	 */
 	addCommitListCallback: (commit: Commit, parsed: boolean) => boolean;
+}
+
+export interface IgnoreInfo {
+	checks: Record<string, string>;
+	logic?: string;
+	addCommitList?: boolean;
+}
+
+/**
+ * Check to determine whether to ignore.
+ * @return ignore True to Ignore (if check is true), False to continue
+ */
+export type IgnoreCheck = (tag: string, data: ChangelogData) => boolean;
+
+/**
+ * Ignore Logic
+ * @param checkResults The results of the checks.
+ * @return ignore True to ignore, false to continue
+ */
+export type IgnoreLogic = (checkResults: boolean[]) => boolean;
+
+export class Ignored {
+	private readonly addCommitList: boolean | undefined;
+
+	constructor(addCommitList?: boolean) {
+		this.addCommitList = addCommitList;
+	}
+
+	getCommitList(): boolean {
+		if (this.addCommitList === undefined) return false;
+		return this.addCommitList;
+	}
 }
 
 export interface ModChangeInfo {
