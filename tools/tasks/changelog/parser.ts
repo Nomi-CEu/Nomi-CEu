@@ -6,9 +6,10 @@ import {
 	detailsKey,
 	expandKey,
 	ignoreKey,
+	modInfoKey,
 	noCategoryKey,
 } from "./definitions";
-import { parseCombine, parseDetails, parseExpand, parseIgnore } from "./specialParser";
+import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo } from "./specialParser";
 import { getChangelog } from "../../util/util";
 import ChangelogData from "./changelogData";
 
@@ -68,6 +69,7 @@ export async function parseCommitBody(
 		// Only return if ignore is not undefined
 		if (ignore) return ignore;
 	}
+	if (commitBody.includes(modInfoKey)) await parseModInfo(commitBody, commitObject);
 	if (commitBody.includes(detailsKey)) {
 		await parseDetails(commitMessage, commitBody, commitObject, parser);
 		return true;

@@ -1,4 +1,4 @@
-import { Commit, FixUpInfo, InputReleaseType } from "../../types/changelogTypes";
+import { Commit, FixUpInfo, InputReleaseType, ParsedModInfo } from "../../types/changelogTypes";
 import { getLastGitTag, getTags, isEnvVariableSet } from "../../util/util";
 
 export default class ChangelogData {
@@ -18,6 +18,9 @@ export default class ChangelogData {
 
 	// Set of tags
 	tags: Set<string>;
+
+	// Map of project IDs to info text and/or details
+	modInfoList: Map<number, ParsedModInfo>;
 
 	/**
 	 * A normal initialisation.
@@ -56,6 +59,8 @@ export default class ChangelogData {
 		this.combineList = new Map<string, Commit[]>();
 
 		this.tags = new Set<string>(await getTags(this.to));
+
+		this.modInfoList = new Map<number, ParsedModInfo>();
 	}
 
 	shouldIterate(): boolean {
@@ -88,6 +93,8 @@ export default class ChangelogData {
 		this.commitFixes = new Map<string, FixUpInfo>();
 		this.shaList = new Set<string>();
 		this.combineList = new Map<string, Commit[]>();
+
+		this.modInfoList = new Map<number, ParsedModInfo>();
 
 		// Tags list is fine because the `to` stays the same
 	}

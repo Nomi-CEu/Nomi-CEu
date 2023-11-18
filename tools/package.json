@@ -51,7 +51,8 @@
 	},
 	"dependencies": {
 		"@egjs/list-differ": "^1.0.1",
-		"@ltd/j-toml": "^1.38.0",
+		"@iarna/toml": "^2.2.5",
+		"@types/iarna__toml": "^2.0.5",
 		"@types/json-stable-stringify-without-jsonify": "^1.0.1",
 		"dedent-js": "^1.0.1",
 		"json-stable-stringify-without-jsonify": "^1.0.1"

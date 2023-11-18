@@ -6,17 +6,21 @@ import {
 	Ignored,
 	IgnoreInfo,
 	IgnoreLogic,
+	ModInfo,
+	ParsedModInfo,
 	Parser,
 } from "../../types/changelogTypes";
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
-import toml from "@ltd/j-toml";
+import toml from "@iarna/toml";
 import {
 	combineKey,
 	combineList,
+	combineRoot,
 	defaultIgnoreLogic,
 	detailsKey,
 	detailsList,
+	detailsRoot,
 	expandKey,
 	expandList,
 	fixUpKey,
@@ -25,6 +29,8 @@ import {
 	ignoreKey,
 	ignoreLogics,
 	indentationLevel,
+	modInfoKey,
+	modInfoList,
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
@@ -124,16 +130,17 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
  */
 export async function parseFixUp(commit: Commit): Promise<boolean> {
 	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
-	await parseTOMLToList(
+	await parseTOMLWithRootToList<FixUpInfo>(
 		commit.body,
 		commit,
 		fixUpKey,
 		fixUpList,
-		(item: FixUpInfo) => item.sha && item.newTitle,
-		(item) => {
+		(item) => !item.sha || !item.newTitle,
+		async (item) => {
 			// Only override if no other overrides, from newer commits, set
 			if (!data.commitFixes.has(item.sha)) data.commitFixes.set(item.sha, item);
 		},
+		(item) => item as unknown as FixUpInfo,
 		(matter) => {
 			// Must override, even if newer commits specified changes, as need to remove fixup data
 			data.commitFixes.set(commit.hash, {
@@ -148,15 +155,57 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 }
 
 /**
+ * Parses a commit with 'mod info'.
+ */
+export async function parseModInfo(commitBody: string, commitObject: Commit): Promise<void> {
+	await parseTOMLWithRootToList<ModInfo>(
+		commitBody,
+		commitObject,
+		modInfoKey,
+		modInfoList,
+		(item): boolean => {
+			const invalidProjectID = !item.projectID || typeof item.projectID !== "number" || Number.isNaN(item.projectID);
+			const invalidInfo = !item.info;
+			const invalidRootDetails = !item.detail;
+			const invalidDetails = !item.details || !Array.isArray(item.details) || !(item.details.length > 0);
+			// Invalid if invalid ID, or invalid info and invalid details
+			return invalidProjectID || (invalidInfo && invalidRootDetails && invalidDetails);
+		},
+		async (item) => {
+			data.modInfoList.set(item.projectID, await getParsedModInfo(item));
+		},
+	);
+}
+
+/**
+ * Gets the parsed mod info of a mod info.
+ */
+async function getParsedModInfo(modInfo: ModInfo): Promise<ParsedModInfo> {
+	const subMessages: ChangelogMessage[] = [];
+	if (modInfo.detail) subMessages.push({ commitMessage: modInfo.detail, indentation: indentationLevel });
+	if (modInfo.details && modInfo.details.length > 0)
+		subMessages.push(
+			...modInfo.details.map((detail) => {
+				return { commitMessage: detail, indentation: indentationLevel };
+			}),
+		);
+
+	return {
+		info: modInfo.info,
+		details: subMessages,
+	};
+}
+
+/**
  * Parses a commit with 'expand'.
  */
 export async function parseExpand(commitBody: string, commitObject: Commit, parser: Parser): Promise<void> {
-	await parseTOMLToList(
+	await parseTOMLWithRootToList<ExpandedMessage>(
 		commitBody,
 		commitObject,
 		expandKey,
 		expandList,
-		(item: ExpandedMessage) => item.messageTitle,
+		(item) => !item.messageTitle,
 		async (item) => {
 			const title = dedent(item.messageTitle);
 
@@ -214,12 +263,12 @@ async function expandDetailsLevel(
 	indentation = indentationLevel,
 ): Promise<ChangelogMessage[]> {
 	const result: ChangelogMessage[] = [];
-	await parseTOMLToList(
+	await parseTOMLWithRootToList<string>(
 		commitBody,
 		commitObject,
 		detailsKey,
 		detailsList,
-		(item: string) => item,
+		(item) => !item,
 		async (item) => {
 			item = dedent(item).trim();
 			if (item.includes(detailsKey)) {
@@ -228,6 +277,7 @@ async function expandDetailsLevel(
 				result.push({ commitMessage: item, commitObject: commitObject, indentation: indentation });
 			}
 		},
+		(root) => root[detailsRoot] as string,
 	);
 	return result;
 }
@@ -236,16 +286,17 @@ async function expandDetailsLevel(
  * Parses a commit with 'combine'.
  */
 export async function parseCombine(commitBody: string, commitObject: Commit): Promise<void> {
-	await parseTOMLToList(
+	await parseTOMLWithRootToList<string>(
 		commitBody,
 		commitObject,
 		combineKey,
 		combineList,
-		(item: string) => item,
-		(item: string) => {
+		(item) => !item,
+		async (item) => {
 			if (!data.combineList.has(item)) data.combineList.set(item, []);
 			data.combineList.get(item).push(commitObject);
 		},
+		(root) => root[combineRoot] as string,
 	);
 }
 
@@ -280,7 +331,7 @@ async function parseTOML<T>(
 			delimiters: delimiter,
 			engines: {
 				toml: (input): Record<string, unknown> => {
-					return toml.parse(input, "\n");
+					return toml.parse(input);
 				},
 			},
 			language: "toml",
@@ -314,50 +365,34 @@ async function parseTOML<T>(
 }
 
 /**
- * Parse TOML in a commit body to produce a list.
- * @param commitBody The body to parse
- * @param commitObject The commit object to grab messages from, and to determine error messages.
- * @param delimiter The delimiters, surrounding the TOML.
- * @param listKey The key of the list to parse.
- * @param emptyCheck The check to see if an item in the list is invalid.
- * @param perItemCallback The callback to perform on each item in the list.
- * @param matterCallback An optional callback to perform on the matter.
+ * Parses a List with safety.
+ * @param messages List to parse
+ * @param listKey List Key, used for error messages
+ * @param commitBody The commit body
+ * @param commitObject The commit object, used for error messages.
+ * @param endMessage The end message to use
+ * @param emptyCheck Check to see if an item is valid. True -> Empty
+ * @param perItemCallback Callback to perform per item. Async to allow for further toml parsing
+ * @param entryModifier Callback to change the entry in error messages. Optional. Defaults to `i + 1`.
  */
-async function parseTOMLToList<T>(
+async function parseList<T>(
+	messages: T[],
+	listKey: string,
 	commitBody: string,
 	commitObject: Commit,
-	delimiter: string,
-	listKey: string,
-	emptyCheck: (item: T) => string,
-	perItemCallback: (item: T) => void,
-	matterCallback?: (matter: GrayMatterFile<string>) => void,
-): Promise<void> {
-	const messages = await parseTOML<T[]>(commitBody, commitObject, delimiter, listKey, matterCallback);
-	const endMessage = getEndMessage(delimiter);
-
-	if (!messages || !Array.isArray(messages) || messages.length === 0) {
-		error(dedent`
-			List (key: '${listKey}') in body:
-			\`\`\`
-			${commitBody}\`\`\`
-			of commit object ${commitObject.hash} (${commitObject.message}) is empty, not a list, or does not exist.`);
-
-		if (commitObject.body && commitBody !== commitObject.body) {
-			error(dedent`
-				Original Body:
-				\`\`\`
-				${commitObject.body}\`\`\``);
-		}
-		error(`${endMessage}\n`);
-
-		if (data.isTest) throw new Error("Failed Parsing Message List. See Above.");
-		return;
-	}
+	endMessage: string,
+	emptyCheck: (item: T) => boolean,
+	perItemCallback: (item: T) => Promise<void>,
+	entryModifier?: (index: number) => number,
+) {
 	for (let i = 0; i < messages.length; i++) {
 		const item = messages[i];
-		if (!emptyCheck(item)) {
+		if (emptyCheck(item)) {
+			let index = i + 1;
+			if (entryModifier) index = entryModifier(i);
+
 			error(dedent`
-				Missing Requirements for entry ${i + 1} in body:
+				Missing Requirements for entry ${index} of list with key '${listKey}' in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
@@ -373,8 +408,155 @@ async function parseTOMLToList<T>(
 			if (data.isTest) throw new Error("Bad Entry. See Above.");
 			continue;
 		}
-		perItemCallback(item);
+		await perItemCallback(item);
 	}
+}
+
+/**
+ * Parses TOML in a commit body to produce a list. List includes items in the base of the toml (added first).
+ * List just contains root item if none in list.
+ * @param commitBody The body to parse
+ * @param commitObject The commit object to grab messages from, and to determine error messages.
+ * @param delimiter The delimiters, surrounding the TOML.
+ * @param listKey The key of the list to parse.
+ * @param rootObjTransform Transform root obj into T. Return undefined if invalid.
+ * @param emptyCheck The check to see if an item in the list is invalid. True -> Invalid/Empty
+ * @param perItemCallback The callback to perform on each item in the list. Async to allow for further toml parsing
+ * @param matterCallback An optional callback to perform on the matter.
+ */
+async function parseTOMLWithRootToList<T>(
+	commitBody: string,
+	commitObject: Commit,
+	delimiter: string,
+	listKey: string,
+	emptyCheck: (item: T) => boolean,
+	perItemCallback: (item: T) => Promise<void>,
+	rootObjTransform?: (root: Record<string, unknown>) => T,
+	matterCallback?: (matter: GrayMatterFile<string>) => void,
+): Promise<void> {
+	let root: Record<string, unknown>;
+	const messages: T[] = [];
+
+	const endMessage = getEndMessage(delimiter);
+
+	// Parse Root TOML
+	try {
+		root = await parseTOML<Record<string, unknown>>(commitBody, commitObject, delimiter, null, matterCallback);
+		const rootObj = rootObjTransform ? rootObjTransform(root) : (root as T);
+		// Only push root if it passes empty check
+		if (rootObj && !emptyCheck(rootObj)) messages.push(rootObj);
+	} catch (e) {
+		error(dedent`
+			Failed parsing Root TOML in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}).
+			This could be because of invalid syntax.`);
+
+		if (commitObject.body && commitBody !== commitObject.body) {
+			error(dedent`
+				Original Body:
+				\`\`\`
+				${commitObject.body}\`\`\``);
+		}
+
+		error(`\n${endMessage}\n`);
+		if (data.isTest) throw e;
+		return undefined;
+	}
+
+	// No List
+	if (!(listKey in root)) {
+		if (messages.length > 0) {
+			await perItemCallback(messages[0]);
+			return;
+		}
+		// No Valid Entry
+		error(dedent`
+				Missing Requirements for root entry, & no list with list key ${listKey} detected in body:
+				\`\`\`
+				${commitBody}\`\`\`
+				of commit object ${commitObject.hash} (${commitObject.message}).`);
+
+		if (commitObject.body && commitBody !== commitObject.body) {
+			error(dedent`
+					Original Body:
+					\`\`\`
+					${commitObject.body}\`\`\``);
+		}
+		error(`${endMessage}\n`);
+
+		if (data.isTest) throw new Error("No Valid Entry. See Above.");
+	}
+
+	// Parse List TOML
+	if (!root[listKey] || !Array.isArray(root[listKey])) {
+		error(dedent`
+			List (key: '${listKey}') in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) not a list, or does not exist.`);
+
+		if (commitObject.body && commitBody !== commitObject.body) {
+			error(dedent`
+				Original Body:
+				\`\`\`
+				${commitObject.body}\`\`\``);
+		}
+		error(`${endMessage}\n`);
+
+		if (data.isTest) throw new Error("Failed Parsing List. See Above.");
+		return;
+	}
+
+	let list: T[];
+	try {
+		list = root[listKey] as unknown as T[];
+	} catch (e) {
+		error(dedent`
+			List (key: '${listKey}') in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) could not be turned into correct list type.`);
+
+		if (commitObject.body && commitBody !== commitObject.body) {
+			error(dedent`
+				Original Body:
+				\`\`\`
+				${commitObject.body}\`\`\``);
+		}
+		error(`${endMessage}\n`);
+
+		if (data.isTest) throw new Error("Failed Parsing List. See Above.");
+		return;
+	}
+	if (list.length === 0) {
+		error(dedent`
+			List (key: '${listKey}') in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is empty.`);
+
+		if (commitObject.body && commitBody !== commitObject.body) {
+			error(dedent`
+				Original Body:
+				\`\`\`
+				${commitObject.body}\`\`\``);
+		}
+		error(`${endMessage}\n`);
+
+		if (data.isTest) throw new Error("Failed Parsing List. See Above.");
+		return;
+	}
+
+	if (messages.length > 0) {
+		messages.push(...list);
+		// Because we've already done empty check on root obj, no need to suppress error msg
+		// Keep as index (root: 0, obj1: 1, obj2: 2, ...)
+		await parseList<T>(messages, listKey, commitBody, commitObject, endMessage, emptyCheck, perItemCallback, (i) => i);
+	}
+	// Normal Parsing of List
+	else await parseList<T>(list, listKey, commitBody, commitObject, endMessage, emptyCheck, perItemCallback);
 }
 
 function getEndMessage(delimiter: string) {

@@ -174,14 +174,19 @@ export function sortCommitListReverse(list: Commit[]): void {
  * @return string Formatted Changelog Message
  */
 async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): Promise<string> {
-	if (changelogMessage.specialFormatting)
-		return changelogMessage.specialFormatting.formatting(changelogMessage, changelogMessage.specialFormatting.storage);
-
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
 	let message = changelogMessage.commitMessage.trim();
 
 	// Transform PR and/or Issue tags into a link.
 	message = await transformTags(message);
+
+	if (changelogMessage.specialFormatting)
+		return changelogMessage.specialFormatting.formatting(
+			message,
+			subMessage,
+			indentation,
+			changelogMessage.specialFormatting.storage,
+		);
 
 	if (changelogMessage.commitObject && !subMessage) {
 		if (data.combineList.has(changelogMessage.commitObject.hash)) {
