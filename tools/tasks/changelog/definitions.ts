@@ -21,12 +21,16 @@ export const expandKey = "[EXPAND]";
 export const expandList = "messages";
 export const detailsKey = "[DETAILS]";
 export const detailsList = "details";
+export const detailsRoot = "detail";
 export const noCategoryKey = "[NO CATEGORY]";
 export const combineKey = "[COMBINE]";
 export const combineList = "commits";
+export const combineRoot = "commit";
 export const fixUpKey = "[FIXUP]";
 export const fixUpList = "fixes";
 export const ignoreKey = "[IGNORE]";
+export const modInfoKey = "[MOD INFO]";
+export const modInfoList = "infos";
 
 /* Sub Category Keys */
 // Mode Category Keys
@@ -201,21 +205,22 @@ export interface ModChangesAllocation {
 	template: string;
 }
 
+// These templates must be triple bracketed, because we don't want these to be html safe
 export const modChangesAllocations: Record<ModChangesType, ModChangesAllocation> = {
 	added: {
 		category: generalCategory,
 		subCategory: modAdditions,
-		template: "{{ modName }}: *v{{ newVersion }}*",
+		template: "{{{ modName }}}: *v{{{ newVersion }}}*",
 	},
 	updated: {
 		category: generalCategory,
 		subCategory: modUpdates,
-		template: "{{ modName }}: *v{{ oldVersion }} ⇥ v{{ newVersion }}*",
+		template: "{{{ modName }}}: *v{{{ oldVersion }}} ⇥ v{{{ newVersion }}}*",
 	},
 	removed: {
 		category: generalCategory,
 		subCategory: modRemovals,
-		template: "{{ modName }}: *v{{ oldVersion }}*",
+		template: "{{{ modName }}}: *v{{{ oldVersion }}}*",
 	},
 };
 

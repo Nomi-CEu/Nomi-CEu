@@ -11,7 +11,6 @@ import { specialParserSetup } from "./specialParser";
 import generateModChanges from "./generateModChanges";
 import pushAll, { pushChangelog, pushSeperator, pushTitle } from "./pusher";
 import log from "fancy-log";
-import * as util from "util";
 
 /**
  * Generates a changelog based on environmental variables, and saves it a changelog data class.

@@ -1,10 +1,10 @@
 import { cleanupVersion, compareAndExpandManifestDependencies, getChangelog, getFileAtRevision } from "../../util/util";
 import { ModpackManifest, ModpackManifestFile } from "../../types/modpackManifest";
-import { Commit, ModChangeInfo } from "../../types/changelogTypes";
+import { ChangelogMessage, Commit, ModChangeInfo } from "../../types/changelogTypes";
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import dedent from "dedent-js";
 import mustache from "mustache";
-import { defaultIndentation, modChangesAllocations, repoLink } from "./definitions";
+import { modChangesAllocations, repoLink } from "./definitions";
 import ChangelogData from "./changelogData";
 import { SpecialChangelogFormatting } from "../../types/changelogTypes";
 import { sortCommitListReverse } from "./pusher";
@@ -15,9 +15,11 @@ import { error } from "fancy-log";
  */
 const getModChangesFormatting: (commits: Commit[]) => SpecialChangelogFormatting<Commit[]> = (commits) => {
 	return {
-		formatting: (changelogMessage, commits) => {
-			const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
-			const message = changelogMessage.commitMessage.trim();
+		formatting: (message, subMessage, indentation, commits) => {
+			// Sub messages are details, so make them bold & italic
+			if (subMessage) {
+				return `${indentation}* ***${message}***`;
+			}
 			if (commits.length > 1) {
 				const authors: string[] = [];
 				const formattedCommits: string[] = [];
@@ -89,32 +91,60 @@ export default async function generateModChanges(data: ChangelogData): Promise<v
 				// Sort array so newest commits appear at end instead of start of commit string
 				sortCommitListReverse(commits);
 			}
-			block.allocation.category.changelogSection.get(block.allocation.subCategory).push({
-				commitMessage: getModChangeMessage(info, block.allocation.template),
-				specialFormatting: getModChangesFormatting(commits),
-			});
+			block.allocation.category.changelogSection
+				.get(block.allocation.subCategory)
+				.push(getModChangeMessage(info, block.allocation.template, data, commits));
 		});
 	});
 }
 
 /**
- * Returns the message, determined by the parameters below.
+ * Returns the changelog message, determined by the parameters below.
  * @param info The mod change info, containing the mod name and versions.
  * @param template The message template to replace in.
+ * @param data The changelog data
+ * @param commits The commits
  */
-function getModChangeMessage(info: ModChangeInfo, template: string): string {
+function getModChangeMessage(
+	info: ModChangeInfo,
+	template: string,
+	data: ChangelogData,
+	commits: Commit[],
+): ChangelogMessage {
 	const oldVersion = cleanupVersion(info.oldVersion);
 	const newVersion = cleanupVersion(info.newVersion);
 
 	// If not provided with either version, return just mod name
-	if (!oldVersion && !newVersion) return info.modName;
+	if (!oldVersion && !newVersion)
+		return {
+			commitMessage: info.modName,
+			specialFormatting: getModChangesFormatting(commits),
+		};
 
 	// Replace in template
-	return mustache.render(template, {
+	let text = mustache.render(template, {
 		modName: info.modName,
 		oldVersion: oldVersion,
 		newVersion: newVersion,
 	});
+
+	// Parse Info
+	let subMessages: ChangelogMessage[] = undefined;
+	if (data.modInfoList.has(info.projectID)) {
+		const modInfo = data.modInfoList.get(info.projectID);
+		if (modInfo.info) text = `${text} ***(${modInfo.info})***`;
+		if (modInfo.details)
+			subMessages = modInfo.details.map((detail) => {
+				detail.specialFormatting = getModChangesFormatting(commits);
+				return detail;
+			});
+	}
+
+	return {
+		commitMessage: text,
+		specialFormatting: getModChangesFormatting(commits),
+		subChangelogMessages: subMessages,
+	};
 }
 
 /**
