@@ -263,6 +263,7 @@ export interface FixUpInfo {
 export interface ModInfo {
 	projectID: number;
 	info?: string;
+	detail?: string;
 	details?: string[];
 }
 

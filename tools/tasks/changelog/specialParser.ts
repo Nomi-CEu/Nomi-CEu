@@ -166,9 +166,10 @@ export async function parseModInfo(commitBody: string, commitObject: Commit): Pr
 		(item): boolean => {
 			const invalidProjectID = !item.projectID || typeof item.projectID !== "number" || Number.isNaN(item.projectID);
 			const invalidInfo = !item.info;
+			const invalidRootDetails = !item.detail;
 			const invalidDetails = !item.details || !Array.isArray(item.details) || !(item.details.length > 0);
 			// Invalid if invalid ID, or invalid info and invalid details
-			return invalidProjectID || (invalidInfo && invalidDetails);
+			return invalidProjectID || (invalidInfo && invalidRootDetails && invalidDetails);
 		},
 		async (item) => {
 			data.modInfoList.set(item.projectID, await getParsedModInfo(item));
@@ -180,11 +181,14 @@ export async function parseModInfo(commitBody: string, commitObject: Commit): Pr
  * Gets the parsed mod info of a mod info.
  */
 async function getParsedModInfo(modInfo: ModInfo): Promise<ParsedModInfo> {
-	let subMessages: ChangelogMessage[] = undefined;
+	const subMessages: ChangelogMessage[] = [];
+	if (modInfo.detail) subMessages.push({ commitMessage: modInfo.detail, indentation: indentationLevel });
 	if (modInfo.details && modInfo.details.length > 0)
-		subMessages = modInfo.details.map((detail) => {
-			return { commitMessage: detail, indentation: indentationLevel };
-		});
+		subMessages.push(
+			...modInfo.details.map((detail) => {
+				return { commitMessage: detail, indentation: indentationLevel };
+			}),
+		);
 
 	return {
 		info: modInfo.info,
