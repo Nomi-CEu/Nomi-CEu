@@ -205,21 +205,22 @@ export interface ModChangesAllocation {
 	template: string;
 }
 
+// These templates must be triple bracketed, because we don't want these to be html safe
 export const modChangesAllocations: Record<ModChangesType, ModChangesAllocation> = {
 	added: {
 		category: generalCategory,
 		subCategory: modAdditions,
-		template: "{{ modName }}: *v{{ newVersion }}*",
+		template: "{{{ modName }}}: *v{{{ newVersion }}}*",
 	},
 	updated: {
 		category: generalCategory,
 		subCategory: modUpdates,
-		template: "{{ modName }}: *v{{ oldVersion }} ⇥ v{{ newVersion }}*",
+		template: "{{{ modName }}}: *v{{{ oldVersion }}} ⇥ v{{{ newVersion }}}*",
 	},
 	removed: {
 		category: generalCategory,
 		subCategory: modRemovals,
-		template: "{{ modName }}: *v{{ oldVersion }}*",
+		template: "{{{ modName }}}: *v{{{ oldVersion }}}*",
 	},
 };
 
