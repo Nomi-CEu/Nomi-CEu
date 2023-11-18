@@ -122,8 +122,12 @@ export interface ChangelogMessage {
 export interface SpecialChangelogFormatting<T> {
 	/**
 	 * Formatting Function
+	 * @param message The transformed message (trimmed, transformed issue/pr tags)
+	 * @param subMessage Whether this message is a sub message (true if yes)
+	 * @param indentation The indentation level to use
+	 * @param storage May be null, is the defined storage in this interface
 	 */
-	formatting: (message: ChangelogMessage, subMessage: boolean, storage?: T) => string;
+	formatting: (message: string, subMessage: boolean, indentation: string, storage?: T) => string;
 
 	/**
 	 * Storage

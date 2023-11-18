@@ -4,7 +4,7 @@ import { ChangelogMessage, Commit, ModChangeInfo } from "../../types/changelogTy
 import ListDiffer, { DiffResult } from "@egjs/list-differ";
 import dedent from "dedent-js";
 import mustache from "mustache";
-import { defaultIndentation, modChangesAllocations, repoLink } from "./definitions";
+import { modChangesAllocations, repoLink } from "./definitions";
 import ChangelogData from "./changelogData";
 import { SpecialChangelogFormatting } from "../../types/changelogTypes";
 import { sortCommitListReverse } from "./pusher";
@@ -15,9 +15,7 @@ import { error } from "fancy-log";
  */
 const getModChangesFormatting: (commits: Commit[]) => SpecialChangelogFormatting<Commit[]> = (commits) => {
 	return {
-		formatting: (changelogMessage, subMessage, commits) => {
-			const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
-			const message = changelogMessage.commitMessage.trim();
+		formatting: (message, subMessage, indentation, commits) => {
 			// Sub messages are details, so make them bold & italic
 			if (subMessage) {
 				return `${indentation}* ***${message}***`;
