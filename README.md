@@ -56,7 +56,7 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 \* Note: Scripts will not work on versions <1.6, thus manual installation will be necessary. 
 
 #### Script Installation Instructions:
-------
+<hr>
 ##### Windows:   
  - Download the script [here](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.bat), and save it to the root directory of the pack (the same level as `\config`).
  - Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
@@ -65,7 +65,7 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
  - Run `curl -O https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh` to download the file.
  - Verify the contents with your editor of choice.
  - Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
-------
+<hr>
 
 #### Manual installation instructions are available [here](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/overrides/README.md).
 
