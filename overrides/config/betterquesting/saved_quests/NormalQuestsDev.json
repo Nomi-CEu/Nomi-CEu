@@ -1,5 +1,4 @@
 {
-  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -63508,7 +63507,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3High Performance Computing Array (HPCA)§r is a computer which provides §dComputation Work§r to be used in the §3Research Station§r. The amount of §dComputation Work§r it provides depends on the type of HPCA parts within it. It also needs to receive adequate §dCooling§r provided by Coolers within its structure.\n\nConnect the §3Computation Data Transmission Hatch§r to the §3Reception Hatch§r on your §3Research Station§r to transfer the §dCWU/t§r produced to it.\n\nThe HPCA accepts almost any combination of §3Computation Components§r, §3Coolers§r, §3Bridges§r and §3Empty Components§r within the 3x3 area behind the §aComputer Heat Vents§r. This quest will build a §d16 CWU/t§r HPCA, enough for scanning the §3Fusion Reactor Mk2§r, §6UV Circuits§r, and all §6ZPM Components§r. You can get away with less at first, but you will eventually need to upgrade to this computing power. Refer to §eJEI§r for some other possible setups.\n\nThe §dCWU/t§r of the HPCA is determined by the sum of the outputs of the §3HPCA Computation Components§r within it. Regular §3Computation Components§r produce §d4 CWU/t§r each, and require §d2 Cooling§r each. §3Advanced Computation Components§r, which you do not have access to yet, produce §d16 CWU/t§r each and require §d4 Cooling§r each.\n\n§dCooling§r is provided by §3Cooler§r blocks within the structure. §3Passive Coolers§r provide §d1 Cooling§r each for free, whereas §3Active Coolers§r provide §d2 Cooling§r each with a steady flow of §9Dielectric PCB Coolant§r, provided through an §3Input Hatch§r. If the Cooling within the HPCA is insufficient, the components may be §cdamaged§r from overheating. The physical position of the components within the HPCA does not matter.\n\nA §3Bridge Component§r may be installed, allowing the HPCA to connect to §3Network Switches§r.\n\nThe energy consumption of the HPCA is determined by the sum of its parts. \u0027Max Energy\u0027 refers to the power draw while the HPCA is computing, while \u0027Upkeep Energy\u0027 refers to the power draw when the HPCA is idling.",
+          "desc:8": "The §3High Performance Computing Array (HPCA)§r is a computer which provides §dComputation Work§r to be used in the §3Research Station§r. The amount of §dComputation Work§r it provides depends on the type of HPCA parts within it. It also needs to receive adequate §dCooling§r provided by Coolers within its structure.\n\nConnect the §3Computation Data Transmission Hatch§r to the §3Reception Hatch§r on your §3Research Station§r to transfer the §dCWU/t§r produced to it.\n\nThe HPCA accepts almost any combination of §3Computation Components§r, §3Coolers§r, §3Bridges§r and §3Empty Components§r within the 3x3 area behind the §aComputer Heat Vents§r. The suggested components will build a §d16 CWU/t§r HPCA, enough for scanning the §3Fusion Reactor Mk2§r, §6UV Circuits§r, and all §6ZPM Components§r. You can get away with less at first, but you will eventually need to upgrade to this computing power. Refer to §eJEI§r for some other possible setups.\n\nThe §dCWU/t§r of the HPCA is determined by the sum of the outputs of the §3HPCA Computation Components§r within it. Regular §3Computation Components§r produce §d4 CWU/t§r each, and require §d2 Cooling§r each. §3Advanced Computation Components§r, which you do not have access to yet, produce §d16 CWU/t§r each and require §d4 Cooling§r each.\n\n§dCooling§r is provided by §3Cooler§r blocks within the structure. §3Passive Coolers§r provide §d1 Cooling§r each for free, whereas §3Active Coolers§r provide §d2 Cooling§r each with a steady flow of §9Dielectric PCB Coolant§r, provided through an §3Input Hatch§r. If the Cooling within the HPCA is insufficient, the components may be §cdamaged§r from overheating. The physical position of the components within the HPCA does not matter.\n\nA §3Bridge Component§r may be installed, allowing the HPCA to connect to §3Network Switches§r.\n\nThe energy consumption of the HPCA is determined by the sum of its parts. \u0027Max Energy\u0027 refers to the power draw while the HPCA is computing, while \u0027Upkeep Energy\u0027 refers to the power draw when the HPCA is idling.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63580,24 +63579,6 @@
               "id:8": "gregtech:computer_casing"
             },
             "4:10": {
-              "Count:3": 4,
-              "Damage:2": 1413,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "5:10": {
-              "Count:3": 4,
-              "Damage:2": 1416,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 1412,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "7:10": {
               "Count:3": 1,
               "Damage:2": 1410,
               "OreDict:8": "",
@@ -63605,6 +63586,35 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 1413,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 4,
+              "Damage:2": 1415,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1412,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
