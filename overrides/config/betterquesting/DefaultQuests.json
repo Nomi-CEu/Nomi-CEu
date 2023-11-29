@@ -40304,27 +40304,33 @@
               "id:8": "gregtech:computer_casing"
             },
             "4:10": {
-              "Count:3": 4,
-              "Damage:2": 1413,
-              "id:8": "gregtech:machine"
-            },
-            "5:10": {
-              "Count:3": 4,
-              "Damage:2": 1416,
-              "id:8": "gregtech:machine"
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 1412,
-              "id:8": "gregtech:machine"
-            },
-            "7:10": {
               "Count:3": 1,
               "Damage:2": 1410,
               "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 1413,
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 4,
+              "Damage:2": 1415,
+              "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1412,
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },

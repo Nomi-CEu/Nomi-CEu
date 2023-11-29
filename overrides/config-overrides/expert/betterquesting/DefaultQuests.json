@@ -29792,7 +29792,7 @@
     },
     "938:10": {
       "preRequisites:11": [
-        3
+        909
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29875,17 +29875,6 @@
         }
       },
       "questID:3": 1030,
-      "rewards:9": {
-        "0:10": {
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "id:8": "contenttweaker:omnicoin25"
-            }
-          }
-        }
-      },
       "tasks:9": {
         "0:10": {
           "requiredItems:9": {
@@ -29924,17 +29913,6 @@
         }
       },
       "questID:3": 1031,
-      "rewards:9": {
-        "0:10": {
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "id:8": "contenttweaker:omnicoin25"
-            }
-          }
-        }
-      },
       "tasks:9": {
         "0:10": {
           "requiredItems:9": {
@@ -30384,17 +30362,6 @@
         }
       },
       "questID:3": 1042,
-      "rewards:9": {
-        "0:10": {
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "id:8": "contenttweaker:omnicoin25"
-            }
-          }
-        }
-      },
       "tasks:9": {
         "0:10": {
           "requiredItems:9": {
@@ -30465,17 +30432,6 @@
         }
       },
       "questID:3": 1044,
-      "rewards:9": {
-        "0:10": {
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "id:8": "contenttweaker:omnicoin5"
-            }
-          }
-        }
-      },
       "tasks:9": {
         "0:10": {
           "requiredItems:9": {
@@ -35893,8 +35849,8 @@
           "id:3": 938,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": -4
+          "x:3": 72,
+          "y:3": 192
         }
       }
     },
