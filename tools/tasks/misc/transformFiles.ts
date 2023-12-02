@@ -19,7 +19,7 @@ let updateFileTransformedVersion: string;
 
 let buildData: BuildData;
 
-export async function setup(): Promise<void> {
+async function setup(): Promise<void> {
 	updateFiles = false;
 	// See if current run is test
 	if (isEnvVariableSet("UPDATE_FILES")) {
@@ -102,7 +102,7 @@ async function modifyFile(readPath: string, writePaths: string[], replacementObj
 	}
 }
 
-export async function updateIssueTemplates(): Promise<void> {
+async function updateIssueTemplates(): Promise<void> {
 	// Filenames
 	const fileNames: string[] = ["001-bug-report.yml", "002-feature-request.yml"];
 
@@ -137,7 +137,7 @@ export async function updateIssueTemplates(): Promise<void> {
 	}
 }
 
-export async function updateRandomPatchesConfig(): Promise<void> {
+async function updateRandomPatchesConfig(): Promise<void> {
 	// Filename & paths
 	const fileName = "randompatches.cfg";
 	const readPath: string = upath.join(templatesFolder, fileName);
@@ -163,7 +163,7 @@ export async function updateRandomPatchesConfig(): Promise<void> {
 	await modifyFile(readPath, [writePathExpert], replacementObject);
 }
 
-export async function updateServerProperties(): Promise<void> {
+async function updateServerProperties(): Promise<void> {
 	// File name of the output files
 	const fileName = "server.properties";
 
@@ -196,7 +196,7 @@ export async function updateServerProperties(): Promise<void> {
 	await modifyFile(readPathExpert, [writePathExpert], replacementObject);
 }
 
-export async function updateMainMenuConfig(): Promise<void> {
+async function updateMainMenuConfig(): Promise<void> {
 	// Filename & paths
 	const fileName = "mainmenu.json";
 	const readPath: string = upath.join(templatesFolder, fileName);
@@ -226,9 +226,14 @@ export async function updateMainMenuConfig(): Promise<void> {
 	return await fs.promises.writeFile(writePath, sortedStringify(modifiedData, { space: 2 }), "utf8");
 }
 
-export const updateFilesTestBuild = gulp.series(updateRandomPatchesConfig, updateServerProperties);
+export const updateFilesIssue = gulp.series(setup, updateIssueTemplates);
+export const updateFilesRandomPatches = gulp.series(setup, updateRandomPatchesConfig);
+export const updateFilesServer = gulp.series(setup, updateServerProperties);
+export const updateFilesMainMenu = gulp.series(setup, updateMainMenuConfig);
+export const updateFilesBuild = gulp.series(setup, updateRandomPatchesConfig, updateServerProperties);
 
 export const updateAll = gulp.series(
+	setup,
 	updateIssueTemplates,
 	updateRandomPatchesConfig,
 	updateServerProperties,

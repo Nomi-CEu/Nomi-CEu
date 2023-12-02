@@ -9,12 +9,12 @@ import * as quest from "./tasks/github/quest";
 export const transformQB = quest.transformQuestBook;
 
 import * as transformFiles from "./tasks/misc/transformFiles";
-export const updateFilesIssue = gulp.series(transformFiles.setup, transformFiles.updateIssueTemplates);
-export const updateFilesRandomPatches = gulp.series(transformFiles.setup, transformFiles.updateRandomPatchesConfig);
-export const updateFilesServer = gulp.series(transformFiles.setup, transformFiles.updateServerProperties);
-export const updateFilesMainMenu = gulp.series(transformFiles.setup, transformFiles.updateMainMenuConfig);
-export const updateFilesBuild = gulp.series(transformFiles.setup, transformFiles.updateFilesTestBuild);
-export const updateFilesAll = gulp.series(transformFiles.setup, transformFiles.updateAll);
+export const updateFilesIssue = transformFiles.updateFilesIssue;
+export const updateFilesRandomPatches = transformFiles.updateFilesRandomPatches;
+export const updateFilesServer = transformFiles.updateFilesServer;
+export const updateFilesMainMenu = transformFiles.updateFilesMainMenu;
+export const updateFilesBuild = transformFiles.updateFilesBuild;
+export const updateFilesAll = transformFiles.updateAll;
 
 import * as changelog from "./tasks/changelog/createChangelog";
 export const createChangelog = changelog.createRootChangelog;
