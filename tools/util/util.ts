@@ -149,9 +149,9 @@ export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<Retri
 export async function downloadFileDef(fileDef: FileDef): Promise<Buffer> {
 	let hashFailed = false;
 	const retryStrategy = (err: Error, response: http.IncomingMessage, body: unknown) => {
-		if (response.statusCode === 404) {
-			throw new Error(`URL ${fileDef.url} returned status 404.`);
-		}
+		if (!response) return requestretry.RetryStrategies.HTTPOrNetworkError(err, response, body);
+		if (response.statusCode === 404) throw new Error(`URL ${fileDef.url} returned status 404.`);
+
 		// Verify hashes.
 		if (!err && fileDef.hashes && body) {
 			const success = fileDef.hashes.every((hashDef) => {
