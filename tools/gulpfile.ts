@@ -1,4 +1,4 @@
-// noinspection JSUnusedGlobalSymbols
+// noinspection JSUnusedGlobalSymbols,UnnecessaryLocalVariableJS
 
 import * as gulp from "gulp";
 
@@ -27,10 +27,13 @@ import mmcTasks from "./tasks/mmc";
 import modTasks from "./tasks/misc/downloadMods";
 
 export const buildClient = gulp.series(sharedTasks, clientTasks);
-export const buildServer = gulp.series(sharedTasks, modTasks, serverTasks);
+export const buildServer = gulp.series(gulp.parallel(sharedTasks, modTasks), serverTasks);
 export const buildLang = gulp.series(sharedTasks, langTasks);
-export const buildMMC = gulp.series(sharedTasks, modTasks, clientTasks, mmcTasks);
-export const buildAll = gulp.series(sharedTasks, modTasks, gulp.series(clientTasks, langTasks, serverTasks, mmcTasks));
+export const buildMMC = gulp.series(gulp.parallel(sharedTasks, modTasks), clientTasks, mmcTasks);
+export const buildAll = gulp.series(
+	gulp.parallel(sharedTasks, modTasks),
+	gulp.series(gulp.parallel(clientTasks, langTasks, serverTasks), mmcTasks),
+);
 
 import checkTasks from "./tasks/checks";
 export const check = gulp.series(checkTasks);
@@ -41,6 +44,8 @@ export const zipServer = zip.zipServer;
 export const zipLang = zip.zipLang;
 export const zipMMC = zip.zipMMC;
 export const zipAll = zip.zipAll;
+
+exports.default = gulp.series(buildAll, zipAll);
 
 import * as gha from "./tasks/misc/gha";
 export const makeArtifactNames = gha.makeArtifactNames;

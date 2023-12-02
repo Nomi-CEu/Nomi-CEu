@@ -7,7 +7,7 @@ import { langDestDirectory, overridesFolder, sharedDestDirectory } from "../../g
 import fs from "fs";
 
 /**
- * Checks and creates all necessary directories so we can build the client safely.
+ * Checks and creates all necessary directories so we can build the lang safely.
  */
 async function createLangDirs() {
 	if (!fs.existsSync(langDestDirectory)) {
