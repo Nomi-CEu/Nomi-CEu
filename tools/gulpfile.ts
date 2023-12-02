@@ -8,23 +8,13 @@ export const pruneCache = pruneCacheTask;
 import * as quest from "./tasks/github/quest";
 export const transformQB = quest.transformQuestBook;
 
-import * as releaseCommit from "./tasks/misc/releaseCommit";
-export const checkRelease = releaseCommit.check;
-
-// Normal Tasks
-export const addVersionIssue = gulp.series(checkRelease, releaseCommit.updateIssueTemplates);
-export const addVersionRandomPatches = gulp.series(checkRelease, releaseCommit.updateRandomPatchesConfig);
-export const addVersionServer = gulp.series(checkRelease, releaseCommit.updateServerProperties);
-export const addVersionMainMenu = gulp.series(checkRelease, releaseCommit.updateMainMenuConfig);
-export const addVersionAll = gulp.series(checkRelease, releaseCommit.updateAll);
-
-// Non Release Tasks
-const setNotRelease = releaseCommit.setNotRelease;
-export const updateTemplatesIssue = gulp.series(setNotRelease, addVersionIssue);
-export const updateTemplatesRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
-export const updateTemplatesServer = gulp.series(setNotRelease, addVersionServer);
-export const updateTemplatesMainMenu = gulp.series(setNotRelease, addVersionMainMenu);
-export const updateTemplatesAll = gulp.series(setNotRelease, addVersionAll);
+import * as transformFiles from "./tasks/misc/transformFiles";
+export const updateFilesIssue = gulp.series(transformFiles.setup, transformFiles.updateIssueTemplates);
+export const updateFilesRandomPatches = gulp.series(transformFiles.setup, transformFiles.updateRandomPatchesConfig);
+export const updateFilesServer = gulp.series(transformFiles.setup, transformFiles.updateServerProperties);
+export const updateFilesMainMenu = gulp.series(transformFiles.setup, transformFiles.updateMainMenuConfig);
+export const updateFilesBuild = gulp.series(transformFiles.setup, transformFiles.updateFilesTestBuild);
+export const updateFilesAll = gulp.series(transformFiles.setup, transformFiles.updateAll);
 
 import * as changelog from "./tasks/changelog/createChangelog";
 export const createChangelog = changelog.createRootChangelog;
