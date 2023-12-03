@@ -261,7 +261,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: ${{ inputs.separate_upload }}
         with:
-          name: ${{ jobs.makeNames.outputs.client }}
+          name: ${{ needs.makeNames.outputs.client }}
           path: ./build/client/**/*
           if-no-files-found: error
 
@@ -326,7 +326,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: ${{ inputs.separate_upload }}
         with:
-          name: ${{ jobs.makeNames.outputs.server }}
+          name: ${{ needs.makeNames.outputs.server }}
           path: ./build/server/**/*
           if-no-files-found: error
 
@@ -391,7 +391,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: ${{ inputs.separate_upload }}
         with:
-          name: ${{ jobs.makeNames.outputs.mmc }}
+          name: ${{ needs.makeNames.outputs.mmc }}
           path: ./build/mmc/**/*
           if-no-files-found: error
 
@@ -456,7 +456,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: ${{ inputs.separate_upload }}
         with:
-          name: ${{ jobs.makeNames.outputs.lang }}
+          name: ${{ needs.makeNames.outputs.lang }}
           path: ./build/lang/**/*
           if-no-files-found: error
 
