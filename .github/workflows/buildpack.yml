@@ -154,10 +154,10 @@ jobs:
       GITHUB_HEAD_REF: ${{ inputs.head_ref }}
       TRUE_SHA: ${{ inputs.true_sha }}
     outputs:
-      client: ${{ steps.artifactNames.outputs.CLIENT }}
-      server: ${{ steps.artifactNames.outputs.SERVER }}
-      lang: ${{ steps.artifactNames.outputs.LANG }}
-      mmc: ${{ steps.artifactNames.outputs.MMC }}
+      client: ${{ steps.artifactNames.outputs.client }}
+      server: ${{ steps.artifactNames.outputs.server }}
+      lang: ${{ steps.artifactNames.outputs.lang }}
+      mmc: ${{ steps.artifactNames.outputs.mmc }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
@@ -199,11 +199,6 @@ jobs:
         id: artifactNames
         working-directory: ./tools
         run: npx gulp makeArtifactNames
-        
-      - name: test
-        env:
-          OUTPUTS: ${{ steps.artifactNames.outputs.MMC }}
-        run: echo $OUTPUTS;
 
   buildClient:
     name: Build Pack Client (${{ inputs.tag }})
