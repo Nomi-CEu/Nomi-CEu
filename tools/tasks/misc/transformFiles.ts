@@ -19,7 +19,7 @@ let updateFileTransformedVersion: string;
 
 let buildData: BuildData;
 
-async function setup(): Promise<void> {
+async function updateFilesSetup(): Promise<void> {
 	updateFiles = false;
 	// See if current run is test
 	if (isEnvVariableSet("UPDATE_FILES")) {
@@ -226,14 +226,14 @@ async function updateMainMenuConfig(): Promise<void> {
 	return await fs.promises.writeFile(writePath, sortedStringify(modifiedData, { space: 2 }), "utf8");
 }
 
-export const updateFilesIssue = gulp.series(setup, updateIssueTemplates);
-export const updateFilesRandomPatches = gulp.series(setup, updateRandomPatchesConfig);
-export const updateFilesServer = gulp.series(setup, updateServerProperties);
-export const updateFilesMainMenu = gulp.series(setup, updateMainMenuConfig);
-export const updateFilesBuild = gulp.series(setup, updateRandomPatchesConfig, updateServerProperties);
+export const updateFilesIssue = gulp.series(updateFilesSetup, updateIssueTemplates);
+export const updateFilesRandomPatches = gulp.series(updateFilesSetup, updateRandomPatchesConfig);
+export const updateFilesServer = gulp.series(updateFilesSetup, updateServerProperties);
+export const updateFilesMainMenu = gulp.series(updateFilesSetup, updateMainMenuConfig);
+export const updateFilesBuild = gulp.series(updateFilesSetup, updateRandomPatchesConfig, updateServerProperties);
 
 export const updateAll = gulp.series(
-	setup,
+	updateFilesSetup,
 	updateIssueTemplates,
 	updateRandomPatchesConfig,
 	updateServerProperties,
