@@ -5,10 +5,10 @@ import sanitize from "sanitize-filename";
 export async function makeArtifactNames(): Promise<void> {
 	const body = makeArtifactNameBody(modpackManifest.name);
 	const names = {
-		client: body + "-client",
-		server: body + "-server",
-		lang: body + "-lang",
-		mmc: body + "-mmc",
+		CLIENT: body + "-client",
+		SERVER: body + "-server",
+		LANG: body + "-lang",
+		MMC: body + "-mmc",
 	};
 
 	Object.keys(names).forEach((name) => {

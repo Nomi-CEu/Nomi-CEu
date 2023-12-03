@@ -154,10 +154,10 @@ jobs:
       GITHUB_HEAD_REF: ${{ inputs.head_ref }}
       TRUE_SHA: ${{ inputs.true_sha }}
     outputs:
-      client: ${{ steps.artifactNames.outputs.client }}
-      server: ${{ steps.artifactNames.outputs.server }}
-      lang: ${{ steps.artifactNames.outputs.lang }}
-      mmc: ${{ steps.artifactNames.outputs.mmc }}
+      client: ${{ steps.artifactNames.outputs.CLIENT }}
+      server: ${{ steps.artifactNames.outputs.SERVER }}
+      lang: ${{ steps.artifactNames.outputs.LANG }}
+      mmc: ${{ steps.artifactNames.outputs.MMC }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
