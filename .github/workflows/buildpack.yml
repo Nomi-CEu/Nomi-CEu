@@ -197,7 +197,7 @@ jobs:
 
       - name: Make Artifact Names
         id: artifactNames
-        working-directory: ./buildtools
+        working-directory: ./tools
         run: npx gulp makeArtifactNames
 
   buildClient:
