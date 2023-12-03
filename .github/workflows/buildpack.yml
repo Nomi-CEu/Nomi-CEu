@@ -199,6 +199,11 @@ jobs:
         id: artifactNames
         working-directory: ./tools
         run: npx gulp makeArtifactNames
+        
+      - name: test
+        env:
+          OUTPUTS: ${{ steps.artifactNames.outputs }}
+        run: echo $OUTPUTS;
 
   buildClient:
     name: Build Pack Client (${{ inputs.tag }})
