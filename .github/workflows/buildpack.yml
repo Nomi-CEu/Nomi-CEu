@@ -202,7 +202,7 @@ jobs:
         
       - name: test
         env:
-          OUTPUTS: ${{ steps.artifactNames.outputs }}
+          OUTPUTS: ${{ steps.artifactNames.outputs.MMC }}
         run: echo $OUTPUTS;
 
   buildClient:
