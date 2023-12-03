@@ -12,6 +12,6 @@ export async function makeArtifactNames(): Promise<void> {
 	};
 
 	Object.keys(names).forEach((name) => {
-		console.log(`"{${name}}={${sanitize(names[name].toLowerCase())}}" >> $GITHUB_OUTPUT`);
+		console.log(`"{${name}}={${sanitize(names[name].toLowerCase())}}" >> "$GITHUB_OUTPUT"`);
 	});
 }
