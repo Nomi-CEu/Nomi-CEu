@@ -97,12 +97,12 @@ jobs:
         run: npx gulp updateFilesAll
 
       - name: Commit and Push Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        id: commit
+        uses: "stefanzweifel/git-auto-commit-action@v4"
+        id: "commit"
         with:
-          commit_message: ${{ !inputs.updateFiles && ${RELEASE_TYPE} ${GITHUB_TAG}\n\n[NO CATEGORY] || Update Issue, Server and RP Config Files from Templates\n\n[SKIP] }}
-          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          tagging_message: ${{ !inputs.updateFiles && ${GITHUB_TAG} || "" }}
+          commit_message: ${{ !inputs.updateFiles && "${{ inputs.release_type }} ${{ inputs.tag }}\n\n[NO CATEGORY]" || "${{ Update Issue, Server and RP Config Files from Templates\n\n[SKIP] }}" }}
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          tagging_message: ${{ !inputs.updateFiles && "${{ inputs.tag }}" || "" }}
 
       - name: Throw Error if No Changes were Detected
         if: ${{ steps.commit.outputs.changes_detected == 'false' }}
