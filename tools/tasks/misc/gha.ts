@@ -8,6 +8,7 @@ export async function makeArtifactNames(): Promise<void> {
 		client: body + "-client",
 		server: body + "-server",
 		lang: body + "-lang",
+		mmc: body + "-mmc",
 	};
 
 	Object.keys(names).forEach((name) => {
