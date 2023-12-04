@@ -50,6 +50,7 @@
 		"upath": "^2.0.1"
 	},
 	"dependencies": {
+		"@actions/core": "^1.10.1",
 		"@egjs/list-differ": "^1.0.1",
 		"@iarna/toml": "^2.2.5",
 		"@types/iarna__toml": "^2.0.5",

@@ -4,88 +4,83 @@ import { configFolder, configOverridesFolder, rootDirectory, templatesFolder } f
 import mustache from "mustache";
 import gulp from "gulp";
 import dedent from "dedent-js";
-import { checkEnvironmentalVariables } from "../../util/util";
+import { isEnvVariableSet } from "../../util/util";
 import sortedStringify from "json-stable-stringify-without-jsonify";
-import log, { error } from "fancy-log";
+import { error } from "fancy-log";
+import { BuildData } from "../../types/transformFiles";
 
 // This updates all the files, for a release.
 
-// IF DEBUGGING:
-// Change debug value to true
-// Change version to a string
-const debug = false;
-const version: string = process.env.VERSION;
+// If it is not a release or build, and thus no changes to versions need to be made.
+// This occurs when the files are to be updated from the templates outside of a release or a build.
+let updateFiles: boolean;
+let updateFileVersion: string;
+let updateFileTransformedVersion: string;
 
-// If it is not a release, and thus no changes to versions need to be made.
-// This occurs when the files are to be updated from the templates outside of a release.
-// Optional variable to set.
-let notRelease = false;
+let buildData: BuildData;
 
-/**
- * Checks if env variable are set, creates versions.txt if file does not exist, and checks if new version already exists in versions.txt.
- */
-export async function check(): Promise<void> {
-	if (!debug) {
-		checkEnvironmentalVariables(["VERSION"]);
-	}
-	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
-
-	if (notRelease) {
-		log("Detected that this is not a release commit.");
-		log("Version info will not change, but the files will be updated from the template.");
-		await checkNotRelease(versionsFilePath);
-	} else {
-		log("Detected that this is a release commit.");
-		await checkRelease(versionsFilePath);
-	}
-}
-
-/**
- * Sets this workflow as a non-release.
- */
-export async function setNotRelease(): Promise<void> {
-	notRelease = true;
-}
-
-// Checks for non-release commits
-async function checkNotRelease(versionsFilePath: string) {
-	// Check if versions.txt exists
-	if (!fs.existsSync(versionsFilePath)) {
-		error(`Version.txt does not exist. Creating empty file, and adding ${version} to it. This may be an error.`);
-
-		// Create Versions.txt, with version
-		await fs.promises.writeFile(versionsFilePath, `        - ${version}`);
-	} else {
-		// Check for duplicate entries
-		let versionList = await fs.promises.readFile(versionsFilePath, "utf8");
-
-		// No Duplicate Key
-		if (!versionList.includes(version)) {
-			error(`Version is not in version.txt. Adding ${version} to version.txt. This may be an error.`);
-
-			versionList = `        - ${version}\n${versionList}`;
-			await fs.promises.writeFile(versionsFilePath, versionList);
+async function updateFilesSetup(): Promise<void> {
+	updateFiles = false;
+	// See if current run is to update files
+	if (isEnvVariableSet("UPDATE_FILES")) {
+		try {
+			updateFiles = JSON.parse(process.env.UPDATE_FILES.toLowerCase());
+		} catch (err) {
+			throw new Error("Update Files Env Variable set to Invalid Value.");
 		}
 	}
-}
+	buildData = new BuildData();
 
-// Checks for release Commits
-async function checkRelease(versionsFilePath: string) {
-	// Check if versions.txt exists
+	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
+	updateFileVersion = "";
+
+	if (!buildData.isVersionBuild() && !updateFiles) return;
+
+	// Versions.txt handling
 	if (!fs.existsSync(versionsFilePath)) {
+		if (updateFiles) {
+			if (!buildData.isVersionBuild())
+				throw new Error(
+					"In order to update files, needs versions.txt to exist and have values, or the version to be set via the GITHUB_TAG environmental variable.",
+				);
+			updateFileVersion = buildData.rawVersion;
+			updateFileTransformedVersion = buildData.transformedVersion;
+			return;
+		}
 		error("Version.txt does not exist. Creating empty file. This may be an error.");
 
 		// Create Versions.txt
 		fs.closeSync(fs.openSync(versionsFilePath, "w"));
 	} else {
-		// Check for duplicate entries
 		const versionList = await fs.promises.readFile(versionsFilePath, "utf8");
 
+		if (updateFiles) {
+			if (!versionList) {
+				if (!buildData.isVersionBuild())
+					throw new Error(
+						"In order to update files, needs versions.txt to exist and have values, or the version to be set via the GITHUB_TAG environmental variable.",
+					);
+				updateFileVersion = buildData.rawVersion;
+				updateFileTransformedVersion = buildData.transformedVersion;
+				return;
+			}
+			updateFileVersion = versionList.split("\n")[0].replace("-", "").trim();
+			updateFileTransformedVersion = `v${updateFileVersion}`;
+			return;
+		}
+
 		// Duplicate Key
-		if (versionList.includes(`${version}\n`)) {
+		if (versionList.includes(`${buildData.rawVersion}\n`)) {
 			throw new Error("Version already exists in version.txt. Exiting...");
 		}
 	}
+}
+
+async function updateFilesBuildSetup(): Promise<void> {
+	updateFiles = true;
+	buildData = new BuildData();
+	updateFileVersion = buildData.rawVersion;
+	updateFileTransformedVersion = buildData.transformedVersion;
 }
 
 /**
@@ -114,7 +109,7 @@ async function modifyFile(readPath: string, writePaths: string[], replacementObj
 	}
 }
 
-export async function updateIssueTemplates(): Promise<void> {
+async function updateIssueTemplates(): Promise<void> {
 	// Filenames
 	const fileNames: string[] = ["001-bug-report.yml", "002-feature-request.yml"];
 
@@ -122,9 +117,13 @@ export async function updateIssueTemplates(): Promise<void> {
 
 	let versionList: string = await fs.promises.readFile(versionsFilePath, "utf8");
 
-	if (!notRelease) {
+	if (!updateFiles) {
+		if (!buildData.isVersionBuild())
+			throw new Error(
+				"In order to update Issue Templates, the version must be set via the GITHUB_TAG environmental variable.",
+			);
 		// Add new version to list, with indent
-		versionList = `        - ${version}\n${versionList}`;
+		versionList = `        - ${buildData.rawVersion}\n${versionList}`;
 	}
 
 	// Replacement Object
@@ -145,7 +144,7 @@ export async function updateIssueTemplates(): Promise<void> {
 	}
 }
 
-export async function updateRandomPatchesConfig(): Promise<void> {
+async function updateRandomPatchesConfig(): Promise<void> {
 	// Filename & paths
 	const fileName = "randompatches.cfg";
 	const readPath: string = upath.join(templatesFolder, fileName);
@@ -156,7 +155,7 @@ export async function updateRandomPatchesConfig(): Promise<void> {
 
 	// Replacement object
 	const replacementObject: Record<string, unknown> = {
-		version: version,
+		versionTitle: updateFiles ? updateFileTransformedVersion : buildData.transformedVersion,
 		mode: "Normal",
 	};
 
@@ -171,7 +170,7 @@ export async function updateRandomPatchesConfig(): Promise<void> {
 	await modifyFile(readPath, [writePathExpert], replacementObject);
 }
 
-export async function updateServerProperties(): Promise<void> {
+async function updateServerProperties(): Promise<void> {
 	// File name of the output files
 	const fileName = "server.properties";
 
@@ -183,7 +182,7 @@ export async function updateServerProperties(): Promise<void> {
 
 	// Replacement Object
 	const replacementObject: Record<string, unknown> = {
-		version: version,
+		versionTitle: updateFiles ? updateFileTransformedVersion : buildData.transformedVersion,
 	};
 
 	// Read and Write paths for normal
@@ -204,15 +203,20 @@ export async function updateServerProperties(): Promise<void> {
 	await modifyFile(readPathExpert, [writePathExpert], replacementObject);
 }
 
-export async function updateMainMenuConfig(): Promise<void> {
+async function updateMainMenuConfig(): Promise<void> {
 	// Filename & paths
 	const fileName = "mainmenu.json";
 	const readPath: string = upath.join(templatesFolder, fileName);
 	const writePath: string = upath.join(rootDirectory, configFolder, "CustomMainMenu", fileName);
 
+	if (!updateFiles && !buildData.isVersionBuild())
+		throw new Error(
+			"The main menu should only be updated if the version is set via the GITHUB_TAG environmental variable.",
+		);
+
 	// Replacement object
 	const replacementObject: Record<string, unknown> = {
-		version: version,
+		version: updateFiles ? updateFileVersion : buildData.rawVersion,
 	};
 
 	// Read file
@@ -229,7 +233,14 @@ export async function updateMainMenuConfig(): Promise<void> {
 	return await fs.promises.writeFile(writePath, sortedStringify(modifiedData, { space: 2 }), "utf8");
 }
 
+export const updateFilesIssue = gulp.series(updateFilesSetup, updateIssueTemplates);
+export const updateFilesRandomPatches = gulp.series(updateFilesSetup, updateRandomPatchesConfig);
+export const updateFilesServer = gulp.series(updateFilesSetup, updateServerProperties);
+export const updateFilesMainMenu = gulp.series(updateFilesSetup, updateMainMenuConfig);
+export const updateFilesBuild = gulp.series(updateFilesBuildSetup, updateRandomPatchesConfig, updateServerProperties);
+
 export const updateAll = gulp.series(
+	updateFilesSetup,
 	updateIssueTemplates,
 	updateRandomPatchesConfig,
 	updateServerProperties,
