@@ -5,8 +5,12 @@ on:
     branches:
       - main
       - test_buildscript*
+    paths-ignore:
+      - "README.md"
 
   pull_request:
+    paths-ignore:
+      - "README.md"
 
 # if a second commit is pushed quickly after the first, cancel the first one's build
 concurrency:
