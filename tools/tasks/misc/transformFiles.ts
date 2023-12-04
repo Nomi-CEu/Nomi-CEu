@@ -21,7 +21,7 @@ let buildData: BuildData;
 
 async function updateFilesSetup(): Promise<void> {
 	updateFiles = false;
-	// See if current run is test
+	// See if current run is to update files
 	if (isEnvVariableSet("UPDATE_FILES")) {
 		try {
 			updateFiles = JSON.parse(process.env.UPDATE_FILES.toLowerCase());
@@ -44,7 +44,7 @@ async function updateFilesSetup(): Promise<void> {
 					"In order to update files, needs versions.txt to exist and have values, or the version to be set via the GITHUB_TAG environmental variable.",
 				);
 			updateFileVersion = buildData.rawVersion;
-			updateFileTransformedVersion = `v${updateFileVersion}`;
+			updateFileTransformedVersion = buildData.transformedVersion;
 			return;
 		}
 		error("Version.txt does not exist. Creating empty file. This may be an error.");
@@ -61,7 +61,7 @@ async function updateFilesSetup(): Promise<void> {
 						"In order to update files, needs versions.txt to exist and have values, or the version to be set via the GITHUB_TAG environmental variable.",
 					);
 				updateFileVersion = buildData.rawVersion;
-				updateFileTransformedVersion = `v${updateFileVersion}`;
+				updateFileTransformedVersion = buildData.transformedVersion;
 				return;
 			}
 			updateFileVersion = versionList.split("\n")[0].replace("-", "").trim();
@@ -74,6 +74,13 @@ async function updateFilesSetup(): Promise<void> {
 			throw new Error("Version already exists in version.txt. Exiting...");
 		}
 	}
+}
+
+async function updateFilesBuildSetup(): Promise<void> {
+	updateFiles = true;
+	buildData = new BuildData();
+	updateFileVersion = buildData.rawVersion;
+	updateFileTransformedVersion = buildData.transformedVersion;
 }
 
 /**
@@ -230,7 +237,7 @@ export const updateFilesIssue = gulp.series(updateFilesSetup, updateIssueTemplat
 export const updateFilesRandomPatches = gulp.series(updateFilesSetup, updateRandomPatchesConfig);
 export const updateFilesServer = gulp.series(updateFilesSetup, updateServerProperties);
 export const updateFilesMainMenu = gulp.series(updateFilesSetup, updateMainMenuConfig);
-export const updateFilesBuild = gulp.series(updateFilesSetup, updateRandomPatchesConfig, updateServerProperties);
+export const updateFilesBuild = gulp.series(updateFilesBuildSetup, updateRandomPatchesConfig, updateServerProperties);
 
 export const updateAll = gulp.series(
 	updateFilesSetup,
