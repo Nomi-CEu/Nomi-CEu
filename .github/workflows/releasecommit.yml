@@ -43,7 +43,7 @@ on:
         description: |
           Whether this commit is just to update files. version.txt will not be changed. This is used when the templates are changed, and the main files need to be updated.
         type: boolean
-        required: true
+        required: false
         default: false
         
 jobs:
@@ -97,18 +97,18 @@ jobs:
         run: npx gulp updateFilesAll
 
       - name: Commit and Push Release Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         id: commit-release
-        if: ${{ !inputs.updateFiles }}
+        if: "${{ !inputs.updateFiles }}"
         with:
           commit_message: "${{ inputs.release_type }} ${{ inputs.tag }}\n\n[NO CATEGORY]"
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           tagging_message: "${{ inputs.tag }}"
 
       - name: Commit and Push Update Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         id: commit-update
-        if: ${{ inputs.updateFiles }}
+        if: "${{ inputs.updateFiles }}"
         with:
           commit_message: "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]"
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
