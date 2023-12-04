@@ -1,11 +1,10 @@
 import fs from "fs";
 import upath from "upath";
-import { overridesFolder, configFolder, configOverridesFolder } from "../../globals";
-import buildConfig from "../../buildConfig";
+import { overridesFolder, configFolder, configOverridesFolder, sharedDestDirectory } from "../../globals";
 import { Quest, QuestBook, QuestLines as QuestLine } from "../../types/bqQuestBook";
 
-const sharedQBDefaults = upath.join(buildConfig.buildSourceDirectory, configFolder, "betterquesting");
-const sharedConfigOverrides = upath.join(buildConfig.buildSourceDirectory, configOverridesFolder);
+const sharedQBDefaults = upath.join(sharedDestDirectory, configFolder, "betterquesting");
+const sharedConfigOverrides = upath.join(sharedDestDirectory, configOverridesFolder);
 
 const langFileLocation = "resources/questbook/lang";
 
@@ -118,7 +117,7 @@ export async function transformQuestBook(): Promise<void> {
 	const questPathExpertOverride = upath.join(sharedConfigOverrides, "expert", "betterquesting", "DefaultQuests.json");
 
 	// Quest Lang Location
-	const questLangLocation = upath.join(buildConfig.buildSourceDirectory, overridesFolder, langFileLocation);
+	const questLangLocation = upath.join(sharedDestDirectory, overridesFolder, langFileLocation);
 
 	// Traverse through the quest book and rewrite titles/descriptions.
 	// Extract title/desc pairs into a lang file.
