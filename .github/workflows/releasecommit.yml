@@ -96,20 +96,25 @@ jobs:
         working-directory: ./tools
         run: npx gulp updateFilesAll
 
-      - name: Make Commit Name
-        run: |
-          echo "$UPDATE_FILES"
-
-      - name: Commit and Push Changes
+      - name: Commit and Push Release Changes
         uses: stefanzweifel/git-auto-commit-action@v4
-        id: commit
+        id: commit-release
+        if: ${{ !inputs.updateFiles }}
         with:
-          commit_message: ${{ !inputs.updateFiles && format('{0} {1}\n\n[NO CATEGORY]', inputs.release_type, inputs.tag) || 'Update Issue, Server and RP Config Files from Templates\n\n[SKIP]' }}
+          commit_message: "${{ inputs.release_type }} ${{ inputs.tag }}\n\n[NO CATEGORY]"
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          tagging_message: ${{ !inputs.updateFiles && inputs.tag || '' }}
+          tagging_message: "${{ inputs.tag }}"
+
+      - name: Commit and Push Update Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        id: commit-update
+        if: ${{ inputs.updateFiles }}
+        with:
+          commit_message: "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]"
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
 
       - name: Throw Error if No Changes were Detected
-        if: ${{ steps.commit.outputs.changes_detected == 'false' }}
+        if: ${{ (steps.commit-release.outputs && steps.commit-release.outputs.changes_detected == 'false') || (steps.commit-update.outputs && steps.commit-update.changes_detected == 'false') }}
         run: |
           echo "No Changes were Detected. Most likely, this is an error."
           exit 1
