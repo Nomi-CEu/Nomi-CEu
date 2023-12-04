@@ -114,7 +114,7 @@ jobs:
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
 
       - name: Throw Error if No Changes were Detected
-        if: ${{ steps.commit-release.outputs.changes_detected == 'false' || steps.commit-update.changes_detected == 'false' }}
+        if: ${{ steps.commit-release.outputs.changes_detected == 'false' || steps.commit-update.outputs.changes_detected == 'false' }}
         run: |
           echo "No Changes were Detected. Most likely, this is an error."
           exit 1
