@@ -28,7 +28,6 @@ body:
         - 1.4.1a
         - 1.4
 
-
     validations:
         required: true
   - type: textarea
