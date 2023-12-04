@@ -5,6 +5,7 @@
     <a href="https://github.com/Nomi-CEu/Nomi-CEu/issues"><img src="https://img.shields.io/github/issues/Nomi-CEu/Nomi-CEu?style=for-the-badge&color=orange" alt="Issues"></a>
     <a href="https://github.com/Nomi-CEu/Nomi-CEu/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/Nomi-CEu?style=for-the-badge" alt="License"></a>
     <a href="https://discord.com/invite/zwQzqP8b6q"><img src="https://img.shields.io/discord/927050775073534012?color=5464ec&label=Discord&style=for-the-badge" alt="Discord"></a>
+    <img alt="Commit Builds Status" src="https://img.shields.io/github/actions/workflow/status/Nomi-CEu/Nomi-CEu/testbuildpack.yml?style=for-the-badge&logo=github&label=Commit%20Builds&link=https%3A%2F%2Fnightly.link%2FNomi-CEu%2FNomi-CEu%2Fworkflows%2Ftestbuildpack%2Fmain">
     <br>
     <a href="https://www.curseforge.com/minecraft/modpacks/Nomi-CEu"><img src="https://cf.way2muchnoise.eu/594351.svg?badge_style=for_the_badge" alt="CurseForge"></a>
     <a href="https://www.curseforge.com/minecraft/modpacks/Nomi-CEu"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_594351_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
