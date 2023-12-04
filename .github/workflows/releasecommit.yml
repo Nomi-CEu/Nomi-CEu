@@ -100,7 +100,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         id: commit
         with:
-          commit_message: ${{ !inputs.updateFiles && inputs.release_type inputs.tag\n\n[NO CATEGORY] || Update Issue, Server and RP Config Files from Templates\n\n[SKIP] }} }}
+          commit_message: ${{ !inputs.updateFiles && format("{0} {1}\n\n[NO CATEGORY]", inputs.release_type, inputs.tag) || "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]" }} }}
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           tagging_message: ${{ !inputs.updateFiles && inputs.tag || "" }}
 
