@@ -78,7 +78,7 @@
       "alignment": "left_center",
       "action": {
         "type": "openLink",
-        "link": "https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/{{version}}"
+        "link": "https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/{{{version}}}"
       }
     },
     "discord": {

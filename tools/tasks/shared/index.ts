@@ -131,10 +131,12 @@ import transformVersion from "./transformVersion";
 import { createBuildChangelog } from "../changelog/createChangelog";
 import mustache from "mustache";
 import log from "fancy-log";
+import { updateFilesBuild } from "../misc/transformFiles";
 
 export default gulp.series(
 	sharedCleanUp,
 	createSharedDirs,
+	updateFilesBuild,
 	copyOverrides,
 	fetchOrMakeChangelog,
 	fetchExternalDependencies,

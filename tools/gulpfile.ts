@@ -1,4 +1,4 @@
-// noinspection JSUnusedGlobalSymbols
+// noinspection JSUnusedGlobalSymbols,UnnecessaryLocalVariableJS
 
 import * as gulp from "gulp";
 
@@ -8,23 +8,13 @@ export const pruneCache = pruneCacheTask;
 import * as quest from "./tasks/github/quest";
 export const transformQB = quest.transformQuestBook;
 
-import * as releaseCommit from "./tasks/misc/releaseCommit";
-export const checkRelease = releaseCommit.check;
-
-// Normal Tasks
-export const addVersionIssue = gulp.series(checkRelease, releaseCommit.updateIssueTemplates);
-export const addVersionRandomPatches = gulp.series(checkRelease, releaseCommit.updateRandomPatchesConfig);
-export const addVersionServer = gulp.series(checkRelease, releaseCommit.updateServerProperties);
-export const addVersionMainMenu = gulp.series(checkRelease, releaseCommit.updateMainMenuConfig);
-export const addVersionAll = gulp.series(checkRelease, releaseCommit.updateAll);
-
-// Non Release Tasks
-const setNotRelease = releaseCommit.setNotRelease;
-export const updateTemplatesIssue = gulp.series(setNotRelease, addVersionIssue);
-export const updateTemplatesRandomPatches = gulp.series(setNotRelease, addVersionRandomPatches);
-export const updateTemplatesServer = gulp.series(setNotRelease, addVersionServer);
-export const updateTemplatesMainMenu = gulp.series(setNotRelease, addVersionMainMenu);
-export const updateTemplatesAll = gulp.series(setNotRelease, addVersionAll);
+import * as transformFiles from "./tasks/misc/transformFiles";
+export const updateFilesIssue = transformFiles.updateFilesIssue;
+export const updateFilesRandomPatches = transformFiles.updateFilesRandomPatches;
+export const updateFilesServer = transformFiles.updateFilesServer;
+export const updateFilesMainMenu = transformFiles.updateFilesMainMenu;
+export const updateFilesBuild = transformFiles.updateFilesBuild;
+export const updateFilesAll = transformFiles.updateAll;
 
 import * as changelog from "./tasks/changelog/createChangelog";
 export const createChangelog = changelog.createRootChangelog;
@@ -37,10 +27,13 @@ import mmcTasks from "./tasks/mmc";
 import modTasks from "./tasks/misc/downloadMods";
 
 export const buildClient = gulp.series(sharedTasks, clientTasks);
-export const buildServer = gulp.series(sharedTasks, modTasks, serverTasks);
+export const buildServer = gulp.series(gulp.parallel(sharedTasks, modTasks), serverTasks);
 export const buildLang = gulp.series(sharedTasks, langTasks);
-export const buildMMC = gulp.series(sharedTasks, modTasks, clientTasks, mmcTasks);
-export const buildAll = gulp.series(sharedTasks, modTasks, gulp.series(clientTasks, langTasks, serverTasks, mmcTasks));
+export const buildMMC = gulp.series(gulp.parallel(sharedTasks, modTasks), clientTasks, mmcTasks);
+export const buildAll = gulp.series(
+	gulp.parallel(sharedTasks, modTasks),
+	gulp.series(gulp.parallel(clientTasks, langTasks, serverTasks), mmcTasks),
+);
 
 import checkTasks from "./tasks/checks";
 export const check = gulp.series(checkTasks);
@@ -51,6 +44,8 @@ export const zipServer = zip.zipServer;
 export const zipLang = zip.zipLang;
 export const zipMMC = zip.zipMMC;
 export const zipAll = zip.zipAll;
+
+exports.default = gulp.series(buildAll, zipAll);
 
 import * as gha from "./tasks/misc/gha";
 export const makeArtifactNames = gha.makeArtifactNames;

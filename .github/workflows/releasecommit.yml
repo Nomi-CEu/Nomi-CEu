@@ -3,56 +3,57 @@ name: Create Release Commit
 on:
   workflow_dispatch:
     inputs:
-      version:
+      tag:
         description: |
-          Release Version (aka 1.6.1a, 1.6.1-beta-3, 2.0, etc.). 
+          Tag to release (aka 1.6.1a, 1.6.1-beta-3, 2.0, etc.).
           
-          Still important if not a release, and will be used to replace all version fields.
-        required: true
+          If this is just a release, then the version will be grabbed from the top line of version.txt. However, this field is needed if version.txt does not exist or is empty.
+        type: string
+        required: false
       release_type:
         description: 'Release Type. Will be ignored if not a release.'
         type: choice
-        required: true
+        required: false
         default: 'Release'
         options:
           - 'Release'
           - 'Beta Release'
           - 'Alpha Release'
-      is_release:
+      update_files:
         description: |
-          Whether this commit is a release. Usually, leave this set to true. See CONTRIBUTING.md for more details.
+          Whether this commit is just to update files. version.txt will not be changed. This is used when the templates are changed, and the main files need to be updated.
         type: boolean
         required: true
-        default: true
+        default: false
 
   workflow_call:
     inputs:
-      version:
+      tag:
         description: |
-          Release Version (aka 1.6.1a, 1.6.1-beta-3, 2.0, etc.). 
+          Tag to release (aka 1.6.1a, 1.6.1-beta-3, 2.0, etc.).
           
-          Still important if not a release, and will be used to replace all version fields.
+          If this is just a release, then the version will be grabbed from the top line of version.txt. However, this field is needed if version.txt does not exist or is empty.
         type: string
-        required: true
+        required: false
       release_type:
         description: 'Release Type. Will be ignored if not a release.'
         type: string
-        required: true
-      is_release:
+        required: false
+      update_files:
         description: |
-          Whether this commit is a release. See CONTRIBUTING.md for more details.
+          Whether this commit is just to update files. version.txt will not be changed. This is used when the templates are changed, and the main files need to be updated.
         type: boolean
         required: false
-        default: true
+        default: false
+        
 jobs:
-  # Release Commit Steps
   createReleaseCommit:
     name: Create Release Commit (${{ inputs.version }})
     runs-on: ubuntu-latest
-    if: "${{ inputs.is_release }}"
     env:
-      VERSION: "${{ inputs.version }}"
-      RELEASE_TYPE: "${{ inputs.release_type }}"
+      UPDATE_FILES: ${{ inputs.update_files }}
+      GITHUB_TAG: ${{ inputs.tag }}
+      RELEASE_TYPE: ${{ inputs.release_type }}
 
     steps:
       - name: Checkout Repo
@@ -91,84 +92,29 @@ jobs:
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
-      - name: Set Release Version
+      - name: Update Files
         working-directory: ./tools
-        run: |
-          npx gulp addVersionAll
+        run: npx gulp updateFilesAll
 
       - name: Commit and Push Release Changes
-        uses: "stefanzweifel/git-auto-commit-action@v4"
-        id: "commit-release"
+        uses: stefanzweifel/git-auto-commit-action@v5
+        id: commit-release
+        if: ${{ !inputs.update_files }}
         with:
-          commit_message: "${{ inputs.release_type }} ${{ inputs.version }}\n\n[NO CATEGORY]"
-          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
-          tagging_message: "${{ inputs.version }}"
+          commit_message: "${{ inputs.release_type }} ${{ inputs.tag }}\n\n[NO CATEGORY]"
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          tagging_message: "${{ inputs.tag }}"
 
-      - name: Throw Error if No Release Changes were Detected
-        if: ${{ steps.commit-release.outputs.changes_detected == 'false' }}
-        run: |
-          echo "No Changes were Made."
-          exit 1
-
-  # Non-Release Commit Steps
-  updateFilesFromTemplate:
-    name: Update Files from Templates
-    runs-on: ubuntu-latest
-    if: "${{ !inputs.is_release }}"
-    env:
-      VERSION: "${{ inputs.version }}"
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ssh-key: ${{ secrets.SSH_KEY }}
-
-      - name: Restore Cached Files
-        uses: actions/cache@v3
-        id: cache
-        with:
-          path: |
-            ~/.npm
-            ./.cache
-            ./tools/node_modules
-          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
-          restore-keys: ${{ runner.os }}-bunny-
-
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-          check-latest: true
-
-      - name: Setup NPM Packages
-        working-directory: ./tools
-        run: npm ci
-
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npx gulp check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-
-      - name: Update Files from Templates
-        working-directory: ./tools
-        run: |
-          npx gulp updateTemplatesAll
-
-      - name: Commit and Push Template Changes
-        uses: "stefanzweifel/git-auto-commit-action@v4"
-        id: "commit-template"
+      - name: Commit and Push Update Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        id: commit-update
+        if: ${{ inputs.update_files }}
         with:
           commit_message: "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]"
-          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
-          
-      - name: Throw Error if No Template Changes were Detected
-        if: ${{ steps.commit-template.outputs.changes_detected == 'false' }}
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+
+      - name: Throw Error if No Changes were Detected
+        if: ${{ steps.commit-release.outputs.changes_detected == 'false' || steps.commit-update.outputs.changes_detected == 'false' }}
         run: |
-          echo "No Template Changes were detected. This may be an error."
+          echo "No Changes were Detected. Most likely, this is an error."
           exit 1
