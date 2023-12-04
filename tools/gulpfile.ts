@@ -5,9 +5,6 @@ import * as gulp from "gulp";
 import pruneCacheTask from "./tasks/misc/pruneCache";
 export const pruneCache = pruneCacheTask;
 
-import * as quest from "./tasks/github/quest";
-export const transformQB = quest.transformQuestBook;
-
 import * as transformFiles from "./tasks/misc/transformFiles";
 export const updateFilesIssue = transformFiles.updateFilesIssue;
 export const updateFilesRandomPatches = transformFiles.updateFilesRandomPatches;
