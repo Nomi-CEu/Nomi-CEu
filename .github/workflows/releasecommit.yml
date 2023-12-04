@@ -96,6 +96,10 @@ jobs:
         working-directory: ./tools
         run: npx gulp updateFilesAll
 
+      - name: Make Commit Name
+        run: |
+          echo "$UPDATE_FILES"
+
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         id: commit
