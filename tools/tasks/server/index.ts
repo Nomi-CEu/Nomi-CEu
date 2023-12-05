@@ -10,16 +10,10 @@ import Bluebird from "bluebird";
 import { ForgeProfile } from "../../types/forgeProfile";
 import { FileDef } from "../../types/fileDef";
 import { downloadOrRetrieveFileDef, getVersionManifest, libraryToPath, relative } from "../../util/util";
-import {
-	mmcDestDirectory,
-	modDestDirectory,
-	modpackManifest,
-	serverDestDirectory,
-	sharedDestDirectory
-} from "../../globals";
+import { modDestDirectory, modpackManifest, serverDestDirectory, sharedDestDirectory } from "../../globals";
 import del from "del";
 import { VersionManifest } from "../../types/versionManifest";
-import { fetchMods } from "../../util/curseForgeAPI";
+import { updateBuildServerProperties } from "../misc/transformFiles";
 
 const FORGE_VERSION_REG = /forge-(.+)/;
 const FORGE_MAVEN = "https://files.minecraftforge.net/maven/";
@@ -202,7 +196,7 @@ function copyServerOverrides() {
 /**
  * Copies files from ./serverfiles into dest folder.
  */
-function copyServerfiles() {
+function copyServerFiles() {
 	return src(["../serverfiles/**"]).pipe(dest(serverDestDirectory));
 }
 
@@ -267,9 +261,10 @@ export default gulp.series([
 	downloadMinecraftServer,
 	copyServerMods,
 	copyServerOverrides,
-	copyServerfiles,
+	copyServerFiles,
 	copyServerLicense,
 	copyServerChangelog,
 	copyServerUpdateNotes,
 	processLaunchscripts,
+	updateBuildServerProperties,
 ]);
