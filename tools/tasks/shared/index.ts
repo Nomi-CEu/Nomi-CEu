@@ -2,7 +2,14 @@ import fs from "fs";
 import gulp from "gulp";
 import upath from "upath";
 import buildConfig from "../../buildConfig";
-import { modDestDirectory, modpackManifest, overridesFolder, sharedDestDirectory, tempDirectory } from "../../globals";
+import {
+	modDestDirectory,
+	modpackManifest,
+	overridesFolder,
+	rootDirectory,
+	sharedDestDirectory,
+	tempDirectory
+} from "../../globals";
 import del from "del";
 import { FileDef } from "../../types/fileDef";
 import Bluebird from "bluebird";
@@ -30,9 +37,10 @@ async function createSharedDirs() {
  * Copies modpack overrides.
  */
 async function copyOverrides() {
+	// Don't copy server.properties files in config-overrides, it is auto transformed into the server build folder
 	return new Promise((resolve) => {
 		gulp
-			.src(upath.join(buildConfig.buildSourceDirectory, overridesFolder, "**/*"))
+			.src(buildConfig.copyToSharedDirGlobs, { cwd: upath.join(buildConfig.buildSourceDirectory) })
 			.pipe(gulp.dest(upath.join(sharedDestDirectory, overridesFolder)))
 			.on("end", resolve);
 	});
