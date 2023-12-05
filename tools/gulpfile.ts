@@ -10,7 +10,6 @@ export const updateFilesIssue = transformFiles.updateFilesIssue;
 export const updateFilesRandomPatches = transformFiles.updateFilesRandomPatches;
 export const updateFilesServer = transformFiles.updateFilesServer;
 export const updateFilesMainMenu = transformFiles.updateFilesMainMenu;
-export const updateFilesBuild = transformFiles.updateFilesBuild;
 export const updateFilesAll = transformFiles.updateAll;
 
 import * as changelog from "./tasks/changelog/createChangelog";
