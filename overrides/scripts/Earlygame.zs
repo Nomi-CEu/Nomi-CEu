@@ -42,7 +42,7 @@ furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0)
 //Snad	
 recipes.remove(<snad:snad>);
 recipes.remove(<snad:snad:1>);
-recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>],[<extrautils2:compressedsand:1>]]);
+recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>], [<enderio:item_material:14>], [<extrautils2:compressedsand:1>]]);
 
 //Photovoltaic Cells
 alloy_smelter.recipeBuilder().inputs([<enderio:item_material:38> * 2, <metaitem:plateElectricalSteel>]).outputs([<enderio:item_material:3>]).duration(180).EUt(16).buildAndRegister();
