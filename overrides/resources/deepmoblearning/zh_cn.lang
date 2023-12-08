@@ -1,0 +1,240 @@
+# Item Names
+item.deepmoblearning.polymer_clay.name=聚合粘土
+item.deepmoblearning.data_model_blank.name=空白数据模型
+item.deepmoblearning.deep_learner.name=深度学习器
+item.deepmoblearning.creative_model_learner.name=创造模式模型学习器
+item.deepmoblearning.trial_key.name=测试密钥
+
+item.deepmoblearning.soot_covered_redstone.name=炭灰红石
+item.deepmoblearning.soot_covered_plate.name=炭灰板材
+item.deepmoblearning.glitch_infused_ingot.name=故障灌注锭
+item.deepmoblearning.glitch_heart.name=损坏的故障心脏
+item.deepmoblearning.glitch_fragment.name=不稳定故障碎片
+
+item.deepmoblearning.glitch_infused_helmet.name=故障灌注头盔
+item.deepmoblearning.glitch_infused_chestplate.name=故障灌注胸甲
+item.deepmoblearning.glitch_infused_leggings.name=故障灌注护腿
+item.deepmoblearning.glitch_infused_boots.name=故障灌注靴子
+item.deepmoblearning.glitch_infused_sword.name=故障灌注剑
+
+# Block Names
+tile.deepmoblearning.infused_ingot_block.name=故障灌注块
+tile.deepmoblearning.machine_casing.name=炭灰板材机械外壳
+tile.deepmoblearning.simulation_chamber.name=模拟室
+tile.deepmoblearning.extraction_chamber.name=战利品制造机
+tile.deepmoblearning.trial_keystone.name=测试楔石
+
+# Entity Names
+entity.deepmoblearning.glitch.name=系统故障
+entity.deepmoblearning.glitch_orb.name=苦难AI之珠
+entity.deepmoblearning.trial_enderman.name=测试型末影人
+entity.deepmoblearning.trial_spider.name=测试型蜘蛛
+entity.deepmoblearning.trial_cave_spider.name=测试型洞穴蜘蛛
+entity.deepmoblearning.trial_slime.name=测试型史莱姆
+
+# General
+deepmoblearning.general.more_info=-按住 %s 查看更多信息
+
+# Living Matter
+deepmoblearning.living_matter.display_name=%s 物质
+deepmoblearning.living_matter.consume_for_xp=%s 来得到经验。
+deepmoblearning.living_matter.consume_stack=按住 %s 消耗整组。
+deepmoblearning.living_matter.xp=每个物品的经验：%s
+
+# Pristine Matter
+deepmoblearning.pristine_matter.display_name=原始 %s 物质
+deepmoblearning.pristine_matter.loot_items=可获得的战利品：
+
+# Data Model
+deepmoblearning.data_model.display_name=%s 数据模型
+deepmoblearning.data_model.type=类型：%s
+deepmoblearning.data_model.tier=等级：%s
+deepmoblearning.data_model.data_collected=收集的数据：%s/%s
+deepmoblearning.data_model.kill_multiplier=每次杀死数据：%s
+deepmoblearning.data_model.rf_cost=模拟成本：%s RF/t
+deepmoblearning.data_model.cannot_simulate=这个等级的数据模型没法用在模拟室中。
+deepmoblearning.data_model.reached_tier=%s 到达了 %s 等级
+deepmoblearning.data_model.disabled=禁用的数据模块
+
+# Deep Learner
+deepmoblearning.deep_learner.hud=当在主手或副手且填充数据模型时将会显示 HUD
+deepmoblearning.deep_learner.contains=容纳下列数据模型
+
+deepmoblearning.deep_learner.heading_name=名字
+deepmoblearning.deep_learner.heading_information=信息
+deepmoblearning.deep_learner.model_tier=模型等级： %s
+deepmoblearning.deep_learner.defeated=%s 击败了：%s
+deepmoblearning.deep_learner.required=击败 %s 更多来达到 %s
+deepmoblearning.deep_learner.maximum=已到达最高等级
+deepmoblearning.deep_learner.health_points=生命值
+
+deepmoblearning.deep_learner.no_model.line_1=未找到数据模型
+deepmoblearning.deep_learner.no_model.line_2=请插入数据模型！
+deepmoblearning.deep_learner.no_model.line_3=你的数据模型将会收集数据
+deepmoblearning.deep_learner.no_model.line_4=当它们被放入深度学习器时
+deepmoblearning.deep_learner.no_model.line_5=为了收集数据，你必须
+deepmoblearning.deep_learner.no_model.line_6=对怪物进行最后一击。
+
+deepmoblearning.deep_learner.button_next=下一个数据模型
+deepmoblearning.deep_learner.button_prev=上一个数据模型
+
+# Data HUD Overlay
+deepmoblearning.data_overlay.kills_needed=需要 %s 击杀
+
+# Creative Model Learner
+deepmoblearning.creative_model_learner.description=一个可以改变深度学习器数据模块等级的创造模式物品。
+deepmoblearning.creative_model_learner.increase_tier=%s 来提高等级。
+deepmoblearning.creative_model_learner.decrease_tier=%s 来降低等级。
+deepmoblearning.creative_model_learner.increase_kills=%s 来模拟击杀。
+
+# Trial Key
+deepmoblearning.trial_key.attunement_message=%s 被调谐到 %s
+deepmoblearning.trial_key.cannot_attune_message=不能调谐 %s - 没有 %s 的测试
+deepmoblearning.trial_key.tooltip.attunement=调谐到 %s
+deepmoblearning.trial_key.tooltip.tier=秘钥等级 %s
+deepmoblearning.trial_key.tooltip.affixes=词缀 %s
+deepmoblearning.trial_key.tooltip.no_affixes=无词缀测试
+deepmoblearning.trial_key.tooltip.affixes_faulty=故障等级的测试没有词缀。
+deepmoblearning.trial_key.tooltip.affix_info=在手册中获取关于词缀的更多类型
+deepmoblearning.trial_key.tooltip.not_attuned=现在未调谐
+deepmoblearning.trial_key.tooltip.available_attunements=可用的调谐：
+
+# Soot-Covered Redstone
+deepmoblearning.soot_covered_redstone.tooltip_1=通过敲击 %s 来制造
+deepmoblearning.soot_covered_redstone.tooltip_2=%s (%s)
+
+# Glitch Armor
+deepmoblearning.glitch_armor.tooltip_1=全套套装穿上时的增益
+deepmoblearning.glitch_armor.tooltip_2=（测试期间增益禁用）
+deepmoblearning.glitch_armor.tooltip_3=  1. %s 概率掉落 %s 原始物质
+deepmoblearning.glitch_armor.tooltip_4=     当数据模块得到数据时。
+deepmoblearning.glitch_armor.tooltip_5=  2. 飞行及免疫掉落伤害。
+
+# Glitch Ingot
+deepmoblearning.glitch_ingot.tooltip_1=通过稳定化 %s 制造
+deepmoblearning.glitch_ingot.tooltip_2=JEI 和手册中有更多信息
+deepmoblearning.glitch_ingot.jei_info_1=省流：将一些碎片、青金石和金锭丢进水中，接着希望好事发生。
+deepmoblearning.glitch_ingot.jei_info_2=你发现青金石对于不稳定故障碎片来说是很好的稳定剂。
+deepmoblearning.glitch_ingot.jei_info_3=在碎片稳定之后，它们会拼命寻找一种物质来附着，你认为黄金作为载体可能足够强大。
+deepmoblearning.glitch_ingot.jei_info_4=整个过程很微妙，需要在水中进行，否则材料就不能很好地粘合。
+
+# Glitch Heart
+deepmoblearning.glitch_heart.tooltip=由系统故障掉落
+
+# Glitch Fragment
+deepmoblearning.glitch_fragment.tooltip_1=使用 %s
+deepmoblearning.glitch_fragment.tooltip_2=敲击一些 %s (%s) 来制作
+deepmoblearning.glitch_fragment.tooltip_3=每个损坏的心脏获得 %d 个碎片
+
+# Glitch Sword
+deepmoblearning.glitch_sword.tooltip_1=增益：快速学习
+deepmoblearning.glitch_sword.tooltip_2=（测试期间增益禁用）
+deepmoblearning.glitch_sword.tooltip_3=来自怪物死亡的数据翻倍。
+deepmoblearning.glitch_sword.tooltip_4=当获取数据的时候，有小概率
+deepmoblearning.glitch_sword.tooltip_5=这把剑会获得永久的伤害提升。
+deepmoblearning.glitch_sword.tooltip_6=当前伤害提升：%s (最大 %s)
+deepmoblearning.glitch_sword.max_damage_reached=你的 %s 现在达到了最好水平！
+deepmoblearning.glitch_sword.damage_increased=你的 %s 正在增强！
+
+# Simulation Chamber
+deepmoblearning.simulation_chamber.simulation_text.launching=启动运行时环境
+deepmoblearning.simulation_chamber.simulation_text.iteration=迭代 #%d 开始
+deepmoblearning.simulation_chamber.simulation_text.loading=从芯片内存中加载模型
+deepmoblearning.simulation_chamber.simulation_text.assessing=评估威胁级别
+deepmoblearning.simulation_chamber.simulation_text.engaged=生成怪物
+deepmoblearning.simulation_chamber.simulation_text.pristine=获取原始物质
+deepmoblearning.simulation_chamber.simulation_text.pristine_success=成功
+deepmoblearning.simulation_chamber.simulation_text.pristine_failure=失败
+deepmoblearning.simulation_chamber.simulation_text.processing=处理结果
+
+deepmoblearning.simulation_chamber.error_text.error=错误：无法开始模拟
+deepmoblearning.simulation_chamber.error_text.no_data_model_1=未找到数据模块
+deepmoblearning.simulation_chamber.error_text.no_data_model_2=请插入数据模块
+deepmoblearning.simulation_chamber.error_text.model_cannot_simulate_1=模型中数据数量无效
+deepmoblearning.simulation_chamber.error_text.model_cannot_simulate_2=请插入有效的数据模型
+deepmoblearning.simulation_chamber.error_text.no_polymer=缺少聚合物介质
+deepmoblearning.simulation_chamber.error_text.no_energy=系统能源不足
+deepmoblearning.simulation_chamber.error_text.output_full=输出槽已满
+
+deepmoblearning.simulation_chamber.redstone_deactivated_1=系统被停用
+deepmoblearning.simulation_chamber.redstone_deactivated_2=因红石信号
+
+deepmoblearning.simulation_chamber.data_model_info.tier=等级
+deepmoblearning.simulation_chamber.data_model_info.iterations=迭代
+deepmoblearning.simulation_chamber.data_model_info.pristine=获取原始物质概率
+
+deepmoblearning.simulation_chamber.tooltip.model_data=%s 数据已收集
+deepmoblearning.simulation_chamber.tooltip.model_max=数据模型达到最高等级
+deepmoblearning.simulation_chamber.tooltip.model_missing=机器缺失数据模型
+deepmoblearning.simulation_chamber.tooltip.model_cannot_simulate=无法运行这个数据模型等级的模拟
+deepmoblearning.simulation_chamber.tooltip.sim_cost=当前数据模型模拟消耗 %d RF/t
+
+# Loot Fabricator
+deepmoblearning.loot_fabricator.tooltip.crafting_cost=操作花费： %d RF/t
+deepmoblearning.loot_fabricator.tooltip.deselect=点击以取消选中产物
+
+deepmoblearning.loot_fabricator.error.no_energy=合成能源不足
+deepmoblearning.loot_fabricator.error.redstone=机器被红石信号禁用
+deepmoblearning.loot_fabricator.error.no_pristine=输入槽无原始物质
+deepmoblearning.loot_fabricator.error.no_output_selected=未选中产物
+deepmoblearning.loot_fabricator.error.output_full=输出槽已满
+
+# Trial Keystone
+deepmoblearning.trial_keystone.start_button.tooltip=开始测试
+
+deepmoblearning.trial_keystone.trial_active_1=测试已经激活
+deepmoblearning.trial_keystone.trial_active_2=完成时奖励将会掉落
+deepmoblearning.trial_keystone.trial_active_3=当前第 %d/%d 波
+deepmoblearning.trial_keystone.area_blocked_1=测试区域内有东西阻挡
+deepmoblearning.trial_keystone.area_blocked_2=确保周围有 15x15x10 的空地
+deepmoblearning.trial_keystone.area_blocked_3=以及测试楔石上方是
+deepmoblearning.trial_keystone.area_blocked_4=空的，区域下方的地板
+deepmoblearning.trial_keystone.area_blocked_5=由完整方块构成。
+deepmoblearning.trial_keystone.no_trial_key_1=请插入调谐后的测试秘钥
+deepmoblearning.trial_keystone.no_trial_key_2=来开始一个测试！
+
+deepmoblearning.trial_keystone.trial_type=测试类型：
+deepmoblearning.trial_keystone.tier=等级：
+deepmoblearning.trial_keystone.waves=波数：
+deepmoblearning.trial_keystone.rewards=奖励：
+deepmoblearning.trial_keystone.affixes=词缀：
+
+# Redstone Mode Button
+deepmoblearning.redstone_mode.always_on=始终开启
+deepmoblearning.redstone_mode.high_on=有红石信号时工作
+deepmoblearning.redstone_mode.high_off=有红石信号时停止工作
+deepmoblearning.redstone_mode.always_off=始终关闭
+
+# Page select button
+deepmoblearning.button_page_select.next=下一页
+deepmoblearning.button_page_select.prev=上一页
+
+# Trials
+deepmoblearning.trial.message.player_left=你离开了测试！
+deepmoblearning.trial.message.aborted=因未知原因测试终止
+deepmoblearning.trial.message.failed=测试失败，所有的参与者都死了或离开了区域
+deepmoblearning.trial.message.completed=干得好！从测试楔石处收集你的奖励
+deepmoblearning.trial.message.wave=波数
+deepmoblearning.trial.message.wave_number=第 %d 波
+deepmoblearning.trial.message.next_wave=下一波：%d
+deepmoblearning.trial.message.wave_cleared=本波次已清除
+deepmoblearning.trial.message.enemies_left=剩余 %d 敌人
+deepmoblearning.trial.message.opponents=敌怪
+deepmoblearning.trial.message.glitch_1=! 故障警报 !
+deepmoblearning.trial.message.glitch_2=在它变成问题之前把它处理掉
+
+# Affixes
+deepmoblearning.affix.blaze_invaders.name=Blaze Invaders
+deepmoblearning.affix.empowered_glitches.name=Empowered Glitches
+deepmoblearning.affix.knockback_immunity.name=Knockback Immunity
+deepmoblearning.affix.loot_hoarder.name=Loot Hoarders
+deepmoblearning.affix.regen_party.name=Regen Party
+deepmoblearning.affix.speed.name=Speed
+deepmoblearning.affix.thunderdome.name=THUNDERDOME
+
+# Creative Tab
+itemGroup.deepmoblearning=深度怪物进化
+
+# Keybinds
+deepmoblearning.key.lshift=LSHIFT
+deepmoblearning.key.lctrl=LCONTROL

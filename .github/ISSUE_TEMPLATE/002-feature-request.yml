@@ -11,7 +11,7 @@ body:
     id: version
     attributes:
       label: Nomi CEu Version
-      description: The version of Nomi CEu you were using when this bug was encountered. If you do not know what it is, check the title of your instance window. If you do not see your version here, please update to the newest alpha, beta or release of the pack. 
+      description: The version of Nomi CEu you are using as the basis for this feature request. If you do not know what it is, check the title of your instance window. f you do not see your version here, please update to the newest alpha, beta or release of the pack.
       options:
         - 1.7-alpha-1
         - 1.6.1a

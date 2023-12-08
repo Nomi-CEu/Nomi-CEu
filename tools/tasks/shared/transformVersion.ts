@@ -25,6 +25,4 @@ export default async function transformManifestVersion(): Promise<void> {
 	} else {
 		modpackManifest.version = "manual-build";
 	}
-
-	modpackManifest.name = "";
 }

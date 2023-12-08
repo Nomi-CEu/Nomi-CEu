@@ -1,11 +1,10 @@
 import fs from "fs";
 import upath from "upath";
-import { overridesFolder, configFolder, configOverridesFolder } from "../../globals";
-import buildConfig from "../../buildConfig";
+import { overridesFolder, configFolder, configOverridesFolder, sharedDestDirectory } from "../../globals";
 import { Quest, QuestBook, QuestLines as QuestLine } from "../../types/bqQuestBook";
 
-const sharedQBDefaults = upath.join(buildConfig.buildSourceDirectory, configFolder, "betterquesting");
-const sharedConfigOverrides = upath.join(buildConfig.buildSourceDirectory, configOverridesFolder);
+const sharedQBDefaults = upath.join(sharedDestDirectory, configFolder, "betterquesting");
+const sharedConfigOverrides = upath.join(sharedDestDirectory, configOverridesFolder);
 
 const langFileLocation = "resources/questbook/lang";
 
@@ -30,7 +29,7 @@ function transformKeyPairs(
 
 			// Push lang file lines.
 			lines.push(
-				`#${namespace} ${storeKey} of mode ${mode}`,
+				`# ${namespace} ${storeKey} of mode ${mode}`,
 				`${titleKey}=${escapeString(properties["name:8"])}`,
 				`${descKey}=${escapeString(properties["desc:8"])}`,
 				"",
@@ -103,12 +102,12 @@ function stripUselessMetadata(object: unknown) {
  */
 export async function transformQuestBook(): Promise<void> {
 	// Source Quest Book File Locations
-	const questPathNormalDev = upath.join(sharedQBDefaults, "saved_quests", "NormalQuestsDev.json");
-	const questPathExpertDev = upath.join(sharedQBDefaults, "saved_quests", "ExpertQuestsDev.json");
+	const questPathNormalSource = upath.join(sharedQBDefaults, "DefaultQuests.json");
+	const questPathExpertSource = upath.join(sharedQBDefaults, "saved_quests", "ExpertQuests.json");
 
 	// Quest Book Objects
-	const questBookNormal: QuestBook = JSON.parse((await fs.promises.readFile(questPathNormalDev)).toString());
-	const questBookExpert: QuestBook = JSON.parse((await fs.promises.readFile(questPathExpertDev)).toString());
+	const questBookNormal: QuestBook = JSON.parse((await fs.promises.readFile(questPathNormalSource)).toString());
+	const questBookExpert: QuestBook = JSON.parse((await fs.promises.readFile(questPathExpertSource)).toString());
 
 	// Quest Book Paths
 	const questPathNormalDefault = upath.join(sharedQBDefaults, "DefaultQuests.json");
@@ -118,13 +117,13 @@ export async function transformQuestBook(): Promise<void> {
 	const questPathExpertOverride = upath.join(sharedConfigOverrides, "expert", "betterquesting", "DefaultQuests.json");
 
 	// Quest Lang Location
-	const questLangLocation = upath.join(buildConfig.buildSourceDirectory, overridesFolder, langFileLocation);
+	const questLangLocation = upath.join(sharedDestDirectory, overridesFolder, langFileLocation);
 
 	// Traverse through the quest book and rewrite titles/descriptions.
 	// Extract title/desc pairs into a lang file.
 	const lines: string[] = [];
 
-	lines.push("Normal Quest Lang Entries:", "");
+	lines.push("# Normal Quest Lang Entries:", "");
 
 	// Normal Mode Quest lines.
 	transformKeyPairs(questBookNormal["questLines:9"], "normal", "line", lines);
@@ -132,7 +131,7 @@ export async function transformQuestBook(): Promise<void> {
 	// Normal Mode Quests themselves.
 	transformKeyPairs(questBookNormal["questDatabase:9"], "normal", "db", lines);
 
-	lines.push("Expert Quest Lang Entries:", "");
+	lines.push("# Expert Quest Lang Entries:", "");
 
 	// Expert Mode Quest lines.
 	transformKeyPairs(questBookExpert["questLines:9"], "expert", "line", lines);
