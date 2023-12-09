@@ -18,11 +18,12 @@ permissions:
   contents: read
 
 jobs:
-  makeNames:
+  setup:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
     if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
-    name: Make Fork PR Artifact Names (${{ github.event.pull_request.head.sha }})
+    name: Setup (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
+    environment: fork-pr-build-pack
     env:
       GITHUB_HEAD_REF: ${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
@@ -31,6 +32,7 @@ jobs:
       server: ${{ steps.artifactNames.outputs.server }}
       lang: ${{ steps.artifactNames.outputs.lang }}
       mmc: ${{ steps.artifactNames.outputs.mmc }}
+      cf_token: ${{ secrets.CFCORE_API_TOKEN }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
@@ -61,8 +63,7 @@ jobs:
     if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Build Fork PR Client (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
-    environment: fork-pr-build-pack
-    needs: makeNames
+    needs: setup
     env:
       GITHUB_HEAD_REF: ${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
@@ -90,12 +91,12 @@ jobs:
         working-directory: ./tools
         run: npx gulp buildClient
         env:
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ needs.setup.outputs.cf_token }}
           
       - name: Upload Client Zip
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ needs.makeNames.outputs.client }}
+          name: ${{ needs.setup.outputs.client }}
           path: ./build/client/**/*
           if-no-files-found: error
 
@@ -105,7 +106,7 @@ jobs:
     name: Build Fork PR Server (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
-    needs: makeNames
+    needs: setup
     env:
       GITHUB_HEAD_REF: ${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
@@ -133,12 +134,12 @@ jobs:
         working-directory: ./tools
         run: npx gulp buildServer
         env:
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ needs.setup.outputs.cf_token }}
 
       - name: Upload Server Zip
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ needs.makeNames.outputs.server }}
+          name: ${{ needs.setup.outputs.server }}
           path: ./build/server/**/*
           if-no-files-found: error
 
@@ -148,7 +149,7 @@ jobs:
     name: Build Fork PR Lang and Changelogs (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
-    needs: makeNames
+    needs: setup
     env:
       GITHUB_HEAD_REF: ${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
@@ -176,12 +177,12 @@ jobs:
         working-directory: ./tools
         run: npx gulp buildLang
         env:
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ needs.setup.outputs.cf_token }}
 
       - name: Upload Lang Zip
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ needs.makeNames.outputs.lang }}
+          name: ${{ needs.setup.outputs.lang }}
           path: ./build/lang/**/*
           if-no-files-found: error
 
