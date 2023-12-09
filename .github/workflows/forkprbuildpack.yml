@@ -105,7 +105,6 @@ jobs:
     if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Build Fork PR Server (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
-    environment: fork-pr-build-pack
     needs: setup
     env:
       GITHUB_HEAD_REF: ${{ github.head_ref }}
@@ -148,7 +147,6 @@ jobs:
     if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Build Fork PR Lang and Changelogs (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
-    environment: fork-pr-build-pack
     needs: setup
     env:
       GITHUB_HEAD_REF: ${{ github.head_ref }}
