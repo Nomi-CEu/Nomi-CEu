@@ -23,7 +23,6 @@ jobs:
     if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Make Fork PR Artifact Names (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
-    environment: fork-pr-build-pack
     env:
       GITHUB_HEAD_REF: ${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
