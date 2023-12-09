@@ -11,7 +11,7 @@ on:
 
 # if a second commit is pushed quickly after the first, cancel the first one's build
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.head_ref }}
   cancel-in-progress: true
 
 permissions:
