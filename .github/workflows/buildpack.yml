@@ -34,7 +34,7 @@ on:
         required: false
         type: string
       separate_upload:
-        description: Whether to uploaed each zip (Client, Server, Lang & MMC) and the changelogs seperately. If not set, will just upload all six files into one artifact (Built Pack).
+        description: Whether to uploaed each zip (Client, Server, Lang) and the changelogs seperately. If not set, will just upload all six files into one artifact (Built Pack).
         required: true
         type: boolean
       
@@ -259,7 +259,6 @@ jobs:
           
       - name: Upload Client Zip
         uses: actions/upload-artifact@v3
-        if: ${{ inputs.separate_upload }}
         with:
           name: ${{ needs.makeNames.outputs.client }}
           path: ./build/client/**/*
@@ -324,7 +323,6 @@ jobs:
 
       - name: Upload Server Zip
         uses: actions/upload-artifact@v3
-        if: ${{ inputs.separate_upload }}
         with:
           name: ${{ needs.makeNames.outputs.server }}
           path: ./build/server/**/*
@@ -389,7 +387,6 @@ jobs:
 
       - name: Upload Lang Zip
         uses: actions/upload-artifact@v3
-        if: ${{ inputs.separate_upload }}
         with:
           name: ${{ needs.makeNames.outputs.lang }}
           path: ./build/lang/**/*
@@ -397,7 +394,6 @@ jobs:
 
       - name: Upload Changelogs
         uses: actions/upload-artifact@v3
-        if: ${{ inputs.separate_upload }}
         with:
           name: Changelogs
           path: ./build/*.md
