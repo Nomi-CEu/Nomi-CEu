@@ -2,6 +2,11 @@
 # If workflow enabled, make sure to set the environment used to need a specific team (admin-devs), and default GITHUB_TOKEN perms to read!
 # See https://securitylab.github.com/research/github-actions-preventing-pwn-requests/ for more information!
 
+# Actions taken to reduce risk:
+# This workflow is only started when the workflow run is approved (GitHub Settings), and when the deployment to `forkprbuildpack` is approved (by admin-devs)
+# Only the CFCORE_API_TOKEN secret is accessed, meaning it is the only one revealed, meaning that the other secrets cannot be used by nodejs tools
+# GITHUB_TOKEN permissions are set to read
+
 name: "[NOT CALLABLE] Fork PR Build Pack"
 
 on:
@@ -32,7 +37,6 @@ jobs:
       server: ${{ steps.artifactNames.outputs.server }}
       lang: ${{ steps.artifactNames.outputs.lang }}
       mmc: ${{ steps.artifactNames.outputs.mmc }}
-      cf_token: ${{ secrets.CFCORE_API_TOKEN }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
@@ -91,7 +95,7 @@ jobs:
         working-directory: ./tools
         run: npx gulp buildClient
         env:
-          CFCORE_API_TOKEN: ${{ needs.setup.outputs.cf_token }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           
       - name: Upload Client Zip
         uses: actions/upload-artifact@v3
@@ -133,7 +137,7 @@ jobs:
         working-directory: ./tools
         run: npx gulp buildServer
         env:
-          CFCORE_API_TOKEN: ${{ needs.setup.outputs.cf_token }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Upload Server Zip
         uses: actions/upload-artifact@v3
@@ -175,7 +179,7 @@ jobs:
         working-directory: ./tools
         run: npx gulp buildLang
         env:
-          CFCORE_API_TOKEN: ${{ needs.setup.outputs.cf_token }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Upload Lang Zip
         uses: actions/upload-artifact@v3
