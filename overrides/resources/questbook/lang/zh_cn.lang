@@ -3038,7 +3038,7 @@ nomifactory.quest.normal.db.921.desc=§bUV§r机械方块。倒数第二个机�
 
 #db 922 of mode normal
 nomifactory.quest.normal.db.922.title=§2“处理线”标签
-nomifactory.quest.normal.db.922.desc=§2添加这个标签是为了帮助你可视化和给你关于化学品制造的提示，以及其他重要的事情来自动化。明智地使用它!标签中的每个任务都会给你一个机器的描述和运行配方所需的最小电压。此外，尽管每个任务都可以通过复选框完成，但一旦您将项目定位在右侧，处理线中的所有任务都会自动完成。复选框或实现产品都将完成任务。%n%n你可能需要保持项目几秒钟，使整条线自动完成。%n%n这是不完整的，发布出来是为了测试。目前，只有脉动聚合物粘土和圆石处理实现，但更多的即将到来。将会有聚乙烯和聚氯乙烯，石油加工，环氧树脂，火箭燃料，聚四氟乙烯，高辛烷值汽油，十六烷增压柴油，聚苯并咪唑，硅岩加工和铂族加工。如果您对其他处理线或如何改进此选项卡有任何建议，请随时在 Discord 上找到 DM Integer Limit#0458 或在 GitHub 上创建 issue。
+nomifactory.quest.normal.db.922.desc=§2添加这个标签是为了帮助你可视化和给你关于化学品制造的提示，以及其他重要的事情来自动化。明智地使用它!§r标签中的每个任务都会给你一个机器的描述和运行配方所需的最小电压。此外，尽管每个任务都可以通过复选框完成，但一旦您将项目定位在右侧，处理线中的所有任务都会自动完成。复选框或实现产品都将完成任务。%n%n你可能需要保持项目几秒钟，使整条线自动完成。%n%n这是不完整的，发布出来是为了测试。目前，只有脉动聚合物粘土和圆石处理实现，但更多的即将到来。将会有聚乙烯和聚氯乙烯，石油加工，环氧树脂，火箭燃料，聚四氟乙烯，高辛烷值汽油，十六烷增压柴油，聚苯并咪唑，硅岩加工和铂族加工。如果您对其他处理线或如何改进此选项卡有任何建议，请随时在 Discord 上找到 DM Integer Limit#0458 或在 GitHub 上创建 issue。
 
 #db 923 of mode normal
 nomifactory.quest.normal.db.923.title=脉动聚合粘土
@@ -3214,7 +3214,7 @@ nomifactory.quest.normal.db.965.desc=§o这个任务通过复选框或在完成�
 
 #db 966 of mode normal
 nomifactory.quest.normal.db.966.title=布置自动合成
-nomifactory.quest.normal.db.966.desc=
+nomifactory.quest.normal.db.966.desc=这个任务会教你关于§bAE2§r自动制造的基础知识。如果你是这个mod的新手，强烈建议你观看视频或在线阅读指南。请记住，这个包中默认禁用频道。%n%n到目前为止，你应该有§6ME接口、§6分子装配室、合成单元、样板§r和一个§6样板终端§r。%n%n首先，对于所有制造，你需要一个§e合成CPU§r。这个结构是四棱柱形的，也可以只有一个方块。它们由以下部分组成：%n*§6合成存储器§r，它决定了一个合成可以有多大。目前，§64K合成存储器§r应该足够了。每个CPU至少需要一个合成存储器。%n*§6并行处理单元§r，用于一次制造多个物品。这些是可选的。%n*§6合成监控器§r，用于查看正在制造的东西。不需要，你可以右键单击CPU来查看正在制造的东西，所以这几乎只是装饰。%n*§6合成单元§r，完全不需要，只是用于填补空洞，如果你缺乏材料。%n%n第二，你需要为自动制造找到地方。对于工作台配方，你需要§6分子装配室§r。§6ME接口§r就放在它们旁边。稍后，在接下来的任务中，会解释如何使用§bGregTech§r进行自动制造。%n%n最后，你需要一个§6样板§r。为了制作这个，在§6样板终端§r中放入空的§6样板§r，然后在§bJEI§r中寻找配方，同时仍然在§6样板终端§r中。然后，在§bJEI§r中点击'+'，并按箭头编码配方。这会进入你在最后一步设置的§6接口§r。您可以使用§6接口终端§r来访问§6接口§r模式槽。%n%n最终，您将需要大量§6样板§r、大量CPU和具有更多存储的CPU，以及大量§6接口§r§r§r。如果某个§6接口§r中的样板槽用完，您可以添加更多§6接口§r，或使用新添加的§6样板扩展卡§r，每个扩展卡增加9个槽。您可以在§6接口§r中最多拥有3个§6样板扩展卡§r，从而使模式槽数量达到36个。
 
 #db 967 of mode normal
 nomifactory.quest.normal.db.967.title=燧石
@@ -3302,7 +3302,7 @@ nomifactory.quest.normal.db.987.desc=没有描述
 
 #db 988 of mode normal
 nomifactory.quest.normal.db.988.title=氧
-nomifactory.quest.normal.db.988.desc=
+nomifactory.quest.normal.db.988.desc=提到二氧化硅，告诉他们如果需要帮助，可以使用附近的圆石相关物品任务链
 
 #db 989 of mode normal
 nomifactory.quest.normal.db.989.title=硫
@@ -3322,7 +3322,7 @@ nomifactory.quest.normal.db.992.desc=没有描述
 
 #db 993 of mode normal
 nomifactory.quest.normal.db.993.title=固化聚乙烯
-nomifactory.quest.normal.db.993.desc=
+nomifactory.quest.normal.db.993.desc=提到你既需要流体又需要板材，你可以将板材粉碎成粉末来制作管道，也可以单独固化铸锭。
 
 #db 994 of mode normal
 nomifactory.quest.normal.db.994.title=生产线：聚氯乙烯
@@ -3334,7 +3334,7 @@ nomifactory.quest.normal.db.995.desc=没有描述
 
 #db 996 of mode normal
 nomifactory.quest.normal.db.996.title=固化聚氯乙烯
-nomifactory.quest.normal.db.996.desc=
+nomifactory.quest.normal.db.996.desc=提到你不需要保存液体，以及如何将薄片粉碎成粉末以制作管道，或者单独固化锭块
 
 #db 997 of mode normal
 nomifactory.quest.normal.db.997.title=生产线：聚四氟乙烯
@@ -3346,11 +3346,10 @@ nomifactory.quest.normal.db.998.desc=没有描述
 
 #db 999 of mode normal
 nomifactory.quest.normal.db.999.title=增广样板编码终端
-nomifactory.quest.normal.db.999.desc=
-
+nomifactory.quest.normal.db.999.desc=§b封包合成§r很酷，但看看这个！%n%n§6ME增广样板终端§r是一种新设备，它允许您使用最多16个原料和6个输出的处理配方对常规§bAE2§r样板进行编码。%n%n这些对于像§3装配线§r这样的复杂多方块机器的自动化配方非常有用，同时避免了比如尴尬的循环合成类的封包合成的陷阱，因为§6解包器§r有内部缓冲区，并且能够使用§6接口终端§r，而不是在您的基地里上蹿下跳塞样板。
 #db 1000 of mode normal
 nomifactory.quest.normal.db.1000.title=样板拓展卡
-nomifactory.quest.normal.db.1000.desc=
+nomifactory.quest.normal.db.1000.desc=一种非常有用的升级卡，可以应用于§6ME接口§r。节省了机器或多方块机组的许多接口。%n%n每个接口最多可以安装§33个§6样板扩展卡§r，使样板插槽数量从9个增加到36个。
 
 #db 1001 of mode normal
 nomifactory.quest.normal.db.1001.title=四氯乙烯
@@ -3386,15 +3385,15 @@ nomifactory.quest.normal.db.1008.desc=没有描述
 
 #db 1009 of mode normal
 nomifactory.quest.normal.db.1009.title=氯仿和氢氟酸
-nomifactory.quest.normal.db.1009.desc=
+nomifactory.quest.normal.db.1009.desc=为聚四氟乙烯而隐藏的任务
 
 #db 1010 of mode normal
 nomifactory.quest.normal.db.1010.title=氢和氟
-nomifactory.quest.normal.db.1010.desc=
+nomifactory.quest.normal.db.1010.desc=为聚四氟乙烯而隐藏的任务
 
 #db 1011 of mode normal
 nomifactory.quest.normal.db.1011.title=氯和甲烷
-nomifactory.quest.normal.db.1011.desc=
+nomifactory.quest.normal.db.1011.desc=为聚四氟乙烯而隐藏的任务
 
 #db 1012 of mode normal
 nomifactory.quest.normal.db.1012.title=HV碎岩机
@@ -3410,15 +3409,15 @@ nomifactory.quest.normal.db.1014.desc=如果你用光了勘矿仪的电，只需
 
 #db 1015 of mode normal
 nomifactory.quest.normal.db.1015.title=哪都能用 AE2......几乎
-nomifactory.quest.normal.db.1015.desc=
+nomifactory.quest.normal.db.1015.desc=§o注意：这个任务接受无线终端、无线合成终端、无线样板终端或无线流体终端。§r%n%n无线访问§b应用能源2§r节省了大量时间，强烈推荐设置。%n%n首先，你需要一个§6安全终端§r和一个§6无线接入点§r。将两者连接到你的网络。就像§6终端§r一样，无线接入点是一个§e微型部件§r，所以你必须把它放在§6ME线缆§r上。%n%n接下来，你需要一个§6无线终端§r或其变种。你可以同时在系统上有多个无线终端或其变种。%n%n最后，把§6无线终端§r放到§6安全终端§r中。这将把它连接到系统。%n%n你可以把它们作为饰品装备，并使用热键来打开它们。搜索'应用能源'作为一个§e类别§r来查看和编辑这些热键。%n%n你只能距离无线接入点16个方块。然而，你可以把§6无线信号增幅器§r放到§6无线接入点§r中以增加范围。一个更好但更昂贵的解决方案，允许从任何地方访问，将在接下来的任务'AE2无处不在！'中解释。
 
 #db 1016 of mode normal
 nomifactory.quest.normal.db.1016.title=AE2无处不在！
-nomifactory.quest.normal.db.1016.desc=
+nomifactory.quest.normal.db.1016.desc=从任何地方都能访问 AE2 有点昂贵和复杂，但它是值得的。%n%n首先，你需要一个§3物质聚合器§r。插入§664k-ME存储组件§r，将模式更改为“奇点”，并放入大量物品。%n%n制作这些物品最快的方法是使用§aAC流体激光§r和§6热力蓄水器§r。%n%n设置热力蓄水器以输出流体激光，将流体激光配置为“输出”，在物质聚合器上添加一个流体激光，将其设置为“输入”，并将它们连接在一起。%n%n如果没有，可以用§6密集圆石制造器§r包围它。n%n在您从§3物质聚合器§r中获得所需的2个§e奇点§r后，您需要设置一个§aME量子环多方块结构§r。用你的§6ME量子环§r构建一个3x3的垂直环，在中间留一个洞。最后，将你的§6ME量子链接仓§r放在孔中，并将其连接到你的ME系统。如果你建造得正确，圆环的纹理应该结合在一起，给你留下一个§a多方块§r。n%n使用2个奇点，将其放入§3压印器§r或§3高级压印器§r中，并使用§6高级卡§r，从而得到§6量子链接卡§r。最后，把它放到§a量子环§r的§6量子链接仓§r中，而不是无线终端！%n%n您应该可以正常使用了！现在，您可以在任何地方访问AE2，包括不同的维度！
 
 #db 1017 of mode normal
 nomifactory.quest.normal.db.1017.title=ME控制器
-nomifactory.quest.normal.db.1017.desc=
+nomifactory.quest.normal.db.1017.desc=§aME控制器§r是§eME网络§r的“大脑”和部分能量存储器。%n%n通常，这个方块充当§e频道§r的来源，但这些机制在§5Nomifactory§r中默认禁用。%n%n当通道被禁用时，您不必进行此操作来运行网络，但如果您这样做，§e你的网络将比没有控制器时消耗更少的能量。另外，它们看起来很酷。%n%n请确保您制作的是AE2控制器，而不是§b凿子§r的赝品控制器！%n%n值得思考。
 
 #db 1018 of mode normal
 nomifactory.quest.normal.db.1018.title=龙之进化聚合自动化
@@ -3434,11 +3433,11 @@ nomifactory.quest.normal.db.1020.desc=§2一个全新的模组来帮助您管理
 
 #db 1021 of mode normal
 nomifactory.quest.normal.db.1021.title=P2P通道
-nomifactory.quest.normal.db.1021.desc=
+nomifactory.quest.normal.db.1021.desc=§o注意：这个任务接受内存卡和高级内存卡。§r%n%n一个 §6P2P通道§r（§a点对点隧道§r）是来自 §b应用能源2§r 的强大工具，可以使用你的ME系统，将物品、红石、RF/EU或流体从一个位置发送到另一个位置，而无需使用任何磁盘存储空间。§c传输RF/EU的输入能量有5%的损失。§r%n%n每个P2P通道系统可能只有一个 §c输入§r，但有 §e任何数量的输出§r。在一个网络上，P2P通道的数量没有限制。%n%n默认情况下，P2P通道是一个 §6ME通道§r，传输ME频道和能量。由于频道被禁用，你很可能不会使用默认的P2P通道。你可以通过手持§bJEI§r可以查到的相应物品右键点击通道来更改P2P通道的模式。%n%n要配置P2P通道，请取一个 §6内存§r。当你拿着内存卡时， §ashift-右键点击§r未配置的通道，设置输入的频率，并将频率保存到记忆卡。一旦第一个通道以这种方式设置，并且内存卡配置了频率，任何后续的通道你用记忆卡 §a右键点击§r将被设置为最近使用的频率的输出。%n%n您还可以使用记忆卡复制ME方块的配置，例如 §6ME接口§r 和 §6ME存储总线§r。§ashift-右键点击§r一个ME方块以复制其配置， §aright-点击§r以粘贴该配置。请注意，这不会复制应用于方块的升级。%n%n您还可以 §ashift-右键点击§r以清空频率，或内存卡中的ME方块配置。%n%n此整合包有§b更好的P2P§r，它添加了§6高级内存卡§r。使用它，你可以§aright-click§r任何ME设备或连接到当前系统的线缆。这将允许你看到所有当前的P2P连接，而无需搜索你的通道。%n%n你也可以使用高级内存卡配置P2P通道。在持卡时，§aright-click§r一个通道，它将被§a选中§r。一旦选择了通道，它将用§a绿色§r高亮显示。你也可以看到你的其他连接，有选择或绑定的选项；点击选择将重新选择通道。%n%n不正确的设置将用§c红色§r显示（通常是P2P设备没有输入）。%n%n§6高级内存卡§r在§3GUI§r中有3种模式可访问：%n%n§a绑定输出§r：%n一旦你想设置为输入的通道被§a选中§r，在任何其他连接上点击§b绑定§r将使之前选择的通道成为输入通道，点击绑定的通道将变为所选通道的输出通道。%n%n§a绑定输入§r：%n一旦你想设置为输出的通道被§a选中§r，在任何其他通道上点击§b绑定§r将使该通道成为所选通道的输入。这在你找不到输出通道时很有用。%n%n§a复制输出§r：%n一旦你想复制的输出通道被§a选中§r，在任何其他连接上点击§b绑定§r将复制所选通道的输出频率。
 
 #db 1022 of mode normal
-nomifactory.quest.normal.db.1022.title=[复活节彩蛋]尼夫
-nomifactory.quest.normal.db.1022.desc=
+nomifactory.quest.normal.db.1022.title=[复活节彩蛋]Neeve
+nomifactory.quest.normal.db.1022.desc=Neeve，野兔的主人。召唤祂，然后用你的礼物祝福祂，你就可以获得祂那只全能兔子的使用权。%n%n必须完成所有3个任务才能完成这个秘密任务！
 
 #db 1023 of mode normal
 nomifactory.quest.normal.db.1023.title=背包整理
