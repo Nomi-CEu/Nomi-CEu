@@ -661,7 +661,10 @@
     {
       "projectID": 513857,
       "fileID": 3739783,
-      "required": true
+      "required": true,
+      "sides": [
+        "client"
+      ]
     },
     {
       "projectID": 538092,
