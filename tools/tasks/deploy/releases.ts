@@ -26,7 +26,7 @@ async function deployReleases(): Promise<void> {
 	});
 
 	const body = makeArtifactNameBody(modpackManifest.name);
-	const files = ["client", "server", "lang", "mmc"].map((file) => sanitize(`${body}-${file}.zip`.toLowerCase()));
+	const files = ["client", "server", "lang"].map((file) => sanitize(`${body}-${file}.zip`.toLowerCase()));
 
 	/**
 	 * Obligatory file check.
