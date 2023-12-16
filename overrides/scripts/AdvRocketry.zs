@@ -561,8 +561,6 @@ makeShaped("ar_fueling_station",
 		M: <ore:pipeNormalFluidStainlessSteel>,    // Medium Stainless Steel Pipe
 	});
 
-<advancedrocketry:fuelingstation>.displayName = "Fueling Station";
-
 // Dilithium Dust
 macerator.recipeBuilder()
 	.inputs([<libvulpes:ore0>])
@@ -928,7 +926,6 @@ makeExtremeRecipe5(<advancedrocketry:spacelaser>,
 recipes.remove(<advancedrocketry:lens>);
 recipes.addShapeless(<advancedrocketry:lens>, [<ore:craftingLensGlass>]);
 <advancedrocketry:lens>.addTooltip(format.gray("A basic lens, used for the Orbital Laser Drill."));
-<advancedrocketry:lens>.displayName = "Orbital Laser Drill Lens";
 
 // Force Field Projector
 recipes.addShaped(<advancedrocketry:forcefieldprojector>, [

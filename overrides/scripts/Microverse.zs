@@ -303,12 +303,6 @@ makeExtremeRecipe9(<contenttweaker:tiertenship>,
 	  W : <contenttweaker:warpengine> }
 );
 
-<extendedcrafting:trimmed:0>.displayName = "Block of Black Steel";
-<extendedcrafting:trimmed:1>.displayName = "Block of Black Steel";
-<extendedcrafting:trimmed:2>.displayName = "Block of Black Steel";
-<extendedcrafting:trimmed:3>.displayName = "Block of Black Steel";
-<extendedcrafting:trimmed:4>.displayName = "Block of Black Steel";
-<extendedcrafting:trimmed:5>.displayName = "Block of Black Steel";
 <extendedcrafting:trimmed:5>.clearTooltip();
 <extendedcrafting:trimmed:5>.addTooltip("Block of Black Steel");
 <extendedcrafting:trimmed:5>.addTooltip(

@@ -352,7 +352,6 @@ recipes.remove(<minecraft:stone:2>);
 recipes.remove(<minecraft:stone:4>);
 recipes.remove(<minecraft:stone:6>);
 
-<enderio:block_enchanter>.displayName = "Dark Steel Enchanter";
 recipes.remove(<enderio:block_enchanter>);
 recipes.addShaped(<enderio:block_enchanter>, [
     [<ore:gemDiamond>, <minecraft:book>, <ore:gemDiamond>],
