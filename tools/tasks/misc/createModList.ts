@@ -30,12 +30,11 @@ export async function createModList(tag = ""): Promise<ModFileInfo[]> {
 	// Fetch mod/addon & file infos, discard result. Further calls will hit cache.
 	await fetchProjectsBulk(manifest.files.map((mod) => mod.projectID));
 	await fetchFilesBulk(
-		// Use this instead of referencing the original array, as .sort sorts the input array
-		[...manifest.files]
-			.sort((a, b) => a.fileID - b.fileID)
+		manifest.files
 			.map((mod) => {
 				return { projectID: mod.projectID, fileID: mod.fileID };
-			}),
+			})
+			.sort((a, b) => a.fileID - b.fileID),
 	);
 
 	log("Fetched Infos. Creating modlist...");
