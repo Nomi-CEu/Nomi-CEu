@@ -1,0 +1,145 @@
+- [Chisel](https://minecraft.curseforge.com/projects/chisel) [MC1.12.2-1.0.2.45] by tterrag, Drullkus, minecreatr
+- [Xtones](https://github.com/TehNut/Xtones) [1.2.2] by Chloe Dawn, TehNut, Dhvagra
+- [FTB Backups](https://www.curseforge.com/minecraft/mc-mods/ftb-backups) [1.1.0.1] by LatvianModder
+- [Mod Tweaker](https://minecraft.curseforge.com/projects/ModTweaker) [4.0.20.5] by Jaredlll08
+- p455w0rd's Library [1.12.2-2.3.161] by TheRealp455w0rd
+- TheDragonLib [1.12.2-5.3.0] by sokratis12GR and Moritz30 in association with TheDragonTeam.
+- ProjectRed Transmission [4.9.4.120]
+- [Thermal Innovation](http://www.teamcofh.com) [0.3.6.1] by Team CoFH
+- packmode-1.12.2-1.2.0
+- Craftable Elytra [1.2] by mariofish
+- Custom Main Menu [2.0.9.1] by lumien
+- [TOP Addons](http://drmanganese.github.io) [1.12.2-1.13.0] by DrManganese
+- More Sound Config [1.0.4] by ichttt
+- The Lost Cities [1.12-2.0.22] by McJty
+- [AutoRegLib](http://www.vazkii.us) [1.3-32] by Vazkii
+- [Chameleon](http://www.jaquadro.com/) [1.12-4.1.3] by jaquadro
+- [EnderCore](http://enderio.com) [1.12.2-0.5.78] by tterrag, CrazyPants, HenryLoenwind
+- [Forge Multipart CBE](https://github.com/Chicken-Bones/ForgeMultipart) [2.6.2.83] by ChickenBones
+- GroovyScript [0.6.4] by CleanroomMC, brachy84, Rongmario
+- MoreOverlays [1.15.1] by feldim2425
+- [FTB Library](http://minecraft.curseforge.com/projects/ftblib) [5.4.7.2] by LatvianModder
+- Bountiful [2.2.0] by Ejektaflex
+- [Cucumber Library](https://minecraft.curseforge.com/projects/cucumber) [1.1.3] by BlakeBr0
+- Inventory Bogo Sorter [1.4.4] by brachy84
+- Wireless Crafting Terminal 2 [1.12.2-3.12.97] by TheRealp455w0rd
+- [CraftTweaker2](http://minetweaker3.powerofbytes.com) [1.12-4.1.20.692] by StanHebben, Jaredlll08
+- [VintageFix](https://github.com/GTNewHorizons/RetroFuturaGradle/) [0.3.3] by embeddedt
+- [Nature's Compass](https://minecraft.curseforge.com/projects/natures-compass) [1.12.2-1.8.5] by ChaosTheDude
+- [Elevator Mod](https://minecraft.curseforge.com/projects/openblocks-elevator) [1.12.2-1.3.14] by VsnGamer
+- [libVulpes](http://minecraft.curseforge.com/projects/libvulpes) [1.12.2-0.4.2-75] by zmaster587
+- [Baubles](http://www.minecraftforum.net/topic/2535073-baubles) [1.12-1.5.2] by Azanor
+- [GregTech](https://www.curseforge.com/minecraft/mc-mods/gregtech-ce-unofficial) [2.7.4-beta] by serenibyss, TechLord22, KilaBash, Archengius, Exidex, BloodAsp, Muramasa, GregoriusT
+- [Snad](http://www.robrit.com) [1.12.1-1.7.09.16a] by TheRoBrit
+- [Thermal Cultivation](http://www.teamcofh.com) [0.3.6.1] by Team CoFH
+- [Building Gadgets](https://minecraft.curseforge.com/projects/building-gadgets) [2.8.4] by Direwolf20
+- MTLib [3.0.7] by Jaredlll08
+- [Thermal Expansion](http://www.teamcofh.com) [5.5.7.1] by Team CoFH
+- Extra Utilities 2 [${version}] by RWTema
+- Worley's Caves [1.5.2] by SuperFluke, booleanbyte
+- [Better Questing Unofficial](https://github.com/CleanroomMC/BetterQuesting) [4.1.0] by Funwayguy, CleanroomMC team
+- _bansoukou-4.3.1
+- [Advanced Rocketry](http://minecraft.curseforge.com/projects/advanced-rocketry) [1.12.2-1.7.0-232] by zmaster587
+- [LoliASM](https://github.com/LoliKingdom/LoliASM) [5.18] by Rongmario
+- Gregicality Multiblocks [1.2.5] by TechLord22
+- PackagedExCrafting-1.12.2-1.0.2.10
+- AE2 Wireless Terminals (AE2WTLib) [1.12.2-1.0.34] by TheRealp455w0rd
+- [Multiblock Tweaker](https://www.curseforge.com/minecraft/mc-mods/multiblocktweaker) [1.12.2-stable-gtceu-1.9.0] by Eutros
+- spark [1.5.2] by Luck
+- [Draconic Evolution](http://www.brandon3055.com/) [1.12.2-2.3.28.193] by brandon3055
+- [CoFH World](http://www.teamcofh.com) [1.4.0.1] by Team CoFH
+- DenseMetals-1.12.2-2.0.0.30
+- [Ender IO](http://enderio.com) [5.3.72] by CrazyPants, tterrag, HenryLoenwind, MatthiasM, CyanideX, EpicSquid
+- [Ender IO endergy](http://enderio.com) [5.3.72] by EpicSquid, CrazyPants, tterrag, HenryLoenwind
+- [Better P2P](https://github.com/LasmGratel/BetterP2P) [1.12.2-1.2.3-extended_life] by AlgorithmX2
+- serializationisbad-1.5
+- [Chest Transporter](http://www.minecraftforum.net/topic/506109-) [1.12.2-2.8.8] by CubeX2
+- [Just Enough Calculation](https://github.com/Towdium/JustEnoughCalculation) [1.12.2-3.2.7] by Towdium
+- Super Sound Muffler: Revived [1.0.2.10] by EdgarAllen
+- [ContentTweaker](http://teamacronymcoders.com) [1.12.2-4.10.0] by SkySom
+- [ExtendedCrafting: Nomifactory Edition](https://www.curseforge.com/minecraft/mc-mods/extended-crafting-nomifactory-edition) [1.7.0.6] by BlakeBr0, ALongStringOfNumbers, Eutropium, Exa4096, notmywing, dan
+- [NuclearCraft](https://minecraft.curseforge.com/projects/nuclearcraft-mod) [2.18y-1.12.2] by tomdodd4598
+- TorchMaster [1.8.5.0] by xalcon
+- Tomb Many Graves [1.12-4.2.0] by M4thG33k, Tiffit
+- [Mod Name Tooltip](https://minecraft.curseforge.com/projects/mod-name-tooltip) [NONE] by mezz
+- [BD Lib](http://bdew.net/mods/) [1.14.4.1] by bdew
+- Open Glider [1.12.1-1.1.0] by gr8pefish
+- AppleSkin [1.0.14] by squeek
+- [Actually Baubles](https://github.com/Jacky1356400/ActuallyBaubles) [1.1] by Jacky1356400
+- [Morpheus](http://www.curse.com/mc-mods/Minecraft/morpheus) [1.12.2-3.5.106] by Quetzi
+- [FTB Utilities](http://minecraft.curseforge.com/projects/ftb-utilities) [5.4.1.131] by LatvianModder
+- PackagedAuto-1.12.2-1.0.8.31
+- Placebo [1.12.2-1.6.0] by Shadows_of_Fire
+- Just Enough Resources [0.9.2] by way2muchnoise
+- Resource Loader [1.5.3] by lumien
+- [EnderStorage](http://www.minecraftforum.net/topic/909223) [2.4.6.137] by ChickenBones, covers1624
+- [Thermal Foundation](http://www.teamcofh.com) [2.6.7.1] by Team CoFH
+- The One Probe [1.12-1.4.28] by McJty
+- [Mouse Tweaks Unofficial](https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks-unofficial) [3.1.4] by CleanroomMC, serenibyss, YaLTeR
+- [Had Enough Items](https://github.com/CleanroomMC/HadEnoughItems) [4.25.0] by mezz, Rongmario
+- Dynamistics [1.0.2] by Eutros
+- Controlling [3.0.12.2] by Jaredlll08
+- Forgiving Void [1.1.0] by BlayTheNinth
+- [Tool Belt](https://github.com/gigaherz/ToolBelt) [1.9.14] by gigaherz
+- [Shadowfacts' Forgelin](https://github.com/shadowfacts/Forgelin) [1.8.4] by shadowfacts
+- [More Plates](https://minecraft.curseforge.com/projects/moreplates) [5.5.2] by PanSzelescik
+- Clumps [3.1.2] by Jaredlll08
+- [Actually Additions](http://github.com/Ellpeck/ActuallyAdditions) [1.12.2-r152] by Ellpeck
+- [CreativeCore](https://www.curseforge.com/minecraft/mc-mods/creativecore) [1.10] by CreativeMD, N247S
+- [More Libs](https://minecraft.curseforge.com/projects/morelibs) [1.2.2] by PanSzelescik
+- [More Furnaces: Nomifactory Edition](https://www.curseforge.com/minecraft/mc-mods/morefurnaces-nomifactory-edition) [1.11.0] by CubeX2, ALongStringOfNumbers, Eutropium, Exa4096, notmywing, dan
+- Avaritia [3.3.0.37] by SpitefulFox, TTFTCUTS
+- [JourneyMap](http://journeymap.info) [1.12.2-5.7.1] by techbrew, mysticdrew
+- TipTheScales [1.12.2-1.0.4] by Jared
+- dan's Crafting Tweaks [9.0.1] by CleanroomMC, dan, BlayTheNinth
+- [CTM](https://minecraft.curseforge.com/projects/ctm) [MC1.12.2-1.0.2.31] by tterrag, Drullkus, minecreatr
+- [ProjectRed Core](http://projectredwiki.com) [4.9.4.120] by MrTJP, ChickenBones, covers1624
+- [RandomPatches](https://minecraft.curseforge.com/projects/randompatches) [1.12.2-1.22.1.10] by TheRandomLabs
+- [Alfheim](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine) [1.0.2] by Red Studio
+- [Storage Drawers](http://www.jaquadro.com/) [5.5.0] by jaquadro
+- [AE2 Unofficial Extended Life](https://github.com/PrototypeTrousers/Applied-Energistics-2) [rv6-stable-7-extended_life-v0.55.27] by AlgorithmX2
+- [CoFH Core](http://www.teamcofh.com) [4.6.6.1] by Team CoFH
+- [B.A.S.E](http://minecraft.curseforge.com/projects/b-a-s-e) [1.12.2-3.14.0] by SkySom, Lanse505, Jared, EwyBoy
+- [MixinBooter](https://github.com/CleanroomMC/MixinBooter) [8.6] by Rongmario
+- [Default World Generator](http://minecraft.curseforge.com/projects/default-world-generator-port) [1.12-2.3.1] by EzTerry, FireBall1725
+- [Difficulty Lock](https://curseforge.com/minecraft/mc-mods/difficulty-lock) [1.2] by Rick South
+- [Bookshelf](http://minecraft.curseforge.com/projects/bookshelf) [2.3.590] by darkhax, lclc98
+- [Dimensional Edibles: Nomifactory Edition](https://github.com/Nomifactory/DimensionalEdibles) [1.12.2-1.6.4] by Jackyy, Turkey2349, ALongStringOfNumbers, Eutropium, Exa4096, notmywing, dan, Mixu78, Caedis
+- ConfigAnytime [1.0] by CleanroomMC
+- [Simply Jetpacks 2](https://minecraft.curseforge.com/projects/simply-jetpacks-2) [2.2.15.69] by tonius11, Tomson124
+- LibrarianLib [4.22] by thecodewarrior, wiresegal, LordSaad44, Elucent, Eladkay, murapix, werty1124, Leviathan143
+- [Faster Ladder Climbing](http://jaspr.net) [1.12-0.1-127] by JaSpr
+- [Crafting Nether Star](https://minecraft.curseforge.com/projects/craftingnetherstar) [1.1] by ZeckG
+- [Universal Tweaks](https://github.com/ACGaming/UniversalTweaks) [1.9.0] by ACGaming
+- [ArchitectureCraft](https://github.com/elytra/ArchitectureCraft) [@VERSION@] by gcewing (Original Developer), darkevilmac (Maintainer)
+- [Project Intelligence](http://www.brandon3055.com/) [1.12.2-1.0.9.28] by brandon3055
+- [ArmorPlus](https://minecraft.curseforge.com/projects/armorplus) [${version}] by sokratis12GR
+- Framed Compacting Drawers [1.2.7] by Eutros
+- [Effortless Building](https://minecraft.curseforge.com/projects/effortless-building) [1.12.2-2.16] by Requios
+- ULV Covers [2.6.2] by Filostorm, LordPINE, Hua En
+- Solar Flux Reborn [12.4.11] by Zeitheron
+- JEI Utilities [0.2.11] by vfyjxf_
+- No Nether Portals [1.1.0]
+- [Redstone Flux](http://www.teamcofh.com) [2.1.1.1] by Team CoFH
+- [Patchouli](http://www.vazkii.us) [1.0-23.6] by Vazkii
+- [Gregtech Drawers](https://www.curseforge.com/minecraft/mc-mods/gregtech-drawers) [1.0.6] by integerlimit_, ung3froren, Raptor__
+- [RealBench: Nomi-CEu Edition](https://www.curseforge.com/minecraft/mc-mods/realbench-nomi-ceu) [1.0.4] by IntegerLimit, Prototik
+- DevTech [2.1.4] by Zook, brachy84
+- [Brandon's Core](http://minecraft.curseforge.com/projects/brandons-core) [1.12.2-2.4.20.22] by brandon3055
+- TrashSlot [8.4.10] by BlayTheNinth
+- [Hooked](http://teamwizardry.com/) [1.0.2] by thecodewarrior
+- ModularUI [2.2.3] by brachy84, Rongmario, CleanroomMC
+- [MrTJPCore](http://...) [2.1.4.43] by MrTJP, covers1624
+- [Dark Utilities](http://www.darkhax.net) [1.8.230] by Darkhax
+- [Redstone Arsenal](http://www.teamcofh.com) [2.6.6.1] by Team CoFH
+- [Client Tweaks](http://balyware.com) [3.1.11] by BlayTheNinth
+- Advanced Solar Materials [1.0] by coderbot16
+- [Collective](https://curseforge.com/minecraft/mc-mods/collective) [3.0] by Rick South
+- [DeepMobEvolution](https://github.com/ThePansmith/DeepMobEvolution) [1.2.1] by Pansmith, serenibyss
+- [Just Enough Dimensions](http://minecraft.curseforge.com/projects/just-enough-dimensions) [1.6.0-dev.20200416.184714] by masa
+- [Red Core](https://www.curseforge.com/minecraft/mc-mods/red-core) [0.4] by Red Studio
+- [LittleTiles](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2408680) by CreativeMD, Shana
+- [Enchantment Descriptions](http://www.darkhax.net) [1.1.15] by Darkhax
+- Neeve's AE2: Extended Life Additions [1.3.1] by NotMyWing
+- [AE2 Stuff](http://bdew.net) [0.7.0.4] by bdew
+- [CodeChicken Lib](http://chickenbones.net/Pages/links.html) [3.2.3.358] by ChickenBones, covers1624
