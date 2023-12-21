@@ -82,6 +82,9 @@ The two patch repos are:
 
 If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/Nomi-CEu/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
 
+## Modlist
+Jump to [Modlist](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/modlist.md)
+
 ## Credits
 Original pack by [Exaxxion](https://github.com/Exaxxion).  
 Stabilized miner textures from [Self-Torture Edition](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition).  
