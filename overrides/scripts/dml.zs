@@ -15,7 +15,6 @@ recipes.addShaped(<deepmoblearning:extraction_chamber>, [
 	[<ore:plateEnergeticAlloy>, <minecraft:hopper>, <ore:plateEnergeticAlloy>]]);
 
 recipes.remove(<deepmoblearning:machine_casing>);
-<deepmoblearning:machine_casing>.displayName = "Dark Steel Machine Hull";
 recipes.addShaped(<deepmoblearning:machine_casing>,[
 	[<ore:plateDarkSteel>,<ore:plateDarkSteel>,<ore:plateDarkSteel>],
 	[<ore:plateDarkSteel>,<meta_tile_entity:hull.lv>,<ore:plateDarkSteel>],
@@ -40,7 +39,6 @@ recipes.addShaped(<deepmoblearning:data_model_blank>, [
 	[<ore:plateElectricalSteel>, <ore:plateElectricalSteel>, <ore:wireFineGold>]]);
 
 recipes.remove(<deepmoblearning:polymer_clay>);
-<deepmoblearning:polymer_clay>.displayName = "Pulsating Polymer Clay";
 
 recipes.addShapeless(<minecraft:rotten_flesh> * 12, [<deepmoblearning:living_matter_overworldian>, <minecraft:chicken>]);
 recipes.addShapeless(<minecraft:rotten_flesh> * 24, [<deepmoblearning:living_matter_overworldian>, <minecraft:beef>]);

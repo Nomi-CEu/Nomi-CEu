@@ -1,0 +1,38 @@
+# line 51-53 of EnderIO.jar
+item.item_basic_capacitor.basic.name=Basic RF Capacitor
+item.item_basic_capacitor.activated.name=Double-Layer RF Capacitor
+item.item_basic_capacitor.ender.name=Octadic RF Capacitor
+
+# line 1575-1577 of EnderIO.jar
+enderio.item_power_conduit.name=Conductive Iron Energy Conduit
+enderio.item_power_conduit_enhanced.name=Energetic Alloy Energy Conduit
+enderio.item_power_conduit_ender.name=Vibrant Alloy Energy Conduit
+
+# line 16,17,20,22,26,27 of EnderIO-endergy.jar
+enderio.item_endergy_conduit_iron.name=End Steel Energy Conduit
+enderio.item_endergy_conduit_electrum.name=Lumium Energy Conduit
+enderio.item_endergy_conduit_copper.name=Signalum Energy Conduit
+enderio.item_endergy_conduit_cobble.name=Enderium Energy Conduit
+enderio.item_endergy_conduit_melodic.name=Draconium Energy Conduit
+enderio.item_endergy_conduit_stellar.name=Draconic Superconductor Energy Conduit
+
+# line 1603 of EnderIO.jar
+tile.block_cap_bank.activated.name=Advanced Capacitor Bank
+
+# line 434 of EnderIO.jar
+tile.block_dark_iron_bars.name=Dark Steel Bars
+
+# line 127-134 of EnderIO.jar
+item.item_dark_steel_helmet.name=Dark Steel Helmet
+item.item_dark_steel_chestplate.name=Dark Steel Chestplate
+item.item_dark_steel_leggings.name=Dark Steel Leggings
+item.item_dark_steel_boots.name=Dark Steel Boots
+
+# line 154-161 of EnderIO.jar
+item.item_end_steel_helmet.name=End Steel Helmet
+item.item_end_steel_chestplate.name=End Steel Chestplate
+item.item_end_steel_leggings.name=End Steel Leggings
+item.item_end_steel_boots.name=End Steel Boots
+
+# line 2245 of EnderIO.jar
+tile.block_enchanter.name=Dark Steel Enchanter

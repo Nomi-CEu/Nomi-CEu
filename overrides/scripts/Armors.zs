@@ -4,7 +4,6 @@ recipes.addShaped(<enderio:block_reinforced_obsidian>,[
 	[<enderio:block_dark_iron_bars>,<armorplus:compressed_obsidian>,<enderio:block_dark_iron_bars>],
 	[<metaitem:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:plateDarkSteel>]]);
 	
-<enderio:block_dark_iron_bars>.displayName = "Dark Steel Bars";
 recipes.remove(<enderio:block_dark_iron_bars>);
 recipes.addShaped(<enderio:block_dark_iron_bars> * 8,[
 	[<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>],
@@ -118,11 +117,6 @@ recipes.addShaped(<armorplus:coal_leggings>, [
 recipes.addShaped(<armorplus:coal_boots>, [
 	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>], 
 	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>]]);	
-<armorplus:coal_helmet>.displayName = "Carbon Plated Helmet";	
-<armorplus:coal_chestplate>.displayName = "Carbon Plated Chestplate";	
-<armorplus:coal_leggings>.displayName = "Carbon Plated Leggings";	
-<armorplus:coal_boots>.displayName = "Carbon Plated Boots";
-	
 	
 //Ardite Armor
 recipes.addShaped(<armorplus:ardite_helmet>, [
@@ -458,8 +452,6 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_bow>, [
 	
 	
 //Ultimate Helmet
-<enderio:item_dark_steel_helmet>.displayName = "Dark Steel Helmet";	
-<enderio:item_end_steel_helmet>.displayName = "End Steel Helmet";
 //Left		
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part>, [
 	[null,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null], 
@@ -514,8 +506,6 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_helmet>, [
 
 
 //Ultimate Chestplate
-<enderio:item_dark_steel_chestplate>.displayName = "Dark Steel Chestplate";	
-<enderio:item_end_steel_chestplate>.displayName = "End Steel Chestplate";
 //Left		
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:5>, [
 	[<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null,null],
@@ -566,8 +556,6 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_chestplate>, [
 
 
 //Ultimate Leggings
-<enderio:item_dark_steel_leggings>.displayName = "Dark Steel Leggings";	
-<enderio:item_end_steel_leggings>.displayName = "End Steel Leggings";
 //Left		
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:8>, [
 	[<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null,null,null],
@@ -620,8 +608,6 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_pants>, [
 
 
 //Ultimate Boots
-<enderio:item_dark_steel_boots>.displayName = "Dark Steel Boots";	
-<enderio:item_end_steel_boots>.displayName = "End Steel Boots";
 //Left		
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:11>, [
 	[null,null,null,null,null],

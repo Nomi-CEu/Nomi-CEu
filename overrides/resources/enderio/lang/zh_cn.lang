@@ -1,0 +1,38 @@
+# line 51-53 of EnderIO.jar
+item.item_basic_capacitor.basic.name=基础 RF 电容
+item.item_basic_capacitor.activated.name=双层 RF 电容
+item.item_basic_capacitor.ender.name=八位 RF 电容
+
+# line 1575-1577 of EnderIO.jar
+enderio.item_power_conduit.name=导电铁能量导管
+enderio.item_power_conduit_enhanced.name=充能合金能量导管
+enderio.item_power_conduit_ender.name=脉冲合金能量导管
+
+# line 16,17,20,22,26,27 of EnderIO-endergy.jar
+enderio.item_endergy_conduit_iron.name=末影钢能量导管
+enderio.item_endergy_conduit_electrum.name=流明能量导管
+enderio.item_endergy_conduit_copper.name=信素能量导管
+enderio.item_endergy_conduit_cobble.name=末影能量导管
+enderio.item_endergy_conduit_melodic.name=龙素能量导管
+enderio.item_endergy_conduit_stellar.name=超导龙素能量导管
+
+# line 1603 of EnderIO.jar
+tile.block_cap_bank.activated.name=高级电容库
+
+# line 434 of EnderIO.jar
+tile.block_dark_iron_bars.name=玄钢栏杆
+
+# line 127-134 of EnderIO.jar
+item.item_dark_steel_helmet.name=玄钢头盔
+item.item_dark_steel_chestplate.name=玄钢胸甲
+item.item_dark_steel_leggings.name=玄钢护腿
+item.item_dark_steel_boots.name=玄钢靴子
+
+# line 154-161 of EnderIO.jar
+item.item_end_steel_helmet.name=末影钢头盔
+item.item_end_steel_chestplate.name=末影钢胸甲
+item.item_end_steel_leggings.name=末影钢护腿
+item.item_end_steel_boots.name=末影钢靴子
+
+# line 2245 of EnderIO.jar
+tile.block_enchanter.name=玄钢附魔器

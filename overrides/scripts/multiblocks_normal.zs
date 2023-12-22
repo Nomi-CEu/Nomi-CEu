@@ -234,8 +234,6 @@ creative_tank_provider.hasMufflerMechanics = false;
 creative_tank_provider.hasMaintenanceMechanics = true;
 creative_tank_provider.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
 
-<gcym:large_multiblock_casing:9>.displayName = "Reaction-Safe Casing";
-
 // Naquadah Reactor 1
 // Groovy (special generator)
 
