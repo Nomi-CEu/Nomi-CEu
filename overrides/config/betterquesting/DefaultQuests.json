@@ -10308,7 +10308,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r. \n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nYou should have set up a §3Vaccum Freezer§r for §6Kanthal§r, but if you haven\u0027t done it yet or want to improve your setup, routing through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering you\u0027re system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
+          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r.\n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nRouting through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering you\u0027re system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10361,7 +10361,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Vacuum Freezers§r are primarily used to cool down hot ingots.\n\nThey\u0027re also capable of freezing air into a liquid, and making superconductors.\n\nAt minimum you will need an energy input hatch, an input bus, an output bus, and 22 §6Frost Proof Machine Casings§r for forming the multiblock for processing Hot Ingots.\n\nIf you want to deal with fluids as well, subtract two casings and use a fluid input and fluid output in their place.\n\nBesides the controller placement, as usual the hatches/buses can go anywhere. Use the building guide in §bJEI§r which can be pulled up from the controller block.",
+          "desc:8": "§3Vacuum Freezers§r are primarily used to cool down §6Hot Ingots§r. They\u0027re also capable of freezing air into a liquid, and making superconductors.\n\nAt minimum you will need an energy input hatch, an input bus, an output bus, and 22 §6Frost Proof Machine Casings§r for forming the multiblock for processing Hot Ingots.\n\nIf you want to deal with fluids as well, subtract two casings and use a fluid input and fluid output in their place.\n\nThe energy tier required for the Vacuum Freezer is typically one tier below the tier used to process the ingot in the §3Electric Blast Furnace§r. \n\nBesides the controller placement, as usual the hatches/buses can go anywhere. Use the building guide in §bJEI§r which can be pulled up from the controller block.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10414,6 +10414,12 @@
               "Damage:2": 1002,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 14,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -46318,7 +46324,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A complex material from §bThermal Expansion§r cooked in an §3Electric Blast Furnace§r, or a §2Alloy Blast Smelter§r.\n\n§6Enderium§r doesn\u0027t require much power (running on as little as MV) but it does need a lot of heat and is incredibly slow without overclocking. §2You can use small amounts of Krypton from Liquid Ender Air distillation to significantly decrease the smelting time.§r\n\nAs with all later blast furnace materials, dedicate a furnace to keeping these in stock and have it running constantly to ensure a stable supply (turning it off when you have an acceptably vast stockpile).\n\nIn addition to its other uses, Enderium gets you access to §aResonant Upgrade Kits§r for machines and the §6Resonant Satchel§r. These quests can be found on the §eProgression§r tab.\n\n",
+          "desc:8": "A complex material from §bThermal Expansion§r cooked in an §3Electric Blast Furnace§r, or a §2Alloy Blast Smelter§r.\n\n§6Enderium§r is incredibly slow without overclocking. §2You can use small amounts of Krypton from Liquid Ender Air distillation to significantly decrease the smelting time.§r\n\nAs with all later blast furnace materials, dedicate a furnace to keeping these in stock and have it running constantly to ensure a stable supply (turning it off when you have an acceptably vast stockpile).\n\nIn addition to its other uses, Enderium gets you access to §aResonant Upgrade Kits§r for machines and the §6Resonant Satchel§r. These quests can be found on the §eProgression§r tab.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
