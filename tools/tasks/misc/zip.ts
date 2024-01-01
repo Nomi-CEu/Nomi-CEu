@@ -43,4 +43,4 @@ export const zipClient = makeZipper(clientDestDirectory, "Client");
 export const zipLang = makeZipper(langDestDirectory, "Lang");
 export const zipMMC = makeZipper(mmcDestDirectory, "MMC");
 
-export const zipAll = gulp.parallel(zipServer, zipClient, zipLang, zipMMC);
+export const zipAll = gulp.parallel(zipServer, zipClient, zipLang);

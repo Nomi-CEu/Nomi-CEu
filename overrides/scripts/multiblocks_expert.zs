@@ -209,8 +209,6 @@ microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
 microverse_projector_advanced_ii.canBeDistinct = true;
 microverse_projector_advanced_ii.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
 
-<gcym:large_multiblock_casing:9>.displayName = "Reaction-Safe Casing";
-
 // Naquadah Reactor 1
 // Groovy (special generator)
 

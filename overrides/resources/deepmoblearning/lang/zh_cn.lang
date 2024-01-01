@@ -1,5 +1,5 @@
 # Item Names
-item.deepmoblearning.polymer_clay.name=聚合粘土
+item.deepmoblearning.polymer_clay.name=脉冲聚合粘土
 item.deepmoblearning.data_model_blank.name=空白数据模型
 item.deepmoblearning.deep_learner.name=深度学习器
 item.deepmoblearning.creative_model_learner.name=创造模式模型学习器
@@ -19,7 +19,7 @@ item.deepmoblearning.glitch_infused_sword.name=故障灌注剑
 
 # Block Names
 tile.deepmoblearning.infused_ingot_block.name=故障灌注块
-tile.deepmoblearning.machine_casing.name=炭灰板材机械外壳
+tile.deepmoblearning.machine_casing.name=玄钢机械外壳
 tile.deepmoblearning.simulation_chamber.name=模拟室
 tile.deepmoblearning.extraction_chamber.name=战利品制造机
 tile.deepmoblearning.trial_keystone.name=测试楔石
@@ -223,7 +223,7 @@ deepmoblearning.trial.message.opponents=敌怪
 deepmoblearning.trial.message.glitch_1=! 故障警报 !
 deepmoblearning.trial.message.glitch_2=在它变成问题之前把它处理掉
 
-# Affixes
+# Affixes 词缀，不翻译
 deepmoblearning.affix.blaze_invaders.name=Blaze Invaders
 deepmoblearning.affix.empowered_glitches.name=Empowered Glitches
 deepmoblearning.affix.knockback_immunity.name=Knockback Immunity

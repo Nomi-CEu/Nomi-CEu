@@ -94,7 +94,6 @@ recipes.addShaped(<actuallyadditions:block_misc:9>, [
 [<metaitem:plateAluminium>,<metaitem:plateAluminium>,<metaitem:plateAluminium>], 
 [<metaitem:plateAluminium>,<actuallyadditions:item_misc:5>,<metaitem:plateAluminium>], 
 [<metaitem:plateAluminium>,<metaitem:plateAluminium>,<metaitem:plateAluminium>]]);
-<actuallyadditions:block_misc:9>.displayName = "Aluminium Casing";	
 
 //AA Atomic Reconstructor	
 recipes.remove(<actuallyadditions:block_atomic_reconstructor>);	

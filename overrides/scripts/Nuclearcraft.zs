@@ -1100,8 +1100,6 @@ thermal_sep.recipeBuilder()
     .outputs(<nuclearcraft:thorium:4>)
     .duration(1100).EUt(48).buildAndRegister();
 
-<nuclearcraft:thorium:4>.displayName = "Prepared Thorium-232";
-
 //Remove Duping Uranium via extra Uranium 235 tiny Pile
 // Uranium-238 * 1
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:dustUranium>], null).remove();

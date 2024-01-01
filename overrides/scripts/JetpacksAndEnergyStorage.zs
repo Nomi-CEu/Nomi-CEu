@@ -137,7 +137,6 @@ recipes.addShaped(<enderio:block_cap_bank:2>,  [
 	[<enderio:block_cap_bank:1>.marked("left"), <enderio:item_basic_capacitor:1>, <enderio:block_cap_bank:1>.marked("right")],
 	[<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>]],
 	sumCapacitorBankPower);
-<enderio:block_cap_bank:2>.displayName = "Advanced Capacitor Bank";
 
 // vibrant capacitor bank
 recipes.remove(<enderio:block_cap_bank:3>);
@@ -292,15 +291,6 @@ recipes.addShaped(<openglider:hang_glider_part:2>, [
 	[null, <metaitem:stickIron>, null],
 	[<metaitem:stickIron>, null, <metaitem:stickIron>],
 	[<metaitem:stickIron>, <metaitem:stickIron>,<metaitem:stickIron>]]);
-
-//<thermalexpansion:frame:128>.displayName = "Leadstone Energy Cell Frame";
-//<thermalexpansion:cell>.displayName = "Leadstone Energy Cell";
-<thermalexpansion:frame:130>.displayName = "Micro Miner Engine Frame";
-<thermalexpansion:frame:146>.displayName = "Micro Miner Engine Core";
-<thermalexpansion:frame:131>.displayName = "Signalum Micro Miner Engine Frame";
-<thermalexpansion:frame:147>.displayName = "Signalum Micro Miner Engine Core";
-<thermalexpansion:frame:132>.displayName = "Enderium Micro Miner Engine Frame";
-<thermalexpansion:frame:148>.displayName = "Enderium Micro Miner Engine Core";
 
 recipes.addShaped(<thermalexpansion:frame:130>, [
 	[<metaitem:plateElectrum>, <metaitem:stickElectrum>, <metaitem:plateElectrum>],
