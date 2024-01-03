@@ -56,11 +56,18 @@ jobs:
       RELEASE_TYPE: ${{ inputs.release_type }}
 
     steps:
+      - name: Get Token
+        id: token
+        uses: peter-murray/workflow-application-token-action@v2.1.0
+        with:
+          application_id: ${{ secrets.APP_ID }}
+          application_private_key: ${{ secrets.APP_KEY }}
+
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ssh-key: ${{ secrets.SSH_KEY }}
+          token: ${{ steps.token.outputs.token }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
@@ -102,7 +109,9 @@ jobs:
         if: ${{ !inputs.update_files }}
         with:
           commit_message: "${{ inputs.release_type }} ${{ inputs.tag }}\n\n[NO CATEGORY]"
-          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          commit_author: Nomi CEu Management <nomi-ceu-management@users.noreply.github.com>
+          commit_user_name: Nomi CEu Management
+          commit_user_email: nomi-ceu-management@users.noreply.github.com
           tagging_message: "${{ inputs.tag }}"
 
       - name: Commit and Push Update Changes
@@ -111,7 +120,9 @@ jobs:
         if: ${{ inputs.update_files }}
         with:
           commit_message: "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]"
-          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          commit_author: Nomi CEu Management <nomi-ceu-management@users.noreply.github.com>
+          commit_user_name: Nomi CEu Management
+          commit_user_email: nomi-ceu-management@users.noreply.github.com
 
       - name: Throw Error if No Changes were Detected
         if: ${{ steps.commit-release.outputs.changes_detected == 'false' || steps.commit-update.outputs.changes_detected == 'false' }}
