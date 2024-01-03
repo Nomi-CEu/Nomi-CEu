@@ -30,8 +30,6 @@ jobs:
       tag: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
     secrets: inherit
-    permissions:
-      contents: write
     
   createChangelog:
     name: Create Changelog (${{ inputs.tag }})
@@ -43,5 +41,3 @@ jobs:
       compare_tag: ${{ inputs.compare_tag }}
       branch: ${{ inputs.branch }}
     secrets: inherit
-    permissions:
-      contents: write
