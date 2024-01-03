@@ -110,9 +110,9 @@ jobs:
         if: ${{ !inputs.update_files }}
         with:
           commit_message: "${{ inputs.release_type }} ${{ inputs.tag }}\n\n[NO CATEGORY]"
-          commit_author: Nomi CEu Management <nomi-ceu-management@users.noreply.github.com>
-          commit_user_name: Nomi CEu Management
-          commit_user_email: nomi-ceu-management@users.noreply.github.com
+          commit_author: nomi-ceu-management[bot] <155502507+nomi-ceu-management[bot]@users.noreply.github.com>
+          commit_user_name: nomi-ceu-management[bot]
+          commit_user_email: 155502507+nomi-ceu-management[bot]@users.noreply.github.com
           tagging_message: "${{ inputs.tag }}"
 
       - name: Commit and Push Update Changes
@@ -121,9 +121,9 @@ jobs:
         if: ${{ inputs.update_files }}
         with:
           commit_message: "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]"
-          commit_author: Nomi CEu Management <nomi-ceu-management@users.noreply.github.com>
-          commit_user_name: Nomi CEu Management
-          commit_user_email: nomi-ceu-management@users.noreply.github.com
+          commit_author: nomi-ceu-management[bot] <155502507+nomi-ceu-management[bot]@users.noreply.github.com>
+          commit_user_name: nomi-ceu-management[bot]
+          commit_user_email: 155502507+nomi-ceu-management[bot]@users.noreply.github.com
 
       - name: Throw Error if No Changes were Detected
         if: ${{ steps.commit-release.outputs.changes_detected == 'false' || steps.commit-update.outputs.changes_detected == 'false' }}
