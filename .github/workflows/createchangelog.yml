@@ -60,11 +60,19 @@ jobs:
       GITHUB_TAG: ${{ inputs.tag }}
       RELEASE_TYPE: ${{ inputs.release_type }}
     steps:
+      - name: Get Token
+        id: token
+        uses: peter-murray/workflow-application-token-action@v2.1.0
+        with:
+          application_id: ${{ secrets.APP_ID }}
+          application_private_key: ${{ secrets.APP_KEY }}
+
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
+          token: ${{ steps.token.outputs.token }}
 
       - name: Restore Cached Files
         uses: actions/cache@v3
@@ -102,7 +110,9 @@ jobs:
         id: "commit-template"
         with:
           commit_message: "Upload Changelogs for Release ${{ inputs.tag }}"
-          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          commit_author: Nomi CEu Management <nomi-ceu-management@users.noreply.github.com>
+          commit_user_name: Nomi CEu Management
+          commit_user_email: nomi-ceu-management@users.noreply.github.com
           branch: ${{ inputs.branch }}
           create_branch: true
 
