@@ -25,6 +25,7 @@ jobs:
         with:
           application_id: ${{ secrets.APP_ID }}
           application_private_key: ${{ secrets.APP_KEY }}
+          organization: Nomi-CEu
 
       - name: Checkout Tag
         uses: actions/checkout@v4
