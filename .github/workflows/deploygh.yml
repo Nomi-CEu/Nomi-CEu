@@ -18,8 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TAG: ${{ inputs.tag }}
-    permissions:
-      contents: write
     steps:
       - name: Checkout Tag
         uses: actions/checkout@v4
