@@ -23,6 +23,11 @@
 - Many QoL features - Wiremill can produce any wire, Creative Tank no longer uses fluids, new creative chests and tanks from CEu, etc.
 - And more...  
 
+## Translations
+Translations are offered for Nomi-CEu, in a separate 'language pack'. This is available to download [here](https://nightly.link/Nomi-CEu/Nomi-CEu-Translations/workflows/pushbuildpack/main?preview) (download the 'combined' zip for Nomi-CEu).
+
+For more information, including supported languages and their status, see [the GitHub Page](https://github.com/Nomi-CEu/Nomi-CEu-Translations/).
+
 ## Contributing and Maintainer Information
 This is available on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki).
 
