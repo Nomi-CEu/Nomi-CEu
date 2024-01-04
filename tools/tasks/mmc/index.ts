@@ -37,7 +37,7 @@ function copyMMCUpdateNotes() {
  * Copies the license file.
  */
 async function copyMMCLicense() {
-	return gulp.src("../LICENSE.md").pipe(gulp.dest(mmcDestDirectory));
+	return gulp.src("../LICENSE").pipe(gulp.dest(mmcDestDirectory));
 }
 
 /**
