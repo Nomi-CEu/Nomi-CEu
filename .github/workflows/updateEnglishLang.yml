@@ -1,0 +1,47 @@
+# Tells Nomi-CEu-Translations to Update English Lang
+name: "Update English Lang in Nomi-CEu-Translations"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      # Only Update English Lang on Branch Main
+      - main
+    paths:
+      # Specify the path to 'assets' folder, suffixed by '/**/[eE][nN]_[uU][sS].lang', then another one, suffixed by '/**/[eE][nN]-[uU][sS].lang' (Can't use character group [-_])
+      - "overrides/resources/**/[eE][nN]_[uU][sS].lang"
+      - "overrides/resources/**/[eE][nN]-[uU][sS].lang"
+
+jobs:
+  updateLang:
+    name: Update English Lang in Nomi-CEu-Translations
+    runs-on: ubuntu-latest
+    steps:
+      # We have to use a custom app token, as the default GITHUB_TOKEN only has access to the base repo.
+      # Nomi-CEu-Management has access to all of Nomi-CEu's Repos.
+      - name: Get Token
+        id: token
+        uses: peter-murray/workflow-application-token-action@v2.1.0
+        with:
+          # Shared Org Secret: Contains the Nomi-CEu-Management App ID (773030)
+          application_id: ${{ secrets.APP_ID }}
+          # Shared Org Secret: Contains the Nomi-CEu-Management App's Private Key.
+          # run `cat {PEM_FILE_PATH} | base64 -w 0 && echo` to encode the key first if changing the key.
+          # Paste the output of the command into the secret value.
+          application_private_key: ${{ secrets.APP_KEY }}
+          organization: Nomi-CEu
+          
+      - name: Dispatch Workflow
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ steps.token.outputs.token }}
+          # A Javascript Function Body to send the Workflow Dispatch Event.
+          script: |
+            await github.rest.repos.createDispatchEvent({
+              owner: "Nomi-CEu", 
+              repo: "Nomi-CEu-Translations",
+              event_type: "update_english_lang",
+              client_payload: {
+                module: "nomi-ceu",
+              },
+            });
