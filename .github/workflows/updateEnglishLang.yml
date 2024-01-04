@@ -9,8 +9,13 @@ on:
       - main
     paths:
       # Specify the path to 'assets' folder, suffixed by '/**/[eE][nN]_[uU][sS].lang', then another one, suffixed by '/**/[eE][nN]-[uU][sS].lang' (Can't use character group [-_])
+      # This also activates on QB Json Change, as if that happens, the QB Lang most likely needs to be changed.
       - "overrides/resources/**/[eE][nN]_[uU][sS].lang"
       - "overrides/resources/**/[eE][nN]-[uU][sS].lang"
+      - "overrides/config/betterquesting/DefaultQuests.json" # Normal QB Json in Default Config
+      - "overrides/config/betterquesting/saved_quests/ExpertQuests.json" # Expert QB Json in Default Config
+      - "overrides/config-overrides/normal/betterquesting/DefaultQuests.json" # Normal QB Json in Config Overrides
+      - "overrides/config-overrides/expert/betterquesting/DefaultQuests.json" # Expert QB Json in Config Overrides
 
 jobs:
   updateLang:
