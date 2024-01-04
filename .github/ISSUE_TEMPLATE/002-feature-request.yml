@@ -65,7 +65,7 @@ body:
       description: "What alternatives have you considered that might help solve the problem? If you aren't sure, or this is not related to a problem, please leave this field blank."
       placeholder: "Example: Otherwise, we can also do Z..."
     validations:
-      required: true
+      required: false
   - type: textarea
     id: additional-info
     attributes:
