@@ -165,16 +165,5 @@ recipes.addShaped(<draconicevolution:info_tablet>, [
 // Prismarine Crystals
 mods.actuallyadditions.AtomicReconstructor.addRecipe(<minecraft:prismarine_crystals>, <metaitem:gemTopaz>, 45000);
 
-// Perfect Gems
-val gemPerfect as OrePrefix = OrePrefix.getPrefix("gemPerfect");
-
-gemPerfect.generateRecipes(function(orePrefix as OrePrefix, material as Material) {
-    <recipemap:cutter>.recipeBuilder()
-        .inputs(Utils.item(orePrefix, material))
-        .fluidInputs(<liquid:lubricant> * 100)
-        .outputs(Utils.item("gemExquisite", material) * 2)
-        .duration(100).EUt(1920).buildAndRegister();
-} as IOreRecipeHandler);
-
 // Cow Egg
 recipes.addShapeless(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:cow"}}), [<enderio:item_soul_vial:1>.withTag({entityId: "minecraft:cow"})]);
