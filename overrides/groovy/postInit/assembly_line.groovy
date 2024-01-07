@@ -23,7 +23,7 @@ mods.gregtech.assembly_line.recipeBuilder()
 
 // Dark Soularium Jetplate
 mods.gregtech.assembly_line.recipeBuilder()
-    .inputs(item('simplyjetpacks:itemjetpack', 8), item('simplyjetpacks:metaitemmods', 4) * 2, item('extrautils2:angelring'), item('enderio:item_material', 16) * 2, item('contenttweaker:doublecompressedoctadiccapacitor'), ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 11) * 2)
+    .inputs(item('simplyjetpacks:itemjetpack', 8), item('simplyjetpacks:metaitemmods', 4) * 2, item('extrautils2:angelring'), item('enderio:item_material', 16) * 2, item('nomilabs:doublecompressedoctadiccapacitor'), ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 11) * 2)
     .fluidInputs(fluid('soldering_alloy') * 1152)
     .outputs(item('simplyjetpacks:itemjetpack', 9))
     .stationResearch(b -> b.researchStack(item('simplyjetpacks:metaitemmods', 11)).CWUt(16))
@@ -32,7 +32,7 @@ mods.gregtech.assembly_line.recipeBuilder()
 
 // Flux-Infused Jetplate
 mods.gregtech.assembly_line.recipeBuilder()
-    .inputs(item('simplyjetpacks:itemjetpack', 17), item('redstonearsenal:armor.plate_flux'), item('simplyjetpacks:metaitemmods', 21), item('extrautils2:angelring'), item('contenttweaker:compressedoctadiccapacitor') * 2, ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 30) * 2)
+    .inputs(item('simplyjetpacks:itemjetpack', 17), item('redstonearsenal:armor.plate_flux'), item('simplyjetpacks:metaitemmods', 21), item('extrautils2:angelring'), item('nomilabs:compressedoctadiccapacitor') * 2, ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 30) * 2)
     .fluidInputs(fluid('soldering_alloy') * 1152)
     .outputs(item('simplyjetpacks:itemjetpack', 18))
     .stationResearch(b -> b.researchStack(item('simplyjetpacks:metaitemmods', 30)).CWUt(16))
@@ -107,8 +107,8 @@ mods.gregtech.assembly_line.recipeBuilder()
 mods.gregtech.assembly_line.recipeBuilder()
     .inputs(metaitem('frameMicroversium'), metaitem('plateMicroversium') * 24, metaitem('gravistar'), metaitem('sensor.uv') * 2, metaitem('robot.arm.uv') * 2, ore('circuitUhv'), metaitem('plateDenseNaquadahAlloy') * 2, metaitem('wireGtQuadrupleEnrichedNaquadahTriniumEuropiumDuranide') * 4, metaitem('wireFineTritanium') * 64)
     .fluidInputs(fluid('soldering_alloy') * 1152, fluid('naquadria') * 576)
-    .outputs(item('contenttweaker:universalnavigator'))
-    .stationResearch(b -> b.researchStack(item('contenttweaker:stellarcreationdata')).CWUt(96).EUt(491520))
+    .outputs(item('nomilabs:universalnavigator'))
+    .stationResearch(b -> b.researchStack(item('nomilabs:stellarcreationdata')).CWUt(96).EUt(491520))
     .duration(6000).EUt(491520)
     .buildAndRegister()
 
@@ -150,7 +150,7 @@ mods.gregtech.assembly_line.recipeBuilder()
 // Simulation Supercomputer
 if (PMConfig.getPackMode() == "normal") {
     mods.gregtech.assembly_line.recipeBuilder()
-        .inputs(item('gcym:large_multiblock_casing', 11), ore('plateTrinaquadalloy') * 6, item('deepmoblearning:simulation_chamber') * 4, item('contenttweaker:heartofauniverse'), metaitem('robot.arm.uv') * 2, metaitem('field.generator.uv') * 2, ore('circuitUhv') * 4, item('draconicevolution:draconic_energy_core'))
+        .inputs(item('gcym:large_multiblock_casing', 11), ore('plateTrinaquadalloy') * 6, item('deepmoblearning:simulation_chamber') * 4, item('nomilabs:heartofauniverse'), metaitem('robot.arm.uv') * 2, metaitem('field.generator.uv') * 2, ore('circuitUhv') * 4, item('draconicevolution:draconic_energy_core'))
         .fluidInputs(fluid('soldering_alloy') * 1152)
         .outputs(metaitem('nomilabs:dml_sim_chamber'))
         .stationResearch(b -> b.researchStack(item('deepmoblearning:simulation_chamber')).CWUt(128).EUt(1966080))
