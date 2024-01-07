@@ -519,7 +519,7 @@ fluid_extractor.recipeBuilder()
 //creative_tank_provider.hasMufflerMechanics = false;
 //creative_tank_provider.hasMaintenanceMechanics = false;
 //
-//recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
+//recipes.addShaped("creative_tank_provider", <metaitem:nomilabs:creative_tank_provider>, [
 //    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
 //    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
 //    [<ore:circuitZpm>, <metaitem:field.generator.uv>, <ore:circuitZpm>]

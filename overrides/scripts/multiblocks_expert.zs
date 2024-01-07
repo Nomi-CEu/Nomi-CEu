@@ -329,19 +329,19 @@ universal_crystallizer.canBeDistinct = true;
 universal_crystallizer.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
 
 // multiblock controller recipes
-recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
+recipes.addShaped("microverse_projector_basic", <metaitem:nomilabs:microverse_projector_basic>, [
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>]
 ]);
 
-recipes.addShaped("microverse_projector_advanced", <metaitem:mbt:microverse_projector_advanced>, [
+recipes.addShaped("microverse_projector_advanced", <metaitem:nomilabs:microverse_projector_advanced>, [
     [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>]
 ]);
 
-recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_projector_advanced_ii>, [
+recipes.addShaped("microverse_projector_advanced_ii", <metaitem:nomilabs:microverse_projector_advanced_ii>, [
     [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>]
@@ -351,7 +351,7 @@ recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_p
 // Naquadah Reactor
 // Moved to Groovy
 
-makeExtremeRecipe5(<metaitem:multiblocktweaker:actualization_chamber>,
+makeExtremeRecipe5(<metaitem:nomilabs:actualization_chamber>,
     ["PPPPP",
      "PEFSP",
      "PWGWP",
@@ -367,7 +367,7 @@ makeExtremeRecipe5(<metaitem:multiblocktweaker:actualization_chamber>,
 assembly_line.recipeBuilder()
     .inputs(<metaitem:gcym:large_autoclave> * 24, <packagedexcrafting:combination_crafter> * 24, <metaitem:emitter.uv> * 24, <metaitem:field.generator.uv> * 24, <ore:circuitUhv> * 64, <gregtech:wire_coil:7> * 64, <draconicevolution:reactor_component> * 24, <draconicevolution:crafting_injector:3> * 8, <moreplates:infinity_plate> * 3, <moreplates:infinity_plate> * 3, <moreplates:infinity_plate> * 3, <moreplates:infinity_plate> * 3)
     .fluidInputs(<liquid:cryotheum> * 36864, <liquid:moltenempowereddiamatine> * 18432, <liquid:naquadria> * 63216, <liquid:taranium> * 4608)
-    .outputs(<metaitem:multiblocktweaker:universal_crystallizer>)
+    .outputs(<metaitem:nomilabs:universal_crystallizer>)
     .duration(900).EUt(7864320).buildAndRegister();
 
 // multiblock recipemap recipes

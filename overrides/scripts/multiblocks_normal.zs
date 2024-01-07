@@ -241,25 +241,25 @@ creative_tank_provider.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>
 // Groovy (special generator)
 
 // multiblock controller recipes
-recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
+recipes.addShaped("microverse_projector_basic", <metaitem:nomilabs:microverse_projector_basic>, [
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>]
 ]);
 
-recipes.addShaped("microverse_projector_advanced", <metaitem:mbt:microverse_projector_advanced>, [
+recipes.addShaped("microverse_projector_advanced", <metaitem:nomilabs:microverse_projector_advanced>, [
     [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>]
 ]);
 
-recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_projector_advanced_ii>, [
+recipes.addShaped("microverse_projector_advanced_ii", <metaitem:nomilabs:microverse_projector_advanced_ii>, [
     [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>]
 ]);
 
-recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
+recipes.addShaped("creative_tank_provider", <metaitem:nomilabs:creative_tank_provider>, [
     [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
     [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
     [<ore:circuitZpm>, <metaitem:field.generator.uv>, <ore:circuitZpm>]
