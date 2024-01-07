@@ -1377,12 +1377,6 @@ arc_furnace.recipeBuilder()
 
 //<ore:blockWarpCoreRim>.add(<gregtech:meta_block_compressed_4:8>);
 
-//GTCE Marble
-mods.chisel.Carving.addVariation("marble", <gregtech:stone_smooth:2>);
-
-//GTCE Basalt
-mods.chisel.Carving.addVariation("basalt", <gregtech:stone_smooth:3>);
-
 //Create Universal GTCE Oredict for tools that can be used to reference by oredict and encapsulates all tools.
 //Works for any material tool, any damage tool, electric or non-electric
 
