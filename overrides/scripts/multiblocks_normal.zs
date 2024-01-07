@@ -16,230 +16,6 @@ import mods.gregtech.recipe.IRecipe;
 import scripts.common.makeShaped as makeShaped;
 import scripts.common.absolute_int as absolute_int;
 
-//val ROCKET_ARROW as ITextureArea = ITextureArea.fullImage("multiblocktweaker:textures/gui/progress_bar/rocket.png");
-
-// multiblock stuctures
-// Basic Microverse Projector
-
-val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic") // automatic allocation ID
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-                       return FactoryBlockPattern.start()
-                          .aisle("CCC", "CVC", "CCC")
-                          .aisle("CCC", "GDG", "CCC")
-                          .aisle("CSC", "CGC", "CCC")
-                          .where('S', controller.self())
-                          .where('G', <blockstate:gregtech:transparent_casing>)
-                          .where('V', <metastate:gregtech:multiblock_casing:2>)
-                          .where('D', <metastate:chisel:diamond:3>)
-                          .where("C", CTPredicate.states(<blockstate:nomilabs:microverse_casing>).setMinGlobalLimited(12) | controller.autoAbilities(true, true, true, true, true, false, true))
-                          .build();
-                 } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("microverse_projector_basic") // create a RecipeMap.
-            .minInputs(2)
-            .maxInputs(4)
-            .minOutputs(1)
-            .maxOutputs(16)
-            .maxFluidInputs(1)
-            //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
-            .build())
-    .withBaseTexture(<blockstate:nomilabs:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
-    .buildAndRegister();
-
-microverse_projector_basic.hasMufflerMechanics = true;
-microverse_projector_basic.hasMaintenanceMechanics = true;
-microverse_projector_basic.canBeDistinct = true;
-microverse_projector_basic.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
-
-// Advanced Microverse Projector
-val microverse_projector_advanced = Builder.start("mbt:microverse_projector_advanced")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle(
-                    "CCCCC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CCCCC")
-            .aisle(
-                    "CVCVC",
-                    "GDDDG",
-                    "GDDDG",
-                    "GDDDG",
-                    "CVCVC")
-            .aisle(
-                    "CCCCC",
-                    "GDDDG",
-                    "GD DG",
-                    "GDDDG",
-                    "CCCCC")
-            .aisle(
-                    "CVCVC",
-                    "GDDDG",
-                    "GDDDG",
-                    "GDDDG",
-                    "CVCVC")
-            .aisle(
-                    "CCSCC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CCCCC")
-            .where('S', controller.self())
-            .where('G', <blockstate:gregtech:transparent_casing>)
-            .where('D', <metastate:chisel:diamond:3>)
-            .where('V', <metastate:gregtech:multiblock_casing:2>)
-            .where(' ', CTPredicate.getAny())
-            .where("C", CTPredicate.states(<blockstate:nomilabs:microverse_casing>).setMinGlobalLimited(45) | controller.autoAbilities(true, true, true, true, false, false, true))
-            .build();
-    } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("microverse_projector_advanced") // create a RecipeMap.
-            .minInputs(2)
-            .maxInputs(4)
-            .minOutputs(1)
-            .maxOutputs(16)
-            //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
-            .build())
-    .withBaseTexture(<blockstate:nomilabs:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
-    .buildAndRegister();
-
-microverse_projector_advanced.hasMufflerMechanics = true;
-microverse_projector_advanced.hasMaintenanceMechanics = true;
-microverse_projector_advanced.canBeDistinct = true;
-microverse_projector_advanced.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
-
-// Advanced Microverse Projector II
-val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_advanced_ii")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle(
-                "         ",
-                "         ",
-                "  CCCCC  ",
-                "  CVCVC  ",
-                "  CCCCC  ",
-                "  CVCVC  ",
-                "  CCCCC  ",
-                "         ",
-                "         ")
-            .aisle(
-                "         ",
-                "  CGGGC  ",
-                " CDDDDDC ",
-                " GDDDDDG ",
-                " GDDDDDG ",
-                " GDDDDDG ",
-                " CDDDDDC ",
-                "  CGGGC  ",
-                "         ")
-            .aisle(
-                "  CCCCC  ",
-                " CDDDDDC ",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                " CDDDDDC ",
-                "  CCCCC  ")
-            .aisle(
-                "  CGGGC  ",
-                " GDDDDDG ",
-                "CDDDDDDDC",
-                "GDD   DDG",
-                "GDD   DDG",
-                "GDD   DDG",
-                "CDDDDDDDC",
-                " GDDDDDG ",
-                "  CGGGC  ").setRepeatable(3)
-            .aisle(
-                "  CCCCC  ",
-                " CDDDDDC ",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                "CDDDDDDDC",
-                " CDDDDDC ",
-                "  CCCCC  ")
-            .aisle(
-                "         ",
-                "  CGGGC  ",
-                " CDDDDDC ",
-                " GDDDDDG ",
-                " GDDDDDG ",
-                " GDDDDDG ",
-                " CDDDDDC ",
-                "  CGGGC  ",
-                "         ")
-            .aisle(
-                "         ",
-                "         ",
-                "  CCSCC  ",
-                "  CGGGC  ",
-                "  CGGGC  ",
-                "  CGGGC  ",
-                "  CCCCC  ",
-                "         ",
-                "         ")
-            
-            .where('S', controller.self())
-            .where('G', <blockstate:gregtech:transparent_casing>)
-            .where('V', <blockstate:gregtech:multiblock_casing>)
-            .where(' ', CTPredicate.getAny())
-            .where('D', <metastate:chisel:diamond:3>)
-            .where("C", CTPredicate.states(<blockstate:nomilabs:microverse_casing>).setMinGlobalLimited(115) | controller.autoAbilities(true, true, true, true, false, false, true))
-            .build();
-    } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("microverse_projector_advanced_ii") // create a RecipeMap.
-            .minInputs(2)
-            .maxInputs(8)
-            .minOutputs(1)
-            .maxOutputs(16)
-            //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
-            .build())
-    .withBaseTexture(<blockstate:nomilabs:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
-    .buildAndRegister();
-
-microverse_projector_advanced_ii.hasMufflerMechanics = true;
-microverse_projector_advanced_ii.hasMaintenanceMechanics = true;
-microverse_projector_advanced_ii.canBeDistinct = true;
-microverse_projector_advanced_ii.frontOverlay = <cube_renderer:COMPRESSOR_OVERLAY>;
-
-// Creative Tank Provider
-val creative_tank_provider = Builder.start("mbt:creative_tank_provider")
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle("CCC", "CCC", "CCC")
-            .aisle("CCC", "CFC", "CCC")
-            .aisle("CCC", "CSC", "CCC")
-            .where('S', controller.self())
-            .where('F', <metastate:gregtech:meta_block_frame_24:12>) // Tungstencarbide Frame Box
-            .where("C", CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>).setMinGlobalLimited(15) | controller.autoAbilities(true, true, true, true, false, false, false))
-            .build();
-    } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("creative_tank_provider")
-            .minInputs(2)
-            .maxInputs(2)
-            .minOutputs(1)
-            .maxOutputs(1)
-            .build())
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
-    .buildAndRegister();
-
-creative_tank_provider.hasMufflerMechanics = false;
-creative_tank_provider.hasMaintenanceMechanics = true;
-creative_tank_provider.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>;
-
-// Naquadah Reactor 1
-// Groovy (special generator)
-
-// Naquadah Reactor 2
-// Groovy (special generator)
-
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:nomilabs:microverse_projector_basic>, [
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>],
@@ -273,8 +49,7 @@ recipes.addShaped("creative_tank_provider", <metaitem:nomilabs:creative_tank_pro
 // multiblock recipemap recipes
 // basic projector
 // t1 ores
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(500)
     .EUt(500)
     .inputs(<nomilabs:tieroneship>,
@@ -298,8 +73,7 @@ microverse_projector_basic.recipeMap
     .buildAndRegister();
 
 // t1 gems
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(500)
     .EUt(500)
     .inputs(<nomilabs:tieroneship>,
@@ -313,8 +87,7 @@ microverse_projector_basic.recipeMap
     .buildAndRegister();
 
 // t1 stellar creation data 1
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(100)
     .EUt(500)
     .inputs(<nomilabs:tieroneship>,
@@ -325,8 +98,7 @@ microverse_projector_basic.recipeMap
 
 
 // t2 radium + ores
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(600)
     .EUt(1000)
     .inputs(<nomilabs:tiertwoship>,
@@ -349,8 +121,7 @@ microverse_projector_basic.recipeMap
     .buildAndRegister();
 
 // t2 stellar creation data
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(120)
     .EUt(1000)
     .inputs(<nomilabs:tiertwoship>,
@@ -360,8 +131,7 @@ microverse_projector_basic.recipeMap
     .buildAndRegister();
 
 // t2 gases
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(700)
     .EUt(2000)
     .inputs(<nomilabs:tiertwoship>,
@@ -374,8 +144,7 @@ microverse_projector_basic.recipeMap
     .buildAndRegister();
 
 // t3 gems
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(700)
     .EUt(2000)
     .inputs(<nomilabs:tierthreeship>,
@@ -393,8 +162,7 @@ microverse_projector_basic.recipeMap
     .buildAndRegister();
 
 // t3 ores
-microverse_projector_basic.recipeMap
-    .recipeBuilder()
+microverse_projector_1.recipeBuilder()
     .duration(700)
     .EUt(2000)
     .inputs(<nomilabs:tierthreeship>,
@@ -420,8 +188,7 @@ microverse_projector_basic.recipeMap
 
 // advanced projector
 // t4 oil and infinity
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(800)
     .EUt(3750)
     .inputs(<nomilabs:tierfourship>,
@@ -434,8 +201,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 // t4 dense gem ores
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(800)
     .EUt(3750)
     .inputs(<nomilabs:tierfourship>,
@@ -451,8 +217,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 // t4 osmium iridium
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(800)
     .EUt(3750)
     .inputs(<nomilabs:tierfourship>,
@@ -465,8 +230,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 // t5 ores
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(1000)
     .EUt(7500)
     .inputs(<nomilabs:tierfiveship>,
@@ -487,8 +251,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 // t5 naquadah sheldonite trinium
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(1000)
     .EUt(7500)
     .inputs(<nomilabs:tierfiveship>,
@@ -503,8 +266,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 // t6 u/os/ir
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(1250)
     .EUt(18750)
     .inputs(<nomilabs:tiersixship>,
@@ -523,8 +285,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 // t6 einsteinium
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(1250)
     .EUt(18750)
     .inputs(<nomilabs:tiersixship>,
@@ -535,8 +296,7 @@ microverse_projector_advanced.recipeMap
     .buildAndRegister();
 
 // t6 eggs
-microverse_projector_advanced.recipeMap
-    .recipeBuilder()
+microverse_projector_2.recipeBuilder()
     .duration(1250)
     .EUt(18750)
     .inputs(<nomilabs:tiersixship>,
@@ -548,8 +308,7 @@ microverse_projector_advanced.recipeMap
 
 // advanced projector 2
 // t7 hearts
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
+microverse_projector_3.recipeBuilder()
     .duration(1500)
     .EUt(31250)
     .inputs(<nomilabs:tiersevenship>,
@@ -576,8 +335,7 @@ microverse_projector_advanced_ii.recipeMap
     .buildAndRegister();
 
 // t7 chaos lair data
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
+microverse_projector_3.recipeBuilder()
     .duration(1500)
     .EUt(31250)
     .inputs(<nomilabs:tiersevenship>,
@@ -592,8 +350,7 @@ microverse_projector_advanced_ii.recipeMap
     .buildAndRegister();
 
 // t8 gravistar nt
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
+microverse_projector_3.recipeBuilder()
     .duration(2000)
     .EUt(62500)
     .inputs(<nomilabs:tiereightship>,
@@ -611,8 +368,7 @@ microverse_projector_advanced_ii.recipeMap
     .buildAndRegister();
 
 // t8 shards eggs
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
+microverse_projector_3.recipeBuilder()
     .duration(1500)
     .EUt(62500)
     .inputs(<nomilabs:tiereightship>,
@@ -630,8 +386,7 @@ microverse_projector_advanced_ii.recipeMap
     .buildAndRegister();
 
 // t9 nt
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
+microverse_projector_3.recipeBuilder()
     .duration(3000)
     .EUt(250000)
     .inputs(<nomilabs:tiernineship>,
@@ -650,8 +405,7 @@ microverse_projector_advanced_ii.recipeMap
     .buildAndRegister();
 
 // t9 universe creation data
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
+microverse_projector_3.recipeBuilder()
     .duration(3000)
     .EUt(250000)
     .inputs(<nomilabs:tiernineship>,
@@ -664,8 +418,7 @@ microverse_projector_advanced_ii.recipeMap
     .buildAndRegister();
 
 // t10 hotu
-microverse_projector_advanced_ii.recipeMap
-    .recipeBuilder()
+microverse_projector_3.recipeBuilder()
     .duration(6000)
     .EUt(1000000)
     .inputs(<nomilabs:tiertenship>,
@@ -676,8 +429,7 @@ microverse_projector_advanced_ii.recipeMap
 
 // creative tank provider
 // creative tank
-creative_tank_provider.recipeMap
-    .recipeBuilder()
+creative_tank_provider.recipeBuilder()
     .notConsumable(<nomilabs:creativeportabletankmold>)
     .inputs(<minecraft:bucket>)
     .outputs(<metaitem:creative_tank>)
@@ -687,14 +439,14 @@ creative_tank_provider.recipeMap
 
 
 // Naquadah Reactor Mk1 Recipes
-<recipemap:naquadah_reactor_1>.recipeBuilder()
+naquadah_reactor_1.recipeBuilder()
     .duration(938)
     .EUt(393216)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
-<recipemap:naquadah_reactor_1>.recipeBuilder()
+naquadah_reactor_1.recipeBuilder()
     .duration(3750)
     .EUt(393216)
     .inputs(<metaitem:boltNaquadria>)
@@ -702,14 +454,14 @@ creative_tank_provider.recipeMap
     .buildAndRegister();
 
 // Naquadah Reactor Mk2 Recipes
-<recipemap:naquadah_reactor_2>.recipeBuilder()
+naquadah_reactor_2.recipeBuilder()
     .duration(1875)
     .EUt(1572864)
     .inputs(<metaitem:boltNaquadahEnriched>)
     .outputs(<metaitem:boltLead>)
     .buildAndRegister();
 
-<recipemap:naquadah_reactor_2>.recipeBuilder()
+naquadah_reactor_2.recipeBuilder()
     .duration(7500)
     .EUt(1572864)
     .inputs(<metaitem:boltNaquadria>)

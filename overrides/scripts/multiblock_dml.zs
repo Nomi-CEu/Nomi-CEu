@@ -76,70 +76,6 @@ val pristine_prefix = "deepmoblearning:pristine_matter_";
 //    500
 //];
 
-val name as string = "dml_sim_chamber";
-
-val dml_sim_chamber = Builder.start("dml_sim_chamber", 3100)
-    .withPattern(function(controller as IControllerTile) as IBlockPattern {
-        return FactoryBlockPattern.start()
-            .aisle(
-                "CCCCC", 
-                "DEEED", 
-                "DEEED", 
-                "DEEED", 
-                "CCCCC"
-            )
-            .aisle(
-                "CCCCC", 
-                "GOOOG", 
-                "DOOOD", 
-                "GOOOG", 
-                "CGGGC"
-            )
-            .aisle(
-                "CCCCC", 
-                "GOOOG", 
-                "DO-OD", 
-                "GOOOG", 
-                "CGGGC"
-            )
-            .aisle(
-                "CCCCC", 
-                "GOOOG", 
-                "DOOOD", 
-                "GOOOG", 
-                "CGGGC"
-            )
-            .aisle(
-                "CCSCC", 
-                "DEGED", 
-                "DGGGD", 
-                "DEGED", 
-                "CCCCC"
-            )
-            .where('S', controller.self())
-            .where('D', <metastate:gcym:large_multiblock_casing:5>)
-            .where('E', <metastate:gregtech:meta_block_compressed_2001:2>) // enderium
-            .where('G', <metastate:appliedenergistics2:quartz_vibrant_glass:0>)
-            .where('O', <metastate:extendedcrafting:storage:4> /* omnium */)
-            .where('-', CTPredicate.getAny())
-            .where('C', CTPredicate.states(<metastate:gcym:large_multiblock_casing:11>).setMinGlobalLimited(30)
-            | controller.autoAbilities(true, true, true, true, false, false, false))
-            .build();
-    } as IPatternBuilderFunction)
-    .withRecipeMap(
-        FactoryRecipeMap.start("dml_sim_chamber")
-            .minInputs(2)
-            .maxInputs(2)
-            .minOutputs(2)
-            .maxOutputs(2)
-            .build())
-    .withBaseTexture(<metastate:gcym:large_multiblock_casing:11>)
-    .buildAndRegister();
-dml_sim_chamber.hasMaintenanceMechanics = true;
-dml_sim_chamber.hasMufflerMechanics = false;
-dml_sim_chamber.canBeDistinct = true;
-dml_sim_chamber.frontOverlay = <cube_renderer:FUSION_REACTOR_OVERLAY>;
-
 //Recipe for Controller
 // Moved to Groovy
 
@@ -147,7 +83,7 @@ val DATA_MODEL_MAXIMUM_TIER = 4;
 val PRISTINE_CHANCE_FIXED = 30; // in %
 
 for mob, cost in mobs {
-    dml_sim_chamber.recipeMap.recipeBuilder()
+    dme_sim_chamber.recipeBuilder()
         .duration(301)
         .EUt(cost / 4 as int)
         .inputs(<deepmoblearning:polymer_clay>)
