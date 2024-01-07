@@ -16,6 +16,10 @@ import mods.gregtech.recipe.IRecipe;
 import scripts.common.makeShaped as makeShaped;
 import scripts.common.absolute_int as absolute_int;
 
+// Hide Hard Mode Controllers
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:actualization_chamber>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:universal_crystallizer>);
+
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:nomilabs:microverse_projector_basic>, [
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>],
