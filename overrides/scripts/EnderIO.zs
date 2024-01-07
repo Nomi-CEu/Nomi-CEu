@@ -278,14 +278,14 @@ recipes.addShaped(doublecompressedoctadiccap, [
 	[compressedoctadiccap,compressedoctadiccap,compressedoctadiccap]]);
 
 //Replace old compressed capacitors with functional ones
-recipes.addShapeless(compressedoctadiccap, [<contenttweaker:compressedoctadiccapacitor>]);
-recipes.addShapeless(doublecompressedoctadiccap, [<contenttweaker:doublecompressedoctadiccapacitor>]);
+recipes.addShapeless(compressedoctadiccap, [<nomilabs:compressedoctadiccapacitor>]);
+recipes.addShapeless(doublecompressedoctadiccap, [<nomilabs:doublecompressedoctadiccapacitor>]);
 
 //An attempt to do the same in JEI
 mods.jei.JEI.addItem(compressedoctadiccap);
 mods.jei.JEI.addItem(doublecompressedoctadiccap);
-<contenttweaker:compressedoctadiccapacitor>.addTooltip(format.white("Put the item into a crafting window if it has no lore"));
-<contenttweaker:doublecompressedoctadiccapacitor>.addTooltip(format.white("Put the item into a crafting window if it has no lore"));
+<nomilabs:compressedoctadiccapacitor>.addTooltip(format.white("Put the item into a crafting window if it has no lore"));
+<nomilabs:doublecompressedoctadiccapacitor>.addTooltip(format.white("Put the item into a crafting window if it has no lore"));
 
 // Crafter
 recipes.remove(<enderio:block_crafter>);

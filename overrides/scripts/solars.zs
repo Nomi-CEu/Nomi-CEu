@@ -126,7 +126,7 @@ recipes.addShaped(<solarflux:solar_panel_4> * 2, [
 
 // Sunnarium
 alloy_smelter.recipeBuilder()
-	.inputs(<contenttweaker:stabilizedplutonium>, <contenttweaker:stabilizedcurium>)
+	.inputs(<nomilabs:stabilizedplutonium>, <nomilabs:stabilizedcurium>)
 	.outputs(<advsolars:sunnarium>)
 	.duration(2000)
 	.EUt(4000)

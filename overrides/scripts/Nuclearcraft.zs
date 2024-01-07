@@ -727,7 +727,7 @@ makeShaped("of_nc_advanced_plating", <nuclearcraft:part:1> * 2,
 recipes.remove(<nuclearcraft:part:2>);
 alloy.recipeBuilder()
     .outputs([<nuclearcraft:part:2> * 2])
-    .inputs([<nuclearcraft:part:1>, <contenttweaker:stabilizeduranium>])
+    .inputs([<nuclearcraft:part:1>, <nomilabs:stabilizeduranium>])
     .duration(400).EUt(2000).buildAndRegister();
 
 // Elite Plating
@@ -788,8 +788,8 @@ large_chemical_reactor.recipeBuilder()
     .fluidOutputs([<liquid:redstone> * 19008])
     .duration(200).EUt(2000).buildAndRegister();
 
-reactor.recipeBuilder().inputs([<contenttweaker:t2laser>])
-    .outputs(<contenttweaker:t3laser>)
+reactor.recipeBuilder().inputs([<nomilabs:t2laser>])
+    .outputs(<nomilabs:t3laser>)
     .fluidInputs([<liquid:radon> * 1000])
     .duration(200).EUt(2000).buildAndRegister();
 
@@ -973,10 +973,10 @@ smoreIngredient(<nuclearcraft:cocoa_butter>, <fluid:cocoa_butter>, ingotMold);
 
 var smingots as IItemStack[] = [
     <nuclearcraft:foursmore>,
-    <contenttweaker:eightsmore>,
-    <contenttweaker:sixteensmore>,
-    <contenttweaker:thirtytwosmore>,
-    <contenttweaker:sixtyfoursmore>
+    <nomilabs:eightsmore>,
+    <nomilabs:sixteensmore>,
+    <nomilabs:thirtytwosmore>,
+    <nomilabs:sixtyfoursmore>
 ] as IItemStack[];
 
 var i = 1;

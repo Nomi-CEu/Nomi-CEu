@@ -22,8 +22,8 @@ val denseOres as IItemStack[][IOreDictEntry] = {
 	, <ore:denseOreLapis>    : [ <densemetals:dense_lapis_ore>    , <gregtech:ore_lapis_0>      ]
 	, <ore:denseOreGold>     : [ <densemetals:dense_gold_ore>     , <gregtech:ore_gold_0>       ]
 	, <ore:denseOreCoal>     : [ <densemetals:dense_coal_ore>     , <gregtech:ore_coal_0>       ]
-	, <ore:denseOreMagma>    : [ <contenttweaker:densemagma>      , <minecraft:magma>           ]
-	, <ore:denseOreOilsands> : [ <contenttweaker:denseoilshale>   , <gregtech:ore_oilsands_0:2> ]
+	, <ore:denseOreMagma>    : [ <nomilabs:densemagma>      , <minecraft:magma>           ]
+	, <ore:denseOreOilsands> : [ <nomilabs:denseoilshale>   , <gregtech:ore_oilsands_0:2> ]
 };
 
 val fluidCatalyst = <liquid:nitric_acid> * 1000;

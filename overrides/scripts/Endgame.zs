@@ -22,8 +22,8 @@ makeShaped("of_enriched_sunnarium", <advsolars:sunnarium_enriched> * 4,
     ["NAN",
      "ASA",
      "NAN"],
-    { N : <contenttweaker:stabilizedneptunium>,
-      A : <contenttweaker:stabilizedamericium>,
+    { N : <nomilabs:stabilizedneptunium>,
+      A : <nomilabs:stabilizedamericium>,
       S : <advsolars:sunnarium> });
 
 makeShaped("of_enriched_sunnarium_plate", <advsolars:sunnarium_enriched_plate>,
@@ -36,7 +36,7 @@ makeShaped("of_enriched_sunnarium_plate", <advsolars:sunnarium_enriched_plate>,
 
 //Radon
 electrolyzer.recipeBuilder()
-    .inputs([<contenttweaker:radiumsalt>])
+    .inputs([<nomilabs:radiumsalt>])
     .outputs([<metaitem:dustRockSalt>])
     .fluidOutputs(<liquid:radon> * 1000)
     .duration(200).EUt(2000).buildAndRegister();
@@ -49,7 +49,7 @@ electrolyzer.recipeBuilder()
 
 
 //Gem Sensor
-makeShaped("of_gem_sensor", <contenttweaker:gemsensor>,
+makeShaped("of_gem_sensor", <nomilabs:gemsensor>,
     [" O ",
      "PSP",
      " P "],
@@ -80,8 +80,8 @@ recipes.addShapeless(<avaritia:resource:2> * 9, [<metaitem:nuggetNeutronium>]);
 
 
 extractor.recipeBuilder()
-    .inputs(<contenttweaker:impossiblerealmdata>)
-    .outputs([<contenttweaker:quantumflux>])
+    .inputs(<nomilabs:impossiblerealmdata>)
+    .outputs([<nomilabs:quantumflux>])
     .duration(100).EUt(3000).buildAndRegister();
 
 recipes.remove(<extrautils2:rainbowgenerator>);
@@ -90,7 +90,7 @@ makeShaped("of_rainbow_generator", <extrautils2:rainbowgenerator>,
      "OHO",
      "OBO"],
     { O : <extrautils2:opinium:8>,
-      H : <contenttweaker:heartofauniverse>,
+      H : <nomilabs:heartofauniverse>,
       T : <extrautils2:rainbowgenerator:2>,
       B : <extrautils2:rainbowgenerator:1> });
 
@@ -100,7 +100,7 @@ makeShaped("of_elytra_wing", <craftelytra:elytra_wing>,
      "PE ",
      "PP "],
     { P : <metaitem:platePalladium>,
-      E : <metaitem:devtech:gemPerfectEmerald> });
+      E : <metaitem:gemPerfectEmerald> });
 
 recipes.remove(<minecraft:elytra>);
 makeShaped("of_elytra", <minecraft:elytra>,
@@ -308,73 +308,73 @@ recipes.remove(<metaitem:gcym:mega_vacuum_freezer>);
 // Moved to Groovy
 
 // Stabilized Miners Tooltips
-<contenttweaker:tieroneship_stabilized>.addTooltip(format.italic(
+<nomilabs:tieroneship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tieroneship_stabilized>.addTooltip(format.italic(
+<nomilabs:tieroneship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tieroneship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tieroneship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tiertwoship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiertwoship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tiertwoship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiertwoship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tiertwoship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tiertwoship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tierthreeship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierthreeship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tierthreeship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierthreeship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tierthreeship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tierthreeship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tierfourship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierfourship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tierfourship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierfourship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tierfourship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tierfourship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tierfourandhalfship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierfourandhalfship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tierfourandhalfship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierfourandhalfship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tierfourandhalfship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tierfourandhalfship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tierfiveship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierfiveship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tierfiveship_stabilized>.addTooltip(format.italic(
+<nomilabs:tierfiveship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tierfiveship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tierfiveship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tiersixship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiersixship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tiersixship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiersixship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tiersixship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tiersixship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tiersevenship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiersevenship_stabilized>.addTooltip(format.italic(
     format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tiersevenship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiersevenship_stabilized>.addTooltip(format.italic(
     format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tiersevenship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tiersevenship_stabilized_matter>.addTooltip(format.italic(
     format.white("It looks oddly familiar.")));
 
 
-<contenttweaker:tiereightship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiereightship_stabilized>.addTooltip(format.italic(
 	format.white("A stabilized version, injected with a Heart of a Universe.")));
-<contenttweaker:tiereightship_stabilized>.addTooltip(format.italic(
+<nomilabs:tiereightship_stabilized>.addTooltip(format.italic(
 	format.white("Lasts indefinitely. Reusable. Totally not overpowered.")));
-<contenttweaker:tiereightship_stabilized_matter>.addTooltip(format.italic(
+<nomilabs:tiereightship_stabilized_matter>.addTooltip(format.italic(
 	format.white("It looks oddly familiar.")));

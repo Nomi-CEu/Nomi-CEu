@@ -54,8 +54,8 @@ chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:23>).fluidI
 chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:24>).fluidInputs([<liquid:canolaoil> * 1000]).fluidOutputs([<liquid:empoweredoil> * 1000]).duration(100).EUt(500).buildAndRegister();
 
 //Moon Materials
-macerator.recipeBuilder().inputs([<advancedrocketry:moonturf>]).outputs([<contenttweaker:moondust>]).duration(200).EUt(400).buildAndRegister();
-macerator.recipeBuilder().inputs([<advancedrocketry:moonturf_dark>]).outputs([<contenttweaker:moondust>]).duration(200).EUt(400).buildAndRegister();
+macerator.recipeBuilder().inputs([<advancedrocketry:moonturf>]).outputs([<nomilabs:moondust>]).duration(200).EUt(400).buildAndRegister();
+macerator.recipeBuilder().inputs([<advancedrocketry:moonturf_dark>]).outputs([<nomilabs:moondust>]).duration(200).EUt(400).buildAndRegister();
 
 macerator.recipeBuilder().inputs([<thermalfoundation:material:2048>]).outputs([<thermalfoundation:material:2049> * 4]).duration(200).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<thermalfoundation:material:2050>]).outputs([<thermalfoundation:material:2051> * 4]).duration(200).EUt(16).buildAndRegister();
@@ -63,7 +63,7 @@ macerator.recipeBuilder().inputs([<thermalfoundation:material:2052>]).outputs([<
 
 centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
-centrifuge.recipeBuilder().inputs(<contenttweaker:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
+centrifuge.recipeBuilder().inputs(<nomilabs:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
 
 // Fluxed electrum blend
 recipes.remove(<redstonearsenal:material>);

@@ -12,23 +12,23 @@ import scripts.common.makeShapeless3 as makeShapeless3;
 
 /////////////	 Tier One Space Ship   	  //////////////////	200 ingots
 
-makeShaped("of_tieroneship", <contenttweaker:tieroneship>,
+makeShaped("of_tieroneship", <nomilabs:tieroneship>,
 	[" G ",
 	 "LAL",
 	 "TMT"],
-	{ G : <contenttweaker:t1guidance>,
-	  L : <contenttweaker:t1laser>,
+	{ G : <nomilabs:t1guidance>,
+	  L : <nomilabs:t1laser>,
 	  A : <metaitem:field.generator.lv>,
 	  T : <simplyjetpacks:metaitemmods:7>,
 	  M : <meta_tile_entity:combustion_generator.lv> }
 );
 
-<contenttweaker:tieroneship>.addTooltip(
+<nomilabs:tieroneship>.addTooltip(
 	format.white(
 		format.italic("Harvests Titanium and other light metals from asteroids in the microverse.")));
 
 // Tier 1 Guidance
-makeShaped("of_t1guidance", <contenttweaker:t1guidance>,
+makeShaped("of_t1guidance", <nomilabs:t1guidance>,
 	["GPG",
 	 "PCP",
 	 "CCC"],
@@ -38,7 +38,7 @@ makeShaped("of_t1guidance", <contenttweaker:t1guidance>,
 );
 
 // Tier 1 Laser
-makeShaped("of_t1laser", <contenttweaker:t1laser>,
+makeShaped("of_t1laser", <nomilabs:t1laser>,
 	[" R ",
 	 "QGQ",
 	 "QGQ"],
@@ -51,7 +51,7 @@ makeShaped("of_t1laser", <contenttweaker:t1laser>,
 
 /////////////	 Tier Two Space Ship  	  //////////////////
 
-makeExtremeRecipe5(<contenttweaker:tiertwoship>,
+makeExtremeRecipe5(<nomilabs:tiertwoship>,
 	["  G  ",
 	 " PAP ",
 	 "LBFBL",
@@ -61,20 +61,20 @@ makeExtremeRecipe5(<contenttweaker:tiertwoship>,
 	  B : <metaitem:field.generator.lv>,
 	  C : <meta_tile_entity:combustion_generator.mv>,
 	  F : <thermalexpansion:frame:146>,
-	  G : <contenttweaker:t1guidance>,
-	  L : <contenttweaker:t1laser>,
+	  G : <nomilabs:t1guidance>,
+	  L : <nomilabs:t1laser>,
 	  P : <metaitem:plateDoubleTitanium>,
 	  T : <simplyjetpacks:metaitemmods:8> }
 );
 
-<contenttweaker:tiertwoship>.addTooltip(
+<nomilabs:tiertwoship>.addTooltip(
 	format.white(
 		format.italic("Harvests Tungsten and other heavy metals from asteroids in the microverse.")));
 
 
 /////////////	 Tier Three Space Ship  	  //////////////////
 
-makeExtremeRecipe7(<contenttweaker:tierthreeship>,
+makeExtremeRecipe7(<nomilabs:tierthreeship>,
 	["  G G  ",
 	 "  PPP  ",
 	 "  ABA  ",
@@ -86,20 +86,20 @@ makeExtremeRecipe7(<contenttweaker:tierthreeship>,
 	  B : <metaitem:crate.titanium>,
 	  C : <meta_tile_entity:combustion_generator.hv>,
 	  F : <thermalexpansion:frame:146>,
-	  G : <contenttweaker:t1guidance>,
-	  L : <contenttweaker:t2laser>,
+	  G : <nomilabs:t1guidance>,
+	  L : <nomilabs:t2laser>,
 	  P : <ore:plateDoubleTungstenCarbide>,
 	  T : <simplyjetpacks:metaitemmods:28> }
 );
 
 // Tier 2 Laser
-makeExtremeRecipe5(<contenttweaker:t2laser>,
+makeExtremeRecipe5(<nomilabs:t2laser>,
 	[" R R ",
 	 "GAGAG",
 	 "GAGAG",
 	 "GBGBG",
 	 "QCECQ"],
-	{ A : <contenttweaker:solidifiedargon>,
+	{ A : <nomilabs:solidifiedargon>,
 	  B : <minecraft:quartz_block>,
 	  C : <ore:circuitHv>,
 	  E : <enderio:block_cap_bank:1>,
@@ -108,7 +108,7 @@ makeExtremeRecipe5(<contenttweaker:t2laser>,
 	  R : <minecraft:redstone_block> }
 );
 
-<contenttweaker:tierthreeship>.addTooltip(
+<nomilabs:tierthreeship>.addTooltip(
 	format.white(
 		format.italic("Harvests ultra hot metals and gems from Nether microverses.")));
 
@@ -123,7 +123,7 @@ makeShaped("of_ar_advrocketmotor", <advancedrocketry:advrocketmotor>,
 );
 
 /////////////	 Tier Four Space Ship  	  //////////////////
-makeExtremeRecipe7(<contenttweaker:tierfourship>,
+makeExtremeRecipe7(<nomilabs:tierfourship>,
 	["   G   ",
 	 "  LWL  ",
 	 " SAWAS ",
@@ -135,8 +135,8 @@ makeExtremeRecipe7(<contenttweaker:tierfourship>,
 	  B : <metaitem:field.generator.hv>,
 	  D : <thermalexpansion:dynamo:3>,
 	  F : <thermalexpansion:frame:147>,
-	  G : <contenttweaker:t1guidance>,
-	  L : <contenttweaker:t2laser>,
+	  G : <nomilabs:t1guidance>,
+	  L : <nomilabs:t2laser>,
 	  S : <ore:plateDoubleSignalum>,
 	  T : <simplyjetpacks:metaitemmods:9>,
 	  W : <ore:plateDoubleTungstenCarbide> }
@@ -144,7 +144,7 @@ makeExtremeRecipe7(<contenttweaker:tierfourship>,
 
 
 // Tier 2 Guidance
-makeShaped("of_t2guidance", <contenttweaker:t2guidance>,
+makeShaped("of_t2guidance", <nomilabs:t2guidance>,
 	["AWA",
 	 "WCW",
 	 "CCC"],
@@ -155,7 +155,7 @@ makeShaped("of_t2guidance", <contenttweaker:t2guidance>,
 
 /////////////	 Tier Five Space Ship  	  //////////////////
 
-makeExtremeRecipe7(<contenttweaker:tierfiveship>,
+makeExtremeRecipe7(<nomilabs:tierfiveship>,
 	["  G G  ",
 	 "  I I  ",
 	 " SILIS ",
@@ -167,9 +167,9 @@ makeExtremeRecipe7(<contenttweaker:tierfiveship>,
 	  B : <meta_tile_entity:super_chest.mv>,
 	  C : <nuclearcraft:fission_controller_new_fixed>,
 	  F : <thermalexpansion:frame:147>,
-	  G : <contenttweaker:t2guidance>,
+	  G : <nomilabs:t2guidance>,
 	  I : <ore:plateDoubleIridium>,
-	  L : <contenttweaker:t3laser>,
+	  L : <nomilabs:t3laser>,
 	  P : <nuclearcraft:fission_port>,
 	  S : <ore:plateDoubleSignalum>,
 	  T : <simplyjetpacks:metaitemmods:10> }
@@ -177,7 +177,7 @@ makeExtremeRecipe7(<contenttweaker:tierfiveship>,
 
 
 /////////////	 Tier Six Space Ship  	  //////////////////
-makeExtremeRecipe7(<contenttweaker:tiersixship>,
+makeExtremeRecipe7(<nomilabs:tiersixship>,
 	[" LG GL ",
 	 "LEE EEL",
 	 "EEEEEEE",
@@ -190,15 +190,15 @@ makeExtremeRecipe7(<contenttweaker:tiersixship>,
 	  C : <nuclearcraft:fission_controller_new_fixed>,
 	  E : <ore:plateDoubleEnderium>,
 	  F : <thermalexpansion:frame:148>,
-	  G : <contenttweaker:t2guidance>,
-	  L : <contenttweaker:t3laser>,
+	  G : <nomilabs:t2guidance>,
+	  L : <nomilabs:t3laser>,
 	  P : <nuclearcraft:fission_port>,
 	  T : <simplyjetpacks:metaitemmods:29> }
 );
 
 /////////////	 Tier Seven Space Ship  	  //////////////////
 
-makeExtremeRecipe9(<contenttweaker:tiersevenship>,
+makeExtremeRecipe9(<nomilabs:tiersevenship>,
 	[" L  D  L ",
 	 " DDDGDDD ",
 	 "LDDDDDDDL",
@@ -211,16 +211,16 @@ makeExtremeRecipe9(<contenttweaker:tiersevenship>,
 	{ A : <metaitem:field.generator.luv>,
 	  D : <ore:plateDoubleDraconium>,
 	  E : <draconicevolution:ender_energy_manipulator>,
-	  G : <contenttweaker:t2guidance>,
-	  L : <contenttweaker:t3laser>,
+	  G : <nomilabs:t2guidance>,
+	  L : <nomilabs:t3laser>,
 	  P : <draconicevolution:particle_generator:2>,
-	  W : <contenttweaker:warpengine> }
+	  W : <nomilabs:warpengine> }
 );
 
 assembly_line.recipeBuilder()
 	.inputs([<metaitem:frameMicroversium>, <ore:plateEnderium> * 6, <draconicevolution:item_dislocation_inhibitor>, <draconicevolution:magnet:1>, <ore:plateCrystalMatrix> * 2, <metaitem:field.generator.iv> * 2, <simplyjetpacks:metaitemmods:30> * 2, <simplyjetpacks:metaitemmods:11>])
 	.fluidInputs(<liquid:soldering_alloy> * 1152)
-	.outputs(<contenttweaker:warpengine>)
+	.outputs(<nomilabs:warpengine>)
 	.property("research", <draconicevolution:item_dislocation_inhibitor>)
 	.duration(1800).EUt(30720).buildAndRegister();
 
@@ -234,7 +234,7 @@ recipes.addShaped(<draconicevolution:magnet:1>, [
 
 /////////////	 Tier Eight Space Ship  	  //////////////////
 
-makeExtremeRecipe9(<contenttweaker:tiereightship>,
+makeExtremeRecipe9(<nomilabs:tiereightship>,
 	[" G C C G ",
 	 " WCCLCCW ",
 	 " WCIIICW ",
@@ -248,10 +248,10 @@ makeExtremeRecipe9(<contenttweaker:tiereightship>,
 	  B : <metaitem:field.generator.zpm>,
 	  C : <ore:plateDoubleCrystalMatrix>,
 	  D : <advancedrocketry:warpcore>,
-	  E : <contenttweaker:warpengine>,
-	  G : <contenttweaker:t2guidance>,
+	  E : <nomilabs:warpengine>,
+	  G : <nomilabs:t2guidance>,
 	  I : <ore:plateDoubleIridium>,
-	  L : <contenttweaker:t3laser>,
+	  L : <nomilabs:t3laser>,
 	  M : <advancedrocketry:warpmonitor>,
 	  W : <ore:plateDoubleTungstenCarbide> }
 );
@@ -260,7 +260,7 @@ makeExtremeRecipe9(<contenttweaker:tiereightship>,
 
 /////////////	 Tier Nine Space Ship  	  //////////////////
 
-makeExtremeRecipe9(<contenttweaker:tiernineship>,
+makeExtremeRecipe9(<nomilabs:tiernineship>,
 	["    Q    ",
 	 "   QQQ   ",
 	 "   QUQ   ",
@@ -273,18 +273,18 @@ makeExtremeRecipe9(<contenttweaker:tiernineship>,
 	{ A : <metaitem:field.generator.uv>,
 	  B : <meta_tile_entity:super_chest.ev>,
 	  C : <draconicevolution:reactor_core>,
-	  Q : <contenttweaker:quantumfluxedeterniumplating>,
+	  Q : <nomilabs:quantumfluxedeterniumplating>,
 	  R : <draconicevolution:reactor_component>,
-	  U : <contenttweaker:universalnavigator>,
-	  W : <contenttweaker:warpengine> }
+	  U : <nomilabs:universalnavigator>,
+	  W : <nomilabs:warpengine> }
 );
 
 // Recipe moved to Groovy
-<contenttweaker:universalnavigator>.addTooltip(format.blue("See you later, navigator!"));
+<nomilabs:universalnavigator>.addTooltip(format.blue("See you later, navigator!"));
 
 /////////////	 Tier Ten Space Ship  	  //////////////////
 
-makeExtremeRecipe9(<contenttweaker:tiertenship>,
+makeExtremeRecipe9(<nomilabs:tiertenship>,
 	["  N   N  ",
 	 " NUN NUN ",
 	 " NNN NNN ",
@@ -299,8 +299,8 @@ makeExtremeRecipe9(<contenttweaker:tiertenship>,
 	  N : <ore:plateDoubleNeutronium>,
 	  P : <solarflux:solar_panel_neutronium>,
 	  R : <draconicevolution:reactor_component>,
-	  U : <contenttweaker:universalnavigator>,
-	  W : <contenttweaker:warpengine> }
+	  U : <nomilabs:universalnavigator>,
+	  W : <nomilabs:warpengine> }
 );
 
 <extendedcrafting:trimmed:5>.clearTooltip();
@@ -314,11 +314,11 @@ recipes.removeByRecipeName("avaritia:items/resource/neutron_nugget");
 
 // Quantum Flux
 
-makeShaped("of_quantumflux_b", <contenttweaker:quantumflux>,
+makeShaped("of_quantumflux_b", <nomilabs:quantumflux>,
 	[" M ",
 	 "MDM",
 	 " M "],
-	{ M : <contenttweaker:moondust>,
+	{ M : <nomilabs:moondust>,
 	  D : <minecraft:diamond> }
 );
 
@@ -349,59 +349,59 @@ fluid_extractor.recipeBuilder()
 	.fluidOutputs(<liquid:xpjuice> * 160)
 	.duration(80).EUt(32).buildAndRegister();
 
-<contenttweaker:tierfourship>.addTooltip(format.white(
+<nomilabs:tierfourship>.addTooltip(format.white(
 	format.italic("Harvests ultra cold materials from the deepest parts of empty space.")));
-<contenttweaker:tierfiveship>.addTooltip(format.white(
+<nomilabs:tierfiveship>.addTooltip(format.white(
 	format.italic("Harvests strange materials from End microverses.")));
-<contenttweaker:tiersixship>.addTooltip(format.white(
+<nomilabs:tiersixship>.addTooltip(format.white(
 	format.italic("Harvests extremely rare materials from every concievable reality.")));
-<contenttweaker:tiersevenship>.addTooltip(format.white(
+<nomilabs:tiersevenship>.addTooltip(format.white(
 	format.italic("Hunts Wyrms and End Dragons from the microverse")));
-<contenttweaker:tiersevenship>.addTooltip(format.white(
+<nomilabs:tiersevenship>.addTooltip(format.white(
 	format.italic("and returns with parts from their carapaces.")));
-<contenttweaker:tiereightship>.addTooltip(format.white(
+<nomilabs:tiereightship>.addTooltip(format.white(
 	format.italic("Hunts inconcievable monstrosities from beyond the End")));
-<contenttweaker:tiereightship>.addTooltip(format.white(
+<nomilabs:tiereightship>.addTooltip(format.white(
 	format.italic("and returns with bizzare trinkets.")));
-<contenttweaker:tiernineship>.addTooltip(format.white(
+<nomilabs:tiernineship>.addTooltip(format.white(
 	format.italic("Collapses microverse stars and harvests their delicious neutronium cores.")));
-<contenttweaker:tiertenship>.addTooltip(format.white(
+<nomilabs:tiertenship>.addTooltip(format.white(
 	format.italic("Collapses an entire microverse and harvests it whole.")));
-<contenttweaker:tiertenship>.addTooltip(format.white(
+<nomilabs:tiertenship>.addTooltip(format.white(
 	format.italic("Try to aim for uninhabited ones.")));
 
 
 // Dense Hydrogen
-makeShaped("of_densehydrogen", <contenttweaker:densehydrogen>,
+makeShaped("of_densehydrogen", <nomilabs:densehydrogen>,
 	["HHH",
 	 "HHH",
 	 "HHH"],
-	{ H : <contenttweaker:solidifiedhydrogen> }
+	{ H : <nomilabs:solidifiedhydrogen> }
 );
 
 compressor.recipeBuilder()
-	.inputs(<contenttweaker:solidifiedhydrogen> * 9)
-	.outputs(<contenttweaker:densehydrogen>)
+	.inputs(<nomilabs:solidifiedhydrogen> * 9)
+	.outputs(<nomilabs:densehydrogen>)
 	.duration(300).EUt(2).buildAndRegister();
 
 // Dense -> Solidified decomposition
-recipes.addShapeless(<contenttweaker:solidifiedhydrogen> * 9, [<contenttweaker:densehydrogen>]);
+recipes.addShapeless(<nomilabs:solidifiedhydrogen> * 9, [<nomilabs:densehydrogen>]);
 
 // Ultra Dense Hydrogen
-makeShaped("of_ultradensehydrogen", <contenttweaker:ultradensehydrogen>,
+makeShaped("of_ultradensehydrogen", <nomilabs:ultradensehydrogen>,
 	["DDD",
 	 "DDD",
 	 "DDD"],
-	{ D : <contenttweaker:densehydrogen> }
+	{ D : <nomilabs:densehydrogen> }
 );
 
 compressor.recipeBuilder()
-	.inputs(<contenttweaker:densehydrogen> * 9)
-	.outputs(<contenttweaker:ultradensehydrogen>)
+	.inputs(<nomilabs:densehydrogen> * 9)
+	.outputs(<nomilabs:ultradensehydrogen>)
 	.duration(300).EUt(2).buildAndRegister();
 
 // Ultra Dense -> Dense decomposition
-recipes.addShapeless(<contenttweaker:densehydrogen> * 9, [<contenttweaker:ultradensehydrogen>]);
+recipes.addShapeless(<nomilabs:densehydrogen> * 9, [<nomilabs:ultradensehydrogen>]);
 
 
 

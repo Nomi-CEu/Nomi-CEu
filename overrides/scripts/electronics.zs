@@ -10,7 +10,7 @@ import scripts.common.makeShaped as makeShaped;
 
 //Resonant Clathrate
 furnace.remove(<minecraft:ender_pearl>);
-furnace.addRecipe(<contenttweaker:pulsatingdust>, <thermalfoundation:material:895>, 0.0);
+furnace.addRecipe(<nomilabs:pulsatingdust>, <thermalfoundation:material:895>, 0.0);
 
 //EnderIO Conduits
 recipes.remove(<enderio:item_power_conduit>);
@@ -115,7 +115,7 @@ mods.jei.JEI.removeAndHide(<enderio:item_endergy_conduit:9>);
 val wrench = <ore:toolWrench>;
 
 // Microversium Machine Casing
-makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
+makeShaped("of_microverse_casing", <nomilabs:microverse_casing> * 2,
 	["PPP",
 	 "PWP",
 	 "PPP"],
@@ -125,7 +125,7 @@ makeShaped("of_microverse_casing", <contenttweaker:microverse_casing> * 2,
 assembler.recipeBuilder()
 	.inputs(<ore:ingotMicroversium> * 4)
 	.circuit(6)
-	.outputs(<contenttweaker:microverse_casing>)
+	.outputs(<nomilabs:microverse_casing>)
 	.duration(50).EUt(16).buildAndRegister();
 
 //// LuV Machine Casing

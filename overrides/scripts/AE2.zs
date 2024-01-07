@@ -22,7 +22,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:20>, <ore:itemSilicon>, true, 
 Inscriber.removeRecipe(<appliedenergistics2:material:24>); 	
 Inscriber.addRecipe(<appliedenergistics2:material:24>, <ore:circuitLv>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:24>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
-//Inscriber.addRecipe(<appliedenergistics2:material:24>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
+//Inscriber.addRecipe(<appliedenergistics2:material:24>, <nomilabs:refinedcircuit>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:17>); 		
 Inscriber.addRecipe(<appliedenergistics2:material:17>, <metaitem:plateDiamond>, true, <appliedenergistics2:material:14>);		
 	
@@ -30,7 +30,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:17>, <metaitem:plateDiamond>, 
 Inscriber.removeRecipe(<appliedenergistics2:material:23>); 	
 Inscriber.addRecipe(<appliedenergistics2:material:23>, <ore:circuitLv>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:23>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
-//Inscriber.addRecipe(<appliedenergistics2:material:23>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
+//Inscriber.addRecipe(<appliedenergistics2:material:23>, <nomilabs:refinedcircuit>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:16>); 		
 Inscriber.addRecipe(<appliedenergistics2:material:16>, <metaitem:plateCertusQuartz>, true, <appliedenergistics2:material:13>);	
 	
@@ -38,7 +38,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:16>, <metaitem:plateCertusQuar
 Inscriber.removeRecipe(<appliedenergistics2:material:22>); 	
 Inscriber.addRecipe(<appliedenergistics2:material:22>, <ore:circuitLv>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:22>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
-//Inscriber.addRecipe(<appliedenergistics2:material:22>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
+//Inscriber.addRecipe(<appliedenergistics2:material:22>, <nomilabs:refinedcircuit>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:18>); 		
 Inscriber.addRecipe(<appliedenergistics2:material:18>, <metaitem:plateGold>, true, <appliedenergistics2:material:15>);		
 	

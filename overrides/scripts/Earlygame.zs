@@ -36,8 +36,8 @@ recipes.addShaped(<toolbelt:pouch>, [
 //Dusts
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:toolMortar>]);
 recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:toolHammer>]);
-recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:toolHammer>]);
-furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
+recipes.addShapeless(<nomilabs:block_dust>, [<minecraft:sand>, <ore:toolHammer>]);
+furnace.addRecipe(<nomilabs:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
 
 //Snad	
 recipes.remove(<snad:snad>);
@@ -162,9 +162,9 @@ macerator.recipeBuilder().inputs([<enderio:item_material:16>]).outputs([<enderio
 macerator.recipeBuilder().inputs([<enderio:item_material:19>]).outputs([<enderio:item_material:34>]).duration(400).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:15>]).outputs([<enderio:item_material:35>]).duration(300).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:14>]).outputs([<enderio:item_material:36>]).duration(200).EUt(16).buildAndRegister();
-macerator.recipeBuilder().inputs([<enderio:item_material:17>]).outputs([<contenttweaker:grainsofinnocence>]).duration(200).EUt(16).buildAndRegister();
-recipes.addShapeless(<contenttweaker:blazepowder>,[<minecraft:blaze_powder>]);
-recipes.addShapeless(<minecraft:blaze_powder>,[<contenttweaker:blazepowder>]);
+macerator.recipeBuilder().inputs([<enderio:item_material:17>]).outputs([<nomilabs:grainsofinnocence>]).duration(200).EUt(16).buildAndRegister();
+recipes.addShapeless(<nomilabs:blazepowder>,[<minecraft:blaze_powder>]);
+recipes.addShapeless(<minecraft:blaze_powder>,[<nomilabs:blazepowder>]);
 recipes.remove(<appliedenergistics2:part:36>);
 
 //Yeta Wrench
@@ -181,7 +181,7 @@ recipes.addShaped(<enderio:item_yeta_wrench>, [
 chemical_reactor.recipeBuilder().inputs([<extendedcrafting:material:7>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:end_stone>).EUt(15).duration(20).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_crystal:1>).EUt(15).duration(100).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:obsidian>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_infused_obsidian>).EUt(15).duration(200).buildAndRegister();
-chemical_reactor.recipeBuilder().inputs([<contenttweaker:block_dust>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:netherrack>).EUt(15).duration(20).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<nomilabs:block_dust>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:netherrack>).EUt(15).duration(20).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:magma>]).fluidOutputs(<liquid:lava> * 1000).EUt(30).duration(120).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<thermalfoundation:fertilizer>]).fluidInputs(<liquid:ammonia> * 100).outputs(<thermalfoundation:fertilizer:1>).EUt(30).duration(120).buildAndRegister();
 
@@ -193,10 +193,10 @@ recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustB
 furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>, 0.0);
 
 // Temporary Black Steel fix
-//recipes.addShapeless(<contenttweaker:dark_red_coal> * 2, [<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>]);
-mods.jei.JEI.hide(<contenttweaker:dark_red_coal>);
+//recipes.addShapeless(<nomilabs:dark_red_coal> * 2, [<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>]);
+mods.jei.JEI.hide(<nomilabs:dark_red_coal>);
 
-mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <contenttweaker:dark_red_coal> * 4]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).hidden().buildAndRegister();
+mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <nomilabs:dark_red_coal> * 4]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).hidden().buildAndRegister();
 
 
 // Clathrates
@@ -258,7 +258,7 @@ compressor.recipeBuilder().inputs(<metaitem:dustCalcium> * 2).outputs(<minecraft
 assembler.recipeBuilder().inputs(<minecraft:bone> * 4).circuit(14).outputs(<minecraft:skull>).duration(20).EUt(16).buildAndRegister();
 
 
-forge_hammer.recipeBuilder().inputs([<minecraft:sand>]).outputs([<contenttweaker:block_dust>]).duration(16).EUt(10).buildAndRegister();
+forge_hammer.recipeBuilder().inputs([<minecraft:sand>]).outputs([<nomilabs:block_dust>]).duration(16).EUt(10).buildAndRegister();
 
 // Endstone Dust * 1
 <recipemap:macerator>.findRecipe(2, [<minecraft:end_stone:0>], null).remove();

@@ -46,7 +46,7 @@ furnace.addRecipe(<metaitem:ingotWroughtIron>, <minecraft:iron_ingot>, 0.0);
 //Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<metaitem:dustCopper>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>]);
 
-recipes.addShapeless(<minecraft:clay>, [<contenttweaker:block_dust>,<minecraft:water_bucket>]);
+recipes.addShapeless(<minecraft:clay>, [<nomilabs:block_dust>,<minecraft:water_bucket>]);
 
 //Clay Electrolyzing
 electrolyzer.findRecipe(60, [<metaitem:dustClay> * 13], [null]).remove();
@@ -91,7 +91,7 @@ recipes.addShaped(<enderio:item_liquid_conduit:1> * 4, [
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 assembler.recipeBuilder().inputs([<minecraft:glass> * 3, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_liquid_conduit:1> * 8]).duration(80).EUt(16).buildAndRegister();
 
-chemical_reactor.recipeBuilder().inputs([<contenttweaker:block_dust>]).fluidInputs([<liquid:water> * 1000]).outputs(<minecraft:clay>).EUt(15).duration(20).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<nomilabs:block_dust>]).fluidInputs([<liquid:water> * 1000]).outputs(<minecraft:clay>).EUt(15).duration(20).buildAndRegister();
 
 
 recipes.remove(<meta_tile_entity:extruder.mv>);
@@ -283,29 +283,29 @@ helpers.clear(<recipemap:primitive_blast_furnace>);
 
 // Creative Tank Data
 extractor.recipeBuilder()
-    .inputs(<contenttweaker:heartofauniverse>)
-    .outputs(<contenttweaker:creativeportabletankmold>)
+    .inputs(<nomilabs:heartofauniverse>)
+    .outputs(<nomilabs:creativeportabletankmold>)
     .duration(1000)
     .EUt(180000)
     .buildAndRegister();
 
 
 // Impossible Realm Data Recipes
-makeShaped("of_impossiblerealmdata_x1", <contenttweaker:impossiblerealmdata>,
+makeShaped("of_impossiblerealmdata_x1", <nomilabs:impossiblerealmdata>,
 	["OEO",
 	 "EOE",
 	 "OEO"],
 	{ E : <actuallyadditions:item_solidified_experience>,
 	  O : <deepmoblearning:living_matter_overworldian> });
 
-makeShaped("of_impossiblerealmdata_x2", <contenttweaker:impossiblerealmdata> * 2,
+makeShaped("of_impossiblerealmdata_x2", <nomilabs:impossiblerealmdata> * 2,
 	["HEH",
 	 "EHE",
 	 "HEH"],
 	{ E : <actuallyadditions:item_solidified_experience>,
 	  H : <deepmoblearning:living_matter_hellish> });
 
-makeShaped("of_impossiblerealmdata_x4", <contenttweaker:impossiblerealmdata> * 4,
+makeShaped("of_impossiblerealmdata_x4", <nomilabs:impossiblerealmdata> * 4,
 	["XEX",
 	 "EXE",
 	 "XEX"],
@@ -313,25 +313,25 @@ makeShaped("of_impossiblerealmdata_x4", <contenttweaker:impossiblerealmdata> * 4
 	  X : <deepmoblearning:living_matter_extraterrestrial> });
 
 // Dragon Lair Data
-makeShapeless3("of_dragonlairdata", <contenttweaker:dragonlairdata>,
+makeShapeless3("of_dragonlairdata", <nomilabs:dragonlairdata>,
 	["IHH",
 	 "HHH",
 	 "HHH"],
-	{ I : <contenttweaker:impossiblerealmdata>,
+	{ I : <nomilabs:impossiblerealmdata>,
 	  H : <deepmoblearning:living_matter_extraterrestrial> }
 );
 
 // Wither Realm Data
-makeShapeless3("of_witherrealmdata", <contenttweaker:witherrealmdata>,
+makeShapeless3("of_witherrealmdata", <nomilabs:witherrealmdata>,
 	["IXX",
 	 "XXX",
 	 "XXX"],
-	{ I : <contenttweaker:impossiblerealmdata>,
+	{ I : <nomilabs:impossiblerealmdata>,
 	  X : <deepmoblearning:living_matter_hellish> }
 );
 
 // Quantum Flux Recipes
-makeShaped("of_quantumflux_a", <contenttweaker:quantumflux>,
+makeShaped("of_quantumflux_a", <nomilabs:quantumflux>,
 	[" X ",
 	 "XMX",
 	 " X "],
@@ -529,7 +529,7 @@ fluid_extractor.recipeBuilder()
 //// creative tank
 //creative_tank_provider.recipeMap
 //    .recipeBuilder()
-//    .notConsumable(<contenttweaker:creativeportabletankmold>)
+//    .notConsumable(<nomilabs:creativeportabletankmold>)
 //    .inputs(<minecraft:bucket>)
 //    .outputs(<metaitem:creative_tank>)
 //    .duration(500)
@@ -539,7 +539,7 @@ fluid_extractor.recipeBuilder()
 //Numismatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:5>);
 recipes.addShaped(<thermalexpansion:dynamo:5>, [
-	[null, <contenttweaker:excitationcoil>, null],
+	[null, <nomilabs:excitationcoil>, null],
 	[<metaitem:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:plateVibrantAlloy>],
 	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
 
@@ -638,7 +638,7 @@ blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<l
 blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
 //////////////////// Exotic Materials Catalyst ////////////////////////
-makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
+makeExtremeRecipe7(<nomilabs:exoticmaterialscatalyst>,
     ["L  M  J",
      " K W S ",
      "  YNT  ",
@@ -739,7 +739,7 @@ recipes.addShaped(<gregtech:multiblock_casing:3> * 4, [
 // Recycling recipes in groovy
 
 // Nq+ and Nq*
-mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
+mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<nomilabs:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
 
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
 
@@ -904,25 +904,25 @@ removeMaterialFluid(32064, [<liquid:naquadah_oxide_aero_solution>]);
 removeMaterialFluid(32065, [<liquid:hot_naquadah_oxide_neocryolite_solution>]);
 
 // Half Ships
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourandhalfship>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiereightandhalfship>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourandhalfship>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiereightandhalfship>);
 
 // Stabilized Miners
-mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfiveship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfiveship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourandhalfship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourandhalfship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tieroneship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tieroneship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersevenship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersevenship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersixship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersixship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierthreeship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierthreeship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiertwoship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiertwoship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiereightship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiereightship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfiveship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfiveship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourandhalfship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourandhalfship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tieroneship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tieroneship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersevenship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersevenship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersixship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersixship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierthreeship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierthreeship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiertwoship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiertwoship_stabilized_matter>);

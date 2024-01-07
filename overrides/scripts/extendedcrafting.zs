@@ -117,8 +117,8 @@ makeExtremeRecipe9(<metaitem:zpm>,
      "   UGU   ",
      "   UUU   ",
      "   NNN   "],
-    { B : <contenttweaker:stabilizedberkelium>,
-      C : <contenttweaker:stabilizedcalifornium>,
+    { B : <nomilabs:stabilizedberkelium>,
+      C : <nomilabs:stabilizedcalifornium>,
       G : <metaitem:field.generator.zpm>,
       N : <nuclearcraft:part:3>,
       U : <ore:circuitZpm> });
@@ -261,10 +261,10 @@ makeShaped("of_nether_star", <minecraft:nether_star>,
      "WCE",
      " S "],
     { N : <cns:star_fragment>,
-      W : <contenttweaker:netherstarwest>,
+      W : <nomilabs:netherstarwest>,
       C : <cns:star_core>,
-      E : <contenttweaker:netherstareast>,
-      S : <contenttweaker:netherstarsouth> });
+      E : <nomilabs:netherstareast>,
+      S : <nomilabs:netherstarsouth> });
 
 recipes.remove(<cns:star_fragment>);
 makeShaped("of_nether_star_north", <cns:star_fragment>,
@@ -274,21 +274,21 @@ makeShaped("of_nether_star_north", <cns:star_fragment>,
     { A : <minecraft:quartz>,
       B : <thermalfoundation:material:1026> });
 
-makeShaped("of_nether_star_south", <contenttweaker:netherstarsouth>,
+makeShaped("of_nether_star_south", <nomilabs:netherstarsouth>,
     ["ABA",
      "ABA",
      " A "],
     { A : <minecraft:quartz>,
       B : <thermalfoundation:material:1027> });
 
-makeShaped("of_nether_star_east", <contenttweaker:netherstareast>,
+makeShaped("of_nether_star_east", <nomilabs:netherstareast>,
     ["AA ",
      "BBA",
      "AA "],
     { A : <minecraft:quartz>,
       B : <thermalfoundation:material:1024> });
 
-makeShaped("of_nether_star_west", <contenttweaker:netherstarwest>,
+makeShaped("of_nether_star_west", <nomilabs:netherstarwest>,
     [" AA",
      "ABB",
      " AA"],
@@ -378,26 +378,26 @@ compressor.recipeBuilder()
 
 mods.extendedcrafting.TableCrafting.remove(<extendedcrafting:singularity_ultimate>);
 //mods.extendedcrafting.TableCrafting.addShaped(<extendedcrafting:singularity_ultimate>, [
-//[null,                            null,                                <extendedcrafting:material:140>,    <contenttweaker:solidifiedhydrogen>,  <contenttweaker:solidifiedhelium>,        <metaitem:dustLithium>,           <extendedcrafting:material:140>,   null,                               null],
-//[null,                            <extendedcrafting:material:140>,     <metaitem:ingotBeryllium>,       <metaitem:dustBoron>,          <metaitem:dustCarbon>,             <contenttweaker:solidifiednitrogen>,    <contenttweaker:solidifiedoxygen>, <extendedcrafting:material:140>,    null],
-//[<extendedcrafting:material:140>, <contenttweaker:solidifiedfluorine>, <contenttweaker:solidifiedneon>,    <metaitem:dustSodium>,         <metaitem:dustMagnesium>,             <metaitem:ingotAluminium>,           <metaitem:ingotSilicon>,      <metaitem:dustPhosphorus>,        <extendedcrafting:material:140>],
-//[<metaitem:dustSulfur>,     <contenttweaker:solidifiedchlorine>, <contenttweaker:solidifiedargon>,   <metaitem:dustPotassium>,         <metaitem:dustCalcium>,             <metaitem:ingotTitanium>,           <metaitem:ingotVanadium>,      <metaitem:ingotChrome>,       <metaitem:ingotManganese>],
-//[<minecraft:iron_ingot>,          <metaitem:ingotCobalt>,        <metaitem:ingotNickel>,       <metaitem:ingotCopper>,         <contenttweaker:exoticmaterialscatalyst>, <metaitem:ingotZinc>,           <metaitem:ingotGallium>,      <metaitem:dustArsenic>,        <contenttweaker:solidifiedkrypton>],
-//[<metaitem:ingotYttrium>,    <metaitem:ingotPalladium>,        <metaitem:ingotSilver>,       <metaitem:ingotIndium>,         <metaitem:ingotTin>,             <metaitem:ingotAntimony>,           <contenttweaker:solidifiedxenon>,  <metaitem:dustLanthanum>,       <metaitem:ingotTungsten>],
-//[<extendedcrafting:material:140>, <metaitem:ingotOsmium>,        <metaitem:ingotIridium>,       <metaitem:ingotPlatinum>,         <minecraft:gold_ingot>,                   <contenttweaker:solidifiedmercury>,     <contenttweaker:solidifiedradon>,  <contenttweaker:stabilizedthorium>, <extendedcrafting:material:140>],
-//[null,                            <extendedcrafting:material:140>,     <contenttweaker:stabilizeduranium>, <contenttweaker:stabilizedneptunium>, <contenttweaker:stabilizedplutonium>,     <contenttweaker:stabilizedamericium>,   <contenttweaker:stabilizedcurium>, <extendedcrafting:material:140>,    null],
-//[null,                            null,                                <extendedcrafting:material:140>,    <contenttweaker:stabilizedberkelium>, <contenttweaker:stabilizedcalifornium>,   <contenttweaker:stabilizedeinsteinium>, <extendedcrafting:material:140>,   null,                               null]]);
+//[null,                            null,                                <extendedcrafting:material:140>,    <nomilabs:solidifiedhydrogen>,  <nomilabs:solidifiedhelium>,        <metaitem:dustLithium>,           <extendedcrafting:material:140>,   null,                               null],
+//[null,                            <extendedcrafting:material:140>,     <metaitem:ingotBeryllium>,       <metaitem:dustBoron>,          <metaitem:dustCarbon>,             <nomilabs:solidifiednitrogen>,    <nomilabs:solidifiedoxygen>, <extendedcrafting:material:140>,    null],
+//[<extendedcrafting:material:140>, <nomilabs:solidifiedfluorine>, <nomilabs:solidifiedneon>,    <metaitem:dustSodium>,         <metaitem:dustMagnesium>,             <metaitem:ingotAluminium>,           <metaitem:ingotSilicon>,      <metaitem:dustPhosphorus>,        <extendedcrafting:material:140>],
+//[<metaitem:dustSulfur>,     <nomilabs:solidifiedchlorine>, <nomilabs:solidifiedargon>,   <metaitem:dustPotassium>,         <metaitem:dustCalcium>,             <metaitem:ingotTitanium>,           <metaitem:ingotVanadium>,      <metaitem:ingotChrome>,       <metaitem:ingotManganese>],
+//[<minecraft:iron_ingot>,          <metaitem:ingotCobalt>,        <metaitem:ingotNickel>,       <metaitem:ingotCopper>,         <nomilabs:exoticmaterialscatalyst>, <metaitem:ingotZinc>,           <metaitem:ingotGallium>,      <metaitem:dustArsenic>,        <nomilabs:solidifiedkrypton>],
+//[<metaitem:ingotYttrium>,    <metaitem:ingotPalladium>,        <metaitem:ingotSilver>,       <metaitem:ingotIndium>,         <metaitem:ingotTin>,             <metaitem:ingotAntimony>,           <nomilabs:solidifiedxenon>,  <metaitem:dustLanthanum>,       <metaitem:ingotTungsten>],
+//[<extendedcrafting:material:140>, <metaitem:ingotOsmium>,        <metaitem:ingotIridium>,       <metaitem:ingotPlatinum>,         <minecraft:gold_ingot>,                   <nomilabs:solidifiedmercury>,     <nomilabs:solidifiedradon>,  <nomilabs:stabilizedthorium>, <extendedcrafting:material:140>],
+//[null,                            <extendedcrafting:material:140>,     <nomilabs:stabilizeduranium>, <nomilabs:stabilizedneptunium>, <nomilabs:stabilizedplutonium>,     <nomilabs:stabilizedamericium>,   <nomilabs:stabilizedcurium>, <extendedcrafting:material:140>,    null],
+//[null,                            null,                                <extendedcrafting:material:140>,    <nomilabs:stabilizedberkelium>, <nomilabs:stabilizedcalifornium>,   <nomilabs:stabilizedeinsteinium>, <extendedcrafting:material:140>,   null,                               null]]);
 
 mods.extendedcrafting.TableCrafting.addShaped(0, <extendedcrafting:singularity_ultimate>, [
-	[<ore:nuggetNetherStar>, <contenttweaker:solidifiedhydrogen>, <contenttweaker:solidifiedhelium>, <ore:dustLithium>, <ore:ingotBeryllium>, <ore:dustBoron>, <ore:dustCarbon>, <contenttweaker:solidifiednitrogen>, <ore:nuggetNetherStar>], 
-	[<contenttweaker:solidifiedoxygen>, <contenttweaker:solidifiedfluorine>, <contenttweaker:solidifiedneon>, <ore:dustSodium>, <ore:dustMagnesium>, <ore:ingotAluminium>, <ore:dustSilicon>, <ore:dustPhosphorus>, <ore:dustSulfur>], 
-	[<contenttweaker:solidifiedchlorine>, <contenttweaker:solidifiedargon>, <ore:dustPotassium>, <ore:dustCalcium>, <ore:ingotTitanium>, <ore:ingotVanadium>, <ore:ingotChrome>, <ore:ingotManganese>, <ore:ingotIron>], 
-	[<ore:ingotCobalt>, <ore:ingotNickel>, <ore:ingotCopper>, <ore:ingotZinc>, <ore:ingotGallium>, <ore:dustArsenic>, <contenttweaker:solidifiedkrypton>, <ore:ingotYttrium>, <ore:ingotNiobium>], 
-	[<ore:ingotMolybdenum>, <ore:ingotRuthenium>, <ore:ingotRhodium>, <ore:ingotPalladium>, <contenttweaker:exoticmaterialscatalyst>, <ore:ingotSilver>, <ore:dustCadmium>, <ore:ingotIndium>, <ore:ingotTin>], 
-	[<ore:ingotAntimony>, <contenttweaker:solidifiedxenon>, <ore:dustCaesium>, <ore:dustBarium>, <ore:dustLanthanum>, <ore:dustCerium>, <ore:ingotNeodymium>, <ore:ingotSamarium>, <ore:ingotEuropium>], 
-	[<ore:ingotLutetium>, <ore:ingotTantalum>, <ore:ingotTungsten>, <ore:ingotOsmium>, <ore:ingotIridium>, <ore:ingotPlatinum>, <ore:ingotGold>, <contenttweaker:solidifiedmercury>, <ore:ingotLead>], 
-	[<contenttweaker:solidifiedradon>, <ore:ingotThorium>, <contenttweaker:stabilizeduranium>, <contenttweaker:stabilizedneptunium>, <contenttweaker:stabilizedplutonium>, <ore:ingotAmericium>, <contenttweaker:stabilizedcurium>, <contenttweaker:stabilizedberkelium>, <contenttweaker:stabilizedcalifornium>], 
-	[<ore:nuggetNetherStar>, <contenttweaker:stabilizedeinsteinium>, <ore:ingotDarmstadtium>, <ore:ingotTritanium>, <ore:ingotDuranium>, <ore:ingotTrinium>, <ore:ingotDraconium>, <ore:ingotNaquadah>, <ore:nuggetNetherStar>]
+	[<ore:nuggetNetherStar>, <nomilabs:solidifiedhydrogen>, <nomilabs:solidifiedhelium>, <ore:dustLithium>, <ore:ingotBeryllium>, <ore:dustBoron>, <ore:dustCarbon>, <nomilabs:solidifiednitrogen>, <ore:nuggetNetherStar>], 
+	[<nomilabs:solidifiedoxygen>, <nomilabs:solidifiedfluorine>, <nomilabs:solidifiedneon>, <ore:dustSodium>, <ore:dustMagnesium>, <ore:ingotAluminium>, <ore:dustSilicon>, <ore:dustPhosphorus>, <ore:dustSulfur>], 
+	[<nomilabs:solidifiedchlorine>, <nomilabs:solidifiedargon>, <ore:dustPotassium>, <ore:dustCalcium>, <ore:ingotTitanium>, <ore:ingotVanadium>, <ore:ingotChrome>, <ore:ingotManganese>, <ore:ingotIron>], 
+	[<ore:ingotCobalt>, <ore:ingotNickel>, <ore:ingotCopper>, <ore:ingotZinc>, <ore:ingotGallium>, <ore:dustArsenic>, <nomilabs:solidifiedkrypton>, <ore:ingotYttrium>, <ore:ingotNiobium>], 
+	[<ore:ingotMolybdenum>, <ore:ingotRuthenium>, <ore:ingotRhodium>, <ore:ingotPalladium>, <nomilabs:exoticmaterialscatalyst>, <ore:ingotSilver>, <ore:dustCadmium>, <ore:ingotIndium>, <ore:ingotTin>], 
+	[<ore:ingotAntimony>, <nomilabs:solidifiedxenon>, <ore:dustCaesium>, <ore:dustBarium>, <ore:dustLanthanum>, <ore:dustCerium>, <ore:ingotNeodymium>, <ore:ingotSamarium>, <ore:ingotEuropium>], 
+	[<ore:ingotLutetium>, <ore:ingotTantalum>, <ore:ingotTungsten>, <ore:ingotOsmium>, <ore:ingotIridium>, <ore:ingotPlatinum>, <ore:ingotGold>, <nomilabs:solidifiedmercury>, <ore:ingotLead>], 
+	[<nomilabs:solidifiedradon>, <ore:ingotThorium>, <nomilabs:stabilizeduranium>, <nomilabs:stabilizedneptunium>, <nomilabs:stabilizedplutonium>, <ore:ingotAmericium>, <nomilabs:stabilizedcurium>, <nomilabs:stabilizedberkelium>, <nomilabs:stabilizedcalifornium>], 
+	[<ore:nuggetNetherStar>, <nomilabs:stabilizedeinsteinium>, <ore:ingotDarmstadtium>, <ore:ingotTritanium>, <ore:ingotDuranium>, <ore:ingotTrinium>, <ore:ingotDraconium>, <ore:ingotNaquadah>, <ore:nuggetNetherStar>]
 ]);
 
 
@@ -420,7 +420,7 @@ makeExtremeRecipe9(<metaitem:ingotCrystalMatrix>,
 recipes.remove(<avaritia:resource>);
 recipes.addShaped(<avaritia:resource>, [
     [<metaitem:plateDiamond>, <minecraft:diamond_block>, <metaitem:plateDiamond>],
-    [<minecraft:diamond_block>, <metaitem:devtech:gemPerfectDiamond>, <minecraft:diamond_block>],
+    [<minecraft:diamond_block>, <metaitem:gemPerfectDiamond>, <minecraft:diamond_block>],
     [<metaitem:plateDiamond>, <minecraft:diamond_block>, <metaitem:plateDiamond>]]);
 
 
@@ -431,7 +431,7 @@ recipes.addShaped(<avaritia:resource>, [
 
 ////////////////////////// Eternal Catalyst ///////////////////////
 
-makeExtremeRecipe9(<contenttweaker:eternalcatalyst>,
+makeExtremeRecipe9(<nomilabs:eternalcatalyst>,
     ["    D    ",
      " D  D  D ",
      "  DDJDD  ",
@@ -453,7 +453,7 @@ makeExtremeRecipe9(<contenttweaker:eternalcatalyst>,
       J : <moreplates:empowered_palis_gear>,
       K : <moreplates:empowered_restonia_gear>,
       L : <moreplates:empowered_void_gear> });
-<contenttweaker:eternalcatalyst>.addTooltip(format.darkGray(format.italic("Gaze into the Abyss...")));
+<nomilabs:eternalcatalyst>.addTooltip(format.darkGray(format.italic("Gaze into the Abyss...")));
 
 
 ////////////////////////// Infinity Ingot ///////////////////////
@@ -470,7 +470,7 @@ makeExtremeRecipe9(<avaritia:resource:6>,
      "         "],
     { A : <ore:nuggetNeutronium>,
       B : <ore:ingotNeutronium>,
-      C : <contenttweaker:eternalcatalyst>,
+      C : <nomilabs:eternalcatalyst>,
       D : <extendedcrafting:material:32>,
       I : <avaritia:resource:5> });
 
@@ -489,14 +489,14 @@ makeExtremeRecipe9(<avaritia:resource:5>,
      "ABAABAABA",
      "AAAABAAAA"],
     { A : <avaritia:resource:2>,
-      B : <contenttweaker:eternalcatalyst>,
+      B : <nomilabs:eternalcatalyst>,
       C : <draconicevolution:chaotic_core>,
-      H : <contenttweaker:heartofauniverse> });
+      H : <nomilabs:heartofauniverse> });
 
 
 /////////// Ultimate Gem ////////////
 
-mods.extendedcrafting.TableCrafting.addShapeless(<contenttweaker:ultimate_gem>,
+mods.extendedcrafting.TableCrafting.addShapeless(<nomilabs:ultimate_gem>,
     [<thermalfoundation:material:893>,
      <actuallyadditions:item_crystal_empowered:5>,
      <enderio:item_material:16>,
@@ -522,7 +522,7 @@ mods.extendedcrafting.TableCrafting.addShapeless(<contenttweaker:ultimate_gem>,
      <redstonearsenal:material:160>,
      <minecraft:diamond>,
      <thermalfoundation:material:895>]);
-<contenttweaker:ultimate_gem>.addTooltip(format.yellow("Recipe is shapeless."));
+<nomilabs:ultimate_gem>.addTooltip(format.yellow("Recipe is shapeless."));
 
 
 
@@ -582,7 +582,7 @@ makeExtremeRecipe9(<draconicevolution:creative_rf_source>,
      "BCDEFEDCB",
      "BBCDEDCBB",
      "ABBCDCBBA"],
-    { A : <contenttweaker:ultimate_generator>,
+    { A : <nomilabs:ultimate_generator>,
       B : <draconicevolution:energy_pylon>,
       C : <draconicevolution:energy_storage_core>,
       D : <draconicevolution:particle_generator>,
@@ -620,7 +620,7 @@ makeExtremeRecipe9(<extrautils2:passivegenerator:6>,
       D : <extrautils2:passivegenerator:3>,
       E : <extrautils2:passivegenerator:2>,
       F : <extrautils2:passivegenerator:8>,
-      G : <contenttweaker:ultimate_generator>,
+      G : <nomilabs:ultimate_generator>,
       H : <avaritia:resource:5> });
 
 makeExtremeRecipe9(creativecell,
@@ -638,7 +638,7 @@ makeExtremeRecipe9(creativecell,
       C : reinforcedcellIng,
       D : signalumcellIng,
       E : resonantcellIng,
-      F : <contenttweaker:ultimate_power_storage>,
+      F : <nomilabs:ultimate_power_storage>,
       G : <avaritia:resource:5> });
 
 makeExtremeRecipe9(<extrautils2:creativeenergy>,
@@ -652,7 +652,7 @@ makeExtremeRecipe9(<extrautils2:creativeenergy>,
      "DEFGHGFED",
      "CDEFGFEDC"],
     { A : <avaritia:resource:5>,
-      B : <contenttweaker:ultimate_generator>,
+      B : <nomilabs:ultimate_generator>,
       C : <extrautils2:opinium:3>,
       D : <extrautils2:opinium:4>,
       E : <extrautils2:opinium:5>,
@@ -682,7 +682,7 @@ makeExtremeRecipe9(<appliedenergistics2:creative_energy_cell>,
       F : <meta_tile_entity:battery_buffer.zpm.16>,
       G : <meta_tile_entity:battery_buffer.uv.16>,
       H : <meta_tile_entity:battery_buffer.uhv.16>,
-      I : <contenttweaker:ultimate_power_storage> });
+      I : <nomilabs:ultimate_power_storage> });
 
 makeExtremeRecipe9(<thermalcultivation:watering_can:32000>,
     ["         ",
@@ -802,7 +802,7 @@ makeExtremeRecipe9(<thermalexpansion:capacitor:32000>.withTag({Energy: 250000000
       E: <thermalexpansion:capacitor:4>.withTag({Energy: 0}, false),
       F: <draconicevolution:draconium_capacitor>,
       G: <draconicevolution:draconium_capacitor:1>,
-      H: <contenttweaker:ultimate_power_storage>,
+      H: <nomilabs:ultimate_power_storage>,
       I: <avaritia:resource:5> });
 
 makeExtremeRecipe9(<storagedrawers:upgrade_creative>,
@@ -859,7 +859,7 @@ dynamo5 = dynamo5.only(isResonant);
 //Ultimate Collections
 
 //Ultimate Generator
-mods.extendedcrafting.TableCrafting.addShapeless(<contenttweaker:ultimate_generator>,
+mods.extendedcrafting.TableCrafting.addShapeless(<nomilabs:ultimate_generator>,
 [<meta_tile_entity:large_boiler.bronze>, <meta_tile_entity:large_boiler.steel>, <meta_tile_entity:combustion_generator.lv>, <meta_tile_entity:combustion_generator.mv>, <nuclearcraft:fission_controller_new_fixed>, <nuclearcraft:salt_fission_controller>, <meta_tile_entity:combustion_generator.hv>, <meta_tile_entity:large_boiler.titanium>, <meta_tile_entity:large_boiler.tungstensteel>,
 <solarflux:solar_panel_1>, <solarflux:solar_panel_4>, <solarflux:solar_panel_5>, <solarflux:solar_panel_6>, <draconicevolution:generator>, <solarflux:solar_panel_7>, <solarflux:solar_panel_8>, <solarflux:solar_panel_wyvern>, <solarflux:solar_panel_neutronium>,
 <solarflux:solar_panel_2>, <solarflux:solar_panel_3>, xu01, xu02, xu03, xu04, xu05, <solarflux:solar_panel_chaotic>, <solarflux:solar_panel_draconic>,
@@ -869,11 +869,11 @@ mods.extendedcrafting.TableCrafting.addShapeless(<contenttweaker:ultimate_genera
 <meta_tile_entity:large_turbine.steam>, <meta_tile_entity:steam_turbine.lv>, xu13, xu12, xu11, xu10, xu09, <meta_tile_entity:gas_turbine.hv>, <meta_tile_entity:large_turbine.plasma>,
 <solarflux:solar_panel_1>, <solarflux:solar_panel_4>, <meta_tile_entity:steam_turbine.mv>, <meta_tile_entity:steam_turbine.hv>, <meta_tile_entity:large_turbine.gas>, <meta_tile_entity:gas_turbine.lv>, <meta_tile_entity:gas_turbine.mv>, <solarflux:solar_panel_chaotic>, <solarflux:solar_panel_draconic>,
 <solarflux:solar_panel_2>, <solarflux:solar_panel_3>, <solarflux:solar_panel_5>, <solarflux:solar_panel_6>, <extrautils2:passivegenerator>, <solarflux:solar_panel_7>, <solarflux:solar_panel_8>, <solarflux:solar_panel_wyvern>, <solarflux:solar_panel_neutronium>]);
-<contenttweaker:ultimate_generator>.addTooltip(format.yellow("Recipe is shapeless."));
+<nomilabs:ultimate_generator>.addTooltip(format.yellow("Recipe is shapeless."));
 
 
 //Ultimate Power Storage
-makeExtremeRecipe9(<contenttweaker:ultimate_power_storage>,
+makeExtremeRecipe9(<nomilabs:ultimate_power_storage>,
     ["ABCDIDCBA",
      "BCDIEIDCB",
      "CDIEFEIDC",

@@ -97,21 +97,21 @@ mods.jei.JEI.addItem(resonanttank);
 //Steam Dynamo
 recipes.remove(<thermalexpansion:dynamo>);
 recipes.addShaped(<thermalexpansion:dynamo>, [
-	[null, <contenttweaker:excitationcoil>, null],
+	[null, <nomilabs:excitationcoil>, null],
 	[<ore:plateCopper>, <morefurnaces:furnaceblock>, <ore:plateCopper>],
 	[<metaitem:gearWroughtIron>, <thermalfoundation:material:514>, <metaitem:gearWroughtIron>]]);
 
 //Magmatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:1>);
 recipes.addShaped(<thermalexpansion:dynamo:1>, [
-	[null, <contenttweaker:excitationcoil>, null],
+	[null, <nomilabs:excitationcoil>, null],
 	[<metaitem:plateDarkSteel>, <morefurnaces:furnaceblock:5>, <metaitem:plateDarkSteel>],
 	[<enderio:item_material:73>, <thermalfoundation:material:514>, <enderio:item_material:73>]]);
 
 //Reactant Dynamo
 recipes.remove(<thermalexpansion:dynamo:3>);
 recipes.addShaped(<thermalexpansion:dynamo:3>, [
-	[null, <contenttweaker:excitationcoil>, null],
+	[null, <nomilabs:excitationcoil>, null],
 	[<metaitem:plateEnergeticAlloy>, <morefurnaces:furnaceblock:1>, <metaitem:plateEnergeticAlloy>],
 	[<enderio:item_material:12>, <thermalfoundation:material:514>, <enderio:item_material:12>]]);
 
@@ -300,7 +300,7 @@ recipes.addShaped(<thermalexpansion:augment:513>, [
 recipes.remove(<thermalexpansion:augment:515>);
 recipes.addShaped(<thermalexpansion:augment:515>, [
 	[<minecraft:iron_ingot>, <metaitem:plateIron>, <minecraft:iron_ingot>],
-	[<metaitem:plateIron>, <contenttweaker:excitationcoil>, <metaitem:plateIron>],
+	[<metaitem:plateIron>, <nomilabs:excitationcoil>, <metaitem:plateIron>],
 	[<minecraft:iron_ingot>, <metaitem:plateIron>, <minecraft:iron_ingot>]]);
 
 	//i give up
@@ -318,7 +318,7 @@ recipes.addShaped(<thermalexpansion:augment:497>, [
 	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
 
 	//excitation coil
-recipes.addShaped(<contenttweaker:excitationcoil>, [
+recipes.addShaped(<nomilabs:excitationcoil>, [
 	[null, <metaitem:plateRedAlloy>, null],
 	[<metaitem:plateRedAlloy>, <thermalfoundation:material:515>, <metaitem:plateRedAlloy>],
 	[<metaitem:plateRedAlloy>, <thermalfoundation:material:515>, <metaitem:plateRedAlloy>]]);
@@ -326,10 +326,10 @@ recipes.addShaped(<contenttweaker:excitationcoil>, [
 assembler.recipeBuilder()
 	.inputs(<metaitem:plateRedAlloy> * 5, <thermalfoundation:material:515> * 2)
 	.circuit(16)
-	.outputs(<contenttweaker:excitationcoil>)
+	.outputs(<nomilabs:excitationcoil>)
 	.duration(100).EUt(16).buildAndRegister();
 
-<contenttweaker:excitationcoil>.addTooltip(format.darkGray(format.italic("Crafting component only.")));
+<nomilabs:excitationcoil>.addTooltip(format.darkGray(format.italic("Crafting component only.")));
 
 // Boiler Conversion
 recipes.removeByRecipeName("thermalexpansion:augment_25");

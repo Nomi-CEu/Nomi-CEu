@@ -56,7 +56,7 @@ var outputInputMap as IIngredient[][IItemStack] = {
 	#Empowered Emeradic
 	<actuallyadditions:block_crystal_empowered:4> : [
 		<actuallyadditions:block_crystal:4>, 
-		<contenttweaker:stabilizeduranium>, 
+		<nomilabs:stabilizeduranium>, 
 		<ore:ingotVibrantAlloy>, 
 		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), 
 		<extendedcrafting:material:17>

@@ -31,7 +31,7 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
                           .where('G', <blockstate:gregtech:transparent_casing>)
                           .where('V', <metastate:gregtech:multiblock_casing:2>)
                           .where('D', <metastate:chisel:diamond:3>)
-                          .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(12) | controller.autoAbilities(true, true, true, true, true, false, true))
+                          .where("C", CTPredicate.states(<blockstate:nomilabs:microverse_casing>).setMinGlobalLimited(12) | controller.autoAbilities(true, true, true, true, true, false, true))
                           .build();
                  } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -43,7 +43,7 @@ val microverse_projector_basic = Builder.start("mbt:microverse_projector_basic")
             .maxFluidInputs(1)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
-    .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
+    .withBaseTexture(<blockstate:nomilabs:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
     .buildAndRegister();
 
 microverse_projector_basic.hasMufflerMechanics = true;
@@ -90,7 +90,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .where('D', <metastate:chisel:diamond:3>)
             .where('V', <metastate:gregtech:multiblock_casing:2>)
             .where(' ', CTPredicate.getAny())
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(45) | controller.autoAbilities(true, true, true, true, false, false, true))
+            .where("C", CTPredicate.states(<blockstate:nomilabs:microverse_casing>).setMinGlobalLimited(45) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -101,7 +101,7 @@ val microverse_projector_advanced = Builder.start("mbt:microverse_projector_adva
             .maxOutputs(16)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
-    .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
+    .withBaseTexture(<blockstate:nomilabs:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
     .buildAndRegister();
 
 microverse_projector_advanced.hasMufflerMechanics = true;
@@ -189,7 +189,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .where('V', <blockstate:gregtech:multiblock_casing>)
             .where(' ', CTPredicate.getAny())
             .where('D', <metastate:chisel:diamond:3>)
-            .where("C", CTPredicate.states(<blockstate:contenttweaker:microverse_casing>).setMinGlobalLimited(115) | controller.autoAbilities(true, true, true, true, false, false, true))
+            .where("C", CTPredicate.states(<blockstate:nomilabs:microverse_casing>).setMinGlobalLimited(115) | controller.autoAbilities(true, true, true, true, false, false, true))
             .build();
     } as IPatternBuilderFunction)
     .withRecipeMap(
@@ -200,7 +200,7 @@ val microverse_projector_advanced_ii = Builder.start("mbt:microverse_projector_a
             .maxOutputs(16)
             //.setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
             .build())
-    .withBaseTexture(<blockstate:contenttweaker:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
+    .withBaseTexture(<blockstate:nomilabs:microverse_casing>) // Looking for existing renderers in CEu. but yeah, you can also use <metastate:gregtech:metal_casing:3> here
     .buildAndRegister();
 
 microverse_projector_advanced_ii.hasMufflerMechanics = true;
@@ -242,21 +242,21 @@ creative_tank_provider.frontOverlay = <cube_renderer:CREATIVE_CONTAINER_OVERLAY>
 
 // multiblock controller recipes
 recipes.addShaped("microverse_projector_basic", <metaitem:mbt:microverse_projector_basic>, [
-    [<ore:circuitHv>, <contenttweaker:microverse_casing>, <ore:circuitHv>],
-    [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitHv>, <contenttweaker:microverse_casing>, <ore:circuitHv>]
+    [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>],
+    [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
+    [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced", <metaitem:mbt:microverse_projector_advanced>, [
-    [<ore:circuitEv>, <contenttweaker:microverse_casing>, <ore:circuitEv>],
-    [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitEv>, <contenttweaker:microverse_casing>, <ore:circuitEv>]
+    [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>],
+    [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
+    [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>]
 ]);
 
 recipes.addShaped("microverse_projector_advanced_ii", <metaitem:mbt:microverse_projector_advanced_ii>, [
-    [<ore:circuitIv>, <contenttweaker:microverse_casing>, <ore:circuitIv>],
-    [<contenttweaker:microverse_casing>, <metaitem:cover.screen>, <contenttweaker:microverse_casing>],
-    [<ore:circuitIv>, <contenttweaker:microverse_casing>, <ore:circuitIv>]
+    [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>],
+    [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
+    [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>]
 ]);
 
 recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
@@ -277,8 +277,8 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(500)
     .EUt(500)
-    .inputs(<contenttweaker:tieroneship>,
-            <contenttweaker:quantumflux>,
+    .inputs(<nomilabs:tieroneship>,
+            <nomilabs:quantumflux>,
             <minecraft:chest>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
     .outputs(<densemetals:dense_iron_ore> * 64,
@@ -302,11 +302,11 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(500)
     .EUt(500)
-    .inputs(<contenttweaker:tieroneship>,
-            <contenttweaker:quantumflux>,
-            <contenttweaker:gemsensor>)
+    .inputs(<nomilabs:tieroneship>,
+            <nomilabs:quantumflux>,
+            <nomilabs:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
-    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
              <gregtech:ore_apatite_0> * 64,
              <gregtech:ore_tricalcium_phosphate_0> * 64,
              <gregtech:ore_quartzite_0> * 64)
@@ -317,10 +317,10 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(100)
     .EUt(500)
-    .inputs(<contenttweaker:tieroneship>,
-            <contenttweaker:ultradensehydrogen>)
+    .inputs(<nomilabs:tieroneship>,
+            <nomilabs:ultradensehydrogen>)
     .fluidInputs(<liquid:rocket_fuel> * 2000)
-    .outputs(<contenttweaker:stellarcreationdata>)
+    .outputs(<nomilabs:stellarcreationdata>)
     .buildAndRegister();
 
 
@@ -329,8 +329,8 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(600)
     .EUt(1000)
-    .inputs(<contenttweaker:tiertwoship>,
-            <contenttweaker:quantumflux> * 2)
+    .inputs(<nomilabs:tiertwoship>,
+            <nomilabs:quantumflux> * 2)
     .fluidInputs(<liquid:rocket_fuel> * 12000)
     .outputs(<gregtech:ore_bauxite_0:2> * 64,
              <gregtech:ore_pyrochlore_0:2> * 64,
@@ -344,8 +344,8 @@ microverse_projector_basic.recipeMap
              <gregtech:ore_tungstate_0:2> * 64,
              <gregtech:ore_tungstate_0:2> * 64,
              <gregtech:ore_tungstate_0:2> * 64,
-             <contenttweaker:radiumsalt> * 64,
-             <contenttweaker:radiumsalt> * 64)
+             <nomilabs:radiumsalt> * 64,
+             <nomilabs:radiumsalt> * 64)
     .buildAndRegister();
 
 // t2 stellar creation data
@@ -353,10 +353,10 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(120)
     .EUt(1000)
-    .inputs(<contenttweaker:tiertwoship>,
-            <contenttweaker:ultradensehydrogen> * 4)
+    .inputs(<nomilabs:tiertwoship>,
+            <nomilabs:ultradensehydrogen> * 4)
     .fluidInputs(<liquid:rocket_fuel> * 3000)
-    .outputs(<contenttweaker:stellarcreationdata> * 4)
+    .outputs(<nomilabs:stellarcreationdata> * 4)
     .buildAndRegister();
 
 // t2 gases
@@ -364,13 +364,13 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(700)
     .EUt(2000)
-    .inputs(<contenttweaker:tiertwoship>,
+    .inputs(<nomilabs:tiertwoship>,
             <metaitem:electric.pump.hv> * 4,
             <thermalfoundation:material:1025> * 64)
     .fluidInputs(<liquid:rocket_fuel> * 12000)
-    .outputs(<contenttweaker:solidifiedneon> * 10,
-            <contenttweaker:solidifiedkrypton> * 10,
-            <contenttweaker:solidifiedxenon> * 10)
+    .outputs(<nomilabs:solidifiedneon> * 10,
+            <nomilabs:solidifiedkrypton> * 10,
+            <nomilabs:solidifiedxenon> * 10)
     .buildAndRegister();
 
 // t3 gems
@@ -378,15 +378,15 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(700)
     .EUt(2000)
-    .inputs(<contenttweaker:tierthreeship>,
-            <contenttweaker:quantumflux> * 4,
-            <contenttweaker:gemsensor>)
+    .inputs(<nomilabs:tierthreeship>,
+            <nomilabs:quantumflux> * 4,
+            <nomilabs:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
-    .outputs(<metaitem:devtech:gemPerfectDiamond> * 64,
-             <metaitem:devtech:gemPerfectDiamond> * 32,
-             <metaitem:devtech:gemPerfectRuby> * 64,
-             <metaitem:devtech:gemPerfectTopaz> * 48,
-             <metaitem:devtech:gemPerfectEmerald> * 32,
+    .outputs(<metaitem:gemPerfectDiamond> * 64,
+             <metaitem:gemPerfectDiamond> * 32,
+             <metaitem:gemPerfectRuby> * 64,
+             <metaitem:gemPerfectTopaz> * 48,
+             <metaitem:gemPerfectEmerald> * 32,
              <gregtech:ore_sapphire_0:1> * 64,
              <gregtech:ore_gold_0:1> * 64,
              <gregtech:ore_silver_0:1> * 64)
@@ -397,8 +397,8 @@ microverse_projector_basic.recipeMap
     .recipeBuilder()
     .duration(700)
     .EUt(2000)
-    .inputs(<contenttweaker:tierthreeship>,
-            <contenttweaker:quantumflux> * 4,
+    .inputs(<nomilabs:tierthreeship>,
+            <nomilabs:quantumflux> * 4,
             <meta_tile_entity:super_chest.mv>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
     .outputs(<gregtech:ore_scheelite_0:1> * 64,
@@ -424,12 +424,12 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(800)
     .EUt(3750)
-    .inputs(<contenttweaker:tierfourship>,
-            <contenttweaker:quantumflux> * 8,
+    .inputs(<nomilabs:tierfourship>,
+            <nomilabs:quantumflux> * 8,
             <advancedrocketry:satelliteprimaryfunction:1>,
             <ore:dustPetrotheum> * 64)
-    .outputs(<contenttweaker:denseoilshale> * 64,
-             <contenttweaker:denseoilshale> * 64,
+    .outputs(<nomilabs:denseoilshale> * 64,
+             <nomilabs:denseoilshale> * 64,
              <ore:compressed2xDustBedrock>.firstItem * 32)
     .buildAndRegister();
 
@@ -438,9 +438,9 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(800)
     .EUt(3750)
-    .inputs(<contenttweaker:tierfourship>,
-            <contenttweaker:quantumflux> * 8,
-            <contenttweaker:gemsensor>,
+    .inputs(<nomilabs:tierfourship>,
+            <nomilabs:quantumflux> * 8,
+            <nomilabs:gemsensor>,
             <ore:dustPetrotheum> * 64) 
     .outputs(<densemetals:dense_lapis_ore> * 64,
              <densemetals:dense_diamond_ore> * 64,
@@ -455,9 +455,9 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(800)
     .EUt(3750)
-    .inputs(<contenttweaker:tierfourship>,
-            <contenttweaker:quantumflux> * 8,
-            <contenttweaker:witherrealmdata> * 4,
+    .inputs(<nomilabs:tierfourship>,
+            <nomilabs:quantumflux> * 8,
+            <nomilabs:witherrealmdata> * 4,
             <ore:dustPetrotheum> * 64) 
     .outputs(<gregtech:ore_iridosmine_8020_0> * 64,
              <gregtech:ore_iridosmine_8020_0> * 64,
@@ -469,9 +469,9 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(1000)
     .EUt(7500)
-    .inputs(<contenttweaker:tierfiveship>,
-            <contenttweaker:quantumflux> * 16,
-            <contenttweaker:stabilizeduranium> * 32)
+    .inputs(<nomilabs:tierfiveship>,
+            <nomilabs:quantumflux> * 16,
+            <nomilabs:stabilizeduranium> * 32)
     .outputs(<gregtech:ore_uraninite_0> * 64,
              <gregtech:ore_palladium_0> * 64,
              <gregtech:ore_realgar_0> * 64,
@@ -491,9 +491,9 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(1000)
     .EUt(7500)
-    .inputs(<contenttweaker:tierfiveship>,
-            <contenttweaker:quantumflux> * 16,
-            <contenttweaker:stabilizedplutonium> * 32)
+    .inputs(<nomilabs:tierfiveship>,
+            <nomilabs:quantumflux> * 16,
+            <nomilabs:stabilizedplutonium> * 32)
     .outputs(<gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_cooperite_0:2> * 64,
              <gregtech:ore_naquadah_0> * 64,
@@ -507,10 +507,10 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(1250)
     .EUt(18750)
-    .inputs(<contenttweaker:tiersixship>,
-            <contenttweaker:quantumflux> * 16,
-            <contenttweaker:stabilizeduranium> * 32,
-            <contenttweaker:witherrealmdata> * 16)
+    .inputs(<nomilabs:tiersixship>,
+            <nomilabs:quantumflux> * 16,
+            <nomilabs:stabilizeduranium> * 32,
+            <nomilabs:witherrealmdata> * 16)
     .outputs(<gregtech:ore_uraninite_0> * 64,
              <gregtech:ore_uraninite_0> * 64,
              <gregtech:ore_uraninite_0> * 64,
@@ -527,11 +527,11 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(1250)
     .EUt(18750)
-    .inputs(<contenttweaker:tiersixship>,
-            <contenttweaker:quantumflux> * 16,
-            <contenttweaker:stabilizedplutonium> * 32,
-            <contenttweaker:witherrealmdata> * 64)
-    .outputs(<contenttweaker:stabilizedeinsteinium> * 32)
+    .inputs(<nomilabs:tiersixship>,
+            <nomilabs:quantumflux> * 16,
+            <nomilabs:stabilizedplutonium> * 32,
+            <nomilabs:witherrealmdata> * 64)
+    .outputs(<nomilabs:stabilizedeinsteinium> * 32)
     .buildAndRegister();
 
 // t6 eggs
@@ -539,10 +539,10 @@ microverse_projector_advanced.recipeMap
     .recipeBuilder()
     .duration(1250)
     .EUt(18750)
-    .inputs(<contenttweaker:tiersixship>,
-            <contenttweaker:quantumflux> * 16,
-            <contenttweaker:stabilizedplutonium> * 32,
-            <contenttweaker:dragonlairdata> * 16)
+    .inputs(<nomilabs:tiersixship>,
+            <nomilabs:quantumflux> * 16,
+            <nomilabs:stabilizedplutonium> * 32,
+            <nomilabs:dragonlairdata> * 16)
     .outputs(<minecraft:dragon_egg> * 32)
     .buildAndRegister();
 
@@ -552,11 +552,11 @@ microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(1500)
     .EUt(31250)
-    .inputs(<contenttweaker:tiersevenship>,
-            <contenttweaker:quantumflux> * 32,
+    .inputs(<nomilabs:tiersevenship>,
+            <nomilabs:quantumflux> * 32,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
-            <contenttweaker:dragonlairdata> * 32)
+            <nomilabs:dragonlairdata> * 32)
     .outputs(<draconicevolution:dragon_heart> * 32,
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_egg> * 64,
@@ -580,15 +580,15 @@ microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(1500)
     .EUt(31250)
-    .inputs(<contenttweaker:tiersevenship>,
+    .inputs(<nomilabs:tiersevenship>,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
-            <contenttweaker:gemsensor>,
-            <contenttweaker:dragonlairdata> * 64,
-            <contenttweaker:dragonlairdata> * 64,
-            <contenttweaker:dragonlairdata> * 64,
-            <contenttweaker:dragonlairdata> * 64)
-    .outputs(<contenttweaker:lairofthechaosguardiandata>)
+            <nomilabs:gemsensor>,
+            <nomilabs:dragonlairdata> * 64,
+            <nomilabs:dragonlairdata> * 64,
+            <nomilabs:dragonlairdata> * 64,
+            <nomilabs:dragonlairdata> * 64)
+    .outputs(<nomilabs:lairofthechaosguardiandata>)
     .buildAndRegister();
 
 // t8 gravistar nt
@@ -596,14 +596,14 @@ microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(2000)
     .EUt(62500)
-    .inputs(<contenttweaker:tiereightship>,
-            <contenttweaker:quantumflux> * 64,
+    .inputs(<nomilabs:tiereightship>,
+            <nomilabs:quantumflux> * 64,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
-            <contenttweaker:witherrealmdata> * 64,
-            <contenttweaker:witherrealmdata> * 64)
+            <nomilabs:witherrealmdata> * 64,
+            <nomilabs:witherrealmdata> * 64)
     .outputs(<metaitem:quantumstar> * 32,
              <metaitem:quantumeye> * 64,
              <ore:ingotNeutronium>.firstItem * 16,
@@ -615,13 +615,13 @@ microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(1500)
     .EUt(62500)
-    .inputs(<contenttweaker:tiereightship>,
-            <contenttweaker:quantumflux> * 64,
+    .inputs(<nomilabs:tiereightship>,
+            <nomilabs:quantumflux> * 64,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
             <ore:gemDilithium>.firstItem * 64,
-            <contenttweaker:lairofthechaosguardiandata>)
+            <nomilabs:lairofthechaosguardiandata>)
     .outputs(<draconicevolution:chaos_shard> * 4,
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_egg> * 64,
@@ -634,10 +634,10 @@ microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(3000)
     .EUt(250000)
-    .inputs(<contenttweaker:tiernineship>,
+    .inputs(<nomilabs:tiernineship>,
             <metaitem:neutron_reflector> * 8,
             <metaitem:blockAwakenedDraconium> * 4,
-            <contenttweaker:stellarcreationdata>)
+            <nomilabs:stellarcreationdata>)
     .outputs(<ore:nuggetNeutronium>.firstItem * 64,
              <ore:nuggetNeutronium>.firstItem * 64,
              <ore:nuggetNeutronium>.firstItem * 64,
@@ -654,13 +654,13 @@ microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(3000)
     .EUt(250000)
-    .inputs(<contenttweaker:tiernineship>,
+    .inputs(<nomilabs:tiernineship>,
             <metaitem:blockAwakenedDraconium> * 4,
-            <contenttweaker:stellarcreationdata> * 64,
-            <contenttweaker:stellarcreationdata> * 64,
-            <contenttweaker:stellarcreationdata> * 64,
-            <contenttweaker:stellarcreationdata> * 64)
-    .outputs(<contenttweaker:universecreationdata>)
+            <nomilabs:stellarcreationdata> * 64,
+            <nomilabs:stellarcreationdata> * 64,
+            <nomilabs:stellarcreationdata> * 64,
+            <nomilabs:stellarcreationdata> * 64)
+    .outputs(<nomilabs:universecreationdata>)
     .buildAndRegister();
 
 // t10 hotu
@@ -668,17 +668,17 @@ microverse_projector_advanced_ii.recipeMap
     .recipeBuilder()
     .duration(6000)
     .EUt(1000000)
-    .inputs(<contenttweaker:tiertenship>,
-            <contenttweaker:universecreationdata>,
+    .inputs(<nomilabs:tiertenship>,
+            <nomilabs:universecreationdata>,
             <ore:blockAwakenedDraconium> * 8)
-    .outputs(<contenttweaker:heartofauniverse>)
+    .outputs(<nomilabs:heartofauniverse>)
     .buildAndRegister();
 
 // creative tank provider
 // creative tank
 creative_tank_provider.recipeMap
     .recipeBuilder()
-    .notConsumable(<contenttweaker:creativeportabletankmold>)
+    .notConsumable(<nomilabs:creativeportabletankmold>)
     .inputs(<minecraft:bucket>)
     .outputs(<metaitem:creative_tank>)
     .duration(500)

@@ -281,7 +281,7 @@ makeShaped("ar_oxygen_charger",
 
 // Cloth
 makeShaped("ctt_cloth",
-	<contenttweaker:cloth> * 4, [
+	<nomilabs:cloth> * 4, [
 		"SSS",
 		"SSS",
 		"SSS",
@@ -290,13 +290,13 @@ makeShaped("ctt_cloth",
 	});
 
 makeShaped("ctt_thermal_cloth",
-	<contenttweaker:thermalcloth> * 3, [
+	<nomilabs:thermalcloth> * 3, [
 		"RRR",
 		"CCC",
 		"RRR",
 	], {
 		R: <minecraft:redstone>,   // Redstone
-		C: <contenttweaker:cloth>, // Cloth
+		C: <nomilabs:cloth>, // Cloth
 	});
 
 /**
@@ -304,32 +304,32 @@ makeShaped("ctt_thermal_cloth",
  */
 
 var thermalCloth as IIngredient[string] = {
-	T: <contenttweaker:thermalcloth>,
+	T: <nomilabs:thermalcloth>,
 };
 
 makeShaped("ctt_unprepared_space_helmet",
-	<contenttweaker:unpreparedspacehelmet>, [
+	<nomilabs:unpreparedspacehelmet>, [
 		"TTT",
 		"T T",
 		"   ",
 	], thermalCloth);
 
 makeShaped("ctt_unprepared_space_chestpiece",
-	<contenttweaker:unpreparedspacechestpiece>, [
+	<nomilabs:unpreparedspacechestpiece>, [
 		"T T",
 		"TTT",
 		"TTT",
 	], thermalCloth);
 
 makeShaped("ctt_unprepared_space_leggins",
-	<contenttweaker:unpreparedspaceleggings>, [
+	<nomilabs:unpreparedspaceleggings>, [
 		"TTT",
 		"T T",
 		"T T",
 	], thermalCloth);
 
 makeShaped("ctt_unprepared_space_boots",
-	<contenttweaker:unpreparedspaceboots>, [
+	<nomilabs:unpreparedspaceboots>, [
 		"   ",
 		"T T",
 		"T T",
@@ -351,23 +351,23 @@ val spaceSuitLayerPattern as string[] = [
 ];
 
 makeShaped("ctt_pressure_layer",
-	<contenttweaker:pressurelayer>, spaceSuitLayerPattern, {
-		C: <contenttweaker:cloth>, // Cloth
+	<nomilabs:pressurelayer>, spaceSuitLayerPattern, {
+		C: <nomilabs:cloth>, // Cloth
 		P: <ore:plateBlackSteel>,  // Black Steel Plate
 	});
 
 makeShaped("ctt_radiation_layer",
-	<contenttweaker:radiationlayer>, spaceSuitLayerPattern, {
-		C: <contenttweaker:cloth>, // Cloth
+	<nomilabs:radiationlayer>, spaceSuitLayerPattern, {
+		C: <nomilabs:cloth>, // Cloth
 		P: <ore:plateLead>,        // Lead Plate
 	});
 
 // Space Helmet
 assembler.recipeBuilder()
 	.inputs([
-		<contenttweaker:unpreparedspacehelmet>,
-		<contenttweaker:pressurelayer> * 2,
-		<contenttweaker:radiationlayer> * 2,
+		<nomilabs:unpreparedspacehelmet>,
+		<nomilabs:pressurelayer> * 2,
+		<nomilabs:radiationlayer> * 2,
 		<minecraft:glass_pane>,
 		<ore:circuitHv>
 	])
@@ -379,9 +379,9 @@ assembler.recipeBuilder()
 // Space Chestplate
 assembler.recipeBuilder()
 	.inputs([
-		<contenttweaker:unpreparedspacechestpiece>,
-		<contenttweaker:pressurelayer> * 4,
-		<contenttweaker:radiationlayer> * 4
+		<nomilabs:unpreparedspacechestpiece>,
+		<nomilabs:pressurelayer> * 4,
+		<nomilabs:radiationlayer> * 4
 	])
 	.outputs([<advancedrocketry:spacechestplate>])
 	.duration(800)
@@ -391,9 +391,9 @@ assembler.recipeBuilder()
 // Space Leggins
 assembler.recipeBuilder()
 	.inputs([
-		<contenttweaker:unpreparedspaceleggings>,
-		<contenttweaker:pressurelayer> * 3,
-		<contenttweaker:radiationlayer> * 3
+		<nomilabs:unpreparedspaceleggings>,
+		<nomilabs:pressurelayer> * 3,
+		<nomilabs:radiationlayer> * 3
 	])
 	.outputs([<advancedrocketry:spaceleggings>])
 	.duration(600)
@@ -403,9 +403,9 @@ assembler.recipeBuilder()
 // Space boots
 assembler.recipeBuilder()
 	.inputs([
-		<contenttweaker:unpreparedspaceboots>,
-		<contenttweaker:pressurelayer>,
-		<contenttweaker:radiationlayer>
+		<nomilabs:unpreparedspaceboots>,
+		<nomilabs:pressurelayer>,
+		<nomilabs:radiationlayer>
 	])
 	.outputs([<advancedrocketry:spaceboots>])
 	.duration(400)
@@ -825,8 +825,8 @@ assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
 			.withTag({"enderio:dsu": "enderio:glide", "enderio:enabled": 1 as byte}),
-		<contenttweaker:radiationlayer>,
-		<contenttweaker:pressurelayer>
+		<nomilabs:radiationlayer>,
+		<nomilabs:pressurelayer>
 	])
 	.outputs(<advancedrocketry:itemupgrade:0>)
 	.duration(400)
@@ -838,8 +838,8 @@ assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
 			.withTag({"enderio:dsu": "enderio:speedboost3", "enderio:enabled": 1 as byte}),
-		<contenttweaker:radiationlayer>,
-		<contenttweaker:pressurelayer>
+		<nomilabs:radiationlayer>,
+		<nomilabs:pressurelayer>
 	])
 	.outputs(<advancedrocketry:itemupgrade:2>)
 	.duration(400)
@@ -851,8 +851,8 @@ assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
 			.withTag({"enderio:dsu": "enderio:travel", "enderio:enabled": 1 as byte}),
-		<contenttweaker:radiationlayer>,
-		<contenttweaker:pressurelayer>
+		<nomilabs:radiationlayer>,
+		<nomilabs:pressurelayer>
 	])
 	.outputs(<advancedrocketry:itemupgrade:1>)
 	.duration(400)
@@ -864,8 +864,8 @@ assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
 			.withTag({"enderio:dsu": "enderio:nightvision", "enderio:enabled": 1 as byte}),
-		<contenttweaker:radiationlayer>,
-		<contenttweaker:pressurelayer>
+		<nomilabs:radiationlayer>,
+		<nomilabs:pressurelayer>
 	])
 	.outputs(<advancedrocketry:itemupgrade:4>)
 	.duration(400)
@@ -877,8 +877,8 @@ assembler.recipeBuilder()
 	.inputs([
 		<enderio:item_dark_steel_upgrade:1>
 			.withTag({"enderio:dsu": "enderio:energyupgrade4", "enderio:enabled": 1 as byte}),
-		<contenttweaker:radiationlayer>,
-		<contenttweaker:pressurelayer>
+		<nomilabs:radiationlayer>,
+		<nomilabs:pressurelayer>
 	])
 	.outputs(<advancedrocketry:itemupgrade:3>)
 	.duration(400)
@@ -913,7 +913,7 @@ makeExtremeRecipe5(<advancedrocketry:spacelaser>,
 		R: <metaitem:frameHsss>,
 		E: <metaitem:emitter.luv>,
 		Z: <metaitem:emitter.zpm>,
-		L: <contenttweaker:t3laser>,
+		L: <nomilabs:t3laser>,
 		S: <metaitem:large_miner.luv>,
 		W: <advancedrocketry:warpcore>,
 	});

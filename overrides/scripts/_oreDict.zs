@@ -518,7 +518,7 @@ for oreDictEntry, items in dustsDisabled {
 }
 
 <ore:dustArdite>.add(<enderio:item_material:30>);
-<ore:dustMoon>.add(<contenttweaker:moondust>);
+<ore:dustMoon>.add(<nomilabs:moondust>);
 
 //////////////////////////////
 //			Gems            //
@@ -2516,36 +2516,36 @@ mods.jei.JEI.removeAndHide(<enderio:item_alloy_nugget:3>);
 recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 
 //Circuits
-//<ore:circuitLv>.add(<contenttweaker:refinedcircuit>);
+//<ore:circuitLv>.add(<nomilabs:refinedcircuit>);
 //<ore:circuitLv>.remove(<metaitem:circuit.advanced_parts>);
 //
-//<ore:circuitMv>.add(<contenttweaker:combinationcircuit>);
-//<ore:circuitMv>.add(<contenttweaker:electronicprocessor>);
-//<ore:circuitMv>.add(<contenttweaker:refinedprocessor>);
-//<ore:circuitMv>.add(<contenttweaker:microcircuit>);
+//<ore:circuitMv>.add(<nomilabs:combinationcircuit>);
+//<ore:circuitMv>.add(<nomilabs:electronicprocessor>);
+//<ore:circuitMv>.add(<nomilabs:refinedprocessor>);
+//<ore:circuitMv>.add(<nomilabs:microcircuit>);
 //<ore:circuitMv>.remove(<metaitem:circuit.good>);
 //<ore:circuitMv>.remove(<metaitem:circuit.advanced>);
 //
-//<ore:circuitHv>.add(<contenttweaker:refinedprocessorarray>);
-//<ore:circuitHv>.add(<contenttweaker:electronicprocessorarray>);
-//<ore:circuitEv>.add(<contenttweaker:refinedprocessormainframe>);
-//<ore:circuitEv>.add(<contenttweaker:microprocessorarray>);
-//<ore:circuitIv>.add(<contenttweaker:crystalcircuit>);
-//<ore:circuitIv>.add(<contenttweaker:quantumprocessor>);
-//<ore:circuitIv>.add(<contenttweaker:microprocessormainframe>);
-//<ore:circuitIv>.add(<contenttweaker:nanoprocessorarray>);
-//<ore:circuitLuv>.add(<contenttweaker:nanoprocessormainframe>);
-//<ore:circuitLuv>.add(<contenttweaker:quantumprocessorarray>);
-//<ore:circuitZpm>.add(<contenttweaker:quantumprocessormainframe>);
-//<ore:circuitZpm>.add(<contenttweaker:crystalprocessorarray>);
-//<ore:circuitSuperconductor>.add(<contenttweaker:crystalprocessormainframe>);
+//<ore:circuitHv>.add(<nomilabs:refinedprocessorarray>);
+//<ore:circuitHv>.add(<nomilabs:electronicprocessorarray>);
+//<ore:circuitEv>.add(<nomilabs:refinedprocessormainframe>);
+//<ore:circuitEv>.add(<nomilabs:microprocessorarray>);
+//<ore:circuitIv>.add(<nomilabs:crystalcircuit>);
+//<ore:circuitIv>.add(<nomilabs:quantumprocessor>);
+//<ore:circuitIv>.add(<nomilabs:microprocessormainframe>);
+//<ore:circuitIv>.add(<nomilabs:nanoprocessorarray>);
+//<ore:circuitLuv>.add(<nomilabs:nanoprocessormainframe>);
+//<ore:circuitLuv>.add(<nomilabs:quantumprocessorarray>);
+//<ore:circuitZpm>.add(<nomilabs:quantumprocessormainframe>);
+//<ore:circuitZpm>.add(<nomilabs:crystalprocessorarray>);
+//<ore:circuitSuperconductor>.add(<nomilabs:crystalprocessormainframe>);
 
 
 //Misc
 //<ore:lvcef>.add(<meta_tile_entity:cef.lv.4>);
 //<ore:lvcef>.add(<meta_tile_entity:cef.lv.16>);
-//<ore:wireGtSinglePulsatingIron>.add(<contenttweaker:pulsatingwire>);
-//<ore:dustEndstone>.add(<contenttweaker:endstonedust>);
+//<ore:wireGtSinglePulsatingIron>.add(<nomilabs:pulsatingwire>);
+//<ore:dustEndstone>.add(<nomilabs:endstonedust>);
 
 //Removals
 //<ore:craftingLensLime>.remove(<metaitem:lensEnderEye>);
@@ -2801,14 +2801,14 @@ recipes.addShapeless(<metaitem:dustSulfur>, [<thermalfoundation:material:771>]);
 recipes.addShapeless(<metaitem:gemCoke> * 9, [<thermalfoundation:storage_resource:1>]);
 
 // Temporary recipe to convert endstone dusts
-//recipes.addShapeless(<ore:dustEndstone>.firstItem, [<contenttweaker:endstonedust>]);
-//<contenttweaker:endstonedust>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
-//<contenttweaker:endstonedust>.addTooltip(format.red("Please use the GregTech variant of Endstone Dust."));
+//recipes.addShapeless(<ore:dustEndstone>.firstItem, [<nomilabs:endstonedust>]);
+//<nomilabs:endstonedust>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
+//<nomilabs:endstonedust>.addTooltip(format.red("Please use the GregTech variant of Endstone Dust."));
 
 // Temporary recipe to convert pulsating iron wire that is probably unnecessary anyway.
-//recipes.addShapeless(<ore:wireGtSinglePulsatingIron>.firstItem, [<contenttweaker:pulsatingwire>]);
-//<contenttweaker:pulsatingwire>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
-//<contenttweaker:pulsatingwire>.addTooltip(format.red("Please use the GregTech variant of Pulsating Iron Wire."));
+//recipes.addShapeless(<ore:wireGtSinglePulsatingIron>.firstItem, [<nomilabs:pulsatingwire>]);
+//<nomilabs:pulsatingwire>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
+//<nomilabs:pulsatingwire>.addTooltip(format.red("Please use the GregTech variant of Pulsating Iron Wire."));
 
 //neutronium plate exchange
 //recipes.addShapeless("of_exchange_neutronium_plate",
@@ -2822,10 +2822,10 @@ recipes.addShapeless(<metaitem:gemCoke> * 9, [<thermalfoundation:storage_resourc
 val pulsatingDustOre = <ore:dustPulsating>;
 val pulsatingMeshOre = <ore:meshPulsating>;
 
-pulsatingDustOre.add(<contenttweaker:pulsatingdust>);
+pulsatingDustOre.add(<nomilabs:pulsatingdust>);
 //pulsatingDustOre.add(<forestry:crafting_material:0>);
 
-pulsatingMeshOre.add(<contenttweaker:pulsatingmesh>);
+pulsatingMeshOre.add(<nomilabs:pulsatingmesh>);
 //pulsatingMeshOre.add(<forestry:crafting_material:1>);
 
 // GT Fluix

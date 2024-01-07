@@ -113,12 +113,12 @@ chemical_reactor.recipeBuilder()
 
 assembler.recipeBuilder()
     .inputs(<metaitem:ringBerylliumOxide> * 64, <metaitem:ringBerylliumOxide> * 64, <metaitem:plateHslaSteel> * 6, <metaitem:circuit.vacuum_tube>)
-    .outputs(<contenttweaker:magnetron>)
+    .outputs(<nomilabs:magnetron>)
     .duration(600).EUt(61440).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
     .inputs(<metaitem:dustGraphite>)
-    .notConsumable(<contenttweaker:magnetron>)
+    .notConsumable(<nomilabs:magnetron>)
     .fluidInputs(<liquid:nitration_mixture> * 2000)
     .outputs(<metaitem:dustGraphene>)
     .fluidOutputs(<liquid:diluted_sulfuric_acid> * 1000, <liquid:nitric_acid> * 1000)
@@ -780,7 +780,7 @@ fusion_reactor.recipeBuilder()
 
 centrifuge.recipeBuilder()
     .fluidInputs(<liquid:plasma.taranium_enriched_helium> * 3000)
-    .notConsumable(<contenttweaker:magnetron>, <thermalfoundation:material:1025>)
+    .notConsumable(<nomilabs:magnetron>, <thermalfoundation:material:1025>)
     .outputs(<metaitem:dustTaranium>, <metaitem:dustSmallCleanInertResidue>)
     .duration(100).EUt(30720).buildAndRegister();
 
