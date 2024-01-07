@@ -1,10 +1,7 @@
 import mods.gregtech.recipe.RecipeMap;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
-import mods.gregtech.ore.OrePrefix;
-import mods.gregtech.ore.IOreRecipeHandler;
 import mods.gregtech.material.Material;
-import mods.gregtech.recipe.Utils;
 import crafttweaker.data.IData;
 import mods.actuallyadditions.AtomicReconstructor;
 
