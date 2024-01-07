@@ -2,9 +2,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.recipe.RecipeMap;
-import mods.contenttweaker.MaterialPart;
-import mods.contenttweaker.MaterialSystem;
-import mods.contenttweaker.Material;
 
 //////////////////////////////////////////////////////////////
 /////////////	    Solar Panels  	    //////////////////

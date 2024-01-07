@@ -2,7 +2,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
-import mods.contenttweaker.Fluid;
 import crafttweaker.recipes.IRecipeFunction;
 
 import mods.gregtech.recipe.RecipeMap;

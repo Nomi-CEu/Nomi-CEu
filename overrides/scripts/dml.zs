@@ -4,9 +4,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.recipe.RecipeMap;
-import mods.contenttweaker.MaterialPart;
-import mods.contenttweaker.MaterialSystem;
-import mods.contenttweaker.Material;
 
 recipes.remove(<deepmoblearning:extraction_chamber>);
 recipes.addShaped(<deepmoblearning:extraction_chamber>, [	
