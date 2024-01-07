@@ -163,8 +163,6 @@ macerator.recipeBuilder().inputs([<enderio:item_material:19>]).outputs([<enderio
 macerator.recipeBuilder().inputs([<enderio:item_material:15>]).outputs([<enderio:item_material:35>]).duration(300).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:14>]).outputs([<enderio:item_material:36>]).duration(200).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:17>]).outputs([<nomilabs:grainsofinnocence>]).duration(200).EUt(16).buildAndRegister();
-recipes.addShapeless(<nomilabs:blazepowder>,[<minecraft:blaze_powder>]);
-recipes.addShapeless(<minecraft:blaze_powder>,[<nomilabs:blazepowder>]);
 recipes.remove(<appliedenergistics2:part:36>);
 
 //Yeta Wrench
@@ -191,13 +189,6 @@ mixer.recipeBuilder().inputs([<metaitem:dustTricalciumPhosphate>,<metaitem:dustG
 mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
 recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustBlackBronze>, <ore:dustSteel>, <ore:dustSteel>, <ore:dustSteel>]);
 furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>, 0.0);
-
-// Temporary Black Steel fix
-//recipes.addShapeless(<nomilabs:dark_red_coal> * 2, [<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>]);
-mods.jei.JEI.hide(<nomilabs:dark_red_coal>);
-
-mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <nomilabs:dark_red_coal> * 4]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).hidden().buildAndRegister();
-
 
 // Clathrates
 chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:glowstone> * 288]).outputs(<thermalfoundation:material:894>).EUt(75).duration(120).buildAndRegister();
