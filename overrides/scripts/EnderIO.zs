@@ -267,25 +267,15 @@ recipes.addShaped(<enderio:item_basic_capacitor> * 12, [
     [<ore:nuggetElectricalSteel>, <metaitem:component.advanced_smd.capacitor>, <ore:nuggetElectricalSteel>],
     [<ore:wireGtSingleTin>,null,<ore:wireGtSingleTin>]]);
 
-recipes.addShaped(compressedoctadiccap, [
+recipes.addShaped(<nomilabs:compressedoctadiccapacitor>, [
 	[<enderio:item_basic_capacitor:2>,<enderio:item_basic_capacitor:2>,<enderio:item_basic_capacitor:2>],
 	[<enderio:item_basic_capacitor:2>,<enderio:item_basic_capacitor:2>,<enderio:item_basic_capacitor:2>],
 	[<enderio:item_basic_capacitor:2>,<enderio:item_basic_capacitor:2>,<enderio:item_basic_capacitor:2>]]);
 
-recipes.addShaped(doublecompressedoctadiccap, [
-	[compressedoctadiccap,compressedoctadiccap,compressedoctadiccap],
-	[compressedoctadiccap,compressedoctadiccap,compressedoctadiccap],
-	[compressedoctadiccap,compressedoctadiccap,compressedoctadiccap]]);
-
-//Replace old compressed capacitors with functional ones
-recipes.addShapeless(compressedoctadiccap, [<nomilabs:compressedoctadiccapacitor>]);
-recipes.addShapeless(doublecompressedoctadiccap, [<nomilabs:doublecompressedoctadiccapacitor>]);
-
-//An attempt to do the same in JEI
-mods.jei.JEI.addItem(compressedoctadiccap);
-mods.jei.JEI.addItem(doublecompressedoctadiccap);
-<nomilabs:compressedoctadiccapacitor>.addTooltip(format.white("Put the item into a crafting window if it has no lore"));
-<nomilabs:doublecompressedoctadiccapacitor>.addTooltip(format.white("Put the item into a crafting window if it has no lore"));
+recipes.addShaped(<nomilabs:doublecompressedoctadiccapacitor>, [
+	[<nomilabs:compressedoctadiccapacitor>,<nomilabs:compressedoctadiccapacitor>,<nomilabs:compressedoctadiccapacitor>],
+	[<nomilabs:compressedoctadiccapacitor>,<nomilabs:compressedoctadiccapacitor>,<nomilabs:compressedoctadiccapacitor>],
+	[<nomilabs:compressedoctadiccapacitor>,<nomilabs:compressedoctadiccapacitor>,<nomilabs:compressedoctadiccapacitor>]]);
 
 // Crafter
 recipes.remove(<enderio:block_crafter>);
