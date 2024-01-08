@@ -413,7 +413,7 @@ assembler.recipeBuilder()
 
 // Kill Glowstone Decomp
 // Small Pile of Redstone Dust * 2
-<recipemap:centrifuge>.findRecipe(80, [<minecraft:glowstone_dust:0>], null).remove();
+//<recipemap:centrifuge>.findRecipe(80, [<minecraft:glowstone_dust:0>], null).remove();
 
 cutter.recipeBuilder()
 	.inputs(<appliedenergistics2:fluix_block>)
