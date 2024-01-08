@@ -690,7 +690,7 @@ recipes.addShaped(<gregtech:cleanroom_casing:2>, [
 ]);
 
 // Replace recycling recipes
-<recipemap:arc_furnace>.findRecipe(30, [<gregtech:cleanroom_casing:2>], [<liquid:oxygen> * 1265]).remove();
+//<recipemap:arc_furnace>.findRecipe(30, [<gregtech:cleanroom_casing:2>], [<liquid:oxygen> * 1265]).remove();
 <recipemap:macerator>.findRecipe(32, [<gregtech:cleanroom_casing:2>], null).remove();
 
 arc_furnace.recipeBuilder()
@@ -733,7 +733,7 @@ mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material
 
 // Recycling recipe replacements
 // RHF
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_blast_furnace>], [<liquid:oxygen> * 20786]).remove();
+//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_blast_furnace>], [<liquid:oxygen> * 20786]).remove();
 <recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_blast_furnace>], null).remove();
 arc_furnace.recipeBuilder()
 	.inputs(<metaitem:gcym:mega_blast_furnace>)
@@ -751,7 +751,7 @@ macerator.recipeBuilder()
 	.buildAndRegister();
 
 // BBC
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_vacuum_freezer>], [<liquid:oxygen> * 26976]).remove();
+//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_vacuum_freezer>], [<liquid:oxygen> * 26976]).remove();
 <recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_vacuum_freezer>], null).remove();
 arc_furnace.recipeBuilder()
 	.inputs(<metaitem:gcym:mega_vacuum_freezer>)

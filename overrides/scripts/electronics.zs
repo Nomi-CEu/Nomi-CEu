@@ -148,7 +148,7 @@ recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:toolMortar>]);
 //Pyrolyse Oven
 recipes.removeByRecipeName("gregtech:pyrolyse_oven");	
 // Aluminium Ingot * 21
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:pyrolyse_oven>], [<liquid:oxygen> * 2160]).remove();
+//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:pyrolyse_oven>], [<liquid:oxygen> * 2160]).remove();
 // Aluminium Dust * 21
 <recipemap:macerator>.findRecipe(8, [<metaitem:pyrolyse_oven>], null).remove();
 
@@ -275,7 +275,7 @@ assembler.recipeBuilder()
 
 // Replace Recycling Recipes
 // Coil
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:voltage_coil.hv>], [<liquid:oxygen> * 152]).remove();
+//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:voltage_coil.hv>], [<liquid:oxygen> * 152]).remove();
 <recipemap:macerator>.findRecipe(8, [<metaitem:voltage_coil.hv>], null).remove();
 arc_furnace.recipeBuilder()
 	.inputs(<metaitem:voltage_coil.hv>)
@@ -293,7 +293,7 @@ macerator.recipeBuilder()
 	.buildAndRegister();
 
 // Energy Hatch
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:energy_hatch.input.hv>], [<liquid:oxygen> * 984]).remove();
+//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:energy_hatch.input.hv>], [<liquid:oxygen> * 984]).remove();
 <recipemap:macerator>.findRecipe(8, [<metaitem:energy_hatch.input.hv>], null).remove();
 arc_furnace.recipeBuilder()
 	.inputs(<metaitem:energy_hatch.input.hv>)
@@ -311,7 +311,7 @@ macerator.recipeBuilder()
 	.buildAndRegister();
 
 // Dynamo Hatch
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:energy_hatch.output.hv>], [<liquid:oxygen> * 1180]).remove();
+//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:energy_hatch.output.hv>], [<liquid:oxygen> * 1180]).remove();
 <recipemap:macerator>.findRecipe(8, [<metaitem:energy_hatch.output.hv>], null).remove();
 arc_furnace.recipeBuilder()
 	.inputs(<metaitem:energy_hatch.output.hv>)
