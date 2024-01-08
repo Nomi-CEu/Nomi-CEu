@@ -67,6 +67,7 @@ global vacuum_freezer               as RecipeMap = RecipeMap.getByName("vacuum_f
 global wiremill                     as RecipeMap = RecipeMap.getByName("wiremill");
 global microverse_projector_1       as RecipeMap = RecipeMap.getByName("microverse_projector_1");
 global microverse_projector_2       as RecipeMap = RecipeMap.getByName("microverse_projector_2");
+global microverse_projector_3       as RecipeMap = RecipeMap.getByName("microverse_projector_3");
 global creative_tank_provider       as RecipeMap = RecipeMap.getByName("creative_tank_provider");
 global naquadah_reactor_1           as RecipeMap = RecipeMap.getByName("naquadah_reactor_1");
 global naquadah_reactor_2           as RecipeMap = RecipeMap.getByName("naquadah_reactor_2");

@@ -60,9 +60,9 @@ blast_furnace.recipeBuilder()
 	.duration(135).EUt(120).buildAndRegister();
 
 // Black Steel * 720
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:nitrogen> * 5000]).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:nitrogen> * 5000]).remove();
 // Black Steel * 720
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2])
@@ -124,9 +124,9 @@ mixer.recipeBuilder()
 	.EUt(1920)
 	.buildAndRegister();
 // Molten Signalum * 1152
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:helium> * 800]).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:helium> * 800]).remove();
 // Molten Signalum * 1152
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<metaitem:dustAnnealedCopper> * 4, <metaitem:dustArdite> * 2, <metaitem:dustRedAlloy> * 2,<thermalfoundation:material:893>])
 	.fluidInputs(<liquid:mana> * 1000)
@@ -156,9 +156,9 @@ mixer.recipeBuilder()
 	.EUt(1920)
 	.buildAndRegister();
 // Molten Lumium * 864
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 12})], [<liquid:helium> * 600]).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 12})], [<liquid:helium> * 600]).remove();
 // Molten Lumium * 864
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2,<extendedcrafting:material:7> * 2,<thermalfoundation:material:894>])
@@ -191,9 +191,9 @@ mixer.recipeBuilder()
 	.buildAndRegister();
 
 // Molten Enderium * 1152
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 14})], [<liquid:krypton> * 80]).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 14})], [<liquid:krypton> * 80]).remove();
 // Molten Enderium * 1152
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 4})], null).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 4})], null).remove();
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<metaitem:dustLead> * 4,<metaitem:dustPlatinum> * 2,<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>])
 	.fluidInputs(<liquid:mana> * 1000)
@@ -243,7 +243,7 @@ mixer.recipeBuilder()
 
 
 // Fluxed Electrum * 1152
-<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustElectrum> * 6, <metaitem:dustLumium>, <metaitem:dustSignalum>, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
+//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustElectrum> * 6, <metaitem:dustLumium>, <metaitem:dustSignalum>, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<metaitem:dustElectrum> * 6, <metaitem:dustLumium>, <metaitem:dustSignalum>, <ore:dustMana>])
 	.fluidOutputs(<liquid:electrum_flux> * 1296)

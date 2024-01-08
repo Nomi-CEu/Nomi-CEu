@@ -8,19 +8,19 @@ mods.jei.JEI.removeAndHide(<metaitem:nomilabs:actualization_chamber>);
 mods.jei.JEI.removeAndHide(<metaitem:nomilabs:universal_crystallizer>);
 
 // multiblock controller recipes
-recipes.addShaped("microverse_projector_basic", <metaitem:nomilabs:microverse_projector_basic>, [
+recipes.addShaped("microverse_projector_1", <metaitem:nomilabs:microverse_projector_1>, [
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitHv>, <nomilabs:microverse_casing>, <ore:circuitHv>]
 ]);
 
-recipes.addShaped("microverse_projector_advanced", <metaitem:nomilabs:microverse_projector_advanced>, [
+recipes.addShaped("microverse_projector_2", <metaitem:nomilabs:microverse_projector_2>, [
     [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitEv>, <nomilabs:microverse_casing>, <ore:circuitEv>]
 ]);
 
-recipes.addShaped("microverse_projector_advanced_ii", <metaitem:nomilabs:microverse_projector_advanced_ii>, [
+recipes.addShaped("microverse_projector_3", <metaitem:nomilabs:microverse_projector_3>, [
     [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>],
     [<nomilabs:microverse_casing>, <metaitem:cover.screen>, <nomilabs:microverse_casing>],
     [<ore:circuitIv>, <nomilabs:microverse_casing>, <ore:circuitIv>]
