@@ -25,9 +25,9 @@ recipes.removeByRecipeName("actuallyadditions:recipes146");
 
 //Redstone Servo
 recipes.addShaped(<thermalfoundation:material:512>, [
-	[<extrautils2:ingredients>,<metaitem:plateElectricalSteel>, <extrautils2:ingredients>],
-	[null,<metaitem:plateElectricalSteel>, null],
-	[<extrautils2:ingredients>,<metaitem:plateElectricalSteel>, <extrautils2:ingredients>]]);
+	[<extrautils2:ingredients>,<metaitem:nomilabs:plateElectricalSteel>, <extrautils2:ingredients>],
+	[null,<metaitem:nomilabs:plateElectricalSteel>, null],
+	[<extrautils2:ingredients>,<metaitem:nomilabs:plateElectricalSteel>, <extrautils2:ingredients>]]);
 
 // remove the wonky 2-tag version from JEI
 mods.jei.JEI.removeAndHide(<thermalexpansion:tank>);
@@ -105,21 +105,21 @@ recipes.addShaped(<thermalexpansion:dynamo>, [
 recipes.remove(<thermalexpansion:dynamo:1>);
 recipes.addShaped(<thermalexpansion:dynamo:1>, [
 	[null, <nomilabs:excitationcoil>, null],
-	[<metaitem:plateDarkSteel>, <morefurnaces:furnaceblock:5>, <metaitem:plateDarkSteel>],
+	[<metaitem:nomilabs:plateDarkSteel>, <morefurnaces:furnaceblock:5>, <metaitem:nomilabs:plateDarkSteel>],
 	[<enderio:item_material:73>, <thermalfoundation:material:514>, <enderio:item_material:73>]]);
 
 //Reactant Dynamo
 recipes.remove(<thermalexpansion:dynamo:3>);
 recipes.addShaped(<thermalexpansion:dynamo:3>, [
 	[null, <nomilabs:excitationcoil>, null],
-	[<metaitem:plateEnergeticAlloy>, <morefurnaces:furnaceblock:1>, <metaitem:plateEnergeticAlloy>],
+	[<metaitem:nomilabs:plateEnergeticAlloy>, <morefurnaces:furnaceblock:1>, <metaitem:nomilabs:plateEnergeticAlloy>],
 	[<enderio:item_material:12>, <thermalfoundation:material:514>, <enderio:item_material:12>]]);
 
 //hardened upgrade
 recipes.remove(<thermalfoundation:upgrade>);
 recipes.addShaped(<thermalfoundation:upgrade>, [
 	[<metaitem:gearInvar>, <metaitem:plateInvar>, <metaitem:gearInvar>],
-	[<metaitem:plateInvar>, <metaitem:blockElectricalSteel>, <metaitem:plateInvar>],
+	[<metaitem:plateInvar>, <metaitem:nomilabs:blockElectricalSteel>, <metaitem:plateInvar>],
 	[<metaitem:gearInvar>, <metaitem:plateInvar>, <metaitem:gearInvar>]]);
 
 //reinforced upgrade
@@ -132,16 +132,16 @@ recipes.addShaped(<thermalfoundation:upgrade:1>, [
 //sig upgrade
 recipes.remove(<thermalfoundation:upgrade:2>);
 recipes.addShaped(<thermalfoundation:upgrade:2>, [
-	[<moreplates:restonia_gear>, <metaitem:plateSignalum>, <moreplates:restonia_gear>],
-	[<metaitem:plateSignalum>, <ore:blockLumium>, <metaitem:plateSignalum>],
-	[<moreplates:restonia_gear>, <metaitem:plateSignalum>, <moreplates:restonia_gear>]]);
+	[<moreplates:restonia_gear>, <metaitem:nomilabs:plateSignalum>, <moreplates:restonia_gear>],
+	[<metaitem:nomilabs:plateSignalum>, <ore:blockLumium>, <metaitem:nomilabs:plateSignalum>],
+	[<moreplates:restonia_gear>, <metaitem:nomilabs:plateSignalum>, <moreplates:restonia_gear>]]);
 
 //end upgrade
 recipes.remove(<thermalfoundation:upgrade:3>);
 recipes.addShaped(<thermalfoundation:upgrade:3>, [
-	[<moreplates:emeradic_gear>, <metaitem:plateEnderium>, <moreplates:emeradic_gear>],
-	[<metaitem:plateEnderium>, <draconicevolution:draconic_core>, <metaitem:plateEnderium>],
-	[<moreplates:emeradic_gear>, <metaitem:plateEnderium>, <moreplates:emeradic_gear>]]);
+	[<moreplates:emeradic_gear>, <metaitem:nomilabs:plateEnderium>, <moreplates:emeradic_gear>],
+	[<metaitem:nomilabs:plateEnderium>, <draconicevolution:draconic_core>, <metaitem:nomilabs:plateEnderium>],
+	[<moreplates:emeradic_gear>, <metaitem:nomilabs:plateEnderium>, <moreplates:emeradic_gear>]]);
 
 //Silver Transmission Coil
 recipes.remove(<thermalfoundation:material:514>);
@@ -264,9 +264,9 @@ recipes.addShaped(<thermalexpansion:augment:448>, [
 	//i give up
 recipes.remove(<thermalexpansion:augment:656>);
 recipes.addShaped(<thermalexpansion:augment:656>, [
-	[<ore:ingotDarkSteel>, <metaitem:plateDarkSteel>, <ore:ingotDarkSteel>],
-	[<metaitem:plateDarkSteel>, <thermalfoundation:material:1024>, <metaitem:plateDarkSteel>],
-	[<ore:ingotDarkSteel>, <metaitem:plateDarkSteel>, <ore:ingotDarkSteel>]]);
+	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>],
+	[<metaitem:nomilabs:plateDarkSteel>, <thermalfoundation:material:1024>, <metaitem:nomilabs:plateDarkSteel>],
+	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>]]);
 
 	//i give up
 recipes.remove(<thermalexpansion:augment:496>);

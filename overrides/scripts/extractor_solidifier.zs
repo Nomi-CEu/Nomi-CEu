@@ -202,12 +202,12 @@ extractor.recipeBuilder()
 
 // Draconium Freezing
 // Draconium Ingot * 1
-<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotDraconium>], [<liquid:liquid_helium> * 500]).remove();
+<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:nomilabs:ingotHotDraconium>], [<liquid:liquid_helium> * 500]).remove();
 
 freezer.recipeBuilder()
-    .inputs([<metaitem:ingotHotDraconium>])
+    .inputs([<metaitem:nomilabs:ingotHotDraconium>])
     .fluidInputs([<liquid:cryotheum> * 2000])
-    .outputs(<metaitem:ingotDraconium>)
+    .outputs(<metaitem:nomilabs:ingotDraconium>)
     .duration(600).EUt(1200).buildAndRegister();
 
 freezer.recipeBuilder()

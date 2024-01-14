@@ -1318,9 +1318,9 @@ for oreDictEntry, items in miscDisabled {
 <ore:dustBone>.add(<minecraft:dye:15>);
 
 // Awakened Draconium Fix
-<ore:blockDraconiumAwakened>.add(<metaitem:blockAwakenedDraconium>);
-<ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
-<ore:nuggetDraconiumAwakened>.add(<metaitem:nuggetAwakenedDraconium>);
+<ore:blockDraconiumAwakened>.add(<metaitem:nomilabs:blockAwakenedDraconium>);
+<ore:ingotDraconiumAwakened>.add(<metaitem:nomilabs:ingotAwakenedDraconium>);
+<ore:nuggetDraconiumAwakened>.add(<metaitem:nomilabs:nuggetAwakenedDraconium>);
 
 // Chisel Blocks fix
 // Aluminium (not aluminum)
@@ -1344,18 +1344,18 @@ for oreDictEntry, items in miscDisabled {
 <ore:blockCoalCoke>.add(<gregtech:meta_block_compressed_22:5>);
 
 // Infinity conversion
-recipes.addShapeless(<avaritia:resource:6>, [<metaitem:ingotInfinity>]);
-recipes.addShapeless(<moreplates:infinity_plate>, [<metaitem:plateInfinity>]);
+recipes.addShapeless(<avaritia:resource:6>, [<metaitem:nomilabs:ingotInfinity>]);
+recipes.addShapeless(<moreplates:infinity_plate>, [<metaitem:nomilabs:plateInfinity>]);
 
-mods.jei.JEI.removeAndHide(<metaitem:ingotInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:plateInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:blockInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:nuggetInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:dustInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:dustSmallInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:dustTinyInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:plateInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:dustInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:dustSmallInfinity>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:dustTinyInfinity>);
 // Infinity Plate * 1
-<recipemap:bender>.findRecipe(24, [<metaitem:ingotInfinity>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:bender>.findRecipe(24, [<metaitem:nomilabs:ingotInfinity>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
 bender.recipeBuilder()
 	.inputs(<avaritia:resource:6>)
@@ -2179,12 +2179,12 @@ mods.jei.JEI.removeAndHide(<thermalfoundation:dye:*>);
 
 //Custom Materials Removals
 //3 Thermal Alloys (nugget, block, ingot, dust)
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetLumium>);
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetSignalum>);
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetEnderium>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockLumium>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockSignalum>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockEnderium>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetLumium>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetSignalum>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetEnderium>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockLumium>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockSignalum>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockEnderium>);
 
 //Lib Vulpes Removals
 mods.jei.JEI.removeAndHide(<libvulpes:gtplug>);
@@ -2368,18 +2368,18 @@ mods.jei.JEI.removeAndHide(<betterquesting:guide_book>);
 
 
 //Ingots to Proper Ingots
-//recipes.addShapeless(<thermalfoundation:material:167>, [<metaitem:ingotEnderium>]);
-//recipes.addShapeless(<enderio:item_alloy_ingot:2>, [<metaitem:ingotVibrantAlloy>]);
-//recipes.addShapeless(<enderio:item_alloy_ingot:1>, [<metaitem:ingotEnergeticAlloy>]);
-//recipes.addShapeless(<enderio:item_alloy_ingot:4>, [<metaitem:ingotConductiveIron>]);
-//recipes.addShapeless(<enderio:item_alloy_ingot:8>, [<metaitem:ingotEndSteel>]);
-//recipes.addShapeless(<enderio:item_alloy_ingot:5>, [<metaitem:ingotPulsatingIron>]);
-//recipes.addShapeless(<enderio:item_alloy_ingot:6>, [<metaitem:ingotDarkSteel>]);
-//recipes.addShapeless(<enderio:item_alloy_ingot>, [<metaitem:ingotElectricalSteel>]);
-//recipes.addShapeless(<thermalfoundation:material:166>, [<metaitem:ingotLumium>]);
-//recipes.addShapeless(<thermalfoundation:material:165>, [<metaitem:ingotSignalum>]);
-//recipes.addShapeless(<draconicevolution:draconium_ingot>, [<metaitem:ingotDraconium>]);
-//recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:dustDraconium>]);
+//recipes.addShapeless(<thermalfoundation:material:167>, [<metaitem:nomilabs:ingotEnderium>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:2>, [<metaitem:nomilabs:ingotVibrantAlloy>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:1>, [<metaitem:nomilabs:ingotEnergeticAlloy>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:4>, [<metaitem:nomilabs:ingotConductiveIron>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:8>, [<metaitem:nomilabs:ingotEndSteel>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:5>, [<metaitem:nomilabs:ingotPulsatingIron>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot:6>, [<metaitem:nomilabs:ingotDarkSteel>]);
+//recipes.addShapeless(<enderio:item_alloy_ingot>, [<metaitem:nomilabs:ingotElectricalSteel>]);
+//recipes.addShapeless(<thermalfoundation:material:166>, [<metaitem:nomilabs:ingotLumium>]);
+//recipes.addShapeless(<thermalfoundation:material:165>, [<metaitem:nomilabs:ingotSignalum>]);
+//recipes.addShapeless(<draconicevolution:draconium_ingot>, [<metaitem:nomilabs:ingotDraconium>]);
+//recipes.addShapeless(<draconicevolution:draconium_dust>, [<metaitem:nomilabs:dustDraconium>]);
 //recipes.addShapeless(<ore:dustWood>.firstItem, [<thermalfoundation:material:800>]);
 
 
@@ -2433,23 +2433,23 @@ fluidextractor.recipeBuilder().inputs(<simplyjetpacks:metaitemmods:3>).fluidOutp
 
 
 //Omnium
-mods.jei.JEI.removeAndHide(<metaitem:ingotOmnium>);
-mods.jei.JEI.removeAndHide(<metaitem:nuggetOmnium>);
-mods.jei.JEI.removeAndHide(<metaitem:blockOmnium>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotOmnium>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetOmnium>);
+mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockOmnium>);
 <ore:ingotOmnium>.add(<extendedcrafting:material:32>);
 <ore:nuggetOmnium>.add(<extendedcrafting:material:33>);
 <ore:blockOmnium>.add(<extendedcrafting:storage:4>);
 recipes.removeByRecipeName("gregtech:block_compress_omnium");
-//wiremill.findRecipe(8, [<metaitem:ingotOmnium>], [null]).remove();
-//macerator.findRecipe(8, [<metaitem:ingotOmnium>], [null]).remove();
+//wiremill.findRecipe(8, [<metaitem:nomilabs:ingotOmnium>], [null]).remove();
+//macerator.findRecipe(8, [<metaitem:nomilabs:ingotOmnium>], [null]).remove();
 //macerator.findRecipe(8, [<gregtech:cable:709>], [null]).remove();
-//extruder.findRecipe(48, [<metaitem:ingotOmnium>,<metaitem:shape.extruder.wire>], [null]).remove();
-//extruder.findRecipe(64, [<metaitem:ingotOmnium> * 9,<metaitem:shape.extruder.block>], [null]).remove();
-//alloy.findRecipe(32, [<metaitem:ingotOmnium> * 9,<metaitem:shape.mold.block>], [null]).remove();
-//fluidextractor.findRecipe(32, [<metaitem:ingotOmnium>], [null]).remove();
-//fluidextractor.findRecipe(32, [<metaitem:nuggetOmnium>], [null]).remove();
-//fluidextractor.findRecipe(32, [<metaitem:blockOmnium>], [null]).remove();
-//wiremill.recipeBuilder().inputs(<extendedcrafting:material:32>).outputs(<metaitem:wireGtSingleOmnium> * 2).duration(364).EUt(7).buildAndRegister();
+//extruder.findRecipe(48, [<metaitem:nomilabs:ingotOmnium>,<metaitem:shape.extruder.wire>], [null]).remove();
+//extruder.findRecipe(64, [<metaitem:nomilabs:ingotOmnium> * 9,<metaitem:shape.extruder.block>], [null]).remove();
+//alloy.findRecipe(32, [<metaitem:nomilabs:ingotOmnium> * 9,<metaitem:shape.mold.block>], [null]).remove();
+//fluidextractor.findRecipe(32, [<metaitem:nomilabs:ingotOmnium>], [null]).remove();
+//fluidextractor.findRecipe(32, [<metaitem:nomilabs:nuggetOmnium>], [null]).remove();
+//fluidextractor.findRecipe(32, [<metaitem:nomilabs:blockOmnium>], [null]).remove();
+//wiremill.recipeBuilder().inputs(<extendedcrafting:material:32>).outputs(<metaitem:nomilabs:wireGtSingleOmnium> * 2).duration(364).EUt(7).buildAndRegister();
 fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:33>).fluidOutputs([<liquid:omnium> * 16]).duration(25).EUt(30).buildAndRegister();
 fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:32>).fluidOutputs([<liquid:omnium> * 144]).duration(200).EUt(30).buildAndRegister();
 fluidextractor.recipeBuilder().inputs(<extendedcrafting:storage:4>).fluidOutputs([<liquid:omnium> * 1296]).duration(1800).EUt(30).buildAndRegister();
@@ -2460,9 +2460,9 @@ solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 144).notConsumable(<met
 solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 144).notConsumable(<metaitem:shape.mold.ingot>).outputs([<extendedcrafting:material:32>]).duration(200).EUt(30).buildAndRegister();
 solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<extendedcrafting:storage:4>]).duration(200).EUt(30).buildAndRegister();
 solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 16).notConsumable(<metaitem:shape.mold.ball>).outputs([<extendedcrafting:singularity_ultimate>]).duration(200).EUt(30).buildAndRegister();
-furnace.remove(<metaitem:ingotOmnium>);
-furnace.addRecipe(<extendedcrafting:material:32>, <metaitem:dustOmnium>, 0.0);
-recipes.addShapeless(<extendedcrafting:material:32>, [<metaitem:ingotOmnium>]);
+furnace.remove(<metaitem:nomilabs:ingotOmnium>);
+furnace.addRecipe(<extendedcrafting:material:32>, <metaitem:nomilabs:dustOmnium>, 0.0);
+recipes.addShapeless(<extendedcrafting:material:32>, [<metaitem:nomilabs:ingotOmnium>]);
 
 //Neutronium
 <ore:ingotNeutronium>.add(<avaritia:resource:4>);
@@ -2707,39 +2707,39 @@ for restrictivePipe in <ore:pipe*Restrictive*>{
 }
 
 // GTCE Conductive Iron
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetConductiveIron>);
-//mods.jei.JEI.removeAndHide(<metaitem:ingotConductiveIron>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockConductiveIron>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetConductiveIron>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotConductiveIron>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockConductiveIron>);
 
 // GTCE Energetic Alloy
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetEnergeticAlloy>);
-//mods.jei.JEI.removeAndHide(<metaitem:ingotEnergeticAlloy>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockEnergeticAlloy>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetEnergeticAlloy>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotEnergeticAlloy>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockEnergeticAlloy>);
 
 // GTCE Vibrant Alloy
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetVibrantAlloy>);
-//mods.jei.JEI.removeAndHide(<metaitem:ingotVibrantAlloy>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockVibrantAlloy>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetVibrantAlloy>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotVibrantAlloy>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockVibrantAlloy>);
 
 // GTCE Pulsating Iron
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetPulsatingIron>);
-//mods.jei.JEI.removeAndHide(<metaitem:ingotPulsatingIron>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockPulsatingIron>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetPulsatingIron>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotPulsatingIron>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockPulsatingIron>);
 
 // GTCE Dark Steel
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetDarkSteel>);
-//mods.jei.JEI.removeAndHide(<metaitem:ingotDarkSteel>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockDarkSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetDarkSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotDarkSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockDarkSteel>);
 
 // GTCE Electrical Steel
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetElectricalSteel>);
-//mods.jei.JEI.removeAndHide(<metaitem:ingotElectricalSteel>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockElectricalSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetElectricalSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotElectricalSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockElectricalSteel>);
 
 // GTCE End Steel
-//mods.jei.JEI.removeAndHide(<metaitem:nuggetEndSteel>);
-//mods.jei.JEI.removeAndHide(<metaitem:ingotEndSteel>);
-//mods.jei.JEI.removeAndHide(<metaitem:blockEndSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetEndSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotEndSteel>);
+//mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockEndSteel>);
 
 //mods.jei.JEI.removeAndHide(<gregtech:meta_block_compressed_54:15>); // Block of Lignite Coke
 

@@ -45,7 +45,7 @@ print("--- loading Darkutils.zs ---");
 	<darkutils:ender_tether>, 
 	[[null, <darkutils:material:1>, null],
 	[null, <minecraft:ender_pearl>, null], 
-	[<metaitem:ingotEndSteel>, <metaitem:ingotEndSteel>, <metaitem:ingotEndSteel>]]);
+	[<metaitem:nomilabs:ingotEndSteel>, <metaitem:nomilabs:ingotEndSteel>, <metaitem:nomilabs:ingotEndSteel>]]);
 
 	recipes.remove(<darkutils:trap_tile:7>);
 	recipes.addShapedMirrored("Player Trap", 

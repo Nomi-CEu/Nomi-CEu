@@ -1,13 +1,13 @@
 recipes.remove(<enderio:block_reinforced_obsidian>);
 recipes.addShaped(<enderio:block_reinforced_obsidian>,[
-	[<metaitem:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:plateDarkSteel>],
+	[<metaitem:nomilabs:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:nomilabs:plateDarkSteel>],
 	[<enderio:block_dark_iron_bars>,<armorplus:compressed_obsidian>,<enderio:block_dark_iron_bars>],
-	[<metaitem:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:plateDarkSteel>]]);
+	[<metaitem:nomilabs:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:nomilabs:plateDarkSteel>]]);
 	
 recipes.remove(<enderio:block_dark_iron_bars>);
 recipes.addShaped(<enderio:block_dark_iron_bars> * 8,[
-	[<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>],
-	[<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>]]);
+	[<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>],
+	[<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>]]);
 
 recipes.addShaped(<armorplus:compressed_obsidian>,[
 	[<minecraft:obsidian>,<minecraft:obsidian>,<minecraft:obsidian>],
@@ -120,19 +120,19 @@ recipes.addShaped(<armorplus:coal_boots>, [
 	
 //Ardite Armor
 recipes.addShaped(<armorplus:ardite_helmet>, [
-	[<metaitem:plateArdite>,<metaitem:plateArdite>,<metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>]]);
+	[<metaitem:nomilabs:plateArdite>,<metaitem:nomilabs:plateArdite>,<metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>]]);
 recipes.addShaped(<armorplus:ardite_chestplate>, [
-[<metaitem:plateArdite>, null, <metaitem:plateArdite>], 
-[<metaitem:plateArdite>, <metaitem:plateArdite>, <metaitem:plateArdite>], 
-[<metaitem:plateArdite>, <metaitem:plateArdite>, <metaitem:plateArdite>]]);
+[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>], 
+[<metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>], 
+[<metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>]]);
 recipes.addShaped(<armorplus:ardite_leggings>, [
-	[<metaitem:plateArdite>, <metaitem:plateArdite>, <metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>]]);
+	[<metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>]]);
 recipes.addShaped(<armorplus:ardite_boots>, [
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>]]);	
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>]]);	
 	
 //Cobalt Armor
 recipes.addShaped(<armorplus:cobalt_helmet>, [
@@ -152,19 +152,19 @@ recipes.addShaped(<armorplus:cobalt_boots>, [
 
 //Manyullyn Armor
 recipes.addShaped(<armorplus:manyullyn_helmet>, [
-	[<metaitem:plateManyullyn>,<metaitem:plateManyullyn>,<metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>]]);
+	[<metaitem:nomilabs:plateManyullyn>,<metaitem:nomilabs:plateManyullyn>,<metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>]]);
 recipes.addShaped(<armorplus:manyullyn_chestplate>, [
-[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>], 
-[<metaitem:plateManyullyn>, <metaitem:plateManyullyn>, <metaitem:plateManyullyn>], 
-[<metaitem:plateManyullyn>, <metaitem:plateManyullyn>, <metaitem:plateManyullyn>]]);
+[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>], 
+[<metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>], 
+[<metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>]]);
 recipes.addShaped(<armorplus:manyullyn_leggings>, [
-	[<metaitem:plateManyullyn>, <metaitem:plateManyullyn>, <metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>]]);
+	[<metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>]]);
 recipes.addShaped(<armorplus:manyullyn_boots>, [
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>]]);
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>]]);
 	
 //Iron Armor
 recipes.remove(<minecraft:iron_helmet>);
@@ -549,7 +549,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_chestplate>, [
 [<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
 [null,<metaitem:ingotNeutronium>,<draconicevolution:draconic_chest>,<armorplus:the_ultimate_chestplate>,<metaitem:qts.advanced_chestplate>,<armorplus:the_ultimate_chestplate>,<draconicevolution:wyvern_chest>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
-[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<metaitem:blockInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<metaitem:nomilabs:blockInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
 [null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null]]); 

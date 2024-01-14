@@ -57,9 +57,9 @@ recipes.addShaped(<nomilabs:alloywidget>, [
 
 //Ender Widget
 recipes.addShaped(<nomilabs:enderwidget>, [
-	[<enderio:item_item_conduit>, <metaitem:platePulsatingIron>, <enderio:item_redstone_conduit>],
-	[<metaitem:platePulsatingIron>, <metaitem:gearElectricalSteel>, <metaitem:platePulsatingIron>], 
-	[<enderio:item_power_conduit>, <metaitem:platePulsatingIron>, <enderio:item_liquid_conduit:1>]]);
+	[<enderio:item_item_conduit>, <metaitem:nomilabs:platePulsatingIron>, <enderio:item_redstone_conduit>],
+	[<metaitem:nomilabs:platePulsatingIron>, <metaitem:nomilabs:gearElectricalSteel>, <metaitem:nomilabs:platePulsatingIron>], 
+	[<enderio:item_power_conduit>, <metaitem:nomilabs:platePulsatingIron>, <enderio:item_liquid_conduit:1>]]);
 
 
 recipes.addShaped(<gregtech:rubber_sapling> * 64, [[<nomilabs:nomicoin5>, null, <nomilabs:nomicoin5>],[<nomilabs:nomicoin5>, null, null], [null, null, null]]);

@@ -382,7 +382,7 @@ microverse_projector_3.recipeBuilder()
     .EUt(250000)
     .inputs(<nomilabs:tiernineship>,
             <metaitem:neutron_reflector> * 8,
-            <metaitem:blockAwakenedDraconium> * 4,
+            <metaitem:nomilabs:blockAwakenedDraconium> * 4,
             <nomilabs:stellarcreationdata>)
     .outputs(<ore:nuggetNeutronium>.firstItem * 64,
              <ore:nuggetNeutronium>.firstItem * 64,
@@ -400,7 +400,7 @@ microverse_projector_3.recipeBuilder()
     .duration(3000)
     .EUt(250000)
     .inputs(<nomilabs:tiernineship>,
-            <metaitem:blockAwakenedDraconium> * 4,
+            <metaitem:nomilabs:blockAwakenedDraconium> * 4,
             <nomilabs:stellarcreationdata> * 64,
             <nomilabs:stellarcreationdata> * 64,
             <nomilabs:stellarcreationdata> * 64,

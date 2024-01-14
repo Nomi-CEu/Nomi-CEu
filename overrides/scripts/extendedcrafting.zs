@@ -403,7 +403,7 @@ mods.extendedcrafting.TableCrafting.addShaped(0, <extendedcrafting:singularity_u
 
 ////////////////////////// Crystal Matrix Ingot ///////////////////////
 recipes.remove(<avaritia:resource:1>);
-makeExtremeRecipe9(<metaitem:ingotCrystalMatrix>,
+makeExtremeRecipe9(<metaitem:nomilabs:ingotCrystalMatrix>,
     ["         ",
      "      DDD",
      "   DDDNAD",

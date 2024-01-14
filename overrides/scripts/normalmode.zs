@@ -103,7 +103,7 @@ recipes.addShaped(<meta_tile_entity:extruder.ev>, [
 
 
 
-recipes.addShapeless(<metaitem:dustConductiveIron>, [<metaitem:dustIron>,<minecraft:redstone>]);
+recipes.addShapeless(<metaitem:nomilabs:dustConductiveIron>, [<metaitem:dustIron>,<minecraft:redstone>]);
 
 // steam multis
 recipes.removeByRecipeName("gregtech:steam_oven");
@@ -363,7 +363,7 @@ recipes.addShaped(<enderio:item_item_conduit> * 4, [
 //ender fluid conduit - by hand
 recipes.addShaped(<enderio:item_liquid_conduit:2> * 4, [
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:wireGtSingleVibrantAlloy>], 
+	[<metaitem:nomilabs:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:nomilabs:wireGtSingleVibrantAlloy>], 
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
 
@@ -375,7 +375,7 @@ assembler.recipeBuilder()
 
 //ender fluid conduit - assembler
 assembler.recipeBuilder()
-    .inputs([<metaitem:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 6])
+    .inputs([<metaitem:nomilabs:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 6])
     .outputs([<enderio:item_liquid_conduit:2> * 8])
     .duration(80).EUt(16).buildAndRegister();
 
@@ -528,7 +528,7 @@ fluid_extractor.recipeBuilder()
 recipes.remove(<thermalexpansion:dynamo:5>);
 recipes.addShaped(<thermalexpansion:dynamo:5>, [
 	[null, <nomilabs:excitationcoil>, null],
-	[<metaitem:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:plateVibrantAlloy>],
+	[<metaitem:nomilabs:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:nomilabs:plateVibrantAlloy>],
 	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
 
 // Red Alloy
@@ -614,16 +614,16 @@ recipes.addShaped(<meta_tile_entity:distillation_tower>, [
 
 //Draconium [tier 14]
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline>*2000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline>*8000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
 //////////////////// Exotic Materials Catalyst ////////////////////////
 makeExtremeRecipe7(<nomilabs:exoticmaterialscatalyst>,
@@ -652,7 +652,7 @@ makeExtremeRecipe7(<nomilabs:exoticmaterialscatalyst>,
       P : <metaitem:ingotHssg>,
       Q : <metaitem:ingotHsse>,
       R : <metaitem:ingotHsss>,
-      S : <metaitem:ingotManyullyn>,
+      S : <metaitem:nomilabs:ingotManyullyn>,
       T : <ore:ingotMicroversium>,
       U : <ore:ingotElectrumFlux>,
       V : <simplyjetpacks:metaitemmods:3>,
@@ -671,7 +671,7 @@ electrolyzer.recipeBuilder()
 // HV Cutting Saw alternate
 recipes.addShaped(<metaitem:cutter.hv>, [
 	[<metaitem:cableGtSingleGold>, <ore:circuitHv>, <gregtech:transparent_casing>],
-	[<metaitem:conveyor.module.hv>, <metaitem:hull.hv>, <metaitem:toolHeadBuzzSawEndSteel>],
+	[<metaitem:conveyor.module.hv>, <metaitem:hull.hv>, <metaitem:nomilabs:toolHeadBuzzSawEndSteel>],
 	[<ore:circuitHv>, <metaitem:cableGtSingleGold>, <metaitem:electric.motor.hv>]
 ]);
 

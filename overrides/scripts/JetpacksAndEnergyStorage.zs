@@ -8,8 +8,8 @@ import scripts.common.makeShaped as makeShaped;
 //Conductive Iron Thruster
 recipes.remove(<simplyjetpacks:metaitemmods:7>);
 recipes.addShaped(<simplyjetpacks:metaitemmods:7>, [
-	[<metaitem:plateConductiveIron>, <enderio:item_power_conduit>, <metaitem:plateConductiveIron>],
-	[<metaitem:plateConductiveIron>, <extrautils2:ingredients>, <metaitem:plateConductiveIron>],
+	[<metaitem:nomilabs:plateConductiveIron>, <enderio:item_power_conduit>, <metaitem:nomilabs:plateConductiveIron>],
+	[<metaitem:nomilabs:plateConductiveIron>, <extrautils2:ingredients>, <metaitem:nomilabs:plateConductiveIron>],
 	[<ore:plateRedAlloy>,<ore:plateRedAlloy>,<ore:plateRedAlloy>]]);
 
 //Leadstone Thruster
@@ -22,8 +22,8 @@ recipes.addShaped(<simplyjetpacks:metaitemmods:26>, [
 //Electrical Steel Thruster
 recipes.remove(<simplyjetpacks:metaitemmods:8>);
 recipes.addShaped(<simplyjetpacks:metaitemmods:8>, [
-	[<metaitem:plateElectricalSteel>, <enderio:item_power_conduit>, <metaitem:plateElectricalSteel>],
-	[<metaitem:plateElectricalSteel>, <enderio:item_material:14>, <metaitem:plateElectricalSteel>],
+	[<metaitem:nomilabs:plateElectricalSteel>, <enderio:item_power_conduit>, <metaitem:nomilabs:plateElectricalSteel>],
+	[<metaitem:nomilabs:plateElectricalSteel>, <enderio:item_material:14>, <metaitem:nomilabs:plateElectricalSteel>],
 	[<ore:plateRedAlloy>,<simplyjetpacks:metaitemmods:7>,<ore:plateRedAlloy>]]);
 
 //Hardened Thruster
@@ -36,8 +36,8 @@ recipes.addShaped(<simplyjetpacks:metaitemmods:27>, [
 //Energetic Alloy Thruster
 recipes.remove(<simplyjetpacks:metaitemmods:9>);
 recipes.addShaped(<simplyjetpacks:metaitemmods:9>, [
-	[<metaitem:plateEnergeticAlloy>, <enderio:item_power_conduit:1>, <metaitem:plateEnergeticAlloy>],
-	[<metaitem:plateEnergeticAlloy>, <enderio:item_material:15>, <metaitem:plateEnergeticAlloy>],
+	[<metaitem:nomilabs:plateEnergeticAlloy>, <enderio:item_power_conduit:1>, <metaitem:nomilabs:plateEnergeticAlloy>],
+	[<metaitem:nomilabs:plateEnergeticAlloy>, <enderio:item_material:15>, <metaitem:nomilabs:plateEnergeticAlloy>],
 	[<metaitem:plateRedAlloy>,<simplyjetpacks:metaitemmods:8>,<metaitem:plateRedAlloy>]]);
 
 //Reinforced Thruster
@@ -50,8 +50,8 @@ recipes.addShaped(<simplyjetpacks:metaitemmods:28>, [
 //Vibrant Alloy Thruster
 recipes.remove(<simplyjetpacks:metaitemmods:10>);
 recipes.addShaped(<simplyjetpacks:metaitemmods:10>, [
-	[<metaitem:plateVibrantAlloy>, <enderio:item_power_conduit:2>, <metaitem:plateVibrantAlloy>],
-	[<metaitem:plateVibrantAlloy>, <enderio:item_material:19>, <metaitem:plateVibrantAlloy>],
+	[<metaitem:nomilabs:plateVibrantAlloy>, <enderio:item_power_conduit:2>, <metaitem:nomilabs:plateVibrantAlloy>],
+	[<metaitem:nomilabs:plateVibrantAlloy>, <enderio:item_material:19>, <metaitem:nomilabs:plateVibrantAlloy>],
 	[<metaitem:plateRedAlloy>,<simplyjetpacks:metaitemmods:9>,<metaitem:plateRedAlloy>]]);
 
 //Dark Soularium Thruster
@@ -113,9 +113,9 @@ canner.recipeBuilder()
 // basic capacitor bank
 recipes.remove(<enderio:block_cap_bank:1>);
 recipes.addShaped(<enderio:block_cap_bank:1>,  [
-	[<metaitem:plateDarkSteel>, <enderio:item_basic_capacitor>, <metaitem:plateDarkSteel>],
+	[<metaitem:nomilabs:plateDarkSteel>, <enderio:item_basic_capacitor>, <metaitem:nomilabs:plateDarkSteel>],
 	[<enderio:item_basic_capacitor>, <enderio:block_buffer:1>, <enderio:item_basic_capacitor>],
-	[<metaitem:plateDarkSteel>, <enderio:item_basic_capacitor>, <metaitem:plateDarkSteel>]]);
+	[<metaitem:nomilabs:plateDarkSteel>, <enderio:item_basic_capacitor>, <metaitem:nomilabs:plateDarkSteel>]]);
 
 
 // adds the existing power of both recipe ingredient capacitor banks to be placed into the resulting craft
@@ -133,17 +133,17 @@ val sumCapacitorBankPower as IRecipeFunction = function(out, ins, cInfo) {
 // advanced capacitor bank
 recipes.remove(<enderio:block_cap_bank:2>);
 recipes.addShaped(<enderio:block_cap_bank:2>,  [
-	[<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>],
+	[<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>],
 	[<enderio:block_cap_bank:1>.marked("left"), <enderio:item_basic_capacitor:1>, <enderio:block_cap_bank:1>.marked("right")],
-	[<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>]],
+	[<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>]],
 	sumCapacitorBankPower);
 
 // vibrant capacitor bank
 recipes.remove(<enderio:block_cap_bank:3>);
 recipes.addShaped(<enderio:block_cap_bank:3>,  [
-	[<metaitem:plateVibrantAlloy>,<metaitem:plateVibrantAlloy>,<metaitem:plateVibrantAlloy>],
+	[<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:plateVibrantAlloy>],
 	[<enderio:block_cap_bank:2>.marked("left"), <ore:itemVibrantCrystal>, <enderio:block_cap_bank:2>.marked("right")],
-	[<metaitem:plateVibrantAlloy>,<metaitem:plateVibrantAlloy>,<metaitem:plateVibrantAlloy>]],
+	[<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:plateVibrantAlloy>]],
 	sumCapacitorBankPower);
 
 //Conductive Iron Jetpack
@@ -199,8 +199,8 @@ recipes.addShaped(reinforcedjetpack, [
 //Vibrant Alloy Jetpack
 recipes.removeByRecipeName("simplyjetpacks:upgraderecipe4");
 recipes.addShaped(vibrantjetpack, [
-	[<metaitem:plateVibrantAlloy>,     compressedoctadiccap,               <metaitem:plateVibrantAlloy>],
-	[<metaitem:plateVibrantAlloy>,     energeticjetpack.marked("jetpack"), <metaitem:plateVibrantAlloy>],
+	[<metaitem:nomilabs:plateVibrantAlloy>,     compressedoctadiccap,               <metaitem:nomilabs:plateVibrantAlloy>],
+	[<metaitem:nomilabs:plateVibrantAlloy>,     energeticjetpack.marked("jetpack"), <metaitem:nomilabs:plateVibrantAlloy>],
 	[<simplyjetpacks:metaitemmods:10>, null,                               <simplyjetpacks:metaitemmods:10>]],
 	transferTag);
 
@@ -298,14 +298,14 @@ recipes.addShaped(<thermalexpansion:frame:130>, [
 	[<metaitem:plateElectrum>, <metaitem:stickElectrum>, <metaitem:plateElectrum>]]);
 
 recipes.addShaped(<thermalexpansion:frame:131>, [
-	[<metaitem:plateSignalum>, <metaitem:stickSignalum>, <metaitem:plateSignalum>],
-	[<metaitem:stickSignalum>, null, <metaitem:stickSignalum>],
-	[<metaitem:plateSignalum>, <metaitem:stickSignalum>, <metaitem:plateSignalum>]]);
+	[<metaitem:nomilabs:plateSignalum>, <metaitem:nomilabs:stickSignalum>, <metaitem:nomilabs:plateSignalum>],
+	[<metaitem:nomilabs:stickSignalum>, null, <metaitem:nomilabs:stickSignalum>],
+	[<metaitem:nomilabs:plateSignalum>, <metaitem:nomilabs:stickSignalum>, <metaitem:nomilabs:plateSignalum>]]);
 
 recipes.addShaped(<thermalexpansion:frame:132>, [
-	[<metaitem:plateEnderium>, <metaitem:stickEnderium>, <metaitem:plateEnderium>],
-	[<metaitem:stickEnderium>, null, <metaitem:stickEnderium>],
-	[<metaitem:plateEnderium>, <metaitem:stickEnderium>, <metaitem:plateEnderium>]]);
+	[<metaitem:nomilabs:plateEnderium>, <metaitem:nomilabs:stickEnderium>, <metaitem:nomilabs:plateEnderium>],
+	[<metaitem:nomilabs:stickEnderium>, null, <metaitem:nomilabs:stickEnderium>],
+	[<metaitem:nomilabs:plateEnderium>, <metaitem:nomilabs:stickEnderium>, <metaitem:nomilabs:plateEnderium>]]);
 
 // redstone cell frame (filled) => "micro miner engine core"
 alloy.recipeBuilder()

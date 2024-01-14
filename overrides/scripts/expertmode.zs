@@ -57,7 +57,7 @@ alloy.recipeBuilder()
 // Endervoir
 recipes.removeByRecipeName("enderio:reservoir");
 assembler.recipeBuilder()
-	.inputs([<ore:blockGlassHardened> * 18, <metaitem:plateDoubleEnergeticAlloy> * 3, <minecraft:cauldron>])
+	.inputs([<ore:blockGlassHardened> * 18, <metaitem:nomilabs:plateDoubleEnergeticAlloy> * 3, <minecraft:cauldron>])
 	.outputs(<enderio:block_reservoir> * 3)
 	.duration(100)
 	.EUt(30)
@@ -91,7 +91,7 @@ makeExtremeRecipe7(<nomilabs:tierfourandhalfship>,
 	  F : <thermalexpansion:frame:147>,
 	  G : <nomilabs:t1guidance>,
 	  L : <nomilabs:t2laser>,
-	  P : <metaitem:plateDoubleLumium>,
+	  P : <metaitem:nomilabs:plateDoubleLumium>,
 	  T : <simplyjetpacks:metaitemmods:9>,
 	  W : <metaitem:plateDoubleTungstenCarbide>,
 	  A : <metaitem:robot.arm.hv>,
@@ -224,7 +224,7 @@ recipes.addShaped(<enderio:item_item_conduit> * 4, [
 //ender fluid conduit - by hand
 recipes.addShaped(<enderio:item_liquid_conduit:2> * 4, [
 	[<ore:itemConduitBinder>, <metaitem:foilPolyvinylChloride>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:wireGtSingleVibrantAlloy>], 
+	[<metaitem:nomilabs:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:nomilabs:wireGtSingleVibrantAlloy>], 
 	[<ore:itemConduitBinder>, <metaitem:foilPolyvinylChloride>, <ore:itemConduitBinder>]]);
 
 
@@ -236,7 +236,7 @@ assembler.recipeBuilder()
 
 //ender fluid conduit - assembler
 assembler.recipeBuilder()
-    .inputs([<metaitem:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 4, <metaitem:foilPolyvinylChloride> * 2])
+    .inputs([<metaitem:nomilabs:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 4, <metaitem:foilPolyvinylChloride> * 2])
     .outputs([<enderio:item_liquid_conduit:2> * 8])
     .duration(80).EUt(16).buildAndRegister();
 
@@ -413,19 +413,19 @@ assembly_line.recipeBuilder()
     .duration(800).EUt(122880).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<metaitem:hull.uhv>, <draconicevolution:draconic_staff_of_power>, <nomilabs:t3laser> * 12, <metaitem:frameBerkelium> * 12, <metaitem:sensor.uv> * 12, <metaitem:conveyor.module.uv> * 24, <metaitem:fluid.regulator.uv> * 24, <metaitem:cableGtSingleEuropium> * 12, <metaitem:gearAwakenedDraconium> * 12)
+    .inputs(<metaitem:hull.uhv>, <draconicevolution:draconic_staff_of_power>, <nomilabs:t3laser> * 12, <metaitem:frameBerkelium> * 12, <metaitem:sensor.uv> * 12, <metaitem:conveyor.module.uv> * 24, <metaitem:fluid.regulator.uv> * 24, <metaitem:cableGtSingleEuropium> * 12, <metaitem:nomilabs:gearAwakenedDraconium> * 12)
     .fluidInputs(<liquid:concrete> * 2304, <liquid:taranium> * 576)
     .outputs(<metaitem:large_miner.luv>)
     .duration(800).EUt(1966080).buildAndRegister();
 
 //Draconium [tier 14]
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
 // Dimethylformamide
 large_chemical_reactor.recipeBuilder()
@@ -438,7 +438,7 @@ large_chemical_reactor.recipeBuilder()
 <recipemap:circuit_assembler>.findRecipe(30720, [<metaitem:board.multilayer.fiber_reinforced> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <metaitem:circuit.mainframe>, <metaitem:foilNiobiumTitanium> * 16], [<liquid:sterilized_growth_medium> * 4000]).remove();
 
 circuit_assembler.recipeBuilder()
-    .inputs(<metaitem:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <ore:circuitIv>, <metaitem:foilNiobiumTitanium> * 16)
+    .inputs(<metaitem:nomilabs:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <ore:circuitIv>, <metaitem:foilNiobiumTitanium> * 16)
     .fluidInputs(<liquid:sterilized_growth_medium> * 4000)
     .outputs(<metaitem:board.wetware> * 16)
 	.property("cleanroom", "sterile_cleanroom")
@@ -446,14 +446,14 @@ circuit_assembler.recipeBuilder()
 
 chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:dimethylbenzene> * 1000, <liquid:chloromethane> * 1000)
-    .outputs(<metaitem:dustDurene> * 24)
+    .outputs(<metaitem:nomilabs:dustDurene> * 24)
     .fluidOutputs(<liquid:hydrochloric_acid> * 1000)
     .duration(120).EUt(120).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
-    .inputs(<metaitem:dustDurene> * 12)
+    .inputs(<metaitem:nomilabs:dustDurene> * 12)
     .fluidInputs(<liquid:oxygen> * 6000)
-    .outputs(<metaitem:dustPyromelliticDianhydride> * 9)
+    .outputs(<metaitem:nomilabs:dustPyromelliticDianhydride> * 9)
     .fluidOutputs(<liquid:water> * 3000)
     .duration(100).EUt(480).buildAndRegister();
 
@@ -467,13 +467,13 @@ large_chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:aminophenol> * 1000, <liquid:nitrochlorobenzene> * 1000, <liquid:water> * 1000)
     .notConsumable(<metaitem:dustSaltpeter>)
     .notConsumable(<liquid:dimethylformamide>)
-    .outputs(<metaitem:dustOxydianiline> * 27)
+    .outputs(<metaitem:nomilabs:dustOxydianiline> * 27)
     .fluidOutputs(<liquid:oxygen> * 3000, <liquid:hydrochloric_acid> * 1000)
     .duration(200).EUt(21000).buildAndRegister();
 
 alloy_smelter.recipeBuilder()
-    .inputs(<metaitem:dustOxydianiline> * 3, <metaitem:dustPyromelliticDianhydride> * 2)
-    .outputs(<metaitem:ingotKaptonK>)
+    .inputs(<metaitem:nomilabs:dustOxydianiline> * 3, <metaitem:nomilabs:dustPyromelliticDianhydride> * 2)
+    .outputs(<metaitem:nomilabs:ingotKaptonK>)
     .duration(30).EUt(7680).buildAndRegister();
 
 //////////////////// Exotic Materials Catalyst ////////////////////////
@@ -503,7 +503,7 @@ makeExtremeRecipe7(<nomilabs:exoticmaterialscatalyst>,
       P : <metaitem:ingotHssg>,
       Q : <metaitem:ingotHsse>,
       R : <metaitem:ingotHsss>,
-      S : <metaitem:ingotManyullyn>,
+      S : <metaitem:nomilabs:ingotManyullyn>,
       T : <ore:ingotMicroversium>,
       U : <ore:ingotElectrumFlux>,
       V : <simplyjetpacks:metaitemmods:3>,

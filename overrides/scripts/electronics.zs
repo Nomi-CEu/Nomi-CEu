@@ -33,58 +33,58 @@ recipes.remove(<enderio:item_endergy_conduit:4>);
 
 recipes.addShaped(<enderio:item_power_conduit> * 3, [									//Conductive Iron Conduit
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleConductiveIron>,<metaitem:wireGtSingleConductiveIron>,<metaitem:wireGtSingleConductiveIron>],
+	[<metaitem:nomilabs:wireGtSingleConductiveIron>,<metaitem:nomilabs:wireGtSingleConductiveIron>,<metaitem:nomilabs:wireGtSingleConductiveIron>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleConductiveIron> * 3, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit> * 4]).duration(80).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleConductiveIron> * 3, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit> * 4]).duration(80).EUt(16).buildAndRegister();
 
 recipes.addShaped(<enderio:item_power_conduit:1> * 3, [									//Energetic Alloy Conduit
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleEnergeticAlloy>,<enderio:item_power_conduit>,<metaitem:wireGtSingleEnergeticAlloy>], 
+	[<metaitem:nomilabs:wireGtSingleEnergeticAlloy>,<enderio:item_power_conduit>,<metaitem:nomilabs:wireGtSingleEnergeticAlloy>], 
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleEnergeticAlloy> * 2, <enderio:item_power_conduit>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleEnergeticAlloy> * 2, <enderio:item_power_conduit>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();
 
 recipes.addShaped(<enderio:item_power_conduit:2> * 3, [									//vibrant alloy conduit
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleVibrantAlloy>,<enderio:item_power_conduit:1>,<metaitem:wireGtSingleVibrantAlloy>], 
+	[<metaitem:nomilabs:wireGtSingleVibrantAlloy>,<enderio:item_power_conduit:1>,<metaitem:nomilabs:wireGtSingleVibrantAlloy>], 
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleVibrantAlloy> * 2, <enderio:item_power_conduit:1>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:2> * 4]).duration(80).EUt(16).buildAndRegister();	
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleVibrantAlloy> * 2, <enderio:item_power_conduit:1>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:2> * 4]).duration(80).EUt(16).buildAndRegister();	
 
 //recipes.addShaped(<enderio:item_endergy_conduit:1> * 3, [									//End Steel Conduit
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-//	[<metaitem:wireGtSingleEndSteel>,<enderio:item_power_conduit:2>,<metaitem:wireGtSingleEndSteel>], 
+//	[<metaitem:nomilabs:wireGtSingleEndSteel>,<enderio:item_power_conduit:2>,<metaitem:nomilabs:wireGtSingleEndSteel>], 
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleEndSteel> * 2, <enderio:item_power_conduit:2>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();	
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleEndSteel> * 2, <enderio:item_power_conduit:2>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();	
 
 //recipes.addShaped(<enderio:item_endergy_conduit:6> * 3, [
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-//	[<metaitem:wireGtSingleLumium>,<enderio:item_endergy_conduit:1> ,<metaitem:wireGtSingleLumium>], 
+//	[<metaitem:nomilabs:wireGtSingleLumium>,<enderio:item_endergy_conduit:1> ,<metaitem:nomilabs:wireGtSingleLumium>], 
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleLumium> * 2, <enderio:item_endergy_conduit:1> , <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:6> * 4]).duration(80).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleLumium> * 2, <enderio:item_endergy_conduit:1> , <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:6> * 4]).duration(80).EUt(16).buildAndRegister();
 
 //recipes.addShaped(<enderio:item_endergy_conduit:4> * 3, [
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-//	[<metaitem:wireGtSingleSignalum>,<enderio:item_endergy_conduit:6>,<metaitem:wireGtSingleSignalum>], 
+//	[<metaitem:nomilabs:wireGtSingleSignalum>,<enderio:item_endergy_conduit:6>,<metaitem:nomilabs:wireGtSingleSignalum>], 
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleSignalum> * 2, <enderio:item_endergy_conduit:6>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:4> * 4]).duration(80).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleSignalum> * 2, <enderio:item_endergy_conduit:6>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:4> * 4]).duration(80).EUt(16).buildAndRegister();
 
 //recipes.addShaped(<enderio:item_endergy_conduit> * 3, [
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-//	[<metaitem:wireGtSingleEnderium>,<enderio:item_endergy_conduit:4>,<metaitem:wireGtSingleEnderium>], 
+//	[<metaitem:nomilabs:wireGtSingleEnderium>,<enderio:item_endergy_conduit:4>,<metaitem:nomilabs:wireGtSingleEnderium>], 
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleEnderium>* 2, <enderio:item_endergy_conduit:4>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit> * 4]).duration(80).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleEnderium>* 2, <enderio:item_endergy_conduit:4>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit> * 4]).duration(80).EUt(16).buildAndRegister();
 
 //recipes.addShaped(<enderio:item_endergy_conduit:10> * 3, [
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-//	[<metaitem:wireGtSingleDraconium>,<enderio:item_endergy_conduit>,<metaitem:wireGtSingleDraconium>], 
+//	[<metaitem:nomilabs:wireGtSingleDraconium>,<enderio:item_endergy_conduit>,<metaitem:nomilabs:wireGtSingleDraconium>], 
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleDraconium>* 2, <enderio:item_endergy_conduit>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:10> * 4]).duration(80).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleDraconium>* 2, <enderio:item_endergy_conduit>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:10> * 4]).duration(80).EUt(16).buildAndRegister();
 
 //MAX Tier - Superconductor
 //recipes.addShaped(<enderio:item_endergy_conduit:11> * 3, [
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-//	[<metaitem:wireGtSingleDraconicSuperconductor>,<enderio:item_endergy_conduit:10>,<metaitem:wireGtSingleDraconicSuperconductor>], 
+//	[<metaitem:nomilabs:wireGtSingleDraconicSuperconductor>,<enderio:item_endergy_conduit:10>,<metaitem:nomilabs:wireGtSingleDraconicSuperconductor>], 
 //	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-assembler.recipeBuilder().inputs([<metaitem:wireGtSingleDraconicSuperconductor>* 2, <enderio:item_endergy_conduit:10>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:11> * 4]).duration(80).EUt(16).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:nomilabs:wireGtSingleDraconicSuperconductor>* 2, <enderio:item_endergy_conduit:10>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:11> * 4]).duration(80).EUt(16).buildAndRegister();
 
 //redstone conduit - by hand
 recipes.addShaped(<enderio:item_redstone_conduit> * 4, [
@@ -243,7 +243,7 @@ recipes.addShaped(<metaitem:board.coated> * 3, [
 // Workstation * 1
 <recipemap:circuit_assembler>.findRecipe(120, [<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <metaitem:component.diode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltBlueAlloy> * 16], [<liquid:tin> * 288]).remove();
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltVibrantAlloy> * 16])
+	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:nomilabs:boltVibrantAlloy> * 16])
 	.fluidInputs([<liquid:tin> * 288])
 	.outputs(<metaitem:circuit.workstation>)
 	.duration(400)
@@ -251,7 +251,7 @@ circuit_assembler.recipeBuilder()
 	.property("cleanroom", "cleanroom")
 	.buildAndRegister();
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltVibrantAlloy> * 16])
+	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:nomilabs:boltVibrantAlloy> * 16])
 	.fluidInputs([<liquid:soldering_alloy> * 144])
 	.outputs(<metaitem:circuit.workstation>)
 	.duration(400)
@@ -340,7 +340,7 @@ macerator.recipeBuilder()
 <recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:soldering_alloy> * 144]).remove();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:tin> * 288)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
@@ -349,7 +349,7 @@ circuit_assembler.recipeBuilder()
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:soldering_alloy> * 144)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
@@ -358,7 +358,7 @@ circuit_assembler.recipeBuilder()
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:tin> * 288)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
@@ -367,7 +367,7 @@ circuit_assembler.recipeBuilder()
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
+	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
 	.fluidInputs(<liquid:soldering_alloy> * 144)
 	.outputs(<metaitem:circuit.nano_computer>)
 	.duration(200)
@@ -381,7 +381,7 @@ circuit_assembler.recipeBuilder()
 <recipemap:circuit_assembler>.findRecipe(9600, [<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineNiobiumTitanium> * 32], [<liquid:tin> * 288]).remove();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineEnderium> * 32])
+	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:nomilabs:wireFineEnderium> * 32])
 	.fluidInputs(<liquid:tin> * 288)
 	.outputs(<metaitem:circuit.crystal_computer>)
 	.duration(400)
@@ -390,7 +390,7 @@ circuit_assembler.recipeBuilder()
 	.buildAndRegister();
 
 circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineEnderium> * 32])
+	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:nomilabs:wireFineEnderium> * 32])
 	.fluidInputs(<liquid:soldering_alloy> * 144)
 	.outputs(<metaitem:circuit.crystal_computer>)
 	.duration(400)

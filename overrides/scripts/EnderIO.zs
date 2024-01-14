@@ -95,7 +95,7 @@ for item in teBalls {
 
 // Blank Dark Steel Upgrade
 alloy.recipeBuilder()
-    .inputs([<metaitem:plateDarkSteel>, <ore:dustPulsating>])
+    .inputs([<metaitem:nomilabs:plateDarkSteel>, <ore:dustPulsating>])
     .outputs([<enderio:item_dark_steel_upgrade>])
     .duration(100)
     .EUt(20)
@@ -191,7 +191,7 @@ alloy.recipeBuilder()
 
 // Dark steel rod + grains of infinity => infinity rod
 alloy.recipeBuilder()
-    .inputs([<metaitem:stickDarkSteel>,<enderio:item_material:20>])
+    .inputs([<metaitem:nomilabs:stickDarkSteel>,<enderio:item_material:20>])
     .outputs([<enderio:item_material:71>])
     .duration(200).EUt(30).buildAndRegister();
 
@@ -209,7 +209,7 @@ alloy.recipeBuilder()
 
 // End steel plate + industrial machine chassis => end steel chassis
 alloy.recipeBuilder()
-    .inputs([<enderio:item_material:1>,<metaitem:plateEndSteel> * 8])
+    .inputs([<enderio:item_material:1>,<metaitem:nomilabs:plateEndSteel> * 8])
     .outputs([<enderio:item_material:66>])
     .duration(800).EUt(30).buildAndRegister();
 
@@ -217,27 +217,27 @@ alloy.recipeBuilder()
 recipes.remove(<enderio:item_travel_staff>);
 recipes.addShaped(<enderio:item_travel_staff>, [
     [null,null,<enderio:item_material:15>],
-    [null,<metaitem:stickDarkSteel>,null],
-    [<metaitem:stickDarkSteel>,null,null]]);
+    [null,<metaitem:nomilabs:stickDarkSteel>,null],
+    [<metaitem:nomilabs:stickDarkSteel>,null,null]]);
 
 //Rod of Return
 recipes.remove(<enderio:item_rod_of_return>);
 recipes.addShaped(<enderio:item_rod_of_return>, [
     [null, <ore:itemPulsatingCrystal>, <ore:itemEnderCrystal>],
-    [null, <metaitem:stickDarkSteel>, <ore:itemPulsatingCrystal>],
-    [<metaitem:stickDarkSteel>, null, null]]);
+    [null, <metaitem:nomilabs:stickDarkSteel>, <ore:itemPulsatingCrystal>],
+    [<metaitem:nomilabs:stickDarkSteel>, null, null]]);
 
 //Ender Generator
 recipes.remove(<enderio:block_ender_generator>);
 recipes.addShaped(<enderio:block_ender_generator>, [
-    [<metaitem:plateEndSteel>,<metaitem:plateEndSteel>, <metaitem:plateEndSteel>],
+    [<metaitem:nomilabs:plateEndSteel>,<metaitem:nomilabs:plateEndSteel>, <metaitem:nomilabs:plateEndSteel>],
     [<appliedenergistics2:quartz_vibrant_glass>, <ore:skullEnderResonator>, <appliedenergistics2:quartz_vibrant_glass>],
-    [<metaitem:gearEndSteel>, <metaitem:plateEndSteel>, <metaitem:gearEndSteel>]]);
+    [<metaitem:nomilabs:gearEndSteel>, <metaitem:nomilabs:plateEndSteel>, <metaitem:nomilabs:gearEndSteel>]]);
 
 //Wireless Dish
 recipes.remove(<enderio:item_material:65>);
 recipes.addShaped(<enderio:item_material:65>,
-    [[<metaitem:emitter.lv>],[<metaitem:stickElectricalSteel>]]);
+    [[<metaitem:emitter.lv>],[<metaitem:nomilabs:stickElectricalSteel>]]);
 
 recipes.remove(<enderio:item_material>); // simple machine chassis
 recipes.remove(<enderio:item_material:66>); // end steel chassis
@@ -294,20 +294,20 @@ recipes.addShaped(<enderio:block_buffer:1>,  [
 //Zombie Generator
 recipes.remove(<enderio:block_zombie_generator>);
 recipes.addShaped(<enderio:block_zombie_generator>, [
-    [<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>],
+    [<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>],
     [<appliedenergistics2:quartz_vibrant_glass>,<enderio:item_material:41>,<appliedenergistics2:quartz_vibrant_glass>],
-    [<metaitem:gearPulsatingIron>,<metaitem:plateElectricalSteel>,<metaitem:gearPulsatingIron>]]);
+    [<metaitem:nomilabs:gearPulsatingIron>,<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:gearPulsatingIron>]]);
 
 recipes.remove(<enderio:block_franken_zombie_generator>);
 recipes.addShaped(<enderio:block_franken_zombie_generator>, [
     [<ore:plateSoularium>, <ore:plateSoularium>, <ore:plateSoularium>],
     [<ore:skullZombieFrankenstein>, <enderio:block_zombie_generator>, <ore:skullZombieFrankenstein>],
-    [<metaitem:gearElectricalSteel>, <ore:plateSoularium>, <metaitem:gearElectricalSteel>]]);
+    [<metaitem:nomilabs:gearElectricalSteel>, <ore:plateSoularium>, <metaitem:nomilabs:gearElectricalSteel>]]);
 
 //The Vat
 recipes.remove(<enderio:block_vat>);
 recipes.addShaped(<enderio:block_vat>, [
-    [<metaitem:plateDarkSteel>, <minecraft:cauldron>, <metaitem:plateDarkSteel>],
+    [<metaitem:nomilabs:plateDarkSteel>, <minecraft:cauldron>, <metaitem:nomilabs:plateDarkSteel>],
     [<enderio:block_tank>, <ore:itemMachineChassi>, <enderio:block_tank>],
     [<metaitem:electric.pump.mv>, <morefurnaces:furnaceblock:3>, <metaitem:electric.pump.mv>]]);
 
@@ -316,21 +316,21 @@ recipes.remove(<appliedenergistics2:quartz_fixture>);
 recipes.addShaped(<appliedenergistics2:quartz_fixture> * 4, [
     [<appliedenergistics2:quartz_glass>,<appliedenergistics2:quartz_glass>,<appliedenergistics2:quartz_glass>],
     [<appliedenergistics2:material:1>,<appliedenergistics2:material:1>,<appliedenergistics2:material:1>],
-    [<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>,<metaitem:plateElectricalSteel>]]);
+    [<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>,<metaitem:nomilabs:plateElectricalSteel>]]);
 
 //Wired Charger
 recipes.remove(<enderio:block_wired_charger>);
 recipes.addShaped(<enderio:block_wired_charger> , [
-    [<metaitem:plateDarkSteel>, <appliedenergistics2:charger>, <metaitem:plateDarkSteel>],
+    [<metaitem:nomilabs:plateDarkSteel>, <appliedenergistics2:charger>, <metaitem:nomilabs:plateDarkSteel>],
     [<enderio:item_power_conduit>, <enderio:item_material:1>, <enderio:item_power_conduit>],
-    [<metaitem:plateElectricalSteel>,<enderio:item_power_conduit>,<metaitem:plateElectricalSteel>]]);
+    [<metaitem:nomilabs:plateElectricalSteel>,<enderio:item_power_conduit>,<metaitem:nomilabs:plateElectricalSteel>]]);
 
 //Coordinate Selector
 recipes.remove(<enderio:item_coord_selector>);
 recipes.addShaped(<enderio:item_coord_selector> , [
-    [<metaitem:emitter.mv>, <metaitem:blockEnderEye>, <metaitem:plateElectricalSteel>], //Ender Eye Block
-    [null, <enderio:item_material:13>, <metaitem:plateElectricalSteel>],
-    [null,null,<metaitem:plateElectricalSteel>]]);
+    [<metaitem:emitter.mv>, <metaitem:blockEnderEye>, <metaitem:nomilabs:plateElectricalSteel>], //Ender Eye Block
+    [null, <enderio:item_material:13>, <metaitem:nomilabs:plateElectricalSteel>],
+    [null,null,<metaitem:nomilabs:plateElectricalSteel>]]);
 
 recipes.remove(<enderio:item_material:11>); // infinity bimetal gear
 recipes.remove(<enderio:item_material:12>); // energized bimetal gear
@@ -402,14 +402,14 @@ alloy.recipeBuilder()
 
 recipes.remove(<enderio:block_travel_anchor>);
 recipes.addShaped(<enderio:block_travel_anchor>, [
-    [<metaitem:plateDarkSteel>,<metaitem:plateVibrantAlloy>,<metaitem:plateDarkSteel>],
-    [<metaitem:plateVibrantAlloy>,<enderio:item_material:14>,<metaitem:plateVibrantAlloy>],
-    [<metaitem:plateDarkSteel>,<metaitem:plateVibrantAlloy>,<metaitem:plateDarkSteel>]]);
+    [<metaitem:nomilabs:plateDarkSteel>,<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:plateDarkSteel>],
+    [<metaitem:nomilabs:plateVibrantAlloy>,<enderio:item_material:14>,<metaitem:nomilabs:plateVibrantAlloy>],
+    [<metaitem:nomilabs:plateDarkSteel>,<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:plateDarkSteel>]]);
 recipes.remove(<enderio:block_tele_pad>);
 recipes.addShaped(<enderio:block_tele_pad>, [
     [<appliedenergistics2:quartz_vibrant_glass>,<appliedenergistics2:quartz_vibrant_glass>,<appliedenergistics2:quartz_vibrant_glass>],
-    [<metaitem:plateDarkSteel>,<enderio:block_travel_anchor>,<metaitem:plateDarkSteel>],
-    [<metaitem:plateDarkSteel>,<enderio:item_basic_capacitor:2>,<metaitem:plateDarkSteel>]]);
+    [<metaitem:nomilabs:plateDarkSteel>,<enderio:block_travel_anchor>,<metaitem:nomilabs:plateDarkSteel>],
+    [<metaitem:nomilabs:plateDarkSteel>,<enderio:item_basic_capacitor:2>,<metaitem:nomilabs:plateDarkSteel>]]);
 
 recipes.removeByRecipeName("enderio:enhanced_combustion_generator");
 recipes.removeByRecipeName("enderio:enhanced_wired_charger");
@@ -418,26 +418,26 @@ recipes.removeByRecipeName("enderio:the_enhanced_vat");
 //Killer Joe
 recipes.remove(<enderio:block_killer_joe>);
 recipes.addShaped(<enderio:block_killer_joe>, [
-    [<metaitem:plateDarkSteel>,<metaitem:plateDarkSteel>,<metaitem:plateDarkSteel>],
+    [<metaitem:nomilabs:plateDarkSteel>,<metaitem:nomilabs:plateDarkSteel>,<metaitem:nomilabs:plateDarkSteel>],
     [<armorplus:infused_lava_sword>, <ore:skullZombieFrankenstein>, <armorplus:infused_lava_sword>  ],
     [<ore:gearDraconium>, <enderio:block_tank:1>, <ore:gearDraconium>]]);
 
 recipes.remove(<enderio:block_dark_steel_trapdoor>);
 recipes.addShaped(<enderio:block_dark_steel_trapdoor>, [
-    [<metaitem:plateDarkSteel>,<metaitem:plateDarkSteel>],
-    [<metaitem:plateDarkSteel>,<metaitem:plateDarkSteel>]]);
+    [<metaitem:nomilabs:plateDarkSteel>,<metaitem:nomilabs:plateDarkSteel>],
+    [<metaitem:nomilabs:plateDarkSteel>,<metaitem:nomilabs:plateDarkSteel>]]);
 
 recipes.remove(<enderio:item_xp_transfer>);
 recipes.addShaped(<enderio:item_xp_transfer>, [
     [null,null,<enderio:item_material:15>],
-    [null,<metaitem:stickVibrantAlloy>,null],
-    [<metaitem:stickVibrantAlloy>,null,null]]);
+    [null,<metaitem:nomilabs:stickVibrantAlloy>,null],
+    [<metaitem:nomilabs:stickVibrantAlloy>,null,null]]);
 
 recipes.remove(<enderio:block_xp_vacuum>);
 recipes.addShaped(<enderio:block_xp_vacuum>, [
-    [<metaitem:plateDarkSteel>, <metaitem:plateDarkSteel>, <metaitem:plateDarkSteel>],
-    [<metaitem:plateDarkSteel>, <enderio:item_xp_transfer>, <metaitem:plateDarkSteel>],
-    [<metaitem:plateDarkSteel>, <ore:itemPulsatingCrystal>, <metaitem:plateDarkSteel>]]);
+    [<metaitem:nomilabs:plateDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <metaitem:nomilabs:plateDarkSteel>],
+    [<metaitem:nomilabs:plateDarkSteel>, <enderio:item_xp_transfer>, <metaitem:nomilabs:plateDarkSteel>],
+    [<metaitem:nomilabs:plateDarkSteel>, <ore:itemPulsatingCrystal>, <metaitem:nomilabs:plateDarkSteel>]]);
 
 
 // Slice'n'Splice
@@ -486,7 +486,7 @@ for i, wafer in wafers {
 //Wireless Dish
 recipes.remove(<enderio:item_material:65>);
 recipes.addShaped(<enderio:item_material:65>,
-    [[<metaitem:emitter.lv>],[<metaitem:stickElectricalSteel>]]);
+    [[<metaitem:emitter.lv>],[<metaitem:nomilabs:stickElectricalSteel>]]);
 
 recipes.remove(<enderio:item_material>); // simple machine chassis
 recipes.remove(<enderio:item_material:66>); // end steel chassis
@@ -507,8 +507,8 @@ alloy.recipeBuilder()
 
 // Z-Logic Controller (Cheap)
 recipes.addShaped(<enderio:item_material:41>, [
-    [<metaitem:ingotSoularium>,<minecraft:skull:2> ,<metaitem:ingotSoularium>],
-    [<metaitem:ingotSoularium>,<ore:circuitMv> ,<metaitem:ingotSoularium>],
+    [<metaitem:nomilabs:ingotSoularium>,<minecraft:skull:2> ,<metaitem:nomilabs:ingotSoularium>],
+    [<metaitem:nomilabs:ingotSoularium>,<ore:circuitMv> ,<metaitem:nomilabs:ingotSoularium>],
     [<metaitem:wafer.silicon>, <metaitem:blockRedAlloy>,<metaitem:wafer.silicon>]
 ]);
 

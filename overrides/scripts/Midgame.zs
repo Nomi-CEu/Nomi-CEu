@@ -83,21 +83,21 @@ recipes.addShaped(<redstonearsenal:material:224> * 4, [
 
 //Manyullyn
 mixer.recipeBuilder()
-    .outputs(<metaitem:dustManyullyn> * 4)
-    .inputs([<metaitem:dustArdite> * 4, <metaitem:dustCobalt> * 4, <ore:dustMana>])
+    .outputs(<metaitem:nomilabs:dustManyullyn> * 4)
+    .inputs([<metaitem:nomilabs:dustArdite> * 4, <metaitem:dustCobalt> * 4, <ore:dustMana>])
     .duration(400).EUt(30).buildAndRegister();
 
 //Ardite
 mixer.recipeBuilder()
-    .outputs(<metaitem:dustArdite> * 4)
+    .outputs(<metaitem:nomilabs:dustArdite> * 4)
     .inputs([<metaitem:dustRedSteel> * 3, <minecraft:blaze_powder>])
     .duration(200).EUt(30).buildAndRegister();
 
 // Draconic Superconductor
 vacuum_freezer.recipeBuilder()
-	.inputs(<metaitem:wireGtSingleDraconium>)
+	.inputs(<metaitem:nomilabs:wireGtSingleDraconium>)
 	.fluidInputs(<liquid:nether_star> * 144)
-	.outputs(<metaitem:wireGtSingleDraconicSuperconductor>)
+	.outputs(<metaitem:nomilabs:wireGtSingleDraconicSuperconductor>)
 	.duration(100)
 	.EUt(6000)
 	.buildAndRegister();

@@ -218,7 +218,7 @@ makeExtremeRecipe9(<nomilabs:tiersevenship>,
 );
 
 assembly_line.recipeBuilder()
-	.inputs([<metaitem:frameMicroversium>, <ore:plateEnderium> * 6, <draconicevolution:item_dislocation_inhibitor>, <draconicevolution:magnet:1>, <ore:plateCrystalMatrix> * 2, <metaitem:field.generator.iv> * 2, <simplyjetpacks:metaitemmods:30> * 2, <simplyjetpacks:metaitemmods:11>])
+	.inputs([<metaitem:nomilabs:frameMicroversium>, <ore:plateEnderium> * 6, <draconicevolution:item_dislocation_inhibitor>, <draconicevolution:magnet:1>, <ore:plateCrystalMatrix> * 2, <metaitem:field.generator.iv> * 2, <simplyjetpacks:metaitemmods:30> * 2, <simplyjetpacks:metaitemmods:11>])
 	.fluidInputs(<liquid:soldering_alloy> * 1152)
 	.outputs(<nomilabs:warpengine>)
 	.property("research", <draconicevolution:item_dislocation_inhibitor>)
@@ -329,7 +329,7 @@ makeShaped("of_aa_block_xp_solidifier", <actuallyadditions:block_xp_solidifier>,
 	["AAA",
 	 "ABA",
 	 "AAA"],
-	{ A : <metaitem:plateVibrantAlloy>,
+	{ A : <metaitem:nomilabs:plateVibrantAlloy>,
 	  B : <meta_tile_entity:fluid_solidifier.hv> }
 );
 <actuallyadditions:item_solidified_experience>.addTooltip(

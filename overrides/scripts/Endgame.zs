@@ -226,7 +226,7 @@ recipes.addShaped(<metaitem:charger.uhv>, [
 // Rhodium Plated Palladium Dust * 4
 <recipemap:mixer>.findRecipe(7680, [<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 mixer.recipeBuilder()
-    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:nomilabs:dustLumium> * 2])
     .circuit(1)
     .outputs(<metaitem:dustRhodiumPlatedPalladium> * 6)
     .duration(400)
@@ -237,7 +237,7 @@ mixer.recipeBuilder()
 <recipemap:centrifuge>.findRecipe(30, [<metaitem:dustRhodiumPlatedPalladium> * 4], null).remove();
 centrifuge.recipeBuilder()
     .inputs(<metaitem:dustRhodiumPlatedPalladium> * 6)
-    .outputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .outputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:nomilabs:dustLumium> * 2])
     .duration(630)
     .EUt(30)
     .buildAndRegister();
@@ -247,7 +247,7 @@ centrifuge.recipeBuilder()
 // Molten Rhodium Plated Palladium * 576
 //<recipemap:alloy_blast_smelter>.findRecipe(7680, [<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 alloy_blast_smelter.recipeBuilder()
-    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:nomilabs:dustLumium> * 2])
     .circuit(3)
     .fluidOutputs(<liquid:molten.rhodium_plated_palladium> * 864)
     .property("temperature", 4500)
@@ -255,7 +255,7 @@ alloy_blast_smelter.recipeBuilder()
     .EUt(7680)
     .buildAndRegister();
 alloy_blast_smelter.recipeBuilder()
-    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:dustLumium> * 2])
+    .inputs([<metaitem:dustPalladium> * 3, <metaitem:dustRhodium>, <metaitem:nomilabs:dustLumium> * 2])
     .fluidInputs(<liquid:argon> * 300)
     .circuit(13)
     .fluidOutputs(<liquid:molten.rhodium_plated_palladium> * 864)

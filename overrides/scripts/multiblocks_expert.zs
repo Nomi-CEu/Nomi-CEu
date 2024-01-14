@@ -638,7 +638,7 @@ microverse_projector_3.recipeBuilder()
     .EUt(250000)
     .inputs(<nomilabs:tiernineship>,
             <metaitem:neutron_reflector> * 8,
-            <metaitem:blockAwakenedDraconium> * 4,
+            <metaitem:nomilabs:blockAwakenedDraconium> * 4,
             <nomilabs:stellarcreationdata>)
     .outputs(<ore:nuggetNeutronium>.firstItem * 64,
              <ore:nuggetNeutronium>.firstItem * 64,
@@ -656,7 +656,7 @@ microverse_projector_3.recipeBuilder()
     .duration(3000)
     .EUt(250000)
     .inputs(<nomilabs:tiernineship>,
-            <metaitem:blockAwakenedDraconium> * 4,
+            <metaitem:nomilabs:blockAwakenedDraconium> * 4,
             <nomilabs:stellarcreationdata> * 64,
             <nomilabs:stellarcreationdata> * 64,
             <nomilabs:stellarcreationdata> * 64,
@@ -1133,7 +1133,7 @@ universal_crystallizer.recipeBuilder()
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:gemPerfectDiamond> * 3, <minecraft:nether_star> * 9, <ore:plateDiamond> * 27, <ore:gemDiamond> * 27)
-    .outputs(<metaitem:ingotCrystalMatrix>)
+    .outputs(<metaitem:nomilabs:ingotCrystalMatrix>)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
     .duration(3).EUt(23592960).buildAndRegister();
 
@@ -1144,13 +1144,13 @@ universal_crystallizer.recipeBuilder()
     .duration(30).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
-    .inputs(<minecraft:nether_star>, <draconicevolution:wyvern_core> * 4, <metaitem:blockAwakenedDraconium> * 2)
+    .inputs(<minecraft:nether_star>, <draconicevolution:wyvern_core> * 4, <metaitem:nomilabs:blockAwakenedDraconium> * 2)
     .outputs(<draconicevolution:awakened_core>)
     .fluidInputs(<liquid:naquadah_enriched> * 30)
     .duration(30).EUt(23592960).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:blockDraconium> * 5, <draconicevolution:wyvern_core> * 4, <draconicevolution:dragon_heart> * 2)
-    .outputs(<metaitem:blockAwakenedDraconium> * 5)
+    .outputs(<metaitem:nomilabs:blockAwakenedDraconium> * 5)
     .fluidInputs(<liquid:naquadah_enriched> * 30)
     .duration(30).EUt(23592960).buildAndRegister();

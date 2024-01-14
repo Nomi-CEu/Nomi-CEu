@@ -2,12 +2,12 @@ import mods.gregtech.recipe.RecipeMap;
 
 recipes.remove(<draconicevolution:draconic_core>);
 recipes.addShaped(<draconicevolution:draconic_core>, [
-	[<metaitem:ingotDraconium>, <ore:ingotTungstenCarbide>, <metaitem:ingotDraconium>],
+	[<metaitem:nomilabs:ingotDraconium>, <ore:ingotTungstenCarbide>, <metaitem:nomilabs:ingotDraconium>],
 	[<ore:ingotTungstenCarbide>, <actuallyadditions:block_crystal_empowered:1>, <ore:ingotTungstenCarbide>], 
-	[<metaitem:ingotDraconium>, <ore:ingotTungstenCarbide>, <metaitem:ingotDraconium>]]);
+	[<metaitem:nomilabs:ingotDraconium>, <ore:ingotTungstenCarbide>, <metaitem:nomilabs:ingotDraconium>]]);
 
 assembler.recipeBuilder()
-	.inputs(<metaitem:ingotDraconium> * 4, <ore:ingotTungstenCarbide> * 4, <actuallyadditions:block_crystal_empowered:1>)
+	.inputs(<metaitem:nomilabs:ingotDraconium> * 4, <ore:ingotTungstenCarbide> * 4, <actuallyadditions:block_crystal_empowered:1>)
 	.outputs(<draconicevolution:draconic_core>)
 	.duration(100).EUt(16).buildAndRegister();
 
@@ -128,10 +128,10 @@ assembly_line.recipeBuilder()
 	.duration(1200).EUt(30720).buildAndRegister();
 
 
-recipes.addShapeless(<metaitem:dustDraconium>, [<draconicevolution:draconium_dust>]);
+recipes.addShapeless(<metaitem:nomilabs:dustDraconium>, [<draconicevolution:draconium_dust>]);
 
 // Hacky fix for broken DE stuff
-//<ore:ingotDraconiumAwakened>.add(<metaitem:ingotAwakenedDraconium>);
+//<ore:ingotDraconiumAwakened>.add(<metaitem:nomilabs:ingotAwakenedDraconium>);
 
 <draconicevolution:draconic_ingot>.displayName = "Activated Awakened Draconium Ingot";
 <draconicevolution:draconium_block>.displayName = "Activated Draconium Block";
@@ -142,12 +142,12 @@ recipes.removeByRecipeName("draconicevolution:draconium_ingot_1");
 recipes.removeByRecipeName("draconicevolution:draconium_block");
 
 // Conversion Recipes
-recipes.addShapeless(<metaitem:blockDraconium>, [<draconicevolution:draconium_block>]);
-recipes.addShapeless(<metaitem:blockAwakenedDraconium>, [<draconicevolution:draconic_block>]);
+recipes.addShapeless(<metaitem:nomilabs:blockDraconium>, [<draconicevolution:draconium_block>]);
+recipes.addShapeless(<metaitem:nomilabs:blockAwakenedDraconium>, [<draconicevolution:draconic_block>]);
 
 /*
 chemical_bath.recipeBuilder()
-	.inputs(<metaitem:blockDraconium>)
+	.inputs(<metaitem:nomilabs:blockDraconium>)
 	.fluidInputs(<liquid:americium> * 432)
 	.outputs(<draconicevolution:draconium_block>)
 	.duration(200)
@@ -155,7 +155,7 @@ chemical_bath.recipeBuilder()
 	.buildAndRegister();
 
 chemical_bath.recipeBuilder()
-	.inputs(<metaitem:blockAwakenedDraconium>)
+	.inputs(<metaitem:nomilabs:blockAwakenedDraconium>)
 	.fluidInputs(<liquid:einsteinium> * 1296)
 	.outputs(<draconicevolution:draconic_block>)
 	.duration(200)
