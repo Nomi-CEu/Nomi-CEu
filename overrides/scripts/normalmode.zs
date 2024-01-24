@@ -8,9 +8,6 @@ import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 import scripts.common.makeShapeless3 as makeShapeless3;
-import scripts.common.removeMaterial as removeMaterial;
-import scripts.common.removeMaterialSolid as removeMaterialSolid;
-import scripts.common.removeMaterialFluid as removeMaterialFluid;
 
 //Nether Cake
 recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustNetherrack>,<metaitem:dustNetherrack>,<metaitem:dustNetherrack>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<minecraft:soul_sand>,<minecraft:soul_sand>,<minecraft:soul_sand>]]);
@@ -716,16 +713,6 @@ large_chemical_reactor.recipeBuilder()
 	.circuit(25)
 	.duration(300).EUt(7680).buildAndRegister();
 
-// Assembly Control Casing
-recipes.remove(<gregtech:multiblock_casing:3>);
-recipes.addShaped(<gregtech:multiblock_casing:3> * 4, [
-    [<ore:circuitLuv>, <metaitem:plate.high_power_integrated_circuit>, <ore:circuitLuv>],
-    [<metaitem:sensor.iv>, <metaitem:frameTungstenSteel>, <metaitem:emitter.iv>],
-    [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
-]);
-
-// Recycling recipes in groovy
-
 // Nq+ and Nq*
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<nomilabs:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
 
@@ -827,69 +814,7 @@ mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_steel>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_bronze>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
 
-// Materials
-removeMaterialSolid(32032);
-removeMaterialSolid(32033);
-removeMaterialSolid(32034);
-removeMaterialSolid(32035);
-//removeMaterialSolid(32036);
-removeMaterialSolid(32037);
-removeMaterialSolid(32038);
-removeMaterialSolid(32039);
-removeMaterialSolid(32040);
-removeMaterialSolid(32041);
-removeMaterialSolid(32042);
-removeMaterialSolid(32043);
-removeMaterialSolid(32044);
-removeMaterialSolid(32045);
-removeMaterialSolid(32049);
-removeMaterialSolid(32051);
-removeMaterialSolid(32052);
-removeMaterialSolid(32055);
-removeMaterialSolid(32057);
-removeMaterialSolid(32058);
-removeMaterialSolid(32059);
-removeMaterialSolid(32060);
-removeMaterialSolid(32061);
-removeMaterialSolid(32066);
-removeMaterialSolid(32067);
-removeMaterialSolid(32068);
-removeMaterialSolid(32069);
-removeMaterialSolid(32071);
-removeMaterialSolid(32072);
-removeMaterialSolid(32073);
-removeMaterialSolid(32074);
-removeMaterialSolid(32075);
-removeMaterialSolid(32076);
-removeMaterialSolid(32077);
-removeMaterialSolid(32078);
-removeMaterialSolid(32079);
-removeMaterialSolid(32080);
-removeMaterialSolid(32081);
-removeMaterialSolid(32083);
-removeMaterialSolid(32084);
-removeMaterialSolid(32085);
-removeMaterialSolid(32087);
-removeMaterialSolid(32088);
-removeMaterialSolid(32093);
-removeMaterialSolid(32096);
-removeMaterialSolid(32097);
-removeMaterialSolid(32098);
-removeMaterialSolid(32099);
-removeMaterialSolid(32100);
-removeMaterialSolid(32109);
-
-removeMaterialFluid(32046, [<liquid:hydrogen_peroxide>]);
-removeMaterialFluid(32047, [<liquid:hydrazine>]);
-removeMaterialFluid(32048, [<liquid:acetone_azine>]);
-removeMaterialFluid(32050, [<liquid:kapton_k>]);
-removeMaterialFluid(32053, [<liquid:dimethylformamide>]);
-removeMaterialFluid(32054, [<liquid:aminophenol>]);
-removeMaterialFluid(32056, [<liquid:antimony_pentafluoride>]);
-removeMaterialFluid(32062, [<liquid:neocryolite>]);
-removeMaterialFluid(32063, [<liquid:naquadah_oxide_petro_solution>]);
-removeMaterialFluid(32064, [<liquid:naquadah_oxide_aero_solution>]);
-removeMaterialFluid(32065, [<liquid:hot_naquadah_oxide_neocryolite_solution>]);
+// HM Material Removals (Moved to Groovy)
 
 // Half Ships
 mods.jei.JEI.removeAndHide(<nomilabs:tierfourandhalfship>);

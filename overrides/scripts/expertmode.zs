@@ -621,26 +621,6 @@ assembly_line.recipeBuilder()
     .outputs(<nomilabs:tieroneship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
-// Assembly Control Casing
-recipes.remove(<gregtech:multiblock_casing:3>);
-recipes.addShaped(<gregtech:multiblock_casing:3>, [
-    [<ore:circuitLuv>, <metaitem:plate.high_power_integrated_circuit>, <ore:circuitLuv>],
-    [<metaitem:sensor.iv>, <metaitem:frameTungstenSteel>, <metaitem:emitter.iv>],
-    [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
-]);
-
-// Recycling recipes in groovy
-
-// Assembly Line Casing
-recipes.remove(<gregtech:multiblock_casing:4>);
-recipes.addShaped(<gregtech:multiblock_casing:4>, [
-    [<ore:plateSteel>, <ore:gearRuridit>, <ore:plateSteel>],
-    [<metaitem:robot.arm.iv>, <metaitem:frameTungstenSteel>, <metaitem:robot.arm.iv>],
-    [<ore:plateSteel>, <ore:gearRuridit>, <ore:plateSteel>]
-]);
-
-// Recycling recipes in groovy
-
 // Remove shortcut recipes
 recipes.remove(<minecraft:stick> * 16);
 recipes.removeByRecipeName("appliedenergistics2:misc/vanilla_comparator");

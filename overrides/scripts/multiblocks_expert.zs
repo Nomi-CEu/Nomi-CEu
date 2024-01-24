@@ -2,7 +2,6 @@
 
 import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeShaped as makeShaped;
-import scripts.common.absolute_int as absolute_int;
 
 // Hide Normal Mode Controllers
 mods.jei.JEI.removeAndHide(<metaitem:nomilabs:creative_tank_provider>);

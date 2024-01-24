@@ -1,7 +1,6 @@
 #packmode normal
 
 import scripts.common.makeShaped as makeShaped;
-import scripts.common.absolute_int as absolute_int;
 
 // Hide Hard Mode Controllers
 mods.jei.JEI.removeAndHide(<metaitem:nomilabs:actualization_chamber>);

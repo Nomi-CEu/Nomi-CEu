@@ -426,11 +426,10 @@ blitzEntity.addPlayerOnlyDrop(<metaitem:dustSaltpeter> % 80, 0, 2); // 80% is ar
 recipes.addShapeless(<metaitem:dustSaltpeter>, [<thermalfoundation:material:772>]);
 
 // Temporary Conversion recipe between gt and thermal mana infused
-recipes.addShapeless(<thermalfoundation:material:136>, [<gregtech:meta_ingot:32021>]);
-recipes.addShapeless(<thermalfoundation:material:72>, [<gregtech:meta_dust:32021>]);
+recipes.addShapeless(<thermalfoundation:material:136>, [<metaitem:nomilabs:ingotMithril>]);
+recipes.addShapeless(<thermalfoundation:material:72>, [<metaitem:nomilabs:dustMithril>]);
 
-// Hide GT Mana infused
-scripts.common.removeMaterialSolid(32021);
+// Hide GT Mana infused (Moved to Groovy)
 
 //Remove Unobtainable Satchel and Void Satchel Recipe
 
