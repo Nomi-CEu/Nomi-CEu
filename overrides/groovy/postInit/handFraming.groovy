@@ -35,7 +35,7 @@ for (ItemStack stack : items) {
                     [front ? item("xtones:zane", 15) : null, stack, null],
                     [null, null, null]
             ])
-            addRecipeOutputTooltip(recipeStack, recipeName,
+            addRecipeOutputTooltip(recipeStack, resource(recipeName),
                     translate("tooltip.hand_framing.top_left"),
                     translate("tooltip.hand_framing.top_right"),
                     translate("tooltip.hand_framing.bottom_left"))
@@ -44,9 +44,14 @@ for (ItemStack stack : items) {
 }
 
 static String getRecipeName(ItemStack stack, boolean trim, boolean front) {
-    String baseName = "hand_framing_" + stack.getItem().getRegistryName().toString() + "." + stack.getMetadata() + "_side"
-    if (trim) baseName = baseName.concat("_trim")
-    if (front) baseName = baseName.concat("_front")
+    String baseName = "nomiceu:hand_framing_"
+
+    if (stack.getItem().getRegistryName() != null)
+        baseName = baseName + stack.getItem().getRegistryName().getNamespace() + "_" + stack.getItem().getRegistryName().getPath()
+
+    baseName = baseName + "." + stack.getMetadata() + "_side"
+    if (trim) baseName = baseName + "_trim"
+    if (front) baseName = baseName + "_front"
     return baseName
 }
 
