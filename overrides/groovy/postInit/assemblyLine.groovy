@@ -2,15 +2,7 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.ingredients.GTRecipeFluidInput
 
 import static gregtech.api.recipes.RecipeMaps.*
-
-// World Accelerator HV
-ASSEMBLY_LINE_RECIPES.recipeBuilder()
-    .inputs(metaitem('hull.luv'), metaitem('field.generator.luv') * 64, metaitem('field.generator.luv') * 16, metaitem('sensor.luv') * 20, metaitem('emitter.luv') * 20, ore('circuitLuv') * 16, metaitem('plateDoubleIridium') * 4, metaitem('nomilabs:plateDenseDraconium') * 2)
-    .fluidInputs(fluid('soldering_alloy') * 1152, fluid('enderium') * 1152)
-    .outputs(metaitem('world_accelerator.hv'))
-    .stationResearch(b -> b.researchStack(item('minecraft:clock')).CWUt(4))
-    .duration(6000).EUt(30720)
-    .buildAndRegister()
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
 
 // ZPM Field Generator (Add Awakened Draconium to Required Fluids)
 ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -38,15 +30,6 @@ ASSEMBLY_LINE_RECIPES.recipeBuilder()
     .duration(3000).EUt(30720)
     .buildAndRegister()
 
-// Naquadah Reactor 1
-ASSEMBLY_LINE_RECIPES.recipeBuilder()
-    .inputs(metaitem('cover.screen'), item('appliedenergistics2:spatial_pylon') * 3, ore('circuitZpm'), item('gregtech:transparent_casing', 1) * 2)
-    .fluidInputs(fluid('soldering_alloy') * 1152, fluid('omnium') * 32)
-    .outputs(metaitem('nomilabs:naquadah_reactor_1'))
-    .stationResearch(b -> b.researchStack(metaitem('boltNaquadah')).CWUt(16))
-    .duration(1500).EUt(122880)
-    .buildAndRegister()
-
 // Rotary Hearth Furnace
 if (LabsModeHelper.normal) {
     ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -56,6 +39,7 @@ if (LabsModeHelper.normal) {
         .stationResearch(b -> b.researchStack(metaitem('electric_blast_furnace')).CWUt(16))
         .duration(1200).EUt(30720)
         .buildAndRegister()
+    changeStackRecycling(metaitem('gcym:mega_blast_furnace'), [metaitem('electric_blast_furnace'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('springNaquadahAlloy') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 } else {
     ASSEMBLY_LINE_RECIPES.recipeBuilder()
         .inputs(metaitem('electric_blast_furnace'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('springTritanium') * 4, metaitem('plateTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
@@ -64,6 +48,7 @@ if (LabsModeHelper.normal) {
         .stationResearch(b -> b.researchStack(metaitem('electric_blast_furnace')).CWUt(128).EUt(1966080))
         .duration(1200).EUt(491520)
         .buildAndRegister()
+    changeStackRecycling(metaitem('gcym:mega_blast_furnace'), [metaitem('electric_blast_furnace'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('springTritanium') * 4, metaitem('plateTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 }
 
 // Bulk Blast Chiller
@@ -75,6 +60,7 @@ if (LabsModeHelper.normal) {
         .stationResearch(b -> b.researchStack(metaitem('vacuum_freezer')).CWUt(16))
         .duration(1200).EUt(30720)
         .buildAndRegister()
+    changeStackRecycling(metaitem('gcym:mega_vacuum_freezer'), [metaitem('vacuum_freezer'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('pipeNormalFluidNaquadah') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 } else {
     ASSEMBLY_LINE_RECIPES.recipeBuilder()
         .inputs(metaitem('vacuum_freezer'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('pipeNormalFluidDuranium') * 4, metaitem('plateDenseTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
@@ -83,15 +69,17 @@ if (LabsModeHelper.normal) {
         .stationResearch(b -> b.researchStack(metaitem('vacuum_freezer')).CWUt(128).EUt(1966080))
         .duration(1200).EUt(491520)
         .buildAndRegister()
+    changeStackRecycling(metaitem('gcym:mega_vacuum_freezer'), [metaitem('vacuum_freezer'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('pipeNormalFluidDuranium') * 4, metaitem('plateDenseTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 }
-// World Accelerator EV
+
+// Naquadah Reactor 1
 ASSEMBLY_LINE_RECIPES.recipeBuilder()
-    .inputs(metaitem('hull.zpm'), metaitem('field.generator.zpm') * 64, metaitem('field.generator.zpm') * 16, metaitem('sensor.zpm') * 20, metaitem('emitter.zpm') * 20, ore('circuitZpm') * 16, metaitem('plateDoubleEuropium') * 4, metaitem('nomilabs:plateDenseDraconium') * 2)
-    .fluidInputs(fluid('soldering_alloy') * 1152, fluid('enderium') * 1152)
-    .outputs(metaitem('world_accelerator.ev'))
-    .stationResearch(b -> b.researchStack(metaitem('world_accelerator.hv')).CWUt(32).EUt(122880))
-    .duration(12000).EUt(122880)
-    .buildAndRegister()
+        .inputs(metaitem('cover.screen'), item('appliedenergistics2:spatial_pylon') * 3, ore('circuitZpm'), item('gregtech:transparent_casing', 1) * 2)
+        .fluidInputs(fluid('soldering_alloy') * 1152, fluid('omnium') * 32)
+        .outputs(metaitem('nomilabs:naquadah_reactor_1'))
+        .stationResearch(b -> b.researchStack(metaitem('boltNaquadah')).CWUt(16))
+        .duration(1500).EUt(122880)
+        .buildAndRegister()
 
 // Naquadah Reactor 2
 ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -156,15 +144,6 @@ if (LabsModeHelper.expert) {
         .duration(1200).EUt(1966080)
         .buildAndRegister()
 }
-
-// World Accelerator IV
-ASSEMBLY_LINE_RECIPES.recipeBuilder()
-    .inputs(metaitem('hull.uv'), metaitem('field.generator.uv') * 64, metaitem('field.generator.uv') * 16, metaitem('sensor.uv') * 20, metaitem('emitter.uv') * 20, ore('circuitUv') * 16, metaitem('plateDoubleEuropium') * 4, metaitem('plateDenseNeutronium') * 2)
-    .fluidInputs(fluid('soldering_alloy') * 1152, fluid('enderium') * 1152, fluid('naquadria') * 576)
-    .outputs(metaitem('world_accelerator.iv'))
-    .stationResearch(b -> b.researchStack(metaitem('world_accelerator.ev')).CWUt(128).EUt(491520))
-    .duration(12000).EUt(491520)
-    .buildAndRegister()
 
 // UV Field Generator (Hard mode only)
 if (LabsModeHelper.expert) {

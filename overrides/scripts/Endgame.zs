@@ -174,47 +174,9 @@ makeShaped("of_omnium_trimmed_black_steel",
 //Add conversion recipe
 recipes.addShapeless(<avaritia:resource:3>, [<metaitem:nuggetNeutronium>]);
 
+//Processing Array (Moved to Groovy)
 
-
-//Processing Array
-recipes.remove(<metaitem:processing_array>);
-makeShaped("of_processing_array", <metaitem:processing_array>,
-    ["CSC",
-     "AHA",
-     "CBC"],
-     { A : <metaitem:robot.arm.iv>, //Robot Arm (IV)
-       H : <meta_tile_entity:hull.iv>, //Machine Hull (IV)
-       C : <ore:circuitLuv>, //T6 Circuit
-       S : <advsolars:sunnarium>, //Sunnarium
-       B : <metaitem:tool.dataorb>}); //dataorb
-
-// Titanium Ingot * 26
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:processing_array>], [<liquid:oxygen> * 3102]).remove();
-// Titanium Dust * 26
-<recipemap:macerator>.findRecipe(8, [<metaitem:processing_array>], null).remove();
-
-
-
-// UHV Batbufs
-recipes.addShaped(<metaitem:battery_buffer.uhv.4>, [
-    [<metaitem:wireGtQuadrupleEuropium>, <ore:chestWood>, <metaitem:wireGtQuadrupleEuropium>],
-    [<metaitem:wireGtQuadrupleEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtQuadrupleEuropium>]
-]);
-recipes.addShaped(<metaitem:battery_buffer.uhv.8>, [
-    [<metaitem:wireGtOctalEuropium>, <ore:chestWood>, <metaitem:wireGtOctalEuropium>],
-    [<metaitem:wireGtOctalEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtOctalEuropium>]
-]);
-recipes.addShaped(<metaitem:battery_buffer.uhv.16>, [
-    [<metaitem:wireGtHexEuropium>, <ore:chestWood>, <metaitem:wireGtHexEuropium>],
-    [<metaitem:wireGtHexEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtHexEuropium>]
-]);
-
-// UHV Turbo Charger
-recipes.addShaped(<metaitem:charger.uhv>, [
-    [<metaitem:wireGtQuadrupleEuropium>, <ore:chestWood>, <metaitem:wireGtQuadrupleEuropium>], 
-    [<metaitem:wireGtQuadrupleEuropium>, <metaitem:hull.uhv>, <metaitem:wireGtQuadrupleEuropium>],
-    [<metaitem:cableGtSingleEuropium>, <ore:circuitUhv>, <metaitem:cableGtSingleEuropium>]
-]);
+// UHV Batbufs & Turbo Charger (Moved to Groovy)
 
 // Assembly Line
 
@@ -283,20 +245,7 @@ recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.luv");
 recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.zpm");
 recipes.removeByRecipeName("gregtech:gregtech.machine.world_accelerator.uv");
 
-// Mercury Barium Calcium Cuprate Ingot * 32
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.hv>], [<liquid:oxygen> * 3896]).remove();
-// Mercury Barium Calcium Cuprate Dust * 32
-<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.hv>], null).remove();
-// Uranium Triplatinum Ingot * 32
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.ev>], [<liquid:oxygen> * 9149]).remove();
-// Uranium Triplatinum Dust * 32
-<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.ev>], null).remove();
-// Tungstensteel Ingot * 32
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:world_accelerator.iv>], [<liquid:oxygen> * 7502]).remove();
-// Tungstensteel Dust * 32
-<recipemap:macerator>.findRecipe(32, [<metaitem:world_accelerator.iv>], null).remove();
-
-// Moved to Groovy
+// Recipes & Recycling Moved to Groovy
 
 /* UHV Multis */
 // Rotary Hearth Furnace

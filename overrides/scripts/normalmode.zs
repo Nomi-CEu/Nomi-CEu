@@ -672,38 +672,7 @@ recipes.addShaped(<metaitem:cutter.hv>, [
 	[<ore:circuitHv>, <metaitem:cableGtSingleGold>, <metaitem:electric.motor.hv>]
 ]);
 
-// Sterilizing Filter
-recipes.removeByRecipeName("gregtech:blacklight");
-recipes.addShaped(<metaitem:blacklight>, [
-	[<metaitem:screwTungstenCarbide>, <metaitem:plateTungstenCarbide>, <metaitem:screwTungstenCarbide>],
-	[null, <metaitem:springHssg>, null],
-	[<ore:circuitIv>, <metaitem:plateTungstenCarbide>, <metaitem:cableGtSinglePlatinum>]
-]);
-recipes.removeByRecipeName("gregtech:filter_casing_sterile");
-recipes.addShaped(<gregtech:cleanroom_casing:2>, [
-	[<metaitem:pipeLargeFluidPolybenzimidazole>, <metaitem:emitter.luv>, <metaitem:pipeLargeFluidPolybenzimidazole>],
-	[<metaitem:item_filter>, <metaitem:blacklight>, <metaitem:item_filter>],
-	[<metaitem:electric.motor.luv>, <ore:frameGtBlackSteel>, <metaitem:rotorIridium>]
-]);
-
-// Replace recycling recipes
-//<recipemap:arc_furnace>.findRecipe(30, [<gregtech:cleanroom_casing:2>], [<liquid:oxygen> * 1265]).remove();
-<recipemap:macerator>.findRecipe(32, [<gregtech:cleanroom_casing:2>], null).remove();
-
-arc_furnace.recipeBuilder()
-	.inputs([<gregtech:cleanroom_casing:2>])
-	.fluidInputs([<liquid:oxygen> * 1265])
-	.outputs([<metaitem:ingotIridium> * 4, <metaitem:ingotBlackSteel> * 2, <metaitem:dustSmallAsh> * 6])
-	.duration(691)
-	.EUt(30)
-	.buildAndRegister();
-	
-macerator.recipeBuilder()
-	.inputs([<gregtech:cleanroom_casing:2>])
-	.outputs([<metaitem:dustPolybenzimidazole> * 12, <metaitem:dustIridium> * 4, <metaitem:dustBlackSteel> * 2])
-	.duration(696)
-	.EUt(32)
-	.buildAndRegister();
+// Sterilizing Filter (Moved to Groovy)
 
 // Butadiene
 large_chemical_reactor.recipeBuilder()
@@ -719,41 +688,7 @@ mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
 
 // Recycling recipe replacements
-// RHF
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_blast_furnace>], [<liquid:oxygen> * 20786]).remove();
-<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_blast_furnace>], null).remove();
-arc_furnace.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_blast_furnace>)
-	.fluidInputs(<liquid:oxygen> * 20786)
-	.outputs(<metaitem:ingotNaquadahAlloy> * 20, <metaitem:ingotInvar> * 4, <metaitem:ingotUraniumRhodiumDinaquadide> * 2, <metaitem:ingotTin>)
-	.duration(20786)
-	.EUt(30)
-	.buildAndRegister();
-
-macerator.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_blast_furnace>)
-	.outputs(<metaitem:dustStone> * 24, <metaitem:dustNaquadahAlloy> * 20, <metaitem:dustInvar> * 4, <metaitem:dustRubber> * 2)
-	.duration(20786)
-	.EUt(30)
-	.buildAndRegister();
-
-// BBC
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_vacuum_freezer>], [<liquid:oxygen> * 26976]).remove();
-<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_vacuum_freezer>], null).remove();
-arc_furnace.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
-	.fluidInputs(<liquid:oxygen> * 26976)
-	.outputs(<metaitem:ingotNaquadahAlloy> * 18, <metaitem:ingotStainlessSteel> * 12, <metaitem:ingotElectrum> * 12, <metaitem:blockSteel>)
-	.duration(26976)
-	.EUt(30)
-	.buildAndRegister();
-
-macerator.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
-	.outputs(<metaitem:dustNaquadahAlloy> * 18, <metaitem:dustSmallRubber> * 50, <metaitem:dustSmallSteel> * 49, <metaitem:dustStainlessSteel> * 12)
-	.duration(25408)
-	.EUt(32)
-	.buildAndRegister();
+// RHF & BBC (moved to Groovy)
 
 // I/O Buses
 // Removals in Groovy

@@ -145,17 +145,7 @@ assembler.recipeBuilder()
 //Wood Pulp
 recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:toolMortar>]);	
 
-//Pyrolyse Oven
-recipes.removeByRecipeName("gregtech:pyrolyse_oven");	
-// Aluminium Ingot * 21
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:pyrolyse_oven>], [<liquid:oxygen> * 2160]).remove();
-// Aluminium Dust * 21
-<recipemap:macerator>.findRecipe(8, [<metaitem:pyrolyse_oven>], null).remove();
-
-recipes.addShaped(<meta_tile_entity:pyrolyse_oven>, [
-	[<metaitem:electric.piston.lv>, <ore:circuitLv>, <ore:wireGtQuadrupleCupronickel>], 
-	[<ore:circuitLv>, <meta_tile_entity:hull.ulv>, <ore:circuitLv>], 
-	[<metaitem:electric.piston.lv>, <metaitem:electric.pump.lv>, <ore:wireGtQuadrupleCupronickel>]]);
+//Pyrolyse Oven (moved to groovy)
 
 //// LV Casing
 //recipes.removeByRecipeName("gregtech:casing.lv");
@@ -262,35 +252,7 @@ circuit_assembler.recipeBuilder()
 // topaz lens oredict
 <ore:craftingLensOrange>.add(<metaitem:lensTopaz>);
 
-// HV coil
-// High Voltage Coil * 1
-<recipemap:assembler>.findRecipe(480, [<metaitem:stickSteelMagnetic>, <metaitem:wireFineBlackSteel> * 16, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
-assembler.recipeBuilder()
-	.inputs(<metaitem:stickSteelMagnetic>, <metaitem:wireFineSilver> * 16)
-	.circuit(1)
-	.outputs(<metaitem:voltage_coil.hv>)
-	.duration(200)
-	.EUt(480)
-	.buildAndRegister();
-
-// Replace Recycling Recipes
-// Coil
-//<recipemap:arc_furnace>.findRecipe(30, [<metaitem:voltage_coil.hv>], [<liquid:oxygen> * 152]).remove();
-<recipemap:macerator>.findRecipe(8, [<metaitem:voltage_coil.hv>], null).remove();
-arc_furnace.recipeBuilder()
-	.inputs(<metaitem:voltage_coil.hv>)
-	.fluidInputs(<liquid:oxygen> * 152)
-	.outputs(<metaitem:ingotSilver> * 2, <metaitem:nuggetSteel> * 4)
-	.duration(152)
-	.EUt(30)
-	.buildAndRegister();
-
-macerator.recipeBuilder()
-	.inputs(<metaitem:voltage_coil.hv>)
-	.outputs(<metaitem:dustSilver> * 2, <metaitem:dustSmallSteelMagnetic> * 2)
-	.duration(156)
-	.EUt(8)
-	.buildAndRegister();
+// HV coil (Moved to Groovy)
 
 // Energy Hatch
 //<recipemap:arc_furnace>.findRecipe(30, [<metaitem:energy_hatch.input.hv>], [<liquid:oxygen> * 984]).remove();

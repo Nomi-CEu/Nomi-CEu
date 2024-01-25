@@ -1,7 +1,11 @@
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
+import net.minecraft.item.ItemStack
+
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeOutputTooltip
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translate
 
 // Hand Framing Tool
-crafting.addShaped(item("nomilabs:hand_framing_tool"), [
+crafting.addShaped("hand_framing_tool_recipe", item("nomilabs:hand_framing_tool"), [
         [null, null, item("storagedrawers:framingtable")],
         [null, item("minecraft:stick"), null],
         [item("minecraft:stick"), null, null]
@@ -24,26 +28,34 @@ List<ItemStack> items = [
 for (ItemStack stack : items) {
     for (boolean trim : [true, false]) {
         for (boolean front : [true, false]) {
-            crafting.addShaped(addNBT(stack, trim, front), [
+            def recipeName = getRecipeName(stack, trim, front)
+            def recipeStack = addNBT(stack, trim, front)
+            crafting.addShaped(recipeName, recipeStack, [
                     [item("xtones:zane"), trim ? item("extendedcrafting:storage", 4) : null, null],
                     [front ? item("xtones:zane", 15) : null, stack, null],
                     [null, null, null]
             ])
+            addRecipeOutputTooltip(recipeStack, recipeName,
+                    translate("tooltip.hand_framing.top_left"),
+                    translate("tooltip.hand_framing.top_right"),
+                    translate("tooltip.hand_framing.bottom_left"))
         }
     }
 }
 
-ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
+static String getRecipeName(ItemStack stack, boolean trim, boolean front) {
+    String baseName = "hand_framing_" + stack.getItem().getRegistryName().toString() + "." + stack.getMetadata() + "_side"
+    if (trim) baseName = baseName.concat("_trim")
+    if (front) baseName = baseName.concat("_front")
+    return baseName
+}
+
+static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
     def sideStack = item("xtones:zane")
     def trimStack = trim ? item("extendedcrafting:storage", 4) : ItemStack.EMPTY
     def frontStack = front ? item("xtones:zane", 15) : ItemStack.EMPTY
 
     stack = ((IFrameable) stack.getItem()).decorate(stack.copy(), sideStack, trimStack, frontStack)
-
-    NBTTagCompound compound = stack.getTagCompound() ?: new NBTTagCompound()
-
-    compound.setBoolean("labs-needs-hand-framing-description", true)
-    stack.setTagCompound(compound)
 
     return stack
 }
