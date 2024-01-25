@@ -1330,18 +1330,14 @@ for oreDictEntry, items in miscDisabled {
 <ore:blockCoalCoke>.add(<metaitem:blockCoke>);
 
 //Ores
-<ore:oreIron>.add(<minecraft:iron_ore>);
-<ore:oreCoal>.add(<minecraft:coal_ore>);
-<ore:oreRedstone>.add(<minecraft:redstone_ore>);
-<ore:oreDiamond>.add(<minecraft:diamond_ore>);
-<ore:oreLapis>.add(<minecraft:lapis_ore>);
-<ore:oreGold>.add(<minecraft:gold_ore>);
-<ore:oreEmerald>.add(<minecraft:emerald_ore>);
-<ore:oreNetherQuartz>.add(<minecraft:quartz_ore>);
-
-<ore:blockAluminum>.add(<gregtech:meta_block_compressed_0:1>);
-
-<ore:blockCoalCoke>.add(<gregtech:meta_block_compressed_22:5>);
+mods.jei.JEI.removeAndHide(<minecraft:iron_ore>);
+mods.jei.JEI.removeAndHide(<minecraft:coal_ore>);
+mods.jei.JEI.removeAndHide(<minecraft:redstone_ore>);
+mods.jei.JEI.removeAndHide(<minecraft:diamond_ore>);
+mods.jei.JEI.removeAndHide(<minecraft:lapis_ore>);
+mods.jei.JEI.removeAndHide(<minecraft:gold_ore>);
+mods.jei.JEI.removeAndHide(<minecraft:emerald_ore>);
+mods.jei.JEI.removeAndHide(<minecraft:quartz_ore>);
 
 // Infinity conversion
 recipes.addShapeless(<avaritia:resource:6>, [<metaitem:nomilabs:ingotInfinity>]);
