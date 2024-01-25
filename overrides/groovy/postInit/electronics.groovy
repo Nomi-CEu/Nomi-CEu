@@ -20,3 +20,9 @@ ASSEMBLER_RECIPES.recipeBuilder()
 		.duration(200)
 		.EUt(480)
 		.buildAndRegister()
+
+// Refresh HV Energy and HV Dynamo Recipes
+// Since stacks are not stored, they cannot simply be reloaded, we must recall.
+// TODO Remove once we get Recursive Recycling Removal
+changeStackRecycling(metaitem('energy_hatch.input.hv'), [metaitem('hull.hv'), metaitem('springGold') * 2, metaitem('plate.low_power_integrated_circuit') * 2, metaitem('voltage_coil.hv')])
+changeStackRecycling(metaitem('energy_hatch.output.hv'), [metaitem('hull.hv'), metaitem('cableGtSingleGold') * 2, metaitem('plate.low_power_integrated_circuit') * 2, metaitem('voltage_coil.hv')])
