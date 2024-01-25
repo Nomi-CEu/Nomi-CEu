@@ -722,14 +722,14 @@ recipes.addShaped(<metaitem:fluid_hatch.export.ev>, [[<metaitem:hull.ev>], [<ore
 recipes.addShaped(<metaitem:fluid_hatch.export.iv>, [[<metaitem:hull.iv>], [<ore:blockGlass>]]);
 
 recipes.addShaped(<metaitem:fluid_hatch.import_4x>, [[<ore:pipeQuadrupleFluidTitanium>], [<metaitem:hull.ev>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import_4x.iv>, [[<ore:pipeQuadrupleFluidTungstensteel>], [<metaitem:hull.iv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import_4x.iv>, [[<ore:pipeQuadrupleFluidTungstenSteel>], [<metaitem:hull.iv>]]);
 recipes.addShaped(<metaitem:fluid_hatch.import_9x>, [[<ore:pipeNonupleFluidTitanium>], [<metaitem:hull.ev>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import_9x.iv>, [[<ore:pipeNonupleFluidTungstensteel>], [<metaitem:hull.iv>]]);
+recipes.addShaped(<metaitem:fluid_hatch.import_9x.iv>, [[<ore:pipeNonupleFluidTungstenSteel>], [<metaitem:hull.iv>]]);
 
 recipes.addShaped(<metaitem:fluid_hatch.export_4x>, [[<metaitem:hull.ev>], [<ore:pipeQuadrupleFluidTitanium>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export_4x.iv>, [[<metaitem:hull.iv>], [<ore:pipeQuadrupleFluidTungstensteel>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export_4x.iv>, [[<metaitem:hull.iv>], [<ore:pipeQuadrupleFluidTungstenSteel>]]);
 recipes.addShaped(<metaitem:fluid_hatch.export_9x>, [[<metaitem:hull.ev>], [<ore:pipeNonupleFluidTitanium>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export_9x.iv>, [[<metaitem:hull.iv>], [<ore:pipeNonupleFluidTungstensteel>]]);
+recipes.addShaped(<metaitem:fluid_hatch.export_9x.iv>, [[<metaitem:hull.iv>], [<ore:pipeNonupleFluidTungstenSteel>]]);
 
 // AA Drill Core Coin Tooltip
 <actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
