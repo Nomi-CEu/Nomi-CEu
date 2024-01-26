@@ -1,4 +1,5 @@
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
+import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeOutputTooltip
@@ -11,7 +12,9 @@ crafting.addShaped("hand_framing_tool_recipe", item("nomilabs:hand_framing_tool"
         [item("minecraft:stick"), null, null]
 ])
 
-// Dummy Recipes for Hand Framing Tool
+// Dummy Hand Framing Recipes
+
+// Specify Hand Framing Tool separately, so we can add its tooltip properly
 List<ItemStack> items = [
         item("storagedrawers:customdrawers"),
         item("storagedrawers:customdrawers", 1),
@@ -21,9 +24,11 @@ List<ItemStack> items = [
         item("storagedrawers:customtrim"),
         item("framedcompactdrawers:framed_compact_drawer"),
         item("framedcompactdrawers:framed_slave"),
-        item("framedcompactdrawers:framed_drawer_controller"),
-        item("nomilabs:hand_framing_tool")
+        item("framedcompactdrawers:framed_drawer_controller")
 ]
+
+ItemStack tool = item("nomilabs:hand_framing_tool")
+items.add(tool)
 
 for (ItemStack stack : items) {
     for (boolean trim : [true, false]) {
@@ -36,6 +41,9 @@ for (ItemStack stack : items) {
                     [null, null, null]
             ])
             addRecipeOutputTooltip(recipeStack, resource(recipeName),
+                    ItemMeta.compare(tool, recipeStack) ?
+                            translate("tooltip.hand_framing.tool") :
+                            translate("tooltip.hand_framing.drawer"),
                     translate("tooltip.hand_framing.top_left"),
                     translate("tooltip.hand_framing.top_right"),
                     translate("tooltip.hand_framing.bottom_left"))
