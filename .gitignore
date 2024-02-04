@@ -7,6 +7,11 @@ tools/node_modules
 
 .idea/
 .idea_modules/
+tools/.idea/
+tools/.idea_modules/
+
+.vscode/
+tools/.vscode/
 
 # OS Specific
 
