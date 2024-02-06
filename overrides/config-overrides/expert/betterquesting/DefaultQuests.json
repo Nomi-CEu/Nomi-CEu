@@ -1781,9 +1781,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32003,
+            "Damage:2": 3,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -1814,9 +1814,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32003,
+              "Damage:2": 3,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2006,9 +2006,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32015,
+            "Damage:2": 15,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -2039,9 +2039,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32015,
+              "Damage:2": 15,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2230,9 +2230,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32012,
+            "Damage:2": 12,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -2263,9 +2263,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32012,
+              "Damage:2": 12,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2283,9 +2283,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32013,
+            "Damage:2": 13,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -2316,9 +2316,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32013,
+              "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -4053,9 +4053,9 @@
             },
             "1:10": {
               "Count:3": 32,
-              "Damage:2": 32011,
+              "Damage:2": 11,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             },
             "2:10": {
               "Count:3": 8,
@@ -4071,9 +4071,9 @@
             },
             "4:10": {
               "Count:3": 16,
-              "Damage:2": 32011,
+              "Damage:2": 11,
               "OreDict:8": "",
-              "id:8": "gregtech:wire_single"
+              "id:8": "nomilabs:wire_single"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -9633,9 +9633,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32050,
+            "Damage:2": 50,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -9665,9 +9665,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32050,
+              "Damage:2": 50,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14545,9 +14545,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14578,9 +14578,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14600,7 +14600,7 @@
             "Count:3": 1,
             "Damage:2": 2,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_block_compressed_2000"
+            "id:8": "nomilabs:meta_block_compressed_0"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14633,7 +14633,7 @@
               "Count:3": 1,
               "Damage:2": 2,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_2000"
+              "id:8": "nomilabs:meta_block_compressed_0"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -16315,9 +16315,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -16348,9 +16348,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -17233,7 +17233,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "nomilabs:blazepowder"
+            "id:8": "minecraft:blaze_powder"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -17793,9 +17793,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32010,
+            "Damage:2": 10,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -17826,9 +17826,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32010,
+              "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -17846,9 +17846,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32018,
+            "Damage:2": 18,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -17879,9 +17879,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32018,
+              "Damage:2": 18,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -18897,9 +18897,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust"
+            "id:8": "nomilabs:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -18930,9 +18930,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "nomilabs:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20572,9 +20572,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32005,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:machine"
+              "id:8": "nomilabs:tiereightship_stabilized"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -27698,7 +27698,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32003,
+            "Damage:2": 32104,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -27731,7 +27731,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32003,
+              "Damage:2": 32104,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -28179,9 +28179,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32017,
+            "Damage:2": 17,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -28212,9 +28212,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32017,
+              "Damage:2": 17,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -30899,9 +30899,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32019,
+            "Damage:2": 19,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -30932,9 +30932,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32019,
+              "Damage:2": 19,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -30952,9 +30952,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32010,
+            "Damage:2": 10,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -30985,9 +30985,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32010,
+              "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31005,9 +31005,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32018,
+            "Damage:2": 18,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31038,9 +31038,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32018,
+              "Damage:2": 18,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31272,9 +31272,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32023,
+            "Damage:2": 23,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31305,9 +31305,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32023,
+              "Damage:2": 23,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31416,9 +31416,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32015,
+            "Damage:2": 15,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31449,9 +31449,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32015,
+              "Damage:2": 15,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31469,9 +31469,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32025,
+            "Damage:2": 25,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31502,9 +31502,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32025,
+              "Damage:2": 25,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31522,9 +31522,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 10976,
-            "OreDict:8": "ingotMicroversium",
-            "id:8": "gregtech:meta_item_1"
+            "Damage:2": 27,
+            "OreDict:8": "",
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31555,9 +31555,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32027,
+              "Damage:2": 27,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31628,9 +31628,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32003,
+            "Damage:2": 3,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31661,9 +31661,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32003,
+              "Damage:2": 3,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31681,9 +31681,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32013,
+            "Damage:2": 13,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31714,9 +31714,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32013,
+              "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31734,9 +31734,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32012,
+            "Damage:2": 12,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31767,9 +31767,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32012,
+              "Damage:2": 12,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31787,9 +31787,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32024,
+            "Damage:2": 24,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31820,9 +31820,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32024,
+              "Damage:2": 24,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31841,9 +31841,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32008,
+            "Damage:2": 8,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31874,9 +31874,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32008,
+              "Damage:2": 8,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -37096,7 +37096,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32004,
+            "Damage:2": 32105,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -37135,13 +37135,13 @@
             },
             "1:10": {
               "Count:3": 3,
-              "Damage:2": 13,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_2006"
+              "id:8": "gregtech:meta_block_compressed_27"
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 32004,
+              "Damage:2": 32105,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -39541,7 +39541,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32006,
+            "Damage:2": 32107,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -39573,7 +39573,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32006,
+              "Damage:2": 32107,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -39593,7 +39593,7 @@
               "Count:3": 10,
               "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_2006"
+              "id:8": "nomilabs:meta_block_compressed_6"
             },
             "4:10": {
               "Count:3": 30,
@@ -39879,9 +39879,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32109,
+            "Damage:2": 109,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -39911,9 +39911,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32109,
+              "Damage:2": 109,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -42602,9 +42602,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32042,
+            "Damage:2": 42,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust"
+            "id:8": "nomilabs:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -42635,9 +42635,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32042,
+              "Damage:2": 42,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "nomilabs:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -46635,9 +46635,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -46667,9 +46667,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
