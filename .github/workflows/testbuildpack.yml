@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - test_buildscript*
+      - dev_*
     paths-ignore:
       - "README.md"
 
