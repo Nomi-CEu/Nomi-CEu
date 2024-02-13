@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - test_buildscript*
-      - dev_*
+      - dev/*
     paths-ignore:
       - "README.md"
 
@@ -20,8 +20,8 @@ concurrency:
   
 jobs:
   build:
-    # Only allow runs from commits to Nomi-CEu Branches or from pull requests from Nomi-CEu repo
-    if: "${{ github.repository_owner == 'Nomi-CEu' && ( !github.event.pull_request || github.event.pull_request.head.repo.owner.login == 'Nomi-CEu' ) }}"
+    # Only allow runs from commits to Nomi-CEu Branches or from pull requests from Nomi-CEu repo without dev/ (That is handled by push)
+    if: "${{ github.repository_owner == 'Nomi-CEu' && ( !github.event.pull_request || ( github.event.pull_request.head.repo.owner.login == 'Nomi-CEu' && !startsWith(github.head_ref, 'dev/') ) ) }}"
     name: Test Build Pack
     uses: ./.github/workflows/buildpack.yml
     with:
