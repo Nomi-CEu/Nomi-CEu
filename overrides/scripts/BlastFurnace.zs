@@ -39,6 +39,7 @@ alloy_blast_smelter.recipeBuilder()
 fluid_solidifier.recipeBuilder().fluidInputs(<liquid:tough_alloy> * 144).notConsumable(<metaitem:shape.mold.ingot>).outputs(<nuclearcraft:alloy:1>).duration(20).EUt(7).buildAndRegister();
 
 //Black Steel [tier 1]
+// Reduces the Duration from ~76s to ~10s
 // Black Steel Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustBlackSteel>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:nitrogen> * 1000]).remove();
 // Black Steel Ingot * 1
@@ -48,7 +49,7 @@ blast_furnace.recipeBuilder()
 	.inputs([<metaitem:dustBlackSteel>])
 	.circuit(1)
 	.outputs([<metaitem:ingotBlackSteel>])
-	.property("temperature", 1000)
+	.property("temperature", 1200)
 	.duration(200).EUt(120).buildAndRegister();
 
 blast_furnace.recipeBuilder()
@@ -56,19 +57,14 @@ blast_furnace.recipeBuilder()
 	.circuit(2)
 	.fluidInputs([<liquid:nitrogen> * 1000])
 	.outputs([<metaitem:ingotBlackSteel>])
-	.property("temperature", 1000)
+	.property("temperature", 1200)
 	.duration(135).EUt(120).buildAndRegister();
-
-// Black Steel * 720
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:nitrogen> * 5000]).remove();
-// Black Steel * 720
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustNickel>, <metaitem:dustBlackBronze>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
 
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2])
 	.circuit(3)
 	.fluidOutputs([<liquid:black_steel> * 1296])
-	.property("temperature", 1000)
+	.property("temperature", 1200)
 	.duration(2880)
 	.EUt(120)
 	.buildAndRegister();
@@ -78,19 +74,34 @@ alloy_blast_smelter.recipeBuilder()
 	.fluidInputs([<liquid:nitrogen> * 9000])
 	.circuit(13)
 	.fluidOutputs([<liquid:black_steel> * 1296])
-	.property("temperature", 1000)
+	.property("temperature", 1200)
 	.duration(1929)
 	.EUt(120)
 	.buildAndRegister();
 
 //Aluminium [tier 2]
+// Reduces the Duration from ~45s to ~20s
 // Aluminium Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustAluminium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:nitrogen> * 1000]).remove();
 // Aluminium Ingot * 1
 <recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustAluminium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:dustAluminium>]).outputs([<metaitem:ingotAluminium>]).circuit(1).property("temperature", 1500).duration(400).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:dustAluminium>]).fluidInputs(<liquid:nitrogen> * 1000).circuit(2).outputs([<metaitem:ingotAluminium>]).property("temperature", 1500).duration(270).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder()
+	.inputs([<metaitem:dustAluminium>])
+	.outputs([<metaitem:ingotAluminium>])
+	.circuit(1)
+	.property("temperature", 1700)
+	.duration(400).EUt(120)
+	.buildAndRegister();
+
+blast_furnace.recipeBuilder()
+	.inputs([<metaitem:dustAluminium>])
+	.fluidInputs(<liquid:nitrogen> * 1000)
+	.circuit(2)
+	.outputs([<metaitem:ingotAluminium>])
+	.property("temperature", 1700)
+	.duration(270).EUt(120)
+	.buildAndRegister();
 
 
 //Energetic Alloy [tier 2]
@@ -117,104 +128,44 @@ blast_furnace.recipeBuilder().inputs([<metaitem:ingotSteel> * 2,<ore:dustRedston
 //Signalum [tier 8]
 recipes.removeByRecipeName("thermalfoundation:dust_signalum");
 mixer.recipeBuilder()
-	.outputs(<metaitem:nomilabs:dustSignalum> * 4)
 	.inputs([<metaitem:dustAnnealedCopper> * 4,<metaitem:nomilabs:dustArdite> * 2,<metaitem:dustRedAlloy> * 2,<thermalfoundation:material:893>])
 	.fluidInputs(<liquid:mana> * 1000)
+	.outputs(<metaitem:nomilabs:dustSignalum> * 4)
 	.duration(300)
 	.EUt(1920)
 	.buildAndRegister();
-// Molten Signalum * 1152
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:nomilabs:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 13})], [<liquid:helium> * 800]).remove();
-// Molten Signalum * 1152
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustAnnealedCopper> * 4, <metaitem:nomilabs:dustArdite> * 2, <metaitem:dustRedAlloy> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustAnnealedCopper> * 4, <metaitem:nomilabs:dustArdite> * 2, <metaitem:dustRedAlloy> * 2,<thermalfoundation:material:893>])
-	.fluidInputs(<liquid:mana> * 1000)
-	.circuit(4)
-	.fluidOutputs(<liquid:molten.signalum> * 576)
-	.property("temperature", 4000)
-	.duration(51200)
-	.EUt(120)
-	.buildAndRegister();
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustAnnealedCopper> * 4, <metaitem:nomilabs:dustArdite> * 2, <metaitem:dustRedAlloy> * 2,<thermalfoundation:material:893>])
-	.fluidInputs([<liquid:mana> * 1000, <liquid:helium> * 400])
-	.circuit(14)
-	.fluidOutputs(<liquid:molten.signalum> * 576)
-	.property("temperature", 4000)
-	.duration(34133)
-	.EUt(120)
-	.buildAndRegister();
+
+// ABS Recipe Changes moved to Groovy.
 
 //Lumium [tier 9]
 recipes.removeByRecipeName("thermalfoundation:dust_lumium");
 mixer.recipeBuilder()
-	.outputs(<metaitem:nomilabs:dustLumium> * 4)
-	.fluidInputs(<liquid:mana> * 1000)
 	.inputs([<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2,<extendedcrafting:material:7> * 2,<thermalfoundation:material:894>])
+	.fluidInputs(<liquid:mana> * 1000)
+	.outputs(<metaitem:nomilabs:dustLumium> * 4)
 	.duration(300)
 	.EUt(1920)
 	.buildAndRegister();
-// Molten Lumium * 864
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 12})], [<liquid:helium> * 600]).remove();
-// Molten Lumium * 864
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2,<extendedcrafting:material:7> * 2,<thermalfoundation:material:894>])
-	.fluidInputs(<liquid:mana> * 1000)
-	.circuit(4)
-	.fluidOutputs(<liquid:molten.lumium> * 576)
-	.property("temperature", 4500)
-	.duration(57600)
-	.EUt(120)
-	.buildAndRegister();
-
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustTinAlloy> * 4, <metaitem:dustSterlingSilver> * 2,<extendedcrafting:material:7> * 2,<thermalfoundation:material:894>])
-	.fluidInputs([<liquid:mana> * 1000, <liquid:helium> * 400])
-	.circuit(14)
-	.fluidOutputs(<liquid:molten.lumium> * 576)
-	.property("temperature", 4500)
-	.duration(38400)
-	.EUt(120)
-	.buildAndRegister();
+// ABS Recipe Changes moved to Groovy.
 
 //Enderium [tier 13]
 recipes.removeByRecipeName("thermalfoundation:dust_enderium");
 mixer.recipeBuilder()
-	.outputs(<metaitem:nomilabs:dustEnderium> * 4)
-	.fluidInputs(<liquid:mana> * 1000)
 	.inputs([<metaitem:dustLead> * 4,<metaitem:dustPlatinum> * 2,<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>])
+	.fluidInputs(<liquid:mana> * 1000)
+	.outputs(<metaitem:nomilabs:dustEnderium> * 4)
 	.duration(300)
 	.EUt(1920)
 	.buildAndRegister();
 
-// Molten Enderium * 1152
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 14})], [<liquid:krypton> * 80]).remove();
-// Molten Enderium * 1152
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustLead> * 4, <metaitem:dustPlatinum> * 2, <metaitem:dustBlueSteel>, <metaitem:dustOsmium>, <metaitem:circuit.integrated>.withTag({Configuration: 4})], null).remove();
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustLead> * 4,<metaitem:dustPlatinum> * 2,<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>])
-	.fluidInputs(<liquid:mana> * 1000)
-	.circuit(5)
-	.fluidOutputs(<liquid:molten.enderium> * 576)
-	.property("temperature", 6400)
-	.duration(83200)
-	.EUt(120)
-	.buildAndRegister();
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustLead> * 4,<metaitem:dustPlatinum> * 2,<metaitem:dustBlueSteel>,<ore:dustOsmium>,<thermalfoundation:material:895>])
-	.fluidInputs([<liquid:mana> * 1000, <liquid:krypton> * 40])
-	.circuit(15)
-	.fluidOutputs(<liquid:molten.enderium> * 576)
-	.property("temperature", 6400)
-	.duration(55467)
-	.EUt(120)
-	.buildAndRegister();
+// ABS Recipe Changes moved to Groovy.
 
 //Dark Soularium [tier 18]
-blast_furnace.recipeBuilder().inputs([<ore:ingotSoularium>,<ore:ingotDarkSteel>]).fluidInputs([<liquid:tritium>*1000]).outputs([<simplyjetpacks:metaitemmods:3>]).property("temperature", 8600).duration(1200).EUt(32000).buildAndRegister();
+blast_furnace.recipeBuilder()
+	.inputs([<ore:ingotSoularium>,<ore:ingotDarkSteel>])
+	.fluidInputs([<liquid:tritium>*1000])
+	.outputs([<simplyjetpacks:metaitemmods:3>]).property("temperature", 8600).duration(1200).EUt(32000).buildAndRegister();
 
 // Quantum Fluxed Eternium [tier 19]
 blast_furnace.recipeBuilder()
@@ -231,6 +182,8 @@ blast_furnace.recipeBuilder()
 	.buildAndRegister();
 
 //Fluxed Electrum
+<recipemap:centrifuge>.findRecipe(30, [<metaitem:nomilabs:dustElectrumFlux> * 8], null).remove();
+
 mixer.recipeBuilder()
 	.inputs([<ore:dustElectrum> * 6, <ore:dustLumium>, <ore:dustSignalum>, <ore:dustMana>])
 	.outputs([<metaitem:nomilabs:dustElectrumFlux> * 9])
@@ -238,12 +191,7 @@ mixer.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister();
 
-// Electrum Dust * 6
-<recipemap:centrifuge>.findRecipe(30, [<metaitem:nomilabs:dustElectrumFlux> * 8], null).remove();
-
-
-// Fluxed Electrum * 1152
-//<recipemap:alloy_blast_smelter>.findRecipe(120, [<metaitem:dustElectrum> * 6, <metaitem:nomilabs:dustLumium>, <metaitem:nomilabs:dustSignalum>, <metaitem:circuit.integrated>.withTag({Configuration: 3})], null).remove();
+// Fluxed Electrum ABS Recipes
 alloy_blast_smelter.recipeBuilder()
 	.inputs([<metaitem:dustElectrum> * 6, <metaitem:nomilabs:dustLumium>, <metaitem:nomilabs:dustSignalum>, <ore:dustMana>])
 	.fluidOutputs(<liquid:electrum_flux> * 1296)
@@ -254,6 +202,8 @@ alloy_blast_smelter.recipeBuilder()
 	.buildAndRegister();
 
 /* Custom Alloys in ABS */
+
+// TODO Refactor To Use Binary Alloy Generator
 
 // Dark Steel
 alloy_blast_smelter.recipeBuilder()

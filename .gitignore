@@ -5,6 +5,9 @@ overrides/config/brandon3055/ResourceCache
 build
 tools/node_modules
 
+*iml
+overrides/groovy/assets
+
 .idea/
 .idea_modules/
 tools/.idea/

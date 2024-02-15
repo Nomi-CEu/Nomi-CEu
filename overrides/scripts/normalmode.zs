@@ -528,17 +528,7 @@ recipes.addShaped(<thermalexpansion:dynamo:5>, [
 	[<metaitem:nomilabs:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:nomilabs:plateVibrantAlloy>],
 	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
 
-// Red Alloy
-//<recipemap:alloy_blast_smelter>.findRecipe(16, [<metaitem:dustCopper>, <minecraft:redstone> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 5})], null).remove();
-alloy_blast_smelter.recipeBuilder()
-	.inputs(<ore:dustCopper> * 2, <minecraft:redstone> * 3)
-	.circuit(2)
-	.property("temperature", 1000)
-	.fluidOutputs(<liquid:red_alloy> * 288)
-	.duration(75).EUt(16).buildAndRegister();
-	
-// Redstone * 4
-<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustRedAlloy>], null).remove();
+// Red Alloy (Moved to Groovy)
 
 // zpm crystal
 // crystal growing w Enderium

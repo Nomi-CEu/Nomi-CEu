@@ -98,10 +98,6 @@ makeExtremeRecipe7(<nomilabs:tierfourandhalfship>,
 	  I : <redstonearsenal:tool.sword_flux> }
 );
 
-<nomilabs:tierfourandhalfship>.addTooltip(
-	format.white(
-		format.italic("Kills mobs in dangerous microverses and collects their highly prized skeletons and parts.")));
-
 /////////////	 Tier Eight and Half Space Ship  	  //////////////////
 makeExtremeRecipe9(<nomilabs:tiereightandhalfship>,
 	["   LLL   ",
@@ -126,10 +122,6 @@ makeExtremeRecipe9(<nomilabs:tiereightandhalfship>,
 	  B : <advancedrocketry:warpmonitor>,
 	  D : <nomilabs:warpengine>}
 );
-
-<nomilabs:tiereightandhalfship>.addTooltip(
-	format.white(
-		format.italic("Harvests exclusive Gems and Metals from unexplored corners, from beyond the microverse.")));
 
 // Exchanging Gadget
 recipes.removeByRecipeName("buildinggadgets:exchangingtool");

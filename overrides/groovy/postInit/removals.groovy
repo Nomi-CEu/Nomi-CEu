@@ -1,6 +1,6 @@
-import io.sommers.packmode.PMConfig
+import com.nomiceu.nomilabs.util.LabsModeHelper
 
-if (PMConfig.getPackMode() == "normal") {
+if (LabsModeHelper.normal) {
 // Input Buses
 // ULV Input Bus * 1
 mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 250])

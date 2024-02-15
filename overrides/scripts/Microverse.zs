@@ -23,10 +23,6 @@ makeShaped("of_tieroneship", <nomilabs:tieroneship>,
 	  M : <meta_tile_entity:combustion_generator.lv> }
 );
 
-<nomilabs:tieroneship>.addTooltip(
-	format.white(
-		format.italic("Harvests Titanium and other light metals from asteroids in the microverse.")));
-
 // Tier 1 Guidance
 makeShaped("of_t1guidance", <nomilabs:t1guidance>,
 	["GPG",
@@ -67,10 +63,6 @@ makeExtremeRecipe5(<nomilabs:tiertwoship>,
 	  T : <simplyjetpacks:metaitemmods:8> }
 );
 
-<nomilabs:tiertwoship>.addTooltip(
-	format.white(
-		format.italic("Harvests Tungsten and other heavy metals from asteroids in the microverse.")));
-
 
 /////////////	 Tier Three Space Ship  	  //////////////////
 
@@ -107,10 +99,6 @@ makeExtremeRecipe5(<nomilabs:t2laser>,
 	  Q : <minecraft:quartz>,
 	  R : <minecraft:redstone_block> }
 );
-
-<nomilabs:tierthreeship>.addTooltip(
-	format.white(
-		format.italic("Harvests ultra hot metals and gems from Nether microverses.")));
 
 // Rocket Engine
 recipes.remove(<advancedrocketry:advrocketmotor>);
@@ -217,6 +205,7 @@ makeExtremeRecipe9(<nomilabs:tiersevenship>,
 	  W : <nomilabs:warpengine> }
 );
 
+// TODO Research?
 assembly_line.recipeBuilder()
 	.inputs([<metaitem:nomilabs:frameMicroversium>, <ore:plateEnderium> * 6, <draconicevolution:item_dislocation_inhibitor>, <draconicevolution:magnet:1>, <ore:plateCrystalMatrix> * 2, <metaitem:field.generator.iv> * 2, <simplyjetpacks:metaitemmods:30> * 2, <simplyjetpacks:metaitemmods:11>])
 	.fluidInputs(<liquid:soldering_alloy> * 1152)
@@ -280,7 +269,6 @@ makeExtremeRecipe9(<nomilabs:tiernineship>,
 );
 
 // Recipe moved to Groovy
-<nomilabs:universalnavigator>.addTooltip(format.blue("See you later, navigator!"));
 
 /////////////	 Tier Ten Space Ship  	  //////////////////
 
@@ -348,28 +336,6 @@ fluid_extractor.recipeBuilder()
 	.inputs(<actuallyadditions:item_solidified_experience>)
 	.fluidOutputs(<liquid:xpjuice> * 160)
 	.duration(80).EUt(32).buildAndRegister();
-
-<nomilabs:tierfourship>.addTooltip(format.white(
-	format.italic("Harvests ultra cold materials from the deepest parts of empty space.")));
-<nomilabs:tierfiveship>.addTooltip(format.white(
-	format.italic("Harvests strange materials from End microverses.")));
-<nomilabs:tiersixship>.addTooltip(format.white(
-	format.italic("Harvests extremely rare materials from every concievable reality.")));
-<nomilabs:tiersevenship>.addTooltip(format.white(
-	format.italic("Hunts Wyrms and End Dragons from the microverse")));
-<nomilabs:tiersevenship>.addTooltip(format.white(
-	format.italic("and returns with parts from their carapaces.")));
-<nomilabs:tiereightship>.addTooltip(format.white(
-	format.italic("Hunts inconcievable monstrosities from beyond the End")));
-<nomilabs:tiereightship>.addTooltip(format.white(
-	format.italic("and returns with bizzare trinkets.")));
-<nomilabs:tiernineship>.addTooltip(format.white(
-	format.italic("Collapses microverse stars and harvests their delicious neutronium cores.")));
-<nomilabs:tiertenship>.addTooltip(format.white(
-	format.italic("Collapses an entire microverse and harvests it whole.")));
-<nomilabs:tiertenship>.addTooltip(format.white(
-	format.italic("Try to aim for uninhabited ones.")));
-
 
 // Dense Hydrogen
 makeShaped("of_densehydrogen", <nomilabs:densehydrogen>,
