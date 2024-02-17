@@ -762,7 +762,7 @@ mixer.recipeBuilder()
 large_chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:xenon> * 1000, <liquid:oxygen> * 4000, <liquid:ultraacidic_residue> * 2000)
     .notConsumable(<draconicevolution:awakened_core>)
-    .outputs(<metaitem:dustEuropium> * 2, <metaitem:nomilabs:dustKaemanite>, <metaitem:dustSmallOsmiridium8020>)
+    .outputs(<metaitem:dustEuropium> * 2, <metaitem:nomilabs:dustKaemanite>, <metaitem:nomilabs:dustSmallOsmiridium8020>)
     .fluidOutputs(<liquid:xenic_acid> * 1000, <liquid:dusty_helium> * 2000)
     .duration(1000).EUt(1920).buildAndRegister();
 
