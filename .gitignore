@@ -6,12 +6,11 @@ build
 tools/node_modules
 
 *iml
-overrides/groovy/assets
+overrides/groovy/assets/**
+overrides/groovy/lib/**
 
-.idea/
-.idea_modules/
-tools/.idea/
-tools/.idea_modules/
+**/.idea/**
+**/.idea_modules/**
 
 .vscode/
 tools/.vscode/
