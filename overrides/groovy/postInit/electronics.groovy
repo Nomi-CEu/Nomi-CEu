@@ -1,5 +1,4 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
-import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
 import static gregtech.api.recipes.RecipeMaps.*

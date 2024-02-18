@@ -21,7 +21,7 @@ furnace.addRecipe(<minecraft:slime_ball> * 2, <metaitem:plant_ball>, 0.0);
 //Ender Pearls
 alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs([<minecraft:ender_pearl>]).duration(300).EUt(16).buildAndRegister();
 
-// Firework Rocket fix
+// Firework Rocket JEI fix
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 1 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>]);
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 2 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>, <minecraft:gunpowder>]);
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 3 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>, <minecraft:gunpowder>, <minecraft:gunpowder>]);
@@ -185,9 +185,9 @@ chemical_reactor.recipeBuilder().inputs([<thermalfoundation:fertilizer>]).fluidI
 
 mixer.recipeBuilder().inputs([<metaitem:dustTricalciumPhosphate>,<metaitem:dustGold>]).outputs(<minecraft:glowstone_dust> * 2).EUt(15).duration(80).buildAndRegister();
 
-// Black Steel
-mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
-recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustBlackBronze>, <ore:dustSteel>, <ore:dustSteel>, <ore:dustSteel>]);
+// Black Steel (Moved to Groovy)
+
+// Black Quartz Ore -> Black Quartz
 furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>, 0.0);
 
 // Clathrates
@@ -211,8 +211,6 @@ chemical_reactor.recipeBuilder().inputs([<minecraft:ender_pearl>,<minecraft:blaz
 
 recipes.remove(<extrautils2:endershard>);
 recipes.addShapeless(<extrautils2:endershard> * 8, [<minecraft:ender_pearl>]);
-// Black Steel Dust * 5
-<recipemap:mixer>.findRecipe(7, [<metaitem:dustBlackBronze>, <metaitem:dustNickel>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
 //Dimethylhydrazine: Changes the EU/t
 chemical_reactor.findRecipe(480, [null], [<liquid:dimethylamine> * 1000, <liquid:monochloramine> * 1000]).remove();
@@ -334,9 +332,6 @@ recipes.addShapeless(<metaitem:dustBatteryAlloy> * 4, [<ore:dustLead>,<ore:dustL
 recipes.addShapeless(<metaitem:battery.re.lv.cadmium>,[<metaitem:battery.hull.lv>,<metaitem:dustCadmium>,<metaitem:dustCadmium>]);	//Small Cadmium
 recipes.addShapeless(<metaitem:battery.re.lv.sodium>,[<metaitem:battery.hull.lv>,<metaitem:dustSodium>,<metaitem:dustSodium>]);	//Small Sodium
 recipes.addShapeless(<metaitem:battery.re.lv.lithium>,[<metaitem:battery.hull.lv>,<metaitem:dustLithium>,<metaitem:dustLithium>]);	//Small Lithium
-
-
-centrifuge.findRecipe(30, [<metaitem:dustBlackSteel> * 5], [null]).remove();
 
 furnace.setFuel(<metaitem:dustGraphite>, 1200);
 

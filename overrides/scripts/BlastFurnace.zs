@@ -61,7 +61,7 @@ blast_furnace.recipeBuilder()
 	.duration(135).EUt(120).buildAndRegister();
 
 alloy_blast_smelter.recipeBuilder()
-	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2])
+	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2])
 	.circuit(3)
 	.fluidOutputs([<liquid:black_steel> * 1296])
 	.property("temperature", 1200)
@@ -70,7 +70,7 @@ alloy_blast_smelter.recipeBuilder()
 	.buildAndRegister();
 
 alloy_blast_smelter.recipeBuilder()
-	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2])
+	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2])
 	.fluidInputs([<liquid:nitrogen> * 9000])
 	.circuit(13)
 	.fluidOutputs([<liquid:black_steel> * 1296])
