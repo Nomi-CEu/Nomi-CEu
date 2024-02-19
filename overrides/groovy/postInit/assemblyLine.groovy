@@ -133,7 +133,7 @@ mods.gregtech.assembly_line.recipeBuilder()
     .buildAndRegister()
 
 // Simulation Supercomputer
-if (LabsModeHelper.expert) {
+if (LabsModeHelper.normal) {
     mods.gregtech.assembly_line.recipeBuilder()
         .inputs(item('gcym:large_multiblock_casing', 11), ore('plateTrinaquadalloy') * 6, item('deepmoblearning:simulation_chamber') * 4, item('nomilabs:heartofauniverse'), metaitem('robot.arm.uv') * 2, metaitem('field.generator.uv') * 2, ore('circuitUhv') * 4, item('draconicevolution:draconic_energy_core'))
         .fluidInputs(fluid('soldering_alloy') * 1152)
