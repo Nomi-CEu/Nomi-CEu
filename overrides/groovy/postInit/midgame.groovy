@@ -2,7 +2,7 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
 
-if (LabsModeHelper.isNormal()) {
+if (LabsModeHelper.normal) {
 	// Assembly Control Casing (Change from Output 2 to Output 4)
 	replaceRecipeOutput(item('gregtech:multiblock_casing', 3) * 2, item('gregtech:multiblock_casing', 3) * 4)
 

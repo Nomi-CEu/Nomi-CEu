@@ -1,10 +1,11 @@
 import com.cleanroommc.groovyscript.api.IIngredient
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.changeStackRecycling
 
 // Changes Buses and Hatches in Normal Mode to not be assembler recipe for first couple tiers.
-if (!LabsModeHelper.normal) return;
+if (!LabsModeHelper.normal) return
 
 // Use Shapeless Create Recipe + Recycling when that is available.
 private void shapelessRecycling(ItemStack output, List<IIngredient> input) {

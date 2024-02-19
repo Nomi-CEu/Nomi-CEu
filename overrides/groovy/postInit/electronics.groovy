@@ -1,7 +1,4 @@
-import com.nomiceu.nomilabs.util.LabsModeHelper
-
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
-import static gregtech.api.recipes.RecipeMaps.*
 
 // Pyrolyse Oven
 replaceRecipeInput(metaitem('pyrolyse_oven'), [
@@ -11,7 +8,7 @@ replaceRecipeInput(metaitem('pyrolyse_oven'), [
 
 // HV Coil
 mods.gregtech.assembler.removeByInput(480, [metaitem('stickSteelMagnetic'), metaitem('wireFineBlackSteel') * 16, metaitem('circuit.integrated').withNbt([Configuration: 1])], null)
-ASSEMBLER_RECIPES.recipeBuilder()
+mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('stickSteelMagnetic'), metaitem('wireFineSilver') * 16)
 		.circuitMeta(1)
 		.outputs(metaitem('voltage_coil.hv'))
