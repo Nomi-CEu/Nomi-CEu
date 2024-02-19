@@ -7,6 +7,7 @@ mods.gregtech.assembly_line.recipeBuilder()
     .inputs(metaitem('frameNaquadahAlloy'), metaitem('plateNaquadahAlloy') * 6, metaitem('quantumstar'), metaitem('emitter.zpm') * 2, ore('circuitZpm') * 2, metaitem('wireFineUraniumRhodiumDinaquadide') * 64, metaitem('wireFineUraniumRhodiumDinaquadide') * 64, metaitem('cableGtSingleVanadiumGallium') * 4)
     .fluidInputs(fluid('soldering_alloy') * 1152, fluid('awakened_draconium') * 1296)
     .outputs(metaitem('field.generator.zpm'))
+    .researchWithoutRecipe("1xmetaitem.field.generator.luv@207", metaitem('tool.dataorb'))
     .duration(600).EUt(24000)
     .buildAndRegister()
 
@@ -145,11 +146,12 @@ if (LabsModeHelper.normal) {
 
 // UV Field Generator (Hard mode only)
 if (LabsModeHelper.expert) {
+    mods.gregtech.assembly_line.removeByOutput([metaitem('field.generator.uv')], null, null, null)
     mods.gregtech.assembly_line.recipeBuilder()
         .inputs(ore('frameGtTritanium'), ore('plateTritanium') * 6, metaitem('gravistar'), metaitem('emitter.uv') * 2, ore('circuitUv') * 2, ore('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, ore('wireFineEnrichedNaquadahTriniumEuropiumDuranide') * 64, ore('cableGtSingleYttriumBariumCuprate') * 4)
         .fluidInputs(fluid('soldering_alloy') * 1728, fluid('naquadria') * 576, fluid('taranium') * 288)
         .outputs(metaitem('field.generator.uv'))
-        .stationResearch(b -> b.researchStack(metaitem('field.generator.zpm')).CWUt(48).EUt(122880))
+        .researchWithoutRecipe("1xmetaitem.field.generator.zpm@208", metaitem('tool.datamodule'))
         .duration(600).EUt(100000)
         .buildAndRegister()
 }
