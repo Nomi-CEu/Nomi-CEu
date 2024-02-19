@@ -1,4 +1,6 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition
+import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
 
@@ -13,7 +15,8 @@ mods.gregtech.assembly_line.recipeBuilder()
 
 // Dark Soularium Jetplate
 mods.gregtech.assembly_line.recipeBuilder()
-    .inputs(item('simplyjetpacks:itemjetpack', 8), item('simplyjetpacks:metaitemmods', 4) * 2, item('extrautils2:angelring'), item('enderio:item_material', 16) * 2, item('nomilabs:doublecompressedoctadiccapacitor'), ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 11) * 2)
+    .inputNBT(item('simplyjetpacks:itemjetpack').item, 1, 8, NBTMatcher.ANY, NBTCondition.ANY)
+    .inputs(item('simplyjetpacks:metaitemmods', 4) * 2, item('extrautils2:angelring'), item('enderio:item_material', 16) * 2, item('nomilabs:doublecompressedoctadiccapacitor'), ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 11) * 2)
     .fluidInputs(fluid('soldering_alloy') * 1152)
     .outputs(item('simplyjetpacks:itemjetpack', 9))
     .stationResearch(b -> b.researchStack(item('simplyjetpacks:metaitemmods', 11)).CWUt(16))
@@ -22,7 +25,9 @@ mods.gregtech.assembly_line.recipeBuilder()
 
 // Flux-Infused Jetplate
 mods.gregtech.assembly_line.recipeBuilder()
-    .inputs(item('simplyjetpacks:itemjetpack', 17), item('redstonearsenal:armor.plate_flux'), item('simplyjetpacks:metaitemmods', 21), item('extrautils2:angelring'), item('nomilabs:compressedoctadiccapacitor') * 2, ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 30) * 2)
+    .inputNBT(item('simplyjetpacks:itemjetpack').item, 1, 17, NBTMatcher.ANY, NBTCondition.ANY)
+    .inputNBT(item('redstonearsenal:armor.plate_flux').item, NBTMatcher.ANY, NBTCondition.ANY)
+    .inputs(item('simplyjetpacks:metaitemmods', 21), item('extrautils2:angelring'), item('nomilabs:compressedoctadiccapacitor') * 2, ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 30) * 2)
     .fluidInputs(fluid('soldering_alloy') * 1152)
     .outputs(item('simplyjetpacks:itemjetpack', 18))
     .stationResearch(b -> b.researchStack(item('simplyjetpacks:metaitemmods', 30)).CWUt(16))
