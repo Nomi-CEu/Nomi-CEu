@@ -64346,6 +64346,136 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1046:10": {
+      "preRequisites:11": [
+        56
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §aAlarm§r is a simple tool which plays a loud sound when given a redstone signal. Useful for notifying you if things go wrong.\n\nRight-click the block to configure its range and sound. This tool requires §d4 EU/t§r input to work.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 10,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Alarm",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1046,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1751,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1047:10": {
+      "preRequisites:11": [
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Reservoir Hatch§r acts as an infinite water source as a fluid input hatch.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1418,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Cooking for Blockheads",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1047,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 1,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1418,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -64850,6 +64980,13 @@
           "sizeY:3": 32,
           "x:3": -840,
           "y:3": 276
+        },
+        "69:10": {
+          "id:3": 1046,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -516,
+          "y:3": 260
         }
       }
     },
@@ -66102,7 +66239,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -704,
-          "y:3": 308
+          "y:3": 316
         },
         "63:10": {
           "id:3": 297,
@@ -66241,8 +66378,8 @@
           "id:3": 340,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -824,
-          "y:3": 284
+          "x:3": -812,
+          "y:3": 316
         },
         "83:10": {
           "id:3": 341,
@@ -66521,8 +66658,8 @@
           "id:3": 782,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -804,
-          "y:3": 252
+          "x:3": -812,
+          "y:3": 284
         },
         "123:10": {
           "id:3": 783,
@@ -66703,7 +66840,7 @@
           "id:3": 1014,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -756,
+          "x:3": -740,
           "y:3": 352
         },
         "149:10": {
@@ -66717,15 +66854,22 @@
           "id:3": 1032,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -816,
-          "y:3": 316
+          "x:3": -812,
+          "y:3": 352
         },
         "151:10": {
           "id:3": 1033,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -788,
-          "y:3": 340
+          "x:3": -776,
+          "y:3": 352
+        },
+        "152:10": {
+          "id:3": 1047,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -812,
+          "y:3": 252
         }
       }
     },
