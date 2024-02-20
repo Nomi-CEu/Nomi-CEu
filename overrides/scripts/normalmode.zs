@@ -102,20 +102,7 @@ recipes.addShaped(<meta_tile_entity:extruder.ev>, [
 
 recipes.addShapeless(<metaitem:nomilabs:dustConductiveIron>, [<metaitem:dustIron>,<minecraft:redstone>]);
 
-// steam multis
-recipes.removeByRecipeName("gregtech:steam_oven");
-recipes.addShaped(<metaitem:steam_oven>, [
-	[<gregtech:metal_casing>, <metaitem:gearInvar>, <gregtech:metal_casing>],
-	[<gregtech:boiler_firebox_casing>, <morefurnaces:furnaceblock:5>, <gregtech:boiler_firebox_casing>],
-	[<gregtech:metal_casing>, <metaitem:gearInvar>, <gregtech:metal_casing>]
-]);
-
-recipes.removeByRecipeName("gregtech:steam_grinder");
-recipes.addShaped(<metaitem:steam_grinder>, [
-	[<gregtech:metal_casing>, <metaitem:gearPotin>, <gregtech:metal_casing>],
-	[<gregtech:metal_casing>, <minecraft:diamond>, <gregtech:metal_casing>],
-	[<gregtech:metal_casing>, <metaitem:gearPotin>, <gregtech:metal_casing>]
-]);
+// steam multis (moved to groovy)
 
 // PBF nomified
 furnace.remove(<metaitem:brick.fireclay>);
