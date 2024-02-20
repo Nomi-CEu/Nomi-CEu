@@ -15859,7 +15859,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Yes, Snad.\n\nThis pack has §aSnad§r, which is simply a sand-like block that instantly grows sugar cane/cactus on top of it when it receives either a block update or a redstone update.\n\nThe sugar cane it produces can be used as a fuel for your dynamos, and later you can even brew it for §9Biomass§r.\n\nThis quest calls for a §aRedstone Timer§r, but there are other ways to make snad grow sugar cane even faster (like a vanilla observer clock pointing into the Snad). Make sure to set the timer to pulse as fast as possible.\n\nTo collect the sugar cane, you can use a piston and an observer. Later you can make an §6Auto-Breaker§r from §bActually Additions§r, which works even better and doesn\u0027t spill sugar cane everywhere.\n\nFor now, a §3Vacuum Chest§r should help keep the floor clean, and causes less lag than Hoppers. A §aVoid Upgrade§r in a §6Storage Drawer§r will automatically delete any items that overflow the drawer\u0027s capacity, so it\u0027s a good way to ensure you don\u0027t crash your server from accumulating a massive sugar cane pile before safer block breakers are available to you.",
+          "desc:8": "Yes, Snad.\n\nThis pack has §aSnad§r, which is simply a sand-like block that instantly grows sugar cane/cactus on top of it when it receives either a block update or a redstone update.\n\nThe sugar cane it produces can be used as a fuel for your dynamos, and later you can even brew it for §9Biomass§r.\n\nThe premier way to activate Snad is with a §6Redstone Conduit§r. By force-connecting the conduit to the side of the Snad block with a Wrench, and inserting a §aSensor Filter§r, you can get the highest growth rate possible. Simpler methods such as a §aRedstone Clock§r can also work, but not as effectively.\n\nTo collect the sugar cane, you can use a piston and an observer. Later you can make an §6Auto-Breaker§r from §bActually Additions§r, which works even better and doesn\u0027t spill sugar cane everywhere.\n\nFor now, a §3Vacuum Chest§r should help keep the floor clean, and causes less lag than Hoppers. A §aVoid Upgrade§r in a §6Storage Drawer§r will automatically delete any items that overflow the drawer\u0027s capacity, so it\u0027s a good way to ensure you don\u0027t crash your server from accumulating a massive sugar cane pile before safer block breakers are available to you.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15919,21 +15919,38 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "enderio:block_vacuum_chest"
-            },
-            "2:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "extrautils2:redstoneclock"
+              "id:8": "enderio:item_redstone_conduit"
             },
-            "3:10": {
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "enderio:item_redstone_sensor_filter"
+            },
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "storagedrawers:upgrade_void"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -30981,7 +30998,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.",
+          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.\n\n§6Pulsating Crystals§r will be required immediately to make §aSnad§r, the key to infinite fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
