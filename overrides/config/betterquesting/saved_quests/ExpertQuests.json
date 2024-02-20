@@ -236,7 +236,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §5Nomifactory§r §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
+          "desc:8": "Welcome to §5Nomifactory§r §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (color 2)§r, and features unique to §cHard/Expert Mode§r will be highlighted in §cred (color C)§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2835,7 +2835,9 @@
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "simplyjetpacks:itemjetpack",
-              "tag:10": {}
+              "tag:10": {
+                "JetpackParticleType:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -12271,7 +12273,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32000,
+            "Damage:2": 32100,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -12328,7 +12330,7 @@
             },
             "4:10": {
               "Count:3": 1,
-              "Damage:2": 32000,
+              "Damage:2": 32100,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -13648,9 +13650,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32023,
+            "Damage:2": 23,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -13681,9 +13683,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32023,
+              "Damage:2": 23,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -22618,7 +22620,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 32101,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -22651,7 +22653,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 32101,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -22866,7 +22868,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32002,
+            "Damage:2": 32102,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -22899,7 +22901,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32002,
+              "Damage:2": 32102,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -37135,9 +37137,9 @@
             },
             "1:10": {
               "Count:3": 3,
-              "Damage:2": 0,
+              "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_27"
+              "id:8": "nomilabs:meta_block_compressed_6"
             },
             "2:10": {
               "Count:3": 1,
