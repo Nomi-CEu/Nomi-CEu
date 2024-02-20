@@ -236,13 +236,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §5Nomifactory§f §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§f.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§f.\n\n§fIf you wish to build your base in a skyblock world, place the §6Void World Cake§f down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§f.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
+          "desc:8": "Welcome to §5Nomifactory§r §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (color 2)§r, and features unique to §cHard/Expert Mode§r will be highlighted in §cred (color C)§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tierfourandhalfship_stabilized"
+            "id:8": "nomilabs:tierfourandhalfship_stabilized"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -336,7 +336,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§c§rOres in §5Nomifactory§f exist in large clusters, or \u0027§eveins§f\u0027. These veins are scattered around the world, and are relatively common. §2The upgraded HV Electric Prospector\u0027s Scanner you were given will tell you the types of ores you can find within a 7x7 chunk area!\n§r\nWhile the Scanner requires energy to work, you are unlikely to deplete its battery. That said, there is a quest you can use to refill the energy of the scanner, which is located on this chapter.\n\nIn order to proceed, you\u0027ll need to locate a source of §6Iron§f. You have a few options. §6Magnetite§f veins are higher up and contain large amounts of iron, as well as some §6Vanadium§f and §6Gold§f. Another good source of iron is §6Limonite§f veins, which contain several types of iron. Finally, §6Pyrite§f can be found paired with §6Copper§f in several types of veins.\n\n§6Wrought Iron§f is obtained simply by §esmelting Iron §cNuggets§e a second time§f. It has more durability than Iron, so it is better for making tools, but §cdo not convert your entire Iron supply over to Wrought Iron§f. The two materials are not interchangeable and you\u0027ll need Iron or Wrought Iron as demanded by various recipes.",
+          "desc:8": "§c§rOres in §5Nomifactory§r exist in large clusters, or \u0027§eveins§r\u0027. These veins are scattered around the world, and are relatively common. §2The upgraded HV Electric Prospector\u0027s Scanner you were given will tell you the types of ores you can find within a 7x7 chunk area!\n§r\nWhile the Scanner requires energy to work, you are unlikely to deplete its battery. That said, there is a quest you can use to refill the energy of the scanner, which is located on this chapter.\n\nIn order to proceed, you\u0027ll need to locate a source of §6Iron§r. You have a few options. §6Magnetite§r veins are higher up and contain large amounts of iron, as well as some §6Vanadium§r and §6Gold§r. Another good source of iron is §6Limonite§r veins, which contain several types of iron. Finally, §6Pyrite§r can be found paired with §6Copper§r in several types of veins.\n\n§6Wrought Iron§r is obtained simply by §esmelting Iron §cNuggets§e a second time§r. It has more durability than Iron, so it is better for making tools, but §cdo not convert your entire Iron supply over to Wrought Iron§r. The two materials are not interchangeable and you\u0027ll need Iron or Wrought Iron as demanded by various recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -457,7 +457,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Before you continue, you\u0027ll need access to some more materials. \n\n§6Redstone§f: Found only deep in the world, in massive veins paired with §6Cinnabar§f and §6Ruby§f.\n\n§6Copper§f: Two primary sources. §6Tetrahedrite§f veins are higher up, while §6Chalcopyrite§f veins are lower, paired with some small amounts of §6Iron§f. You\u0027ll also find §6Malachite§f inside of Iron veins, this is another type of copper ore.\n\n§6Tin§f: Found essentially at ground level. §6Cassiterite§f is another type of tin ore, and they\u0027re always found together. If you cannot find a vein of tin, there are small amounts of tin inside veins of §6Aluminium§f and §6Rock Salt§f, which might be enough to hold you over until you find a proper tin vein.\n\n§6Coal§f: Found in relatively shallow depths. §6Lignite Coal§f is §2removed.\n\n§6Gold§f: Found inside of §6Magnetite§f veins, close to the surface.",
+          "desc:8": "Before you continue, you\u0027ll need access to some more materials. \n\n§6Redstone§r: Found only deep in the world, in massive veins paired with §6Cinnabar§r and §6Ruby§r.\n\n§6Copper§r: Two primary sources. §6Tetrahedrite§r veins are higher up, while §6Chalcopyrite§r veins are lower, paired with some small amounts of §6Iron§r. You\u0027ll also find §6Malachite§r inside of Iron veins, this is another type of copper ore.\n\n§6Tin§r: Found essentially at ground level. §6Cassiterite§r is another type of tin ore, and they\u0027re always found together. If you cannot find a vein of tin, there are small amounts of tin inside veins of §6Aluminium§r and §6Rock Salt§r, which might be enough to hold you over until you find a proper tin vein.\n\n§6Coal§r: Found in relatively shallow depths. §6Lignite Coal§r is §2removed.\n\n§6Gold§r: Found inside of §6Magnetite§r veins, close to the surface.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -535,7 +535,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§f, can be wrapped in their §6Rubber§f insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§f and liquid §9Rubber§f, but you can do it the simple way for now.\n\n§2GT cables now support RF conversion natively! You can plug an RF machine into an EU cable directly and it will convert the energy. You cannot, however, plug an §dRF§r power souce directly into an §dEU§r cable.",
+          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§r, can be wrapped in their §6Rubber§r insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§r and liquid §9Rubber§r, but you can do it the simple way for now.\n\n§2GT cables now support RF conversion natively! You can plug an RF machine into an EU cable directly and it will convert the energy. You cannot, however, plug an §dRF§r power souce directly into an §dEU§r cable.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -653,7 +653,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§f. Ore veins are massive, and mining is extremely fast with §aMining Hammers§f. What\u0027s more, even once you get access to §3Macerators§f, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials §fbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have Medium Voltage machines or even later.§r",
+          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§r. Ore veins are massive, and mining is extremely fast with §aMining Hammers§r. What\u0027s more, even once you get access to §3Macerators§r, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials §rbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have Medium Voltage machines or even later.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -701,7 +701,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiertwoship"
+            "id:8": "nomilabs:tiertwoship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -734,7 +734,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiertwoship"
+              "id:8": "nomilabs:tiertwoship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -749,7 +749,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A \"§esubstrate§f\" is the \"board\" part of a circuit board... the backing that the circuit components and wires are laid into. A good substrate needs to not conduct electricity, for obvious reasons. §6Wood§r coated in §6Sticky Resin§r is a primitive but effective material to use as your first substrate.\n\n§2CEu circuit progression means you also have to put wires on your substrates for them to be usable. In this case, use some Copper Wires.§r\n\nYou\u0027ll also need to make §6Vacuum Tubes§f, as well as some primitive §6Resistors§r. §6Paper§r will work as a material for these, for now.\n\nMake sure to code these recipes into a §3Crafting Station§r... you\u0027ll be making a LOT of these things.",
+          "desc:8": "A \"§esubstrate§r\" is the \"board\" part of a circuit board... the backing that the circuit components and wires are laid into. A good substrate needs to not conduct electricity, for obvious reasons. §6Wood§r coated in §6Sticky Resin§r is a primitive but effective material to use as your first substrate.\n\n§2CEu circuit progression means you also have to put wires on your substrates for them to be usable. In this case, use some Copper Wires.§r\n\nYou\u0027ll also need to make §6Vacuum Tubes§r, as well as some primitive §6Resistors§r. §6Paper§r will work as a material for these, for now.\n\nMake sure to code these recipes into a §3Crafting Station§r... you\u0027ll be making a LOT of these things.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -814,7 +814,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§f. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§f... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron Tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§f (not a §aMining Hammer§f, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§f. §6Plates§f can make a §aFile§f, Files can make §6Rods§f, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§f is probably your best bet for a tool material right now, but better materials will become available as you progress. \n\nThis quest technically accepts any tool material, but it is highly recommended to use §6Wrought Iron§r.",
+          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§r will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§r. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§r... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron Tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§r (not a §aMining Hammer§r, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§r. §6Plates§r can make a §aFile§r, Files can make §6Rods§r, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§r is probably your best bet for a tool material right now, but better materials will become available as you progress. \n\nThis quest technically accepts any tool material, but it is highly recommended to use §6Wrought Iron§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1009,7 +1009,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you try to craft each item only when you need it, you\u0027ll go insane. It is far more effective to §ebatch-craft§f frequently used items so you don\u0027t have to do it as often. It is very satisfying to get all the ingredients together then craft §ea stack of items§f all at once.\n\n§3Crafting Stations§f are an indispensable tool for batch-crafting. They can save recipes for all the steps in production chains for things like tools, circuits, machine casings, and more. You will want to §emake several of them§r§r for the convenience they offer.\n\nEach Crafting Station comes with some inventory space for general items, as well as a dedicated row specifically for holding §bGregTech§r tools. In addition, Crafting Stations can §einteract with adjacent inventories§r, so you can keep common materials in a container between them. This includes access points to large virtual inventories, like a §aDrawer Controller§r§r, which you will be able to make later.\n\nTo use the Crafting Station, you must either manually set up a recipe in the pattern area, or click-in a table recipe from §bJEI§r. Place the ingredients inside the Crafting Station or an adjacent container, then you can click the resulting item to craft it. Once an item is crafted, the recipe will appear on the top-right in the history pane. As usual, Shift-clicking the output item will craft up to a stack of it.\n\nEach Crafting Station will remember §eup to the last nine recipes§r you made in them, which can be recalled by clicking the item in the top-right recipe history pane. Old recipes will be cycled out, so if you want to ensure a recipe doesn\u0027t ever get replaced by a different one, §eShift-click the recipe in the history pane to lock it§r.\n\nThe available ingredients from neighboring inventories are visible through the §eStorage§r tab on the Crafting Station, and you can also place items into this tab to send them to available neighboring inventories.",
+          "desc:8": "If you try to craft each item only when you need it, you\u0027ll go insane. It is far more effective to §ebatch-craft§r frequently used items so you don\u0027t have to do it as often. It is very satisfying to get all the ingredients together then craft §ea stack of items§r all at once.\n\n§3Crafting Stations§r are an indispensable tool for batch-crafting. They can save recipes for all the steps in production chains for things like tools, circuits, machine casings, and more. You will want to §emake several of them§r§r for the convenience they offer.\n\nEach Crafting Station comes with some inventory space for general items, as well as a dedicated row specifically for holding §bGregTech§r tools. In addition, Crafting Stations can §einteract with adjacent inventories§r, so you can keep common materials in a container between them. This includes access points to large virtual inventories, like a §aDrawer Controller§r§r, which you will be able to make later.\n\nTo use the Crafting Station, you must either manually set up a recipe in the pattern area, or click-in a table recipe from §bJEI§r. Place the ingredients inside the Crafting Station or an adjacent container, then you can click the resulting item to craft it. Once an item is crafted, the recipe will appear on the top-right in the history pane. As usual, Shift-clicking the output item will craft up to a stack of it.\n\nEach Crafting Station will remember §eup to the last nine recipes§r you made in them, which can be recalled by clicking the item in the top-right recipe history pane. Old recipes will be cycled out, so if you want to ensure a recipe doesn\u0027t ever get replaced by a different one, §eShift-click the recipe in the history pane to lock it§r.\n\nThe available ingredients from neighboring inventories are visible through the §eStorage§r tab on the Crafting Station, and you can also place items into this tab to send them to available neighboring inventories.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1062,7 +1062,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Iron Furnaces§f can smelt an item in §a150 ticks§f, which is somewhat faster than a vanilla §6Furnace§f, which takes §a200 ticks§f. The fuel efficiency remains the same for all furnaces.",
+          "desc:8": "§3Iron Furnaces§r can smelt an item in §a150 ticks§r, which is somewhat faster than a vanilla §6Furnace§r, which takes §a200 ticks§r. The fuel efficiency remains the same for all furnaces.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1115,7 +1115,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Copper Furnaces§f are another step up in speed, taking §a100 ticks§f to smelt an item.",
+          "desc:8": "§3Copper Furnaces§r are another step up in speed, taking §a100 ticks§r to smelt an item.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1168,7 +1168,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Silver Furnaces§f are another step up in speed, taking a mere §a60 ticks§f to smelt an item.",
+          "desc:8": "§3Silver Furnaces§r are another step up in speed, taking a mere §a60 ticks§r to smelt an item.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1221,7 +1221,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Gold Furnaces§f are yet another step up in speed, taking only §a40 ticks§f to smelt an item.",
+          "desc:8": "§3Gold Furnaces§r are yet another step up in speed, taking only §a40 ticks§r to smelt an item.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1274,7 +1274,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "While §3Obsidian Furnaces§f are the same speed as §3Diamond Furnaces§f, they have twice the throughput since they can §esmelt two items at once§f.\n\nYou may find that Diamond Furnaces suit your needs better than Obsidian, but they\u0027ll both be crafting ingredients in various machines soon enough, so crafting one is not a waste, even if you don\u0027t use it.",
+          "desc:8": "While §3Obsidian Furnaces§r are the same speed as §3Diamond Furnaces§r, they have twice the throughput since they can §esmelt two items at once§r.\n\nYou may find that Diamond Furnaces suit your needs better than Obsidian, but they\u0027ll both be crafting ingredients in various machines soon enough, so crafting one is not a waste, even if you don\u0027t use it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1381,7 +1381,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Diamond Furnaces§f are the fastest available, taking only §a25 ticks§f to smelt an item.",
+          "desc:8": "§3Diamond Furnaces§r are the fastest available, taking only §a25 ticks§r to smelt an item.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1648,7 +1648,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first RF power generator!\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§f.",
+          "desc:8": "Your first RF power generator!\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1781,9 +1781,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32003,
+            "Damage:2": 3,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -1814,9 +1814,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32003,
+              "Damage:2": 3,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -1889,7 +1889,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:pulsatingdust"
+            "id:8": "nomilabs:pulsatingdust"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -1928,7 +1928,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:pulsatingdust"
+              "id:8": "nomilabs:pulsatingdust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2006,9 +2006,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32015,
+            "Damage:2": 15,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -2039,9 +2039,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32015,
+              "Damage:2": 15,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2230,9 +2230,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32012,
+            "Damage:2": 12,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -2263,9 +2263,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32012,
+              "Damage:2": 12,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2283,9 +2283,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32013,
+            "Damage:2": 13,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -2316,9 +2316,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32013,
+              "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2371,7 +2371,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Going out in search of a §6Rubber Tree§f is a viable option for sure. However, if this isn\u0027t appealing, you can also §eshear leaves§f and make §6Plantballs§f out of them. Plantballs smelt into §6Slime§f, and Slime smelts into §6Sticky Resin§r.\n\nYou\u0027ll want to transition to Rubber Trees at some point, though, since the §eratio of leaves to rubber is quite poor§f.\n\nUse the §3Steam Extractor§r to extract §6Raw Rubber Pulp§r from the resin, then \"alloy\" with §6Sulfur§r for the §6Rubber§r. Finally, mold it with the §6Plate Mold§r in an §3Alloy Smelter§r to make §6Rubber Sheets§r.\n\nIt\u0027s quite inefficient to do it this way, but such is the life of early game §bGregTech§f. At least rubber isn\u0027t particularly hard to come by.",
+          "desc:8": "Going out in search of a §6Rubber Tree§r is a viable option for sure. However, if this isn\u0027t appealing, you can also §eshear leaves§r and make §6Plantballs§r out of them. Plantballs smelt into §6Slime§r, and Slime smelts into §6Sticky Resin§r.\n\nYou\u0027ll want to transition to Rubber Trees at some point, though, since the §eratio of leaves to rubber is quite poor§r.\n\nUse the §3Steam Extractor§r to extract §6Raw Rubber Pulp§r from the resin, then \"alloy\" with §6Sulfur§r for the §6Rubber§r. Finally, mold it with the §6Plate Mold§r in an §3Alloy Smelter§r to make §6Rubber Sheets§r.\n\nIt\u0027s quite inefficient to do it this way, but such is the life of early game §bGregTech§r. At least rubber isn\u0027t particularly hard to come by.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2835,7 +2835,9 @@
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "simplyjetpacks:itemjetpack",
-              "tag:10": {}
+              "tag:10": {
+                "JetpackParticleType:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -3728,7 +3730,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:gemsensor"
+            "id:8": "nomilabs:gemsensor"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -3761,7 +3763,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:gemsensor"
+              "id:8": "nomilabs:gemsensor"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -3962,7 +3964,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tierthreeship"
+            "id:8": "nomilabs:tierthreeship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -3995,7 +3997,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tierthreeship"
+              "id:8": "nomilabs:tierthreeship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -4010,7 +4012,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Use your newly acquired §3Alloy Smelter§f§  to make some new alloys!\n\n§eCopper§r alloyed with §eRedstone§r makes §6Red Alloy Ingots§r.\n\n§eIron§r alloyed with §eRedstone§r makes §6Conductive Iron Ingots§r.\n\n§aHammer§r them into §6Plates§r, then §acut§r them into §6Wires§r.\n",
+          "desc:8": "Use your newly acquired §3Alloy Smelter§r§  to make some new alloys!\n\n§eCopper§r alloyed with §eRedstone§r makes §6Red Alloy Ingots§r.\n\n§eIron§r alloyed with §eRedstone§r makes §6Conductive Iron Ingots§r.\n\n§aHammer§r them into §6Plates§r, then §acut§r them into §6Wires§r.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4053,9 +4055,9 @@
             },
             "1:10": {
               "Count:3": 32,
-              "Damage:2": 32011,
+              "Damage:2": 11,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             },
             "2:10": {
               "Count:3": 8,
@@ -4071,9 +4073,9 @@
             },
             "4:10": {
               "Count:3": 16,
-              "Damage:2": 32011,
+              "Damage:2": 11,
               "OreDict:8": "",
-              "id:8": "gregtech:wire_single"
+              "id:8": "nomilabs:wire_single"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -4642,7 +4644,7 @@
             "Count:3": 1,
             "Damage:2": 276,
             "OreDict:8": "",
-            "id:8": "devtech:meta_gem_perfect"
+            "id:8": "gregtech:meta_gem_perfect"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -4675,7 +4677,7 @@
               "Count:3": 1,
               "Damage:2": 276,
               "OreDict:8": "",
-              "id:8": "devtech:meta_gem_perfect"
+              "id:8": "gregtech:meta_gem_perfect"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5878,7 +5880,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizedeinsteinium"
+              "id:8": "nomilabs:stabilizedeinsteinium"
             },
             "1:10": {
               "Count:3": 1,
@@ -9633,9 +9635,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32050,
+            "Damage:2": 50,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -9665,9 +9667,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32050,
+              "Damage:2": 50,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -10861,7 +10863,7 @@
             "OreDict:8": "",
             "id:8": "betterquesting:placeholder",
             "tag:10": {
-              "orig_id:8": "contenttweaker:microcircuit",
+              "orig_id:8": "nomilabs:microcircuit",
               "orig_meta:3": 0
             }
           },
@@ -10898,7 +10900,7 @@
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
-                "orig_id:8": "contenttweaker:microcircuit",
+                "orig_id:8": "nomilabs:microcircuit",
                 "orig_meta:3": 0
               }
             }
@@ -12271,7 +12273,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32000,
+            "Damage:2": 32100,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -12306,7 +12308,7 @@
               "Count:3": 15,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:microverse_casing"
+              "id:8": "nomilabs:microverse_casing"
             },
             "1:10": {
               "Count:3": 1,
@@ -12328,7 +12330,7 @@
             },
             "4:10": {
               "Count:3": 1,
-              "Damage:2": 32000,
+              "Damage:2": 32100,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -12395,7 +12397,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tieroneship"
+            "id:8": "nomilabs:tieroneship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -12428,7 +12430,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tieroneship"
+              "id:8": "nomilabs:tieroneship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -13487,7 +13489,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiereightship"
+            "id:8": "nomilabs:tiereightship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -13520,7 +13522,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiereightship"
+              "id:8": "nomilabs:tiereightship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -13596,7 +13598,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiernineship"
+            "id:8": "nomilabs:tiernineship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -13629,7 +13631,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiernineship"
+              "id:8": "nomilabs:tiernineship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -13648,9 +13650,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32023,
+            "Damage:2": 23,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -13681,9 +13683,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32023,
+              "Damage:2": 23,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14227,7 +14229,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tierfourship"
+            "id:8": "nomilabs:tierfourship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14260,7 +14262,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tierfourship"
+              "id:8": "nomilabs:tierfourship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14280,7 +14282,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tierfiveship"
+            "id:8": "nomilabs:tierfiveship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14313,7 +14315,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tierfiveship"
+              "id:8": "nomilabs:tierfiveship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14386,7 +14388,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiersixship"
+            "id:8": "nomilabs:tiersixship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14419,7 +14421,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiersixship"
+              "id:8": "nomilabs:tiersixship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14494,7 +14496,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiersevenship"
+            "id:8": "nomilabs:tiersevenship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14527,7 +14529,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiersevenship"
+              "id:8": "nomilabs:tiersevenship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14545,9 +14547,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14578,9 +14580,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14600,7 +14602,7 @@
             "Count:3": 1,
             "Damage:2": 2,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_block_compressed_2000"
+            "id:8": "nomilabs:meta_block_compressed_0"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -14633,7 +14635,7 @@
               "Count:3": 1,
               "Damage:2": 2,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_2000"
+              "id:8": "nomilabs:meta_block_compressed_0"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -15237,7 +15239,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts LV, MV and HV Macerators.\n\n§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nYou don\u0027t really need a LV one, as you can use the superior §3Steam Grinder§r. LV or MV ones could be used for automation. However, HV ones provide chanced output, extremely important for §eOre Processing§r and other processes.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§f.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.§r\n\n§2Macerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
+          "desc:8": "§oNote: this quest accepts LV, MV and HV Macerators.\n\n§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nYou don\u0027t really need a LV one, as you can use the superior §3Steam Grinder§r. LV or MV ones could be used for automation. However, HV ones provide chanced output, extremely important for §eOre Processing§r and other processes.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§r.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.§r\n\n§2Macerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16315,9 +16317,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -16348,9 +16350,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -17231,9 +17233,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "contenttweaker:blazepowder"
+            "id:8": "minecraft:blaze_powder"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -17793,9 +17795,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32010,
+            "Damage:2": 10,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -17826,9 +17828,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32010,
+              "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -17846,9 +17848,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32018,
+            "Damage:2": 18,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "nomilabs:meta_plate_double"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -17879,9 +17881,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32018,
+              "Damage:2": 18,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
+              "id:8": "nomilabs:meta_plate_double"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -17902,7 +17904,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:quantumfluxedeterniumplating"
+            "id:8": "nomilabs:quantumfluxedeterniumplating"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -17935,7 +17937,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:quantumfluxedeterniumplating"
+              "id:8": "nomilabs:quantumfluxedeterniumplating"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -17993,7 +17995,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need large quantities of §6Canola§f (for §6Canola Oil§f in a §bCanola Press§f) and §6Sugarcane§f (for §6Ethanol§f).\n\nOf course, other crops can work as well, if you want to mix things up.",
+          "desc:8": "You\u0027ll need large quantities of §6Canola§r (for §6Canola Oil§r in a §bCanola Press§r) and §6Sugarcane§r (for §6Ethanol§r).\n\nOf course, other crops can work as well, if you want to mix things up.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18897,9 +18899,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust"
+            "id:8": "nomilabs:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -18930,9 +18932,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "nomilabs:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -19776,7 +19778,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aHang Glider§f is a great way to cross long distances, if you\u0027re so inclined.\n\nJust go find a couple of §eCows§r, and perhaps kill them with a §6Butchery Knife§r, which comes with §bLooting III§r. Seriously, its just 12 §dLeather§r!",
+          "desc:8": "The §aHang Glider§r is a great way to cross long distances, if you\u0027re so inclined.\n\nJust go find a couple of §eCows§r, and perhaps kill them with a §6Butchery Knife§r, which comes with §bLooting III§r. Seriously, its just 12 §dLeather§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19896,7 +19898,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:eternalcatalyst"
+            "id:8": "nomilabs:eternalcatalyst"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -19929,7 +19931,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:eternalcatalyst"
+              "id:8": "nomilabs:eternalcatalyst"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20541,7 +20543,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiereightship_stabilized"
+            "id:8": "nomilabs:tiereightship_stabilized"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -20572,7 +20574,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32005,
+              "Damage:2": 32106,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -20588,7 +20590,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aGrappling Hook§f is very useful in an urban environment.\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however since quite a lot of mods occupy this hotkey you\u0027ll need to visit the controls menu to resolve the button conflicts.",
+          "desc:8": "A §aGrappling Hook§r is very useful in an urban environment.\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however since quite a lot of mods occupy this hotkey you\u0027ll need to visit the controls menu to resolve the button conflicts.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20750,7 +20752,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aSoft Mallet§f can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the mallet.",
+          "desc:8": "A §aSoft Mallet§r can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the mallet.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21738,7 +21740,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:netherstarwest"
+              "id:8": "nomilabs:netherstarwest"
             },
             "2:10": {
               "Count:3": 1,
@@ -21750,13 +21752,13 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:netherstareast"
+              "id:8": "nomilabs:netherstareast"
             },
             "4:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:netherstarsouth"
+              "id:8": "nomilabs:netherstarsouth"
             },
             "5:10": {
               "Count:3": 1,
@@ -21814,7 +21816,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You might be wondering what chunkloading options there are in the pack.\n\nOpen your inventory and look at the top-left corner of the screen. Click the map-looking icon called §eClaimed Chunks§r.\n\n§6Click a chunk§r to claim it as yours. This will prevent unwanted creeper explosions and other players from interacting with your base.\n\n§6Shift-left click a claimed chunk§r to load it. This will ensure that the chunk is loaded at all times, even when you\u0027re not there. Alternatively, there are §achunk-loading wards§f from §bExtra Utilities§f.\n\n§eIf you\u0027re playing on a server with custom settings, ask the server owner what methods are available§f.\n\nTo invite players to your §bFTB Utils§f party, look for a corresponding button in the same corner. Parties share claimed chunks with each other. You can configure permissions for your party\u0027s claimed chunks in the party settings menu.",
+          "desc:8": "You might be wondering what chunkloading options there are in the pack.\n\nOpen your inventory and look at the top-left corner of the screen. Click the map-looking icon called §eClaimed Chunks§r.\n\n§6Click a chunk§r to claim it as yours. This will prevent unwanted creeper explosions and other players from interacting with your base.\n\n§6Shift-left click a claimed chunk§r to load it. This will ensure that the chunk is loaded at all times, even when you\u0027re not there. Alternatively, there are §achunk-loading wards§r from §bExtra Utilities§r.\n\n§eIf you\u0027re playing on a server with custom settings, ask the server owner what methods are available§r.\n\nTo invite players to your §bFTB Utils§r party, look for a corresponding button in the same corner. Parties share claimed chunks with each other. You can configure permissions for your party\u0027s claimed chunks in the party settings menu.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21926,7 +21928,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:quantumflux"
+            "id:8": "nomilabs:quantumflux"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -21959,7 +21961,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:quantumflux"
+              "id:8": "nomilabs:quantumflux"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -22240,7 +22242,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Anvils§f can be used to repair almost all §bGregTech tools§f!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§f spawn abundantly in §bLost Cities§f buildings, so go and snatch one!\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§f to repair tools made of §6Wrought Iron§f. The only tools unable to be repaired are the mortar and the plunger.",
+          "desc:8": "§3Anvils§r can be used to repair almost all §bGregTech tools§r!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§r spawn abundantly in §bLost Cities§r buildings, so go and snatch one!\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§r to repair tools made of §6Wrought Iron§r. The only tools unable to be repaired are the mortar and the plunger.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22293,7 +22295,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nThis quest accepts a §aScrewdriver§r and a §aCrowbar§r made of any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §a§lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §a§lPump§r: is much like a §aConveyor§f, but for fluids.\n\n- §a§lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §a§lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §a§lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §2§lDetector§r: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §2§lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nThis quest accepts a §aScrewdriver§r and a §aCrowbar§r made of any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §a§lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §a§lPump§r: is much like a §aConveyor§r, but for fluids.\n\n- §a§lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §a§lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §a§lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §2§lDetector§r: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §2§lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22378,7 +22380,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "All GregTech machines have one dedicated output side, which can be set by right-clicking a side with a §aGregTech Wrench§f. This is used for ejecting items into an adjacent inventory.\n\nTo enable auto-output, open the machine GUI and click one of the buttons in the bottom-left corner: §6orange§r is items and §9blue§r is fluids.\n\nIf you want to also be able to insert items into the output side, you\u0027ll have to right-click the output side with a §aGregTech Screwdriver§r.\n\nThis can be done by directly right clicking on the output side with a screwdriver, or §6shift right-clicking§r with a screwdriver from the machine grid.\n\nThese features can be used to chain machines together to make processing pipelines and facilitate crafting automation with §bApplied Energistics 2§f.",
+          "desc:8": "All GregTech machines have one dedicated output side, which can be set by right-clicking a side with a §aGregTech Wrench§r. This is used for ejecting items into an adjacent inventory.\n\nTo enable auto-output, open the machine GUI and click one of the buttons in the bottom-left corner: §6orange§r is items and §9blue§r is fluids.\n\nIf you want to also be able to insert items into the output side, you\u0027ll have to right-click the output side with a §aGregTech Screwdriver§r.\n\nThis can be done by directly right clicking on the output side with a screwdriver, or §6shift right-clicking§r with a screwdriver from the machine grid.\n\nThese features can be used to chain machines together to make processing pipelines and facilitate crafting automation with §bApplied Energistics 2§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22618,7 +22620,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 32101,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -22651,7 +22653,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 32101,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -22659,7 +22661,7 @@
               "Count:3": 47,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:microverse_casing"
+              "id:8": "nomilabs:microverse_casing"
             },
             "2:10": {
               "Count:3": 26,
@@ -22866,7 +22868,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32002,
+            "Damage:2": 32102,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -22899,7 +22901,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32002,
+              "Damage:2": 32102,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -22913,7 +22915,7 @@
               "Count:3": 119,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:microverse_casing"
+              "id:8": "nomilabs:microverse_casing"
             },
             "3:10": {
               "Count:3": 81,
@@ -26392,7 +26394,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aStorage Drawer Controllers§r are the central hub of any good storage system. They can pull from any drawers they are connected to (via other drawers, or drawer trims) within a 12 block cubic radius. This leads to a potential 25x25x25 area to connect drawers, centered on the controller.\n\nThe appearance can be customized by crafting the controller into §aFramed Controller§r and putting it into a §aFraming Table§r.\n\n§aController Slaves§r do not extend the range, but rather act as another access point to that controller - allowing you to push/pull from any of the drawers within range of the local Drawer Controller.\n\nConnecting an §6ME Storage Bus§f to a controller exposes all of the drawers to §bApplied Energistics§f. Particularly large networks can be laggy though, so keep your drawer networks a manageable size.\n\nAnother cool thing about controllers is that when §bStorage Drawers§r §6Keys§r are used on a drawer controller, they affect the whole system!",
+          "desc:8": "§aStorage Drawer Controllers§r are the central hub of any good storage system. They can pull from any drawers they are connected to (via other drawers, or drawer trims) within a 12 block cubic radius. This leads to a potential 25x25x25 area to connect drawers, centered on the controller.\n\nThe appearance can be customized by crafting the controller into §aFramed Controller§r and putting it into a §aFraming Table§r.\n\n§aController Slaves§r do not extend the range, but rather act as another access point to that controller - allowing you to push/pull from any of the drawers within range of the local Drawer Controller.\n\nConnecting an §6ME Storage Bus§r to a controller exposes all of the drawers to §bApplied Energistics§r. Particularly large networks can be laggy though, so keep your drawer networks a manageable size.\n\nAnother cool thing about controllers is that when §bStorage Drawers§r §6Keys§r are used on a drawer controller, they affect the whole system!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26445,7 +26447,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest completes with any wood-type drawer, or a Framed Drawer and a Framing Table.\n\n§bStorage Drawers§f provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§f is useful for making custom drawers out of §6Framed Drawers§f, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers§r in-world, with the cost of some sticks. \n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free! \n\nSee the uses of the framing tool in §eJEI§r and the §eJEI Information Page§r of the Hand Framing Tool§r for more information.\n\nFurthermore, you can do special stuff with your drawers, with §6Keys§r! Search §e@StorageDrawers Keys§r in §bJEI§r to see them! You can do things from \u0027locking\u0027 the drawer, meaning only that item can enter the drawer, show how many items are in the drawer, and even remove the display of items! \n\n§cPlease note that excessive use of the Quantify Key may lead to lag.",
+          "desc:8": "§oThis quest completes with any wood-type drawer, or a Framed Drawer and a Framing Table.\n\n§bStorage Drawers§r provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§r is useful for making custom drawers out of §6Framed Drawers§r, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers§r in-world, with the cost of some sticks. \n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free! \n\nSee the uses of the framing tool in §eJEI§r and the §eJEI Information Page§r of the Hand Framing Tool§r for more information.\n\nFurthermore, you can do special stuff with your drawers, with §6Keys§r! Search §e@StorageDrawers Keys§r in §bJEI§r to see them! You can do things from \u0027locking\u0027 the drawer, meaning only that item can enter the drawer, show how many items are in the drawer, and even remove the display of items! \n\n§cPlease note that excessive use of the Quantify Key may lead to lag.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26772,7 +26774,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:exoticmaterialscatalyst"
+            "id:8": "nomilabs:exoticmaterialscatalyst"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -26805,7 +26807,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:exoticmaterialscatalyst"
+              "id:8": "nomilabs:exoticmaterialscatalyst"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -27183,9 +27185,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32012,
+            "Damage:2": 12,
             "OreDict:8": "",
-            "id:8": "gregtech:wire_octal"
+            "id:8": "nomilabs:wire_octal"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -27698,7 +27700,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32003,
+            "Damage:2": 32104,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -27731,7 +27733,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32003,
+              "Damage:2": 32104,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -27792,7 +27794,7 @@
             "OreDict:8": "",
             "id:8": "betterquesting:placeholder",
             "tag:10": {
-              "orig_id:8": "contenttweaker:microprocessorarray",
+              "orig_id:8": "nomilabs:microprocessorarray",
               "orig_meta:3": 0
             }
           },
@@ -27829,7 +27831,7 @@
               "OreDict:8": "",
               "id:8": "betterquesting:placeholder",
               "tag:10": {
-                "orig_id:8": "contenttweaker:microprocessorarray",
+                "orig_id:8": "nomilabs:microprocessorarray",
                 "orig_meta:3": 0
               }
             }
@@ -28179,9 +28181,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32017,
+            "Damage:2": 17,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -28212,9 +28214,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32017,
+              "Damage:2": 17,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -28336,7 +28338,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With all of the components made, it\u0027s time to craft an §2Electronic Circuit§r.\n\nThis is where your §3Crafting Station§f setups will really shine! With the patterns encoded into a Crafting Stations (well, really over §omany§r Crafting Stations), you\u0027ll be able to §ebatch craft circuits quickly§f.\n\nYou\u0027ll be making a LOT§r of circuits, so take advantage of the improved crafting efficiency.",
+          "desc:8": "With all of the components made, it\u0027s time to craft an §2Electronic Circuit§r.\n\nThis is where your §3Crafting Station§r setups will really shine! With the patterns encoded into a Crafting Stations (well, really over §omany§r Crafting Stations), you\u0027ll be able to §ebatch craft circuits quickly§r.\n\nYou\u0027ll be making a LOT§r of circuits, so take advantage of the improved crafting efficiency.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28924,7 +28926,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Overclocking aside, as you continue to progress in §5Nomifactory§f, materials made in the §3Electric Blast Furnace§f will take longer to complete. §eMore advanced coils do not give speed bonuses§f §2directly§r; they mainly allow for the furnace to §eget hot enough to process more advanced materials§f, §2and they also granting energy efficiency bonuses and speed bonuses to overclocking.§r\n\nConsequently, you\u0027ll need to continually expand your smelting and power generation infrastructure.\n\nYou don\u0027t have to get all four of these Electric Blast Furnaces completed and running just yet, but be prepared to make many of them over the course of the pack.\n\n§2As a reminder, all blocks and hatches can be shared across EBFs, except Maintenance!",
+          "desc:8": "Overclocking aside, as you continue to progress in §5Nomifactory§r, materials made in the §3Electric Blast Furnace§r will take longer to complete. §eMore advanced coils do not give speed bonuses§r §2directly§r; they mainly allow for the furnace to §eget hot enough to process more advanced materials§r, §2and they also granting energy efficiency bonuses and speed bonuses to overclocking.§r\n\nConsequently, you\u0027ll need to continually expand your smelting and power generation infrastructure.\n\nYou don\u0027t have to get all four of these Electric Blast Furnaces completed and running just yet, but be prepared to make many of them over the course of the pack.\n\n§2As a reminder, all blocks and hatches can be shared across EBFs, except Maintenance!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29838,7 +29840,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tierfourandhalfship"
+            "id:8": "nomilabs:tierfourandhalfship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -29870,7 +29872,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tierfourandhalfship"
+              "id:8": "nomilabs:tierfourandhalfship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -29922,7 +29924,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is an augment that will work in all §3dynamos§f. It increases the efficiency of the fuel being used inside the dynamo, increasing the power it generates. However, the rate of power generation remains the same, the fuel simply lasts longer. So, while §6Fuel Catalyzers§f decrease the amount you\u0027ll need to go mining for §6Coal§f, they won\u0027t boost your production of RF per second.\n\nEach Fuel Catalyzer increases fuel efficiency by §a15%§f, additively (so two will make fuel last §a30% longer§f, three is §a45% longer§f, etc.).",
+          "desc:8": "This is an augment that will work in all §3dynamos§r. It increases the efficiency of the fuel being used inside the dynamo, increasing the power it generates. However, the rate of power generation remains the same, the fuel simply lasts longer. So, while §6Fuel Catalyzers§r decrease the amount you\u0027ll need to go mining for §6Coal§r, they won\u0027t boost your production of RF per second.\n\nEach Fuel Catalyzer increases fuel efficiency by §a15%§r, additively (so two will make fuel last §a30% longer§r, three is §a45% longer§r, etc.).",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30899,9 +30901,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32019,
+            "Damage:2": 19,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -30932,9 +30934,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32019,
+              "Damage:2": 19,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -30952,9 +30954,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32010,
+            "Damage:2": 10,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -30985,9 +30987,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32010,
+              "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31005,9 +31007,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32018,
+            "Damage:2": 18,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31038,9 +31040,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32018,
+              "Damage:2": 18,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31272,9 +31274,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32023,
+            "Damage:2": 23,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31305,9 +31307,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32023,
+              "Damage:2": 23,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31416,9 +31418,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32015,
+            "Damage:2": 15,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31449,9 +31451,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32015,
+              "Damage:2": 15,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31469,9 +31471,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32025,
+            "Damage:2": 25,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31502,9 +31504,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32025,
+              "Damage:2": 25,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31522,9 +31524,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 10976,
-            "OreDict:8": "ingotMicroversium",
-            "id:8": "gregtech:meta_item_1"
+            "Damage:2": 27,
+            "OreDict:8": "",
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31555,9 +31557,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32027,
+              "Damage:2": 27,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31628,9 +31630,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32003,
+            "Damage:2": 3,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31661,9 +31663,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32003,
+              "Damage:2": 3,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31681,9 +31683,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32013,
+            "Damage:2": 13,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31714,9 +31716,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32013,
+              "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31734,9 +31736,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32012,
+            "Damage:2": 12,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31767,9 +31769,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32012,
+              "Damage:2": 12,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31787,9 +31789,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32024,
+            "Damage:2": 24,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31820,9 +31822,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32024,
+              "Damage:2": 24,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -31841,9 +31843,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32008,
+            "Damage:2": 8,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -31874,9 +31876,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32008,
+              "Damage:2": 8,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32055,7 +32057,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:heartofauniverse"
+            "id:8": "nomilabs:heartofauniverse"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -32088,7 +32090,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:heartofauniverse"
+              "id:8": "nomilabs:heartofauniverse"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32110,7 +32112,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiertenship"
+            "id:8": "nomilabs:tiertenship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -32143,7 +32145,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiertenship"
+              "id:8": "nomilabs:tiertenship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32535,7 +32537,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedhydrogen"
+            "id:8": "nomilabs:solidifiedhydrogen"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -32568,7 +32570,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedhydrogen"
+              "id:8": "nomilabs:solidifiedhydrogen"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32588,7 +32590,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedhelium"
+            "id:8": "nomilabs:solidifiedhelium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -32621,7 +32623,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedhelium"
+              "id:8": "nomilabs:solidifiedhelium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32854,7 +32856,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiednitrogen"
+            "id:8": "nomilabs:solidifiednitrogen"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -32887,7 +32889,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiednitrogen"
+              "id:8": "nomilabs:solidifiednitrogen"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32908,7 +32910,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedoxygen"
+            "id:8": "nomilabs:solidifiedoxygen"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -32941,7 +32943,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedoxygen"
+              "id:8": "nomilabs:solidifiedoxygen"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32961,7 +32963,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedfluorine"
+            "id:8": "nomilabs:solidifiedfluorine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -32994,7 +32996,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedfluorine"
+              "id:8": "nomilabs:solidifiedfluorine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -33014,7 +33016,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedneon"
+            "id:8": "nomilabs:solidifiedneon"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -33047,7 +33049,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedneon"
+              "id:8": "nomilabs:solidifiedneon"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -33385,7 +33387,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedchlorine"
+            "id:8": "nomilabs:solidifiedchlorine"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -33418,7 +33420,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedchlorine"
+              "id:8": "nomilabs:solidifiedchlorine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -33438,7 +33440,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedargon"
+            "id:8": "nomilabs:solidifiedargon"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -33471,7 +33473,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedargon"
+              "id:8": "nomilabs:solidifiedargon"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -34233,7 +34235,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedkrypton"
+            "id:8": "nomilabs:solidifiedkrypton"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -34266,7 +34268,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedkrypton"
+              "id:8": "nomilabs:solidifiedkrypton"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -34605,7 +34607,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedxenon"
+            "id:8": "nomilabs:solidifiedxenon"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -34638,7 +34640,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedxenon"
+              "id:8": "nomilabs:solidifiedxenon"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -34923,7 +34925,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedmercury"
+            "id:8": "nomilabs:solidifiedmercury"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -34956,7 +34958,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedmercury"
+              "id:8": "nomilabs:solidifiedmercury"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -34976,7 +34978,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:solidifiedradon"
+            "id:8": "nomilabs:solidifiedradon"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35009,7 +35011,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:solidifiedradon"
+              "id:8": "nomilabs:solidifiedradon"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35082,7 +35084,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:stabilizeduranium"
+            "id:8": "nomilabs:stabilizeduranium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35115,7 +35117,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizeduranium"
+              "id:8": "nomilabs:stabilizeduranium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35135,7 +35137,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:stabilizedneptunium"
+            "id:8": "nomilabs:stabilizedneptunium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35168,7 +35170,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizedneptunium"
+              "id:8": "nomilabs:stabilizedneptunium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35188,7 +35190,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:stabilizedplutonium"
+            "id:8": "nomilabs:stabilizedplutonium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35221,7 +35223,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizedplutonium"
+              "id:8": "nomilabs:stabilizedplutonium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35294,7 +35296,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:stabilizedcurium"
+            "id:8": "nomilabs:stabilizedcurium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35327,7 +35329,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizedcurium"
+              "id:8": "nomilabs:stabilizedcurium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35347,7 +35349,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:stabilizedberkelium"
+            "id:8": "nomilabs:stabilizedberkelium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35380,7 +35382,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizedberkelium"
+              "id:8": "nomilabs:stabilizedberkelium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35400,7 +35402,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:stabilizedcalifornium"
+            "id:8": "nomilabs:stabilizedcalifornium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35433,7 +35435,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizedcalifornium"
+              "id:8": "nomilabs:stabilizedcalifornium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -35454,7 +35456,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:stabilizedeinsteinium"
+            "id:8": "nomilabs:stabilizedeinsteinium"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -35487,7 +35489,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:stabilizedeinsteinium"
+              "id:8": "nomilabs:stabilizedeinsteinium"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36170,7 +36172,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aImplosion Compressor§f is like an autoclave that uses explosions instead of water. It is the only way to turn most gem dusts into gemstones.\n\nPlease note that for recipes, like §6Apatite Dust -\u003e Apatite§r, an §3Autoclave§r with §6Distilled Water§r is more efficient than the Implosion Compressor.\n\nIt will also be vital for processing §5Motes of Omnium§f.\n\nIn addition to the controller and casings, you will need one §eLV or better§r §6Item Input Bus§r, §6Item Output Bus§r, and §6Energy Input Hatch§r.\n\n§2If desired, you may upgrade this directly to an Electric Implosion Compressor, which is no different than an Implosion Compressor at the moment.",
+          "desc:8": "The §aImplosion Compressor§r is like an autoclave that uses explosions instead of water. It is the only way to turn most gem dusts into gemstones.\n\nPlease note that for recipes, like §6Apatite Dust -\u003e Apatite§r, an §3Autoclave§r with §6Distilled Water§r is more efficient than the Implosion Compressor.\n\nIt will also be vital for processing §5Motes of Omnium§r.\n\nIn addition to the controller and casings, you will need one §eLV or better§r §6Item Input Bus§r, §6Item Output Bus§r, and §6Energy Input Hatch§r.\n\n§2If desired, you may upgrade this directly to an Electric Implosion Compressor, which is no different than an Implosion Compressor at the moment.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36229,7 +36231,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tierfourandhalfship"
+            "id:8": "nomilabs:tierfourandhalfship"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -36321,7 +36323,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:pulsatingmesh"
+            "id:8": "nomilabs:pulsatingmesh"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -36360,7 +36362,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:pulsatingmesh"
+              "id:8": "nomilabs:pulsatingmesh"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -36835,7 +36837,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Confused about all the Wrenches yet?\n\nThe §aCrescent Hammer§r is for use on machines from §bThermal Expansion§f, but can be used for basic wrench interactions with blocks from almost every mod.\n\nThe §aYeta Wrench§r is used with machines and conduits from §bEnderIO§f, and has several special display modes (§6sneak-mouse wheel§f to switch between them).\n\nThe §aGregTech Wrench§r is used to rotate GregTech machines and redefine their output sides. §2It also has some of the capabilities of the other Wrenches now.§r\n\nYou can see which mod a machine is from with the §9blue text§f at the bottom of its tooltip.",
+          "desc:8": "Confused about all the Wrenches yet?\n\nThe §aCrescent Hammer§r is for use on machines from §bThermal Expansion§r, but can be used for basic wrench interactions with blocks from almost every mod.\n\nThe §aYeta Wrench§r is used with machines and conduits from §bEnderIO§r, and has several special display modes (§6sneak-mouse wheel§r to switch between them).\n\nThe §aGregTech Wrench§r is used to rotate GregTech machines and redefine their output sides. §2It also has some of the capabilities of the other Wrenches now.§r\n\nYou can see which mod a machine is from with the §9blue text§r at the bottom of its tooltip.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37096,7 +37098,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32004,
+            "Damage:2": 32105,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -37137,11 +37139,11 @@
               "Count:3": 3,
               "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_2006"
+              "id:8": "nomilabs:meta_block_compressed_6"
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 32004,
+              "Damage:2": 32105,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -39541,7 +39543,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32006,
+            "Damage:2": 32107,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -39573,7 +39575,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32006,
+              "Damage:2": 32107,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -39593,7 +39595,7 @@
               "Count:3": 10,
               "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_2006"
+              "id:8": "nomilabs:meta_block_compressed_6"
             },
             "4:10": {
               "Count:3": 30,
@@ -39879,9 +39881,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32109,
+            "Damage:2": 109,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -39911,9 +39913,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32109,
+              "Damage:2": 109,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -40175,7 +40177,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Dislocator Pedestals§f are a very simple way of inter-dimensional transport.\n\nHold a §6Dislocator§f in your hand and §6sneak-right click§f to bind it to your position. Now, place it inside a Pedestal so you can travel to the bound spot anytime you want.\n\nBefore going to the Moon, you\u0027ll need §etwo Dislocators§f and §etwo Pedestals§f.\n\nBind one Dislocator to a location in the Overworld, then take it with you to the Moon and put it down on a Pedestal.\n\nBind the other Dislocator to a location on the Moon, then use the first Pedestal to return home. Place the second Dislocator on the second Pedestal, then you can warp between the two locations at will. Neat!\n\n§aTip: Dislocators don\u0027t lose durability on use when placed in a Pedestal!",
+          "desc:8": "§6Dislocator Pedestals§r are a very simple way of inter-dimensional transport.\n\nHold a §6Dislocator§r in your hand and §6sneak-right click§r to bind it to your position. Now, place it inside a Pedestal so you can travel to the bound spot anytime you want.\n\nBefore going to the Moon, you\u0027ll need §etwo Dislocators§r and §etwo Pedestals§r.\n\nBind one Dislocator to a location in the Overworld, then take it with you to the Moon and put it down on a Pedestal.\n\nBind the other Dislocator to a location on the Moon, then use the first Pedestal to return home. Place the second Dislocator on the second Pedestal, then you can warp between the two locations at will. Neat!\n\n§aTip: Dislocators don\u0027t lose durability on use when placed in a Pedestal!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42602,9 +42604,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32042,
+            "Damage:2": 42,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust"
+            "id:8": "nomilabs:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -42635,9 +42637,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32042,
+              "Damage:2": 42,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "nomilabs:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -46635,9 +46637,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32001,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -46667,9 +46669,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 64,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -48599,7 +48601,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tiereightandhalfship"
+            "id:8": "nomilabs:tiereightandhalfship"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -48631,7 +48633,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiereightandhalfship"
+              "id:8": "nomilabs:tiereightandhalfship"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -49359,7 +49361,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:heartofauniverse",
+              "id:8": "nomilabs:heartofauniverse",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -49382,7 +49384,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:magnetron",
+              "id:8": "nomilabs:magnetron",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -49394,7 +49396,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:universecreationdata",
+              "id:8": "nomilabs:universecreationdata",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -49406,7 +49408,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tierfourandhalfship_stabilized",
+              "id:8": "nomilabs:tierfourandhalfship_stabilized",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -49418,7 +49420,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiertenship",
+              "id:8": "nomilabs:tiertenship",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -49441,7 +49443,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tierfourandhalfship",
+              "id:8": "nomilabs:tierfourandhalfship",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -49453,7 +49455,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:tiereightandhalfship",
+              "id:8": "nomilabs:tiereightandhalfship",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -49500,7 +49502,7 @@
               "Count:3": 64,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:sixtyfoursmore",
+              "id:8": "nomilabs:sixtyfoursmore",
               "tag:10": {
                 "RepairCost:3": 0,
                 "display:10": {
@@ -54954,7 +54956,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:heartofauniverse"
+            "id:8": "nomilabs:heartofauniverse"
           },
           "name:8": "End Game",
           "visibility:8": "ALWAYS"
@@ -55880,12 +55882,12 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Welcome to §5Nomifactory§r, I\u0027ll be your guide.",
+          "desc:8": "Welcome to §5Nomi-CEu§r §cHard/Expert Mode§r, I\u0027ll be your guide.",
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 516,
             "OreDict:8": "",
-            "id:8": "minecraft:iron_ingot"
+            "id:8": "gregtech:meta_item_1"
           },
           "name:8": "Genesis",
           "visibility:8": "ALWAYS"
@@ -56361,7 +56363,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:tieroneship"
+            "id:8": "nomilabs:tieroneship"
           },
           "name:8": "Into The Microverse",
           "visibility:8": "ALWAYS"

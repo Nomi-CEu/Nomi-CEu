@@ -76,7 +76,7 @@
     "livingMatter": "extraterrestrial",
     "simulationRFCost": 6666,
     "craftingIngredients": [
-      "contenttweaker:dragonlairdata",
+      "nomilabs:dragonlairdata",
 	  "deepmoblearning:living_matter_extraterrestrial",
 	  "deepmoblearning:living_matter_extraterrestrial",
 	  "deepmoblearning:living_matter_extraterrestrial",
@@ -91,7 +91,7 @@
     "lootItems": [
       "armorplus:material,1,3",
       "minecraft:dragon_breath,1,0",
-      "contenttweaker:dragonlairdata,1,0"
+      "nomilabs:dragonlairdata,1,0"
     ],
     "deepLearnerDisplay": {
       "hearts": 100,
@@ -129,7 +129,7 @@
       "minecraft:ender_pearl,6",
 	  "minecraft:emerald,6",
       "enderio:block_enderman_skull,2",
-      "contenttweaker:impossiblerealmdata,1,0"
+      "nomilabs:impossiblerealmdata,1,0"
     ],
     "trial": {
       "entities": "deepmoblearning:trial_enderman",
@@ -449,7 +449,7 @@
     "lootItems": [
       "armorplus:material,1,2",
 	  "extrautils2:ingredients,1,10",
-	  "contenttweaker:witherrealmdata,1,0"
+	  "nomilabs:witherrealmdata,1,0"
     ],
     "deepLearnerDisplay": {
       "hearts": 150,

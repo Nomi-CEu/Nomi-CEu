@@ -9,7 +9,7 @@
     "weight": 70
   },
   {
-    "content": "contenttweaker:stonewidget",
+    "content": "nomilabs:stonewidget",
     "amount": {
       "min": 5,
       "max": 25
@@ -72,7 +72,7 @@
     "weight": 30
   },
   {
-    "content": "contenttweaker:enderwidget",
+    "content": "nomilabs:enderwidget",
     "amount": {
       "min": 2,
       "max": 5
@@ -81,7 +81,7 @@
     "weight": 50
   },
   {
-    "content": "contenttweaker:alloywidget",
+    "content": "nomilabs:alloywidget",
     "amount": {
       "min": 2,
       "max": 5
@@ -90,7 +90,7 @@
     "weight": 40
   },
   {
-    "content": "contenttweaker:woodenwidget",
+    "content": "nomilabs:woodenwidget",
     "amount": {
       "min": 5,
       "max": 25

@@ -1,13 +1,13 @@
 recipes.remove(<enderio:block_reinforced_obsidian>);
 recipes.addShaped(<enderio:block_reinforced_obsidian>,[
-	[<metaitem:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:plateDarkSteel>],
+	[<metaitem:nomilabs:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:nomilabs:plateDarkSteel>],
 	[<enderio:block_dark_iron_bars>,<armorplus:compressed_obsidian>,<enderio:block_dark_iron_bars>],
-	[<metaitem:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:plateDarkSteel>]]);
+	[<metaitem:nomilabs:plateDarkSteel>,<enderio:block_dark_iron_bars>,<metaitem:nomilabs:plateDarkSteel>]]);
 	
 recipes.remove(<enderio:block_dark_iron_bars>);
 recipes.addShaped(<enderio:block_dark_iron_bars> * 8,[
-	[<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>],
-	[<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>,<metaitem:stickDarkSteel>]]);
+	[<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>],
+	[<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:stickDarkSteel>]]);
 
 recipes.addShaped(<armorplus:compressed_obsidian>,[
 	[<minecraft:obsidian>,<minecraft:obsidian>,<minecraft:obsidian>],
@@ -51,88 +51,88 @@ recipes.addShaped(<minecraft:diamond_boots>, [
 furnace.addRecipe(<thermalfoundation:material:833>, <metaitem:rubber_drop>, 0.0);
 
 //Redstone Armor
-recipes.addShaped(<contenttweaker:redstonearmorplate>, [
+recipes.addShaped(<nomilabs:redstonearmorplate>, [
 [null, <metaitem:plateRedstone>, null], 
 [<metaitem:plateRedstone>, <thermalfoundation:material:833>, <metaitem:plateRedstone>], 
 [null, <metaitem:plateRedstone>, null]]);
 recipes.addShaped(<armorplus:redstone_helmet>, [
-	[<contenttweaker:redstonearmorplate>,<contenttweaker:redstonearmorplate>,<contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>]]);
+	[<nomilabs:redstonearmorplate>,<nomilabs:redstonearmorplate>,<nomilabs:redstonearmorplate>], 
+	[<nomilabs:redstonearmorplate>, null, <nomilabs:redstonearmorplate>]]);
 recipes.addShaped(<armorplus:redstone_chestplate>, [
-[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>], 
-[<contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>], 
-[<contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>]]);
+[<nomilabs:redstonearmorplate>, null, <nomilabs:redstonearmorplate>], 
+[<nomilabs:redstonearmorplate>, <nomilabs:redstonearmorplate>, <nomilabs:redstonearmorplate>], 
+[<nomilabs:redstonearmorplate>, <nomilabs:redstonearmorplate>, <nomilabs:redstonearmorplate>]]);
 recipes.addShaped(<armorplus:redstone_leggings>, [
-	[<contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>, <contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>]]);
+	[<nomilabs:redstonearmorplate>, <nomilabs:redstonearmorplate>, <nomilabs:redstonearmorplate>], 
+	[<nomilabs:redstonearmorplate>, null, <nomilabs:redstonearmorplate>], 
+	[<nomilabs:redstonearmorplate>, null, <nomilabs:redstonearmorplate>]]);
 recipes.addShaped(<armorplus:redstone_boots>, [
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>], 
-	[<contenttweaker:redstonearmorplate>, null, <contenttweaker:redstonearmorplate>]]);	
+	[<nomilabs:redstonearmorplate>, null, <nomilabs:redstonearmorplate>], 
+	[<nomilabs:redstonearmorplate>, null, <nomilabs:redstonearmorplate>]]);	
 recipes.addShaped(<armorplus:redstone_sword>, [
-	[null, <contenttweaker:redstonearmorplate>, null], 
-	[null, <contenttweaker:redstonearmorplate>, null], 
+	[null, <nomilabs:redstonearmorplate>, null], 
+	[null, <nomilabs:redstonearmorplate>, null], 
 	[null, <minecraft:stick>, null]]);	
 	
 //Lapis Armor
-recipes.addShaped(<contenttweaker:lapisarmorplate>, [
+recipes.addShaped(<nomilabs:lapisarmorplate>, [
 [null, <metaitem:plateLapis>, null], 
 [<metaitem:plateLapis>, <thermalfoundation:material:833>, <metaitem:plateLapis>], 
 [null, <metaitem:plateLapis>, null]]);
 recipes.addShaped(<armorplus:lapis_helmet>, [
-	[<contenttweaker:lapisarmorplate>,<contenttweaker:lapisarmorplate>,<contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>]]);
+	[<nomilabs:lapisarmorplate>,<nomilabs:lapisarmorplate>,<nomilabs:lapisarmorplate>], 
+	[<nomilabs:lapisarmorplate>, null, <nomilabs:lapisarmorplate>]]);
 recipes.addShaped(<armorplus:lapis_chestplate>, [
-[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>], 
-[<contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>], 
-[<contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>]]);
+[<nomilabs:lapisarmorplate>, null, <nomilabs:lapisarmorplate>], 
+[<nomilabs:lapisarmorplate>, <nomilabs:lapisarmorplate>, <nomilabs:lapisarmorplate>], 
+[<nomilabs:lapisarmorplate>, <nomilabs:lapisarmorplate>, <nomilabs:lapisarmorplate>]]);
 recipes.addShaped(<armorplus:lapis_leggings>, [
-	[<contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>, <contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>]]);
+	[<nomilabs:lapisarmorplate>, <nomilabs:lapisarmorplate>, <nomilabs:lapisarmorplate>], 
+	[<nomilabs:lapisarmorplate>, null, <nomilabs:lapisarmorplate>], 
+	[<nomilabs:lapisarmorplate>, null, <nomilabs:lapisarmorplate>]]);
 recipes.addShaped(<armorplus:lapis_boots>, [
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>], 
-	[<contenttweaker:lapisarmorplate>, null, <contenttweaker:lapisarmorplate>]]);	
+	[<nomilabs:lapisarmorplate>, null, <nomilabs:lapisarmorplate>], 
+	[<nomilabs:lapisarmorplate>, null, <nomilabs:lapisarmorplate>]]);	
 recipes.addShaped(<armorplus:lapis_sword>, [
-	[null, <contenttweaker:lapisarmorplate>, null], 
-	[null, <contenttweaker:lapisarmorplate>, null], 
+	[null, <nomilabs:lapisarmorplate>, null], 
+	[null, <nomilabs:lapisarmorplate>, null], 
 	[null, <minecraft:stick>, null]]);	
 	
 //Carbon Armor
-recipes.addShaped(<contenttweaker:carbonarmorplate>, [
+recipes.addShaped(<nomilabs:carbonarmorplate>, [
 [null, <metaitem:carbon.plate>, null], 
 [<metaitem:carbon.plate>, <thermalfoundation:material:833>, <metaitem:carbon.plate>], 
 [null, <metaitem:carbon.plate>, null]]);
 recipes.addShaped(<armorplus:coal_helmet>, [
-	[<contenttweaker:carbonarmorplate>,<contenttweaker:carbonarmorplate>,<contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>]]);
+	[<nomilabs:carbonarmorplate>,<nomilabs:carbonarmorplate>,<nomilabs:carbonarmorplate>], 
+	[<nomilabs:carbonarmorplate>, null, <nomilabs:carbonarmorplate>]]);
 recipes.addShaped(<armorplus:coal_chestplate>, [
-[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>], 
-[<contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>], 
-[<contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>]]);
+[<nomilabs:carbonarmorplate>, null, <nomilabs:carbonarmorplate>], 
+[<nomilabs:carbonarmorplate>, <nomilabs:carbonarmorplate>, <nomilabs:carbonarmorplate>], 
+[<nomilabs:carbonarmorplate>, <nomilabs:carbonarmorplate>, <nomilabs:carbonarmorplate>]]);
 recipes.addShaped(<armorplus:coal_leggings>, [
-	[<contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>, <contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>]]);
+	[<nomilabs:carbonarmorplate>, <nomilabs:carbonarmorplate>, <nomilabs:carbonarmorplate>], 
+	[<nomilabs:carbonarmorplate>, null, <nomilabs:carbonarmorplate>], 
+	[<nomilabs:carbonarmorplate>, null, <nomilabs:carbonarmorplate>]]);
 recipes.addShaped(<armorplus:coal_boots>, [
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>], 
-	[<contenttweaker:carbonarmorplate>, null, <contenttweaker:carbonarmorplate>]]);	
+	[<nomilabs:carbonarmorplate>, null, <nomilabs:carbonarmorplate>], 
+	[<nomilabs:carbonarmorplate>, null, <nomilabs:carbonarmorplate>]]);	
 	
 //Ardite Armor
 recipes.addShaped(<armorplus:ardite_helmet>, [
-	[<metaitem:plateArdite>,<metaitem:plateArdite>,<metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>]]);
+	[<metaitem:nomilabs:plateArdite>,<metaitem:nomilabs:plateArdite>,<metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>]]);
 recipes.addShaped(<armorplus:ardite_chestplate>, [
-[<metaitem:plateArdite>, null, <metaitem:plateArdite>], 
-[<metaitem:plateArdite>, <metaitem:plateArdite>, <metaitem:plateArdite>], 
-[<metaitem:plateArdite>, <metaitem:plateArdite>, <metaitem:plateArdite>]]);
+[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>], 
+[<metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>], 
+[<metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>]]);
 recipes.addShaped(<armorplus:ardite_leggings>, [
-	[<metaitem:plateArdite>, <metaitem:plateArdite>, <metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>]]);
+	[<metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>, <metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>]]);
 recipes.addShaped(<armorplus:ardite_boots>, [
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>], 
-	[<metaitem:plateArdite>, null, <metaitem:plateArdite>]]);	
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>], 
+	[<metaitem:nomilabs:plateArdite>, null, <metaitem:nomilabs:plateArdite>]]);	
 	
 //Cobalt Armor
 recipes.addShaped(<armorplus:cobalt_helmet>, [
@@ -152,19 +152,19 @@ recipes.addShaped(<armorplus:cobalt_boots>, [
 
 //Manyullyn Armor
 recipes.addShaped(<armorplus:manyullyn_helmet>, [
-	[<metaitem:plateManyullyn>,<metaitem:plateManyullyn>,<metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>]]);
+	[<metaitem:nomilabs:plateManyullyn>,<metaitem:nomilabs:plateManyullyn>,<metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>]]);
 recipes.addShaped(<armorplus:manyullyn_chestplate>, [
-[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>], 
-[<metaitem:plateManyullyn>, <metaitem:plateManyullyn>, <metaitem:plateManyullyn>], 
-[<metaitem:plateManyullyn>, <metaitem:plateManyullyn>, <metaitem:plateManyullyn>]]);
+[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>], 
+[<metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>], 
+[<metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>]]);
 recipes.addShaped(<armorplus:manyullyn_leggings>, [
-	[<metaitem:plateManyullyn>, <metaitem:plateManyullyn>, <metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>]]);
+	[<metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>, <metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>]]);
 recipes.addShaped(<armorplus:manyullyn_boots>, [
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>], 
-	[<metaitem:plateManyullyn>, null, <metaitem:plateManyullyn>]]);
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>], 
+	[<metaitem:nomilabs:plateManyullyn>, null, <metaitem:nomilabs:plateManyullyn>]]);
 	
 //Iron Armor
 recipes.remove(<minecraft:iron_helmet>);
@@ -479,7 +479,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:2>, [
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_helmet>, [
 [null,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,null],
 [null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
-[null,<simplyjetpacks:metaitemmods:3>,<contenttweaker:ultimate_gem>,<contenttweaker:ultimate_gem>,<armorplus:the_ultimate_part:1>,<contenttweaker:ultimate_gem>,<contenttweaker:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null],
+[null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<nomilabs:ultimate_gem>,<armorplus:the_ultimate_part:1>,<nomilabs:ultimate_gem>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null],
 [null,<simplyjetpacks:metaitemmods:3>,<armorplus:the_ultimate_part:2>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:the_ultimate_part>,<simplyjetpacks:metaitemmods:3>,null],
 [null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
 [null,null,<armorplus:material:4>,<armorplus:material:4>,null,<armorplus:material:4>,<armorplus:material:4>,null,null],
@@ -532,12 +532,12 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:3>, [
 	
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_chestplate>, [
 [null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,null,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null],
-[<simplyjetpacks:metaitemmods:3>,<contenttweaker:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,null,null,<simplyjetpacks:metaitemmods:3>,<contenttweaker:ultimate_gem>,<simplyjetpacks:metaitemmods:3>],
+[<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,null,null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,null,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>],
 [null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
-[null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<contenttweaker:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
-[null,<simplyjetpacks:metaitemmods:3>,<armorplus:the_ultimate_part:5>,<contenttweaker:ultimate_gem>,<armorplus:the_ultimate_part:4>,<contenttweaker:ultimate_gem>,<armorplus:the_ultimate_part:3>,<simplyjetpacks:metaitemmods:3>,null],
-[null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<contenttweaker:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
+[null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<nomilabs:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
+[null,<simplyjetpacks:metaitemmods:3>,<armorplus:the_ultimate_part:5>,<nomilabs:ultimate_gem>,<armorplus:the_ultimate_part:4>,<nomilabs:ultimate_gem>,<armorplus:the_ultimate_part:3>,<simplyjetpacks:metaitemmods:3>,null],
+[null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<nomilabs:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
 [null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
 [null,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,null]]);   
 
@@ -549,7 +549,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_chestplate>, [
 [<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
 [null,<metaitem:ingotNeutronium>,<draconicevolution:draconic_chest>,<armorplus:the_ultimate_chestplate>,<metaitem:qts.advanced_chestplate>,<armorplus:the_ultimate_chestplate>,<draconicevolution:wyvern_chest>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
-[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<metaitem:blockInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
+[null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<ore:blockInfinity>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<ore:ingotInfinity>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<armorplus:the_ultimate_chestplate>,<metaitem:ingotNeutronium>,null],
 [null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null]]); 
@@ -581,14 +581,14 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:6>, [
 	[null,null,null,<armorplus:emerald_leggings>,<enderio:block_reinforced_obsidian>]]);
 
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_leggings>, [
-[<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>, <contenttweaker:ultimate_gem>, <armorplus:the_ultimate_part:7>, <contenttweaker:ultimate_gem>, <simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>],
+[<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>, <nomilabs:ultimate_gem>, <armorplus:the_ultimate_part:7>, <nomilabs:ultimate_gem>, <simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
-[<simplyjetpacks:metaitemmods:3>,<contenttweaker:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<contenttweaker:ultimate_gem>,<simplyjetpacks:metaitemmods:3>],
+[<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,null,null,null,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<armorplus:the_ultimate_part:8>,<armorplus:material:4>,null,null,null,<armorplus:material:4>,<armorplus:the_ultimate_part:6>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,null,null,null,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
-[<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<contenttweaker:ultimate_gem>,null,null,null,<contenttweaker:ultimate_gem>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
-[<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<contenttweaker:ultimate_gem>,null,null,null,<contenttweaker:ultimate_gem>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
+[<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<nomilabs:ultimate_gem>,null,null,null,<nomilabs:ultimate_gem>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
+[<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<nomilabs:ultimate_gem>,null,null,null,<nomilabs:ultimate_gem>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,null,null,null,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>]]); 
 
 //Infinity Leggings
@@ -635,9 +635,9 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:9>, [
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_boots>, [
 [null,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,null],
 [null,<armorplus:material:4>,<armorplus:the_ultimate_part:10>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<armorplus:super_star_boots>,<armorplus:material:4>,null],
-[null,<armorplus:material:4>,<contenttweaker:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<contenttweaker:ultimate_gem>,<armorplus:material:4>,null],
-[<armorplus:material:4>,<armorplus:material:4>,<contenttweaker:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<contenttweaker:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>],
-[<armorplus:material:4>,<armorplus:the_ultimate_part:11>,<contenttweaker:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<contenttweaker:ultimate_gem>,<armorplus:the_ultimate_part:9>,<armorplus:material:4>],
+[null,<armorplus:material:4>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<armorplus:material:4>,null],
+[<armorplus:material:4>,<armorplus:material:4>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>],
+[<armorplus:material:4>,<armorplus:the_ultimate_part:11>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<armorplus:the_ultimate_part:9>,<armorplus:material:4>],
 [<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>],
 [null,null,null,null,null,null,null,null,null],
 [null,null,null,null,null,null,null,null,null],

@@ -1,6 +1,6 @@
 [
   {
-    "content": "contenttweaker:omnicoin100",
+    "content": "nomilabs:nomicoin100",
     "unitWorth": 100,
     "weight": 10,
 	"amount": {
@@ -9,7 +9,7 @@
     }
   },
   {
-    "content": "contenttweaker:omnicoin5",
+    "content": "nomilabs:nomicoin5",
     "unitWorth": 5,
     "weight": 100,
 	"amount": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "content": "contenttweaker:omnicoin25",
+    "content": "nomilabs:nomicoin25",
     "unitWorth": 25,
     "weight": 50,
 	"amount": {
@@ -27,7 +27,7 @@
     }
   },
   {
-    "content": "contenttweaker:omnicoin",
+    "content": "nomilabs:nomicoin",
     "unitWorth": 1,
     "weight": 100,
 	"amount": {

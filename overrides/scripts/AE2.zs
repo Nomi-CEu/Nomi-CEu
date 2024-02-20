@@ -22,7 +22,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:20>, <ore:itemSilicon>, true, 
 Inscriber.removeRecipe(<appliedenergistics2:material:24>); 	
 Inscriber.addRecipe(<appliedenergistics2:material:24>, <ore:circuitLv>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:24>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
-//Inscriber.addRecipe(<appliedenergistics2:material:24>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
+//Inscriber.addRecipe(<appliedenergistics2:material:24>, <nomilabs:refinedcircuit>, false, <appliedenergistics2:material:17>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:17>); 		
 Inscriber.addRecipe(<appliedenergistics2:material:17>, <metaitem:plateDiamond>, true, <appliedenergistics2:material:14>);		
 	
@@ -30,7 +30,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:17>, <metaitem:plateDiamond>, 
 Inscriber.removeRecipe(<appliedenergistics2:material:23>); 	
 Inscriber.addRecipe(<appliedenergistics2:material:23>, <ore:circuitLv>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:23>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
-//Inscriber.addRecipe(<appliedenergistics2:material:23>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
+//Inscriber.addRecipe(<appliedenergistics2:material:23>, <nomilabs:refinedcircuit>, false, <appliedenergistics2:material:16>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:16>); 		
 Inscriber.addRecipe(<appliedenergistics2:material:16>, <metaitem:plateCertusQuartz>, true, <appliedenergistics2:material:13>);	
 	
@@ -38,7 +38,7 @@ Inscriber.addRecipe(<appliedenergistics2:material:16>, <metaitem:plateCertusQuar
 Inscriber.removeRecipe(<appliedenergistics2:material:22>); 	
 Inscriber.addRecipe(<appliedenergistics2:material:22>, <ore:circuitLv>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
 //Inscriber.addRecipe(<appliedenergistics2:material:22>, <metaitem:circuit.basic_electronic>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
-//Inscriber.addRecipe(<appliedenergistics2:material:22>, <contenttweaker:refinedcircuit>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
+//Inscriber.addRecipe(<appliedenergistics2:material:22>, <nomilabs:refinedcircuit>, false, <appliedenergistics2:material:18>,<appliedenergistics2:material:20>);	
 Inscriber.removeRecipe(<appliedenergistics2:material:18>); 		
 Inscriber.addRecipe(<appliedenergistics2:material:18>, <metaitem:plateGold>, true, <appliedenergistics2:material:15>);		
 	
@@ -52,9 +52,9 @@ recipes.addShaped(<appliedenergistics2:drive>, [
 //ME Inscriber
 recipes.remove(<appliedenergistics2:inscriber>);
 recipes.addShaped(<appliedenergistics2:inscriber>, [
-	[<metaitem:plateDarkSteel>,<metaitem:electric.piston.mv>,<metaitem:plateDarkSteel>],
-	[<appliedenergistics2:material:7>,<meta_tile_entity:hull.mv>,<metaitem:plateDarkSteel>],
-	[<metaitem:plateDarkSteel>,<metaitem:electric.piston.mv>,<metaitem:plateDarkSteel>]]);		
+	[<metaitem:nomilabs:plateDarkSteel>,<metaitem:electric.piston.mv>,<metaitem:nomilabs:plateDarkSteel>],
+	[<appliedenergistics2:material:7>,<meta_tile_entity:hull.mv>,<metaitem:nomilabs:plateDarkSteel>],
+	[<metaitem:nomilabs:plateDarkSteel>,<metaitem:electric.piston.mv>,<metaitem:nomilabs:plateDarkSteel>]]);		
 	
 //Pattern
 recipes.remove(<appliedenergistics2:material:52>);
@@ -119,9 +119,9 @@ alloy.recipeBuilder()
 // Meteorite Compass
 recipes.remove(<appliedenergistics2:sky_compass>);
 recipes.addShaped(<appliedenergistics2:sky_compass>,[
-	[<actuallyadditions:item_crystal:3>,<metaitem:plateDarkSteel>,<actuallyadditions:item_crystal:3>],
-	[<metaitem:plateDarkSteel>,<appliedenergistics2:material:1>,<metaitem:plateDarkSteel>],
-	[<actuallyadditions:item_crystal:3>,<metaitem:plateDarkSteel>,<actuallyadditions:item_crystal:3>]]);
+	[<actuallyadditions:item_crystal:3>,<metaitem:nomilabs:plateDarkSteel>,<actuallyadditions:item_crystal:3>],
+	[<metaitem:nomilabs:plateDarkSteel>,<appliedenergistics2:material:1>,<metaitem:nomilabs:plateDarkSteel>],
+	[<actuallyadditions:item_crystal:3>,<metaitem:nomilabs:plateDarkSteel>,<actuallyadditions:item_crystal:3>]]);
 
 compressor.recipeBuilder().inputs(<appliedenergistics2:material:7>).outputs(<ore:plateFluix>.firstItem).EUt(12).duration(20).buildAndRegister();	
 compressor.recipeBuilder().inputs([<appliedenergistics2:material:12>]).outputs(<ore:plateFluix>.firstItem).EUt(12).duration(20).buildAndRegister();	
@@ -203,9 +203,9 @@ recipes.addShaped(<appliedenergistics2:material:25>, [
 //Advanced Card
 recipes.remove(<appliedenergistics2:material:28>);	
 recipes.addShaped(<appliedenergistics2:material:28>, [
-[<metaitem:wireFineAluminium>,<metaitem:plateElectricalSteel>,null],
-[<metaitem:wireFineAluminium>,<appliedenergistics2:material:23>,<metaitem:plateElectricalSteel>],
-[<metaitem:wireFineAluminium>,<metaitem:plateElectricalSteel>,null]]);
+[<metaitem:wireFineAluminium>,<metaitem:nomilabs:plateElectricalSteel>,null],
+[<metaitem:wireFineAluminium>,<appliedenergistics2:material:23>,<metaitem:nomilabs:plateElectricalSteel>],
+[<metaitem:wireFineAluminium>,<metaitem:nomilabs:plateElectricalSteel>,null]]);
 	
 //Matter Condensor
 recipes.remove(<appliedenergistics2:condenser>);	
@@ -257,9 +257,9 @@ recipes.addShaped(<appliedenergistics2:fluid_interface>, [
 //Energy Acceptor
 recipes.remove(<appliedenergistics2:energy_acceptor>);
 recipes.addShaped(<appliedenergistics2:energy_acceptor>, [
-	[<metaitem:plateElectricalSteel>, <ore:plateFluix>, <metaitem:plateElectricalSteel>], 
+	[<metaitem:nomilabs:plateElectricalSteel>, <ore:plateFluix>, <metaitem:nomilabs:plateElectricalSteel>], 
 	[<ore:plateFluix>, <meta_tile_entity:hull.lv>, <ore:plateFluix>], 
-	[<metaitem:plateElectricalSteel>, <ore:plateFluix>, <metaitem:plateElectricalSteel>]]);
+	[<metaitem:nomilabs:plateElectricalSteel>, <ore:plateFluix>, <metaitem:nomilabs:plateElectricalSteel>]]);
 
 //Fluix Plate
 recipes.remove(<ore:plateFluix>);
@@ -276,9 +276,9 @@ recipes.remove(<ore:plateFluix>);
 //Storage Housing
 recipes.remove(<appliedenergistics2:material:39>);
 recipes.addShaped(<appliedenergistics2:material:39>, [
-	[<metaitem:wireFineRedAlloy>, <metaitem:plateElectricalSteel>, <metaitem:wireFineRedAlloy>], 
-	[<metaitem:plateElectricalSteel>, null, <metaitem:plateElectricalSteel>], 
-	[<metaitem:wireFineRedAlloy>, <metaitem:plateElectricalSteel>, <metaitem:wireFineRedAlloy>]]);	
+	[<metaitem:wireFineRedAlloy>, <metaitem:nomilabs:plateElectricalSteel>, <metaitem:wireFineRedAlloy>], 
+	[<metaitem:nomilabs:plateElectricalSteel>, null, <metaitem:nomilabs:plateElectricalSteel>], 
+	[<metaitem:wireFineRedAlloy>, <metaitem:nomilabs:plateElectricalSteel>, <metaitem:wireFineRedAlloy>]]);	
 	
 	
 //Illuminated Panel
@@ -290,9 +290,9 @@ recipes.addShaped(<appliedenergistics2:part:180>, [
 //Charger
 recipes.remove(<appliedenergistics2:charger>);
 recipes.addShaped(<appliedenergistics2:charger>, [
-	[<metaitem:plateDarkSteel>, <metaitem:plateCertusQuartz>, <metaitem:plateDarkSteel>], 
-	[<metaitem:plateDarkSteel>, null, null], 
-	[<metaitem:plateDarkSteel>, <metaitem:plateCertusQuartz>, <metaitem:plateDarkSteel>]]);
+	[<metaitem:nomilabs:plateDarkSteel>, <metaitem:plateCertusQuartz>, <metaitem:nomilabs:plateDarkSteel>], 
+	[<metaitem:nomilabs:plateDarkSteel>, null, null], 
+	[<metaitem:nomilabs:plateDarkSteel>, <metaitem:plateCertusQuartz>, <metaitem:nomilabs:plateDarkSteel>]]);
 
 //ME Chest
 recipes.remove(<appliedenergistics2:chest>);

@@ -1,19 +1,6 @@
 #packmode expert
 #priority -1
 
-import mods.gregtech.multiblock.Builder;
-import mods.gregtech.multiblock.FactoryBlockPattern;
-import mods.gregtech.multiblock.RelativeDirection;
-import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
-import mods.gregtech.IControllerTile;
-import mods.gregtech.multiblock.CTPredicate;
-import mods.gregtech.multiblock.IBlockPattern;
-import mods.gregtech.recipe.FactoryRecipeMap;
-import mods.gregtech.recipe.RecipeMap;
-import mods.gregtech.recipe.functions.IRunOverclockingLogicFunction;
-import mods.gregtech.recipe.IRecipeLogic;
-import mods.gregtech.recipe.IRecipe;
-
 import crafttweaker.mods.IMod;
 import crafttweaker.item.IItemStack;
 
@@ -64,13 +51,13 @@ recipes.remove(<enderstorage:ender_storage:1>);
 // Pulsating Mesh
 alloy.recipeBuilder()
 	.inputs([<ore:dustPulsating>, <metaitem:carbon.mesh>])
-	.outputs([<contenttweaker:pulsatingmesh>])
+	.outputs([<nomilabs:pulsatingmesh>])
 	.duration(180).EUt(16).buildAndRegister();
 
 // Endervoir
 recipes.removeByRecipeName("enderio:reservoir");
 assembler.recipeBuilder()
-	.inputs([<ore:blockGlassHardened> * 18, <metaitem:plateDoubleEnergeticAlloy> * 3, <minecraft:cauldron>])
+	.inputs([<ore:blockGlassHardened> * 18, <metaitem:nomilabs:plateDoubleEnergeticAlloy> * 3, <minecraft:cauldron>])
 	.outputs(<enderio:block_reservoir> * 3)
 	.duration(100)
 	.EUt(30)
@@ -90,7 +77,7 @@ makeShaped("farming_station", <enderio:block_farm_station>,
 	  C : <ore:circuitLv>});
 
 /////////////	 Tier Four and Half Space Ship  	  //////////////////
-makeExtremeRecipe7(<contenttweaker:tierfourandhalfship>,
+makeExtremeRecipe7(<nomilabs:tierfourandhalfship>,
 	["  LGL  ",
 	 "I PWP I",
 	 "APPCPPA",
@@ -102,21 +89,17 @@ makeExtremeRecipe7(<contenttweaker:tierfourandhalfship>,
 	  B : <metaitem:field.generator.hv>,
 	  D : <thermalexpansion:dynamo:3>,
 	  F : <thermalexpansion:frame:147>,
-	  G : <contenttweaker:t1guidance>,
-	  L : <contenttweaker:t2laser>,
-	  P : <metaitem:plateDoubleLumium>,
+	  G : <nomilabs:t1guidance>,
+	  L : <nomilabs:t2laser>,
+	  P : <metaitem:nomilabs:plateDoubleLumium>,
 	  T : <simplyjetpacks:metaitemmods:9>,
 	  W : <metaitem:plateDoubleTungstenCarbide>,
 	  A : <metaitem:robot.arm.hv>,
 	  I : <redstonearsenal:tool.sword_flux> }
 );
 
-<contenttweaker:tierfourandhalfship>.addTooltip(
-	format.white(
-		format.italic("Kills mobs in dangerous microverses and collects their highly prized skeletons and parts.")));
-
 /////////////	 Tier Eight and Half Space Ship  	  //////////////////
-makeExtremeRecipe9(<contenttweaker:tiereightandhalfship>,
+makeExtremeRecipe9(<nomilabs:tiereightandhalfship>,
 	["   LLL   ",
 	 "  LNNNL  ",
 	 " GNTTTNG ",
@@ -126,9 +109,9 @@ makeExtremeRecipe9(<contenttweaker:tiereightandhalfship>,
 	 "NTTQAQTTN",
 	 "NTTBABTTN",
 	 " DDD DDD "],
-	{ L : <contenttweaker:t3laser>,
+	{ L : <nomilabs:t3laser>,
 	  N : <metaitem:plateDoubleNaquadahAlloy>,
-	  G : <contenttweaker:t2guidance>,
+	  G : <nomilabs:t2guidance>,
 	  T : <metaitem:plateDoubleTrinium>,
 	  F : <metaitem:field.generator.zpm>,
 	  E : <metaitem:emitter.zpm>,
@@ -137,12 +120,8 @@ makeExtremeRecipe9(<contenttweaker:tiereightandhalfship>,
 	  Q : <metaitem:quantum_chest.luv>,
 	  A : <advancedrocketry:warpcore>,
 	  B : <advancedrocketry:warpmonitor>,
-	  D : <contenttweaker:warpengine>}
+	  D : <nomilabs:warpengine>}
 );
-
-<contenttweaker:tiereightandhalfship>.addTooltip(
-	format.white(
-		format.italic("Harvests exclusive Gems and Metals from unexplored corners, from beyond the microverse.")));
 
 // Exchanging Gadget
 recipes.removeByRecipeName("buildinggadgets:exchangingtool");
@@ -179,7 +158,7 @@ mixer.recipeBuilder()
     .duration(100).EUt(480).buildAndRegister();
 
 mixer.recipeBuilder()
-	.inputs(<contenttweaker:grainsofinnocence>)
+	.inputs(<nomilabs:grainsofinnocence>)
     .fluidOutputs(<liquid:xpjuice> * 6720) // 24L
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
@@ -199,7 +178,7 @@ mixer.recipeBuilder()
 // Quantum Flux
 mixer.recipeBuilder()
 	.inputs(<ore:gemCrystalFlux>)
-	.outputs(<contenttweaker:quantumflux> * 8)
+	.outputs(<nomilabs:quantumflux> * 8)
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
 
@@ -237,7 +216,7 @@ recipes.addShaped(<enderio:item_item_conduit> * 4, [
 //ender fluid conduit - by hand
 recipes.addShaped(<enderio:item_liquid_conduit:2> * 4, [
 	[<ore:itemConduitBinder>, <metaitem:foilPolyvinylChloride>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:wireGtSingleVibrantAlloy>], 
+	[<metaitem:nomilabs:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:nomilabs:wireGtSingleVibrantAlloy>], 
 	[<ore:itemConduitBinder>, <metaitem:foilPolyvinylChloride>, <ore:itemConduitBinder>]]);
 
 
@@ -249,7 +228,7 @@ assembler.recipeBuilder()
 
 //ender fluid conduit - assembler
 assembler.recipeBuilder()
-    .inputs([<metaitem:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 4, <metaitem:foilPolyvinylChloride> * 2])
+    .inputs([<metaitem:nomilabs:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 4, <metaitem:foilPolyvinylChloride> * 2])
     .outputs([<enderio:item_liquid_conduit:2> * 8])
     .duration(80).EUt(16).buildAndRegister();
 
@@ -298,7 +277,7 @@ makeExtremeRecipe9(<metaitem:creative_chest> * 2,
 //Numismatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:5>);
 recipes.addShaped(<thermalexpansion:dynamo:5>, [
-	[null, <contenttweaker:excitationcoil>, null],
+	[null, <nomilabs:excitationcoil>, null],
 	[<metaitem:plateZeron100>, <morefurnaces:furnaceblock:2>, <metaitem:plateZeron100>],
 	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
 
@@ -395,7 +374,7 @@ recipes.addShaped(<ae2stuff:grower>, [
 
 // Es fluid extraction
 extractor.recipeBuilder()
-    .inputs(<contenttweaker:stabilizedeinsteinium>)
+    .inputs(<nomilabs:stabilizedeinsteinium>)
     .fluidOutputs(<liquid:einsteinium> * 9)
     .duration(16).EUt(30).buildAndRegister();
 
@@ -415,30 +394,30 @@ assembler.recipeBuilder()
 <recipemap:assembler>.findRecipe(30720, [<metaitem:hull.luv>, <metaitem:frameHsss> * 4, <metaitem:circuit.nano_mainframe> * 4, <metaitem:electric.motor.luv> * 4, <metaitem:electric.pump.luv> * 4, <metaitem:conveyor.module.luv> * 4, <metaitem:gearRuridit> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
 
 assembler.recipeBuilder()
-    .inputs(<metaitem:hull.iv>, <enderio:item_stellar_alloy_pickaxe>, <contenttweaker:t3laser> * 12, <metaitem:frameStainlessSteel> * 12, <metaitem:sensor.iv> * 6, <metaitem:conveyor.module.iv> * 12, <metaitem:fluid.regulator.iv> * 12, <metaitem:gearTungstenSteel> * 12)
+    .inputs(<metaitem:hull.iv>, <enderio:item_stellar_alloy_pickaxe>, <nomilabs:t3laser> * 12, <metaitem:frameStainlessSteel> * 12, <metaitem:sensor.iv> * 6, <metaitem:conveyor.module.iv> * 12, <metaitem:fluid.regulator.iv> * 12, <metaitem:gearTungstenSteel> * 12)
     .outputs(<metaitem:large_miner.ev>)
     .duration(400).EUt(7680).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<metaitem:hull.zpm>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <contenttweaker:t3laser> * 12, <metaitem:frameNaquadahAlloy> * 12, <metaitem:sensor.zpm> * 6, <metaitem:conveyor.module.zpm> * 12, <metaitem:fluid.regulator.zpm> * 12, <metaitem:cableGtSingleVanadiumGallium> * 12, <moreplates:empowered_void_gear> * 12)
+    .inputs(<metaitem:hull.zpm>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <nomilabs:t3laser> * 12, <metaitem:frameNaquadahAlloy> * 12, <metaitem:sensor.zpm> * 6, <metaitem:conveyor.module.zpm> * 12, <metaitem:fluid.regulator.zpm> * 12, <metaitem:cableGtSingleVanadiumGallium> * 12, <moreplates:empowered_void_gear> * 12)
     .fluidInputs(<liquid:concrete> * 2304)
     .outputs(<metaitem:large_miner.iv>)
     .duration(800).EUt(122880).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<metaitem:hull.uhv>, <draconicevolution:draconic_staff_of_power>, <contenttweaker:t3laser> * 12, <metaitem:frameBerkelium> * 12, <metaitem:sensor.uv> * 12, <metaitem:conveyor.module.uv> * 24, <metaitem:fluid.regulator.uv> * 24, <metaitem:cableGtSingleEuropium> * 12, <metaitem:gearAwakenedDraconium> * 12)
+    .inputs(<metaitem:hull.uhv>, <draconicevolution:draconic_staff_of_power>, <nomilabs:t3laser> * 12, <metaitem:frameBerkelium> * 12, <metaitem:sensor.uv> * 12, <metaitem:conveyor.module.uv> * 24, <metaitem:fluid.regulator.uv> * 24, <metaitem:cableGtSingleEuropium> * 12, <metaitem:nomilabs:gearAwakenedDraconium> * 12)
     .fluidInputs(<liquid:concrete> * 2304, <liquid:taranium> * 576)
     .outputs(<metaitem:large_miner.luv>)
     .duration(800).EUt(1966080).buildAndRegister();
 
 //Draconium [tier 14]
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
 
 // Dimethylformamide
 large_chemical_reactor.recipeBuilder()
@@ -451,7 +430,7 @@ large_chemical_reactor.recipeBuilder()
 <recipemap:circuit_assembler>.findRecipe(30720, [<metaitem:board.multilayer.fiber_reinforced> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <metaitem:circuit.mainframe>, <metaitem:foilNiobiumTitanium> * 16], [<liquid:sterilized_growth_medium> * 4000]).remove();
 
 circuit_assembler.recipeBuilder()
-    .inputs(<metaitem:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <ore:circuitIv>, <metaitem:foilNiobiumTitanium> * 16)
+    .inputs(<metaitem:nomilabs:plateKaptonK> * 16, <metaitem:petri_dish>, <metaitem:electric.pump.luv>, <metaitem:sensor.iv>, <ore:circuitIv>, <metaitem:foilNiobiumTitanium> * 16)
     .fluidInputs(<liquid:sterilized_growth_medium> * 4000)
     .outputs(<metaitem:board.wetware> * 16)
 	.property("cleanroom", "sterile_cleanroom")
@@ -459,14 +438,14 @@ circuit_assembler.recipeBuilder()
 
 chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:dimethylbenzene> * 1000, <liquid:chloromethane> * 1000)
-    .outputs(<metaitem:dustDurene> * 24)
+    .outputs(<metaitem:nomilabs:dustDurene> * 24)
     .fluidOutputs(<liquid:hydrochloric_acid> * 1000)
     .duration(120).EUt(120).buildAndRegister();
 
 chemical_reactor.recipeBuilder()
-    .inputs(<metaitem:dustDurene> * 12)
+    .inputs(<metaitem:nomilabs:dustDurene> * 12)
     .fluidInputs(<liquid:oxygen> * 6000)
-    .outputs(<metaitem:dustPyromelliticDianhydride> * 9)
+    .outputs(<metaitem:nomilabs:dustPyromelliticDianhydride> * 9)
     .fluidOutputs(<liquid:water> * 3000)
     .duration(100).EUt(480).buildAndRegister();
 
@@ -480,17 +459,17 @@ large_chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:aminophenol> * 1000, <liquid:nitrochlorobenzene> * 1000, <liquid:water> * 1000)
     .notConsumable(<metaitem:dustSaltpeter>)
     .notConsumable(<liquid:dimethylformamide>)
-    .outputs(<metaitem:dustOxydianiline> * 27)
+    .outputs(<metaitem:nomilabs:dustOxydianiline> * 27)
     .fluidOutputs(<liquid:oxygen> * 3000, <liquid:hydrochloric_acid> * 1000)
     .duration(200).EUt(21000).buildAndRegister();
 
 alloy_smelter.recipeBuilder()
-    .inputs(<metaitem:dustOxydianiline> * 3, <metaitem:dustPyromelliticDianhydride> * 2)
-    .outputs(<metaitem:ingotKaptonK>)
+    .inputs(<metaitem:nomilabs:dustOxydianiline> * 3, <metaitem:nomilabs:dustPyromelliticDianhydride> * 2)
+    .outputs(<metaitem:nomilabs:ingotKaptonK>)
     .duration(30).EUt(7680).buildAndRegister();
 
 //////////////////// Exotic Materials Catalyst ////////////////////////
-makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
+makeExtremeRecipe7(<nomilabs:exoticmaterialscatalyst>,
     ["L  M  J",
      " K W S ",
      "  YNT  ",
@@ -516,7 +495,7 @@ makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
       P : <metaitem:ingotHssg>,
       Q : <metaitem:ingotHsse>,
       R : <metaitem:ingotHsss>,
-      S : <metaitem:ingotManyullyn>,
+      S : <metaitem:nomilabs:ingotManyullyn>,
       T : <ore:ingotMicroversium>,
       U : <ore:ingotElectrumFlux>,
       V : <simplyjetpacks:metaitemmods:3>,
@@ -581,78 +560,58 @@ recipes.addShaped(<metaitem:gcym:parallel_hatch.uv>, [
 
 // Stabilized Miners
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tiereightship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tiereightship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tiereightship_stabilized>)
+    .outputs(<nomilabs:tiereightship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tiersevenship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tiersevenship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tiersevenship_stabilized>)
+    .outputs(<nomilabs:tiersevenship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tiersixship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tiersixship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tiersixship_stabilized>)
+    .outputs(<nomilabs:tiersixship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tierfiveship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tierfiveship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tierfiveship_stabilized>)
+    .outputs(<nomilabs:tierfiveship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tierfourandhalfship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tierfourandhalfship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tierfourandhalfship_stabilized>)
+    .outputs(<nomilabs:tierfourandhalfship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tierfourship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tierfourship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tierfourship_stabilized>)
+    .outputs(<nomilabs:tierfourship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tierthreeship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tierthreeship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tierthreeship_stabilized>)
+    .outputs(<nomilabs:tierthreeship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tiertwoship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tiertwoship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tiertwoship_stabilized>)
+    .outputs(<nomilabs:tiertwoship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<contenttweaker:tieroneship>, <contenttweaker:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
+    .inputs(<nomilabs:tieroneship>, <nomilabs:heartofauniverse>, <draconicevolution:chaos_shard> * 4, <metaitem:field.generator.uv> * 24, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6, <metaitem:plateDenseIridium> * 6)
     .fluidInputs(<liquid:rocket_fuel> * 48000, <liquid:omnium> * 576, <liquid:neutronium> * 576)
-    .outputs(<contenttweaker:tieroneship_stabilized>)
+    .outputs(<nomilabs:tieroneship_stabilized>)
     .duration(5000).EUt(500000).buildAndRegister();
-
-// Assembly Control Casing
-recipes.remove(<gregtech:multiblock_casing:3>);
-recipes.addShaped(<gregtech:multiblock_casing:3>, [
-    [<ore:circuitLuv>, <metaitem:plate.high_power_integrated_circuit>, <ore:circuitLuv>],
-    [<metaitem:sensor.iv>, <metaitem:frameTungstenSteel>, <metaitem:emitter.iv>],
-    [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
-]);
-
-// Recycling recipes in groovy
-
-// Assembly Line Casing
-recipes.remove(<gregtech:multiblock_casing:4>);
-recipes.addShaped(<gregtech:multiblock_casing:4>, [
-    [<ore:plateSteel>, <ore:gearRuridit>, <ore:plateSteel>],
-    [<metaitem:robot.arm.iv>, <metaitem:frameTungstenSteel>, <metaitem:robot.arm.iv>],
-    [<ore:plateSteel>, <ore:gearRuridit>, <ore:plateSteel>]
-]);
-
-// Recycling recipes in groovy
 
 // Remove shortcut recipes
 recipes.remove(<minecraft:stick> * 16);

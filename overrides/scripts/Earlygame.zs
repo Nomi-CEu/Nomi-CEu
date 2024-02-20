@@ -21,7 +21,7 @@ furnace.addRecipe(<minecraft:slime_ball> * 2, <metaitem:plant_ball>, 0.0);
 //Ender Pearls
 alloy.recipeBuilder().inputs([<minecraft:diamond>,<ore:dustPulsating>]).outputs([<minecraft:ender_pearl>]).duration(300).EUt(16).buildAndRegister();
 
-// Firework Rocket fix
+// Firework Rocket JEI fix
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 1 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>]);
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 2 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>, <minecraft:gunpowder>]);
 recipes.addShapeless(<minecraft:fireworks>.withTag({Fireworks: {Flight: 3 as byte}}), [<minecraft:paper>, <minecraft:gunpowder>, <minecraft:gunpowder>, <minecraft:gunpowder>]);
@@ -36,8 +36,8 @@ recipes.addShaped(<toolbelt:pouch>, [
 //Dusts
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <ore:toolMortar>]);
 recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <ore:toolHammer>]);
-recipes.addShapeless(<contenttweaker:block_dust>, [<minecraft:sand>, <ore:toolHammer>]);
-furnace.addRecipe(<contenttweaker:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
+recipes.addShapeless(<nomilabs:block_dust>, [<minecraft:sand>, <ore:toolHammer>]);
+furnace.addRecipe(<nomilabs:pulsatingdust>, <metaitem:dustUraninite>, 0.0);
 
 //Snad	
 recipes.remove(<snad:snad>);
@@ -45,7 +45,7 @@ recipes.remove(<snad:snad:1>);
 recipes.addShaped(<snad:snad>, [[<extrautils2:compressedsand:1>], [<enderio:item_material:14>], [<extrautils2:compressedsand:1>]]);
 
 //Photovoltaic Cells
-alloy_smelter.recipeBuilder().inputs([<enderio:item_material:38> * 2, <metaitem:plateElectricalSteel>]).outputs([<enderio:item_material:3>]).duration(180).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<enderio:item_material:38> * 2, <metaitem:nomilabs:plateElectricalSteel>]).outputs([<enderio:item_material:3>]).duration(180).EUt(16).buildAndRegister();
 
 
 //Drawers
@@ -97,7 +97,7 @@ alloy_smelter.recipeBuilder().inputs([<extrautils2:ingredients:9>, <ore:ingotEle
 recipes.remove(<extrautils2:ingredients:1>);
 recipes.addShaped(<extrautils2:ingredients:1>, [
 	[null, <actuallyadditions:item_crystal>, null],
-	[<actuallyadditions:item_crystal>, <metaitem:gearConductiveIron>, <actuallyadditions:item_crystal>],
+	[<actuallyadditions:item_crystal>, <metaitem:nomilabs:gearConductiveIron>, <actuallyadditions:item_crystal>],
 	[null, <actuallyadditions:item_crystal>, null]]);
 
 
@@ -113,34 +113,34 @@ recipes.addShaped(<simplyjetpacks:metaitem:4>, [[<minecraft:leather>, <ore:plate
 
 //EIO Alloys
 // Dark steel
-alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <minecraft:obsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <minecraft:obsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <metaitem:dustObsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <metaitem:dustObsidian>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <actuallyadditions:item_crystal:3>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <actuallyadditions:item_crystal:3>]).outputs([<metaitem:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <minecraft:obsidian>]).outputs([<metaitem:nomilabs:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <minecraft:obsidian>]).outputs([<metaitem:nomilabs:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <metaitem:dustObsidian>]).outputs([<metaitem:nomilabs:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <metaitem:dustObsidian>]).outputs([<metaitem:nomilabs:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <actuallyadditions:item_crystal:3>]).outputs([<metaitem:nomilabs:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <actuallyadditions:item_crystal:3>]).outputs([<metaitem:nomilabs:ingotDarkSteel>]).duration(240).EUt(16).buildAndRegister();
 
 // Electrical Steel
-alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <metaitem:dustSilicon>]).outputs([<metaitem:ingotElectricalSteel>]).duration(120).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <metaitem:dustSilicon>]).outputs([<metaitem:ingotElectricalSteel>]).duration(120).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:ingotSteel>, <metaitem:dustSilicon>]).outputs([<metaitem:nomilabs:ingotElectricalSteel>]).duration(120).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustSteel>, <metaitem:dustSilicon>]).outputs([<metaitem:nomilabs:ingotElectricalSteel>]).duration(120).EUt(16).buildAndRegister();
 
 // End Steel
-alloy_smelter.recipeBuilder().inputs([<metaitem:ingotDarkSteel>, <ore:dustEndstone>]).outputs([<metaitem:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustDarkSteel>, <ore:dustEndstone>]).outputs([<metaitem:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:ingotDarkSteel>, <minecraft:end_stone>]).outputs([<metaitem:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustDarkSteel>, <minecraft:end_stone>]).outputs([<metaitem:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:nomilabs:ingotDarkSteel>, <ore:dustEndstone>]).outputs([<metaitem:nomilabs:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:nomilabs:dustDarkSteel>, <ore:dustEndstone>]).outputs([<metaitem:nomilabs:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:nomilabs:ingotDarkSteel>, <minecraft:end_stone>]).outputs([<metaitem:nomilabs:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:nomilabs:dustDarkSteel>, <minecraft:end_stone>]).outputs([<metaitem:nomilabs:ingotEndSteel>]).duration(300).EUt(120).buildAndRegister();
 
 // Soularium
-alloy_smelter.recipeBuilder().inputs([<minecraft:gold_ingot>, <minecraft:soul_sand>]).outputs([<metaitem:ingotSoularium>]).duration(120).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustGold>, <minecraft:soul_sand>]).outputs([<metaitem:ingotSoularium>]).duration(120).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<minecraft:gold_ingot>, <minecraft:soul_sand>]).outputs([<metaitem:nomilabs:ingotSoularium>]).duration(120).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustGold>, <minecraft:soul_sand>]).outputs([<metaitem:nomilabs:ingotSoularium>]).duration(120).EUt(16).buildAndRegister();
 
 // Conductive Iron
-alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>, <minecraft:redstone>]).outputs([<metaitem:ingotConductiveIron>]).duration(150).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustIron>, <minecraft:redstone>]).outputs([<metaitem:ingotConductiveIron>]).duration(150).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>, <minecraft:redstone>]).outputs([<metaitem:nomilabs:ingotConductiveIron>]).duration(150).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustIron>, <minecraft:redstone>]).outputs([<metaitem:nomilabs:ingotConductiveIron>]).duration(150).EUt(16).buildAndRegister();
 
 // Pulsating Iron
-alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>, <ore:dustPulsating>]).outputs([<metaitem:ingotPulsatingIron>]).duration(150).EUt(16).buildAndRegister();
-alloy_smelter.recipeBuilder().inputs([<metaitem:dustIron>, <ore:dustPulsating>]).outputs([<metaitem:ingotPulsatingIron>]).duration(150).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<minecraft:iron_ingot>, <ore:dustPulsating>]).outputs([<metaitem:nomilabs:ingotPulsatingIron>]).duration(150).EUt(16).buildAndRegister();
+alloy_smelter.recipeBuilder().inputs([<metaitem:dustIron>, <ore:dustPulsating>]).outputs([<metaitem:nomilabs:ingotPulsatingIron>]).duration(150).EUt(16).buildAndRegister();
 
 // Ae2 glass
 alloy_smelter.recipeBuilder().inputs([<minecraft:glass>, <ore:dustCertusQuartz>]).outputs([<appliedenergistics2:quartz_glass> * 2]).duration(100).EUt(16).buildAndRegister();
@@ -162,9 +162,7 @@ macerator.recipeBuilder().inputs([<enderio:item_material:16>]).outputs([<enderio
 macerator.recipeBuilder().inputs([<enderio:item_material:19>]).outputs([<enderio:item_material:34>]).duration(400).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:15>]).outputs([<enderio:item_material:35>]).duration(300).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:14>]).outputs([<enderio:item_material:36>]).duration(200).EUt(16).buildAndRegister();
-macerator.recipeBuilder().inputs([<enderio:item_material:17>]).outputs([<contenttweaker:grainsofinnocence>]).duration(200).EUt(16).buildAndRegister();
-recipes.addShapeless(<contenttweaker:blazepowder>,[<minecraft:blaze_powder>]);
-recipes.addShapeless(<minecraft:blaze_powder>,[<contenttweaker:blazepowder>]);
+macerator.recipeBuilder().inputs([<enderio:item_material:17>]).outputs([<nomilabs:grainsofinnocence>]).duration(200).EUt(16).buildAndRegister();
 recipes.remove(<appliedenergistics2:part:36>);
 
 //Yeta Wrench
@@ -181,23 +179,16 @@ recipes.addShaped(<enderio:item_yeta_wrench>, [
 chemical_reactor.recipeBuilder().inputs([<extendedcrafting:material:7>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:end_stone>).EUt(15).duration(20).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_crystal:1>).EUt(15).duration(100).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:obsidian>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_infused_obsidian>).EUt(15).duration(200).buildAndRegister();
-chemical_reactor.recipeBuilder().inputs([<contenttweaker:block_dust>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:netherrack>).EUt(15).duration(20).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<nomilabs:block_dust>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:netherrack>).EUt(15).duration(20).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:magma>]).fluidOutputs(<liquid:lava> * 1000).EUt(30).duration(120).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<thermalfoundation:fertilizer>]).fluidInputs(<liquid:ammonia> * 100).outputs(<thermalfoundation:fertilizer:1>).EUt(30).duration(120).buildAndRegister();
 
 mixer.recipeBuilder().inputs([<metaitem:dustTricalciumPhosphate>,<metaitem:dustGold>]).outputs(<minecraft:glowstone_dust> * 2).EUt(15).duration(80).buildAndRegister();
 
-// Black Steel
-mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4>.withEmptyTag() * 2]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).buildAndRegister();
-recipes.removeShapeless(<metaitem:dustBlackSteel>, [<ore:dustNickel>, <ore:dustBlackBronze>, <ore:dustSteel>, <ore:dustSteel>, <ore:dustSteel>]);
+// Black Steel (Moved to Groovy)
+
+// Black Quartz Ore -> Black Quartz
 furnace.addRecipe(<actuallyadditions:item_misc:5>, <actuallyadditions:block_misc:3>, 0.0);
-
-// Temporary Black Steel fix
-//recipes.addShapeless(<contenttweaker:dark_red_coal> * 2, [<actuallyadditions:item_crystal:3>, <extrautils2:ingredients:4>]);
-mods.jei.JEI.hide(<contenttweaker:dark_red_coal>);
-
-mixer.recipeBuilder().inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2, <contenttweaker:dark_red_coal> * 4]).outputs(<metaitem:dustBlackSteel>  * 9).EUt(15).duration(200).hidden().buildAndRegister();
-
 
 // Clathrates
 chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:glowstone> * 288]).outputs(<thermalfoundation:material:894>).EUt(75).duration(120).buildAndRegister();
@@ -205,7 +196,7 @@ chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liqu
 chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:ender> * 250]).outputs(<thermalfoundation:material:895>).EUt(75).duration(120).buildAndRegister();
 
 // Draconium
-chemical_reactor.recipeBuilder().inputs([<minecraft:dragon_breath>, <metaitem:dustManyullyn>]).outputs(<ore:dustDraconium>.firstItem).EUt(2000).duration(500).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<minecraft:dragon_breath>, <metaitem:nomilabs:dustManyullyn>]).outputs(<ore:dustDraconium>.firstItem).EUt(2000).duration(500).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:glass_bottle> * 4]).fluidInputs([<liquid:pyrotheum> * 1000, <liquid:nitro_fuel> * 1000]).outputs(<minecraft:dragon_breath> * 4).EUt(2000).duration(1000).buildAndRegister();
 
 recipes.addShaped(<extendedcrafting:material:40>, [
@@ -220,8 +211,6 @@ chemical_reactor.recipeBuilder().inputs([<minecraft:ender_pearl>,<minecraft:blaz
 
 recipes.remove(<extrautils2:endershard>);
 recipes.addShapeless(<extrautils2:endershard> * 8, [<minecraft:ender_pearl>]);
-// Black Steel Dust * 5
-<recipemap:mixer>.findRecipe(7, [<metaitem:dustBlackBronze>, <metaitem:dustNickel>, <metaitem:dustSteel> * 3, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
 //Dimethylhydrazine: Changes the EU/t
 chemical_reactor.findRecipe(480, [null], [<liquid:dimethylamine> * 1000, <liquid:monochloramine> * 1000]).remove();
@@ -258,84 +247,12 @@ compressor.recipeBuilder().inputs(<metaitem:dustCalcium> * 2).outputs(<minecraft
 assembler.recipeBuilder().inputs(<minecraft:bone> * 4).circuit(14).outputs(<minecraft:skull>).duration(20).EUt(16).buildAndRegister();
 
 
-forge_hammer.recipeBuilder().inputs([<minecraft:sand>]).outputs([<contenttweaker:block_dust>]).duration(16).EUt(10).buildAndRegister();
+forge_hammer.recipeBuilder().inputs([<minecraft:sand>]).outputs([<nomilabs:block_dust>]).duration(16).EUt(10).buildAndRegister();
 
 // Endstone Dust * 1
 <recipemap:macerator>.findRecipe(2, [<minecraft:end_stone:0>], null).remove();
 
 macerator.recipeBuilder().inputs([<ore:endstone>.firstItem]).outputs([<ore:dustEndstone>.firstItem]).duration(16).EUt(10).buildAndRegister();
-
-// Iron Furnace
-assembler.recipeBuilder()
-	.inputs(<ore:craftingFurnace>, <ore:ingotIron> * 8)
-	.circuit(8)
-	.outputs(<morefurnaces:furnaceblock>)
-	.duration(100).EUt(7).buildAndRegister();
-
-//Copper Furnace
-recipes.remove(<morefurnaces:furnaceblock:5>);
-recipes.addShaped(<morefurnaces:furnaceblock:5>, [
-[<ore:ingotCopper>, <ore:ingotCopper>, <ore:ingotCopper>],
-[<ore:ingotCopper>, <morefurnaces:furnaceblock>, <ore:ingotCopper>],
-[<ore:ingotCopper>, <ore:ingotCopper>, <ore:ingotCopper>]]);
-
-assembler.recipeBuilder()
-	.inputs(<morefurnaces:furnaceblock>, <ore:ingotCopper> * 8)
-	.circuit(8)
-	.outputs(<morefurnaces:furnaceblock:5>)
-	.duration(100).EUt(7).buildAndRegister();
-
-//Silver Furnace
-recipes.remove(<morefurnaces:furnaceblock:6>);
-recipes.addShaped(<morefurnaces:furnaceblock:6>, [
-	[<ore:ingotSilver>, <ore:ingotSilver>, <ore:ingotSilver>],
-	[<ore:ingotSilver>, <morefurnaces:furnaceblock:5>, <ore:ingotSilver>],
-	[<ore:ingotSilver>, <ore:ingotSilver>, <ore:ingotSilver>]]);
-
-assembler.recipeBuilder()
-	.inputs(<morefurnaces:furnaceblock:5>, <ore:ingotSilver> * 8)
-	.circuit(8)
-	.outputs(<morefurnaces:furnaceblock:6>)
-	.duration(100).EUt(7).buildAndRegister();
-
-//Gold Furnace
-recipes.remove(<morefurnaces:furnaceblock:1>);
-recipes.addShaped(<morefurnaces:furnaceblock:1>, [
-	[<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>],
-	[<minecraft:gold_ingot>, <morefurnaces:furnaceblock:6>, <minecraft:gold_ingot>],
-	[<minecraft:gold_ingot>, <minecraft:gold_ingot>, <minecraft:gold_ingot>]]);
-
-assembler.recipeBuilder()
-	.inputs(<morefurnaces:furnaceblock:6>, <ore:ingotGold> * 8)
-	.circuit(8)
-	.outputs(<morefurnaces:furnaceblock:1>)
-	.duration(100).EUt(7).buildAndRegister();
-
-//Diamond Furnace
-recipes.remove(<morefurnaces:furnaceblock:2>);
-recipes.addShaped(<morefurnaces:furnaceblock:2>, [
-	[<minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>],
-	[<minecraft:diamond>, <morefurnaces:furnaceblock:1>, <minecraft:diamond>],
-	[<minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>]]);
-
-assembler.recipeBuilder()
-	.inputs(<morefurnaces:furnaceblock:1>, <ore:gemDiamond> * 8)
-	.circuit(8)
-	.outputs(<morefurnaces:furnaceblock:2>)
-	.duration(100).EUt(7).buildAndRegister();
-
-//Obsidian Furnace
-recipes.remove(<morefurnaces:furnaceblock:3>);
-recipes.addShaped(<morefurnaces:furnaceblock:3>, [
-	[<minecraft:obsidian>, <minecraft:obsidian>, <minecraft:obsidian>],
-	[<morefurnaces:furnaceblock:2>, <minecraft:obsidian>, <morefurnaces:furnaceblock:2>],
-	[<minecraft:obsidian>, <minecraft:obsidian>, <minecraft:obsidian>]]);
-
-assembler.recipeBuilder()
-	.inputs(<morefurnaces:furnaceblock:2> * 2, <ore:blockObsidian> * 7)
-	.circuit(8)
-	.outputs(<morefurnaces:furnaceblock:3>)
-	.duration(100).EUt(7).buildAndRegister();
 
 // Battery Alloy
 recipes.addShapeless(<metaitem:dustBatteryAlloy> * 4, [<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustAntimony>]);
@@ -343,9 +260,6 @@ recipes.addShapeless(<metaitem:dustBatteryAlloy> * 4, [<ore:dustLead>,<ore:dustL
 recipes.addShapeless(<metaitem:battery.re.lv.cadmium>,[<metaitem:battery.hull.lv>,<metaitem:dustCadmium>,<metaitem:dustCadmium>]);	//Small Cadmium
 recipes.addShapeless(<metaitem:battery.re.lv.sodium>,[<metaitem:battery.hull.lv>,<metaitem:dustSodium>,<metaitem:dustSodium>]);	//Small Sodium
 recipes.addShapeless(<metaitem:battery.re.lv.lithium>,[<metaitem:battery.hull.lv>,<metaitem:dustLithium>,<metaitem:dustLithium>]);	//Small Lithium
-
-
-centrifuge.findRecipe(30, [<metaitem:dustBlackSteel> * 5], [null]).remove();
 
 furnace.setFuel(<metaitem:dustGraphite>, 1200);
 
@@ -422,7 +336,7 @@ assembler.recipeBuilder()
 
 // Kill Glowstone Decomp
 // Small Pile of Redstone Dust * 2
-<recipemap:centrifuge>.findRecipe(80, [<minecraft:glowstone_dust:0>], null).remove();
+//<recipemap:centrifuge>.findRecipe(80, [<minecraft:glowstone_dust:0>], null).remove();
 
 cutter.recipeBuilder()
 	.inputs(<appliedenergistics2:fluix_block>)

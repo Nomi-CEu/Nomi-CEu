@@ -204,7 +204,7 @@ function copyServerFiles() {
  * Copies the license file.
  */
 function copyServerLicense() {
-	return src("../LICENSE.md").pipe(dest(serverDestDirectory));
+	return src("../LICENSE").pipe(dest(serverDestDirectory));
 }
 
 /**

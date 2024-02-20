@@ -2,7 +2,7 @@
 <h1 align="center">Nomifactory CEu</h1>
 <p align="center"><b><i>Fork of <a href="https://github.com/Nomifactory/Nomifactory"> Nomifactory</a>, using <a href="https://github.com/GregTechCEu/GregTech"> GregTech CEu</a> and its related mods.</i></b></p>
 <h1 align="center">
-    <a href="https://github.com/Nomi-CEu/Nomi-CEu/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/Nomi-CEu?style=for-the-badge&logo=github" alt="License"></a>
+    <a href="https://github.com/Nomi-CEu/Nomi-CEu/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/Nomi-CEu?style=for-the-badge&logo=github" alt="License"></a>
     <a href="https://nightly.link/Nomi-CEu/Nomi-CEu/workflows/testbuildpack/main"><img src="https://img.shields.io/github/actions/workflow/status/Nomi-CEu/Nomi-CEu/testbuildpack.yml?style=for-the-badge&logo=github&label=builds&color=orange" alt="Builds"></a>
     <a href="https://discord.com/invite/zwQzqP8b6q"><img src="https://img.shields.io/discord/927050775073534012?style=for-the-badge&logo=discord&logoColor=%23ffffff&label=discord%20&labelColor=gray&color=%235865F2" alt="Discord"></a>
     <br>
@@ -23,6 +23,11 @@
 - Many QoL features - Wiremill can produce any wire, Creative Tank no longer uses fluids, new creative chests and tanks from CEu, etc.
 - And more...  
 
+## Translations
+Translations are offered for Nomi-CEu, in a separate 'language pack'. This is available to download [here](https://nightly.link/Nomi-CEu/Nomi-CEu-Translations/workflows/pushbuildpack/main?preview) (download the 'nomi-ceu' zip for Nomi-CEu).
+
+For more information, including supported languages and their status, see [the GitHub Page](https://github.com/Nomi-CEu/Nomi-CEu-Translations/).
+
 ## Contributing and Maintainer Information
 This is available on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki).
 
@@ -37,7 +42,7 @@ Nomi-CEu comes with addon scripts for the following mods. You can drop them into
 - [Lazy AE2](https://www.curseforge.com/minecraft/mc-mods/lazy-ae2)  
 - [Project Red - Illumination](https://www.curseforge.com/minecraft/mc-mods/project-red-illumination)    
 
-\* Note: If you are adding these mods via the CurseForge app, remove the extra copy of AE2 (non-extended life), of which it might automatically download.
+\* Note: If you are adding these mods via the CurseForge app, remove the extra copy of AE2 **(*non*-extended life)**, of which it might automatically download.
 
 ## Expert Mode 
 If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition Fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack. 

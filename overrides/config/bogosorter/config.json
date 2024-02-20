@@ -1,0 +1,63 @@
+{
+  "General": {
+    "enableAutoRefill": true,
+    "refillDmgThreshold": 1,
+    "enableHotbarSwap": true,
+    "sortSound": "minecraft:ui.button.click",
+    "buttonColor": "#ffffffff",
+    "_comment": "By setting the chance below to 0 you agree to have no humor and that you are boring.",
+    "baseBogoChance": 0
+  },
+  "ItemSortRules": [
+    {
+      "name": "mod",
+      "inverted": false
+    },
+    {
+      "name": "material",
+      "inverted": false
+    },
+    {
+      "name": "ore_prefix",
+      "inverted": false
+    },
+    {
+      "name": "id",
+      "inverted": false
+    },
+    {
+      "name": "meta",
+      "inverted": false
+    },
+    {
+      "name": "nbt_has",
+      "inverted": false
+    },
+    {
+      "name": "nbt_rules",
+      "inverted": false
+    }
+  ],
+  "NbtSortRules": [
+    {
+      "name": "enchantment",
+      "inverted": false
+    },
+    {
+      "name": "enchantment_book",
+      "inverted": false
+    },
+    {
+      "name": "potion",
+      "inverted": false
+    },
+    {
+      "name": "gt_circ_config",
+      "inverted": false
+    },
+    {
+      "name": "gt_item_damage",
+      "inverted": false
+    }
+  ]
+}

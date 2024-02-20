@@ -64,7 +64,7 @@ async function exportModpackManifest() {
  * Copies the license file.
  */
 async function copyClientLicense() {
-	return gulp.src("../LICENSE.md").pipe(gulp.dest(clientDestDirectory));
+	return gulp.src("../LICENSE").pipe(gulp.dest(clientDestDirectory));
 }
 
 /**

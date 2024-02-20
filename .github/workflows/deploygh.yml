@@ -18,9 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TAG: ${{ inputs.tag }}
-    permissions:
-      contents: write
     steps:
+      - name: Get Token
+        id: token
+        uses: peter-murray/workflow-application-token-action@v2.1.0
+        with:
+          application_id: ${{ secrets.APP_ID }}
+          application_private_key: ${{ secrets.APP_KEY }}
+          organization: Nomi-CEu
+
       - name: Checkout Tag
         uses: actions/checkout@v4
         with:
@@ -65,7 +71,7 @@ jobs:
 
       - name: Deploy to GitHub Releases
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
           RELEASE_TYPE: ${{ inputs.release_type }}

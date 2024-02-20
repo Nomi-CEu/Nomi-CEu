@@ -4,6 +4,24 @@ overrides/config/brandon3055/ProjectIntelligence
 overrides/config/brandon3055/ResourceCache
 build
 tools/node_modules
-*.DS_Store
-buildtools/build.bat
+
+*iml
+overrides/groovy/assets/**
+overrides/groovy/lib/**
+
+**/.idea/**
+**/.idea_modules/**
+
+.vscode/
+tools/.vscode/
+
+# OS Specific
+
+# Mac
 *.icloud
+*.DS_Store
+
+# Linux
+*~
+
+

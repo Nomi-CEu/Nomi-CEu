@@ -2,9 +2,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.recipe.RecipeMap;
-import mods.contenttweaker.MaterialPart;
-import mods.contenttweaker.MaterialSystem;
-import mods.contenttweaker.Material;
 
 //////////////////////////////////////////////////////////////
 /////////////	    Solar Panels  	    //////////////////
@@ -43,8 +40,8 @@ recipes.addShaped(<solarflux:photovoltaic_cell_1> * 6,[
 recipes.remove(<solarflux:solar_panel_3>);
 recipes.addShaped(<solarflux:solar_panel_3>,[
 	[<solarflux:solar_panel_2>, <solarflux:photovoltaic_cell_1>, <solarflux:solar_panel_2>],	
-	[<metaitem:plateElectricalSteel>, <metaitem:blockConductiveIron>, <metaitem:plateElectricalSteel>],	
-	[<metaitem:gearElectricalSteel>, <enderio:item_power_conduit:2>, <metaitem:gearElectricalSteel>]]);	
+	[<metaitem:nomilabs:plateElectricalSteel>, <metaitem:nomilabs:blockConductiveIron>, <metaitem:nomilabs:plateElectricalSteel>],	
+	[<metaitem:nomilabs:gearElectricalSteel>, <enderio:item_power_conduit:2>, <metaitem:nomilabs:gearElectricalSteel>]]);	
 
 recipes.remove(<solarflux:solar_panel_4>);
 recipes.remove(<solarflux:solar_panel_5>);
@@ -114,22 +111,22 @@ recipes.addShaped(<solarflux:photovoltaic_cell_2> * 6, [
 
 recipes.addShaped(<solarflux:solar_panel_6> * 4, [
 	[<solarflux:solar_panel_5>, <solarflux:photovoltaic_cell_4>, <solarflux:solar_panel_5>],	
-	[<metaitem:plateSignalum>, <advsolars:sunnarium_enriched>, <metaitem:plateSignalum>],	
-	[<metaitem:plateSignalum>,<enderio:item_endergy_conduit:4>,<metaitem:plateSignalum>]]);	
+	[<metaitem:nomilabs:plateSignalum>, <advsolars:sunnarium_enriched>, <metaitem:nomilabs:plateSignalum>],	
+	[<metaitem:nomilabs:plateSignalum>,<enderio:item_endergy_conduit:4>,<metaitem:nomilabs:plateSignalum>]]);	
 
 recipes.addShaped(<solarflux:solar_panel_5> * 4, [
 	[<solarflux:solar_panel_4>, <solarflux:photovoltaic_cell_3>, <solarflux:solar_panel_4>],	
-	[<metaitem:plateLumium>, <advsolars:sunnarium>, <metaitem:plateLumium>],	
-	[<metaitem:plateLumium>,<enderio:item_endergy_conduit:6>,<metaitem:plateLumium>]]);	
+	[<metaitem:nomilabs:plateLumium>, <advsolars:sunnarium>, <metaitem:nomilabs:plateLumium>],	
+	[<metaitem:nomilabs:plateLumium>,<enderio:item_endergy_conduit:6>,<metaitem:nomilabs:plateLumium>]]);	
 
 recipes.addShaped(<solarflux:solar_panel_4> * 2, [
 	[<solarflux:solar_panel_3>, <solarflux:photovoltaic_cell_2>, <solarflux:solar_panel_3>],	
-	[<ore:ingotMicroversium>, <metaitem:blockEndSteel>, <ore:ingotMicroversium>],	
+	[<ore:ingotMicroversium>, <metaitem:nomilabs:blockEndSteel>, <ore:ingotMicroversium>],	
 	[<ore:ingotMicroversium>,<enderio:item_endergy_conduit:1>,<ore:ingotMicroversium>]]);	
 
 // Sunnarium
 alloy_smelter.recipeBuilder()
-	.inputs(<contenttweaker:stabilizedplutonium>, <contenttweaker:stabilizedcurium>)
+	.inputs(<nomilabs:stabilizedplutonium>, <nomilabs:stabilizedcurium>)
 	.outputs(<advsolars:sunnarium>)
 	.duration(2000)
 	.EUt(4000)

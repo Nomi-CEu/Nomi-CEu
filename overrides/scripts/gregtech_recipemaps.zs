@@ -65,7 +65,16 @@ global thermal_sep                  as RecipeMap = RecipeMap.getByName("thermal_
 global unpackager                   as RecipeMap = RecipeMap.getByName("unpacker");
 global vacuum_freezer               as RecipeMap = RecipeMap.getByName("vacuum_freezer");
 global wiremill                     as RecipeMap = RecipeMap.getByName("wiremill");
-
+global microverse_projector_1       as RecipeMap = RecipeMap.getByName("microverse_projector_1");
+global microverse_projector_2       as RecipeMap = RecipeMap.getByName("microverse_projector_2");
+global microverse_projector_3       as RecipeMap = RecipeMap.getByName("microverse_projector_3");
+global creative_tank_provider       as RecipeMap = RecipeMap.getByName("creative_tank_provider");
+global naquadah_reactor_1           as RecipeMap = RecipeMap.getByName("naquadah_reactor_1");
+global naquadah_reactor_2           as RecipeMap = RecipeMap.getByName("naquadah_reactor_2");
+global actualization_chamber        as RecipeMap = RecipeMap.getByName("actualization_chamber");
+global universal_crystallizer       as RecipeMap = RecipeMap.getByName("universal_crystallizer");
+global dme_sim_chamber              as RecipeMap = RecipeMap.getByName("dme_sim_chamber");
+global greenhouse                   as RecipeMap = RecipeMap.getByName("greenhouse");
 
 
 // Tools
