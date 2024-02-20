@@ -1676,7 +1676,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You already have §6Steel§r, but it can be made much faster in the §3Alloy Smelter§r, at the cost of EU.\n\nYou might want to save your §6Coal Dust§r for circuits and use §6Charcoal Dust§r instead. Later, you can also process either of these dusts, §6Coal Coke Dust§r, §2or Diamond Dust§r into §6Carbon Dust§r, which can be used for Steel and other useful things.",
+          "desc:8": "You already have §6Steel§r, but it can be made much faster in the §3Alloy Smelter§r, at the cost of EU. Once you build the §3Electric Blast Furnace§r, you may opt to make Steel there with Oxygen instead.\n\nYou might want to save your §6Coal Dust§r for circuits and use §6Charcoal Dust§r instead. Later, you can also process either of these dusts, §6Coal Coke Dust§r, §2or Diamond Dust§r into §6Carbon Dust§r, which can be used for Steel and other useful things.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5647,7 +5647,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Initial circuit components are a bit more difficult in CEu, and you need Arsenic in addition to Gallium.§r\n\nFor §dGallium§r, you may, ranged from worst to best:\n\n- §3Electrolyze §aSphalerite§r for a low chance of small dust. Note that you lose on direct smelting value.\n\n-§r Put §aCrushed Bauxite§r in the §3Chemical Bath§r. Note that this requires §9Sodium Persulfate§r. \n\n- Obtain it as a Byproduct of §aSphalerite§r Ore Processing, in the §3Thermal Centrifuge§r or §3Centrifuge§r.\n\n§2For Arsenic, you must centrifuge Realgar Dust, or (more involvedly) flash smelt Cobaltite Dust in the EBF, and electrolyse the resultant Arsenic Trioxide.\n\nCombine both in a Mixer to make Gallium Arsenide.",
+          "desc:8": "§2Initial circuit components are a bit more difficult in CEu, and you need Arsenic in addition to Gallium.§r\n\nFor §dGallium§r, you may, ranged from worst to best:\n\n- §3Electrolyze §aSphalerite§r for a low chance of dust. Note that you lose on direct smelting value.\n\n-§r Put §aCrushed Bauxite§r in the §3Chemical Bath§r. Note that this requires §9Sodium Persulfate§r. \n\n- Obtain it as a Byproduct of §aSphalerite§r Ore Processing, in the §3Thermal Centrifuge§r or §3Centrifuge§r.\n\n§2For Arsenic, you must centrifuge Realgar Dust, or (more involvedly) flash smelt Cobaltite Dust in the EBF, and electrolyse the resultant Arsenic Trioxide.\n\nCombine both in a Mixer to make Gallium Arsenide.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26519,7 +26519,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Large Plasma Turbines§r are a powerful late game method of generating power. One Large Plasma Turbine produces §2a base of 16384 EU/t when using an IV Rotor Holder§r.",
+          "desc:8": "§3Large Plasma Turbines§r are a powerful late game method of generating power. One Large Plasma Turbine produces §2a base of 16384 EU/t when using an IV Rotor Holder§r.\n\nGenerally, the best plasma fuels to use will be §eHelium Plasma§r with a §3Fusion Reactor Mk1§r, §eTin Plasma§r when you upgrade to §3Mk2§r, and §eAmericium Plasma§r when you upgrade to §3Mk3§r. However, the other plasmas are still competitive, and your setup might lend itself better to a different plasma. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45109,13 +45109,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "When you first started the pack, we told you that ore doubling can wait, and that\u0027s true... But you will need to start doing some rudimentary ore processing for §ebyproducts§r.\n\nByproducts are additional materials that can only be obtained from processing ores in certain machines. For example, there is no \"Gallium Ore\" or \"Arsenic Ore\". You get §6Gallium§r and §6Arsenic §ras a byproduct from processing other ores.\n\nOres have various means of processing, and eventually you\u0027ll use machine pipelines to process ores in specific ways to optimize what byproducts you gain. You can look at the §6Ore Byproduct Page§r of an ore in §bJEI§r, accessed by pressing \u0027U\u0027 on an ore and navigating to the byproduct tab, to see the required route to obtain desired byproducts. \n\nThe relevant machines are as follows:\n \n- §3Macerator§r: turns ores into §6Crushed Ores§r, Crushed Ores into §6Impure Dusts§r, and §6Purified Crushed Ores§r into §6Pure Dusts§r. Higher tiers of macerators have byproduct slots and gain a chance to get a full pile of byproduct from ores and both types of crushed ores.\n\n- §3Ore Washer§r: cleans Crushed Ores with §9Water§r, making Purified Crushed Ores§r, and a guaranteed 3 tiny piles of byproduct. Using §9Distilled Water§r makes them go faster. §2You can also perform a simple wash with this similar to Cauldron washing, which is extremely fast, but grants no byproducts.§r\n\n- §3Chemical Bath§r: §2uses Sodium Persulfate or Mercury to purify certain ores, granting a chance to yield a full pile of a byproduct.\n\n§r- §3Centrifuge§r: separates Pure or Impure dusts into the final material, producing a guaranteed §21 (nerfed from 3) tiny pile of byproduct§r.\n\n- §3Electrolyzer§r: uses power to split compounds into individual elements, sometimes gaining useful byproducts in the process. §2Be warned that certain dusts may be better to directly smelt instead of electrolyze!§r\n\n- §3Thermal Centrifuge§r: not to be confused with the regular Centrifuge. §2Less slow and power-hungry now, but still so. However, it yields 3 additional tiny piles of byproduct, and macerating the Centrifuged Ore can grant a special third byproduct.\n\n§2- Sifter: filters high-quality Gems from Purified Crushed gem Ores for an overall higher yield.\n\n- Electromagnetic Separator: filters magnetic metals from certain ores, increasing their yields.§r\n\nYour first forays into ore processing for byproducts will be the Electrolyzer and the Centrifuge.\n",
+          "desc:8": "When you first started the pack, we told you that ore doubling can wait, and that\u0027s true... But you will need to start doing some rudimentary ore processing for §ebyproducts§r.\n\nByproducts are additional materials that can only be obtained from processing ores in certain machines. For example, there is no \"Gallium Ore\" or \"Arsenic Ore\". You get §6Gallium§r and §6Arsenic §ras a byproduct from processing other ores.\n\nOres have various means of processing, and eventually you\u0027ll use machine pipelines to process ores in specific ways to optimize what byproducts you gain. You can look at the §6Ore Byproduct Page§r of an ore in §bJEI§r, accessed by pressing \u0027U\u0027 on an ore and navigating to the byproduct tab, to see the required route to obtain desired byproducts. \n\nThe relevant machines are as follows:\n \n- §3Macerator§r: turns ores into §6Crushed Ores§r, Crushed Ores into §6Impure Dusts§r, and §6Purified Crushed Ores§r into §6Pure Dusts§r. Higher tiers of macerators have byproduct slots and gain a chance to get a full pile of byproduct from ores and both types of crushed ores.\n\n- §3Ore Washer§r: cleans Crushed Ores with §9Water§r, making Purified Crushed Ores§r, and 1/3 of a byproduct dust. Using §9Distilled Water§r makes them go faster. §2You can also perform a simple wash with this similar to Cauldron washing, which is extremely fast, but grants no byproducts.§r\n\n- §3Chemical Bath§r: §2uses Sodium Persulfate or Mercury to purify certain ores, granting a chance to yield a full pile of a byproduct.\n\n§r- §3Centrifuge§r: separates Pure or Impure dusts into the final material, producing 1/9 byproduct dust.\n\n- §3Electrolyzer§r: uses power to split compounds into individual elements, sometimes gaining useful byproducts in the process. §2Be warned that certain dusts may be better to directly smelt instead of electrolyze!§r\n\n- §3Thermal Centrifuge§r: not to be confused with the regular Centrifuge. §2Less slow and power-hungry now, but still so. However, it yields 1/3 byproduct dust, and macerating the Centrifuged Ore can grant a special third byproduct.\n\n§2- Sifter: filters high-quality Gems from Purified Crushed gem Ores for an overall higher yield.\n\n- Electromagnetic Separator: filters magnetic metals from certain ores, increasing their yields.§r\n\nYour first forays into ore processing for byproducts will be the Electrolyzer and the Centrifuge.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 4,
+            "Damage:2": 39,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_dust_tiny"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -54909,7 +54909,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Configurable to output any number of GT Volts and Amps.",
+          "desc:8": "An upgrade from the Creative RF Source, this can be configured to output any amount of GT Volts and Amps.\n\nThis can connect to a Laser network directly.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55903,7 +55903,8 @@
     "897:10": {
       "preRequisites:11": [
         830,
-        896
+        896,
+        52
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -65034,50 +65035,50 @@
           "id:3": 31,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -248,
-          "y:3": 792
+          "x:3": -220,
+          "y:3": 852
         },
         "4:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -176,
-          "y:3": 796
+          "x:3": -140,
+          "y:3": 856
         },
         "5:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -212,
+          "x:3": -216,
           "y:3": 756
         },
         "6:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
-          "y:3": 720
+          "x:3": -260,
+          "y:3": 732
         },
         "7:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 796
+          "x:3": -140,
+          "y:3": 792
         },
         "8:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -92,
-          "y:3": 756
+          "x:3": -176,
+          "y:3": 824
         },
         "9:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -92,
-          "y:3": 796
+          "x:3": -140,
+          "y:3": 824
         },
         "10:10": {
           "id:3": 52,
@@ -65097,15 +65098,15 @@
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -212,
-          "y:3": 720
+          "x:3": -236,
+          "y:3": 816
         },
         "13:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 756
+          "x:3": -176,
+          "y:3": 792
         },
         "14:10": {
           "id:3": 70,
@@ -65300,8 +65301,8 @@
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -216,
-          "y:3": 580
+          "x:3": -176,
+          "y:3": 508
         },
         "42:10": {
           "id:3": 129,
@@ -65398,8 +65399,8 @@
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -248,
-          "y:3": 720
+          "x:3": -260,
+          "y:3": 788
         },
         "56:10": {
           "id:3": 227,
@@ -65664,8 +65665,8 @@
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -216,
-          "y:3": 612
+          "x:3": -156,
+          "y:3": 544
         },
         "94:10": {
           "id:3": 832,
@@ -65734,15 +65735,15 @@
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 504
+          "x:3": -176,
+          "y:3": 700
         },
         "104:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 544
+          "x:3": -216,
+          "y:3": 700
         },
         "105:10": {
           "id:3": 973,
