@@ -10,7 +10,13 @@ material('rhodium_plated_palladium')
         .changeChemicalFormula()
         .change()
 
+// Can't use change composition to remove, as that is only performed at the end of running scripts, and if not removed, conflicts will occur.
+// TODO Make this use change composition when that accepts non-material Item Stacks
+
 /* Black Steel */
+
+// Remove ABS Recipes
+mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('black_steel')], null, null)
 
 // Remove Mixer Recipes
 mods.gregtech.mixer.removeByOutput([metaitem('dustBlackSteel')], null, null, null)

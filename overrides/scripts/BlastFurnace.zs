@@ -191,15 +191,7 @@ mixer.recipeBuilder()
 	.EUt(120)
 	.buildAndRegister();
 
-// Fluxed Electrum ABS Recipes
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<metaitem:dustElectrum> * 6, <metaitem:nomilabs:dustLumium>, <metaitem:nomilabs:dustSignalum>, <ore:dustMana>])
-	.fluidOutputs(<liquid:electrum_flux> * 1296)
-	.circuit(4)
-	.property("temperature", 1100)
-	.duration(19602)
-	.EUt(120)
-	.buildAndRegister();
+// Fluxed Electrum ABS Recipes (Groovy)
 
 /* Custom Alloys in ABS */
 

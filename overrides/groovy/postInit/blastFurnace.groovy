@@ -69,6 +69,20 @@ mods.gregtech.alloy_blast_smelter.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
+// Fluxed Electrum (Adds Mana Dust)
+// There is only one ABS recipe, fluxed electrum has no gas boost
+// TODO Add a gas boost?
+mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('electrum_flux')], null, null)
+
+mods.gregtech.alloy_blast_smelter.recipeBuilder()
+        .inputs([metaitem('dustElectrum') * 6, metaitem('nomilabs:dustLumium'), metaitem('nomilabs:dustSignalum'), ore('dustMana')])
+        .fluidOutputs(fluid('electrum_flux') * 1296)
+        .circuitMeta(4)
+        .property('temperature', 1100)
+        .duration(8712)
+        .EUt(120)
+        .buildAndRegister()
+
 if (LabsModeHelper.normal) {
     mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('red_alloy')], null, null)
 
