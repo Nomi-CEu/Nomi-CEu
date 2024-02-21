@@ -4786,7 +4786,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Third Micro Miner. §2You\u0027ll need that Boron in the MV Field Generators.§r\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore",
+          "desc:8": "The Third Micro Miner. §2You\u0027ll need that Boron in the MV Field Generators.§r\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore\n§2* Cobaltite Ore\n* Laurite Ore\n* Cuprorhodsite Ore§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13697,7 +13697,7 @@
     },
     "197:10": {
       "preRequisites:11": [
-        201
+        311
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -21614,12 +21614,13 @@
     },
     "311:10": {
       "preRequisites:11": [
-        197
+        827,
+        201
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungstensteel§r is the fourth coil material available, increasing your EBF\u0027s operating temperature to 4500K so it can process more advanced materials.",
+          "desc:8": "§6RTM-Alloy§r is the fourth coil material available, increasing your EBF\u0027s operating temperature to 4500K so it can process more advanced materials.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21631,7 +21632,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Tungstensteel Coil Blocks",
+          "name:8": "RTM-Alloy Coil Blocks",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -51801,12 +51802,13 @@
     },
     "827:10": {
       "preRequisites:11": [
-        177
+        177,
+        65
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A rudimentary version of Platinum Group Sludge (PGS) processing existed in the base pack. Here, it is a strong source of the Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum - as well as Gold. All of these elements will be used in IV-tier and above materials.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.\n\nThis is still optional, and you can get §6Ruthenium§r and §6Rhodium§r from §6Osmiridium 80/20 Ore§r and §6Iridosmine 80/20 Ore§r from Microverse adventures instead.",
+          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. However, the yields of these ores from Microverse missions are small, so you should consider processing §6Platinum Group Sludge (PGS)§r for more.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51819,7 +51821,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Platinum Group Processing",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -51859,15 +51861,38 @@
               "Damage:2": 93,
               "OreDict:8": "",
               "id:8": "gregtech:meta_dust"
-            },
-            "1:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 90,
               "OreDict:8": "",
               "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 75,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 50,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -66703,15 +66728,15 @@
           "id:3": 65,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -560,
-          "y:3": 216
+          "x:3": -508,
+          "y:3": 132
         },
         "5:10": {
           "id:3": 68,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -492,
-          "y:3": 312
+          "x:3": -488,
+          "y:3": 276
         },
         "6:10": {
           "id:3": 132,
@@ -66724,15 +66749,15 @@
           "id:3": 139,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 132
+          "x:3": -216,
+          "y:3": 280
         },
         "8:10": {
           "id:3": 144,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 168
+          "x:3": -216,
+          "y:3": 240
         },
         "9:10": {
           "id:3": 148,
@@ -66906,22 +66931,22 @@
           "id:3": 176,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -306,
-          "y:3": -48
+          "x:3": -360,
+          "y:3": 60
         },
         "34:10": {
           "id:3": 177,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -258,
-          "y:3": -48
+          "x:3": -360,
+          "y:3": 144
         },
         "35:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": 24
+          "x:3": -156,
+          "y:3": 144
         },
         "36:10": {
           "id:3": 179,
@@ -66934,15 +66959,15 @@
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": -12
+          "x:3": -120,
+          "y:3": 144
         },
         "38:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
-          "y:3": -48
+          "x:3": -84,
+          "y:3": 144
         },
         "39:10": {
           "id:3": 182,
@@ -67004,36 +67029,36 @@
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -456,
-          "y:3": 204
+          "x:3": -360,
+          "y:3": 240
         },
         "48:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -420,
-          "y:3": 240
+          "x:3": -360,
+          "y:3": 280
         },
         "49:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 204
+          "x:3": -216,
+          "y:3": 192
         },
         "50:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -456,
-          "y:3": 144
+          "y:3": 192
         },
         "51:10": {
           "id:3": 234,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
-          "y:3": 168
+          "x:3": -216,
+          "y:3": 164
         },
         "52:10": {
           "id:3": 235,
@@ -67054,7 +67079,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -548,
-          "y:3": 180
+          "y:3": 144
         },
         "55:10": {
           "id:3": 248,
@@ -67082,14 +67107,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -548,
-          "y:3": 144
+          "y:3": 192
         },
         "59:10": {
           "id:3": 261,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
-          "y:3": 276
+          "y:3": 280
         },
         "60:10": {
           "id:3": 267,
@@ -67212,10 +67237,10 @@
         },
         "77:10": {
           "id:3": 311,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": 204
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -336,
+          "y:3": 180
         },
         "78:10": {
           "id:3": 312,
@@ -67228,15 +67253,15 @@
           "id:3": 318,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -330,
+          "x:3": -324,
           "y:3": 108
         },
         "80:10": {
           "id:3": 328,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 132
+          "x:3": -48,
+          "y:3": 176
         },
         "81:10": {
           "id:3": 339,
@@ -67257,27 +67282,27 @@
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -392,
-          "y:3": 280
+          "y:3": 296
         },
         "84:10": {
           "id:3": 344,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -512,
-          "y:3": 176
+          "x:3": -524,
+          "y:3": 220
         },
         "85:10": {
           "id:3": 347,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 204
+          "x:3": -120,
+          "y:3": 192
         },
         "86:10": {
           "id:3": 350,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -160,
+          "x:3": -124,
           "y:3": 236
         },
         "87:10": {
@@ -67312,7 +67337,7 @@
           "id:3": 512,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -456,
+          "x:3": -420,
           "y:3": 240
         },
         "92:10": {
@@ -67340,7 +67365,7 @@
           "id:3": 542,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -492,
+          "x:3": -456,
           "y:3": 240
         },
         "96:10": {
@@ -67354,8 +67379,8 @@
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -496,
-          "y:3": 208
+          "x:3": -524,
+          "y:3": 284
         },
         "98:10": {
           "id:3": 555,
@@ -67375,113 +67400,113 @@
           "id:3": 610,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -480,
-          "y:3": 176
+          "x:3": -524,
+          "y:3": 252
         },
         "101:10": {
           "id:3": 611,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 168
+          "x:3": -84,
+          "y:3": 176
         },
         "102:10": {
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -156,
           "y:3": 276
         },
         "103:10": {
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -84,
           "y:3": 240
         },
         "104:10": {
           "id:3": 672,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -156,
           "y:3": 240
         },
         "105:10": {
           "id:3": 673,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -84,
           "y:3": 276
         },
         "106:10": {
           "id:3": 674,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -120,
           "y:3": 276
         },
         "107:10": {
           "id:3": 675,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -120,
           "y:3": 312
         },
         "108:10": {
           "id:3": 676,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -120,
           "y:3": 348
         },
         "109:10": {
           "id:3": 677,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -84,
           "y:3": 312
         },
         "110:10": {
           "id:3": 678,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -156,
           "y:3": 348
         },
         "111:10": {
           "id:3": 679,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -84,
           "y:3": 348
         },
         "112:10": {
           "id:3": 680,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -168,
+          "x:3": -132,
           "y:3": 384
         },
         "113:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -492,
+          "x:3": -456,
           "y:3": 276
         },
         "114:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -528,
+          "x:3": -420,
           "y:3": 276
         },
         "115:10": {
           "id:3": 732,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 168
+          "x:3": -156,
+          "y:3": 176
         },
         "116:10": {
           "id:3": 745,
@@ -67544,13 +67569,13 @@
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -392,
-          "y:3": 220
+          "y:3": 268
         },
         "125:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -156,
           "y:3": 312
         },
         "126:10": {
@@ -67558,7 +67583,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
-          "y:3": 276
+          "y:3": 280
         },
         "127:10": {
           "id:3": 800,
@@ -67599,15 +67624,15 @@
           "id:3": 827,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -258,
-          "y:3": -79
+          "x:3": -324,
+          "y:3": 144
         },
         "133:10": {
           "id:3": 828,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -364,
-          "y:3": 236
+          "y:3": 320
         },
         "134:10": {
           "id:3": 835,
@@ -67628,34 +67653,34 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
-          "y:3": 312
+          "y:3": 324
         },
         "137:10": {
           "id:3": 849,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
-          "y:3": 276
+          "y:3": 364
         },
         "138:10": {
           "id:3": 850,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -364,
-          "y:3": 308
+          "x:3": -328,
+          "y:3": 360
         },
         "139:10": {
           "id:3": 851,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
-          "y:3": 276
+          "y:3": 280
         },
         "140:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
+          "x:3": -48,
           "y:3": 312
         },
         "141:10": {
@@ -67718,8 +67743,8 @@
           "id:3": 1025,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -456,
-          "y:3": 276
+          "x:3": -488,
+          "y:3": 240
         },
         "150:10": {
           "id:3": 1032,
