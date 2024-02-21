@@ -30665,7 +30665,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.\n\n§6Pulsating Crystals§r will be required immediately to make §aSnad§r, the key to infinite fuel.",
+          "desc:8": "§oThis quest accepts any Autoclave from LV to IV.§r\n\nAn §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.\n\n§6Pulsating Crystals§r will be required immediately to make §aSnad§r, the key to infinite fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30716,7 +30716,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 125,
-              "OreDict:8": "",
+              "OreDict:8": "questbookAutoclave",
               "id:8": "gregtech:machine"
             }
           },
@@ -47806,7 +47806,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 440,
-              "OreDict:8": "",
+              "OreDict:8": "questbookLathe",
               "id:8": "gregtech:machine"
             }
           },
@@ -64600,7 +64600,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nThis block calls for an §6LV Sensor§r, which requires a bit of §6Quartzite§r. Buy some if you haven\u0027t come across it yet.\n\nAt §5EV§r tier, you can build §3Large Miners§r.",
+          "desc:8": "§oThis quest accepts LV, MV or HV Miner.§r\n\nThe §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nThe LV Miner calls for an §6LV Sensor§r, which requires a bit of §6Quartzite§r. Buy some if you haven\u0027t come across it yet.\n\nAt §5EV§r tier, you can build §3Large Miners§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64650,7 +64650,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 920,
-              "OreDict:8": "",
+              "OreDict:8": "questbookSingleMiner",
               "id:8": "gregtech:machine"
             }
           },
