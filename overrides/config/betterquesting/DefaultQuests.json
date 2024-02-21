@@ -64529,6 +64529,53 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1049:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1
+      ],
+      "preRequisites:11": [
+        60,
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Most multiblocks now support rotation along any axis. Right-click with a Wrench on a face with a rotation ↺ symbol to rotate the controller.\n\nThe rules for building multiblocks remain the same.\n\nTake your setups to a new dimension!\n\nThe §3Cleanroom§r, §3Multiblock Miners/Drills§r, and §3Distillation Tower§r do not support being rotated.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "redstonearsenal:tool.wrench_flux",
+            "tag:10": {
+              "Energy:3": 0
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Multiblock Rotation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1049,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -64793,15 +64840,15 @@
           "id:3": 402,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -468,
-          "y:3": 356
+          "x:3": -456,
+          "y:3": 384
         },
         "35:10": {
           "id:3": 403,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -516,
-          "y:3": 356
+          "x:3": -504,
+          "y:3": 384
         },
         "36:10": {
           "id:3": 413,
@@ -64940,15 +64987,15 @@
           "id:3": 788,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -564,
-          "y:3": 404
+          "x:3": -456,
+          "y:3": 240
         },
         "56:10": {
           "id:3": 789,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -564,
-          "y:3": 356
+          "x:3": -504,
+          "y:3": 240
         },
         "57:10": {
           "id:3": 814,
@@ -64975,8 +65022,8 @@
           "id:3": 819,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -516,
-          "y:3": 404
+          "x:3": -504,
+          "y:3": 432
         },
         "61:10": {
           "id:3": 829,
@@ -64989,15 +65036,15 @@
           "id:3": 890,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -468,
-          "y:3": 308
+          "x:3": -456,
+          "y:3": 336
         },
         "63:10": {
           "id:3": 893,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -516,
-          "y:3": 308
+          "x:3": -504,
+          "y:3": 336
         },
         "64:10": {
           "id:3": 903,
@@ -65010,8 +65057,8 @@
           "id:3": 913,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -468,
-          "y:3": 260
+          "x:3": -456,
+          "y:3": 288
         },
         "66:10": {
           "id:3": 962,
@@ -65024,8 +65071,8 @@
           "id:3": 1020,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -468,
-          "y:3": 404
+          "x:3": -456,
+          "y:3": 432
         },
         "68:10": {
           "id:3": 1026,
@@ -65038,8 +65085,15 @@
           "id:3": 1046,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -516,
-          "y:3": 260
+          "x:3": -504,
+          "y:3": 288
+        },
+        "70:10": {
+          "id:3": 1049,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -504,
+          "y:3": 192
         }
       }
     },
