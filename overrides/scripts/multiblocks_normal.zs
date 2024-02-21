@@ -177,8 +177,8 @@ microverse_projector_1.recipeBuilder()
              <gregtech:ore_almandine_0:1> * 64,
              <gregtech:ore_lepidolite_0:1> * 64,
              <gregtech:ore_cobaltite_0:1> * 64,
-             <gregtech:ore_laurite_0:1> * 32,
-             <gregtech:ore_cuprorhodsite_0:1> * 24)
+             <gregtech:ore_laurite_0:1> * 16,
+             <gregtech:ore_cuprorhodsite_0:1> * 8)
     .buildAndRegister();
 
 // advanced projector
