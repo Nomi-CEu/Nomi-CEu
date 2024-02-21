@@ -64477,6 +64477,58 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1048:10": {
+      "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Electric Prospector\u0027s Scanner§r given for free now has integration with §eJourneyMap§r.\n\nPick up surface rocks, right-click ore blocks, or use an electric prospector on ore mode to discover veins.\n\nPress the \"action key\" (default: delete) while hovering over a vein to mark it as depleted (or not depleted).\n\nDouble-click a vein to mark it as a waypoint, and again to unmark it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:filled_map"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Visual Ores",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1048,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -69571,8 +69623,8 @@
           "id:3": 25,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -42
+          "x:3": 72,
+          "y:3": -36
         },
         "17:10": {
           "id:3": 37,
@@ -69732,8 +69784,8 @@
           "id:3": 496,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -6
+          "x:3": 72,
+          "y:3": 0
         },
         "40:10": {
           "id:3": 530,
@@ -69838,7 +69890,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -42
+          "y:3": -36
         },
         "55:10": {
           "id:3": 909,
@@ -69901,7 +69953,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -6
+          "y:3": 0
+        },
+        "64:10": {
+          "id:3": 1048,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -36
         }
       }
     },
