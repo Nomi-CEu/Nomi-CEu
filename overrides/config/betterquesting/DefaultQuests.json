@@ -11664,7 +11664,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hydrogen Sulfide§r is a byproduct of hydrodesulfurization. §2It also comes from distilling Liquid Nether Air.§r\n\nA simple chemical reaction with §9Water§r reprocesses it into the useful §9Sulfuric Acid§r, or it can be electrolyzed for recovering the §9Hydrogen§r.",
+          "desc:8": "§9Hydrogen Sulfide§r is a byproduct of hydrodesulfurization. §2It also comes from distilling Liquid Nether Air.§r\n\nA simple chemical reaction with §9Oxygen§r reprocesses it into the useful §9Sulfuric Acid§r, or it can be electrolyzed for recovering the §9Hydrogen§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14927,7 +14927,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Rutile Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n\n\n",
+          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Bauxite Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31994,7 +31994,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts both LV and MV Brewery.\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power. Building §2many Breweries§r is necessary to brew enough Biomass for plastics. §2An alternative and more resource efficient way of making biomass is with a Pyrolyse Oven, Water, and Bio Chaff.",
+          "desc:8": "§oThis quest accepts any Brewery from LV to IV.§r\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power. Building §2many Breweries§r is necessary to brew enough Biomass for plastics. §2An alternative and more resource efficient way of making biomass is with a Pyrolyse Oven, Water, and Bio Chaff.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35078,6 +35078,23 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "extrautils2:angelblock"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
