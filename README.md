@@ -18,7 +18,8 @@
 - Multiblock versions of nearly all machines, including EBF, Freezer and DT, processing up to 256 recipes in parallel  
 - New processing chains for Naquadah, Advanced SMDs, Crystal Chips, and more  
 - Fixed lots of unpleasant CE-ness - fixed infinite Amp bug, different ore stone types don't clog up your inventory, etc.   
-- Super-performant emissive effects on machines, coil blocks, the Fusion Reactor, and more  
+- Super-performant emissive effects on machines, coil blocks, the Fusion Reactor, and more
+- Assembly Line Research, Cleanrooom, and other ported and improved features from GT5 
 - Updated questbook to guide you through all the new stuff, including a completely new chapter, the Processing Lines Tab, to give you more info, useful tips and a visual representation of different processing lines, both new and old  
 - Many QoL features - Wiremill can produce any wire, Creative Tank no longer uses fluids, new creative chests and tanks from CEu, etc.
 - And more...  
@@ -76,16 +77,6 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 <hr>
 
 #### Manual installation instructions are available [here](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/overrides/README.md).
-
-## Bansoukou
-This pack uses two bansoukou patches. 
-The first one is for [NuclearCraft](https://github.com/tomdodd4598/NuclearCraft/tree/1.12.2), and the second one is for [Draconic Evolution](https://github.com/Draconic-Inc/Draconic-Evolution/tree/1.12.2).
-
-The two patch repos are:
-- [NuclearCraft](https://github.com/Exaxxion/NuclearCraft/tree/2.18y-ceu). This fixes GTCEu incompatability with NuclearCraft.
-- [Draconic Evolution](https://github.com/Nomi-CEu/Draconic-Evolution). This adds the destruct core button, and allows GT blocks in place of DE blocks in the Energy Core and Reactor.
-
-If there are issues or crashes with Draconic Evolution, please report them to [here](https://github.com/Nomi-CEu/Draconic-Evolution/issues) instead of the main Draconic Evolution repo.
 
 ## Credits
 Original pack by [Exaxxion](https://github.com/Exaxxion).  
