@@ -35,12 +35,15 @@ body:
         Added AE2 Fluid Crafting Rework: Version 2.4.18-r.
     validations:
       required: false
-  - type: input
+  - type: textarea
     id: environment
     attributes:
       label: Environment
-      description: "How you were playing on the world. Typical answers include: Singleplayer, Open to LAN, Forge Server, Sponge Server, or Mohist Server. If you selected Nightly as your version, please also specify the Nightly Hash (the 7 random characters), and the Nightly Branch."
-      placeholder: "Example: Singleplayer | Example For Nightly: Singleplayer, Nightly Main 7ga03fj"
+      description: "How you were playing on the world, and the Nightly Specification (if relevant). Typical answers include: Singleplayer, Open to LAN, Forge Server, Sponge Server, or Mohist Server. If you selected Nightly as your version, please also specify the Nightly Hash (the 7 random characters), and the Nightly Branch."
+      placeholder: |
+        Example: Singleplayer
+        Example For Nightly: Singleplayer, Nightly main 7ga03fj
+        Example For Nightly On Dev Branch: Singleplayer, Nightly dev/gt-2.8 1asdf83
     validations:
       required: true
   - type: textarea
