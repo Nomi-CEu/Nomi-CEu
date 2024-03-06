@@ -11,6 +11,7 @@ body:
       label: Nomi CEu Version
       description: The version of Nomi CEu you were using when this bug was encountered. If you do not know what it is, check the title of your instance window. If you do not see your version here, please update to the newest alpha, beta or release of the pack.
       options:
+        - "Nightly"
 {{{versions}}}
 
     validations:
@@ -38,8 +39,8 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: "How you were playing on the world. Typical answers include: Singleplayer, Open to LAN, Forge Server, Sponge Server, or Mohist Server."
-      placeholder: "Example: Singleplayer"
+      description: "How you were playing on the world. Typical answers include: Singleplayer, Open to LAN, Forge Server, Sponge Server, or Mohist Server. If you selected Nightly as your version, please also specify the Nightly Hash (the 7 random characters), and the Nightly Branch."
+      placeholder: "Example: Singleplayer | Example For Nightly: Singleplayer, Nightly Main 7ga03fj"
     validations:
       required: true
   - type: dropdown
