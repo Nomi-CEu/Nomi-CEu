@@ -85,4 +85,3 @@ static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
 
     return stack
 }
-
