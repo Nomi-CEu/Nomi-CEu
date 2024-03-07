@@ -14,10 +14,10 @@ mods.gregtech.assembler.removeByOutput([metaitem('item_bus.import.ev')], null, n
 mods.gregtech.assembler.removeByOutput([metaitem('item_bus.import.iv')], null, null, null)
 
 createRecipe(metaitem('item_bus.import.ulv'), [[ore('chest')], [metaitem('hull.ulv')]])
-createRecipe(metaitem('item_bus.import.lv'), [[[ore('chest')]], [[metaitem('hull.lv')]]])
+createRecipe(metaitem('item_bus.import.lv'), [[ore('chest')], [metaitem('hull.lv')]])
 createRecipe(metaitem('item_bus.import.mv'), [[ore('chest')], [metaitem('hull.mv')]])
 createRecipe(metaitem('item_bus.import.hv'), [[ore('chest')], [metaitem('hull.hv')]])
-createRecipe(metaitem('item_bus.import.ev'), [[[ore('chest')]], [[metaitem('hull.ev')]]])
+createRecipe(metaitem('item_bus.import.ev'), [[ore('chest')], [metaitem('hull.ev')]])
 createRecipe(metaitem('item_bus.import.iv'), [[ore('chest')], [metaitem('hull.iv')]])
 
 // Output Buses
