@@ -13,7 +13,6 @@ body:
       options:
         - "Nightly"
 {{{versions}}}
-
     validations:
       required: true
   - type: input
@@ -35,7 +34,7 @@ body:
         Added AE2 Fluid Crafting Rework: Version 2.4.18-r.
     validations:
       required: false
-   type: textarea
+  - type: textarea
     id: environment
     attributes:
       label: Environment
