@@ -13,7 +13,6 @@ body:
       options:
         - "Nightly"
 {{{versions}}}
-
     validations:
         required: true
   - type: input
