@@ -60,6 +60,7 @@ const uselessProps = {
 	"snd_update:8": "minecraft:entity.player.levelup",
 	"tasklogic:8": "AND",
 	"questlogic:8": "AND",
+	"entryLogic:8": "AND",
 	"visibility:8": "NORMAL",
 	"partysinglereward:1": 0,
 	"lockedprogress:1": 0,
