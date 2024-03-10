@@ -6,10 +6,28 @@ recipes.addShapeless(<metaitem:dye.black>, [<minecraft:dye:0>]);
 <ore:dyeBrown>.remove(<minecraft:dye:3>);
 <ore:dye>.remove(<minecraft:dye:3>);
 recipes.addShapeless(<metaitem:dye.brown>, [<minecraft:dye:3>]);
+<ore:dyeBrown>.remove(<nuclearcraft:cocoa_solids>);
+recipes.addShapeless(<metaitem:dye.brown>, [<nuclearcraft:cocoa_solids>]);
+recipes.addShapeless(<metaitem:dye.brown>, [<metaitem:dustCocoa>]); //NC cocoa solids and vanilla cocoa stop being a dye when turned into GT cocoa dust
+<ore:dyeBrown>.remove(<metaitem:dustMetalMixture>);
+recipes.addShapeless(<metaitem:dye.brown>, [<metaitem:dustMetalMixture>]);
 
 <ore:dyeBlue>.remove(<minecraft:dye:4>);
 <ore:dye>.remove(<minecraft:dye:4>);
 recipes.addShapeless(<metaitem:dye.blue>, [<minecraft:dye:4>]);
+<ore:dyeBlue>.remove(<metaitem:gemLazurite>);
+recipes.addShapeless(<metaitem:dye.blue>, [<metaitem:gemLazurite>]);
+<ore:dyeBlue>.remove(<metaitem:gemSodalite>);
+recipes.addShapeless(<metaitem:dye.blue>, [<metaitem:gemSodalite>]);
+<ore:dyeBlue>.remove(<metaitem:dustLapis>);
+recipes.addShapeless(<metaitem:dye.blue>, [<metaitem:dustLapis>]);
+<ore:dyeBlue>.remove(<metaitem:dustLazurite>);
+recipes.addShapeless(<metaitem:dye.blue>, [<metaitem:dustLazurite>]);
+<ore:dyeBlue>.remove(<metaitem:dustSodalite>);
+recipes.addShapeless(<metaitem:dye.blue>, [<metaitem:dustSodalite>]);
+
+<ore:dyeMagenta>.remove(<extrautils2:ingredients:3>);
+recipes.addShapeless(<metaitem:dye.magenta>, [<extrautils2:ingredients:3>]);
 
 <ore:dyeWhite>.remove(<minecraft:dye:15>);
 <ore:dye>.remove(<minecraft:dye:15>);
