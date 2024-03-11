@@ -198,6 +198,7 @@ chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liqu
 // Draconium
 chemical_reactor.recipeBuilder().inputs([<minecraft:dragon_breath>, <metaitem:nomilabs:dustManyullyn>]).outputs(<ore:dustDraconium>.firstItem).EUt(2000).duration(500).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:glass_bottle> * 4]).fluidInputs([<liquid:pyrotheum> * 1000, <liquid:nitro_fuel> * 1000]).outputs(<minecraft:dragon_breath> * 4).EUt(2000).duration(1000).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<minecraft:glass_bottle> * 16]).fluidInputs([<liquid:pyrotheum> * 1000, <liquid:gasoline_premium> * 1000]).outputs(<minecraft:dragon_breath> * 16).EUt(2000).duration(1000).buildAndRegister();
 
 recipes.addShaped(<extendedcrafting:material:40>, [
 	[null, <minecraft:ender_eye>, null],

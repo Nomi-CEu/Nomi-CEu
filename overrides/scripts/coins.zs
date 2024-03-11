@@ -6,9 +6,9 @@ import crafttweaker.item.IItemStack;
   
 
 recipes.addShaped(<actuallyadditions:item_misc:16>, [
-	[<nomilabs:nomicoin100>, null, <nomilabs:nomicoin100>],
-	[null, <nomilabs:nomicoin100>, null],
-	[<nomilabs:nomicoin100>, null, <nomilabs:nomicoin100>]]);
+	[<nomilabs:nomicoin25>, null, <nomilabs:nomicoin25>],
+	[null, <nomilabs:nomicoin25>, null],
+	[<nomilabs:nomicoin25>, null, <nomilabs:nomicoin25>]]);
 recipes.addShapeless(<morefurnaces:furnaceblock:2> * 2, [<morefurnaces:furnaceblock:3>]); 
   
 //Stone Widget

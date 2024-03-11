@@ -1,9 +1,12 @@
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
 import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.ItemStack
+import net.minecraft.util.ResourceLocation
+import net.minecraftforge.registries.IForgeRegistryEntry
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeOutputTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translate
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.SafeMethodHelpers.callInstanceMethodOfClass
 
 // Hand Framing Tool
 crafting.addShaped("hand_framing_tool_recipe", item("nomilabs:hand_framing_tool"), [
@@ -54,8 +57,12 @@ for (ItemStack stack : items) {
 static String getRecipeName(ItemStack stack, boolean trim, boolean front) {
     String baseName = "nomiceu:hand_framing_"
 
-    if (stack.getItem().getRegistryName() != null)
-        baseName = baseName + stack.getItem().getRegistryName().getNamespace() + "_" + stack.getItem().getRegistryName().getPath()
+    // We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
+    // Without SideOnly, so it crashes.
+    // Use the special of class type so the addInformation method isn't loaded.
+    def rl = (ResourceLocation) callInstanceMethodOfClass(IForgeRegistryEntry<Item>.class, stack.getItem(), "getRegistryName", null)
+    if (rl != null)
+        baseName = baseName + rl.getNamespace() + "_" + rl.getPath()
 
     baseName = baseName + "." + stack.getMetadata() + "_side"
     if (trim) baseName = baseName + "_trim"
@@ -68,8 +75,13 @@ static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
     def trimStack = trim ? item("extendedcrafting:storage", 4) : ItemStack.EMPTY
     def frontStack = front ? item("xtones:zane", 15) : ItemStack.EMPTY
 
-    stack = ((IFrameable) stack.getItem()).decorate(stack.copy(), sideStack, trimStack, frontStack)
+    // We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
+    // Without SideOnly, so it crashes.
+    // Use the special of class type so the addInformation method isn't loaded.
+    def frameable = (IFrameable) stack.getItem()
+    stack = (ItemStack) callInstanceMethodOfClass(IFrameable.class, frameable, "decorate", [stack.copy(), sideStack, trimStack, frontStack])
+    if (stack == null)
+        return stack
 
     return stack
 }
-
