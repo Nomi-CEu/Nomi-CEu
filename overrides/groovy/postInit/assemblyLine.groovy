@@ -2,8 +2,6 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition
 import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher
 
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
-
 // ZPM Field Generator (Add Awakened Draconium to Required Fluids)
 mods.gregtech.assembly_line.recipeBuilder()
     .inputs(metaitem('frameNaquadahAlloy'), metaitem('plateNaquadahAlloy') * 6, metaitem('quantumstar'), metaitem('emitter.zpm') * 2, ore('circuitZpm') * 2, metaitem('wireFineUraniumRhodiumDinaquadide') * 64, metaitem('wireFineUraniumRhodiumDinaquadide') * 64, metaitem('cableGtSingleVanadiumGallium') * 4)
@@ -40,19 +38,19 @@ if (LabsModeHelper.normal) {
         .inputs(metaitem('electric_blast_furnace'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('springNaquadahAlloy') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
         .fluidInputs(fluid('soldering_alloy') * 1152)
         .outputs(metaitem('gcym:mega_blast_furnace'))
+        .changeRecycling()
         .stationResearch(b -> b.researchStack(metaitem('electric_blast_furnace')).CWUt(16))
         .duration(1200).EUt(30720)
         .buildAndRegister()
-    changeStackRecycling(metaitem('gcym:mega_blast_furnace'), [metaitem('electric_blast_furnace'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('springNaquadahAlloy') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 } else {
     mods.gregtech.assembly_line.recipeBuilder()
         .inputs(metaitem('electric_blast_furnace'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('springTritanium') * 4, metaitem('plateTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
         .fluidInputs(fluid('soldering_alloy') * 1152)
         .outputs(metaitem('gcym:mega_blast_furnace'))
+        .changeRecycling()
         .stationResearch(b -> b.researchStack(metaitem('electric_blast_furnace')).CWUt(128).EUt(1966080))
         .duration(1200).EUt(491520)
         .buildAndRegister()
-    changeStackRecycling(metaitem('gcym:mega_blast_furnace'), [metaitem('electric_blast_furnace'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('springTritanium') * 4, metaitem('plateTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 }
 
 // Bulk Blast Chiller
@@ -61,19 +59,19 @@ if (LabsModeHelper.normal) {
         .inputs(metaitem('vacuum_freezer'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('pipeNormalFluidNaquadah') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
         .fluidInputs(fluid('soldering_alloy') * 1152)
         .outputs(metaitem('gcym:mega_vacuum_freezer'))
+        .changeRecycling()
         .stationResearch(b -> b.researchStack(metaitem('vacuum_freezer')).CWUt(16))
         .duration(1200).EUt(30720)
         .buildAndRegister()
-    changeStackRecycling(metaitem('gcym:mega_vacuum_freezer'), [metaitem('vacuum_freezer'), ore('circuitUv') * 4, metaitem('field.generator.luv') * 4, metaitem('pipeNormalFluidNaquadah') * 4, metaitem('plateDenseNaquadahAlloy') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 } else {
     mods.gregtech.assembly_line.recipeBuilder()
         .inputs(metaitem('vacuum_freezer'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('pipeNormalFluidDuranium') * 4, metaitem('plateDenseTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4)
         .fluidInputs(fluid('soldering_alloy') * 1152)
         .outputs(metaitem('gcym:mega_vacuum_freezer'))
+        .changeRecycling()
         .stationResearch(b -> b.researchStack(metaitem('vacuum_freezer')).CWUt(128).EUt(1966080))
         .duration(1200).EUt(491520)
         .buildAndRegister()
-    changeStackRecycling(metaitem('gcym:mega_vacuum_freezer'), [metaitem('vacuum_freezer'), ore('circuitUhv') * 4, metaitem('field.generator.uv') * 4, metaitem('pipeNormalFluidDuranium') * 4, metaitem('plateDenseTritanium') * 4, metaitem('wireGtQuadrupleUraniumRhodiumDinaquadide') * 4])
 }
 
 // Naquadah Reactor 1

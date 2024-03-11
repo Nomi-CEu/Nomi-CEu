@@ -396,7 +396,7 @@ recipes.addShaped(<thermalexpansion:frame:64>, [
 recipes.addShapeless(<thermalfoundation:material:640>, [<actuallyadditions:item_misc:16>]);
 
 // Fluxbore Head
-recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillStainlessSteel>]);
+recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillVanadiumSteel>]);
 
 //Add Black Lotus to Phytogenic Insolator for black dye
 mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*3,<actuallyadditions:block_black_lotus>, <thermalfoundation:fertilizer:0>, 4800);

@@ -385,39 +385,16 @@ assembler.recipeBuilder()
     .outputs(<actuallyadditions:item_misc:16>)
     .duration(100).EUt(7).buildAndRegister();
 
-// Ore Drilling Plants
-// Basic Ore Drilling Plant * 1
-<recipemap:assembler>.findRecipe(1920, [<metaitem:hull.ev>, <metaitem:frameTitanium> * 4, <metaitem:circuit.workstation> * 4, <metaitem:electric.motor.ev> * 4, <metaitem:electric.pump.ev> * 4, <metaitem:conveyor.module.ev> * 4, <metaitem:gearTungsten> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
-// Advanced Ore Drilling Plant * 1
-<recipemap:assembler>.findRecipe(7680, [<metaitem:hull.iv>, <metaitem:frameTungstenSteel> * 4, <metaitem:circuit.mainframe> * 4, <metaitem:electric.motor.iv> * 4, <metaitem:electric.pump.iv> * 4, <metaitem:conveyor.module.iv> * 4, <metaitem:gearIridium> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
-// Advanced Ore Drilling Plant II * 1
-<recipemap:assembler>.findRecipe(30720, [<metaitem:hull.luv>, <metaitem:frameHsss> * 4, <metaitem:circuit.nano_mainframe> * 4, <metaitem:electric.motor.luv> * 4, <metaitem:electric.pump.luv> * 4, <metaitem:conveyor.module.luv> * 4, <metaitem:gearRuridit> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 2})], null).remove();
-
-assembler.recipeBuilder()
-    .inputs(<metaitem:hull.iv>, <enderio:item_stellar_alloy_pickaxe>, <nomilabs:t3laser> * 12, <metaitem:frameStainlessSteel> * 12, <metaitem:sensor.iv> * 6, <metaitem:conveyor.module.iv> * 12, <metaitem:fluid.regulator.iv> * 12, <metaitem:gearTungstenSteel> * 12)
-    .outputs(<metaitem:large_miner.ev>)
-    .duration(400).EUt(7680).buildAndRegister();
-
-assembly_line.recipeBuilder()
-    .inputs(<metaitem:hull.zpm>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <thermalinnovation:drill:4>, <nomilabs:t3laser> * 12, <metaitem:frameNaquadahAlloy> * 12, <metaitem:sensor.zpm> * 6, <metaitem:conveyor.module.zpm> * 12, <metaitem:fluid.regulator.zpm> * 12, <metaitem:cableGtSingleVanadiumGallium> * 12, <moreplates:empowered_void_gear> * 12)
-    .fluidInputs(<liquid:concrete> * 2304)
-    .outputs(<metaitem:large_miner.iv>)
-    .duration(800).EUt(122880).buildAndRegister();
-
-assembly_line.recipeBuilder()
-    .inputs(<metaitem:hull.uhv>, <draconicevolution:draconic_staff_of_power>, <nomilabs:t3laser> * 12, <metaitem:frameBerkelium> * 12, <metaitem:sensor.uv> * 12, <metaitem:conveyor.module.uv> * 24, <metaitem:fluid.regulator.uv> * 24, <metaitem:cableGtSingleEuropium> * 12, <metaitem:nomilabs:gearAwakenedDraconium> * 12)
-    .fluidInputs(<liquid:concrete> * 2304, <liquid:taranium> * 576)
-    .outputs(<metaitem:large_miner.luv>)
-    .duration(800).EUt(1966080).buildAndRegister();
+// Ore Drilling Plants (Moved to Groovy)
 
 //Draconium [tier 14]
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
+<recipemap:electric_blast_furnace>.findRecipe(30720, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:electric_blast_furnace>.findRecipe(30720, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium> * 1000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(1800).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium> * 4000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(3600).EUt(30720).buildAndRegister();
 
 // Dimethylformamide
 large_chemical_reactor.recipeBuilder()

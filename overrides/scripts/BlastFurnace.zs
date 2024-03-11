@@ -181,7 +181,7 @@ blast_furnace.recipeBuilder()
 	.EUt(250000)
 	.buildAndRegister();
 
-//Fluxed Electrum
+//Fluxed Electrum (adds mana dust)
 <recipemap:centrifuge>.findRecipe(30, [<metaitem:nomilabs:dustElectrumFlux> * 8], null).remove();
 
 mixer.recipeBuilder()

@@ -8,10 +8,9 @@ mods.gregtech.assembler.recipeBuilder()
         .inputs(ore('craftingFurnace'), ore('ingotIron') * 8)
         .circuitMeta(8)
         .outputs(item('morefurnaces:furnaceblock'))
+        .changeRecycling()
         .duration(100).EUt(7)
         .buildAndRegister()
-
-changeStackRecycling(item('morefurnaces:furnaceblock'), [item('minecraft:furnace'), item('minecraft:iron_ingot') * 8])
 
 //Copper Furnace
 replaceRecipeInput(item('morefurnaces:furnaceblock', 5), [

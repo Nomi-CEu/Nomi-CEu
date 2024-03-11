@@ -588,16 +588,16 @@ recipes.addShaped(<meta_tile_entity:distillation_tower>, [
 
 //Draconium [tier 14]
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
+<recipemap:electric_blast_furnace>.findRecipe(30720, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:electric_blast_furnace>.findRecipe(30720, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(1800).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(3600).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(1800).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(3600).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(1206).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(2412).EUt(30720).buildAndRegister();
 
 //////////////////// Exotic Materials Catalyst ////////////////////////
 makeExtremeRecipe7(<nomilabs:exoticmaterialscatalyst>,

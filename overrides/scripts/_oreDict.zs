@@ -237,6 +237,8 @@ for oreDictEntry, items in blocksDisabled {
 	oreDictEntry.removeItems(items);
 }
 
+mods.jei.JEI.removeAndHide(<enderio:block_alloy_endergy:5>);
+
 <ore:blockWarpCoreRim>.add(<gregtech:meta_block_compressed_7:1>);
 
 <ore:fusedGlass>.add(<gregtech:transparent_casing:0>);
@@ -769,6 +771,8 @@ for oreDictEntry, items in ingotsDisabled {
 	oreDictEntry.removeItems(items);
 }
 
+mods.jei.JEI.removeAndHide(<enderio:item_alloy_endergy_ingot:5>);
+
 ////////////////////////
 //	     Sticks       //
 ////////////////////////
@@ -905,7 +909,11 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:224>,
 		<libvulpes:productnugget:9>,
 		<libvulpes:productnugget:6>
-	]
+	],
+
+	<ore:nuggetEnergeticAlloy> : [
+		<enderio:item_alloy_nugget:1>
+	],
 };
 
 for oreDictEntry, items in nuggetsDisabled {
@@ -914,6 +922,8 @@ for oreDictEntry, items in nuggetsDisabled {
 	}
 	oreDictEntry.removeItems(items);
 }
+
+mods.jei.JEI.removeAndHide(<enderio:item_alloy_endergy_nugget:5>);
 
 ////////////////////////////
 //			Ores          //
