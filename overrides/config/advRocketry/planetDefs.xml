@@ -112,4 +112,5 @@
 			<rotationalPeriod>21100</rotationalPeriod>
         </planet>
 		</star>
+    <star name="Eye Of Eternity" numGasGiants="0" numPlanets="0" size="2.0" temp="800" x="300" y="120" blackHole="true" > </star>
 </galaxy>
