@@ -1092,11 +1092,13 @@ naquadah_reactor_2.recipeBuilder()
 // Universal Crystallizer Recipes
 // recipes MUST have an eut below 1 UV amp (524,288 EU/t)
 // in order to run without using higher tier energy hatches
+
+// original was 3 ticks, 23592960 eut
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64)
     .outputs(<minecraft:diamond> * 32)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(23592960).buildAndRegister();
+    .duration(150).EUt(471859).buildAndRegister();
 
 // Combination recipe is 4,000,000 RF for all empowered recipes
 // 4,000,000 RF -> 1,000,000 EU
