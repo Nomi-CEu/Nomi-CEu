@@ -1090,6 +1090,8 @@ naquadah_reactor_2.recipeBuilder()
     .buildAndRegister();
 
 // Universal Crystallizer Recipes
+// recipes MUST have an eut below 1 UV amp (524,288 EU/t)
+// in order to run without using higher tier energy hatches
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64, <ore:dustCarbon> * 64)
     .outputs(<minecraft:diamond> * 32)
@@ -1138,26 +1140,26 @@ universal_crystallizer.recipeBuilder()
     .fluidInputs(<liquid:naquadah_enriched> * 3)
     .duration(3).EUt(23592960).buildAndRegister();
 
+// DE recipe is 175,544,000 RF -> 43,886,000 EU total
+// at 100 ticks, eu/t would be 438,860 EU/t
 universal_crystallizer.recipeBuilder()
     .inputs(<actuallyadditions:block_crystal_empowered:4>, <metaitem:blockNetherStar> * 2, <draconicevolution:draconic_core> * 4, <armorplus:block_compressed_infused_lava_crystal> * 2)
     .outputs(<draconicevolution:wyvern_core>)
     .fluidInputs(<liquid:naquadah_enriched> * 30)
-    .duration(30).EUt(1462867).buildAndRegister();
-    // DE recipe is 175,544,000 RF -> 43,886,000 EU total
-    // at 30 ticks, eu/t would be ~1,462,867 EU/t
+    .duration(100).EUt(438860).buildAndRegister();
 
+// DE recipe is 3,000,000,000 RF -> 750,000,000 EU total
+// at 1500 ticks, eu/t would be 500,000 EU/t
 universal_crystallizer.recipeBuilder()
     .inputs(<minecraft:nether_star>, <draconicevolution:wyvern_core> * 4, <metaitem:nomilabs:blockAwakenedDraconium> * 2)
     .outputs(<draconicevolution:awakened_core>)
     .fluidInputs(<liquid:naquadah_enriched> * 30)
-    .duration(240).EUt(1562500).buildAndRegister();
-    // DE recipe is 3,000,000,000 RF -> 750,000,000 EU total
-    // at 240 ticks, eu/t would be ~1,562,500 EU/t
+    .duration(1500).EUt(1562500).buildAndRegister();
 
+// DE recipe is 24,000,000,000 RF -> 6,000,000,000 EU total
+// at 12,000 ticks, eu/t would be 500,000 EU/t
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:blockDraconium> * 5, <draconicevolution:wyvern_core> * 4, <draconicevolution:dragon_heart> * 2)
     .outputs(<metaitem:nomilabs:blockAwakenedDraconium> * 5)
     .fluidInputs(<liquid:naquadah_enriched> * 30)
-    .duration(2160).EUt(2777778).buildAndRegister();
-    // DE recipe is 24,000,000,000 RF -> 6,000,000,000 EU total
-    // at 2160 ticks, eu/t would be ~2,777,778 EU/t
+    .duration(12000).EUt(500000).buildAndRegister();
