@@ -1098,41 +1098,45 @@ universal_crystallizer.recipeBuilder()
     .fluidInputs(<liquid:naquadah_enriched> * 3)
     .duration(3).EUt(23592960).buildAndRegister();
 
+// Combination recipe is 4,000,000 RF for all empowered recipes
+// 4,000,000 RF -> 1,000,000 EU
+// at 2 ticks the EU/t would be 500,000 EU/t
+// multiply ticks by 7 -> 14 ticks
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustIron> * 63)
     .outputs(<actuallyadditions:block_crystal_empowered:5> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(23592960).buildAndRegister();
+    .duration(14).EUt(500000).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustRedstone> * 63)
     .outputs(<actuallyadditions:block_crystal_empowered> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(23592960).buildAndRegister();
+    .duration(14).EUt(500000).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustLapis> * 63)
     .outputs(<actuallyadditions:block_crystal_empowered:1> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(23592960).buildAndRegister();
+    .duration(14).EUt(500000).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustCoal> * 63)
     .outputs(<actuallyadditions:block_crystal_empowered:3> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(23592960).buildAndRegister();
+    .duration(14).EUt(500000).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustDiamond> * 63)
     .outputs(<actuallyadditions:block_crystal_empowered:2> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(23592960).buildAndRegister();
+    .duration(14).EUt(500000).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:dustEmerald> * 63)
     .outputs(<actuallyadditions:block_crystal_empowered:4> * 7)
     .fluidInputs(<liquid:naquadah_enriched> * 3)
-    .duration(3).EUt(23592960).buildAndRegister();
+    .duration(14).EUt(500000).buildAndRegister();
 
 universal_crystallizer.recipeBuilder()
     .inputs(<ore:gemPerfectDiamond> * 3, <minecraft:nether_star> * 9, <ore:plateDiamond> * 27, <ore:gemDiamond> * 27)
@@ -1154,7 +1158,7 @@ universal_crystallizer.recipeBuilder()
     .inputs(<minecraft:nether_star>, <draconicevolution:wyvern_core> * 4, <metaitem:nomilabs:blockAwakenedDraconium> * 2)
     .outputs(<draconicevolution:awakened_core>)
     .fluidInputs(<liquid:naquadah_enriched> * 30)
-    .duration(1500).EUt(1562500).buildAndRegister();
+    .duration(1500).EUt(500000).buildAndRegister();
 
 // DE recipe is 24,000,000,000 RF -> 6,000,000,000 EU total
 // at 12,000 ticks, eu/t would be 500,000 EU/t
