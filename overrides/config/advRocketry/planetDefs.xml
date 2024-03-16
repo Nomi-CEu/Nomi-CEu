@@ -1,5 +1,5 @@
 <galaxy>
-    <star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0">
+	<star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0">
 		<planet name="Earth" DIMID="0" dimMapping="">
 			<isKnown>true</isKnown>
 			<fogColor>1.0,1.0,1.0</fogColor>
@@ -111,6 +111,6 @@
 			<gravitationalMultiplier>200</gravitationalMultiplier>
 			<rotationalPeriod>21100</rotationalPeriod>
         </planet>
-		</star>
-    <star name="Eye Of Eternity" numGasGiants="0" numPlanets="0" size="2.0" temp="800" x="300" y="120" blackHole="true" > </star>
+	</star>
+	<star name="Eye Of Eternity" numGasGiants="0" numPlanets="0" size="2.0" temp="800" x="300" y="120" blackHole="true" > </star>
 </galaxy>
