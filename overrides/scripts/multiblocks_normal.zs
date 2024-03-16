@@ -388,15 +388,9 @@ microverse_projector_3.recipeBuilder()
             <metaitem:neutron_reflector> * 8,
             <metaitem:nomilabs:blockAwakenedDraconium> * 4,
             <nomilabs:stellarcreationdata>)
-    .outputs(<ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64)
+    .outputs(<metaitem:ingotNeutronium> * 64,
+             <metaitem:ingotNeutronium> * 64,
+             <metaitem:ingotNeutronium> * 32)
     .buildAndRegister();
 
 // t9 universe creation data
