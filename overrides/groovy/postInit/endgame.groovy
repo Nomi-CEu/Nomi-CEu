@@ -1,4 +1,5 @@
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
+import com.nomiceu.nomilabs.util.LabsModeHelper
 
 // Processing Array
 replaceRecipeInput(metaitem('processing_array'),
@@ -55,3 +56,16 @@ mods.gregtech.assembly_line.recipeBuilder()
 		.stationResearch(b -> b.researchStack(metaitem('world_accelerator.ev')).CWUt(128).EUt(491520))
 		.duration(12000).EUt(491520)
 		.buildAndRegister()
+
+// Computer Casing
+if (LabsModeHelper.normal) {
+	// Computer Casing * 2
+	mods.gregtech.assembler.removeByInput(30720, [metaitem('frameIridium'), metaitem('plateIridium') * 6, metaitem('circuit.nano_mainframe'), metaitem('wireFineCobalt') * 32, metaitem('wireFineCopper') * 32, metaitem('wireGtSingleVanadiumGallium') * 2], null)
+
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(metaitem('frameIridium'), metaitem('plateIridium') * 6, metaitem('circuit.nano_mainframe') * 2, metaitem('wireFineCobalt') * 64, metaitem('wireFineCopper') * 64, metaitem('wireGtSingleVanadiumGallium') * 4)
+		.outputs(item('gregtech:computer_casing') * 4)
+		.changeRecycling()
+		.duration(400).EUt(30720)
+		.buildAndRegister();
+} 
