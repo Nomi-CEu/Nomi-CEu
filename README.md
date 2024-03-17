@@ -23,6 +23,9 @@
 - Many QoL features - Wiremill can produce any wire, Creative Tank no longer uses fluids, new creative chests and tanks from CEu, etc.
 - And more...  
 
+## Contributing and Maintainer Information
+This is available on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki).
+
 ## Server Setup and Information
 Details on how to setup a basic server, and some important server admin information, are listed [here.](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/serverfiles/README.md)
 
