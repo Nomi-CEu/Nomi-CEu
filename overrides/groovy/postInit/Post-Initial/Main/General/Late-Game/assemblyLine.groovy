@@ -1,6 +1,4 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
-import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition
-import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher
 
 // ZPM Field Generator (Add Awakened Draconium to Required Fluids)
 mods.gregtech.assembly_line.recipeBuilder()
@@ -13,7 +11,7 @@ mods.gregtech.assembly_line.recipeBuilder()
 
 // Dark Soularium Jetplate
 mods.gregtech.assembly_line.recipeBuilder()
-    .inputNBT(item('simplyjetpacks:itemjetpack').item, 1, 8, NBTMatcher.ANY, NBTCondition.ANY)
+    .inputWildNBT(item('simplyjetpacks:itemjetpack', 8))
     .inputs(item('simplyjetpacks:metaitemmods', 4) * 2, item('extrautils2:angelring'), item('enderio:item_material', 16) * 2, item('nomilabs:doublecompressedoctadiccapacitor'), ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 11) * 2)
     .fluidInputs(fluid('soldering_alloy') * 1152)
     .outputs(item('simplyjetpacks:itemjetpack', 9))
@@ -23,8 +21,8 @@ mods.gregtech.assembly_line.recipeBuilder()
 
 // Flux-Infused Jetplate
 mods.gregtech.assembly_line.recipeBuilder()
-    .inputNBT(item('simplyjetpacks:itemjetpack').item, 1, 17, NBTMatcher.ANY, NBTCondition.ANY)
-    .inputNBT(item('redstonearsenal:armor.plate_flux').item, NBTMatcher.ANY, NBTCondition.ANY)
+    .inputWildNBT(item('simplyjetpacks:itemjetpack', 17))
+    .inputWildNBT(item('redstonearsenal:armor.plate_flux'))
     .inputs(item('simplyjetpacks:metaitemmods', 21), item('extrautils2:angelring'), item('nomilabs:compressedoctadiccapacitor') * 2, ore('circuitLuv') * 4, item('simplyjetpacks:metaitemmods', 30) * 2)
     .fluidInputs(fluid('soldering_alloy') * 1152)
     .outputs(item('simplyjetpacks:itemjetpack', 18))
