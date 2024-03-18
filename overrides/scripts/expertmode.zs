@@ -378,12 +378,7 @@ extractor.recipeBuilder()
     .fluidOutputs(<liquid:einsteinium> * 9)
     .duration(16).EUt(30).buildAndRegister();
 
-// Drill Core
-assembler.recipeBuilder()
-    .inputs(<metaitem:power_unit.lv>, <metaitem:electric.motor.lv> * 4, <metaitem:cableGtSingleTin> * 4, <metaitem:gearSmallSteel> * 4)
-    .circuit(2)
-    .outputs(<actuallyadditions:item_misc:16>)
-    .duration(100).EUt(7).buildAndRegister();
+// Drill Core (Moved to Groovy)
 
 // Ore Drilling Plants (Moved to Groovy)
 
