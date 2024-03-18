@@ -1,0 +1,388 @@
+{
+    "executeBlocking": true,
+    "patchModules": [
+        {
+            "classesToPatch": [
+                "net.bdew.lib.network.SerializedMessageCodec",
+                "net.bdew.lib.network.NetChannel"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "net.bdew"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.enderio.core.common.config.PacketConfigSync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "crazypants",
+                "com.enderio"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "p455w0rd.danknull.network.PacketConfigSync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "p455w0rd.danknull"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "reborncore.common.network.ExtendedPacketBuffer"
+            ],
+            "classAllowlist": [
+                "java.math.BigInteger"
+            ],
+            "packageAllowlist": []
+        },
+        {
+            "classesToPatch": [
+                "makeo.gadomancy.common.network.packets.PacketUpdateGolemTypeOrder",
+                "makeo.gadomancy.common.network.packets.PacketSyncConfigs"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "makeo.gadomancy"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "org.wyldmods.simpleachievements.common.networking.MessageSendAchievements"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "org.wyldmods.simpleachievements"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "immersive_armors.cobalt.network.Message"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "immersive_armors"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "immersive_aircraft.cobalt.network.Message"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "immersive_aircraft"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "immersive_paintings.cobalt.network.Message"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "immersive_paintings"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "gcewing.projectblue.BaseNBTChannel$NBTCodec"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "gcewing.projectblue"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.github.technus.tectech.mechanics.spark.RendererMessage"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.github.technus"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.n247s.N2ConfigApi.api.networking.N2ConfigApiMessageHandler"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.n247s.N2ConfigApi"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "p455w0rd.endermanevo.network.PacketFriendermanRegistrySync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "p455w0rd.endermanevo"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.mattdahepic.mdecore.config.sync.PacketConfigSync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.mattdahepic"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.iconmaster.aec.network.TransferConfigsPacket"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.iconmaster.aec"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "net.tslat.aoa3.common.packet.leaderboard.PacketLeaderboardStats",
+                "net.tslat.aoa3.common.packet.leaderboard.PacketIndividualLeaderboardStats"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "net.tslat.aoa3"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "pl.asie.lib.util.Base64"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "pl.asie"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "arrowsplus.core.forge.PacketHandler"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "arrowsplus"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "hellfirepvp.astralsorcery.common.network.packet.server.PktSyncConfig"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "hellfirepvp.astralsorcery"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "mal.carbonization.network.MultiblockFurnaceMessageServer"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "mal.carbonization"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "p455w0rd.capes.packet.PacketClientAddFriend",
+                "p455w0rd.capes.packet.PacketClientRemoveFriend",
+                "p455w0rd.capes.packet.PacketClientUpdateFriend",
+                "p455w0rd.capes.packet.PacketServerFriendSync",
+                "p455w0rd.capes.packet.PacketServerPlayerSync",
+                "p455w0rd.capes.packet.PacketServerTextureURLSync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "p455w0rd.capes"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "gcewing.sg.base.ForgeNBTNetworking$BasePacketHandler",
+                "gcewing.sg.BaseNBTChannel$NBTCodec",
+                "gcewing.sg.BaseNBTChannel$BasePacketHandler"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "gcewing.sg"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.zerren.extrafirma.core.network.PacketHandler"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.zerren.extrafirma"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "journeymap.common.network.impl.Message"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "journeymap"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.polipo.bookshelf.net.MyMessage"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.polipo.bookshelf"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "mca.PacketHandler",
+                "mca.core.forge.PacketHandler"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "mca"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "logisticspipes.network.abstractpackets.GenericPacket",
+                "logisticspipes.network.packets.debuggui.DebugInfoUpdate",
+                "logisticspipes.network.packets.debuggui.DebugTargetResponse",
+                "logisticspipes.network.packets.debuggui.DebugTypePacket",
+                "logisticspipes.network.packets.routingdebug.RoutingUpdateTargetResponse"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "logisticspipes"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "aeronicamc.mods.mxtune.network.NetworkSerializedHelper"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "aeronicamc.mods.mxtune"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "p455w0rd.p455w0rdsthings.network.PacketConfigSync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "p455w0rd.p455w0rdsthings"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "radixcore.modules.RadixNettyIO"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "radixcore"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "radixcore.network.ByteBufIO"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "radixcore",
+                "mca"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "net.smart.moving.SmartMovingPacketStream"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "net.smart.moving"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "svenhjol.strange.scrolls.message.ClientQuestList"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "svenhjol.strange"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.supermartijn642.configlib.ConfigSyncPacket"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.supermartijn642"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "vazkii.tinkerer.common.network.PacketManager"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "vazkii.tinkerer"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "p455w0rd.tanaddons.network.PacketConfigSync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "p455w0rd.tanaddons"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "tterrag.core.common.config.PacketConfigSync"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "tterrag"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "mods.gra.energymanipulator.client.ClientPacketHandler"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "mods.gra.energymanipulator"
+            ]
+        },
+        {
+            "classesToPatch": [
+                "com.possible_triangle.brazier.network.ByteConfigSerializer"
+            ],
+            "classAllowlist": [],
+            "packageAllowlist": [
+                "com.possible_triangle.brazier"
+            ]
+        }
+    ],
+    "classAllowlist": [
+        "boolean",
+        "byte",
+        "char",
+        "short",
+        "int",
+        "long",
+        "float",
+        "double",
+        "void"
+    ],
+    "packageAllowlist": [
+        "java.util",
+        "java.lang"
+    ]
+}
