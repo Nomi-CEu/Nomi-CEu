@@ -8,8 +8,10 @@
       "classes/preInit/"
     ],
     "init": [
-      "classes/init/NaqRecipeLogic.groovy",
       "classes/init"
+    ],
+    "postInit": [
+      "classes/postInit"
     ]
   },
   "loaders": {
@@ -20,6 +22,8 @@
       "init/"
     ],
     "postInit": [
+      "postInit/Initial",
+      "postInit/Post-Initial",
       "postInit/"
     ]
   }
