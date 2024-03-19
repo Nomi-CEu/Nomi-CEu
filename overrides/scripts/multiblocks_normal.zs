@@ -162,6 +162,8 @@ microverse_projector_1.recipeBuilder()
     .outputs(<gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
@@ -174,7 +176,9 @@ microverse_projector_1.recipeBuilder()
              <gregtech:ore_certus_quartz_0:1> * 64,
              <gregtech:ore_almandine_0:1> * 64,
              <gregtech:ore_lepidolite_0:1> * 64,
-             <gregtech:ore_cobaltite_0:1> * 64)
+             <gregtech:ore_cobaltite_0:1> * 64,
+             <gregtech:ore_laurite_0:1> * 16,
+             <gregtech:ore_cuprorhodsite_0:1> * 8)
     .buildAndRegister();
 
 // advanced projector
@@ -384,15 +388,9 @@ microverse_projector_3.recipeBuilder()
             <metaitem:neutron_reflector> * 8,
             <metaitem:nomilabs:blockAwakenedDraconium> * 4,
             <nomilabs:stellarcreationdata>)
-    .outputs(<ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64,
-             <ore:nuggetNeutronium>.firstItem * 64)
+    .outputs(<metaitem:ingotNeutronium> * 64,
+             <metaitem:ingotNeutronium> * 64,
+             <metaitem:ingotNeutronium> * 32)
     .buildAndRegister();
 
 // t9 universe creation data

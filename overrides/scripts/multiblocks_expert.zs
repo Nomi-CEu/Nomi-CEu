@@ -182,6 +182,8 @@ microverse_projector_1.recipeBuilder()
     .outputs(<gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
@@ -194,7 +196,9 @@ microverse_projector_1.recipeBuilder()
              <gregtech:ore_certus_quartz_0:1> * 64,
              <gregtech:ore_almandine_0:1> * 64,
              <gregtech:ore_lepidolite_0:1> * 64,
-             <gregtech:ore_cobaltite_0:1> * 64)
+             <gregtech:ore_cobaltite_0:1> * 64,
+             <gregtech:ore_laurite_0:1> * 16,
+             <gregtech:ore_cuprorhodsite_0:1> * 8)
     .buildAndRegister();
 
 
@@ -774,6 +778,8 @@ actualization_chamber.recipeBuilder()
     .outputs(<gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
              <gregtech:ore_tungstate_0:1> * 64,
@@ -786,7 +792,9 @@ actualization_chamber.recipeBuilder()
              <gregtech:ore_certus_quartz_0:1> * 64,
              <gregtech:ore_almandine_0:1> * 64,
              <gregtech:ore_lepidolite_0:1> * 64,
-             <gregtech:ore_cobaltite_0:1> * 64)
+             <gregtech:ore_cobaltite_0:1> * 64,
+             <gregtech:ore_laurite_0:1> * 16,
+             <gregtech:ore_cuprorhodsite_0:1> * 8)
     .buildAndRegister();
 
 // t3 magma

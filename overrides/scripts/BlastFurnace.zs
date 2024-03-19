@@ -4,7 +4,6 @@ import mods.gregtech.recipe.RecipeMap;
 furnace.remove(<ore:ingotIridium>);
 furnace.remove(<ore:ingotTungsten>);
 furnace.remove(<ore:ingotBlackSteel>);
-furnace.remove(<ore:ingotUranium>);
 furnace.remove(<ore:ingotAluminium>);
 furnace.remove(<thermalfoundation:material:132>);
 furnace.remove(<thermalfoundation:ore:4>);
