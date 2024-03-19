@@ -43,11 +43,7 @@ makeExtremeRecipe5(<metaitem:nomilabs:actualization_chamber>,
       S : <metaitem:sensor.uv>,
       F : <gregtech:fusion_casing:1> });
 
-assembly_line.recipeBuilder()
-    .inputs(<metaitem:gcym:large_autoclave> * 24, <packagedexcrafting:combination_crafter> * 24, <metaitem:emitter.uv> * 24, <metaitem:field.generator.uv> * 24, <ore:circuitUhv> * 64, <gregtech:wire_coil:7> * 64, <draconicevolution:reactor_component> * 24, <draconicevolution:crafting_injector:3> * 8, <moreplates:infinity_plate> * 3, <moreplates:infinity_plate> * 3, <moreplates:infinity_plate> * 3, <moreplates:infinity_plate> * 3)
-    .fluidInputs(<liquid:cryotheum> * 36864, <liquid:moltenempowereddiamatine> * 18432, <liquid:naquadria> * 63216, <liquid:taranium> * 4608)
-    .outputs(<metaitem:nomilabs:universal_crystallizer>)
-    .duration(900).EUt(7864320).buildAndRegister();
+// Universal Crystallizer (Moved to Grooy)
 
 // multiblock recipemap recipes
 // basic projector

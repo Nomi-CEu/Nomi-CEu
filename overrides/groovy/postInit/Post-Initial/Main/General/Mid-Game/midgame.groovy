@@ -3,6 +3,12 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
 
+// Processing Array
+replaceRecipeInput(metaitem('processing_array'),
+		[[ore('circuitLuv'), item('advsolars:sunnarium'), ore('circuitLuv')],
+		 [metaitem('robot.arm.iv'), metaitem('hull.iv'), metaitem('robot.arm.iv')],
+		 [ore('circuitLuv'), metaitem('tool.datastick'), ore('circuitLuv')]])
+
 if (LabsModeHelper.normal) {
 	// Assembly Control Casing (Change from Output 2 to Output 4)
 	replaceRecipeOutput(item('gregtech:multiblock_casing', 3) * 2, item('gregtech:multiblock_casing', 3) * 4)
@@ -21,7 +27,7 @@ if (LabsModeHelper.normal) {
 	])
 }
 
-// Ore Drilling Plants
+// HM Ore Drilling Plants
 if (LabsModeHelper.expert) {
 	mods.gregtech.assembler.removeByOutput([metaitem('large_miner.ev')], null, null, null)
 	mods.gregtech.assembler.removeByOutput([metaitem('large_miner.iv')], null, null, null)
@@ -42,6 +48,7 @@ if (LabsModeHelper.expert) {
 			.inputs(item('nomilabs:t3laser') * 12, metaitem('frameNaquadahAlloy') * 12, metaitem('sensor.zpm') * 6, metaitem('conveyor.module.zpm') * 12, metaitem('fluid.regulator.zpm') * 12, metaitem('cableGtSingleVanadiumGallium') * 12, item('moreplates:empowered_void_gear') * 12)
 			.fluidInputs(fluid('concrete') * 2304)
 			.outputs(metaitem('large_miner.iv'))
+			.stationResearch(b -> b.researchStack(metaitem('large_miner.ev')).CWUt(16))
 			.duration(800).EUt(VA[ZPM]).buildAndRegister()
 
 	mods.gregtech.assembly_line.recipeBuilder()
@@ -50,5 +57,6 @@ if (LabsModeHelper.expert) {
 			.inputs(item('nomilabs:t3laser') * 12, metaitem('frameBerkelium') * 12, metaitem('sensor.uv') * 12, metaitem('conveyor.module.uv') * 24, metaitem('fluid.regulator.uv') * 24, metaitem('cableGtSingleEuropium') * 12, metaitem('nomilabs:gearAwakenedDraconium') * 12)
 			.fluidInputs(fluid('concrete') * 2304, fluid('taranium') * 576)
 			.outputs(metaitem('large_miner.luv'))
+			.stationResearch(b -> b.researchStack(metaitem('large_miner.iv')).CWUt(128))
 			.duration(800).EUt(VA[UHV]).buildAndRegister()
 }
