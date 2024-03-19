@@ -53,17 +53,16 @@ mods.gregtech.assembly_line.recipeBuilder()
 		.duration(12000).EUt(VA[UV])
 		.buildAndRegister()
 
-// Computer Casing
+// Computer Casing (NM Only)
 if (LabsModeHelper.normal) {
-	// Computer Casing * 2
-	mods.gregtech.assembler.removeByInput(30720, [metaitem('frameIridium'), metaitem('plateIridium') * 6, metaitem('circuit.nano_mainframe'), metaitem('wireFineCobalt') * 32, metaitem('wireFineCopper') * 32, metaitem('wireGtSingleVanadiumGallium') * 2], null)
+	mods.gregtech.assembler.removeByOutput([item('gregtech:computer_casing')], null, null, null)
 
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('frameIridium'), metaitem('plateIridium') * 6, metaitem('circuit.nano_mainframe') * 2, metaitem('wireFineCobalt') * 64, metaitem('wireFineCopper') * 64, metaitem('wireGtSingleVanadiumGallium') * 4)
 		.outputs(item('gregtech:computer_casing') * 4)
 		.changeRecycling()
-		.duration(400).EUt(30720)
-		.buildAndRegister();
+		.duration(400).EUt(VA[LuV])
+		.buildAndRegister()
 } 
 
 // Universal Crystallizer (HM Only)
