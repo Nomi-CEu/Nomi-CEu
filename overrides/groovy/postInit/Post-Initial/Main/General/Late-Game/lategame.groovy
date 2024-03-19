@@ -1,11 +1,7 @@
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
-// Processing Array
-replaceRecipeInput(metaitem('processing_array'),
-		[[ore('circuitLuv'), item('advsolars:sunnarium'), ore('circuitLuv')],
-		 [metaitem('robot.arm.iv'), metaitem('hull.iv'), metaitem('robot.arm.iv')],
-		 [ore('circuitLuv'), metaitem('tool.datastick'), ore('circuitLuv')]])
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
+import static gregtech.api.GTValues.*
 
 // UHV Batbufs
 createRecipe(metaitem('battery_buffer.uhv.4'), [
@@ -34,7 +30,7 @@ mods.gregtech.assembly_line.recipeBuilder()
 		.outputs(metaitem('world_accelerator.hv'))
 		.changeRecycling()
 		.stationResearch(b -> b.researchStack(item('minecraft:clock')).CWUt(4))
-		.duration(6000).EUt(30720)
+		.duration(6000).EUt(VA[LuV])
 		.buildAndRegister()
 
 // World Accelerator EV
@@ -43,8 +39,8 @@ mods.gregtech.assembly_line.recipeBuilder()
 		.fluidInputs(fluid('soldering_alloy') * 1152, fluid('enderium') * 1152)
 		.outputs(metaitem('world_accelerator.ev'))
 		.changeRecycling()
-		.stationResearch(b -> b.researchStack(metaitem('world_accelerator.hv')).CWUt(32).EUt(122880))
-		.duration(12000).EUt(122880)
+		.stationResearch(b -> b.researchStack(metaitem('world_accelerator.hv')).CWUt(32).EUt(VH[ZPM]))
+		.duration(12000).EUt(VA[ZPM])
 		.buildAndRegister()
 
 // World Accelerator IV
@@ -53,8 +49,8 @@ mods.gregtech.assembly_line.recipeBuilder()
 		.fluidInputs(fluid('soldering_alloy') * 1152, fluid('enderium') * 1152, fluid('naquadria') * 576)
 		.outputs(metaitem('world_accelerator.iv'))
 		.changeRecycling()
-		.stationResearch(b -> b.researchStack(metaitem('world_accelerator.ev')).CWUt(128).EUt(491520))
-		.duration(12000).EUt(491520)
+		.stationResearch(b -> b.researchStack(metaitem('world_accelerator.ev')).CWUt(128).EUt(VA[UV]))
+		.duration(12000).EUt(VA[UV])
 		.buildAndRegister()
 
 // Computer Casing
@@ -69,3 +65,15 @@ if (LabsModeHelper.normal) {
 		.duration(400).EUt(30720)
 		.buildAndRegister();
 } 
+
+// Universal Crystallizer (HM Only)
+if (LabsModeHelper.expert) {
+	mods.gregtech.assembly_line.recipeBuilder()
+			.inputs(metaitem('gcym:large_autoclave') * 24, item('packagedexcrafting:combination_crafter') * 24, metaitem('emitter.uv') * 24, metaitem('field.generator.uv') * 24, ore('circuitUhv') * 64, item('gregtech:wire_coil', 7) * 64, item('draconicevolution:reactor_component') * 24, item('draconicevolution:crafting_injector', 3) * 8, item('moreplates:infinity_plate') * 12)
+			.fluidInputs(fluid('cryotheum') * 36864, fluid('moltenempowereddiamatine') * 18432, fluid('naquadria') * 63216, fluid('taranium') * 4608)
+			.outputs(metaitem('nomilabs:universal_crystallizer'))
+			.changeRecycling()
+			.stationResearch(b -> b.researchStack(item('gregtech:wire_coil', 7)).CWUt(128))
+			.duration(900).EUt(VA[UHV])
+			.buildAndRegister()
+}
