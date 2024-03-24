@@ -2,8 +2,8 @@
   "weight": 100,
   "name": "Void Infinite Oil Deposit",
   "yield": {
-    "min": 80,
-    "max": 80
+    "min": 40,
+    "max": 40
   },
   "depletion": {
     "amount": 0,
