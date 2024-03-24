@@ -20,6 +20,7 @@ if (LabsModeHelper.normal) {
 			[ore('circuitIv'), metaitem('plateTungstenCarbide'), metaitem('cableGtSinglePlatinum')]
 	])
 
+	// Sterilizing Filter Casing
 	replaceRecipeShaped(item('gregtech:cleanroom_casing', 2) * 2, item('gregtech:cleanroom_casing', 2) * 1, [
 			[metaitem('pipeLargeFluidPolybenzimidazole'), metaitem('emitter.luv'), metaitem('pipeLargeFluidPolybenzimidazole')],
 			[metaitem('item_filter'), metaitem('blacklight'), metaitem('item_filter')],
