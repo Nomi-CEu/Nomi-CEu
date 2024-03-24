@@ -115,100 +115,100 @@ fluid_extractor.recipeBuilder()
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:argon> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedargon>)
+    .outputs(<nomilabs:solidifiedargon>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:krypton> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedkrypton>)
+    .outputs(<nomilabs:solidifiedkrypton>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:xenon> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedxenon>)
+    .outputs(<nomilabs:solidifiedxenon>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:chlorine> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedchlorine>)
+    .outputs(<nomilabs:solidifiedchlorine>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:fluorine> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedfluorine>)
+    .outputs(<nomilabs:solidifiedfluorine>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:mercury> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedmercury>)
+    .outputs(<nomilabs:solidifiedmercury>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:helium> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedhelium>)
+    .outputs(<nomilabs:solidifiedhelium>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:neon> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedneon>)
+    .outputs(<nomilabs:solidifiedneon>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:radon> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedradon>)
+    .outputs(<nomilabs:solidifiedradon>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:nitrogen> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiednitrogen>)
+    .outputs(<nomilabs:solidifiednitrogen>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:oxygen> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedoxygen>)
+    .outputs(<nomilabs:solidifiedoxygen>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:hydrogen> * 1000])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:solidifiedhydrogen>)
+    .outputs(<nomilabs:solidifiedhydrogen>)
     .duration(500).EUt(16).buildAndRegister();
 
 // Special cases
 extractor.recipeBuilder()
-    .inputs(<contenttweaker:solidifiedneon>)
+    .inputs(<nomilabs:solidifiedneon>)
     .fluidOutputs(<liquid:neon> * 1000)
     .duration(200).EUt(120).buildAndRegister();
 
 extractor.recipeBuilder()
-    .inputs(<contenttweaker:solidifiedkrypton>)
+    .inputs(<nomilabs:solidifiedkrypton>)
     .fluidOutputs(<liquid:krypton> * 1000)
     .duration(200).EUt(120).buildAndRegister();
 
 extractor.recipeBuilder()
-    .inputs(<contenttweaker:solidifiedxenon>)
+    .inputs(<nomilabs:solidifiedxenon>)
     .fluidOutputs(<liquid:xenon> * 1000)
     .duration(200).EUt(120).buildAndRegister();
 
 // Draconium Freezing
 // Draconium Ingot * 1
-<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotDraconium>], [<liquid:liquid_helium> * 500]).remove();
+<recipemap:vacuum_freezer>.findRecipe(1920, [<metaitem:nomilabs:ingotHotDraconium>], [<liquid:liquid_helium> * 500]).remove();
 
 freezer.recipeBuilder()
-    .inputs([<metaitem:ingotHotDraconium>])
+    .inputs([<metaitem:nomilabs:ingotHotDraconium>])
     .fluidInputs([<liquid:cryotheum> * 2000])
-    .outputs(<metaitem:ingotDraconium>)
-    .duration(600).EUt(1200).buildAndRegister();
+    .outputs(<metaitem:nomilabs:ingotDraconium>)
+    .duration(600).EUt(1920).buildAndRegister();
 
 freezer.recipeBuilder()
     .inputs([<minecraft:ice>])
@@ -219,79 +219,79 @@ freezer.recipeBuilder()
 //solidifier.recipeBuilder()
 //    .fluidInputs([<liquid:thorium> * 144])
 //    .notConsumable(<metaitem:shape.mold.ball>)
-//    .outputs(<contenttweaker:stabilizedthorium>)
+//    .outputs(<nomilabs:stabilizedthorium>)
 //    .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:uranium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizeduranium>)
+    .outputs(<nomilabs:stabilizeduranium>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:uranium_235> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizeduranium>)
+    .outputs(<nomilabs:stabilizeduranium>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:uranium233> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizeduranium>)
+    .outputs(<nomilabs:stabilizeduranium>)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:neptunium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedneptunium> * 2)
+    .outputs(<nomilabs:stabilizedneptunium> * 2)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:plutonium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedplutonium> * 2)
+    .outputs(<nomilabs:stabilizedplutonium> * 2)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:plutonium_241> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedplutonium> * 2)
+    .outputs(<nomilabs:stabilizedplutonium> * 2)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:plutonium2> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedplutonium> * 2)
+    .outputs(<nomilabs:stabilizedplutonium> * 2)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:americium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedamericium> * 4)
+    .outputs(<nomilabs:stabilizedamericium> * 4)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:curium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedcurium> * 4)
+    .outputs(<nomilabs:stabilizedcurium> * 4)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:berkelium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedberkelium> * 8)
+    .outputs(<nomilabs:stabilizedberkelium> * 8)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:californium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedcalifornium> * 8)
+    .outputs(<nomilabs:stabilizedcalifornium> * 8)
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:einsteinium> * 144])
     .notConsumable(<metaitem:shape.mold.ball>)
-    .outputs(<contenttweaker:stabilizedeinsteinium> * 16)
+    .outputs(<nomilabs:stabilizedeinsteinium> * 16)
     .duration(500).EUt(16).buildAndRegister();
 
 

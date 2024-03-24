@@ -31,14 +31,14 @@ mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empo
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:item_crystal_empowered:5>);
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_empowered:5>);
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_enori_gear>);
-mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:5>, <actuallyadditions:block_crystal:5>, <metaitem:gemApatite>, <metaitem:ingotEndSteel>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "helium", Amount: 1000}}), <extendedcrafting:material:14>, 1000000, 400);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:5>, <actuallyadditions:block_crystal:5>, <metaitem:gemApatite>, <metaitem:nomilabs:ingotEndSteel>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "helium", Amount: 1000}}), <extendedcrafting:material:14>, 1000000, 400);
 
 
 //Empowered Void Crystal
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:item_crystal_empowered:3>);
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_empowered:3>);
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_void_gear>);
-mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:3>, <actuallyadditions:block_crystal:3>, <actuallyadditions:item_misc:5>, <metaitem:ingotDarkSteel>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil", Amount: 1000}}), <extendedcrafting:material:15>, 1000000, 400);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:3>, <actuallyadditions:block_crystal:3>, <actuallyadditions:item_misc:5>, <metaitem:nomilabs:ingotDarkSteel>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil", Amount: 1000}}), <extendedcrafting:material:15>, 1000000, 400);
 
 
 //Empowered Diamatine
@@ -53,7 +53,7 @@ mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empo
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:item_crystal_empowered:4>);
 mods.actuallyadditions.Empowerer.removeRecipe(<actuallyadditions:block_crystal_empowered:4>);
 mods.actuallyadditions.Empowerer.removeRecipe(<moreplates:empowered_emeradic_gear>);
-mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:4>, <actuallyadditions:block_crystal:4>, <contenttweaker:stabilizeduranium>, <metaitem:ingotVibrantAlloy>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <extendedcrafting:material:17>, 1000000, 400);
+mods.actuallyadditions.Empowerer.addRecipe(<actuallyadditions:block_crystal_empowered:4>, <actuallyadditions:block_crystal:4>, <nomilabs:stabilizeduranium>, <metaitem:nomilabs:ingotVibrantAlloy>, <metaitem:fluid_cell>.withTag({Fluid: {FluidName: "argon", Amount: 1000}}), <extendedcrafting:material:17>, 1000000, 400);
 
 //Black Quartz
 electrolyzer.recipeBuilder()
@@ -76,9 +76,9 @@ autoclave.recipeBuilder()
 //Long Range Breaker
 recipes.remove(<actuallyadditions:block_directional_breaker>);
 recipes.addShaped(<actuallyadditions:block_directional_breaker>, [
-[<metaitem:plateVibrantAlloy>,<actuallyadditions:block_crystal:2>,<metaitem:plateVibrantAlloy>], 
+[<metaitem:nomilabs:plateVibrantAlloy>,<actuallyadditions:block_crystal:2>,<metaitem:nomilabs:plateVibrantAlloy>], 
 [<actuallyadditions:block_breaker>,<actuallyadditions:block_breaker>,<actuallyadditions:block_breaker>], 
-[<metaitem:plateVibrantAlloy>,<actuallyadditions:block_crystal:4>,<metaitem:plateVibrantAlloy>]]);	
+[<metaitem:nomilabs:plateVibrantAlloy>,<actuallyadditions:block_crystal:4>,<metaitem:nomilabs:plateVibrantAlloy>]]);	
 	
 //AA Ender Pearl Block
 recipes.remove(<actuallyadditions:block_misc:6>);	
@@ -105,9 +105,9 @@ recipes.addShaped(<actuallyadditions:block_atomic_reconstructor>, [
 //Display Stand
 recipes.remove(<actuallyadditions:block_display_stand>);	
 recipes.addShaped(<actuallyadditions:block_display_stand>, [
-[<metaitem:stickDarkSteel>,<metaitem:plateVibrantAlloy>,<metaitem:stickDarkSteel>], 
-[<metaitem:plateVibrantAlloy>,<actuallyadditions:block_misc:9>,<metaitem:plateVibrantAlloy>], 
-[<metaitem:stickDarkSteel>,<metaitem:plateVibrantAlloy>,<metaitem:stickDarkSteel>]]);
+[<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:stickDarkSteel>], 
+[<metaitem:nomilabs:plateVibrantAlloy>,<actuallyadditions:block_misc:9>,<metaitem:nomilabs:plateVibrantAlloy>], 
+[<metaitem:nomilabs:stickDarkSteel>,<metaitem:nomilabs:plateVibrantAlloy>,<metaitem:nomilabs:stickDarkSteel>]]);
 
 //Empowerer
 recipes.remove(<actuallyadditions:block_empowerer>);	
@@ -231,8 +231,8 @@ recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_sl
 	[redPlate, furnGen, redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_death"}), [
-	[<metaitem:plateEndSteel>,<enderio:item_material:42>,<metaitem:plateEndSteel>],
-	[<metaitem:plateEndSteel>,<extrautils2:machine>,<metaitem:plateEndSteel>],
+	[<metaitem:nomilabs:plateEndSteel>,<enderio:item_material:42>,<metaitem:nomilabs:plateEndSteel>],
+	[<metaitem:nomilabs:plateEndSteel>,<extrautils2:machine>,<metaitem:nomilabs:plateEndSteel>],
 	[redPlate, <extrautils2:machine>.withTag({Type: "extrautils2:generator_ice"}), redPlate]]);
 	
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator_enchant"}), [
@@ -282,8 +282,8 @@ recipes.addShaped(<actuallyadditions:block_farmer>, [
 recipes.remove(<actuallyadditions:item_drill:3>);
 recipes.addShaped(<actuallyadditions:item_drill:3>, [
 	[<actuallyadditions:block_crystal:3>, <actuallyadditions:block_crystal:2>, <metaitem:toolHeadDrillDiamond>], 
-	[<metaitem:gearEnergeticAlloy>, <actuallyadditions:item_misc:16>, <actuallyadditions:block_crystal:2>], 
-	[<metaitem:blockEnergeticAlloy>, <metaitem:gearEnergeticAlloy>, <actuallyadditions:block_crystal:3>]]);	
+	[<metaitem:nomilabs:gearEnergeticAlloy>, <actuallyadditions:item_misc:16>, <actuallyadditions:block_crystal:2>], 
+	[<metaitem:nomilabs:blockEnergeticAlloy>, <metaitem:nomilabs:gearEnergeticAlloy>, <actuallyadditions:block_crystal:3>]]);	
 
 //Vertical Digger	
 recipes.remove(<actuallyadditions:block_miner>);
@@ -295,9 +295,9 @@ recipes.remove(<actuallyadditions:block_miner>);
 //Ender Casing
 recipes.remove(<actuallyadditions:block_misc:8>);	
 recipes.addShaped(<actuallyadditions:block_misc:8>, [
-	[<metaitem:plateEnderPearl>, <metaitem:platePulsatingIron>, <metaitem:plateEnderPearl>],
-	[<metaitem:platePulsatingIron>, <actuallyadditions:block_misc:2>, <metaitem:platePulsatingIron>], 
-	[<metaitem:plateEnderPearl>, <metaitem:platePulsatingIron>, <metaitem:plateEnderPearl>]]);
+	[<metaitem:plateEnderPearl>, <metaitem:nomilabs:platePulsatingIron>, <metaitem:plateEnderPearl>],
+	[<metaitem:nomilabs:platePulsatingIron>, <actuallyadditions:block_misc:2>, <metaitem:nomilabs:platePulsatingIron>], 
+	[<metaitem:plateEnderPearl>, <metaitem:nomilabs:platePulsatingIron>, <metaitem:plateEnderPearl>]]);
 
 //Trash Can (Items)
 recipes.remove(<extrautils2:trashcan>);
@@ -381,9 +381,9 @@ recipes.addShaped(<extrautils2:passivegenerator:5>, [
 	
 //Chunk Loader
 recipes.addShaped(<extrautils2:chunkloader>, [
-	[<metaitem:stickEnergeticAlloy>, <extrautils2:ingredients:2>, <metaitem:stickEnergeticAlloy>], 
-	[<metaitem:stickEnergeticAlloy>, <metaitem:blockEnergeticAlloy>, <metaitem:stickEnergeticAlloy>], 
-	[null, <metaitem:blockEnergeticAlloy>, null]]);
+	[<metaitem:nomilabs:stickEnergeticAlloy>, <extrautils2:ingredients:2>, <metaitem:nomilabs:stickEnergeticAlloy>], 
+	[<metaitem:nomilabs:stickEnergeticAlloy>, <metaitem:nomilabs:blockEnergeticAlloy>, <metaitem:nomilabs:stickEnergeticAlloy>], 
+	[null, <metaitem:nomilabs:blockEnergeticAlloy>, null]]);
 
 //Dragon Mill
 recipes.addShaped(<extrautils2:passivegenerator:8>, [

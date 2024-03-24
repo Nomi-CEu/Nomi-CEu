@@ -1,9 +1,9 @@
 {
   "weight": 100,
-  "name": "Void Infinite Raw Oil Deposit",
+  "name": "Void Infinite Oil Deposit",
   "yield": {
-    "min": 80,
-    "max": 80
+    "min": 40,
+    "max": 40
   },
   "depletion": {
     "amount": 0,
@@ -13,5 +13,5 @@
   "dimension_filter": [
     "dimension_id:119"
   ],
-  "fluid": "oil_medium"
+  "fluid": "oil"
 }

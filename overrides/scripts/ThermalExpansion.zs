@@ -2,7 +2,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
-import mods.contenttweaker.Fluid;
 import crafttweaker.recipes.IRecipeFunction;
 
 import mods.gregtech.recipe.RecipeMap;
@@ -26,9 +25,9 @@ recipes.removeByRecipeName("actuallyadditions:recipes146");
 
 //Redstone Servo
 recipes.addShaped(<thermalfoundation:material:512>, [
-	[<extrautils2:ingredients>,<metaitem:plateElectricalSteel>, <extrautils2:ingredients>],
-	[null,<metaitem:plateElectricalSteel>, null],
-	[<extrautils2:ingredients>,<metaitem:plateElectricalSteel>, <extrautils2:ingredients>]]);
+	[<extrautils2:ingredients>,<metaitem:nomilabs:plateElectricalSteel>, <extrautils2:ingredients>],
+	[null,<metaitem:nomilabs:plateElectricalSteel>, null],
+	[<extrautils2:ingredients>,<metaitem:nomilabs:plateElectricalSteel>, <extrautils2:ingredients>]]);
 
 // remove the wonky 2-tag version from JEI
 mods.jei.JEI.removeAndHide(<thermalexpansion:tank>);
@@ -98,29 +97,29 @@ mods.jei.JEI.addItem(resonanttank);
 //Steam Dynamo
 recipes.remove(<thermalexpansion:dynamo>);
 recipes.addShaped(<thermalexpansion:dynamo>, [
-	[null, <contenttweaker:excitationcoil>, null],
+	[null, <nomilabs:excitationcoil>, null],
 	[<ore:plateCopper>, <morefurnaces:furnaceblock>, <ore:plateCopper>],
 	[<metaitem:gearWroughtIron>, <thermalfoundation:material:514>, <metaitem:gearWroughtIron>]]);
 
 //Magmatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:1>);
 recipes.addShaped(<thermalexpansion:dynamo:1>, [
-	[null, <contenttweaker:excitationcoil>, null],
-	[<metaitem:plateDarkSteel>, <morefurnaces:furnaceblock:5>, <metaitem:plateDarkSteel>],
+	[null, <nomilabs:excitationcoil>, null],
+	[<metaitem:nomilabs:plateDarkSteel>, <morefurnaces:furnaceblock:5>, <metaitem:nomilabs:plateDarkSteel>],
 	[<enderio:item_material:73>, <thermalfoundation:material:514>, <enderio:item_material:73>]]);
 
 //Reactant Dynamo
 recipes.remove(<thermalexpansion:dynamo:3>);
 recipes.addShaped(<thermalexpansion:dynamo:3>, [
-	[null, <contenttweaker:excitationcoil>, null],
-	[<metaitem:plateEnergeticAlloy>, <morefurnaces:furnaceblock:1>, <metaitem:plateEnergeticAlloy>],
+	[null, <nomilabs:excitationcoil>, null],
+	[<metaitem:nomilabs:plateEnergeticAlloy>, <morefurnaces:furnaceblock:1>, <metaitem:nomilabs:plateEnergeticAlloy>],
 	[<enderio:item_material:12>, <thermalfoundation:material:514>, <enderio:item_material:12>]]);
 
 //hardened upgrade
 recipes.remove(<thermalfoundation:upgrade>);
 recipes.addShaped(<thermalfoundation:upgrade>, [
 	[<metaitem:gearInvar>, <metaitem:plateInvar>, <metaitem:gearInvar>],
-	[<metaitem:plateInvar>, <metaitem:blockElectricalSteel>, <metaitem:plateInvar>],
+	[<metaitem:plateInvar>, <metaitem:nomilabs:blockElectricalSteel>, <metaitem:plateInvar>],
 	[<metaitem:gearInvar>, <metaitem:plateInvar>, <metaitem:gearInvar>]]);
 
 //reinforced upgrade
@@ -133,16 +132,16 @@ recipes.addShaped(<thermalfoundation:upgrade:1>, [
 //sig upgrade
 recipes.remove(<thermalfoundation:upgrade:2>);
 recipes.addShaped(<thermalfoundation:upgrade:2>, [
-	[<moreplates:restonia_gear>, <metaitem:plateSignalum>, <moreplates:restonia_gear>],
-	[<metaitem:plateSignalum>, <ore:blockLumium>, <metaitem:plateSignalum>],
-	[<moreplates:restonia_gear>, <metaitem:plateSignalum>, <moreplates:restonia_gear>]]);
+	[<moreplates:restonia_gear>, <metaitem:nomilabs:plateSignalum>, <moreplates:restonia_gear>],
+	[<metaitem:nomilabs:plateSignalum>, <ore:blockLumium>, <metaitem:nomilabs:plateSignalum>],
+	[<moreplates:restonia_gear>, <metaitem:nomilabs:plateSignalum>, <moreplates:restonia_gear>]]);
 
 //end upgrade
 recipes.remove(<thermalfoundation:upgrade:3>);
 recipes.addShaped(<thermalfoundation:upgrade:3>, [
-	[<moreplates:emeradic_gear>, <metaitem:plateEnderium>, <moreplates:emeradic_gear>],
-	[<metaitem:plateEnderium>, <draconicevolution:draconic_core>, <metaitem:plateEnderium>],
-	[<moreplates:emeradic_gear>, <metaitem:plateEnderium>, <moreplates:emeradic_gear>]]);
+	[<moreplates:emeradic_gear>, <metaitem:nomilabs:plateEnderium>, <moreplates:emeradic_gear>],
+	[<metaitem:nomilabs:plateEnderium>, <draconicevolution:draconic_core>, <metaitem:nomilabs:plateEnderium>],
+	[<moreplates:emeradic_gear>, <metaitem:nomilabs:plateEnderium>, <moreplates:emeradic_gear>]]);
 
 //Silver Transmission Coil
 recipes.remove(<thermalfoundation:material:514>);
@@ -265,9 +264,9 @@ recipes.addShaped(<thermalexpansion:augment:448>, [
 	//i give up
 recipes.remove(<thermalexpansion:augment:656>);
 recipes.addShaped(<thermalexpansion:augment:656>, [
-	[<ore:ingotDarkSteel>, <metaitem:plateDarkSteel>, <ore:ingotDarkSteel>],
-	[<metaitem:plateDarkSteel>, <thermalfoundation:material:1024>, <metaitem:plateDarkSteel>],
-	[<ore:ingotDarkSteel>, <metaitem:plateDarkSteel>, <ore:ingotDarkSteel>]]);
+	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>],
+	[<metaitem:nomilabs:plateDarkSteel>, <thermalfoundation:material:1024>, <metaitem:nomilabs:plateDarkSteel>],
+	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>]]);
 
 	//i give up
 recipes.remove(<thermalexpansion:augment:496>);
@@ -301,7 +300,7 @@ recipes.addShaped(<thermalexpansion:augment:513>, [
 recipes.remove(<thermalexpansion:augment:515>);
 recipes.addShaped(<thermalexpansion:augment:515>, [
 	[<minecraft:iron_ingot>, <metaitem:plateIron>, <minecraft:iron_ingot>],
-	[<metaitem:plateIron>, <contenttweaker:excitationcoil>, <metaitem:plateIron>],
+	[<metaitem:plateIron>, <nomilabs:excitationcoil>, <metaitem:plateIron>],
 	[<minecraft:iron_ingot>, <metaitem:plateIron>, <minecraft:iron_ingot>]]);
 
 	//i give up
@@ -319,7 +318,7 @@ recipes.addShaped(<thermalexpansion:augment:497>, [
 	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
 
 	//excitation coil
-recipes.addShaped(<contenttweaker:excitationcoil>, [
+recipes.addShaped(<nomilabs:excitationcoil>, [
 	[null, <metaitem:plateRedAlloy>, null],
 	[<metaitem:plateRedAlloy>, <thermalfoundation:material:515>, <metaitem:plateRedAlloy>],
 	[<metaitem:plateRedAlloy>, <thermalfoundation:material:515>, <metaitem:plateRedAlloy>]]);
@@ -327,10 +326,8 @@ recipes.addShaped(<contenttweaker:excitationcoil>, [
 assembler.recipeBuilder()
 	.inputs(<metaitem:plateRedAlloy> * 5, <thermalfoundation:material:515> * 2)
 	.circuit(16)
-	.outputs(<contenttweaker:excitationcoil>)
+	.outputs(<nomilabs:excitationcoil>)
 	.duration(100).EUt(16).buildAndRegister();
-
-<contenttweaker:excitationcoil>.addTooltip(format.darkGray(format.italic("Crafting component only.")));
 
 // Boiler Conversion
 recipes.removeByRecipeName("thermalexpansion:augment_25");
@@ -397,7 +394,7 @@ recipes.addShaped(<thermalexpansion:frame:64>, [
 recipes.addShapeless(<thermalfoundation:material:640>, [<actuallyadditions:item_misc:16>]);
 
 // Fluxbore Head
-recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillStainlessSteel>]);
+recipes.addShapeless(<thermalfoundation:material:656>, [<metaitem:toolHeadDrillVanadiumSteel>]);
 
 //Add Black Lotus to Phytogenic Insolator for black dye
 mods.thermalexpansion.Insolator.addRecipe(<actuallyadditions:block_black_lotus>*3,<actuallyadditions:block_black_lotus>, <thermalfoundation:fertilizer:0>, 4800);
@@ -427,11 +424,10 @@ blitzEntity.addPlayerOnlyDrop(<metaitem:dustSaltpeter> % 80, 0, 2); // 80% is ar
 recipes.addShapeless(<metaitem:dustSaltpeter>, [<thermalfoundation:material:772>]);
 
 // Temporary Conversion recipe between gt and thermal mana infused
-recipes.addShapeless(<thermalfoundation:material:136>, [<gregtech:meta_ingot:32021>]);
-recipes.addShapeless(<thermalfoundation:material:72>, [<gregtech:meta_dust:32021>]);
+recipes.addShapeless(<thermalfoundation:material:136>, [<metaitem:nomilabs:ingotMithril>]);
+recipes.addShapeless(<thermalfoundation:material:72>, [<metaitem:nomilabs:dustMithril>]);
 
-// Hide GT Mana infused
-scripts.common.removeMaterialSolid(32021);
+// Hide GT Mana infused (Moved to Groovy)
 
 //Remove Unobtainable Satchel and Void Satchel Recipe
 

@@ -4,9 +4,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.recipe.RecipeMap;
-import mods.contenttweaker.MaterialPart;
-import mods.contenttweaker.MaterialSystem;
-import mods.contenttweaker.Material;
 
 recipes.remove(<deepmoblearning:extraction_chamber>);
 recipes.addShaped(<deepmoblearning:extraction_chamber>, [	
@@ -23,7 +20,7 @@ recipes.addShaped(<deepmoblearning:machine_casing>,[
 recipes.remove(<metaitem:carbon.mesh>);
 alloy.recipeBuilder().inputs([<minecraft:string> * 4,<ore:dustCoal>]).outputs([<metaitem:carbon.mesh>]).duration(100).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<minecraft:string> * 4,<ore:dustCarbon>]).outputs([<metaitem:carbon.mesh>]).duration(100).EUt(16).buildAndRegister();
-alloy.recipeBuilder().inputs([<metaitem:carbon.mesh>,<ore:dustPulsating> * 4]).outputs([<contenttweaker:pulsatingmesh>]).duration(200).EUt(16).buildAndRegister();
+alloy.recipeBuilder().inputs([<metaitem:carbon.mesh>,<ore:dustPulsating> * 4]).outputs([<nomilabs:pulsatingmesh>]).duration(200).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<ore:dustPulsating>,<minecraft:clay>]).outputs([<deepmoblearning:polymer_clay> * 4	]).duration(240).EUt(7).buildAndRegister();
 
 recipes.remove(<deepmoblearning:simulation_chamber>);

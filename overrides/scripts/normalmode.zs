@@ -1,18 +1,6 @@
 #packmode normal
 #priority -1
 
-import mods.gregtech.multiblock.Builder;
-import mods.gregtech.multiblock.FactoryBlockPattern;
-import mods.gregtech.multiblock.RelativeDirection;
-import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
-import mods.gregtech.IControllerTile;
-import mods.gregtech.multiblock.CTPredicate;
-import mods.gregtech.multiblock.IBlockPattern;
-import mods.gregtech.recipe.FactoryRecipeMap;
-import mods.gregtech.recipe.RecipeMap;
-import mods.gregtech.recipe.functions.IRunOverclockingLogicFunction;
-import mods.gregtech.recipe.IRecipeLogic;
-import mods.gregtech.recipe.IRecipe;
 import mods.gregtech.recipe.helpers;
 
 import scripts.common.makeShaped as makeShaped;
@@ -20,9 +8,6 @@ import scripts.common.makeExtremeRecipe5 as makeExtremeRecipe5;
 import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 import scripts.common.makeShapeless3 as makeShapeless3;
-import scripts.common.removeMaterial as removeMaterial;
-import scripts.common.removeMaterialSolid as removeMaterialSolid;
-import scripts.common.removeMaterialFluid as removeMaterialFluid;
 
 //Nether Cake
 recipes.addShaped(<dimensionaledibles:nether_cake>, [[<metaitem:dustNetherrack>,<metaitem:dustNetherrack>,<metaitem:dustNetherrack>], [<minecraft:obsidian>, <enderio:item_material:70>, <minecraft:obsidian>],[<minecraft:soul_sand>,<minecraft:soul_sand>,<minecraft:soul_sand>]]);
@@ -46,7 +31,7 @@ furnace.addRecipe(<metaitem:ingotWroughtIron>, <minecraft:iron_ingot>, 0.0);
 //Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<metaitem:dustCopper>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>]);
 
-recipes.addShapeless(<minecraft:clay>, [<contenttweaker:block_dust>,<minecraft:water_bucket>]);
+recipes.addShapeless(<minecraft:clay>, [<nomilabs:block_dust>,<minecraft:water_bucket>]);
 
 //Clay Electrolyzing
 electrolyzer.findRecipe(60, [<metaitem:dustClay> * 13], [null]).remove();
@@ -91,7 +76,7 @@ recipes.addShaped(<enderio:item_liquid_conduit:1> * 4, [
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 assembler.recipeBuilder().inputs([<minecraft:glass> * 3, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_liquid_conduit:1> * 8]).duration(80).EUt(16).buildAndRegister();
 
-chemical_reactor.recipeBuilder().inputs([<contenttweaker:block_dust>]).fluidInputs([<liquid:water> * 1000]).outputs(<minecraft:clay>).EUt(15).duration(20).buildAndRegister();
+chemical_reactor.recipeBuilder().inputs([<nomilabs:block_dust>]).fluidInputs([<liquid:water> * 1000]).outputs(<minecraft:clay>).EUt(15).duration(20).buildAndRegister();
 
 
 recipes.remove(<meta_tile_entity:extruder.mv>);
@@ -115,22 +100,9 @@ recipes.addShaped(<meta_tile_entity:extruder.ev>, [
 
 
 
-recipes.addShapeless(<metaitem:dustConductiveIron>, [<metaitem:dustIron>,<minecraft:redstone>]);
+recipes.addShapeless(<metaitem:nomilabs:dustConductiveIron>, [<metaitem:dustIron>,<minecraft:redstone>]);
 
-// steam multis
-recipes.removeByRecipeName("gregtech:steam_oven");
-recipes.addShaped(<metaitem:steam_oven>, [
-	[<gregtech:metal_casing>, <metaitem:gearInvar>, <gregtech:metal_casing>],
-	[<gregtech:boiler_firebox_casing>, <morefurnaces:furnaceblock:5>, <gregtech:boiler_firebox_casing>],
-	[<gregtech:metal_casing>, <metaitem:gearInvar>, <gregtech:metal_casing>]
-]);
-
-recipes.removeByRecipeName("gregtech:steam_grinder");
-recipes.addShaped(<metaitem:steam_grinder>, [
-	[<gregtech:metal_casing>, <metaitem:gearPotin>, <gregtech:metal_casing>],
-	[<gregtech:metal_casing>, <minecraft:diamond>, <gregtech:metal_casing>],
-	[<gregtech:metal_casing>, <metaitem:gearPotin>, <gregtech:metal_casing>]
-]);
+// steam multis (moved to groovy)
 
 // PBF nomified
 furnace.remove(<metaitem:brick.fireclay>);
@@ -283,29 +255,29 @@ helpers.clear(<recipemap:primitive_blast_furnace>);
 
 // Creative Tank Data
 extractor.recipeBuilder()
-    .inputs(<contenttweaker:heartofauniverse>)
-    .outputs(<contenttweaker:creativeportabletankmold>)
+    .inputs(<nomilabs:heartofauniverse>)
+    .outputs(<nomilabs:creativeportabletankmold>)
     .duration(1000)
     .EUt(180000)
     .buildAndRegister();
 
 
 // Impossible Realm Data Recipes
-makeShaped("of_impossiblerealmdata_x1", <contenttweaker:impossiblerealmdata>,
+makeShaped("of_impossiblerealmdata_x1", <nomilabs:impossiblerealmdata>,
 	["OEO",
 	 "EOE",
 	 "OEO"],
 	{ E : <actuallyadditions:item_solidified_experience>,
 	  O : <deepmoblearning:living_matter_overworldian> });
 
-makeShaped("of_impossiblerealmdata_x2", <contenttweaker:impossiblerealmdata> * 2,
+makeShaped("of_impossiblerealmdata_x2", <nomilabs:impossiblerealmdata> * 2,
 	["HEH",
 	 "EHE",
 	 "HEH"],
 	{ E : <actuallyadditions:item_solidified_experience>,
 	  H : <deepmoblearning:living_matter_hellish> });
 
-makeShaped("of_impossiblerealmdata_x4", <contenttweaker:impossiblerealmdata> * 4,
+makeShaped("of_impossiblerealmdata_x4", <nomilabs:impossiblerealmdata> * 4,
 	["XEX",
 	 "EXE",
 	 "XEX"],
@@ -313,25 +285,25 @@ makeShaped("of_impossiblerealmdata_x4", <contenttweaker:impossiblerealmdata> * 4
 	  X : <deepmoblearning:living_matter_extraterrestrial> });
 
 // Dragon Lair Data
-makeShapeless3("of_dragonlairdata", <contenttweaker:dragonlairdata>,
+makeShapeless3("of_dragonlairdata", <nomilabs:dragonlairdata>,
 	["IHH",
 	 "HHH",
 	 "HHH"],
-	{ I : <contenttweaker:impossiblerealmdata>,
+	{ I : <nomilabs:impossiblerealmdata>,
 	  H : <deepmoblearning:living_matter_extraterrestrial> }
 );
 
 // Wither Realm Data
-makeShapeless3("of_witherrealmdata", <contenttweaker:witherrealmdata>,
+makeShapeless3("of_witherrealmdata", <nomilabs:witherrealmdata>,
 	["IXX",
 	 "XXX",
 	 "XXX"],
-	{ I : <contenttweaker:impossiblerealmdata>,
+	{ I : <nomilabs:impossiblerealmdata>,
 	  X : <deepmoblearning:living_matter_hellish> }
 );
 
 // Quantum Flux Recipes
-makeShaped("of_quantumflux_a", <contenttweaker:quantumflux>,
+makeShaped("of_quantumflux_a", <nomilabs:quantumflux>,
 	[" X ",
 	 "XMX",
 	 " X "],
@@ -375,7 +347,7 @@ recipes.addShaped(<enderio:item_item_conduit> * 4, [
 //ender fluid conduit - by hand
 recipes.addShaped(<enderio:item_liquid_conduit:2> * 4, [
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<metaitem:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:wireGtSingleVibrantAlloy>], 
+	[<metaitem:nomilabs:wireGtSingleVibrantAlloy>,<enderio:item_liquid_conduit:1>,<metaitem:nomilabs:wireGtSingleVibrantAlloy>], 
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
 
@@ -387,7 +359,7 @@ assembler.recipeBuilder()
 
 //ender fluid conduit - assembler
 assembler.recipeBuilder()
-    .inputs([<metaitem:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 6])
+    .inputs([<metaitem:nomilabs:wireGtSingleVibrantAlloy> * 2, <enderio:item_liquid_conduit:1>, <ore:itemConduitBinder> * 6])
     .outputs([<enderio:item_liquid_conduit:2> * 8])
     .duration(80).EUt(16).buildAndRegister();
 
@@ -519,7 +491,7 @@ fluid_extractor.recipeBuilder()
 //creative_tank_provider.hasMufflerMechanics = false;
 //creative_tank_provider.hasMaintenanceMechanics = false;
 //
-//recipes.addShaped("creative_tank_provider", <metaitem:mbt:creative_tank_provider>, [
+//recipes.addShaped("creative_tank_provider", <metaitem:nomilabs:creative_tank_provider>, [
 //    [<metaitem:emitter.zpm>, <metaitem:field.generator.luv>, <metaitem:emitter.zpm>],
 //    [<metaitem:field.generator.zpm>, <gcym:large_multiblock_casing:11>, <metaitem:field.generator.zpm>],
 //    [<ore:circuitZpm>, <metaitem:field.generator.uv>, <ore:circuitZpm>]
@@ -529,7 +501,7 @@ fluid_extractor.recipeBuilder()
 //// creative tank
 //creative_tank_provider.recipeMap
 //    .recipeBuilder()
-//    .notConsumable(<contenttweaker:creativeportabletankmold>)
+//    .notConsumable(<nomilabs:creativeportabletankmold>)
 //    .inputs(<minecraft:bucket>)
 //    .outputs(<metaitem:creative_tank>)
 //    .duration(500)
@@ -539,21 +511,11 @@ fluid_extractor.recipeBuilder()
 //Numismatic Dynamo
 recipes.remove(<thermalexpansion:dynamo:5>);
 recipes.addShaped(<thermalexpansion:dynamo:5>, [
-	[null, <contenttweaker:excitationcoil>, null],
-	[<metaitem:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:plateVibrantAlloy>],
+	[null, <nomilabs:excitationcoil>, null],
+	[<metaitem:nomilabs:plateVibrantAlloy>, <morefurnaces:furnaceblock:2>, <metaitem:nomilabs:plateVibrantAlloy>],
 	[<enderio:item_material:13>, <thermalfoundation:material:514>, <enderio:item_material:13>]]);
 
-// Red Alloy
-<recipemap:alloy_blast_smelter>.findRecipe(16, [<metaitem:dustCopper>, <minecraft:redstone> * 4, <metaitem:circuit.integrated>.withTag({Configuration: 5})], null).remove();
-alloy_blast_smelter.recipeBuilder()
-	.inputs(<ore:dustCopper> * 2, <minecraft:redstone> * 3)
-	.circuit(2)
-	.property("temperature", 1000)
-	.fluidOutputs(<liquid:red_alloy> * 288)
-	.duration(75).EUt(16).buildAndRegister();
-	
-// Redstone * 4
-<recipemap:centrifuge>.findRecipe(30, [<metaitem:dustRedAlloy>], null).remove();
+// Red Alloy (Moved to Groovy)
 
 // zpm crystal
 // crystal growing w Enderium
@@ -626,19 +588,19 @@ recipes.addShaped(<meta_tile_entity:distillation_tower>, [
 
 //Draconium [tier 14]
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
+<recipemap:electric_blast_furnace>.findRecipe(30720, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:neon> * 25]).remove();
 // Hot Draconium Ingot * 1
-<recipemap:electric_blast_furnace>.findRecipe(120, [<metaitem:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+<recipemap:electric_blast_furnace>.findRecipe(30720, [<metaitem:nomilabs:dustDraconium>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
 
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline>*2000]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline>*8000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<metaitem:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:ingotHotDraconium>).property("temperature", 6800).duration(10000).EUt(120).buildAndRegister();
-blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:ingotHotDraconium> * 2]).property("temperature", 6800).duration(20000).EUt(120).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:nitro_fuel>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(1800).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:nitro_fuel>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(3600).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline>*2000]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(1800).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline>*8000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(3600).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<metaitem:nomilabs:dustDraconium>]).fluidInputs([<liquid:gasoline_premium>*500]).outputs(<metaitem:nomilabs:ingotHotDraconium>).property("temperature", 6800).duration(1206).EUt(30720).buildAndRegister();
+blast_furnace.recipeBuilder().inputs([<armorplus:material:3> * 4]).fluidInputs([<liquid:gasoline_premium>*2000]).outputs([<metaitem:nomilabs:ingotHotDraconium> * 2]).property("temperature", 6800).duration(2412).EUt(30720).buildAndRegister();
 
 //////////////////// Exotic Materials Catalyst ////////////////////////
-makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
+makeExtremeRecipe7(<nomilabs:exoticmaterialscatalyst>,
     ["L  M  J",
      " K W S ",
      "  YNT  ",
@@ -664,7 +626,7 @@ makeExtremeRecipe7(<contenttweaker:exoticmaterialscatalyst>,
       P : <metaitem:ingotHssg>,
       Q : <metaitem:ingotHsse>,
       R : <metaitem:ingotHsss>,
-      S : <metaitem:ingotManyullyn>,
+      S : <metaitem:nomilabs:ingotManyullyn>,
       T : <ore:ingotMicroversium>,
       U : <ore:ingotElectrumFlux>,
       V : <simplyjetpacks:metaitemmods:3>,
@@ -683,42 +645,11 @@ electrolyzer.recipeBuilder()
 // HV Cutting Saw alternate
 recipes.addShaped(<metaitem:cutter.hv>, [
 	[<metaitem:cableGtSingleGold>, <ore:circuitHv>, <gregtech:transparent_casing>],
-	[<metaitem:conveyor.module.hv>, <metaitem:hull.hv>, <metaitem:toolHeadBuzzSawEndSteel>],
+	[<metaitem:conveyor.module.hv>, <metaitem:hull.hv>, <metaitem:nomilabs:toolHeadBuzzSawEndSteel>],
 	[<ore:circuitHv>, <metaitem:cableGtSingleGold>, <metaitem:electric.motor.hv>]
 ]);
 
-// Sterilizing Filter
-recipes.removeByRecipeName("gregtech:blacklight");
-recipes.addShaped(<metaitem:blacklight>, [
-	[<metaitem:screwTungstenCarbide>, <metaitem:plateTungstenCarbide>, <metaitem:screwTungstenCarbide>],
-	[null, <metaitem:springHssg>, null],
-	[<ore:circuitIv>, <metaitem:plateTungstenCarbide>, <metaitem:cableGtSinglePlatinum>]
-]);
-recipes.removeByRecipeName("gregtech:filter_casing_sterile");
-recipes.addShaped(<gregtech:cleanroom_casing:2>, [
-	[<metaitem:pipeLargeFluidPolybenzimidazole>, <metaitem:emitter.luv>, <metaitem:pipeLargeFluidPolybenzimidazole>],
-	[<metaitem:item_filter>, <metaitem:blacklight>, <metaitem:item_filter>],
-	[<metaitem:electric.motor.luv>, <ore:frameGtBlackSteel>, <metaitem:rotorIridium>]
-]);
-
-// Replace recycling recipes
-<recipemap:arc_furnace>.findRecipe(30, [<gregtech:cleanroom_casing:2>], [<liquid:oxygen> * 1265]).remove();
-<recipemap:macerator>.findRecipe(32, [<gregtech:cleanroom_casing:2>], null).remove();
-
-arc_furnace.recipeBuilder()
-	.inputs([<gregtech:cleanroom_casing:2>])
-	.fluidInputs([<liquid:oxygen> * 1265])
-	.outputs([<metaitem:ingotIridium> * 4, <metaitem:ingotBlackSteel> * 2, <metaitem:dustSmallAsh> * 6])
-	.duration(691)
-	.EUt(30)
-	.buildAndRegister();
-	
-macerator.recipeBuilder()
-	.inputs([<gregtech:cleanroom_casing:2>])
-	.outputs([<metaitem:dustPolybenzimidazole> * 12, <metaitem:dustIridium> * 4, <metaitem:dustBlackSteel> * 2])
-	.duration(696)
-	.EUt(32)
-	.buildAndRegister();
+// Sterilizing Filter (Moved to Groovy)
 
 // Butadiene
 large_chemical_reactor.recipeBuilder()
@@ -728,98 +659,15 @@ large_chemical_reactor.recipeBuilder()
 	.circuit(25)
 	.duration(300).EUt(7680).buildAndRegister();
 
-// Assembly Control Casing
-recipes.remove(<gregtech:multiblock_casing:3>);
-recipes.addShaped(<gregtech:multiblock_casing:3> * 4, [
-    [<ore:circuitLuv>, <metaitem:plate.high_power_integrated_circuit>, <ore:circuitLuv>],
-    [<metaitem:sensor.iv>, <metaitem:frameTungstenSteel>, <metaitem:emitter.iv>],
-    [<ore:circuitLuv>, <metaitem:electric.motor.iv>, <ore:circuitLuv>]
-]);
-
-// Recycling recipes in groovy
-
 // Nq+ and Nq*
-mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<contenttweaker:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
+mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:20> * 4,<nomilabs:grainsofinnocence>,<enderio:item_material:36>]).fluidInputs([<liquid:pulsating_iron> * 576, <liquid:neptunium> * 144]).outputs(<metaitem:dustNaquadahEnriched>).EUt(8000).duration(400).buildAndRegister();
 
 mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material:34>,<enderio:item_material:35>*4,<enderio:item_material:37>]).fluidInputs([<liquid:enderium> * 576, <liquid:curium> * 144]).outputs(<metaitem:dustNaquadria>).EUt(30000).duration(400).buildAndRegister();
 
 // Recycling recipe replacements
-// RHF
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_blast_furnace>], [<liquid:oxygen> * 20786]).remove();
-<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_blast_furnace>], null).remove();
-arc_furnace.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_blast_furnace>)
-	.fluidInputs(<liquid:oxygen> * 20786)
-	.outputs(<metaitem:ingotNaquadahAlloy> * 20, <metaitem:ingotInvar> * 4, <metaitem:ingotUraniumRhodiumDinaquadide> * 2, <metaitem:ingotTin>)
-	.duration(20786)
-	.EUt(30)
-	.buildAndRegister();
+// RHF & BBC (moved to Groovy)
 
-macerator.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_blast_furnace>)
-	.outputs(<metaitem:dustStone> * 24, <metaitem:dustNaquadahAlloy> * 20, <metaitem:dustInvar> * 4, <metaitem:dustRubber> * 2)
-	.duration(20786)
-	.EUt(30)
-	.buildAndRegister();
-
-// BBC
-<recipemap:arc_furnace>.findRecipe(30, [<metaitem:gcym:mega_vacuum_freezer>], [<liquid:oxygen> * 26976]).remove();
-<recipemap:macerator>.findRecipe(32, [<metaitem:gcym:mega_vacuum_freezer>], null).remove();
-arc_furnace.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
-	.fluidInputs(<liquid:oxygen> * 26976)
-	.outputs(<metaitem:ingotNaquadahAlloy> * 18, <metaitem:ingotStainlessSteel> * 12, <metaitem:ingotElectrum> * 12, <metaitem:blockSteel>)
-	.duration(26976)
-	.EUt(30)
-	.buildAndRegister();
-
-macerator.recipeBuilder()
-	.inputs(<metaitem:gcym:mega_vacuum_freezer>)
-	.outputs(<metaitem:dustNaquadahAlloy> * 18, <metaitem:dustSmallRubber> * 50, <metaitem:dustSmallSteel> * 49, <metaitem:dustStainlessSteel> * 12)
-	.duration(25408)
-	.EUt(32)
-	.buildAndRegister();
-
-// I/O Buses
-// Removals in Groovy
-
-recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ore:chest>], [<metaitem:hull.ulv>]]);
-recipes.addShaped(<metaitem:item_bus.import.lv>, [[<ore:chest>], [<metaitem:hull.lv>]]);
-recipes.addShaped(<metaitem:item_bus.import.mv>, [[<ore:chest>], [<metaitem:hull.mv>]]);
-recipes.addShaped(<metaitem:item_bus.import.hv>, [[<ore:chest>], [<metaitem:hull.hv>]]);
-recipes.addShaped(<metaitem:item_bus.import.ev>, [[<ore:chest>], [<metaitem:hull.ev>]]);
-recipes.addShaped(<metaitem:item_bus.import.iv>, [[<ore:chest>], [<metaitem:hull.iv>]]);
-
-recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ore:chest>]]);
-recipes.addShaped(<metaitem:item_bus.export.lv>, [[<metaitem:hull.lv>], [<ore:chest>]]);
-recipes.addShaped(<metaitem:item_bus.export.mv>, [[<metaitem:hull.mv>], [<ore:chest>]]);
-recipes.addShaped(<metaitem:item_bus.export.hv>, [[<metaitem:hull.hv>], [<ore:chest>]]);
-recipes.addShaped(<metaitem:item_bus.export.ev>, [[<metaitem:hull.ev>], [<ore:chest>]]);
-recipes.addShaped(<metaitem:item_bus.export.iv>, [[<metaitem:hull.iv>], [<ore:chest>]]);
-
-recipes.addShaped(<metaitem:fluid_hatch.import.ulv>, [[<ore:blockGlass>], [<metaitem:hull.ulv>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import.lv>, [[<ore:blockGlass>], [<metaitem:hull.lv>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import.mv>, [[<ore:blockGlass>], [<metaitem:hull.mv>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import.hv>, [[<ore:blockGlass>], [<metaitem:hull.hv>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import.ev>, [[<ore:blockGlass>], [<metaitem:hull.ev>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import.iv>, [[<ore:blockGlass>], [<metaitem:hull.iv>]]);
-
-recipes.addShaped(<metaitem:fluid_hatch.export.ulv>, [[<metaitem:hull.ulv>], [<ore:blockGlass>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export.lv>, [[<metaitem:hull.lv>], [<ore:blockGlass>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export.mv>, [[<metaitem:hull.mv>], [<ore:blockGlass>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export.hv>, [[<metaitem:hull.hv>], [<ore:blockGlass>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export.ev>, [[<metaitem:hull.ev>], [<ore:blockGlass>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export.iv>, [[<metaitem:hull.iv>], [<ore:blockGlass>]]);
-
-recipes.addShaped(<metaitem:fluid_hatch.import_4x>, [[<ore:pipeQuadrupleFluidTitanium>], [<metaitem:hull.ev>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import_4x.iv>, [[<ore:pipeQuadrupleFluidTungstensteel>], [<metaitem:hull.iv>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import_9x>, [[<ore:pipeNonupleFluidTitanium>], [<metaitem:hull.ev>]]);
-recipes.addShaped(<metaitem:fluid_hatch.import_9x.iv>, [[<ore:pipeNonupleFluidTungstensteel>], [<metaitem:hull.iv>]]);
-
-recipes.addShaped(<metaitem:fluid_hatch.export_4x>, [[<metaitem:hull.ev>], [<ore:pipeQuadrupleFluidTitanium>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export_4x.iv>, [[<metaitem:hull.iv>], [<ore:pipeQuadrupleFluidTungstensteel>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export_9x>, [[<metaitem:hull.ev>], [<ore:pipeNonupleFluidTitanium>]]);
-recipes.addShaped(<metaitem:fluid_hatch.export_9x.iv>, [[<metaitem:hull.iv>], [<ore:pipeNonupleFluidTungstensteel>]]);
+// I/O Buses (Groovy)
 
 // AA Drill Core Coin Tooltip
 <actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
@@ -839,90 +687,28 @@ mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_furnace_steel>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_bronze>);
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_alloy_smelter_steel>);
 
-// Materials
-removeMaterialSolid(32032);
-removeMaterialSolid(32033);
-removeMaterialSolid(32034);
-removeMaterialSolid(32035);
-//removeMaterialSolid(32036);
-removeMaterialSolid(32037);
-removeMaterialSolid(32038);
-removeMaterialSolid(32039);
-removeMaterialSolid(32040);
-removeMaterialSolid(32041);
-removeMaterialSolid(32042);
-removeMaterialSolid(32043);
-removeMaterialSolid(32044);
-removeMaterialSolid(32045);
-removeMaterialSolid(32049);
-removeMaterialSolid(32051);
-removeMaterialSolid(32052);
-removeMaterialSolid(32055);
-removeMaterialSolid(32057);
-removeMaterialSolid(32058);
-removeMaterialSolid(32059);
-removeMaterialSolid(32060);
-removeMaterialSolid(32061);
-removeMaterialSolid(32066);
-removeMaterialSolid(32067);
-removeMaterialSolid(32068);
-removeMaterialSolid(32069);
-removeMaterialSolid(32071);
-removeMaterialSolid(32072);
-removeMaterialSolid(32073);
-removeMaterialSolid(32074);
-removeMaterialSolid(32075);
-removeMaterialSolid(32076);
-removeMaterialSolid(32077);
-removeMaterialSolid(32078);
-removeMaterialSolid(32079);
-removeMaterialSolid(32080);
-removeMaterialSolid(32081);
-removeMaterialSolid(32083);
-removeMaterialSolid(32084);
-removeMaterialSolid(32085);
-removeMaterialSolid(32087);
-removeMaterialSolid(32088);
-removeMaterialSolid(32093);
-removeMaterialSolid(32096);
-removeMaterialSolid(32097);
-removeMaterialSolid(32098);
-removeMaterialSolid(32099);
-removeMaterialSolid(32100);
-removeMaterialSolid(32109);
-
-removeMaterialFluid(32046, [<liquid:hydrogen_peroxide>]);
-removeMaterialFluid(32047, [<liquid:hydrazine>]);
-removeMaterialFluid(32048, [<liquid:acetone_azine>]);
-removeMaterialFluid(32050, [<liquid:kapton_k>]);
-removeMaterialFluid(32053, [<liquid:dimethylformamide>]);
-removeMaterialFluid(32054, [<liquid:aminophenol>]);
-removeMaterialFluid(32056, [<liquid:antimony_pentafluoride>]);
-removeMaterialFluid(32062, [<liquid:neocryolite>]);
-removeMaterialFluid(32063, [<liquid:naquadah_oxide_petro_solution>]);
-removeMaterialFluid(32064, [<liquid:naquadah_oxide_aero_solution>]);
-removeMaterialFluid(32065, [<liquid:hot_naquadah_oxide_neocryolite_solution>]);
+// HM Material Removals (Moved to Groovy)
 
 // Half Ships
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourandhalfship>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiereightandhalfship>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourandhalfship>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiereightandhalfship>);
 
 // Stabilized Miners
-mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiereightship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfiveship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfiveship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourandhalfship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourandhalfship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierfourship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tieroneship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tieroneship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersevenship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersevenship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersixship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiersixship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierthreeship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tierthreeship_stabilized_matter>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiertwoship_stabilized>);
-mods.jei.JEI.removeAndHide(<contenttweaker:tiertwoship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiereightship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiereightship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfiveship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfiveship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourandhalfship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourandhalfship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierfourship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tieroneship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tieroneship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersevenship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersevenship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersixship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiersixship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierthreeship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tierthreeship_stabilized_matter>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiertwoship_stabilized>);
+mods.jei.JEI.removeAndHide(<nomilabs:tiertwoship_stabilized_matter>);
