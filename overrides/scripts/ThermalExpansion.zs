@@ -329,8 +329,6 @@ assembler.recipeBuilder()
 	.outputs(<nomilabs:excitationcoil>)
 	.duration(100).EUt(16).buildAndRegister();
 
-<nomilabs:excitationcoil>.addTooltip(format.darkGray(format.italic("Crafting component only.")));
-
 // Boiler Conversion
 recipes.removeByRecipeName("thermalexpansion:augment_25");
 recipes.addShaped(<thermalexpansion:augment:576>, [
