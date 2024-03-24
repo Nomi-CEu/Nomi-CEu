@@ -14,11 +14,11 @@ createStabilizedMinerRecipe(item('nomilabs:tiersixship'), item('nomilabs:tiersix
 createStabilizedMinerRecipe(item('nomilabs:tiersevenship'), item('nomilabs:tiersevenship_stabilized'))
 createStabilizedMinerRecipe(item('nomilabs:tiereightship'), item('nomilabs:tiereightship_stabilized'))
 
+// No Recycling, Accidental Recycling would be horrible, and most of the expensive ingredients cannot be recycled back
 void createStabilizedMinerRecipe(ItemStack nonStab, ItemStack stab) {
     mods.gregtech.assembly_line.recipeBuilder()
             .inputs(nonStab, item('nomilabs:heartofauniverse'), item('draconicevolution:chaos_shard') * 4, metaitem('field.generator.uv') * 24, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7)
             .fluidInputs(fluid('rocket_fuel') * 48000, fluid('omnium') * 576, fluid('neutronium') * 576)
             .outputs(stab)
-            .changeRecycling()
             .duration(2500).EUt(VA[UHV]).buildAndRegister()
 }
