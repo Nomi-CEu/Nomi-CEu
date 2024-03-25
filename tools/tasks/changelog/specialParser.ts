@@ -9,6 +9,7 @@ import {
 	ModInfo,
 	ParsedModInfo,
 	Parser,
+	PriorityInfo,
 } from "../../types/changelogTypes";
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
@@ -30,6 +31,7 @@ import {
 	indentationLevel,
 	modInfoKey,
 	modInfoList,
+	priorityKey,
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
@@ -40,6 +42,27 @@ let data: ChangelogData;
 
 export function specialParserSetup(inputData: ChangelogData): void {
 	data = inputData;
+}
+
+/**
+ * Reads a commit's priority.
+ */
+export async function parsePriority(commitBody: string, commitObject: Commit): Promise<number | undefined> {
+	if (!commitBody.includes(priorityKey)) return undefined;
+	const info = await parseTOML<PriorityInfo>(commitBody, commitObject, priorityKey);
+	if (!info) return undefined;
+
+	if (!info.priority) {
+		error(dedent`
+			Priority Info in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is missing priority info (key 'priority').`);
+		if (data.isTest) throw new Error("Failed to Parse Priority Info. See Above.");
+		return undefined;
+	}
+
+	return info.priority;
 }
 
 /**
@@ -58,6 +81,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is missing check info (key 'checks').`);
+		if (data.isTest) throw new Error("Failed to Parse Ignore Info. See Above.");
 		return undefined;
 	}
 

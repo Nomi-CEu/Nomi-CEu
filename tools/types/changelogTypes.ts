@@ -8,6 +8,7 @@ export interface Commit {
 	body: string;
 	author_name: string;
 	author_email: string;
+	priority?: number;
 }
 
 /**
@@ -271,6 +272,10 @@ export interface ModInfo {
 export interface ParsedModInfo {
 	info?: string;
 	details?: ChangelogMessage[];
+}
+
+export interface PriorityInfo {
+	priority: number;
 }
 
 export type FixUpMode = "REPLACE" | "ADDITION";

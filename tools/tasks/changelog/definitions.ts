@@ -31,6 +31,7 @@ export const fixUpList = "fixes";
 export const ignoreKey = "[IGNORE]";
 export const modInfoKey = "[MOD INFO]";
 export const modInfoList = "infos";
+export const priorityKey = "[PRIORITY]";
 
 /* Sub Category Keys */
 // Mode Category Keys

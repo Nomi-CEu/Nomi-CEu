@@ -8,8 +8,9 @@ import {
 	ignoreKey,
 	modInfoKey,
 	noCategoryKey,
+	priorityKey,
 } from "./definitions";
-import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo } from "./specialParser";
+import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo, parsePriority } from "./specialParser";
 import { getChangelog } from "../../util/util";
 import ChangelogData from "./changelogData";
 
@@ -78,6 +79,20 @@ export async function parseCommitBody(
 		// Only return if ignore is not undefined
 		if (ignore) return ignore;
 	}
+
+	let newPriority = 0;
+	if (commitBody.includes(priorityKey)) {
+		const priority = await parsePriority(commitBody, commitObject);
+
+		// Only set if priority is not undefined or 0
+		if (priority) newPriority = priority;
+	}
+	// Copy commit if new priority (don't mess it up for other changelog messages when using expand)
+	if (commitObject.priority !== newPriority) {
+		commitObject = { ...commitObject };
+		commitObject.priority = newPriority;
+	}
+
 	if (commitBody.includes(modInfoKey)) await parseModInfo(commitBody, commitObject);
 	if (commitBody.includes(detailsKey)) {
 		await parseDetails(commitMessage, commitBody, commitObject, parser);
