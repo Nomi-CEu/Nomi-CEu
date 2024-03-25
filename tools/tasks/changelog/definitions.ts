@@ -31,6 +31,7 @@ export const fixUpList = "fixes";
 export const ignoreKey = "[IGNORE]";
 export const modInfoKey = "[MOD INFO]";
 export const modInfoList = "infos";
+export const priorityKey = "[PRIORITY]";
 
 /* Sub Category Keys */
 // Mode Category Keys
@@ -227,8 +228,10 @@ export const modChangesAllocations: Record<ModChangesType, ModChangesAllocation>
 // Ignore Allocations
 
 /* Ignore Checks */
-const beforeCheck: IgnoreCheck = (tag, data) => !data.tags.has(tag);
-const afterCheck: IgnoreCheck = (tag, data) => data.tags.has(tag);
+const targetBeforeCheck: IgnoreCheck = (tag, data) => !data.tags.has(tag);
+const targetAfterCheck: IgnoreCheck = (tag, data) => data.tags.has(tag);
+const compareBeforeCheck: IgnoreCheck = (tag, data) => !data.compareTags.has(tag);
+const compareAfterCheck: IgnoreCheck = (tag, data) => data.compareTags.has(tag);
 const compareIsCheck: IgnoreCheck = (tag, data) => data.since === tag;
 const compareNotCheck: IgnoreCheck = (tag, data) => data.since !== tag;
 const targetIsCheck: IgnoreCheck = (tag, data) => data.to === tag;
@@ -236,8 +239,10 @@ const targetNotCheck: IgnoreCheck = (tag, data) => data.to !== tag;
 
 /* Ignore Checks Map */
 export const ignoreChecks: Record<string, IgnoreCheck> = {
-	before: beforeCheck,
-	after: afterCheck,
+	targetBefore: targetBeforeCheck,
+	targetAfter: targetAfterCheck,
+	compareBefore: compareBeforeCheck,
+	compareAfter: compareAfterCheck,
 	compareIs: compareIsCheck,
 	compareNot: compareNotCheck,
 	targetIs: targetIsCheck,

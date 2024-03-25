@@ -27,7 +27,7 @@ async function createChangelog(): Promise<ChangelogData> {
 		for (const tag of tags) {
 			const iteration = tags.indexOf(tag);
 			log(`Iteration ${iteration + 1} of Changelog.`);
-			data.setupIteration(tag);
+			await data.setupIteration(tag);
 			categoriesSetup();
 			specialParserSetup(data);
 

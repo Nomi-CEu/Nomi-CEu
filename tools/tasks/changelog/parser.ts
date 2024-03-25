@@ -8,8 +8,9 @@ import {
 	ignoreKey,
 	modInfoKey,
 	noCategoryKey,
+	priorityKey,
 } from "./definitions";
-import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo } from "./specialParser";
+import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo, parsePriority } from "./specialParser";
 import { getChangelog } from "../../util/util";
 import ChangelogData from "./changelogData";
 
@@ -21,8 +22,17 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 
 		if (data.commitFixes.has(commit.hash)) {
 			const fixUpInfo = data.commitFixes.get(commit.hash);
-			commit.message = fixUpInfo.newTitle;
-			commit.body = fixUpInfo.newBody;
+			if (fixUpInfo.newTitle) commit.message = fixUpInfo.newTitle;
+			if (fixUpInfo.newBody) {
+				switch (fixUpInfo.mode) {
+					case "REPLACE":
+						commit.body = fixUpInfo.newBody;
+						break;
+					case "ADDITION":
+						commit.body = commit.body.concat(`\n\n${fixUpInfo.newBody}`);
+						break;
+				}
+			}
 		}
 
 		if (parser.skipCallback(commit, commit.message, commit.body)) {
@@ -69,6 +79,20 @@ export async function parseCommitBody(
 		// Only return if ignore is not undefined
 		if (ignore) return ignore;
 	}
+
+	let newPriority = 0;
+	if (commitBody.includes(priorityKey)) {
+		const priority = await parsePriority(commitBody, commitObject);
+
+		// Only set if priority is not undefined or 0
+		if (priority) newPriority = priority;
+	}
+	// Copy commit if new priority (don't mess it up for other changelog messages when using expand)
+	if (commitObject.priority !== newPriority) {
+		commitObject = { ...commitObject };
+		commitObject.priority = newPriority;
+	}
+
 	if (commitBody.includes(modInfoKey)) await parseModInfo(commitBody, commitObject);
 	if (commitBody.includes(detailsKey)) {
 		await parseDetails(commitMessage, commitBody, commitObject, parser);
