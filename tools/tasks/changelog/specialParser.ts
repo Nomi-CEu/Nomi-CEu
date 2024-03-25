@@ -135,8 +135,9 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 		commit,
 		fixUpKey,
 		fixUpList,
-		(item) => !item.sha || !item.newTitle,
+		(item) => !item.sha || (!item.newTitle && !item.newBody),
 		async (item) => {
+			if (!item.mode) item.mode = "REPLACE"; // Default Mode is Replace (Legacy Compat)
 			// Only override if no other overrides, from newer commits, set
 			if (!data.commitFixes.has(item.sha)) data.commitFixes.set(item.sha, item);
 		},
@@ -145,6 +146,7 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 			// Must override, even if newer commits specified changes, as need to remove fixup data
 			data.commitFixes.set(commit.hash, {
 				sha: commit.hash,
+				mode: "REPLACE",
 				newTitle: commit.message,
 				// Replace "\r\n" (Caused by editing on GitHub) with "\n", as the output matter has this done.
 				newBody: commit.body.replace(/\r\n/g, "\n").replace(matter.matter.trim(), ""),
@@ -205,8 +207,9 @@ export async function parseExpand(commitBody: string, commitObject: Commit, pars
 		commitObject,
 		expandKey,
 		expandList,
-		(item) => !item.messageTitle,
+		(item) => !item.messageTitle && !item.messageBody,
 		async (item) => {
+			if (!item.messageTitle) item.messageTitle = commitObject.message;
 			const title = dedent(item.messageTitle);
 
 			if (item.messageBody) {
@@ -542,7 +545,7 @@ async function parseTOMLWithRootToList<T>(
 		}
 		// No Valid Entry
 		error(dedent`
-				Missing Requirements for root entry, & no list with list key ${listKey} detected in body:
+				Missing Requirements for root entry, & no list with list key '${listKey}' detected in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
@@ -629,10 +632,9 @@ async function parseTOMLWithRootToList<T>(
 }
 
 function getEndMessage(delimiter: string) {
-	if (data.isTest) {
-		return dedent`
-			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
+	const normal = dedent`
+			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/wiki/Part-2:-Maintainer-Information#62-create-changelog!
 			Also check that you have surrounded the TOML in '${delimiter}'!`;
-	}
-	return "Skipping...";
+	if (data.isTest) return normal;
+	return normal.concat("\nSkipping...");
 }

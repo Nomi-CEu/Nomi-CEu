@@ -21,8 +21,17 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 
 		if (data.commitFixes.has(commit.hash)) {
 			const fixUpInfo = data.commitFixes.get(commit.hash);
-			commit.message = fixUpInfo.newTitle;
-			commit.body = fixUpInfo.newBody;
+			if (fixUpInfo.newTitle) commit.message = fixUpInfo.newTitle;
+			if (fixUpInfo.newBody) {
+				switch (fixUpInfo.mode) {
+					case "REPLACE":
+						commit.body = fixUpInfo.newBody;
+						break;
+					case "ADDITION":
+						commit.body = commit.body.concat(`\n\n${fixUpInfo.newBody}`);
+						break;
+				}
+			}
 		}
 
 		if (parser.skipCallback(commit, commit.message, commit.body)) {

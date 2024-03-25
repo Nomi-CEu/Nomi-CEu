@@ -256,8 +256,9 @@ export interface ExpandedMessage {
 
 export interface FixUpInfo {
 	sha: string;
-	newTitle: string;
+	newTitle?: string;
 	newBody?: string;
+	mode: FixUpMode;
 }
 
 export interface ModInfo {
@@ -271,6 +272,8 @@ export interface ParsedModInfo {
 	info?: string;
 	details?: ChangelogMessage[];
 }
+
+export type FixUpMode = "REPLACE" | "ADDITION";
 
 export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release" | "Cutting Edge Build";
 
