@@ -83,14 +83,15 @@ export default class ChangelogData {
 	/**
 	 * Setups the state for a iteration. Init must be called first.
 	 */
-	setupIteration(compareTag: string): void {
+	async setupIteration(compareTag: string): Promise<void> {
 		this.since = compareTag;
+		this.compareTags = new Set<string>(await getTags(this.since));
 	}
 
 	/**
 	 * Resets the state for a future iteration. Init must be called first.
 	 */
-	async resetForIteration(): Promise<void> {
+	resetForIteration(): void {
 		// Reset all lists, except builder
 		this.commitList = [];
 
@@ -101,8 +102,6 @@ export default class ChangelogData {
 		this.modInfoList = new Map<number, ParsedModInfo>();
 
 		// Tags list is fine because the 'to' (Target) stays the same
-
-		// Regenerate 'since' (Compare) tags list
-		this.compareTags = new Set<string>(await getTags(this.since));
+		// Other Tags list is generated at setup
 	}
 }
