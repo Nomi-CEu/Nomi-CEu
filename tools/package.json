@@ -1,9 +1,9 @@
 {
-	"name": "nomifactory-buildtools",
+	"name": "nomi-ceu-build-tools",
 	"version": "1.2.2",
-	"description": "Nomifactory Server Builder.",
+	"description": "Nomifactory CEu Buildscript and Tools.",
 	"main": "gulpfile.js",
-	"author": "NotMyWing",
+	"author": "Nomi-CEu Team",
 	"license": "LGPL-3.0",
 	"devDependencies": {
 		"@octokit/rest": "^18.3.5",
@@ -52,10 +52,9 @@
 	"dependencies": {
 		"@actions/core": "^1.10.1",
 		"@egjs/list-differ": "^1.0.1",
-		"@iarna/toml": "^2.2.5",
-		"@types/iarna__toml": "^2.0.5",
 		"@types/json-stable-stringify-without-jsonify": "^1.0.1",
 		"dedent-js": "^1.0.1",
-		"json-stable-stringify-without-jsonify": "^1.0.1"
+		"json-stable-stringify-without-jsonify": "^1.0.1",
+		"toml-v1": "^1.0.0"
 	}
 }

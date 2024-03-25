@@ -12,7 +12,6 @@ import {
 } from "../../types/changelogTypes";
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
-import toml from "@iarna/toml";
 import {
 	combineKey,
 	combineList,
@@ -35,6 +34,7 @@ import {
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
 import { error } from "fancy-log";
+import { parse } from "toml-v1";
 
 let data: ChangelogData;
 
@@ -263,23 +263,92 @@ async function expandDetailsLevel(
 	indentation = indentationLevel,
 ): Promise<ChangelogMessage[]> {
 	const result: ChangelogMessage[] = [];
-	await parseTOMLWithRootToList<string>(
+	await parseTOMLWithRootToList<string | unknown[]>(
 		commitBody,
 		commitObject,
 		detailsKey,
 		detailsList,
 		(item) => !item,
 		async (item) => {
-			item = dedent(item).trim();
-			if (item.includes(detailsKey)) {
-				result.push(...(await expandDetailsLevel(item, commitObject, `${indentation}${indentationLevel}`)));
+			// Nested Details
+			if (Array.isArray(item)) {
+				await addDetailsLevel(commitBody, commitObject, item as unknown[], `${indentation}${indentationLevel}`, result);
+				return;
+			}
+			let string = item as string;
+			string = dedent(string).trim();
+
+			// Legacy Nested Details
+			if (string.includes(detailsKey)) {
+				result.push(...(await expandDetailsLevel(string, commitObject, `${indentation}${indentationLevel}`)));
 			} else {
-				result.push({ commitMessage: item, commitObject: commitObject, indentation: indentation });
+				result.push({ commitMessage: string, commitObject: commitObject, indentation: indentation });
 			}
 		},
 		(root) => root[detailsRoot] as string,
 	);
 	return result;
+}
+
+/**
+ * Adds Levels of Details through Arrays.
+ */
+async function addDetailsLevel(
+	commitBody: string,
+	commitObject: Commit,
+	details: unknown[],
+	indentation: string,
+	builder: ChangelogMessage[],
+) {
+	const endMessage = getEndMessage(detailsKey);
+	for (const detail of details) {
+		// Nested Details
+		if (Array.isArray(detail)) {
+			await addDetailsLevel(
+				commitBody,
+				commitObject,
+				detail as unknown[],
+				`${indentation}${indentationLevel}`,
+				builder,
+			);
+			continue;
+		}
+
+		// Transform into String
+		let detailString: string;
+		if (typeof detail !== "string") {
+			try {
+				detailString = detail.toString();
+			} catch (e) {
+				error(dedent`
+					Failed parsing Detail \`${detail}\` of Details Level:
+					\`\`\`
+					${details}\`\`\`
+					of commit object ${commitObject.hash} (${commitObject.message}).
+					The value could not be converted into a string.`);
+
+				if (commitObject.body && commitBody !== commitObject.body) {
+					error(dedent`
+						Original Body:
+						\`\`\`
+						${commitObject.body}\`\`\``);
+				}
+
+				error(`\n${endMessage}\n`);
+				if (data.isTest) throw e;
+				continue;
+			}
+		} else detailString = detail as string;
+
+		detailString = dedent(detailString).trim();
+
+		// Legacy Nested Details
+		if (detailString.includes(detailsKey)) {
+			builder.push(...(await expandDetailsLevel(detailString, commitObject, `${indentation}${indentationLevel}`)));
+		} else {
+			builder.push({ commitMessage: detailString, commitObject: commitObject, indentation: indentation });
+		}
+	}
 }
 
 /**
@@ -331,7 +400,7 @@ async function parseTOML<T>(
 			delimiters: delimiter,
 			engines: {
 				toml: (input): Record<string, unknown> => {
-					return toml.parse(input);
+					return parse(input) as Record<string, unknown>;
 				},
 			},
 			language: "toml",
