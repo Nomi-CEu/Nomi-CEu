@@ -41,7 +41,7 @@ async function createChangelog(): Promise<ChangelogData> {
 			if (iteration < tags.length - 1) {
 				// More to go
 				pushSeperator(data);
-				data.resetForIteration();
+				await data.resetForIteration();
 			}
 		}
 		return data;
