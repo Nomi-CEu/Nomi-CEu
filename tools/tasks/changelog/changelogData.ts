@@ -16,8 +16,11 @@ export default class ChangelogData {
 	// Map of a commit SHA to the commits which need to be added to its commit list.
 	combineList: Map<string, Commit[]>;
 
-	// Set of tags
+	// Set of tags before 'to' (Target)
 	tags: Set<string>;
+
+	// Set of tags before 'since' (Compare)
+	compareTags: Set<string>;
 
 	// Map of project IDs to info text and/or details
 	modInfoList: Map<number, ParsedModInfo>;
@@ -59,6 +62,7 @@ export default class ChangelogData {
 		this.combineList = new Map<string, Commit[]>();
 
 		this.tags = new Set<string>(await getTags(this.to));
+		this.compareTags = new Set<string>(await getTags(this.since));
 
 		this.modInfoList = new Map<number, ParsedModInfo>();
 	}
@@ -79,8 +83,9 @@ export default class ChangelogData {
 	/**
 	 * Setups the state for a iteration. Init must be called first.
 	 */
-	setupIteration(compareTag: string): void {
+	async setupIteration(compareTag: string): Promise<void> {
 		this.since = compareTag;
+		this.compareTags = new Set<string>(await getTags(this.since));
 	}
 
 	/**
@@ -96,6 +101,7 @@ export default class ChangelogData {
 
 		this.modInfoList = new Map<number, ParsedModInfo>();
 
-		// Tags list is fine because the `to` stays the same
+		// Tags list is fine because the 'to' (Target) stays the same
+		// Other Tags list is generated at setup
 	}
 }

@@ -9,10 +9,10 @@ import {
 	ModInfo,
 	ParsedModInfo,
 	Parser,
+	PriorityInfo,
 } from "../../types/changelogTypes";
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
-import toml from "@iarna/toml";
 import {
 	combineKey,
 	combineList,
@@ -31,15 +31,38 @@ import {
 	indentationLevel,
 	modInfoKey,
 	modInfoList,
+	priorityKey,
 } from "./definitions";
 import { findCategories, findSubCategory } from "./parser";
 import ChangelogData from "./changelogData";
 import { error } from "fancy-log";
+import { parse } from "toml-v1";
 
 let data: ChangelogData;
 
 export function specialParserSetup(inputData: ChangelogData): void {
 	data = inputData;
+}
+
+/**
+ * Reads a commit's priority.
+ */
+export async function parsePriority(commitBody: string, commitObject: Commit): Promise<number | undefined> {
+	if (!commitBody.includes(priorityKey)) return undefined;
+	const info = await parseTOML<PriorityInfo>(commitBody, commitObject, priorityKey);
+	if (!info) return undefined;
+
+	if (!info.priority) {
+		error(dedent`
+			Priority Info in body:
+			\`\`\`
+			${commitBody}\`\`\`
+			of commit object ${commitObject.hash} (${commitObject.message}) is missing priority info (key 'priority').`);
+		if (data.isTest) throw new Error("Failed to Parse Priority Info. See Above.");
+		return undefined;
+	}
+
+	return info.priority;
 }
 
 /**
@@ -58,6 +81,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is missing check info (key 'checks').`);
+		if (data.isTest) throw new Error("Failed to Parse Ignore Info. See Above.");
 		return undefined;
 	}
 
@@ -135,8 +159,9 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 		commit,
 		fixUpKey,
 		fixUpList,
-		(item) => !item.sha || !item.newTitle,
+		(item) => !item.sha || (!item.newTitle && !item.newBody),
 		async (item) => {
+			if (!item.mode) item.mode = "REPLACE"; // Default Mode is Replace (Legacy Compat)
 			// Only override if no other overrides, from newer commits, set
 			if (!data.commitFixes.has(item.sha)) data.commitFixes.set(item.sha, item);
 		},
@@ -145,6 +170,7 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 			// Must override, even if newer commits specified changes, as need to remove fixup data
 			data.commitFixes.set(commit.hash, {
 				sha: commit.hash,
+				mode: "REPLACE",
 				newTitle: commit.message,
 				// Replace "\r\n" (Caused by editing on GitHub) with "\n", as the output matter has this done.
 				newBody: commit.body.replace(/\r\n/g, "\n").replace(matter.matter.trim(), ""),
@@ -205,8 +231,9 @@ export async function parseExpand(commitBody: string, commitObject: Commit, pars
 		commitObject,
 		expandKey,
 		expandList,
-		(item) => !item.messageTitle,
+		(item) => !item.messageTitle && !item.messageBody,
 		async (item) => {
+			if (!item.messageTitle) item.messageTitle = commitObject.message;
 			const title = dedent(item.messageTitle);
 
 			if (item.messageBody) {
@@ -263,23 +290,92 @@ async function expandDetailsLevel(
 	indentation = indentationLevel,
 ): Promise<ChangelogMessage[]> {
 	const result: ChangelogMessage[] = [];
-	await parseTOMLWithRootToList<string>(
+	await parseTOMLWithRootToList<string | unknown[]>(
 		commitBody,
 		commitObject,
 		detailsKey,
 		detailsList,
 		(item) => !item,
 		async (item) => {
-			item = dedent(item).trim();
-			if (item.includes(detailsKey)) {
-				result.push(...(await expandDetailsLevel(item, commitObject, `${indentation}${indentationLevel}`)));
+			// Nested Details
+			if (Array.isArray(item)) {
+				await addDetailsLevel(commitBody, commitObject, item as unknown[], `${indentation}${indentationLevel}`, result);
+				return;
+			}
+			let string = item as string;
+			string = dedent(string).trim();
+
+			// Legacy Nested Details
+			if (string.includes(detailsKey)) {
+				result.push(...(await expandDetailsLevel(string, commitObject, `${indentation}${indentationLevel}`)));
 			} else {
-				result.push({ commitMessage: item, commitObject: commitObject, indentation: indentation });
+				result.push({ commitMessage: string, commitObject: commitObject, indentation: indentation });
 			}
 		},
 		(root) => root[detailsRoot] as string,
 	);
 	return result;
+}
+
+/**
+ * Adds Levels of Details through Arrays.
+ */
+async function addDetailsLevel(
+	commitBody: string,
+	commitObject: Commit,
+	details: unknown[],
+	indentation: string,
+	builder: ChangelogMessage[],
+) {
+	const endMessage = getEndMessage(detailsKey);
+	for (const detail of details) {
+		// Nested Details
+		if (Array.isArray(detail)) {
+			await addDetailsLevel(
+				commitBody,
+				commitObject,
+				detail as unknown[],
+				`${indentation}${indentationLevel}`,
+				builder,
+			);
+			continue;
+		}
+
+		// Transform into String
+		let detailString: string;
+		if (typeof detail !== "string") {
+			try {
+				detailString = detail.toString();
+			} catch (e) {
+				error(dedent`
+					Failed parsing Detail \`${detail}\` of Details Level:
+					\`\`\`
+					${details}\`\`\`
+					of commit object ${commitObject.hash} (${commitObject.message}).
+					The value could not be converted into a string.`);
+
+				if (commitObject.body && commitBody !== commitObject.body) {
+					error(dedent`
+						Original Body:
+						\`\`\`
+						${commitObject.body}\`\`\``);
+				}
+
+				error(`\n${endMessage}\n`);
+				if (data.isTest) throw e;
+				continue;
+			}
+		} else detailString = detail as string;
+
+		detailString = dedent(detailString).trim();
+
+		// Legacy Nested Details
+		if (detailString.includes(detailsKey)) {
+			builder.push(...(await expandDetailsLevel(detailString, commitObject, `${indentation}${indentationLevel}`)));
+		} else {
+			builder.push({ commitMessage: detailString, commitObject: commitObject, indentation: indentation });
+		}
+	}
 }
 
 /**
@@ -331,7 +427,7 @@ async function parseTOML<T>(
 			delimiters: delimiter,
 			engines: {
 				toml: (input): Record<string, unknown> => {
-					return toml.parse(input);
+					return parse(input) as Record<string, unknown>;
 				},
 			},
 			language: "toml",
@@ -473,7 +569,7 @@ async function parseTOMLWithRootToList<T>(
 		}
 		// No Valid Entry
 		error(dedent`
-				Missing Requirements for root entry, & no list with list key ${listKey} detected in body:
+				Missing Requirements for root entry, & no list with list key '${listKey}' detected in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
@@ -560,10 +656,9 @@ async function parseTOMLWithRootToList<T>(
 }
 
 function getEndMessage(delimiter: string) {
-	if (data.isTest) {
-		return dedent`
-			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/blob/main/CONTRIBUTING.md!
+	const normal = dedent`
+			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/wiki/Part-2:-Maintainer-Information#62-create-changelog!
 			Also check that you have surrounded the TOML in '${delimiter}'!`;
-	}
-	return "Skipping...";
+	if (data.isTest) return normal;
+	return normal.concat("\nSkipping...");
 }

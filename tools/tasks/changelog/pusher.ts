@@ -146,6 +146,8 @@ function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined,
 		const dateA = new Date(commitA.date);
 		const dateB = new Date(commitB.date);
 
+		// This is reversed, so higher priorities go on top
+		if (commitB.priority !== commitA.priority) return commitB.priority - commitA.priority;
 		// This is reversed, so the newest commits go on top
 		if (dateB.getTime() - dateA.getTime() !== 0) return dateB.getTime() - dateA.getTime();
 		if (backup) return backup(a, b);
@@ -162,7 +164,9 @@ export function sortCommitListReverse(list: Commit[]): void {
 		const dateA = new Date(a.date);
 		const dateB = new Date(b.date);
 
-		if (dateB.getTime() - dateA.getTime() !== 0) return dateA.getTime() - dateB.getTime();
+		// This is reversed, so higher priorities go on top
+		if (b.priority !== a.priority) return b.priority - a.priority; // Priority is still highest first
+		if (dateA.getTime() - dateB.getTime() !== 0) return dateA.getTime() - dateB.getTime();
 		return a.message.localeCompare(b.message);
 	});
 }
