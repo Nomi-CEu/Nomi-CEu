@@ -1,4 +1,13 @@
-import { Category, Commit, IgnoreCheck, Ignored, IgnoreLogic, Parser, SubCategory } from "../../types/changelogTypes";
+import {
+	Category,
+	Commit,
+	FixUpInfo,
+	IgnoreCheck,
+	Ignored,
+	IgnoreLogic,
+	Parser,
+	SubCategory
+} from "../../types/changelogTypes";
 import { modpackManifest } from "../../globals";
 import { parseCommitBody } from "./parser";
 import { parseFixUp } from "./specialParser";
@@ -137,9 +146,12 @@ const defaultParsingCallback = async (
 const fixupParsing: Parser = {
 	skipCallback: () => false,
 	// No need to care about message/body, never parse expand/details commits
-	itemCallback: (_parser, commit) => parseFixUp(commit),
+	itemCallback: (_parser, commit, _commitMessage: string, _commitBody?: string, fix?: FixUpInfo) =>
+		parseFixUp(commit, fix),
 	addCommitListCallback: () => false,
 	addSHACallback: () => false,
+	// Don't apply fixup if it is not meant to apply to fixes
+	applyFixCalback: (fix) => fix.changeFixes === undefined || fix.changeFixes === null || (fix.changeFixes as boolean),
 };
 
 const overridesParsing: Parser = {
