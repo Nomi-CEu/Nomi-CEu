@@ -77,6 +77,9 @@ recipes.addShaped(<enderio:item_liquid_conduit:1> * 4, [
 assembler.recipeBuilder().inputs([<minecraft:glass> * 3, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_liquid_conduit:1> * 8]).duration(80).EUt(16).buildAndRegister();
 
 chemical_reactor.recipeBuilder().inputs([<nomilabs:block_dust>]).fluidInputs([<liquid:water> * 1000]).outputs(<minecraft:clay>).EUt(15).duration(20).buildAndRegister();
+// Amount stays the same, as you are hydrating the dust, so fact that it is distilled doesn't improve amount of water
+// Duration is improved, because its distilled, its easier to react
+chemical_reactor.recipeBuilder().inputs([<nomilabs:block_dust>]).fluidInputs([<liquid:distilled_water> * 1000]).outputs(<minecraft:clay>).EUt(15).duration(10).buildAndRegister();
 
 
 recipes.remove(<meta_tile_entity:extruder.mv>);
