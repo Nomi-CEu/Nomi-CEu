@@ -21,18 +21,12 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 		if (data.shaList.has(commit.hash)) continue;
 
 		let savedFix: FixUpInfo = undefined;
-		console.log(`Parsing Commit ${commit.hash} with Parser ${parser.dirs}`)
-		console.log(Array.from(data.commitFixes.values()))
 		if (data.commitFixes.has(commit.hash)) {
 			const fixUpInfo = data.commitFixes.get(commit.hash);
 			if (!parser.applyFixCalback || parser.applyFixCalback(fixUpInfo)) {
 				applyFix(commit, fixUpInfo);
-				console.log("Applying Fix");
-				console.log(fixUpInfo);
 			} else {
 				savedFix = fixUpInfo;
-				console.log("Saving Fix");
-				console.log(fixUpInfo);
 			}
 		}
 
