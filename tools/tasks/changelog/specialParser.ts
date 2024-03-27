@@ -154,7 +154,6 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
  */
 export async function parseFixUp(commit: Commit, fix?: FixUpInfo): Promise<boolean> {
 	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
-	console.log(commit.hash, Array.from(data.commitFixes.values()), fix)
 	await parseTOMLWithRootToList<FixUpInfo>(
 		commit.body,
 		commit,
