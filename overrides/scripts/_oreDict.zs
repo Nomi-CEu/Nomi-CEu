@@ -2652,6 +2652,19 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookWA>.add(<metaitem:world_accelerator.ev>);
 <ore:questbookWA>.add(<metaitem:world_accelerator.iv>);
 
+<ore:questbookLathe>.add(<metaitem:lathe.lv>);
+<ore:questbookLathe>.add(<metaitem:lathe.mv>);
+
+<ore:questbookSingleMiner>.add(<metaitem:miner.lv>);
+<ore:questbookSingleMiner>.add(<metaitem:miner.mv>);
+<ore:questbookSingleMiner>.add(<metaitem:miner.hv>);
+
+<ore:questbookAutoclave>.add(<metaitem:autoclave.lv>);
+<ore:questbookAutoclave>.add(<metaitem:autoclave.mv>);
+<ore:questbookAutoclave>.add(<metaitem:autoclave.hv>);
+<ore:questbookAutoclave>.add(<metaitem:autoclave.ev>);
+<ore:questbookAutoclave>.add(<metaitem:autoclave.iv>);
+
 // Add All GT Super and Quantum Tanks (apart from creative)
 // Super Tanks
 <ore:questbookTanks>.add(<metaitem:super_tank.lv>);
