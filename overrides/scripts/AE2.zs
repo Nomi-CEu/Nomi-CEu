@@ -235,7 +235,7 @@ Inscriber.removeRecipe(<appliedenergistics2:material:15>);
 // Presses
 laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensRed>).outputs([<appliedenergistics2:material:14>]).EUt(120).duration(1600).buildAndRegister();
 laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensBlue>).outputs([<appliedenergistics2:material:13>]).EUt(120).duration(1600).buildAndRegister();
-laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<metaitem:lensDiamond>).outputs([<appliedenergistics2:material:19>]).EUt(120).duration(1600).buildAndRegister();
+laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensLightBlue>).outputs([<appliedenergistics2:material:19>]).EUt(120).duration(1600).buildAndRegister();
 laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensGreen>).outputs([<appliedenergistics2:material:15>]).EUt(120).duration(1600).buildAndRegister();
 laser_engraver.recipeBuilder().inputs([<metaitem:blockVanadiumSteel>]).notConsumable(<ore:craftingLensWhite>).outputs([<appliedenergistics2:material:21>]).EUt(120).duration(1600).buildAndRegister();
 recipes.addShapeless(<appliedenergistics2:part:120>, [<metaitem:boltSteel>]); 
