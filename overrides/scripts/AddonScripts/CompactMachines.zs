@@ -11,9 +11,9 @@ recipes.addShaped(<compactmachines3:psd>, [
 ]);
 
 recipes.addShaped(<compactmachines3:wallbreakable> * 16, [
-    [<metaitem:frameHslaSteel>, <metaitem:frameHslaSteel>, <metaitem:frameHslaSteel>],
-    [<metaitem:frameHslaSteel>, <metaitem:sensor.hv>, <metaitem:frameHslaSteel>],
-    [<metaitem:frameHslaSteel>, <metaitem:frameHslaSteel>, <metaitem:frameHslaSteel>]
+    [<ore:frameGtHslaSteel>, <ore:frameGtHslaSteel>, <ore:frameGtHslaSteel>],
+    [<ore:frameGtHslaSteel>, <metaitem:sensor.hv>, <ore:frameGtHslaSteel>],
+    [<ore:frameGtHslaSteel>, <ore:frameGtHslaSteel>, <ore:frameGtHslaSteel>]
 ]);
 
 assembler.recipeBuilder()
