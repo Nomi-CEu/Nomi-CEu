@@ -1,0 +1,340 @@
+{
+  "_README": "https://gitlab.com/CDAGaming/CraftPresence/-/wikis/home",
+  "_SOURCE": "https://gitlab.com/CDAGaming/CraftPresence",
+  "_schemaVersion": 6,
+  "_lastMCVersionId": 340,
+  "generalSettings": {
+    "detectATLauncherInstance": false,
+    "detectCurseManifest": false,
+    "detectMultiMCManifest": false,
+    "detectMCUpdaterInstance": false,
+    "detectTechnicPack": false,
+    "detectModrinthPack": false,
+    "detectBiomeData": false,
+    "detectDimensionData": true,
+    "detectWorldData": true,
+    "clientId": "1222869945398853733",
+    "defaultIcon": "nomi-ceu",
+    "enableJoinRequests": false,
+    "partyPrivacyLevel": 1,
+    "preferredClientLevel": 3,
+    "resetTimeOnInit": false,
+    "autoRegister": false
+  },
+  "biomeSettings": {
+    "fallbackBiomeIcon": "unknown",
+    "biomeData": {
+      "default": {
+        "textOverride": "Playing in {biome.name}"
+      }
+    }
+  },
+  "dimensionSettings": {
+    "fallbackDimensionIcon": "overworld",
+    "dimensionData": {
+      "the_nether": {
+        "textOverride": "In the {dimension.name}",
+        "iconOverride": "the_nether",
+        "data": {
+          "enabled": true,
+          "useAsMain": false,
+          "details": "",
+          "gameState": "",
+          "largeImageKey": "",
+          "largeImageText": "",
+          "smallImageKey": "",
+          "smallImageText": "",
+          "startTimestamp": "",
+          "endTimestamp": "",
+          "buttons": {}
+        }
+      },
+      "the_end": {
+        "textOverride": "In the {dimension.name}",
+        "iconOverride": "the_end",
+        "data": {
+          "enabled": true,
+          "useAsMain": false,
+          "details": "",
+          "gameState": "",
+          "largeImageKey": "",
+          "largeImageText": "",
+          "smallImageKey": "",
+          "smallImageText": "",
+          "startTimestamp": "",
+          "endTimestamp": "",
+          "buttons": {}
+        }
+      },
+      "space": {
+        "textOverride": "In the {dimension.name}",
+        "iconOverride": "space_warp",
+        "data": {
+          "enabled": true,
+          "useAsMain": false,
+          "details": "",
+          "gameState": "",
+          "largeImageKey": "",
+          "largeImageText": "",
+          "smallImageKey": "",
+          "smallImageText": "",
+          "startTimestamp": "",
+          "endTimestamp": "",
+          "buttons": {}
+        }
+      },
+      "planet": {
+        "textOverride": "In the {dimension.name}",
+        "iconOverride": "planet",
+        "data": {
+          "enabled": true,
+          "useAsMain": false,
+          "details": "",
+          "gameState": "",
+          "largeImageKey": "",
+          "largeImageText": "",
+          "smallImageKey": "",
+          "smallImageText": "",
+          "startTimestamp": "",
+          "endTimestamp": "",
+          "buttons": {}
+        }
+      },
+      "jed_surface_0": {
+        "textOverride": "In the {dimension.name}",
+        "iconOverride": "void_world",
+        "data": {
+          "enabled": true,
+          "useAsMain": false,
+          "details": "",
+          "gameState": "",
+          "largeImageKey": "",
+          "largeImageText": "",
+          "smallImageKey": "",
+          "smallImageText": "",
+          "startTimestamp": "",
+          "endTimestamp": "",
+          "buttons": {}
+        }
+      },
+      "jed_surface_loaded_0": {
+        "textOverride": "In the {dimension.name}",
+        "iconOverride": "void_world",
+        "data": {
+          "enabled": true,
+          "useAsMain": false,
+          "details": "",
+          "gameState": "",
+          "largeImageKey": "",
+          "largeImageText": "",
+          "smallImageKey": "",
+          "smallImageText": "",
+          "startTimestamp": "",
+          "endTimestamp": "",
+          "buttons": {}
+        }
+      },
+      "default": {
+        "textOverride": "In the {dimension.name}"
+      }
+    }
+  },
+  "serverSettings": {
+    "fallbackServerIcon": "nomi-ceu",
+    "fallbackServerName": "Nomi-CEu Server",
+    "fallbackServerMotd": "Nomifactory CEu Server",
+    "serverData": {
+      "default": {
+        "textOverride": "Playing Multiplayer ({custom.mode_formatted} Mode)"
+      }
+    }
+  },
+  "statusMessages": {
+    "mainMenuData": {
+      "textOverride": "In the Main Menu"
+    },
+    "loadingData": {
+      "textOverride": "Loading...",
+      "iconOverride": "loading",
+      "data": {
+        "enabled": true,
+        "useAsMain": false,
+        "details": "",
+        "gameState": "",
+        "largeImageKey": "loading",
+        "largeImageText": "",
+        "smallImageKey": "nomi-ceu",
+        "smallImageText": "",
+        "startTimestamp": "",
+        "endTimestamp": "",
+        "buttons": {
+          "default": {
+            "label": "Example Text",
+            "url": "https://google.com"
+          }
+        }
+      }
+    },
+    "lanData": {
+      "textOverride": "Playing on LAN ({custom.mode_formatted} Mode)"
+    },
+    "singleplayerData": {
+      "textOverride": "Playing Singleplayer ({custom.mode_formatted} Mode)",
+      "data": {
+        "enabled": true,
+        "useAsMain": false,
+        "details": "",
+        "gameState": "",
+        "largeImageKey": "",
+        "largeImageText": "",
+        "smallImageKey": "",
+        "smallImageText": "",
+        "startTimestamp": "",
+        "endTimestamp": "",
+        "buttons": {
+          "default": {
+            "label": "Example Text",
+            "url": "https://google.com"
+          }
+        }
+      }
+    }
+  },
+  "advancedSettings": {
+    "enablePerGui": false,
+    "enablePerItem": false,
+    "enablePerEntity": false,
+    "formatWords": true,
+    "debugMode": false,
+    "verboseMode": false,
+    "refreshRate": 2,
+    "allowPlaceholderPreviews": false,
+    "guiSettings": {
+      "fallbackGuiIcon": "unknown",
+      "guiData": {
+        "default": {
+          "textOverride": "In {screen.name}"
+        }
+      }
+    },
+    "itemMessages": {
+      "default": "Holding {item.message.holding}"
+    },
+    "entitySettings": {
+      "fallbackEntityIcon": "unknown",
+      "targetData": {
+        "default": {
+          "textOverride": "Targeting {entity.target.name}"
+        }
+      },
+      "ridingData": {
+        "default": {
+          "textOverride": "Riding {entity.riding.name}"
+        }
+      }
+    },
+    "allowEndpointIcons": true,
+    "serverIconEndpoint": "https://api.mcsrvstat.us/icon/{server.address.short}",
+    "playerSkinEndpoint": "https://mc-heads.net/avatar/{getOrDefault(player.uuid.short, player.name)}",
+    "allowDuplicatePackets": false,
+    "maxConnectionAttempts": 10
+  },
+  "accessibilitySettings": {
+    "tooltipBackground": {
+      "start": {
+        "red": 16,
+        "green": 0,
+        "blue": 16,
+        "alpha": 240
+      }
+    },
+    "tooltipBorder": {
+      "start": {
+        "red": 80,
+        "green": 0,
+        "blue": 255,
+        "alpha": 80
+      },
+      "end": {
+        "red": 40,
+        "green": 0,
+        "blue": 127,
+        "alpha": 80
+      }
+    },
+    "guiBackground": {
+      "start": {
+        "red": 64,
+        "green": 64,
+        "blue": 64,
+        "alpha": 255
+      },
+      "texLocation": "minecraft:textures/gui/options_background.png"
+    },
+    "altGuiBackground": {
+      "start": {
+        "red": 16,
+        "green": 16,
+        "blue": 16,
+        "alpha": 192
+      },
+      "end": {
+        "red": 16,
+        "green": 16,
+        "blue": 16,
+        "alpha": 208
+      }
+    },
+    "languageId": "en_us",
+    "stripTranslationColors": false,
+    "stripTranslationFormatting": false,
+    "stripExtraGuiElements": false,
+    "renderTooltips": true,
+    "configKeyCode": 0
+  },
+  "displaySettings": {
+    "presenceData": {
+      "enabled": true,
+      "useAsMain": false,
+      "details": "{getFirst(menu.message)}",
+      "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
+      "largeImageKey": "{getFirst(menu.icon, general.icon)}",
+      "largeImageText": "{getFirst(menu.message, dimension.message)}",
+      "smallImageKey": "{getFirst(dimension.icon, server.icon)}",
+      "smallImageText": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
+      "startTimestamp": "{data.general.time}",
+      "endTimestamp": "",
+      "buttons": {
+        "default": {
+          "label": "Example Text",
+          "url": "https://google.com"
+        },
+        "github": {
+          "label": "Nomi-CEu GitHub",
+          "url": "https://github.com/Nomi-CEu/Nomi-CEu"
+        },
+        "discord": {
+          "label": "Nomi-CEu Discord",
+          "url": "https://discord.com/invite/zwQzqP8b6q"
+        }
+      }
+    },
+    "dynamicIcons": {
+      "default": "https://via.placeholder.com/256.png"
+    },
+    "dynamicVariables": {
+      "default": "Example Text",
+      "mods": "{general.mods} Mod(s)",
+      "player_info_coordinate": "At {player.position.x}, {player.position.z}",
+      "players": "{server.players.current} / {server.players.max} Players",
+      "player_info_in": "({custom.player_info.health})",
+      "player_info_items": "Items: {item.main_hand.message}",
+      "player_info_out": "As {player.name}",
+      "player_info_health": "Health: {player.health.current}/{player.health.max}",
+      "world_info": "On {world.name}",
+      "pack": "{pack.name}",
+      "mode": "{executeMethod('io.sommers.packmode.PMConfig', null, 'getPackMode')}",
+      "mode_formatted": "{executeMethod('org.apache.commons.lang3.StringUtils', null, 'capitalize', 'java.lang.String', custom.mode)}"
+    }
+  }
+}
