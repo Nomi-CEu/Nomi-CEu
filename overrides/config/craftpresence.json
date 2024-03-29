@@ -300,7 +300,7 @@
       "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
       "largeImageKey": "{getFirst(menu.icon, general.icon)}",
       "largeImageText": "{getFirst(menu.message, dimension.message)}",
-      "smallImageKey": "{getFirst(dimension.icon, server.icon)}",
+      "smallImageKey": "",
       "smallImageText": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
       "startTimestamp": "{data.general.time}",
       "endTimestamp": "",
