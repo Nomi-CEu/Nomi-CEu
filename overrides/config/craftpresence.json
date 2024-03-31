@@ -145,7 +145,7 @@
     "fallbackServerMotd": "Nomifactory CEu Server",
     "serverData": {
       "default": {
-        "textOverride": "Playing Multiplayer ({custom.mode_formatted} Mode)"
+        "textOverride": "Playing Multiplayer ({custom.mode} Mode)"
       }
     }
   },
@@ -176,10 +176,10 @@
       }
     },
     "lanData": {
-      "textOverride": "Playing on LAN ({custom.mode_formatted} Mode)"
+      "textOverride": "Playing on LAN ({custom.mode} Mode)"
     },
     "singleplayerData": {
-      "textOverride": "Playing Singleplayer ({custom.mode_formatted} Mode)",
+      "textOverride": "Playing Singleplayer ({custom.mode} Mode)",
       "data": {
         "enabled": true,
         "useAsMain": false,
@@ -204,7 +204,7 @@
     "enablePerGui": false,
     "enablePerItem": false,
     "enablePerEntity": false,
-    "formatWords": true,
+    "formatWords": false,
     "debugMode": false,
     "verboseMode": false,
     "refreshRate": 2,
@@ -299,9 +299,9 @@
       "details": "{getFirst(menu.message)}",
       "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
       "largeImageKey": "{getFirst(menu.icon, general.icon)}",
-      "largeImageText": "{getFirst(menu.message, dimension.message)}",
-      "smallImageKey": "",
-      "smallImageText": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
+      "largeImageText": "Playing {custom.windowTitle}",
+      "smallImageKey": "{custom.tierSlug}",
+      "smallImageText": "Stage: {custom.tierName}",
       "startTimestamp": "{data.general.time}",
       "endTimestamp": "",
       "buttons": {
@@ -333,8 +333,11 @@
       "player_info_health": "Health: {player.health.current}/{player.health.max}",
       "world_info": "On {world.name}",
       "pack": "{pack.name}",
-      "mode": "{executeMethod('io.sommers.packmode.PMConfig', null, 'getPackMode')}",
-      "mode_formatted": "{executeMethod('org.apache.commons.lang3.StringUtils', null, 'capitalize', 'java.lang.String', custom.mode)}"
+      "mode": "{executeMethod('com.nomiceu.nomilabs.util.LabsModeHelper', null, 'getFormattedMode')}",
+      "tierSlug": "{executeMethod('com.nomiceu.nomilabs.integration.betterquesting.LabsTierHelper', null, 'getTierSlug')}",
+      "tierName": "{executeMethod('com.nomiceu.nomilabs.integration.betterquesting.LabsTierHelper', null, 'getTierName')}",
+      "windowCreated": "{executeMethod('org.lwjgl.opengl.Display', null, 'isCreated')}",
+      "windowTitle": "{custom.windowCreated ? executeMethod('org.lwjgl.opengl.Display', null, 'getTitle') : ''}"
     }
   }
 }
