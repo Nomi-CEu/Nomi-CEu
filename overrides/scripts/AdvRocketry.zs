@@ -160,25 +160,8 @@ makeShaped("pauto_encoder",
 		H: <packagedauto:recipe_holder>,        // Recipe Holder
 		T: <ore:plateTitanium>,   // Titanium Plate
 		C: <ore:circuitEv>,  // T4 Circuit
-		X: <ae2stuff:encoder>,    // AE2STuff Pattern Encoder
+		X: <meta_tile_entity:hull.hv>,    // HV Machine Hull
 	});
-
-recipes.remove(<ae2stuff:encoder>);
-makeShaped("ae2stuff_encoder",
-	<ae2stuff:encoder>, [
-		"STS",
-		"AXF",
-		"SCS",
-	], {
-		S: <ore:plateStainlessSteel>,         // Stainless Steel Plate
-		T: <appliedenergistics2:part:340>,    // ME Pattern Terminal
-		F: <appliedenergistics2:material:43>, // Formation Core
-		A: <appliedenergistics2:material:44>, // Annihilation Core
-		M: <packagedauto:me_package_component>, // ME Packaging Component
-		C: <ore:circuitHv>,               // T4 Circuit
-		X: <meta_tile_entity:hull.hv>,              // HV Machine Hull
-	});
-
 
 recipes.remove(<packagedauto:me_package_component>);
 makeShaped("pauto_me_package_component",
