@@ -763,6 +763,6 @@ mods.gregtech.assembly_line.recipeBuilder()
             .buildAndRegister()
 
 //JEI
-mods.jei.JEI.removeAndHide(item('appliedenergistics2:material:0'))
+mods.jei.removeAndHide(item('appliedenergistics2:material:0'))
 
 //Idk how to do tooltips
