@@ -713,7 +713,58 @@ crafting.shapedBuilder()
     .key('D', ore('circuitEv'))
     .replace().register()
 
-//nae2
+//1k Fluid Storage
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:material:54'))
+    .matrix('GPG',
+            'PCP',
+            'GPG')
+    .key('G', item('minecraft:glass'))
+    .key('P', metaitem('plateLapis'))
+    .key('C', ore('circuitLv'))
+    .replace().register()
+
+//4k Fluid Storage
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:material:55'))
+    .matrix('ABA',
+            'CDC',
+            'ACA')
+    .key('A', item('minecraft:glass'))
+    .key('B', item('appliedenergistics2:material:22'))
+    .key('C', item('appliedenergistics2:material:54'))
+    .key('D', ore('circuitMv'))
+    .replace().register()
+
+//16k Fluid Storage
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:material:56'))
+    .matrix('ABA',
+            'CDC',
+            'ACA')
+    .key('A', item('minecraft:glass'))
+    .key('B', item('appliedenergistics2:material:24'))
+    .key('C', item('appliedenergistics2:material:55'))
+    .key('D', ore('circuitHv'))
+    .replace().register()
+
+//64k Fluid Storage
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:material:57'))
+    .matrix('ABA',
+            'CDC',
+            'ACA')
+    .key('A', item('appliedenergistics2:material:22'))
+    .key('B', item('appliedenergistics2:material:24'))
+    .key('C', item('appliedenergistics2:material:56'))
+    .key('D', ore('circuitEv'))
+    .replace().register()
+
+
+
+
+
+// NAE2
 
 //256k Storage
 crafting.removeByOutput(item('nae2:material:1'))
@@ -738,7 +789,7 @@ mods.gregtech.assembly_line.recipeBuilder()
             .EUt(30720)
             .buildAndRegister()
 
-//4096k Storage'
+//4096k Storage
 crafting.removeByOutput(item('nae2:material:3'))
 
 mods.gregtech.assembly_line.recipeBuilder()
@@ -761,6 +812,56 @@ mods.gregtech.assembly_line.recipeBuilder()
 			.duration(600)
             .EUt(122880)
             .buildAndRegister()
+
+//256k Fluid Storage
+crafting.removeByOutput(item('nae2:material:5'))
+
+mods.gregtech.assembly_line.recipeBuilder()
+	.outputs(item('nae2:material:5'))
+    .inputs(metaitem('field.generator.lv'), ore('circuitIv'), item('appliedenergistics2:material:22'))
+    .fluidInputs(fluid('soldering_alloy') * 144)
+	.duration(200)
+    .EUt(15360)
+    .buildAndRegister()
+
+//1024k Fluid Storage
+crafting.removeByOutput(item('nae2:material:6'))
+
+mods.gregtech.assembly_line.recipeBuilder()
+	.outputs(item('nae2:material:6'))
+    .inputs(metaitem('field.generator.mv'), ore('circuitLuv'), item('nae2:material:5'))
+    .fluidInputs(fluid('soldering_alloy') * 144)
+    .scannerResearch(b -> b.researchStack(item('nae2:material:5')))
+	.duration(200)
+    .EUt(30720)
+    .buildAndRegister()
+
+//4096k Fluid Storage'
+crafting.removeByOutput(item('nae2:material:7'))
+
+mods.gregtech.assembly_line.recipeBuilder()
+	.outputs(item('nae2:material:7'))
+    .inputs(metaitem('field.generator.hv'), ore('circuitZpm'), item('nae2:material:6'))
+    .fluidInputs(fluid('soldering_alloy') * 288)
+    .stationResearch(b -> b.researchStack(metaitem('quantum_tank.iv')).CWUt(16))
+	.duration(400)
+    .EUt(61440)
+    .buildAndRegister()
+
+//16384k Fluid Storage
+crafting.removeByOutput(item('nae2:material:8'))
+
+mods.gregtech.assembly_line.recipeBuilder()
+    .outputs(item('nae2:material:8'))
+	.inputs(metaitem('field.generator.ev'), ore('circuitUv'), item('nae2:material:7'))
+    .fluidInputs(fluid('soldering_alloy') * 576)
+    .stationResearch(b -> b.researchStack(metaitem('quantum_tank.luv')).CWUt(32))
+	.duration(600)
+    .EUt(122880)
+    .buildAndRegister()
+
+
+
 
 //JEI
 mods.jei.removeAndHide(item('appliedenergistics2:material:0'))
