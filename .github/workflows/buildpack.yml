@@ -136,13 +136,14 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload All Files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Built Pack
           path: |
             ./build/*.zip
             ./build/*.md
           if-no-files-found: error
+          compression-level: 0
 
   makeNames:
     name: Make Artifact Names (${{ inputs.tag }})
@@ -258,11 +259,12 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
           
       - name: Upload Client Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.makeNames.outputs.client }}
           path: ./build/client/**/*
           if-no-files-found: error
+          compression-level: 9
 
   buildServer:
     name: Build Pack Server (${{ inputs.tag }})
@@ -322,11 +324,12 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload Server Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.makeNames.outputs.server }}
           path: ./build/server/**/*
           if-no-files-found: error
+          compression-level: 9
 
   buildLang:
     name: Build Pack Lang and Changelogs (${{ inputs.tag }})
@@ -386,15 +389,17 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload Lang Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.makeNames.outputs.lang }}
           path: ./build/lang/**/*
           if-no-files-found: error
+          compression-level: 9
 
       - name: Upload Changelogs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Changelogs
           path: ./build/*.md
           if-no-files-found: error
+          compression-level: 9

@@ -118,11 +118,12 @@ jobs:
           create_branch: true
 
       - name: Upload Changelog
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Changelogs
           path: |
             ./CHANGELOG.md
             ./CHANGELOG_CF.md
           if-no-files-found: error
+          compression-level: 9
         
