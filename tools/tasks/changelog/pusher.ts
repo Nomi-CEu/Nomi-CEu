@@ -13,6 +13,15 @@ export default async function pushAll(inputData: ChangelogData): Promise<void> {
 	await pushChangelog(inputData);
 }
 
+export async function pushSetup(): Promise<void> {
+	octokit = new Octokit({
+		auth: process.env.GITHUB_TOKEN,
+	});
+
+	// Save Issue/PR Info to Cache
+	await getNewestIssueURLs(octokit);
+}
+
 export function pushTitle(inputData: ChangelogData): void {
 	data = inputData;
 
@@ -40,13 +49,6 @@ export function pushTitle(inputData: ChangelogData): void {
 
 export async function pushChangelog(inputData: ChangelogData): Promise<void> {
 	data = inputData;
-
-	octokit = new Octokit({
-		auth: process.env.GITHUB_TOKEN,
-	});
-
-	// Save Issue/PR Info to Cache
-	await getNewestIssueURLs(octokit);
 
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
@@ -119,6 +121,7 @@ async function pushCategory(category: Category) {
 			hasValues = true;
 		}
 	}
+	await transformAllIssueURLs(categoryLog);
 	if (hasValues) {
 		// Push Title
 		data.builder.push(`## ${category.categoryName}:`);
@@ -179,10 +182,7 @@ export function sortCommitListReverse(list: Commit[]): void {
  */
 async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): Promise<string> {
 	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
-	let message = changelogMessage.commitMessage.trim();
-
-	// Transform PR and/or Issue tags into a link.
-	message = await transformTags(message);
+	const message = changelogMessage.commitMessage.trim();
 
 	if (changelogMessage.specialFormatting)
 		return changelogMessage.specialFormatting.formatting(
@@ -241,9 +241,25 @@ function formatCommit(commit: Commit): string {
 }
 
 /**
+ * Transforms PR/Issue Tags in all strings of the generated changelog.
+ * @param changelog The list to transform all PR/Issue Tags of.
+ */
+async function transformAllIssueURLs(changelog: string[]) {
+	const promises: Promise<string>[] = [];
+	for (let i = 0; i < changelog.length; i++) {
+		const categoryFormatted = changelog[i];
+		// Transform PR and/or Issue tags into a link.
+		promises.push(transformTags(categoryFormatted).then((categoryTransformed) => (changelog[i] = categoryTransformed)));
+	}
+	// Apply all Link Changes
+	await Promise.all(promises);
+}
+
+/**
  * Transforms PR/Issue Tags into Links.
  */
 async function transformTags(message: string): Promise<string> {
+	const promises: Promise<string>[] = [];
 	if (message.search(/#\d+/) !== -1) {
 		const matched = message.match(/#\d+/g);
 		for (const match of matched) {
@@ -251,11 +267,11 @@ async function transformTags(message: string): Promise<string> {
 			const digits = Number.parseInt(match.match(/\d+/)[0]);
 
 			// Get PR/Issue Info (PRs are listed in the Issue API Endpoint)
-			const url = await getIssueURL(digits, octokit);
-			if (url) {
-				message = message.replace(match, `[#${digits}](${url})`);
-			}
+			promises.push(getIssueURL(digits, octokit).then((url) => message.replace(match, `[#${digits}](${url})`)));
 		}
 	}
+
+	// Resolve all Issue URL Replacements
+	await Promise.all(promises);
 	return message;
 }

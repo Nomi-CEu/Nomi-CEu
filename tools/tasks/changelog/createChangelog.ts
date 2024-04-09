@@ -9,7 +9,7 @@ import { parsers } from "./definitions";
 import parse from "./parser";
 import { specialParserSetup } from "./specialParser";
 import generateModChanges from "./generateModChanges";
-import pushAll, { pushChangelog, pushSeperator, pushTitle } from "./pusher";
+import pushAll, { pushChangelog, pushSeperator, pushSetup, pushTitle } from "./pusher";
 import log from "fancy-log";
 
 /**
@@ -19,6 +19,7 @@ async function createChangelog(): Promise<ChangelogData> {
 	const data: ChangelogData = new ChangelogData();
 
 	await data.init();
+	await pushSetup();
 
 	// Handle Iterations
 	if (data.shouldIterate()) {

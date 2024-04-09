@@ -453,7 +453,6 @@ makeExtremeRecipe9(<nomilabs:eternalcatalyst>,
       J : <moreplates:empowered_palis_gear>,
       K : <moreplates:empowered_restonia_gear>,
       L : <moreplates:empowered_void_gear> });
-<nomilabs:eternalcatalyst>.addTooltip(format.darkGray(format.italic("Gaze into the Abyss...")));
 
 
 ////////////////////////// Infinity Ingot ///////////////////////
@@ -522,8 +521,6 @@ mods.extendedcrafting.TableCrafting.addShapeless(<nomilabs:ultimate_gem>,
      <redstonearsenal:material:160>,
      <minecraft:diamond>,
      <thermalfoundation:material:895>]);
-<nomilabs:ultimate_gem>.addTooltip(format.yellow("Recipe is shapeless."));
-
 
 
 
@@ -869,7 +866,6 @@ mods.extendedcrafting.TableCrafting.addShapeless(<nomilabs:ultimate_generator>,
 <meta_tile_entity:large_turbine.steam>, <meta_tile_entity:steam_turbine.lv>, xu13, xu12, xu11, xu10, xu09, <meta_tile_entity:gas_turbine.hv>, <meta_tile_entity:large_turbine.plasma>,
 <solarflux:solar_panel_1>, <solarflux:solar_panel_4>, <meta_tile_entity:steam_turbine.mv>, <meta_tile_entity:steam_turbine.hv>, <meta_tile_entity:large_turbine.gas>, <meta_tile_entity:gas_turbine.lv>, <meta_tile_entity:gas_turbine.mv>, <solarflux:solar_panel_chaotic>, <solarflux:solar_panel_draconic>,
 <solarflux:solar_panel_2>, <solarflux:solar_panel_3>, <solarflux:solar_panel_5>, <solarflux:solar_panel_6>, <extrautils2:passivegenerator>, <solarflux:solar_panel_7>, <solarflux:solar_panel_8>, <solarflux:solar_panel_wyvern>, <solarflux:solar_panel_neutronium>]);
-<nomilabs:ultimate_generator>.addTooltip(format.yellow("Recipe is shapeless."));
 
 
 //Ultimate Power Storage
