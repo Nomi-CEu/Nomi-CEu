@@ -6,7 +6,7 @@ import {
 	Ignored,
 	IgnoreLogic,
 	Parser,
-	SubCategory
+	SubCategory,
 } from "../../types/changelogTypes";
 import { modpackManifest } from "../../globals";
 import { parseCommitBody } from "./parser";
