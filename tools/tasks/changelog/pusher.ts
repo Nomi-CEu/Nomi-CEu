@@ -3,11 +3,10 @@ import { categories, defaultIndentation } from "./definitions";
 import { Category, ChangelogMessage, Commit } from "../../types/changelogTypes";
 import { repoLink } from "./definitions";
 import { Octokit } from "@octokit/rest";
-import { getIssueURL, getNewestIssueURLs, isEnvVariableSet } from "../../util/util";
-import log from "fancy-log";
+import { getIssueURL, getNewestIssueURLs } from "../../util/util";
 
 let data: ChangelogData;
-let octokit: Octokit | undefined;
+let octokit: Octokit;
 
 export default async function pushAll(inputData: ChangelogData): Promise<void> {
 	pushTitle(inputData);
@@ -15,15 +14,12 @@ export default async function pushAll(inputData: ChangelogData): Promise<void> {
 }
 
 export async function pushSetup(): Promise<void> {
-	if (isEnvVariableSet("GITHUB_TOKEN")) {
-		octokit = new Octokit({
-			auth: process.env.GITHUB_TOKEN,
-		});
-	}
+	octokit = new Octokit({
+		auth: process.env.GITHUB_TOKEN,
+	});
 
 	// Save Issue/PR Info to Cache
-	if (octokit) await getNewestIssueURLs(octokit);
-	else log("Skipping Transforming Issue/PR URLs! 'GITHUB_TOKEN' Not Set!");
+	await getNewestIssueURLs(octokit);
 }
 
 export function pushTitle(inputData: ChangelogData): void {
@@ -125,7 +121,7 @@ async function pushCategory(category: Category) {
 			hasValues = true;
 		}
 	}
-	if (octokit) await transformAllIssueURLs(categoryLog);
+	await transformAllIssueURLs(categoryLog);
 	if (hasValues) {
 		// Push Title
 		data.builder.push(`## ${category.categoryName}:`);
@@ -263,8 +259,6 @@ async function transformAllIssueURLs(changelog: string[]) {
  * Transforms PR/Issue Tags into Links.
  */
 async function transformTags(message: string): Promise<string> {
-	if (!octokit) return message;
-
 	const promises: Promise<string>[] = [];
 	if (message.search(/#\d+/) !== -1) {
 		const matched = message.match(/#\d+/g);
