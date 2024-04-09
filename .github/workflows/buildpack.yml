@@ -96,7 +96,7 @@ jobs:
           ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
@@ -167,7 +167,7 @@ jobs:
           ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
@@ -219,7 +219,7 @@ jobs:
           ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
@@ -284,7 +284,7 @@ jobs:
           ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
@@ -349,7 +349,7 @@ jobs:
           ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
