@@ -107,9 +107,9 @@ jobs:
           restore-keys: ${{ runner.os }}-bunny-
 
       - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -178,9 +178,9 @@ jobs:
           restore-keys: ${{ runner.os }}-bunny-
 
       - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -230,9 +230,9 @@ jobs:
           restore-keys: ${{ runner.os }}-bunny-
 
       - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -295,9 +295,9 @@ jobs:
           restore-keys: ${{ runner.os }}-bunny-
 
       - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -360,9 +360,9 @@ jobs:
           restore-keys: ${{ runner.os }}-bunny-
 
       - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
