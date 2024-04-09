@@ -14,6 +14,18 @@ export default async function pushAll(inputData: ChangelogData): Promise<void> {
 	await pushChangelog(inputData);
 }
 
+export async function pushSetup(): Promise<void> {
+	if (isEnvVariableSet("GITHUB_TOKEN")) {
+		octokit = new Octokit({
+			auth: process.env.GITHUB_TOKEN,
+		});
+	}
+
+	// Save Issue/PR Info to Cache
+	if (octokit) await getNewestIssueURLs(octokit);
+	else log("Skipping Transforming Issue/PR URLs! 'GITHUB_TOKEN' Not Set!");
+}
+
 export function pushTitle(inputData: ChangelogData): void {
 	data = inputData;
 
@@ -41,16 +53,6 @@ export function pushTitle(inputData: ChangelogData): void {
 
 export async function pushChangelog(inputData: ChangelogData): Promise<void> {
 	data = inputData;
-
-	if (isEnvVariableSet("GITHUB_TOKEN")) {
-		octokit = new Octokit({
-			auth: process.env.GITHUB_TOKEN,
-		});
-	}
-
-	// Save Issue/PR Info to Cache
-	if (octokit) await getNewestIssueURLs(octokit);
-	else log("Skipping Transforming Issue/PR URLs! 'GITHUB_TOKEN' Not Set!");
 
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
@@ -123,16 +125,7 @@ async function pushCategory(category: Category) {
 			hasValues = true;
 		}
 	}
-	const promises: Promise<string>[] = [];
-	for (let i = 0; i < categoryLog.length; i++) {
-		const categoryFormatted = categoryLog[i];
-		// Transform PR and/or Issue tags into a link.
-		promises.push(
-			transformTags(categoryFormatted).then((categoryTransformed) => (categoryLog[i] = categoryTransformed)),
-		);
-	}
-	// Apply all Link Changes
-	await Promise.all(promises);
+	if (octokit) await transformAllIssueURLs(categoryLog);
 	if (hasValues) {
 		// Push Title
 		data.builder.push(`## ${category.categoryName}:`);
@@ -249,6 +242,21 @@ function formatCommit(commit: Commit): string {
 	const shortSHA = commit.hash.substring(0, 7);
 
 	return `* [\`${shortSHA}\`](${repoLink}commit/${commit.hash}): ${formattedCommit}`;
+}
+
+/**
+ * Transforms PR/Issue Tags in all strings of the generated changelog.
+ * @param changelog The list to transform all PR/Issue Tags of.
+ */
+async function transformAllIssueURLs(changelog: string[]) {
+	const promises: Promise<string>[] = [];
+	for (let i = 0; i < changelog.length; i++) {
+		const categoryFormatted = changelog[i];
+		// Transform PR and/or Issue tags into a link.
+		promises.push(transformTags(categoryFormatted).then((categoryTransformed) => (changelog[i] = categoryTransformed)));
+	}
+	// Apply all Link Changes
+	await Promise.all(promises);
 }
 
 /**
