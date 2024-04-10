@@ -21,11 +21,12 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: peter-murray/workflow-application-token-action@v2.1.0
+        uses: peter-murray/workflow-application-token-action@v3
         with:
           application_id: ${{ secrets.APP_ID }}
           application_private_key: ${{ secrets.APP_KEY }}
           organization: Nomi-CEu
+          revoke_token: true
 
       - name: Checkout Tag
         uses: actions/checkout@v4
@@ -34,7 +35,7 @@ jobs:
           ref: ${{ inputs.tag }}
 
       - name: Restore Cached Files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
@@ -45,9 +46,9 @@ jobs:
           restore-keys: ${{ runner.os }}-bunny-
 
       - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -64,7 +65,7 @@ jobs:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Download Built Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: Built Pack
           path: ./build/

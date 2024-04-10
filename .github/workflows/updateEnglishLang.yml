@@ -28,7 +28,7 @@ jobs:
       # Nomi-CEu-Management has access to all of Nomi-CEu's Repos.
       - name: Get Token
         id: token
-        uses: peter-murray/workflow-application-token-action@v2.1.0
+        uses: peter-murray/workflow-application-token-action@v3
         with:
           # Shared Org Secret: Contains the Nomi-CEu-Management App ID (773030)
           application_id: ${{ secrets.APP_ID }}
@@ -37,6 +37,7 @@ jobs:
           # Paste the output of the command into the secret value.
           application_private_key: ${{ secrets.APP_KEY }}
           organization: Nomi-CEu
+          revoke_token: true
           
       - name: Dispatch Workflow
         uses: actions/github-script@v5
