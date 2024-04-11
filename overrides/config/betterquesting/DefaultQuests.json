@@ -6162,7 +6162,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -6196,8 +6196,20 @@
               "Damage:2": 568,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
-            },
-            "1:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 593,
               "OreDict:8": "",
@@ -13289,6 +13301,24 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
+              "Damage:2": 569,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
               "Damage:2": 594,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
@@ -15926,6 +15956,7 @@
         "1:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 1,
@@ -16690,7 +16721,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Ninth Micro Miner.\n\nCombines §bStellar Creation Data§r into the §dUniverse Creation Data§r, which is a crucial component for the Tier Ten Micro Miner mission.\n\nThe alternate mission brings a decent quantity of §6Neutronium§r. It might be easier to just make all your Neutronium in the reactor, but it\u0027s up to you.",
+          "desc:8": "The Ninth Micro Miner.\n\nCombines §bStellar Creation Data§r into the §dUniverse Creation Data§r, which is a crucial component for the Tier Ten Micro Miner mission.\n\nThe alternate mission brings a large quantity of §6Neutronium§r. It might be easier to just make all your Neutronium in the reactor, but it\u0027s up to you.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18303,7 +18334,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Small Piles of Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.\n",
+          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Small Piles of Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and §2allows you to skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19369,7 +19400,7 @@
             "id:8": "minecraft:dragon_egg"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Breaking Some Eggs",
@@ -35082,6 +35113,7 @@
         "1:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 1,
@@ -42617,7 +42649,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Climbing the ladder of fissile materials will require some specific raw materials and machinery.\n\n§2Uraninite is the base resource you will need, which comes from Uraninite and Pitchblende Ore. You will need to react it with Fluorine and Hydrofluoric Acid in a Chemical Reactor to form Uranium Hexafluoride.\n\nThe Uranium Hexafluoride must then be separated into Depleted and Enriched Uranium Hexafluoride in a Centrifuge. The Depleted UF₆ will grant Uranium-238, while the Enriched UF₆ will grant Uranium-235.\n\n",
+          "desc:8": "Climbing the ladder of fissile materials will require some specific raw materials and machinery.\n\n§2Uraninite is the base resource you will need, which comes from Uraninite and Pitchblende Ore. You will need to react it with Fluorine and Hydrofluoric Acid in a Chemical Reactor to form Uranium Hexafluoride.\n\nThe Uranium Hexafluoride must then be separated into Depleted and Enriched Uranium Hexafluoride in a Centrifuge. The Depleted UF₆ will grant Uranium-238, while the Enriched UF₆ will grant Uranium-235.\n\nYou may find Red Granite as a viable source of Uranium-238 if you are able to process it in large enough volumes to offset the low base chance.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46841,9 +46873,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 167,
+            "Damage:2": 18,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -48819,6 +48851,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -48836,6 +48869,7 @@
         "1:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 1,
@@ -49630,7 +49664,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -49662,6 +49696,24 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 573,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 598,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
             }
@@ -51867,6 +51919,7 @@
         "1:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 1,
@@ -51902,7 +51955,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This is the highest tier of polymer. It is used in crafting Advanced SMD components, ZPM+ Machine Hulls, among other things.\n\nThis polymer requires at least 14 processing steps to craft. Good luck!",
+          "desc:8": "This is the highest tier of polymer. It is used in crafting §2Advanced SMD components and ZPM+ Machine Hulls,§r among other things.\n\nThis polymer can require up to §914 steps§r to create from scratch, but multiple steps are able to be skipped through distillation of various liquids. §6Check what steps you can easily skip!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52579,7 +52632,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Systems on Chip can be engraved with HV power and Glowstone Boules. This unlocks the ultimate tier one circuit recipe in the EV Circuit Assembler.\n\nThe ultimate tier two circuit recipe requires an IV Circuit Assembler.",
+          "desc:8": "§2Systems on Chip can be engraved with HV power and Phosphorus Boules. This unlocks the ultimate tier one circuit recipe in the EV Circuit Assembler.\n\nThe ultimate tier two circuit recipe requires an IV Circuit Assembler.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52598,7 +52651,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -52625,6 +52678,24 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 572,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
@@ -53347,7 +53418,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6IV Assembling Machine§r is required for§2 Advanced SMD components§r.\n\nConsider upgrading to a §6Large Assembling Factory§r, which is easier to upgrade and can accept Parallel Control Hatches. ",
+          "desc:8": "The §6IV Assembling Machine§r is required for§2 Advanced SMD components§r.\n\nConsider upgrading to a §6Large Assembling Factory§r, which is easier to upgrade and can accept Parallel Control Hatches. The §6Large Assembing Factory§r §ccannot be recipe tier overclocked§r, as it only accepts one Energy hatch. You will need to craft higher tier standard Assembling Machines for some higher tier items.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53904,7 +53975,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -53936,6 +54007,24 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 574,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 599,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
             }
@@ -57159,7 +57248,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Multiblock version of the Circuit Assembler. Can accept Parallel Control Hatches, and allows tiering it up more easily.",
+          "desc:8": "§2Multiblock version of the Circuit Assembler. Can accept Parallel Control Hatches, and allows tiering it up more easily. \n\nNote that like the Large Assembling Machine, the Large Circuit Assembler §ccannot use more than one Energy Hatch§2, preventing it from recipe tier overclocking.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63909,10 +63998,12 @@
     },
     "1031:10": {
       "preRequisiteTypes:7": [
-        2
+        2,
+        0
       ],
       "preRequisites:11": [
-        286
+        286,
+        1035
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -64217,7 +64308,8 @@
       "preRequisites:11": [
         1037,
         286,
-        325
+        325,
+        844
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -64434,7 +64526,8 @@
     },
     "1037:10": {
       "preRequisites:11": [
-        825
+        825,
+        328
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -64784,10 +64877,12 @@
     },
     "1042:10": {
       "preRequisiteTypes:7": [
-        1
+        1,
+        2
       ],
       "preRequisites:11": [
-        524
+        524,
+        847
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -65113,6 +65208,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -65178,6 +65274,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -65342,6 +65439,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -72286,7 +72384,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
