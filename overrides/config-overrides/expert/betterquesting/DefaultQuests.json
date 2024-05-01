@@ -2004,9 +2004,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32014,
+              "Damage:2": 14,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             },
             "1:10": {
               "Count:3": 1,
@@ -32664,9 +32664,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32028,
+            "Damage:2": 28,
             "OreDict:8": "",
-            "id:8": "gregtech:wire_single"
+            "id:8": "nomilabs:wire_single"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -32698,9 +32698,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32028,
+              "Damage:2": 28,
               "OreDict:8": "",
-              "id:8": "gregtech:wire_single"
+              "id:8": "nomilabs:wire_single"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -39617,9 +39617,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32010,
+              "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -39936,9 +39936,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32018,
+              "Damage:2": 18,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -40178,15 +40178,15 @@
             },
             "1:10": {
               "Count:3": 2,
-              "Damage:2": 32018,
+              "Damage:2": 18,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             },
             "2:10": {
               "Count:3": 3,
-              "Damage:2": 32010,
+              "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_nugget"
+              "id:8": "nomilabs:meta_nugget"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -40658,9 +40658,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
+              "id:8": "nomilabs:meta_dust"
             },
             "1:10": {
               "Count:3": 3,
@@ -42592,9 +42592,9 @@
             },
             "1:10": {
               "Count:3": 2,
-              "Damage:2": 32010,
+              "Damage:2": 10,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nomilabs:meta_ingot"
             },
             "2:10": {
               "Count:3": 3,
@@ -51574,6 +51574,387 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:laser_pipe_normal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "955:10": {
+      "preRequisites:11": [
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Starting at §5§5EV§r, 4A Energy and Dynamo hatches are available at each tier. From §1IV§r onwards, 16A hatches will be available.\n\nNote that these hatches will not allow you to \"skip\" tiers! The maximum §erecipe tier§r a multiblock can run is determined by the tier of the hatch. If two hatches of the same tier are in the multiblock, the recipe tier will be increased to the next higher tier.\n\nInstead, these hatches can allow you to overclock recipes you can already do even more. The §eoverclock tier§r is the total EU/t input summed across all hatches.\n\nExamples:\n\n- 2x §7LV§r hatch -\u003e §bMV§r recipe tier, §bMV§r OC tier\n\n- 16A §1IV§r hatch -\u003e §1IV§r recipe tier, §cZPM§r OC tier\n\n- 2x 16A §1IV§r hatch -\u003e §dLuV§r recipe tier, 2A §cZPM§r OC tier\n\nIf in doubt, check the multiblock\u0027s GUI. It will show the max recipe tier, as well as max EU/t for overclocking.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1399,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "High Amperage Energy Hatches",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1045,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1399,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1245,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        }
+      }
+    },
+    "956:10": {
+      "preRequisites:11": [
+        56
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §aAlarm§r is a simple tool which plays a loud sound when given a redstone signal. Useful for notifying you if things go wrong.\n\nRight-click the block to configure its range and sound. This tool requires §d4 EU/t§r input to work.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 10,
+            "OreDict:8": "",
+            "id:8": "gregtech:warning_sign"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Alarm",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1046,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1751,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "957:10": {
+      "preRequisites:11": [
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Reservoir Hatch§r acts as an infinite water source as a fluid input hatch.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1418,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Cooking for Blockheads",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1047,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 1,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1418,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "958:10": {
+      "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Electric Prospector\u0027s Scanner§r given for free now has integration with §eJourneyMap§r.\n\nPick up surface rocks, right-click ore blocks, or use an electric prospector on ore mode to discover veins.\n\nPress the \"action key\" (default: delete) while hovering over a vein to mark it as depleted (or not depleted).\n\nDouble-click a vein to mark it as a waypoint, and again to unmark it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:filled_map"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Visual Ores",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1048,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "959:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1
+      ],
+      "preRequisites:11": [
+        60,
+        22
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Most multiblocks now support rotation along any axis. Right-click with a Wrench on a face with a rotation ↺ symbol to rotate the controller.\n\nThe rules for building multiblocks remain the same.\n\nTake your setups to a new dimension!\n\nThe §3Cleanroom§r, §3Multiblock Miners/Drills§r, and §3Distillation Tower§r do not support being rotated.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "redstonearsenal:tool.wrench_flux",
+            "tag:10": {
+              "Energy:3": 0
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Multiblock Rotation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1049,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "960:10": {
+      "preRequisites:11": [
+        53
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oThis quest accepts LV, MV or HV Miner.§r\n\nThe §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nThe LV Miner calls for an §6LV Sensor§r, which requires a bit of §6Quartzite§r. Buy some if you haven\u0027t come across it yet.\n\nAt §5EV§r tier, you can build §3Large Miners§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 920,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Automatic Mining",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1050,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 920,
+              "OreDict:8": "questbookSingleMiner",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
