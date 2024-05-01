@@ -4014,7 +4014,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Third Micro Miner. §2You\u0027ll need that Boron in the MV Field Generators.§r\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore§r\n§\n\nor:\n§6* Dense Magma Block§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore",
+          "desc:8": "The Third Micro Miner. §2You\u0027ll need that Boron in the MV Field Generators.§r\n\nThis one can get you:\n§6* Scheelite Ore\n* Tungstate Ore\n§2* Ilmenite Ore§6\n* Vanadium Magnetite Ore\n* Tetrahedrite Ore\n* Cassiterite Ore\n* Tin Ore\n* Redstone Ore\n* Certus Quartz Ore\n* Almandine Ore\n* Lepidolite Ore\n§2* Cobaltite Ore\n* Laurite Ore\n* Cuprorhodsite Ore§r\n\nor:\n§6* Dense Magma Block§r\n\nWhen equipped with Gemstone Sensor:\n§2* Perfect Diamonds\n* Perfect Rubies\n* Perfect Topaz\n* Perfect Emeralds\n§6* Sapphire Ore\n* Silver Ore\n* Gold Ore\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4761,7 +4761,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Initial circuit components are a bit more difficult in CEu, and you need Arsenic in addition to Gallium.§r\n\nFor §dGallium§r, you may, ranged from worst to best:\n\n- §3Electrolyze §aSphalerite§r for a low chance of small dust. Note that you lose on direct smelting value.\n\n-§r Put §aCrushed Bauxite§r in the §3Chemical Bath§r. Note that this requires §9Sodium Persulfate§r. \n\n- Obtain it as a Byproduct of §aSphalerite§r Ore Processing, in the §3Thermal Centrifuge§r or §3Centrifuge§r.\n\n§2For Arsenic, you must centrifuge Realgar Dust, or (more involvedly) flash smelt Cobaltite Dust in the EBF, and electrolyse the resultant Arsenic Trioxide.\n\nCombine both in a Mixer to make Gallium Arsenide.",
+          "desc:8": "§2Initial circuit components are a bit more difficult in CEu, and you need Arsenic in addition to Gallium.§r\n\nFor §dGallium§r, you may, ranged from worst to best:\n\n- §3Electrolyze §aSphalerite§r for a low chance of dust. Note that you lose on direct smelting value.\n\n-§r Put §aCrushed Bauxite§r in the §3Chemical Bath§r. Note that this requires §9Sodium Persulfate§r. \n\n- Obtain it as a Byproduct of §aSphalerite§r Ore Processing, in the §3Thermal Centrifuge§r or §3Centrifuge§r.\n\n§2For Arsenic, you must centrifuge Realgar Dust, or (more involvedly) flash smelt Cobaltite Dust in the EBF, and electrolyse the resultant Arsenic Trioxide.\n\nCombine both in a Mixer to make Gallium Arsenide.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5645,7 +5645,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Sulfuric Acid is mainly produced in a 3-step process:§r\n-§6 Sulfur§o§r added to §9Oxygen§r to produce §9Sulfur Dioxide§r. §9SO₂§r also can come from treating certain §6Sulfur-containing Dusts§r with §9Oxygen§r in the EBF, or by processing §eNether Air§r.\n- §9Sulfur Dioxide§r added to more §9Oxygen§r, with §cVanadium Pentoxide§r catalyst, to produce §9Sulfur Trioxide§r.\n- §9Sulfur Trioxide§r added to §9Water§r, to produce §eSulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at EV.\n\nYou can also get Sulfuric Acid by adding §9Oxygen§r to §9Hydrogen Sulfide§r, which can be obtained via Petroleum, or by combining §9Hydrogen§r and §6Sulfur§r.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things.",
+          "desc:8": "§9Sulfuric Acid§r is mainly produced in a 3-step process:§r\n\n- §6Sulfur§r added to §9Oxygen§r to produce §eSulfur Dioxide§r. §9SO₂§r also can come from treating certain §6Sulfur-containing Dusts§r with §9Oxygen§r in the EBF, or by processing §eNether Air§r.\n\n- §9Sulfur Dioxide§r added to more §9Oxygen§r, with §cVanadium Pentoxide§r catalyst, to produce §eSulfur Trioxide§r.\n\n- §9Sulfur Trioxide§r added to §9Water§r, to produce §9Sulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at §dEV§r.\n\nYou can also get Sulfuric Acid by adding §9Oxygen§r to §9Hydrogen Sulfide§r, which can be obtained via Petroleum, or by combining §9Hydrogen§r and §6Sulfur§r.\n\nYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6893,7 +6893,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Black Steel§r will be used to make various items from §bExtended Crafting§r. It will also be the basis of other Steel types later on.",
+          "desc:8": "§6Black Steel§r will be used to make various items from §bExtended Crafting§r. It will also be the basis of other Steel types later on.\n\nAt first, you will have to create §6Black Bronze Dust§r on the way to §6Black Steel Dust§r. By making an §6HV Mixer§r, you can skip this step with a shortcut recipe.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8671,7 +8671,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r. \n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nYou should have set up a §3Vaccum Freezer§r for §6Kanthal§r, but if you haven\u0027t done it yet or want to improve your setup, routing through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering you\u0027re system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
+          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r.\n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly. \n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nRouting through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering your system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8711,7 +8711,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Vacuum Freezers§r are primarily used to cool down hot ingots.\n\nThey\u0027re also capable of freezing air into a liquid, and making superconductors.\n\nAt minimum you will need an energy input hatch, an input bus, an output bus, and 22 §6Frost Proof Machine Casings§r for forming the multiblock for processing Hot Ingots.\n\nIf you want to deal with fluids as well, subtract two casings and use a fluid input and fluid output in their place.\n\nBesides the controller placement, as usual the hatches/buses can go anywhere. Use the building guide in §bJEI§r which can be pulled up from the controller block.",
+          "desc:8": "§3Vacuum Freezers§r are primarily used to cool down §6Hot Ingots§r. They\u0027re also capable of freezing air into a liquid, and making superconductors.\n\nAt minimum you will need an energy input hatch, an input bus, an output bus, and 22 §6Frost Proof Machine Casings§r for forming the multiblock for processing Hot Ingots.\n\nIf you want to deal with fluids as well, subtract two casings and use a fluid input and fluid output in their place.\n\nThe energy tier required for the Vacuum Freezer is typically one tier below the tier used to process the ingot in the §3Electric Blast Furnace§r. \n\nBesides the controller placement, as usual the hatches/buses can go anywhere. Use the building guide in §bJEI§r which can be pulled up from the controller block.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9664,7 +9664,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hydrogen Sulfide§r is a byproduct of hydrodesulfurization. §2It also comes from distilling Liquid Nether Air.§r\n\nA simple chemical reaction with §9Water§r reprocesses it into the useful §9Sulfuric Acid§r, or it can be electrolyzed for recovering the §9Hydrogen§r.",
+          "desc:8": "§9Hydrogen Sulfide§r is a byproduct of hydrodesulfurization. §2It also comes from distilling Liquid Nether Air.§r\n\nA simple chemical reaction with §9Oxygen§r reprocesses it into the useful §9Sulfuric Acid§r, or it can be electrolyzed for recovering the §9Hydrogen§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12332,7 +12332,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Rutile Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n\n\n",
+          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Bauxite Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13127,7 +13127,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Yes, Snad.\n\nThis pack has §aSnad§r, which is simply a sand-like block that instantly grows sugar cane/cactus on top of it when it receives either a block update or a redstone update.\n\nThe sugar cane it produces can be used as a fuel for your dynamos, and later you can even brew it for §9Biomass§r.\n\nThis quest calls for a §aRedstone Timer§r, but there are other ways to make snad grow sugar cane even faster (like a vanilla observer clock pointing into the Snad). Make sure to set the timer to pulse as fast as possible.\n\nTo collect the sugar cane, you can use a piston and an observer. Later you can make an §6Auto-Breaker§r from §bActually Additions§r, which works even better and doesn\u0027t spill sugar cane everywhere.\n\nFor now, a §3Vacuum Chest§r should help keep the floor clean, and causes less lag than Hoppers. A §aVoid Upgrade§r in a §6Storage Drawer§r will automatically delete any items that overflow the drawer\u0027s capacity, so it\u0027s a good way to ensure you don\u0027t crash your server from accumulating a massive sugar cane pile before safer block breakers are available to you.",
+          "desc:8": "Yes, Snad.\n\nThis pack has §aSnad§r, which is simply a sand-like block that instantly grows sugar cane/cactus on top of it when it receives either a block update or a redstone update.\n\nThe sugar cane it produces can be used as a fuel for your dynamos, and later you can even brew it for §9Biomass§r.\n\nThe premier way to activate Snad is with a §6Redstone Conduit§r. By force-connecting the conduit to the side of the Snad block with a Wrench, and inserting a §aSensor Filter§r, you can get the highest growth rate possible. Simpler methods such as a §aRedstone Clock§r can also work, but not as effectively.\n\nTo collect the sugar cane, you can use a piston and an observer. Later you can make an §6Auto-Breaker§r from §bActually Additions§r, which works even better and doesn\u0027t spill sugar cane everywhere.\n\nFor now, a §3Vacuum Chest§r should help keep the floor clean, and causes less lag than Hoppers. A §aVoid Upgrade§r in a §6Storage Drawer§r will automatically delete any items that overflow the drawer\u0027s capacity, so it\u0027s a good way to ensure you don\u0027t crash your server from accumulating a massive sugar cane pile before safer block breakers are available to you.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13778,7 +13778,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Ninth Micro Miner.\n\nCombines §bStellar Creation Data§r into the §dUniverse Creation Data§r, which is a crucial component for the Tier Ten Micro Miner mission.\n\nThe alternate mission brings a decent quantity of §6Neutronium§r, but you have to bootstrap it with some Neutronium from the §3Fusion Reactor Mark 3§r anyway. It might be easier to just make all your Neutronium in the reactor, but it\u0027s up to you.",
+          "desc:8": "The Ninth Micro Miner.\n\nCombines §bStellar Creation Data§r into the §dUniverse Creation Data§r, which is a crucial component for the Tier Ten Micro Miner mission.\n\nThe alternate mission brings a large quantity of §6Neutronium§r. It might be easier to just make all your Neutronium in the reactor, but it\u0027s up to you.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15072,7 +15072,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Small Piles of Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.\n",
+          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Small Piles of Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and §2allows you to skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17826,7 +17826,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungstensteel§r is the fourth coil material available, increasing your EBF\u0027s operating temperature to 4500K so it can process more advanced materials.",
+          "desc:8": "§6RTM-Alloy§r is the fourth coil material available, increasing your EBF\u0027s operating temperature to 4500K so it can process more advanced materials.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19333,7 +19333,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With §6Titanium§r smelting automated, you can now build Machine Hulls for Extreme Voltage machines.\n\n§2Starting at EV, 4A Energy and Dynamo hatches are available at each tier.",
+          "desc:8": "With §6Titanium§r smelting automated, you can now build Machine Hulls for Extreme Voltage machines.\n\nEV motors require a better material than §6Steel§r for its magnetism.§6\n\nNeodynium§r is required, which is mainly achieved from §6Rare Earth§r. The main sources of this are §6Redstone§r, and everything inside of §6Bastnasite§r veins.\n\nEV Machine Hulls unlock a handful of nice things. Check the surrounding quests for more information.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22440,7 +22440,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Large Plasma Turbines§r are a powerful late game method of generating power. One Large Plasma Turbine produces §2a base of 16384 EU/t when using an IV Rotor Holder§r.",
+          "desc:8": "§3Large Plasma Turbines§r are a powerful late game method of generating power. One Large Plasma Turbine produces §2a base of 16384 EU/t when using an IV Rotor Holder§r.\n\nGenerally, the best plasma fuels to use will be §eHelium Plasma§r with a §3Fusion Reactor Mk1§r, §eTin Plasma§r when you upgrade to §3Mk2§r, and §eAmericium Plasma§r when you upgrade to §3Mk3§r. However, the other plasmas are still competitive, and your setup might lend itself better to a different plasma. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22613,7 +22613,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine.\n\nThis quest accepts a §aScrewdriver§r and a §aCrowbar§r made of any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §a§lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §a§lPump§r: is much like a §aConveyor§r, but for fluids.\n\n- §a§lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §a§lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §a§lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §2§lDetector§r: Available in Item, Fluid, Energy, Activity, and Advanced Activity flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §2§lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine. This quest accepts a §aScrewdriver§r and §aCrowbar§r made from any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§r, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§r: Available in §aItem§r, §aFluid§r, §aEnergy§r, and §aActivity§r flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lAdvanced Detectors§r: Available as §aItem§r, §aFluid§r, §aEnergy§r, or §aActivity§r, these covers can emit redstone in more ways than their normal counterparts. Specifically, the §aItem§r, §aFluid§r, and §aEnergy§r advanced detectors can emit a latched redstone signal based on the amount of item/fluid between a set min and max, or they can emit redstone signals proportional to the amount of item/fluids between a set min and max. The §aAdvanced Activity Detector§r emits redstone proportional to a machines progress on a recipe \n\n- §lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26433,7 +26433,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but right now you want it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.",
+          "desc:8": "§oThis quest accepts any Autoclave from LV to IV.§r\n\nAn §3Autoclave§r is a machine that uses liquids (usually water) to polish stones, carve gems into lenses, infuse gems with special liquids, and crystallize various dusts.\n\nYou\u0027ll need an Autoclave for many recipes, but most presently you will need it to make §6Pulsating Crystals§r and §6Vibrant Crystals§r from §bEnderIO§r.\n\n§6Pulsating Crystals§r will be required immediately to make §aSnad§r, the key to infinite fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27272,7 +27272,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts both LV and MV Brewery.\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power. Building §2many Breweries§r is necessary to brew enough Biomass for plastics.",
+          "desc:8": "§oThis quest accepts any Brewery from LV to IV.§r\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power. Building §2many Breweries§r is necessary to brew enough Biomass for plastics. §2An alternative and more resource efficient way of making biomass is with a Pyrolyse Oven, Water, and Bio Chaff.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36143,7 +36143,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Climbing the ladder of fissile materials will require some specific raw materials and machinery.\n\n§2Uraninite is the base resource you will need, which comes from Uraninite and Pitchblende Ore. You will need to react it with Fluorine and Hydrofluoric Acid in a Chemical Reactor to form Uranium Hexafluoride.\n\nThe Uranium Hexafluoride must then be separated into Depleted and Enriched Uranium Hexafluoride in a Centrifuge. The Depleted UF₆ will grant Uranium-238, while the Enriched UF₆ will grant Uranium-235.\n\n",
+          "desc:8": "Climbing the ladder of fissile materials will require some specific raw materials and machinery.\n\n§2Uraninite is the base resource you will need, which comes from Uraninite and Pitchblende Ore. You will need to react it with Fluorine and Hydrofluoric Acid in a Chemical Reactor to form Uranium Hexafluoride.\n\nThe Uranium Hexafluoride must then be separated into Depleted and Enriched Uranium Hexafluoride in a Centrifuge. The Depleted UF₆ will grant Uranium-238, while the Enriched UF₆ will grant Uranium-235.\n\nYou may find Red Granite as a viable source of Uranium-238 if you are able to process it in large enough volumes to offset the low base chance.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38786,7 +38786,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "When you first started the pack, we told you that ore doubling can wait, and that\u0027s true... But you will need to start doing some rudimentary ore processing for §ebyproducts§r.\n\nByproducts are additional materials that can only be obtained from processing ores in certain machines. For example, there is no \"Gallium Ore\" or \"Arsenic Ore\". You get §6Gallium§r and §6Arsenic §ras a byproduct from processing other ores.\n\nOres have various means of processing, and eventually you\u0027ll use machine pipelines to process ores in specific ways to optimize what byproducts you gain. You can look at the §b§b§6Ore Byproduct Page§6§r of an ore in §bJEI§r, accessed by pressing \u0027U\u0027 on an ore and navigating to the byproduct tab, to see the required route to obtain desired byproducts. \n\nThe relevant machines are as follows:\n \n- §3Macerator§r: turns ores into §6Crushed Ores§r, Crushed Ores into §6Impure Dusts§r, and §6Purified Crushed Ores§r into §6Pure Dusts§r. Higher tiers of macerators have byproduct slots and gain a chance to get a full pile of byproduct from ores and both types of crushed ores.\n\n- §3Ore Washer§r: cleans Crushed Ores with §9Water§r, making Purified Crushed Ores§r, and a guaranteed 3 tiny piles of byproduct. Using §9Distilled Water§r makes them go faster. §2You can also perform a simple wash with this similar to Cauldron washing, which is extremely fast, but grants no byproducts.§r\n\n- §3Chemical Bath§r: §2uses Sodium Persulfate or Mercury to purify certain ores, granting a chance to yield a full pile of a byproduct.\n\n§r- §3§3Centrifuge§r: separates Pure or Impure dusts into the final material, producing a guaranteed §21 (nerfed from 3) tiny pile of byproduct§r.\n\n- §3Electrolyzer§r: uses power to split compounds into individual elements, sometimes gaining useful byproducts in the process. §2Be warned that certain dusts may be better to directly smelt instead of electrolyze!§r\n\n- §3Thermal Centrifuge§r: not to be confused with the regular Centrifuge. §2Less slow and power-hungry now, but still so. However, it yields 3 additional tiny piles of byproduct, and macerating the Centrifuged Ore can grant a special third byproduct.\n\n§2- Sifter: filters high-quality Gems from Purified Crushed gem Ores for an overall higher yield.\n\n- Electromagnetic Separator: filters magnetic metals from certain ores, increasing their yields.§r\n\nYour first forays into ore processing for byproducts will be the Electrolyzer and the Centrifuge.\n",
+          "desc:8": "When you first started the pack, we told you that ore doubling can wait, and that\u0027s true... But you will need to start doing some rudimentary ore processing for §ebyproducts§r.\n\nByproducts are additional materials that can only be obtained from processing ores in certain machines. For example, there is no \"Gallium Ore\" or \"Arsenic Ore\". You get §6Gallium§r and §6Arsenic §ras a byproduct from processing other ores.\n\nOres have various means of processing, and eventually you\u0027ll use machine pipelines to process ores in specific ways to optimize what byproducts you gain. You can look at the §6Ore Byproduct Page§r of an ore in §bJEI§r, accessed by pressing \u0027U\u0027 on an ore and navigating to the byproduct tab, to see the required route to obtain desired byproducts. \n\nThe relevant machines are as follows:\n \n- §3Macerator§r: turns ores into §6Crushed Ores§r, Crushed Ores into §6Impure Dusts§r, and §6Purified Crushed Ores§r into §6Pure Dusts§r. Higher tiers of macerators have byproduct slots and gain a chance to get a full pile of byproduct from ores and both types of crushed ores.\n\n- §3Ore Washer§r: cleans Crushed Ores with §9Water§r, making Purified Crushed Ores§r, and 1/3 of a byproduct dust. Using §9Distilled Water§r makes them go faster. §2You can also perform a simple wash with this similar to Cauldron washing, which is extremely fast, but grants no byproducts.§r\n\n- §3Chemical Bath§r: §2uses Sodium Persulfate or Mercury to purify certain ores, granting a chance to yield a full pile of a byproduct.\n\n§r- §3Centrifuge§r: separates Pure or Impure dusts into the final material, producing 1/9 byproduct dust.\n\n- §3Electrolyzer§r: uses power to split compounds into individual elements, sometimes gaining useful byproducts in the process. §2Be warned that certain dusts may be better to directly smelt instead of electrolyze!§r\n\n- §3Thermal Centrifuge§r: not to be confused with the regular Centrifuge. §2Less slow and power-hungry now, but still so. However, it yields 1/3 byproduct dust, and macerating the Centrifuged Ore can grant a special third byproduct.\n\n§2- Sifter: filters high-quality Gems from Purified Crushed gem Ores for an overall higher yield.\n\n- Electromagnetic Separator: filters magnetic metals from certain ores, increasing their yields.§r\n\nYour first forays into ore processing for byproducts will be the Electrolyzer and the Centrifuge.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39898,7 +39898,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A complex material from §bThermal Expansion§r cooked in an §3Electric Blast Furnace§r.\n\n§6Enderium§r doesn\u0027t require much power (running on as little as MV) but it does need a lot of heat and is incredibly slow without overclocking. §2You can use small amounts of Krypton from Liquid Ender Air distillation to significantly decrease the smelting time.§r\n\nAs with all later blast furnace materials, dedicate a furnace to keeping these in stock and have it running constantly to ensure a stable supply (turning it off when you have an acceptably vast stockpile).\n\nIn addition to its other uses, Enderium gets you access to §aResonant Upgrade Kits§r for machines and the §6Resonant Satchel§r. These quests can be found on the §eProgression§r tab.\n\n",
+          "desc:8": "A complex material from §bThermal Expansion§r cooked in an §3Electric Blast Furnace§r, or a §2Alloy Blast Smelter§r.\n\n§6Enderium§r is incredibly slow without overclocking. §2You can use small amounts of Krypton from Liquid Ender Air distillation to significantly decrease the smelting time.§r\n\nAs with all later blast furnace materials, dedicate a furnace to keeping these in stock and have it running constantly to ensure a stable supply (turning it off when you have an acceptably vast stockpile).\n\nIn addition to its other uses, Enderium gets you access to §aResonant Upgrade Kits§r for machines and the §6Resonant Satchel§r. These quests can be found on the §eProgression§r tab.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43312,7 +43312,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Technically not new to CEu, but it was disabled in the original version, and it had much less functionality in CE.§r\n\nThe Arc Furnace allows you to make §6Annealed Copper§r, which will be used in the MV Age. It can also make 2 pieces of Glass from 1 Sand. Later, it can make §2Tempered Glass§r§r for use in higher-tier recipes.\n\nThe Arc Furnace also functions as a §auniversal recycling machine§r. Pretty much anything can be recycled into ingots and dusts of its base components.\n\nAll of its recipes require Oxygen.\n\nAll Arc Furnace recipes use exactly 30 EU/t, so you can get away with using LV Arc Furnaces for the whole pack!",
+          "desc:8": "§2Technically not new to CEu, but it was disabled in the original version, and it had much less functionality in CE.§r\n\nThe Arc Furnace allows you to make §6Annealed Copper§r, which will be used in the MV Age. It can also make 2 pieces of Glass from 1 Sand. Later, it can make §2Tempered Glass§r for use in higher-tier recipes.\n\nThe Arc Furnace also functions as a §auniversal recycling machine§r. Pretty much anything can be recycled into ingots and dusts of its base components.\n\nAll of its recipes require Oxygen.\n\nAll Arc Furnace recipes use exactly 30 EU/t, so you can get away with using LV Arc Furnaces for the whole pack. However, at §5EV§r, the Arc Furnace expands to 9 slots.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44078,7 +44078,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A rudimentary version of Platinum Group Sludge (PGS) processing existed in the base pack. Here, it is a strong source of the Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum - as well as Gold. All of these elements will be used in IV-tier and above materials.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.",
+          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. However, the yields of these ores from Microverse missions are small, so you should consider processing §6Platinum Group Sludge (PGS)§r for more.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44137,7 +44137,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This is the highest tier of polymer. It is used in crafting Advanced SMD components, ZPM+ Machine Hulls, among other things.\n\nThis polymer requires at least 14 processing steps to craft. Good luck!",
+          "desc:8": "This is the highest tier of polymer. It is used in crafting §2Advanced SMD components and ZPM+ Machine Hulls,§r among other things.\n\nThis polymer can require up to §914 steps§r to create from scratch, but multiple steps are able to be skipped through distillation of various liquids. §6Check what steps you can easily skip!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44707,7 +44707,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Systems on Chip can be engraved with HV power and Glowstone Boules. This unlocks the ultimate tier one circuit recipe in the EV Circuit Assembler.\n\nThe ultimate tier two circuit recipe requires an IV Circuit Assembler.",
+          "desc:8": "§2Systems on Chip can be engraved with HV power and Phosphorus Boules. This unlocks the ultimate tier one circuit recipe in the EV Circuit Assembler.\n\nThe ultimate tier two circuit recipe requires an IV Circuit Assembler.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45304,7 +45304,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Used for Advanced SMD components.",
+          "desc:8": "The §6IV Assembling Machine§r is required for§2 Advanced SMD components§r.\n\nConsider upgrading to a §6Large Assembling Factory§r, which is easier to upgrade and can accept Parallel Control Hatches. The §6Large Assembing Factory§r §ccannot be recipe tier overclocked§r, as it only accepts one Energy hatch. You will need to craft higher tier standard Assembling Machines for some higher tier items.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47039,7 +47039,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Configurable to output any number of GT Volts and Amps.",
+          "desc:8": "An upgrade from the §6Creative RF Source§r, this can be configured to output any amount of GT Volts and Amps.\n\nThis can also connect to a §bLaser Network§r directly!\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47890,7 +47890,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With Silver, LPICs, NaK, and an HV Assembler, you can finally make HV Energy and Dynamo hatches.\n\nYou should get the gist of making these now, so there will not be further quests on Energy and Dynamo hatches.",
+          "desc:8": "With §6Silver, LPICs§r, §9NaK§r, and an §6HV Assembler§r, you can finally make HV Energy and Dynamo hatches.\n\nYou should get the gist of making these now, so there will not be further quests on Energy and Dynamo hatches.\n\nLook out for a new more efficient EV-tier recipe for §6Steel§r in the EBF.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48415,7 +48415,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Multiblock version of the Circuit Assembler. Can accept Parallel Control Hatches, and allows tiering it up more easily.",
+          "desc:8": "§2Multiblock version of the Circuit Assembler. Can accept Parallel Control Hatches, and allows tiering it up more easily. \n\nNote that like the Large Assembling Machine, the Large Circuit Assembler §ccannot use more than one Energy Hatch§2, preventing it from recipe tier overclocking.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

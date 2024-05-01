@@ -6808,7 +6808,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Sulfuric Acid§r is mainly produced in a 3-step process:\n\n- §6Sulfur§r added to §9Oxygen§r to produce §eSulfur Dioxide§r. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing §eNether Air§r.\n\n- Sulfur Dioxide added to more Oxygen, to produce §eSulfur Trioxide§r.\n\n- Sulfur Trioxide added to §9Water§r, to produce §9Sulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at §6HV§r.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nIf you are using §dGregTech Pipes§r, check that your pipe material of choice can handle acids.",
+          "desc:8": "§9Sulfuric Acid§r is mainly produced in a 3-step process:\n\n- §6Sulfur§r added to §9Oxygen§r to produce §eSulfur Dioxide§r. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing §eNether Air§r.\n\n- Sulfur Dioxide added to more Oxygen, to produce §eSulfur Trioxide§r.\n\n- Sulfur Trioxide added to §9Water§r, to produce §9Sulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at §6HV§r.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeep Mob Evolution§r's §aBlaze Model§r.\n\nIf you are using §dGregTech Pipes§r, check that your pipe material of choice can handle acids.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55623,7 +55623,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An upgrade from the Creative RF Source, this can be configured to output any amount of GT Volts and Amps.\n\nThis can connect to a Laser network directly.",
+          "desc:8": "An upgrade from the §6Creative RF Source§r, this can be configured to output any amount of GT Volts and Amps.\n\nThis can also connect to a §bLaser Network§r directly!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
