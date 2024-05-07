@@ -11332,7 +11332,7 @@
     },
     "197:10": {
       "preRequisites:11": [
-        201
+        311
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -17821,7 +17821,8 @@
     },
     "311:10": {
       "preRequisites:11": [
-        197
+        201,
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -21858,7 +21859,6 @@
     },
     "389:10": {
       "preRequisites:11": [
-        251,
         262,
         386
       ],
@@ -44073,7 +44073,8 @@
     },
     "827:10": {
       "preRequisites:11": [
-        177
+        177,
+        65
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47884,6 +47885,7 @@
     },
     "897:10": {
       "preRequisites:11": [
+        52,
         830,
         896
       ],
@@ -50685,9 +50687,11 @@
     },
     "941:10": {
       "preRequisiteTypes:7": [
+        0,
         2
       ],
       "preRequisites:11": [
+        1035,
         286
       ],
       "properties:10": {
@@ -50801,8 +50805,8 @@
     },
     "943:10": {
       "preRequisites:11": [
-        102,
-        339
+        339,
+        729
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -50941,7 +50945,8 @@
       "preRequisites:11": [
         1037,
         286,
-        325
+        325,
+        844
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51120,6 +51125,7 @@
     },
     "947:10": {
       "preRequisites:11": [
+        328,
         825
       ],
       "properties:10": {
@@ -51405,10 +51411,12 @@
     },
     "952:10": {
       "preRequisiteTypes:7": [
-        1
+        1,
+        2
       ],
       "preRequisites:11": [
-        524
+        524,
+        847
       ],
       "properties:10": {
         "betterquesting:10": {
