@@ -1,9 +1,9 @@
-import ChangelogData from "./changelogData";
-import { categories, defaultIndentation } from "./definitions";
-import { Category, ChangelogMessage, Commit } from "../../types/changelogTypes";
-import { repoLink } from "./definitions";
+import ChangelogData from "./changelogData.ts";
+import { categories, defaultIndentation } from "./definitions.ts";
+import { Category, ChangelogMessage, Commit } from "#types/changelogTypes.ts";
+import { repoLink } from "./definitions.ts";
 import { Octokit } from "@octokit/rest";
-import { getIssueURL, getNewestIssueURLs } from "../../util/util";
+import { getIssueURL, getNewestIssueURLs } from "#utils/util.ts";
 
 let data: ChangelogData;
 let octokit: Octokit;
@@ -94,7 +94,7 @@ async function pushCategory(category: Category) {
 	// Push All Sub Categories
 	for (const subCategory of category.subCategories) {
 		// Loop through key list instead of map to produce correct order
-		const list = category.changelogSection.get(subCategory);
+		const list = category.changelogSection?.get(subCategory);
 		if (list && list.length != 0) {
 			// Push Key Name (only pushes if Key Name is not "")
 			if (subCategory.keyName) {
@@ -150,7 +150,7 @@ function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined,
 		const dateB = new Date(commitB.date);
 
 		// This is reversed, so higher priorities go on top
-		if (commitB.priority !== commitA.priority) return commitB.priority - commitA.priority;
+		if (commitB.priority !== commitA.priority) return (commitB.priority ?? 0) - (commitA.priority ?? 0);
 		// This is reversed, so the newest commits go on top
 		if (dateB.getTime() - dateA.getTime() !== 0) return dateB.getTime() - dateA.getTime();
 		if (backup) return backup(a, b);
@@ -168,7 +168,7 @@ export function sortCommitListReverse(list: Commit[]): void {
 		const dateB = new Date(b.date);
 
 		// This is reversed, so higher priorities go on top
-		if (b.priority !== a.priority) return b.priority - a.priority; // Priority is still highest first
+		if (b.priority !== a.priority) return (b.priority ?? 0) - (a.priority ?? 0); // Priority is still highest first
 		if (dateA.getTime() - dateB.getTime() !== 0) return dateA.getTime() - dateB.getTime();
 		return a.message.localeCompare(b.message);
 	});
@@ -194,7 +194,7 @@ async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMes
 
 	if (changelogMessage.commitObject && !subMessage) {
 		if (data.combineList.has(changelogMessage.commitObject.hash)) {
-			const commits = data.combineList.get(changelogMessage.commitObject.hash);
+			const commits = data.combineList.get(changelogMessage.commitObject.hash) ?? [];
 			commits.push(changelogMessage.commitObject);
 
 			// Sort original array so newest commits appear at the end instead of start of commit string
@@ -261,10 +261,12 @@ async function transformAllIssueURLs(changelog: string[]) {
 async function transformTags(message: string): Promise<string> {
 	const promises: Promise<string>[] = [];
 	if (message.search(/#\d+/) !== -1) {
-		const matched = message.match(/#\d+/g);
+		const matched = message.match(/#\d+/g) ?? [];
 		for (const match of matched) {
 			// Extract digits
-			const digits = Number.parseInt(match.match(/\d+/)[0]);
+			const digitsMatch = match.match(/\d+/);
+			if (!digitsMatch) continue;
+			const digits = Number.parseInt(digitsMatch[0]);
 
 			// Get PR/Issue Info (PRs are listed in the Issue API Endpoint)
 			promises.push(getIssueURL(digits, octokit).then((url) => message.replace(match, `[#${digits}](${url})`)));
