@@ -1,5 +1,5 @@
 {
-  "build:8": "4.2.1",
+  "build:8": "4.2.2",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -6401,7 +6401,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need a variety of §alenses§r for use in §3Precision Laser Engravers§r, all of which are made in the §2Lathe§r.\n\nInitially you\u0027ll need a §a§3§2Ruby Lens§r. Soon you will need §2Diamond, Emerald, Topaz, and Sapphire Lenses§r. §2You can choose to use an MV Lathe to get a lens from a plate, or sift for an Exquisite Gem and use an LV Lathe.\n\n",
+          "desc:8": "You\u0027ll need a variety of §alenses§r for use in §3Precision Laser Engravers§r, all of which are made in the §2Lathe§r.\n\nInitially you\u0027ll need a §a§3§2Ruby Lens§r. Soon you will need §2Diamond, Emerald, Topaz, and Sapphire Lenses§r. §2You can choose to use an MV Lathe to get a lens from a plate, or sift for an Exquisite Gem and use an LV Lathe.\n\n§rAlternatively, you can use §9Sulfuric Acid§r to create §9Chemical Dyes§r of the required color, and use them to make dyed §6Glass Lenses§r. Chemical Dyes can be infinitely looped.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6808,7 +6808,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Sulfuric Acid§r is mainly produced in a 3-step process:\n\n- §6Sulfur§r added to §9Oxygen§r to produce §eSulfur Dioxide§r. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing §eNether Air§r.\n\n- Sulfur Dioxide added to more Oxygen, to produce §eSulfur Trioxide§r.\n\n- Sulfur Trioxide added to §9Water§r, to produce §9Sulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at §6HV§r.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeep Mob Evolution§r's §aBlaze Model§r.\n\nIf you are using §dGregTech Pipes§r, check that your pipe material of choice can handle acids.",
+          "desc:8": "§9Sulfuric Acid§r is mainly produced in a 3-step process:\n\n- §6Sulfur§r added to §9Oxygen§r to produce §eSulfur Dioxide§r. SO₂ also can come from treating certain Sulfur-containing Dusts with Oxygen in the EBF, or by processing §eNether Air§r.\n\n- Sulfur Dioxide added to more Oxygen, to produce §eSulfur Trioxide§r.\n\n- Sulfur Trioxide added to §9Water§r, to produce §9Sulfuric Acid§r.\n\nThe shortcut Sulfur + Water reaction is locked behind the Large Chemical Reactor, unlocked at §6HV§r.\n\n§rYou\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeep Mob Evolution§r\u0027s §aBlaze Model§r.\n\nIf you are using §dGregTech Pipes§r, check that your pipe material of choice can handle acids.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15087,8 +15087,8 @@
     "216:10": {
       "preRequisites:11": [
         89,
-        897,
-        214
+        214,
+        895
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33331,7 +33331,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The first and most expensive Tier Six Circuit, needed for crafting the §3IV Assembling Machine§r.\n\nRequires a bunch of standard circuit components.",
+          "desc:8": "The first and most expensive Tier Six Circuit, needed for crafting the §3IV Circuit Assembler§r.\n\nRequires a bunch of standard circuit components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33817,7 +33817,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now you can craft the §6Quantum Processor Mainframe§r, the first Tier Seven circuit.\n\nThese are required for crafting the Ludicrous Voltage (LuV) §3Assembling Machine§r.",
+          "desc:8": "Now you can craft the §6Quantum Processor Mainframe§r, the first Tier Seven circuit.\n\nThese are required for crafting the Ludicrous Voltage (LuV) §3Circuit Assembler§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34095,7 +34095,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Crystal Processor Mainframe§r is the first Tier Eight circuit.\n\nThis is the first tier of Circuit which must be §2researched§r in the §3Research Station§r.\n\nAlong with things you already know how to make, this needs §6HSS-E Frames§r.\n\nThese are required for crafting the §3ZPM Assembling Machine§r. As usual, these are extremely expensive: invest in the next theme of circuits instead of trying to mass-produce these.\n",
+          "desc:8": "The §6Crystal Processor Mainframe§r is the first Tier Eight circuit.\n\nThis is the first tier of Circuit which must be §2researched§r in the §3Research Station§r.\n\nAlong with things you already know how to make, this needs §6HSS-E Frames§r.\n\nThese are required for crafting the §3ZPM Circuit Assembler§r. As usual, these are extremely expensive: invest in the next theme of circuits instead of trying to mass-produce these.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -60154,7 +60154,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Quartz Sand.\n\nThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Sand§r into §6Quartz Sand§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§o§oThis quest completes via checkbox or upon achieving Quartz Sand.\n\nThis step requires a Macerator at voltage §lLV§r§o or higher.§r\n\nCrush your §6Sand§r into §6Quartz Sand§r. Can be centrifuged into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
