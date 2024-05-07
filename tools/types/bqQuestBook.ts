@@ -1,7 +1,7 @@
 export interface QuestBook {
 	"format:8": string;
 	"questDatabase:9": { [key: string]: Quest };
-	"questLines:9": { [key: string]: QuestLines };
+	"questLines:9": { [key: string]: QuestLine };
 	"questSettings:10": QuestSettings;
 }
 
@@ -58,11 +58,19 @@ export interface Rewards {
 	"choices:9"?: { [key: string]: Icon };
 }
 
-export interface QuestLines {
+export interface QuestLine {
 	"lineID:3": number;
 	"order:3": number;
 	"properties:10": QuestLines9_Properties10;
-	"quests:9": { [key: string]: { [key: string]: number } };
+	"quests:9": { [key: string]: QuestLinesQuest };
+}
+
+export interface QuestLinesQuest {
+	"id:3": number;
+	"sizeX:3": number;
+	"sizeY:3": number;
+	"x:3": number;
+	"y:3": number;
 }
 
 export interface QuestLines9_Properties10 {

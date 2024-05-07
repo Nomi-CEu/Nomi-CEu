@@ -15,7 +15,6 @@ import { input, select } from "@inquirer/prompts";
 import { configFolder, configOverridesFolder, rootDirectory, storageFolder } from "#globals";
 import logInfo, { logError, logWarn } from "#utils/log.ts";
 import colors from "colors";
-import picomatch, { Matcher } from "picomatch";
 import { getUniqueToArray } from "#utils/util.js";
 
 let data: PortQBData;
@@ -116,14 +115,17 @@ let cachedQuestByName: Map<string, Quest>;
 /**
  * Finds the corresponding quest on the qb to change, using the data cache. If object is not found in the data cache, asks the client questions to determine the quest.
  * @param sourceId The id of the quest on the source qb.
+ * @param sourceQuest The Source Quest, if it is not just `data.currentIDsToQuests.get(sourceId)`.
  * @return Returns the quest that is found, or undefined if the quest should be skipped.
  */
-export async function findQuest(sourceId: number): Promise<Quest | undefined> {
+export async function findQuest(sourceId: number, sourceQuest?: Quest): Promise<Quest | undefined> {
 	if (data.ignoreQuests.has(sourceId)) return undefined;
 	if (data.foundQuests.has(sourceId)) return data.foundQuests.get(sourceId);
 
-	const sourceQuest = data.currentIDsToQuests.get(sourceId);
-	if (!sourceQuest) return undefined;
+	// If no source quest, default behaviour
+	if (!sourceQuest) sourceQuest = data.currentIDsToQuests.get(sourceId);
+	// If still no source quest, throw
+	if (!sourceQuest) throw new Error(`Request Find Quest for id ${sourceId}, which is not in IDs to Quests!`);
 
 	logInfo(
 		colors.magenta(`Finding Corresponding Quest for Source Quest with ID ${sourceId} and Name ${name(sourceQuest)}...`),
@@ -304,11 +306,7 @@ const specialModifierHandlers: SpecialModifierHandler[] = [
 	},
 ];
 
-export function getChanged(
-	currentQuests: Quest[],
-	oldQuests: Quest[],
-	currentIDsToQuests: Map<number, Quest>,
-): Changed {
+export function getChanged(currentQuests: Quest[], oldQuests: Quest[]): Changed {
 	// i is current iter, j is old iter
 	let i = 0;
 	let j = 0;
@@ -332,18 +330,18 @@ export function getChanged(
 			j++;
 			continue;
 		}
-		if (currentIDsToQuests.has(currentQuestID)) {
-			changed.added.push(currentQuests[i]);
-			i++;
+		if (!data.currentIDsToQuests.has(oldQuestID)) {
+			logWarn(
+				`A quest has been removed directly! (ID ${id(oldQuests[j])}, Name '${name(
+					oldQuests[j],
+				)}') This is NOT recommended! IDs may overlay in the future! Replace quests with empty ones instead!`,
+			);
+			changed.removed.push(oldQuests[j]);
+			j++;
 			continue;
 		}
-		logWarn(
-			`A quest has been removed directly! (ID ${id(oldQuests[j])}, Name ${name(
-				oldQuests[j],
-			)}) This is NOT recommended! IDs may overlay in the future! Replace quests with empty ones instead!`,
-		);
-		changed.removed.push(oldQuests[j]);
-		j++;
+		changed.added.push(currentQuests[i]);
+		i++;
 	}
 	if (i < currentQuests.length) {
 		changed.added.push(...currentQuests.slice(i));

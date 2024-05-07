@@ -1,7 +1,7 @@
 import fs from "fs";
 import upath from "upath";
 import { rootDirectory } from "#globals";
-import { Quest, QuestBook } from "#types/bqQuestBook.ts";
+import { Quest, QuestBook, QuestLine } from "#types/bqQuestBook.ts";
 import { getFileAtRevision } from "#utils/util.ts";
 import { getChanged, id, save, setupUtils } from "./portQBUtils.ts";
 import PortQBData from "./portQBData.ts";
@@ -35,7 +35,7 @@ export default async function portQBChanges(): Promise<void> {
 
 	await data.readSavedPorter();
 
-	data.changed = getChanged(currentQuests, oldQuests, data.currentIDsToQuests);
+	data.changed = getChanged(currentQuests, oldQuests);
 	const addedQuestIDs = data.changed.added.map((quest) => id(quest));
 	const modifiedQuestIDs = data.changed.modified.map((mod) => id(mod.oldQuest));
 	const removedQuestIDs = data.changed.removed.map((quest) => id(quest));
@@ -50,14 +50,30 @@ export default async function portQBChanges(): Promise<void> {
 
 	if (addedQuestIDs.length > 0) await additions();
 	if (modifiedQuestIDs.length > 0) await modifications();
-	if (removedQuestIDs.length > 0) await removals();
+	if (removedQuestIDs.length > 0) {
+		// Set the Old IDs to Quests
+		data.oldIDsToQuests = new Map<number, Quest>(oldQuests.map((quest) => [id(quest), quest]));
+		// Set the Quest Line Changeable
+		data.questLines = Object.values(toChange["questLines:9"]);
+		await removals();
+	}
 
+	// Save Quest Database
 	const obj = {} as { [key: string]: Quest };
 	const iter = data.toChangeIDsToQuests.values();
 	for (let i = 0; i < data.toChangeIDsToQuests.size; i++) {
 		obj[`${i}:10`] = iter.next().value;
 	}
 	toChange["questDatabase:9"] = obj;
+
+	// Save Quest Lines, if Changed
+	if (data.questLines) {
+		const obj = {} as { [key: string]: QuestLine };
+		for (let i = 0; i < data.questLines.length; i++) {
+			obj[`${i}:10`] = data.questLines[i];
+		}
+		toChange["questLines:9"] = obj;
+	}
 
 	return save(toChange);
 }

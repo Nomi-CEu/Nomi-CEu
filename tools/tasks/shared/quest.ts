@@ -1,7 +1,7 @@
 import fs from "fs";
 import upath from "upath";
 import { overridesFolder, configFolder, configOverridesFolder, sharedDestDirectory } from "#globals";
-import { Quest, QuestBook, QuestLines as QuestLine } from "#types/bqQuestBook.ts";
+import { Quest, QuestBook, QuestLine as QuestLine } from "#types/bqQuestBook.ts";
 
 const sharedQBDefaults = upath.join(sharedDestDirectory, configFolder, "betterquesting");
 const sharedConfigOverrides = upath.join(sharedDestDirectory, configOverridesFolder);

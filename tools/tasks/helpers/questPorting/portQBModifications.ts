@@ -281,12 +281,8 @@ const modifyPrerequisites = async (questToModify: Quest, modify: Modified, chang
 	const preRequisiteArray = questToModify["preRequisites:11"];
 	const preRequisiteTypeArray = questToModify["preRequisiteTypes:7"];
 
-	const preRequisitesCurrent = new Map<number, number>();
 	const preRequisites = new Map<number, number>();
 
-	preRequisiteArrayCurrent.forEach((pre, index) =>
-		preRequisitesCurrent.set(pre, preRequisiteTypeArrayCurrent ? preRequisiteTypeArrayCurrent[index] : 0),
-	);
 	preRequisiteArray.forEach((pre, index) =>
 		preRequisites.set(pre, preRequisiteTypeArray ? preRequisiteTypeArray[index] : 0),
 	);
@@ -307,7 +303,11 @@ const modifyPrerequisites = async (questToModify: Quest, modify: Modified, chang
 			return;
 		}
 		logInfo("Adding Prerequisite...");
-		preRequisites.set(id(toAdd), preRequisitesCurrent.get(added) ?? 0);
+		const index = preRequisiteArrayCurrent.indexOf(added);
+		preRequisites.set(
+			id(toAdd),
+			index === -1 || !preRequisiteTypeArrayCurrent ? 0 : preRequisiteTypeArrayCurrent[index] ?? 0,
+		);
 	}
 
 	// Unique to Old: Removed.
@@ -356,9 +356,9 @@ const modifyGeneral = async (
 	const newValueAsString = stringify(newValue) ?? "";
 
 	logInfo(colors.bold("Change in Source Quest:"));
-	console.log(fakeDiff(stringify(navigateTo(modify.oldQuest, change.path)) ?? "", newValueAsString))
+	console.log(fakeDiff(stringify(navigateTo(modify.oldQuest, change.path)) ?? "", newValueAsString));
 	logInfo(colors.bold("Change if Applied:"));
-	console.log(fakeDiff(stringify(navigateTo(questToModify, change.path)) ?? "", newValueAsString))
+	console.log(fakeDiff(stringify(navigateTo(questToModify, change.path)) ?? "", newValueAsString));
 
 	const shouldContinue = await confirm({ message: "Would you like to apply the Change?" });
 	if (!shouldContinue) {

@@ -9,7 +9,7 @@ import {
 	readFromPorter,
 	savedQuestPorter,
 } from "./portQBUtils.ts";
-import { Quest } from "#types/bqQuestBook.ts";
+import { Quest, QuestLine } from "#types/bqQuestBook.ts";
 import fs from "fs";
 import logInfo from "#utils/log.ts";
 import { modificationParsers } from "./portQBModifications.ts";
@@ -25,6 +25,9 @@ export default class PortQBData {
 	// Changed Maps b/w source qb and qb to change
 	changed: Changed;
 
+	// Map of quest id to quest on the old source qb (Only used in Remove)
+	oldIDsToQuests?: Map<number, Quest>;
+
 	// Map of quest id to quest on the source qb
 	currentIDsToQuests: Map<number, Quest>;
 
@@ -39,6 +42,9 @@ export default class PortQBData {
 
 	// Map from quest id on the source qb to the quest obj on the qb to change
 	foundQuests: Map<number, Quest>;
+
+	// Quest Lines Changeable (Only used in Remove)
+	questLines?: QuestLine[];
 
 	// The Porter that was read from.
 	savedPorter?: SavedPorter;
