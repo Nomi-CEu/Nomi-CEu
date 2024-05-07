@@ -13,12 +13,12 @@ import {
 import PortQBData from "./portQBData.ts";
 import DiffMatchPatch from "diff-match-patch";
 import picomatch from "picomatch";
-import { booleanSelect, findQuest, id, name } from "./portQBUtils.ts";
+import { booleanSelect, findQuest, id, name, navigateTo, setValue } from "./portQBUtils.ts";
 import fakeDiff from "fake-diff";
 import { Operation } from "just-diff";
 import logInfo, { logNotImportant } from "#utils/log.ts";
 import dedent from "dedent-js";
-import { editor, select } from "@inquirer/prompts";
+import { confirm, editor, select } from "@inquirer/prompts";
 import colors from "colors";
 import { stringify } from "javascript-stringify";
 import { Quest } from "#types/bqQuestBook.ts";
@@ -350,21 +350,24 @@ const modifyGeneral = async (
 	path: string[],
 ): Promise<void> => {
 	assertIsModification(change);
-	logInfo(`${change.op}, ${path.toString()}`);
-	/*
-	log(`Change in ${toTitle(path.split("/").pop())}:`);
-	log(`Old Version: ${navigateTo(modify.oldQuest, change.path)}`);
-	log(`New Version: ${navigateTo(modify.currentQuest, change.path)}`);
-	log(`Current Value: ${navigateTo(data.toChangeIDsToQuests.get(id), change.path)}`);
-	const shouldContinue = await confirm({ message: "Would you like to replace?" });
-	if (!shouldContinue) return;
-	const modified = data.toChangeIDsToQuests.get(id);
-	navigateToBefore(modified, change.path)[change.path[change.path.length - 1]] = navigateTo(
-		modify.currentQuest,
-		change.path,
-	);
-	data.toChangeIDsToQuests.set(id, modified);
-	*/
+	logInfo(`Change in '${path.pop()}':`);
+
+	const newValue = navigateTo(modify.currentQuest, change.path);
+	const newValueAsString = stringify(newValue) ?? "";
+
+	logInfo(colors.bold("Change in Source Quest:"));
+	console.log(fakeDiff(stringify(navigateTo(modify.oldQuest, change.path)) ?? "", newValueAsString))
+	logInfo(colors.bold("Change if Applied:"));
+	console.log(fakeDiff(stringify(navigateTo(questToModify, change.path)) ?? "", newValueAsString))
+
+	const shouldContinue = await confirm({ message: "Would you like to apply the Change?" });
+	if (!shouldContinue) {
+		logNotImportant("Skipping...");
+		return;
+	}
+
+	logInfo("Applying Change...");
+	setValue(questToModify, change.path, newValue);
 };
 
 function isAddingOrReplacingComplexTask(path: string[]): boolean {

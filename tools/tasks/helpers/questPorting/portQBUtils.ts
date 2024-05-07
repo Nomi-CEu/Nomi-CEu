@@ -406,13 +406,14 @@ function emptyTasks(quest: Quest): boolean {
 	);
 }
 
-export function navigateToBefore(quest: Quest, paths: string[] | number[]): unknown {
+export function setValue(quest: Quest, paths: string[] | number[], newValue: unknown) {
 	let current: unknown = quest;
 	for (const path of paths.slice(0, -1)) {
 		// @ts-expect-error Current is Unknown
 		current = current[path];
 	}
-	return current;
+	// @ts-expect-error Current and New Value is Unknown
+	current[paths[paths.length - 1]] = newValue;
 }
 
 export function navigateTo(quest: Quest, paths: string[] | number[]): unknown {
