@@ -1,6 +1,13 @@
 import { Quest, QuestBook, QuestVisibility } from "#types/bqQuestBook.ts";
 import { diff } from "just-diff";
-import { Changed, CorrectQuest, QuestChange, Replacements, SavedPorter } from "#types/portQBTypes.ts";
+import {
+	Changed,
+	CorrectQuest,
+	QuestChange,
+	Replacements,
+	SavedPorter,
+	SpecialModifierHandler,
+} from "#types/portQBTypes.ts";
 import upath from "upath";
 import fs from "fs";
 import PortQBData from "./portQBData.ts";
@@ -8,6 +15,8 @@ import { input, select } from "@inquirer/prompts";
 import { configFolder, configOverridesFolder, rootDirectory, storageFolder } from "#globals";
 import logInfo, { logError, logWarn } from "#utils/log.ts";
 import colors from "colors";
+import picomatch, { Matcher } from "picomatch";
+import { getUniqueToArray } from "#utils/util.js";
 
 let data: PortQBData;
 
@@ -275,6 +284,26 @@ export function dependencies(quest: Quest): number[] {
 	return quest["preRequisites:11"];
 }
 
+/**
+ * Paths to Ignore in Quest Change Calculation.
+ * Prerequisites handled separately.
+ * Prerequisites Types handled by Prerequisites.
+ **/
+const ignoreRootPaths = new Set<string>(["preRequisites:11", "preRequisiteTypes:7"]);
+
+/**
+ * Special Handling in Modified. The Path that is added to the changes list should have -CUSTOM appended to the end, to distinguish this from other changes.
+ */
+const specialModifierHandlers: SpecialModifierHandler[] = [
+	(old, current, changes) => {
+		const diff = getUniqueToArray(old["preRequisites:11"], current["preRequisites:11"]);
+		// Unique to old array: Removed
+		if (diff.arr1Unique.length > 0 || diff.arr2Unique.length > 0) {
+			changes.push({ path: ["preRequisites-CUSTOM"], op: "replace", value: diff });
+		}
+	},
+];
+
 export function getChanged(
 	currentQuests: Quest[],
 	oldQuests: Quest[],
@@ -288,8 +317,14 @@ export function getChanged(
 		const currentQuestID = id(currentQuests[i]);
 		const oldQuestID = id(oldQuests[j]);
 		if (currentQuestID == oldQuestID) {
-			const questDiff = diff(oldQuests[j], currentQuests[i]) as QuestChange[];
+			let questDiff = diff(oldQuests[j], currentQuests[i]) as QuestChange[];
 			if (questDiff.length !== 0) {
+				questDiff = questDiff.filter(
+					(change) => typeof change.path[0] !== "string" || !ignoreRootPaths.has(change.path[0]),
+				);
+				for (const handler of specialModifierHandlers) {
+					handler(oldQuests[j], currentQuests[i], questDiff);
+				}
 				if (isEmptyQuest(currentQuests[i])) changed.removed.push(oldQuests[j]);
 				else changed.modified.push({ currentQuest: currentQuests[i], oldQuest: oldQuests[j], change: questDiff });
 			}

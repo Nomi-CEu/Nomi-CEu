@@ -86,6 +86,8 @@ export type ChangeAndPath = {
 	path: string[];
 };
 
+export type SpecialModifierHandler = (oldQuest: Quest, currentQuest: Quest, questDiff: QuestChange[]) => void;
+
 export class Message {
 	private readonly message: string;
 	private repeats: number;

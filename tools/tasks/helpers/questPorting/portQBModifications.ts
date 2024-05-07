@@ -12,7 +12,7 @@ import {
 } from "#types/portQBTypes.ts";
 import PortQBData from "./portQBData.ts";
 import DiffMatchPatch from "diff-match-patch";
-import picomatch, { Matcher } from "picomatch";
+import picomatch from "picomatch";
 import { booleanSelect, findQuest, id, name } from "./portQBUtils.ts";
 import fakeDiff from "fake-diff";
 import { Operation } from "just-diff";
@@ -22,6 +22,7 @@ import { editor, select } from "@inquirer/prompts";
 import colors from "colors";
 import { stringify } from "javascript-stringify";
 import { Quest } from "#types/bqQuestBook.ts";
+import { ArrayUnique } from "#utils/util.js";
 
 let data: PortQBData;
 const dmp = new DiffMatchPatch();
@@ -107,14 +108,6 @@ function findAllParsers(modify: Modified): {
 			return path.split(":")[0];
 		});
 		const path = pathList.join("/");
-
-		let shouldIgnore = false;
-		for (const ignore of pathsIgnore) {
-			if (!ignore(path)) continue;
-			shouldIgnore = true;
-			break;
-		}
-		if (shouldIgnore) continue;
 
 		// Instead of filtering out ignored parsers before, we must check if the parser match is one that is ignored
 		// This is because otherwise the general parser would be called instead
@@ -276,90 +269,70 @@ const modifyRewards = async (questToModify: Quest, modify: Modified, changeAndPa
 	logInfo(`${stringify(changeAndPaths, null, 2)}`);
 };
 
-const modifyPrerequisites = async (questToModify: Quest, modify: Modified, change: QuestChange, path: string[]) => {
-	const index = getIndex(path, "preRequisites");
-	if (index === -1) return;
+const modifyPrerequisites = async (questToModify: Quest, modify: Modified, change: QuestChange) => {
+	logInfo("Performing Prerequisite Modifications...");
 
-	const logPerforming = () => logInfo(`Performing Prerequisite ${formatOp(change.op)}...`);
+	// Get Array Diff
+	const arrayDiff = change.value as ArrayUnique<number>;
+
+	const preRequisiteArrayCurrent = modify.currentQuest["preRequisites:11"];
+	const preRequisiteTypeArrayCurrent = modify.currentQuest["preRequisiteTypes:7"];
 
 	const preRequisiteArray = questToModify["preRequisites:11"];
-	const newPreRequisiteTypeArray = modify.currentQuest["preRequisiteTypes:7"];
 	const preRequisiteTypeArray = questToModify["preRequisiteTypes:7"];
+
+	const preRequisitesCurrent = new Map<number, number>();
 	const preRequisites = new Map<number, number>();
 
-	for (let i = 0; i < preRequisiteArray.length; i++) {
-		preRequisites.set(preRequisiteArray[i], preRequisiteTypeArray ? preRequisiteTypeArray[i] : 0);
+	preRequisiteArrayCurrent.forEach((pre, index) =>
+		preRequisitesCurrent.set(pre, preRequisiteTypeArrayCurrent ? preRequisiteTypeArrayCurrent[index] : 0),
+	);
+	preRequisiteArray.forEach((pre, index) =>
+		preRequisites.set(pre, preRequisiteTypeArray ? preRequisiteTypeArray[index] : 0),
+	);
+
+	// Unique to Current: Added.
+	for (const added of arrayDiff.arr2Unique) {
+		const toAdd = await findQuest(added);
+		if (!toAdd) {
+			logInfo("Skipping, Could not find Corresponding Quest...");
+			return;
+		}
+		if (preRequisites.has(id(toAdd))) {
+			logNotImportant("Quest Already Contains Added Prerequisite.");
+			return;
+		}
+		if (!(await booleanSelect(`Should we Add Quest with ID ${id(toAdd)} and Name ${name(toAdd)} as a Prerequisite?`))) {
+			logNotImportant("Skipping...");
+			return;
+		}
+		logInfo("Adding Prerequisite...");
+		preRequisites.set(id(toAdd), preRequisitesCurrent.get(added) ?? 0);
 	}
 
-	switch (change.op) {
-		case "add":
-			if (typeof change.value !== "number") return;
-			const toAdd = await findQuest(change.value);
-			if (!toAdd) {
-				logInfo("Skipping, Could not find Corresponding Quest...");
-				return;
-			}
-			if (preRequisites.has(id(toAdd))) {
-				logNotImportant("Quest Already Contains Added Prerequisite.");
-				return;
-			}
-			if (
-				!(await booleanSelect(`Should we Add Quest with ID ${id(toAdd)} and Name ${name(toAdd)} as a Prerequisite?`))
-			) {
-				logNotImportant("Skipping...");
-				return;
-			}
-			logPerforming();
-			preRequisites.set(id(toAdd), newPreRequisiteTypeArray ? newPreRequisiteTypeArray[index] : 0);
-			break;
-		case "remove":
-			const toRemove = await findQuest(modify.oldQuest["preRequisites:11"][index]);
-			if (!toRemove) {
-				logInfo("Skipping, Could not find Corresponding Quest...");
-				return;
-			}
-			if (!preRequisites.has(id(toRemove))) {
-				logNotImportant("Quest Does Not Contain Removed Prerequisite.");
-				return;
-			}
-			if (
-				!(await booleanSelect(
-					`Should we Remove Quest with ID ${id(toRemove)} and Name ${name(toRemove)} as a Prerequisite?`,
-				))
-			) {
-				logNotImportant("Skipping...");
-				return;
-			}
-			logPerforming();
-			preRequisites.delete(id(toRemove));
-			break;
-		case "replace":
-			const oldQuest = await findQuest(modify.oldQuest["preRequisites:11"][index]);
-			const newQuest = await findQuest(modify.currentQuest["preRequisites:11"][index]);
-			if (!oldQuest || !newQuest) {
-				logInfo("Skipping, Could not find one or both Corresponding Quests...");
-				return;
-			}
-			if (!preRequisiteArray.includes(id(oldQuest)) || preRequisiteArray.includes(id(newQuest))) {
-				logNotImportant(
-					"Quest Does Not Contain Modified Prerequisite, or Already Contains New Version of the Modified Prerequisite.",
-				);
-				return;
-			}
-			logInfo(
-				`Quest with ID ${id(oldQuest)} and Name ${name(oldQuest)} => Quest with ID ${id(newQuest)} and Name ${name(
-					newQuest,
-				)}`,
-			);
-			if (!(await booleanSelect("Should we Modify this Prerequisite?"))) {
-				logNotImportant("Skipping...");
-				return;
-			}
-			logPerforming();
-			preRequisites.delete(id(oldQuest));
-			preRequisites.set(id(newQuest), newPreRequisiteTypeArray ? newPreRequisiteTypeArray[index] : 0); // TODO Better Deps List Diffing, Fix Missing IDs in Expert (Format Task), Removal remove id from quest lines
-			break;
+	// Unique to Old: Removed.
+	for (const removed of arrayDiff.arr1Unique) {
+		const toRemove = await findQuest(removed);
+		if (!toRemove) {
+			logInfo("Skipping, Could not find Corresponding Quest...");
+			return;
+		}
+		if (!preRequisites.has(id(toRemove))) {
+			logNotImportant("Quest Does Not Contain Removed Prerequisite.");
+			return;
+		}
+		if (
+			!(await booleanSelect(
+				`Should we Remove Quest with ID ${id(toRemove)} and Name ${name(toRemove)} as a Prerequisite?`,
+			))
+		) {
+			logNotImportant("Skipping...");
+			return;
+		}
+		logInfo("Removing Prerequisite...");
+		preRequisites.delete(id(toRemove));
 	}
+
 	// Save
 	questToModify["preRequisites:11"] = Array.from(preRequisites.keys()).sort();
 	if (Array.from(preRequisites.values()).findIndex((value) => value !== 0) === -1) return;
@@ -416,8 +389,6 @@ function getFormattedNameWithIndex(path: string[], op: Operation, pathKey: strin
 	return `${baseName} No. ${index + 1} Modification`;
 }
 
-const pathsIgnore: Matcher[] = [picomatch("preRequisiteTypes/*")];
-
 export const modificationParsers = [
 	{
 		id: "icon",
@@ -470,8 +441,7 @@ export const modificationParsers = [
 	{
 		id: "prerequisites",
 		name: "Prerequisite",
-		formattedName: (path, op) => getFormattedNameWithIndex(path, op, "preRequisites", "Prerequisite"),
-		condition: picomatch("preRequisites/*"),
+		condition: picomatch("preRequisites-CUSTOM"),
 		logic: {
 			type: LogicType.Simple,
 			applyOnce: false,
