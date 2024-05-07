@@ -1,14 +1,13 @@
-import { modpackManifest } from "../../globals";
+import { modpackManifest } from "#globals";
 
 import fs from "fs";
 import upath from "upath";
-import buildConfig from "../../buildConfig";
-import { makeArtifactNameBody } from "../../util/util";
-import Bluebird from "bluebird";
+import buildConfig from "#buildConfig";
+import { makeArtifactNameBody } from "#utils/util.ts";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
-import { DeployReleaseType, inputToDeployReleaseTypes } from "../../types/changelogTypes";
+import { DeployReleaseType, InputReleaseType, inputToDeployReleaseTypes } from "#types/changelogTypes.ts";
 
 const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
 
@@ -42,7 +41,7 @@ async function deployReleases(): Promise<void> {
 		auth: process.env.GITHUB_TOKEN,
 	});
 
-	const parsedSlug = /(.+)\/(.+)/.exec(process.env.GITHUB_REPOSITORY);
+	const parsedSlug = /(.+)\/(.+)/.exec(process.env.GITHUB_REPOSITORY ?? "");
 	if (!parsedSlug) {
 		throw new Error("No/malformed GitHub repository slug provided.");
 	}
@@ -53,7 +52,8 @@ async function deployReleases(): Promise<void> {
 	};
 
 	const tag = process.env.GITHUB_TAG;
-	const releaseType: DeployReleaseType = inputToDeployReleaseTypes[process.env.RELEASE_TYPE];
+	const releaseType: DeployReleaseType =
+		inputToDeployReleaseTypes[(process.env.RELEASE_TYPE ?? "") as InputReleaseType];
 	const preRelease = releaseType ? releaseType.isPreRelease : false;
 
 	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
@@ -73,16 +73,20 @@ async function deployReleases(): Promise<void> {
 	});
 
 	// Upload artifacts.
-	await Bluebird.map(files, async (file) => {
-		await octokit.repos.uploadReleaseAsset({
-			name: file,
-			release_id: release.data.id,
-			...repo,
+	await Promise.all(
+		files.map(async (file) => {
+			return octokit.repos.uploadReleaseAsset({
+				name: file,
+				release_id: release.data.id,
+				...repo,
 
-			// Dumb workaround thanks to broken typings.
-			data: (await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, file))) as unknown as string,
-		});
-	});
+				// Dumb workaround thanks to broken typings. Data should accept buffers...
+				data: (await fs.promises.readFile(
+					upath.join(buildConfig.buildDestinationDirectory, file),
+				)) as unknown as string,
+			});
+		}),
+	);
 
 	await octokit.repos.updateRelease({
 		release_id: release.data.id,

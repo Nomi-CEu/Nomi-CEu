@@ -1,9 +1,9 @@
-import log from "fancy-log";
-import { fetchFileInfo, fetchFilesBulk, fetchProject, fetchProjectsBulk } from "../../util/curseForgeAPI";
-import { modpackManifest } from "../../globals";
-import { checkGitTag, getFileAtRevision } from "../../util/util";
-import { ModpackManifest } from "../../types/modpackManifest";
-import { CurseForgeFileInfo, CurseForgeModInfo } from "../../types/curseForge";
+import { fetchFileInfo, fetchFilesBulk, fetchProject, fetchProjectsBulk } from "#utils/curseForgeAPI.ts";
+import { modpackManifest } from "#globals";
+import { checkGitTag, getFileAtRevision } from "#utils/util.ts";
+import { ModpackManifest } from "#types/modpackManifest.ts";
+import { CurseForgeFileInfo, CurseForgeModInfo } from "#types/curseForge.ts";
+import logInfo from "#utils/log.ts";
 
 export interface ModFileInfo {
 	modInfo: CurseForgeModInfo;
@@ -16,13 +16,13 @@ export interface ModFileInfo {
  * Fetches mod links and builds a modlist.
  */
 export async function createModList(tag = ""): Promise<ModFileInfo[]> {
-	log("Fetching mod & file infos...");
+	logInfo("Fetching mod & file infos...");
 
 	let manifest: ModpackManifest = modpackManifest;
 
 	if (tag) {
 		checkGitTag(tag);
-		manifest = JSON.parse(getFileAtRevision("manifest.json", tag));
+		manifest = JSON.parse(await getFileAtRevision("manifest.json", tag));
 	}
 
 	manifest.files.sort((a, b) => a.projectID - b.projectID);
@@ -37,7 +37,7 @@ export async function createModList(tag = ""): Promise<ModFileInfo[]> {
 			.sort((a, b) => a.fileID - b.fileID),
 	);
 
-	log("Fetched Infos. Creating modlist...");
+	logInfo("Fetched Infos. Creating modlist...");
 
 	// Create modlist
 	const output: ModFileInfo[] = [];

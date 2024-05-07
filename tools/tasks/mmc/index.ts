@@ -1,28 +1,22 @@
-import { clientDestDirectory, mmcDestDirectory, modDestDirectory, modpackManifest } from "../../globals";
-import { fetchMods } from "../../util/curseForgeAPI";
+import { clientDestDirectory, mmcDestDirectory, modDestDirectory, modpackManifest } from "#globals";
 import * as upath from "upath";
-import { series, src, symlink } from "gulp";
 import * as fs from "fs";
-import gulp from "gulp";
-import buildConfig from "../../buildConfig";
+import gulp, { series, src, symlink } from "gulp";
+import buildConfig from "#buildConfig";
 
-async function mmcCleanUp(cb) {
+async function mmcCleanUp() {
 	if (fs.existsSync(mmcDestDirectory)) {
 		await fs.promises.rm(mmcDestDirectory, { recursive: true });
 	}
-
-	cb();
 }
 
 /**
  * Checks and creates all necessary directories so we can build the MMC zip safely.
  */
-async function createMMCDirs(cb) {
+async function createMMCDirs() {
 	if (!fs.existsSync(mmcDestDirectory)) {
 		await fs.promises.mkdir(mmcDestDirectory, { recursive: true });
 	}
-
-	cb();
 }
 
 /**
@@ -31,7 +25,6 @@ async function createMMCDirs(cb) {
 function copyMMCUpdateNotes() {
 	return gulp.src("../UPDATENOTES.md", { allowEmpty: true }).pipe(gulp.dest(mmcDestDirectory));
 }
-
 
 /**
  * Copies the license file.
@@ -52,7 +45,6 @@ function copyMMCChangelog() {
  */
 function copyOverrides() {
 	return src(upath.join(clientDestDirectory, "**/*"), {
-		nodir: true,
 		resolveSymlinks: false,
 	}).pipe(symlink(upath.join(mmcDestDirectory)));
 }
@@ -70,13 +62,12 @@ async function renameOverrides() {
  */
 async function copyMMCModJars() {
 	return src([upath.join(modDestDirectory, "*"), upath.join(modDestDirectory, "client", "*")], {
-		nodir: true,
 		resolveSymlinks: false,
 	}).pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));
 }
 
 async function createMMCConfig() {
-	const cfg = {
+	const cfg: Record<string, string> = {
 		InstanceType: "OneSix",
 		iconKey: "default",
 		name: modpackManifest.name,
@@ -96,7 +87,7 @@ async function createMMCManifest() {
 	const manifest = {
 		components: [],
 		formatVersion: 1,
-	};
+	} as { components: unknown[], formatVersion: number };
 
 	manifest.components.push({
 		cachedName: "Minecraft",
@@ -134,6 +125,9 @@ async function createMMCManifest() {
 export default series(
 	mmcCleanUp,
 	createMMCDirs,
+	copyMMCChangelog,
+	copyMMCLicense,
+	copyMMCUpdateNotes,
 	copyOverrides,
 	renameOverrides,
 	createMMCConfig,

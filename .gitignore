@@ -15,6 +15,9 @@ tools/node_modules
 .vscode/
 tools/.vscode/
 
+# Tools Debugging
+tools/.dest/
+
 # OS Specific
 
 # Mac

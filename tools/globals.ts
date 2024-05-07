@@ -1,7 +1,7 @@
-import buildConfig from "./buildConfig";
+import buildConfig from "#buildConfig";
 import upath from "upath";
-import manifest from "./../manifest.json";
-import { ModpackManifest } from "./types/modpackManifest";
+import manifest from "./../manifest.json" assert { type: "json" };
+import { ModpackManifest } from "#types/modpackManifest.ts";
 
 export const sharedDestDirectory = upath.join(buildConfig.buildDestinationDirectory, "shared");
 export const modDestDirectory = upath.join(buildConfig.buildDestinationDirectory, "mods");
@@ -16,6 +16,7 @@ export const configFolder = upath.join(overridesFolder, "config");
 export const configOverridesFolder = upath.join(overridesFolder, "config-overrides");
 export const rootDirectory = "..";
 export const templatesFolder = "templates";
+export const storageFolder = "storage";
 
 // The Repository Owner (For Issues & PR Tags Transforms in Changelog)
 export const repoOwner = "Nomi-CEu";

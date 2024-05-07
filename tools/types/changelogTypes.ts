@@ -1,4 +1,4 @@
-import ChangelogData from "../tasks/changelog/changelogData";
+import ChangelogData from "#tasks/changelog/changelogData.ts";
 
 export interface Commit {
 	hash: string;
@@ -114,7 +114,8 @@ export interface ChangelogMessage {
 	/**
 	 * If this changelog message is special. This is special formatting for it.
 	 */
-	specialFormatting?: SpecialChangelogFormatting<unknown>;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	specialFormatting?: SpecialChangelogFormatting<any>;
 }
 
 /**
@@ -314,5 +315,8 @@ export const inputToDeployReleaseTypes: Record<InputReleaseType, DeployReleaseTy
 		isPreRelease: true,
 		cfReleaseType: "alpha",
 	},
-	"Cutting Edge Build": undefined,
+	"Cutting Edge Build": {
+		isPreRelease: true,
+		cfReleaseType: "alpha",
+	},
 };

@@ -1,4 +1,4 @@
-import { Category, Commit, FixUpInfo, Ignored, Parser, SubCategory } from "../../types/changelogTypes";
+import { Category, Commit, FixUpInfo, Ignored, Parser, SubCategory } from "#types/changelogTypes.ts";
 import {
 	categories,
 	combineKey,
@@ -9,10 +9,10 @@ import {
 	modInfoKey,
 	noCategoryKey,
 	priorityKey,
-} from "./definitions";
-import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo, parsePriority } from "./specialParser";
-import { getChangelog } from "../../util/util";
-import ChangelogData from "./changelogData";
+} from "./definitions.ts";
+import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo, parsePriority } from "./specialParser.ts";
+import { getChangelog } from "#utils/util.ts";
+import ChangelogData from "./changelogData.ts";
 
 export default async function parseParser(data: ChangelogData, parser: Parser): Promise<void> {
 	const commits = await getChangelog(data.since, data.to, parser.dirs);
@@ -20,13 +20,15 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 	for (const commit of commits) {
 		if (data.shaList.has(commit.hash)) continue;
 
-		let savedFix: FixUpInfo = undefined;
+		let savedFix: FixUpInfo | undefined = undefined;
 		if (data.commitFixes.has(commit.hash)) {
 			const fixUpInfo = data.commitFixes.get(commit.hash);
-			if (!parser.applyFixCalback || parser.applyFixCalback(fixUpInfo)) {
-				applyFix(commit, fixUpInfo);
-			} else {
-				savedFix = fixUpInfo;
+			if (fixUpInfo) {
+				if (!parser.applyFixCalback || parser.applyFixCalback(fixUpInfo)) {
+					applyFix(commit, fixUpInfo);
+				} else {
+					savedFix = fixUpInfo;
+				}
 			}
 		}
 
@@ -131,7 +133,7 @@ function sortCommit(message: string, commitBody: string, commit: Commit, indenta
 
 	sortedCategories.forEach((category) => {
 		const subCategory = findSubCategory(commitBody, category);
-		category.changelogSection.get(subCategory).push({
+		category.changelogSection?.get(subCategory)?.push({
 			commitMessage: message,
 			commitObject: commit,
 			indentation: indentation,
@@ -145,7 +147,7 @@ function sortCommit(message: string, commitBody: string, commit: Commit, indenta
  * @param commitBody The commit body to sort with
  * @return categoryList The categories that the commit belongs in. Return undefined if no category specified via keys.
  */
-export function findCategories(commitBody: string): Category[] | undefined {
+export function findCategories(commitBody: string): Category[] {
 	const sortedCategories: Category[] = [];
 	for (const category of categories) {
 		if (category.commitKey !== undefined) {

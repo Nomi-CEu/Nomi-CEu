@@ -6,10 +6,12 @@ export interface QuestBook {
 }
 
 export interface Quest {
+	"preRequisiteTypes:7"?: number[];
 	"preRequisites:11": number[];
 	"properties:10": QuestProperties;
 	"questID:3": number;
-	"rewards:9": Rewards9;
+	"rewards:9": { [key: string]: Rewards };
+	"tasks:9": { [key: string]: unknown };
 }
 
 export interface QuestProperties {
@@ -21,6 +23,7 @@ export interface QuestPropertiesBQ {
 	"desc:8": string;
 	"globalshare:1": number;
 	"icon:10": Icon;
+	"ignoresview:1": number;
 	"ismain:1": number;
 	"issilent:1": number;
 	"lockedprogress:1": number;
@@ -44,38 +47,15 @@ export interface Icon {
 	"tag:10"?: unknown;
 }
 
-export enum QuestLogic {
-	And = "AND",
-	Or = "OR",
-}
+export type QuestLogic = "AND" | "OR";
 
-export enum QuestVisibility {
-	Always = "ALWAYS",
-	Chain = "CHAIN",
-	Hidden = "HIDDEN",
-	Normal = "NORMAL",
-	Unlocked = "UNLOCKED",
-}
+export type QuestVisibility = "ALWAYS" | "CHAIN" | "HIDDEN" | "NORMAL" | "UNLOCKED";
 
-export interface Rewards9 {
-	"0:10"?: Rewards9_010;
-}
-
-export interface Rewards9_010 {
+export interface Rewards {
 	"index:3": number;
-	"rewardID:8": RewardID8;
+	"rewardID:8": string;
 	"rewards:9"?: { [key: string]: Icon };
 	"choices:9"?: { [key: string]: Icon };
-}
-
-export enum RewardID8 {
-	BqStandardChoice = "bq_standard:choice",
-	BqStandardItem = "bq_standard:item",
-}
-
-export enum TaskID8 {
-	BqStandardCheckbox = "bq_standard:checkbox",
-	BqStandardRetrieval = "bq_standard:retrieval",
 }
 
 export interface QuestLines {

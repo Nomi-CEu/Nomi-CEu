@@ -1,7 +1,7 @@
 import fs from "fs";
 import upath from "upath";
-import { overridesFolder, configFolder, configOverridesFolder, sharedDestDirectory } from "../../globals";
-import { Quest, QuestBook, QuestLines as QuestLine } from "../../types/bqQuestBook";
+import { overridesFolder, configFolder, configOverridesFolder, sharedDestDirectory } from "#globals";
+import { Quest, QuestBook, QuestLines as QuestLine } from "#types/bqQuestBook.ts";
 
 const sharedQBDefaults = upath.join(sharedDestDirectory, configFolder, "betterquesting");
 const sharedConfigOverrides = upath.join(sharedDestDirectory, configOverridesFolder);
@@ -49,7 +49,7 @@ function transformKeyPairs(
  *
  * Interesting, huh?
  */
-const uselessProps = {
+const uselessProps: Record<string, string | number> = {
 	"simultaneous:1": 0,
 	"ismain:1": 0,
 	"repeat_relative:1": 1,
@@ -77,7 +77,7 @@ const uselessProps = {
 	"ignoresview:1": 0,
 };
 
-function stripUselessMetadata(object: unknown) {
+function stripUselessMetadata(object: Record<string, unknown>) {
 	Object.keys(object).forEach((propName) => {
 		const prop = object[propName];
 		if (prop === uselessProps[propName]) {
@@ -89,9 +89,9 @@ function stripUselessMetadata(object: unknown) {
 				return delete object[propName];
 			}
 
-			stripUselessMetadata(prop);
+			stripUselessMetadata(prop as Record<string, unknown>);
 
-			if (Object.keys(prop).length === 0) {
+			if (Object.keys(prop as Record<string, unknown>).length === 0) {
 				return delete object[propName];
 			}
 		}
@@ -152,8 +152,8 @@ export async function transformQuestBook(): Promise<void> {
 	await fs.promises.writeFile(upath.join(questLangLocation, "en_us.lang"), lines.join("\n"));
 
 	// Strip useless metadata.
-	stripUselessMetadata(questBookNormal);
-	stripUselessMetadata(questBookExpert);
+	stripUselessMetadata(questBookNormal as unknown as Record<string, unknown>);
+	stripUselessMetadata(questBookExpert as unknown as Record<string, unknown>);
 
 	// Write QB files.
 	await fs.promises.writeFile(questPathNormalDefault, JSON.stringify(questBookNormal, null, 2));

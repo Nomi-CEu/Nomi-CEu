@@ -7,10 +7,10 @@ import {
 	IgnoreLogic,
 	Parser,
 	SubCategory,
-} from "../../types/changelogTypes";
-import { modpackManifest } from "../../globals";
-import { parseCommitBody } from "./parser";
-import { parseFixUp } from "./specialParser";
+} from "#types/changelogTypes.ts";
+import { modpackManifest } from "#globals";
+import { parseCommitBody } from "./parser.ts";
+import { parseFixUp } from "./specialParser.ts";
 
 /* Values */
 export const defaultIndentation = "";
@@ -127,7 +127,7 @@ export const categories: Category[] = [
 ];
 
 /* Parsing Util Methods */
-const defaultSkipCallback = (_commit: Commit, _commitMessage: string, commitBody: string): boolean => {
+const defaultSkipCallback = (_commit: Commit, _commitMessage: string, commitBody?: string): boolean => {
 	if (!commitBody) return false;
 	return commitBody.includes(skipKey);
 };
@@ -135,7 +135,7 @@ const defaultParsingCallback = async (
 	parser: Parser,
 	commit: Commit,
 	commitMessage: string,
-	commitBody: string,
+	commitBody?: string,
 ): Promise<boolean | Ignored> => {
 	if (!commitBody) return false;
 	return parseCommitBody(commitMessage, commitBody, commit, parser);
@@ -159,7 +159,7 @@ const overridesParsing: Parser = {
 	skipCallback: defaultSkipCallback,
 	itemCallback: defaultParsingCallback,
 	leftOverCallback: (commit, commitMessage, _commitBody, subMessages) => {
-		generalCategory.changelogSection.get(generalCategory.defaultSubCategory).push({
+		generalCategory.changelogSection?.get(generalCategory.defaultSubCategory)?.push({
 			commitMessage: commitMessage,
 			commitObject: commit,
 			subChangelogMessages: subMessages,
@@ -188,7 +188,7 @@ const finalParsing: Parser = {
  * Note that unless `addSHA` of the category is set to false, a commit parsed in a previous category will not be allowed to be parsed in future categories,
  * even if they fit in the dirs.
  */
-export const parsers: Parser[] = [fixupParsing, overridesParsing, manifestParsing, finalParsing];
+export const changelogParsers: Parser[] = [fixupParsing, overridesParsing, manifestParsing, finalParsing];
 
 /* Parsing Information / Allocations for Mod Changes */
 
@@ -262,8 +262,8 @@ export const ignoreChecks: Record<string, IgnoreCheck> = {
 };
 
 /* Ignore Logic */
-const andLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => result === false).length === 0;
-const orLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => result === true).length > 0;
+const andLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => !result).length === 0;
+const orLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => result).length > 0;
 const nandLogic: IgnoreLogic = (checkResults) => !andLogic(checkResults);
 const norLogic: IgnoreLogic = (checkResults) => !orLogic(checkResults);
 

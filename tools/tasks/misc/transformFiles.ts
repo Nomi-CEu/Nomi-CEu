@@ -7,14 +7,14 @@ import {
 	serverDestDirectory,
 	sharedDestDirectory,
 	templatesFolder,
-} from "../../globals";
+} from "#globals";
 import mustache from "mustache";
 import gulp from "gulp";
 import dedent from "dedent-js";
-import { isEnvVariableSet } from "../../util/util";
+import { isEnvVariableSet } from "#utils/util.ts";
 import sortedStringify from "json-stable-stringify-without-jsonify";
-import { error } from "fancy-log";
-import { BuildData } from "../../types/transformFiles";
+import { BuildData } from "#types/transformFiles.ts";
+import { logWarn } from "#utils/log.ts";
 
 // This updates all the files, for a release.
 
@@ -31,7 +31,7 @@ async function updateFilesSetup(): Promise<void> {
 	// See if current run is to update files
 	if (isEnvVariableSet("UPDATE_FILES")) {
 		try {
-			updateFiles = JSON.parse(process.env.UPDATE_FILES.toLowerCase());
+			updateFiles = JSON.parse((process.env.UPDATE_FILES ?? "false").toLowerCase());
 		} catch (err) {
 			throw new Error("Update Files Env Variable set to Invalid Value.");
 		}
@@ -54,7 +54,7 @@ async function updateFilesSetup(): Promise<void> {
 			updateFileTransformedVersion = buildData.transformedVersion;
 			return;
 		}
-		error("Version.txt does not exist. Creating empty file. This may be an error.");
+		logWarn("Version.txt does not exist. Creating empty file. This may be an error.");
 
 		// Create Versions.txt
 		fs.closeSync(fs.openSync(versionsFilePath, "w"));

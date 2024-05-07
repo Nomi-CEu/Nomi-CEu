@@ -1,4 +1,4 @@
-import { modpackManifest } from "../../globals";
+import { modpackManifest } from "#globals";
 
 /**
  * Transform the version field of manifest.json.
