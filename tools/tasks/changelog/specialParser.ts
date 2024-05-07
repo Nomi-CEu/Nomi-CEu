@@ -152,7 +152,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 /**
  * Parses a commit with 'Fixup'.
  */
-export async function parseFixUp(commit: Commit): Promise<boolean> {
+export async function parseFixUp(commit: Commit, fix?: FixUpInfo): Promise<boolean> {
 	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
 	await parseTOMLWithRootToList<FixUpInfo>(
 		commit.body,
@@ -167,13 +167,31 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 		},
 		(item) => item as unknown as FixUpInfo,
 		(matter) => {
+			let title = commit.message;
+			// Replace "\r\n" (Caused by editing on GitHub) with "\n", as the output matter has this done.
+			let body = commit.body.replace(/\r\n/g, "\n").replace(matter.matter.trim(), "");
+
+			// Apply Ignored Fixes
+			if (fix) {
+				if (fix.newTitle) title = fix.newTitle;
+				if (fix.newBody) {
+					switch (fix.mode) {
+						case "REPLACE":
+							body = fix.newBody;
+							break;
+						case "ADDITION":
+							body = body.concat(`\n\n${fix.newBody}`);
+							break;
+					}
+				}
+			}
+
 			// Must override, even if newer commits specified changes, as need to remove fixup data
 			data.commitFixes.set(commit.hash, {
 				sha: commit.hash,
 				mode: "REPLACE",
-				newTitle: commit.message,
-				// Replace "\r\n" (Caused by editing on GitHub) with "\n", as the output matter has this done.
-				newBody: commit.body.replace(/\r\n/g, "\n").replace(matter.matter.trim(), ""),
+				newTitle: title,
+				newBody: body,
 			});
 		},
 	);

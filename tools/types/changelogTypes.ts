@@ -166,6 +166,7 @@ export interface Parser {
 	 * commit: The commit object.
 	 * commitMessage: The message of the commit.<p>
 	 * commitBody: The body of the commit. Might be undefined.<p>
+	 * fix: The fix, if it is not already applied. Usually undefined. Always undefined if applyFixCallback is unset.<p>
 	 * return: True if parsing was successful, false if not. Can return Ignored if commit was ignored (not skipped).
 	 */
 	itemCallback: (
@@ -173,6 +174,7 @@ export interface Parser {
 		commit: Commit,
 		commitMessage: string,
 		commitBody?: string,
+		fix?: FixUpInfo,
 	) => Promise<boolean | Ignored>;
 
 	/**
@@ -209,6 +211,15 @@ export interface Parser {
 	 * return: True if to add, false if not.
 	 */
 	addCommitListCallback: (commit: Commit, parsed: boolean) => boolean;
+
+	/**
+	 * Callback to determine whether fixes should be applied to this commit.
+	 * Optional. If not provided, assumes yes.
+	 * <p><p>
+	 * fix: The FixUpInfo Object.<p>
+	 * return: True if to fix, false if not.
+	 */
+	applyFixCalback?: (fix: FixUpInfo) => boolean;
 }
 
 export interface IgnoreInfo {
@@ -259,7 +270,9 @@ export interface FixUpInfo {
 	sha: string;
 	newTitle?: string;
 	newBody?: string;
-	mode: FixUpMode;
+	mode: FixUpMode; // Auto Filled in If Not Provided
+	// Whether this fix should replace that other commit's fixes as well.
+	changeFixes?: boolean;
 }
 
 export interface ModInfo {

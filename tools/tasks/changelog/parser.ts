@@ -1,4 +1,4 @@
-import { Category, Commit, Ignored, Parser, SubCategory } from "../../types/changelogTypes";
+import { Category, Commit, FixUpInfo, Ignored, Parser, SubCategory } from "../../types/changelogTypes";
 import {
 	categories,
 	combineKey,
@@ -20,18 +20,13 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 	for (const commit of commits) {
 		if (data.shaList.has(commit.hash)) continue;
 
+		let savedFix: FixUpInfo = undefined;
 		if (data.commitFixes.has(commit.hash)) {
 			const fixUpInfo = data.commitFixes.get(commit.hash);
-			if (fixUpInfo.newTitle) commit.message = fixUpInfo.newTitle;
-			if (fixUpInfo.newBody) {
-				switch (fixUpInfo.mode) {
-					case "REPLACE":
-						commit.body = fixUpInfo.newBody;
-						break;
-					case "ADDITION":
-						commit.body = commit.body.concat(`\n\n${fixUpInfo.newBody}`);
-						break;
-				}
+			if (!parser.applyFixCalback || parser.applyFixCalback(fixUpInfo)) {
+				applyFix(commit, fixUpInfo);
+			} else {
+				savedFix = fixUpInfo;
 			}
 		}
 
@@ -40,7 +35,7 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 			continue;
 		}
 
-		const parsed = await parser.itemCallback(parser, commit, commit.message, commit.body);
+		const parsed = await parser.itemCallback(parser, commit, commit.message, commit.body, savedFix);
 		if (parsed instanceof Ignored) {
 			if (parsed.getCommitList() && parser.addCommitListCallback) {
 				if (parser.addCommitListCallback(commit, true)) data.commitList.push(commit);
@@ -52,6 +47,20 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 		if (!parser.addSHACallback || parser.addSHACallback(commit, parsed)) data.shaList.add(commit.hash);
 
 		if (parser.addCommitListCallback(commit, parsed)) data.commitList.push(commit);
+	}
+}
+
+function applyFix(commit: Commit, fix: FixUpInfo) {
+	if (fix.newTitle) commit.message = fix.newTitle;
+	if (fix.newBody) {
+		switch (fix.mode) {
+			case "REPLACE":
+				commit.body = fix.newBody;
+				break;
+			case "ADDITION":
+				commit.body = commit.body.concat(`\n\n${fix.newBody}`);
+				break;
+		}
 	}
 }
 
