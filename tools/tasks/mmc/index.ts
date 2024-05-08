@@ -87,7 +87,7 @@ async function createMMCManifest() {
 	const manifest = {
 		components: [],
 		formatVersion: 1,
-	} as { components: unknown[], formatVersion: number };
+	} as { components: unknown[]; formatVersion: number };
 
 	manifest.components.push({
 		cachedName: "Minecraft",

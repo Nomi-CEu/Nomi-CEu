@@ -14,5 +14,12 @@
 		"skipLibCheck": true,
 		"resolveJsonModule": true
 	},
-	"include": ["gulpfile.ts", "globals.ts", "buildConfig.ts", "tasks/**/*", "types/**/*", "utils/**/*"]
+	"include": [
+		"gulpfile.ts",
+		"globals.ts",
+		"buildConfig.ts",
+		"tasks/**/*",
+		"types/**/*",
+		"utils/**/*"
+	]
 }

@@ -8,7 +8,10 @@ module.exports = {
 		},
 	},
 	plugins: ["@typescript-eslint"],
-	extends: ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+	extends: [
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+	],
 	rules: {
 		quotes: [2, "double", { avoidEscape: true }],
 		semi: [2, "always"],

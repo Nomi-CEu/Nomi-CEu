@@ -31,7 +31,7 @@ export async function additions(): Promise<void> {
 		}
 
 		const addingID = ++newID;
-		logInfo(`Adding New Quest with ID ${addingID} and Name '${name(addition)}'...`);
+		logInfo("Adding New Quest...");
 
 		const newQuest = { ...addition } as Quest; // Copy Quest
 		newQuest["questID:3"] = addingID;
@@ -92,15 +92,26 @@ export async function removals(): Promise<void> {
 			logInfo("Skipping...");
 			continue;
 		}
-		const quest = await findQuest(id(removal));
+		const quest = await findQuest(id(removal), data.oldIDsToQuests?.get(id(removal)));
 		if (!quest) {
 			logInfo("Skipping, Could not find Corresponding Quest...");
 			continue;
 		}
+		logInfo("Removing Quest...");
 		const newId = id(quest);
 
 		const newEmptyQuest = { ...emptyQuest } as Quest; // Copy Quest
 		newEmptyQuest["questID:3"] = newId;
 		data.toChangeIDsToQuests.set(newId, newEmptyQuest);
+
+		// Remove quest from Quest Lines
+		if (data.questLines) {
+			for (const line of data.questLines) {
+				for (const key of Object.keys(line["quests:9"])) {
+					const questInfo = line["quests:9"][key];
+					if (newId === questInfo["id:3"]) delete line["quests:9"][key];
+				}
+			}
+		}
 	}
 }

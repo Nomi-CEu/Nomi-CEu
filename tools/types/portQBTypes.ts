@@ -39,8 +39,8 @@ export interface Replacements {
 }
 
 export interface Parser {
-	id?: string;
-	name?: string;
+	id: string;
+	name: string;
 	formattedName?: (path: string[], op: Operation) => string;
 	condition: Matcher;
 	logic: SimpleLogic | BunchedLogic;

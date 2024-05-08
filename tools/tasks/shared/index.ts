@@ -102,8 +102,14 @@ async function fetchOrMakeChangelog() {
 		logInfo("Using Changelog Files from Branch.");
 		const url = "https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
 		await downloadChangelogs(
-			mustache.render(url, { branch: process.env.CHANGELOG_BRANCH, filename: "CHANGELOG.md" }),
-			mustache.render(url, { branch: process.env.CHANGELOG_BRNACH, filename: "CHANGELOG_CF.md" }),
+			mustache.render(url, {
+				branch: process.env.CHANGELOG_BRANCH,
+				filename: "CHANGELOG.md",
+			}),
+			mustache.render(url, {
+				branch: process.env.CHANGELOG_BRNACH,
+				filename: "CHANGELOG_CF.md",
+			}),
 		);
 		return;
 	}

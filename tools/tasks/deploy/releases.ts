@@ -61,7 +61,10 @@ async function deployReleases(): Promise<void> {
 		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
 	).toString();
 
-	changelog = mustache.render(changelog, { CENTER_ALIGN: 'align="center"', CF_REDIRECT: "" });
+	changelog = mustache.render(changelog, {
+		CENTER_ALIGN: 'align="center"',
+		CF_REDIRECT: "",
+	});
 
 	// Create a release.
 	const release = await octokit.repos.createRelease({

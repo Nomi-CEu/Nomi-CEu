@@ -82,7 +82,10 @@ function copyClientChangelog() {
  */
 function copyClientOverrides() {
 	return gulp
-		.src(buildConfig.copyFromSharedClientGlobs, { cwd: sharedDestDirectory, allowEmpty: true })
+		.src(buildConfig.copyFromSharedClientGlobs, {
+			cwd: sharedDestDirectory,
+			allowEmpty: true,
+		})
 		.pipe(dest(upath.join(clientDestDirectory, "overrides")));
 }
 

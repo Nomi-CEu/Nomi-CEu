@@ -228,7 +228,11 @@ export async function parseModInfo(commitBody: string, commitObject: Commit): Pr
  */
 async function getParsedModInfo(modInfo: ModInfo): Promise<ParsedModInfo> {
 	const subMessages: ChangelogMessage[] = [];
-	if (modInfo.detail) subMessages.push({ commitMessage: modInfo.detail, indentation: indentationLevel });
+	if (modInfo.detail)
+		subMessages.push({
+			commitMessage: modInfo.detail,
+			indentation: indentationLevel,
+		});
 	if (modInfo.details && modInfo.details.length > 0)
 		subMessages.push(
 			...modInfo.details.map((detail) => {
@@ -329,7 +333,11 @@ async function expandDetailsLevel(
 			if (string.includes(detailsKey)) {
 				result.push(...(await expandDetailsLevel(string, commitObject, `${indentation}${indentationLevel}`)));
 			} else {
-				result.push({ commitMessage: string, commitObject: commitObject, indentation: indentation });
+				result.push({
+					commitMessage: string,
+					commitObject: commitObject,
+					indentation: indentation,
+				});
 			}
 		},
 		(root) => root[detailsRoot] as string,
@@ -388,7 +396,11 @@ async function addDetailsLevel(
 		if (detailString.includes(detailsKey)) {
 			builder.push(...(await expandDetailsLevel(detailString, commitObject, `${indentation}${indentationLevel}`)));
 		} else {
-			builder.push({ commitMessage: detailString, commitObject: commitObject, indentation: indentation });
+			builder.push({
+				commitMessage: detailString,
+				commitObject: commitObject,
+				indentation: indentation,
+			});
 		}
 	}
 }
