@@ -232,7 +232,11 @@ async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMes
  * Returns a formatted commit
  */
 function formatCommit(commit: Commit): string {
-	const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
+	const date = new Date(commit.date).toLocaleDateString("en-us", {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+	});
 	const formattedCommit = `${commit.message} - **${commit.author_name}** (${date})`;
 
 	const shortSHA = commit.hash.substring(0, 7);

@@ -16,11 +16,15 @@ async function modCleanUp() {
 async function createModDirs() {
 	// This also makes the base dir, as it is recursive.
 	if (!fs.existsSync(upath.join(modDestDirectory, "client"))) {
-		await fs.promises.mkdir(upath.join(modDestDirectory, "client"), { recursive: true });
+		await fs.promises.mkdir(upath.join(modDestDirectory, "client"), {
+			recursive: true,
+		});
 	}
 
 	if (!fs.existsSync(upath.join(modDestDirectory, "server"))) {
-		await fs.promises.mkdir(upath.join(modDestDirectory, "server"), { recursive: true });
+		await fs.promises.mkdir(upath.join(modDestDirectory, "server"), {
+			recursive: true,
+		});
 	}
 }
 

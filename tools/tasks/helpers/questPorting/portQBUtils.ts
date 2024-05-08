@@ -290,8 +290,9 @@ export function dependencies(quest: Quest): number[] {
  * Paths to Ignore in Quest Change Calculation.
  * Prerequisites handled separately.
  * Prerequisites Types handled by Prerequisites.
+ * Rewards not ported (too different across Quest Books)
  **/
-const ignoreRootPaths = new Set<string>(["preRequisites:11", "preRequisiteTypes:7"]);
+const ignoreRootPaths = new Set<string>(["preRequisites:11", "preRequisiteTypes:7", "rewards:9"]);
 
 /**
  * Special Handling in Modified. The Path that is added to the changes list should have -CUSTOM appended to the end, to distinguish this from other changes.
@@ -301,7 +302,11 @@ const specialModifierHandlers: SpecialModifierHandler[] = [
 		const diff = getUniqueToArray(old["preRequisites:11"], current["preRequisites:11"]);
 		// Unique to old array: Removed
 		if (diff.arr1Unique.length > 0 || diff.arr2Unique.length > 0) {
-			changes.push({ path: ["preRequisites-CUSTOM"], op: "replace", value: diff });
+			changes.push({
+				path: ["preRequisites-CUSTOM"],
+				op: "replace",
+				value: diff,
+			});
 		}
 	},
 ];
@@ -324,7 +329,12 @@ export function getChanged(currentQuests: Quest[], oldQuests: Quest[]): Changed 
 					handler(oldQuests[j], currentQuests[i], questDiff);
 				}
 				if (isEmptyQuest(currentQuests[i])) changed.removed.push(oldQuests[j]);
-				else changed.modified.push({ currentQuest: currentQuests[i], oldQuest: oldQuests[j], change: questDiff });
+				else
+					changed.modified.push({
+						currentQuest: currentQuests[i],
+						oldQuest: oldQuests[j],
+						change: questDiff,
+					});
 			}
 			i++;
 			j++;
@@ -397,9 +407,7 @@ function emptyTasks(quest: Quest): boolean {
 		Object.keys(quest["tasks:9"]).length === 0 ||
 		(Object.keys(quest["tasks:9"]).length === 1 &&
 			(!quest["tasks:9"]["0:10"] ||
-				// @ts-expect-error No Defined Type for Tasks
 				!quest["tasks:9"]["0:10"]["taskID:8"] ||
-				// @ts-expect-error No Defined Type for Tasks
 				quest["tasks:9"]["0:10"]["taskID:8"] === emptyQuestTaskId))
 	);
 }

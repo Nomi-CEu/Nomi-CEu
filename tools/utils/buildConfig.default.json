@@ -7,17 +7,9 @@
 	"launchscriptsMinRAM": "2048M",
 	"launchscriptsMaxRAM": "2048M",
 	"launchscriptsJVMArgs": "",
-	"copyToSharedDirGlobs": [
-		"overrides/**/*",
-		"!overrides/**/server.properties"
-	],
-	"copyFromSharedServerGlobs": [
-		"overrides/**/*",
-		"!overrides/resources/**/*"
-	],
-	"copyFromSharedClientGlobs": [
-		"overrides/**/*"
-	],
+	"copyToSharedDirGlobs": ["overrides/**/*", "!overrides/**/server.properties"],
+	"copyFromSharedServerGlobs": ["overrides/**/*", "!overrides/resources/**/*"],
+	"copyFromSharedClientGlobs": ["overrides/**/*"],
 	"buildDestinationDirectory": "../build",
 	"nightlyHookAvatar": "",
 	"nightlyHookName": ""

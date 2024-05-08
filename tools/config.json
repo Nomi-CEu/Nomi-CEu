@@ -1,8 +1,5 @@
 {
-	"copyFromSharedServerGlobs": [
-		"overrides/**/*",
-		"!overrides/resources/**/*"
-	],
+	"copyFromSharedServerGlobs": ["overrides/**/*", "!overrides/resources/**/*"],
 	"copyFromSharedClientGlobs": [
 		"overrides/**/*",
 		"!overrides/resources/minecraft/textures/gui/title/background/*"

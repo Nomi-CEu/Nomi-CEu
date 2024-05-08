@@ -11,7 +11,12 @@ export interface Quest {
 	"properties:10": QuestProperties;
 	"questID:3": number;
 	"rewards:9": { [key: string]: Rewards };
-	"tasks:9": { [key: string]: unknown };
+	"tasks:9": { [key: string]: Task };
+}
+
+export interface Task {
+	"index:3": number;
+	"taskID:8": string;
 }
 
 export interface QuestProperties {

@@ -128,11 +128,9 @@ export default class PortQBData {
 				await checkbox({
 					message:
 						"What Modification Parsers Should We Ignore, If Any? (Other Small Logic And Value Changes are Handled Separately)",
-					choices: modificationParsers
-						.filter((parser) => parser.id)
-						.map((parser) => {
-							return { name: parser.name, value: parser.id ?? "" };
-						}),
+					choices: modificationParsers.map((parser) => {
+						return { name: parser.name, value: parser.id };
+					}),
 					required: false,
 				}),
 			);

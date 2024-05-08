@@ -48,7 +48,10 @@ const normalMode: SubCategory = { commitKey: "[NM]", keyName: "Normal Mode" };
 const hardMode: SubCategory = { commitKey: "[HM]", keyName: "Hard Mode" };
 
 /* Misc Sub Category Keys */
-const qolChanges: SubCategory = { commitKey: "[QOL]", keyName: "Quality of Life" };
+const qolChanges: SubCategory = {
+	commitKey: "[QOL]",
+	keyName: "Quality of Life",
+};
 
 /* Set Sub Categories (Sub Categories that do not let any commit in) */
 const bothModes: SubCategory = { keyName: "Both Modes" };

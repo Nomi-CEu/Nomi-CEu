@@ -115,15 +115,13 @@ function findAllParsers(modify: Modified): {
 			if (!parser.condition(path)) continue;
 
 			// ID Checks and Handles
-			if (parser.id) {
-				if (data.modifyParsersIgnore.has(parser.id)) {
-					logNotImportant(`Skipping Change with Parser with id '${parser.id}'...`);
-					break;
-				}
-				if (parser.logic.type === LogicType.Simple) {
-					if (foundSimpleParserIds.has(parser.id)) break;
-					if (parser.logic.applyOnce) foundSimpleParserIds.add(parser.id);
-				}
+			if (data.modifyParsersIgnore.has(parser.id)) {
+				logNotImportant(`Skipping Change with Parser with id '${parser.id}'...`);
+				break;
+			}
+			if (parser.logic.type === LogicType.Simple) {
+				if (foundSimpleParserIds.has(parser.id)) break;
+				if (parser.logic.applyOnce) foundSimpleParserIds.add(parser.id);
 			}
 
 			// Simple Parser Logic
@@ -136,8 +134,6 @@ function findAllParsers(modify: Modified): {
 			}
 
 			// Bunched Parser Logic
-			if (!parser.id) throw new Error("All Bunched Parsers must have ID Set!");
-
 			const changeAndPath: ChangeAndPath = { change: change, path: pathList };
 			if (!foundBuncableParsers.has(parser.id)) {
 				foundBuncableParsers.set(parser.id, [{ logic: parser.logic, changeAndPath: [changeAndPath] }]);
@@ -166,7 +162,10 @@ function findAllParsers(modify: Modified): {
 		}
 	}
 
-	return { formattedNames: outputFormatted.sort(), callableFunctions: outputFunctions };
+	return {
+		formattedNames: outputFormatted.sort(),
+		callableFunctions: outputFunctions,
+	};
 }
 
 function assertIsModification(change: QuestChange) {
@@ -265,10 +264,6 @@ const modifyTasks = async (questToModify: Quest, modify: Modified, changeAndPath
 	logInfo(`${stringify(changeAndPaths, null, 2)}`);
 };
 
-const modifyRewards = async (questToModify: Quest, modify: Modified, changeAndPaths: ChangeAndPath[]) => {
-	logInfo(`${stringify(changeAndPaths, null, 2)}`);
-};
-
 const modifyPrerequisites = async (questToModify: Quest, modify: Modified, change: QuestChange) => {
 	logInfo("Performing Prerequisite Modifications...");
 
@@ -360,7 +355,9 @@ const modifyGeneral = async (
 	logInfo(colors.bold("Change if Applied:"));
 	console.log(fakeDiff(stringify(navigateTo(questToModify, change.path)) ?? "", newValueAsString));
 
-	const shouldContinue = await confirm({ message: "Would you like to apply the Change?" });
+	const shouldContinue = await confirm({
+		message: "Would you like to apply the Change?",
+	});
 	if (!shouldContinue) {
 		logNotImportant("Skipping...");
 		return;
@@ -428,20 +425,6 @@ export const modificationParsers = [
 		},
 	},
 	{
-		id: "rewards",
-		name: "Reward",
-		formattedName: (path, op) => {
-			if (!isAddingOrReplacingComplexTask(path) && op !== "replace") op = "replace";
-			return getFormattedNameWithIndex(path, op, "rewards", "Reward");
-		},
-		condition: picomatch("rewards/**/*"),
-		logic: {
-			type: LogicType.Bunched,
-			applyTogether: (path1, path2) => getIndex(path1, "rewards") === getIndex(path2, "rewards"),
-			func: modifyRewards,
-		},
-	},
-	{
 		id: "prerequisites",
 		name: "Prerequisite",
 		condition: picomatch("preRequisites-CUSTOM"),
@@ -452,6 +435,8 @@ export const modificationParsers = [
 		},
 	},
 	{
+		id: "general",
+		name: "General Changes",
 		formattedName: (path, op) => `'${path[path.length - 1]}' ${formatOp(op)}`,
 		condition: picomatch("**/*"),
 		logic: {

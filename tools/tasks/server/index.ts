@@ -153,7 +153,10 @@ async function copyServerMods() {
  */
 function copyServerOverrides() {
 	return gulp
-		.src(buildConfig.copyFromSharedServerGlobs, { cwd: sharedDestDirectory, allowEmpty: true })
+		.src(buildConfig.copyFromSharedServerGlobs, {
+			cwd: sharedDestDirectory,
+			allowEmpty: true,
+		})
 		.pipe(dest(upath.join(serverDestDirectory)));
 }
 

@@ -166,7 +166,9 @@ export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<Retri
 	}
 
 	if (!fs.existsSync(buildConfig.downloaderCacheDirectory)) {
-		await fs.promises.mkdir(buildConfig.downloaderCacheDirectory, { recursive: true });
+		await fs.promises.mkdir(buildConfig.downloaderCacheDirectory, {
+			recursive: true,
+		});
 	}
 
 	let handle: fs.promises.FileHandle | undefined = undefined;
@@ -227,7 +229,11 @@ function fixConfig(axiosInstance: AxiosInstance | AxiosStatic, config: AxiosRequ
  * Use Axios Retry API to retry if Hash Failed or No Response.
  */
 function retryOrThrow(response: AxiosResponse<unknown, unknown>, error: string) {
-	const currentState = { ...DEFAULT_OPTIONS, ...retryCfg, ...response.config[namespace] };
+	const currentState = {
+		...DEFAULT_OPTIONS,
+		...retryCfg,
+		...response.config[namespace],
+	};
 	const config = { ...response.config };
 
 	currentState.retryCount = currentState.retryCount || 0;
