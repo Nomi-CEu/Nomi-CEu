@@ -42,9 +42,14 @@ async function getForgeURLs() {
 	/**
 	 * Finally, fetch libraries.
 	 */
-	const libraries = forgeProfile.libraries.filter((x) => Boolean(x?.downloads?.artifact?.url));
+	const libraries = forgeProfile.libraries.filter((x) =>
+		Boolean(x?.downloads?.artifact?.url),
+	);
 
-	return [FORGE_MAVEN + forgeInstallerPath, ...libraries.map((library) => library.downloads.artifact.url)];
+	return [
+		FORGE_MAVEN + forgeInstallerPath,
+		...libraries.map((library) => library.downloads.artifact.url),
+	];
 }
 
 /**
@@ -58,12 +63,16 @@ export default async function pruneCache(): Promise<void> {
 
 	// Fetch file infos.
 	const fileInfos = await Promise.all(
-		modpackManifest.files.map(async (file) => fetchFileInfo(file.projectID, file.fileID)),
+		modpackManifest.files.map(async (file) =>
+			fetchFileInfo(file.projectID, file.fileID),
+		),
 	);
 	urls.push(...fileInfos.map((fileInfo) => fileInfo.downloadUrl));
 
 	// Fetch the Minecraft server.
-	const versionManifest = await getVersionManifest(modpackManifest.minecraft.version);
+	const versionManifest = await getVersionManifest(
+		modpackManifest.minecraft.version,
+	);
 	if (!versionManifest) {
 		throw new Error(`No manifest found for Minecraft ${versionManifest}`);
 	}
@@ -74,14 +83,21 @@ export default async function pruneCache(): Promise<void> {
 		urls.push(...modpackManifest.externalDependencies.map((dep) => dep.url));
 	}
 
-	const cache = (await fs.promises.readdir(buildConfig.downloaderCacheDirectory)).filter((entity) =>
-		fs.statSync(upath.join(buildConfig.downloaderCacheDirectory, entity)).isFile(),
+	const cache = (
+		await fs.promises.readdir(buildConfig.downloaderCacheDirectory)
+	).filter((entity) =>
+		fs
+			.statSync(upath.join(buildConfig.downloaderCacheDirectory, entity))
+			.isFile(),
 	);
 
-	const shaMap: { [key: string]: boolean } = urls.reduce((map: Record<string, boolean>, url) => {
-		map[sha1(url)] = true;
-		return map;
-	}, {});
+	const shaMap: { [key: string]: boolean } = urls.reduce(
+		(map: Record<string, boolean>, url) => {
+			map[sha1(url)] = true;
+			return map;
+		},
+		{},
+	);
 
 	let count = 0,
 		bytes = 0;

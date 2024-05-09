@@ -54,13 +54,22 @@ export enum LogicType {
 export interface SimpleLogic {
 	type: LogicType.Simple;
 	applyOnce: boolean;
-	func: (questToModify: Quest, modify: Modified, change: QuestChange, path: string[]) => Promise<void>;
+	func: (
+		questToModify: Quest,
+		modify: Modified,
+		change: QuestChange,
+		path: string[],
+	) => Promise<void>;
 }
 
 export interface BunchedLogic {
 	type: LogicType.Bunched;
 	applyTogether: (path1: string[], path2: string[]) => boolean;
-	func: (questToModify: Quest, modify: Modified, changeAndPaths: ChangeAndPath[]) => Promise<void>;
+	func: (
+		questToModify: Quest,
+		modify: Modified,
+		changeAndPaths: ChangeAndPath[],
+	) => Promise<void>;
 }
 
 export interface SavedPorter {
@@ -86,7 +95,11 @@ export type ChangeAndPath = {
 	path: string[];
 };
 
-export type SpecialModifierHandler = (oldQuest: Quest, currentQuest: Quest, questDiff: QuestChange[]) => void;
+export type SpecialModifierHandler = (
+	oldQuest: Quest,
+	currentQuest: Quest,
+	questDiff: QuestChange[],
+) => void;
 
 export class Message {
 	private readonly message: string;

@@ -13,16 +13,24 @@ import {
 import PortQBData from "./portQBData.ts";
 import DiffMatchPatch from "diff-match-patch";
 import picomatch from "picomatch";
-import { booleanSelect, findQuest, id, name, navigateTo, setValue } from "./portQBUtils.ts";
+import {
+	booleanSelect,
+	findQuest,
+	id,
+	name,
+	navigateTo,
+	setValue,
+} from "./portQBUtils.ts";
 import fakeDiff from "fake-diff";
 import { Operation } from "just-diff";
-import logInfo, { logNotImportant } from "#utils/log.ts";
+import logInfo, { logNotImportant, logWarn } from "#utils/log.ts";
 import dedent from "dedent-js";
 import { confirm, editor, select } from "@inquirer/prompts";
 import colors from "colors";
 import { stringify } from "javascript-stringify";
 import { Quest } from "#types/bqQuestBook.ts";
 import { ArrayUnique } from "#utils/util.js";
+import lodash from "lodash";
 
 let data: PortQBData;
 const dmp = new DiffMatchPatch();
@@ -103,10 +111,12 @@ function findAllParsers(modify: Modified): {
 	const foundBuncableParsers = new Map<string, BunchedParserPath[]>();
 	const foundSimpleParserIds = new Set<string>();
 	for (const change of modify.change) {
-		const pathList = (change.path as string[] | number[]).map((path: string | number): string => {
-			if (typeof path === "number") path = (path as number).toString();
-			return path.split(":")[0];
-		});
+		const pathList = (change.path as string[] | number[]).map(
+			(path: string | number): string => {
+				if (typeof path === "number") path = (path as number).toString();
+				return path.split(":")[0];
+			},
+		);
 		const path = pathList.join("/");
 
 		// Instead of filtering out ignored parsers before, we must check if the parser match is one that is ignored
@@ -116,7 +126,9 @@ function findAllParsers(modify: Modified): {
 
 			// ID Checks and Handles
 			if (data.modifyParsersIgnore.has(parser.id)) {
-				logNotImportant(`Skipping Change with Parser with id '${parser.id}'...`);
+				logNotImportant(
+					`Skipping Change with Parser with id '${parser.id}'...`,
+				);
 				break;
 			}
 			if (parser.logic.type === LogicType.Simple) {
@@ -127,29 +139,51 @@ function findAllParsers(modify: Modified): {
 			// Simple Parser Logic
 			if (parser.logic.type === LogicType.Simple) {
 				outputFunctions.push(
-					async (quest) => await (parser.logic as SimpleLogic).func(quest, modify, change, pathList),
+					async (quest) =>
+						await (parser.logic as SimpleLogic).func(
+							quest,
+							modify,
+							change,
+							pathList,
+						),
 				);
-				outputFormatted.push(getFormattedParserName(parser, pathList, change.op));
+				outputFormatted.push(
+					getFormattedParserName(parser, pathList, change.op),
+				);
 				break;
 			}
 
 			// Bunched Parser Logic
 			const changeAndPath: ChangeAndPath = { change: change, path: pathList };
 			if (!foundBuncableParsers.has(parser.id)) {
-				foundBuncableParsers.set(parser.id, [{ logic: parser.logic, changeAndPath: [changeAndPath] }]);
-				outputFormatted.push(getFormattedParserName(parser, pathList, change.op));
+				foundBuncableParsers.set(parser.id, [
+					{ logic: parser.logic, changeAndPath: [changeAndPath] },
+				]);
+				outputFormatted.push(
+					getFormattedParserName(parser, pathList, change.op),
+				);
 				break;
 			}
 
 			let foundBunch = false;
 			for (const parserBunch of foundBuncableParsers.get(parser.id) ?? []) {
-				if (!parserBunch.logic.applyTogether(parserBunch.changeAndPath[0].path, pathList)) continue;
+				if (
+					!parserBunch.logic.applyTogether(
+						parserBunch.changeAndPath[0].path,
+						pathList,
+					)
+				)
+					continue;
 				parserBunch.changeAndPath.push(changeAndPath);
 				foundBunch = true;
 			}
 			if (!foundBunch) {
-				foundBuncableParsers.get(parser.id)?.push({ logic: parser.logic, changeAndPath: [changeAndPath] });
-				outputFormatted.push(getFormattedParserName(parser, pathList, change.op));
+				foundBuncableParsers
+					.get(parser.id)
+					?.push({ logic: parser.logic, changeAndPath: [changeAndPath] });
+				outputFormatted.push(
+					getFormattedParserName(parser, pathList, change.op),
+				);
 			}
 			break;
 		}
@@ -158,7 +192,10 @@ function findAllParsers(modify: Modified): {
 	// Change Bunched Parsers Into Function
 	for (const bunchList of foundBuncableParsers.values()) {
 		for (const bunch of bunchList) {
-			outputFunctions.push(async (quest) => await bunch.logic.func(quest, modify, bunch.changeAndPath));
+			outputFunctions.push(
+				async (quest) =>
+					await bunch.logic.func(quest, modify, bunch.changeAndPath),
+			);
 		}
 	}
 
@@ -176,15 +213,25 @@ function assertIsModification(change: QuestChange) {
 		`);
 }
 
-const modifyDesc = async (questToModify: Quest, modify: Modified, change: QuestChange) => {
+const modifyDesc = async (
+	questToModify: Quest,
+	modify: Modified,
+	change: QuestChange,
+) => {
 	assertIsModification(change);
-	const oldQuest = modify.oldQuest["properties:10"]["betterquesting:10"]["desc:8"];
-	const newQuest = modify.currentQuest["properties:10"]["betterquesting:10"]["desc:8"];
-	const originalQuest = questToModify["properties:10"]["betterquesting:10"]["desc:8"];
+	const oldQuest =
+		modify.oldQuest["properties:10"]["betterquesting:10"]["desc:8"];
+	const newQuest =
+		modify.currentQuest["properties:10"]["betterquesting:10"]["desc:8"];
+	const originalQuest =
+		questToModify["properties:10"]["betterquesting:10"]["desc:8"];
 
 	logInfo(colors.bold("Change in Source Quest:"));
 	console.log(fakeDiff(oldQuest, newQuest));
-	const apply = dmp.patch_apply(dmp.patch_make(oldQuest, newQuest), originalQuest)[0];
+	const apply = dmp.patch_apply(
+		dmp.patch_make(oldQuest, newQuest),
+		originalQuest,
+	)[0];
 	logInfo(colors.bold("If Applied:"));
 	console.log(fakeDiff(originalQuest, apply));
 	logInfo(colors.bold("If Replaced:"));
@@ -223,9 +270,15 @@ const modifyDesc = async (questToModify: Quest, modify: Modified, change: QuestC
 					{ name: "Original Description", value: "ORIGINAL" },
 				],
 			})) as CustomDescriptionTemplate;
-			const templateStr = template === "APPLY" ? apply : template === "REPLACE" ? newQuest : originalQuest;
+			const templateStr =
+				template === "APPLY"
+					? apply
+					: template === "REPLACE"
+						? newQuest
+						: originalQuest;
 			description = await editor({
-				message: "Enter your Custom Description. Enter an Empty String to Cancel!",
+				message:
+					"Enter your Custom Description. Enter an Empty String to Cancel!",
 				default: templateStr,
 			});
 			if (!description) {
@@ -238,11 +291,18 @@ const modifyDesc = async (questToModify: Quest, modify: Modified, change: QuestC
 	questToModify["properties:10"]["betterquesting:10"]["desc:8"] = description;
 };
 
-const modifyIcon = async (questToModify: Quest, modify: Modified, change: QuestChange) => {
+const modifyIcon = async (
+	questToModify: Quest,
+	modify: Modified,
+	change: QuestChange,
+) => {
 	assertIsModification(change);
-	const oldIcon = modify.oldQuest["properties:10"]["betterquesting:10"]["icon:10"];
-	const newIcon = modify.currentQuest["properties:10"]["betterquesting:10"]["icon:10"];
-	const currentIcon = questToModify["properties:10"]["betterquesting:10"]["icon:10"];
+	const oldIcon =
+		modify.oldQuest["properties:10"]["betterquesting:10"]["icon:10"];
+	const newIcon =
+		modify.currentQuest["properties:10"]["betterquesting:10"]["icon:10"];
+	const currentIcon =
+		questToModify["properties:10"]["betterquesting:10"]["icon:10"];
 
 	const newIconString = stringify(newIcon, null, 2) ?? "";
 
@@ -260,18 +320,27 @@ const modifyIcon = async (questToModify: Quest, modify: Modified, change: QuestC
 	questToModify["properties:10"]["betterquesting:10"]["icon:10"] = newIcon;
 };
 
-const modifyTasks = async (questToModify: Quest, modify: Modified, changeAndPaths: ChangeAndPath[]) => {
+const modifyTasks = async (
+	questToModify: Quest,
+	modify: Modified,
+	changeAndPaths: ChangeAndPath[],
+) => {
 	logInfo(`${stringify(changeAndPaths, null, 2)}`);
 };
 
-const modifyPrerequisites = async (questToModify: Quest, modify: Modified, change: QuestChange) => {
+const modifyPrerequisites = async (
+	questToModify: Quest,
+	modify: Modified,
+	change: QuestChange,
+) => {
 	logInfo("Performing Prerequisite Modifications...");
 
 	// Get Array Diff
 	const arrayDiff = change.value as ArrayUnique<number>;
 
 	const preRequisiteArrayCurrent = modify.currentQuest["preRequisites:11"];
-	const preRequisiteTypeArrayCurrent = modify.currentQuest["preRequisiteTypes:7"];
+	const preRequisiteTypeArrayCurrent =
+		modify.currentQuest["preRequisiteTypes:7"];
 
 	const preRequisiteArray = questToModify["preRequisites:11"];
 	const preRequisiteTypeArray = questToModify["preRequisiteTypes:7"];
@@ -279,7 +348,10 @@ const modifyPrerequisites = async (questToModify: Quest, modify: Modified, chang
 	const preRequisites = new Map<number, number>();
 
 	preRequisiteArray.forEach((pre, index) =>
-		preRequisites.set(pre, preRequisiteTypeArray ? preRequisiteTypeArray[index] : 0),
+		preRequisites.set(
+			pre,
+			preRequisiteTypeArray ? preRequisiteTypeArray[index] : 0,
+		),
 	);
 
 	// Unique to Current: Added.
@@ -293,7 +365,11 @@ const modifyPrerequisites = async (questToModify: Quest, modify: Modified, chang
 			logNotImportant("Quest Already Contains Added Prerequisite.");
 			return;
 		}
-		if (!(await booleanSelect(`Should we Add Quest with ID ${id(toAdd)} and Name ${name(toAdd)} as a Prerequisite?`))) {
+		if (
+			!(await booleanSelect(
+				`Should we Add Quest with ID ${id(toAdd)} and Name ${name(toAdd)} as a Prerequisite?`,
+			))
+		) {
 			logNotImportant("Skipping...");
 			return;
 		}
@@ -301,7 +377,9 @@ const modifyPrerequisites = async (questToModify: Quest, modify: Modified, chang
 		const index = preRequisiteArrayCurrent.indexOf(added);
 		preRequisites.set(
 			id(toAdd),
-			index === -1 || !preRequisiteTypeArrayCurrent ? 0 : preRequisiteTypeArrayCurrent[index] ?? 0,
+			index === -1 || !preRequisiteTypeArrayCurrent
+				? 0
+				: preRequisiteTypeArrayCurrent[index] ?? 0,
 		);
 	}
 
@@ -330,7 +408,10 @@ const modifyPrerequisites = async (questToModify: Quest, modify: Modified, chang
 
 	// Save
 	questToModify["preRequisites:11"] = Array.from(preRequisites.keys()).sort();
-	if (Array.from(preRequisites.values()).findIndex((value) => value !== 0) === -1) return;
+	if (
+		Array.from(preRequisites.values()).findIndex((value) => value !== 0) === -1
+	)
+		return;
 	const types: number[] = [];
 	for (let i = 0; i < questToModify["preRequisites:11"].length; i++) {
 		types[i] = preRequisites.get(questToModify["preRequisites:11"][i]) ?? 0;
@@ -351,9 +432,19 @@ const modifyGeneral = async (
 	const newValueAsString = stringify(newValue) ?? "";
 
 	logInfo(colors.bold("Change in Source Quest:"));
-	console.log(fakeDiff(stringify(navigateTo(modify.oldQuest, change.path)) ?? "", newValueAsString));
+	console.log(
+		fakeDiff(
+			stringify(navigateTo(modify.oldQuest, change.path)) ?? "",
+			newValueAsString,
+		),
+	);
 	logInfo(colors.bold("Change if Applied:"));
-	console.log(fakeDiff(stringify(navigateTo(questToModify, change.path)) ?? "", newValueAsString));
+	console.log(
+		fakeDiff(
+			stringify(navigateTo(questToModify, change.path)) ?? "",
+			newValueAsString,
+		),
+	);
 
 	const shouldContinue = await confirm({
 		message: "Would you like to apply the Change?",
@@ -374,12 +465,17 @@ function isAddingOrReplacingComplexTask(path: string[]): boolean {
 function getIndex(path: string[], pathKey: string): number {
 	const index = path.indexOf(pathKey) + 1;
 	if (index == 0 || index >= path.length) return -1; // indexOf returns -1 if not found, +1 = 0
-	const num = path[index];
+	const num = Number.parseInt(path[index]);
 	if (Number.isNaN(num)) return -1;
-	return Number.parseInt(num);
+	return num;
 }
 
-function getFormattedNameWithIndex(path: string[], op: Operation, pathKey: string, baseName: string): string {
+function getFormattedNameWithIndex(
+	path: string[],
+	op: Operation,
+	pathKey: string,
+	baseName: string,
+): string {
 	const defaultVal = `${baseName} ${formatOp(op)}`;
 
 	if (op !== "replace") return defaultVal;
@@ -414,13 +510,14 @@ export const modificationParsers = [
 		id: "tasks",
 		name: "Task",
 		formattedName: (path, op) => {
-			if (!isAddingOrReplacingComplexTask(path) && op !== "replace") op = "replace";
+			if (!isAddingOrReplacingComplexTask(path) && op !== "replace")
+				op = "replace";
 			return getFormattedNameWithIndex(path, op, "tasks", "Task");
 		},
 		condition: picomatch("tasks/**/*"),
 		logic: {
 			type: LogicType.Bunched,
-			applyTogether: (path1, path2) => getIndex(path1, "tasks") === getIndex(path2, "tasks"),
+			applyTogether: () => true,
 			func: modifyTasks,
 		},
 	},
@@ -437,7 +534,7 @@ export const modificationParsers = [
 	{
 		id: "general",
 		name: "General Changes",
-		formattedName: (path, op) => `'${path[path.length - 1]}' ${formatOp(op)}`,
+		formattedName: (path, op) => `'${path.at(-1)}' ${formatOp(op)}`,
 		condition: picomatch("**/*"),
 		logic: {
 			type: LogicType.Simple,

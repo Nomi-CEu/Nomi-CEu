@@ -12,7 +12,12 @@ import upath from "upath";
 import fs from "fs";
 import PortQBData from "./portQBData.ts";
 import { input, select } from "@inquirer/prompts";
-import { configFolder, configOverridesFolder, rootDirectory, storageFolder } from "#globals";
+import {
+	configFolder,
+	configOverridesFolder,
+	rootDirectory,
+	storageFolder,
+} from "#globals";
 import logInfo, { logError, logWarn } from "#utils/log.ts";
 import colors from "colors";
 import { getUniqueToArray } from "#utils/util.js";
@@ -20,7 +25,8 @@ import { getUniqueToArray } from "#utils/util.js";
 let data: PortQBData;
 
 export const emptyQuestName = "Gap";
-export const emptyQuestDescription = "Unused Gap Quest. Prevents Overriding Of IDs.";
+export const emptyQuestDescription =
+	"Unused Gap Quest. Prevents Overriding Of IDs.";
 export const emptyQuestVisibility: QuestVisibility = "HIDDEN";
 export const emptyQuestIconId = "minecraft:air";
 export const emptyQuestTaskId = "bq_standard:checkbox";
@@ -73,8 +79,17 @@ export const defaultPorter = {
 } as SavedPorter;
 
 /* Paths */
-export const cfgNormalPath = upath.join(configFolder, "betterquesting", "DefaultQuests.json");
-export const cfgExpertPath = upath.join(configFolder, "betterquesting", "saved_quests", "ExpertQuests.json");
+export const cfgNormalPath = upath.join(
+	configFolder,
+	"betterquesting",
+	"DefaultQuests.json",
+);
+export const cfgExpertPath = upath.join(
+	configFolder,
+	"betterquesting",
+	"saved_quests",
+	"ExpertQuests.json",
+);
 
 export const cfgOverrideNormalPath = upath.join(
 	configOverridesFolder,
@@ -118,17 +133,25 @@ let cachedQuestByName: Map<string, Quest>;
  * @param sourceQuest The Source Quest, if it is not just `data.currentIDsToQuests.get(sourceId)`.
  * @return Returns the quest that is found, or undefined if the quest should be skipped.
  */
-export async function findQuest(sourceId: number, sourceQuest?: Quest): Promise<Quest | undefined> {
+export async function findQuest(
+	sourceId: number,
+	sourceQuest?: Quest,
+): Promise<Quest | undefined> {
 	if (data.ignoreQuests.has(sourceId)) return undefined;
 	if (data.foundQuests.has(sourceId)) return data.foundQuests.get(sourceId);
 
 	// If no source quest, default behaviour
 	if (!sourceQuest) sourceQuest = data.currentIDsToQuests.get(sourceId);
 	// If still no source quest, throw
-	if (!sourceQuest) throw new Error(`Request Find Quest for id ${sourceId}, which is not in IDs to Quests!`);
+	if (!sourceQuest)
+		throw new Error(
+			`Request Find Quest for id ${sourceId}, which is not in IDs to Quests!`,
+		);
 
 	logInfo(
-		colors.magenta(`Finding Corresponding Quest for Source Quest with ID ${sourceId} and Name ${name(sourceQuest)}...`),
+		colors.magenta(
+			`Finding Corresponding Quest for Source Quest with ID ${sourceId} and Name ${name(sourceQuest)}...`,
+		),
 	);
 
 	// Try Find by ID
@@ -140,7 +163,9 @@ export async function findQuest(sourceId: number, sourceQuest?: Quest): Promise<
 		);
 		if (correctQuestById === "YES") {
 			logInfo("Using Quest...");
-			await finalizeFoundQuest(sourceId, () => data.foundQuests.set(sourceId, questById));
+			await finalizeFoundQuest(sourceId, () =>
+				data.foundQuests.set(sourceId, questById),
+			);
 			return questById;
 		}
 		if (correctQuestById === "IGNORE") {
@@ -153,7 +178,9 @@ export async function findQuest(sourceId: number, sourceQuest?: Quest): Promise<
 	// Generate Quest By Name if Needed
 	if (!cachedQuestByName) {
 		cachedQuestByName = new Map<string, Quest>();
-		[...data.toChangeIDsToQuests.values()].forEach((item) => cachedQuestByName.set(removeFormatting(name(item)), item));
+		[...data.toChangeIDsToQuests.values()].forEach((item) =>
+			cachedQuestByName.set(removeFormatting(name(item)), item),
+		);
 	}
 
 	// Try Find by Name
@@ -166,7 +193,9 @@ export async function findQuest(sourceId: number, sourceQuest?: Quest): Promise<
 		);
 		if (correctQuestByName === "YES") {
 			logInfo("Using Quest...");
-			await finalizeFoundQuest(sourceId, () => data.foundQuests.set(sourceId, questByName));
+			await finalizeFoundQuest(sourceId, () =>
+				data.foundQuests.set(sourceId, questByName),
+			);
 			return questByName;
 		}
 		if (correctQuestByName === "IGNORE") {
@@ -210,14 +239,19 @@ export async function findQuest(sourceId: number, sourceQuest?: Quest): Promise<
 
 	if (foundBySpecificID === "IGNORE" || !questBySpecificID)
 		await finalizeFoundQuest(sourceId, () => data.ignoreQuests.add(sourceId));
-	else await finalizeFoundQuest(sourceId, () => data.foundQuests.set(sourceId, questBySpecificID));
+	else
+		await finalizeFoundQuest(sourceId, () =>
+			data.foundQuests.set(sourceId, questBySpecificID),
+		);
 
 	return questBySpecificID;
 }
 
 async function finalizeFoundQuest(sourceID: number, addToList: () => void) {
 	if (data.alwaysAskQuests.has(sourceID)) {
-		logInfo("This Quest is set to Ask Each Time. If this is not Desirable, Change this in the Saved Porter!");
+		logInfo(
+			"This Quest is set to Ask Each Time. If this is not Desirable, Change this in the Saved Porter!",
+		);
 		return;
 	}
 	const askEachTime = await booleanSelect(
@@ -292,14 +326,21 @@ export function dependencies(quest: Quest): number[] {
  * Prerequisites Types handled by Prerequisites.
  * Rewards not ported (too different across Quest Books)
  **/
-const ignoreRootPaths = new Set<string>(["preRequisites:11", "preRequisiteTypes:7", "rewards:9"]);
+const ignoreRootPaths = new Set<string>([
+	"preRequisites:11",
+	"preRequisiteTypes:7",
+	"rewards:9",
+]);
 
 /**
  * Special Handling in Modified. The Path that is added to the changes list should have -CUSTOM appended to the end, to distinguish this from other changes.
  */
 const specialModifierHandlers: SpecialModifierHandler[] = [
 	(old, current, changes) => {
-		const diff = getUniqueToArray(old["preRequisites:11"], current["preRequisites:11"]);
+		const diff = getUniqueToArray(
+			old["preRequisites:11"],
+			current["preRequisites:11"],
+		);
 		// Unique to old array: Removed
 		if (diff.arr1Unique.length > 0 || diff.arr2Unique.length > 0) {
 			changes.push({
@@ -311,7 +352,10 @@ const specialModifierHandlers: SpecialModifierHandler[] = [
 	},
 ];
 
-export function getChanged(currentQuests: Quest[], oldQuests: Quest[]): Changed {
+export function getChanged(
+	currentQuests: Quest[],
+	oldQuests: Quest[],
+): Changed {
 	// i is current iter, j is old iter
 	let i = 0;
 	let j = 0;
@@ -323,7 +367,9 @@ export function getChanged(currentQuests: Quest[], oldQuests: Quest[]): Changed 
 			let questDiff = diff(oldQuests[j], currentQuests[i]) as QuestChange[];
 			if (questDiff.length !== 0) {
 				questDiff = questDiff.filter(
-					(change) => typeof change.path[0] !== "string" || !ignoreRootPaths.has(change.path[0]),
+					(change) =>
+						typeof change.path[0] !== "string" ||
+						!ignoreRootPaths.has(change.path[0]),
 				);
 				for (const handler of specialModifierHandlers) {
 					handler(oldQuests[j], currentQuests[i], questDiff);
@@ -384,13 +430,16 @@ function emptyDesc(quest: Quest): boolean {
 }
 
 function emptyVisibility(quest: Quest): boolean {
-	const questVisibility = quest["properties:10"]["betterquesting:10"]["visibility:8"];
+	const questVisibility =
+		quest["properties:10"]["betterquesting:10"]["visibility:8"];
 	return questVisibility === emptyQuestVisibility;
 }
 
 function emptyIcon(quest: Quest): boolean {
 	const questIcon = quest["properties:10"]["betterquesting:10"]["icon:10"];
-	return !questIcon || questIcon["id:8"] === emptyQuestIconId || !questIcon["id:8"];
+	return (
+		!questIcon || questIcon["id:8"] === emptyQuestIconId || !questIcon["id:8"]
+	);
 }
 
 function questIsSilent(quest: Quest): boolean {
@@ -412,14 +461,18 @@ function emptyTasks(quest: Quest): boolean {
 	);
 }
 
-export function setValue(quest: Quest, paths: string[] | number[], newValue: unknown) {
+export function setValue(
+	quest: Quest,
+	paths: string[] | number[],
+	newValue: unknown,
+) {
 	let current: unknown = quest;
 	for (const path of paths.slice(0, -1)) {
 		// @ts-expect-error Current is Unknown
 		current = current[path];
 	}
 	// @ts-expect-error Current and New Value is Unknown
-	current[paths[paths.length - 1]] = newValue;
+	current[paths.at(-1)] = newValue;
 }
 
 export function navigateTo(quest: Quest, paths: string[] | number[]): unknown {
@@ -435,7 +488,9 @@ export async function save(toSave: QuestBook): Promise<void> {
 	const save = await booleanSelect("Would you like to Save Changes?");
 	if (!save) return;
 
-	const shouldSavePorter = await booleanSelect("Would you like to Save the Quest Porter?");
+	const shouldSavePorter = await booleanSelect(
+		"Would you like to Save the Quest Porter?",
+	);
 	if (shouldSavePorter) await savePorter();
 
 	// Formatting Changes
@@ -461,7 +516,10 @@ export async function save(toSave: QuestBook): Promise<void> {
 			replacement: "\\u0027",
 		},
 	];
-	let parsed = JSON.stringify(toSave, null, 2).replace(/("[a-zA-Z_]+:[56]":\s)(-?[0-9]+)(,?)$/gm, "$1$2.0$3"); // Add '.0' to any Float/Double Values that are Integers
+	let parsed = JSON.stringify(toSave, null, 2).replace(
+		/("[a-zA-Z_]+:[56]":\s)(-?[0-9]+)(,?)$/gm,
+		"$1$2.0$3",
+	); // Add '.0' to any Float/Double Values that are Integers
 
 	for (const replacement of replacements) {
 		parsed = parsed.replace(replacement.search, replacement.replacement);
@@ -472,7 +530,13 @@ export async function save(toSave: QuestBook): Promise<void> {
 	}
 
 	logInfo(`Saved Files: ${data.outputPaths.join(", ")}!`);
-	logInfo(colors.green(colors.bold("Remember to import the JSON Files into your Instance to format them!")));
+	logInfo(
+		colors.green(
+			colors.bold(
+				"Remember to import the JSON Files into your Instance to format them!",
+			),
+		),
+	);
 }
 
 async function savePorter() {
@@ -524,11 +588,18 @@ async function savePorter() {
 	else porter.alwaysAskQuestsExpert = alwaysAskArr;
 
 	// Write Porter to File
-	return fs.promises.writeFile(savedQuestPorter, JSON.stringify(porter, null, 2));
+	return fs.promises.writeFile(
+		savedQuestPorter,
+		JSON.stringify(porter, null, 2),
+	);
 }
 
-export async function readFromPorter(replaceExisting: boolean): Promise<SavedPorter> {
-	const savedPorter = JSON.parse(await fs.promises.readFile(savedQuestPorter, "utf-8")) as SavedPorter;
+export async function readFromPorter(
+	replaceExisting: boolean,
+): Promise<SavedPorter> {
+	const savedPorter = JSON.parse(
+		await fs.promises.readFile(savedQuestPorter, "utf-8"),
+	) as SavedPorter;
 
 	// Make Sure Porter has Every Key
 	for (const key of Object.keys(defaultPorter)) {
@@ -539,7 +610,10 @@ export async function readFromPorter(replaceExisting: boolean): Promise<SavedPor
 	// Add in Map
 	if (replaceExisting) data.foundQuests.clear();
 	for (const savedQuestPath of savedPorter.savedQuestMap) {
-		if (Number.isNaN(savedQuestPath.normal) || Number.isNaN(savedQuestPath.expert))
+		if (
+			Number.isNaN(savedQuestPath.normal) ||
+			Number.isNaN(savedQuestPath.expert)
+		)
 			throw new Error("ID must be a number!");
 
 		let sourceID: number, targetID: number;
@@ -554,22 +628,28 @@ export async function readFromPorter(replaceExisting: boolean): Promise<SavedPor
 				break;
 		}
 
-		if (!data.currentIDsToQuests.has(sourceID)) throw new Error("ID must be a valid quest!");
+		if (!data.currentIDsToQuests.has(sourceID))
+			throw new Error("ID must be a valid quest!");
 		const targetQuest = data.toChangeIDsToQuests.get(targetID);
 		if (!targetQuest) throw new Error("ID must be a valid quest!");
 
-		if (!data.foundQuests.has(sourceID)) data.foundQuests.set(sourceID, targetQuest);
+		if (!data.foundQuests.has(sourceID))
+			data.foundQuests.set(sourceID, targetQuest);
 	}
 
 	// Ignore & Always Ask
 	addToOrReplaceSet(
 		replaceExisting,
-		data.type === "NORMAL" ? savedPorter.ignoreQuestsNormal : savedPorter.ignoreQuestsExpert,
+		data.type === "NORMAL"
+			? savedPorter.ignoreQuestsNormal
+			: savedPorter.ignoreQuestsExpert,
 		data.ignoreQuests,
 	);
 	addToOrReplaceSet(
 		replaceExisting,
-		data.type === "NORMAL" ? savedPorter.alwaysAskQuestsNormal : savedPorter.alwaysAskQuestsExpert,
+		data.type === "NORMAL"
+			? savedPorter.alwaysAskQuestsNormal
+			: savedPorter.alwaysAskQuestsExpert,
 		data.alwaysAskQuests,
 	);
 
@@ -577,7 +657,11 @@ export async function readFromPorter(replaceExisting: boolean): Promise<SavedPor
 	return savedPorter;
 }
 
-function addToOrReplaceSet<T>(replaceExisting: boolean, array: T[], set: Set<T>): Set<T> {
+function addToOrReplaceSet<T>(
+	replaceExisting: boolean,
+	array: T[],
+	set: Set<T>,
+): Set<T> {
 	if (replaceExisting) return new Set<T>(array);
 
 	array.forEach((value) => set.add(value));

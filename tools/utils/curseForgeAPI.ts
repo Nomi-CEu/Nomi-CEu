@@ -1,10 +1,18 @@
-import { CurseForgeFileInfo, CurseForgeModInfo, CurseForgeModInfo as CurseForgeProject } from "#types/curseForge.ts";
+import {
+	CurseForgeFileInfo,
+	CurseForgeModInfo,
+	CurseForgeModInfo as CurseForgeProject,
+} from "#types/curseForge.ts";
 import { ModpackManifestFile } from "#types/modpackManifest.ts";
 import buildConfig from "#buildConfig";
 import upath from "upath";
 import fs from "fs";
 import { FileDef } from "#types/fileDef.ts";
-import { downloadOrRetrieveFileDef, getAxios, RetrievedFileDefReason } from "./util.ts";
+import {
+	downloadOrRetrieveFileDef,
+	getAxios,
+	RetrievedFileDefReason,
+} from "./util.ts";
 import logInfo, { logError, logWarn } from "./log.ts";
 
 function getCurseForgeToken() {
@@ -19,7 +27,9 @@ function getCurseForgeToken() {
 }
 
 const curseForgeProjectCache: { [key: number]: CurseForgeProject } = {};
-export async function fetchProject(toFetch: number): Promise<CurseForgeProject> {
+export async function fetchProject(
+	toFetch: number,
+): Promise<CurseForgeProject> {
 	if (curseForgeProjectCache[toFetch]) {
 		return curseForgeProjectCache[toFetch];
 	}
@@ -45,7 +55,10 @@ export async function fetchProject(toFetch: number): Promise<CurseForgeProject> 
 }
 
 const fetchedFileInfoCache: { [key: string]: CurseForgeFileInfo } = {};
-export async function fetchFileInfo(projectID: number, fileID: number): Promise<CurseForgeFileInfo> {
+export async function fetchFileInfo(
+	projectID: number,
+	fileID: number,
+): Promise<CurseForgeFileInfo> {
 	const slug = `${projectID}/${fileID}`;
 
 	if (fetchedFileInfoCache[slug]) {
@@ -84,7 +97,9 @@ export interface ProjectToFileId {
  * @param toFetch List of Project IDs to File IDs, to fetch.
  * @returns CurseForge file infos.
  */
-export async function fetchFilesBulk(toFetch: ProjectToFileId[]): Promise<CurseForgeFileInfo[]> {
+export async function fetchFilesBulk(
+	toFetch: ProjectToFileId[],
+): Promise<CurseForgeFileInfo[]> {
 	const fileInfos: CurseForgeFileInfo[] = [];
 	// Map of file ids not fetched (project ID to file ID)
 	const unfetched: ProjectToFileId[] = [];
@@ -151,7 +166,9 @@ export async function fetchFilesBulk(toFetch: ProjectToFileId[]): Promise<CurseF
 					return file.id;
 				}),
 			);
-			const toFetchMissing = [...new Set(toFetch.filter((x) => !fileInfoIDs.has(x.fileID)))];
+			const toFetchMissing = [
+				...new Set(toFetch.filter((x) => !fileInfoIDs.has(x.fileID))),
+			];
 
 			if (toFetchMissing.length > 0) {
 				logWarn(
@@ -172,7 +189,9 @@ export async function fetchFilesBulk(toFetch: ProjectToFileId[]): Promise<CurseF
 						// In case something fails to download; catch, rewrite, rethrow.
 						missingFileInfos.push(fetchFileInfo(file.projectID, file.fileID));
 					} catch (err) {
-						logError(`Couldn't fetch file ${file.fileID} of mod ${file.projectID}. See Below.`);
+						logError(
+							`Couldn't fetch file ${file.fileID} of mod ${file.projectID}. See Below.`,
+						);
 						throw err;
 					}
 				}
@@ -194,7 +213,9 @@ export async function fetchFilesBulk(toFetch: ProjectToFileId[]): Promise<CurseF
  * @param toFetch Project IDs to fetch.
  * @returns CurseForge project infos.
  */
-export async function fetchProjectsBulk(toFetch: number[]): Promise<CurseForgeProject[]> {
+export async function fetchProjectsBulk(
+	toFetch: number[],
+): Promise<CurseForgeProject[]> {
 	const modInfos: CurseForgeProject[] = [];
 	const unfetched: number[] = [];
 
@@ -238,15 +259,21 @@ export async function fetchProjectsBulk(toFetch: number[]): Promise<CurseForgePr
 		// try requesting them individually.
 		if (modInfos.length !== toFetch.length) {
 			const modInfoIDs = new Set(modInfos.map((mi) => mi.id));
-			const toFetchMissing = [...new Set(toFetch.filter((x) => !modInfoIDs.has(x)))];
+			const toFetchMissing = [
+				...new Set(toFetch.filter((x) => !modInfoIDs.has(x))),
+			];
 
-			logWarn(`Couldn't fetch some project IDs in bulk: ${toFetchMissing.join(", ")}`);
+			logWarn(
+				`Couldn't fetch some project IDs in bulk: ${toFetchMissing.join(", ")}`,
+			);
 
 			// Try fetching mods individually, in case they've been deleted.
 			let count = 0;
 			const missingModInfos: Promise<CurseForgeModInfo>[] = [];
 			for (const id of toFetchMissing) {
-				logInfo(`Fetching project ID ${id} directly... (${++count} / ${toFetchMissing.length})`);
+				logInfo(
+					`Fetching project ID ${id} directly... (${++count} / ${toFetchMissing.length})`,
+				);
 
 				try {
 					// In case something fails to download; catch, rewrite, rethrow.
@@ -271,7 +298,10 @@ export async function fetchProjectsBulk(toFetch: number[]): Promise<CurseForgePr
  * @param toFetch The files to fetch
  * @param destination The dir to put all the mods in. The mods will go into that dir, and not into a sub dir!
  */
-export async function fetchMods(toFetch: ModpackManifestFile[], destination: string): Promise<void> {
+export async function fetchMods(
+	toFetch: ModpackManifestFile[],
+	destination: string,
+): Promise<void> {
 	if (toFetch.length > 0) {
 		logInfo(`Fetching ${toFetch.length} mods...`);
 
@@ -296,9 +326,13 @@ export async function fetchMods(toFetch: ModpackManifestFile[], destination: str
 				fetched += 1;
 
 				if (modFile.reason == RetrievedFileDefReason.Downloaded) {
-					logInfo(`Downloaded ${upath.basename(fileDef.url)}... (${fetched} / ${toFetch.length})`);
+					logInfo(
+						`Downloaded ${upath.basename(fileDef.url)}... (${fetched} / ${toFetch.length})`,
+					);
 				} else if (modFile.reason == RetrievedFileDefReason.CacheHit) {
-					logInfo(`Fetched ${upath.basename(fileDef.url)} from cache... (${fetched} / ${toFetch.length})`);
+					logInfo(
+						`Fetched ${upath.basename(fileDef.url)} from cache... (${fetched} / ${toFetch.length})`,
+					);
 				}
 
 				const dest = upath.join(destination, fileInfo.fileName);

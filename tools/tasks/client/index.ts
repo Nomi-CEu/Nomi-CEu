@@ -1,5 +1,9 @@
 import gulp, { dest } from "gulp";
-import { clientDestDirectory, modpackManifest, sharedDestDirectory } from "#globals";
+import {
+	clientDestDirectory,
+	modpackManifest,
+	sharedDestDirectory,
+} from "#globals";
 import fs from "fs";
 import upath from "upath";
 import buildConfig from "#buildConfig";
@@ -67,14 +71,18 @@ async function copyClientLicense() {
  * Copies the update notes file.
  */
 function copyClientUpdateNotes() {
-	return gulp.src("../UPDATENOTES.md", { allowEmpty: true }).pipe(gulp.dest(clientDestDirectory));
+	return gulp
+		.src("../UPDATENOTES.md", { allowEmpty: true })
+		.pipe(gulp.dest(clientDestDirectory));
 }
 
 /**
  * Copies the changelog file.
  */
 function copyClientChangelog() {
-	return gulp.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(dest(clientDestDirectory));
+	return gulp
+		.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
+		.pipe(dest(clientDestDirectory));
 }
 
 /**
@@ -176,7 +184,10 @@ async function fetchModList() {
 		</html>
 	`;
 
-	return fs.promises.writeFile(upath.join(clientDestDirectory, "modlist.html"), formattedModList);
+	return fs.promises.writeFile(
+		upath.join(clientDestDirectory, "modlist.html"),
+		formattedModList,
+	);
 }
 
 /**

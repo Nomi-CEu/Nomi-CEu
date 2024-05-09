@@ -12,7 +12,11 @@ import {
 } from "#globals";
 import { deleteAsync } from "del";
 import { FileDef } from "#types/fileDef.ts";
-import { downloadFileDef, downloadOrRetrieveFileDef, isEnvVariableSet } from "#utils/util.ts";
+import {
+	downloadFileDef,
+	downloadOrRetrieveFileDef,
+	isEnvVariableSet,
+} from "#utils/util.ts";
 import transformVersion from "./transformVersion.ts";
 import { createBuildChangelog } from "../changelog/index.ts";
 import mustache from "mustache";
@@ -93,14 +97,21 @@ async function fetchExternalDependencies() {
  * Either fetches the Changelog File, or makes one.
  */
 async function fetchOrMakeChangelog() {
-	if (isEnvVariableSet("CHANGELOG_URL") && isEnvVariableSet("CHANGELOG_CF_URL")) {
+	if (
+		isEnvVariableSet("CHANGELOG_URL") &&
+		isEnvVariableSet("CHANGELOG_CF_URL")
+	) {
 		logInfo("Using Changelog Files from URL.");
-		await downloadChangelogs(process.env.CHANGELOG_URL ?? "", process.env.CHANGELOG_CF_URL ?? "");
+		await downloadChangelogs(
+			process.env.CHANGELOG_URL ?? "",
+			process.env.CHANGELOG_CF_URL ?? "",
+		);
 		return;
 	}
 	if (isEnvVariableSet("CHANGELOG_BRANCH")) {
 		logInfo("Using Changelog Files from Branch.");
-		const url = "https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
+		const url =
+			"https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
 		await downloadChangelogs(
 			mustache.render(url, {
 				branch: process.env.CHANGELOG_BRANCH,
@@ -117,7 +128,10 @@ async function fetchOrMakeChangelog() {
 	await createBuildChangelog();
 }
 
-async function downloadChangelogs(changelogURL: string, changelogCFURL: string) {
+async function downloadChangelogs(
+	changelogURL: string,
+	changelogCFURL: string,
+) {
 	const changelog = await downloadFileDef({ url: changelogURL });
 	const changelogCF = await downloadFileDef({ url: changelogCFURL });
 
@@ -125,10 +139,17 @@ async function downloadChangelogs(changelogURL: string, changelogCFURL: string) 
 	await writeToChangelog(changelogCF, "CHANGELOG_CF.md", changelogCFURL);
 }
 
-async function writeToChangelog(buffer: Buffer, changelogFile: string, url: string) {
+async function writeToChangelog(
+	buffer: Buffer,
+	changelogFile: string,
+	url: string,
+) {
 	let handle: fs.promises.FileHandle | undefined = undefined;
 	try {
-		handle = await fs.promises.open(upath.join(buildConfig.buildDestinationDirectory, changelogFile), "w");
+		handle = await fs.promises.open(
+			upath.join(buildConfig.buildDestinationDirectory, changelogFile),
+			"w",
+		);
 
 		await handle.write(buffer);
 		await handle.close();

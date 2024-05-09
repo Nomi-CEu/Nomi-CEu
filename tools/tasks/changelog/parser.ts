@@ -1,4 +1,11 @@
-import { Category, Commit, FixUpInfo, Ignored, Parser, SubCategory } from "#types/changelogTypes.ts";
+import {
+	Category,
+	Commit,
+	FixUpInfo,
+	Ignored,
+	Parser,
+	SubCategory,
+} from "#types/changelogTypes.ts";
 import {
 	categories,
 	combineKey,
@@ -10,11 +17,21 @@ import {
 	noCategoryKey,
 	priorityKey,
 } from "./definitions.ts";
-import { parseCombine, parseDetails, parseExpand, parseIgnore, parseModInfo, parsePriority } from "./specialParser.ts";
+import {
+	parseCombine,
+	parseDetails,
+	parseExpand,
+	parseIgnore,
+	parseModInfo,
+	parsePriority,
+} from "./specialParser.ts";
 import { getChangelog } from "#utils/util.ts";
 import ChangelogData from "./changelogData.ts";
 
-export default async function parseParser(data: ChangelogData, parser: Parser): Promise<void> {
+export default async function parseParser(
+	data: ChangelogData,
+	parser: Parser,
+): Promise<void> {
 	const commits = await getChangelog(data.since, data.to, parser.dirs);
 
 	for (const commit of commits) {
@@ -33,22 +50,33 @@ export default async function parseParser(data: ChangelogData, parser: Parser): 
 		}
 
 		if (parser.skipCallback(commit, commit.message, commit.body)) {
-			if (!parser.addSHACallback || parser.addSHACallback(commit, true)) data.shaList.add(commit.hash);
+			if (!parser.addSHACallback || parser.addSHACallback(commit, true))
+				data.shaList.add(commit.hash);
 			continue;
 		}
 
-		const parsed = await parser.itemCallback(parser, commit, commit.message, commit.body, savedFix);
+		const parsed = await parser.itemCallback(
+			parser,
+			commit,
+			commit.message,
+			commit.body,
+			savedFix,
+		);
 		if (parsed instanceof Ignored) {
 			if (parsed.getCommitList() && parser.addCommitListCallback) {
-				if (parser.addCommitListCallback(commit, true)) data.commitList.push(commit);
+				if (parser.addCommitListCallback(commit, true))
+					data.commitList.push(commit);
 			}
 			continue;
 		}
 
-		if (!parsed && parser.leftOverCallback) parser.leftOverCallback(commit, commit.message, commit.body, []);
-		if (!parser.addSHACallback || parser.addSHACallback(commit, parsed)) data.shaList.add(commit.hash);
+		if (!parsed && parser.leftOverCallback)
+			parser.leftOverCallback(commit, commit.message, commit.body, []);
+		if (!parser.addSHACallback || parser.addSHACallback(commit, parsed))
+			data.shaList.add(commit.hash);
 
-		if (parser.addCommitListCallback(commit, parsed)) data.commitList.push(commit);
+		if (parser.addCommitListCallback(commit, parsed))
+			data.commitList.push(commit);
 	}
 }
 
@@ -104,7 +132,8 @@ export async function parseCommitBody(
 		commitObject.priority = newPriority;
 	}
 
-	if (commitBody.includes(modInfoKey)) await parseModInfo(commitBody, commitObject);
+	if (commitBody.includes(modInfoKey))
+		await parseModInfo(commitBody, commitObject);
 	if (commitBody.includes(detailsKey)) {
 		await parseDetails(commitMessage, commitBody, commitObject, parser);
 		return true;
@@ -127,7 +156,12 @@ export async function parseCommitBody(
  * @param indentation The indentation of the message, if needed. Defaults to "".
  * @return added If the commit message was added to a category
  */
-function sortCommit(message: string, commitBody: string, commit: Commit, indentation = defaultIndentation): boolean {
+function sortCommit(
+	message: string,
+	commitBody: string,
+	commit: Commit,
+	indentation = defaultIndentation,
+): boolean {
 	const sortedCategories: Category[] = findCategories(commitBody);
 	if (sortedCategories.length === 0) return false;
 
@@ -162,7 +196,10 @@ export function findCategories(commitBody: string): Category[] {
 /**
  * Finds the correct Sub Category a commit should go in. Must be given the Category first!
  */
-export function findSubCategory(commitBody: string, category: Category): SubCategory {
+export function findSubCategory(
+	commitBody: string,
+	category: Category,
+): SubCategory {
 	for (const subCategory of category.subCategories) {
 		if (subCategory.commitKey !== undefined) {
 			if (commitBody.includes(subCategory.commitKey)) {

@@ -129,7 +129,12 @@ export interface SpecialChangelogFormatting<T> {
 	 * @param indentation The indentation level to use
 	 * @param storage May be null, is the defined storage in this interface
 	 */
-	formatting: (message: string, subMessage: boolean, indentation: string, storage?: T) => string;
+	formatting: (
+		message: string,
+		subMessage: boolean,
+		indentation: string,
+		storage?: T,
+	) => string;
 
 	/**
 	 * Storage
@@ -157,7 +162,11 @@ export interface Parser {
 	 * commitBody: The body of the commit. Might be undefined.<p>
 	 * return: True to skip, false to not.
 	 */
-	skipCallback: (commit: Commit, commitMessage: string, commitBody?: string) => boolean;
+	skipCallback: (
+		commit: Commit,
+		commitMessage: string,
+		commitBody?: string,
+	) => boolean;
 
 	/**
 	 * Callback per item.
@@ -294,7 +303,11 @@ export interface PriorityInfo {
 
 export type FixUpMode = "REPLACE" | "ADDITION";
 
-export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release" | "Cutting Edge Build";
+export type InputReleaseType =
+	| "Release"
+	| "Beta Release"
+	| "Alpha Release"
+	| "Cutting Edge Build";
 
 export interface DeployReleaseType {
 	isPreRelease: boolean;
@@ -302,7 +315,10 @@ export interface DeployReleaseType {
 }
 
 // Cutting Edge Build is not needed here, as this type is only used for deploying, and not building.
-export const inputToDeployReleaseTypes: Record<InputReleaseType, DeployReleaseType> = {
+export const inputToDeployReleaseTypes: Record<
+	InputReleaseType,
+	DeployReleaseType
+> = {
 	Release: {
 		isPreRelease: false,
 		cfReleaseType: "release",

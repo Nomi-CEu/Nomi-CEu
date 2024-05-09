@@ -7,9 +7,18 @@ import { makeArtifactNameBody } from "#utils/util.ts";
 import { Octokit } from "@octokit/rest";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
-import { DeployReleaseType, InputReleaseType, inputToDeployReleaseTypes } from "#types/changelogTypes.ts";
+import {
+	DeployReleaseType,
+	InputReleaseType,
+	inputToDeployReleaseTypes,
+} from "#types/changelogTypes.ts";
 
-const variablesToCheck = ["GITHUB_TAG", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "RELEASE_TYPE"];
+const variablesToCheck = [
+	"GITHUB_TAG",
+	"GITHUB_TOKEN",
+	"GITHUB_REPOSITORY",
+	"RELEASE_TYPE",
+];
 
 /**
  * Uploads build artifacts to GitHub Releases.
@@ -25,7 +34,9 @@ async function deployReleases(): Promise<void> {
 	});
 
 	const body = makeArtifactNameBody(modpackManifest.name);
-	const files = ["client", "server", "lang"].map((file) => sanitize(`${body}-${file}.zip`.toLowerCase()));
+	const files = ["client", "server", "lang"].map((file) =>
+		sanitize(`${body}-${file}.zip`.toLowerCase()),
+	);
 
 	/**
 	 * Obligatory file check.
@@ -53,12 +64,16 @@ async function deployReleases(): Promise<void> {
 
 	const tag = process.env.GITHUB_TAG;
 	const releaseType: DeployReleaseType =
-		inputToDeployReleaseTypes[(process.env.RELEASE_TYPE ?? "") as InputReleaseType];
+		inputToDeployReleaseTypes[
+			(process.env.RELEASE_TYPE ?? "") as InputReleaseType
+		];
 	const preRelease = releaseType ? releaseType.isPreRelease : false;
 
 	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
 	let changelog = (
-		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
+		await fs.promises.readFile(
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+		)
 	).toString();
 
 	changelog = mustache.render(changelog, {

@@ -22,10 +22,23 @@ import langTasks from "./tasks/lang/index.ts";
 import mmcTasks from "./tasks/mmc/index.ts";
 import modTasks from "./tasks/misc/downloadMods.ts";
 
-export const buildClient = gulp.series(sharedTasks, clientTasks, pruneCacheTask);
-export const buildServer = gulp.series(gulp.parallel(sharedTasks, modTasks), serverTasks, pruneCacheTask);
+export const buildClient = gulp.series(
+	sharedTasks,
+	clientTasks,
+	pruneCacheTask,
+);
+export const buildServer = gulp.series(
+	gulp.parallel(sharedTasks, modTasks),
+	serverTasks,
+	pruneCacheTask,
+);
 export const buildLang = gulp.series(sharedTasks, langTasks, pruneCacheTask);
-export const buildMMC = gulp.series(gulp.parallel(sharedTasks, modTasks), clientTasks, mmcTasks, pruneCacheTask);
+export const buildMMC = gulp.series(
+	gulp.parallel(sharedTasks, modTasks),
+	clientTasks,
+	mmcTasks,
+	pruneCacheTask,
+);
 export const buildAll = gulp.series(
 	sharedTasks,
 	gulp.parallel(clientTasks, langTasks, gulp.series(modTasks, serverTasks)),

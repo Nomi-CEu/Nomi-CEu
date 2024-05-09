@@ -7,8 +7,17 @@ import fs from "fs";
 import buildConfig from "#buildConfig";
 import { ForgeProfile } from "#types/forgeProfile.ts";
 import { FileDef } from "#types/fileDef.ts";
-import { downloadOrRetrieveFileDef, getForgeJar, getVersionManifest } from "#utils/util.ts";
-import { modDestDirectory, modpackManifest, serverDestDirectory, sharedDestDirectory } from "#globals";
+import {
+	downloadOrRetrieveFileDef,
+	getForgeJar,
+	getVersionManifest,
+} from "#utils/util.ts";
+import {
+	modDestDirectory,
+	modpackManifest,
+	serverDestDirectory,
+	sharedDestDirectory,
+} from "#globals";
 import { deleteAsync } from "del";
 import { updateBuildServerProperties } from "../misc/transformFiles.ts";
 import logInfo, { logWarn } from "#utils/log.ts";
@@ -69,14 +78,19 @@ async function downloadForge() {
 	}
 
 	if (!forgeUniversalJar) {
-		throw new Error("Couldn't find the universal Forge jar in the installation jar.");
+		throw new Error(
+			"Couldn't find the universal Forge jar in the installation jar.",
+		);
 	}
 
 	/**
 	 * Move the universal jar into the dist folder.
 	 */
 	logInfo("Extracting the Forge jar...");
-	await fs.promises.writeFile(upath.join(serverDestDirectory, upath.basename(forgeUniversalPath)), forgeUniversalJar);
+	await fs.promises.writeFile(
+		upath.join(serverDestDirectory, upath.basename(forgeUniversalPath)),
+		forgeUniversalJar,
+	);
 
 	/**
 	 * Save the universal jar file name for later.
@@ -88,7 +102,9 @@ async function downloadForge() {
 	/**
 	 * Finally, fetch libraries.
 	 */
-	const libraries = forgeProfile.libraries.filter((x) => Boolean(x?.downloads?.artifact?.url));
+	const libraries = forgeProfile.libraries.filter((x) =>
+		Boolean(x?.downloads?.artifact?.url),
+	);
 	logInfo(`Fetching ${libraries.length} server libraries...`);
 
 	await Promise.all(
@@ -100,13 +116,22 @@ async function downloadForge() {
 			};
 
 			if (library.downloads.artifact.sha1) {
-				def.hashes = [{ id: "sha1", hashes: [library.downloads.artifact.sha1] }];
+				def.hashes = [
+					{ id: "sha1", hashes: [library.downloads.artifact.sha1] },
+				];
 			}
 
-			const destPath = upath.join(serverDestDirectory, "libraries", libraryPath);
+			const destPath = upath.join(
+				serverDestDirectory,
+				"libraries",
+				libraryPath,
+			);
 
 			await fs.promises.mkdir(upath.dirname(destPath), { recursive: true });
-			return fs.promises.copyFile((await downloadOrRetrieveFileDef(def)).cachePath, destPath);
+			return fs.promises.copyFile(
+				(await downloadOrRetrieveFileDef(def)).cachePath,
+				destPath,
+			);
 		}),
 	);
 }
@@ -116,7 +141,9 @@ async function downloadForge() {
  */
 async function downloadMinecraftServer() {
 	logInfo("Fetching the Minecraft version manifest...");
-	const versionManifest = await getVersionManifest(modpackManifest.minecraft.version);
+	const versionManifest = await getVersionManifest(
+		modpackManifest.minecraft.version,
+	);
 	if (!versionManifest) {
 		throw new Error(`No manifest found for Minecraft ${versionManifest}`);
 	}
@@ -135,7 +162,10 @@ async function downloadMinecraftServer() {
 		throw new Error(`No server jar file found for ${versionManifest.id}`);
 	}
 
-	const dest = upath.join(serverDestDirectory, `minecraft_server.${versionManifest.id}.jar`);
+	const dest = upath.join(
+		serverDestDirectory,
+		`minecraft_server.${versionManifest.id}.jar`,
+	);
 	await fs.promises.copyFile(serverJar.cachePath, dest);
 }
 
@@ -143,9 +173,15 @@ async function downloadMinecraftServer() {
  * Copies server & shared mods.
  */
 async function copyServerMods() {
-	return src([upath.join(modDestDirectory, "*"), upath.join(modDestDirectory, "server", "*")], {
-		resolveSymlinks: false,
-	}).pipe(dest(upath.join(serverDestDirectory, "mods")));
+	return src(
+		[
+			upath.join(modDestDirectory, "*"),
+			upath.join(modDestDirectory, "server", "*"),
+		],
+		{
+			resolveSymlinks: false,
+		},
+	).pipe(dest(upath.join(serverDestDirectory, "mods")));
 }
 
 /**
@@ -178,14 +214,18 @@ function copyServerLicense() {
  * Copies the update notes file.
  */
 function copyServerUpdateNotes() {
-	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(dest(serverDestDirectory));
+	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
+		dest(serverDestDirectory),
+	);
 }
 
 /**
  * Copies the changelog file.
  */
 function copyServerChangelog() {
-	return src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(dest(serverDestDirectory));
+	return src(
+		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+	).pipe(dest(serverDestDirectory));
 }
 
 /**

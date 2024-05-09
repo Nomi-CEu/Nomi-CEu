@@ -1,5 +1,10 @@
 import { checkbox, input, select } from "@inquirer/prompts";
-import { Changed, PortingType, SavedPorter, SourceOption } from "#types/portQBTypes.ts";
+import {
+	Changed,
+	PortingType,
+	SavedPorter,
+	SourceOption,
+} from "#types/portQBTypes.ts";
 import {
 	booleanSelect,
 	cfgExpertPath,
@@ -77,7 +82,8 @@ export default class PortQBData {
 
 	async setup(): Promise<void> {
 		this.ref = await input({
-			message: "What Commit SHA, Tag OR Branch should we compare to? (Defaults to 'main')",
+			message:
+				"What Commit SHA, Tag OR Branch should we compare to? (Defaults to 'main')",
 			default: "main",
 		});
 
@@ -96,7 +102,8 @@ export default class PortQBData {
 		})) as PortingType;
 
 		this.sourceOption = (await select({
-			message: "Which version should we use, for both Source Files? (We need to check both Normal and Expert to Port!)",
+			message:
+				"Which version should we use, for both Source Files? (We need to check both Normal and Expert to Port!)",
 			choices: [
 				{
 					name: "Main Config Dir",
@@ -111,19 +118,30 @@ export default class PortQBData {
 
 		switch (this.type) {
 			case "NORMAL":
-				this.srcPath = this.sourceOption === "CFG" ? cfgNormalPath : cfgOverrideNormalPath;
-				this.srcPathToChange = this.sourceOption === "CFG" ? cfgExpertPath : cfgOverrideExpertPath;
+				this.srcPath =
+					this.sourceOption === "CFG" ? cfgNormalPath : cfgOverrideNormalPath;
+				this.srcPathToChange =
+					this.sourceOption === "CFG" ? cfgExpertPath : cfgOverrideExpertPath;
 				this.outputPaths = [cfgExpertPath, cfgOverrideExpertPath];
 				break;
 			case "EXPERT":
-				this.srcPath = this.sourceOption === "CFG" ? cfgExpertPath : cfgOverrideExpertPath;
-				this.srcPathToChange = this.sourceOption === "CFG" ? cfgNormalPath : cfgOverrideNormalPath;
+				this.srcPath =
+					this.sourceOption === "CFG" ? cfgExpertPath : cfgOverrideExpertPath;
+				this.srcPathToChange =
+					this.sourceOption === "CFG" ? cfgNormalPath : cfgOverrideNormalPath;
 				this.outputPaths = [cfgExpertPath, cfgOverrideExpertPath];
 				break;
 		}
 
 		// If We Expand This to include a lot of Boolean Options, we can use https://github.com/Bartheleway/inquirer-table-multiple
-		if (await booleanSelect("Open Advanced Modification Settings?", "Yes", "No", false)) {
+		if (
+			await booleanSelect(
+				"Open Advanced Modification Settings?",
+				"Yes",
+				"No",
+				false,
+			)
+		) {
 			this.modifyParsersIgnore = new Set<string>(
 				await checkbox({
 					message:

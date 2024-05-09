@@ -6,8 +6,15 @@ import {
 	getFileAtRevision,
 	getUniqueToArray,
 } from "#utils/util.ts";
-import { ModpackManifest, ModpackManifestFile } from "#types/modpackManifest.ts";
-import { ChangelogMessage, Commit, ModChangeInfo } from "#types/changelogTypes.ts";
+import {
+	ModpackManifest,
+	ModpackManifestFile,
+} from "#types/modpackManifest.ts";
+import {
+	ChangelogMessage,
+	Commit,
+	ModChangeInfo,
+} from "#types/changelogTypes.ts";
 import dedent from "dedent-js";
 import mustache from "mustache";
 import { modChangesAllocations, repoLink } from "./definitions.ts";
@@ -19,7 +26,9 @@ import { logError } from "#utils/log.ts";
 /**
  * Mod Changes special formatting
  */
-const getModChangesFormatting: (commits?: Commit[]) => SpecialChangelogFormatting<Commit[] | undefined> = (commits) => {
+const getModChangesFormatting: (
+	commits?: Commit[],
+) => SpecialChangelogFormatting<Commit[] | undefined> = (commits) => {
 	return {
 		formatting: (message, subMessage, indentation, commits) => {
 			// Sub messages are details, so make them bold & italic
@@ -32,8 +41,11 @@ const getModChangesFormatting: (commits?: Commit[]) => SpecialChangelogFormattin
 				const authors: string[] = [];
 				const formattedCommits: string[] = [];
 				commits.forEach((commit) => {
-					if (!authors.includes(commit.author_name)) authors.push(commit.author_name);
-					formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
+					if (!authors.includes(commit.author_name))
+						authors.push(commit.author_name);
+					formattedCommits.push(
+						`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`,
+					);
 				});
 				authors.sort();
 				return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")})`;
@@ -52,10 +64,19 @@ const getModChangesFormatting: (commits?: Commit[]) => SpecialChangelogFormattin
 /**
  * Pushes the mod changes, with their relative commits, to their respective sub categories in the specified category.
  */
-export default async function generateModChanges(data: ChangelogData): Promise<void> {
-	const oldManifest: ModpackManifest = JSON.parse(await getFileAtRevision("manifest.json", data.since));
-	const newManifest: ModpackManifest = JSON.parse(await getFileAtRevision("manifest.json", data.to));
-	const comparisonResult = await compareAndExpandManifestDependencies(oldManifest, newManifest);
+export default async function generateModChanges(
+	data: ChangelogData,
+): Promise<void> {
+	const oldManifest: ModpackManifest = JSON.parse(
+		await getFileAtRevision("manifest.json", data.since),
+	);
+	const newManifest: ModpackManifest = JSON.parse(
+		await getFileAtRevision("manifest.json", data.to),
+	);
+	const comparisonResult = await compareAndExpandManifestDependencies(
+		oldManifest,
+		newManifest,
+	);
 
 	const commitList = await getChangelog(data.since, data.to, ["manifest.json"]);
 	const projectIDsToCommits: Map<number, Commit[]> = new Map();
@@ -63,7 +84,8 @@ export default async function generateModChanges(data: ChangelogData): Promise<v
 	for (const commit of commitList) {
 		const projectIDs = await getChangedProjectIDs(commit.hash);
 		projectIDs.forEach((id) => {
-			if (projectIDsToCommits.has(id)) projectIDsToCommits.get(id)?.push(commit);
+			if (projectIDsToCommits.has(id))
+				projectIDsToCommits.get(id)?.push(commit);
 			else projectIDsToCommits.set(id, [commit]);
 		});
 	}
@@ -101,7 +123,9 @@ export default async function generateModChanges(data: ChangelogData): Promise<v
 			}
 			block.allocation.category.changelogSection
 				?.get(block.allocation.subCategory)
-				?.push(getModChangeMessage(info, block.allocation.template, data, commits));
+				?.push(
+					getModChangeMessage(info, block.allocation.template, data, commits),
+				);
 		});
 	});
 }
@@ -182,11 +206,17 @@ async function getChangedProjectIDs(sha: string): Promise<number[]> {
  * Gets what parts of the 'manifest.json' file a commit changed.
  * @param sha The sha of the commit
  */
-async function getCommitChange(sha: string): Promise<ArrayUnique<ModpackManifestFile> | undefined> {
+async function getCommitChange(
+	sha: string,
+): Promise<ArrayUnique<ModpackManifestFile> | undefined> {
 	let oldManifest: ModpackManifest, newManifest: ModpackManifest;
 	try {
-		oldManifest = JSON.parse(await getFileAtRevision("manifest.json", `${sha}^`)) as ModpackManifest;
-		newManifest = JSON.parse(await getFileAtRevision("manifest.json", sha)) as ModpackManifest;
+		oldManifest = JSON.parse(
+			await getFileAtRevision("manifest.json", `${sha}^`),
+		) as ModpackManifest;
+		newManifest = JSON.parse(
+			await getFileAtRevision("manifest.json", sha),
+		) as ModpackManifest;
 	} catch (e) {
 		logError(dedent`
 			Failed to parse the manifest.json file at commit ${sha} or the commit before!
@@ -195,7 +225,12 @@ async function getCommitChange(sha: string): Promise<ArrayUnique<ModpackManifest
 	}
 
 	let result: ArrayUnique<ModpackManifestFile> | undefined = undefined;
-	if (oldManifest && newManifest) result = getUniqueToArray(oldManifest.files, newManifest.files, (e) => e.fileID);
+	if (oldManifest && newManifest)
+		result = getUniqueToArray(
+			oldManifest.files,
+			newManifest.files,
+			(e) => e.fileID,
+		);
 
 	return result;
 }

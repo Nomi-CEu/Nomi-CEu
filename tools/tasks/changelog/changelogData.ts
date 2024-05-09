@@ -1,4 +1,9 @@
-import { Commit, FixUpInfo, InputReleaseType, ParsedModInfo } from "#types/changelogTypes.ts";
+import {
+	Commit,
+	FixUpInfo,
+	InputReleaseType,
+	ParsedModInfo,
+} from "#types/changelogTypes.ts";
 import { getLastGitTag, getTags, isEnvVariableSet } from "#utils/util.ts";
 
 export default class ChangelogData {
@@ -40,12 +45,15 @@ export default class ChangelogData {
 
 		// Get Release Type
 		this.releaseType = "Release";
-		if (isEnvVariableSet("RELEASE_TYPE")) this.releaseType = process.env.RELEASE_TYPE as InputReleaseType;
+		if (isEnvVariableSet("RELEASE_TYPE"))
+			this.releaseType = process.env.RELEASE_TYPE as InputReleaseType;
 
 		// See if current run is test
 		if (isEnvVariableSet("TEST_CHANGELOG")) {
 			try {
-				this.isTest = JSON.parse((process.env.TEST_CHANGELOG ?? "false").toLowerCase());
+				this.isTest = JSON.parse(
+					(process.env.TEST_CHANGELOG ?? "false").toLowerCase(),
+				);
 			} catch (err) {
 				throw new Error("Test Changelog Env Variable set to Invalid Value.");
 			}
