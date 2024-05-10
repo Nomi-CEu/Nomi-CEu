@@ -16,6 +16,8 @@ jobs:
   deployGH:
     name: Deploy to GitHub Releases (${{ inputs.tag }})
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       GITHUB_TAG: ${{ inputs.tag }}
     steps:
@@ -71,7 +73,7 @@ jobs:
 
       - name: Deploy to GitHub Releases
         env:
-          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
           CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
           RELEASE_TYPE: ${{ inputs.release_type }}

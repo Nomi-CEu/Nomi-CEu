@@ -61,6 +61,8 @@ jobs:
     if: ${{ inputs.deploy_to_gh }}
     needs: build
     uses: ./.github/workflows/deploygh.yml
+    permissions:
+      contents: write
     with:
       tag: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
