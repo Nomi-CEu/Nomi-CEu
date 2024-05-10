@@ -8,12 +8,12 @@ export type PortingType = "NORMAL" | "EXPERT";
 // Which File to Source From
 export type SourceOption = "CFG" | "CFG-OVERRIDE";
 
-// Is Right Quest?
-export type CorrectQuest = "YES" | "IGNORE" | "NO";
+export type YesIgnoreNo = "YES" | "IGNORE" | "NO";
 
 // How should we apply description change?
-export type DescriptionChange = "APPLY" | "REPLACE" | "CUSTOM" | "IGNORE";
-export type CustomDescriptionTemplate = "APPLY" | "REPLACE" | "ORIGINAL";
+export type DescriptionTaskChange = "APPLY" | "REPLACE" | "CUSTOM" | "IGNORE";
+export type CustomDescriptionTaskTemplate = "APPLY" | "REPLACE" | "ORIGINAL";
+export type TaskDifferentSolution = "APPLY" | "CONTINUE" | "IGNORE";
 
 export interface Changed {
 	added: Quest[];

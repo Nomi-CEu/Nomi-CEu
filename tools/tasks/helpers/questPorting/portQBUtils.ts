@@ -2,7 +2,7 @@ import { Quest, QuestBook, QuestVisibility } from "#types/bqQuestBook.ts";
 import { diff } from "just-diff";
 import {
 	Changed,
-	CorrectQuest,
+	YesIgnoreNo,
 	QuestChange,
 	Replacements,
 	SavedPorter,
@@ -206,7 +206,7 @@ export async function findQuest(
 	}
 
 	// Finally, ask for the specific ID
-	let foundBySpecificID: CorrectQuest = "NO";
+	let foundBySpecificID: YesIgnoreNo = "NO";
 	let questBySpecificID: Quest | undefined = undefined;
 	while (foundBySpecificID === "NO") {
 		const specID = parseInt(
@@ -264,7 +264,7 @@ async function finalizeFoundQuest(sourceID: number, addToList: () => void) {
 	else addToList();
 }
 
-async function isRightQuest(message: string): Promise<CorrectQuest> {
+async function isRightQuest(message: string): Promise<YesIgnoreNo> {
 	return (await select({
 		message: message,
 		choices: [
@@ -281,7 +281,7 @@ async function isRightQuest(message: string): Promise<CorrectQuest> {
 				value: "IGNORE",
 			},
 		],
-	})) as CorrectQuest;
+	})) as YesIgnoreNo;
 }
 
 export async function booleanSelect(
@@ -459,29 +459,6 @@ function emptyTasks(quest: Quest): boolean {
 				!quest["tasks:9"]["0:10"]["taskID:8"] ||
 				quest["tasks:9"]["0:10"]["taskID:8"] === emptyQuestTaskId))
 	);
-}
-
-export function setValue(
-	quest: Quest,
-	paths: string[] | number[],
-	newValue: unknown,
-) {
-	let current: unknown = quest;
-	for (const path of paths.slice(0, -1)) {
-		// @ts-expect-error Current is Unknown
-		current = current[path];
-	}
-	// @ts-expect-error Current and New Value is Unknown
-	current[paths.at(-1)] = newValue;
-}
-
-export function navigateTo(quest: Quest, paths: string[] | number[]): unknown {
-	let current: unknown = quest;
-	for (const path of paths) {
-		// @ts-expect-error Current is Unknown
-		current = current[path];
-	}
-	return current;
 }
 
 export async function save(toSave: QuestBook): Promise<void> {
