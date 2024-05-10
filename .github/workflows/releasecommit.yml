@@ -58,12 +58,11 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: peter-murray/workflow-application-token-action@v3
+        uses: actions/create-github-app-token@v1
         with:
           application_id: ${{ secrets.APP_ID }}
           application_private_key: ${{ secrets.APP_KEY }}
-          organization: Nomi-CEu
-          revoke_token: true
+          owner: Nomi-CEu
 
       - name: Checkout Repo
         uses: actions/checkout@v4
