@@ -37,7 +37,7 @@ import axiosRetry, {
 	namespace,
 } from "axios-retry";
 import stream from "node:stream";
-import { NomiConfig } from "#types/axios.js";
+import { NomiConfig } from "#types/axios.ts";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 

@@ -4,7 +4,7 @@ import {
 	PortingType,
 	SavedPorter,
 	SourceOption,
-} from "#types/portQBTypes.ts";
+} from "#types/actionQBTypes.ts";
 import {
 	booleanSelect,
 	cfgExpertPath,
@@ -13,7 +13,7 @@ import {
 	cfgOverrideNormalPath,
 	readFromPorter,
 	savedQuestPorter,
-} from "./portQBUtils.ts";
+} from "../actionQBUtils.ts";
 import { Quest, QuestLine } from "#types/bqQuestBook.ts";
 import fs from "fs";
 import logInfo from "#utils/log.ts";

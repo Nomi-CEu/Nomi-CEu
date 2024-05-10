@@ -1,4 +1,4 @@
-import { Quest, QuestBook, QuestVisibility } from "#types/bqQuestBook.ts";
+import { Icon, Quest, QuestBook, QuestVisibility } from "#types/bqQuestBook.ts";
 import { diff } from "just-diff";
 import {
 	Changed,
@@ -7,10 +7,10 @@ import {
 	Replacements,
 	SavedPorter,
 	SpecialModifierHandler,
-} from "#types/portQBTypes.ts";
+} from "#types/actionQBTypes.ts";
 import upath from "upath";
 import fs from "fs";
-import PortQBData from "./portQBData.ts";
+import PortQBData from "./questPorting/portQBData.ts";
 import { input, select } from "@inquirer/prompts";
 import {
 	configFolder,
@@ -20,7 +20,7 @@ import {
 } from "#globals";
 import logInfo, { logError, logWarn } from "#utils/log.ts";
 import colors from "colors";
-import { getUniqueToArray } from "#utils/util.js";
+import { getUniqueToArray } from "#utils/util.ts";
 
 let data: PortQBData;
 
@@ -106,6 +106,8 @@ export const cfgOverrideExpertPath = upath.join(
 
 export const savedQuestPorter = upath.join(storageFolder, "savedQBPorter.json");
 
+const nomiCoinMatcher = /^nomilabs:nomicoin[0-9]*$/;
+
 export function setupUtils(dataIn: PortQBData): void {
 	data = dataIn;
 }
@@ -123,6 +125,36 @@ export function removeFormatting(input: string): string {
 		builder.push(char);
 	}
 	return builder.join("");
+}
+
+export function stripRewards(quest: Quest, shouldCheck = false, log = false) {
+	for (const rewardKey of Object.keys(quest["rewards:9"])) {
+		const reward = quest["rewards:9"][rewardKey];
+		if (
+			!reward ||
+			reward["rewardID:8"] !== "bq_standard:item" ||
+			!reward["rewards:9"]
+		)
+			continue;
+
+		for (const itemKey of Object.keys(reward["rewards:9"])) {
+			const item: Icon = reward["rewards:9"][itemKey];
+			if (item && item["id:8"] && nomiCoinMatcher.test(item["id:8"])) {
+				if (shouldCheck)
+					throw new Error(
+						`Expert Quest with ID ${quest["questID:3"]} has Nomi Coin Reward!`,
+					);
+				if (log)
+					logWarn(
+						`Removing Nomi Coin Reward for Expert Quest with ID ${quest["questID:3"]}...`,
+					);
+				delete reward["rewards:9"][itemKey];
+			}
+		}
+		if (Object.keys(reward["rewards:9"]).length === 0)
+			delete quest["rewards:9"][rewardKey];
+		else quest["rewards:9"][rewardKey] = reward;
+	}
 }
 
 let cachedQuestByName: Map<string, Quest>;
@@ -461,15 +493,7 @@ function emptyTasks(quest: Quest): boolean {
 	);
 }
 
-export async function save(toSave: QuestBook): Promise<void> {
-	const save = await booleanSelect("Would you like to Save Changes?");
-	if (!save) return;
-
-	const shouldSavePorter = await booleanSelect(
-		"Would you like to Save the Quest Porter?",
-	);
-	if (shouldSavePorter) await savePorter();
-
+export function stringifyQB(qb: QuestBook): string {
 	// Formatting Changes
 	const replacements: Replacements[] = [
 		{
@@ -493,7 +517,7 @@ export async function save(toSave: QuestBook): Promise<void> {
 			replacement: "\\u0027",
 		},
 	];
-	let parsed = JSON.stringify(toSave, null, 2).replace(
+	let parsed = JSON.stringify(qb, null, 2).replace(
 		/("[a-zA-Z_]+:[56]":\s)(-?[0-9]+)(,?)$/gm,
 		"$1$2.0$3",
 	); // Add '.0' to any Float/Double Values that are Integers
@@ -501,6 +525,19 @@ export async function save(toSave: QuestBook): Promise<void> {
 	for (const replacement of replacements) {
 		parsed = parsed.replace(replacement.search, replacement.replacement);
 	}
+	return parsed;
+}
+
+export async function save(toSave: QuestBook): Promise<void> {
+	const save = await booleanSelect("Would you like to Save Changes?");
+	if (!save) return;
+
+	const shouldSavePorter = await booleanSelect(
+		"Would you like to Save the Quest Porter?",
+	);
+	if (shouldSavePorter) await savePorter();
+
+	const parsed = stringifyQB(toSave);
 
 	for (const path of data.outputPaths) {
 		await fs.promises.writeFile(upath.join(rootDirectory, path), parsed);

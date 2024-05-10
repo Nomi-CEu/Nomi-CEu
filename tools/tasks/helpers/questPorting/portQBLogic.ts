@@ -5,15 +5,13 @@ import {
 	emptyQuest,
 	findQuest,
 	id,
-	name,
-} from "./portQBUtils.ts";
-import { Icon, Quest } from "#types/bqQuestBook.ts";
+	name, stripRewards
+} from "../actionQBUtils.ts";
+import { Quest } from "#types/bqQuestBook.ts";
 import { performModification } from "./portQBModifications.ts";
 import logInfo, { logNotImportant } from "../../../utils/log.ts";
 
 let data: PortQBData;
-
-const nomiCoinMatcher = /^nomilabs:nomicoin[0-9]*$/;
 
 export function setupLogic(dataIn: PortQBData): void {
 	data = dataIn;
@@ -74,24 +72,7 @@ export async function additions(): Promise<void> {
 		// if we are porting TO expert, strip rewards
 		if (data.type === "NORMAL") {
 			logInfo("Stripping Rewards...");
-			for (const rewardKey of Object.keys(quest["rewards:9"])) {
-				const reward = quest["rewards:9"][rewardKey];
-				if (
-					!reward ||
-					reward["rewardID:8"] !== "bq_standard:item" ||
-					!reward["rewards:9"]
-				)
-					continue;
-
-				for (const itemKey of Object.keys(reward["rewards:9"])) {
-					const item: Icon = reward["rewards:9"][itemKey];
-					if (item && item["id:8"] && nomiCoinMatcher.test(item["id:8"]))
-						delete reward["rewards:9"][itemKey];
-				}
-				if (Object.keys(reward["rewards:9"]).length === 0)
-					delete quest["rewards:9"][rewardKey];
-				else quest["rewards:9"][rewardKey] = reward;
-			}
+			stripRewards(quest);
 		}
 
 		// Push to Output

@@ -11,11 +11,11 @@ import {
 	SimpleLogic,
 	TaskDifferentSolution,
 	YesIgnoreNo,
-} from "#types/portQBTypes.ts";
+} from "#types/actionQBTypes.ts";
 import PortQBData from "./portQBData.ts";
 import DiffMatchPatch from "diff-match-patch";
 import picomatch from "picomatch";
-import { booleanSelect, findQuest, id, name } from "./portQBUtils.ts";
+import { booleanSelect, findQuest, id, name } from "../actionQBUtils.ts";
 import fakeDiff from "fake-diff";
 import { Operation } from "just-diff";
 import logInfo, { logError, logNotImportant, logWarn } from "#utils/log.ts";
@@ -24,7 +24,7 @@ import { confirm, editor, input, select } from "@inquirer/prompts";
 import colors from "colors";
 import { stringify } from "javascript-stringify";
 import { Quest, Task } from "#types/bqQuestBook.ts";
-import { ArrayUnique } from "#utils/util.js";
+import { ArrayUnique } from "#utils/util.ts";
 import lodash from "lodash";
 
 let data: PortQBData;
