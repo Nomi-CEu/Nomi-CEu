@@ -55,7 +55,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 	logInfo("Fetching CurseForge version manifest...");
 	const versionsManifest: CurseForgeLegacyMCVersion[] | undefined = (
 		await getAxios()({
-			url: buildConfig.cfCoreApiEndpoint + "api/game/versions",
+			url: CURSEFORGE_LEGACY_ENDPOINT + "api/game/versions",
 			method: "get",
 			headers: tokenHeaders,
 			responseType: "json",
