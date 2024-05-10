@@ -103,6 +103,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 					parentFileID: parentID ? parentID : undefined,
 					gameVersions: parentID ? undefined : [version.id],
 					displayName: file.displayName,
+					childFileType: parentID ? 2 : undefined,
 				}),
 				file: fs.createReadStream(
 					upath.join(buildConfig.buildDestinationDirectory, file.name),
