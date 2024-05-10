@@ -5148,8 +5148,20 @@
               "Damage:2": 568,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
-            },
-            "1:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 593,
               "OreDict:8": "",
@@ -8752,6 +8764,12 @@
               "Damage:2": 1002,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 14,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -10989,6 +11007,24 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
+              "Damage:2": 569,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
               "Damage:2": 594,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
@@ -13174,21 +13210,39 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "enderio:block_vacuum_chest"
-            },
-            "2:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "extrautils2:redstoneclock"
+              "id:8": "enderio:item_redstone_conduit"
             },
-            "3:10": {
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "enderio:item_redstone_sensor_filter"
+            },
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "storagedrawers:upgrade_void"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -26472,7 +26526,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 125,
-              "OreDict:8": "",
+              "OreDict:8": "questbookAutoclave",
               "id:8": "gregtech:machine"
             }
           },
@@ -29835,6 +29889,24 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "extrautils2:angelblock"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -41249,7 +41321,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 440,
-              "OreDict:8": "",
+              "OreDict:8": "questbookLathe",
               "id:8": "gregtech:machine"
             }
           },
@@ -42367,6 +42439,24 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 573,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 598,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
             }
@@ -44118,16 +44208,40 @@
               "Count:3": 1,
               "Damage:2": 93,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 90,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 90,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 75,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 50,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -44741,6 +44855,24 @@
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 572,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
@@ -45741,6 +45873,24 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 574,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 599,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
             }
