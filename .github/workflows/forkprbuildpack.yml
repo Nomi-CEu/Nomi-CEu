@@ -60,7 +60,7 @@ jobs:
       - name: Make Artifact Names
         id: artifactNames
         working-directory: ./tools
-        run: npx gulp makeArtifactNames
+        run: npm run gulp makeArtifactNames
 
   buildClient:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
@@ -93,7 +93,7 @@ jobs:
 
       - name: Build Client
         working-directory: ./tools
-        run: npx gulp buildClient
+        run: npm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           
@@ -136,7 +136,7 @@ jobs:
 
       - name: Build Server
         working-directory: ./tools
-        run: npx gulp buildServer
+        run: npm run gulp buildServer
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
@@ -179,7 +179,7 @@ jobs:
 
       - name: Build Lang and Changelogs
         working-directory: ./tools
-        run: npx gulp buildLang
+        run: npm run gulp buildLang
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 

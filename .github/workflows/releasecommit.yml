@@ -94,7 +94,7 @@ jobs:
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npx gulp check
+        run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -103,7 +103,7 @@ jobs:
 
       - name: Update Files
         working-directory: ./tools
-        run: npx gulp updateFilesAll
+        run: npm run gulp updateFilesAll
 
       - name: Commit and Push Release Changes
         uses: stefanzweifel/git-auto-commit-action@v5
