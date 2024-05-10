@@ -41,7 +41,6 @@ export interface Replacements {
 export interface Parser {
 	id: string;
 	name: string;
-	formattedName?: (path: string[], op: Operation) => string;
 	condition: Matcher;
 	logic: SimpleLogic | BunchedLogic;
 }
@@ -54,6 +53,7 @@ export enum LogicType {
 export interface SimpleLogic {
 	type: LogicType.Simple;
 	applyOnce: boolean;
+	formattedName?: (path: string[], op: Operation) => string;
 	func: (
 		questToModify: Quest,
 		modify: Modified,
@@ -65,6 +65,7 @@ export interface SimpleLogic {
 export interface BunchedLogic {
 	type: LogicType.Bunched;
 	applyTogether: (path1: string[], path2: string[]) => boolean;
+	formattedName: (changeAndPaths: ChangeAndPath[]) => string[];
 	func: (
 		questToModify: Quest,
 		modify: Modified,
