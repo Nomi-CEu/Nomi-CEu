@@ -51,4 +51,4 @@ jobs:
 
       - name: Check QB
         working-directory: ./tools
-        run: npm run checkQB
+        run: npm run gulp checkQB
