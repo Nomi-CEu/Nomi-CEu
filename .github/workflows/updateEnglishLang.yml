@@ -31,11 +31,11 @@ jobs:
         uses: actions/create-github-app-token@v1
         with:
           # Shared Org Secret: Contains the Nomi-CEu-Management App ID (773030)
-          application_id: ${{ secrets.APP_ID }}
+          application_id: ${{ secrets.APPLICATION_ID }}
           # Shared Org Secret: Contains the Nomi-CEu-Management App's Private Key.
           # run `cat {PEM_FILE_PATH} | base64 -w 0 && echo` to encode the key first if changing the key.
           # Paste the output of the command into the secret value.
-          application_private_key: ${{ secrets.APP_KEY }}
+          application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
           owner: Nomi-CEu
           
       - name: Dispatch Workflow

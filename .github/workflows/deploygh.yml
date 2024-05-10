@@ -23,8 +23,8 @@ jobs:
         id: token
         uses: actions/create-github-app-token@v1
         with:
-          application_id: ${{ secrets.APP_ID }}
-          application_private_key: ${{ secrets.APP_KEY }}
+          application_id: ${{ secrets.APPLICATION_ID }}
+          application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
           owner: Nomi-CEu
 
       - name: Checkout Tag
