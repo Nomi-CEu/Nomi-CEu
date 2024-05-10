@@ -47,7 +47,7 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
+      - name: Setup NodeJS v20
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -81,7 +81,7 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
+      - name: Setup NodeJS v20
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -124,7 +124,7 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
+      - name: Setup NodeJS v20
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -167,7 +167,7 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
+      - name: Setup NodeJS v20
         uses: actions/setup-node@v4
         with:
           node-version: 20

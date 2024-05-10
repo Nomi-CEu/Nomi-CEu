@@ -87,7 +87,7 @@ jobs:
           key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
           restore-keys: ${{ runner.os }}-bunny-
 
-      - name: Setup NodeJS v16
+      - name: Setup NodeJS v20
         uses: actions/setup-node@v4
         with:
           node-version: 20
