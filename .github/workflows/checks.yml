@@ -1,0 +1,54 @@
+name: Checks
+on:
+  push:
+    branches:
+      - main
+      - test_buildscript*
+      - dev/*
+    paths-ignore:
+      - "README.md"
+
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Ref
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore Cached Files
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            ~/.npm
+            ./.cache
+            ./tools/node_modules
+          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          restore-keys: ${{ runner.os }}-bunny-
+
+      - name: Setup NodeJS v16
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          check-latest: true
+
+      - name: Setup NPM Packages
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Check Buildscripts
+        working-directory: ./tools
+        run: npm run check
+
+      - name: Check QB
+        working-directory: ./tools
+        run: npm run checkQB
