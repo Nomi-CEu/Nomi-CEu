@@ -54,7 +54,12 @@ export interface Icon {
 
 export type QuestLogic = "AND" | "OR";
 
-export type QuestVisibility = "ALWAYS" | "CHAIN" | "HIDDEN" | "NORMAL" | "UNLOCKED";
+export type QuestVisibility =
+	| "ALWAYS"
+	| "CHAIN"
+	| "HIDDEN"
+	| "NORMAL"
+	| "UNLOCKED";
 
 export interface Rewards {
 	"index:3": number;

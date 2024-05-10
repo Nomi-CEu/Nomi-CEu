@@ -5,7 +5,12 @@ import { Quest, QuestBook, QuestLine } from "#types/bqQuestBook.ts";
 import { getFileAtRevision } from "#utils/util.ts";
 import { getChanged, id, save, setupUtils } from "./portQBUtils.ts";
 import PortQBData from "./portQBData.ts";
-import { additions, modifications, removals, setupLogic } from "./portQBLogic.ts";
+import {
+	additions,
+	modifications,
+	removals,
+	setupLogic,
+} from "./portQBLogic.ts";
 import { setupModifications } from "./portQBModifications.ts";
 import logInfo, { logError } from "../../../utils/log.ts";
 
@@ -18,20 +23,34 @@ export default async function portQBChanges(): Promise<void> {
 	setupModifications(data);
 	setupUtils(data);
 
-	const current = JSON.parse(await fs.promises.readFile(upath.join(rootDirectory, data.srcPath), "utf-8")) as QuestBook;
-	const old = JSON.parse(await getFileAtRevision(data.srcPath, data.ref)) as QuestBook;
+	const current = JSON.parse(
+		await fs.promises.readFile(
+			upath.join(rootDirectory, data.srcPath),
+			"utf-8",
+		),
+	) as QuestBook;
+	const old = JSON.parse(
+		await getFileAtRevision(data.srcPath, data.ref),
+	) as QuestBook;
 
 	const currentQuests = Object.values(current["questDatabase:9"]);
 	const oldQuests = Object.values(old["questDatabase:9"]);
 
 	const toChange = JSON.parse(
-		await fs.promises.readFile(upath.join(rootDirectory, data.srcPathToChange), "utf-8"),
+		await fs.promises.readFile(
+			upath.join(rootDirectory, data.srcPathToChange),
+			"utf-8",
+		),
 	) as QuestBook;
 
 	const quests = Object.values(toChange["questDatabase:9"]);
 
-	data.currentIDsToQuests = new Map<number, Quest>(currentQuests.map((quest) => [id(quest), quest]));
-	data.toChangeIDsToQuests = new Map<number, Quest>(quests.map((quest) => [id(quest), quest]));
+	data.currentIDsToQuests = new Map<number, Quest>(
+		currentQuests.map((quest) => [id(quest), quest]),
+	);
+	data.toChangeIDsToQuests = new Map<number, Quest>(
+		quests.map((quest) => [id(quest), quest]),
+	);
 
 	await data.readSavedPorter();
 
@@ -43,7 +62,11 @@ export default async function portQBChanges(): Promise<void> {
 	logInfo(`Quests Modified: [${modifiedQuestIDs.join(", ")}]`);
 	logInfo(`Quests Removed: [${removedQuestIDs.join(", ")}]`);
 
-	if (addedQuestIDs.length === 0 && modifiedQuestIDs.length === 0 && removedQuestIDs.length === 0) {
+	if (
+		addedQuestIDs.length === 0 &&
+		modifiedQuestIDs.length === 0 &&
+		removedQuestIDs.length === 0
+	) {
 		logError("Files are the Same! No Changes Detected! Exiting...");
 		return;
 	}
@@ -52,7 +75,9 @@ export default async function portQBChanges(): Promise<void> {
 	if (modifiedQuestIDs.length > 0) await modifications();
 	if (removedQuestIDs.length > 0) {
 		// Set the Old IDs to Quests
-		data.oldIDsToQuests = new Map<number, Quest>(oldQuests.map((quest) => [id(quest), quest]));
+		data.oldIDsToQuests = new Map<number, Quest>(
+			oldQuests.map((quest) => [id(quest), quest]),
+		);
 		// Set the Quest Line Changeable
 		data.questLines = Object.values(toChange["questLines:9"]);
 		await removals();

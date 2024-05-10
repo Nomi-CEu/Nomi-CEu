@@ -1,10 +1,19 @@
 import PortQBData from "./portQBData.ts";
-import { booleanSelect, dependencies, emptyQuest, findQuest, id, name } from "./portQBUtils.ts";
-import { Quest } from "#types/bqQuestBook.ts";
+import {
+	booleanSelect,
+	dependencies,
+	emptyQuest,
+	findQuest,
+	id,
+	name,
+} from "./portQBUtils.ts";
+import { Icon, Quest } from "#types/bqQuestBook.ts";
 import { performModification } from "./portQBModifications.ts";
 import logInfo, { logNotImportant } from "../../../utils/log.ts";
 
 let data: PortQBData;
+
+const nomiCoinMatcher = /^nomilabs:nomicoin[0-9]*$/;
 
 export function setupLogic(dataIn: PortQBData): void {
 	data = dataIn;
@@ -15,7 +24,8 @@ export async function additions(): Promise<void> {
 		logNotImportant("Skipping...");
 		return;
 	}
-	let newID = [...data.toChangeIDsToQuests.keys()].sort((a, b) => a - b).pop() ?? 0;
+	let newID =
+		[...data.toChangeIDsToQuests.keys()].sort((a, b) => a - b).pop() ?? 0;
 	const addingQuests: Quest[] = [];
 	logNotImportant("Porting Additions...");
 	for (const addition of data.changed.added) {
@@ -31,7 +41,7 @@ export async function additions(): Promise<void> {
 		}
 
 		const addingID = ++newID;
-		logInfo("Adding New Quest...");
+		logInfo(`Adding New Quest with ID ${addingID}...`);
 
 		const newQuest = { ...addition } as Quest; // Copy Quest
 		newQuest["questID:3"] = addingID;
@@ -44,7 +54,9 @@ export async function additions(): Promise<void> {
 	// Sort out Dependencies (Do Afterwards, so if new quests dep on each other, that works)
 	if (addingQuests.length === 0) return;
 	for (const quest of addingQuests) {
-		logInfo(`Modifying Deps for Quest with ID ${id(quest)} and Name ${name(quest)}...`);
+		logInfo(
+			`Modifying Deps for Quest with ID ${id(quest)} and Name ${name(quest)}...`,
+		);
 		const deps = dependencies(quest);
 		const depTypes = quest["preRequisiteTypes:7"];
 		const useDepTypes = depTypes && depTypes.length === deps.length;
@@ -57,6 +69,29 @@ export async function additions(): Promise<void> {
 					depTypes.splice(i, 1);
 				}
 			} else deps[i] = id(depQuest);
+		}
+
+		// if we are porting TO expert, strip rewards
+		if (data.type === "NORMAL") {
+			logInfo("Stripping Rewards...");
+			for (const rewardKey of Object.keys(quest["rewards:9"])) {
+				const reward = quest["rewards:9"][rewardKey];
+				if (
+					!reward ||
+					reward["rewardID:8"] !== "bq_standard:item" ||
+					!reward["rewards:9"]
+				)
+					continue;
+
+				for (const itemKey of Object.keys(reward["rewards:9"])) {
+					const item: Icon = reward["rewards:9"][itemKey];
+					if (item && item["id:8"] && nomiCoinMatcher.test(item["id:8"]))
+						delete reward["rewards:9"][itemKey];
+				}
+				if (Object.keys(reward["rewards:9"]).length === 0)
+					delete quest["rewards:9"][rewardKey];
+				else quest["rewards:9"][rewardKey] = reward;
+			}
 		}
 
 		// Push to Output
@@ -92,7 +127,10 @@ export async function removals(): Promise<void> {
 			logInfo("Skipping...");
 			continue;
 		}
-		const quest = await findQuest(id(removal), data.oldIDsToQuests?.get(id(removal)));
+		const quest = await findQuest(
+			id(removal),
+			data.oldIDsToQuests?.get(id(removal)),
+		);
 		if (!quest) {
 			logInfo("Skipping, Could not find Corresponding Quest...");
 			continue;

@@ -9,7 +9,12 @@ import { changelogParsers } from "./definitions.ts";
 import parseParser from "./parser.ts";
 import { specialParserSetup } from "./specialParser.ts";
 import generateModChanges from "./generateModChanges.ts";
-import pushAll, { pushChangelog, pushSeperator, pushSetup, pushTitle } from "./pusher.ts";
+import pushAll, {
+	pushChangelog,
+	pushSeperator,
+	pushSetup,
+	pushTitle,
+} from "./pusher.ts";
 import logInfo from "#utils/log.ts";
 
 /**
@@ -71,7 +76,10 @@ export const createRootChangelog = async (): Promise<void> => {
 	const builder = (await createChangelog()).builder;
 
 	// Write files.
-	await fs.promises.writeFile(upath.join(rootDirectory, "CHANGELOG.md"), builder.join("\n"));
+	await fs.promises.writeFile(
+		upath.join(rootDirectory, "CHANGELOG.md"),
+		builder.join("\n"),
+	);
 	return fs.promises.writeFile(
 		upath.join(rootDirectory, "CHANGELOG_CF.md"),
 		await marked(builder.join("\n"), { async: true }),
@@ -86,7 +94,10 @@ export const createBuildChangelog = async (): Promise<void> => {
 	const builder = (await createChangelog()).builder;
 
 	// Write files.
-	await fs.promises.writeFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"), builder.join("\n"));
+	await fs.promises.writeFile(
+		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+		builder.join("\n"),
+	);
 	return fs.promises.writeFile(
 		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
 		await marked(builder.join("\n"), { async: true }),

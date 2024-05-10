@@ -8,12 +8,12 @@ export type PortingType = "NORMAL" | "EXPERT";
 // Which File to Source From
 export type SourceOption = "CFG" | "CFG-OVERRIDE";
 
-// Is Right Quest?
-export type CorrectQuest = "YES" | "IGNORE" | "NO";
+export type YesIgnoreNo = "YES" | "IGNORE" | "NO";
 
 // How should we apply description change?
-export type DescriptionChange = "APPLY" | "REPLACE" | "CUSTOM" | "IGNORE";
-export type CustomDescriptionTemplate = "APPLY" | "REPLACE" | "ORIGINAL";
+export type DescriptionTaskChange = "APPLY" | "REPLACE" | "CUSTOM" | "IGNORE";
+export type CustomDescriptionTaskTemplate = "APPLY" | "REPLACE" | "ORIGINAL";
+export type TaskDifferentSolution = "APPLY" | "CONTINUE" | "IGNORE";
 
 export interface Changed {
 	added: Quest[];
@@ -54,13 +54,22 @@ export enum LogicType {
 export interface SimpleLogic {
 	type: LogicType.Simple;
 	applyOnce: boolean;
-	func: (questToModify: Quest, modify: Modified, change: QuestChange, path: string[]) => Promise<void>;
+	func: (
+		questToModify: Quest,
+		modify: Modified,
+		change: QuestChange,
+		path: string[],
+	) => Promise<void>;
 }
 
 export interface BunchedLogic {
 	type: LogicType.Bunched;
 	applyTogether: (path1: string[], path2: string[]) => boolean;
-	func: (questToModify: Quest, modify: Modified, changeAndPaths: ChangeAndPath[]) => Promise<void>;
+	func: (
+		questToModify: Quest,
+		modify: Modified,
+		changeAndPaths: ChangeAndPath[],
+	) => Promise<void>;
 }
 
 export interface SavedPorter {
@@ -86,7 +95,11 @@ export type ChangeAndPath = {
 	path: string[];
 };
 
-export type SpecialModifierHandler = (oldQuest: Quest, currentQuest: Quest, questDiff: QuestChange[]) => void;
+export type SpecialModifierHandler = (
+	oldQuest: Quest,
+	currentQuest: Quest,
+	questDiff: QuestChange[],
+) => void;
 
 export class Message {
 	private readonly message: string;

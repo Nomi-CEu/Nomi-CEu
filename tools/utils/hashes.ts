@@ -34,11 +34,17 @@ const hashFuncs: { [key: string]: (buffer: Buffer) => string } = {
  *
  * @throws {Error} Throws a generic error if hashes don't match.
  */
-export const compareBufferToHashDef = (buffer: Buffer, hashDef: HashDef): boolean => {
+export const compareBufferToHashDef = (
+	buffer: Buffer,
+	hashDef: HashDef,
+): boolean => {
 	if (!hashFuncs[hashDef.id]) {
 		throw new Error(`No hash function found for ${hashDef.id}.`);
 	}
 
 	const sum = hashFuncs[hashDef.id](buffer);
-	return (Array.isArray(hashDef.hashes) && hashDef.hashes.includes(sum)) || hashDef.hashes == sum;
+	return (
+		(Array.isArray(hashDef.hashes) && hashDef.hashes.includes(sum)) ||
+		hashDef.hashes == sum
+	);
 };

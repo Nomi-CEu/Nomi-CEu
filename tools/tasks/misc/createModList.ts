@@ -1,4 +1,9 @@
-import { fetchFileInfo, fetchFilesBulk, fetchProject, fetchProjectsBulk } from "#utils/curseForgeAPI.ts";
+import {
+	fetchFileInfo,
+	fetchFilesBulk,
+	fetchProject,
+	fetchProjectsBulk,
+} from "#utils/curseForgeAPI.ts";
 import { modpackManifest } from "#globals";
 import { checkGitTag, getFileAtRevision } from "#utils/util.ts";
 import { ModpackManifest } from "#types/modpackManifest.ts";

@@ -1,4 +1,9 @@
-import { clientDestDirectory, mmcDestDirectory, modDestDirectory, modpackManifest } from "#globals";
+import {
+	clientDestDirectory,
+	mmcDestDirectory,
+	modDestDirectory,
+	modpackManifest,
+} from "#globals";
 import * as upath from "upath";
 import * as fs from "fs";
 import gulp, { series, src, symlink } from "gulp";
@@ -23,7 +28,9 @@ async function createMMCDirs() {
  * Copies the update notes file.
  */
 function copyMMCUpdateNotes() {
-	return gulp.src("../UPDATENOTES.md", { allowEmpty: true }).pipe(gulp.dest(mmcDestDirectory));
+	return gulp
+		.src("../UPDATENOTES.md", { allowEmpty: true })
+		.pipe(gulp.dest(mmcDestDirectory));
 }
 
 /**
@@ -37,7 +44,9 @@ async function copyMMCLicense() {
  * Copies the changelog file.
  */
 function copyMMCChangelog() {
-	return gulp.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(gulp.dest(mmcDestDirectory));
+	return gulp
+		.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
+		.pipe(gulp.dest(mmcDestDirectory));
 }
 
 /**
@@ -53,7 +62,10 @@ function copyOverrides() {
  * Renames copied overrides to '.minecraft'.
  */
 async function renameOverrides() {
-	await fs.promises.rename(upath.join(mmcDestDirectory, "overrides"), upath.join(mmcDestDirectory, ".minecraft"));
+	await fs.promises.rename(
+		upath.join(mmcDestDirectory, "overrides"),
+		upath.join(mmcDestDirectory, ".minecraft"),
+	);
 	return fs.promises.rm(upath.join(mmcDestDirectory, "manifest.json"));
 }
 
@@ -61,9 +73,15 @@ async function renameOverrides() {
  * Copies client & shared mods.
  */
 async function copyMMCModJars() {
-	return src([upath.join(modDestDirectory, "*"), upath.join(modDestDirectory, "client", "*")], {
-		resolveSymlinks: false,
-	}).pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));
+	return src(
+		[
+			upath.join(modDestDirectory, "*"),
+			upath.join(modDestDirectory, "client", "*"),
+		],
+		{
+			resolveSymlinks: false,
+		},
+	).pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));
 }
 
 async function createMMCConfig() {
@@ -119,7 +137,10 @@ async function createMMCManifest() {
 		});
 	}
 
-	return fs.promises.writeFile(upath.join(mmcDestDirectory, "mmc-pack.json"), JSON.stringify(manifest, null, "\t"));
+	return fs.promises.writeFile(
+		upath.join(mmcDestDirectory, "mmc-pack.json"),
+		JSON.stringify(manifest, null, "\t"),
+	);
 }
 
 export default series(

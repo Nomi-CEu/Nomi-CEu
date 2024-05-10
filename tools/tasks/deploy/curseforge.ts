@@ -3,17 +3,29 @@ import { modpackManifest } from "#globals";
 import fs from "fs";
 import upath from "upath";
 import buildConfig from "#buildConfig";
-import { getAxios, isEnvVariableSet, makeArtifactNameBody } from "#utils/util.ts";
+import {
+	getAxios,
+	isEnvVariableSet,
+	makeArtifactNameBody,
+} from "#utils/util.ts";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
-import { DeployReleaseType, InputReleaseType, inputToDeployReleaseTypes } from "#types/changelogTypes.ts";
+import {
+	DeployReleaseType,
+	InputReleaseType,
+	inputToDeployReleaseTypes,
+} from "#types/changelogTypes.ts";
 import logInfo from "#utils/log.ts";
 import { CurseForgeLegacyMCVersion } from "#types/curseForge.ts";
 import core from "@actions/core";
 import { AxiosRequestConfig } from "axios";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
-const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID", "RELEASE_TYPE"];
+const variablesToCheck = [
+	"CURSEFORGE_API_TOKEN",
+	"CURSEFORGE_PROJECT_ID",
+	"RELEASE_TYPE",
+];
 
 async function upload(files: { name: string; displayName: string }[]) {
 	files.forEach((file) => {
@@ -25,7 +37,9 @@ async function upload(files: { name: string; displayName: string }[]) {
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
 	let changelog = (
-		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"))
+		await fs.promises.readFile(
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
+		)
 	).toString();
 
 	changelog = mustache.render(changelog, {
@@ -52,22 +66,30 @@ async function upload(files: { name: string; displayName: string }[]) {
 		throw new Error("Failed to fetch CurseForge version manifest.");
 	}
 
-	const version = versionsManifest.find((m) => m.name == modpackManifest.minecraft.version);
+	const version = versionsManifest.find(
+		(m) => m.name == modpackManifest.minecraft.version,
+	);
 
 	if (!version) {
-		throw new Error(`Version ${modpackManifest.minecraft.version} not found on CurseForge.`);
+		throw new Error(
+			`Version ${modpackManifest.minecraft.version} not found on CurseForge.`,
+		);
 	}
 
 	const uploadedIDs: { name: string; id: number }[] = [];
 	let parentID: number | undefined = undefined;
 
 	const releaseType: DeployReleaseType =
-		inputToDeployReleaseTypes[(process.env.RELEASE_TYPE ?? "Release") as InputReleaseType];
+		inputToDeployReleaseTypes[
+			(process.env.RELEASE_TYPE ?? "Release") as InputReleaseType
+		];
 
 	// Upload artifacts.
 	for (const file of files) {
 		const options: AxiosRequestConfig<unknown> = {
-			url: CURSEFORGE_LEGACY_ENDPOINT + `api/projects/${process.env.CURSEFORGE_PROJECT_ID}/upload-file`,
+			url:
+				CURSEFORGE_LEGACY_ENDPOINT +
+				`api/projects/${process.env.CURSEFORGE_PROJECT_ID}/upload-file`,
 			method: "post",
 			headers: {
 				...tokenHeaders,
@@ -82,12 +104,17 @@ async function upload(files: { name: string; displayName: string }[]) {
 					gameVersions: parentID ? undefined : [version.id],
 					displayName: file.displayName,
 				}),
-				file: fs.createReadStream(upath.join(buildConfig.buildDestinationDirectory, file.name)),
+				file: fs.createReadStream(
+					upath.join(buildConfig.buildDestinationDirectory, file.name),
+				),
 			},
 			responseType: "json",
 		};
 
-		logInfo(`Uploading ${file.name} to CurseForge...` + (parentID ? `(child of ${parentID})` : ""));
+		logInfo(
+			`Uploading ${file.name} to CurseForge...` +
+				(parentID ? `(child of ${parentID})` : ""),
+		);
 
 		const response: { id: number } = (await getAxios()(options)).data;
 
@@ -123,11 +150,19 @@ export async function deployCurseForge(): Promise<void> {
 
 	const files = [
 		{
-			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-client.zip").toLowerCase()),
+			name: sanitize(
+				(
+					makeArtifactNameBody(modpackManifest.name) + "-client.zip"
+				).toLowerCase(),
+			),
 			displayName: displayName,
 		},
 		{
-			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-server.zip").toLowerCase()),
+			name: sanitize(
+				(
+					makeArtifactNameBody(modpackManifest.name) + "-server.zip"
+				).toLowerCase(),
+			),
 			displayName: `${displayName}-server`,
 		},
 	];

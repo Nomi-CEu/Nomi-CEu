@@ -12,7 +12,10 @@ import buildConfig from "#buildConfig";
 import { makeArtifactNameBody } from "#utils/util.ts";
 import sanitize from "sanitize-filename";
 
-async function zipFolder(path: string, zipName: string = upath.basename(path) + ".zip"): Promise<void> {
+async function zipFolder(
+	path: string,
+	zipName: string = upath.basename(path) + ".zip",
+): Promise<void> {
 	return new Promise((resolve) => {
 		gulp
 			.src(upath.join(path, "**"), { base: path, dot: true })
@@ -26,7 +29,11 @@ function makeZipper(src: string, artifactName: string) {
 	const zipFn = () => {
 		return zipFolder(
 			upath.join(src),
-			sanitize((makeArtifactNameBody(modpackManifest.name) + `-${artifactName}.zip`).toLowerCase()),
+			sanitize(
+				(
+					makeArtifactNameBody(modpackManifest.name) + `-${artifactName}.zip`
+				).toLowerCase(),
+			),
 		);
 	};
 

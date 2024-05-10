@@ -39,10 +39,16 @@ export function pushTitle(inputData: ChangelogData): void {
 			timeZoneName: "short",
 		});
 		// noinspection HtmlDeprecatedAttribute
-		data.builder.push(`<h1 align="center">${data.releaseType} (${date})</h1>`, "");
+		data.builder.push(
+			`<h1 align="center">${data.releaseType} (${date})</h1>`,
+			"",
+		);
 	} else {
 		// noinspection HtmlUnknownAttribute
-		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`, "");
+		data.builder.push(
+			`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`,
+			"",
+		);
 		data.builder.push("{{{ CF_REDIRECT }}}", "");
 	}
 }
@@ -137,7 +143,11 @@ async function pushCategory(category: Category) {
  * @param transform A function to turn each element of type T into an element of type Commit
  * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal) or will compare commit messages.
  */
-function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined, backup?: (a: T, b: T) => number) {
+function sortCommitList<T>(
+	list: T[],
+	transform: (obj: T) => Commit | undefined,
+	backup?: (a: T, b: T) => number,
+) {
 	list.sort((a, b): number => {
 		const commitA = transform(a);
 		const commitB = transform(b);
@@ -150,9 +160,11 @@ function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined,
 		const dateB = new Date(commitB.date);
 
 		// This is reversed, so higher priorities go on top
-		if (commitB.priority !== commitA.priority) return (commitB.priority ?? 0) - (commitA.priority ?? 0);
+		if (commitB.priority !== commitA.priority)
+			return (commitB.priority ?? 0) - (commitA.priority ?? 0);
 		// This is reversed, so the newest commits go on top
-		if (dateB.getTime() - dateA.getTime() !== 0) return dateB.getTime() - dateA.getTime();
+		if (dateB.getTime() - dateA.getTime() !== 0)
+			return dateB.getTime() - dateA.getTime();
 		if (backup) return backup(a, b);
 		return commitA.message.localeCompare(commitB.message);
 	});
@@ -169,7 +181,8 @@ export function sortCommitListReverse(list: Commit[]): void {
 
 		// This is reversed, so higher priorities go on top
 		if (b.priority !== a.priority) return (b.priority ?? 0) - (a.priority ?? 0); // Priority is still highest first
-		if (dateA.getTime() - dateB.getTime() !== 0) return dateA.getTime() - dateB.getTime();
+		if (dateA.getTime() - dateB.getTime() !== 0)
+			return dateA.getTime() - dateB.getTime();
 		return a.message.localeCompare(b.message);
 	});
 }
@@ -180,8 +193,14 @@ export function sortCommitListReverse(list: Commit[]): void {
  * @param subMessage Whether this message is a subMessage (used in details). Set to true to make it a subMessage (different parsing). Defaults to false.
  * @return string Formatted Changelog Message
  */
-async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): Promise<string> {
-	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
+async function formatChangelogMessage(
+	changelogMessage: ChangelogMessage,
+	subMessage = false,
+): Promise<string> {
+	const indentation =
+		changelogMessage.indentation == undefined
+			? defaultIndentation
+			: changelogMessage.indentation;
 	const message = changelogMessage.commitMessage.trim();
 
 	if (changelogMessage.specialFormatting)
@@ -194,7 +213,8 @@ async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMes
 
 	if (changelogMessage.commitObject && !subMessage) {
 		if (data.combineList.has(changelogMessage.commitObject.hash)) {
-			const commits = data.combineList.get(changelogMessage.commitObject.hash) ?? [];
+			const commits =
+				data.combineList.get(changelogMessage.commitObject.hash) ?? [];
 			commits.push(changelogMessage.commitObject);
 
 			// Sort original array so newest commits appear at the end instead of start of commit string
@@ -207,11 +227,16 @@ async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMes
 
 			commits.forEach((commit) => {
 				if (processedSHAs.has(commit.hash)) return;
-				if (!authors.includes(commit.author_name) && !authorEmails.has(commit.author_email)) {
+				if (
+					!authors.includes(commit.author_name) &&
+					!authorEmails.has(commit.author_email)
+				) {
 					authors.push(commit.author_name);
 					authorEmails.add(commit.author_email);
 				}
-				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
+				formattedCommits.push(
+					`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`,
+				);
 				processedSHAs.add(commit.hash);
 			});
 
@@ -253,7 +278,11 @@ async function transformAllIssueURLs(changelog: string[]) {
 	for (let i = 0; i < changelog.length; i++) {
 		const categoryFormatted = changelog[i];
 		// Transform PR and/or Issue tags into a link.
-		promises.push(transformTags(categoryFormatted).then((categoryTransformed) => (changelog[i] = categoryTransformed)));
+		promises.push(
+			transformTags(categoryFormatted).then(
+				(categoryTransformed) => (changelog[i] = categoryTransformed),
+			),
+		);
 	}
 	// Apply all Link Changes
 	await Promise.all(promises);
@@ -273,7 +302,11 @@ async function transformTags(message: string): Promise<string> {
 			const digits = Number.parseInt(digitsMatch[0]);
 
 			// Get PR/Issue Info (PRs are listed in the Issue API Endpoint)
-			promises.push(getIssueURL(digits, octokit).then((url) => message.replace(match, `[#${digits}](${url})`)));
+			promises.push(
+				getIssueURL(digits, octokit).then((url) =>
+					message.replace(match, `[#${digits}](${url})`),
+				),
+			);
 		}
 	}
 

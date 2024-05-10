@@ -5,8 +5,16 @@ import buildConfig from "#buildConfig";
 import upath from "upath";
 import { compareBufferToHashDef } from "./hashes.ts";
 import { execSync } from "child_process";
-import { ExternalDependency, ModpackManifest, ModpackManifestFile } from "#types/modpackManifest.ts";
-import { fetchFileInfo, fetchProject, fetchProjectsBulk } from "./curseForgeAPI.ts";
+import {
+	ExternalDependency,
+	ModpackManifest,
+	ModpackManifestFile,
+} from "#types/modpackManifest.ts";
+import {
+	fetchFileInfo,
+	fetchProject,
+	fetchProjectsBulk,
+} from "./curseForgeAPI.ts";
 import { VersionManifest } from "#types/versionManifest.ts";
 import { VersionsManifest } from "#types/versionsManifest.ts";
 import { pathspec, SimpleGit, simpleGit } from "simple-git";
@@ -15,8 +23,19 @@ import { modpackManifest, repoName, repoOwner, rootDirectory } from "#globals";
 import { Octokit } from "@octokit/rest";
 import logInfo, { logError, logWarn } from "./log.ts";
 import lodash from "lodash";
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosStatic } from "axios";
-import axiosRetry, { DEFAULT_OPTIONS, IAxiosRetryConfig, IAxiosRetryConfigExtended, namespace } from "axios-retry";
+import axios, {
+	AxiosError,
+	AxiosInstance,
+	AxiosRequestConfig,
+	AxiosResponse,
+	AxiosStatic,
+} from "axios";
+import axiosRetry, {
+	DEFAULT_OPTIONS,
+	IAxiosRetryConfig,
+	IAxiosRetryConfigExtended,
+	namespace,
+} from "axios-retry";
 import stream from "node:stream";
 import { NomiConfig } from "#types/axios.js";
 
@@ -29,7 +48,9 @@ const retryCfg: IAxiosRetryConfig = {
 	retries: 10,
 	retryDelay: (count) => count * 100,
 	onRetry: (count, error, cfg) =>
-		logWarn(`Retrying HTTP Request of URL ${cfg.url} in 100ms. (${error.message}) (${count} Times)`),
+		logWarn(
+			`Retrying HTTP Request of URL ${cfg.url} in 100ms. (${error.message}) (${count} Times)`,
+		),
 	onMaxRetryTimesExceeded: (error) => {
 		throw error;
 	},
@@ -41,7 +62,8 @@ const fileDownloader = axios.create();
 axiosRetry(fileDownloader, retryCfg);
 fileDownloader.interceptors.response.use(async (response) => {
 	if (response.status < 200 || response.status > 299) return response; // Error, Probably Handled by Axios Retry
-	if (!response.data || !(response.data instanceof stream.Stream)) return retryOrThrow(response, "No Response Error");
+	if (!response.data || !(response.data instanceof stream.Stream))
+		return retryOrThrow(response, "No Response Error");
 
 	const buf: Uint8Array[] = [];
 	const dataStream = response.data as stream.Stream;
@@ -56,12 +78,17 @@ fileDownloader.interceptors.response.use(async (response) => {
 	const url = response.config.url ?? nomiCfg.fileDef.url;
 
 	// If Buffer Does not Match, Retry
-	if (!buffer) throw new Error(`Failed to Download File from ${url}, no Buffer Returned!`);
+	if (!buffer)
+		throw new Error(`Failed to Download File from ${url}, no Buffer Returned!`);
 	if (nomiCfg.fileDef.hashes) {
 		const success = nomiCfg.fileDef.hashes.every((hashDef) => {
 			return compareBufferToHashDef(buffer, hashDef);
 		});
-		if (!success) return retryOrThrow(response, `Failed to Download File from ${url}, File Checksum Checking Failed!`);
+		if (!success)
+			return retryOrThrow(
+				response,
+				`Failed to Download File from ${url}, File Checksum Checking Failed!`,
+			);
 	}
 
 	response.data = buffer;
@@ -137,10 +164,15 @@ export interface RetrievedFileDef {
  * <p>
  * @param fileDef The file def to download or retrieve.
  */
-export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<RetrievedFileDef> {
+export async function downloadOrRetrieveFileDef(
+	fileDef: FileDef,
+): Promise<RetrievedFileDef> {
 	const fileNameSha = sha1(fileDef.url);
 
-	const cachedFilePath = upath.join(buildConfig.downloaderCacheDirectory, fileNameSha);
+	const cachedFilePath = upath.join(
+		buildConfig.downloaderCacheDirectory,
+		fileNameSha,
+	);
 	if (fs.existsSync(cachedFilePath)) {
 		const file = await fs.promises.readFile(cachedFilePath);
 
@@ -185,7 +217,9 @@ export async function downloadOrRetrieveFileDef(fileDef: FileDef): Promise<Retri
 	} catch (err) {
 		// noinspection PointlessBooleanExpressionJS,JSObjectNullOrUndefined
 		if (handle && (await handle.stat()).isFile()) {
-			logInfo(`Couldn't download ${upath.basename(fileDef.url)}, cleaning up ${fileNameSha}...`);
+			logInfo(
+				`Couldn't download ${upath.basename(fileDef.url)}, cleaning up ${fileNameSha}...`,
+			);
 
 			await handle.close();
 			await fs.promises.unlink(cachedFilePath);
@@ -211,7 +245,10 @@ export async function downloadFileDef(fileDef: FileDef): Promise<Buffer> {
 	return response.data as Buffer;
 }
 
-function fixConfig(axiosInstance: AxiosInstance | AxiosStatic, config: AxiosRequestConfig) {
+function fixConfig(
+	axiosInstance: AxiosInstance | AxiosStatic,
+	config: AxiosRequestConfig,
+) {
 	// @ts-expect-error agent non-existent in type declaration`
 	if (axiosInstance.defaults.agent === config.agent) {
 		// @ts-expect-error agent non-existent in type declaration
@@ -228,7 +265,10 @@ function fixConfig(axiosInstance: AxiosInstance | AxiosStatic, config: AxiosRequ
 /**
  * Use Axios Retry API to retry if Hash Failed or No Response.
  */
-function retryOrThrow(response: AxiosResponse<unknown, unknown>, error: string) {
+function retryOrThrow(
+	response: AxiosResponse<unknown, unknown>,
+	error: string,
+) {
 	const currentState = {
 		...DEFAULT_OPTIONS,
 		...retryCfg,
@@ -247,7 +287,11 @@ function retryOrThrow(response: AxiosResponse<unknown, unknown>, error: string) 
 		retryState.retryCount++;
 		const delay = retryState.retryDelay(retryState.retryCount, axiosError);
 		fixConfig(fileDownloader, config);
-		if (!retryState.shouldResetTimeout && config.timeout && currentState.lastRequestTime) {
+		if (
+			!retryState.shouldResetTimeout &&
+			config.timeout &&
+			currentState.lastRequestTime
+		) {
 			const lastRequestDuration = Date.now() - currentState.lastRequestTime;
 			const timeout = config.timeout - lastRequestDuration - delay;
 			if (timeout <= 0) throw new Error(error);
@@ -280,7 +324,11 @@ export function makeArtifactNameBody(baseName: string): string {
 		return `${baseName}-${process.env.GITHUB_HEAD_REF}-${shortCommit}`;
 	}
 	// If SHA and ref is provided, append both the branch and short SHA.
-	if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
+	if (
+		process.env.GITHUB_SHA &&
+		process.env.GITHUB_REF &&
+		process.env.GITHUB_REF.startsWith("refs/heads/")
+	) {
 		const shortCommit = process.env.GITHUB_SHA.substring(0, 7);
 		const branch = /refs\/heads\/(.+)/.exec(process.env.GITHUB_REF);
 		if (branch) return `${baseName}-${branch[1]}-${shortCommit}`;
@@ -353,7 +401,10 @@ export async function getTags(ref = "HEAD"): Promise<string[]> {
  * @param path The path to the file
  * @param revision The git ref point. Can also be a commit SHA.
  */
-export async function getFileAtRevision(path: string, revision = "HEAD"): Promise<string> {
+export async function getFileAtRevision(
+	path: string,
+	revision = "HEAD",
+): Promise<string> {
 	let output: string = "";
 	await git.show(`${revision}:./${path}`, (err, file) => {
 		if (err) {
@@ -384,20 +435,16 @@ export async function compareAndExpandManifestDependencies(
 	newFiles: ModpackManifest,
 ): Promise<ManifestFileListComparisonResult> {
 	// Map inputs for efficient joining.
-	const oldFileMap: { [key: number]: ModpackManifestFile } = oldFiles.files.reduce(
-		(map: Record<number, ModpackManifestFile>, file) => {
+	const oldFileMap: { [key: number]: ModpackManifestFile } =
+		oldFiles.files.reduce((map: Record<number, ModpackManifestFile>, file) => {
 			map[file.projectID] = file;
 			return map;
-		},
-		{},
-	);
-	const newFileMap: { [key: number]: ModpackManifestFile } = newFiles.files.reduce(
-		(map: Record<number, ModpackManifestFile>, file) => {
+		}, {});
+	const newFileMap: { [key: number]: ModpackManifestFile } =
+		newFiles.files.reduce((map: Record<number, ModpackManifestFile>, file) => {
 			map[file.projectID] = file;
 			return map;
-		},
-		{},
-	);
+		}, {});
 
 	const removed: ModChangeInfo[] = [],
 		modified: ModChangeInfo[] = [],
@@ -405,7 +452,10 @@ export async function compareAndExpandManifestDependencies(
 
 	// Create a distinct map of project IDs.
 	const projectIDs = Array.from(
-		new Set([...oldFiles.files.map((f) => f.projectID), ...newFiles.files.map((f) => f.projectID)]),
+		new Set([
+			...oldFiles.files.map((f) => f.projectID),
+			...newFiles.files.map((f) => f.projectID),
+		]),
 	);
 
 	// Fetch projects in bulk and discard the result.
@@ -419,7 +469,10 @@ export async function compareAndExpandManifestDependencies(
 
 		// Doesn't exist in new, but exists in old. Removed. Left outer join.
 		if (!newFileInfo && oldFileInfo) {
-			const names = Promise.all([getModName(projectID), getFileName(projectID, oldFileInfo.fileID)]);
+			const names = Promise.all([
+				getModName(projectID),
+				getFileName(projectID, oldFileInfo.fileID),
+			]);
 			toFetch.push(
 				names.then(([mod, file]) => {
 					removed.push({
@@ -432,7 +485,10 @@ export async function compareAndExpandManifestDependencies(
 		}
 		// Doesn't exist in old, but exists in new. Added. Right outer join.
 		else if (newFileInfo && !oldFileInfo) {
-			const names = Promise.all([getModName(projectID), getFileName(projectID, newFileInfo.fileID)]);
+			const names = Promise.all([
+				getModName(projectID),
+				getFileName(projectID, newFileInfo.fileID),
+			]);
 			toFetch.push(
 				names.then(([mod, file]) => {
 					added.push({
@@ -466,20 +522,18 @@ export async function compareAndExpandManifestDependencies(
 	await Promise.all(toFetch);
 
 	// Compare external dependencies the same way.
-	const oldExternalMap: { [key: string]: ExternalDependency } = (oldFiles.externalDependencies || []).reduce(
-		(map: Record<string, ExternalDependency>, file) => {
-			map[file.name] = file;
-			return map;
-		},
-		{},
-	);
-	const newExternalMap: { [key: string]: ExternalDependency } = (newFiles.externalDependencies || []).reduce(
-		(map: Record<string, ExternalDependency>, file) => {
-			map[file.name] = file;
-			return map;
-		},
-		{},
-	);
+	const oldExternalMap: { [key: string]: ExternalDependency } = (
+		oldFiles.externalDependencies || []
+	).reduce((map: Record<string, ExternalDependency>, file) => {
+		map[file.name] = file;
+		return map;
+	}, {});
+	const newExternalMap: { [key: string]: ExternalDependency } = (
+		newFiles.externalDependencies || []
+	).reduce((map: Record<string, ExternalDependency>, file) => {
+		map[file.name] = file;
+		return map;
+	}, {});
 
 	const externalNames = Array.from(
 		new Set([
@@ -513,14 +567,17 @@ export async function compareAndExpandManifestDependencies(
 	};
 }
 
-const LAUNCHERMETA_VERSION_MANIFEST = "https://launchermeta.mojang.com/mc/game/version_manifest.json";
+const LAUNCHERMETA_VERSION_MANIFEST =
+	"https://launchermeta.mojang.com/mc/game/version_manifest.json";
 
 /**
  * Fetches the version manifest associated with the provided Minecraft version.
  *
  * @param minecraftVersion Minecraft version. (e. g., "1.12.2")
  */
-export async function getVersionManifest(minecraftVersion: string): Promise<VersionManifest | undefined> {
+export async function getVersionManifest(
+	minecraftVersion: string,
+): Promise<VersionManifest | undefined> {
 	/**
 	 * Fetch the manifest file of all Minecraft versions.
 	 */
@@ -576,11 +633,14 @@ export async function getNewestIssueURLs(octokit: Octokit): Promise<void> {
 			sort: "updated",
 		});
 		if (issues.status !== 200) {
-			logError(`Failed to get all Issue URLs of Repo. Returned Status Code ${issues.status}, expected Status 200.`);
+			logError(
+				`Failed to get all Issue URLs of Repo. Returned Status Code ${issues.status}, expected Status 200.`,
+			);
 			return;
 		}
 		issues.data.forEach((issue) => {
-			if (!issueURLCache.has(issue.number)) issueURLCache.set(issue.number, issue.html_url);
+			if (!issueURLCache.has(issue.number))
+				issueURLCache.set(issue.number, issue.html_url);
 		});
 	} catch (e) {
 		logError(
@@ -592,8 +652,12 @@ export async function getNewestIssueURLs(octokit: Octokit): Promise<void> {
 /**
  * Gets the specified Issue URL from the cache, or retrieves it.
  */
-export async function getIssueURL(issueNumber: number, octokit: Octokit): Promise<string> {
-	if (issueURLCache.has(issueNumber)) return issueURLCache.get(issueNumber) ?? "";
+export async function getIssueURL(
+	issueNumber: number,
+	octokit: Octokit,
+): Promise<string> {
+	if (issueURLCache.has(issueNumber))
+		return issueURLCache.get(issueNumber) ?? "";
 	try {
 		const issueInfo = await octokit.issues.get({
 			owner: repoOwner,
@@ -606,7 +670,9 @@ export async function getIssueURL(issueNumber: number, octokit: Octokit): Promis
 			);
 			return "";
 		}
-		logInfo(`No Issue URL Cache for Issue Number ${issueNumber}. Retrieved Specifically.`);
+		logInfo(
+			`No Issue URL Cache for Issue Number ${issueNumber}. Retrieved Specifically.`,
+		);
 		return issueInfo.data.html_url;
 	} catch (e) {
 		logError(
@@ -630,7 +696,10 @@ export async function getForgeJar(): Promise<{
 	 * Break down the Forge version defined in manifest.json.
 	 */
 	const parsedForgeEntry = FORGE_VERSION_REG.exec(
-		(minecraft.modLoaders.find((x) => x.id && x.id.indexOf("forge") != -1) || {}).id || "",
+		(
+			minecraft.modLoaders.find((x) => x.id && x.id.indexOf("forge") != -1) ||
+			{}
+		).id || "",
 	);
 
 	if (!parsedForgeEntry) {
@@ -641,8 +710,12 @@ export async function getForgeJar(): Promise<{
 	 * Transform Forge version into Maven library path.
 	 */
 	const forgeMavenLibrary = `net.minecraftforge:forge:${minecraft.version}-${parsedForgeEntry[1]}`;
-	const forgeInstallerPath = libraryToPath(forgeMavenLibrary) + "-installer.jar";
-	const forgeUniversalPath = upath.join("maven", libraryToPath(forgeMavenLibrary) + ".jar");
+	const forgeInstallerPath =
+		libraryToPath(forgeMavenLibrary) + "-installer.jar";
+	const forgeUniversalPath = upath.join(
+		"maven",
+		libraryToPath(forgeMavenLibrary) + ".jar",
+	);
 
 	/**
 	 * Fetch the Forge installer
@@ -666,7 +739,11 @@ export interface ArrayUnique<T> {
 /**
  * Returns the values unique to each array, via lodash.
  */
-export function getUniqueToArray<T>(arr1: T[], arr2: T[], mappingFunc?: (val: T) => unknown): ArrayUnique<T> {
+export function getUniqueToArray<T>(
+	arr1: T[],
+	arr2: T[],
+	mappingFunc?: (val: T) => unknown,
+): ArrayUnique<T> {
 	if (mappingFunc)
 		return {
 			arr1Unique: lodash.differenceBy(arr1, arr2, mappingFunc),
