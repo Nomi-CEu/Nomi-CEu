@@ -30,8 +30,6 @@
 		"@types/gulp-rename": "^2.0.6",
 		"@types/gulp-zip": "^4.0.4",
 		"@types/inquirer": "^9.0.7",
-		"@types/json-stable-stringify": "^1.0.36",
-		"@types/json-stable-stringify-without-jsonify": "^1.0.2",
 		"@types/lodash": "^4.17.1",
 		"@types/md5": "^2.3.5",
 		"@types/merge-stream": "^1.1.5",
@@ -62,10 +60,6 @@
 		"gulp-zip": "^6.0.0",
 		"inquirer": "^9.2.20",
 		"javascript-stringify": "^2.1.0",
-		"json-sorted-stringify": "^1.0.0",
-		"json-stable-stringify": "^1.1.1",
-		"json-stable-stringify-without-jsonify": "^1.0.1",
-		"json-stringify-deterministic": "^1.0.12",
 		"just-diff": "^6.0.2",
 		"just-remove": "^3.2.0",
 		"lodash": "^4.17.21",
@@ -85,7 +79,7 @@
 		"toml-v1": "^1.0.0",
 		"ts-node": "^10.9.2",
 		"typescript": "5.4.5",
-		"unzipper": "^0.11.4",
+		"unzipper": "^0.11.5",
 		"upath": "^2.0.1"
 	}
 }
