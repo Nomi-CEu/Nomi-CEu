@@ -19,6 +19,7 @@ import { rootDirectory } from "#globals";
 import colors from "colors";
 import { isEnvVariableSet } from "#utils/util.ts";
 import * as core from "@actions/core";
+import lodash from "lodash";
 
 const isAvailableForFormatting = /[0-9a-ek-or]/;
 
@@ -152,33 +153,42 @@ async function checkAndFixQB(
 	isExpert: boolean,
 ) {
 	let index = 0;
+	// Use if Should Check is false, so we don't modify the underlying object.
+	const newQB = shouldCheck
+		? qb["questDatabase:9"]
+		: lodash.cloneDeep(qb["questDatabase:9"]);
+
 	for (const questKey of Object.keys(qb["questDatabase:9"])) {
-		let quest = qb["questDatabase:9"][questKey];
+		// Copy Quest if Should Check is false (So we don't modify the underlying object)
+		const quest = shouldCheck
+			? qb["questDatabase:9"][questKey]
+			: { ...qb["questDatabase:9"][questKey] };
+
 		const foundID = id(quest);
 
 		// Check for Missing Quests
-		if (foundID !== index) {
+		while (foundID > index) {
 			if (shouldCheck) throw new Error(`Missing Quest at Index ${index}!`);
 			logWarn(`Adding Empty Quest at Index ${index}...`);
-			quest = { ...emptyQuest };
-			quest["questID:3"] = index;
-			qb["questDatabase:9"][questKey] = quest;
+			const newQuest = { ...emptyQuest };
+			newQuest["questID:3"] = index;
+			newQB[`${index}:10`] = newQuest;
 			index++;
-			continue;
 		}
+
 		index++;
 
 		// Check Name Formatting
 		quest["properties:10"]["betterquesting:10"]["name:8"] =
-			stripOrThrowExcessFormatting(shouldCheck, name(quest), id(quest), "Name");
+			stripOrThrowExcessFormatting(shouldCheck, name(quest), foundID, "Name");
 
 		// Check for Empty Descriptions
 		if (!quest["properties:10"]["betterquesting:10"]["desc:8"]) {
 			if (shouldCheck)
-				throw new Error(`Quest has Empty Description at Index ${index}!`);
+				throw new Error(`Quest with ID ${foundID} has Empty Description!`);
 
 			quest["properties:10"]["betterquesting:10"]["desc:8"] = await input({
-				message: `Quest has an Empty Description at Index ${index}! What should we Replace it With?`,
+				message: `Quest with ID ${foundID} has an Empty Description! What should we Replace it With?`,
 				default: "No Description",
 				validate: (value) => Boolean(value),
 			});
@@ -188,7 +198,7 @@ async function checkAndFixQB(
 			stripOrThrowExcessFormatting(
 				shouldCheck,
 				quest["properties:10"]["betterquesting:10"]["desc:8"],
-				id(quest),
+				foundID,
 				"Description",
 			);
 
@@ -197,11 +207,11 @@ async function checkAndFixQB(
 			quest["properties:10"]["betterquesting:10"]["visibility:8"] === "NORMAL"
 		) {
 			if (shouldCheck)
-				throw new Error(`Quest has Visibility Normal at Index ${index}!`);
+				throw new Error(`Quest with ID ${foundID} has Visibility Normal!`);
 
 			quest["properties:10"]["betterquesting:10"]["visibility:8"] =
 				await select({
-					message: `Quest has Visibility Normal at Index ${index}! What should we Replace it With?`,
+					message: `Quest with ID ${foundID} has Visibility Normal! What should we Replace it With?`,
 					choices: [
 						{
 							name: "Always",
@@ -225,7 +235,10 @@ async function checkAndFixQB(
 
 		// Check for Rewards that have Nomicoins
 		if (isExpert) stripRewards(quest, isExpert, true);
+
+		if (!shouldCheck) newQB[`${foundID}:10`] = quest;
 	}
+	if (!shouldCheck) qb["questDatabase:9"] = newQB;
 }
 
 function stripOrThrowExcessFormatting(
