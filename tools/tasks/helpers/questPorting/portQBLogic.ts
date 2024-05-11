@@ -5,7 +5,8 @@ import {
 	emptyQuest,
 	findQuest,
 	id,
-	name, stripRewards
+	name,
+	stripRewards,
 } from "../actionQBUtils.ts";
 import { Quest } from "#types/bqQuestBook.ts";
 import { performModification } from "./portQBModifications.ts";

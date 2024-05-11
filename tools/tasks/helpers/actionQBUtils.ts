@@ -691,14 +691,14 @@ export async function readFromPorter(
 	}
 
 	// Ignore & Always Ask
-	addToOrReplaceSet(
+	data.ignoreQuests = addToOrReplaceSet(
 		replaceExisting,
 		data.type === "NORMAL"
 			? savedPorter.ignoreQuestsNormal
 			: savedPorter.ignoreQuestsExpert,
 		data.ignoreQuests,
 	);
-	addToOrReplaceSet(
+	data.alwaysAskQuests = addToOrReplaceSet(
 		replaceExisting,
 		data.type === "NORMAL"
 			? savedPorter.alwaysAskQuestsNormal

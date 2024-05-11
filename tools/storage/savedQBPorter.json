@@ -289,7 +289,9 @@
       "expert": 1050
     }
   ],
-  "ignoreQuestsNormal": [],
+  "ignoreQuestsNormal": [
+    959
+  ],
   "ignoreQuestsExpert": [],
   "alwaysAskQuestsNormal": [],
   "alwaysAskQuestsExpert": []
