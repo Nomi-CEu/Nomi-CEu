@@ -77,7 +77,8 @@ async function upload(files: { name: string; displayName: string }[]) {
 		);
 	}
 
-	const uploadedIDs: { name: string; id: number }[] = [];
+	const uploadedIDs: { filePath: string; displayName: string; id: number }[] =
+		[];
 	let parentID: number | undefined = undefined;
 
 	const releaseType: DeployReleaseType =
@@ -87,6 +88,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 
 	// Upload artifacts.
 	for (const file of files) {
+		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
 		const options: AxiosRequestConfig<unknown> = {
 			url:
 				CURSEFORGE_LEGACY_ENDPOINT +
@@ -105,9 +107,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 					gameVersions: parentID ? undefined : [version.id],
 					displayName: file.displayName,
 				}),
-				file: fs.createReadStream(
-					upath.join(buildConfig.buildDestinationDirectory, file.name),
-				),
+				file: fs.createReadStream(path),
 			},
 			responseType: "json",
 		};
@@ -120,7 +120,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 		const response: { id: number } = (await getAxios()(options)).data;
 
 		if (response && response.id) {
-			uploadedIDs.push({ name: file.displayName, id: response.id });
+			uploadedIDs.push({ filePath: path, displayName: file.displayName, id: response.id });
 			if (!parentID) {
 				parentID = response.id;
 			}
@@ -138,13 +138,9 @@ async function upload(files: { name: string; displayName: string }[]) {
 					{ data: "File Size", header: true },
 				],
 				...uploadedIDs.map((uploaded) => [
-					uploaded.name,
+					uploaded.displayName,
 					uploaded.id.toString(),
-					filesize(
-						fs.statSync(
-							upath.join(buildConfig.buildDestinationDirectory, uploaded.name),
-						).size,
-					),
+					filesize(fs.statSync(uploaded.filePath).size),
 				]),
 			])
 			.write();
