@@ -17,8 +17,9 @@ import {
 } from "#types/changelogTypes.ts";
 import logInfo from "#utils/log.ts";
 import { CurseForgeLegacyMCVersion } from "#types/curseForge.ts";
-import core from "@actions/core";
+import * as core from "@actions/core";
 import { AxiosRequestConfig } from "axios";
+import { filesize } from "filesize";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
 const variablesToCheck = [
@@ -103,7 +104,6 @@ async function upload(files: { name: string; displayName: string }[]) {
 					parentFileID: parentID ? parentID : undefined,
 					gameVersions: parentID ? undefined : [version.id],
 					displayName: file.displayName,
-					childFileType: parentID ? 2 : undefined,
 				}),
 				file: fs.createReadStream(
 					upath.join(buildConfig.buildDestinationDirectory, file.name),
@@ -129,9 +129,25 @@ async function upload(files: { name: string; displayName: string }[]) {
 		}
 	}
 	if (isEnvVariableSet("GITHUB_STEP_SUMMARY"))
-		core.summary.addRaw(
-			`## Nomi-CEu CurseForge Deploy Summary:${uploadedIDs.map((uploaded) => `\n  - File: ${uploaded.name} | File ID: ${uploaded.id}`).join("")}`,
-		);
+		await core.summary
+			.addHeading("Nomi-CEu CurseForge Deploy Summary:", 2)
+			.addTable([
+				[
+					{ data: "File Name", header: true },
+					{ data: "File ID", header: true },
+					{ data: "File Size", header: true },
+				],
+				...uploadedIDs.map((uploaded) => [
+					uploaded.name,
+					uploaded.id.toString(),
+					filesize(
+						fs.statSync(
+							upath.join(buildConfig.buildDestinationDirectory, uploaded.name),
+						).size,
+					),
+				]),
+			])
+			.write();
 }
 
 /**
