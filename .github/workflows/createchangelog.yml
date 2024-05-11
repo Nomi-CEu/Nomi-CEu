@@ -62,12 +62,11 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: peter-murray/workflow-application-token-action@v3
+        uses: actions/create-github-app-token@v1
         with:
-          application_id: ${{ secrets.APP_ID }}
-          application_private_key: ${{ secrets.APP_KEY }}
-          organization: Nomi-CEu
-          revoke_token: true
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_KEY }}
+          owner: Nomi-CEu
 
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -87,7 +86,7 @@ jobs:
           key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
           restore-keys: ${{ runner.os }}-bunny-
 
-      - name: Setup NodeJS v16
+      - name: Setup NodeJS v20
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -99,7 +98,7 @@ jobs:
 
       - name: Create Changelog
         working-directory: ./tools
-        run: npx gulp createChangelog
+        run: npm run gulp createChangelog
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           COMPARE_TAG: ${{ inputs.compare_tag }}

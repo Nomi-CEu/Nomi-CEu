@@ -17,8 +17,9 @@ import {
 } from "#types/changelogTypes.ts";
 import logInfo from "#utils/log.ts";
 import { CurseForgeLegacyMCVersion } from "#types/curseForge.ts";
-import core from "@actions/core";
+import * as core from "@actions/core";
 import { AxiosRequestConfig } from "axios";
+import { filesize } from "filesize";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
 const variablesToCheck = [
@@ -55,7 +56,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 	logInfo("Fetching CurseForge version manifest...");
 	const versionsManifest: CurseForgeLegacyMCVersion[] | undefined = (
 		await getAxios()({
-			url: buildConfig.cfCoreApiEndpoint + "api/game/versions",
+			url: CURSEFORGE_LEGACY_ENDPOINT + "api/game/versions",
 			method: "get",
 			headers: tokenHeaders,
 			responseType: "json",
@@ -76,7 +77,8 @@ async function upload(files: { name: string; displayName: string }[]) {
 		);
 	}
 
-	const uploadedIDs: { name: string; id: number }[] = [];
+	const uploadedIDs: { filePath: string; displayName: string; id: number }[] =
+		[];
 	let parentID: number | undefined = undefined;
 
 	const releaseType: DeployReleaseType =
@@ -86,6 +88,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 
 	// Upload artifacts.
 	for (const file of files) {
+		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
 		const options: AxiosRequestConfig<unknown> = {
 			url:
 				CURSEFORGE_LEGACY_ENDPOINT +
@@ -104,9 +107,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 					gameVersions: parentID ? undefined : [version.id],
 					displayName: file.displayName,
 				}),
-				file: fs.createReadStream(
-					upath.join(buildConfig.buildDestinationDirectory, file.name),
-				),
+				file: fs.createReadStream(path),
 			},
 			responseType: "json",
 		};
@@ -119,7 +120,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 		const response: { id: number } = (await getAxios()(options)).data;
 
 		if (response && response.id) {
-			uploadedIDs.push({ name: file.displayName, id: response.id });
+			uploadedIDs.push({ filePath: path, displayName: file.displayName, id: response.id });
 			if (!parentID) {
 				parentID = response.id;
 			}
@@ -128,9 +129,21 @@ async function upload(files: { name: string; displayName: string }[]) {
 		}
 	}
 	if (isEnvVariableSet("GITHUB_STEP_SUMMARY"))
-		core.summary.addRaw(
-			`## Nomi-CEu CurseForge Deploy Summary:${uploadedIDs.map((uploaded) => `\n  - File: ${uploaded.name} | File ID: ${uploaded.id}`).join("")}`,
-		);
+		await core.summary
+			.addHeading("Nomi-CEu CurseForge Deploy Summary:", 2)
+			.addTable([
+				[
+					{ data: "File Name", header: true },
+					{ data: "File ID", header: true },
+					{ data: "File Size", header: true },
+				],
+				...uploadedIDs.map((uploaded) => [
+					uploaded.displayName,
+					uploaded.id.toString(),
+					filesize(fs.statSync(uploaded.filePath).size),
+				]),
+			])
+			.write();
 }
 
 /**

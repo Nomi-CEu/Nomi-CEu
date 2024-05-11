@@ -17,10 +17,31 @@ import logInfo, { logWarn } from "#utils/log.ts";
 import upath from "upath";
 import { rootDirectory } from "#globals";
 import colors from "colors";
+import { isEnvVariableSet } from "#utils/util.ts";
+import * as core from "@actions/core";
 
 const isAvailableForFormatting = /[0-9a-ek-or]/;
 
-export const check = () => checkAndFix(true);
+export const check = async () => {
+	try {
+		await checkAndFix(true);
+	} catch (e) {
+		if (isEnvVariableSet("GITHUB_STEP_SUMMARY")) {
+			const summary = core.summary
+				.addHeading("Quest Book Format Error!", 2)
+				.addRaw(
+					"Run the below Command in your Local Clone to Format the Quest Book:",
+					true,
+				)
+				.addCodeBlock("npm run gulp fixQB");
+
+			if (e instanceof Error) summary.addDetails("Details...", e.message);
+
+			await summary.write();
+		}
+		throw e;
+	}
+};
 export const fix = () => checkAndFix(false);
 
 async function checkAndFix(shouldCheck: boolean) {
