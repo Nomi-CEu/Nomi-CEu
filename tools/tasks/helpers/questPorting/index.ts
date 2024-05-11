@@ -9,7 +9,7 @@ import {
 	additions,
 	modifications,
 	removals,
-	setupLog
+	setupLogic,
 } from "./portQBLogic.ts";
 import { setupModifications } from "./portQBModifications.ts";
 import logInfo, { logError } from "../../../utils/log.ts";
