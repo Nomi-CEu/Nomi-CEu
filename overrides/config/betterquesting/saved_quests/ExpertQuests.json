@@ -5327,7 +5327,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need a variety of §alenses§r for use in §3Precision Laser Engravers§r, all of which are made in the §2Lathe§r.\n\nInitially you\u0027ll need a §a§3§2Ruby Lens§r. Soon you will need §2Diamond, Emerald, Topaz, and Sapphire Lenses§r. §2You can choose to use an MV Lathe to get a lens from a plate, or sift for an Exquisite Gem and use an LV Lathe.\n\n",
+          "desc:8": "You\u0027ll need a variety of §alenses§r for use in §3Precision Laser Engravers§r, all of which are made in the §2Lathe§r.\n\nInitially you\u0027ll need a §a§3§2Ruby Lens§r. Soon you will need §2Diamond, Emerald, Topaz, and Sapphire Lenses§r. §2You can choose to use an MV Lathe to get a lens from a plate, or sift for an Exquisite Gem and use an LV Lathe.\n\n§rAlternatively, you can use §9Sulfuric Acid§r to create §9Chemical Dyes§r of the required color, and use them to make dyed §6Glass Lenses§r. Chemical Dyes can be infinitely looped.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12471,9 +12471,9 @@
     },
     "216:10": {
       "preRequisites:11": [
+        214,
         89,
-        897,
-        214
+        895
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15126,7 +15126,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Small Piles of Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and §2allows you to skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.\n",
+          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and §2allows you to skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28421,7 +28421,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The first and most expensive Tier Six Circuit, needed for crafting the §3IV Assembling Machine§r.\n\nRequires a bunch of standard circuit components.",
+          "desc:8": "The first and most expensive Tier Six Circuit, needed for crafting the §3IV Circuit Assembler§r.\n\nRequires a bunch of standard circuit components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28816,7 +28816,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now you can craft the §6Quantum Processor Mainframe§r, the first Tier Seven circuit.\n\nThese are required for crafting the Ludicrous Voltage (LuV) §3Assembling Machine§r.",
+          "desc:8": "Now you can craft the §6Quantum Processor Mainframe§r, the first Tier Seven circuit.\n\nThese are required for crafting the Ludicrous Voltage (LuV) §3Circuit Assembler§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -29042,7 +29042,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Crystal Processor Mainframe§r is the first Tier Eight circuit.\n\nAlong with things you already know how to make, this needs §6HSS-E Frames§r.\n\nThese are required for crafting the §3ZPM Assembling Machine§r. As usual, these are extremely expensive: invest in the next theme of circuits instead of trying to mass-produce these.\n",
+          "desc:8": "The §6Crystal Processor Mainframe§r is the first Tier Eight circuit.\n\nThis is the first tier of Circuit which must be §2researched§r in the §3Research Station§r.\n\nAlong with things you already know how to make, this needs §6HSS-E Frames§r.\n\nThese are required for crafting the §3ZPM Circuit Assembler§r. As usual, these are extremely expensive: invest in the next theme of circuits instead of trying to mass-produce these.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
