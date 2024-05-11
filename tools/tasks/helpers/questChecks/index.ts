@@ -39,6 +39,7 @@ export const check = async () => {
 
 			await summary.write();
 		}
+		throw e;
 	}
 };
 export const fix = () => checkAndFix(false);
