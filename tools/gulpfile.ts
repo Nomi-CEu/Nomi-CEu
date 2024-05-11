@@ -65,5 +65,9 @@ export { deployCurseForge } from "./tasks/deploy/curseforge.ts";
 import * as release from "./tasks/deploy/releases.ts";
 export const deployReleases = release.default;
 
+import * as checkFix from "./tasks/helpers/questChecks/index.ts";
+export const checkQB = checkFix.check;
+export const fixQB = checkFix.fix;
+
 import * as qbPort from "./tasks/helpers/questPorting/index.ts";
-export const portQBChanges = qbPort.default;
+export const portQBChanges = gulp.series(qbPort.default, fixQB);

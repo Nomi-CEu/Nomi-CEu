@@ -11,11 +11,11 @@ import {
 	SimpleLogic,
 	TaskDifferentSolution,
 	YesIgnoreNo,
-} from "#types/portQBTypes.ts";
+} from "#types/actionQBTypes.ts";
 import PortQBData from "./portQBData.ts";
 import DiffMatchPatch from "diff-match-patch";
 import picomatch from "picomatch";
-import { booleanSelect, findQuest, id, name } from "./portQBUtils.ts";
+import { booleanSelect, findQuest, id, name } from "../actionQBUtils.ts";
 import fakeDiff from "fake-diff";
 import { Operation } from "just-diff";
 import logInfo, { logError, logNotImportant, logWarn } from "#utils/log.ts";
@@ -24,7 +24,7 @@ import { confirm, editor, input, select } from "@inquirer/prompts";
 import colors from "colors";
 import { stringify } from "javascript-stringify";
 import { Quest, Task } from "#types/bqQuestBook.ts";
-import { ArrayUnique } from "#utils/util.js";
+import { ArrayUnique } from "#utils/util.ts";
 import lodash from "lodash";
 
 let data: PortQBData;
@@ -78,9 +78,14 @@ export async function performModification(modify: Modified): Promise<void> {
 	}
 }
 
-function getFormattedParserName(parser: Parser, path: string[], op: Operation) {
-	if (!parser.formattedName) return `${parser.name} ${formatOp(op)}`;
-	return parser.formattedName(path, op);
+function getSimpleFormattedParserName(
+	parser: Parser,
+	logic: SimpleLogic,
+	path: string[],
+	op: Operation,
+) {
+	if (!logic.formattedName) return `${parser.name} ${formatOp(op)}`;
+	return logic.formattedName(path, op);
 }
 
 function formatOp(operation: Operation): string {
@@ -144,7 +149,12 @@ function findAllParsers(modify: Modified): {
 						),
 				);
 				outputFormatted.push(
-					getFormattedParserName(parser, pathList, change.op),
+					getSimpleFormattedParserName(
+						parser,
+						parser.logic,
+						pathList,
+						change.op,
+					),
 				);
 				break;
 			}
@@ -155,9 +165,6 @@ function findAllParsers(modify: Modified): {
 				foundBuncableParsers.set(parser.id, [
 					{ logic: parser.logic, changeAndPath: [changeAndPath] },
 				]);
-				outputFormatted.push(
-					getFormattedParserName(parser, pathList, change.op),
-				);
 				break;
 			}
 
@@ -177,9 +184,6 @@ function findAllParsers(modify: Modified): {
 				foundBuncableParsers
 					.get(parser.id)
 					?.push({ logic: parser.logic, changeAndPath: [changeAndPath] });
-				outputFormatted.push(
-					getFormattedParserName(parser, pathList, change.op),
-				);
 			}
 			break;
 		}
@@ -192,6 +196,7 @@ function findAllParsers(modify: Modified): {
 				async (quest) =>
 					await bunch.logic.func(quest, modify, bunch.changeAndPath),
 			);
+			outputFormatted.push(...bunch.logic.formattedName(bunch.changeAndPath));
 		}
 	}
 
@@ -335,8 +340,10 @@ const modifyTasks = async (
 		);
 		logInfo(colors.bold("Change:"));
 		console.log(
-			stringify(Object.values(currentTasks), null, 2) ?? "",
-			stringify(Object.values(oldTasks), null, 2) ?? "",
+			fakeDiff(
+				stringify(Object.values(currentTasks), null, 2) ?? "",
+				stringify(Object.values(oldTasks), null, 2) ?? "",
+			),
 		);
 
 		const solution = (await select({
@@ -424,7 +431,7 @@ const modifyTasks = async (
 
 			if (
 				!(await booleanSelect(
-					`Should we ${change.change.op === "add" ? "Add" : "Remove"} Task No. ${index + 1} and ID ${id}?`,
+					`Should we ${change.change.op === "add" ? "Add" : "Remove"} Task No. ${index + 1} with ID ${id}?`,
 				))
 			) {
 				logNotImportant("Skipping...");
@@ -591,7 +598,7 @@ const modifyTasks = async (
 					taskObj = JSON.parse(apply) as Task;
 				} catch (e) {
 					logWarn("Invalid JSON! Enter your own Below!");
-					taskObj = await getCustomDescription(
+					taskObj = await getCustomTasks(
 						currentTaskString,
 						newTaskString,
 						apply,
@@ -603,7 +610,7 @@ const modifyTasks = async (
 				taskObj = { ...newTask };
 				break;
 			case "CUSTOM":
-				taskObj = await getCustomDescription(
+				taskObj = await getCustomTasks(
 					currentTaskString,
 					newTaskString,
 					apply,
@@ -620,7 +627,7 @@ const modifyTasks = async (
 	}
 };
 
-async function getCustomDescription(
+async function getCustomTasks(
 	originalTask: string,
 	newTask: string,
 	apply: string,
@@ -842,15 +849,33 @@ export const modificationParsers = [
 	{
 		id: taskKey,
 		name: "Task",
-		formattedName: (path, op) => {
-			if (!isAddingOrRemovingComplexTask(path) && op !== "replace")
-				op = "replace";
-			return getFormattedNameWithIndex(path, op, taskKey, "Task");
-		},
 		condition: picomatch("tasks/**/*"),
 		logic: {
 			type: LogicType.Bunched,
 			applyTogether: () => true,
+			formattedName: (changes) => {
+				const result: string[] = [];
+				changes = lodash.uniqBy(changes, (change) =>
+					getIndex(change.path, taskKey),
+				);
+
+				for (const change of changes) {
+					if (
+						!isAddingOrRemovingComplexTask(change.path) &&
+						change.change.op !== "replace"
+					)
+						change.change.op = "replace";
+					result.push(
+						getFormattedNameWithIndex(
+							change.path,
+							change.change.op,
+							taskKey,
+							"Task",
+						),
+					);
+				}
+				return result;
+			},
 			func: modifyTasks,
 		},
 	},
@@ -867,11 +892,11 @@ export const modificationParsers = [
 	{
 		id: "general",
 		name: "General Changes",
-		formattedName: (path, op) => `'${path.at(-1)}' ${formatOp(op)}`,
 		condition: picomatch("**/*"),
 		logic: {
 			type: LogicType.Simple,
 			applyOnce: false,
+			formattedName: (path, op) => `'${path.at(-1)}' ${formatOp(op)}`,
 			func: modifyGeneral,
 		},
 	},
