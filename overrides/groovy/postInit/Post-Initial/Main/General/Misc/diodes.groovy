@@ -5,6 +5,7 @@ import gregtech.api.unification.OreDictUnifier
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
 import gregtech.common.metatileentities.MetaTileEntities
+import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.SafeMethodHelpers.callInstanceMethodOfClass
 import static gregtech.loaders.recipe.CraftingComponent.*;
@@ -60,7 +61,7 @@ IIngredient getIngredientFromGTComponent(Component comp, int tier) {
 	}
 	if (ing instanceof UnificationEntry) {
 		def entry = (UnificationEntry) ing
-		return OreDictUnifier.get(ing) as IIngredient
+		return OreDictUnifier.get(entry) as IIngredient
 	}
 	if (ing instanceof ItemStack) return ing as IIngredient
 }
