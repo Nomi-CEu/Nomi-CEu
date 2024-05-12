@@ -1,5 +1,6 @@
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
 import com.nomiceu.nomilabs.util.ItemMeta
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.util.ResourceLocation
 import net.minecraftforge.registries.IForgeRegistryEntry
