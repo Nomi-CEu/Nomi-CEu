@@ -10,78 +10,78 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.SafeMethodHelpers.callIn
 
 // Hand Framing Tool
 crafting.addShaped("hand_framing_tool_recipe", item("nomilabs:hand_framing_tool"), [
-        [null, null, item("storagedrawers:framingtable")],
-        [null, item("minecraft:stick"), null],
-        [item("minecraft:stick"), null, null]
+	[null, null, item("storagedrawers:framingtable")],
+	[null, item("minecraft:stick"), null],
+	[item("minecraft:stick"), null, null]
 ])
 
 // Dummy Hand Framing Recipes
 
 // Specify Hand Framing Tool separately, so we can add its tooltip properly
 List<ItemStack> items = [
-        item("storagedrawers:customdrawers"),
-        item("storagedrawers:customdrawers", 1),
-        item("storagedrawers:customdrawers", 2),
-        item("storagedrawers:customdrawers", 3),
-        item("storagedrawers:customdrawers", 4),
-        item("storagedrawers:customtrim"),
-        item("framedcompactdrawers:framed_compact_drawer"),
-        item("framedcompactdrawers:framed_slave"),
-        item("framedcompactdrawers:framed_drawer_controller")
+	item("storagedrawers:customdrawers"),
+	item("storagedrawers:customdrawers", 1),
+	item("storagedrawers:customdrawers", 2),
+	item("storagedrawers:customdrawers", 3),
+	item("storagedrawers:customdrawers", 4),
+	item("storagedrawers:customtrim"),
+	item("framedcompactdrawers:framed_compact_drawer"),
+	item("framedcompactdrawers:framed_slave"),
+	item("framedcompactdrawers:framed_drawer_controller")
 ]
 
 ItemStack tool = item("nomilabs:hand_framing_tool")
 items.add(tool)
 
 for (ItemStack stack : items) {
-    for (boolean trim : [true, false]) {
-        for (boolean front : [true, false]) {
-            def recipeName = getRecipeName(stack, trim, front)
-            def recipeStack = addNBT(stack, trim, front)
-            crafting.addShaped(recipeName, recipeStack, [
-                    [item("xtones:zane"), trim ? item("extendedcrafting:storage", 4) : null, null],
-                    [front ? item("xtones:zane", 15) : null, stack, null],
-                    [null, null, null]
-            ])
-            addRecipeOutputTooltip(recipeStack, resource(recipeName),
-                    ItemMeta.compare(tool, recipeStack) ?
-                            translate("tooltip.hand_framing.tool") :
-                            translate("tooltip.hand_framing.drawer"),
-                    translate("tooltip.hand_framing.top_left"),
-                    translate("tooltip.hand_framing.top_right"),
-                    translate("tooltip.hand_framing.bottom_left"))
-        }
-    }
+	for (boolean trim : [true, false]) {
+		for (boolean front : [true, false]) {
+			def recipeName = getRecipeName(stack, trim, front)
+			def recipeStack = addNBT(stack, trim, front)
+			crafting.addShaped(recipeName, recipeStack, [
+				[item("xtones:zane"), trim ? item("extendedcrafting:storage", 4) : null, null],
+				[front ? item("xtones:zane", 15) : null, stack, null],
+				[null, null, null]
+			])
+			addRecipeOutputTooltip(recipeStack, resource(recipeName),
+				ItemMeta.compare(tool, recipeStack) ?
+					translate("tooltip.hand_framing.tool") :
+					translate("tooltip.hand_framing.drawer"),
+				translate("tooltip.hand_framing.top_left"),
+				translate("tooltip.hand_framing.top_right"),
+				translate("tooltip.hand_framing.bottom_left"))
+		}
+	}
 }
 
 static String getRecipeName(ItemStack stack, boolean trim, boolean front) {
-    String baseName = "nomiceu:hand_framing_"
+	String baseName = "nomiceu:hand_framing_"
 
-    // We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
-    // Without SideOnly, so it crashes.
-    // Use the special of class type so the addInformation method isn't loaded.
-    def rl = (ResourceLocation) callInstanceMethodOfClass(IForgeRegistryEntry<Item>.class, stack.getItem(), "getRegistryName", null)
-    if (rl != null)
-        baseName = baseName + rl.getNamespace() + "_" + rl.getPath()
+	// We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
+	// Without SideOnly, so it crashes.
+	// Use the special of class type so the addInformation method isn't loaded.
+	def rl = (ResourceLocation) callInstanceMethodOfClass(IForgeRegistryEntry<Item>.class, stack.getItem(), "getRegistryName", null)
+	if (rl != null)
+		baseName = baseName + rl.getNamespace() + "_" + rl.getPath()
 
-    baseName = baseName + "." + stack.getMetadata() + "_side"
-    if (trim) baseName = baseName + "_trim"
-    if (front) baseName = baseName + "_front"
-    return baseName
+	baseName = baseName + "." + stack.getMetadata() + "_side"
+	if (trim) baseName = baseName + "_trim"
+	if (front) baseName = baseName + "_front"
+	return baseName
 }
 
 static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
-    def sideStack = item("xtones:zane")
-    def trimStack = trim ? item("extendedcrafting:storage", 4) : ItemStack.EMPTY
-    def frontStack = front ? item("xtones:zane", 15) : ItemStack.EMPTY
+	def sideStack = item("xtones:zane")
+	def trimStack = trim ? item("extendedcrafting:storage", 4) : ItemStack.EMPTY
+	def frontStack = front ? item("xtones:zane", 15) : ItemStack.EMPTY
 
-    // We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
-    // Without SideOnly, so it crashes.
-    // Use the special of class type so the addInformation method isn't loaded.
-    def frameable = (IFrameable) stack.getItem()
-    stack = (ItemStack) callInstanceMethodOfClass(IFrameable.class, frameable, "decorate", [stack.copy(), sideStack, trimStack, frontStack])
-    if (stack == null)
-        return stack
+	// We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
+	// Without SideOnly, so it crashes.
+	// Use the special of class type so the addInformation method isn't loaded.
+	def frameable = (IFrameable) stack.getItem()
+	stack = (ItemStack) callInstanceMethodOfClass(IFrameable.class, frameable, "decorate", [stack.copy(), sideStack, trimStack, frontStack])
+	if (stack == null)
+		return stack
 
-    return stack
+	return stack
 }
