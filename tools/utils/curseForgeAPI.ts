@@ -308,7 +308,7 @@ export async function fetchMods(
 		let fetched = 0;
 
 		await Promise.all(
-			toFetch.map(async (file) => {
+			toFetch.map(async (file): Promise<void> => {
 				const fileInfo = await fetchFileInfo(file.projectID, file.fileID);
 				const fileDef: FileDef = {
 					url: fileInfo.downloadUrl,
@@ -337,7 +337,7 @@ export async function fetchMods(
 
 				const dest = upath.join(destination, fileInfo.fileName);
 
-				return fs.promises.copyFile(modFile.cachePath, dest);
+				await fs.promises.symlink(upath.resolve(modFile.cachePath), dest);
 			}),
 		);
 	} else {

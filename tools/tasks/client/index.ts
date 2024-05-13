@@ -1,4 +1,4 @@
-import gulp, { dest } from "gulp";
+import gulp, { dest, symlink } from "gulp";
 import {
 	clientDestDirectory,
 	modpackManifest,
@@ -11,6 +11,7 @@ import { deleteAsync } from "del";
 import { createModList, ModFileInfo } from "../misc/createModList.ts";
 import dedent from "dedent-js";
 import { cleanupVersion } from "#utils/util.ts";
+import filter from "gulp-filter";
 
 async function clientCleanUp() {
 	return deleteAsync(upath.join(clientDestDirectory, "*"), { force: true });
@@ -89,12 +90,15 @@ function copyClientChangelog() {
  * Copies modpack overrides.
  */
 function copyClientOverrides() {
+	const f = filter((f) => !f.isDirectory());
 	return gulp
 		.src(buildConfig.copyFromSharedClientGlobs, {
 			cwd: sharedDestDirectory,
 			allowEmpty: true,
+			resolveSymlinks: true,
 		})
-		.pipe(dest(upath.join(clientDestDirectory, "overrides")));
+		.pipe(f)
+		.pipe(symlink(upath.join(clientDestDirectory, "overrides")));
 }
 
 /**

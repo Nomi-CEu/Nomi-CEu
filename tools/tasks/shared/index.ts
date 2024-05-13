@@ -1,5 +1,5 @@
 import fs from "fs";
-import gulp from "gulp";
+import gulp, { dest, src } from "gulp";
 import upath from "upath";
 import buildConfig from "#buildConfig";
 import {
@@ -47,10 +47,10 @@ async function createSharedDirs() {
  */
 async function copyOverrides() {
 	// Don't copy server.properties files in config-overrides, it is auto transformed into the server build folder
+	// Copy, not Symlink, so we can transform the files as we wish
 	return new Promise((resolve) => {
-		gulp
-			.src(buildConfig.copyToSharedDirGlobs, { cwd: upath.join(rootDirectory) })
-			.pipe(gulp.dest(upath.join(sharedDestDirectory, overridesFolder)))
+		src(buildConfig.copyToSharedDirGlobs, { cwd: upath.join(rootDirectory) })
+			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
 			.on("end", resolve);
 	});
 }
@@ -87,7 +87,7 @@ async function fetchExternalDependencies() {
 				const dest = upath.join(destDirectory, upath.basename(depDef.url));
 				const cachePath = (await downloadOrRetrieveFileDef(depDef)).cachePath;
 
-				return fs.promises.copyFile(cachePath, dest);
+				return fs.promises.symlink(upath.resolve(dest, cachePath), dest);
 			}),
 		);
 	}

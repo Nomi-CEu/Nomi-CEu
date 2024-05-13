@@ -8,6 +8,7 @@ import * as upath from "upath";
 import * as fs from "fs";
 import gulp, { series, src, symlink } from "gulp";
 import buildConfig from "#buildConfig";
+import filter from "gulp-filter";
 
 async function mmcCleanUp() {
 	if (fs.existsSync(mmcDestDirectory)) {
@@ -53,9 +54,12 @@ function copyMMCChangelog() {
  * Copies modpack overrides.
  */
 function copyOverrides() {
+	const f = filter((f) => !f.isDirectory());
 	return src(upath.join(clientDestDirectory, "**/*"), {
 		resolveSymlinks: false,
-	}).pipe(symlink(upath.join(mmcDestDirectory)));
+	})
+		.pipe(f)
+		.pipe(symlink(upath.join(mmcDestDirectory)));
 }
 
 /**
@@ -73,15 +77,13 @@ async function renameOverrides() {
  * Copies client & shared mods.
  */
 async function copyMMCModJars() {
-	return src(
-		[
-			upath.join(modDestDirectory, "*"),
-			upath.join(modDestDirectory, "client", "*"),
-		],
-		{
-			resolveSymlinks: false,
-		},
-	).pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));
+	const f = filter((f) => !f.isDirectory());
+	return src(["*", upath.join("client", "*")], {
+		cwd: modDestDirectory,
+		resolveSymlinks: true,
+	})
+		.pipe(f)
+		.pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));
 }
 
 async function createMMCConfig() {

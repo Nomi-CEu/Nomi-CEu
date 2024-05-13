@@ -2,7 +2,7 @@ import upath from "upath";
 import unzip from "unzipper";
 import through from "through2";
 import mustache from "mustache";
-import gulp, { src, dest } from "gulp";
+import gulp, { src, dest, symlink } from "gulp";
 import fs from "fs";
 import buildConfig from "#buildConfig";
 import { ForgeProfile } from "#types/forgeProfile.ts";
@@ -21,6 +21,7 @@ import {
 import { deleteAsync } from "del";
 import { updateBuildServerProperties } from "../misc/transformFiles.ts";
 import logInfo, { logWarn } from "#utils/log.ts";
+import filter from "gulp-filter";
 
 let g_forgeJar: string | undefined = undefined;
 
@@ -166,34 +167,34 @@ async function downloadMinecraftServer() {
 		serverDestDirectory,
 		`minecraft_server.${versionManifest.id}.jar`,
 	);
-	await fs.promises.copyFile(serverJar.cachePath, dest);
+	await fs.promises.symlink(upath.resolve(serverJar.cachePath), dest);
 }
 
 /**
  * Copies server & shared mods.
  */
 async function copyServerMods() {
-	return src(
-		[
-			upath.join(modDestDirectory, "*"),
-			upath.join(modDestDirectory, "server", "*"),
-		],
-		{
-			resolveSymlinks: false,
-		},
-	).pipe(dest(upath.join(serverDestDirectory, "mods")));
+	const f = filter((f) => !f.isDirectory());
+	return src(["*", upath.join("server", "*")], {
+		cwd: modDestDirectory,
+		resolveSymlinks: true,
+	})
+		.pipe(f)
+		.pipe(symlink(upath.join(serverDestDirectory, "mods")));
 }
 
 /**
  * Copies modpack overrides.
  */
 function copyServerOverrides() {
-	return gulp
-		.src(buildConfig.copyFromSharedServerGlobs, {
-			cwd: sharedDestDirectory,
-			allowEmpty: true,
-		})
-		.pipe(dest(upath.join(serverDestDirectory)));
+	const f = filter((f) => !f.isDirectory());
+	return src(buildConfig.copyFromSharedServerGlobs, {
+		cwd: sharedDestDirectory,
+		allowEmpty: true,
+		resolveSymlinks: true,
+	})
+		.pipe(f)
+		.pipe(symlink(upath.join(serverDestDirectory)));
 }
 
 /**
@@ -261,7 +262,7 @@ function processLaunchscripts() {
 		.pipe(dest(serverDestDirectory));
 }
 
-export default gulp.series([
+export default gulp.series(
 	serverCleanUp,
 	createServerDirs,
 	downloadForge,
@@ -274,4 +275,4 @@ export default gulp.series([
 	copyServerUpdateNotes,
 	processLaunchscripts,
 	updateBuildServerProperties,
-]);
+);

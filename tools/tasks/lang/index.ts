@@ -26,7 +26,7 @@ async function copyLang() {
 		"resources",
 	);
 
-	const opts = { base: resourcesPath };
+	const opts = { base: resourcesPath, resolveSymlinks: true };
 	const streams = [
 		gulp.src(upath.join(resourcesPath, "pack.mcmeta"), opts),
 		gulp.src(upath.join(resourcesPath, "**/*.lang"), opts).pipe(
