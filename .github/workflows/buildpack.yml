@@ -121,6 +121,7 @@ jobs:
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
@@ -191,6 +192,7 @@ jobs:
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
@@ -242,6 +244,7 @@ jobs:
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
@@ -315,6 +318,7 @@ jobs:
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
@@ -379,6 +383,7 @@ jobs:
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
