@@ -21,6 +21,8 @@ import {
 import logInfo, { logError, logWarn } from "#utils/log.ts";
 import colors from "colors";
 import { getUniqueToArray } from "#utils/util.ts";
+import sortKeys from "sort-keys";
+import lodash from "lodash";
 
 let data: PortQBData;
 
@@ -244,9 +246,10 @@ export async function findQuest(
 		const specID = parseInt(
 			await input({
 				message:
-					"Please Provide a Specific Quest ID to be used as the Corresponding Quest. Enter 0 to Skip/Cancel this Quest!",
+					"Please Provide a Specific Quest ID to be used as the Corresponding Quest. Enter -1 to Skip/Cancel this Quest!",
 				validate: (value) => {
 					const numValue = parseInt(value);
+					if (numValue === -1) return true; // Allow Cancelling
 					if (isNaN(numValue) || numValue < 0) {
 						return "Please Enter a Number Value >= 0!";
 					}
@@ -254,7 +257,7 @@ export async function findQuest(
 				},
 			}),
 		);
-		if (specID === 0) {
+		if (specID === -1) {
 			logInfo("Cancelling...");
 			foundBySpecificID = "IGNORE";
 			break;
@@ -517,6 +520,17 @@ export function stringifyQB(qb: QuestBook): string {
 			replacement: "\\u0027",
 		},
 	];
+	qb = sortKeysRecursiveIgnoreArray(qb, (key1, key2): number => {
+		const defaultVal = key2 < key1 ? 1 : -1;
+
+		if (!key1.includes(":") || !key2.includes(":")) return defaultVal;
+
+		const num1 = Number.parseInt(key1.split(":")[0]);
+		const num2 = Number.parseInt(key2.split(":")[0]);
+
+		if (Number.isNaN(num1) || Number.isNaN(num2)) return defaultVal;
+		return num1 - num2;
+	});
 	let parsed = JSON.stringify(qb, null, 2).replace(
 		/("[a-zA-Z_]+:[56]":\s)(-?[0-9]+)(,?)$/gm,
 		"$1$2.0$3",
@@ -526,6 +540,29 @@ export function stringifyQB(qb: QuestBook): string {
 		parsed = parsed.replace(replacement.search, replacement.replacement);
 	}
 	return parsed;
+}
+
+/**
+ * Use our own, instead of sortKeysRecursive, to ignore sorting of arrays.
+ */
+function sortKeysRecursiveIgnoreArray<T extends object>(
+	object: T,
+	compare: (a: string, b: string) => number,
+): T {
+	const result = sortKeys(object as Record<string, unknown>, { compare }) as T;
+
+	// We can modify results, Object.Keys returns a static array
+	Object.keys(result).forEach(function (key) {
+		const current = lodash.get(result, key);
+		if (current) {
+			if (typeof current === "object") {
+				lodash.set(result, key, sortKeys(current, { compare }));
+				return;
+			}
+		}
+	});
+
+	return result;
 }
 
 export async function save(toSave: QuestBook): Promise<void> {
@@ -589,6 +626,8 @@ async function savePorter() {
 			normal: normalID,
 			expert: expertID,
 		});
+
+		porter.savedQuestMap.sort((a, b) => a.normal - b.normal);
 	}
 
 	// Save Ignore

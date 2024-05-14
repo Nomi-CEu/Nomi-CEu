@@ -610,11 +610,7 @@ const modifyTasks = async (
 				taskObj = { ...newTask };
 				break;
 			case "CUSTOM":
-				taskObj = await getCustomTasks(
-					currentTaskString,
-					newTaskString,
-					apply,
-				);
+				taskObj = await getCustomTasks(currentTaskString, newTaskString, apply);
 				break;
 		}
 		if (!taskObj) continue;

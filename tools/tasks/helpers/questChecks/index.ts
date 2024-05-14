@@ -158,6 +158,8 @@ async function checkAndFixQB(
 		? qb["questDatabase:9"]
 		: lodash.cloneDeep(qb["questDatabase:9"]);
 
+	// Checks for Quests
+	logInfo("Checking Quests...");
 	for (const questKey of Object.keys(qb["questDatabase:9"])) {
 		// Copy Quest if Should Check is false (So we don't modify the underlying object)
 		const quest = shouldCheck
@@ -180,7 +182,13 @@ async function checkAndFixQB(
 
 		// Check Name Formatting
 		quest["properties:10"]["betterquesting:10"]["name:8"] =
-			stripOrThrowExcessFormatting(shouldCheck, name(quest), foundID, "Name");
+			stripOrThrowExcessFormatting(
+				shouldCheck,
+				name(quest),
+				foundID,
+				"Quest",
+				"Name",
+			);
 
 		// Check for Empty Descriptions
 		if (!quest["properties:10"]["betterquesting:10"]["desc:8"]) {
@@ -199,6 +207,7 @@ async function checkAndFixQB(
 				shouldCheck,
 				quest["properties:10"]["betterquesting:10"]["desc:8"],
 				foundID,
+				"Quest",
 				"Description",
 			);
 
@@ -233,10 +242,82 @@ async function checkAndFixQB(
 				});
 		}
 
+		// Check the Order of Prerequisites
+		const oldPrerequisites = shouldCheck
+			? quest["preRequisites:11"]
+			: [...quest["preRequisites:11"]]; // Copy if Changing
+
+		let rightOrder = true;
+		let prev: number = -1; // Smallest ID is 0
+		for (let i = 0; i < oldPrerequisites.length; i++) {
+			const pre = oldPrerequisites[i];
+			if (prev < pre) {
+				prev = pre;
+				continue;
+			}
+			if (prev === pre) {
+				if (shouldCheck)
+					throw new Error(
+						`Duplicate Prerequisites in Quest with ID ${foundID}!`,
+					);
+				logWarn(
+					`Removing Duplicate Prerequisite in Quest with ID ${foundID}...`,
+				);
+				quest["preRequisites:11"].splice(i, 1);
+			}
+			rightOrder = false;
+			break;
+		}
+
+		// Sort Prerequisites if Needed
+		if (!rightOrder) {
+			if (shouldCheck)
+				throw new Error(
+					`Prerequisites in Quest with ID ${foundID} is in the Wrong Order!`,
+				);
+			logWarn(`Sorting Prerequisites in Quest with ID ${foundID}...`);
+
+			const types = quest["preRequisiteTypes:7"];
+			if (!types) quest["preRequisites:11"].sort();
+			else {
+				const preRequisites = new Map<number, number>();
+				quest["preRequisites:11"].forEach((pre, index) =>
+					preRequisites.set(pre, types[index]),
+				);
+
+				quest["preRequisites:11"].sort();
+				for (let i = 0; i < quest["preRequisites:11"].length; i++) {
+					types[i] = preRequisites.get(quest["preRequisites:11"][i]) ?? 0;
+				}
+			}
+		}
+
 		// Check for Rewards that have Nomicoins
 		if (isExpert) stripRewards(quest, isExpert, true);
 
 		if (!shouldCheck) newQB[`${foundID}:10`] = quest;
+	}
+
+	// Check for Redundant Formatting in Quest Lines
+	logInfo("Checking Quest Lines...");
+	for (const lineKey of Object.keys(qb["questLines:9"])) {
+		const line = qb["questLines:9"][lineKey];
+		line["properties:10"]["betterquesting:10"]["name:8"] =
+			stripOrThrowExcessFormatting(
+				shouldCheck,
+				line["properties:10"]["betterquesting:10"]["name:8"],
+				line["lineID:3"],
+				"Quest Line",
+				"Name",
+			);
+		line["properties:10"]["betterquesting:10"]["desc:8"] =
+			stripOrThrowExcessFormatting(
+				shouldCheck,
+				line["properties:10"]["betterquesting:10"]["desc:8"],
+				line["lineID:3"],
+				"Quest Line",
+				"Description",
+			);
 	}
 	if (!shouldCheck) qb["questDatabase:9"] = newQB;
 }
@@ -245,6 +326,7 @@ function stripOrThrowExcessFormatting(
 	shouldCheck: boolean,
 	value: string,
 	id: number,
+	name: string,
 	key: string,
 ): string {
 	if (!value.includes("§")) return value;
@@ -258,10 +340,10 @@ function stripOrThrowExcessFormatting(
 			if (char === "f") {
 				if (shouldCheck)
 					throw new Error(
-						`Quest with ID ${id} at ${key} has Formatting Code 'f'!`,
+						`${name} with ID ${id} at ${key} has Formatting Code 'f'!`,
 					);
 				logWarn(
-					`Replacing Formatting Code 'f' with 'r' in Quest with ID ${id} at ${key}...`,
+					`Replacing Formatting Code 'f' with 'r' in ${name} with ID ${id} at ${key}...`,
 				);
 				builder.push("r");
 				continue;
@@ -270,11 +352,11 @@ function stripOrThrowExcessFormatting(
 			if (!isAvailableForFormatting.test(char)) {
 				if (shouldCheck)
 					throw new Error(
-						`Quest with ID ${id} at ${key} has Lone Formatting Signal!`,
+						`${name} with ID ${id} at ${key} has Lone Formatting Signal!`,
 					);
 
 				logWarn(
-					`Removing Lone Formatting Signal in Quest with ID ${id} at ${key}...`,
+					`Removing Lone Formatting Signal in ${name} with ID ${id} at ${key}...`,
 				);
 
 				// Remove Last Element
@@ -286,11 +368,11 @@ function stripOrThrowExcessFormatting(
 			if (builder.length === 1 && char === "r") {
 				if (shouldCheck)
 					throw new Error(
-						`Quest with ID ${id} at ${key} has Redundant Formatting!`,
+						`${name} with ID ${id} at ${key} has Redundant Formatting!`,
 					);
 
 				logWarn(
-					`Removing Redundant Formatting from Quest with ID ${id} at ${key}...`,
+					`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
 				);
 
 				// Remove Previous
@@ -310,11 +392,11 @@ function stripOrThrowExcessFormatting(
 
 			if (shouldCheck)
 				throw new Error(
-					`Quest with ID ${id} at ${key} has Redundant Formatting!`,
+					`${name} with ID ${id} at ${key} has Redundant Formatting!`,
 				);
 
 			logWarn(
-				`Removing Redundant Formatting from Quest with ID ${id} at ${key}...`,
+				`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
 			);
 
 			// Remove Previous
