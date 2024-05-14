@@ -190,15 +190,15 @@ async function checkAndFixQB(
 				"Name",
 			);
 
-		// Check for Empty Descriptions
-		if (!quest["properties:10"]["betterquesting:10"]["desc:8"]) {
+		// Check for Empty Descriptions (Trim first, might be a space)
+		if (!quest["properties:10"]["betterquesting:10"]["desc:8"].trim()) {
 			if (shouldCheck)
 				throw new Error(`Quest with ID ${foundID} has Empty Description!`);
 
 			quest["properties:10"]["betterquesting:10"]["desc:8"] = await input({
-				message: `Quest with ID ${foundID} has an Empty Description! What should we Replace it With?`,
+				message: `Quest with ID ${foundID} and Name ${quest["properties:10"]["betterquesting:10"]["name:8"]} has an Empty Description! What should we Replace it With?`,
 				default: "No Description",
-				validate: (value) => Boolean(value),
+				validate: (value) => Boolean(value.trim()),
 			});
 		}
 		// Check Desc Formatting (Still check if after, as user may have entered dupe formatting)
@@ -210,6 +210,20 @@ async function checkAndFixQB(
 				"Quest",
 				"Description",
 			);
+
+		const trimmed =
+			quest["properties:10"]["betterquesting:10"]["desc:8"].trim();
+
+		// Check if Description is Trimmed (Still check if after, as user may have entered new lines)
+		if (quest["properties:10"]["betterquesting:10"]["desc:8"] !== trimmed) {
+			if (shouldCheck)
+				throw new Error(
+					`Quest with ID ${foundID} has Excess Spaces/New Lines in the Description!`,
+				);
+
+			logWarn(`Trimming Description of Quest with ID ${foundID}!`);
+			quest["properties:10"]["betterquesting:10"]["desc:8"] = trimmed;
+		}
 
 		// Visibility Check
 		if (

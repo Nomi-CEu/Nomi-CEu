@@ -9,7 +9,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main purpose for this device is to turn §6Certus Quartz§r into §6Charged Certus Quartz Crystals§r.\n\nThis device can be powered with RF via energy conduits or use AE energy from a network via ME conduits or cables.\n\nIt accepts power from two sides. Which two sides? It\u0027s pretty easy to guess.\n\n\n\n\n\n\n\n\nOk, ok. It\u0027s the top and bottom.\n\n",
+          "desc:8": "The main purpose for this device is to turn §6Certus Quartz§r into §6Charged Certus Quartz Crystals§r.\n\nThis device can be powered with RF via energy conduits or use AE energy from a network via ME conduits or cables.\n\nIt accepts power from two sides. Which two sides? It\u0027s pretty easy to guess.\n\n\n\n\n\n\n\n\nOk, ok. It\u0027s the top and bottom.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -200,7 +200,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts both LV and MV Canning Machines.\n\n§aLV Batteries§r were very simple to make, but more effective forms of power storage will be more complex to build, so we\u0027ll need to lay the groundwork now.\n\nPut your §3Centrifuge§r to work for the §6Antimony§r you\u0027ll need, which comes in tiny piles from processing §6Tetrahedrite Ore§r and §6Stibnite Ore§r.\n\n",
+          "desc:8": "Note: this quest accepts both LV and MV Canning Machines.\n\n§aLV Batteries§r were very simple to make, but more effective forms of power storage will be more complex to build, so we\u0027ll need to lay the groundwork now.\n\nPut your §3Centrifuge§r to work for the §6Antimony§r you\u0027ll need, which comes in tiny piles from processing §6Tetrahedrite Ore§r and §6Stibnite Ore§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1761,7 +1761,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into §6Coal Coke§r will not only make it more useful as fuel, but will also produce §9Phenol§r, which you\u0027ll need for circuits.\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nRemember that Hatches and Buses can be replaced by Hatches and Buses of any tier, although the Input Bus must be at least LV, as there are 2 inputs, and that you can  §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.\n",
+          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into §6Coal Coke§r will not only make it more useful as fuel, but will also produce §9Phenol§r, which you\u0027ll need for circuits.\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nRemember that Hatches and Buses can be replaced by Hatches and Buses of any tier, although the Input Bus must be at least LV, as there are 2 inputs, and that you can  §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3597,7 +3597,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts LV/MV/HV Centrifuge.\n\nCentrifuging air is a reliable way to get §9Nitrogen§r before you have access to §2distlling Liquid Air§r.\n\n",
+          "desc:8": "Note: this quest accepts LV/MV/HV Centrifuge.\n\nCentrifuging air is a reliable way to get §9Nitrogen§r before you have access to §2distlling Liquid Air§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4037,7 +4037,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Centrifuges§r provide you with §21 tiny pile§r of additional materials when processing ore dusts (§e9 tiny piles \u003d 1 dust§r). Sometimes it\u0027s the main dust, but often it\u0027s a different useful material that is otherwise unobtainable.\n\nInstead of washing §6impure dusts§r (made from macerating or hammering ores) in a cauldron, you can get more out of each dust by centrifuging it. The same is true of §6pure dusts§r, when you eventually make a §3Washer§r or §3Chemical Bath§r. Note however that pure and impure dusts will usually give different byproducts (always check in §bJEI§r).\n\nCentrifuges also have other uses like unmixing compound dusts and fluids, or getting §6Rubber Pulp§r, which can be chemically reacted with §6Sulfur§r to efficiently make §9liquid Rubber§r.\n\n",
+          "desc:8": "§3Centrifuges§r provide you with §21 tiny pile§r of additional materials when processing ore dusts (§e9 tiny piles \u003d 1 dust§r). Sometimes it\u0027s the main dust, but often it\u0027s a different useful material that is otherwise unobtainable.\n\nInstead of washing §6impure dusts§r (made from macerating or hammering ores) in a cauldron, you can get more out of each dust by centrifuging it. The same is true of §6pure dusts§r, when you eventually make a §3Washer§r or §3Chemical Bath§r. Note however that pure and impure dusts will usually give different byproducts (always check in §bJEI§r).\n\nCentrifuges also have other uses like unmixing compound dusts and fluids, or getting §6Rubber Pulp§r, which can be chemically reacted with §6Sulfur§r to efficiently make §9liquid Rubber§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4631,7 +4631,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aME Chest§r is somewhat impractical to use on its own, but it\u0027s a necessary ingredient for the much more useful §6ME Drive§r.\n\nThis is a rudimentary digital item storage device. By placing a §6Storage Cell§r inside it, you can access the contents as though you were looking through a chest. You can carry the disk to another location and place it down in a different ME Chest if you want, and the items will come with it.\n\n§cDon\u0027t put Storage Cells inside other portable mod inventories like a Satchel, (or vice-versa) as you risk corrupting the contents of the Satchel and the Storage Cell.§r There\u0027s technical reasons why this happens (NBT overflow), and it\u0027s not unique to these items, but that\u0027s not really worth going into.\n\n",
+          "desc:8": "The §aME Chest§r is somewhat impractical to use on its own, but it\u0027s a necessary ingredient for the much more useful §6ME Drive§r.\n\nThis is a rudimentary digital item storage device. By placing a §6Storage Cell§r inside it, you can access the contents as though you were looking through a chest. You can carry the disk to another location and place it down in a different ME Chest if you want, and the items will come with it.\n\n§cDon\u0027t put Storage Cells inside other portable mod inventories like a Satchel, (or vice-versa) as you risk corrupting the contents of the Satchel and the Storage Cell.§r There\u0027s technical reasons why this happens (NBT overflow), and it\u0027s not unique to these items, but that\u0027s not really worth going into.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5238,7 +5238,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An §3MV Electrolyzer§r allows you to process recipes that require up to 128 EU/t, and can optionally overclock recipes costing at most 32 EU/t.\n\nThis means you can split more kinds of things for useful products.\n",
+          "desc:8": "An §3MV Electrolyzer§r allows you to process recipes that require up to 128 EU/t, and can optionally overclock recipes costing at most 32 EU/t.\n\nThis means you can split more kinds of things for useful products.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5799,7 +5799,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Bending Machine §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r once you get §9Polyethylene (PE)§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.\n",
+          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Bending Machine §rto make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r once you get §9Polyethylene (PE)§r, and for cutting §6Wafers§r into usable components. \n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7537,7 +7537,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aPatterns§r are used to encode a single crafting table or processing recipe for on-demand automation with §bApplied Energistics§r.\n\nEncode them in a §aPattern Terminal§r.\n\nNote that recipes encoded with Substitutions on will use existing equivalent items, but §ewill only automatically craft the exact item specified in the recipe.§r\n\n§2With PAE2, recipes with tools have been improved by a huge amount. However, still aim for recipes without tools.§r\n\nUse recipes that use machines instead!\n\n",
+          "desc:8": "§aPatterns§r are used to encode a single crafting table or processing recipe for on-demand automation with §bApplied Energistics§r.\n\nEncode them in a §aPattern Terminal§r.\n\nNote that recipes encoded with Substitutions on will use existing equivalent items, but §ewill only automatically craft the exact item specified in the recipe.§r\n\n§2With PAE2, recipes with tools have been improved by a huge amount. However, still aim for recipes without tools.§r\n\nUse recipes that use machines instead!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7874,7 +7874,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to §29 stacks of 512 items (or 4608 items)§r for passive autocrafting and to push into other inventories. Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\nAlso, if you connect a gadget from §bBuilding Gadgets§r to the Interface, the gadget will pull materials straight from the attached AE2 network, §aNOT§r the Interface. Particularly useful with the §6Auto Chisel§r. \n\nThere is information of the Gadgets, and how to connect them to inventories, in the §eInspector Gadget§r quest in §cGenesis§r, and information of the Auto Chisel in the §eAuto Chisel§r quest in §cMatter Energy§r or §cThe Beginning§r.\n\n",
+          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to §29 stacks of 512 items (or 4608 items)§r for passive autocrafting and to push into other inventories. Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\nAlso, if you connect a gadget from §bBuilding Gadgets§r to the Interface, the gadget will pull materials straight from the attached AE2 network, §aNOT§r the Interface. Particularly useful with the §6Auto Chisel§r. \n\nThere is information of the Gadgets, and how to connect them to inventories, in the §eInspector Gadget§r quest in §cGenesis§r, and information of the Auto Chisel in the §eAuto Chisel§r quest in §cMatter Energy§r or §cThe Beginning§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8963,7 +8963,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Stoneburnt§r is a key ingredient in crafting many things from Extra Utilities.\n\nBesides the Manual Mill, there are multiple ways to generate GP. Look up \"Mill\" in JEI for all possible mills.\n\nNote that the individual generators have been balanced differently than normal, so take that into account before building 16 Water Mills. It is a good idea to use several different kinds due to §bExtra Utilities§r implementing diminishing returns to prevent spamming one kind of Mill.\n\n",
+          "desc:8": "§6Stoneburnt§r is a key ingredient in crafting many things from Extra Utilities.\n\nBesides the Manual Mill, there are multiple ways to generate GP. Look up \"Mill\" in JEI for all possible mills.\n\nNote that the individual generators have been balanced differently than normal, so take that into account before building 16 Water Mills. It is a good idea to use several different kinds due to §bExtra Utilities§r implementing diminishing returns to prevent spamming one kind of Mill.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10580,7 +10580,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the Overworld.\n\n§rLarger quantities of Ilmenite and Bauxite may be found on the Moon and other planets.\n\n",
+          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the Overworld.\n\n§rLarger quantities of Ilmenite and Bauxite may be found on the Moon and other planets.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11083,7 +11083,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Nichrome§r is an alloy of §6Nickel§r and §6Chrome§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.\n",
+          "desc:8": "§6Nichrome§r is an alloy of §6Nickel§r and §6Chrome§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11946,7 +11946,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Air§r can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Air§r.\n\n§9Liquid Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Nether Air and Liquid Ender Air give different useful components too.\n",
+          "desc:8": "§9Air§r can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Air§r.\n\n§9Liquid Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Nether Air and Liquid Ender Air give different useful components too.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12149,7 +12149,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Note: this quest accepts LV/MV/HV/EV §3Gas Collectors§r.\n\nA §3Gas Collector§r will suck up air at a decent rate, provided the top side is unobstructed. The collected Air is automatically ejected into an adjacent tank via the output face.\n\n§2Gas Collectors in the Nether and End will collect Nether Air and Ender Air respectively, which yield different products. Make sure you set the correct circuit configuration for the dimension you are in.§r\n\nIV+ air collectors are not part of this quest, but for reference they exist and are called §3Atmosphere Collectors§r.\n\n",
+          "desc:8": "Note: this quest accepts LV/MV/HV/EV §3Gas Collectors§r.\n\nA §3Gas Collector§r will suck up air at a decent rate, provided the top side is unobstructed. The collected Air is automatically ejected into an adjacent tank via the output face.\n\n§2Gas Collectors in the Nether and End will collect Nether Air and Ender Air respectively, which yield different products. Make sure you set the correct circuit configuration for the dimension you are in.§r\n\nIV+ air collectors are not part of this quest, but for reference they exist and are called §3Atmosphere Collectors§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12834,7 +12834,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts either Oil, Raw Oil, Light Oil or Heavy Oil.§r\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.\n",
+          "desc:8": "§oNote: this quest accepts either Oil, Raw Oil, Light Oil or Heavy Oil.§r\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r \n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13732,7 +13732,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungstensteel§r is an alloy of §6Tungsten§r and §6Steel§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.\n",
+          "desc:8": "§6Tungstensteel§r is an alloy of §6Tungsten§r and §6Steel§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14501,7 +14501,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "At some point you might consider venturing into space, like the Moon. While it\u0027s not at all required for the progression, you might find it valuable: to say the least, the Moon contains ore veins which are otherwise very rare to find in the Overworld. And for this, you\u0027ll need a rocket and a whole lot of preparations.\n\nBefore you can build the rocket itself, you\u0027ll need to create a launch pad. The §6Launch Pad§r blocks go in a 3x3 layout flat on the ground to form the platform.\n\nThe Structure Tower§r is formed from a column of §6Structure Tower§r blocks that holds your rocket upright. The first block goes adjacent to any side of the launch pad platform (on the same Y-level as the launch pad blocks).\n\nWith 6 Structure Tower blocks, you can only build a rocket 5 blocks high, since any higher would exceed the height of the tower. To build a taller rocket, you\u0027ll need to build a taller tower using more Structure Tower blocks.\n\nThe §3Rocket Assembling Machine§r needs to be placed next to the launch pad (not on it) 1 block higher than the platform, so that the bottom of the Rocket Assembler is flush with the top of the launch pad. It also needs to be supplied with RF power to function.\n\n",
+          "desc:8": "At some point you might consider venturing into space, like the Moon. While it\u0027s not at all required for the progression, you might find it valuable: to say the least, the Moon contains ore veins which are otherwise very rare to find in the Overworld. And for this, you\u0027ll need a rocket and a whole lot of preparations.\n\nBefore you can build the rocket itself, you\u0027ll need to create a launch pad. The §6Launch Pad§r blocks go in a 3x3 layout flat on the ground to form the platform.\n\nThe Structure Tower§r is formed from a column of §6Structure Tower§r blocks that holds your rocket upright. The first block goes adjacent to any side of the launch pad platform (on the same Y-level as the launch pad blocks).\n\nWith 6 Structure Tower blocks, you can only build a rocket 5 blocks high, since any higher would exceed the height of the tower. To build a taller rocket, you\u0027ll need to build a taller tower using more Structure Tower blocks.\n\nThe §3Rocket Assembling Machine§r needs to be placed next to the launch pad (not on it) 1 block higher than the platform, so that the bottom of the Rocket Assembler is flush with the top of the launch pad. It also needs to be supplied with RF power to function.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14647,7 +14647,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Even simple rockets demand §6Double Plates§r for their construction. In this case, made out of §6Steel§r. ",
+          "desc:8": "Even simple rockets demand §6Double Plates§r for their construction. In this case, made out of §6Steel§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14782,7 +14782,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Fueling Station§r is how rockets get fuel.\n\nFirst, put together your Rocket, then §aScan§r and §cBuild§r the Rocket in the §3Rocket Assembling Machine§r to assemble it (which turns it into an entity). Next, with the §aLinker§r in your hand, right-click the Fueling Station then the Rocket Assembling Machine to link the Fueling Station to the constructed Rocket. \n\nYou\u0027ll get a confirmation message when you do it right, and a little line will appear between the Fueling Station and the rocket.\n\nNow just get §9Rocket Fuel§r into the Fueling Station and it will transfer to the Rocket automatically.\n",
+          "desc:8": "The §3Fueling Station§r is how rockets get fuel.\n\nFirst, put together your Rocket, then §aScan§r and §cBuild§r the Rocket in the §3Rocket Assembling Machine§r to assemble it (which turns it into an entity). Next, with the §aLinker§r in your hand, right-click the Fueling Station then the Rocket Assembling Machine to link the Fueling Station to the constructed Rocket. \n\nYou\u0027ll get a confirmation message when you do it right, and a little line will appear between the Fueling Station and the rocket.\n\nNow just get §9Rocket Fuel§r into the Fueling Station and it will transfer to the Rocket automatically.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14957,7 +14957,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Bauxite Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).\n\n\n",
+          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Bauxite Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15223,7 +15223,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is your first Micro Miner ever. §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.\n\n",
+          "desc:8": "This is your first Micro Miner ever. §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15821,7 +15821,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Here comes the chemistry.\n\nIt might seem crazy right now, but you\u0027ll want a dedicated §3Chemical Reactor§r for pretty much every chemical you want to process. You probably want to hold off on doing that until you\u0027ve got a solid base of autocrafting though... it stings a lot less when you can just request crafts of Chemical Reactors from your AE2 system.\n",
+          "desc:8": "Here comes the chemistry.\n\nIt might seem crazy right now, but you\u0027ll want a dedicated §3Chemical Reactor§r for pretty much every chemical you want to process. You probably want to hold off on doing that until you\u0027ve got a solid base of autocrafting though... it stings a lot less when you can just request crafts of Chemical Reactors from your AE2 system.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16789,7 +16789,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Double Plates§r used exclusively for the Tier Eight Micro Miner. ",
+          "desc:8": "§2Double Plates§r used exclusively for the Tier Eight Micro Miner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17897,7 +17897,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Double Plates§r used exclusively for the Tier Seven Micro Miner. ",
+          "desc:8": "§2Double Plates§r used exclusively for the Tier Seven Micro Miner.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18267,7 +18267,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An advanced ingredient used for the §aUltimate Extended Crafting Table§r and other late-game recipes. ",
+          "desc:8": "An advanced ingredient used for the §aUltimate Extended Crafting Table§r and other late-game recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18334,7 +18334,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and §2allows you to skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.\n",
+          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and §2allows you to skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19391,7 +19391,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "\"§6Dragon Eggs§r?\" You might ask. Yep.\n\nThe final circuit theme, Wetware, will require a lot of them.\n\nTier Six Micro Miners can get some eggs (enough for this quest, as it happens), but Tier Seven miners are a better long-term solution for building up your supply, as they also give §6Dragon Hearts§r.\n\nLater, you\u0027ll also get substantial quantities from Tier Eight Micro Miners, while you are accumulating §6Chaos Shards§r.\n\n",
+          "desc:8": "\"§6Dragon Eggs§r?\" You might ask. Yep.\n\nThe final circuit theme, Wetware, will require a lot of them.\n\nTier Six Micro Miners can get some eggs (enough for this quest, as it happens), but Tier Seven miners are a better long-term solution for building up your supply, as they also give §6Dragon Hearts§r.\n\nLater, you\u0027ll also get substantial quantities from Tier Eight Micro Miners, while you are accumulating §6Chaos Shards§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20813,7 +20813,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This casing is the structure for §bThermal Expansion§r\u0027s devices, which are simpler machines.\n\n",
+          "desc:8": "This casing is the structure for §bThermal Expansion§r\u0027s devices, which are simpler machines.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21718,7 +21718,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6HSS-G§r is an alloy of §6Tungstensteel§r, §6Chrome§r, §6Molybdenum§r, and §6Vanadium§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.\n",
+          "desc:8": "§6HSS-G§r is an alloy of §6Tungstensteel§r, §6Chrome§r, §6Molybdenum§r, and §6Vanadium§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22644,7 +22644,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Just ignore the protesters outside your base.\n\nEach craft in an §3LuV Chemical Reactor§r takes five minutes, so it\u0027s probably a good idea to have more than one machine running this recipe. At least you get §2128 from a single craft.\n",
+          "desc:8": "Just ignore the protesters outside your base.\n\nEach craft in an §3LuV Chemical Reactor§r takes five minutes, so it\u0027s probably a good idea to have more than one machine running this recipe. At least you get §2128 from a single craft.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23186,7 +23186,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The final circuit!\n\nThe only novel ingredient is §6Tritanium Frames§r.\n\n§6Wetware Processor Mainframes§r are unique in that there are no subsquent circuit themes, and thus no other kinds of Tier Nine circuits. Unlike past mainframes, you will need to craft more than just a few of them. They\u0027re mostly used in the Endgame though, so you don\u0027t have to worry too much yet.\n\nDefinitely consider parallelizing your §3Assembly Lines§r if you haven\u0027t already. Even just having two or three lines will vastly improve your production speeds and help avoid bottlenecks as you push towards the Endgame.\n",
+          "desc:8": "The final circuit!\n\nThe only novel ingredient is §6Tritanium Frames§r.\n\n§6Wetware Processor Mainframes§r are unique in that there are no subsquent circuit themes, and thus no other kinds of Tier Nine circuits. Unlike past mainframes, you will need to craft more than just a few of them. They\u0027re mostly used in the Endgame though, so you don\u0027t have to worry too much yet.\n\nDefinitely consider parallelizing your §3Assembly Lines§r if you haven\u0027t already. Even just having two or three lines will vastly improve your production speeds and help avoid bottlenecks as you push towards the Endgame.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25106,7 +25106,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.\n\nThe GT Creative Tank has been enhanced. You can turn it on and off, configure exactly how much fluid you want it to push and how often, and change which direction the fluid is pushed out. You can even configure the fluid you want directly from JEI!§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Chest§r!\n\n",
+          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §dCreative Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. §2Use the Creative Tank Provider to supply you with Creative Tanks.\n\nThe GT Creative Tank has been enhanced. You can turn it on and off, configure exactly how much fluid you want it to push and how often, and change which direction the fluid is pushed out. You can even configure the fluid you want directly from JEI!§r\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of. §3Fluid Solidifiers§r §2or the much more powerful Large Solidification Arrays§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Chest§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26794,7 +26794,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Multi Smelter§r is an absolute smelting unit, and is most likely the best furnace added by a mod.\n\nIt\u0027s a 3x3x3 multiblock machine capable of §esmelting huge amounts of items per second§r. By upgrading its coils and power tier, it can become capable of smelting up to literal thousands of items per second.\n\nShift and hover over different coil blocks: they tell you the number of items a Multi Smelter can smelt per operation: §e32 items per level§r. The most basic Multi Smelter essentially does 32 items in the same time as a furnace does one. With a set of §6Tungstensteel§r coil blocks, that jumps to 128 items per operation.\n\nThis quest doesn\u0027t ask for coils, hatches or buses: feel free to choose whatever combination you want. You\u0027ll need §a8 coil blocks§r, §a1 input bus§r, §a1 output bus§r, and §21 maintenance hatch§r, §21 muffler hatch§r, and at least §a1 energy hatch§r, all of any tier.\n\n",
+          "desc:8": "The §3Multi Smelter§r is an absolute smelting unit, and is most likely the best furnace added by a mod.\n\nIt\u0027s a 3x3x3 multiblock machine capable of §esmelting huge amounts of items per second§r. By upgrading its coils and power tier, it can become capable of smelting up to literal thousands of items per second.\n\nShift and hover over different coil blocks: they tell you the number of items a Multi Smelter can smelt per operation: §e32 items per level§r. The most basic Multi Smelter essentially does 32 items in the same time as a furnace does one. With a set of §6Tungstensteel§r coil blocks, that jumps to 128 items per operation.\n\nThis quest doesn\u0027t ask for coils, hatches or buses: feel free to choose whatever combination you want. You\u0027ll need §a8 coil blocks§r, §a1 input bus§r, §a1 output bus§r, and §21 maintenance hatch§r, §21 muffler hatch§r, and at least §a1 energy hatch§r, all of any tier.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26867,7 +26867,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Large Plasma Turbines§r are a powerful late game method of generating power. One Large Plasma Turbine produces §2a base of 16384 EU/t when using an IV Rotor Holder§r.\n\nGenerally, the best plasma fuels to use will be §eHelium Plasma§r with a §3Fusion Reactor Mk1§r, §eTin Plasma§r when you upgrade to §3Mk2§r, and §eAmericium Plasma§r when you upgrade to §3Mk3§r. However, the other plasmas are still competitive, and your setup might lend itself better to a different plasma. ",
+          "desc:8": "§3Large Plasma Turbines§r are a powerful late game method of generating power. One Large Plasma Turbine produces §2a base of 16384 EU/t when using an IV Rotor Holder§r.\n\nGenerally, the best plasma fuels to use will be §eHelium Plasma§r with a §3Fusion Reactor Mk1§r, §eTin Plasma§r when you upgrade to §3Mk2§r, and §eAmericium Plasma§r when you upgrade to §3Mk3§r. However, the other plasmas are still competitive, and your setup might lend itself better to a different plasma.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27079,7 +27079,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine. This quest accepts a §aScrewdriver§r and §aCrowbar§r made from any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§r, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§r: Available in §aItem§r, §aFluid§r, §aEnergy§r, and §aActivity§r flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lAdvanced Detectors§r: Available as §aItem§r, §aFluid§r, §aEnergy§r, or §aActivity§r, these covers can emit redstone in more ways than their normal counterparts. Specifically, the §aItem§r, §aFluid§r, and §aEnergy§r advanced detectors can emit a latched redstone signal based on the amount of item/fluid between a set min and max, or they can emit redstone signals proportional to the amount of item/fluids between a set min and max. The §aAdvanced Activity Detector§r emits redstone proportional to a machines progress on a recipe \n\n- §lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.\n",
+          "desc:8": "§bGregTech§r adds a very versatile way of augmenting machines with §aMachine Covers§r. Covers are \"upgrades\" that you can put on any GregTech machine, chest, or drum to expand its functionality. These are seperate on each side of the machine, meaning you can have up to six different covers! To work with covers, you\u0027ll need to make yourself a §aScrewdriver§r to configure covers, and a §aCrowbar§r to remove covers without having to break the machine. This quest accepts a §aScrewdriver§r and §aCrowbar§r made from any material.\n\nHere\u0027s a list of some covers there are in the game, and what they do:\n\n- §lConveyor§r: transfers items continuously to or from an adjacent inventory.\n\n- §lPump§r: is much like a §aConveyor§r, but for fluids.\n\n- §lRobotic Arm§r: is much like §aConveyor§r, but has two additional modes:\n    * §eKeep Exact§r: moves items to keep a stock of at most the specified number of items\n    * §eSupply Exact§r: transfers precisely the specified number of items per operation.\nThis cover is very useful for crafting automation.\n\n- §lFluid Regulator§r: is like a §aRobotic Arm§r, but works with fluids instead of items.\n\n- §lShutter§r: prevents automation from interacting with a specific side of a machine.\n\n- §lDetector§r: Available in §aItem§r, §aFluid§r, §aEnergy§r, and §aActivity§r flavours. Emits a Redstone signal depending on the status of whatever it\u0027s detecting.\n\n- §lAdvanced Detectors§r: Available as §aItem§r, §aFluid§r, §aEnergy§r, or §aActivity§r, these covers can emit redstone in more ways than their normal counterparts. Specifically, the §aItem§r, §aFluid§r, and §aEnergy§r advanced detectors can emit a latched redstone signal based on the amount of item/fluid between a set min and max, or they can emit redstone signals proportional to the amount of item/fluids between a set min and max. The §aAdvanced Activity Detector§r emits redstone proportional to a machines progress on a recipe \n\n- §lDigital Interface§r: A graphical display for the machine\u0027s current status. Can display things like contained fluids, energy levels, etc.\n\nCovers that move items or fluids can have a §aFilter§r placed inside them. These modify the functionality of covers in ways explained in their own quests.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27318,7 +27318,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Osmium§r and §6Iridium§r from the §6Tier Four Micro Miner§r or §6Platinum Group Processing§r, you can begin automating §bExtended Crafting§r recipes. While it is possible to use §6Automation Interfaces§r for this task, you have access to something §ovastly§r better§r: §bPackagedExCrafting§r.\n\nTo begin, you\u0027ll need to craft one of each extended §3Package Crafter§r listed on the right. Put an §3Unpackager§r on top of each one, and then a §3Packager§r anywhere you want. These are all AE2 devices, so you\u0027ll need to connect them to an ME Network.\n\nNext, right-click the §3Package Recipe Encoder§r, and you should see a button saying \"Processing\": this button cycles through recipe types, including the various Extended Crafting tables. You\u0027ll have to choose the appropriate table for the recipe you want to encode.\n\n§6Holders§r must be encoded in pairs: one for the Packager, and one for the Unpackager. Select the appropriate table for the recipe, look up the recipe you want to encode, and press §6[+]§r in §bJEI§r to fill it in. Put two Holders in the top-left slot and press Save to encode the recipe to both of them. Finally, put each Holder into the respective machines.\n\nIf you\u0027ve done everything correctly, you should see the item appear as craftable in a Terminal.\n\nWhile it might seem that the crafting process is slow, §ePackagedAuto is excellent at parallelizing§r. You can surround an Unpackager with Crafters and it will use all of them. It\u0027s also possible to add more Unpackagers with Crafters to keep up with the Packager, as long as the Holders are all the same.\n\n",
+          "desc:8": "Now that you have §6Osmium§r and §6Iridium§r from the §6Tier Four Micro Miner§r or §6Platinum Group Processing§r, you can begin automating §bExtended Crafting§r recipes. While it is possible to use §6Automation Interfaces§r for this task, you have access to something §ovastly§r better§r: §bPackagedExCrafting§r.\n\nTo begin, you\u0027ll need to craft one of each extended §3Package Crafter§r listed on the right. Put an §3Unpackager§r on top of each one, and then a §3Packager§r anywhere you want. These are all AE2 devices, so you\u0027ll need to connect them to an ME Network.\n\nNext, right-click the §3Package Recipe Encoder§r, and you should see a button saying \"Processing\": this button cycles through recipe types, including the various Extended Crafting tables. You\u0027ll have to choose the appropriate table for the recipe you want to encode.\n\n§6Holders§r must be encoded in pairs: one for the Packager, and one for the Unpackager. Select the appropriate table for the recipe, look up the recipe you want to encode, and press §6[+]§r in §bJEI§r to fill it in. Put two Holders in the top-left slot and press Save to encode the recipe to both of them. Finally, put each Holder into the respective machines.\n\nIf you\u0027ve done everything correctly, you should see the item appear as craftable in a Terminal.\n\nWhile it might seem that the crafting process is slow, §ePackagedAuto is excellent at parallelizing§r. You can surround an Unpackager with Crafters and it will use all of them. It\u0027s also possible to add more Unpackagers with Crafters to keep up with the Packager, as long as the Holders are all the same.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27791,7 +27791,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Lunar Mining Station§r is a large multiblock structure used for mining gases from the moon. It is an excellent (though not the only) source of §9Deuterium§r or §9Helium-3§r, depending on what kind of §6Rover§r you use. \n\nRovers only have a 10% chance to break while mining, so a stack of them will last quite a while.\n\nWhile both available recipes require §eMV power§r, you can overclock it with higher tiers of power. The positions of hatches and buses can be swapped with any §6LuV Machine Casing§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.\n\nBecause this structure must be placed on the Moon, it is a good idea to use mechanisms like §aEnder Tanks§r or a §6Quantum Link Chamber§r for teleporting the fluids back to your base.\n\nMake sure to keep it chunk-loaded!\n",
+          "desc:8": "The §3Lunar Mining Station§r is a large multiblock structure used for mining gases from the moon. It is an excellent (though not the only) source of §9Deuterium§r or §9Helium-3§r, depending on what kind of §6Rover§r you use. \n\nRovers only have a 10% chance to break while mining, so a stack of them will last quite a while.\n\nWhile both available recipes require §eMV power§r, you can overclock it with higher tiers of power. The positions of hatches and buses can be swapped with any §6LuV Machine Casing§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.\n\nBecause this structure must be placed on the Moon, it is a good idea to use mechanisms like §aEnder Tanks§r or a §6Quantum Link Chamber§r for teleporting the fluids back to your base.\n\nMake sure to keep it chunk-loaded!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31958,7 +31958,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32265,7 +32265,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32628,7 +32628,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33608,7 +33608,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "What?!\n§6STEAM DYNAMO§r is evolving!\n\nUpgrade kits can be applied to Thermal Expansion Dynamos, machines, and even Portable Tanks. Machines and dynamos get additional augment slots.\n\nWhen applied to a dynamo, it increases the §apower generation and fuel burn rate to 150%§r.\n\nIncreases the base capacity of Portable Tanks to §a200 buckets§r.\n\nAllows machines operate at §a150% of base power per tick§r. The more power a machine can use, the faster it works.\n",
+          "desc:8": "What?!\n§6STEAM DYNAMO§r is evolving!\n\nUpgrade kits can be applied to Thermal Expansion Dynamos, machines, and even Portable Tanks. Machines and dynamos get additional augment slots.\n\nWhen applied to a dynamo, it increases the §apower generation and fuel burn rate to 150%§r.\n\nIncreases the base capacity of Portable Tanks to §a200 buckets§r.\n\nAllows machines operate at §a150% of base power per tick§r. The more power a machine can use, the faster it works.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34095,7 +34095,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Crystal Processor Mainframe§r is the first Tier Eight circuit.\n\nThis is the first tier of Circuit which must be §2researched§r in the §3Research Station§r.\n\nAlong with things you already know how to make, this needs §6HSS-E Frames§r.\n\nThese are required for crafting the §3ZPM Circuit Assembler§r. As usual, these are extremely expensive: invest in the next theme of circuits instead of trying to mass-produce these.\n",
+          "desc:8": "The §6Crystal Processor Mainframe§r is the first Tier Eight circuit.\n\nThis is the first tier of Circuit which must be §2researched§r in the §3Research Station§r.\n\nAlong with things you already know how to make, this needs §6HSS-E Frames§r.\n\nThese are required for crafting the §3ZPM Circuit Assembler§r. As usual, these are extremely expensive: invest in the next theme of circuits instead of trying to mass-produce these.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34162,7 +34162,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6ZPM Machine Hulls§r are made with §2Naquadah Alloy Plates,§r but you\u0027ll notice they also need §2Polybenzimidazole§r.\n\nZPM stands for Zero Point Module.\n\nThis is the last tier of machine that\u0027s sensible to produce before you reach the §dCreative Tank§r. Multiblock hatches are a different matter: feel free to upgrade your §3EBF§rs to Ultimate Voltage, if you can handle the power drain.\n",
+          "desc:8": "§6ZPM Machine Hulls§r are made with §2Naquadah Alloy Plates,§r but you\u0027ll notice they also need §2Polybenzimidazole§r.\n\nZPM stands for Zero Point Module.\n\nThis is the last tier of machine that\u0027s sensible to produce before you reach the §dCreative Tank§r. Multiblock hatches are a different matter: feel free to upgrade your §3EBF§rs to Ultimate Voltage, if you can handle the power drain.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34607,7 +34607,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34846,7 +34846,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts both LV and MV Distillery. §2\n\nIf you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r. Therefore, it is recommended for fluids with only one useful output, like §9Biomass§r, §9Diluted Sulfuric Acid§r, and §9Diluted Hydrochloric Acid§r.\n\nHowever, the Distillation Tower is recommended for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nYou\u0027re going to need it soon!\n\n",
+          "desc:8": "§oNote: this quest accepts both LV and MV Distillery. §2\n\nIf you are distilling Ethanol, you now need an MV Distillery.\n\n§rThe §3Distillery§r is a single-block machine which only outputs one distillate out of several and §cdiscards§r the rest. You can use this now to get §9Ethanol§r from §9Biomass§r, or to selectively distill §9Oil§r in multiple steps to §9Ethylene§r. Its advantage over the full Tower, apart from cost, is its §denergy efficiency§r. Therefore, it is recommended for fluids with only one useful output, like §9Biomass§r, §9Diluted Sulfuric Acid§r, and §9Diluted Hydrochloric Acid§r.\n\nHowever, the Distillation Tower is recommended for advanced chemistry, as most things have more than one important output: §9Fermented Biomass§r, §9Charcoal Byproducts§r from your §3Pyrolyse Oven§r, and the entire line of petrochemicals from §9Oil§r, to name a few.\n\nYou\u0027re going to need it soon!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36570,7 +36570,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you continue to progress, crafting times for more advanced §3Electric Blast Furnace§r recipes will continue to increase. More advanced coils increase the operating temperature so you can smelt more advanced materials, §2and they also grant energy efficiency bonuses and speed bonuses to overclocking.§r\n\nDespite this, you\u0027ll still need to get your infrastructure for smelting, as well as for power generation, up to snuff.\n\nYou don\u0027t need to get all eight of these completed and running just yet, but plan to at some point in the future. Instead of upgrading existing EBFs, have them passively automating a stock of materials and build new EBFs with higher specifications for new materials.\n\n",
+          "desc:8": "As you continue to progress, crafting times for more advanced §3Electric Blast Furnace§r recipes will continue to increase. More advanced coils increase the operating temperature so you can smelt more advanced materials, §2and they also grant energy efficiency bonuses and speed bonuses to overclocking.§r\n\nDespite this, you\u0027ll still need to get your infrastructure for smelting, as well as for power generation, up to snuff.\n\nYou don\u0027t need to get all eight of these completed and running just yet, but plan to at some point in the future. Instead of upgrading existing EBFs, have them passively automating a stock of materials and build new EBFs with higher specifications for new materials.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36675,7 +36675,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36742,7 +36742,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36809,7 +36809,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36876,7 +36876,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36944,7 +36944,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37011,7 +37011,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37079,7 +37079,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37146,7 +37146,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37251,7 +37251,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37318,7 +37318,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37385,7 +37385,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37452,7 +37452,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37519,7 +37519,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37586,7 +37586,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37653,7 +37653,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37720,7 +37720,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37788,7 +37788,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37856,7 +37856,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37923,7 +37923,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37990,7 +37990,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 64,
@@ -38057,7 +38057,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38289,7 +38289,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Neutronium§r is a hyper-dense material normally found in the hearts of neutron stars: the collapsed cores of stars between ten and thirty times the size of the sun.\n\nFun fact: a single neutronium block is approximately 2884 million metric tons and somewhere around 600000K, yet you\u0027re somehow capable of holding one with your bare hands. Don\u0027t think about it too much.\n\nNeutronium is made from fusing molten §9Naquadria§r, a super-enriched form of §6Naquadah§r, with molten §9Americium§r, §2or from the Tier Eight Micro Miner.§r\n\nAfter getting §6Chaotic Fusion Injectors§r, you might consider using Tier Nine Micro Miners to supplement the fusion, as it is net-positive for Neutronium. These miners are expensive though, so it\u0027s up to you.\n",
+          "desc:8": "§6Neutronium§r is a hyper-dense material normally found in the hearts of neutron stars: the collapsed cores of stars between ten and thirty times the size of the sun.\n\nFun fact: a single neutronium block is approximately 2884 million metric tons and somewhere around 600000K, yet you\u0027re somehow capable of holding one with your bare hands. Don\u0027t think about it too much.\n\nNeutronium is made from fusing molten §9Naquadria§r, a super-enriched form of §6Naquadah§r, with molten §9Americium§r, §2or from the Tier Eight Micro Miner.§r\n\nAfter getting §6Chaotic Fusion Injectors§r, you might consider using Tier Nine Micro Miners to supplement the fusion, as it is net-positive for Neutronium. These miners are expensive though, so it\u0027s up to you.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38699,7 +38699,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38766,7 +38766,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38833,7 +38833,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38900,7 +38900,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38967,7 +38967,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39034,7 +39034,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39102,7 +39102,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39170,7 +39170,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39237,7 +39237,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39305,7 +39305,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39372,7 +39372,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39439,7 +39439,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39506,7 +39506,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39573,7 +39573,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39640,7 +39640,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39707,7 +39707,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39774,7 +39774,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39841,7 +39841,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39908,7 +39908,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39975,7 +39975,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40042,7 +40042,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40109,7 +40109,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40174,7 +40174,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40241,7 +40241,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40308,7 +40308,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40375,7 +40375,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40442,7 +40442,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40509,7 +40509,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40576,7 +40576,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40643,7 +40643,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40710,7 +40710,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40777,7 +40777,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40845,7 +40845,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40912,7 +40912,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40979,7 +40979,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41046,7 +41046,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41113,7 +41113,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 64,
@@ -41180,7 +41180,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41248,7 +41248,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41316,7 +41316,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41383,7 +41383,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41450,7 +41450,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41517,7 +41517,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41584,7 +41584,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41651,7 +41651,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41718,7 +41718,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41785,7 +41785,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41852,7 +41852,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41919,7 +41919,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41986,7 +41986,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42053,7 +42053,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42120,7 +42120,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42187,7 +42187,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42254,7 +42254,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42321,7 +42321,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42389,7 +42389,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": " ",
+          "desc:8": "Required in §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42649,7 +42649,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Climbing the ladder of fissile materials will require some specific raw materials and machinery.\n\n§2Uraninite is the base resource you will need, which comes from Uraninite and Pitchblende Ore. You will need to react it with Fluorine and Hydrofluoric Acid in a Chemical Reactor to form Uranium Hexafluoride.\n\nThe Uranium Hexafluoride must then be separated into Depleted and Enriched Uranium Hexafluoride in a Centrifuge. The Depleted UF₆ will grant Uranium-238, while the Enriched UF₆ will grant Uranium-235.\n\nYou may find Red Granite as a viable source of Uranium-238 if you are able to process it in large enough volumes to offset the low base chance.\n\n",
+          "desc:8": "Climbing the ladder of fissile materials will require some specific raw materials and machinery.\n\n§2Uraninite is the base resource you will need, which comes from Uraninite and Pitchblende Ore. You will need to react it with Fluorine and Hydrofluoric Acid in a Chemical Reactor to form Uranium Hexafluoride.\n\nThe Uranium Hexafluoride must then be separated into Depleted and Enriched Uranium Hexafluoride in a Centrifuge. The Depleted UF₆ will grant Uranium-238, while the Enriched UF₆ will grant Uranium-235.\n\nYou may find Red Granite as a viable source of Uranium-238 if you are able to process it in large enough volumes to offset the low base chance.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42722,7 +42722,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Neptunium 236 or 237.§r\n\nLow-Enriched Neptunium 236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium 237§r to §6Neptunium 236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN 236§r gives a small bit of Neptunium 237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.\n",
+          "desc:8": "§oNote: this quest accepts Neptunium 236 or 237.§r\n\nLow-Enriched Neptunium 236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium 237§r to §6Neptunium 236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN 236§r gives a small bit of Neptunium 237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43472,7 +43472,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6String§r and §6Coal Dust§r can be baked together into a §6Carbon Mesh§r in an §3Alloy Furnace§r.\n\nCombine that with §6Pulsating Dust§r to get a §6Pulsating Mesh§r.\n\n",
+          "desc:8": "§6String§r and §6Coal Dust§r can be baked together into a §6Carbon Mesh§r in an §3Alloy Furnace§r.\n\nCombine that with §6Pulsating Dust§r to get a §6Pulsating Mesh§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45627,7 +45627,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "When you first started the pack, we told you that ore doubling can wait, and that\u0027s true... But you will need to start doing some rudimentary ore processing for §ebyproducts§r.\n\nByproducts are additional materials that can only be obtained from processing ores in certain machines. For example, there is no \"Gallium Ore\" or \"Arsenic Ore\". You get §6Gallium§r and §6Arsenic §ras a byproduct from processing other ores.\n\nOres have various means of processing, and eventually you\u0027ll use machine pipelines to process ores in specific ways to optimize what byproducts you gain. You can look at the §6Ore Byproduct Page§r of an ore in §bJEI§r, accessed by pressing \u0027U\u0027 on an ore and navigating to the byproduct tab, to see the required route to obtain desired byproducts. \n\nThe relevant machines are as follows:\n \n- §3Macerator§r: turns ores into §6Crushed Ores§r, Crushed Ores into §6Impure Dusts§r, and §6Purified Crushed Ores§r into §6Pure Dusts§r. Higher tiers of macerators have byproduct slots and gain a chance to get a full pile of byproduct from ores and both types of crushed ores.\n\n- §3Ore Washer§r: cleans Crushed Ores with §9Water§r, making Purified Crushed Ores§r, and 1/3 of a byproduct dust. Using §9Distilled Water§r makes them go faster. §2You can also perform a simple wash with this similar to Cauldron washing, which is extremely fast, but grants no byproducts.§r\n\n- §3Chemical Bath§r: §2uses Sodium Persulfate or Mercury to purify certain ores, granting a chance to yield a full pile of a byproduct.\n\n§r- §3Centrifuge§r: separates Pure or Impure dusts into the final material, producing 1/9 byproduct dust.\n\n- §3Electrolyzer§r: uses power to split compounds into individual elements, sometimes gaining useful byproducts in the process. §2Be warned that certain dusts may be better to directly smelt instead of electrolyze!§r\n\n- §3Thermal Centrifuge§r: not to be confused with the regular Centrifuge. §2Less slow and power-hungry now, but still so. However, it yields 1/3 byproduct dust, and macerating the Centrifuged Ore can grant a special third byproduct.\n\n§2- Sifter: filters high-quality Gems from Purified Crushed gem Ores for an overall higher yield.\n\n- Electromagnetic Separator: filters magnetic metals from certain ores, increasing their yields.§r\n\nYour first forays into ore processing for byproducts will be the Electrolyzer and the Centrifuge.\n",
+          "desc:8": "When you first started the pack, we told you that ore doubling can wait, and that\u0027s true... But you will need to start doing some rudimentary ore processing for §ebyproducts§r.\n\nByproducts are additional materials that can only be obtained from processing ores in certain machines. For example, there is no \"Gallium Ore\" or \"Arsenic Ore\". You get §6Gallium§r and §6Arsenic §ras a byproduct from processing other ores.\n\nOres have various means of processing, and eventually you\u0027ll use machine pipelines to process ores in specific ways to optimize what byproducts you gain. You can look at the §6Ore Byproduct Page§r of an ore in §bJEI§r, accessed by pressing \u0027U\u0027 on an ore and navigating to the byproduct tab, to see the required route to obtain desired byproducts. \n\nThe relevant machines are as follows:\n \n- §3Macerator§r: turns ores into §6Crushed Ores§r, Crushed Ores into §6Impure Dusts§r, and §6Purified Crushed Ores§r into §6Pure Dusts§r. Higher tiers of macerators have byproduct slots and gain a chance to get a full pile of byproduct from ores and both types of crushed ores.\n\n- §3Ore Washer§r: cleans Crushed Ores with §9Water§r, making Purified Crushed Ores§r, and 1/3 of a byproduct dust. Using §9Distilled Water§r makes them go faster. §2You can also perform a simple wash with this similar to Cauldron washing, which is extremely fast, but grants no byproducts.§r\n\n- §3Chemical Bath§r: §2uses Sodium Persulfate or Mercury to purify certain ores, granting a chance to yield a full pile of a byproduct.\n\n§r- §3Centrifuge§r: separates Pure or Impure dusts into the final material, producing 1/9 byproduct dust.\n\n- §3Electrolyzer§r: uses power to split compounds into individual elements, sometimes gaining useful byproducts in the process. §2Be warned that certain dusts may be better to directly smelt instead of electrolyze!§r\n\n- §3Thermal Centrifuge§r: not to be confused with the regular Centrifuge. §2Less slow and power-hungry now, but still so. However, it yields 1/3 byproduct dust, and macerating the Centrifuged Ore can grant a special third byproduct.\n\n§2- Sifter: filters high-quality Gems from Purified Crushed gem Ores for an overall higher yield.\n\n- Electromagnetic Separator: filters magnetic metals from certain ores, increasing their yields.§r\n\nYour first forays into ore processing for byproducts will be the Electrolyzer and the Centrifuge.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45667,7 +45667,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§6Uraninite Ore§r is the first source of §6Pulsating Dust§r but is not a very good one in the long term. Instead you should make §6Resonant Clathrates§r, which are an infinitely-renewable and effective source of Pulsating Dust.\n\nResonant Clathrates are made by melting §6Ender Pearls§r with a §3Fluid Extractor§r into §9Resonant Ender§r, then mixing that with §6Nether Quartz§r in an MV or better §3Chemical Reactor§r. Smelting this clathrate gives Pulsating Dust.\n\nWith Resonant Clathrates now accessible, everything you need for crafting §6Pulsating Polymer Clay§r can be automated in a net-positive loop.§r Doing so is the first step in automation of §bDeep Mob Evolution§r, which is §ea primary source of important materials for the rest of the pack§r.\n\nThe exact implementation is up to you. Make use of the various LV and MV machines you have, and look through §bJEI§r and the Processing Lines Tab for the ways to get infinite sources of each ingredient (like §aEnderman Models§r for pearls).\n\n",
+          "desc:8": "§oThis is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.\n\n§6Uraninite Ore§r is the first source of §6Pulsating Dust§r but is not a very good one in the long term. Instead you should make §6Resonant Clathrates§r, which are an infinitely-renewable and effective source of Pulsating Dust.\n\nResonant Clathrates are made by melting §6Ender Pearls§r with a §3Fluid Extractor§r into §9Resonant Ender§r, then mixing that with §6Nether Quartz§r in an MV or better §3Chemical Reactor§r. Smelting this clathrate gives Pulsating Dust.\n\nWith Resonant Clathrates now accessible, everything you need for crafting §6Pulsating Polymer Clay§r can be automated in a net-positive loop.§r Doing so is the first step in automation of §bDeep Mob Evolution§r, which is §ea primary source of important materials for the rest of the pack§r.\n\nThe exact implementation is up to you. Make use of the various LV and MV machines you have, and look through §bJEI§r and the Processing Lines Tab for the ways to get infinite sources of each ingredient (like §aEnderman Models§r for pearls).",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45802,7 +45802,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Working with fluids is a bit tricky. AE2 §aPatterns§r have no notion of fluids, meaning that you have to §ededicate separate machines to specific fluid combinations§r, ensuring they remain stocked.\n\nAE2 has a §aFluid Import Bus§r and §aFluid Export Bus§r, and this is the usual go-to for players experienced with AE2. A §aCapacity Card§r will let you export or import five specific chemicals through a single bus, which is enough for, say, §3Chemical Reactors§r. However, §cexcessive use of AE2 buses will cause lag§r.\n\nA better approach for §bGregTech§r machines is using a stocked §aFluid Interface§r and a §aPump§r or a §aFluid Regulator§r. This works almost identically to passive autocrafting with Robot Arms, and §aFluid Filters§r can allow routing specific fluids to adjacent machines. This method is much more performant, scaling without causing lag like buses. For machines from other mods, you can route fluids from a Fluid Interface with conduits.\n\n",
+          "desc:8": "Working with fluids is a bit tricky. AE2 §aPatterns§r have no notion of fluids, meaning that you have to §ededicate separate machines to specific fluid combinations§r, ensuring they remain stocked.\n\nAE2 has a §aFluid Import Bus§r and §aFluid Export Bus§r, and this is the usual go-to for players experienced with AE2. A §aCapacity Card§r will let you export or import five specific chemicals through a single bus, which is enough for, say, §3Chemical Reactors§r. However, §cexcessive use of AE2 buses will cause lag§r.\n\nA better approach for §bGregTech§r machines is using a stocked §aFluid Interface§r and a §aPump§r or a §aFluid Regulator§r. This works almost identically to passive autocrafting with Robot Arms, and §aFluid Filters§r can allow routing specific fluids to adjacent machines. This method is much more performant, scaling without causing lag like buses. For machines from other mods, you can route fluids from a Fluid Interface with conduits.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45842,7 +45842,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your §3Chemical Reactors§r will be making a lot of different fluids. You\u0027ll need to manage the logistics of routing and storing all the different fluids you\u0027re automating.\n\nWherever possible, having one Chemical Reactor output directly into another machine that needs its output chemical saves you from having to figure out additional storage and routing. §aFluid Filters§r and §aPump covers§r are very useful for moving fluids around a compact processing pipeline.\n\nBut what about the final output fluids that you need elsewhere?\n\nOne option is to use the output tanks of the Chemical Reactors as a small storage buffer, letting it back up and stop crafting automatically. A §aFluid Storage Bus§r on the machine will expose the fluid to your ME Network. Whenever you need some of this fluid, your AE2 system will pull the needed fluid out and the machine will resume processing.\n\nThere\u0027s some catches with this approach though. First is that the inaccessible input tanks will also show up in AE but you won\u0027t be able to access them. You will want to set the Storage Bus to §eExport Only§r so AE doesn\u0027t try to store random fluids in the Chemical Reactor, and you may want to §ereduce the priority§r of the Storage Bus as well: this will signal to AE that you want it to remove fluids from that location first. Also, if multiple fluids are produced, §ethe machine will not resume processing if it doesn\u0027t have room for all fluid outputs§r.\n\nWhen you get access to them, it\u0027s probably just better to use single-fluid-formatted §aFluid Storage Cells§r and dump outputs into AE via Fluid Interfaces. You can fill up the cells, then pull the fluids out wherever else you need them. An alternative to this is storage buses on §3Gregtech Tanks and Drums§r.\n\n",
+          "desc:8": "Your §3Chemical Reactors§r will be making a lot of different fluids. You\u0027ll need to manage the logistics of routing and storing all the different fluids you\u0027re automating.\n\nWherever possible, having one Chemical Reactor output directly into another machine that needs its output chemical saves you from having to figure out additional storage and routing. §aFluid Filters§r and §aPump covers§r are very useful for moving fluids around a compact processing pipeline.\n\nBut what about the final output fluids that you need elsewhere?\n\nOne option is to use the output tanks of the Chemical Reactors as a small storage buffer, letting it back up and stop crafting automatically. A §aFluid Storage Bus§r on the machine will expose the fluid to your ME Network. Whenever you need some of this fluid, your AE2 system will pull the needed fluid out and the machine will resume processing.\n\nThere\u0027s some catches with this approach though. First is that the inaccessible input tanks will also show up in AE but you won\u0027t be able to access them. You will want to set the Storage Bus to §eExport Only§r so AE doesn\u0027t try to store random fluids in the Chemical Reactor, and you may want to §ereduce the priority§r of the Storage Bus as well: this will signal to AE that you want it to remove fluids from that location first. Also, if multiple fluids are produced, §ethe machine will not resume processing if it doesn\u0027t have room for all fluid outputs§r.\n\nWhen you get access to them, it\u0027s probably just better to use single-fluid-formatted §aFluid Storage Cells§r and dump outputs into AE via Fluid Interfaces. You can fill up the cells, then pull the fluids out wherever else you need them. An alternative to this is storage buses on §3Gregtech Tanks and Drums§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46648,7 +46648,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Vanilla enchanting mechanics are just so tedious. Don\u0027t you wish you could just make a specific enchant instead of grinding levels and rolling the dice?\n\n§eOh wait- you can!§r\n\nThe §3Dark Steel Enchanter§r is a device that uses §6Book and Quill§r, experience levels, lapis, and enchant-specific items to create an §6Enchanted Book§r with an enchantment of your choosing. Then you can just use an Anvil to enchant your item like usual.\n\nThis is a good time to bring up the §dHolding§r enchant, which can be applied to most items from §bThermal Foundation§r and its related mods. Holding can be crafted up to level IV, which massively boosts the storage capacity of items like §aSatchels§r, §aFlux Capacitors§r, and §aPortable Tanks§r.\n\nYou can also make the §dMending§r enchant which allows you to infinitely repair the item when damaged using §9Liquid XP§r in an §bEnderIO §aFluid Tank§r or §aPressurized Fluid Tank§r. Keep in mind that §dMending§r does not work on §3Gregtech Tools§r.\n\n",
+          "desc:8": "Vanilla enchanting mechanics are just so tedious. Don\u0027t you wish you could just make a specific enchant instead of grinding levels and rolling the dice?\n\n§eOh wait- you can!§r\n\nThe §3Dark Steel Enchanter§r is a device that uses §6Book and Quill§r, experience levels, lapis, and enchant-specific items to create an §6Enchanted Book§r with an enchantment of your choosing. Then you can just use an Anvil to enchant your item like usual.\n\nThis is a good time to bring up the §dHolding§r enchant, which can be applied to most items from §bThermal Foundation§r and its related mods. Holding can be crafted up to level IV, which massively boosts the storage capacity of items like §aSatchels§r, §aFlux Capacitors§r, and §aPortable Tanks§r.\n\nYou can also make the §dMending§r enchant which allows you to infinitely repair the item when damaged using §9Liquid XP§r in an §bEnderIO §aFluid Tank§r or §aPressurized Fluid Tank§r. Keep in mind that §dMending§r does not work on §3Gregtech Tools§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46869,7 +46869,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A complex material from §bThermal Expansion§r cooked in an §3Electric Blast Furnace§r, or a §2Alloy Blast Smelter§r.\n\n§6Enderium§r is incredibly slow without overclocking. §2You can use small amounts of Krypton from Liquid Ender Air distillation to significantly decrease the smelting time.§r\n\nAs with all later blast furnace materials, dedicate a furnace to keeping these in stock and have it running constantly to ensure a stable supply (turning it off when you have an acceptably vast stockpile).\n\nIn addition to its other uses, Enderium gets you access to §aResonant Upgrade Kits§r for machines and the §6Resonant Satchel§r. These quests can be found on the §eProgression§r tab.\n\n",
+          "desc:8": "A complex material from §bThermal Expansion§r cooked in an §3Electric Blast Furnace§r, or a §2Alloy Blast Smelter§r.\n\n§6Enderium§r is incredibly slow without overclocking. §2You can use small amounts of Krypton from Liquid Ender Air distillation to significantly decrease the smelting time.§r\n\nAs with all later blast furnace materials, dedicate a furnace to keeping these in stock and have it running constantly to ensure a stable supply (turning it off when you have an acceptably vast stockpile).\n\nIn addition to its other uses, Enderium gets you access to §aResonant Upgrade Kits§r for machines and the §6Resonant Satchel§r. These quests can be found on the §eProgression§r tab.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47663,7 +47663,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you\u0027ve dealt with the dragon, seek the bedrock structure floating mid-air around the edge of the main island.\n\nCarefully throw an §6Ender Pearl§r inside one (where there\u0027s a portal-looking texture) to teleport to a distant island.\n\nOnce there, gather some §6Chorus Flowers§r. You\u0027ll have to smash the flower itself to get it: simply breaking the stem of a plant will not drop the flower.\n\nAnd finally, obtain some §6Draconium Dust§r. Its ore spawns in small quantities, but should be everywhere.\n\nTo get back to the main island, throw an Ender Pearl into another bedrock portal structure.\n\n",
+          "desc:8": "Now that you\u0027ve dealt with the dragon, seek the bedrock structure floating mid-air around the edge of the main island.\n\nCarefully throw an §6Ender Pearl§r inside one (where there\u0027s a portal-looking texture) to teleport to a distant island.\n\nOnce there, gather some §6Chorus Flowers§r. You\u0027ll have to smash the flower itself to get it: simply breaking the stem of a plant will not drop the flower.\n\nAnd finally, obtain some §6Draconium Dust§r. Its ore spawns in small quantities, but should be everywhere.\n\nTo get back to the main island, throw an Ender Pearl into another bedrock portal structure.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48137,7 +48137,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Circuits along this line are LuV, and can all be substituted in recipes.\n\nThe pattern stays the same: the rightmost circuit comes in larger quantities and is overall easier to produce.\n\nMake sure to set up the wetware board production as soon as possible! These take a very long time to make.\n\nIt\u0027s LuV, not LUV.\n",
+          "desc:8": "Circuits along this line are LuV, and can all be substituted in recipes.\n\nThe pattern stays the same: the rightmost circuit comes in larger quantities and is overall easier to produce.\n\nMake sure to set up the wetware board production as soon as possible! These take a very long time to make.\n\nIt\u0027s LuV, not LUV.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48510,7 +48510,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Wyvern Fusion Injectors§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy.\n\nSee the §bDraconic Evolution§r manual for more information on the material requirements for each tier, and more information on the §6Stabilizers§r and §6Pylons§r.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Wyvern Fusion Injectors§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy.\n\nSee the §bDraconic Evolution§r manual for more information on the material requirements for each tier, and more information on the §6Stabilizers§r and §6Pylons§r.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Tank§r, as it requires large amounts of §6Awakened Draconium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48589,7 +48589,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis is represented in a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation.§r\n\nNow that you have acquired §6Steel§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Evolution§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n",
+          "desc:8": "§oThis is represented in a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation.§r\n\nNow that you have acquired §6Steel§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Evolution§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48998,7 +48998,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.\n",
+          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicon Rubber, as well as being a more efficient way to coat wires.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49122,7 +49122,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Farming Station§r is a machine that automates growing and harvesting trees and crops around it, based on what items you put in it.\n\nThe Farming Station will principally collect crops, saplings, and wood, but it will also collect things like §6Apples§r from Oak Trees and §6Sticky Resin§r from Rubber Trees. It can also collect leaves if you want it to.\n\nLike other §bEnderIO§r machines, it requires an §6RF capacitor§r. The quality of capacitor affects the overall size of the farm as well as the speed and energy at which it operates.\n\nYou can configure which crops or tree types will be planted relative to the Farming Station by placing the crop or sapling in the various quadrants in the GUI. Clicking the lock button will ensure that the stack placed there won\u0027t be completely consumed, as that could lead to plants migrating to other quadrants.\n\nIn addition to power, the Farming Station§r requires specific §etools§r (and usually a supply of §9Water§r) to operate. If you\u0027re missing anything, the machine will refuse to operate and displays a message over itself to let you know.\n\nFor planting §6crops§r or §6saplings§r, you need a §aHoe§r.\nFor chopping §6trees§r, you need an §aAxe§r. To collect §6leaves§r, you also need §aShears§r.\n\nTool durability is consumed as the farm performs work, so the tools will eventually break. You can make §aStone Tools§r from a cobblestone generator and some sticks, or even §aDiamond Tools§r using diamonds from your §3Deep Mob Evolution§r setup.\n\nAlternately, you can invest in fancier tools such as th§re §aDark Backhoe§r (which is designed for use in the Farming Station), or even unbreakable tools much later like the §aFlux Infused Axe§r and §aOmniwrench§r (shears).\n\nThe Farming Station also has a lesser-known feature: it respects enchantments and upgrades on your tools. Tools with §eEmpowered§r upgrades will be ejected into the output slots when they run out of charge (if they don\u0027t break first). Tools with the §eMending§r enchantment are similarly ejected when they are about to break.\n\nYou can use these properties to your advantage.\n\n",
+          "desc:8": "The §3Farming Station§r is a machine that automates growing and harvesting trees and crops around it, based on what items you put in it.\n\nThe Farming Station will principally collect crops, saplings, and wood, but it will also collect things like §6Apples§r from Oak Trees and §6Sticky Resin§r from Rubber Trees. It can also collect leaves if you want it to.\n\nLike other §bEnderIO§r machines, it requires an §6RF capacitor§r. The quality of capacitor affects the overall size of the farm as well as the speed and energy at which it operates.\n\nYou can configure which crops or tree types will be planted relative to the Farming Station by placing the crop or sapling in the various quadrants in the GUI. Clicking the lock button will ensure that the stack placed there won\u0027t be completely consumed, as that could lead to plants migrating to other quadrants.\n\nIn addition to power, the Farming Station§r requires specific §etools§r (and usually a supply of §9Water§r) to operate. If you\u0027re missing anything, the machine will refuse to operate and displays a message over itself to let you know.\n\nFor planting §6crops§r or §6saplings§r, you need a §aHoe§r.\nFor chopping §6trees§r, you need an §aAxe§r. To collect §6leaves§r, you also need §aShears§r.\n\nTool durability is consumed as the farm performs work, so the tools will eventually break. You can make §aStone Tools§r from a cobblestone generator and some sticks, or even §aDiamond Tools§r using diamonds from your §3Deep Mob Evolution§r setup.\n\nAlternately, you can invest in fancier tools such as th§re §aDark Backhoe§r (which is designed for use in the Farming Station), or even unbreakable tools much later like the §aFlux Infused Axe§r and §aOmniwrench§r (shears).\n\nThe Farming Station also has a lesser-known feature: it respects enchantments and upgrades on your tools. Tools with §eEmpowered§r upgrades will be ejected into the output slots when they run out of charge (if they don\u0027t break first). Tools with the §eMending§r enchantment are similarly ejected when they are about to break.\n\nYou can use these properties to your advantage.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49188,7 +49188,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Smart Item Filter§r from §3GregTech§r is an important tool when automating otherwise troublesome machines. It is a cover which filters item transfer based on whether a valid recipe exists for those items in a specified machine.\n\nThis is powerful in combination with movement covers like the §6Robot Arm§r. If you place this filter on the §eElectrolyzer§r mode in a Robot Arm set to §eSupply Exact§r mode, the Robot Arm will transfer precisely the right amounts of all valid items into an §3Electrolyzer§r so it will operate without clogging. There\u0027s no other way to accomplish this feat!\n\nThis filter also has §eSifter§r and §eCentrifuge§r modes for use with those machines. It does not have modes for any other machines.\n\nThe §eDefault§r button lets you click it to §eIgnore Fluids§r, which is useful when you have recipes that also require fluids (like §9Hydrogen§r in an Electrolyzer). Since Robot Arms can\u0027t move fluids, it would otherwise prevent the cover from working.\n",
+          "desc:8": "The §6Smart Item Filter§r from §3GregTech§r is an important tool when automating otherwise troublesome machines. It is a cover which filters item transfer based on whether a valid recipe exists for those items in a specified machine.\n\nThis is powerful in combination with movement covers like the §6Robot Arm§r. If you place this filter on the §eElectrolyzer§r mode in a Robot Arm set to §eSupply Exact§r mode, the Robot Arm will transfer precisely the right amounts of all valid items into an §3Electrolyzer§r so it will operate without clogging. There\u0027s no other way to accomplish this feat!\n\nThis filter also has §eSifter§r and §eCentrifuge§r modes for use with those machines. It does not have modes for any other machines.\n\nThe §eDefault§r button lets you click it to §eIgnore Fluids§r, which is useful when you have recipes that also require fluids (like §9Hydrogen§r in an Electrolyzer). Since Robot Arms can\u0027t move fluids, it would otherwise prevent the cover from working.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49332,7 +49332,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Machine Controller§r is a cover that manages the operation of §bGregTech§r machines, similar to a §aSoft Hammer§r. These are crucial for §epassive automation§r, where a machine is dedicated to keeping something in stock for you.\n\n\"Machines\" here is broader than you might think. It of course works on single-block machines, but can also be used on §eMultiblock Controllers§r like your §3Electronic Blast Furnace§r. But it\u0027s even more flexible than that: you can use it on any §bGregTech§r block that accepts transfer covers, as long as the controllable cover is placed on it first! This means it also works for things like §6Chests§r, §6Drums§r, and Multiblock inputs.\n\nThe cover works by detecting a §eredstone signal§r. By default, the entire machine will be disabled if a sufficiently strong signal is detected by the cover.\n\nWhen you open the Machine Controller\u0027s GUI with a §aScrewdriver§r, you will see several options for configuring its behavior:\n\nThe strength of the signal required to trigger the Machine Controller is configurable using the top slider.\n\nAnother button allows you to select whether to control the whole machine (where applicable) or a specific cover. This lets you do things like stop moving items into a machine, but also allow the machine to continue working.\n\nSwitching from §eNormal§r to §eInverted§r mode will make the Machine Controller instead disable the machine until it receives the requisite redstone signal. This is often preferable when working with §6Level Emitters§r to prevent machines from starting up if your §eME Network§r is offline.\n\nSome use cases:\n• Control machines through vanilla redstone contraptions or a simple lever.\n\n• The §6Redstone Upgrades§r from §bStorage Drawers§r can be used when outputting into a drawer to make the drawer emit redstone that can control the machine.\n\n• When you progress to digital storage, an §6ME Level Emitter§r or §6ME Fluid Level Emitter§r can be used to emit signal based on specific items or fluids in your network.\n",
+          "desc:8": "The §6Machine Controller§r is a cover that manages the operation of §bGregTech§r machines, similar to a §aSoft Hammer§r. These are crucial for §epassive automation§r, where a machine is dedicated to keeping something in stock for you.\n\n\"Machines\" here is broader than you might think. It of course works on single-block machines, but can also be used on §eMultiblock Controllers§r like your §3Electronic Blast Furnace§r. But it\u0027s even more flexible than that: you can use it on any §bGregTech§r block that accepts transfer covers, as long as the controllable cover is placed on it first! This means it also works for things like §6Chests§r, §6Drums§r, and Multiblock inputs.\n\nThe cover works by detecting a §eredstone signal§r. By default, the entire machine will be disabled if a sufficiently strong signal is detected by the cover.\n\nWhen you open the Machine Controller\u0027s GUI with a §aScrewdriver§r, you will see several options for configuring its behavior:\n\nThe strength of the signal required to trigger the Machine Controller is configurable using the top slider.\n\nAnother button allows you to select whether to control the whole machine (where applicable) or a specific cover. This lets you do things like stop moving items into a machine, but also allow the machine to continue working.\n\nSwitching from §eNormal§r to §eInverted§r mode will make the Machine Controller instead disable the machine until it receives the requisite redstone signal. This is often preferable when working with §6Level Emitters§r to prevent machines from starting up if your §eME Network§r is offline.\n\nSome use cases:\n• Control machines through vanilla redstone contraptions or a simple lever.\n\n• The §6Redstone Upgrades§r from §bStorage Drawers§r can be used when outputting into a drawer to make the drawer emit redstone that can control the machine.\n\n• When you progress to digital storage, an §6ME Level Emitter§r or §6ME Fluid Level Emitter§r can be used to emit signal based on specific items or fluids in your network.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49399,7 +49399,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Processing Array§r is a §bGregTech§r multiblock that allows for processing multiple recipes in parallel in a single stucture and is extremely useful for saving space.\n\nUp to 16 of the same recipe can be processed in parallel by placing the machines for the recipe in exactly one §aMachine Access Interface§r in the multiblock structure, as well as the ingredients and non-consumable items (like §6Integrated Circuits§r) for the recipe you want to process in one or more input buses. While a recipe is running, the Machine Access Interface is §elocked§r and machines cannot be added or removed.\n\nNote that each machine will still draw the full voltage required for the recipe, which may be more than a single §aEnergy Input Hatch§r can provide. This is why the §6Processing Array§r has an astounding Hatch limit, and can support up to §e4 Energy Inputs§r on the structure. This allows you to get the needed 16 Amps of power to the machine from a single tier-appropriate §3CEF§r.\n\nProcessing Arrays distribute their buffered power at the appropriate voltage, so there\u0027s no danger of your machines exploding if you, for example, operate 16 HV machines off one amp of IV power.\n\nBecause the required number of Inputs, Outputs, and Casings is highly variable, this quest only asks you to craft the §6Processing Array Controller§r and the §aMachine Access Interface§r. Make sure your buses and hatches are large enough to hold the ingredients and outputs for the number of parallel crafts you\u0027re attempting, and that you\u0027re providing enough power for all those machines!\n\nAn advanced feature of the Processing Array is §eDistinct Bus Mode§r. This makes the Processing Array only consider a single item input bus at a time when determining whether it can run a recipe. This is useful when recipes for a particular machine require different catalyst items, like §6Integrated Circuits§r on different configurations or §6Extruder Shapes§r.\n\nDistinct Bus Mode may be enabled or disabled via the Processing Array controller by clicking in the designated area.\n\n",
+          "desc:8": "The §6Processing Array§r is a §bGregTech§r multiblock that allows for processing multiple recipes in parallel in a single stucture and is extremely useful for saving space.\n\nUp to 16 of the same recipe can be processed in parallel by placing the machines for the recipe in exactly one §aMachine Access Interface§r in the multiblock structure, as well as the ingredients and non-consumable items (like §6Integrated Circuits§r) for the recipe you want to process in one or more input buses. While a recipe is running, the Machine Access Interface is §elocked§r and machines cannot be added or removed.\n\nNote that each machine will still draw the full voltage required for the recipe, which may be more than a single §aEnergy Input Hatch§r can provide. This is why the §6Processing Array§r has an astounding Hatch limit, and can support up to §e4 Energy Inputs§r on the structure. This allows you to get the needed 16 Amps of power to the machine from a single tier-appropriate §3CEF§r.\n\nProcessing Arrays distribute their buffered power at the appropriate voltage, so there\u0027s no danger of your machines exploding if you, for example, operate 16 HV machines off one amp of IV power.\n\nBecause the required number of Inputs, Outputs, and Casings is highly variable, this quest only asks you to craft the §6Processing Array Controller§r and the §aMachine Access Interface§r. Make sure your buses and hatches are large enough to hold the ingredients and outputs for the number of parallel crafts you\u0027re attempting, and that you\u0027re providing enough power for all those machines!\n\nAn advanced feature of the Processing Array is §eDistinct Bus Mode§r. This makes the Processing Array only consider a single item input bus at a time when determining whether it can run a recipe. This is useful when recipes for a particular machine require different catalyst items, like §6Integrated Circuits§r on different configurations or §6Extruder Shapes§r.\n\nDistinct Bus Mode may be enabled or disabled via the Processing Array controller by clicking in the designated area.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50340,7 +50340,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Having trouble finding a biome? Never fear, the §6Nature’s Compass§r is here! For a very small price, you’ll be able to find any biome your heart pleases!\n\n§bRight-clicking§r with the Nature’s Compass in hand will open the §eSelect Biome GUI§r, where you can search any biome, modded or vanilla. Once you find the desired biome, double click or hit §aStart Search§r, and the compass will now point you in the direction of the biome, and tell you how far it it is.\n\nIn the top left of the Select Biome GUI, you can hit the §aInfo§r button for additional information on the biome. You can also press §aSort By§r to change how the biomes are organized.\n\nOnce you have found your desired biome, you can §bshift right-click§r while holding the compass to clear the selected biome. When no biome is selected, the compass will simply point to world spawn.\n",
+          "desc:8": "Having trouble finding a biome? Never fear, the §6Nature’s Compass§r is here! For a very small price, you’ll be able to find any biome your heart pleases!\n\n§bRight-clicking§r with the Nature’s Compass in hand will open the §eSelect Biome GUI§r, where you can search any biome, modded or vanilla. Once you find the desired biome, double click or hit §aStart Search§r, and the compass will now point you in the direction of the biome, and tell you how far it it is.\n\nIn the top left of the Select Biome GUI, you can hit the §aInfo§r button for additional information on the biome. You can also press §aSort By§r to change how the biomes are organized.\n\nOnce you have found your desired biome, you can §bshift right-click§r while holding the compass to clear the selected biome. When no biome is selected, the compass will simply point to world spawn.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50557,7 +50557,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Simulation Supercomputer§r is a multiblock structure that performs §bDeep Mob Evolution§r simulations like the §3Simulation Chamber§r, but is capable of overclocking these simulations to incredible speeds.\n\nOne of these structures can perform the equivalent work of hundreds of individual Simulation Chambers more efficiently. This will make it far easier to generate pristine matter you\u0027ll need for things like §6Dragon Lair Data§r. You\u0027ll probably need several §3Loot Fabricators§r to keep up with it.\n\nThe data model you place in the input bus will §2have a fixed 30% chance of producing Pristine matter regardless of its tier. §eOverclocking does not alter the chances of pristines§r: those come at fixed rates per iteration.\n\nAs a §dCreative Tier§r structure, it is rather expensive to make. However, it is an investment that will easily pay for itself as you progress through the endgame. You should strongly consider making one of these with your second §dHeart of a Universe§r.\n",
+          "desc:8": "The §3Simulation Supercomputer§r is a multiblock structure that performs §bDeep Mob Evolution§r simulations like the §3Simulation Chamber§r, but is capable of overclocking these simulations to incredible speeds.\n\nOne of these structures can perform the equivalent work of hundreds of individual Simulation Chambers more efficiently. This will make it far easier to generate pristine matter you\u0027ll need for things like §6Dragon Lair Data§r. You\u0027ll probably need several §3Loot Fabricators§r to keep up with it.\n\nThe data model you place in the input bus will §2have a fixed 30% chance of producing Pristine matter regardless of its tier. §eOverclocking does not alter the chances of pristines§r: those come at fixed rates per iteration.\n\nAs a §dCreative Tier§r structure, it is rather expensive to make. However, it is an investment that will easily pay for itself as you progress through the endgame. You should strongly consider making one of these with your second §dHeart of a Universe§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51049,7 +51049,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Circuit Assemblers§r are the linchpin of your factory, gating progression through the §6Circuits§r. \n\nEach time you upgrade to a new voltage of Circuit Assembler, you will be able to craft more advanced §ethemes§r of circuits. These use more complex ingredients and require new infrastructure to be in place, but are more efficient to craft overall than the same tier of circuit from the prior theme.\n\n§2The LV Circuit Assembler allows you to make Electronic Circuits far more easily.\n\nThe circuit progression has been largely replaced with the progression native to CEu, with a few minor changes to reflect the progression of this pack better.§r Check out the §dProgression quest book tab§r to see the flow of circuit progression.\n",
+          "desc:8": "§3Circuit Assemblers§r are the linchpin of your factory, gating progression through the §6Circuits§r. \n\nEach time you upgrade to a new voltage of Circuit Assembler, you will be able to craft more advanced §ethemes§r of circuits. These use more complex ingredients and require new infrastructure to be in place, but are more efficient to craft overall than the same tier of circuit from the prior theme.\n\n§2The LV Circuit Assembler allows you to make Electronic Circuits far more easily.\n\nThe circuit progression has been largely replaced with the progression native to CEu, with a few minor changes to reflect the progression of this pack better.§r Check out the §dProgression quest book tab§r to see the flow of circuit progression.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52220,7 +52220,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Ender Fluid Link Covers are GTCEu\u0027s Ender Tanks§r. Each Cover sends their fluids through a frequency defined by an §68-digit hexadecimal number§r (0-9, then A-F for each digit). That gives you §64.29 billion§r channels to work with! \n\nEnder Fluid Link Covers work as long as their chunk is loaded - regardless of distance or dimension.\n\nSetting the mode to Import will §opull§r fluids from the world location it is attached to, while Export will §opush§r fluids to the world. You must turn the I/O to Enabled for it to start working. Each channel has a buffer of §d64 buckets§r.\n\nThe \"Virtual Tank Viewer\" app in your §4Terminal§r allows you to see the contents of all Ender Fluid Link channels. Regardless, I recommend you set up a system to organise all those channels. I would also advise against using the default channel (FFFFFFFF) in all cases.\n",
+          "desc:8": "§2Ender Fluid Link Covers are GTCEu\u0027s Ender Tanks§r. Each Cover sends their fluids through a frequency defined by an §68-digit hexadecimal number§r (0-9, then A-F for each digit). That gives you §64.29 billion§r channels to work with! \n\nEnder Fluid Link Covers work as long as their chunk is loaded - regardless of distance or dimension.\n\nSetting the mode to Import will §opull§r fluids from the world location it is attached to, while Export will §opush§r fluids to the world. You must turn the I/O to Enabled for it to start working. Each channel has a buffer of §d64 buckets§r.\n\nThe \"Virtual Tank Viewer\" app in your §4Terminal§r allows you to see the contents of all Ender Fluid Link channels. Regardless, I recommend you set up a system to organise all those channels. I would also advise against using the default channel (FFFFFFFF) in all cases.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53086,7 +53086,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Trinium Coils§r are the eighth coil material available, increasing your EBF\u0027s operating temperature to 9001K so it can process more advanced materials.\n",
+          "desc:8": "§2Trinium Coils§r are the eighth coil material available, increasing your EBF\u0027s operating temperature to 9001K so it can process more advanced materials.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56937,7 +56937,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Tablet device you get now is very valuable to do plenty of tasks in GregTech.§r\n\n§oBe careful with removing the battery. Removing it will cause it to become a normal HV battery, and will no longer have 6.4m EU.§r\n\nThis Quest explains how you can use the §4Terminal§r. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\n§4IMPORTANT:§r If you the terminal freezes, you can press §eControl + E§r to force exit it.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",\n",
+          "desc:8": "§2The Tablet device you get now is very valuable to do plenty of tasks in GregTech.§r\n\n§oBe careful with removing the battery. Removing it will cause it to become a normal HV battery, and will no longer have 6.4m EU.§r\n\nThis Quest explains how you can use the §4Terminal§r. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\n§4IMPORTANT:§r If you the terminal freezes, you can press §eControl + E§r to force exit it.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59803,7 +59803,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This is new to CEu! Before, you could only distil Liquid Air.\n\n§9Ender Air§r, collected from a §3Gas Collector§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Ender Air§r.\n\n§9Liquid Ender Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Nether Air give different useful components too.\n",
+          "desc:8": "§2This is new to CEu! Before, you could only distil Liquid Air.\n\n§9Ender Air§r, collected from a §3Gas Collector§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Ender Air§r.\n\n§9Liquid Ender Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Nether Air give different useful components too.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59871,7 +59871,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This is new to CEu! Before, you could only distil Liquid Air.\n\n§9Nether Air§r, collected from §3Gas Collectors§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Nether Air§r.\n\n§9Liquid Nether Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Ender Air give different useful components too.\n",
+          "desc:8": "§2This is new to CEu! Before, you could only distil Liquid Air.\n\n§9Nether Air§r, collected from §3Gas Collectors§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Nether Air§r.\n\n§9Liquid Nether Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Ender Air give different useful components too.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -60625,7 +60625,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online. Just remember that channels are disabled by default in this pack.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6Interfaces§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 36.\n\n",
+          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online. Just remember that channels are disabled by default in this pack.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6Interfaces§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 36.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62993,7 +62993,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027re going to craft a LOT of stuff using §bDraconic Evolution §6Fusion§r. Therefore, a way to automate it is crucial.\n\nFirst, place an §6Item Laser Relay§r on each §aInjector§r, one on the §aCore§r, and one on an §aItem Interface§r. You\u0027ll notice that you will need 2 more item lasers than your amount of Injectors.\n\nConnect them all to the Item Interface with your §6Laser Wrench§r. Pretty much, just click on one of the lasers, and click on your Item Interface.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r \n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nUse the §6Compass§r to change the Laser on the core\u0027s piority to 1. \n\nFinally, place the §aRedstone Clock§r next to the core. \n\nYou also need to setup some mechanism to take the finished item out of the core. A Phantomface works well here, as it will only output the output item, and not the input item.\n\nImport into the Item Interface. You can use the Extended Processing Pattern Terminal and an Interface with Blocking Mode to do this. ",
+          "desc:8": "You\u0027re going to craft a LOT of stuff using §bDraconic Evolution §6Fusion§r. Therefore, a way to automate it is crucial.\n\nFirst, place an §6Item Laser Relay§r on each §aInjector§r, one on the §aCore§r, and one on an §aItem Interface§r. You\u0027ll notice that you will need 2 more item lasers than your amount of Injectors.\n\nConnect them all to the Item Interface with your §6Laser Wrench§r. Pretty much, just click on one of the lasers, and click on your Item Interface.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r \n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nUse the §6Compass§r to change the Laser on the core\u0027s piority to 1. \n\nFinally, place the §aRedstone Clock§r next to the core. \n\nYou also need to setup some mechanism to take the finished item out of the core. A Phantomface works well here, as it will only output the output item, and not the input item.\n\nImport into the Item Interface. You can use the Extended Processing Pattern Terminal and an Interface with Blocking Mode to do this.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63222,7 +63222,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: This quest accepts both Memory Cards, and Advanced Memory Cards.§r\n\nA §6P2P Tunnel§r (§aPoint-to-Point Tunnel§r) is a powerful tool from §bApplied Energistics 2§r that can be used to send items, redstone, RF/EU or fluids from one location to another, using your ME system, without the need to use any disk storage space. §cTransporting RF/EU has a 5% tax on the input energy.§r\n\nEach P2P tunnel system may have only §cone input§r but §eany number of outputs§r. There is no limit on how many P2P tunnels, or P2P tunnel systems, you can have on one network.\n\nBy default, a P2P tunnel is an §6ME tunnel§r, which transmits Applied Energistics channels and power. Since channels are disabled, you will most likely not be using the default tunnel. You can change the mode of your P2P tunnels by right clicking the tunnel with the respective item seen in §bJEI§r.\n\nTo configure your P2P tunnels, take a §6Memory Card§r. While holding the memory card, §ashift-right click§r the unconfigured tunnel, to set the frequency of the input, and save the frequency to the memory card. Once the first tunnel has been set up this way and the memory card is configured with the frequency, any subsequent tunnel you §aright-click§r with the memory card will be set as the output of the most recent frequency used.\n\nYou can also use memory cards to copy the configuration of ME blocks and tile-entities, such as §6Interfaces§r and §6Storage Buses§r. §aShift-right click§r a ME block to copy its configuration, and §aright-click§r to paste that configuration. Note that this doesn\u0027t copy upgrades applied to the block.\n\nYou can also §ashift-right click§r to empty the frequency, or the ME block configuration, set in the card.\n\nThis pack has §bBetter P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nYou can also configure P2P tunnels using your Advanced Memory Card. While holding the card, §aright-click§r on a tunnel, it will be §aselected§r. Once a tunnel is selected, it will be highlighted in §agreen§r. You can also see your other connections with the options to select or bind; hitting select will reselect the tunnel.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\nThe §6Advanced Memory Card§r has 3 modes accessible in the §3GUI§r:\n\n§aBind Output§r:\nOnce the tunnel you would like to be set as an input has been §aselected§r, hitting §bbind§r on any other connection will turn the selected tunnel into an input tunnel, and any binded tunnels will be turned into output tunnels for the selected tunnel.\n\n§aBind Input§r:\nOnce the tunnel you would like to be set as an output has been §aselected§r, hitting §bbind§r on any other tunnel will set the tunnel as the input of the selected tunnel. This is useful for when you can’t find the output tunnel.\n \n§aCopy Output§r:\nOnce an output tunnel you want to copy has been §aselected§r, hitting §bbind§r on any other connection will copy the output frequency of the selected tunnel.\n",
+          "desc:8": "§oNote: This quest accepts both Memory Cards, and Advanced Memory Cards.§r\n\nA §6P2P Tunnel§r (§aPoint-to-Point Tunnel§r) is a powerful tool from §bApplied Energistics 2§r that can be used to send items, redstone, RF/EU or fluids from one location to another, using your ME system, without the need to use any disk storage space. §cTransporting RF/EU has a 5% tax on the input energy.§r\n\nEach P2P tunnel system may have only §cone input§r but §eany number of outputs§r. There is no limit on how many P2P tunnels, or P2P tunnel systems, you can have on one network.\n\nBy default, a P2P tunnel is an §6ME tunnel§r, which transmits Applied Energistics channels and power. Since channels are disabled, you will most likely not be using the default tunnel. You can change the mode of your P2P tunnels by right clicking the tunnel with the respective item seen in §bJEI§r.\n\nTo configure your P2P tunnels, take a §6Memory Card§r. While holding the memory card, §ashift-right click§r the unconfigured tunnel, to set the frequency of the input, and save the frequency to the memory card. Once the first tunnel has been set up this way and the memory card is configured with the frequency, any subsequent tunnel you §aright-click§r with the memory card will be set as the output of the most recent frequency used.\n\nYou can also use memory cards to copy the configuration of ME blocks and tile-entities, such as §6Interfaces§r and §6Storage Buses§r. §aShift-right click§r a ME block to copy its configuration, and §aright-click§r to paste that configuration. Note that this doesn\u0027t copy upgrades applied to the block.\n\nYou can also §ashift-right click§r to empty the frequency, or the ME block configuration, set in the card.\n\nThis pack has §bBetter P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nYou can also configure P2P tunnels using your Advanced Memory Card. While holding the card, §aright-click§r on a tunnel, it will be §aselected§r. Once a tunnel is selected, it will be highlighted in §agreen§r. You can also see your other connections with the options to select or bind; hitting select will reselect the tunnel.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\nThe §6Advanced Memory Card§r has 3 modes accessible in the §3GUI§r:\n\n§aBind Output§r:\nOnce the tunnel you would like to be set as an input has been §aselected§r, hitting §bbind§r on any other connection will turn the selected tunnel into an input tunnel, and any binded tunnels will be turned into output tunnels for the selected tunnel.\n\n§aBind Input§r:\nOnce the tunnel you would like to be set as an output has been §aselected§r, hitting §bbind§r on any other tunnel will set the tunnel as the input of the selected tunnel. This is useful for when you can’t find the output tunnel.\n \n§aCopy Output§r:\nOnce an output tunnel you want to copy has been §aselected§r, hitting §bbind§r on any other connection will copy the output frequency of the selected tunnel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
