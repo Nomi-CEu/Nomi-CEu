@@ -2,26 +2,31 @@ import upath from "upath";
 import unzip from "unzipper";
 import through from "through2";
 import mustache from "mustache";
-import log from "fancy-log";
 import gulp, { src, dest, symlink } from "gulp";
 import fs from "fs";
-import buildConfig from "../../buildConfig";
-import Bluebird from "bluebird";
-import { ForgeProfile } from "../../types/forgeProfile";
-import { FileDef } from "../../types/fileDef";
-import { downloadOrRetrieveFileDef, getVersionManifest, libraryToPath, relative } from "../../util/util";
-import { modDestDirectory, modpackManifest, serverDestDirectory, sharedDestDirectory } from "../../globals";
-import del from "del";
-import { VersionManifest } from "../../types/versionManifest";
-import { updateBuildServerProperties } from "../misc/transformFiles";
+import buildConfig from "#buildConfig";
+import { ForgeProfile } from "#types/forgeProfile.ts";
+import { FileDef } from "#types/fileDef.ts";
+import {
+	downloadOrRetrieveFileDef,
+	getForgeJar,
+	getVersionManifest,
+} from "#utils/util.ts";
+import {
+	modDestDirectory,
+	modpackManifest,
+	serverDestDirectory,
+	sharedDestDirectory,
+} from "#globals";
+import { deleteAsync } from "del";
+import { updateBuildServerProperties } from "../misc/transformFiles.ts";
+import logInfo, { logWarn } from "#utils/log.ts";
+import filter from "gulp-filter";
 
-const FORGE_VERSION_REG = /forge-(.+)/;
-const FORGE_MAVEN = "https://files.minecraftforge.net/maven/";
-
-let g_forgeJar;
+let g_forgeJar: string | undefined = undefined;
 
 async function serverCleanUp() {
-	return del(upath.join(serverDestDirectory, "*"), { force: true });
+	return deleteAsync(upath.join(serverDestDirectory, "*"), { force: true });
 }
 
 /**
@@ -39,44 +44,16 @@ async function createServerDirs() {
  * Extract, parse the profile data and download required libraries.
  */
 async function downloadForge() {
-	const minecraft = modpackManifest.minecraft;
-
-	/**
-	 * Break down the Forge version defined in manifest.json.
-	 */
-	const parsedForgeEntry = FORGE_VERSION_REG.exec(
-		(minecraft.modLoaders.find((x) => x.id && x.id.indexOf("forge") != -1) || {}).id || "",
-	);
-
-	if (!parsedForgeEntry) {
-		throw new Error("Malformed Forge version in manifest.json.");
-	}
-
-	/**
-	 * Transform Forge version into Maven library path.
-	 */
-	const forgeMavenLibrary = `net.minecraftforge:forge:${minecraft.version}-${parsedForgeEntry[1]}`;
-	const forgeInstallerPath = libraryToPath(forgeMavenLibrary) + "-installer.jar";
-	const forgeUniversalPath = upath.join("maven", libraryToPath(forgeMavenLibrary) + ".jar");
-
-	/**
-	 * Fetch the Forge installer
-	 */
-	const forgeJar = await fs.promises.readFile(
-		(
-			await downloadOrRetrieveFileDef({
-				url: FORGE_MAVEN + forgeInstallerPath,
-			})
-		).cachePath,
-	);
+	const { forgeJar, forgeUniversalPath } = await getForgeJar();
 
 	/**
 	 * Parse the profile manifest.
 	 */
-	let forgeUniversalJar: Buffer, forgeProfile: ForgeProfile;
+	let forgeUniversalJar: Buffer | undefined = undefined;
+	let forgeProfile: ForgeProfile | undefined = undefined;
 	const files = (await unzip.Open.buffer(forgeJar))?.files;
 
-	log("Extracting Forge installation profile & jar...");
+	logInfo("Extracting Forge installation profile & jar...");
 
 	if (!files) {
 		throw new Error("Malformed Forge installation jar.");
@@ -102,14 +79,19 @@ async function downloadForge() {
 	}
 
 	if (!forgeUniversalJar) {
-		throw new Error("Couldn't find the universal Forge jar in the installation jar.");
+		throw new Error(
+			"Couldn't find the universal Forge jar in the installation jar.",
+		);
 	}
 
 	/**
 	 * Move the universal jar into the dist folder.
 	 */
-	log("Extracting the Forge jar...");
-	await fs.promises.writeFile(upath.join(serverDestDirectory, upath.basename(forgeUniversalPath)), forgeUniversalJar);
+	logInfo("Extracting the Forge jar...");
+	await fs.promises.writeFile(
+		upath.join(serverDestDirectory, upath.basename(forgeUniversalPath)),
+		forgeUniversalJar,
+	);
 
 	/**
 	 * Save the universal jar file name for later.
@@ -121,12 +103,13 @@ async function downloadForge() {
 	/**
 	 * Finally, fetch libraries.
 	 */
-	const libraries = forgeProfile.libraries.filter((x) => Boolean(x?.downloads?.artifact?.url));
-	log(`Fetching ${libraries.length} server libraries...`);
+	const libraries = forgeProfile.libraries.filter((x) =>
+		Boolean(x?.downloads?.artifact?.url),
+	);
+	logInfo(`Fetching ${libraries.length} server libraries...`);
 
-	return Bluebird.map(
-		libraries,
-		async (library) => {
+	await Promise.all(
+		libraries.map(async (library) => {
 			const libraryPath = library.downloads.artifact.path;
 
 			const def: FileDef = {
@@ -134,15 +117,23 @@ async function downloadForge() {
 			};
 
 			if (library.downloads.artifact.sha1) {
-				def.hashes = [{ id: "sha1", hashes: [library.downloads.artifact.sha1] }];
+				def.hashes = [
+					{ id: "sha1", hashes: [library.downloads.artifact.sha1] },
+				];
 			}
 
-			const destPath = upath.join(serverDestDirectory, "libraries", libraryPath);
+			const destPath = upath.join(
+				serverDestDirectory,
+				"libraries",
+				libraryPath,
+			);
 
 			await fs.promises.mkdir(upath.dirname(destPath), { recursive: true });
-			await fs.promises.symlink(relative(destPath, (await downloadOrRetrieveFileDef(def)).cachePath), destPath);
-		},
-		{ concurrency: buildConfig.downloaderConcurrency },
+			return fs.promises.copyFile(
+				(await downloadOrRetrieveFileDef(def)).cachePath,
+				destPath,
+			);
+		}),
 	);
 }
 
@@ -150,10 +141,12 @@ async function downloadForge() {
  * Download the server jar.
  */
 async function downloadMinecraftServer() {
-	log("Fetching the Minecraft version manifest...");
-	const versionManifest: VersionManifest = await getVersionManifest(modpackManifest.minecraft.version);
+	logInfo("Fetching the Minecraft version manifest...");
+	const versionManifest = await getVersionManifest(
+		modpackManifest.minecraft.version,
+	);
 	if (!versionManifest) {
-		throw new Error(`No manifest found for Minecraft ${versionManifest.id}`);
+		throw new Error(`No manifest found for Minecraft ${versionManifest}`);
 	}
 
 	/**
@@ -170,26 +163,37 @@ async function downloadMinecraftServer() {
 		throw new Error(`No server jar file found for ${versionManifest.id}`);
 	}
 
-	const dest = upath.join(serverDestDirectory, `minecraft_server.${versionManifest.id}.jar`);
-	await fs.promises.symlink(relative(dest, serverJar.cachePath), dest);
+	const dest = upath.join(
+		serverDestDirectory,
+		`minecraft_server.${versionManifest.id}.jar`,
+	);
+	await fs.promises.symlink(upath.resolve(serverJar.cachePath), dest);
 }
 
 /**
  * Copies server & shared mods.
  */
 async function copyServerMods() {
-	return src([upath.join(modDestDirectory, "*"), upath.join(modDestDirectory, "server", "*")], {
-		nodir: true,
-		resolveSymlinks: false,
-	}).pipe(symlink(upath.join(serverDestDirectory, "mods")));
+	const f = filter((f) => !f.isDirectory());
+	return src(["*", upath.join("server", "*")], {
+		cwd: modDestDirectory,
+		resolveSymlinks: true,
+	})
+		.pipe(f)
+		.pipe(symlink(upath.join(serverDestDirectory, "mods")));
 }
 
 /**
  * Copies modpack overrides.
  */
 function copyServerOverrides() {
-	return gulp
-		.src(buildConfig.copyFromSharedServerGlobs, { nodir: true, cwd: sharedDestDirectory, allowEmpty: true })
+	const f = filter((f) => !f.isDirectory());
+	return src(buildConfig.copyFromSharedServerGlobs, {
+		cwd: sharedDestDirectory,
+		allowEmpty: true,
+		resolveSymlinks: true,
+	})
+		.pipe(f)
 		.pipe(symlink(upath.join(serverDestDirectory)));
 }
 
@@ -211,14 +215,18 @@ function copyServerLicense() {
  * Copies the update notes file.
  */
 function copyServerUpdateNotes() {
-	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(dest(serverDestDirectory));
+	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
+		dest(serverDestDirectory),
+	);
 }
 
 /**
  * Copies the changelog file.
  */
 function copyServerChangelog() {
-	return src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(dest(serverDestDirectory));
+	return src(
+		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+	).pipe(dest(serverDestDirectory));
 }
 
 /**
@@ -237,8 +245,8 @@ function processLaunchscripts() {
 	if (g_forgeJar) {
 		rules.forgeJar = g_forgeJar;
 	} else {
-		log.warn("No forgeJar specified!");
-		log.warn("Did downloadForge task fail?");
+		logWarn("No forgeJar specified!");
+		logWarn("Did downloadForge task fail?");
 	}
 
 	return src(["../launchscripts/**"])
@@ -254,7 +262,7 @@ function processLaunchscripts() {
 		.pipe(dest(serverDestDirectory));
 }
 
-export default gulp.series([
+export default gulp.series(
 	serverCleanUp,
 	createServerDirs,
 	downloadForge,
@@ -267,4 +275,4 @@ export default gulp.series([
 	copyServerUpdateNotes,
 	processLaunchscripts,
 	updateBuildServerProperties,
-]);
+);

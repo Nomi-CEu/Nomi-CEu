@@ -1,11 +1,11 @@
-import { modpackManifest } from "../../globals";
-import { makeArtifactNameBody } from "../../util/util";
+import { modpackManifest } from "#globals";
+import { makeArtifactNameBody } from "#utils/util.ts";
 import sanitize from "sanitize-filename";
 import { setOutput } from "@actions/core";
 
 export async function makeArtifactNames(): Promise<void> {
 	const body = makeArtifactNameBody(modpackManifest.name);
-	const names = {
+	const names: Record<string, string> = {
 		client: body + "-client",
 		server: body + "-server",
 		lang: body + "-lang",

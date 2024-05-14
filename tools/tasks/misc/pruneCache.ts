@@ -1,18 +1,13 @@
-import Bluebird from "bluebird";
-import { modpackManifest } from "../../globals";
-import { downloadOrRetrieveFileDef, getVersionManifest, libraryToPath } from "../../util/util";
+import { modpackManifest } from "#globals";
+import { FORGE_MAVEN, getForgeJar, getVersionManifest } from "#utils/util.ts";
 import unzip from "unzipper";
-import { ForgeProfile } from "../../types/forgeProfile";
-import log from "fancy-log";
+import { ForgeProfile } from "#types/forgeProfile.ts";
 import sha1 from "sha1";
-import { fetchFileInfo } from "../../util/curseForgeAPI";
-import { VersionManifest } from "../../types/versionManifest";
+import { fetchFileInfo } from "#utils/curseForgeAPI.ts";
 import fs from "fs";
 import upath from "upath";
-import buildConfig from "../../buildConfig";
-
-const FORGE_VERSION_REG = /forge-(.+)/;
-const FORGE_MAVEN = "https://files.minecraftforge.net/maven/";
+import buildConfig from "#buildConfig";
+import logInfo from "#utils/log.ts";
 
 /**
  * Download the Forge jar.
@@ -21,40 +16,12 @@ const FORGE_MAVEN = "https://files.minecraftforge.net/maven/";
  * except we only download/fetch the Forge jar and enumerate the libraries it has.
  */
 async function getForgeURLs() {
-	const minecraft = modpackManifest.minecraft;
-
-	/**
-	 * Break down the Forge version defined in manifest.json.
-	 */
-	const parsedForgeEntry = FORGE_VERSION_REG.exec(
-		(minecraft.modLoaders.find((x) => x.id && x.id.indexOf("forge") != -1) || {}).id || "",
-	);
-
-	if (!parsedForgeEntry) {
-		throw new Error("Malformed Forge version in manifest.json.");
-	}
-
-	/**
-	 * Transform Forge version into Maven library path.
-	 */
-	const forgeMavenLibrary = `net.minecraftforge:forge:${minecraft.version}-${parsedForgeEntry[1]}`;
-	const forgeInstallerPath = libraryToPath(forgeMavenLibrary) + "-installer.jar";
-
-	/**
-	 * Fetch the Forge installer
-	 */
-	const forgeJar = await fs.promises.readFile(
-		(
-			await downloadOrRetrieveFileDef({
-				url: FORGE_MAVEN + forgeInstallerPath,
-			})
-		).cachePath,
-	);
+	const { forgeJar, forgeInstallerPath } = await getForgeJar();
 
 	/**
 	 * Parse the profile manifest.
 	 */
-	let forgeProfile: ForgeProfile;
+	let forgeProfile: ForgeProfile | undefined = undefined;
 	const files = (await unzip.Open.buffer(forgeJar))?.files;
 
 	if (!files) {
@@ -75,9 +42,14 @@ async function getForgeURLs() {
 	/**
 	 * Finally, fetch libraries.
 	 */
-	const libraries = forgeProfile.libraries.filter((x) => Boolean(x?.downloads?.artifact?.url));
+	const libraries = forgeProfile.libraries.filter((x) =>
+		Boolean(x?.downloads?.artifact?.url),
+	);
 
-	return [FORGE_MAVEN + forgeInstallerPath, ...libraries.map((library) => library.downloads.artifact.url)];
+	return [
+		FORGE_MAVEN + forgeInstallerPath,
+		...libraries.map((library) => library.downloads.artifact.url),
+	];
 }
 
 /**
@@ -90,13 +62,19 @@ export default async function pruneCache(): Promise<void> {
 	urls.push(...(await getForgeURLs()).map((url) => url));
 
 	// Fetch file infos.
-	const fileInfos = await Bluebird.map(modpackManifest.files, (file) => fetchFileInfo(file.projectID, file.fileID));
+	const fileInfos = await Promise.all(
+		modpackManifest.files.map(async (file) =>
+			fetchFileInfo(file.projectID, file.fileID),
+		),
+	);
 	urls.push(...fileInfos.map((fileInfo) => fileInfo.downloadUrl));
 
 	// Fetch the Minecraft server.
-	const versionManifest: VersionManifest = await getVersionManifest(modpackManifest.minecraft.version);
+	const versionManifest = await getVersionManifest(
+		modpackManifest.minecraft.version,
+	);
 	if (!versionManifest) {
-		throw new Error(`No manifest found for Minecraft ${versionManifest.id}`);
+		throw new Error(`No manifest found for Minecraft ${versionManifest}`);
 	}
 	urls.push(versionManifest.downloads.server.url);
 
@@ -105,11 +83,21 @@ export default async function pruneCache(): Promise<void> {
 		urls.push(...modpackManifest.externalDependencies.map((dep) => dep.url));
 	}
 
-	const cache = (await fs.promises.readdir(buildConfig.downloaderCacheDirectory)).filter((entity) =>
-		fs.statSync(upath.join(buildConfig.downloaderCacheDirectory, entity)).isFile(),
+	const cache = (
+		await fs.promises.readdir(buildConfig.downloaderCacheDirectory)
+	).filter((entity) =>
+		fs
+			.statSync(upath.join(buildConfig.downloaderCacheDirectory, entity))
+			.isFile(),
 	);
 
-	const shaMap: { [key: string]: boolean } = urls.reduce((map, url) => ((map[sha1(url)] = true), map), {});
+	const shaMap: { [key: string]: boolean } = urls.reduce(
+		(map: Record<string, boolean>, url) => {
+			map[sha1(url)] = true;
+			return map;
+		},
+		{},
+	);
 
 	let count = 0,
 		bytes = 0;
@@ -122,12 +110,12 @@ export default async function pruneCache(): Promise<void> {
 			if (stat && stat.isFile()) {
 				count += 1;
 				bytes += stat.size;
-				log(`Pruning ${sha}...`);
+				logInfo(`Pruning ${sha}...`);
 
 				await fs.promises.unlink(path);
 			}
 		}
 	}
 
-	log(`Pruned ${count} files (${(bytes / 1024 / 1024).toFixed(3)} MiB)`);
+	logInfo(`Pruned ${count} files (${(bytes / 1024 / 1024).toFixed(3)} MiB)`);
 }

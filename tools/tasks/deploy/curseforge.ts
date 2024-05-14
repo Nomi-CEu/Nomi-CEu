@@ -1,17 +1,32 @@
-import { modpackManifest } from "../../globals";
+import { modpackManifest } from "#globals";
 
-import request from "requestretry";
 import fs from "fs";
-import log from "fancy-log";
 import upath from "upath";
-import buildConfig from "../../buildConfig";
-import { makeArtifactNameBody } from "../../util/util";
+import buildConfig from "#buildConfig";
+import {
+	getAxios,
+	isEnvVariableSet,
+	makeArtifactNameBody,
+} from "#utils/util.ts";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
-import { DeployReleaseType, inputToDeployReleaseTypes } from "../../types/changelogTypes";
+import {
+	DeployReleaseType,
+	InputReleaseType,
+	inputToDeployReleaseTypes,
+} from "#types/changelogTypes.ts";
+import logInfo from "#utils/log.ts";
+import { CurseForgeLegacyMCVersion } from "#types/curseForge.ts";
+import * as core from "@actions/core";
+import { AxiosRequestConfig } from "axios";
+import { filesize } from "filesize";
 
 const CURSEFORGE_LEGACY_ENDPOINT = "https://minecraft.curseforge.com/";
-const variablesToCheck = ["CURSEFORGE_API_TOKEN", "CURSEFORGE_PROJECT_ID", "RELEASE_TYPE"];
+const variablesToCheck = [
+	"CURSEFORGE_API_TOKEN",
+	"CURSEFORGE_PROJECT_ID",
+	"RELEASE_TYPE",
+];
 
 async function upload(files: { name: string; displayName: string }[]) {
 	files.forEach((file) => {
@@ -23,7 +38,9 @@ async function upload(files: { name: string; displayName: string }[]) {
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
 	let changelog = (
-		await fs.promises.readFile(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"))
+		await fs.promises.readFile(
+			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
+		)
 	).toString();
 
 	changelog = mustache.render(changelog, {
@@ -36,74 +53,104 @@ async function upload(files: { name: string; displayName: string }[]) {
 	};
 
 	// Fetch the list of Minecraft versions from CurseForge.
-	log("Fetching CurseForge version manifest...");
-	const versionsManifest =
-		(await request({
-			uri: CURSEFORGE_LEGACY_ENDPOINT + "api/game/versions",
+	logInfo("Fetching CurseForge version manifest...");
+	const versionsManifest: CurseForgeLegacyMCVersion[] | undefined = (
+		await getAxios()({
+			url: CURSEFORGE_LEGACY_ENDPOINT + "api/game/versions",
+			method: "get",
 			headers: tokenHeaders,
-			method: "GET",
-			json: true,
-			fullResponse: false,
-			maxAttempts: 5,
-		})) || [];
+			responseType: "json",
+		})
+	).data;
 
 	if (!versionsManifest) {
 		throw new Error("Failed to fetch CurseForge version manifest.");
 	}
 
-	const version = versionsManifest.find((m) => m.name == modpackManifest.minecraft.version);
+	const version = versionsManifest.find(
+		(m) => m.name == modpackManifest.minecraft.version,
+	);
 
 	if (!version) {
-		throw new Error(`Version ${modpackManifest.minecraft.version} not found on CurseForge.`);
+		throw new Error(
+			`Version ${modpackManifest.minecraft.version} not found on CurseForge.`,
+		);
 	}
 
-	let clientFileID: number | null;
+	const uploadedIDs: { filePath: string; displayName: string; id: number }[] =
+		[];
+	let parentID: number | undefined = undefined;
 
-	const releaseType: DeployReleaseType = inputToDeployReleaseTypes[process.env.RELEASE_TYPE];
+	const releaseType: DeployReleaseType =
+		inputToDeployReleaseTypes[
+			(process.env.RELEASE_TYPE ?? "Release") as InputReleaseType
+		];
 
 	// Upload artifacts.
 	for (const file of files) {
-		const options = {
-			uri: CURSEFORGE_LEGACY_ENDPOINT + `api/projects/${process.env.CURSEFORGE_PROJECT_ID}/upload-file`,
-			method: "POST",
+		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
+		const options: AxiosRequestConfig<unknown> = {
+			url:
+				CURSEFORGE_LEGACY_ENDPOINT +
+				`api/projects/${process.env.CURSEFORGE_PROJECT_ID}/upload-file`,
+			method: "post",
 			headers: {
 				...tokenHeaders,
 				"Content-Type": "multipart/form-data",
 			},
-			formData: {
+			data: {
 				metadata: JSON.stringify({
 					changelog: changelog,
 					changelogType: "html",
 					releaseType: releaseType ? releaseType.cfReleaseType : "release",
-					parentFileID: clientFileID ? clientFileID : undefined,
-					gameVersions: clientFileID ? undefined : [version.id],
+					parentFileID: parentID ? parentID : undefined,
+					gameVersions: parentID ? undefined : [version.id],
 					displayName: file.displayName,
 				}),
-				file: fs.createReadStream(upath.join(buildConfig.buildDestinationDirectory, file.name)),
+				file: fs.createReadStream(path),
 			},
-			json: true,
-			fullResponse: false,
+			responseType: "json",
 		};
 
-		log(`Uploading ${file.name} to CurseForge...` + (clientFileID ? `(child of ${clientFileID})` : ""));
+		logInfo(
+			`Uploading ${file.name} to CurseForge...` +
+				(parentID ? `(child of ${parentID})` : ""),
+		);
 
-		const response = await request(options);
+		const response: { id: number } = (await getAxios()(options)).data;
 
 		if (response && response.id) {
-			if (!clientFileID) {
-				clientFileID = response.id;
+			uploadedIDs.push({ filePath: path, displayName: file.displayName, id: response.id });
+			if (!parentID) {
+				parentID = response.id;
 			}
 		} else {
 			throw new Error(`Failed to upload ${file.name}: Invalid Response.`);
 		}
 	}
+	if (isEnvVariableSet("GITHUB_STEP_SUMMARY"))
+		await core.summary
+			.addHeading("Nomi-CEu CurseForge Deploy Summary:", 2)
+			.addTable([
+				[
+					{ data: "File Name", header: true },
+					{ data: "File ID", header: true },
+					{ data: "File Size", header: true },
+				],
+				...uploadedIDs.map((uploaded) => [
+					uploaded.displayName,
+					uploaded.id.toString(),
+					filesize(fs.statSync(uploaded.filePath).size),
+				]),
+			])
+			.write();
 }
 
 /**
  * Uploads build artifacts to CurseForge.
  */
 export async function deployCurseForge(): Promise<void> {
-	/**
+	/*
 	 * Obligatory variable check.
 	 */
 	["GITHUB_TAG", ...variablesToCheck].forEach((vari) => {
@@ -112,15 +159,23 @@ export async function deployCurseForge(): Promise<void> {
 		}
 	});
 
-	const displayName = process.env.GITHUB_TAG;
+	const displayName = process.env.GITHUB_TAG ?? "";
 
 	const files = [
 		{
-			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-client.zip").toLowerCase()),
+			name: sanitize(
+				(
+					makeArtifactNameBody(modpackManifest.name) + "-client.zip"
+				).toLowerCase(),
+			),
 			displayName: displayName,
 		},
 		{
-			name: sanitize((makeArtifactNameBody(modpackManifest.name) + "-server.zip").toLowerCase()),
+			name: sanitize(
+				(
+					makeArtifactNameBody(modpackManifest.name) + "-server.zip"
+				).toLowerCase(),
+			),
 			displayName: `${displayName}-server`,
 		},
 	];
