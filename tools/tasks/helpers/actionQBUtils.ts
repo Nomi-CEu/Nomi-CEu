@@ -190,7 +190,7 @@ export async function findQuest(
 
 	// Try Find by ID
 	const questById = data.toChangeIDsToQuests.get(sourceId);
-	if (questById) {
+	if (questById && !isEmptyQuest(questById)) {
 		// Ask the client if the corresponding id on the corresponding qb is correct
 		const correctQuestById = await isRightQuest(
 			`Does the Corresponding Quest have ID ${sourceId} and Name ${name(questById)}?`,
@@ -220,7 +220,7 @@ export async function findQuest(
 	// Try Find by Name
 	const removeFormattedName = removeFormatting(name(sourceQuest));
 	const questByName = cachedQuestByName.get(removeFormattedName);
-	if (questByName) {
+	if (questByName && !isEmptyQuest(questByName)) {
 		// Ask the client if the corresponding id on the corresponding qb is correct
 		const correctQuestByName = await isRightQuest(
 			`Does the Corresponding Quest have ID ${id(questByName)} and Name ${name(questByName)}?`,
@@ -265,6 +265,12 @@ export async function findQuest(
 		questBySpecificID = data.toChangeIDsToQuests.get(specID);
 		if (!questBySpecificID) {
 			logError(`${specID} is not a Quest ID in the Quest Book being Changed!`);
+			continue;
+		}
+		if (isEmptyQuest(questBySpecificID)) {
+			logError(
+				`${specID} is a Empty Quest! Enter -1 to Skip/Cancel this Quest, not the ID of an Empty Quest!`,
+			);
 			continue;
 		}
 		foundBySpecificID = await isRightQuest(
