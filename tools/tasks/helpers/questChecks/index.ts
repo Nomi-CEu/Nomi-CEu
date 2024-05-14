@@ -278,14 +278,14 @@ async function checkAndFixQB(
 			logWarn(`Sorting Prerequisites in Quest with ID ${foundID}...`);
 
 			const types = quest["preRequisiteTypes:7"];
-			if (!types) quest["preRequisites:11"].sort();
+			if (!types) quest["preRequisites:11"].sort((a, b) => a - b);
 			else {
 				const preRequisites = new Map<number, number>();
 				quest["preRequisites:11"].forEach((pre, index) =>
 					preRequisites.set(pre, types[index]),
 				);
 
-				quest["preRequisites:11"].sort();
+				quest["preRequisites:11"].sort((a, b) => a - b);
 				for (let i = 0; i < quest["preRequisites:11"].length; i++) {
 					types[i] = preRequisites.get(quest["preRequisites:11"][i]) ?? 0;
 				}
@@ -320,6 +320,14 @@ async function checkAndFixQB(
 			);
 	}
 	if (!shouldCheck) qb["questDatabase:9"] = newQB;
+
+	logInfo("Checking Properties...");
+	// Check Edit Mode
+	if (qb["questSettings:10"]["betterquesting:10"]["editmode:1"] !== 0) {
+		if (shouldCheck) throw new Error("Edit Mode is On!");
+		logWarn("Turning off Edit Mode...");
+		qb["questSettings:10"]["betterquesting:10"]["editmode:1"] = 0;
+	}
 }
 
 function stripOrThrowExcessFormatting(

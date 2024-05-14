@@ -743,7 +743,9 @@ const modifyPrerequisites = async (
 	}
 
 	// Save
-	questToModify["preRequisites:11"] = Array.from(preRequisites.keys()).sort();
+	questToModify["preRequisites:11"] = Array.from(preRequisites.keys()).sort(
+		(a, b) => a - b,
+	);
 	if (
 		Array.from(preRequisites.values()).findIndex((value) => value !== 0) === -1
 	)

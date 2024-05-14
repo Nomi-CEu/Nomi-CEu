@@ -6463,9 +6463,9 @@
     },
     "89:10": {
       "preRequisites:11": [
+        87,
         130,
-        236,
-        87
+        236
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7529,10 +7529,10 @@
     },
     "104:10": {
       "preRequisites:11": [
-        109,
-        110,
         89,
-        96
+        96,
+        109,
+        110
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -7666,8 +7666,8 @@
     },
     "106:10": {
       "preRequisites:11": [
-        104,
-        62
+        62,
+        104
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -8010,8 +8010,8 @@
     },
     "111:10": {
       "preRequisites:11": [
-        105,
-        62
+        62,
+        105
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -9399,9 +9399,9 @@
     },
     "132:10": {
       "preRequisites:11": [
-        203,
         35,
-        52
+        52,
+        203
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -14951,8 +14951,8 @@
     },
     "214:10": {
       "preRequisites:11": [
-        232,
-        55
+        55,
+        232
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16439,9 +16439,9 @@
     },
     "236:10": {
       "preRequisites:11": [
-        1041,
+        96,
         894,
-        96
+        1041
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -23179,9 +23179,9 @@
     },
     "335:10": {
       "preRequisites:11": [
-        1038,
         196,
-        334
+        334,
+        1038
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -31303,8 +31303,8 @@
     },
     "494:10": {
       "preRequisites:11": [
-        102,
-        62
+        62,
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34396,10 +34396,10 @@
     },
     "540:10": {
       "preRequisites:11": [
-        147,
         21,
-        259,
-        76
+        76,
+        147,
+        259
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51853,8 +51853,8 @@
     },
     "827:10": {
       "preRequisites:11": [
-        177,
-        65
+        65,
+        177
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61738,8 +61738,8 @@
     },
     "998:10": {
       "preRequisites:11": [
-        1002,
-        825
+        825,
+        1002
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61983,8 +61983,8 @@
     },
     "1002:10": {
       "preRequisites:11": [
-        1010,
-        825
+        825,
+        1010
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62041,8 +62041,8 @@
     },
     "1003:10": {
       "preRequisites:11": [
-        1012,
-        825
+        825,
+        1012
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62099,8 +62099,8 @@
     },
     "1004:10": {
       "preRequisites:11": [
-        1011,
-        825
+        825,
+        1011
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62377,9 +62377,9 @@
     },
     "1009:10": {
       "preRequisites:11": [
+        825,
         1002,
-        1003,
-        825
+        1003
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62751,11 +62751,11 @@
     },
     "1016:10": {
       "preRequisites:11": [
+        54,
+        62,
         132,
         148,
-        230,
-        54,
-        62
+        230
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62835,9 +62835,9 @@
     },
     "1017:10": {
       "preRequisites:11": [
-        1016,
         120,
-        391
+        391,
+        1016
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -63216,8 +63216,8 @@
     },
     "1022:10": {
       "preRequisites:11": [
-        100,
-        98
+        98,
+        100
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -64306,10 +64306,10 @@
     },
     "1035:10": {
       "preRequisites:11": [
-        1037,
         286,
         325,
-        844
+        844,
+        1037
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -64405,8 +64405,8 @@
     },
     "1036:10": {
       "preRequisites:11": [
-        1037,
-        286
+        286,
+        1037
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -64593,8 +64593,8 @@
     },
     "1038:10": {
       "preRequisites:11": [
-        1039,
-        196
+        196,
+        1039
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -72384,7 +72384,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
