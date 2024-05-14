@@ -7,14 +7,14 @@ import {
 	serverDestDirectory,
 	sharedDestDirectory,
 	templatesFolder,
-} from "../../globals";
+} from "#globals";
 import mustache from "mustache";
 import gulp from "gulp";
 import dedent from "dedent-js";
-import { isEnvVariableSet } from "../../util/util";
-import sortedStringify from "json-stable-stringify-without-jsonify";
-import { error } from "fancy-log";
-import { BuildData } from "../../types/transformFiles";
+import { isEnvVariableSet } from "#utils/util.ts";
+import { BuildData } from "#types/transformFiles.ts";
+import { logWarn } from "#utils/log.ts";
+import sortKeysRecursive from "sort-keys-recursive";
 
 // This updates all the files, for a release.
 
@@ -31,7 +31,9 @@ async function updateFilesSetup(): Promise<void> {
 	// See if current run is to update files
 	if (isEnvVariableSet("UPDATE_FILES")) {
 		try {
-			updateFiles = JSON.parse(process.env.UPDATE_FILES.toLowerCase());
+			updateFiles = JSON.parse(
+				(process.env.UPDATE_FILES ?? "false").toLowerCase(),
+			);
 		} catch (err) {
 			throw new Error("Update Files Env Variable set to Invalid Value.");
 		}
@@ -54,7 +56,9 @@ async function updateFilesSetup(): Promise<void> {
 			updateFileTransformedVersion = buildData.transformedVersion;
 			return;
 		}
-		error("Version.txt does not exist. Creating empty file. This may be an error.");
+		logWarn(
+			"Version.txt does not exist. Creating empty file. This may be an error.",
+		);
 
 		// Create Versions.txt
 		fs.closeSync(fs.openSync(versionsFilePath, "w"));
@@ -106,7 +110,9 @@ export async function updateBuildServerProperties(): Promise<void> {
 
 	// Replacement Object
 	const replacementObject: Record<string, unknown> = {
-		versionTitle: updateFiles ? updateFileTransformedVersion : buildData.transformedVersion,
+		versionTitle: updateFiles
+			? updateFileTransformedVersion
+			: buildData.transformedVersion,
 	};
 
 	// Read and Write paths for normal
@@ -121,7 +127,12 @@ export async function updateBuildServerProperties(): Promise<void> {
 
 	// Read and Write paths for expert
 	const readPathExpert: string = upath.join(templatesFolder, fileNameExpert);
-	const writePathExpert: string = upath.join(serverDestDirectory, "config-overrides", "expert", fileName);
+	const writePathExpert: string = upath.join(
+		serverDestDirectory,
+		"config-overrides",
+		"expert",
+		fileName,
+	);
 
 	// Modify Expert File
 	await modifyFile(readPathExpert, [writePathExpert], replacementObject, false);
@@ -140,7 +151,9 @@ export async function updateBuildRandomPatches(): Promise<void> {
 
 	// Replacement object
 	const replacementObject: Record<string, unknown> = {
-		versionTitle: updateFiles ? updateFileTransformedVersion : buildData.transformedVersion,
+		versionTitle: updateFiles
+			? updateFileTransformedVersion
+			: buildData.transformedVersion,
 		mode: "Normal",
 	};
 
@@ -149,7 +162,12 @@ export async function updateBuildRandomPatches(): Promise<void> {
 
 	// Change values for Expert Config
 	replacementObject["mode"] = "Expert";
-	const writePathExpert = upath.join(sharedDestDirectory, configOverridesFolder, "expert", fileName);
+	const writePathExpert = upath.join(
+		sharedDestDirectory,
+		configOverridesFolder,
+		"expert",
+		fileName,
+	);
 
 	// Modify Expert File
 	await modifyFile(readPath, [writePathExpert], replacementObject, false);
@@ -194,7 +212,10 @@ async function updateIssueTemplates(): Promise<void> {
 
 	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
 
-	let versionList: string = await fs.promises.readFile(versionsFilePath, "utf8");
+	let versionList: string = await fs.promises.readFile(
+		versionsFilePath,
+		"utf8",
+	);
 
 	if (!updateFiles) {
 		if (!buildData.isVersionBuild())
@@ -213,7 +234,11 @@ async function updateIssueTemplates(): Promise<void> {
 	// Write updated Version List
 	await fs.promises.writeFile(versionsFilePath, versionList);
 
-	const issueTemplatesFolder: string = upath.join(rootDirectory, ".github", "ISSUE_TEMPLATE");
+	const issueTemplatesFolder: string = upath.join(
+		rootDirectory,
+		".github",
+		"ISSUE_TEMPLATE",
+	);
 
 	// Write to issue templates
 	for (const fileName of fileNames) {
@@ -234,7 +259,9 @@ async function updateRandomPatchesConfig(): Promise<void> {
 
 	// Replacement object
 	const replacementObject: Record<string, unknown> = {
-		versionTitle: updateFiles ? updateFileTransformedVersion : buildData.transformedVersion,
+		versionTitle: updateFiles
+			? updateFileTransformedVersion
+			: buildData.transformedVersion,
 		mode: "Normal",
 	};
 
@@ -243,7 +270,12 @@ async function updateRandomPatchesConfig(): Promise<void> {
 
 	// Change values for Expert Config
 	replacementObject["mode"] = "Expert";
-	const writePathExpert = upath.join(rootDirectory, configOverridesFolder, "expert", fileName);
+	const writePathExpert = upath.join(
+		rootDirectory,
+		configOverridesFolder,
+		"expert",
+		fileName,
+	);
 
 	// Modify Expert File
 	await modifyFile(readPath, [writePathExpert], replacementObject);
@@ -261,7 +293,9 @@ async function updateServerProperties(): Promise<void> {
 
 	// Replacement Object
 	const replacementObject: Record<string, unknown> = {
-		versionTitle: updateFiles ? updateFileTransformedVersion : buildData.transformedVersion,
+		versionTitle: updateFiles
+			? updateFileTransformedVersion
+			: buildData.transformedVersion,
 	};
 
 	// Read and Write paths for normal
@@ -276,7 +310,12 @@ async function updateServerProperties(): Promise<void> {
 
 	// Read and Write paths for expert
 	const readPathExpert: string = upath.join(templatesFolder, fileNameExpert);
-	const writePathExpert: string = upath.join(rootDirectory, configOverridesFolder, "expert", fileName);
+	const writePathExpert: string = upath.join(
+		rootDirectory,
+		configOverridesFolder,
+		"expert",
+		fileName,
+	);
 
 	// Modify Expert File
 	await modifyFile(readPathExpert, [writePathExpert], replacementObject);
@@ -286,7 +325,12 @@ async function updateMainMenuConfig(): Promise<void> {
 	// Filename & paths
 	const fileName = "mainmenu.json";
 	const readPath: string = upath.join(templatesFolder, fileName);
-	const writePath: string = upath.join(rootDirectory, configFolder, "CustomMainMenu", fileName);
+	const writePath: string = upath.join(
+		rootDirectory,
+		configFolder,
+		"CustomMainMenu",
+		fileName,
+	);
 
 	if (!updateFiles && !buildData.isVersionBuild())
 		throw new Error(
@@ -302,20 +346,38 @@ async function updateMainMenuConfig(): Promise<void> {
 	const data: string = await fs.promises.readFile(readPath, "utf8");
 
 	// Moustache Render
-	const modifiedData = JSON.parse(mustache.render(data, replacementObject));
+	let modifiedData = JSON.parse(mustache.render(data, replacementObject));
 
 	// Add warning to not edit file
 	modifiedData["_comment"] =
 		"DO NOT EDIT THIS FILE! EDIT THE TEMPlATES INSTEAD! See https://github.com/Nomi-CEu/Nomi-CEu/wiki/Part-1:-Contributing-Information#section-5-template-information!";
 
 	// Sort keys so that comment appears first
-	return await fs.promises.writeFile(writePath, sortedStringify(modifiedData, { space: 2 }), "utf8");
+	modifiedData = sortKeysRecursive(modifiedData);
+
+	return await fs.promises.writeFile(
+		writePath,
+		JSON.stringify(modifiedData, null, 2),
+		"utf8",
+	);
 }
 
-export const updateFilesIssue = gulp.series(updateFilesSetup, updateIssueTemplates);
-export const updateFilesRandomPatches = gulp.series(updateFilesSetup, updateRandomPatchesConfig);
-export const updateFilesServer = gulp.series(updateFilesSetup, updateServerProperties);
-export const updateFilesMainMenu = gulp.series(updateFilesSetup, updateMainMenuConfig);
+export const updateFilesIssue = gulp.series(
+	updateFilesSetup,
+	updateIssueTemplates,
+);
+export const updateFilesRandomPatches = gulp.series(
+	updateFilesSetup,
+	updateRandomPatchesConfig,
+);
+export const updateFilesServer = gulp.series(
+	updateFilesSetup,
+	updateServerProperties,
+);
+export const updateFilesMainMenu = gulp.series(
+	updateFilesSetup,
+	updateMainMenuConfig,
+);
 
 export const updateAll = gulp.series(
 	updateFilesSetup,

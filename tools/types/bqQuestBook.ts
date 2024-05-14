@@ -1,15 +1,22 @@
 export interface QuestBook {
 	"format:8": string;
 	"questDatabase:9": { [key: string]: Quest };
-	"questLines:9": { [key: string]: QuestLines };
+	"questLines:9": { [key: string]: QuestLine };
 	"questSettings:10": QuestSettings;
 }
 
 export interface Quest {
+	"preRequisiteTypes:7"?: number[];
 	"preRequisites:11": number[];
 	"properties:10": QuestProperties;
 	"questID:3": number;
-	"rewards:9": Rewards9;
+	"rewards:9": { [key: string]: Rewards };
+	"tasks:9": { [key: string]: Task };
+}
+
+export interface Task {
+	"index:3": number;
+	"taskID:8": string;
 }
 
 export interface QuestProperties {
@@ -21,6 +28,7 @@ export interface QuestPropertiesBQ {
 	"desc:8": string;
 	"globalshare:1": number;
 	"icon:10": Icon;
+	"ignoresview:1": number;
 	"ismain:1": number;
 	"issilent:1": number;
 	"lockedprogress:1": number;
@@ -44,45 +52,35 @@ export interface Icon {
 	"tag:10"?: unknown;
 }
 
-export enum QuestLogic {
-	And = "AND",
-	Or = "OR",
-}
+export type QuestLogic = "AND" | "OR";
 
-export enum QuestVisibility {
-	Always = "ALWAYS",
-	Chain = "CHAIN",
-	Hidden = "HIDDEN",
-	Normal = "NORMAL",
-	Unlocked = "UNLOCKED",
-}
+export type QuestVisibility =
+	| "ALWAYS"
+	| "CHAIN"
+	| "HIDDEN"
+	| "NORMAL"
+	| "UNLOCKED";
 
-export interface Rewards9 {
-	"0:10"?: Rewards9_010;
-}
-
-export interface Rewards9_010 {
+export interface Rewards {
 	"index:3": number;
-	"rewardID:8": RewardID8;
+	"rewardID:8": string;
 	"rewards:9"?: { [key: string]: Icon };
 	"choices:9"?: { [key: string]: Icon };
 }
 
-export enum RewardID8 {
-	BqStandardChoice = "bq_standard:choice",
-	BqStandardItem = "bq_standard:item",
-}
-
-export enum TaskID8 {
-	BqStandardCheckbox = "bq_standard:checkbox",
-	BqStandardRetrieval = "bq_standard:retrieval",
-}
-
-export interface QuestLines {
+export interface QuestLine {
 	"lineID:3": number;
 	"order:3": number;
 	"properties:10": QuestLines9_Properties10;
-	"quests:9": { [key: string]: { [key: string]: number } };
+	"quests:9": { [key: string]: QuestLinesQuest };
+}
+
+export interface QuestLinesQuest {
+	"id:3": number;
+	"sizeX:3": number;
+	"sizeY:3": number;
+	"x:3": number;
+	"y:3": number;
 }
 
 export interface QuestLines9_Properties10 {

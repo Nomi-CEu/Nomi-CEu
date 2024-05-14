@@ -1,5 +1,5 @@
 import gulp from "gulp";
-import { checkEnvironmentalVariables } from "../../util/util";
+import { checkEnvironmentalVariables } from "#utils/util.ts";
 
 const vars = [
 	"GITHUB_TOKEN",
@@ -18,7 +18,7 @@ const vars = [
 async function checkEnv() {
 	checkEnvironmentalVariables(vars);
 
-	if (!/.+\/.+/.exec(process.env.GITHUB_REPOSITORY)) {
+	if (!/.+\/.+/.exec(process.env.GITHUB_REPOSITORY ?? "")) {
 		throw new Error("Malformed repository slug.");
 	}
 }

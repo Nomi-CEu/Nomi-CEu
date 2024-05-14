@@ -1,4 +1,4 @@
-import { modpackManifest } from "../../globals";
+import { modpackManifest } from "#globals";
 
 /**
  * Transform the version field of manifest.json.
@@ -14,7 +14,11 @@ export default async function transformManifestVersion(): Promise<void> {
 		modpackManifest.version = `${process.env.GITHUB_HEAD_REF}-${shortCommit}`;
 	}
 	// If SHA and ref is provided, append both the branch and short SHA.
-	else if (process.env.GITHUB_SHA && process.env.GITHUB_REF && process.env.GITHUB_REF.startsWith("refs/heads/")) {
+	else if (
+		process.env.GITHUB_SHA &&
+		process.env.GITHUB_REF &&
+		process.env.GITHUB_REF.startsWith("refs/heads/")
+	) {
 		const shortCommit = process.env.GITHUB_SHA.substring(0, 7);
 		const branch = /refs\/heads\/(.+)/.exec(process.env.GITHUB_REF)?.[1];
 		if (!branch) {

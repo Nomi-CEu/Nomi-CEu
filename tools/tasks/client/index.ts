@@ -1,19 +1,20 @@
-import gulp from "gulp";
-import { clientDestDirectory, modpackManifest, overridesFolder, sharedDestDirectory } from "../../globals";
+import gulp, { dest, symlink } from "gulp";
+import {
+	clientDestDirectory,
+	modpackManifest,
+	sharedDestDirectory,
+} from "#globals";
 import fs from "fs";
 import upath from "upath";
-import buildConfig from "../../buildConfig";
-import rename from "gulp-rename";
-import imagemin from "gulp-imagemin";
-import pngToJpeg from "png-to-jpeg";
-import { MainMenuConfig } from "../../types/mainMenuConfig";
-import del from "del";
-import { createModList, ModFileInfo } from "../misc/createModList";
+import buildConfig from "#buildConfig";
+import { deleteAsync } from "del";
+import { createModList, ModFileInfo } from "../misc/createModList.ts";
 import dedent from "dedent-js";
-import { cleanupVersion } from "../../util/util";
+import { cleanupVersion } from "#utils/util.ts";
+import filter from "gulp-filter";
 
 async function clientCleanUp() {
-	return del(upath.join(clientDestDirectory, "*"), { force: true });
+	return deleteAsync(upath.join(clientDestDirectory, "*"), { force: true });
 }
 
 /**
@@ -71,7 +72,9 @@ async function copyClientLicense() {
  * Copies the update notes file.
  */
 function copyClientUpdateNotes() {
-	return gulp.src("../UPDATENOTES.md", { allowEmpty: true }).pipe(gulp.dest(clientDestDirectory));
+	return gulp
+		.src("../UPDATENOTES.md", { allowEmpty: true })
+		.pipe(gulp.dest(clientDestDirectory));
 }
 
 /**
@@ -80,16 +83,22 @@ function copyClientUpdateNotes() {
 function copyClientChangelog() {
 	return gulp
 		.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
-		.pipe(gulp.dest(clientDestDirectory));
+		.pipe(dest(clientDestDirectory));
 }
 
 /**
  * Copies modpack overrides.
  */
 function copyClientOverrides() {
+	const f = filter((f) => !f.isDirectory());
 	return gulp
-		.src(buildConfig.copyFromSharedClientGlobs, { nodir: true, cwd: sharedDestDirectory, allowEmpty: true })
-		.pipe(gulp.symlink(upath.join(clientDestDirectory, "overrides")));
+		.src(buildConfig.copyFromSharedClientGlobs, {
+			cwd: sharedDestDirectory,
+			allowEmpty: true,
+			resolveSymlinks: true,
+		})
+		.pipe(f)
+		.pipe(symlink(upath.join(clientDestDirectory, "overrides")));
 }
 
 /**
@@ -179,7 +188,10 @@ async function fetchModList() {
 		</html>
 	`;
 
-	return fs.promises.writeFile(upath.join(clientDestDirectory, "modlist.html"), formattedModList);
+	return fs.promises.writeFile(
+		upath.join(clientDestDirectory, "modlist.html"),
+		formattedModList,
+	);
 }
 
 /**
@@ -211,54 +223,6 @@ function getTickCross(bool: boolean): string {
 	return '<td class="redCross">&#10006;</td>';
 }
 
-const bgImageNamespace = "minecraft";
-const bgImagePath = "textures/gui/title/background";
-const mainMenuConfigPath = "config/CustomMainMenu/mainmenu.json";
-
-/**
- * Minifies (converts to jpeg) main menu files so they don't take up 60% of the pack size.
- */
-async function compressMainMenuImages() {
-	const mainMenuImages = [];
-	const bgImagePathReal = upath.join("resources", bgImageNamespace, bgImagePath);
-
-	// Convert each slideshow image to 80% jpg.
-	await new Promise((resolve) => {
-		gulp
-			.src(upath.join(sharedDestDirectory, overridesFolder, bgImagePathReal, "**/*"))
-			.pipe(imagemin([pngToJpeg({ quality: buildConfig.screenshotsQuality })]))
-			.pipe(
-				rename((f) => {
-					// xd
-					f.extname = ".jpg";
-
-					// Ping back the file name so we don't have to scan the folder again.
-					mainMenuImages.push(`${f.basename}${f.extname}`);
-				}),
-			)
-			.pipe(gulp.dest(upath.join(clientDestDirectory, overridesFolder, bgImagePathReal)))
-			.on("end", resolve);
-	});
-
-	if (mainMenuImages.length > 0) {
-		// Read the CustomMainMenu config and parse it.
-		const mainMenuConfig: MainMenuConfig = JSON.parse(
-			(await fs.promises.readFile(upath.join(clientDestDirectory, overridesFolder, mainMenuConfigPath))).toString(),
-		);
-
-		// Fill the config with image paths using the weird "namespace:path" scheme.
-		mainMenuConfig.other.background.slideshow.images = mainMenuImages.map(
-			(img) => bgImageNamespace + ":" + upath.join(bgImagePath, img),
-		);
-
-		// Write it back.
-		return fs.promises.writeFile(
-			upath.join(clientDestDirectory, overridesFolder, mainMenuConfigPath),
-			JSON.stringify(mainMenuConfig, null, "  "),
-		);
-	}
-}
-
 export default gulp.series(
 	clientCleanUp,
 	createClientDirs,
@@ -269,5 +233,4 @@ export default gulp.series(
 	copyClientChangelog,
 	copyClientUpdateNotes,
 	fetchModList,
-	compressMainMenuImages,
 );

@@ -1,23 +1,32 @@
 import fs from "fs";
-import gulp from "gulp";
+import gulp, { dest, src } from "gulp";
 import upath from "upath";
-import buildConfig from "../../buildConfig";
+import buildConfig from "#buildConfig";
 import {
 	modDestDirectory,
 	modpackManifest,
 	overridesFolder,
 	rootDirectory,
 	sharedDestDirectory,
-	tempDirectory
-} from "../../globals";
-import del from "del";
-import { FileDef } from "../../types/fileDef";
-import Bluebird from "bluebird";
-import { downloadFileDef, downloadOrRetrieveFileDef, isEnvVariableSet, relative } from "../../util/util";
+	tempDirectory,
+} from "#globals";
+import { deleteAsync } from "del";
+import { FileDef } from "#types/fileDef.ts";
+import {
+	downloadFileDef,
+	downloadOrRetrieveFileDef,
+	isEnvVariableSet,
+} from "#utils/util.ts";
+import transformVersion from "./transformVersion.ts";
+import { createBuildChangelog } from "../changelog/index.ts";
+import mustache from "mustache";
+import { updateBuildRandomPatches } from "../misc/transformFiles.ts";
+import { transformQuestBook } from "./quest.ts";
+import logInfo from "#utils/log.ts";
 
 async function sharedCleanUp() {
-	await del(upath.join(sharedDestDirectory, "*"), { force: true });
-	await del(upath.join(tempDirectory, "*"), { force: true });
+	await deleteAsync(upath.join(sharedDestDirectory, "*"), { force: true });
+	await deleteAsync(upath.join(tempDirectory, "*"), { force: true });
 }
 
 /**
@@ -38,10 +47,10 @@ async function createSharedDirs() {
  */
 async function copyOverrides() {
 	// Don't copy server.properties files in config-overrides, it is auto transformed into the server build folder
+	// Copy, not Symlink, so we can transform the files as we wish
 	return new Promise((resolve) => {
-		gulp
-			.src(buildConfig.copyToSharedDirGlobs, { cwd: upath.join(buildConfig.buildSourceDirectory) })
-			.pipe(gulp.dest(upath.join(sharedDestDirectory, overridesFolder)))
+		src(buildConfig.copyToSharedDirGlobs, { cwd: upath.join(rootDirectory) })
+			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
 			.on("end", resolve);
 	});
 }
@@ -73,17 +82,13 @@ async function fetchExternalDependencies() {
 
 		delete modpackManifest.externalDependencies;
 
-		return Bluebird.map(
-			depDefs,
-			async (depDef) => {
+		await Promise.all(
+			depDefs.map(async (depDef) => {
 				const dest = upath.join(destDirectory, upath.basename(depDef.url));
 				const cachePath = (await downloadOrRetrieveFileDef(depDef)).cachePath;
 
-				const rel = relative(dest, cachePath);
-
-				await fs.promises.symlink(rel, dest);
-			},
-			{ concurrency: buildConfig.downloaderConcurrency },
+				return fs.promises.symlink(upath.resolve(dest, cachePath), dest);
+			}),
 		);
 	}
 }
@@ -92,25 +97,41 @@ async function fetchExternalDependencies() {
  * Either fetches the Changelog File, or makes one.
  */
 async function fetchOrMakeChangelog() {
-	if (isEnvVariableSet("CHANGELOG_URL") && isEnvVariableSet("CHANGELOG_CF_URL")) {
-		log("Using Changelog Files from URL.");
-		await downloadChangelogs(process.env.CHANGELOG_URL, process.env.CHANGELOG_CF_URL);
-		return;
-	}
-	if (isEnvVariableSet("CHANGELOG_BRANCH")) {
-		log("Using Changelog Files from Branch.");
-		const url = "https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
+	if (
+		isEnvVariableSet("CHANGELOG_URL") &&
+		isEnvVariableSet("CHANGELOG_CF_URL")
+	) {
+		logInfo("Using Changelog Files from URL.");
 		await downloadChangelogs(
-			mustache.render(url, { branch: process.env.CHANGELOG_BRANCH, filename: "CHANGELOG.md" }),
-			mustache.render(url, { branch: process.env.CHANGELOG_BRNACH, filename: "CHANGELOG_CF.md" }),
+			process.env.CHANGELOG_URL ?? "",
+			process.env.CHANGELOG_CF_URL ?? "",
 		);
 		return;
 	}
-	log("Creating Changelog Files.");
+	if (isEnvVariableSet("CHANGELOG_BRANCH")) {
+		logInfo("Using Changelog Files from Branch.");
+		const url =
+			"https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/{{ branch }}/{{ filename }}";
+		await downloadChangelogs(
+			mustache.render(url, {
+				branch: process.env.CHANGELOG_BRANCH,
+				filename: "CHANGELOG.md",
+			}),
+			mustache.render(url, {
+				branch: process.env.CHANGELOG_BRNACH,
+				filename: "CHANGELOG_CF.md",
+			}),
+		);
+		return;
+	}
+	logInfo("Creating Changelog Files.");
 	await createBuildChangelog();
 }
 
-async function downloadChangelogs(changelogURL: string, changelogCFURL: string) {
+async function downloadChangelogs(
+	changelogURL: string,
+	changelogCFURL: string,
+) {
 	const changelog = await downloadFileDef({ url: changelogURL });
 	const changelogCF = await downloadFileDef({ url: changelogCFURL });
 
@@ -118,29 +139,29 @@ async function downloadChangelogs(changelogURL: string, changelogCFURL: string) 
 	await writeToChangelog(changelogCF, "CHANGELOG_CF.md", changelogCFURL);
 }
 
-async function writeToChangelog(buffer: Buffer, changelogFile: string, url: string) {
-	let handle: fs.promises.FileHandle;
+async function writeToChangelog(
+	buffer: Buffer,
+	changelogFile: string,
+	url: string,
+) {
+	let handle: fs.promises.FileHandle | undefined = undefined;
 	try {
-		handle = await fs.promises.open(upath.join(buildConfig.buildDestinationDirectory, changelogFile), "w");
+		handle = await fs.promises.open(
+			upath.join(buildConfig.buildDestinationDirectory, changelogFile),
+			"w",
+		);
 
 		await handle.write(buffer);
 		await handle.close();
 	} catch (err) {
 		if (handle && (await handle.stat()).isFile()) {
-			log(`Couldn't download changelog from URL ${url}, cleaning up...`);
+			logInfo(`Couldn't download changelog from URL ${url}, cleaning up...`);
 
 			await handle.close();
 		}
 		throw err;
 	}
 }
-
-import transformVersion from "./transformVersion";
-import { createBuildChangelog } from "../changelog/createChangelog";
-import mustache from "mustache";
-import log from "fancy-log";
-import { updateBuildRandomPatches } from "../misc/transformFiles";
-import { transformQuestBook } from "./quest";
 
 export default gulp.series(
 	sharedCleanUp,
