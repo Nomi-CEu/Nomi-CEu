@@ -144,7 +144,7 @@ async function checkAndFix(shouldCheck: boolean) {
 				expert,
 			),
 		]);
-	} else logInfo(colors.bold("Successful. No Formatting Errors!"));
+	} else logInfo(colors.green("Successful. No Formatting Errors!"));
 }
 
 async function checkAndFixQB(
