@@ -33,16 +33,15 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
-      - name: Restore Cached Files
+      - name: Restore NPM Cached Files
         uses: actions/cache@v4
-        id: cache
+        id: npm-cache
         with:
           path: |
             ~/.npm
-            ./.cache
             ./tools/node_modules
-          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
-          restore-keys: ${{ runner.os }}-bunny-
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
         uses: actions/setup-node@v4
