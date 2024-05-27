@@ -13726,17 +13726,24 @@
       }
     },
     "197:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1
+      ],
       "preRequisites:11": [
-        311
+        159,
+        201,
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungstensteel§r is an alloy of §6Tungsten§r and §6Steel§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
+          "desc:8": "§6RTM-Alloy§r is an alloy of §6Ruthenium, Tungsten §fand §6Molybdenum§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 2013,
+            "Damage:2": 451,
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
@@ -13744,7 +13751,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Tungstensteel",
+          "name:8": "RTM-Alloy",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -13783,7 +13790,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 2013,
+              "Damage:2": 451,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             }
@@ -13794,8 +13801,8 @@
     },
     "198:10": {
       "preRequisites:11": [
-        197,
-        785
+        785,
+        1051
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -21646,7 +21653,8 @@
     "311:10": {
       "preRequisites:11": [
         201,
-        827
+        827,
+        197
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32555,8 +32563,8 @@
     },
     "512:10": {
       "preRequisites:11": [
-        197,
-        296
+        296,
+        1051
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -34533,9 +34541,9 @@
     },
     "542:10": {
       "preRequisites:11": [
-        197,
         209,
-        296
+        296,
+        1051
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -65455,6 +65463,73 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1051:10": {
+      "preRequisites:11": [
+        201,
+        311
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Tungstensteel§f is an alloy of §6Tungsten §fand §6Steel.\n\n§fThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2013,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tungstensteel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1051,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 5,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2013,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -67126,8 +67201,8 @@
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 240
+          "x:3": -396,
+          "y:3": 192
         },
         "48:10": {
           "id:3": 198,
@@ -67863,6 +67938,13 @@
           "sizeY:3": 24,
           "x:3": -812,
           "y:3": 252
+        },
+        "153:10": {
+          "id:3": 1051,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -360,
+          "y:3": 240
         }
       }
     },
