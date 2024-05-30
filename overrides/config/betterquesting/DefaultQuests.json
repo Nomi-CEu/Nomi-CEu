@@ -13739,7 +13739,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6RTM-Alloy§r is an alloy of §6Ruthenium, Tungsten §fand §6Molybdenum§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
+          "desc:8": "§6RTM-Alloy§r is an alloy of §6Ruthenium, Tungsten §rand §6Molybdenum§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21652,9 +21652,9 @@
     },
     "311:10": {
       "preRequisites:11": [
+        197,
         201,
-        827,
-        197
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -65472,7 +65472,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungstensteel§f is an alloy of §6Tungsten §fand §6Steel.\n\n§fThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.\n",
+          "desc:8": "§6Tungstensteel§r is an alloy of §6Tungsten §rand §6Steel.\n\n§rThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
