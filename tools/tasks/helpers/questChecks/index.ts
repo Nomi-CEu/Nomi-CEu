@@ -69,7 +69,7 @@ async function checkAndFix(shouldCheck: boolean) {
 			upath.join(rootDirectory, cfgOverrideExpertPath),
 			"utf-8",
 		);
-		if (exp1 !== exp2) throw new Error("Normal Quest Books are not the Same!");
+		if (exp1 !== exp2) throw new Error("Expert Quest Books are not the Same!");
 
 		checkNormalQB = JSON.parse(nml1) as QuestBook;
 		checkExpertQB = JSON.parse(exp1) as QuestBook;
@@ -307,7 +307,7 @@ async function checkAndFixQB(
 		}
 
 		// Check for Rewards that have Nomicoins
-		if (isExpert) stripRewards(quest, isExpert, true);
+		if (isExpert) stripRewards(quest, shouldCheck, true);
 
 		if (!shouldCheck) newQB[`${foundID}:10`] = quest;
 	}
