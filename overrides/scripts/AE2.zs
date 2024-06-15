@@ -13,8 +13,8 @@ import mods.gregtech.recipe.RecipeMap;
 <appliedenergistics2:material:60>.addTooltip(format.yellow("When put in a wireless terminal, it will pick items off the floor and put them into your ae2 system based on your configuration.")); //magnet card
 <appliedenergistics2:material:31>.addTooltip(format.yellow("Inverts ae2 configurations. Example: If you have a storage bus set to only store Omnium Ingots, and you have this card, it will store every item but Omnium Ingots")); //inverter card
 <appliedenergistics2:material:29>.addTooltip(format.yellow("Only exports/imports/ items in a certain damage range.")); //fuzzy card
-<appliedenergistics2:material:27>.addTooltip(format.yellow("Allows importing/exporting more then one type of item from a machine, onr card is 4 slots, and cards is 9 slots.")); //capacity card
-
+<appliedenergistics2:material:27>.addTooltip(format.yellow("Allows importing/exporting more then one type of item from a machine, one card is 4 slots, and cards is 9 slots.")); //capacity card
+<appliedenergistics2:material:26>.addTooltip(format.yellow("Allows redstone control over ME machines.")); //redstone card
 
 
 <appliedenergistics2:material:10>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Certus Quartz Seed."));
