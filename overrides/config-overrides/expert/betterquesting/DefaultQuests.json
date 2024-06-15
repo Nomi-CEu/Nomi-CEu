@@ -41880,7 +41880,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.",
+          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicone Rubber, as well as being a more efficient way to coat wires.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41903,7 +41903,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -41920,6 +41920,20 @@
             "0:10": {
               "Amount:3": 1000,
               "FluidName:8": "silicone_rubber"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "styrene_butadiene_rubber"
             }
           },
           "taskID:8": "bq_standard:fluid"
