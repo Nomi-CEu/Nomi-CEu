@@ -10,7 +10,7 @@ import mods.gregtech.recipe.RecipeMap;
 <appliedenergistics2:material:58>.addTooltip(format.yellow("Used in interfaces. Allows you to put more patterns in an interface then normally allowed up to 4x the normal amount of patterns. Check the Quest Book for more information.")); //pattern expansion card
 <appliedenergistics2:material:53>.addTooltip(format.yellow("Allows machines to craft items as they are used up automatically.")); //crafting card
 <appliedenergistics2:material:30>.addTooltip(format.yellow("Speeds up various ae2 processes such as exporting things into a machine, speeding up molecular accelerators.")); //acceleration card
-<appliedenergistics2:material:69>.addTooltip(format.yellow("When put in a wireless terminal, it will pick items off the floor and put them into your ae2 system based on your configuration.")); //magnet card
+<appliedenergistics2:material:60>.addTooltip(format.yellow("When put in a wireless terminal, it will pick items off the floor and put them into your ae2 system based on your configuration.")); //magnet card
 
 
 <appliedenergistics2:material:10>.addTooltip(format.red("Made in a Crystal Growth Chamber from a Certus Quartz Seed."));
