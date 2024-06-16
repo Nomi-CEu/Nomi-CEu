@@ -7,8 +7,8 @@ mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blo
 mods.hei.removeAndHide(item('densemetals:dense_platinum_ore')) //Dense Platinum ore
 mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:81')) // Centrifuged Ore
 mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) //trona ore
-mods.hei.removeAndHide(item('gregtech:ore_trona_0, 1')) //trona ore
-mods.hei.removeAndHide(item('gregtech:ore_trona_0, 2')) //trona ore
+mods.hei.removeAndHide(item('gregtech:ore_trona_0', 1)) //trona ore
+mods.hei.removeAndHide(item('gregtech:ore_trona_0', 2)) //trona ore
 mods.hei.removeAndHide(item('gregtech:meta_dust_small:2031')) // small dust
 mods.hei.removeAndHide(item('densemetals:dense_diamond_ore')) //Dense Diamond ore
 mods.hei.removeAndHide(item('densemetals:dense_quartz_ore')) // dense quartz ore
