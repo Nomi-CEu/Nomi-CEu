@@ -11430,7 +11430,7 @@
     "198:10": {
       "preRequisites:11": [
         785,
-        1054
+        1053
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27778,7 +27778,7 @@
       ],
       "preRequisites:11": [
         296,
-        1054
+        1053
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -29421,7 +29421,7 @@
       "preRequisites:11": [
         209,
         296,
-        1054
+        1053
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -55652,61 +55652,6 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
-    },
-    "1054:10": {
-      "preRequisites:11": [
-        201,
-        311
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "§6Tungstensteel§r is an alloy of §6Tungsten §rand §6Steel§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 2013,
-            "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Tungstensteel",
-          "partysinglereward:1": 0,
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 1054,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 2013,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
     }
   },
   "questLines:9": {
@@ -58110,7 +58055,7 @@
           "y:3": 344
         },
         "151:10": {
-          "id:3": 1054,
+          "id:3": 1053,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
