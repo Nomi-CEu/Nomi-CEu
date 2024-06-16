@@ -122,3 +122,10 @@ interface CurseForgeSortableGameVersion {
 	gameVersionReleaseDate: Date;
 	gameVersionTypeId: number;
 }
+
+export interface CurseForgeLegacyMCVersion {
+	id: number;
+	gameVersionTypeID: number;
+	name: string;
+	slug: string;
+}

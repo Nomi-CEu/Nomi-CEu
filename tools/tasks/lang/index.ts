@@ -2,8 +2,12 @@ import gulp from "gulp";
 import rename from "gulp-rename";
 import merge from "merge-stream";
 import upath from "upath";
-import buildConfig from "../../buildConfig";
-import { langDestDirectory, overridesFolder, sharedDestDirectory } from "../../globals";
+import buildConfig from "#buildConfig";
+import {
+	langDestDirectory,
+	overridesFolder,
+	sharedDestDirectory,
+} from "#globals";
 import fs from "fs";
 
 /**
@@ -16,9 +20,13 @@ async function createLangDirs() {
 }
 
 async function copyLang() {
-	const resourcesPath = upath.join(sharedDestDirectory, overridesFolder, "resources");
+	const resourcesPath = upath.join(
+		sharedDestDirectory,
+		overridesFolder,
+		"resources",
+	);
 
-	const opts = { nodir: true, base: resourcesPath };
+	const opts = { base: resourcesPath, resolveSymlinks: true };
 	const streams = [
 		gulp.src(upath.join(resourcesPath, "pack.mcmeta"), opts),
 		gulp.src(upath.join(resourcesPath, "**/*.lang"), opts).pipe(
@@ -30,7 +38,11 @@ async function copyLang() {
 
 	return await new Promise((resolve) => {
 		merge(...streams)
-			.pipe(gulp.dest(upath.join(buildConfig.buildDestinationDirectory, langDestDirectory)))
+			.pipe(
+				gulp.dest(
+					upath.join(buildConfig.buildDestinationDirectory, langDestDirectory),
+				),
+			)
 			.on("end", resolve);
 	});
 }

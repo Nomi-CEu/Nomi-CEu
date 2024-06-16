@@ -95,30 +95,39 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
-      - name: Restore Cached Files
-        uses: actions/cache@v3
-        id: cache
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
         with:
           path: |
             ~/.npm
-            ./.cache
             ./tools/node_modules
-          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
-          restore-keys: ${{ runner.os }}-bunny-
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Restore Build Cached Files
+        uses: actions/cache@v4
+        id: build-cache
         with:
-          node-version: "16"
+          path: |
+            ./.cache
+          key: ${{ runner.os }}-build-${{ hashFiles('./.cache', './manifest.json') }}
+          restore-keys: ${{ runner.os }}-build-
+
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npx gulp check
+        run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -127,7 +136,7 @@ jobs:
 
       - name: Build and Zip Pack
         working-directory: ./tools
-        run: npx gulp
+        run: npm run gulp
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
@@ -136,13 +145,14 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload All Files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Built Pack
           path: |
             ./build/*.zip
             ./build/*.md
           if-no-files-found: error
+          compression-level: 0
 
   makeNames:
     name: Make Artifact Names (${{ inputs.tag }})
@@ -165,30 +175,30 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
-      - name: Restore Cached Files
-        uses: actions/cache@v3
-        id: cache
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
         with:
           path: |
             ~/.npm
-            ./.cache
             ./tools/node_modules
-          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
-          restore-keys: ${{ runner.os }}-bunny-
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npx gulp check
+        run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -198,7 +208,7 @@ jobs:
       - name: Make Artifact Names
         id: artifactNames
         working-directory: ./tools
-        run: npx gulp makeArtifactNames
+        run: npm run gulp makeArtifactNames
 
   buildClient:
     name: Build Pack Client (${{ inputs.tag }})
@@ -217,30 +227,30 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
-      - name: Restore Cached Files
-        uses: actions/cache@v3
-        id: cache
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
         with:
           path: |
             ~/.npm
-            ./.cache
             ./tools/node_modules
-          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
-          restore-keys: ${{ runner.os }}-bunny-
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npx gulp check
+        run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -249,7 +259,7 @@ jobs:
 
       - name: Build Client
         working-directory: ./tools
-        run: npx gulp buildClient
+        run: npm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
@@ -258,11 +268,12 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
           
       - name: Upload Client Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.makeNames.outputs.client }}
           path: ./build/client/**/*
           if-no-files-found: error
+          compression-level: 9
 
   buildServer:
     name: Build Pack Server (${{ inputs.tag }})
@@ -281,30 +292,39 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
-      - name: Restore Cached Files
-        uses: actions/cache@v3
-        id: cache
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
         with:
           path: |
             ~/.npm
-            ./.cache
             ./tools/node_modules
-          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
-          restore-keys: ${{ runner.os }}-bunny-
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Restore Build Cached Files
+        uses: actions/cache@v4
+        id: build-cache
         with:
-          node-version: "16"
+          path: |
+            ./.cache
+          key: ${{ runner.os }}-build-${{ hashFiles('./.cache', './manifest.json') }}
+          restore-keys: ${{ runner.os }}-build-
+
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npx gulp check
+        run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -313,7 +333,7 @@ jobs:
 
       - name: Build Server
         working-directory: ./tools
-        run: npx gulp buildServer
+        run: npm run gulp buildServer
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
@@ -322,11 +342,12 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload Server Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.makeNames.outputs.server }}
           path: ./build/server/**/*
           if-no-files-found: error
+          compression-level: 9
 
   buildLang:
     name: Build Pack Lang and Changelogs (${{ inputs.tag }})
@@ -345,30 +366,30 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
-      - name: Restore Cached Files
-        uses: actions/cache@v3
-        id: cache
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
         with:
           path: |
             ~/.npm
-            ./.cache
             ./tools/node_modules
-          key: ${{ runner.os }}-bunny-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
-          restore-keys: ${{ runner.os }}-bunny-
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npx gulp check
+        run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -377,7 +398,7 @@ jobs:
 
       - name: Build Lang and Changelogs
         working-directory: ./tools
-        run: npx gulp buildLang
+        run: npm run gulp buildLang
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
@@ -386,15 +407,17 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload Lang Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.makeNames.outputs.lang }}
           path: ./build/lang/**/*
           if-no-files-found: error
+          compression-level: 9
 
       - name: Upload Changelogs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Changelogs
           path: ./build/*.md
           if-no-files-found: error
+          compression-level: 9

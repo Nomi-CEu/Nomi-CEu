@@ -5,7 +5,7 @@ interface ModLoader {
 
 interface Minecraft {
 	version: string;
-	modLoaders?: ModLoader[];
+	modLoaders: ModLoader[];
 }
 
 export interface ExternalDependency {
@@ -28,7 +28,7 @@ export interface ModpackManifest {
 	name: string;
 	version: string;
 	author: string;
-	projectID: number;
+	projectID?: number;
 	externalDependencies?: ExternalDependency[];
 	files: ModpackManifestFile[];
 	overrides: string;

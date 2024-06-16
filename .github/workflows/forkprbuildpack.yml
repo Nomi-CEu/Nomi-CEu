@@ -47,10 +47,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -60,7 +60,7 @@ jobs:
       - name: Make Artifact Names
         id: artifactNames
         working-directory: ./tools
-        run: npx gulp makeArtifactNames
+        run: npm run gulp makeArtifactNames
 
   buildClient:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
@@ -81,10 +81,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -93,16 +93,17 @@ jobs:
 
       - name: Build Client
         working-directory: ./tools
-        run: npx gulp buildClient
+        run: npm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           
       - name: Upload Client Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.setup.outputs.client }}
           path: ./build/client/**/*
           if-no-files-found: error
+          compression-level: 9
 
   buildServer:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
@@ -123,10 +124,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -135,16 +136,17 @@ jobs:
 
       - name: Build Server
         working-directory: ./tools
-        run: npx gulp buildServer
+        run: npm run gulp buildServer
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Upload Server Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.setup.outputs.server }}
           path: ./build/server/**/*
           if-no-files-found: error
+          compression-level: 9
 
   buildLang:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
@@ -165,10 +167,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v16
-        uses: actions/setup-node@v3
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: 20
           check-latest: true
 
       - name: Setup NPM Packages
@@ -177,20 +179,22 @@ jobs:
 
       - name: Build Lang and Changelogs
         working-directory: ./tools
-        run: npx gulp buildLang
+        run: npm run gulp buildLang
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Upload Lang Zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.setup.outputs.lang }}
           path: ./build/lang/**/*
           if-no-files-found: error
+          compression-level: 9
 
       - name: Upload Changelogs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Changelogs
           path: ./build/*.md
           if-no-files-found: error
+          compression-level: 9

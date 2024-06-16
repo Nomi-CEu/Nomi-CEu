@@ -4,18 +4,20 @@ import {
 	mmcDestDirectory,
 	modpackManifest,
 	serverDestDirectory,
-} from "../../globals";
+} from "#globals";
 import upath from "upath";
 import zip from "gulp-zip";
-import gulp from "gulp";
-import buildConfig from "../../buildConfig";
-import { makeArtifactNameBody } from "../../util/util";
+import gulp, { src } from "gulp";
+import buildConfig from "#buildConfig";
+import { makeArtifactNameBody } from "#utils/util.ts";
 import sanitize from "sanitize-filename";
 
-async function zipFolder(path: string, zipName: string = upath.basename(path) + ".zip"): Promise<void> {
+async function zipFolder(
+	path: string,
+	zipName: string = upath.basename(path) + ".zip",
+): Promise<void> {
 	return new Promise((resolve) => {
-		gulp
-			.src(upath.join(path, "**"), { nodir: true, base: path, dot: true })
+		src(upath.join(path, "**"), { base: path, dot: true })
 			.pipe(zip(zipName))
 			.pipe(gulp.dest(buildConfig.buildDestinationDirectory))
 			.on("end", resolve);
@@ -26,7 +28,11 @@ function makeZipper(src: string, artifactName: string) {
 	const zipFn = () => {
 		return zipFolder(
 			upath.join(src),
-			sanitize((makeArtifactNameBody(modpackManifest.name) + `-${artifactName}.zip`).toLowerCase()),
+			sanitize(
+				(
+					makeArtifactNameBody(modpackManifest.name) + `-${artifactName}.zip`
+				).toLowerCase(),
+			),
 		);
 	};
 

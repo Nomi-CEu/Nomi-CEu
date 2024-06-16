@@ -1,5 +1,10 @@
-import { Commit, FixUpInfo, InputReleaseType, ParsedModInfo } from "../../types/changelogTypes";
-import { getLastGitTag, getTags, isEnvVariableSet } from "../../util/util";
+import {
+	Commit,
+	FixUpInfo,
+	InputReleaseType,
+	ParsedModInfo,
+} from "#types/changelogTypes.ts";
+import { getLastGitTag, getTags, isEnvVariableSet } from "#utils/util.ts";
 
 export default class ChangelogData {
 	since: string;
@@ -26,30 +31,33 @@ export default class ChangelogData {
 	modInfoList: Map<number, ParsedModInfo>;
 
 	/**
-	 * A normal initialisation.
+	 * Constructor. Non-Async Inits are performed here.
 	 */
-	async init(): Promise<void> {
+	constructor() {
 		this.since = getLastGitTag();
 		this.to = "HEAD";
 
 		// If this is a tagged build, fetch the tag before last.
 		if (isEnvVariableSet("GITHUB_TAG")) {
 			this.since = getLastGitTag(process.env.GITHUB_TAG);
-			this.to = process.env.GITHUB_TAG;
+			this.to = process.env.GITHUB_TAG ?? "HEAD";
 		}
 
 		// Get Release Type
 		this.releaseType = "Release";
-		if (isEnvVariableSet("RELEASE_TYPE")) this.releaseType = process.env.RELEASE_TYPE as InputReleaseType;
+		if (isEnvVariableSet("RELEASE_TYPE"))
+			this.releaseType = process.env.RELEASE_TYPE as InputReleaseType;
 
 		// See if current run is test
 		if (isEnvVariableSet("TEST_CHANGELOG")) {
 			try {
-				this.isTest = JSON.parse(process.env.TEST_CHANGELOG.toLowerCase());
+				this.isTest = JSON.parse(
+					(process.env.TEST_CHANGELOG ?? "false").toLowerCase(),
+				);
 			} catch (err) {
 				throw new Error("Test Changelog Env Variable set to Invalid Value.");
 			}
-		}
+		} else this.isTest = false;
 
 		// Initialise Final Builder
 		this.builder = [];
@@ -61,10 +69,18 @@ export default class ChangelogData {
 		this.shaList = new Set<string>();
 		this.combineList = new Map<string, Commit[]>();
 
+		this.modInfoList = new Map<number, ParsedModInfo>();
+
+		// Init Tag Sets for Now, so we don't have to deal with nullable params
+		this.tags = new Set<string>();
+		this.compareTags = new Set<string>();
+	}
+	/**
+	 * A normal initialisation. Async Inits are called here.
+	 */
+	async init(): Promise<void> {
 		this.tags = new Set<string>(await getTags(this.to));
 		this.compareTags = new Set<string>(await getTags(this.since));
-
-		this.modInfoList = new Map<number, ParsedModInfo>();
 	}
 
 	shouldIterate(): boolean {
@@ -76,7 +92,7 @@ export default class ChangelogData {
 	 * @return tags The Compare Tags
 	 */
 	getIterations(): string[] {
-		const iterations = process.env.COMPARE_TAG;
+		const iterations = process.env.COMPARE_TAG ?? "";
 		return iterations.split(",").map((tag) => tag.trim());
 	}
 

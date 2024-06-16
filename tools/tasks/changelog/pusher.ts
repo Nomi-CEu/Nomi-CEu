@@ -1,9 +1,9 @@
-import ChangelogData from "./changelogData";
-import { categories, defaultIndentation } from "./definitions";
-import { Category, ChangelogMessage, Commit } from "../../types/changelogTypes";
-import { repoLink } from "./definitions";
+import ChangelogData from "./changelogData.ts";
+import { categories, defaultIndentation } from "./definitions.ts";
+import { Category, ChangelogMessage, Commit } from "#types/changelogTypes.ts";
+import { repoLink } from "./definitions.ts";
 import { Octokit } from "@octokit/rest";
-import { getIssueURL, getNewestIssueURLs } from "../../util/util";
+import { getIssueURL, getNewestIssueURLs } from "#utils/util.ts";
 
 let data: ChangelogData;
 let octokit: Octokit;
@@ -11,6 +11,15 @@ let octokit: Octokit;
 export default async function pushAll(inputData: ChangelogData): Promise<void> {
 	pushTitle(inputData);
 	await pushChangelog(inputData);
+}
+
+export async function pushSetup(): Promise<void> {
+	octokit = new Octokit({
+		auth: process.env.GITHUB_TOKEN,
+	});
+
+	// Save Issue/PR Info to Cache
+	await getNewestIssueURLs(octokit);
 }
 
 export function pushTitle(inputData: ChangelogData): void {
@@ -30,23 +39,22 @@ export function pushTitle(inputData: ChangelogData): void {
 			timeZoneName: "short",
 		});
 		// noinspection HtmlDeprecatedAttribute
-		data.builder.push(`<h1 align="center">${data.releaseType} (${date})</h1>`, "");
+		data.builder.push(
+			`<h1 align="center">${data.releaseType} (${date})</h1>`,
+			"",
+		);
 	} else {
 		// noinspection HtmlUnknownAttribute
-		data.builder.push(`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`, "");
+		data.builder.push(
+			`<h1 {{{ CENTER_ALIGN }}}>${data.releaseType} ${data.to}</h1>`,
+			"",
+		);
 		data.builder.push("{{{ CF_REDIRECT }}}", "");
 	}
 }
 
 export async function pushChangelog(inputData: ChangelogData): Promise<void> {
 	data = inputData;
-
-	octokit = new Octokit({
-		auth: process.env.GITHUB_TOKEN,
-	});
-
-	// Save Issue/PR Info to Cache
-	await getNewestIssueURLs(octokit);
 
 	data.builder.push(`# Changes Since ${data.since}`, "");
 
@@ -92,7 +100,7 @@ async function pushCategory(category: Category) {
 	// Push All Sub Categories
 	for (const subCategory of category.subCategories) {
 		// Loop through key list instead of map to produce correct order
-		const list = category.changelogSection.get(subCategory);
+		const list = category.changelogSection?.get(subCategory);
 		if (list && list.length != 0) {
 			// Push Key Name (only pushes if Key Name is not "")
 			if (subCategory.keyName) {
@@ -119,6 +127,7 @@ async function pushCategory(category: Category) {
 			hasValues = true;
 		}
 	}
+	await transformAllIssueURLs(categoryLog);
 	if (hasValues) {
 		// Push Title
 		data.builder.push(`## ${category.categoryName}:`);
@@ -134,7 +143,11 @@ async function pushCategory(category: Category) {
  * @param transform A function to turn each element of type T into an element of type Commit
  * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal) or will compare commit messages.
  */
-function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined, backup?: (a: T, b: T) => number) {
+function sortCommitList<T>(
+	list: T[],
+	transform: (obj: T) => Commit | undefined,
+	backup?: (a: T, b: T) => number,
+) {
 	list.sort((a, b): number => {
 		const commitA = transform(a);
 		const commitB = transform(b);
@@ -147,9 +160,11 @@ function sortCommitList<T>(list: T[], transform: (obj: T) => Commit | undefined,
 		const dateB = new Date(commitB.date);
 
 		// This is reversed, so higher priorities go on top
-		if (commitB.priority !== commitA.priority) return commitB.priority - commitA.priority;
+		if (commitB.priority !== commitA.priority)
+			return (commitB.priority ?? 0) - (commitA.priority ?? 0);
 		// This is reversed, so the newest commits go on top
-		if (dateB.getTime() - dateA.getTime() !== 0) return dateB.getTime() - dateA.getTime();
+		if (dateB.getTime() - dateA.getTime() !== 0)
+			return dateB.getTime() - dateA.getTime();
 		if (backup) return backup(a, b);
 		return commitA.message.localeCompare(commitB.message);
 	});
@@ -165,8 +180,9 @@ export function sortCommitListReverse(list: Commit[]): void {
 		const dateB = new Date(b.date);
 
 		// This is reversed, so higher priorities go on top
-		if (b.priority !== a.priority) return b.priority - a.priority; // Priority is still highest first
-		if (dateA.getTime() - dateB.getTime() !== 0) return dateA.getTime() - dateB.getTime();
+		if (b.priority !== a.priority) return (b.priority ?? 0) - (a.priority ?? 0); // Priority is still highest first
+		if (dateA.getTime() - dateB.getTime() !== 0)
+			return dateA.getTime() - dateB.getTime();
 		return a.message.localeCompare(b.message);
 	});
 }
@@ -177,12 +193,15 @@ export function sortCommitListReverse(list: Commit[]): void {
  * @param subMessage Whether this message is a subMessage (used in details). Set to true to make it a subMessage (different parsing). Defaults to false.
  * @return string Formatted Changelog Message
  */
-async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMessage = false): Promise<string> {
-	const indentation = changelogMessage.indentation == undefined ? defaultIndentation : changelogMessage.indentation;
-	let message = changelogMessage.commitMessage.trim();
-
-	// Transform PR and/or Issue tags into a link.
-	message = await transformTags(message);
+async function formatChangelogMessage(
+	changelogMessage: ChangelogMessage,
+	subMessage = false,
+): Promise<string> {
+	const indentation =
+		changelogMessage.indentation == undefined
+			? defaultIndentation
+			: changelogMessage.indentation;
+	const message = changelogMessage.commitMessage.trim();
 
 	if (changelogMessage.specialFormatting)
 		return changelogMessage.specialFormatting.formatting(
@@ -194,7 +213,8 @@ async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMes
 
 	if (changelogMessage.commitObject && !subMessage) {
 		if (data.combineList.has(changelogMessage.commitObject.hash)) {
-			const commits = data.combineList.get(changelogMessage.commitObject.hash);
+			const commits =
+				data.combineList.get(changelogMessage.commitObject.hash) ?? [];
 			commits.push(changelogMessage.commitObject);
 
 			// Sort original array so newest commits appear at the end instead of start of commit string
@@ -207,11 +227,16 @@ async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMes
 
 			commits.forEach((commit) => {
 				if (processedSHAs.has(commit.hash)) return;
-				if (!authors.includes(commit.author_name) && !authorEmails.has(commit.author_email)) {
+				if (
+					!authors.includes(commit.author_name) &&
+					!authorEmails.has(commit.author_email)
+				) {
 					authors.push(commit.author_name);
 					authorEmails.add(commit.author_email);
 				}
-				formattedCommits.push(`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`);
+				formattedCommits.push(
+					`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`,
+				);
 				processedSHAs.add(commit.hash);
 			});
 
@@ -232,7 +257,11 @@ async function formatChangelogMessage(changelogMessage: ChangelogMessage, subMes
  * Returns a formatted commit
  */
 function formatCommit(commit: Commit): string {
-	const date = new Date(commit.date).toLocaleDateString("en-us", { year: "numeric", month: "short", day: "numeric" });
+	const date = new Date(commit.date).toLocaleDateString("en-us", {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+	});
 	const formattedCommit = `${commit.message} - **${commit.author_name}** (${date})`;
 
 	const shortSHA = commit.hash.substring(0, 7);
@@ -241,21 +270,47 @@ function formatCommit(commit: Commit): string {
 }
 
 /**
+ * Transforms PR/Issue Tags in all strings of the generated changelog.
+ * @param changelog The list to transform all PR/Issue Tags of.
+ */
+async function transformAllIssueURLs(changelog: string[]) {
+	const promises: Promise<string>[] = [];
+	for (let i = 0; i < changelog.length; i++) {
+		const categoryFormatted = changelog[i];
+		// Transform PR and/or Issue tags into a link.
+		promises.push(
+			transformTags(categoryFormatted).then(
+				(categoryTransformed) => (changelog[i] = categoryTransformed),
+			),
+		);
+	}
+	// Apply all Link Changes
+	await Promise.all(promises);
+}
+
+/**
  * Transforms PR/Issue Tags into Links.
  */
 async function transformTags(message: string): Promise<string> {
+	const promises: Promise<string>[] = [];
 	if (message.search(/#\d+/) !== -1) {
-		const matched = message.match(/#\d+/g);
+		const matched = message.match(/#\d+/g) ?? [];
 		for (const match of matched) {
 			// Extract digits
-			const digits = Number.parseInt(match.match(/\d+/)[0]);
+			const digitsMatch = match.match(/\d+/);
+			if (!digitsMatch) continue;
+			const digits = Number.parseInt(digitsMatch[0]);
 
 			// Get PR/Issue Info (PRs are listed in the Issue API Endpoint)
-			const url = await getIssueURL(digits, octokit);
-			if (url) {
-				message = message.replace(match, `[#${digits}](${url})`);
-			}
+			promises.push(
+				getIssueURL(digits, octokit).then((url) =>
+					message.replace(match, `[#${digits}](${url})`),
+				),
+			);
 		}
 	}
+
+	// Resolve all Issue URL Replacements
+	await Promise.all(promises);
 	return message;
 }

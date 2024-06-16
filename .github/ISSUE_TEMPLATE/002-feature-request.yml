@@ -14,6 +14,7 @@ body:
       description: The version of Nomi CEu you are using as the basis for this feature request. If you do not know what it is, check the title of your instance window. f you do not see your version here, please update to the newest alpha, beta or release of the pack.
       options:
         - "Nightly"
+        - 1.7-alpha-4
         - 1.7-alpha-3
         - 1.7-alpha-2a
         - 1.7-alpha-2
@@ -62,6 +63,18 @@ body:
         Example: Singleplayer
         Example For Nightly: Singleplayer, Nightly main 7ga03fj
         Example For Nightly On Dev Branch: Singleplayer, Nightly dev/gt-2.8 1asdf83
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      description: "What pack mode is this feature request related to?"
+      options:
+        - "Normal Mode"
+        - "Expert Mode"
+        - "Both Modes"
+        - "N/A"
     validations:
       required: true
   - type: textarea

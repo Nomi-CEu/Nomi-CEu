@@ -10,7 +10,7 @@ import {
 	ParsedModInfo,
 	Parser,
 	PriorityInfo,
-} from "../../types/changelogTypes";
+} from "#types/changelogTypes.ts";
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
 import {
@@ -32,12 +32,13 @@ import {
 	modInfoKey,
 	modInfoList,
 	priorityKey,
-} from "./definitions";
-import { findCategories, findSubCategory } from "./parser";
-import ChangelogData from "./changelogData";
-import { error } from "fancy-log";
-import { parse } from "toml-v1";
+} from "./definitions.ts";
+import { findCategories, findSubCategory } from "./parser.ts";
+import ChangelogData from "./changelogData.ts";
+import toml from "toml-v1";
+import { logError } from "#utils/log.ts";
 
+const { parse } = toml;
 let data: ChangelogData;
 
 export function specialParserSetup(inputData: ChangelogData): void {
@@ -47,18 +48,26 @@ export function specialParserSetup(inputData: ChangelogData): void {
 /**
  * Reads a commit's priority.
  */
-export async function parsePriority(commitBody: string, commitObject: Commit): Promise<number | undefined> {
+export async function parsePriority(
+	commitBody: string,
+	commitObject: Commit,
+): Promise<number | undefined> {
 	if (!commitBody.includes(priorityKey)) return undefined;
-	const info = await parseTOML<PriorityInfo>(commitBody, commitObject, priorityKey);
+	const info = await parseTOML<PriorityInfo>(
+		commitBody,
+		commitObject,
+		priorityKey,
+	);
 	if (!info) return undefined;
 
 	if (!info.priority) {
-		error(dedent`
+		logError(dedent`
 			Priority Info in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is missing priority info (key 'priority').`);
-		if (data.isTest) throw new Error("Failed to Parse Priority Info. See Above.");
+		if (data.isTest)
+			throw new Error("Failed to Parse Priority Info. See Above.");
 		return undefined;
 	}
 
@@ -70,13 +79,16 @@ export async function parsePriority(commitBody: string, commitObject: Commit): P
  * @commit The Commit Body. Does check whether the ignore key is there.
  * @return Returns undefined to continue, and an Ignored object if to skip.
  */
-export async function parseIgnore(commitBody: string, commitObject: Commit): Promise<Ignored | undefined> {
+export async function parseIgnore(
+	commitBody: string,
+	commitObject: Commit,
+): Promise<Ignored | undefined> {
 	if (!commitBody.includes(ignoreKey)) return undefined;
 	const info = await parseTOML<IgnoreInfo>(commitBody, commitObject, ignoreKey);
 	if (!info) return undefined;
 
 	if (!info.checks) {
-		error(dedent`
+		logError(dedent`
 			Ignore Info in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -89,7 +101,7 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 	try {
 		infoKeys = Object.keys(info.checks);
 	} catch (err) {
-		error(dedent`
+		logError(dedent`
 			Could not get the keys in Ignore Info of body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -102,9 +114,10 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 	const ignoreKeys = new Set<string>(Object.keys(ignoreChecks));
 	const checkResults: boolean[] = [];
 	infoKeys.forEach((key) => {
-		if (ignoreKeys.has(key)) checkResults.push(ignoreChecks[key].call(this, info.checks[key], data));
+		if (ignoreKeys.has(key))
+			checkResults.push(ignoreChecks[key](info.checks[key], data));
 		else {
-			error(dedent`
+			logError(dedent`
 			Ignore Check with key '${key}' in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -112,11 +125,12 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			Only accepts keys: ${Array.from(ignoreKeys)
 				.map((key) => `'${key}'`)
 				.join(", ")}.`);
-			if (data.isTest) throw new Error("Failed Parsing Ignore Check. See Above.");
+			if (data.isTest)
+				throw new Error("Failed Parsing Ignore Check. See Above.");
 		}
 	});
 	if (checkResults.length === 0) {
-		error(dedent`
+		logError(dedent`
 			No Ignore Checks found in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -124,16 +138,18 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 			Only accepts keys: ${Array.from(ignoreKeys)
 				.map((key) => `'${key}'`)
 				.join(", ")}.`);
-		if (data.isTest) throw new Error("Failed Parsing Ignore Checks. See Above.");
+		if (data.isTest)
+			throw new Error("Failed Parsing Ignore Checks. See Above.");
 		return undefined;
 	}
 
 	/* Find Logic */
 	let logic: IgnoreLogic;
 	if (info.logic === undefined) logic = defaultIgnoreLogic;
-	else if (Object.keys(ignoreLogics).includes(info.logic)) logic = ignoreLogics[info.logic];
+	else if (Object.keys(ignoreLogics).includes(info.logic))
+		logic = ignoreLogics[info.logic];
 	else {
-		error(dedent`
+		logError(dedent`
 			Ignore Logic '${info.logic}' in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -145,14 +161,17 @@ export async function parseIgnore(commitBody: string, commitObject: Commit): Pro
 		logic = defaultIgnoreLogic;
 	}
 
-	if (logic.call(this, checkResults)) return new Ignored(info.addCommitList);
+	if (logic(checkResults)) return new Ignored(info.addCommitList);
 	return undefined;
 }
 
 /**
  * Parses a commit with 'Fixup'.
  */
-export async function parseFixUp(commit: Commit): Promise<boolean> {
+export async function parseFixUp(
+	commit: Commit,
+	fix?: FixUpInfo,
+): Promise<boolean> {
 	if (!commit.body || !commit.body.includes(fixUpKey)) return false;
 	await parseTOMLWithRootToList<FixUpInfo>(
 		commit.body,
@@ -167,13 +186,33 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 		},
 		(item) => item as unknown as FixUpInfo,
 		(matter) => {
+			let title = commit.message;
+			// Replace "\r\n" (Caused by editing on GitHub) with "\n", as the output matter has this done.
+			let body = commit.body
+				.replace(/\r\n/g, "\n")
+				.replace(matter.matter.trim(), "");
+
+			// Apply Ignored Fixes
+			if (fix) {
+				if (fix.newTitle) title = fix.newTitle;
+				if (fix.newBody) {
+					switch (fix.mode) {
+						case "REPLACE":
+							body = fix.newBody;
+							break;
+						case "ADDITION":
+							body = body.concat(`\n\n${fix.newBody}`);
+							break;
+					}
+				}
+			}
+
 			// Must override, even if newer commits specified changes, as need to remove fixup data
 			data.commitFixes.set(commit.hash, {
 				sha: commit.hash,
 				mode: "REPLACE",
-				newTitle: commit.message,
-				// Replace "\r\n" (Caused by editing on GitHub) with "\n", as the output matter has this done.
-				newBody: commit.body.replace(/\r\n/g, "\n").replace(matter.matter.trim(), ""),
+				newTitle: title,
+				newBody: body,
 			});
 		},
 	);
@@ -183,19 +222,32 @@ export async function parseFixUp(commit: Commit): Promise<boolean> {
 /**
  * Parses a commit with 'mod info'.
  */
-export async function parseModInfo(commitBody: string, commitObject: Commit): Promise<void> {
+export async function parseModInfo(
+	commitBody: string,
+	commitObject: Commit,
+): Promise<void> {
 	await parseTOMLWithRootToList<ModInfo>(
 		commitBody,
 		commitObject,
 		modInfoKey,
 		modInfoList,
 		(item): boolean => {
-			const invalidProjectID = !item.projectID || typeof item.projectID !== "number" || Number.isNaN(item.projectID);
+			// noinspection SuspiciousTypeOfGuard
+			const invalidProjectID =
+				!item.projectID ||
+				typeof item.projectID !== "number" ||
+				Number.isNaN(item.projectID);
 			const invalidInfo = !item.info;
 			const invalidRootDetails = !item.detail;
-			const invalidDetails = !item.details || !Array.isArray(item.details) || !(item.details.length > 0);
+			const invalidDetails =
+				!item.details ||
+				!Array.isArray(item.details) ||
+				!(item.details.length > 0);
 			// Invalid if invalid ID, or invalid info and invalid details
-			return invalidProjectID || (invalidInfo && invalidRootDetails && invalidDetails);
+			return (
+				invalidProjectID ||
+				(invalidInfo && invalidRootDetails && invalidDetails)
+			);
 		},
 		async (item) => {
 			data.modInfoList.set(item.projectID, await getParsedModInfo(item));
@@ -208,7 +260,11 @@ export async function parseModInfo(commitBody: string, commitObject: Commit): Pr
  */
 async function getParsedModInfo(modInfo: ModInfo): Promise<ParsedModInfo> {
 	const subMessages: ChangelogMessage[] = [];
-	if (modInfo.detail) subMessages.push({ commitMessage: modInfo.detail, indentation: indentationLevel });
+	if (modInfo.detail)
+		subMessages.push({
+			commitMessage: modInfo.detail,
+			indentation: indentationLevel,
+		});
 	if (modInfo.details && modInfo.details.length > 0)
 		subMessages.push(
 			...modInfo.details.map((detail) => {
@@ -225,7 +281,11 @@ async function getParsedModInfo(modInfo: ModInfo): Promise<ParsedModInfo> {
 /**
  * Parses a commit with 'expand'.
  */
-export async function parseExpand(commitBody: string, commitObject: Commit, parser: Parser): Promise<void> {
+export async function parseExpand(
+	commitBody: string,
+	commitObject: Commit,
+	parser: Parser,
+): Promise<void> {
 	await parseTOMLWithRootToList<ExpandedMessage>(
 		commitBody,
 		commitObject,
@@ -266,13 +326,18 @@ export async function parseDetails(
 
 	if (sortedCategories.length === 0) {
 		if (parser.leftOverCallback) {
-			parser.leftOverCallback(commitObject, commitMessage, commitBody, subMessages);
+			parser.leftOverCallback(
+				commitObject,
+				commitMessage,
+				commitBody,
+				subMessages,
+			);
 		}
 	} else {
 		sortedCategories.forEach((category) => {
 			const subCategory = findSubCategory(commitBody, category);
 
-			category.changelogSection.get(subCategory).push({
+			category.changelogSection?.get(subCategory)?.push({
 				commitMessage: commitMessage,
 				commitObject: commitObject,
 				subChangelogMessages: subMessages,
@@ -299,7 +364,13 @@ async function expandDetailsLevel(
 		async (item) => {
 			// Nested Details
 			if (Array.isArray(item)) {
-				await addDetailsLevel(commitBody, commitObject, item as unknown[], `${indentation}${indentationLevel}`, result);
+				await addDetailsLevel(
+					commitBody,
+					commitObject,
+					item as unknown[],
+					`${indentation}${indentationLevel}`,
+					result,
+				);
 				return;
 			}
 			let string = item as string;
@@ -307,9 +378,19 @@ async function expandDetailsLevel(
 
 			// Legacy Nested Details
 			if (string.includes(detailsKey)) {
-				result.push(...(await expandDetailsLevel(string, commitObject, `${indentation}${indentationLevel}`)));
+				result.push(
+					...(await expandDetailsLevel(
+						string,
+						commitObject,
+						`${indentation}${indentationLevel}`,
+					)),
+				);
 			} else {
-				result.push({ commitMessage: string, commitObject: commitObject, indentation: indentation });
+				result.push({
+					commitMessage: string,
+					commitObject: commitObject,
+					indentation: indentation,
+				});
 			}
 		},
 		(root) => root[detailsRoot] as string,
@@ -342,38 +423,43 @@ async function addDetailsLevel(
 		}
 
 		// Transform into String
-		let detailString: string;
 		if (typeof detail !== "string") {
-			try {
-				detailString = detail.toString();
-			} catch (e) {
-				error(dedent`
-					Failed parsing Detail \`${detail}\` of Details Level:
+			logError(dedent`
+				Failed parsing Detail \`${detail}\` of Details Level:
+				\`\`\`
+				${details}\`\`\`
+				of commit object ${commitObject.hash} (${commitObject.message}).
+				The value is not a string.`);
+
+			if (commitObject.body && commitBody !== commitObject.body) {
+				logError(dedent`
+					Original Body:
 					\`\`\`
-					${details}\`\`\`
-					of commit object ${commitObject.hash} (${commitObject.message}).
-					The value could not be converted into a string.`);
-
-				if (commitObject.body && commitBody !== commitObject.body) {
-					error(dedent`
-						Original Body:
-						\`\`\`
-						${commitObject.body}\`\`\``);
-				}
-
-				error(`\n${endMessage}\n`);
-				if (data.isTest) throw e;
-				continue;
+					${commitObject.body}\`\`\``);
 			}
-		} else detailString = detail as string;
 
-		detailString = dedent(detailString).trim();
+			logError(`\n${endMessage}\n`);
+			if (data.isTest) throw new Error("Value is not a string.");
+			continue;
+		}
+
+		const detailString = dedent(detail).trim();
 
 		// Legacy Nested Details
 		if (detailString.includes(detailsKey)) {
-			builder.push(...(await expandDetailsLevel(detailString, commitObject, `${indentation}${indentationLevel}`)));
+			builder.push(
+				...(await expandDetailsLevel(
+					detailString,
+					commitObject,
+					`${indentation}${indentationLevel}`,
+				)),
+			);
 		} else {
-			builder.push({ commitMessage: detailString, commitObject: commitObject, indentation: indentation });
+			builder.push({
+				commitMessage: detailString,
+				commitObject: commitObject,
+				indentation: indentation,
+			});
 		}
 	}
 }
@@ -381,7 +467,10 @@ async function addDetailsLevel(
 /**
  * Parses a commit with 'combine'.
  */
-export async function parseCombine(commitBody: string, commitObject: Commit): Promise<void> {
+export async function parseCombine(
+	commitBody: string,
+	commitObject: Commit,
+): Promise<void> {
 	await parseTOMLWithRootToList<string>(
 		commitBody,
 		commitObject,
@@ -390,7 +479,7 @@ export async function parseCombine(commitBody: string, commitObject: Commit): Pr
 		(item) => !item,
 		async (item) => {
 			if (!data.combineList.has(item)) data.combineList.set(item, []);
-			data.combineList.get(item).push(commitObject);
+			data.combineList.get(item)?.push(commitObject);
 		},
 		(root) => root[combineRoot] as string,
 	);
@@ -438,7 +527,7 @@ async function parseTOML<T>(
 		if (!itemKey) item = parseResult.data as T;
 		else item = parseResult.data[itemKey];
 	} catch (e) {
-		error(dedent`
+		logError(dedent`
 			Failed parsing TOML in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -446,13 +535,13 @@ async function parseTOML<T>(
 			This could be because of invalid syntax.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			error(dedent`
+			logError(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
 
-		error(`\n${endMessage}\n`);
+		logError(`\n${endMessage}\n`);
 		if (data.isTest) throw e;
 		return undefined;
 	}
@@ -487,19 +576,19 @@ async function parseList<T>(
 			let index = i + 1;
 			if (entryModifier) index = entryModifier(i);
 
-			error(dedent`
+			logError(dedent`
 				Missing Requirements for entry ${index} of list with key '${listKey}' in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
 
 			if (commitObject.body && commitBody !== commitObject.body) {
-				error(dedent`
+				logError(dedent`
 					Original Body:
 					\`\`\`
 					${commitObject.body}\`\`\``);
 			}
-			error(`${endMessage}\n`);
+			logError(`${endMessage}\n`);
 
 			if (data.isTest) throw new Error("Bad Entry. See Above.");
 			continue;
@@ -530,19 +619,26 @@ async function parseTOMLWithRootToList<T>(
 	rootObjTransform?: (root: Record<string, unknown>) => T,
 	matterCallback?: (matter: GrayMatterFile<string>) => void,
 ): Promise<void> {
-	let root: Record<string, unknown>;
+	let root: Record<string, unknown> | undefined;
 	const messages: T[] = [];
 
 	const endMessage = getEndMessage(delimiter);
 
 	// Parse Root TOML
 	try {
-		root = await parseTOML<Record<string, unknown>>(commitBody, commitObject, delimiter, null, matterCallback);
+		root = await parseTOML<Record<string, unknown>>(
+			commitBody,
+			commitObject,
+			delimiter,
+			undefined,
+			matterCallback,
+		);
+		if (!root) return;
 		const rootObj = rootObjTransform ? rootObjTransform(root) : (root as T);
 		// Only push root if it passes empty check
 		if (rootObj && !emptyCheck(rootObj)) messages.push(rootObj);
 	} catch (e) {
-		error(dedent`
+		logError(dedent`
 			Failed parsing Root TOML in body:
 			\`\`\`
 			${commitBody}\`\`\`
@@ -550,13 +646,13 @@ async function parseTOMLWithRootToList<T>(
 			This could be because of invalid syntax.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			error(dedent`
+			logError(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
 
-		error(`\n${endMessage}\n`);
+		logError(`\n${endMessage}\n`);
 		if (data.isTest) throw e;
 		return undefined;
 	}
@@ -568,38 +664,38 @@ async function parseTOMLWithRootToList<T>(
 			return;
 		}
 		// No Valid Entry
-		error(dedent`
+		logError(dedent`
 				Missing Requirements for root entry, & no list with list key '${listKey}' detected in body:
 				\`\`\`
 				${commitBody}\`\`\`
 				of commit object ${commitObject.hash} (${commitObject.message}).`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			error(dedent`
+			logError(dedent`
 					Original Body:
 					\`\`\`
 					${commitObject.body}\`\`\``);
 		}
-		error(`${endMessage}\n`);
+		logError(`${endMessage}\n`);
 
 		if (data.isTest) throw new Error("No Valid Entry. See Above.");
 	}
 
 	// Parse List TOML
 	if (!root[listKey] || !Array.isArray(root[listKey])) {
-		error(dedent`
+		logError(dedent`
 			List (key: '${listKey}') in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) not a list, or does not exist.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			error(dedent`
+			logError(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
-		error(`${endMessage}\n`);
+		logError(`${endMessage}\n`);
 
 		if (data.isTest) throw new Error("Failed Parsing List. See Above.");
 		return;
@@ -609,37 +705,37 @@ async function parseTOMLWithRootToList<T>(
 	try {
 		list = root[listKey] as unknown as T[];
 	} catch (e) {
-		error(dedent`
+		logError(dedent`
 			List (key: '${listKey}') in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) could not be turned into correct list type.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			error(dedent`
+			logError(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
-		error(`${endMessage}\n`);
+		logError(`${endMessage}\n`);
 
 		if (data.isTest) throw new Error("Failed Parsing List. See Above.");
 		return;
 	}
 	if (list.length === 0) {
-		error(dedent`
+		logError(dedent`
 			List (key: '${listKey}') in body:
 			\`\`\`
 			${commitBody}\`\`\`
 			of commit object ${commitObject.hash} (${commitObject.message}) is empty.`);
 
 		if (commitObject.body && commitBody !== commitObject.body) {
-			error(dedent`
+			logError(dedent`
 				Original Body:
 				\`\`\`
 				${commitObject.body}\`\`\``);
 		}
-		error(`${endMessage}\n`);
+		logError(`${endMessage}\n`);
 
 		if (data.isTest) throw new Error("Failed Parsing List. See Above.");
 		return;
@@ -649,10 +745,28 @@ async function parseTOMLWithRootToList<T>(
 		messages.push(...list);
 		// Because we've already done empty check on root obj, no need to suppress error msg
 		// Keep as index (root: 0, obj1: 1, obj2: 2, ...)
-		await parseList<T>(messages, listKey, commitBody, commitObject, endMessage, emptyCheck, perItemCallback, (i) => i);
+		await parseList<T>(
+			messages,
+			listKey,
+			commitBody,
+			commitObject,
+			endMessage,
+			emptyCheck,
+			perItemCallback,
+			(i) => i,
+		);
 	}
 	// Normal Parsing of List
-	else await parseList<T>(list, listKey, commitBody, commitObject, endMessage, emptyCheck, perItemCallback);
+	else
+		await parseList<T>(
+			list,
+			listKey,
+			commitBody,
+			commitObject,
+			endMessage,
+			emptyCheck,
+			perItemCallback,
+		);
 }
 
 function getEndMessage(delimiter: string) {

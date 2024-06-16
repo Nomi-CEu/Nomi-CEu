@@ -17,16 +17,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:draconium"
+        "primary": "ore:nomilabs:draconium"
       },
       {
-        "secondary": "ore:draconium"
+        "secondary": "ore:nomilabs:draconium"
       },
       {
-        "between": "ore:draconium"
+        "between": "ore:nomilabs:draconium"
       },
       {
-        "sporadic": "ore:draconium"
+        "sporadic": "ore:nomilabs:draconium"
       }
     ]
   }

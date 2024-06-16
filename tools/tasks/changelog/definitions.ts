@@ -1,7 +1,16 @@
-import { Category, Commit, IgnoreCheck, Ignored, IgnoreLogic, Parser, SubCategory } from "../../types/changelogTypes";
-import { modpackManifest } from "../../globals";
-import { parseCommitBody } from "./parser";
-import { parseFixUp } from "./specialParser";
+import {
+	Category,
+	Commit,
+	FixUpInfo,
+	IgnoreCheck,
+	Ignored,
+	IgnoreLogic,
+	Parser,
+	SubCategory,
+} from "#types/changelogTypes.ts";
+import { modpackManifest } from "#globals";
+import { parseCommitBody } from "./parser.ts";
+import { parseFixUp } from "./specialParser.ts";
 
 /* Values */
 export const defaultIndentation = "";
@@ -39,7 +48,10 @@ const normalMode: SubCategory = { commitKey: "[NM]", keyName: "Normal Mode" };
 const hardMode: SubCategory = { commitKey: "[HM]", keyName: "Hard Mode" };
 
 /* Misc Sub Category Keys */
-const qolChanges: SubCategory = { commitKey: "[QOL]", keyName: "Quality of Life" };
+const qolChanges: SubCategory = {
+	commitKey: "[QOL]",
+	keyName: "Quality of Life",
+};
 
 /* Set Sub Categories (Sub Categories that do not let any commit in) */
 const bothModes: SubCategory = { keyName: "Both Modes" };
@@ -118,7 +130,11 @@ export const categories: Category[] = [
 ];
 
 /* Parsing Util Methods */
-const defaultSkipCallback = (_commit: Commit, _commitMessage: string, commitBody: string): boolean => {
+const defaultSkipCallback = (
+	_commit: Commit,
+	_commitMessage: string,
+	commitBody?: string,
+): boolean => {
 	if (!commitBody) return false;
 	return commitBody.includes(skipKey);
 };
@@ -126,7 +142,7 @@ const defaultParsingCallback = async (
 	parser: Parser,
 	commit: Commit,
 	commitMessage: string,
-	commitBody: string,
+	commitBody?: string,
 ): Promise<boolean | Ignored> => {
 	if (!commitBody) return false;
 	return parseCommitBody(commitMessage, commitBody, commit, parser);
@@ -137,9 +153,20 @@ const defaultParsingCallback = async (
 const fixupParsing: Parser = {
 	skipCallback: () => false,
 	// No need to care about message/body, never parse expand/details commits
-	itemCallback: (_parser, commit) => parseFixUp(commit),
+	itemCallback: (
+		_parser,
+		commit,
+		_commitMessage: string,
+		_commitBody?: string,
+		fix?: FixUpInfo,
+	) => parseFixUp(commit, fix),
 	addCommitListCallback: () => false,
 	addSHACallback: () => false,
+	// Don't apply fixup if it is not meant to apply to fixes
+	applyFixCalback: (fix) =>
+		fix.changeFixes === undefined ||
+		fix.changeFixes === null ||
+		(fix.changeFixes as boolean),
 };
 
 const overridesParsing: Parser = {
@@ -147,11 +174,13 @@ const overridesParsing: Parser = {
 	skipCallback: defaultSkipCallback,
 	itemCallback: defaultParsingCallback,
 	leftOverCallback: (commit, commitMessage, _commitBody, subMessages) => {
-		generalCategory.changelogSection.get(generalCategory.defaultSubCategory).push({
-			commitMessage: commitMessage,
-			commitObject: commit,
-			subChangelogMessages: subMessages,
-		});
+		generalCategory.changelogSection
+			?.get(generalCategory.defaultSubCategory)
+			?.push({
+				commitMessage: commitMessage,
+				commitObject: commit,
+				subChangelogMessages: subMessages,
+			});
 	},
 	addCommitListCallback: () => true,
 };
@@ -176,7 +205,12 @@ const finalParsing: Parser = {
  * Note that unless `addSHA` of the category is set to false, a commit parsed in a previous category will not be allowed to be parsed in future categories,
  * even if they fit in the dirs.
  */
-export const parsers: Parser[] = [fixupParsing, overridesParsing, manifestParsing, finalParsing];
+export const changelogParsers: Parser[] = [
+	fixupParsing,
+	overridesParsing,
+	manifestParsing,
+	finalParsing,
+];
 
 /* Parsing Information / Allocations for Mod Changes */
 
@@ -207,7 +241,10 @@ export interface ModChangesAllocation {
 }
 
 // These templates must be triple bracketed, because we don't want these to be html safe
-export const modChangesAllocations: Record<ModChangesType, ModChangesAllocation> = {
+export const modChangesAllocations: Record<
+	ModChangesType,
+	ModChangesAllocation
+> = {
 	added: {
 		category: generalCategory,
 		subCategory: modAdditions,
@@ -230,7 +267,8 @@ export const modChangesAllocations: Record<ModChangesType, ModChangesAllocation>
 /* Ignore Checks */
 const targetBeforeCheck: IgnoreCheck = (tag, data) => !data.tags.has(tag);
 const targetAfterCheck: IgnoreCheck = (tag, data) => data.tags.has(tag);
-const compareBeforeCheck: IgnoreCheck = (tag, data) => !data.compareTags.has(tag);
+const compareBeforeCheck: IgnoreCheck = (tag, data) =>
+	!data.compareTags.has(tag);
 const compareAfterCheck: IgnoreCheck = (tag, data) => data.compareTags.has(tag);
 const compareIsCheck: IgnoreCheck = (tag, data) => data.since === tag;
 const compareNotCheck: IgnoreCheck = (tag, data) => data.since !== tag;
@@ -250,8 +288,10 @@ export const ignoreChecks: Record<string, IgnoreCheck> = {
 };
 
 /* Ignore Logic */
-const andLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => result === false).length === 0;
-const orLogic: IgnoreLogic = (checkResults) => checkResults.filter((result) => result === true).length > 0;
+const andLogic: IgnoreLogic = (checkResults) =>
+	checkResults.filter((result) => !result).length === 0;
+const orLogic: IgnoreLogic = (checkResults) =>
+	checkResults.filter((result) => result).length > 0;
 const nandLogic: IgnoreLogic = (checkResults) => !andLogic(checkResults);
 const norLogic: IgnoreLogic = (checkResults) => !orLogic(checkResults);
 

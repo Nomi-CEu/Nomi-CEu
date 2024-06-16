@@ -1,4 +1,4 @@
-import ChangelogData from "../tasks/changelog/changelogData";
+import ChangelogData from "#tasks/changelog/changelogData.ts";
 
 export interface Commit {
 	hash: string;
@@ -114,7 +114,8 @@ export interface ChangelogMessage {
 	/**
 	 * If this changelog message is special. This is special formatting for it.
 	 */
-	specialFormatting?: SpecialChangelogFormatting<unknown>;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	specialFormatting?: SpecialChangelogFormatting<any>;
 }
 
 /**
@@ -128,7 +129,12 @@ export interface SpecialChangelogFormatting<T> {
 	 * @param indentation The indentation level to use
 	 * @param storage May be null, is the defined storage in this interface
 	 */
-	formatting: (message: string, subMessage: boolean, indentation: string, storage?: T) => string;
+	formatting: (
+		message: string,
+		subMessage: boolean,
+		indentation: string,
+		storage?: T,
+	) => string;
 
 	/**
 	 * Storage
@@ -156,7 +162,11 @@ export interface Parser {
 	 * commitBody: The body of the commit. Might be undefined.<p>
 	 * return: True to skip, false to not.
 	 */
-	skipCallback: (commit: Commit, commitMessage: string, commitBody?: string) => boolean;
+	skipCallback: (
+		commit: Commit,
+		commitMessage: string,
+		commitBody?: string,
+	) => boolean;
 
 	/**
 	 * Callback per item.
@@ -166,6 +176,7 @@ export interface Parser {
 	 * commit: The commit object.
 	 * commitMessage: The message of the commit.<p>
 	 * commitBody: The body of the commit. Might be undefined.<p>
+	 * fix: The fix, if it is not already applied. Usually undefined. Always undefined if applyFixCallback is unset.<p>
 	 * return: True if parsing was successful, false if not. Can return Ignored if commit was ignored (not skipped).
 	 */
 	itemCallback: (
@@ -173,6 +184,7 @@ export interface Parser {
 		commit: Commit,
 		commitMessage: string,
 		commitBody?: string,
+		fix?: FixUpInfo,
 	) => Promise<boolean | Ignored>;
 
 	/**
@@ -209,6 +221,15 @@ export interface Parser {
 	 * return: True if to add, false if not.
 	 */
 	addCommitListCallback: (commit: Commit, parsed: boolean) => boolean;
+
+	/**
+	 * Callback to determine whether fixes should be applied to this commit.
+	 * Optional. If not provided, assumes yes.
+	 * <p><p>
+	 * fix: The FixUpInfo Object.<p>
+	 * return: True if to fix, false if not.
+	 */
+	applyFixCalback?: (fix: FixUpInfo) => boolean;
 }
 
 export interface IgnoreInfo {
@@ -259,7 +280,9 @@ export interface FixUpInfo {
 	sha: string;
 	newTitle?: string;
 	newBody?: string;
-	mode: FixUpMode;
+	mode: FixUpMode; // Auto Filled in If Not Provided
+	// Whether this fix should replace that other commit's fixes as well.
+	changeFixes?: boolean;
 }
 
 export interface ModInfo {
@@ -280,7 +303,11 @@ export interface PriorityInfo {
 
 export type FixUpMode = "REPLACE" | "ADDITION";
 
-export type InputReleaseType = "Release" | "Beta Release" | "Alpha Release" | "Cutting Edge Build";
+export type InputReleaseType =
+	| "Release"
+	| "Beta Release"
+	| "Alpha Release"
+	| "Cutting Edge Build";
 
 export interface DeployReleaseType {
 	isPreRelease: boolean;
@@ -288,7 +315,10 @@ export interface DeployReleaseType {
 }
 
 // Cutting Edge Build is not needed here, as this type is only used for deploying, and not building.
-export const inputToDeployReleaseTypes: Record<InputReleaseType, DeployReleaseType> = {
+export const inputToDeployReleaseTypes: Record<
+	InputReleaseType,
+	DeployReleaseType
+> = {
 	Release: {
 		isPreRelease: false,
 		cfReleaseType: "release",
@@ -301,5 +331,8 @@ export const inputToDeployReleaseTypes: Record<InputReleaseType, DeployReleaseTy
 		isPreRelease: true,
 		cfReleaseType: "alpha",
 	},
-	"Cutting Edge Build": undefined,
+	"Cutting Edge Build": {
+		isPreRelease: true,
+		cfReleaseType: "alpha",
+	},
 };
