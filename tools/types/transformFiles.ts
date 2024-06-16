@@ -20,11 +20,11 @@ export class BuildData {
 					: process.env.GITHUB_TAG;
 		}
 		// If Pull Request Branch Name is provided and a 'True SHA' is provided
-		else if (process.env.GITHUB_HEAD_REF && process.env.TRUE_SHA) {
+		else if (process.env.HEAD_REF && process.env.TRUE_SHA) {
 			const shortCommit = process.env.TRUE_SHA.substring(0, 7);
 			this.type = "HEAD_REF";
-			this.rawVersion = `${process.env.GITHUB_HEAD_REF}-${shortCommit}`;
-			this.transformedVersion = `PR Build (${process.env.GITHUB_HEAD_REF} branch, ${shortCommit})`;
+			this.rawVersion = `${process.env.HEAD_REF}-${shortCommit}`;
+			this.transformedVersion = `PR Build (${process.env.HEAD_REF} branch, ${shortCommit})`;
 		}
 		// If SHA and ref is provided, append both the branch and short SHA.
 		else if (

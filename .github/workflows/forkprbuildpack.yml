@@ -23,7 +23,7 @@ permissions:
   contents: read
 
 env:
-  GITHUB_HEAD_REF: ${{ format('{0}/{1}', github.event.pull_request.head.repo.owner.login, github.head_ref) }}
+  HEAD_REF: ${{ format('{0}/{1}', github.event.pull_request.head.repo.owner.login, github.head_ref) }}
   TRUE_SHA: ${{ github.event.pull_request.head.sha }}
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Test
         run: |
-          echo $GITHUB_HEAD_REF
+          echo $HEAD_REF
           echo $TRUE_SHA
           
       - name: Checkout Ref
