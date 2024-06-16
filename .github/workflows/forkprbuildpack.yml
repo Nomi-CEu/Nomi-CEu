@@ -22,6 +22,10 @@ concurrency:
 permissions:
   contents: read
 
+env:
+  GITHUB_HEAD_REF: ${{ format('{0}/{1}', github.event.pull_request.head.repo.owner.login, github.head_ref) }}
+  TRUE_SHA: ${{ github.event.pull_request.head.sha }}
+
 jobs:
   setup:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
@@ -29,9 +33,6 @@ jobs:
     name: Setup (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
-    env:
-      GITHUB_HEAD_REF: ${{ format('{0}/{1}', github.event.pull_request.head.repo.owner.login, github.head_ref) }}
-      TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     outputs:
       client: ${{ steps.artifactNames.outputs.client }}
       server: ${{ steps.artifactNames.outputs.server }}
@@ -63,14 +64,9 @@ jobs:
         run: npm run gulp makeArtifactNames
 
   buildClient:
-    # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
-    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Build Fork PR Client (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     needs: setup
-    env:
-      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
-      TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
@@ -106,14 +102,9 @@ jobs:
           compression-level: 9
 
   buildServer:
-    # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
-    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Build Fork PR Server (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     needs: setup
-    env:
-      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
-      TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
@@ -149,14 +140,9 @@ jobs:
           compression-level: 9
 
   buildLang:
-    # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
-    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Build Fork PR Lang and Changelogs (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     needs: setup
-    env:
-      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
-      TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
