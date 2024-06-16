@@ -30,6 +30,7 @@ export class BuildData {
 			if (process.env.HEAD_REPO && process.env.HEAD_REPO !== "Nomi-CEu") {
 				this.rawVersion = `[${process.env.HEAD_REPO.toLowerCase()}-${process.env.HEAD_REF}]-${shortCommit}`;
 				this.transformedVersion = `Fork PR Build (${process.env.HEAD_REPO}/${process.env.HEAD_REF} branch, ${shortCommit})`;
+				return;
 			}
 
 			this.rawVersion = `${process.env.HEAD_REF}-${shortCommit}`;
