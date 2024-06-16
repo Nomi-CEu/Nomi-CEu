@@ -18,16 +18,27 @@ export class BuildData {
 				process.env.GITHUB_TAG.search(/^v/) === -1
 					? `v${process.env.GITHUB_TAG}`
 					: process.env.GITHUB_TAG;
+			return;
 		}
+
 		// If Pull Request Branch Name is provided and a 'True SHA' is provided
-		else if (process.env.HEAD_REF && process.env.TRUE_SHA) {
+		if (process.env.HEAD_REF && process.env.TRUE_SHA) {
 			const shortCommit = process.env.TRUE_SHA.substring(0, 7);
 			this.type = "HEAD_REF";
+
+			// If Head Repo is provided and this is a Fork PR
+			if (process.env.HEAD_REPO && process.env.HEAD_REPO !== "Nomi-CEu") {
+				this.rawVersion = `[${process.env.HEAD_REPO.toLowerCase()}-${process.env.HEAD_REF}]-${shortCommit}`;
+				this.transformedVersion = `Fork PR Build (${process.env.HEAD_REPO}/${process.env.HEAD_REF} branch, ${shortCommit})`;
+			}
+
 			this.rawVersion = `${process.env.HEAD_REF}-${shortCommit}`;
 			this.transformedVersion = `PR Build (${process.env.HEAD_REF} branch, ${shortCommit})`;
+			return;
 		}
+
 		// If SHA and ref is provided, append both the branch and short SHA.
-		else if (
+		if (
 			process.env.GITHUB_SHA &&
 			process.env.GITHUB_REF &&
 			process.env.GITHUB_REF.startsWith("refs/heads/")
@@ -41,13 +52,13 @@ export class BuildData {
 			this.type = "GITHUB_SHA";
 			this.rawVersion = `${branch}-${shortCommit}`;
 			this.transformedVersion = `Nightly Build (${branch} branch, ${shortCommit})`;
+			return;
 		}
+
 		// Manual Build
-		else {
-			this.type = "MANUAL_BUILD";
-			this.rawVersion = "manual-build";
-			this.transformedVersion = "Manual Build";
-		}
+		this.type = "MANUAL_BUILD";
+		this.rawVersion = "manual-build";
+		this.transformedVersion = "Manual Build";
 	}
 
 	public isVersionBuild(): boolean {

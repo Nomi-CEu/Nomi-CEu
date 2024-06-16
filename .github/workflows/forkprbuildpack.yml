@@ -23,7 +23,8 @@ permissions:
   contents: read
 
 env:
-  HEAD_REF: ${{ format('{0}/{1}', github.event.pull_request.head.repo.owner.login, github.head_ref) }}
+  HEAD_REF: ${{ github.head_ref }}
+  HEAD_REPO: ${{ github.event.pull_request.head.repo.owner.login }}
   TRUE_SHA: ${{ github.event.pull_request.head.sha }}
 
 jobs:
