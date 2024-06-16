@@ -3,64 +3,84 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 /* Item Removals */
 
 // AR
-mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
-mods.hei.removeAndHide(item('densemetals:dense_platinum_ore')) //Dense Platinum ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:81')) // Centrifuged Ore
-mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) //trona ore
-mods.hei.removeAndHide(item('gregtech:ore_trona_0', 1)) //trona ore
-mods.hei.removeAndHide(item('gregtech:ore_trona_0', 2)) //trona ore
-mods.hei.removeAndHide(item('gregtech:meta_dust_small:2031')) // small dust
-mods.hei.removeAndHide(item('densemetals:dense_diamond_ore')) //Dense Diamond ore
-mods.hei.removeAndHide(item('densemetals:dense_quartz_ore')) // dense quartz ore
-mods.hei.removeAndHide(item('densemetals:dense_copper_ore')) // dense copper ore
-mods.hei.removeAndHide(item('nomilabs:meta_crushed_purified', 110)) // purified crushed ore
-mods.hei.removeAndHide(item('nomilabs:meta_dust_pure:110')) // pure dust
-mods.hei.removeAndHide(item('densemetals:dense_thorium_ore')) // dense thorium ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:2031')) // purified crushed ore
-mods.hei.removeAndHide(item('nomilabs:meta_dust_small:110')) // small dust
-mods.hei.removeAndHide(item('gregtech:meta_crushed:2031;')) // crushed ore
-mods.hei.removeAndHide(item('densemetals:dense_emerald_ore')) // dense emerald ore
-mods.hei.removeAndHide(item('densemetals:dense_plutonium_ore')) // dense plutonium ore
-mods.hei.removeAndHide(item('gregtech:meta_dust_tiny:2031')) // tiny dust
-mods.hei.removeAndHide(item('nomilabs:meta_dust_impure:110')) // impure dust
-mods.hei.removeAndHide(item('densemetals:dense_lapis_ore')) // dense lapis ore
-mods.hei.removeAndHide(item('densemetals:dense_lead_ore')) // dense lead ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:2031')) // centrifuged ore
-mods.hei.removeAndHide(item('densemetals:dense_silver_ore')) // dense silver ore
-mods.hei.removeAndHide(item('densemetals:dense_iridium_ore')) // dense iridium ore
-mods.hei.removeAndHide(item('nomilabs:meta_dust_tiny:110')) // tiny dust
+
+void Remove_Trona(){
+mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) //Trona Ore
+mods.hei.removeAndHide(item('gregtech:ore_trona_0', 1)) //Trona Ore
+mods.hei.removeAndHide(item('gregtech:ore_trona_0', 2)) //Trona Ore
+mods.hei.removeAndHide(item('gregtech:meta_dust_small:2031')) // Small Dust
+mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:2031')) // Purified Crushed Ore
+mods.hei.removeAndHide(item('gregtech:meta_crushed:2031;')) // Crushed Ore
+mods.hei.removeAndHide(item('gregtech:meta_dust_tiny:2031')) // Tiny Dust
+mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:2031')) // Centrifuged Ore
+mods.hei.removeAndHide(item('gregtech:meta_dust_impure:2031')) // Impure Dust
+mods.hei.removeAndHide(item('gregtech:meta_dust_pure:2031')) // Pure Dust
+mods.hei.removeAndHide(item('gregtech:meta_dust:2031')) // Dust
+mods.hei.removeAndHide(item('gregtech:meta_crushed:2031')) // Crushed Ore
+}
+
+void Remove_Darmstadite(){
+mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 0)) // Darmstadite Ore
+mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 1)) // Darmstadite Ore
+mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 2)) // Darmstadite Ore
+mods.hei.removeAndHide(item('nomilabs:meta_crushed_purified', 110)) // Purified Crushed Ore
+mods.hei.removeAndHide(item('nomilabs:meta_dust_pure:110')) // Pure Dust
+mods.hei.removeAndHide(item('nomilabs:meta_dust_small:110')) // Small Dust
+mods.hei.removeAndHide(item('nomilabs:meta_dust_tiny:110')) // Tiny Dust
 mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:110')) // Centrifuged Ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:110')) // crushed purified ore
-mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 0)) // darmstadite ore
-mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 1)) // darmstadite ore
-mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 2)) // darmstadite ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed:81')) // crushed ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed:110')) // crushed ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:81')) // crushed purified ore
-mods.hei.removeAndHide(item('densemetals:dense_aluminum_ore')) // dense aluminum ore 
-mods.hei.removeAndHide(item('gregtech:meta_dust_impure:81')) // impure dust
-mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 0)) // plutonium ore
-mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 1)) // plutonium ore
-mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 2)) // plutonium ore
-mods.hei.removeAndHide(item('densemetals:dense_redstone_ore')) // dense redstone ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed:23')) // crushed ore
-mods.hei.removeAndHide(item('gregtech:meta_dust_impure:2031')) // impure dust
-mods.hei.removeAndHide(item('densemetals:dense_mithril_ore')) // dense mithrill ore
-mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:23')) // crushed purified ore
-mods.hei.removeAndHide(item('gregtech:meta_dust_pure:2031')) // pure dust
-mods.hei.removeAndHide(item('densemetals:dense_nickel_ore')) // dense nickel ore
-mods.hei.removeAndHide(item('densemetals:dense_tin_ore')) // dense tin ore
-mods.hei.removeAndHide(item('gregtech:meta_dust_pure:81')) // pure dust
-mods.hei.removeAndHide(item('densemetals:dense_beryllium_ore')) // dense beryllium ore
-mods.hei.removeAndHide(item('densemetals:dense_gold_ore')) // 
-mods.hei.removeAndHide(item('nomilabs:meta_crushed', 110)) // crushed ore
-mods.hei.removeAndHide(item('nomilabs:meta_crushed_centrifuged', 110)) // crushed centrifuged ore
-mods.hei.removeAndHide(item('nomilabs:meta_dust:110')) // dust
-mods.hei.removeAndHide(item('densemetals:dense_rutile_ore')) // dense rutile ore
-mods.hei.removeAndHide(item('gregtech:meta_dust:2031')) // dust
-mods.hei.removeAndHide(item('gregtech:meta_crushed:2031')) // crushed ore
+mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:110')) // Crushed Purified Ore
+mods.hei.removeAndHide(item('nomilabs:meta_dust_impure:110')) // Impure Dust
+mods.hei.removeAndHide(item('gregtech:meta_crushed:110')) // Crushed Ore
+mods.hei.removeAndHide(item('nomilabs:meta_crushed', 110)) // Crushed Ore
+mods.hei.removeAndHide(item('nomilabs:meta_crushed_centrifuged', 110)) // Crushed Centrifuged Ore
+mods.hei.removeAndHide(item('nomilabs:meta_dust:110')) // Dust
+}
 
+void Remove_Plutonium_239(){
+mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 0)) // Plutonium Ore
+mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 1)) // Plutonium Ore
+mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 2)) // Plutonium Ore
+mods.hei.removeAndHide(item('gregtech:meta_crushed:81')) // Crushed Ore
+mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:81')) // Centrifuged Ore
+mods.hei.removeAndHide(item('gregtech:meta_dust_impure:81')) // Impure Dust
+mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:81')) // Crushed Purified Ore
+mods.hei.removeAndHide(item('gregtech:meta_dust_pure:81')) // Pure Dust
+}
 
+void Remove_Cobalt(){
+
+mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:23')) // Crushed Purified Ore
+mods.hei.removeAndHide(item('gregtech:meta_crushed:23')) // Crushed Ore
+mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:23')) // Centrifuged Ore
+mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 0)) // Cobalt Ore
+mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 1)) // Cobalt Ore
+mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 2)) // Cobalt Ore
+	
+}
+void Remove_Dense_Ores(){
+mods.hei.removeAndHide(item('densemetals:dense_platinum_ore')) // Dense Platinum Ore
+mods.hei.removeAndHide(item('densemetals:dense_quartz_ore')) // Dense Quartz Ore
+mods.hei.removeAndHide(item('densemetals:dense_copper_ore')) // Dense Copper Ore
+mods.hei.removeAndHide(item('densemetals:dense_thorium_ore')) // Dense Thorium Ore
+mods.hei.removeAndHide(item('densemetals:dense_plutonium_ore')) // Dense Plutonium Ore
+mods.hei.removeAndHide(item('densemetals:dense_lead_ore')) // Dense Lead Ore
+mods.hei.removeAndHide(item('densemetals:dense_silver_ore')) // Dense Silver Ore
+mods.hei.removeAndHide(item('densemetals:dense_iridium_ore')) // Dense Iridium Ore
+mods.hei.removeAndHide(item('densemetals:dense_aluminum_ore')) // Dense Aluminum Ore
+mods.hei.removeAndHide(item('densemetals:dense_mithril_ore')) // Dense Mithrill Ore
+mods.hei.removeAndHide(item('densemetals:dense_nickel_ore')) // Dense Nickel Ore
+mods.hei.removeAndHide(item('densemetals:dense_tin_ore')) // Dense Tin Ore
+mods.hei.removeAndHide(item('densemetals:dense_beryllium_ore')) // Dense Beryllium Ore
+mods.hei.removeAndHide(item('densemetals:dense_gold_ore')) // Dense Gold Ore
+mods.hei.removeAndHide(item('densemetals:dense_rutile_ore')) // Dense Rutile Ore	
+}
+
+mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
+Remove_Trona()
+Remove_Darmstadite()
+Remove_Plutonium_239()
+Remove_Cobalt()
+Remove_Dense_Ores()
 
 
 /* Remove Categories (Appear Randomly after /gs reload) */
