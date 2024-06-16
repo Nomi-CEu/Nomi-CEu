@@ -20,6 +20,7 @@ mods.hei.removeAndHide(item('gregtech:meta_crushed:2031')) // Crushed Ore
 }
 
 void Remove_Darmstadite(){
+if (LabsModeHelper.normal) {
 mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 0)) // Darmstadite Ore
 mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 1)) // Darmstadite Ore
 mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 2)) // Darmstadite Ore
@@ -34,7 +35,9 @@ mods.hei.removeAndHide(item('gregtech:meta_crushed:110')) // Crushed Ore
 mods.hei.removeAndHide(item('nomilabs:meta_crushed', 110)) // Crushed Ore
 mods.hei.removeAndHide(item('nomilabs:meta_crushed_centrifuged', 110)) // Crushed Centrifuged Ore
 mods.hei.removeAndHide(item('nomilabs:meta_dust:110')) // Dust
+        }
 }
+	
 
 void Remove_Plutonium_239(){
 mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 0)) // Plutonium Ore
