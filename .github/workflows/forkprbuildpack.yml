@@ -30,7 +30,7 @@ env:
 jobs:
   setup:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
-    #if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
+    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Setup (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
@@ -39,12 +39,7 @@ jobs:
       server: ${{ steps.artifactNames.outputs.server }}
       lang: ${{ steps.artifactNames.outputs.lang }}
       mmc: ${{ steps.artifactNames.outputs.mmc }}
-    steps:
-      - name: Test
-        run: |
-          echo $HEAD_REF
-          echo $TRUE_SHA
-          
+    steps:          
       - name: Checkout Ref
         uses: actions/checkout@v4
         with:
