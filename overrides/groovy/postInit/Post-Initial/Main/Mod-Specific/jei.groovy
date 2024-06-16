@@ -1,9 +1,7 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
 /* Item Removals */
-
-// AR
-
+//Unobtainable Ores
 void Remove_Trona(){
 mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) //Trona Ore
 mods.hei.removeAndHide(item('gregtech:ore_trona_0', 1)) //Trona Ore
@@ -77,13 +75,16 @@ mods.hei.removeAndHide(item('densemetals:dense_beryllium_ore')) // Dense Berylli
 mods.hei.removeAndHide(item('densemetals:dense_gold_ore')) // Dense Gold Ore
 mods.hei.removeAndHide(item('densemetals:dense_rutile_ore')) // Dense Rutile Ore	
 }
-
-mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
 Remove_Trona()
 Remove_Darmstadite()
 Remove_Plutonium_239()
 Remove_Cobalt()
 Remove_Dense_Ores()
+// AR
+
+
+mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
+
 
 
 /* Remove Categories (Appear Randomly after /gs reload) */
