@@ -38,6 +38,7 @@ import axiosRetry, {
 } from "axios-retry";
 import stream from "node:stream";
 import { NomiConfig } from "#types/axios.ts";
+import { BuildData } from "#types/transformFiles.js";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
@@ -314,26 +315,7 @@ function retryOrThrow(
  * Mostly intended to be called by CI/CD.
  */
 export function makeArtifactNameBody(baseName: string): string {
-	// If the tag is provided by CI, simply just glue it to the base name.
-	if (process.env.GITHUB_TAG) {
-		return `${baseName}-${process.env.GITHUB_TAG}`;
-	}
-	// If Pull Request Branch Name is provided and a 'True SHA' is provided
-	if (process.env.GITHUB_HEAD_REF && process.env.TRUE_SHA) {
-		const shortCommit = process.env.TRUE_SHA.substring(0, 7);
-		return `${baseName}-${process.env.GITHUB_HEAD_REF}-${shortCommit}`;
-	}
-	// If SHA and ref is provided, append both the branch and short SHA.
-	if (
-		process.env.GITHUB_SHA &&
-		process.env.GITHUB_REF &&
-		process.env.GITHUB_REF.startsWith("refs/heads/")
-	) {
-		const shortCommit = process.env.GITHUB_SHA.substring(0, 7);
-		const branch = /refs\/heads\/(.+)/.exec(process.env.GITHUB_REF);
-		if (branch) return `${baseName}-${branch[1]}-${shortCommit}`;
-	}
-	return baseName;
+	return `${baseName}-${new BuildData().rawVersion}`;
 }
 
 /**
