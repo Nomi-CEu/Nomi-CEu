@@ -77,16 +77,17 @@ on:
         type: string
         required: false
 
+env:
+  GITHUB_TAG: ${{ inputs.tag }}
+  RELEASE_TYPE: ${{ inputs.release_type }}
+  HEAD_REF: ${{ inputs.head_ref }}
+  TRUE_SHA: ${{ inputs.true_sha }}
+
 jobs:
   buildSingle:
     name: Build Pack (${{ inputs.tag }})
     runs-on: ubuntu-latest
     if: ${{ !inputs.separate_upload }}
-    env:
-      GITHUB_TAG: ${{ inputs.tag }}
-      RELEASE_TYPE: ${{ inputs.release_type }}
-      GITHUB_HEAD_REF: ${{ inputs.head_ref }}
-      TRUE_SHA: ${{ inputs.true_sha }}
 
     steps:
       - name: Checkout Ref
@@ -158,11 +159,6 @@ jobs:
     name: Make Artifact Names (${{ inputs.tag }})
     runs-on: ubuntu-latest
     if: ${{ inputs.separate_upload }}
-    env:
-      GITHUB_TAG: ${{ inputs.tag }}
-      RELEASE_TYPE: ${{ inputs.release_type }}
-      GITHUB_HEAD_REF: ${{ inputs.head_ref }}
-      TRUE_SHA: ${{ inputs.true_sha }}
     outputs:
       client: ${{ steps.artifactNames.outputs.client }}
       server: ${{ steps.artifactNames.outputs.server }}
@@ -215,11 +211,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.separate_upload }}
     needs: makeNames
-    env:
-      GITHUB_TAG: ${{ inputs.tag }}
-      RELEASE_TYPE: ${{ inputs.release_type }}
-      GITHUB_HEAD_REF: ${{ inputs.head_ref }}
-      TRUE_SHA: ${{ inputs.true_sha }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
@@ -280,11 +271,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.separate_upload }}
     needs: makeNames
-    env:
-      GITHUB_TAG: ${{ inputs.tag }}
-      RELEASE_TYPE: ${{ inputs.release_type }}
-      GITHUB_HEAD_REF: ${{ inputs.head_ref }}
-      TRUE_SHA: ${{ inputs.true_sha }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
@@ -354,11 +340,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.separate_upload }}
     needs: makeNames
-    env:
-      GITHUB_TAG: ${{ inputs.tag }}
-      RELEASE_TYPE: ${{ inputs.release_type }}
-      GITHUB_HEAD_REF: ${{ inputs.head_ref }}
-      TRUE_SHA: ${{ inputs.true_sha }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
