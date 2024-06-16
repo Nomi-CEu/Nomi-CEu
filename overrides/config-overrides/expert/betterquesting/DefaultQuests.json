@@ -55655,13 +55655,13 @@
     },
     "1054:10": {
       "preRequisites:11": [
-        311,
-        201
+        201,
+        311
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungstensteel§f is an alloy of §6Tungsten §rand §6Steel§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
+          "desc:8": "§6Tungstensteel§r is an alloy of §6Tungsten §rand §6Steel§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
