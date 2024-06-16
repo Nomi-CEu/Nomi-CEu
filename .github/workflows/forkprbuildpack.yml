@@ -16,7 +16,7 @@ on:
 
 # if a second commit is pushed quickly after the first, cancel the first one's build
 concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 permissions:
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
     env:
-      GITHUB_HEAD_REF: ${{ github.head_ref }}
+      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     outputs:
       client: ${{ steps.artifactNames.outputs.client }}
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: setup
     env:
-      GITHUB_HEAD_REF: ${{ github.head_ref }}
+      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Ref
@@ -112,7 +112,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: setup
     env:
-      GITHUB_HEAD_REF: ${{ github.head_ref }}
+      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Ref
@@ -155,7 +155,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: setup
     env:
-      GITHUB_HEAD_REF: ${{ github.head_ref }}
+      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Ref
