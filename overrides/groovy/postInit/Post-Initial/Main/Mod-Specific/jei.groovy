@@ -6,7 +6,9 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
 mods.hei.removeAndHide(item('densemetals:dense_platinum_ore')) //Dense Platinum ore
 mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:81')) // Centrifuged Ore
-mods.hei.removeAndHide(item('gregtech:ore_trona_0')) //trona ore
+mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) //trona ore
+mods.hei.removeAndHide(item('gregtech:ore_trona_0, 1')) //trona ore
+mods.hei.removeAndHide(item('gregtech:ore_trona_0, 2')) //trona ore
 mods.hei.removeAndHide(item('gregtech:meta_dust_small:2031')) // small dust
 mods.hei.removeAndHide(item('densemetals:dense_diamond_ore')) //Dense Diamond ore
 mods.hei.removeAndHide(item('densemetals:dense_quartz_ore')) // dense quartz ore
@@ -29,13 +31,17 @@ mods.hei.removeAndHide(item('densemetals:dense_iridium_ore')) // dense iridium o
 mods.hei.removeAndHide(item('nomilabs:meta_dust_tiny:110')) // tiny dust
 mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged:110')) // Centrifuged Ore
 mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:110')) // crushed purified ore
-mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0')) // darmstadite ore
+mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 0)) // darmstadite ore
+mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 1)) // darmstadite ore
+mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 2)) // darmstadite ore
 mods.hei.removeAndHide(item('gregtech:meta_crushed:81')) // crushed ore
 mods.hei.removeAndHide(item('gregtech:meta_crushed:110')) // crushed ore
 mods.hei.removeAndHide(item('gregtech:meta_crushed_purified:81')) // crushed purified ore
 mods.hei.removeAndHide(item('densemetals:dense_aluminum_ore')) // dense aluminum ore 
 mods.hei.removeAndHide(item('gregtech:meta_dust_impure:81')) // impure dust
-mods.hei.removeAndHide(item('gregtech:ore_plutonium_0')) // plutonium ore
+mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 0)) // plutonium ore
+mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 1)) // plutonium ore
+mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 2)) // plutonium ore
 mods.hei.removeAndHide(item('densemetals:dense_redstone_ore')) // dense redstone ore
 mods.hei.removeAndHide(item('gregtech:meta_crushed:23')) // crushed ore
 mods.hei.removeAndHide(item('gregtech:meta_dust_impure:2031')) // impure dust
