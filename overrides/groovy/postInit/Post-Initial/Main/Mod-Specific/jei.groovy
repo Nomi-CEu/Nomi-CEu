@@ -1,7 +1,7 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
 /* Item Removals */
-//Unobtainable Ores
+// Unobtainable Ores
 void removeTrona(){
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) // Trona Ore
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 1)) // Trona Ore
