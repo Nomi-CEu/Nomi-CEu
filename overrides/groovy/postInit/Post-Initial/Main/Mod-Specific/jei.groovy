@@ -80,8 +80,8 @@ Remove_Darmstadite()
 Remove_Plutonium_239()
 Remove_Cobalt()
 Remove_Dense_Ores()
-// AR
 
+// AR
 
 mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
 
