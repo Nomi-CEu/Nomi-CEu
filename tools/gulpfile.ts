@@ -57,7 +57,7 @@ export const zipAll = zip.zipAll;
 
 export default gulp.series(buildAll, zipAll);
 
-import * as gha from "./tasks/misc/gha.ts";
+import * as gha from "#tasks/misc/makeArtifactNames.ts";
 export const makeArtifactNames = gha.makeArtifactNames;
 
 export { deployCurseForge } from "./tasks/deploy/curseforge.ts";
