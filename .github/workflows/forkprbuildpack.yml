@@ -25,12 +25,12 @@ permissions:
 jobs:
   setup:
     # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
-    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
+    #if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
     name: Setup (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
     env:
-      GITHUB_HEAD_REF: ${{ github.event.pull_request.head.repo.owner.login }}/${{ github.head_ref }}
+      GITHUB_HEAD_REF: ${{ format('{0}/{1}', github.event.pull_request.head.repo.owner.login, github.head_ref) }}
       TRUE_SHA: ${{ github.event.pull_request.head.sha }}
     outputs:
       client: ${{ steps.artifactNames.outputs.client }}
