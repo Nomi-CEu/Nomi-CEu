@@ -73,11 +73,69 @@ void removeDenseOres(){
 	mods.hei.removeAndHide(item('densemetals:dense_gold_ore')) // Dense Gold Ore
 	mods.hei.removeAndHide(item('densemetals:dense_rutile_ore')) // Dense Rutile Ore	
 }
+
+void removeUnobtainableVersions(){
+	mods.hei.removeAndHide(item('gregtech:ore_aluminium_0', 1)) // Nether Aluminum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_beryllium_0', 2)) // End Beryllium Ore
+	mods.hei.removeAndHide(item('gregtech:ore_iron_0', 1)) // Nether Iron Ore
+	mods.hei.removeAndHide(item('gregtech:ore_iron_0', 2) // End Iron Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lead_0', 1)) // Nether Lead Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lead_0', 2) // End Lead Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lithium_0', 1) // Nether Lithium Ore
+	mods.hei.removeAndHide(item('gregtech:ore_molybdenum_0', 2) // End Molybdenum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_neodymium_0', 2) // End Neodymium Ore		 
+	mods.hei.removeAndHide(item('gregtech:ore_nickel_0', 1) // Nether Nickel Ore
+	mods.hei.removeAndHide(item('gregtech:ore_nickel_0', 2) // End Nickel Ore
+	mods.hei.removeAndHide(item('gregtech:ore_palladium_0', 1) // Nether Palladium Ore
+	mods.hei.removeAndHide(item('gregtech:ore_platinum_0', 1) // Nether Platinum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_silver_0', 2) // End Silver Ore
+	mods.hei.removeAndHide(item('gregtech:ore_sulfur_0', 2) // End Sulfur Ore
+	mods.hei.removeAndHide(item('gregtech:ore_thorium_0', 2) // End Thorium Ore
+	mods.hei.removeAndHide(item('gregtech:ore_tin_0', 2) // End Tin Ore
+	mods.hei.removeAndHide(item('gregtech:ore_naquadah_0', 1) // Nether Naquadah Ore
+	mods.hei.removeAndHide(item('gregtech:ore_naquadah_0', 2) // End Naquadah Ore
+	mods.hei.removeAndHide(item('gregtech:ore_certus_quartz_0', 2) // End Certus Quartz Ore
+	mods.hei.removeAndHide(item('gregtech:ore_almandine_0', 2) // End Almandine Ore
+	mods.hei.removeAndHide(item('gregtech:ore_asbestos_0', 2) // End Asbestos Ore
+	mods.hei.removeAndHide(item('gregtech:ore_asbestos_0', 1) // Nether Asbestos Ore
+	mods.hei.removeAndHide(item('gregtech:ore_banded_iron_0', 2) // End Banded Iron Ore
+	mods.hei.removeAndHide(item('gregtech:ore_blue_topaz_0', 0) // Overworld Blue Topaz Ore
+	mods.hei.removeAndHide(item('gregtech:ore_blue_topaz_0', 2) // End Blue Topaz Ore
+	mods.hei.removeAndHide(item('gregtech:ore_brown_limonite_0', 2) // End Brown Limonite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_calcite_0', 2) // End Calcite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_calcite_0', 1) // Nether Calcite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_cassiterite_sand_0', 1) // Nether Cassiterite Sand Ore
+	mods.hei.removeAndHide(item('gregtech:ore_cassiterite_sand_0', 2) // End Cassiterite Sand Ore
+	mods.hei.removeAndHide(item('gregtech:ore_chalcopyrite_0', 2) // End Chalcopyrite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_chalcopyrite_0', 1) // Nether Chalcopyrite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_chromite_0', 1) // Nether Chromite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_chromite_0', 0) // Overworld Chromite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_cinnabar_0', 2) // End Cinnabar Ore
+	mods.hei.removeAndHide(item('gregtech:ore_coal_0', 2) // End Coal Ore
+	mods.hei.removeAndHide(item('gregtech:ore_coal_0', 1) // Nether Coal Ore
+			       
+	
+	
+	
+if (LabsModeHelper.expert) {
+	mods.hei.removeAndHide(item('gregtech:ore_lithium_0', 0) // Overworld Lithium Ore
+	mods.hei.removeAndHide(item('gregtech:ore_neodymium_0', 0) // Overworld Neodyminum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_platinum_0', 0) // Overworld Platinum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_sulfur_0', 0) // Overworld Sulfur Ore
+	mods.hei.removeAndHide(item('gregtech:ore_thorium_0', 0) // Overworld Thorium Ore
+	mods.hei.removeAndHide(item('gregtech:ore_naquadah_0', 0) // Overworld Naquadah Ore
+			       
+	
+
+	}	
+}			       
+			       
 removeTrona()
 removeDarmstadite()
 removePlutonium_239()
 removeCobalt()
 removeDenseOres()
+removeUnobtainableVersions()			       
 
 // AR
 mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
