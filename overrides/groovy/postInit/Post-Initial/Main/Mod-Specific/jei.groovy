@@ -113,7 +113,40 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_cinnabar_0', 2) // End Cinnabar Ore
 	mods.hei.removeAndHide(item('gregtech:ore_coal_0', 2) // End Coal Ore
 	mods.hei.removeAndHide(item('gregtech:ore_coal_0', 1) // Nether Coal Ore
-			       
+	mods.hei.removeAndHide(item('gregtech:ore_cobaltite_0', 2) // End Cobaltite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_diamond_0', 2) // End Diamond Ore
+	mods.hei.removeAndHide(item('gregtech:ore_diamond_0', 1) // Nether Diamond Ore
+	mods.hei.removeAndHide(item('gregtech:ore_emerald_0', 2) // Nether Emerald Ore
+	mods.hei.removeAndHide(item('gregtech:ore_galena_0', 1) // Nether Galena Ore
+	mods.hei.removeAndHide(item('gregtech:ore_galena_0', 2) // End Galena Ore
+	mods.hei.removeAndHide(item('gregtech:ore_garnierite_0', 2) // End Garnierite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_garnierite_0', 1) // Nether Garnierite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_green_sapphire_0', 1) // Nether Green Saphire Ore
+	mods.hei.removeAndHide(item('gregtech:ore_green_sapphire_0', 2) // End Green Saphire Ore
+	mods.hei.removeAndHide(item('gregtech:ore_grossular_0', 2) // End Grossular Ore
+	mods.hei.removeAndHide(item('gregtech:ore_bauxite_0', 1) // Nether Bauxite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lazurite_0', 1) // Nether Lazurite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lazurite_0', 2) // End Lazurite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_magnesite_0', 1) // Nether Magnesite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_magnesite_0', 2) // End Magnesite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_magnetite_0', 1) // Nether Magnesite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_molybdenite_0', 2) // End Molybdenite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_powellite_0', 2) // End Powellite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pyrite_0', 2) // End Pyrite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pyrolusite_0', 2) // End Pyrolusite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pyrope_0', 2) // End Pyrope Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pyrope_0', 1) // Nether Pyrope Ore
+	mods.hei.removeAndHide(item('gregtech:ore_rock_salt_0', 2) // End Rock Salt Ore
+	mods.hei.removeAndHide(item('gregtech:ore_rock_salt_0', 1) // Nether Rock Salt Ore
+	mods.hei.removeAndHide(item('gregtech:ore_ruby_0', 2) // End Ruby Ore
+	mods.hei.removeAndHide(item('gregtech:ore_salt_0', 2) // End Salt Ore
+	mods.hei.removeAndHide(item('gregtech:ore_salt_0', 1) // Nether Salt Ore
+	mods.hei.removeAndHide(item('gregtech:ore_saltpeter_0', 2) // End Saltpeter Ore
+	mods.hei.removeAndHide(item('gregtech:ore_sapphire_0', 2) // End Sapphire Ore
+	mods.hei.removeAndHide(item('gregtech:ore_sodalite_0', 2) // End Sodalite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_sodalite_0', 1) // Nether Sodalite Ore
+	
+	
 	
 	
 	
@@ -124,10 +157,19 @@ if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_sulfur_0', 0) // Overworld Sulfur Ore
 	mods.hei.removeAndHide(item('gregtech:ore_thorium_0', 0) // Overworld Thorium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_naquadah_0', 0) // Overworld Naquadah Ore
-			       
+	mods.hei.removeAndHide(item('gregtech:ore_cobaltite_0', 1) // Nether Cobaltite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 0) // Overworld Sheldonite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_powellite_0', 0) // Overworld Powellite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_saltpeter_0', 0) // Overworld Saltpeter Ore
+	
+	}	
+if (LabsModeHelper.normal){
+	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 1) // Nether Sheldonite Ore
 	
 
-	}	
+
+	
+}		       
 }			       
 			       
 removeTrona()
