@@ -145,8 +145,19 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_sapphire_0', 2) // End Sapphire Ore
 	mods.hei.removeAndHide(item('gregtech:ore_sodalite_0', 2) // End Sodalite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_sodalite_0', 1) // Nether Sodalite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_spessartine_0', 1) // Nether Spressartine Ore
+	mods.hei.removeAndHide(item('gregtech:ore_spessartine_0', 2) // End Spressartine Ore
+	mods.hei.removeAndHide(item('gregtech:ore_stibnite_0', 2) // End Stibnite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_tetrahedrite_0', 2) // End Tetrahedrite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_topaz_0', 2) // End Topaz Ore
+	mods.hei.removeAndHide(item('gregtech:ore_uraninite_0', 1) // Nether Uraninite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_wulfenite_0', 2) // End Wulfenite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_yellow_limonite_0', 2) // End Limonite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_nether_quartz_0', 2) // End Nether Quartz Ore
+	mods.hei.removeAndHide(item('gregtech:ore_quartzite_0', 2) // End Quartzite Ore
 	
 	
+			       
 	
 	
 	
@@ -161,10 +172,13 @@ if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 0) // Overworld Sheldonite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_powellite_0', 0) // Overworld Powellite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_saltpeter_0', 0) // Overworld Saltpeter Ore
+	mods.hei.removeAndHide(item('gregtech:ore_topaz_0', 0) // Overworld Topaz Ore
 	
 	}	
 if (LabsModeHelper.normal){
 	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 1) // Nether Sheldonite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 2) // End Tantalite Ore
+	
 	
 
 
