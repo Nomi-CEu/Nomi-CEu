@@ -8,10 +8,10 @@ replaceRecipeInput(metaitem('processing_array'),
 
 
 
-// PBI block into ingots
-
-crafting.addShapeless(metaitem('blockPolybenzimidazole'), <ingotPolybenzimidazole * 9>)
-
 // PBI ingots into block
+
+crafting.addShapeless(metaitem('blockPolybenzimidazole'), <ingotPolybenzimidazole> * 9)
+
+// PBI block into ingots
  
-crafting.addShapeless(metaitem('ingotPolybenzimidazole') * 9, )
+crafting.addShapeless(metaitem('ingotPolybenzimidazole') * 9, <blockPolybenzimidazole>)
