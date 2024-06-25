@@ -7,7 +7,7 @@ replaceRecipeInput(metaitem('processing_array'),
 	 [ore('circuitLuv'), metaitem('tool.datastick'), ore('circuitLuv')]])
 
 // PBI ingots into block
-crafting.addShapeless(metaitem('blockPolybenzimidazole'), [ore('ingotPolybenzimidazole') * 9])
+crafting.addShapeless(metaitem('blockPolybenzimidazole'), [ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole'), ore('ingotPolybenzimidazole')])
 
 // PBI block into ingots
 crafting.addShapeless(metaitem('ingotPolybenzimidazole') * 9, [ore('blockPolybenzimidazole')])
