@@ -15,5 +15,5 @@ crafting.addShapeless(blockPolybenzimidazole, inputList1)
 // PBI block into ingots
 def blockPolybenzimidazole2 = ore('blockPolybenzimidazole') // Redefining to avoid conflicts
 def ingotPolybenzimidazole2 = metaitem('ingotPolybenzimidazole')
-def inputList2 = [blockPolybenzimidazole2] * 9 // Create a list with 9 instances of blockPolybenzimidazole
+def inputList2 = [blockPolybenzimidazole2] * 1 // Create a list with 1 instances of blockPolybenzimidazole
 crafting.addShapeless(ingotPolybenzimidazole2 * 9, inputList2)
