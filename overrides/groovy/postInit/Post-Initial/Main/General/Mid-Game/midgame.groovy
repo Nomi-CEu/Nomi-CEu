@@ -12,4 +12,4 @@ crafting.addShapeless(metaitem('blockPolybenzimidazole'), [ore('ingotPolybenzimi
 
 // PBI block into ingots
 
-crafting.addShapeless(metaitem('ingotPolybenzimidazole') * 9, [ore('blockPolybenzimidazole')9] )
+crafting.addShapeless(metaitem('ingotPolybenzimidazole') * 9, [ore('blockPolybenzimidazole')9])
