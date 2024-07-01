@@ -19,7 +19,7 @@ CURRENT_MODE="$(head .mode)"
 CURRENT_MODE=${CURRENT_MODE:="normal"}
 
 # Check if config-overrides dir exists
-if [[ ! -d "${NORMAL_CFG}" ]] || [[ ! -d "${EXPERT_CFG}" ]]; then
+if [ ! -d "${NORMAL_CFG}" ] || [ ! -d "${EXPERT_CFG}" ]; then
   printf "\n\n${RED}Could not find \`config-overrides\` directory! \nMake sure you are in the \`/minecraft\` directory of your instance! (The one containing \`/config\`)${NORMAL}\n"
   printf "${YELLOW}Otherwise, if you are in the \`/minecraft\` directory, please try reinstalling the pack.${NORMAL}\n"
   exit 1
@@ -40,7 +40,7 @@ fi
 case $MODE in
     N|n|normal|Normal)
 
-    cp -rf "$NORMAL_CFG/." ${TARGET} 
+    cp -rf "$NORMAL_CFG/." ${TARGET}
 
     # Only copy server.properties if it exists.
     if [ -f "server.properties" ]; then
