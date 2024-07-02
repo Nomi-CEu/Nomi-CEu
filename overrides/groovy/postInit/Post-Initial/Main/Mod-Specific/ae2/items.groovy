@@ -213,3 +213,55 @@ crafting.shapedBuilder()
 	.key('C', item('appliedenergistics2:material:56'))
 	.key('D', ore('circuitEv'))
 	.replace().register()
+
+// AE2 Processor Shortcut
+// Logic Processor
+mods.gregtech.circuit_assembler.recipeBuilder()
+	.inputs(ore('circuitEv'), metaitem('plate.nand_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+	.fluidInputs(fluid('soldering_alloy') * 288)
+	.outputs(item('appliedenergistics2:material', 22) * 16)
+	.duration(400).EUt(VA[IV]).buildAndRegister();
+
+// Calculation Processor
+mods.gregtech.circuit_assembler.recipeBuilder()
+	.inputs(ore('circuitEv'), metaitem('plate.central_processing_unit') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+	.fluidInputs(fluid('soldering_alloy') * 288)
+	.outputs(item('appliedenergistics2:material', 23) * 16)
+	.duration(400).EUt(VA[IV]).buildAndRegister();
+
+// Engineering Processor
+mods.gregtech.circuit_assembler.recipeBuilder()
+	.inputs(ore('circuitEv'), metaitem('plate.nor_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+	.fluidInputs(fluid('soldering_alloy') * 288)
+	.outputs(item('appliedenergistics2:material', 24) * 16)
+	.duration(400).EUt(VA[IV]).buildAndRegister();
+
+// Purified AE2 Crystal Shortcut
+mods.gregtech.autoclave.recipeBuilder()
+	.notConsumable(item('appliedenergistics2:crystal_seed'))
+	.inputs(ore('dustCertusQuartz') * 64)
+	.fluidInputs(fluid('distilled_water') * 8000)
+	.outputs(item('appliedenergistics2:material', 10) * 64, item('appliedenergistics2:material', 10) * 64)
+	.duration(2560).EUt(VA[EV]).buildAndRegister();
+
+mods.gregtech.autoclave.recipeBuilder()
+	.notConsumable(item('appliedenergistics2:crystal_seed', 1200))
+	.inputs(ore('dustFluix') * 64)
+	.fluidInputs(fluid('distilled_water') * 8000)
+	.outputs(item('appliedenergistics2:material', 12) * 64, item('appliedenergistics2:material', 12) * 64)
+	.duration(2560).EUt(VA[EV]).buildAndRegister();
+
+mods.gregtech.autoclave.recipeBuilder()
+	.notConsumable(item('appliedenergistics2:crystal_seed', 600))
+	.inputs(ore('dustNetherQuartz') * 64)
+	.fluidInputs(fluid('distilled_water') * 8000)
+	.outputs(item('appliedenergistics2:material', 11) * 64, item('appliedenergistics2:material', 11) * 64)
+	.duration(2560).EUt(VA[EV]).buildAndRegister();
+
+// Fluix+Charged Certus Shortcut
+mods.gregtech.autoclave.recipeBuilder()
+	.inputs(ore('dustCertusQuartz') * 8, ore('dustNetherQuartz') * 8)
+	.fluidInputs(fluid('redstone') * 1152)
+	.outputs(item('appliedenergistics2:material', 7) * 16)
+	.duration(160).EUt(VA[EV]).buildAndRegister();
+
