@@ -1,4 +1,5 @@
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MiscHelpers.removeDraconicFusionRecipe
+import static gregtech.api.GTValues.*
 
 // Wyvern Core
 removeDraconicFusionRecipe(item('minecraft:emerald_block'), item('draconicevolution:wyvern_core'))
@@ -155,4 +156,69 @@ mods.draconicevolution.fusion.recipeBuilder()
 	.output(item('draconicevolution:dislocator_advanced'))
 	.energy(10000000)
 	.tierDraconic()
+
+// Packaged Draconic Recipes
+// Fusion Package Crafter
+removeDraconicFusionRecipe(item('draconicevolution:fusion_crafting_core'), item('packageddraconic:fusion_crafter'))
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('draconicevolution:fusion_crafting_core'), item('extendedcrafting:interface') * 4, item('packagedauto:me_package_component') * 4, item('extendedcrafting:material', 12) * 4, metaitem('field.generator.iv'), metaitem('wireFineRuridit') * 64)
+	.fluidInputs(fluid('soldering_alloy') * 576)
+	.outputs(item('packageddraconic:fusion_crafter'))
+	.duration(400).EUt(VA[LuV]).buildAndRegister();
+
+// Marked Fusion Pedestals
+crafting.remove('packageddraconic:marked_basic_injector')
+crafting.remove('packageddraconic:marked_draconic_injector')
+crafting.remove('packageddraconic:marked_wyvern_injector')
+crafting.remove('packageddraconic:marked_chaotic_injector')
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('draconicevolution:crafting_injector'), item('extendedcrafting:material', 19), metaitem('sensor.iv'), ore('gearDraconium'))
+	.outputs(item('packageddraconic:marked_basic_injector'))
+	.duration(100).EUt(VA[IV]).buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('draconicevolution:crafting_injector', 1), item('extendedcrafting:material', 19), metaitem('sensor.iv'), ore('gearDraconium'))
+	.outputs(item('packageddraconic:marked_wyvern_injector'))
+	.duration(100).EUt(VA[IV]).buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('draconicevolution:crafting_injector', 2), item('extendedcrafting:material', 19), metaitem('sensor.iv'), ore('gearDraconium'))
+	.outputs(item('packageddraconic:marked_draconic_injector'))
+	.duration(100).EUt(VA[IV]).buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('draconicevolution:crafting_injector', 3), item('extendedcrafting:material', 19), metaitem('sensor.iv'), ore('gearDraconium'))
+	.outputs(item('packageddraconic:marked_chaotic_injector'))
+	.duration(100).EUt(VA[IV]).buildAndRegister()
+
+mods.draconicevolution.fusion.recipeBuilder()
+	.catalyst(item('packageddraconic:marked_basic_injector'))
+	.input(item('draconicevolution:wyvern_core'), item('draconicevolution:draconic_core'), item('minecraft:nether_star'), item('minecraft:nether_star'), item('draconicevolution:draconic_core'), ore('blockDraconium'), item('minecraft:nether_star'), item('minecraft:nether_star'))
+	.output(item('packageddraconic:marked_wyvern_injector'))
+	.energy(256000)
+	.tierNormal()
 	.register()
+
+mods.draconicevolution.fusion.recipeBuilder()
+		.catalyst(item('packageddraconic:marked_wyvern_injector'))
+		.input(item('minecraft:nether_star'), item('minecraft:dragon_egg'), item('draconicevolution:wyvern_core'), item('draconicevolution:wyvern_core'), item('minecraft:dragon_egg'), item('minecraft:nether_star'))
+		.output(item('packageddraconic:marked_draconic_injector'))
+		.energy(1000000000)
+		.tierWyvern()
+		.register()
+
+mods.draconicevolution.fusion.recipeBuilder()
+		.catalyst(item('packageddraconic:marked_draconic_injector'))
+		.input(item('draconicevolution:chaos_shard'), item('draconicevolution:chaos_shard'), metaitem('ingotNeutronium'), metaitem('ingotNeutronium'), metaitem('nomilabs:blockCrystalMatrix'), metaitem('nomilabs:blockCrystalMatrix'), metaitem('ingotNeutronium'), metaitem('ingotNeutronium'), item('draconicevolution:chaos_shard'), item('draconicevolution:chaos_shard'))
+		.output(item('packageddraconic:marked_chaotic_injector'))
+		.energy(3000000000)
+		.tierDraconic()
+		.register()
+
+crafting.addShapeless(item('draconicevolution:crafting_injector'), [item('packageddraconic:marked_basic_injector')])
+crafting.addShapeless(item('draconicevolution:crafting_injector', 1), [item('packageddraconic:marked_wyvern_injector')])
+crafting.addShapeless(item('draconicevolution:crafting_injector', 2), [item('packageddraconic:marked_draconic_injector')])
+crafting.addShapeless(item('draconicevolution:crafting_injector', 3), [item('packageddraconic:marked_chaotic_injector')])
+
+
