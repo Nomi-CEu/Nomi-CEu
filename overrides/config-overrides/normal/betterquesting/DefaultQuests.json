@@ -63001,13 +63001,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027re going to craft a LOT of stuff using §bDraconic Evolution §6Fusion§r. Therefore, a way to automate it is crucial.\n\nFirst, place an §6Item Laser Relay§r on each §aInjector§r, one on the §aCore§r, and one on an §aItem Interface§r. You\u0027ll notice that you will need 2 more item lasers than your amount of Injectors.\n\nConnect them all to the Item Interface with your §6Laser Wrench§r. Pretty much, just click on one of the lasers, and click on your Item Interface.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r \n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nUse the §6Compass§r to change the Laser on the core\u0027s piority to 1. \n\nFinally, place the §aRedstone Clock§r next to the core. \n\nYou also need to setup some mechanism to take the finished item out of the core. A Phantomface works well here, as it will only output the output item, and not the input item.\n\nImport into the Item Interface. You can use the Extended Processing Pattern Terminal and an Interface with Blocking Mode to do this.",
+          "desc:8": "You\u0027re going to craft a LOT of stuff using §bDraconic Evolution §6Fusion§r. Therefore, a way to automate it is crucial.\n\nUsing §bPackagedDraconic§r, Draconic Fusion recipes can be easily automated through PackagedAuto. To get started, place a §6Fusion Package Crafter§r next to an §6Unpackager§r and surround it with §6Marked Fusion Crafting Injectors§r like a normal Fusion setup. Then, you can handle recipes through the Unpackager just like any other PAuto setup.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "actuallyadditions:block_laser_relay_item"
+            "id:8": "packageddraconic:fusion_crafter"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -63050,34 +63050,10 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 10,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:block_laser_relay_item"
-            },
-            "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "actuallyadditions:block_item_viewer"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:item_laser_wrench"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:compass"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "extrautils2:redstoneclock"
+              "id:8": "packageddraconic:fusion_crafter"
             }
           },
           "taskID:8": "bq_standard:retrieval"
