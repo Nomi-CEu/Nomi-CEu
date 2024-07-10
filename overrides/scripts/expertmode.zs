@@ -58,7 +58,7 @@ alloy.recipeBuilder()
 recipes.removeByRecipeName("enderio:reservoir");
 assembler.recipeBuilder()
 	.inputs([<ore:blockGlassHardened> * 18, <metaitem:nomilabs:plateDoubleEnergeticAlloy> * 3, <minecraft:cauldron>])
-	.outputs(<enderio:block_reservoir> * 3)
+	.outputs(<enderio:block_reservoir> * 4)
 	.duration(100)
 	.EUt(30)
 	.buildAndRegister();
