@@ -277,7 +277,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §5Nomifactory§r §2GTCEu Edition§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
+          "desc:8": "Welcome to §5Nomifactory§r §2GTCEu Edition§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\nDon\u0027t forget: you can always open the §6Questbook§r with the §eGrave§r key!\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (colour 2)§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14721,7 +14721,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need this to set the §aGuidance Computer\u0027s§r destination to the Moon (Luna).\n\nIn your assembled Rocket, press the Rocket GUI Hotkey (default is §eC§r but you may need to rebind it). Click the little square that says \"Guidance Computer\" to pull up the Guidance Computer inventory. Then, place the blank chip into the Guidance Computer. Back out of this menu (§eEsc§r or §eE§r) to get back to the main Rocket GUI.\n\nClick the §cSelect Dst§r button, choose Luna, and click the Select button to assign the destination to the chip.\n\n§eNote: if you want to return your rocket to Earth, you will need to change the destination in this manner again to Earth before launching.§r",
+          "desc:8": "You\u0027ll need this to set the §aGuidance Computer\u0027s§r destination to the Moon (Luna).\n\nIn your assembled Rocket, press the Rocket GUI Hotkey (default is §eCtrl/Cmd + C§r). Click the little square that says \"Guidance Computer\" to pull up the Guidance Computer inventory. Then, place the blank chip into the Guidance Computer. Back out of this menu (§eEsc§r or §eE§r) to get back to the main Rocket GUI.\n\nClick the §cSelect Dst§r button, choose Luna, and click the Select button to assign the destination to the chip.\n\n§eNote: if you want to return your rocket to Earth, you will need to change the destination in this manner again to Earth before launching.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25168,7 +25168,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aGrappling Hook§r is very useful in an urban environment.\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however since quite a lot of mods occupy this hotkey you\u0027ll need to visit the controls menu to resolve the button conflicts.",
+          "desc:8": "A §aGrappling Hook§r is very useful in an urban environment.\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however you can change this as you wish. Just be careful of §cKeybind Conflicts§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63139,7 +63139,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is `R\u0027), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nThe Tool Belt can store anything with a stack size of 1, like swords, pickaxes, §bGregTech§r tools, and the §6Terminal§r. It has also been modified a bit, so it also allows any §bStorage Drawers§r key, and §cdoesn\u0027t allow any Thermal Satchel§r.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
+          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is §eR§r), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nThe Tool Belt can store anything with a stack size of 1, like swords, pickaxes, §bGregTech§r tools, and the §6Terminal§r. It has also been modified a bit, so it also allows any §bStorage Drawers§r key, and §cdoesn\u0027t allow any Thermal Satchel§r.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -63533,7 +63533,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default sort keybind is §aMiddle Click§r, §cbut you can always change the keybind. Simply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nYou can also configure how it is sorted, within the GUI. The default key to open the GUI is §aK§r.\n\nInventory Bogo Sorter, by default, also replaces stacks of items, like blocks, tools and food in your hotbar. For tools, it even replaces it just before it breaks, so you can repair it! Now, you can build a pillar to y-256 without opening your inventory, or changing hotbar slots!",
+          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default sort keybind is §aMiddle Click§r, but you can always change the keybind. Simply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nYou can also configure how it is sorted, within the GUI. The default key to open the GUI is §aK§r.\n\nInventory Bogo Sorter, by default, also replaces stacks of items, like blocks, tools and food in your hotbar. For tools, it even replaces it just before it breaks, so you can repair it! Now, you can build a pillar to y-256 without opening your inventory, or changing hotbar slots!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -65302,7 +65302,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 1048,
