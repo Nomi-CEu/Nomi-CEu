@@ -20,7 +20,7 @@ import {
 import transformVersion from "./transformVersion.ts";
 import { createBuildChangelog } from "../changelog/index.ts";
 import mustache from "mustache";
-import { updateBuildRandomPatches } from "../misc/transformFiles.ts";
+import { updateFilesBuildSetup, updateLabsVersion } from "../misc/transformFiles.ts";
 import { transformQuestBook } from "./quest.ts";
 import logInfo from "#utils/log.ts";
 
@@ -163,13 +163,18 @@ async function writeToChangelog(
 	}
 }
 
+const updateBuildLabsVersion = async () => {
+	await updateLabsVersion(sharedDestDirectory);
+};
+
 export default gulp.series(
 	sharedCleanUp,
 	createSharedDirs,
 	copyOverrides,
 	fetchOrMakeChangelog,
 	fetchExternalDependencies,
-	updateBuildRandomPatches,
+	updateFilesBuildSetup,
+	updateBuildLabsVersion,
 	transformVersion,
 	transformQuestBook,
 );
