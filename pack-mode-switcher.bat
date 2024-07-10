@@ -17,10 +17,12 @@ if "%errorlevel%" == "2" goto copyExpert
 
 :copyNormal
 robocopy "%normalCfgPath%" "%targetPath%" *.* /e /nfl /ndl
+echo normal > .mode
 goto end
 
 :copyExpert
 robocopy "%expertCfgPath%" "%targetPath%" *.* /e /nfl /ndl
+echo expert > .mode
 goto end
 
 :end
