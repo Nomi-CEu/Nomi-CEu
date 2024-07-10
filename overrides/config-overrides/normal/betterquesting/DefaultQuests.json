@@ -64059,7 +64059,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining an §aI/O Bus§r and an §aME Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Buses§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nNote that only the Interface-textured side will connect to an ME network.",
+          "desc:8": "Combining an §aI/O Bus§r and an §aME Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Buses/Hatches§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nSaves you that crucial block space, whilst giving you access to your usual features (such as §eGhost Circuits§r). They also have an extra storage space (for things like §6Lenses§r and §6Molds§r)!\n\nAlso, when you get tired of placing the same configuration over and over again, you can use §bGregTech§r §6Data Sticks§r to copy a ME Hatch/Bus Configuration!\n\nIn §9IV§r, you also unlock §6ME Stocking Input Buses and Hatches§r, which instead of storing a set amount of items/fluids itself, simply extracts items/fluids from the AE Network on demand. Technically, §einfinite throughput§r (or as much as your AE system can support), and saves having buffer items and fluids everywhere!\n\nNote that only the Interface-textured side will connect to an ME network.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64118,6 +64118,24 @@
               "Damage:2": 1746,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1747,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1745,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 261,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -64125,26 +64143,24 @@
       }
     },
     "1033:10": {
-      "preRequisites:11": [
-        339,
-        729
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining an §aI/O Hatch§r and an §aME Fluid Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Hatches§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nNote that only the Interface-textured side will connect to an ME network.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1747,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "§2ME Multiblock Hatches",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -64152,48 +64168,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 1033,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1747,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 1745,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -67416,14 +67399,14 @@
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -764,
-          "y:3": 276
+          "y:3": 272
         },
         "82:10": {
           "id:3": 340,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -812,
-          "y:3": 316
+          "y:3": 352
         },
         "83:10": {
           "id:3": 341,
@@ -67493,7 +67476,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -648,
-          "y:3": 272
+          "y:3": 268
         },
         "93:10": {
           "id:3": 527,
@@ -67703,7 +67686,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -812,
-          "y:3": 284
+          "y:3": 316
         },
         "123:10": {
           "id:3": 783,
@@ -67794,7 +67777,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -600,
-          "y:3": 284
+          "y:3": 280
         },
         "136:10": {
           "id:3": 841,
@@ -67898,24 +67881,17 @@
           "id:3": 1032,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -812,
-          "y:3": 352
-        },
-        "151:10": {
-          "id:3": 1033,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
           "x:3": -776,
           "y:3": 352
         },
-        "152:10": {
+        "151:10": {
           "id:3": 1047,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -812,
-          "y:3": 252
+          "y:3": 280
         },
-        "153:10": {
+        "152:10": {
           "id:3": 1051,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -72121,13 +72097,6 @@
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 594
-        },
-        "50:10": {
-          "id:3": 1033,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": 408
         }
       }
     },
