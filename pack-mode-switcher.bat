@@ -17,22 +17,13 @@ if "%errorlevel%" == "2" goto copyExpert
 
 :copyNormal
 robocopy "%normalCfgPath%" "%targetPath%" *.* /e /nfl /ndl
-
-rem If server.properties exists, update server config
-IF EXIST server.properties (move "%targetPath%\server.properties" .\)
-echo normal > .mode
 goto end
 
 :copyExpert
 robocopy "%expertCfgPath%" "%targetPath%" *.* /e /nfl /ndl
-
-rem If server.properties exists, update server config
-IF EXIST server.properties (move "%targetPath%\server.properties" .\)
-echo expert > .mode
+goto end
 
 :end
-rem if server.properties is left over in the config path, remove it 
-IF EXIST "%targetPath%/server.properties" DEL "%targetPath%\server.properties"
 echo Switch completed
 pause
 exit
