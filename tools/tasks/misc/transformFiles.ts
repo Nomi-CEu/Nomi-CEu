@@ -1,11 +1,6 @@
 import fs from "fs";
 import upath from "upath";
-import {
-	configFolder,
-	configOverridesFolder,
-	rootDirectory,
-	templatesFolder,
-} from "#globals";
+import { configFolder, rootDirectory, templatesFolder } from "#globals";
 import mustache from "mustache";
 import gulp from "gulp";
 import dedent from "dedent-js";
@@ -94,7 +89,7 @@ export async function updateFilesBuildSetup() {
 
 /**
  * @param readPath The filepath to read from. (Template)
- * @param writePaths The filepaths to write to.
+ * @param writePath The filepath to write to.
  * @param replacementObject A record, of type string to type unknown, containing the keys, and replacement for those keys
  * @param addWarning whether to add warning not to edit file
  * <p>
@@ -103,7 +98,7 @@ export async function updateFilesBuildSetup() {
  */
 async function modifyFile(
 	readPath: string,
-	writePaths: string[],
+	writePath: string,
 	replacementObject: Record<string, unknown>,
 	addWarning = true,
 ) {
@@ -120,9 +115,7 @@ async function modifyFile(
 			${modifiedData}`;
 
 	// Write the modified content back to the file
-	for (const filename of writePaths) {
-		await fs.promises.writeFile(filename, modifiedData, "utf8");
-	}
+	return fs.promises.writeFile(writePath, modifiedData, "utf8");
 }
 
 /* Functions NOT Used in Build Process */
@@ -164,7 +157,7 @@ async function updateIssueTemplates(): Promise<void> {
 	for (const fileName of fileNames) {
 		const readPath = upath.join(templatesFolder, fileName);
 		const writePath = upath.join(issueTemplatesFolder, fileName);
-		await modifyFile(readPath, [writePath], replacementObject);
+		await modifyFile(readPath, writePath, replacementObject);
 	}
 }
 
@@ -211,38 +204,31 @@ async function updateMainMenuConfig(): Promise<void> {
 
 /* Functions USED in Build Process */
 export async function updateLabsVersion(rootDir: string): Promise<void> {
-	// Filename & paths
 	const fileName = "nomilabs-version.cfg";
 	const readPath: string = upath.join(templatesFolder, fileName);
 	const writePath = upath.join(rootDir, configFolder, fileName);
 
-	// Replacement object
 	const replacementObject: Record<string, unknown> = {
 		version: updateFiles
 			? updateFileTransformedVersion
 			: buildData.transformedVersion,
 	};
 
-	// Modify File
-	await modifyFile(readPath, [writePath], replacementObject);
+	return modifyFile(readPath, writePath, replacementObject);
 }
 
 export async function updateServerProperties(rootDir: string): Promise<void> {
-	// File Name
 	const fileName = "server.properties";
+	const readPath: string = upath.join(templatesFolder, fileName);
+	const writePath: string = upath.join(rootDir, fileName);
 
-	// Replacement Object
 	const replacementObject: Record<string, unknown> = {
 		versionTitle: updateFiles
 			? updateFileTransformedVersion
 			: buildData.transformedVersion,
 	};
 
-	// Read and Write Paths
-	const readPath: string = upath.join(templatesFolder, fileName);
-	const writePath: string = upath.join(rootDir, "serverfiles", fileName);
-
-	return modifyFile(readPath, [writePath], replacementObject);
+	return modifyFile(readPath, writePath, replacementObject);
 }
 
 // Main Closures
@@ -251,7 +237,7 @@ const updateFilesLabsVersion = async () => {
 };
 
 const updateFilesServerProperties = async () => {
-	await updateServerProperties(rootDirectory);
+	await updateServerProperties(upath.join(rootDirectory, "serverfiles"));
 };
 
 export const updateFilesIssue = gulp.series(
