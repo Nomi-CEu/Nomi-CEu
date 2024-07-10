@@ -30,7 +30,7 @@ addOverride('key.craftingtweaks.compressStack', Keyboard.KEY_NONE)
 addOverride('key.craftingtweaks.refill_last', Keyboard.KEY_NONE)
 addOverride('key.craftingtweaks.refill_last_stack', Keyboard.KEY_NONE)
 
-addOverride('enderio.keybind.inventory', KeyModifier.SHIFT,Keyboard.KEY_C)
+addOverride('enderio.keybind.inventory', KeyModifier.SHIFT, Keyboard.KEY_C)
 
 addOverride('key.draconicevolution.toolConfig', KeyModifier.SHIFT, Keyboard.KEY_C)
 
