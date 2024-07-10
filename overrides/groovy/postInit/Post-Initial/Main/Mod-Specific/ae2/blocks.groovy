@@ -1,5 +1,3 @@
-package ae2
-
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
 
