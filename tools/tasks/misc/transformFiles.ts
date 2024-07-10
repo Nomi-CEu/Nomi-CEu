@@ -228,14 +228,8 @@ export async function updateLabsVersion(rootDir: string): Promise<void> {
 }
 
 export async function updateServerProperties(rootDir: string): Promise<void> {
-	// File name of the output files
+	// File Name
 	const fileName = "server.properties";
-
-	// File name of the Normal Template File
-	const fileNameNormal = "server_normal.properties";
-
-	// File name of the Expert Template File
-	const fileNameExpert = "server_expert.properties";
 
 	// Replacement Object
 	const replacementObject: Record<string, unknown> = {
@@ -244,27 +238,11 @@ export async function updateServerProperties(rootDir: string): Promise<void> {
 			: buildData.transformedVersion,
 	};
 
-	// Read and Write paths for normal
-	const readPathNormal: string = upath.join(templatesFolder, fileNameNormal);
-	const writePathsNormal: string[] = [
-		upath.join(rootDir, "serverfiles", fileName),
-		upath.join(rootDir, configOverridesFolder, "normal", fileName),
-	];
+	// Read and Write Paths
+	const readPath: string = upath.join(templatesFolder, fileName);
+	const writePath: string = upath.join(rootDir, "serverfiles", fileName);
 
-	// Modify Normal File
-	await modifyFile(readPathNormal, writePathsNormal, replacementObject);
-
-	// Read and Write paths for expert
-	const readPathExpert: string = upath.join(templatesFolder, fileNameExpert);
-	const writePathExpert: string = upath.join(
-		rootDir,
-		configOverridesFolder,
-		"expert",
-		fileName,
-	);
-
-	// Modify Expert File
-	await modifyFile(readPathExpert, [writePathExpert], replacementObject);
+	return modifyFile(readPath, [writePath], replacementObject);
 }
 
 // Main Closures
