@@ -81,6 +81,7 @@ async function copyMMCModJars() {
 	return src(["*", upath.join("client", "*")], {
 		cwd: modDestDirectory,
 		resolveSymlinks: true,
+		encoding: false,
 	})
 		.pipe(f)
 		.pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));

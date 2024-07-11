@@ -239,7 +239,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §5Nomifactory§r §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (color 2)§r, and features unique to §cHard/Expert Mode§r will be highlighted in §cred (color C)§r.",
+          "desc:8": "Welcome to §5Nomifactory§r §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\nDon\\u0027t forget: you can always open the §6Questbook§r with the §eGrave§r key!\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (color 2)§r, and features unique to §cHard/Expert Mode§r will be highlighted in §cred (color C)§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -442,7 +442,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 5,
@@ -482,7 +482,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 6,
@@ -561,7 +561,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 7,
@@ -681,7 +681,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 9,
@@ -778,7 +778,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 11,
@@ -858,7 +858,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 12,
@@ -1040,7 +1040,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 13,
@@ -1094,7 +1094,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 14,
@@ -1202,7 +1202,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 16,
@@ -1256,7 +1256,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 17,
@@ -1310,7 +1310,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 18,
@@ -1418,7 +1418,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 20,
@@ -1695,7 +1695,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 24,
@@ -2423,7 +2423,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 37,
@@ -2485,7 +2485,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 38,
@@ -2594,7 +2594,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 40,
@@ -3125,7 +3125,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 50,
@@ -3566,7 +3566,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 58,
@@ -4090,7 +4090,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 66,
@@ -8284,7 +8284,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 141,
@@ -12193,7 +12193,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need this to set the §aGuidance Computer\u0027s§r destination to the Moon (Luna).\n\nIn your assembled Rocket, press the Rocket GUI Hotkey (default is §eC§r but you may need to rebind it). Click the little square that says \"Guidance Computer\" to pull up the Guidance Computer inventory. Then, place the blank chip into the Guidance Computer. Back out of this menu (§eEsc§r or §eE§r) to get back to the main Rocket GUI.\n\nClick the §cSelect Dst§r button, choose Luna, and click the Select button to assign the destination to the chip.\n\n§eNote: if you want to return your rocket to Earth, you will need to change the destination in this manner again to Earth before launching.§r",
+          "desc:8": "You\u0027ll need this to set the §aGuidance Computer\u0027s§r destination to the Moon (Luna).\n\nIn your assembled Rocket, press the Rocket GUI Hotkey (default is §eCtrl/Cmd + C§r). Click the little square that says \"Guidance Computer\" to pull up the Guidance Computer inventory. Then, place the blank chip into the Guidance Computer. Back out of this menu (§eEsc§r or §eE§r) to get back to the main Rocket GUI.\n\nClick the §cSelect Dst§r button, choose Luna, and click the Select button to assign the destination to the chip.\n\n§eNote: if you want to return your rocket to Earth, you will need to change the destination in this manner again to Earth before launching.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15318,7 +15318,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 266,
@@ -20147,7 +20147,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "UNLOCKED"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 353,
@@ -20953,7 +20953,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aGrappling Hook§r is very useful in an urban environment.\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however since quite a lot of mods occupy this hotkey you\u0027ll need to visit the controls menu to resolve the button conflicts.",
+          "desc:8": "A §aGrappling Hook§r is very useful in an urban environment.\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however you can change this as you wish. Just be careful of §cKeybind Conflicts§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20974,7 +20974,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 368,
@@ -21066,7 +21066,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 370,
@@ -21151,7 +21151,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 371,
@@ -22210,7 +22210,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 393,
@@ -22642,7 +22642,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 401,
@@ -22878,7 +22878,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 405,
@@ -23560,7 +23560,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 415,
@@ -26405,7 +26405,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 488,
@@ -26587,7 +26587,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 491,
@@ -26811,7 +26811,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 495,
@@ -28789,7 +28789,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 530,
@@ -29768,7 +29768,6 @@
     },
     "548:10": {
       "preRequisites:11": [
-        21,
         909
       ],
       "properties:10": {
@@ -29788,14 +29787,14 @@
           "lockedprogress:1": 1,
           "name:8": "Molds",
           "partysinglereward:1": 0,
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 548,
@@ -30070,7 +30069,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 552,
@@ -30399,7 +30398,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 558,
@@ -36121,7 +36120,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 670,
@@ -37107,7 +37106,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 687,
@@ -39578,7 +39577,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 743,
@@ -40383,7 +40382,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 755,
@@ -41377,7 +41376,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 775,
@@ -41662,7 +41661,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 780,
@@ -41979,7 +41978,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 786,
@@ -42912,7 +42911,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 803,
@@ -43193,7 +43192,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 808,
@@ -43415,7 +43414,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 813,
@@ -43614,7 +43613,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 817,
@@ -48764,7 +48763,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 909,
@@ -48883,7 +48882,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 911,
@@ -49002,7 +49001,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 913,
@@ -49077,7 +49076,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 914,
@@ -49756,7 +49755,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is `R\u0027), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nThe Tool Belt can store anything with a stack size of 1, like swords, pickaxes, §bGregTech§r tools, and the §6Terminal§r. It has also been modified a bit, so it also allows any §bStorage Drawers§r key, and §cdoesn\u0027t allow any Thermal Satchel§r.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
+          "desc:8": "§2A brand new and highly requested mod to CEu to help you manage your tools!§r\n\nThe §eTool Belt§r is a item, which can store your tools, and exchange them easily! Right now, it has 2 slots, but later, once you unlock §6Steel§r, you can upgrade it with §6Belt Pouches§r, all the way to 9 slots, with an §3Anvil§r and some §aXP§r!\n\nMake the Tool Belt, and you can use the keybind (default is §eR§r), while the belt is in your inventory or Bauble Slots §cand you are holding something, or the belt is not empty§r, to open its GUI. \n\nAlternatively, you can right click while holding the belt to open its inventory.\n\nThe Tool Belt is equipable as a §bBauble§r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can\u0027t tell which bauble slot looks like a belt.\n\nThe Tool Belt can store anything with a stack size of 1, like swords, pickaxes, §bGregTech§r tools, and the §6Terminal§r. It has also been modified a bit, so it also allows any §bStorage Drawers§r key, and §cdoesn\u0027t allow any Thermal Satchel§r.\n\nNow, you can insert and extract from the belt! You can also use the Keybinds `§eCycle Tool Left§r\u0027 and `§eCycle Tool Right§r\u0027 whilst you are in the GUI.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49776,7 +49775,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 927,
@@ -50348,7 +50347,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default sort keybind is §aMiddle Click§r, §cbut you can always change the keybind. Simply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nYou can also configure how it is sorted, within the GUI. The default key to open the GUI is §aK§r.\n\nInventory Bogo Sorter, by default, also replaces stacks of items, like blocks, tools and food in your hotbar. For tools, it even replaces it just before it breaks, so you can repair it! Now, you can build a pillar to y-256 without opening your inventory, or changing hotbar slots!",
+          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default sort keybind is §aMiddle Click§r, but you can always change the keybind. Simply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nYou can also configure how it is sorted, within the GUI. The default key to open the GUI is §aK§r.\n\nInventory Bogo Sorter, by default, also replaces stacks of items, like blocks, tools and food in your hotbar. For tools, it even replaces it just before it breaks, so you can repair it! Now, you can build a pillar to y-256 without opening your inventory, or changing hotbar slots!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50368,7 +50367,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 932,
@@ -50636,7 +50635,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 937,
@@ -50695,7 +50694,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 938,
@@ -54328,7 +54327,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining an §aI/O Bus§r and an §aME Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Buses§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nNote that only the Interface-textured side will connect to an ME network.",
+          "desc:8": "Combining an §aI/O Bus§r and an §aME Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Buses/Hatches§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nSaves you that crucial block space, whilst giving you access to your usual features (such as §eGhost Circuits§r). They also have an extra storage space (for things like §6Lenses§r and §6Molds§r)!\n\nAlso, when you get tired of placing the same configuration over and over again, you can use §bGregTech§r §6Data Sticks§r to copy a ME Hatch/Bus Configuration!\n\nIn §9IV§r, you also unlock §6ME Stocking Input Buses and Hatches§r, which instead of storing a set amount of items/fluids itself, simply extracts items/fluids from the AE Network on demand. Technically, §einfinite throughput§r (or as much as your AE system can support), and saves having buffer items and fluids everywhere!\n\nNote that only the Interface-textured side will connect to an ME network.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54374,6 +54373,24 @@
               "Damage:2": 1746,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1747,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1745,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 261,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -54381,26 +54398,24 @@
       }
     },
     "1033:10": {
-      "preRequisites:11": [
-        339,
-        729
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining an §aI/O Hatch§r and an §aME Fluid Interface§r into a single block, these can be used in place of §aInput§r and §aOutput Hatches§r in GregTech multiblocks to connect them directly to your AE2 network.\n\nNote that only the Interface-textured side will connect to an ME network.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1747,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "§2ME Multiblock Hatches",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -54408,35 +54423,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 1033,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1747,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 1745,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -55369,7 +55364,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 1048,
@@ -57538,7 +57533,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -756,
-          "y:3": 308
+          "y:3": 344
         },
         "81:10": {
           "id:3": 341,
@@ -58010,27 +58005,20 @@
           "y:3": 380
         },
         "148:10": {
-          "id:3": 1033,
+          "id:3": 1045,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -720,
           "y:3": 380
         },
         "149:10": {
-          "id:3": 1045,
+          "id:3": 1047,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -756,
           "y:3": 380
         },
         "150:10": {
-          "id:3": 1047,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -756,
-          "y:3": 344
-        },
-        "151:10": {
           "id:3": 1053,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -62166,13 +62154,6 @@
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 630
-        },
-        "52:10": {
-          "id:3": 1033,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 186,
-          "y:3": 438
         }
       }
     }

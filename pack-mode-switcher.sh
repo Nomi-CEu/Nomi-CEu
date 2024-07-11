@@ -42,13 +42,6 @@ case $MODE in
 
     cp -rf "$NORMAL_CFG/." ${TARGET}
 
-    # Only copy server.properties if it exists.
-    if [ -f "server.properties" ]; then
-        mv "${TARGET}/server.properties" ./
-    else
-        rm "${TARGET}/server.properties" || true
-    fi
-
     # Update Mode
     echo normal > .mode
   ;;
@@ -56,12 +49,6 @@ case $MODE in
   E|e|expert|Expert)
 
     cp -rf "$EXPERT_CFG/." ${TARGET}
-
-    if [ -f "server.properties" ]; then
-        mv "${TARGET}/server.properties" ./
-    else
-        rm "${TARGET}/server.properties" || true
-    fi
 
     # Update Mode
     echo expert > .mode

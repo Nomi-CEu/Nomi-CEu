@@ -59,7 +59,6 @@ If you want a harder, or perhaps a more "true" GregTech experience, check out th
 - Harder recipes for assorted things like Iridium, Graphene, Numismatic Dynamos, and more  
 
 ### Installation Instructions:
-\* Note: Scripts will not work on versions <1.6, thus manual installation will be necessary. 
 
 #### Script Installation Instructions:
 

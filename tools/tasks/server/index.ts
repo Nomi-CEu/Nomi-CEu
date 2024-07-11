@@ -19,7 +19,10 @@ import {
 	sharedDestDirectory,
 } from "#globals";
 import { deleteAsync } from "del";
-import { updateBuildServerProperties } from "../misc/transformFiles.ts";
+import {
+	updateFilesBuildSetup,
+	updateServerProperties,
+} from "../misc/transformFiles.ts";
 import logInfo, { logWarn } from "#utils/log.ts";
 import filter from "gulp-filter";
 
@@ -178,6 +181,7 @@ async function copyServerMods() {
 	return src(["*", upath.join("server", "*")], {
 		cwd: modDestDirectory,
 		resolveSymlinks: true,
+		encoding: false,
 	})
 		.pipe(f)
 		.pipe(symlink(upath.join(serverDestDirectory, "mods")));
@@ -192,6 +196,7 @@ function copyServerOverrides() {
 		cwd: sharedDestDirectory,
 		allowEmpty: true,
 		resolveSymlinks: true,
+		encoding: false,
 	})
 		.pipe(f)
 		.pipe(symlink(upath.join(serverDestDirectory)));
@@ -262,6 +267,10 @@ function processLaunchscripts() {
 		.pipe(dest(serverDestDirectory));
 }
 
+const updateBuildServerProperties = async () => {
+	await updateServerProperties(serverDestDirectory);
+};
+
 export default gulp.series(
 	serverCleanUp,
 	createServerDirs,
@@ -274,5 +283,6 @@ export default gulp.series(
 	copyServerChangelog,
 	copyServerUpdateNotes,
 	processLaunchscripts,
+	updateFilesBuildSetup,
 	updateBuildServerProperties,
 );

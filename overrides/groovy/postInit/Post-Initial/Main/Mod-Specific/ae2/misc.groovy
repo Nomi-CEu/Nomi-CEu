@@ -1,5 +1,3 @@
-package ae2
-
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
 
@@ -23,7 +21,7 @@ crafting.shapelessBuilder()
 	.register()
 
 // JEI
-mods.jei.removeAndHide(item('appliedenergistics2:material:0'))
+mods.jei.ingredient.removeAndHide(item('appliedenergistics2:material:0'))
 
 // AE2 Certus -> GT Certus
 crafting.remove('appliedenergistics2:misc/deconstruction_certus_quartz_pillar')

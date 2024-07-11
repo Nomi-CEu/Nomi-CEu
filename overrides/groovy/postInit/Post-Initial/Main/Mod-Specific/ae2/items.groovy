@@ -1,5 +1,3 @@
-package ae2
-
 import static gregtech.api.GTValues.*
 
 /* Usable Items */
