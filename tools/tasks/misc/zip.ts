@@ -17,7 +17,7 @@ async function zipFolder(
 	zipName: string = upath.basename(path) + ".zip",
 ): Promise<void> {
 	return new Promise((resolve) => {
-		src(upath.join(path, "**"), { base: path, dot: true })
+		src(upath.join(path, "**"), { base: path, dot: true, encoding: false })
 			.pipe(zip(zipName))
 			.pipe(gulp.dest(buildConfig.buildDestinationDirectory))
 			.on("end", resolve);

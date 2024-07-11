@@ -96,6 +96,7 @@ function copyClientOverrides() {
 			cwd: sharedDestDirectory,
 			allowEmpty: true,
 			resolveSymlinks: true,
+			encoding: false,
 		})
 		.pipe(f)
 		.pipe(symlink(upath.join(clientDestDirectory, "overrides")));

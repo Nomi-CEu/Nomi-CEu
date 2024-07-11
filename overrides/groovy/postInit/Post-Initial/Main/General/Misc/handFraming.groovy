@@ -6,7 +6,7 @@ import net.minecraft.util.ResourceLocation
 import net.minecraftforge.registries.IForgeRegistryEntry
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeOutputTooltip
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translate
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.SafeMethodHelpers.callInstanceMethodOfClass
 
 // Hand Framing Tool
@@ -46,11 +46,11 @@ for (ItemStack stack : items) {
 			])
 			addRecipeOutputTooltip(recipeStack, resource(recipeName),
 				ItemMeta.compare(tool, recipeStack) ?
-					translate("tooltip.hand_framing.tool") :
-					translate("tooltip.hand_framing.drawer"),
-				translate("tooltip.hand_framing.top_left"),
-				translate("tooltip.hand_framing.top_right"),
-				translate("tooltip.hand_framing.bottom_left"))
+					translatable("tooltip.hand_framing.tool") :
+					translatable("tooltip.hand_framing.drawer"),
+				translatable("tooltip.hand_framing.top_left"),
+				translatable("tooltip.hand_framing.top_right"),
+				translatable("tooltip.hand_framing.bottom_left"))
 		}
 	}
 }
