@@ -227,6 +227,10 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 	#blockFuelCoke
 	<ore:blockFuelCoke> : [
 		<thermalfoundation:storage_resource:1>
+	],
+	#blockSoularium
+	<ore:blockSoularium> : [
+		<enderio:block_alloy:7>
 	]
 };
 
@@ -478,7 +482,7 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 		<thermalfoundation:material:96>
 	],
 
-	#dustSulur
+	#dustSulfur
 	<ore:dustSulfur>: [
 		<thermalfoundation:material:771>,
 		<nuclearcraft:gem_dust:6>
@@ -509,6 +513,11 @@ var dustsDisabled as IItemStack[][IOreDictEntry] = {
 	#dustEndstone
 	<ore:dustEndstone>: [
 		<nuclearcraft:gem_dust:11>
+	],
+
+	#dustSoularium
+	<ore:dustSoularium>: [
+		<enderio:item_material:74>
 	]
 };
 
@@ -914,6 +923,18 @@ var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
 	<ore:nuggetEnergeticAlloy> : [
 		<enderio:item_alloy_nugget:1>
 	],
+
+	<ore:nuggetConductiveIron> : [
+		<enderio:item_alloy_nugget:4>
+	],
+
+	<ore:nuggetEndSteel> : [
+		<enderio:item_alloy_nugget:8>
+	],
+
+	<ore:nuggetSoularium> : [
+		<enderio:item_alloy_nugget:7>
+	]
 };
 
 for oreDictEntry, items in nuggetsDisabled {
@@ -923,6 +944,24 @@ for oreDictEntry, items in nuggetsDisabled {
 	oreDictEntry.removeItems(items);
 }
 
+/* Just Remove These Nuggets, so conversion is still possible (the ingots are achievable via dungeon) */
+# Electrical Steel
+mods.jei.JEI.hide(<enderio:item_alloy_nugget>);
+
+# Vibrant Alloy
+mods.jei.JEI.hide(<enderio:item_alloy_nugget:2>);
+
+# Pulsating Iron
+mods.jei.JEI.hide(<enderio:item_alloy_nugget:5>);
+
+# Dark Steel
+mods.jei.JEI.hide(<enderio:item_alloy_nugget:6>);
+
+// Leave Stellar Nugget, we use EIO's default Stellar Ingot
+
+/* END */
+
+# Energetic Silver
 mods.jei.JEI.removeAndHide(<enderio:item_alloy_endergy_nugget:5>);
 
 ////////////////////////////

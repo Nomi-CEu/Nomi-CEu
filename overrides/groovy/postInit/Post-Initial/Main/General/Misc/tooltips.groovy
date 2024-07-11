@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
+import classes.postInit.EioPrefixes
 
 /* Actually Additions */
 
@@ -198,6 +199,15 @@ addTooltip(item('extendedcrafting:trimmed', 5), [
 	translatable('nomiceu.tooltip.extendedcrafting.black_steel.omnium.1'),
 	translatable('nomiceu.tooltip.extendedcrafting.black_steel.omnium.2'),
 ])
+
+/* Ender IO */
+
+// Glasses
+addTooltip(item('enderio:block_fused_glass'), translatable('tooltip.fused_glass.make'))
+
+for (ItemStack stack in EioPrefixes.getAllItems()) {
+	addTooltip(stack.item, translatable('tooltip.eio_glass.dye'))
+}
 
 /* Project Red */
 
