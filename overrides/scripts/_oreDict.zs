@@ -2819,16 +2819,6 @@ recipes.addShapeless(<metaitem:dustSulfur>, [<thermalfoundation:material:771>]);
 //Thermal Coal Coke Decomposition
 recipes.addShapeless(<metaitem:gemCoke> * 9, [<thermalfoundation:storage_resource:1>]);
 
-// Temporary recipe to convert endstone dusts
-//recipes.addShapeless(<ore:dustEndstone>.firstItem, [<nomilabs:endstonedust>]);
-//<nomilabs:endstonedust>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
-//<nomilabs:endstonedust>.addTooltip(format.red("Please use the GregTech variant of Endstone Dust."));
-
-// Temporary recipe to convert pulsating iron wire that is probably unnecessary anyway.
-//recipes.addShapeless(<ore:wireGtSinglePulsatingIron>.firstItem, [<nomilabs:pulsatingwire>]);
-//<nomilabs:pulsatingwire>.addTooltip(format.red("This item is obsolete and will be removed in the next update."));
-//<nomilabs:pulsatingwire>.addTooltip(format.red("Please use the GregTech variant of Pulsating Iron Wire."));
-
 //neutronium plate exchange
 //recipes.addShapeless("of_exchange_neutronium_plate",
 //    <moreplates:neutronium_plate>,

@@ -1,16 +1,84 @@
-metaitem.circuit.energy_flow.name=Crystal Processor
-metaitem.circuit.quantum_processor.name=§5Quantum Circuit
-metaitem.circuit.nano_processor_assembly.name=Nanoprocessor
-metaitem.circuit.nano_processor.name=Nanocircuit
-metaitem.circuit.processor_assembly.name=Microprocessor
-metaitem.circuit.basic_electronic.name=Electronic Circuit
-metaitem.circuit.basic.name=Primitive Circuit
-metaitem.quantumeye.name=Quantum Eye
-metaitem.board.phenolic.name=Phenolic Substrate
-metaitem.circuit.wetware_processor.name=Wetware Circuit
-metaitem.circuit.wetware_assembly.name=Wetware Processor
-metaitem.circuit.wetware_super_computer.name=Wetware Processor Array
-metaitem.circuit.wetware_mainframe.name=Wetware Processor Mainframe
-metaitem.quantumstar.name=§5Quantum Star
-
 nomifactory.nonetherportals=Nether portals are disabled in §5Nomi-CEu§r. Follow the quest book to unlock §6Nether Cakes§r!
+
+# Tooltips
+
+# Actually Additions
+nomiceu.tooltip.actuallyadditions.drill_core.1=§cAcquired by exploration of Lost Cities buildings or vanilla dungeons.§r
+nomiceu.tooltip.actuallyadditions.drill_core.2=§cAlso can be purchased for Nomicoins!§r
+nomiceu.tooltip.actuallyadditions.canola.1=§aCanola can be turned into Canola Oil via a Canola Press.§r
+nomiceu.tooltip.actuallyadditions.canola.2=§aThis is a somewhat slow machine and requres RF to function.§r
+nomiceu.tooltip.actuallyadditions.canola_press=§aTurns Canola into Canola Oil. Requires RF.§r
+nomiceu.tooltip.actuallyadditions.knife=§cWhen making Hamburgers, make sure to place this in the Crafting Table last!§r
+nomiceu.tooltip.actuallyadditions.solidifed_xp.normal.1=§aDrops from monsters, and can be made in§r
+nomiceu.tooltip.actuallyadditions.solidifed_xp.normal.2=§aa Fluid Solidifier or Experience Solidifier.§r
+nomiceu.tooltip.actuallyadditions.solidifed_xp.expert=§aMade in a Fluid Solidifier or Experience Solidifier.§r
+
+# Advanced Rocketry
+nomiceu.tooltip.advancedrocketry.orbital_laser_drill.1=§7Glory to the PGS!§r
+nomiceu.tooltip.advancedrocketry.orbital_laser_drill.2=§7Consult the AR Wiki for building instructions.§r
+nomiceu.tooltip.advancedrocketry.orbital_laser_drill.3=§7Consumes §e1,000,000§r RF/t§r
+nomiceu.tooltip.advancedrocketry.orbital_laser_drill.4=§cExtremely finicky. Use at your own risk.§r
+nomiceu.tooltip.advancedrocketry.orbital_laser_drill.5=§cTry restarting your world if it isn't working.§r
+nomiceu.tooltip.advancedrocketry.basic_lens=§7A basic lens, used for the Orbital Laser Drill.§r
+
+# AE2 & NAE2
+nomiceu.tooltip.ae2.crafting_terminal_removal.1=§cThis item is being removed.§r
+nomiceu.tooltip.ae2.crafting_terminal_removal.2=§cA temperary conversion recipe has been added.§r
+nomiceu.tooltip.ae2.crafting_terminal_removal.3=§cCheck JEI for more details.§r
+nomiceu.tooltip.ae2.quantum_link_card.1=§eAllows wireless access from anywhere!§r
+nomiceu.tooltip.ae2.quantum_link_card.2=§eCheck the Quest Book for more information.§r
+nomiceu.tooltip.ae2.pattern_expansion_card=§eExpand your Interfaces' Pattern Capacity!§r
+nomiceu.tooltip.ae2.crafting_card=§eAllows machines to craft items as they are used up, automatically.§r
+nomiceu.tooltip.ae2.acceleration_card=§eSpeeds up your ME machines§r.
+nomiceu.tooltip.ae2.magnet_card=§ePicks up items and puts them into your AE2 System.§r
+nomiceu.tooltip.ae2.inverter_card=§eInverts your AE2 configurations!§r
+nomiceu.tooltip.ae2.fuzzy_card=§eOnly handles items in a certain damage range.§r
+nomiceu.tooltip.ae2.capacity_card=§eExpand your Import/Export buses!§r
+nomiceu.tooltip.ae2.redstone_card=§eControl your ME machines... with Redstone!§r
+nomiceu.tooltip.ae2.sticky_card=§eConfigured Items can ONLY go to that ME machine!§r
+nomiceu.tooltip.ae2.pure_certus_quartz=§aMade in a Crystal Growth Chamber from a Certus Quartz Seed.§r
+nomiceu.tooltip.ae2.pure_nether_quartz=§aMade in a Crystal Growth Chamber from a Nether Quartz Seed.§r
+nomiceu.tooltip.ae2.pure_fluix=§aMade in a Crystal Growth Chamber from a Fluix Seed.§r
+nomiceu.tooltip.ae2.charged_certus=§bObtained by charging with RF power in the AE2 Charger, or the Energetic Infuser.§r
+nomiceu.tooltip.ae2.p2p_me=§aThe basis for all other P2P Tunnels.§r
+nomiceu.tooltip.ae2.p2p_rf=§aMade by right-clicking a ME P2P Tunnel with an energy conduit.§r
+nomiceu.tooltip.ae2.p2p_fluid=§aMade by right-clicking a ME P2P Tunnel with a bucket.§r
+nomiceu.tooltip.ae2.p2p_item=§aMade by right-clicking a ME P2P Tunnel with a chest.§r
+nomiceu.tooltip.ae2.p2p_light=§aMade by right-clicking a ME P2P Tunnel with a torch.§r
+nomiceu.tooltip.ae2.p2p_redstone=§aMade by right-clicking a ME P2P Tunnel with redstone.§r
+nomiceu.tooltip.ae2.p2p_eu=§aMade by right-clicking a ME P2P Tunnel with any GregTech wire or cable.§r
+nomiceu.tooltip.ae2.p2p_interface=§aMade by right-clicking a ME P2P Tunnel with an interface.§r
+nomiceu.tooltip.ae2.channels_not_enabled=Channels not enabled!
+nomiceu.tooltip.ae2.controller=§bThe ME Controller reduces your AE2 system's power consumption!§r
+nomiceu.tooltip.ae2.dense=§bFor decoration!§r
+nomiceu.tooltip.ae2.facade=§3AE2 facades can be made from most non-tile-entities.§r
+
+# Dimensional Edibles
+nomiceu.tooltip.dimensionaledibles.island_cake.1=§aUsed by Server Owners to send FTB Teams and Individuals to their Personal Islands!§r
+nomiceu.tooltip.dimensionaledibles.island_cake.2=§aView the Server Information File on GitHub for more information!§r
+
+# Dark Utils
+nomiceu.tooltip.darkutils.ender_tether=Blocks Endermen from teleporting.
+
+# Deep Mob Learning
+nomiceu.tooltip.dml.glitch_fragment=§bObtained by crushing Glitch Hearts against Obsidian.§r
+
+# Thermal Expansion
+nomiceu.tooltip.thermalexpansion.capacitors=§cCannot be discharged in GT Battery Buffers!§r
+
+# GregTech
+nomiceu.tooltip.gregtech.prospector.1=§6§lUsage:§r
+nomiceu.tooltip.gregtech.prospector.2=Grid squares = 1 chunk, up is north.
+nomiceu.tooltip.gregtech.prospector.3=Click an ore in the sidebar to isolate it.
+nomiceu.tooltip.gregtech.prospector.4=Use JEI to check the potential vein depth.
+nomiceu.tooltip.gregtech.facade.1=§3GTCEu facades can be made from most non-tile-entities.§r
+nomiceu.tooltip.gregtech.facade.2=§3They craft into different amounts based on the metal used!§r
+
+# Extended Crafting
+nomiceu.tooltip.extendedcrafting.black_steel.omnium=§7Omnium Trimmed§r
+
+# Project Red
+nomiceu.tooltip.projectred.wire=§eFor use with ProjectRed.§r
+
+# XTones
+nomiceu.tooltip.xtones.lamp=§eRequires a redstone signal to light.§r

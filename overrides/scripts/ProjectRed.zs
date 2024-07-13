@@ -32,7 +32,6 @@ for item in toRemove {
 }
 
 // Recipes
-<projectred-transmission:wire>.addTooltip(format.yellow("For use with ProjectRed"));
 recipes.removeByRecipeName("projectred-transmission:red_alloy_wire");
 recipes.addShapeless(<projectred-transmission:wire>, [<ore:wireGtSingleRedAlloy>]);
 

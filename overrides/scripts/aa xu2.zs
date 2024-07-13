@@ -427,9 +427,6 @@ recipes.addShaped(<actuallyadditions:block_furnace_solar>, [
 
 //Drill Core
 recipes.remove(<actuallyadditions:item_misc:16>);
-<actuallyadditions:item_misc:16>.addTooltip(format.red("Acquired by exploration of Lost Cities buildings or vanilla dungeons."));
-// Coin tooltip is done in normalmode.zs
-
 
 // Canola Press
 recipes.removeByRecipeName("actuallyadditions:recipes132");
@@ -437,11 +434,5 @@ recipes.addShaped(<actuallyadditions:block_canola_press>, [
 	[<metaitem:plateSteel>, <actuallyadditions:block_crystal:5>, <metaitem:plateSteel>], 
 	[<metaitem:electric.piston.mv>, null, <metaitem:electric.piston.mv>], 
 	[<metaitem:plateSteel>, <actuallyadditions:item_misc:8>, <metaitem:plateSteel>]]);
-<actuallyadditions:block_canola_press>.addTooltip(format.green("Turns Canola into Canola Oil. Requires RF."));  
-
-	
-<actuallyadditions:item_misc:13>.addTooltip(format.green("Canola can be turned into Canola Oil via a Canola Press. This is a somewhat slow machine and requres RF to function."));
-
-<actuallyadditions:item_knife>.addTooltip(format.red("When making Hamburgers, make sure to place this in the Crafting Table last! Otherwise, Bio Mash will be created."));
 	
 print("--- ActuallyAdditions.zs initialized ---");

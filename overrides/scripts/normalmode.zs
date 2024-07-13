@@ -672,9 +672,6 @@ mixer.recipeBuilder().inputs([<metaitem:dustNaquadah> * 2,<enderio:item_material
 
 // I/O Buses (Groovy)
 
-// AA Drill Core Coin Tooltip
-<actuallyadditions:item_misc:16>.addTooltip(format.red("Also can be purchased for Nomicoins."));
-
 // Removals
 // GT
 mods.jei.JEI.removeAndHide(<meta_tile_entity:steam_extractor_bronze>);

@@ -291,12 +291,6 @@ makeExtremeRecipe9(<nomilabs:tiertenship>,
 	  W : <nomilabs:warpengine> }
 );
 
-<extendedcrafting:trimmed:5>.clearTooltip();
-<extendedcrafting:trimmed:5>.addTooltip("Block of Black Steel");
-<extendedcrafting:trimmed:5>.addTooltip(
-	format.gray(
-		format.italic("Omnium Trimmed")));
-
 recipes.removeByRecipeName("avaritia:items/resource/neutron_nugget");
 
 
@@ -320,10 +314,6 @@ makeShaped("of_aa_block_xp_solidifier", <actuallyadditions:block_xp_solidifier>,
 	{ A : <metaitem:nomilabs:plateVibrantAlloy>,
 	  B : <meta_tile_entity:fluid_solidifier.hv> }
 );
-<actuallyadditions:item_solidified_experience>.addTooltip(
-	format.green("Drops from monsters, and can be made in"));
-<actuallyadditions:item_solidified_experience>.addTooltip(
-	format.green("a Fluid Solidifier or Experience Solidifier."));
 
 // Solidified Experience
 solidifier.recipeBuilder()
