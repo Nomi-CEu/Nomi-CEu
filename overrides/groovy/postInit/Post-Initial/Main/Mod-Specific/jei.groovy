@@ -1,8 +1,9 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 
 /* Item Removals */
 // Unobtainable Ores
-void removeTrona(){
+void removeTrona() {
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) // Trona Ore
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 1)) // Trona Ore
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 2)) // Trona Ore
@@ -17,7 +18,7 @@ void removeTrona(){
 	mods.hei.removeAndHide(item('gregtech:meta_crushed', 2031)) // Crushed Ore
 }
 
-void removeDarmstadite(){
+void removeDarmstadite() {
 	if (LabsModeHelper.normal) {
 		mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 0)) // Darmstadite Ore
 		mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 1)) // Darmstadite Ore
@@ -35,9 +36,8 @@ void removeDarmstadite(){
 		mods.hei.removeAndHide(item('nomilabs:meta_dust', 110)) // Dust
 	}
 }
-	
 
-void removePlutonium_239(){
+void removePlutonium239() {
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 0)) // Plutonium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 1)) // Plutonium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 2)) // Plutonium Ore
@@ -48,15 +48,16 @@ void removePlutonium_239(){
 	mods.hei.removeAndHide(item('gregtech:meta_dust_pure', 81)) // Pure Dust
 }
 
-void removeCobalt(){
+void removeCobalt() {
 	mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 0)) // Cobalt Ore
 	mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 1)) // Cobalt Ore
 	mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 2)) // Cobalt Ore
 	mods.hei.removeAndHide(item('gregtech:meta_crushed_purified', 23)) // Crushed Purified Ore
 	mods.hei.removeAndHide(item('gregtech:meta_crushed', 23)) // Crushed Ore
-	mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged', 23)) // Centrifuged Ore	
+	mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged', 23)) // Centrifuged Ore
 }
-void removeDenseOres(){
+
+void removeDenseOres() {
 	mods.hei.removeAndHide(item('densemetals:dense_platinum_ore')) // Dense Platinum Ore
 	mods.hei.removeAndHide(item('densemetals:dense_quartz_ore')) // Dense Quartz Ore
 	mods.hei.removeAndHide(item('densemetals:dense_copper_ore')) // Dense Copper Ore
@@ -73,15 +74,23 @@ void removeDenseOres(){
 	mods.hei.removeAndHide(item('densemetals:dense_gold_ore')) // Dense Gold Ore
 	mods.hei.removeAndHide(item('densemetals:dense_rutile_ore')) // Dense Rutile Ore	
 }
+
 removeTrona()
 removeDarmstadite()
-removePlutonium_239()
+removePlutonium239()
 removeCobalt()
 removeDenseOres()
 
 // AR
 mods.hei.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
 
+// Armor Plus
+mods.jei.ingredient.hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
+
+// Thermal
+removeAndHideItemIgnoreNBT(item('thermalexpansion:machine', 13)) // Arcane Ensorcellator
+removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 9)) // Decoctive Diffuser
+removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 8)) // Insightful Condenser
 
 /* Remove Categories (Appear Randomly after /gs reload) */
 // EIO
