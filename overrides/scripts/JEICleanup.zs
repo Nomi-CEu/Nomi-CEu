@@ -17,17 +17,9 @@ if(!isNull(ae2)) {
 
     for item in ae2Items {
         if(item.displayName has "Cable Facade") {
-            if(item.displayName has "Block of Neutronium") {
-                item.addTooltip(format.darkAqua("Facades can be crafted from most blocks, but are hidden from JEI to reduce clutter"));
-            }
-            else {
+            if(!(item.displayName has "Block of Neutronium")) {
                mods.jei.JEI.hide(item); 
             }
         }
     }
 }
-
-//Adding a tooltop to the GTCEu facade
-<gregtech:meta_item_1:330>.withTag({Facade: {id: "minecraft:stone", Count: 1 as byte, Damage: 0 as short}}).addTooltip(format.darkAqua("GTCEu Cable facades can be made from most non-tile-entites, and craft into different amounts based on the metal used."));
-
-
