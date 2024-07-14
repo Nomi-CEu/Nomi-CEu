@@ -1,4 +1,4 @@
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 
 // Pyrolyse Oven
 replaceRecipeInput(metaitem('pyrolyse_oven'), [

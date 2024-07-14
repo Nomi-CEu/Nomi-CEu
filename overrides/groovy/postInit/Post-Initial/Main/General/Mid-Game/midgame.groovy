@@ -1,4 +1,4 @@
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 
 // Processing Array
 replaceRecipeInput(metaitem('processing_array'),
