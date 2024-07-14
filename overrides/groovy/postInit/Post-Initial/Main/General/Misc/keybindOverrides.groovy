@@ -1,4 +1,6 @@
-import com.nomiceu.nomilabs.util.LabsSide
+// SIDE: CLIENT
+// ^, Makes the Script only Run Client-Side
+
 import net.minecraftforge.client.settings.KeyModifier
 import org.lwjgl.input.Keyboard
 
@@ -6,10 +8,6 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.KeyBindingHelpers.*
 
 // This File overrides the Default Keybinds for New Players.
 // All Keybinds that a new player would probably never need to use should probably be unset here.
-
-// Doesn't matter on Server
-// IMPORTANT! This stops the script from crashing on servers!
-if (LabsSide.isDedicatedServer()) return
 
 addOverride('keybind.baublesinventory', Keyboard.KEY_NONE)
 
