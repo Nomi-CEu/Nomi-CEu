@@ -189,6 +189,11 @@ for (ItemStack storage : storageCells) {
 	])
 }
 
+// Quartz Knives
+for (ItemStack knife : [item('appliedenergistics2:nether_quartz_cutting_knife'), item('appliedenergistics2:certus_quartz_cutting_knife')]) {
+	addTooltip(knife, translatable('nomiceu.tooltip.ae2.quartz_knife'))
+}
+
 /* Dimensional Edibles */
 
 // Island Cake
