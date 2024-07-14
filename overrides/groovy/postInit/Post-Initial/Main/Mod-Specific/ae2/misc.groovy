@@ -117,7 +117,7 @@ var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, It
 		.top(circuit)
 		.bottom(item('appliedenergistics2:material:20')) // Silicon
 		.output(processor)
-		.register()
+		.press().register()
 }
 
 // Calculation
