@@ -1,3 +1,6 @@
+// SIDE: CLIENT
+// ^ Script only runs Client-Side
+
 import appeng.core.AEConfig
 import appeng.core.features.AEFeature
 import com.nomiceu.nomilabs.util.LabsModeHelper
