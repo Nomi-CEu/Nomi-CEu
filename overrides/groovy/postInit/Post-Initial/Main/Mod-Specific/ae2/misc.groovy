@@ -84,13 +84,13 @@ mods.appliedenergistics2.inscriber.recipeBuilder()
 	.input(ore('plateSilicon'))
 	.top(item('appliedenergistics2:material:19'))
 	.output(item('appliedenergistics2:material:20'))
-	.register()
+	.inscribe().register()
 
 mods.appliedenergistics2.inscriber.recipeBuilder()
 	.input(ore('itemSilicon'))
 	.top(item('appliedenergistics2:material:19'))
 	.output(item('appliedenergistics2:material:20'))
-	.register()
+	.inscribe().register()
 
 var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, ItemStack press, ItemStack circuit, ItemStack processor ->
 	/* Presses */
@@ -108,7 +108,7 @@ var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, It
 		.input(plate)
 		.top(press)
 		.output(circuit)
-		.register()
+		.inscribe().register()
 
 	/* Processors */
 	mods.appliedenergistics2.inscriber.removeByOutput(processor)
@@ -117,7 +117,7 @@ var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, It
 		.top(circuit)
 		.bottom(item('appliedenergistics2:material:20')) // Silicon
 		.output(processor)
-		.inscribe().register()
+		.register()
 }
 
 // Calculation
