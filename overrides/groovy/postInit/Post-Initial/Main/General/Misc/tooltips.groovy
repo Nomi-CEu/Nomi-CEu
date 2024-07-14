@@ -146,6 +146,49 @@ if (!AEConfig.instance().isFeatureEnabled(AEFeature.CHANNELS)) {
 // Facades
 addTooltip(item('appliedenergistics2:facade'), translatable('nomiceu.tooltip.ae2.facade'))
 
+// Crafting Storages
+var craftingStorages = [
+	item('appliedenergistics2:crafting_storage_1k'),
+	item('appliedenergistics2:crafting_storage_4k'),
+	item('appliedenergistics2:crafting_storage_16k'),
+	item('appliedenergistics2:crafting_storage_64k'),
+	item('nae2:storage_crafting_256k'),
+	item('nae2:storage_crafting_1024k'),
+	item('nae2:storage_crafting_4096k'),
+	item('nae2:storage_crafting_16384k'),
+]
+for (ItemStack crafting : craftingStorages) {
+	addTooltip(crafting, translatable('nomiceu.tooltip.ae2.crafting_storage'))
+}
+
+// Storage Cells
+var storageCells = [
+	item('appliedenergistics2:storage_cell_1k'),
+	item('appliedenergistics2:storage_cell_4k'),
+	item('appliedenergistics2:storage_cell_16k'),
+	item('appliedenergistics2:storage_cell_64k'),
+	item('appliedenergistics2:fluid_storage_cell_1k'),
+	item('appliedenergistics2:fluid_storage_cell_4k'),
+	item('appliedenergistics2:fluid_storage_cell_16k'),
+	item('appliedenergistics2:fluid_storage_cell_64k'),
+	item('nae2:storage_cell_void'),
+	item('nae2:fluid_storage_cell_void'),
+	item('nae2:storage_cell_256k'),
+	item('nae2:storage_cell_1024k'),
+	item('nae2:storage_cell_4096k'),
+	item('nae2:storage_cell_16384k'),
+	item('nae2:storage_cell_fluid_256k'),
+	item('nae2:storage_cell_fluid_1024k'),
+	item('nae2:storage_cell_fluid_4096k'),
+	item('nae2:storage_cell_fluid_16384k'),
+]
+for (ItemStack storage : storageCells) {
+	addTooltip(storage, [
+		translatableEmpty(),
+		translatable('nomiceu.tooltip.ae2.storage_cell'),
+	])
+}
+
 /* Dimensional Edibles */
 
 // Island Cake
