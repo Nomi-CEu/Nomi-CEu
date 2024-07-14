@@ -52,6 +52,9 @@ nomiceu.tooltip.ae2.channels_not_enabled=Channels not enabled!
 nomiceu.tooltip.ae2.controller=§bThe ME Controller reduces your AE2 system's power consumption!§r
 nomiceu.tooltip.ae2.dense=§bFor decoration!§r
 nomiceu.tooltip.ae2.facade=§3AE2 facades can be made from most non-tile-entities.§r
+nomiceu.tooltip.ae2.crafting_storage=§ePlace this into a Crafting Grid to recycle it!§r
+nomiceu.tooltip.ae2.storage_cell=§eShift Right Click whilst holding this to recycle it!§r
+nomiceu.tooltip.ae2.quartz_knife=§eRight Click on placed ME parts to rename them... for free!§r
 
 # Dimensional Edibles
 nomiceu.tooltip.dimensionaledibles.island_cake.1=§aUsed by Server Owners to send FTB Teams and Individuals to their Personal Islands!§r
@@ -75,7 +78,8 @@ nomiceu.tooltip.gregtech.facade.1=§3GTCEu facades can be made from most non-til
 nomiceu.tooltip.gregtech.facade.2=§3They craft into different amounts based on the metal used!§r
 
 # Extended Crafting
-nomiceu.tooltip.extendedcrafting.black_steel.omnium=§7Omnium Trimmed§r
+nomiceu.tooltip.extendedcrafting.black_steel.omnium.1=Block of Black Steel
+nomiceu.tooltip.extendedcrafting.black_steel.omnium.2=§7Omnium Trimmed§r
 
 # Ender IO
 tooltip.fused_glass.make=Made with §6Tempered Glass§r and §7White Dye§r
