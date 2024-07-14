@@ -1,6 +1,23 @@
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.*
+import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.RecipeMaps
+
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 
 /* Adds Recycling Recipes to some GT Items */
+
+// 4x and 9x Fluid Hatches
+// Only add these in Hard Mode, in Normal Mode, these are added in Mode-Specific/Normal-Mode/buses.groovy
+if (LabsModeHelper.expert) {
+	changeStackRecycling(metaitem('fluid_hatch.import_4x'), RecipeMaps.ASSEMBLER_RECIPES)
+	changeStackRecycling(metaitem('fluid_hatch.import_4x.iv'), RecipeMaps.ASSEMBLER_RECIPES)
+	changeStackRecycling(metaitem('fluid_hatch.import_9x'), RecipeMaps.ASSEMBLER_RECIPES)
+	changeStackRecycling(metaitem('fluid_hatch.import_9x.iv'), RecipeMaps.ASSEMBLER_RECIPES)
+
+	changeStackRecycling(metaitem('fluid_hatch.export_4x'), RecipeMaps.ASSEMBLER_RECIPES)
+	changeStackRecycling(metaitem('fluid_hatch.export_4x.iv'), RecipeMaps.ASSEMBLER_RECIPES)
+	changeStackRecycling(metaitem('fluid_hatch.export_9x'), RecipeMaps.ASSEMBLER_RECIPES)
+	changeStackRecycling(metaitem('fluid_hatch.export_9x.iv'), RecipeMaps.ASSEMBLER_RECIPES)
+}
 
 // Parts LuV
 changeStackRecycling(metaitem('electric.motor.luv'), [metaitem('stickLongSamariumMagnetic'), metaitem('stickLongHsss') * 2, metaitem('ringHsss') * 2, metaitem('roundHsss') * 4, metaitem('wireFineRuridit') * 64, metaitem('cableGtSingleNiobiumTitanium') * 2])

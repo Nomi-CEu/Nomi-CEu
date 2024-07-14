@@ -1,6 +1,6 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecipeRecyclingHelpers.createRecipe
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.createRecipe
 
 // Changes Buses and Hatches in Normal Mode to not be assembler recipe for first couple tiers.
 if (!LabsModeHelper.normal) return
@@ -76,13 +76,12 @@ mods.gregtech.assembler.removeByOutput([metaitem('fluid_hatch.export_9x')], null
 mods.gregtech.assembler.removeByOutput([metaitem('fluid_hatch.import_9x.iv')], null, null, null)
 mods.gregtech.assembler.removeByOutput([metaitem('fluid_hatch.export_9x.iv')], null, null, null)
 
-// No Recycling Recipes for 4x/9x hatches, don't add them
-crafting.addShaped(metaitem('fluid_hatch.import_4x'), [[ore('pipeQuadrupleFluidTitanium')], [metaitem('hull.ev')]])
-crafting.addShaped(metaitem('fluid_hatch.import_4x.iv'), [[ore('pipeQuadrupleFluidTungstenSteel')], [metaitem('hull.iv')]])
-crafting.addShaped(metaitem('fluid_hatch.import_9x'), [[ore('pipeNonupleFluidTitanium')], [metaitem('hull.ev')]])
-crafting.addShaped(metaitem('fluid_hatch.import_9x.iv'), [[ore('pipeNonupleFluidTungstenSteel')], [metaitem('hull.iv')]])
+createRecipe(metaitem('fluid_hatch.import_4x'), [[ore('pipeQuadrupleFluidTitanium')], [metaitem('hull.ev')]])
+createRecipe(metaitem('fluid_hatch.import_4x.iv'), [[ore('pipeQuadrupleFluidTungstenSteel')], [metaitem('hull.iv')]])
+createRecipe(metaitem('fluid_hatch.import_9x'), [[ore('pipeNonupleFluidTitanium')], [metaitem('hull.ev')]])
+createRecipe(metaitem('fluid_hatch.import_9x.iv'), [[ore('pipeNonupleFluidTungstenSteel')], [metaitem('hull.iv')]])
 
-crafting.addShaped(metaitem('fluid_hatch.export_4x'), [[metaitem('hull.ev')], [ore('pipeQuadrupleFluidTitanium')]])
-crafting.addShaped(metaitem('fluid_hatch.export_4x.iv'), [[metaitem('hull.iv')], [ore('pipeQuadrupleFluidTungstenSteel')]])
-crafting.addShaped(metaitem('fluid_hatch.export_9x'), [[metaitem('hull.ev')], [ore('pipeNonupleFluidTitanium')]])
-crafting.addShaped(metaitem('fluid_hatch.export_9x.iv'), [[metaitem('hull.iv')], [ore('pipeNonupleFluidTungstenSteel')]])
+createRecipe(metaitem('fluid_hatch.export_4x'), [[metaitem('hull.ev')], [ore('pipeQuadrupleFluidTitanium')]])
+createRecipe(metaitem('fluid_hatch.export_4x.iv'), [[metaitem('hull.iv')], [ore('pipeQuadrupleFluidTungstenSteel')]])
+createRecipe(metaitem('fluid_hatch.export_9x'), [[metaitem('hull.ev')], [ore('pipeNonupleFluidTitanium')]])
+createRecipe(metaitem('fluid_hatch.export_9x.iv'), [[metaitem('hull.iv')], [ore('pipeNonupleFluidTungstenSteel')]])
