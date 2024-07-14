@@ -206,7 +206,7 @@ addTooltip(item('extendedcrafting:trimmed', 5), [
 addTooltip(item('enderio:block_fused_glass'), translatable('tooltip.fused_glass.make'))
 
 for (ItemStack stack in EioPrefixes.getAllItems()) {
-	addTooltip(stack.item, translatable('tooltip.eio_glass.dye'))
+	addTooltip(stack, translatable('tooltip.eio_glass.dye'))
 }
 
 /* Project Red */
