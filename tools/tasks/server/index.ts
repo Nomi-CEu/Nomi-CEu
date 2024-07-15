@@ -206,7 +206,9 @@ function copyServerOverrides() {
  * Copies files from ./serverfiles into dest folder.
  */
 function copyServerFiles() {
-	return src(["../serverfiles/**"]).pipe(dest(serverDestDirectory));
+	return src(["../serverfiles/**"], {
+		encoding: false, // Needed because of the Server Icon
+	}).pipe(dest(serverDestDirectory));
 }
 
 /**
