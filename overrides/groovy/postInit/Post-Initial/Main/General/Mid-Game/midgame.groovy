@@ -1,4 +1,5 @@
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static gregtech.api.GTValues.*
 
 // Processing Array
 replaceRecipeInput(metaitem('processing_array'),
@@ -6,8 +7,8 @@ replaceRecipeInput(metaitem('processing_array'),
 	 [metaitem('robot.arm.iv'), metaitem('hull.iv'), metaitem('robot.arm.iv')],
 	 [ore('circuitLuv'), metaitem('tool.datastick'), ore('circuitLuv')]])
 
-// Replace small piles from Rare Earth centrifuging with large piles
-mods.gregtech.centrifuge.removeByInput(20, [metaitem('dustRareEarth')], null)
+// Make Rare Earth Centrifuging Output Full Dusts
+mods.gregtech.centrifuge.removeByInput([metaitem('dustRareEarth')], null)
 mods.gregtech.centrifuge.recipeBuilder()
     .inputs(metaitem('dustRareEarth'))
     .chancedOutput(metaitem('dustCadmium'), 625, 100)
@@ -17,5 +18,5 @@ mods.gregtech.centrifuge.recipeBuilder()
     .chancedOutput(metaitem('dustYttrium'), 625, 100)
     .chancedOutput(metaitem('dustLanthanum'), 625, 100)
     .duration(64)
-    .EUt(20)
+    .EUt(VA[LV])
     .buildAndRegister()
