@@ -1,11 +1,7 @@
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ShapedConversionRecipe
 import net.minecraft.item.EnumDyeColor
-import gregtech.api.unification.material.MarkerMaterials
-import gregtech.api.unification.material.Materials
-import gregtech.api.unification.ore.OrePrefix
-
-import static gregtech.api.GTValues.*
+import net.minecraft.item.ItemStack
 
 // Backport MC 1.14 Dye Mechanics
 ore('dyeBlack').remove(item('minecraft:dye', 0))
@@ -17,7 +13,8 @@ ore('dye').remove(item('minecraft:dye', 3))
 addShapedConversionRecipe(metaitem('dye.brown'), item('minecraft:dye', 3))
 ore('dyeBrown').remove(item('nuclearcraft:cocoa_solids'))
 addShapedConversionRecipe(metaitem('dye.brown'), item('nuclearcraft:cocoa_solids'))
-addShapedConversionRecipe(metaitem('dye.brown'), metaitem('dustCocoa')); //NC cocoa solids and vanilla cocoa stop being a dye when turned into GT cocoa dust
+// NC cocoa solids and vanilla cocoa stop being a dye when turned into GT cocoa dust
+addShapedConversionRecipe(metaitem('dye.brown'), metaitem('dustCocoa'))
 ore('dyeBrown').remove(metaitem('dustMetalMixture'))
 addShapedConversionRecipe(metaitem('dye.brown'), metaitem('dustMetalMixture'))
 
@@ -72,23 +69,7 @@ for (def color : EnumDyeColor.values()) {
 // Fix Satchel Redeying
 addOreDictToOreDict(ore('dye'), dyeHelperMap.values())
 
-// Re-Generate Chemical Dye Reactor Recipes (Breaks when OreDict Changes for Some Reason)
-// Copied with some Groovy Changes from
-// https://github.com/GregTechCEu/GregTech/blob/master/src/main/java/gregtech/loaders/recipe/chemistry/ReactorRecipes.java#L619-L626
-// Update when they update.
-for (int i = 0; i < Materials.CHEMICAL_DYES.length; i++) {
-	// Technically the amount being 288 doesn't matter, but calling without amount returns Fluid, and we need FluidStack
-	mods.gregtech.chemical_reactor.removeByOutput(null, [Materials.CHEMICAL_DYES[i].getFluid(288)], null, null)
-	mods.gregtech.chemical_reactor.recipeBuilder()
-		.input(OrePrefix.dye, MarkerMaterials.Color.VALUES[i])
-		.inputs(metaitem('dustSalt') * 2)
-		.fluidInputs(fluid('sulfuric_acid') * 250)
-		.fluidOutputs(Materials.CHEMICAL_DYES[i].getFluid(288))
-		.duration(600).EUt(VA[LV]) // Original is 24, but not in GTValues, so just increase to 30
-		.buildAndRegister()
-}
-
-void addOreDictToOreDict(OreDictIngredient addTo, Collection<OreDictIngredient> from) {
+static void addOreDictToOreDict(OreDictIngredient addTo, Collection<OreDictIngredient> from) {
 	for (def ing in from) {
 		for (def stack in ing) {
 			addTo.add(stack)
@@ -96,7 +77,7 @@ void addOreDictToOreDict(OreDictIngredient addTo, Collection<OreDictIngredient> 
 	}
 }
 
-void addShapedConversionRecipe(ItemStack outputStack, ItemStack inputStack) {
+static void addShapedConversionRecipe(ItemStack outputStack, ItemStack inputStack) {
 	crafting.shapedBuilder()
 		.output(outputStack)
 		.matrix([[inputStack]])
