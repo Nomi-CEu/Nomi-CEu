@@ -4,11 +4,11 @@ import net.minecraft.item.ItemStack
 import static gregtech.api.GTValues.*
 
 // Standardise fluix dust
-ore('dustFluix').add(item('appliedenergistics2:material:8'))
+ore('dustFluix').add(item('appliedenergistics2:material', 8))
 
 // Conversion Recipes (DEPRECATED)
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:material:59'))
+	.output(item('appliedenergistics2:material', 59))
 	.input(item('ae2wtlib:infinity_booster_card'))
 	.register()
 crafting.shapelessBuilder()
@@ -16,12 +16,12 @@ crafting.shapelessBuilder()
 	.input(item('wct:wct'))
 	.register()
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:material:60'))
+	.output(item('appliedenergistics2:material', 60))
 	.input(item('wct:magnet_card'))
 	.register()
 
 // JEI
-mods.jei.ingredient.removeAndHide(item('appliedenergistics2:material:0'))
+mods.jei.ingredient.removeAndHide(item('appliedenergistics2:material', 0))
 
 // AE2 Certus -> GT Certus
 crafting.remove('appliedenergistics2:misc/deconstruction_certus_quartz_pillar')
@@ -35,7 +35,7 @@ crafting.shapelessBuilder()
 
 // Name Press
 mods.gregtech.laser_engraver.recipeBuilder()
-	.outputs(item('appliedenergistics2:material:21'))
+	.outputs(item('appliedenergistics2:material', 21))
 	.inputs(ore('blockVanadiumSteel'))
 	.notConsumable(ore('craftingLensWhite'))
 	.duration(1600).EUt(VA[MV])
@@ -60,7 +60,7 @@ mods.gregtech.alloy_smelter.recipeBuilder()
 
 // Skystone Dust
 mods.gregtech.macerator.recipeBuilder()
-	.outputs(item('appliedenergistics2:material:45'))
+	.outputs(item('appliedenergistics2:material', 45))
 	.inputs(item('appliedenergistics2:sky_stone_block'))
 	.duration(45).EUt(VA[ULV])
 	.buildAndRegister()
@@ -70,26 +70,26 @@ mods.gregtech.macerator.recipeBuilder()
 // Silicon (done manually, is unique)
 
 // Inscriber Silicon Press
-mods.appliedenergistics2.inscriber.removeByOutput(item('appliedenergistics2:material:19'))
+mods.appliedenergistics2.inscriber.removeByOutput(item('appliedenergistics2:material', 19))
 mods.gregtech.laser_engraver.recipeBuilder()
-	.outputs(item('appliedenergistics2:material:19'))
+	.outputs(item('appliedenergistics2:material', 19))
 	.inputs(ore('blockVanadiumSteel'))
 	.notConsumable(ore('craftingLensLightBlue'))
 	.duration(1600).EUt(VA[MV])
 	.buildAndRegister()
 
 // Printed Silicon
-mods.appliedenergistics2.inscriber.removeByOutput(item('appliedenergistics2:material:20'))
+mods.appliedenergistics2.inscriber.removeByOutput(item('appliedenergistics2:material', 20))
 mods.appliedenergistics2.inscriber.recipeBuilder()
 	.input(ore('plateSilicon'))
-	.top(item('appliedenergistics2:material:19'))
-	.output(item('appliedenergistics2:material:20'))
+	.top(item('appliedenergistics2:material', 19))
+	.output(item('appliedenergistics2:material', 20))
 	.inscribe().register()
 
 mods.appliedenergistics2.inscriber.recipeBuilder()
 	.input(ore('itemSilicon'))
-	.top(item('appliedenergistics2:material:19'))
-	.output(item('appliedenergistics2:material:20'))
+	.top(item('appliedenergistics2:material', 19))
+	.output(item('appliedenergistics2:material', 20))
 	.inscribe().register()
 
 var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, ItemStack press, ItemStack circuit, ItemStack processor ->
@@ -115,18 +115,18 @@ var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, It
 	mods.appliedenergistics2.inscriber.recipeBuilder()
 		.input(ore('circuitLv'))
 		.top(circuit)
-		.bottom(item('appliedenergistics2:material:20')) // Silicon
+		.bottom(item('appliedenergistics2:material', 20)) // Silicon
 		.output(processor)
 		.press().register()
 }
 
 // Calculation
-applyProcessorChange(ore('craftingLensBlue'), ore('plateCertusQuartz'), item('appliedenergistics2:material:13'), item('appliedenergistics2:material:16'), item('appliedenergistics2:material:23'))
+applyProcessorChange(ore('craftingLensBlue'), ore('plateCertusQuartz'), item('appliedenergistics2:material', 13), item('appliedenergistics2:material', 16), item('appliedenergistics2:material', 23))
 
 // Engineering
-applyProcessorChange(ore('craftingLensRed'), ore('plateDiamond'), item('appliedenergistics2:material:14'), item('appliedenergistics2:material:17'), item('appliedenergistics2:material:24'))
+applyProcessorChange(ore('craftingLensRed'), ore('plateDiamond'), item('appliedenergistics2:material', 14), item('appliedenergistics2:material', 17), item('appliedenergistics2:material', 24))
 
 // Logic
-applyProcessorChange(ore('craftingLensGreen'), ore('plateGold'), item('appliedenergistics2:material:15'), item('appliedenergistics2:material:18'), item('appliedenergistics2:material:22'))
+applyProcessorChange(ore('craftingLensGreen'), ore('plateGold'), item('appliedenergistics2:material', 15), item('appliedenergistics2:material', 18), item('appliedenergistics2:material', 22))
 
 
