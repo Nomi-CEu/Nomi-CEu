@@ -289,35 +289,7 @@ recipes.addShaped(<metaitem:maintenance_hatch_full_auto>, [
     [<ore:circuitIv>, <metaitem:maintenance_hatch>, <ore:circuitIv>]
 ]);
 
-// Fluid Storage
-recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_1k_part");
-recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_4k_part");
-recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_16k_part");
-recipes.removeByRecipeName("appliedenergistics2:network/cells/fluid_storage_components_cell_64k_part");
-
-assembler.recipeBuilder()
-    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:22>, <ore:circuitEv> * 2)
-    .outputs(<appliedenergistics2:material:54>)
-    .duration(100).EUt(960)
-    .buildAndRegister();
-
-assembler.recipeBuilder()
-    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:23>, <appliedenergistics2:material:54> * 3)
-    .outputs(<appliedenergistics2:material:55>)
-    .duration(100).EUt(960)
-    .buildAndRegister();
-
-assembler.recipeBuilder()
-    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:23>, <appliedenergistics2:material:55> * 3)
-    .outputs(<appliedenergistics2:material:56>)
-    .duration(100).EUt(960)
-    .buildAndRegister();
-
-assembler.recipeBuilder()
-    .inputs(<metaitem:gemExquisiteLapis> * 2, <ore:crystalPureCertusQuartz> * 4, <appliedenergistics2:material:23>, <appliedenergistics2:material:56> * 3)
-    .outputs(<appliedenergistics2:material:57>)
-    .duration(100).EUt(960)
-    .buildAndRegister();
+// Fluid Storage (Moved to Groovy)
 
 // Small Storage Crates
 recipes.removeByRecipeName("actuallyadditions:recipes162");
