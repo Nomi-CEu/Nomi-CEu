@@ -28,24 +28,25 @@ function escapeString(string: string) {
 	return string.replace(/%/g, "%%").replace(/\n/g, "%n");
 }
 
-function transformKeyPairs(
-	database: { [key: string]: Quest } | { [key: string]: QuestLine },
+function transformKeyPairs<T extends Quest | QuestLine>(
+	database: { [key: string]: T },
 	mode: string,
 	namespace: string,
 	lines: string[],
+	getId: (item: T) => number,
 ) {
 	Object.keys(database).forEach((key) => {
-		const storeKey = key.replace(/:10/g, "");
 		const item = database[key];
+		const id = getId(item);
 
 		const properties = item["properties:10"]["betterquesting:10"];
 		if (properties["name:8"] !== "Gap") {
-			const titleKey = `nomifactory.quest.${mode}.${namespace}.${storeKey}.title`;
-			const descKey = `nomifactory.quest.${mode}.${namespace}.${storeKey}.desc`;
+			const titleKey = `nomifactory.quest.${mode}.${namespace}.${id}.title`;
+			const descKey = `nomifactory.quest.${mode}.${namespace}.${id}.desc`;
 
 			// Push lang file lines.
 			lines.push(
-				`# ${namespace} ${storeKey} of mode ${mode}`.trimEnd(),
+				`# ${namespace} ${id} of mode ${mode}`.trimEnd(),
 				`${titleKey}=${escapeString(properties["name:8"])}`.trimEnd(),
 				`${descKey}=${escapeString(properties["desc:8"])}`.trimEnd(),
 				"",
@@ -179,21 +180,48 @@ export async function transformQuestBook(): Promise<void> {
 		"",
 	);
 
+	const questID = (item: Quest) => item["questID:3"];
+	const lineID = (item: QuestLine) => item["lineID:3"];
+
 	lines.push("# Normal Quest Lang Entries:", "");
 
 	// Normal Mode Quest lines.
-	transformKeyPairs(questBookNormal["questLines:9"], "normal", "line", lines);
+	transformKeyPairs(
+		questBookNormal["questLines:9"],
+		"normal",
+		"line",
+		lines,
+		lineID,
+	);
 
 	// Normal Mode Quests themselves.
-	transformKeyPairs(questBookNormal["questDatabase:9"], "normal", "db", lines);
+	transformKeyPairs(
+		questBookNormal["questDatabase:9"],
+		"normal",
+		"db",
+		lines,
+		questID,
+	);
 
 	lines.push("# Expert Quest Lang Entries:", "");
 
 	// Expert Mode Quest lines.
-	transformKeyPairs(questBookExpert["questLines:9"], "expert", "line", lines);
+	transformKeyPairs(
+		questBookExpert["questLines:9"],
+		"expert",
+		"line",
+		lines,
+		lineID,
+	);
 
 	// Expert Mode Quests themselves.
-	transformKeyPairs(questBookExpert["questDatabase:9"], "expert", "db", lines);
+	transformKeyPairs(
+		questBookExpert["questDatabase:9"],
+		"expert",
+		"db",
+		lines,
+		questID,
+	);
 
 	// Write lang file.
 	await fs.promises.mkdir(questLangLocation, { recursive: true });
