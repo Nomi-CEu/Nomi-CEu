@@ -120,7 +120,7 @@ jobs:
         id: commit-update
         if: ${{ inputs.update_files }}
         with:
-          commit_message: "Update Issue, Server and RP Config Files from Templates\n\n[SKIP]"
+          commit_message: "Update Issue, Server and Version Config Files from Templates\n\n[SKIP]"
           commit_author: nomi-ceu-management[bot] <155502507+nomi-ceu-management[bot]@users.noreply.github.com>
           commit_user_name: nomi-ceu-management[bot]
           commit_user_email: 155502507+nomi-ceu-management[bot]@users.noreply.github.com
