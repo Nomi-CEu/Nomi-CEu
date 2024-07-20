@@ -107,8 +107,8 @@ if (LabsModeHelper.expert) {
 // Coated Circuit Board
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(ore('plankWood'))
-	.fluidInputs(fluid('glue') * 500)
-	.circuitMeta(8)
+	.fluidInputs(fluid('glue') * 150)
+	.circuitMeta(3)
 	.outputs(item('gregtech:meta_item_1', 381))
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
