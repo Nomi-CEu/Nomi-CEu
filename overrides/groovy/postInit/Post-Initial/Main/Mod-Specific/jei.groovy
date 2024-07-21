@@ -171,10 +171,15 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_glauconite_sand_0', 1) // Nether Glauconite Sand
 	mods.hei.removeAndHide(item('gregtech:ore_malachite_0', 2) // End Malachite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_malachite_0', 1) // Nether Malachite Ore	
-	
-	
-	
-	
+	mods.hei.removeAndHide(item('gregtech:ore_mica_0', 1) // Nether Mica Ore
+	mods.hei.removeAndHide(item('gregtech:ore_mica_0', 2) // End Mica Ore
+	mods.hei.removeAndHide(item('gregtech:ore_barite_0', 2) // End Barite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_alunite_0', 2) // End Alunite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_alunite_0', 0) // Overworld Alunite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_talc_0', 2) // End Talc Ore
+	mods.hei.removeAndHide(item('gregtech:ore_talc_0', 1) // Nether Talc Ore
+	mods.hei.removeAndHide(item('gregtech:ore_soapstone_0', 2) // End Soapstone Ore
+	mods.hei.removeAndHide(item('gregtech:ore_talc_0', 1) // Nether Soapstone Ore
 	
 if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_lithium_0', 0) // Overworld Lithium Ore
@@ -188,7 +193,7 @@ if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_powellite_0', 0) // Overworld Powellite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_saltpeter_0', 0) // Overworld Saltpeter Ore
 	mods.hei.removeAndHide(item('gregtech:ore_topaz_0', 0) // Overworld Topaz Ore
-	
+	mods.hei.removeAndHide(item('gregtech:ore_barite_0', 0) // Overworld Barite Ore
 	}	
 if (LabsModeHelper.normal){
 	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 1) // Nether Sheldonite Ore
