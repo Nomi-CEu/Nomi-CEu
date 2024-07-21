@@ -155,9 +155,24 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_yellow_limonite_0', 2) // End Limonite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_nether_quartz_0', 2) // End Nether Quartz Ore
 	mods.hei.removeAndHide(item('gregtech:ore_quartzite_0', 2) // End Quartzite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_graphite_0', 2) // End Graphite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_graphite_0', 1) // Nether Graphite Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_bornite_0', 0) // Overworld Graphite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_chalcocite_0', 0) // Overworld Chalcocite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_chalcocite_0', 2) // End Chalcocite Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_realgar_0', 2) // End Realgar Ore
+	mods.hei.removeAndHide(item('gregtech:ore_realgar_0', 1) // Nether Realgar Ore
+	mods.hei.removeAndHide(item('gregtech:ore_bastnasite_0', 2) // End Bastnasite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pentlandite_0', 2) // End Pentlandite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_spodumene_0', 2) // End Spodumene Ore
+	mods.hei.removeAndHide(item('gregtech:ore_spodumene_0', 1) // Nether Spodumene Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lepidolite_0', 2) // End Lepidolite Ore		       
+	mods.hei.removeAndHide(item('gregtech:ore_glauconite_sand_0', 2) // End Glauconite Sand
+	mods.hei.removeAndHide(item('gregtech:ore_glauconite_sand_0', 1) // Nether Glauconite Sand
+	mods.hei.removeAndHide(item('gregtech:ore_malachite_0', 2) // End Malachite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_malachite_0', 1) // Nether Malachite Ore	
 	
 	
-			       
 	
 	
 	
@@ -178,7 +193,8 @@ if (LabsModeHelper.expert) {
 if (LabsModeHelper.normal){
 	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 1) // Nether Sheldonite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 2) // End Tantalite Ore
-	
+	mods.hei.removeAndHide(item('gregtech:ore_pentlandite_0', 1) // Nether Pentlandite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lepidolite_0', 1) // Nether Lepidolite Ore
 	
 
 
