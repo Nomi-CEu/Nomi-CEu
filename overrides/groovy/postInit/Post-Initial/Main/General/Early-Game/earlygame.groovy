@@ -114,6 +114,7 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
 
+// Circuit Board (Move from Wood Plate + Glue + Foil to Coated Circuit Board + Foil)
 mods.gregtech.assembler.removeByOutput([metaitem('circuit_board.basic')], null, null, null) 
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('board.coated'), ore('foilCopper') * 4)
