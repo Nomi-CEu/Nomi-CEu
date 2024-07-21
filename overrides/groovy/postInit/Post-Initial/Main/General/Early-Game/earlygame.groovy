@@ -104,3 +104,21 @@ if (LabsModeHelper.expert) {
 		.buildAndRegister()
 
 }
+
+// Coated Circuit Board
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('plateWood'))
+	.fluidInputs(fluid('glue') * 100)
+	.circuitMeta(3)
+	.outputs(metaitem('board.coated'))
+	.duration(100).EUt(VA[ULV])
+	.buildAndRegister()
+
+// Circuit Board (Move from Wood Plate + Glue + Foil to Coated Circuit Board + Foil)
+mods.gregtech.assembler.removeByOutput([metaitem('circuit_board.basic')], null, null, null) 
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('board.coated'), ore('foilCopper') * 4)
+	.outputs(metaitem('circuit_board.basic'))
+	.duration(100).EUt(VA[ULV])
+	.buildAndRegister()
+
