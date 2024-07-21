@@ -113,3 +113,12 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(metaitem('board.coated'))
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
+
+mods.gregtech.assembler.removeByOutput([metaitem('circuit_board.basic')], null, null, null) 
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(metaitem('board.coated'))
+	.inputs(item('gregtech:meta_foil', 25))
+	.outputs(metaitem('circuit_board.basic'))
+	.duration(100).EUt(VA[ULV])
+	.buildAndRegister()
+
