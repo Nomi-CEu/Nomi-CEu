@@ -18,7 +18,6 @@ removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 8)) // Insightful Con
 removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 9)) // Decoctive Diffuser
 
 // Hide Unused Augments
-void removeAugments() {
 mods.hei.removeAndHide(item('thermalexpansion:augment', 352)) // Pyroconvective Loop
 mods.hei.removeAndHide(item('thermalexpansion:augment', 401)) // Flux Reconstruction
 mods.hei.removeAndHide(item('thermalexpansion:augment', 402)) // Parabolic Flux Coupling
@@ -26,5 +25,4 @@ mods.hei.removeAndHide(item('thermalexpansion:augment', 448)) // Reagent Recover
 mods.hei.removeAndHide(item('thermalexpansion:augment', 656)) // Isentropic Reservoir
 mods.hei.removeAndHide(item('thermalexpansion:augment', 672)) // Closed Loop Cooling
 mods.hei.removeAndHide(item('thermalexpansion:augment', 704)) // Disjunctive Extraction
-}
-removeAugments()
+
