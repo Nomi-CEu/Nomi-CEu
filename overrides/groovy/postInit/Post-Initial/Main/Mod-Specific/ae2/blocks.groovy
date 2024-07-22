@@ -1,5 +1,3 @@
-package ae2
-
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
 
@@ -29,7 +27,7 @@ crafting.shapedBuilder()
 		'DPD')
 	.key('D', metaitem('nomilabs:plateDarkSteel'))
 	.key('P', metaitem('electric.piston.mv'))
-	.key('F', item('appliedenergistics2:material:7'))
+	.key('F', item('appliedenergistics2:material', 7))
 	.key('H', metaitem('hull.mv'))
 	.replace().register()
 
@@ -41,9 +39,9 @@ crafting.shapedBuilder()
 		'FLF',
 		'PCP')
 	.key('P', metaitem('plateAluminium'))
-	.key('C', item('appliedenergistics2:material:23'))
-	.key('F', item('appliedenergistics2:part:16'))
-	.key('L', item('appliedenergistics2:material:22'))
+	.key('C', item('appliedenergistics2:material', 23))
+	.key('F', item('appliedenergistics2:part', 16))
+	.key('L', item('appliedenergistics2:material', 22))
 	.replace().register()
 
 // Molecular Assembler
@@ -55,9 +53,9 @@ crafting.shapedBuilder()
 		'PGP')
 	.key('P', metaitem('plateAluminium'))
 	.key('G', item('appliedenergistics2:quartz_glass'))
-	.key('A', item('appliedenergistics2:material:44'))
+	.key('A', item('appliedenergistics2:material', 44))
 	.key('C', metaitem('workbench'))
-	.key('F', item('appliedenergistics2:material:43'))
+	.key('F', item('appliedenergistics2:material', 43))
 	.replace().register()
 
 // Matter Condensor
@@ -102,12 +100,12 @@ crafting.shapedBuilder()
 		'CSF',
 		'DQD')
 	.key('G', item('appliedenergistics2:quartz_glass'))
-	.key('P', item('appliedenergistics2:part:180'))
-	.key('C', item('appliedenergistics2:material:10'))
+	.key('P', item('appliedenergistics2:part', 180))
+	.key('C', item('appliedenergistics2:material', 10))
 	.key('S', item('actuallyadditions:block_giant_chest'))
-	.key('F', item('appliedenergistics2:material:12'))
+	.key('F', item('appliedenergistics2:material', 12))
 	.key('D', ore('blockDarkSteel'))
-	.key('Q', item('appliedenergistics2:material:11'))
+	.key('Q', item('appliedenergistics2:material', 11))
 	.replace().register()
 
 // Quantum Ring
@@ -118,8 +116,8 @@ crafting.shapedBuilder()
 		'EQE',
 		'PCP')
 	.key('P', metaitem('plateStainlessSteel'))
-	.key('C', item('appliedenergistics2:material:23'))
-	.key('E', item('appliedenergistics2:material:24'))
+	.key('C', item('appliedenergistics2:material', 23))
+	.key('E', item('appliedenergistics2:material', 24))
 	.key('Q', metaitem('quantumstar'))
 	.replace().register()
 
@@ -134,9 +132,9 @@ var makeInterface = { String recipeName, OreDictIngredient plate, ItemStack movi
 			'PPP')
 		.key('P', plate)
 		.key('R', moving)
-		.key('A', item('appliedenergistics2:material:44'))
+		.key('A', item('appliedenergistics2:material', 44))
 		.key('M', metaitem('hull.mv'))
-		.key('F', item('appliedenergistics2:material:43'))
+		.key('F', item('appliedenergistics2:material', 43))
 		.register()
 }
 
@@ -148,27 +146,27 @@ makeInterface('appliedenergistics2:network/blocks/fluid_interfaces_interface', o
 
 /* Cables */
 // Quartz Fiber
-crafting.removeByOutput(item('appliedenergistics2:part:140'))
+crafting.removeByOutput(item('appliedenergistics2:part', 140))
 mods.gregtech.wiremill.recipeBuilder()
-	.inputs(item('appliedenergistics2:material:11'))
-	.outputs(item('appliedenergistics2:part:140') * 2)
+	.inputs(item('appliedenergistics2:material', 11))
+	.outputs(item('appliedenergistics2:part', 140) * 2)
 	.duration(100).EUt(VHA[LV])
 	.buildAndRegister()
 
 // Glass Cable
-crafting.removeByOutput(item('appliedenergistics2:part:16'))
+crafting.removeByOutput(item('appliedenergistics2:part', 16))
 mods.gregtech.alloy_smelter.recipeBuilder()
-	.inputs(ore('dustFluix'), item('appliedenergistics2:part:140'))
-	.outputs(item('appliedenergistics2:part:16') * 2)
+	.inputs(ore('dustFluix'), item('appliedenergistics2:part', 140))
+	.outputs(item('appliedenergistics2:part', 16) * 2)
 	.duration(50).EUt(VHA[LV])
 	.buildAndRegister()
 
 // Covered Cable
 for (var rubber in [fluid('rubber') * 144, fluid('styrene_butadiene_rubber') * 36, fluid('silicone_rubber') * 76]) {
 	mods.gregtech.assembler.recipeBuilder()
-		.inputs(item('appliedenergistics2:part:16'))
+		.inputs(item('appliedenergistics2:part', 16))
 		.fluidInputs(rubber)
-		.outputs(item('appliedenergistics2:part:36'))
+		.outputs(item('appliedenergistics2:part', 36))
 		.duration(100).EUt(VA[ULV])
 		.buildAndRegister()
 
@@ -177,7 +175,7 @@ for (var rubber in [fluid('rubber') * 144, fluid('styrene_butadiene_rubber') * 3
 // ME Conduit
 crafting.removeByOutput(item('enderio:item_me_conduit'))
 mods.gregtech.assembler.recipeBuilder()
-	.inputs(item('appliedenergistics2:part:36') * 3, item('enderio:item_material:4') * 6)
+	.inputs(item('appliedenergistics2:part', 36) * 3, item('enderio:item_material', 4) * 6)
 	.outputs(item('enderio:item_me_conduit') * 8)
 	.duration(100).EUt(VHA[LV])
 	.buildAndRegister()
@@ -198,16 +196,16 @@ var makePlane = { OreDictIngredient plate, ItemStack core, ItemStack plane ->
 }
 
 // Formation Plane
-makePlane(ore('plateAluminium'), item('appliedenergistics2:material:43'), item('appliedenergistics2:part:320'))
+makePlane(ore('plateAluminium'), item('appliedenergistics2:material', 43), item('appliedenergistics2:part', 320))
 
 // Annihilation Plane
-makePlane(ore('plateAluminium'), item('appliedenergistics2:material:44'), item('appliedenergistics2:part:300'))
+makePlane(ore('plateAluminium'), item('appliedenergistics2:material', 44), item('appliedenergistics2:part', 300))
 
 // Fluid Formation Plane
-makePlane(ore('plateLapis'), item('appliedenergistics2:material:43'), item('appliedenergistics2:part:321'))
+makePlane(ore('plateLapis'), item('appliedenergistics2:material', 43), item('appliedenergistics2:part', 321))
 
 // Fluid Annihilation Plane
-makePlane(ore('plateLapis'), item('appliedenergistics2:material:44'), item('appliedenergistics2:part:302'))
+makePlane(ore('plateLapis'), item('appliedenergistics2:material', 44), item('appliedenergistics2:part', 302))
 
 /* Level Emitters */
 var makeEmitter = { OreDictIngredient plate, ItemStack emitter ->
@@ -218,59 +216,59 @@ var makeEmitter = { OreDictIngredient plate, ItemStack emitter ->
 			'CR')
 		.key('T', item('minecraft:redstone_torch'))
 		.key('P', plate)
-		.key('C', item('appliedenergistics2:material:23'))
+		.key('C', item('appliedenergistics2:material', 23))
 		.key('R', ore('stickStainlessSteel'))
 		.replace().register()
 }
 
 // Item Emitter
-makeEmitter(ore('plateAluminium'), item('appliedenergistics2:part:280'))
+makeEmitter(ore('plateAluminium'), item('appliedenergistics2:part', 280))
 
 // Fluid Emitter
-makeEmitter(ore('plateLapis'), item('appliedenergistics2:part:281'))
+makeEmitter(ore('plateLapis'), item('appliedenergistics2:part', 281))
 
 /* Terminals */
 // ME Terminal
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:part:380'))
+	.output(item('appliedenergistics2:part', 380))
 	.input(ore('itemIlluminatedPanel'))
 	.input(ore('circuitLv'))
 	.replace().register()
 
 // Pattern Terminal
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:part:340'))
-	.input(item('appliedenergistics2:material:24'))
-	.input(item('appliedenergistics2:part:380'))
-	.input(item('appliedenergistics2:material:52'))
+	.output(item('appliedenergistics2:part', 340))
+	.input(item('appliedenergistics2:material', 24))
+	.input(item('appliedenergistics2:part', 380))
+	.input(item('appliedenergistics2:material', 52))
 	.replace().register()
 
 // Fluid Terminal
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:part:520'))
-	.input(item('appliedenergistics2:part:380'))
+	.output(item('appliedenergistics2:part', 520))
+	.input(item('appliedenergistics2:part', 380))
 	.input(metaitem('plateLapis'))
-	.input(item('appliedenergistics2:material:22'))
+	.input(item('appliedenergistics2:material', 22))
 	.replace().register()
 
 // Extended Processing Pattern Terminal
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:part:341'))
+	.output(item('appliedenergistics2:part', 341))
 	.matrix(
 		'A',
 		'B',
 		'C')
-	.key('A', item('appliedenergistics2:part:340'))
+	.key('A', item('appliedenergistics2:part', 340))
 	.key('B', ore('circuitEv'))
 	.key('C', item('packagedauto:encoder'))
 	.replace().register()
 
 // Configuration Fluid Interface Terminal
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:part:522'))
-	.input(item('appliedenergistics2:part:520'))
-	.input(item('appliedenergistics2:material:24'))
-	.input(item('appliedenergistics2:fluid_interface').or(item('appliedenergistics2:part:441')))
+	.output(item('appliedenergistics2:part', 522))
+	.input(item('appliedenergistics2:part', 520))
+	.input(item('appliedenergistics2:material', 24))
+	.input(item('appliedenergistics2:fluid_interface').or(item('appliedenergistics2:part', 441)))
 	.replace().register()
 
 /* Buses */
@@ -280,7 +278,7 @@ var makeImportBus = { OreDictIngredient plate, ItemStack bus ->
 		.matrix(
 			' A ',
 			'PEP')
-		.key('A', item('appliedenergistics2:material:44'))
+		.key('A', item('appliedenergistics2:material', 44))
 		.key('P', plate)
 		.key('E', metaitem('electric.piston.mv'))
 		.replace().register()
@@ -293,57 +291,57 @@ var makeExportBus = { OreDictIngredient plate, ItemStack bus ->
 			'PEP',
 			' A ')
 		.key('P', plate)
-		.key('E', item('appliedenergistics2:material:43'))
+		.key('E', item('appliedenergistics2:material', 43))
 		.key('A', metaitem('electric.piston.mv'))
 		.replace().register()
 }
 
 // Import Bus
-makeImportBus(ore('plateAluminium'), item('appliedenergistics2:part:240'))
+makeImportBus(ore('plateAluminium'), item('appliedenergistics2:part', 240))
 
 // Fluid Import Bus
-makeImportBus(ore('plateLapis'), item('appliedenergistics2:part:241'))
+makeImportBus(ore('plateLapis'), item('appliedenergistics2:part', 241))
 
 // Export Bus
-makeExportBus(ore('plateAluminium'), item('appliedenergistics2:part:260'))
+makeExportBus(ore('plateAluminium'), item('appliedenergistics2:part', 260))
 
 // Fluid Export Bus
-makeExportBus(ore('plateLapis'), item('appliedenergistics2:part:261'))
+makeExportBus(ore('plateLapis'), item('appliedenergistics2:part', 261))
 
 // Storage Bus
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:part:220'))
+	.output(item('appliedenergistics2:part', 220))
 	.input(metaitem('electric.piston.mv'), item('appliedenergistics2:interface'))
 	.replace().register()
 
 // Fluid Storage Bus
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:part:221'))
+	.output(item('appliedenergistics2:part', 221))
 	.input(metaitem('electric.pump.mv'), item('appliedenergistics2:fluid_interface'))
 	.replace().register()
 
 // Oredict Storage Bus
 crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:part:222'))
-	.input(item('appliedenergistics2:part:220'), metaitem('ore_dictionary_filter'))
+	.output(item('appliedenergistics2:part', 222))
+	.input(item('appliedenergistics2:part', 220), metaitem('ore_dictionary_filter'))
 
 /* Misc Block Parts */
 // P2P Tunnel
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:part:460'))
+	.output(item('appliedenergistics2:part', 460))
 	.matrix(
 		' P ',
 		'PEP',
 		'FFF')
 	.key('P', metaitem('plateStainlessSteel'))
-	.key('E', item('appliedenergistics2:material:24'))
+	.key('E', item('appliedenergistics2:material', 24))
 	.key('F', ore('plateFluix'))
 	.replace().register()
 
 // Illuminated Panel
 crafting.remove('appliedenergistics2:network/parts/panels_semi_dark_monitor')
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:part:180'))
+	.output(item('appliedenergistics2:part', 180))
 	.matrix(
 		'GGG',
 		'PPP')
@@ -352,7 +350,7 @@ crafting.shapedBuilder()
 	.register()
 
 // Cable Anchor
-crafting.addShapeless(item('appliedenergistics2:part:120'), [ore('boltSteel')])
+crafting.addShapeless(item('appliedenergistics2:part', 120), [ore('boltSteel')])
 
 /* Misc Blocks */
 // Vibrant Quartz Glass

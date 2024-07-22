@@ -108,6 +108,9 @@ export async function parseCommitBody(
 	commitObject: Commit,
 	parser: Parser,
 ): Promise<boolean | Ignored> {
+	if (commitBody.includes(modInfoKey))
+		await parseModInfo(commitBody, commitObject);
+
 	if (commitBody.includes(expandKey)) {
 		await parseExpand(commitBody, commitObject, parser);
 		return true;
@@ -132,8 +135,6 @@ export async function parseCommitBody(
 		commitObject.priority = newPriority;
 	}
 
-	if (commitBody.includes(modInfoKey))
-		await parseModInfo(commitBody, commitObject);
 	if (commitBody.includes(detailsKey)) {
 		await parseDetails(commitMessage, commitBody, commitObject, parser);
 		return true;

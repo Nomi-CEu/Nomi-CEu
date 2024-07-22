@@ -8,6 +8,12 @@ import { getIssueURL, getNewestIssueURLs } from "#utils/util.ts";
 let data: ChangelogData;
 let octokit: Octokit;
 
+// How many lines the changelog (excluding the commit log) can be before the commit log is excluded.
+const sectionLinesBeforeCommitLogExcluded = 50;
+
+// How many lines the commit log can be before its is excluded.
+const logLinesBeforeCommitLogExcluded = 20;
+
 export default async function pushAll(inputData: ChangelogData): Promise<void> {
 	pushTitle(inputData);
 	await pushChangelog(inputData);
@@ -65,12 +71,17 @@ export async function pushChangelog(inputData: ChangelogData): Promise<void> {
 
 	// Push the commit log
 	if (data.commitList.length > 0) {
-		sortCommitList(data.commitList, (commit) => commit);
+		if (
+			data.builder.length < sectionLinesBeforeCommitLogExcluded &&
+			data.commitList.length < logLinesBeforeCommitLogExcluded
+		) {
+			sortCommitList(data.commitList, (commit) => commit);
 
-		data.builder.push("## Commits");
-		data.commitList.forEach((commit) => {
-			data.builder.push(formatCommit(commit));
-		});
+			data.builder.push("## Commits");
+			data.commitList.forEach((commit) => {
+				data.builder.push(formatCommit(commit));
+			});
+		}
 	} else {
 		// No Commit List = No Changes
 		data.builder.push("");

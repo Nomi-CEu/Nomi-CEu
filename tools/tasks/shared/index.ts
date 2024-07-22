@@ -20,7 +20,10 @@ import {
 import transformVersion from "./transformVersion.ts";
 import { createBuildChangelog } from "../changelog/index.ts";
 import mustache from "mustache";
-import { updateBuildRandomPatches } from "../misc/transformFiles.ts";
+import {
+	updateFilesBuildSetup,
+	updateLabsVersion,
+} from "../misc/transformFiles.ts";
 import { transformQuestBook } from "./quest.ts";
 import logInfo from "#utils/log.ts";
 
@@ -49,7 +52,10 @@ async function copyOverrides() {
 	// Don't copy server.properties files in config-overrides, it is auto transformed into the server build folder
 	// Copy, not Symlink, so we can transform the files as we wish
 	return new Promise((resolve) => {
-		src(buildConfig.copyToSharedDirGlobs, { cwd: upath.join(rootDirectory) })
+		src(buildConfig.copyToSharedDirGlobs, {
+			cwd: upath.join(rootDirectory),
+			encoding: false,
+		})
 			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
 			.on("end", resolve);
 	});
@@ -163,13 +169,18 @@ async function writeToChangelog(
 	}
 }
 
+const updateBuildLabsVersion = async () => {
+	await updateLabsVersion(sharedDestDirectory);
+};
+
 export default gulp.series(
 	sharedCleanUp,
 	createSharedDirs,
 	copyOverrides,
 	fetchOrMakeChangelog,
 	fetchExternalDependencies,
-	updateBuildRandomPatches,
+	updateFilesBuildSetup,
+	updateBuildLabsVersion,
 	transformVersion,
 	transformQuestBook,
 );

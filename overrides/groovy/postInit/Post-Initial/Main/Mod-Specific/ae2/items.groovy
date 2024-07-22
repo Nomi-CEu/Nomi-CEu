@@ -1,4 +1,4 @@
-package ae2
+import com.nomiceu.nomilabs.util.LabsModeHelper
 
 import static gregtech.api.GTValues.*
 
@@ -11,15 +11,15 @@ crafting.shapedBuilder()
 		'VPV',
 		'PCP',
 		'VPV')
-	.key('V', item('actuallyadditions:item_crystal:3'))
+	.key('V', item('actuallyadditions:item_crystal', 3))
 	.key('P', metaitem('nomilabs:plateDarkSteel'))
-	.key('C', item('appliedenergistics2:material:1'))
+	.key('C', item('appliedenergistics2:material', 1))
 	.replace().register()
 
 // Memory Card
 crafting.shapelessBuilder()
 	.output(item('appliedenergistics2:memory_card'))
-	.input(item('appliedenergistics2:material:25'))
+	.input(item('appliedenergistics2:material', 25))
 	.input(ore('circuitHv'))
 	.replace().register()
 
@@ -32,7 +32,7 @@ crafting.shapelessBuilder()
 /* Materials */
 // Pattern
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:52') * 8)
+	.output(item('appliedenergistics2:material', 52) * 8)
 	.matrix(
 		'WWW',
 		'PCP',
@@ -44,51 +44,51 @@ crafting.shapedBuilder()
 
 // Fluix Plate
 mods.gregtech.compressor.recipeBuilder()
-	.inputs(item('appliedenergistics2:material:7'))
+	.inputs(item('appliedenergistics2:material', 7))
 	.outputs(item('moreplates:fluix_plate'))
 	.duration(20).EUt(VHA[LV])
 	.buildAndRegister()
 
 mods.gregtech.compressor.recipeBuilder()
-	.inputs(item('appliedenergistics2:material:12'))
+	.inputs(item('appliedenergistics2:material', 12))
 	.outputs(item('moreplates:fluix_plate'))
 	.duration(20).EUt(VHA[LV])
 	.buildAndRegister()
 
 // Wireless Part
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:41'))
+	.output(item('appliedenergistics2:material', 41))
 	.matrix(
 		' E ',
 		'PFP',
 		' P ')
 	.key('E', metaitem('emitter.ev'))
 	.key('P', metaitem('plateTitanium'))
-	.key('F', item('appliedenergistics2:material:9'))
+	.key('F', item('appliedenergistics2:material', 9))
 	.replace().register()
 
 // Basic Card
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:25'))
+	.output(item('appliedenergistics2:material', 25))
 	.matrix(
 		'WP ',
 		'WCP',
 		'WP ')
 	.key('W', ore('wireFineCopper'))
 	.key('P', ore('plateIron'))
-	.key('C', item('appliedenergistics2:material:23'))
+	.key('C', item('appliedenergistics2:material', 23))
 	.replace().register()
 
 // Advanced Card
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:28'))
+	.output(item('appliedenergistics2:material', 28))
 	.matrix(
 		'WP ',
 		'WCP',
 		'WP ')
 	.key('W', ore('wireFineAluminium'))
 	.key('P', ore('plateElectricalSteel'))
-	.key('C', item('appliedenergistics2:material:23'))
+	.key('C', item('appliedenergistics2:material', 23))
 	.replace().register()
 
 /* Storage */
@@ -104,7 +104,7 @@ crafting.remove('appliedenergistics2:network/cells/fluid_storage_cell_64k')
 
 // Storage Housing
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:39'))
+	.output(item('appliedenergistics2:material', 39))
 	.matrix(
 		'WPW',
 		'P P',
@@ -115,7 +115,7 @@ crafting.shapedBuilder()
 
 // 1k Storage
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:35'))
+	.output(item('appliedenergistics2:material', 35))
 	.matrix('GPG',
 		'PCP',
 		'GPG')
@@ -126,90 +126,178 @@ crafting.shapedBuilder()
 
 // 4k Storage
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:36'))
+	.output(item('appliedenergistics2:material', 36))
 	.matrix(
 		'ABA',
 		'CDC',
 		'ACA')
 	.key('A', item('minecraft:glass'))
-	.key('B', item('appliedenergistics2:material:22'))
-	.key('C', item('appliedenergistics2:material:35'))
+	.key('B', item('appliedenergistics2:material', 22))
+	.key('C', item('appliedenergistics2:material', 35))
 	.key('D', ore('circuitMv'))
 	.replace().register()
 
 // 16k Storage
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:37'))
+	.output(item('appliedenergistics2:material', 37))
 	.matrix(
 		'ABA',
 		'CDC',
 		'ACA')
 	.key('A', item('minecraft:glass'))
-	.key('B', item('appliedenergistics2:material:24'))
-	.key('C', item('appliedenergistics2:material:36'))
+	.key('B', item('appliedenergistics2:material', 24))
+	.key('C', item('appliedenergistics2:material', 36))
 	.key('D', ore('circuitHv'))
 	.replace().register()
 
 // 64k Storage
 crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:38'))
+	.output(item('appliedenergistics2:material', 38))
 	.matrix(
 		'ABA',
 		'CDC',
 		'ACA')
-	.key('A', item('appliedenergistics2:material:22'))
-	.key('B', item('appliedenergistics2:material:24'))
-	.key('C', item('appliedenergistics2:material:37'))
+	.key('A', item('appliedenergistics2:material', 22))
+	.key('B', item('appliedenergistics2:material', 24))
+	.key('C', item('appliedenergistics2:material', 37))
 	.key('D', ore('circuitEv'))
 	.replace().register()
 
-// 1k Fluid Storage
-crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:54'))
-	.matrix(
-		'GPG',
-		'PCP',
-		'GPG')
-	.key('G', item('minecraft:glass'))
-	.key('P', metaitem('plateLapis'))
-	.key('C', ore('circuitLv'))
-	.replace().register()
+/* Fluid Storage (Different Across NM and HM) */
 
-// 4k Fluid Storage
-crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:55'))
-	.matrix(
-		'ABA',
-		'CDC',
-		'ACA')
-	.key('A', item('minecraft:glass'))
-	.key('B', item('appliedenergistics2:material:22'))
-	.key('C', item('appliedenergistics2:material:54'))
-	.key('D', ore('circuitMv'))
-	.replace().register()
+if (LabsModeHelper.normal) {
+	// 1k Fluid Storage
+	crafting.shapedBuilder()
+		.output(item('appliedenergistics2:material', 54))
+		.matrix(
+			'GPG',
+			'PCP',
+			'GPG')
+		.key('G', item('minecraft:glass'))
+		.key('P', metaitem('plateLapis'))
+		.key('C', ore('circuitLv'))
+		.replace().register()
 
-// 16k Fluid Storage
-crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:56'))
-	.matrix(
-		'ABA',
-		'CDC',
-		'ACA')
-	.key('A', item('minecraft:glass'))
-	.key('B', item('appliedenergistics2:material:24'))
-	.key('C', item('appliedenergistics2:material:55'))
-	.key('D', ore('circuitHv'))
-	.replace().register()
+	// 4k Fluid Storage
+	crafting.shapedBuilder()
+		.output(item('appliedenergistics2:material', 55))
+		.matrix(
+			'ABA',
+			'CDC',
+			'ACA')
+		.key('A', item('minecraft:glass'))
+		.key('B', item('appliedenergistics2:material', 22))
+		.key('C', item('appliedenergistics2:material', 54))
+		.key('D', ore('circuitMv'))
+		.replace().register()
 
-// 64k Fluid Storage
-crafting.shapedBuilder()
-	.output(item('appliedenergistics2:material:57'))
-	.matrix(
-		'ABA',
-		'CDC',
-		'ACA')
-	.key('A', item('appliedenergistics2:material:22'))
-	.key('B', item('appliedenergistics2:material:24'))
-	.key('C', item('appliedenergistics2:material:56'))
-	.key('D', ore('circuitEv'))
-	.replace().register()
+	// 16k Fluid Storage
+	crafting.shapedBuilder()
+		.output(item('appliedenergistics2:material', 56))
+		.matrix(
+			'ABA',
+			'CDC',
+			'ACA')
+		.key('A', item('minecraft:glass'))
+		.key('B', item('appliedenergistics2:material', 24))
+		.key('C', item('appliedenergistics2:material', 55))
+		.key('D', ore('circuitHv'))
+		.replace().register()
+
+	// 64k Fluid Storage
+	crafting.shapedBuilder()
+		.output(item('appliedenergistics2:material', 57))
+		.matrix(
+			'ABA',
+			'CDC',
+			'ACA')
+		.key('A', item('appliedenergistics2:material', 22))
+		.key('B', item('appliedenergistics2:material', 24))
+		.key('C', item('appliedenergistics2:material', 56))
+		.key('D', ore('circuitEv'))
+		.replace().register()
+} else {
+	// 1k Fluid Storage
+	crafting.removeByOutput(item('appliedenergistics2:material', 54))
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 22), ore('circuitEv') * 2)
+		.outputs(item('appliedenergistics2:material', 54))
+		.duration(100).EUt(VHA[EV])
+		.buildAndRegister()
+
+	// 4k Fluid Storage
+	crafting.removeByOutput(item('appliedenergistics2:material', 55))
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 23), item('appliedenergistics2:material', 54) * 3)
+		.outputs(item('appliedenergistics2:material', 55))
+		.duration(100).EUt(VHA[EV])
+		.buildAndRegister()
+
+	// 16k Fluid Storage
+	crafting.removeByOutput(item('appliedenergistics2:material', 56))
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 23), item('appliedenergistics2:material', 55) * 3)
+		.outputs(item('appliedenergistics2:material', 56))
+		.duration(100).EUt(VHA[EV])
+		.buildAndRegister()
+
+	// 64k Fluid Storage
+	crafting.removeByOutput(item('appliedenergistics2:material', 57))
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 23), item('appliedenergistics2:material', 56) * 3)
+		.outputs(item('appliedenergistics2:material', 57))
+		.duration(100).EUt(VHA[EV])
+		.buildAndRegister()
+}
+
+// AE2 Processor Shortcut
+// Logic Processor
+mods.gregtech.circuit_assembler.recipeBuilder()
+	.inputs(ore('circuitEv'), metaitem('plate.nand_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+	.fluidInputs(fluid('soldering_alloy') * 288)
+	.outputs(item('appliedenergistics2:material', 22) * 16)
+	.duration(400).EUt(VA[IV]).buildAndRegister();
+
+// Calculation Processor
+mods.gregtech.circuit_assembler.recipeBuilder()
+	.inputs(ore('circuitEv'), metaitem('plate.central_processing_unit') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+	.fluidInputs(fluid('soldering_alloy') * 288)
+	.outputs(item('appliedenergistics2:material', 23) * 16)
+	.duration(400).EUt(VA[IV]).buildAndRegister();
+
+// Engineering Processor
+mods.gregtech.circuit_assembler.recipeBuilder()
+	.inputs(ore('circuitEv'), metaitem('plate.nor_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+	.fluidInputs(fluid('soldering_alloy') * 288)
+	.outputs(item('appliedenergistics2:material', 24) * 16)
+	.duration(400).EUt(VA[IV]).buildAndRegister();
+
+// Purified AE2 Crystal Shortcut
+mods.gregtech.autoclave.recipeBuilder()
+	.notConsumable(item('appliedenergistics2:crystal_seed'))
+	.inputs(ore('dustCertusQuartz') * 64)
+	.fluidInputs(fluid('distilled_water') * 8000)
+	.outputs(item('appliedenergistics2:material', 10) * 64, item('appliedenergistics2:material', 10) * 64)
+	.duration(2560).EUt(VA[EV]).buildAndRegister();
+
+mods.gregtech.autoclave.recipeBuilder()
+	.notConsumable(item('appliedenergistics2:crystal_seed', 1200))
+	.inputs(ore('dustFluix') * 64)
+	.fluidInputs(fluid('distilled_water') * 8000)
+	.outputs(item('appliedenergistics2:material', 12) * 64, item('appliedenergistics2:material', 12) * 64)
+	.duration(2560).EUt(VA[EV]).buildAndRegister();
+
+mods.gregtech.autoclave.recipeBuilder()
+	.notConsumable(item('appliedenergistics2:crystal_seed', 600))
+	.inputs(ore('dustNetherQuartz') * 64)
+	.fluidInputs(fluid('distilled_water') * 8000)
+	.outputs(item('appliedenergistics2:material', 11) * 64, item('appliedenergistics2:material', 11) * 64)
+	.duration(2560).EUt(VA[EV]).buildAndRegister();
+
+// Fluix + Charged Certus Shortcut
+mods.gregtech.autoclave.recipeBuilder()
+	.inputs(ore('dustCertusQuartz') * 8, ore('dustNetherQuartz') * 8)
+	.fluidInputs(fluid('redstone') * 1152)
+	.outputs(item('appliedenergistics2:material', 7) * 16)
+	.duration(160).EUt(VA[EV]).buildAndRegister();
+

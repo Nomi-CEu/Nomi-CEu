@@ -160,25 +160,8 @@ makeShaped("pauto_encoder",
 		H: <packagedauto:recipe_holder>,        // Recipe Holder
 		T: <ore:plateTitanium>,   // Titanium Plate
 		C: <ore:circuitEv>,  // T4 Circuit
-		X: <ae2stuff:encoder>,    // AE2STuff Pattern Encoder
+		X: <appliedenergistics2:interface> // AE2 Interface
 	});
-
-recipes.remove(<ae2stuff:encoder>);
-makeShaped("ae2stuff_encoder",
-	<ae2stuff:encoder>, [
-		"STS",
-		"AXF",
-		"SCS",
-	], {
-		S: <ore:plateStainlessSteel>,         // Stainless Steel Plate
-		T: <appliedenergistics2:part:340>,    // ME Pattern Terminal
-		F: <appliedenergistics2:material:43>, // Formation Core
-		A: <appliedenergistics2:material:44>, // Annihilation Core
-		M: <packagedauto:me_package_component>, // ME Packaging Component
-		C: <ore:circuitHv>,               // T4 Circuit
-		X: <meta_tile_entity:hull.hv>,              // HV Machine Hull
-	});
-
 
 recipes.remove(<packagedauto:me_package_component>);
 makeShaped("pauto_me_package_component",
@@ -917,15 +900,10 @@ makeExtremeRecipe5(<advancedrocketry:spacelaser>,
 		S: <metaitem:large_miner.luv>,
 		W: <advancedrocketry:warpcore>,
 	});
-<advancedrocketry:spacelaser>.addTooltip(format.gray("Glory to the PGS!"));
-<advancedrocketry:spacelaser>.addTooltip(format.gray("Consult the AR Wiki for building instructions."));
-<advancedrocketry:spacelaser>.addTooltip(format.gray("Consumes ") + format.yellow("1,000,000") + format.gray(" RF/t"));
-<advancedrocketry:spacelaser>.addTooltip(format.red("Extremely finicky. Use at your own risk. Try restarting your world if it isn't working."));
 
 // Lens (for the drill)
 recipes.remove(<advancedrocketry:lens>);
 recipes.addShapeless(<advancedrocketry:lens>, [<ore:craftingLensGlass>]);
-<advancedrocketry:lens>.addTooltip(format.gray("A basic lens, used for the Orbital Laser Drill."));
 
 // Force Field Projector
 recipes.addShaped(<advancedrocketry:forcefieldprojector>, [
