@@ -22,21 +22,36 @@ void removeDarmstadite(){
 		mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 0)) // Darmstadite Ore
 		mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 1)) // Darmstadite Ore
 		mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 2)) // Darmstadite Ore
-		mods.hei.removeAndHide(item('nomilabs:meta_crushed_purified', 110)) // Purified Crushed Ore
-		mods.hei.removeAndHide(item('nomilabs:meta_dust_pure', 110)) // Pure Dust
-		mods.hei.removeAndHide(item('nomilabs:meta_dust_small', 110)) // Small Dust
-		mods.hei.removeAndHide(item('nomilabs:meta_dust_tiny', 110)) // Tiny Dust
-		mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged', 110)) // Centrifuged Ore
-		mods.hei.removeAndHide(item('gregtech:meta_crushed_purifie', 110)) // Crushed Purified Ore
-		mods.hei.removeAndHide(item('nomilabs:meta_dust_impure', 110)) // Impure Dust
-		mods.hei.removeAndHide(item('gregtech:meta_crushed', 110)) // Crushed Ore
-		mods.hei.removeAndHide(item('nomilabs:meta_crushed', 110)) // Crushed Ore
-		mods.hei.removeAndHide(item('nomilabs:meta_crushed_centrifuged', 110)) // Crushed Centrifuged Ore
-		mods.hei.removeAndHide(item('nomilabs:meta_dust', 110)) // Dust
+		mods.hei.removeAndHide(item('nomilabs:meta_crushed_purified', 32110)) // Purified Crushed Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_pure', 32110)) // Pure Dust
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_small', 32110)) // Small Dust
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_tiny', 32110)) // Tiny Dust
+		mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged', 32110)) // Centrifuged Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_impure', 32110)) // Impure Dust
+		mods.hei.removeAndHide(item('gregtech:meta_crushed', 32110)) // Crushed Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_crushed_centrifuged', 32110)) // Crushed Centrifuged Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_dust', 32110)) // Dust
 	}
 }
-	
-
+void removeDulysite(){
+	if (LabsModeHelper.normal) {
+		mods.hei.removeAndHide(item('gregtech:ore_dulysite_0', 0)) // Dulysite Ore
+		mods.hei.removeAndHide(item('gregtech:ore_dulysite_0', 1)) // Dulysite Ore
+		mods.hei.removeAndHide(item('gregtech:ore_dulysite_0', 2)) // Dulysite Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_crushed_purified', 32111)) // Purified Crushed Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_pure', 32111)) // Pure Dust
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_small', 32111)) // Small Dust
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_tiny', 32111)) // Tiny Dust
+		mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged', 32111)) // Centrifuged Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_dust_impure', 32111)) // Impure Dust
+		mods.hei.removeAndHide(item('gregtech:meta_crushed', 32111)) // Crushed Ore
+		mods.hei.removeAndHide(item('nomilabs:meta_dust', 32111)) // Dust
+		mods.hei.removeAndHide(item('gregtech:meta_block_compressed_2006', 15)) // Block
+		mods.hei.removeAndHide(item('gregtech:meta_gem_exquisite', 32111)) // Exquisite Gem
+		mods.hei.removeAndHide(item('gregtech:meta_gem_flawless', 32111)) // Flawless Gem
+		mods.hei.removeAndHide(item('gregtech:meta_gem', 32111)) // Gem
+	}
+}
 void removePlutonium_239(){
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 0)) // Plutonium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 1)) // Plutonium Ore
@@ -54,7 +69,9 @@ void removeCobalt(){
 	mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 2)) // Cobalt Ore
 	mods.hei.removeAndHide(item('gregtech:meta_crushed_purified', 23)) // Crushed Purified Ore
 	mods.hei.removeAndHide(item('gregtech:meta_crushed', 23)) // Crushed Ore
-	mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged', 23)) // Centrifuged Ore	
+	mods.hei.removeAndHide(item('gregtech:meta_crushed_centrifuged', 23)) // Centrifuged Ore
+	mods.hei.removeAndHide(item('gregtech:meta_dust_impure', 23)) // Impure Dust
+	mods.hei.removeAndHide(item('gregtech:meta_dust_pure', 23)) // Pure Dust
 }
 void removeDenseOres(){
 	mods.hei.removeAndHide(item('densemetals:dense_platinum_ore')) // Dense Platinum Ore
@@ -219,8 +236,22 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_garnet_sand_0', 1) // Nether Garnet Sand Ore	
 	mods.hei.removeAndHide(item('gregtech:ore_basaltic_mineral_sand_0', 2) // End Basaltic Mineral Sand Ore			       
 	mods.hei.removeAndHide(item('gregtech:ore_basaltic_mineral_sand_0', 1) // Nether Basaltic Mineral Sand Ore
+	mods.hei.removeAndHide(item('gregtech:ore_draconium_0', 1) // Nether Draconicum Ore		       
+	mods.hei.removeAndHide(item('gregtech:ore_draconium_0', 0) // Overworld Draconicum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_osmiridium_8020_0', 1) // Nether Osmiridium 80/20 Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_osmiridium_8020_0', 2) // End Osmiridium 80/20 Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_iridosmine_8020_0', 1) // Nether Iridosmine 80/20 Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_iridosmine_8020_0', 2) // End Iridosmine 80/20 Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_kaemanite_0', 1) // Nether Kaemanite Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_kaemanite_0', 2) // End Kaemanite Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_fluorite_0', 1) // Nether Fluorite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_fluorite_0', 2) // End Fluorite Ore
 	
+			       
+			       
 	
+
+			       
 			       
 if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_lithium_0', 0) // Overworld Lithium Ore
@@ -243,6 +274,10 @@ if (LabsModeHelper.normal){
 	mods.hei.removeAndHide(item('gregtech:ore_pentlandite_0', 1) // Nether Pentlandite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_lepidolite_0', 1) // Nether Lepidolite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_vanadium_magnetite_0', 1) // Nether Vanadium Magnetite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_snowchestite_0', 0) // Overworld Snowchestite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_snowchestite_0', 1) // Nether Snowchestite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_snowchestite_0', 2) // End Snowchestite Ore	
+	
 
 
 	
