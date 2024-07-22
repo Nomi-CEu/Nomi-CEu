@@ -304,6 +304,14 @@ mods.hei.hideCategory("zmaster587.AR.arcFurnace")
 mods.hei.hideCategory("zmaster587.AR.platePresser")
 mods.hei.hideCategory("zmaster587.AR.centrifuge")
 
+// Armor Plus
+mods.jei.ingredient.hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
+
+// Thermal
+removeAndHideItemIgnoreNBT(item('thermalexpansion:machine', 13)) // Arcane Ensorcellator
+removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 9)) // Decoctive Diffuser
+removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 8)) // Insightful Condenser
+
 // Hide Mob Category for HM (Its Peaceful Locked)
 if (LabsModeHelper.expert) {
     mods.jei.hideCategory("jeresources.mob")
