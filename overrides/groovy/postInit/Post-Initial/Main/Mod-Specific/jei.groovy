@@ -2,7 +2,7 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 
 /* Item Removals */
 // Unobtainable Ores
-void removeTrona(){
+void removeTrona() {
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 0)) // Trona Ore
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 1)) // Trona Ore
 	mods.hei.removeAndHide(item('gregtech:ore_trona_0', 2)) // Trona Ore
@@ -17,7 +17,7 @@ void removeTrona(){
 	mods.hei.removeAndHide(item('gregtech:meta_crushed', 2031)) // Crushed Ore
 }
 
-void removeDarmstadite(){
+void removeDarmstadite() {
 	if (LabsModeHelper.normal) {
 		mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 0)) // Darmstadite Ore
 		mods.hei.removeAndHide(item('gregtech:ore_darmstadtite_0', 1)) // Darmstadite Ore
@@ -33,7 +33,7 @@ void removeDarmstadite(){
 		mods.hei.removeAndHide(item('nomilabs:meta_dust', 32110)) // Dust
 	}
 }
-void removeDulysite(){
+void removeDulysite() {
 	if (LabsModeHelper.normal) {
 		mods.hei.removeAndHide(item('gregtech:ore_dulysite_0', 0)) // Dulysite Ore
 		mods.hei.removeAndHide(item('gregtech:ore_dulysite_0', 1)) // Dulysite Ore
@@ -52,7 +52,7 @@ void removeDulysite(){
 		mods.hei.removeAndHide(item('gregtech:meta_gem', 32111)) // Gem
 	}
 }
-void removePlutonium_239(){
+void removePlutonium_239() {
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 0)) // Plutonium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 1)) // Plutonium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_plutonium_0', 2)) // Plutonium Ore
@@ -63,7 +63,7 @@ void removePlutonium_239(){
 	mods.hei.removeAndHide(item('gregtech:meta_dust_pure', 81)) // Pure Dust
 }
 
-void removeCobalt(){
+void removeCobalt() {
 	mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 0)) // Cobalt Ore
 	mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 1)) // Cobalt Ore
 	mods.hei.removeAndHide(item('gregtech:ore_cobalt_0', 2)) // Cobalt Ore
@@ -73,7 +73,7 @@ void removeCobalt(){
 	mods.hei.removeAndHide(item('gregtech:meta_dust_impure', 23)) // Impure Dust
 	mods.hei.removeAndHide(item('gregtech:meta_dust_pure', 23)) // Pure Dust
 }
-void removeDenseOres(){
+void removeDenseOres() {
 	mods.hei.removeAndHide(item('densemetals:dense_platinum_ore')) // Dense Platinum Ore
 	mods.hei.removeAndHide(item('densemetals:dense_quartz_ore')) // Dense Quartz Ore
 	mods.hei.removeAndHide(item('densemetals:dense_copper_ore')) // Dense Copper Ore
@@ -91,7 +91,7 @@ void removeDenseOres(){
 	mods.hei.removeAndHide(item('densemetals:dense_rutile_ore')) // Dense Rutile Ore	
 }
 
-void removeUnobtainableVersions(){
+void removeUnobtainableVersions() {
 	mods.hei.removeAndHide(item('gregtech:ore_aluminium_0', 1)) // Nether Aluminum Ore
 	mods.hei.removeAndHide(item('gregtech:ore_beryllium_0', 2)) // End Beryllium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_iron_0', 1)) // Nether Iron Ore
