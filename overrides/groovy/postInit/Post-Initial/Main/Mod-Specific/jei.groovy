@@ -215,6 +215,12 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_diatomite_0', 2) // End Diatomite Ore	
 	mods.hei.removeAndHide(item('gregtech:ore_granatic_mineral_sand_0', 2) // End Granatic Mineral Sand Ore			       
 	mods.hei.removeAndHide(item('gregtech:ore_granatic_mineral_sand_0', 1) // Nether Granatic Mineral Sand Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_garnet_sand_0', 2) // End Garnet Sand Ore		
+	mods.hei.removeAndHide(item('gregtech:ore_garnet_sand_0', 1) // Nether Garnet Sand Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_basaltic_mineral_sand_0', 2) // End Basaltic Mineral Sand Ore			       
+	mods.hei.removeAndHide(item('gregtech:ore_basaltic_mineral_sand_0', 1) // Nether Basaltic Mineral Sand Ore
+	
+	
 			       
 if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_lithium_0', 0) // Overworld Lithium Ore
