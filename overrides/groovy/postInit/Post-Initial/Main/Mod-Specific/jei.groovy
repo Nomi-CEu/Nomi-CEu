@@ -205,9 +205,16 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_fullers_earth_0', 1) // Nether Fullers Earth Ore
 	mods.hei.removeAndHide(item('gregtech:ore_fullers_earth_0', 2) // End Fullers Earth Ore
 	mods.hei.removeAndHide(item('gregtech:ore_pitchblende_0', 1) // Nether Pitchblende Ore	
-	
-			       
-
+	mods.hei.removeAndHide(item('gregtech:ore_monazite_0', 2) // End Monazite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_gypsum_0', 2) // End Gypsum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_gypsum_0', 1) // Nether Gypsum Ore
+	mods.hei.removeAndHide(item('gregtech:ore_zeolite_0', 1) // Nether Zeolite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_zeolite_0', 2) // End Zeolite Ore		       
+	mods.hei.removeAndHide(item('gregtech:ore_redstone_0', 2) // End Redstone Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_electrotine_0', 2) // End Electrotine Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_diatomite_0', 2) // End Diatomite Ore	
+	mods.hei.removeAndHide(item('gregtech:ore_granatic_mineral_sand_0', 2) // End Granatic Mineral Sand Ore			       
+	mods.hei.removeAndHide(item('gregtech:ore_granatic_mineral_sand_0', 1) // Nether Granatic Mineral Sand Ore	
 			       
 if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_lithium_0', 0) // Overworld Lithium Ore
@@ -222,6 +229,7 @@ if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_saltpeter_0', 0) // Overworld Saltpeter Ore
 	mods.hei.removeAndHide(item('gregtech:ore_topaz_0', 0) // Overworld Topaz Ore
 	mods.hei.removeAndHide(item('gregtech:ore_barite_0', 0) // Overworld Barite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_electrotine_0', 0) // Overworld Electrotine Ore
 	}	
 if (LabsModeHelper.normal){
 	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 1) // Nether Sheldonite Ore
