@@ -190,9 +190,23 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_amethyst_0', 1) // Nether Amethyst Ore
 	mods.hei.removeAndHide(item('gregtech:ore_lapis_0', 1) // Nether Lapis Ore
 	mods.hei.removeAndHide(item('gregtech:ore_lapis_0', 2) // End Lapis Ore
-
+	mods.hei.removeAndHide(item('gregtech:ore_apatite_0', 2) // End Apatite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_apatite_0', 1) // Nether Apatite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_tricalcium_phosphate_0', 1) // Nether Tricalcium Phosphate Ore
+	mods.hei.removeAndHide(item('gregtech:ore_tricalcium_phosphate_0', 2) // End Tricalcium Phosphate Ore
+	mods.hei.removeAndHide(item('gregtech:ore_red_garnet_0', 2) // End Red Garnet Ore
+	mods.hei.removeAndHide(item('gregtech:ore_red_garnet_0', 1) // Nether Red Garnet Ore
+	mods.hei.removeAndHide(item('gregtech:ore_yellow_garnet_0', 2) // End Yellow Garnet Ore
+	mods.hei.removeAndHide(item('gregtech:ore_yellow_garnet_0', 1) // Nether Yellow Garnet Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pollucite_0', 1) // Nether Pollucite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pollucite_0', 2) // End Pollucite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_bentonite_0', 2) // End Bentonite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_bentonite_0', 1) // Nether Bentonite Ore		       
+	mods.hei.removeAndHide(item('gregtech:ore_fullers_earth_0', 1) // Nether Fullers Earth Ore
+	mods.hei.removeAndHide(item('gregtech:ore_fullers_earth_0', 2) // End Fullers Earth Ore
+	mods.hei.removeAndHide(item('gregtech:ore_pitchblende_0', 1) // Nether Pitchblende Ore	
 	
-
+			       
 
 			       
 if (LabsModeHelper.expert) {
@@ -214,7 +228,7 @@ if (LabsModeHelper.normal){
 	mods.hei.removeAndHide(item('gregtech:ore_sheldonite_0', 2) // End Tantalite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_pentlandite_0', 1) // Nether Pentlandite Ore
 	mods.hei.removeAndHide(item('gregtech:ore_lepidolite_0', 1) // Nether Lepidolite Ore
-	
+	mods.hei.removeAndHide(item('gregtech:ore_vanadium_magnetite_0', 1) // Nether Vanadium Magnetite Ore
 
 
 	
