@@ -180,7 +180,21 @@ void removeUnobtainableVersions(){
 	mods.hei.removeAndHide(item('gregtech:ore_talc_0', 1) // Nether Talc Ore
 	mods.hei.removeAndHide(item('gregtech:ore_soapstone_0', 2) // End Soapstone Ore
 	mods.hei.removeAndHide(item('gregtech:ore_talc_0', 1) // Nether Soapstone Ore
+	mods.hei.removeAndHide(item('gregtech:ore_kyanite_0', 1) // Nether Kyanite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_kyanite_0', 2) // End Kyanite Ore
+	mods.hei.removeAndHide(item('gregtech:ore_oilsands_0', 1) // Nether Oilsands Ore
+	mods.hei.removeAndHide(item('gregtech:ore_olivine_0', 1) // Nether Olivine Ore
+	mods.hei.removeAndHide(item('gregtech:ore_opal_0', 1) // Nether Opal Ore
+	mods.hei.removeAndHide(item('gregtech:ore_opal_0', 2) // End Opal Ore
+	mods.hei.removeAndHide(item('gregtech:ore_amethyst_0', 2) // End Amethyst Ore
+	mods.hei.removeAndHide(item('gregtech:ore_amethyst_0', 1) // Nether Amethyst Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lapis_0', 1) // Nether Lapis Ore
+	mods.hei.removeAndHide(item('gregtech:ore_lapis_0', 2) // End Lapis Ore
+
 	
+
+
+			       
 if (LabsModeHelper.expert) {
 	mods.hei.removeAndHide(item('gregtech:ore_lithium_0', 0) // Overworld Lithium Ore
 	mods.hei.removeAndHide(item('gregtech:ore_neodymium_0', 0) // Overworld Neodyminum Ore
