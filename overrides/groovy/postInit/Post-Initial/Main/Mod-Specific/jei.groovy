@@ -1,4 +1,5 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 
 /* Item Removals */
 // Unobtainable Ores
