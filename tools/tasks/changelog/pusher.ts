@@ -3,7 +3,12 @@ import { categories, defaultIndentation } from "./definitions.ts";
 import { Category, ChangelogMessage, Commit } from "#types/changelogTypes.ts";
 import { repoLink } from "./definitions.ts";
 import { Octokit } from "@octokit/rest";
-import { getIssueURL, getNewestIssueURLs } from "#utils/util.ts";
+import {
+	formatAuthor,
+	getIssueURL,
+	getNewestCommitAuthors,
+	getNewestIssueURLs,
+} from "#utils/util.ts";
 
 let data: ChangelogData;
 let octokit: Octokit;
@@ -13,6 +18,9 @@ const sectionLinesBeforeCommitLogExcluded = 50;
 
 // How many lines the commit log can be before its is excluded.
 const logLinesBeforeCommitLogExcluded = 20;
+
+// How many commits to include after a message.
+const maxIncludeCommits = 3;
 
 export default async function pushAll(inputData: ChangelogData): Promise<void> {
 	pushTitle(inputData);
@@ -75,12 +83,14 @@ export async function pushChangelog(inputData: ChangelogData): Promise<void> {
 			data.builder.length < sectionLinesBeforeCommitLogExcluded &&
 			data.commitList.length < logLinesBeforeCommitLogExcluded
 		) {
+			// Commit List is relatively short, and most commits would have been handled via category pushing anyway.
+			// Just retrieve each author info sequentially.
 			sortCommitList(data.commitList, (commit) => commit);
 
 			data.builder.push("## Commits");
-			data.commitList.forEach((commit) => {
-				data.builder.push(formatCommit(commit));
-			});
+			for (const commit of data.commitList) {
+				data.builder.push(await formatCommit(commit));
+			}
 		}
 	} else {
 		// No Commit List = No Changes
@@ -118,19 +128,31 @@ async function pushCategory(category: Category) {
 				categoryLog.push(`### ${subCategory.keyName}:`);
 			}
 
+			// Format Main Messages (Async so Author Fetch is Fast)
+			await getNewestCommitAuthors(octokit);
+			const formatted: { message: ChangelogMessage; formatted: string }[] =
+				await Promise.all(
+					list.map((message) =>
+						formatChangelogMessage(message).then((formatted) => {
+							return { message, formatted };
+						}),
+					),
+				);
+
 			// Sort Log
 			sortCommitList(
-				list,
-				(message) => message.commitObject,
-				(a, b) => a.commitMessage.localeCompare(b.commitMessage),
+				formatted,
+				(formatted) => formatted.message.commitObject,
+				(a, b) =>
+					a.message.commitMessage.localeCompare(b.message.commitMessage),
 			);
 
 			// Push Log
-			for (const changelogMessage of list) {
-				categoryLog.push(await formatChangelogMessage(changelogMessage));
-				// Push Sub Messages
-				if (changelogMessage.subChangelogMessages) {
-					for (const subMessage of changelogMessage.subChangelogMessages)
+			for (const format of formatted) {
+				categoryLog.push(format.formatted);
+				// Push Sub Messages (No need for Async, Author Info Not Calculated in Sub Messages)
+				if (format.message.subChangelogMessages) {
+					for (const subMessage of format.message.subChangelogMessages)
 						categoryLog.push(await formatChangelogMessage(subMessage, true));
 				}
 			}
@@ -222,58 +244,110 @@ async function formatChangelogMessage(
 			changelogMessage.specialFormatting.storage,
 		);
 
-	if (changelogMessage.commitObject && !subMessage) {
-		if (data.combineList.has(changelogMessage.commitObject.hash)) {
-			const commits =
-				data.combineList.get(changelogMessage.commitObject.hash) ?? [];
-			commits.push(changelogMessage.commitObject);
-
-			// Sort original array so newest commits appear at the end instead of start of commit string
-			sortCommitListReverse(commits);
-
-			const formattedCommits: string[] = [];
-			const authors: string[] = [];
-			const authorEmails: Set<string> = new Set<string>();
-			const processedSHAs: Set<string> = new Set<string>();
-
-			commits.forEach((commit) => {
-				if (processedSHAs.has(commit.hash)) return;
-				if (
-					!authors.includes(commit.author_name) &&
-					!authorEmails.has(commit.author_email)
-				) {
-					authors.push(commit.author_name);
-					authorEmails.add(commit.author_email);
-				}
-				formattedCommits.push(
-					`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`,
-				);
-				processedSHAs.add(commit.hash);
-			});
-
-			authors.sort();
-			return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")})`;
-		}
-		const commit = changelogMessage.commitObject;
-		const shortSHA = commit.hash.substring(0, 7);
-		const author = commit.author_name;
-
-		return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${repoLink}commit/${commit.hash}))`;
+	if (!changelogMessage.commitObject || subMessage) {
+		return formatMessage(message, indentation, undefined, subMessage);
 	}
 
-	return `${indentation}* ${message}`;
+	if (data.combineList.has(changelogMessage.commitObject.hash)) {
+		const commits =
+			data.combineList.get(changelogMessage.commitObject.hash) ?? [];
+		commits.push(changelogMessage.commitObject);
+
+		return formatMessage(message, indentation, commits, subMessage);
+	}
+
+	return formatMessage(
+		message,
+		indentation,
+		[changelogMessage.commitObject],
+		subMessage,
+	);
+}
+
+/**
+ * Formats a Changelog Message
+ * @param message The message to format.
+ * @param indentation Indentation to use.
+ * @param commits List of Commits
+ * @param subMessage Whether this message is a subMessage (used in details). Set to true to make it a subMessage (different parsing). Defaults to false.
+ * @return string Formatted Changelog Message
+ */
+export async function formatMessage(
+	message: string,
+	indentation: string,
+	commits?: Commit[],
+	subMessage = false,
+): Promise<string> {
+	if (!commits || commits.length == 0 || subMessage) {
+		return `${indentation}* ${message}`;
+	}
+
+	if (commits.length === 1) {
+		const commit = commits[0];
+		const shortSHA = commit.hash.substring(0, 7);
+		const formattedCommit = `[\`${shortSHA}\`](${repoLink}commit/${commit.hash})`;
+		const author = await formatAuthor(commit, octokit);
+
+		return `${indentation}* ${message} - ${author} (${formattedCommit})`;
+	}
+
+	// Sort original array so newest commits appear at the end instead of start of commit string
+	sortCommitListReverse(commits);
+
+	const formattedCommits: string[] = [];
+	const authors: string[] = [];
+	const retrievedAuthors: { commit: Commit; formatted: string }[] =
+		await Promise.all(
+			commits.map((commit) =>
+				formatAuthor(commit, octokit).then((formatted) => {
+					return { commit, formatted };
+				}),
+			),
+		);
+
+	const processedAuthors: Set<string> = new Set<string>();
+	const processedEmails: Set<string> = new Set<string>();
+	const processedSHAs: Set<string> = new Set<string>();
+
+	sortCommitList(
+		retrievedAuthors,
+		(author) => author.commit,
+		(a, b) => a.formatted.localeCompare(b.formatted),
+	);
+	retrievedAuthors.forEach((pAuthor) => {
+		if (processedSHAs.has(pAuthor.commit.hash)) return;
+		if (
+			!processedAuthors.has(pAuthor.formatted) &&
+			!processedEmails.has(pAuthor.commit.author_email)
+		) {
+			authors.push(pAuthor.formatted);
+			processedAuthors.add(pAuthor.formatted);
+			processedEmails.add(pAuthor.commit.author_email);
+		}
+		formattedCommits.push(
+			`[\`${pAuthor.commit.hash.substring(0, 7)}\`](${repoLink}commit/${pAuthor.commit.hash})`,
+		);
+		processedSHAs.add(pAuthor.commit.hash);
+	});
+
+	// Delete all Formatted Commits after MaxIncludeCommits elements, replace with '...'
+	if (formattedCommits.length > maxIncludeCommits) {
+		formattedCommits.splice(maxIncludeCommits, Infinity, "...");
+	}
+
+	return `${indentation}* ${message} - ${authors.join(", ")} (${formattedCommits.join(", ")})`;
 }
 
 /**
  * Returns a formatted commit
  */
-function formatCommit(commit: Commit): string {
+async function formatCommit(commit: Commit): Promise<string> {
 	const date = new Date(commit.date).toLocaleDateString("en-us", {
 		year: "numeric",
 		month: "short",
 		day: "numeric",
 	});
-	const formattedCommit = `${commit.message} - **${commit.author_name}** (${date})`;
+	const formattedCommit = `${commit.message} - ${await formatAuthor(commit, octokit)} (${date})`;
 
 	const shortSHA = commit.hash.substring(0, 7);
 

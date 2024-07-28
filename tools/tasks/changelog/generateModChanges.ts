@@ -17,10 +17,10 @@ import {
 } from "#types/changelogTypes.ts";
 import dedent from "dedent-js";
 import mustache from "mustache";
-import { modChangesAllocations, repoLink } from "./definitions.ts";
+import { modChangesAllocations } from "./definitions.ts";
 import ChangelogData from "./changelogData.ts";
 import { SpecialChangelogFormatting } from "#types/changelogTypes.ts";
-import { sortCommitListReverse } from "./pusher.ts";
+import { formatMessage, sortCommitListReverse } from "./pusher.ts";
 import { logError } from "#utils/log.ts";
 
 /**
@@ -30,32 +30,11 @@ const getModChangesFormatting: (
 	commits?: Commit[],
 ) => SpecialChangelogFormatting<Commit[] | undefined> = (commits) => {
 	return {
-		formatting: (message, subMessage, indentation, commits) => {
+		formatting: async (message, subMessage, indentation, commits) => {
 			// Sub messages are details, so make them bold & italic
 			if (subMessage) return `${indentation}* ***${message}***`;
 
-			// Edge Case
-			if (!commits) return `${indentation}* ${message}`;
-
-			if (commits.length > 1) {
-				const authors: string[] = [];
-				const formattedCommits: string[] = [];
-				commits.forEach((commit) => {
-					if (!authors.includes(commit.author_name))
-						authors.push(commit.author_name);
-					formattedCommits.push(
-						`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`,
-					);
-				});
-				authors.sort();
-				return `${indentation}* ${message} - **${authors.join("**, **")}** (${formattedCommits.join(", ")})`;
-			}
-
-			const commit = commits[0];
-			const shortSHA = commit.hash.substring(0, 7);
-			const author = commit.author_name;
-
-			return `${indentation}* ${message} - **${author}** ([\`${shortSHA}\`](${repoLink}commit/${commit.hash}))`;
+			return formatMessage(message, indentation, commits, subMessage);
 		},
 		storage: commits,
 	} as SpecialChangelogFormatting<Commit[] | undefined>;

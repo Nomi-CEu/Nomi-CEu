@@ -593,9 +593,15 @@ export async function getVersionManifest(
  */
 export function cleanupVersion(version?: string): string {
 	if (!version) return "";
+
+	if (!version.replace(/[\d+.?]+/g, "")) return version;
+
 	version = version.replace(/1\.12\.2|1\.12|\.jar/g, "");
 	const list = version.match(/[\d+.?]+/g);
 	if (!list) return version;
+
+	if (list[list.length - 1] == "0") return version;
+
 	return list[list.length - 1];
 }
 
@@ -650,17 +656,96 @@ export async function getIssueURL(
 			logError(
 				`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. Returned Status Code ${issueInfo.status}, expected Status 200.`,
 			);
+			issueURLCache.set(issueNumber, "");
 			return "";
 		}
 		logInfo(
 			`No Issue URL Cache for Issue Number ${issueNumber}. Retrieved Specifically.`,
 		);
+		issueURLCache.set(issueNumber, issueInfo.data.html_url);
 		return issueInfo.data.html_url;
 	} catch (e) {
 		logError(
 			`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. This may be because this is not a PR or Issue, or could be because of rate limits.`,
 		);
+		issueURLCache.set(issueNumber, "");
 		return "";
+	}
+}
+
+// Map of Commit SHA -> Formatted Author
+const commitAuthorCache: Map<string, string> = new Map<string, string>();
+
+/**
+ * Fills the Commit Author Cache with the newest 100 commits from the repo.
+ */
+export async function getNewestCommitAuthors(octokit: Octokit): Promise<void> {
+	if (commitAuthorCache.size > 0) return;
+	try {
+		const commits = await octokit.repos.listCommits({
+			owner: repoOwner,
+			repo: repoName,
+			per_page: 100,
+		});
+		if (commits.status !== 200) {
+			logError(
+				`Failed to get all Commit Authors. Returned Status Code ${commits.status}, expected Status 200.`,
+			);
+			return;
+		}
+		commits.data.forEach((commit) => {
+			if (!commitAuthorCache.has(commit.sha))
+				commitAuthorCache.set(commit.sha, commit.author?.login ?? "");
+		});
+	} catch (e) {
+		logError(
+			"Failed to get all Commit Authors of Repo. This may be because there are no commits, or because of rate limits.",
+		);
+	}
+}
+
+/**
+ * Gets the Author, in mentionable form (@login), or default (**Display Name**), from a Commit.
+ */
+export async function formatAuthor(commit: Commit, octokit: Octokit) {
+	const defaultFormat = `**${commit.author_name}**`;
+
+	if (commitAuthorCache.has(commit.hash)) {
+		const login = commitAuthorCache.get(commit.hash);
+		if (login) return `@${login}`;
+		return defaultFormat;
+	}
+
+	try {
+		const commitInfo = await octokit.repos.getCommit({
+			owner: repoOwner,
+			repo: repoName,
+			ref: commit.hash,
+		});
+		if (commitInfo.status !== 200) {
+			logError(
+				`Failed to get the Author Info for Commit ${commit.hash}. Returned Status Code ${commitInfo.status}, expected Status 200.`,
+			);
+			commitAuthorCache.set(commit.hash, "");
+			return defaultFormat;
+		}
+		if (!commitInfo.data.author?.login) {
+			logError(
+				`Failed to get the Author Info for Commit ${commit.hash}. Returned Null Data, Author or Login.`,
+			);
+			commitAuthorCache.set(commit.hash, "");
+			return defaultFormat;
+		}
+		logInfo(
+			`No Author Cache for Commit ${commit.hash}. Retrieved Specifically.`,
+		);
+		return `@${commitInfo.data.author.login}`;
+	} catch (e) {
+		logError(
+			`Failed to get Commit Author for Commit ${commit.hash}. This may be because there are no commits, or because of rate limits.`,
+		);
+		commitAuthorCache.set(commit.hash, "");
+		return defaultFormat;
 	}
 }
 
