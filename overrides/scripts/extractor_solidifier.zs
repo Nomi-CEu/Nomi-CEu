@@ -36,6 +36,12 @@ fluid_extractor.recipeBuilder()
     .fluidOutputs([<liquid:mana> * 250])
     .duration(40).EUt(30).buildAndRegister();
 
+solidifier.recipeBuilder()
+    .fluidInputs([<liquid:mana> * 250])
+    .notConsumable(<metaitem:shape.mold.ball>)
+    .outputs([<thermalfoundation:material:1028>])
+    .duration(40).EUt(30).buildAndRegister();
+
 fluid_extractor.recipeBuilder()
     .inputs([<thermalfoundation:coin:1>])
     .fluidOutputs([<liquid:gold> * 48])
