@@ -242,15 +242,6 @@ addTooltip(metaitem('cover.facade'), [
 	translatable('nomiceu.tooltip.gregtech.facade.2'),
 ])
 
-/* Extended Crafting */
-
-// Omnium Trimmed Black Steel
-clearTooltip(item('extendedcrafting:trimmed', 5))
-addTooltip(item('extendedcrafting:trimmed', 5), [
-	translatable('nomiceu.tooltip.extendedcrafting.black_steel.omnium.1'),
-	translatable('nomiceu.tooltip.extendedcrafting.black_steel.omnium.2'),
-])
-
 /* Ender IO */
 
 // Glasses

@@ -46,11 +46,11 @@ for (ItemStack stack : items) {
 			])
 			addRecipeOutputTooltip(recipeStack, resource(recipeName),
 				ItemMeta.compare(tool, recipeStack) ?
-					translatable("tooltip.hand_framing.tool") :
-					translatable("tooltip.hand_framing.drawer"),
-				translatable("tooltip.hand_framing.top_left"),
-				translatable("tooltip.hand_framing.top_right"),
-				translatable("tooltip.hand_framing.bottom_left"))
+					translatable("nomiceu.tooltip.labs.hand_framing.tool") :
+					translatable("nomiceu.tooltip.labs.hand_framing.drawer"),
+				translatable("nomiceu.tooltip.labs.hand_framing.top_left"),
+				translatable("nomiceu.tooltip.labs.hand_framing.top_right"),
+				translatable("nomiceu.tooltip.labs.hand_framing.bottom_left"))
 		}
 	}
 }
