@@ -236,14 +236,6 @@ makeExtremeRecipe7(<extendedcrafting:table_ultimate>,
       E : <minecraft:emerald_block>,
       T : <extendedcrafting:table_elite> });
 
-implosion.recipeBuilder()
-    .inputs([<extendedcrafting:singularity_ultimate>])
-    .property("explosives", 1)
-    .outputs(<extendedcrafting:material:33>)
-    .duration(20).EUt(30).buildAndRegister();
-
-
-
 recipes.remove(<minecraft:end_crystal>);
 // End Crystal * 1
 <recipemap:assembler>.findRecipe(16, [<minecraft:ghast_tear:0>, <minecraft:ender_eye:0>], [<liquid:glass> * 1008]).remove();

@@ -307,15 +307,6 @@ electrolyzer.recipeBuilder()
 	.fluidOutputs(<liquid:chlorine> * 2000, <liquid:hydrogen> * 4000)
 	.duration(576).EUt(60).buildAndRegister();
 
-
-
-//Omnium
-implosion_compressor.recipeBuilder()
-	.inputs([<extendedcrafting:singularity_ultimate>])
-	.outputs(<extendedcrafting:material:33>)
-	.property("explosives", <metaitem:dynamite> * 8)
-	.duration(20).EUt(30).buildAndRegister();
-
 //Add Decomposition Recipe for Polyphenylene Sulfide
 electrolyzer.recipeBuilder()
 	.fluidInputs(<liquid:polyphenylene_sulfide> * 11000)
