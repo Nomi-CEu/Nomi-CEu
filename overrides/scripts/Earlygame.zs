@@ -395,7 +395,3 @@ macerator.recipeBuilder()
     .duration(236)
     .EUt(8)
     .buildAndRegister();*/
-
-<gregtech:meta_item_1:466>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
-<gregtech:meta_item_1:467>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
-<gregtech:meta_item_1:468>.addTooltip(format.yellow("Grid squares correspond to 1 chunk, up is north\nClick a resource name in sidebar to highlight only it\nUse JEI to check potential vein depth"));
