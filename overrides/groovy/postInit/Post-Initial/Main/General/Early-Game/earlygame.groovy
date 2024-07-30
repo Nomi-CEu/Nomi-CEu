@@ -102,7 +102,6 @@ if (LabsModeHelper.expert) {
 		.outputs(item('actuallyadditions:item_misc', 16))
 		.duration(100).EUt(VA[ULV])
 		.buildAndRegister()
-
 }
 
 // Coated Circuit Board
@@ -115,10 +114,8 @@ mods.gregtech.assembler.recipeBuilder()
 	.buildAndRegister()
 
 // Circuit Board (Move from Wood Plate + Glue + Foil to Coated Circuit Board + Foil)
-mods.gregtech.assembler.removeByOutput([metaitem('circuit_board.basic')], null, null, null) 
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('board.coated'), ore('foilCopper') * 4)
 	.outputs(metaitem('circuit_board.basic'))
 	.duration(100).EUt(VA[ULV])
-	.buildAndRegister()
-
+	.replace().buildAndRegister()
