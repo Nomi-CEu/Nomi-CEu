@@ -20,8 +20,6 @@ addOverride('key.craftpresence.config_keycode.name', Keyboard.KEY_NONE)
 
 addOverride('Open Rocket GUI', KeyModifier.CONTROL, Keyboard.KEY_C)
 
-addOverride('key.cofh.multimode', Keyboard.KEY_NONE)
-
 addOverride('key.craftingtweaks.compressAll', Keyboard.KEY_NONE)
 addOverride('key.craftingtweaks.compressOne', Keyboard.KEY_NONE)
 addOverride('key.craftingtweaks.compressStack', Keyboard.KEY_NONE)
