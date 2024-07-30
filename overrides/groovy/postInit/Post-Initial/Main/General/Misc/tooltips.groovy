@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
-import classes.postInit.EioPrefixes
+import classes.postInit.Common
 
 /* Actually Additions */
 
@@ -111,15 +111,21 @@ addTooltip(item('appliedenergistics2:material', 12), translatable('nomiceu.toolt
 // Charged Certus
 addTooltip(item('appliedenergistics2:material', 1), translatable('nomiceu.tooltip.ae2.charged_certus'))
 
-// P2P Tunnels
-addTooltip(item('appliedenergistics2:part', 460), translatable('nomiceu.tooltip.ae2.p2p_me'))
-addTooltip(item('appliedenergistics2:part', 469), translatable('nomiceu.tooltip.ae2.p2p_rf'))
-addTooltip(item('appliedenergistics2:part', 463), translatable('nomiceu.tooltip.ae2.p2p_fluid'))
-addTooltip(item('appliedenergistics2:part', 462), translatable('nomiceu.tooltip.ae2.p2p_item'))
-addTooltip(item('appliedenergistics2:part', 467), translatable('nomiceu.tooltip.ae2.p2p_light'))
-addTooltip(item('appliedenergistics2:part', 461), translatable('nomiceu.tooltip.ae2.p2p_redstone'))
-addTooltip(item('appliedenergistics2:part', 470), translatable('nomiceu.tooltip.ae2.p2p_eu'))
-addTooltip(item('nae2:part', 1), translatable('nomiceu.tooltip.ae2.p2p_interface'))
+/* P2P Tunnels */
+
+// ME P2P (Special)
+// Add a new line after its unique tooltip so it is easier to read the global p2p tooltip
+addTooltip(Common.meP2p, [
+	translatable('nomiceu.tooltip.ae2.p2p.me'),
+	translatableEmpty(),
+	translatable("nomiceu.tooltip.ae2.p2p.desc"),
+])
+
+// Global P2P
+for (ItemStack item : Common.p2pVariants) {
+	addTooltip(item, translatable("nomiceu.tooltip.ae2.p2p.desc"))
+}
+
 
 // Dense Cables, Conduits, and Controller
 // Only apply tooltip if channels not enabled (manually, by players)
@@ -256,7 +262,7 @@ addTooltip(item('extendedcrafting:trimmed', 5), [
 // Glasses
 addTooltip(item('enderio:block_fused_glass'), translatable('tooltip.fused_glass.make'))
 
-for (ItemStack stack in EioPrefixes.getAllItems()) {
+for (ItemStack stack in Common.eioGlasses) {
 	addTooltip(stack, translatable('tooltip.eio_glass.dye'))
 }
 
