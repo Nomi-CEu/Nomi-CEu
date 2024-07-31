@@ -56,18 +56,6 @@ for jeiCategory in jeiCategories {
 }
 
 function purgeFluidFromJEI(fluid as string) {
-    // gtce various metal cells
-    val containers = [<metaitem:large_fluid_cell.steel>,
-                      <metaitem:fluid_cell>,
-                      <metaitem:large_fluid_cell.tungstensteel>] as IItemStack[];
-
-    // remove from various GT containers
-    for container in containers {
-        mods.jei.JEI.removeAndHide(container.withTag({Fluid: {FluidName: fluid, Amount: 1000}}));
-    }
-
-    // Different tag schemas...
-//    mods.jei.JEI.removeAndHide(<ceramics:clay_bucket>.withTag({fluids: {FluidName: fluid, Amount: 1000}}));
     mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: fluid, Amount: 1000}));
 }
 
