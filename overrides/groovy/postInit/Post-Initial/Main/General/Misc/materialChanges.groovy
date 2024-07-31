@@ -10,16 +10,16 @@ material('rhodium_plated_palladium')
 	.changeChemicalFormula()
 	.change()
 
+/* Black Steel */
+
 // Can't use change composition to remove, as that is only performed at the end of running scripts, and if not removed, conflicts will occur.
 // TODO Make this use change composition when that accepts non-material Item Stacks
 
-/* Black Steel */
-
 // Remove ABS Recipes
-mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('black_steel')], null, null)
+mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('black_steel')])
 
 // Remove Mixer Recipes
-mods.gregtech.mixer.removeByOutput([metaitem('dustBlackSteel')], null, null, null)
+mods.gregtech.mixer.removeByOutput([metaitem('dustBlackSteel')], null)
 
 // Remove Decomp Recipe
 mods.gregtech.centrifuge.removeByInput([metaitem('dustBlackSteel')], null)
@@ -28,7 +28,7 @@ mods.gregtech.centrifuge.removeByInput([metaitem('dustBlackSteel')], null)
 mods.gregtech.mixer.recipeBuilder()
 	.inputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
 	.outputs(metaitem('dustBlackSteel') * 9)
-	.EUt(VHA[LV]).duration(200)
+	.duration(200).EUt(VHA[LV])
 	.buildAndRegister()
 
 /* Black Steel Shortcut */
@@ -37,15 +37,14 @@ mods.gregtech.mixer.recipeBuilder()
 mods.gregtech.mixer.recipeBuilder()
 	.inputs(metaitem('dustSteel') * 15, metaitem('dustCopper') * 6, metaitem('dustGold') * 2, metaitem('dustSilver') * 2, item('actuallyadditions:item_crystal', 3) * 10, item('extrautils2:ingredients', 4) * 10)
 	.outputs(metaitem('dustBlackSteel') * 45)
-	.EUt(VHA[HV]).duration(375)
+	.duration(375).EUt(VHA[HV])
 	.buildAndRegister()
 
 // Decomp Recipe
 mods.gregtech.centrifuge.recipeBuilder()
 	.inputs(metaitem('dustBlackSteel') * 9)
 	.outputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
-	.EUt(VA[LV] * 2)
-	.duration(480)
+	.duration(480).EUt(VA[LV] * 2)
 	.buildAndRegister()
 
 // Change Chem Formula
