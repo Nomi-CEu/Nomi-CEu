@@ -180,8 +180,6 @@ recipes.addShapeless(<avaritia:resource:3>, [<metaitem:nuggetNeutronium>]);
 
 // Assembly Line
 
-// ZPM Field Generator * 1
-<recipemap:assembly_line>.findRecipe(24000, [<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <metaitem:circuit.quantum_mainframe> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4], [<liquid:soldering_alloy> * 1152]).remove();
 // Moved to Groovy
 
 // Rhodium Plated Palladium -> Rhodium Plated Lumium Palladium (Moved to Groovy)

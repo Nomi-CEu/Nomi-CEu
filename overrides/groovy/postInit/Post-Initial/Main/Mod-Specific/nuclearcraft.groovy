@@ -1,8 +1,13 @@
+import nc.enumm.MetaEnums
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
 import static gregtech.api.GTValues.*
+import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecipe
+
+// Change Active Cooler Recipe from NC Helium -> GT Liquid Helium
+changeCoolerRecipe(fluid('liquid_helium'), MetaEnums.CoolerType.HELIUM)
 
 // Replace Cooler Crafting Recipes with Canner Recipes
 def replaceCannerRecipe = (ItemStack cooler, FluidStack fluid) -> {

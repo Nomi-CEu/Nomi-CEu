@@ -1,117 +1,76 @@
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.RecipeBuilder
+import gregtech.api.recipes.ingredients.GTRecipeInput
+import gregtech.api.recipes.recipeproperties.TemperatureProperty
+import net.minecraft.item.ItemStack
+import net.minecraftforge.fluids.FluidStack
 
-import static gregtech.api.GTValues.*
+// Lumium
+mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.lumium')])
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.inputs(item('extendedcrafting:material', 7) * 2, ore('clathrateGlowstone')) // Luminessence
+				.fluidInputs(fluid('mana') * 1000)
+		}.changeCircuitMeta { meta -> meta + 2 }
+		.copyProperties(TemperatureProperty.instance)
+		.replaceAndRegister()
+	}
 
-// Signalum (Adds Redstone Clathrate)
-mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('molten.signalum')], null, null)
+// Signalum
+mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.signalum')])
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.inputs(ore('clathrateRedstone'))
+				.fluidInputs(fluid('mana') * 1000)
+		}.changeCircuitMeta { meta -> meta + 1 }
+		.copyProperties(TemperatureProperty.instance)
+		.replaceAndRegister()
+	}
 
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs(metaitem('dustAnnealedCopper') * 4, metaitem('nomilabs:dustArdite') * 2, metaitem('dustRedAlloy') * 2, item('thermalfoundation:material', 893))
-	.fluidInputs(fluid('mana') * 1000, fluid('helium') * 800)
-	.circuitMeta(14)
-	.fluidOutputs(fluid('molten.signalum') * 576)
-	.property('temperature', 4000)
-	.duration(5628)
-	.EUt(VA[IV])
-	.buildAndRegister()
+// Enderium
+mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.enderium')])
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.inputs(ore('clathrateEnder'))
+				.fluidInputs(fluid('mana') * 1000)
+		}.changeCircuitMeta { meta -> meta + 1 }
+		.copyProperties(TemperatureProperty.instance)
+		.replaceAndRegister()
+	}
 
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs(metaitem('dustAnnealedCopper') * 4, metaitem('nomilabs:dustArdite') * 2, metaitem('dustRedAlloy') * 2, item('thermalfoundation:material', 893))
-	.fluidInputs(fluid('mana') * 1000)
-	.circuitMeta(4)
-	.fluidOutputs(fluid('molten.signalum') * 576)
-	.property('temperature', 4000)
-	.duration(8400)
-	.EUt(VA[IV])
-	.buildAndRegister()
-
-// Lumium (Adds Energized Clathrate & Luminessence)
-mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('molten.lumium')], null, null)
-
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs(metaitem('dustTinAlloy') * 4, metaitem('dustSterlingSilver') * 2, item('extendedcrafting:material', 7) * 2, item('thermalfoundation:material', 894))
-	.fluidInputs(fluid('mana') * 1000, fluid('helium') * 600)
-	.circuitMeta(14)
-	.fluidOutputs(fluid('molten.lumium') * 576)
-	.property('temperature', 4500)
-	.duration(4824)
-	.EUt(VA[IV])
-	.buildAndRegister()
-
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs(metaitem('dustTinAlloy') * 4, metaitem('dustSterlingSilver') * 2, item('extendedcrafting:material', 7) * 2, item('thermalfoundation:material', 894))
-	.fluidInputs(fluid('mana') * 1000)
-	.circuitMeta(4)
-	.fluidOutputs(fluid('molten.lumium') * 576)
-	.property('temperature', 4500)
-	.duration(7200)
-	.EUt(VA[IV])
-	.buildAndRegister()
-
-// Enderium (Adds Resonant Clathrate)
-mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('molten.enderium')], null, null)
-
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs(metaitem('dustLead') * 4, metaitem('dustPlatinum') * 2, metaitem('dustBlueSteel'), metaitem('dustOsmium'), item('thermalfoundation:material', 895))
-	.fluidInputs(fluid('mana') * 1000, fluid('krypton') * 80)
-	.circuitMeta(15)
-	.fluidOutputs(fluid('molten.enderium') * 576)
-	.property('temperature', 6400)
-	.duration(6432)
-	.EUt(VA[LuV])
-	.buildAndRegister()
-
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs(metaitem('dustLead') * 4, metaitem('dustPlatinum') * 2, metaitem('dustBlueSteel'), metaitem('dustOsmium'), item('thermalfoundation:material', 895))
-	.fluidInputs(fluid('mana') * 1000)
-	.circuitMeta(5)
-	.fluidOutputs(fluid('molten.enderium') * 576)
-	.property('temperature', 6400)
-	.duration(9600)
-	.EUt(VA[LuV])
-	.buildAndRegister()
-
-// Fluxed Electrum (Adds Mana Dust)
-mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('electrum_flux')], null, null)
-
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs([metaitem('dustElectrum') * 6, metaitem('nomilabs:dustLumium'), metaitem('nomilabs:dustSignalum'), ore('dustMana')])
-	.fluidInputs(fluid('nitrogen') * 8000)
-	.fluidOutputs(fluid('electrum_flux') * 1296)
-	.circuitMeta(14)
-	.property('temperature', 1100)
-	.duration(6432)
-	.EUt(VA[EV])
-	.buildAndRegister()
-
-mods.gregtech.alloy_blast_smelter.recipeBuilder()
-	.inputs([metaitem('dustElectrum') * 6, metaitem('nomilabs:dustLumium'), metaitem('nomilabs:dustSignalum'), ore('dustMana')])
-	.fluidOutputs(fluid('electrum_flux') * 1296)
-	.circuitMeta(4)
-	.property('temperature', 1100)
-	.duration(9600)
-	.EUt(VA[EV])
-	.buildAndRegister()
+// Fluxed Electrum
+mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('electrum_flux')])
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder {RecipeBuilder recipe ->
+			recipe.inputs(ore('dustMana'))
+		}.changeCircuitMeta { meta -> meta + 1 }
+		.copyProperties(TemperatureProperty.instance)
+		.replaceAndRegister()
+	}
 
 if (LabsModeHelper.normal) {
-	mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('red_alloy')], null, null)
-
-	mods.gregtech.alloy_blast_smelter.recipeBuilder()
-		.inputs(ore('dustCopper') * 2, item('minecraft:redstone') * 3)
-		.circuitMeta(2)
-		.property('temperature', 1400)
-		.fluidOutputs(fluid('red_alloy') * 288)
-		.duration(75)
-		.EUt(VH[LV])
-		.buildAndRegister()
+	// Red Alloy (Increases Output)
+	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
+		.forEach { ChangeRecipeBuilder builder ->
+			builder.clearCircuitMeta()
+				.changeEachFluidOutput { FluidStack fluid ->
+					fluid.amount *= 2
+					return fluid
+				}
+				.builder { RecipeBuilder recipe ->
+					recipe.clearInputs()
+						.inputs(ore('dustCopper') * 2, item('minecraft:redstone') * 3)
+						.circuitMeta(2)
+				}.replaceAndRegister()
+		}
 
 	// Red Alloy has DISABLE DECOMPOSITION flag, so we need to replace it ourselves
-	mods.gregtech.centrifuge.removeByInput([metaitem('dustRedAlloy')], null)
-
-	mods.gregtech.centrifuge.recipeBuilder()
-		.inputs(metaitem('dustRedAlloy') * 2)
-		.outputs(item('minecraft:redstone') * 3, metaitem('dustCopper') * 2)
-		.duration(45)
-		.EUt(VA[LV])
-		.buildAndRegister()
+	mods.gregtech.centrifuge.changeByInput([metaitem('dustRedAlloy')], null)
+		.changeEachInput { GTRecipeInput input ->
+			return input.copyWithAmount(2)
+		}.builder { RecipeBuilder recipe ->
+			recipe.clearOutputs()
+				.outputs(item('minecraft:redstone') * 3, metaitem('dustCopper') * 2)
+		}.replaceAndRegister()
 }

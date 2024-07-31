@@ -1,4 +1,6 @@
+import com.cleanroommc.groovyscript.api.IIngredient
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
+import com.nomiceu.nomilabs.groovy.ShapedDummyRecipe
 import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
@@ -39,11 +41,21 @@ for (ItemStack stack : items) {
 		for (boolean front : [true, false]) {
 			def recipeName = getRecipeName(stack, trim, front)
 			def recipeStack = addNBT(stack, trim, front)
-			crafting.addShaped(recipeName, recipeStack, [
-				[item("xtones:zane"), trim ? item("extendedcrafting:storage", 4) : null, null],
-				[front ? item("xtones:zane", 15) : null, stack, null],
-				[null, null, null]
-			])
+
+			crafting.shapedBuilder()
+				.name(recipeName)
+				.output(recipeStack)
+				.matrix(
+					'ST ',
+					'FS ',
+					'   ')
+				.key('S', item("xtones:zane"))
+				.key('T', trim ? item("extendedcrafting:storage", 4) : IIngredient.EMPTY)
+				.key('F', front ? item("xtones:zane", 15) : IIngredient.EMPTY)
+				.key('S', stack)
+				.recipeClassFunction((output, width, height, ingredients) -> new ShapedDummyRecipe(output, ingredients, width, height, false))
+				.register()
+
 			addRecipeOutputTooltip(recipeStack, resource(recipeName),
 				ItemMeta.compare(tool, recipeStack) ?
 					translatable("nomiceu.tooltip.labs.hand_framing.tool") :
