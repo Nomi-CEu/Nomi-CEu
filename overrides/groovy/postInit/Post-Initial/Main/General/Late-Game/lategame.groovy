@@ -1,7 +1,28 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.builders.ImplosionRecipeBuilder
+import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
+
+// Omnium Implosion Compressor Recipes
+ImplosionRecipeBuilder builder = mods.gregtech.implosion_compressor.recipeBuilder()
+	.inputs(item('extendedcrafting:singularity_ultimate'))
+	.outputs(item('extendedcrafting:material:33'))
+	.chancedOutput(item('gregtech:meta_dust', 275), 2500, 0)
+	.duration(20).EUt(VA[LV])
+
+// TNT
+builder.copy()
+	.explosivesAmount(8)
+	.buildAndRegister()
+
+// Other Explosives
+for (ItemStack explosive : [item('gregtech:powderbarrel') * 16, metaitem('dynamite') * 4, item('gregtech:itnt') * 2]) {
+	builder.copy()
+		.explosivesType(explosive)
+		.buildAndRegister()
+}
 
 if (LabsModeHelper.normal) {
 	// Assembly Control Casing (Change from Output 2 to Output 4)

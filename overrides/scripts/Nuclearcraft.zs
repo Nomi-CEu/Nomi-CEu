@@ -56,18 +56,6 @@ for jeiCategory in jeiCategories {
 }
 
 function purgeFluidFromJEI(fluid as string) {
-    // gtce various metal cells
-    val containers = [<metaitem:large_fluid_cell.steel>,
-                      <metaitem:fluid_cell>,
-                      <metaitem:large_fluid_cell.tungstensteel>] as IItemStack[];
-
-    // remove from various GT containers
-    for container in containers {
-        mods.jei.JEI.removeAndHide(container.withTag({Fluid: {FluidName: fluid, Amount: 1000}}));
-    }
-
-    // Different tag schemas...
-//    mods.jei.JEI.removeAndHide(<ceramics:clay_bucket>.withTag({fluids: {FluidName: fluid, Amount: 1000}}));
     mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: fluid, Amount: 1000}));
 }
 
@@ -596,102 +584,6 @@ alloy.recipeBuilder()
     .outputs([<nuclearcraft:alloy:6> * 2])
     .inputs([<ore:dustSteel>, <ore:dustBoron>])
     .duration(300).EUt(16).buildAndRegister();
-
-
-// remove table recipes for coolers and replace with canning machine recipes
-
-recipes.remove(<nuclearcraft:cooler:1>);
-fluid_canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:1>])
-    .inputs([<nuclearcraft:cooler>])
-    .fluidInputs([<liquid:water> * 1000])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:2>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:2>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustRedstone> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:3>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:3>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustNetherQuartz> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:4>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:4>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustGold> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:5>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:5>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustGlowstone> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:6>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:6>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustLapis> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:7>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:7>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustDiamond> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:8>);
-fluid_canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:8>])
-    .inputs([<nuclearcraft:cooler>])
-    .fluidInputs([<liquid:helium> * 1000])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:9>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:9>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustEnderium> * 16])
-    .duration(400).EUt(9).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:10>);
-fluid_canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:10>])
-    .inputs([<nuclearcraft:cooler>])
-    .fluidInputs([<liquid:cryotheum> * 1000])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:11>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:11>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustIron> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:12>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:12>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustEmerald> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:13>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:13>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustCopper> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:14>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:14>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustTin> * 16])
-    .duration(400).EUt(2).buildAndRegister();
-
-recipes.remove(<nuclearcraft:cooler:15>);
-canner.recipeBuilder()
-    .outputs([<nuclearcraft:cooler:15>])
-    .inputs([<nuclearcraft:cooler>, <ore:dustMagnesium> * 16])
-    .duration(400).EUt(2).buildAndRegister();
 
 //Uranium RTG
 recipes.remove(<nuclearcraft:rtg_uranium>);
