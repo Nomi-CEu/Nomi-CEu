@@ -103,7 +103,7 @@ mods.gregtech.assembly_line.recipeBuilder()
 	.fluidInputs(fluid('soldering_alloy') * 1152, fluid('omnium') * 288)
 	.outputs(metaitem('nomilabs:naquadah_reactor_2'))
 	.stationResearch(b -> b.researchStack(metaitem('nomilabs:naquadah_reactor_1')).CWUt(64).EUt(VA[UV]))
-	.duration(1500).EUt(VA[ZPM])
+	.duration(1500).EUt(VA[UV])
 	.buildAndRegister()
 
 // Universal Navigator
