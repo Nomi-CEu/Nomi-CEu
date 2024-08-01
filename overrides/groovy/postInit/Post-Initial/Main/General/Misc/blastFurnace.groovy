@@ -3,7 +3,6 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.ingredients.GTRecipeInput
 import gregtech.api.recipes.recipeproperties.TemperatureProperty
-import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
 // Lumium
