@@ -15,6 +15,13 @@ material('rhodium_plated_palladium')
 	.changeChemicalFormula()
 	.change()
 
+material('glowstone')
+	.changeComposition()
+	.setComponents([metaitem('dustGold'), metaitem('dustTricalciumPhosphate')])
+	.changeDecompositionRecipes()
+	.changeChemicalFormula()
+	.change()
+
 /* Black Steel */
 
 // Can't use change composition to remove, as that is only performed at the end of running scripts, and if not removed, conflicts will occur.
