@@ -287,6 +287,12 @@ makeShaped("of_impossiblerealmdata_x4", <nomilabs:impossiblerealmdata> * 4,
 	{ E : <actuallyadditions:item_solidified_experience>,
 	  X : <deepmoblearning:living_matter_extraterrestrial> });
 
+extractor.recipeBuilder()
+    .inputs(<nomilabs:impossiblerealmdata>)
+    .outputs([<nomilabs:quantumflux>])
+    .duration(100).EUt(3000)
+    .buildAndRegister();
+
 // Dragon Lair Data
 makeShapeless3("of_dragonlairdata", <nomilabs:dragonlairdata>,
 	["IHH",
