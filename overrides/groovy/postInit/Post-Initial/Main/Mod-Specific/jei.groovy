@@ -22,26 +22,29 @@ if (LabsModeHelper.expert) {
 
 /* Remove Categories (Appear Randomly after /gs reload) */
 // EIO
-mods.jei.category.hideCategory("CombustionGenerator")
-mods.jei.category.hideCategory("Enchanter")
-mods.jei.category.hideCategory("GrindingBall")
-mods.jei.category.hideCategory("SagMill")
-mods.jei.category.hideCategory("SolarPanel")
-mods.jei.category.hideCategory("StirlingGenerator")
+mods.jei.category.hideCategory('CombustionGenerator')
+mods.jei.category.hideCategory('Enchanter')
+mods.jei.category.hideCategory('GrindingBall')
+mods.jei.category.hideCategory('SagMill')
+mods.jei.category.hideCategory('SolarPanel')
+mods.jei.category.hideCategory('StirlingGenerator')
 
 // AR
-mods.jei.category.hideCategory("zmaster587.AR.rollingMachine")
-mods.jei.category.hideCategory("zmaster587.AR.lathe")
-mods.jei.category.hideCategory("zmaster587.AR.precisionAssembler")
-mods.jei.category.hideCategory("zmaster587.AR.sawMill")
-mods.jei.category.hideCategory("zmaster587.AR.chemicalReactor")
-mods.jei.category.hideCategory("zmaster587.AR.crystallizer")
-mods.jei.category.hideCategory("zmaster587.AR.electrolyzer")
-mods.jei.category.hideCategory("zmaster587.AR.arcFurnace")
-mods.jei.category.hideCategory("zmaster587.AR.platePresser")
-mods.jei.category.hideCategory("zmaster587.AR.centrifuge")
+mods.jei.category.hideCategory('zmaster587.AR.rollingMachine')
+mods.jei.category.hideCategory('zmaster587.AR.lathe')
+mods.jei.category.hideCategory('zmaster587.AR.precisionAssembler')
+mods.jei.category.hideCategory('zmaster587.AR.sawMill')
+mods.jei.category.hideCategory('zmaster587.AR.chemicalReactor')
+mods.jei.category.hideCategory('zmaster587.AR.crystallizer')
+mods.jei.category.hideCategory('zmaster587.AR.electrolyzer')
+mods.jei.category.hideCategory('zmaster587.AR.arcFurnace')
+mods.jei.category.hideCategory('zmaster587.AR.platePresser')
+mods.jei.category.hideCategory('zmaster587.AR.centrifuge')
+
+// Armor Plus
+mods.jei.category.hideCategory('armorplus:workbench')
 
 // Vanilla
 if (LabsModeHelper.expert) {
-    mods.jei.category.hideCategory("jeresources.mob")
+    mods.jei.category.hideCategory('jeresources.mob')
 }
