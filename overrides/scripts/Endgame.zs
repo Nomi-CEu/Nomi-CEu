@@ -78,12 +78,6 @@ blast_furnace.recipeBuilder()
 
 recipes.addShapeless(<avaritia:resource:2> * 9, [<metaitem:nuggetNeutronium>]);
 
-
-extractor.recipeBuilder()
-    .inputs(<nomilabs:impossiblerealmdata>)
-    .outputs([<nomilabs:quantumflux>])
-    .duration(100).EUt(3000).buildAndRegister();
-
 recipes.remove(<extrautils2:rainbowgenerator>);
 makeShaped("of_rainbow_generator", <extrautils2:rainbowgenerator>,
     ["OTO",
