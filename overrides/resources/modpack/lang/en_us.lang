@@ -1,3 +1,4 @@
+# No Nether Portals
 nomifactory.nonetherportals=Nether portals are disabled in §5Nomi-CEu§r. Follow the quest book to unlock §6Nether Cakes§r!
 
 # Tooltips
@@ -40,14 +41,8 @@ nomiceu.tooltip.ae2.pure_certus_quartz=§aMade in a Crystal Growth Chamber from 
 nomiceu.tooltip.ae2.pure_nether_quartz=§aMade in a Crystal Growth Chamber from a Nether Quartz Seed.§r
 nomiceu.tooltip.ae2.pure_fluix=§aMade in a Crystal Growth Chamber from a Fluix Seed.§r
 nomiceu.tooltip.ae2.charged_certus=§bObtained by charging with RF power in the AE2 Charger, or the Energetic Infuser.§r
-nomiceu.tooltip.ae2.p2p_me=§aThe basis for all other P2P Tunnels.§r
-nomiceu.tooltip.ae2.p2p_rf=§aMade by right-clicking a ME P2P Tunnel with an energy conduit.§r
-nomiceu.tooltip.ae2.p2p_fluid=§aMade by right-clicking a ME P2P Tunnel with a bucket.§r
-nomiceu.tooltip.ae2.p2p_item=§aMade by right-clicking a ME P2P Tunnel with a chest.§r
-nomiceu.tooltip.ae2.p2p_light=§aMade by right-clicking a ME P2P Tunnel with a torch.§r
-nomiceu.tooltip.ae2.p2p_redstone=§aMade by right-clicking a ME P2P Tunnel with redstone.§r
-nomiceu.tooltip.ae2.p2p_eu=§aMade by right-clicking a ME P2P Tunnel with any GregTech wire or cable.§r
-nomiceu.tooltip.ae2.p2p_interface=§aMade by right-clicking a ME P2P Tunnel with an interface.§r
+nomiceu.tooltip.ae2.p2p.me=§bThe basis for all other P2P Tunnels.§r
+nomiceu.tooltip.ae2.p2p.desc=§aShift and scroll whilst holding to cycle through P2P types!§r
 nomiceu.tooltip.ae2.channels_not_enabled=Channels not enabled!
 nomiceu.tooltip.ae2.controller=§bThe ME Controller reduces your AE2 system's power consumption!§r
 nomiceu.tooltip.ae2.dense=§bFor decoration!§r
@@ -55,6 +50,7 @@ nomiceu.tooltip.ae2.facade=§3AE2 facades can be made from most non-tile-entitie
 nomiceu.tooltip.ae2.crafting_storage=§ePlace this into a Crafting Grid to recycle it!§r
 nomiceu.tooltip.ae2.storage_cell=§eShift Right Click whilst holding this to recycle it!§r
 nomiceu.tooltip.ae2.quartz_knife=§eRight Click on placed ME parts to rename them... for free!§r
+nomiceu.tooltip.ae2.p2p_reset_me_shapeless=§5Reset P2Ps back to ME P2Ps!§r
 
 # Dimensional Edibles
 nomiceu.tooltip.dimensionaledibles.island_cake.1=§aUsed by Server Owners to send FTB Teams and Individuals to their Personal Islands!§r
@@ -77,16 +73,19 @@ nomiceu.tooltip.gregtech.prospector.4=Use JEI to check the potential vein depth.
 nomiceu.tooltip.gregtech.facade.1=§3GTCEu facades can be made from most non-tile-entities.§r
 nomiceu.tooltip.gregtech.facade.2=§3They craft into different amounts based on the metal used!§r
 
-# Extended Crafting
-nomiceu.tooltip.extendedcrafting.black_steel.omnium.1=Block of Black Steel
-nomiceu.tooltip.extendedcrafting.black_steel.omnium.2=§7Omnium Trimmed§r
-
 # Ender IO
 tooltip.fused_glass.make=Made with §6Tempered Glass§r and §7White Dye§r
 tooltip.eio_glass.dye=Can be §bDyed§r!
 
 # Project Red
 nomiceu.tooltip.projectred.wire=§eFor use with ProjectRed.§r
+
+# Nomi Labs
+nomiceu.tooltip.labs.hand_framing.tool=§5Frame your Hand Framing Tool by Hand!§r
+nomiceu.tooltip.labs.hand_framing.drawer=§5Frame your Drawers by Hand!§r
+nomiceu.tooltip.labs.hand_framing.top_left=§5Top Left: §oSide§r
+nomiceu.tooltip.labs.hand_framing.top_right=§5Top Right: §oTrim§r
+nomiceu.tooltip.labs.hand_framing.bottom_left=§5Bottom Left: §oFront§r
 
 # XTones
 nomiceu.tooltip.xtones.lamp=§eRequires a redstone signal to light.§r

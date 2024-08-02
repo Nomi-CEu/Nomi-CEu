@@ -4,23 +4,11 @@
   "version": "1.0.0",
   "debug": false,
   "classes": {
-    "preInit": [
-      "classes/preInit/"
-    ],
-    "init": [
-      "classes/init"
-    ],
     "postInit": [
       "classes/postInit"
     ]
   },
   "loaders": {
-    "preInit": [
-      "preInit/"
-    ],
-    "init": [
-      "init/"
-    ],
     "postInit": [
       "postInit/Initial",
       "postInit/Post-Initial",

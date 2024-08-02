@@ -13,7 +13,7 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
 
-//Copper Furnace
+// Copper Furnace
 replaceRecipeInput(item('morefurnaces:furnaceblock', 5), [
 	[ore('ingotCopper'), ore('ingotCopper'), ore('ingotCopper')],
 	[ore('ingotCopper'), item('morefurnaces:furnaceblock'), ore('ingotCopper')],
@@ -26,7 +26,7 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
 
-//Silver Furnace
+// Silver Furnace
 replaceRecipeInput(item('morefurnaces:furnaceblock', 6), [
 	[ore('ingotSilver'), ore('ingotSilver'), ore('ingotSilver')],
 	[ore('ingotSilver'), item('morefurnaces:furnaceblock', 5), ore('ingotSilver')],
@@ -39,7 +39,7 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
 
-//Gold Furnace
+// Gold Furnace
 replaceRecipeInput(item('morefurnaces:furnaceblock', 1), [
 	[item('minecraft:gold_ingot'), item('minecraft:gold_ingot'), item('minecraft:gold_ingot')],
 	[item('minecraft:gold_ingot'), item('morefurnaces:furnaceblock', 6), item('minecraft:gold_ingot')],
@@ -52,7 +52,7 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
 
-//Diamond Furnace
+// Diamond Furnace
 replaceRecipeInput(item('morefurnaces:furnaceblock', 2), [
 	[item('minecraft:diamond'), item('minecraft:diamond'), item('minecraft:diamond')],
 	[item('minecraft:diamond'), item('morefurnaces:furnaceblock', 1), item('minecraft:diamond')],
@@ -65,7 +65,7 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(100).EUt(VA[ULV])
 	.buildAndRegister()
 
-//Obsidian Furnace
+// Obsidian Furnace
 replaceRecipeInput(item('morefurnaces:furnaceblock', 3), [
 	[item('minecraft:obsidian'), item('minecraft:obsidian'), item('minecraft:obsidian')],
 	[item('morefurnaces:furnaceblock', 2), item('minecraft:obsidian'), item('morefurnaces:furnaceblock', 2)],
@@ -102,7 +102,6 @@ if (LabsModeHelper.expert) {
 		.outputs(item('actuallyadditions:item_misc', 16))
 		.duration(100).EUt(VA[ULV])
 		.buildAndRegister()
-
 }
 
 // Coated Circuit Board
@@ -115,10 +114,8 @@ mods.gregtech.assembler.recipeBuilder()
 	.buildAndRegister()
 
 // Circuit Board (Move from Wood Plate + Glue + Foil to Coated Circuit Board + Foil)
-mods.gregtech.assembler.removeByOutput([metaitem('circuit_board.basic')], null, null, null) 
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('board.coated'), ore('foilCopper') * 4)
 	.outputs(metaitem('circuit_board.basic'))
 	.duration(100).EUt(VA[ULV])
-	.buildAndRegister()
-
+	.replace().buildAndRegister()

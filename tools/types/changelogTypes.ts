@@ -134,7 +134,7 @@ export interface SpecialChangelogFormatting<T> {
 		subMessage: boolean,
 		indentation: string,
 		storage?: T,
-	) => string;
+	) => Promise<string>;
 
 	/**
 	 * Storage

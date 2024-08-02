@@ -82,6 +82,25 @@ fixItemFluidTooltip(item('actuallyadditions:block_refined_canola_oil'), fluid('r
 fixItemFluidTooltip(item('actuallyadditions:block_crystal_oil'), fluid('crystaloil'))
 fixItemFluidTooltip(item('actuallyadditions:block_empowered_oil'), fluid('empoweredoil'))
 
+/* NuclearCraft */
+
+// Fixes (With Tooltip)
+fixItemFluidTooltip(item('nuclearcraft:fluid_chocolate_liquor'), fluid('chocolate_liquor'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_cocoa_butter'), fluid('cocoa_butter'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_unsweetened_chocolate'), fluid('unsweetened_chocolate'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_dark_chocolate'), fluid('dark_chocolate'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_milk_chocolate'), fluid('milk_chocolate'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_sugar'), fluid('sugar'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_gelatin'), fluid('gelatin'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_hydrated_gelatin'), fluid('hydrated_gelatin'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_marshmallow'), fluid('marshmallow'))
+
+// Tooltip Additions
+addFluidTooltip(fluid('quartz'))
+addFluidTooltip(fluid('lapis'))
+addFluidTooltip(fluid('diamond'))
+addFluidTooltip(fluid('emerald'))
+
 /* Util Functions */
 
 /**

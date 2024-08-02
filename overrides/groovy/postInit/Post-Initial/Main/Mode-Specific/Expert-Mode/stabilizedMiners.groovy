@@ -1,4 +1,5 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import net.minecraft.item.ItemStack
 
 import static gregtech.api.GTValues.*
 
@@ -20,5 +21,6 @@ void createStabilizedMinerRecipe(ItemStack nonStab, ItemStack stab) {
 		.inputs(nonStab, item('nomilabs:heartofauniverse'), item('draconicevolution:chaos_shard') * 4, metaitem('field.generator.uv') * 24, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7)
 		.fluidInputs(fluid('rocket_fuel') * 48000, fluid('omnium') * 576, fluid('neutronium') * 576)
 		.outputs(stab)
-		.duration(2500).EUt(VA[UHV]).buildAndRegister()
+		.duration(2500).EUt(VA[UHV])
+		.buildAndRegister()
 }

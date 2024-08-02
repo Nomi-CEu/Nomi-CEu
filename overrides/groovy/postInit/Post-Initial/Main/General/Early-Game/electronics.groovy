@@ -1,4 +1,5 @@
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static gregtech.api.GTValues.*
 
 // Pyrolyse Oven
 replaceRecipeInput(metaitem('pyrolyse_oven'), [
@@ -7,15 +8,13 @@ replaceRecipeInput(metaitem('pyrolyse_oven'), [
 	[metaitem('electric.piston.lv'), metaitem('electric.pump.lv'), ore('wireGtQuadrupleCupronickel')]])
 
 // HV Coil
-mods.gregtech.assembler.removeByInput(480, [metaitem('stickSteelMagnetic'), metaitem('wireFineBlackSteel') * 16, metaitem('circuit.integrated').withNbt([Configuration: 1])], null)
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('stickSteelMagnetic'), metaitem('wireFineSilver') * 16)
 	.circuitMeta(1)
 	.outputs(metaitem('voltage_coil.hv'))
 	.changeRecycling()
-	.duration(200)
-	.EUt(480)
-	.buildAndRegister()
+	.duration(200).EUt(VA[HV])
+	.replace().buildAndRegister()
 
 // Refresh HV Energy and HV Dynamo Recipes
 // Since stacks are not stored, they cannot simply be reloaded, we must recall.

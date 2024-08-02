@@ -462,16 +462,6 @@ brewery.recipeBuilder()
 	.property("cleanroom", "sterile_cleanroom")
     .duration(128).EUt(4).buildAndRegister();
 
-// Taranium in UV Fieldgen
-// UV Field Generator * 1
-<recipemap:assembly_line>.findRecipe(100000, [<metaitem:frameTritanium>, <metaitem:plateTritanium> * 6, <metaitem:gravistar>, <metaitem:emitter.uv> * 2, <metaitem:circuit.crystal_mainframe> * 2, <metaitem:wireFineEnrichedNaquadahTriniumEuropiumDuranide> * 64, <metaitem:wireFineEnrichedNaquadahTriniumEuropiumDuranide> * 64, <metaitem:cableGtSingleYttriumBariumCuprate> * 4], [<liquid:soldering_alloy> * 1728, <liquid:naquadria> * 576]).remove();
-
-assembly_line.recipeBuilder()
-    .inputs(<metaitem:frameTritanium>, <metaitem:plateTritanium> * 6, <metaitem:gravistar>, <metaitem:emitter.uv> * 2, <ore:circuitUv> * 2, <metaitem:wireFineEnrichedNaquadahTriniumEuropiumDuranide> * 64, <metaitem:wireFineEnrichedNaquadahTriniumEuropiumDuranide> * 64, <metaitem:cableGtSingleYttriumBariumCuprate> * 4)
-    .fluidInputs(<liquid:soldering_alloy> * 1728, <liquid:naquadria> * 576, <liquid:taranium> * 288)
-    .outputs(<metaitem:field.generator.uv>)
-    .duration(600).EUt(100000).buildAndRegister();
-
 // Parallel Hatches
 recipes.removeByRecipeName("gcym:parallel_hatch_iv");
 recipes.removeByRecipeName("gcym:parallel_hatch_luv");

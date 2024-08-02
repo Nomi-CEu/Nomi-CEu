@@ -1,10 +1,10 @@
 import net.minecraft.item.ItemStack
-import classes.postInit.EioPrefixes
+import classes.postInit.Common
 
-/* Cleanup EIO Glasses in JEI
+/* Cleanup EIO Glasses in JEI, removing the dyed versions of each variant of glass
  * Since we are lazy, remove all, then add back the original
  */
-for (var stack in EioPrefixes.getAllItems()) {
+for (var stack in Common.eioGlasses) {
 	mods.jei.ingredient.hide(new ItemStack(stack.getItem(), 1, Short.MAX_VALUE))
 	mods.jei.ingredient.add(stack.copy())
 }

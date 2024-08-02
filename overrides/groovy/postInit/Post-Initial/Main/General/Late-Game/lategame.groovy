@@ -1,7 +1,28 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.builders.ImplosionRecipeBuilder
+import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
+
+// Omnium Implosion Compressor Recipes
+ImplosionRecipeBuilder builder = mods.gregtech.implosion_compressor.recipeBuilder()
+	.inputs(item('extendedcrafting:singularity_ultimate'))
+	.outputs(item('extendedcrafting:material:33'))
+	.chancedOutput(item('gregtech:meta_dust', 275), 2500, 0)
+	.duration(20).EUt(VA[LV])
+
+// TNT
+builder.copy()
+	.explosivesAmount(8)
+	.buildAndRegister()
+
+// Other Explosives
+for (ItemStack explosive : [item('gregtech:powderbarrel') * 16, metaitem('dynamite') * 4, item('gregtech:itnt') * 2]) {
+	builder.copy()
+		.explosivesType(explosive)
+		.buildAndRegister()
+}
 
 if (LabsModeHelper.normal) {
 	// Assembly Control Casing (Change from Output 2 to Output 4)
@@ -22,14 +43,12 @@ if (LabsModeHelper.normal) {
 	])
 
 	// Computer Casing
-	mods.gregtech.assembler.removeByOutput([item('gregtech:computer_casing')], null, null, null)
-
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('frameIridium'), metaitem('plateIridium') * 6, ore('circuitLuv') * 2, metaitem('wireFineCobalt') * 64, metaitem('wireFineCopper') * 64, metaitem('wireGtSingleVanadiumGallium') * 4)
 		.outputs(item('gregtech:computer_casing') * 4)
 		.changeRecycling()
 		.duration(400).EUt(VA[LuV])
-		.buildAndRegister()
+		.replace().buildAndRegister()
 }
 
 // UHV Batbufs
@@ -54,16 +73,17 @@ createRecipe(metaitem('charger.uhv'), [
 
 // HM Ore Drilling Plants
 if (LabsModeHelper.expert) {
-	mods.gregtech.assembler.removeByOutput([metaitem('large_miner.ev')], null, null, null)
-	mods.gregtech.assembler.removeByOutput([metaitem('large_miner.iv')], null, null, null)
-	mods.gregtech.assembler.removeByOutput([metaitem('large_miner.luv')], null, null, null)
+	// Must Remove Manually as RecipeMap changed
+	mods.gregtech.assembler.removeByOutput([metaitem('large_miner.iv')], null)
+	mods.gregtech.assembler.removeByOutput([metaitem('large_miner.luv')], null)
 
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(metaitem('hull.iv'))
 		.inputWildNBT(item('redstonearsenal:tool.pickaxe_flux'))
 		.inputs(item('nomilabs:t3laser') * 12, metaitem('frameStainlessSteel') * 12, metaitem('sensor.iv') * 6, metaitem('conveyor.module.iv') * 12, metaitem('fluid.regulator.iv') * 12, metaitem('gearTungstenSteel') * 12)
 		.outputs(metaitem('large_miner.ev'))
-		.duration(400).EUt(VA[IV]).buildAndRegister()
+		.duration(400).EUt(VA[IV])
+		.replace().buildAndRegister()
 
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('hull.zpm'))
@@ -74,7 +94,8 @@ if (LabsModeHelper.expert) {
 		.fluidInputs(fluid('concrete') * 2304)
 		.outputs(metaitem('large_miner.iv'))
 		.stationResearch(b -> b.researchStack(metaitem('large_miner.ev')).CWUt(16))
-		.duration(800).EUt(VA[ZPM]).buildAndRegister()
+		.duration(800).EUt(VA[ZPM])
+		.buildAndRegister()
 
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('hull.uhv'))
@@ -83,7 +104,8 @@ if (LabsModeHelper.expert) {
 		.fluidInputs(fluid('concrete') * 2304, fluid('taranium') * 576)
 		.outputs(metaitem('large_miner.luv'))
 		.stationResearch(b -> b.researchStack(metaitem('large_miner.iv')).CWUt(128))
-		.duration(800).EUt(VA[UHV]).buildAndRegister()
+		.duration(800).EUt(VA[UHV])
+		.buildAndRegister()
 }
 
 // World Accelerator HV

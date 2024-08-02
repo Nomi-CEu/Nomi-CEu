@@ -33,7 +33,6 @@ void replaceRecipe(int minTier, int maxTier, IIngredient oreDict) {
 		// Direct call to MetaTileEntity
 		def diode = callInstanceMethodOfClass(MetaTileEntity.class, MetaTileEntities.DIODES[tier], "getStackForm", null)
 
-		crafting.removeByOutput(diode)
 		crafting.shapedBuilder()
 			.output(diode)
 			.matrix("CDC", "DHD", "PDP")
@@ -41,7 +40,7 @@ void replaceRecipe(int minTier, int maxTier, IIngredient oreDict) {
 			.key('D', oreDict)
 			.key('P', plate)
 			.key('C', cable)
-			.register()
+			.replace().register()
 	}
 }
 

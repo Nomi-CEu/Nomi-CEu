@@ -1,3 +1,8 @@
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
+import gregtech.api.recipes.RecipeBuilder
+import gregtech.api.recipes.ingredients.GTRecipeInput
+import net.minecraftforge.fluids.FluidStack
+
 import static gregtech.api.GTValues.*
 
 // Rhodium Plated Palladium -> Rhodium Plated Lumium-Palladium
@@ -10,43 +15,53 @@ material('rhodium_plated_palladium')
 	.changeChemicalFormula()
 	.change()
 
-// Can't use change composition to remove, as that is only performed at the end of running scripts, and if not removed, conflicts will occur.
-// TODO Make this use change composition when that accepts non-material Item Stacks
+material('glowstone')
+	.changeComposition()
+	.setComponents([metaitem('dustGold'), metaitem('dustTricalciumPhosphate')])
+	.changeDecompositionRecipes()
+	.changeChemicalFormula()
+	.change()
 
 /* Black Steel */
 
-// Remove ABS Recipes
-mods.gregtech.alloy_blast_smelter.removeByOutput(null, [fluid('black_steel')], null, null)
+// Can't use change composition to remove, as that is only performed at the end of running scripts, and if not removed, conflicts will occur.
+// TODO Make this use change composition when that accepts non-material Item Stacks
 
-// Remove Mixer Recipes
-mods.gregtech.mixer.removeByOutput([metaitem('dustBlackSteel')], null, null, null)
+// Change ABS Recipes
+mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('black_steel')])
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.clearInputs()
+				.inputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
+		}.changeCircuitMeta { meta -> meta + 1 }
+		.changeEachFluidOutput { FluidStack fluid -> return fluid * (L * 9) }
+		.replaceAndRegister()
+	}
 
-// Remove Decomp Recipe
-mods.gregtech.centrifuge.removeByInput([metaitem('dustBlackSteel')], null)
+/* Change Mixer Recipes */
+mods.gregtech.mixer.removeByOutput([metaitem('dustBlackSteel')], null)
 
 // Normal Mixer Recipe
 mods.gregtech.mixer.recipeBuilder()
 	.inputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
 	.outputs(metaitem('dustBlackSteel') * 9)
-	.EUt(VHA[LV]).duration(200)
+	.duration(200).EUt(VHA[LV])
 	.buildAndRegister()
 
-/* Black Steel Shortcut */
-// Normal recipe would be 50 ticks per recipe at HV overclock, plus 125 ticks for the Black Bronze step,
-// for a total of 375 ticks. This recipe is 5 batches at once, so is equivalent time but saves a step.
+// Shortcut Mixer Recipe
 mods.gregtech.mixer.recipeBuilder()
 	.inputs(metaitem('dustSteel') * 15, metaitem('dustCopper') * 6, metaitem('dustGold') * 2, metaitem('dustSilver') * 2, item('actuallyadditions:item_crystal', 3) * 10, item('extrautils2:ingredients', 4) * 10)
 	.outputs(metaitem('dustBlackSteel') * 45)
-	.EUt(VHA[HV]).duration(375)
+	.duration(300).EUt(VHA[HV])
 	.buildAndRegister()
 
-// Decomp Recipe
-mods.gregtech.centrifuge.recipeBuilder()
-	.inputs(metaitem('dustBlackSteel') * 9)
-	.outputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
-	.EUt(VA[LV] * 2)
-	.duration(480)
-	.buildAndRegister()
+// Change Decomp Recipe
+mods.gregtech.centrifuge.changeByInput([metaitem('dustBlackSteel')], null)
+	.changeEachInput { GTRecipeInput input -> input.copyWithAmount(9) }
+		.builder { RecipeBuilder recipe ->
+			recipe.clearOutputs()
+				.outputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
+		}.replaceAndRegister()
 
 // Change Chem Formula
 material('black_steel')
