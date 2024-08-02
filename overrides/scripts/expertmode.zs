@@ -507,12 +507,6 @@ val dml as IMod = loadedMods["deepmoblearning"];
 
 if(!isNull(dml)) {
     val dmlItems as IItemStack[] = dml.items;
-	
-	mods.jei.JEI.hideCategory("deepmoblearning.simulation_chamber");
-	mods.jei.JEI.hideCategory("deepmoblearning.extraction_chamber");
-    
-    // No JEI recipes for Trial Keystones yet
-	// mods.jei.JEI.hideCategory("deepmoblearning.trial_keystone");
 
 	//remove everything
     for item in dmlItems {

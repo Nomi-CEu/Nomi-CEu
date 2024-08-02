@@ -21,6 +21,16 @@ if (LabsModeHelper.expert) {
 }
 
 /* Remove Categories (Appear Randomly after /gs reload) */
+// Avatitia
+mods.jei.category.hideCategory('Avatitia.Extreme')
+
+// DME
+if (LabsModeHelper.expert) {
+	mods.jei.category.hideCategory('deepmoblearning.simulation_chamber')
+	mods.jei.category.hideCategory('deepmoblearning.extraction_chamber')
+	mods.jei.category.hideCategory('deepmoblearning.trial_keystone')
+}
+
 // EIO
 mods.jei.category.hideCategory('CombustionGenerator')
 mods.jei.category.hideCategory('Enchanter')
@@ -42,6 +52,9 @@ mods.jei.category.hideCategory('zmaster587.AR.platePresser')
 mods.jei.category.hideCategory('zmaster587.AR.centrifuge')
 
 // Armor Plus
+mods.jei.category.hideCategory('armorplus:lava_infuser_infusing')
+mods.jei.category.hideCategory('armorplus:high_tech_bench')
+mods.jei.category.hideCategory('armorplus:ulti_tech_bench')
 mods.jei.category.hideCategory('armorplus:workbench')
 
 // Vanilla
