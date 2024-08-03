@@ -59,25 +59,6 @@ blast_furnace.recipeBuilder()
 	.property("temperature", 1200)
 	.duration(135).EUt(120).buildAndRegister();
 
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2])
-	.circuit(3)
-	.fluidOutputs([<liquid:black_steel> * 1296])
-	.property("temperature", 1200)
-	.duration(2880)
-	.EUt(120)
-	.buildAndRegister();
-
-alloy_blast_smelter.recipeBuilder()
-	.inputs([<ore:dustSteel> * 3,<ore:dustBlackBronze> * 2,<actuallyadditions:item_crystal:3> * 2,<extrautils2:ingredients:4> * 2])
-	.fluidInputs([<liquid:nitrogen> * 9000])
-	.circuit(13)
-	.fluidOutputs([<liquid:black_steel> * 1296])
-	.property("temperature", 1200)
-	.duration(1929)
-	.EUt(120)
-	.buildAndRegister();
-
 //Aluminium [tier 2]
 // Reduces the Duration from ~45s to ~20s
 // Aluminium Ingot * 1
