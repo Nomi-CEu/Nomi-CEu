@@ -33,7 +33,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('black_steel')])
 		builder.builder { RecipeBuilder recipe ->
 			recipe.clearInputs()
 				.inputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
-		}.changeCircuitMeta { meta -> meta + 1 }
+		}.changeCircuitMeta { meta -> meta } // Copy Circuit
 		.changeEachFluidOutput { FluidStack fluid -> return fluid * (L * 9) }
 		.replaceAndRegister()
 	}
@@ -58,10 +58,10 @@ mods.gregtech.mixer.recipeBuilder()
 // Change Decomp Recipe
 mods.gregtech.centrifuge.changeByInput([metaitem('dustBlackSteel')], null)
 	.changeEachInput { GTRecipeInput input -> input.copyWithAmount(9) }
-		.builder { RecipeBuilder recipe ->
-			recipe.clearOutputs()
-				.outputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
-		}.replaceAndRegister()
+	.builder { RecipeBuilder recipe ->
+		recipe.clearOutputs()
+			.outputs(metaitem('dustSteel') * 3, metaitem('dustBlackBronze') * 2, item('actuallyadditions:item_crystal', 3) * 2, item('extrautils2:ingredients', 4) * 2)
+	}.replaceAndRegister()
 
 // Change Chem Formula
 material('black_steel')
