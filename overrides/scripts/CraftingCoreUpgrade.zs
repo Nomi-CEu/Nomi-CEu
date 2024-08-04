@@ -53,6 +53,30 @@ var outputInputMap as IIngredient[][IItemStack] = {
 		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil", Amount: 1000}}), 
 		<extendedcrafting:material:15>
 	],
+	#Empowered Void Crystal
+	<actuallyadditions:block_crystal_empowered:3> : [
+		<actuallyadditions:block_crystal:3>, 
+		<ore:gemQuartzBlack>,
+		<ore:ingotDarkSteel>,
+		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil_heavy", Amount: 1000}}), 
+		<extendedcrafting:material:15>
+	],
+	#Empowered Void Crystal
+	<actuallyadditions:block_crystal_empowered:3> : [
+		<actuallyadditions:block_crystal:3>, 
+		<ore:gemQuartzBlack>,
+		<ore:ingotDarkSteel>,
+		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil_medium", Amount: 1000}}), 
+		<extendedcrafting:material:15>
+	],
+	#Empowered Void Crystal
+	<actuallyadditions:block_crystal_empowered:3> : [
+		<actuallyadditions:block_crystal:3>, 
+		<ore:gemQuartzBlack>,
+		<ore:ingotDarkSteel>,
+		<metaitem:fluid_cell>.withTag({Fluid: {FluidName: "oil_light", Amount: 1000}}), 
+		<extendedcrafting:material:15>
+	],
 	#Empowered Emeradic
 	<actuallyadditions:block_crystal_empowered:4> : [
 		<actuallyadditions:block_crystal:4>, 
