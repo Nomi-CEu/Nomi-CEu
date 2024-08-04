@@ -6,9 +6,8 @@ import {
 } from "#globals";
 import * as upath from "upath";
 import * as fs from "fs";
-import gulp, { series, src, symlink } from "gulp";
+import { dest, series, src } from "gulp";
 import buildConfig from "#buildConfig";
-import filter from "gulp-filter";
 
 async function mmcCleanUp() {
 	if (fs.existsSync(mmcDestDirectory)) {
@@ -29,37 +28,34 @@ async function createMMCDirs() {
  * Copies the update notes file.
  */
 function copyMMCUpdateNotes() {
-	return gulp
-		.src("../UPDATENOTES.md", { allowEmpty: true })
-		.pipe(gulp.dest(mmcDestDirectory));
+	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
+		dest(mmcDestDirectory),
+	);
 }
 
 /**
  * Copies the license file.
  */
 async function copyMMCLicense() {
-	return gulp.src("../LICENSE").pipe(gulp.dest(mmcDestDirectory));
+	return src("../LICENSE").pipe(dest(mmcDestDirectory));
 }
 
 /**
  * Copies the changelog file.
  */
 function copyMMCChangelog() {
-	return gulp
-		.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
-		.pipe(gulp.dest(mmcDestDirectory));
+	return src(
+		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+	).pipe(dest(mmcDestDirectory));
 }
 
 /**
  * Copies modpack overrides.
  */
 function copyOverrides() {
-	const f = filter((f) => !f.isDirectory());
 	return src(upath.join(clientDestDirectory, "**/*"), {
 		resolveSymlinks: false,
-	})
-		.pipe(f)
-		.pipe(symlink(upath.join(mmcDestDirectory)));
+	}).pipe(dest(upath.join(mmcDestDirectory)));
 }
 
 /**
@@ -77,14 +73,11 @@ async function renameOverrides() {
  * Copies client & shared mods.
  */
 async function copyMMCModJars() {
-	const f = filter((f) => !f.isDirectory());
 	return src(["*", upath.join("client", "*")], {
 		cwd: modDestDirectory,
 		resolveSymlinks: true,
 		encoding: false,
-	})
-		.pipe(f)
-		.pipe(symlink(upath.join(mmcDestDirectory, ".minecraft", "mods")));
+	}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft", "mods")));
 }
 
 async function createMMCConfig() {

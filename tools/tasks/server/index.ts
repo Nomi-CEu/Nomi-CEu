@@ -2,7 +2,7 @@ import upath from "upath";
 import unzip from "unzipper";
 import through from "through2";
 import mustache from "mustache";
-import gulp, { src, dest, symlink } from "gulp";
+import { src, dest, series } from "gulp";
 import fs from "fs";
 import buildConfig from "#buildConfig";
 import { ForgeProfile } from "#types/forgeProfile.ts";
@@ -24,7 +24,6 @@ import {
 	updateServerProperties,
 } from "../misc/transformFiles.ts";
 import logInfo, { logWarn } from "#utils/log.ts";
-import filter from "gulp-filter";
 
 let g_forgeJar: string | undefined = undefined;
 
@@ -177,29 +176,23 @@ async function downloadMinecraftServer() {
  * Copies server & shared mods.
  */
 async function copyServerMods() {
-	const f = filter((f) => !f.isDirectory());
 	return src(["*", upath.join("server", "*")], {
 		cwd: modDestDirectory,
 		resolveSymlinks: true,
 		encoding: false,
-	})
-		.pipe(f)
-		.pipe(symlink(upath.join(serverDestDirectory, "mods")));
+	}).pipe(dest(upath.join(serverDestDirectory, "mods")));
 }
 
 /**
  * Copies modpack overrides.
  */
 function copyServerOverrides() {
-	const f = filter((f) => !f.isDirectory());
 	return src(buildConfig.copyFromSharedServerGlobs, {
 		cwd: sharedDestDirectory,
 		allowEmpty: true,
 		resolveSymlinks: true,
 		encoding: false,
-	})
-		.pipe(f)
-		.pipe(symlink(upath.join(serverDestDirectory)));
+	}).pipe(dest(upath.join(serverDestDirectory)));
 }
 
 /**
@@ -273,7 +266,7 @@ const updateBuildServerProperties = async () => {
 	await updateServerProperties(serverDestDirectory);
 };
 
-export default gulp.series(
+export default series(
 	serverCleanUp,
 	createServerDirs,
 	downloadForge,

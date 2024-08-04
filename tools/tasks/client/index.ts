@@ -1,4 +1,4 @@
-import gulp, { dest, symlink } from "gulp";
+import { src, dest, series } from "gulp";
 import {
 	clientDestDirectory,
 	modpackManifest,
@@ -11,7 +11,6 @@ import { deleteAsync } from "del";
 import { createModList, ModFileInfo } from "../misc/createModList.ts";
 import dedent from "dedent-js";
 import { cleanupVersion } from "#utils/util.ts";
-import filter from "gulp-filter";
 
 async function clientCleanUp() {
 	return deleteAsync(upath.join(clientDestDirectory, "*"), { force: true });
@@ -65,41 +64,37 @@ async function exportModpackManifest() {
  * Copies the license file.
  */
 async function copyClientLicense() {
-	return gulp.src("../LICENSE").pipe(gulp.dest(clientDestDirectory));
+	return src("../LICENSE").pipe(dest(clientDestDirectory));
 }
 
 /**
  * Copies the update notes file.
  */
 function copyClientUpdateNotes() {
-	return gulp
-		.src("../UPDATENOTES.md", { allowEmpty: true })
-		.pipe(gulp.dest(clientDestDirectory));
+	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
+		dest(clientDestDirectory),
+	);
 }
 
 /**
  * Copies the changelog file.
  */
 function copyClientChangelog() {
-	return gulp
-		.src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"))
-		.pipe(dest(clientDestDirectory));
+	return src(
+		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+	).pipe(dest(clientDestDirectory));
 }
 
 /**
  * Copies modpack overrides.
  */
 function copyClientOverrides() {
-	const f = filter((f) => !f.isDirectory());
-	return gulp
-		.src(buildConfig.copyFromSharedClientGlobs, {
-			cwd: sharedDestDirectory,
-			allowEmpty: true,
-			resolveSymlinks: true,
-			encoding: false,
-		})
-		.pipe(f)
-		.pipe(symlink(upath.join(clientDestDirectory, "overrides")));
+	return src(buildConfig.copyFromSharedClientGlobs, {
+		cwd: sharedDestDirectory,
+		allowEmpty: true,
+		resolveSymlinks: true,
+		encoding: false,
+	}).pipe(dest(upath.join(clientDestDirectory, "overrides")));
 }
 
 /**
@@ -224,7 +219,7 @@ function getTickCross(bool: boolean): string {
 	return '<td class="redCross">&#10006;</td>';
 }
 
-export default gulp.series(
+export default series(
 	clientCleanUp,
 	createClientDirs,
 	copyClientOverrides,
