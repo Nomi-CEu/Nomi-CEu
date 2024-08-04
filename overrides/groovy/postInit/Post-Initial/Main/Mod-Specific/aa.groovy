@@ -9,8 +9,7 @@ import java.awt.Color
 
 // Actually Additions Specific Modifications
 
-// Empowered Recipes
-
+/* Helpers */
 var setupEmpowerer = { int blockItemMeta, Color particleColor ->
 	return mods.actuallyadditions.empowerer.recipeBuilder()
 		.mainInput(item('actuallyadditions:block_crystal', blockItemMeta))
@@ -39,6 +38,8 @@ var fillMetaItem = { FluidStack toFill, MetaItem.MetaValueItem item ->
 	fluidCap.fill(toFill * 1000, true)
 	return fluidCap.container
 }
+
+/* Custom Empowerer Recipes */
 
 // Empowered Restonia
 setupAndRemoveEmpowerer(0, item('moreplates:empowered_restonia_gear'), Color.RED)
@@ -73,7 +74,7 @@ setupAndRemoveEmpowerer(5, item('moreplates:empowered_enori_gear'), Color.WHITE)
 	.input(ore('gemApatite'), ore('ingotEndSteel'), fillMetaItem(fluid('helium'), MetaItems.FLUID_CELL), item('extendedcrafting:material', 14))
 	.register()
 
-// For EVERY Empowerer Recipe, add a Combination Crafting Recipe
+/* For EVERY Empowerer Recipe, add a Combination Crafting Recipe */
 mods.actuallyadditions.empowerer.streamRecipes()
 	.forEach { EmpowererRecipe recipe ->
 		mods.extendedcrafting.combination_crafting.recipeBuilder()
