@@ -169,7 +169,7 @@ async function downloadMinecraftServer() {
 		serverDestDirectory,
 		`minecraft_server.${versionManifest.id}.jar`,
 	);
-	await fs.promises.symlink(upath.resolve(serverJar.cachePath), dest);
+	await fs.promises.copyFile(upath.resolve(serverJar.cachePath), dest);
 }
 
 /**
