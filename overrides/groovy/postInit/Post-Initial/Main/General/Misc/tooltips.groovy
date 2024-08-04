@@ -38,16 +38,12 @@ addTooltip(item('actuallyadditions:block_canola_press'), translatable('nomiceu.t
 addTooltip(item('actuallyadditions:item_knife'), translatable('nomiceu.tooltip.actuallyadditions.knife'))
 
 // Solidified XP
-ItemStack solidXp = item('actuallyadditions:item_solidified_experience')
-if (LabsModeHelper.normal) {
-	addTooltip(solidXp, [
-	    translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.normal.1'),
-		translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.normal.2'),
-	])
-} else {
-	addTooltip(solidXp, translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.expert'))
-}
-addTooltip(solidXp, [translatableEmpty(), translatable("nomiceu.tooltip.actuallyadditions.solidifed_xp.amount")])
+addTooltip(item('actuallyadditions:item_solidified_experience'), [
+	translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.desc.1'),
+	translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.desc.2'),
+	translatableEmpty(),
+	translatable("nomiceu.tooltip.actuallyadditions.solidifed_xp.amount"),
+])
 
 /* Advanced Rocketry */
 
