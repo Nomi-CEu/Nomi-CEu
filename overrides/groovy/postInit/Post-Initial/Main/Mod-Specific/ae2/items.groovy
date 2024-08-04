@@ -1,4 +1,5 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import net.minecraftforge.fluids.FluidStack
 
 import static gregtech.api.GTValues.*
 
@@ -250,28 +251,30 @@ if (LabsModeHelper.normal) {
 }
 
 // AE2 Processor Shortcut
-// Logic Processor
-mods.gregtech.circuit_assembler.recipeBuilder()
-	.inputs(ore('circuitEv'), metaitem('plate.nand_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
-	.fluidInputs(fluid('soldering_alloy') * 288)
-	.outputs(item('appliedenergistics2:material', 22) * 16)
-	.duration(400).EUt(VA[IV])
-	.buildAndRegister();
+for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 288]) {
+	// Logic Processor
+	mods.gregtech.circuit_assembler.recipeBuilder()
+		.inputs(ore('circuitEv'), metaitem('plate.nand_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+		.fluidInputs(joiningFluid)
+		.outputs(item('appliedenergistics2:material', 22) * 16)
+		.duration(400).EUt(VA[IV])
+		.buildAndRegister();
 
-// Calculation Processor
-mods.gregtech.circuit_assembler.recipeBuilder()
-	.inputs(ore('circuitEv'), metaitem('plate.central_processing_unit') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
-	.fluidInputs(fluid('soldering_alloy') * 288)
-	.outputs(item('appliedenergistics2:material', 23) * 16)
-	.duration(400).EUt(VA[IV]).buildAndRegister();
+	// Calculation Processor
+	mods.gregtech.circuit_assembler.recipeBuilder()
+		.inputs(ore('circuitEv'), metaitem('plate.central_processing_unit') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+		.fluidInputs(joiningFluid)
+		.outputs(item('appliedenergistics2:material', 23) * 16)
+		.duration(400).EUt(VA[IV]).buildAndRegister();
 
-// Engineering Processor
-mods.gregtech.circuit_assembler.recipeBuilder()
-	.inputs(ore('circuitEv'), metaitem('plate.nor_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
-	.fluidInputs(fluid('soldering_alloy') * 288)
-	.outputs(item('appliedenergistics2:material', 24) * 16)
-	.duration(400).EUt(VA[IV])
-	.buildAndRegister();
+	// Engineering Processor
+	mods.gregtech.circuit_assembler.recipeBuilder()
+		.inputs(ore('circuitEv'), metaitem('plate.nor_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+		.fluidInputs(joiningFluid)
+		.outputs(item('appliedenergistics2:material', 24) * 16)
+		.duration(400).EUt(VA[IV])
+		.buildAndRegister();
+}
 
 // Purified AE2 Crystal Shortcut
 mods.gregtech.autoclave.recipeBuilder()
