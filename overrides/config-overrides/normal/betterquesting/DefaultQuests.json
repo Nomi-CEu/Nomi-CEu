@@ -27020,7 +27020,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Anvils§r can be used to repair almost all §bGregTech tools§r!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§r spawn abundantly in §bLost Cities§r buildings, so go and snatch one!\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§r to repair tools made of §6Wrought Iron§r. The only tools unable to be repaired are the mortar and the plunger.\n\nAlso, you can now repair your free §6Mining Hammers§r with some §6Diamonds§r!",
+          "desc:8": "§3Anvils§r can be used to repair almost all §bGregTech tools§r!\n\nYou might want to get yourself an anvil instead of breaking and crafting new tools every time. Anvils§r spawn abundantly in §bLost Cities§r buildings, so go and snatch one!\n\nPlease note that in §5Nomifactory CEu§r, XP scales linearly.\n\nThis means that every XP level §arequires the same amount of XP§r §e(25 XP)§r, and that higher XP levels §ado not require more XP§r.\n\nPut a damaged tool inside and put some material it\u0027s made of. For example, you\u0027ll need to put §6Wrought Iron Ingots§r to repair tools made of §6Wrought Iron§r. The only tools unable to be repaired are the mortar and the plunger.\n\nAlso, you can now repair your free §6Mining Hammers§r with some §6Diamonds§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34548,7 +34548,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Soul Binder§r is an §bEnderIO§r machine which uses §aSoul Vials§r and Experience to enhance specific items.\n\nIt may be prudent to store §9Liquid XP§r in an adjacent §3Obelisk§r, which the Soul Binder can draw from directly, or you can insert it using other standard means of fluid routing.",
+          "desc:8": "The §3Soul Binder§r is an §bEnderIO§r machine which uses §aSoul Vials§r and §aXP§r to enhance specific items.\n\nIt may be prudent to store §9Liquid XP§r in an adjacent §3Obelisk§r, which the Soul Binder can draw from directly, or you can insert it using other standard means of fluid routing.\n\nRemember: XP scales linearly! Every level requires the same amount of XP, so don\u0027t be afraid to gather large amounts of §eXP Levels§r, whether it be in your §3Soul Binder§r, or simply in your own §6Experience Bar§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46656,7 +46656,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Vanilla enchanting mechanics are just so tedious. Don\u0027t you wish you could just make a specific enchant instead of grinding levels and rolling the dice?\n\n§eOh wait- you can!§r\n\nThe §3Dark Steel Enchanter§r is a device that uses §6Book and Quill§r, experience levels, lapis, and enchant-specific items to create an §6Enchanted Book§r with an enchantment of your choosing. Then you can just use an Anvil to enchant your item like usual.\n\nThis is a good time to bring up the §dHolding§r enchant, which can be applied to most items from §bThermal Foundation§r and its related mods. Holding can be crafted up to level IV, which massively boosts the storage capacity of items like §aSatchels§r, §aFlux Capacitors§r, and §aPortable Tanks§r.\n\nYou can also make the §dMending§r enchant which allows you to infinitely repair the item when damaged using §9Liquid XP§r in an §bEnderIO §aFluid Tank§r or §aPressurized Fluid Tank§r. Keep in mind that §dMending§r does not work on §3Gregtech Tools§r.",
+          "desc:8": "Vanilla enchanting mechanics are just so tedious. Don\u0027t you wish you could just make a specific enchant instead of grinding levels and rolling the dice?\n\n§eOh wait- you can!§r\n\nThe §3Dark Steel Enchanter§r is a device that uses §6Book and Quill§r, experience levels, lapis, and enchant-specific items to create an §6Enchanted Book§r with an enchantment of your choosing. Then you can just use an Anvil to enchant your item like usual.\n\nThis is a good time to bring up the §dHolding§r enchant, which can be applied to most items from §bThermal Foundation§r and its related mods. Holding can be crafted up to level IV, which massively boosts the storage capacity of items like §aSatchels§r, §aFlux Capacitors§r, and §aPortable Tanks§r.\n\nYou can also make the §dMending§r enchant which allows you to infinitely repair the item when damaged using §9Liquid XP§r in an §bEnderIO §aFluid Tank§r or §aPressurized Fluid Tank§r. Keep in mind that §dMending§r does not work on §3Gregtech Tools§r.\n\nRemember: XP scales linearly! Every level requires the same amount of XP, so don\u0027t be afraid to gather large amounts of §eXP Levels§r, whether it be in your §3Dark Steel Enchanter§r, or simply in your own §6Experience Bar§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

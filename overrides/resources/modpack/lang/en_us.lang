@@ -3,6 +3,9 @@ nomifactory.nonetherportals=Nether portals are disabled in §5Nomi-CEu§r. Follo
 
 # Tooltips
 
+# MC
+nomiceu.tooltip.mc.xp_bottle=§eGives 25 XP, or one XP Level!§r
+
 # Actually Additions
 nomiceu.tooltip.actuallyadditions.drill_core.1=§cAcquired by exploration of Lost Cities buildings or vanilla dungeons.§r
 nomiceu.tooltip.actuallyadditions.drill_core.2=§cAlso can be purchased for Nomicoins!§r
@@ -10,9 +13,11 @@ nomiceu.tooltip.actuallyadditions.canola.1=§aCanola can be turned into Canola O
 nomiceu.tooltip.actuallyadditions.canola.2=§aThis is a somewhat slow machine and requres RF to function.§r
 nomiceu.tooltip.actuallyadditions.canola_press=§aTurns Canola into Canola Oil. Requires RF.§r
 nomiceu.tooltip.actuallyadditions.knife=§cWhen making Hamburgers, make sure to place this in the Crafting Table last!§r
-nomiceu.tooltip.actuallyadditions.solidifed_xp.normal.1=§aDrops from monsters, and can be made in§r
-nomiceu.tooltip.actuallyadditions.solidifed_xp.normal.2=§aa Fluid Solidifier or Experience Solidifier.§r
-nomiceu.tooltip.actuallyadditions.solidifed_xp.expert=§aMade in a Fluid Solidifier or Experience Solidifier.§r
+nomiceu.tooltip.actuallyadditions.solidifed_xp.desc.1=§aDrops from monsters, and can be made in§r
+nomiceu.tooltip.actuallyadditions.solidifed_xp.desc.2=§aa Fluid Solidifier or Experience Solidifier.§r
+
+# Output: §eGives 8 XP, of 32% of a XP Level!§r (% is Escaped)
+nomiceu.tooltip.actuallyadditions.solidifed_xp.amount=§eGives 8 XP, of 32%% of a XP Level!§r
 
 # Advanced Rocketry
 nomiceu.tooltip.advancedrocketry.orbital_laser_drill.1=§7Glory to the PGS!§r
@@ -59,8 +64,12 @@ nomiceu.tooltip.dimensionaledibles.island_cake.2=§aView the Server Information 
 # Dark Utils
 nomiceu.tooltip.darkutils.ender_tether=Blocks Endermen from teleporting.
 
-# Deep Mob Learning
-nomiceu.tooltip.dml.glitch_fragment=§bObtained by crushing Glitch Hearts against Obsidian.§r
+# Deep Mob Evolution
+nomiceu.tooltip.dme.glitch_fragment=§bObtained by crushing Glitch Hearts against Obsidian.§r
+
+# Output: §eGives (AMOUNT)% of a XP Level!§r (% is Escaped)
+nomiceu.tooltip.dme.matter=§eGives %s%% of a XP Level!§r
+nomiceu.tooltip.dme.matter.full_level=§eGives One XP Level!§r
 
 # Thermal Expansion
 nomiceu.tooltip.thermalexpansion.capacitors=§cCannot be discharged in GT Battery Buffers!§r
@@ -74,8 +83,9 @@ nomiceu.tooltip.gregtech.facade.1=§3GTCEu facades can be made from most non-til
 nomiceu.tooltip.gregtech.facade.2=§3They craft into different amounts based on the metal used!§r
 
 # Ender IO
-tooltip.fused_glass.make=Made with §6Tempered Glass§r and §7White Dye§r
-tooltip.eio_glass.dye=Can be §bDyed§r!
+nomiceu.tooltip.eio.fused_glass.make=Made with §6Tempered Glass§r and §7White Dye§r
+nomiceu.tooltip.eio.glass.dye=Can be §bDyed§r!
+nomiceu.tooltip.eio.liquid_xp=§e20L = 1XP, 500L = 1 XP Level!§r
 
 # Project Red
 nomiceu.tooltip.projectred.wire=§eFor use with ProjectRed.§r
