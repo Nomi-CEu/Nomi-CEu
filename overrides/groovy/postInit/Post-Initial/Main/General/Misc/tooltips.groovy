@@ -13,6 +13,26 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import classes.postInit.Common
 
+/* Mixed */
+// Fillable Items
+List<ItemStack> fillable = [
+	metaitem('fluid_cell'),
+	metaitem('fluid_cell.universal'),
+	metaitem('large_fluid_cell.steel'),
+	metaitem('large_fluid_cell.aluminium'),
+	metaitem('large_fluid_cell.stainless_steel'),
+	metaitem('large_fluid_cell.titanium'),
+	metaitem('large_fluid_cell.tungstensteel'),
+	metaitem('fluid_cell.glass_vial'),
+	item('minecraft:bucket'),
+	item('minecraft:water_bucket'),
+	item('minecraft:lava_bucket'),
+	item('forge:bucketfilled'),
+]
+for (ItemStack fill : fillable) {
+	addTooltip(fill, translatable('nomiceu.tooltip.mixed.fillable'))
+}
+
 /* MC */
 // XP Bottle
 addTooltip(item('minecraft:experience_bottle'), translatable("nomiceu.tooltip.mc.xp_bottle"))
