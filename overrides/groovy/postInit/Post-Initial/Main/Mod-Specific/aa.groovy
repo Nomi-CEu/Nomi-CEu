@@ -59,7 +59,7 @@ setupAndRemoveEmpowerer(2, item('moreplates:empowered_diamatine_gear'), Color.CY
 // Empowered Void
 removeEmpowerer(3, item('moreplates:empowered_void_gear'))
 for (var oilType : ['oil', 'oil_heavy', 'oil_medium', 'oil_light']) {
-	setupEmpowerer(3, Color.BLACK)
+	setupEmpowerer(3, Color.DARK_GRAY)
 		.input(item('actuallyadditions:item_misc', 5), ore('ingotDarkSteel'), fillMetaItem(fluid(oilType), MetaItems.FLUID_CELL), item('extendedcrafting:material', 15))
 		.register()
 }
