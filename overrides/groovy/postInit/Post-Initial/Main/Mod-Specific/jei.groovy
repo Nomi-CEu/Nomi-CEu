@@ -20,6 +20,9 @@ if (LabsModeHelper.expert) {
 	mods.jei.ingredient.removeAndHide(item('nomilabs:impossiblerealmdata'))
 }
 
+// Modded Buckets
+hideItemIgnoreNBT(item('forge:bucketfilled'))
+
 /* Remove Categories (Appear Randomly after /gs reload) */
 // Avatitia
 mods.jei.category.hideCategory('Avatitia.Extreme')
