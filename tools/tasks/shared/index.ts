@@ -49,7 +49,6 @@ async function createSharedDirs() {
  * Copies modpack overrides.
  */
 async function copyOverrides() {
-	// Don't copy server.properties files in config-overrides, it is auto transformed into the server build folder
 	// Copy, not Symlink, so we can transform the files as we wish
 	return new Promise((resolve) => {
 		src(buildConfig.copyToSharedDirGlobs, {

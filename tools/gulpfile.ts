@@ -8,7 +8,6 @@ export const pruneCache = pruneCacheTask;
 import * as transformFiles from "./tasks/misc/transformFiles.ts";
 export const updateFilesIssue = transformFiles.updateFilesIssue;
 export const updateFilesLabsVersion = transformFiles.updateFilesVersion;
-export const updateFilesServer = transformFiles.updateFilesServer;
 export const updateFilesMainMenu = transformFiles.updateFilesMainMenu;
 export const updateFilesAll = transformFiles.updateAll;
 

@@ -19,10 +19,6 @@ import {
 	sharedDestDirectory,
 } from "#globals";
 import { deleteAsync } from "del";
-import {
-	updateFilesBuildSetup,
-	updateServerProperties,
-} from "../misc/transformFiles.ts";
 import logInfo, { logWarn } from "#utils/log.ts";
 
 let g_forgeJar: string | undefined = undefined;
@@ -262,10 +258,6 @@ function processLaunchscripts() {
 		.pipe(dest(serverDestDirectory));
 }
 
-const updateBuildServerProperties = async () => {
-	await updateServerProperties(serverDestDirectory);
-};
-
 export default series(
 	serverCleanUp,
 	createServerDirs,
@@ -278,6 +270,4 @@ export default series(
 	copyServerChangelog,
 	copyServerUpdateNotes,
 	processLaunchscripts,
-	updateFilesBuildSetup,
-	updateBuildServerProperties,
 );
