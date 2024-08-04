@@ -7,7 +7,7 @@
 	"launchscriptsMinRAM": "2048M",
 	"launchscriptsMaxRAM": "2048M",
 	"launchscriptsJVMArgs": "",
-	"copyToSharedDirGlobs": ["overrides/**/*", "!overrides/**/server.properties"],
+	"copyToSharedDirGlobs": ["overrides/**/*"],
 	"copyFromSharedServerGlobs": ["overrides/**/*", "!overrides/resources/**/*"],
 	"copyFromSharedClientGlobs": ["overrides/**/*"],
 	"buildDestinationDirectory": "../build",

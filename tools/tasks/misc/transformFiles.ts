@@ -217,27 +217,9 @@ export async function updateLabsVersion(rootDir: string): Promise<void> {
 	return modifyFile(readPath, writePath, replacementObject);
 }
 
-export async function updateServerProperties(rootDir: string): Promise<void> {
-	const fileName = "server.properties";
-	const readPath: string = upath.join(templatesFolder, fileName);
-	const writePath: string = upath.join(rootDir, fileName);
-
-	const replacementObject: Record<string, unknown> = {
-		versionTitle: updateFiles
-			? updateFileTransformedVersion
-			: buildData.transformedVersion,
-	};
-
-	return modifyFile(readPath, writePath, replacementObject);
-}
-
 // Main Closures
 const updateFilesLabsVersion = async () => {
 	await updateLabsVersion(rootDirectory);
-};
-
-const updateFilesServerProperties = async () => {
-	await updateServerProperties(upath.join(rootDirectory, "serverfiles"));
 };
 
 export const updateFilesIssue = gulp.series(
@@ -247,10 +229,6 @@ export const updateFilesIssue = gulp.series(
 export const updateFilesVersion = gulp.series(
 	updateFilesSetup,
 	updateFilesLabsVersion,
-);
-export const updateFilesServer = gulp.series(
-	updateFilesSetup,
-	updateFilesServerProperties,
 );
 export const updateFilesMainMenu = gulp.series(
 	updateFilesSetup,
@@ -262,7 +240,6 @@ export const updateAll = gulp.series(
 	gulp.parallel(
 		updateIssueTemplates,
 		updateFilesLabsVersion,
-		updateFilesServerProperties,
 		updateMainMenuConfig,
 	),
 );
