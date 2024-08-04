@@ -1,3 +1,4 @@
+import de.ellpeck.actuallyadditions.api.recipe.EmpowererRecipe
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.common.items.MetaItems
 import net.minecraft.item.ItemStack
@@ -71,3 +72,18 @@ setupAndRemoveEmpowerer(4, item('moreplates:empowered_emeradic_gear'), Color.GRE
 setupAndRemoveEmpowerer(5, item('moreplates:empowered_enori_gear'), Color.WHITE)
 	.input(ore('gemApatite'), ore('ingotEndSteel'), fillMetaItem(fluid('helium'), MetaItems.FLUID_CELL), item('extendedcrafting:material', 14))
 	.register()
+
+// For EVERY Empowerer Recipe, add a Combination Crafting Recipe
+mods.actuallyadditions.empowerer.streamRecipes()
+	.forEach { EmpowererRecipe recipe ->
+		mods.extendedcrafting.combination_crafting.recipeBuilder()
+			.input(recipe.input.matchingStacks[0])
+			.pedestals(recipe.standOne.matchingStacks[0])
+			.pedestals(recipe.standTwo.matchingStacks[0])
+			.pedestals(recipe.standThree.matchingStacks[0])
+			.pedestals(recipe.standFour.matchingStacks[0])
+			.output(recipe.output)
+			.totalCost(4_000_000)
+			.costPerTick(400_000)
+			.register()
+	}
