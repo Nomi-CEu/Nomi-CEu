@@ -19,3 +19,6 @@ mods.gregtech.centrifuge.recipeBuilder()
     .chancedOutput(metaitem('dustLanthanum'), 625, 100)
     .duration(64).EUt(VA[LV])
     .buildAndRegister()
+
+// Nether Star Block -> Nether Star
+crafting.addShapeless(item('minecraft:nether_star') * 9, [ore('blockNetherStar')])
