@@ -2,14 +2,10 @@ import com.cleanroommc.groovyscript.api.IIngredient
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
 import com.nomiceu.nomilabs.groovy.ShapedDummyRecipe
 import com.nomiceu.nomilabs.util.ItemMeta
-import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.util.ResourceLocation
-import net.minecraftforge.registries.IForgeRegistryEntry
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeOutputTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.SafeMethodHelpers.callInstanceMethodOfClass
 
 // Hand Framing Tool
 crafting.addShaped("hand_framing_tool_recipe", item("nomilabs:hand_framing_tool"), [
@@ -73,7 +69,7 @@ static String getRecipeName(ItemStack stack, boolean trim, boolean front) {
 	// We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
 	// Without SideOnly, so it crashes.
 	// Use the special of class type so the addInformation method isn't loaded.
-	def rl = (ResourceLocation) callInstanceMethodOfClass(IForgeRegistryEntry<Item>.class, stack.getItem(), "getRegistryName", null)
+	def rl = stack.getItem().getRegistryName()
 	if (rl != null)
 		baseName = baseName + rl.getNamespace() + "_" + rl.getPath()
 
@@ -88,11 +84,8 @@ static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
 	def trimStack = trim ? item("extendedcrafting:storage", 4) : ItemStack.EMPTY
 	def frontStack = front ? item("xtones:zane", 15) : ItemStack.EMPTY
 
-	// We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
-	// Without SideOnly, so it crashes.
-	// Use the special of class type so the addInformation method isn't loaded.
 	def frameable = (IFrameable) stack.getItem()
-	stack = (ItemStack) callInstanceMethodOfClass(IFrameable.class, frameable, "decorate", [stack.copy(), sideStack, trimStack, frontStack])
+	stack = frameable.decorate(stack.copy(), sideStack, trimStack, frontStack)
 	if (stack == null)
 		return stack
 
