@@ -36,7 +36,6 @@ if (LabsModeHelper.expert) {
 
 // EIO
 mods.jei.category.hideCategory('CombustionGenerator')
-mods.jei.category.hideCategory('Enchanter')
 mods.jei.category.hideCategory('GrindingBall')
 mods.jei.category.hideCategory('SagMill')
 mods.jei.category.hideCategory('SolarPanel')
