@@ -1,14 +1,14 @@
 {
   "weight": 0,
-  "name": "Overworld Salt Water Deposit",
+  "name": "Overworld Infinite Salt Water Deposit",
   "yield": {
     "min": 50,
     "max": 100
   },
   "depletion": {
-    "amount": 1,
-    "chance": 100,
-    "depleted_yield": 15
+    "amount": 0,
+    "chance": 0,
+    "depleted_yield": 50
   },
   "fluid": "salt_water",
   "dimension_filter": [
