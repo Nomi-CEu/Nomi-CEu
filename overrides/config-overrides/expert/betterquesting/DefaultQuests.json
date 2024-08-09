@@ -16972,7 +16972,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bDraconic Evolution§r features §eFusion Crafting§r, which requires a §6Fusion Crafting Core§r and up to ten injectors of the appropriate tier.\n\nYou\u0027ll need eight §6Basic Fusion Crafting Injectors§r to upgrade any additional injectors you make to Wyvern Tier.\n\nYes, that means you should plan to make more than eight. If you really want to plan ahead, make thirty-four of these.",
+          "desc:8": "§bDraconic Evolution§r features §eFusion Crafting§r, which requires a §6Fusion Crafting Core§r and up to ten injectors of the appropriate tier.\n\nYou\u0027ll need a setup with eight §6Basic Fusion Crafting Injectors§r to upgrade any additional injectors you make to Wyvern Tier.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49643,7 +49643,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027re going to craft a LOT of stuff using §bDraconic Evolution §6Fusion§r. Therefore, a way to automate it is crucial.\n\nUsing §bPackagedDraconic§r, Draconic Fusion recipes can be easily automated through PackagedAuto. To get started, place a §6Fusion Package Crafter§r next to an §6Unpackager§r and surround it with §6Marked Fusion Crafting Injectors§r like a normal Fusion setup. Then, you can handle recipes through the Unpackager just like any other PAuto setup.",
+          "desc:8": "You\u0027re going to craft a §lLOT§r of stuff using §bDraconic Evolution Fusion§r. Therefore, a way to automate it is crucial.\n\nUsing §bPackagedDraconic§r, Draconic Fusion recipes can be easily automated through PackagedAuto. To get started, place a §6Fusion Package Crafter§r next to an §6Unpackager§r and surround it with §6Marked Fusion Crafting Injectors§r like a normal Fusion setup. §cNote that Marked Fusion Crafting Injectors do not accept ME Power, only RF/EU Power!§r\n\nNow you can handle recipes through the Unpackager, just like any other PAuto setup! No more laser routing and messy conduit spaghetti!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
