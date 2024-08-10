@@ -25168,7 +25168,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aGrappling Hook§r is very useful in an urban environment.\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however you can change this as you wish. Just be careful of §cKeybind Conflicts§r!",
+          "desc:8": "You may wish to §aautomatically sprint§r, instead of having to press §eControl + W§r or §eW twice§r. To achieve this, change the §bSprint§r keybind to §eW§r. (or the same keybind as Move Foward)\n\nA §aGrappling Hook§r is also very useful in an urban environment, allowing you to climb buildings with ease!\n\nThere are lots of ways to upgrade and improve your Grappling Hook, so play around with it.\n\nOpen your inventory and look for the Baubles button, click it to reveal the additional bauble slots and put the Hook there.\n\nThe default key is §6C§r, however you can change this as you wish. Just be careful of §cKeybind Conflicts§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25180,7 +25180,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Grappling Hook",
+          "name:8": "Movin\u0027 Around",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -63001,7 +63001,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027re going to craft a §lLOT§r of stuff using §bDraconic Evolution Fusion§r. Therefore, a way to automate it is crucial.\n\nUsing §bPackagedDraconic§r, Draconic Fusion recipes can be easily automated through PackagedAuto. To get started, place a §6Fusion Package Crafter§r next to an §6Unpackager§r and surround it with §6Marked Fusion Crafting Injectors§r like a normal Fusion setup. §cNote that Marked Fusion Crafting Injectors do not accept ME Power, only RF/EU Power!§r\n\nNow you can handle recipes through the Unpackager, just like any other PAuto setup! No more laser routing and messy conduit spaghetti!",
+          "desc:8": "You\u0027re going to craft a §lLOT§r of stuff using §bDraconic Evolution Fusion§r. Therefore, a way to automate it is crucial.\n\nUsing §bPackagedDraconic§r, Draconic Fusion recipes can be easily automated through PackagedAuto. To get started, place a §6Fusion Package Crafter§r next to an §6Unpackager§r and surround it with §6Marked Fusion Crafting Injectors§r like a normal Fusion setup.\n\nNote that Marked Fusion Crafting Injectors §cdo not§r accept §aME Power§r, only §eRF Power§r!\n\nNow you can handle recipes through the Unpackager, just like any other PAuto setup! No more laser routing and messy conduit spaghetti!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
