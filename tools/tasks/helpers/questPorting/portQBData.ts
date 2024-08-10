@@ -18,6 +18,8 @@ import { Quest, QuestLine } from "#types/bqQuestBook.ts";
 import fs from "fs";
 import logInfo from "#utils/log.ts";
 import { modificationParsers } from "./portQBModifications.ts";
+import { git, listRemotes } from "#utils/util.ts";
+import { repoName, repoOwner } from "#globals";
 
 export default class PortQBData {
 	ref: string;
@@ -26,6 +28,9 @@ export default class PortQBData {
 	srcPath: string;
 	srcPathToChange: string;
 	outputPaths: string[];
+
+	// Whether the current ref is a created temporary branch
+	createdBranch: boolean;
 
 	// Changed Maps b/w source qb and qb to change
 	changed: Changed;
@@ -68,6 +73,7 @@ export default class PortQBData {
 		this.srcPathToChange = "";
 		this.outputPaths = [];
 
+		this.createdBranch = false;
 		this.changed = { added: [], modified: [], removed: [] };
 
 		this.currentIDsToQuests = new Map<number, Quest>();
@@ -81,11 +87,54 @@ export default class PortQBData {
 	}
 
 	async setup(): Promise<void> {
-		this.ref = await input({
-			message:
-				"What Commit SHA, Tag OR Branch should we compare to? (Defaults to 'main')",
-			default: "main",
-		});
+		if (
+			await booleanSelect("Should we Clone and Compare With Nomi-CEu/main?")
+		) {
+			const remote = await input({
+				message: "What Remote should we Use?",
+				default: "Nomi-CEu/Nomi-CEu",
+			});
+
+			const existingRemotes = await listRemotes();
+			if (existingRemotes.includes(remote)) {
+				logInfo("Using Existing Remote...");
+			} else {
+				logInfo(`Adding Remote ${remote}...`);
+
+				git.addRemote(
+					remote,
+					`https://github.com/${repoOwner}/${repoName}.git`,
+				);
+			}
+
+			this.ref = await input({
+				message: "What Temporary Branch should we create?",
+				default: "temp/Nomi-CEu/main",
+			});
+
+			if ((await git.branchLocal()).all.includes(this.ref)) {
+				throw new Error("Branch already Exists!");
+			}
+
+			// Create the Ref Branch, tracking the remote's main branch, but do not switch to it
+			const currBranch = (await git.raw(["branch", "--show-current"])).trim();
+			await git.stash();
+			await git.checkoutBranch(this.ref, `${remote}/main`);
+			await git.checkout(currBranch);
+
+			// Pop the newest stash (the one we just created)
+			await git.raw(["stash", "pop"]);
+
+			logInfo(`Created Branch ${this.ref} and Restored Working Directory!`);
+
+			this.createdBranch = true;
+		} else {
+			this.ref = await input({
+				message:
+					"What Commit SHA, Tag OR Branch should we compare to? (Defaults to 'main')",
+				default: "main",
+			});
+		}
 
 		this.type = (await select({
 			message: "How should we port?",

@@ -2,7 +2,7 @@ import fs from "fs";
 import upath from "upath";
 import { rootDirectory } from "#globals";
 import { Quest, QuestBook, QuestLine } from "#types/bqQuestBook.ts";
-import { getFileAtRevision } from "#utils/util.ts";
+import { getFileAtRevision, git } from "#utils/util.ts";
 import { getChanged, id, save, setupUtils } from "../actionQBUtils.ts";
 import PortQBData from "./portQBData.ts";
 import {
@@ -12,7 +12,7 @@ import {
 	setupLogic,
 } from "./portQBLogic.ts";
 import { setupModifications } from "./portQBModifications.ts";
-import logInfo, { logError } from "../../../utils/log.ts";
+import logInfo, { logError, logNotImportant } from "#utils/log.ts";
 
 let data: PortQBData;
 
@@ -32,6 +32,12 @@ export default async function portQBChanges(): Promise<void> {
 	const old = JSON.parse(
 		await getFileAtRevision(data.srcPath, data.ref),
 	) as QuestBook;
+
+	// Now we have used the ref, delete branch
+	if (data.createdBranch) {
+		await git.deleteLocalBranch(data.ref);
+		logNotImportant(`Deleted Temp Branch ${data.ref}`);
+	}
 
 	const currentQuests = Object.values(current["questDatabase:9"]);
 	const oldQuests = Object.values(old["questDatabase:9"]);

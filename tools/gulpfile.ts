@@ -69,4 +69,4 @@ export const checkQB = checkFix.check;
 export const fixQB = checkFix.fix;
 
 import * as qbPort from "./tasks/helpers/questPorting/index.ts";
-export const portQBChanges = gulp.series(qbPort.default, fixQB);
+export const portQB = gulp.series(qbPort.default, fixQB);
