@@ -20,7 +20,7 @@ import fakeDiff from "fake-diff";
 import { Operation } from "just-diff";
 import logInfo, { logError, logNotImportant, logWarn } from "#utils/log.ts";
 import dedent from "dedent-js";
-import { confirm, editor, input, select } from "@inquirer/prompts";
+import { editor, input, select } from "@inquirer/prompts";
 import colors from "colors";
 import { stringify } from "javascript-stringify";
 import { Quest, Task } from "#types/bqQuestBook.ts";
@@ -784,9 +784,9 @@ const modifyGeneral = async (
 		),
 	);
 
-	const shouldContinue = await confirm({
-		message: "Would you like to apply the Change?",
-	});
+	const shouldContinue = await booleanSelect(
+		"Would you like to apply this Change?",
+	);
 	if (!shouldContinue) {
 		logNotImportant("Skipping...");
 		return;

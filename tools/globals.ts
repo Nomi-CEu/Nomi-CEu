@@ -42,8 +42,8 @@ export const rootDirectory = "..";
 export const templatesFolder = "templates";
 export const storageFolder = "storage";
 
-// The Repository Owner (For Issues & PR Tags Transforms in Changelog)
+// The GitHub Repository Owner
 export const repoOwner = "Nomi-CEu";
 
-// The Repository Name (For Issues & PR Tags Transforms in Changelog)
+// The GitHub Repository Name
 export const repoName = "Nomi-CEu";

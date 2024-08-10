@@ -43,7 +43,7 @@ import { BuildData } from "#types/transformFiles.js";
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
 // Make git commands run in root dir
-const git: SimpleGit = simpleGit(rootDirectory);
+export const git: SimpleGit = simpleGit(rootDirectory);
 
 const retryCfg: IAxiosRetryConfig = {
 	retries: 10,
@@ -747,6 +747,13 @@ export async function formatAuthor(commit: Commit, octokit: Octokit) {
 		commitAuthorCache.set(commit.hash, "");
 		return defaultFormat;
 	}
+}
+
+/**
+ * List all Remotes in the Git Repository.
+ */
+export async function listRemotes(): Promise<string[]> {
+	return git.getRemotes().then((r) => r.map((re) => re.name));
 }
 
 export const FORGE_VERSION_REG = /forge-(.+)/;
