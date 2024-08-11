@@ -116,10 +116,13 @@ export default class PortQBData {
 				throw new Error("Branch already Exists!");
 			}
 
+			// Fetch
+			await git.fetch(remote);
+
 			// Create the Ref Branch, tracking the remote's main branch, but do not switch to it
 			const currBranch = (await git.raw(["branch", "--show-current"])).trim();
 			await git.stash();
-			await git.checkoutBranch(this.ref, `${remote}/main`);
+			await git.checkoutBranch(this.ref, `remotes/${remote}/main`);
 			await git.checkout(currBranch);
 
 			// Pop the newest stash (the one we just created)
