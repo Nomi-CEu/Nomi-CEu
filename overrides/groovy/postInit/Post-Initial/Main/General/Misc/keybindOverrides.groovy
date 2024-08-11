@@ -38,6 +38,8 @@ addOverride('key.ftbutilities.trash', Keyboard.KEY_NONE)
 
 addOverride('key.groovyscript.reload', Keyboard.KEY_NONE)
 
+addOverride("key.sort", Keyboard.KEY_RETURN)
+
 addOverride('key.journeymap.fullscreen_chat_position', Keyboard.KEY_NONE)
 
 addOverride('key.little.config', Keyboard.KEY_L)
