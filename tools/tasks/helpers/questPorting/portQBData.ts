@@ -178,7 +178,7 @@ export default class PortQBData {
 					this.sourceOption === "CFG" ? cfgExpertPath : cfgOverrideExpertPath;
 				this.srcPathToChange =
 					this.sourceOption === "CFG" ? cfgNormalPath : cfgOverrideNormalPath;
-				this.outputPaths = [cfgExpertPath, cfgOverrideExpertPath];
+				this.outputPaths = [cfgNormalPath, cfgOverrideNormalPath];
 				break;
 		}
 
