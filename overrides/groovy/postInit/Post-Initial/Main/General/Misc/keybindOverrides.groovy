@@ -38,7 +38,9 @@ addOverride('key.ftbutilities.trash', Keyboard.KEY_NONE)
 
 addOverride('key.groovyscript.reload', Keyboard.KEY_NONE)
 
-addOverride("key.sort", Keyboard.KEY_RETURN)
+// Doesn't affect ability to move bookmarks for some reason?
+// Also fixes Middle Click not working for sorting inventory
+addOverride("key.jeiutilities.pickBookmark", Keyboard.KEY_NONE)
 
 addOverride('key.journeymap.fullscreen_chat_position', Keyboard.KEY_NONE)
 
