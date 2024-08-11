@@ -50347,7 +50347,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory!\n\nThe default sort keybind is §aMiddle Click§r, but you can always change the keybind. Simply hover over any slot in the inventory (§6Chests§r, §6Crates§r, your personal inventory, etc.), and click your sort keybind, and voila! A neat inventory.\n\nYou can also configure how it is sorted, within the GUI. The default key to open the GUI is §aK§r.\n\nInventory Bogo Sorter, by default, also replaces stacks of items, like blocks, tools and food in your hotbar. For tools, it even replaces it just before it breaks, so you can repair it! Now, you can build a pillar to y-256 without opening your inventory, or changing hotbar slots!",
+          "desc:8": "This pack has §bInventory Bogo Sorter§r, allowing for quick, customizable, and easy sorting of any inventory.\n\nThe default sort keybind is §aEnter / Return§r, but you can always change the keybind. Simply hover over any slot in an inventory (§eChests§r, §eCrates§r, §ePlayer Inventory§r, etc.), click the sort keybind, and voila! A neat inventory.\n\nYou can also configure how your items are sorted within the Config GUI. The default key to open the GUI is §aK§r.\n\nInventory Bogo Sorter, by default, also §erefills stacks of items§r, like blocks, tools and food, from your inventory to your hotbar. For tools, it replaces it §ejust before it breaks§r, so you can repair it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
