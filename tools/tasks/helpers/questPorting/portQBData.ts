@@ -101,11 +101,15 @@ export default class PortQBData {
 			} else {
 				logInfo(`Adding Remote ${remote}...`);
 
-				git.addRemote(
+				await git.addRemote(
 					remote,
 					`https://github.com/${repoOwner}/${repoName}.git`,
 				);
 			}
+
+			// Fetch
+			logInfo(`Fetching Remote ${remote}...`);
+			await git.raw(["fetch", remote]);
 
 			this.ref = await input({
 				message: "What Temporary Branch should we create?",
@@ -115,9 +119,6 @@ export default class PortQBData {
 			if ((await git.branchLocal()).all.includes(this.ref)) {
 				throw new Error("Branch already Exists!");
 			}
-
-			// Fetch
-			await git.fetch(remote);
 
 			// Create the Ref Branch, tracking the remote's main branch, but do not switch to it
 			const currBranch = (await git.raw(["branch", "--show-current"])).trim();
