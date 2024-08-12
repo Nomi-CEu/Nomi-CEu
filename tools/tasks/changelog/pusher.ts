@@ -6,9 +6,10 @@ import { Octokit } from "@octokit/rest";
 import {
 	formatAuthor,
 	getIssueURL,
-	getNewestCommitAuthors,
-	getNewestIssueURLs,
+	getCommitAuthors,
+	getIssueURLs,
 } from "#utils/util.ts";
+import logInfo from "#utils/log.ts";
 
 let data: ChangelogData;
 let octokit: Octokit;
@@ -32,8 +33,10 @@ export async function pushSetup(): Promise<void> {
 		auth: process.env.GITHUB_TOKEN,
 	});
 
-	// Save Issue/PR Info to Cache
-	await getNewestIssueURLs(octokit);
+	// Fill Caches
+	logInfo("Filling Caches...");
+	await getIssueURLs(octokit);
+	await getCommitAuthors(octokit);
 }
 
 export function pushTitle(inputData: ChangelogData): void {
@@ -129,7 +132,6 @@ async function pushCategory(category: Category) {
 			}
 
 			// Format Main Messages (Async so Author Fetch is Fast)
-			await getNewestCommitAuthors(octokit);
 			const formatted: { message: ChangelogMessage; formatted: string }[] =
 				await Promise.all(
 					list.map((message) =>

@@ -608,25 +608,19 @@ export function cleanupVersion(version?: string): string {
 const issueURLCache: Map<number, string> = new Map<number, string>();
 
 /**
- * Gets newest updated 100 closed issue/PR URLs of the repo and saves it to the cache.
+ * Gets all closed issue/PR URLs of the repo, sorted by updated, and saves it to the cache.
  */
-export async function getNewestIssueURLs(octokit: Octokit): Promise<void> {
+export async function getIssueURLs(octokit: Octokit): Promise<void> {
 	if (issueURLCache.size > 0) return;
 	try {
-		const issues = await octokit.issues.listForRepo({
+		const issues = await octokit.paginate(octokit.issues.listForRepo, {
 			owner: repoOwner,
 			repo: repoName,
 			per_page: 100,
 			state: "closed",
 			sort: "updated",
 		});
-		if (issues.status !== 200) {
-			logError(
-				`Failed to get all Issue URLs of Repo. Returned Status Code ${issues.status}, expected Status 200.`,
-			);
-			return;
-		}
-		issues.data.forEach((issue) => {
+		issues.forEach((issue) => {
 			if (!issueURLCache.has(issue.number))
 				issueURLCache.set(issue.number, issue.html_url);
 		});
@@ -647,6 +641,7 @@ export async function getIssueURL(
 	if (issueURLCache.has(issueNumber))
 		return issueURLCache.get(issueNumber) ?? "";
 	try {
+		// Try to retrieve, might be open
 		const issueInfo = await octokit.issues.get({
 			owner: repoOwner,
 			repo: repoName,
@@ -666,7 +661,7 @@ export async function getIssueURL(
 		return issueInfo.data.html_url;
 	} catch (e) {
 		logError(
-			`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. This may be because this is not a PR or Issue, or could be because of rate limits.`,
+			`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. This may be because this is not a PR or Issue, it was deleted, or because of rate limits.`,
 		);
 		issueURLCache.set(issueNumber, "");
 		return "";
@@ -677,23 +672,17 @@ export async function getIssueURL(
 const commitAuthorCache: Map<string, string> = new Map<string, string>();
 
 /**
- * Fills the Commit Author Cache with the newest 100 commits from the repo.
+ * Fills the Commit Author Cache.
  */
-export async function getNewestCommitAuthors(octokit: Octokit): Promise<void> {
+export async function getCommitAuthors(octokit: Octokit): Promise<void> {
 	if (commitAuthorCache.size > 0) return;
 	try {
-		const commits = await octokit.repos.listCommits({
+		const commits = await octokit.paginate(octokit.repos.listCommits, {
 			owner: repoOwner,
 			repo: repoName,
 			per_page: 100,
 		});
-		if (commits.status !== 200) {
-			logError(
-				`Failed to get all Commit Authors. Returned Status Code ${commits.status}, expected Status 200.`,
-			);
-			return;
-		}
-		commits.data.forEach((commit) => {
+		commits.forEach((commit) => {
 			if (!commitAuthorCache.has(commit.sha))
 				commitAuthorCache.set(commit.sha, commit.author?.login ?? "");
 		});
@@ -717,6 +706,7 @@ export async function formatAuthor(commit: Commit, octokit: Octokit) {
 	}
 
 	try {
+		// Try to retrieve, just in case
 		const commitInfo = await octokit.repos.getCommit({
 			owner: repoOwner,
 			repo: repoName,
