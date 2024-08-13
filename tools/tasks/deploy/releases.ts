@@ -3,8 +3,7 @@ import { modpackManifest } from "#globals";
 import fs from "fs";
 import upath from "upath";
 import buildConfig from "#buildConfig";
-import { makeArtifactNameBody } from "#utils/util.ts";
-import { Octokit } from "@octokit/rest";
+import { makeArtifactNameBody, octokit } from "#utils/util.ts";
 import sanitize from "sanitize-filename";
 import mustache from "mustache";
 import {
@@ -46,10 +45,6 @@ async function deployReleases(): Promise<void> {
 		if (!fs.existsSync(path)) {
 			throw new Error(`File ${path} doesn't exist!`);
 		}
-	});
-
-	const octokit = new Octokit({
-		auth: process.env.GITHUB_TOKEN,
 	});
 
 	const parsedSlug = /(.+)\/(.+)/.exec(process.env.GITHUB_REPOSITORY ?? "");

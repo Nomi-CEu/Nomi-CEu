@@ -39,11 +39,40 @@ import axiosRetry, {
 import stream from "node:stream";
 import { NomiConfig } from "#types/axios.ts";
 import { BuildData } from "#types/transformFiles.js";
+import { retry } from "@octokit/plugin-retry";
+import { throttling } from "@octokit/plugin-throttling";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
 // Make git commands run in root dir
 export const git: SimpleGit = simpleGit(rootDirectory);
+
+const RetryOctokit = Octokit.plugin(retry, throttling);
+export const octokit = new RetryOctokit({
+	auth: process.env.GITHUB_TOKEN,
+	throttle: {
+		onRateLimit: (retryAfter, options, _octokit, retryCount) => {
+			logError(
+				`Request Quota Exhausted for Request ${options.method} ${options.url}!`,
+			);
+
+			if (retryCount < buildConfig.downloaderMaxRetries) {
+				logInfo(`Retrying after ${retryAfter} seconds.`);
+				return true;
+			}
+		},
+		onSecondaryRateLimit: (retryAfter, options, _octokit, retryCount) => {
+			logError(
+				`Secondary Rate Limit Hit for Request ${options.method} ${options.url}!`,
+			);
+
+			if (retryCount < buildConfig.downloaderMaxRetries) {
+				logInfo(`Retrying after ${retryAfter} seconds.`);
+				return true;
+			}
+		},
+	},
+});
 
 const retryCfg: IAxiosRetryConfig = {
 	retries: 10,
@@ -610,7 +639,7 @@ const issueURLCache: Map<number, string> = new Map<number, string>();
 /**
  * Gets all closed issue/PR URLs of the repo, sorted by updated, and saves it to the cache.
  */
-export async function getIssueURLs(octokit: Octokit): Promise<void> {
+export async function getIssueURLs(): Promise<void> {
 	if (issueURLCache.size > 0) return;
 	try {
 		const issues = await octokit.paginate(octokit.issues.listForRepo, {
@@ -634,10 +663,7 @@ export async function getIssueURLs(octokit: Octokit): Promise<void> {
 /**
  * Gets the specified Issue URL from the cache, or retrieves it.
  */
-export async function getIssueURL(
-	issueNumber: number,
-	octokit: Octokit,
-): Promise<string> {
+export async function getIssueURL(issueNumber: number): Promise<string> {
 	if (issueURLCache.has(issueNumber))
 		return issueURLCache.get(issueNumber) ?? "";
 	try {
@@ -674,7 +700,7 @@ const commitAuthorCache: Map<string, string> = new Map<string, string>();
 /**
  * Fills the Commit Author Cache.
  */
-export async function getCommitAuthors(octokit: Octokit): Promise<void> {
+export async function getCommitAuthors(): Promise<void> {
 	if (commitAuthorCache.size > 0) return;
 	try {
 		const commits = await octokit.paginate(octokit.repos.listCommits, {
@@ -696,7 +722,7 @@ export async function getCommitAuthors(octokit: Octokit): Promise<void> {
 /**
  * Gets the Author, in mentionable form (@login), or default (**Display Name**), from a Commit.
  */
-export async function formatAuthor(commit: Commit, octokit: Octokit) {
+export async function formatAuthor(commit: Commit) {
 	const defaultFormat = `**${commit.author_name}**`;
 
 	if (commitAuthorCache.has(commit.hash)) {

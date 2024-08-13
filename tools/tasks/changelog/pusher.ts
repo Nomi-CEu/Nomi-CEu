@@ -2,7 +2,6 @@ import ChangelogData from "./changelogData.ts";
 import { categories, defaultIndentation } from "./definitions.ts";
 import { Category, ChangelogMessage, Commit } from "#types/changelogTypes.ts";
 import { repoLink } from "./definitions.ts";
-import { Octokit } from "@octokit/rest";
 import {
 	formatAuthor,
 	getIssueURL,
@@ -12,7 +11,6 @@ import {
 import logInfo from "#utils/log.ts";
 
 let data: ChangelogData;
-let octokit: Octokit;
 
 // How many lines the changelog (excluding the commit log) can be before the commit log is excluded.
 const sectionLinesBeforeCommitLogExcluded = 50;
@@ -29,14 +27,10 @@ export default async function pushAll(inputData: ChangelogData): Promise<void> {
 }
 
 export async function pushSetup(): Promise<void> {
-	octokit = new Octokit({
-		auth: process.env.GITHUB_TOKEN,
-	});
-
 	// Fill Caches
 	logInfo("Filling Caches...");
-	await getIssueURLs(octokit);
-	await getCommitAuthors(octokit);
+	await getIssueURLs();
+	await getCommitAuthors();
 }
 
 export function pushTitle(inputData: ChangelogData): void {
@@ -288,7 +282,7 @@ export async function formatMessage(
 		const commit = commits[0];
 		const shortSHA = commit.hash.substring(0, 7);
 		const formattedCommit = `[\`${shortSHA}\`](${repoLink}commit/${commit.hash})`;
-		const author = await formatAuthor(commit, octokit);
+		const author = await formatAuthor(commit);
 
 		return `${indentation}* ${message} - ${author} (${formattedCommit})`;
 	}
@@ -301,7 +295,7 @@ export async function formatMessage(
 	const retrievedAuthors: { commit: Commit; formatted: string }[] =
 		await Promise.all(
 			commits.map((commit) =>
-				formatAuthor(commit, octokit).then((formatted) => {
+				formatAuthor(commit).then((formatted) => {
 					return { commit, formatted };
 				}),
 			),
@@ -349,7 +343,7 @@ async function formatCommit(commit: Commit): Promise<string> {
 		month: "short",
 		day: "numeric",
 	});
-	const formattedCommit = `${commit.message} - ${await formatAuthor(commit, octokit)} (${date})`;
+	const formattedCommit = `${commit.message} - ${await formatAuthor(commit)} (${date})`;
 
 	const shortSHA = commit.hash.substring(0, 7);
 
@@ -390,7 +384,7 @@ async function transformTags(message: string): Promise<string> {
 
 			// Get PR/Issue Info (PRs are listed in the Issue API Endpoint)
 			promises.push(
-				getIssueURL(digits, octokit).then((url) =>
+				getIssueURL(digits).then((url) =>
 					message.replace(match, `[#${digits}](${url})`),
 				),
 			);
