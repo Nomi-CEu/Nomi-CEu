@@ -23,6 +23,7 @@
 		"@inquirer/confirm": "^3.1.6",
 		"@inquirer/prompts": "^5.0.2",
 		"@octokit/plugin-retry": "^7.1.1",
+		"@octokit/plugin-throttling": "^9.3.1",
 		"@octokit/rest": "^21.0.1",
 		"@types/diff-match-patch": "^1.0.36",
 		"@types/fake-diff": "^1.0.3",

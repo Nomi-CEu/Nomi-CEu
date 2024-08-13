@@ -40,16 +40,38 @@ import stream from "node:stream";
 import { NomiConfig } from "#types/axios.ts";
 import { BuildData } from "#types/transformFiles.js";
 import { retry } from "@octokit/plugin-retry";
+import { throttling } from "@octokit/plugin-throttling";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
 // Make git commands run in root dir
 export const git: SimpleGit = simpleGit(rootDirectory);
 
-// @ts-expect-error error declaration
-const RetryOctokit = Octokit.plugin(retry);
+const RetryOctokit = Octokit.plugin(retry, throttling);
 export const octokit = new RetryOctokit({
 	auth: process.env.GITHUB_TOKEN,
+	throttle: {
+		onRateLimit: (retryAfter, options, _octokit, retryCount) => {
+			logError(
+				`Request Quota Exhausted for Request ${options.method} ${options.url}!`,
+			);
+
+			if (retryCount < buildConfig.downloaderMaxRetries) {
+				logInfo(`Retrying after ${retryAfter} seconds.`);
+				return true;
+			}
+		},
+		onSecondaryRateLimit: (retryAfter, options, _octokit, retryCount) => {
+			logError(
+				`Secondary Rate Limit Hit for Request ${options.method} ${options.url}!`,
+			);
+
+			if (retryCount < buildConfig.downloaderMaxRetries) {
+				logInfo(`Retrying after ${retryAfter} seconds.`);
+				return true;
+			}
+		},
+	},
 });
 
 const retryCfg: IAxiosRetryConfig = {
