@@ -250,7 +250,7 @@ addTooltip(item('deepmoblearning:glitch_fragment'), translatable('nomiceu.toolti
 // Matter
 for (MetadataLivingMatter matter : MetadataManager.livingMatterMetadataList) {
 	// XP is as a Percent of One Level
-	int xpPercent = (matter.xpValue / LabsConfig.advanced.aaEioLinearXp) * 100
+	int xpPercent = (matter.xpValue / LabsConfig.advanced.otherModsLinearXp) * 100
 	if (xpPercent == 100)
 		addTooltip(matter.itemStack, translatable('nomiceu.tooltip.dme.matter.full_level'))
 	else
