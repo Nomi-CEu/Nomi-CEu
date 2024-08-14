@@ -20,7 +20,6 @@ removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 9)) // Decoctive Diff
 // Hide Unused Augments
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 352)) // Pyroconvective Loop
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 401)) // Flux Reconstruction
-mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 402)) // Parabolic Flux Coupling
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 448)) // Reagent Recovery
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 656)) // Isentropic Reservoir
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 672)) // Closed Loop Cooling
