@@ -1,7 +1,12 @@
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.RecipeBuilder
 import net.minecraftforge.fluids.FluidStack
 
+import java.util.stream.Stream
+
 import static gregtech.api.GTValues.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.*
 
 /* Usable Items */
 // Meteorite Compass
@@ -258,14 +263,15 @@ for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 2
 		.fluidInputs(joiningFluid)
 		.outputs(item('appliedenergistics2:material', 22) * 16)
 		.duration(400).EUt(VA[IV])
-		.buildAndRegister();
+		.buildAndRegister()
 
 	// Calculation Processor
 	mods.gregtech.circuit_assembler.recipeBuilder()
 		.inputs(ore('circuitEv'), metaitem('plate.central_processing_unit') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
 		.fluidInputs(joiningFluid)
 		.outputs(item('appliedenergistics2:material', 23) * 16)
-		.duration(400).EUt(VA[IV]).buildAndRegister();
+		.duration(400).EUt(VA[IV])
+		.buildAndRegister()
 
 	// Engineering Processor
 	mods.gregtech.circuit_assembler.recipeBuilder()
@@ -273,7 +279,44 @@ for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 2
 		.fluidInputs(joiningFluid)
 		.outputs(item('appliedenergistics2:material', 24) * 16)
 		.duration(400).EUt(VA[IV])
-		.buildAndRegister();
+		.buildAndRegister()
+}
+
+// Add Circuits to Quartz and Certus Quartz Autoclave Recipes (So Doesn't Conflict with Purified Shortcut)
+var getCertusRecipes = { List<Stream<ChangeRecipeBuilder>> input ->
+	input.add(mods.gregtech.autoclave.changeByOutput(null, null, [chanced(metaitem('gemCertusQuartz'), 7000, 1000)], null))
+	input.add(mods.gregtech.autoclave.changeByOutput([metaitem('gemCertusQuartz')], null))
+}
+
+List<Stream<ChangeRecipeBuilder>> toAddCircuit = []
+toAddCircuit.add(mods.gregtech.autoclave.changeByOutput(null, null, [chanced(item('minecraft:quartz'), 7000, 1000)], null))
+toAddCircuit.add(mods.gregtech.autoclave.changeByOutput([item('minecraft:quartz')], null))
+getCertusRecipes(toAddCircuit)
+
+toAddCircuit.forEach { Stream<ChangeRecipeBuilder> stream ->
+	stream.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.circuitMeta(1)
+		}.replaceAndRegister()
+	}
+}
+
+// Copy Certus Quartz Recipe for Fluix
+List<Stream<ChangeRecipeBuilder>> certusRecipes = []
+getCertusRecipes(certusRecipes)
+
+certusRecipes.forEach { stream ->
+	stream.forEach { builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.clearInputs()
+				.inputs(item('appliedenergistics2:material', 8))
+				.circuitMeta(1)
+		}.changeEachOutput { output ->
+			return item('appliedenergistics2:material', 7) * output.count
+		}.changeEachChancedOutput { output ->
+			return chanced(item('appliedenergistics2:material', 7), output.chance, output.chanceBoost)
+		}.buildAndRegister()
+	}
 }
 
 // Purified AE2 Crystal Shortcut
@@ -283,7 +326,7 @@ mods.gregtech.autoclave.recipeBuilder()
 	.fluidInputs(fluid('distilled_water') * 8000)
 	.outputs(item('appliedenergistics2:material', 10) * 64, item('appliedenergistics2:material', 10) * 64)
 	.duration(2560).EUt(VA[EV])
-	.buildAndRegister();
+	.buildAndRegister()
 
 mods.gregtech.autoclave.recipeBuilder()
 	.notConsumable(item('appliedenergistics2:crystal_seed', 1200))
@@ -291,7 +334,7 @@ mods.gregtech.autoclave.recipeBuilder()
 	.fluidInputs(fluid('distilled_water') * 8000)
 	.outputs(item('appliedenergistics2:material', 12) * 64, item('appliedenergistics2:material', 12) * 64)
 	.duration(2560).EUt(VA[EV])
-	.buildAndRegister();
+	.buildAndRegister()
 
 mods.gregtech.autoclave.recipeBuilder()
 	.notConsumable(item('appliedenergistics2:crystal_seed', 600))
@@ -299,7 +342,7 @@ mods.gregtech.autoclave.recipeBuilder()
 	.fluidInputs(fluid('distilled_water') * 8000)
 	.outputs(item('appliedenergistics2:material', 11) * 64, item('appliedenergistics2:material', 11) * 64)
 	.duration(2560).EUt(VA[EV])
-	.buildAndRegister();
+	.buildAndRegister()
 
 // Fluix + Charged Certus Shortcut
 mods.gregtech.autoclave.recipeBuilder()
@@ -307,5 +350,5 @@ mods.gregtech.autoclave.recipeBuilder()
 	.fluidInputs(fluid('redstone') * 1152)
 	.outputs(item('appliedenergistics2:material', 7) * 16)
 	.duration(160).EUt(VA[EV])
-	.buildAndRegister();
+	.buildAndRegister()
 
