@@ -6,7 +6,7 @@ import gregtech.api.unification.stack.UnificationEntry
 import gregtech.common.metatileentities.MetaTileEntities
 import net.minecraft.item.ItemStack
 
-import static gregtech.loaders.recipe.CraftingComponent.*;
+import static gregtech.loaders.recipe.CraftingComponent.*
 import static gregtech.api.GTValues.*
 
 ore('allDiodes').add(metaitem('component.diode'))

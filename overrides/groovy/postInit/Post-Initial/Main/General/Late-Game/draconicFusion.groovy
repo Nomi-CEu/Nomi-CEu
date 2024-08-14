@@ -151,7 +151,7 @@ mods.gregtech.assembler.recipeBuilder()
 	.fluidInputs(fluid('soldering_alloy') * 576)
 	.outputs(item('packageddraconic:fusion_crafter'))
 	.duration(400).EUt(VA[LuV])
-	.buildAndRegister();
+	.buildAndRegister()
 
 // Marked Fusion Pedestals
 crafting.remove('packageddraconic:marked_basic_injector')
