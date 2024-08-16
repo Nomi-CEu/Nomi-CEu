@@ -5,6 +5,8 @@ import gregtech.api.recipes.ingredients.GTRecipeInput
 import gregtech.api.recipes.recipeproperties.TemperatureProperty
 import net.minecraftforge.fluids.FluidStack
 
+import static gregtech.api.GTValues.*
+
 // Lumium
 mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.lumium')])
 	.forEach { ChangeRecipeBuilder builder ->
@@ -12,6 +14,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.lumium')])
 			recipe.inputs(item('extendedcrafting:material', 7) * 2, ore('clathrateGlowstone')) // Luminessence
 				.fluidInputs(fluid('mana') * 1000)
 		}.changeCircuitMeta { meta -> meta + 2 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
@@ -23,6 +26,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.signalum')
 			recipe.inputs(ore('clathrateRedstone'))
 				.fluidInputs(fluid('mana') * 1000)
 		}.changeCircuitMeta { meta -> meta + 1 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
@@ -34,6 +38,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.enderium')
 			recipe.inputs(ore('clathrateEnder'))
 				.fluidInputs(fluid('mana') * 1000)
 		}.changeCircuitMeta { meta -> meta + 1 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
@@ -44,6 +49,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('electrum_flux')])
 		builder.builder {RecipeBuilder recipe ->
 			recipe.inputs(ore('dustMana'))
 		}.changeCircuitMeta { meta -> meta + 1 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 9) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
