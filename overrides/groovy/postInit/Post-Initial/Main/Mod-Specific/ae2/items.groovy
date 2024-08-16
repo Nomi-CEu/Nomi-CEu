@@ -1,6 +1,7 @@
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
+import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
 import java.util.stream.Stream
@@ -283,40 +284,38 @@ for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 2
 }
 
 // Add Circuits to Quartz and Certus Quartz Autoclave Recipes (So Doesn't Conflict with Purified Shortcut)
-var getCertusRecipes = { List<Stream<ChangeRecipeBuilder>> input ->
-	input.add(mods.gregtech.autoclave.changeByOutput(null, null, [chanced(metaitem('gemCertusQuartz'), 7000, 1000)], null))
-	input.add(mods.gregtech.autoclave.changeByOutput([metaitem('gemCertusQuartz')], null))
+
+// 2D List of Recipes, Each List is Seperate Quartz Type
+List<List<ChangeRecipeBuilder>> quartzRecipes = []
+
+for (ItemStack quartz : [item('minecraft:quartz'), metaitem('gemCertusQuartz')]) {
+	List<ChangeRecipeBuilder> toAdd = []
+	toAdd.addAll(mods.gregtech.autoclave.changeByOutput(null, null, [chanced(quartz, 7000, 1000)], null).iterator())
+	toAdd.addAll(mods.gregtech.autoclave.changeByOutput([quartz], null).iterator())
+
+	quartzRecipes.add(toAdd)
 }
 
-List<Stream<ChangeRecipeBuilder>> toAddCircuit = []
-toAddCircuit.add(mods.gregtech.autoclave.changeByOutput(null, null, [chanced(item('minecraft:quartz'), 7000, 1000)], null))
-toAddCircuit.add(mods.gregtech.autoclave.changeByOutput([item('minecraft:quartz')], null))
-getCertusRecipes(toAddCircuit)
-
-toAddCircuit.forEach { Stream<ChangeRecipeBuilder> stream ->
-	stream.forEach { ChangeRecipeBuilder builder ->
+quartzRecipes.forEach { List<ChangeRecipeBuilder> builders ->
+	builders.forEach { ChangeRecipeBuilder builder ->
 		builder.builder { RecipeBuilder recipe ->
 			recipe.circuitMeta(1)
 		}.replaceAndRegister()
 	}
 }
 
-// Copy Certus Quartz Recipe for Fluix
-List<Stream<ChangeRecipeBuilder>> certusRecipes = []
-getCertusRecipes(certusRecipes)
-
-certusRecipes.forEach { stream ->
-	stream.forEach { builder ->
-		builder.builder { RecipeBuilder recipe ->
-			recipe.clearInputs()
-				.inputs(item('appliedenergistics2:material', 8))
-				.circuitMeta(1)
-		}.changeEachOutput { output ->
-			return item('appliedenergistics2:material', 7) * output.count
-		}.changeEachChancedOutput { output ->
-			return chanced(item('appliedenergistics2:material', 7), output.chance, output.chanceBoost)
-		}.buildAndRegister()
-	}
+// Copy a Quartz Recipe for Fluix
+quartzRecipes[0].forEach { builder ->
+	builder.copyOriginal()
+	.builder { RecipeBuilder recipe ->
+		recipe.clearInputs()
+			.inputs(item('appliedenergistics2:material', 8))
+			.circuitMeta(1)
+	}.changeEachOutput { output ->
+		return item('appliedenergistics2:material', 7) * output.count
+	}.changeEachChancedOutput { output ->
+		return chanced(item('appliedenergistics2:material', 7), output.chance, output.chanceBoost)
+	}.buildAndRegister()
 }
 
 // Purified AE2 Crystal Shortcut
