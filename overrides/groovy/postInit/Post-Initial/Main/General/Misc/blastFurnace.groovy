@@ -3,7 +3,8 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.ingredients.GTRecipeInput
 import gregtech.api.recipes.recipeproperties.TemperatureProperty
-import net.minecraftforge.fluids.FluidStack
+
+import static gregtech.api.GTValues.*
 
 // Lumium
 mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.lumium')])
@@ -12,6 +13,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.lumium')])
 			recipe.inputs(item('extendedcrafting:material', 7) * 2, ore('clathrateGlowstone')) // Luminessence
 				.fluidInputs(fluid('mana') * 1000)
 		}.changeCircuitMeta { meta -> meta + 2 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
@@ -23,6 +25,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.signalum')
 			recipe.inputs(ore('clathrateRedstone'))
 				.fluidInputs(fluid('mana') * 1000)
 		}.changeCircuitMeta { meta -> meta + 1 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
@@ -34,6 +37,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.enderium')
 			recipe.inputs(ore('clathrateEnder'))
 				.fluidInputs(fluid('mana') * 1000)
 		}.changeCircuitMeta { meta -> meta + 1 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
@@ -44,6 +48,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('electrum_flux')])
 		builder.builder {RecipeBuilder recipe ->
 			recipe.inputs(ore('dustMana'))
 		}.changeCircuitMeta { meta -> meta + 1 }
+		.changeEachFluidOutput { fluid -> fluid * (L * 9) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
@@ -53,10 +58,7 @@ if (LabsModeHelper.normal) {
 	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
 		.forEach { ChangeRecipeBuilder builder ->
 			builder.clearCircuitMeta()
-				.changeEachFluidOutput { FluidStack fluid ->
-					fluid.amount *= 2
-					return fluid
-				}
+				.changeEachFluidOutput { fluid -> fluid * (L * 2) }
 				.builder { RecipeBuilder recipe ->
 					recipe.clearInputs()
 						.inputs(ore('dustCopper') * 2, item('minecraft:redstone') * 3)
