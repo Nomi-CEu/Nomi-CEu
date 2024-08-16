@@ -12351,9 +12351,9 @@
         2
       ],
       "preRequisites:11": [
+        173,
         176,
-        224,
-        173
+        224
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -52651,12 +52651,12 @@
     },
     "838:10": {
       "preRequisiteTypes:7": [
-        0,
-        1
+        1,
+        0
       ],
       "preRequisites:11": [
-        526,
-        194
+        194,
+        526
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -65538,7 +65538,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 1052,
