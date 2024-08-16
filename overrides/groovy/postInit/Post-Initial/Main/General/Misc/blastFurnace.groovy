@@ -3,7 +3,6 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.ingredients.GTRecipeInput
 import gregtech.api.recipes.recipeproperties.TemperatureProperty
-import net.minecraftforge.fluids.FluidStack
 
 import static gregtech.api.GTValues.*
 
@@ -59,10 +58,7 @@ if (LabsModeHelper.normal) {
 	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
 		.forEach { ChangeRecipeBuilder builder ->
 			builder.clearCircuitMeta()
-				.changeEachFluidOutput { FluidStack fluid ->
-					fluid.amount *= 2
-					return fluid
-				}
+				.changeEachFluidOutput { fluid -> fluid * (L * 2) }
 				.builder { RecipeBuilder recipe ->
 					recipe.clearInputs()
 						.inputs(ore('dustCopper') * 2, item('minecraft:redstone') * 3)
