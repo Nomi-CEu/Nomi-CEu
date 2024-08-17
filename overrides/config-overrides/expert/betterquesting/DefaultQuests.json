@@ -1613,7 +1613,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need §6Obsidian§r to make §6Dark Steel§r. Most of the tools you can make cannot mine Obsidian, but you do have a few potential options for ones that will work. The options you\u0027re most likely to have access to at this point are:\n\n1) A §aDiamond Pickaxe§r or §aDiamond Mining Hammer§r.\n\n2) A §aPlatinum Mining Hammer§r (not pickaxe though).\n\nLater. you can use a §3Rock Breaker§r at voltage §aHV§r or higher to make §6Obsidian§r without spending §6Lava§r!",
+          "desc:8": "To make §6Dark Steel§r you\u0027ll need §6Obsidian§r, which is created by solidifying lava source blocks with water as usual. It can be mined with a §aDiamond Hammer§r/§aPickaxe§r or other diamond-level tool.\n\nAn §3HV Rock Breaker§r can create §6Obsidian§r without spending §6Lava§r later on, and §6Void Crystals§r can be used as a cheaper substitute.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10166,7 +10166,8 @@
     },
     "176:10": {
       "preRequisites:11": [
-        173
+        173,
+        922
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10189,7 +10190,7 @@
           "lockedprogress:1": 1,
           "name:8": "Nitrogen Dioxide",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -10219,13 +10220,20 @@
       }
     },
     "177:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2,
+        2
+      ],
       "preRequisites:11": [
-        176
+        176,
+        224,
+        826
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Don\u0027t let the EPA catch you making this stuff.\n\n§9Nitrogen Dioxide§r, §9Oxygen§r, and §9Water§r will create §9Nitric Acid§r, the next step in your chemical journey.",
+          "desc:8": "Don\u0027t let the EPA catch you making this stuff.\n\nNitric Acid can be created from §9Nitrogen Dioxide§r, from §9Ammonia§r or directly from §9Hydrogen§r, §9Nitrogen§r and §9Oxygen§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10243,7 +10251,7 @@
           "lockedprogress:1": 1,
           "name:8": "§2Nitric Acid",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -10491,9 +10499,15 @@
       }
     },
     "182:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1
+      ],
       "preRequisites:11": [
         172,
-        806
+        806,
+        826
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -11368,12 +11382,10 @@
     },
     "197:10": {
       "preRequisiteTypes:7": [
-        2,
         0,
         1
       ],
       "preRequisites:11": [
-        159,
         201,
         827
       ],
@@ -40822,9 +40834,15 @@
       }
     },
     "762:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
         754,
-        761
+        761,
+        803
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42891,7 +42909,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Whether or not you (or your server admin) picked the default §bLost Cities§r overworld type, you have the option of teleporting yourself to the §eLost Cities Dimension§r. This is useful if you like other world types but want to still be able to explore cities for things like §eloot and spawners§r.\n\nTo create a portal, you must place a §aBed§r down on two §6Blocks of Diamond§r. Then, you surround the bed with any kind of §eMonster Skulls§r. Sleep in this bed and you will be teleported there.\n\n§cDon\u0027t forget to have a way to get back!§r You can use the §e/sethome§r command to register where your house is, and §e/home§r to return to it. If you supply a name (default \"home\") then you can register and go to multiple locations. There are some §erestrictions§r on this though: §eit takes a few seconds of standing still to activate§r and there is a §ecooldown§r between uses.\n\nLater on you\u0027ll have other means of teleportation.\n\nMonster Skulls might take a little while to get if you\u0027re playing in §ePeaceful§r. §6Skeleton Skulls§r would be the way to go in that case.",
+          "desc:8": "Whether or not you (or your server admin) picked the default §bLost Cities§r overworld type, you have the option of teleporting yourself to the §eLost Cities Dimension§r. This is useful if you like other world types but want to still be able to explore cities for things like §eloot and spawners§r.\n\nTo create a portal, you must place a §aBed§r down on two §6Blocks of Diamond§r. Then, you surround the bed with any kind of §eMonster Skulls§r. Sleep in this bed and you will be teleported there.\n\n§cDon\u0027t forget to have a way to get back!§r You can use the §e/sethome§r command to register where your house is, and §e/home§r to return to it. If you supply a name (for example §e/sethome nether§r) then you can register and teleport to up to 25 homes by default. \n\nThere are some §erestrictions§r on this though: §eIt takes a few seconds of standing still for /home to activate§r, and there is a §ecooldown§r between uses. These restrictions can be bypassed by enabling cheats.\n\n§e/setwarp§r and §e/warp§r work much the same, except warp points are server-wide for any player to use - great for meeting points and events.\n\nLater on you\u0027ll have other means of teleportation.\n\nMonster Skulls might take a little while to get if you\u0027re playing in §ePeaceful§r. §6Skeleton Skulls§r would be the way to go in that case.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44194,7 +44212,6 @@
     },
     "827:10": {
       "preRequisites:11": [
-        65,
         177
       ],
       "properties:10": {
@@ -44213,7 +44230,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Platinum Group Processing",
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -49917,7 +49934,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: This quest accepts both Memory Cards, and Advanced Memory Cards.§r\n\nA §6P2P Tunnel§r (§aPoint-to-Point Tunnel§r) is a powerful tool from §bApplied Energistics 2§r that can be used to send items, redstone, RF/EU or fluids from one location to another, using your ME system, without the need to use any disk storage space.\n\n§6RF P2P§r requires a §c5% RF tax§r which is taken from your energy cells.\n\n§cIf your ME network doesn\u0027t have enough energy storage capacity RF P2P throughput rate will be limited accordingly, since you need to be able to store (and provide) enough energy to pay for all the tax in a tick at once.§r\n\n§2EU input into an RF P2P tunnel will be automatically converted to RF as usual.§r Input is limited to 2.1 billion RF/t while the output is limited only by the total across all inputs. (World accelerated energy sources are able to bypass the input limit, since they send energy multiple times per tick.)\n\n§6EU P2P§r preserves both voltage and amperage and also has a §c5% tax§r, but deducts it from the throughput instead: §2No energy cells are necessary, §cbut only 95% of the EU reaches the output.§r EU P2P has no practical throughput limit.§r\n\nEach P2P tunnel system may have §aany number of inputs§r and §aany number of outputs§r. There is no limit on how many P2P tunnels, or P2P tunnel systems, you can have on one network.\n\nBy default, a P2P tunnel is an §6ME tunnel§r, which transmits Applied Energistics channels and power. Since channels are disabled, you will most likely not be using the default tunnel. You can change the mode of your P2P tunnels by right clicking the tunnel with the respective item seen in §bJEI§r.\n\nTo configure your P2P tunnels, take a §6Memory Card§r. While holding the memory card, §ashift-right click§r the unconfigured tunnel, to set the frequency of the input, and save the frequency to the memory card. Once the first tunnel has been set up this way and the memory card is configured with the frequency, any subsequent tunnel you §aright-click§r with the memory card will be set as the output of the most recent frequency used. Alternatively, you can set a P2P tunnel as an §einput§r by §aright-clicking§r the tunnel with the §ecard in your off-hand§r.\n\nYou can also use memory cards to copy the configuration of ME blocks and tile-entities, such as §6Interfaces§r and §6Storage Buses§r. §aShift-right click§r a ME block to copy its configuration, and §aright-click§r to paste that configuration. Note that this doesn\u0027t copy upgrades applied to the block.\n\nYou can also §ashift-right click§r to empty the frequency, or the ME block configuration, set in the card.\n\nThis pack has §bBetter P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nYou can also configure P2P tunnels using your Advanced Memory Card. While holding the card, §aright-click§r on a tunnel, it will be §aselected§r. Once a tunnel is selected, it will be highlighted in §agreen§r. You can also see your other connections with the options to select or bind; hitting select will reselect the tunnel.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\nThe §6Advanced Memory Card§r has 3 modes accessible in the §3GUI§r:\n\n§aBind Output§r:\nOnce the tunnel you would like to be set as an input has been §aselected§r, hitting §bbind§r on any other connection will turn the selected tunnel into an input tunnel, and any binded tunnels will be turned into output tunnels for the selected tunnel.\n\n§aBind Input§r:\nOnce the tunnel you would like to be set as an output has been §aselected§r, hitting §bbind§r on any other tunnel will set the tunnel as the input of the selected tunnel. This is useful for when you can’t find the output tunnel.\n \n§aCopy Output§r:\nOnce an output tunnel you want to copy has been §aselected§r, hitting §bbind§r on any other connection will copy the output frequency of the selected tunnel.",
+          "desc:8": "§oNote: This quest accepts both Memory Cards and Advanced Memory Cards.§r\n\nA §6P2P Tunnel§r (§aPoint-to-Point Tunnel§r) is a powerful tool from §bApplied Energistics 2§r that can be used to send items, redstone, RF/EU or fluids from one location to another, using your ME system, without the need to use any disk storage space.\n\nEach P2P tunnel system may have §aany number of inputs§r and §aany number of outputs§r. There is no limit on how many P2P tunnels, or P2P tunnel systems, you can have on one network.\n\nBy default, a P2P tunnel is an §6ME tunnel§r, which transmits Applied Energistics channels and power. Since channels are disabled, you will most likely not be using the default tunnel. You can change the mode of your P2P tunnels by right clicking the tunnel with the respective item seen in §bJEI§r, or by §asneak-scrolling§r with the P2P tunnel in hand.\n\nTo configure your P2P tunnels, take a §6Memory Card§r. While holding the memory card, §ashift-right click§r the unconfigured tunnel, to set the frequency of the input, and save the frequency to the memory card. Once the first tunnel has been set up this way and the memory card is configured with the frequency, any subsequent tunnel you §aright-click§r with the memory card will be set as the output of the most recent frequency used. Alternatively, you can set a P2P tunnel as an §einput§r by §aright-clicking§r the tunnel with the §ecard in your off-hand§r.\n\nYou can also use memory cards to copy the configuration of ME blocks and tile-entities, such as §6Interfaces§r and §6Storage Buses§r. §aShift-right click§r a ME block to copy its configuration, and §aright-click§r to paste that configuration. Note that this doesn\u0027t copy upgrades applied to the block.\n\nYou can also §ashift-right click§r to empty the frequency, or the ME block configuration, set in the card.\n\nThis pack has §bBetter P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nYou can also configure P2P tunnels using your Advanced Memory Card. While holding the card, §aright-click§r on a tunnel, it will be §aselected§r. Once a tunnel is selected, it will be highlighted in §agreen§r. You can also see your other connections with the options to select or bind; hitting select will reselect the tunnel.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\nThe §6Advanced Memory Card§r has 3 modes accessible in the §3GUI§r:\n\n§aBind Output§r:\nOnce the tunnel you would like to be set as an input has been §aselected§r, hitting §bbind§r on any other connection will turn the selected tunnel into an input tunnel, and any binded tunnels will be turned into output tunnels for the selected tunnel.\n\n§aBind Input§r:\nOnce the tunnel you would like to be set as an output has been §aselected§r, hitting §bbind§r on any other tunnel will set the tunnel as the input of the selected tunnel. This is useful for when you can’t find the output tunnel.\n \n§aCopy Output§r:\nOnce an output tunnel you want to copy has been §aselected§r, hitting §bbind§r on any other connection will copy the output frequency of the selected tunnel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55618,6 +55635,65 @@
               "Damage:2": 2013,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1054:10": {
+      "preRequisites:11": [
+        930
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6RF§r and §6EU P2P tunnels§r can be used to transport energy over your ME network. They connect §bmany inputs to many outputs§r, have §bno hard throughput limit§r and require §bno extra cables§r besides your existing ME network. They are often used to power machines in cleanrooms or other dimensions, but can also form your main power grid.\n\n§6RF P2P§r requires a §c5% RF tax§r which is taken directly from your energy cells. The total RF P2P throughput rate of your network is therefore §climited by your energy storage§r, since you need to be able to store and provide enough energy to pay for all the tax in a tick at once. One §6Dense Energy Cell§r is enough to start with, but more will be needed eventually.\n\n§6EU P2P§r also charges a §c5% EU tax§r, but deducts it from the throughput instead: No additional cells are necessary, but only 95% of the EU reaches the machine.\n\nBe aware that EU P2P §cpreserves input voltage§r, so you need to be careful not to connect the wrong EU P2P channel to a machine.\n\nIn both cases §aEU is automatically converted to RF§r but not the other way around.\n\nEnergy P2P channels are linked just like other P2P tunnels, and a tunnel can be set to carry RF or EU by §aright-clicking§r it with an energy conduit/Gregtech cable or by §asneak-scrolling§r with any §6P2P tunnel§r in hand.\n\n§bBetterP2P§r\u0027s §6Advanced Memory Card§r might be helpful in managing your energy P2P channels.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 469,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Energy P2P",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1054,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "OR",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 469,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 470,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -62154,6 +62230,13 @@
           "sizeY:3": 24,
           "x:3": 186,
           "y:3": 630
+        },
+        "52:10": {
+          "id:3": 1054,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 102,
+          "y:3": 588
         }
       }
     }
