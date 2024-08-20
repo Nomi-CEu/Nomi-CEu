@@ -44218,7 +44218,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Give me a little juice, FRIDAY!",
+          "desc:8": "This one goes fast and has §ano gradual drop§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44234,7 +44234,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Infinity War",
+          "name:8": "Fast Flight",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -44294,11 +44294,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "I\u0027m running out of MCU puns.\n\nThe §aAngel Ring§r is actually slower than a jetpack, but it grants creative flight and requires no fuel (except a bit of GP).\n\nUp to you if you want to use it over a jetpack for day to day stuff, but it\u0027s an ingredient in the next jetpack, so if you want that you\u0027ll need to make one eventually.",
+          "desc:8": "The §aAngel Ring§r is actually slower than a jetpack, but it grants creative flight without gradual drop, requires no traditional fuel and can be active §aat the same time§r as a jetpack to greatly increase your flight speed. It\u0027s activated by double tapping the jump key.\n\nIt consumes §b32 GP§r while active, however, and will deactivate if you don\u0027t have enough.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1,
             "OreDict:8": "",
             "id:8": "extrautils2:angelring"
           },
@@ -44306,7 +44306,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Captain... Marvel? IDK",
+          "name:8": "Spread Your Wings",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -44362,7 +44362,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is the flight of our lives.",
+          "desc:8": "Pairs with an Angel Ring to achieve §cl§6u§e§ed§ai§ec§br§do§cu§6s§r speed.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44378,7 +44378,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Endgame",
+          "name:8": "Going Hypersonic",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -72553,7 +72553,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
