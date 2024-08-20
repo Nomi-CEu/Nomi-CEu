@@ -12216,7 +12216,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll be needing large quantities of the various Noble Gasses so you should get this automated and running continuously. \n\n§2After liquefication, Overworld Air grants Helium and Argon; Nether Air grants Helium-3 and Neon; Ender Air grants Helium, Krypton, Xenon, and Radon.\n\nCertain Noble Gases can also boost the speed of EBF processes.",
+          "desc:8": "You\u0027ll be needing large amounts of the various noble gases so you should get this automated and running continuously. \n\nAfter §bliquefication§r, §eOverworld Air§r grants §9Helium§r and §9Argon§r, §eNether Air§r grants §9Helium-3§r and §9Neon§r and §eEnder Air§r grants §9Helium§r, §9Krypton§r, §9Xenon§r, and §9Radon§r.\n\nSome noble gases can be used to §aboost§r the speed of certain EBF recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12232,7 +12232,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Noble Gasses",
+          "name:8": "§2Noble Gases",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -42663,8 +42663,13 @@
       }
     },
     "672:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        350
+        350,
+        899
       ],
       "properties:10": {
         "betterquesting:10": {
