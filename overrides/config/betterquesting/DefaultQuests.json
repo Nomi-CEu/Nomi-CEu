@@ -10580,7 +10580,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the Overworld.\n\n§rLarger quantities of Ilmenite and Bauxite may be found on the Moon and other planets.",
+          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the §eOverworld§r.\n\n§rLarger quantities of §6Ilmenite§r and §6Bauxite§r may be found on the §eMoon§r and other planets.\n\n§6Ilmenite§r dust can be processed into §6Rutile§r in a §acompletely renewable§r process that yields §6Wrought Iron§r as a byproduct.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62646,7 +62646,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.§r\n\n§6Fluorine§r is needed in §6Polytetrafluoroethylene (PTFE)§r, and §6Thorium§r is used in §bNuclearCraft §3Fission Reactors§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust §ris then finally put into a §3Electrolyser§r. This yeilds §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
+          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.§r\n\n§6Fluorine§r is needed to produce §6Polytetrafluoroethylene§r (PTFE) and to process §6Naquadah§r, and §6Thorium§r is used to breed other elements in a §3Fission Reactor§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher, and can be performed without any water or lava present if done in a §3Processing Array§r.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust §ris then finally put into a §3Electrolyser§r. This yeilds §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
