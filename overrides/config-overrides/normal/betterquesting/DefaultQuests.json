@@ -61945,8 +61945,13 @@
       }
     },
     "1001:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        109
+        109,
+        1053
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62863,10 +62868,17 @@
       }
     },
     "1017:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0,
+        0,
+        1
+      ],
       "preRequisites:11": [
         120,
         391,
-        1016
+        1016,
+        1053
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -65577,6 +65589,78 @@
               "Damage:2": 470,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1053:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "There are many §eCards§r in §bApplied Energistics 2§r, some of which are highlighted in this chapter. However, for the rest of them, it is up to you to discover them!\n\nSimply search \u0027@ae2 card\u0027 in §bJEI§r to find them, at which point you can simply see their tooltip for their usage!\n\nHave fun exploring!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 28,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "AE2 Modifier Cards",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1053,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 25,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 28,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -71845,14 +71929,14 @@
           "id:3": 0,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -126,
           "y:3": 348
         },
         "1:10": {
           "id:3": 1,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -126,
           "y:3": 444
         },
         "2:10": {
@@ -71873,21 +71957,21 @@
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -126,
           "y:3": 480
         },
         "5:10": {
           "id:3": 64,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -26,
-          "y:3": 272
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 108,
+          "y:3": 390
         },
         "6:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
+          "x:3": -162,
           "y:3": 396
         },
         "7:10": {
@@ -71908,7 +71992,7 @@
           "id:3": 101,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -150,
+          "x:3": -138,
           "y:3": 528
         },
         "10:10": {
@@ -71985,22 +72069,22 @@
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 90,
-          "y:3": 276
+          "x:3": 174,
+          "y:3": 396
         },
         "21:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 90,
-          "y:3": 216
+          "x:3": 216,
+          "y:3": 396
         },
         "22:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 34,
-          "y:3": 216
+          "x:3": 216,
+          "y:3": 444
         },
         "23:10": {
           "id:3": 122,
@@ -72035,7 +72119,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": 276
+          "y:3": 348
         },
         "28:10": {
           "id:3": 237,
@@ -72048,7 +72132,7 @@
           "id:3": 259,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 6,
+          "x:3": 90,
           "y:3": 348
         },
         "30:10": {
@@ -72104,7 +72188,7 @@
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -126,
           "y:3": 396
         },
         "38:10": {
@@ -72147,21 +72231,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": 216
+          "y:3": 294
         },
         "44:10": {
           "id:3": 1017,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -22,
-          "y:3": 216
+          "x:3": -78,
+          "y:3": 258
         },
         "45:10": {
           "id:3": 1018,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 444
+          "x:3": -30,
+          "y:3": 348
         },
         "46:10": {
           "id:3": 1020,
@@ -72197,6 +72281,13 @@
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 552
+        },
+        "51:10": {
+          "id:3": 1053,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 444
         }
       }
     },

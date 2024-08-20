@@ -76,7 +76,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nThis machine requires §eME Power§r, which is provided through a §aME Network§r connection. Placing it next to your §3Energy Acceptor§r accomplishes this for now, or you can connect it via §3Fluix Glass Cables§r.\n\nJEI doesn\u0027t show the Chamber\u0027s recipes directly, so we\u0027ll explain it here:\n\nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nFluix Crystals you\u0027ve already had to make in a pool of water by now, and it\u0027s the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.",
+          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nBut first, your going to alloy your §6Black Steel§r with some other materials to make §6Blue Steel§r. Have fun!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nThis machine requires §eME Power§r, which is provided through a §aME Network§r connection. Placing it next to your §3Energy Acceptor§r accomplishes this for now, or you can connect it via §3Fluix Glass Cables§r.\n\nJEI doesn\u0027t show the Chamber\u0027s recipes directly, so we\u0027ll explain it here:\n\nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nFluix Crystals you\u0027ve already had to make in a pool of water by now, and it\u0027s the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44347,8 +44347,13 @@
       }
     },
     "829:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        109
+        109,
+        1055
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49285,9 +49290,15 @@
       }
     },
     "918:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1
+      ],
       "preRequisites:11": [
         391,
-        917
+        917,
+        1055
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -55699,6 +55710,65 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1055:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "There are many §eCards§r in §bApplied Energistics 2§r, some of which are highlighted in this chapter. However, for the rest of them, it is up to you to discover them!\n\nSimply search \u0027@ae2 card\u0027 in §bJEI§r to find them, at which point you can simply see their tooltip for their usage!\n\nHave fun exploring!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 28,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "AE2 Modifier Cards",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1055,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 25,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 28,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -61904,10 +61974,10 @@
         },
         "5:10": {
           "id:3": 64,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": 12,
-          "y:3": 364
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 156,
+          "y:3": 426
         },
         "6:10": {
           "id:3": 73,
@@ -62018,43 +62088,43 @@
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": 368
+          "x:3": 228,
+          "y:3": 432
         },
         "22:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 186,
-          "y:3": 368
+          "x:3": 270,
+          "y:3": 432
         },
         "23:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": 368
+          "x:3": 270,
+          "y:3": 480
         },
         "24:10": {
           "id:3": 122,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 260,
-          "y:3": 480
+          "x:3": 228,
+          "y:3": 516
         },
         "25:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 260,
-          "y:3": 516
+          "x:3": 228,
+          "y:3": 552
         },
         "26:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 260,
-          "y:3": 552
+          "x:3": 228,
+          "y:3": 588
         },
         "27:10": {
           "id:3": 132,
@@ -62088,7 +62158,7 @@
           "id:3": 259,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 66,
+          "x:3": 60,
           "y:3": 390
         },
         "32:10": {
@@ -62200,8 +62270,8 @@
           "id:3": 924,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": 480
+          "x:3": 6,
+          "y:3": 366
         },
         "48:10": {
           "id:3": 926,
@@ -62237,6 +62307,13 @@
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": 588
+        },
+        "53:10": {
+          "id:3": 1055,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 18,
+          "y:3": 480
         }
       }
     }
