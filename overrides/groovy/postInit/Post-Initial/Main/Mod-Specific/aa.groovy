@@ -1,7 +1,9 @@
+import com.cleanroommc.groovyscript.api.IIngredient
 import de.ellpeck.actuallyadditions.api.recipe.EmpowererRecipe
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.common.items.MetaItems
 import net.minecraft.item.ItemStack
+import net.minecraft.item.crafting.Ingredient
 import net.minecraftforge.fluids.FluidStack
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler
 
@@ -75,14 +77,41 @@ setupAndRemoveEmpowerer(5, item('moreplates:empowered_enori_gear'), Color.WHITE)
 	.register()
 
 /* For EVERY Empowerer Recipe, add a Combination Crafting Recipe */
+
+// IIngredient Class that Matches Based on MC Ing
+// Very basic, always amount of 1
+class IngredientMCEmpower implements IIngredient {
+	Ingredient ing
+
+	IngredientMCEmpower(Ingredient ing) { this.ing = ing }
+
+	@Override
+	int getAmount() { return 1 }
+
+	@Override
+	void setAmount(int i) {}
+
+	@Override
+	IIngredient exactCopy() { return this }
+
+	@Override
+	Ingredient toMcIngredient() { return ing }
+
+	@Override
+	ItemStack[] getMatchingStacks() { return ing.getMatchingStacks() }
+
+	@Override
+	boolean test(ItemStack itemStack) { return ing.apply(itemStack) }
+}
+
 mods.actuallyadditions.empowerer.streamRecipes()
 	.forEach { EmpowererRecipe recipe ->
 		mods.extendedcrafting.combination_crafting.recipeBuilder()
-			.input(recipe.input.matchingStacks[0])
-			.pedestals(recipe.standOne.matchingStacks[0])
-			.pedestals(recipe.standTwo.matchingStacks[0])
-			.pedestals(recipe.standThree.matchingStacks[0])
-			.pedestals(recipe.standFour.matchingStacks[0])
+			.input(new IngredientMCEmpower(recipe.input))
+			.pedestals(new IngredientMCEmpower(recipe.standOne))
+			.pedestals(new IngredientMCEmpower(recipe.standTwo))
+			.pedestals(new IngredientMCEmpower(recipe.standThree))
+			.pedestals(new IngredientMCEmpower(recipe.standFour))
 			.output(recipe.output)
 			.totalCost(4_000_000)
 			.costPerTick(400_000)
