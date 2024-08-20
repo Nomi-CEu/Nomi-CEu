@@ -1951,7 +1951,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.",
+          "desc:8": "Your first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.\n\n\nYou can also use §6Large Bronze Boilers§r to produce steam for use in §6Steam Turbines§r or §bTurbine Conversion§r-augmented §6Steam Dynamos§r. Each one produces 800 mB steam per tick, which is equivalent to 400 EU/t or 1600 RF/t. They are significantly more expensive, however.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2000,7 +2000,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
-          "entryLogic:8": "AND",
+          "entryLogic:8": "OR",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -2017,6 +2017,12 @@
                 "Level:1": 0,
                 "RSControl:1": 0
               }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1013,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -20619,7 +20625,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Obtaining §6Grains of Infinity§r will require you to mine all the way down to Bedrock level.\n\nUse Flint and Steel to light a fire (or many fires) and then wait for it to go out. There\u0027s a 50% chance of Grains Of Infinity to appear for every fire that burns out on its own.\n\nBut who wants to do that forever? There will be better ways before too long, don\u0027t worry.",
+          "desc:8": "Obtaining §6Grains of Infinity§r will require you to mine all the way down to Bedrock level.\n\nUse Flint and Steel to light a fire (or many fires) and then wait for it to go out. There\u0027s a 50% chance of Grains Of Infinity to appear for every fire that burns out on its own.\n\nDon\u0027t worry, you\u0027ll be able to use §aFire Water§r, §aBlazing Pyrotheum§r or §aTier Four Microminers§r to get grains before long.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50437,9 +50443,17 @@
       }
     },
     "806:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1,
+        1,
+        0
+      ],
       "preRequisites:11": [
-        166,
-        226
+        226,
+        835,
+        154,
+        166
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51893,7 +51907,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. However, the yields of these ores from Microverse missions are small, so you should consider processing §6Platinum Group Sludge (PGS)§r for more.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.",
+          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. However, the yields of these ores from Microverse missions are small, so you should consider processing §6Platinum Group Sludge (PGS)§r for more.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.\n\nIf you get stuck, check out the excellent flowcharts on the §eDiscord§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55733,7 +55747,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -55766,6 +55780,24 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1008,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_foil"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -56869,7 +56901,8 @@
     },
     "900:10": {
       "preRequisites:11": [
-        888
+        888,
+        505
       ],
       "properties:10": {
         "betterquesting:10": {
