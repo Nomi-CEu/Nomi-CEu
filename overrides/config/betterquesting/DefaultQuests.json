@@ -30909,7 +30909,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Useful to carry more stuff.\n\nWhat more explanation are you expecting?",
+          "desc:8": "Holds your stuff.\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34695,7 +34695,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry even more stuff.",
+          "desc:8": "Holds more stuff.\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34781,7 +34781,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry §oeven more§r stuff.",
+          "desc:8": "Holds §oeven more§r stuff. \n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47124,7 +47124,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry the most stuff.\n\nIf you need more space than this, enchant it with §aHolding IV§r.",
+          "desc:8": "Sworn to carry your burdens.\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49955,7 +49955,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry a whole lotta stuff!",
+          "desc:8": "Carry a whole lotta stuff!\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
