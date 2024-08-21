@@ -49299,18 +49299,18 @@
     "918:10": {
       "preRequisiteTypes:7": [
         0,
-        0,
+        1,
         1
       ],
       "preRequisites:11": [
-        391,
         917,
-        1055
+        1055,
+        1071
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §664k ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. \n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nAfter you have made the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring Multiblock§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, §cNOT the Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you need to setup a §aQuantum Ring Multiblock§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, §cNOT the Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49346,24 +49346,18 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "appliedenergistics2:condenser"
-            },
-            "1:10": {
               "Count:3": 8,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:quantum_ring"
             },
-            "2:10": {
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:quantum_link"
             },
-            "3:10": {
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 59,
               "OreDict:8": "",
@@ -56604,6 +56598,121 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1071:10": {
+      "preRequisites:11": [
+        120,
+        148,
+        267,
+        391
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Matter Condenser§r accepts large quantities of items or fluids to turn into data, which can ultimately be converted into a §6Singularity§r. They can also make §6Matter Balls§r, but they are useless in this pack.\n\nA storage component is needed for holding this data. Specifically, you need a §664k Storage Component§r to make a Singularity.\n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nSingularities are required for linking together §aQuantum Link Chambers§r, and for crafting different AE2 and NAE2 parts.\n\nFor the former, you want to detonate a §6Tiny TNT§r with a Singularity dropped on the ground next to it. This will create a pair of §6Quantum Entangled Singularities§r, which you can place inside of a Quantum Link Chamber to connect them together.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:condenser"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Matter Condenser",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1071,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:condenser"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 47,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1072:10": {
+      "preRequisites:11": [
+        1071
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §aME Storage Exposer§r provides automation access to every item and fluid stored inside of your ME Network.\n\nIt\u0027s a lot like a §aController Slave§r from §bStorage Drawers§r: you can directly interact with this block using §6conduits§r, §6machine covers§r, or even other ME parts like §aStorage Buses§r or §aP2P§r.\n\n§cThis functionality comes with a performance cost§r: the more things exposed by this block to automation, the more impact on TPS there will be. Use §efiltered subnets§r to expose just the relevant contents.\n\nFor example, you can create a subnet consisting of an §aOre Dictionary Storage Bus§r and an Exposer so that the exposer only sees very specific items from the main network. If you wanted to expose all ores from your network to this subnet, you could use §eore*§r in the Storage Bus\u0027s filter, and automation would have access to all your ores.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:exposer"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ME Storage Exposer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1072,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:exposer"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -63254,6 +63363,20 @@
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 516
+        },
+        "69:10": {
+          "id:3": 1071,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 354,
+          "y:3": 432
+        },
+        "70:10": {
+          "id:3": 1072,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 354,
+          "y:3": 480
         }
       }
     }
