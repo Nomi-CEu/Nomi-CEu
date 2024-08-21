@@ -56713,6 +56713,86 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1073:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        64,
+        89,
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aVoid Storage Cells§r can be placed anywhere a regular storage cell is allowed, but §call items or fluids that enter the cell are voided to create data for the§r §3Matter Condenser§r.\n\nAs such, you should §cbe extremely careful§r and partition the cell to filter which items or fluids are allowed to be voided using a §aCell Workbench§r.\n\nOne possible use case is putting them in an §3ME IO Port§r to mass-void junk items from your storage.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Void Storage Cells",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1073,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:cell_workbench"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:storage_cell_void",
+              "tag:10": {}
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:fluid_storage_cell_void",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -63377,6 +63457,13 @@
           "sizeY:3": 24,
           "x:3": 354,
           "y:3": 480
+        },
+        "71:10": {
+          "id:3": 1073,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 162,
+          "y:3": 390
         }
       }
     }
