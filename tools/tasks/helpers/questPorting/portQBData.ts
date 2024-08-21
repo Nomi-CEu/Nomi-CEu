@@ -135,8 +135,8 @@ export default class PortQBData {
 		} else {
 			this.ref = await input({
 				message:
-					"What Commit SHA, Tag OR Branch should we compare to? (Defaults to 'main')",
-				default: "main",
+					"What Commit SHA, Tag OR Branch should we compare to? (Defaults to 'HEAD')",
+				default: "HEAD",
 			});
 		}
 
