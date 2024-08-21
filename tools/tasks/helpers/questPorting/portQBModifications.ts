@@ -209,7 +209,8 @@ function findAllParsers(modify: Modified): {
 function assertIsModification(change: QuestChange) {
 	if (change.op !== "replace")
 		throw new Error(dedent`
-		  Runtime Exception: Addition/Removal Should Not Happen Here! Report this to the Core Devs of Nomi-CEu!
+		  Runtime Exception: Addition/Removal Should Not Happen Here!
+		  If this is a Proper Change, Report this to the Core Devs of Nomi-CEu!
         Path: ${change.path.toString()}
 		`);
 }
@@ -297,7 +298,11 @@ const modifyIcon = async (
 	modify: Modified,
 	change: QuestChange,
 ) => {
-	assertIsModification(change);
+	// Tag Compounds might be removed/added
+	if (
+		change.path.toString() !== "properties:10,betterquesting:10,icon:10,tag:10"
+	) assertIsModification(change);
+
 	const oldIcon =
 		modify.oldQuest["properties:10"]["betterquesting:10"]["icon:10"];
 	const newIcon =
@@ -831,6 +836,7 @@ export const modificationParsers = [
 		logic: {
 			type: LogicType.Simple,
 			applyOnce: true,
+			formattedName: () => "Icon Modification",
 			func: modifyIcon,
 		},
 	},
