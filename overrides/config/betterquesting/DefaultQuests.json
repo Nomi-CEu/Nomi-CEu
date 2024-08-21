@@ -66610,6 +66610,74 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1068:10": {
+      "preRequisites:11": [
+        89,
+        100,
+        116
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Tired of the §3Atomic Reconstructor§r needing you to drop items on the ground and having to pick them back up again? Then you\u0027ll love the §6Reconstruction Chamber§r!\n\nPush items into it and hit it with the Atomic Reconstructor\u0027s beam, and the items will be transformed as though they had been on the floor. Transformed items will be automatically ejected into an adjacent inventory (like an §aME Interface§r), allowing for convenient automation.\n\nThe Reconstruction Chamber is also compatible with comparators, so you can emit a redstone signal when it contains items. This means you can selectively enable the Atomic Reconstructor instead of relying on a pressure plate for a pulse, or constant-firing.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:reconstruction_chamber"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Reconstruction Chamber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1068,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:reconstruction_chamber"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -73307,7 +73375,7 @@
           "id:3": 1064,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -30,
+          "x:3": -36,
           "y:3": 414
         },
         "63:10": {
@@ -73328,8 +73396,15 @@
           "id:3": 1067,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -30,
+          "x:3": -36,
           "y:3": 444
+        },
+        "66:10": {
+          "id:3": 1068,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 480
         }
       }
     },
