@@ -354,9 +354,21 @@ function stripOrThrowExcessFormatting(
 	if (!value.includes("§")) return value;
 
 	let builder: string[] = [];
+	let emptyAmt: number = 0;
 
 	for (let i = 0; i < value.length; i++) {
 		const char = value.charAt(i);
+
+		// If Space, ignore, add one to Empty Amt
+		if (char === " ") {
+			emptyAmt++;
+			builder.push(char);
+			continue;
+		}
+
+		// Else, reset Empty Amt
+		const oldEmptyAmt = emptyAmt;
+		emptyAmt = 0;
 
 		if (builder.at(-1) === "§") {
 			if (char === "f") {
@@ -407,7 +419,8 @@ function stripOrThrowExcessFormatting(
 
 		if (char === "§") {
 			// If two characters before was not § (if builder length < 2, `.at` returns undefined)
-			if (builder.at(-2) !== "§") {
+			// (Ignoring Spaces)
+			if (builder.at(-2 - oldEmptyAmt) !== "§") {
 				builder.push(char);
 				continue;
 			}
@@ -422,7 +435,12 @@ function stripOrThrowExcessFormatting(
 			);
 
 			// Remove Previous
-			builder = builder.slice(0, -2);
+			builder = builder.slice(0, -2 - oldEmptyAmt);
+
+			// Add Empty Amount Spaces
+			for (let i = 0; i < oldEmptyAmt; i++) {
+				builder.push(" ");
+			}
 		}
 
 		builder.push(char);
