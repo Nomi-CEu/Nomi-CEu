@@ -66541,6 +66541,75 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1067:10": {
+      "preRequisites:11": [
+        54,
+        105,
+        132,
+        148
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Laser-ify your ME Networks!\n\nThe §6ME Beam Former§r is a device that creates a beam between two points to connect networks over empty space or transparent blocks. You\u0027ll need two devices to set up a link.\n\nThe beam updates in real-time based on changes to the blocks along its path. §eIf a non-transparent block gets in the way, the connection breaks§r. This makes it useful not only for linking networks together, but also for detecting arbitrary block updates if necessary.\n\nThe beam\u0027s color matches the cable color of the Beam Former it originates from. If the two devices have different cable colors, the color of the first activated Beam Former takes precedence.\n\nThe maximum distance the beam can cover is 32 blocks, or 34 blocks if you include the Beam Formers themselves.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ME Beam Former",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1067,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -72804,14 +72873,14 @@
           "id:3": 0,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
+          "x:3": -162,
           "y:3": 348
         },
         "1:10": {
           "id:3": 1,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
+          "x:3": -162,
           "y:3": 444
         },
         "2:10": {
@@ -72825,14 +72894,14 @@
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -114,
           "y:3": 480
         },
         "4:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
+          "x:3": -162,
           "y:3": 480
         },
         "5:10": {
@@ -72846,7 +72915,7 @@
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -204,
+          "x:3": -198,
           "y:3": 396
         },
         "7:10": {
@@ -72867,7 +72936,7 @@
           "id:3": 101,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -180,
+          "x:3": -174,
           "y:3": 528
         },
         "10:10": {
@@ -72902,7 +72971,7 @@
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -114,
           "y:3": 594
         },
         "15:10": {
@@ -72993,7 +73062,7 @@
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -114,
           "y:3": 348
         },
         "28:10": {
@@ -73014,7 +73083,7 @@
           "id:3": 282,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -132,
+          "x:3": -126,
           "y:3": 384
         },
         "31:10": {
@@ -73063,7 +73132,7 @@
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
+          "x:3": -162,
           "y:3": 396
         },
         "38:10": {
@@ -73091,7 +73160,7 @@
           "id:3": 1000,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -114,
           "y:3": 660
         },
         "42:10": {
@@ -73105,21 +73174,21 @@
           "id:3": 1016,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -114,
           "y:3": 312
         },
         "44:10": {
           "id:3": 1017,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -114,
           "y:3": 276
         },
         "45:10": {
           "id:3": 1018,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
+          "x:3": -66,
           "y:3": 348
         },
         "46:10": {
@@ -73161,8 +73230,8 @@
           "id:3": 1053,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 444
+          "x:3": 6,
+          "y:3": 414
         },
         "52:10": {
           "id:3": 1054,
@@ -73238,7 +73307,7 @@
           "id:3": 1064,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
+          "x:3": -30,
           "y:3": 414
         },
         "63:10": {
@@ -73254,6 +73323,13 @@
           "sizeY:3": 24,
           "x:3": -36,
           "y:3": 552
+        },
+        "65:10": {
+          "id:3": 1067,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -30,
+          "y:3": 444
         }
       }
     },
