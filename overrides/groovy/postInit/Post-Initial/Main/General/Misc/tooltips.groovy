@@ -121,8 +121,17 @@ addTooltip(item('appliedenergistics2:material', 27), translatable('nomiceu.toolt
 // Redstone Card
 addTooltip(item('appliedenergistics2:material', 26), translatable('nomiceu.tooltip.ae2.acceleration_card'))
 
+// Inverter Card
+addTooltip(item('appliedenergistics2:material', 31), translatable("nomiceu.tooltip.ae2.inverter_card"))
+
 // Sticky Card
 addTooltip(item('appliedenergistics2:material', 61), translatable('nomiceu.tooltip.ae2.sticky_card'))
+
+// Hyper Acceleration Card
+addTooltip(item('nae2:upgrade'), [
+	translatable("nomiceu.tooltip.ae2.hyper_acceleration_card.1"),
+	translatable("nomiceu.tooltip.ae2.hyper_acceleration_card.2")
+])
 
 // Pure Certus Quartz
 addTooltip(item('appliedenergistics2:material', 10), translatable('nomiceu.tooltip.ae2.pure_certus_quartz'))
