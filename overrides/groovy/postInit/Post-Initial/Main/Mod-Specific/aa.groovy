@@ -102,6 +102,12 @@ class IngredientMCEmpower implements IIngredient {
 
 	@Override
 	boolean test(ItemStack itemStack) { return ing.apply(itemStack) }
+
+	@Override
+	String getMark() { return null }
+
+	@Override
+	void setMark(String s) {}
 }
 
 mods.actuallyadditions.empowerer.streamRecipes()
