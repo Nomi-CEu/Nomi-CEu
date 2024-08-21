@@ -121,6 +121,9 @@ addTooltip(item('appliedenergistics2:material', 27), translatable('nomiceu.toolt
 // Redstone Card
 addTooltip(item('appliedenergistics2:material', 26), translatable('nomiceu.tooltip.ae2.acceleration_card'))
 
+// Inverter Card
+addTooltip(item('appliedenergistics2:material', 31), translatable("nomiceu.tooltip.ae2.inverter_card"))
+
 // Sticky Card
 addTooltip(item('appliedenergistics2:material', 61), translatable('nomiceu.tooltip.ae2.sticky_card'))
 
