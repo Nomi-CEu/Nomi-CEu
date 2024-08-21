@@ -3943,10 +3943,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 35,
             "OreDict:8": "",
-            "id:8": "appliedenergistics2:storage_cell_1k",
-            "tag:10": {}
+            "id:8": "appliedenergistics2:material"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -56431,7 +56430,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Interface P2P Tunnels§r are like an upgraded §6Item P2P Tunnel§r for §6ME Interfaces§r. These P2P Tunnels allow you to parallelize crafting patterns from a single ME Interface to many destinations.\n\nThe input tunnel should always be placed on an ME Interface, and the output tunnels on valid destinations for the §aEncoded Patterns§r contained in that ME Interface.\n\nUnlike Item P2P Tunnels, which allow items sent through them to split across destinations, Interface P2P Tunnels §eensure that all of the items from a pattern end up at the same destination§r.\n\nYou can also §epush items back into the output tunnel§r and it will come out of the input tunnel, back into the adjacent ME Interface.\n\n§eBlocking Mode§r also functions normally through Interface P2P Tunnels, only inserting items into a destination which is empty or equivalent (like config circuits).\n\nIf the above is confusing, think of it like this: §eeach destination is treated like it\u0027s actually adjacent to the ME Interface§r. Instead of at most five sides, you get as many \"sides\" of the interface as you want!",
+          "desc:8": "§6Interface P2P Tunnels§r are like an upgraded §6Item P2P Tunnel§r for §6ME Interfaces§r. These P2P Tunnels allow you to parallelize crafting patterns from a single ME Interface to many destinations.\n\nThe input tunnel should always be placed on an ME Interface, and the output tunnels on valid destinations for the §aEncoded Patterns§r contained in that ME Interface.\n\nUnlike Item P2P Tunnels, which allow items sent through them to split across destinations, Interface P2P Tunnels §eensure that all of the items from a pattern end up at the same destination§r.\n\nYou can also §epush items back into the output tunnel§r and it will come out of the input tunnel, back into the adjacent ME Interface.\n\nThis also extends to having more than one input P2P, with output sides being able to pull from every input, allowing you to mass-pattern your machines.\n\nFurthermore, the Interface P2P works with §6Fluid Interfaces§r as well, allowing you to push fluids back to a different input P2P adjacent to a Fluid Interface.\n\n§eBlocking Mode§r also functions normally through Interface P2P Tunnels, only inserting items into a destination which is empty or equivalent (like config circuits).\n\nIf the above is confusing, think of it like this: §eeach destination is treated like it\u0027s actually adjacent to the ME Interface§r. Instead of at most five sides, you get as many \"sides\" of the interface as you want, with as many \u0027interfaces\u0027 as you want!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56493,7 +56492,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Laser-ify your ME Networks!\n\nThe §6ME Beam Former§r is a device that creates a beam between two points to connect networks over empty space or transparent blocks. You\u0027ll need two devices to set up a link.\n\nThe beam updates in real-time based on changes to the blocks along its path. §eIf a non-transparent block gets in the way, the connection breaks§r. This makes it useful not only for linking networks together, but also for detecting arbitrary block updates if necessary.\n\nThe beam\u0027s color matches the cable color of the Beam Former it originates from. If the two devices have different cable colors, the color of the first activated Beam Former takes precedence.\n\nThe maximum distance the beam can cover is 32 blocks, or 34 blocks if you include the Beam Formers themselves.",
+          "desc:8": "Laser-ify your ME Networks!\n\nThe §6ME Beam Former§r is a device that creates a beam between two points to connect networks over empty space or transparent blocks. You\u0027ll need two devices to set up a link.\n\nThis is great for transporting your ME Networks into §aCleanrooms§r, as an alternative to passing them through §6Machine Hulls§r, although they will have to pass through §6Cleanroom Glass§r and not §6Plascrete§r.\n\nThe beam updates in real-time based on changes to the blocks along its path. §eIf a non-transparent block gets in the way, the connection breaks§r. This makes it useful not only for linking networks together, but also for detecting arbitrary block updates if necessary.\n\nThe beam\u0027s color matches the cable color of the Beam Former it originates from. If the two devices have different cable colors, the color of the first activated Beam Former takes precedence.\n\nThe maximum distance the beam can cover is 32 blocks, or 34 blocks if you include the Beam Formers themselves.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56609,7 +56608,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Matter Condenser§r accepts large quantities of items or fluids to turn into data, which can ultimately be converted into a §6Singularity§r. They can also make §6Matter Balls§r, but they are useless in this pack.\n\nA storage component is needed for holding this data. Specifically, you need a §664k Storage Component§r to make a Singularity.\n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nSingularities are required for linking together §aQuantum Link Chambers§r, and for crafting different AE2 and NAE2 parts.\n\nFor the former, you want to detonate a §6Tiny TNT§r with a Singularity dropped on the ground next to it. This will create a pair of §6Quantum Entangled Singularities§r, which you can place inside of a Quantum Link Chamber to connect them together.",
+          "desc:8": "The §3Matter Condenser§r accepts large quantities of items or fluids to turn into data, which can ultimately be converted into a §6Singularity§r. They can also make §6Matter Balls§r, but they are useless in this pack.\n\nA storage component is needed for holding this data. Specifically, you need a §664k Storage Component§r to make a Singularity.\n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nSingularities are required for linking together §aQuantum Link Chambers§r, and for crafting different AE2 and NAE2 parts.\n\nFor the former, you want to detonate a §6Tiny TNT§r with two §6Singularities§r and an §6Ender Pearl§r dropped on the ground next to it. This will create a pair of §6Quantum Entangled Singularities§r, which you can place inside of a Quantum Link Chamber to connect them together.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
