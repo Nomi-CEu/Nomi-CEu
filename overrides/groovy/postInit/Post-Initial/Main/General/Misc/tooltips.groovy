@@ -238,6 +238,20 @@ for (ItemStack knife : [item('appliedenergistics2:nether_quartz_cutting_knife'),
 	addTooltip(knife, translatable('nomiceu.tooltip.ae2.quartz_knife'))
 }
 
+// Buses Warning
+List<ItemStack> buses = [
+	item('appliedenergistics2:part', 240), // ME Import Buses
+	item('appliedenergistics2:part', 241), // ME Fluid Import Buses
+	item('appliedenergistics2:part', 260), // ME Export Buses
+	item('appliedenergistics2:part', 261), // ME Fluid Export Buses
+]
+for (var bus : buses) {
+	addTooltip(bus, [translatable("nomiceu.tooltip.ae2.buses.warning")])
+}
+
+// Storage Exposer Warning
+addTooltip(item('nae2:exposer'), [translatableEmpty(), translatable("nomiceu.tooltip.ae2.storage_exposer.warning")])
+
 /* Dimensional Edibles */
 
 // Island Cake
