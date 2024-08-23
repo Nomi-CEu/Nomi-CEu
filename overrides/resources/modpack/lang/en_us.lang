@@ -62,6 +62,9 @@ nomiceu.tooltip.ae2.p2p_reset_me_shapeless=§5Reset P2Ps back to ME P2Ps!§r
 nomiceu.tooltip.ae2.inverter_card=§eInverts the Logic of a ME Machine.§r
 nomiceu.tooltip.ae2.hyper_acceleration_card.1=§bAn even faster version of the Acceleration Card!§r
 nomiceu.tooltip.ae2.hyper_acceleration_card.2=§cOnly Works in ME IO Ports.§r
+nomiceu.tooltip.ae2.buses.warning=§cMay cause TPS lag if used excessively! Use Interfaces instead!§r
+nomiceu.tooltip.ae2.storage_exposer.warning=§cMay cause TPS lag if used on big networks without Filters!§r
+
 
 # Dimensional Edibles
 nomiceu.tooltip.dimensionaledibles.island_cake.1=§aUsed by Server Owners to send FTB Teams and Individuals to their Personal Islands!§r

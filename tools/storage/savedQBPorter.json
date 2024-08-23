@@ -5,6 +5,10 @@
       "expert": 0
     },
     {
+      "normal": 1,
+      "expert": 1
+    },
+    {
       "normal": 3,
       "expert": 3
     },
@@ -33,12 +37,20 @@
       "expert": 52
     },
     {
+      "normal": 54,
+      "expert": 54
+    },
+    {
       "normal": 56,
       "expert": 56
     },
     {
       "normal": 60,
       "expert": 60
+    },
+    {
+      "normal": 64,
+      "expert": 64
     },
     {
       "normal": 65,
@@ -57,6 +69,10 @@
       "expert": 88
     },
     {
+      "normal": 89,
+      "expert": 89
+    },
+    {
       "normal": 94,
       "expert": 94
     },
@@ -65,12 +81,48 @@
       "expert": 95
     },
     {
+      "normal": 100,
+      "expert": 100
+    },
+    {
       "normal": 102,
       "expert": 102
     },
     {
+      "normal": 105,
+      "expert": 105
+    },
+    {
+      "normal": 109,
+      "expert": 109
+    },
+    {
       "normal": 116,
       "expert": 116
+    },
+    {
+      "normal": 118,
+      "expert": 118
+    },
+    {
+      "normal": 119,
+      "expert": 119
+    },
+    {
+      "normal": 120,
+      "expert": 120
+    },
+    {
+      "normal": 124,
+      "expert": 124
+    },
+    {
+      "normal": 132,
+      "expert": 132
+    },
+    {
+      "normal": 148,
+      "expert": 148
     },
     {
       "normal": 149,
@@ -137,6 +189,10 @@
       "expert": 263
     },
     {
+      "normal": 267,
+      "expert": 267
+    },
+    {
       "normal": 279,
       "expert": 279
     },
@@ -169,6 +225,10 @@
       "expert": 389
     },
     {
+      "normal": 391,
+      "expert": 391
+    },
+    {
       "normal": 399,
       "expert": 399
     },
@@ -179,6 +239,10 @@
     {
       "normal": 402,
       "expert": 402
+    },
+    {
+      "normal": 404,
+      "expert": 404
     },
     {
       "normal": 406,
@@ -313,6 +377,18 @@
       "expert": 906
     },
     {
+      "normal": 967,
+      "expert": 809
+    },
+    {
+      "normal": 1001,
+      "expert": 829
+    },
+    {
+      "normal": 1017,
+      "expert": 918
+    },
+    {
       "normal": 1019,
       "expert": 925
     },
@@ -375,6 +451,82 @@
     {
       "normal": 1051,
       "expert": 1053
+    },
+    {
+      "normal": 1053,
+      "expert": 1055
+    },
+    {
+      "normal": 1054,
+      "expert": 1056
+    },
+    {
+      "normal": 1055,
+      "expert": 1057
+    },
+    {
+      "normal": 1056,
+      "expert": 1058
+    },
+    {
+      "normal": 1057,
+      "expert": 1059
+    },
+    {
+      "normal": 1058,
+      "expert": 1060
+    },
+    {
+      "normal": 1059,
+      "expert": 1061
+    },
+    {
+      "normal": 1060,
+      "expert": 1062
+    },
+    {
+      "normal": 1061,
+      "expert": 1063
+    },
+    {
+      "normal": 1062,
+      "expert": 1064
+    },
+    {
+      "normal": 1063,
+      "expert": 1065
+    },
+    {
+      "normal": 1064,
+      "expert": 1066
+    },
+    {
+      "normal": 1065,
+      "expert": 1067
+    },
+    {
+      "normal": 1066,
+      "expert": 1068
+    },
+    {
+      "normal": 1067,
+      "expert": 1069
+    },
+    {
+      "normal": 1068,
+      "expert": 1070
+    },
+    {
+      "normal": 1069,
+      "expert": 1071
+    },
+    {
+      "normal": 1070,
+      "expert": 1072
+    },
+    {
+      "normal": 1071,
+      "expert": 1073
     }
   ],
   "ignoreQuestsNormal": [
