@@ -14081,7 +14081,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is one of the simpler rockets you can build. The specifics of the shape don\u0027t really matter, as long as the rocket engines are on the bottom and all the parts are added. It also needs to be inside the edges of the Launch Pad and not taller than the Structure Tower.\n\n§aIn order to progress this quest chain further, you\u0027ll first need to complete the Interdimensional Transport (either Dislocators or Telepad) questline and the Rocket Fuel questline, both of which are nearby on this quest tab.",
+          "desc:8": "This is one of the simpler rockets you can build. The specifics of the shape don\u0027t really matter as long as the rocket engines are on the bottom and all the parts are added. It also needs to be inside the edges of the Launch Pad and not taller than the Structure Tower.\n\n§aIn order to progress this quest chain further, you\u0027ll first need to complete the Interdimensional Transport (either FTB Homes, Dislocators or Telepad) questline and the Rocket Fuel questline, both of which are nearby on this quest tab.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14228,13 +14228,20 @@
       }
     },
     "204:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        2
+      ],
       "preRequisites:11": [
-        205
+        208,
+        210,
+        116
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.",
+          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.\n\nIf you have the §6Nomicoins§r to spare, you can also apply the §dAirtight Seal§r enchant to all four pieces of your armor to make it act like a space suit. §cIt still needs to be refilled at a Gas Pad occasionally!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14254,7 +14261,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -14309,18 +14316,43 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:enchanted_book",
+              "tag:10": {
+                "StoredEnchantments:9": {
+                  "0:10": {
+                    "id:2": 12,
+                    "lvl:2": 1
+                  }
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
     "205:10": {
       "preRequisites:11": [
-        208,
-        210
+        204
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Suit Workstation is needed to install §6Low Pressure Tanks§r (or a larger tank if you like) onto your Space Suit Chest-Piece.\n\nOnce installed, you can stand on a §aGas Charging Pad§r to fill up the tanks with §9Oxygen§r. Of course, you\u0027ll need to fill the Gas Charging Pad with Oxygen first.",
+          "desc:8": "The Suit Workstation is needed to install §6Low Pressure Tanks§r (or a larger tank if you like) onto your Space Suit Chest-Piece.\n\nOnce installed, you can stand on a §3Gas Charging Pad§r to fill up the tanks with §9Oxygen§r. Of course, you\u0027ll need to fill the Gas Charging Pad with Oxygen first, using something like a fluid conduit.\n\nIf you choose to use §dAirtight Seal§r enchants instead of a space suit you\u0027ll only need a Gas Charging Pad.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14332,7 +14364,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Suit Workstation",
+          "name:8": "Suiting Up",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14373,6 +14405,24 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
+              "id:8": "advancedrocketry:oxygencharger"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
               "id:8": "advancedrocketry:suitworkstation"
             },
             "1:10": {
@@ -14380,15 +14430,9 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "advancedrocketry:pressuretank"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "advancedrocketry:oxygencharger"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -14991,7 +15035,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you went to the §eMoon§r you have the option of using §6Moon Dust§r or a §3Fluid Rig§r to produce the Deuterium you need to smelt the §6Microversium§r for your first §3Microverse Projector§r. \n\nYour other options are to centrifuge or distill §9Ender Air§r, or to centrifuge §9Hydrogen§r. How you choose to proceed is up to you.\n\nOnce you have some §9Deuterium§r, smelt some §6Microversium§r. Soon you\u0027ll be launching your §6Micro Miners§r into another universe!\n\n",
+          "desc:8": "If you went to the §eMoon§r you have the option of using §6Moon Dust§r or a §3Fluid Rig§r to produce the Deuterium you need to get the §6Microversium§r for your first §3Microverse Projector§r. \n\nYour other options are to centrifuge or distill §9Ender Air§r, or to centrifuge §9Hydrogen§r. How you choose to proceed is up to you.\n\nOnce you have §9Deuterium§r, smelt some §6Microversium§r. Soon you\u0027ll be launching your §6Micro Miners§r into another universe!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16240,15 +16284,15 @@
     },
     "232:10": {
       "preRequisites:11": [
-        204,
         211,
         212,
-        762
+        762,
+        205
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your Rocket built, fuel loaded, and destination set, it\u0027s time for the prelaunch checklist.\n\n- §eMake sure you\u0027re wearing your Space Suit§r (all four pieces) and that it has a full tank of Oxygen. If you plan to stay on the Moon a while, maybe bring a gas charging pad and Ender Tank (being filled with Oxygen) with you.\n\nTeleportation:\n\n- If you decided to go with §aDislocators§r, make sure you take two with you: one bound to the Overworld, the other ready to bind to the Moon. Also bring along a Pedestal to put the Overworld one on the Moon surface.\n\n- If you decided to go with §aTelepads§r, make sure you\u0027ve constructed a Telepad in the Overworld and that you\u0027re carrying coordinates that lead to it. Make sure to bring your Coordinate Selector, blank Paper, and materials for the second Telepad setup. Bring Dew of the Void and RF power (like a §6Solar Panel§r and a §6Capacitor Bank§r).\n\nIn either case, as soon as you land you will need to prepare the other half of the teleportation route, and chunkload it.\n\nWhen you\u0027re sure you\u0027re prepared, sit in your rocket and press §eSpace§r.\n\nLiftoff!",
+          "desc:8": "With your Rocket built, fuel loaded, and destination set, it\u0027s time for the prelaunch checklist.\n\n- §eMake sure you\u0027re wearing your Space Suit§r (all four pieces) and that it has a full tank of Oxygen. If you plan to stay on the Moon a while, maybe bring a gas charging pad and Ender Tank (being filled with Oxygen) with you.\n\nWhen it comes to teleportation to and from the Moon you have some options:\n\n- If using §bFTB Homes§r, use /sethome moon to set a home on the moon, which you can return to with /home moon.\n\n- If you decided to go with §aDislocators§r, make sure you take two with you: one bound to the Overworld, the other ready to bind to the Moon. Also bring along a Pedestal to put the Overworld one on the Moon surface.\n\n- If you decided to go with §aTelepads§r, make sure you\u0027ve constructed a Telepad in the Overworld and that you\u0027re carrying coordinates that lead to it. Make sure to bring your Coordinate Selector, blank Paper, and materials for the second Telepad setup. Bring Dew of the Void and RF power (like a §6Solar Panel§r and a §6Capacitor Bank§r). §cRemember to chunkload the Telepad on the Moon!§r\n\nWhen you\u0027re sure you\u0027re prepared, sit in your rocket and press §eSpace§r.\n\nLiftoff!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -72645,14 +72689,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
-          "y:3": 456
+          "y:3": 420
         },
         "10:10": {
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
-          "y:3": 420
+          "y:3": 456
         },
         "11:10": {
           "id:3": 206,
@@ -72708,21 +72752,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
-          "y:3": 594
+          "y:3": 600
         },
         "19:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 522,
-          "y:3": 594
+          "y:3": 600
         },
         "20:10": {
           "id:3": 217,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
-          "y:3": 636
+          "y:3": 642
         },
         "21:10": {
           "id:3": 219,
@@ -72869,7 +72913,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 606,
-          "y:3": 594
+          "y:3": 600
         },
         "42:10": {
           "id:3": 510,
@@ -72967,14 +73011,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 540,
-          "y:3": 552
+          "y:3": 558
         },
         "56:10": {
           "id:3": 1073,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 588,
-          "y:3": 552
+          "y:3": 558
         }
       }
     },
