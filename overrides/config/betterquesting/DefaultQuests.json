@@ -2903,7 +2903,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts any §oLV Energy Converter§o.\n\n§rThe §3Steam Dynamos§r you have made are capable of generating §aRF power§r, but §bGregTech§r machines require §aEU power§r. With your first §6circuit§r in hand, you are ready to build a §eLow Voltage (LV) §2Energy Converter§r.\n\n§cNote that EU machines cannot use RF! §2However, EU is automatically converted to RF as needed.§r\n\nThe §2Energy Converter§r is a special device that §econverts §2between §aRF power§r and §aEU power§r. They come in §2four sizes: 1A, 4A, 8A, and 16A.\n\n§aRF§r converts into §aEU§r at a §e4 to 1 ratio§r. §a100 RF§r becomes §a25 EU§r, and vice-versa.",
+          "desc:8": "§oNote: this quest accepts any §oLV Energy Converter§o.\n\n§rThe §3Steam Dynamos§r you have made are capable of generating §aRF§r power, but §bGregTech§r machines require §aEU§r power. With your first §6circuit§r in hand, you are ready to build a §eLow Voltage (LV) §2Energy Converter§r.\n\n§3Energy Converters§r are special devices that §econvert§r between §aRF§r power and §aEU§r power, and come in four sizes: 1A, 4A, 8A, and 16A. \n\nYou can reverse the conversion to turn EU into RF by right-clicking it with a soft hammer.\n\nEU is §2automatically converted§r to RF as needed, for example when connecting a §bGregTech§r cable directly to an RF-consuming machine. However, conduits cannot connect directly to most EU providers, so you will still need to use EU to RF converters to connect EU generators to your conduit grid.\n\n§aRF§r converts into §aEU§r at a §e4 to 1 ratio§r. §a100 RF§r becomes §a25 EU§r, and vice-versa. \n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14050,7 +14050,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
-          "entryLogic:8": "AND",
+          "entryLogic:8": "OR",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -14061,6 +14061,12 @@
               "Damage:2": 115,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 115,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -44293,7 +44299,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aAngel Ring§r is actually slower than a jetpack, but it grants creative flight without gradual drop, requires no traditional fuel and can be active §aat the same time§r as a jetpack to greatly increase your flight speed. It\u0027s activated by double tapping the jump key.\n\nIt consumes §b32 GP§r while active, however, and will deactivate if you don\u0027t have enough.",
+          "desc:8": "The §6Angel Ring§r is actually slower than most jetpacks. However, it grants §acreative flight§r with no gradual drop and requires no traditional fuel. \n\nIt reserves §b32 GP§r while active and will deactivate if you don\u0027t have enough. Double press the jump key (i.e spacebar) to activate. Your Angel Ring can be active at the same time as a normal jetpack, and the speeds §astack§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -74007,7 +74013,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
