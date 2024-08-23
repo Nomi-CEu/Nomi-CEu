@@ -40205,7 +40205,9 @@
       }
     },
     "635:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        55
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -41480,7 +41482,7 @@
     },
     "654:10": {
       "preRequisites:11": [
-        251
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41547,7 +41549,7 @@
     },
     "655:10": {
       "preRequisites:11": [
-        251
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41949,7 +41951,8 @@
     },
     "661:10": {
       "preRequisites:11": [
-        669
+        672,
+        671
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41968,7 +41971,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 092: Uranium",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -42150,7 +42153,7 @@
     },
     "664:10": {
       "preRequisites:11": [
-        677
+        673
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42217,7 +42220,7 @@
     },
     "665:10": {
       "preRequisites:11": [
-        676
+        677
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42351,7 +42354,7 @@
     },
     "667:10": {
       "preRequisites:11": [
-        679
+        676
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42419,7 +42422,7 @@
     "668:10": {
       "preRequisites:11": [
         254,
-        287
+        195
       ],
       "properties:10": {
         "betterquesting:10": {
