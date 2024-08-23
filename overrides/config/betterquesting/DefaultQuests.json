@@ -2903,7 +2903,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts any §oLV Energy Converter§o.\n\n§rThe §3Steam Dynamos§r you have made are capable of generating §aRF§r power, but §bGregTech§r machines require §aEU§r power. With your first §6circuit§r in hand, you are ready to build a §eLow Voltage (LV) §2Energy Converter§r.\n\n§3Energy Converters§r are special devices that §econvert§r between §aRF§r power and §aEU§r power, and come in four sizes: 1A, 4A, 8A, and 16A. \n\nYou can reverse the conversion to turn EU into RF by right-clicking it with a soft hammer.\n\nEU is §2automatically converted§r to RF as needed, for example when connecting a §bGregTech§r cable directly to an RF-consuming machine. However, conduits cannot connect directly to most EU providers, so you will still need to use EU to RF converters to connect EU generators to your conduit grid.\n\n§aRF§r converts into §aEU§r at a §e4 to 1 ratio§r. §a100 RF§r becomes §a25 EU§r, and vice-versa. \n\n",
+          "desc:8": "§oNote: this quest accepts any §oLV Energy Converter§o.\n\n§rThe §3Steam Dynamos§r you have made are capable of generating §aRF§r power, but §bGregTech§r machines require §aEU§r power. With your first §6circuit§r in hand, you are ready to build a §eLow Voltage (LV) §2Energy Converter§r.\n\n§3Energy Converters§r are special devices that §econvert§r between §aRF§r power and §aEU§r power, and come in four sizes: 1A, 4A, 8A, and 16A. \n\nYou can reverse the conversion to turn EU into RF by right-clicking it with a soft hammer.\n\nEU is §2automatically converted§r to RF as needed, for example when connecting a §bGregTech§r cable directly to an RF-consuming machine. However, conduits cannot connect directly to most EU providers, so you will still need to use EU to RF converters to connect EU generators to your conduit grid.\n\n§aRF§r converts into §aEU§r at a §e4 to 1 ratio§r. §a100 RF§r becomes §a25 EU§r, and vice-versa.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14229,14 +14229,14 @@
     },
     "204:10": {
       "preRequisiteTypes:7": [
+        2,
         0,
-        0,
-        2
+        0
       ],
       "preRequisites:11": [
+        116,
         208,
-        210,
-        116
+        210
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -15035,7 +15035,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you went to the §eMoon§r you have the option of using §6Moon Dust§r or a §3Fluid Rig§r to produce the Deuterium you need to get the §6Microversium§r for your first §3Microverse Projector§r. \n\nYour other options are to centrifuge or distill §9Ender Air§r, or to centrifuge §9Hydrogen§r. How you choose to proceed is up to you.\n\nOnce you have §9Deuterium§r, smelt some §6Microversium§r. Soon you\u0027ll be launching your §6Micro Miners§r into another universe!\n\n",
+          "desc:8": "If you went to the §eMoon§r you have the option of using §6Moon Dust§r or a §3Fluid Rig§r to produce the Deuterium you need to get the §6Microversium§r for your first §3Microverse Projector§r. \n\nYour other options are to centrifuge or distill §9Ender Air§r, or to centrifuge §9Hydrogen§r. How you choose to proceed is up to you.\n\nOnce you have §9Deuterium§r, smelt some §6Microversium§r. Soon you\u0027ll be launching your §6Micro Miners§r into another universe!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16284,10 +16284,10 @@
     },
     "232:10": {
       "preRequisites:11": [
+        205,
         211,
         212,
-        762,
-        205
+        762
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -23872,7 +23872,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9§3The Empowerer§r is a machine from §bActually Additions§r used to convert its special crystalline materials into empowered variants.\n\nThe Empowerer is placed in the center of a flat 7x7 region. The four §aDisplay Stands§r are placed with a two-block gap from the Empowerer, one in each cardinal direction.\n\nRecipes require specific items to be placed on the Display Stands and the main item on the Empowerer itself. The items on the Display Stands are consumed and the central item is Empowered.\n\nRF power needs to be fed into the Display Stands to infuse the center item with power. The Display Stands have a low per-side power transfer rate so it takes a while. Consider putting energy conduits on multiple sides of each display stand to speed it up a bit.\n\n\nIf you\u0027ve used the Empowerer before you\u0027ll know that this thing\u0027s a bit of a pain. It\u0027s slow, takes up a large space, and it\u0027s cumbersome to automate. \n\nDon\u0027t worry, you\u0027ll get access to the §3Combination Package Crafter§r after you get §6Draconium§r, which is vastly faster, more compact and easier to automate. This lets you do Empowerer recipes directly through §bPackagedAuto§r and §bAE2§r. However, some optional paths like §9Bio-Diesel§r involve early Empowerer use.",
+          "desc:8": "§3The Empowerer§r is a machine from §bActually Additions§r used to convert its special crystalline materials into empowered variants.\n\nThe Empowerer is placed in the center of a flat 7x7 region. The four §aDisplay Stands§r are placed with a two-block gap from the Empowerer, one in each cardinal direction.\n\nRecipes require specific items to be placed on the Display Stands and the main item on the Empowerer itself. The items on the Display Stands are consumed and the central item is Empowered.\n\nRF power needs to be fed into the Display Stands to infuse the center item with power. The Display Stands have a low per-side power transfer rate so it takes a while. Consider putting energy conduits on multiple sides of each display stand to speed it up a bit.\n\n\nIf you\u0027ve used the Empowerer before you\u0027ll know that this thing\u0027s a bit of a pain. It\u0027s slow, takes up a large space, and it\u0027s cumbersome to automate. \n\nDon\u0027t worry, you\u0027ll get access to the §3Combination Package Crafter§r after you get §6Draconium§r, which is vastly faster, more compact and easier to automate. This lets you do Empowerer recipes directly through §bPackagedAuto§r and §bAE2§r. However, some optional paths like §9Bio-Diesel§r involve early Empowerer use.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42023,8 +42023,8 @@
     },
     "661:10": {
       "preRequisites:11": [
-        672,
-        671
+        671,
+        672
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42493,8 +42493,8 @@
     },
     "668:10": {
       "preRequisites:11": [
-        254,
-        195
+        195,
+        254
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -44442,7 +44442,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Pairs with an Angel Ring to achieve §cl§6u§e§ed§ai§ec§br§do§cu§6s§r speed.\n\n",
+          "desc:8": "Pairs with an Angel Ring to achieve §cl§6u§ed§ai§ec§br§do§cu§6s§r speed.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50525,15 +50525,15 @@
     "806:10": {
       "preRequisiteTypes:7": [
         1,
+        0,
         1,
-        1,
-        0
+        1
       ],
       "preRequisites:11": [
-        226,
-        835,
         154,
-        166
+        166,
+        226,
+        835
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -56981,8 +56981,8 @@
     },
     "900:10": {
       "preRequisites:11": [
-        888,
-        505
+        505,
+        888
       ],
       "properties:10": {
         "betterquesting:10": {
