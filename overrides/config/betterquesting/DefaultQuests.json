@@ -65391,7 +65391,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Most multiblocks now support rotation along any axis. Right-click with a Wrench on a face with a rotation ↺ symbol to rotate the controller.\n\nThe rules for building multiblocks remain the same.\n\nTake your setups to a new dimension!\n\nThe §3Cleanroom§r, §3Multiblock Miners/Drills§r, and §3Distillation Tower§r do not support being rotated.",
+          "desc:8": "Most multiblocks now support §2rotation§r along any axis. Right-click with a wrench on a face with a rotation ↺ symbol to rotate the controller.\n\nMultiblocks can also be §2reflected§r to form a mirror image of the normal structure. You don\u0027t need to do anything to the controller for this, a mirror image will automatically be recognized as a valid structure.\n\nThe rules for building multiblocks otherwise remain the same. \n\nTake your setups to a new dimension!\n\nThe §3Cleanroom§r, §3Multiblock Miners/Drills§r, and §3Distillation Tower§r do not support being rotated.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
