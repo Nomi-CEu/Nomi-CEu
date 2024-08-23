@@ -36974,7 +36974,7 @@
     },
     "585:10": {
       "preRequisites:11": [
-        29
+        910
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -37569,7 +37569,7 @@
           "lockedprogress:1": 1,
           "name:8": "Microversium Ingots",
           "partysinglereward:1": 0,
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -37952,6 +37952,10 @@
       }
     },
     "600:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
         298,
         513
@@ -38998,7 +39002,7 @@
     },
     "616:10": {
       "preRequisites:11": [
-        3
+        780
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41146,7 +41150,7 @@
     },
     "648:10": {
       "preRequisites:11": [
-        59
+        822
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41684,7 +41688,7 @@
     },
     "656:10": {
       "preRequisites:11": [
-        3
+        757
       ],
       "properties:10": {
         "betterquesting:10": {
