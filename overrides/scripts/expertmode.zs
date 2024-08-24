@@ -518,3 +518,14 @@ if(!isNull(dml)) {
 	// remove spawnegg
 	mods.jei.JEI.removeAndHide(<minecraft:spawn_egg>.withTag({EntityTag: {id: "deepmoblearning:glitch"}}));
 }
+// Airtight seal
+
+
+mods.extendedcrafting.TableCrafting.addShaped(0, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 12 as short}]}), [
+[<ore:ringRubber>, <gregtech:meta_item_1:500>, <gregtech:machine:217>, <gregtech:meta_item_1:500>, <ore:ringRubber>], 
+[<ore:foilTitanium>, <advancedrocketry:pressuretank:1>, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 30 as short}]}), <advancedrocketry:pressuretank:1>, <ore:foilTitanium>], 
+[<gregtech:meta_item_1:145>, <ore:pipeSmallFluidPolytetrafluoroethylene>, <ore:dustQuicklime>, <ore:pipeSmallFluidPolytetrafluoroethylene>, <gregtech:meta_item_1:145>], 
+[<ore:foilTitanium>, <advancedrocketry:pressuretank:1>, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 5 as short}]}), <advancedrocketry:pressuretank:1>, <ore:foilTitanium>], 
+[<ore:ringRubber>, <gregtech:meta_item_1:500>, <gregtech:machine:277>, <gregtech:meta_item_1:500>, <ore:ringRubber>]
+	]);
+
