@@ -252,6 +252,20 @@ for (var bus : buses) {
 // Storage Exposer Warning
 addTooltip(item('nae2:exposer'), [translatableEmpty(), translatable("nomiceu.tooltip.ae2.storage_exposer.warning")])
 
+// Matter Cannon
+addTooltip(item('appliedenergistics2:matter_cannon'), [
+	translatableEmpty(),
+	translatable("nomiceu.tooltip.ae2.matter_cannon.1"),
+	translatable("nomiceu.tooltip.ae2.matter_cannon.2"),
+])
+
+// Tiny TNT
+addTooltip(item('appliedenergistics2:tiny_tnt'), [
+	translatable("nomiceu.tooltip.ae2.tiny_tnt.1"),
+	translatable("nomiceu.tooltip.ae2.tiny_tnt.2"),
+	translatable("nomiceu.tooltip.ae2.tiny_tnt.3"),
+])
+
 /* Dimensional Edibles */
 
 // Island Cake
