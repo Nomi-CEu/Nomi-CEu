@@ -21,6 +21,7 @@
 			</planet>
             <planet name="Void" DIMID="119" dimMapping="" customIcon="Moon">
 				<isKnown>true</isKnown>
+				<isNativeDimension>false</isNativeDimension>
 				<fogColor>1.0,1.0,1.0</fogColor>
 				<skyColor>1.0,1.0,1.0</skyColor>
 				<gravitationalMultiplier>100</gravitationalMultiplier>
