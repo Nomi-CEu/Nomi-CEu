@@ -1668,7 +1668,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou can also choose to make §6Basic Steam Turbines§r to generate EU directly.\n\nKeep in mind that §eDynamos only output power when burning through fuel§r, and §6only the block attached directly to the coil will get provided with power§r.\n\n\nYou can also use §6Large Bronze Boilers§r to produce steam for use in §6Steam Turbines§r or §bTurbine Conversion§r-augmented §6Steam Dynamos§r. Each one produces 800 mB steam per tick, which is equivalent to 400 EU/t or 1600 RF/t. They are significantly more expensive, however.",
+          "desc:8": "(§oThis quest accepts either a Steam Dynamo or a Large Bronze Boiler.§r)\n\nYour first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou can also choose to make §6Basic Steam Turbines§r to generate EU directly.\n\nKeep in mind that §eDynamos only output power when burning through fuel§r, and §6only the block attached directly to the coil will get provided with power§r.\n\nYou can also use §6Large Bronze Boilers§r to produce steam for use in §6Steam Turbines§r or §bTurbine Conversion§r-augmented §6Steam Dynamos§r. Each one produces 800 mB steam per tick, which is equivalent to 400 EU/t or 1600 RF/t. They are significantly more expensive, however.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1694,7 +1694,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "CHAIN"
         }
       },
@@ -1704,7 +1704,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
-          "entryLogic:8": "OR",
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -1721,10 +1721,46 @@
                 "Level:1": 0,
                 "RSControl:1": 0
               }
-            },
-            "1:10": {
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 1013,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 20,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_firebox_casing"
+            },
+            "3:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1654,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -8789,7 +8825,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the §eOverworld§r.\n\n§rLarger quantities of §6Ilmenite§r and §6Bauxite§r may be found on the §eMoon§r and other planets.\n\n§6Ilmenite§r dust can be processed into §6Rutile§r in a §acompletely renewable§r process that yields §6Wrought Iron§r as a byproduct.",
+          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the §eOverworld§r.\n\n§rLarger quantities of §6Ilmenite§r and §6Bauxite§r may be found on the §eMoon§r and other planets.\n\n§6Ilmenite§r dust can be processed into §6Rutile§r in an §3Electric Blast Furnace§r, yielding §6Wrought Iron§r as a byproduct.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11670,7 +11706,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is one of the simpler rockets you can build. The specifics of the shape don\u0027t really matter as long as the rocket engines are on the bottom and all the parts are added. It also needs to be inside the edges of the Launch Pad and not taller than the Structure Tower.\n\n§aIn order to progress this quest chain further, you\u0027ll first need to complete the Interdimensional Transport (either FTB Homes, Dislocators or Telepad) questline and the Rocket Fuel questline, both of which are nearby on this quest tab.",
+          "desc:8": "This is one of the simpler rockets you can build. The specifics of the shape don\u0027t really matter as long as the rocket engines are on the bottom and all the parts are added. It also needs to be inside the edges of the Launch Pad and not taller than the Structure Tower.\n\n§aIn order to progress this quest chain further, you\u0027ll first need to complete the Interdimensional Transport (either FTB Warps/Homes, Dislocators or Telepad) questline and the Rocket Fuel questline, both of which are nearby on this quest tab.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11804,7 +11840,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.\n\nIf you have the §6Nomicoins§r to spare, you can also apply the §dAirtight Seal§r enchant to all four pieces of your armor to make it act like a space suit. §cIt still needs to be refilled at a Gas Pad occasionally!§r",
+          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.\n\nIf you can afford the recipe, you can also apply the §dAirtight Seal§r enchant to all four pieces of your armor to make it act like a space suit. §cIt still needs to be refilled at a Gas Pad occasionally!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11902,7 +11938,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Suit Workstation is needed to install §6Low Pressure Tanks§r (or a larger tank if you like) onto your Space Suit Chest-Piece.\n\nOnce installed, you can stand on a §3Gas Charging Pad§r to fill up the tanks with §9Oxygen§r. Of course, you\u0027ll need to fill the Gas Charging Pad with Oxygen first, using something like a fluid conduit.\n\nIf you choose to use §dAirtight Seal§r enchants instead of a space suit you\u0027ll only need a Gas Charging Pad.",
+          "desc:8": "The Suit Workstation is needed to install §6Low Pressure Tanks§r (or a larger tank if you like) onto your Space Suit Chest-Piece.\n\nOnce installed, you can stand on a §3Gas Charging Pad§r to fill up the tanks with §9Oxygen§r. Of course, you\u0027ll need to fill the Gas Charging Pad with Oxygen first, using something like a fluid conduit.\n\nIf you choose to use §dAirtight Seal§r enchants instead of a space suit, you\u0027ll only need a Gas Charging Pad.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12446,7 +12482,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you went to the §eMoon§r you have the option of using §6Moon Dust§r or a §3Fluid Rig§r to produce the Deuterium you need to get the §6Microversium§r for your first §3Microverse Projector§r. \n\nYour other options are to centrifuge or distill §9Ender Air§r, or to centrifuge §9Hydrogen§r. How you choose to proceed is up to you.\n\nOnce you have §9Deuterium§r, smelt some §6Microversium§r. Soon you\u0027ll be launching your §6Micro Miners§r into another universe!",
+          "desc:8": "If you went to the §eMoon§r you have the option of using §6Moon Dust§r or a §3Fluid Rig§r to produce the Deuterium you need to get the §6Microversium§r for your first §3Microverse Projector§r.\n\nYour other options are to centrifuge or distill §9Ender Air§r, or to centrifuge §9Hydrogen§r. How you choose to proceed is up to you.\n\nOnce you have §9Deuterium§r, smelt some §6Microversium§r. Soon you\u0027ll be launching your §6Micro Miners§r into another universe!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13514,7 +13550,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "We Choose To Go To The Moon",
+          "name:8": "Liftoff",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -27570,7 +27606,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\nLater, you can use §2Fluid Rigs§r or break down Ghast Tears to obtain §9Salt Water§r, and electrolyze it to Chlorine. If you don\u0027t need §6Sodium Hydroxide§r then centrifuging the §9Salt Water§r before electrolyzing is substantially faster.",
+          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\nLater, you can use §2Fluid Rigs§r or break down Ghast Tears to obtain §9Salt Water§r, and electrolyze it to Chlorine. If you don\u0027t need §6Sodium Hydroxide§r, then centrifuging the §9Salt Water§r before electrolyzing is substantially faster.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37578,7 +37614,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This one goes fast and has §ano gradual drop§r.",
+          "desc:8": "Goes even faster, and has a §aperfectly stable Hover Mode§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37641,7 +37677,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Angel Ring§r is actually slower than most jetpacks. However, it grants §acreative flight§r with no gradual drop and requires no traditional fuel. \n\nIt reserves §b32 GP§r while active and will deactivate if you don\u0027t have enough. Double press the jump key (i.e spacebar) to activate. Your Angel Ring can be active at the same time as a normal jetpack, and the speeds §astack§r.",
+          "desc:8": "The §6Angel Ring§r is actually slower than most jetpacks. However, it grants §acreative flight§r and requires no traditional fuel. \n\nIt reserves §b32 GP§r while active and will deactivate if you don\u0027t have enough. Double press the jump key (i.e spacebar) to activate. Your Angel Ring can be active at the same time as a normal jetpack, and the speeds §astack§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47420,20 +47456,6 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "polyphenylene_sulfide"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
           "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
@@ -54767,7 +54789,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -57023,6 +57045,46 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1076:10": {
+      "preRequisites:11": [
+        93,
+        902
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §bGT Console§r is a very useful app for the §6Terminal§r that allows you to configure machines §awithout the use of tools§r. It also lets you set §aseparate sides for item and fluid auto-output§r, which is not possible using normal tools.\n\nFirst, you\u0027ll need to install a §6Wireless Transmitter§r in the §bHardware Manager§r of your §6Terminal§r and add the §6GT Console§r app through the §bApp Store§r.\n\nThen, right-click a machine with the §6Terminal§r while sneaking and click the §bGT Console§r app. This opens an interface where you can change the machine\u0027s settings, including the configuration of covers like conveyors and pumps.\n\nOnce you get used to it, this nifty little app will make setting up machines a lot easier!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 503,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gregtech Console",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1076,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
