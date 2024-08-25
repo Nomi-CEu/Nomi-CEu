@@ -257,6 +257,14 @@ addTooltip(item('appliedenergistics2:matter_cannon'), [
 	translatableEmpty(),
 	translatable("nomiceu.tooltip.ae2.matter_cannon.1"),
 	translatable("nomiceu.tooltip.ae2.matter_cannon.2"),
+	translatable("nomiceu.tooltip.ae2.storage_cell_like")
+])
+
+// Color Applicator
+addTooltip(item('appliedenergistics2:color_applicator'), [
+	translatableEmpty(),
+	translatable("nomiceu.tooltip.ae2.color_applicator.1"),
+	translatable("nomiceu.tooltip.ae2.storage_cell_like")
 ])
 
 // Tiny TNT
