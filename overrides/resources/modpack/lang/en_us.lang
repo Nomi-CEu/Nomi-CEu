@@ -64,7 +64,13 @@ nomiceu.tooltip.ae2.hyper_acceleration_card.1=§bAn even faster version of the A
 nomiceu.tooltip.ae2.hyper_acceleration_card.2=§cOnly Works in ME IO Ports.§r
 nomiceu.tooltip.ae2.buses.warning=§cMay cause TPS lag if used excessively! Use Interfaces instead!§r
 nomiceu.tooltip.ae2.storage_exposer.warning=§cMay cause TPS lag if used on big networks without Filters!§r
-
+nomiceu.tooltip.ae2.tiny_tnt.1=§cCannot be lit with Flint and Steel!
+nomiceu.tooltip.ae2.tiny_tnt.2=§bLight with a Redstone Signal instead!§r
+nomiceu.tooltip.ae2.tiny_tnt.3=§eDoesn't break blocks!§r
+nomiceu.tooltip.ae2.matter_cannon.1=§eAccepts Matter Balls, Paint Balls and Nuggets as ammo.§r
+nomiceu.tooltip.ae2.matter_cannon.2=§bFilled with ammo like a Storage Cell!§r
+nomiceu.tooltip.ae2.color_applicator.1=§eAccepts Paint Balls like a Storage Cell.§r
+nomiceu.tooltip.ae2.storage_cell_like=§bUsing a ME Chest may be helpful!§r
 
 # Dimensional Edibles
 nomiceu.tooltip.dimensionaledibles.island_cake.1=§aUsed by Server Owners to send FTB Teams and Individuals to their Personal Islands!§r
