@@ -67179,6 +67179,46 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1074:10": {
+      "preRequisites:11": [
+        902,
+        93
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §bGT Console§r is a very useful app for the §6Terminal§r that allows you to configure machines §awithout the use of tools§r. It also lets you set §aseparate sides for item and fluid auto-output§r, which is not possible using normal tools.\n\nFirst, you\u0027ll need to install a §6Wireless Transmitter§r in the §bHardware Manager§r of your §6Terminal§r and add the §6GT Console§r app through the §bApp Store§r.\n\nThen, right-click a machine with the §6Terminal§r while sneaking and click the §bGT Console§r app. This opens an interface where you can change the machine\u0027s settings, including the configuration of covers like conveyors and pumps.\n\nOnce you get used to it, this nifty little app will make setting up machines a lot easier!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 503,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gregtech Console",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1074,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -68495,6 +68535,13 @@
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 508
+        },
+        "110:10": {
+          "id:3": 1074,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -356,
+          "y:3": 532
         }
       }
     },
