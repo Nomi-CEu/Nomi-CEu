@@ -337,6 +337,18 @@ for (ItemStack stack in Common.eioGlasses) {
 	addTooltip(stack, translatable('nomiceu.tooltip.eio.glass.dye'))
 }
 
+// Facades
+List<ItemStack> facades = [
+	item('enderio:item_conduit_facade'),
+	item('enderio:item_conduit_facade', 1),
+	item('enderio:item_conduit_facade', 2),
+	item('enderio:item_conduit_facade', 3),
+]
+
+for (ItemStack facade : facades) {
+	addTooltip(facade, [translatableEmpty(), translatable("nomiceu.tooltip.eio.facade")])
+}
+
 /* Project Red */
 
 // Transmission Wire
