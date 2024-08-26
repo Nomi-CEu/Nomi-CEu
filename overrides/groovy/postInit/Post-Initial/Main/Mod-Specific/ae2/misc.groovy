@@ -38,6 +38,7 @@ mods.gregtech.laser_engraver.recipeBuilder()
 	.outputs(item('appliedenergistics2:material', 21))
 	.inputs(ore('blockVanadiumSteel'))
 	.notConsumable(ore('craftingLensWhite'))
+	.changeRecycling()
 	.duration(1600).EUt(VA[MV])
 	.buildAndRegister()
 
@@ -75,6 +76,7 @@ mods.gregtech.laser_engraver.recipeBuilder()
 	.outputs(item('appliedenergistics2:material', 19))
 	.inputs(ore('blockVanadiumSteel'))
 	.notConsumable(ore('craftingLensLightBlue'))
+	.changeRecycling()
 	.duration(1600).EUt(VA[MV])
 	.buildAndRegister()
 
@@ -99,6 +101,7 @@ var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, It
 		.outputs(press)
 		.inputs(ore('blockVanadiumSteel'))
 		.notConsumable(lens)
+		.changeRecycling()
 		.duration(1600).EUt(VA[MV])
 		.buildAndRegister()
 
