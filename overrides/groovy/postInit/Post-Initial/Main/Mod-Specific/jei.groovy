@@ -35,6 +35,9 @@ List<ItemStack> lootBoxes = [
 ]
 lootBoxes.forEach { removeAndHideItemIgnoreNBT(it) }
 
+mods.jei.ingredient.removeAndHide(item('betterquesting:placeholder'))
+mods.jei.ingredient.removeAndHide(fluid('betterquesting.placeholder'))
+
 // Modded Buckets
 hideItemIgnoreNBT(item('forge:bucketfilled'))
 
