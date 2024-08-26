@@ -182,7 +182,7 @@ async function checkAndFixQB(
 
 		// Check Name Formatting
 		quest["properties:10"]["betterquesting:10"]["name:8"] =
-			stripOrThrowExcessFormatting(
+			stripOrThrowExcessSpacesOrFormatting(
 				shouldCheck,
 				name(quest),
 				foundID,
@@ -203,7 +203,7 @@ async function checkAndFixQB(
 		}
 		// Check Desc Formatting (Still check if after, as user may have entered dupe formatting)
 		quest["properties:10"]["betterquesting:10"]["desc:8"] =
-			stripOrThrowExcessFormatting(
+			stripOrThrowExcessSpacesOrFormatting(
 				shouldCheck,
 				quest["properties:10"]["betterquesting:10"]["desc:8"],
 				foundID,
@@ -317,7 +317,7 @@ async function checkAndFixQB(
 	for (const lineKey of Object.keys(qb["questLines:9"])) {
 		const line = qb["questLines:9"][lineKey];
 		line["properties:10"]["betterquesting:10"]["name:8"] =
-			stripOrThrowExcessFormatting(
+			stripOrThrowExcessSpacesOrFormatting(
 				shouldCheck,
 				line["properties:10"]["betterquesting:10"]["name:8"],
 				line["lineID:3"],
@@ -325,7 +325,7 @@ async function checkAndFixQB(
 				"Name",
 			);
 		line["properties:10"]["betterquesting:10"]["desc:8"] =
-			stripOrThrowExcessFormatting(
+			stripOrThrowExcessSpacesOrFormatting(
 				shouldCheck,
 				line["properties:10"]["betterquesting:10"]["desc:8"],
 				line["lineID:3"],
@@ -344,6 +344,54 @@ async function checkAndFixQB(
 	}
 }
 
+function stripOrThrowExcessSpacesOrFormatting(
+	shouldCheck: boolean,
+	value: string,
+	id: number,
+	name: string,
+	key: string,
+): string {
+	let formattingResult = stripOrThrowExcessFormatting(
+		shouldCheck,
+		value,
+		id,
+		name,
+		key,
+	);
+	const trimmedResult = formattingResult.trim();
+
+	if (trimmedResult !== formattingResult) {
+		if (shouldCheck)
+			throw new Error(
+				`${name} with ID ${id} at ${key} has Extra Spaces or New Lines at Beginning or End!`,
+			);
+		logWarn(
+			`Removing Extra Spaces or New Lines in ${name} with ID ${id} at ${key}...`,
+		);
+		formattingResult = trimmedResult;
+	}
+
+	if (!value.includes("\n")) return formattingResult;
+
+	const builder: string[] = [];
+	for (const bit of formattingResult.split("\n")) {
+		const trimmedBit = bit.trim();
+
+		if (trimmedBit !== bit) {
+			if (shouldCheck)
+				throw new Error(
+					`${name} with ID ${id} at ${key} has Extra Spaces at Beginning or End of a Line!`,
+				);
+			logWarn(
+				`Removing Extra Spaces in a Line of ${name} with ID ${id} at ${key}...`,
+			);
+		}
+
+		builder.push(trimmedBit);
+	}
+	return builder.join("\n");
+}
+
 function stripOrThrowExcessFormatting(
 	shouldCheck: boolean,
 	value: string,
@@ -354,9 +402,21 @@ function stripOrThrowExcessFormatting(
 	if (!value.includes("§")) return value;
 
 	let builder: string[] = [];
+	let emptyAmt: number = 0;
 
 	for (let i = 0; i < value.length; i++) {
 		const char = value.charAt(i);
+
+		// If Space, ignore, add one to Empty Amt
+		if (char === " ") {
+			emptyAmt++;
+			builder.push(char);
+			continue;
+		}
+
+		// Else, reset Empty Amt
+		const oldEmptyAmt = emptyAmt;
+		emptyAmt = 0;
 
 		if (builder.at(-1) === "§") {
 			if (char === "f") {
@@ -407,7 +467,8 @@ function stripOrThrowExcessFormatting(
 
 		if (char === "§") {
 			// If two characters before was not § (if builder length < 2, `.at` returns undefined)
-			if (builder.at(-2) !== "§") {
+			// (Ignoring Spaces)
+			if (builder.at(-2 - oldEmptyAmt) !== "§") {
 				builder.push(char);
 				continue;
 			}
@@ -422,7 +483,12 @@ function stripOrThrowExcessFormatting(
 			);
 
 			// Remove Previous
-			builder = builder.slice(0, -2);
+			builder = builder.slice(0, -2 - oldEmptyAmt);
+
+			// Add Empty Amount Spaces
+			for (let i = 0; i < oldEmptyAmt; i++) {
+				builder.push(" ");
+			}
 		}
 
 		builder.push(char);
