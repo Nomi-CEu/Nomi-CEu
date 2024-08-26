@@ -2,68 +2,62 @@
     <star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0">
 		<planet name="Earth" DIMID="0" dimMapping="">
 			<isKnown>true</isKnown>
-			<fogColor>1.0,1.0,1.0</fogColor>
-			<skyColor>1.0,1.0,1.0</skyColor>
-			<gravitationalMultiplier>100</gravitationalMultiplier>
-			<orbitalDistance>80</orbitalDistance>
-			<orbitalPhi>0</orbitalPhi>
-			<rotationalPeriod>24000</rotationalPeriod>
-			<atmosphereDensity>100</atmosphereDensity>
+			<isNativeDimension>false</isNativeDimension>
+			<orbitalDistance>100</orbitalDistance>
 			<planet name="Luna" DIMID="100">
-				<isKnown>true</isKnown>
-				<fogColor>1.0,1.0,1.0</fogColor>
-				<skyColor>1.0,1.0,1.0</skyColor>
 				<gravitationalMultiplier>16</gravitationalMultiplier>
-				<orbitalDistance>150</orbitalDistance>
+				<orbitalDistance>50</orbitalDistance>
 				<orbitalPhi>0</orbitalPhi>
 				<rotationalPeriod>128000</rotationalPeriod>
 				<atmosphereDensity>0</atmosphereDensity>
 			</planet>
-            <planet name="Void" DIMID="119" dimMapping="" customIcon="Moon">
-				<isKnown>true</isKnown>
+			<planet name="Void" DIMID="119" dimMapping="" customIcon="CarbonWorld">
 				<isNativeDimension>false</isNativeDimension>
-				<fogColor>1.0,1.0,1.0</fogColor>
-				<skyColor>1.0,1.0,1.0</skyColor>
-				<gravitationalMultiplier>100</gravitationalMultiplier>
-				<orbitalDistance>110</orbitalDistance>
-				<orbitalPhi>0</orbitalPhi>
-				<rotationalPeriod>24000</rotationalPeriod>
-				<atmosphereDensity>100</atmosphereDensity>
+				<orbitalDistance>150</orbitalDistance>
+			</planet>
+			<planet name="Lost Cities" DIMID="111" dimMapping="" customIcon="EarthLike">
+				<isNativeDimension>false</isNativeDimension>
+				<orbitalDistance>330</orbitalDistance>
+				<hasRings>true</hasRings>
 			</planet>
 		</planet>
 		<planet name="Mercury" DIMID="101" customIcon="lava">
-		    <biomeIds>biomesoplenty:volcanic_island</biomeIds>
-            <skyColor>0,0,0</skyColor>
+			<isKnown>true</isKnown>
+			<biomeIds>biomesoplenty:volcanic_island</biomeIds>
+			<skyColor>0,0,0</skyColor>
 			<oceanBlock>minecraft:fluid.lava</oceanBlock>
 			<atmosphereDensity>120</atmosphereDensity>
 			<gravitationalMultiplier>38</gravitationalMultiplier>
-			<orbitalDistance>10</orbitalDistance>
+			<orbitalDistance>40</orbitalDistance>
 			<rotationalPeriod>1400000</rotationalPeriod>
 		</planet>
 		<planet name="Venus" DIMID="102" customIcon="lava">
-		    <biomeIds>biomesoplenty:volcanic_island</biomeIds>
-            <skyColor>0,0,0</skyColor>
+			<isKnown>true</isKnown>
+			<biomeIds>biomesoplenty:volcanic_island</biomeIds>
+			<skyColor>0,0,0</skyColor>
 			<fogColor>0.9,0.9,0.9</fogColor>
 			<oceanBlock>nuclearcraft:fluid.sulfuric_acid</oceanBlock>
 			<atmosphereDensity>120</atmosphereDensity>
 			<gravitationalMultiplier>90</gravitationalMultiplier>
-			<orbitalDistance>40</orbitalDistance>
+			<orbitalDistance>72</orbitalDistance>
 			<rotationalPeriod>2784000</rotationalPeriod>
 		</planet>
 		<planet name="Mars" DIMID="103" customIcon="marslike">
+			<isKnown>true</isKnown>
 			<biomeIds>advancedrocketry:hotdryrock</biomeIds>
             <skyColor>1,0.2,0</skyColor>
 			<fogColor>0.9,0.6,0.1</fogColor>
 			<atmosphereDensity>0</atmosphereDensity>
-			<orbitalDistance>120</orbitalDistance>
+			<orbitalDistance>150</orbitalDistance>
 			<gravitationalMultiplier>70</gravitationalMultiplier>
 			<rotationalPeriod>20000</rotationalPeriod>
 		</planet>
 		<planet name="Jupiter" DIMID="104" customIcon="gasgiantred">
-            <GasGiant>true</GasGiant>
+			<isKnown>true</isKnown>
+			<GasGiant>true</GasGiant>
 			<gas>hydrogen</gas>
 			<gas>helium</gas>
-			<orbitalDistance>120</orbitalDistance>
+			<orbitalDistance>180</orbitalDistance>
 			<rotationalPeriod>9900</rotationalPeriod>
 			<planet name="Io" DIMID="105" customIcon="moon">
 				<atmosphereDensity>0</atmosphereDensity>
@@ -81,11 +75,12 @@
             </planet>
         </planet>
 		<planet name="Saturn" DIMID="107" customIcon="gasgiantblue">
-            <GasGiant>true</GasGiant>
+			<isKnown>true</isKnown>
+			<GasGiant>true</GasGiant>
 			<gas>hydrogen</gas>
 			<gas>helium</gas>
 			<hasRings>true</hasRings>
-			<orbitalDistance>130</orbitalDistance>
+			<orbitalDistance>230</orbitalDistance>
 			<rotationalPeriod>10600</rotationalPeriod>
 			<planet name="Titan" DIMID="108" customIcon="moon">
 				<atmosphereDensity>0</atmosphereDensity>
@@ -96,21 +91,24 @@
 			</planet>
         </planet>
 		<planet name="Uranus" DIMID="109" customIcon="iceworld">
-		    <GasGiant>true</GasGiant>
+			<isKnown>true</isKnown>
+			<GasGiant>true</GasGiant>
 			<gas>hydrogen</gas>
 			<gas>helium</gas>
+			<hasRings>true</hasRings>
 			<atmosphereDensity>0</atmosphereDensity>
-			<orbitalDistance>300</orbitalDistance>
+			<orbitalDistance>290</orbitalDistance>
 			<gravitationalMultiplier>200</gravitationalMultiplier>
 			<rotationalPeriod>17250</rotationalPeriod>
         </planet>
 		<planet name="Neptune" DIMID="110" customIcon="iceworld">
-		   <GasGiant>true</GasGiant>
+			<isKnown>true</isKnown>
+			<GasGiant>true</GasGiant>
 			<gas>hydrogen</gas>
 			<gas>helium</gas>
-			<orbitalDistance>350</orbitalDistance>
+			<orbitalDistance>400</orbitalDistance>
 			<gravitationalMultiplier>200</gravitationalMultiplier>
 			<rotationalPeriod>21100</rotationalPeriod>
         </planet>
-		</star>
+	</star>
 </galaxy>
