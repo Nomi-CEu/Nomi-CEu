@@ -350,7 +350,7 @@ crafting.shapedBuilder()
 	.register()
 
 // Cable Anchor
-crafting.addShapeless(item('appliedenergistics2:part', 120), [ore('boltSteel')])
+crafting.replaceShapeless(item('appliedenergistics2:part', 120), [ore('boltSteel')])
 
 /* Misc Blocks */
 // Vibrant Quartz Glass

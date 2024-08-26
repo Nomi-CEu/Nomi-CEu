@@ -1,4 +1,5 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 
@@ -19,6 +20,23 @@ removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 8)) // Insightful Con
 if (LabsModeHelper.expert) {
 	mods.jei.ingredient.removeAndHide(item('nomilabs:impossiblerealmdata'))
 }
+
+// Better Questing
+List<ItemStack> lootBoxes = [
+	item('bq_standard:loot_chest'),
+	item('bq_standard:loot_chest', 25),
+	item('bq_standard:loot_chest', 50),
+	item('bq_standard:loot_chest', 75),
+	item('bq_standard:loot_chest', 100),
+	item('bq_standard:loot_chest', 101),
+	item('bq_standard:loot_chest', 102),
+	item('bq_standard:loot_chest', 103),
+	item('bq_standard:loot_chest', 104),
+]
+lootBoxes.forEach { removeAndHideItemIgnoreNBT(it) }
+
+mods.jei.ingredient.removeAndHide(item('betterquesting:placeholder'))
+mods.jei.ingredient.removeAndHide(fluid('betterquesting.placeholder'))
 
 // Modded Buckets
 hideItemIgnoreNBT(item('forge:bucketfilled'))

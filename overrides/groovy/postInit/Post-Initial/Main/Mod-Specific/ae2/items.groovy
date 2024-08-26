@@ -4,8 +4,6 @@ import gregtech.api.recipes.RecipeBuilder
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
-import java.util.stream.Stream
-
 import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.*
 

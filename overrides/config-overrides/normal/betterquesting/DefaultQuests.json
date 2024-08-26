@@ -88,7 +88,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nJEI doesn\u0027t show the Chamber\u0027s recipes directly, so we\u0027ll explain it here:\n\nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nFluix Crystals you\u0027ve already had to make in a pool of water by now, and it\u0027s the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.",
+          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nThis machine requires §eME Power§r, which is provided through a §aME Network§r connection. Placing it next to your §3Energy Acceptor§r accomplishes this for now, or you can connect it via §3Fluix Glass Cables§r.\n\nJEI doesn\u0027t show the Chamber\u0027s recipes directly, so we\u0027ll explain it here:\n\nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nFluix Crystals you\u0027ve already had to make in a pool of water by now, and it\u0027s the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1951,7 +1951,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.",
+          "desc:8": "(§oThis quest accepts either a Steam Dynamo or a Large Bronze Boiler.§r)\n\nYour first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.\n\nYou can also use §6Large Bronze Boilers§r to produce steam for use in §6Steam Turbines§r or §bTurbine Conversion§r-augmented §6Steam Dynamos§r. Each one produces 800 mB steam per tick, which is equivalent to 400 EU/t or 1600 RF/t. They are significantly more expensive, however.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1977,7 +1977,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "CHAIN"
         }
       },
@@ -2017,6 +2017,48 @@
                 "Level:1": 0,
                 "RSControl:1": 0
               }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1013,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 20,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_firebox_casing"
+            },
+            "3:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1654,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2897,7 +2939,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts any §oLV Energy Converter§o.\n\n§rThe §3Steam Dynamos§r you have made are capable of generating §aRF power§r, but §bGregTech§r machines require §aEU power§r. With your first §6circuit§r in hand, you are ready to build a §eLow Voltage (LV) §2Energy Converter§r.\n\n§cNote that EU machines cannot use RF! §2However, EU is automatically converted to RF as needed.§r\n\nThe §2Energy Converter§r is a special device that §econverts §2between §aRF power§r and §aEU power§r. They come in §2four sizes: 1A, 4A, 8A, and 16A.\n\n§aRF§r converts into §aEU§r at a §e4 to 1 ratio§r. §a100 RF§r becomes §a25 EU§r, and vice-versa.",
+          "desc:8": "§oNote: this quest accepts any §oLV Energy Converter§o.\n\n§rThe §3Steam Dynamos§r you have made are capable of generating §aRF§r power, but §bGregTech§r machines require §aEU§r power. With your first §6circuit§r in hand, you are ready to build a §eLow Voltage (LV) §2Energy Converter§r.\n\n§3Energy Converters§r are special devices that §econvert§r between §aRF§r power and §aEU§r power, and come in four sizes: 1A, 4A, 8A, and 16A. \n\nYou can reverse the conversion to turn EU into RF by right-clicking it with a soft hammer.\n\nEU is §2automatically converted§r to RF as needed, for example when connecting a §bGregTech§r cable directly to an RF-consuming machine. However, conduits cannot connect directly to most EU providers, so you will still need to use EU to RF converters to connect EU generators to your conduit grid.\n\n§aRF§r converts into §aEU§r at a §e4 to 1 ratio§r. §a100 RF§r becomes §a25 EU§r, and vice-versa.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4698,14 +4740,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§bApplied Energistics§r uses §6Storage Cells§r as its primary means of digital item and fluid storage.\n\nAll unformatted Storage Cells are limited to at most 63 distinct item types, with the first item of each new type taking up a chunk of the total bytes of cell storage, and subsequent items of existing types taking a small number of bytes thereafter.\n\nA §61k ME Storage Cell§r is the first and smallest cell for storing items. If you are going to be storing many different kinds of items in your network, you will need to make an §6ME Drive§r and fill it with multiple Storage Cells.\n\nThe §64k ME Storage Cell§r is the next size up. With four times the bytes it holds substantially more items per type, but it requires a more advanced technology than you currently have available: AE §6Processors§r made in an §3Inscriber§r.",
+          "desc:8": "§bApplied Energistics§r uses §6Storage Cells§r as its primary means of digital item and fluid storage.\n\nAll Storage Cells are limited to at most 63 distinct item types, with the first item of each new type taking up a chunk of the total bytes of cell storage, and subsequent items of existing types taking a small number of bytes thereafter.\n\nSo, if you want to maximize your storage for a particular item, it may be helpful to format your cells in a §eCell Workbench§r, which results in only those items being allowed to enter the cell.\n\nA §61k ME Storage Cell§r is the first and smallest cell for storing items. If you are going to be storing many different kinds of items in your network, you will need to make an §6ME Drive§r and fill it with multiple Storage Cells.\n\nThe §64k ME Storage Cell§r is the next size up. With four times the bytes it holds substantially more items per type, but it requires a more advanced technology than you currently have available: AE §6Processors§r made in an §3Inscriber§r.\n\nPress §eR§r whilst hovering over a cell to see its contents, and shift-right click whilst holding a §6Storage Cell§r to turn it back into a §6Housing§r and a §6Component§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 35,
             "OreDict:8": "",
-            "id:8": "appliedenergistics2:storage_cell_1k",
-            "tag:10": {}
+            "id:8": "appliedenergistics2:material"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -7874,7 +7915,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to §29 stacks of 512 items (or 4608 items)§r for passive autocrafting and to push into other inventories. Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\nAlso, if you connect a gadget from §bBuilding Gadgets§r to the Interface, the gadget will pull materials straight from the attached AE2 network, §aNOT§r the Interface. Particularly useful with the §6Auto Chisel§r. \n\nThere is information of the Gadgets, and how to connect them to inventories, in the §eInspector Gadget§r quest in §cGenesis§r, and information of the Auto Chisel in the §eAuto Chisel§r quest in §cMatter Energy§r or §cThe Beginning§r.",
+          "desc:8": "§aME Interfaces§r are extremely important for automation. You\u0027ll be making a lot of these, if you\u0027re playing the pack right.\n\nThese can be filled with encoded §aPatterns§r to perform on-demand autocrafting, and can be configured to stock up to §e9 stacks of items§r for passive autocrafting, and to push into other inventories. Any item pushed into an ME Interface is digitized and placed in your ME Network storage.\n\nWhen adjacent to one or more §aMolecular Assemblers§r, crafting table patterns can be crafted. It will use as many adjacent Molecular Assemblers as possible, restricted by availability and number of §aCo-processors§r in your crafting CPU multiblock.\n\nWhen adjacent to any other block, you can use processing patterns with a machine to insert items into the machine. Processing patterns require that the finished item is inserted back into the ME Network by way of an ME Interface (though it doesn\u0027t need to be the same ME Interface the Pattern is in).\n\nME Interfaces can be wrenched to ensure they only communicate with a particular adjacent block, or can be crafted into a micropart form to fit multiple in the same block space (each micropart only interacting with the adjacent block face).\n\nLocking mode will prevent an §6Interface§r from sending more ingredients until §eone of various conditions§r are met. For example, if a craft is very slow you can prevent the interface from putting more ingredients into the machine until the §eprevious craft finishes§r, so a different interface with the same pattern can §ahandle that request instead§r. Other options include enabling/disabling the Interface with §6Redstone§r.\n\nAlso, if you connect a gadget from §bBuilding Gadgets§r to the Interface, the gadget will pull materials straight from the attached AE2 network, §enot§r the Interface. Particularly useful with the §6Auto Chisel§r!\n\nThere is information of the Gadgets, and how to connect them to inventories, in the §eInspector Gadget§r quest in §3Genesis§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8494,7 +8535,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A component used primarily for making bigger §6Storage Cells§r.\n\nUnformatted disks always have a hard limit of 63 distinct types of items, but each step up has roughly four times the total storage space of the prior disk.",
+          "desc:8": "The second tier of AE §6Item Storage§r. Used for making §a4k ME Storage Cells§r or §a4k Crafting Storages§r.\n\nUnformatted disks always have a hard limit of 63 distinct types of items, but each step up has roughly four times the total storage space of the prior disk.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8561,7 +8602,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The penultimate component for AE item §6Storage Cells§r.",
+          "desc:8": "The third tier of component for AE §6Item Storage§r.\n\nUsed for a §a16k ME Storage Cell§r or a §a16k Crafting Storage§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8628,7 +8669,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The ultimate item storage component in §bApplied Energistics§r.\n\nUsed for storing really big amounts of things, like in a §664k ME Storage Cell§r.",
+          "desc:8": "The fourth tier of component for AE §6Item Storage§r.\n\nUsed for storing large amounts of items or information, like in a §a64k ME Storage Cell§r or a §a64k Crafting Storage§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10580,7 +10621,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the Overworld.\n\n§rLarger quantities of Ilmenite and Bauxite may be found on the Moon and other planets.",
+          "desc:8": "§6Rutile§r is a §6Titanium§r precursor found in §6Ilmenite Ore§r and §6Bauxite Ore§r, which spawn uncommonly in the §eOverworld§r.\n\n§rLarger quantities of §6Ilmenite§r and §6Bauxite§r may be found on the §eMoon§r and other planets.\n\n§6Ilmenite§r dust can be processed into §6Rutile§r in an §3Electric Blast Furnace§r, yielding §6Wrought Iron§r as a byproduct.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12216,7 +12257,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll be needing large quantities of the various Noble Gasses so you should get this automated and running continuously. \n\n§2After liquefication, Overworld Air grants Helium and Argon; Nether Air grants Helium-3 and Neon; Ender Air grants Helium, Krypton, Xenon, and Radon.\n\nCertain Noble Gases can also boost the speed of EBF processes.",
+          "desc:8": "You\u0027ll be needing large amounts of the various noble gases so you should get this automated and running continuously. \n\nAfter §bliquefication§r, §eOverworld Air§r grants §9Helium§r and §9Argon§r, §eNether Air§r grants §9Helium-3§r and §9Neon§r and §eEnder Air§r grants §9Helium§r, §9Krypton§r, §9Xenon§r, and §9Radon§r.\n\nSome noble gases can be used to §aboost§r the speed of certain EBF recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12232,7 +12273,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Noble Gasses",
+          "name:8": "§2Noble Gases",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -13257,6 +13298,10 @@
       }
     },
     "190:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
       "preRequisites:11": [
         153,
         186
@@ -14041,7 +14086,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
-          "entryLogic:8": "AND",
+          "entryLogic:8": "OR",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
@@ -14052,6 +14097,12 @@
               "Damage:2": 115,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 115,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -14066,7 +14117,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is one of the simpler rockets you can build. The specifics of the shape don\u0027t really matter, as long as the rocket engines are on the bottom and all the parts are added. It also needs to be inside the edges of the Launch Pad and not taller than the Structure Tower.\n\n§aIn order to progress this quest chain further, you\u0027ll first need to complete the Interdimensional Transport (either Dislocators or Telepad) questline and the Rocket Fuel questline, both of which are nearby on this quest tab.",
+          "desc:8": "This is one of the simpler rockets you can build. The specifics of the shape don\u0027t really matter as long as the rocket engines are on the bottom and all the parts are added. It also needs to be inside the edges of the Launch Pad and not taller than the Structure Tower.\n\n§aIn order to progress this quest chain further, you\u0027ll first need to complete the Interdimensional Transport (either FTB Warps/Homes, Dislocators or Telepad) questline and the Rocket Fuel questline, both of which are nearby on this quest tab.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14213,13 +14264,20 @@
       }
     },
     "204:10": {
+      "preRequisiteTypes:7": [
+        2,
+        0,
+        0
+      ],
       "preRequisites:11": [
-        205
+        116,
+        208,
+        210
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.",
+          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.\n\nIf you can afford the recipe, you can also apply the §dAirtight Seal§r enchant to all four pieces of your armor to make it act like a space suit. §cIt still needs to be refilled at a Gas Pad occasionally!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14239,7 +14297,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -14294,18 +14352,43 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:enchanted_book",
+              "tag:10": {
+                "StoredEnchantments:9": {
+                  "0:10": {
+                    "id:2": 12,
+                    "lvl:2": 1
+                  }
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
     "205:10": {
       "preRequisites:11": [
-        208,
-        210
+        204
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Suit Workstation is needed to install §6Low Pressure Tanks§r (or a larger tank if you like) onto your Space Suit Chest-Piece.\n\nOnce installed, you can stand on a §aGas Charging Pad§r to fill up the tanks with §9Oxygen§r. Of course, you\u0027ll need to fill the Gas Charging Pad with Oxygen first.",
+          "desc:8": "The Suit Workstation is needed to install §6Low Pressure Tanks§r (or a larger tank if you like) onto your Space Suit Chest-Piece.\n\nOnce installed, you can stand on a §3Gas Charging Pad§r to fill up the tanks with §9Oxygen§r. Of course, you\u0027ll need to fill the Gas Charging Pad with Oxygen first, using something like a fluid conduit.\n\nIf you choose to use §dAirtight Seal§r enchants instead of a space suit, you\u0027ll only need a Gas Charging Pad.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14317,7 +14400,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Suit Workstation",
+          "name:8": "Suiting Up",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14358,6 +14441,24 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
+              "id:8": "advancedrocketry:oxygencharger"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
               "id:8": "advancedrocketry:suitworkstation"
             },
             "1:10": {
@@ -14365,15 +14466,9 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "advancedrocketry:pressuretank"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "advancedrocketry:oxygencharger"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -14520,7 +14615,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "At some point you might consider venturing into space, like the Moon. While it\u0027s not at all required for the progression, you might find it valuable: to say the least, the Moon contains ore veins which are otherwise very rare to find in the Overworld. And for this, you\u0027ll need a rocket and a whole lot of preparations.\n\nBefore you can build the rocket itself, you\u0027ll need to create a launch pad. The §6Launch Pad§r blocks go in a 3x3 layout flat on the ground to form the platform.\n\nThe Structure Tower§r is formed from a column of §6Structure Tower§r blocks that holds your rocket upright. The first block goes adjacent to any side of the launch pad platform (on the same Y-level as the launch pad blocks).\n\nWith 6 Structure Tower blocks, you can only build a rocket 5 blocks high, since any higher would exceed the height of the tower. To build a taller rocket, you\u0027ll need to build a taller tower using more Structure Tower blocks.\n\nThe §3Rocket Assembling Machine§r needs to be placed next to the launch pad (not on it) 1 block higher than the platform, so that the bottom of the Rocket Assembler is flush with the top of the launch pad. It also needs to be supplied with RF power to function.",
+          "desc:8": "At some point you might consider venturing into space, like the Moon. While it\u0027s not at all required for the progression, you might find it valuable: to say the least, the Moon contains ore veins which are not found in the Overworld. And for this, you\u0027ll need a rocket and a whole lot of preparations.\n\nBefore you can build the rocket itself, you\u0027ll need to create a launch pad. The §6Launch Pad§r blocks go in a 3x3 layout flat on the ground to form the platform.\n\nThe Structure Tower§r is formed from a column of §6Structure Tower§r blocks that holds your rocket upright. The first block goes adjacent to any side of the launch pad platform (on the same Y-level as the launch pad blocks).\n\nWith 6 Structure Tower blocks, you can only build a rocket 5 blocks high, since any higher would exceed the height of the tower. To build a taller rocket, you\u0027ll need to build a taller tower using more Structure Tower blocks.\n\nThe §3Rocket Assembling Machine§r needs to be placed next to the launch pad (not on it) 1 block higher than the platform, so that the bottom of the Rocket Assembler is flush with the top of the launch pad. It also needs to be supplied with RF power to function.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14970,13 +15065,13 @@
     },
     "214:10": {
       "preRequisites:11": [
-        55,
-        232
+        1072,
+        1073
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Moon is a barren, lifeless rock... So why did you want to come here?\n\nOne major draw is that §6Moon Turf§r, which makes up the surface of the Moon, is an efficient means of obtaining §9Deuterium§r. It will be useful for producing §9Microversium§r, §9Tritium§r, plasmas from fusion, and crystallizing §6Dilithium§r.\n\nThe Moon also contains fluid deposits of §eDeuterium§r and §eHelium-3§r, which you can harvest with a §3Fluid Rig§r. However, you will want to use the second Fluid Rig tier to extract it, as the amount of Deuterium and Helium-3 is too low to be anything appreciable from a first tier Fluid Rig.\n\nSpace exploration isn\u0027t mandatory in this pack, so if you don\u0027t feel like exploring space with §bAdvanced Rocketry§r, then you can centrifuge §9Hydrogen§r for §eDeuterium§r instead.\n\nJust keep in mind that it\u0027s much less rewarding to skip this and you\u0027ll need lots of Hydrogen to compensate, although you won\u0027t need too much for the first §3Microverse Projector§r.\n\nIn §6HV§r Age and more effectively in §1IV§r Age, you can also get this from processing §9Ender Air§r, which may be better than going to the moon, depending on your circumstances.§r\n\nThere are also several ores that are rare on the Overworld but exist in abundance on the Moon. In particular, the Moon contains large quantities of §6Titanium§r (in the form of §6Bauxite Ore§r and §6Ilmenite Ore§r) and §6Tungsten§r (in the form of §6Scheelite Ore§r and §6Tungstate Ore§r).",
+          "desc:8": "If you went to the §eMoon§r you have the option of using §6Moon Dust§r or a §3Fluid Rig§r to produce the Deuterium you need to get the §6Microversium§r for your first §3Microverse Projector§r.\n\nYour other options are to centrifuge or distill §9Ender Air§r, or to centrifuge §9Hydrogen§r. How you choose to proceed is up to you.\n\nOnce you have §9Deuterium§r, smelt some §6Microversium§r. Soon you\u0027ll be launching your §6Micro Miners§r into another universe!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14992,7 +15087,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Deuterium",
+          "name:8": "Deuterium and Microversium",
           "partysinglereward:1": 0,
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
@@ -15033,6 +15128,24 @@
             }
           },
           "taskID:8": "bq_standard:fluid"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 27,
+              "OreDict:8": "",
+              "id:8": "nomilabs:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -15233,6 +15346,12 @@
       }
     },
     "217:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1,
+        0,
+        0
+      ],
       "preRequisites:11": [
         216,
         220,
@@ -15242,7 +15361,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is your first Micro Miner ever. §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.",
+          "desc:8": "This is your first Micro Miner. §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Imenite Ore§r\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore§r\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a Gemstone Sensor (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15414,7 +15533,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Mix §9Oxygen§r and §91,1-Dimethylhydrazine§r together to make §9Rocket Fuel§r.\n\nAwesome!\n\nWhen you have stable sourcing for Nitrogen and Oxygen, you can make and use §9Dinitrogen Tetroxide§r in the recipe instead of Oxygen. It doubles the efficiency of your Hydrazine when making Rocket Fuel.",
+          "desc:8": "Mix §9Oxygen§r and §91,1-Dimethylhydrazine§r together to make §9Rocket Fuel§r.\n\nAwesome!\n\nWhen you have stable sourcing for Nitrogen and Oxygen, you can make and use §9Dinitrogen Tetroxide§r in the recipe instead of Oxygen. It doubles the efficiency of your 1,1-Dimethylhydrazine when making Rocket Fuel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16201,7 +16320,7 @@
     },
     "232:10": {
       "preRequisites:11": [
-        204,
+        205,
         211,
         212,
         762
@@ -16209,7 +16328,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your Rocket built, fuel loaded, and destination set, it\u0027s time for the prelaunch checklist.\n\n- §eMake sure you\u0027re wearing your Space Suit§r (all four pieces) and that it has a full tank of Oxygen. If you plan to stay on the Moon a while, maybe bring a gas charging pad and Ender Tank (being filled with Oxygen) with you.\n\nTeleportation:\n\n- If you decided to go with §aDislocators§r, make sure you take two with you: one bound to the Overworld, the other ready to bind to the Moon. Also bring along a Pedestal to put the Overworld one on the Moon surface.\n\n- If you decided to go with §aTelepads§r, make sure you\u0027ve constructed a Telepad in the Overworld and that you\u0027re carrying coordinates that lead to it. Make sure to bring your Coordinate Selector, blank Paper, and materials for the second Telepad setup. Bring Dew of the Void and RF power (like a §6Solar Panel§r and a §6Capacitor Bank§r).\n\nIn either case, as soon as you land you will need to prepare the other half of the teleportation route, and chunkload it.\n\nWhen you\u0027re sure you\u0027re prepared, sit in your rocket and press §eSpace§r.\n\nLiftoff!",
+          "desc:8": "With your Rocket built, fuel loaded, and destination set, it\u0027s time for the prelaunch checklist.\n\n- §eMake sure you\u0027re wearing your Space Suit§r (all four pieces) and that it has a full tank of Oxygen. If you plan to stay on the Moon a while, maybe bring a gas charging pad and Ender Tank (being filled with Oxygen) with you.\n\nWhen it comes to teleportation to and from the Moon you have some options:\n\n- If using §bFTB Homes§r, use /sethome moon to set a home on the moon, which you can return to with /home moon.\n\n- If you decided to go with §aDislocators§r, make sure you take two with you: one bound to the Overworld, the other ready to bind to the Moon. Also bring along a Pedestal to put the Overworld one on the Moon surface.\n\n- If you decided to go with §aTelepads§r, make sure you\u0027ve constructed a Telepad in the Overworld and that you\u0027re carrying coordinates that lead to it. Make sure to bring your Coordinate Selector, blank Paper, and materials for the second Telepad setup. Bring Dew of the Void and RF power (like a §6Solar Panel§r and a §6Capacitor Bank§r). §cRemember to chunkload the Telepad on the Moon!§r\n\nWhen you\u0027re sure you\u0027re prepared, sit in your rocket and press §eSpace§r.\n\nLiftoff!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16221,7 +16340,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Fly To The Moon",
+          "name:8": "Liftoff",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -17256,7 +17375,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This quest, and the ones that follow it, are §cNOT REQUIRED§r for progression.\n\nOnly do them if you want to be able to explore the various planets offered by Advanced Rocketry and potentially build bases there, or in space.\n\nRefer to the various high quality tutorials on AR available on YouTube for specifics.",
+          "desc:8": "This quest, and the ones that follow it, are §cNOT REQUIRED§r for progression.\n\nOnly do them if you want to be able to explore the various planets offered by Advanced Rocketry and potentially build bases there, or in space.\n\nA space station offers a cool base location with §ano night§r, but you will have to contend with §clow gravity§r, §cno oxygen§r and §cno mob/critter spawning§r\n\nRefer to the various high quality tutorials on AR available on YouTube for specifics.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18353,7 +18472,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Indium Dust, Aluminium Sulfite and §9Lead-Zinc Solution§r. The latter two can be centrifuged into various useful materials, and the Indium piles can be combined into full dusts.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and §2allows you to skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.",
+          "desc:8": "§6Indium§r is a rare material requiring specialized bulk ore processing to acquire. It is useful for making §6Indium Gallium Phosphide§r (InGaP).\n\nYou will need to purify (with a §3Washer§r or §3Chemical Bath§r) §6Galena§r and §6Sphalerite§r to get §6Crushed Purified§r dusts. These need to be placed together in a §3Chemical Reactor§r along with §9Sulfuric Acid§r, which will result in §9Indium Concentrate§r.\n\nThis in turn needs to be reacted with §6Aluminium§r in another Chemical Reactor, to create §2Indium Dust§r, §2Aluminium Sulfite§r and §9Lead-Zinc Solution§r. The latter two can be broken down into various useful materials.\n\nThere is an alternative recipe set to §9Programmed Circuit §64§r, which performs the recipe in a larger batch and allows you to §2skip combining small piles into full dusts.§r\n\n§2Indium can also be obtained from the Naquadah processing chain in LuV.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20615,7 +20734,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Obtaining §6Grains of Infinity§r will require you to mine all the way down to Bedrock level.\n\nUse Flint and Steel to light a fire (or many fires) and then wait for it to go out. There\u0027s a 50% chance of Grains Of Infinity to appear for every fire that burns out on its own.\n\nBut who wants to do that forever? There will be better ways before too long, don\u0027t worry.",
+          "desc:8": "Obtaining §6Grains of Infinity§r will require you to mine all the way down to Bedrock level.\n\nUse Flint and Steel to light a fire (or many fires) and then wait for it to go out. There\u0027s a 50% chance of Grains Of Infinity to appear for every fire that burns out on its own.\n\nDon\u0027t worry, you\u0027ll be able to use §aFire Water§r, §aBlazing Pyrotheum§r or §aTier Four Microminers§r to get grains before long.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23789,7 +23908,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3The Empowerer§r is a machine from §bActually Additions§r used to convert its special crystalline materials into empowered variants.\n\nThe Empowerer is placed in the center of a flat 7x7 region. The four §aDisplay Stands§r are placed with a two-block gap from the Empowerer, one in each cardinal direction.\n\nRecipes require specific items to be placed on the Display Stands and the main item on the Empowerer itself. The items on the Display Stands are consumed and the central item is Empowered.\n\nRF power needs to be fed into the Display Stands to infuse the center item with power. The Display Stands have a low per-side power transfer rate so it takes a while. Consider putting energy conduits on multiple sides of each display stand to speed it up a bit.\n\nThis thing\u0027s a bit of a pain. It\u0027s slow, takes up a large space, and it\u0027s cumbersome to automate. Don\u0027t worry, you\u0027ll get access to the §3Crafting Core§r after you get §6Draconium§r, which is vastly faster, more compact, and easier to automate. Even better, that\u0027s pretty much immediately craftable into the §3Combination Package Crafter§r, which can do the Empowerer recipes directly through §bPackagedAuto§r and §bAE2§r.",
+          "desc:8": "§3The Empowerer§r is a machine from §bActually Additions§r used to convert its special crystalline materials into empowered variants.\n\nThe Empowerer is placed in the center of a flat 7x7 region. The four §aDisplay Stands§r are placed with a two-block gap from the Empowerer, one in each cardinal direction.\n\nRecipes require specific items to be placed on the Display Stands and the main item on the Empowerer itself. The items on the Display Stands are consumed and the central item is Empowered.\n\nRF power needs to be fed into the Display Stands to infuse the center item with power. The Display Stands have a low per-side power transfer rate so it takes a while. Consider putting energy conduits on multiple sides of each display stand to speed it up a bit.\n\n\nIf you\u0027ve used the Empowerer before you\u0027ll know that this thing\u0027s a bit of a pain. It\u0027s slow, takes up a large space, and it\u0027s cumbersome to automate. \n\nDon\u0027t worry, you\u0027ll get access to the §3Combination Package Crafter§r after you get §6Draconium§r, which is vastly faster, more compact and easier to automate. This lets you do Empowerer recipes directly through §bPackagedAuto§r and §bAE2§r. However, some optional paths like §9Bio-Diesel§r involve early Empowerer use.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26649,8 +26768,8 @@
     },
     "395:10": {
       "preRequisites:11": [
-        214,
-        690
+        690,
+        1073
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27238,7 +27357,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can easily automate most §bGregTech§r machines with §aME Interfaces§r and processing §aPatterns§r early on by using the machines\u0027 auto-output feature.\n\nUse a §aGregTech Wrench§r to relocate the output side of a machine where you want it to be, right-click it with a §aGregTech Screwdriver§r to permit input on the output face, then put an ME Interface on that side of the machine.\n\nYou can also permit input from the output side by shift-right-clicking with a screwdriver on the output side via the machine grid.\n\nRight-click the machine and enable item auto-output (§6orange box§r in the bottom-left corner of the GUI).\n\nNow, stuff the ME Interface with processing patterns. The next time you order an item, the ME Interface will push ingredients into the machine, and the machine will push outputs back into the Interface once they\u0027re ready, completing the craft. No need to use conduits or import buses!\n\nFurthermore, you can use Blocking Mode, which ensures that no items are in the inventory before placing the items in, which is a handy way to prevent conflicts. Even better, blocking mode now ignores Programmable Circuits and Molds! Please note that non-consumable items should stay in the machine, and not be included in the pattern made. Yes, this means you should make a seperate machine for each non-consumable, as well as fluids, at least until you get PAs and Large Machines.",
+          "desc:8": "You can easily automate most §bGregTech§r machines with §aME Interfaces§r and processing §aPatterns§r early on by using the machines\u0027 auto-output feature.\n\nUse a §aGregTech Wrench§r to relocate the output side of a machine where you want it to be, right-click it with a §aGregTech Screwdriver§r to permit input on the output face, then put an ME Interface on that side of the machine.\n\nYou can also permit input from the output side by shift-right-clicking with a screwdriver on the output side via the machine grid.\n\nRight-click the machine and enable item auto-output (§6orange box§r in the bottom-left corner of the GUI).\n\nNow, stuff the ME Interface with processing patterns. The next time you order an item, the ME Interface will push ingredients into the machine, and the machine will push outputs back into the Interface once they\u0027re ready, completing the craft. No need to use conduits or import buses!\n\nFurthermore, you can use Blocking Mode, which ensures that no items are in the inventory before placing the items in, which is a handy way to prevent conflicts. Even better, blocking mode now ignores Programmable Circuits and Molds! Please note that non-consumable items should stay in the machine, and not be included in the pattern made. Yes, this means you should make a seperate machine for each non-consumable, as well as fluids, at least until you get §6Programmed Circuit Cards§r, §6PAs§r and/or §6Large Machines§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30909,7 +31028,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Useful to carry more stuff.\n\nWhat more explanation are you expecting?",
+          "desc:8": "Holds your stuff.\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32218,7 +32337,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\n§2Later, you can use Fluid Rigs or break down Ghast Tears to obtain Salt Water, and electrolyze it to Chlorine. \n\n§rUsing Fluid Rigs is the best way to obtain mass amounts of Chlorine.",
+          "desc:8": "You\u0027ll need §9Chlorine§r at this point. It is an important ingredient in many chemical processes, and you can currently get it from electrolyzing either §6Salt§r or §6Rock Salt§r.\n\nLater, you can use §2Fluid Rigs§r or break down Ghast Tears to obtain §9Salt Water§r, and electrolyze it to Chlorine. If you don\u0027t need §6Sodium Hydroxide§r, then centrifuging the §9Salt Water§r before electrolyzing is substantially faster.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34695,7 +34814,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry even more stuff.",
+          "desc:8": "Holds more stuff.\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34781,7 +34900,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry §oeven more§r stuff.",
+          "desc:8": "Holds §oeven more§r stuff. \n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -35056,7 +35175,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nShift-right-click while holding the §3Prospector\u0027s Scanner§r to set it to fluid mode, then right click it in order to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. You can also check the §eFluid Vein Information JEI§r page for information on where they spawn.\n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas\nSalt Water§r (only in Ocean biomes)\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nIn the §eVoid§r: §9Raw Oil§r (does not deplete)\n\nAs Fluid Rigs work, they will deplete the vein under them, reducing their yields. When a vein is depleted, it still yields a small amount of its fluid. The first tier of Fluid Rig takes §d100,000 operations§r to deplete a vein. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.",
+          "desc:8": "§2Fluid Rigs will harvest fluids from underground fluid veins. Note that the fluid veins are simply simulated and don\u0027t exist in the world. §r\n\nShift-right-click while holding the §3Prospector\u0027s Scanner§r to set it to fluid mode, then right click it in order to see the type and amount of fluid underground and to check the depletion state of the vein. The first number represents the base amount of fluid extracted per second. You can also check the §eFluid Vein Information JEI§r page for information on where they spawn.\n\nIn the §eOverworld§r, it can harvest: §9Oil, Light Oil, Heavy Oil, Raw Oil, Natural Gas\nSalt Water§r (only in Ocean biomes)\n\nIn the §eNether§r: §eLava, Natural Gas§r\n\nOn the §eMoon§r: §9Deuterium, Helium-3§r\n\nIn the §eVoid§r: §9Raw Oil§r\n\nAs Fluid Rigs work, they will deplete the vein under them, reducing their yields. When a vein is depleted, it still yields a small amount of its fluid. The first tier of Fluid Rig takes §d100,000 operations§r to deplete a vein. Higher tier Fluid Rigs harvest fluids far faster and deplete veins slower.\n\nNote that regular oil veins and raw oil veins in the §eOverworld§r have §aequivalent§r depleted yield to the raw oil veins in the §eVoid§r: 40 regular oil or 80 raw oil, respectively.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36891,7 +37010,7 @@
     },
     "585:10": {
       "preRequisites:11": [
-        29
+        910
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -37486,7 +37605,7 @@
           "lockedprogress:1": 1,
           "name:8": "Microversium Ingots",
           "partysinglereward:1": 0,
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -37869,6 +37988,10 @@
       }
     },
     "600:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
         298,
         513
@@ -38512,7 +38635,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Phantomfaces§r are powerful blocks added by §bActually Additions§r. They work by connecting to an inventory. \n\nIn order to do this, grab a §6Phantom Connector§r and shift-right click the inventory which you want to connect to, and then shift-right clicking on the §6Phantomface§r. You should see a message saying that it has been successfully connected. Keep in mind that these have a range, so don\u0027t put your inventories too far away.\n\nNow, whenever an item goes into that inventory, it will go into the §6Phantomface§r. This also works the other way around. §6\n\nPhantomfaces§r can also be crafted into other variants, such as §6Phantom Breakers§r and §6Phantom Placers§r. These work just like the §6Phantomface§r, but with a slight variation. For example, §6Phantom Breakers§r would put the item they broke into the inventory it is connected to.",
+          "desc:8": "§6Phantomfaces§r are powerful blocks added by §bActually Additions§r. They work by connecting to an inventory. \n\nIn order to do this, grab a §6Phantom Connector§r and shift-right click the inventory which you want to connect to, and then shift-right clicking on the §6Phantomface§r. You should see a message saying that it has been successfully connected. Keep in mind that these have a range, so don\u0027t put your inventories too far away.\n\nNow, whenever an item goes into that inventory, it will go into the §6Phantomface§r. This also works the other way around. §6\n\nPhantomfaces§r can also be crafted into other variants, such as §6Phantom Breakers§r and §6Phantom Placers§r. These work just like the §6Phantomface§r, but with a slight variation. For example, §6Phantom Breakers§r would put the item they broke into the inventory it is connected to.\n\nPhantomface-based setups can be §chard to troubleshoot§r, so consider using AE2 if possible.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38915,7 +39038,7 @@
     },
     "616:10": {
       "preRequisites:11": [
-        3
+        780
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -39789,7 +39912,7 @@
     },
     "629:10": {
       "preRequisites:11": [
-        131
+        507
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -40190,7 +40313,9 @@
       }
     },
     "635:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        55
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -41061,7 +41186,7 @@
     },
     "648:10": {
       "preRequisites:11": [
-        59
+        822
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41465,7 +41590,7 @@
     },
     "654:10": {
       "preRequisites:11": [
-        251
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41532,7 +41657,7 @@
     },
     "655:10": {
       "preRequisites:11": [
-        251
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41599,7 +41724,7 @@
     },
     "656:10": {
       "preRequisites:11": [
-        3
+        757
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41934,7 +42059,8 @@
     },
     "661:10": {
       "preRequisites:11": [
-        669
+        671,
+        672
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41953,7 +42079,7 @@
           "lockedprogress:1": 1,
           "name:8": "Element 092: Uranium",
           "partysinglereward:1": 0,
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -42001,7 +42127,7 @@
     },
     "662:10": {
       "preRequisites:11": [
-        673
+        671
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42068,7 +42194,7 @@
     },
     "663:10": {
       "preRequisites:11": [
-        675
+        673
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42135,7 +42261,7 @@
     },
     "664:10": {
       "preRequisites:11": [
-        677
+        673
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42202,7 +42328,7 @@
     },
     "665:10": {
       "preRequisites:11": [
-        676
+        677
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42269,7 +42395,7 @@
     },
     "666:10": {
       "preRequisites:11": [
-        678
+        676
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42336,7 +42462,7 @@
     },
     "667:10": {
       "preRequisites:11": [
-        679
+        676
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42403,8 +42529,8 @@
     },
     "668:10": {
       "preRequisites:11": [
-        254,
-        287
+        195,
+        254
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42476,7 +42602,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "When you have enough materials, you can craft Uranium isotope clumps into Low-Enriched Uranium 235 Fuel (or §6LEU-235§r, for short). This fuel uses an 8:1 ratio of U238 to U235.\n\nThis fuel is processed in your §3Fission Reactor§r by placing it in the controller. When a redstone signal is applied it will burn the fuel, generating some power from the reactor and after a while you\u0027ll get a §6Depleted LEU-235 Fuel§r.\n\nThe depleted fuel is separated in a regular §3Centrifuge§r, resulting in many tiny clumps of fissile materials: Uranium 238, §6Neptunium 237§r, §6Plutonium 239§r, and §6Plutonium 241§r.",
+          "desc:8": "When you have enough materials, you can craft Uranium isotope clumps into Low-Enriched Uranium-235 Fuel (or §6LEU-235§r, for short). This fuel uses an 8:1 ratio of U-238 to U-235.\n\nThis fuel is processed in your §3Fission Reactor§r by placing it in the controller. When a redstone signal is applied it will burn the fuel, generating some power from the reactor and after a while you\u0027ll get a §6Depleted LEU-235 Fuel§r.\n\nThe depleted fuel is separated in a regular §3Centrifuge§r, resulting in many tiny clumps of fissile materials: §6Uranium 238§r, §6Neptunium-237§r, §6Plutonium-239§r, and §6Plutonium-241§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42596,7 +42722,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Thorium is a basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2Black Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium 232§r, made from Thorium enriched in a §3Thermal Centrifuge§r.\n\nThis fuel is processed in your §3Fission Reactor§r by placing it in the controller. When a redstone signal is applied it will burn the fuel, generating some power from the reactor and after a while you\u0027ll get a §6Depleted TBU Fuel§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium 233§r, §6Uranium 235§r, §6Neptunium 236§r, and §6Neptunium 237§r.",
+          "desc:8": "Thorium is a basic fissile material that can be used to get into the fissile chain. Thorium comes from §6Pitchblende Ore§r, §6Thorium Ore§r, and even §2Black Granite§r (with a few processing steps).\n\nThorium-Bred Uranium, or §6TBU§r for short, is made from nine clumps of §6Thorium-232§r, made from Thorium enriched in a §3Thermal Centrifuge§r.\n\nThis fuel is processed in your §3Fission Reactor§r by placing it in the controller. When a redstone signal is applied it will burn the fuel, generating some power from the reactor and after a while you\u0027ll get a §6Depleted TBU Fuel§r.\n\nThe depleted fuel provides tiny clumps of §6Uranium-233§r, §6Uranium-235§r, §6Neptunium-236§r, and §6Neptunium-237§r.\n\nTBU fuel can provide you with almost all the isotopes you need though a simple fuel cycle: §6TBU§r fuel is used to produce §6LEN-236§r followed by §6LEA-242§r and §6LECm-243§r, or §6LECm-247§r if you need §6Californium-252§r.\n\nYou won\u0027t be able to source §6Uranium-238§r this way,. however, and you might still find yourself wanting to run the other fuels to convert excess isotopes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42663,8 +42789,13 @@
       }
     },
     "672:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
       "preRequisites:11": [
-        350
+        350,
+        899
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -42742,7 +42873,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Neptunium 236 or 237.§r\n\nLow-Enriched Neptunium 236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium 237§r to §6Neptunium 236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN 236§r gives a small bit of Neptunium 237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.",
+          "desc:8": "§oNote: this quest accepts Neptunium-236 or 237.§r\n\nLow-Enriched Neptunium-236, or §6LEN-236§r, is the next step in the fissile material fuel chain.\n\nThis fuel requires an 8:1 ratio of §6Neptunium-237§r to §6Neptunium-236§r. Using only the results from Thorium fission, it will take two batches of §6Depleted TBU Fuel§r to make your first LEN fuel.\n\nOf course, higher order reactions also will result in small amounts of Neptunium that you can work with as well.\n\n§6Depleted LEN-236§r gives a small bit of Neptunium-237 back, but principally provides §6Plutonium§r and §6Americium§r isotopes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42810,7 +42941,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Uranium 233§r is obtained exclusively from the fission of §6TBU Fuels§r.\n\n§6LEU-233§r is made from one §6U233§r and eight §6U238§r.\n\n§6Depleted LEU-233§r will give you various §6Plutonium§r isotopes and some §6Americium§r.",
+          "desc:8": "§6Uranium-233§r is obtained exclusively from the fission of §6TBU Fuels§r.\n\n§6LEU-233§r is made from one §6U-233§r and eight §6U-238§r.\n\n§6Depleted LEU-233§r will give you various §6Plutonium§r isotopes and some §6Americium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42885,7 +43016,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Plutonium 238, 239, 241 or 242.§r\n\nLow-Enriched Plutonium 239, or §6LEP-239§r, is made from the usual 8:1 ratio of two isotopes of §6Plutonium§r, 242 and 239, acquired from earlier depleted fuels. You will also need §6Plutonium§r in large amounts for §eSunnarium§r.\n\nThe two sources of Plutonium are Uranium-based fuels and Neptunium-based fuels.\n\n§6Depleted LEP-239§r will give you some different isotopes of §6Curium§r for further enrichment.\n\nHigh-Enriched Plutonium fuels will give better results, but §cgenerate a lot more heat§r. Make sure your reactor cooling is up to the task.",
+          "desc:8": "§oNote: this quest accepts Plutonium 238, 239, 241 or 242.§r\n\nLow-Enriched Plutonium-239, or §6LEP-239§r, is made from the usual 8:1 ratio of two isotopes of §6Plutonium§r, 242 and 239, acquired from earlier depleted fuels. You will also need §6Plutonium§r in large amounts for §eSunnarium§r.\n\nThe two sources of Plutonium are Uranium-based fuels and Neptunium-based fuels.\n\n§6Depleted LEP-239§r will give you some different isotopes of §6Curium§r for further enrichment.\n\nHigh-Enriched Plutonium fuels will give better results, but §cgenerate a lot more heat§r. Make sure your reactor cooling is up to the task.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42953,7 +43084,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Curium 243, 245, 246 or 247.§r\n\nLow-Enriched Curium 243, or §6LECm-243§r, is made from §6Curium-243§r and §6Curium-246§r. You will also need §6Curium§r in large amounts for §eSunnarium§r.\n\n§6Depleted LECm-243 Fuel§r gives mostly Curium-246 back, but also small quantities of §6Berkelium§r and §6Californium§r isotopes.\n\n§6HECm-247§r is a better alternative for strictly Californium, if your reactor can withstand the heat.",
+          "desc:8": "§oNote: this quest accepts Curium-243, 245, 246 or 247.§r\n\nLow-Enriched Curium-243, or §6LECm-243§r, is made from §6Curium-243§r and §6Curium-246§r. You will also need §6Curium§r in large amounts for §eSunnarium§r.\n\n§6Depleted LECm-243 Fuel§r gives mostly Curium-246 back, but also small quantities of §6Berkelium§r and §6Californium§r isotopes.\n\n§6HECm-247§r is a better alternative for strictly Californium, if your reactor can withstand the heat.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43025,7 +43156,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Americium 241, 242, or 243.\n\n§6Americium 242§r and §6Americium 243§r are used to make §6LEA-242 Fuel§r.\n\nThere\u0027s also §6Americium 241§r, but this is only useful for making RTGs (which produce small amounts of RF continuously) or decaying down into §6Neptunium§r.\n\n§6Depleted LEA 242 Fuels§r will return a lot of §6Curium 246§r, and small amounts of the other three isotopes.",
+          "desc:8": "§oNote: this quest accepts Americium-241, 242, or 243.\n\n§6Americium-242§r and §6Americium-243§r are used to make §6LEA-242 Fuel§r.\n\n§6Depleted LEA-242 Fuels§r will return a lot of §6Curium-246§r, and small amounts of the other three isotopes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43092,7 +43223,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Berkelium 247 or 248.\n\n§6LEB-248 Fuel§r is made with §e8 §6Berkelium-247§r and §e1 §6Berkelium 248§r. When depleted, it results in several different isotopes of §6Californium§r.",
+          "desc:8": "§oNote: this quest accepts Berkelium-247 or 248.\n\n§6LEB-248 Fuel§r is made with §e8 §6Berkelium-247§r and §e1 §6Berkelium-248§r. When depleted, it results in several different isotopes of §6Californium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -43159,7 +43290,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Californium 249, 250, 251 or 252.\n\n§6Californium§r is the final fissile material in the NuclearCraft processing chain.\n\n§6LECf-249 Fuel§r is made with the 8:1 ratio of §6Californium-252§r and §6Californium-249§r. When depleted, it results in... different isotopes of Californium.\n\nUnless you want §6Californium RTGs§r or are experimenting with further fission routes, this step is probably unnecessary for general materials processing.",
+          "desc:8": "§oNote: this quest accepts Californium-249, 250, 251 or 252.\n\n§6Californium§r is the final fissile material in the NuclearCraft processing chain.\n\n§6LECf-249 Fuel§r is made with the 8:1 ratio of §6Californium-252§r and §6Californium-249§r. When depleted, it results in... different isotopes of Californium.\n\nUnless you want §6Californium RTGs§r or are experimenting with further fission routes, this step is probably unnecessary for general materials processing.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44203,7 +44334,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Give me a little juice, FRIDAY!",
+          "desc:8": "Goes even faster, and has a §aperfectly stable Hover Mode§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44219,7 +44350,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Infinity War",
+          "name:8": "Fast Flight",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -44279,11 +44410,11 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "I\u0027m running out of MCU puns.\n\nThe §aAngel Ring§r is actually slower than a jetpack, but it grants creative flight and requires no fuel (except a bit of GP).\n\nUp to you if you want to use it over a jetpack for day to day stuff, but it\u0027s an ingredient in the next jetpack, so if you want that you\u0027ll need to make one eventually.",
+          "desc:8": "The §6Angel Ring§r is actually slower than most jetpacks. However, it grants §acreative flight§r and requires no traditional fuel. \n\nIt reserves §b32 GP§r while active and will deactivate if you don\u0027t have enough. Double press the jump key (i.e spacebar) to activate. Your Angel Ring can be active at the same time as a normal jetpack, and the speeds §astack§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1,
             "OreDict:8": "",
             "id:8": "extrautils2:angelring"
           },
@@ -44291,7 +44422,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Captain... Marvel? IDK",
+          "name:8": "Spread Your Wings",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -44347,7 +44478,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is the flight of our lives.",
+          "desc:8": "Pairs with an Angel Ring to achieve §cl§6u§ed§ai§ec§br§do§cu§6s§r speed.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44363,7 +44494,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Endgame",
+          "name:8": "Going Hypersonic",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -47124,7 +47255,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry the most stuff.\n\nIf you need more space than this, enchant it with §aHolding IV§r.",
+          "desc:8": "Sworn to carry your burdens.\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49955,7 +50086,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Carry a whole lotta stuff!",
+          "desc:8": "Carry a whole lotta stuff!\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\nCan be §benchanted§r increase its capacity by up to §a36 slots§r at §dHolding IV§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50428,9 +50559,17 @@
       }
     },
     "806:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0,
+        1,
+        1
+      ],
       "preRequisites:11": [
+        154,
         166,
-        226
+        226,
+        835
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -51884,7 +52023,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. However, the yields of these ores from Microverse missions are small, so you should consider processing §6Platinum Group Sludge (PGS)§r for more.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.",
+          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. However, the yields of these ores from Microverse missions are small, so you should consider processing §6Platinum Group Sludge (PGS)§r for more.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.\n\nIf you get stuck, check out the excellent flowcharts on the §eDiscord§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54233,7 +54372,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.\n\n§rThese are formed like multiblocks. You can add a §3Parallel Control Hatch§r in order to allow them to process §dmore recipes§r at the same time, similarly to a §3Processing Array§r. The highest tier of Parallel Control Hatch can facilitate processing §d256 recipes§r at once!\n\nSearch \"@gregicality\" or look up the usages of Parallel Hatches in JEI to see details of all the multiblock machines.\n\nMost of the advanced alloys used to make the casings of these multiblocks are made in the §3Alloy Blast Smelter§r. If you can\u0027t seem to find the recipes for them, look for the §eMolten Fluid§r form.",
+          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.\n\n§rThese are formed like multiblocks. You can add a §3Parallel Control Hatch§r in order to allow them to process §dmore recipes§r at the same time, similarly to a §3Processing Array§r. The highest tier of Parallel Control Hatch can facilitate processing §d256 recipes§r at once!\n\nSearch \"@gregicality\" or look up the usages of Parallel Hatches in JEI to see details of all the multiblock machines. The §6Pattern Multi-Tool§r can be used to easily multiply patterns to fully benefit from multiblock parallel capabilities.\n\nMost of the advanced alloys used to make the casings of these multiblocks are made in the §3Alloy Blast Smelter§r. If you can\u0027t seem to find the recipes for them, look for the §eMolten Fluid§r form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55724,7 +55863,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -55747,16 +55886,20 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
-          "requiredFluids:9": {
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "polyphenylene_sulfide"
+              "Count:3": 1,
+              "Damage:2": 1008,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_foil"
             }
           },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -56860,6 +57003,7 @@
     },
     "900:10": {
       "preRequisites:11": [
+        505,
         888
       ],
       "properties:10": {
@@ -56966,7 +57110,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Tablet device you get now is very valuable to do plenty of tasks in GregTech.§r\n\n§oBe careful with removing the battery. Removing it will cause it to become a normal HV battery, and will no longer have 6.4m EU.§r\n\nThis Quest explains how you can use the §4Terminal§r. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\n§4IMPORTANT:§r If you the terminal freezes, you can press §eControl + E§r to force exit it.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them! This is similar to the remote access from the §3Central Monitor§r.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",",
+          "desc:8": "§2The Tablet device you get now is very valuable to do plenty of tasks in GregTech.§r\n\n§oBe careful with removing the battery. Removing it will cause it to become a normal HV battery, and will no longer have 6.4m EU.§r\n\nThis Quest explains how you can use the §4Terminal§r. §bThis is merely basic information, you can skip this for a while as the Terminal isn\u0027t used much in the early game§r.\n\n§4IMPORTANT:§r If you the terminal freezes, you can press §eControl + E§r to force exit it.\n\nThe Terminal runs on §4GregOS™§r (not an actual Trademark), an operating system which works with §5Applications§r.\n\n§9Machines Guides§r, §9Multiblock Guides§r, §9Item Guides§r, and §9Tutorials§r are what they sound like. Note that they are currently still being worked on.\n\n§9System Settings§r changes... settings (duh) related to the Terminal. You can §bset your own background picture§r, remove the double confirmation on exit, and more. Most of the keybinds apply to the §5Home§r button. Double clicking by default exists any open Application.\n\n§9Multiblock Helper§r is split into two functionalities. The first one requires a requires a §dLV§r Battery and a §dCamera§r mounted to enable §bVR visualization§r of multiblock structures. The upgrade unlocked at §6HV§r allows you to §6debug§r and §6auto-build§r.\n\n§9GT Console§r configures machines as if you were using regular tools, but without using them. §aNotably, this app allows you to set separate sides for fluid and item auto output!§r \n\n§9Battery Manager§r, assuming you have a Battery mounted, checks the Energy level and indicates energy usage of other Apps.\n\n§9Hardware Manager§r is used to mount Hardwares, such as Battery, to enable other Apps.\n\n§9App Store§r (not exactly a Store) adds Apps to your collection, and allows upgrades for some of them. Keep in mind Apps may still require specific mounted devices to function.\n\n§9Ore Prospector§r works the same way as the portable §dProspector§r and can be upgraded several times.\n\n§9Fluid Prospector§r works the same way as the portable §dProspector§r (but for fluids!) and can be upgraded several times.\n\n§9Recipe Chart§r is a wonderful chart planner to build Recipe Chains and visualize them.\n\n§9World Prospector§r is a §dX-Ray VR§r for filtered blocks.\n\n§9Virtual Tank Viewer§r is used in combination with §3Ender Fluid Covers§r. It stores information about all your §dVirtual Tanks§r.\n\n§9Cape Selector§r lets you become fancy! You can have your characters wear a fancy §dCape§r.\",",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -60356,7 +60500,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. \n\nThe first way that comes to mind is electrolysing §9Water§r, but that is slow. \n\nInstead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be achieved by centrifuging §6Food§r and §6Wood§r, processing §6Pyroluse Byproducts§r, or through §6Petroleum§r. \n\nRight now, for the small quantities you need, you can simply electrolyse §9Water§r. Just keep those other ways in mind, for later in the game.",
+          "desc:8": "§oSilicon Dioxide is an important part of a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation of how to passively automate this.§r\n\nAround this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r. \n\nThe first way that comes to mind is electrolysing §9Water§r, but that is §cextremely slow and inefficient§r.§r.\n\nInstead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §6Methane§r can be obtained from §6pyroluse byproducts§r, or via §6petrochemistry§r, although there are many sources. You can also recombine your methane after reacting it with water, although this process is somewhat inefficient.\n\nFor now, you could obtain the first couple of buckets of §9Hydrogen§r needed to set up petrochemistry by electrolyzing §9Methane§r from §6centrifuging§r various biological materials, or various ores like §6Limonite§r. Electrolyzing various dusts provides early §9Oxygen§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -60654,7 +60798,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online. Just remember that channels are disabled by default in this pack.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6Interfaces§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 36.",
+          "desc:8": "This quest teaches you the basics about §bApplied Energistics 2§r autocrafting. If you are new this mod, it is highly recommended that you watch a video or read a guide online. Just remember that channels are disabled by default in this pack.\n\nBy now, you should have §6ME Interfaces, §6Molecular Assemblers, Crafting Units, Patterns§r and a §6Pattern Terminal§r. \n\nFirst, for all crafts, you\u0027ll need a §eCrafting CPU§r. These are structures that must be in a rectangular prism, and can be only one block. These compose of:\n* §6Crafting Storages§r, which determine how big a craft can be. For now, §64K Crafting Storages§r should be enough. You must have at least one per CPU.\n* §6Co-Processing Units§r, which are used to craft multiple things at once. These are optional.\n* §6Crafting Monitors§r, used to see what is crafting. Not needed, and you can right-click on the CPU to find out what is crafting anyways, so this is pretty much just decoration.\n* §6Crafting Units§r, which aren\u0027t needed at all, and are just used to fill holes, if you have a lack of materials.\n\nSecond, you\u0027ll need the place for the autocrafting. For Crafting Table recipes, you\u0027ll need §6Molecular Assemblers§r. §6Interfaces§r are placed next to them. Autocrafting with §bGregTech§r is explained later, in the quest following this one.\n\nFinally, you\u0027ll need a §6Pattern§r. In order to make this, put empty §6Patterns§r in the §6Pattern Terminal§r, and find the recipe in §bJEI§r, while still in the §6Pattern Terminal§r. Then, click \u0027+\u0027 in §bJEI§r, and press the arrow to encode the recipe. This goes in the §6Interface§r that you set up in the last step. You can use §6Interface Terminals§r to access §6Interfaces\u0027§r pattern slots.\n\nEventually, you\u0027ll need a lot of §6Patterns§r, lots of CPUs, and ones with more storage, and lots of §6Interfaces§r. If you run out of pattern slots in an §6Interface§r, you can add more §6Interfaces§r, or use newly added §6Pattern Expansion Cards§r, which add 9 slots each. You can have a maximum of 3 §6Pattern Expansion Cards§r in an §6Interface§r, which makes the amount of pattern slots go to 36.\n\nNote that you can recycle your CPUs by simply placing them in a §eCrafting Grid§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61945,13 +62089,18 @@
       }
     },
     "1001:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        109
+        109,
+        1053
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A very useful upgrade card that can be applied to §6Interfaces§r. Saves having many interfaces crowded around a machine or multiblock.\n\nYou can have up to §33 §6Pattern Expansion Cards§r installed per interface, bringing the amount of pattern slots from 9 to 36.",
+          "desc:8": "§aPattern Expansion Cards§r increase the number of pattern slots that an §aME Interface§r can use by 9 each, up to a maximum of 36 patterns with 3 cards.\n\nThese cards cost an Interface to make, but allow you to densely pack patterns into individual interfaces.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62641,7 +62790,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.§r\n\n§6Fluorine§r is needed in §6Polytetrafluoroethylene (PTFE)§r, and §6Thorium§r is used in §bNuclearCraft §3Fission Reactors§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust §ris then finally put into a §3Electrolyser§r. This yeilds §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
+          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.§r\n\n§6Fluorine§r is needed to produce §6Polytetrafluoroethylene§r (PTFE) and to process §6Naquadah§r, and §6Thorium§r is used to breed other elements in a §3Fission Reactor§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher, and can be performed without any water or lava present if done in a §3Processing Array§r.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust §ris then finally put into a §3Electrolyser§r. This yeilds §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62863,15 +63012,20 @@
       }
     },
     "1017:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1,
+        1
+      ],
       "preRequisites:11": [
-        120,
-        391,
-        1016
+        1016,
+        1053,
+        1069
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you will need a §3Matter Condenser§r. Stick a §664k ME Storage Component§r in, change the mode to \u0027Singularity\u0027, and stuff lots of items in. \n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nAfter you have made the 2 §eSingularities§r you will need from the §3Matter Condenser§r, you need to setup a §aQuantum Ring Multiblock§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, §cNOT the Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you need to setup a §aQuantum Ring Multiblock§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, §cNOT the Wireless Terminal§r! \n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62920,24 +63074,18 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "appliedenergistics2:condenser"
-            },
-            "1:10": {
               "Count:3": 8,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:quantum_ring"
             },
-            "2:10": {
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:quantum_link"
             },
-            "3:10": {
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 59,
               "OreDict:8": "",
@@ -63227,16 +63375,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: This quest accepts both Memory Cards and Advanced Memory Cards.§r\n\nA §6P2P Tunnel§r (§aPoint-to-Point Tunnel§r) is a powerful tool from §bApplied Energistics 2§r that can be used to send items, redstone, RF/EU or fluids from one location to another, using your ME system, without the need to use any disk storage space.\n\nEach P2P tunnel system may have §aany number of inputs§r and §aany number of outputs§r. There is no limit on how many P2P tunnels, or P2P tunnel systems, you can have on one network.\n\nBy default, a P2P tunnel is an §6ME tunnel§r, which transmits Applied Energistics channels and power. Since channels are disabled, you will most likely not be using the default tunnel. You can change the mode of your P2P tunnels by right clicking the tunnel with the respective item seen in §bJEI§r, or by §asneak-scrolling§r with the P2P tunnel in hand.\n\nTo configure your P2P tunnels, take a §6Memory Card§r. While holding the memory card, §ashift-right click§r the unconfigured tunnel, to set the frequency of the input, and save the frequency to the memory card. Once the first tunnel has been set up this way and the memory card is configured with the frequency, any subsequent tunnel you §aright-click§r with the memory card will be set as the output of the most recent frequency used. Alternatively, you can set a P2P tunnel as an §einput§r by §aright-clicking§r the tunnel with the §ecard in your off-hand§r.\n\nYou can also use memory cards to copy the configuration of ME blocks and tile-entities, such as §6Interfaces§r and §6Storage Buses§r. §aShift-right click§r a ME block to copy its configuration, and §aright-click§r to paste that configuration. Note that this doesn\u0027t copy upgrades applied to the block.\n\nYou can also §ashift-right click§r to empty the frequency, or the ME block configuration, set in the card.\n\nThis pack has §bBetter P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nYou can also configure P2P tunnels using your Advanced Memory Card. While holding the card, §aright-click§r on a tunnel, it will be §aselected§r. Once a tunnel is selected, it will be highlighted in §agreen§r. You can also see your other connections with the options to select or bind; hitting select will reselect the tunnel.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\nThe §6Advanced Memory Card§r has 3 modes accessible in the §3GUI§r:\n\n§aBind Output§r:\nOnce the tunnel you would like to be set as an input has been §aselected§r, hitting §bbind§r on any other connection will turn the selected tunnel into an input tunnel, and any binded tunnels will be turned into output tunnels for the selected tunnel.\n\n§aBind Input§r:\nOnce the tunnel you would like to be set as an output has been §aselected§r, hitting §bbind§r on any other tunnel will set the tunnel as the input of the selected tunnel. This is useful for when you can’t find the output tunnel.\n \n§aCopy Output§r:\nOnce an output tunnel you want to copy has been §aselected§r, hitting §bbind§r on any other connection will copy the output frequency of the selected tunnel.",
+          "desc:8": "A §6P2P Tunnel§r (§aPoint-to-Point Tunnel§r) is a powerful tool from §bApplied Energistics 2§r that can be used to send items, redstone, RF/EU or fluids from one location to another, using your ME system, without the need to use any disk storage space.\n\nEach P2P tunnel system may have §aany number of inputs§r and §aany number of outputs§r. There is no limit on how many P2P tunnels, or P2P tunnel systems, you can have on one network.\n\nBy default, a P2P tunnel is an §6ME tunnel§r, which transmits Applied Energistics channels and power. Since channels are disabled, you will most likely not be using the default tunnel. You can change the mode of your P2P tunnels by using the assembler recipes or by §asneak-scrolling§r with the P2P tunnel in hand.\n\nTo configure your P2P tunnels, take a §6Memory Card§r. While holding the memory card, §ashift-right click§r the unconfigured tunnel, to set the frequency of the input, and save the frequency to the memory card. Once the first tunnel has been set up this way and the memory card is configured with the frequency, any subsequent tunnel you §aright-click§r with the memory card will be set as the output of the most recent frequency used. Alternatively, you can set a P2P tunnel as an §einput§r by §aright-clicking§r the tunnel with the §ecard in your off-hand§r.\n\nYou can also use memory cards to copy the configuration of ME blocks and tile-entities, such as §6Interfaces§r and §6Storage Buses§r. §aShift-right click§r a ME block to copy its configuration, and §aright-click§r to paste that configuration. Note that this doesn\u0027t copy upgrades applied to the block.\n\nYou can also §ashift-right click§r to empty the frequency, or the ME block configuration, set in the card.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 460,
             "OreDict:8": "",
-            "id:8": "betterp2p:advanced_memory_card",
-            "tag:10": {
-              "selectedIndex:3": -1
-            }
+            "id:8": "appliedenergistics2:part"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -63287,7 +63432,7 @@
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "OreDict:8": "questbookCards",
+              "OreDict:8": "",
               "id:8": "appliedenergistics2:memory_card",
               "tag:10": {}
             }
@@ -64399,7 +64544,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3High Performance Computing Array (HPCA)§r is a computer which provides §dComputation Work§r to be used in the §3Research Station§r. The amount of §dComputation Work§r it provides depends on the type of HPCA parts within it. It also needs to receive adequate §dCooling§r provided by Coolers within its structure.\n\nConnect the §3Computation Data Transmission Hatch§r to the §3Reception Hatch§r on your §3Research Station§r to transfer the §dCWU/t§r produced to it.\n\nThe HPCA accepts almost any combination of §3Computation Components§r, §3Coolers§r, §3Bridges§r and §3Empty Components§r within the 3x3 area behind the §aComputer Heat Vents§r. The suggested components will build a §d16 CWU/t§r HPCA, enough for scanning the §3Fusion Reactor Mk2§r, §6UV Circuits§r, and all §6ZPM Components§r. You can get away with less at first, but you will eventually need to upgrade to this computing power. Refer to §eJEI§r for some other possible setups.\n\nThe §dCWU/t§r of the HPCA is determined by the sum of the outputs of the §3HPCA Computation Components§r within it. Regular §3Computation Components§r produce §d4 CWU/t§r each, and require §d2 Cooling§r each. §3Advanced Computation Components§r, which you do not have access to yet, produce §d16 CWU/t§r each and require §d4 Cooling§r each.\n\n§dCooling§r is provided by §3Cooler§r blocks within the structure. §3Passive Coolers§r provide §d1 Cooling§r each for free, whereas §3Active Coolers§r provide §d2 Cooling§r each with a steady flow of §9Dielectric PCB Coolant§r, provided through an §3Input Hatch§r. If the Cooling within the HPCA is insufficient, the components may be §cdamaged§r from overheating. The physical position of the components within the HPCA does not matter.\n\nA §3Bridge Component§r may be installed, allowing the HPCA to connect to §3Network Switches§r.\n\nThe energy consumption of the HPCA is determined by the sum of its parts. \u0027Max Energy\u0027 refers to the power draw while the HPCA is computing, while \u0027Upkeep Energy\u0027 refers to the power draw when the HPCA is idling.",
+          "desc:8": "The §3High Performance Computing Array (HPCA)§r is a computer which provides §dComputation Work§r to be used in the §3Research Station§r. The amount of §dComputation Work§r it provides depends on the type of HPCA parts within it. It also needs to receive adequate §dCooling§r provided by Coolers within its structure.\n\nConnect the §3Computation Data Transmission Hatch§r to the §3Reception Hatch§r on your §3Research Station§r to transfer the §dCWU/t§r produced to it.\n\nThe HPCA accepts almost any combination of §3Computation Components§r, §3Coolers§r, §3Bridges§r and §3Empty Components§r within the 3x3 area behind the §aComputer Heat Vents§r. The suggested components will build a §d16 CWU/t§r HPCA, enough for scanning the §3Fusion Reactor Mk2§r, §6UV Circuits§r, and all §6ZPM Components§r. You can get away with less at first, but you will eventually need to upgrade to this computing power. Refer to §eJEI§r for some other possible setups.\n\nThe §dCWU/t§r of the HPCA is determined by the sum of the outputs of the §3HPCA Computation Components§r within it. Regular §3Computation Components§r produce §d4 CWU/t§r each, and require §d2 Cooling§r each. §3Advanced Computation Components§r, which you do not have access to yet, produce §d16 CWU/t§r each and require §d4 Cooling§r each, and a fully upgraded HPCA can produce up to §d36 CWU/t§r.\n\n§dCooling§r is provided by §3Cooler§r blocks within the structure. §3Passive Coolers§r provide §d1 Cooling§r each for free, whereas §3Active Coolers§r provide §d2 Cooling§r each with a steady flow of §9Dielectric PCB Coolant§r, provided through an §3Input Hatch§r. If the Cooling within the HPCA is insufficient, the components may be §cdamaged§r from overheating. The physical position of the components within the HPCA does not matter.\n\nA §3Bridge Component§r may be installed, allowing the HPCA to connect to §3Network Switches§r.\n\nThe energy consumption of the HPCA is determined by the sum of its parts. \u0027Max Energy\u0027 refers to the power draw while the HPCA is computing, while \u0027Upkeep Energy\u0027 refers to the power draw when the HPCA is idling.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64418,7 +64563,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -64496,14 +64641,14 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
-              "Count:3": 4,
-              "Damage:2": 1415,
+              "Count:3": 3,
+              "Damage:2": 1416,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "2:10": {
-              "Count:3": 1,
-              "Damage:2": 1412,
+              "Count:3": 2,
+              "Damage:2": 1415,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -65220,7 +65365,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Reservoir Hatch§r acts as an infinite water source as a fluid input hatch.",
+          "desc:8": "The §6Reservoir Hatch§r acts as a truly infinite water source for multiblocks.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -65232,7 +65377,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Cooking for Blockheads",
+          "name:8": "Ocean In A Box",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -65343,7 +65488,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Most multiblocks now support rotation along any axis. Right-click with a Wrench on a face with a rotation ↺ symbol to rotate the controller.\n\nThe rules for building multiblocks remain the same.\n\nTake your setups to a new dimension!\n\nThe §3Cleanroom§r, §3Multiblock Miners/Drills§r, and §3Distillation Tower§r do not support being rotated.",
+          "desc:8": "Most multiblocks now support §2rotation§r along any axis. Right-click with a wrench on a face with a rotation ↺ symbol to rotate the controller.\n\nMultiblocks can also be §2reflected§r to form a mirror image of the normal structure. You don\u0027t need to do anything to the controller for this, a mirror image will automatically be recognized as a valid structure.\n\nThe rules for building multiblocks otherwise remain the same. \n\nTake your setups to a new dimension!\n\nThe §3Cleanroom§r, §3Multiblock Miners/Drills§r, and §3Distillation Tower§r do not support being rotated.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -65580,6 +65725,1511 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1053:10": {
+      "preRequisites:11": [
+        105
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "There are many §eCards§r in §bApplied Energistics 2§r and §bNeeve\u0027s AE2: Extended Life Additions§r, some of which are highlighted in this chapter. However, for the rest of them, it is up to you to discover them!\n\nSimply search \u0027@ae2 card\u0027 n §bJEI§r to find them, at which point you can simply see their tooltip for their usage!\n\nHave fun exploring!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 28,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "AE2 Modifier Cards",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1053,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 25,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 28,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1054:10": {
+      "preRequisites:11": [
+        120
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The fifth tier of component for AE §6Item Storage§r.\n\nUsed for a §a256k ME Storage Cell§r or a §a256k Crafting Storage§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "256k Item Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1054,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1055:10": {
+      "preRequisites:11": [
+        1054
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The sixth tier of component for AE §6Item Storage§r.\n\nUsed for a §a1024k ME Storage Cell§r or a §a1024k Crafting Storage§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "1024k Item Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1055,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1056:10": {
+      "preRequisites:11": [
+        1055
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The penultimate tier of component for AE §6Item Storage§r.\n\nUsed for a §a4096k ME Storage Cell§r or a §a4096k Crafting Storage§r.\n\nAlmost there!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "4096k Item Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1056,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1057:10": {
+      "preRequisites:11": [
+        1056
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The ultimate tier of component for AE §6Item Storage§r.\n\nUsed for storing huge amounts of items or information, like in a §a16384k ME Storage Cell§r or a §a16384k Crafting Storage§r.\n\nAlmost infinite storage!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 4,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "16384k Item Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1057,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1058:10": {
+      "preRequisites:11": [
+        124
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The fifth fluid storage component, used for §a256k Fluid Storage Cells§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "256k Fluid Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1058,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1059:10": {
+      "preRequisites:11": [
+        1058
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The sixth fluid storage component, used for §a1024k Fluid Storage Cells§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 6,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "1024k Fluid Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1059,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 6,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1060:10": {
+      "preRequisites:11": [
+        1059
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The penultimate fluid storage component, used for §a4096k Fluid Storage Cells§r.\n\nAlmost there!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 7,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "4096k Fluid Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1060,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 7,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1061:10": {
+      "preRequisites:11": [
+        1060
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The ultimate fluid storage component, used for §a16384k Fluid Storage Cells§r.\n\nAlmost infinite storage!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 8,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "16384k Fluid Storage",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1061,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 8,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1062:10": {
+      "preRequisites:11": [
+        1064
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Recipes dispatched by an §aME Interface§r with a §aJob Auto-Complete Card§r will complete without waiting for any specified outputs.\n\n§d\"Well that\u0027s kind of odd, why would I want that?\"§r\nGreat question!\n\nThere\u0027s an old trick called the \"paper trick\" where people would rename a paper in an anvil to create a unique item, set that as the output of a processing pattern, and cycle the paper out and back into the network after depositing the ingredients to trick §bAE2§r into \"completing\" the craft.\n\n§eThis card achieves the same thing but without item cycling.§r\n\nThis is frequently used for ordering an entire multiblock \u0027s components to dump into a chest for convenient building, which obviously doesn\u0027t have an output item as it\u0027s not a conventional craft.\n\nAnother common use is to send off a §6Micro Miner§r mission for resources that are dumped into a processing pipeline (so you don\u0027t need to wait for it to actually finish). In this case it\u0027s also §esafer to use the trick, as you can inadvertently create cycles in the crafting tree if you\u0027re not careful§r. The Naquadah mission, for example, can end up depending on itself if the system is told the Miner mission outputs Naquadah dust.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "nae2:upgrade"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Job Auto-Complete Card",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1062,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "nae2:upgrade"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1063:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        109,
+        132,
+        1053
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Are you tired of making a whole new machine or adding a new input bus for each recipe with a different circuit? Well the §6Programmed Circuit Card§r has you covered!\n\nSimply add one of these cards into a §aME Interface§r, and add the relevant §6Programmed Circuit§r to your recipe patterns. Now, when you order a recipe, the circuit will be set in the machine, on-demand! The recipe won\u0027t even require a circuit for crafting, thanks to §eGhost Circuits§r and the magic of these cards!\n\nAlso works with Multiblock §6Input Buses§r!\n\nSo much easier!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "nae2:upgrade"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Programmed Circuit Card",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1063,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "nae2:upgrade"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1064:10": {
+      "preRequisites:11": [
+        1053
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aCrafting Cards§r are a useful tool for automation.\n\nThis card will generate crafting requests from the machine it is augmenting. In the case of an §aME Interface§r, crafting requests will be generated to keep the items in its stocking slots filled to the specified number.\n\nNote that you can expose these stocked items back to the network with a §aStorage Bus§r, if you so wish.\n\nRequests are made just like when you order them manually, except it will prioritize using the §osmallest§r available valid crafting computer.\n\nFor this reason you should consider adding a separate §31k Crafting Storage§r or §34k Crafting Storage§r as its own computer each time you use one of these cards, to prevent your main computers from being tied up with these crafting requests. If your craft doesn\u0027t fit into that, maybe reconsider using a crafting card for that item.\n\nThis card has been maligned for producing lag and performing poorly, which was definitely true in §bAE2§r back in 2020. §eHowever, these issues have long since been addressed in §bAE2-UEL§e, and are no longer a problem§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 53,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Crafting Card",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1064,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 53,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1065:10": {
+      "preRequisites:11": [
+        1022
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Want to make configuring your §6P2P Tunnels§r easier?\n\nThis pack has §bBetter(er) P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nTo configure P2P tunnels, you need to select a P2P tunnel. This can be done in the GUI by clicking on its entry, or it can be done in-world by §aright-clicking§r on a P2P tunnel whilst holding the card.\n\nOnce a tunnel is selected, it will be highlighted in §agreen§r.\n\nConnected outputs are highlighted in §6orange§r, and connected inputs are highlighted in §9blue§r.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\n§aLeft-click§r on the name of the P2P to rename it.\n\n§aRight-click§r on a P2P entry to change its type, or to change it from an input to an output (or vice versa).\n\nThe card has 5 modes accessible in the §3GUI§r, switchable via the second button to the left. These are:\n\n§lBind to Output:§r\nThis mode sets the §aselected P2P§r as the §9input§r of the §bbind target§r (the entry you pressed §eBind§r on). Note that their input/output state and type are changed as necessary.\n\nIn this mode, the §bbind target§r can be any P2P on a different frequency than the §aselected P2P§r.\n\nNote that the §aselected P2P§r becomes an §9input§r, and the §bbind target§r becomes an §aoutput§r.\n\n§lBind to Input:§r\nThis is the same as §oBind to Output§r, except the §aselected P2P§r becomes an §6output§r, and the §bbind target§r becomes an §9input§r.\n\n§lAdd as Input:§r\nThis simply adds the §aselected P2P§r as one of the §bbind target\u0027s§r §9inputs§r.\n\nIn this mode, the §bbind target§r must have the same type as the §aselected P2P§r, as well as on a different frequency.\n\nNote that the §bbind targetis not changed. The §aselected P2P§r becomes an §9input§r.\n\n§lAdd as Output:§r\nThis is the same as §oAdd as Input§r, but the §aselected P2P§r becomes an §6output§r.\n\n§lUnbind:§r\nThis mode simply allows you to unbind P2P entries. The §aselected P2P§r is not changed.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "betterp2p:advanced_memory_card",
+            "tag:10": {
+              "gui:1": 3,
+              "selectedIndex:10": {}
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Advanced Memory Card",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1065,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "betterp2p:advanced_memory_card",
+              "tag:10": {
+                "gui:1": 3,
+                "selectedIndex:10": {}
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1066:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
+      "preRequisites:11": [
+        109,
+        1022
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Interface P2P Tunnels§r are like an upgraded §6Item P2P Tunnel§r for §6ME Interfaces§r. These P2P Tunnels allow you to parallelize crafting patterns from a single ME Interface to many destinations.\n\nThe input tunnel should always be placed on an ME Interface, and the output tunnels on valid destinations for the §aEncoded Patterns§r contained in that ME Interface.\n\nUnlike Item P2P Tunnels, which allow items sent through them to split across destinations, Interface P2P Tunnels §eensure that all of the items from a pattern end up at the same destination§r.\n\nYou can also §epush items back into the output tunnel§r and it will come out of the input tunnel, back into the adjacent ME Interface.\n\nThis also extends to having more than one input P2P, with output sides being able to pull from every input, allowing you to mass-pattern your machines.\n\nFurthermore, the Interface P2P works with §6Fluid Interfaces§r as well, allowing you to push fluids back to a different input P2P adjacent to a Fluid Interface.\n\n§eBlocking Mode§r also functions normally through Interface P2P Tunnels, only inserting items into a destination which is empty or equivalent (like config circuits).\n\nIf the above is confusing, think of it like this: §eeach destination is treated like it\u0027s actually adjacent to the ME Interface§r. Instead of at most five sides, you get as many \"sides\" of the interface as you want, with as many \u0027interfaces\u0027 as you want!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "nae2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Interface P2P",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1066,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "nae2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1067:10": {
+      "preRequisites:11": [
+        54,
+        105,
+        132,
+        148
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Laser-ify your ME Networks!\n\nThe §6ME Beam Former§r is a device that creates a beam between two points to connect networks over empty space or transparent blocks. You\u0027ll need two devices to set up a link.\n\nThis is great for transporting your ME Networks into §aCleanrooms§r, as an alternative to passing them through §6Machine Hulls§r, although they will have to pass through §6Cleanroom Glass§r and not §6Plascrete§r.\n\nThe beam updates in real-time based on changes to the blocks along its path. §eIf a non-transparent block gets in the way, the connection breaks§r. This makes it useful not only for linking networks together, but also for detecting arbitrary block updates if necessary.\n\nThe beam\u0027s color matches the cable color of the Beam Former it originates from. If the two devices have different cable colors, the color of the first activated Beam Former takes precedence.\n\nThe maximum distance the beam can cover is 32 blocks, or 34 blocks if you include the Beam Formers themselves.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:part"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ME Beam Former",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1067,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:part"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1068:10": {
+      "preRequisites:11": [
+        89,
+        100,
+        116
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Tired of the §3Atomic Reconstructor§r needing you to drop items on the ground and having to pick them back up again? Then you\u0027ll love the §6Reconstruction Chamber§r!\n\nPush items into it and hit it with the Atomic Reconstructor\u0027s beam, and the items will be transformed as though they had been on the floor. Transformed items will be automatically ejected into an adjacent inventory (like an §aME Interface§r), allowing for convenient automation.\n\nThe Reconstruction Chamber is also compatible with comparators, so you can emit a redstone signal when it contains items. This means you can selectively enable the Atomic Reconstructor instead of relying on a pressure plate for a pulse, or constant-firing.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:reconstruction_chamber"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Reconstruction Chamber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1068,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:reconstruction_chamber"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1069:10": {
+      "preRequisites:11": [
+        120,
+        148,
+        267,
+        391
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Matter Condenser§r accepts large quantities of items or fluids to turn into data, which can ultimately be converted into a §6Singularity§r.\n\nThey can also make §6Matter Balls§r, but they are useless in this pack... well, except for being fired in the §eMatter Cannon§r, and being made into §6Paint Balls§r for the §eColor Applicator§r.\n\nA storage component is needed for holding this data. Specifically, you need a §664k Storage Component§r to make a Singularity.\n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r. \n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nSingularities are required for linking together §aQuantum Link Chambers§r, and for crafting different AE2 and NAE2 parts.\n\nFor the former, you want to detonate an explosive (like §eTiny TNT§r, §eTNT§r or §ePowderbarrel§r), with a §6Singularity§r and an §6Ender Pearl Dust§r dropped on the ground next to it.\n\nThis will create a pair of §6Quantum Entangled Singularities§r, which you can then place inside of a Quantum Link Chamber to connect them together.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:condenser"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Matter Condenser",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1069,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:condenser"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 47,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1070:10": {
+      "preRequisites:11": [
+        1069
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §aME Storage Exposer§r provides automation access to every item and fluid stored inside of your ME Network.\n\nIt\u0027s a lot like a §aController Slave§r from §bStorage Drawers§r: you can directly interact with this block using §6conduits§r, §6machine covers§r, or even other ME parts like §aStorage Buses§r or §aP2P§r.\n\n§cThis functionality comes with a performance cost§r: the more things exposed by this block to automation, the more impact on TPS there will be. Use §efiltered subnets§r to expose just the relevant contents.\n\nFor example, you can create a subnet consisting of an §aOre Dictionary Storage Bus§r and an Exposer so that the exposer only sees very specific items from the main network. If you wanted to expose all ores from your network to this subnet, you could use §eore*§r in the Storage Bus\u0027s filter, and automation would have access to all your ores.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:exposer"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "ME Storage Exposer",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1070,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:exposer"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1071:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        64,
+        89,
+        102
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§aVoid Storage Cells§r can be placed anywhere a regular storage cell is allowed, but §call items or fluids that enter the cell are voided to create data for the§r §3Matter Condenser§r.\n\nAs such, you should §cbe extremely careful§r and partition the cell to filter which items or fluids are allowed to be voided using a §aCell Workbench§r.\n\nOne possible use case is putting them in an §3ME IO Port§r to mass-void junk items from your storage.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nae2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Void Storage Cells",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1071,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 1,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:cell_workbench"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:material"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:storage_cell_void",
+              "tag:10": {}
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nae2:fluid_storage_cell_void",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1072:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
+      "preRequisites:11": [
+        55
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You might have experienced §5Advanced Rocketry§r before. Good news!\n\nGoing to the moon is §acompletely optional§r, but comes with some unique perks:\n\n- §6Moon Dust§r, which can be centrifuged for the §9Deuterium§r you\u0027ll need to make your first §3Microverse Projector§r. It can also be used to make §6Quantum Flux§r more cheaply.\n\n- §9Deuterium§r and §9Helium-3§r veins for your §3Fluid Rigs§r.\n\n- Very high §aore density§r. §6Dilithium§r and §6Fluorite§r ores are only available from the Moon or microminer missions.\n\n- Your rocket can be repurposed to set up a §3space station§r, which offers §apermanent daytime§r. Space bases are also just plain cool!\n\nIf this isn\u0027t enough to convince you, then §9Deuterium§r can be sourced by centrifuging or distilling §9Ender Air§r. An earlier but less efficient alternative is centrifuging §9Hydrogen§r,\n\nNote that you will still need to make §9Rocket Fuel§r for your §6Tier 1-3 Microminers§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:grass"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "We Choose Not To Go To The Moon",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1072,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "deuterium"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "1073:10": {
+      "preRequisites:11": [
+        232
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §eMoon§r is full of, well, moon rocks. Macerate them to produce §6Moon Dust§r, which can be used as a source of §9Deuterium§r or to produce §6Quantum Flux§r more cheaply.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nomilabs:moondust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Moon Dust",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1073,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:moondust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1074:10": {
+      "preRequisites:11": [
+        93,
+        902
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §bGT Console§r is a very useful app for the §6Terminal§r that allows you to configure machines §awithout the use of tools§r. It also lets you set §aseparate sides for item and fluid auto-output§r, which is not possible using normal tools.\n\nFirst, you\u0027ll need to install a §6Wireless Transmitter§r in the §bHardware Manager§r of your §6Terminal§r and add the §6GT Console§r app through the §bApp Store§r.\n\nThen, right-click a machine with the §6Terminal§r while sneaking and click the §bGT Console§r app. This opens an interface where you can change the machine\u0027s settings, including the configuration of covers like conveyors and pumps.\n\nOnce you get used to it, this nifty little app will make setting up machines a lot easier!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 503,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Gregtech Console",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1074,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -66898,6 +68548,13 @@
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 508
+        },
+        "110:10": {
+          "id:3": 1074,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -356,
+          "y:3": 532
         }
       }
     },
@@ -71058,396 +72715,396 @@
           "y:3": 348
         },
         "1:10": {
-          "id:3": 55,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": 552
-        },
-        "2:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 456
         },
-        "3:10": {
+        "2:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 444
         },
-        "4:10": {
+        "3:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 600
         },
-        "5:10": {
+        "4:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 504
         },
-        "6:10": {
+        "5:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 210,
           "y:3": 552
         },
-        "7:10": {
+        "6:10": {
           "id:3": 116,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 252,
           "y:3": 546
         },
-        "8:10": {
+        "7:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 210,
           "y:3": 600
         },
-        "9:10": {
+        "8:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 456
         },
-        "10:10": {
+        "9:10": {
           "id:3": 204,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 600,
+          "y:3": 420
+        },
+        "10:10": {
+          "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 600,
           "y:3": 456
         },
         "11:10": {
-          "id:3": 205,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 600,
-          "y:3": 420
-        },
-        "12:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 258,
           "y:3": 420
         },
-        "13:10": {
+        "12:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 420
         },
-        "14:10": {
+        "13:10": {
           "id:3": 208,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 420
         },
-        "15:10": {
+        "14:10": {
           "id:3": 209,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 474,
           "y:3": 414
         },
-        "16:10": {
+        "15:10": {
           "id:3": 210,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 384
         },
-        "17:10": {
+        "16:10": {
           "id:3": 211,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 456
         },
-        "18:10": {
+        "17:10": {
           "id:3": 212,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 420
         },
-        "19:10": {
+        "18:10": {
           "id:3": 214,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
-          "y:3": 552
+          "y:3": 600
         },
-        "20:10": {
+        "19:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": 588
+          "x:3": 522,
+          "y:3": 600
         },
-        "21:10": {
+        "20:10": {
           "id:3": 217,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
-          "y:3": 624
+          "y:3": 642
         },
-        "22:10": {
+        "21:10": {
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 636,
           "y:3": 420
         },
-        "23:10": {
+        "22:10": {
           "id:3": 220,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 336
         },
-        "24:10": {
+        "23:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 336
         },
-        "25:10": {
+        "24:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 300
         },
-        "26:10": {
+        "25:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 372
         },
-        "27:10": {
+        "26:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 336
         },
-        "28:10": {
+        "27:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 300
         },
-        "29:10": {
+        "28:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 372
         },
-        "30:10": {
+        "29:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 336
         },
-        "31:10": {
+        "30:10": {
           "id:3": 229,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 162,
           "y:3": 552
         },
-        "32:10": {
+        "31:10": {
           "id:3": 232,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 492
         },
-        "33:10": {
+        "32:10": {
           "id:3": 262,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 552
         },
-        "34:10": {
+        "33:10": {
           "id:3": 275,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 306,
           "y:3": 474
         },
-        "35:10": {
+        "34:10": {
           "id:3": 276,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 480
         },
-        "36:10": {
+        "35:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 600
         },
-        "37:10": {
+        "36:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 600
         },
-        "38:10": {
+        "37:10": {
           "id:3": 386,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 468,
           "y:3": 492
         },
-        "39:10": {
+        "38:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 552
         },
-        "40:10": {
+        "39:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 552
         },
-        "41:10": {
+        "40:10": {
           "id:3": 389,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
           "y:3": 492
         },
-        "42:10": {
+        "41:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 600,
-          "y:3": 588
+          "x:3": 606,
+          "y:3": 600
         },
-        "43:10": {
+        "42:10": {
           "id:3": 510,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 684,
           "y:3": 420
         },
-        "44:10": {
+        "43:10": {
           "id:3": 511,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 708,
           "y:3": 384
         },
-        "45:10": {
+        "44:10": {
           "id:3": 539,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 516
         },
-        "46:10": {
-          "id:3": 690,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 600,
-          "y:3": 552
-        },
-        "47:10": {
+        "45:10": {
           "id:3": 754,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 660,
           "y:3": 456
         },
-        "48:10": {
+        "46:10": {
           "id:3": 757,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 258,
           "y:3": 688
         },
-        "49:10": {
+        "47:10": {
           "id:3": 758,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 210,
           "y:3": 688
         },
-        "50:10": {
+        "48:10": {
           "id:3": 759,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 732,
           "y:3": 420
         },
-        "51:10": {
+        "49:10": {
           "id:3": 760,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 660,
           "y:3": 688
         },
-        "52:10": {
+        "50:10": {
           "id:3": 761,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 660,
           "y:3": 552
         },
-        "53:10": {
+        "51:10": {
           "id:3": 762,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 654,
           "y:3": 498
         },
-        "54:10": {
+        "52:10": {
           "id:3": 763,
           "sizeX:3": 18,
           "sizeY:3": 18,
           "x:3": 637,
           "y:3": 459
         },
-        "55:10": {
+        "53:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 444
         },
-        "56:10": {
+        "54:10": {
           "id:3": 952,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 258,
           "y:3": 730
+        },
+        "55:10": {
+          "id:3": 1072,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 540,
+          "y:3": 558
+        },
+        "56:10": {
+          "id:3": 1073,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 588,
+          "y:3": 558
         }
       }
     },
@@ -71845,14 +73502,14 @@
           "id:3": 0,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -162,
           "y:3": 348
         },
         "1:10": {
           "id:3": 1,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -162,
           "y:3": 444
         },
         "2:10": {
@@ -71866,35 +73523,35 @@
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
+          "x:3": -114,
           "y:3": 480
         },
         "4:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -162,
           "y:3": 480
         },
         "5:10": {
           "id:3": 64,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": -26,
-          "y:3": 272
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 108,
+          "y:3": 390
         },
         "6:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -180,
+          "x:3": -198,
           "y:3": 396
         },
         "7:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 6,
+          "x:3": 48,
           "y:3": 552
         },
         "8:10": {
@@ -71908,7 +73565,7 @@
           "id:3": 101,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -150,
+          "x:3": -174,
           "y:3": 528
         },
         "10:10": {
@@ -71943,7 +73600,7 @@
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
+          "x:3": -114,
           "y:3": 594
         },
         "15:10": {
@@ -71985,22 +73642,22 @@
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 90,
-          "y:3": 276
+          "x:3": 174,
+          "y:3": 396
         },
         "21:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 90,
-          "y:3": 216
+          "x:3": 216,
+          "y:3": 396
         },
         "22:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 34,
-          "y:3": 216
+          "x:3": 216,
+          "y:3": 444
         },
         "23:10": {
           "id:3": 122,
@@ -72027,15 +73684,15 @@
           "id:3": 140,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 6,
+          "x:3": 48,
           "y:3": 516
         },
         "27:10": {
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
-          "y:3": 276
+          "x:3": -114,
+          "y:3": 348
         },
         "28:10": {
           "id:3": 237,
@@ -72055,7 +73712,7 @@
           "id:3": 282,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -90,
+          "x:3": -126,
           "y:3": 384
         },
         "31:10": {
@@ -72063,21 +73720,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
-          "y:3": 690
+          "y:3": 696
         },
         "32:10": {
           "id:3": 406,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 6,
-          "y:3": 690
+          "y:3": 696
         },
         "33:10": {
           "id:3": 408,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 6,
-          "y:3": 642
+          "y:3": 660
         },
         "34:10": {
           "id:3": 494,
@@ -72098,13 +73755,13 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": 642
+          "y:3": 660
         },
         "37:10": {
           "id:3": 784,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
+          "x:3": -162,
           "y:3": 396
         },
         "38:10": {
@@ -72126,14 +73783,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 90,
-          "y:3": 642
+          "y:3": 660
         },
         "41:10": {
           "id:3": 1000,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
-          "y:3": 642
+          "x:3": -114,
+          "y:3": 660
         },
         "42:10": {
           "id:3": 1001,
@@ -72146,35 +73803,35 @@
           "id:3": 1016,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -78,
-          "y:3": 216
+          "x:3": -114,
+          "y:3": 312
         },
         "44:10": {
           "id:3": 1017,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -22,
-          "y:3": 216
+          "x:3": -114,
+          "y:3": 276
         },
         "45:10": {
           "id:3": 1018,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -36,
-          "y:3": 444
+          "x:3": -66,
+          "y:3": 348
         },
         "46:10": {
           "id:3": 1020,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
-          "y:3": 642
+          "y:3": 660
         },
         "47:10": {
           "id:3": 1022,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
+          "x:3": 6,
           "y:3": 516
         },
         "48:10": {
@@ -72182,21 +73839,154 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": 690
+          "y:3": 696
         },
         "49:10": {
           "id:3": 1032,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": 594
+          "y:3": 588
         },
         "50:10": {
           "id:3": 1052,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
+          "x:3": 6,
           "y:3": 552
+        },
+        "51:10": {
+          "id:3": 1053,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 6,
+          "y:3": 414
+        },
+        "52:10": {
+          "id:3": 1054,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 480
+        },
+        "53:10": {
+          "id:3": 1055,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 516
+        },
+        "54:10": {
+          "id:3": 1056,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 552
+        },
+        "55:10": {
+          "id:3": 1057,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 588
+        },
+        "56:10": {
+          "id:3": 1058,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 174,
+          "y:3": 588
+        },
+        "57:10": {
+          "id:3": 1059,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 174,
+          "y:3": 624
+        },
+        "58:10": {
+          "id:3": 1060,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 174,
+          "y:3": 660
+        },
+        "59:10": {
+          "id:3": 1061,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 174,
+          "y:3": 696
+        },
+        "60:10": {
+          "id:3": 1062,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -66,
+          "y:3": 414
+        },
+        "61:10": {
+          "id:3": 1063,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 90,
+          "y:3": 588
+        },
+        "62:10": {
+          "id:3": 1064,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 414
+        },
+        "63:10": {
+          "id:3": 1065,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 516
+        },
+        "64:10": {
+          "id:3": 1066,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 552
+        },
+        "65:10": {
+          "id:3": 1067,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 444
+        },
+        "66:10": {
+          "id:3": 1068,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": 480
+        },
+        "67:10": {
+          "id:3": 1069,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 258,
+          "y:3": 444
+        },
+        "68:10": {
+          "id:3": 1070,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 258,
+          "y:3": 480
+        },
+        "69:10": {
+          "id:3": 1071,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 114,
+          "y:3": 348
         }
       }
     },

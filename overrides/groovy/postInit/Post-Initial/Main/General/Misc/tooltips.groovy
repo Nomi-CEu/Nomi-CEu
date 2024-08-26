@@ -238,6 +238,42 @@ for (ItemStack knife : [item('appliedenergistics2:nether_quartz_cutting_knife'),
 	addTooltip(knife, translatable('nomiceu.tooltip.ae2.quartz_knife'))
 }
 
+// Buses Warning
+List<ItemStack> buses = [
+	item('appliedenergistics2:part', 240), // ME Import Buses
+	item('appliedenergistics2:part', 241), // ME Fluid Import Buses
+	item('appliedenergistics2:part', 260), // ME Export Buses
+	item('appliedenergistics2:part', 261), // ME Fluid Export Buses
+]
+for (var bus : buses) {
+	addTooltip(bus, [translatable("nomiceu.tooltip.ae2.buses.warning")])
+}
+
+// Storage Exposer Warning
+addTooltip(item('nae2:exposer'), [translatableEmpty(), translatable("nomiceu.tooltip.ae2.storage_exposer.warning")])
+
+// Matter Cannon
+addTooltip(item('appliedenergistics2:matter_cannon'), [
+	translatableEmpty(),
+	translatable("nomiceu.tooltip.ae2.matter_cannon.1"),
+	translatable("nomiceu.tooltip.ae2.matter_cannon.2"),
+	translatable("nomiceu.tooltip.ae2.storage_cell_like")
+])
+
+// Color Applicator
+addTooltip(item('appliedenergistics2:color_applicator'), [
+	translatableEmpty(),
+	translatable("nomiceu.tooltip.ae2.color_applicator.1"),
+	translatable("nomiceu.tooltip.ae2.storage_cell_like")
+])
+
+// Tiny TNT
+addTooltip(item('appliedenergistics2:tiny_tnt'), [
+	translatable("nomiceu.tooltip.ae2.tiny_tnt.1"),
+	translatable("nomiceu.tooltip.ae2.tiny_tnt.2"),
+	translatable("nomiceu.tooltip.ae2.tiny_tnt.3"),
+])
+
 /* Dimensional Edibles */
 
 // Island Cake
@@ -299,6 +335,18 @@ addTooltip(item('enderio:block_fused_glass'), translatable('nomiceu.tooltip.eio.
 
 for (ItemStack stack in Common.eioGlasses) {
 	addTooltip(stack, translatable('nomiceu.tooltip.eio.glass.dye'))
+}
+
+// Facades
+List<ItemStack> facades = [
+	item('enderio:item_conduit_facade'),
+	item('enderio:item_conduit_facade', 1),
+	item('enderio:item_conduit_facade', 2),
+	item('enderio:item_conduit_facade', 3),
+]
+
+for (ItemStack facade : facades) {
+	addTooltip(facade, [translatableEmpty(), translatable("nomiceu.tooltip.eio.facade")])
 }
 
 /* Project Red */
