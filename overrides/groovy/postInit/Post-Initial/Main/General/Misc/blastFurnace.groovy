@@ -12,7 +12,8 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.lumium')])
 		builder.builder { RecipeBuilder recipe ->
 			recipe.inputs(item('extendedcrafting:material', 7) * 2, ore('clathrateGlowstone')) // Luminessence
 				.fluidInputs(fluid('mana') * 1000)
-		}.changeCircuitMeta { meta -> meta + 2 }
+		}.changeDuration { duration -> (int) (duration / 6 * 4) } // Old recipe made 6, new recipe makes 4
+		.changeCircuitMeta { meta -> meta + 2 }
 		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
@@ -24,7 +25,8 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.signalum')
 		builder.builder { RecipeBuilder recipe ->
 			recipe.inputs(ore('clathrateRedstone'))
 				.fluidInputs(fluid('mana') * 1000)
-		}.changeCircuitMeta { meta -> meta + 1 }
+		}.changeDuration { duration -> (int) (duration / 8 * 4) } // Old recipe made 8, new recipe makes 4
+		.changeCircuitMeta { meta -> meta + 1 }
 		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
@@ -36,7 +38,8 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.enderium')
 		builder.builder { RecipeBuilder recipe ->
 			recipe.inputs(ore('clathrateEnder'))
 				.fluidInputs(fluid('mana') * 1000)
-		}.changeCircuitMeta { meta -> meta + 1 }
+		}.changeDuration { duration -> (int) (duration / 8 * 4) } // Old recipe made 8, new recipe makes 4
+		.changeCircuitMeta { meta -> meta + 1 }
 		.changeEachFluidOutput { fluid -> fluid * (L * 4) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
@@ -47,14 +50,15 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('electrum_flux')])
 	.forEach { ChangeRecipeBuilder builder ->
 		builder.builder {RecipeBuilder recipe ->
 			recipe.inputs(ore('dustMana'))
-		}.changeCircuitMeta { meta -> meta + 1 }
+		}.changeDuration { duration -> (int) (duration / 8 * 9) } // Old recipe made 8, new recipe makes 9
+		.changeCircuitMeta { meta -> meta + 1 }
 		.changeEachFluidOutput { fluid -> fluid * (L * 9) }
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
 
 if (LabsModeHelper.normal) {
-	// Red Alloy (Increases Output)
+	// Red Alloy (Increases Output & Changes Copper/Redstone Ratio)
 	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
 		.forEach { ChangeRecipeBuilder builder ->
 			builder.clearCircuitMeta()
@@ -66,7 +70,6 @@ if (LabsModeHelper.normal) {
 				}.replaceAndRegister()
 		}
 
-	// Red Alloy has DISABLE DECOMPOSITION flag, so we need to replace it ourselves
 	mods.gregtech.centrifuge.changeByInput([metaitem('dustRedAlloy')], null)
 		.changeEachInput { GTRecipeInput input ->
 			return input.copyWithAmount(2)
