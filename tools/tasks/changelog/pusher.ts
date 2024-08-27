@@ -374,6 +374,7 @@ async function transformAllIssueURLs(changelog: string[]) {
  */
 async function transformTags(message: string): Promise<string> {
 	const promises: Promise<string>[] = [];
+	const transformed: Set<number> = new Set<number>();
 	if (message.search(/#\d+/) !== -1) {
 		const matched = message.match(/#\d+/g) ?? [];
 		for (const match of matched) {
@@ -382,10 +383,14 @@ async function transformTags(message: string): Promise<string> {
 			if (!digitsMatch) continue;
 			const digits = Number.parseInt(digitsMatch[0]);
 
+			if (transformed.has(digits)) continue;
+			transformed.add(digits);
+
 			// Get PR/Issue Info (PRs are listed in the Issue API Endpoint)
 			promises.push(
-				getIssueURL(digits).then((url) =>
-					message.replace(match, `[#${digits}](${url})`),
+				getIssueURL(digits).then(
+					(url) =>
+						(message = message.replaceAll(match, `[#${digits}](${url})`)),
 				),
 			);
 		}
