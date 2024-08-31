@@ -11,59 +11,14 @@
 			<oreDict>OREDICT_NAME SIZE</oreDict>
 		</output>
 	</Recipe>
-	
+
 	Can have Multiple In/Outputs
 	Some Machines can only Accept either Fluids or Items
-	
+
 	timeRequired="NUMBER"	how long a Recipe takes, Unit is in Ticks.
 	power="NUMBER" how much Power the Recipes takes per Tick. Unit is in RF.
-	
+
 	The "useDefault" attribute will prevent loading of recipes if set to "false"
 <!-->
-<Recipes useDefault="true">
-	<Recipe timeRequired="9000" power ="20">
-		<input>
-			<itemStack>thermalfoundation:material 7 132</itemStack>
-			<itemStack>libvulpes:productingot 3 7</itemStack>
-		</input>
-		<output>
-			<itemStack>advancedrocketry:productingot 3</itemStack>
-		</output>
-	</Recipe>
-	<Recipe timeRequired="6000" power ="1">
-		<input>
-			<itemStack>minecraft:coal 1 1</itemStack>
-			<itemStack>minecraft:iron_ingot</itemStack>
-		</input>
-		<output>
-			<itemStack>thermalfoundation:material 1 160</itemStack>
-			<itemStack>nuclearcraft:alloy 1 5</itemStack>
-			<itemStack>libvulpes:productingot 1 6</itemStack>
-		</output>
-	</Recipe>
-	<Recipe timeRequired="12000" power ="1">
-		<input>
-			<itemStack>minecraft:sand</itemStack>
-		</input>
-		<output>
-			<itemStack>libvulpes:productingot 1 3</itemStack>
-		</output>
-	</Recipe>
-	<Recipe timeRequired="3000" power ="20">
-		<input>
-			<itemStack>thermalfoundation:material 1 135</itemStack>
-			<itemStack>libvulpes:productingot 1 7</itemStack>
-		</input>
-		<output>
-			<itemStack>advancedrocketry:productingot 2 1</itemStack>
-		</output>
-	</Recipe>
-	<Recipe timeRequired="100" power ="10">
-		<input>
-			<oreDict>oreRutile</oreDict>
-		</input>
-		<output>
-			<itemStack>libvulpes:productingot 1 7</itemStack>
-		</output>
-	</Recipe>
+<Recipes useDefault="false">
 </Recipes>

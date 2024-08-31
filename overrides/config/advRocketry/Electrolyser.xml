@@ -11,23 +11,14 @@
 			<oreDict>OREDICT_NAME SIZE</oreDict>
 		</output>
 	</Recipe>
-	
+
 	Can have Multiple In/Outputs
 	Some Machines can only Accept either Fluids or Items
-	
+
 	timeRequired="NUMBER"	how long a Recipe takes, Unit is in Ticks.
 	power="NUMBER" how much Power the Recipes takes per Tick. Unit is in RF.
-	
+
 	The "useDefault" attribute will prevent loading of recipes if set to "false"
 <!-->
-<Recipes useDefault="true">
-	<Recipe timeRequired="100" power ="20">
-		<input>
-			<fluidStack>water 10</fluidStack>
-		</input>
-		<output>
-			<fluidStack>hydrogen 100</fluidStack>
-			<fluidStack>oxygen 100</fluidStack>
-		</output>
-	</Recipe>
+<Recipes useDefault="false">
 </Recipes>
