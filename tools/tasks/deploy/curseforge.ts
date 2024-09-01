@@ -29,7 +29,7 @@ const variablesToCheck = [
 ];
 
 async function upload(files: { name: string; displayName: string }[]) {
-	files.forEach((file) => {
+	const filePaths = files.map((file) => {
 		const path = upath.join(
 			buildConfig.buildDestinationDirectory,
 			"cf",
@@ -38,6 +38,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 		if (!fs.existsSync(path)) {
 			throw new Error(`File ${path} doesn't exist!`);
 		}
+		return { path: path, file: file };
 	});
 
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
@@ -91,8 +92,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 		];
 
 	// Upload artifacts.
-	for (const file of files) {
-		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
+	for (const filePath of filePaths) {
 		const options: AxiosRequestConfig<unknown> = {
 			url:
 				CURSEFORGE_LEGACY_ENDPOINT +
@@ -109,15 +109,15 @@ async function upload(files: { name: string; displayName: string }[]) {
 					releaseType: releaseType ? releaseType.cfReleaseType : "release",
 					parentFileID: parentID ? parentID : undefined,
 					gameVersions: parentID ? undefined : [version.id],
-					displayName: file.displayName,
+					displayName: filePath.file.displayName,
 				}),
-				file: fs.createReadStream(path),
+				file: fs.createReadStream(filePath.path),
 			},
 			responseType: "json",
 		};
 
 		logInfo(
-			`Uploading ${file.name} to CurseForge...` +
+			`Uploading ${filePath.file.name} to CurseForge...` +
 				(parentID ? `(child of ${parentID})` : ""),
 		);
 
@@ -125,15 +125,17 @@ async function upload(files: { name: string; displayName: string }[]) {
 
 		if (response && response.id) {
 			uploadedIDs.push({
-				filePath: path,
-				displayName: file.displayName,
+				filePath: filePath.path,
+				displayName: filePath.file.displayName,
 				id: response.id,
 			});
 			if (!parentID) {
 				parentID = response.id;
 			}
 		} else {
-			throw new Error(`Failed to upload ${file.name}: Invalid Response.`);
+			throw new Error(
+				`Failed to upload ${filePath.file.name}: Invalid Response.`,
+			);
 		}
 	}
 	if (isEnvVariableSet("GITHUB_STEP_SUMMARY"))
