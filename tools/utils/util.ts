@@ -642,13 +642,26 @@ const issueURLCache: Map<number, string> = new Map<number, string>();
 export async function getIssueURLs(): Promise<void> {
 	if (issueURLCache.size > 0) return;
 	try {
-		const issues = await octokit.paginate(octokit.issues.listForRepo, {
-			owner: repoOwner,
-			repo: repoName,
-			per_page: 100,
-			state: "closed",
-			sort: "updated",
-		});
+		let page = 1;
+		const issues = await octokit.paginate(
+			octokit.issues.listForRepo,
+			{
+				owner: repoOwner,
+				repo: repoName,
+				per_page: 100,
+				state: "closed",
+				sort: "updated",
+			},
+			(response, done) => {
+				if (page++ >= buildConfig.changelogCacheMaxPages) {
+					logInfo(
+						`Fetched ${buildConfig.changelogCacheMaxPages} Pages of 100 Issues! Final Issue Fetched: #${response.data.at(-1)?.number ?? 0}`,
+					);
+					done();
+				}
+				return response.data;
+			},
+		);
 		issues.forEach((issue) => {
 			if (!issueURLCache.has(issue.number))
 				issueURLCache.set(issue.number, issue.html_url);
@@ -703,11 +716,24 @@ const commitAuthorCache: Map<string, string> = new Map<string, string>();
 export async function getCommitAuthors(): Promise<void> {
 	if (commitAuthorCache.size > 0) return;
 	try {
-		const commits = await octokit.paginate(octokit.repos.listCommits, {
-			owner: repoOwner,
-			repo: repoName,
-			per_page: 100,
-		});
+		let page = 1;
+		const commits = await octokit.paginate(
+			octokit.repos.listCommits,
+			{
+				owner: repoOwner,
+				repo: repoName,
+				per_page: 100,
+			},
+			(response, done) => {
+				if (page++ >= buildConfig.changelogCacheMaxPages) {
+					logInfo(
+						`Fetched ${buildConfig.changelogCacheMaxPages} Pages of 100 Commits! Final Commit Fetched: ${response.data.at(-1)?.sha ?? ""}`,
+					);
+					done();
+				}
+				return response.data;
+			},
+		);
 		commits.forEach((commit) => {
 			if (!commitAuthorCache.has(commit.sha))
 				commitAuthorCache.set(commit.sha, commit.author?.login ?? "");

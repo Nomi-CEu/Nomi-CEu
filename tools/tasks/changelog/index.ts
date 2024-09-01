@@ -52,7 +52,7 @@ async function createChangelog(): Promise<ChangelogData> {
 		}
 		return data;
 	}
-	logInfo("No Iterations Detected.");
+	logInfo("Default Iteration Detected.");
 
 	categoriesSetup();
 	specialParserSetup(data);

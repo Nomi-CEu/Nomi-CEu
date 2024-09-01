@@ -14,20 +14,26 @@ import sanitize from "sanitize-filename";
 
 async function zipFolder(
 	path: string,
-	zipName: string = upath.basename(path) + ".zip",
+	globs: string[],
+	dest: string,
+	zipName: string,
 ): Promise<void> {
 	return new Promise((resolve) => {
-		src(upath.join(path, "**"), { base: path, dot: true, encoding: false })
+		src(globs, { cwd: path, dot: true, encoding: false })
 			.pipe(zip(zipName))
-			.pipe(gulp.dest(buildConfig.buildDestinationDirectory))
+			.pipe(gulp.dest(dest))
 			.on("end", resolve);
 	});
 }
 
-function makeZipper(src: string, artifactName: string) {
+function makeZipper(src: string, artifactName: string, isCFZip = false) {
 	const zipFn = () => {
 		return zipFolder(
-			upath.join(src),
+			src,
+			isCFZip ? buildConfig.cfZipGlobs : buildConfig.normalZipGlobs,
+			isCFZip
+				? upath.join(buildConfig.buildDestinationDirectory, "cf")
+				: buildConfig.buildDestinationDirectory,
 			sanitize(
 				(
 					makeArtifactNameBody(modpackManifest.name) + `-${artifactName}.zip`
@@ -37,7 +43,7 @@ function makeZipper(src: string, artifactName: string) {
 	};
 
 	Object.defineProperty(zipFn, "name", {
-		value: `zip${artifactName}`,
+		value: `zip${artifactName}${isCFZip ? "CF" : ""}`,
 		configurable: true,
 	});
 
@@ -48,5 +54,13 @@ export const zipServer = makeZipper(serverDestDirectory, "Server");
 export const zipClient = makeZipper(clientDestDirectory, "Client");
 export const zipLang = makeZipper(langDestDirectory, "Lang");
 export const zipMMC = makeZipper(mmcDestDirectory, "MMC");
+export const zipServerCF = makeZipper(serverDestDirectory, "Server", true);
+export const zipClientCF = makeZipper(clientDestDirectory, "Client", true);
 
-export const zipAll = gulp.parallel(zipServer, zipClient, zipLang);
+export const zipAll = gulp.parallel(
+	zipServer,
+	zipClient,
+	zipLang,
+	zipServerCF,
+	zipClientCF,
+);

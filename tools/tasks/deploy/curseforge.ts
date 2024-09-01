@@ -30,7 +30,11 @@ const variablesToCheck = [
 
 async function upload(files: { name: string; displayName: string }[]) {
 	files.forEach((file) => {
-		const path = upath.join(buildConfig.buildDestinationDirectory, file.name);
+		const path = upath.join(
+			buildConfig.buildDestinationDirectory,
+			"cf",
+			file.name,
+		);
 		if (!fs.existsSync(path)) {
 			throw new Error(`File ${path} doesn't exist!`);
 		}
@@ -120,7 +124,11 @@ async function upload(files: { name: string; displayName: string }[]) {
 		const response: { id: number } = (await getAxios()(options)).data;
 
 		if (response && response.id) {
-			uploadedIDs.push({ filePath: path, displayName: file.displayName, id: response.id });
+			uploadedIDs.push({
+				filePath: path,
+				displayName: file.displayName,
+				id: response.id,
+			});
 			if (!parentID) {
 				parentID = response.id;
 			}

@@ -61,6 +61,19 @@ async function copyOverrides() {
 }
 
 /**
+ * Copies Modpack Pack Mode Switcher Scripts.
+ */
+async function copyPackModeSwitchers() {
+	return new Promise((resolve) => {
+		src(buildConfig.packModeSwitcherGlobs, {
+			cwd: upath.join(rootDirectory),
+		})
+			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
+			.on("end", resolve);
+	});
+}
+
+/**
  * Fetch external dependencies and remove the field from the manifest file.
  */
 async function fetchExternalDependencies() {
@@ -176,6 +189,7 @@ export default gulp.series(
 	sharedCleanUp,
 	createSharedDirs,
 	copyOverrides,
+	copyPackModeSwitchers,
 	fetchOrMakeChangelog,
 	fetchExternalDependencies,
 	updateFilesBuildSetup,
