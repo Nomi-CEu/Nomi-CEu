@@ -52,6 +52,8 @@ export const zipClient = zip.zipClient;
 export const zipServer = zip.zipServer;
 export const zipLang = zip.zipLang;
 export const zipMMC = zip.zipMMC;
+export const zipClientCF = zip.zipClientCF;
+export const zipServerCF = zip.zipServerCF;
 export const zipAll = zip.zipAll;
 
 export default gulp.series(buildAll, zipAll);

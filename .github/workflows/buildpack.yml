@@ -37,7 +37,7 @@ on:
         description: Whether to uploaed each zip (Client, Server, Lang) and the changelogs seperately. If not set, will just upload all six files into one artifact (Built Pack).
         required: true
         type: boolean
-      
+
   workflow_call:
     inputs:
       tag:
@@ -150,7 +150,7 @@ jobs:
         with:
           name: Built Pack
           path: |
-            ./build/*.zip
+            ./build/**/*.zip
             ./build/*.md
           if-no-files-found: error
           compression-level: 0
@@ -257,7 +257,7 @@ jobs:
           CHANGELOG_URL: ${{ inputs.changelog_url }}
           CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
           COMPARE_TAG: ${{ inputs.compare_tag }}
-          
+
       - name: Upload Client Zip
         uses: actions/upload-artifact@v4
         with:
