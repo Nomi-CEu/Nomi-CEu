@@ -11,41 +11,14 @@
 			<oreDict>OREDICT_NAME SIZE</oreDict>
 		</output>
 	</Recipe>
-	
+
 	Can have Multiple In/Outputs
 	Some Machines can only Accept either Fluids or Items
-	
+
 	timeRequired="NUMBER"	how long a Recipe takes, Unit is in Ticks.
 	power="NUMBER" how much Power the Recipes takes per Tick. Unit is in RF.
-	
+
 	The "useDefault" attribute will prevent loading of recipes if set to "false"
 <!-->
-<Recipes useDefault="true">
-	<Recipe timeRequired="40" power ="20">
-		<input>
-			<itemStack>advancedrocketry:carbonscrubbercartridge 1 1</itemStack>
-		</input>
-		<output>
-			<itemStack>advancedrocketry:carbonscrubbercartridge</itemStack>
-			<itemStack>minecraft:coal 1 1</itemStack>
-		</output>
-	</Recipe>
-	<Recipe timeRequired="100" power ="10">
-		<input>
-			<fluidStack>oxygen 10</fluidStack>
-			<fluidStack>hydrogen 10</fluidStack>
-		</input>
-		<output>
-			<fluidStack>rocketfuel 20</fluidStack>
-		</output>
-	</Recipe>
-	<Recipe timeRequired="100" power ="1">
-		<input>
-			<itemStack>minecraft:bone</itemStack>
-			<fluidStack>nitrogen 10</fluidStack>
-		</input>
-		<output>
-			<itemStack>minecraft:dye 8 15</itemStack>
-		</output>
-	</Recipe>
+<Recipes useDefault="false">
 </Recipes>
