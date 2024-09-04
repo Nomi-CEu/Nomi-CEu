@@ -110,7 +110,7 @@ addTooltip(item('appliedenergistics2:material', 30), translatable('nomiceu.toolt
 addTooltip(item('appliedenergistics2:material', 60), translatable('nomiceu.tooltip.ae2.magnet_card'))
 
 // Inverter Card
-addTooltip(item('appliedenergistics2:material', 30), translatable('nomiceu.tooltip.ae2.inverter_card'))
+addTooltip(item('appliedenergistics2:material', 31), translatable('nomiceu.tooltip.ae2.inverter_card'))
 
 // Fuzzy Card
 addTooltip(item('appliedenergistics2:material', 29), translatable('nomiceu.tooltip.ae2.fuzzy_card'))
@@ -119,10 +119,7 @@ addTooltip(item('appliedenergistics2:material', 29), translatable('nomiceu.toolt
 addTooltip(item('appliedenergistics2:material', 27), translatable('nomiceu.tooltip.ae2.capacity_card'))
 
 // Redstone Card
-addTooltip(item('appliedenergistics2:material', 26), translatable('nomiceu.tooltip.ae2.acceleration_card'))
-
-// Inverter Card
-addTooltip(item('appliedenergistics2:material', 31), translatable("nomiceu.tooltip.ae2.inverter_card"))
+addTooltip(item('appliedenergistics2:material', 26), translatable('nomiceu.tooltip.ae2.redstone_card'))
 
 // Sticky Card
 addTooltip(item('appliedenergistics2:material', 61), translatable('nomiceu.tooltip.ae2.sticky_card'))
