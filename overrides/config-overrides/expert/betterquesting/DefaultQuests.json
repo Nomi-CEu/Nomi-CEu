@@ -40252,7 +40252,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Universal Crystallizer§r can make §6Crystal Matrix Ingots§r at about a ninth of the §6Diamond§r cost, makes §6Wyvern§r and §6Awakened Cores§r and §6Awakened Draconium§r far faster than §3Fusion Crafting§r, and crafts §6Empowered Blocks§r without hassle.\n\nThis is the final machine you will make, and the most costly. You will need §d12 Hearts of a Universe§r and §d80 Chaos Shards§r, among others.\n\nIt requires a small amount of Enriched Naquadah to run, and an immense amount of power - but with §6Creative RF Source§r, it shouldn\u0027t be a problem.",
+          "desc:8": "The §3Universal Crystallizer§r can make §6Crystal Matrix Ingots§r at about a ninth of the §6Diamond§r cost, makes §6Wyvern§r and §6Awakened Cores§r and §6Awakened Draconium§r far faster than §3Fusion Crafting§r, and crafts §6Empowered Blocks§r without hassle.\n\nThis is the final machine you will make, and the most costly. You will need §d12 Hearts of a Universe§r and §d80 Chaos Shards§r, among others.\n\nThis Multiblock, unlike most others, accepts §aLaser Hatches§r as energy input, overclocking it to up to §d4096A of UV§r power.\n\nIt requires a small amount of Enriched Naquadah to run, and an immense amount of power - but with §6Creative RF Source§r, it shouldn\u0027t be a problem.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55290,7 +55290,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aLasers§r are §dGregTech§r\u0027s native solution to high-volume power transfer. Each power tier starting at §1IV§r has §aLaser Hatches§r capable of transferring §d256A§r, §d1,024A§r and §d4,096A§r of their voltage\u0027s power!\n\nEnergy in the Laser Network flows from §aLaser Sources§r through §6Laser Transmitting Cables§r to §aLaser Targets§r. All these must be in a straight line - lasers don\u0027t bend, after all. Similarly to other power-related blocks, the tier of the §aLaser Target§r must not be lower than the tier of the §aLaser Source§r.\n\nYou can choose to use these when moving power between §3Active Transformers§r and your §3Power Substation§r.",
+          "desc:8": "§aLasers§r are §dGregTech§r\u0027s native solution to high-volume power transfer. Each power tier starting at §1IV§r has §aLaser Hatches§r capable of transferring §d256A§r, §d1,024A§r and §d4,096A§r of their voltage\u0027s power!\n\nEnergy in the Laser Network flows from §aLaser Sources§r through §6Laser Transmitting Cables§r to §aLaser Targets§r. All these must be in a straight line - lasers don\u0027t bend, after all. Similarly to other power-related blocks, the tier of the §aLaser Target§r must not be lower than the tier of the §aLaser Source§r.\n\n§aLasers§r are also used to power some end-game multiblocks like the §6Universal Crystallizer§r, allowing them to receive up to §d4096A of UV§r power.\n\nYou can choose to use these when moving power between §3Active Transformers§r and your §3Power Substation§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
