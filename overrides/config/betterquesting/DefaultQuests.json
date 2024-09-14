@@ -20711,16 +20711,34 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "draconicevolution:fusion_crafting_core"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "OR",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 0,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 8,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "draconicevolution:crafting_injector"
             },
             "1:10": {
-              "Count:3": 1,
+              "Count:3": 8,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "draconicevolution:fusion_crafting_core"
+              "id:8": "packageddraconic:marked_basic_injector"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -63014,12 +63032,10 @@
     "1017:10": {
       "preRequisiteTypes:7": [
         0,
-        1,
         1
       ],
       "preRequisites:11": [
         1016,
-        1053,
         1069
       ],
       "properties:10": {
