@@ -89,6 +89,10 @@
       "expert": 95
     },
     {
+      "normal": 99,
+      "expert": 99
+    },
+    {
       "normal": 100,
       "expert": 100
     },
@@ -215,6 +219,10 @@
     {
       "normal": 279,
       "expert": 279
+    },
+    {
+      "normal": 287,
+      "expert": 287
     },
     {
       "normal": 295,
@@ -551,6 +559,10 @@
     {
       "normal": 1071,
       "expert": 1073
+    },
+    {
+      "normal": 1075,
+      "expert": 1077
     }
   ],
   "ignoreQuestsNormal": [
