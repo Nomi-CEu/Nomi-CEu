@@ -60846,11 +60846,62 @@
         }
       },
       "questID:3": 967,
-      "rewards:9": {},
-      "tasks:9": {
+      "rewards:9": {
         "0:10": {
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:interface"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:molecular_assembler"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 340,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:part"
+            },
+            "3:10": {
+              "Count:3": 8,
+              "Damage:2": 52,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:crafting_storage_4k"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
