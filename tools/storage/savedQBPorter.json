@@ -535,12 +535,18 @@
     {
       "normal": 1071,
       "expert": 1073
+    },
+    {
+      "normal": 1075,
+      "expert": 1077
     }
   ],
   "ignoreQuestsNormal": [
     959
   ],
   "ignoreQuestsExpert": [],
-  "alwaysAskQuestsNormal": [],
+  "alwaysAskQuestsNormal": [
+    6
+  ],
   "alwaysAskQuestsExpert": []
 }
