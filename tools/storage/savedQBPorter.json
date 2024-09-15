@@ -61,6 +61,10 @@
       "expert": 65
     },
     {
+      "normal": 72,
+      "expert": 72
+    },
+    {
       "normal": 78,
       "expert": 78
     },
@@ -157,8 +161,13 @@
       "expert": 167
     },
     {
+<<<<<<< HEAD
       "normal": 174,
       "expert": 174
+=======
+      "normal": 184,
+      "expert": 184
+>>>>>>> qb_sbr_silicone
     },
     {
       "normal": 190,
@@ -563,6 +572,13 @@
     {
       "normal": 1075,
       "expert": 1077
+<<<<<<< HEAD
+=======
+    },
+    {
+      "normal": 1076,
+      "expert": 1078
+>>>>>>> qb_sbr_silicone
     }
   ],
   "ignoreQuestsNormal": [
