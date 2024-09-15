@@ -49150,12 +49150,13 @@
     },
     "785:10": {
       "preRequisites:11": [
-        72
+        1075,
+        1076
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicone Rubber, as well as being a more efficient way to coat wires.",
+          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49171,8 +49172,8 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2New Cable Coverings",
-          "questlogic:8": "AND",
+          "name:8": "New Cable Coverings",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -49183,48 +49184,11 @@
         }
       },
       "questID:3": 785,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "silicone_rubber"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 1,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "styrene_butadiene_rubber"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -54365,6 +54329,10 @@
       }
     },
     "859:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
       "preRequisites:11": [
         198,
         858
@@ -67232,6 +67200,135 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1075:10": {
+      "preRequisites:11": [
+        72
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§eSilicone Rubber (SiB)§r is another high-tier §6Rubber§r use to coat higher tier §6Cables§r. To make §eSilicone Rubber§r, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r.\n\nYou might find it easier to make §3Styrene-Butadiene Rubber§r if you already have a robust petrochemistry infrastructure. However, §eSilicone Rubber§r is required for higher tier recipes.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1000,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_plate"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "§2Silicone Rubber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1075,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "silicone_rubber"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
+    },
+    "1076:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
+      "preRequisites:11": [
+        72,
+        184
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§eStyrene-Butadiene Rubber (SBR)§r is a type of §6Rubber§r can wrap any tier of §6Cables§r. It is made from §6Raw Styrene-Butadiene Rubber Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor.§r This produces more liquid than §9Silicone Rubber§r, as well as being a more efficient way to coat wires.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1004,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_plate"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "§2Styrene-Butadiene Rubber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1076,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "requiredFluids:9": {
+            "0:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "styrene_butadiene_rubber"
+            }
+          },
+          "taskID:8": "bq_standard:fluid"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -69162,8 +69259,8 @@
           "id:3": 341,
           "sizeX:3": 20,
           "sizeY:3": 20,
-          "x:3": -392,
-          "y:3": 296
+          "x:3": -390,
+          "y:3": 264
         },
         "84:10": {
           "id:3": 344,
@@ -69449,8 +69546,8 @@
           "id:3": 785,
           "sizeX:3": 20,
           "sizeY:3": 20,
-          "x:3": -392,
-          "y:3": 268
+          "x:3": -390,
+          "y:3": 306
         },
         "125:10": {
           "id:3": 798,
@@ -69582,7 +69679,7 @@
           "id:3": 859,
           "sizeX:3": 72,
           "sizeY:3": 72,
-          "x:3": -444,
+          "x:3": -496,
           "y:3": 328
         },
         "144:10": {
@@ -69647,6 +69744,20 @@
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 240
+        },
+        "153:10": {
+          "id:3": 1075,
+          "sizeX:3": 20,
+          "sizeY:3": 20,
+          "x:3": -390,
+          "y:3": 330
+        },
+        "154:10": {
+          "id:3": 1076,
+          "sizeX:3": 20,
+          "sizeY:3": 20,
+          "x:3": -414,
+          "y:3": 306
         }
       }
     },
