@@ -64243,7 +64243,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-GregTech machine adjacent to them. This is handy for §dDraconic Evolution Fusion§r, which is a slow process otherwise.\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 8A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
+          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-§bGregTech§r machine adjacent to them. This is extremely handly especially in endgame, allows for immense speedup of §6Draconic Evolution Fusion Crafting, NuclearCraft Fission Reactor, Solar Panels, Resonators§r and more!§r\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 6A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
