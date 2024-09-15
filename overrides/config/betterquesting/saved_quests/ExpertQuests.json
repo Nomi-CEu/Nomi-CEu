@@ -3086,7 +3086,6 @@
     },
     "49:10": {
       "preRequisites:11": [
-        146,
         174
       ],
       "properties:10": {
@@ -10099,7 +10098,7 @@
     },
     "174:10": {
       "preRequisites:11": [
-        93
+        146
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10149,7 +10148,10 @@
           },
           "taskID:8": "bq_standard:retrieval"
         }
-      }
+      },
+      "preRequisiteTypes:7": [
+        1
+      ]
     },
     "175:10": {
       "preRequisites:11": [
