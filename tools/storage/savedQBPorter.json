@@ -573,18 +573,23 @@
       "normal": 1075,
       "expert": 1077
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     },
     {
       "normal": 1076,
       "expert": 1078
 >>>>>>> qb_sbr_silicone
+=======
+>>>>>>> qb_void_satchel
     }
   ],
   "ignoreQuestsNormal": [
     959
   ],
   "ignoreQuestsExpert": [],
-  "alwaysAskQuestsNormal": [],
+  "alwaysAskQuestsNormal": [
+    6
+  ],
   "alwaysAskQuestsExpert": []
 }

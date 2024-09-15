@@ -10098,7 +10098,7 @@
     },
     "174:10": {
       "preRequisites:11": [
-        146
+        93
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -57113,6 +57113,7 @@
     },
     "1077:10": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "preRequisiteTypes:7": [
         0,
         2
@@ -57124,10 +57125,15 @@
       "preRequisites:11": [
         72
 >>>>>>> qb_sbr_silicone
+=======
+      "preRequisites:11": [
+        6
+>>>>>>> qb_void_satchel
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
           "desc:8": "The §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, §3Naquadah Reactor Mk1§r and §3Naquadah Reactor Mk2§r, the latter producces significantly more power while costing a large amounts of §dOmnium§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
           "globalshare:1": 0,
@@ -57145,25 +57151,47 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_plate"
 >>>>>>> qb_sbr_silicone
+=======
+          "desc:8": "the §6Void Satchel§r automatically voids any item going into its inventory. Useful for voiding excess §6Cobblestone§r or §6Netherrack§r when mining.\n\nCan be §bconfigured§r with sneak-right click and set to §aauto-pickup items§r according to its filter by activating it (default key: §bV§r).\n\n§cBe sure to configure the satchel correctly before turning on auto-pickup to avoid voiding valuables!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 100,
+            "OreDict:8": "",
+            "id:8": "thermalexpansion:satchel",
+            "tag:10": {
+              "Accessible:1": 1
+            }
+>>>>>>> qb_void_satchel
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
           "name:8": "Naquadah Reactors",
           "partysinglereward:1": 0,
 =======
           "name:8": "§2Silicone Rubber",
 >>>>>>> qb_sbr_silicone
+=======
+          "name:8": "Void Satchel",
+          "partysinglereward:1": 0,
+>>>>>>> qb_void_satchel
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
+<<<<<<< HEAD
           "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
+=======
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+>>>>>>> qb_void_satchel
         }
       },
       "questID:3": 1077,
@@ -57172,6 +57200,7 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
           "entryLogic:8": "AND",
           "groupDetect:1": 0,
@@ -57343,6 +57372,25 @@
           },
           "taskID:8": "bq_standard:fluid"
 >>>>>>> qb_sbr_silicone
+=======
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 100,
+              "OreDict:8": "",
+              "id:8": "thermalexpansion:satchel",
+              "tag:10": {
+                "Accessible:1": 1
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+>>>>>>> qb_void_satchel
         }
       }
     }
