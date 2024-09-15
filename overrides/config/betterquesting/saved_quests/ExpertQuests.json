@@ -57088,6 +57088,155 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1077:10": {
+      "preRequisiteTypes:7": [
+        0,
+        2
+      ],
+      "preRequisites:11": [
+        99,
+        287
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, §3Naquadah Reactor Mk1§r and §3Naquadah Reactor Mk2§r, the latter producces significantly more power while costing a large amounts of §dOmnium§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32104,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "Naquadah Reactors",
+          "partysinglereward:1": 0,
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1077,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32104,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "extendedcrafting:trimmed"
+            },
+            "2:10": {
+              "Count:3": 2,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_compressed_8"
+            },
+            "3:10": {
+              "Count:3": 12,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:spatial_pylon"
+            },
+            "4:10": {
+              "Count:3": 12,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:transparent_casing"
+            },
+            "5:10": {
+              "Count:3": 14,
+              "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gcym:large_multiblock_casing"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 1252,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32105,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 13,
+              "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gcym:large_multiblock_casing"
+            },
+            "2:10": {
+              "Count:3": 3,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_block_compressed_27"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "extendedcrafting:storage"
+            },
+            "4:10": {
+              "Count:3": 16,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:transparent_casing"
+            },
+            "5:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:spatial_pylon"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 1253,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
