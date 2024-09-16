@@ -50453,7 +50453,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly line, since it has a whole bunch of ULV inputs buses that hold one item stack each.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nIf you\u0027ve unlocked §3The Empowerer§r, you might have considered §aPhantomfaces§r. These would certainly be an improvement over item conduits, but there\u0027s an even better solution.\n\nEnter §aItem Laser Relays§r: these handy tools from §bActually Additions§r allow you to create a virtual inventory out of multiple real ones; that is, you can use them to make other automation think that all of the input buses are the same inventory.\n\n§eOne important thing to note is that lasers appear to be \"placed\" on a particular block but they will interact with all adjacent (non-laser) blocks.§r Take this into account when placing them.\n\nTo start, place a laser on each of the input buses. Then, place the §aItem Interface§r adjacent to the laser on the first input bus. This will serve as the access point to the virtual inventory where you can connect things like an §aME Interface§r.\n\nIf you don\u0027t have enough space in a normal pattern, try using the §6Extended Processing Pattern Terminal§r!\n\nTake your §aLaser Wrench§r and right click the first laser relay, then the second laser relay, to link them together. Repeat this with the second and third relays, third and fourth relays, etc. until they have all been linked together. Now you have a laser network virtualizing all of the input buses!\n\n§cWarning: be careful not to place a second laser on a laser network adjacent to the network\u0027s Item Interface. This will immediately crash your game because it creates a cycle in the network. You will have to either restore from backup or edit the level.dat directly to remove the block to play again.§r\n\nRemember to always use §eBlocking Mode§r when connecting the laser network to on-demand crafting. If you don\u0027t use Blocking Mode, you are likely to accidentally craft something else and jam your Assembly Line.",
+          "desc:8": "The §3Assembly Line§r is a particularly unusual multiblock from an automation standpoint. Up until now, it has been possible to dump ingredients into a single input bus. Clearly, this won\u0027t work for the Assembly Line, since you are required to insert items in the §ccorrect order§r.\n\nYou might be tempted to dump everything into a chest and route items around to specific buses with §aItem Conduits§r. You\u0027ll probably find this to be slow, prone to jamming, and inflexible when you want to run different recipes.\n\nThere are several better ways to automate ordered items. Described here is an §dAE2§r-based method:\n\n- Place the §3ME Interface§r containing the patterns facing an §3Item P2P§r.\n\n- Connect it to two output Item P2P: one on the first Input Bus, and the other into a §3GT Item Pipe§r network.\n\n- Connect the Item Pipes to all Input Buses, including the first one.\n\nSince ME Interfaces send items in order, this can flawlessly automate ordered inputs. If you don\u0027t have enough space in a normal pattern, try using the §6Extended Processing Pattern Terminal§r!\n\nFurthermore, by connecting an output Item P2P to the first Input Bus, this allows you to use §eBlocking Mode§r as well! This should always be used in Assembly Lines, as if you don\u0027t use Blocking Mode, you can accidentally craft something else and jam your Assembly Line.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50502,22 +50502,10 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 10,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:block_laser_relay_item"
-            },
-            "1:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 462,
               "OreDict:8": "",
-              "id:8": "actuallyadditions:block_item_viewer"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:item_laser_wrench"
+              "id:8": "appliedenergistics2:part"
             }
           },
           "taskID:8": "bq_standard:retrieval"
