@@ -55049,6 +55049,12 @@
               "Damage:2": 1410,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 3,
+              "OreDict:8": "",
+              "id:8": "gregtech:computer_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
