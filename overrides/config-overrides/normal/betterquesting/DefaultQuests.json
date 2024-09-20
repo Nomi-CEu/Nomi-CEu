@@ -67406,6 +67406,72 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1077:10": {
+      "preRequisites:11": [
+        1017
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "There are more uses to your newly-crafted §3Quantum Link Chamber§r, including being able to §amove your AE2 connection across dimensions.§r\n\nTo start, simply drop 1 §6Singularity§r and 1 §6Ender Dust§r and create an explosion nearby. This will create 2 §6Quantum Entangled Singularities§r.\n\nMake 2 §3Quantum Rings,§r 1 at your base and another at a remote location. Put 1 of each §6Entangled Singularity§r into the respective §3Quantum Rings§r and it will allow the other side to access the main network.\n\n§cMake sure to provide the other side with power in order for the connection to be formed!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 48,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:material"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Interdimensional Networking",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1077,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 48,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:material"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -74112,6 +74178,13 @@
           "sizeY:3": 24,
           "x:3": 114,
           "y:3": 348
+        },
+        "70:10": {
+          "id:3": 1077,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -164,
+          "y:3": 276
         }
       }
     },
