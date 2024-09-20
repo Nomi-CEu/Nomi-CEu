@@ -54361,6 +54361,10 @@
       }
     },
     "859:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
       "preRequisites:11": [
         198,
         858
@@ -67357,6 +67361,45 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1076:10": {
+      "preRequisites:11": [
+        859
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Gregically Multiblocks§r features a complex system for parallel processing of materials. It all starts with the §6Parallel Control Hatch§r, which is required for the machine to process multiple recipes at once. Higher-tier §6Parallel Hatches§r allow for more parallel processes. §eAdditionally, you can open its GUI to configure the number of parallels the multiblock is allowed to handle. However, this has limited functionality.§r\n\nParallel Mechanics work by essentially “downclocking” the recipe when it can, doubling its speed and quadrupling the number of parallels. §cThis means you cannot parallelize recipes of the same tier as your machine.§r For example, putting a §64x Parallel Hatch§r into an §3IV Multiblock§r running EV recipes allows it to process four recipes at once. However, it cannot parallelize IV recipes due to them being the same tier as the machine. Moreover, §cYou also need enough items and fluids in order to properly parallel.§r\n\n§eNote: This parallelization mechanic also affects recipes with chanced outputs.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2050,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Parallelization Machanics",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1076,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -69651,8 +69694,8 @@
           "id:3": 859,
           "sizeX:3": 72,
           "sizeY:3": 72,
-          "x:3": -444,
-          "y:3": 328
+          "x:3": -438,
+          "y:3": 330
         },
         "136:10": {
           "id:3": 888,
@@ -69716,6 +69759,13 @@
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 240
+        },
+        "145:10": {
+          "id:3": 1076,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -480,
+          "y:3": 306
         }
       }
     },
