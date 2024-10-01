@@ -1,6 +1,9 @@
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
+import gregtech.api.recipes.ingredients.GTRecipeItemInput
+import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition
+import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
@@ -318,7 +321,8 @@ quartzRecipes[0].forEach { builder ->
 
 // Purified AE2 Crystal Shortcut
 mods.gregtech.autoclave.recipeBuilder()
-	.notConsumable(item('appliedenergistics2:crystal_seed'))
+	.inputNBT(new GTRecipeItemInput(item('appliedenergistics2:crystal_seed')).setNonConsumable(),
+		NBTMatcher.ANY, NBTCondition.ANY)
 	.inputs(ore('dustCertusQuartz') * 64)
 	.fluidInputs(fluid('distilled_water') * 8000)
 	.outputs(item('appliedenergistics2:material', 10) * 64, item('appliedenergistics2:material', 10) * 64)
@@ -326,7 +330,8 @@ mods.gregtech.autoclave.recipeBuilder()
 	.buildAndRegister()
 
 mods.gregtech.autoclave.recipeBuilder()
-	.notConsumable(item('appliedenergistics2:crystal_seed', 1200))
+	.inputNBT(new GTRecipeItemInput(item('appliedenergistics2:crystal_seed', 1200)).setNonConsumable(),
+		NBTMatcher.ANY, NBTCondition.ANY)
 	.inputs(ore('dustFluix') * 64)
 	.fluidInputs(fluid('distilled_water') * 8000)
 	.outputs(item('appliedenergistics2:material', 12) * 64, item('appliedenergistics2:material', 12) * 64)
@@ -334,7 +339,8 @@ mods.gregtech.autoclave.recipeBuilder()
 	.buildAndRegister()
 
 mods.gregtech.autoclave.recipeBuilder()
-	.notConsumable(item('appliedenergistics2:crystal_seed', 600))
+	.inputNBT(new GTRecipeItemInput(item('appliedenergistics2:crystal_seed', 600)).setNonConsumable(),
+		NBTMatcher.ANY, NBTCondition.ANY)
 	.inputs(ore('dustNetherQuartz') * 64)
 	.fluidInputs(fluid('distilled_water') * 8000)
 	.outputs(item('appliedenergistics2:material', 11) * 64, item('appliedenergistics2:material', 11) * 64)
