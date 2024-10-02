@@ -1,6 +1,4 @@
 {
-  "_README": "https://gitlab.com/CDAGaming/CraftPresence/-/wikis/home",
-  "_SOURCE": "https://gitlab.com/CDAGaming/CraftPresence",
   "_schemaVersion": 6,
   "_lastMCVersionId": 340,
   "generalSettings": {
@@ -11,12 +9,11 @@
     "detectTechnicPack": false,
     "detectModrinthPack": false,
     "detectBiomeData": false,
-    "detectDimensionData": true,
+    "detectDimensionData": false,
     "detectWorldData": true,
     "clientId": "1222869945398853733",
     "defaultIcon": "nomi-ceu",
     "enableJoinRequests": false,
-    "partyPrivacyLevel": 1,
     "preferredClientLevel": 3,
     "resetTimeOnInit": false,
     "autoRegister": false
@@ -38,6 +35,9 @@
         "data": {
           "enabled": true,
           "useAsMain": false,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "",
           "gameState": "",
           "largeImageKey": "",
@@ -55,6 +55,9 @@
         "data": {
           "enabled": true,
           "useAsMain": false,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "",
           "gameState": "",
           "largeImageKey": "",
@@ -72,6 +75,9 @@
         "data": {
           "enabled": true,
           "useAsMain": false,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "",
           "gameState": "",
           "largeImageKey": "",
@@ -89,6 +95,9 @@
         "data": {
           "enabled": true,
           "useAsMain": false,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "",
           "gameState": "",
           "largeImageKey": "",
@@ -106,6 +115,9 @@
         "data": {
           "enabled": true,
           "useAsMain": false,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "",
           "gameState": "",
           "largeImageKey": "",
@@ -123,6 +135,9 @@
         "data": {
           "enabled": true,
           "useAsMain": false,
+          "isInstance": false,
+          "activityType": 0,
+          "partyPrivacy": 1,
           "details": "",
           "gameState": "",
           "largeImageKey": "",
@@ -151,7 +166,28 @@
   },
   "statusMessages": {
     "mainMenuData": {
-      "textOverride": "In the Main Menu"
+      "textOverride": "In the Main Menu",
+      "data": {
+        "enabled": true,
+        "useAsMain": false,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
+        "details": "",
+        "gameState": "",
+        "largeImageKey": "",
+        "largeImageText": "",
+        "smallImageKey": "",
+        "smallImageText": "",
+        "startTimestamp": "",
+        "endTimestamp": "",
+        "buttons": {
+          "default": {
+            "label": "Example Text",
+            "url": "https://google.com"
+          }
+        }
+      }
     },
     "loadingData": {
       "textOverride": "Loading...",
@@ -159,6 +195,9 @@
       "data": {
         "enabled": true,
         "useAsMain": false,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
         "details": "",
         "gameState": "",
         "largeImageKey": "loading",
@@ -176,15 +215,63 @@
       }
     },
     "lanData": {
-      "textOverride": "Playing on LAN ({custom.mode} Mode)"
+      "textOverride": "Playing on LAN ({custom.mode} Mode)",
+      "data": {
+        "enabled": true,
+        "useAsMain": false,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
+        "details": "",
+        "gameState": "Playing on LAN ({custom.mode} Mode)",
+        "largeImageKey": "",
+        "largeImageText": "",
+        "smallImageKey": "",
+        "smallImageText": "",
+        "startTimestamp": "",
+        "endTimestamp": "",
+        "buttons": {
+          "default": {
+            "label": "Example Text",
+            "url": "https://google.com"
+          }
+        }
+      }
     },
     "singleplayerData": {
       "textOverride": "Playing Singleplayer ({custom.mode} Mode)",
       "data": {
         "enabled": true,
         "useAsMain": false,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
         "details": "",
-        "gameState": "",
+        "gameState": "Playing Singleplayer ({custom.mode} Mode)",
+        "largeImageKey": "",
+        "largeImageText": "",
+        "smallImageKey": "",
+        "smallImageText": "",
+        "startTimestamp": "",
+        "endTimestamp": "",
+        "buttons": {
+          "default": {
+            "label": "Example Text",
+            "url": "https://google.com"
+          }
+        }
+      }
+    },
+    "realmData": {
+      "textOverride": "Playing on Realm ({custom.mode} Mode)",
+      "data": {
+        "enabled": true,
+        "useAsMain": false,
+        "isInstance": false,
+        "activityType": 0,
+        "partyPrivacy": 1,
+        "details": "",
+        "gameState": "Playing on Realm ({custom.mode} Mode)",
         "largeImageKey": "",
         "largeImageText": "",
         "smallImageKey": "",
@@ -237,65 +324,23 @@
     "serverIconEndpoint": "https://api.mcsrvstat.us/icon/{server.address.short}",
     "playerSkinEndpoint": "https://mc-heads.net/avatar/{getOrDefault(player.uuid.short, player.name)}",
     "allowDuplicatePackets": false,
-    "maxConnectionAttempts": 10
+    "maxConnectionAttempts": 10,
+    "enableClassGraph": false
   },
   "accessibilitySettings": {
-    "tooltipBackground": {
-      "start": {
-        "red": 16,
-        "green": 0,
-        "blue": 16,
-        "alpha": 240
-      }
-    },
-    "tooltipBorder": {
-      "start": {
-        "red": 80,
-        "green": 0,
-        "blue": 255,
-        "alpha": 80
-      },
-      "end": {
-        "red": 40,
-        "green": 0,
-        "blue": 127,
-        "alpha": 80
-      }
-    },
-    "guiBackground": {
-      "start": {
-        "red": 64,
-        "green": 64,
-        "blue": 64,
-        "alpha": 255
-      },
-      "texLocation": "minecraft:textures/gui/options_background.png"
-    },
-    "altGuiBackground": {
-      "start": {
-        "red": 16,
-        "green": 16,
-        "blue": 16,
-        "alpha": 192
-      },
-      "end": {
-        "red": 16,
-        "green": 16,
-        "blue": 16,
-        "alpha": 208
-      }
-    },
     "languageId": "en_us",
     "stripTranslationColors": false,
     "stripTranslationFormatting": false,
     "stripExtraGuiElements": false,
-    "renderTooltips": true,
     "configKeyCode": 0
   },
   "displaySettings": {
     "presenceData": {
       "enabled": true,
       "useAsMain": false,
+      "isInstance": false,
+      "activityType": 0,
+      "partyPrivacy": 1,
       "details": "{getFirst(menu.message)}",
       "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
       "largeImageKey": "{getFirst(menu.icon, general.icon)}",
@@ -323,21 +368,21 @@
       "default": "https://via.placeholder.com/256.png"
     },
     "dynamicVariables": {
-      "default": "Example Text",
+      "windowCreated": "{executeMethod('org.lwjgl.opengl.Display', null, 'isCreated')}",
       "mods": "{general.mods} Mod(s)",
-      "player_info_coordinate": "At {player.position.x}, {player.position.z}",
       "players": "{server.players.current} / {server.players.max} Players",
-      "player_info_in": "({custom.player_info.health})",
       "player_info_items": "Items: {item.main_hand.message}",
-      "player_info_out": "As {player.name}",
+      "windowTitle": "{custom.windowCreated ? executeMethod('org.lwjgl.opengl.Display', null, 'getTitle') : ''}",
       "player_info_health": "Health: {player.health.current}/{player.health.max}",
-      "world_info": "On {world.name}",
       "pack": "{pack.name}",
       "mode": "{executeMethod('com.nomiceu.nomilabs.util.LabsModeHelper', null, 'getFormattedMode')}",
       "tierSlug": "{executeMethod('com.nomiceu.nomilabs.integration.betterquesting.LabsTierHelper', null, 'getTierSlug')}",
+      "default": "Example Text",
+      "player_info_coordinate": "At {player.position.x}, {player.position.z}",
+      "player_info_in": "({custom.player_info.health})",
       "tierName": "{executeMethod('com.nomiceu.nomilabs.integration.betterquesting.LabsTierHelper', null, 'getTierName')}",
-      "windowCreated": "{executeMethod('org.lwjgl.opengl.Display', null, 'isCreated')}",
-      "windowTitle": "{custom.windowCreated ? executeMethod('org.lwjgl.opengl.Display', null, 'getTitle') : ''}"
+      "player_info_out": "As {player.name}",
+      "world_info": "On {world.name}"
     }
   }
 }
