@@ -695,8 +695,8 @@
     },
     "10:10": {
       "preRequisites:11": [
+        148,
         209,
-        245,
         539
       ],
       "properties:10": {
@@ -4048,7 +4048,7 @@
         2
       ],
       "preRequisites:11": [
-        246,
+        255,
         328,
         386
       ],
@@ -11690,8 +11690,7 @@
     },
     "202:10": {
       "preRequisites:11": [
-        208,
-        210
+        208
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -11819,13 +11818,11 @@
     "204:10": {
       "preRequisiteTypes:7": [
         2,
-        0,
         0
       ],
       "preRequisites:11": [
         116,
-        208,
-        210
+        208
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -12110,8 +12107,7 @@
     },
     "208:10": {
       "preRequisites:11": [
-        209,
-        210
+        209
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -14588,9 +14584,9 @@
     "251:10": {
       "preRequisites:11": [
         234,
-        315,
         386,
-        407
+        407,
+        583
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -14644,7 +14640,7 @@
     },
     "252:10": {
       "preRequisites:11": [
-        314
+        253
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -14752,7 +14748,7 @@
     },
     "254:10": {
       "preRequisites:11": [
-        316
+        750
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -31614,7 +31610,7 @@
             "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Signalum Ingots",
@@ -32776,7 +32772,6 @@
     "605:10": {
       "preRequisites:11": [
         564,
-        606,
         607
       ],
       "properties:10": {
