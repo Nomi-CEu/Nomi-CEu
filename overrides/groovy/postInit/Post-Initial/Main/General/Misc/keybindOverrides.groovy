@@ -2,6 +2,7 @@
 // ^, Makes the Script only Run Client-Side
 
 import net.minecraftforge.client.settings.KeyModifier
+import net.minecraftforge.fml.common.Loader
 import org.lwjgl.input.Keyboard
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.KeyBindingHelpers.*
@@ -16,7 +17,9 @@ addOverride('key.advancements', Keyboard.KEY_NONE)
 addOverride('key.loadToolbarActivator', Keyboard.KEY_NONE)
 addOverride('key.saveToolbarActivator', Keyboard.KEY_NONE)
 
-addOverride('key.craftpresence.config_keycode.name', Keyboard.KEY_NONE)
+// Some People Remove CraftPresence
+if (Loader.isModLoaded('craftpresence'))
+	addOverride('key.craftpresence.config_keycode.name', Keyboard.KEY_NONE)
 
 addOverride('Open Rocket GUI', KeyModifier.CONTROL, Keyboard.KEY_C)
 
