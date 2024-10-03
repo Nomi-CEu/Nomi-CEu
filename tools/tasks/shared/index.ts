@@ -115,16 +115,19 @@ async function fetchExternalDependencies() {
 async function fetchOrMakeChangelog() {
 	if (shouldSkipChangelog()) return;
 
-	if (!isEnvVariableSet("MADE_CHANGELOG")) return false;
+	if (isEnvVariableSet("MADE_CHANGELOG")) {
+		let made = false;
+		try {
+			made = JSON.parse((process.env.MADE_CHANGELOG ?? "false").toLowerCase());
+		} catch (err) {
+			throw new Error("Made Changelog Env Variable set to Invalid Value.");
+		}
 
-	let made = false;
-	try {
-		made = JSON.parse((process.env.MADE_CHANGELOG ?? "false").toLowerCase());
-	} catch (err) {
-		throw new Error("Made Changelog Env Variable set to Invalid Value.");
+		if (made) {
+			logInfo("Already Made Changelogs...");
+			return;
+		}
 	}
-
-	if (made) logInfo("Already Made Changelogs...");
 
 	if (
 		isEnvVariableSet("CHANGELOG_URL") &&
