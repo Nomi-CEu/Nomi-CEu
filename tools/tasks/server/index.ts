@@ -11,6 +11,7 @@ import {
 	downloadOrRetrieveFileDef,
 	getForgeJar,
 	getVersionManifest,
+	shouldSkipChangelog,
 } from "#utils/util.ts";
 import {
 	modDestDirectory,
@@ -182,7 +183,7 @@ async function copyServerMods() {
 /**
  * Copies modpack overrides.
  */
-function copyServerOverrides() {
+async function copyServerOverrides() {
 	return src(buildConfig.copyFromSharedServerGlobs, {
 		cwd: sharedDestDirectory,
 		allowEmpty: true,
@@ -194,7 +195,7 @@ function copyServerOverrides() {
 /**
  * Copies files from ./serverfiles into dest folder.
  */
-function copyServerFiles() {
+async function copyServerFiles() {
 	return src(["../serverfiles/**"], {
 		encoding: false, // Needed because of the Server Icon
 	}).pipe(dest(serverDestDirectory));
@@ -203,14 +204,14 @@ function copyServerFiles() {
 /**
  * Copies the license file.
  */
-function copyServerLicense() {
+async function copyServerLicense() {
 	return src("../LICENSE").pipe(dest(serverDestDirectory));
 }
 
 /**
  * Copies the update notes file.
  */
-function copyServerUpdateNotes() {
+async function copyServerUpdateNotes() {
 	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
 		dest(serverDestDirectory),
 	);
@@ -219,7 +220,9 @@ function copyServerUpdateNotes() {
 /**
  * Copies the changelog file.
  */
-function copyServerChangelog() {
+async function copyServerChangelog() {
+	if (shouldSkipChangelog()) return;
+
 	return src(
 		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 	).pipe(dest(serverDestDirectory));
@@ -230,7 +233,7 @@ function copyServerChangelog() {
  *
  * Replaces jvmArgs, minRAM, maxRAM and forgeJar.
  */
-function processLaunchscripts() {
+async function processLaunchscripts() {
 	const rules = {
 		jvmArgs: buildConfig.launchscriptsJVMArgs,
 		minRAM: buildConfig.launchscriptsMinRAM,

@@ -34,9 +34,14 @@ on:
         required: false
         type: string
       separate_upload:
-        description: Whether to uploaed each zip (Client, Server, Lang) and the changelogs seperately. If not set, will just upload all six files into one artifact (Built Pack).
+        description: Whether to upload each zip (Client, Server, Lang) and the changelogs seperately. If not set, will just upload all six files into one artifact (Built Pack).
         required: true
         type: boolean
+      skip_changelog:
+        description: Whether to skip changelog generation.
+        type: boolean
+        default: false
+        required: true
 
   workflow_call:
     inputs:
@@ -66,7 +71,7 @@ on:
         required: false
         type: string
       separate_upload:
-        description: Whether to uploaed each zip (Client, Server & Lang) and the changelogs seperately. If not set, will just upload all five files into one artifact (Built Pack).
+        description: Whether to upload each zip (Client, Server & Lang) and the changelogs seperately. If not set, will just upload all five files into one artifact (Built Pack).
         required: false
         default: false
         type: boolean
@@ -76,12 +81,18 @@ on:
       true_sha:
         type: string
         required: false
+      skip_changelog:
+        description: Whether to skip changelog generation.
+        type: boolean
+        default: false
+        required: false
 
 env:
   GITHUB_TAG: ${{ inputs.tag }}
   RELEASE_TYPE: ${{ inputs.release_type }}
   HEAD_REF: ${{ inputs.head_ref }}
   TRUE_SHA: ${{ inputs.true_sha }}
+  SKIP_CHANGELOG: ${{ inputs.skip_changelog }}
 
 jobs:
   buildSingle:
@@ -396,6 +407,7 @@ jobs:
           compression-level: 9
 
       - name: Upload Changelogs
+        if: ${{ !inputs.skip_changelog }}
         uses: actions/upload-artifact@v4
         with:
           name: Changelogs

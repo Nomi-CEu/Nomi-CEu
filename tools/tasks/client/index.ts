@@ -10,7 +10,7 @@ import buildConfig from "#buildConfig";
 import { deleteAsync } from "del";
 import { createModList, ModFileInfo } from "../misc/createModList.ts";
 import dedent from "dedent-js";
-import { cleanupVersion } from "#utils/util.ts";
+import { cleanupVersion, shouldSkipChangelog } from "#utils/util.ts";
 
 async function clientCleanUp() {
 	return deleteAsync(upath.join(clientDestDirectory, "*"), { force: true });
@@ -70,7 +70,7 @@ async function copyClientLicense() {
 /**
  * Copies the update notes file.
  */
-function copyClientUpdateNotes() {
+async function copyClientUpdateNotes() {
 	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
 		dest(clientDestDirectory),
 	);
@@ -79,7 +79,9 @@ function copyClientUpdateNotes() {
 /**
  * Copies the changelog file.
  */
-function copyClientChangelog() {
+async function copyClientChangelog() {
+	if (shouldSkipChangelog()) return;
+
 	return src(
 		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 	).pipe(dest(clientDestDirectory));
@@ -88,7 +90,7 @@ function copyClientChangelog() {
 /**
  * Copies modpack overrides.
  */
-function copyClientOverrides() {
+async function copyClientOverrides() {
 	return src(buildConfig.copyFromSharedClientGlobs, {
 		cwd: sharedDestDirectory,
 		allowEmpty: true,

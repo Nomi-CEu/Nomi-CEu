@@ -3,7 +3,7 @@
 # See https://securitylab.github.com/research/github-actions-preventing-pwn-requests/ for more information!
 
 # Actions taken to reduce risk:
-# This workflow is only started when the workflow run is approved (GitHub Settings), and when the deployment to `forkprbuildpack` is approved (by admin-devs)
+# This workflow is only started if a PR has the 'fork-build' label, and when the deployment to `forkprbuildpack` is approved (by admin-devs)
 # Only the CFCORE_API_TOKEN secret is accessed, meaning it is the only one revealed, meaning that the other secrets cannot be used by nodejs tools
 # GITHUB_TOKEN permissions are set to read
 
@@ -11,6 +11,9 @@ name: "[NOT CALLABLE] Fork PR Build Pack"
 
 on:
   pull_request_target:
+    types:
+      - synchronize
+      - labeled
     paths-ignore:
       - "README.md"
 
@@ -26,11 +29,12 @@ env:
   HEAD_REF: ${{ github.head_ref }}
   HEAD_REPO: ${{ github.event.pull_request.head.repo.owner.login }}
   TRUE_SHA: ${{ github.event.pull_request.head.sha }}
+  SKIP_CHANGELOG: true
 
 jobs:
   setup:
-    # Only continue if we are in base Nomi-CEu Repo and pull request is from fork
-    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' }}"
+    # Only continue if we are in base Nomi-CEu Repo, pull request is from fork and pr has fork-build label
+    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' && contains(github.event.pull_request.labels.*.name, 'fork-build') }}"
     name: Setup (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
@@ -39,7 +43,7 @@ jobs:
       server: ${{ steps.artifactNames.outputs.server }}
       lang: ${{ steps.artifactNames.outputs.lang }}
       mmc: ${{ steps.artifactNames.outputs.mmc }}
-    steps:          
+    steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
         with:
@@ -93,7 +97,7 @@ jobs:
         run: npm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          
+
       - name: Upload Client Zip
         uses: actions/upload-artifact@v4
         with:
@@ -141,7 +145,7 @@ jobs:
           compression-level: 9
 
   buildLang:
-    name: Build Fork PR Lang and Changelogs (${{ github.event.pull_request.head.sha }})
+    name: Build Fork PR Lang (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     needs: setup
     steps:
@@ -164,7 +168,7 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Build Lang and Changelogs
+      - name: Build Lang
         working-directory: ./tools
         run: npm run gulp buildLang
         env:
@@ -175,13 +179,5 @@ jobs:
         with:
           name: ${{ needs.setup.outputs.lang }}
           path: ./build/lang/**/*
-          if-no-files-found: error
-          compression-level: 9
-
-      - name: Upload Changelogs
-        uses: actions/upload-artifact@v4
-        with:
-          name: Changelogs
-          path: ./build/*.md
           if-no-files-found: error
           compression-level: 9
