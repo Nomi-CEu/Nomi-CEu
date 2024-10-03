@@ -1,4 +1,4 @@
-import sha1 from "sha1";
+import { sha1 } from "hash-wasm";
 import { FileDef } from "#types/fileDef.ts";
 import fs from "fs";
 import buildConfig from "#buildConfig";
@@ -111,9 +111,12 @@ fileDownloader.interceptors.response.use(async (response) => {
 	if (!buffer)
 		throw new Error(`Failed to Download File from ${url}, no Buffer Returned!`);
 	if (nomiCfg.fileDef.hashes) {
-		const success = nomiCfg.fileDef.hashes.every((hashDef) => {
-			return compareBufferToHashDef(buffer, hashDef);
-		});
+		let success = true;
+		for (const hash of nomiCfg.fileDef.hashes) {
+			if (await compareBufferToHashDef(buffer, hash)) continue;
+			success = false;
+			break;
+		}
 		if (!success)
 			return retryOrThrow(
 				response,
@@ -197,7 +200,7 @@ export interface RetrievedFileDef {
 export async function downloadOrRetrieveFileDef(
 	fileDef: FileDef,
 ): Promise<RetrievedFileDef> {
-	const fileNameSha = sha1(fileDef.url);
+	const fileNameSha = await sha1(fileDef.url);
 
 	const cachedFilePath = upath.join(
 		buildConfig.downloaderCacheDirectory,
@@ -214,13 +217,13 @@ export async function downloadOrRetrieveFileDef(
 
 			// Check hashes.
 			if (fileDef.hashes) {
-				if (
-					fileDef.hashes.every((hashDef) => {
-						return compareBufferToHashDef(file, hashDef);
-					})
-				) {
-					return rFileDef;
+				let success = true;
+				for (const hash of fileDef.hashes) {
+					if (await compareBufferToHashDef(file, hash)) continue;
+					success = false;
+					break;
 				}
+				if (success) return rFileDef;
 			} else {
 				return rFileDef;
 			}
@@ -881,7 +884,6 @@ export function shouldSkipChangelog(): boolean {
 		throw new Error("Skip Changelog Env Variable set to Invalid Value.");
 	}
 
-	if (skip)
-		logInfo("Skipping Changelogs...");
+	if (skip) logInfo("Skipping Changelogs...");
 	return skip;
 }

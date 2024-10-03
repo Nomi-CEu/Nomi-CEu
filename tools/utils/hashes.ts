@@ -1,6 +1,4 @@
-import _sha1 from "sha1";
-import _md5 from "md5";
-
+import { sha1, md5 } from "hash-wasm";
 import { HashDef } from "#types/hashDef.ts";
 
 /**
@@ -8,8 +6,8 @@ import { HashDef } from "#types/hashDef.ts";
  *
  * This is what CurseForge and Forge are using to check files.
  */
-export const sha1 = (inputBuffer: Buffer): string => {
-	return _sha1(inputBuffer);
+const performSha1 = (inputBuffer: Buffer): Promise<string> => {
+	return sha1(inputBuffer);
 };
 
 /**
@@ -17,13 +15,13 @@ export const sha1 = (inputBuffer: Buffer): string => {
  *
  * This is what CF is using to check files.
  */
-export const md5 = (inputBuffer: Buffer): string => {
-	return _md5(inputBuffer);
+const performMd5 = (inputBuffer: Buffer): Promise<string> => {
+	return md5(inputBuffer);
 };
 
-const hashFuncs: { [key: string]: (buffer: Buffer) => string } = {
-	sha1,
-	md5,
+const hashFuncs: { [key: string]: (buffer: Buffer) => Promise<string> } = {
+	sha1: performSha1,
+	md5: performMd5,
 };
 
 /**
@@ -34,17 +32,17 @@ const hashFuncs: { [key: string]: (buffer: Buffer) => string } = {
  *
  * @throws {Error} Throws a generic error if hashes don't match.
  */
-export const compareBufferToHashDef = (
+export async function compareBufferToHashDef(
 	buffer: Buffer,
 	hashDef: HashDef,
-): boolean => {
+): Promise<boolean> {
 	if (!hashFuncs[hashDef.id]) {
 		throw new Error(`No hash function found for ${hashDef.id}.`);
 	}
 
-	const sum = hashFuncs[hashDef.id](buffer);
+	const sum = await hashFuncs[hashDef.id](buffer);
 	return (
 		(Array.isArray(hashDef.hashes) && hashDef.hashes.includes(sum)) ||
 		hashDef.hashes == sum
 	);
-};
+}
