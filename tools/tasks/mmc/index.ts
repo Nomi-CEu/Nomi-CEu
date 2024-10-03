@@ -8,6 +8,7 @@ import * as upath from "upath";
 import * as fs from "fs";
 import { dest, series, src } from "gulp";
 import buildConfig from "#buildConfig";
+import { shouldSkipChangelog } from "#utils/util.ts";
 
 async function mmcCleanUp() {
 	if (fs.existsSync(mmcDestDirectory)) {
@@ -27,7 +28,7 @@ async function createMMCDirs() {
 /**
  * Copies the update notes file.
  */
-function copyMMCUpdateNotes() {
+async function copyMMCUpdateNotes() {
 	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
 		dest(mmcDestDirectory),
 	);
@@ -43,7 +44,9 @@ async function copyMMCLicense() {
 /**
  * Copies the changelog file.
  */
-function copyMMCChangelog() {
+async function copyMMCChangelog() {
+	if (shouldSkipChangelog()) return;
+
 	return src(
 		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 	).pipe(dest(mmcDestDirectory));
@@ -52,7 +55,7 @@ function copyMMCChangelog() {
 /**
  * Copies modpack overrides.
  */
-function copyOverrides() {
+async function copyOverrides() {
 	return src(upath.join(clientDestDirectory, "**/*"), {
 		resolveSymlinks: false,
 	}).pipe(dest(upath.join(mmcDestDirectory)));
