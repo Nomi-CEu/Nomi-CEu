@@ -12,6 +12,10 @@ on:
   pull_request:
     paths-ignore:
       - "README.md"
+    types:
+      - opened
+      - reopened
+      - synchronize
 
 # if a second commit is pushed quickly after the first, cancel the first one's build
 concurrency:
@@ -28,5 +32,5 @@ jobs:
       separate_upload: true
       head_ref: ${{ github.head_ref }}
       true_sha: ${{ github.event.pull_request.head.sha }}
-      skip_changelog: ${{ github.event.pull_request }}
+      skip_changelog: ${{ github.event.pull_request != null }}
     secrets: inherit

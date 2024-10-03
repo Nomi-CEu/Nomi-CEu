@@ -407,6 +407,7 @@ jobs:
           compression-level: 9
 
       - name: Upload Changelogs
+        if: ${{ !inputs.skip_changelog }}
         uses: actions/upload-artifact@v4
         with:
           name: Changelogs
