@@ -1,6 +1,4 @@
-import gulp from "gulp";
-import rename from "gulp-rename";
-import merge from "merge-stream";
+import { dest, series, src } from "gulp";
 import upath from "upath";
 import buildConfig from "#buildConfig";
 import {
@@ -9,6 +7,18 @@ import {
 	sharedDestDirectory,
 } from "#globals";
 import fs from "fs";
+import { deleteAsync } from "del";
+import { shouldSkipChangelog } from "#utils/util.ts";
+
+const resourcesPath = upath.join(
+	sharedDestDirectory,
+	overridesFolder,
+	"resources",
+);
+
+async function langCleanUp() {
+	return deleteAsync(upath.join(langDestDirectory, "*"), { force: true });
+}
 
 /**
  * Checks and creates all necessary directories so we can build the lang safely.
@@ -19,32 +29,51 @@ async function createLangDirs() {
 	}
 }
 
-async function copyLang() {
-	const resourcesPath = upath.join(
-		sharedDestDirectory,
-		overridesFolder,
-		"resources",
-	);
-
-	const opts = { base: resourcesPath, resolveSymlinks: true };
-	const streams = [
-		gulp.src(upath.join(resourcesPath, "pack.mcmeta"), opts),
-		gulp.src(upath.join(resourcesPath, "**/*.lang"), opts).pipe(
-			rename((f) => {
-				f.dirname = upath.join("assets", f.dirname);
-			}),
-		),
-	];
-
-	return await new Promise((resolve) => {
-		merge(...streams)
-			.pipe(
-				gulp.dest(
-					upath.join(buildConfig.buildDestinationDirectory, langDestDirectory),
-				),
-			)
-			.on("end", resolve);
-	});
+/**
+ * Copies the license file.
+ */
+async function copyLangLicense() {
+	return src("../LICENSE").pipe(dest(langDestDirectory));
 }
 
-export default gulp.series(createLangDirs, copyLang);
+/**
+ * Copies the update notes file.
+ */
+async function copyLangUpdateNotes() {
+	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
+		dest(langDestDirectory),
+	);
+}
+
+/**
+ * Copies the changelog file.
+ */
+async function copyLangChangelog() {
+	if (shouldSkipChangelog()) return;
+
+	return src(
+		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+	).pipe(dest(langDestDirectory));
+}
+
+async function copyLangFiles() {
+	return src(upath.join("**", "*.lang"), { cwd: resourcesPath }).pipe(
+		dest(upath.join(langDestDirectory, "assets")),
+	);
+}
+
+async function copyLangMcMeta() {
+	return src("pack.mcmeta", { cwd: resourcesPath }).pipe(
+		dest(upath.join(langDestDirectory)),
+	);
+}
+
+export default series(
+	langCleanUp,
+	createLangDirs,
+	copyLangFiles,
+	copyLangMcMeta,
+	copyLangLicense,
+	copyLangChangelog,
+	copyLangUpdateNotes,
+);
