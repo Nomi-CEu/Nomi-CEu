@@ -10,7 +10,11 @@ import buildConfig from "#buildConfig";
 import { deleteAsync } from "del";
 import { createModList, ModFileInfo } from "../misc/createModList.ts";
 import dedent from "dedent-js";
-import { cleanupVersion, shouldSkipChangelog } from "#utils/util.ts";
+import {
+	cleanupVersion,
+	promiseStream,
+	shouldSkipChangelog,
+} from "#utils/util.ts";
 
 async function clientCleanUp() {
 	return deleteAsync(upath.join(clientDestDirectory, "*"), { force: true });
@@ -64,15 +68,17 @@ async function exportModpackManifest() {
  * Copies the license file.
  */
 async function copyClientLicense() {
-	return src("../LICENSE").pipe(dest(clientDestDirectory));
+	return promiseStream(src("../LICENSE").pipe(dest(clientDestDirectory)));
 }
 
 /**
  * Copies the update notes file.
  */
 async function copyClientUpdateNotes() {
-	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
-		dest(clientDestDirectory),
+	return promiseStream(
+		src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
+			dest(clientDestDirectory),
+		),
 	);
 }
 
@@ -82,21 +88,25 @@ async function copyClientUpdateNotes() {
 async function copyClientChangelog() {
 	if (shouldSkipChangelog()) return;
 
-	return src(
-		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
-	).pipe(dest(clientDestDirectory));
+	return promiseStream(
+		src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
+			dest(clientDestDirectory),
+		),
+	);
 }
 
 /**
  * Copies modpack overrides.
  */
 async function copyClientOverrides() {
-	return src(buildConfig.copyFromSharedClientGlobs, {
-		cwd: sharedDestDirectory,
-		allowEmpty: true,
-		resolveSymlinks: true,
-		encoding: false,
-	}).pipe(dest(upath.join(clientDestDirectory, "overrides")));
+	return promiseStream(
+		src(buildConfig.copyFromSharedClientGlobs, {
+			cwd: sharedDestDirectory,
+			allowEmpty: true,
+			resolveSymlinks: true,
+			encoding: false,
+		}).pipe(dest(upath.join(clientDestDirectory, "overrides"))),
+	);
 }
 
 /**

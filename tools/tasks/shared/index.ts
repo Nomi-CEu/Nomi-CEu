@@ -15,8 +15,8 @@ import { FileDef } from "#types/fileDef.ts";
 import {
 	downloadFileDef,
 	downloadOrRetrieveFileDef,
-	isEnvVariableSet,
-	shouldSkipChangelog,
+	isEnvVariableSet, promiseStream,
+	shouldSkipChangelog
 } from "#utils/util.ts";
 import transformVersion from "./transformVersion.ts";
 import { createBuildChangelog } from "../changelog/index.ts";
@@ -51,27 +51,23 @@ async function createSharedDirs() {
  */
 async function copyOverrides() {
 	// Copy, not Symlink, so we can transform the files as we wish
-	return new Promise((resolve) => {
+	return promiseStream(
 		src(buildConfig.copyToSharedDirGlobs, {
 			cwd: upath.join(rootDirectory),
 			encoding: false,
-		})
-			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
-			.on("end", resolve);
-	});
+		}).pipe(dest(upath.join(sharedDestDirectory, overridesFolder))),
+	);
 }
 
 /**
  * Copies Modpack Pack Mode Switcher Scripts.
  */
 async function copyPackModeSwitchers() {
-	return new Promise((resolve) => {
+	return promiseStream(
 		src(buildConfig.packModeSwitcherGlobs, {
 			cwd: upath.join(rootDirectory),
-		})
-			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
-			.on("end", resolve);
-	});
+		}).pipe(dest(upath.join(sharedDestDirectory, overridesFolder))),
+	);
 }
 
 /**
