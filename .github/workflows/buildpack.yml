@@ -271,6 +271,7 @@ jobs:
         run: npm ci
 
       - name: Download Changelog Artifacts
+        if: ${{ !inputs.skip_changelog }}
         uses: actions/download-artifact@v4
         with:
           name: Changelogs
@@ -334,6 +335,7 @@ jobs:
         run: npm ci
 
       - name: Download Changelog Artifacts
+        if: ${{ !inputs.skip_changelog }}
         uses: actions/download-artifact@v4
         with:
           name: Changelogs
@@ -388,6 +390,7 @@ jobs:
         run: npm ci
 
       - name: Download Changelog Artifacts
+        if: ${{ !inputs.skip_changelog }}
         uses: actions/download-artifact@v4
         with:
           name: Changelogs
