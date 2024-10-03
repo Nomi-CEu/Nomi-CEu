@@ -16,6 +16,7 @@ import {
 	downloadFileDef,
 	downloadOrRetrieveFileDef,
 	isEnvVariableSet,
+	shouldSkipChangelog,
 } from "#utils/util.ts";
 import transformVersion from "./transformVersion.ts";
 import { createBuildChangelog } from "../changelog/index.ts";
@@ -112,9 +113,11 @@ async function fetchExternalDependencies() {
 }
 
 /**
- * Either fetches the Changelog File, or makes one.
+ * Either fetches the Changelog File, or makes one. Does nothing if 'SKIP_CHANGELOG' is set to a truthy value.
  */
 async function fetchOrMakeChangelog() {
+	if (shouldSkipChangelog()) return;
+
 	if (
 		isEnvVariableSet("CHANGELOG_URL") &&
 		isEnvVariableSet("CHANGELOG_CF_URL")
