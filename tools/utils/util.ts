@@ -48,6 +48,7 @@ const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 export const git: SimpleGit = simpleGit(rootDirectory);
 
 const RetryOctokit = Octokit.plugin(retry, throttling);
+let shouldTryGetInfo = true;
 export const octokit = new RetryOctokit({
 	auth: process.env.GITHUB_TOKEN,
 	throttle: {
@@ -57,8 +58,15 @@ export const octokit = new RetryOctokit({
 			);
 
 			if (retryCount < buildConfig.downloaderMaxRetries) {
-				logInfo(`Retrying after ${retryAfter} seconds.`);
-				return true;
+				if (retryAfter < buildConfig.changelogRequestRetryMaxSeconds) {
+					logInfo(`Retrying after ${retryAfter} seconds.`);
+					return true;
+				}
+				logError(
+					`Reset Time of ${retryAfter} Seconds is Too Long! Not Retrying!`,
+				);
+				shouldTryGetInfo = false;
+				return false;
 			}
 		},
 		onSecondaryRateLimit: (retryAfter, options, _octokit, retryCount) => {
@@ -67,8 +75,15 @@ export const octokit = new RetryOctokit({
 			);
 
 			if (retryCount < buildConfig.downloaderMaxRetries) {
-				logInfo(`Retrying after ${retryAfter} seconds.`);
-				return true;
+				if (retryAfter < buildConfig.changelogRequestRetryMaxSeconds) {
+					logInfo(`Retrying after ${retryAfter} seconds.`);
+					return true;
+				}
+				logError(
+					`Reset Time of ${retryAfter} Seconds is Too Long! Not Retrying!`,
+				);
+				shouldTryGetInfo = false;
+				return false;
 			}
 		},
 	},
@@ -644,6 +659,10 @@ const issueURLCache: Map<number, string> = new Map<number, string>();
  */
 export async function getIssueURLs(): Promise<void> {
 	if (issueURLCache.size > 0) return;
+	if (!shouldTryGetInfo) {
+		logError("Skipping Get Issues because of Rate Limits!");
+		return;
+	}
 	try {
 		let page = 1;
 		const issues = await octokit.paginate(
@@ -682,6 +701,7 @@ export async function getIssueURLs(): Promise<void> {
 export async function getIssueURL(issueNumber: number): Promise<string> {
 	if (issueURLCache.has(issueNumber))
 		return issueURLCache.get(issueNumber) ?? "";
+	if (!shouldTryGetInfo) return "";
 	try {
 		// Try to retrieve, might be open
 		const issueInfo = await octokit.issues.get({
@@ -718,6 +738,10 @@ const commitAuthorCache: Map<string, string> = new Map<string, string>();
  */
 export async function getCommitAuthors(): Promise<void> {
 	if (commitAuthorCache.size > 0) return;
+	if (!shouldTryGetInfo) {
+		logError("Skipping Get Commits because of Rate Limits!");
+		return;
+	}
 	try {
 		let page = 1;
 		const commits = await octokit.paginate(
@@ -759,6 +783,8 @@ export async function formatAuthor(commit: Commit) {
 		if (login) return `@${login}`;
 		return defaultFormat;
 	}
+
+	if (!shouldTryGetInfo) return defaultFormat;
 
 	try {
 		// Try to retrieve, just in case
