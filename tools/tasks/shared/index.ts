@@ -15,8 +15,9 @@ import { FileDef } from "#types/fileDef.ts";
 import {
 	downloadFileDef,
 	downloadOrRetrieveFileDef,
-	isEnvVariableSet, promiseStream,
-	shouldSkipChangelog
+	isEnvVariableSet,
+	promiseStream,
+	shouldSkipChangelog,
 } from "#utils/util.ts";
 import transformVersion from "./transformVersion.ts";
 import { createBuildChangelog } from "../changelog/index.ts";
@@ -114,6 +115,20 @@ async function fetchExternalDependencies() {
 async function fetchOrMakeChangelog() {
 	if (shouldSkipChangelog()) return;
 
+	if (isEnvVariableSet("MADE_CHANGELOG")) {
+		let made = false;
+		try {
+			made = JSON.parse((process.env.MADE_CHANGELOG ?? "false").toLowerCase());
+		} catch (err) {
+			throw new Error("Made Changelog Env Variable set to Invalid Value.");
+		}
+
+		if (made) {
+			logInfo("Already Made Changelogs...");
+			return;
+		}
+	}
+
 	if (
 		isEnvVariableSet("CHANGELOG_URL") &&
 		isEnvVariableSet("CHANGELOG_CF_URL")
@@ -195,4 +210,10 @@ export default gulp.series(
 	updateBuildLabsVersion,
 	transformVersion,
 	transformQuestBook,
+);
+
+export const buildChangelog = gulp.series(
+	sharedCleanUp,
+	createSharedDirs,
+	fetchOrMakeChangelog,
 );

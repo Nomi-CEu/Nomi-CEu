@@ -14,7 +14,7 @@ export const updateFilesAll = transformFiles.updateAll;
 import * as changelog from "./tasks/changelog/index.ts";
 export const createChangelog = changelog.createRootChangelog;
 
-import sharedTasks from "./tasks/shared/index.ts";
+import * as sharedTasks from "./tasks/shared/index.ts";
 import clientTasks from "./tasks/client/index.ts";
 import serverTasks from "./tasks/server/index.ts";
 import langTasks from "./tasks/lang/index.ts";
@@ -22,23 +22,27 @@ import mmcTasks from "./tasks/mmc/index.ts";
 import * as modTasks from "./tasks/misc/downloadMods.ts";
 
 export const buildClient = gulp.series(
-	sharedTasks,
+	sharedTasks.default,
 	clientTasks,
 	pruneCacheTask,
 );
 export const buildServer = gulp.series(
-	gulp.parallel(sharedTasks, modTasks.downloadSharedAndServer),
+	gulp.parallel(sharedTasks.default, modTasks.downloadSharedAndServer),
 	serverTasks,
 	pruneCacheTask,
 );
-export const buildLang = gulp.series(sharedTasks, langTasks, pruneCacheTask);
+export const buildLang = gulp.series(
+	sharedTasks.default,
+	langTasks,
+	pruneCacheTask,
+);
 export const buildMMC = gulp.series(
-	gulp.parallel(sharedTasks, modTasks.downloadSharedAndClient),
+	gulp.parallel(sharedTasks.default, modTasks.downloadSharedAndClient),
 	mmcTasks,
 	pruneCacheTask,
 );
 export const buildAll = gulp.series(
-	sharedTasks,
+	sharedTasks.default,
 	gulp.parallel(
 		clientTasks,
 		langTasks,
@@ -46,6 +50,7 @@ export const buildAll = gulp.series(
 	),
 	pruneCacheTask,
 );
+export const buildChangelog = sharedTasks.buildChangelog;
 
 import checkTasks from "./tasks/checks/index.ts";
 export const check = gulp.series(checkTasks);

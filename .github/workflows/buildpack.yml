@@ -167,7 +167,7 @@ jobs:
           compression-level: 0
 
   makeNames:
-    name: Make Artifact Names (${{ inputs.tag }})
+    name: Make Artifact Names and Changelogs (${{ inputs.tag }})
     runs-on: ubuntu-latest
     if: ${{ inputs.separate_upload }}
     outputs:
@@ -217,6 +217,26 @@ jobs:
         working-directory: ./tools
         run: npm run gulp makeArtifactNames
 
+      - name: Make Changelogs
+        if: ${{ !inputs.skip_changelog }}
+        working-directory: ./tools
+        run: npm run gulp buildChangelog
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
+          CHANGELOG_URL: ${{ inputs.changelog_url }}
+          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
+          COMPARE_TAG: ${{ inputs.compare_tag }}
+
+      - name: Upload Changelogs
+        if: ${{ !inputs.skip_changelog }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Changelogs
+          path: ./build/*.md
+          if-no-files-found: error
+          compression-level: 9
+
   buildClient:
     name: Build Pack Client (${{ inputs.tag }})
     runs-on: ubuntu-latest
@@ -250,24 +270,19 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+      - name: Download Changelog Artifacts
+        if: ${{ !inputs.skip_changelog }}
+        uses: actions/download-artifact@v4
+        with:
+          name: Changelogs
+          path: ./build/
 
       - name: Build Client
         working-directory: ./tools
         run: npm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
-          CHANGELOG_URL: ${{ inputs.changelog_url }}
-          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
-          COMPARE_TAG: ${{ inputs.compare_tag }}
+          MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Client Zip
         uses: actions/upload-artifact@v4
@@ -319,24 +334,19 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+      - name: Download Changelog Artifacts
+        if: ${{ !inputs.skip_changelog }}
+        uses: actions/download-artifact@v4
+        with:
+          name: Changelogs
+          path: ./build/
 
       - name: Build Server
         working-directory: ./tools
         run: npm run gulp buildServer
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
-          CHANGELOG_URL: ${{ inputs.changelog_url }}
-          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
-          COMPARE_TAG: ${{ inputs.compare_tag }}
+          MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Server Zip
         uses: actions/upload-artifact@v4
@@ -379,38 +389,24 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+      - name: Download Changelog Artifacts
+        if: ${{ !inputs.skip_changelog }}
+        uses: actions/download-artifact@v4
+        with:
+          name: Changelogs
+          path: ./build/
 
-      - name: Build Lang and Changelogs
+      - name: Build Lang
         working-directory: ./tools
         run: npm run gulp buildLang
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
-          CHANGELOG_URL: ${{ inputs.changelog_url }}
-          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
-          COMPARE_TAG: ${{ inputs.compare_tag }}
+          MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Lang Zip
         uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.makeNames.outputs.lang }}
           path: ./build/lang/**/*
-          if-no-files-found: error
-          compression-level: 9
-
-      - name: Upload Changelogs
-        if: ${{ !inputs.skip_changelog }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: Changelogs
-          path: ./build/*.md
           if-no-files-found: error
           compression-level: 9
