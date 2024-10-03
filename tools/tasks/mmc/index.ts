@@ -1,8 +1,8 @@
 import {
-	clientDestDirectory,
 	mmcDestDirectory,
 	modDestDirectory,
 	modpackManifest,
+	sharedDestDirectory,
 } from "#globals";
 import upath from "upath";
 import fs from "fs";
@@ -59,7 +59,7 @@ async function copyOverrides() {
 	return src("**/*", {
 		resolveSymlinks: true,
 		encoding: false,
-		cwd: upath.join(clientDestDirectory, "overrides"),
+		cwd: upath.join(sharedDestDirectory, "overrides"),
 	}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft")));
 }
 

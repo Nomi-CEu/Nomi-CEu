@@ -34,7 +34,6 @@ export const buildServer = gulp.series(
 export const buildLang = gulp.series(sharedTasks, langTasks, pruneCacheTask);
 export const buildMMC = gulp.series(
 	gulp.parallel(sharedTasks, modTasks.downloadSharedAndClient),
-	clientTasks,
 	mmcTasks,
 	pruneCacheTask,
 );
