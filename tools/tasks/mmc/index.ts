@@ -4,8 +4,8 @@ import {
 	modDestDirectory,
 	modpackManifest,
 } from "#globals";
-import * as upath from "upath";
-import * as fs from "fs";
+import upath from "upath";
+import fs from "fs";
 import { dest, series, src } from "gulp";
 import buildConfig from "#buildConfig";
 import { shouldSkipChangelog } from "#utils/util.ts";
@@ -56,20 +56,11 @@ async function copyMMCChangelog() {
  * Copies modpack overrides.
  */
 async function copyOverrides() {
-	return src(upath.join(clientDestDirectory, "**/*"), {
-		resolveSymlinks: false,
-	}).pipe(dest(upath.join(mmcDestDirectory)));
-}
-
-/**
- * Renames copied overrides to '.minecraft'.
- */
-async function renameOverrides() {
-	await fs.promises.rename(
-		upath.join(mmcDestDirectory, "overrides"),
-		upath.join(mmcDestDirectory, ".minecraft"),
-	);
-	return fs.promises.rm(upath.join(mmcDestDirectory, "manifest.json"));
+	return src("**/*", {
+		resolveSymlinks: true,
+		encoding: false,
+		cwd: upath.join(clientDestDirectory, "overrides"),
+	}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft")));
 }
 
 /**
@@ -149,7 +140,6 @@ export default series(
 	copyMMCLicense,
 	copyMMCUpdateNotes,
 	copyOverrides,
-	renameOverrides,
 	createMMCConfig,
 	createMMCManifest,
 	copyMMCModJars,
