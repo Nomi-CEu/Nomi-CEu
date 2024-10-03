@@ -270,6 +270,12 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
+      - name: Download Changelog Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Changelogs
+          path: ./build/
+
       - name: Build Client
         working-directory: ./tools
         run: npm run gulp buildClient
@@ -327,6 +333,12 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
+      - name: Download Changelog Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Changelogs
+          path: ./build/
+
       - name: Build Server
         working-directory: ./tools
         run: npm run gulp buildServer
@@ -374,6 +386,12 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
+
+      - name: Download Changelog Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Changelogs
+          path: ./build/
 
       - name: Build Lang
         working-directory: ./tools
