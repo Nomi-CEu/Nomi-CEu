@@ -29,6 +29,7 @@ env:
   HEAD_REF: ${{ github.head_ref }}
   HEAD_REPO: ${{ github.event.pull_request.head.repo.owner.login }}
   TRUE_SHA: ${{ github.event.pull_request.head.sha }}
+  SKIP_CHANGELOG: true
 
 jobs:
   setup:
@@ -42,7 +43,7 @@ jobs:
       server: ${{ steps.artifactNames.outputs.server }}
       lang: ${{ steps.artifactNames.outputs.lang }}
       mmc: ${{ steps.artifactNames.outputs.mmc }}
-    steps:          
+    steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
         with:
@@ -96,7 +97,7 @@ jobs:
         run: npm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          
+
       - name: Upload Client Zip
         uses: actions/upload-artifact@v4
         with:

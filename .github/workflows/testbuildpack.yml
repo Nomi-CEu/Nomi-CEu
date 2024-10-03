@@ -17,7 +17,7 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-  
+
 jobs:
   build:
     # Only allow runs from commits to Nomi-CEu Branches or from pull requests from Nomi-CEu repo without dev/ (That is handled by push)
@@ -28,5 +28,5 @@ jobs:
       separate_upload: true
       head_ref: ${{ github.head_ref }}
       true_sha: ${{ github.event.pull_request.head.sha }}
+      skip_changelog: ${{ github.event.pull_request }}
     secrets: inherit
-
