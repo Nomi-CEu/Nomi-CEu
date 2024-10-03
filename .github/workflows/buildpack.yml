@@ -221,6 +221,12 @@ jobs:
         if: ${{ !inputs.skip_changelog }}
         working-directory: ./tools
         run: npm run gulp buildChangelog
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
+          CHANGELOG_URL: ${{ inputs.changelog_url }}
+          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
+          COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload Changelogs
         if: ${{ !inputs.skip_changelog }}
@@ -264,24 +270,11 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-
       - name: Build Client
         working-directory: ./tools
         run: npm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
-          CHANGELOG_URL: ${{ inputs.changelog_url }}
-          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
-          COMPARE_TAG: ${{ inputs.compare_tag }}
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Client Zip
@@ -334,24 +327,11 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-
       - name: Build Server
         working-directory: ./tools
         run: npm run gulp buildServer
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
-          CHANGELOG_URL: ${{ inputs.changelog_url }}
-          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
-          COMPARE_TAG: ${{ inputs.compare_tag }}
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Server Zip
@@ -395,24 +375,11 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-
       - name: Build Lang
         working-directory: ./tools
         run: npm run gulp buildLang
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
-          CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
-          CHANGELOG_URL: ${{ inputs.changelog_url }}
-          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
-          COMPARE_TAG: ${{ inputs.compare_tag }}
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Lang Zip
