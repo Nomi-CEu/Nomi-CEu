@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-      - test_buildscript*
+      - test-buildscript*
 
 jobs:
   testCommits:
