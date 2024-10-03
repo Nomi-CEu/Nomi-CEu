@@ -8,7 +8,7 @@ import upath from "upath";
 import fs from "fs";
 import { dest, series, src } from "gulp";
 import buildConfig from "#buildConfig";
-import { shouldSkipChangelog } from "#utils/util.ts";
+import { promiseStream, shouldSkipChangelog } from "#utils/util.ts";
 
 async function mmcCleanUp() {
 	if (fs.existsSync(mmcDestDirectory)) {
@@ -29,8 +29,8 @@ async function createMMCDirs() {
  * Copies the update notes file.
  */
 async function copyMMCUpdateNotes() {
-	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
-		dest(mmcDestDirectory),
+	return promiseStream(
+		src("../UPDATENOTES.md", { allowEmpty: true }).pipe(dest(mmcDestDirectory)),
 	);
 }
 
@@ -38,7 +38,7 @@ async function copyMMCUpdateNotes() {
  * Copies the license file.
  */
 async function copyMMCLicense() {
-	return src("../LICENSE").pipe(dest(mmcDestDirectory));
+	return promiseStream(src("../LICENSE").pipe(dest(mmcDestDirectory)));
 }
 
 /**
@@ -47,31 +47,37 @@ async function copyMMCLicense() {
 async function copyMMCChangelog() {
 	if (shouldSkipChangelog()) return;
 
-	return src(
-		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
-	).pipe(dest(mmcDestDirectory));
+	return promiseStream(
+		src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
+			dest(mmcDestDirectory),
+		),
+	);
 }
 
 /**
  * Copies modpack overrides.
  */
 async function copyOverrides() {
-	return src("**/*", {
-		resolveSymlinks: true,
-		encoding: false,
-		cwd: upath.join(sharedDestDirectory, "overrides"),
-	}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft")));
+	return promiseStream(
+		src("**/*", {
+			resolveSymlinks: true,
+			encoding: false,
+			cwd: upath.join(sharedDestDirectory, "overrides"),
+		}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft"))),
+	);
 }
 
 /**
  * Copies client & shared mods.
  */
 async function copyMMCModJars() {
-	return src(["*", upath.join("client", "*")], {
-		cwd: modDestDirectory,
-		resolveSymlinks: true,
-		encoding: false,
-	}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft", "mods")));
+	return promiseStream(
+		src(["*", upath.join("client", "*")], {
+			cwd: modDestDirectory,
+			resolveSymlinks: true,
+			encoding: false,
+		}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft", "mods"))),
+	);
 }
 
 async function createMMCConfig() {

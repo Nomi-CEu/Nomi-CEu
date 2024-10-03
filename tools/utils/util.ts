@@ -913,3 +913,7 @@ export function shouldSkipChangelog(): boolean {
 	if (skip) logInfo("Skipping Changelogs...");
 	return skip;
 }
+
+export function promiseStream(stream: NodeJS.ReadWriteStream): Promise<void> {
+	return new Promise((resolve) => stream.on("end", resolve));
+}
