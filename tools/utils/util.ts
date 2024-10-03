@@ -870,3 +870,18 @@ export function getUniqueToArray<T>(
 		arr2Unique: lodash.difference(arr2, arr1),
 	};
 }
+
+export function shouldSkipChangelog(): boolean {
+	if (!isEnvVariableSet("SKIP_CHANGELOG")) return false;
+
+	let skip = false;
+	try {
+		skip = JSON.parse((process.env.SKIP_CHANGELOG ?? "false").toLowerCase());
+	} catch (err) {
+		throw new Error("Skip Changelog Env Variable set to Invalid Value.");
+	}
+
+	if (skip)
+		logInfo("Skipping Changelogs...");
+	return skip;
+}
