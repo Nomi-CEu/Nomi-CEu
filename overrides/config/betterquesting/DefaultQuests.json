@@ -617,7 +617,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§r, can be wrapped in their §6Rubber§r insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§r and liquid §9Rubber§r, but you can do it the simple way for now.\n\n§2CEu has GT6-style pipes and cables on by default. §rYou will need to use §aWire Cutters§r to connect each side of a cable to machines or other cables. Placing it against the machine or cable automatically connects it as well. The same behaviour follows for GT pipes, whose tool is the §aWrench§r.\nThis can save you from energy or fluids going the wrong way. But if you don\u0027t like this, disable the config option for \"GT6 style pipes and cables\" in the GregTech config file.\n\n§2GT cables now support RF conversion natively! §rYou can plug an §dRF§r machine into an §dEU§r cable directly and it will convert the energy. You cannot, however, plug an §dRF§r power souce directly into an §dEU§r cable.",
+          "desc:8": "The most basic cables, such as these §6Red Alloy Cables§r, can be wrapped in their §6Rubber§r insulation by hand.\n\nMore advanced types of cables will require an §3Assembling Machine§r and liquid §9Rubber§r, but you can do it the simple way for now.\n\n§2CEu has GT6-style pipes and cables on by default. §rYou will need to use §aWire Cutters§r to connect each side of a cable to machines or other cables. Placing it against the machine or cable automatically connects it as well. The same behaviour follows for GT pipes, whose tool is the §aWrench§r.\nThis can save you from energy or fluids going the wrong way. But if you don\u0027t like this, disable the config option for \"GT6 style pipes and cables\" in the GregTech config file.\n\n§2GT cables now support RF conversion natively! §rYou can plug an §dRF§r machine into an §dEU§r cable directly and it will convert the energy. You cannot, however, plug an §dRF§r power source directly into an §dEU§r cable.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15731,7 +15731,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hydrogen§r and §9Nitrogen§r combine together to make §9Ammonia§r.\n\nAn easy way to get Nitrogen is to centrifuge §9Air§r, which will require you to build an §3Air Collector§r. You could also electrolyze §6Saltpeter§r, distill §9Fermented Biomass§r in a §3Distillation Tower§r, or get huge amounts from §2distlling Liquid Air in a Distillation Tower.§r.",
+          "desc:8": "§9Hydrogen§r and §9Nitrogen§r combine together to make §9Ammonia§r.\n\nAn easy way to get Nitrogen is to centrifuge §9Air§r, which will require you to build an §3Air Collector§r. You could also electrolyze §6Saltpeter§r, distill §9Fermented Biomass§r in a §3Distillation Tower§r, or get huge amounts from §2distilling Liquid Air in a Distillation Tower.§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -33084,7 +33084,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, §3Naquadah Reactor Mk1§r and §3Naquadah Reactor Mk2§r, the latter producces significantly more power while costing a large amounts of §dOmnium§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
+          "desc:8": "The §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, §3Naquadah Reactor Mk1§r and §3Naquadah Reactor Mk2§r, the latter produces significantly more power while costing a large amounts of §dOmnium§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49092,7 +49092,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These are the basic cables used by §3Applied Energistics§r to transport network connectivity. Due to the fact that channels are disabled, these cables will be your main method of transporting network connectivity, rather than the dense cables.\n\nThese cables do not share blockspace with conduits or cables for other mods, so they can be somewhat unweildy to build with, but they do accept §3Applied Energistics §6Facades§r, so they can be hidden very easily. Keep in mind that a large number of facades leads to FPS lag.\n\nLater you can make a variant of the cable that can share blockspace with §3Ender IO§r conduits.",
+          "desc:8": "These are the basic cables used by §3Applied Energistics§r to transport network connectivity. Due to the fact that channels are disabled, these cables will be your main method of transporting network connectivity, rather than the dense cables.\n\nThese cables do not share blockspace with conduits or cables for other mods, so they can be somewhat unwieldy to build with, but they do accept §3Applied Energistics §6Facades§r, so they can be hidden very easily. Keep in mind that a large number of facades leads to FPS lag.\n\nLater you can make a variant of the cable that can share blockspace with §3Ender IO§r conduits.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57876,7 +57876,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Wetware and crystal-related processes require some stronger sterilisation.§r\n\nYou will need to build another §3Cleanroom§r to run these recipes inside. Instead of §3Filter Casings§r, use §3Sterilizing Filter Casings§r in the top face.\n\nNote that a Sterile Cleanroom cannot handle recipes which require regular Cleanrooms.",
+          "desc:8": "§2Wetware and crystal-related processes require some stronger sterilization.§r\n\nYou will need to build another §3Cleanroom§r to run these recipes inside. Instead of §3Filter Casings§r, use §3Sterilizing Filter Casings§r in the top face.\n\nNote that a Sterile Cleanroom cannot handle recipes which require regular Cleanrooms.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58323,7 +58323,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This tab was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§oYou may have to hold the item for a few seconds for the whole line to auto-complete.\n\nThis is not complete, and is published out for testing purposes. Currently, only Pulsating Polymer Clay and Cobbleworks are implemented, but more chains are to come. These are Polyethylene and Polyvinyl Chloride, Oil Processing, Epoxy Resin, Rocket Fuel, Polytetrafluoroethylene, High-Octane Gasoline, Cetane-Boosted Diesel, Polybenzimidazole, Naquadah Processing and Platinum Group Processing. If you have any suggestions on other chains or on how to improve this tab, feel free to DM Integer Limit#0458 on Discord or create an issue on GitHub.",
+          "desc:8": "§2This tab was added to help you visualize and give you tips on making chemicals, among other important things to automate. Use it wisely!§r\n\nEach quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests.\n\n§oYou may have to hold the item for a few seconds for the whole line to auto-complete.\n\nThis is not complete, and is published out for testing purposes. Currently, only Pulsating Polymer Clay and Cobbleworks are implemented, but more chains are to come. These are Polyethylene and Polyvinyl Chloride, Oil Processing, Epoxy Resin, Rocket Fuel, Polytetrafluoroethylene, High-Octane Gasoline, Cetane-Boosted Diesel, Polybenzimidazole, Naquadah Processing and Platinum Group Processing. If you have any suggestions on other chains or on how to improve this tab, feel free to DM Integer Limit#0458 on Discord or create an issue on GitHub.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58481,7 +58481,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Chemical Reactor at voltage §lMV§o or higher.§r\n\nCombine your §6Quartz§r and §6Resonant Ender§r to make §6Resonant Clathrate§r. One §3Electrolyser§r making §6Quartz§r supports one §3Chemical Reactor §rof the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\n§oThis step requires a Chemical Reactor at voltage §lMV§o or higher.§r\n\nCombine your §6Quartz§r and §6Resonant Ender§r to make §6Resonant Clathrate§r. One §3Electrolyzer§r making §6Quartz§r supports one §3Chemical Reactor §rof the same tier.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59976,7 +59976,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This is new to CEu! Before, you could only distil Liquid Air.\n\n§9Ender Air§r, collected from a §3Gas Collector§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Ender Air§r.\n\n§9Liquid Ender Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Nether Air give different useful components too.",
+          "desc:8": "§2This is new to CEu! Before, you could only distill Liquid Air.\n\n§9Ender Air§r, collected from a §3Gas Collector§r, can be sent into the §3Vacuum Freezer§r to turn it into §9Liquid Ender Air§r.\n\n§9Liquid Ender Air§r can be sent into a §2Distillation Tower§r to break it down into its components.\n\n§2Liquid Air and Liquid Nether Air give different useful components too.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -60270,7 +60270,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest completes via checkbox or upon achieving Silicon Dioxide Dust.\n\nThis step requires a Centrifuge at voltage §lLV§o or higher.§r\n\nSeperate your §6Glass Dust§r into §6Silicon Dioxide Dust§r. Can be electrolysed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Silicon Dioxide Dust.\n\nThis step requires a Centrifuge at voltage §lLV§o or higher.§r\n\nSeperate your §6Glass Dust§r into §6Silicon Dioxide Dust§r. Can be electrolyzed into useful resources.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62841,7 +62841,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.§r\n\n§6Fluorine§r is needed to produce §6Polytetrafluoroethylene§r (PTFE) and to process §6Naquadah§r, and §6Thorium§r is used to breed other elements in a §3Fission Reactor§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher, and can be performed without any water or lava present if done in a §3Processing Array§r.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust §ris then finally put into a §3Electrolyser§r. This yeilds §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
+          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.§r\n\n§6Fluorine§r is needed to produce §6Polytetrafluoroethylene§r (PTFE) and to process §6Naquadah§r, and §6Thorium§r is used to breed other elements in a §3Fission Reactor§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher, and can be performed without any water or lava present if done in a §3Processing Array§r.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust §ris then finally put into a §3Electrolyzer§r. This yields §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -67370,7 +67370,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Gregically Multiblocks§r features a complex system for parallel processing of materials. It all starts with the §6Parallel Control Hatch§r, which is required for the machine to process multiple recipes at once. Higher-tier §6Parallel Hatches§r allow for more parallel processes. §eAdditionally, you can open its GUI to configure the number of parallels the multiblock is allowed to handle. However, this has limited functionality.§r\n\nParallel Mechanics work by essentially “downclocking” the recipe when it can, doubling its speed and quadrupling the number of parallels. §cThis means you cannot parallelize recipes of the same tier as your machine.§r For example, putting a §64x Parallel Hatch§r into an §3IV Multiblock§r running EV recipes allows it to process four recipes at once. However, it cannot parallelize IV recipes due to them being the same tier as the machine. Moreover, §cYou also need enough items and fluids in order to properly parallel.§r\n\n§eNote: This parallelization mechanic also affects recipes with chanced outputs.§r",
+          "desc:8": "§2Gregicality Multiblocks§r features a complex system for parallel processing of materials. It all starts with the §6Parallel Control Hatch§r, which is required for the machine to process multiple recipes at once. Higher-tier §6Parallel Hatches§r allow for more parallel processes. §eAdditionally, you can open its GUI to configure the number of parallels the multiblock is allowed to handle. However, this has limited functionality.§r\n\nParallel Mechanics work by essentially “downclocking” the recipe when it can, doubling its speed and quadrupling the number of parallels. §cThis means you cannot parallelize recipes of the same tier as your machine.§r For example, putting a §64x Parallel Hatch§r into an §3IV Multiblock§r running EV recipes allows it to process four recipes at once. However, it cannot parallelize IV recipes due to them being the same tier as the machine. Moreover, §cYou also need enough items and fluids in order to properly parallel.§r\n\n§eNote: This parallelization mechanic also affects recipes with chanced outputs.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
