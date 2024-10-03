@@ -3,7 +3,7 @@ import { fetchMods } from "#utils/curseForgeAPI.ts";
 import upath from "upath";
 import fs from "fs";
 import { deleteAsync } from "del";
-import gulp from "gulp";
+import { parallel, series } from "gulp";
 import logInfo from "#utils/log.ts";
 
 async function modCleanUp() {
@@ -31,19 +31,29 @@ async function createModDirs() {
 /**
  * Downloads mods according to manifest.json and checks hashes.
  */
-export async function downloadMods(): Promise<void> {
+async function downloadMods(): Promise<void> {
 	logInfo("Fetching Shared Mods...");
 	await fetchMods(
 		modpackManifest.files.filter((f) => !f.sides),
 		modDestDirectory,
 	);
+}
 
+/**
+ * Downloads mods according to manifest.json and checks hashes.
+ */
+async function downloadClientMods(): Promise<void> {
 	logInfo("Fetching Client Mods...");
 	await fetchMods(
 		modpackManifest.files.filter((f) => f.sides && f.sides.includes("client")),
 		upath.join(modDestDirectory, "client"),
 	);
+}
 
+/**
+ * Downloads mods according to manifest.json and checks hashes.
+ */
+async function downloadServerMods(): Promise<void> {
 	logInfo("Fetching Server Mods...");
 	await fetchMods(
 		modpackManifest.files.filter((f) => f.sides && f.sides.includes("server")),
@@ -51,4 +61,14 @@ export async function downloadMods(): Promise<void> {
 	);
 }
 
-export default gulp.series(modCleanUp, createModDirs, downloadMods);
+export const downloadSharedAndServer = series(
+	modCleanUp,
+	createModDirs,
+	parallel(downloadMods, downloadServerMods),
+);
+
+export const downloadSharedAndClient = series(
+	modCleanUp,
+	createModDirs,
+	parallel(downloadMods, downloadClientMods),
+);

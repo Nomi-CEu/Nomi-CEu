@@ -5,6 +5,7 @@
 	"downloaderCheckHashes": true,
 	"downloaderCacheDirectory": "../.cache",
 	"changelogCacheMaxPages": 5,
+	"changelogRequestRetryMaxSeconds": 60,
 	"launchscriptsMinRAM": "2048M",
 	"launchscriptsMaxRAM": "2048M",
 	"launchscriptsJVMArgs": "",

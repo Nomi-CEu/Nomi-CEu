@@ -1,4 +1,4 @@
-import sha1 from "sha1";
+import { sha1 } from "hash-wasm";
 import { FileDef } from "#types/fileDef.ts";
 import fs from "fs";
 import buildConfig from "#buildConfig";
@@ -48,6 +48,7 @@ const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 export const git: SimpleGit = simpleGit(rootDirectory);
 
 const RetryOctokit = Octokit.plugin(retry, throttling);
+let shouldTryGetInfo = true;
 export const octokit = new RetryOctokit({
 	auth: process.env.GITHUB_TOKEN,
 	throttle: {
@@ -57,8 +58,15 @@ export const octokit = new RetryOctokit({
 			);
 
 			if (retryCount < buildConfig.downloaderMaxRetries) {
-				logInfo(`Retrying after ${retryAfter} seconds.`);
-				return true;
+				if (retryAfter < buildConfig.changelogRequestRetryMaxSeconds) {
+					logInfo(`Retrying after ${retryAfter} seconds.`);
+					return true;
+				}
+				logError(
+					`Reset Time of ${retryAfter} Seconds is Too Long! Not Retrying!`,
+				);
+				shouldTryGetInfo = false;
+				return false;
 			}
 		},
 		onSecondaryRateLimit: (retryAfter, options, _octokit, retryCount) => {
@@ -67,8 +75,15 @@ export const octokit = new RetryOctokit({
 			);
 
 			if (retryCount < buildConfig.downloaderMaxRetries) {
-				logInfo(`Retrying after ${retryAfter} seconds.`);
-				return true;
+				if (retryAfter < buildConfig.changelogRequestRetryMaxSeconds) {
+					logInfo(`Retrying after ${retryAfter} seconds.`);
+					return true;
+				}
+				logError(
+					`Reset Time of ${retryAfter} Seconds is Too Long! Not Retrying!`,
+				);
+				shouldTryGetInfo = false;
+				return false;
 			}
 		},
 	},
@@ -111,9 +126,12 @@ fileDownloader.interceptors.response.use(async (response) => {
 	if (!buffer)
 		throw new Error(`Failed to Download File from ${url}, no Buffer Returned!`);
 	if (nomiCfg.fileDef.hashes) {
-		const success = nomiCfg.fileDef.hashes.every((hashDef) => {
-			return compareBufferToHashDef(buffer, hashDef);
-		});
+		let success = true;
+		for (const hash of nomiCfg.fileDef.hashes) {
+			if (await compareBufferToHashDef(buffer, hash)) continue;
+			success = false;
+			break;
+		}
 		if (!success)
 			return retryOrThrow(
 				response,
@@ -197,7 +215,7 @@ export interface RetrievedFileDef {
 export async function downloadOrRetrieveFileDef(
 	fileDef: FileDef,
 ): Promise<RetrievedFileDef> {
-	const fileNameSha = sha1(fileDef.url);
+	const fileNameSha = await sha1(fileDef.url);
 
 	const cachedFilePath = upath.join(
 		buildConfig.downloaderCacheDirectory,
@@ -214,13 +232,13 @@ export async function downloadOrRetrieveFileDef(
 
 			// Check hashes.
 			if (fileDef.hashes) {
-				if (
-					fileDef.hashes.every((hashDef) => {
-						return compareBufferToHashDef(file, hashDef);
-					})
-				) {
-					return rFileDef;
+				let success = true;
+				for (const hash of fileDef.hashes) {
+					if (await compareBufferToHashDef(file, hash)) continue;
+					success = false;
+					break;
 				}
+				if (success) return rFileDef;
 			} else {
 				return rFileDef;
 			}
@@ -641,6 +659,10 @@ const issueURLCache: Map<number, string> = new Map<number, string>();
  */
 export async function getIssueURLs(): Promise<void> {
 	if (issueURLCache.size > 0) return;
+	if (!shouldTryGetInfo) {
+		logError("Skipping Get Issues because of Rate Limits!");
+		return;
+	}
 	try {
 		let page = 1;
 		const issues = await octokit.paginate(
@@ -679,6 +701,7 @@ export async function getIssueURLs(): Promise<void> {
 export async function getIssueURL(issueNumber: number): Promise<string> {
 	if (issueURLCache.has(issueNumber))
 		return issueURLCache.get(issueNumber) ?? "";
+	if (!shouldTryGetInfo) return "";
 	try {
 		// Try to retrieve, might be open
 		const issueInfo = await octokit.issues.get({
@@ -715,6 +738,10 @@ const commitAuthorCache: Map<string, string> = new Map<string, string>();
  */
 export async function getCommitAuthors(): Promise<void> {
 	if (commitAuthorCache.size > 0) return;
+	if (!shouldTryGetInfo) {
+		logError("Skipping Get Commits because of Rate Limits!");
+		return;
+	}
 	try {
 		let page = 1;
 		const commits = await octokit.paginate(
@@ -756,6 +783,8 @@ export async function formatAuthor(commit: Commit) {
 		if (login) return `@${login}`;
 		return defaultFormat;
 	}
+
+	if (!shouldTryGetInfo) return defaultFormat;
 
 	try {
 		// Try to retrieve, just in case
@@ -881,7 +910,6 @@ export function shouldSkipChangelog(): boolean {
 		throw new Error("Skip Changelog Env Variable set to Invalid Value.");
 	}
 
-	if (skip)
-		logInfo("Skipping Changelogs...");
+	if (skip) logInfo("Skipping Changelogs...");
 	return skip;
 }
