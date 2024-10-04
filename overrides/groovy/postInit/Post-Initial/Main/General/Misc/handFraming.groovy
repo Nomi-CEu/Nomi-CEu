@@ -42,13 +42,13 @@ for (ItemStack stack : items) {
 				.name(recipeName)
 				.output(recipeStack)
 				.matrix(
-					'ST ',
+					'IT ',
 					'FS ',
 					'   ')
 				.key('S', item("xtones:zane"))
 				.key('T', trim ? item("extendedcrafting:storage", 4) : IIngredient.EMPTY)
 				.key('F', front ? item("xtones:zane", 15) : IIngredient.EMPTY)
-				.key('S', stack)
+				.key('I', stack)
 				.recipeClassFunction((output, width, height, ingredients) -> new ShapedDummyRecipe(output, ingredients, width, height, false))
 				.register()
 
@@ -66,9 +66,6 @@ for (ItemStack stack : items) {
 static String getRecipeName(ItemStack stack, boolean trim, boolean front) {
 	String baseName = "nomiceu:hand_framing_"
 
-	// We have to use safe method helpers, because some items from Framed Compacting Drawers mislabel addInformation,
-	// Without SideOnly, so it crashes.
-	// Use the special of class type so the addInformation method isn't loaded.
 	def rl = stack.getItem().getRegistryName()
 	if (rl != null)
 		baseName = baseName + rl.getNamespace() + "_" + rl.getPath()
