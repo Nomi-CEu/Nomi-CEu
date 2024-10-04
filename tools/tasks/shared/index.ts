@@ -16,6 +16,7 @@ import {
 	downloadFileDef,
 	downloadOrRetrieveFileDef,
 	isEnvVariableSet,
+	promiseStream,
 	shouldSkipChangelog,
 } from "#utils/util.ts";
 import transformVersion from "./transformVersion.ts";
@@ -51,27 +52,23 @@ async function createSharedDirs() {
  */
 async function copyOverrides() {
 	// Copy, not Symlink, so we can transform the files as we wish
-	return new Promise((resolve) => {
+	return promiseStream(
 		src(buildConfig.copyToSharedDirGlobs, {
 			cwd: upath.join(rootDirectory),
 			encoding: false,
-		})
-			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
-			.on("end", resolve);
-	});
+		}).pipe(dest(upath.join(sharedDestDirectory, overridesFolder))),
+	);
 }
 
 /**
  * Copies Modpack Pack Mode Switcher Scripts.
  */
 async function copyPackModeSwitchers() {
-	return new Promise((resolve) => {
+	return promiseStream(
 		src(buildConfig.packModeSwitcherGlobs, {
 			cwd: upath.join(rootDirectory),
-		})
-			.pipe(dest(upath.join(sharedDestDirectory, overridesFolder)))
-			.on("end", resolve);
-	});
+		}).pipe(dest(upath.join(sharedDestDirectory, overridesFolder))),
+	);
 }
 
 /**
@@ -117,6 +114,20 @@ async function fetchExternalDependencies() {
  */
 async function fetchOrMakeChangelog() {
 	if (shouldSkipChangelog()) return;
+
+	if (isEnvVariableSet("MADE_CHANGELOG")) {
+		let made = false;
+		try {
+			made = JSON.parse((process.env.MADE_CHANGELOG ?? "false").toLowerCase());
+		} catch (err) {
+			throw new Error("Made Changelog Env Variable set to Invalid Value.");
+		}
+
+		if (made) {
+			logInfo("Already Made Changelogs...");
+			return;
+		}
+	}
 
 	if (
 		isEnvVariableSet("CHANGELOG_URL") &&
@@ -199,4 +210,10 @@ export default gulp.series(
 	updateBuildLabsVersion,
 	transformVersion,
 	transformQuestBook,
+);
+
+export const buildChangelog = gulp.series(
+	sharedCleanUp,
+	createSharedDirs,
+	fetchOrMakeChangelog,
 );

@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - test_buildscript*
+      - test-buildscript*
       - dev/*
     paths-ignore:
       - "README.md"

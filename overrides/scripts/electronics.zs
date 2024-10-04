@@ -92,12 +92,6 @@ recipes.addShaped(<enderio:item_redstone_conduit> * 4, [
 	[<metaitem:wireGtSingleRedAlloy>,<metaitem:wireGtSingleRedAlloy>,<metaitem:wireGtSingleRedAlloy>], 
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
-//me conduit - by hand
-recipes.addShaped(<enderio:item_me_conduit> * 4, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<appliedenergistics2:part:36>,<appliedenergistics2:part:36>,<appliedenergistics2:part:36>], 
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
-
 //redstone conduit - assembler
 assembler.recipeBuilder()
     .inputs([<metaitem:wireGtSingleRedAlloy> * 3, <ore:itemConduitBinder> * 6])
