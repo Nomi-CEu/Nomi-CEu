@@ -1,10 +1,12 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import net.minecraft.enchantment.Enchantment
 import net.minecraft.item.ItemStack
 
 import static gregtech.api.GTValues.*
 
 // Add Airtight Seal Recipes
-ItemStack airtight = item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) 12, 'lvl': (short) 1]]])
+int airtightId = Enchantment.getEnchantmentID(enchantment('advancedrocketry:spacebreathing'))
+ItemStack airtight = item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) airtightId, 'lvl': (short) 1]]])
 
 if (LabsModeHelper.normal) {
 	mods.gregtech.assembler.recipeBuilder()
@@ -23,6 +25,8 @@ if (LabsModeHelper.normal) {
 		.duration(500).EUt(VA[HV])
 		.buildAndRegister()
 } else {
+	int respirationId = Enchantment.getEnchantmentID(enchantment('minecraft:respiration'))
+	int holdingId = Enchantment.getEnchantmentID(enchantment('cofhcore:holding'))
 	mods.extendedcrafting.table_crafting.shapedBuilder()
 		.tierAdvanced()
 		.output(airtight * 4)
@@ -38,11 +42,11 @@ if (LabsModeHelper.normal) {
 		.key('C', metaitem('gas_collector.hv'))
 		.key('T', ore('plateDoubleTitanium'))
 		.key('P', item('advancedrocketry:pressuretank', 1)) // Normal Pressure Tank
-		.key('Z', item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) 5, 'lvl': (short) 3]]])) // Respiration 3
+		.key('Z', item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) respirationId, 'lvl': (short) 3]]])) // Respiration 3
 		.key('F', metaitem('fluid.regulator.ev'))
 		.key('A', metaitem('pipeNormalFluidPolytetrafluoroethylene'))
 		.key('D', ore('dustQuicklime'))
-		.key('Y', item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) 36, 'lvl': (short) 4]]])) // Holding 4
+		.key('Y', item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) holdingId, 'lvl': (short) 4]]])) // Holding 4
 		.key('B', metaitem('chemical_reactor.hv'))
 		.key('X', metaitem('duct_tape'))
 		.register()
