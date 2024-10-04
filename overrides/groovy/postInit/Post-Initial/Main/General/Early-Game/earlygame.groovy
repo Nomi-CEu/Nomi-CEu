@@ -1,5 +1,8 @@
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
+import com.nomiceu.nomilabs.groovy.RecipePredicates
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.builders.SimpleRecipeBuilder
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
@@ -197,3 +200,36 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(robotArm)
 	.duration(50).EUt(VA[ULV])
 	.buildAndRegister()
+
+// Lubricant Alternatives (Per Oil)
+ChangeRecipeBuilderCollection<SimpleRecipeBuilder> lubeRecipes = mods.gregtech.brewery.changeByOutput(
+	RecipePredicates.hasExactlyFluidInput(fluid('oil') * 1000),
+	null, [fluid('lubricant') * 1000])
+
+// Raw Oil: 2x Input, 0.5x Output
+lubeRecipes.forEach {
+	it.builder {
+		it.clearFluidInputs()
+			.fluidInputs(fluid('oil_medium') * 2000)
+	}.buildAndRegister()
+}
+
+// Light Oil: 1x Input, 0.5x Output
+lubeRecipes.copy().forEach {
+	it.builder {
+		it.clearFluidInputs()
+			.fluidInputs(fluid('oil_light') * 1000)
+	}.changeEachFluidOutput {
+		return it * (it.amount / 2)
+	}.buildAndRegister()
+}
+
+// Heavy Oil: 1x Input, 4x Output
+lubeRecipes.copy().forEach {
+	it.builder {
+		it.clearFluidInputs()
+			.fluidInputs(fluid('oil_heavy') * 1000)
+	}.changeEachFluidOutput {
+		return it * (it.amount * 4)
+	}.buildAndRegister()
+}
