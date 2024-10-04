@@ -1,4 +1,5 @@
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.ingredients.GTRecipeItemInput
@@ -287,17 +288,14 @@ for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 2
 // Add Circuits to Quartz and Certus Quartz Autoclave Recipes (So Doesn't Conflict with Purified Shortcut)
 
 // 2D List of Recipes, Each List is Seperate Quartz Type
-List<List<ChangeRecipeBuilder>> quartzRecipes = []
+List<ChangeRecipeBuilderCollection> quartzRecipes = []
 
 for (ItemStack quartz : [item('minecraft:quartz'), metaitem('gemCertusQuartz')]) {
-	List<ChangeRecipeBuilder> toAdd = []
-	toAdd.addAll(mods.gregtech.autoclave.changeByOutput(null, null, [chanced(quartz, 7000, 1000)], null).iterator())
-	toAdd.addAll(mods.gregtech.autoclave.changeByOutput([quartz], null).iterator())
-
-	quartzRecipes.add(toAdd)
+	quartzRecipes.add(mods.gregtech.autoclave.changeByOutput(null, null, [chanced(quartz, 7000, 1000)], null)
+		.with(mods.gregtech.autoclave.changeByOutput([quartz], null)))
 }
 
-quartzRecipes.forEach { List<ChangeRecipeBuilder> builders ->
+quartzRecipes.forEach { ChangeRecipeBuilderCollection builders ->
 	builders.forEach { ChangeRecipeBuilder builder ->
 		builder.builder { RecipeBuilder recipe ->
 			recipe.circuitMeta(1)
@@ -306,9 +304,8 @@ quartzRecipes.forEach { List<ChangeRecipeBuilder> builders ->
 }
 
 // Copy a Quartz Recipe for Fluix
-quartzRecipes[0].forEach { builder ->
-	builder.copyOriginal()
-	.builder { RecipeBuilder recipe ->
+quartzRecipes[0].copy().forEach { ChangeRecipeBuilder builder ->
+	builder.builder { RecipeBuilder recipe ->
 		recipe.clearInputs()
 			.inputs(item('appliedenergistics2:material', 8))
 			.circuitMeta(1)
