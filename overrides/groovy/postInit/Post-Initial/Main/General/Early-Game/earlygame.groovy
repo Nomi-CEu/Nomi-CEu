@@ -1,4 +1,7 @@
+import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import net.minecraft.item.ItemStack
+import net.minecraftforge.fluids.FluidStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
@@ -119,3 +122,78 @@ mods.gregtech.assembler.recipeBuilder()
 	.outputs(metaitem('circuit_board.basic'))
 	.duration(100).EUt(VA[ULV])
 	.replace().buildAndRegister()
+
+/* ULV Covers */
+List<OreDictIngredient> rings = [ore('ringRubber'), ore('ringSiliconeRubber'), ore('ringStyreneButadieneRubber')]
+List<OreDictIngredient> plates = [ore('plateSiliconeRubber'), ore('plateStyreneButadieneRubber')]
+List<FluidStack> fluids = [fluid('rubber'), fluid('silicone_rubber'), fluid('styrene_butadiene_rubber')]
+
+ItemStack motor = metaitem('ulv_covers:electric.motor.ulv')
+ItemStack piston = metaitem('ulv_covers:electric.piston.ulv')
+ItemStack pump = metaitem('ulv_covers:electric.pump.ulv')
+ItemStack conveyor = metaitem('ulv_covers:conveyor.module.ulv')
+ItemStack robotArm = metaitem('ulv_covers:robot.arm.ulv')
+
+// Crafting: Pump, Copper Pipe -> Bronze Small Pipe, SiR and SBR Options
+crafting.removeByOutput(pump)
+for (var ring : rings) {
+	crafting.shapedBuilder()
+		.output(pump)
+		.matrix('PS', 'MR')
+		.key('P', ore('pipeTinyFluidBronze'))
+		.key('S', ore('rotorBronze'))
+		.key('M', motor)
+		.key('R', ring)
+		.register()
+}
+
+// Crafting: Conveyor, SiR and SBR Options
+for (var plate : plates) {
+	crafting.shapedBuilder()
+		.output(conveyor)
+		.matrix('PC', 'MP')
+		.key('P', plate)
+		.key('C', ore('cableGtSingleLead'))
+		.key('M', motor)
+		.register()
+}
+
+// Assembler: Motor
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('wireGtSingleTin') * 2, ore('stickBronze'), ore('stickIronMagnetic'))
+	.outputs(motor)
+	.duration(50).EUt(VA[ULV])
+	.buildAndRegister()
+
+// Assembler: Piston
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('stickBronze'), ore('plateBronze'), ore('gearSmallBronze'), motor)
+	.outputs(piston)
+	.duration(50).EUt(VA[ULV])
+	.buildAndRegister()
+
+// Assembler: Pump
+for (var ring : rings) {
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('pipeTinyFluidBronze'), ore('rotorBronze'), ring, motor)
+		.outputs(pump)
+		.duration(50).EUt(VA[ULV])
+		.buildAndRegister()
+}
+
+// Assembler: Conveyor
+for (var fluid : fluids) {
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(ore('cableGtSingleLead'), motor)
+		.fluidInputs(fluid * 288)
+		.outputs(conveyor)
+		.duration(50).EUt(VA[ULV])
+		.buildAndRegister()
+}
+
+// Assembler: Robot Arm
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('stickBronze'), motor, piston, ore('circuitUlv'))
+	.outputs(robotArm)
+	.duration(50).EUt(VA[ULV])
+	.buildAndRegister()
