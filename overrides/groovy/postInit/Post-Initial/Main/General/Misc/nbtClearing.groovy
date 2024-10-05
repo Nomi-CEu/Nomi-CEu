@@ -27,12 +27,33 @@ for (def meta : 1..15) {
 }
 
 /* Drawers */
+/* Also voids upgrades, but if we didn't, it would look as if not nmpty */
 // Wooden Type Drawers
+for (def meta : 0..4) {
+    nbtClearingRecipe(item('storagedrawers:basicdrawers', meta), {
+        it.tagCompound = transferSubTags(it, 'material')
+    })
+}
 
+// Compacting Drawers
+nbtClearingRecipe(item('storagedrawers:compdrawers'))
+
+/* Framed Drawer Like */
+def framedClearer = { ItemStack it ->
+    it.tagCompound = transferSubTags(it, 'MatS', 'MatT', 'MatF')
+}
+
+// Framed Drawers
+for (def meta : 0..4) {
+    nbtClearingRecipe(item('storagedrawers:customdrawers', meta), framedClearer)
+}
+
+// Framed Compacting Drawers
+nbtClearingRecipe(item('framedcompactdrawers:framed_compact_drawer'), framedClearer)
 
 // Thermal Portable Tanks
 nbtClearingRecipe(item('thermalexpansion:tank'), {
-    transferSubTags(it, 'Creative', 'Level', 'RSControl')
+    it.tagCompound = transferSubTags(it, 'Creative', 'Level', 'RSControl')
 })
 
 // Tooltips for Other Clearable Containers
