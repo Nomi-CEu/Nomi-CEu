@@ -1,4 +1,5 @@
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import gregtech.api.recipes.RecipeBuilder
 
 import static gregtech.api.GTValues.*
@@ -12,7 +13,7 @@ var ptfe = fluid('polytetrafluoroethylene')
 var pbi = fluid('polybenzimidazole')
 
 for (var tier : peHulls) {
-	var peRecipes = mods.gregtech.assembler.changeByOutput([HULL.getIngredient(tier)], null)
+	ChangeRecipeBuilderCollection peRecipes = mods.gregtech.assembler.changeByOutput([HULL.getIngredient(tier)], null)
 	peRecipes.forEach { ChangeRecipeBuilder it ->
 		it.builder { RecipeBuilder builder ->
 			builder.clearFluidInputs()
@@ -20,12 +21,11 @@ for (var tier : peHulls) {
 		}.buildAndRegister()
 	}
 
-	peRecipes.forEach { ChangeRecipeBuilder it ->
-		it.copyOriginal()
-			.builder { RecipeBuilder builder ->
-				builder.clearFluidInputs()
-					.fluidInputs(pbi * 72)
-			}.buildAndRegister()
+	peRecipes.copy().forEach { ChangeRecipeBuilder it ->
+		it.builder { RecipeBuilder builder ->
+			builder.clearFluidInputs()
+				.fluidInputs(pbi * 72)
+		}.buildAndRegister()
 	}
 }
 
