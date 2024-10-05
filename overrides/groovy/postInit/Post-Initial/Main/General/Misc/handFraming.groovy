@@ -42,8 +42,8 @@ for (ItemStack stack : items) {
 				.name(recipeName)
 				.output(recipeStack)
 				.matrix(
-					'IT ',
-					'FS ',
+					'ST ',
+					'FI ',
 					'   ')
 				.key('S', item("xtones:zane"))
 				.key('T', trim ? item("extendedcrafting:storage", 4) : IIngredient.EMPTY)
