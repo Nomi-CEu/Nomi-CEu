@@ -13,6 +13,18 @@
       "expert": 3
     },
     {
+      "normal": 6,
+      "expert": 6
+    },
+    {
+      "normal": 7,
+      "expert": 7
+    },
+    {
+      "normal": 10,
+      "expert": 10
+    },
+    {
       "normal": 19,
       "expert": 53
     },
@@ -57,8 +69,16 @@
       "expert": 65
     },
     {
+      "normal": 68,
+      "expert": 68
+    },
+    {
       "normal": 78,
       "expert": 78
+    },
+    {
+      "normal": 81,
+      "expert": 81
     },
     {
       "normal": 84,
@@ -133,12 +153,32 @@
       "expert": 150
     },
     {
+      "normal": 153,
+      "expert": 153
+    },
+    {
+      "normal": 156,
+      "expert": 156
+    },
+    {
       "normal": 159,
       "expert": 159
     },
     {
       "normal": 167,
       "expert": 167
+    },
+    {
+      "normal": 173,
+      "expert": 173
+    },
+    {
+      "normal": 176,
+      "expert": 176
+    },
+    {
+      "normal": 177,
+      "expert": 177
     },
     {
       "normal": 190,
@@ -157,6 +197,22 @@
       "expert": 201
     },
     {
+      "normal": 202,
+      "expert": 202
+    },
+    {
+      "normal": 204,
+      "expert": 204
+    },
+    {
+      "normal": 208,
+      "expert": 208
+    },
+    {
+      "normal": 210,
+      "expert": 210
+    },
+    {
       "normal": 214,
       "expert": 214
     },
@@ -169,6 +225,10 @@
       "expert": 217
     },
     {
+      "normal": 224,
+      "expert": 224
+    },
+    {
       "normal": 228,
       "expert": 228
     },
@@ -177,12 +237,32 @@
       "expert": 240
     },
     {
+      "normal": 245,
+      "expert": 245
+    },
+    {
+      "normal": 246,
+      "expert": 246
+    },
+    {
       "normal": 251,
       "expert": 251
     },
     {
+      "normal": 252,
+      "expert": 252
+    },
+    {
       "normal": 253,
       "expert": 253
+    },
+    {
+      "normal": 254,
+      "expert": 254
+    },
+    {
+      "normal": 255,
+      "expert": 255
     },
     {
       "normal": 262,
@@ -207,6 +287,18 @@
     {
       "normal": 311,
       "expert": 311
+    },
+    {
+      "normal": 314,
+      "expert": 314
+    },
+    {
+      "normal": 315,
+      "expert": 315
+    },
+    {
+      "normal": 316,
+      "expert": 316
     },
     {
       "normal": 328,
@@ -273,6 +365,10 @@
       "expert": 512
     },
     {
+      "normal": 519,
+      "expert": 519
+    },
+    {
       "normal": 524,
       "expert": 524
     },
@@ -285,6 +381,10 @@
       "expert": 535
     },
     {
+      "normal": 540,
+      "expert": 540
+    },
+    {
       "normal": 542,
       "expert": 542
     },
@@ -293,8 +393,24 @@
       "expert": 549
     },
     {
+      "normal": 583,
+      "expert": 583
+    },
+    {
+      "normal": 605,
+      "expert": 605
+    },
+    {
+      "normal": 606,
+      "expert": 606
+    },
+    {
       "normal": 672,
       "expert": 672
+    },
+    {
+      "normal": 696,
+      "expert": 696
     },
     {
       "normal": 727,
@@ -321,6 +437,10 @@
       "expert": 1045
     },
     {
+      "normal": 784,
+      "expert": 784
+    },
+    {
       "normal": 785,
       "expert": 785
     },
@@ -341,6 +461,10 @@
       "expert": 828
     },
     {
+      "normal": 834,
+      "expert": 834
+    },
+    {
       "normal": 838,
       "expert": 838
     },
@@ -357,8 +481,16 @@
       "expert": 849
     },
     {
+      "normal": 853,
+      "expert": 853
+    },
+    {
       "normal": 856,
       "expert": 856
+    },
+    {
+      "normal": 859,
+      "expert": 859
     },
     {
       "normal": 880,
@@ -379,6 +511,26 @@
     {
       "normal": 906,
       "expert": 906
+    },
+    {
+      "normal": 914,
+      "expert": 914
+    },
+    {
+      "normal": 923,
+      "expert": 923
+    },
+    {
+      "normal": 926,
+      "expert": 926
+    },
+    {
+      "normal": 952,
+      "expert": 922
+    },
+    {
+      "normal": 962,
+      "expert": 805
     },
     {
       "normal": 967,
@@ -431,6 +583,10 @@
     {
       "normal": 1037,
       "expert": 1037
+    },
+    {
+      "normal": 1038,
+      "expert": 1038
     },
     {
       "normal": 1042,
@@ -535,10 +691,24 @@
     {
       "normal": 1071,
       "expert": 1073
+    },
+    {
+      "normal": 1075,
+      "expert": 1077
+    },
+    {
+      "normal": 1076,
+      "expert": 1078
+    },
+    {
+      "normal": 1077,
+      "expert": 1079
     }
   ],
   "ignoreQuestsNormal": [
-    959
+    959,
+    958,
+    1014
   ],
   "ignoreQuestsExpert": [],
   "alwaysAskQuestsNormal": [],
