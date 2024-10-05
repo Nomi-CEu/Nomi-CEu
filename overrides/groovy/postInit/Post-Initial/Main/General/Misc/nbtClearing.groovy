@@ -35,6 +35,12 @@ for (def meta : 0..4) {
     })
 }
 
+// GregTech Drawers
+for (def meta : 0..4) {
+    nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_rubber_wood', meta))
+    nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_treated_wood', meta))
+}
+
 // Compacting Drawers
 nbtClearingRecipe(item('storagedrawers:compdrawers'))
 
