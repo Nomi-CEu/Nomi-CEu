@@ -2,7 +2,7 @@ import { modpackManifest } from "#globals";
 import { FORGE_MAVEN, getForgeJar, getVersionManifest } from "#utils/util.ts";
 import unzip from "unzipper";
 import { ForgeProfile } from "#types/forgeProfile.ts";
-import sha1 from "sha1";
+import { sha1 } from "hash-wasm";
 import { fetchFileInfo } from "#utils/curseForgeAPI.ts";
 import fs from "fs";
 import upath from "upath";
@@ -91,16 +91,14 @@ export default async function pruneCache(): Promise<void> {
 			.isFile(),
 	);
 
-	const shaMap: { [key: string]: boolean } = urls.reduce(
-		(map: Record<string, boolean>, url) => {
-			map[sha1(url)] = true;
-			return map;
-		},
-		{},
-	);
+	const shaMap: { [key: string]: boolean } = {};
+	const hashes = await Promise.all(urls.map((url) => sha1(url)));
+	for (const hash of hashes) {
+		shaMap[hash] = true;
+	}
 
-	let count = 0,
-		bytes = 0;
+	let count = 0;
+	let bytes = 0;
 
 	for (const sha of cache) {
 		if (!shaMap[sha]) {

@@ -11,6 +11,7 @@ import {
 	downloadOrRetrieveFileDef,
 	getForgeJar,
 	getVersionManifest,
+	promiseStream,
 	shouldSkipChangelog,
 } from "#utils/util.ts";
 import {
@@ -173,47 +174,55 @@ async function downloadMinecraftServer() {
  * Copies server & shared mods.
  */
 async function copyServerMods() {
-	return src(["*", upath.join("server", "*")], {
-		cwd: modDestDirectory,
-		resolveSymlinks: true,
-		encoding: false,
-	}).pipe(dest(upath.join(serverDestDirectory, "mods")));
+	return promiseStream(
+		src(["*", upath.join("server", "*")], {
+			cwd: modDestDirectory,
+			resolveSymlinks: true,
+			encoding: false,
+		}).pipe(dest(upath.join(serverDestDirectory, "mods"))),
+	);
 }
 
 /**
  * Copies modpack overrides.
  */
 async function copyServerOverrides() {
-	return src(buildConfig.copyFromSharedServerGlobs, {
-		cwd: sharedDestDirectory,
-		allowEmpty: true,
-		resolveSymlinks: true,
-		encoding: false,
-	}).pipe(dest(upath.join(serverDestDirectory)));
+	return promiseStream(
+		src(buildConfig.copyFromSharedServerGlobs, {
+			cwd: sharedDestDirectory,
+			allowEmpty: true,
+			resolveSymlinks: true,
+			encoding: false,
+		}).pipe(dest(upath.join(serverDestDirectory))),
+	);
 }
 
 /**
  * Copies files from ./serverfiles into dest folder.
  */
 async function copyServerFiles() {
-	return src(["../serverfiles/**"], {
-		encoding: false, // Needed because of the Server Icon
-	}).pipe(dest(serverDestDirectory));
+	return promiseStream(
+		src(["../serverfiles/**"], {
+			encoding: false, // Needed because of the Server Icon
+		}).pipe(dest(serverDestDirectory)),
+	);
 }
 
 /**
  * Copies the license file.
  */
 async function copyServerLicense() {
-	return src("../LICENSE").pipe(dest(serverDestDirectory));
+	return promiseStream(src("../LICENSE").pipe(dest(serverDestDirectory)));
 }
 
 /**
  * Copies the update notes file.
  */
 async function copyServerUpdateNotes() {
-	return src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
-		dest(serverDestDirectory),
+	return promiseStream(
+		src("../UPDATENOTES.md", { allowEmpty: true }).pipe(
+			dest(serverDestDirectory),
+		),
 	);
 }
 
@@ -223,9 +232,11 @@ async function copyServerUpdateNotes() {
 async function copyServerChangelog() {
 	if (shouldSkipChangelog()) return;
 
-	return src(
-		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
-	).pipe(dest(serverDestDirectory));
+	return promiseStream(
+		src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
+			dest(serverDestDirectory),
+		),
+	);
 }
 
 /**
@@ -248,17 +259,19 @@ async function processLaunchscripts() {
 		logWarn("Did downloadForge task fail?");
 	}
 
-	return src(["../launchscripts/**"])
-		.pipe(
-			through.obj((file, _, callback) => {
-				if (file.isBuffer()) {
-					const rendered = mustache.render(file.contents.toString(), rules);
-					file.contents = Buffer.from(rendered);
-				}
-				callback(null, file);
-			}),
-		)
-		.pipe(dest(serverDestDirectory));
+	return promiseStream(
+		src(["../launchscripts/**"])
+			.pipe(
+				through.obj((file, _, callback) => {
+					if (file.isBuffer()) {
+						const rendered = mustache.render(file.contents.toString(), rules);
+						file.contents = Buffer.from(rendered);
+					}
+					callback(null, file);
+				}),
+			)
+			.pipe(dest(serverDestDirectory)),
+	);
 }
 
 export default series(
