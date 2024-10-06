@@ -3,7 +3,9 @@ import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.NBTClearingRecipeHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.CAN_CLEAR_TOOLTIP
+import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.WARNING_TOOLTIP
 import static gregtech.common.metatileentities.MetaTileEntities.*
 
 // NBT Clearing Recipes
@@ -23,16 +25,24 @@ for (def material : ["wood", "bronze", "steel", "aluminium", "stainless_steel", 
 
 // NC Coolers
 for (def meta : 1..15) {
-    nbtClearingRecipe(item('nuclearcraft:cooler', meta), item('nuclearcraft:cooler'))
+    nbtClearingRecipe(item('nuclearcraft:cooler', meta), item('nuclearcraft:cooler'),
+            translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.can_clear'),
+            translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.warning'))
 }
 
 /* Drawers */
+// Add empty can clear tooltip, as we want to add multiple lines
+var empty = translatableEmpty()
+List<ItemStack> canClearDrawers = []
+
 // Wooden Type Drawers
 for (def meta : 0..4) {
     nbtClearingRecipe(item('storagedrawers:basicdrawers', meta), {
         var tag = transferSubTags(it, 'material')
         it.tagCompound = transferDrawerUpgradeData(it, tag)
-    })
+    }, empty, WARNING_TOOLTIP)
+
+    canClearDrawers.add(item('storagedrawers:basicdrawers', meta))
 }
 
 var normalClearer = { ItemStack it ->
@@ -41,12 +51,18 @@ var normalClearer = { ItemStack it ->
 
 // GregTech Drawers
 for (def meta : 0..4) {
-    nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_rubber_wood', meta), normalClearer)
-    nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_treated_wood', meta), normalClearer)
+    nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_rubber_wood', meta), normalClearer,
+            empty, WARNING_TOOLTIP)
+    nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_treated_wood', meta), normalClearer,
+            empty, WARNING_TOOLTIP)
+
+    canClearDrawers.add(item('gregtechdrawers:basicdrawers_gregtech_rubber_wood', meta))
+    canClearDrawers.add(item('gregtechdrawers:basicdrawers_gregtech_treated_wood', meta))
 }
 
 // Compacting Drawers
-nbtClearingRecipe(item('storagedrawers:compdrawers'), normalClearer)
+nbtClearingRecipe(item('storagedrawers:compdrawers'), normalClearer, empty, WARNING_TOOLTIP)
+canClearDrawers.add(item('storagedrawers:compdrawers'))
 
 /* Framed Drawer Like */
 def framedClearer = { ItemStack it ->
@@ -56,11 +72,18 @@ def framedClearer = { ItemStack it ->
 
 // Framed Drawers
 for (def meta : 0..4) {
-    nbtClearingRecipe(item('storagedrawers:customdrawers', meta), framedClearer)
+    nbtClearingRecipe(item('storagedrawers:customdrawers', meta), framedClearer, empty, WARNING_TOOLTIP)
+    canClearDrawers.add(item('storagedrawers:customdrawers', meta))
 }
 
 // Framed Compacting Drawers
-nbtClearingRecipe(item('framedcompactdrawers:framed_compact_drawer'), framedClearer)
+nbtClearingRecipe(item('framedcompactdrawers:framed_compact_drawer'), framedClearer, empty, WARNING_TOOLTIP)
+canClearDrawers.add(item('framedcompactdrawers:framed_compact_drawer'))
+
+for (var canClear : canClearDrawers) {
+    addTooltip(canClear, [translatable('nomiceu.tooltip.drawers.nbt_clearing.drawers.can_clear.1'),
+                          translatable('nomiceu.tooltip.drawers.nbt_clearing.drawers.can_clear.2')])
+}
 
 // Thermal Portable Tanks
 nbtClearingRecipe(item('thermalexpansion:tank'), {
