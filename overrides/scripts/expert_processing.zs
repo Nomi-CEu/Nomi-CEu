@@ -582,7 +582,8 @@ sifter.recipeBuilder()
 // Rhodium
 blast_furnace.recipeBuilder()
     .inputs(<metaitem:nomilabs:dustPlatinumGroupResidue>, <metaitem:nomilabs:dustPotassiumPyrosulfate> * 11)
-    .outputs(<metaitem:dustRhodiumSulfate>, <metaitem:nomilabs:dustPotassiumSulfate> * 14, <metaitem:nomilabs:dustIridiumGroupSludge>)
+    .outputs(<metaitem:dustRhodiumSulfate>, <metaitem:nomilabs:dustPotassiumSulfate> * 7, <metaitem:nomilabs:dustIridiumGroupSludge>)
+    .fluidOutputs(<liquid:sulfur_trioxide> * 1000)
     .property("temperature", 1048)
     .duration(200).EUt(120).buildAndRegister();
 
