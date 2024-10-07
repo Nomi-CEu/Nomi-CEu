@@ -10987,6 +10987,7 @@
         60,
         91,
         836,
+        895,
         1040
       ],
       "properties:10": {
@@ -16552,7 +16553,6 @@
     "236:10": {
       "preRequisites:11": [
         96,
-        894,
         1041
       ],
       "properties:10": {
@@ -31580,7 +31580,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest completes with any wood-type drawer, or a Framed Drawer and a Framing Table.\n\n§bStorage Drawers§r provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§r is useful for making custom drawers out of §6Framed Drawers§r, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers§r in-world, with the cost of some sticks.\n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free!\n\nSee the uses of the framing tool in §eJEI§r and the §eJEI Information Page§r of the Hand Framing Tool§r for more information.\n\nFurthermore, you can do special stuff with your drawers, with §6Keys§r! Search §e@StorageDrawers Keys§r in §bJEI§r to see them! You can do things from \u0027locking\u0027 the drawer, meaning only that item can enter the drawer, show how many items are in the drawer, and even remove the display of items!\n\n§cPlease note that excessive use of the Quantify Key may lead to lag.",
+          "desc:8": "§oThis quest completes with any wood-type drawer, or a Framed Drawer and a Framing Table.\n\n§bStorage Drawers§r provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nBreaking Drawers will not drop the items, instead, the items will stay in the drawer item. Place drawers in a §6Crafting Grid§r to clear contents. Note that §eDrawer Upgrades§r will not be cleared!\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§r is useful for making custom drawers out of §6Framed Drawers§r, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers§r in-world, with the cost of some sticks.\n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free!\n\nSee the uses of the framing tool in §eJEI§r and the §eJEI Information Page§r of the Hand Framing Tool§r for more information.\n\nFurthermore, you can do special stuff with your drawers, with §6Keys§r! Search §e@StorageDrawers Keys§r in §bJEI§r to see them! You can do things from \u0027locking\u0027 the drawer, meaning only that item can enter the drawer, show how many items are in the drawer, and even remove the display of items!\n\n§cPlease note that excessive use of the Quantify Key may lead to lag.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51428,7 +51428,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts a Power Unit of any voltage (LV, MV, HV, EV \u0026 IV). §r\n\nWith §bGregTech §6Power Storage§r unlocked, you can make §aPower Units§r for electric GT tools.\n\nCheck if that tool has that tier first! §6Drills§r are available at all tiers, the §6Wrench§r is available at §7LV§r, §6HV§r and §1IV§r, and the other electric tools, such as §6Chainsaws§r and §6Screwdrivers§r are only available at §7LV§r.\n\n§2A new addition among them is the Drill, which at LV tier can mine a 3x3x1 area of blocks, and at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.§r\n\nCharge these with a §6Battery§r of appropriate tier, or in an appropriately tiered §3Machine§r, §3Battery Buffer§r or §3Turbo Charger§r.\n\nYou may want to look into §6Chainsaws§r for mass tree felling as well, or a §6Wrench§r, for breaking machines very quickly. The other electric tools are probably not worth making.",
+          "desc:8": "§oNote: this quest accepts a Power Unit of any voltage (LV, MV, HV, EV \u0026 IV). §r\n\nWith §bGregTech §6Power Storage§r unlocked, you can make §aPower Units§r for electric GT tools.\n\nCheck if that tool has that tier first! §6Drills§r are available at all tiers, the §6Wrench§r is available at §7LV§r, §6HV§r and §1IV§r, and the other electric tools, such as §6Chainsaws§r and §6Screwdrivers§r are only available at §7LV§r.\n\nCharge these with a §6Battery§r of appropriate tier, or in an appropriately tiered §3Machine§r, §3Battery Buffer§r or §3Turbo Charger§r.\n\nWhen you want to upgrade or change the §eTool Head§r, simply place your electric tool in a §6Crafting Grid§r with the new head!\n\n§2A new addition among them is the Drill§r.\n\nA powerful mining tool, which at LV tier can mine a 3x3x1 area of blocks, and at MV tier can mine a 3x3x3 area of blocks.\n\nHigher tier drills can mine 5x5x5, 7x7x7 and 9x9x9 areas! Shift-right-click to change the breaking area.§r\n\nYou may want to look into §6Chainsaws§r for mass tree felling as well, or a §6Wrench§r, for breaking machines very quickly. The other electric tools are probably not worth making.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -52514,6 +52514,10 @@
       }
     },
     "834:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
         96,
         540
@@ -65563,7 +65567,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Multiblock Rotation",
-          "questlogic:8": "AND",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -68203,7 +68207,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
-          "y:3": 356
+          "y:3": 376
         },
         "27:10": {
           "id:3": 86,
@@ -68224,7 +68228,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -460,
-          "y:3": 356
+          "y:3": 376
         },
         "30:10": {
           "id:3": 89,
@@ -68363,8 +68367,8 @@
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -364,
-          "y:3": 476
+          "x:3": -372,
+          "y:3": 460
         },
         "50:10": {
           "id:3": 156,
@@ -68378,7 +68382,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
-          "y:3": 460
+          "y:3": 424
         },
         "52:10": {
           "id:3": 184,
@@ -68426,7 +68430,7 @@
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -540,
+          "x:3": -504,
           "y:3": 544
         },
         "59:10": {
@@ -68461,7 +68465,7 @@
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -368,
+          "x:3": -364,
           "y:3": 568
         },
         "64:10": {
@@ -68594,8 +68598,8 @@
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -320,
-          "y:3": 484
+          "x:3": -364,
+          "y:3": 512
         },
         "83:10": {
           "id:3": 805,
@@ -68762,8 +68766,8 @@
           "id:3": 1013,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -252,
-          "y:3": 580
+          "x:3": -248,
+          "y:3": 576
         },
         "107:10": {
           "id:3": 1028,
@@ -68790,8 +68794,8 @@
           "id:3": 1074,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -356,
-          "y:3": 532
+          "x:3": -276,
+          "y:3": 604
         }
       }
     },
@@ -68818,8 +68822,8 @@
           "id:3": 10,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -808,
-          "y:3": 144
+          "x:3": -684,
+          "y:3": 96
         },
         "1:10": {
           "id:3": 49,
@@ -68839,8 +68843,8 @@
           "id:3": 54,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -660,
-          "y:3": 156
+          "x:3": -672,
+          "y:3": 240
         },
         "4:10": {
           "id:3": 65,
@@ -69063,8 +69067,8 @@
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -720,
-          "y:3": 240
+          "x:3": -572,
+          "y:3": 280
         },
         "36:10": {
           "id:3": 188,
@@ -69077,7 +69081,7 @@
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -684,
+          "x:3": -572,
           "y:3": 240
         },
         "38:10": {
@@ -69140,22 +69144,22 @@
           "id:3": 248,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": 196
+          "x:3": -708,
+          "y:3": 204
         },
         "47:10": {
           "id:3": 249,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": 236
+          "x:3": -708,
+          "y:3": 240
         },
         "48:10": {
           "id:3": 250,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
-          "y:3": 156
+          "x:3": -736,
+          "y:3": 204
         },
         "49:10": {
           "id:3": 255,
@@ -69175,8 +69179,8 @@
           "id:3": 267,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -720,
-          "y:3": 156
+          "x:3": -672,
+          "y:3": 204
         },
         "52:10": {
           "id:3": 275,
@@ -70575,7 +70579,7 @@
           "id:3": 99,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -276,
+          "x:3": -288,
           "y:3": 420
         },
         "4:10": {
@@ -70673,7 +70677,7 @@
           "id:3": 254,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -276,
+          "x:3": -288,
           "y:3": 224
         },
         "18:10": {
@@ -70757,7 +70761,7 @@
           "id:3": 279,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
+          "x:3": -276,
           "y:3": 348
         },
         "30:10": {
@@ -71051,7 +71055,7 @@
           "id:3": 534,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
+          "x:3": -276,
           "y:3": 312
         },
         "72:10": {
@@ -71135,8 +71139,8 @@
           "id:3": 750,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -264,
-          "y:3": 108
+          "x:3": -276,
+          "y:3": 162
         },
         "84:10": {
           "id:3": 776,

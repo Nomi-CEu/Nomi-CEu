@@ -5142,7 +5142,6 @@
     "84:10": {
       "preRequisites:11": [
         81,
-        83,
         88
       ],
       "properties:10": {
@@ -7486,7 +7485,6 @@
     },
     "126:10": {
       "preRequisites:11": [
-        95,
         830
       ],
       "properties:10": {
@@ -8932,8 +8930,7 @@
     },
     "153:10": {
       "preRequisites:11": [
-        93,
-        540
+        93
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -13723,7 +13720,6 @@
     "236:10": {
       "preRequisites:11": [
         95,
-        894,
         1041
       ],
       "properties:10": {
@@ -27355,6 +27351,10 @@
       }
     },
     "502:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
         96,
         894
@@ -28253,7 +28253,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, the §3Naquadah Reactor Mk1§r and the §3Naquadah Reactor Mk2§r. The latter produces significantly more power, but costs a large amounts of §dOmnium§r.",
+          "desc:8": "The §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, §3Naquadah Reactor Mk1§r and §3Naquadah Reactor Mk2§r, the latter produces significantly more power while costing a large amounts of §dOmnium§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42038,7 +42038,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\nTo make §9Styrene-Butadiene Rubber§r, you will need to create §6Raw Styrene-Butadiene Rubber Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. This produces more liquid than §6Silicone Rubber§r, as well as being a more efficient way to coat wires.",
+          "desc:8": "§oNote: this quest accepts Silicone Rubber or Styrene-Butadiene Rubber.\n\n§9Rubber§r has been sufficient for making cables so far, but you will soon discover that this basic type of rubber won\u0027t withstand more than §2Extreme Voltage§r. Higher quality rubber is necessary to properly insulate your wires.\n\nThere are two better types of rubber, and you will eventually need to make both of them. §eThese can also be used for insulating lower voltage wires more efficiently, requiring less fluid§r!\n\n§2Both Styrene-Butadiene Rubber (SBR) and Silicone Rubber (SiR) can wrap any Cable tier.§r However, SBR requires petrochemistry infrastructure you may not have yet, and is not mandatory until you are making late-game components. On the other hand, SiR can conveniently be made from chemicals you are already familiar with, but coats wires less efficiently. By setting this up now, you won\u0027t have to change your wire coating material later!\n\nTo make Silicone Rubber, you will need to create §6Polydimethylsiloxane Dust§r in one of several ways, then mix it with §6Sulfur§r in a §3Chemical Reactor§r. You can then coat wires with it in an §3Assembling Machine§r.\n\n§2To make Styrene-Butadiene Rubber, you will need to create Raw Styrene-Butadiene Rubber Dust in one of several ways, then mix it with Sulfur in a Chemical Reactor. This produces more liquid than Silicone Rubber, as well as being a more efficient way to coat wires.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44833,8 +44833,7 @@
     },
     "834:10": {
       "preRequisites:11": [
-        96,
-        540
+        96
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -48117,7 +48116,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With the MV Assembling Machine, you can assemble a few necessary parts for the next Circuit tier.",
+          "desc:8": "With the §6MV Assembling Machine§r, you can assemble a few necessary parts for the next Circuit tier, and make §6MV Energy Inputs§r, necessary for §eKanthal Ingots§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -54492,7 +54491,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-§bGregTech§r machine adjacent to them. This is extremely handly especially in endgame, allows for immense speedup of §6Draconic Evolution Fusion Crafting, NuclearCraft Fission Reactors, Solar Panels, Resonators§r and more!§r\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 6A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
+          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-§bGregTech§r machine adjacent to them. This is extremely handly especially in endgame, allows for immense speedup of §6Draconic Evolution Fusion Crafting, NuclearCraft Fission Reactor, Solar Panels, Resonators§r and more!§r\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 6A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57825,13 +57824,13 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
-          "y:3": -360
+          "y:3": -364
         },
         "1:10": {
           "id:3": 19,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
+          "x:3": 244,
           "y:3": -104
         },
         "2:10": {
@@ -57852,77 +57851,77 @@
           "id:3": 31,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 632,
+          "x:3": 752,
           "y:3": -488
         },
         "5:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 604,
+          "x:3": 724,
           "y:3": -484
         },
         "6:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
+          "x:3": 756,
           "y:3": -372
         },
         "7:10": {
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 576,
-          "y:3": -180
+          "x:3": 696,
+          "y:3": -184
         },
         "8:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 656,
+          "x:3": 776,
           "y:3": -336
         },
         "9:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 604,
+          "x:3": 724,
           "y:3": -416
         },
         "10:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
+          "x:3": 756,
           "y:3": -448
         },
         "11:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 604,
+          "x:3": 724,
           "y:3": -448
         },
         "12:10": {
           "id:3": 52,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 692,
+          "x:3": 812,
           "y:3": -232
         },
         "13:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
+          "x:3": 756,
           "y:3": -228
         },
         "14:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 636,
+          "x:3": 756,
           "y:3": -416
         },
         "15:10": {
@@ -57930,7 +57929,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
-          "y:3": -404
+          "y:3": -408
         },
         "16:10": {
           "id:3": 71,
@@ -57979,13 +57978,13 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
-          "y:3": -276
+          "y:3": -268
         },
         "23:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
+          "x:3": 28,
           "y:3": -316
         },
         "24:10": {
@@ -58006,14 +58005,14 @@
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 284,
-          "y:3": -448
+          "x:3": 100,
+          "y:3": -404
         },
         "27:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 284,
+          "x:3": 100,
           "y:3": -316
         },
         "28:10": {
@@ -58034,8 +58033,8 @@
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 284,
-          "y:3": -388
+          "x:3": 100,
+          "y:3": -364
         },
         "31:10": {
           "id:3": 89,
@@ -58048,7 +58047,7 @@
           "id:3": 90,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 524,
+          "x:3": 644,
           "y:3": -532
         },
         "33:10": {
@@ -58090,7 +58089,7 @@
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 492,
+          "x:3": 612,
           "y:3": -228
         },
         "39:10": {
@@ -58104,8 +58103,8 @@
           "id:3": 104,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": 484,
-          "y:3": -188
+          "x:3": 604,
+          "y:3": -192
         },
         "41:10": {
           "id:3": 107,
@@ -58125,15 +58124,15 @@
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 364,
-          "y:3": -276
+          "x:3": 488,
+          "y:3": -264
         },
         "44:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -448
+          "x:3": 64,
+          "y:3": -364
         },
         "45:10": {
           "id:3": 130,
@@ -58146,56 +58145,56 @@
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 536,
+          "x:3": 656,
           "y:3": -228
         },
         "47:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 696,
+          "x:3": 816,
           "y:3": -372
         },
         "48:10": {
           "id:3": 133,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 532,
+          "x:3": 652,
           "y:3": -452
         },
         "49:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 536,
-          "y:3": -284
+          "x:3": 656,
+          "y:3": -264
         },
         "50:10": {
           "id:3": 135,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": 528,
+          "x:3": 648,
           "y:3": -380
         },
         "51:10": {
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": 736,
+          "x:3": 856,
           "y:3": -380
         },
         "52:10": {
           "id:3": 156,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 136,
-          "y:3": -316
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": 128,
+          "y:3": -324
         },
         "53:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 244,
+          "x:3": 284,
           "y:3": -316
         },
         "54:10": {
@@ -58216,8 +58215,8 @@
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 244,
-          "y:3": -276
+          "x:3": 208,
+          "y:3": -140
         },
         "57:10": {
           "id:3": 184,
@@ -58231,28 +58230,28 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -88,
-          "y:3": -408
+          "y:3": -412
         },
         "59:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 576,
+          "x:3": 696,
           "y:3": -372
         },
         "60:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 620,
+          "x:3": 740,
           "y:3": -336
         },
         "61:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": -388
+          "x:3": 512,
+          "y:3": -416
         },
         "62:10": {
           "id:3": 233,
@@ -58279,15 +58278,15 @@
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 176,
-          "y:3": -392
+          "x:3": 420,
+          "y:3": -420
         },
         "66:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 484,
-          "y:3": -264
+          "x:3": 448,
+          "y:3": -192
         },
         "67:10": {
           "id:3": 398,
@@ -58307,7 +58306,7 @@
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 492,
+          "x:3": 612,
           "y:3": -448
         },
         "70:10": {
@@ -58328,8 +58327,8 @@
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 536,
-          "y:3": -180
+          "x:3": 656,
+          "y:3": -184
         },
         "73:10": {
           "id:3": 509,
@@ -58349,14 +58348,14 @@
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 220,
-          "y:3": -392
+          "x:3": 464,
+          "y:3": -420
         },
         "76:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 208,
+          "x:3": 244,
           "y:3": -144
         },
         "77:10": {
@@ -58364,42 +58363,42 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
-          "y:3": -276
+          "y:3": -268
         },
         "78:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 132,
-          "y:3": -392
+          "x:3": 376,
+          "y:3": -420
         },
         "79:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": -360
+          "y:3": -364
         },
         "80:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": -420
+          "x:3": 552,
+          "y:3": -448
         },
         "81:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": -388
+          "x:3": 552,
+          "y:3": -416
         },
         "82:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 64,
-          "y:3": -356
+          "x:3": 552,
+          "y:3": -384
         },
         "83:10": {
           "id:3": 747,
@@ -58419,7 +58418,7 @@
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 744,
+          "x:3": 864,
           "y:3": -336
         },
         "86:10": {
@@ -58427,7 +58426,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
-          "y:3": -276
+          "y:3": -268
         },
         "87:10": {
           "id:3": 812,
@@ -58475,71 +58474,71 @@
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -404
+          "x:3": 28,
+          "y:3": -364
         },
         "94:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 576,
+          "x:3": 696,
           "y:3": -228
         },
         "95:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 404,
-          "y:3": -392
+          "x:3": 504,
+          "y:3": -232
         },
         "96:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 448,
-          "y:3": -388
+          "x:3": 528,
+          "y:3": -264
         },
         "97:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 364,
-          "y:3": -388
+          "x:3": 528,
+          "y:3": -192
         },
         "98:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 448,
-          "y:3": -356
+          "x:3": 488,
+          "y:3": -192
         },
         "99:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 448,
-          "y:3": -180
+          "x:3": 568,
+          "y:3": -264
         },
         "100:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
-          "y:3": -276
+          "y:3": -264
         },
         "101:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
-          "y:3": -276
+          "y:3": -268
         },
         "102:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
-          "y:3": -276
+          "y:3": -268
         },
         "103:10": {
           "id:3": 886,
@@ -58559,22 +58558,22 @@
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 324,
-          "y:3": -448
+          "x:3": 136,
+          "y:3": -404
         },
         "106:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 324,
-          "y:3": -388
+          "x:3": 136,
+          "y:3": -364
         },
         "107:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
-          "y:3": -196
+          "y:3": -192
         },
         "108:10": {
           "id:3": 897,
@@ -58588,21 +58587,21 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
-          "y:3": -168
+          "y:3": -144
         },
         "110:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 696,
+          "x:3": 816,
           "y:3": -420
         },
         "111:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 136,
-          "y:3": -356
+          "x:3": 172,
+          "y:3": -364
         },
         "112:10": {
           "id:3": 1041,
@@ -58616,13 +58615,13 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
-          "y:3": -360
+          "y:3": -364
         },
         "114:10": {
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 412,
+          "x:3": 408,
           "y:3": -264
         }
       }
