@@ -321,8 +321,7 @@ for (ItemStack prospector in [metaitem('prospector.lv'), metaitem('prospector.hv
 
 // Facades
 addTooltip(metaitem('cover.facade'), [
-	translatable('nomiceu.tooltip.gregtech.facade.1'),
-	translatable('nomiceu.tooltip.gregtech.facade.2'),
+	translatable('nomiceu.tooltip.gregtech.facade')
 ])
 
 /* Ender IO */
