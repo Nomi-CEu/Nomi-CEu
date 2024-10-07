@@ -1,4 +1,5 @@
 import {
+	AuthorInfo,
 	ChangelogMessage,
 	Commit,
 	ExpandedMessage,
@@ -14,6 +15,8 @@ import {
 import dedent from "dedent-js";
 import matter, { GrayMatterFile } from "gray-matter";
 import {
+	coAuthorsKey,
+	coAuthorsList,
 	combineKey,
 	combineList,
 	combineRoot,
@@ -163,6 +166,29 @@ export async function parseIgnore(
 
 	if (logic(checkResults)) return new Ignored(info.addCommitList);
 	return undefined;
+}
+
+/**
+ * Parses a commit with coauthor info.
+ */
+export async function parseCoAuthor(
+	commitBody: string,
+	commitObject: Commit,
+): Promise<void> {
+	if (!commitBody.includes(coAuthorsKey)) return;
+	await parseTOMLWithRootToList<AuthorInfo>(
+		commitBody,
+		commitObject,
+		coAuthorsKey,
+		coAuthorsList,
+		(item) => !item.email || !item.name,
+		async (item) => {
+			const authors = data.coAuthorList.get(commitObject.hash) ?? [];
+			authors.push(item);
+			data.coAuthorList.set(commitObject.hash, authors);
+		},
+		(item) => item as unknown as AuthorInfo,
+	);
 }
 
 /**

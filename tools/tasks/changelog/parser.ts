@@ -8,6 +8,7 @@ import {
 } from "#types/changelogTypes.ts";
 import {
 	categories,
+	coAuthorsKey,
 	combineKey,
 	defaultIndentation,
 	detailsKey,
@@ -18,6 +19,7 @@ import {
 	priorityKey,
 } from "./definitions.ts";
 import {
+	parseCoAuthor,
 	parseCombine,
 	parseDetails,
 	parseExpand,
@@ -110,6 +112,9 @@ export async function parseCommitBody(
 ): Promise<boolean | Ignored> {
 	if (commitBody.includes(modInfoKey))
 		await parseModInfo(commitBody, commitObject);
+
+	if (commitBody.includes(coAuthorsKey))
+		await parseCoAuthor(commitBody, commitObject);
 
 	if (commitBody.includes(expandKey)) {
 		await parseExpand(commitBody, commitObject, parser);

@@ -287,43 +287,57 @@ export async function formatMessage(
 		return `${indentation}* ${message} - ${author} (${formattedCommit})`;
 	}
 
-	// Sort original array so newest commits appear at the end instead of start of commit string
-	sortCommitListReverse(commits);
-
 	const formattedCommits: string[] = [];
 	const authors: string[] = [];
-	const retrievedAuthors: { commit: Commit; formatted: string }[] =
+	const retrievedAuthors: { commit: Commit; name: string; email: string }[] =
 		await Promise.all(
 			commits.map((commit) =>
-				formatAuthor(commit).then((formatted) => {
-					return { commit, formatted };
+				formatAuthor(commit).then((name) => {
+					return { commit, name, email: commit.author_email };
 				}),
 			),
 		);
 
+	const processedSHAs: Set<string> = new Set<string>();
+
+	sortCommitList(commits, (commit) => commit);
+
+	// Co-Authors for Each Commit, Format Commits
+	commits.forEach((commit) => {
+		if (processedSHAs.has(commit.hash)) return;
+		formattedCommits.push(
+			`[\`${commit.hash.substring(0, 7)}\`](${repoLink}commit/${commit.hash})`,
+		);
+		processedSHAs.add(commit.hash);
+
+		const authors = data.coAuthorList.get(commit.hash);
+		if (!authors || authors.length === 0) return;
+
+		retrievedAuthors.push(
+			...authors.map((author) => {
+				return { commit, name: `@${author.name}`, email: author.email };
+			}),
+		);
+	});
+
 	const processedAuthors: Set<string> = new Set<string>();
 	const processedEmails: Set<string> = new Set<string>();
-	const processedSHAs: Set<string> = new Set<string>();
 
 	sortCommitList(
 		retrievedAuthors,
 		(author) => author.commit,
-		(a, b) => a.formatted.localeCompare(b.formatted),
+		(a, b) => a.name.localeCompare(b.name),
 	);
 	retrievedAuthors.forEach((pAuthor) => {
-		if (processedSHAs.has(pAuthor.commit.hash)) return;
+		// Author
 		if (
-			!processedAuthors.has(pAuthor.formatted) &&
-			!processedEmails.has(pAuthor.commit.author_email)
+			!processedAuthors.has(pAuthor.name) &&
+			!processedEmails.has(pAuthor.email)
 		) {
-			authors.push(pAuthor.formatted);
-			processedAuthors.add(pAuthor.formatted);
-			processedEmails.add(pAuthor.commit.author_email);
+			authors.push(pAuthor.name);
+			processedAuthors.add(pAuthor.name);
+			processedEmails.add(pAuthor.email);
 		}
-		formattedCommits.push(
-			`[\`${pAuthor.commit.hash.substring(0, 7)}\`](${repoLink}commit/${pAuthor.commit.hash})`,
-		);
-		processedSHAs.add(pAuthor.commit.hash);
 	});
 
 	// Delete all Formatted Commits after MaxIncludeCommits elements, replace with '...'
