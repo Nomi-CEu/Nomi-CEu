@@ -3,7 +3,7 @@ import {
 	Commit,
 	FixUpInfo,
 	InputReleaseType,
-	ParsedModInfo
+	ParsedModInfo,
 } from "#types/changelogTypes.ts";
 import { getLastGitTag, getTags, isEnvVariableSet } from "#utils/util.ts";
 
