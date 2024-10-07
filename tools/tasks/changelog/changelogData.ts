@@ -1,4 +1,5 @@
 import {
+	AuthorInfo,
 	Commit,
 	FixUpInfo,
 	InputReleaseType,
@@ -29,6 +30,9 @@ export default class ChangelogData {
 
 	// Map of project IDs to info text and/or details
 	modInfoList: Map<number, ParsedModInfo>;
+
+	// Map of commit sha to specified coauthors for that commit
+	coAuthorList: Map<string, AuthorInfo[]>;
 
 	/**
 	 * Constructor. Non-Async Inits are performed here.
@@ -70,6 +74,7 @@ export default class ChangelogData {
 		this.combineList = new Map<string, Commit[]>();
 
 		this.modInfoList = new Map<number, ParsedModInfo>();
+		this.coAuthorList = new Map<string, AuthorInfo[]>();
 
 		// Init Tag Sets for Now, so we don't have to deal with nullable params
 		this.tags = new Set<string>();
@@ -116,6 +121,7 @@ export default class ChangelogData {
 		this.combineList = new Map<string, Commit[]>();
 
 		this.modInfoList = new Map<number, ParsedModInfo>();
+		this.coAuthorList = new Map<string, AuthorInfo[]>();
 
 		// Tags list is fine because the 'to' (Target) stays the same
 		// Other Tags list is generated at setup

@@ -41,6 +41,8 @@ export const ignoreKey = "[IGNORE]";
 export const modInfoKey = "[MOD INFO]";
 export const modInfoList = "infos";
 export const priorityKey = "[PRIORITY]";
+export const coAuthorsKey = "[AUTHORS]";
+export const coAuthorsList = "authors";
 
 /* Sub Category Keys */
 // Mode Category Keys

@@ -301,6 +301,11 @@ export interface PriorityInfo {
 	priority: number;
 }
 
+export interface AuthorInfo {
+	name: string;
+	email: string;
+}
+
 export type FixUpMode = "REPLACE" | "ADDITION";
 
 export type InputReleaseType =
