@@ -2297,7 +2297,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This alloy is made from §2mixing §22 Gold Dust, 1 Redstone, and 1 Glowstone Dust §2and putting it §rin your new §3Electric Blast Furnace (EBF)§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\nYou might want to consider getting some §9Nitrogen§r, which speeds up EBF recipes. See the \"Basic Air Collection\" quest to start your journey. For this recipe, it reduces the duration to 13.7 seconds.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
+          "desc:8": "This alloy is made from §2mixing 2 Gold Dust, 1 Redstone, and 1 Glowstone Dust§r and putting it in a mixer, then your new §3Electric Blast Furnace (EBF)§r.\n\nThrow §2the prepared dust into the input bus§r and in twenty seconds your §6Energetic Alloy Ingot§r will be in the output bus.\n\nYou might want to consider getting some §9Nitrogen§r, which speeds up EBF recipes. See the \"Basic Air Collection\" quest to start your journey. For this recipe, it reduces the duration to 13.7 seconds.\n\n§2In EV, you can build an Alloy Blast Smelter, which doubles the yield.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2351,7 +2351,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Another alloy.\n\n§2In EV Age, you can build an Alloy Blast Smelter which doubles the yield.",
+          "desc:8": "Another alloy.\n\n§2In EV, you can build an Alloy Blast Smelter, which doubles the yield.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11400,7 +11400,7 @@
     "197:10": {
       "preRequisites:11": [
         201,
-        1080
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -43123,7 +43123,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Around this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r.\n\nThe first way that comes to mind is electrolysing §9Water§r, but that is §cextremely slow and inefficient§r.§r.\n\nInstead, the best way of making early game §6Oxygen§r is §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r and §6Water§r together in a §3Chemical Reactor§r. §chowever this requires a HV Chemical Reactor§r. §6Methane§r can be obtained from §6Pyrolyse byproducts§r, or via §6Petrochemistry§r, although there are many sources. You can also recombine your methane after reacting it with water, although this process is somewhat inefficient.\n\nFor now, you can get §9Hydrogen§r by electrolyzing §9Methane§r, which you obtain from §6centrifuging§r various biological materials, or various ores like §6Limonite§r. Electrolyzing various dusts, especially §6Silicon Dioxide§r, provides early §9Oxygen§r.",
+          "desc:8": "Around this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r.\n\nThe first way that comes to mind is electrolyzing §9Water§r, but that is §cextremely slow and inefficient§r.§r.\n\nInstead, the best way of making early game §6Oxygen§r is through §6Silicon Dioxide§r. This dust can easily be obtained through processing §6Cobblestone§r, and is fast and efficient.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r in an §bElectrolyzer§r. §6Methane§r can be obtained from §6Biological Materials§r, §6Pyrolyse Byproducts§r, or later, via §6Petrochemistry§r. There are many other sources as well, including various ores like §6Limonite§r. Check JEI!\n\nIn §6HV§r, you can react §6Methane§r with §6Water§r in a §bChemical Reactor§r for fast and efficient Hydrogen.\n\nIt is worth setting up automation for these early! Even if you stockpile some simply through electrolyzing Water, it is worth it!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44353,12 +44353,13 @@
     },
     "827:10": {
       "preRequisites:11": [
+        65,
         177
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. However, the yields of these ores from Microverse missions are small, so you should consider processing §6Platinum Group Sludge (PGS)§r for more.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.\n\nIf you get stuck, check out the excellent flowcharts on the §eDiscord§r.",
+          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. This should be enough for your initial needs, such as for §6RTM-Alloy Coils§r, especially when using §6Tier Three Micro Miners§r.\n\nHowever, the yields of these ores from Microverse missions may not be enough in the long term, so you should consider processing §6Platinum Group Sludge (PGS)§r for more. You will also need to process PGS for your initial yields of §6Iridium§r, as §6Osmiridium Ore§r and §6Iridosmine Ore§r are only available with the §6Tier Five Micro Miner§r. The mission also gives only small amounts, so processing PGS is the better option.\n\n§rYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.\n\nIf you get stuck, check out the excellent flowcharts on the §eDiscord§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44370,8 +44371,8 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Platinum Group Processing",
-          "questlogic:8": "AND",
+          "name:8": "§2Platinum Group Metals",
+          "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -57258,39 +57259,42 @@
       }
     },
     "1080:10": {
-      "preRequisites:11": [
-        65,
-        827
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Quest used for complex quest logic.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "\"Tier Three Micro Miner\" or \"Platinum Group Processing\"",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
+          "tasklogic:8": "AND",
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 1080,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -58815,8 +58819,8 @@
           "id:3": 177,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": 152
+          "x:3": -324,
+          "y:3": 148
         },
         "24:10": {
           "id:3": 178,
@@ -59459,8 +59463,8 @@
           "id:3": 827,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -332,
-          "y:3": 148
+          "x:3": -400,
+          "y:3": 144
         },
         "116:10": {
           "id:3": 828,
@@ -59615,13 +59619,6 @@
           "sizeY:3": 24,
           "x:3": -432,
           "y:3": 396
-        },
-        "138:10": {
-          "id:3": 1080,
-          "sizeX:3": 0,
-          "sizeY:3": 0,
-          "x:3": -384,
-          "y:3": 216
         }
       }
     },
