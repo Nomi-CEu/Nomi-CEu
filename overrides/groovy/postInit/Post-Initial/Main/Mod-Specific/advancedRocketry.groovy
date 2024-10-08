@@ -4,50 +4,61 @@ import net.minecraft.item.ItemStack
 
 import static gregtech.api.GTValues.*
 
-// Add Airtight Seal Recipes
+/* Airtight Seal Recipes */
+// Industrial Rebreather Kit -> Airtight Seal
+mods.enderio.enchanter.recipeBuilder()
+	.enchantment(enchantment('advancedrocketry:spacebreathing'))
+	.input(item('nomilabs:industrial_rebreather_kit'))
+	.amountPerLevel(1)
+	.xpCostMultiplier(3) // 27 Levels, 15 Lapis
+	.register()
+
+// Recipes for Industrial Rebreather Kit
 int airtightId = Enchantment.getEnchantmentID(enchantment('advancedrocketry:spacebreathing'))
 ItemStack airtight = item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) airtightId, 'lvl': (short) 1]]])
 
 if (LabsModeHelper.normal) {
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(
-			ore('foilAluminium') * 64,
-			metaitem('duct_tape') * 32,
-			item('nomilabs:cloth') * 16,
-			metaitem('carbon.mesh') * 8,
-			metaitem('fluid.regulator.hv') * 4,
-			metaitem('gas_collector.hv'),
+			ore('foilAluminium') * 32,
+			metaitem('duct_tape') * 16,
+			item('nomilabs:cloth') * 8,
+			metaitem('carbon.mesh') * 4,
+			metaitem('fluid.regulator.hv'),
+			metaitem('gas_collector.mv'),
 			item('advancedrocketry:pressuretank', 1), // Normal Pressure Tank
-			item('advancedrocketry:pressuretank', 1),
-			item('advancedrocketry:pressuretank', 1),
 		).fluidInputs(fluid('rubber') * 1296)
-		.outputs(airtight * 4)
+		.outputs(item('nomilabs:industrial_rebreather_kit'))
 		.duration(500).EUt(VA[HV])
 		.buildAndRegister()
 } else {
-	int respirationId = Enchantment.getEnchantmentID(enchantment('minecraft:respiration'))
-	int holdingId = Enchantment.getEnchantmentID(enchantment('cofhcore:holding'))
+	ItemStack respiration = item('minecraft:enchanted_book')
+	ItemStack holding = respiration.copy()
+
+	respiration.addEnchantment(enchantment('minecraft:respiration'), 1)
+	holding.addEnchantment(enchantment('cofhcore:holding'), 1)
+
 	mods.extendedcrafting.table_crafting.shapedBuilder()
 		.tierAdvanced()
-		.output(airtight * 4)
+		.output(item('nomilabs:industrial_rebreather_kit'))
 		.matrix(
 			'RMCMR',
-			'TPZPT',
-			'FADAF',
-			'TPYPT',
+			'TAZAT',
+			'FDPDF',
+			'TAYAT',
 			'RXBXR',
 		)
-		.key('R', ore('ringRubber'))
+		.key('R', ore('ringStyreneButadieneRubber'))
 		.key('M', metaitem('carbon.mesh'))
-		.key('C', metaitem('gas_collector.hv'))
+		.key('C', metaitem('gas_collector.mv'))
 		.key('T', ore('plateDoubleTitanium'))
 		.key('P', item('advancedrocketry:pressuretank', 1)) // Normal Pressure Tank
-		.key('Z', item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) respirationId, 'lvl': (short) 3]]])) // Respiration 3
+		.key('Z', respiration)
 		.key('F', metaitem('fluid.regulator.ev'))
-		.key('A', metaitem('pipeNormalFluidPolytetrafluoroethylene'))
+		.key('A', metaitem('pipeSmallFluidPolytetrafluoroethylene'))
 		.key('D', ore('dustQuicklime'))
-		.key('Y', item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) holdingId, 'lvl': (short) 4]]])) // Holding 4
-		.key('B', metaitem('chemical_reactor.hv'))
+		.key('Y', holding)
+		.key('B', metaitem('chemical_reactor.mv'))
 		.key('X', metaitem('duct_tape'))
 		.register()
 }
