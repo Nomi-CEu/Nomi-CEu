@@ -1559,7 +1559,6 @@ mods.jei.JEI.removeAndHide(<advancedrocketry:microwavereciever>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:drill>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:solarpanel>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:biomescanner>);
-mods.jei.JEI.removeAndHide(<advancedrocketry:terraformer>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:deployablerocketbuilder>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:liquidtank>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:intake>);

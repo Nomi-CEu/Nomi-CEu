@@ -924,7 +924,6 @@ mods.jei.JEI.removeAndHide(<advancedrocketry:basalt>);       // Basalt
 mods.jei.JEI.removeAndHide(<advancedrocketry:landingfloat>); // Landing Float
 mods.jei.JEI.removeAndHide(<advancedrocketry:airlock_door>); // Airlock Door (Technical Block)
 mods.jei.JEI.removeAndHide(<advancedrocketry:lightsource>);  // Light source (Technical Block)
-mods.jei.JEI.removeAndHide(<advancedrocketry:astrobed>);     // Astrobed     (Technical Block)
 
 //AR Rocket fuel, unusable
 mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: "rocketfuel", Amount: 1000}));
