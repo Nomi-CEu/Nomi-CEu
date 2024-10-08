@@ -8,6 +8,12 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 // AR
 mods.jei.ingredient.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
 
+removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketrocketfuel'))
+removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketnitrogen'))
+removeAndHideItemIgnoreNBT(item('advancedrocketry:buckethydrogen'))
+removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketoxygen'))
+removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketenrichedlava'))
+
 // Armor Plus
 mods.jei.ingredient.removeAndHide(item('armorplus:block_melting_obsidian')) // Null Texture Item
 
