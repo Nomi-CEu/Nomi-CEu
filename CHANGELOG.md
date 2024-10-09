@@ -1,6 +1,16 @@
-<h1 {{{ CENTER_ALIGN }}}>Release 1.7.1</h1>
+<h1 align="center"><a href="https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/1.7"><img src="https://raw.githubusercontent.com/Nomi-CEu/Branding/main/Nomi%20CEu/Releases/1.7/1.7.png" alt="Release 1.7"></a></h1>
 
-{{{ CF_REDIRECT }}}
+<p align="center"><em><b>The Culimation of 1 Year of Work, and over 6 Alpha and Beta Releases.</em></b></p>
+
+<p align="center"><em>Featuring Assembly Line Research, Many Feature and Quality of Life Additions, and Bug Fixes Galore!</em></p>
+
+<hr>
+
+## Warning
+
+**Please DO NOT revert any saves that have been loaded in this release to 1.7-beta-5c, 1.6.1b, 1.6.1a, or prior!**
+
+<hr>
 
 # Changes Since 1.7a
 
