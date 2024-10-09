@@ -1,8 +1,8 @@
-<h1 style="text-align:center"><a href="https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/1.7"><img src="https://raw.githubusercontent.com/Nomi-CEu/Branding/main/Nomi%20CEu/Releases/1.7/1.7.png" alt="Release 1.7"></a></h1>
+<h1 style="text-align:center"><a href="https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/1.7.1"><img src="https://raw.githubusercontent.com/Nomi-CEu/Branding/main/Nomi%20CEu/Releases/1.7.1/1.7.1.png" alt="Release 1.7.1"></a></h1>
 
-<p style="text-align:center"><em><b>The Culimation of 1 Year of Work, and over 6 Alpha and Beta Releases.</em></b></p>
+<p style="text-align:center"><em><b>Bug Fixes, Polishing and Quest Book Improvements!</em></b></p>
 
-<p style="text-align:center"><em>Featuring Assembly Line Research, Many Feature and Quality of Life Additions, and Bug Fixes Galore!</em></p>
+<p style="text-align:center"><em>Featuring Airtight Seal Fix, Alternative Recipes, Performance Improvements, and fixing Drawer Keys with Empty Drawers!</em></p>
 
 <hr>
 
@@ -10,7 +10,10 @@
 <p><b>Please DO NOT revert any saves that have been loaded in this release to 1.7-beta-5c, 1.6.1b, 1.6.1a, or prior!</b></p>
 
 <hr>
-<p>{{{ CF_REDIRECT }}}</p>
+
+<p><strong>Recipe Changelog</strong> is available <a href="https://github.com/Nomi-CEu/Branding/blob/main/Nomi%20CEu/Releases/1.7.1/Recipes%20Changed%20Since%201.7a.md">here</a>.</p>
+
+<hr>
 <h1>Changes Since 1.7a</h1>
 <h2>Balancing Changes:</h2>
 <h3>Both Modes:</h3>
