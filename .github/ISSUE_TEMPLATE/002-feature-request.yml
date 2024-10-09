@@ -14,6 +14,7 @@ body:
       description: The version of Nomi CEu you are using as the basis for this feature request. If you do not know what it is, check the title of your instance window. f you do not see your version here, please update to the newest alpha, beta or release of the pack.
       options:
         - "Nightly"
+        - 1.7.1
         - 1.7a
         - 1.7
         - 1.7-beta-6a
@@ -107,7 +108,7 @@ body:
     attributes:
       label: How Will Your Solution Work
       description: |
-        Describe how the solution will fix the problem, or add to the pack.
+        Describe how the solution will fix the problem, or add to the pack. 
         If you are suggesting a mod, please describe what the mod does, and how it will add to the pack.
       placeholder: "Example: If X was done, than Y will get a use, and..."
     validations:
