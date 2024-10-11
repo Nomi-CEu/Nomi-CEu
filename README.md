@@ -29,11 +29,14 @@ Translations are offered for Nomi-CEu, in a separate 'language pack'. This is av
 
 For more information, including supported languages and their status, see [the GitHub Page](https://github.com/Nomi-CEu/Nomi-CEu-Translations/).
 
-## Contributing and Maintainer Information
-This is available on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki).
+## Installing, Updating and Customizing Information
+Player Information, including recommended ways to install the pack, is on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki).
 
 ## Server Setup and Information
-Details on how to setup a basic server, and some important server admin information, are listed [here.](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/serverfiles/README.md)
+Details on how to setup a basic server, some important server admin information, and how to update servers, is on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki/Page-1:-Player-Information#section-3-server-installation-and-updating).
+
+## Contributing and Maintainer Information
+This is available on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki/Part-2:-Contributing-Information).
 
 ## Addon Mods
 Nomi-CEu comes with addon scripts for the following mods. You can drop them into the mods folder, and their recipes will be adjusted accordingly.
