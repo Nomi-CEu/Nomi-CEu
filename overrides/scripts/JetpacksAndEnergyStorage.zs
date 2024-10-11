@@ -199,7 +199,7 @@ recipes.addShaped(reinforcedjetpack, [
 //Vibrant Alloy Jetpack
 recipes.removeByRecipeName("simplyjetpacks:upgraderecipe4");
 recipes.addShaped(vibrantjetpack, [
-	[<metaitem:nomilabs:plateVibrantAlloy>,     compressedoctadiccap,               <metaitem:nomilabs:plateVibrantAlloy>],
+	[<metaitem:nomilabs:plateVibrantAlloy>,     <nomilabs:compressedoctadiccapacitor>,               <metaitem:nomilabs:plateVibrantAlloy>],
 	[<metaitem:nomilabs:plateVibrantAlloy>,     energeticjetpack.marked("jetpack"), <metaitem:nomilabs:plateVibrantAlloy>],
 	[<simplyjetpacks:metaitemmods:10>, null,                               <simplyjetpacks:metaitemmods:10>]],
 	transferTag);
