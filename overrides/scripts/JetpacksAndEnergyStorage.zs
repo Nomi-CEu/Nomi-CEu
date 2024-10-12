@@ -308,20 +308,23 @@ recipes.addShaped(<thermalexpansion:frame:132>, [
 	[<metaitem:nomilabs:plateEnderium>, <metaitem:nomilabs:stickEnderium>, <metaitem:nomilabs:plateEnderium>]]);
 
 // redstone cell frame (filled) => "micro miner engine core"
-alloy.recipeBuilder()
-    .inputs([<thermalexpansion:frame:130>, <minecraft:redstone_block> * 2])
+fluid_canner.recipeBuilder()
+    .fluidInputs([<liquid:redstone> * (1296 * 2)])
+    .inputs([<thermalexpansion:frame:130>])
     .outputs([<thermalexpansion:frame:146>])
     .duration(500).EUt(480).buildAndRegister();
 
 // signalum cell frame (filled) => "signalum micro miner engine core"
-alloy.recipeBuilder()
-    .inputs([<thermalexpansion:frame:131>, <minecraft:redstone_block> * 4])
+fluid_canner.recipeBuilder()
+    .fluidInputs([<liquid:redstone> * (1296 * 4)])
+    .inputs([<thermalexpansion:frame:131>])
     .outputs([<thermalexpansion:frame:147>])
     .duration(1000).EUt(2000).buildAndRegister();
 
 // resonant cell frame (filled) => "enderium micro miner engine core"
-alloy.recipeBuilder()
-    .inputs([<thermalexpansion:frame:132>, <minecraft:redstone_block> * 8])
+fluid_canner.recipeBuilder()
+    .fluidInputs([<liquid:redstone> * (1296 * 8)])
+    .inputs([<thermalexpansion:frame:132>])
     .outputs([<thermalexpansion:frame:148>])
     .duration(2000).EUt(8000).buildAndRegister();
 
