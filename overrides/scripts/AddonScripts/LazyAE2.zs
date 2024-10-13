@@ -104,6 +104,13 @@ assembler.recipeBuilder()
     .duration(400).EUt(1920).buildAndRegister();
 
 // Circuit Etcher
+recipes.remove(<threng:machine:2>);
+recipes.addShaped(<threng:machine:2>, [
+    [<appliedenergistics2:material:19>, <ae2stuff:inscriber>, <appliedenergistics2:material:13>],
+    [<appliedenergistics2:quartz_glass>, <threng:material:4>, <appliedenergistics2:quartz_glass>],
+    [<appliedenergistics2:material:15>, <appliedenergistics2:material:43>, <appliedenergistics2:material:14>]
+]);
+
 mods.threng.Etcher.removeRecipe(<appliedenergistics2:material:22>);
 mods.threng.Etcher.removeRecipe(<appliedenergistics2:material:23>);
 mods.threng.Etcher.removeRecipe(<appliedenergistics2:material:24>);

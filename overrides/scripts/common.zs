@@ -42,10 +42,6 @@ global reinforcedcellIng as IIngredient = reinforcedcell.only(isReinforced);
 global signalumcellIng   as IIngredient = signalumcell.only(isSignalum);
 global resonantcellIng   as IIngredient = resonantcell.only(isResonant);
 
-// Compressed capacitors
-global compressedoctadiccap       as IItemStack = <nomilabs:compressedoctadiccapacitor>.withTag({display: {Name: "Compressed Octadic RF Capacitor", Lore: ["This is what is known as a Compressed Octadic Capacitor.", "Or, you could just call this an Octadic Capacitor Two.", "Can be inserted into EnderIO machines.", "Level: 4"]}, eiocap: {level: 4 as float}}, false);
-global doublecompressedoctadiccap as IItemStack = <nomilabs:doublecompressedoctadiccapacitor>.withTag({display: {Name: "Double Compressed Octadic RF Capacitor", Lore: ["AND THIS IS TO GO EVEN FURTHER BEYOND!", "Can be inserted into EnderIO machines.", "Level: 9.001", "Just kidding, it's only 5."]}, eiocap: {level: 5 as float}}, false);
-
 // EIO Jetpacks
 global conductiveironjetpack         as IItemStack = <simplyjetpacks:itemjetpack:1>.withTag({Energy: 0, JetpackParticleType: 0}, false);
 global electricalsteeljetpack        as IItemStack = <simplyjetpacks:itemjetpack:2>.withTag({Energy: 0, JetpackParticleType: 0}, false);
