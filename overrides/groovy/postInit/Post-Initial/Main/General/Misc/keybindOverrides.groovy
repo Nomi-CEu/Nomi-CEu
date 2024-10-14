@@ -34,6 +34,7 @@ addOverride('enderio.keybind.inventory', KeyModifier.SHIFT, Keyboard.KEY_C)
 addOverride('key.draconicevolution.toolConfig', KeyModifier.SHIFT, Keyboard.KEY_C)
 
 // This one is special: It fixes the bug where pressing T in JEI/AE2 would sometimes force you out of the GUI
+// Its also replaced by a different mod, FindMyItemsAndFluids.
 addOverride('key.xu2.searchforitems', Keyboard.KEY_NONE)
 
 addOverride('key.ftbutilities.nbt', Keyboard.KEY_NONE)
