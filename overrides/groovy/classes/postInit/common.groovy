@@ -1,11 +1,12 @@
 package classes.postInit
 
 import net.minecraft.item.ItemStack
+import org.apache.commons.lang3.tuple.Pair
 
 class Common {
 	/* Cached Values */
 	private static ItemStack meP2p = null
-	private static List<ItemStack> p2pVariants = null
+	private static List<Pair<String, ItemStack>> p2pVariants = null
 	private static List<ItemStack> eioGlasses = null
 
 	static ItemStack getMeP2p() {
@@ -15,17 +16,17 @@ class Common {
 		return meP2p
 	}
 	// All P2P Variants, Excluding ME P2P
-	static List<ItemStack> getP2pVariants() {
+	static List<Pair<String, ItemStack>> getP2pVariants() {
 		if (p2pVariants != null) return p2pVariants
 
 		p2pVariants = [
-			item('appliedenergistics2:part', 461), // Redstone
-			item('appliedenergistics2:part', 462), // Item
-			item('appliedenergistics2:part', 463), // Fluid
-			item('appliedenergistics2:part', 467), // Light
-			item('appliedenergistics2:part', 469), // RF
-			item('appliedenergistics2:part', 470), // EU
-			item('nae2:part', 1), // Interface
+			Pair.of('Redstone', item('appliedenergistics2:part', 461)),
+			Pair.of('Item', item('appliedenergistics2:part', 462)),
+			Pair.of('Fluid', item('appliedenergistics2:part', 463)),
+			Pair.of('Light', item('appliedenergistics2:part', 467)),
+			Pair.of('RF', item('appliedenergistics2:part', 469)),
+			Pair.of('EU', item('appliedenergistics2:part', 470)),
+			Pair.of('Interface', item('nae2:part', 1)),
 		]
 		return p2pVariants
 	}

@@ -149,12 +149,16 @@ addTooltip(item('appliedenergistics2:material', 1), translatable('nomiceu.toolti
 addTooltip(Common.meP2p, [
 	translatable('nomiceu.tooltip.ae2.p2p.me'),
 	translatableEmpty(),
+	translatable('nomiceu.tooltip.ae2.p2p.type', 'ME'),
 	translatable("nomiceu.tooltip.ae2.p2p.desc"),
 ])
 
-// Global P2P
-for (ItemStack item : Common.p2pVariants) {
-	addTooltip(item, translatable("nomiceu.tooltip.ae2.p2p.desc"))
+// Other P2P
+for (var item : Common.p2pVariants) {
+	addTooltip(item.value, [
+		translatable('nomiceu.tooltip.ae2.p2p.type', item.key),
+		translatable("nomiceu.tooltip.ae2.p2p.desc"),
+	])
 }
 
 
