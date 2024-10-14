@@ -1,7 +1,9 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.common.metatileentities.MetaTileEntities
 import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
+import static gregtech.api.GTValues.*
 
 /* Item Removals */
 
@@ -26,6 +28,13 @@ removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 8)) // Insightful Con
 if (LabsModeHelper.expert) {
 	mods.jei.ingredient.removeAndHide(item('nomilabs:impossiblerealmdata'))
 }
+
+// GregTech
+// Higher Tier Muffler Hatches
+for (var tier : [MV, HV, EV, IV, LuV, ZPM, UV]) {
+	mods.jei.ingredient.removeAndHide(MetaTileEntities.MUFFLER_HATCH[tier].getStackForm())
+}
+
 
 // Better Questing
 List<ItemStack> lootBoxes = [
