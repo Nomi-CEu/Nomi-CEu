@@ -78,7 +78,7 @@ const uselessProps: Record<string, string | number> = {
 	"tasklogic:8": "AND",
 	"questlogic:8": "AND",
 	"entryLogic:8": "AND",
-	"visibility:8": "NORMAL",
+	"visibility:8": "ALWAYS",
 	"partysinglereward:1": 0,
 	"lockedprogress:1": 0,
 	"OreDict:8": "",
