@@ -67486,6 +67486,48 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1080:10": {
+      "preRequisiteTypes:7": [
+        2
+      ],
+      "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§5Nomi-CEu§r also features §bFind My Items and Fluids.§r A mod that allows you to search any nearby inventories for §6Item§r and §9Fluids§r. Originally, you were able to do this with §bExtra Utilities 2§r, but it didn\u0027t support searching for fluids.\n\nThis mod features two hotkeys: §eT§r for searching items and §eY§r for searching fluids. To start, simply press §eT§r while hovering an item inside a GUI. Any inventories containing the specified item will §6Emit a particle effect§r.\n\nWhile pressing §eY§r while hovering any fluid inside a GUI, any tanks or buckets containing the specified fluid will also emit a particle effect.\n\n§cKeep in mind nothing will happen if there are no fluids/items of that type nearby!§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "advancedrocketry:beaconfinder"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Find My Items and Fluids",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1080,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -72855,6 +72897,13 @@
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 168
+        },
+        "66:10": {
+          "id:3": 1080,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -228,
+          "y:3": 240
         }
       }
     },
