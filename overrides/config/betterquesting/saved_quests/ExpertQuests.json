@@ -823,7 +823,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§r will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§r. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§r... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron Tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§r (not a §aMining Hammer§r, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§r. §6Plates§r can make a §aFile§r, Files can make §6Rods§r, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§r is probably your best bet for a tool material right now, but better materials will become available as you progress.\n\nThis quest technically accepts any tool material, but it is highly recommended to use §6Wrought Iron§r.",
+          "desc:8": "One of the eccentricities of the pack you\u0027ll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and §bJEI§r will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so §ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says§r. Rods where rods go, plates where plates, etc. The only restriction is that tools §emust be made from all of the same material§r... you cannot mix and match different metals in a single item.\n\nRecipes will default to showing a §6Iron Tool §rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool\u0027s material in the recipes: it can be whatever you\u0027d like.\n\nFor now, make a §aHammer§r (not a §aMining Hammer§r, mind you... six ingots, not five). Hammers can be used to turn §etwo ingots into one plate§r. §6Plates§r can make a §aFile§r, Files can make §6Rods§r, etc. Use JEI to work your way down the list of tools.\n\n§6Wrought Iron§r is probably your best bet for a tool material right now, but better materials will become available as you progress.\n\nThis quest technically accepts any tool material, but it is highly recommended to use §6Wrought Iron§r, due to its high durability.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1505,7 +1505,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into §6Coal Coke§r will not only make it more useful as fuel, but will also produce §9Phenol§r, which you\u0027ll need for circuits.\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nYou can §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.",
+          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into some more §6Coal Coke§r will also produce §9Phenol§r, which you\u0027ll need for circuits. Yes, this oven is different from the §bCoke Oven§r in many ways!\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nYou can §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21140,7 +21140,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2For making Charcoal for smelting, and Creosote, which can be used as furnace fuel, boiler fuel, and for Treated Planks.\n\nUse up to 5 Coke Oven Hatches for automation.",
+          "desc:8": "You need the §bCoke Oven§r for §9Creosote Oil§r, which can be used as fuel and for §6Treated Planks§r. Given how slow the recipes run, you might want to make more than one of these.\n\nPlacing your §6Coal§r into here will turn it into §6Coal Coke§r, which burns for twice as long, and produces extra §9Crescote Oil§r, which you can use as a further fuel source. Essentially, you create more bang for your buck!\n\nYou can also make §6Charcoal§r now! Only takes 45 seconds...\n\nAlso, remember: You can make §6Tiny Charcoal§r and §6Tiny Coke§r, which smelt exactly one item in the §bFurnace§r. Don\u0027t waste fuel!\n\nYou can use up to 5 §6Coke Oven Hatches§r for automation. Don\u0027t let the §9Crescote Oil§r fill up, or the Oven will stop!\n\nMake some §bGregTech §6Wooden Barrels§r or §6Bronze Drums§r to store all the oil!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -21189,19 +21189,49 @@
               "id:8": "gregtech:metal_casing"
             },
             "2:10": {
-              "Count:3": 1,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "minecraft:coal"
-            },
-            "3:10": {
-              "Count:3": 1,
+              "Count:3": 8,
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:planks"
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "minecraft:coal"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 319,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_gem"
+            },
+            "2:10": {
+              "Count:3": 8,
+              "Damage:2": 11,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:item_misc"
+            },
+            "3:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:tiny_coke"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -48916,7 +48946,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A mixture of §6Clay, Brick, §cGypsum and Concrete§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. §c\n\nSo far, your only available route for Concrete is adding Stone Dust, Quartz Sand, Clay and Calcite to a bucket of Water.§r\n\nThis allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower). Now you can make §7LV §6Machine Hulls§r!\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
+          "desc:8": "A mixture of §6Clay, Brick, §cGypsum and Concrete§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. Given how slow the recipes run, you might want to eventually make more than one of these.\n\nSo far, your only available route for §6Concrete§r is adding §6Stone Dust§r, §6Quartz Sand§r, §6Clay§r and §6Calcite§r to a §6Bucket of Water§r. Have fun!\n\nThis allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower). Now you can make §7LV §6Machine Hulls§r!\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57327,7 +57357,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 1081,
@@ -57336,6 +57366,59 @@
         "0:10": {
           "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
+        }
+      }
+    },
+    "1082:10": {
+      "preRequisites:11": [
+        4
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "To save your limited supplies of §6Coal§r, you may wish to transform it into §6Tiny Coal§r, which smelts exactly one item, saving you fuel in the §bFurnace!§r.\n\nSimply place your §6Coal§r in the §bCrafting Table§r. You can also change your Tiny Coal back into Coal at any time!\n\nNote: tiny versions are also available for §6Charcoal§r and §6Coal Coke§r, which you will unlock later.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 10,
+            "OreDict:8": "",
+            "id:8": "actuallyadditions:item_misc"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tiny Fuels",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 1082,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 8,
+              "Damage:2": 10,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:item_misc"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
@@ -62299,7 +62382,7 @@
           "id:3": 9,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -216,
           "y:3": 60
         },
         "6:10": {
@@ -62320,50 +62403,50 @@
           "id:3": 13,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 66
+          "x:3": -144,
+          "y:3": 48
         },
         "9:10": {
           "id:3": 14,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 24
         },
         "10:10": {
           "id:3": 15,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 108
         },
         "11:10": {
           "id:3": 16,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 144
         },
         "12:10": {
           "id:3": 17,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 180
         },
         "13:10": {
           "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 252
+          "x:3": 156,
+          "y:3": 258
         },
         "14:10": {
           "id:3": 20,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": 216
+          "x:3": 156,
+          "y:3": 222
         },
         "15:10": {
           "id:3": 24,
@@ -62405,7 +62488,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
-          "y:3": 68
+          "y:3": 66
         },
         "21:10": {
           "id:3": 56,
@@ -62474,7 +62557,7 @@
           "id:3": 393,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -252,
           "y:3": -12
         },
         "31:10": {
@@ -62495,7 +62578,7 @@
           "id:3": 405,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -252,
           "y:3": 24
         },
         "34:10": {
@@ -62593,7 +62676,7 @@
           "id:3": 743,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -216,
           "y:3": -12
         },
         "48:10": {
@@ -62607,7 +62690,7 @@
           "id:3": 775,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -252,
           "y:3": 168
         },
         "50:10": {
@@ -62621,21 +62704,21 @@
           "id:3": 786,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -252,
           "y:3": 60
         },
         "52:10": {
           "id:3": 803,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -252,
           "y:3": 96
         },
         "53:10": {
           "id:3": 808,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -216,
           "y:3": 96
         },
         "54:10": {
@@ -62677,28 +62760,28 @@
           "id:3": 913,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -216,
           "y:3": 24
         },
         "60:10": {
           "id:3": 914,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -252,
           "y:3": 132
         },
         "61:10": {
           "id:3": 927,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
+          "x:3": -180,
           "y:3": 24
         },
         "62:10": {
           "id:3": 932,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -216,
           "y:3": 132
         },
         "63:10": {
@@ -62733,8 +62816,15 @@
           "id:3": 1081,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -216,
           "y:3": 168
+        },
+        "68:10": {
+          "id:3": 1082,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 66
         }
       }
     },

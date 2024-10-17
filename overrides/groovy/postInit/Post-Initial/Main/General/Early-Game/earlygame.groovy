@@ -201,6 +201,9 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(50).EUt(VA[ULV])
 	.buildAndRegister()
 
+// Coke -> 16 Tiny Coke
+crafting.addShapeless(item('nomilabs:tiny_coke') * 16, [ore('fuelCoke')])
+
 // Lubricant Alternatives (Per Oil)
 ChangeRecipeBuilderCollection<SimpleRecipeBuilder> lubeRecipes = mods.gregtech.brewery.changeByOutput(
 	RecipePredicates.hasExactlyFluidInput(fluid('oil') * 1000),

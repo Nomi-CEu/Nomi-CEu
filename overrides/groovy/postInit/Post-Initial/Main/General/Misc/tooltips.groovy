@@ -65,6 +65,16 @@ addTooltip(item('actuallyadditions:item_solidified_experience'), [
 	translatable("nomiceu.tooltip.actuallyadditions.solidifed_xp.amount"),
 ])
 
+// Tiny Fuels
+var tinyFuels = [
+	item('actuallyadditions:item_misc', 10), // Tiny Coal
+	item('actuallyadditions:item_misc', 11), // Tiny Charcoal
+]
+
+for (var item : tinyFuels) {
+	addTooltip(item, translatable("tooltip.nomilabs.tiny_fuels"))
+}
+
 /* Advanced Rocketry */
 
 // Orbital Laser Drill

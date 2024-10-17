@@ -25348,7 +25348,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No hoops to jump through here. Smelt §6Wood Logs§r to get §6Charcoal§r. It will serve you well as a fuel source until you locate a vein of §6Coal§r.\n\nYou might want to craft Charcoal into §6Tiny Charcoal§r pieces to save some fuel. One tiny piece is enough to smelt exactly one item. Just put charcoal into the crafting grid to make some!",
+          "desc:8": "No hoops to jump through here. Smelt §6Wood Logs§r to get §6Charcoal§r. It will serve you well as a fuel source until you locate a vein of §6Coal§r.\n\nYou might want to craft Charcoal into §6Tiny Charcoal§r pieces to save some fuel. One tiny piece is enough to smelt exactly one item. Just put charcoal into the crafting grid to make some!\n\nYou can also make §6Tiny Coal§r in the same way.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25360,7 +25360,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Charcoal",
+          "name:8": "Charcoal and Tiny Fuels",
           "partysinglereward:1": 0,
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
@@ -25389,6 +25389,24 @@
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "minecraft:coal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 8,
+              "Damage:2": 10,
+              "OreDict:8": "",
+              "id:8": "actuallyadditions:item_misc"
             },
             "1:10": {
               "Count:3": 8,
@@ -25397,7 +25415,7 @@
               "id:8": "actuallyadditions:item_misc"
             }
           },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -67534,7 +67552,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "UNLOCKED"
         }
       },
       "questID:3": 1080,
@@ -72870,8 +72888,8 @@
           "id:3": 1023,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 204
+          "x:3": -228,
+          "y:3": 240
         },
         "62:10": {
           "id:3": 1024,
@@ -72905,8 +72923,8 @@
           "id:3": 1080,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": 240
+          "x:3": -192,
+          "y:3": 204
         }
       }
     },
