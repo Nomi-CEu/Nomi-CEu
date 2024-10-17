@@ -6146,7 +6146,6 @@
     "84:10": {
       "preRequisites:11": [
         81,
-        83,
         88
       ],
       "properties:10": {
@@ -6879,6 +6878,10 @@
       }
     },
     "95:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
         184,
         973
@@ -7101,6 +7104,10 @@
       }
     },
     "98:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
         91,
         895
@@ -9343,6 +9350,10 @@
       }
     },
     "131:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
       "preRequisites:11": [
         95,
         507
@@ -9551,7 +9562,8 @@
     "134:10": {
       "preRequisites:11": [
         96,
-        131
+        131,
+        821
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10466,7 +10478,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r.\n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly.\n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nRouting through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high piority. This will accept any new Hot Ingots entering your system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
+          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r.\n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly.\n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nRouting through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high priority. This will accept any new Hot Ingots entering your system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12029,7 +12041,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The reaction that produces §9Bio Diesel§r is also the only source of §9Glycerol§r, which is an easy way to make §9Epichlorohydrin§r, an important ingredient of §9Epoxy§r.\n\n§9Glycerol§r is also used in the production of §9Glyceryl Trinitrate§r, an important step in making §6Dynamite§r, which can be used later in the §3Implosion Compressor§r.\n\nEven if you\u0027re otherwise going all in on petrochemistry for Epoxy, you\u0027ll probably end up with some Bio Diesel as a result of making Glycerol, unless your\u0027re using §6TNT§r.\n\nBio Diesel can be used for power, but is probably better to convert it to §2Cetane-Boosted Diesel§r.",
+          "desc:8": "The reaction that produces §9Bio Diesel§r is also the only source of §9Glycerol§r, which is an easy way to make §9Epichlorohydrin§r, an important ingredient of §9Epoxy§r.\n\n§9Glycerol§r is also used in the production of §9Glyceryl Trinitrate§r, an important step in making §6Dynamite§r, which can be used later in the §3Implosion Compressor§r.\n\nEven if you\u0027re otherwise going all in on petrochemistry for Epoxy, you\u0027ll probably end up with some Bio Diesel as a result of making Glycerol, unless you\u0027re using §6TNT§r.\n\nBio Diesel can be used for power, but is probably better to convert it to §2Cetane-Boosted Diesel§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12097,7 +12109,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Although it might take a while, you will start accumulating a large amount of it. Simply start placing your placing your collected §9Air§r into a §bCentrifuge§r!\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, such as speeding up some §bElectric Blast Furnace§r recipes, making §6Glowstone-Doped Silicon Boules§r, and making §6Cetane-Boosted Diesel§r.\n\nSince it has so many uses, make sure you have §eautomated§r the process of making §9Nitrogen§r. Yes, do it now! You\u0027ll thank yourself when you start running §bElectric Blast Furnace§r recipes.",
+          "desc:8": "§9Nitrogen§r comprises 78% of the atmosphere. Although it might take a while, you will start accumulating a large amount of it. Simply start placing your placing your collected §9Air§r into a §bCentrifuge§r!\n\nEven so, don\u0027t void it unless you have secured a very large stockpile. Storage is cheap and Nitrogen is used in sizeable quantities for several notable things, such as speeding up some §bElectric Blast Furnace§r recipes, making §6Phosphorus-Doped Silicon Boules§r, and making §6Cetane-Boosted Diesel§r.\n\nSince it has so many uses, make sure you have §eautomated§r the process of making §9Nitrogen§r. Yes, do it now! You\u0027ll thank yourself when you start running §bElectric Blast Furnace§r recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12231,7 +12243,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll be needing large amounts of the various noble gases so you should get this automated and running continuously.\n\nAfter §bliquefication§r, §eOverworld Air§r grants §9Helium§r and §9Argon§r, §eNether Air§r grants §9Helium-3§r and §9Neon§r and §eEnder Air§r grants §9Helium§r, §9Krypton§r, §9Xenon§r, and §9Radon§r.\n\nSome noble gases can be used to §aboost§r the speed of certain EBF recipes.",
+          "desc:8": "You\u0027ll be needing large amounts of the various noble gases so you should get this automated and running continuously.\n\nAfter §bliquefaction, §eOverworld Air§r grants §9Helium§r and §9Argon§r, §eNether Air§r grants §9Helium-3§r and §9Neon§r and §eEnder Air§r grants §9Helium§r, §9Krypton§r, §9Xenon§r, and §9Radon§r.\n\nSome noble gases can be used to §aboost§r the speed of certain EBF recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18141,7 +18153,7 @@
     },
     "260:10": {
       "preRequisites:11": [
-        53
+        764
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -50287,7 +50299,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Whether or not you (or your server admin) picked the default §bLost Cities§r overworld type, you have the option of teleporting yourself to the §eLost Cities Dimension§r. This is useful if you like other world types but want to still be able to explore cities for things like §eloot and spawners§r.\n\nTo create a portal, you must place a §aBed§r down on two §6Blocks of Diamond§r. Then, you surround the bed with any kind of §eMonster Skulls§r. Sleep in this bed and you will be teleported there.\n\n§cDon\u0027t forget to have a way to get back!§r You can use the §e/sethome§r command to register where your house is, and §e/home§r to return to it. If you supply a name (for example §e/sethome nether§r) then you can register and teleport to up to 25 homes by default.\n\nThere are some §erestrictions§r on this though: §eIt takes a few seconds of standing still for /home to activate§r, and there is a §ecooldown§r between uses. These restrictions can be bypassed by enabling cheats.\n\n§e/setwarp§r and §e/warp§r work much the same, except warp points are server-wide for any player to use - great for meeting points and events.\n\nLater on you\u0027ll have other means of teleportation.\n\nMonster Skulls might take a little while to get if you\u0027re playing in §ePeaceful§r. §6Skeleton Skulls§r would be the way to go in that case.",
+          "desc:8": "Whether or not you (or your server admin) picked the default §bLost Cities§r overworld type, you have the option of teleporting yourself to the §eLost Cities Dimension§r. This is useful if you like other world types but want to still be able to explore cities for things like §eloot and spawners§r.\n\nTo create a portal, you must place a §aBed§r down on two §6Blocks of Diamond§r. Then, you surround the bed with any kind of §eMonster Skulls§r. Sleep in this bed and you will be teleported there.\n\n§cDon\u0027t forget to have a way to get back!§r You can use the §e/sethome§r command to register where your house is, and §e/home§r to return to it. If you supply a name (for example §e/sethome nether§r) then you can register and teleport to up to 25 homes by default.\n\nThere are some §erestrictions§r on this though: §eIt takes a few seconds of standing still for /home to activate§r, and there is a §ecooldown§r between uses. These restrictions can be bypassed by enabling cheats.\n\n§e/setwarp§r and §e/warp§r work much the same, §cbut they can only be created and removed by people with operator permissions.§r Warp points are server-wide for any player to use - great for meeting points and events.\n\nLater on you\u0027ll have other means of teleportation.\n\nMonster Skulls might take a little while to get if you\u0027re playing in §ePeaceful§r. §6Skeleton Skulls§r would be the way to go in that case.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50618,7 +50630,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§5Nomi-CEu§r shares an official Discord server with §5Nomifactory§r, which serves as a useful community resource.\n\nOn the server, there are flowcharts and guides to help you with many parts of the pack, development announcements and more are available in the Nomi-CEu-News channel, and the community helps with tech support questions, and investigates possible bug reports.\n\nYou can also chat with many fellow players there if you like, who are largely willing to help with general questions one might have.\n\nTo join the server, you can use the button on the Main Menu to go to the join URL, or if you\u0027re not into Discord you can find our projects on GitHub at our organization page: §9https://github.com/Nomi-CEu§r.\n\nIssue tracking and development, including for Nomi Labs, is handled on our respective GitHub project repositories. The repository for this pack is §9https://github.com/Nomi-CEu/Nomi-CEu§r.",
+          "desc:8": "§5Nomi-CEu§r shares an official Discord server with §5Nomifactory§r, which serves as a useful community resource.\n\nOn the server, there are flowcharts and guides to help you with many parts of the pack, development announcements and more are available in the Nomi-CEu-News channel, and the community helps with tech support questions, and investigates possible bug reports.\n\nYou can also chat with many fellow players there if you like, who are largely willing to help with general questions one might have.\n\n§5Nomi-CEu\u0027s§r Discord server also has §eTags,§r which contains many community-made flowcharts and guides. Run §e%t search \u003ctag\u003e§r and §e%t \u003ctag\u003e§r in §9#bot-spam§r to search and run any tag within the database.\n\nTo join the server, you can use the button on the Main Menu to go to the join URL, or if you\u0027re not into Discord you can find our projects on GitHub at our organization page: §9https://github.com/Nomi-CEu§r.\n\nIssue tracking and development, including for Nomi Labs, is handled on our respective GitHub project repositories. The repository for this pack is §9https://github.com/Nomi-CEu/Nomi-CEu§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56737,6 +56749,11 @@
       }
     },
     "897:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1,
+        0
+      ],
       "preRequisites:11": [
         52,
         830,
@@ -58940,7 +58957,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYour first source of §6Ender Pearls§r could be §6Ender Lillies§r. However, that is too manual and slow for the purpose §6Ender Pearls§r are needed for here. Instead, you can make a net-positive §6Pulsating Polymer Clay§r setup that uses §6Enderman Data Models§r to produce §6Ender Pearls§r. A Self-Aware §6Enderman Data Model§r can supply enough §6Ender Pearls§r to support the running of 6.2 other models.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Resonant Clathrate.§r\n\nYour first source of §6Ender Pearls§r could be §6Ender Lilies§r. However, that is too manual and slow for the purpose §6Ender Pearls§r are needed for here. Instead, you can make a net-positive §6Pulsating Polymer Clay§r setup that uses §6Enderman Data Models§r to produce §6Ender Pearls§r. A Self-Aware §6Enderman Data Model§r can supply enough §6Ender Pearls§r to support the running of 6.2 other models.\n\n\n\nYou might have noticed that all quests in this line complete automatically via §6Resonant Clathrate§r instead of §6Pulsating Polymer Clay§r. This is the case as it follows the §oResonant Clathrate§r quest in §oSimulating Mobs§r, and you will probably make §6Pulsating Polymer Clay§r via §6Uraninite§r before making a passive setup via §6Resonant Clathrate§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59745,7 +59762,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest completes via checkbox or upon achieving Stone.§r\n\n§oThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§o or higher.§r\n\nMainly used for decorational blocks. Still part of §eCobbleworks§r I guess.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
+          "desc:8": "§oThis quest completes via checkbox or upon achieving Stone.§r\n\n§oThis step requires a Furnace or an upgraded Furnace, or a Electric Furnace at voltage §lLV§o or higher.§r\n\nMainly used for decorative blocks. Still part of §eCobbleworks§r I guess.\n\n\n\nYou might have noticed that all quests in this line complete automatically via the main resource achieved by that step. This is as this §eCobbleworks§r chain is extremely versatile, and each resource may be important or not, depending on your situation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62931,7 +62948,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system.\n\nYou can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away. However, you can put §6Wireless Boosters§r into the §6Wireless Access Point§r to increase the range. A better, but more expensive solution, that allows access from anyhere, will be explained in the following quest, \u0027AE2 Everywhere!\u0027.",
+          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system.\n\nYou can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away. However, you can put §6Wireless Boosters§r into the §6Wireless Access Point§r to increase the range. A better, but more expensive solution, that allows access from anywhere, will be explained in the following quest, \u0027AE2 Everywhere!\u0027.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64151,7 +64168,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-§bGregTech§r machine adjacent to them. This is extremely handly especially in endgame, allows for immense speedup of §6Draconic Evolution Fusion Crafting, NuclearCraft Fission Reactors, Solar Panels, Resonators§r and more!§r\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 6A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
+          "desc:8": "§3World Accelerators§r accelerate the ticks of any non-§bGregTech§r machine adjacent to them. This is extremely handy especially in endgame, allows for immense speedup of §6Draconic Evolution Fusion Crafting, NuclearCraft Fission Reactors, Solar Panels, Resonators§r and more!§r\n\nThe §6HV§r WA accelerates by 8x, the §5EV§r WA accelerates by 16x, and the §1IV§r WA accelerates by 32x. They require an input of 6A of their voltage tier. Be sure to right-click the WA once with a §aScrewdriver§r to set it to §eTile Entity Mode§r, otherwise it will accelerate random ticks in a radius around it instead.\n\nMake them in an §3Assembly Line§r with some very advanced components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -66538,7 +66555,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Want to make configuring your §6P2P Tunnels§r easier?\n\nThis pack has §bBetter(er) P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nTo configure P2P tunnels, you need to select a P2P tunnel. This can be done in the GUI by clicking on its entry, or it can be done in-world by §aright-clicking§r on a P2P tunnel whilst holding the card.\n\nOnce a tunnel is selected, it will be highlighted in §agreen§r.\n\nConnected outputs are highlighted in §6orange§r, and connected inputs are highlighted in §9blue§r.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\n§aLeft-click§r on the name of the P2P to rename it.\n\n§aRight-click§r on a P2P entry to change its type, or to change it from an input to an output (or vice versa).\n\nThe card has 5 modes accessible in the §3GUI§r, switchable via the second button to the left. These are:\n\n§lBind to Output:§r\nThis mode sets the §aselected P2P§r as the §9input§r of the §bbind target§r (the entry you pressed §eBind§r on). Note that their input/output state and type are changed as necessary.\n\nIn this mode, the §bbind target§r can be any P2P on a different frequency than the §aselected P2P§r.\n\nNote that the §aselected P2P§r becomes an §9input§r, and the §bbind target§r becomes an §aoutput§r.\n\n§lBind to Input:§r\nThis is the same as §oBind to Output§r, except the §aselected P2P§r becomes an §6output§r, and the §bbind target§r becomes an §9input§r.\n\n§lAdd as Input:§r\nThis simply adds the §aselected P2P§r as one of the §bbind target\u0027s §9inputs§r.\n\nIn this mode, the §bbind target§r must have the same type as the §aselected P2P§r, as well as on a different frequency.\n\nNote that the §bbind targetis not changed. The §aselected P2P§r becomes an §9input§r.\n\n§lAdd as Output:§r\nThis is the same as §oAdd as Input§r, but the §aselected P2P§r becomes an §6output§r.\n\n§lUnbind:§r\nThis mode simply allows you to unbind P2P entries. The §aselected P2P§r is not changed.",
+          "desc:8": "Want to make configuring your §6P2P Tunnels§r easier?\n\nThis pack has §bBetter(er) P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nTo configure P2P tunnels, you need to select a P2P tunnel. This can be done in the GUI by clicking on its entry, or it can be done in-world by §aright-clicking§r on a P2P tunnel whilst holding the card.\n\nOnce a tunnel is selected, it will be highlighted in §agreen§r.\n\nConnected outputs are highlighted in §6orange§r, and connected inputs are highlighted in §9blue§r.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\n§aLeft-click§r on the name of the P2P to rename it.\n\n§aRight-click§r on a P2P entry to change its type, or to change it from an input to an output (or vice versa).\n\nThe card has 5 modes accessible in the §3GUI§r, switchable via the second button to the left. These are:\n\n§lBind to Output:§r\nThis mode sets the §aselected P2P§r as the §9input§r of the §bbind target§r (the entry you pressed §eBind§r on). Note that their input/output state and type are changed as necessary.\n\nIn this mode, the §bbind target§r can be any P2P on a different frequency than the §aselected P2P§r.\n\nNote that the §aselected P2P§r becomes an §9input§r, and the §bbind target§r becomes an §aoutput§r.\n\n§lBind to Input:§r\nThis is the same as §oBind to Output§r, except the §aselected P2P§r becomes an §6output§r, and the §bbind target§r becomes an §9input§r.\n\n§lAdd as Input:§r\nThis simply adds the §aselected P2P§r as one of the §bbind target\u0027s §9inputs§r.\n\nIn this mode, the §bbind target§r must have the same type as the §aselected P2P§r, as well as on a different frequency.\n\nNote that the §bbind target is not changed. The §aselected P2P§r becomes an §9input§r.\n\n§lAdd as Output:§r\nThis is the same as §oAdd as Input§r, but the §aselected P2P§r becomes an §6output§r.\n\n§lUnbind:§r\nThis mode simply allows you to unbind P2P entries. The §aselected P2P§r is not changed.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -66823,7 +66840,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Matter Condenser§r accepts large quantities of items or fluids to turn into data, which can ultimately be converted into a §6Singularity§r.\n\nThey can also make §6Matter Balls§r, but they are useless in this pack... well, except for being fired in the §eMatter Cannon§r, and being made into §6Paint Balls§r for the §eColor Applicator§r.\n\nA storage component is needed for holding this data. Specifically, you need a §664k Storage Component§r to make a Singularity.\n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r.\n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condensor set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nSingularities are required for linking together §aQuantum Link Chambers§r, and for crafting different AE2 and NAE2 parts.\n\nFor the former, you want to detonate an explosive (like §eTiny TNT§r, §eTNT§r or §ePowderbarrel§r), with a §6Singularity§r and an §6Ender Pearl Dust§r dropped on the ground next to it.\n\nThis will create a pair of §6Quantum Entangled Singularities§r, which you can then place inside of a Quantum Link Chamber to connect them together.",
+          "desc:8": "The §3Matter Condenser§r accepts large quantities of items or fluids to turn into data, which can ultimately be converted into a §6Singularity§r.\n\nThey can also make §6Matter Balls§r, but they are useless in this pack... well, except for being fired in the §eMatter Cannon§r, and being made into §6Paint Balls§r for the §eColor Applicator§r.\n\nA storage component is needed for holding this data. Specifically, you need a §664k Storage Component§r to make a Singularity.\n\nThe fastest way to make these is with §aFluid Lasers§r and a §6Aqueous Accumulator§r.\n\nSet the Aqueous Accumulator§r to output at a fluid laser, configure that fluid laser to `output\u0027, add a fluid laser on your matter condenser set to `input\u0027, and connect them together.\n\nIf you don\u0027t have that, you can surround it with §6Dense Cobblestone Generators§r.\n\nSingularities are required for linking together §aQuantum Link Chambers§r, and for crafting different AE2 and NAE2 parts.\n\nFor the former, you want to detonate an explosive (like §eTiny TNT§r, §eTNT§r or §ePowderbarrel§r), with a §6Singularity§r and an §6Ender Pearl Dust§r dropped on the ground next to it.\n\nThis will create a pair of §6Quantum Entangled Singularities§r, which you can then place inside of a Quantum Link Chamber to connect them together.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -67323,7 +67340,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Parallelization Machanics",
+          "name:8": "Parallelization Mechanics",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -68063,768 +68080,754 @@
         },
         "1:10": {
           "id:3": 22,
-          "sizeX:3": 28,
-          "sizeY:3": 28,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
           "x:3": -104,
-          "y:3": 272
+          "y:3": 292
         },
         "2:10": {
-          "id:3": 27,
-          "sizeX:3": 28,
-          "sizeY:3": 28,
-          "x:3": -104,
-          "y:3": 308
-        },
-        "3:10": {
           "id:3": 31,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
           "y:3": 852
         },
-        "4:10": {
+        "3:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -140,
           "y:3": 856
         },
-        "5:10": {
+        "4:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 756
         },
-        "6:10": {
+        "5:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -260,
           "y:3": 732
         },
-        "7:10": {
+        "6:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -140,
           "y:3": 792
         },
-        "8:10": {
+        "7:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 824
         },
-        "9:10": {
+        "8:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -140,
           "y:3": 824
         },
-        "10:10": {
+        "9:10": {
           "id:3": 52,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -308,
           "y:3": 692
         },
-        "11:10": {
+        "10:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -236,
           "y:3": 816
         },
-        "12:10": {
+        "11:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 792
         },
-        "13:10": {
+        "12:10": {
           "id:3": 70,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 208
         },
-        "14:10": {
+        "13:10": {
           "id:3": 71,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -304,
           "y:3": 328
         },
-        "15:10": {
+        "14:10": {
           "id:3": 72,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
           "y:3": 204
         },
-        "16:10": {
+        "15:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 208
         },
-        "17:10": {
+        "16:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 172
         },
-        "18:10": {
+        "17:10": {
           "id:3": 76,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
           "y:3": 328
         },
-        "19:10": {
+        "18:10": {
           "id:3": 78,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 244
         },
-        "20:10": {
+        "19:10": {
           "id:3": 79,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 320
         },
-        "21:10": {
+        "20:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 280
         },
-        "22:10": {
+        "21:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 320
         },
-        "23:10": {
+        "22:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -140,
           "y:3": 292
         },
-        "24:10": {
+        "23:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -460,
           "y:3": 300
         },
-        "25:10": {
+        "24:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
-          "y:3": 376
+          "y:3": 356
         },
-        "26:10": {
+        "25:10": {
           "id:3": 86,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 424
         },
-        "27:10": {
+        "26:10": {
           "id:3": 87,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 496
         },
-        "28:10": {
+        "27:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -460,
-          "y:3": 376
+          "y:3": 356
         },
-        "29:10": {
+        "28:10": {
           "id:3": 89,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -416,
           "y:3": 536
         },
-        "30:10": {
+        "29:10": {
           "id:3": 90,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -660,
           "y:3": 532
         },
-        "31:10": {
+        "30:10": {
           "id:3": 91,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -304,
           "y:3": 372
         },
-        "32:10": {
+        "31:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -372,
           "y:3": 172
         },
-        "33:10": {
+        "32:10": {
           "id:3": 93,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -312,
           "y:3": 532
         },
-        "34:10": {
+        "33:10": {
           "id:3": 95,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -100,
           "y:3": 648
         },
-        "35:10": {
+        "34:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 656
         },
-        "36:10": {
+        "35:10": {
           "id:3": 98,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -304,
-          "y:3": 420
+          "y:3": 464
         },
-        "37:10": {
+        "36:10": {
           "id:3": 104,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -416,
           "y:3": 592
         },
-        "38:10": {
+        "37:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -336,
           "y:3": 208
         },
-        "39:10": {
+        "38:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -372,
           "y:3": 208
         },
-        "40:10": {
+        "39:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 508
         },
-        "41:10": {
+        "40:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 300
         },
-        "42:10": {
+        "41:10": {
           "id:3": 130,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -444,
           "y:3": 464
         },
-        "43:10": {
+        "42:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 656
+          "x:3": -352,
+          "y:3": 688
         },
-        "44:10": {
+        "43:10": {
           "id:3": 132,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -308,
           "y:3": 748
         },
-        "45:10": {
+        "44:10": {
           "id:3": 133,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -596,
           "y:3": 652
         },
-        "46:10": {
+        "45:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -300,
+          "x:3": -352,
           "y:3": 656
         },
-        "47:10": {
+        "46:10": {
           "id:3": 135,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -656,
           "y:3": 648
         },
-        "48:10": {
+        "47:10": {
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -372,
           "y:3": 460
         },
-        "49:10": {
+        "48:10": {
           "id:3": 156,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 376
         },
-        "50:10": {
+        "49:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 424
         },
-        "51:10": {
+        "50:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 700
         },
-        "52:10": {
+        "51:10": {
           "id:3": 187,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -508,
           "y:3": 168
         },
-        "53:10": {
+        "52:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -648,
           "y:3": 756
         },
-        "54:10": {
+        "53:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -260,
           "y:3": 788
         },
-        "55:10": {
+        "54:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -92,
           "y:3": 536
         },
-        "56:10": {
+        "55:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -340,
           "y:3": 168
         },
-        "57:10": {
+        "56:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 544
         },
-        "58:10": {
+        "57:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 208
         },
-        "59:10": {
+        "58:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 372
         },
-        "60:10": {
+        "59:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 512
         },
-        "61:10": {
+        "60:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -452,
           "y:3": 504
         },
-        "62:10": {
+        "61:10": {
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 568
         },
-        "63:10": {
+        "62:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 656
         },
-        "64:10": {
+        "63:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -92,
           "y:3": 576
         },
-        "65:10": {
-          "id:3": 507,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 612
-        },
-        "66:10": {
+        "64:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 240
         },
-        "67:10": {
+        "65:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 332
         },
-        "68:10": {
+        "66:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 416
         },
-        "69:10": {
+        "67:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 656
         },
-        "70:10": {
+        "68:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 404
         },
-        "71:10": {
+        "69:10": {
           "id:3": 556,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 328
         },
-        "72:10": {
+        "70:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 284
         },
-        "73:10": {
+        "71:10": {
           "id:3": 727,
           "sizeX:3": 28,
           "sizeY:3": 28,
           "x:3": -462,
           "y:3": 242
         },
-        "74:10": {
+        "72:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 496
         },
-        "75:10": {
+        "73:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 576
         },
-        "76:10": {
+        "74:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -52,
           "y:3": 536
         },
-        "77:10": {
+        "75:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 172
         },
-        "78:10": {
+        "76:10": {
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -180,
           "y:3": 752
         },
-        "79:10": {
+        "77:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 280
         },
-        "80:10": {
+        "78:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 208
         },
-        "81:10": {
+        "79:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 512
         },
-        "82:10": {
+        "80:10": {
           "id:3": 805,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -144,
           "y:3": 420
         },
-        "83:10": {
+        "81:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -92,
           "y:3": 612
         },
-        "84:10": {
+        "82:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -228,
           "y:3": 412
         },
-        "85:10": {
+        "83:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 376
         },
-        "86:10": {
+        "84:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 244
         },
-        "87:10": {
+        "85:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -68,
-          "y:3": 292
+          "x:3": -352,
+          "y:3": 624
         },
-        "88:10": {
+        "86:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 292
         },
-        "89:10": {
+        "87:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 244
         },
-        "90:10": {
+        "88:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 756
         },
-        "91:10": {
+        "89:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
           "y:3": 540
         },
-        "92:10": {
+        "90:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 544
         },
-        "93:10": {
+        "91:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 580
         },
-        "94:10": {
+        "92:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 612
         },
-        "95:10": {
+        "93:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -456,
           "y:3": 696
         },
-        "96:10": {
+        "94:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -276,
+          "x:3": -264,
           "y:3": 484
         },
-        "97:10": {
+        "95:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -260,
           "y:3": 376
         },
-        "98:10": {
+        "96:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 376
         },
-        "99:10": {
+        "97:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -448,
           "y:3": 568
         },
-        "100:10": {
+        "98:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 424
         },
-        "101:10": {
+        "99:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -460,
           "y:3": 424
         },
-        "102:10": {
+        "100:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 700
         },
-        "103:10": {
+        "101:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 700
         },
-        "104:10": {
+        "102:10": {
           "id:3": 973,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -80,
           "y:3": 668
         },
-        "105:10": {
+        "103:10": {
           "id:3": 1013,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 576
         },
-        "106:10": {
+        "104:10": {
           "id:3": 1028,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 804
         },
-        "107:10": {
+        "105:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 336
         },
-        "108:10": {
+        "106:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 508
         },
-        "109:10": {
+        "107:10": {
           "id:3": 1074,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 604
         },
-        "110:10": {
+        "108:10": {
           "id:3": 1079,
           "sizeX:3": 24,
           "sizeY:3": 24,

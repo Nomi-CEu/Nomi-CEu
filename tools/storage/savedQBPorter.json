@@ -101,6 +101,10 @@
       "expert": 81
     },
     {
+      "normal": 83,
+      "expert": 83
+    },
+    {
       "normal": 84,
       "expert": 84
     },
@@ -165,6 +169,10 @@
       "expert": 132
     },
     {
+      "normal": 134,
+      "expert": 134
+    },
+    {
       "normal": 146,
       "expert": 146
     },
@@ -201,12 +209,20 @@
       "expert": 171
     },
     {
+      "normal": 172,
+      "expert": 172
+    },
+    {
       "normal": 173,
       "expert": 173
     },
     {
       "normal": 174,
       "expert": 174
+    },
+    {
+      "normal": 175,
+      "expert": 175
     },
     {
       "normal": 176,
@@ -493,12 +509,24 @@
       "expert": 795
     },
     {
+      "normal": 803,
+      "expert": 803
+    },
+    {
+      "normal": 808,
+      "expert": 808
+    },
+    {
       "normal": 814,
       "expert": 814
     },
     {
       "normal": 819,
       "expert": 819
+    },
+    {
+      "normal": 821,
+      "expert": 821
     },
     {
       "normal": 827,
@@ -581,6 +609,10 @@
       "expert": 926
     },
     {
+      "normal": 935,
+      "expert": 935
+    },
+    {
       "normal": 952,
       "expert": 922
     },
@@ -599,6 +631,10 @@
     {
       "normal": 1001,
       "expert": 829
+    },
+    {
+      "normal": 1016,
+      "expert": 917
     },
     {
       "normal": 1017,
@@ -772,7 +808,8 @@
   "ignoreQuestsNormal": [
     959,
     958,
-    1014
+    1014,
+    949
   ],
   "ignoreQuestsExpert": [],
   "alwaysAskQuestsNormal": [],

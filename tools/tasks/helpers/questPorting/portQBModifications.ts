@@ -301,7 +301,8 @@ const modifyIcon = async (
 	// Tag Compounds might be removed/added
 	if (
 		change.path.toString() !== "properties:10,betterquesting:10,icon:10,tag:10"
-	) assertIsModification(change);
+	)
+		assertIsModification(change);
 
 	const oldIcon =
 		modify.oldQuest["properties:10"]["betterquesting:10"]["icon:10"];
