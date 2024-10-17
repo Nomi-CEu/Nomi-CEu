@@ -67497,7 +67497,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§5Nomi-CEu§r also features §bFind My Items and Fluids.§r A mod that allows you to search any nearby inventories for §6Item§r and §9Fluids§r. Originally, you were able to do this with §bExtra Utilities 2§r, but it didn\u0027t support searching for fluids.\n\nThis mod features two hotkeys: §eT§r for\nsearching items and §eY§r for searching fluids. To start, simply press §eT§r while hovering an item inside a GUI or with §bJEI§r. Any inventories containing the specified item will §6Emit a particle effect§r.\n\nWhile pressing §eY§r while hovering any fluid inside a GUI, any tanks or buckets containing the specified fluid will also emit a particle effect.\n\nNote that the said mod only matches the type of item, not §eMetadata§r or §eNBT§r. For example, when you search with said mod using  a §6GregTech Wrench§r, it will match any GregTech wrench made from any material.\n\n§cKeep in mind nothing will happen if there are no fluids/items of that type nearby!§r",
+          "desc:8": "§5Nomi-CEu§r also features §bFind My Items and Fluids.§r A mod that allows you to search any nearby inventories for §6Item§r and §9Fluids§r. Originally, you were able to do this with §bExtra Utilities 2§r, but it didn\u0027t support searching for fluids.\n\nThis mod features two hotkeys: §eT§r for searching items and §eY§r for searching fluids. To start, simply press §eT§r while hovering an item inside a GUI or with §bJEI§r. Any inventories containing the specified item will §6Emit a particle effect§r.\n\nWhile pressing §eY§r while hovering any fluid inside a GUI, any tanks or buckets containing the specified fluid will also emit a particle effect.\n\nNote that the said mod only matches the type of item, not §eMetadata§r or §eNBT§r. For example, when you search with said mod using a §6GregTech Wrench§r, it will match any GregTech wrench made from any material.\n\n§cKeep in mind nothing will happen if there are no fluids/items of that type nearby!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -67517,7 +67517,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 1080,
