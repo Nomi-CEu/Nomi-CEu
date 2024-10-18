@@ -150,7 +150,7 @@ async function fetchOrMakeChangelog() {
 				filename: "CHANGELOG.md",
 			}),
 			mustache.render(url, {
-				branch: process.env.CHANGELOG_BRNACH,
+				branch: process.env.CHANGELOG_BRANCH,
 				filename: "CHANGELOG_CF.md",
 			}),
 		);
