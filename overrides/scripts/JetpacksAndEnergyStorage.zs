@@ -337,10 +337,12 @@ recipes.addShaped(<thermalexpansion:frame:128>, [
 
 // Leadstone Energy Cell
 
-// hide the multi-tag one from JEI so it's not confusing
-mods.jei.JEI.removeAndHide(<thermalexpansion:cell>.withTag({Recv: 10000, RSControl: 0 as byte, Facing: 3 as byte, Energy: 0, SideCache: [2, 1, 1, 1, 1, 1] as byte[] as byte[], Level: 0 as byte, Send: 10000}));
+
+
 
 recipes.remove(<thermalexpansion:cell>);
+
+
 
 alloy.recipeBuilder()
     .inputs([<thermalexpansion:frame:128>, <minecraft:redstone_block>])
@@ -417,3 +419,29 @@ mods.jei.JEI.addItem(hardenedcell);
 mods.jei.JEI.addItem(reinforcedcell);
 mods.jei.JEI.addItem(signalumcell);
 mods.jei.JEI.addItem(resonantcell);
+
+global creativeCell   as IItemStack = <thermalexpansion:cell>.withTag({Creative: 1 as byte, Level: 4 as byte}, false);
+mods.jei.JEI.addItem(creativeCell);
+
+
+
+// hide the multi-tag one from JEI so it's not confusing
+
+//mods.jei.JEI.removeAndHide(<thermalexpansion:cell>.withTag({Creative: 1 as byte, Level: 4 as byte}));
+
+
+
+
+
+//mods.jei.JEI.addItem(<thermalexpansion:cell>.withTag({
+//    Recv: 250000,
+//    RSControl: 0 as byte,
+//    Facing: 3 as byte,
+//    Energy: 500000000,
+//    Creative: 1 as byte,
+//    SideCache: [2, 2, 2, 2, 2, 2] as byte[] as byte[],
+//    Level: 4 as byte,
+//    Send: 250000
+//}));
+
+

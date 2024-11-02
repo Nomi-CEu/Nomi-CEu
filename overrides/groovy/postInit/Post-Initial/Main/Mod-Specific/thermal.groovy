@@ -3,12 +3,16 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 // Fix Energy Cells in JEI
 // Remove all Energy Cells, then add them back
 hideItemIgnoreNBT(item('thermalexpansion:cell'))
+//hideItemIgnoreNBT(item('thermalexpansion:cell'))
 
 // Basic..Resonant
 for (int level : 0..4) {
 	mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 0, 'Level': (byte) level]))
 }
 
+//mods.jei.ingredient.hide(item('thermalexpansion:cell'))
+
+//mods.jei.ingredient.hide(item('thermalexpansion:cell:*'))
 // Creative
 mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 1, 'Level': (byte) 4]))
 

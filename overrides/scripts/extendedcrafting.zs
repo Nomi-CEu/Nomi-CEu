@@ -7,6 +7,7 @@ import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 
 val creativecell = <thermalexpansion:cell>.withTag({Creative: 1 as byte, Level: 4 as byte}, false);
+
 val creativetank = <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 1 as byte, Level: 4 as byte}, false);
 val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType: 3}, false);
 
@@ -29,7 +30,7 @@ makeShaped("of_extendedcrafting_compressor", <extendedcrafting:compressor>,
       C : <extendedcrafting:material:10>,
       D : <extendedcrafting:frame>,
       E : <metaitem:plateBlackSteel> });
-      
+
 recipes.remove(<extendedcrafting:guide>);
 
 recipes.remove(<extendedcrafting:frame>);
@@ -381,14 +382,14 @@ mods.extendedcrafting.TableCrafting.remove(<extendedcrafting:singularity_ultimat
 //[null,                            null,                                <extendedcrafting:material:140>,    <nomilabs:stabilizedberkelium>, <nomilabs:stabilizedcalifornium>,   <nomilabs:stabilizedeinsteinium>, <extendedcrafting:material:140>,   null,                               null]]);
 
 mods.extendedcrafting.TableCrafting.addShaped(0, <extendedcrafting:singularity_ultimate>, [
-	[<ore:nuggetNetherStar>, <nomilabs:solidifiedhydrogen>, <nomilabs:solidifiedhelium>, <ore:dustLithium>, <ore:ingotBeryllium>, <ore:dustBoron>, <ore:dustCarbon>, <nomilabs:solidifiednitrogen>, <ore:nuggetNetherStar>], 
-	[<nomilabs:solidifiedoxygen>, <nomilabs:solidifiedfluorine>, <nomilabs:solidifiedneon>, <ore:dustSodium>, <ore:dustMagnesium>, <ore:ingotAluminium>, <ore:dustSilicon>, <ore:dustPhosphorus>, <ore:dustSulfur>], 
-	[<nomilabs:solidifiedchlorine>, <nomilabs:solidifiedargon>, <ore:dustPotassium>, <ore:dustCalcium>, <ore:ingotTitanium>, <ore:ingotVanadium>, <ore:ingotChrome>, <ore:ingotManganese>, <ore:ingotIron>], 
-	[<ore:ingotCobalt>, <ore:ingotNickel>, <ore:ingotCopper>, <ore:ingotZinc>, <ore:ingotGallium>, <ore:dustArsenic>, <nomilabs:solidifiedkrypton>, <ore:ingotYttrium>, <ore:ingotNiobium>], 
-	[<ore:ingotMolybdenum>, <ore:ingotRuthenium>, <ore:ingotRhodium>, <ore:ingotPalladium>, <nomilabs:exoticmaterialscatalyst>, <ore:ingotSilver>, <ore:dustCadmium>, <ore:ingotIndium>, <ore:ingotTin>], 
-	[<ore:ingotAntimony>, <nomilabs:solidifiedxenon>, <ore:dustCaesium>, <ore:dustBarium>, <ore:dustLanthanum>, <ore:dustCerium>, <ore:ingotNeodymium>, <ore:ingotSamarium>, <ore:ingotEuropium>], 
-	[<ore:ingotLutetium>, <ore:ingotTantalum>, <ore:ingotTungsten>, <ore:ingotOsmium>, <ore:ingotIridium>, <ore:ingotPlatinum>, <ore:ingotGold>, <nomilabs:solidifiedmercury>, <ore:ingotLead>], 
-	[<nomilabs:solidifiedradon>, <ore:ingotThorium>, <nomilabs:stabilizeduranium>, <nomilabs:stabilizedneptunium>, <nomilabs:stabilizedplutonium>, <ore:ingotAmericium>, <nomilabs:stabilizedcurium>, <nomilabs:stabilizedberkelium>, <nomilabs:stabilizedcalifornium>], 
+	[<ore:nuggetNetherStar>, <nomilabs:solidifiedhydrogen>, <nomilabs:solidifiedhelium>, <ore:dustLithium>, <ore:ingotBeryllium>, <ore:dustBoron>, <ore:dustCarbon>, <nomilabs:solidifiednitrogen>, <ore:nuggetNetherStar>],
+	[<nomilabs:solidifiedoxygen>, <nomilabs:solidifiedfluorine>, <nomilabs:solidifiedneon>, <ore:dustSodium>, <ore:dustMagnesium>, <ore:ingotAluminium>, <ore:dustSilicon>, <ore:dustPhosphorus>, <ore:dustSulfur>],
+	[<nomilabs:solidifiedchlorine>, <nomilabs:solidifiedargon>, <ore:dustPotassium>, <ore:dustCalcium>, <ore:ingotTitanium>, <ore:ingotVanadium>, <ore:ingotChrome>, <ore:ingotManganese>, <ore:ingotIron>],
+	[<ore:ingotCobalt>, <ore:ingotNickel>, <ore:ingotCopper>, <ore:ingotZinc>, <ore:ingotGallium>, <ore:dustArsenic>, <nomilabs:solidifiedkrypton>, <ore:ingotYttrium>, <ore:ingotNiobium>],
+	[<ore:ingotMolybdenum>, <ore:ingotRuthenium>, <ore:ingotRhodium>, <ore:ingotPalladium>, <nomilabs:exoticmaterialscatalyst>, <ore:ingotSilver>, <ore:dustCadmium>, <ore:ingotIndium>, <ore:ingotTin>],
+	[<ore:ingotAntimony>, <nomilabs:solidifiedxenon>, <ore:dustCaesium>, <ore:dustBarium>, <ore:dustLanthanum>, <ore:dustCerium>, <ore:ingotNeodymium>, <ore:ingotSamarium>, <ore:ingotEuropium>],
+	[<ore:ingotLutetium>, <ore:ingotTantalum>, <ore:ingotTungsten>, <ore:ingotOsmium>, <ore:ingotIridium>, <ore:ingotPlatinum>, <ore:ingotGold>, <nomilabs:solidifiedmercury>, <ore:ingotLead>],
+	[<nomilabs:solidifiedradon>, <ore:ingotThorium>, <nomilabs:stabilizeduranium>, <nomilabs:stabilizedneptunium>, <nomilabs:stabilizedplutonium>, <ore:ingotAmericium>, <nomilabs:stabilizedcurium>, <nomilabs:stabilizedberkelium>, <nomilabs:stabilizedcalifornium>],
 	[<ore:nuggetNetherStar>, <nomilabs:stabilizedeinsteinium>, <ore:ingotDarmstadtium>, <ore:ingotTritanium>, <ore:ingotDuranium>, <ore:ingotTrinium>, <ore:ingotDraconium>, <ore:ingotNaquadah>, <ore:nuggetNetherStar>]
 ]);
 
@@ -582,14 +583,14 @@ makeExtremeRecipe9(<draconicevolution:creative_rf_source>,
 
 // GT Infinite Energy
 mods.extendedcrafting.TableCrafting.addShaped(0, <metaitem:infinite_energy>, [
-	[<ore:wireGtHexMercuryBariumCalciumCuprate>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexMercuryBariumCalciumCuprate>], 
-	[<ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>], 
-	[<ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>], 
-	[<ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>], 
-	[<ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <draconicevolution:creative_rf_source>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>], 
-	[<ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>], 
-	[<ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>], 
-	[<ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>], 
+	[<ore:wireGtHexMercuryBariumCalciumCuprate>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexMercuryBariumCalciumCuprate>],
+	[<ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>],
+	[<ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>],
+	[<ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>],
+	[<ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <draconicevolution:creative_rf_source>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>],
+	[<ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexOmnium>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>],
+	[<ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>],
+	[<ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>],
 	[<ore:wireGtHexMercuryBariumCalciumCuprate>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexMercuryBariumCalciumCuprate>]
 ]);
 
@@ -683,11 +684,11 @@ makeExtremeRecipe9(<thermalcultivation:watering_can:32000>,
      "   DDBBB ",
      "    CCC  ",
      "         "],
-    { A : <thermalcultivation:watering_can>.withTag({Water:0, Mode:0}, false),
-      B : <thermalcultivation:watering_can:1>.withTag({Water:0, Mode:1}, false),
-      C : <thermalcultivation:watering_can:2>.withTag({Water:0, Mode:2}, false),
-      D : <thermalcultivation:watering_can:3>.withTag({Water:0, Mode:3}, false),
-      E : <thermalcultivation:watering_can:4>.withTag({Water:0, Mode:4}, false),
+    { A : <thermalcultivation:watering_can>.withTag({Water:0,Mode:0}, false),
+      B : <thermalcultivation:watering_can:1>.withTag({Water:0,Mode:1}, false),
+      C : <thermalcultivation:watering_can:2>.withTag({Water:0,Mode:2}, false),
+      D : <thermalcultivation:watering_can:3>.withTag({Water:0,Mode:3}, false),
+      E : <thermalcultivation:watering_can:4>.withTag({Water:0,Mode:4}, false),
       I : <avaritia:resource:5>});
 
 makeExtremeRecipe9(<solarflux:solar_panel_infinity>,
