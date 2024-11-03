@@ -1,4 +1,9 @@
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
+import crafttweaker.api.minecraft.CraftTweakerMC;
+import crafttweaker.api.item.IItemStack;
+import crafttweaker.api.item.IIngredient;
+import crafttweaker.mods.jei.JEI;
+import crafttweaker.CraftTweakerAPI;
 
 // Fix Energy Cells in JEI
 // Remove all Energy Cells, then add them back
@@ -10,9 +15,8 @@ for (int level : 0..4) {
 	mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 0, 'Level': (byte) level]))
 }
 
-//mods.jei.ingredient.hide(item('thermalexpansion:cell'))
+JEI.addItem(CraftTweakerMC.getIItemStack(item('thermalexpansion:cell:*')))
 
-//mods.jei.ingredient.hide(item('thermalexpansion:cell:*'))
 // Creative
 mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 1, 'Level': (byte) 4]))
 
