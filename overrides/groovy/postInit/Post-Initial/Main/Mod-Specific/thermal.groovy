@@ -36,6 +36,8 @@ JEI.hide(ClosedLoopCooling);
 IItemStack DisjunctiveExtraction = CraftTweakerMC.getIItemStack(item('thermalexpansion:augment', 704));
 JEI.hide(DisjunctiveExtraction);
 
+IItemStack PyroclasticInjection = CraftTweakerMC.getIItemStack(item('thermalexpansion:augment', 496));
+JEI.hide(PyroclasticInjection);
 
 
 
