@@ -15,10 +15,17 @@ material('rhodium_plated_palladium')
 	.changeChemicalFormula()
 	.change()
 
+// Remove Glowstone Decomp (No Glowstone -> Phosphorous)
+material('glowstone')
+	.changeComposition()
+	.removeComponents()
+	.changeDecompositionRecipes()
+	.change()
+
+// Change Glowstone Chem Formula
 material('glowstone')
 	.changeComposition()
 	.setComponents([metaitem('dustGold'), metaitem('dustTricalciumPhosphate')])
-	.changeDecompositionRecipes()
 	.changeChemicalFormula()
 	.change()
 
