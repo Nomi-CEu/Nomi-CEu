@@ -799,6 +799,7 @@ function getEndMessage(delimiter: string) {
 	const normal = dedent`
 			Try checking the TOML syntax in https://www.toml-lint.com/, checking the object tree in https://www.convertsimple.com/convert-toml-to-json/, checking syntax in https://toml.io/en/v1.0.0, and looking through https://github.com/Nomi-CEu/Nomi-CEu/wiki/Part-3:-Maintainer-Information#12-create-changelog!
 			Also check that you have surrounded the TOML in '${delimiter}'!`;
+	// Decided to keep this mention of Nomi-CEu still the documentation could still apply and we're not going to rewrite it
 	if (data.isTest) return normal;
 	return normal.concat("\nSkipping...");
 }

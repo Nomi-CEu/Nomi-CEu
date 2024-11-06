@@ -12,7 +12,7 @@
     "detectDimensionData": false,
     "detectWorldData": true,
     "clientId": "1222869945398853733",
-    "defaultIcon": "nomi-ceu",
+    "defaultIcon": "hogifactory",
     "enableJoinRequests": false,
     "preferredClientLevel": 3,
     "resetTimeOnInit": false,
@@ -155,9 +155,9 @@
     }
   },
   "serverSettings": {
-    "fallbackServerIcon": "nomi-ceu",
-    "fallbackServerName": "Nomi-CEu Server",
-    "fallbackServerMotd": "Nomifactory CEu Server",
+    "fallbackServerIcon": "hogifactory",
+    "fallbackServerName": "HOGifactory Server",
+    "fallbackServerMotd": "HOGifactory Server",
     "serverData": {
       "default": {
         "textOverride": "Playing Multiplayer ({custom.mode} Mode)"
@@ -202,7 +202,7 @@
         "gameState": "",
         "largeImageKey": "loading",
         "largeImageText": "",
-        "smallImageKey": "nomi-ceu",
+        "smallImageKey": "hogifactory",
         "smallImageText": "",
         "startTimestamp": "",
         "endTimestamp": "",
@@ -355,12 +355,8 @@
           "url": "https://google.com"
         },
         "github": {
-          "label": "Nomi-CEu GitHub",
-          "url": "https://github.com/Nomi-CEu/Nomi-CEu"
-        },
-        "discord": {
-          "label": "Nomi-CEu Discord",
-          "url": "https://discord.com/invite/zwQzqP8b6q"
+          "label": "HOGifactory GitHub",
+          "url": "https://github.com/Horde-Of-Greg/HOGifactory"
         }
       }
     },

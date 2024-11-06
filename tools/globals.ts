@@ -43,7 +43,7 @@ export const templatesFolder = "templates";
 export const storageFolder = "storage";
 
 // The GitHub Repository Owner
-export const repoOwner = "Nomi-CEu";
+export const repoOwner = "Horde-Of-Greg";
 
 // The GitHub Repository Name
-export const repoName = "Nomi-CEu";
+export const repoName = "HOGifactory";

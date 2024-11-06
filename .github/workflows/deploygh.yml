@@ -25,7 +25,7 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
-          owner: Nomi-CEu
+          owner: Horde-Of-Greg
 
       - name: Checkout Tag
         uses: actions/checkout@v4

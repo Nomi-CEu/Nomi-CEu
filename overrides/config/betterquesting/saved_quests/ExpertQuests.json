@@ -239,7 +239,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Welcome to §5Nomifactory §2GTCEu Edition: §cHard/Expert Mode§r!\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\nDon\\u0027t forget: you can always open the §6Questbook§r with the §eGrave§r key!\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (color 2)§r, and features unique to §cHard/Expert Mode§r will be highlighted in §cred (color C)§r.",
+          "desc:8": "Welcome to §5HOGifactory\n\nThis pack is intended to be played in a §bLost Cities / Overworld dimension§r.\n\nIf you\u0027re playing with friends, don\u0027t forget to invite them to the §equestbook party§r.\n\nDon\\u0027t forget: you can always open the §6Questbook§r with the §eGrave§r key!\n\n§rIf you wish to build your base in a skyblock world, place the §6Void World Cake§r down on the ground, and eat a slice to be sent to the void. Please note that you\u0027ll still need to return to the Lost Cities / Overworld dimension to mine, but you can freely build in complete safety in the §eVoid World§r.\n\nFeatures new to §2CEu§r and quests with new content will be highlighted in §2dark green (color 2)§r, and features unique to §cHard/Expert Mode§r will be highlighted in §cred (color C)§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -339,7 +339,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Ores in §5Nomifactory§r exist in large clusters, or \u0027§eveins§r\u0027. These veins are scattered around the world, and are relatively common. §2The upgraded HV Electric Prospector\u0027s Scanner you were given will tell you the types of ores you can find within a 7x7 chunk area!\n§r\nWhile the Scanner requires energy to work, you are unlikely to deplete its battery. That said, there is a quest you can use to refill the energy of the scanner, which is located on this chapter.\n\nIn order to proceed, you\u0027ll need to locate a source of §6Iron§r. You have a few options. §6Magnetite§r veins are higher up and contain large amounts of iron, as well as some §6Vanadium§r and §6Gold§r. Another good source of iron is §6Limonite§r veins, which contain several types of iron. Finally, §6Pyrite§r can be found paired with §6Copper§r in several types of veins.\n\n§6Wrought Iron§r is obtained simply by §esmelting Iron §cNuggets§e a second time§r. It has more durability than Iron, so it is better for making tools, but §cdo not convert your entire Iron supply over to Wrought Iron§r. The two materials are not interchangeable and you\u0027ll need Iron or Wrought Iron as demanded by various recipes.",
+          "desc:8": "Ores in §5HOGifactory§r exist in large clusters, or \u0027§eveins§r\u0027. These veins are scattered around the world, and are relatively common. §2The upgraded HV Electric Prospector\u0027s Scanner you were given will tell you the types of ores you can find within a 7x7 chunk area!\n§r\nWhile the Scanner requires energy to work, you are unlikely to deplete its battery. That said, there is a quest you can use to refill the energy of the scanner, which is located on this chapter.\n\nIn order to proceed, you\u0027ll need to locate a source of §6Iron§r. You have a few options. §6Magnetite§r veins are higher up and contain large amounts of iron, as well as some §6Vanadium§r and §6Gold§r. Another good source of iron is §6Limonite§r veins, which contain several types of iron. Finally, §6Pyrite§r can be found paired with §6Copper§r in several types of veins.\n\n§6Wrought Iron§r is obtained simply by §esmelting Iron §cNuggets§e a second time§r. It has more durability than Iron, so it is better for making tools, but §cdo not convert your entire Iron supply over to Wrought Iron§r. The two materials are not interchangeable and you\u0027ll need Iron or Wrought Iron as demanded by various recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -660,7 +660,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§r. Ore veins are massive, and mining is extremely fast with §aMining Hammers§r. What\u0027s more, even once you get access to §3Macerators§r, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials §rbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have Medium Voltage machines or even later.§r",
+          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in HOGifactory, though§r. Ore veins are massive, and mining is extremely fast with §aMining Hammers§r. What\u0027s more, even once you get access to §3Macerators§r, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials §rbecause you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have Medium Voltage machines or even later.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20940,7 +20940,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You win.\n\nCongratulations.\n\nI hope you enjoyed playing §5Nomi-CEu Expert Mode§r.",
+          "desc:8": "You win.\n\nCongratulations.\n\nI hope you enjoyed playing §5HOGifactory§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

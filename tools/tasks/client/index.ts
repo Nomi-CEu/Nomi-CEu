@@ -119,9 +119,9 @@ async function fetchModList() {
 		<!DOCTYPE html>
 		<html lang="en">
 			<head>
-				<title>Nomi-CEu Mod Information</title>
+				<title>HOGifactory Mod Information</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<link rel = "icon" href =  "https://github.com/Nomi-CEu/Nomi-CEu/assets/103940576/672808a8-0ad0-4d07-809e-08336a928909" type = "image/x-icon"> 
+				<link rel = "icon" href =  "https://github.com/Horde-Of-Greg/HOGifactory/blob/main/assets/images/HOGifactory-logo.png?raw=true" type = "image/x-icon"> 
 				<style>
 					caption {
 						font-size: 30px;
@@ -182,7 +182,7 @@ async function fetchModList() {
 			</head>
 			<body>
 				<table>
-					<caption>Nomi-CEu Mod List (${modList.length} Mods):</caption>
+					<caption>HOGifactory Mod List (${modList.length} Mods):</caption>
 					<tr>
 						<th>Mod Name</th>
 						<th>Mod Version</th>

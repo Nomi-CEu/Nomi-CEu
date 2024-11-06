@@ -78,31 +78,7 @@
 			"alignment": "left_center",
 			"action": {
 				"type": "openLink",
-				"link": "https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/{{{version}}}"
-			}
-		},
-		"discord": {
-			"text": "Join Us On Discord!",
-			"posX": 4,
-			"posY": 26,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openLink",
-				"link": "https://discord.gg/zwQzqP8b6q"
-			}
-		},
-		"akliz": {
-			"text": "Rent Your Own Nomifactory Server!",
-			"posX": 4,
-			"posY": 50,
-			"width": 240,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openLink",
-				"link": "https://www.akliz.net/nomifactory"
+				"link": "https://github.com/Horde-Of-Greg/HOGifactory/releases/tag/{{{version}}}"
 			}
 		}
 	},

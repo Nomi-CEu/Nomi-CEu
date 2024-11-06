@@ -50,7 +50,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 
 	changelog = mustache.render(changelog, {
 		CENTER_ALIGN: 'style="text-align: center;"',
-		CF_REDIRECT: `<h4 style="text-align: center;">Looks way better <a href="https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/${process.env.GITHUB_TAG}">here.</a></h4>`,
+		CF_REDIRECT: `<h4 style="text-align: center;">Looks way better <a href="https://github.com/Horde-Of-Greg/HOGifactory/releases/tag/${process.env.GITHUB_TAG}">here.</a></h4>`,
 	});
 
 	const tokenHeaders = {
@@ -140,7 +140,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 	}
 	if (isEnvVariableSet("GITHUB_STEP_SUMMARY"))
 		await core.summary
-			.addHeading("Nomi-CEu CurseForge Deploy Summary:", 2)
+			.addHeading("HOGifactory CurseForge Deploy Summary:", 2)
 			.addTable([
 				[
 					{ data: "File Name", header: true },

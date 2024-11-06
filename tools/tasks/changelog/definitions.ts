@@ -20,7 +20,7 @@ export const indentationLevel = "  ";
   Link to the repo, with a slash at the end.
   All URLs will be appended to this.
  */
-export const repoLink = "https://github.com/Nomi-CEu/Nomi-CEu/";
+export const repoLink = "https://github.com/Horde-Of-Greg/HOGifactory/";
 
 /* Keys */
 

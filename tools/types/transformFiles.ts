@@ -27,7 +27,7 @@ export class BuildData {
 			this.type = "HEAD_REF";
 
 			// If Head Repo is provided and this is a Fork PR
-			if (process.env.HEAD_REPO && process.env.HEAD_REPO !== "Nomi-CEu") {
+			if (process.env.HEAD_REPO && process.env.HEAD_REPO !== "HOGifactory") {
 				this.rawVersion = `[${process.env.HEAD_REPO.toLowerCase()}-${process.env.HEAD_REF}]-${shortCommit}`;
 				this.transformedVersion = `Fork PR Build (${process.env.HEAD_REPO}/${process.env.HEAD_REF} branch, ${shortCommit})`;
 				return;

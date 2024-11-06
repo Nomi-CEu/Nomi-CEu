@@ -66,7 +66,7 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
-          owner: Nomi-CEu
+          owner: Horde-Of-Greg
 
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -111,9 +111,10 @@ jobs:
         id: "commit-template"
         with:
           commit_message: "Upload Changelogs for Release ${{ inputs.tag }}"
-          commit_author: nomi-ceu-management[bot] <155502507+nomi-ceu-management[bot]@users.noreply.github.com>
-          commit_user_name: nomi-ceu-management[bot]
-          commit_user_email: 155502507+nomi-ceu-management[bot]@users.noreply.github.com
+          commit_author: horde-of-greg-management[bot] <1048098+horde-of-greg-management[bot]@users.noreply.github.com>
+          # We need to make a github app for this to work.
+          commit_user_name: horde-of-greg-management[bot]
+          commit_user_email: 1048098+horde-of-greg-management[bot]@users.noreply.github.com
           branch: ${{ inputs.branch }}
           create_branch: true
 

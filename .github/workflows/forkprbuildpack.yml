@@ -33,8 +33,8 @@ env:
 
 jobs:
   setup:
-    # Only continue if we are in base Nomi-CEu Repo, pull request is from fork and pr has fork-build label
-    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' && contains(github.event.pull_request.labels.*.name, 'fork-build') }}"
+    # Only continue if we are in base HOGifactory Repo, pull request is from fork and pr has fork-build label
+    if: "${{ github.repository_owner == 'Horde-Of-Greg' && github.event.pull_request.head.repo.owner.login != 'Horde-Of-Greg' && contains(github.event.pull_request.labels.*.name, 'fork-build') }}"
     name: Setup (${{ github.event.pull_request.head.sha }})
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
