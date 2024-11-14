@@ -1,4 +1,4 @@
-import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+dimport com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.groovy.RecipePredicates
 import com.nomiceu.nomilabs.util.LabsModeHelper
@@ -109,14 +109,6 @@ if (LabsModeHelper.expert) {
 		.duration(100).EUt(VA[ULV])
 		.buildAndRegister()
 }
-
-
-// Ender Lily Extractor Recipe
-mods.gregtech.extractor.recipeBuilder()
-	.inputs(item('extrautils2:enderlilly')
-	.fluidOutputs(fluid('ender') * 25)
-	.duration(80).EUt(VA[ULV])
-	.buildAndRegister()
 
 // Coated Circuit Board
 mods.gregtech.assembler.recipeBuilder()
