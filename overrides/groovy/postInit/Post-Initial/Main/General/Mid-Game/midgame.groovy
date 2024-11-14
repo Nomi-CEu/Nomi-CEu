@@ -32,24 +32,24 @@ mods.gregtech.large_chemical_reactor.removeByOutput([fluid('diaminobenzidine')],
 // Chemical Reactor Recipe
 mods.gregtech.chemical_reactor.recipeBuilder()
     .inputs(metaitem('dustTinyZinc'))  
-    .fluidInputs([fluid('nitrochlorobenzene') * 2000, fluid('hydrogen') * 2000]) 
-    .fluidOutputs([fluid('dichlorobenzidine') * 1000]) 
+    .fluidinputs([fluid('nitrochlorobenzene') * 2000, fluid('hydrogen') * 2000], null)
+    .fluidoutputs([fluid('dichlorobenzidine') * 1000], null) 
     .duration(200).EUt(VA[EV])
     .buildAndRegister()
 
 // Large Chemical Reactor Recipe 
 mods.gregtech.large_chemical_reactor.recipeBuilder()
     .inputs(metaitem('dustZinc')) 
-    .fluidInputs([fluid('nitrochlorobenzene') * 18000, fluid('hydrogen') * 18000]) 
-    .fluidOutputs([fluid('dichlorobenzidine') * 9000]) 
+    .fluidinputs([fluid('nitrochlorobenzene') * 18000, fluid('hydrogen') * 18000], null) 
+    .fluidoutputs([fluid('dichlorobenzidine') * 9000], null) 
     .duration(1800).EUt(VA[EV])
     .buildAndRegister()
 
 // Large Chemical Reactor Recipe
 mods.gregtech.large_chemical_reactor.recipeBuilder()
     .inputs(metaitem('dustCopper'))  
-    .fluidInputs([fluid('dichlorobenzidine') * 1000, fluid('ammonia') * 2000])
-    .fluidOutputs([fluid('diaminobenzidine') * 1000, fluid('hydrochloric_acid') * 2000]) 
+    .fluidinputs([fluid('dichlorobenzidine') * 1000, fluid('ammonia') * 2000], null)
+    .fluidoutputs([fluid('diaminobenzidine') * 1000, fluid('hydrochloric_acid') * 2000], null) 
     .duration(100).EUt(VA[IV])
     .buildAndRegister()
 
