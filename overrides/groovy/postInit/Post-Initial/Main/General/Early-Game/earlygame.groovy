@@ -1,4 +1,4 @@
-dimport com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.groovy.RecipePredicates
 import com.nomiceu.nomilabs.util.LabsModeHelper
