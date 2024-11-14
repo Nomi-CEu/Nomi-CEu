@@ -23,32 +23,33 @@ mods.gregtech.centrifuge.recipeBuilder()
 // Nether Star Block -> Nether Star
 crafting.addShapeless(item('minecraft:nether_star') * 9, [ore('blockNetherStar')])
 
-// Fixed catylsts in PBI Chain
+// Fixed catalysts in PBI Chain
 // Remove the recipes
-crafting.removeByOutput(fluid('dichlorobenzidine'))
-crafting.removeByOutput(fluid('diaminobenzidine'))
-// Replace with corect catylsts
+mods.gregtech.chemical_reactor.removeByOutput([fluid('dichlorobenzidine')], null)
+mods.gregtech.large_chemical_reactor.removeByOutput([fluid('dichlorobenzidine')], null)
+mods.gregtech.large_chemical_reactor.removeByOutput([fluid('diaminobenzidine')], null)
+
+// Chemical Reactor Recipe
 mods.gregtech.chemical_reactor.recipeBuilder()
-	.inputs(metaitem('dustTinyZinc')
-	.fluidinputs(('nitrochlorobenzene') * 2000)
-	.fluidinputs('hydrogen') * 2000)
-	.fluidoutputs(fluid('dichlorobenzidine') * 1000)
-	.duration(200).EUt(VA[EV])
-	.buildAndRegister()
+    .inputs(metaitem('dustTinyZinc'))  
+    .fluidInputs([fluid('nitrochlorobenzene') * 2000, fluid('hydrogen') * 2000]) 
+    .fluidOutputs([fluid('dichlorobenzidine') * 1000]) 
+    .duration(200).EUt(VA[EV])
+    .buildAndRegister()
 
+// Large Chemical Reactor Recipe 
 mods.gregtech.large_chemical_reactor.recipeBuilder()
-	.inputs(metaitem('dustZinc'))
-	.fluidinputs('nitrochlorobenzene') * 18000 
-	.fluidinputsfluid('hydrogen') * 18000
-	.fluidoutputs(fluid('dichlorobenzidine') * 9000)
-	.duration(1800).EUt(VA[EV])
-	.buildAndRegister()
+    .inputs(metaitem('dustZinc')) 
+    .fluidInputs([fluid('nitrochlorobenzene') * 18000, fluid('hydrogen') * 18000]) 
+    .fluidOutputs([fluid('dichlorobenzidine') * 9000]) 
+    .duration(1800).EUt(VA[EV])
+    .buildAndRegister()
 
+// Large Chemical Reactor Recipe
 mods.gregtech.large_chemical_reactor.recipeBuilder()
-	.inputs(metaitem('dustCopper'))
-	.fluidinputs(('dichlorobenzidine') * 1000)
-	.fluidinputs(('ammonia') * 2000)
-	.fluidoutputs(fluid('diaminobenzidine') * 1000)
-	.fluidoutputs(('hydrochloric_acid') * 2000)
-	.duration(100).EUt(VA[IV])
-	.buildAndRegister()
+    .inputs(metaitem('dustCopper'))  
+    .fluidInputs([fluid('dichlorobenzidine') * 1000, fluid('ammonia') * 2000])
+    .fluidOutputs([fluid('diaminobenzidine') * 1000, fluid('hydrochloric_acid') * 2000]) 
+    .duration(100).EUt(VA[IV])
+    .buildAndRegister()
+
