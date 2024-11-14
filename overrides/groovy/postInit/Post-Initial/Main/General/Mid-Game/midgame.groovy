@@ -22,34 +22,3 @@ mods.gregtech.centrifuge.recipeBuilder()
 
 // Nether Star Block -> Nether Star
 crafting.addShapeless(item('minecraft:nether_star') * 9, [ore('blockNetherStar')])
-
-// Fixed catalysts in PBI Chain
-// Remove the recipes
-mods.gregtech.chemical_reactor.removeByOutput([fluid('dichlorobenzidine')], null)
-mods.gregtech.large_chemical_reactor.removeByOutput([fluid('dichlorobenzidine')], null)
-mods.gregtech.large_chemical_reactor.removeByOutput([fluid('diaminobenzidine')], null)
-
-// Chemical Reactor Recipe
-mods.gregtech.chemical_reactor.recipeBuilder()
-    .inputs(metaitem('dustTinyZinc'))  
-    .fluidinputs([fluid('nitrochlorobenzene') * 2000, fluid('hydrogen') * 2000], null)
-    .fluidoutputs([fluid('dichlorobenzidine') * 1000], null) 
-    .duration(200).EUt(VA[EV])
-    .buildAndRegister()
-
-// Large Chemical Reactor Recipe 
-mods.gregtech.large_chemical_reactor.recipeBuilder()
-    .inputs(metaitem('dustZinc')) 
-    .fluidinputs([fluid('nitrochlorobenzene') * 18000, fluid('hydrogen') * 18000], null) 
-    .fluidoutputs([fluid('dichlorobenzidine') * 9000], null) 
-    .duration(1800).EUt(VA[EV])
-    .buildAndRegister()
-
-// Large Chemical Reactor Recipe
-mods.gregtech.large_chemical_reactor.recipeBuilder()
-    .inputs(metaitem('dustCopper'))  
-    .fluidinputs([fluid('dichlorobenzidine') * 1000, fluid('ammonia') * 2000], null)
-    .fluidoutputs([fluid('diaminobenzidine') * 1000, fluid('hydrochloric_acid') * 2000], null) 
-    .duration(100).EUt(VA[IV])
-    .buildAndRegister()
-
