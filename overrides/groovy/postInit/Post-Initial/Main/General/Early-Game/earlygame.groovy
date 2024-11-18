@@ -110,6 +110,14 @@ if (LabsModeHelper.expert) {
 		.buildAndRegister()
 }
 
+
+// Ender Lily Extractor Recipe
+mods.gregtech.extractor.recipeBuilder()
+	.inputs(item('extrautils2:enderlilly')
+	.fluidOutputs(fluid('ender') * 25)
+	.duration(80).EUt(VA[ULV])
+	.buildAndRegister()
+
 // Coated Circuit Board
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(ore('plateWood'))
