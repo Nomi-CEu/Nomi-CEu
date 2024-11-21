@@ -113,7 +113,7 @@ if (LabsModeHelper.expert) {
 
 // Ender Lily Extractor Recipe
 mods.gregtech.extractor.recipeBuilder()
-	.inputs(item('extrautils2:enderlilly')
+	.inputs(item('extrautils2:enderlilly'))
 	.fluidOutputs(fluid('ender') * 25)
 	.duration(80).EUt(VA[ULV])
 	.buildAndRegister()
