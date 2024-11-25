@@ -11,6 +11,8 @@ on:
   pull_request:
     branches:
       - main
+      - test-buildscript*
+      - dev/*
     paths-ignore:
       - "README.md"
 
