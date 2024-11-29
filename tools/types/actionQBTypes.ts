@@ -3,12 +3,15 @@ import { Operation } from "just-diff";
 import { Matcher } from "picomatch";
 
 // QB Porting From.
-export type PortingType = "NORMAL" | "EXPERT";
+export type Mode = "NORMAL" | "EXPERT";
 
 // Which File to Source From
 export type SourceOption = "CFG" | "CFG-OVERRIDE";
 
 export type YesIgnoreNo = "YES" | "IGNORE" | "NO";
+
+export type InfoMode = "SAVE_INFO" | "MODIFY";
+export type InfoAction = "DELETE" | "MASS_DEPS" | "NOTHING";
 
 // How should we apply description change?
 export type DescriptionTaskChange = "APPLY" | "REPLACE" | "CUSTOM" | "IGNORE";

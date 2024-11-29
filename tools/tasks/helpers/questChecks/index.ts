@@ -7,13 +7,14 @@ import {
 	cfgOverrideNormalPath,
 	emptyQuest,
 	id,
+	isEmptyQuest,
 	name,
 	stringifyQB,
 	stripRewards,
 } from "#tasks/helpers/actionQBUtils.ts";
 import { input, select } from "@inquirer/prompts";
 import { SourceOption } from "#types/actionQBTypes.ts";
-import logInfo, { logWarn } from "#utils/log.ts";
+import logInfo, { logError, logWarn } from "#utils/log.ts";
 import upath from "upath";
 import { rootDirectory } from "#globals";
 import colors from "colors";
@@ -334,6 +335,36 @@ async function checkAndFixQB(
 			);
 	}
 	if (!shouldCheck) qb["questDatabase:9"] = newQB;
+
+	logInfo("Checking Existence of Quests...");
+
+	const questIDs = new Set<number>();
+
+	// Check if all quests exist in some quest line
+	for (const questKey of Object.keys(qb["questDatabase:9"])) {
+		const quest = qb["questDatabase:9"][questKey];
+
+		if (!isEmptyQuest(quest)) questIDs.add(quest["questID:3"]);
+	}
+
+	for (const lineKey of Object.keys(qb["questLines:9"])) {
+		const questEntries = qb["questLines:9"][lineKey]["quests:9"];
+		for (const questEntryKey of Object.keys(questEntries)) {
+			questIDs.delete(questEntries[questEntryKey]["id:3"]);
+		}
+	}
+
+	if (questIDs.size !== 0) {
+		// How do we fix this automatically? Just throw, tell the user to fix.
+		if (!shouldCheck)
+			logError(
+				"The below issue cannot be automatically fixed. Please fix it manually. The task `infoQB` may help.",
+			);
+
+		throw new Error(
+			`The Following Quests Exist, but are NOT in a Quest Line: ${[...questIDs].join(", ")}!`,
+		);
+	}
 
 	logInfo("Checking Properties...");
 	// Check Edit Mode
