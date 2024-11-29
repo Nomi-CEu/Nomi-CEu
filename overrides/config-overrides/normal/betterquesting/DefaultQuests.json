@@ -66645,11 +66645,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "uberconduitprobe:uber_conduit_probe_item",
-              "orig_meta:3": 0
-            }
+            "id:8": "uberconduitprobe:uber_conduit_probe_item"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -66719,11 +66715,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "uberconduitprobe:uber_conduit_probe_item",
-                "orig_meta:3": 0
-              }
+              "id:8": "uberconduitprobe:uber_conduit_probe_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
