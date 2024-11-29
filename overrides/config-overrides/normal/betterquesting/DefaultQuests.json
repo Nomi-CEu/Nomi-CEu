@@ -11287,29 +11287,23 @@
       }
     },
     "164:10": {
-      "preRequisites:11": [
-        184
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Heavy Fuel§r is mixed with §9Light Fuel§r to create §9Diesel§r.\n\nSince Diesel requires more Light than Heavy fuel, you should consider Steam-cracking and distilling the excess quantity of Heavy Fuel for its useful constituents.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "heavy_fuel"
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Heavy Fuel",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -11318,65 +11312,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 164,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "heavy_fuel"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "165:10": {
-      "preRequisites:11": [
-        184
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Light Fuel\u0027s distillates are now more useful, and it is the only source of Octane for High-Octane Gasoline.\nBut if you choose to produce Diesel, a large proportion of the Light Fuel you produce still has to go into Diesel production.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "light_fuel"
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Light Fuel",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -11385,65 +11350,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 165,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "light_fuel"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "166:10": {
-      "preRequisites:11": [
-        184
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Naphtha§r is best utilized for Steam-Cracking and distilling for its constituents.\n\nNotably it contains §9Light Fuel§r and §9Heavy Fuel§r for making more §9Diesel§r, as well as many other useful chemicals for a variety of purposes.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "naphtha"
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Naphtha",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -11452,38 +11388,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 166,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "naphtha"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -11527,8 +11440,7 @@
     },
     "168:10": {
       "preRequisites:11": [
-        164,
-        165
+        184
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -49742,7 +49654,7 @@
       ],
       "preRequisites:11": [
         154,
-        166,
+        184,
         226,
         835
       ],
@@ -60247,8 +60159,7 @@
       "preRequisites:11": [
         94,
         227,
-        504,
-        546
+        505
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -60265,7 +60176,7 @@
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "MV Chemical Reactor, Sulfuric Acid, Brewery and Distillery",
+          "name:8": "\"MV Chemical Reactor\", \"Sulfuric Acid\", and \"Ethanol\"",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -67543,7 +67454,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
-          "y:3": 612
+          "y:3": 616
         },
         "35:10": {
           "id:3": 95,
@@ -67668,8 +67579,8 @@
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 700
+          "x:3": -92,
+          "y:3": 736
         },
         "53:10": {
           "id:3": 187,
@@ -67759,332 +67670,339 @@
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -92,
-          "y:3": 576
+          "x:3": -48,
+          "y:3": 656
         },
         "66:10": {
+          "id:3": 505,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -48,
+          "y:3": 700
+        },
+        "67:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -352,
           "y:3": 720
         },
-        "67:10": {
+        "68:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 240
         },
-        "68:10": {
+        "69:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 332
         },
-        "69:10": {
+        "70:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 416
         },
-        "70:10": {
+        "71:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 656
+          "x:3": -92,
+          "y:3": 700
         },
-        "71:10": {
+        "72:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 404
         },
-        "72:10": {
+        "73:10": {
           "id:3": 556,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 328
         },
-        "73:10": {
+        "74:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -660,
           "y:3": 284
         },
-        "74:10": {
+        "75:10": {
           "id:3": 727,
           "sizeX:3": 28,
           "sizeY:3": 28,
           "x:3": -462,
           "y:3": 242
         },
-        "75:10": {
+        "76:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 496
         },
-        "76:10": {
+        "77:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 576
         },
-        "77:10": {
+        "78:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 536
         },
-        "78:10": {
+        "79:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 172
         },
-        "79:10": {
+        "80:10": {
           "id:3": 781,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -180,
           "y:3": 752
         },
-        "80:10": {
+        "81:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 280
         },
-        "81:10": {
+        "82:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 208
         },
-        "82:10": {
+        "83:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -364,
           "y:3": 512
         },
-        "83:10": {
+        "84:10": {
           "id:3": 805,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -144,
           "y:3": 420
         },
-        "84:10": {
+        "85:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -6,
-          "y:3": 612
+          "x:3": -8,
+          "y:3": 576
         },
-        "85:10": {
+        "86:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -228,
           "y:3": 412
         },
-        "86:10": {
+        "87:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 376
         },
-        "87:10": {
+        "88:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 244
         },
-        "88:10": {
+        "89:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -352,
           "y:3": 624
         },
-        "89:10": {
+        "90:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 292
         },
-        "90:10": {
+        "91:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 244
         },
-        "91:10": {
+        "92:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -408,
           "y:3": 756
         },
-        "92:10": {
+        "93:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -220,
           "y:3": 540
         },
-        "93:10": {
+        "94:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 544
         },
-        "94:10": {
+        "95:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 580
         },
-        "95:10": {
+        "96:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 612
         },
-        "96:10": {
+        "97:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -456,
           "y:3": 696
         },
-        "97:10": {
+        "98:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
           "y:3": 484
         },
-        "98:10": {
+        "99:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -260,
           "y:3": 376
         },
-        "99:10": {
+        "100:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 376
         },
-        "100:10": {
+        "101:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -448,
           "y:3": 568
         },
-        "101:10": {
+        "102:10": {
           "id:3": 891,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -6,
-          "y:3": 654
+          "x:3": -8,
+          "y:3": 616
         },
-        "102:10": {
+        "103:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 424
         },
-        "103:10": {
+        "104:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -460,
           "y:3": 424
         },
-        "104:10": {
+        "105:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -176,
           "y:3": 700
         },
-        "105:10": {
+        "106:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 700
         },
-        "106:10": {
+        "107:10": {
           "id:3": 973,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -80,
           "y:3": 668
         },
-        "107:10": {
+        "108:10": {
           "id:3": 1013,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -248,
           "y:3": 576
         },
-        "108:10": {
+        "109:10": {
           "id:3": 1028,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -300,
           "y:3": 804
         },
-        "109:10": {
+        "110:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 336
         },
-        "110:10": {
+        "111:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 508
         },
-        "111:10": {
+        "112:10": {
           "id:3": 1074,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 604
         },
-        "112:10": {
+        "113:10": {
           "id:3": 1079,
           "sizeX:3": 24,
           "sizeY:3": 24,
