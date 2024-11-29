@@ -1,7 +1,7 @@
 import { checkbox, input, select } from "@inquirer/prompts";
 import {
 	Changed,
-	PortingType,
+	Mode,
 	SavedPorter,
 	SourceOption,
 } from "#types/actionQBTypes.ts";
@@ -23,7 +23,9 @@ import { repoName, repoOwner } from "#globals";
 
 export default class PortQBData {
 	ref: string;
-	type: PortingType;
+
+	// Which qb are we porting from
+	type: Mode;
 	sourceOption: SourceOption;
 	srcPath: string;
 	srcPathToChange: string;
@@ -152,7 +154,7 @@ export default class PortQBData {
 					value: "EXPERT",
 				},
 			],
-		})) as PortingType;
+		})) as Mode;
 
 		this.sourceOption = (await select({
 			message:

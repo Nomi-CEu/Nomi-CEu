@@ -588,30 +588,23 @@
       }
     },
     "8:10": {
-      "preRequisites:11": [
-        136,
-        191
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With three §6Microcircuits§r and some standard components, you can upgrade to the penultimate Tier Three circuit: a §6Microprocessor§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 32491,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gregtech:meta_item_2",
-              "orig_meta:3": 32491
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "The Third Tier Three Circuits",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -620,33 +613,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 8,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 32491,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:meta_item_2",
-                "orig_meta:3": 32491
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -1889,7 +1864,7 @@
     },
     "27:10": {
       "preRequisites:11": [
-        146
+        53
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5837,25 +5812,23 @@
       }
     },
     "97:10": {
-      "preRequisites:11": [
-        109
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you didn\u0027t know, you can have stacks of items stored inside of an §aME Interface§r. Placing a §aStorage Bus§r onto the ME Interface lets you access and use those items in recipes. Putting a §aCrafting Card§r inside the Interface will let the Interface automatically place autocraft orders for items it should stock but you don\u0027t have.\n\nThis approach can be used for autocrafting to some extent, but proceed with caution as crafting cards can produce a great deal of lag on larger ME Networks. AE calculates the full crafting tree of these items every time a request is made, even if you have enough items already in stock.\n\nThus, it is strongly recommended to limit Crafting Cards to simple recipes (ones without many dependent recipes) and ideally on smaller purpose-built networks.\n\nPrefer passive autocrafting methods on your main network, or if things are gonna get complicated.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 220,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "appliedenergistics2:part"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Keeping Stuff In Stock",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -5864,35 +5837,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 97,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 220,
-              "OreDict:8": "",
-              "id:8": "appliedenergistics2:part"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 53,
-              "OreDict:8": "",
-              "id:8": "appliedenergistics2:material"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -7197,25 +7150,23 @@
       }
     },
     "121:10": {
-      "preRequisites:11": [
-        198
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This compressor is needed for making §6Signalum Heavy Plating§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 234,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "IV Compressor",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -7224,29 +7175,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 121,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 234,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -8020,29 +7957,23 @@
       }
     },
     "136:10": {
-      "preRequisites:11": [
-        93
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Another electronic component.\n\nMaking it inside an §3Assembling Machine§r is much, much cheaper than by hand, and using §6Nickel Zinc Ferrite§r bolts gives even better returns.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 32456,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gregtech:meta_item_2",
-              "orig_meta:3": 32456
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Small Coils",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -8051,33 +7982,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 136,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 32456,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:meta_item_2",
-                "orig_meta:3": 32456
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -9323,29 +9236,23 @@
       }
     },
     "160:10": {
-      "preRequisites:11": [
-        184
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "First, you need some §9Oil§r. Pick your favorite method: you should engineer a renewable automated source, as you will need large quantities.\n\nStart off by running the Oil through the §3Distillation Tower§r. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "sulfuric_heavy_fuel"
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Sulfuric Heavy, Light, Naphtha and Gas",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -9354,64 +9261,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 160,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "sulfuric_heavy_fuel"
-            },
-            "1:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "sulfuric_light_fuel"
-            },
-            "2:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "sulfuric_naphtha"
-            },
-            "3:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "sulfuric_gas"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "161:10": {
-      "preRequisites:11": [
-        184
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Like other petroleum products, §9Sulfuric Gas §2or Natural Gas§r is hydrodesulfurized into §9Refinery Gas§r using §9Hydrogen§r in a §3Chemical Reactor§r.\n\nRefinery Gas can be cracked and further distilled for its constituents, but it is also useful as fuel for §3Gas Turbines§r. While it can be burned directly, centrifuging Refinery Gas produces §9LPG§r (Liquefied Petroleum Gas), which is an ideal fuel for Gas Turbines, and §9Methane§r which is a potential suboptimal turbine fuel but is also useful for various chemical reactions.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "refinery_gas"
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Refinery Gas",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -9420,25 +9299,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 161,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "refinery_gas"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -9650,29 +9519,23 @@
       }
     },
     "166:10": {
-      "preRequisites:11": [
-        184
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Naphtha§r is best utilized for Steam-Cracking and distilling for its constituents.\n\nNotably it contains §9Light Fuel§r and §9Heavy Fuel§r for making more §9Diesel§r, as well as many other useful chemicals for a variety of purposes.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "naphtha"
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Naphtha",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -9681,52 +9544,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 166,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "naphtha"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "167:10": {
-      "preRequisites:11": [
-        184
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hydrogen Sulfide§r is a byproduct of hydrodesulfurization. §2It also comes from distilling Liquid Nether Air.§r\n\nA simple chemical reaction with §9Oxygen§r reprocesses it into the useful §9Sulfuric Acid§r, or it can be electrolyzed for recovering the §9Hydrogen§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "hydrogen_sulfide"
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Hydrogen Sulfide",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -9735,25 +9582,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 167,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "hydrogen_sulfide"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -11067,30 +10904,23 @@
       }
     },
     "191:10": {
-      "preRequisites:11": [
-        188,
-        532
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Using your new §6Epoxy Circuit Boards§r and some familiar components, you can now make the final form of Tier Two Circuit: the §6Microcircuit§r.\n\nYou craft four of these at once, and they\u0027re pretty cheap. Consider that you used to have to make §6Primitive Processors§r for this tier, and realize how far you\u0027ve come.\n\nAs with the final form of any tier of circuits, be sure to set up automation to stockpile these. You won\u0027t get to the §6System-on-Chip§r variant recipe for a while yet.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "nomilabs:microcircuit",
-              "orig_meta:3": 0
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "The Fourth And Final Tier Two Circuits",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -11099,33 +10929,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 191,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "nomilabs:microcircuit",
-                "orig_meta:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -12205,25 +12017,23 @@
       }
     },
     "210:10": {
-      "preRequisites:11": [
-        21
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Even simple rockets demand §6Double Plates§r for their construction. In this case, made out of §6Steel§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 324,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Steel Double Plates",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -12232,29 +12042,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 210,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 324,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -14098,19 +13894,19 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The final tier of EBF Coils.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 7,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:wire_coil"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 1,
-          "lockedprogress:1": 1,
-          "name:8": "Tritanium Coil Block",
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14119,29 +13915,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 243,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 16,
-              "Damage:2": 7,
-              "OreDict:8": "",
-              "id:8": "gregtech:wire_coil"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -14202,25 +13984,23 @@
       }
     },
     "245:10": {
-      "preRequisites:11": [
-        148
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Heavy: avoid dropping it on your foot.\n\nThese §2double plates§r are used for two things-- §6Tier Two Micro Miners§r and the §3Space Station Assembler§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 113,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Titanium Double Plates",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -14229,29 +14009,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 245,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 113,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -14655,8 +14421,11 @@
       }
     },
     "253:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
       "preRequisites:11": [
-        889
+        827
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16005,19 +15774,19 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can combine various items with a §6Blank Data Model§r for a completed §6Data Model§r that you can run inside the §3Simulation Chamber§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "deepmoblearning:data_model_blank"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Simulated Mobs",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -16026,29 +15795,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 278,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_blank"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -18141,25 +17896,23 @@
       }
     },
     "314:10": {
-      "preRequisites:11": [
-        253
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Double Plates§r made from §6Iridium§r for Tier Five and Tier Eight Micro Miners.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 50,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Iridium Double Plates",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -18168,53 +17921,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 314,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 50,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "315:10": {
-      "preRequisites:11": [
-        311,
-        745
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Double Plates§r required for the next two tiers of Micro Miners.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 10,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "nomilabs:meta_plate_double"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Signalum Double Plates",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -18223,52 +17959,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 315,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 10,
-              "OreDict:8": "",
-              "id:8": "nomilabs:meta_plate_double"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "316:10": {
-      "preRequisites:11": [
-        750
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Double Plates§r made from §6Enderium§r used for the Tier Six Micro Miner.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 18,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "nomilabs:meta_plate_double"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Enderium Double Plates",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -18277,29 +17997,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 316,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 18,
-              "OreDict:8": "",
-              "id:8": "nomilabs:meta_plate_double"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -23458,27 +23164,23 @@
       }
     },
     "412:10": {
-      "preRequisites:11": [
-        232,
-        296,
-        527
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Lunar Mining Station§r is a large multiblock structure used for mining gases from the moon. It is an excellent (though not the only) source of §9Deuterium§r or §9Helium-3§r, depending on what kind of §6Rover§r you use.\n\nRovers only have a 10% chance to break while mining, so a stack of them will last quite a while.\n\nWhile both available recipes require §eMV power§r, you can overclock it with higher tiers of power. The positions of hatches and buses can be swapped with any §6LuV Machine Casing§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.\n\nBecause this structure must be placed on the Moon, it is a good idea to use mechanisms like §aEnder Tanks§r or a §6Quantum Link Chamber§r for teleporting the fluids back to your base.\n\nMake sure to keep it chunk-loaded!",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "armorplus:btm_moon"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Lunar Mining Station",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -23487,77 +23189,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 412,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 3007,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 56,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine_casing"
-            },
-            "2:10": {
-              "Count:3": 17,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:block_misc"
-            },
-            "3:10": {
-              "Count:3": 12,
-              "Damage:2": 5,
-              "OreDict:8": "",
-              "id:8": "enderio:block_alloy_endergy"
-            },
-            "4:10": {
-              "Count:3": 9,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "enderio:block_alloy_endergy"
-            },
-            "5:10": {
-              "Count:3": 4,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "extrautils2:ineffableglass"
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:beacon"
-            },
-            "7:10": {
-              "Count:3": 1,
-              "Damage:2": 1199,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "8:10": {
-              "Count:3": 1,
-              "Damage:2": 1150,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -26756,28 +26396,23 @@
       }
     },
     "492:10": {
-      "preRequisites:11": [
-        233
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Is it expensive? Yes. Is it worth it? Hell yes.\n\nIt doesn\u0027t start to shine until you get the good upgrades for it though, so maybe hold off for a while.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 3,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "actuallyadditions:item_drill",
-            "tag:10": {
-              "Energy:3": 250000
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Drill Baby Drill",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -26786,32 +26421,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 492,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 3,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:item_drill",
-              "tag:10": {
-                "Energy:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -27156,25 +26774,23 @@
       }
     },
     "499:10": {
-      "preRequisites:11": [
-        53
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have a §3Wiremill§r, you can turn one §6Copper Wire§r into four §6Fine Copper Wire§r. The recipes for §6Resistors§r, §6LV Motors§r and §6Vacuum Tubes§r all accept either type, so doing this extra processing step will make your §6Copper Ingots§r go §efour times further§r when making circuits.\n\nYou\u0027ll be making a lot more circuits from here on out, so it\u0027s definitely worthwhile to save your copper!",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 25,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_wire_fine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Fine Copper Wire",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -27183,29 +26799,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 499,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 25,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_wire_fine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -28384,30 +27986,23 @@
       }
     },
     "520:10": {
-      "preRequisites:11": [
-        8,
-        148
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Four §6Microprocessors§r combined with §6Titanium Plates§r and a few other standard components will make a §6MicroSupercomputer§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "nomilabs:microprocessorarray",
-              "orig_meta:3": 0
-            }
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "The Second Tier Four Circuits",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -28416,33 +28011,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 520,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "nomilabs:microprocessorarray",
-                "orig_meta:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -28503,26 +28080,23 @@
       }
     },
     "522:10": {
-      "preRequisites:11": [
-        138,
-        286
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This compressor is needed for making §6Iridium Heavy Plating§r and §6Enderium Heavy Plating§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 235,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "LuV Compressor",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -28531,29 +28105,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 522,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 235,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -29409,8 +28969,8 @@
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
           "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
@@ -29420,7 +28980,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 538,
@@ -30114,27 +29674,23 @@
       }
     },
     "550:10": {
-      "preRequisites:11": [
-        98,
-        233,
-        492
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Place the §3Vertical Digger§r over an ore vein, feed it RF, and it will mine up the entire vein for you.\n\nFor drills, you will need a §6GregTech Drill§r (any LV drill will work), a §6Fluxbore§r (Reinforced tier is required) and an §6Actually Additions Drill§r (any color is fine, but take out any augments you wish to keep).\n\nThe GregTech Drill will not be consumed, but everything else will be.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "actuallyadditions:block_miner"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Vertical Digger",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -30143,29 +29699,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 550,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:block_miner"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -32819,25 +32361,23 @@
       }
     },
     "606:10": {
-      "preRequisites:11": [
-        607
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Kind of redundant, really.\n\nThese §2Double Plates§r are used exclusively for the Tier Ten Micro Miner. You need some serious protection from forces when harvesting a whole microverse.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 127,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_plate_double"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Neutronium Double Plates",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -32846,29 +32386,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 606,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 127,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_plate_double"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -33041,19 +32567,19 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "An alloy of §6Steel§r and §6Boron§r. Pretty simple.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 6,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "nuclearcraft:alloy"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 1,
-          "lockedprogress:1": 1,
-          "name:8": "Ferroboron",
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -33062,29 +32588,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 610,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 6,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:alloy"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -33143,25 +32655,23 @@
       }
     },
     "612:10": {
-      "preRequisites:11": [
-        536
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The ZPM tier §3Compressor§r is needed for the most advanced heavy plating types: §6Draconium§r and §6Crystal Matrix§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 236,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "ZPM Compressor",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -33170,29 +32680,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 612,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 236,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -36967,25 +36463,24 @@
       }
     },
     "682:10": {
-      "preRequisites:11": [
-        3
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §2CEu§r version of Nomi is already slightly harder than the original, due to various progression changes CEu makes.\n\nBut if you want a §charder§r, or perhaps a more \"§5true§r\" §dGregTech§r experience, check out the §cExpert§r mode. This pack mode is based on the §bSelf-Torture Edition fork§r of the original pack.\n\nHighlights include:\n\n- No §bDML§r for easy infinite resources\n- §6Omnicoins§r can\u0027t be spent\n- The §7Steam Age§r\n- No §3Creative Tank§r; instead...\n- §6Stabilized Micro Miners§r for late-game infinite resources\n- Harder recipes for assorted things like §6Iridium§r, §3Numismatic Dynamos§r, and more\n\nTo enable §cExpert§r mode, change the pack mode (Options -\u003e Pack Mode) to Expert, then run §e/bq_admin default load ExpertQuests§r. The same command should be used for updating the quest book on Expert mode.\nTo go back, change the pack mode to §aNormal§r and run §e/bq_admin default load§r.\n\nTo tune your challenge even further, check out the various recipe configs in the GregTech config file.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "nomilabs:tierfourandhalfship"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Hard Mode",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -36993,7 +36488,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 682,
@@ -37006,25 +36501,23 @@
       }
     },
     "683:10": {
-      "preRequisites:11": [
-        278
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Provide your §3Simulation Chamber§r with RF power and §6Pulsating Polymer Clay§r. Then insert a §6Data Model§r of your choice. The Simulation Chamber will consume Polymer Clay and a decent amount of power to begin simulating mob kills. This will generate §6Overworldian Matter§r and may occasionally provide you with §6Pristine Matter§r.\n\n§6Overworldian Matter§r can be eaten to gain experience, or can be combined with other materials to obtain drops from Overworld mobs. With these drops, you can then create Data Models for other mob types as well.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "deepmoblearning:living_matter_overworldian"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Overworldian Matter",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37033,29 +36526,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 683,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:living_matter_overworldian"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -37098,26 +36577,23 @@
       }
     },
     "685:10": {
-      "preRequisites:11": [
-        34,
-        76
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Simulating mob kills will occasionally result in §6Pristine Matter§r of that mob\u0027s type.\n\nPutting Pristine matter into a §3Loot Fabricator§r will allow you to obtain one of various items related to that mob.\n\nMuch like §3Simulation Chambers§r, Loot Fabricators are §asided§r, accepting input from §athe top side§r and allowing extraction from §aall sides except the top§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "deepmoblearning:extraction_chamber"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Loot Fabricator",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37126,52 +36602,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 685,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:extraction_chamber"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "686:10": {
-      "preRequisites:11": [
-        683
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There\u0027s no rush to get these all done and leveled up, but they do provide a good source of some of the basic resources in exchange for RF.\n\nLook at what the §6Pristine Matter§r for each mob provides, and set up simulators for all the ones you\u0027re interested in. If your power can handle it, it can even be advantageous to run several of the same model.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "deepmoblearning:data_model_zombie"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Overworldian Mobs",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37180,71 +36640,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 686,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_zombie"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_creeper"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_witch"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_skeleton"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_spider"
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_guardian"
-            },
-            "6:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_thermal_elemental"
-            },
-            "7:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_slime"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -37322,25 +36726,23 @@
       }
     },
     "688:10": {
-      "preRequisites:11": [
-        683
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Overworldian Matter§r and §6Netherrack§r can be crafted into §6Hellish Matter§r.\n\nNetherrack can be obtained by combining a §6Dust Block§r and §cLava§r in a §3Chemical Reactor§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "deepmoblearning:living_matter_hellish"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Hellish Matter",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37349,52 +36751,36 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 688,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:living_matter_hellish"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
     "689:10": {
-      "preRequisites:11": [
-        688
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Just as with Overworldian mob data, there\u0027s no huge rush or need to focus on these. Just run them while you work on other projects.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "deepmoblearning:data_model_blaze"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Hellish Mobs",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37403,41 +36789,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 689,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_blaze"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_wither_skeleton"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_ghast"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -37499,19 +36859,19 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Some of these simulations will start to consume tremendous amounts of power at this point, so if you\u0027re finding it a struggle, don\u0027t be afraid to hold off on progressing through these data models until a later time.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "deepmoblearning:data_model_enderman"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Extraterrestrial Mobs",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -37520,47 +36880,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 691,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 1,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_enderman"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_shulker"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_wither"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "deepmoblearning:data_model_dragon"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -41098,25 +40426,23 @@
       "tasks:9": {}
     },
     "765:10": {
-      "preRequisites:11": [
-        3
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Progression tab was added so you can keep track of the important bits of the pack.\n\nCircuits are the baseline of the entire Nomifactory progression, so keep climbing!",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:book"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "What is This?",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -41125,7 +40451,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 765,
@@ -41141,8 +40467,7 @@
       "preRequisites:11": [
         76,
         87,
-        135,
-        191
+        135
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -41177,7 +40502,6 @@
     },
     "767:10": {
       "preRequisites:11": [
-        8,
         89,
         203,
         500
@@ -41217,7 +40541,6 @@
       "preRequisites:11": [
         132,
         264,
-        520,
         525
       ],
       "properties:10": {
@@ -41899,13 +41222,11 @@
       }
     },
     "782:10": {
-      "preRequisites:11": [
-        214
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Hidden gathering quest for SMP",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 0,
@@ -41914,23 +41235,29 @@
             "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
+          "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "\"Deuterium\" or \"I Don\u0027t Like Space\"",
-          "questlogic:8": "OR",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
-          "snd_complete:8": "",
+          "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 782,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "783:10": {
       "preRequisites:11": [
@@ -42692,25 +42019,24 @@
       }
     },
     "797:10": {
-      "preRequisites:11": [
-        796
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6System-on-Chip§r (or §6SoC§r) is a specialty component that miniaturizes all the typical circuit components (like §6SMDs§r) onto a single chip.\n\nThese are very useful as they unlock the most efficient recipes for creating §6Refined§r, §6Micro§r, and §6Nano Circuits§r.\n\nEach SoC-based circuit recipe requires a different minimum tier of §aAssembling Machine§r, with the Nano Circuits requiring §eLuV§r.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 572,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "System-on-Chip",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -42718,29 +42044,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 797,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 572,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -44042,6 +43354,9 @@
       }
     },
     "821:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
       "preRequisites:11": [
         27
       ],
@@ -45121,7 +44436,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Your first few Raw Crystal Chips must be grown in an Autoclave from liquid Europium, and Exquisite Emeralds or Exquisite Olivine.\n\nAfter the first few, you can smash them into pieces using a Forge Hammer, and duplicate them with Bacterial Sludge, Mutagen, or more Europium.\n\nBacterial Sludge can later be obtained in the byproducts of getting Stem Cells.",
+          "desc:8": "Your first few §6Raw Crystal Chips§r must be grown in an §bAutoclave§r from liquid §9Europium§r, and §6Exquisite Emeralds§r or §6Exquisite Olivine§r.\n\nAfter the first few, you can smash them into pieces using a §bForge Hammer§r, and duplicate them with §9Bacterial Sludge§r, §9Mutagen§r, or more §9Europium§r.\n\n§9Bacterial Sludge§r can later be obtained in the byproducts of getting §6Stem Cells§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -46316,27 +45631,24 @@
       }
     },
     "860:10": {
-      "preRequisites:11": [
-        531,
-        826,
-        828
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The ultimate reactor. It is compatible with Parallel Control Hatches and can be configured to run Large Chemical Reactor or normal Chemical Reactor recipes.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 2009,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "§2Chemical Plant",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -46344,53 +45656,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 860,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 67,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
-            },
-            "1:10": {
-              "Count:3": 6,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "gregtech:boiler_casing"
-            },
-            "2:10": {
-              "Count:3": 6,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:transparent_casing"
-            },
-            "3:10": {
-              "Count:3": 3,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "gcym:unique_casing"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 2009,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -47515,26 +46789,24 @@
       }
     },
     "882:10": {
-      "preRequisites:11": [
-        325,
-        750
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Hidden gathering quest for Crystals",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "\"Enderium Ingot\" or \"Europium Ingot\"",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -47542,12 +46814,17 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 882,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "883:10": {
       "preRequisites:11": [
@@ -47873,25 +47150,24 @@
       }
     },
     "889:10": {
-      "preRequisites:11": [
-        827
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Platinum Group Processing",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -47899,12 +47175,17 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 889,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "890:10": {
       "preRequisites:11": [
@@ -47952,7 +47233,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Chemical Dyes are made with 1 unit of dye, 2 Salt and Sulfuric Acid. Each yields 4 dyes when solidified, so you can create an infinite loop of dyes with only 1 initial dye item.\n\nTheir main use is to dye Glass Lenses for production of advanced wafers.\n\nYou may also wish to make a Spray Can and fill it with Chemical Dye. This allows you to paint basically all GT tile entities.",
+          "desc:8": "§oThis quest accepts any Chemical Dye.§r\n\n§6Chemical Dyes§r are made with 1 unit of dye, 2 Salt and Sulfuric Acid. Each yields 4 dyes when solidified, so you can create an §einfinite loop of dyes§r with only 1 initial dye item.\n\nYou can do many things with them, from making materials for your base, such as in creating §bXTones Blocks§r, to dying §6Glass Lenses§r for §eLaser Engraving§r.\n\nYou may also wish to make a §6Spray Can§r and fill it with Chemical Dye. This allows you to paint basically all §bGT tile entities§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47981,16 +47262,20 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 288,
-              "FluidName:8": "dye_orange"
+              "Count:3": 1,
+              "Damage:2": 421,
+              "OreDict:8": "questbookChemicalDye",
+              "id:8": "gregtech:meta_item_1"
             }
           },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -48321,26 +47606,24 @@
       }
     },
     "898:10": {
-      "preRequisites:11": [
-        93,
-        891
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Required for staining Glass Lenses with Chemical Dyes.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 202,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "§2HV Chemical Bath",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -48348,35 +47631,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 898,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 202,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 821,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -48906,25 +48169,24 @@
       "tasks:9": {}
     },
     "908:10": {
-      "preRequisites:11": [
-        196
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Tritanium Ingot",
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -48932,12 +48194,17 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 908,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     },
     "909:10": {
       "preRequisites:11": [
@@ -49759,6 +49026,10 @@
       }
     },
     "923:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1
+      ],
       "preRequisites:11": [
         287,
         920
@@ -58049,787 +57320,801 @@
           "id:3": 22,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -16,
-          "y:3": -60
+          "x:3": -12,
+          "y:3": -80
         },
         "3:10": {
+          "id:3": 27,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -40
+        },
+        "4:10": {
           "id:3": 31,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 752,
           "y:3": -488
         },
-        "4:10": {
+        "5:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 724,
           "y:3": -484
         },
-        "5:10": {
+        "6:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 756,
           "y:3": -372
         },
-        "6:10": {
+        "7:10": {
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -184
         },
-        "7:10": {
+        "8:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 776,
           "y:3": -336
         },
-        "8:10": {
+        "9:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 724,
           "y:3": -416
         },
-        "9:10": {
+        "10:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 756,
           "y:3": -448
         },
-        "10:10": {
+        "11:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 724,
           "y:3": -448
         },
-        "11:10": {
+        "12:10": {
           "id:3": 52,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 812,
           "y:3": -232
         },
-        "12:10": {
+        "13:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 756,
           "y:3": -228
         },
-        "13:10": {
+        "14:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 756,
           "y:3": -416
         },
-        "14:10": {
+        "15:10": {
           "id:3": 70,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -408
         },
-        "15:10": {
+        "16:10": {
           "id:3": 71,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 80,
           "y:3": -232
         },
-        "16:10": {
+        "17:10": {
           "id:3": 72,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -48,
           "y:3": -148
         },
-        "17:10": {
+        "18:10": {
           "id:3": 74,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 116,
           "y:3": -184
         },
-        "18:10": {
+        "19:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -228
         },
-        "19:10": {
+        "20:10": {
           "id:3": 76,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 80,
           "y:3": -64
         },
-        "20:10": {
+        "21:10": {
           "id:3": 78,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -316
         },
-        "21:10": {
+        "22:10": {
           "id:3": 79,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -268
         },
-        "22:10": {
+        "23:10": {
           "id:3": 80,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 28,
           "y:3": -316
         },
-        "23:10": {
+        "24:10": {
           "id:3": 81,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -316
         },
-        "24:10": {
+        "25:10": {
           "id:3": 82,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -60
         },
-        "25:10": {
+        "26:10": {
           "id:3": 83,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -404
         },
-        "26:10": {
+        "27:10": {
           "id:3": 84,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -316
         },
-        "27:10": {
+        "28:10": {
           "id:3": 86,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -328
         },
-        "28:10": {
+        "29:10": {
           "id:3": 87,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -484
         },
-        "29:10": {
+        "30:10": {
           "id:3": 88,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -364
         },
-        "30:10": {
+        "31:10": {
           "id:3": 89,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -520
         },
-        "31:10": {
+        "32:10": {
           "id:3": 90,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 644,
           "y:3": -532
         },
-        "32:10": {
+        "33:10": {
           "id:3": 91,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 132,
           "y:3": -232
         },
-        "33:10": {
+        "34:10": {
           "id:3": 92,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 116,
           "y:3": -104
         },
-        "34:10": {
+        "35:10": {
           "id:3": 93,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 440,
           "y:3": -236
         },
-        "35:10": {
+        "36:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -228
         },
-        "36:10": {
+        "37:10": {
           "id:3": 95,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 276,
           "y:3": -236
         },
-        "37:10": {
+        "38:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -228
         },
-        "38:10": {
+        "39:10": {
           "id:3": 98,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -232
         },
-        "39:10": {
+        "40:10": {
           "id:3": 104,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 604,
           "y:3": -192
         },
-        "40:10": {
+        "41:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -184
         },
-        "41:10": {
+        "42:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -144
         },
-        "42:10": {
+        "43:10": {
           "id:3": 126,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 488,
           "y:3": -264
         },
-        "43:10": {
+        "44:10": {
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 64,
           "y:3": -364
         },
-        "44:10": {
+        "45:10": {
           "id:3": 130,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -556
         },
-        "45:10": {
+        "46:10": {
           "id:3": 131,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 656,
           "y:3": -228
         },
-        "46:10": {
+        "47:10": {
           "id:3": 132,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 816,
           "y:3": -372
         },
-        "47:10": {
+        "48:10": {
           "id:3": 133,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 652,
           "y:3": -452
         },
-        "48:10": {
+        "49:10": {
           "id:3": 134,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 656,
           "y:3": -280
         },
-        "49:10": {
+        "50:10": {
           "id:3": 135,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 648,
           "y:3": -380
         },
-        "50:10": {
+        "51:10": {
           "id:3": 154,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 856,
           "y:3": -380
         },
-        "51:10": {
+        "52:10": {
           "id:3": 156,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 128,
           "y:3": -324
         },
-        "52:10": {
+        "53:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -316
         },
-        "53:10": {
+        "54:10": {
           "id:3": 164,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -228
         },
-        "54:10": {
+        "55:10": {
           "id:3": 165,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -184
         },
-        "55:10": {
+        "56:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
-          "y:3": -140
+          "y:3": -144
         },
-        "56:10": {
+        "57:10": {
           "id:3": 184,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -184
         },
-        "57:10": {
+        "58:10": {
           "id:3": 187,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -88,
           "y:3": -412
         },
-        "58:10": {
+        "59:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -372
         },
-        "59:10": {
+        "60:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 740,
           "y:3": -336
         },
-        "60:10": {
+        "61:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 512,
           "y:3": -416
         },
-        "61:10": {
+        "62:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 112,
           "y:3": -148
         },
-        "62:10": {
+        "63:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -484
         },
-        "63:10": {
+        "64:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -104
         },
-        "64:10": {
+        "65:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 420,
           "y:3": -420
         },
-        "65:10": {
+        "66:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -192
         },
-        "66:10": {
+        "67:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -560
         },
-        "67:10": {
+        "68:10": {
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -556
         },
-        "68:10": {
+        "69:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -448
         },
-        "69:10": {
+        "70:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -104
         },
-        "70:10": {
+        "71:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -144
         },
-        "71:10": {
+        "72:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 656,
           "y:3": -184
         },
-        "72:10": {
+        "73:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 376,
           "y:3": -376
         },
-        "73:10": {
+        "74:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -4
         },
-        "74:10": {
+        "75:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 464,
           "y:3": -420
         },
-        "75:10": {
+        "76:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -144
         },
-        "76:10": {
+        "77:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -268
         },
-        "77:10": {
+        "78:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 376,
           "y:3": -420
         },
-        "78:10": {
+        "79:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -364
         },
-        "79:10": {
+        "80:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": -448
         },
-        "80:10": {
+        "81:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": -416
         },
-        "81:10": {
+        "82:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
           "y:3": -384
         },
-        "82:10": {
+        "83:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -228
         },
-        "83:10": {
+        "84:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -124
         },
-        "84:10": {
+        "85:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 864,
           "y:3": -336
         },
-        "85:10": {
+        "86:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -268
         },
-        "86:10": {
+        "87:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 296,
           "y:3": -216
         },
-        "87:10": {
+        "88:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -72
         },
-        "88:10": {
+        "89:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 364,
           "y:3": -104
         },
-        "89:10": {
+        "90:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -164
         },
-        "90:10": {
+        "91:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 632,
           "y:3": -308
         },
-        "91:10": {
+        "92:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -60
         },
-        "92:10": {
+        "93:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 28,
           "y:3": -364
         },
-        "93:10": {
+        "94:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -228
         },
-        "94:10": {
+        "95:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 504,
           "y:3": -232
         },
-        "95:10": {
+        "96:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": -264
         },
-        "96:10": {
+        "97:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": -192
         },
-        "97:10": {
+        "98:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 488,
           "y:3": -192
         },
-        "98:10": {
+        "99:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 568,
           "y:3": -264
         },
-        "99:10": {
+        "100:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -264
         },
-        "100:10": {
+        "101:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -268
         },
-        "101:10": {
+        "102:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -268
         },
-        "102:10": {
+        "103:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -520
         },
-        "103:10": {
+        "104:10": {
           "id:3": 887,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -184
         },
-        "104:10": {
+        "105:10": {
+          "id:3": 891,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 244,
+          "y:3": -268
+        },
+        "106:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -404
         },
-        "105:10": {
+        "107:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -364
         },
-        "106:10": {
+        "108:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -192
         },
-        "107:10": {
+        "109:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -228
         },
-        "108:10": {
+        "110:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -144
         },
-        "109:10": {
+        "111:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 816,
           "y:3": -420
         },
-        "110:10": {
+        "112:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -364
         },
-        "111:10": {
+        "113:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -276
         },
-        "112:10": {
+        "114:10": {
           "id:3": 1052,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -364
         },
-        "113:10": {
+        "115:10": {
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -264
         },
-        "114:10": {
+        "116:10": {
           "id:3": 1083,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -61392,83 +60677,97 @@
           "y:3": 356
         },
         "118:10": {
+          "id:3": 901,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -84,
+          "y:3": 120
+        },
+        "119:10": {
           "id:3": 904,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 204
         },
-        "119:10": {
+        "120:10": {
           "id:3": 905,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 244
         },
-        "120:10": {
+        "121:10": {
           "id:3": 906,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 348
         },
-        "121:10": {
+        "122:10": {
           "id:3": 907,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -204,
           "y:3": 396
         },
-        "122:10": {
+        "123:10": {
           "id:3": 910,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
           "y:3": 312
         },
-        "123:10": {
+        "124:10": {
           "id:3": 920,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 114,
           "y:3": 318
         },
-        "124:10": {
+        "125:10": {
+          "id:3": 923,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": -204,
+          "y:3": 444
+        },
+        "126:10": {
           "id:3": 925,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 116,
           "y:3": 72
         },
-        "125:10": {
+        "127:10": {
           "id:3": 1029,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
           "y:3": 160
         },
-        "126:10": {
+        "128:10": {
           "id:3": 1030,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 80,
           "y:3": -12
         },
-        "127:10": {
+        "129:10": {
           "id:3": 1031,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 12,
           "y:3": -80
         },
-        "128:10": {
+        "130:10": {
           "id:3": 1042,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 12,
           "y:3": -12
         },
-        "129:10": {
+        "131:10": {
           "id:3": 1044,
           "sizeX:3": 48,
           "sizeY:3": 48,
