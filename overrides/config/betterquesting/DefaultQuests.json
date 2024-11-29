@@ -677,82 +677,6 @@
         }
       }
     },
-    "8:10": {
-      "preRequisites:11": [
-        136,
-        191
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "With three §6Microcircuits§r and some standard components, you can upgrade to the penultimate Tier Three circuit: a §6Microprocessor§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 32491,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gregtech:meta_item_2",
-              "orig_meta:3": 32491
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "The Third Tier Three Circuits",
-          "partysinglereward:1": 0,
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 8,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin25"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 32491,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:meta_item_2",
-                "orig_meta:3": 32491
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
     "9:10": {
       "preRequisites:11": [
         141
@@ -9640,81 +9564,6 @@
         }
       }
     },
-    "136:10": {
-      "preRequisites:11": [
-        93
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Another electronic component.\n\nMaking it inside an §3Assembling Machine§r is much, much cheaper than by hand, and using §6Nickel Zinc Ferrite§r bolts gives even better returns.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 32456,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "gregtech:meta_item_2",
-              "orig_meta:3": 32456
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Small Coils",
-          "partysinglereward:1": 0,
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 136,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 32456,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "gregtech:meta_item_2",
-                "orig_meta:3": 32456
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
     "137:10": {
       "preRequisites:11": [],
       "properties:10": {
@@ -13149,82 +12998,6 @@
               "Damage:2": 594,
               "OreDict:8": "",
               "id:8": "gregtech:meta_item_1"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "191:10": {
-      "preRequisites:11": [
-        188,
-        532
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Using your new §6Epoxy Circuit Boards§r and some familiar components, you can now make the final form of Tier Two Circuit: the §6Microcircuit§r.\n\nYou craft four of these at once, and they\u0027re pretty cheap. Consider that you used to have to make §6Primitive Processors§r for this tier, and realize how far you\u0027ve come.\n\nAs with the final form of any tier of circuits, be sure to set up automation to stockpile these. You won\u0027t get to the §6System-on-Chip§r variant recipe for a while yet.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "nomilabs:microcircuit",
-              "orig_meta:3": 0
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "The Fourth And Final Tier Two Circuits",
-          "partysinglereward:1": 0,
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 191,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin25"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "nomilabs:microcircuit",
-                "orig_meta:3": 0
-              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -32695,82 +32468,6 @@
         }
       }
     },
-    "520:10": {
-      "preRequisites:11": [
-        8,
-        148
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Four §6Microprocessors§r combined with §6Titanium Plates§r and a few other standard components will make a §6MicroSupercomputer§r.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "nomilabs:microprocessorarray",
-              "orig_meta:3": 0
-            }
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "The Second Tier Four Circuits",
-          "partysinglereward:1": 0,
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 520,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "nomilabs:microprocessorarray",
-                "orig_meta:3": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
     "521:10": {
       "preRequisites:11": [
         261,
@@ -47497,8 +47194,7 @@
       "preRequisites:11": [
         76,
         87,
-        135,
-        191
+        135
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -47533,7 +47229,6 @@
     },
     "767:10": {
       "preRequisites:11": [
-        8,
         89,
         203,
         500
@@ -47573,7 +47268,6 @@
       "preRequisites:11": [
         132,
         264,
-        520,
         525
       ],
       "properties:10": {
