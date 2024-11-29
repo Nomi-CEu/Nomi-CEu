@@ -47379,7 +47379,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Chemical Dyes are made with 1 unit of dye, 2 Salt and Sulfuric Acid. Each yields 4 dyes when solidified, so you can create an infinite loop of dyes with only 1 initial dye item.\n\nTheir main use is to dye Glass Lenses for production of advanced wafers.\n\nYou may also wish to make a Spray Can and fill it with Chemical Dye. This allows you to paint basically all GT tile entities.",
+          "desc:8": "§oThis quest accepts any Chemical Dye.§r\n\n§6Chemical Dyes§r are made with 1 unit of dye, 2 Salt and Sulfuric Acid. Each yields 4 dyes when solidified, so you can create an §einfinite loop of dyes§r with only 1 initial dye item.\n\nYou can do many things with them, from making materials for your base, such as in creating §bXTones Blocks§r, to dying §6Glass Lenses§r for §eLaser Engraving§r.\n\nYou may also wish to make a §6Spray Can§r and fill it with Chemical Dye. This allows you to paint basically all §bGT tile entities§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47408,16 +47408,20 @@
         "0:10": {
           "autoConsume:1": 0,
           "consume:1": 0,
+          "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
           "index:3": 0,
-          "requiredFluids:9": {
+          "partialMatch:1": 1,
+          "requiredItems:9": {
             "0:10": {
-              "Amount:3": 288,
-              "FluidName:8": "dye_orange"
+              "Count:3": 1,
+              "Damage:2": 421,
+              "OreDict:8": "questbookChemicalDye",
+              "id:8": "gregtech:meta_item_1"
             }
           },
-          "taskID:8": "bq_standard:fluid"
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -56844,7 +56848,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "uberconduitprobe:uber_conduit_probe_item"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "uberconduitprobe:uber_conduit_probe_item",
+              "orig_meta:3": 0
+            }
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -56901,7 +56909,11 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "uberconduitprobe:uber_conduit_probe_item"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "uberconduitprobe:uber_conduit_probe_item",
+                "orig_meta:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -57830,7 +57842,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
-          "y:3": -140
+          "y:3": -144
         },
         "56:10": {
           "id:3": 184,
@@ -58169,76 +58181,83 @@
           "y:3": -184
         },
         "104:10": {
+          "id:3": 891,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 244,
+          "y:3": -268
+        },
+        "105:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -404
         },
-        "105:10": {
+        "106:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -364
         },
-        "106:10": {
+        "107:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -192
         },
-        "107:10": {
+        "108:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -228
         },
-        "108:10": {
+        "109:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -144
         },
-        "109:10": {
+        "110:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 816,
           "y:3": -420
         },
-        "110:10": {
+        "111:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -364
         },
-        "111:10": {
+        "112:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -276
         },
-        "112:10": {
+        "113:10": {
           "id:3": 1052,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -364
         },
-        "113:10": {
+        "114:10": {
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -264
         },
-        "114:10": {
+        "115:10": {
           "id:3": 1083,
           "sizeX:3": 24,
           "sizeY:3": 24,
