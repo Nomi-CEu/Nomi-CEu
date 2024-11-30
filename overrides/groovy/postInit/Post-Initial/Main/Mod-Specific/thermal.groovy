@@ -1,8 +1,18 @@
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
+/* Fix Tanks in JEI */
+// Remove All, then add them back
+mods.jei.ingredient.hide(item('thermalexpansion:tank'))
 
-// Fix Energy Cells in JEI
+// Basic..Resonant
+for (int level : 0..4) {
+	mods.jei.ingredient.add(item('thermalexpansion:tank')
+		.withNbt([RSControl: (byte) 0, 'Creative': (byte) 0, 'Level': (byte) level]))
+}
+
+// No Creative Tank
+
+/* Fix Energy Cells in JEI */
 // Remove all Energy Cells, then add them back
-hideItemIgnoreNBT(item('thermalexpansion:cell'))
+mods.jei.ingredient.hide(item('thermalexpansion:cell'))
 
 // Basic..Resonant
 for (int level : 0..4) {
@@ -13,9 +23,8 @@ for (int level : 0..4) {
 mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 1, 'Level': (byte) 4]))
 
 // Hide Unused Thermal Machines
-removeAndHideItemIgnoreNBT(item('thermalexpansion:machine', 13)) // Arcane Ensorcellator
-removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 8)) // Insightful Condenser
-removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 9)) // Decoctive Diffuser
+mods.jei.ingredient.hide(item('thermalexpansion:device', 8)) // Insightful Condenser
+mods.jei.ingredient.hide(item('thermalexpansion:device', 9)) // Decoctive Diffuser
 
 // Hide Unused Augments
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 352)) // Pyroconvective Loop
