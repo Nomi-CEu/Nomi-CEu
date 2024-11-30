@@ -22,10 +22,6 @@ for (int level : 0..4) {
 // Creative
 mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 1, 'Level': (byte) 4]))
 
-// Hide Unused Thermal Machines
-mods.jei.ingredient.hide(item('thermalexpansion:device', 8)) // Insightful Condenser
-mods.jei.ingredient.hide(item('thermalexpansion:device', 9)) // Decoctive Diffuser
-
 // Hide Unused Augments
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 352)) // Pyroconvective Loop
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 401)) // Flux Reconstruction
