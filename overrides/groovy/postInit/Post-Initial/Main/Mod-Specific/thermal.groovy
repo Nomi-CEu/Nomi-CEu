@@ -1,4 +1,4 @@
-import com.cleanroommc.groovyscript.api.IIngredient
+import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.ItemStack
 import net.minecraft.item.crafting.Ingredient
@@ -72,7 +72,7 @@ createAllUpgradeRecipes(item('thermalexpansion:cell')
 	.withNbt(['Creative': (byte) 0]))
 
 /* Upgrade Recipe Classes and Functions */
-class UpgradeIngredient implements IIngredient {
+class UpgradeIngredient extends SimpleIIngredient {
 	static String tagKey = 'Level'
 
 	ItemStack toUpgrade
@@ -81,20 +81,6 @@ class UpgradeIngredient implements IIngredient {
 	UpgradeIngredient(ItemStack toUpgrade, List<Integer> matchingLevels) {
 		this.toUpgrade = toUpgrade
 		this.matchingLevels = new HashSet<>(matchingLevels.collect {(byte) it})
-	}
-
-	@Override
-	int getAmount() { return 1 }
-
-	@Override
-	void setAmount(int i) {}
-
-	@Override
-	IIngredient exactCopy() { return this }
-
-	@Override
-	Ingredient toMcIngredient() {
-		return Ingredient.fromStacks(getMatchingStacks())
 	}
 
 	@Override
@@ -117,12 +103,6 @@ class UpgradeIngredient implements IIngredient {
 
 		return matchingLevels.contains(tag.getByte(tagKey))
 	}
-
-	@Override
-	String getMark() { return null }
-
-	@Override
-	void setMark(String s) {}
 }
 
 void createAllUpgradeRecipes(ItemStack toUpgrade) {
