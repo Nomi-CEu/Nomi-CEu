@@ -7,7 +7,6 @@ import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 
 val creativecell = <thermalexpansion:cell>.withTag({Creative: 1 as byte, Level: 4 as byte}, false);
-val creativetank = <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 1 as byte, Level: 4 as byte}, false);
 val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType: 3}, false);
 
 //Noble Gasses
@@ -834,11 +833,6 @@ var dynamo0 = <thermalexpansion:dynamo>.withTag({RSControl: 0 as byte, Creative:
 var dynamo1 = <thermalexpansion:dynamo:1>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
 var dynamo3 = <thermalexpansion:dynamo:3>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
 var dynamo5 = <thermalexpansion:dynamo:5>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
-
-recipes.addShapeless(dynamo0, [<thermalexpansion:dynamo>,<thermalfoundation:upgrade:35>]);
-recipes.addShapeless(dynamo1, [<thermalexpansion:dynamo:1>,<thermalfoundation:upgrade:35>]);
-recipes.addShapeless(dynamo3, [<thermalexpansion:dynamo:3>,<thermalfoundation:upgrade:35>]);
-recipes.addShapeless(dynamo5, [<thermalexpansion:dynamo:5>,<thermalfoundation:upgrade:35>]);
 
 dynamo0 = dynamo0.only(isResonant);
 dynamo1 = dynamo1.only(isResonant);

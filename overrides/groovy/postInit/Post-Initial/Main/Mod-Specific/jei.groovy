@@ -5,6 +5,8 @@ import net.minecraft.item.ItemStack
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 import static gregtech.api.GTValues.*
 
+// General Item/Category Removals. Some may be in other scripts.
+
 /* Item Removals */
 
 // AR
@@ -19,11 +21,6 @@ removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketenrichedlava'))
 // Armor Plus
 mods.jei.ingredient.removeAndHide(item('armorplus:block_melting_obsidian')) // Null Texture Item
 
-// Thermal
-removeAndHideItemIgnoreNBT(item('thermalexpansion:machine', 13)) // Arcane Ensorcellator
-removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 9)) // Decoctive Diffuser
-removeAndHideItemIgnoreNBT(item('thermalexpansion:device', 8)) // Insightful Condenser
-
 // Nomi Labs
 if (LabsModeHelper.expert) {
 	mods.jei.ingredient.removeAndHide(item('nomilabs:impossiblerealmdata'))
@@ -34,7 +31,6 @@ if (LabsModeHelper.expert) {
 for (var tier : [MV, HV, EV, IV, LuV, ZPM, UV]) {
 	mods.jei.ingredient.removeAndHide(MetaTileEntities.MUFFLER_HATCH[tier].getStackForm())
 }
-
 
 // Better Questing
 List<ItemStack> lootBoxes = [

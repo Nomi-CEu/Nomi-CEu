@@ -2825,11 +2825,6 @@ mods.jei.JEI.removeAndHide(<simplyjetpacks:itemfluxpack:3>);
 mods.jei.JEI.removeAndHide(<simplyjetpacks:itemfluxpack:4>);
 mods.jei.JEI.removeAndHide(<simplyjetpacks:itemfluxpack:5>);
 
-
-mods.jei.JEI.removeAndHide(<thermalexpansion:machine:6>);
-mods.jei.JEI.removeAndHide(<thermalexpansion:machine:8>);
-
-
 //mods.jei.JEI.removeAndHide(<metaitem:cover.solar.panel>);
 //mods.jei.JEI.removeAndHide(<metaitem:cover.solar.panel.ulv>);
 //mods.jei.JEI.removeAndHide(<metaitem:cover.solar.panel.lv>);

@@ -29,68 +29,12 @@ recipes.addShaped(<thermalfoundation:material:512>, [
 	[null,<metaitem:nomilabs:plateElectricalSteel>, null],
 	[<extrautils2:ingredients>,<metaitem:nomilabs:plateElectricalSteel>, <extrautils2:ingredients>]]);
 
-// remove the wonky 2-tag version from JEI
-mods.jei.JEI.removeAndHide(<thermalexpansion:tank>);
-
-// replace tank recipe with 3-tag version
+// replace tank recipe
 recipes.remove(<thermalexpansion:tank>);
 recipes.addShaped(basictank, [
 	[<metaitem:plateCopper>, <ore:blockGlassHardened>, <metaitem:plateCopper>],
 	[<ore:blockGlassHardened>,null,<ore:blockGlassHardened>],
 	[<metaitem:plateCopper>, <thermalfoundation:material:512>, <metaitem:plateCopper>]]);
-
-function updateTank(level as byte) as IRecipeFunction {
-    return function(out, ins, cInfo) as IItemStack {
-        return ins.tank.updateTag({Level: level});
-    };
-}
-
-var tankShape as string[] = ["ABA",
-                             "BCB",
-                             "ABA"];
-
-makeShapedF("of_hardenedtank",
-    hardenedtank,
-    tankShape,
-    { A : <actuallyadditions:item_crystal:1>,
-      B : <metaitem:plateInvar>,
-      C : basictankIng.marked("tank")},
-    updateTank(1)
-);
-
-makeShapedF("of_reinforcedtank",
-    reinforcedtank,
-    tankShape,
-    { A : <thermalfoundation:material:1026>,
-      B : <metaitem:plateElectrum>,
-      C : hardenedtankIng.marked("tank")},
-    updateTank(2)
-);
-
-makeShapedF("of_signalumtank",
-    signalumtank,
-    tankShape,
-    { A : <thermalfoundation:material:1027>,
-      B : <ore:plateSignalum>,
-      C : reinforcedtankIng.marked("tank")},
-    updateTank(3)
-);
-
-makeShapedF("of_resonanttank",
-    resonanttank,
-    tankShape,
-    { A : <thermalfoundation:material:1024>,
-      B : <ore:plateEnderium>,
-      C : signalumtankIng.marked("tank")},
-    updateTank(4)
-);
-
-
-mods.jei.JEI.addItem(basictank);
-mods.jei.JEI.addItem(hardenedtank);
-mods.jei.JEI.addItem(reinforcedtank);
-mods.jei.JEI.addItem(signalumtank);
-mods.jei.JEI.addItem(resonanttank);
 
 //mods.jei.JEI.addItem(<gregtech:meta_tool:7>.withTag({RandomKey: -9206505693458694257 as long, CreatorMost: -5567380206174582019 as long, CraftingComponents: [{id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "minecraft:stick", Count: 1 as byte, Damage: 0 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}], "GT.ToolStats": {PrimaryMaterial: "rubber", HandleMaterial: "wood"}, CreatorLeast: -6837252790035570724 as long}));
 
