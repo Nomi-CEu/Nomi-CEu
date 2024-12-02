@@ -1,7 +1,6 @@
 import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.ItemStack
-import net.minecraft.item.crafting.Ingredient
 
 /* Fix Tanks in JEI */
 // Remove All, then add them back
