@@ -212,6 +212,41 @@ mods.gregtech.assembler.recipeBuilder()
 // Coke -> 16 Tiny Coke
 crafting.addShapeless(item('nomilabs:tiny_coke') * 16, [ore('fuelCoke')])
 
+/* Early Cell Recipes */
+// Basic Cell: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('fluid_cell'))
+	.matrix('PHP', ' R ')
+	.key('P', ore('plateTin'))
+	.key('H', ore('toolHammer'))
+	.key('R', ore('ringIron'))
+	.register()
+
+// Bronze Cell: Assembler
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('plateDoubleBronze') * 2, ore('ringTin') * 2)
+	.outputs(metaitem('nomilabs:bronze_cell'))
+	.duration(200).EUt(VA[LV])
+	.buildAndRegister()
+
+// Bronze Cell: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('nomilabs:bronze_cell'))
+	.matrix('PHP', 'RRR')
+	.key('P', ore('plateDoubleBronze'))
+	.key('H', ore('toolHammer'))
+	.key('R', ore('ringTin'))
+	.register()
+
+// Steel Cell: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('large_fluid_cell.steel'))
+	.matrix('PHP', 'RRR')
+	.key('P', ore('plateDoubleSteel'))
+	.key('H', ore('toolHammer'))
+	.key('R', ore('ringBronze'))
+	.register()
+
 // Lubricant Alternatives (Per Oil)
 ChangeRecipeBuilderCollection<SimpleRecipeBuilder> lubeRecipes = mods.gregtech.brewery.changeByOutput(
 	RecipePredicates.hasExactlyFluidInput(fluid('oil') * 1000),

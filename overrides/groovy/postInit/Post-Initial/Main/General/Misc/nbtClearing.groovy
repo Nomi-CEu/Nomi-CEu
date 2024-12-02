@@ -30,6 +30,9 @@ for (def meta : 1..15) {
             translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.warning'))
 }
 
+// Bronze Cell
+nbtClearingRecipe(metaitem('nomilabs:bronze_cell'))
+
 /* Drawers */
 // Add empty can clear tooltip, as we want to add multiple lines
 var empty = translatableEmpty()
