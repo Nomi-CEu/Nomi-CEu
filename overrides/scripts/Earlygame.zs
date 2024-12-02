@@ -225,14 +225,9 @@ chemical_reactor.recipeBuilder()
 //Remove other recipe for Dimethylhydrazine
 chemical_reactor.findRecipe(480, [null], [<liquid:methanol> * 2000, <liquid:ammonia> * 2000, <liquid:hypochlorous_acid> * 1000]).remove();
 
-//Lava Factory
+//Lava Factory Casing
 recipes.remove(<actuallyadditions:block_misc:7>);
 recipes.addShaped(<actuallyadditions:block_misc:7> * 2, [[<metaitem:plateAluminium>, <metaitem:plateSteel>, <metaitem:plateAluminium>],[<metaitem:plateSteel>, null, <metaitem:plateSteel>], [<metaitem:plateAluminium>, <metaitem:plateSteel>, <metaitem:plateAluminium>]]);
-
-recipes.remove(<actuallyadditions:block_lava_factory_controller>);
-recipes.addShaped(<actuallyadditions:block_lava_factory_controller>, [
-	[<actuallyadditions:item_misc:8>, <actuallyadditions:block_misc:7>, <actuallyadditions:item_misc:8>],
-	[<minecraft:lava_bucket:*>, <morefurnaces:furnaceblock:3>, <minecraft:lava_bucket:*>]]);
 
 recipes.remove(<actuallyadditions:block_fluid_collector>);
 recipes.remove(<actuallyadditions:block_placer>);
