@@ -434,6 +434,7 @@ function stripOrThrowExcessFormatting(
 
 	let builder: string[] = [];
 	let emptyAmt: number = 0;
+	let prevFormat: string = "";
 
 	for (let i = 0; i < value.length; i++) {
 		const char = value.charAt(i);
@@ -492,6 +493,24 @@ function stripOrThrowExcessFormatting(
 				builder = [];
 				continue;
 			}
+
+			// Check Prev Format
+			if (prevFormat === char) {
+				if (shouldCheck)
+					throw new Error(
+						`${name} with ID ${id} at ${key} has Redundant Formatting!`,
+					);
+
+				logWarn(
+					`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
+				);
+
+				// Remove Previous
+				builder = builder.slice(0, -1);
+				continue;
+			}
+
+			prevFormat = char;
 			builder.push(char);
 			continue;
 		}
