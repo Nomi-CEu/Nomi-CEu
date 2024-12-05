@@ -434,7 +434,8 @@ function stripOrThrowExcessFormatting(
 
 	let builder: string[] = [];
 	let emptyAmt: number = 0;
-	let prevFormat: string = "";
+	// Start off as 'r', so we can remove initial redundant 'r'
+	let prevFormat: string = "r";
 
 	for (let i = 0; i < value.length; i++) {
 		const char = value.charAt(i);
