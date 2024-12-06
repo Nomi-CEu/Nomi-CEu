@@ -1,5 +1,6 @@
 import { logWarn } from "#utils/log.ts";
 
+const doubleSpace = / {2,}/g;
 const isAvailableForFormatting = /[0-9a-ek-or]/;
 
 export default function stripOrThrowExcessSpacesOrFormatting(
@@ -16,6 +17,13 @@ export default function stripOrThrowExcessSpacesOrFormatting(
 		name,
 		key,
 	);
+
+	if (doubleSpace.test(formattingResult)) {
+		if (shouldCheck)
+			throw new Error(`${name} with ID ${id} at ${key} has Double Space(s)!`);
+		logWarn(`Removing Double Space(s) in ${name} with ID ${id} at ${key}...`);
+		formattingResult = formattingResult.replace(doubleSpace, " ");
+	}
 
 	const trimmedResult = formattingResult.trim();
 
@@ -62,7 +70,7 @@ function stripOrThrowExcessFormatting(
 
 	let builder: string[] = [];
 	let emptyAmt: number = 0;
-	let previousSpace: boolean = false;
+
 	// Start off as 'r', so we can remove initial redundant 'r'
 	let prevFormat: string = "r";
 
@@ -100,18 +108,6 @@ function stripOrThrowExcessFormatting(
 
 		// If Space, ignore, add one to Empty Amt
 		if (char === " " || char == "\n") {
-			// Check for double space
-			if (char === " " && previousSpace) {
-				if (shouldCheck)
-					throw new Error(
-						`${name} with ID ${id} at ${key} has a Double Space!`,
-					);
-				logWarn(`Removing Double Space in ${name} with ID ${id} at ${key}...`);
-				previousSpace = true;
-				continue;
-			}
-
-			previousSpace = false;
 			emptyAmt++;
 			builder.push(char);
 			continue;
