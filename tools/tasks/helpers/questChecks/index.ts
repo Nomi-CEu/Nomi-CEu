@@ -442,6 +442,41 @@ function stripOrThrowExcessFormatting(
 
 		// If Space, ignore, add one to Empty Amt
 		if (char === " ") {
+			// Check for double space
+			if (emptyAmt > 0) {
+				if (shouldCheck)
+					throw new Error(
+						`${name} with ID ${id} at ${key} has a Double Space!`,
+					);
+				logWarn(`Removing Double Space in ${name} with ID ${id} at ${key}...`);
+				continue;
+			}
+
+			// This only applies for non 'r' formatting, which should be after spaces
+			if (builder.at(-2) === "§" && builder.at(-1) !== "r") {
+				if (shouldCheck)
+					throw new Error(
+						`${name} with ID ${id} at ${key} has Non-Resetting Formatting Before Spaces!`,
+					);
+				logWarn(
+					`Moving Non-Resetting Formatting After Spaces in ${name} with ID ${id} at ${key}...`,
+				);
+				const code = builder.at(-1);
+				if (!code) continue;
+
+				// Remove last formatting
+				builder = builder.slice(0, -2);
+
+				// Push space, then code
+				builder.push(char);
+				builder.push("§");
+				builder.push(code);
+
+				// Reset empty amount, its no longer empty
+				emptyAmt = 0;
+				continue;
+			}
+
 			emptyAmt++;
 			builder.push(char);
 			continue;
@@ -461,6 +496,7 @@ function stripOrThrowExcessFormatting(
 					`Replacing Formatting Code 'f' with 'r' in ${name} with ID ${id} at ${key}...`,
 				);
 				builder.push("r");
+				prevFormat = "r";
 				continue;
 			}
 
@@ -479,19 +515,21 @@ function stripOrThrowExcessFormatting(
 				continue;
 			}
 
-			// Start of String, Remove Formatting is NOT Needed
-			if (builder.length === 1 && char === "r") {
+			// Check for 'r' formatting, which should be BEFORE spaces
+			if (char === "r" && builder.at(-2) === " ") {
 				if (shouldCheck)
 					throw new Error(
-						`${name} with ID ${id} at ${key} has Redundant Formatting!`,
+						`${name} with ID ${id} at ${key} has Resetting Formatting After Space!`,
 					);
 
 				logWarn(
-					`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
+					`Moving Resetting Formatting Before Space in ${name} with ID ${id} at ${key}...`,
 				);
 
-				// Remove Previous
-				builder = [];
+				// Remove previous space, add in code, 'r' then space
+				builder = builder.slice(0, -2);
+				builder.push("§r ");
+				prevFormat = "r";
 				continue;
 			}
 
