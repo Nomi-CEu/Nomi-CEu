@@ -220,18 +220,35 @@ function stripOrThrowExcessFormatting(
 		builder.push(char);
 	}
 
-	// Check for redundant formatting at end
-	if (builder.at(-2) === "§") {
+	// Check for redundant formatting at end, only if text being reset from a non-normal formatting
+	if (builder.at(-2) === "§" && builder.at(-1) !== "r" && prevFormat !== "r") {
 		if (shouldCheck)
 			throw new Error(
-				`${name} with ID ${id} at ${key} has Redundant Formatting!`,
+				`${name} with ID ${id} at ${key} has Redundant Formatting At End!`,
 			);
 
 		logWarn(
-			`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
+			`Removing Redundant Formatting At End from ${name} with ID ${id} at ${key}...`,
 		);
 
 		builder = builder.slice(0, -2);
+	}
+
+	// Check for missing resetting signal at end
+	if (
+		prevFormat !== "r" &&
+		(builder.at(-1) !== "r" || builder.at(-2) !== "§")
+	) {
+		if (shouldCheck)
+			throw new Error(
+				`${name} with ID ${id} at ${key} is missing Resetting Formatting At End!`,
+			);
+
+		logWarn(
+			`Adding Resetting Formatting At End in ${name} with ID ${id} at ${key}...`,
+		);
+
+		builder.push("§r");
 	}
 
 	return builder.join("");
