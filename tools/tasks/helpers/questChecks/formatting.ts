@@ -62,6 +62,7 @@ function stripOrThrowExcessFormatting(
 
 	let builder: string[] = [];
 	let emptyAmt: number = 0;
+	let previousSpace: boolean = false;
 	// Start off as 'r', so we can remove initial redundant 'r'
 	let prevFormat: string = "r";
 
@@ -98,17 +99,19 @@ function stripOrThrowExcessFormatting(
 		}
 
 		// If Space, ignore, add one to Empty Amt
-		if (char === " ") {
+		if (char === " " || char == "\n") {
 			// Check for double space
-			if (emptyAmt > 0) {
+			if (char === " " && previousSpace) {
 				if (shouldCheck)
 					throw new Error(
 						`${name} with ID ${id} at ${key} has a Double Space!`,
 					);
 				logWarn(`Removing Double Space in ${name} with ID ${id} at ${key}...`);
+				previousSpace = true;
 				continue;
 			}
 
+			previousSpace = false;
 			emptyAmt++;
 			builder.push(char);
 			continue;
@@ -191,7 +194,7 @@ function stripOrThrowExcessFormatting(
 
 		if (char === "§") {
 			// If two characters before was not § (if builder length < 2, `.at` returns undefined)
-			// (Ignoring Spaces)
+			// (Ignoring Spaces or New Lines)
 			if (builder.at(-2 - oldEmptyAmt) !== "§") {
 				builder.push(char);
 				continue;
@@ -207,12 +210,11 @@ function stripOrThrowExcessFormatting(
 			);
 
 			// Remove Previous
+			const empties = builder.slice(-oldEmptyAmt);
 			builder = builder.slice(0, -2 - oldEmptyAmt);
 
 			// Add Empty Amount Spaces
-			for (let i = 0; i < oldEmptyAmt; i++) {
-				builder.push(" ");
-			}
+			builder.push(...empties);
 		}
 
 		builder.push(char);
