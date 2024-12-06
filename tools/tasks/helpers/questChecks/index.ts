@@ -389,6 +389,7 @@ function stripOrThrowExcessSpacesOrFormatting(
 		name,
 		key,
 	);
+
 	const trimmedResult = formattingResult.trim();
 
 	if (trimmedResult !== formattingResult) {
@@ -582,5 +583,20 @@ function stripOrThrowExcessFormatting(
 
 		builder.push(char);
 	}
+
+	// Check for redundant formatting at end
+	if (builder.at(-2) === "§") {
+		if (shouldCheck)
+			throw new Error(
+				`${name} with ID ${id} at ${key} has Redundant Formatting!`,
+			);
+
+		logWarn(
+			`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
+		);
+
+		builder = builder.slice(0, -2);
+	}
+
 	return builder.join("");
 }

@@ -722,7 +722,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§r. Ore veins are massive, and mining is extremely fast with §aMining Hammers§r. What\u0027s more, even once you get access to §3Macerators§r, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials or anything you buy with §dNomicoins§r because you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have the §2Steam Grinder§e, or Medium Voltage machines or even later.§r",
+          "desc:8": "In most expert packs, you want to try to process as little ore as possible before you get access to ore doubling. It\u0027s a habit most of us pick up.\n\n§eYou shouldn\u0027t feel any pressure to do that in Nomifactory, though§r. Ore veins are massive, and mining is extremely fast with §aMining Hammers§r. What\u0027s more, even once you get access to §3Macerators§r, they initially process ore slowly and require power to operate.\n\nObvious exceptions would be rare materials or anything you buy with §dNomicoins§r because you can\u0027t find it. Those are worth doubling, if possible.\n\nBut at least for now, you shouldn\u0027t feel any guilt about smelting the more common ores without doubling them! §eOre doubling can be safely ignored until you have the §2Steam Grinder§e, or Medium Voltage machines or even later.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -2232,7 +2232,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Pulsating Dust§r is a mysterious magical material that taps into the power of Ender. It has all sorts of strange and potentially dangerous applications, including the ability to make §6Pulsating Ingots§r and §6Ender Pearls§r.\n\nYour first source of Pulsating Dust is §6Uraninite§r, which you can get from §6Uraninite Ore§r. Later on, you\u0027ll be able to produce Pulsating Dust by smelting §6Resonant Clathrates§r.\n\n§cPlease note that the Enderpearl Dust electrolysis recipe requires an EV Electrolyzer, and is most likely not worth it.§r",
+          "desc:8": "§6Pulsating Dust§r is a mysterious magical material that taps into the power of Ender. It has all sorts of strange and potentially dangerous applications, including the ability to make §6Pulsating Ingots§r and §6Ender Pearls§r.\n\nYour first source of Pulsating Dust is §6Uraninite§r, which you can get from §6Uraninite Ore§r. Later on, you\u0027ll be able to produce Pulsating Dust by smelting §6Resonant Clathrates§r.\n\n§cPlease note that the Enderpearl Dust electrolysis recipe requires an EV Electrolyzer, and is most likely not worth it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13837,7 +13837,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.\n\nIf you can afford the recipe, you can also apply the §dAirtight Seal§r enchant to all four pieces of your armor to make it act like a space suit. §cIt still needs to be refilled at a Gas Pad occasionally!§r",
+          "desc:8": "Making yourself a space suit is the most important step towards your space adventures.\n\nThis suit lets you breathe in space, which is kind of important.\n\nIf you can afford the recipe, you can also apply the §dAirtight Seal§r enchant to all four pieces of your armor to make it act like a space suit. §cIt still needs to be refilled at a Gas Pad occasionally!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14358,7 +14358,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need this to set the §aGuidance Computer\u0027s§r destination to the Moon (Luna).\n\nIn your assembled Rocket, press the Rocket GUI Hotkey (default is §eCtrl/Cmd + C§r). Click the little square that says \"Guidance Computer\" to pull up the Guidance Computer inventory. Then, place the blank chip into the Guidance Computer. Back out of this menu (§eEsc§r or §eE§r) to get back to the main Rocket GUI.\n\nClick the §cSelect Dst§r button, choose Luna, and click the Select button to assign the destination to the chip.\n\n§eNote: if you want to return your rocket to Earth, you will need to change the destination in this manner again to Earth before launching.§r",
+          "desc:8": "You\u0027ll need this to set the §aGuidance Computer\u0027s§r destination to the Moon (Luna).\n\nIn your assembled Rocket, press the Rocket GUI Hotkey (default is §eCtrl/Cmd + C§r). Click the little square that says \"Guidance Computer\" to pull up the Guidance Computer inventory. Then, place the blank chip into the Guidance Computer. Back out of this menu (§eEsc§r or §eE§r) to get back to the main Rocket GUI.\n\nClick the §cSelect Dst§r button, choose Luna, and click the Select button to assign the destination to the chip.\n\n§eNote: if you want to return your rocket to Earth, you will need to change the destination in this manner again to Earth before launching.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17073,7 +17073,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §232§r stacks of §6End Oilsands Ore§r, and 32 §6Compressed Infinity Dust Blocks§r, equivalent to 2592 §6Infinity Dust§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Lapis Ore\n* Dense Diamond Ore\n* Dense Coal Ore\n* Dense Emerald Ore\n* Dense Redstone Ore§r",
+          "desc:8": "The Fourth Micro Miner.\n\nAll of the Tier Four missions require §68 Quantum Flux§r and a stack of §6Petrotheum Dust§r.\n\nThis miner is the first convenient source of §6Osmium§r and §6Iridium§r, via a mission requiring §6Wither Realm Data§r.\n\nA §6Composition Sensor§r instead directs the miner to obtain §6Dense Oilsands Ore§r, equivalent to §232§r stacks of §6End Oilsands Ore§r, and 32 §6Compressed Infinity Dust Blocks§r, equivalent to 2592 §6Infinity Dust§r.\n\nWhen equipped with a §6Gemstone Sensor§r:\n§6* Dense Lapis Ore\n* Dense Diamond Ore\n* Dense Coal Ore\n* Dense Emerald Ore\n* Dense Redstone Ore",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26501,7 +26501,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Multiblock Builder§r",
+          "name:8": "§2Multiblock Builder",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -30872,7 +30872,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest completes with any wood-type drawer, or a Framed Drawer and a Framing Table.\n\n§bStorage Drawers§r provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nBreaking Drawers will not drop the items, instead, the items will stay in the drawer item. Place drawers in a §6Crafting Grid§r to clear contents. Note that §eDrawer Upgrades§r will not be cleared!\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§r is useful for making custom drawers out of §6Framed Drawers§r, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers in-world, with the cost of some sticks.\n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free!\n\nSee the uses of the framing tool in §eJEI§r and the §eJEI Information Page§r of the Hand Framing Tool for more information.\n\nFurthermore, you can do special stuff with your drawers, with §6Keys§r! Search §e@StorageDrawers Keys§r in §bJEI§r to see them! You can do things from \u0027locking\u0027 the drawer, meaning only that item can enter the drawer, show how many items are in the drawer, and even remove the display of items!\n\n§cPlease note that excessive use of the Quantify Key may lead to lag.§r",
+          "desc:8": "§oThis quest completes with any wood-type drawer, or a Framed Drawer and a Framing Table.\n\n§bStorage Drawers§r provide a huge amount of storage for a single item type. Use them for things you have a lot of, such as stone, dirt and ores.\n\nBreaking Drawers will not drop the items, instead, the items will stay in the drawer item. Place drawers in a §6Crafting Grid§r to clear contents. Note that §eDrawer Upgrades§r will not be cleared!\n\nIf the wood-type appearances aren\u0027t your style, the §3Framing Table§r is useful for making custom drawers out of §6Framed Drawers§r, and up to three additional items which define how the resulting drawer will look. Please note that due to a glitch, items can\u0027t be put into non-framed §6Framed Drawers§r.\n\nIn addition, the §aHand Framing Tool§r has been implemented, allowing you to decorate your framed drawers in world, and convert default drawers into Framed Drawers in-world, with the cost of some sticks.\n\nIn fact, once you consume the blocks you would like to decorate your framed drawers into, no more of those blocks will be consumed, decorating your drawers for free!\n\nSee the uses of the framing tool in §eJEI§r and the §eJEI Information Page§r of the Hand Framing Tool for more information.\n\nFurthermore, you can do special stuff with your drawers, with §6Keys§r! Search §e@StorageDrawers Keys§r in §bJEI§r to see them! You can do things from \u0027locking\u0027 the drawer, meaning only that item can enter the drawer, show how many items are in the drawer, and even remove the display of items!\n\n§cPlease note that excessive use of the Quantify Key may lead to lag.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51213,7 +51213,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is the highest tier of polymer. It is used in crafting §2Advanced SMD components and ZPM+ Machine Hulls,§r among other things.\n\nThis polymer can require up to §914 steps§r to create from scratch, but multiple steps are able to be skipped through distillation of various liquids. §6Check what steps you can easily skip!§r",
+          "desc:8": "This is the highest tier of polymer. It is used in crafting §2Advanced SMD components and ZPM+ Machine Hulls,§r among other things.\n\nThis polymer can require up to §914 steps§r to create from scratch, but multiple steps are able to be skipped through distillation of various liquids. §6Check what steps you can easily skip!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56843,7 +56843,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Machine Naming§r",
+          "name:8": "§2Machine Naming",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -64527,7 +64527,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Multiblock Rotation§r",
+          "name:8": "§2Multiblock Rotation",
           "questlogic:8": "OR",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -66336,7 +66336,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Gregicality Multiblocks§r features a complex system for parallel processing of materials. It all starts with the §6Parallel Control Hatch§r, which is required for the machine to process multiple recipes at once. Higher-tier §6Parallel Hatches§r allow for more parallel processes. §eAdditionally, you can open its GUI to configure the number of parallels the multiblock is allowed to handle. However, this has limited functionality.§r\n\nParallel Mechanics work by essentially “downclocking” the recipe when it can, doubling its speed and quadrupling the number of parallels. §cThis means you cannot parallelize recipes of the same tier as your machine.§r For example, putting a §64x Parallel Hatch§r into an §3IV Multiblock§r running EV recipes allows it to process four recipes at once. However, it cannot parallelize IV recipes due to them being the same tier as the machine. Moreover, §cYou also need enough items and fluids in order to properly parallel.§r\n\n§eNote: This parallelization mechanic also affects recipes with chanced outputs.§r",
+          "desc:8": "§2Gregicality Multiblocks§r features a complex system for parallel processing of materials. It all starts with the §6Parallel Control Hatch§r, which is required for the machine to process multiple recipes at once. Higher-tier §6Parallel Hatches§r allow for more parallel processes. §eAdditionally, you can open its GUI to configure the number of parallels the multiblock is allowed to handle. However, this has limited functionality.§r\n\nParallel Mechanics work by essentially “downclocking” the recipe when it can, doubling its speed and quadrupling the number of parallels. §cThis means you cannot parallelize recipes of the same tier as your machine.§r For example, putting a §64x Parallel Hatch§r into an §3IV Multiblock§r running EV recipes allows it to process four recipes at once. However, it cannot parallelize IV recipes due to them being the same tier as the machine. Moreover, §cYou also need enough items and fluids in order to properly parallel.§r\n\n§eNote: This parallelization mechanic also affects recipes with chanced outputs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -66522,7 +66522,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Lost an item? Don\u0027t worry! §5Nomi-CEu§r features §bFind My Items and Fluids!§r\n\nThis mod, as its name implies, allows you to search nearby inventories for §6Item§r and §9Fluids§r. Originally, you were able to do this with §bExtra Utilities 2§r, but it didn\u0027t support searching for fluids.\n\nThis mod features two hotkeys: §eY§r for searching items and §eT§r for searching fluids. To start, simply press §eY§r while hovering an item inside a GUI or even with §bJEI§r. Any inventories containing the specified item will §6Emit a particle effect§r.\n\nWhile pressing §eT§r while hovering any fluid inside a GUI, any tanks or buckets containing the specified fluid will also emit a particle effect.\n\nNote that the said mod only matches the type of item, not §eMetadata§r or §eNBT§r. For example, when you search with said mod using a §6GregTech Wrench§r, it will match any GregTech wrench made from any material.\n\n§cKeep in mind nothing will happen if there are no fluids/items of that type nearby!§r",
+          "desc:8": "Lost an item? Don\u0027t worry! §5Nomi-CEu§r features §bFind My Items and Fluids!§r\n\nThis mod, as its name implies, allows you to search nearby inventories for §6Item§r and §9Fluids§r. Originally, you were able to do this with §bExtra Utilities 2§r, but it didn\u0027t support searching for fluids.\n\nThis mod features two hotkeys: §eY§r for searching items and §eT§r for searching fluids. To start, simply press §eY§r while hovering an item inside a GUI or even with §bJEI§r. Any inventories containing the specified item will §6Emit a particle effect§r.\n\nWhile pressing §eT§r while hovering any fluid inside a GUI, any tanks or buckets containing the specified fluid will also emit a particle effect.\n\nNote that the said mod only matches the type of item, not §eMetadata§r or §eNBT§r. For example, when you search with said mod using a §6GregTech Wrench§r, it will match any GregTech wrench made from any material.\n\n§cKeep in mind nothing will happen if there are no fluids/items of that type nearby!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
