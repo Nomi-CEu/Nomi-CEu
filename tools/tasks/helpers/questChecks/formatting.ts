@@ -1,4 +1,4 @@
-import { logWarn } from "#utils/log.js";
+import { logWarn } from "#utils/log.ts";
 
 const isAvailableForFormatting = /[0-9a-ek-or]/;
 
@@ -68,6 +68,35 @@ function stripOrThrowExcessFormatting(
 	for (let i = 0; i < value.length; i++) {
 		const char = value.charAt(i);
 
+		// This only applies for non 'r' formatting, which should be after spaces
+		if (
+			(char === " " || char === "\n") &&
+			builder.at(-2) === "§" &&
+			builder.at(-1) !== "r"
+		) {
+			if (shouldCheck)
+				throw new Error(
+					`${name} with ID ${id} at ${key} has Non-Resetting Formatting Before Spaces!`,
+				);
+			logWarn(
+				`Moving Non-Resetting Formatting After Spaces in ${name} with ID ${id} at ${key}...`,
+			);
+			const code = builder.at(-1);
+			if (!code) continue;
+
+			// Remove last formatting
+			builder = builder.slice(0, -2);
+
+			// Push space, then code
+			builder.push(char);
+			builder.push("§");
+			builder.push(code);
+
+			// Reset empty amount, its no longer empty
+			emptyAmt = 0;
+			continue;
+		}
+
 		// If Space, ignore, add one to Empty Amt
 		if (char === " ") {
 			// Check for double space
@@ -77,31 +106,6 @@ function stripOrThrowExcessFormatting(
 						`${name} with ID ${id} at ${key} has a Double Space!`,
 					);
 				logWarn(`Removing Double Space in ${name} with ID ${id} at ${key}...`);
-				continue;
-			}
-
-			// This only applies for non 'r' formatting, which should be after spaces
-			if (builder.at(-2) === "§" && builder.at(-1) !== "r") {
-				if (shouldCheck)
-					throw new Error(
-						`${name} with ID ${id} at ${key} has Non-Resetting Formatting Before Spaces!`,
-					);
-				logWarn(
-					`Moving Non-Resetting Formatting After Spaces in ${name} with ID ${id} at ${key}...`,
-				);
-				const code = builder.at(-1);
-				if (!code) continue;
-
-				// Remove last formatting
-				builder = builder.slice(0, -2);
-
-				// Push space, then code
-				builder.push(char);
-				builder.push("§");
-				builder.push(code);
-
-				// Reset empty amount, its no longer empty
-				emptyAmt = 0;
 				continue;
 			}
 
@@ -144,7 +148,7 @@ function stripOrThrowExcessFormatting(
 			}
 
 			// Check for 'r' formatting, which should be BEFORE spaces
-			if (char === "r" && builder.at(-2) === " ") {
+			if (char === "r" && (builder.at(-2) === " " || builder.at(-2) === "\n")) {
 				if (shouldCheck)
 					throw new Error(
 						`${name} with ID ${id} at ${key} has Resetting Formatting After Space!`,
@@ -154,9 +158,12 @@ function stripOrThrowExcessFormatting(
 					`Moving Resetting Formatting Before Space in ${name} with ID ${id} at ${key}...`,
 				);
 
+				const empty = builder.at(-2) ?? " ";
+
 				// Remove previous space, add in code, 'r' then space
 				builder = builder.slice(0, -2);
-				builder.push("§r ");
+				builder.push("§r");
+				builder.push(empty);
 				prevFormat = "r";
 				continue;
 			}
