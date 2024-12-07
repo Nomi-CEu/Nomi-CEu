@@ -113,9 +113,10 @@ function checkFormattingChar(data: ChecksData) {
 			logOrThrowProblem("Lone Formatting Signal");
 			const withoutSignal = char.char.replace(invalidFormatting, "$1");
 
-			// in the case char is just '§', with nothing afterwards, now char is empty
-			// break if this is the case, as this means that we've processed entire string
-			if (!withoutSignal) break;
+			// In the case char is just '§', with nothing afterwards, now char is empty
+			// This could either mean two § in a row, or end of string
+			if (!withoutSignal) continue;
+
 			data.processor.add(withoutSignal);
 			continue;
 		}
