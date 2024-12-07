@@ -1,213 +1,226 @@
 import { logWarn } from "#utils/log.ts";
 
-const doubleSpace = / {2,}/g;
-const isAvailableForFormatting = /[0-9a-ek-or]/;
+/* Patterns */
+const doubleSpacePtn = / {2,}/g;
+const invalidFormattingPtn = /§$|§([^0-9a-ek-or])/;
+const isEmptyPtn = /\s/;
+const isFormattingSignal = /§([0-9a-ek-or])/;
 
-export default function stripOrThrowExcessSpacesOrFormatting(
-	shouldCheck: boolean,
-	value: string,
-	id: number,
-	name: string,
-	key: string,
+/* Parameters */
+let shouldCheck = true;
+let value = "";
+let id = 0;
+let name = "";
+let key = "";
+
+/* Storage for Per Char Checks */
+// Builder for per character
+let builder: string[] = [];
+// Current format style
+let currFormat = "r";
+// Format before this character occurred
+let formatBeforeChar = "r";
+
+export default function stripOrThrowInvalidSpacesOrFormatting(
+	shouldCheckIn: boolean,
+	valueIn: string,
+	idIn: number,
+	nameIn: string,
+	keyIn: string,
 ): string {
-	let formattingResult = stripOrThrowExcessFormatting(
-		shouldCheck,
-		value,
-		id,
-		name,
-		key,
-	);
+	shouldCheck = shouldCheckIn;
+	value = valueIn;
+	id = idIn;
+	name = nameIn;
+	key = keyIn;
 
-	if (doubleSpace.test(formattingResult)) {
-		if (shouldCheck)
-			throw new Error(`${name} with ID ${id} at ${key} has Double Space(s)!`);
-		logWarn(`Removing Double Space(s) in ${name} with ID ${id} at ${key}...`);
-		formattingResult = formattingResult.replace(doubleSpace, " ");
+	stripOrThrowInvalidFormatting();
+
+	if (doubleSpacePtn.test(value)) {
+		logOrThrowProblem("Double Space(s)");
+		value = value.replace(doubleSpacePtn, " ");
 	}
 
-	const trimmedResult = formattingResult.trim();
+	const trimmedResult = value.trim();
 
-	if (trimmedResult !== formattingResult) {
-		if (shouldCheck)
-			throw new Error(
-				`${name} with ID ${id} at ${key} has Extra Spaces or New Lines at Beginning or End!`,
-			);
-		logWarn(
-			`Removing Extra Spaces or New Lines in ${name} with ID ${id} at ${key}...`,
-		);
-		formattingResult = trimmedResult;
+	if (trimmedResult !== value) {
+		logOrThrowProblem("Extra Spaces or New Lines at Beginning or End");
+		value = trimmedResult;
 	}
 
-	if (!value.includes("\n")) return formattingResult;
+	if (!value.includes("\n")) return value;
 
-	const builder: string[] = [];
-	for (const bit of formattingResult.split("\n")) {
+	const lineBuilder: string[] = [];
+	for (const bit of value.split("\n")) {
 		const trimmedBit = bit.trim();
 
-		if (trimmedBit !== bit) {
-			if (shouldCheck)
-				throw new Error(
-					`${name} with ID ${id} at ${key} has Extra Spaces at Beginning or End of a Line!`,
-				);
-			logWarn(
-				`Removing Extra Spaces in a Line of ${name} with ID ${id} at ${key}...`,
-			);
-		}
+		if (trimmedBit !== bit)
+			logOrThrowProblem("Extra Spaces at Beginning or End of a Line");
 
-		builder.push(trimmedBit);
+		lineBuilder.push(trimmedBit);
 	}
-	return builder.join("\n");
+	return lineBuilder.join("\n");
 }
 
-function stripOrThrowExcessFormatting(
-	shouldCheck: boolean,
-	value: string,
-	id: number,
-	name: string,
-	key: string,
-): string {
-	if (!value.includes("§")) return value;
+/**
+ * Whole string formatting check.
+ */
+function stripOrThrowInvalidFormatting() {
+	if (!value.includes("§")) return;
 
-	let builder: string[] = [];
-	let emptyAmt: number = 0;
+	// Reset Storage
+	builder = [];
+	currFormat = "r";
+	formatBeforeChar = "r";
 
-	// Start off as 'r', so we can remove initial redundant 'r'
-	let prevFormat: string = "r";
+	checkInvalidFormattingChar();
 
-	for (let i = 0; i < value.length; i++) {
-		const char = value.charAt(i);
+	/* End of String Checks */
+	const prevChar = builder.at(-1);
+	if (!prevChar) {
+		value = builder.join("");
+		return;
+	}
 
-		// This only applies for non 'r' formatting, which should be after spaces
-		if (
-			(char === " " || char === "\n") &&
-			builder.at(-2) === "§" &&
-			builder.at(-1) !== "r"
-		) {
-			if (shouldCheck)
-				throw new Error(
-					`${name} with ID ${id} at ${key} has Non-Resetting Formatting Before Spaces!`,
-				);
-			logWarn(
-				`Moving Non-Resetting Formatting After Spaces in ${name} with ID ${id} at ${key}...`,
-			);
-			const code = builder.at(-1);
-			if (!code) continue;
+	// Check for redundant formatting at end, only if text being reset from a non-normal formatting
+	if (formatBeforeChar === "r") {
+		if (isFormattingSignal.test(prevChar)) {
+			logOrThrowProblem("Redundant Formatting At End");
+			builder = builder.slice(0, -1);
+		}
 
-			// Remove last formatting
-			builder = builder.slice(0, -2);
+		value = builder.join("");
+		return;
+	}
 
-			// Push space, then code
-			builder.push(char);
-			builder.push("§");
-			builder.push(code);
+	// Check for missing resetting signal at end
+	if (!isResettingSignal(prevChar)) {
+		logOrThrowProblem("Resetting Formatting At End", "Missing", "Adding");
+		if (isFormattingSignal.test(prevChar)) builder = builder.slice(0, -1);
 
-			// Reset empty amount, its no longer empty
-			emptyAmt = 0;
+		builder.push("§r");
+	}
+
+	value = builder.join("");
+}
+
+/**
+ * Per character formatting check.
+ */
+function checkInvalidFormattingChar() {
+	const iter = value[Symbol.iterator]();
+	let char: string | undefined;
+	let emptyAmt = 0;
+
+	// Breaks when char returns undefined or empty
+	for (char = getWorkingChar(iter); char; char = getWorkingChar(iter)) {
+		// Check for invalid formatting
+		if (invalidFormattingPtn.test(char)) {
+			logOrThrowProblem("Lone Formatting Signal");
+			char = char.replace(invalidFormattingPtn, "$1");
+
+			// in the case char is just '§', with nothing afterwards, now char is empty
+			// break if this is the case, as this means that we've processed entire string
+			if (!char) break;
 			continue;
 		}
 
-		// If Space, ignore, add one to Empty Amt
-		if (char === " " || char == "\n") {
+		// Handle Spaces or New Lines
+		if (isEmptyPtn.test(char)) {
+			// This only applies for non 'r' formatting, which should be after spaces
+			if (isFormattingSignal.test(char) && !isResettingSignal(char)) {
+				logOrThrowProblem(
+					"Non-Resetting Formatting",
+					"",
+					"Moving",
+					"Before Space(s)",
+					"After Space(s)",
+				);
+				const code = builder.at(-1);
+				if (!code) continue;
+
+				// Remove last formatting
+				builder = builder.slice(0, -1);
+
+				// Push space, then code
+				builder.push(char);
+				builder.push(code);
+
+				// Reset empty amount, its no longer empty
+				emptyAmt = 0;
+				continue;
+			}
+
+			// No need to continue processing, return and add to empty amt
 			emptyAmt++;
 			builder.push(char);
 			continue;
 		}
 
-		// Else, reset Empty Amt
+		// Else, reset empty amt
 		const oldEmptyAmt = emptyAmt;
 		emptyAmt = 0;
 
-		if (builder.at(-1) === "§") {
-			if (char === "f") {
-				if (shouldCheck)
-					throw new Error(
-						`${name} with ID ${id} at ${key} has Formatting Code 'f'!`,
-					);
-				logWarn(
-					`Replacing Formatting Code 'f' with 'r' in ${name} with ID ${id} at ${key}...`,
-				);
-				builder.push("r");
-				prevFormat = "r";
-				continue;
-			}
-
-			if (!isAvailableForFormatting.test(char)) {
-				if (shouldCheck)
-					throw new Error(
-						`${name} with ID ${id} at ${key} has Lone Formatting Signal!`,
-					);
-
-				logWarn(
-					`Removing Lone Formatting Signal in ${name} with ID ${id} at ${key}...`,
-				);
-
-				// Remove Last Element
-				builder = builder.slice(0, -1);
-				continue;
-			}
-
-			// Check for 'r' formatting, which should be BEFORE spaces
-			if (char === "r" && (builder.at(-2) === " " || builder.at(-2) === "\n")) {
-				if (shouldCheck)
-					throw new Error(
-						`${name} with ID ${id} at ${key} has Resetting Formatting After Space!`,
-					);
-
-				logWarn(
-					`Moving Resetting Formatting Before Space in ${name} with ID ${id} at ${key}...`,
-				);
-
-				const empty = builder.at(-2) ?? " ";
-
-				// Remove previous space, add in code, 'r' then space
-				builder = builder.slice(0, -2);
-				builder.push("§r");
-				builder.push(empty);
-				prevFormat = "r";
-				continue;
-			}
-
-			// Check Prev Format
-			if (prevFormat === char) {
-				if (shouldCheck)
-					throw new Error(
-						`${name} with ID ${id} at ${key} has Redundant Formatting!`,
-					);
-
-				logWarn(
-					`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
-				);
-
-				// Remove Previous
-				builder = builder.slice(0, -1);
-				continue;
-			}
-
-			prevFormat = char;
+		// If not formatting signal, ignore
+		if (!isFormattingSignal.test(char)) {
 			builder.push(char);
+
+			// Set formatBeforeChar
+			formatBeforeChar = currFormat;
+			continue;
+		}
+		let signal = getFormattingSignal(char);
+
+		// Check for legacy 'f' signal
+		if (signal === "f") {
+			logOrThrowProblem("Formatting Code 'f'", "", "Replacing", "", "with 'r'");
+			signal = "r";
+			char = "§r";
+		}
+
+		// Check for 'r' formatting, which should be BEFORE spaces
+		if (signal === "r" && oldEmptyAmt > 0) {
+			logOrThrowProblem(
+				"Resetting Formatting",
+				"",
+				"Moving",
+				"After Space(s)",
+				"Before Space(s)",
+			);
+
+			const empties = builder.slice(-oldEmptyAmt);
+			builder = builder.slice(0, -1 - oldEmptyAmt);
+
+			// Add Code then Spaces
+			builder.push(char);
+			builder.push(...empties);
+
+			// Reset Empty Amt and currFormat
+			emptyAmt = oldEmptyAmt;
+			formatBeforeChar = currFormat;
+			currFormat = signal;
 			continue;
 		}
 
-		if (char === "§") {
-			// If two characters before was not § (if builder length < 2, `.at` returns undefined)
-			// (Ignoring Spaces or New Lines)
-			if (builder.at(-2 - oldEmptyAmt) !== "§") {
-				builder.push(char);
-				continue;
-			}
+		// Check Prev Format
+		if (currFormat === signal) {
+			logOrThrowProblem("Redundant Formatting");
 
-			if (shouldCheck)
-				throw new Error(
-					`${name} with ID ${id} at ${key} has Redundant Formatting!`,
-				);
+			// No need to do anything, just continue
+			continue;
+		}
 
-			logWarn(
-				`Removing Redundant Formatting from ${name} with ID ${id} at ${key}...`,
-			);
+		formatBeforeChar = currFormat;
+		currFormat = signal;
 
-			// Remove Previous
+		// If previous character before was § (if builder length < 1, `.at` returns undefined)
+		// (Ignoring Spaces or New Lines)
+		if (builder.at(-1 - oldEmptyAmt) === "§") {
+			logOrThrowProblem("Redundant Formatting");
+
+			// Remove Previous Formatting + Spaces
 			const empties = builder.slice(-oldEmptyAmt);
-			builder = builder.slice(0, -2 - oldEmptyAmt);
+			builder = builder.slice(0, -1 - oldEmptyAmt);
 
 			// Add Empty Amount Spaces
 			builder.push(...empties);
@@ -215,37 +228,55 @@ function stripOrThrowExcessFormatting(
 
 		builder.push(char);
 	}
+}
 
-	// Check for redundant formatting at end, only if text being reset from a non-normal formatting
-	if (builder.at(-2) === "§" && builder.at(-1) !== "r" && prevFormat !== "r") {
-		if (shouldCheck)
-			throw new Error(
-				`${name} with ID ${id} at ${key} has Redundant Formatting At End!`,
-			);
+/* Helpers */
 
-		logWarn(
-			`Removing Redundant Formatting At End from ${name} with ID ${id} at ${key}...`,
+/**
+ * Either throws, if checking, or logs a fixing notice.
+ * <br><br>
+ * Error Msg formatted as: `${name} with ID ${id} at ${key} has ${describer} ${problem} ${conditionBefore}!`,<br>
+ * Fixing Msg formatted as: `${verb} ${problem} ${conditionAfter} in ${name} with ID ${id} at ${key}...`,
+ */
+function logOrThrowProblem(
+	problem: string,
+	describer = "",
+	verb: string = "Removing",
+	conditionBefore = "",
+	conditionAfter = "",
+) {
+	if (shouldCheck)
+		throw new Error(
+			`${name} with ID ${id} at ${key} has ${describer}${describer ? ` ${describer}` : ""}
+			${problem}${conditionBefore ? ` ${conditionBefore}` : ""}!`,
 		);
 
-		builder = builder.slice(0, -2);
+	logWarn(
+		`${verb} ${problem}${conditionAfter ? ` ${conditionAfter}` : ""} in ${name} with ID ${id} at ${key}...`,
+	);
+}
+
+/**
+ * Get the character we want to process, or undefined is iter is done. Also clumps together formatting signals.
+ */
+function getWorkingChar(iter: IterableIterator<string>): string | undefined {
+	const next = iter.next();
+
+	if (!next.value || next.done) return undefined;
+
+	if (next.value === "§") {
+		// Combine Characters
+		return next.value + (iter.next().value ?? "");
 	}
+	return next.value;
+}
 
-	// Check for missing resetting signal at end
-	if (
-		prevFormat !== "r" &&
-		(builder.at(-1) !== "r" || builder.at(-2) !== "§")
-	) {
-		if (shouldCheck)
-			throw new Error(
-				`${name} with ID ${id} at ${key} is missing Resetting Formatting At End!`,
-			);
+function isResettingSignal(char: string): boolean {
+	return char === "§r";
+}
 
-		logWarn(
-			`Adding Resetting Formatting At End in ${name} with ID ${id} at ${key}...`,
-		);
+function getFormattingSignal(char: string): string {
+	if (!isFormattingSignal.test(char)) return "";
 
-		builder.push("§r");
-	}
-
-	return builder.join("");
+	return char.replace(isFormattingSignal, "$1");
 }
