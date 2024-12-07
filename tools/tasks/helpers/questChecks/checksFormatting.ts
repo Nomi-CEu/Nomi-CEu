@@ -138,7 +138,7 @@ function checkFormattingChar(data: ChecksData) {
 		}
 
 		// Check if formatting is right after another (ignoring spaces, newlines, etc.)
-		const prevIgnoreSpaces = data.processor.getLastNonSpaceLike();
+		let prevIgnoreSpaces = data.processor.getLastNonSpaceLike();
 		if (isFormattingSignal.test(prevIgnoreSpaces.char.char)) {
 			logOrThrowProblem("Redundant Formatting");
 
@@ -160,6 +160,8 @@ function checkFormattingChar(data: ChecksData) {
 					"Before Space(s)",
 				);
 
+				// Refetch ignore spaces, it may have changed
+				prevIgnoreSpaces = data.processor.getLastNonSpaceLike();
 				if (prevIgnoreSpaces.index === -1) {
 					// We don't need to add resetting formatting at start of processor
 					// Also, this condition should have already been caught through redundant checks
@@ -167,9 +169,9 @@ function checkFormattingChar(data: ChecksData) {
 					continue;
 				}
 
-				// Splice in before spaces
+				// Splice in before spaces (Add after existing character, so use index + 1)
 				const currFormat = data.processor.getCurrentFormat();
-				data.processor.result.splice(prevIgnoreSpaces.index, 0, {
+				data.processor.result.splice(prevIgnoreSpaces.index + 1, 0, {
 					char: formattingChar + signal,
 					formatBefore: currFormat,
 					formatAfter: signal,
