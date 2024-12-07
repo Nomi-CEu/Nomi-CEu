@@ -40,10 +40,11 @@ export default class ChecksCharProcessor {
 			if (next === "§") {
 				next = "";
 
-				// Decrement i again, so the next character is added seperately
+				// Decrement i again, so the next character is added separately
 				i--;
 			}
-			this.addFormat(char, this.source);
+
+			this.addFormat(next, this.source);
 		}
 
 		this.result = [];
@@ -89,7 +90,7 @@ export default class ChecksCharProcessor {
 	 * Returns whether there are more characters to process in the source list.
 	 */
 	public hasNext(): boolean {
-		return this.currIndex >= this.source.length;
+		return this.currIndex < this.source.length;
 	}
 
 	/**

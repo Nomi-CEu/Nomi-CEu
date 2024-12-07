@@ -35,10 +35,6 @@ export default class ChecksData {
 		this.processor = new ChecksCharProcessor(value);
 	}
 
-	public getResult(): Characters {
-		return this.processor.result;
-	}
-
 	public saveValue() {
 		this.value = this.processor.getResult();
 	}

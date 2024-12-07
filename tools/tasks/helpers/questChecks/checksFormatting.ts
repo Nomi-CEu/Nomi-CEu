@@ -29,22 +29,22 @@ export default function checkSpacesAndFormatting(
 
 	checkFormatting(data);
 
-	if (doubleSpace.test(value)) {
+	if (doubleSpace.test(data.value)) {
 		logOrThrowProblem("Double Space(s)");
-		value = value.replace(doubleSpace, " ");
+		data.value = data.value.replace(doubleSpace, " ");
 	}
 
-	const trimmedResult = value.trim();
+	const trimmedResult = data.value.trim();
 
-	if (trimmedResult !== value) {
+	if (trimmedResult !== data.value) {
 		logOrThrowProblem("Extra Spaces or New Lines at Beginning or End");
-		value = trimmedResult;
+		data.value = trimmedResult;
 	}
 
-	if (!value.includes("\n")) return value;
+	if (!data.value.includes("\n")) return data.value;
 
 	const lineBuilder: string[] = [];
-	for (const bit of value.split("\n")) {
+	for (const bit of data.value.split("\n")) {
 		const trimmedBit = bit.trim();
 
 		if (trimmedBit !== bit)
@@ -64,7 +64,7 @@ function checkFormatting(data: ChecksData) {
 	checkFormattingChar(data);
 
 	/* End of String Checks */
-	const prevChar = data.getResult().at(-1);
+	const prevChar = data.processor.result.at(-1);
 	if (!prevChar) {
 		data.saveValue();
 		return;
