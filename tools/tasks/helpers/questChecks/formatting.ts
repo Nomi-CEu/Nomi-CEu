@@ -215,7 +215,8 @@ function checkInvalidFormattingChar() {
 
 		// If previous character before was § (if builder length < 1, `.at` returns undefined)
 		// (Ignoring Spaces or New Lines)
-		if (builder.at(-1 - oldEmptyAmt) === "§") {
+		const prevProper = builder.at(-1 - oldEmptyAmt);
+		if (prevProper && isFormattingSignal.test(prevProper)) {
 			logOrThrowProblem("Redundant Formatting");
 
 			// Remove Previous Formatting + Spaces
