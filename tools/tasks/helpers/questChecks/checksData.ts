@@ -1,6 +1,4 @@
-import ChecksCharProcessor, {
-	Characters,
-} from "#tasks/helpers/questChecks/checksCharProcessor.ts";
+import ChecksCharProcessor from "#tasks/helpers/questChecks/checksCharProcessor.ts";
 
 /* Patterns */
 export const doubleSpace = / {2,}/g;
