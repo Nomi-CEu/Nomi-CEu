@@ -93,7 +93,9 @@ export default async function portQBChanges(): Promise<void> {
 	const obj = {} as { [key: string]: Quest };
 	const iter = data.toChangeIDsToQuests.values();
 	for (let i = 0; i < data.toChangeIDsToQuests.size; i++) {
-		obj[`${i}:10`] = iter.next().value;
+		const quest = iter.next().value;
+		if (!quest) continue;
+		obj[`${i}:10`] = quest;
 	}
 	toChange["questDatabase:9"] = obj;
 

@@ -21,7 +21,7 @@ import colors from "colors";
 import { isEnvVariableSet } from "#utils/util.ts";
 import * as core from "@actions/core";
 import lodash from "lodash";
-import stripOrThrowInvalidSpacesOrFormatting from "./formatting.ts";
+import checkSpacesAndFormatting from "./checksFormatting.ts";
 
 export const check = async () => {
 	try {
@@ -182,7 +182,7 @@ async function checkAndFixQB(
 
 		// Check Name Formatting
 		quest["properties:10"]["betterquesting:10"]["name:8"] =
-			stripOrThrowInvalidSpacesOrFormatting(
+			checkSpacesAndFormatting(
 				shouldCheck,
 				name(quest),
 				foundID,
@@ -203,7 +203,7 @@ async function checkAndFixQB(
 		}
 		// Check Desc Formatting (Still check if after, as user may have entered dupe formatting)
 		quest["properties:10"]["betterquesting:10"]["desc:8"] =
-			stripOrThrowInvalidSpacesOrFormatting(
+			checkSpacesAndFormatting(
 				shouldCheck,
 				quest["properties:10"]["betterquesting:10"]["desc:8"],
 				foundID,
@@ -317,7 +317,7 @@ async function checkAndFixQB(
 	for (const lineKey of Object.keys(qb["questLines:9"])) {
 		const line = qb["questLines:9"][lineKey];
 		line["properties:10"]["betterquesting:10"]["name:8"] =
-			stripOrThrowInvalidSpacesOrFormatting(
+			checkSpacesAndFormatting(
 				shouldCheck,
 				line["properties:10"]["betterquesting:10"]["name:8"],
 				line["lineID:3"],
@@ -325,7 +325,7 @@ async function checkAndFixQB(
 				"Name",
 			);
 		line["properties:10"]["betterquesting:10"]["desc:8"] =
-			stripOrThrowInvalidSpacesOrFormatting(
+			checkSpacesAndFormatting(
 				shouldCheck,
 				line["properties:10"]["betterquesting:10"]["desc:8"],
 				line["lineID:3"],
