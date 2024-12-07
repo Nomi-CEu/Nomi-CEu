@@ -64,35 +64,33 @@ function checkFormatting(data: ChecksData) {
 	checkFormattingChar(data);
 
 	/* End of String Checks */
-	const prevChar = data.processor.result.at(-1);
-	if (!prevChar) {
-		data.saveValue();
-		return;
-	}
+	let prevChar = data.processor.getLast();
 
-	// Check for redundant formatting at end, only if text being reset from a non-normal formatting
-	if (prevChar.formatBefore === resettingSignal) {
-		if (isFormattingSignal.test(prevChar.char)) {
+	// Check for redundant formatting at end
+	if (isFormattingSignal.test(prevChar.char)) {
+		// If not resetting change, or we have no need to reset
+		// Note the second case should be caught by redundant formatting check, so no need to check
+		if (!isResettingSignal(prevChar.char)) {
 			logOrThrowProblem("Redundant Formatting At End");
-			data.processor.removeLast(1);
+			data.processor.removeLast();
 		}
 
-		data.saveValue();
-		return;
-	}
-
-	// Check for missing resetting signal at end
-	// At this point, we know the text ends at a non-normal state (ignoring a final resetting signal, if one exists)
-	if (!isResettingSignal(prevChar.char)) {
-		logOrThrowProblem("Resetting Formatting At End", "Missing", "Adding");
-
-		// Remove any existing formatting signals
-		if (isFormattingSignal.test(prevChar.char)) data.processor.removeLast(1);
-
-		data.processor.addFormat(resettingSignal);
+		// For continued processing, refresh prevChar
+		prevChar = data.processor.getLast();
 	}
 
 	data.saveValue();
+
+	// Check for missing resetting signal at end
+	if (
+		!isResettingSignal(prevChar.char) &&
+		prevChar.formatBefore !== resettingSignal
+	) {
+		logOrThrowProblem("Resetting Formatting At End", "Missing", "Adding");
+
+		// Trim value, then add §r to it
+		data.value = data.value.trim() + formattingChar + resettingSignal;
+	}
 }
 
 /**

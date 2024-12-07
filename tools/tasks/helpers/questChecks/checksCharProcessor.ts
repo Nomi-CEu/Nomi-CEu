@@ -57,6 +57,8 @@ export default class ChecksCharProcessor {
 	 * Adds a normal character to the specified list. Defaults to result list.
 	 */
 	public add(char: string, list: Characters = this.result): void {
+		if (!char) return;
+
 		const fmt = this.getCurrentFormat(list);
 		list.push({ char, formatBefore: fmt, formatAfter: fmt });
 	}
