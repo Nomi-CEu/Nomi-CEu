@@ -9,7 +9,7 @@
 	"private": true,
 	"scripts": {
 		"gulp": "node --import ./tsNodeESMRegister.mjs  node_modules/gulp/bin/gulp.js",
-		"check": "tsc --pretty"
+		"check": "tsc --pretty --noUnusedLocals --noUnusedParameters"
 	},
 	"imports": {
 		"#types/*": "./types/*",
