@@ -108,35 +108,24 @@ function checkFormattingChar(data: ChecksData) {
 			continue;
 		}
 
-		// Check for invalid formatting
+		let signal = "";
+
+		// Check for invalid formatting, including legacy 'f' signal
 		if (invalidFormatting.test(char.char)) {
-			logOrThrowProblem("Lone Formatting Signal");
-			const withoutSignal = char.char.replace(invalidFormatting, "$1");
+			logOrThrowProblem(
+				`Invalid Formatting Signal '${char.char}'`,
+				"",
+				"Replacing",
+				"",
+				"with '§r'",
+			);
 
-			// In the case char is just '§', with nothing afterwards, now char is empty
-			// This could either mean two § in a row, or end of string
-			if (!withoutSignal) continue;
-
-			data.processor.add(withoutSignal);
-			continue;
-		}
-
-		let signal = char.char.replace(isFormattingSignal, "$1");
-
-		// Check for legacy 'f' signal
-		if (signal === "f") {
-			logOrThrowProblem("Formatting Code 'f'", "", "Replacing", "", "with 'r'");
+			// BQu treats signals like §z as a resetting signal, so make them reset
+			// Yes, even ones followed after by `'`, a space, or a newline
 			signal = "r";
-		}
+		} else signal = char.char.replace(isFormattingSignal, "$1");
 
-		/* Redundant Formatting Checks */
-		// Check if formatting does nothing
-		if (char.formatBefore === char.formatAfter) {
-			logOrThrowProblem("Redundant Formatting");
-
-			// No need to do anything, just continue
-			continue;
-		}
+		// Note: Do not use char.char past this point, use signal instead!
 
 		// Check if formatting is right after another (ignoring spaces, newlines, etc.)
 		let prevIgnoreSpaces = data.processor.getLastNonSpaceLike();
@@ -145,8 +134,24 @@ function checkFormattingChar(data: ChecksData) {
 
 			// Remove previous formatting
 			// Note: this won't be called if not found, as empty string is not a formatting signal
-			data.processor.result.splice(prevIgnoreSpaces.index, 1);
+			// Instead of splicing, remove all, then add back, so we ensure correct formatting of spaces
+			const empties = data.processor.result.slice(prevIgnoreSpaces.index + 1);
+			data.processor.removeLast(
+				data.processor.result.length - prevIgnoreSpaces.index,
+			);
+
+			empties.forEach((char) => data.processor.add(char.char));
 		}
+
+		/* Redundant Formatting Checks */
+		// Check if formatting does nothing
+		if (data.processor.getCurrentFormat() === signal) {
+			logOrThrowProblem("Redundant Formatting");
+
+			// No need to do anything, just continue
+			continue;
+		}
+
 		/* End Redundant Formatting Checks */
 
 		/* Formatting Order Checks */
@@ -170,13 +175,15 @@ function checkFormattingChar(data: ChecksData) {
 					continue;
 				}
 
-				// Splice in before spaces (Add after existing character, so use index + 1)
-				const currFormat = data.processor.getCurrentFormat();
-				data.processor.result.splice(prevIgnoreSpaces.index + 1, 0, {
-					char: formattingChar + signal,
-					formatBefore: currFormat,
-					formatAfter: signal,
-				});
+				// Move in before spaces (Add after existing character, so use index + 1)
+				// Instead of splicing, remove all, then add back, so we ensure correct formatting of spaces
+				const empties = data.processor.result.slice(prevIgnoreSpaces.index + 1);
+				data.processor.removeLast(
+					data.processor.result.length - prevIgnoreSpaces.index - 1, // -1, we don't want to remove last-non-space char itself
+				);
+
+				data.processor.addFormat(signal);
+				empties.forEach((char) => data.processor.add(char.char));
 				continue;
 			}
 			data.processor.addFormat(signal);

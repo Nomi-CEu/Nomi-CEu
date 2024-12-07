@@ -37,7 +37,8 @@ export default class ChecksCharProcessor {
 			let next = value.charAt(++i) ?? "";
 
 			// Don't add if next character is also formatting, just leave it as lone signal and have formatter deal with it
-			if (next === "§") {
+			// Newlines and spaces BQu ignores after a formatting char, so keep them
+			if (next === formattingChar) {
 				next = "";
 
 				// Decrement i again, so the next character is added separately

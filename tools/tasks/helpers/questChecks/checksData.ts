@@ -4,9 +4,9 @@ import ChecksCharProcessor, {
 
 /* Patterns */
 export const doubleSpace = / {2,}/g;
-export const invalidFormatting = /§$|§([^0-9a-fk-or])/;
+export const invalidFormatting = /§$|§[^0-9a-ek-or]/;
 export const isSpaceOrNewLine = /[ \n]/;
-export const isFormattingSignal = /§([0-9a-fk-or])/;
+export const isFormattingSignal = /§([0-9a-ek-or])/;
 
 /* Constants */
 export const formattingChar = "§";
