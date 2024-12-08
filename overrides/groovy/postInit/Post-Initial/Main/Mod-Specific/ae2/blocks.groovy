@@ -154,7 +154,7 @@ mods.gregtech.wiremill.recipeBuilder()
 	.buildAndRegister()
 
 // Glass Cable
-crafting.removeByOutput(item('appliedenergistics2:part', 16))
+crafting.remove('appliedenergistics2:network/cables/glass_fluix')
 mods.gregtech.alloy_smelter.recipeBuilder()
 	.inputs(ore('dustFluix'), item('appliedenergistics2:part', 140))
 	.outputs(item('appliedenergistics2:part', 16) * 2)
@@ -162,6 +162,7 @@ mods.gregtech.alloy_smelter.recipeBuilder()
 	.buildAndRegister()
 
 // Covered Cable
+crafting.remove('appliedenergistics2:network/cables/covered_fluix')
 for (var rubber in [fluid('rubber') * 144, fluid('styrene_butadiene_rubber') * 36, fluid('silicone_rubber') * 76]) {
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(item('appliedenergistics2:part', 16))
@@ -169,7 +170,6 @@ for (var rubber in [fluid('rubber') * 144, fluid('styrene_butadiene_rubber') * 3
 		.outputs(item('appliedenergistics2:part', 36))
 		.duration(100).EUt(VA[ULV])
 		.buildAndRegister()
-
 }
 
 // ME Conduit
