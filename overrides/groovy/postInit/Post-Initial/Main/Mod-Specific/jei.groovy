@@ -10,20 +10,20 @@ import static gregtech.api.GTValues.*
 /* Item Removals */
 
 // AR
-mods.jei.ingredient.removeAndHide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
+mods.jei.ingredient.hide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
 
-removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketrocketfuel'))
-removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketnitrogen'))
-removeAndHideItemIgnoreNBT(item('advancedrocketry:buckethydrogen'))
-removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketoxygen'))
-removeAndHideItemIgnoreNBT(item('advancedrocketry:bucketenrichedlava'))
+hideItemIgnoreNBT(item('advancedrocketry:bucketrocketfuel'))
+hideItemIgnoreNBT(item('advancedrocketry:bucketnitrogen'))
+hideItemIgnoreNBT(item('advancedrocketry:buckethydrogen'))
+hideItemIgnoreNBT(item('advancedrocketry:bucketoxygen'))
+hideItemIgnoreNBT(item('advancedrocketry:bucketenrichedlava'))
 
 // Armor Plus
-mods.jei.ingredient.removeAndHide(item('armorplus:block_melting_obsidian')) // Null Texture Item
+mods.jei.ingredient.hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
 
 // Nomi Labs
 if (LabsModeHelper.expert) {
-	mods.jei.ingredient.removeAndHide(item('nomilabs:impossiblerealmdata'))
+	mods.jei.ingredient.hide(item('nomilabs:impossiblerealmdata'))
 }
 
 // GregTech
@@ -44,10 +44,10 @@ List<ItemStack> lootBoxes = [
 	item('bq_standard:loot_chest', 103),
 	item('bq_standard:loot_chest', 104),
 ]
-lootBoxes.forEach { removeAndHideItemIgnoreNBT(it) }
+lootBoxes.forEach { hideItemIgnoreNBT(it) }
 
-mods.jei.ingredient.removeAndHide(item('betterquesting:placeholder'))
-mods.jei.ingredient.removeAndHide(fluid('betterquesting.placeholder'))
+mods.jei.ingredient.hide(item('betterquesting:placeholder'))
+mods.jei.ingredient.hide(fluid('betterquesting.placeholder'))
 
 // Modded Buckets
 hideItemIgnoreNBT(item('forge:bucketfilled'))
