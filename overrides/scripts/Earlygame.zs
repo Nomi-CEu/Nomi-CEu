@@ -163,7 +163,6 @@ macerator.recipeBuilder().inputs([<enderio:item_material:19>]).outputs([<enderio
 macerator.recipeBuilder().inputs([<enderio:item_material:15>]).outputs([<enderio:item_material:35>]).duration(300).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:14>]).outputs([<enderio:item_material:36>]).duration(200).EUt(16).buildAndRegister();
 macerator.recipeBuilder().inputs([<enderio:item_material:17>]).outputs([<nomilabs:grainsofinnocence>]).duration(200).EUt(16).buildAndRegister();
-recipes.remove(<appliedenergistics2:part:36>);
 
 //Yeta Wrench
 recipes.remove(<enderio:item_yeta_wrench>);
