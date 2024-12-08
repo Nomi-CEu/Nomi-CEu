@@ -9,6 +9,58 @@ import net.minecraftforge.fluids.FluidStack
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
 
+// Allow treated wood sticks in (most) stick recipes
+ore('stickWood').add(metaitem('stickTreatedWood'))
+
+// Make Wood Frame Box only accept non-treated wood sticks
+// So we don't conflict with Treated Wood Frame Box recipe
+crafting.shapedBuilder()
+	.output(metaitem('frameWood') * 2)
+	.matrix('SSS', 'STS', 'SSS')
+	.key('S', item('minecraft:stick'))
+	.key('T', ore('toolSaw'))
+	.replace().register()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(item('minecraft:stick') * 4)
+	.circuitMeta(4)
+	.outputs(metaitem('frameWood'))
+	.duration(64).EUt(VA[ULV])
+	.replace().buildAndRegister()
+
+if (LabsModeHelper.expert) {
+	// Log -> Stick Shortcut (Expert Mode)
+	crafting.shapedBuilder()
+		.output(item('minecraft:stick') * 4)
+		.matrix('B', 'B')
+		.key('B', ore('logWood'))
+		.register()
+
+	// Remove endercore paper recipe
+	crafting.remove('endercore:shapeless_paper')
+
+	// Remove aa paper recipe (with rice)
+	crafting.remove('actuallyadditions:recipes23')
+
+	// Allow rice -> paper through chad
+	crafting.shapedBuilder()
+		.output(metaitem('dustPaper') * 2)
+		.matrix('RRR', ' M ')
+		.key('R', item('actuallyadditions:item_food', 16))
+		.key('M', ore('toolMortar'))
+		.register()
+} else {
+	// Remove mc paper recipe, is useless with endercore's shapeless one
+	crafting.remove('minecraft:paper')
+}
+
+// Wood Pulp
+// Output 4 for Normal, 2 for Expert
+crafting.addShapeless(metaitem('dustWood') * (LabsModeHelper.expert ? 2 : 4), [ore('logWood'), ore('toolMortar')])
+
+// Remove Thermal Foundation's clay recipe, slag is unobtainable
+crafting.remove('thermalfoundation:clay_ball')
+
 // Furnaces
 // Iron Furnace
 mods.gregtech.assembler.recipeBuilder()
