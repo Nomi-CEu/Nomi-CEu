@@ -9,25 +9,6 @@ import net.minecraftforge.fluids.FluidStack
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
 
-// Allow treated wood sticks in (most) stick recipes
-ore('stickWood').add(metaitem('stickTreatedWood'))
-
-// Make Wood Frame Box only accept non-treated wood sticks
-// So we don't conflict with Treated Wood Frame Box recipe
-crafting.shapedBuilder()
-	.output(metaitem('frameWood') * 2)
-	.matrix('SSS', 'STS', 'SSS')
-	.key('S', item('minecraft:stick'))
-	.key('T', ore('toolSaw'))
-	.replace().register()
-
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(item('minecraft:stick') * 4)
-	.circuitMeta(4)
-	.outputs(metaitem('frameWood'))
-	.duration(64).EUt(VA[ULV])
-	.replace().buildAndRegister()
-
 if (LabsModeHelper.expert) {
 	// Log -> Stick Shortcut (Expert Mode)
 	crafting.shapedBuilder()
