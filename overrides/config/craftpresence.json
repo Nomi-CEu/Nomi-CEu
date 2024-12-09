@@ -365,14 +365,14 @@
       }
     },
     "dynamicIcons": {
-      "default": "https://via.placeholder.com/256.png"
+      "default": "https://via.placeholder.com/256.png",
+      "IntegerLimit_": "https://mc-heads.net/avatar/ba3d12a4b7f347309db3b9f71531e8d6"
     },
     "dynamicVariables": {
-      "windowCreated": "{executeMethod('org.lwjgl.opengl.Display', null, 'isCreated')}",
       "mods": "{general.mods} Mod(s)",
       "players": "{server.players.current} / {server.players.max} Players",
       "player_info_items": "Items: {item.main_hand.message}",
-      "windowTitle": "{custom.windowCreated ? executeMethod('org.lwjgl.opengl.Display', null, 'getTitle') : ''}",
+      "windowTitle": "{executeMethod('com.nomiceu.nomilabs.util.LabsDisplayHelper', null, 'getWindowTitle')}",
       "player_info_health": "Health: {player.health.current}/{player.health.max}",
       "pack": "{pack.name}",
       "mode": "{executeMethod('com.nomiceu.nomilabs.util.LabsModeHelper', null, 'getFormattedMode')}",
