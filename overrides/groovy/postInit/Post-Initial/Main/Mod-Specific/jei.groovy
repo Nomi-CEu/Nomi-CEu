@@ -77,6 +77,7 @@ mods.jei.category.hideCategory('GrindingBall')
 mods.jei.category.hideCategory('SagMill')
 mods.jei.category.hideCategory('SolarPanel')
 mods.jei.category.hideCategory('StirlingGenerator')
+mods.jei.category.hideCategory('LavaGenerator')
 
 // AR
 mods.jei.category.hideCategory('zmaster587.AR.rollingMachine')
