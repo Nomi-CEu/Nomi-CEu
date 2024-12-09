@@ -56,9 +56,8 @@ hideItemIgnoreNBT(item('forge:bucketfilled'))
 // Add back Creosote Bucket, has usages in recipes and furnace
 mods.jei.ingredient.add(FluidUtil.getFilledBucket(fluid('creosote') * 1000))
 
-// Add back Concrete Bucket, used in Firebricks
-if (LabsModeHelper.expert)
-	mods.jei.ingredient.add(FluidUtil.getFilledBucket(fluid('concrete') * 1000))
+// Add Concrete Cell to JEI
+mods.jei.ingredient.add(metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'concrete', 'Amount': 1000]]))
 
 /* Remove Categories (Appear Randomly after /gs reload) */
 // Avatitia

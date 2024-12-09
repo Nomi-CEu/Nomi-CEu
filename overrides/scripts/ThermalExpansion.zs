@@ -169,14 +169,6 @@ recipes.addShaped(<thermalexpansion:augment:337>, [
 	[<thermalfoundation:material:328>, <metaitem:gearDiamond>, <thermalfoundation:material:328>],
 	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
 
-
-//Pyroconductive Loop
-recipes.remove(<thermalexpansion:augment:352>);
-recipes.addShaped(<thermalexpansion:augment:352>, [
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>],
-	[<thermalfoundation:material:328>, <minecraft:lava_bucket>, <thermalfoundation:material:328>],
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
-
 //charger thing
 recipes.remove(<thermalexpansion:augment:400>);
 recipes.addShaped(<thermalexpansion:augment:400>, [
@@ -211,13 +203,6 @@ recipes.addShaped(<thermalexpansion:augment:656>, [
 	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>],
 	[<metaitem:nomilabs:plateDarkSteel>, <thermalfoundation:material:1024>, <metaitem:nomilabs:plateDarkSteel>],
 	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>]]);
-
-	//i give up
-recipes.remove(<thermalexpansion:augment:496>);
-recipes.addShaped(<thermalexpansion:augment:496>, [
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>],
-	[<thermalfoundation:material:328>, <minecraft:water_bucket>, <thermalfoundation:material:328>],
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
 
 	//i give up
 recipes.remove(<thermalexpansion:augment:688>);

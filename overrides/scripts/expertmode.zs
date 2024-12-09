@@ -135,15 +135,6 @@ makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate:
 	  R : <ore:dustRedstone>,
 	  I : <ore:ingotIron>}); 
 
-
-recipes.remove(<nuclearcraft:water_source>);
-makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
-    ["AAA",
-     "B B",
-     "AAA"],
-    { A : <ore:plateDoubleSteel>,
-      B : <minecraft:water_bucket:*> });
-
 // XP Juice
 mixer.recipeBuilder()
 	.inputs(<ore:itemPulsatingPowder>)
@@ -313,26 +304,6 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 4, [
 
 recipes.addShaped(<storagedrawers:upgrade_storage:3>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotAluminium>, <storagedrawers:upgrade_template>, <ore:ingotAluminium>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 recipes.addShaped(<storagedrawers:upgrade_storage:4>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotVibrantAlloy>, <storagedrawers:upgrade_template>, <ore:ingotVibrantAlloy>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
-
-// NC Cobble gen
-recipes.remove(<nuclearcraft:cobblestone_generator>);
-makeShaped("of_nc_cobblestone_generator",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "B C",
-     "AAA"],
-    { A : <ore:plateBlackSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
-
-makeShaped("of_nc_cobblestone_generator_mirrored",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "C B",
-     "AAA"],
-    { A : <ore:plateBlackSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
 
 //Crystal Growth Chamber
 recipes.addShaped(<ae2stuff:grower>, [
