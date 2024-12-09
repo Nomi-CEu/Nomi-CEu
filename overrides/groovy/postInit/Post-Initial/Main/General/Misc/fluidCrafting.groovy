@@ -229,8 +229,19 @@ crafting.shapedBuilder()
 	.key('C', ore('stick'))
 	.replace().register()
 
-// Firebricks
+// Concrete Cell + Firebricks
 if (LabsModeHelper.expert) {
+	crafting.shapedBuilder()
+		.output(IngredientFluidBucket.fillStack(metaitem('fluid_cell'), fluid('concrete') * 1000))
+		.matrix('ABC', 'ADE', ' F ')
+		.key('A', ore('dustCalcite'))
+		.key('B', metaitem('fluid_cell'))
+		.key('C', ore('dustStone'))
+		.key('D', fluidIng(fluid('water')))
+		.key('E', ore('dustQuartzSand'))
+		.key('F', ore('dustClay'))
+		.replace().register()
+
 	crafting.shapedBuilder()
 		.output(item('gregtech:metal_casing', 1))
 		.matrix('BGB', 'BCB', 'BGB')
@@ -346,9 +357,7 @@ class IngredientFluidBucket extends SimpleIIngredient {
 		List<ItemStack> matchingStacks = [FluidUtil.getFilledBucket(this.stack)]
 
 		for (ItemStack fill : fillables) {
-			var toFill = fill.copy();
-			if (getHandler(toFill)?.fill(this.stack, true) != 0)
-				matchingStacks.add(toFill)
+			matchingStacks.add(fillStack(fill, this.stack))
 		}
 
 		this.matchingStacks = matchingStacks.toArray()
@@ -379,6 +388,12 @@ class IngredientFluidBucket extends SimpleIIngredient {
 		handler.drain(stack, true)
 
 		return handler.getContainer() * 1
+	}
+
+	static ItemStack fillStack(ItemStack itemStack, FluidStack fluidStack) {
+		var toFill = itemStack.copy()
+		getHandler(toFill)?.fill(fluidStack, true)
+		return toFill
 	}
 
 	static IFluidHandlerItem getHandler(ItemStack itemStack) {
