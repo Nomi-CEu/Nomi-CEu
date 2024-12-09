@@ -105,6 +105,19 @@ for (def material : ["wood", "bronze", "steel", "aluminium", "stainless_steel", 
     clearableContainers.add(metaitem("drum.${material}"))
 }
 
+// Cells
+
+// Bronze Cell does not need tooltip added, its recipe is added above
+
+// Special Cells
+clearableContainers.add(metaitem('fluid_cell'))
+clearableContainers.add(metaitem('fluid_cell.universal'))
+
+// Material Cells
+for (def material : ["steel", "aluminium", "stainless_steel", "titanium", "tungstensteel"]) {
+	clearableContainers.add(metaitem("large_fluid_cell.${material}"))
+}
+
 // EIO Tanks
 // Technically Machines Too... but Not As Useful
 clearableContainers.add(item('enderio:block_tank'))

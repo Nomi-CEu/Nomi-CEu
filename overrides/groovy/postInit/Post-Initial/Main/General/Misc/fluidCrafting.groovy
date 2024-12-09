@@ -2,10 +2,15 @@ import com.google.common.base.CaseFormat
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import net.minecraft.item.ItemStack
+import net.minecraftforge.fluids.Fluid
 import net.minecraftforge.fluids.FluidStack
 import net.minecraftforge.fluids.FluidUtil
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler
 import net.minecraftforge.fluids.capability.IFluidHandlerItem
+
+import static com.nomiceu.nomilabs.util.LabsTranslate.Translatable
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translate
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
 /*
  * Allows recipes with buckets to accept all fluid containers.
@@ -31,37 +36,46 @@ for (var entry : [0: 'glass', 20: 'covered', 40: 'smart', 60: 'dense_smart', 500
 	}
 
 	crafting.remove("appliedenergistics2:network/cables/${entry.value}_fluix_clean")
-	crafting.addShapeless(output, [cables, fluidIng(fluid('water'))])
+	crafting.shapelessBuilder()
+		.output(output)
+		.input(cables, fluidIng(fluid('water')))
+		.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('water')))
+		.replace().register()
 }
 
 // Paper
 crafting.remove('thermalfoundation:paper')
-crafting.addShapeless(item('minecraft:paper') * 2,
-	[ore('dustWood'), ore('dustWood'), ore('dustWood'), ore('dustWood'), fluidIng(fluid('water'))])
+crafting.shapelessBuilder()
+	.output(item('minecraft:paper') * 2)
+	.input(ore('dustWood'), ore('dustWood'), ore('dustWood'), ore('dustWood'), fluidIng(fluid('water')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.register()
 
 // Podzol
 crafting.remove('thermalfoundation:block_podzol')
-crafting.addShapeless(item('minecraft:dirt', 2), [
-	ore('treeLeaves'),
-	ore('treeLeaves'),
-	item('minecraft:dirt', 1),
-	item('thermalfoundation:fertilizer', 1),
-	fluidIng(fluid('water')),
-])
+crafting.shapelessBuilder()
+	.output(item('minecraft:dirt', 2))
+	.input(ore('treeLeaves'), ore('treeLeaves'), item('minecraft:dirt', 1),
+		item('thermalfoundation:fertilizer', 1), fluidIng(fluid('water')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.register()
 
 // Mycelium
 crafting.remove('thermalfoundation:block_mycelium')
-crafting.addShapeless(item('minecraft:mycelium'), [
-	item('minecraft:brown_mushroom'),
-	item('minecraft:red_mushroom'),
-	item('minecraft:dirt', 1),
-	item('thermalfoundation:fertilizer', 1),
-	fluidIng(fluid('water')),
-])
+crafting.shapelessBuilder()
+	.output(item('minecraft:mycelium'))
+	.input(item('minecraft:brown_mushroom'), item('minecraft:red_mushroom'), item('minecraft:dirt', 1),
+		item('thermalfoundation:fertilizer', 1), fluidIng(fluid('water')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.register()
 
 // Little Tiles Water
-crafting.replaceShapeless(item('littletiles:lttransparentcoloredblock', 5) * 2,
-	[fluidIng(fluid('water')), fluidIng(fluid('water'))])
+crafting.shapelessBuilder()
+	.output(item('littletiles:lttransparentcoloredblock', 5) * 2)
+	.input(fluidIng(fluid('water')), fluidIng(fluid('water')))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.replace().register()
 
 // Waterstone
 crafting.shapedBuilder()
@@ -69,6 +83,7 @@ crafting.shapedBuilder()
 	.matrix('AAA', 'ABA', 'AAA')
 	.key('A', item('minecraft:stone'))
 	.key('B', fluidIng(fluid('water')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
 	.replace().register()
 
 // Water Mob Filter
@@ -79,6 +94,7 @@ crafting.shapedBuilder()
 	.key('A', ore('fenceGateWood'))
 	.key('B', ore('stone'))
 	.key('C', fluidIng(fluid('water')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
 	.register()
 
 // Rice Slimeball
@@ -88,6 +104,7 @@ crafting.shapedBuilder()
 	.matrix(' A ', 'ABA', ' A ')
 	.key('A', item('actuallyadditions:item_misc', 9))
 	.key('B', fluidIng(fluid('water')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
 	.register()
 
 // Ring of Liquid Banning
@@ -97,12 +114,19 @@ crafting.shapedBuilder()
 	.key('A', fluidIng(fluid('water')))
 	.key('B', item('actuallyadditions:item_crystal_empowered', 2))
 	.key('C', item('actuallyadditions:item_misc', 6))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(2, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(6, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(8, IngredientFluidBucket.getInputTooltip(fluid('water')))
 	.replace().register()
 
 // Red Machine -> Blank Machine
 crafting.remove('enderio:deco_block_1_1_f')
-crafting.addShapeless(item('enderio:block_decoration1', 1),
-	[item('enderio:block_decoration1', 13), fluidIng(fluid('water'))])
+crafting.shapelessBuilder()
+	.output(item('enderio:block_decoration1', 1))
+	.input(item('enderio:block_decoration1', 13), fluidIng(fluid('water')))
+	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.register()
 
 // Hard Mode Recipes
 if (LabsModeHelper.expert) {
@@ -114,6 +138,7 @@ if (LabsModeHelper.expert) {
 		.key('M', ore('toolMallet'))
 		.key('D', ore('dustPaper'))
 		.key('W', fluidIng(fluid('water')))
+		.setInputTooltip(7, IngredientFluidBucket.getInputTooltip(fluid('water')))
 		.register()
 
 	// Bricks
@@ -123,15 +148,20 @@ if (LabsModeHelper.expert) {
 		.matrix('BBB', 'BWB', 'BBB')
 		.key('B', item('minecraft:brick'))
 		.key('W', fluidIng(fluid('water')))
+		.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
 		.register()
 
-	// Don't replace concrete, as it consumes a bucket and produces a bucket
+	// Concrete Bucket recipe is changed, see below
 }
 
 /* Lava Bucket */
 
 // Little Tiles Lava
-crafting.replaceShapeless(item('littletiles:ltcoloredblock', 12), [fluidIng(fluid('lava'))])
+crafting.shapelessBuilder()
+	.output(item('littletiles:ltcoloredblock', 12))
+	.input(fluidIng(fluid('lava')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('lava')))
+	.replace().register()
 
 // Lavastone
 crafting.shapedBuilder()
@@ -139,6 +169,7 @@ crafting.shapedBuilder()
 	.matrix('AAA', 'ABA', 'AAA')
 	.key('A', item('minecraft:stone'))
 	.key('B', fluidIng(fluid('lava')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('lava')))
 	.replace().register()
 
 // Nullifier
@@ -153,6 +184,7 @@ crafting.shapedBuilder()
 	.key('C', item('thermalexpansion:frame', 64))
 	.key('D', ore('gearIron'))
 	.key('E', item('thermalfoundation:material', 512))
+	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('lava')))
 	.register()
 
 // Void Satchel
@@ -162,17 +194,24 @@ crafting.shapedBuilder()
 	.key('A', item('minecraft:leather'))
 	.key('B', ore('stone'))
 	.key('C', fluidIng(fluid('lava')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('lava')))
 	.replace().register()
 
 /* Milk Bucket */
 
 // White Water
-crafting.replaceShapeless(item('littletiles:lttransparentcoloredblock', 6),
-	[fluidIng(fluid('milk')), item('littletiles:lttransparentcoloredblock', 5)])
+crafting.shapelessBuilder()
+	.output(item('littletiles:lttransparentcoloredblock', 6))
+	.input(fluidIng(fluid('milk')), item('littletiles:lttransparentcoloredblock', 5))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.replace().register()
 
 // White Lava
-crafting.replaceShapeless(item('littletiles:ltcoloredblock', 14),
-	[fluidIng(fluid('milk')), item('littletiles:ltcoloredblock', 12)])
+crafting.shapelessBuilder()
+	.output(item('littletiles:ltcoloredblock', 14))
+	.input(fluidIng(fluid('milk')), item('littletiles:ltcoloredblock', 12))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.replace().register()
 
 // Pet Mob Filter
 crafting.remove('darkutils:filter_pet')
@@ -182,14 +221,22 @@ crafting.shapedBuilder()
 	.key('A', ore('fenceGateWood'))
 	.key('B', ore('stone'))
 	.key('C', fluidIng(fluid('milk')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('milk')))
 	.register()
 
 // Chocolate Coin
-crafting.replaceShapeless(metaitem('coin.chocolate'),
-	[ore('dustCocoa'), ore('foilGold'), fluidIng(fluid('milk')), ore('dustSugar')])
+crafting.shapelessBuilder()
+	.output(metaitem('coin.chocolate'))
+	.input(ore('dustCocoa'), ore('foilGold'), fluidIng(fluid('milk')), ore('dustSugar'))
+	.setInputTooltip(3, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.replace().register()
 
 // Cheese
-crafting.replaceShapeless(item('actuallyadditions:item_food'), [fluidIng(fluid('milk')), ore('egg')])
+crafting.shapelessBuilder()
+	.output(item('actuallyadditions:item_food'))
+	.input(fluidIng(fluid('milk')), ore('egg'))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.replace().register()
 
 // Chocolate
 crafting.shapedBuilder()
@@ -197,6 +244,7 @@ crafting.shapedBuilder()
 	.matrix('C C', 'CMC', 'C C')
 	.key('C', item('minecraft:dye', 3))
 	.key('M', fluidIng(fluid('milk')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('milk')))
 	.replace().register()
 
 // Chocolate Cake
@@ -208,6 +256,9 @@ crafting.shapedBuilder()
 	.key('E', ore('egg'))
 	.key('D', ore('dough'))
 	.key('S', ore('dustSugar'))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.setInputTooltip(2, IngredientFluidBucket.getInputTooltip(fluid('milk')))
 	.replace().register()
 
 /* Misc */
@@ -218,6 +269,7 @@ crafting.shapedBuilder()
 	.matrix('AAA', 'ABA', 'AAA')
 	.key('A', ore('plankWood'))
 	.key('B', fluidIng(fluid('creosote')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('creosote')))
 	.replace().register()
 
 // Torch
@@ -227,6 +279,7 @@ crafting.shapedBuilder()
 	.key('A', ore('wool'))
 	.key('B', fluidIng(fluid('creosote')))
 	.key('C', ore('stick'))
+	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('creosote')))
 	.replace().register()
 
 // Concrete Cell + Firebricks
@@ -240,6 +293,7 @@ if (LabsModeHelper.expert) {
 		.key('D', fluidIng(fluid('water')))
 		.key('E', ore('dustQuartzSand'))
 		.key('F', ore('dustClay'))
+		.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
 		.replace().register()
 
 	crafting.shapedBuilder()
@@ -248,6 +302,7 @@ if (LabsModeHelper.expert) {
 		.key('B', metaitem('brick.fireclay'))
 		.key('G', ore('dustGypsum'))
 		.key('C', fluidIng(fluid('concrete')))
+		.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('concrete')))
 		.replace().register()
 }
 
@@ -255,7 +310,11 @@ if (LabsModeHelper.expert) {
 
 if (LabsModeHelper.normal) {
 	// Dust -> Clay
-	crafting.addShapeless(item('minecraft:clay'), [item('nomilabs:block_dust'), fluidIng(fluid('water'))])
+	crafting.shapelessBuilder()
+		.output(item('minecraft:clay'))
+		.input(item('nomilabs:block_dust'), fluidIng(fluid('water')))
+		.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('water')))
+		.register()
 }
 
 // NC Water Source
@@ -264,6 +323,8 @@ crafting.shapedBuilder()
 	.matrix('AAA', 'B B', 'AAA')
 	.key('A', LabsModeHelper.expert ? ore('plateDoubleSteel') : ore('plateWroughtIron'))
 	.key('B', fluidIng(fluid('water')))
+    .setInputTooltip(3, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(5, IngredientFluidBucket.getInputTooltip(fluid('water')))
 	.replace().register()
 
 // NC Cobblestone Generator
@@ -273,6 +334,9 @@ crafting.shapedBuilder()
 	.key('A', LabsModeHelper.expert ? ore('plateBlackSteel') : ore('plateWroughtIron'))
 	.key('B', fluidIng(fluid('water')))
 	.key('C', fluidIng(fluid('lava')))
+	.setInputTooltip(3, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(5, IngredientFluidBucket.getInputTooltip(fluid('lava')))
+	.setOutputTooltip(translatable('nomiceu.tooltip.mixed.mirrorable'))
 	.replace().mirrored().register()
 
 // Lava Factory
@@ -283,7 +347,9 @@ crafting.shapedBuilder()
 	.key('B', item('actuallyadditions:block_misc', 7)) // Lava Factory Casing
 	.key('C', fluidIng(fluid('lava')))
 	.key('D', item('morefurnaces:furnaceblock', 3)) // Obsidian Furnace
-	.replace().mirrored().register()
+	.setInputTooltip(6, IngredientFluidBucket.getInputTooltip(fluid('lava')))
+	.setInputTooltip(8, IngredientFluidBucket.getInputTooltip(fluid('lava')))
+	.replace().register()
 
 // Pyroclastic Injection
 crafting.shapedBuilder()
@@ -292,10 +358,16 @@ crafting.shapedBuilder()
 	.key('A', ore('ingotMithril'))
 	.key('B', ore('plateMithril'))
 	.key('C', fluidIng(fluid('water')))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
 	.replace().register()
 
 // Obsidian Quick Craft
-crafting.addShapeless(item('minecraft:obsidian'), [fluidIng(fluid('water')), fluidIng(fluid('lava'))])
+crafting.shapelessBuilder()
+	.output(item('minecraft:obsidian'))
+	.input(fluidIng(fluid('water')), fluidIng(fluid('lava')))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('lava')))
+	.register()
 
 // Cake Base
 crafting.shapedBuilder()
@@ -304,6 +376,7 @@ crafting.shapedBuilder()
 	.key('S', ore('dustSugar'))
 	.key('M', fluidIng(fluid('milk')))
 	.key('D', ore('dough'))
+	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('milk')))
 	.replace().register()
 
 // Cake
@@ -314,19 +387,22 @@ crafting.shapedBuilder()
 	.key('S', ore('dustSugar'))
 	.key('E', ore('egg'))
 	.key('D', ore('dough'))
+	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('milk')))
+	.setInputTooltip(2, IngredientFluidBucket.getInputTooltip(fluid('milk')))
 	.replace().register()
 
 /* Classes and Helpers */
 
 // IIngredient Class that Matches Based on FluidStack in Containers
 class IngredientFluidBucket extends SimpleIIngredient {
-	static AMOUNT = 1000
+	public static final AMOUNT = 1000
 	// Example Fills (excludes bucket)
-	private static List<ItemStack> fillables = [
+	private static final List<ItemStack> fillables = [
 		metaitem('fluid_cell'),
 		metaitem('fluid_cell.universal'),
-		metaitem('large_fluid_cell.steel'),
 		metaitem('nomilabs:bronze_cell'),
+		metaitem('large_fluid_cell.steel'),
 		metaitem('large_fluid_cell.aluminium'),
 		metaitem('large_fluid_cell.stainless_steel'),
 		metaitem('large_fluid_cell.titanium'),
@@ -348,8 +424,8 @@ class IngredientFluidBucket extends SimpleIIngredient {
 		item('thermalexpansion:tank').withNbt(['RSControl': (byte) 0, 'Creative': (byte) 0, 'Level': (byte) 4]),
 	]
 
-	FluidStack stack
-	ItemStack[] matchingStacks
+	private final FluidStack stack
+	private final ItemStack[] matchingStacks
 
 	IngredientFluidBucket(FluidStack stack) {
 		this.stack = stack * AMOUNT
@@ -357,7 +433,18 @@ class IngredientFluidBucket extends SimpleIIngredient {
 		List<ItemStack> matchingStacks = [FluidUtil.getFilledBucket(this.stack)]
 
 		for (ItemStack fill : fillables) {
-			matchingStacks.add(fillStack(fill, this.stack))
+			var toFill = fill.copy()
+
+			var handler = getHandler(toFill)
+			if (handler == null) continue
+
+			int capacity = handler.tankProperties[0].capacity
+			if (capacity <= 0) capacity = AMOUNT
+
+			int filled = handler.fill(stack * capacity, true)
+
+			if (filled == capacity)
+				matchingStacks.add(toFill)
 		}
 
 		this.matchingStacks = matchingStacks.toArray()
@@ -408,6 +495,31 @@ class IngredientFluidBucket extends SimpleIIngredient {
 			handler = itemStack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)
 		}
 		return handler
+	}
+
+	static Translatable[] getInputTooltip(FluidStack fluidStack) {
+		return new Translatable[] {
+			new TranslatableFluidTooltip(fluidStack.fluid),
+			translatable('nomiceu.tooltip.mixed.accepts_fluid_container')
+		}
+	}
+}
+
+/**
+ * Simple wrapper class so we can use translated name of fluid in tooltip
+ */
+class TranslatableFluidTooltip extends Translatable {
+	Fluid fluid
+
+	TranslatableFluidTooltip(Fluid fluid) {
+		super('nomiceu.tooltip.mixed.accepts_fluid')
+		this.fluid = fluid
+	}
+
+	@Override
+	protected String translateThis() {
+		String fluidName = translate(fluid.unlocalizedName)
+		return translate(key, fluidName)
 	}
 }
 

@@ -5,6 +5,9 @@ nomifactory.nonetherportals=Nether portals are disabled in §5Nomi-CEu§r. Follo
 
 # Mixed
 nomiceu.tooltip.mixed.fillable=Can be filled with the §bCanning Machine§r.
+nomiceu.tooltip.mixed.mirrorable=§7Recipe can be mirrored.§r
+nomiceu.tooltip.mixed.accepts_fluid=§7Fluid: §b%s§r
+nomiceu.tooltip.mixed.accepts_fluid_container=§7Accepts §aBuckets§7, §aCells§7, §aDrums§7, and other §aFluid Containers§7!
 
 # MC
 nomiceu.tooltip.mc.xp_bottle=§eGives 25 XP, or one XP Level!§r
