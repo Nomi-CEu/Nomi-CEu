@@ -136,9 +136,6 @@ assembler.recipeBuilder()
 //	[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>], 
 //	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
 
-//Wood Pulp
-recipes.addShapeless(<metaitem:dustWood> * 4,[<ore:logWood>,<ore:toolMortar>]);	
-
 //Pyrolyse Oven (moved to groovy)
 
 //// LV Casing

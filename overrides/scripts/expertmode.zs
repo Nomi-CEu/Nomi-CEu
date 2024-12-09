@@ -494,7 +494,7 @@ recipes.addShaped(<metaitem:gcym:parallel_hatch.uv>, [
 // Stabilized Miners (Moved to Groovy)
 
 // Remove shortcut recipes
-recipes.remove(<minecraft:stick> * 16);
+recipes.remove(<ore:stickWood> * 16);
 recipes.removeByRecipeName("appliedenergistics2:misc/vanilla_comparator");
 recipes.remove(<minecraft:chest> * 4);
 

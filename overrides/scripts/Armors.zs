@@ -46,7 +46,7 @@ recipes.addShaped(<minecraft:diamond_boots>, [
 // recipes.addShaped(<minecraft:diamond_sword>, [
 //	[null, <metaitem:plateDiamond>, null], 
 //	[null, <metaitem:plateDiamond>, null], 
-//	[null, <minecraft:stick>, null]]);	
+//	[null, <ore:stickWood>, null]]);	
 	
 furnace.addRecipe(<thermalfoundation:material:833>, <metaitem:rubber_drop>, 0.0);
 
@@ -72,7 +72,7 @@ recipes.addShaped(<armorplus:redstone_boots>, [
 recipes.addShaped(<armorplus:redstone_sword>, [
 	[null, <nomilabs:redstonearmorplate>, null], 
 	[null, <nomilabs:redstonearmorplate>, null], 
-	[null, <minecraft:stick>, null]]);	
+	[null, <ore:stickWood>, null]]);	
 	
 //Lapis Armor
 recipes.addShaped(<nomilabs:lapisarmorplate>, [
@@ -96,7 +96,7 @@ recipes.addShaped(<armorplus:lapis_boots>, [
 recipes.addShaped(<armorplus:lapis_sword>, [
 	[null, <nomilabs:lapisarmorplate>, null], 
 	[null, <nomilabs:lapisarmorplate>, null], 
-	[null, <minecraft:stick>, null]]);	
+	[null, <ore:stickWood>, null]]);	
 	
 //Carbon Armor
 recipes.addShaped(<nomilabs:carbonarmorplate>, [
@@ -205,7 +205,7 @@ recipes.addShaped(<armorplus:knight_slime_boots>, [
 //Infused Lava
 var obs = <armorplus:lava_infused_obsidian>;
 var cry = <armorplus:lava_crystal:1>;
-var stick = <minecraft:stick>;
+var stick = <ore:stickWood>;
 mods.extendedcrafting.TableCrafting.addShaped(<armorplus:infused_lava_helmet>, [
 [obs,obs,cry,obs,obs],
 [cry,null,null,null,cry],
@@ -258,7 +258,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:obsidian_boots>, [
 recipes.addShaped(<armorplus:obsidian_sword>, [
 	[null, <armorplus:compressed_obsidian>, null], 
 	[null, <armorplus:compressed_obsidian>, null], 
-	[null, <minecraft:stick>, null]]);	
+	[null, <ore:stickWood>, null]]);	
 
 
 //Emerald

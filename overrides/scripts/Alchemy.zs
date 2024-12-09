@@ -7,15 +7,15 @@ import scripts.common.makeShaped as makeShaped;
 
 //Wooden Gear
 recipes.remove(<enderio:item_material:9>);
-recipes.addShaped(<enderio:item_material:9>, [[null,<minecraft:stick>,null],
-	[<minecraft:stick>,null,<minecraft:stick>],
-	[null,<minecraft:stick>,null]]);
+recipes.addShaped(<enderio:item_material:9>, [[null,<ore:stickWood>,null],
+	[<ore:stickWood>,null,<ore:stickWood>],
+	[null,<ore:stickWood>,null]]);
 
 //Wooden Shears
 recipes.remove(<thermalfoundation:tool.shears_wood>);
-recipes.addShaped(<thermalfoundation:tool.shears_wood>, [[null,<minecraft:stick>,null],
-	[<minecraft:stick>,null,<minecraft:stick>],
-	[<enderio:item_material:9>,<minecraft:stick>,null]]);
+recipes.addShaped(<thermalfoundation:tool.shears_wood>, [[null,<ore:stickWood>,null],
+	[<ore:stickWood>,null,<ore:stickWood>],
+	[<enderio:item_material:9>,<ore:stickWood>,null]]);
 
 //Fertilizer 
 recipes.addShaped("actuallyadditions_fertilizer", <actuallyadditions:item_fertilizer> * 8, [[<minecraft:sand>,<metaitem:gemApatite>,<minecraft:sand>]]);
