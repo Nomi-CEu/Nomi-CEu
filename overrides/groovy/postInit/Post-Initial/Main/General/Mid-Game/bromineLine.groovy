@@ -35,7 +35,7 @@ mods.gregtech.fluid_solidifier.recipeBuilder()
 		.fluidInputs(fluid('bromine') * 1000)
 		.notConsumable(metaitem('shape.mold.ball'))
 		.outputs(item('nomilabs:solidifiedbromine'))
-		.duration(100).EUt(VA[LV])
+		.duration(500).EUt(16)
 		.buildAndRegister()
 
 // Bromine Line HM Parts
