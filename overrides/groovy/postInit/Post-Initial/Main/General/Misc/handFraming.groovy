@@ -4,7 +4,6 @@ import com.nomiceu.nomilabs.groovy.ShapedDummyRecipe
 import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.ItemStack
 
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeOutputTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
 // Hand Framing Tool
@@ -35,45 +34,26 @@ items.add(tool)
 for (ItemStack stack : items) {
 	for (boolean trim : [true, false]) {
 		for (boolean front : [true, false]) {
-			def recipeName = getRecipeName(stack, trim, front)
 			def recipeStack = addNBT(stack, trim, front)
 
 			crafting.shapedBuilder()
-				.name(recipeName)
 				.output(recipeStack)
-				.matrix(
-					'ST ',
-					'FI ',
-					'   ')
+				.matrix('ST ', 'FI ', '   ')
 				.key('S', item("xtones:zane"))
 				.key('T', trim ? item("extendedcrafting:storage", 4) : IIngredient.EMPTY)
 				.key('F', front ? item("xtones:zane", 15) : IIngredient.EMPTY)
 				.key('I', stack)
 				.recipeClassFunction((output, width, height, ingredients) -> new ShapedDummyRecipe(output, ingredients, width, height, false))
-				.register()
-
-			addRecipeOutputTooltip(recipeStack, resource(recipeName),
-				ItemMeta.compare(tool, recipeStack) ?
-					translatable("nomiceu.tooltip.labs.hand_framing.tool") :
-					translatable("nomiceu.tooltip.labs.hand_framing.drawer"),
-				translatable("nomiceu.tooltip.labs.hand_framing.top_left"),
-				translatable("nomiceu.tooltip.labs.hand_framing.top_right"),
-				translatable("nomiceu.tooltip.labs.hand_framing.bottom_left"))
+				.setOutputTooltip(
+					ItemMeta.compare(tool, recipeStack) ?
+						translatable("nomiceu.tooltip.labs.hand_framing.tool") :
+						translatable("nomiceu.tooltip.labs.hand_framing.drawer"),
+					translatable("nomiceu.tooltip.labs.hand_framing.top_left"),
+					translatable("nomiceu.tooltip.labs.hand_framing.top_right"),
+					translatable("nomiceu.tooltip.labs.hand_framing.bottom_left")
+				).register()
 		}
 	}
-}
-
-static String getRecipeName(ItemStack stack, boolean trim, boolean front) {
-	String baseName = "nomiceu:hand_framing_"
-
-	def rl = stack.getItem().getRegistryName()
-	if (rl != null)
-		baseName = baseName + rl.getNamespace() + "_" + rl.getPath()
-
-	baseName = baseName + "." + stack.getMetadata() + "_side"
-	if (trim) baseName = baseName + "_trim"
-	if (front) baseName = baseName + "_front"
-	return baseName
 }
 
 static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {

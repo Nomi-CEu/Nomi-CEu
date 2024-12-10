@@ -9,6 +9,39 @@ import net.minecraftforge.fluids.FluidStack
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
 
+if (LabsModeHelper.expert) {
+	// Log -> Stick Shortcut (Expert Mode)
+	crafting.shapedBuilder()
+		.output(item('minecraft:stick') * 4)
+		.matrix('B', 'B')
+		.key('B', ore('logWood'))
+		.register()
+
+	// Remove endercore paper recipe
+	crafting.remove('endercore:shapeless_paper')
+
+	// Remove aa paper recipe (with rice)
+	crafting.remove('actuallyadditions:recipes23')
+
+	// Allow rice -> paper through chad
+	crafting.shapedBuilder()
+		.output(metaitem('dustPaper') * 2)
+		.matrix('RRR', ' M ')
+		.key('R', item('actuallyadditions:item_food', 16))
+		.key('M', ore('toolMortar'))
+		.register()
+} else {
+	// Remove mc paper recipe, is useless with endercore's shapeless one
+	crafting.remove('minecraft:paper')
+}
+
+// Wood Pulp
+// Output 4 for Normal, 2 for Expert
+crafting.addShapeless(metaitem('dustWood') * (LabsModeHelper.expert ? 2 : 4), [ore('logWood'), ore('toolMortar')])
+
+// Remove Thermal Foundation's clay recipe, slag is unobtainable
+crafting.remove('thermalfoundation:clay_ball')
+
 // Furnaces
 // Iron Furnace
 mods.gregtech.assembler.recipeBuilder()
@@ -110,6 +143,14 @@ if (LabsModeHelper.expert) {
 		.buildAndRegister()
 }
 
+
+// Ender Lily Extractor Recipe
+mods.gregtech.extractor.recipeBuilder()
+	.inputs(item('extrautils2:enderlilly'))
+	.fluidOutputs(fluid('ender') * 25)
+	.duration(80).EUt(VA[ULV])
+	.buildAndRegister()
+
 // Coated Circuit Board
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(ore('plateWood'))
@@ -203,6 +244,41 @@ mods.gregtech.assembler.recipeBuilder()
 
 // Coke -> 16 Tiny Coke
 crafting.addShapeless(item('nomilabs:tiny_coke') * 16, [ore('fuelCoke')])
+
+/* Early Cell Recipes */
+// Basic Cell: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('fluid_cell'))
+	.matrix('PHP', ' R ')
+	.key('P', ore('plateTin'))
+	.key('H', ore('toolHammer'))
+	.key('R', ore('ringIron'))
+	.register()
+
+// Bronze Cell: Assembler
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('plateDoubleBronze') * 2, ore('ringTin') * 2)
+	.outputs(metaitem('nomilabs:bronze_cell'))
+	.duration(200).EUt(VA[LV])
+	.buildAndRegister()
+
+// Bronze Cell: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('nomilabs:bronze_cell'))
+	.matrix('PHP', 'RRR')
+	.key('P', ore('plateDoubleBronze'))
+	.key('H', ore('toolHammer'))
+	.key('R', ore('ringTin'))
+	.register()
+
+// Steel Cell: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('large_fluid_cell.steel'))
+	.matrix('PHP', 'RRR')
+	.key('P', ore('plateDoubleSteel'))
+	.key('H', ore('toolHammer'))
+	.key('R', ore('ringBronze'))
+	.register()
 
 // Lubricant Alternatives (Per Oil)
 ChangeRecipeBuilderCollection<SimpleRecipeBuilder> lubeRecipes = mods.gregtech.brewery.changeByOutput(

@@ -1,4 +1,3 @@
-import com.cleanroommc.groovyscript.api.IIngredient
 import de.ellpeck.actuallyadditions.api.recipe.EmpowererRecipe
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.common.items.MetaItems
@@ -6,6 +5,8 @@ import net.minecraft.item.ItemStack
 import net.minecraft.item.crafting.Ingredient
 import net.minecraftforge.fluids.FluidStack
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler
+
+import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 
 import java.awt.Color
 
@@ -79,20 +80,10 @@ setupAndRemoveEmpowerer(5, item('moreplates:empowered_enori_gear'), Color.WHITE)
 /* For EVERY Empowerer Recipe, add a Combination Crafting Recipe */
 
 // IIngredient Class that Matches Based on MC Ing
-// Very basic, always amount of 1
-class IngredientMCEmpower implements IIngredient {
+class IngredientMCEmpower extends SimpleIIngredient {
 	Ingredient ing
 
 	IngredientMCEmpower(Ingredient ing) { this.ing = ing }
-
-	@Override
-	int getAmount() { return 1 }
-
-	@Override
-	void setAmount(int i) {}
-
-	@Override
-	IIngredient exactCopy() { return this }
 
 	@Override
 	Ingredient toMcIngredient() { return ing }
@@ -102,12 +93,6 @@ class IngredientMCEmpower implements IIngredient {
 
 	@Override
 	boolean test(ItemStack itemStack) { return ing.apply(itemStack) }
-
-	@Override
-	String getMark() { return null }
-
-	@Override
-	void setMark(String s) {}
 }
 
 mods.actuallyadditions.empowerer.streamRecipes()

@@ -336,84 +336,9 @@ recipes.addShaped(<thermalexpansion:frame:128>, [
 	[<metaitem:plateLead>, <metaitem:stickLead>, <metaitem:plateLead>]]);
 
 // Leadstone Energy Cell
-
-// hide the multi-tag one from JEI so it's not confusing
-mods.jei.JEI.removeAndHide(<thermalexpansion:cell>.withTag({Recv: 10000, RSControl: 0 as byte, Facing: 3 as byte, Energy: 0, SideCache: [2, 1, 1, 1, 1, 1] as byte[] as byte[], Level: 0 as byte, Send: 10000}));
-
 recipes.remove(<thermalexpansion:cell>);
 
 alloy.recipeBuilder()
     .inputs([<thermalexpansion:frame:128>, <minecraft:redstone_block>])
     .outputs([basiccell])
     .duration(500).EUt(30).buildAndRegister();
-
-// Note: applying kits in-world will also update the Send & Recv tags but that's not really needed for auto-crafting.
-
-// Conversion Kit Ugrades via Crafting Table:
-
-// basic => reinforced
-recipes.addShapeless("basic_to_reinforced_energy_cell_conversion",
-    reinforcedcell,
-    [basiccellIng.marked("cell"),<thermalfoundation:upgrade:33>],
-    function(out, ins, cInfo) {
-        return ins.cell.updateTag({Level: 2 as byte, Creative: 0 as byte});
-    } as IRecipeFunction
-);
-
-// basic => signalum
-recipes.addShapeless("basic_to_signalum_energy_cell_conversion",
-    signalumcell,
-    [basiccellIng.marked("cell"),<thermalfoundation:upgrade:34>],
-    function(out, ins, cInfo) {
-        return ins.cell.updateTag({Level: 3 as byte, Creative: 0 as byte});
-    } as IRecipeFunction
-);
-
-// basic => resonant
-recipes.addShapeless("basic_to_resonant_energy_cell_conversion",
-    resonantcell,
-    [basiccellIng.marked("cell"),<thermalfoundation:upgrade:35>],
-    function(out, ins, cInfo) {
-        return ins.cell.updateTag({Level: 4 as byte, Creative: 0 as byte});
-    } as IRecipeFunction
-);
-
-// NOTE: technically you can use conversion kits on non-basic cell tiers but it's kind of wasteful so I'm not gonna bother adding that
-
-val upgradeTierByOne as IRecipeFunction =
-    function(out, ins, cinfo) {
-        var level = ins.cell.tag.Level.asByte();
-        return ins.cell.updateTag({Level: level+1 as byte, Creative: 0 as byte});
-    };
-
-// Upgrade Kit
-recipes.addShapeless("basic_to_hardened_energy_cell_upgrade",
-    hardenedcell,
-    [basiccellIng.marked("cell"), <thermalfoundation:upgrade>],
-    upgradeTierByOne
-);
-
-recipes.addShapeless("hardened_to_reinforced_energy_cell_upgrade",
-    reinforcedcell,
-    [hardenedcellIng.marked("cell"), <thermalfoundation:upgrade:1>],
-    upgradeTierByOne
-);
-
-recipes.addShapeless("reinforced_to_signalum_energy_cell_upgrade",
-    signalumcell,
-    [reinforcedcellIng.marked("cell"), <thermalfoundation:upgrade:2>],
-    upgradeTierByOne
-);
-
-recipes.addShapeless("signalum_to_resonant_energy_cell_upgrade",
-    resonantcell,
-    [signalumcellIng.marked("cell"), <thermalfoundation:upgrade:3>],
-    upgradeTierByOne
-);
-
-// Register all energy cell tiers in JEI
-mods.jei.JEI.addItem(basiccell);
-mods.jei.JEI.addItem(hardenedcell);
-mods.jei.JEI.addItem(reinforcedcell);
-mods.jei.JEI.addItem(signalumcell);
-mods.jei.JEI.addItem(resonantcell);
