@@ -31,18 +31,10 @@ mods.gregtech.large_chemical_reactor.removeByOutput([fluid('diaminobenzidine')],
 
 // Chemical Reactor Recipe
 mods.gregtech.chemical_reactor.recipeBuilder()
-    .notConsumable(metaitem('dustTinyZinc'))  
+    .notConsumable(metaitem('dustZinc'))  
     .fluidinputs([fluid('nitrochlorobenzene') * 2000, fluid('hydrogen') * 2000], null)
     .fluidoutputs([fluid('dichlorobenzidine') * 1000], null) 
     .duration(200).EUt(VA[EV])
-    .buildAndRegister()
-
-// Large Chemical Reactor Recipe 
-mods.gregtech.large_chemical_reactor.recipeBuilder()
-    .notConsumable(metaitem('dustZinc')) 
-    .fluidinputs([fluid('nitrochlorobenzene') * 18000, fluid('hydrogen') * 18000], null) 
-    .fluidoutputs([fluid('dichlorobenzidine') * 9000], null) 
-    .duration(1800).EUt(VA[EV])
     .buildAndRegister()
 
 // Large Chemical Reactor Recipe
