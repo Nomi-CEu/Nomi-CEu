@@ -52,6 +52,7 @@ mods.gregtech.large_chemical_reactor.recipeBuilder()
     .fluidoutputs([fluid('diaminobenzidine') * 1000, fluid('hydrochloric_acid') * 2000], null) 
     .duration(100).EUt(VA[IV])
     .buildAndRegister()
+
 // Large Chemical Reactor Recipe
 mods.gregtech.large_chemical_reactor.recipeBuilder()
     .inputs(metaitem('dustCopper') * 9)  
