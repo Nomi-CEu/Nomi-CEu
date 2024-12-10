@@ -38,8 +38,8 @@ mods.gregtech.chemical_reactor.recipeBuilder()
     .buildAndRegister()
 
 // Large Chemical Reactor Recipe
-mods.gregtech.large_chemical_reactor.recipeBuilder()
-    .inputs(metaitem('dustCopper'))  
+mods.gregtech.chemical_reactor.recipeBuilder()
+    .inputs(ore('dustTinyCopper'))  
     .fluidinputs([fluid('dichlorobenzidine') * 1000, fluid('ammonia') * 2000], null)
     .fluidoutputs([fluid('diaminobenzidine') * 1000, fluid('hydrochloric_acid') * 2000], null) 
     .duration(100).EUt(VA[IV])
@@ -47,7 +47,7 @@ mods.gregtech.large_chemical_reactor.recipeBuilder()
 
 // Large Chemical Reactor Recipe
 mods.gregtech.large_chemical_reactor.recipeBuilder()
-    .inputs(metaitem('dustCopper') * 9)  
+    .inputs(metaitem('dustCopper'))  
     .fluidinputs([fluid('dichlorobenzidine') * 9000, fluid('ammonia') * 18000], null)
     .fluidoutputs([fluid('diaminobenzidine') * 9000, fluid('hydrochloric_acid') * 18000], null) 
     .duration(900).EUt(VA[IV])
