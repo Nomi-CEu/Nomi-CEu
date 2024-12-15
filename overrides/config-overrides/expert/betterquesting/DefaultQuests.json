@@ -11218,7 +11218,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6RTM-Alloy§r is an alloy of §6Ruthenium, Tungsten§r and §6Molybdenum§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
+          "desc:8": "§6RTM Alloy§r is an alloy of §6Ruthenium, Tungsten§r and §6Molybdenum§r.\n\nThis alloy is cooked in an §3Electric Blast Furnace§r and cooled in a §3Vacuum Freezer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11230,7 +11230,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "RTM-Alloy",
+          "name:8": "RTM Alloy",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -11426,7 +11426,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Tungsten§r is a material that requires an §3EV Electrolyzer, §ca LV Extractor§r and an §3Electric Blast Furnace§r with at least §6Nichrome Coils§r. §cAn EV Chemical Reactor can also be used, if you want Tungsten Dust§r.\n\nIt is only found from §6Tungstate §2Dust and Scheelite Dust, obtained from their respective ores.§r Tungstate is also obtainable in small quantities from centrifuging §6Endstone Dust§r.\n\nScheelite and Tungstate needs to be §2bathed in Hydrochloric Acid to make Tungstic Acid, then §cextracted§r to get to §cTungsten Trioxide.\n\nThis can either be cooked in an EBF with Carbon to get Tungsten, or chemically reacted with Hydrogen to achieve Tungsten Dust.\n\nThe first option is recommended, as it saves Hydrogen, and takes less time to cook in the EBF than the latter option.§r",
+          "desc:8": "§6Tungsten§r is a material that requires an §3EV Electrolyzer§r, §ca LV Extractor§r and an §3Electric Blast Furnace§r with at least §6Nichrome Coils§r. §cAn EV Chemical Reactor can also be used, if you want Tungsten Dust§r.\n\nIt is only found from §6Tungstate §2Dust and Scheelite Dust, obtained from their respective ores.§r Tungstate is also obtainable in small quantities from centrifuging §6Endstone Dust§r.\n\nScheelite and Tungstate needs to be §2bathed in Hydrochloric Acid to make Tungstic Acid, then §cextracted§r to get to §cTungsten Trioxide.\n\nThis can either be cooked in an EBF with Carbon to get Tungsten, or chemically reacted with Hydrogen to achieve Tungsten Dust.\n\nThe first option is recommended, as it saves Hydrogen, and takes less time to cook in the EBF than the latter option.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17739,7 +17739,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6RTM-Alloy§r is the fourth coil material available, increasing your EBF\u0027s operating temperature to 4500K so it can process more advanced materials.",
+          "desc:8": "§6RTM Alloy§r is the fourth coil material available, increasing your EBF\u0027s operating temperature to 4500K so it can process more advanced materials.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17751,7 +17751,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "RTM-Alloy Coil Blocks",
+          "name:8": "RTM Alloy Coil Blocks",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -43705,7 +43705,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. This should be enough for your initial needs, such as for §6RTM-Alloy Coils§r, especially when using §6Tier Three Micro Miners§r.\n\nHowever, the yields of these ores from Microverse missions may not be enough in the long term, so you should consider processing §6Platinum Group Sludge (PGS)§r for more. You will also need to process PGS for your initial yields of §6Iridium§r, as §6Osmiridium Ore§r and §6Iridosmine Ore§r are only available with the §6Tier Five Micro Miner§r. The mission also gives only small amounts, so processing PGS is the better option.\n\nYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.\n\nIf you get stuck, check out the excellent flowcharts on the §eDiscord§r.",
+          "desc:8": "The §6Platinum Group Metals - Ruthenium, Rhodium, Palladium, Osmium, Iridium, and Platinum§r - are rare materials used in upcoming recipes. §6Ruthenium§r will be required now for the next tier of coils.\n\nThese materials can be obtained from ores exclusive to Microverse missions - §6Laurite Ore§r for Ruthenium, §6Cuprorhodsite Ore§r for Rhodium, and §6Osmiridium Ore§r and §6Iridosmine Ore§r for Osmium and Iridium. This should be enough for your initial needs, such as for §6RTM Alloy Coils§r, especially when using §6Tier Three Micro Miners§r.\n\nHowever, the yields of these ores from Microverse missions may not be enough in the long term, so you should consider processing §6Platinum Group Sludge (PGS)§r for more. You will also need to process PGS for your initial yields of §6Iridium§r, as §6Osmiridium Ore§r and §6Iridosmine Ore§r are only available with the §6Tier Five Micro Miner§r. The mission also gives only small amounts, so processing PGS is the better option.\n\nYou will need to treat certain ores with §9Nitric Acid§r to yield §6PGS§r - §6Sheldonite§r is the best. Then, using an §3HV+ Centrifuge§r and §9Aqua Regia§r, break it down into the PGS salts, and reduce those salts to the metals.\n\nIf you get stuck, check out the excellent flowcharts on the §eDiscord§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
