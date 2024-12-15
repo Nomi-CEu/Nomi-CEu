@@ -3,10 +3,13 @@ import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.groovy.RecipePredicates
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.SimpleRecipeBuilder
+import gregtech.client.utils.TooltipHelper
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeInputTooltip
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 import static gregtech.api.GTValues.*
 
 if (LabsModeHelper.expert) {
@@ -30,6 +33,11 @@ if (LabsModeHelper.expert) {
 		.key('R', item('actuallyadditions:item_food', 16))
 		.key('M', ore('toolMortar'))
 		.register()
+
+	// Compressed Coke Clay Recipe
+	// Add Input Tooltip for Non-Consumed Wooden Form
+	addRecipeInputTooltip('gregtech:compressed_coke_clay', 4,
+		translatable("nomiceu.tooltip.mixed.not_consumed").addFormat(TooltipHelper.BLINKING_CYAN))
 } else {
 	// Remove mc paper recipe, is useless with endercore's shapeless one
 	crafting.remove('minecraft:paper')
