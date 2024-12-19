@@ -9,6 +9,7 @@ import static gregtech.api.GTValues.*
 mods.gregtech.fluid_heater.recipeBuilder()
 		.fluidInputs(fluid('salt_water') * 1000)
 		.fluidOutputs(fluid('mineralrichbrine') * 200)
+		.circuitMeta(1)
 		.duration(20).EUt(VA[HV])
 		.buildAndRegister()
 
