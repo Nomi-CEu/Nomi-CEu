@@ -33,15 +33,15 @@ if (LabsModeHelper.expert) {
 		.key('R', item('actuallyadditions:item_food', 16))
 		.key('M', ore('toolMortar'))
 		.register()
-
-	// Compressed Coke Clay Recipe
-	// Add Input Tooltip for Non-Consumed Wooden Form
-	addRecipeInputTooltip('gregtech:compressed_coke_clay', 4,
-		translatable("nomiceu.tooltip.mixed.not_consumed").addFormat(TooltipHelper.BLINKING_CYAN))
 } else {
 	// Remove mc paper recipe, is useless with endercore's shapeless one
 	crafting.remove('minecraft:paper')
 }
+
+// Compressed Coke Clay Recipe
+// Add Input Tooltip for Non-Consumed Wooden Form
+addRecipeInputTooltip('gregtech:compressed_coke_clay', 4,
+	translatable("nomiceu.tooltip.mixed.not_consumed").addFormat(TooltipHelper.BLINKING_CYAN))
 
 // Wood Pulp
 // Output 4 for Normal, 2 for Expert
