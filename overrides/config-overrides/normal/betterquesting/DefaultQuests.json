@@ -64472,7 +64472,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest accepts LV, MV or HV Miner.§r\n\nThe §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nThe LV Miner calls for an §6LV Sensor§r, which requires a bit of §6Quartzite§r. Buy some if you haven\u0027t come across it yet.\n\nAt §5EV§r tier, you can build §3Large Miners§r.",
+          "desc:8": "§oThis quest accepts LV, MV or HV Miner.§r\n\nThe §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nThe LV Miner calls for an §6LV Sensor§r, which requires a bit of §6Quartzite§r. Buy some if you haven\u0027t come across it yet. You also need to provide power there. Whether you setup some simple power production or carry it across in batteries is up to you.\n\nAt §5EV§r tier, you can build §3Drilling Plants§r instead.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64484,7 +64484,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Automatic Mining",
+          "name:8": "§2Automatic Mining§r",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
