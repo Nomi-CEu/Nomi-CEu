@@ -66622,7 +66622,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 1082,
@@ -66635,7 +66635,12 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
+              "id:8": "minecraft:golden_carrot",
+              "tag:10": {
+                "display:10": {
+                  "Name:8": "I can... see!"
+                }
+              }
             }
           }
         }
