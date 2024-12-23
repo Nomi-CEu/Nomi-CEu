@@ -42812,7 +42812,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "HIDDEN"
+          "visibility:8": "ALWAYS"
         }
       },
       "questID:3": 812,
