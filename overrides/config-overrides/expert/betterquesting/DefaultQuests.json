@@ -56960,6 +56960,188 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1090:10": {
+      "preRequisites:11": [
+        339
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§2Black Granite Processing is a great way to get tons of Fluorine and Thorium. Therefore, it is recommended to setup this process as soon as possible.\n\n§6Fluorine§r is needed to produce §6Polytetrafluoroethylene§r (PTFE) and to process §6Naquadah§r, and §6Thorium§r is used to breed other elements in a §3Fission Reactor§r.\n\n§3Rock Breakers§r are first used to achieve renewable §6Black Granite§r. This recipe runs at §dEV§r or higher, and can be performed without any water or lava present if done in a §3Processing Array§r.\n\nAfter this, §3Macerators§r should pulverise the §6Black Granite§r into §6Black Granite Dust§r and a chance of §6Thorium§r. It is recommended to overclock this recipe as much as you can, in order to maximize output of §6Thorium§r.\n\nA §3Centrifuge§r then turns §6Black Granite Dust§r into §6Biotite Dust§r and §6Silicon Dioxide Dust§r. The latter can be electrolysed, yielding §6Silicon§r and §6Oxygen§r.\n\n§6Biotite Dust§r is then finally put into a §3Electrolyzer§r. This yields §6Potassium, Magnesium, Aluminium§r and §6Silicon Dust§r, as well as some §6Fluorine§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2019,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Black Granite Processing§r",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1090,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2019,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1091:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        339,
+        825
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Starting at §5EV§r tier, §aQuadruple§r and §aNonuple Input Hatches§r and §aOutput Hatches§r are available. They essentially act as 4 or 9 different Input or Output Hatches for multiblocks in a single block. This should come in handy for §3Large Chemical Reactor§r work.\n\nHigher tier hatches increase the capacity, like normal hatches.\n\nNote that certain multiblocks, such as the §3Distillation Tower§r, do not accept these hatches. Check §eJEI§r if you run into issues.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1191,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Multi Fluid Hatches§r",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1091,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1190,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1205,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1191,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1206,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1092:10": {
+      "preRequisites:11": [
+        93
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With §aHV §3Rock Breakers§r, you can make §6Obsidian§r, without spending lots of §6Lava§r!\n\nReminder: in order to set this up, §6Lava§r and §6Water§r must be placed §ahorizontally adjacent§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 667,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2HV Rock Breaker§r",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1092,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 667,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -57763,7 +57945,7 @@
           "id:3": 98,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": 360,
+          "x:3": 364,
           "y:3": -232
         },
         "40:10": {
@@ -58225,7 +58407,7 @@
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 372,
           "y:3": -192
         },
         "106:10": {
@@ -58283,6 +58465,13 @@
           "sizeY:3": 24,
           "x:3": 688,
           "y:3": -416
+        },
+        "114:10": {
+          "id:3": 1092,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 408,
+          "y:3": -192
         }
       }
     },
@@ -58769,17 +58958,17 @@
         },
         "66:10": {
           "id:3": 339,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -720,
-          "y:3": 344
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -728,
+          "y:3": 336
         },
         "67:10": {
           "id:3": 340,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -756,
-          "y:3": 344
+          "x:3": -792,
+          "y:3": 416
         },
         "68:10": {
           "id:3": 341,
@@ -58876,8 +59065,8 @@
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -756,
-          "y:3": 420
+          "x:3": -792,
+          "y:3": 452
         },
         "82:10": {
           "id:3": 551,
@@ -58897,8 +59086,8 @@
           "id:3": 580,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -696,
-          "y:3": 420
+          "x:3": -732,
+          "y:3": 452
         },
         "85:10": {
           "id:3": 611,
@@ -59051,8 +59240,8 @@
           "id:3": 783,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -576,
-          "y:3": 420
+          "x:3": -612,
+          "y:3": 452
         },
         "107:10": {
           "id:3": 785,
@@ -59198,8 +59387,8 @@
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -636,
-          "y:3": 420
+          "x:3": -672,
+          "y:3": 452
         },
         "128:10": {
           "id:3": 899,
@@ -59240,22 +59429,22 @@
           "id:3": 1032,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -684,
-          "y:3": 380
+          "x:3": -720,
+          "y:3": 416
         },
         "134:10": {
           "id:3": 1045,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -720,
+          "x:3": -792,
           "y:3": 380
         },
         "135:10": {
           "id:3": 1047,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -756,
-          "y:3": 380
+          "x:3": -792,
+          "y:3": 344
         },
         "136:10": {
           "id:3": 1053,
@@ -59270,6 +59459,20 @@
           "sizeY:3": 24,
           "x:3": -432,
           "y:3": 396
+        },
+        "138:10": {
+          "id:3": 1090,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -756,
+          "y:3": 416
+        },
+        "139:10": {
+          "id:3": 1091,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -684,
+          "y:3": 416
         }
       }
     },
