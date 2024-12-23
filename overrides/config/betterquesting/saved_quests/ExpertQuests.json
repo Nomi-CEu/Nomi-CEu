@@ -988,7 +988,7 @@
     },
     "13:10": {
       "preRequisites:11": [
-        4
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1651,7 +1651,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
+          "tasklogic:8": "AND",
           "visibility:8": "UNLOCKED"
         }
       },
@@ -22398,7 +22398,7 @@
     },
     "401:10": {
       "preRequisites:11": [
-        12
+        4
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -62021,8 +62021,8 @@
           "id:3": 13,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": 66
+          "x:3": 24,
+          "y:3": 140
         },
         "9:10": {
           "id:3": 14,
@@ -62078,7 +62078,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": -36
+          "y:3": -42
         },
         "17:10": {
           "id:3": 37,
@@ -62189,8 +62189,8 @@
           "id:3": 401,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": 140
+          "x:3": 12,
+          "y:3": 66
         },
         "33:10": {
           "id:3": 405,
@@ -62351,7 +62351,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -36
+          "y:3": -42
         },
         "56:10": {
           "id:3": 909,
