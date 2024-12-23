@@ -1906,8 +1906,8 @@
     },
     "24:10": {
       "preRequisites:11": [
-        66,
-        687
+        687,
+        1082
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -66594,6 +66594,72 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1082:10": {
+      "preRequisites:11": [
+        66
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This electrifying coil gives permanent §dNight Vision§r when worn as a hat. Truly the height of fashion.\n\nNo side effects, no catch. Although you also need this for your §3Steam Dynamo§r...",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nomilabs:excitationcoil"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Excitation Coil",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1082,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:excitationcoil"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -71570,14 +71636,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 180
+          "y:3": 186
         },
         "4:10": {
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": 216
+          "y:3": 222
         },
         "5:10": {
           "id:3": 9,
@@ -71591,7 +71657,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 216
+          "y:3": 222
         },
         "7:10": {
           "id:3": 12,
@@ -71654,7 +71720,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 252
+          "y:3": 258
         },
         "16:10": {
           "id:3": 25,
@@ -71668,21 +71734,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": 180
+          "y:3": 186
         },
         "18:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 288
+          "y:3": 294
         },
         "19:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 252
+          "y:3": 258
         },
         "20:10": {
           "id:3": 50,
@@ -71696,21 +71762,21 @@
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -36,
-          "y:3": 360
+          "y:3": 366
         },
         "22:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": 420
+          "y:3": 426
         },
         "23:10": {
           "id:3": 66,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 216
+          "y:3": 222
         },
         "24:10": {
           "id:3": 141,
@@ -71723,8 +71789,8 @@
           "id:3": 266,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 180
+          "x:3": -54,
+          "y:3": 156
         },
         "26:10": {
           "id:3": 353,
@@ -71766,7 +71832,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -114,
-          "y:3": 384
+          "y:3": 390
         },
         "32:10": {
           "id:3": 401,
@@ -71787,21 +71853,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 324
+          "y:3": 330
         },
         "35:10": {
           "id:3": 415,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
-          "y:3": 420
+          "y:3": 426
         },
         "36:10": {
           "id:3": 488,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 216
+          "x:3": -84,
+          "y:3": 186
         },
         "37:10": {
           "id:3": 491,
@@ -71815,7 +71881,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": 288
+          "y:3": 294
         },
         "39:10": {
           "id:3": 496,
@@ -71829,21 +71895,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 30,
-          "y:3": 252
+          "y:3": 258
         },
         "41:10": {
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -150,
-          "y:3": 384
+          "y:3": 390
         },
         "42:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -54,
-          "y:3": 288
+          "y:3": 294
         },
         "43:10": {
           "id:3": 670,
@@ -71857,7 +71923,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -108,
-          "y:3": 252
+          "y:3": 258
         },
         "45:10": {
           "id:3": 692,
@@ -71878,7 +71944,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -114,
-          "y:3": 420
+          "y:3": 426
         },
         "48:10": {
           "id:3": 775,
@@ -71913,7 +71979,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -114,
-          "y:3": 348
+          "y:3": 354
         },
         "53:10": {
           "id:3": 813,
@@ -71934,14 +72000,14 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 174
+          "y:3": 180
         },
         "56:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -78,
-          "y:3": 384
+          "y:3": 390
         },
         "57:10": {
           "id:3": 921,
@@ -72012,6 +72078,13 @@
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 204
+        },
+        "67:10": {
+          "id:3": 1082,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 222
         }
       }
     },
