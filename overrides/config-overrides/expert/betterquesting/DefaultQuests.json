@@ -39884,12 +39884,13 @@
     },
     "756:10": {
       "preRequisites:11": [
-        776
+        776,
+        1097
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Taranium§r is an exotic material found in tiny quantities from... §6Stone Dust§r.\n\nProcess Stone Dust through a long chain (and enjoy the byproducts), and eventually, you\u0027ll reach the §6Taranium Dust§r. It\u0027s used in several powerful endgame tools, such as §6UV Field Generator§r and §3Advanced Ore Drilling Plant II§r.",
+          "desc:8": "§6Taranium§r is an exotic material found in tiny quantities from... §6Stone Dust Processing§r.\n\nDo the full long line (and enjoy the byproducts), and eventually, you\u0027ll reach the §6Taranium Dust§r. It\u0027s used in several powerful endgame tools, such as §6UV Field Generator§r and §3Advanced Ore Drilling Plant II§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
