@@ -917,17 +917,17 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:wire_cutter",
+            "id:8": "gregtech:wrench",
             "tag:10": {
               "DisallowContainerItem:1": 0,
               "GT.Behaviours:10": {},
               "GT.Tool:10": {
-                "AttackDamage:5": 1.0,
-                "AttackSpeed:5": -2.4,
+                "AttackDamage:5": 3.0,
+                "AttackSpeed:5": -3.0,
                 "Durability:3": 0,
                 "HarvestLevel:3": 2,
-                "Material:8": "iron",
-                "MaxDurability:3": 256,
+                "Material:8": "gregtech:wrought_iron",
+                "MaxDurability:3": 383,
                 "ToolSpeed:5": 6.0
               },
               "HideFlags:3": 2
@@ -1115,7 +1115,7 @@
     },
     "13:10": {
       "preRequisites:11": [
-        4
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1522,7 +1522,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Alloy Smelters are used to create alloys by melting and reforming items together.\n\nNow you won\u0027t need to grind up metals into dusts and mix them for alloy dusts! Plus, many of the more complex alloys you couldn\u0027t make that way are now possible.",
+          "desc:8": "The §3Alloy Smelter§r is used to create alloys by melting and reforming items together. It also makes §6Steel§r much faster than your PBF.\n\nNow you won\u0027t need to grind up metals into dusts and mix them for alloy dusts! Plus, many of the more complex alloys you couldn\u0027t make that way are now possible.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1650,25 +1650,23 @@
       }
     },
     "21:10": {
-      "preRequisites:11": [
-        19
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You already have §6Steel§r, but it can be made much faster in the §3Alloy Smelter§r, at the cost of EU. Once you build the §3Electric Blast Furnace§r, you may opt to make Steel there with Oxygen instead.\n\nYou might want to save your §6Coal Dust§r for circuits and use §6Charcoal Dust§r instead. Later, you can also process either of these dusts, §6Coal Coke Dust§r, §2or Diamond Dust§r into §6Carbon Dust§r, which can be used for Steel and other useful things.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 324,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Steel§r",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -1677,42 +1675,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 21,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 324,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -1723,7 +1694,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into §6Coal Coke§r will not only make it more useful as fuel, but will also produce §9Phenol§r, which you\u0027ll need for circuits.\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nRemember that Hatches and Buses can be replaced by Hatches and Buses of any tier, although the Input Bus must be at least LV, as there are 2 inputs, and that you can §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.§r",
+          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into some more §6Coal Coke§r will also produce §9Phenol§r, which you\u0027ll need for circuits.\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\n§eHatches and Buses can be replaced by Hatches and Buses of any tier!\n\n§2In GTCEu, all hatches and buses, except the Maintenance Hatch, can be shared between Multiblocks!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1773,50 +1744,50 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 1004,
               "OreDict:8": "",
-              "id:8": "gregtech:wire_coil"
+              "id:8": "gregtech:machine"
             },
             "1:10": {
-              "Count:3": 1,
-              "Damage:2": 1151,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1181,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 1196,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 1211,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "6:10": {
               "Count:3": 10,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:machine_casing"
             },
+            "2:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1151,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1166,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 1181,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 1196,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
             "7:10": {
               "Count:3": 1,
-              "Damage:2": 1004,
+              "Damage:2": 1211,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -1906,14 +1877,13 @@
     },
     "24:10": {
       "preRequisites:11": [
-        50,
-        66,
-        687
+        687,
+        1082
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "(§oThis quest accepts either a Steam Dynamo or a Large Bronze Boiler.§r)\n\nYour first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.\n\nYou can also use §6Large Bronze Boilers§r to produce steam for use in §6Steam Turbines§r or §bTurbine Conversion§r-augmented §6Steam Dynamos§r. Each one produces 800 mB steam per tick, which is equivalent to 400 EU/t or 1600 RF/t. They are significantly more expensive, however.\n\n§aNote: 1 EU of energy \u003d 2 mb of steam \u003d 4 RF, use this when planning your early power setup.§r",
+          "desc:8": "Your first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power. Specifically, the base version generates\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -1939,7 +1909,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
+          "tasklogic:8": "AND",
           "visibility:8": "CHAIN"
         }
       },
@@ -1964,7 +1934,7 @@
           "consume:1": 0,
           "entryLogic:8": "AND",
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -1979,48 +1949,6 @@
                 "Level:1": 0,
                 "RSControl:1": 0
               }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 1013,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "1:10": {
-              "Count:3": 20,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
-            },
-            "2:10": {
-              "Count:3": 4,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:boiler_firebox_casing"
-            },
-            "3:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:boiler_casing"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 1654,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2092,7 +2020,6 @@
     },
     "26:10": {
       "preRequisites:11": [
-        21,
         23
       ],
       "properties:10": {
@@ -2373,7 +2300,6 @@
     },
     "30:10": {
       "preRequisites:11": [
-        21,
         260
       ],
       "properties:10": {
@@ -2895,8 +2821,7 @@
       "preRequisites:11": [
         24,
         40,
-        530,
-        909
+        530
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -3633,7 +3558,7 @@
     },
     "50:10": {
       "preRequisites:11": [
-        4
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4341,14 +4266,13 @@
     },
     "60:10": {
       "preRequisites:11": [
-        21,
         59,
         903
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials. The first of which, §6Aluminium§r, is going to be important in the immediate future.\n\nSince smelting §6Aluminium§r requires MV power, you\u0027re going to have to power this with 2 LV Energy Input Hatches.\n\nThere is a diagram of how to build the EBF in §bJEI§r. The second and third levels must be a 3x3 square shape of Coil Blocks (§6Cupronickel§r is the only type of coil block you have access to for now) with an empty center. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nHowever, the bottom and top layers are very flexible. The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least §29 §eHeatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\nHatches and Buses can be replaced by Hatches and Buses of any tier, although the Input Bus must be at least LV, as there are 2 inputs.\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches except Maintenance can be shared between Multiblocks!§r",
+          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials. The first of these materials, §6Aluminium§r, is going to be important in the immediate future.\n\nSince smelting §6Aluminium§r requires MV power, you\u0027re going to have to power this with 2 LV Energy Input Hatches.\n\nThe bottom and top layers of this multiblock are very flexible! The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least 9 Heatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\n§eHatches and Buses can be replaced by Hatches and Buses of any tier!§r\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches and buses, except the Maintenance Hatch, can be shared between Multiblocks!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4404,46 +4328,46 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
+              "Count:3": 9,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
               "Count:3": 16,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:wire_coil"
             },
-            "2:10": {
+            "3:10": {
               "Count:3": 2,
               "Damage:2": 1211,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "3:10": {
+            "4:10": {
               "Count:3": 1,
               "Damage:2": 1151,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "4:10": {
+            "5:10": {
               "Count:3": 1,
               "Damage:2": 1166,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "5:10": {
+            "6:10": {
               "Count:3": 1,
               "Damage:2": 1181,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "6:10": {
+            "7:10": {
               "Count:3": 1,
               "Damage:2": 1196,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
-            },
-            "7:10": {
-              "Count:3": 9,
-              "Damage:2": 2,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
             },
             "8:10": {
               "Count:3": 1,
@@ -6037,7 +5961,6 @@
     },
     "83:10": {
       "preRequisites:11": [
-        21,
         129,
         147,
         259
@@ -6918,7 +6841,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields. For now it\u0027s not a great idea, as in addition to its Overworld rarity, you need it for §6Titanium§r.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
+          "desc:8": "§9Polyethylene (PE)§r is the most common category of plastic, made from polymers of §9Ethylene§r. Adding §9Oxygen§r in a §3Chemical Reactor§r recreates (with some artistic license) early accidental synthesis of Polyethylene.\n\nWhen you unlock the §2Large Chemical Reactor§r and have large amounts of §6Rutile§r and §6Bauxite§r (probably after you visit the Moon) you can consider using §9Titanium Tetrachloride§r as a catalyst to improve your Polyethylene yields.\n\nForm §6Polyethylene Sheets§r using a §3Fluid Solidifier§r and a §aPlate Mold§r for use in crafting electronics components. You\u0027ll need both the liquid and the sheets. For §9Polyethylene (PE)§r pipes, you can either pulverise your sheets into dust and use those in the extruder, or solidify §9Polyethylene (PE)§r into §6Polyethylene Bars§r seperately.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10266,12 +10189,14 @@
     },
     "148:10": {
       "preRequisites:11": [
-        149
+        150,
+        152,
+        157
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A perfect material for making chopsticks.\n\nAlso the tier material for Extreme Voltage (EV).",
+          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r, the tier material for §dExtreme Voltage (EV)§r.\n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly.\n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10332,26 +10257,23 @@
       }
     },
     "149:10": {
-      "preRequisites:11": [
-        152,
-        157
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Combining §9Titanium Tetrachloride§r with §6Magnesium§r in an §3Electric Blast Furnace§r (approximating the Kroll process) will net you your first §6Titanium§r.\n\nThis process is a loop, and therefore will not cost you any resources, apart from §6Rutile§r, if you process it correctly.\n\nUnfortunately, it is super hot. You\u0027ll need to cool it in a §3Vacuum Freezer§r for it to be usable.\n\nRouting through AE is an alternative way to using item conduits. Simply set an Ore Dictionary Storage Bus on the input bus of the freezer, set it to \u0027ingotHot*\u0027, and set it to a high priority. This will accept any new Hot Ingots entering your system, and eliminates the need for a big conduit network.\n\nDon\u0027t encode the Hot Ingot in a pattern though!",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 113,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot_hot"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Hot Titanium",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -10360,27 +10282,14 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 149,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nomilabs:nomicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "index:3": 1,
+          "index:3": 0,
           "taskID:8": "bq_standard:checkbox"
         }
       }
@@ -10392,7 +10301,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Vacuum Freezers§r are primarily used to cool down §6Hot Ingots§r. They\u0027re also capable of freezing air into a liquid, and making superconductors.\n\nAt minimum you will need an energy input hatch, an input bus, an output bus, and 22 §6Frost Proof Machine Casings§r for forming the multiblock for processing Hot Ingots.\n\nIf you want to deal with fluids as well, subtract two casings and use a fluid input and fluid output in their place.\n\nThe energy tier required for the Vacuum Freezer is typically one tier below the tier used to process the ingot in the §3Electric Blast Furnace§r.\n\nBesides the controller placement, as usual the hatches/buses can go anywhere. Use the building guide in §bJEI§r which can be pulled up from the controller block.",
+          "desc:8": "§3Vacuum Freezers§r are primarily used to cool down §6Hot Ingots§r. They\u0027re also capable of freezing air into a liquid, and making superconductors.\n\n§cDon\u0027t handle Hot Ingots by hand or encode them in a pattern!§r\n\nInstead of having a big conduit network, you can route routing through AE. Simply set an §eOre Dictionary Storage Bus§r on the input bus of the freezer, set it to §a\u0027ingotHot*\u0027§r, and set it to a §ahigh priority§r. This will accept any new Hot Ingots entering your system.\n\nAt minimum you will need an energy input hatch, an input bus, an output bus, and 22 §6Frost Proof Machine Casings§r for forming the multiblock for processing Hot Ingots.\n\nIf you want to deal with fluids as well, subtract two casings and use a fluid input and fluid output in their place.\n\nThe energy tier required for the Vacuum Freezer is typically one tier below the tier used to process the ingot in the §3Electric Blast Furnace§r.\n\nBesides the controller placement, as usual the hatches/buses can go anywhere. Use the building guide in §bJEI§r which can be pulled up from the controller block.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12494,7 +12403,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts either Oil, Raw Oil, Light Oil or Heavy Oil.§r\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r\n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.\n\nThe upcoming quests will guide you through the basics of petrochemistry. Once you\u0027ve mastered that, feel free to explore further.",
+          "desc:8": "§oNote: this quest accepts either Oil, Raw Oil, Light Oil or Heavy Oil.§r\n\nPetrochemistry is the category of organic chemistry pertaining to petroleum, otherwise known as §9Oil§r.\n\n§bGregTech§r\u0027s petrochemistry may seem daunting at first, given the sheer number of chemicals and processing options, but it\u0027s actually easier to get into than you think.\n\nOil is the starting point, and can be found in several variants which you can pump from finite natural wells on the Overworld, as well as coming renewably from §6Oilsands Ore§r and §6Soul Sand§r, and directly in liquid form from a §3Fluid Rig§r.\n\n§2The Fluid Rig can also harvest Raw Oil, Heavy Oil and Light Oil depending on your fluid vein. Raw Oil is similar to Oil, giving the same ratios when distilled but needing double the fluid. Heavy Oil and Light Oil give different ratios when distilled.§r\n\nStart off by distilling the Oil. This will result in §9Sulfuric Heavy Fuel§r, §9Sulfuric Light Fuel§r, §9Sulfuric Naphtha§r, and/or §9Sulfuric Gas§r.\n\nThese will all need to be hydrodesulfurized using §9Hydrogen§r in a §3Chemical Reactor§r or §2Oil Cracking Unit§r, which produces the non-Sulfuric versions.\n\nAll of these products are useful, so figure out how you want to store the variety and large quantities of fluids.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15288,7 +15197,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Hydrogen§r and §9Nitrogen§r combine together to make §9Ammonia§r.\n\nAn easy way to get Nitrogen is to centrifuge §9Air§r, which will require you to build an §3Air Collector§r. You could also electrolyze §6Saltpeter§r, distill §9Fermented Biomass§r in a §3Distillation Tower§r, or get huge amounts from §2distilling Liquid Air in a Distillation Tower.§r.",
+          "desc:8": "§9Hydrogen§r and §9Nitrogen§r combine together to make §9Ammonia§r.\n\nAn easy way to get Nitrogen is to centrifuge §9Air§r, which will require you to build an §3Air Collector§r. You could also electrolyze §6Saltpeter§r, distill §9Fermented Biomass§r in a §3Distillation Tower§r, or get huge amounts from §2distilling Liquid Air in a Distillation Tower.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16899,7 +16808,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Warp Core§r is a multiblock structure that you can build on the space station. Use the Holo-Projector for a building guide.\n\nWhile it\u0027s not required for the progression, you can spend some resources to travel to distant planets, either to explore them or just to change the background of your space station.\n\nThe Input Hatch must be filled with §6Dilithium§r.",
+          "desc:8": "The §3Warp Core§r is a multiblock structure that you can build on the space station. Use the Holo-Projector for a building guide.\n\nWhile it\u0027s not required for the progression, you can spend some resources to travel to distant planets, either to explore them or just to change the background of your space station. You can really go anywhere, but the §eSun§r offers a black-hole like background that may suit your tastes.\n\nThe Input Hatch must be filled with §6Dilithium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20201,7 +20110,7 @@
     },
     "296:10": {
       "preRequisites:11": [
-        21
+        909
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -23839,8 +23748,7 @@
     },
     "353:10": {
       "preRequisites:11": [
-        12,
-        141
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -26550,7 +26458,7 @@
     },
     "401:10": {
       "preRequisites:11": [
-        12
+        4
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -27150,7 +27058,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Unlike §aRF power§r, which is safe to transport in any §6conduit§r, §aEU power §erequires caution§r. The key is to always §amatch or exceed§r the §eVoltage§r and §eAmperage§r of your power source with your §6cables§r and machines.\n\n§cNEVER§r hook up your Energy Converter to a cable that has fewer §eAmps§r than your Energy Converter or Battery Buffer generates. For example, you must use §64x cable§r for a 4A Converter, and §616x cable§r for a filled 16-slot Battery Buffer. Cables with insufficient amperage rating will §cburn and be destroyed§r. §2Both the multiple-amp-source and multiple-face-input bugs from CE have been fixed - the Energy network now works as intended.§r\n\nSimilarly, your cable must match or exceed the §eVoltage§r of your machines, or they will §cburn and be destroyed§r.\n\n§cNEVER§r connect a machine to excessive §eVoltage§r or it will §cvaporize§r. Touching a §6wire§r with connected §aEU power§r will §cinjure or kill you§r, so for your safety, §euse §6cables §einstead§r!\n\n§2Superconductor-type wires do not damage you in CEu. The 0-loss cables in CE (Conductive Iron, Energetic Alloy, etc.) are considered Superconductors.§r",
+          "desc:8": "Unlike §aRF power§r, which is safe to transport in any §6conduit§r, §aEU power §erequires caution§r. The key is to always §amatch or exceed§r the §eVoltage§r and §eAmperage§r of your power source with your §6cables§r and machines.\n\n§cNEVER§r hook up your Energy Converter to a cable that has fewer §eAmps§r than your Energy Converter or Battery Buffer generates. For example, you must use §64x cable§r for a 4A Converter, and §616x cable§r for a filled 16-slot Battery Buffer. Cables with insufficient amperage rating will §cburn and be destroyed§r.\n\n§2If you are coming from CE - Both the multiple-amp-source and multiple-face-input bugs from CE have been fixed, the energy network now works as intended.§r\n\nSimilarly, your cable must match or exceed the §eVoltage§r of your machines, or they will §cburn and be destroyed§r.\n\n§cNEVER§r connect a machine to excessive §eVoltage§r or it will §cvaporize§r. Touching a §6non-superconductor wire§r with connected §aEU power§r will §cinjure or kill you§r, so for your safety, §euse §6cables or superconductors §einstead§r!\n\n§eNote: superconductors, or wires with 0 loss, have no cable variant. Touching superconductor wires will NOT damage you!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30555,7 +30463,7 @@
     },
     "491:10": {
       "preRequisites:11": [
-        12
+        4
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -32352,7 +32260,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, the §3Naquadah Reactor Mk1§r and the §3Naquadah Reactor Mk2§r. The latter produces significantly more power, but costs a large amounts of §dOmnium§r.",
+          "desc:8": "§oThis quest accepts the materials for a Naquadah Reactor Mk1 or the materials for a Naquadah Mk 2.§r\n\nThe §3Naquadah Reactor§r is a structure used to generate considerable amounts of EU power from decaying §6Enriched Naquadah§r or §6Naquadria§r into §6Lead§r.\n\nIt has two versions, the §3Naquadah Reactor Mk1§r and the §3Naquadah Reactor Mk2§r. The latter produces significantly more power, but costs a large amounts of §dOmnium§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32408,34 +32316,34 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
+              "Count:3": 13,
+              "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gcym:large_multiblock_casing"
+            },
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 5,
               "OreDict:8": "",
               "id:8": "extendedcrafting:trimmed"
             },
-            "2:10": {
+            "3:10": {
               "Count:3": 2,
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:meta_block_compressed_8"
             },
-            "3:10": {
+            "4:10": {
               "Count:3": 12,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:spatial_pylon"
             },
-            "4:10": {
+            "5:10": {
               "Count:3": 12,
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:transparent_casing"
-            },
-            "5:10": {
-              "Count:3": 14,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "gcym:large_multiblock_casing"
             },
             "6:10": {
               "Count:3": 1,
@@ -32468,32 +32376,32 @@
               "id:8": "gcym:large_multiblock_casing"
             },
             "2:10": {
-              "Count:3": 3,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_27"
-            },
-            "3:10": {
               "Count:3": 1,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "extendedcrafting:storage"
             },
-            "4:10": {
-              "Count:3": 16,
-              "Damage:2": 1,
+            "3:10": {
+              "Count:3": 3,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:transparent_casing"
+              "id:8": "gregtech:meta_block_compressed_27"
             },
-            "5:10": {
+            "4:10": {
               "Count:3": 16,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:spatial_pylon"
             },
+            "5:10": {
+              "Count:3": 16,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:transparent_casing"
+            },
             "6:10": {
               "Count:3": 1,
-              "Damage:2": 1243,
+              "Damage:2": 1253,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -33786,7 +33694,6 @@
     },
     "540:10": {
       "preRequisites:11": [
-        21,
         76,
         147,
         259
@@ -34341,7 +34248,7 @@
     },
     "548:10": {
       "preRequisites:11": [
-        21
+        909
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -38756,7 +38663,7 @@
     },
     "624:10": {
       "preRequisites:11": [
-        149
+        71
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -43048,7 +42955,7 @@
     },
     "687:10": {
       "preRequisites:11": [
-        12
+        50
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -43413,7 +43320,6 @@
     },
     "692:10": {
       "preRequisites:11": [
-        4,
         12
       ],
       "properties:10": {
@@ -47868,12 +47774,12 @@
     },
     "779:10": {
       "preRequisites:11": [
-        21
+        909
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis is represented in a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation.§r\n\nNow that you have acquired §6Steel§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Evolution§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.",
+          "desc:8": "§oThis is represented in a Processing Line. Visit the Processing Lines Tab to have more info, useful tips and a visual representation.§r\n\nThe §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Evolution§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50148,7 +50054,7 @@
     },
     "814:10": {
       "preRequisites:11": [
-        21
+        53
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -50833,7 +50739,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This quest accepts an LV or MV Sifter.\n\nThe Sifter gets you Flawless and Exquisite Gems from Crushed Purified Gem Ores. Overall it results in a higher yield. Higher tiers of Sifter increase the yield further.\n\nYou will need small quantities of Flawless Emeralds for MV Emitter and Sensor components.§r",
+          "desc:8": "§oThis quest accepts an LV or MV Sifter.§r\n\nThe §3Sifter§r gets you §6Flawless and Exquisite Gems§r from §6Crushed Purified Gem Ores§r, resulting in a higher yield. Higher tiers of the Sifter increase the yield further.\n\nYou will need small quantities of §6Flawless Emeralds§r for §6MV Emitter and Sensor§r components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51274,6 +51180,7 @@
     },
     "829:10": {
       "preRequisites:11": [
+        53,
         779
       ],
       "properties:10": {
@@ -55941,7 +55848,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Micro Miner missions, and from processing renewable Black Granite.§r",
+          "desc:8": "§9Hydrofluoric Acid§r is a dangerous acid made by mixing §9Hydrogen§r and §9Fluorine§r. It is used in the production of §9Polytetrafluoroethylene§r, and in §6Uranium§r and §6Naquadah§r processing.\n\nFluorine is best obtained from §6Topaz§r or §6Bastnasite§r, obtained through their Micro Miner missions, or in renewable §6Black Granite§r, through §dEV §3Rock Breakers§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56573,16 +56480,13 @@
       "tasks:9": {}
     },
     "909:10": {
-      "preRequisiteTypes:7": [
-        2
-      ],
       "preRequisites:11": [
-        3
+        12
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A mixture of Clay and Brick produces large quantities of §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r, which §2forms the basis of LV Machine Hulls§r, and allows you to make §6Belt Pouches§r, for upgrading your §eTool Belt§r.\n\nThe §3PBF§r has been changed to be blazing fast - just 20 seconds per §6Steel Ingot§r! You will still want to keep it running, as you won\u0027t stop needing Steel.",
+          "desc:8": "A mixture of Clay and Brick produces large quantities of §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. This allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower), which §2forms the basis of LV Machine Hulls§r, and allows you to make §6Belt Pouches§r, for upgrading your §eTool Belt§r.\n\n§eMultiblocks, like the Primitive Blast Furnace, can share blocks! For example, if you build another Primitive Blast Furnace, you can share the wall between them!§r\n\nA diagram of how to build this structure is in §bJEI§r. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nThe §3PBF§r has been changed to be blazing fast - just 20 seconds per §6Steel Ingot§r! You will still want to keep it running, as you won\u0027t stop needing Steel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56591,7 +56495,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Primitive Steelworks§r",
@@ -56722,7 +56626,7 @@
     },
     "911:10": {
       "preRequisites:11": [
-        38
+        56
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -61742,7 +61646,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r, §6Granite§r and §6Obsidian§r.\n\nIn order to set this up, §6Lava§r and §6Water§r must be placed §ahorizontally adjacent§r.\n\nMaking §6Cobblestone§r this way is not a good idea, due to §bNuclearCraft §6Cobblestone Generators§r, which don\u0027t cost any power. However, with §aHV §3Rock Breakers§r, you can make §6Obsidian§r, without spending lots of §6Lava§r!\n\n§aLV§r and §aMV§r ones also exist, however, they aren\u0027t very useful.",
+          "desc:8": "The §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r, §6Granite§r and §6Obsidian§r.\n\nIn order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r.\n\nMaking §6Cobblestone§r this way is not a good idea, due to §bNuclearCraft §eCobblestone Generators§r, which don\u0027t cost any power. However, with §6HV §3Rock Breakers§r,, you can make §eObsidian§r, without spending lots of §eLava§r!\n\n§7LV§r and §bMV§r ones also exist, however, they aren\u0027t very useful.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -61754,7 +61658,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "HV Rock Breaker",
+          "name:8": "§2HV Rock Breaker§r",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -61812,9 +61716,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 2019,
             "OreDict:8": "",
-            "id:8": "gregtech:stone_smooth"
+            "id:8": "gregtech:meta_dust"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -64554,7 +64458,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest accepts LV, MV or HV Miner.§r\n\nThe §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nThe LV Miner calls for an §6LV Sensor§r, which requires a bit of §6Quartzite§r. Buy some if you haven\u0027t come across it yet.\n\nAt §5EV§r tier, you can build §3Large Miners§r.",
+          "desc:8": "§oThis quest accepts LV, MV or HV Miner.§r\n\nThe §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nThe LV Miner calls for an §6LV Sensor§r, which requires a bit of §6Quartzite§r. Buy some if you haven\u0027t come across it yet. You also need to provide power there. Whether you setup some simple power production or carry it across in batteries is up to you.\n\nAt §5EV§r tier, you can build §3Drilling Plants§r instead.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -64566,7 +64470,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Automatic Mining",
+          "name:8": "§2Automatic Mining§r",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -66258,7 +66162,7 @@
     },
     "1075:10": {
       "preRequisites:11": [
-        6
+        4
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -66606,30 +66510,6 @@
           "entryLogic:8": "AND",
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "enderio:item_conduit_probe"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 1,
-              "OreDict:8": "",
-              "id:8": "enderio:item_basic_capacitor"
-            }
-          },
-          "taskID:8": "bq_standard:optional_retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 1,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -66641,6 +66521,188 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1082:10": {
+      "preRequisites:11": [
+        66
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This electrifying coil gives permanent §dNight Vision§r when worn as a hat. Truly the height of fashion.\n\nNo side effects, no catch. Although you also need this for your §3Steam Dynamo§r...",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nomilabs:excitationcoil"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Excitation Coil",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 1082,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:golden_carrot",
+              "tag:10": {
+                "display:10": {
+                  "Name:8": "I can... see!"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:excitationcoil"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1083:10": {
+      "preRequisites:11": [
+        53
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oThis quest accepts ULV or LV Conveyor Modules.§r\n\nYou will need to route a LOT of things through your machines in the future, so its worth setting up some basic automation to make handling §emass inputs§r easier.\n\nFor this, you will need §6Conveyors§r; the ULV ones are fairly cheap, although LV and higher ones offer higher transfer speeds.\n\nYou will also need two storage containers. At least one of them must be openable with a block on top, such as an §bActually Additions §6Storage Crate§r.\n\n§aRight-click§r the target machine with a §eWrench§r to change the output side; set it to below the machine. In the machine GUI, enable auto-output in the bottom-left corner.\n\nNow, place the conveyor, as a cover, on the top face of the machine. Use a §eScrewdriver§r to configure it to \u0027Import\u0027.\n\nFinally, place your storage containers, one directly below the machine, and one directly above. Simply place your inputs in the top container, and outputs will appear in the bottom!\n\nIf your machines process the inputs too fast, upgrade the conveyor!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "ulv_covers:ulv_cover_meta_item"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Basic Machine Automation",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1083,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "questbookConveyor",
+              "id:8": "ulv_covers:ulv_cover_meta_item"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1084:10": {
+      "preRequisites:11": [
+        6
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You will be handling many different fluids, from §9Water§r and §9Steam§r to §9Lava§r. Some of these you might want to store, and others are collected from in-world.\n\nFor fluid collection, §bGregTech §6Cells§r is your best friend. Offering much more storage per item than a bucket, and being stackable, these allow for quick collection of in-world fluids, like Water and Lava. These come in many tiers, but currently, you can make §6Basic§r and §6Bronze§r cells.\n\nFor fluid storage, you have many choices, but currently, you can only use §bEnderIO §6Portable Tanks§r, §bGregTech §6Drums§r or §bGregTech §6Wooden Barrels§r. Portable Tanks provide less storage, but are cheaper, and don\u0027t have restrictions on fluid temeprature and type. Drums are available in multiple sizes, and allow for §aauto-output§r on the bottom side (use a §eScrewdriver§r to toggle).\n\n§aNote the restrictions on fluid temperature and fluid type for Cells, Barrels and Drums!\n\n§dNomi-CEu§r has another special feature: crafting recipes involving filled buckets can use §aany fluid container§r. Remember this when mass-crafting §6Water Sources§r or §6Cobblestone Generators§r. It can save you a lot of fiddling!\n\n§aIn such recipes, only the fluid inside the container is consumed; not the container itself.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 78,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Managing Fluids§r",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "UNLOCKED"
+        }
+      },
+      "questID:3": 1084,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:meta_item"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1611,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -66680,515 +66742,515 @@
           "y:3": 188
         },
         "2:10": {
-          "id:3": 21,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -724,
-          "y:3": 124
-        },
-        "3:10": {
           "id:3": 22,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -548,
           "y:3": 296
         },
-        "4:10": {
+        "3:10": {
           "id:3": 23,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
-          "y:3": 162
+          "y:3": 172
         },
-        "5:10": {
+        "4:10": {
           "id:3": 26,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
           "y:3": 136
         },
-        "6:10": {
+        "5:10": {
           "id:3": 28,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -712,
           "y:3": 40
         },
-        "7:10": {
+        "6:10": {
           "id:3": 29,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -712,
           "y:3": 8
         },
-        "8:10": {
+        "7:10": {
           "id:3": 30,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
-          "y:3": 188
+          "y:3": 204
         },
-        "9:10": {
+        "8:10": {
           "id:3": 33,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -536,
           "y:3": 172
         },
-        "10:10": {
+        "9:10": {
           "id:3": 34,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -712,
           "y:3": 404
         },
-        "11:10": {
+        "10:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -712,
           "y:3": 440
         },
-        "12:10": {
+        "11:10": {
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -668,
           "y:3": 8
         },
-        "13:10": {
+        "12:10": {
           "id:3": 41,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -748,
           "y:3": 440
         },
-        "14:10": {
+        "13:10": {
           "id:3": 45,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -536,
           "y:3": 204
         },
-        "15:10": {
+        "14:10": {
           "id:3": 53,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -852,
           "y:3": 224
         },
-        "16:10": {
+        "15:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -804,
           "y:3": 192
         },
-        "17:10": {
+        "16:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -712,
-          "y:3": 236
+          "y:3": 272
         },
-        "18:10": {
+        "17:10": {
           "id:3": 60,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -724,
           "y:3": 344
         },
-        "19:10": {
+        "18:10": {
           "id:3": 69,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
           "y:3": 356
         },
-        "20:10": {
+        "19:10": {
           "id:3": 72,
           "sizeX:3": 56,
           "sizeY:3": 56,
           "x:3": -956,
           "y:3": 292
         },
-        "21:10": {
+        "20:10": {
           "id:3": 145,
           "sizeX:3": 30,
           "sizeY:3": 30,
           "x:3": -895,
           "y:3": 181
         },
-        "22:10": {
+        "21:10": {
           "id:3": 146,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": 136
         },
-        "23:10": {
+        "22:10": {
           "id:3": 147,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -800,
-          "y:3": 280
+          "x:3": -804,
+          "y:3": 284
         },
-        "24:10": {
+        "23:10": {
           "id:3": 173,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -804,
           "y:3": 164
         },
-        "25:10": {
+        "24:10": {
           "id:3": 174,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -804,
           "y:3": 136
         },
-        "26:10": {
+        "25:10": {
           "id:3": 215,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": 40
         },
-        "27:10": {
+        "26:10": {
           "id:3": 228,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 8
         },
-        "28:10": {
+        "27:10": {
           "id:3": 231,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -764,
-          "y:3": 136
+          "x:3": -768,
+          "y:3": 164
         },
-        "29:10": {
+        "28:10": {
           "id:3": 259,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -636,
           "y:3": 392
         },
-        "30:10": {
+        "29:10": {
           "id:3": 260,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
           "y:3": 236
         },
-        "31:10": {
+        "30:10": {
           "id:3": 270,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 68
         },
-        "32:10": {
+        "31:10": {
           "id:3": 272,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -580,
-          "y:3": 172
+          "y:3": 204
         },
-        "33:10": {
+        "32:10": {
           "id:3": 273,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": 404
         },
-        "34:10": {
+        "33:10": {
           "id:3": 282,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -496,
           "y:3": 124
         },
-        "35:10": {
+        "34:10": {
           "id:3": 296,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -580,
           "y:3": 136
         },
-        "36:10": {
+        "35:10": {
           "id:3": 352,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": 88
         },
-        "37:10": {
+        "36:10": {
           "id:3": 402,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -432,
           "y:3": 384
         },
-        "38:10": {
+        "37:10": {
           "id:3": 403,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -480,
           "y:3": 384
         },
-        "39:10": {
+        "38:10": {
           "id:3": 413,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 136
         },
-        "40:10": {
+        "39:10": {
           "id:3": 489,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -988,
           "y:3": 184
         },
-        "41:10": {
+        "40:10": {
           "id:3": 490,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 68
         },
-        "42:10": {
+        "41:10": {
           "id:3": 497,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -860,
           "y:3": 184
         },
-        "43:10": {
+        "42:10": {
           "id:3": 498,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -888,
           "y:3": 404
         },
-        "44:10": {
+        "43:10": {
           "id:3": 516,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -884,
           "y:3": 236
         },
-        "45:10": {
+        "44:10": {
           "id:3": 517,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 236
         },
-        "46:10": {
+        "45:10": {
           "id:3": 528,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -580,
-          "y:3": 204
+          "y:3": 172
         },
-        "47:10": {
+        "46:10": {
           "id:3": 544,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -668,
           "y:3": 272
         },
-        "48:10": {
+        "47:10": {
           "id:3": 545,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
           "y:3": 308
         },
-        "49:10": {
+        "48:10": {
           "id:3": 548,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -712,
           "y:3": 88
         },
-        "50:10": {
+        "49:10": {
           "id:3": 553,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -580,
           "y:3": 88
         },
-        "51:10": {
+        "50:10": {
           "id:3": 554,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -580,
           "y:3": 56
         },
-        "52:10": {
+        "51:10": {
           "id:3": 559,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -676,
           "y:3": 440
         },
-        "53:10": {
+        "52:10": {
           "id:3": 682,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -636,
           "y:3": 76
         },
-        "54:10": {
+        "53:10": {
           "id:3": 684,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -624,
           "y:3": 40
         },
-        "55:10": {
+        "54:10": {
           "id:3": 752,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -668,
-          "y:3": 160
+          "x:3": -672,
+          "y:3": 192
         },
-        "56:10": {
+        "55:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 136
         },
-        "57:10": {
+        "56:10": {
           "id:3": 779,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -668,
-          "y:3": 88
+          "x:3": -748,
+          "y:3": 236
         },
-        "58:10": {
+        "57:10": {
           "id:3": 788,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -432,
           "y:3": 240
         },
-        "59:10": {
+        "58:10": {
           "id:3": 789,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -480,
           "y:3": 240
         },
-        "60:10": {
+        "59:10": {
           "id:3": 814,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -668,
-          "y:3": 117
+          "x:3": -772,
+          "y:3": 268
         },
-        "61:10": {
+        "60:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 184
         },
-        "62:10": {
+        "61:10": {
           "id:3": 817,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -676,
-          "y:3": 192
+          "x:3": -680,
+          "y:3": 136
         },
-        "63:10": {
+        "62:10": {
           "id:3": 819,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -480,
           "y:3": 432
         },
-        "64:10": {
+        "63:10": {
           "id:3": 829,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -668,
-          "y:3": 60
+          "x:3": -712,
+          "y:3": 236
         },
-        "65:10": {
+        "64:10": {
           "id:3": 890,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -432,
           "y:3": 336
         },
-        "66:10": {
+        "65:10": {
           "id:3": 893,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -480,
           "y:3": 336
         },
-        "67:10": {
+        "66:10": {
           "id:3": 903,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -712,
           "y:3": 308
         },
-        "68:10": {
+        "67:10": {
           "id:3": 913,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -432,
           "y:3": 288
         },
-        "69:10": {
+        "68:10": {
           "id:3": 962,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -580,
           "y:3": 236
         },
-        "70:10": {
+        "69:10": {
           "id:3": 1020,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -432,
           "y:3": 432
         },
-        "71:10": {
+        "70:10": {
           "id:3": 1026,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -888,
           "y:3": 280
         },
-        "72:10": {
+        "71:10": {
           "id:3": 1046,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -480,
           "y:3": 288
         },
-        "73:10": {
+        "72:10": {
           "id:3": 1049,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -480,
           "y:3": 192
         },
-        "74:10": {
+        "73:10": {
           "id:3": 1050,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -764,
-          "y:3": 192
+          "x:3": -736,
+          "y:3": 136
+        },
+        "74:10": {
+          "id:3": 1083,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -840,
+          "y:3": 308
         }
       }
     },
@@ -68032,10 +68094,10 @@
       "quests:9": {
         "0:10": {
           "id:3": 10,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -684,
-          "y:3": 96
+          "sizeX:3": 44,
+          "sizeY:3": 44,
+          "x:3": -700,
+          "y:3": 152
         },
         "1:10": {
           "id:3": 54,
@@ -68063,7 +68125,7 @@
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -640,
-          "y:3": -60
+          "y:3": 132
         },
         "5:10": {
           "id:3": 139,
@@ -68084,931 +68146,924 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -762,
-          "y:3": 102
+          "y:3": 78
         },
         "8:10": {
-          "id:3": 149,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -756,
-          "y:3": 72
-        },
-        "9:10": {
           "id:3": 150,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -568,
-          "y:3": -68
+          "x:3": -648,
+          "y:3": 72
         },
-        "10:10": {
+        "9:10": {
           "id:3": 151,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -720,
-          "y:3": 40
+          "y:3": -56
         },
-        "11:10": {
+        "10:10": {
           "id:3": 152,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -756,
-          "y:3": 40
+          "y:3": -20
         },
-        "12:10": {
+        "11:10": {
           "id:3": 153,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -684,
-          "y:3": 40
+          "x:3": -756,
+          "y:3": -56
         },
-        "13:10": {
+        "12:10": {
           "id:3": 158,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -556,
-          "y:3": 24
+          "x:3": -568,
+          "y:3": 84
         },
-        "14:10": {
+        "13:10": {
           "id:3": 159,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -556,
-          "y:3": 60
+          "x:3": -568,
+          "y:3": 156
         },
-        "15:10": {
+        "14:10": {
           "id:3": 162,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 40
         },
-        "16:10": {
+        "15:10": {
           "id:3": 163,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 8
         },
-        "17:10": {
+        "16:10": {
           "id:3": 168,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -232,
           "y:3": 72
         },
-        "18:10": {
+        "17:10": {
           "id:3": 170,
           "sizeX:3": 20,
           "sizeY:3": 20,
           "x:3": -338,
           "y:3": 74
         },
-        "19:10": {
+        "18:10": {
           "id:3": 171,
-          "sizeX:3": 40,
-          "sizeY:3": 40,
-          "x:3": -488,
-          "y:3": -32
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -640,
+          "y:3": 24
         },
-        "20:10": {
+        "19:10": {
           "id:3": 172,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 72
         },
-        "21:10": {
+        "20:10": {
           "id:3": 174,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -420,
-          "y:3": -56
+          "x:3": -592,
+          "y:3": 4
         },
-        "22:10": {
+        "21:10": {
           "id:3": 175,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -480,
-          "y:3": 24
+          "x:3": -680,
+          "y:3": 28
         },
-        "23:10": {
+        "22:10": {
           "id:3": 177,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 144
         },
-        "24:10": {
+        "23:10": {
           "id:3": 178,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -152,
           "y:3": 72
         },
-        "25:10": {
+        "24:10": {
           "id:3": 179,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -196,
           "y:3": 68
         },
-        "26:10": {
+        "25:10": {
           "id:3": 180,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -116,
           "y:3": 72
         },
-        "27:10": {
+        "26:10": {
           "id:3": 181,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -80,
           "y:3": 72
         },
-        "28:10": {
+        "27:10": {
           "id:3": 182,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 108
         },
-        "29:10": {
+        "28:10": {
           "id:3": 185,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -608,
-          "y:3": 96
+          "sizeX:3": 40,
+          "sizeY:3": 40,
+          "x:3": -536,
+          "y:3": 100
         },
-        "30:10": {
+        "29:10": {
           "id:3": 186,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -540,
-          "y:3": 240
+          "x:3": -596,
+          "y:3": 248
         },
-        "31:10": {
+        "30:10": {
           "id:3": 188,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -596,
+          "x:3": -528,
           "y:3": 192
         },
-        "32:10": {
+        "31:10": {
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -568,
-          "y:3": 240
+          "y:3": 248
         },
-        "33:10": {
+        "32:10": {
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -636,
-          "y:3": 40
+          "y:3": 204
         },
-        "34:10": {
+        "33:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -568,
-          "y:3": 280
+          "y:3": 288
         },
-        "35:10": {
+        "34:10": {
           "id:3": 197,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -396,
           "y:3": 192
         },
-        "36:10": {
+        "35:10": {
           "id:3": 198,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 276
         },
-        "37:10": {
+        "36:10": {
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 192
         },
-        "38:10": {
+        "37:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -556,
+          "x:3": -568,
           "y:3": 192
         },
-        "39:10": {
+        "38:10": {
           "id:3": 234,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 156
         },
-        "40:10": {
+        "39:10": {
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -864,
-          "y:3": 108
+          "y:3": 84
         },
-        "41:10": {
+        "40:10": {
           "id:3": 248,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -708,
           "y:3": 204
         },
-        "42:10": {
+        "41:10": {
           "id:3": 249,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -708,
           "y:3": 240
         },
-        "43:10": {
+        "42:10": {
           "id:3": 250,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -736,
           "y:3": 204
         },
-        "44:10": {
+        "43:10": {
           "id:3": 255,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -472,
           "y:3": 192
         },
-        "45:10": {
+        "44:10": {
           "id:3": 261,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 276
         },
-        "46:10": {
+        "45:10": {
           "id:3": 267,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -672,
           "y:3": 204
         },
-        "47:10": {
+        "46:10": {
           "id:3": 275,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -972,
+          "x:3": -1012,
           "y:3": -12
         },
-        "48:10": {
+        "47:10": {
           "id:3": 285,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -704,
-          "y:3": 352
+          "y:3": 360
         },
-        "49:10": {
+        "48:10": {
           "id:3": 297,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -912,
-          "y:3": 108
+          "x:3": -828,
+          "y:3": 84
         },
-        "50:10": {
+        "49:10": {
           "id:3": 298,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -864,
-          "y:3": 60
+          "x:3": -900,
+          "y:3": 84
         },
-        "51:10": {
+        "50:10": {
           "id:3": 299,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -912,
-          "y:3": 144
+          "x:3": -828,
+          "y:3": 120
         },
-        "52:10": {
+        "51:10": {
           "id:3": 300,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -912,
-          "y:3": 180
+          "x:3": -848,
+          "y:3": 156
         },
-        "53:10": {
+        "52:10": {
           "id:3": 301,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -804,
+          "x:3": -844,
           "y:3": 24
         },
-        "54:10": {
+        "53:10": {
           "id:3": 302,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -880,
           "y:3": 24
         },
-        "55:10": {
+        "54:10": {
           "id:3": 303,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -928,
           "y:3": 24
         },
-        "56:10": {
+        "55:10": {
           "id:3": 304,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
+          "x:3": -964,
           "y:3": 24
         },
-        "57:10": {
+        "56:10": {
           "id:3": 305,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -924,
+          "x:3": -964,
           "y:3": -12
         },
-        "58:10": {
+        "57:10": {
           "id:3": 306,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -888,
+          "x:3": -928,
           "y:3": -12
         },
-        "59:10": {
+        "58:10": {
           "id:3": 307,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -840,
+          "x:3": -880,
           "y:3": -12
         },
-        "60:10": {
+        "59:10": {
           "id:3": 308,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -804,
+          "x:3": -844,
           "y:3": -12
         },
-        "61:10": {
+        "60:10": {
           "id:3": 309,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -864,
+          "x:3": -904,
           "y:3": -56
         },
-        "62:10": {
+        "61:10": {
           "id:3": 310,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -912,
-          "y:3": 216
+          "x:3": -848,
+          "y:3": 192
         },
-        "63:10": {
+        "62:10": {
           "id:3": 311,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -306,
           "y:3": 192
         },
-        "64:10": {
+        "63:10": {
           "id:3": 312,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 240
         },
-        "65:10": {
+        "64:10": {
           "id:3": 318,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -348,
           "y:3": 108
         },
-        "66:10": {
+        "65:10": {
           "id:3": 328,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 124
         },
-        "67:10": {
+        "66:10": {
           "id:3": 339,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": -764,
-          "y:3": 272
+          "y:3": 280
         },
-        "68:10": {
+        "67:10": {
           "id:3": 340,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -812,
-          "y:3": 352
+          "y:3": 360
         },
-        "69:10": {
+        "68:10": {
           "id:3": 341,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -396,
           "y:3": 240
         },
-        "70:10": {
+        "69:10": {
           "id:3": 344,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -432,
           "y:3": 240
         },
-        "71:10": {
+        "70:10": {
           "id:3": 347,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 192
         },
-        "72:10": {
+        "71:10": {
           "id:3": 350,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -124,
           "y:3": 236
         },
-        "73:10": {
+        "72:10": {
           "id:3": 390,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -948,
-          "y:3": 216
+          "x:3": -884,
+          "y:3": 192
         },
-        "74:10": {
+        "73:10": {
           "id:3": 391,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -972,
+          "x:3": -1012,
           "y:3": 24
         },
-        "75:10": {
+        "74:10": {
           "id:3": 416,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -348,
           "y:3": 40
         },
-        "76:10": {
+        "75:10": {
           "id:3": 500,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -596,
-          "y:3": 240
+          "x:3": -528,
+          "y:3": 288
         },
-        "77:10": {
+        "76:10": {
           "id:3": 512,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 348
         },
-        "78:10": {
+        "77:10": {
           "id:3": 526,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -648,
-          "y:3": 268
+          "y:3": 276
         },
-        "79:10": {
+        "78:10": {
           "id:3": 527,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 240
         },
-        "80:10": {
+        "79:10": {
           "id:3": 532,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -648,
-          "y:3": -20
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -636,
+          "y:3": 172
         },
-        "81:10": {
+        "80:10": {
           "id:3": 542,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -288,
           "y:3": 312
         },
-        "82:10": {
+        "81:10": {
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -812,
-          "y:3": 388
+          "y:3": 396
         },
-        "83:10": {
+        "82:10": {
           "id:3": 551,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -432,
           "y:3": 312
         },
-        "84:10": {
+        "83:10": {
           "id:3": 555,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -948,
-          "y:3": 252
+          "x:3": -884,
+          "y:3": 228
         },
-        "85:10": {
+        "84:10": {
           "id:3": 580,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -752,
-          "y:3": 388
+          "y:3": 396
         },
-        "86:10": {
+        "85:10": {
           "id:3": 610,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -432,
           "y:3": 276
         },
-        "87:10": {
+        "86:10": {
           "id:3": 611,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 156
         },
-        "88:10": {
+        "87:10": {
           "id:3": 669,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 276
         },
-        "89:10": {
+        "88:10": {
           "id:3": 671,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 240
         },
-        "90:10": {
+        "89:10": {
           "id:3": 672,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 240
         },
-        "91:10": {
+        "90:10": {
           "id:3": 673,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 276
         },
-        "92:10": {
+        "91:10": {
           "id:3": 674,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 276
         },
-        "93:10": {
+        "92:10": {
           "id:3": 675,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 312
         },
-        "94:10": {
+        "93:10": {
           "id:3": 676,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": 348
         },
-        "95:10": {
+        "94:10": {
           "id:3": 677,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 312
         },
-        "96:10": {
+        "95:10": {
           "id:3": 678,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 348
         },
-        "97:10": {
+        "96:10": {
           "id:3": 679,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 348
         },
-        "98:10": {
+        "97:10": {
           "id:3": 680,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -132,
           "y:3": 384
         },
-        "99:10": {
+        "98:10": {
           "id:3": 693,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 312
         },
-        "100:10": {
+        "99:10": {
           "id:3": 694,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -216,
           "y:3": 312
         },
-        "101:10": {
+        "100:10": {
           "id:3": 732,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 156
         },
-        "102:10": {
+        "101:10": {
           "id:3": 745,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 240
         },
-        "103:10": {
+        "102:10": {
           "id:3": 746,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -876,
-          "y:3": 216
+          "x:3": -812,
+          "y:3": 192
         },
-        "104:10": {
+        "103:10": {
           "id:3": 748,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -876,
-          "y:3": 252
+          "x:3": -812,
+          "y:3": 228
         },
-        "105:10": {
+        "104:10": {
           "id:3": 751,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -876,
-          "y:3": 180
+          "x:3": -812,
+          "y:3": 156
         },
-        "106:10": {
+        "105:10": {
           "id:3": 756,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -768,
+          "x:3": -808,
           "y:3": -12
         },
-        "107:10": {
+        "106:10": {
           "id:3": 773,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -180,
           "y:3": 84
         },
-        "108:10": {
+        "107:10": {
           "id:3": 782,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -812,
-          "y:3": 316
+          "y:3": 324
         },
-        "109:10": {
+        "108:10": {
           "id:3": 783,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -632,
-          "y:3": 388
+          "y:3": 396
         },
-        "110:10": {
+        "109:10": {
           "id:3": 785,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -396,
           "y:3": 276
         },
-        "111:10": {
+        "110:10": {
           "id:3": 798,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
           "y:3": 312
         },
-        "112:10": {
+        "111:10": {
           "id:3": 799,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 276
         },
-        "113:10": {
+        "112:10": {
           "id:3": 800,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": -300,
           "y:3": 84
         },
-        "114:10": {
+        "113:10": {
           "id:3": 806,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -276,
           "y:3": 108
         },
-        "115:10": {
+        "114:10": {
           "id:3": 807,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -312,
           "y:3": 40
         },
-        "116:10": {
+        "115:10": {
           "id:3": 825,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -684,
+          "x:3": -808,
           "y:3": -56
         },
-        "117:10": {
+        "116:10": {
           "id:3": 826,
           "sizeX:3": 40,
           "sizeY:3": 40,
-          "x:3": -692,
-          "y:3": -108
+          "x:3": -816,
+          "y:3": -112
         },
-        "118:10": {
+        "117:10": {
           "id:3": 827,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -396,
           "y:3": 144
         },
-        "119:10": {
+        "118:10": {
           "id:3": 828,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -364,
           "y:3": 308
         },
-        "120:10": {
+        "119:10": {
           "id:3": 838,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -596,
-          "y:3": 280
+          "y:3": 288
         },
-        "121:10": {
+        "120:10": {
           "id:3": 841,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 312
         },
-        "122:10": {
+        "121:10": {
           "id:3": 849,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 348
         },
-        "123:10": {
+        "122:10": {
           "id:3": 850,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -328,
           "y:3": 344
         },
-        "124:10": {
+        "123:10": {
           "id:3": 851,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -324,
           "y:3": 276
         },
-        "125:10": {
+        "124:10": {
           "id:3": 852,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 312
         },
-        "126:10": {
+        "125:10": {
           "id:3": 857,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -704,
-          "y:3": 316
+          "y:3": 324
         },
-        "127:10": {
+        "126:10": {
           "id:3": 858,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -476,
-          "y:3": 312
+          "y:3": 320
         },
-        "128:10": {
+        "127:10": {
           "id:3": 859,
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -496,
-          "y:3": 356
+          "y:3": 364
         },
-        "129:10": {
+        "128:10": {
           "id:3": 888,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -196,
           "y:3": 28
         },
-        "130:10": {
+        "129:10": {
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -692,
-          "y:3": 388
+          "y:3": 396
         },
-        "131:10": {
+        "130:10": {
           "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -768,
+          "x:3": -844,
           "y:3": -56
         },
-        "132:10": {
+        "131:10": {
           "id:3": 900,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -232,
           "y:3": 32
         },
-        "133:10": {
+        "132:10": {
           "id:3": 953,
-          "sizeX:3": 40,
-          "sizeY:3": 40,
-          "x:3": -488,
-          "y:3": -108
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -640,
+          "y:3": -24
         },
-        "134:10": {
+        "133:10": {
           "id:3": 1014,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -740,
-          "y:3": 352
+          "x:3": -776,
+          "y:3": 360
         },
-        "135:10": {
+        "134:10": {
           "id:3": 1025,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -252,
           "y:3": 348
         },
-        "136:10": {
+        "135:10": {
           "id:3": 1032,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -776,
-          "y:3": 352
+          "x:3": -740,
+          "y:3": 360
         },
-        "137:10": {
+        "136:10": {
           "id:3": 1047,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -812,
-          "y:3": 280
+          "y:3": 288
         },
-        "138:10": {
+        "137:10": {
           "id:3": 1051,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 240
         },
-        "139:10": {
+        "138:10": {
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -416,
-          "y:3": 380
+          "y:3": 388
         }
       }
     },
@@ -71611,176 +71666,176 @@
           "id:3": 5,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 28,
-          "y:3": 92
+          "x:3": -72,
+          "y:3": 114
         },
         "3:10": {
           "id:3": 6,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 150
+          "x:3": -54,
+          "y:3": 186
         },
         "4:10": {
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 192
+          "x:3": 30,
+          "y:3": 222
         },
         "5:10": {
           "id:3": 9,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -180,
           "y:3": 60
         },
         "6:10": {
           "id:3": 11,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 73,
-          "y:3": 228
+          "x:3": -12,
+          "y:3": 222
         },
         "7:10": {
           "id:3": 12,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -18,
-          "y:3": 102
+          "y:3": 132
         },
         "8:10": {
           "id:3": 13,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 64
+          "x:3": 12,
+          "y:3": 96
         },
         "9:10": {
           "id:3": 14,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 24
         },
         "10:10": {
           "id:3": 15,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 108
         },
         "11:10": {
           "id:3": 16,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 152
         },
         "12:10": {
           "id:3": 17,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 192
         },
         "13:10": {
           "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 260
         },
         "14:10": {
           "id:3": 20,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
+          "x:3": 156,
           "y:3": 228
         },
         "15:10": {
           "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 192
+          "x:3": -54,
+          "y:3": 258
         },
         "16:10": {
           "id:3": 25,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": -36
+          "x:3": -60,
+          "y:3": -42
         },
         "17:10": {
           "id:3": 37,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 73,
-          "y:3": 108
+          "x:3": 30,
+          "y:3": 186
         },
         "18:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 300
+          "y:3": 294
         },
         "19:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 228
+          "y:3": 258
         },
         "20:10": {
           "id:3": 50,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 64
+          "x:3": -114,
+          "y:3": 138
         },
         "21:10": {
           "id:3": 56,
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -36,
-          "y:3": 408
+          "y:3": 366
         },
         "22:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 264
+          "x:3": -78,
+          "y:3": 426
         },
         "23:10": {
           "id:3": 66,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 192
+          "x:3": -54,
+          "y:3": 222
         },
         "24:10": {
           "id:3": 141,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -180,
           "y:3": 24
         },
         "25:10": {
           "id:3": 266,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 150
+          "x:3": -54,
+          "y:3": 156
         },
         "26:10": {
           "id:3": 353,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
-          "y:3": 108
+          "x:3": 90,
+          "y:3": 138
         },
         "27:10": {
           "id:3": 368,
@@ -71793,42 +71848,42 @@
           "id:3": 370,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 114,
+          "x:3": 120,
           "y:3": 40
         },
         "29:10": {
           "id:3": 371,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 108
+          "x:3": 48,
+          "y:3": 114
         },
         "30:10": {
           "id:3": 393,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": -12
         },
         "31:10": {
           "id:3": 394,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 336
+          "x:3": -114,
+          "y:3": 390
         },
         "32:10": {
           "id:3": 401,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 30,
-          "y:3": 132
+          "x:3": 84,
+          "y:3": 52
         },
         "33:10": {
           "id:3": 405,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": 24
         },
         "34:10": {
@@ -71836,202 +71891,202 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": 372
+          "y:3": 330
         },
         "35:10": {
           "id:3": 415,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 372
+          "x:3": -150,
+          "y:3": 426
         },
         "36:10": {
           "id:3": 488,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 30,
-          "y:3": 168
+          "x:3": -84,
+          "y:3": 156
         },
         "37:10": {
           "id:3": 491,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 138
+          "x:3": -144,
+          "y:3": 40
         },
         "38:10": {
           "id:3": 495,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 260
+          "x:3": 30,
+          "y:3": 294
         },
         "39:10": {
           "id:3": 496,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 0
+          "x:3": -60,
+          "y:3": -6
         },
         "40:10": {
           "id:3": 530,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 73,
-          "y:3": 261
+          "x:3": 30,
+          "y:3": 258
         },
         "41:10": {
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 336
+          "x:3": -150,
+          "y:3": 390
         },
         "42:10": {
           "id:3": 558,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 192
+          "x:3": -54,
+          "y:3": 294
         },
         "43:10": {
           "id:3": 670,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -138,
-          "y:3": 40
+          "x:3": -108,
+          "y:3": 52
         },
         "44:10": {
           "id:3": 687,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 108
+          "x:3": -114,
+          "y:3": 258
         },
         "45:10": {
           "id:3": 692,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": 64
+          "x:3": -36,
+          "y:3": 96
         },
         "46:10": {
           "id:3": 743,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -180,
           "y:3": -12
         },
         "47:10": {
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 372
+          "x:3": -114,
+          "y:3": 426
         },
         "48:10": {
           "id:3": 775,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": 204
         },
         "49:10": {
           "id:3": 786,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": 60
         },
         "50:10": {
           "id:3": 803,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": 96
         },
         "51:10": {
           "id:3": 808,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -180,
           "y:3": 96
         },
         "52:10": {
           "id:3": 811,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -90,
-          "y:3": 300
+          "x:3": -114,
+          "y:3": 354
         },
         "53:10": {
           "id:3": 813,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 58
+          "x:3": -72,
+          "y:3": 60
         },
         "54:10": {
           "id:3": 902,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": -36
+          "x:3": -12,
+          "y:3": -72
         },
         "55:10": {
           "id:3": 909,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 67,
-          "y:3": 294
+          "x:3": -18,
+          "y:3": 180
         },
         "56:10": {
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
-          "y:3": 300
+          "x:3": -78,
+          "y:3": 390
         },
         "57:10": {
           "id:3": 921,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -180,
           "y:3": 132
         },
         "58:10": {
           "id:3": 923,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": 168
         },
         "59:10": {
           "id:3": 1015,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": 132
         },
         "60:10": {
           "id:3": 1021,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 58
+          "x:3": 48,
+          "y:3": 60
         },
         "61:10": {
           "id:3": 1023,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -228,
+          "x:3": -216,
           "y:3": 240
         },
         "62:10": {
           "id:3": 1024,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -180,
           "y:3": 168
         },
         "63:10": {
@@ -72039,28 +72094,42 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": 0
+          "y:3": -6
         },
         "64:10": {
           "id:3": 1048,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": -36
+          "x:3": 36,
+          "y:3": -42
         },
         "65:10": {
           "id:3": 1075,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 168
+          "x:3": 12,
+          "y:3": 64
         },
         "66:10": {
           "id:3": 1080,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
+          "x:3": -180,
           "y:3": 204
+        },
+        "67:10": {
+          "id:3": 1082,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 222
+        },
+        "68:10": {
+          "id:3": 1084,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 186
         }
       }
     },
