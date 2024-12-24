@@ -2684,10 +2684,6 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookLathe>.add(<metaitem:lathe.lv>);
 <ore:questbookLathe>.add(<metaitem:lathe.mv>);
 
-<ore:questbookSingleMiner>.add(<metaitem:miner.lv>);
-<ore:questbookSingleMiner>.add(<metaitem:miner.mv>);
-<ore:questbookSingleMiner>.add(<metaitem:miner.hv>);
-
 <ore:questbookAutoclave>.add(<metaitem:autoclave.lv>);
 <ore:questbookAutoclave>.add(<metaitem:autoclave.mv>);
 <ore:questbookAutoclave>.add(<metaitem:autoclave.hv>);

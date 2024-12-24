@@ -57174,6 +57174,59 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1093:10": {
+      "preRequisites:11": [
+        670
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oThis quest accepts Steam, LV, MV or HV Miner.§r\n\nThe §3Miner§r mines ore blocks directly below it in a certain radius. Higher tier Miners operate faster and have larger covered areas.\n\nIf you are using a §3Steam Miner§r, you can setup simple steam production, perhaps through §3Solar Boilers§r, or transport steam to the desired location through drums. If you are using electrical ones, you could setup some simple power production or carry it across in batteries.\n\nAt §9IV§r tier, you can build §3Drilling Plants§r instead.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 21,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Automatic Mining§r",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1093,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 21,
+              "OreDict:8": "questbookSingleMiner",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -62626,7 +62679,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
-          "y:3": 252
+          "y:3": 288
         },
         "72:10": {
           "id:3": 1088,
@@ -62641,6 +62694,13 @@
           "sizeY:3": 40,
           "x:3": 16,
           "y:3": 432
+        },
+        "74:10": {
+          "id:3": 1093,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 252
         }
       }
     },
