@@ -66647,6 +66647,64 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1084:10": {
+      "preRequisites:11": [
+        6
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You will be handling many different fluids, from §9Water§r and §9Steam§r to §9Lava§r. Some of these you might want to store, and others are collected from in-world.\n\nFor fluid collection, §bGregTech §6Cells§r is your best friend. Offering much more storage per item than a bucket, and being stackable, these allow for quick collection of in-world fluids, like Water and Lava. These come in many tiers, but currently, you can make §6Basic§r and §6Bronze§r cells.\n\nFor fluid storage, you have many choices, but currently, you can only use §bEnderIO §6Portable Tanks§r, §bGregTech §6Drums§r or §bGregTech §6Wooden Barrels§r. Portable Tanks provide less storage, but are cheaper, and don\u0027t have restrictions on fluid temeprature and type. Drums are available in multiple sizes, and allow for §aauto-output§r on the bottom side (use a §eScrewdriver§r to toggle).\n\n§aNote the restrictions on fluid temperature and fluid type for Cells, Barrels and Drums!\n\n§dNomi-CEu§r has another special feature: crafting recipes involving filled buckets can use §aany fluid container§r. Remember this when mass-crafting §6Water Sources§r or §6Cobblestone Generators§r. It can save you a lot of fiddling!\n\n§aIn such recipes, only the fluid inside the container is consumed; not the container itself.§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 78,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Managing Fluids§r",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1084,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:meta_item"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1611,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -71734,7 +71792,7 @@
           "id:3": 50,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
+          "x:3": -114,
           "y:3": 138
         },
         "21:10": {
@@ -71776,7 +71834,7 @@
           "id:3": 353,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
+          "x:3": 90,
           "y:3": 138
         },
         "27:10": {
@@ -71847,7 +71905,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
-          "y:3": 186
+          "y:3": 156
         },
         "37:10": {
           "id:3": 491,
@@ -71902,7 +71960,7 @@
           "id:3": 687,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
+          "x:3": -114,
           "y:3": 258
         },
         "45:10": {
@@ -72065,6 +72123,13 @@
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 222
+        },
+        "68:10": {
+          "id:3": 1084,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 186
         }
       }
     },
