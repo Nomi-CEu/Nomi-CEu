@@ -27854,34 +27854,34 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
+              "Count:3": 13,
+              "Damage:2": 9,
+              "OreDict:8": "",
+              "id:8": "gcym:large_multiblock_casing"
+            },
+            "2:10": {
               "Count:3": 1,
               "Damage:2": 5,
               "OreDict:8": "",
               "id:8": "extendedcrafting:trimmed"
             },
-            "2:10": {
+            "3:10": {
               "Count:3": 2,
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:meta_block_compressed_8"
             },
-            "3:10": {
+            "4:10": {
               "Count:3": 12,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:spatial_pylon"
             },
-            "4:10": {
+            "5:10": {
               "Count:3": 12,
               "Damage:2": 1,
               "OreDict:8": "",
               "id:8": "gregtech:transparent_casing"
-            },
-            "5:10": {
-              "Count:3": 14,
-              "Damage:2": 9,
-              "OreDict:8": "",
-              "id:8": "gcym:large_multiblock_casing"
             },
             "6:10": {
               "Count:3": 1,
@@ -27914,28 +27914,28 @@
               "id:8": "gcym:large_multiblock_casing"
             },
             "2:10": {
-              "Count:3": 3,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_block_compressed_27"
-            },
-            "3:10": {
               "Count:3": 1,
               "Damage:2": 4,
               "OreDict:8": "",
               "id:8": "extendedcrafting:storage"
             },
-            "4:10": {
-              "Count:3": 16,
-              "Damage:2": 1,
+            "3:10": {
+              "Count:3": 3,
+              "Damage:2": 13,
               "OreDict:8": "",
-              "id:8": "gregtech:transparent_casing"
+              "id:8": "nomilabs:meta_block_compressed_6"
             },
-            "5:10": {
+            "4:10": {
               "Count:3": 16,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:spatial_pylon"
+            },
+            "5:10": {
+              "Count:3": 16,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:transparent_casing"
             },
             "6:10": {
               "Count:3": 1,
