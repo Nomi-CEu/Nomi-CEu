@@ -4242,7 +4242,8 @@
     },
     "70:10": {
       "preRequisites:11": [
-        2
+        2,
+        187
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -43435,7 +43436,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This quest accepts an LV or MV Sifter.\n\nThe Sifter gets you Flawless and Exquisite Gems from Crushed Purified Gem Ores. Overall it results in a higher yield. Higher tiers of Sifter increase the yield further.\n\nYou will need small quantities of Flawless Emeralds for MV Emitter and Sensor components.§r",
+          "desc:8": "§oThis quest accepts an LV or MV Sifter.§r\n\nThe §3Sifter§r gets you §6Flawless and Exquisite Gems§r from §6Crushed Purified Gem Ores§r, resulting in a higher yield. Higher tiers of the Sifter increase the yield further.\n\nThe Sifter can also net you large amounts of §6Flint§r from §6Gravel§r!\n\nYou will need small quantities of §6Flawless Emeralds§r for §6MV Emitter and Sensor§r components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -47596,13 +47597,16 @@
       }
     },
     "899:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
       "preRequisites:11": [
         71
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Micro Miner missions, or in small amounts from renewable Black Granite.§r",
+          "desc:8": "§9Hydrofluoric Acid§r is a dangerous acid made by mixing §9Hydrogen§r and §9Fluorine§r. It is used in the production of §9Polytetrafluoroethylene§r, and in §6Uranium§r and §6Naquadah§r processing.\n\nFluorine is best obtained from §6Topaz§r or §6Bastnasite§r, or in renewable §6Black Granite§r, through §dEV §3Rock Breakers§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57329,6 +57333,167 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1095:10": {
+      "preRequisites:11": [
+        670
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oThis quest accepts a Normal and High Pressure Steam Rock Breaker, or a LV-MV Electric Rock Breaker.§r\n\nThe §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r and §6Stone§r.\n\nIn order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r.\n\nCurrently, you can process this through §3Forge Hammers§r; first into §6Gravel§r, which can source you some §6Flint§r; and into §6Sand§r, which you can turn into §6Glass§r, and later, §9Oxygen§r.\n\nAt the §eSteam Age§r, this isn\u0027t too useful, but you will want to set this up soon.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 19,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rock Breaker",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1095,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 19,
+              "OreDict:8": "questbookRockBreaker",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1096:10": {
+      "preRequisites:11": [
+        116
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Infinite §6Cobblestone§r contained in a single block! Easily upgradable!\n\nNo more §3Rock Breakers§r! At least for cobblestone...",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:cobblestone_generator"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Better Infinite Cobblestone",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1096,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:cobblestone_generator"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1097:10": {
+      "preRequisites:11": [
+        899,
+        1040,
+        1095
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With a §bMV §3Chemical Bath§r, your options for processing §6Cobblestone§r have greatly expanded.\n\nIt all starts with §eStone Dust§r, produced simply by placing Cobblestone in a §3Macerator§r of any tier. Then, the dust goes in a Chemical Bath with some §9Hydrofluoric Acid§r. Don\u0027t worry, you get it all the §9Fluorine§r, so you only need a little to jumpstart the system.\n\nThe resulting §6Quartzite§r is not the main goal; instead, the processing now goes into the §9Dirty Hexafluorosilicic Acid§r. By centrifuging it, you can now process §6Stone Residue§r into countless products. Some of these steps stretch way beyond §bMV§r; your stone processing will expand as you progress.\n\nCentrifuging the Dirty Hexafluorosilicic Acid also results in §9Hexafluorosilicic Acid§r, which can be electrolyzed for §6Silicon§r, and to loop back your Fluorine.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1599,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Advanced Stone Processing",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1097,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1599,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -58612,60 +58777,81 @@
           "y:3": -228
         },
         "107:10": {
+          "id:3": 899,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 208,
+          "y:3": -404
+        },
+        "108:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -144
         },
-        "108:10": {
+        "109:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 816,
           "y:3": -420
         },
-        "109:10": {
+        "110:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -364
         },
-        "110:10": {
+        "111:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -316
         },
-        "111:10": {
+        "112:10": {
           "id:3": 1052,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -364
         },
-        "112:10": {
+        "113:10": {
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -264
         },
-        "113:10": {
+        "114:10": {
           "id:3": 1083,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 688,
           "y:3": -416
         },
-        "114:10": {
+        "115:10": {
           "id:3": 1092,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -192
+        },
+        "116:10": {
+          "id:3": 1095,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 172,
+          "y:3": -444
+        },
+        "117:10": {
+          "id:3": 1097,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 172,
+          "y:3": -404
         }
       }
     },
@@ -62810,6 +62996,13 @@
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": 252
+        },
+        "75:10": {
+          "id:3": 1095,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 252
         }
       }
     },
@@ -62844,7 +63037,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 450
+          "y:3": 462
         },
         "2:10": {
           "id:3": 94,
@@ -62865,7 +63058,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
-          "y:3": 498
+          "y:3": 504
         },
         "5:10": {
           "id:3": 115,
@@ -63216,6 +63409,13 @@
           "sizeY:3": 24,
           "x:3": 588,
           "y:3": 552
+        },
+        "55:10": {
+          "id:3": 1096,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 504
         }
       }
     },

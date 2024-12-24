@@ -19,6 +19,13 @@ for (def tier : ['lv', 'mv', 'hv']) {
 	ore('questbookSingleMiner').add(metaitem("miner.${tier}"))
 }
 
+// Rock Breaker (Used in HM Only)
+for (def type : ['bronze', 'steel'])
+	ore('questbookRockBreaker').add(metaitem("steam_rock_breaker_${type}"))
+
+for (def tier : ['lv', 'mv'])
+	ore('questbookRockBreaker').add(metaitem("rock_breaker.${tier}"))
+
 // Chemical Dyes
 for (def color : EnumDyeColor.values()) {
 	ore('questbookChemicalDye').add(metaitem("dye.${color.getName()}"))
