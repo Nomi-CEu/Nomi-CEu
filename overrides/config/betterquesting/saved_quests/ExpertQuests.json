@@ -1463,7 +1463,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into some more §6Coal Coke§r will also produce §9Phenol§r, which you\u0027ll need for circuits. Yes, this oven is different from the §bCoke Oven§r in many ways!\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\nYou can §6sneak-right click§r the controller to enable the in-world preview.\n\n§2As stated in the tooltip, higher tier coils will make this faster.§r",
+          "desc:8": "The main function of this oven is to increase the fuel values of your wood and coal while also recovering some of the various potentially useful waste products.\n\nTurning §6Coal§r into some more §6Coal Coke§r will also produce §9Phenol§r, which you\u0027ll need for circuits. Yes, this oven is different from the §bCoke Oven§r in many ways!\n\nThe Pyrolyse Oven is also the source of several other fluids that can be distilled for useful ingredients.\n\n§eHatches and Buses can be replaced by Hatches and Buses of any tier!\n\n§2In GTCEu, all hatches and buses, except the Maintenance Hatch, can be shared between Multiblocks!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3605,7 +3605,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials, and improve your §6Steel§r production. The first of these materials, §6Aluminium§r, is going to be important in the immediate future.\n\nThere is a diagram of how to build the EBF in §bJEI§r. The second and third levels must be a 3x3 square shape of Coil Blocks (§6Cupronickel§r is the only type of coil block you have access to for now) with an empty center. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nHowever, the bottom and top layers are very flexible. The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least §29 §eHeatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches except Maintenance can be shared between Multiblocks!§r",
+          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials, and improve your §6Steel§r production. The first of these materials, §6Aluminium§r, is going to be important in the immediate future.\n\nSince smelting §6Aluminium§r requires MV power, you\u0027re going to have to power this with 2 LV Energy Input Hatches.\n\nThe bottom and top layers of this multiblock are very flexible! The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least 9 Heatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\n§eHatches and Buses can be replaced by Hatches and Buses of any tier!§r\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches and buses, except the Maintenance Hatch, can be shared between Multiblocks!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20811,7 +20811,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You need the §bCoke Oven§r for §9Creosote Oil§r, which can be used as fuel and for §6Treated Planks§r. Given how slow the recipes run, you might want to make more than one of these.\n\nPlacing your §6Coal§r into here will turn it into §6Coal Coke§r, which burns for twice as long, and produces extra §9Crescote Oil§r, which you can use as a further fuel source. Essentially, you create more bang for your buck!\n\nYou can also make §6Charcoal§r now! Only takes 45 seconds...\n\nAlso, remember: You can make §6Tiny Charcoal§r and §6Tiny Coke§r, which smelt exactly one item in the §bFurnace§r. Don\u0027t waste fuel!\n\nYou can use up to 5 §6Coke Oven Hatches§r for automation. Don\u0027t let the §9Crescote Oil§r fill up, or the Oven will stop!\n\nMake some §bGregTech §6Wooden Barrels§r or §6Bronze Drums§r to store all the oil, or use it in §eSteam Liquid Boilers§r and in §eFurnaces§r! Please note that using Creosote Oil in the furnace requires placing it in a bucket first.",
+          "desc:8": "You need the §bCoke Oven§r for §9Creosote Oil§r, which can be used as fuel and for §6Treated Planks§r. Given how slow the recipes run, you might want to make more than one of these.\n\n§eMultiblocks, like the Coke Oven, can share blocks! For example, if you build another Coke Oven, you can share the wall between them!§r\n\nA diagram of how to build this structure is in §bJEI§r. You can also §6sneak-right click§r the controller to enable the in-world preview. You can use up to 5 §6Coke Oven Hatches§r for automation, which replaces any Coke Oven Brick in the structure.\n\nPlacing your §6Coal§r into here will turn it into §6Coal Coke§r, which burns for twice as long, and produces extra §9Crescote Oil§r, which you can use as a further fuel source. Essentially, you create more bang for your buck!\n\nYou can also make §6Charcoal§r now! Only takes 45 seconds...\n\nAlso, remember: You can make §6Tiny Charcoal§r and §6Tiny Coke§r, which smelt exactly one item in the §bFurnace§r. Don\u0027t waste fuel!\n\nDon\u0027t let the §9Crescote Oil§r fill up, or the Oven will stop!\n\nMake some §bGregTech §6Wooden Barrels§r or §6Bronze Drums§r to store all the oil, or use it in §eSteam Liquid Boilers§r and in §eFurnaces§r! Please note that using Creosote Oil in the furnace requires placing it in a bucket first.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36622,7 +36622,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Feeding §3Steam producers§r with water by hand is a pretty silly idea.\n\nA §2Primitive Water Pump§r will take care of that for you.",
+          "desc:8": "Feeding §3Steam producers§r with water by hand is a pretty silly idea.\n\nA §2Primitive Water Pump§r will take care of that for you.\n\nA diagram of how to build this structure is in §bJEI§r. You can also §6sneak-right click§r the controller to enable the in-world preview. The location of the §ePump Output Hatch§r is fixed.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48165,7 +48165,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nA mixture of §6Clay, Brick, §cGypsum and Concrete§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. Given how slow the recipes run, you might want to eventually make more than one of these.\n\nSo far, your only available route for §6Concrete§r is adding §6Stone Dust§r, §6Quartz Sand§r, §6Clay§r and §6Calcite§r to some §6Water§r and an §6Empty Cell§r. Have fun!\n\nThis allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower). Now you can make §7LV §6Machine Hulls§r!\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
+          "desc:8": "Your first major crafting project!\n\nA mixture of §6Clay, Brick, §cGypsum and Concrete§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. Given how slow the recipes run, you might want to eventually make more than one of these.\n\nSo far, your only available route for §6Concrete§r is adding §6Stone Dust§r, §6Quartz Sand§r, §6Clay§r and §6Calcite§r to some §6Water§r and an §6Empty Cell§r. Have fun!\n\n§eMultiblocks, like the Primitive Blast Furnace, can share blocks! For example, if you build another Primitive Blast Furnace, you can share the wall between them!§r\n\nA diagram of how to build this structure is in §bJEI§r. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nThis allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower). Now you can make §7LV §6Machine Hulls§r!\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56757,7 +56757,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Slap this on your Dynamos to produce §9Steam§r instead of RF.\n\nIf you are coming from CE or Normal Mode, surprise! No turbine augment. Use §bGregTech §3Steam Turbines§r instead.\n\nAt base, produces 160 MB/t of steam. Around 10x your current steam boilers!",
+          "desc:8": "Slap this on your Dynamos to produce §9Steam§r instead of RF.\n\nYou will have to pipe the steam into §bGregTech §3Steam Turbines§r to generate power.\n\nAt base, produces 160 MB/t of steam. Around 10x your current steam boilers!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57221,6 +57221,108 @@
               "Count:3": 1,
               "Damage:2": 21,
               "OreDict:8": "questbookSingleMiner",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1094:10": {
+      "preRequisites:11": [
+        72,
+        1051
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §3Large Bronze Boiler§r greatly increases your steam production ability, producing up to 800MB/t of §9Steam§r. As usual, you have to route the steam through §3Steam Turbines§r to produce electricity.\n\nThe boiler also is more efficient with higher temperatures; keeping the boiler running for long periods of time ensures maximum efficiency. You may want to invest in a §6Sugar Cane Farm§r with §3Snad§r to keep the boiler running.\n\nThe §eFirebox Casings§r are very flexible, and you can replace any one with a §6Maintenance Hatch Muffler Hatch§r, §6Input Bus§r or §6Input Hatch§r. §6Output Hatches§r must be on the second layer up and replace a §eBronze Machine Casing§r.\n\n§eKeep in mind that you need at least 20 Bronze Machine Casings, and at least 4 Firebox Casings!\n\n§2In GTCEu, all hatches and buses, except the Maintenance Hatch, can be shared between Multiblocks!§r",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1013,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "§2Large Bronze Boiler§r",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1094,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1013,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 20,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 4,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_firebox_casing"
+            },
+            "3:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:boiler_casing"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1151,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 1181,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 1196,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "7:10": {
+              "Count:3": 1,
+              "Damage:2": 1657,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "8:10": {
+              "Count:3": 1,
+              "Damage:2": 1654,
+              "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
           },
@@ -57730,6 +57832,13 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -792,
+          "y:3": 392
+        },
+        "69:10": {
+          "id:3": 1094,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -892,
           "y:3": 392
         }
       }
