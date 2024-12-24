@@ -294,7 +294,7 @@ if (LabsModeHelper.expert) {
 		.key('E', ore('dustQuartzSand'))
 		.key('F', ore('dustClay'))
 		.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
-		.replace().register()
+		.register()
 
 	crafting.shapedBuilder()
 		.output(item('gregtech:metal_casing', 1))
