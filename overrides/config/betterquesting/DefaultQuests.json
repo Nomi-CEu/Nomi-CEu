@@ -50753,7 +50753,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2This quest accepts an LV or MV Sifter.\n\nThe Sifter gets you Flawless and Exquisite Gems from Crushed Purified Gem Ores. Overall it results in a higher yield. Higher tiers of Sifter increase the yield further.\n\nYou will need small quantities of Flawless Emeralds for MV Emitter and Sensor components.§r",
+          "desc:8": "§oThis quest accepts an LV or MV Sifter.§r\n\nThe §3Sifter§r gets you §6Flawless and Exquisite Gems§r from §6Crushed Purified Gem Ores§r, resulting in a higher yield. Higher tiers of the Sifter increase the yield further.\n\nYou will need small quantities of §6Flawless Emeralds§r for §6MV Emitter and Sensor§r components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -55862,7 +55862,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Hydrofluoric Acid is a dangerous acid made by mixing Hydrogen and Fluorine. It is used in the production of Polytetrafluoroethylene, and in Uranium and Naquadah processing.\n\nFluorine is best obtained from Topaz or Bastnasite Ore processing from their Micro Miner missions, and from processing renewable Black Granite.§r",
+          "desc:8": "§9Hydrofluoric Acid§r is a dangerous acid made by mixing §9Hydrogen§r and §9Fluorine§r. It is used in the production of §9Polytetrafluoroethylene§r, and in §6Uranium§r and §6Naquadah§r processing.\n\nFluorine is best obtained from §6Topaz§r or §6Bastnasite§r, obtained through their Micro Miner missions, or in renewable §6Black Granite§r, through §dEV §3Rock Breakers§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
