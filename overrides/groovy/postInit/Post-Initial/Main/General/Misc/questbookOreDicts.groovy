@@ -26,6 +26,11 @@ for (def type : ['bronze', 'steel'])
 for (def tier : ['lv', 'mv'])
 	ore('questbookRockBreaker').add(metaitem("rock_breaker.${tier}"))
 
+
+// Early Conveyors (for Manual Automation)
+ore('questbookConveyor').add(metaitem('ulv_covers:conveyor.module.ulv'))
+ore('questbookConveyor').add(metaitem('conveyor.module.lv'))
+
 // Chemical Dyes
 for (def color : EnumDyeColor.values()) {
 	ore('questbookChemicalDye').add(metaitem("dye.${color.getName()}"))
