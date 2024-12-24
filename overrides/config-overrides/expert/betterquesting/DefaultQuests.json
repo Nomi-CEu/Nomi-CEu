@@ -1500,50 +1500,50 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 1004,
               "OreDict:8": "",
-              "id:8": "gregtech:wire_coil"
+              "id:8": "gregtech:machine"
             },
             "1:10": {
-              "Count:3": 1,
-              "Damage:2": 1151,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 1166,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 1181,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 1196,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "5:10": {
-              "Count:3": 1,
-              "Damage:2": 1211,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            },
-            "6:10": {
               "Count:3": 10,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:machine_casing"
             },
+            "2:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_coil"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1151,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1166,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 1181,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 1196,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
             "7:10": {
               "Count:3": 1,
-              "Damage:2": 1004,
+              "Damage:2": 1211,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -3648,46 +3648,46 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
+              "Count:3": 9,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
               "Count:3": 16,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "gregtech:wire_coil"
             },
-            "2:10": {
+            "3:10": {
               "Count:3": 2,
               "Damage:2": 1211,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "3:10": {
+            "4:10": {
               "Count:3": 1,
               "Damage:2": 1151,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "4:10": {
+            "5:10": {
               "Count:3": 1,
               "Damage:2": 1166,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "5:10": {
+            "6:10": {
               "Count:3": 1,
               "Damage:2": 1181,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
-            "6:10": {
+            "7:10": {
               "Count:3": 1,
               "Damage:2": 1196,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
-            },
-            "7:10": {
-              "Count:3": 9,
-              "Damage:2": 2,
-              "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
             },
             "8:10": {
               "Count:3": 1,
