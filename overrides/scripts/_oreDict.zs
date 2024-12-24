@@ -2650,13 +2650,6 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.zpm>);
 <ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.uv>);
 
-<ore:questbookSteamBoiler>.add(<gregtech:machine:1>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:2>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:3>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:4>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:5>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:6>);
-
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.lv>); // LV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.hv>); // HV Fluid Extractor
