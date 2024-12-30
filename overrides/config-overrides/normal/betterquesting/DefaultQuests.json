@@ -1815,7 +1815,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "To make §6Dark Steel§r you\u0027ll need §6Obsidian§r, which is created by solidifying lava source blocks with water as usual. It can be mined with a §aDiamond Hammer§r/§aPickaxe§r or other diamond-level tool.\n\nAn §3HV Rock Breaker§r can create §6Obsidian§r without spending §6Lava§r later on, and §6Void Crystals§r can be used as a cheaper substitute.",
+          "desc:8": "To make §6Dark Steel§r you\u0027ll need §6Obsidian§r. You have two choices for this: you can either mine it, as usual, or simply craft fluid containers together containing §9Water§r and §9Lava§r. This is especially quick with some cells!\n\nAn §3HV Rock Breaker§r can create §6Obsidian§r without spending §6Lava§r later on, and §6Void Crystals§r can be used as a cheaper substitute.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -23686,7 +23686,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you don\u0027t want to mine Obsidian by hand, consider using a Fluid Solidifier to turn §cLava§r into §6Obsidian Blocks§r for you. The process is slow and energy intensive, though.\n\n§3Fluid Solidifiers§r are useful for lots of other things too, of course. Look through the various molds to see what you can make with one.",
+          "desc:8": "§3Fluid Solidifiers§r are useful for lots of things too, of course. Look through the various molds to see what you can make with one. §aGears§r and §aRotors§r may be the most useful.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -67160,7 +67160,7 @@
           "id:3": 548,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -712,
+          "x:3": -804,
           "y:3": 88
         },
         "49:10": {
