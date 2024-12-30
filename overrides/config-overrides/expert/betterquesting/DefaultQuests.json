@@ -6385,7 +6385,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This handy terminal allows you to see the pattern slots of all §aME Interfaces§r in your network in one place.\n\nThis means you don\u0027t have to run to your ME Interfaces each time you make a new pattern for them.",
+          "desc:8": "This handy terminal allows you to see the pattern slots of all §aME Interfaces§r in your network in one place.\n\n§eIt may be helpful to rename your Interfaces, for easy searching!§r\n\nThis means you don\u0027t have to run to your ME Interfaces each time you make a new pattern for them.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48523,7 +48523,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A variant of the §aConfiguration Interface Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "desc:8": "A variant of the §aInterface Configuration Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\n§eIt may be helpful to rename your Fluid Interfaces, for easy searching!§r\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48576,7 +48576,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A variant of the §aInterface Terminal§r which allows you to view and edit the stocking slots of interfaces on your network, as well as highlighting them in-world.\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "desc:8": "A variant of the §aInterface Terminal§r which allows you to view and edit the stocking slots of interfaces on your network, as well as highlighting them in-world.\n\n§eIt may be helpful to rename your Interfaces, for easy searching!§r\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57633,6 +57633,59 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1100:10": {
+      "preRequisites:11": [
+        51
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§oThis quest accepts a Nether Quartz Cutting Knife or a Certus Quartz Cutting Knife.§r\n\nTo prevent confusion, it may be useful to rename AE2 blocks or parts. Instead of spending XP in an §3Anvil§r, you can use a §aCutting Knife§r instead!\n\nSimply right click any placed AE2 block or part, such as an §3Interface§r, §3P2P Tunnel§r, even a §3Terminal§r, and set a custom name! Right click the text box to clear it.\n\nYour custom names will appear in your §bThe One Probe§r display, and even in some GUIs!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:certus_quartz_cutting_knife"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Renaming AE2 Parts",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1100,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "itemQuartzKnife",
+              "id:8": "appliedenergistics2:nether_quartz_cutting_knife"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -64323,7 +64376,7 @@
           "id:3": 1073,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 166,
+          "x:3": 228,
           "y:3": 390
         },
         "72:10": {
@@ -64331,6 +64384,13 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 354,
+          "y:3": 390
+        },
+        "73:10": {
+          "id:3": 1100,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
           "y:3": 390
         }
       }
