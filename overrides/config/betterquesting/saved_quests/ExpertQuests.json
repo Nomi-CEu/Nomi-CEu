@@ -40991,73 +40991,40 @@
       }
     },
     "779:10": {
-      "preRequisites:11": [
-        909
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Cobblestone can be processed into many useful materials:\n\n§6Stone Dust§r is useful for small amounts of a whole host of useful materials.\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r or §6Silicon Dioxide§r for §6Oxygen§r.\n\nFinally, §6Dust§r can be turned into §6Netherrack§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 665,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2Infinite Cobblestone§r",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
+          "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "OR",
-          "visibility:8": "ALWAYS"
+          "tasklogic:8": "AND",
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 779,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 20,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 665,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -57355,7 +57322,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest accepts a Normal and High Pressure Steam Rock Breaker, or a LV-MV Electric Rock Breaker.§r\n\nThe §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r and §6Stone§r.\n\nIn order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r.\n\nCurrently, you can process this through §3Forge Hammers§r; first into §6Gravel§r, which can source you some §6Flint§r; and into §6Sand§r, which you can turn into §6Glass§r, and later, §9Oxygen§r.\n\nAt the §eSteam Age§r, this isn\u0027t too useful, but you will want to set this up soon.",
+          "desc:8": "§oThis quest accepts a Normal and High Pressure Steam Rock Breaker, or a LV-MV Electric Rock Breaker.§r\n\nThe §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r and §6Stone§r.\n\nIn order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r.\n\nCurrently, you can process this through §3Forge Hammers§r; first into §6Gravel§r, which can source you some §6Flint§r; and into §6Sand§r, which you can turn into §6Glass§r, and later, §9Oxygen§r.\n\nAt the §eSteam Age§r, this isn\u0027t too useful, but you will want to setup a cobbleworks soon, to produce all these materials for you §apassively§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57719,7 +57686,7 @@
           "id:3": 22,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -572,
+          "x:3": -608,
           "y:3": 332
         },
         "2:10": {
@@ -57948,17 +57915,17 @@
         },
         "34:10": {
           "id:3": 402,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -444,
-          "y:3": 394
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -448,
+          "y:3": 424
         },
         "35:10": {
           "id:3": 403,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
           "x:3": -492,
-          "y:3": 394
+          "y:3": 424
         },
         "36:10": {
           "id:3": 413,
@@ -58066,137 +58033,137 @@
           "y:3": 188
         },
         "51:10": {
-          "id:3": 779,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -588,
-          "y:3": 442
-        },
-        "52:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -560,
           "y:3": 160
         },
-        "53:10": {
+        "52:10": {
           "id:3": 788,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -540,
-          "y:3": 442
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -492,
+          "y:3": 292
+        },
+        "53:10": {
+          "id:3": 789,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -448,
+          "y:3": 292
         },
         "54:10": {
-          "id:3": 789,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -540,
-          "y:3": 394
-        },
-        "55:10": {
           "id:3": 805,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 232
         },
-        "56:10": {
+        "55:10": {
           "id:3": 814,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -608,
-          "y:3": 280
+          "y:3": 276
         },
-        "57:10": {
+        "56:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 232
         },
-        "58:10": {
+        "57:10": {
           "id:3": 819,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
           "x:3": -492,
-          "y:3": 442
+          "y:3": 468
+        },
+        "58:10": {
+          "id:3": 890,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -448,
+          "y:3": 380
         },
         "59:10": {
-          "id:3": 890,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -444,
-          "y:3": 346
+          "id:3": 893,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -492,
+          "y:3": 380
         },
         "60:10": {
-          "id:3": 893,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -492,
-          "y:3": 346
-        },
-        "61:10": {
           "id:3": 903,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -744,
           "y:3": 344
         },
-        "62:10": {
+        "61:10": {
           "id:3": 919,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -444,
-          "y:3": 298
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -448,
+          "y:3": 336
+        },
+        "62:10": {
+          "id:3": 926,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -448,
+          "y:3": 468
         },
         "63:10": {
-          "id:3": 926,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -444,
-          "y:3": 440
-        },
-        "64:10": {
           "id:3": 933,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -840,
           "y:3": 272
         },
-        "65:10": {
+        "64:10": {
           "id:3": 1046,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -588,
-          "y:3": 394
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -448,
+          "y:3": 248
+        },
+        "65:10": {
+          "id:3": 1049,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -492,
+          "y:3": 336
         },
         "66:10": {
-          "id:3": 1049,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -492,
-          "y:3": 298
-        },
-        "67:10": {
           "id:3": 1050,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": 184
         },
-        "68:10": {
+        "67:10": {
           "id:3": 1051,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -792,
           "y:3": 392
         },
-        "69:10": {
+        "68:10": {
           "id:3": 1094,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 392
+        },
+        "69:10": {
+          "id:3": 1095,
+          "sizeX:3": 32,
+          "sizeY:3": 32,
+          "x:3": -492,
+          "y:3": 248
         },
         "70:10": {
           "id:3": 1098,
