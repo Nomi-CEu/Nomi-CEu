@@ -48517,7 +48517,6 @@
     },
     "915:10": {
       "preRequisites:11": [
-        62,
         494,
         729
       ],
@@ -48715,7 +48714,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you need to setup a §aQuantum Ring Multiblock§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Ring§r, §cNOT the Wireless Terminal§r!\n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you need to setup a §aQuantum Network Bridge§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Network Bridge§r, §cNOT the Wireless Terminal§r!\n\nNow, simply connect your Quantum Ring to your AE2 network! Just remember that the multiblock §conly accepts connections on the edges§r, not on the corners, or the center block.\n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56465,12 +56464,14 @@
     },
     "1079:10": {
       "preRequisites:11": [
-        918
+        267,
+        391,
+        1071
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "There are more uses to your newly-crafted §3Quantum Link Chamber§r, including being able to §amove your AE2 connection across dimensions.§r\n\nTo start, simply drop 1 §6Singularity§r and 1 §6Ender Dust§r and create an explosion nearby. This will create 2 §6Quantum Entangled Singularities§r.\n\nMake 2 §3Quantum Rings,§r 1 at your base and another at a remote location. Put 1 of each §6Entangled Singularity§r into the respective §3Quantum Rings§r and it will allow the other side to access the main network.\n\n§cMake sure to provide the other side with power in order for the connection to be formed!§r",
+          "desc:8": "With a §3Singularity§r, and a bit of setup, you can §amove your AE2 connection across dimensions and long distances.§r\n\nTo start, simply drop 1 §6Singularity§r and 1 §6Ender Dust§r and create an explosion nearby. This will create 2 §6Quantum Entangled Singularities§r. These are unique to any other entangled singularity you may create in the future, so it may be helpful to rename them.\n\nNext, you need to setup a §aQuantum Network Bridge§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nMake 2 of these multiblocks: one at your base, and one at a remote location.\n\nPut 1 §6Entangled Singularity§r into each network bridge.\n\nThere are several things you must do to ensure the connection works properly:\n\n1. §aMake sure both sides are chunkloaded.§r\n\n2. §eCheck your network connections!§r Quantum Bridges can only be connected by the edges. They cannot be connected through the corners or the middle block.\n\n3. §cProvide both sides with power.§r You only need to provide an initial power boost to form the connection, then, if both sides are chunkloaded, both should draw power from the main network. It may be helpful to place a couple §3Energy Cells§r on the other side, just in case.\n\nNow, you should be able to access your AE2 network in the new location!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56510,6 +56511,18 @@
               "Damage:2": 48,
               "OreDict:8": "",
               "id:8": "appliedenergistics2:material"
+            },
+            "1:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:quantum_ring"
+            },
+            "2:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:quantum_link"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -63848,7 +63861,7 @@
           "id:3": 64,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 156,
+          "x:3": 160,
           "y:3": 426
         },
         "6:10": {
@@ -64310,15 +64323,15 @@
           "id:3": 1073,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 162,
+          "x:3": 166,
           "y:3": 390
         },
         "72:10": {
           "id:3": 1079,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
-          "y:3": 294
+          "x:3": 354,
+          "y:3": 390
         }
       }
     }
