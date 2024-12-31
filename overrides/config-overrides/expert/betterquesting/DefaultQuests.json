@@ -3605,7 +3605,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials, and improve your §6Steel§r production. The first of these materials, §6Aluminium§r, is going to be important in the immediate future.\n\nSince smelting §6Aluminium§r requires MV power, you\u0027re going to have to power this with 2 LV Energy Input Hatches.\n\nThe bottom and top layers of this multiblock are very flexible! The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least 9 Heatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\n§eHatches and Buses can be replaced by Hatches and Buses of any tier!§r\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches and buses, except the Maintenance Hatch, can be shared between Multiblocks!§r",
+          "desc:8": "The §3Electric Blast Furnace§r is a major, major milestone in your §bGregTech§r career. It has the power to smelt more advanced materials, and improve your §6Steel§r production. The first of these materials, §6Aluminium§r, is going to be important in the immediate future.\n\nSince smelting §6Aluminium§r requires MV power, you\u0027re going to have to power this with 2 LV Energy Input Hatches. That uses a lot of energy, so it may be wise to make a §3Battery Buffer§r, if you haven\u0027t already.\n\nThe bottom and top layers of this multiblock are very flexible! The §6EBF Controller§r must be on the §ebottom layer§r of the structure, and on the §emiddle of an outer edge§r; the §6Muffler Hatch§r must be in the §eexact middle of the top layer§r. Otherwise, you can put the hatches and buses wherever you want, filling in all gaps in each layer with §6Heatproof Machine Casings§r. It\u0027s worth noting that you must §euse at least 9 Heatproof Machine Casings in your layout or the structure will not form§r.\n\nThis quest calls for a §2maintenance hatch§r, two energy hatches, a fluid input and output, and an item input and output, which is a total of 7 positions. Their specific order and placement don\u0027t matter, as long as you can access them. The 8th position is your EBF controller, leaving 9 gaps to be filled by Heatproof Machine Casings. If you did everything right, the structure will form: the colors on its hatches and casings will unify, and the controller will say \"Idling.\"\n\n§eHatches and Buses can be replaced by Hatches and Buses of any tier!§r\n\nYou\u0027ll most likely want to locate your power quite near to the EBF. It is very power hungry, and if it cannot get enough energy, progress on the current item smelting will start to regress. Be careful to ensure the EBF has enough power, and keep a Soft Hammer nearby to pause it by tapping the controller if you run out of power.\n\n§2In GTCEu, all hatches and buses, except the Maintenance Hatch, can be shared between Multiblocks!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22055,12 +22055,12 @@
     },
     "394:10": {
       "preRequisites:11": [
-        911
+        56
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Basic §aFlux Capacitors§r hold a whopping lot of energy - §a1 million RF§r - and are useful for keeping your §aRF-powered§r equipment and tools charged.\n\nPut one into your newly crafted §3Battery Buffer§r to charge it. You can then put it in your inventory to charge your items with §aRF§r.\n\n§cRF batteries such as Flux Capacitors cannot be discharged in GregTech Battery Buffers or Machines!§r\n\nFlux Capacitor is a §bBauble§r, open your inventory and look for the Baubles button, click it to reveal the additional bauble slots menu and put it into any slot you wish.\n\nFinally you can charge up all those depleted §6Dark Boots§r and §6The Ender§r swords you\u0027ve looted.",
+          "desc:8": "Basic §aFlux Capacitors§r hold a whopping lot of energy - §a1 million RF§r - and are useful for keeping your §aRF-powered§r equipment and tools charged.\n\nTo charge it, you have several options:\n\n- Placing it in a §bGregTech §3Machine§r\u0027s charger slot, which charges it at 1 amp (or at §7LV§r, 32 EU/t or 128 RF/t)\n\n- Placing it in a §bGregTech §3Battery Buffer§r, which charges it at 2 amps (or at §7LV§r, 64 EU/t or 256 RF/t)\n\n- Placing it in a §bGregTech §3Turbo Charger§r, which charges it at 4 amps (or at §7LV§r, 128 EU/t or 512 RF/t)\n\nThen, hold it and §ashift-right click§r, and it should charge your items with §aRF§r.\n\n§cRF batteries such as Flux Capacitors cannot be discharged in GregTech Battery Buffers or Machines!§r\n\nFlux Capacitor is a §bBauble§r, open your inventory and look for the Baubles button, click it to reveal the additional bauble slots menu and put it into any slot you wish.\n\nFinally you can charge up all those depleted §6Dark Boots§r and §6The Ender§r swords you\u0027ve looted.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -22116,6 +22116,24 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1376,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
@@ -48276,7 +48294,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §6Battery Buffer§r is a machine which can hold §6Batteries§r for energy storage. Each Battery accepts up to 2 amps and outputs up to 1 amp.\n\nYou can also charge §6Electric Tools§r in them.\n\n§cRF batteries such as Flux Capacitors cannot be drained by Battery Buffers!§r",
+          "desc:8": "Feel like you are wasting the power constantly produced by your §3Steam Turbines§r, or your machines using too much energy?\n\nThe §6Battery Buffer§r is a machine which can hold §6Batteries§r for energy storage. Each Battery accepts up to 2 amps and outputs up to 1 amp.\n\nYou can also charge §6Electric Tools§r and §6Flux Capacitors§r in them.\n\n§cRF batteries such as Flux Capacitors cannot be drained by Battery Buffers!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62967,7 +62985,7 @@
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
+          "x:3": 60,
           "y:3": 572
         },
         "23:10": {
@@ -63030,7 +63048,7 @@
           "id:3": 394,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -84,
           "y:3": 536
         },
         "32:10": {
@@ -63051,7 +63069,7 @@
           "id:3": 415,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -120,
           "y:3": 572
         },
         "35:10": {
@@ -63100,7 +63118,7 @@
           "id:3": 552,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
+          "x:3": -120,
           "y:3": 536
         },
         "42:10": {
@@ -63142,7 +63160,7 @@
           "id:3": 755,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -84,
           "y:3": 572
         },
         "48:10": {
@@ -63212,7 +63230,7 @@
           "id:3": 911,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
+          "x:3": 60,
           "y:3": 536
         },
         "58:10": {
