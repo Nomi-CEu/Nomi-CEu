@@ -16155,7 +16155,8 @@
         250,
         258,
         330,
-        411
+        411,
+        1035
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -17316,9 +17317,17 @@
       }
     },
     "256:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
       "preRequisites:11": [
         250,
         257,
+        286,
         330,
         411
       ],
@@ -22612,9 +22621,16 @@
       }
     },
     "335:10": {
+      "preRequisiteTypes:7": [
+        0,
+        0,
+        1,
+        0
+      ],
       "preRequisites:11": [
         196,
         334,
+        1034,
         1038
       ],
       "properties:10": {
@@ -32251,11 +32267,13 @@
     "519:10": {
       "preRequisiteTypes:7": [
         0,
-        2
+        2,
+        0
       ],
       "preRequisites:11": [
         99,
-        287
+        287,
+        1035
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -33387,8 +33405,7 @@
     "535:10": {
       "preRequisites:11": [
         534,
-        1035,
-        1036
+        1035
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -45968,7 +45985,8 @@
       "preRequisites:11": [
         535,
         802,
-        846
+        846,
+        1035
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -53478,7 +53496,9 @@
     "861:10": {
       "preRequisites:11": [
         535,
-        848
+        848,
+        1034,
+        1038
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -56336,7 +56356,7 @@
             "id:8": "gregtech:machine"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "§2Large Circuit Assembler§r",
@@ -63364,7 +63384,7 @@
         286,
         325,
         844,
-        1037
+        1036
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -70481,10 +70501,10 @@
         },
         "70:10": {
           "id:3": 533,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -120,
-          "y:3": 300
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 312
         },
         "71:10": {
           "id:3": 534,
