@@ -12141,7 +12141,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Holding one of these reveals §aTravel Anchors§r and §aTelepads§r in range.\n\nShift + right-click after aiming to warp to one, or point it anywhere to teleport forward a short distance (works through walls).\n\nThese are powered with RF, and can be further enchanted through §bEnderIO§r\u0027s enchanting mechanics.\n\nThe §6Vibrant Crystal§r will require an §3Autoclave§r.",
+          "desc:8": "Holding one of these reveals §aTravel Anchors§r and §aTelepads§r in range.\n\nShift + right-click after aiming to warp to one, or point it anywhere to teleport forward a short distance (works through walls).\n\nThese are powered with RF, and can be further enchanted through §bEnderIO§r\u0027s enchanting mechanics.\n\nAlternatively, you can search the §eLost Cities§r or make a Travel §6Dark Steel§r Upgrade, and apply it to your\n§bEnderIO§r tools.\n\nThe §6Vibrant Crystal§r will require an §3Autoclave§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12159,7 +12159,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Staff of Traveling",
+          "name:8": "Travelling Around in Style",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -12193,6 +12193,28 @@
                   "energy:3": 1000000,
                   "level:3": 3
                 }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "enderio:item_dark_steel_upgrade",
+              "tag:10": {
+                "enderio:dsu:8": "enderio:travel",
+                "enderio:enabled:1": 1
               }
             }
           },
@@ -12546,7 +12568,7 @@
     },
     "219:10": {
       "preRequisites:11": [
-        35
+        213
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -40245,7 +40267,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §einterdimensional teleportation§r, you can travel to and from the Moon without launching a rocket each way.",
+          "desc:8": "Now that you have §einterdimensional teleportation§r, you can travel to and from the Moon without launching a rocket each way.\n\nWhether you do this by §asetting FTB Homes§r, through §bEnderIO §6Telepads§r, or §bDraconic Evolution §6Dislocators§r is up to you!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48590,7 +48612,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system.\n\nYou can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away. However, you can put §6Wireless Boosters§r into the §6Wireless Access Point§r to increase the range. A better, but more expensive solution, that allows access from anywhere, will be explained in the following quest, \u0027AE2 Everywhere!\u0027.",
+          "desc:8": "§oNote: this quest accepts the Wireless Terminal, Wireless Crafting Terminal, Wireless Pattern Terminal or Wireless Fluid Terminal.§r\n\nAccessing §bApplied Energistics 2§r wirelessly saves a huge amount of time, and is highly recommended to set up.\n\nFirst, you will need a §6Security Terminal§r, and a §6Wireless Access Point§r. Connect both to your network. Like the §6Terminal§r, the Wireless Access Point is a §emicropart§r, so you must place it on a §6ME Cable§r.\n\nNext, you need a §6Wireless Terminal§r, or its varients. You can have as many Wireless Terminals or their varients on the system at the same time.\n\nFinally, put your §6Wireless Terminal§r into the §6Security Terminal§r. This will connect it to the system.\n\nYou can equip these as a bauble, and use a hotkey to open them. Search \u0027Applied Energistics\u0027 as a §ecategory§r to see and edit these hotkeys.\n\nYou can only go 16 blocks away. However, you can put §6Wireless Boosters§r into the §6Wireless Access Point§r to increase the range. A better, but more expensive solution, that allows access from anywhere, will be explained in the following quest, \u0027AE2 Everywhere!\u0027.\n\nYou also need to recharge your terminal manually. Although you can make this chore happen less often with a §6Flux Capacitor§r, wireless charging would be nice... Check out the §aWireless Charging Side Quest§r in §aMid Game§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48664,7 +48686,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you need to setup a §aQuantum Network Bridge§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Network Bridge§r, §cNOT the Wireless Terminal§r!\n\nNow, simply connect your Quantum Ring to your AE2 network! Just remember that the multiblock §conly accepts connections on the edges§r, not on the corners, or the center block.\n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!",
+          "desc:8": "Accessing AE2 from anywhere is a bit more expensive and complex, but its well worth it.\n\nFirstly, you need to setup a §aQuantum Network Bridge§r. Build a 3 by 3 vertical ring with your §6Quantum Rings§r, leaving a hole in the middle. Finally, stick your §6Quantum Link Chamber§r in the hole, and connect it to your ME system. If you built it correctly, the textures of the rings should combine, leaving you with a §aMultiblock§r.\n\nWith your 2 Singularities, put it into an §3Inscriber§r or an §3Advanced Inscriber§r with a §6Advanced Card§r, resulting in a §6Quantum Link Card§r. Finally, put that into the §6Quantum Link Chamber§r of the §aQuantum Network Bridge§r, §cNOT the Wireless Terminal§r!\n\nNow, simply connect your Quantum Ring to your AE2 network! Just remember that the multiblock §conly accepts connections on the edges§r, not on the corners, or the center block.\n\nYou should be good to go! You can now access AE2 anywhere, including in different dimensions!\n\nIf you are still manually charging your terminal... check out the §aWireless Charging Side Quest§r in §aMid Game§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57704,6 +57726,82 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1102:10": {
+      "preRequisiteTypes:7": [
+        1,
+        1
+      ],
+      "preRequisites:11": [
+        390,
+        542
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You don\u0027t want to keep sticking your §6Flux Capacitor§r into a charger? You want §eWireless Charging§r?\n\nWell, you have two options: a §3Energetic Infuser§r with a §6Parabolic Flux Coupling§r augment, from §bThermal Expansion§r, or a §6Wireless Antenna§r from §bEnderIO§r.\n\n§6Parabolic Flux Coupling§r charges §6Flux Capacitors§r in your inventory, up to §a32 blocks away§r from the infuser. It can charge your capacitors at the max charge speed (e.g. 9k RF/t for reinforced, 16k RF/t for signalum, and 25k RF/t for resonant), but it can only charge one capacitor, per player, at a time.\n\n§6Wireless Antenna§r charges any item in your inventory, up to §a24 blocks away§r. When you unlock §6Trinium Coils§r and §6Dark Soularium§r, you can upgrade this to a §6Enhanced Wireless Antenna§r, which has a range of 64 blocks, and even add §6Wireless Antenna Extensions§r to each side, increasing the range to a whopping 192 blocks. However, the transfer speed is limited to 10k RF/t per player.\n\n§cNote that the Wireless Antenna only accepts energy from the bottom.§r\n\nPick your poison: more transfer speed, or more range? Of course, you could use both, but do you really need that much power?",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 402,
+            "OreDict:8": "",
+            "id:8": "thermalexpansion:augment"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Wireless Charging",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1102,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 402,
+              "OreDict:8": "",
+              "id:8": "thermalexpansion:augment"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "enderio:block_normal_wireless_charger"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -58658,412 +58756,419 @@
           "y:3": -336
         },
         "59:10": {
+          "id:3": 219,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 740,
+          "y:3": -300
+        },
+        "60:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -364
         },
-        "60:10": {
+        "61:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 112,
           "y:3": -148
         },
-        "61:10": {
+        "62:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -520
         },
-        "62:10": {
+        "63:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -104
         },
-        "63:10": {
+        "64:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 420,
           "y:3": -420
         },
-        "64:10": {
+        "65:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -192
         },
-        "65:10": {
+        "66:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -560
         },
-        "66:10": {
+        "67:10": {
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -556
         },
-        "67:10": {
+        "68:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -448
         },
-        "68:10": {
+        "69:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -112
         },
-        "69:10": {
+        "70:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -148
         },
-        "70:10": {
+        "71:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 656,
           "y:3": -184
         },
-        "71:10": {
+        "72:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 376,
           "y:3": -376
         },
-        "72:10": {
+        "73:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -4
         },
-        "73:10": {
+        "74:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 420,
           "y:3": -376
         },
-        "74:10": {
+        "75:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -148
         },
-        "75:10": {
+        "76:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -268
         },
-        "76:10": {
+        "77:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 376,
           "y:3": -420
         },
-        "77:10": {
+        "78:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -364
         },
-        "78:10": {
+        "79:10": {
           "id:3": 728,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 248,
           "y:3": -364
         },
-        "79:10": {
+        "80:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 248,
           "y:3": -400
         },
-        "80:10": {
+        "81:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -400
         },
-        "81:10": {
+        "82:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 16,
           "y:3": -228
         },
-        "82:10": {
+        "83:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -124
         },
-        "83:10": {
+        "84:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 864,
           "y:3": -336
         },
-        "84:10": {
+        "85:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -268
         },
-        "85:10": {
+        "86:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 296,
           "y:3": -216
         },
-        "86:10": {
+        "87:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -72
         },
-        "87:10": {
+        "88:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 364,
           "y:3": -104
         },
-        "88:10": {
+        "89:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -164
         },
-        "89:10": {
+        "90:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 676,
           "y:3": -316
         },
-        "90:10": {
+        "91:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -60
         },
-        "91:10": {
+        "92:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 28,
           "y:3": -364
         },
-        "92:10": {
+        "93:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -228
         },
-        "93:10": {
+        "94:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 504,
           "y:3": -232
         },
-        "94:10": {
+        "95:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": -264
         },
-        "95:10": {
+        "96:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": -192
         },
-        "96:10": {
+        "97:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 488,
           "y:3": -192
         },
-        "97:10": {
+        "98:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 568,
           "y:3": -264
         },
-        "98:10": {
+        "99:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -264
         },
-        "99:10": {
+        "100:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -268
         },
-        "100:10": {
+        "101:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -268
         },
-        "101:10": {
+        "102:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -520
         },
-        "102:10": {
+        "103:10": {
           "id:3": 891,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -268
         },
-        "103:10": {
+        "104:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -404
         },
-        "104:10": {
+        "105:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -364
         },
-        "105:10": {
+        "106:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": -192
         },
-        "106:10": {
+        "107:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -228
         },
-        "107:10": {
+        "108:10": {
           "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -404
         },
-        "108:10": {
+        "109:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -144
         },
-        "109:10": {
+        "110:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 816,
           "y:3": -420
         },
-        "110:10": {
+        "111:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -364
         },
-        "111:10": {
+        "112:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -316
         },
-        "112:10": {
+        "113:10": {
           "id:3": 1052,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -364
         },
-        "113:10": {
+        "114:10": {
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -264
         },
-        "114:10": {
+        "115:10": {
           "id:3": 1083,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 688,
           "y:3": -416
         },
-        "115:10": {
+        "116:10": {
           "id:3": 1092,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -192
         },
-        "116:10": {
+        "117:10": {
           "id:3": 1095,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -444
         },
-        "117:10": {
+        "118:10": {
           "id:3": 1097,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -59655,7 +59760,7 @@
           "id:3": 549,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -792,
+          "x:3": -912,
           "y:3": 452
         },
         "81:10": {
@@ -59676,7 +59781,7 @@
           "id:3": 580,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -732,
+          "x:3": -852,
           "y:3": 452
         },
         "84:10": {
@@ -59830,7 +59935,7 @@
           "id:3": 783,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -612,
+          "x:3": -732,
           "y:3": 452
         },
         "106:10": {
@@ -59961,10 +60066,10 @@
         },
         "124:10": {
           "id:3": 859,
-          "sizeX:3": 48,
-          "sizeY:3": 48,
-          "x:3": -500,
-          "y:3": 384
+          "sizeX:3": 64,
+          "sizeY:3": 64,
+          "x:3": -508,
+          "y:3": 376
         },
         "125:10": {
           "id:3": 888,
@@ -59977,7 +60082,7 @@
           "id:3": 892,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": -672,
+          "x:3": -792,
           "y:3": 452
         },
         "127:10": {
@@ -60063,6 +60168,13 @@
           "sizeY:3": 24,
           "x:3": -708,
           "y:3": 364
+        },
+        "139:10": {
+          "id:3": 1102,
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": -672,
+          "y:3": 452
         }
       }
     },
@@ -63362,272 +63474,279 @@
           "y:3": 420
         },
         "17:10": {
+          "id:3": 213,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 636,
+          "y:3": 384
+        },
+        "18:10": {
           "id:3": 214,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 588
         },
-        "18:10": {
+        "19:10": {
           "id:3": 216,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 522,
           "y:3": 588
         },
-        "19:10": {
+        "20:10": {
           "id:3": 217,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 624
         },
-        "20:10": {
+        "21:10": {
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 636,
           "y:3": 420
         },
-        "21:10": {
+        "22:10": {
           "id:3": 220,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 564,
           "y:3": 336
         },
-        "22:10": {
+        "23:10": {
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": 336
         },
-        "23:10": {
+        "24:10": {
           "id:3": 222,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 300
         },
-        "24:10": {
+        "25:10": {
           "id:3": 223,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 504,
           "y:3": 372
         },
-        "25:10": {
+        "26:10": {
           "id:3": 224,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 336
         },
-        "26:10": {
+        "27:10": {
           "id:3": 225,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 300
         },
-        "27:10": {
+        "28:10": {
           "id:3": 226,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 372
         },
-        "28:10": {
+        "29:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": 336
         },
-        "29:10": {
+        "30:10": {
           "id:3": 229,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 546
         },
-        "30:10": {
+        "31:10": {
           "id:3": 232,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 552,
           "y:3": 492
         },
-        "31:10": {
+        "32:10": {
           "id:3": 262,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": 546
         },
-        "32:10": {
+        "33:10": {
           "id:3": 275,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 306,
           "y:3": 474
         },
-        "33:10": {
+        "34:10": {
           "id:3": 276,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 480
         },
-        "34:10": {
+        "35:10": {
           "id:3": 384,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 588
         },
-        "35:10": {
+        "36:10": {
           "id:3": 385,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": 588
         },
-        "36:10": {
+        "37:10": {
           "id:3": 386,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 468,
           "y:3": 486
         },
-        "37:10": {
+        "38:10": {
           "id:3": 387,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 546
         },
-        "38:10": {
+        "39:10": {
           "id:3": 388,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": 546
         },
-        "39:10": {
+        "40:10": {
           "id:3": 389,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 396,
           "y:3": 486
         },
-        "40:10": {
+        "41:10": {
           "id:3": 395,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 606,
           "y:3": 588
         },
-        "41:10": {
+        "42:10": {
           "id:3": 510,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 684,
           "y:3": 420
         },
-        "42:10": {
+        "43:10": {
           "id:3": 511,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 708,
           "y:3": 384
         },
-        "43:10": {
+        "44:10": {
           "id:3": 539,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 516
         },
-        "44:10": {
+        "45:10": {
           "id:3": 754,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 660,
           "y:3": 456
         },
-        "45:10": {
+        "46:10": {
           "id:3": 757,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 264,
           "y:3": 672
         },
-        "46:10": {
+        "47:10": {
           "id:3": 758,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 672
         },
-        "47:10": {
+        "48:10": {
           "id:3": 759,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 732,
           "y:3": 420
         },
-        "48:10": {
+        "49:10": {
           "id:3": 760,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 660,
           "y:3": 672
         },
-        "49:10": {
+        "50:10": {
           "id:3": 761,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 660,
           "y:3": 552
         },
-        "50:10": {
+        "51:10": {
           "id:3": 762,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 654,
           "y:3": 498
         },
-        "51:10": {
+        "52:10": {
           "id:3": 763,
           "sizeX:3": 18,
           "sizeY:3": 18,
           "x:3": 637,
           "y:3": 459
         },
-        "52:10": {
+        "53:10": {
           "id:3": 922,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 264,
           "y:3": 720
         },
-        "53:10": {
+        "54:10": {
           "id:3": 1074,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 540,
           "y:3": 552
         },
-        "54:10": {
+        "55:10": {
           "id:3": 1075,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 588,
           "y:3": 552
         },
-        "55:10": {
+        "56:10": {
           "id:3": 1096,
           "sizeX:3": 24,
           "sizeY:3": 24,
