@@ -7677,7 +7677,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This handy terminal allows you to see the pattern slots of all §aME Interfaces§r in your network in one place.\n\n§eIt may be helpful to rename your Interfaces, for easy searching! Check out the Cutting Knife for this job.§r\n\nThis means you don\u0027t have to run to your ME Interfaces each time you make a new pattern for them.",
+          "desc:8": "This handy terminal allows you to see the pattern slots of all §aME Interfaces§r in your network in one place.\n\n§eIt may be helpful to rename your Interfaces, for easy searching!§r\n\nThis means you don\u0027t have to run to your ME Interfaces each time you make a new pattern for them.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30334,7 +30334,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Most plates are made in the Bending Machine instead of here. (Technically this was the case in CE, but this modpack transferred its recipes to the Compressor.)§r\n\nHowever, this machine will still see use for compressing §eNuggets§r into §eIngots§r, §eIngots§r into §eBlocks§r, §eGem Dusts§r into §ePlates§r (such as §6Certus Quartz§r), as well as various other useful recipes.",
+          "desc:8": "§2Most plates are made in the Bending Machine instead of here. (Technically this was the case in CE, but this modpack transferred its recipes to the Compressor.)§r\n\nHowever, this machine will still see use for compressing §eNuggets§r into §eIngots§r, §eIngots§r into §eBlocks§r, §eGem Dusts§r into §ePlates§r (such as §6Certus Quartz§r), as well as various other useful recipes.\n\nRight now, its probably most useful to you for turning §6Sticky Resin§r into §6Rubber Sheets§r more efficiently.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56967,7 +56967,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A variant of the §aInterface Configuration Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\n§eIt may be helpful to rename your Fluid Interfaces, for easy searching! Check out the Cutting Knife for this job.§r\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "desc:8": "A variant of the §aInterface Configuration Terminal§r which allows you to view and edit the stocking slots of fluid interfaces on your network, as well as highlighting them in-world.\n\n§eIt may be helpful to rename your Fluid Interfaces, for easy searching!§r\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57033,7 +57033,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A variant of the §aInterface Terminal§r which allows you to view and edit the stocking slots of interfaces on your network, as well as highlighting them in-world.\n\n§eIt may be helpful to rename your Interfaces, for easy searching! Check out the Cutting Knife for this job.§r\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
+          "desc:8": "A variant of the §aInterface Terminal§r which allows you to view and edit the stocking slots of interfaces on your network, as well as highlighting them in-world.\n\n§eIt may be helpful to rename your Interfaces, for easy searching!§r\n\nUseful for managing passive automation setups, and finding them when your base gets large.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -65467,7 +65467,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Want to make configuring your §6P2P Tunnels§r easier?\n\nThis pack has §bBetter(er) P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nTo configure P2P tunnels, you need to select a P2P tunnel. This can be done in the GUI by clicking on its entry, or it can be done in-world by §aright-clicking§r on a P2P tunnel whilst holding the card.\n\nOnce a tunnel is selected, it will be highlighted in §agreen§r.\n\nConnected outputs are highlighted in §6orange§r, and connected inputs are highlighted in §9blue§r.\n\nAn incorrect setup will show in §cred§r (P2P devices that are unbound, or have no input/output).\n\n§aLeft-click§r on the name of the P2P to rename it.\n\n§aRight-click§r on a P2P entry to change its type, or to change it from an input to an output (or vice versa).\n\n§aHover§r over the left of a P2P entry to see its position, facing, and connection information.\n\nOn the left, you have several buttons to alter the behaviour of the card. The most significant ones are:\n\nThe §eMode Changer§r, which changes how the card connects P2Ps. Hover over the button to see what that particular mode does. There are 5 modes, each for different use cases. Click the button to cycle through modes.\n\nThe §eSort Changer§r, which allows you to sort by §bdistance§r or §bname§r. Default sorting will be best for most situations, but distance can also be useful.\n\nYou can also §afilter§r the P2P list, through the search bar on the top. You can simply filter by name, or you can use tags to refine your search. Hover over the search bar to see the full list, but the most helpful ones may be §b@in§r and §b@out§r to filter input and outputs, and §b@distless\u003d\u003cdistance\u003e§r to see all P2Ps within that distance.\n\n§eIt may be helpful to rename your P2Ps, to avoid confusion! Whether you do this through the GUI, or with a cutting knife, is up to you!§r",
+          "desc:8": "Want to make configuring your §6P2P Tunnels§r easier?\n\nThis pack has §bBetter(er) P2P§r, which adds the §6Advanced Memory Card§r. Using it, you can §aright-click§r on any ME device or cable that is attached to the current system. This will allow you to see all your current P2P connections without having to search for your tunnels.\n\nTo configure P2P tunnels, you need to select a P2P tunnel. This can be done in the GUI by clicking on its entry, or it can be done in-world by §aright-clicking§r on a P2P tunnel whilst holding the card.\n\nOnce a tunnel is selected, it will be highlighted in §agreen§r.\n\nConnected outputs are highlighted in §6orange§r, and connected inputs are highlighted in §9blue§r.\n\nAn incorrect setup will show in §cred§r (Usually P2P device without input).\n\n§aLeft-click§r on the name of the P2P to rename it.\n\n§aRight-click§r on a P2P entry to change its type, or to change it from an input to an output (or vice versa).\n\nThe card has 5 modes accessible in the §3GUI§r, switchable via the second button to the left. These are:\n\n§lBind to Output:§r\nThis mode sets the §aselected P2P§r as the §9input§r of the §bbind target§r (the entry you pressed §eBind§r on). Note that their input/output state and type are changed as necessary.\n\nIn this mode, the §bbind target§r can be any P2P on a different frequency than the §aselected P2P§r.\n\nNote that the §aselected P2P§r becomes an §9input§r, and the §bbind target§r becomes an §aoutput§r.\n\n§lBind to Input:§r\nThis is the same as §oBind to Output§r, except the §aselected P2P§r becomes an §6output§r, and the §bbind target§r becomes an §9input§r.\n\n§lAdd as Input:§r\nThis simply adds the §aselected P2P§r as one of the §bbind target\u0027s §9inputs§r.\n\nIn this mode, the §bbind target§r must have the same type as the §aselected P2P§r, as well as on a different frequency.\n\nNote that the §bbind target is not changed. The §aselected P2P§r becomes an §9input§r.\n\n§lAdd as Output:§r\nThis is the same as §oAdd as Input§r, but the §aselected P2P§r becomes an §6output§r.\n\n§lUnbind:§r\nThis mode simply allows you to unbind P2P entries. The §aselected P2P§r is not changed.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

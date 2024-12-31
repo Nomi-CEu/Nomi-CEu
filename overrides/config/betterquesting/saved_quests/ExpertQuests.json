@@ -3385,7 +3385,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With §dEU§r power rolling in, all you need now are some §bGregTech§r machines to hook up to the cables!\n\nBut first: a warning:\n\nUnlike §aRF power§r, which is safe to transport in any §6conduit§r, §aEU power §erequires caution§r. The key is to always §amatch or exceed§r the §eVoltage§r and §eAmperage§r of your power source with your §6cables§r and machines.\n\n§cNEVER§r hook up your Energy Converter to a cable that has fewer §eAmps§r than your Energy Converter or Battery Buffer generates. For example, you must use §64x cable§r for a 4A Converter, and §616x cable§r for a filled 16-slot Battery Buffer. Cables with insufficient amperage rating will §cburn and be destroyed§r.\n\n§2If you are coming from CE - Both the multiple-amp-source and multiple-face-input bugs from CE have been fixed, the energy network now works as intended.§r\n\nSimilarly, your cable must match or exceed the §eVoltage§r of your machines, or they will §cburn and be destroyed§r.\n\n§cNEVER§r connect a machine to excessive §eVoltage§r or it will §cvaporize§r. Touching a §6non-superconductor wire§r with connected §aEU power§r will §cinjure or kill you§r, so for your safety, §euse §6cables or superconductors §einstead§r!\n\n§eNote: superconductors, or wires with 0 loss, have no cable variant. Touching superconductor wires will NOT damage you!§r\n\nFor machines, although you can get whatever you want, we recommend you first get:\n\nThe §6Wiremill§r, which makes crafting wires much, much easier.\n\nAfterwards, you can also consider:\n\n- The §2Bending Machine§r, which makes 1 plate from one ingot.\n- The §2Electrolyzer, and then the Arc Furnace§r, which makes producing §6Wrought Iron§r and §6Glass§r much easier.\n\nOn to the next chapter!",
+          "desc:8": "With §dEU§r power rolling in, all you need now are some §bGregTech§r machines to hook up to the cables!\n\nBut first: a warning:\n\nUnlike §aRF power§r, which is safe to transport in any §6conduit§r, §aEU power §erequires caution§r. The key is to always §amatch or exceed§r the §eVoltage§r and §eAmperage§r of your power source with your §6cables§r and machines.\n\n§cNEVER§r hook up your Energy Converter to a cable that has fewer §eAmps§r than your Energy Converter or Battery Buffer generates. For example, you must use §64x cable§r for a 4A Converter, and §616x cable§r for a filled 16-slot Battery Buffer. Cables with insufficient amperage rating will §cburn and be destroyed§r.\n\n§2If you are coming from CE - Both the multiple-amp-source and multiple-face-input bugs from CE have been fixed, the energy network now works as intended.§r\n\nSimilarly, your cable must match or exceed the §eVoltage§r of your machines, or they will §cburn and be destroyed§r.\n\n§cNEVER§r connect a machine to excessive §eVoltage§r or it will §cvaporize§r. Touching a §6non-superconductor wire§r with connected §aEU power§r will §cinjure or kill you§r, so for your safety, §euse §6cables or superconductors §einstead§r!\n\n§eNote: superconductors, or wires with 0 loss, have no cable variant. Touching superconductor wires will NOT damage you!§r\n\nFor machines, although you can get whatever you want, we recommend you first get:\n\nThe §6Wiremill§r, which makes crafting wires much, much easier.\n\nAfterwards, you can also consider:\n\n- The §2Bending Machine§r, which makes 1 plate from one ingot.\n- The §2Electrolyzer, and then the Arc Furnace§r, which makes producing §6Wrought Iron§r and §6Glass§r much easier.\n\nYou can also make an Electric version of all your Steam Machines! Recipes will take the same duration as a High Pressure machine, but the auto-output feature, and the lack of steam usage and a steam vent, may make them more convenient to use.\n\nOn to the next chapter!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15321,7 +15321,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNote: this quest accepts LV, MV and HV Macerators.\n\n§3Macerators§r are useful for grinding things down, replacing the §aMortars§r you\u0027ve needed until now. This is an important machine you will be using for many things in the future.\n\nYou don\u0027t really need a LV one, as you can use the superior §3Steam Grinder§r. LV or MV ones could be used for automation. However, HV ones provide chanced output, extremely important for §eOre Processing§r and other processes.\n\nOne useful application for a Macerator in the near future is grinding down §6Clay§r or §6Terracotta§r into §6Clay Dust§r.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.\n\nMacerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
+          "desc:8": "§oNote: this quest accepts LV, MV and HV Macerators.\n\n§3Macerators§r are useful for grinding things down. This is an important machine you will be using for many things in the future.\n\nYou don\u0027t really need a LV one, as you can use the superior §3Steam Grinder§r, or just your existing §3Steam Macerator§r. LV or MV ones could be used for automation. However, HV ones provide chanced output, extremely important for §eOre Processing§r and other processes.\n\nBesides not having limited durability, a key advantage of Macerators over Mortars is the chance to get additional materials when grinding things down. These are called §ebyproducts§r, and HV or better Macerators have three slots instead of one so byproducts can appear.\n\nWhen reading Macerator recipes in §bJEI§r, you can tell which outputs are byproducts by seeing if §ethe tooltip tells you it has a chance to appear§r: guaranteed outputs do not list a chance. §2The chance increases by a certain amount for each tier of machine you have above the tier of recipe. This chance is also listed in the tooltip.\n\nMacerators can now also recycle your old Machines for some extra materials.§r\n\nFinally, a Macerator will only start processing if there is room for all possible outputs. Make sure you empty them so they can keep working.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -26162,25 +26162,23 @@
       }
     },
     "489:10": {
-      "preRequisites:11": [
-        145
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Most plates are made in the Bending Machine instead of here. (Technically this was the case in CE, but this modpack transferred its recipes to the Compressor.)§r\n\nHowever, this machine will still see use for compressing §eNuggets§r into §eIngots§r, §eIngots§r into §eBlocks§r, §eGem Dusts§r into §ePlates§r (such as §6Certus Quartz§r), as well as various other useful recipes.",
+          "desc:8": "Unused Gap Quest. Prevents Overriding Of IDs.",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 230,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:machine"
+            "id:8": "minecraft:air"
           },
           "ignoresview:1": 0,
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "§2LV Compressor§r",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -26189,29 +26187,15 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 489,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 230,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -35745,7 +35729,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Steam Machines can run recipes listed as up to §d32 EU/t§r.\n\n§cThey MUST have their vent side unobstructed!§r Use a §6Wrench§r to change the venting side.\n\n- §3Forge Hammer§r: Allows you to make §62 plates§r from §63 ingots§r.\n\n- §3Macerator§r: Allows you to grind §6Clay§r, and other ingots, into their respective §eDusts§r.\n\n- §3Compressor§r: Allows you to make §6Compressed Fireclay§r, and other materials.\n\n- §3Alloy Smelter§r: Allows you to make §6Bronze§r more efficiently, as well as other useful alloys like §6Invar§r. Also allows you to cast §6Glass§r, and make components like §eGears§r more easily, and make §6Rubber Sheets§r, with Molds.\n\nYou can upgrade them to HP version with Steel, which doubles their speed.\n\nIf the machine sounds start to get on your nerves, you can mute GT machines with a GT Hammer.",
+          "desc:8": "Steam Machines can run recipes listed as up to §d32 EU/t§r, or at §8ULV§r and §7LV§r voltages. However, the recipes will take twice as long as the duration listed.\n\n§cThey MUST have their vent side unobstructed!§r Use a §6Wrench§r to change the venting side.\n\n- §3Forge Hammer§r: Allows you to make §62 plates§r from §63 ingots§r.\n\n- §3Macerator§r: Allows you to grind §6Clay§r, and other ingots, into their respective §eDusts§r.\n\n- §3Compressor§r: Allows you to make §6Compressed Fireclay§r, and other materials.\n\n- §3Alloy Smelter§r: Allows you to make §6Bronze§r more efficiently, as well as other useful alloys like §6Invar§r. Also allows you to cast §6Glass§r, and make components like §eGears§r more easily, and make §6Rubber Sheets§r, with Molds.\n\nYou can upgrade them to HP version with Steel, which doubles their speed.\n\nIf the machine sounds start to get on your nerves, you can mute GT machines with a GT Hammer.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48136,7 +48120,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nA mixture of §6Clay, Brick, §cGypsum and Concrete§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. Given how slow the recipes run, you might want to eventually make more than one of these.\n\nSo far, your only available route for §6Concrete§r is adding §6Stone Dust§r, §6Quartz Sand§r, §6Clay§r and §6Calcite§r to some §6Water§r and an §6Empty Cell§r. Have fun!\n\n§aNote that the empty cells are consumed in the craft, but not the fluid container storing Water.\n\n§eMultiblocks, like the Primitive Blast Furnace, can share blocks! For example, if you build another Primitive Blast Furnace, you can share the wall between them!§r\n\nA diagram of how to build this structure is in §bJEI§r. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nThis allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower). Now you can make §7LV §6Machine Hulls§r!\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
+          "desc:8": "Your first major crafting project!\n\nA mixture of §6Clay, Brick, §cGypsum and Concrete§r produces §6Firebricks§r, used in building the §3Primitive Blast Furnace§r. Given how slow the recipes run, you might want to eventually make more than one of these.\n\nSo far, your only available route for §6Concrete§r is adding §6Stone Dust§r, §6Quartz Sand§r, §6Clay§r and §6Calcite§r to some §6Water§r and an §6Empty Cell§r. Have fun!\n\n§aNote that the empty cells are consumed in the craft, but not the fluid container storing Water.\n\n§eMultiblocks, like the Primitive Blast Furnace, can share blocks! For example, if you build another Primitive Blast Furnace, you can share the wall between them!§r\n\nA diagram of how to build this structure is in §bJEI§r. You can also §6sneak-right click§r the controller to enable the in-world preview.\n\nThis allows you to make §6Steel§r from §6Wrought Iron§r (or with §6Iron§r, but its slower). Now you can make §7LV §6Machine Hulls§r, and §6High Pressure Steam Machines§r, which work twice as fast as your current normal machines!\n\nIf you upgrade your §6Steam Boilers§r, you may want to recycle the old ones with your §3Macerator§r.\n\nAlso allows you to make the §6Belt Pouch§r, to upgrade your §eTool Belt§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58009,237 +57993,230 @@
           "y:3": 128
         },
         "38:10": {
-          "id:3": 489,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -984,
-          "y:3": 232
-        },
-        "39:10": {
           "id:3": 490,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -560,
           "y:3": 128
         },
-        "40:10": {
+        "39:10": {
           "id:3": 497,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 280
         },
-        "41:10": {
+        "40:10": {
           "id:3": 498,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": 440
         },
-        "42:10": {
+        "41:10": {
           "id:3": 516,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -792,
           "y:3": 344
         },
-        "43:10": {
+        "42:10": {
           "id:3": 517,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 280
         },
-        "44:10": {
+        "43:10": {
           "id:3": 528,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 196
         },
-        "45:10": {
+        "44:10": {
           "id:3": 544,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -692,
           "y:3": 284
         },
-        "46:10": {
+        "45:10": {
           "id:3": 545,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -648,
           "y:3": 344
         },
-        "47:10": {
+        "46:10": {
           "id:3": 553,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 80
         },
-        "48:10": {
+        "47:10": {
           "id:3": 554,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 48
         },
-        "49:10": {
+        "48:10": {
           "id:3": 559,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -708,
           "y:3": 476
         },
-        "50:10": {
+        "49:10": {
           "id:3": 774,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 188
         },
-        "51:10": {
+        "50:10": {
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -560,
           "y:3": 160
         },
-        "52:10": {
+        "51:10": {
           "id:3": 788,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -492,
           "y:3": 292
         },
-        "53:10": {
+        "52:10": {
           "id:3": 789,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -448,
           "y:3": 292
         },
-        "54:10": {
+        "53:10": {
           "id:3": 805,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -604,
           "y:3": 232
         },
-        "55:10": {
+        "54:10": {
           "id:3": 814,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -608,
           "y:3": 276
         },
-        "56:10": {
+        "55:10": {
           "id:3": 815,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -940,
           "y:3": 232
         },
-        "57:10": {
+        "56:10": {
           "id:3": 819,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -492,
           "y:3": 468
         },
-        "58:10": {
+        "57:10": {
           "id:3": 890,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -448,
           "y:3": 380
         },
-        "59:10": {
+        "58:10": {
           "id:3": 893,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -492,
           "y:3": 380
         },
-        "60:10": {
+        "59:10": {
           "id:3": 903,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -744,
           "y:3": 344
         },
-        "61:10": {
+        "60:10": {
           "id:3": 919,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -448,
           "y:3": 336
         },
-        "62:10": {
+        "61:10": {
           "id:3": 926,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -448,
           "y:3": 468
         },
-        "63:10": {
+        "62:10": {
           "id:3": 933,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -840,
           "y:3": 272
         },
-        "64:10": {
+        "63:10": {
           "id:3": 1046,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -448,
           "y:3": 248
         },
-        "65:10": {
+        "64:10": {
           "id:3": 1049,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -492,
           "y:3": 336
         },
-        "66:10": {
+        "65:10": {
           "id:3": 1050,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -840,
           "y:3": 184
         },
-        "67:10": {
+        "66:10": {
           "id:3": 1051,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -792,
           "y:3": 392
         },
-        "68:10": {
+        "67:10": {
           "id:3": 1094,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -892,
           "y:3": 392
         },
-        "69:10": {
+        "68:10": {
           "id:3": 1095,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": -492,
           "y:3": 248
         },
-        "70:10": {
+        "69:10": {
           "id:3": 1098,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -744,
           "y:3": 184
         },
-        "71:10": {
+        "70:10": {
           "id:3": 1101,
           "sizeX:3": 24,
           "sizeY:3": 24,
