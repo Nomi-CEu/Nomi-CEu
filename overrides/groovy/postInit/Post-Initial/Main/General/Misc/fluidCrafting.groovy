@@ -284,6 +284,9 @@ crafting.shapedBuilder()
 
 // Concrete Cell + Firebricks
 if (LabsModeHelper.expert) {
+	// Existing Concrete Bucket Recipe
+	crafting.remove('gregtech:bucket_of_concrete')
+
 	crafting.shapedBuilder()
 		.output(IngredientFluidBucket.fillStack(metaitem('fluid_cell'), fluid('concrete') * 1000))
 		.matrix('ABC', 'ADE', ' F ')
