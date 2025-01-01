@@ -288,7 +288,7 @@ if (LabsModeHelper.expert) {
 	crafting.remove('gregtech:bucket_of_concrete')
 
 	crafting.shapedBuilder()
-		.output(IngredientFluidBucket.fillStack(metaitem('fluid_cell'), fluid('concrete') * 1000))
+		.output(fillStack(metaitem('fluid_cell'), fluid('concrete') * 1000))
 		.matrix('ABC', 'ADE', ' F ')
 		.key('A', ore('dustCalcite'))
 		.key('B', metaitem('fluid_cell'))
@@ -304,7 +304,7 @@ if (LabsModeHelper.expert) {
 		.matrix('BGB', 'BCB', 'BGB')
 		.key('B', metaitem('brick.fireclay'))
 		.key('G', ore('dustGypsum'))
-		.key('C', fluidIng(fluid('concrete')))
+		.key('C', fluidIng(fluid('concrete'), fillStack(metaitem('fluid_cell'), fluid('concrete') * 1000)))
 		.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('concrete')))
 		.replace().register()
 }
@@ -400,57 +400,19 @@ crafting.shapedBuilder()
 // IIngredient Class that Matches Based on FluidStack in Containers
 class IngredientFluidBucket extends SimpleIIngredient {
 	public static final AMOUNT = 1000
-	// Example Fills (excludes bucket)
-	private static final List<ItemStack> fillables = [
-		metaitem('fluid_cell'),
-		metaitem('fluid_cell.universal'),
-		metaitem('nomilabs:bronze_cell'),
-		metaitem('large_fluid_cell.steel'),
-		metaitem('large_fluid_cell.aluminium'),
-		metaitem('large_fluid_cell.stainless_steel'),
-		metaitem('large_fluid_cell.titanium'),
-		metaitem('large_fluid_cell.tungstensteel'),
-		metaitem('fluid_cell.glass_vial'),
-		metaitem('drum.bronze'),
-		metaitem('drum.gold'),
-		metaitem('drum.steel'),
-		metaitem('drum.aluminium'),
-		metaitem('drum.stainless_steel'),
-		metaitem('drum.titanium'),
-		metaitem('drum.tungstensteel'),
-		item('enderio:block_tank'),
-		item('enderio:block_tank', 1),
-		item('thermalexpansion:tank').withNbt(['RSControl': (byte) 0, 'Creative': (byte) 0, 'Level': (byte) 0]),
-		item('thermalexpansion:tank').withNbt(['RSControl': (byte) 0, 'Creative': (byte) 0, 'Level': (byte) 1]),
-		item('thermalexpansion:tank').withNbt(['RSControl': (byte) 0, 'Creative': (byte) 0, 'Level': (byte) 2]),
-		item('thermalexpansion:tank').withNbt(['RSControl': (byte) 0, 'Creative': (byte) 0, 'Level': (byte) 3]),
-		item('thermalexpansion:tank').withNbt(['RSControl': (byte) 0, 'Creative': (byte) 0, 'Level': (byte) 4]),
-	]
 
 	private final FluidStack stack
 	private final ItemStack[] matchingStacks
 
-	IngredientFluidBucket(FluidStack stack) {
+	IngredientFluidBucket(FluidStack stack, ItemStack display = null) {
 		this.stack = stack * AMOUNT
 
-		List<ItemStack> matchingStacks = [FluidUtil.getFilledBucket(this.stack)]
-
-		for (ItemStack fill : fillables) {
-			var toFill = fill.copy()
-
-			var handler = getHandler(toFill)
-			if (handler == null) continue
-
-			int capacity = handler.tankProperties[0].capacity
-			if (capacity <= 0) capacity = AMOUNT
-
-			int filled = handler.fill(stack * capacity, true)
-
-			if (filled == capacity)
-				matchingStacks.add(toFill)
+		// Use default display (bucket)
+		if (display == null) {
+			display = FluidUtil.getFilledBucket(this.stack)
 		}
 
-		this.matchingStacks = matchingStacks.toArray()
+		this.matchingStacks = new ItemStack[]{ display }
 	}
 
 	@Override
@@ -480,12 +442,6 @@ class IngredientFluidBucket extends SimpleIIngredient {
 		return handler.getContainer() * 1
 	}
 
-	static ItemStack fillStack(ItemStack itemStack, FluidStack fluidStack) {
-		var toFill = itemStack.copy()
-		getHandler(toFill)?.fill(fluidStack, true)
-		return toFill
-	}
-
 	static IFluidHandlerItem getHandler(ItemStack itemStack) {
 		if (itemStack.isEmpty()) return null
 
@@ -502,7 +458,7 @@ class IngredientFluidBucket extends SimpleIIngredient {
 
 	static Translatable[] getInputTooltip(FluidStack fluidStack) {
 		return new Translatable[] {
-			new TranslatableFluidTooltip(fluidStack.fluid),
+			new TranslatableFluidTooltip(fluidStack),
 			translatable('nomiceu.tooltip.mixed.accepts_fluid_container')
 		}
 	}
@@ -512,20 +468,25 @@ class IngredientFluidBucket extends SimpleIIngredient {
  * Simple wrapper class so we can use translated name of fluid in tooltip
  */
 class TranslatableFluidTooltip extends Translatable {
-	Fluid fluid
+	FluidStack fluid
 
-	TranslatableFluidTooltip(Fluid fluid) {
+	TranslatableFluidTooltip(FluidStack fluid) {
 		super('nomiceu.tooltip.mixed.accepts_fluid')
 		this.fluid = fluid
 	}
 
 	@Override
 	protected String translateThis() {
-		String fluidName = translate(fluid.unlocalizedName)
-		return translate(key, fluidName)
+		return translate(key, fluid.fluid.getLocalizedName(fluid))
 	}
 }
 
-static IngredientFluidBucket fluidIng(FluidStack stack) {
-	return new IngredientFluidBucket(stack)
+static IngredientFluidBucket fluidIng(FluidStack stack, ItemStack display = null) {
+	return new IngredientFluidBucket(stack, display)
+}
+
+static ItemStack fillStack(ItemStack itemStack, FluidStack fluidStack) {
+	var toFill = itemStack.copy()
+	IngredientFluidBucket.getHandler(toFill)?.fill(fluidStack, true)
+	return toFill
 }
