@@ -1,3 +1,5 @@
+import com.nomiceu.nomilabs.util.LabsModeHelper
+
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
 
@@ -22,3 +24,12 @@ mods.gregtech.centrifuge.recipeBuilder()
 
 // Nether Star Block -> Nether Star
 crafting.addShapeless(item('minecraft:nether_star') * 9, [ore('blockNetherStar')])
+
+// Nitrogen -> Liquid Nitrogen
+if (LabsModeHelper.expert) {
+	mods.gregtech.vacuum_freezer.recipeBuilder()
+		.fluidInputs(fluid('nitrogen') * 1000)
+		.fluidOutputs(fluid('liquid_nitrogen') * 1000)
+		.duration(90).EUt(VA[HV])
+		.buildAndRegister()
+}

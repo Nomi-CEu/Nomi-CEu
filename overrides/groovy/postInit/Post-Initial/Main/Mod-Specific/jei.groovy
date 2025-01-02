@@ -27,6 +27,10 @@ if (LabsModeHelper.expert) {
 	mods.jei.ingredient.hide(item('nomilabs:impossiblerealmdata'))
 }
 
+if (LabsModeHelper.normal) {
+	mods.jei.ingredient.hide(fluid('liquid_nitrogen'))
+}
+
 // GregTech
 // Higher Tier Muffler Hatches
 for (var tier : [MV, HV, EV, IV, LuV, ZPM, UV]) {
