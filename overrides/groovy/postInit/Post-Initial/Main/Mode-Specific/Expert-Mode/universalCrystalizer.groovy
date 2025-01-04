@@ -2,7 +2,7 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 
 import static gregtech.api.GTValues.*
 
-if (!LabsModeHelper.expert) return;
+if (!LabsModeHelper.expert) return
 
 // Universal Crystallizer Recipes
 // crafting MUST have an eut below 1 UHV amp (2,097,152 EU/t)
@@ -64,4 +64,4 @@ mods.gregtech.universal_crystallizer.recipeBuilder()
 	.outputs(metaitem('nomilabs:blockAwakenedDraconium') * 5)
 	.fluidInputs(fluid('naquadah_enriched') * 30)
 	.duration(100).EUt((int) V[UHV])
-	.buildAndRegister();
+	.buildAndRegister()
