@@ -54,10 +54,6 @@ chemical_reactor.recipeBuilder().inputs(<actuallyadditions:item_misc:24>).fluidI
 macerator.recipeBuilder().inputs([<advancedrocketry:moonturf>]).outputs([<nomilabs:moondust>]).duration(200).EUt(400).buildAndRegister();
 macerator.recipeBuilder().inputs([<advancedrocketry:moonturf_dark>]).outputs([<nomilabs:moondust>]).duration(200).EUt(400).buildAndRegister();
 
-macerator.recipeBuilder().inputs([<thermalfoundation:material:2048>]).outputs([<thermalfoundation:material:2049> * 4]).duration(200).EUt(16).buildAndRegister();
-macerator.recipeBuilder().inputs([<thermalfoundation:material:2050>]).outputs([<thermalfoundation:material:2051> * 4]).duration(200).EUt(16).buildAndRegister();
-macerator.recipeBuilder().inputs([<thermalfoundation:material:2052>]).outputs([<thermalfoundation:material:2053> * 4]).duration(200).EUt(16).buildAndRegister();
-
 centrifuge.findRecipe(20, [], [<liquid:hydrogen> * 160]).remove();
 centrifuge.recipeBuilder().fluidInputs(<liquid:hydrogen> * 500).fluidOutputs([<liquid:deuterium> * 10]).duration(800).EUt(30).buildAndRegister();
 centrifuge.recipeBuilder().inputs(<nomilabs:moondust>).fluidOutputs([<liquid:deuterium> * 100]).duration(200).EUt(20).buildAndRegister();
