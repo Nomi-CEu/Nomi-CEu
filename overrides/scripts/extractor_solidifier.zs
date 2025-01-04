@@ -7,26 +7,6 @@ import scripts.common.makeExtremeRecipe7 as makeExtremeRecipe7;
 import scripts.common.makeExtremeRecipe9 as makeExtremeRecipe9;
 
 fluid_extractor.recipeBuilder()
-    .inputs([<ore:dustCryotheum>])
-    .fluidOutputs([<liquid:cryotheum> * 250])
-    .duration(40).EUt(30).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<ore:dustPyrotheum>])
-    .fluidOutputs([<liquid:pyrotheum> * 250])
-    .duration(40).EUt(30).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<ore:dustAerotheum>])
-    .fluidOutputs([<liquid:aerotheum> * 250])
-    .duration(40).EUt(30).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<ore:dustPetrotheum>])
-    .fluidOutputs([<liquid:petrotheum> * 250])
-    .duration(40).EUt(30).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
     .inputs([<ore:gemEnderPearl>])
     .fluidOutputs([<liquid:ender> * 250])
     .duration(40).EUt(30).buildAndRegister();

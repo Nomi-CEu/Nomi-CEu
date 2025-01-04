@@ -63,9 +63,9 @@ var rodsToDusts = [
 	2052 : 2053, // Basalz
 ]
 
-for (var rodToDust : rodsToDusts) {
-	ItemStack rod = item('thermalfoundation:material', rodToDust.key)
-	ItemStack dust = item('thermalfoundation:material', rodToDust.value)
+rodsToDusts.forEach { int rodMeta, int dustMeta ->
+	ItemStack rod = item('thermalfoundation:material', rodMeta)
+	ItemStack dust = item('thermalfoundation:material', dustMeta)
 
 	mods.gregtech.compressor.recipeBuilder()
 		.inputs(dust * 5)
@@ -78,4 +78,74 @@ for (var rodToDust : rodsToDusts) {
 		.outputs(dust * 4)
 		.duration(88).EUt(2) // Special Exception: Not from GTValues, matches Blaze Rod EUt instead
 		.buildAndRegister()
+}
+
+var nameToDust = [
+    "pyrotheum" : item('thermalfoundation:material', 1024),
+	"cryotheum" : item('thermalfoundation:material', 1025),
+	"aerotheum" : item('thermalfoundation:material', 1026),
+	"petrotheum" : item('thermalfoundation:material', 1027),
+]
+
+// Extraction
+nameToDust.forEach { String name, ItemStack dust ->
+	mods.gregtech.extractor.recipeBuilder()
+		.inputs(dust)
+		.fluidOutputs(fluid(name) * 250)
+		.duration(40).EUt(VA[LV])
+		.buildAndRegister()
+}
+
+// HM processing from Powder to Dust
+// More complicated but redstone free processing
+
+if (LabsModeHelper.expert) {
+	// Remove powder -> dust recipes
+	nameToDust.values().forEach {
+		crafting.removeByOutput(it)
+	}
+
+	// Pyrotheum
+	mods.gregtech.chemical_reactor.recipeBuilder()
+		.inputs(item('minecraft:blaze_powder') * 2, ore('dustSulfur'))
+		.fluidInputs(fluid('lava') * 250)
+		.fluidOutputs(fluid('pyrotheum') * 500)
+		.duration(20).EUt(VA[HV])
+		.buildAndRegister()
+
+	// Cryotheum
+	mods.gregtech.chemical_reactor.recipeBuilder()
+		.inputs(ore('dustBlizz') * 2, ore('dustIce'))
+		.fluidInputs(fluid('liquid_nitrogen') * 250)
+		.fluidOutputs(fluid('cryotheum') * 500)
+		.duration(20).EUt(VA[HV])
+		.buildAndRegister()
+
+	// Aerotheum
+	mods.gregtech.chemical_reactor.recipeBuilder()
+		.inputs(ore('dustBlitz') * 2, ore('dustSaltpeter'))
+		.fluidInputs(fluid('nitric_acid') * 250)
+		.fluidOutputs(fluid('aerotheum') * 500)
+		.duration(20).EUt(VA[HV])
+		.buildAndRegister()
+
+	// Petrotheum
+	for (var oil : [fluid('oil'), fluid('oil_medium'), fluid('oil_light'), fluid('oil_heavy')]) {
+		mods.gregtech.chemical_reactor.recipeBuilder()
+			.inputs(ore('dustBasalz') * 2, ore('dustObsidian'))
+			.fluidInputs(oil * 250)
+			.fluidOutputs(fluid('petrotheum') * 500)
+			.duration(20).EUt(VA[HV])
+			.buildAndRegister()
+	}
+
+	// Liquid -> Dust Recipes
+	nameToDust.forEach { String name, ItemStack dust ->
+		mods.gregtech.chemical_bath.recipeBuilder()
+			.fluidInputs(fluid(name) * 250)
+			.notConsumable(item('nuclearcraft:block_ice'))
+			.outputs(dust)
+			.duration(100).EUt(VHA[ULV])
+			.buildAndRegister()
+	}
 }
