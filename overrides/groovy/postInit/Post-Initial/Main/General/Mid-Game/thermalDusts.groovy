@@ -7,6 +7,13 @@ import static gregtech.api.GTValues.*
 
 // Thermal Dusts Related Recipes
 
+// Blaze Powder (pre-elemental reduction)
+// Decrease voltage to MV (from HV), by reducing EUt by 4, and increasing duration by 4
+mods.gregtech.chemical_reactor.changeByInput([metaitem('dustCarbon'), metaitem('dustSulfur')], null)
+	.changeEUt { it -> (int) (it / 4) }
+	.changeDuration { it -> (int) (it * 4) }
+	.replaceAndRegister()
+
 /* Elemental Reduction Fluid */
 
 // Normal
