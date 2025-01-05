@@ -7,14 +7,15 @@ import static gregtech.api.GTValues.*
 
 // Thermal Dusts Related Recipes
 
-// Elemental Reduction Fluid
+/* Elemental Reduction Fluid */
 
 // Normal
 mods.gregtech.chemical_reactor.recipeBuilder()
 	.inputs(ore('dustPulsating'))
 	.fluidInputs(fluid('hydrofluoric_acid') * 1000)
 	.fluidOutputs(fluid('elementalreduction') * 1000)
-	.duration(80).EUt(90).buildAndRegister()
+	.duration(80).EUt(VA[MV])
+	.buildAndRegister()
 
 if (LabsModeHelper.expert) {
 	// Fluoroantimonic Acid (3x Pulsating and Fluorine Efficiency)
@@ -22,10 +23,26 @@ if (LabsModeHelper.expert) {
 		.inputs(ore('dustPulsating') * 4)
 		.fluidInputs(fluid('fluoroantimonic_acid') * 1000)
 		.fluidOutputs(fluid('elementalreduction') * 12000)
-		.duration(540).EUt(360).buildAndRegister()
+		.duration(540).EUt(VA[HV])
+		.buildAndRegister()
+
+	// Naphthalene, Copper and Ender Pearl Versions
+	mods.gregtech.large_chemical_reactor.recipeBuilder()
+		.inputs(ore('dustCalcium') * 9, ore('dustCopper'), ore('dustEnderPearl'))
+		.fluidInputs(fluid('hydrofluoric_acid') * 18000)
+		.fluidOutputs(fluid('elementalreduction') * 36000)
+		.duration(1620).EUt(VA[MV])
+		.buildAndRegister()
+
+	mods.gregtech.large_chemical_reactor.recipeBuilder()
+		.inputs(ore('dustCalcium') * 9, ore('dustCopper'), ore('dustEnderPearl'))
+		.fluidInputs(fluid('fluoroantimonic_acid') * 4500)
+		.fluidOutputs(fluid('elementalreduction') * 108000)
+		.duration(2700).EUt(VA[HV])
+		.buildAndRegister()
 }
 
-// Powder from Elemental Reduction
+/* Powder from Elemental Reduction */
 var addPowderFromReduction = { IIngredient uniq, ItemStack out ->
 	mods.gregtech.chemical_reactor.recipeBuilder()
 		.inputs(uniq)
@@ -45,7 +62,7 @@ addPowderFromReduction(item('minecraft:snow'), item('thermalfoundation:material'
 addPowderFromReduction(ore('dustEndstone'), item('thermalfoundation:material', 2051)) // Blitz
 addPowderFromReduction(carbonLike, item('thermalfoundation:material', 2053)) // Basalz
 
-// Rod Compression (5 -> 1) and Maceration (1 -> 4)
+/* Rod Compression (5 -> 1) and Maceration (1 -> 4) */
 
 // Replace existing Blaze Rod recipe (4 -> 1)
 mods.gregtech.compressor.changeByInput([item('minecraft:blaze_powder') * 4], null)
@@ -96,8 +113,7 @@ nameToDust.forEach { String name, ItemStack dust ->
 		.buildAndRegister()
 }
 
-// HM processing from Powder to Dust
-// More complicated but redstone free processing
+/* HM Processing from Powder to Dust (Complicated, but Redstone Free) */
 
 if (LabsModeHelper.expert) {
 	// Remove powder -> dust recipes
