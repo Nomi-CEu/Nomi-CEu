@@ -6,6 +6,15 @@ import net.minecraftforge.fluids.FluidStack
 import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecipe
 
+// Thorium -> Prepared Thorium
+for (var thorium : [ore('dustThorium'), ore('ingotThorium')]) {
+	mods.gregtech.thermal_centrifuge.recipeBuilder()
+		.inputs(thorium)
+		.outputs(item('nuclearcraft:thorium', 4))
+		.duration(950).EUt(VHA[MV])
+		.buildAndRegister()
+}
+
 // Change Active Cooler Recipe from NC Helium -> GT Liquid Helium
 changeCoolerRecipe(fluid('liquid_helium'), MetaEnums.CoolerType.HELIUM)
 
