@@ -891,9 +891,6 @@ val liq as int[][ILiquidStack] = {
 };
 
 val blocks = [
-
-    //Uranium
-    [<nuclearcraft:block_depleted_uranium>, <metaitem:plateUranium> * 9],
     //Americium
     [<nuclearcraft:block_depleted_americium>, <metaitem:plateAmericium> * 9],
     //Thorium

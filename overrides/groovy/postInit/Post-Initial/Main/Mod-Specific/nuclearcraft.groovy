@@ -6,6 +6,9 @@ import net.minecraftforge.fluids.FluidStack
 import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecipe
 
+// LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
+crafting.addShapeless(metaitem('blockUranium'), [item('nuclearcraft:block_depleted_uranium')])
+
 // Thorium -> Prepared Thorium
 for (var thorium : [ore('dustThorium'), ore('ingotThorium')]) {
 	mods.gregtech.thermal_centrifuge.recipeBuilder()
