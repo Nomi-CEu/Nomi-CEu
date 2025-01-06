@@ -701,19 +701,6 @@ makeShaped("of_nc_coppersolenoid", <nuclearcraft:part:4>,
 // unused part
 recipes.remove(<nuclearcraft:part:5>);
 
-
-// Uranium 235 - from dust
-thermal_sep.recipeBuilder()
-    .outputs(<nuclearcraft:uranium:4>)
-    .inputs([<metaitem:dustUranium235>])
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Uranium 235 - from ingot
-thermal_sep.recipeBuilder()
-    .outputs(<nuclearcraft:uranium:4>)
-    .inputs([<metaitem:ingotUranium235>])
-    .duration(3200).EUt(48).buildAndRegister();
-
 // Add tiny fuel clumps to the Packager (GTCEu)
 var clumps = [
 
