@@ -124,27 +124,6 @@ centrifuge.recipeBuilder()
 	.EUt(1280)
 	.buildAndRegister();
 
-// Black Granite Dust * 1
-<recipemap:macerator>.findRecipe(2, [<gregtech:stone_smooth:0>], null).remove();
-macerator.recipeBuilder()
-	.inputs([<gregtech:stone_smooth:0>])
-	.outputs([<metaitem:dustGraniteBlack>])
-	.chancedOutput(<metaitem:dustThorium>, 100, 700)
-	.duration(150)
-	.EUt(2)
-	.buildAndRegister();
-
-// Granite Dust * 1
-<recipemap:macerator>.findRecipe(2, [<minecraft:stone:1>], null).remove();
-macerator.recipeBuilder()
-	.inputs([<minecraft:stone:1>])
-	.outputs([<metaitem:dustGranite>])
-	.chancedOutput(<metaitem:dustSmallStone>, 100, 40)
-	.chancedOutput(<metaitem:dustThorium>, 100, 500)
-	.duration(150)
-	.EUt(2)
-	.buildAndRegister();
-
 canner.recipeBuilder()
 	.inputs(<minecraft:glass_bottle>)
 	.fluidInputs(<liquid:xpjuice> * 500)
