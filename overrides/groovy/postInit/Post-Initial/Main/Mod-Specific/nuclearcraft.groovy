@@ -15,7 +15,7 @@ for (var thorium : [ore('dustThorium'), ore('ingotThorium')]) {
 	mods.gregtech.thermal_centrifuge.recipeBuilder()
 		.inputs(thorium)
 		.outputs(item('nuclearcraft:thorium', 4))
-		.duration(950).EUt(VHA[MV])
+		.duration(950).EUt(48) // Special Case: Reduced Power Consumption & Match Other NC Recipes
 		.buildAndRegister()
 }
 
