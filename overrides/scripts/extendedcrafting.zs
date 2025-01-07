@@ -829,10 +829,10 @@ var xu13 = <extrautils2:machine>.withTag({Type: "extrautils2:generator_ice"});
 var xu14 = <extrautils2:machine>.withTag({Type: "extrautils2:generator_death"});
 var xu15 = <extrautils2:machine>.withTag({Type: "extrautils2:generator_enchant"});
 var xu16 = <extrautils2:machine>.withTag({Type: "extrautils2:generator_slime"});
-var dynamo0 = <thermalexpansion:dynamo>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
-var dynamo1 = <thermalexpansion:dynamo:1>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
-var dynamo3 = <thermalexpansion:dynamo:3>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
-var dynamo5 = <thermalexpansion:dynamo:5>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
+var dynamo0 as IIngredient = <thermalexpansion:dynamo>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
+var dynamo1 as IIngredient = <thermalexpansion:dynamo:1>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
+var dynamo3 as IIngredient = <thermalexpansion:dynamo:3>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
+var dynamo5 as IIngredient = <thermalexpansion:dynamo:5>.withTag({RSControl: 0 as byte, Creative: 0 as byte, Energy: 0, Level: 4 as byte, Augments: []}, false);
 
 dynamo0 = dynamo0.only(isResonant);
 dynamo1 = dynamo1.only(isResonant);
