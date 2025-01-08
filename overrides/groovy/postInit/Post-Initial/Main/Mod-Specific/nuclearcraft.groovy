@@ -1,3 +1,4 @@
+import com.nomiceu.nomilabs.util.ItemMeta
 import nc.enumm.MetaEnums
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
@@ -5,6 +6,78 @@ import net.minecraftforge.fluids.FluidStack
 
 import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecipe
+
+// LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
+crafting.addShapeless(metaitem('blockUranium'), [item('nuclearcraft:block_depleted_uranium')])
+
+// Thorium -> Prepared Thorium
+for (var thorium : [ore('dustThorium'), ore('ingotThorium')]) {
+	mods.gregtech.thermal_centrifuge.recipeBuilder()
+		.inputs(thorium)
+		.outputs(item('nuclearcraft:thorium', 4))
+		.duration(950).EUt(48) // Special Case: Reduced Power Consumption & Match Other NC Recipes
+		.buildAndRegister()
+}
+
+/* Fuel Values */
+Map<String, List<Integer>> fuelMetas = [
+    'thorium': [0],
+	'uranium': [0, 2, 4, 6],
+	'neptunium': [0, 2],
+	'plutonium': [0, 2, 4, 6],
+	'americium': [0, 2],
+	'curium': [0, 2, 4, 6, 8, 10],
+	'berkelium': [0, 2],
+	'californium': [0, 2, 4, 6]
+]
+
+var u235 = Tuple.tuple(new ItemMeta(item('nuclearcraft:uranium', 4)), metaitem('ingotUranium235'))
+var u238 = Tuple.tuple(new ItemMeta(item('nuclearcraft:uranium', 8)), metaitem('ingotUranium'))
+var p239 = Tuple.tuple(new ItemMeta(item('nuclearcraft:plutonium', 4)), metaitem('ingotPlutonium'))
+var p241 = Tuple.tuple(new ItemMeta(item('nuclearcraft:plutonium', 8)), metaitem('ingotPlutonium241'))
+
+var u235Tiny = Tuple.tuple(new ItemMeta(item('nuclearcraft:uranium', 6)), metaitem('nuggetUranium235'))
+var u238Tiny = Tuple.tuple(new ItemMeta(item('nuclearcraft:uranium', 10)), metaitem('nuggetUranium'))
+var p239Tiny = Tuple.tuple(new ItemMeta(item('nuclearcraft:plutonium', 6)), metaitem('nuggetPlutonium'))
+var p241Tiny = Tuple.tuple(new ItemMeta(item('nuclearcraft:plutonium', 10)), metaitem('nuggetPlutonium241'))
+
+var checkReplacementsOrDefault = { ItemStack stack, Tuple2<ItemMeta, ItemStack>... toReplace ->
+	for (var replacement : toReplace) {
+		if (replacement.v1.compareWith(stack))
+			return replacement.v2 * stack.count
+	}
+
+	return stack
+}
+
+/* Fuel Decomposition Recipe Changes */
+// Replace NC U235 and U238 with GT Versions
+for (var meta : fuelMetas['uranium']) {
+	mods.gregtech.thermal_centrifuge.changeByInput([item('nuclearcraft:fuel_uranium', meta)], null)
+		.changeEachOutput { ItemStack stack -> checkReplacementsOrDefault(stack, u235, u238) }
+		.replaceAndRegister()
+}
+
+// Replace NC P239 and U241 with GT Versions
+for (var meta : fuelMetas['plutonium']) {
+	mods.gregtech.thermal_centrifuge.changeByInput([item('nuclearcraft:fuel_plutonium', meta)], null)
+		.changeEachOutput { ItemStack stack -> checkReplacementsOrDefault(stack, p239, p241) }
+		.replaceAndRegister()
+}
+
+/* Depleted Fuel Recycling Changes */
+// Increase All Outputs by 10%
+// Replace NC U235, U238, P239 and P241 with GT Versions
+for (var fuel : fuelMetas) {
+	for (var meta : fuel.value) {
+		mods.gregtech.centrifuge.changeByInput([item("nuclearcraft:depleted_fuel_${fuel.key}", meta)], null)
+			.changeEachOutput { ItemStack stack ->
+				stack = checkReplacementsOrDefault(stack, u235Tiny, u238Tiny, p239Tiny, p241Tiny)
+				stack.count = (int) Math.ceil(stack.count * 1.1f)
+				return stack
+			}.replaceAndRegister()
+	}
+}
 
 // Change Active Cooler Recipe from NC Helium -> GT Liquid Helium
 changeCoolerRecipe(fluid('liquid_helium'), MetaEnums.CoolerType.HELIUM)

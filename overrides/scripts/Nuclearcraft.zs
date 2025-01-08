@@ -455,106 +455,6 @@ centrifuge.recipeBuilder()
     .duration(20).EUt(7)
     .buildAndRegister();
 
-// Switch to GT U-235, U-238, Pu-239, Pu-241
-// Tiny Clump of Uranium-233 * 16
-<recipemap:centrifuge>.findRecipe(24, [<nuclearcraft:depleted_fuel_thorium:0>], null).remove();
-centrifuge.recipeBuilder()
-    .inputs(<nuclearcraft:depleted_fuel_thorium:0>)
-    .outputs(<nuclearcraft:uranium:2> * 16, <metaitem:nuggetUranium235> * 8, <nuclearcraft:neptunium:2> * 8, <nuclearcraft:neptunium:6> * 32)
-    .duration(1200).EUt(24).buildAndRegister();
-
-// Uranium-238 * 8
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_uranium:4>], null).remove();
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_uranium:4>)
-    .outputs(<metaitem:dustUranium> * 8, <metaitem:dustUranium235>)
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Uranium-238 * 5
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_uranium:6>], null).remove();
-
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_uranium:6>)
-    .outputs(<metaitem:dustUranium> * 5, <metaitem:dustUranium235> * 4)
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Tiny Clump of Uranium-238 * 20
-<recipemap:centrifuge>.findRecipe(24, [<nuclearcraft:depleted_fuel_uranium:6>], null).remove();
-centrifuge.recipeBuilder()
-    .inputs(<nuclearcraft:depleted_fuel_uranium:6>)
-    .outputs(<nuclearcraft:neptunium:6> * 16, <metaitem:nuggetUranium> * 20, <metaitem:nuggetPlutonium> * 4, <nuclearcraft:plutonium:14> * 24)
-    .duration(1200).EUt(24).buildAndRegister();
-
-// Tiny Clump of Uranium-238 * 40
-<recipemap:centrifuge>.findRecipe(24, [<nuclearcraft:depleted_fuel_uranium:4>], null).remove();
-centrifuge.recipeBuilder()
-    .inputs(<nuclearcraft:depleted_fuel_uranium:4>)
-    .outputs(<nuclearcraft:neptunium:6> * 8, <metaitem:nuggetUranium> * 40, <metaitem:nuggetPlutonium> * 8, <metaitem:nuggetPlutonium241> * 8)
-    .duration(1200).EUt(24).buildAndRegister();
-
-// Tiny Clump of Uranium-238 * 16
-<recipemap:centrifuge>.findRecipe(24, [<nuclearcraft:depleted_fuel_neptunium:2>], null).remove();
-centrifuge.recipeBuilder()
-    .inputs(<nuclearcraft:depleted_fuel_neptunium:2>)
-    .outputs(<nuclearcraft:plutonium:2> * 8, <metaitem:nuggetUranium> * 16, <metaitem:nuggetPlutonium> * 8, <nuclearcraft:plutonium:14> * 32)
-    .duration(1200).EUt(24).buildAndRegister();
-
-// Uranium-238 * 8
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_uranium:0>], null).remove();
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_uranium:0>)
-    .outputs(<metaitem:dustUranium> * 8, <nuclearcraft:uranium:0>)
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Uranium-238 * 5
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_uranium:2>], null).remove();
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_uranium:2>)
-    .outputs(<metaitem:dustUranium> * 5, <nuclearcraft:uranium:0> * 4)
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Tiny Clump of Plutonium-239 * 4
-<recipemap:centrifuge>.findRecipe(24, [<nuclearcraft:depleted_fuel_uranium:0>], null).remove();
-centrifuge.recipeBuilder()
-    .inputs(<nuclearcraft:depleted_fuel_uranium:0>)
-    .outputs(<nuclearcraft:plutonium:14> * 32, <metaitem:nuggetPlutonium241> * 4, <metaitem:nuggetPlutonium> * 4, <nuclearcraft:americium:10> * 24)
-    .duration(1200).EUt(24).buildAndRegister();
-
-// Tiny Clump of Plutonium-239 * 8
-<recipemap:centrifuge>.findRecipe(24, [<nuclearcraft:depleted_fuel_plutonium:0>], null).remove();
-centrifuge.recipeBuilder()
-    .inputs(<nuclearcraft:depleted_fuel_plutonium:0>)
-    .outputs(<nuclearcraft:plutonium:14> * 24, <nuclearcraft:curium:2> * 4, <metaitem:nuggetPlutonium> * 8, <nuclearcraft:curium:10> * 28)
-    .duration(1200).EUt(24).buildAndRegister();
-
-// Plutonium-242 * 8
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_plutonium:0>], null).remove();
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_plutonium:0>)
-    .outputs(<nuclearcraft:plutonium:12> * 8, <metaitem:dustPlutonium>)
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Plutonium-242 * 5
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_plutonium:2>], null).remove();
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_plutonium:2>)
-    .outputs(<nuclearcraft:plutonium:12> * 5, <metaitem:dustPlutonium> * 4)
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Plutonium-242 * 8
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_plutonium:4>], null).remove();
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_plutonium:4>)
-    .outputs(<nuclearcraft:plutonium:12> * 8, <metaitem:dustPlutonium241>)
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Plutonium-242 * 5
-<recipemap:thermal_centrifuge>.findRecipe(48, [<nuclearcraft:fuel_plutonium:6>], null).remove();
-thermal_centrifuge.recipeBuilder() 
-    .inputs(<nuclearcraft:fuel_plutonium:6>)
-    .outputs(<nuclearcraft:plutonium:12> * 5, <metaitem:dustPlutonium241> * 4)
-    .duration(3200).EUt(48).buildAndRegister();
-
 mods.jei.JEI.removeAndHide(<nuclearcraft:uranium:4>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:uranium:6>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:uranium:8>);
@@ -700,19 +600,6 @@ makeShaped("of_nc_coppersolenoid", <nuclearcraft:part:4>,
 
 // unused part
 recipes.remove(<nuclearcraft:part:5>);
-
-
-// Uranium 235 - from dust
-thermal_sep.recipeBuilder()
-    .outputs(<nuclearcraft:uranium:4>)
-    .inputs([<metaitem:dustUranium235>])
-    .duration(3200).EUt(48).buildAndRegister();
-
-// Uranium 235 - from ingot
-thermal_sep.recipeBuilder()
-    .outputs(<nuclearcraft:uranium:4>)
-    .inputs([<metaitem:ingotUranium235>])
-    .duration(3200).EUt(48).buildAndRegister();
 
 // Add tiny fuel clumps to the Packager (GTCEu)
 var clumps = [
@@ -904,9 +791,6 @@ val liq as int[][ILiquidStack] = {
 };
 
 val blocks = [
-
-    //Uranium
-    [<nuclearcraft:block_depleted_uranium>, <metaitem:plateUranium> * 9],
     //Americium
     [<nuclearcraft:block_depleted_americium>, <metaitem:plateAmericium> * 9],
     //Thorium
@@ -980,16 +864,6 @@ fluid_extractor.recipeBuilder()
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotThorium>], null).remove();
 // Thorium-232 * 1
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:dustThorium>], null).remove();
-
-thermal_sep.recipeBuilder()
-    .inputs(<metaitem:dustThorium>)
-    .outputs(<nuclearcraft:thorium:4>)
-    .duration(1100).EUt(48).buildAndRegister();
-
-thermal_sep.recipeBuilder()
-    .inputs(<metaitem:ingotThorium>)
-    .outputs(<nuclearcraft:thorium:4>)
-    .duration(1100).EUt(48).buildAndRegister();
 
 //Remove Duping Uranium via extra Uranium 235 tiny Pile
 // Uranium-238 * 1

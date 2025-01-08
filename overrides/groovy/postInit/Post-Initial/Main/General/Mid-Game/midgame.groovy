@@ -1,6 +1,9 @@
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.recipes.RecipeBuilder
+import gregtech.api.recipes.chance.output.impl.ChancedItemOutput
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.chanced
 import static gregtech.api.GTValues.*
 
 // Processing Array
@@ -33,3 +36,25 @@ if (LabsModeHelper.expert) {
 		.duration(90).EUt(VA[HV])
 		.buildAndRegister()
 }
+
+/* Nuclear Related Chanced Output Changes */
+
+// Buff Thorium Yields from Black Granite
+mods.gregtech.macerator.changeByInput([item('gregtech:stone_smooth')], null)
+	.changeEachChancedOutput { ChancedItemOutput output ->
+		return chanced(output.ingredient, output.chance, 700) // Original: 1%, + 0.4%, New: 1%, +7%
+	}.replaceAndRegister()
+
+// Add Thorium Yields from Granite + LEGACY: Change Stone Dust to Small Stone Dust
+mods.gregtech.macerator.changeByInput([item('minecraft:stone', 1)], null)
+	.builder { RecipeBuilder builder ->
+		builder.clearChancedOutput()
+			.chancedOutput(metaitem('dustSmallStone'), 100, 40)
+			.chancedOutput(metaitem('dustThorium'), 100, 500)
+	}.replaceAndRegister()
+
+// Buff Uranium Yields from Red Granite
+mods.gregtech.macerator.changeByInput([item('gregtech:stone_smooth', 1)], null)
+	.changeEachChancedOutput { ChancedItemOutput output ->
+		return chanced(output.ingredient, 100, 100) // Original: 0.1%, + 0.05%, New: 1%, +1%
+	}.replaceAndRegister()
