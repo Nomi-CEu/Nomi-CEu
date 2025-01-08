@@ -223,14 +223,6 @@ assembler.recipeBuilder()
     .outputs([<enderio:item_liquid_conduit:2> * 8])
     .duration(80).EUt(16).buildAndRegister();
 
-// Elemental Reduction with H2SbF7
-reactor.recipeBuilder()
-    .inputs(<ore:dustPulsating> * 4)
-    .fluidInputs([<liquid:fluoroantimonic_acid> * 1000])
-    .fluidOutputs(<liquid:elementalreduction> * 12000)
-    .duration(540).EUt(360).buildAndRegister();
-
-
 ////////////////////////// Creative Vending Upgrade ///////////////////////
 val creativecell = <thermalexpansion:cell>.withTag({Creative: 1 as byte, Level: 4 as byte}, false);
 val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType: 3}, false);

@@ -390,12 +390,6 @@ electrolyzer.recipeBuilder()
     .fluidOutputs(<liquid:neocryolite> * 3750, <liquid:oxygen> * 3000)
     .duration(750).EUt(7680).buildAndRegister();
 
-chemical_bath.recipeBuilder()
-    .fluidInputs(<liquid:aerotheum> * 250)
-    .notConsumable(<nuclearcraft:block_ice>)
-    .outputs(<ore:dustAerotheum>.firstItem)
-    .duration(100).EUt(7).buildAndRegister();
-
 // Platinum Group
 // Raw Platinum Powder * 3
 <recipemap:centrifuge>.findRecipe(480, [<metaitem:dustPlatinumGroupSludge> * 6], [<liquid:aqua_regia> * 1200]).remove();
