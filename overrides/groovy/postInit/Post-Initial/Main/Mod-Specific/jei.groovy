@@ -107,3 +107,48 @@ mods.jei.category.hideCategory('armorplus:workbench')
 if (LabsModeHelper.expert) {
     mods.jei.category.hideCategory('jeresources.mob')
 }
+
+/* Recipe Catalyst Overrides */
+// Crafting (Remove Thermal's Auto Crafter, and Add Avaritia's Compressed)
+overrideRecipeCatalysts('minecraft.crafting',
+	item('minecraft:crafting_table'),
+	item('avaritia:compressed_crafting_table'),
+	metaitem('workbench'),
+	item('actuallyadditions:item_crafter_on_a_stick'),
+	item('extrautils2:crafter'),
+	item('enderio:block_crafter'),
+	item('enderio:block_inventory_panel'))
+
+// Smelting (add More Furnaces' Furnaces)
+List<Object> furnaceCatalysts = [item('minecraft:furnace')]
+for (var meta : [0, 5, 6, 1, 2, 3]) { // in tier order
+	furnaceCatalysts.add(item('morefurnaces:furnaceblock', meta))
+}
+furnaceCatalysts.add(metaitem('steam_furnace_bronze'))
+furnaceCatalysts.add(metaitem('steam_furnace_steel'))
+for (var furnace : MetaTileEntities.ELECTRIC_FURNACE) {
+	if (furnace == null) continue
+	furnaceCatalysts.add(furnace.getStackForm())
+}
+furnaceCatalysts.add(metaitem('steam_oven'))
+furnaceCatalysts.add(metaitem('multi_furnace'))
+
+overrideRecipeCatalysts('minecraft.smelting', furnaceCatalysts.toArray())
+
+// Extended Crafting (Add PAuto ExCrafting Crafters)
+overrideRecipeCatalysts('extendedcrafting:table_crafting_5x5',
+	item('extendedcrafting:table_advanced'),
+	item('packagedexcrafting:advanced_crafter'))
+
+overrideRecipeCatalysts('extendedcrafting:table_crafting_7x7',
+	item('extendedcrafting:table_elite'),
+	item('packagedexcrafting:elite_crafter'))
+
+overrideRecipeCatalysts('extendedcrafting:table_crafting_9x9',
+	item('extendedcrafting:table_ultimate'),
+	item('packagedexcrafting:ultimate_crafter'))
+
+// Draconic Fusion (Add Packaged Draconic Core)
+overrideRecipeCatalysts('DraconicEvolution.Fusion',
+	item('draconicevolution:fusion_crafting_core'),
+	item('packageddraconic:fusion_crafter'))
