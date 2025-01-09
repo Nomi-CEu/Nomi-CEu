@@ -73,8 +73,7 @@ crafting.shapelessBuilder()
 crafting.shapelessBuilder()
 	.output(item('littletiles:lttransparentcoloredblock', 5) * 2)
 	.input(fluidIng(fluid('water')), fluidIng(fluid('water')))
-	.setInputTooltip(0, IngredientFluidBucket.getInputTooltip(fluid('water')))
-	.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('water')))
+	.setInputTooltip(IngredientFluidBucket.getInputTooltip(fluid('water')))
 	.replace().register()
 
 // Waterstone
@@ -160,7 +159,7 @@ if (LabsModeHelper.expert) {
 crafting.shapelessBuilder()
 	.output(item('littletiles:ltcoloredblock', 12))
 	.input(fluidIng(fluid('lava')))
-	.setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('lava')))
+	.setInputTooltip(IngredientFluidBucket.getInputTooltip(fluid('lava')))
 	.replace().register()
 
 // Lavastone
