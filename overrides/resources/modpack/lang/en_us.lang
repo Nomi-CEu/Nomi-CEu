@@ -9,6 +9,8 @@ nomiceu.tooltip.mixed.mirrorable=§7Recipe can be mirrored.§r
 nomiceu.tooltip.mixed.accepts_fluid=§7Fluid: §b%s§r
 nomiceu.tooltip.mixed.accepts_fluid_container=§7Accepts §aBuckets§7, §aCells§7, §aDrums§7, and other §aFluid Containers§7!
 nomiceu.tooltip.mixed.not_consumed=Ingredient Not Consumed!
+nomiceu.tooltip.mixed.deprecated=§cItem Deprecated! Place in Crafting Grid to Convert!§r
+nomiceu.tooltip.mixed.deprecation=§cConversion Recipe from Deprecated Item to Alternative!§r
 
 # MC
 nomiceu.tooltip.mc.xp_bottle=§eGives 25 XP, or one XP Level!§r

@@ -9,8 +9,27 @@ import net.minecraftforge.fluids.FluidStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeInputTooltip
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 import static gregtech.api.GTValues.*
+
+// Change Recipe for AA's Crafting Table on a Stick to be Stick + Table
+crafting.replaceShapeless(item('actuallyadditions:item_crafter_on_a_stick'),
+	[item('minecraft:stick'), item('minecraft:crafting_table')])
+
+// Deprecate Extended Crafting's Handheld Crafting Table
+mods.jei.ingredient.removeAndHide(item('extendedcrafting:handheld_table'))
+
+addTooltip(item('extendedcrafting:handheld_table'), translatable('nomiceu.tooltip.mixed.deprecated'))
+
+crafting.shapelessBuilder()
+	.output(item('actuallyadditions:item_crafter_on_a_stick'))
+	.input(item('extendedcrafting:handheld_table'))
+	.setOutputTooltip(translatable('nomiceu.tooltip.mixed.deprecation'))
+	.register()
+
+// Remove Avaritia Double Compressed -> Compressed Crafting Table Recipe (Double Compressed is Unobtainable and Removed)
+crafting.remove('avaritia:blocks/crafting/un_double_compressed_crafting_table')
 
 if (LabsModeHelper.expert) {
 	// Log -> Stick Shortcut (Expert Mode)
