@@ -10,9 +10,8 @@
   },
   "loaders": {
     "postInit": [
-      "postInit/Initial",
-      "postInit/Post-Initial",
-      "postInit/"
+      "postInit/main",
+      "postInit/addon"
     ]
   }
 }
