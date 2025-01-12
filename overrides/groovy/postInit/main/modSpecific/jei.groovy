@@ -13,11 +13,11 @@ import static gregtech.api.GTValues.*
 // AR
 mods.jei.ingredient.hide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
 
-hideItemIgnoreNBT(item('advancedrocketry:bucketrocketfuel'))
-hideItemIgnoreNBT(item('advancedrocketry:bucketnitrogen'))
-hideItemIgnoreNBT(item('advancedrocketry:buckethydrogen'))
-hideItemIgnoreNBT(item('advancedrocketry:bucketoxygen'))
-hideItemIgnoreNBT(item('advancedrocketry:bucketenrichedlava'))
+mods.jei.ingredient.hide(item('advancedrocketry:bucketrocketfuel'))
+mods.jei.ingredient.hide(item('advancedrocketry:bucketnitrogen'))
+mods.jei.ingredient.hide(item('advancedrocketry:buckethydrogen'))
+mods.jei.ingredient.hide(item('advancedrocketry:bucketoxygen'))
+mods.jei.ingredient.hide(item('advancedrocketry:bucketenrichedlava'))
 
 // Armor Plus
 mods.jei.ingredient.hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
@@ -52,7 +52,7 @@ List<ItemStack> lootBoxes = [
 	item('bq_standard:loot_chest', 103),
 	item('bq_standard:loot_chest', 104),
 ]
-lootBoxes.forEach { hideItemIgnoreNBT(it) }
+lootBoxes.forEach { mods.jei.ingredient.hide(it) }
 
 mods.jei.ingredient.hide(item('betterquesting:placeholder'))
 mods.jei.ingredient.hide(fluid('betterquesting.placeholder'))
