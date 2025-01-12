@@ -1,4 +1,4 @@
-package postInit.addon.zbgt
+// mods_loaded: zbgt
 
 import gregtech.api.recipes.builders.AssemblyLineRecipeBuilder
 import gregtech.api.recipes.recipeproperties.ResearchProperty
@@ -11,13 +11,21 @@ Creative item Recipes
 These are recipe for all the ZBGT creative items added
 */
 
+//Creative Computation Mold
+mods.gregtech.scanner.recipeBuilder()
+	.inputs(metaitem('tool.datamodule'), item('avaritia:resource', 5))
+	.fluidInputs(fluid('pcb_coolant') * 100000000)
+	.outputs(item('nomilabs:creativecomputationmold'))
+	.duration(2000)
+	.EUt(500000)
+	.buildAndRegister()
+
 if (LabsModeHelper.normal) {
 	//NM Specific
 
 	//Creative Computation
 	mods.gregtech.creative_tank_provider.recipeBuilder()
-		.notConsumable(item('nomilabs:creativeportabletankmold'))
-	//TODO: Add a creative computation mold item through labs or ZBGT
+		.notConsumable(item('nomilabs:creativecomputationmold'))
 		.inputs(item('minecraft:paper'))
 		.outputs(metaitem('zbgt:creative_computation_provider'))
 		.duration(500)
@@ -52,7 +60,7 @@ if (LabsModeHelper.normal) {
 
 	//Creative Computation
 	mods.gregtech.universal_crystallizer.recipeBuilder()
-		.notConsumable(item('nomilabs:creativeportabletankmold'))
+		.notConsumable(item('nomilabs:creativecomputationmold'))
 		.inputs(item('minecraft:paper'))
 		.fluidInputs(fluid('naquadria') * 1000000)
 		.outputs(metaitem('zbgt:creative_computation_provider'))

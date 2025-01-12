@@ -152,3 +152,8 @@ overrideRecipeCatalysts('extendedcrafting:table_crafting_9x9',
 overrideRecipeCatalysts('DraconicEvolution.Fusion',
 	item('draconicevolution:fusion_crafting_core'),
 	item('packageddraconic:fusion_crafter'))
+
+//ZBGT integration
+if (!Loader.isModLoaded('zbgt')) {
+	mods.jei.ingredient.removeAndHide(item('nomilabs:creativecomputationmold'))
+}
