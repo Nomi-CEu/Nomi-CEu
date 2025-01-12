@@ -1,7 +1,7 @@
 package postInit.addon.zbgt
 
-
-
+import gregtech.api.recipes.builders.AssemblyLineRecipeBuilder
+import gregtech.api.recipes.recipeproperties.ResearchProperty
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
 import static gregtech.api.GTValues.*
@@ -11,48 +11,82 @@ Creative item Recipes
 These are recipe for all the ZBGT creative items added
 */
 
-//NM Specific (using Tank Provider)
 if (LabsModeHelper.normal) {
+	//NM Specific
+
+	//Creative Computation
 	mods.gregtech.creative_tank_provider.recipeBuilder()
 		.notConsumable(item('nomilabs:creativeportabletankmold'))
-		//TODO: Add a creative computation mold item through labs or ZBGT
+	//TODO: Add a creative computation mold item through labs or ZBGT
 		.inputs(item('minecraft:paper'))
 		.outputs(metaitem('zbgt:creative_computation_provider'))
 		.duration(500)
-		.EUt(100000)
+		.EUt(1000000)
 		.buildAndRegister()
 
+	//Energy Sink
 	mods.gregtech.creative_tank_provider.recipeBuilder()
 		.notConsumable(metaitem('infinite_energy'))
 		.inputs(item('extrautils2:trashcanenergy'))
 		.outputs(metaitem('zbgt:creative_energy_sink'))
 		.duration(500)
-		.EUt(100000)
+		.EUt(1000000)
 		.buildAndRegister()
+	//Not Needed anymore
+	crafting.removeByInput(metaitem('zbgt:creative_energy_sink'))
 
+	//Energy Source
 	mods.gregtech.creative_tank_provider.recipeBuilder()
 		.notConsumable(metaitem('infinite_energy'))
 		.inputs(item('minecraft:redstone_block'))
 		.outputs(metaitem('zbgt:creative_energy_source'))
 		.duration(500)
-		.EUt(100000)
+		.EUt(1000000)
 		.buildAndRegister()
 	//Prevent GT Source dupe
 	crafting.removeByInput(metaitem('zbgt:creative_energy_source'))
 	//Not needed anymore
 	crafting.removeByInput(metaitem('infinite_energy'))
+} else {
+	//HM Specific
 
-	mods.gregtech.creative_tank_provider.recipeBuilder()
+	//Creative Computation
+	mods.gregtech.universal_crystallizer.recipeBuilder()
+		.notConsumable(item('nomilabs:creativeportabletankmold'))
+		.inputs(item('minecraft:paper'))
+		.fluidInputs(fluid('naquadria') * 1000000)
+		.outputs(metaitem('zbgt:creative_computation_provider'))
+		.duration(500)
+		.EUt(1000000)
+		.buildAndRegister()
+
+	//Energy Sink
+	mods.gregtech.universal_crystallizer.recipeBuilder()
+		.notConsumable(metaitem('infinite_energy'))
+		.inputs(item('extrautils2:trashcanenergy'))
+		.fluidInputs(fluid('naquadria') * 1000000)
+		.outputs(metaitem('zbgt:creative_energy_sink'))
+		.duration(500)
+		.EUt(1000000)
+		.buildAndRegister()
+	crafting.removeByInput(metaitem('zbgt:creative_energy_sink'))
+
+	//Energy Source
+	mods.gregtech.universal_crystallizer.recipeBuilder()
 		.notConsumable(metaitem('infinite_energy'))
 		.inputs(item('minecraft:redstone_block'))
-		.outputs(item('zbgt:creative_heating_coil'))
+		.fluidInputs(fluid('naquadria') * 1000000)
+		.outputs(metaitem('zbgt:creative_energy_source'))
 		.duration(500)
-		.EUt(100000)
+		.EUt(1000000)
 		.buildAndRegister()
-} else {
-	//TODO: Add HM scripts
+	//Prevent GT Source dupe
+	crafting.removeByInput(metaitem('zbgt:creative_energy_source'))
+	//Not needed anymore
+	crafting.removeByInput(metaitem('infinite_energy'))
 }
 
+//Creative Coils
 mods.gregtech.precise_assembler_recipes.recipeBuilder()
 	.inputs(item('avaritia:resource', 5), item('gregtech:wire_coil', 7) * 512)
 	.fluidInputs(fluid('neutronium') * 512000, fluid('pyrotheum') * 20000000)
@@ -84,9 +118,6 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(1200).EUt(VA[IV])
 	.buildAndRegister()
 
-//LuV
-
-// Mega LCR
 //ZPM
 
 // Mega Electric Blast Furnace
@@ -179,11 +210,11 @@ if (LabsModeHelper.normal) {
 		.buildAndRegister()
 } else {
 	mods.gregtech.assembly_line.recipeBuilder()
-		.inputs(metaitem('alloy_blast_smelter') * 64,
-			metaitem('nomilabs:frameTaranium') * 64,
+		.inputs(metaitem('gcym:alloy_blast_smelter') * 64,
+			metaitem('frameTritanium') * 64,
 			ore('circuitUhv') * 16,
 			metaitem('field.generator.uv') * 16,
-			metaitem('nomilabs:ringTaranium') * 16,
+			metaitem('ringTritanium') * 16,
 			metaitem('nomilabs:plateTaranium') * 16,
 			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
 		)
