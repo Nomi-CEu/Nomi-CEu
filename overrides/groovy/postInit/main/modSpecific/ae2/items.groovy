@@ -1,3 +1,5 @@
+package postInit.main.modSpecific.ae2
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.util.LabsModeHelper

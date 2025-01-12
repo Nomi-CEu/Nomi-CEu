@@ -1,3 +1,5 @@
+package postInit.main.general.lateGame
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.ImplosionRecipeBuilder
 import net.minecraft.item.ItemStack

@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.ingredients.GTRecipeInput
