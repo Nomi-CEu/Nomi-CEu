@@ -14,6 +14,8 @@ import static gregtech.api.GTValues.*
 
 // AR
 mods.jei.ingredient.hide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
+mods.jei.ingredient.hide(item('advancedrocketry:quartzcrucible'))
+mods.jei.ingredient.hide(item('advancedrocketry:iquartzcrucible'))
 
 mods.jei.ingredient.hide(item('advancedrocketry:bucketrocketfuel'))
 mods.jei.ingredient.hide(item('advancedrocketry:bucketnitrogen'))

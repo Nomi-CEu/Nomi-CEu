@@ -55,10 +55,6 @@ for jeiCategory in jeiCategories {
     mods.jei.JEI.hideCategory(jeiCategory);
 }
 
-function purgeFluidFromJEI(fluid as string) {
-    mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: fluid, Amount: 1000}));
-}
-
 zenClass Removal {
 
     var item as IItemStack;
@@ -322,6 +318,7 @@ for fuelObj in fuelObjs {
 
 // Get rid of unused NC fluids related to the MSR
 // unfortunately liquids aren't registered with their parent mod so this is ugly
+/*
 for liquid in game.liquids {
     if(liquid.displayName has "Eutectic" |
        liquid.displayName has "Molten Depleted" |
@@ -334,12 +331,11 @@ for liquid in game.liquids {
        liquid.name has "_24" | 
        liquid.name has "_25" ) {
 
-        purgeFluidFromJEI(liquid.name);
-
-        // Hide the fluid too
+        // Hide the fluid
         mods.jei.JEI.hide(liquid*1000);
     }
 }
+*/
 
 // Unused NC fluid tile things to purge from JEI
 val ncFluids as string[] = [
@@ -403,8 +399,6 @@ for fluid in ncFluids {
     if(!isNull(item)) {
         mods.jei.JEI.hide(item);
     }
-
-    purgeFluidFromJEI(fluid);
 }
 
 val sharedFluids as string[] = [
