@@ -127,23 +127,9 @@ assembly_line.recipeBuilder()
 	.property("research", <draconicevolution:wyvern_energy_core>)
 	.duration(1200).EUt(30720).buildAndRegister();
 
-
-recipes.addShapeless(<metaitem:nomilabs:dustDraconium>, [<draconicevolution:draconium_dust>]);
-
-// Hacky fix for broken DE stuff
-//<ore:ingotDraconiumAwakened>.add(<metaitem:nomilabs:ingotAwakenedDraconium>);
-
-<draconicevolution:draconic_ingot>.displayName = "Activated Awakened Draconium Ingot";
-<draconicevolution:draconium_block>.displayName = "Activated Draconium Block";
-<draconicevolution:draconic_block>.displayName = "Activated Awakened Draconium Block";
-
 recipes.removeByRecipeName("draconicevolution:draconic_ingot_1");
 recipes.removeByRecipeName("draconicevolution:draconium_ingot_1");
 recipes.removeByRecipeName("draconicevolution:draconium_block");
-
-// Conversion Recipes
-recipes.addShapeless(<metaitem:nomilabs:blockDraconium>, [<draconicevolution:draconium_block>]);
-recipes.addShapeless(<metaitem:nomilabs:blockAwakenedDraconium>, [<draconicevolution:draconic_block>]);
 
 /*
 chemical_bath.recipeBuilder()
