@@ -8,11 +8,11 @@ import static com.nomiceu.nomilabs.gregtech.material.registry.LabsMaterials.*
 
 // Hide GT Mana Infused/Mithril (Deprecated) from JEI
 // Can't remap, as rods cannot be remapped.
-hideMaterial(Mithril)
+hideMaterial(Mithril, false)
 
 // Hide GT Infinity (Deprecated) from JEI
 // Can't remap, as double plates cannot be remapped.
-hideMaterial(Infinity)
+hideMaterial(Infinity, false)
 
 // Normal Mode Specific (Hiding Hard Mode Materials)
 if (!LabsModeHelper.isNormal()) return
@@ -110,5 +110,5 @@ Material[] materials = [
 ]
 
 for (def material : materials) {
-	yeetMaterial(material)
+	yeetMaterial(material, false)
 }
