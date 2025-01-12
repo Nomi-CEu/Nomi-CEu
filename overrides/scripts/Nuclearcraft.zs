@@ -315,28 +315,6 @@ for fuelObj in fuelObjs {
     }
 }
 
-
-// Get rid of unused NC fluids related to the MSR
-// unfortunately liquids aren't registered with their parent mod so this is ugly
-/*
-for liquid in game.liquids {
-    if(liquid.displayName has "Eutectic" |
-       liquid.displayName has "Molten Depleted" |
-       liquid.displayName has "Molten LE" |
-       liquid.displayName has "Molten HE" |
-       liquid.displayName has "Molten TB" |
-       liquid.displayName has "Fluoride" |
-       liquid.displayName has "FLiBe" |
-       liquid.name has "_23" | 
-       liquid.name has "_24" | 
-       liquid.name has "_25" ) {
-
-        // Hide the fluid
-        mods.jei.JEI.hide(liquid*1000);
-    }
-}
-*/
-
 // Unused NC fluid tile things to purge from JEI
 val ncFluids as string[] = [
     "alugentum",
