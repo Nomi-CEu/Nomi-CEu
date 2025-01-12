@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import com.cleanroommc.groovyscript.api.IIngredient
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.api.unification.OreDictUnifier

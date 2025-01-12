@@ -1,3 +1,5 @@
+package postInit.main.modSpecific
+
 import com.nomiceu.nomilabs.util.ItemMeta
 import nc.enumm.MetaEnums
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient

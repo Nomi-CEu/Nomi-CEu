@@ -1,3 +1,5 @@
+package postInit.main.general.midGame
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.chance.output.impl.ChancedItemOutput

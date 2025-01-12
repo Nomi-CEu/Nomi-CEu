@@ -1,3 +1,5 @@
+package postInit.main.general.midGame
+
 import com.cleanroommc.groovyscript.api.IIngredient
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.ingredients.GTRecipeInput

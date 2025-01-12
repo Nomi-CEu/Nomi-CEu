@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition
 import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher

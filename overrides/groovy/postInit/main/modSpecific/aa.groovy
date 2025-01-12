@@ -1,3 +1,5 @@
+package postInit.main.modSpecific
+
 import de.ellpeck.actuallyadditions.api.recipe.EmpowererRecipe
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.common.items.MetaItems

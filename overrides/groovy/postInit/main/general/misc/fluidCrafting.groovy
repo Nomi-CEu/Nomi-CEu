@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import com.google.common.base.CaseFormat
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import com.nomiceu.nomilabs.groovy.SimpleIIngredient

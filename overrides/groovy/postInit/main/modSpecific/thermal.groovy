@@ -1,3 +1,5 @@
+package postInit.main.modSpecific
+
 import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.ItemStack
