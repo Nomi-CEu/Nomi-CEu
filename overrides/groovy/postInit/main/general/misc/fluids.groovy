@@ -25,21 +25,21 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 /* Thermal Foundation */
 
 // Removals
-hideFluidItemBucket(item('thermalfoundation:fluid_crude_oil'), fluid('crude_oil'))
-hideFluidBucket(fluid('refined_oil'))
-hideFluidBucket(fluid('coal'))
-hideFluidBucket(fluid('refined_fuel'))
-hideFluidBucket(fluid('sap'))
-hideFluidBucket(fluid('syrup'))
-hideFluidBucket(fluid('resin'))
-hideFluidBucket(fluid('tree_oil'))
-hideFluidBucket(fluid('biocrude'))
-hideFluidBucket(fluid('refined_biofuel'))
-hideFluidBucket(fluid('mushroom_stew'))
-hideFluidBucket(fluid('experience'))
-hideFluidBucket(fluid('potion'))
-hideFluidBucket(fluid('potion_splash'))
-hideFluidBucket(fluid('potion_lingering'))
+mods.jei.ingredient.hide(item('thermalfoundation:fluid_crude_oil'))
+hideFluid(fluid('refined_oil'))
+hideFluid(fluid('coal'))
+hideFluid(fluid('refined_fuel'))
+hideFluid(fluid('sap'))
+hideFluid(fluid('syrup'))
+hideFluid(fluid('resin'))
+hideFluid(fluid('tree_oil'))
+hideFluid(fluid('biocrude'))
+hideFluid(fluid('refined_biofuel'))
+hideFluid(fluid('mushroom_stew'))
+hideFluid(fluid('experience'))
+hideFluid(fluid('potion'))
+hideFluid(fluid('potion_splash'))
+hideFluid(fluid('potion_lingering'))
 
 // Fixes (Without Tooltip)
 fixItemFluid(item('thermalfoundation:fluid_redstone'), fluid('redstone'))
@@ -63,9 +63,8 @@ for (Fluid labsFluid : LabsFluids.BLOCKS.keySet()) {
 /* Advanced Rocketry */
 
 // Removals
-// Interestingly, there is no bucket form of Advanced Rocketry Fluids.
-mods.jei.ingredient.hide(VanillaTypes.FLUID, fluid('rocketfuel'))
-mods.jei.ingredient.hide(VanillaTypes.FLUID, fluid('enrichedlava'))
+hideFluid(fluid('rocketfuel'))
+hideFluid(fluid('enrichedlava'))
 
 /* Ender IO */
 
@@ -156,17 +155,8 @@ static void fixItemFluidTooltip(ItemStack itemForm, FluidStack fluidForm, FluidS
 }
 
 /**
- * Hides the Item Form and Bucket of a Fluid in JEI.
+ * Hides the Fluid Form of a Fluid in JEI.
  */
-static void hideFluidItemBucket(ItemStack itemForm, FluidStack fluidForm) {
-	mods.jei.ingredient.hide(itemForm)
-	mods.jei.ingredient.hide(FluidUtil.getFilledBucket(fluidForm * 1000))
-}
-
-/**
- * Hides the Fluid Form and Bucket of a Fluid in JEI.
- */
-static void hideFluidBucket(FluidStack fluidForm) {
+static void hideFluid(FluidStack fluidForm) {
 	mods.jei.ingredient.hide(VanillaTypes.FLUID, fluidForm)
-	mods.jei.ingredient.hide(FluidUtil.getFilledBucket(fluidForm * 1000))
 }
