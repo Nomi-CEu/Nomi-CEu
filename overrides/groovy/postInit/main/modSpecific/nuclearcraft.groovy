@@ -1,13 +1,28 @@
 package postInit.main.modSpecific
 
 import com.nomiceu.nomilabs.util.ItemMeta
+import mezz.jei.api.ingredients.VanillaTypes
 import nc.enumm.MetaEnums
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import nc.fluid.FluidMolten
+import nc.init.NCCoolantFluids
+import nc.init.NCFissionFluids
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
 import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecipe
+
+/* Hide Molten Salt Reactor Fluids */
+for (var toHide : NCFissionFluids.fluidList) {
+	mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+}
+
+for (var toHide : NCCoolantFluids.fluidList) {
+	// Ignore Normal Molten Fluids
+	if (toHide instanceof FluidMolten) continue;
+	mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+}
 
 // LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
 crafting.addShapeless(metaitem('blockUranium'), [item('nuclearcraft:block_depleted_uranium')])
