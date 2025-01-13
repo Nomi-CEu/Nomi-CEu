@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.item.EnumDyeColor
 

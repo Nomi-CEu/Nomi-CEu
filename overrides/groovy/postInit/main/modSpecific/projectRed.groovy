@@ -1,3 +1,5 @@
+package postInit.main.modSpecific
+
 import static gregtech.api.GTValues.*
 
 // Conductive Plate

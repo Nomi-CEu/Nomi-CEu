@@ -1,3 +1,5 @@
+package postInit.main.modeSpecific.expert
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.item.ItemStack
 

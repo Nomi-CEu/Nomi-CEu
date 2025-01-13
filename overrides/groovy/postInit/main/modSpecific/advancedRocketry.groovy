@@ -1,3 +1,5 @@
+package postInit.main.modSpecific
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.item.ItemStack

@@ -1,3 +1,5 @@
+package postInit.main.general.earlyGame
+
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
 

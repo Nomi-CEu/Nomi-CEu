@@ -1,3 +1,5 @@
+package postInit.main.modeSpecific.normal
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import mustapelto.deepmoblearning.common.metadata.MetadataDataModel
 import mustapelto.deepmoblearning.common.metadata.MetadataManager

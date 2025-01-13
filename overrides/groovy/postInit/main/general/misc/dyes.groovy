@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ShapedConversionRecipe
 import net.minecraft.item.EnumDyeColor

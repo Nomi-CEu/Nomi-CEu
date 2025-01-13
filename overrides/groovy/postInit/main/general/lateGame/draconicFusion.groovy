@@ -1,3 +1,5 @@
+package postInit.main.general.lateGame
+
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MiscHelpers.removeDraconicFusionRecipe
 import static gregtech.api.GTValues.*
 

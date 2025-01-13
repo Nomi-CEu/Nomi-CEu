@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
 

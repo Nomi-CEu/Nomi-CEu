@@ -1,3 +1,5 @@
+package postInit.main.modeSpecific.normal
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.createRecipe
