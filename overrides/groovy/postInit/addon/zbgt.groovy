@@ -14,6 +14,7 @@ import static gregtech.api.GTValues.*
  * These are recipe for all the ZBGT creative items added
 */
 
+//TODO: move this to a 1.8 branch for a new PR
 // Creative Computation Mold
 mods.gregtech.scanner.recipeBuilder()
 	.inputs(metaitem('tool.datamodule'), item('avaritia:resource', 5))
