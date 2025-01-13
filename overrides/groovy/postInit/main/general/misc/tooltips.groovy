@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 // SIDE: CLIENT
 // ^ Script only runs Client-Side
 

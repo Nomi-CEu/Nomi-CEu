@@ -1,3 +1,5 @@
+package postInit.main.modSpecific
+
 import net.minecraft.item.ItemStack
 import classes.postInit.Common
 

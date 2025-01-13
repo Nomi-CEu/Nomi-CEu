@@ -1,3 +1,5 @@
+package postInit.main.general.misc
+
 import com.cleanroommc.groovyscript.api.IIngredient
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
 import com.nomiceu.nomilabs.groovy.ShapedDummyRecipe

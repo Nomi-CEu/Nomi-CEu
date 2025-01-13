@@ -1,3 +1,5 @@
+package postInit.main.modSpecific.ae2
+
 import classes.postInit.Common
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 
