@@ -67,7 +67,7 @@ if (LabsModeHelper.normal) {
 	mods.gregtech.universal_crystallizer.recipeBuilder()
 		.notConsumable(metaitem('infinite_energy'))
 		.inputs(metaitem('transformer.adjustable.uv') * 64,
-			metaitem('wireGtHexOmnium') * 64,
+			metaitem('nomilabs:wireGtHexOmnium') * 64,
 			ore('circuitUhv') * 16,
 			metaitem('field.generator.uv') * 16,
 			metaitem('sensor.uv') * 16,
