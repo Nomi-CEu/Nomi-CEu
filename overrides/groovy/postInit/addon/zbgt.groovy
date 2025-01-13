@@ -1,4 +1,7 @@
-// mods_loaded: zbgt
+// MODS_LOADED: ZBGT
+// ^, Makes the script not run as long as ZBGT isn't a mod in the player's instance. Gives groovy errors otherwise.
+
+package postInit.addon
 
 import gregtech.api.recipes.builders.AssemblyLineRecipeBuilder
 import gregtech.api.recipes.recipeproperties.ResearchProperty
@@ -7,11 +10,11 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 import static gregtech.api.GTValues.*
 
 /*
-Creative item Recipes
-These are recipe for all the ZBGT creative items added
+ * Creative item Recipes
+ * These are recipe for all the ZBGT creative items added
 */
 
-//Creative Computation Mold
+// Creative Computation Mold
 mods.gregtech.scanner.recipeBuilder()
 	.inputs(metaitem('tool.datamodule'), item('avaritia:resource', 5))
 	.fluidInputs(fluid('pcb_coolant') * 100000000)
@@ -21,9 +24,10 @@ mods.gregtech.scanner.recipeBuilder()
 	.buildAndRegister()
 
 if (LabsModeHelper.normal) {
-	//NM Specific
+	// NM Specific
 
-	//Creative Computation
+	//TODO: move this to a 1.8 branch for a new PR
+	// Creative Computation
 	mods.gregtech.creative_tank_provider.recipeBuilder()
 		.notConsumable(item('nomilabs:creativecomputationmold'))
 		.inputs(item('minecraft:paper'))
@@ -32,18 +36,7 @@ if (LabsModeHelper.normal) {
 		.EUt(1000000)
 		.buildAndRegister()
 
-	//Energy Sink
-	mods.gregtech.creative_tank_provider.recipeBuilder()
-		.notConsumable(metaitem('infinite_energy'))
-		.inputs(item('extrautils2:trashcanenergy'))
-		.outputs(metaitem('zbgt:creative_energy_sink'))
-		.duration(500)
-		.EUt(1000000)
-		.buildAndRegister()
-	//Not Needed anymore
-	crafting.removeByInput(metaitem('zbgt:creative_energy_sink'))
-
-	//Energy Source
+	// Energy Source
 	mods.gregtech.creative_tank_provider.recipeBuilder()
 		.notConsumable(metaitem('infinite_energy'))
 		.inputs(item('minecraft:redstone_block'))
@@ -56,9 +49,10 @@ if (LabsModeHelper.normal) {
 	//Not needed anymore
 	crafting.removeByInput(metaitem('infinite_energy'))
 } else {
-	//HM Specific
+	// HM Specific
 
-	//Creative Computation
+	//TODO: move this to a 1.8 branch for a new PR
+	// Creative Computation
 	mods.gregtech.universal_crystallizer.recipeBuilder()
 		.notConsumable(item('nomilabs:creativecomputationmold'))
 		.inputs(item('minecraft:paper'))
@@ -68,18 +62,7 @@ if (LabsModeHelper.normal) {
 		.EUt(1000000)
 		.buildAndRegister()
 
-	//Energy Sink
-	mods.gregtech.universal_crystallizer.recipeBuilder()
-		.notConsumable(metaitem('infinite_energy'))
-		.inputs(item('extrautils2:trashcanenergy'))
-		.fluidInputs(fluid('naquadria') * 1000000)
-		.outputs(metaitem('zbgt:creative_energy_sink'))
-		.duration(500)
-		.EUt(1000000)
-		.buildAndRegister()
-	crafting.removeByInput(metaitem('zbgt:creative_energy_sink'))
-
-	//Energy Source
+	// Energy Source Hatch
 	mods.gregtech.universal_crystallizer.recipeBuilder()
 		.notConsumable(metaitem('infinite_energy'))
 		.inputs(item('minecraft:redstone_block'))
@@ -88,13 +71,13 @@ if (LabsModeHelper.normal) {
 		.duration(500)
 		.EUt(1000000)
 		.buildAndRegister()
-	//Prevent GT Source dupe
+	// Prevent GT Source dupe
 	crafting.removeByInput(metaitem('zbgt:creative_energy_source'))
-	//Not needed anymore
+	// Not needed anymore
 	crafting.removeByInput(metaitem('infinite_energy'))
 }
 
-//Creative Coils
+// Creative Coils
 mods.gregtech.precise_assembler_recipes.recipeBuilder()
 	.inputs(item('avaritia:resource', 5), item('gregtech:wire_coil', 7) * 512)
 	.fluidInputs(fluid('neutronium') * 512000, fluid('pyrotheum') * 20000000)
@@ -105,14 +88,15 @@ mods.gregtech.precise_assembler_recipes.recipeBuilder()
 
 
 /*
-Mega multiblocks Recipes
-These are recipe for all the ZBGT mega multiblocks in a more balanced way.
-Organized by tier in which the script moves them to in NM.
+ * Mega multiblocks Recipes
+ * These are recipe for all the ZBGT mega multiblocks in a more balanced way.
 */
 
-//IV
+// Cracker
+// Remove default recipes
 mods.gregtech.assembler.removeByInput(480, [metaitem('cracker') * 64], [fluid('soldering_alloy') * 9216 * 9216])
 mods.gregtech.assembler.removeByInput(480, [metaitem('cracker') * 64], [fluid('tin') * 18432 * 18432])
+//New recipe
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('cracker') * 64,
 		metaitem('gcym:frameWatertightSteel') * 64,
@@ -126,12 +110,12 @@ mods.gregtech.assembler.recipeBuilder()
 	.duration(1200).EUt(VA[IV])
 	.buildAndRegister()
 
-//ZPM
-
 // Mega Electric Blast Furnace
+// Remove default recipes
 mods.gregtech.assembler.removeByInput(480, [metaitem('electric_blast_furnace') * 64], [fluid('tin') * 18432 * 18432])
 mods.gregtech.assembler.removeByInput(480, [metaitem('electric_blast_furnace') * 64], [fluid('soldering_alloy') * 9216 * 9216])
 if (LabsModeHelper.normal) {
+	// New NM Recipe
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('electric_blast_furnace') * 64,
 			metaitem('frameNaquadahAlloy') * 64,
@@ -147,6 +131,7 @@ if (LabsModeHelper.normal) {
 		.duration(1200).EUt(VA[LuV])
 		.buildAndRegister()
 } else {
+	// New HM Recipe
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('electric_blast_furnace') * 64,
 			metaitem('frameTritanium') * 64,
@@ -164,9 +149,11 @@ if (LabsModeHelper.normal) {
 }
 
 // Mega Vacuum Freezer
+// Remove default recipes
 mods.gregtech.assembler.removeByInput(480, [metaitem('vacuum_freezer') * 64], [fluid('tin') * 18432 * 18432])
 mods.gregtech.assembler.removeByInput(480, [metaitem('vacuum_freezer') * 64], [fluid('soldering_alloy') * 9216 * 9216])
 if (LabsModeHelper.normal) {
+	// New NM Recipe
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('vacuum_freezer') * 64,
 			metaitem('frameNaquadahAlloy') * 64,
@@ -182,6 +169,7 @@ if (LabsModeHelper.normal) {
 		.duration(1200).EUt(VA[LuV])
 		.buildAndRegister()
 } else {
+	// New HM Recipe
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('vacuum_freezer') * 64,
 			metaitem('frameDuranium') * 64,
@@ -199,9 +187,11 @@ if (LabsModeHelper.normal) {
 }
 
 // Mega Alloy Blast Smelter
+// Remove default recipes
 mods.gregtech.assembler.removeByInput(480, [metaitem('gcym:alloy_blast_smelter') * 64], [fluid('tin') * 18432 * 18432])
 mods.gregtech.assembler.removeByInput(480, [metaitem('gcym:alloy_blast_smelter') * 64], [fluid('soldering_alloy') * 9216 * 9216])
 if (LabsModeHelper.normal) {
+	// New NM Recipe
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('gcym:alloy_blast_smelter') * 64,
 			metaitem('nomilabs:frameAwakenedDraconium') * 64,
@@ -217,6 +207,7 @@ if (LabsModeHelper.normal) {
 		.duration(1200).EUt(VA[LuV])
 		.buildAndRegister()
 } else {
+	// New HM Recipe
 	mods.gregtech.assembly_line.recipeBuilder()
 		.inputs(metaitem('gcym:alloy_blast_smelter') * 64,
 			metaitem('frameTritanium') * 64,

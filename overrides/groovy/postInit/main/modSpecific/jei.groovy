@@ -66,6 +66,12 @@ mods.jei.ingredient.add(FluidUtil.getFilledBucket(fluid('creosote') * 1000))
 // Add Concrete Cell to JEI
 mods.jei.ingredient.add(metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'concrete', 'Amount': 1000]]))
 
+//TODO: move this to a 1.8 branch for a new PR
+// ZBGT integration
+if (!Loader.isModLoaded('zbgt')) {
+	mods.jei.ingredient.hide(item('nomilabs:creativecomputationmold'))
+}
+
 /* Remove Categories (Appear Randomly after /gs reload) */
 // Avatitia
 mods.jei.category.hideCategory('Avatitia.Extreme')
@@ -152,8 +158,3 @@ overrideRecipeCatalysts('extendedcrafting:table_crafting_9x9',
 overrideRecipeCatalysts('DraconicEvolution.Fusion',
 	item('draconicevolution:fusion_crafting_core'),
 	item('packageddraconic:fusion_crafter'))
-
-//ZBGT integration
-if (!Loader.isModLoaded('zbgt')) {
-	mods.jei.ingredient.removeAndHide(item('nomilabs:creativecomputationmold'))
-}
