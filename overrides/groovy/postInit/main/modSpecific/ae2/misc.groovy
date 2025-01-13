@@ -8,20 +8,6 @@ import static gregtech.api.GTValues.*
 // Standardise fluix dust
 ore('dustFluix').add(item('appliedenergistics2:material', 8))
 
-// Conversion Recipes (DEPRECATED)
-crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:material', 59))
-	.input(item('ae2wtlib:infinity_booster_card'))
-	.register()
-crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:wireless_crafting_terminal'))
-	.input(item('wct:wct'))
-	.register()
-crafting.shapelessBuilder()
-	.output(item('appliedenergistics2:material', 60))
-	.input(item('wct:magnet_card'))
-	.register()
-
 // JEI
 mods.jei.ingredient.removeAndHide(item('appliedenergistics2:material', 0))
 

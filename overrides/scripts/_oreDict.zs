@@ -1919,12 +1919,6 @@ mods.jei.JEI.removeAndHide(<extrautils2:book>);
 mods.jei.JEI.removeAndHide(<extrautils2:minichest>);
 mods.jei.JEI.removeAndHide(<extrautils2:analogcrafter>);
 
-// Wireless Terminals Removals
-mods.jei.JEI.removeAndHide(<ae2wtlib:infinity_booster_card>);
-mods.jei.JEI.removeAndHide(<wct:wct>);
-mods.jei.JEI.removeAndHide(<wct:wct_creative>);
-mods.jei.JEI.removeAndHide(<wct:magnet_card>);
-
 //Gregtech Removals
 mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.lv>);
 mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.mv>);
