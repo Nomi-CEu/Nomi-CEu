@@ -1,7 +1,7 @@
-package postInit.main.general.misc
-
 // SIDE: CLIENT
 // ^ Script only runs Client-Side
+
+package postInit.main.general.misc
 
 import appeng.core.AEConfig
 import appeng.core.features.AEFeature
