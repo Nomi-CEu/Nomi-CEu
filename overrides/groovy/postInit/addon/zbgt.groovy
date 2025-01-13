@@ -25,18 +25,16 @@ crafting.remove('zbgt:creative_energy_hatch_to_emitter')
 crafting.remove('zbgt:creative_item_bus_to_chest')
 crafting.remove('zbgt:creative_chest_to_item_bus')
 
+// Creative Tank
+crafting.remove('zbgt:creative_fluid_hatch_to_tank')
+crafting.remove('zbgt:creative_tank_to_fluid_hatch')
+
 // Add new recipes
 
 if (LabsModeHelper.normal) {
 	// NM Specific
 
 	// Creative Fluid Source Hatch
-
-	// Remove Default Recipes
-	crafting.remove('zbgt:creative_fluid_hatch_to_tank')
-	crafting.remove('zbgt:creative_tank_to_fluid_hatch')
-
-	//New Recipe
 	mods.gregtech.creative_tank_provider.recipeBuilder()
 		.notConsumable(item('nomilabs:creativeportabletankmold'))
 		.inputs(metaitem('reservoir_hatch'))
