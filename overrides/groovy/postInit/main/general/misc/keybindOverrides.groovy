@@ -1,7 +1,7 @@
-package postInit.main.general.misc
-
 // SIDE: CLIENT
 // ^, Makes the Script only Run Client-Side
+
+package postInit.main.general.misc
 
 import net.minecraftforge.client.settings.KeyModifier
 import net.minecraftforge.fml.common.Loader
