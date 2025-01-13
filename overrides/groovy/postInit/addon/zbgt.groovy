@@ -27,28 +27,8 @@ crafting.remove('zbgt:creative_chest_to_item_bus')
 
 // Add new recipes
 
-//TODO: move this to a 1.8 branch for a new PR
-// Creative Computation Mold
-mods.gregtech.scanner.recipeBuilder()
-	.inputs(metaitem('tool.datamodule'), item('avaritia:resource', 5))
-	.fluidInputs(fluid('pcb_coolant') * 100000000)
-	.outputs(item('nomilabs:creativecomputationmold'))
-	.duration(2000)
-	.EUt(500000)
-	.buildAndRegister()
-
 if (LabsModeHelper.normal) {
 	// NM Specific
-
-	//TODO: move this to a 1.8 branch for a new PR
-	// Creative Computation
-	mods.gregtech.creative_tank_provider.recipeBuilder()
-		.notConsumable(item('nomilabs:creativecomputationmold'))
-		.inputs(item('minecraft:paper'))
-		.outputs(metaitem('zbgt:creative_computation_provider'))
-		.duration(500)
-		.EUt(1000000)
-		.buildAndRegister()
 
 	// Creative Fluid Source Hatch
 
@@ -84,17 +64,6 @@ if (LabsModeHelper.normal) {
 		.buildAndRegister()
 } else {
 	// HM Specific
-
-	//TODO: move this to a 1.8 branch for a new PR
-	// Creative Computation
-	mods.gregtech.universal_crystallizer.recipeBuilder()
-		.notConsumable(item('nomilabs:creativecomputationmold'))
-		.inputs(item('minecraft:paper'))
-		.fluidInputs(fluid('naquadria') * 1000000)
-		.outputs(metaitem('zbgt:creative_computation_provider'))
-		.duration(500)
-		.EUt(1000000)
-		.buildAndRegister()
 
 	// Energy Source Hatch
 	mods.gregtech.universal_crystallizer.recipeBuilder()
