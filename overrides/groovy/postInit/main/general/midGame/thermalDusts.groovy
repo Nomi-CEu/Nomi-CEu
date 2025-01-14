@@ -37,15 +37,15 @@ if (LabsModeHelper.expert) {
 
 	// Naphthalene, Copper and Ender Pearl Versions
 	mods.gregtech.large_chemical_reactor.recipeBuilder()
-		.inputs(ore('dustCalcium') * 9, ore('dustCopper'), ore('dustEnderPearl'))
-		.fluidInputs(fluid('hydrofluoric_acid') * 18000)
+		.inputs(ore('dustCalcium') * 9, ore('dustAnnealedCopper'), ore('dustEnderPearl'))
+		.fluidInputs(fluid('naphthalene') * 2000, fluid('hydrofluoric_acid') * 18000)
 		.fluidOutputs(fluid('elementalreduction') * 36000)
 		.duration(1620).EUt(VA[MV])
 		.buildAndRegister()
 
 	mods.gregtech.large_chemical_reactor.recipeBuilder()
-		.inputs(ore('dustCalcium') * 9, ore('dustCopper'), ore('dustEnderPearl'))
-		.fluidInputs(fluid('fluoroantimonic_acid') * 4500)
+		.inputs(ore('dustCalcium') * 9, ore('dustAnnealedCopper'), ore('dustEnderPearl'))
+		.fluidInputs(fluid('naphthalene') * 2000, fluid('fluoroantimonic_acid') * 4500)
 		.fluidOutputs(fluid('elementalreduction') * 108000)
 		.duration(2700).EUt(VA[HV])
 		.buildAndRegister()
