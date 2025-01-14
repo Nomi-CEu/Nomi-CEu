@@ -1,5 +1,5 @@
 // MODS_LOADED: zbgt
-// ^, Makes the script not run as long as ZBGT isn't a mod in the player's instance. Gives groovy errors otherwise.
+// ^, Makes the script not run as long as ZBGT isn't a mod in the player's instance.
 
 package postInit.addon
 
@@ -9,10 +9,9 @@ import com.nomiceu.nomilabs.util.LabsModeHelper
 
 import static gregtech.api.GTValues.*
 
-/*
- * Creative item Recipes
- * These are recipe for all the ZBGT creative items added
-*/
+// TODO: Implement the Creative computing hatch and Creative data hatch
+
+/* Creative item Recipes */
 
 // Remove default recipes
 
@@ -39,8 +38,7 @@ if (LabsModeHelper.normal) {
 		.notConsumable(item('nomilabs:creativeportabletankmold'))
 		.inputs(metaitem('reservoir_hatch'))
 		.outputs(metaitem('zbgt:creative_reservoir_hatch'))
-		.duration(500)
-		.EUt(1000000) /* Value to stay consistent with regular tank recipe */
+		.duration(500).EUt(1000000) // Value to stay consistent with regular tank recipe
 		.buildAndRegister()
 
 	// Energy Source Hatch
@@ -57,8 +55,7 @@ if (LabsModeHelper.normal) {
 		)
 		.outputs(metaitem('zbgt:creative_energy_source'))
 		.casingTier(4)
-		.duration(200)
-		.EUt(VA[UHV])
+		.duration(200).EUt(VA[UHV])
 		.buildAndRegister()
 } else {
 	// HM Specific
@@ -74,10 +71,9 @@ if (LabsModeHelper.normal) {
 			metaitem('laser_hatch.source_4096a.uv') * 4
 		)
 		.inputWildNBT(metaitem('max.battery'))
-		.fluidInputs(fluid('naquadria') * 82944 /* 64 Blocks*/ )
+		.fluidInputs(fluid('naquadria') * 82944) // 64 Blocks
 		.outputs(metaitem('zbgt:creative_energy_source'))
-		.duration(200)
-		.EUt(VA[UHV])
+		.duration(200).EUt(VA[UHV])
 		.buildAndRegister()
 }
 
@@ -91,14 +87,12 @@ mods.gregtech.precise_assembler_recipes.recipeBuilder()
 	.buildAndRegister()
 
 
-/*
- * Mega multiblocks Recipes
- * These are recipe for all the ZBGT mega multiblocks in a more balanced way.
-*/
+/* Mega Multiblocks Recipes */
 
 // Cracker
 // Remove default recipes
-mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_ocu') * 1], null)
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_ocu')], null)
+
 //New Recipe
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('cracker') * 64,
@@ -115,7 +109,7 @@ mods.gregtech.assembler.recipeBuilder()
 
 // Mega Electric Blast Furnace
 // Remove default recipes
-mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_ebf') * 1], null)
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_ebf')], null)
 
 // New Recipes
 if (LabsModeHelper.normal) {
@@ -154,7 +148,7 @@ if (LabsModeHelper.normal) {
 
 // Mega Vacuum Freezer
 // Remove default recipes
-mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_vf') * 1], null)
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_vf')], null)
 
 // New Recipes
 if (LabsModeHelper.normal) {
@@ -193,7 +187,7 @@ if (LabsModeHelper.normal) {
 
 // Mega Alloy Blast Smelter
 // Remove default recipes
-mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_abs') * 1], null)
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_abs')], null)
 
 // New Recipes
 if (LabsModeHelper.normal) {
