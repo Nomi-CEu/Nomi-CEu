@@ -93,7 +93,7 @@ mods.gregtech.precise_assembler_recipes.recipeBuilder()
 // Remove default recipes
 mods.gregtech.assembler.removeByOutput([metaitem('zbgt:mega_ocu')], null)
 
-//New Recipe
+// New Recipe
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(metaitem('cracker') * 64,
 		metaitem('gcym:frameWatertightSteel') * 64,
