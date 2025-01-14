@@ -46,6 +46,7 @@ Nomi-CEu comes with addon scripts for the following mods. You can drop them into
 - [Flux Networks](https://www.curseforge.com/minecraft/mc-mods/flux-networks)
 - [Lazy AE2](https://www.curseforge.com/minecraft/mc-mods/lazy-ae2)
 - [Project Red - Illumination](https://www.curseforge.com/minecraft/mc-mods/project-red-illumination)
+- [ZBGT](https://www.curseforge.com/minecraft/mc-mods/zbgt)
 
 \* Note: If you are adding these mods via the CurseForge app, remove the extra copy of AE2 **(*non*-extended life)**, of which it might automatically download.
 
