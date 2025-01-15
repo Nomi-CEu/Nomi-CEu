@@ -15,6 +15,31 @@ mods.enderio.enchanter.recipeBuilder()
 	.xpCostMultiplier(3) // 27 Levels, 15 Lapis
 	.register()
 
+// Lens Block
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(
+		item('gregtech:transparent_casing', 1) * 3,
+		item('advancedrocketry:lens') * 3,
+		ore('stickLongRuridit')
+	)
+	.outputs(item('advancedrocketry:blocklens'))
+	.duration(100).EUt(VA[LuV])
+	.buildAndRegister()
+
+// Vacuum-Chamber High Power Laser Emitter
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(
+		item('advancedrocketry:blocklens'),
+		ore('gemPerfectRuby'),
+		ore('plateTitaniumTungstenCarbide') * 4,
+		item('gregtech:laser_pipe_normal') * 8,
+		metaitem('electric.pump.luv'),
+		item('libvulpes:structuremachine')
+	).fluidInputs(fluid('polytetrafluoroethylene') * 1296)
+	.outputs(item('advancedrocketry:vacuumlaser'))
+	.duration(280).EUt(VA[LuV])
+	.buildAndRegister()
+
 // Recipes for Industrial Rebreather Kit
 int airtightId = Enchantment.getEnchantmentID(enchantment('advancedrocketry:spacebreathing'))
 ItemStack airtight = item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) airtightId, 'lvl': (short) 1]]])

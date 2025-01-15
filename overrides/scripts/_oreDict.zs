@@ -1534,7 +1534,6 @@ mods.jei.JEI.removeAndHide(<advancedrocketry:liquidtank>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:intake>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:solargenerator>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:railgun>);
-mods.jei.JEI.removeAndHide(<advancedrocketry:blocklens>);
 //mods.jei.JEI.removeAndHide(<advancedrocketry:forcefieldprojector>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:spaceelevatorcontroller>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:beacon>);
