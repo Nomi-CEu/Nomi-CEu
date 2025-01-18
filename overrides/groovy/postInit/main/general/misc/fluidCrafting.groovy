@@ -42,7 +42,7 @@ for (var entry : [0: 'glass', 20: 'covered', 40: 'smart', 60: 'dense_smart', 500
 		.output(output)
 		.input(cables, fluidIng(fluid('water')))
 		.setInputTooltip(1, IngredientFluidBucket.getInputTooltip(fluid('water')))
-		.replace().register()
+		.register()
 }
 
 // Paper
