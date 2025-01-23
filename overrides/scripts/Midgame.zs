@@ -5,7 +5,7 @@ import mods.gregtech.material.Material;
 import crafttweaker.data.IData;
 import mods.actuallyadditions.AtomicReconstructor;
 
-recipes.remove(<thermalexpansion:satchel:2>);
+recipes.removeByRecipeName("thermalexpansion:satchel_3");
 recipes.addShaped("test", <thermalexpansion:satchel:2>, [
 	[null, <metaitem:nuggetElectrum>, null],
 	[<metaitem:ingotAluminium>, <thermalexpansion:satchel:1>.marked("satchel"), <metaitem:ingotAluminium>], 
