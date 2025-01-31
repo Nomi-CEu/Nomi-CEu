@@ -155,7 +155,7 @@
     }
   },
   "serverSettings": {
-    "fallbackServerIcon": "nomi-ceu",
+    "fallbackServerIcon": "logo-{custom.modeSlug}",
     "fallbackServerName": "Nomi-CEu Server",
     "fallbackServerMotd": "Nomifactory CEu Server",
     "serverData": {
@@ -202,7 +202,7 @@
         "gameState": "",
         "largeImageKey": "loading",
         "largeImageText": "",
-        "smallImageKey": "nomi-ceu",
+        "smallImageKey": "logo-{custom.modeSlug}",
         "smallImageText": "",
         "startTimestamp": "",
         "endTimestamp": "",
@@ -343,7 +343,7 @@
       "partyPrivacy": 1,
       "details": "{getFirst(menu.message)}",
       "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
-      "largeImageKey": "{getFirst(menu.icon, general.icon)}",
+      "largeImageKey": "{getOrDefault(menu.icon, custom.logoSlug)}",
       "largeImageText": "Playing {custom.windowTitle}",
       "smallImageKey": "{custom.tierSlug}",
       "smallImageText": "Stage: {custom.tierName}",
@@ -376,6 +376,7 @@
       "player_info_health": "Health: {player.health.current}/{player.health.max}",
       "pack": "{pack.name}",
       "mode": "{executeMethod('com.nomiceu.nomilabs.util.LabsModeHelper', null, 'getFormattedMode')}",
+      "logoSlug": "logo-{executeMethod('com.nomiceu.nomilabs.util.LabsModeHelper', null, 'getMode')}",
       "tierSlug": "{executeMethod('com.nomiceu.nomilabs.integration.betterquesting.LabsTierHelper', null, 'getTierSlug')}",
       "default": "Example Text",
       "player_info_coordinate": "At {player.position.x}, {player.position.z}",
