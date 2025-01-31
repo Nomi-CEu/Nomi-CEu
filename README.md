@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/Nomi-CEu/Nomi-CEu/assets/103940576/672808a8-0ad0-4d07-809e-08336a928909" alt="Logo"></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/3f18c90d-efac-4a17-b9b8-556e1d7a3cc1" alt="Logo"></p>
 <h1 align="center">Nomifactory CEu</h1>
 <p align="center"><b><i>Fork of <a href="https://github.com/Nomifactory/Nomifactory"> Nomifactory</a>, using <a href="https://github.com/GregTechCEu/GregTech"> GregTech CEu</a> and its related mods.</i></b></p>
 <h1 align="center">
@@ -10,6 +10,8 @@
     <a href="https://www.curseforge.com/minecraft/modpacks/nomi-ceu"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_nomi-ceu_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
     <a href="https://github.com/Nomi-CEu/Nomi-CEu/releases"><img src="https://img.shields.io/github/downloads/Nomi-CEu/Nomi-CEu/total?sort=semver&logo=github&label=&style=for-the-badge&color=2d2d2d&labelColor=545454&logoColor=FFFFFF" alt="GitHub"></a>
 </h1>
+
+
 
 ## Features:
 - GregTech Community Edition Unofficial, and its related mods, which are actively developed
