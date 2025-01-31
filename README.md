@@ -9,8 +9,8 @@
 <p align="center"><b><i>Fork of <a href="https://github.com/Nomifactory/Nomifactory"> Nomifactory</a>, using <a href="https://github.com/GregTechCEu/GregTech"> GregTech CEu</a> and its related mods.</i></b></p>
 <h1 align="center">
     <a href="https://github.com/Nomi-CEu/Nomi-CEu/"><img src="https://img.shields.io/github/stars/Nomi-CEu/Nomi-CEu?style=for-the-badge&logo=github&logoColor=white" alt="Stars"></a>
-    <a href="https://nightly.link/Nomi-CEu/Nomi-CEu/workflows/testbuildpack/main"><img src="https://img.shields.io/github/last-commit/Nomi-CEu/Nomi-CEu/main?style=for-the-badge&logo=githubactions&logoColor=white&label=Nightly%20Builds&color=%238a67ab" alt="Builds"></a>
-    <a href="https://discord.com/invite/zwQzqP8b6q"><img src="https://img.shields.io/discord/927050775073534012?style=for-the-badge&logo=discord&logoColor=%23ffffff&label=discord%20&labelColor=gray&color=%235865F2" alt="Discord"></a>
+    <a href="https://nightly.link/Nomi-CEu/Nomi-CEu/workflows/testbuildpack/main"><img src="https://img.shields.io/github/last-commit/Nomi-CEu/Nomi-CEu/main?style=for-the-badge&logo=githubactions&logoColor=white&label=Nightly%20Builds&color=mediumpurple" alt="Builds"></a>
+    <a href="https://discord.com/invite/zwQzqP8b6q"><img src="https://img.shields.io/discord/927050775073534012?style=for-the-badge&logo=discord&logoColor=white&label=discord%20&labelColor=gray&color=slateblue" alt="Discord"></a>
     <br>
     <a href="https://www.curseforge.com/minecraft/modpacks/nomi-ceu"><img src="https://cf.way2muchnoise.eu/nomi-ceu.svg?badge_style=for_the_badge" alt="CurseForge"></a>
     <a href="https://www.curseforge.com/minecraft/modpacks/nomi-ceu"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_nomi-ceu_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
