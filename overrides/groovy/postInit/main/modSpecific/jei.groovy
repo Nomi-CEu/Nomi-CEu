@@ -44,6 +44,11 @@ for (var tier : [MV, HV, EV, IV, LuV, ZPM, UV]) {
 	mods.jei.ingredient.removeAndHide(MetaTileEntities.MUFFLER_HATCH[tier].getStackForm())
 }
 
+// Extended Crafting
+// Ender & Enhanced Ender
+mods.jei.ingredient.hide(item('extendedcrafting:storage', 5)) // Block of Ender
+mods.jei.ingredient.hide(item('extendedcrafting:material', 49)) // Enhanced Ender Nugget
+
 // Better Questing
 List<ItemStack> lootBoxes = [
 	item('bq_standard:loot_chest'),
@@ -119,6 +124,7 @@ overrideRecipeCatalysts('minecraft.crafting',
 	item('avaritia:compressed_crafting_table'),
 	metaitem('workbench'),
 	item('actuallyadditions:item_crafter_on_a_stick'),
+	item('appliedenergistics2:molecular_assembler'),
 	item('extrautils2:crafter'),
 	item('enderio:block_crafter'),
 	item('enderio:block_inventory_panel'))
