@@ -1,118 +1,118 @@
 {
-	"images": {
-		"title": {
-			"image": "minecraft:textures/gui/title/top.png",
-			"posX": -150,
-			"posY": 4,
-			"width": 300,
-			"height": 79,
-			"alignment": "top_center"
-		}
-	},
 	"buttons": {
-		"singleplayer": {
-			"text": "menu.singleplayer",
+		"akliz": {
+			"action": {
+				"link": "https://www.akliz.net/nomifactory",
+				"type": "openLink"
+			},
+			"alignment": "left_center",
+			"height": 20,
 			"posX": 4,
-			"posY": -46,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "singleplayer"
-			}
-		},
-		"multiplayer": {
-			"text": "menu.multiplayer",
-			"posX": 125,
-			"posY": -46,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "multiplayer"
-			}
-		},
-		"mods": {
-			"text": "fml.menu.mods",
-			"posX": 4,
-			"posY": -22,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "mods"
-			}
-		},
-		"options": {
-			"text": "menu.options",
-			"posX": 125,
-			"posY": -22,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "options"
-			}
-		},
-		"quit": {
-			"text": "menu.quit",
-			"posX": 4,
-			"posY": 74,
-			"width": 240,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "quit"
-			}
-		},
-		"update": {
-			"text": "Update Changes",
-			"posX": 125,
-			"posY": 26,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openLink",
-				"link": "https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/{{{version}}}"
-			}
+			"posY": 58,
+			"text": "Rent Your Own Nomifactory Server!",
+			"width": 240
 		},
 		"discord": {
+			"action": {
+				"link": "https://discord.gg/zwQzqP8b6q",
+				"type": "openLink"
+			},
+			"alignment": "left_center",
+			"height": 20,
+			"posX": 4,
+			"posY": 34,
 			"text": "Join Us On Discord!",
-			"posX": 4,
-			"posY": 26,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openLink",
-				"link": "https://discord.gg/zwQzqP8b6q"
-			}
+			"width": 120
 		},
-		"akliz": {
-			"text": "Rent Your Own Nomifactory Server!",
-			"posX": 4,
-			"posY": 50,
-			"width": 240,
-			"height": 20,
-			"alignment": "left_center",
+		"mods": {
 			"action": {
-				"type": "openLink",
-				"link": "https://www.akliz.net/nomifactory"
-			}
+				"gui": "mods",
+				"type": "openGui"
+			},
+			"alignment": "left_center",
+			"height": 20,
+			"posX": 4,
+			"posY": -14,
+			"text": "fml.menu.mods",
+			"width": 120
+		},
+		"multiplayer": {
+			"action": {
+				"gui": "multiplayer",
+				"type": "openGui"
+			},
+			"alignment": "left_center",
+			"height": 20,
+			"posX": 125,
+			"posY": -38,
+			"text": "menu.multiplayer",
+			"width": 120
+		},
+		"options": {
+			"action": {
+				"gui": "options",
+				"type": "openGui"
+			},
+			"alignment": "left_center",
+			"height": 20,
+			"posX": 125,
+			"posY": -14,
+			"text": "menu.options",
+			"width": 120
+		},
+		"quit": {
+			"action": {
+				"type": "quit"
+			},
+			"alignment": "left_center",
+			"height": 20,
+			"posX": 4,
+			"posY": 82,
+			"text": "menu.quit",
+			"width": 240
+		},
+		"singleplayer": {
+			"action": {
+				"gui": "singleplayer",
+				"type": "openGui"
+			},
+			"alignment": "left_center",
+			"height": 20,
+			"posX": 4,
+			"posY": -38,
+			"text": "menu.singleplayer",
+			"width": 120
+		},
+		"update": {
+			"action": {
+				"link": "https://github.com/Nomi-CEu/Nomi-CEu/releases/tag/{{{version}}}",
+				"type": "openLink"
+			},
+			"alignment": "left_center",
+			"height": 20,
+			"posX": 125,
+			"posY": 34,
+			"text": "Update Changes",
+			"width": 120
+		}
+	},
+	"images": {
+		"title": {
+			"alignment": "top_center",
+			"height": 79,
+			"image": "minecraft:textures/gui/title/top_{{{mode}}}.png",
+			"posX": -150,
+			"posY": 4,
+			"width": 300
 		}
 	},
 	"labels": {
 		"mojang": {
-			"text": "Copyright Mojang AB. Do not distribute!",
+			"alignment": "bottom_right",
+			"color": -1,
 			"posX": -197,
 			"posY": -10,
-			"color": -1,
-			"alignment": "bottom_right"
+			"text": "Copyright Mojang AB. Do not distribute!"
 		}
 	},
 	"other": {
@@ -121,7 +121,6 @@
 			"slideshow": {
 				"displayDuration": 100,
 				"fadeDuration": 40,
-				"shuffle": true,
 				"images": [
 					"minecraft:textures/gui/title/background/besoiobiy_1.jpg",
 					"minecraft:textures/gui/title/background/besoiobiy_2.jpg",
@@ -143,7 +142,8 @@
 					"minecraft:textures/gui/title/background/pgs_2.jpg",
 					"minecraft:textures/gui/title/background/qr_est.jpg",
 					"minecraft:textures/gui/title/background/supasem.jpg"
-				]
+				],
+				"shuffle": true
 			}
 		}
 	}
