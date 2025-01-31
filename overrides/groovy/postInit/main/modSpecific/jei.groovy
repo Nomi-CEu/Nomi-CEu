@@ -124,10 +124,10 @@ overrideRecipeCatalysts('minecraft.crafting',
 	item('avaritia:compressed_crafting_table'),
 	metaitem('workbench'),
 	item('actuallyadditions:item_crafter_on_a_stick'),
+	item('appliedenergistics2:molecular_assembler'),
 	item('extrautils2:crafter'),
 	item('enderio:block_crafter'),
-	item('enderio:block_inventory_panel'),
-	item('appliedenergistics2:molecular_assembler'))
+	item('enderio:block_inventory_panel'))
 
 // Smelting (add More Furnaces' Furnaces)
 List<Object> furnaceCatalysts = [item('minecraft:furnace')]
