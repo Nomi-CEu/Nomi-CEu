@@ -167,6 +167,7 @@
   "statusMessages": {
     "mainMenuData": {
       "textOverride": "In the Main Menu",
+      "iconOverride": "{custom.logo_slug}",
       "data": {
         "enabled": true,
         "useAsMain": false,
