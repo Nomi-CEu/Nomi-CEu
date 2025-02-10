@@ -326,6 +326,7 @@ crafting.shapelessBuilder()
 crafting.shapelessBuilder()
 	.output(item('appliedenergistics2:part', 222))
 	.input(item('appliedenergistics2:part', 220), metaitem('ore_dictionary_filter'))
+	.replace().register()
 
 /* Misc Block Parts */
 // P2P Tunnel
