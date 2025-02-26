@@ -1,10 +1,10 @@
 package postInit.main.general.misc
 
 import com.google.common.base.CaseFormat
+import com.nomiceu.nomilabs.util.ItemMeta
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import net.minecraft.item.ItemStack
-import net.minecraftforge.fluids.Fluid
 import net.minecraftforge.fluids.FluidStack
 import net.minecraftforge.fluids.FluidUtil
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler
@@ -293,7 +293,7 @@ if (LabsModeHelper.expert) {
 		.output(fillStack(metaitem('fluid_cell'), fluid('concrete') * 1000))
 		.matrix('ABC', 'ADE', ' F ')
 		.key('A', ore('dustCalcite'))
-		.key('B', metaitem('fluid_cell'))
+		.key('B', new NoNBTIngredient(metaitem('fluid_cell')))
 		.key('C', ore('dustStone'))
 		.key('D', fluidIng(fluid('water')))
 		.key('E', ore('dustQuartzSand'))
@@ -491,4 +491,26 @@ static ItemStack fillStack(ItemStack itemStack, FluidStack fluidStack) {
 	var toFill = itemStack.copy()
 	IngredientFluidBucket.getHandler(toFill)?.fill(fluidStack, true)
 	return toFill
+}
+
+/**
+ * Simple Wrapper Class to make sure an ingredient has NO nbt.
+ */
+class NoNBTIngredient extends SimpleIIngredient {
+
+	private final ItemStack stack;
+
+	NoNBTIngredient(ItemStack stack) {
+		this.stack = stack;
+	}
+
+	@Override
+	ItemStack[] getMatchingStacks() {
+		return new ItemStack[]{ stack };
+	}
+
+	@Override
+	boolean test(ItemStack itemStack) {
+		return ItemMeta.compare(itemStack, stack) && (!itemStack.hasTagCompound() || itemStack.getTagCompound().isEmpty());
+	}
 }
