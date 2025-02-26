@@ -159,8 +159,8 @@ if (LabsModeHelper.expert) {
 
 // Little Tiles Lava
 crafting.shapelessBuilder()
-	.output(item('littletiles:ltcoloredblock', 12))
-	.input(fluidIng(fluid('lava')))
+	.output(item('littletiles:ltcoloredblock', 12) * 2)
+	.input(fluidIng(fluid('lava')), fluidIng(fluid('lava')))
 	.setInputTooltip(IngredientFluidBucket.getInputTooltip(fluid('lava')))
 	.replace().register()
 
