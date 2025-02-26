@@ -22285,7 +22285,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Multi Smelter§r is an absolute smelting unit, and is most likely the best furnace added by a mod.\n\nIt\u0027s a 3x3x3 multiblock machine capable of §esmelting huge amounts of items per second§r. By upgrading its coils and power tier, it can become capable of smelting up to literal thousands of items per second.\n\nHover over different coil blocks: the higher the §elevel§r, the more items a Multi Smelter can smelt per operation: §e32 items per level§r. The most basic Multi Smelter essentially does 32 items in the same time as a furnace does one. With a set of level 4 coil blocks, that jumps to 128 items per operation.\n\nThis quest doesn\u0027t ask for coils, hatches or buses: feel free to choose whatever combination you want. You\u0027ll need §a8 coil blocks§r, §a1 input bus§r, §a1 output bus§r and at least §a1 energy hatch§r of any tier.",
+          "desc:8": "The §3Multi Smelter§r is an absolute smelting unit, and is most likely the best furnace added by a mod.\n\nIt\u0027s a 3x3x3 multiblock machine capable of §esmelting huge amounts of items per second§r. By upgrading its coils and power tier, it can become capable of smelting up to literal thousands of items per second.\n\nShift and hover over different coil blocks: they tell you the number of items a Multi Smelter can smelt per operation: §e32 items per level§r. The most basic Multi Smelter essentially does 32 items in the same time as a furnace does one. With a set of §6RTM Alloy§r coil blocks, that jumps to §e128 items per operation§r.\n\nThis quest doesn\u0027t ask for coils, hatches or buses: feel free to choose whatever combination you want. You\u0027ll need §a8 coil blocks§r, §a1 input bus§r, §a1 output bus§r, and §21 maintenance hatch§r, §21 muffler hatch§r, and at least §a1 energy hatch§r, all of any tier.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -39369,7 +39369,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Upgrade time!\n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra §229§r if you don\u0027t want more than §a2 Fluid Inputs§r and §a1 Fluid Output§r. Don\u0027t forget the extra §e31 Fusion Glass§r or §6Fusion Machine Casings§r!\n\n§bYes, the Fusion Glass is the same tier as last time, but the Fusion Machine Casings are more expensive.§r\n\nMake sure your using §6ZPM Energy Hatches§r!\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
+          "desc:8": "Upgrade time!\n...or building a new one, which is probably better.\n\nYet again this quest asks for the minimal number of casings. Make an extra §229§r if you don\u0027t want more than §a2 Fluid Inputs§r and §a1 Fluid Output§r. Don\u0027t forget the extra §e31 Fusion Glass§r or §6Fusion Machine Casings§r!\n\n§bYes, the Fusion Glass is the same tier as last time, but the Fusion Machine Casings are more expensive.§r\n\nMake sure you\u0027re using §6ZPM Energy Hatches§r!\n\nIf you insist on upgrading instead of making a new one, don\u0027t dismantle the current one before you\u0027re sure you\u0027ve got everything you need to upgrade it, or you might end up having to rebuild the §3Mark 1 Fusion Reactor§r again.\n\nThe §3Mark 2 Fusion Reactor§r has an energy buffer of §e320M EU§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45541,13 +45541,12 @@
     "859:10": {
       "preRequisites:11": [
         690,
-        858,
-        1110
+        858
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.§r\n\nThese are formed like multiblocks. You can add a §3Parallel Control Hatch§r in order to allow them to process §dmore recipes§r at the same time, similarly to a §3Processing Array§r. The highest tier of Parallel Control Hatch can facilitate processing §d256 recipes§r at once!\n\n§eAll GCYM Multiblocks, except the Large Assembler and the Large Circuit Assembler, accepts up to 3 Energy Hatches.§r\n\nSearch \"@gregicality\" or look up the usages of Parallel Hatches in JEI to see details of all the multiblock machines. The §6Pattern Multi-Tool§r can be used to easily multiply patterns to fully benefit from multiblock parallel capabilities.\n\nMost of the advanced alloys used to make the casings of these multiblocks are made in the §3Alloy Blast Smelter§r. If you can\u0027t seem to find the recipes for them, look for the §eMolten Fluid§r form.\n\n§aDistinct Bus Mode§r is extremely helpful when setting up §3Processing Arrays§r for automation: for example, you can have a bus for gear recipes and one for rotor recipes, on the same multiblock.",
+          "desc:8": "§2With advanced alloys from the Alloy Blast Smelter and IV Machines, you can make large versions of most GT machines.§r\n\nThese are formed like multiblocks. You can add a §3Parallel Control Hatch§r in order to allow them to process §dmore recipes§r at the same time, similarly to a §3Processing Array§r. The highest tier of Parallel Control Hatch can facilitate processing §d256 recipes§r at once!\n\n§eAll GCYM Multiblocks, except the Large Assembler and the Large Circuit Assembler, accepts up to 3 Energy Hatches.§r\n\nSearch \"@gregicality\" or look up the usages of Parallel Hatches in JEI to see details of all the multiblock machines. The §6Pattern Multi-Tool§r can be used to easily multiply patterns to fully benefit from multiblock parallel capabilities.\n\nMost of the advanced alloys used to make the casings of these multiblocks are made in the §3Alloy Blast Smelter§r. If you can\u0027t seem to find the recipes for them, look for the §eMolten Fluid§r form.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -48360,7 +48359,7 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 1316,
-              "OreDict:8": "",
+              "OreDict:8": "questbookLvBatteryBuffer",
               "id:8": "gregtech:machine"
             }
           },
@@ -54314,7 +54313,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Once you scan and make make your first §6UV Circuits§r and §6ZPM Field Generators§r, you can upgrade your §3HPCA Computing Components§r to §3Advanced Components§r. These produce §d16 CWU/t§r each and require §d4 Cooling§r each.\n\nWith them, you can upgrade a single HPCA to produce §d32 CWU/t§r total - enough for basic §6UV components§r, and the §3Network Switch§r, which will allow you to go higher.",
+          "desc:8": "Once you scan and make your first §6UV Circuits§r and §6ZPM Field Generators§r, you can upgrade your §3HPCA Computing Components§r to §3Advanced Components§r. These produce §d16 CWU/t§r each and require §d4 Cooling§r each.\n\nWith them, you can upgrade a single HPCA to produce §d32 CWU/t§r total - enough for basic §6UV components§r, and the §3Network Switch§r, which will allow you to go higher.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58271,50 +58270,6 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
-    },
-    "1110:10": {
-      "preRequisiteTypes:7": [
-        1,
-        1
-      ],
-      "preRequisites:11": [
-        22,
-        60
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "As you automate more, an advanced feature of multiblocks that will quickly become helpful is §aDistinct Bus Mode§r.\n\nThis makes multiblocks only consider a single item input bus at a time when determining whether it can run a recipe. This is useful when recipes for a particular machine require different catalyst items, like §6Integrated Circuits§r on different configurations or §6Extruder Shapes§r.\n\n§eNote that fluids are always counted when determining recipes.§r\n\nDistinct Bus Mode may be enabled or disabled via most multiblock controller by clicking in the designated area. §cNot all multiblocks support Distinct Bus Mode!§r",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 1151,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Distinct Bus Mode",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
-        }
-      },
-      "questID:3": 1110,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
-        }
-      }
     }
   },
   "questLines:9": {
@@ -59673,13 +59628,6 @@
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -404
-        },
-        "120:10": {
-          "id:3": 1110,
-          "sizeX:3": 32,
-          "sizeY:3": 32,
-          "x:3": 464,
-          "y:3": -420
         }
       }
     },
@@ -60716,13 +60664,6 @@
           "sizeY:3": 24,
           "x:3": -68,
           "y:3": 276
-        },
-        "145:10": {
-          "id:3": 1110,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -560,
-          "y:3": 396
         }
       }
     },
