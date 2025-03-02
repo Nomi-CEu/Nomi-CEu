@@ -163,11 +163,7 @@ if (LabsModeHelper.expert) {
 
 // Ender Lily Extractor Recipe
 mods.gregtech.extractor.recipeBuilder()
-<<<<<<< HEAD:overrides/groovy/postInit/Post-Initial/Main/General/Early-Game/earlygame.groovy
-	.inputs(item('extrautils2:enderlilly')
-=======
 	.inputs(item('extrautils2:enderlilly'))
->>>>>>> 072c7b481e1e04765cff687d14ce3551e7f4bc67:overrides/groovy/postInit/main/general/earlyGame/earlygame.groovy
 	.fluidOutputs(fluid('ender') * 25)
 	.duration(80).EUt(VA[ULV])
 	.buildAndRegister()
