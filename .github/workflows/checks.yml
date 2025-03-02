@@ -1,18 +1,7 @@
 name: Checks
 on:
   push:
-    branches:
-      - main
-      - test-buildscript*
-      - dev/*
-    paths-ignore:
-      - "README.md"
-
   pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - "README.md"
 
 jobs:
   checks:

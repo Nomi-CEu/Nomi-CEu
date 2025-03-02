@@ -7,15 +7,15 @@ import scripts.common.makeShaped as makeShaped;
 
 //Wooden Gear
 recipes.remove(<enderio:item_material:9>);
-recipes.addShaped(<enderio:item_material:9>, [[null,<minecraft:stick>,null],
-	[<minecraft:stick>,null,<minecraft:stick>],
-	[null,<minecraft:stick>,null]]);
+recipes.addShaped(<enderio:item_material:9>, [[null,<ore:stickWood>,null],
+	[<ore:stickWood>,null,<ore:stickWood>],
+	[null,<ore:stickWood>,null]]);
 
 //Wooden Shears
 recipes.remove(<thermalfoundation:tool.shears_wood>);
-recipes.addShaped(<thermalfoundation:tool.shears_wood>, [[null,<minecraft:stick>,null],
-	[<minecraft:stick>,null,<minecraft:stick>],
-	[<enderio:item_material:9>,<minecraft:stick>,null]]);
+recipes.addShaped(<thermalfoundation:tool.shears_wood>, [[null,<ore:stickWood>,null],
+	[<ore:stickWood>,null,<ore:stickWood>],
+	[<enderio:item_material:9>,<ore:stickWood>,null]]);
 
 //Fertilizer 
 recipes.addShaped("actuallyadditions_fertilizer", <actuallyadditions:item_fertilizer> * 8, [[<minecraft:sand>,<metaitem:gemApatite>,<minecraft:sand>]]);
@@ -25,14 +25,6 @@ recipes.remove(<dimensionaledibles:nether_cake>);
 recipes.remove(<dimensionaledibles:end_cake>);
 recipes.remove(<dimensionaledibles:island_cake>);
 recipes.remove(<dimensionaledibles:custom_cake>);
-recipes.remove(<minecraft:cake>);
-recipes.remove(<enderio:item_material:70>);
-
-//Cake Base
-recipes.addShaped(<enderio:item_material:70>, [[<minecraft:sugar>, <minecraft:milk_bucket> | <minecraft:bucket>, <minecraft:sugar>], [<actuallyadditions:item_misc:4> | <actuallyadditions:item_misc:9>, <actuallyadditions:item_misc:4> | <actuallyadditions:item_misc:9>, <actuallyadditions:item_misc:4> | <actuallyadditions:item_misc:9>]]);
-
-//Cake
-recipes.addShaped(<minecraft:cake>, [[<minecraft:milk_bucket> | <minecraft:bucket>, <minecraft:milk_bucket> | <minecraft:bucket>, <minecraft:milk_bucket> | <minecraft:bucket>], [<minecraft:sugar>, <ore:egg>, <minecraft:sugar>], [<actuallyadditions:item_misc:4>,<actuallyadditions:item_misc:4>,<actuallyadditions:item_misc:4>]]);
 
 //Overworld Cake
 recipes.addShaped(<dimensionaledibles:overworld_cake>, [[<minecraft:redstone>, <metaitem:dustGold>, <minecraft:redstone>], [<ore:treeSapling>, <enderio:item_material:70>, <ore:treeSapling>],[<metaitem:plant_ball>,<minecraft:diamond>,<metaitem:plant_ball>]]);

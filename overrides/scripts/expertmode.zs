@@ -135,15 +135,6 @@ makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate:
 	  R : <ore:dustRedstone>,
 	  I : <ore:ingotIron>}); 
 
-
-recipes.remove(<nuclearcraft:water_source>);
-makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
-    ["AAA",
-     "B B",
-     "AAA"],
-    { A : <ore:plateDoubleSteel>,
-      B : <minecraft:water_bucket:*> });
-
 // XP Juice
 mixer.recipeBuilder()
 	.inputs(<ore:itemPulsatingPowder>)
@@ -232,17 +223,8 @@ assembler.recipeBuilder()
     .outputs([<enderio:item_liquid_conduit:2> * 8])
     .duration(80).EUt(16).buildAndRegister();
 
-// Elemental Reduction with H2SbF7
-reactor.recipeBuilder()
-    .inputs(<ore:dustPulsating> * 4)
-    .fluidInputs([<liquid:fluoroantimonic_acid> * 1000])
-    .fluidOutputs(<liquid:elementalreduction> * 12000)
-    .duration(540).EUt(360).buildAndRegister();
-
-
 ////////////////////////// Creative Vending Upgrade ///////////////////////
-val creativecell = <thermalexpansion:cell>.withTag({Recv: 250000, RSControl: 0 as byte, Facing: 3 as byte, Energy: 500000000, Creative: 1 as byte, SideCache: [2, 2, 2, 2, 2, 2] as byte[] as byte[], Level: 4 as byte, Send: 250000}, false);
-val creativetank = <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 1 as byte, Level: 4 as byte}, false);
+val creativecell = <thermalexpansion:cell>.withTag({Creative: 1 as byte, Level: 4 as byte}, false);
 val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType: 3}, false);
 
 makeExtremeRecipe9(<metaitem:creative_chest> * 2,
@@ -258,7 +240,7 @@ makeExtremeRecipe9(<metaitem:creative_chest> * 2,
     { A : <storagedrawers:upgrade_creative>,
       B : <ore:ingotInfinity>,
       C : <draconicevolution:creative_rf_source>,
-      D : creativecell.only(isCreative),
+      D : creativecell,
       E : <extrautils2:creativeenergy>,
       G : <extrautils2:passivegenerator:6>,
       H : <avaritia:infinity_helmet>,
@@ -314,26 +296,6 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 4, [
 
 recipes.addShaped(<storagedrawers:upgrade_storage:3>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotAluminium>, <storagedrawers:upgrade_template>, <ore:ingotAluminium>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 recipes.addShaped(<storagedrawers:upgrade_storage:4>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotVibrantAlloy>, <storagedrawers:upgrade_template>, <ore:ingotVibrantAlloy>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
-
-// NC Cobble gen
-recipes.remove(<nuclearcraft:cobblestone_generator>);
-makeShaped("of_nc_cobblestone_generator",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "B C",
-     "AAA"],
-    { A : <ore:plateBlackSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
-
-makeShaped("of_nc_cobblestone_generator_mirrored",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "C B",
-     "AAA"],
-    { A : <ore:plateBlackSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
 
 //Crystal Growth Chamber
 recipes.addShaped(<ae2stuff:grower>, [
@@ -495,7 +457,7 @@ recipes.addShaped(<metaitem:gcym:parallel_hatch.uv>, [
 // Stabilized Miners (Moved to Groovy)
 
 // Remove shortcut recipes
-recipes.remove(<minecraft:stick> * 16);
+recipes.remove(<ore:stickWood> * 16);
 recipes.removeByRecipeName("appliedenergistics2:misc/vanilla_comparator");
 recipes.remove(<minecraft:chest> * 4);
 

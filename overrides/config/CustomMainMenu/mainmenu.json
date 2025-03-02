@@ -1,110 +1,110 @@
 {
-	"images": {
-		"title": {
-			"image": "minecraft:textures/gui/title/top.png",
-			"posX": -150,
-			"posY": 4,
-			"width": 300,
-			"height": 79,
-			"alignment": "top_center"
-		}
-	},
-	"buttons": {
-		"singleplayer": {
-			"text": "menu.singleplayer",
-			"posX": 4,
-			"posY": -46,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "singleplayer"
-			}
-		},
-		"multiplayer": {
-			"text": "menu.multiplayer",
-			"posX": 125,
-			"posY": -46,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "multiplayer"
-			}
-		},
-		"mods": {
-			"text": "fml.menu.mods",
-			"posX": 4,
-			"posY": -22,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "mods"
-			}
-		},
-		"options": {
-			"text": "menu.options",
-			"posX": 125,
-			"posY": -22,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openGui",
-				"gui": "options"
-			}
-		},
-		"quit": {
-			"text": "menu.quit",
-			"posX": 4,
-			"posY": 74,
-			"width": 240,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "quit"
-			}
-		},
-		"update": {
-			"text": "Update Changes",
-			"posX": 125,
-			"posY": 26,
-			"width": 120,
-			"height": 20,
-			"alignment": "left_center",
-			"action": {
-				"type": "openLink",
-				"link": "https://github.com/Horde-Of-Greg/HOGifactory/releases/tag/{{{version}}}"
-			}
-		}
-	},
-	"labels": {
-		"mojang": {
-			"text": "Copyright Mojang AB. Do not distribute!",
-			"posX": -197,
-			"posY": -10,
-			"color": -1,
-			"alignment": "bottom_right"
-		}
-	},
-	"other": {
-		"background": {
-			"image": "",
-			"slideshow": {
-				"displayDuration": 100,
-				"fadeDuration": 40,
-				"shuffle": true,
-				"images": [
-					"minecraft:textures/gui/title/background/abomination.jpg",
-					"minecraft:textures/gui/title/background/steamchad.jpg",
-					"minecraft:textures/gui/title/background/audi_fusion.jpg",
-					"minecraft:textures/gui/title/background/fuge_tower.jpg"
-				]
-			}
-		}
-	}
+  "images": {
+    "title": {
+      "image": "minecraft:textures/gui/title/top.png",
+      "posX": -150,
+      "posY": 4,
+      "width": 300,
+      "height": 79,
+      "alignment": "top_center"
+    }
+  },
+  "buttons": {
+    "singleplayer": {
+      "text": "menu.singleplayer",
+      "posX": 4,
+      "posY": -46,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "singleplayer"
+      }
+    },
+    "multiplayer": {
+      "text": "menu.multiplayer",
+      "posX": 125,
+      "posY": -46,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "multiplayer"
+      }
+    },
+    "mods": {
+      "text": "fml.menu.mods",
+      "posX": 4,
+      "posY": -22,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "mods"
+      }
+    },
+    "options": {
+      "text": "menu.options",
+      "posX": 125,
+      "posY": -22,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openGui",
+        "gui": "options"
+      }
+    },
+    "quit": {
+      "text": "menu.quit",
+      "posX": 4,
+      "posY": 74,
+      "width": 240,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "quit"
+      }
+    },
+    "update": {
+      "text": "Update Changes",
+      "posX": 125,
+      "posY": 26,
+      "width": 120,
+      "height": 20,
+      "alignment": "left_center",
+      "action": {
+        "type": "openLink",
+        "link": "https://github.com/Horde-Of-Greg/HOGifactory/releases/tag/{{{version}}}"
+      }
+    }
+  },
+  "labels": {
+    "mojang": {
+      "text": "Copyright Mojang AB. Do not distribute!",
+      "posX": -197,
+      "posY": -10,
+      "color": -1,
+      "alignment": "bottom_right"
+    }
+  },
+  "other": {
+    "background": {
+      "image": "",
+      "slideshow": {
+        "displayDuration": 100,
+        "fadeDuration": 40,
+        "shuffle": true,
+        "images": [
+          "minecraft:textures/gui/title/background/abomination.jpg",
+          "minecraft:textures/gui/title/background/steamchad.jpg",
+          "minecraft:textures/gui/title/background/audi_fusion.jpg",
+          "minecraft:textures/gui/title/background/fuge_tower.jpg"
+        ]
+      }
+    }
+  }
 }

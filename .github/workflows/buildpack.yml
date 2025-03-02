@@ -357,7 +357,7 @@ jobs:
           compression-level: 9
 
   buildLang:
-    name: Build Pack Lang and Changelogs (${{ inputs.tag }})
+    name: Build Pack Lang (${{ inputs.tag }})
     runs-on: ubuntu-latest
     if: ${{ inputs.separate_upload }}
     needs: makeNames

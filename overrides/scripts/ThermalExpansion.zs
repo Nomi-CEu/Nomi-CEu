@@ -29,68 +29,12 @@ recipes.addShaped(<thermalfoundation:material:512>, [
 	[null,<metaitem:nomilabs:plateElectricalSteel>, null],
 	[<extrautils2:ingredients>,<metaitem:nomilabs:plateElectricalSteel>, <extrautils2:ingredients>]]);
 
-// remove the wonky 2-tag version from JEI
-mods.jei.JEI.removeAndHide(<thermalexpansion:tank>);
-
-// replace tank recipe with 3-tag version
+// replace tank recipe
 recipes.remove(<thermalexpansion:tank>);
 recipes.addShaped(basictank, [
 	[<metaitem:plateCopper>, <ore:blockGlassHardened>, <metaitem:plateCopper>],
 	[<ore:blockGlassHardened>,null,<ore:blockGlassHardened>],
 	[<metaitem:plateCopper>, <thermalfoundation:material:512>, <metaitem:plateCopper>]]);
-
-function updateTank(level as byte) as IRecipeFunction {
-    return function(out, ins, cInfo) as IItemStack {
-        return ins.tank.updateTag({Level: level});
-    };
-}
-
-var tankShape as string[] = ["ABA",
-                             "BCB",
-                             "ABA"];
-
-makeShapedF("of_hardenedtank",
-    hardenedtank,
-    tankShape,
-    { A : <actuallyadditions:item_crystal:1>,
-      B : <metaitem:plateInvar>,
-      C : basictankIng.marked("tank")},
-    updateTank(1)
-);
-
-makeShapedF("of_reinforcedtank",
-    reinforcedtank,
-    tankShape,
-    { A : <thermalfoundation:material:1026>,
-      B : <metaitem:plateElectrum>,
-      C : hardenedtankIng.marked("tank")},
-    updateTank(2)
-);
-
-makeShapedF("of_signalumtank",
-    signalumtank,
-    tankShape,
-    { A : <thermalfoundation:material:1027>,
-      B : <ore:plateSignalum>,
-      C : reinforcedtankIng.marked("tank")},
-    updateTank(3)
-);
-
-makeShapedF("of_resonanttank",
-    resonanttank,
-    tankShape,
-    { A : <thermalfoundation:material:1024>,
-      B : <ore:plateEnderium>,
-      C : signalumtankIng.marked("tank")},
-    updateTank(4)
-);
-
-
-mods.jei.JEI.addItem(basictank);
-mods.jei.JEI.addItem(hardenedtank);
-mods.jei.JEI.addItem(reinforcedtank);
-mods.jei.JEI.addItem(signalumtank);
-mods.jei.JEI.addItem(resonanttank);
 
 //mods.jei.JEI.addItem(<gregtech:meta_tool:7>.withTag({RandomKey: -9206505693458694257 as long, CreatorMost: -5567380206174582019 as long, CraftingComponents: [{id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "minecraft:stick", Count: 1 as byte, Damage: 0 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}, {id: "gregtech:meta_item_1", Count: 1 as byte, Damage: 10152 as short}], "GT.ToolStats": {PrimaryMaterial: "rubber", HandleMaterial: "wood"}, CreatorLeast: -6837252790035570724 as long}));
 
@@ -225,14 +169,6 @@ recipes.addShaped(<thermalexpansion:augment:337>, [
 	[<thermalfoundation:material:328>, <metaitem:gearDiamond>, <thermalfoundation:material:328>],
 	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
 
-
-//Pyroconductive Loop
-recipes.remove(<thermalexpansion:augment:352>);
-recipes.addShaped(<thermalexpansion:augment:352>, [
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>],
-	[<thermalfoundation:material:328>, <minecraft:lava_bucket>, <thermalfoundation:material:328>],
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
-
 //charger thing
 recipes.remove(<thermalexpansion:augment:400>);
 recipes.addShaped(<thermalexpansion:augment:400>, [
@@ -267,13 +203,6 @@ recipes.addShaped(<thermalexpansion:augment:656>, [
 	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>],
 	[<metaitem:nomilabs:plateDarkSteel>, <thermalfoundation:material:1024>, <metaitem:nomilabs:plateDarkSteel>],
 	[<ore:ingotDarkSteel>, <metaitem:nomilabs:plateDarkSteel>, <ore:ingotDarkSteel>]]);
-
-	//i give up
-recipes.remove(<thermalexpansion:augment:496>);
-recipes.addShaped(<thermalexpansion:augment:496>, [
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>],
-	[<thermalfoundation:material:328>, <minecraft:water_bucket>, <thermalfoundation:material:328>],
-	[<thermalfoundation:material:136>, <thermalfoundation:material:328>, <thermalfoundation:material:136>]]);
 
 	//i give up
 recipes.remove(<thermalexpansion:augment:688>);
@@ -410,22 +339,14 @@ mixer.recipeBuilder()
     .inputs([<thermalfoundation:material:1028>, <metaitem:dustTitanium>])
     .duration(200).EUt(30).buildAndRegister();
 
-// Change drops of pulverised obsidian and niter, add (temporary) conversion recipes
+// Change drops of pulverised obsidian and niter
 val basalzEntity = <entity:thermalfoundation:basalz>;
 basalzEntity.removeDrop(<thermalfoundation:material:770>);
 basalzEntity.addPlayerOnlyDrop(<metaitem:dustObsidian> % 80, 0, 2); // 80% is around the rate observed.
 
-recipes.addShapeless(<metaitem:dustObsidian>, [<thermalfoundation:material:770>]);
-
 val blitzEntity = <entity:thermalfoundation:blitz>;
 blitzEntity.removeDrop(<thermalfoundation:material:772>);
 blitzEntity.addPlayerOnlyDrop(<metaitem:dustSaltpeter> % 80, 0, 2); // 80% is around the rate observed.
-
-recipes.addShapeless(<metaitem:dustSaltpeter>, [<thermalfoundation:material:772>]);
-
-// Temporary Conversion recipe between gt and thermal mana infused
-recipes.addShapeless(<thermalfoundation:material:136>, [<metaitem:nomilabs:ingotMithril>]);
-recipes.addShapeless(<thermalfoundation:material:72>, [<metaitem:nomilabs:dustMithril>]);
 
 // Hide GT Mana infused (Moved to Groovy)
 

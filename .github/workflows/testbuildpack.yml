@@ -33,4 +33,5 @@ jobs:
       head_ref: ${{ github.head_ref }}
       true_sha: ${{ github.event.pull_request.head.sha }}
       skip_changelog: ${{ github.event.pull_request != null }}
+      release_type: Cutting Edge Build
     secrets: inherit

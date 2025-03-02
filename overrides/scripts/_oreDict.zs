@@ -1282,7 +1282,6 @@ var gearsDisabled as IItemStack[][IOreDictEntry] = {
 
 	#gearWood
 	<ore:gearWood> : [
-		<appliedenergistics2:material:40>,
 		<thermalfoundation:material:22>
 	]
 };
@@ -1388,32 +1387,6 @@ mods.jei.JEI.removeAndHide(<minecraft:gold_ore>);
 mods.jei.JEI.removeAndHide(<minecraft:emerald_ore>);
 mods.jei.JEI.removeAndHide(<minecraft:quartz_ore>);
 
-// Infinity conversion
-recipes.addShapeless(<avaritia:resource:6>, [<metaitem:nomilabs:ingotInfinity>]);
-recipes.addShapeless(<moreplates:infinity_plate>, [<metaitem:nomilabs:plateInfinity>]);
-
-mods.jei.JEI.removeAndHide(<metaitem:nomilabs:ingotInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:nomilabs:plateInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:nomilabs:blockInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:nomilabs:nuggetInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:nomilabs:dustInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:nomilabs:dustSmallInfinity>);
-mods.jei.JEI.removeAndHide(<metaitem:nomilabs:dustTinyInfinity>);
-// Infinity Plate * 1
-<recipemap:bender>.findRecipe(24, [<metaitem:nomilabs:ingotInfinity>, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
-
-bender.recipeBuilder()
-	.inputs(<avaritia:resource:6>)
-	.circuit(1)
-	.outputs(<moreplates:infinity_plate>)
-	.duration(5000).EUt(24).buildAndRegister();
-
-arc_furnace.recipeBuilder()
-	.inputs(<moreplates:infinity_plate>)
-	.fluidInputs(<liquid:oxygen> * 5000)
-	.outputs(<avaritia:resource:6>)
-	.duration(5000).EUt(30).buildAndRegister();
-
 //Add moreplates neutronium plate to gtce neutronium ore dict
 //<ore:plateNeutronium>.add(<moreplates:neutronium_plate:0>);
 
@@ -1491,7 +1464,6 @@ mods.jei.JEI.hideCategory("xu2_machine_extrautils2:furnace");
 mods.jei.JEI.hideCategory("xu2_machine_extrautils2:crusher");
 mods.jei.JEI.hideCategory("xu2_machine_extrautils2:generator_survival");
 mods.jei.JEI.hideCategory("xu2_machine_extrautils2:generator");
-mods.jei.JEI.hide(<appliedenergistics2:facade>);
 mods.jei.JEI.removeAndHide(<appliedenergistics2:material:5>);
 
 
@@ -1504,8 +1476,6 @@ mods.jei.JEI.removeAndHide(<actuallyadditions:block_smiley_cloud>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_grinder_double>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_grinder>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_furnace_double>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:block_inputter>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:block_inputter_advanced>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_fishing_net>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_oil_generator>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:block_fermenting_barrel>);
@@ -1541,7 +1511,6 @@ mods.jei.JEI.removeAndHide(<advancedrocketry:loader>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:precisionassemblingmachine>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:platepress>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:blastbrick>);
-mods.jei.JEI.removeAndHide(<advancedrocketry:iquartzcrucible>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:crystallizer>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:cuttingmachine>);
 mods.jei.JEI.removeAndHide(<advancedrocketry:observatory>);
@@ -1949,12 +1918,6 @@ mods.jei.JEI.removeAndHide(<extrautils2:creativeharvest>);
 mods.jei.JEI.removeAndHide(<extrautils2:book>);
 mods.jei.JEI.removeAndHide(<extrautils2:minichest>);
 mods.jei.JEI.removeAndHide(<extrautils2:analogcrafter>);
-
-// Wireless Terminals Removals
-mods.jei.JEI.removeAndHide(<ae2wtlib:infinity_booster_card>);
-mods.jei.JEI.removeAndHide(<wct:wct>);
-mods.jei.JEI.removeAndHide(<wct:wct_creative>);
-mods.jei.JEI.removeAndHide(<wct:magnet_card>);
 
 //Gregtech Removals
 mods.jei.JEI.removeAndHide(<metaitem:world_accelerator.lv>);
@@ -2650,13 +2613,6 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 <ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.zpm>);
 <ore:questbookParallelControlHatch>.add(<metaitem:gcym:parallel_hatch.uv>);
 
-<ore:questbookSteamBoiler>.add(<gregtech:machine:1>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:2>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:3>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:4>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:5>);
-<ore:questbookSteamBoiler>.add(<gregtech:machine:6>);
-
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.lv>); // LV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.mv>); // MV Fluid Extractor
 //<ore:questbookFluidExtractor>.add(<meta_tile_entity:fluid_extractor.hv>); // HV Fluid Extractor
@@ -2690,10 +2646,6 @@ recipes.addShapeless(<metaitem:ingotRedAlloy>, [<enderio:item_alloy_ingot:3>]);
 
 <ore:questbookLathe>.add(<metaitem:lathe.lv>);
 <ore:questbookLathe>.add(<metaitem:lathe.mv>);
-
-<ore:questbookSingleMiner>.add(<metaitem:miner.lv>);
-<ore:questbookSingleMiner>.add(<metaitem:miner.mv>);
-<ore:questbookSingleMiner>.add(<metaitem:miner.hv>);
 
 <ore:questbookAutoclave>.add(<metaitem:autoclave.lv>);
 <ore:questbookAutoclave>.add(<metaitem:autoclave.mv>);
@@ -2824,11 +2776,6 @@ mods.jei.JEI.removeAndHide(<simplyjetpacks:itemfluxpack:2>);
 mods.jei.JEI.removeAndHide(<simplyjetpacks:itemfluxpack:3>);
 mods.jei.JEI.removeAndHide(<simplyjetpacks:itemfluxpack:4>);
 mods.jei.JEI.removeAndHide(<simplyjetpacks:itemfluxpack:5>);
-
-
-mods.jei.JEI.removeAndHide(<thermalexpansion:machine:6>);
-mods.jei.JEI.removeAndHide(<thermalexpansion:machine:8>);
-
 
 //mods.jei.JEI.removeAndHide(<metaitem:cover.solar.panel>);
 //mods.jei.JEI.removeAndHide(<metaitem:cover.solar.panel.ulv>);

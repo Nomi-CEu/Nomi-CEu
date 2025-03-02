@@ -31,8 +31,6 @@ furnace.addRecipe(<metaitem:ingotWroughtIron>, <minecraft:iron_ingot>, 0.0);
 //Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<metaitem:dustCopper>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>]);
 
-recipes.addShapeless(<minecraft:clay>, [<nomilabs:block_dust>,<minecraft:water_bucket>]);
-
 //Clay Electrolyzing
 electrolyzer.findRecipe(60, [<metaitem:dustClay> * 13], [null]).remove();
 electrolyzer.recipeBuilder().inputs([<metaitem:dustClay> * 13]).outputs([<metaitem:dustSodium> * 2, <metaitem:dustSilicon> * 2, <metaitem:dustLithium>, <metaitem:dustAluminium> * 2]).fluidOutputs([<liquid:water>*6000]).duration(364).EUt(15).buildAndRegister();
@@ -331,14 +329,6 @@ makeShaped("of_dml_living_matter_extraterrestrial",
 	  E : <minecraft:ender_pearl> }
 );
 
-recipes.remove(<nuclearcraft:water_source>);
-makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
-    ["AAA",
-     "B B",
-     "AAA"],
-    { A : <ore:plateWroughtIron>,
-      B : <minecraft:water_bucket:*> });
-
 
 //Rubber by hand
 recipes.addShaped(<metaitem:plateRubber>,[[<ore:toolHammer>],[<metaitem:rubber_drop>],[<metaitem:rubber_drop>]]);	
@@ -404,8 +394,7 @@ recipes.addShaped("basic_circuit_board", <metaitem:circuit_board.basic>, [[<ore:
 
 
 ////////////////////////// Creative Chest ///////////////////////
-val creativecell = <thermalexpansion:cell>.withTag({Recv: 250000, RSControl: 0 as byte, Facing: 3 as byte, Energy: 500000000, Creative: 1 as byte, SideCache: [2, 2, 2, 2, 2, 2] as byte[] as byte[], Level: 4 as byte, Send: 250000}, false);
-val creativetank = <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 1 as byte, Level: 4 as byte}, false);
+val creativecell = <thermalexpansion:cell>.withTag({Creative: 1 as byte, Level: 4 as byte}, false);
 val creativejetpack = <simplyjetpacks:itemjetpack>.withTag({JetpackParticleType: 3}, false);
 
 makeExtremeRecipe9(<metaitem:creative_chest> * 2,
@@ -421,7 +410,7 @@ makeExtremeRecipe9(<metaitem:creative_chest> * 2,
     { A : <storagedrawers:upgrade_creative>,
       B : <ore:ingotInfinity>,
       C : <draconicevolution:creative_rf_source>,
-      D : creativecell.only(isCreative),
+      D : creativecell,
       E : <extrautils2:creativeenergy>,
       F : <extrautils2:drum:4>,
       G : <extrautils2:passivegenerator:6>,
@@ -561,26 +550,6 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 2, [
 	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
 	[<ore:stickWood>, <storagedrawers:customdrawers>, <ore:stickWood>],
 	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
-
-// NC Cobble gen
-recipes.remove(<nuclearcraft:cobblestone_generator>);
-makeShaped("of_nc_cobblestone_generator",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "B C",
-     "AAA"],
-    { A : <ore:plateSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
-
-makeShaped("of_nc_cobblestone_generator_mirrored",
-    <nuclearcraft:cobblestone_generator>,
-    ["AAA",
-     "C B",
-     "AAA"],
-    { A : <ore:plateSteel>,
-      B : <minecraft:water_bucket:*>,
-      C : <minecraft:lava_bucket:*> });
 
 //Crystal Growth Chamber
 recipes.addShaped(<ae2stuff:grower>, [

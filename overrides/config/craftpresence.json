@@ -167,6 +167,7 @@
   "statusMessages": {
     "mainMenuData": {
       "textOverride": "In the Main Menu",
+      "iconOverride": "{custom.logo_slug}",
       "data": {
         "enabled": true,
         "useAsMain": false,
@@ -343,7 +344,7 @@
       "partyPrivacy": 1,
       "details": "{getFirst(menu.message)}",
       "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
-      "largeImageKey": "{getFirst(menu.icon, general.icon)}",
+      "largeImageKey": "{getOrDefault(menu.icon, custom.logoSlug)}",
       "largeImageText": "Playing {custom.windowTitle}",
       "smallImageKey": "{custom.tierSlug}",
       "smallImageText": "Stage: {custom.tierName}",
@@ -361,17 +362,18 @@
       }
     },
     "dynamicIcons": {
-      "default": "https://via.placeholder.com/256.png"
+      "default": "https://via.placeholder.com/256.png",
+      "IntegerLimit_": "https://mc-heads.net/avatar/ba3d12a4b7f347309db3b9f71531e8d6"
     },
     "dynamicVariables": {
-      "windowCreated": "{executeMethod('org.lwjgl.opengl.Display', null, 'isCreated')}",
       "mods": "{general.mods} Mod(s)",
       "players": "{server.players.current} / {server.players.max} Players",
       "player_info_items": "Items: {item.main_hand.message}",
-      "windowTitle": "{custom.windowCreated ? executeMethod('org.lwjgl.opengl.Display', null, 'getTitle') : ''}",
+      "windowTitle": "{executeMethod('com.nomiceu.nomilabs.util.LabsDisplayHelper', null, 'getWindowTitle')}",
       "player_info_health": "Health: {player.health.current}/{player.health.max}",
       "pack": "{pack.name}",
       "mode": "{executeMethod('com.nomiceu.nomilabs.util.LabsModeHelper', null, 'getFormattedMode')}",
+      "logoSlug": "logo-{executeMethod('com.nomiceu.nomilabs.util.LabsModeHelper', null, 'getMode')}",
       "tierSlug": "{executeMethod('com.nomiceu.nomilabs.integration.betterquesting.LabsTierHelper', null, 'getTierSlug')}",
       "default": "Example Text",
       "player_info_coordinate": "At {player.position.x}, {player.position.z}",
