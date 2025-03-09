@@ -86,7 +86,7 @@ body:
     id: problem
     attributes:
       label: Related Problem
-      description: If the feature you wish to change is related to a problem, please desscribe it. Leave this field blank if it is not related to a problem.
+      description: If the feature you wish to change is related to a problem, please describe it. Leave this field blank if it is not related to a problem.
       placeholder: "Example: I'm always frustrated when..."
     validations:
       required: false
