@@ -60,3 +60,18 @@ mods.gregtech.macerator.changeByInput([item('gregtech:stone_smooth', 1)], null)
 	.changeEachChancedOutput { ChancedItemOutput output ->
 		return chanced(output.ingredient, 100, 100) // Original: 0.1%, + 0.05%, New: 1%, +1%
 	}.replaceAndRegister()
+
+// Maceration of Dilithium and Black Quartz Ore
+// Critical to ensure they work in ore drills (multiblock)
+mods.gregtech.macerator.recipeBuilder()
+	.inputs(ore('oreDilithium'))
+	.outputs(item('libvulpes:productdust') * 2)
+	.duration(200).EUt(VA[HV])
+	.buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+	.inputs(ore('oreQuartzBlack'))
+	.outputs(item('actuallyadditions:item_dust', 7) * 2)
+	.duration(200).EUt(VA[HV])
+	.buildAndRegister();
+

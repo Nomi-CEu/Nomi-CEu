@@ -544,14 +544,6 @@ makeShaped("ar_fueling_station",
 		M: <ore:pipeNormalFluidStainlessSteel>,    // Medium Stainless Steel Pipe
 	});
 
-// Dilithium Dust
-macerator.recipeBuilder()
-	.inputs([<libvulpes:ore0>])
-	.outputs([<ore:dustDilithium>.firstItem * 2])
-	.duration(200)
-	.EUt(420)
-	.buildAndRegister();
-
 // Dilithium Crystal
 autoclave.recipeBuilder()
 	.inputs([<ore:dustDilithium> * 4])
