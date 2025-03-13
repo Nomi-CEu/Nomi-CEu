@@ -1,4 +1,4 @@
-# Expert Mode Instalation
+# Expert Mode Installation
 Config Changes for Normal and Expert Mode are found in `/config-overrides/normal` and `/config-overrides/expert` respectively.
 
 Users can use any of the below methods to replace configs:
