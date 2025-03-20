@@ -289,7 +289,7 @@ for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 2
 
 // Add Circuits to Quartz and Certus Quartz Autoclave Recipes (So Doesn't Conflict with Purified Shortcut)
 
-// 2D List of Recipes, Each List is Seperate Quartz Type
+// 2D List of Recipes, Each List is Separate Quartz Type
 List<ChangeRecipeBuilderCollection> quartzRecipes = []
 
 for (ItemStack quartz : [item('minecraft:quartz'), metaitem('gemCertusQuartz')]) {

@@ -174,7 +174,7 @@ recipes.addShaped(<enderio:item_yeta_wrench>, [
 
 
 
-//Chemistry Why the hell is all sorts of things put here half of these arent even early game in any capacity aaaaaaaa
+//Chemistry Why the hell is all sorts of things put here half of these aren't even early game in any capacity aaaaaaaa
 chemical_reactor.recipeBuilder().inputs([<extendedcrafting:material:7>]).fluidInputs([<liquid:lava> * 1000]).outputs(<minecraft:end_stone>).EUt(15).duration(20).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:quartz>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_crystal:1>).EUt(15).duration(100).buildAndRegister();
 chemical_reactor.recipeBuilder().inputs([<minecraft:obsidian>]).fluidInputs([<liquid:lava> * 1000]).outputs(<armorplus:lava_infused_obsidian>).EUt(15).duration(200).buildAndRegister();
