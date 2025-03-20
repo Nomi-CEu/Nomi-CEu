@@ -1,0 +1,5 @@
+[files]
+extend-exclude = ["overrides/config/**", "overrides/config-overrides/**"]
+
+[default]
+extend-ignore-words-re = ["§\\w+"]

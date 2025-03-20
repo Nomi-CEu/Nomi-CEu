@@ -101,7 +101,7 @@ mixer.recipeBuilder()
 	.buildAndRegister();
 
 //Microversium [tier 3]
-// Conficts with Steel EBF Recipe
+// Conflicts with Steel EBF Recipe
 //blast_furnace.recipeBuilder().inputs([<metaitem:dustSteel> * 2,<ore:dustRedstone>, <ore:dustGlowstone>]).fluidInputs([<liquid:deuterium>*100]).outputs([<ore:ingotMicroversium>.firstItem * 2]).property("temperature", 1700).duration(600).EUt(120).buildAndRegister();
 blast_furnace.recipeBuilder().inputs([<metaitem:ingotSteel> * 2,<ore:dustRedstone>, <ore:dustGlowstone>]).fluidInputs([<liquid:deuterium>*100]).outputs([<ore:ingotMicroversium>.firstItem * 2]).property("temperature", 1700).duration(600).EUt(120).buildAndRegister();
 
