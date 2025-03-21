@@ -12,7 +12,7 @@ const vars = [
 ];
 
 /**
- * Check required env. variables for vailidity and cancel
+ * Check required env. variables for validity and cancel
  * the build if something is unset.
  */
 async function checkEnv() {

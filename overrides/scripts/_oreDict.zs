@@ -2832,16 +2832,16 @@ function metalRecipeFix(
     oredictBlock  as IOreDictEntry,
     oredictIngot  as IOreDictEntry,
     oredictNugget as IOreDictEntry,
-    preferedBlock as IItemStack,
-    preferedIngot as IItemStack,
-    preferedNugget as IItemStack
+    preferredBlock as IItemStack,
+    preferredIngot as IItemStack,
+    preferredNugget as IItemStack
     ){
 		//Fix block to ingot recipes
         for metalBlock in oredictBlock.items {
             recipes.removeShaped(metalBlock);
             recipes.removeShapeless(metalBlock);
 
-            recipes.addShapeless(preferedIngot * 9, [
+            recipes.addShapeless(preferredIngot * 9, [
                 metalBlock
                 ]);
         }
@@ -2853,8 +2853,8 @@ function metalRecipeFix(
             recipes.removeShaped(metalIngot);
             recipes.removeShapeless(metalIngot);
 
-            recipes.addShapeless(preferedNugget * 9, [metalIngot]);
-            recipes.addShapeless(preferedBlock, [
+            recipes.addShapeless(preferredNugget * 9, [metalIngot]);
+            recipes.addShapeless(preferredBlock, [
                 metalIngot, metalIngot, metalIngot,
                 metalIngot, metalIngot, metalIngot,
                 metalIngot, metalIngot, metalIngot]);
@@ -2865,18 +2865,18 @@ function metalRecipeFix(
             recipes.removeShaped(metalNugget * 9);
             recipes.removeShapeless(metalNugget * 9);
 
-            recipes.addShapeless(preferedIngot, [
+            recipes.addShapeless(preferredIngot, [
                 metalNugget, metalNugget, metalNugget,
                 metalNugget, metalNugget, metalNugget,
                 metalNugget, metalNugget, metalNugget]);
         }
 
         //Backup oredict ingot to block and nugget to ingot recipes for if a player tries to combine various mod ingots
-        recipes.addShapeless(preferedBlock, [
+        recipes.addShapeless(preferredBlock, [
                 oredictIngot, oredictIngot, oredictIngot,
                 oredictIngot, oredictIngot, oredictIngot,
                 oredictIngot, oredictIngot, oredictIngot]);
-        recipes.addShapeless(preferedIngot, [
+        recipes.addShapeless(preferredIngot, [
                 oredictNugget, oredictNugget, oredictNugget,
                 oredictNugget, oredictNugget, oredictNugget,
                 oredictNugget, oredictNugget, oredictNugget]);

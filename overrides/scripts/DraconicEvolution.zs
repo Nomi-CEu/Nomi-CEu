@@ -76,7 +76,7 @@ assembly_line.recipeBuilder()
 	.property("research", <draconicevolution:draconic_core>)
 	.duration(1200).EUt(30720).buildAndRegister();
 
-//Reactor Stabalizer Frame
+//Reactor Stabilizer Frame
 recipes.remove(<draconicevolution:reactor_part>);	
 // Moved to Groovy
 
