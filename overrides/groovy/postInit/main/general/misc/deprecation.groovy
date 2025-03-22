@@ -91,6 +91,10 @@ conversion(metaitem('nomilabs:plateMithril'), item('thermalfoundation:material',
 conversion(metaitem('nomilabs:ingotInfinity'), item('avaritia:resource', 6))
 conversion(metaitem('nomilabs:plateInfinity'), item('moreplates:infinity_plate'))
 
+// Deprecate Player Interface in Favor for the XU2 Player Chest
+deprecate(item('actuallyadditions:block_player_interface'))
+conversion(item('actuallyadditions:block_player_interface'), item('extrautils2:playerchest'))
+
 /* Replace Infinity GT Machine Recipes */
 
 // Remove Ingot -> Nugget Recipe
