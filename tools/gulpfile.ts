@@ -41,6 +41,13 @@ export const buildAll = gulp.series(
 );
 export const buildChangelog = sharedTasks.buildChangelog;
 
+import { extractTypoCheckFiles } from "#tasks/helpers/langExtract.ts";
+export const buildTypoCheck = gulp.series(
+	sharedTasks.fastTypoBuild,
+	langTasks,
+	extractTypoCheckFiles,
+);
+
 import checkTasks from "./tasks/checks/index.ts";
 export const check = gulp.series(checkTasks);
 

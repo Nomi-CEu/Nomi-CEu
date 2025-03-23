@@ -41,6 +41,7 @@
 		"@types/unzipper": "^0.10.9",
 		"@typescript-eslint/eslint-plugin": "^7.8.0",
 		"@typescript-eslint/parser": "^7.8.0",
+		"async-folder-walker": "^3.0.5",
 		"axios": "^1.6.8",
 		"axios-retry": "^4.1.0",
 		"case-switcher-js": "^1.1.10",
