@@ -49,7 +49,7 @@ jobs:
         with:
           files: build/typo-check/
 
-      - name: GitHub Workflow and Templates Typo Check
+      - name: Other Misc Typo Check
         uses: crate-ci/typos@v1
         with:
-          files: .github/
+          files: .github/ README.md overrides/README.md
