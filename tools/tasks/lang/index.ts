@@ -85,3 +85,5 @@ export default series(
 	copyLangChangelog,
 	copyLangUpdateNotes,
 );
+
+export const typoBuild = series(langCleanUp, createLangDirs, copyLangFiles);

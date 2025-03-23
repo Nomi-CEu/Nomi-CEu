@@ -218,7 +218,7 @@ export const buildChangelog = gulp.series(
 	fetchOrMakeChangelog,
 );
 
-export const fastTypoBuild = gulp.series(
+export const typoBuild = gulp.series(
 	sharedCleanUp,
 	createSharedDirs,
 	copyOverrides,
