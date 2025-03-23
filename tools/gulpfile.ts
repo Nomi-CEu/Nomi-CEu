@@ -17,7 +17,7 @@ export const createChangelog = changelog.createRootChangelog;
 import * as sharedTasks from "./tasks/shared/index.ts";
 import clientTasks from "./tasks/client/index.ts";
 import serverTasks from "./tasks/server/index.ts";
-import langTasks from "./tasks/lang/index.ts";
+import * as langTasks from "./tasks/lang/index.ts";
 import mmcTasks from "./tasks/mmc/index.ts";
 import * as modTasks from "./tasks/misc/downloadMods.ts";
 
@@ -26,7 +26,7 @@ export const buildServer = gulp.series(
 	gulp.parallel(sharedTasks.default, modTasks.downloadSharedAndServer),
 	serverTasks,
 );
-export const buildLang = gulp.series(sharedTasks.default, langTasks);
+export const buildLang = gulp.series(sharedTasks.default, langTasks.default);
 export const buildMMC = gulp.series(
 	gulp.parallel(sharedTasks.default, modTasks.downloadSharedAndClient),
 	mmcTasks,
@@ -35,11 +35,18 @@ export const buildAll = gulp.series(
 	sharedTasks.default,
 	gulp.parallel(
 		clientTasks,
-		langTasks,
+		langTasks.default,
 		gulp.series(modTasks.downloadSharedAndServer, serverTasks),
 	),
 );
 export const buildChangelog = sharedTasks.buildChangelog;
+
+import { extractTypoCheckFiles } from "#tasks/helpers/langExtract.ts";
+export const buildTypoCheck = gulp.series(
+	sharedTasks.typoBuild,
+	langTasks.typoBuild,
+	extractTypoCheckFiles,
+);
 
 import checkTasks from "./tasks/checks/index.ts";
 export const check = gulp.series(checkTasks);

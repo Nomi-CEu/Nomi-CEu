@@ -217,3 +217,10 @@ export const buildChangelog = gulp.series(
 	createSharedDirs,
 	fetchOrMakeChangelog,
 );
+
+export const typoBuild = gulp.series(
+	sharedCleanUp,
+	createSharedDirs,
+	copyOverrides,
+	transformQuestBook,
+);

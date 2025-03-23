@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Restore NPM Cached Files
         uses: actions/cache@v4
@@ -41,3 +39,17 @@ jobs:
       - name: Check QB
         working-directory: ./tools
         run: npm run gulp checkQB
+
+      - name: Build Lang Typo Check
+        working-directory: ./tools
+        run: npm run gulp buildTypoCheck
+
+      - name: Lang Typo Check
+        uses: crate-ci/typos@v1
+        with:
+          files: build/typo-check/
+
+      - name: GitHub Workflow and Templates Typo Check
+        uses: crate-ci/typos@v1
+        with:
+          files: .github/

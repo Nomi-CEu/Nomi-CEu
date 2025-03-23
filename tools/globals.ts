@@ -27,6 +27,10 @@ export const langDestDirectory = upath.join(
 	buildConfig.buildDestinationDirectory,
 	"lang",
 );
+export const typoCheckDirectory = upath.join(
+	buildConfig.buildDestinationDirectory,
+	"typo-check",
+);
 export const tempDirectory = upath.join(
 	buildConfig.buildDestinationDirectory,
 	"temp",

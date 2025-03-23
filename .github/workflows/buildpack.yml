@@ -30,11 +30,11 @@ on:
         required: false
         type: string
       compare_tag:
-        description: Tag(s) to compare against. If specifying multiple, seperate by commas. (Spaces allowed). See CONTRIBUTING.md for more information.
+        description: Tag(s) to compare against. If specifying multiple, separate by commas. (Spaces allowed). See CONTRIBUTING.md for more information.
         required: false
         type: string
       separate_upload:
-        description: Whether to upload each zip (Client, Server, Lang) and the changelogs seperately. If not set, will just upload all six files into one artifact (Built Pack).
+        description: Whether to upload each zip (Client, Server, Lang) and the changelogs separately. If not set, will just upload all six files into one artifact (Built Pack).
         required: true
         type: boolean
       skip_changelog:
@@ -71,7 +71,7 @@ on:
         required: false
         type: string
       separate_upload:
-        description: Whether to upload each zip (Client, Server & Lang) and the changelogs seperately. If not set, will just upload all five files into one artifact (Built Pack).
+        description: Whether to upload each zip (Client, Server & Lang) and the changelogs separately. If not set, will just upload all five files into one artifact (Built Pack).
         required: false
         default: false
         type: boolean
