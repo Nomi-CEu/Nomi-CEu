@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Restore NPM Cached Files
         uses: actions/cache@v4

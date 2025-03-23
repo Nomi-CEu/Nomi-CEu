@@ -16,7 +16,7 @@ on:
           - 'Beta Release'
           - 'Alpha Release'
       compare_tag:
-        description: Tag(s) to compare against. If not set, will use the tag before `Tag`. If specifying multiple, seperate by commas. (Spaces allowed).
+        description: Tag(s) to compare against. If not set, will use the tag before `Tag`. If specifying multiple, separate by commas. (Spaces allowed).
         required: false
       branch:
         description: Branch to push changelog to. If not set, changelog will just be uploaded as an artifact.
@@ -30,7 +30,7 @@ jobs:
       tag: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
     secrets: inherit
-    
+
   createChangelog:
     name: Create Changelog (${{ inputs.tag }})
     needs: releaseCommit
