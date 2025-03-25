@@ -27,7 +27,7 @@ mods.gregtech.centrifuge.recipeBuilder()
     .duration(64).EUt(VA[LV])
     .buildAndRegister()
 
-// Rework the EM Separator for Naquadah (More Enriched Naquadah, less Naquadah)
+// Rework the EM Separator for Naquadah (More Enriched Naquadah, Less Naquadah)
 mods.gregtech.electromagnetic_separator.changeByInput(24, [metaitem('dustPureNaquadah')], null)
 	.builder { RecipeBuilder builder ->
 		builder.clearChancedOutput().clearOutputs()
