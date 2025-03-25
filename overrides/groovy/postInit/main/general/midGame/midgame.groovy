@@ -31,9 +31,9 @@ mods.gregtech.centrifuge.recipeBuilder()
 mods.gregtech.electromagnetic_separator.changeByInput(24, [metaitem('dustPureNaquadah')], null)
 	.builder { RecipeBuilder builder ->
 		builder.clearChancedOutput().clearOutputs()
+			.outputs(item('gregtech:meta_dust', 125))
 			.chancedOutput(item('gregtech:meta_dust', 125), 2000, 500)
 			.chancedOutput(item('gregtech:meta_dust', 124), 5000, 375)
-			.outputs(item('gregtech:meta_dust', 125))
 	}.replaceAndRegister()
 
 // Nether Star Block -> Nether Star
