@@ -9548,7 +9548,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r. Each mB of Diesel generates §d480 EU§r in §3Combustion Generators§r.\n\nOnce you get HV machinery, you can upgrade this to §9Cetane-Boosted Diesel§r.\n\nIt\u0027s more power efficient to use §3singleblock Distilleries§r over a §3Distillation Tower§r for Oil, due to the overclocking mechanics being different. For Diesel, the correct ratio is §d3 Distilleries for Light Oil and 2 Distilleries for Heavy Oil§r.",
+          "desc:8": "§9Diesel§r is a mixture of §9Light Fuel§r and §9Heavy Fuel§r. Each mB of Diesel generates §d480 EU§r in §3Combustion Generators§r.\n\nOnce you get §6HV§r machinery, you can upgrade this to §9Cetane-Boosted Diesel§r.\n\nIt\u0027s more power efficient to use §3singleblock Distilleries§r over a §3Distillation Tower§r for Oil, due to the overclocking mechanics being different. However, it is still recommended to use Distillation Towers, to get the other useful byproducts too.\n\nFor §eOil§r, the ratio for Diesel is §e3 Distilleries for Light Fuel and 2 Distilleries for Heavy Fuel§r. For §dRaw Oil§r, the ratio is §d1 Distillery for each§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -44726,7 +44726,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A heavy Naquadah isotope with more nuclear capability.\n\n§6Enriched Naquadah§r is meant to be used in as-of-yet-unimplemented CEu-native reactors. It\u0027s used in small amounts for §3Trinium Coil blocks§r, or in Nomi reactors, though Naquadria is better for that purpose.\n\nAt least it\u0027s the easiest to obtain, and you can get it by mixing, the full Naquadah chain, or by passing Purified Naquadah Dust through an Electromagnetic Separator.",
+          "desc:8": "§2A heavy Naquadah isotope with more nuclear capability.\n\n§6Enriched Naquadah§r is meant to be used in as-of-yet-unimplemented CEu-native reactors. It\u0027s used in small amounts for §3Trinium Coil blocks§r, or in Nomi reactors, though Naquadria is better for that purpose.\n\nAt least it\u0027s the easiest to obtain, and you can get it by §3mixing§r, the §afull Naquadah chain§r, or by passing §6Purified Naquadah Dust§r through an §3Electromagnetic Separator§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
