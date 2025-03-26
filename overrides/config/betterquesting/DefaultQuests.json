@@ -64029,7 +64029,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The 8th tier of §6Solar Panel§r, this is required for making higher tier Solar Panels for the endgame. It\u0027s also a decent power source.",
+          "desc:8": "The 8th tier of §6Solar Panel§r, this is required for making higher tier Solar Panels for the endgame. It\u0027s also a decent power source.\n\nNote that when placed in a horizontal grid, §dsolars share power to each other§r. This means, to reduce lag, you can place a large grid, and have only several connections (the amount of solars per connection depends on the ratio of transfer limit to generation limit). For this solar, you can do only §a1 connection per 8 solars§r.\n\n§eIn older versions, placing solars in large grids used to cause lag, but this is no longer the case.§r In fact, placing solars in a grid can sometimes even be §amore performant§r than using the old solar tower approach!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
