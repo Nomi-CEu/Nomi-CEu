@@ -36,6 +36,15 @@ for (var thorium : [ore('dustThorium'), ore('ingotThorium')]) {
 		.buildAndRegister()
 }
 
+// Obsolete Thermal Centrifuge Recipes
+List<List<ItemStack>> obsoleteIsotopes = [
+	[item('nuclearcraft:boron', 2), item('nuclearcraft:boron', 1) * 3],
+	[item('nuclearcraft:lithium', 2), item('nuclearcraft:lithium', 1) * 3],
+	[item('nuclearcraft:uranium', 9), item('nuclearcraft:uranium', 7)],
+	[item('nuclearcraft:thorium', 5), item('nuclearcraft:thorium', 3)]
+]
+obsoleteIsotopes.forEach { mods.gregtech.thermal_centrifuge.removeByOutput(it, null) }
+
 /* Fuel Values */
 Map<String, List<Integer>> fuelMetas = [
     'thorium': [0],
