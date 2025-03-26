@@ -58270,6 +58270,59 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1110:10": {
+      "preRequisites:11": [
+        113
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Do you want to automate some §6Coffee§r into your hotbar when you finish drinking it? Or do you want to automate your own inventory? Well, have I got a solution for you: the §6Player Chest§r!\n\nWith this, you can configure which slots are accessible to automation, and then simply pipe items in or out.\n\nFor example, you can have a slot dedicated for coffee, where after you drink it, the cup gets extracted and a new coffee comes in, or even do more complex tasks involving your inventory.\n\nAutomation at its highest level!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "extrautils2:playerchest"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Player Chest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1110,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "extrautils2:playerchest"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -64269,6 +64322,13 @@
           "sizeY:3": 24,
           "x:3": 216,
           "y:3": 504
+        },
+        "57:10": {
+          "id:3": 1110,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 168,
+          "y:3": 636
         }
       }
     },
