@@ -57183,7 +57183,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With §6HV §3Rock Breakers§r, you can make §eObsidian§r, without spending lots of §eLava§r!\n\nReminder: in order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r.",
+          "desc:8": "With §6HV §3Rock Breakers§r, you can make §eObsidian§r, without spending lots of §eLava§r!\n\nReminder: in order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r. §cThe fluids must not be in the front and back, they must be to the left and right!§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -57391,7 +57391,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest accepts a Normal and High Pressure Steam Rock Breaker, or a LV-MV Electric Rock Breaker.§r\n\nThe §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r and §6Stone§r.\n\nIn order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r.\n\nCurrently, you can process this through §3Forge Hammers§r; first into §6Gravel§r, which can source you some §6Flint§r; and into §6Sand§r, which you can turn into §6Glass§r, and later, §9Oxygen§r.\n\nAt the §eSteam Age§r, this isn\u0027t too useful, but you will want to setup a cobbleworks soon, to produce all these materials for you §apassively§r.",
+          "desc:8": "§oThis quest accepts a Normal and High Pressure Steam Rock Breaker, or a LV-MV Electric Rock Breaker.§r\n\nThe §3Rock Breaker§r makes §6Lava§r and §6Water§r related products, such as §6Cobblestone§r and §6Stone§r.\n\nIn order to set this up, §eLava§r and §eWater§r must be placed §ahorizontally adjacent§r. §cThe fluids must not be in the front and back, they must be to the left and right!§r\n\nCurrently, you can process this through §3Forge Hammers§r; first into §6Gravel§r, which can source you some §6Flint§r; and into §6Sand§r, which you can turn into §6Glass§r, and later, §9Oxygen§r.\n\nAt the §eSteam Age§r, this isn\u0027t too useful, but you will want to setup a cobbleworks soon, to produce all these materials for you §apassively§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
