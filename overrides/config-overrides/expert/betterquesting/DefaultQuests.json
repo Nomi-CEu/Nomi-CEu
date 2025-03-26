@@ -399,7 +399,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks (unless you\u0027re crouching) and mine quickly.\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material.§r\n\nYour free Diamond Mining Hammer should last you a bit, and you can always fix it using an anvil and some diamonds.",
+          "desc:8": "§aMining Hammers§r offer a relatively cheap way to mine out areas much faster. They clear a 3x3 of blocks (unless you\u0027re crouching) and mine quickly.\n\n§2GTCEu now has Mining Hammers natively! You can craft them with any GT tool material.§r\n\nYour free Diamond Mining Hammer should last you a bit, and you can always fix it using an anvil and some diamonds.\n\nHowever, you might additionally consider getting a §eSpade§r, which allows you to clear 3x3 areas of shovellable material, like §6Dirt§r or §6Sand§r. You will be needing a lot of §6Sand§r, §6Clay§r and even some §6Gravel§r in the future!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -433,7 +433,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Mining Hammers",
+          "name:8": "Mining Tools",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -449,8 +449,43 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:spade",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "AoEColumn:3": 1,
+                  "AoELayer:3": 0,
+                  "AoERow:3": 1,
+                  "MaxAoEColumn:3": 1,
+                  "MaxAoELayer:3": 0,
+                  "MaxAoERow:3": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.5,
+                  "AttackSpeed:5": -3.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "gregtech:wrought_iron",
+                  "MaxDurability:3": 1151,
+                  "ToolSpeed:5": 4.8
+                },
+                "HideFlags:3": 2
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
