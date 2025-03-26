@@ -6696,7 +6696,12 @@
       }
     },
     "94:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
       "preRequisites:11": [
+        27,
         810
       ],
       "properties:10": {
@@ -50589,7 +50594,7 @@
         1
       ],
       "preRequisites:11": [
-        27
+        94
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -55668,13 +55673,16 @@
       }
     },
     "896:10": {
+      "preRequisiteTypes:7": [
+        1
+      ],
       "preRequisites:11": [
-        6
+        27
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Sodium Potassium is an alloy of... take a guess.\n\nIt\u0027s used in the construction of HV and above Energy and Dynamo hatches.§r",
+          "desc:8": "§9Sodium Potassium§r is an alloy of... take a guess.\n\nIt\u0027s used in the construction of §6HV§r and above §3Energy and Dynamo Hatches§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
