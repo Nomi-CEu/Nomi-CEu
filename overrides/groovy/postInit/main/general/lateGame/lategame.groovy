@@ -1,11 +1,23 @@
 package postInit.main.general.lateGame
 
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.ImplosionRecipeBuilder
+import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty
 import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
+
+// Plutonium 239 Fusion Recipe
+// Energy to Start is displayed as MK I level, but because of ZPM voltage, MK II is required.
+// Bump energy req down to LuV to avoid confusion.
+mods.gregtech.fusion_reactor.changeByOutput(null, [fluid('plutonium')])
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { it.EUt(VA[LuV]) }
+			.copyProperties(FusionEUToStartProperty.instance)
+			.replaceAndRegister()
+	}
 
 // Omnium Implosion Compressor Recipes
 ImplosionRecipeBuilder builder = mods.gregtech.implosion_compressor.recipeBuilder()
