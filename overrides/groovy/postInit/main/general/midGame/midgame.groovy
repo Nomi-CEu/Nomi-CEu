@@ -28,12 +28,12 @@ mods.gregtech.centrifuge.recipeBuilder()
     .buildAndRegister()
 
 // Rework the EM Separator for Naquadah (More Enriched Naquadah, Less Naquadah)
-mods.gregtech.electromagnetic_separator.changeByInput(24, [metaitem('dustPureNaquadah')], null)
+mods.gregtech.electromagnetic_separator.changeByInput([metaitem('dustPureNaquadah')], null)
 	.builder { RecipeBuilder builder ->
 		builder.clearChancedOutput().clearOutputs()
-			.outputs(item('gregtech:meta_dust', 125))
-			.chancedOutput(item('gregtech:meta_dust', 125), 2000, 500)
-			.chancedOutput(item('gregtech:meta_dust', 124), 5000, 375)
+			.outputs(metaitem('dustNaquadahEnriched'))
+			.chancedOutput(metaitem('dustNaquadahEnriched'), 2000, 500)
+			.chancedOutput(metaitem('dustNaquadah'), 5000, 375)
 	}.replaceAndRegister()
 
 // Nether Star Block -> Nether Star
