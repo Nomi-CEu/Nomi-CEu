@@ -4,10 +4,12 @@ import com.nomiceu.nomilabs.util.ItemMeta
 import mezz.jei.api.ingredients.VanillaTypes
 import nc.enumm.MetaEnums
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import nc.fluid.FluidFission
 import nc.fluid.FluidMolten
 import nc.init.NCCoolantFluids
 import nc.init.NCFissionFluids
 import net.minecraft.item.ItemStack
+import net.minecraftforge.fluids.FluidRegistry
 import net.minecraftforge.fluids.FluidStack
 
 import static gregtech.api.GTValues.*
@@ -15,7 +17,10 @@ import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecip
 
 /* Hide Molten Salt Reactor Fluids */
 for (var toHide : NCFissionFluids.fluidList) {
-	mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+	if (FluidRegistry.getFluid(toHide.getName()) instanceof FluidFission)
+		mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+	else
+		println "NuclearCraft Script: Skipping Fluid ${toHide.getName()} as registered outside of NC!"
 }
 
 for (var toHide : NCCoolantFluids.fluidList) {
@@ -23,6 +28,8 @@ for (var toHide : NCCoolantFluids.fluidList) {
 	if (toHide instanceof FluidMolten) continue;
 	mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
 }
+
+//
 
 // LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
 crafting.addShapeless(metaitem('blockUranium'), [item('nuclearcraft:block_depleted_uranium')])
