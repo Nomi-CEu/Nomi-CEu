@@ -36,6 +36,13 @@ mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 656)) // Isen
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 672)) // Closed Loop Cooling
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 704)) // Disjunctive Extraction
 
+/* Other Hiding */
+// Excavators
+// (Replaced by GTCEu Spades)
+mods.jei.ingredient.removeAndHide(item('redstonearsenal:tool.excavator_flux'))
+mods.jei.ingredient.removeAndHide(item('thermalfoundation:tool.excavator_diamond'))
+mods.jei.ingredient.removeAndHide(item('thermalfoundation:tool.excavator_iron'))
+
 /* Upgrade Recipes */
 // Machines (Do each manually, side cache varies)
 createAllUpgradeRecipes(item('thermalexpansion:machine', 4) // Phytogenic Insolator
