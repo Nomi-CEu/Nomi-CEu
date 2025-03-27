@@ -50905,7 +50905,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Polytetrafluoroethylene (PTFE, or Teflon) is a polymer made from Carbon and Fluorine.\n\nThis polymer is most importantly used to make Large Chemical Reactors. It\u0027s also required for IV and LuV Machine Hulls, and can be substituted in some cases for higher yields.§r",
+          "desc:8": "§9Polytetrafluoroethylene§r (PTFE, or Teflon) is a polymer made from §6Carbon§r and §6Fluorine§r.\n\nThis polymer is most importantly used to make §eLarge Chemical Reactors§r. It\u0027s also required for §9IV§r and §dLuV §eMachine Hulls§r, and can be substituted in the place of other polymers, in some cases, for higher yields.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -50971,7 +50971,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The Large Chemical Reactor (LCR) is a multiblock Chemical Reactor with more input/output slots.§r\n\nThe §3LCR§r can also perform some exclusive reactions which allow you to combine multiple normal §3Chemical Reactor§r steps into a §6single step§r, such as:\n- §aTetrafluoroethylene§r\n- §aNitrogen Dioxide§r\n- §aSulfuric Acid§r\n- §aEpichlorohydrin§r, needed for...\n- §aEpoxy§r\n\nThe §3LCR§r also is required to perform some recipes, such as §aRaw Gasoline§r production, and §aPolybenzimidazole§r.\n\nAny other recipe which could be done in a normal §9Chemical Reactor§r, as well as certain §9Mixer§r recipes, can also be done in an §3LCR§r.\n\nAll §dOverclocks§r in the §3LCR§r are §6100% efficient§r; each overclock will §5quadruple the speed§r, as opposed to doubling it.",
+          "desc:8": "The §3Large Chemical Reactor (LCR)§r is a multiblock §3Chemical Reactor§r with more input/output slots. It can greatly speed up your reactions, and can especially help with your §6Sulfuric Acid§r production.\n\nThe §3LCR§r can perform some exclusive reactions which allow you to combine multiple normal §3Chemical Reactor§r steps into a §6single step§r, such as:\n- §aTetrafluoroethylene§r\n- §aNitrogen Dioxide§r\n- §aSulfuric Acid§r\n- §aEpichlorohydrin§r, needed for...\n- §aEpoxy§r\n\nThe §3LCR§r also is required to perform some recipes, such as §aRaw Gasoline§r production, and §aPolybenzimidazole§r.\n\nAny other recipe which could be done in a normal §9Chemical Reactor§r, as well as certain §9Mixer§r recipes, can also be done in an §3LCR§r.\n\nAll §dOverclocks§r in the §3LCR§r are §6100% efficient§r; each overclock will §5quadruple the speed§r, as opposed to doubling it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
