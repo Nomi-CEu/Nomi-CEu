@@ -825,12 +825,6 @@ fluid_extractor.recipeBuilder()
     .fluidOutputs(<liquid:plutonium2> * 1296)
     .duration(720).EUt(32).buildAndRegister();
 
-//Plutonium 244 Block (GTCE)
-fluid_extractor.recipeBuilder()
-    .inputs(<gregtech:meta_block_compressed_3:4>) //Plutonium Block
-    .fluidOutputs(<liquid:plutonium> * 1296)
-    .duration(720).EUt(32).buildAndRegister();
-
 //Remove Duping Thorium via extra Thorium230 tiny Pile
 // Thorium-232 * 1
 <recipemap:thermal_centrifuge>.findRecipe(48, [<metaitem:ingotThorium>], null).remove();
