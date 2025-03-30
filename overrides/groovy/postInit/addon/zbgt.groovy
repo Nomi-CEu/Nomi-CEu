@@ -3,8 +3,6 @@
 
 package postInit.addon
 
-import gregtech.api.recipes.builders.AssemblyLineRecipeBuilder
-import gregtech.api.recipes.recipeproperties.ResearchProperty
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
 import static gregtech.api.GTValues.*
