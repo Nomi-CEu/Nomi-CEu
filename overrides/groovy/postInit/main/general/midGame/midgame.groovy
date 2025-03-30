@@ -48,6 +48,9 @@ if (LabsModeHelper.expert) {
 		.buildAndRegister()
 }
 
+// Add Ore Dict for Radium Salt
+ore('dustRadiumSalt').add(item('nomilabs:radiumsalt'))
+
 /* Nuclear Related Chanced Output Changes */
 
 // Buff Thorium Yields from Black Granite
