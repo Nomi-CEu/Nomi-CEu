@@ -65,23 +65,32 @@ export async function fetchFileInfo(
 		return fetchedFileInfoCache[slug];
 	}
 
-	const fileInfo: CurseForgeFileInfo = (
-		await getAxios()({
-			url: `${buildConfig.cfCoreApiEndpoint}/v1/mods/${projectID}/files/${fileID}`,
-			method: "get",
-			responseType: "json",
-			headers: {
-				"X-Api-Key": getCurseForgeToken(),
-			},
-		})
-	).data?.data;
+	let fileInfo: CurseForgeFileInfo | undefined;
+	try {
+		fileInfo = (
+			await getAxios()({
+				url: `${buildConfig.cfCoreApiEndpoint}/v1/mods/${projectID}/files/${fileID}`,
+				method: "get",
+				responseType: "json",
+				headers: {
+					"X-Api-Key": getCurseForgeToken(),
+				},
+			})
+		).data?.data;
+	} catch (e) {
+		// Usually a 404, aka bad json
+		throw new Error(
+			`Failed to get info of file from project ${projectID} with fileID ${fileID}!\n${e}`,
+		);
+	}
 
 	if (!fileInfo) {
-		throw new Error(`Failed to download file ${projectID}/file/${fileID}`);
+		throw new Error(
+			`Failed to get info of file from project ${projectID} with fileID ${fileID}!`,
+		);
 	}
 
 	fetchedFileInfoCache[slug] = fileInfo;
-
 	return fileInfo;
 }
 
