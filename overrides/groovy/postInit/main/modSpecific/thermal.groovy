@@ -143,3 +143,28 @@ void createUpgradeRecipe(ItemStack result, ItemStack toUpgrade, ItemStack upgrad
 		.register()
 }
 
+/* Remove Obsolete Recipes */
+List<ItemStack> ingots = [
+	item('advancedrocketry:productingot'), // Titanium Aluminide
+	item('advancedrocketry:productingot', 1), // Titanium Iridium Alloy
+	item('nuclearcraft:ingot', 12), // Aluminum
+	item('thermalfoundation:material', 128), // Copper
+	item('thermalfoundation:material', 129), // Tin
+	item('thermalfoundation:material', 130), // Silver
+	item('thermalfoundation:material', 131), // Lead
+	item('thermalfoundation:material', 132), // Aluminum
+	item('thermalfoundation:material', 133), // Nickel
+	item('thermalfoundation:material', 134), // Platinum
+	item('thermalfoundation:material', 135), // Iridium
+	item('thermalfoundation:material', 160), // Steel
+	item('thermalfoundation:material', 161), // Electrum
+	item('thermalfoundation:material', 162), // Invar
+	item('thermalfoundation:material', 163), // Bronze
+	item('thermalfoundation:material', 164), // Constantan
+	item('thermalfoundation:material', 165), // Signalum
+	item('thermalfoundation:material', 166), // Lumium
+	item('thermalfoundation:material', 167), // Enderium
+]
+ingots.forEach { mods.thermalexpansion.compactor.removeByInput(it) }
+
+mods.thermalexpansion.compactor.removeByOutput(item('thermalfoundation:material', 264)) // Mana Infused Gear
