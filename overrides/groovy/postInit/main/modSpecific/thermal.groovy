@@ -147,12 +147,12 @@ void createUpgradeRecipe(ItemStack result, ItemStack toUpgrade, ItemStack upgrad
 List<ItemStack> ingots = [
 	item('advancedrocketry:productingot'), // Titanium Aluminide
 	item('advancedrocketry:productingot', 1), // Titanium Iridium Alloy
-	item('nuclearcraft:ingot', 12), // Aluminum
+	item('nuclearcraft:ingot', 12), // Aluminium
 	item('thermalfoundation:material', 128), // Copper
 	item('thermalfoundation:material', 129), // Tin
 	item('thermalfoundation:material', 130), // Silver
 	item('thermalfoundation:material', 131), // Lead
-	item('thermalfoundation:material', 132), // Aluminum
+	item('thermalfoundation:material', 132), // Aluminium
 	item('thermalfoundation:material', 133), // Nickel
 	item('thermalfoundation:material', 134), // Platinum
 	item('thermalfoundation:material', 135), // Iridium
@@ -167,4 +167,6 @@ List<ItemStack> ingots = [
 ]
 ingots.forEach { mods.thermalexpansion.compactor.removeByInput(it) }
 
-mods.thermalexpansion.compactor.removeByOutput(item('thermalfoundation:material', 264)) // Mana Infused Gear
+// Mana Infused Gear
+mods.thermalexpansion.compactor.removeByOutput(item('thermalfoundation:material', 264))
+mods.jei.hide(item('thermalfoundation:material', 264)) // Mana Infused Gear
