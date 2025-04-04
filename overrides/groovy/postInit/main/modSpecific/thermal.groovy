@@ -43,6 +43,9 @@ mods.jei.ingredient.removeAndHide(item('redstonearsenal:tool.excavator_flux'))
 mods.jei.ingredient.removeAndHide(item('thermalfoundation:tool.excavator_diamond'))
 mods.jei.ingredient.removeAndHide(item('thermalfoundation:tool.excavator_iron'))
 
+// Unused Items
+mods.jei.hide(item('thermalfoundation:material', 264)) // Mana Infused Gear
+
 /* Upgrade Recipes */
 // Machines (Do each manually, side cache varies)
 createAllUpgradeRecipes(item('thermalexpansion:machine', 4) // Phytogenic Insolator
@@ -167,6 +170,4 @@ List<ItemStack> ingots = [
 ]
 ingots.forEach { mods.thermalexpansion.compactor.removeByInput(it) }
 
-// Mana Infused Gear
-mods.thermalexpansion.compactor.removeByOutput(item('thermalfoundation:material', 264))
-mods.jei.hide(item('thermalfoundation:material', 264)) // Mana Infused Gear
+mods.thermalexpansion.compactor.removeByOutput(item('thermalfoundation:material', 264)) // Mana Infused Gear
