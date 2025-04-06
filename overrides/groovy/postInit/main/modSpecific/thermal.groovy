@@ -44,7 +44,7 @@ mods.jei.ingredient.removeAndHide(item('thermalfoundation:tool.excavator_diamond
 mods.jei.ingredient.removeAndHide(item('thermalfoundation:tool.excavator_iron'))
 
 // Unused Items
-mods.jei.hide(item('thermalfoundation:material', 264)) // Mana Infused Gear
+mods.jei.ingredient.hide(item('thermalfoundation:material', 264)) // Mana Infused Gear
 
 /* Upgrade Recipes */
 // Machines (Do each manually, side cache varies)
