@@ -320,7 +320,19 @@ export async function parseExpand(
 		(item) => !item.messageTitle && !item.messageBody,
 		async (item) => {
 			if (!item.messageTitle) item.messageTitle = commitObject.message;
-			const title = dedent(item.messageTitle);
+			let title = dedent(item.messageTitle);
+
+			// Check for PR titles
+			const ptn = /\(#\d+\)$/;
+			if (!ptn.test(title.trim())) {
+				// Try to grab from main item
+				const match = commitObject.message.trim().match(ptn);
+
+				if (match !== null) {
+					const pr = match[0];
+					title = title.trim() + ` ${pr}`;
+				}
+			}
 
 			if (item.messageBody) {
 				const body = dedent(item.messageBody).trim();

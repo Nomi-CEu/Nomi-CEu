@@ -54,6 +54,10 @@ const qolChanges: SubCategory = {
 	commitKey: "[QOL]",
 	keyName: "Quality of Life",
 };
+const jeiChanges: SubCategory = {
+	commitKey: "[JEI]",
+	keyName: "Just Enough Items",
+};
 
 /* Set Sub Categories (Sub Categories that do not let any commit in) */
 const bothModes: SubCategory = { keyName: "Both Modes" };
@@ -106,7 +110,7 @@ const generalCategory: Category = {
 	commitKey: "[GENERAL]",
 	categoryName: "General Changes",
 	defaultSubCategory: other,
-	subCategories: [modUpdates, modAdditions, modRemovals, other],
+	subCategories: [jeiChanges, modUpdates, modAdditions, modRemovals, other],
 };
 const internalCategory: Category = {
 	commitKey: "[INTERNAL]",
