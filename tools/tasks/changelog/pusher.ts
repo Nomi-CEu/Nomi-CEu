@@ -167,14 +167,50 @@ async function pushCategory(category: Category) {
 }
 
 /**
- * Sorts a list that contains commit data
+ * Sorts a list that contains commit data, so that newest is on top (first).
  * @param list A list of type T that contains commit data
  * @param transform A function to turn each element of type T into an element of type Commit
  * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal) or will compare commit messages.
  */
-function sortCommitList<T>(
+export function sortCommitList<T>(
 	list: T[],
 	transform: (obj: T) => Commit | undefined,
+	backup?: (a: T, b: T) => number,
+): void {
+	sortCommitListInternal(
+		list,
+		transform,
+		// This is reversed, so higher priorities go on top
+		(a, b) => b - a,
+		backup,
+	);
+}
+
+/**
+ * Sorts a list that contains commit data, so that newest is on bottom (first).
+ * @param list A list of type T that contains commit data
+ * @param transform A function to turn each element of type T into an element of type Commit
+ * @param backup A backup sort, to call when either element does not have a commit object, or when the commit objects' times are the same. Optional, if not set, will just return 0 (equal) or will compare commit messages.
+ */
+export function sortCommitListReverse<T>(
+	list: T[],
+	transform: (obj: T) => Commit | undefined,
+	backup?: (a: T, b: T) => number,
+): void {
+	sortCommitListInternal(
+		list,
+		transform,
+		// This is reversed, so higher priorities go on bottom, then we reverse it
+		(a, b) => b - a,
+		backup,
+	);
+	list.reverse();
+}
+
+function sortCommitListInternal<T>(
+	list: T[],
+	transform: (obj: T) => Commit | undefined,
+	prioritySorting: (a: number, b: number) => number,
 	backup?: (a: T, b: T) => number,
 ) {
 	list.sort((a, b): number => {
@@ -188,31 +224,13 @@ function sortCommitList<T>(
 		const dateA = new Date(commitA.date);
 		const dateB = new Date(commitB.date);
 
-		// This is reversed, so higher priorities go on top
-		if (commitB.priority !== commitA.priority)
-			return (commitB.priority ?? 0) - (commitA.priority ?? 0);
+		if (commitA.priority !== commitB.priority)
+			return prioritySorting(commitA.priority ?? 0, commitB.priority ?? 0);
 		// This is reversed, so the newest commits go on top
 		if (dateB.getTime() - dateA.getTime() !== 0)
 			return dateB.getTime() - dateA.getTime();
 		if (backup) return backup(a, b);
 		return commitA.message.localeCompare(commitB.message);
-	});
-}
-
-/**
- * Sorts a commits list so that newest commits are on the bottom.
- * @param list The commit list.
- */
-export function sortCommitListReverse(list: Commit[]): void {
-	list.sort((a, b) => {
-		const dateA = new Date(a.date);
-		const dateB = new Date(b.date);
-
-		// This is reversed, so higher priorities go on top
-		if (b.priority !== a.priority) return (b.priority ?? 0) - (a.priority ?? 0); // Priority is still highest first
-		if (dateA.getTime() - dateB.getTime() !== 0)
-			return dateA.getTime() - dateB.getTime();
-		return a.message.localeCompare(b.message);
 	});
 }
 
@@ -300,7 +318,7 @@ export async function formatMessage(
 
 	const processedSHAs: Set<string> = new Set<string>();
 
-	sortCommitList(commits, (commit) => commit);
+	sortCommitListReverse(commits, (commit) => commit);
 
 	// Co-Authors for Each Commit, Format Commits
 	commits.forEach((commit) => {
@@ -323,7 +341,7 @@ export async function formatMessage(
 	const processedAuthors: Set<string> = new Set<string>();
 	const processedEmails: Set<string> = new Set<string>();
 
-	sortCommitList(
+	sortCommitListReverse(
 		retrievedAuthors,
 		(author) => author.commit,
 		(a, b) => a.name.localeCompare(b.name),

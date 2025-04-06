@@ -98,7 +98,7 @@ export default async function generateModChanges(
 				commits = projectIDsToCommits.get(info.projectID) ?? [];
 
 				// Sort array so newest commits appear at end instead of start of commit string
-				sortCommitListReverse(commits);
+				sortCommitListReverse(commits, (commit) => commit);
 			}
 			block.allocation.category.changelogSection
 				?.get(block.allocation.subCategory)
