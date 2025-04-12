@@ -1,7 +1,7 @@
 <galaxy>
     <star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0" blackHole="false">
-        <star name="Eye Of Existence" numGasGiants="0" numPlanets="0" temp="800" blackHole="true" separation="100.0" />
         <star name="Eye Of Eternity" numGasGiants="0" numPlanets="0" temp="800" blackHole="true" separation="100.0" />
+        <star name="Eye Of Harmony" numGasGiants="0" numPlanets="0" temp="800" blackHole="true" separation="100.0" />
 		<planet name="Earth" DIMID="0" dimMapping="">
 			<isKnown>true</isKnown>
 			<isNativeDimension>false</isNativeDimension>
