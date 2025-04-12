@@ -293,17 +293,8 @@ const modifyDesc = async (
 	questToModify["properties:10"]["betterquesting:10"]["desc:8"] = description;
 };
 
-const modifyIcon = async (
-	questToModify: Quest,
-	modify: Modified,
-	change: QuestChange,
-) => {
-	// Tag Compounds might be removed/added
-	if (
-		change.path.toString() !== "properties:10,betterquesting:10,icon:10,tag:10"
-	)
-		assertIsModification(change);
-
+const modifyIcon = async (questToModify: Quest, modify: Modified) => {
+	// We could assert is modification, but its too complicated with all the different content that could be changed.
 	const oldIcon =
 		modify.oldQuest["properties:10"]["betterquesting:10"]["icon:10"];
 	const newIcon =
@@ -833,7 +824,7 @@ export const modificationParsers = [
 	{
 		id: "icon",
 		name: "Icon",
-		condition: picomatch("properties/betterquesting/icon/*"),
+		condition: picomatch("properties/betterquesting/icon/**/*"),
 		logic: {
 			type: LogicType.Simple,
 			applyOnce: true,

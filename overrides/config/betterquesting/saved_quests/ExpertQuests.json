@@ -405,7 +405,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:mining_hammer",
+            "id:8": "gregtech:spade",
             "tag:10": {
               "DisallowContainerItem:1": 0,
               "GT.Behaviours:10": {
@@ -414,16 +414,15 @@
                 "AoERow:3": 1,
                 "MaxAoEColumn:3": 1,
                 "MaxAoELayer:3": 0,
-                "MaxAoERow:3": 1,
-                "TorchPlacing:1": 1
+                "MaxAoERow:3": 1
               },
               "GT.Tool:10": {
                 "AttackDamage:5": 3.5,
-                "AttackSpeed:5": -3.2,
+                "AttackSpeed:5": -3.4,
                 "Durability:3": 0,
                 "HarvestLevel:3": 2,
-                "Material:8": "iron",
-                "MaxDurability:3": 256,
+                "Material:8": "gregtech:wrought_iron",
+                "MaxDurability:3": 1151,
                 "ToolSpeed:5": 4.8
               },
               "HideFlags:3": 2
@@ -26860,7 +26859,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your new §2Epoxy Circuit Boards§r, §6Nano CPUs§r, and some standard components, you can make the final type of Tier Three Circuit: the §6Nanocircuit§r.\n\nAs the best form of Tier Three circuit, these should be automated and stockpiled. As with the Final Tier Two circuits, the §6Advanced System-on-Chip§r variant recipes won\u0027t be available for a while.",
+          "desc:8": "With your new §2Epoxy Circuit Boards§r, §6Nano CPUs§r, and some standard components, you can make the final type of Tier Three Circuit: the §6Nanoprocessor§r.\n\nAs the best form of Tier Three circuit, these should be automated and stockpiled. As with the Final Tier Two circuits, the §6Advanced System-on-Chip§r variant recipes won\u0027t be available for a while.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28164,7 +28163,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Upgrading to the §6Nano Supercomputer§r requires some standard circuit components, but also some §6Lumium Wire§r and §2Fine Tungstensteel Wire.§r",
+          "desc:8": "Upgrading to the §6Nano Supercomputer§r requires some standard circuit components, but also some §6Fine Lumium Wire§r and §2Fine Tungstensteel Wire.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28272,7 +28271,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Nothing you haven\u0027t seen here: just combine some standard circuit components and §6Nanocircuits§r to make a §6Nanoprocessor§r.",
+          "desc:8": "Nothing you haven\u0027t seen here: just combine some standard circuit components and §6Nanoprocessors§r to make a §6Nanoprocessor Assembly§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
