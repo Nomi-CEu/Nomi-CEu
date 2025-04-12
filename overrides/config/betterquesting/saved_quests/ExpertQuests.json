@@ -16877,40 +16877,16 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 8,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "draconicevolution:crafting_injector"
-            },
-            "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "draconicevolution:fusion_crafting_core"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "entryLogic:8": "AND",
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 1,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
+            },
+            "1:10": {
               "Count:3": 8,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "packageddraconic:marked_basic_injector"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "packageddraconic:fusion_crafter"
+              "id:8": "draconicevolution:crafting_injector"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -18688,7 +18664,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Basic Fusion Crafting Injectors§r can be upgraded to Wyvern Tier via fusion crafting.\n\nTechnically you only need six of these to start making the next tier of injectors, but some recipes will need more than that. Plan on making at least twenty-six of these.",
+          "desc:8": "§oThis quest can be completed through either task.\n\n§6Basic Fusion Crafting Injectors§r can be upgraded to Wyvern Tier via fusion crafting.\n\nTechnically you only need six of these to start making the next tier of injectors, but some recipes will need more than that. Plan on making at least twenty-six of these.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18708,7 +18684,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -18732,6 +18708,24 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "packageddraconic:marked_wyvern_injector"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -18742,7 +18736,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Draconic Fusion Crafting Injectors§r are the penultimate tier of injectors for fusion crafting.\n\nYou\u0027ll need a fusion crafting setup with ten of these for the next tier of injector, and the next tier you\u0027ll also need ten injectors, so consider making 20 of these.",
+          "desc:8": "§oThis quest can be completed through either task.\n\n§6Draconic Fusion Crafting Injectors§r are the penultimate tier of injectors for fusion crafting.\n\nYou\u0027ll need a fusion crafting setup with ten of these for the next tier of injector, and the next tier you\u0027ll also need ten injectors, so consider making 20 of these.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18762,7 +18756,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -18786,6 +18780,24 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "packageddraconic:marked_draconic_injector"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -18797,7 +18809,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The highest tier of fusion crafting injectors. You will need at least ten of these to reach the §dStabilized Micro Miners§r.\n\nEach injector requires four ingots of §6Neutronium§r and four §6Chaos Shards§r, as well as two §6Crystal Matrix§r blocks.\n\nHope you\u0027ve got those Tier Eight Micro Miners automated.",
+          "desc:8": "§oThis quest can be completed through either task.§r\n\nThe highest tier of fusion crafting injectors. You will need at least ten of these to reach the §dStabilized Micro Miners§r.\n\nEach injector requires four ingots of §6Neutronium§r and four §6Chaos Shards§r, as well as two §6Crystal Matrix§r blocks.\n\nHope you\u0027ve got those Tier Eight Micro Miners automated.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -18817,7 +18829,7 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "ALWAYS"
         }
       },
@@ -18838,6 +18850,24 @@
               "Damage:2": 3,
               "OreDict:8": "",
               "id:8": "draconicevolution:crafting_injector"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "packageddraconic:marked_chaotic_injector"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -49206,6 +49236,12 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "packageddraconic:fusion_crafter"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "packageddraconic:marked_basic_injector"
             }
           },
           "taskID:8": "bq_standard:retrieval"
