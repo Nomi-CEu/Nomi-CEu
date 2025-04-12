@@ -23,7 +23,7 @@ addOverride('key.saveToolbarActivator', Keyboard.KEY_NONE)
 if (Loader.isModLoaded('craftpresence'))
 	addOverride('key.craftpresence.config_keycode.name', Keyboard.KEY_NONE)
 
-addOverride('Open Rocket GUI', KeyModifier.CONTROL, Keyboard.KEY_C)
+addOverride('key.openRocketUI', KeyModifier.CONTROL, Keyboard.KEY_C)
 
 addOverride('key.craftingtweaks.compressAll', Keyboard.KEY_NONE)
 addOverride('key.craftingtweaks.compressOne', Keyboard.KEY_NONE)
