@@ -528,7 +528,6 @@ for oreDictEntry, items in dustsDisabled {
 	oreDictEntry.removeItems(items);
 }
 
-<ore:dustArdite>.add(<enderio:item_material:30>);
 <ore:dustMoon>.add(<nomilabs:moondust>);
 
 //////////////////////////////
