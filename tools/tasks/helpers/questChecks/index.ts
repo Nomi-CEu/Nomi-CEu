@@ -306,6 +306,30 @@ async function checkAndFixQB(
 			}
 		}
 
+		// Check for Fluid Tasks' Amount
+		for (const task of Object.values(quest["tasks:9"])) {
+			if (task["taskID:8"] !== "bq_standard:fluid") continue;
+
+			const reqFluids = task["requiredFluids:9"] as Record<
+				string,
+				Record<string, unknown>
+			>;
+			if (!reqFluids) return;
+			for (const fluid of Object.values(reqFluids)) {
+				if (fluid["Amount:3"] === 1) continue;
+
+				if (shouldCheck)
+					throw new Error(
+						`Task with Index ${task["index:3"]} in Quest with ID ${foundID} has Fluid with Amount ≠ 1!`,
+					);
+
+				logWarn(
+					`Fixing Required Fluid Amount of Task with Index ${task["index:3"]} in Quest with ID ${foundID}...`,
+				);
+				fluid["Amount:3"] = 1;
+			}
+		}
+
 		// Check for Rewards that have Nomicoins
 		if (isExpert) stripRewards(quest, shouldCheck, true);
 
