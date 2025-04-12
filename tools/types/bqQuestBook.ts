@@ -14,7 +14,7 @@ export interface Quest {
 	"tasks:9": { [key: string]: Task };
 }
 
-export interface Task {
+export interface Task extends Record<string, unknown> {
 	"index:3": number;
 	"taskID:8": string;
 }
