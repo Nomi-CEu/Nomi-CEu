@@ -1,5 +1,7 @@
 <galaxy>
-    <star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0">
+    <star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0" blackHole="false">
+        <star name="Eye Of Existence" numGasGiants="0" numPlanets="0" temp="800" blackHole="true" separation="100.0" />
+        <star name="Eye Of Eternity" numGasGiants="0" numPlanets="0" temp="800" blackHole="true" separation="100.0" />
 		<planet name="Earth" DIMID="0" dimMapping="">
 			<isKnown>true</isKnown>
 			<isNativeDimension>false</isNativeDimension>
@@ -28,7 +30,7 @@
 			<oceanBlock>minecraft:fluid.lava</oceanBlock>
 			<atmosphereDensity>120</atmosphereDensity>
 			<gravitationalMultiplier>38</gravitationalMultiplier>
-			<orbitalDistance>40</orbitalDistance>
+			<orbitalDistance>50</orbitalDistance>
 			<rotationalPeriod>1400000</rotationalPeriod>
 		</planet>
 		<planet name="Venus" DIMID="102" customIcon="lava">
