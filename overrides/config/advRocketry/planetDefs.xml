@@ -1,26 +1,29 @@
 <galaxy>
-    <star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0" blackHole="false">
-        <star name="Eye Of Eternity" numGasGiants="0" numPlanets="0" temp="800" blackHole="true" separation="100.0" />
-        <star name="Eye Of Harmony" numGasGiants="0" numPlanets="0" temp="800" blackHole="true" separation="100.0" />
+	<star name="Sol" temp="100" x="0" y="0" numPlanets="0" numGasGiants="0" blackHole="false">
+		<star name="Eye Of Eternity" temp="800" blackHole="true" separation="100.0" />
+		<star name="Eye Of Harmony" temp="800" blackHole="true" separation="100.0" />
 		<planet name="Earth" DIMID="0" dimMapping="">
 			<isKnown>true</isKnown>
 			<isNativeDimension>false</isNativeDimension>
 			<orbitalDistance>100</orbitalDistance>
 			<planet name="Luna" DIMID="100">
 				<gravitationalMultiplier>16</gravitationalMultiplier>
-				<orbitalDistance>50</orbitalDistance>
-				<orbitalPhi>0</orbitalPhi>
+				<orbitalDistance>100</orbitalDistance>
 				<rotationalPeriod>128000</rotationalPeriod>
 				<atmosphereDensity>0</atmosphereDensity>
+				<orbitalPhi>0</orbitalPhi>
+				<orbitalTheta>270</orbitalTheta>
 			</planet>
-			<planet name="Void" DIMID="119" dimMapping="" customIcon="CarbonWorld">
+			<planet name="Void" DIMID="119" dimMapping="" customIcon="GasGiantBlue">
 				<isNativeDimension>false</isNativeDimension>
-				<orbitalDistance>150</orbitalDistance>
+				<orbitalDistance>275</orbitalDistance>
+				<orbitalTheta>270</orbitalTheta>
 			</planet>
 			<planet name="Lost Cities" DIMID="111" dimMapping="" customIcon="EarthLike">
 				<isNativeDimension>false</isNativeDimension>
-				<orbitalDistance>330</orbitalDistance>
+				<orbitalDistance>275</orbitalDistance>
 				<hasRings>true</hasRings>
+				<orbitalTheta>90</orbitalTheta>
 			</planet>
 		</planet>
 		<planet name="Mercury" DIMID="101" customIcon="lava">
@@ -47,7 +50,7 @@
 		<planet name="Mars" DIMID="103" customIcon="marslike">
 			<isKnown>true</isKnown>
 			<biomeIds>advancedrocketry:hotdryrock</biomeIds>
-            <skyColor>1,0.2,0</skyColor>
+			<skyColor>1,0.2,0</skyColor>
 			<fogColor>0.9,0.6,0.1</fogColor>
 			<atmosphereDensity>0</atmosphereDensity>
 			<orbitalDistance>150</orbitalDistance>
@@ -66,7 +69,7 @@
 				<gravitationalMultiplier>300</gravitationalMultiplier>
 				<orbitalDistance>180</orbitalDistance>
 				<rotationalPeriod>10000</rotationalPeriod>
-            </planet>
+			</planet>
 			<planet name="Europa" DIMID="106" customIcon="waterworld">
 				<biomeIds>minecraft:frozen_ocean</biomeIds>
 				<atmosphereDensity>0</atmosphereDensity>
@@ -74,8 +77,8 @@
 				<orbitalDistance>90</orbitalDistance>
 				<orbitalPhi>90</orbitalPhi>
 				<rotationalPeriod>10000</rotationalPeriod>
-            </planet>
-        </planet>
+			</planet>
+		</planet>
 		<planet name="Saturn" DIMID="107" customIcon="gasgiantblue">
 			<isKnown>true</isKnown>
 			<GasGiant>true</GasGiant>
@@ -91,7 +94,7 @@
 				<orbitalPhi>120</orbitalPhi>
 				<rotationalPeriod>12000</rotationalPeriod>
 			</planet>
-        </planet>
+		</planet>
 		<planet name="Uranus" DIMID="109" customIcon="iceworld">
 			<isKnown>true</isKnown>
 			<GasGiant>true</GasGiant>
@@ -102,7 +105,7 @@
 			<orbitalDistance>290</orbitalDistance>
 			<gravitationalMultiplier>200</gravitationalMultiplier>
 			<rotationalPeriod>17250</rotationalPeriod>
-        </planet>
+		</planet>
 		<planet name="Neptune" DIMID="110" customIcon="iceworld">
 			<isKnown>true</isKnown>
 			<GasGiant>true</GasGiant>
@@ -111,6 +114,6 @@
 			<orbitalDistance>400</orbitalDistance>
 			<gravitationalMultiplier>200</gravitationalMultiplier>
 			<rotationalPeriod>21100</rotationalPeriod>
-        </planet>
+		</planet>
 	</star>
 </galaxy>
