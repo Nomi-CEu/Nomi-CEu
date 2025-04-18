@@ -29,8 +29,6 @@ for (var toHide : NCCoolantFluids.fluidList) {
 	mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
 }
 
-//
-
 // LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
 crafting.addShapeless(metaitem('blockUranium'), [item('nuclearcraft:block_depleted_uranium')])
 
