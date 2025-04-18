@@ -10,7 +10,7 @@
       "height": 20,
       "posX": 4,
       "posY": 58,
-      "text": "Rent Your Own Nomifactory Server!",
+      "text": "nomiceu.main_menu.rent_server",
       "width": 240
     },
     "discord": {
@@ -22,7 +22,7 @@
       "height": 20,
       "posX": 4,
       "posY": 34,
-      "text": "Join Us On Discord!",
+      "text": "nomiceu.main_menu.discord",
       "width": 120
     },
     "mods": {
@@ -93,7 +93,7 @@
       "height": 20,
       "posX": 125,
       "posY": 34,
-      "text": "Update Changes",
+      "text": "nomiceu.main_menu.update",
       "width": 120
     }
   },
