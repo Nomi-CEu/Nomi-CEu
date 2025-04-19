@@ -27362,7 +27362,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The functions of the Extractor and Fluid Extractor have been combined into a single machine!\n\n§3Extractors§r are useful for melting things into liquids. For example, you can melt down ingots into molten metals, or §6Rubber Sheets§r into liquid §9Rubber§r.\n\nWhen you have access to §6Steel§r, you can make molds and use §3Fluid Solidifiers§r to form various components more efficiently from fluids, like §6Gears§r.",
+          "desc:8": "§2The functions of the Extractor and Fluid Extractor have been combined into a single machine!\n\n§3Extractors§r are useful for melting things into liquids. For example, you can melt down ingots into molten metals, or §6Rubber Sheets§r into liquid §9Rubber§r.\n\nThe Extractor can also feed into §3Fluid Solidifiers§r, to form various components more efficiently from fluids and corresponding §6Molds§r, like §6Gears§r and §6Rotors§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

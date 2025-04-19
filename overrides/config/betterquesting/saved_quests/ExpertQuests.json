@@ -1960,9 +1960,9 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 5,
+            "Damage:2": 14,
             "OreDict:8": "",
-            "id:8": "enderio:item_alloy_ingot"
+            "id:8": "nomilabs:meta_ingot"
           },
           "ignoresview:1": 0,
           "ismain:1": 1,
@@ -23294,7 +23294,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2The functions of the Extractor and Fluid Extractor have been combined into a single machine!\n\n§3Extractors§r are useful for melting things into liquids. For example, you can melt down ingots into molten metals, or §6Rubber Sheets§r into liquid §9Rubber§r.\n\n§2Unlike your Steam Extractor, this one can produce fluids!§r\n\nWhen you have access to §6Steel§r, you can make molds and use §3Fluid Solidifiers§r to form various components more efficiently from fluids, like §6Gears§r.",
+          "desc:8": "§2The functions of the Extractor and Fluid Extractor have been combined into a single machine!\n\n§3Extractors§r are useful for melting things into liquids. For example, you can melt down ingots into molten metals, or §6Rubber Sheets§r into liquid §9Rubber§r.\n\n§2Unlike your Steam Extractor, this one can produce fluids!§r\n\nThe Extractor can also feed into §3Fluid Solidifiers§r, to form various components more efficiently from fluids and corresponding §6Molds§r, like §6Gears§r and §6Rotors§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
