@@ -83,7 +83,7 @@ export default async function parseParser(
 }
 
 function applyFix(commit: Commit, fix: FixUpInfo) {
-	if (fix.newTitle) commit.message = fix.newTitle;
+	if (fix.newTitle) commit.message = bringOverPRLabels(commit, fix.newTitle);
 	if (fix.newBody) {
 		switch (fix.mode) {
 			case "REPLACE":
@@ -94,6 +94,23 @@ function applyFix(commit: Commit, fix: FixUpInfo) {
 				break;
 		}
 	}
+}
+
+export function bringOverPRLabels(
+	commitObject: Commit,
+	newTitle: string,
+): string {
+	const ptn = /\(#\d+\)$/;
+	if (!ptn.test(newTitle.trim())) {
+		// Try to grab from main item
+		const match = commitObject.message.trim().match(ptn);
+
+		if (match !== null) {
+			const pr = match[0];
+			newTitle = newTitle.trim() + ` ${pr}`;
+		}
+	}
+	return newTitle;
 }
 
 /**
