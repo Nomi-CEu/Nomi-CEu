@@ -36,7 +36,7 @@ import {
 	modInfoList,
 	priorityKey,
 } from "./definitions.ts";
-import { findCategories, findSubCategory } from "./parser.ts";
+import {bringOverPRLabels, findCategories, findSubCategory} from "./parser.ts";
 import ChangelogData from "./changelogData.ts";
 import toml from "toml-v1";
 import { logError } from "#utils/log.ts";
@@ -320,19 +320,7 @@ export async function parseExpand(
 		(item) => !item.messageTitle && !item.messageBody,
 		async (item) => {
 			if (!item.messageTitle) item.messageTitle = commitObject.message;
-			let title = dedent(item.messageTitle);
-
-			// Check for PR titles
-			const ptn = /\(#\d+\)$/;
-			if (!ptn.test(title.trim())) {
-				// Try to grab from main item
-				const match = commitObject.message.trim().match(ptn);
-
-				if (match !== null) {
-					const pr = match[0];
-					title = title.trim() + ` ${pr}`;
-				}
-			}
+			const title = bringOverPRLabels(commitObject, dedent(item.messageTitle));
 
 			if (item.messageBody) {
 				const body = dedent(item.messageBody).trim();
