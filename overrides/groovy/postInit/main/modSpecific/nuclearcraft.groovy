@@ -4,8 +4,9 @@ import com.nomiceu.nomilabs.util.ItemMeta
 import mezz.jei.api.ingredients.VanillaTypes
 import nc.enumm.MetaEnums
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import nc.fluid.FluidCoolant
 import nc.fluid.FluidFission
-import nc.fluid.FluidMolten
+import nc.fluid.FluidHotCoolant
 import nc.init.NCCoolantFluids
 import nc.init.NCFissionFluids
 import net.minecraft.item.ItemStack
@@ -24,9 +25,12 @@ for (var toHide : NCFissionFluids.fluidList) {
 }
 
 for (var toHide : NCCoolantFluids.fluidList) {
-	// Ignore Normal Molten Fluids
-	if (toHide instanceof FluidMolten) continue;
-	mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+	// Ignore Normal Molten Fluids & Registered Outside of NC
+	var fluidReg = FluidRegistry.getFluid(toHide.getName())
+	if (fluidReg instanceof FluidCoolant || fluidReg instanceof FluidHotCoolant)
+		mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+	else
+		println "NuclearCraft Script: Skipping Fluid ${toHide.getName()} as registered outside of NC, or is a Molten Fluid!"
 }
 
 // LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
