@@ -2,6 +2,9 @@ import ChecksCharProcessor from "#tasks/helpers/questChecks/checksCharProcessor.
 
 /* Patterns */
 export const doubleSpace = / {2,}/g;
+export const hasGrammar = /[;,.?!]/g;
+export const grammarChar = /[;,.?!]/;
+export const specialGrammarChar = /[?!]/;
 export const invalidFormatting = /§$|§[^0-9a-ek-or]/;
 export const isSpaceOrNewLine = /[ \n]/;
 export const isFormattingSignal = /§([0-9a-ek-or])/;

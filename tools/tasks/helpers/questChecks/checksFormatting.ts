@@ -7,6 +7,9 @@ import ChecksData, {
 	isSpaceOrNewLine,
 	isFormattingSignal,
 	resettingSignal,
+	hasGrammar,
+	grammarChar,
+	specialGrammarChar,
 } from "./checksData.ts";
 import {
 	isResettingSignal,
@@ -15,9 +18,9 @@ import {
 } from "./checksUtil.ts";
 
 /**
- * Makes various space and newline related checks, and checks formatting.
+ * Makes various space, newline and grammar related checks, and checks formatting.
  */
-export default function checkSpacesAndFormatting(
+export default function checkGrammarAndFormatting(
 	shouldCheck: boolean,
 	value: string,
 	id: number,
@@ -27,7 +30,9 @@ export default function checkSpacesAndFormatting(
 	const data = new ChecksData(shouldCheck, value, id, name, key);
 	setupUtil(data);
 
-	checkFormatting(data);
+	if (checkFormatting(data)) data.processor.prepareIteration();
+
+	checkDoubleGrammar(data);
 
 	if (doubleSpace.test(data.value)) {
 		logOrThrowProblem("Double Space(s)");
@@ -56,10 +61,70 @@ export default function checkSpacesAndFormatting(
 }
 
 /**
+ * Checks for double grammar.
+ */
+function checkDoubleGrammar(data: ChecksData) {
+	if (!hasGrammar.test(data.value)) return;
+
+	if (data.value.includes("…")) {
+		logOrThrowProblem("Unicode Ellipses Used");
+		data.value = data.value.replaceAll("…", "...");
+	}
+
+	let prevChar = "";
+
+	while (data.processor.hasNext()) {
+		const char = data.processor.toNext();
+
+		// If formatting signal, ignore
+		if (char.char.includes(formattingChar)) {
+			continue;
+		}
+
+		// If not grammar, ignore, reset prev char
+		if (!grammarChar.test(char.char)) {
+			prevChar = "";
+			continue;
+		}
+
+		if (prevChar) {
+			// Double Grammar, but check to see if its ...
+			if (
+				prevChar !== "." ||
+				char.char !== "." ||
+				data.processor.getNext().char !== "."
+			) {
+				// Check ?! or ?? or !? or !! or …? or …! (UNICODE ELLIPSES)
+				if (
+					(specialGrammarChar.test(prevChar) || prevChar === "…") &&
+					specialGrammarChar.test(char.char)
+				) {
+					prevChar = char.char;
+					continue; // Just continue
+				}
+
+				throw new Error(
+					`Double Grammar (${prevChar}${char.char}) found in Quest with ID ${data.id} at ${data.key}! This cannot be fixed automatically!`,
+				);
+			}
+
+			// Ellipses, fine
+			// Use unicode ellipses to catch extra full stops
+			prevChar = "…";
+
+			// Increment Pos
+			data.processor.toNext();
+		} else prevChar = char.char;
+	}
+
+	// No need for save, since grammar check has no auto-correct
+}
+
+/**
  * Whole string formatting checks.
  */
-function checkFormatting(data: ChecksData) {
-	if (!data.value.includes(formattingChar)) return;
+function checkFormatting(data: ChecksData): boolean {
+	if (!data.value.includes(formattingChar)) return false;
 
 	checkFormattingChar(data);
 
@@ -91,6 +156,7 @@ function checkFormatting(data: ChecksData) {
 		// Trim value, then add §r to it
 		data.value = data.value.trim() + formattingChar + resettingSignal;
 	}
+	return true;
 }
 
 /**
