@@ -1917,7 +1917,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power. Specifically, the base version generates\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.",
+          "desc:8": "Your first major crafting project!\n\nThe §6Steam Dynamo§r will be your source of §dpower§r for the early game. It requires §9Water§r and burnable fuel like §6Coal§r or §6Sugar Cane§r to produce power.\n\nYou\u0027ll need a small bit of §6Silver§r for this dynamo. If you haven\u0027t found a §6Galena vein§r yet (which is where Silver is), then consider \"buying\" some §6Silver Ore§r using §dNomicoins§r. You won\u0027t need a ton of silver and lead just yet, so it won\u0027t bankrupt you.\n\nKeep in mind that §eDynamos only output power when burning through fuel, and only the block attached directly to the coil will get provided with power§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10622,7 +10622,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r.\n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources. §9Oil§r distillation, with its four outputs, will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than four output fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r. Also, any recipe that has an item output will need an §6Output Bus§r, anywhere on the bottom layer.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Energy Input Hatch§r can go wherever you can fit it on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r. §2You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top.\n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
+          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r.\n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources. §9Oil§r distillation, with its four outputs, will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than four output fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r. Also, any recipe that has an item output will need an §6Output Bus§r, anywhere on the bottom layer.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch §2can go anywhere on the bottom layer§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Energy Input Hatch§r can go wherever you can fit it on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r. §2You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top.\n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37747,7 +37747,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Provides more augment slots to machines and dynamos.\n\nDynamos operate at §a250% of base power and fuel burn rate§r.\n\nTanks hold §a450 buckets§r.\n\nMachines operate at §a250% of base speed.§r",
+          "desc:8": "Provides more augment slots to machines and dynamos.\n\nDynamos operate at §a250% of base power and fuel burn rate§r.\n\nTanks hold §a450 buckets§r.\n\nMachines operate at §a250% of base speed§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49781,7 +49781,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Simulation Supercomputer§r is a multiblock structure that performs §bDeep Mob Evolution§r simulations like the §3Simulation Chamber§r, but is capable of overclocking these simulations to incredible speeds.\n\nOne of these structures can perform the equivalent work of hundreds of individual Simulation Chambers more efficiently. This will make it far easier to generate pristine matter you\u0027ll need for things like §6Dragon Lair Data§r. You\u0027ll probably need several §3Loot Fabricators§r to keep up with it.\n\nThe data model you place in the input bus will §2have a fixed 30% chance of producing Pristine matter regardless of its tier. §eOverclocking does not alter the chances of pristines§r: those come at fixed rates per iteration.\n\nAs a §dCreative Tier§r structure, it is rather expensive to make. However, it is an investment that will easily pay for itself as you progress through the endgame. You should strongly consider making one of these with your second §dHeart of a Universe§r.",
+          "desc:8": "The §3Simulation Supercomputer§r is a multiblock structure that performs §bDeep Mob Evolution§r simulations like the §3Simulation Chamber§r, but it is capable of §eoverclocking and parallelizing§r these simulations to incredible speeds.\n\nOne of these structures can perform the equivalent work of hundreds of individual Simulation Chambers more efficiently. This will make it far easier to generate pristine matter you\u0027ll need for things like §6Dragon Lair Data§r, as well as greatly increasing the speed you can level up models.\n\nYou\u0027ll probably need several §3Loot Fabricators§r to keep up with it.\n\nThe data model you place in the input bus will have the same chances of §6Pristine Matter§r if you were to put it in a Simulation Chamber. §eOverclocking does not alter the chances of pristines§r: those come at fixed rates per iteration.\n\nAs a §dCreative Tier§r structure, it is rather expensive to make. However, it is an investment that will easily pay for itself as you progress through the endgame. You should strongly consider making one of these with your second §dHeart of a Universe§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -53548,14 +53548,12 @@
     "861:10": {
       "preRequisites:11": [
         535,
-        848,
-        1034,
-        1038
+        848
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer.§r\n\nAccepts any §6Parallel Control Hatch§r, parallelizing up to §e256x§r with the best hatch!.\n\nThe §aRotary Hearth Furnace§r is quite big!",
+          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer.§r\n\nAccepts any §6Parallel Control Hatch§r, parallelizing up to §e256x§r with the best hatch!\n\nThe §aRotary Hearth Furnace§r is quite big!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -59508,7 +59506,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Around this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r.\n\nThe first way that comes to mind is electrolyzing §9Water§r, but that is §cextremely slow and inefficient§r..\n\nInstead, the best way of making early game §6Oxygen§r is through §6Silicon Dioxide§r. This dust can easily be obtained through processing §6Cobblestone§r, and is fast and efficient.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r in an §bElectrolyzer§r. §6Methane§r can be obtained from §6Biological Materials§r, §6Pyrolyse Byproducts§r, or later, via §6Petrochemistry§r. There are many other sources as well, including various ores like §6Limonite§r. Check JEI!\n\nIn §6HV§r, you can react §6Methane§r with §6Water§r in a §bChemical Reactor§r for fast and efficient Hydrogen.\n\nIt is worth setting up automation for these early! Even if you stockpile some simply through electrolyzing Water, it is worth it!",
+          "desc:8": "Around this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r.\n\nThe first way that comes to mind is electrolyzing §9Water§r, but that is §cextremely slow and inefficient§r. However, this should be enough for your initial uses of these elements.\n\nInstead, the best way of making early game §6Oxygen§r is through §6Silicon Dioxide§r. This dust can easily be obtained through processing §6Cobblestone§r into §6Glass§r and then §6Glass Dust§r, and is fast and efficient, but you need a §3Centrifuge§r to turn §6Glass Dust§r into §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r in an §bElectrolyzer§r. §6Methane§r can be obtained from §6Biological Materials§r, §6Pyrolyse Byproducts§r, or later, via §6Petrochemistry§r. There are many other sources as well, including various ores like §6Limonite§r. Check JEI!\n\nIn §6HV§r, you can react §6Methane§r with §6Water§r in a §bChemical Reactor§r for fast and efficient Hydrogen.\n\nIt is worth setting up automation for these early! Stockpile some simply through electrolyzing Water, it is worth it!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

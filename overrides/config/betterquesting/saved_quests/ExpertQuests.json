@@ -8910,7 +8910,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "It\u0027s finally time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r.\n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources. §9Oil§r distillation, with its four outputs, will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than four output fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r. Also, any recipe that has an item output will need an §6Output Bus§r, anywhere on the bottom layer.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch §2can go anywhere on the bottom layer.§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Energy Input Hatch§r can go wherever you can fit it on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r. §2You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top.\n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
+          "desc:8": "With tier three circuits in hand, it\u0027s time to make a §3Distillation Tower§r, which is the gatekeeper for more advanced plastics like §6Epoxy§r and doing petrochemistry.\n\nThe Distillation Tower is a highly flexible multiblock structure, able to be anywhere from §62 blocks high to up to 13 high§r (12 fluid outputs). The way that it works is that each level of the tower after the first will output an additional fluid from the recipe. §cAny output fluids in excess of available buses are voided§r.\n\nWhat you need the Distillation Tower for initially is to break down §9Oil§r and §9Fermented Biomass§r into useful resources. §9Oil§r distillation, with its four outputs, will require a §efive-block-high Distillation Tower§r (the quest materials are for such a tower; if you want to build it bigger, you will need §ean additional 7 casings and 1 fluid output per floor§r).\n\nAny recipe with more than four output fluids (like §9Fermented Biomass§r) will need a larger tower. Make sure to increase the height of your tower to accommodate all of the outputs you want to keep. Also check the voltage requirements of the recipes, as many Distillation Tower recipes need higher voltages than MV. §eYou can swap out your Energy Input for a higher tier one when that time comes§r. Also, any recipe that has an item output will need an §6Output Bus§r, anywhere on the bottom layer.\n\nThe tower we\u0027ll be building at first is 3x3x5 (LxWxH), with a hollow center. The §6Fluid Input Hatch §2can go anywhere on the bottom layer§r. The §6controller§r goes in the middle of an outer edge of the bottom layer. The §6Energy Input Hatch§r can go wherever you can fit it on the bottom layer. The rest of the 3x3 must be filled with §6Clean Stainless Steel Casings§r. §2You also need a Maintenance Hatch, which can go anywhere on the structure.§r Each level above that is a ring of 7 Clean Stainless Steel Casings, one §6Fluid Output§r and nothing in the center, except for the topmost layer which needs an eighth casing to fill in the center, capping off the top.\n\nFor distilling fluids which only have one useful output, like §9Biomass§r, it is recommended to use single-block Distilleries, due to their energy efficiency and generally lower costs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -32571,7 +32571,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Provides more augment slots to machines and dynamos.\n\nDynamos operate at §a250% of base power and fuel burn rate§r.\n\nTanks hold §a450 buckets§r.\n\nMachines operate at §a250% of base speed.§r",
+          "desc:8": "Provides more augment slots to machines and dynamos.\n\nDynamos operate at §a250% of base power and fuel burn rate§r.\n\nTanks hold §a450 buckets§r.\n\nMachines operate at §a250% of base speed§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42490,7 +42490,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Around this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r.\n\nThe first way that comes to mind is electrolyzing §9Water§r, but that is §cextremely slow and inefficient§r..\n\nInstead, the best way of making early game §6Oxygen§r is through §6Silicon Dioxide§r. This dust can easily be obtained through processing §6Cobblestone§r, and is fast and efficient.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r in an §bElectrolyzer§r. §6Methane§r can be obtained from §6Biological Materials§r, §6Pyrolyse Byproducts§r, or later, via §6Petrochemistry§r. There are many other sources as well, including various ores like §6Limonite§r. Check JEI!\n\nIn §6HV§r, you can react §6Methane§r with §6Water§r in a §bChemical Reactor§r for fast and efficient Hydrogen.\n\nIt is worth setting up automation for these early! Even if you stockpile some simply through electrolyzing Water, it is worth it!",
+          "desc:8": "Around this point, you will need large quantities of §6Hydrogen§r and §6Oxygen§r.\n\nThe first way that comes to mind is electrolyzing §9Water§r, but that is §cextremely slow and inefficient§r. However, this should be enough for your initial uses of these elements.\n\nInstead, the best way of making early game §6Oxygen§r is through §6Silicon Dioxide§r. This dust can easily be obtained through processing §6Cobblestone§r into §6Glass§r and then §6Glass Dust§r, and is fast and efficient, but you need a §3Centrifuge§r to turn §6Glass Dust§r into §6Silicon Dioxide§r.\n\n§6Hydrogen§r is a bit trickier, but you can put §6Methane§r in an §bElectrolyzer§r. §6Methane§r can be obtained from §6Biological Materials§r, §6Pyrolyse Byproducts§r, or later, via §6Petrochemistry§r. There are many other sources as well, including various ores like §6Limonite§r. Check JEI!\n\nIn §6HV§r, you can react §6Methane§r with §6Water§r in a §bChemical Reactor§r for fast and efficient Hydrogen.\n\nIt is worth setting up automation for these early! Stockpile some simply through electrolyzing Water, it is worth it!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -45722,7 +45722,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer.§r\n\nAccepts any §6Parallel Control Hatch§r, parallelizing up to §e256x§r with the best hatch!.\n\nThe §aRotary Hearth Furnace§r is quite big!",
+          "desc:8": "§2Upgraded forms of the EBF and Vacuum Freezer.§r\n\nAccepts any §6Parallel Control Hatch§r, parallelizing up to §e256x§r with the best hatch!\n\nThe §aRotary Hearth Furnace§r is quite big!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56722,7 +56722,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "To save your limited supplies of §6Coal§r, you may wish to transform it into §6Tiny Coal§r, which smelts exactly one item, saving you fuel in the §bFurnace!§r.\n\nSimply place your §6Coal§r in the §bCrafting Table§r. You can also change your Tiny Coal back into Coal at any time!\n\nNote: tiny versions are also available for §6Charcoal§r and §6Coal Coke§r, which you will unlock later.",
+          "desc:8": "To save your limited supplies of §6Coal§r, you may wish to transform it into §6Tiny Coal§r, which smelts exactly one item, saving you fuel in the §bFurnace§r!\n\nSimply place your §6Coal§r in the §bCrafting Table§r. You can also change your Tiny Coal back into Coal at any time!\n\nNote: tiny versions are also available for §6Charcoal§r and §6Coal Coke§r, which you will unlock later.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -62564,7 +62564,7 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "You\u0027re in the endgame now...\n\nHarvest entire microverses and unlock §dStabilized Micro Miners.§r.\n\nPut your automation to the ultimate test as you progress towards the final goal: the §dCreative Chest§r.",
+          "desc:8": "You\u0027re in the endgame now...\n\nHarvest entire microverses and unlock §dStabilized Micro Miners§r.\n\nPut your automation to the ultimate test as you progress towards the final goal: the §dCreative Chest§r.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,

@@ -27,7 +27,7 @@ export default class ChecksCharProcessor {
 
 		// Init source with characters
 		for (let i = 0; i < value.length; i++) {
-			let char = value.charAt(i);
+			const char = value.charAt(i);
 
 			if (char !== formattingChar) {
 				this.add(char, this.source);
@@ -150,6 +150,15 @@ export default class ChecksCharProcessor {
 		return index === -1
 			? { char: emptyChar, index }
 			: { char: this.at(index, list), index };
+	}
+
+	/**
+	 * Copy over the result to the source, and clear the result.
+	 */
+	public prepareIteration(): void {
+		this.source = this.result;
+		this.result = [];
+		this.currIndex = -1;
 	}
 
 	/**
