@@ -118,7 +118,7 @@ if (LabsModeHelper.normal) {
 			ore('circuitUv') * 16,
 			metaitem('field.generator.luv') * 16,
 			metaitem('springNaquadahAlloy') * 16,
-			metaitem('plateDenseNaquadahAlloy') * 16,
+			metaitem('plateNaquadahAlloy') * 16,
 			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
 		)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
@@ -157,7 +157,7 @@ if (LabsModeHelper.normal) {
 			ore('circuitUv') * 16,
 			metaitem('field.generator.luv') * 16,
 			metaitem('pipeNormalFluidNaquadah') * 16,
-			metaitem('plateDenseNaquadahAlloy') * 16,
+			metaitem('plateNaquadahAlloy') * 16,
 			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
 		)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
@@ -173,7 +173,7 @@ if (LabsModeHelper.normal) {
 			ore('circuitUhv') * 16,
 			metaitem('field.generator.uv') * 16,
 			metaitem('pipeNormalFluidDuranium') * 16,
-			metaitem('plateDenseTritanium') * 16,
+			metaitem('plateTritanium') * 16,
 			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
 		)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
