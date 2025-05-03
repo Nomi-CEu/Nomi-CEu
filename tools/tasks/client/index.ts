@@ -122,22 +122,27 @@ async function fetchModList() {
 				<title>Nomi-CEu Mod Information</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<link rel = "icon" href =  "https://github.com/Nomi-CEu/Nomi-CEu/assets/103940576/672808a8-0ad0-4d07-809e-08336a928909" type = "image/x-icon"> 
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+				<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
 				<style>
 					caption {
 						font-size: 30px;
 						color: #fff;
-						font-family: "Comic Sans MS", "sans-serif";
+						font-family: "Geologica", "sans-serif";
 						font-weight: 700;
 						border-radius: 10px;
 						border-collapse: collapse;
 						background-color: #795B97;
+						padding-top: 5px;
+						padding-bottom: 5px;
 					}
 					table {
 						border-collapse: collapse;
 						width: 100%;
 						color: #333;
-						font-family: "Comic Sans MS", "sans-serif";
-						font-size: 13px;
+						font-family: "ui-sans-serif", "system-ui", "sans-serif";
+						font-size: 15px;
 						text-align: left;
 						border-radius: 10px;
 						overflow: hidden;
@@ -146,7 +151,7 @@ async function fetchModList() {
 					table th {
 						background-color: #9973BD;
 						color: #fff;
-						font-family: "Comic Sans MS", "sans-serif";
+						font-family: "Geologica", "sans-serif";
 						font-weight: bold;
 						padding: 10px;
 						text-transform: uppercase;
@@ -165,18 +170,19 @@ async function fetchModList() {
 						background-color: #fff;
 						padding: 10px;
 						border-bottom: 1px solid #ccc;
-						font-weight: bold;
+						font-weight: 600;
+						letter-spacing: 0.03em;
 					}
 					table tr:last-of-type {
 						border-bottom: 2px solid #9973BD;
 					}
 					.redCross {
-					  color: #ff0000;
-					  font-size: 20px;
+						color: #ff0000;
+						font-size: 20px;
 					}
 					.greenTick {
-					  color: #32cd32;
-					  font-size: 20px;
+						color: #32cd32;
+						font-size: 20px;
 					}
 				</style>
 			</head>
@@ -211,7 +217,7 @@ function formatModList(modList: ModFileInfo[]): string {
 		output.push(dedent`
 			<tr>
 				<td><a href="${modFile.modInfo.links.websiteUrl}">${modFile.modInfo.name}</a></td>
-				<td><a href="${modFile.fileInfo.downloadUrl}">v${cleanupVersion(modFile.fileInfo.displayName)}</a></td>
+				<td><a href="${modFile.modInfo.links.websiteUrl}/files/${modFile.fileInfo.id}">v${cleanupVersion(modFile.fileInfo.displayName)}</a></td>
 				${getTickCross(modFile.inClient)}
 				${getTickCross(modFile.inServer)}
 				<td>${modFile.modInfo.authors.map((author) => `<a href=${author.url}>${author.name}</a>`).join(", ")}</td>
