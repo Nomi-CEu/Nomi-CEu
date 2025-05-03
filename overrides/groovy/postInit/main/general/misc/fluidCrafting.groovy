@@ -432,10 +432,8 @@ class IngredientFluidBucket extends SimpleIIngredient {
 
 	@Override
 	ItemStack applyTransform(ItemStack matchedInput) {
-		matchedInput = matchedInput.copy()
-
-		if (matchedInput.getItem().hasContainerItem(matchedInput))
-			return super.applyTransform(matchedInput)
+		// Technically, we could use containerItem logic (e.g. super's logic) for GT Drums, Super Tanks, etc.
+		// But leads to voiding if we don't normalize stack size to 1, and its just easier to use this logic for all.
 
 		var handler = getHandler(matchedInput)
 		if (handler == null) return super.applyTransform(matchedInput)
@@ -449,8 +447,8 @@ class IngredientFluidBucket extends SimpleIIngredient {
 
 		IFluidHandlerItem handler = null
 		if (itemStack.hasCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)) {
+			itemStack = itemStack.copy()
 			if (itemStack.getCount() > 1) {
-				itemStack = itemStack.copy()
 				itemStack.setCount(1)
 			}
 			handler = itemStack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)
