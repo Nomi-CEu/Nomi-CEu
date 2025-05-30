@@ -329,3 +329,15 @@ lubeRecipes.copy().forEach {
 		return it * (it.amount * 4)
 	}.buildAndRegister()
 }
+// Compressor Recipie for Lossy conversion of coal (and coke) dust to coal (gem)
+mods.gregtech.compressor.recipeBuilder()
+  .inputs(metaitem('dustCoal') * 3)
+  .outputs(item('minecraft:coal') * 2)
+  .duration(200).EUt(VA[LV])
+  .buildAndRegister()
+
+mods.gregtech.compressor.recipeBuilder()
+  .inputs(metaitem('dustCoke') * 3)
+  .outputs(metaitem('gemCoke') * 2)
+  .duration(200).EUt(VA[LV])
+  .buildAndRegister()
