@@ -1,6 +1,7 @@
 package postInit.main.general.misc
 
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
+import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.ingredients.GTRecipeInput
 import net.minecraftforge.fluids.FluidStack
@@ -78,3 +79,78 @@ material('black_steel')
 	.setComponents([materialstack('black_bronze') * 2, materialstack('steel') * 3])
 	.changeChemicalFormula()
 	.change()
+
+/* Red Alloy */
+// Half Redstone Req with Annealed
+
+// Alloy Smelter
+mods.gregtech.alloy_smelter.changeByInput([metaitem('ingotAnnealedCopper'), item('minecraft:redstone') * 4], null)
+	.builder { RecipeBuilder recipe ->
+		recipe.clearInputs()
+			.inputs(ore('ingotAnnealedCopper') * 1, item('minecraft:redstone') * 2)
+	}.replaceAndRegister()
+
+mods.gregtech.alloy_smelter.changeByInput([metaitem('dustAnnealedCopper'), item('minecraft:redstone') * 4], null)
+	.builder { RecipeBuilder recipe ->
+		recipe.clearInputs()
+			.inputs(ore('dustAnnealedCopper') * 1, item('minecraft:redstone') * 2)
+	}.replaceAndRegister()
+
+// Mixer
+mods.gregtech.mixer.changeByOutput([metaitem('dustRedAlloy')], null)
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.clearInputs()
+				.inputs(ore('dustAnnealedCopper') * 1, item('minecraft:redstone') * 2)
+				.circuitMeta(2)
+		}.buildAndRegister()
+	}
+
+if (LabsModeHelper.normal) {
+	// ABS (Increases Output & Changes Copper/Redstone Ratio)
+	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
+		.forEach { ChangeRecipeBuilder builder ->
+			builder.clearCircuitMeta()
+				.changeEachFluidOutput { fluid -> fluid * (L * 2) }
+				.builder { RecipeBuilder recipe ->
+					recipe.clearInputs()
+						.inputs(ore('dustCopper') * 2, item('minecraft:redstone') * 3)
+						.circuitMeta(2)
+				}.replaceAndRegister()
+
+			builder.copyOriginal().clearCircuitMeta()
+				.changeEachFluidOutput { fluid -> fluid * (L * 2) }
+				.builder { RecipeBuilder recipe ->
+					recipe.clearInputs()
+						.inputs(ore('dustAnnealedCopper') * 2, item('minecraft:redstone') * 2)
+						.circuitMeta(2)
+				}.replaceAndRegister()
+		}
+
+	// Change Composition to reflect cheapest
+	mods.gregtech.centrifuge.changeByInput([metaitem('dustRedAlloy')], null)
+		.changeEachInput { GTRecipeInput input ->
+			return input.copyWithAmount(2)
+		}.builder { RecipeBuilder recipe ->
+		recipe.clearOutputs()
+			.outputs(item('minecraft:redstone') * 2, metaitem('dustCopper') * 2)
+	}.replaceAndRegister()
+} else {
+	// ABS with Annealed
+	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
+		.forEach { ChangeRecipeBuilder builder ->
+			builder.clearCircuitMeta()
+				.builder { RecipeBuilder recipe ->
+					recipe.clearInputs()
+						.inputs(ore('dustAnnealedCopper') * 1, item('minecraft:redstone') * 2)
+						.circuitMeta(5)
+				}.buildAndRegister()
+		}
+
+	// Change composition to reflect cheapest
+	mods.gregtech.centrifuge.changeByInput([metaitem('dustRedAlloy')], null)
+		.builder { RecipeBuilder recipe ->
+		recipe.clearOutputs()
+			.outputs(item('minecraft:redstone') * 2, metaitem('dustCopper') * 1)
+	}.replaceAndRegister()
+}
