@@ -120,7 +120,7 @@ if (LabsModeHelper.normal) {
 
 			builder.copyOriginal().clearCircuitMeta()
 				.changeEachFluidOutput { fluid -> fluid * L }
-				.changeDuration { it / 2}
+				.changeDuration { (int) (it / 2) }
 				.builder { RecipeBuilder recipe ->
 					recipe.clearInputs()
 						.inputs(ore('dustAnnealedCopper') * 1, item('minecraft:redstone') * 1)
