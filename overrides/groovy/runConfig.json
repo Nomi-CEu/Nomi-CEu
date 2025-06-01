@@ -3,12 +3,10 @@
   "packId": "nomiceu",
   "version": "1.0.0",
   "debug": false,
-  "classes": {
-    "postInit": [
-      "classes/postInit"
-    ]
-  },
   "loaders": {
+    "preInit": [
+      "classes/"
+    ],
     "postInit": [
       "postInit/main",
       "postInit/addon"
