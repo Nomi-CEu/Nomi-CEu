@@ -119,22 +119,29 @@ if (LabsModeHelper.normal) {
 				}.replaceAndRegister()
 
 			builder.copyOriginal().clearCircuitMeta()
-				.changeEachFluidOutput { fluid -> fluid * (L * 2) }
+				.changeEachFluidOutput { fluid -> fluid * L }
+				.changeDuration { it / 2}
 				.builder { RecipeBuilder recipe ->
 					recipe.clearInputs()
-						.inputs(ore('dustAnnealedCopper') * 2, item('minecraft:redstone') * 2)
+						.inputs(ore('dustAnnealedCopper') * 1, item('minecraft:redstone') * 1)
 						.circuitMeta(2)
 				}.replaceAndRegister()
 		}
 
-	// Change Composition to reflect cheapest
+	// Change composition and formula to reflect cheapest (Red Alloy has Disable Decomposition Flag)
 	mods.gregtech.centrifuge.changeByInput([metaitem('dustRedAlloy')], null)
 		.changeEachInput { GTRecipeInput input ->
-			return input.copyWithAmount(2)
+			return input.copyWithAmount(1)
 		}.builder { RecipeBuilder recipe ->
 		recipe.clearOutputs()
-			.outputs(item('minecraft:redstone') * 2, metaitem('dustCopper') * 2)
+			.outputs(item('minecraft:redstone') * 1, metaitem('dustCopper') * 1)
 	}.replaceAndRegister()
+
+	material('red_alloy')
+		.changeComposition()
+		.setComponents([materialstack('copper') * 1, materialstack('redstone') * 1])
+		.changeChemicalFormula()
+		.change()
 } else {
 	// ABS with Annealed
 	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
@@ -147,10 +154,16 @@ if (LabsModeHelper.normal) {
 				}.buildAndRegister()
 		}
 
-	// Change composition to reflect cheapest
+	// Change composition and formula to reflect cheapest (Red Alloy has Disable Decomposition Flag)
 	mods.gregtech.centrifuge.changeByInput([metaitem('dustRedAlloy')], null)
 		.builder { RecipeBuilder recipe ->
 		recipe.clearOutputs()
 			.outputs(item('minecraft:redstone') * 2, metaitem('dustCopper') * 1)
 	}.replaceAndRegister()
+
+	material('red_alloy')
+		.changeComposition()
+		.setComponents([materialstack('copper') * 1, materialstack('redstone') * 2])
+		.changeChemicalFormula()
+		.change()
 }
