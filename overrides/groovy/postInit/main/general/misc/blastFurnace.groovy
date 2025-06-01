@@ -58,25 +58,3 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('electrum_flux')])
 		.copyProperties(TemperatureProperty.instance)
 		.replaceAndRegister()
 	}
-
-if (LabsModeHelper.normal) {
-	// Red Alloy (Increases Output & Changes Copper/Redstone Ratio)
-	mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('red_alloy')])
-		.forEach { ChangeRecipeBuilder builder ->
-			builder.clearCircuitMeta()
-				.changeEachFluidOutput { fluid -> fluid * (L * 2) }
-				.builder { RecipeBuilder recipe ->
-					recipe.clearInputs()
-						.inputs(ore('dustCopper') * 2, item('minecraft:redstone') * 3)
-						.circuitMeta(2)
-				}.replaceAndRegister()
-		}
-
-	mods.gregtech.centrifuge.changeByInput([metaitem('dustRedAlloy')], null)
-		.changeEachInput { GTRecipeInput input ->
-			return input.copyWithAmount(2)
-		}.builder { RecipeBuilder recipe ->
-			recipe.clearOutputs()
-				.outputs(item('minecraft:redstone') * 3, metaitem('dustCopper') * 2)
-		}.replaceAndRegister()
-}
