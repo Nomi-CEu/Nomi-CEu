@@ -9,6 +9,7 @@ import gregtech.client.utils.TooltipHelper
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
+import static org.apache.commons.lang3.tuple.Pair.of
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeInputTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
@@ -329,15 +330,18 @@ lubeRecipes.copy().forEach {
 		return it * (it.amount * 4)
 	}.buildAndRegister()
 }
-// Compressor Recipie for Lossy conversion of coal (and coke) dust to coal (gem)
-mods.gregtech.compressor.recipeBuilder()
-  .inputs(metaitem('dustCoal') * 3)
-  .outputs(item('minecraft:coal') * 2)
-  .duration(200).EUt(VA[LV])
-  .buildAndRegister()
 
-mods.gregtech.compressor.recipeBuilder()
-  .inputs(metaitem('dustCoke') * 3)
-  .outputs(metaitem('gemCoke') * 2)
-  .duration(200).EUt(VA[LV])
-  .buildAndRegister()
+// Compressor recipes for lossy conversion of coal, charcoal, and coke dust to fuel (gem)
+var dustsAndFuels = [
+	of(metaitem('dustCoal'), item('minecraft:coal')),
+	of(metaitem('dustCharcoal'), item('minecraft:coal', 1)),
+	of(metaitem('dustCoke'), metaitem('gemCoke'))
+]
+
+for (var pair : dustsAndFuels) {
+	mods.gregtech.compressor.recipeBuilder()
+		.inputs(pair.left * 3)
+		.outputs(pair.right * 2)
+		.duration(100).EUt(VA[LV])
+		.buildAndRegister()
+}
