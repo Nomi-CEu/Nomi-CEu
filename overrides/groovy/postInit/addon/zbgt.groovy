@@ -266,60 +266,60 @@ for(int i = 3; i <= 9; i++) {
 
 /* Unwrap craft for Wraps */
 def wraps = [
-	(item('zbgt:zbgt_meta_item', 57)): item('zbgt:zbgt_meta_item', 26), // Wrap of Generic ULV Circuit -> Generic ULV Circuit
-	(item('zbgt:zbgt_meta_item', 58)): item('zbgt:zbgt_meta_item', 27), // Wrap of Generic LV Circuit -> Generic LV Circuit
-	(item('zbgt:zbgt_meta_item', 59)): item('zbgt:zbgt_meta_item', 28), // Wrap of Generic MV Circuit -> Generic MV Circuit
-	(item('zbgt:zbgt_meta_item', 60)): item('zbgt:zbgt_meta_item', 29), // Wrap of Generic HV Circuit -> Generic HV Circuit
-	(item('zbgt:zbgt_meta_item', 61)): item('zbgt:zbgt_meta_item', 30), // Wrap of Generic EV Circuit -> Generic EV Circuit
-	(item('zbgt:zbgt_meta_item', 62)): item('zbgt:zbgt_meta_item', 31), // Wrap of Generic IV Circuit -> Generic IV Circuit
-	(item('zbgt:zbgt_meta_item', 63)): item('zbgt:zbgt_meta_item', 32), // Wrap of Generic LUV Circuit -> Generic LUV Circuit
-	(item('zbgt:zbgt_meta_item', 64)): item('zbgt:zbgt_meta_item', 33), // Wrap of Generic ZPM Circuit -> Generic ZPM Circuit
-	(item('zbgt:zbgt_meta_item', 65)): item('zbgt:zbgt_meta_item', 34), // Wrap of Generic UV Circuit -> Generic UV Circuit
-	(item('zbgt:zbgt_meta_item', 66)): item('zbgt:zbgt_meta_item', 35), // Wrap of Generic UHV Circuit -> Generic UHV Circuit
-	(item('zbgt:zbgt_meta_item', 72)): metaitem('component.smd.capacitor'), // Wrap of SMD Capacitor
-	(item('zbgt:zbgt_meta_item', 73)): metaitem('component.smd.diode'), // Wrap of SMD Diode
-	(item('zbgt:zbgt_meta_item', 74)): metaitem('component.smd.inductor'), // Wrap of SMD Inductor
-	(item('zbgt:zbgt_meta_item', 75)): metaitem('component.smd.resistor'), // Wrap of SMD Resistor
-	(item('zbgt:zbgt_meta_item', 76)): metaitem('component.smd.transistor'), // Wrap of SMD Transistor
-	(item('zbgt:zbgt_meta_item', 77)): metaitem('component.advanced_smd.capacitor'), // Wrap of Advanced SMD Capacitor
-	(item('zbgt:zbgt_meta_item', 78)): metaitem('component.advanced_smd.diode'), // Wrap of Advanced SMD Diode
-	(item('zbgt:zbgt_meta_item', 79)): metaitem('component.advanced_smd.inductor'), // Wrap of Advanced SMD Inductor
-	(item('zbgt:zbgt_meta_item', 80)): metaitem('component.advanced_smd.resistor'), // Wrap of Advanced SMD Resistor
-	(item('zbgt:zbgt_meta_item', 81)): metaitem('component.advanced_smd.transistor'), // Wrap of Advanced SMD Transistor
-	(item('zbgt:zbgt_meta_item', 82)): metaitem('board.coated'), // Wrap of Coated Circuit Board
-	(item('zbgt:zbgt_meta_item', 83)): metaitem('board.phenolic'), // Wrap of Phenolic Circuit Board
-	(item('zbgt:zbgt_meta_item', 84)): metaitem('board.plastic'), // Wrap of Plastic Circuit Board
-	(item('zbgt:zbgt_meta_item', 85)): metaitem('board.epoxy'), // Wrap of Epoxy Circuit Board
-	(item('zbgt:zbgt_meta_item', 86)): metaitem('board.fiber_reinforced'), // Wrap of Fiber Reinforced Circuit Board
-	(item('zbgt:zbgt_meta_item', 87)): metaitem('board.multilayer.fiber_reinforced'), // Wrap of Multilayer Fiber Reinforced Circuit Board
-	(item('zbgt:zbgt_meta_item', 88)): metaitem('board.wetware'), // Wrap of Wetware Circuit Board
-	(item('zbgt:zbgt_meta_item', 89)): metaitem('circuit_board.basic'), // Wrap of Basic Circuit Board
-	(item('zbgt:zbgt_meta_item', 90)): metaitem('circuit_board.good'), // Wrap of Good Circuit Board
-	(item('zbgt:zbgt_meta_item', 91)): metaitem('circuit_board.plastic'), // Wrap of Plastic Circuit Board
-	(item('zbgt:zbgt_meta_item', 92)): metaitem('circuit_board.advanced'), // Wrap of Advanced Circuit Board
-	(item('zbgt:zbgt_meta_item', 93)): metaitem('circuit_board.elite'), // Wrap of Elite Circuit Board
-	(item('zbgt:zbgt_meta_item', 94)): metaitem('circuit_board.extreme'), // Wrap of Extreme Circuit Board
-	(item('zbgt:zbgt_meta_item', 95)): metaitem('circuit_board.wetware'), // Wrap of Master Circuit Board
-	(item('zbgt:zbgt_meta_item', 96)): metaitem('plate.simple_system_on_chip'), // Wrap of Simple SoC
-	(item('zbgt:zbgt_meta_item', 97)): metaitem('plate.system_on_chip'), // Wrap of SoC
-	(item('zbgt:zbgt_meta_item', 98)): metaitem('plate.advanced_system_on_chip'), // Wrap of Advanced SoC
-	(item('zbgt:zbgt_meta_item', 99)): metaitem('plate.highly_advanced_system_on_chip'), // Wrap of Highly Advanced SoC
-	(item('zbgt:zbgt_meta_item', 100)): metaitem('plate.central_processing_unit'), // Wrap of CPU
-	(item('zbgt:zbgt_meta_item', 101)): metaitem('plate.nano_central_processing_unit'), // Wrap of Nano CPU
-	(item('zbgt:zbgt_meta_item', 102)): metaitem('plate.qbit_central_processing_unit'), // Wrap of Qubit CPU
-	(item('zbgt:zbgt_meta_item', 103)): metaitem('plate.ultra_low_power_integrated_circuit'), // Wrap of Ultra Low Power IC
-	(item('zbgt:zbgt_meta_item', 104)): metaitem('plate.low_power_integrated_circuit'), // Wrap of Low Power IC
-	(item('zbgt:zbgt_meta_item', 105)): metaitem('plate.power_integrated_circuit'), // Wrap of Power IC
-	(item('zbgt:zbgt_meta_item', 106)): metaitem('plate.high_power_integrated_circuit'), // Wrap of High Power IC
-	(item('zbgt:zbgt_meta_item', 107)): metaitem('plate.ultra_high_power_integrated_circuit'), // Wrap of Ultra High Power IC
-	(item('zbgt:zbgt_meta_item', 108)): metaitem('plate.random_access_memory'), // Wrap of RAM
-	(item('zbgt:zbgt_meta_item', 109)): metaitem('plate.nor_memory_chip'), // Wrap of NOR Chip
-	(item('zbgt:zbgt_meta_item', 110)): metaitem('plate.nand_memory_chip'), // Wrap of NAND Chip
-	(item('zbgt:zbgt_meta_item', 111)): metaitem('plate.integrated_logic_circuit'), // Wrap of Integrated Logic Circuit
-	(item('zbgt:zbgt_meta_item', 112)): metaitem('processor.neuro'), // Wrap of Neuro Processsing Unit
-	(item('zbgt:zbgt_meta_item', 113)): metaitem('engraved.crystal_chip'), // Wrap of Engraved Crystal Chip
-	(item('zbgt:zbgt_meta_item', 114)): metaitem('crystal.central_processing_unit'), // Wrap of Chrystal CPU
-	(item('zbgt:zbgt_meta_item', 115)): metaitem('crystal.system_on_chip') // Wrap of Crystal SoC
+	(metaitem('zbgt:wrapped.circuit.ulv')): metaitem('zbgt:generic_circuit.ulv'),
+	(metaitem('zbgt:wrapped.circuit.lv')): metaitem('zbgt:generic_circuit.lv'),
+	(metaitem('zbgt:wrapped.circuit.mv')): metaitem('zbgt:generic_circuit.mv'),
+	(metaitem('zbgt:wrapped.circuit.hv')): metaitem('zbgt:generic_circuit.hv'),
+	(metaitem('zbgt:wrapped.circuit.ev')): metaitem('zbgt:generic_circuit.ev'),
+	(metaitem('zbgt:wrapped.circuit.iv')): metaitem('zbgt:generic_circuit.iv'),
+	(metaitem('zbgt:wrapped.circuit.luv')): metaitem('zbgt:generic_circuit.luv'),
+	(metaitem('zbgt:wrapped.circuit.zpm')): metaitem('zbgt:generic_circuit.zpm'),
+	(metaitem('zbgt:wrapped.circuit.uv')): metaitem('zbgt:generic_circuit.uv'),
+	(metaitem('zbgt:wrapped.circuit.uhv')): metaitem('zbgt:generic_circuit.uhv'),
+	(metaitem('zbgt:wrapped.smd.capacitor')): metaitem('component.smd.capacitor'),
+	(metaitem('zbgt:wrapped.smd.diode')): metaitem('component.smd.diode'),
+	(metaitem('zbgt:wrapped.smd.inductor')): metaitem('component.smd.inductor'),
+	(metaitem('zbgt:wrapped.smd.resistor')): metaitem('component.smd.resistor'),
+	(metaitem('zbgt:wrapped.smd.transistor')): metaitem('component.smd.transistor'),
+	(metaitem('zbgt:wrapped.smd.advanced_capacitor')): metaitem('component.advanced_smd.capacitor'),
+	(metaitem('zbgt:wrapped.smd.advanced_diode')): metaitem('component.advanced_smd.diode'),
+	(metaitem('zbgt:wrapped.smd.advanced_inductor')): metaitem('component.advanced_smd.inductor'),
+	(metaitem('zbgt:wrapped.smd.advanced_resistor')): metaitem('component.advanced_smd.resistor'),
+	(metaitem('zbgt:wrapped.smd.advanced_transistor')): metaitem('component.advanced_smd.transistor'),
+	(metaitem('zbgt:wrapped.board.coated')): metaitem('board.coated'),
+	(metaitem('zbgt:wrapped.board.phenolic')): metaitem('board.phenolic'),
+	(metaitem('zbgt:wrapped.board.plastic')): metaitem('board.plastic'),
+	(metaitem('zbgt:wrapped.board.epoxy')): metaitem('board.epoxy'),
+	(metaitem('zbgt:wrapped.board.fiber_reinforced')): metaitem('board.fiber_reinforced'),
+	(metaitem('zbgt:wrapped.board.multilayer_fiber_reinforced')): metaitem('board.multilayer.fiber_reinforced'),
+	(metaitem('zbgt:wrapped.board.wetware')): metaitem('board.wetware'),
+	(metaitem('zbgt:wrapped.circuit_board.basic')): metaitem('circuit_board.basic'),
+	(metaitem('zbgt:wrapped.circuit_board.good')): metaitem('circuit_board.good'),
+	(metaitem('zbgt:wrapped.circuit_board.plastic')): metaitem('circuit_board.plastic'),
+	(metaitem('zbgt:wrapped.circuit_board.advanced')): metaitem('circuit_board.advanced'),
+	(metaitem('zbgt:wrapped.circuit_board.elite')): metaitem('circuit_board.elite'),
+	(metaitem('zbgt:wrapped.circuit_board.extreme')): metaitem('circuit_board.extreme'),
+	(metaitem('zbgt:wrapped.circuit_board.wetware')): metaitem('circuit_board.wetware'),
+	(metaitem('zbgt:wrapped.chip.soc_simple')): metaitem('plate.simple_system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.soc')): metaitem('plate.system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.soc_advanced')): metaitem('plate.advanced_system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.soc_highly_advanced')): metaitem('plate.highly_advanced_system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.cpu')): metaitem('plate.central_processing_unit'),
+	(metaitem('zbgt:wrapped.chip.cpu_nano')): metaitem('plate.nano_central_processing_unit'),
+	(metaitem('zbgt:wrapped.chip.cpu_qubit')): metaitem('plate.qbit_central_processing_unit'),
+	(metaitem('zbgt:wrapped.chip.pic_ultra_low')): metaitem('plate.ultra_low_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic_low')): metaitem('plate.low_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic')): metaitem('plate.power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic_high')): metaitem('plate.high_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic_ultra_high')): metaitem('plate.ultra_high_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.ram')): metaitem('plate.random_access_memory'),
+	(metaitem('zbgt:wrapped.chip.nor')): metaitem('plate.nor_memory_chip'),
+	(metaitem('zbgt:wrapped.chip.nand')): metaitem('plate.nand_memory_chip'),
+	(metaitem('zbgt:wrapped.chip.integrated_logic')): metaitem('plate.integrated_logic_circuit'),
+	(metaitem('zbgt:wrapped.misc.neuro_processor')): metaitem('processor.neuro'),
+	(metaitem('zbgt:wrapped.misc.engraved_crystal_chip')): metaitem('engraved.crystal_chip'),
+	(metaitem('zbgt:wrapped.misc.crystal_cpu')): metaitem('crystal.central_processing_unit'),
+	(metaitem('zbgt:wrapped.misc.crystal_soc')): metaitem('crystal.system_on_chip')
 ]
 
 wraps.each { wrap, output ->
@@ -334,58 +334,51 @@ wraps.each { wrap, output ->
 
 /* Cells */
 // Remove unused cells from JEI
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 133)) // 180K Space Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 134)) // 360K Space Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 135)) // 540K Space Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 136)) // 1080K Space Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 143)) // 180K SP Coolant Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 144)) // 360K SP Coolant Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 145)) // 540K SP Coolant Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 146)) // 1080K SP Coolant Cell
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.360k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.540k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.1080k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k_sp'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.360k_sp'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.540k_sp'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.1080k_sp'))
 
 // Remove unused filled cell recipes and from JEI
-mods.gregtech.canner.removeByOutput([item('zbgt:zbgt_meta_item', 137)], null) // 60K HE Coolant Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 137))
-mods.gregtech.canner.removeByOutput([item('zbgt:zbgt_meta_item', 138)], null) // 180K HE Coolant Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 138))
-mods.gregtech.canner.removeByOutput([item('zbgt:zbgt_meta_item', 140)], null) // 60K NaK Coolant Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 140))
-mods.gregtech.canner.removeByOutput([item('zbgt:zbgt_meta_item', 141)], null) // 180K NaK Coolant Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 141))
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.60k.he')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.60k.he'))
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.180k.he')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k.he'))
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.60k.nak')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.60k.nak'))
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.180k.nak')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k.nak'))
 
 // Remove smaller single craft cells, and compley 60K cell craft
-mods.gregtech.assembler.removeByOutput([item('zbgt:zbgt_meta_item', 130)], null) // 10K Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 130))
-mods.gregtech.assembler.removeByOutput([item('zbgt:zbgt_meta_item', 131)], null) // 30K Cell
-mods.jei.ingredient.removeAndHide(item('zbgt:zbgt_meta_item', 131))
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:coolant_cell.10k')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.10k'))
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:coolant_cell.30k')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.30k'))
 
 mods.gregtech.assembler.removeByInput(120, [
-		item('zbgt:zbgt_meta_item', 131) * 2, // 30K Cell * 2
-		item('gregtech:meta_plate', 112) * 8, // Tin Plates * 8
+		metaitem('zbgt:coolant_cell.30k') * 2, // 30K Cell * 2
+		metaitem('plateTin') * 8, // Tin Plates * 8
 		metaitem('circuit.integrated').withNbt(['Configuration': 1])
 	], null)
 
 
 /* Dropper Cover Assembler recipes */
-def dropperCoverRecipes = [
-	'lv': item('zbgt:zbgt_meta_item', 117), // LV Dropper Cover
-	'mv': item('zbgt:zbgt_meta_item', 118), // MV Dropper Cover
-	'hv': item('zbgt:zbgt_meta_item', 119), // HV Dropper Cover
-	'ev': item('zbgt:zbgt_meta_item', 120), // EV Dropper Cover
-	'iv': item('zbgt:zbgt_meta_item', 121) // IV Dropper Cover
-]
-def eut = ['lv': VA[LV], 'mv': VA[MV], 'hv': VA[HV], 'ev': VA[EV], 'iv': VA[IV]]
+def dropperCoverTiers = ['lv': VA[LV], 'mv': VA[MV], 'hv': VA[HV], 'ev': VA[EV], 'iv': VA[IV]]
 
-dropperCoverRecipes.each { tier, output ->
+dropperCoverTiers.each { tier, eut ->
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(
-			metaitem("conveyor.module.${tier.toLowerCase()}"),
+			metaitem("conveyor.module.${tier}"),
 			item('minecraft:dropper'),
 			ore("circuit${tier.capitalize()}"),
-			metaitem("electric.piston.${tier.toLowerCase()}")
+			metaitem("electric.piston.${tier}")
 		)
-		.outputs(output)
-		.duration(200).EUt(eut[tier])
+		.outputs(metaitem("zbgt:cover.cover_dropper.${tier}"))
+		.duration(200).EUt(eut)
 		.buildAndRegister()
 }
 
