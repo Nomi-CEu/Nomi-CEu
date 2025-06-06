@@ -247,7 +247,7 @@ mods.gregtech.assembler.recipeBuilder()
 		metaitem('plateTitanium') * 4
 	)
 	.outputs(item('zbgt:yottank_cell', 1))
-	.duration(100).EUt(VA[IV])
+	.duration(100).EUt(VA[EV])
 	.buildAndRegister()
 
 mods.gregtech.assembler.recipeBuilder()
