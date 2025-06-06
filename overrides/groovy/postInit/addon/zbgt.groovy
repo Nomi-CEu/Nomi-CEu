@@ -5,6 +5,9 @@ package postInit.addon
 
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
+
 import static gregtech.api.GTValues.*
 
 // TODO: Implement the Creative computing hatch and Creative data hatch
@@ -225,23 +228,23 @@ if (LabsModeHelper.normal) {
 
 /* YOTTank Cells */
 // Add new recipes for YOTTank Cells
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(
-		item('gregtech:hermetic_casing', 0),
-		metaitem('field.generator.lv'),
-		ore('circuitLv') * 4,
-		metaitem('plateSteel') * 4
-	)
-	.outputs(item('zbgt:yottank_cell', 0))
-	.duration(100).EUt(VA[LV])
-	.buildAndRegister()
+crafting.shapedBuilder().name('zbgt:yottank_cell_0')
+	.output(item('zbgt:yottank_cell', 0))
+	.matrix('SFS'
+		   ,'SHS'
+		   ,'SCS')
+	.key('S', metaitem('plateSteel'))
+	.key('F', metaitem('field.generator.lv'))
+	.key('H', item('gregtech:hermetic_casing', 0))
+	.key('C', ore('circuitLv'))
+	.register()
 
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(
-		item('gregtech:hermetic_casing', 4),
+		item('gregtech:hermetic_casing', 3),
 		metaitem('field.generator.hv') * 2,
-		ore('circuitIv') * 4,
-		metaitem('plateTungstenSteel') * 4
+		ore('circuitEv') * 4,
+		metaitem('plateTitanium') * 4
 	)
 	.outputs(item('zbgt:yottank_cell', 1))
 	.duration(100).EUt(VA[IV])
@@ -249,19 +252,53 @@ mods.gregtech.assembler.recipeBuilder()
 
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(
+		item('gregtech:hermetic_casing', 5),
+		metaitem('field.generator.iv') * 2,
+		ore('circuitLuv') * 4,
+		metaitem('plateRhodiumPlatedPalladium') * 4
+	)
+	.fluidInputs(fluid('tin') * (144 * 4))
+	.outputs(item('zbgt:yottank_cell', 2))
+	.duration(100).EUt(VA[LuV])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(
+		item('gregtech:hermetic_casing', 5),
+		metaitem('field.generator.iv') * 2,
+		ore('circuitLuv') * 4,
+		metaitem('plateRhodiumPlatedPalladium') * 4
+	)
+	.fluidInputs(fluid('soldering_alloy') * (144 * 2))
+	.outputs(item('zbgt:yottank_cell', 2))
+	.duration(100).EUt(VA[LuV])
+	.buildAndRegister()
+
+mods.gregtech.assembly_line.recipeBuilder()
+	.inputs(
 		item('gregtech:hermetic_casing', 8),
 		metaitem('field.generator.uv') * 2,
-		ore('circuitUv') * 4,
-		metaitem('plateNeutronium') * 4
+		ore('circuitUhv') * 4,
+		metaitem('plateEuropium') * 8
 	)
-	.outputs(item('zbgt:yottank_cell', 2))
+	.fluidInputs(fluid('soldering_alloy') * (144 * 8), fluid('polybenzimidazole') * (144 * 8))
+	.outputs(item('zbgt:yottank_cell', 3))
+	.stationResearch(b -> b.researchStack(item('zbgt:yottank_cell', 2)).CWUt(16).EUt(VA[UV]))
 	.duration(100).EUt(VA[UV])
 	.buildAndRegister()
 
+
 // Remove other YOTTank Cells from JEI
-for(int i = 3; i <= 9; i++) {
+for(int i = 4; i <= 9; i++) {
 	mods.jei.ingredient.removeAndHide(item('zbgt:yottank_cell', i))
 }
+
+// Add tooltips to YOTTank Cells
+addTooltip(item('zbgt:yottank_cell', 0), [
+	translatableEmpty(),
+	translatable('nomiceu.tooltip.yottank_cell.yottank_cell.1'),
+	translatable('nomiceu.tooltip.yottank_cell.yottank_cell.2')
+])
 
 
 /* Unwrap craft for Wraps */
