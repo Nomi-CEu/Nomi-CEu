@@ -1,8 +1,8 @@
 package postInit.main.modSpecific
 
+import classes.Common
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import net.minecraft.item.ItemStack
-import classes.postInit.Common
 
 /* Cleanup EIO Glasses in JEI, removing the dyed versions of each variant of glass
  * Since we are lazy, remove all, then add back the original

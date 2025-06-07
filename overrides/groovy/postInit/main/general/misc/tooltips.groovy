@@ -3,6 +3,7 @@
 
 package postInit.main.general.misc
 
+import classes.Common
 import appeng.core.AEConfig
 import appeng.core.features.AEFeature
 import com.nomiceu.nomilabs.config.LabsConfig
@@ -13,7 +14,6 @@ import net.minecraft.item.ItemStack
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
-import classes.postInit.Common
 
 /* Mixed */
 // Fillable Items
