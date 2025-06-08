@@ -165,7 +165,7 @@ mods.gregtech.alloy_smelter.recipeBuilder()
 
 // Covered Cable
 crafting.remove('appliedenergistics2:network/cables/covered_fluix')
-for (var rubber in [fluid('rubber') * 144, fluid('styrene_butadiene_rubber') * 36, fluid('silicone_rubber') * 76]) {
+for (var rubber in [fluid('rubber') * 144, fluid('styrene_butadiene_rubber') * 36, fluid('silicone_rubber') * 72]) {
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(item('appliedenergistics2:part', 16))
 		.fluidInputs(rubber)
