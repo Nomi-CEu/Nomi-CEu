@@ -230,9 +230,9 @@ if (LabsModeHelper.normal) {
 // Add new recipes for YOTTank Cells
 crafting.shapedBuilder().name('zbgt:yottank_cell_0')
 	.output(item('zbgt:yottank_cell', 0))
-	.matrix('SFS'
-		   ,'SHS'
-		   ,'SCS')
+	.matrix('SFS',
+			'SHS',
+			'SCS')
 	.key('S', metaitem('plateSteel'))
 	.key('F', metaitem('field.generator.lv'))
 	.key('H', item('gregtech:hermetic_casing', 0))
