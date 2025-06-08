@@ -1,6 +1,5 @@
 // MODS_LOADED: ae2fc
-
-// Original Compatibility Author: tracer4b in file AE2FluidCrafting.zs
+// ^, Makes the script not run as long as AE2 FC isn't a mod in the player's instance.
 
 package postInit.addon
 
