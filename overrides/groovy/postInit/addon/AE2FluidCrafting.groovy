@@ -18,9 +18,9 @@ crafting.remove('ae2fc:fluid_assembler')
 // Fluid Discretizer recipe
 crafting.shapedBuilder().name('ae2fc:fluid_discretizer')
 	.output(item('ae2fc:fluid_discretizer'))
-	.matrix('EIE'
-		   ,'PGP'
-		   ,'EFE')
+	.matrix('EIE',
+			'PGP',
+			'EFE')
 	.key('E', ore('plateEnergeticAlloy'))
 	.key('I', item('appliedenergistics2:part', 220)) // Storage Bus
 	.key('P', item('appliedenergistics2:material', 24)) // Engineering Processor
@@ -31,9 +31,9 @@ crafting.shapedBuilder().name('ae2fc:fluid_discretizer')
 // Fluid Pattern Encoder recipe
 crafting.shapedBuilder().name('ae2fc:fluid_pattern_encoder')
 	.output(item('ae2fc:fluid_pattern_encoder'))
-	.matrix(' S '
-		   ,'EWE'
-		   ,' P ')
+	.matrix(' S ',
+			'EWE',
+			' P ')
 	.key('S', metaitem('sensor.mv'))
 	.key('E', item('appliedenergistics2:material', 24)) // Engineering Processor
 	.key('W', item('minecraft:crafting_table'))
@@ -65,9 +65,9 @@ crafting.addShapeless(item('ae2fc:dual_interface'), [
 // Fluid Level Maintainer recipe
 crafting.shapedBuilder().name('ae2fc:fluid_level_maintainer')
 	.output(item('ae2fc:fluid_level_maintainer'))
-	.matrix('MEM'
-		   ,'PCP'
-		   ,'MAM')
+	.matrix('MEM',
+			'PCP',
+			'MAM')
 	.key('M', ore('ingotBlueSteel'))
 	.key('E', item('appliedenergistics2:part', 281)) // Fluid Level Emitter
 	.key('P', item('appliedenergistics2:material', 22)) // Logic Processor
@@ -78,9 +78,9 @@ crafting.shapedBuilder().name('ae2fc:fluid_level_maintainer')
 // Extended Fluid Pattern Terminal recipe
 crafting.shapedBuilder().name('ae2fc:part_fluid_pattern_ex_terminal')
 	.output(item('ae2fc:part_fluid_pattern_ex_terminal'))
-	.matrix('T'
-		   ,'C'
-		   ,'E')
+	.matrix('T',
+			'C',
+			'E')
 	.key('T', item('ae2fc:part_fluid_pattern_terminal'))
 	.key('C', ore('circuitEv'))
 	.key('E', item('packagedauto:encoder'))
@@ -89,9 +89,9 @@ crafting.shapedBuilder().name('ae2fc:part_fluid_pattern_ex_terminal')
 // Ultimate Encoder recipe
 crafting.shapedBuilder().name('ae2fc:ultimate_encoder')
 	.output(item('ae2fc:ultimate_encoder'))
-	.matrix(' T '
-		   ,'PFP'
-		   ,' C ')
+	.matrix(' T ',
+			'PFP',
+			' C ')
 	.key('T', item('appliedenergistics2:part', 341)) // Extended Pattern Terminal
 	.key('P', item('appliedenergistics2:material', 24)) // Engineering Processor
 	.key('F', item('ae2fc:fluid_pattern_encoder'))
@@ -101,9 +101,9 @@ crafting.shapedBuilder().name('ae2fc:ultimate_encoder')
 // Fluid Assembler recipe
 crafting.shapedBuilder().name('ae2fc:fluid_assembler')
 	.output(item('ae2fc:fluid_assembler'))
-	.matrix('MFM'
-		   ,'PAP'
-		   ,'MFM')
+	.matrix('MFM',
+			'PAP',
+			'MFM')
 	.key('M', ore('plateIron'))
 	.key('F', item('appliedenergistics2:material', 54)) // 1k Fluid Storage Component
 	.key('P', item('appliedenergistics2:material', 22)) // Logic Processor
