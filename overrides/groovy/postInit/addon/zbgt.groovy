@@ -5,6 +5,9 @@ package postInit.addon
 
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
+
 import static gregtech.api.GTValues.*
 
 // TODO: Implement the Creative computing hatch and Creative data hatch
@@ -221,3 +224,205 @@ if (LabsModeHelper.normal) {
 		.duration(1200).EUt(VA[UV])
 		.buildAndRegister()
 }
+
+
+/* YOTTank Cells */
+// Add new recipes for YOTTank Cells
+crafting.shapedBuilder().name('zbgt:yottank_cell_0')
+	.output(item('zbgt:yottank_cell', 0))
+	.matrix('SFS',
+			'SHS',
+			'SCS')
+	.key('S', metaitem('plateSteel'))
+	.key('F', metaitem('field.generator.lv'))
+	.key('H', item('gregtech:hermetic_casing', 0))
+	.key('C', ore('circuitLv'))
+	.register()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(
+		item('gregtech:hermetic_casing', 3),
+		metaitem('field.generator.hv') * 2,
+		ore('circuitEv') * 4,
+		metaitem('plateTitanium') * 4
+	)
+	.outputs(item('zbgt:yottank_cell', 1))
+	.duration(100).EUt(VA[EV])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(
+		item('gregtech:hermetic_casing', 5),
+		metaitem('field.generator.iv') * 2,
+		ore('circuitLuv') * 4,
+		metaitem('plateRhodiumPlatedPalladium') * 4
+	)
+	.fluidInputs(fluid('tin') * (144 * 4))
+	.outputs(item('zbgt:yottank_cell', 2))
+	.duration(100).EUt(VA[LuV])
+	.buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(
+		item('gregtech:hermetic_casing', 5),
+		metaitem('field.generator.iv') * 2,
+		ore('circuitLuv') * 4,
+		metaitem('plateRhodiumPlatedPalladium') * 4
+	)
+	.fluidInputs(fluid('soldering_alloy') * (144 * 2))
+	.outputs(item('zbgt:yottank_cell', 2))
+	.duration(100).EUt(VA[LuV])
+	.buildAndRegister()
+
+mods.gregtech.assembly_line.recipeBuilder()
+	.inputs(
+		item('gregtech:hermetic_casing', 8),
+		metaitem('field.generator.uv') * 2,
+		ore('circuitUhv') * 4,
+		metaitem('plateEuropium') * 8
+	)
+	.fluidInputs(fluid('soldering_alloy') * (144 * 8), fluid('polybenzimidazole') * (144 * 8))
+	.outputs(item('zbgt:yottank_cell', 3))
+	.stationResearch(b -> b.researchStack(item('zbgt:yottank_cell', 2)).CWUt(16).EUt(VA[UV]))
+	.duration(100).EUt(VA[UV])
+	.buildAndRegister()
+
+
+// Remove other YOTTank Cells from JEI
+for(int i = 4; i <= 9; i++) {
+	mods.jei.ingredient.removeAndHide(item('zbgt:yottank_cell', i))
+}
+
+// Add tooltips to YOTTank Cells
+addTooltip(item('zbgt:yottank_cell', 0), [
+	translatableEmpty(),
+	translatable('nomiceu.tooltip.yottank_cell.yottank_cell.1'),
+	translatable('nomiceu.tooltip.yottank_cell.yottank_cell.2')
+])
+
+
+/* Unwrap craft for Wraps */
+def wraps = [
+	(metaitem('zbgt:wrapped.circuit.ulv')): metaitem('zbgt:generic_circuit.ulv'),
+	(metaitem('zbgt:wrapped.circuit.lv')): metaitem('zbgt:generic_circuit.lv'),
+	(metaitem('zbgt:wrapped.circuit.mv')): metaitem('zbgt:generic_circuit.mv'),
+	(metaitem('zbgt:wrapped.circuit.hv')): metaitem('zbgt:generic_circuit.hv'),
+	(metaitem('zbgt:wrapped.circuit.ev')): metaitem('zbgt:generic_circuit.ev'),
+	(metaitem('zbgt:wrapped.circuit.iv')): metaitem('zbgt:generic_circuit.iv'),
+	(metaitem('zbgt:wrapped.circuit.luv')): metaitem('zbgt:generic_circuit.luv'),
+	(metaitem('zbgt:wrapped.circuit.zpm')): metaitem('zbgt:generic_circuit.zpm'),
+	(metaitem('zbgt:wrapped.circuit.uv')): metaitem('zbgt:generic_circuit.uv'),
+	(metaitem('zbgt:wrapped.circuit.uhv')): metaitem('zbgt:generic_circuit.uhv'),
+	(metaitem('zbgt:wrapped.smd.capacitor')): metaitem('component.smd.capacitor'),
+	(metaitem('zbgt:wrapped.smd.diode')): metaitem('component.smd.diode'),
+	(metaitem('zbgt:wrapped.smd.inductor')): metaitem('component.smd.inductor'),
+	(metaitem('zbgt:wrapped.smd.resistor')): metaitem('component.smd.resistor'),
+	(metaitem('zbgt:wrapped.smd.transistor')): metaitem('component.smd.transistor'),
+	(metaitem('zbgt:wrapped.smd.advanced_capacitor')): metaitem('component.advanced_smd.capacitor'),
+	(metaitem('zbgt:wrapped.smd.advanced_diode')): metaitem('component.advanced_smd.diode'),
+	(metaitem('zbgt:wrapped.smd.advanced_inductor')): metaitem('component.advanced_smd.inductor'),
+	(metaitem('zbgt:wrapped.smd.advanced_resistor')): metaitem('component.advanced_smd.resistor'),
+	(metaitem('zbgt:wrapped.smd.advanced_transistor')): metaitem('component.advanced_smd.transistor'),
+	(metaitem('zbgt:wrapped.board.coated')): metaitem('board.coated'),
+	(metaitem('zbgt:wrapped.board.phenolic')): metaitem('board.phenolic'),
+	(metaitem('zbgt:wrapped.board.plastic')): metaitem('board.plastic'),
+	(metaitem('zbgt:wrapped.board.epoxy')): metaitem('board.epoxy'),
+	(metaitem('zbgt:wrapped.board.fiber_reinforced')): metaitem('board.fiber_reinforced'),
+	(metaitem('zbgt:wrapped.board.multilayer_fiber_reinforced')): metaitem('board.multilayer.fiber_reinforced'),
+	(metaitem('zbgt:wrapped.board.wetware')): metaitem('board.wetware'),
+	(metaitem('zbgt:wrapped.circuit_board.basic')): metaitem('circuit_board.basic'),
+	(metaitem('zbgt:wrapped.circuit_board.good')): metaitem('circuit_board.good'),
+	(metaitem('zbgt:wrapped.circuit_board.plastic')): metaitem('circuit_board.plastic'),
+	(metaitem('zbgt:wrapped.circuit_board.advanced')): metaitem('circuit_board.advanced'),
+	(metaitem('zbgt:wrapped.circuit_board.elite')): metaitem('circuit_board.elite'),
+	(metaitem('zbgt:wrapped.circuit_board.extreme')): metaitem('circuit_board.extreme'),
+	(metaitem('zbgt:wrapped.circuit_board.wetware')): metaitem('circuit_board.wetware'),
+	(metaitem('zbgt:wrapped.chip.soc_simple')): metaitem('plate.simple_system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.soc')): metaitem('plate.system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.soc_advanced')): metaitem('plate.advanced_system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.soc_highly_advanced')): metaitem('plate.highly_advanced_system_on_chip'),
+	(metaitem('zbgt:wrapped.chip.cpu')): metaitem('plate.central_processing_unit'),
+	(metaitem('zbgt:wrapped.chip.cpu_nano')): metaitem('plate.nano_central_processing_unit'),
+	(metaitem('zbgt:wrapped.chip.cpu_qubit')): metaitem('plate.qbit_central_processing_unit'),
+	(metaitem('zbgt:wrapped.chip.pic_ultra_low')): metaitem('plate.ultra_low_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic_low')): metaitem('plate.low_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic')): metaitem('plate.power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic_high')): metaitem('plate.high_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.pic_ultra_high')): metaitem('plate.ultra_high_power_integrated_circuit'),
+	(metaitem('zbgt:wrapped.chip.ram')): metaitem('plate.random_access_memory'),
+	(metaitem('zbgt:wrapped.chip.nor')): metaitem('plate.nor_memory_chip'),
+	(metaitem('zbgt:wrapped.chip.nand')): metaitem('plate.nand_memory_chip'),
+	(metaitem('zbgt:wrapped.chip.integrated_logic')): metaitem('plate.integrated_logic_circuit'),
+	(metaitem('zbgt:wrapped.misc.neuro_processor')): metaitem('processor.neuro'),
+	(metaitem('zbgt:wrapped.misc.engraved_crystal_chip')): metaitem('engraved.crystal_chip'),
+	(metaitem('zbgt:wrapped.misc.crystal_cpu')): metaitem('crystal.central_processing_unit'),
+	(metaitem('zbgt:wrapped.misc.crystal_soc')): metaitem('crystal.system_on_chip')
+]
+
+wraps.each { wrap, output ->
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(wrap)
+		.circuitMeta(1)
+		.outputs(output * 16)
+		.duration(100).EUt(VA[LV])
+		.buildAndRegister()
+}
+
+
+/* Cells */
+// Remove unused cells from JEI
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.360k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.540k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.1080k'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k_sp'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.360k_sp'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.540k_sp'))
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.1080k_sp'))
+
+// Remove unused filled cell recipes and from JEI
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.60k.he')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.60k.he'))
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.180k.he')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k.he'))
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.60k.nak')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.60k.nak'))
+mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.180k.nak')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k.nak'))
+
+// Remove smaller single craft cells, and compley 60K cell craft
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:coolant_cell.10k')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.10k'))
+mods.gregtech.assembler.removeByOutput([metaitem('zbgt:coolant_cell.30k')], null)
+mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.30k'))
+
+mods.gregtech.assembler.removeByInput(120, [
+		metaitem('zbgt:coolant_cell.30k') * 2, // 30K Cell * 2
+		metaitem('plateTin') * 8, // Tin Plates * 8
+		metaitem('circuit.integrated').withNbt(['Configuration': 1])
+	], null)
+
+
+/* Dropper Cover Assembler recipes */
+def dropperCoverTiers = ['lv': VA[LV], 'mv': VA[MV], 'hv': VA[HV], 'ev': VA[EV], 'iv': VA[IV]]
+
+dropperCoverTiers.each { tier, eut ->
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(
+			metaitem("conveyor.module.${tier}"),
+			item('minecraft:dropper'),
+			ore("circuit${tier.capitalize()}"),
+			metaitem("electric.piston.${tier}")
+		)
+		.outputs(metaitem("zbgt:cover.cover_dropper.${tier}"))
+		.duration(200).EUt(eut)
+		.buildAndRegister()
+}
+
+// Remove higher tier blocks from JEI
+mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 9)) // Component Assembly Line Casing (UHV)
+mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 10)) // Component Assembly Line Casing (UEV)
+mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 11)) // Component Assembly Line Casing (UIV)
+mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 12)) // Component Assembly Line Casing (UXV)
+mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 13)) // Component Assembly Line Casing (OpV)
+mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 14)) // Component Assembly Line Casing (MAX)
