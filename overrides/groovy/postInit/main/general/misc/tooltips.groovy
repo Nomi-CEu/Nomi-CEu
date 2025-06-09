@@ -310,6 +310,12 @@ for (MetadataLivingMatter matter : MetadataManager.livingMatterMetadataList) {
 /* NuclearCraft */
 addTooltip(item('nuclearcraft:fission_controller_new_fixed'), translatable('nomiceu.tooltip.nc.fission_safe'))
 
+// Tooltip to Port: Prevent Confusion with Active Coolers
+addTooltip(item('nuclearcraft:fission_port'), [
+	translatable('nomiceu.tooltip.nc.fission_port_warning'),
+	translatable('nomiceu.tooltip.nc.fission_port_redirect'),
+])
+
 /* Thermal Expansion */
 
 // Capacitors
