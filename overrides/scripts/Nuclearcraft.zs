@@ -536,22 +536,6 @@ alloy.recipeBuilder()
     .inputs([<nuclearcraft:alloy:2>, <ore:ingotTough>])
     .duration(200).EUt(1000).buildAndRegister();
 
-
-
-large_chemical_reactor.recipeBuilder()
-    .outputs(<nuclearcraft:gem_dust:1>)
-    .inputs([<ore:orePyrolusite> * 6])
-    .fluidInputs([<liquid:sulfuric_acid> * 3000])
-    .fluidOutputs([<liquid:manganese> * 4320])
-    .duration(200).EUt(2000).buildAndRegister();
-
-large_chemical_reactor.recipeBuilder()
-    .outputs(<nuclearcraft:gem_dust:1>)
-    .inputs([<ore:oreRedstone> * 12])
-    .fluidInputs([<liquid:sulfuric_acid> * 6000])
-    .fluidOutputs([<liquid:redstone> * 19008])
-    .duration(200).EUt(2000).buildAndRegister();
-
 reactor.recipeBuilder().inputs([<nomilabs:t2laser>])
     .outputs(<nomilabs:t3laser>)
     .fluidInputs([<liquid:radon> * 1000])
