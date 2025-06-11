@@ -1,6 +1,7 @@
 package postInit.main.modSpecific
 
 import com.nomiceu.nomilabs.util.ItemMeta
+import gregtech.api.unification.OreDictUnifier
 import mezz.jei.api.ingredients.VanillaTypes
 import nc.enumm.MetaEnums
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
@@ -109,6 +110,31 @@ for (var fuel : fuelMetas) {
 				return stack
 			}.replaceAndRegister()
 	}
+}
+
+/* Crushed Rhodochrosite from Redstone & Pyrolusite */
+var oreInputs = [
+	(oreprefix('ore')): 2, // Double Ore Req for Normal Ore
+	(oreprefix('oreNetherrack')): 1,
+	(oreprefix('oreEndstone')): 1,
+]
+
+for (var input : oreInputs) {
+	mods.gregtech.large_chemical_reactor.recipeBuilder()
+		.outputs(item('nuclearcraft:gem_dust', 1))
+		.inputs(OreDictUnifier.get(input.key, material('pyrolusite')) * (3 * input.value))
+		.fluidInputs(fluid('sulfuric_acid') * 3000)
+		.fluidOutputs(fluid('manganese') * 4320)
+		.duration(200).EUt(VA[EV])
+		.buildAndRegister()
+
+	mods.gregtech.large_chemical_reactor.recipeBuilder()
+		.outputs(item('nuclearcraft:gem_dust', 1))
+		.inputs(OreDictUnifier.get(input.key, material('redstone')) * (6 * input.value))
+		.fluidInputs(fluid('sulfuric_acid') * 6000)
+		.fluidOutputs(fluid('redstone') * 19008)
+		.duration(200).EUt(VA[EV])
+		.buildAndRegister()
 }
 
 // Change Active Cooler Recipe from NC Helium -> GT Liquid Helium
