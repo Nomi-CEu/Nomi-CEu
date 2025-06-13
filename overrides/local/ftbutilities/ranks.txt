@@ -4,7 +4,10 @@
 default_player_rank: true
 power: 1
 ftbutilities.homes.max: 25
+ftbutilities.homes.warmup: 0
 ftbutilities.homes.cooldown: 0
+ftbutilities.warps.warmup: 0
+ftbutilities.warps.cooldown: 0
 ftbutilities.claims.max_chunks: 2000
 ftbutilities.chunkloader.max_chunks: 1000
 
