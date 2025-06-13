@@ -11046,12 +11046,13 @@
     },
     "194:10": {
       "preRequisites:11": [
-        157
+        157,
+        539
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Glowstone§r.\n\nThese are made in an §3EBF§r with §2Kanthal§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made far more efficiently with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.",
+          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Phosphorus§r.\n\nThese are made in an §3EBF§r with §2Kanthal§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon and Gallium Arsenide as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made §efar more efficiently§r with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11060,10 +11061,10 @@
             "id:8": "gregtech:meta_item_1"
           },
           "ignoresview:1": 0,
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "§2Glowstone Doped Silicon Boule§r",
+          "name:8": "§2Phosphorus Doped Silicon Boules§r",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -29075,12 +29076,13 @@
     },
     "539:10": {
       "preRequisites:11": [
+        55,
         260
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Phosphorus§r can be obtained by processing §6Tricalcium Phosphate Ore§r or §6Apatite Ore§r into dust and electrolyzing several times.\n\nBoth ores are found in §6Apatite§r veins.",
+          "desc:8": "§6Phosphorus§r can be obtained by processing §6Tricalcium Phosphate Ore§r or §6Apatite Ore§r into dust and centrifuging/electrolyzing several times.\n\nBoth ores are found in §6Apatite§r veins.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -41503,7 +41505,14 @@
       }
     },
     "787:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1,
+        1,
+        1
+      ],
       "preRequisites:11": [
+        35,
         272,
         296,
         490
@@ -42978,7 +42987,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Technically not new to CEu, but it was disabled in the original version, and it had much less functionality in CE.§r\n\nThe §3Arc Furnace§r allows you to finally make §6Wrought Iron§r an ingot at a time. It also greatly simplifies glass creation, and allows you to make §6Annealed Copper§r, which will be used in the MV Age. Later, it can make §2Tempered Glass§r for use in higher-tier recipes.\n\nThe Arc Furnace also functions as a §auniversal recycling machine§r. Pretty much anything can be recycled into ingots and dusts of its base components.\n\nAll of its recipes require §9Oxygen§r.\n\nAll Arc Furnace recipes use exactly 30 EU/t, so you can get away with using LV Arc Furnaces for the whole pack. However, at §5EV§r, the Arc Furnace expands to 9 slots.",
+          "desc:8": "§2Technically not new to CEu, but it was disabled in the original version, and it had much less functionality in CE.§r\n\nThe §3Arc Furnace§r allows you to finally make §6Wrought Iron§r an ingot at a time. It also greatly simplifies glass creation, and allows you to make §6Annealed Copper§r, which can reduce the cost of §6Redstone§r in §6Red Alloy§r, and will be used in the MV Age. Later, it can make §2Tempered Glass§r for use in higher-tier recipes.\n\nThe Arc Furnace also functions as a §auniversal recycling machine§r. Pretty much anything can be recycled into ingots and dusts of its base components.\n\nAll of its recipes require §9Oxygen§r.\n\nAll Arc Furnace recipes use exactly 30 EU/t, so you can get away with using LV Arc Furnaces for the whole pack. However, at §5EV§r, the Arc Furnace expands to 9 slots.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58618,7 +58627,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -560,
-          "y:3": 196
+          "y:3": 160
         },
         "9:10": {
           "id:3": 34,
@@ -58646,7 +58655,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -560,
-          "y:3": 232
+          "y:3": 196
         },
         "13:10": {
           "id:3": 53,
@@ -58897,8 +58906,8 @@
           "id:3": 787,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -560,
-          "y:3": 160
+          "x:3": -744,
+          "y:3": 512
         },
         "49:10": {
           "id:3": 788,
@@ -59475,440 +59484,454 @@
           "y:3": -412
         },
         "60:10": {
+          "id:3": 194,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 568,
+          "y:3": -356
+        },
+        "61:10": {
           "id:3": 203,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -372
         },
-        "61:10": {
+        "62:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 740,
           "y:3": -336
         },
-        "62:10": {
+        "63:10": {
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 740,
           "y:3": -300
         },
-        "63:10": {
+        "64:10": {
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -364
         },
-        "64:10": {
+        "65:10": {
           "id:3": 233,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 112,
           "y:3": -148
         },
-        "65:10": {
+        "66:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -520
         },
-        "66:10": {
+        "67:10": {
           "id:3": 237,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 156,
           "y:3": -104
         },
-        "67:10": {
+        "68:10": {
           "id:3": 319,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 420,
           "y:3": -420
         },
-        "68:10": {
+        "69:10": {
           "id:3": 338,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -192
         },
-        "69:10": {
+        "70:10": {
           "id:3": 398,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -560
         },
-        "70:10": {
+        "71:10": {
           "id:3": 400,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -556
         },
-        "71:10": {
+        "72:10": {
           "id:3": 502,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -448
         },
-        "72:10": {
+        "73:10": {
           "id:3": 504,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -112
         },
-        "73:10": {
+        "74:10": {
           "id:3": 505,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -148
         },
-        "74:10": {
+        "75:10": {
           "id:3": 507,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 656,
           "y:3": -184
         },
-        "75:10": {
+        "76:10": {
           "id:3": 509,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 376,
           "y:3": -376
         },
-        "76:10": {
+        "77:10": {
+          "id:3": 539,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 528,
+          "y:3": -356
+        },
+        "78:10": {
           "id:3": 540,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -4
         },
-        "77:10": {
+        "79:10": {
           "id:3": 541,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 420,
           "y:3": -376
         },
-        "78:10": {
+        "80:10": {
           "id:3": 546,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -148
         },
-        "79:10": {
+        "81:10": {
           "id:3": 549,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -268
         },
-        "80:10": {
+        "82:10": {
           "id:3": 609,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 376,
           "y:3": -420
         },
-        "81:10": {
+        "83:10": {
           "id:3": 727,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -364
         },
-        "82:10": {
+        "84:10": {
           "id:3": 730,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 248,
           "y:3": -400
         },
-        "83:10": {
+        "85:10": {
           "id:3": 731,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -400
         },
-        "84:10": {
+        "86:10": {
           "id:3": 747,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 44,
           "y:3": -148
         },
-        "85:10": {
+        "87:10": {
           "id:3": 790,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -124
         },
-        "86:10": {
+        "88:10": {
           "id:3": 801,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 864,
           "y:3": -336
         },
-        "87:10": {
+        "89:10": {
           "id:3": 810,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -268
         },
-        "88:10": {
+        "90:10": {
           "id:3": 812,
           "sizeX:3": 0,
           "sizeY:3": 0,
           "x:3": 296,
           "y:3": -216
         },
-        "89:10": {
+        "91:10": {
           "id:3": 816,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": 312,
           "y:3": -72
         },
-        "90:10": {
+        "92:10": {
           "id:3": 818,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 364,
           "y:3": -104
         },
-        "91:10": {
+        "93:10": {
           "id:3": 820,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -164
         },
-        "92:10": {
+        "94:10": {
           "id:3": 821,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 676,
           "y:3": -324
         },
-        "93:10": {
+        "95:10": {
           "id:3": 822,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": -60
         },
-        "94:10": {
+        "96:10": {
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 28,
           "y:3": -364
         },
-        "95:10": {
+        "97:10": {
           "id:3": 824,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 696,
           "y:3": -228
         },
-        "96:10": {
+        "98:10": {
           "id:3": 825,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 448,
           "y:3": -192
         },
-        "97:10": {
+        "99:10": {
           "id:3": 826,
           "sizeX:3": 40,
           "sizeY:3": 40,
           "x:3": 440,
           "y:3": -156
         },
-        "98:10": {
+        "100:10": {
           "id:3": 830,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 544,
           "y:3": -232
         },
-        "99:10": {
+        "101:10": {
           "id:3": 831,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 568,
           "y:3": -192
         },
-        "100:10": {
+        "102:10": {
           "id:3": 832,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 528,
           "y:3": -192
         },
-        "101:10": {
+        "103:10": {
           "id:3": 833,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -192
         },
-        "102:10": {
+        "104:10": {
           "id:3": 834,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 568,
           "y:3": -264
         },
-        "103:10": {
+        "105:10": {
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -264
         },
-        "104:10": {
+        "106:10": {
           "id:3": 836,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 100,
           "y:3": -268
         },
-        "105:10": {
+        "107:10": {
           "id:3": 837,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -268
         },
-        "106:10": {
+        "108:10": {
           "id:3": 886,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 284,
           "y:3": -520
         },
-        "107:10": {
+        "109:10": {
           "id:3": 891,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 244,
           "y:3": -268
         },
-        "108:10": {
+        "110:10": {
           "id:3": 894,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -404
         },
-        "109:10": {
+        "111:10": {
           "id:3": 895,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 136,
           "y:3": -364
         },
-        "110:10": {
+        "112:10": {
           "id:3": 896,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -264
         },
-        "111:10": {
+        "113:10": {
           "id:3": 897,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -228
         },
-        "112:10": {
+        "114:10": {
           "id:3": 899,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 208,
           "y:3": -404
         },
-        "113:10": {
+        "115:10": {
           "id:3": 929,
           "sizeX:3": 32,
           "sizeY:3": 32,
           "x:3": 360,
           "y:3": -144
         },
-        "114:10": {
+        "116:10": {
           "id:3": 936,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 816,
           "y:3": -420
         },
-        "115:10": {
+        "117:10": {
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -364
         },
-        "116:10": {
+        "118:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
           "y:3": -316
         },
-        "117:10": {
+        "119:10": {
           "id:3": 1052,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -364
         },
-        "118:10": {
+        "120:10": {
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 400,
           "y:3": -264
         },
-        "119:10": {
+        "121:10": {
           "id:3": 1083,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 688,
           "y:3": -416
         },
-        "120:10": {
+        "122:10": {
           "id:3": 1092,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 400,
           "y:3": -192
         },
-        "121:10": {
+        "123:10": {
           "id:3": 1095,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -444
         },
-        "122:10": {
+        "124:10": {
           "id:3": 1097,
           "sizeX:3": 24,
           "sizeY:3": 24,
