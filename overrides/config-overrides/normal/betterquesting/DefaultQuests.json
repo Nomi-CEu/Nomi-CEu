@@ -798,7 +798,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Second Micro Miner! §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:\n§6* Bauxite Ore\n§2* Pyrochlore Ore\n§6* Copper Ore\n§2* Sphalerite Ore\n§6* Cassiterite Ore\n* Scheelite Ore\n* Tungstate Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.\n\n§2A new mission is available in CEu. This mission costs HV Electric Pumps and Cryotheum Dust. This nets you Solidified Neon, Xenon and Krypton, although it is better to get those from distilling Liquid Nether and Ender Air, as of the useful byproducts you get, and the tiny amount of each element you get in this mission.§r",
+          "desc:8": "The Second Micro Miner! §2You\u0027ll need that Phosphorus in the LV Field Generators.§r\n\nThis uses an §bExtended Crafting§r table so it\u0027s not possible to automate the Miner itself with §bApplied Energistics 2§r just yet (this requires more advanced technology not easy to access until the Tier Four Micro Miner). You can make it semi-automatically by prestocking the components you need, and filling up the Extended Crafting Table with §bJEI§r!\n\nThis Micro Miner can get you:\n§6* Bauxite Ore\n§2* Pyrochlore Ore\n§6* Copper Ore\n§2* Sphalerite Ore\n§6* Cassiterite Ore\n* Scheelite Ore\n* Tungstate Ore\n* Radium Salt§r\n\nAs well as the §6Stellar Creation Data§r, which will be useful much, much later.\n\n§2A new mission is available in CEu. This mission costs HV Electric Pumps and Cryotheum Dust. This nets you Solidified Neon, Xenon and Krypton, although it is better to get those from distilling Liquid Nether and Ender Air, as of the useful byproducts you get, and the tiny amount of each element you get in this mission.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13090,13 +13090,13 @@
     },
     "194:10": {
       "preRequisites:11": [
-        157,
+        52,
         539
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Phosphorus§r.\n\nThese are made in an §3EBF§r with §2Kanthal§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon and Gallium Arsenide as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made §efar more efficiently§r with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.",
+          "desc:8": "A more advanced type of §6Silicon Boule§r, formed by doping the §6Silicon§r crystal lattice with §6Phosphorus§r.\n\nThese are made in an §3EBF§r with §2Kanthal§r or better coils, and need §2Nitrogen§r for the process. It needs twice as much Silicon and Gallium Arsenide as the basic boules, but also results in twice as many doped Silicon Wafers when sliced.\n\nCircuit Wafers can be made §efar more efficiently§r with these doped Silicon Wafers, but they are also needed for some more advanced types of Circuit Wafers that can\u0027t be engraved onto the basic ones.\n\nYou\u0027ll need to cut these in the Cleanroom.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14844,7 +14844,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is your first §bMicro Miner. §2You\u0027ll need that Phosphorous in the LV Field Generators.§r\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Ilmenite Ore\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a §bGemstone Sensor§r (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.",
+          "desc:8": "This is your first §bMicro Miner. §2You\u0027ll need that Phosphorus in the LV Field Generators.§r\nYes, not the last: these things aren\u0027t reusable.\n\nThis one can get you:\n§6* Dense Iron Ore\n* Cassiterite Ore\n* Redstone Ore\n* Nickel Ore\n§2* Ilmenite Ore\n§6* Uraninite Ore\n* Galena Ore\n§2* Molybdenum Ore\n§6* Moon Turf\n* Dilithium\n* Salt Ore§r\n\nWhen equipped with a §bGemstone Sensor§r (which may currently not be available to you yet):\n§2* Perfect Diamond\n§6* Apatite Ore\n* Tricalcium Phosphate Ore\n* Quartzite Ore§r\n\nCan also be used to bring §bStellar Creation Data§r, but less efficiently than the Tier Two.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -68282,7 +68282,7 @@
           "id:3": 70,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 204
         },
         "14:10": {
@@ -68485,7 +68485,7 @@
           "id:3": 129,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 312
         },
         "43:10": {
@@ -68548,14 +68548,14 @@
           "id:3": 156,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 380
         },
         "52:10": {
           "id:3": 157,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 432
         },
         "53:10": {
@@ -68583,15 +68583,15 @@
           "id:3": 187,
           "sizeX:3": 32,
           "sizeY:3": 32,
-          "x:3": -508,
+          "x:3": -496,
           "y:3": 164
         },
         "57:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -468,
-          "y:3": 468
+          "x:3": -252,
+          "y:3": 672
         },
         "58:10": {
           "id:3": 203,
@@ -68632,7 +68632,7 @@
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 544
         },
         "64:10": {
@@ -68709,8 +68709,8 @@
           "id:3": 539,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -468,
-          "y:3": 432
+          "x:3": -216,
+          "y:3": 672
         },
         "75:10": {
           "id:3": 540,
@@ -68863,7 +68863,7 @@
           "id:3": 823,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 244
         },
         "97:10": {
@@ -69010,14 +69010,14 @@
           "id:3": 1040,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 348
         },
         "118:10": {
           "id:3": 1041,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -504,
+          "x:3": -492,
           "y:3": 508
         },
         "119:10": {
