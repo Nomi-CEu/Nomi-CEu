@@ -44,4 +44,6 @@ mods.gregtech.assembly_line.recipeBuilder()
         .stationResearch(b -> b.researchStack(item('gregtech:fusion_casing', 1)).CWUt(128))
         .EUt(VA[UHV]).duration(600)
         .buildAndRegister()
+
+
   
