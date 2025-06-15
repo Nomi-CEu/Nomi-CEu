@@ -27,6 +27,7 @@ List<ItemStack> fillable = [
 	metaitem('large_fluid_cell.tungstensteel'),
 	metaitem('fluid_cell.glass_vial'),
 	metaitem('nomilabs:bronze_cell'),
+	metaitem('nomilabs:gold_cell'),
 	item('minecraft:bucket'),
 	item('minecraft:water_bucket'),
 	item('minecraft:lava_bucket'),

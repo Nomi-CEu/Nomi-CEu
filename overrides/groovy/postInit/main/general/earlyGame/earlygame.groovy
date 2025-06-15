@@ -289,6 +289,22 @@ crafting.shapedBuilder()
 	.key('R', ore('ringTin'))
 	.register()
 
+// Gold Cell: Assembler
+mods.gregtech.assembler.recipeBuilder()
+	.inputs(ore('plateDoubleGold') * 2, ore('ringTin') * 2)
+	.outputs(metaitem('nomilabs:gold_cell'))
+	.duration(200).EUt(VA[LV])
+	.buildAndRegister()
+
+// Gold Cell: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('nomilabs:gold_cell'))
+	.matrix('PHP', 'RRR')
+	.key('P', ore('plateDoubleGold'))
+	.key('H', ore('toolHammer'))
+	.key('R', ore('ringTin'))
+	.register()
+
 // Steel Cell: Crafting
 crafting.shapedBuilder()
 	.output(metaitem('large_fluid_cell.steel'))
