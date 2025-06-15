@@ -427,11 +427,13 @@ mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 12)) // Component Ass
 mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 13)) // Component Assembly Line Casing (OpV)
 mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 14)) // Component Assembly Line Casing (MAX)
 
-//CoAL recipe fixes
-//ZPM and UV Field gen recipe removal
+/* CoAL recipe fixes */
+
+// ZPM and UV Field gen recipe removal
 mods.gregtech.coal_recipes.removeByOutput([metaitem('field.generator.zpm')], null)
 mods.gregtech.coal_recipes.removeByOutput([metaitem('field.generator.uv')], null)
-//ZPM field gen fix
+
+// ZPM field gen fix
 mods.gregtech.coal_recipes.recipeBuilder()
 	.inputs(metaitem('quantumstar') * 48,
 		metaitem('frameNaquadahAlloy') * 48,
@@ -450,7 +452,8 @@ mods.gregtech.coal_recipes.recipeBuilder()
 	.CasingTier(7)
 	.CWUt(32)
 	.buildAndRegister()
-//UV field gen fix
+
+// UV field gen fix
 mods.gregtech.coal_recipes.recipeBuilder()
 	.inputs(metaitem('gravistar') * 48,
 		metaitem('frameTritanium') * 48,
