@@ -32,8 +32,9 @@ for (def meta : 1..15) {
             translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.warning'))
 }
 
-// Bronze Cell
+// Bronze & Gold Cell
 nbtClearingRecipe(metaitem('nomilabs:bronze_cell'))
+nbtClearingRecipe(metaitem('nomilabs:gold_cell'))
 
 /* Drawers */
 // Add empty can clear tooltip, as we want to add multiple lines
@@ -109,7 +110,7 @@ for (def material : ["wood", "bronze", "steel", "aluminium", "stainless_steel", 
 
 // Cells
 
-// Bronze Cell does not need tooltip added, its recipe is added above
+// Bronze/Gold Cell does not need tooltip added, its recipe is added above
 
 // Special Cells
 clearableContainers.add(metaitem('fluid_cell'))
