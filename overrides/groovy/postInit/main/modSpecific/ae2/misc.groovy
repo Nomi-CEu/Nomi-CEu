@@ -1,6 +1,6 @@
 package postInit.main.modSpecific.ae2
 
-import it.unimi.dsi.fastutil.Pair
+import org.apache.commons.lang3.tuple.Pair
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.Item
@@ -31,8 +31,8 @@ var createCrystalSeed = { int progress ->
 
 var seeds = [Pair.of('CertusQuartz', CERTUS), Pair.of('NetherQuartz', NETHER), Pair.of('Fluix', FLUIX)]
 for (var seed : seeds) {
-	crafting.removeByOutput(item('appliedenergistics2:crystal_seed', seed.right()))
-	crafting.addShapeless(createCrystalSeed(seed.right()) * 2, [ore('sand'), ore("dust${seed.left()}")])
+	crafting.removeByOutput(item('appliedenergistics2:crystal_seed', seed.right))
+	crafting.addShapeless(createCrystalSeed(seed.right) * 2, [ore('sand'), ore("dust${seed.left}")])
 }
 
 // JEI
