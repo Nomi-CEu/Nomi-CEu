@@ -7,10 +7,18 @@ import appeng.core.AEConfig
 import appeng.core.features.AEFeature
 import com.nomiceu.nomilabs.config.LabsConfig
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.GregTechAPI
+import gregtech.api.unification.OreDictUnifier
+import gregtech.api.unification.material.properties.PropertyKey
+import gregtech.api.util.TextFormattingUtil
+import gregtech.common.pipelike.fluidpipe.BlockFluidPipe
+import gregtech.common.pipelike.fluidpipe.ItemBlockFluidPipe
 import mustapelto.deepmoblearning.common.metadata.MetadataLivingMatter
 import mustapelto.deepmoblearning.common.metadata.MetadataManager
 import net.minecraft.item.ItemStack
 
+import static gregtech.api.unification.ore.OrePrefix.*
+import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import classes.postInit.Common
@@ -341,6 +349,65 @@ for (ItemStack prospector in [metaitem('prospector.lv'), metaitem('prospector.hv
 addTooltip(metaitem('cover.facade'), [
 	translatable('nomiceu.tooltip.gregtech.facade')
 ])
+
+// ULV Covers
+// Change tooltips to match other covers
+customHandleTooltip(metaitem('ulv_covers:conveyor.module.ulv')) {
+	it.clear()
+	it.add(translate('metaitem.conveyor.module.tooltip'))
+	it.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
+}
+
+customHandleTooltip(metaitem('ulv_covers:robot.arm.ulv')) {
+	it.clear()
+	it.add(translate('metaitem.robot.arm.tooltip'))
+	it.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
+}
+
+customHandleTooltip(metaitem('ulv_covers:electric.pump.ulv')) {
+	it.clear()
+	it.add(translate('metaitem.electric.pump.tooltip'))
+	it.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', 320))
+}
+
+// Pipes
+// Change Unit in Tooltips to L/s
+var fluidPipePrefixes = [pipeTinyFluid, pipeSmallFluid, pipeNormalFluid,pipeLargeFluid, pipeHugeFluid,
+						 pipeQuadrupleFluid, pipeNonupleFluid]
+for (var material : GregTechAPI.materialManager.registeredMaterials) {
+	if (!material.hasProperty(PropertyKey.FLUID_PIPE)) continue
+
+	for (var prefix : fluidPipePrefixes) {
+		ItemStack pipe = OreDictUnifier.get(prefix, material)
+		// Wood & Treated Wood Pipes don't have tiny, huge, quad and nonuple
+		if (pipe.empty) continue
+
+		var pipeBlock = (BlockFluidPipe) ((ItemBlockFluidPipe) pipe.getItem()).block
+
+		var prop = pipeBlock.createItemProperties(pipe)
+		String transferAmt = TextFormattingUtil.formatNumbers(prop.getThroughput() * 20)
+
+		customHandleTooltip(pipe) {
+			it.subList(0, 1).clear() // Remove first
+			it.add(0, translate('nomiceu.tooltip.gregtech.transfer_l_s', transferAmt))
+		}
+	}
+}
+
+// Pumps
+// Change Unit in Tooltips to L/s
+var tiers = Common.getVoltageNames(LV, UV)
+for (int i = 0; i < tiers.size(); i++) {
+	String tier = tiers[i]
+	long transferAmt = 1280 * (long) Math.pow(4, i)
+
+	String transferFmt = TextFormattingUtil.formatNumbers(transferAmt)
+
+	customHandleTooltip(metaitem("electric.pump.${tier}")) {
+		it.subList(it.size() - 1, it.size()).clear() // Remove last
+		it.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', transferFmt))
+	}
+}
 
 /* Ender IO */
 

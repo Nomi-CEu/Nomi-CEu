@@ -1,5 +1,6 @@
 package classes.postInit
 
+import gregtech.api.GTValues
 import net.minecraft.item.ItemStack
 import org.apache.commons.lang3.tuple.Pair
 
@@ -8,6 +9,23 @@ class Common {
 	private static ItemStack meP2p = null
 	private static List<Pair<String, ItemStack>> p2pVariants = null
 	private static List<ItemStack> eioGlasses = null
+	private static List<String> voltageNames = null
+
+	/**
+	 * Gets a continuous sublist of GregTech Voltage Names, in lowercase. Do not modify the returned list.
+	 * @param from The start index of the sublist. Inclusive.
+	 * @param to The end index of the sublist. Inclusive.
+ 	 */
+	static List<String> getVoltageNames(int from, int to) {
+		if (voltageNames == null) {
+			voltageNames = new ArrayList<>()
+			for (var voltage : GTValues.VN) {
+				voltageNames.add(voltage.toLowerCase())
+			}
+		}
+
+		return voltageNames.subList(from, to + 1)
+	}
 
 	static ItemStack getMeP2p() {
 		if (meP2p != null) return meP2p
