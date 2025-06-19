@@ -350,6 +350,26 @@ addTooltip(metaitem('cover.facade'), [
 	translatable('nomiceu.tooltip.gregtech.facade')
 ])
 
+// ULV Covers
+// Change tooltips to match other covers
+customHandleTooltip(metaitem('ulv_covers:conveyor.module.ulv')) {
+	it.clear()
+	it.add(translate('metaitem.conveyor.module.tooltip'))
+	it.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
+}
+
+customHandleTooltip(metaitem('ulv_covers:robot.arm.ulv')) {
+	it.clear()
+	it.add(translate('metaitem.robot.arm.tooltip'))
+	it.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
+}
+
+customHandleTooltip(metaitem('ulv_covers:electric.pump.ulv')) {
+	it.clear()
+	it.add(translate('metaitem.electric.pump.tooltip'))
+	it.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', 320))
+}
+
 // Pipes
 // Change Unit in Tooltips to L/s
 var fluidPipePrefixes = [pipeTinyFluid, pipeSmallFluid, pipeNormalFluid,pipeLargeFluid, pipeHugeFluid,
@@ -367,10 +387,10 @@ for (var material : GregTechAPI.materialManager.registeredMaterials) {
 		var prop = pipeBlock.createItemProperties(pipe)
 		String transferAmt = TextFormattingUtil.formatNumbers(prop.getThroughput() * 20)
 
-		customHandleTooltip(pipe, {
+		customHandleTooltip(pipe) {
 			it.subList(0, 1).clear() // Remove first
-			it.add(0,translatable('nomiceu.tooltip.gregtech.transfer_l_s', transferAmt).translate())
-		})
+			it.add(0, translate('nomiceu.tooltip.gregtech.transfer_l_s', transferAmt))
+		}
 	}
 }
 
@@ -383,10 +403,10 @@ for (int i = 0; i < tiers.size(); i++) {
 
 	String transferFmt = TextFormattingUtil.formatNumbers(transferAmt)
 
-	customHandleTooltip(metaitem("electric.pump.${tier}"), {
+	customHandleTooltip(metaitem("electric.pump.${tier}")) {
 		it.subList(it.size() - 1, it.size()).clear() // Remove last
-		it.add(translatable('nomiceu.tooltip.gregtech.transfer_l_s', transferFmt).translate())
-	})
+		it.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', transferFmt))
+	}
 }
 
 /* Ender IO */
