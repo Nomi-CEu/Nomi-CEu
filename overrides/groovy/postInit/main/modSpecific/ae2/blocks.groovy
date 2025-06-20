@@ -174,15 +174,6 @@ for (var rubber in [fluid('rubber') * 144, fluid('styrene_butadiene_rubber') * 3
 		.buildAndRegister()
 }
 
-// ME Conduit
-crafting.removeByOutput(item('enderio:item_me_conduit'))
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(item('appliedenergistics2:part', 36) * 3, item('enderio:item_material', 4) * 6)
-	.outputs(item('enderio:item_me_conduit') * 8)
-	.duration(100).EUt(VHA[LV])
-	.buildAndRegister()
-
-
 /* Block Parts */
 /* Planes */
 var makePlane = { OreDictIngredient plate, ItemStack core, ItemStack plane ->

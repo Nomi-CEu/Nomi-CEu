@@ -4451,7 +4451,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types. Oh, and they\u0027re relatively cheaper to make.\n\nThe only downside is that §ethey will not connect to §bApplied Energistics §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use AE cables like §6Fluix Cable§r for those.",
+          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types, but they are more expensive to make, and §ccan sometimes cause connection issues§r, so use them wisely and only when needed.\n\nThey also §ewill not connect to §bApplied Energistics §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use §6Fluix Cables§r for those.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
