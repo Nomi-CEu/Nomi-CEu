@@ -1,6 +1,7 @@
 package postInit.main.general.earlyGame
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.groovy.RecipePredicates
 import com.nomiceu.nomilabs.util.LabsModeHelper
@@ -263,7 +264,7 @@ mods.gregtech.assembler.recipeBuilder()
 // Coke -> 16 Tiny Coke
 crafting.addShapeless(item('nomilabs:tiny_coke') * 16, [ore('fuelCoke')])
 
-/* Early Cell Recipes */
+/* Early Cell Recipes & Change Production to 4 Cells (Excl. Basic Cell) */
 // Basic Cell: Crafting
 crafting.shapedBuilder()
 	.output(metaitem('fluid_cell'))
@@ -276,13 +277,14 @@ crafting.shapedBuilder()
 // Bronze Cell: Assembler
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(ore('plateDoubleBronze') * 2, ore('ringTin') * 2)
-	.outputs(metaitem('nomilabs:bronze_cell'))
+	.outputs(metaitem('nomilabs:bronze_cell') * 4)
 	.duration(200).EUt(VA[LV])
+	.changeRecycling()
 	.buildAndRegister()
 
 // Bronze Cell: Crafting
 crafting.shapedBuilder()
-	.output(metaitem('nomilabs:bronze_cell'))
+	.output(metaitem('nomilabs:bronze_cell') * 4)
 	.matrix('PHP', 'RRR')
 	.key('P', ore('plateDoubleBronze'))
 	.key('H', ore('toolHammer'))
@@ -292,13 +294,14 @@ crafting.shapedBuilder()
 // Gold Cell: Assembler
 mods.gregtech.assembler.recipeBuilder()
 	.inputs(ore('plateDoubleGold') * 2, ore('ringTin') * 2)
-	.outputs(metaitem('nomilabs:gold_cell'))
+	.outputs(metaitem('nomilabs:gold_cell') * 4)
 	.duration(200).EUt(VA[LV])
+	.changeRecycling()
 	.buildAndRegister()
 
 // Gold Cell: Crafting
 crafting.shapedBuilder()
-	.output(metaitem('nomilabs:gold_cell'))
+	.output(metaitem('nomilabs:gold_cell') * 4)
 	.matrix('PHP', 'RRR')
 	.key('P', ore('plateDoubleGold'))
 	.key('H', ore('toolHammer'))
@@ -307,12 +310,23 @@ crafting.shapedBuilder()
 
 // Steel Cell: Crafting
 crafting.shapedBuilder()
-	.output(metaitem('large_fluid_cell.steel'))
+	.output(metaitem('large_fluid_cell.steel') * 4)
 	.matrix('PHP', 'RRR')
 	.key('P', ore('plateDoubleSteel'))
 	.key('H', ore('toolHammer'))
 	.key('R', ore('ringBronze'))
 	.register()
+
+/* Assembler Recipe Mass Change (Excl. Basic Cell & Labs Cells) */
+for (var material : ["steel", "aluminium", "stainless_steel", "titanium", "tungstensteel"]) {
+	mods.gregtech.assembler.changeByOutput([metaitem("large_fluid_cell.${material}")], null)
+		.forEach { ChangeRecipeBuilder builder ->
+			builder.changeEachOutput { it * 4 }
+				.builder {
+					it.changeRecycling()
+				}.replaceAndRegister()
+		}
+}
 
 // Lubricant Alternatives (Per Oil)
 ChangeRecipeBuilderCollection<SimpleRecipeBuilder> lubeRecipes = mods.gregtech.brewery.changeByOutput(
