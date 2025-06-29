@@ -267,7 +267,7 @@ crafting.addShapeless(item('nomilabs:tiny_coke') * 16, [ore('fuelCoke')])
 /* Early Cell Recipes & Change Production to 4 Cells (Excl. Basic Cell) */
 // Basic Cell: Crafting
 crafting.shapedBuilder()
-	.output(metaitem('fluid_cell'))
+	.output(metaitem('fluid_cell') * 4)
 	.matrix('PHP', ' R ')
 	.key('P', ore('plateTin'))
 	.key('H', ore('toolHammer'))
@@ -316,6 +316,19 @@ crafting.shapedBuilder()
 	.key('H', ore('toolHammer'))
 	.key('R', ore('ringBronze'))
 	.register()
+
+// Basic Cell Mass Change
+mods.gregtech.bender.changeByOutput([metaitem('fluid_cell')], null)
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.changeEachOutput { it * (it.count * 4) }
+			.replaceAndRegister()
+	}
+
+mods.gregtech.extruder.changeByOutput([metaitem('fluid_cell')], null)
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.changeEachOutput { it * (it.count * 4) }
+			.replaceAndRegister()
+	}
 
 /* Assembler Recipe Mass Change (Excl. Basic Cell & Labs Cells) */
 for (var material : ["steel", "aluminium", "stainless_steel", "titanium", "tungstensteel"]) {
