@@ -79,11 +79,23 @@ mods.gregtech.macerator.recipeBuilder()
 	.inputs(ore('oreDilithium'))
 	.outputs(item('libvulpes:productdust') * 2)
 	.duration(200).EUt(VA[HV])
-	.buildAndRegister();
+	.buildAndRegister()
 
 mods.gregtech.macerator.recipeBuilder()
 	.inputs(ore('oreQuartzBlack'))
 	.outputs(item('actuallyadditions:item_dust', 7) * 2)
 	.duration(200).EUt(VA[HV])
-	.buildAndRegister();
+	.buildAndRegister()
 
+// Rock Breaker Recipes for Netherrack and Endstone (HV and LuV)
+mods.gregtech.rock_breaker.recipeBuilder()
+	.notConsumable(item('minecraft:netherrack'))
+	.outputs(item('minecraft:netherrack'))
+	.duration(16).EUt(VA[HV])
+	.buildAndRegister()
+
+mods.gregtech.rock_breaker.recipeBuilder()
+	.notConsumable(item('minecraft:end_stone'))
+	.outputs(item('minecraft:end_stone'))
+	.duration(16).EUt(VA[LuV])
+	.buildAndRegister()
