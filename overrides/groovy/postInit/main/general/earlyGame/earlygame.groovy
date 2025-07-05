@@ -264,7 +264,16 @@ mods.gregtech.assembler.recipeBuilder()
 // Coke -> 16 Tiny Coke
 crafting.addShapeless(item('nomilabs:tiny_coke') * 16, [ore('fuelCoke')])
 
-/* Early Cell Recipes & Change Production to 4 Cells (Excl. Basic Cell) */
+/* Early Cell Recipes & Change Production to 4 Cells (Excl. Glass Vial) */
+// Glass Vial: Crafting
+crafting.shapedBuilder()
+	.output(metaitem('fluid_cell.glass_vial'))
+	.matrix('PHP', ' R ')
+	.key('P', ore('blockGlass'))
+	.key('H', ore('toolHammer'))
+	.key('R', metaitem('component.glass.tube'))
+	.register()
+
 // Basic Cell: Crafting
 crafting.shapedBuilder()
 	.output(metaitem('fluid_cell') * 4)
