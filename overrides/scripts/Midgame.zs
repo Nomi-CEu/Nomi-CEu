@@ -108,18 +108,6 @@ gas_collector.recipeBuilder()
 	.EUt(16)
 	.buildAndRegister();
 
-// Rebalancing important chanced outputs
-// Helium * 120
-<recipemap:centrifuge>.findRecipe(20, [<metaitem:dustEndstone>], null).remove();
-centrifuge.recipeBuilder()
-	.inputs([<metaitem:dustEndstone>])
-	.outputs([<minecraft:sand>, <metaitem:dustSmallTungstate>])
-	.fluidOutputs([<liquid:helium> * 120])
-	.chancedOutput(<metaitem:dustTinyPlatinum>, 5000, 2000)
-	.duration(40)
-	.EUt(1280)
-	.buildAndRegister();
-
 canner.recipeBuilder()
 	.inputs(<minecraft:glass_bottle>)
 	.fluidInputs(<liquid:xpjuice> * 500)
