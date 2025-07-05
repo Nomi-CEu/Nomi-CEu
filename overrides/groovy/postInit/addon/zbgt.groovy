@@ -426,3 +426,53 @@ mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 11)) // Component Ass
 mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 12)) // Component Assembly Line Casing (UXV)
 mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 13)) // Component Assembly Line Casing (OpV)
 mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 14)) // Component Assembly Line Casing (MAX)
+
+// CoAL recipe fixes
+// ZPM and UV Field gen recipe removal
+mods.gregtech.coal_recipes.removeByOutput([metaitem('field.generator.zpm')], null)
+mods.gregtech.coal_recipes.removeByOutput([metaitem('field.generator.uv')], null)
+
+// ZPM field gen fix
+mods.gregtech.coal_recipes.recipeBuilder()
+	.inputs(
+		metaitem('quantumstar') * 48,
+		metaitem('frameNaquadahAlloy') * 48,
+		metaitem('plateDenseNaquadahAlloy') * 32,
+		metaitem('cableGtHexVanadiumGallium') * 48,
+		metaitem('emitter.zpm') * 96,
+		ore('circuitZpm') * 384,
+	)
+	.fluidInputs(
+		fluid('soldering_alloy') * 55296,
+	        fluid('uranium_rhodium_dinaquadide') * 110592,
+		fluid('awakened_draconium') * 62208,
+	)
+	.circuitMeta(8)
+	.outputs(metaitem('field.generator.zpm') * 64)
+	.duration(28800).EUt(VA[LuV])
+	.CasingTier(7)
+	.CWUt(32)
+	.buildAndRegister()
+
+// UV field gen fix
+mods.gregtech.coal_recipes.recipeBuilder()
+	.inputs(
+		metaitem('gravistar') * 48,
+		metaitem('frameTritanium') * 48,
+		metaitem('plateDenseTritanium') * 32,
+		metaitem('cableGtHexYttriumBariumCuprate') * 48,
+		metaitem('emitter.uv') * 96,
+		ore('circuitUv') * 384,
+	)
+	.fluidInputs(
+		fluid('soldering_alloy') * 82944,
+		fluid('enriched_naquadah_trinium_europium_duranide') * 110592,
+		fluid('naquadria') * 27648,
+		fluid('taranium') * 13824,
+	)
+	.circuitMeta(8)
+	.outputs(metaitem('field.generator.uv') * 64)
+	.duration(28800).EUt(VA[ZPM])
+	.CasingTier(8)
+	.CWUt(64)
+	.buildAndRegister()
