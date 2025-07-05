@@ -158,6 +158,13 @@ overrideRecipeCatalysts('extendedcrafting:table_crafting_9x9',
 	item('extendedcrafting:table_ultimate'),
 	item('packagedexcrafting:ultimate_crafter'))
 
+// Crafting Core (Add PAuto ExCrafting Combination Package Crafter + Marked Pedestals)
+overrideRecipeCatalysts('extendedcrafting:combination_crafting',
+	item('extendedcrafting:crafting_core'),
+	item('extendedcrafting:pedestal'),
+	item('packagedexcrafting:combination_crafter'),
+	item('packagedexcrafting:marked_pedestal'))
+
 // Draconic Fusion (Add Packaged Draconic Core)
 overrideRecipeCatalysts('DraconicEvolution.Fusion',
 	item('draconicevolution:fusion_crafting_core'),
