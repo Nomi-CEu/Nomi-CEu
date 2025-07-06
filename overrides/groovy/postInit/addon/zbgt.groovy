@@ -436,8 +436,8 @@ mods.gregtech.coal_recipes.changeByOutput([metaitem('ulv_covers:conveyor.module.
 
 		for (var rubber : [fluid('rubber'), fluid('silicone_rubber'), fluid('styrene_butadiene_rubber')]) {
 			builder.copyOriginal()
-				.changeInputs {
-					it.set(0, it.get(0).copyWithAmount((int) (it.get(0).getAmount() / 2))) // Reduce motor amt to half
+				.changeInput(0) {
+					it.copyWithAmount((int) (it.getAmount() / 2)) // Reduce motor amt to half
 				}.builder { RecipeBuilder recipe ->
 					recipe.clearFluidInputs()
 						.fluidInputs(rubber * (L * 2 * 48))
