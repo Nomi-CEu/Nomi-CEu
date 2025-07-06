@@ -3,7 +3,14 @@
 
 package postInit.addon
 
+import classes.postInit.Common
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import com.zorbatron.zbgt.api.recipes.properties.CoALProperty
+import gregtech.api.items.metaitem.MetaItem
+import gregtech.api.recipes.Recipe
+import gregtech.api.recipes.RecipeBuilder
+import gregtech.api.recipes.recipeproperties.ComputationProperty
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
@@ -45,15 +52,12 @@ if (LabsModeHelper.normal) {
 	// Energy Source Hatch
 	mods.gregtech.precise_assembler_recipes.recipeBuilder()
 		.notConsumable(metaitem('infinite_energy'))
-		.inputs(metaitem('transformer.adjustable.uv') * 64,
-			metaitem('laser_hatch.source_4096a.uv') * 4
-		)
+		.inputs(metaitem('transformer.adjustable.uv') * 64, metaitem('laser_hatch.source_4096a.uv') * 4)
 		.inputWildNBT(metaitem('max.battery'))
 		.fluidInputs(fluid('soldering_alloy') * 9216,
 			fluid('polybenzimidazole') * 18432,
 			fluid('naquadria') * 2304,
-			fluid('omnium') * 1440
-		)
+			fluid('omnium') * 1440)
 		.outputs(metaitem('zbgt:creative_energy_source'))
 		.casingTier(4)
 		.duration(200).EUt(VA[UHV])
@@ -69,8 +73,7 @@ if (LabsModeHelper.normal) {
 			ore('circuitUhv') * 16,
 			metaitem('field.generator.uv') * 16,
 			metaitem('sensor.uv') * 16,
-			metaitem('laser_hatch.source_4096a.uv') * 4
-		)
+			metaitem('laser_hatch.source_4096a.uv') * 4)
 		.inputWildNBT(metaitem('max.battery'))
 		.fluidInputs(fluid('naquadria') * 82944) // 64 Blocks
 		.outputs(metaitem('zbgt:creative_energy_source'))
@@ -101,8 +104,7 @@ mods.gregtech.assembler.recipeBuilder()
 		ore('circuitLuv') * 16,
 		item('gcym:unique_casing', 4) * 16,
 		metaitem('electric.pump.iv') * 16,
-		metaitem('pipeNormalFluidPolybenzimidazole') * 16
-	)
+		metaitem('pipeNormalFluidPolybenzimidazole') * 16)
 	.fluidInputs(fluid('soldering_alloy') * 9216)
 	.outputs(metaitem('zbgt:mega_ocu'))
 	.duration(1200).EUt(VA[IV])
@@ -122,8 +124,7 @@ if (LabsModeHelper.normal) {
 			metaitem('field.generator.luv') * 16,
 			metaitem('springNaquadahAlloy') * 16,
 			metaitem('plateNaquadahAlloy') * 16,
-			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
-		)
+			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
 		.outputs(metaitem('zbgt:mega_ebf'))
 		.stationResearch(b -> b.researchStack(metaitem('gcym:mega_blast_furnace')).CWUt(16))
@@ -138,8 +139,7 @@ if (LabsModeHelper.normal) {
 			metaitem('field.generator.uv') * 16,
 			metaitem('springTritanium') * 16,
 			metaitem('plateTritanium') * 16,
-			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
-		)
+			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
 		.outputs(metaitem('zbgt:mega_ebf'))
 		.stationResearch(b -> b.researchStack(metaitem('gcym:mega_blast_furnace')).CWUt(128).EUt(VA[UHV]))
@@ -161,8 +161,7 @@ if (LabsModeHelper.normal) {
 			metaitem('field.generator.luv') * 16,
 			metaitem('pipeNormalFluidNaquadah') * 16,
 			metaitem('plateNaquadahAlloy') * 16,
-			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
-		)
+			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
 		.outputs(metaitem('zbgt:mega_vf'))
 		.stationResearch(b -> b.researchStack(metaitem('gcym:mega_vacuum_freezer')).CWUt(16))
@@ -177,8 +176,7 @@ if (LabsModeHelper.normal) {
 			metaitem('field.generator.uv') * 16,
 			metaitem('pipeNormalFluidDuranium') * 16,
 			metaitem('plateTritanium') * 16,
-			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
-		)
+			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
 		.outputs(metaitem('zbgt:mega_vf'))
 		.stationResearch(b -> b.researchStack(metaitem('gcym:mega_vacuum_freezer')).CWUt(128).EUt(VA[UHV]))
@@ -200,8 +198,7 @@ if (LabsModeHelper.normal) {
 			metaitem('field.generator.luv') * 16,
 			metaitem('nomilabs:ringAwakenedDraconium') * 16,
 			metaitem('nomilabs:plateAwakenedDraconium') * 16,
-			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
-		)
+			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
 		.outputs(metaitem('zbgt:mega_abs'))
 		.stationResearch(b -> b.researchStack(metaitem('gcym:alloy_blast_smelter')).CWUt(16))
@@ -216,8 +213,7 @@ if (LabsModeHelper.normal) {
 			metaitem('field.generator.uv') * 16,
 			metaitem('ringTritanium') * 16,
 			metaitem('nomilabs:plateTaranium') * 16,
-			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16
-		)
+			metaitem('wireGtHexUraniumRhodiumDinaquadide') * 16)
 		.fluidInputs(fluid('soldering_alloy') * 9216)
 		.outputs(metaitem('zbgt:mega_abs'))
 		.stationResearch(b -> b.researchStack(metaitem('gcym:alloy_blast_smelter')).CWUt(128).EUt(VA[UHV]))
@@ -228,7 +224,7 @@ if (LabsModeHelper.normal) {
 
 /* YOTTank Cells */
 // Add new recipes for YOTTank Cells
-crafting.shapedBuilder().name('zbgt:yottank_cell_0')
+crafting.shapedBuilder()
 	.output(item('zbgt:yottank_cell', 0))
 	.matrix('SFS',
 			'SHS',
@@ -239,49 +235,39 @@ crafting.shapedBuilder().name('zbgt:yottank_cell_0')
 	.key('C', ore('circuitLv'))
 	.register()
 
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(
-		item('gregtech:hermetic_casing', 3),
-		metaitem('field.generator.hv') * 2,
-		ore('circuitEv') * 4,
-		metaitem('plateTitanium') * 4
-	)
-	.outputs(item('zbgt:yottank_cell', 1))
-	.duration(100).EUt(VA[EV])
-	.buildAndRegister()
+for (var tinLike : [fluid('tin') * (L * 2), fluid('soldering_alloy') * L]) {
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(
+			item('gregtech:hermetic_casing', 3),
+			metaitem('field.generator.hv') * 2,
+			ore('circuitEv') * 4,
+			metaitem('plateTitanium') * 4)
+		.fluidInputs(tinLike)
+		.outputs(item('zbgt:yottank_cell', 1))
+		.duration(100).EUt(VA[EV])
+		.buildAndRegister()
+}
 
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(
-		item('gregtech:hermetic_casing', 5),
-		metaitem('field.generator.iv') * 2,
-		ore('circuitLuv') * 4,
-		metaitem('plateRhodiumPlatedPalladium') * 4
-	)
-	.fluidInputs(fluid('tin') * (144 * 4))
-	.outputs(item('zbgt:yottank_cell', 2))
-	.duration(100).EUt(VA[LuV])
-	.buildAndRegister()
-
-mods.gregtech.assembler.recipeBuilder()
-	.inputs(
-		item('gregtech:hermetic_casing', 5),
-		metaitem('field.generator.iv') * 2,
-		ore('circuitLuv') * 4,
-		metaitem('plateRhodiumPlatedPalladium') * 4
-	)
-	.fluidInputs(fluid('soldering_alloy') * (144 * 2))
-	.outputs(item('zbgt:yottank_cell', 2))
-	.duration(100).EUt(VA[LuV])
-	.buildAndRegister()
+for (var tinLike : [fluid('tin') * (L * 4), fluid('soldering_alloy') * (L * 2)]) {
+	mods.gregtech.assembler.recipeBuilder()
+		.inputs(
+			item('gregtech:hermetic_casing', 5),
+			metaitem('field.generator.iv') * 2,
+			ore('circuitLuv') * 4,
+			metaitem('plateRhodiumPlatedPalladium') * 4)
+		.fluidInputs(tinLike)
+		.outputs(item('zbgt:yottank_cell', 2))
+		.duration(100).EUt(VA[LuV])
+		.buildAndRegister()
+}
 
 mods.gregtech.assembly_line.recipeBuilder()
 	.inputs(
 		item('gregtech:hermetic_casing', 8),
 		metaitem('field.generator.uv') * 2,
 		ore('circuitUhv') * 4,
-		metaitem('plateEuropium') * 8
-	)
-	.fluidInputs(fluid('soldering_alloy') * (144 * 8), fluid('polybenzimidazole') * (144 * 8))
+		metaitem('plateEuropium') * 8)
+	.fluidInputs(fluid('soldering_alloy') * (L * 8), fluid('polybenzimidazole') * (L * 8))
 	.outputs(item('zbgt:yottank_cell', 3))
 	.stationResearch(b -> b.researchStack(item('zbgt:yottank_cell', 2)).CWUt(16).EUt(VA[UV]))
 	.duration(100).EUt(VA[UV])
@@ -300,74 +286,41 @@ addTooltip(item('zbgt:yottank_cell', 0), [
 	translatable('nomiceu.tooltip.yottank_cell.yottank_cell.2')
 ])
 
+for (int i = 1; i <= 3; i++) {
+	addTooltip(item('zbgt:yottank_cell', i), [
+		translatableEmpty(),
+		translatable('nomiceu.tooltip.yottank_cell.yottank_cell.1')
+	])
+}
 
-/* Unwrap craft for Wraps */
-def wraps = [
-	(metaitem('zbgt:wrapped.circuit.ulv')): metaitem('zbgt:generic_circuit.ulv'),
-	(metaitem('zbgt:wrapped.circuit.lv')): metaitem('zbgt:generic_circuit.lv'),
-	(metaitem('zbgt:wrapped.circuit.mv')): metaitem('zbgt:generic_circuit.mv'),
-	(metaitem('zbgt:wrapped.circuit.hv')): metaitem('zbgt:generic_circuit.hv'),
-	(metaitem('zbgt:wrapped.circuit.ev')): metaitem('zbgt:generic_circuit.ev'),
-	(metaitem('zbgt:wrapped.circuit.iv')): metaitem('zbgt:generic_circuit.iv'),
-	(metaitem('zbgt:wrapped.circuit.luv')): metaitem('zbgt:generic_circuit.luv'),
-	(metaitem('zbgt:wrapped.circuit.zpm')): metaitem('zbgt:generic_circuit.zpm'),
-	(metaitem('zbgt:wrapped.circuit.uv')): metaitem('zbgt:generic_circuit.uv'),
-	(metaitem('zbgt:wrapped.circuit.uhv')): metaitem('zbgt:generic_circuit.uhv'),
-	(metaitem('zbgt:wrapped.smd.capacitor')): metaitem('component.smd.capacitor'),
-	(metaitem('zbgt:wrapped.smd.diode')): metaitem('component.smd.diode'),
-	(metaitem('zbgt:wrapped.smd.inductor')): metaitem('component.smd.inductor'),
-	(metaitem('zbgt:wrapped.smd.resistor')): metaitem('component.smd.resistor'),
-	(metaitem('zbgt:wrapped.smd.transistor')): metaitem('component.smd.transistor'),
-	(metaitem('zbgt:wrapped.smd.advanced_capacitor')): metaitem('component.advanced_smd.capacitor'),
-	(metaitem('zbgt:wrapped.smd.advanced_diode')): metaitem('component.advanced_smd.diode'),
-	(metaitem('zbgt:wrapped.smd.advanced_inductor')): metaitem('component.advanced_smd.inductor'),
-	(metaitem('zbgt:wrapped.smd.advanced_resistor')): metaitem('component.advanced_smd.resistor'),
-	(metaitem('zbgt:wrapped.smd.advanced_transistor')): metaitem('component.advanced_smd.transistor'),
-	(metaitem('zbgt:wrapped.board.coated')): metaitem('board.coated'),
-	(metaitem('zbgt:wrapped.board.phenolic')): metaitem('board.phenolic'),
-	(metaitem('zbgt:wrapped.board.plastic')): metaitem('board.plastic'),
-	(metaitem('zbgt:wrapped.board.epoxy')): metaitem('board.epoxy'),
-	(metaitem('zbgt:wrapped.board.fiber_reinforced')): metaitem('board.fiber_reinforced'),
-	(metaitem('zbgt:wrapped.board.multilayer_fiber_reinforced')): metaitem('board.multilayer.fiber_reinforced'),
-	(metaitem('zbgt:wrapped.board.wetware')): metaitem('board.wetware'),
-	(metaitem('zbgt:wrapped.circuit_board.basic')): metaitem('circuit_board.basic'),
-	(metaitem('zbgt:wrapped.circuit_board.good')): metaitem('circuit_board.good'),
-	(metaitem('zbgt:wrapped.circuit_board.plastic')): metaitem('circuit_board.plastic'),
-	(metaitem('zbgt:wrapped.circuit_board.advanced')): metaitem('circuit_board.advanced'),
-	(metaitem('zbgt:wrapped.circuit_board.elite')): metaitem('circuit_board.elite'),
-	(metaitem('zbgt:wrapped.circuit_board.extreme')): metaitem('circuit_board.extreme'),
-	(metaitem('zbgt:wrapped.circuit_board.wetware')): metaitem('circuit_board.wetware'),
-	(metaitem('zbgt:wrapped.chip.soc_simple')): metaitem('plate.simple_system_on_chip'),
-	(metaitem('zbgt:wrapped.chip.soc')): metaitem('plate.system_on_chip'),
-	(metaitem('zbgt:wrapped.chip.soc_advanced')): metaitem('plate.advanced_system_on_chip'),
-	(metaitem('zbgt:wrapped.chip.soc_highly_advanced')): metaitem('plate.highly_advanced_system_on_chip'),
-	(metaitem('zbgt:wrapped.chip.cpu')): metaitem('plate.central_processing_unit'),
-	(metaitem('zbgt:wrapped.chip.cpu_nano')): metaitem('plate.nano_central_processing_unit'),
-	(metaitem('zbgt:wrapped.chip.cpu_qubit')): metaitem('plate.qbit_central_processing_unit'),
-	(metaitem('zbgt:wrapped.chip.pic_ultra_low')): metaitem('plate.ultra_low_power_integrated_circuit'),
-	(metaitem('zbgt:wrapped.chip.pic_low')): metaitem('plate.low_power_integrated_circuit'),
-	(metaitem('zbgt:wrapped.chip.pic')): metaitem('plate.power_integrated_circuit'),
-	(metaitem('zbgt:wrapped.chip.pic_high')): metaitem('plate.high_power_integrated_circuit'),
-	(metaitem('zbgt:wrapped.chip.pic_ultra_high')): metaitem('plate.ultra_high_power_integrated_circuit'),
-	(metaitem('zbgt:wrapped.chip.ram')): metaitem('plate.random_access_memory'),
-	(metaitem('zbgt:wrapped.chip.nor')): metaitem('plate.nor_memory_chip'),
-	(metaitem('zbgt:wrapped.chip.nand')): metaitem('plate.nand_memory_chip'),
-	(metaitem('zbgt:wrapped.chip.integrated_logic')): metaitem('plate.integrated_logic_circuit'),
-	(metaitem('zbgt:wrapped.misc.neuro_processor')): metaitem('processor.neuro'),
-	(metaitem('zbgt:wrapped.misc.engraved_crystal_chip')): metaitem('engraved.crystal_chip'),
-	(metaitem('zbgt:wrapped.misc.crystal_cpu')): metaitem('crystal.central_processing_unit'),
-	(metaitem('zbgt:wrapped.misc.crystal_soc')): metaitem('crystal.system_on_chip')
-]
+/* Unwrap Craft for Wraps (Excl. Circuits) */
+for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').getItem().getAllItems()) {
+	if (!meta.unlocalizedName.startsWith('wrapped.') || meta.unlocalizedName.startsWith('wrapped.circuit.')) continue
 
-wraps.each { wrap, output ->
+	List<Recipe> recipes = mods.gregtech.assembler.findByOutput([meta.getStackForm()], null)
+
+	if (recipes == null)
+		println "ZBGT Addon Script: Could not find recipes for wrap ${meta.unlocalizedName}!"
+
+	for (Recipe recipe : recipes) {
+		mods.gregtech.assembler.recipeBuilder()
+			.inputs(meta.getStackForm())
+			.circuitMeta(1)
+			.outputs(recipe.getInputs().get(0).inputStacks[0]) // First input, first accepted stack
+			.duration(100).EUt(VA[LV])
+			.buildAndRegister()
+	}
+}
+
+/* Unwrap Craft for Circuits */
+for (var tier : Common.getVoltageNames(ULV, UHV)) {
 	mods.gregtech.assembler.recipeBuilder()
-		.inputs(wrap)
+		.inputs(metaitem("zbgt:wrapped.circuit.${tier}"))
 		.circuitMeta(1)
-		.outputs(output * 16)
+		.outputs(metaitem("zbgt:generic_circuit.${tier}")) // Circuit Wraps contain one circuit only
 		.duration(100).EUt(VA[LV])
 		.buildAndRegister()
 }
-
 
 /* Cells */
 // Remove unused cells from JEI
@@ -390,7 +343,7 @@ mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.60k.nak'))
 mods.gregtech.canner.removeByOutput([metaitem('zbgt:coolant_cell.180k.nak')], null)
 mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.180k.nak'))
 
-// Remove smaller single craft cells, and compley 60K cell craft
+// Remove smaller single craft cells, and complex 60K cell craft
 mods.gregtech.assembler.removeByOutput([metaitem('zbgt:coolant_cell.10k')], null)
 mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.10k'))
 mods.gregtech.assembler.removeByOutput([metaitem('zbgt:coolant_cell.30k')], null)
@@ -402,77 +355,112 @@ mods.gregtech.assembler.removeByInput(120, [
 		metaitem('circuit.integrated').withNbt(['Configuration': 1])
 	], null)
 
-
 /* Dropper Cover Assembler recipes */
-def dropperCoverTiers = ['lv': VA[LV], 'mv': VA[MV], 'hv': VA[HV], 'ev': VA[EV], 'iv': VA[IV]]
-
-dropperCoverTiers.each { tier, eut ->
+for (var tier : LV..IV) {
+	var name = VN[tier].toLowerCase()
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(
-			metaitem("conveyor.module.${tier}"),
+			metaitem("conveyor.module.${name}"),
 			item('minecraft:dropper'),
-			ore("circuit${tier.capitalize()}"),
-			metaitem("electric.piston.${tier}")
-		)
-		.outputs(metaitem("zbgt:cover.cover_dropper.${tier}"))
-		.duration(200).EUt(eut)
+			ore("circuit${name.capitalize()}"),
+			metaitem("electric.piston.${name}"))
+		.outputs(metaitem("zbgt:cover.cover_dropper.${name}"))
+		.duration(200).EUt(VA[tier])
 		.buildAndRegister()
 }
 
-// Remove higher tier blocks from JEI
-mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 9)) // Component Assembly Line Casing (UHV)
-mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 10)) // Component Assembly Line Casing (UEV)
-mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 11)) // Component Assembly Line Casing (UIV)
-mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 12)) // Component Assembly Line Casing (UXV)
-mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 13)) // Component Assembly Line Casing (OpV)
-mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', 14)) // Component Assembly Line Casing (MAX)
+/* CoAL */
 
-// CoAL recipe fixes
-// ZPM and UV Field gen recipe removal
-mods.gregtech.coal_recipes.removeByOutput([metaitem('field.generator.zpm')], null)
-mods.gregtech.coal_recipes.removeByOutput([metaitem('field.generator.uv')], null)
+/* Remove UHV+ CoAL blocks from JEI */
+for (var tier : UHV..MAX) {
+	mods.jei.ingredient.removeAndHide(item('zbgt:coal_casing', tier))
+}
 
-// ZPM field gen fix
+/* CoAL Recipe Fixes */
+
+// ULV Covers
+// ZBGT generates recipes using the 'hard' ulv cover recipes.
 mods.gregtech.coal_recipes.recipeBuilder()
 	.inputs(
-		metaitem('quantumstar') * 48,
-		metaitem('frameNaquadahAlloy') * 48,
-		metaitem('plateDenseNaquadahAlloy') * 32,
-		metaitem('cableGtHexVanadiumGallium') * 48,
-		metaitem('emitter.zpm') * 96,
-		ore('circuitZpm') * 384,
-	)
-	.fluidInputs(
-		fluid('soldering_alloy') * 55296,
-	        fluid('uranium_rhodium_dinaquadide') * 110592,
-		fluid('awakened_draconium') * 62208,
-	)
-	.circuitMeta(8)
-	.outputs(metaitem('field.generator.zpm') * 64)
-	.duration(28800).EUt(VA[LuV])
-	.CasingTier(7)
-	.CWUt(32)
-	.buildAndRegister()
+		ore('stickLongBronze') * 24,
+		ore('wireGtHexTin') * 6,
+		ore('stickLongIronMagnetic') * 24)
+	.circuitMeta(1)
+	.outputs(metaitem('ulv_covers:electric.motor.ulv') * 64)
+	.duration(600).EUt(VA[ULV])
+	.replace().buildAndRegister()
 
-// UV field gen fix
 mods.gregtech.coal_recipes.recipeBuilder()
 	.inputs(
-		metaitem('gravistar') * 48,
-		metaitem('frameTritanium') * 48,
-		metaitem('plateDenseTritanium') * 32,
-		metaitem('cableGtHexYttriumBariumCuprate') * 48,
-		metaitem('emitter.uv') * 96,
-		ore('circuitUv') * 384,
-	)
-	.fluidInputs(
-		fluid('soldering_alloy') * 82944,
-		fluid('enriched_naquadah_trinium_europium_duranide') * 110592,
-		fluid('naquadria') * 27648,
-		fluid('taranium') * 13824,
-	)
-	.circuitMeta(8)
-	.outputs(metaitem('field.generator.uv') * 64)
-	.duration(28800).EUt(VA[ZPM])
-	.CasingTier(8)
-	.CWUt(64)
-	.buildAndRegister()
+		ore('gearBronze') * 12,
+		ore('stickLongBronze') * 24,
+		metaitem('ulv_covers:electric.motor.ulv') * 48,
+		ore('plateDoubleBronze') * 24)
+	.circuitMeta(2)
+	.outputs(metaitem('ulv_covers:electric.piston.ulv') * 64)
+	.duration(600).EUt(VA[ULV])
+	.replace().buildAndRegister()
+
+var pumpBuilder = mods.gregtech.coal_recipes.recipeBuilder()
+	.inputs(
+		ore('rotorBronze') * 48,
+		ore('pipeNormalFluidBronze') * 16,
+		metaitem('ulv_covers:electric.motor.ulv') * 48)
+	.circuitMeta(3)
+	.outputs(metaitem('ulv_covers:electric.pump.ulv') * 64)
+	.duration(600).EUt(VA[ULV])
+	.replace() // Removes the original recipe, once
+
+for (var rubber : [fluid('rubber'), fluid('silicone_rubber'), fluid('styrene_butadiene_rubber')]) {
+	pumpBuilder.copy()
+		.fluidInputs(rubber * (L / 4 * 48))
+		.buildAndRegister()
+}
+
+mods.gregtech.coal_recipes.recipeBuilder()
+	.inputs(
+		ore('circuitUlv') * 48,
+		ore('stickLongBronze') * 24,
+		metaitem('ulv_covers:electric.piston.ulv') * 48,
+		metaitem('ulv_covers:electric.motor.ulv') * 48)
+	.circuitMeta(4)
+	.outputs(metaitem('ulv_covers:robot.arm.ulv') * 64)
+	.duration(600).EUt(VA[ULV])
+	.replace().buildAndRegister()
+
+mods.gregtech.coal_recipes.changeByOutput([metaitem('ulv_covers:conveyor.module.ulv')], null)
+	// Don't copy properties; ULV components have none
+	.forEach { ChangeRecipeBuilder builder ->
+		// Remove Original
+		builder.builder{ it.replace() }
+
+		for (var rubber : [fluid('rubber'), fluid('silicone_rubber'), fluid('styrene_butadiene_rubber')]) {
+			builder.copyOriginal()
+				.changeInputs {
+					it.set(0, it.get(0).copyWithAmount((int) (it.get(0).getAmount() / 2))) // Reduce motor amt to half
+				}.builder { RecipeBuilder recipe ->
+					recipe.clearFluidInputs()
+						.fluidInputs(rubber * (L * 2 * 48))
+						.circuitMeta(5)
+				}.buildAndRegister()
+		}
+	}
+
+// Field Generators (ZPM, UV (HM Only))
+mods.gregtech.coal_recipes.changeByOutput([metaitem('field.generator.zpm')], null)
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.builder { RecipeBuilder recipe ->
+			recipe.fluidInputs(fluid('awakened_draconium') * (L * 9 * 48)) // Original Amount x 48 (64 production, 3/4 discount)
+		}.copyProperties(CoALProperty.instance, ComputationProperty.instance) // CoAL supports total computation, but never used
+		.replaceAndRegister()
+	}
+
+if (LabsModeHelper.expert) {
+	mods.gregtech.coal_recipes.changeByOutput([metaitem('field.generator.zpm')], null)
+		.forEach { ChangeRecipeBuilder builder ->
+			builder.builder { RecipeBuilder recipe ->
+				recipe.fluidInputs(fluid('taranium') * (L * 2 * 48)) // Original Amount x 48 (64 production, 3/4 discount)
+			}.copyProperties(CoALProperty.instance, ComputationProperty.instance) // CoAL supports total computation, but never used
+			.replaceAndRegister()
+		}
+}
