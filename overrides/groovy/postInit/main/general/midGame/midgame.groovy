@@ -1,5 +1,6 @@
 package postInit.main.general.midGame
 
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.chance.output.impl.ChancedItemOutput
@@ -89,13 +90,38 @@ mods.gregtech.macerator.recipeBuilder()
 
 // Rock Breaker Recipes for Netherrack and Endstone (HV and LuV)
 mods.gregtech.rock_breaker.recipeBuilder()
-	.notConsumable(item('minecraft:netherrack'))
+	.notConsumable(item('nomilabs:solidifiedneon'))
 	.outputs(item('minecraft:netherrack'))
 	.duration(16).EUt(VA[HV])
 	.buildAndRegister()
 
 mods.gregtech.rock_breaker.recipeBuilder()
-	.notConsumable(item('minecraft:end_stone'))
+	.notConsumable(item('nomilabs:solidifiedkrypton'))
 	.outputs(item('minecraft:end_stone'))
 	.duration(16).EUt(VA[LuV])
 	.buildAndRegister()
+
+/* Netherrack & Endstone Dust Processing Changes */
+
+// Add Lava to Netherrack Centrifuging
+mods.gregtech.centrifuge.changeByInput([metaitem('dustNetherrack')], null)
+	.builder { RecipeBuilder recipe ->
+		recipe.fluidOutputs(fluid('lava') * 120)
+	}.replaceAndRegister()
+
+// Endstone Maceration: Replace Tungstate with Ender Pearl
+mods.gregtech.macerator.changeByInput([item('minecraft:end_stone')], null)
+	.builder { RecipeBuilder recipe ->
+		recipe.clearChancedOutput()
+			.chancedOutput(metaitem('dustTinyEnderPearl'), 500, 120)
+	}.replaceAndRegister()
+
+// Endstone Centrifusion: Change Output Amounts and Chances
+mods.gregtech.centrifuge.changeByInput([metaitem('dustEndstone')], null)
+	.builder { RecipeBuilder recipe ->
+		recipe.clearOutputs()
+			.clearChancedOutput()
+			.outputs(item('minecraft:sand'), metaitem('dustSmallTungstate'))
+			.chancedOutput(metaitem('dustTinyPlatinum'), 5000, 2000)
+			.duration(40).EUt(LabsModeHelper.expert ? VA[IV] : VA[EV])
+	}.replaceAndRegister()

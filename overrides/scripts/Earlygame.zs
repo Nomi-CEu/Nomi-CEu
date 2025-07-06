@@ -244,11 +244,6 @@ assembler.recipeBuilder().inputs(<minecraft:bone> * 4).circuit(14).outputs(<mine
 
 forge_hammer.recipeBuilder().inputs([<minecraft:sand>]).outputs([<nomilabs:block_dust>]).duration(16).EUt(10).buildAndRegister();
 
-// Endstone Dust * 1
-<recipemap:macerator>.findRecipe(2, [<minecraft:end_stone:0>], null).remove();
-
-macerator.recipeBuilder().inputs([<ore:endstone>.firstItem]).outputs([<ore:dustEndstone>.firstItem]).duration(16).EUt(10).buildAndRegister();
-
 // Battery Alloy
 recipes.addShapeless(<metaitem:dustBatteryAlloy> * 4, [<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustLead>,<ore:dustAntimony>]);
 
