@@ -1,6 +1,6 @@
 package postInit.main.modSpecific.ae2
 
-import classes.postInit.Common
+import classes.Common
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 
 import static gregtech.api.GTValues.*

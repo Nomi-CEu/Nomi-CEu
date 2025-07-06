@@ -1,4 +1,4 @@
-package classes.postInit
+package classes
 
 import gregtech.api.GTValues
 import net.minecraft.item.ItemStack
