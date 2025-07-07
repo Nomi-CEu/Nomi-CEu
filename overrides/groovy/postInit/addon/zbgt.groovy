@@ -12,6 +12,7 @@ import gregtech.api.recipes.Recipe
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.recipeproperties.ComputationProperty
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 
@@ -368,6 +369,33 @@ for (var tier : LV..IV) {
 		.duration(200).EUt(VA[tier])
 		.buildAndRegister()
 }
+
+/* Circuit Assembly Line */
+
+// EV: Tier 1 (Workstation)
+mods.gregtech.circuit_assembly_line_recipes.changeByOutput([metaitem('circuit.workstation')], null)
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.changeInput(-1) {
+				toGtInput(ore('stickVibrantAlloy') * 64)
+			}.replaceAndRegister()
+	}
+
+// IV: Tier 2 (Nano Supercomputer)
+mods.gregtech.circuit_assembly_line_recipes.changeByOutput([metaitem('circuit.nano_computer')], null)
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.removeInputs(-1, -2)
+			.builder { RecipeBuilder recipe ->
+				recipe.inputs(ore('wireGtHexLumium'), ore('wireGtHexTungstenSteel') * 2)
+			}.replaceAndRegister()
+	}
+
+// ZPM: Tier 2 (Crystal Supercomputer)
+mods.gregtech.circuit_assembly_line_recipes.changeByOutput([metaitem('circuit.crystal_computer')], null)
+	.forEach { ChangeRecipeBuilder builder ->
+		builder.changeInput(-1) {
+				toGtInput(ore('wireGtHexEnderium') * 4)
+			}.replaceAndRegister()
+	}
 
 /* CoAL */
 
