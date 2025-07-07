@@ -230,7 +230,7 @@ if (LabsModeHelper.normal) {
 	// 1k Fluid Storage
 	crafting.removeByOutput(item('appliedenergistics2:material', 54))
 	mods.gregtech.assembler.recipeBuilder()
-		.inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 22), ore('circuitHv') * 2)
+		.inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 22), ore('circuitEv') * 2)
 		.outputs(item('appliedenergistics2:material', 54))
 		.duration(100).EUt(VHA[EV])
 		.buildAndRegister()
