@@ -350,7 +350,7 @@ mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.10k'))
 mods.gregtech.assembler.removeByOutput([metaitem('zbgt:coolant_cell.30k')], null)
 mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.30k'))
 
-mods.gregtech.assembler.removeByInput(120, [
+mods.gregtech.assembler.removeByInput([
 		metaitem('zbgt:coolant_cell.30k') * 2, // 30K Cell * 2
 		metaitem('plateTin') * 8, // Tin Plates * 8
 		metaitem('circuit.integrated').withNbt(['Configuration': 1])
