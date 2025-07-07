@@ -79,3 +79,6 @@ export const portQB = gulp.series(qbPort.default, fixQB);
 
 import * as qbInfo from "./tasks/helpers/questInfo/index.ts";
 export const infoQB = qbInfo.default;
+
+import * as labs from "./tasks/misc/updateLabs.ts";
+export const updateLabs = labs.updateLabs;

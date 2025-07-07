@@ -1,0 +1,68 @@
+name: Update Nomi Labs [AUTO]
+
+on:
+  repository_dispatch:
+    types: [labs_released]
+
+env:
+  VER: ${{ github.event.client_payload.ver }}
+  ID: ${{ github.event.client_payload.id }}
+
+jobs:
+  updateLabsAndPR:
+    name: Update Nomi Labs (${{ github.event.client_payload.ver }})
+    runs-on: ubuntu-latest
+    if: ${{ github.repository_owner == 'Nomi-CEu' }}
+    steps:
+      - name: Get Token
+        id: token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_KEY }}
+          owner: Nomi-CEu
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: refs/heads/main
+          fetch-depth: 0
+
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
+        with:
+          path: |
+            ~/.npm
+            ./tools/node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
+
+      - name: Setup NodeJS v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          check-latest: true
+
+      - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Update Labs
+        working-directory: ./tools
+        run: npm run gulp updateLabs
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ steps.token.outputs.token }}
+          commit-message: Update Nomi Labs to ${{ env.VER }}
+          committer: nomi-ceu-management[bot] <155502507+nomi-ceu-management[bot]@users.noreply.github.com>
+          author: nomi-ceu-management[bot] <155502507+nomi-ceu-management[bot]@users.noreply.github.com>
+          branch: labs-update/${{ env.VER }}
+          title: Update Nomi Labs to ${{ env.VER }}
+          body: |
+            Automatic Pull Request created to update Nomi Labs.
+            New Version: ${{ env.VER }}
+          labels: auto-creation
