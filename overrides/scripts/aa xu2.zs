@@ -365,7 +365,7 @@ recipes.addShaped(<extrautils2:drum:2>, [
 	
 //Demonic	
 recipes.removeByRecipeName("extrautils2:drum_65536");
-mods.extendedcrafting.TableCrafting.addShaped(<extrautils2:drum:3>,[
+mods.extendedcrafting.TableCrafting.addShaped(2, <extrautils2:drum:3>,[
 	[<extrautils2:simpledecorative:1>,<moreplates:demon_plate>,<moreplates:demon_plate>,<moreplates:demon_plate>,<extrautils2:simpledecorative:1>],
 	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
 	[<extrautils2:simpledecorative:1>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:drum:2>,<metaitem:plateDoubleWatertightSteel>,<extrautils2:simpledecorative:1>],
