@@ -11,6 +11,9 @@ jobs:
       - name: Checkout Ref
         uses: actions/checkout@v4
 
+      - name: Check Line Endings
+        uses: erclu/check-crlf@v1
+
       - name: Restore NPM Cached Files
         uses: actions/cache@v4
         id: npm-cache

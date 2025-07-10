@@ -206,27 +206,27 @@ recipes.addShaped(<armorplus:knight_slime_boots>, [
 var obs = <armorplus:lava_infused_obsidian>;
 var cry = <armorplus:lava_crystal:1>;
 var stick = <ore:stickWood>;
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:infused_lava_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:infused_lava_helmet>, [
 [obs,obs,cry,obs,obs],
 [cry,null,null,null,cry],
 [cry,null,null,null,cry]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:infused_lava_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:infused_lava_chestplate>, [
 [cry,null,null,null,cry],
 [cry,null,null,null,cry],
 [obs,obs,obs,obs,obs],
 [obs,cry,obs,cry,obs],
 [obs,obs,obs,obs,obs]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:infused_lava_leggings>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:infused_lava_leggings>, [
 [obs,obs,obs,obs,obs],
 [obs,cry,cry,cry,obs],
 [cry,null,null,null,cry],
 [cry,null,null,null,cry],
 [cry,null,null,null,cry]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:infused_lava_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:infused_lava_boots>, [
 [obs,null,null,null,obs],
 [obs,null,null,null,obs],
 [cry,null,null,null,cry]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:infused_lava_sword>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:infused_lava_sword>, [
 [null,null,cry,null,null],
 [null,null,cry,null,null],
 [null,null,cry,null,null],
@@ -235,23 +235,23 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:infused_lava_sword>, [
 
 //Obsidian
 var obsidian = <minecraft:obsidian>;
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:obsidian_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:obsidian_helmet>, [
 [obsidian,obsidian,obsidian,obsidian,obsidian],
 [obsidian,null,null,null,obsidian],
 [obsidian,null,null,null,obsidian]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:obsidian_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:obsidian_chestplate>, [
 [obsidian,null,null,null,obsidian],
 [obsidian,null,null,null,obsidian],
 [obsidian,obsidian,obsidian,obsidian,obsidian],
 [obsidian,obsidian,obsidian,obsidian,obsidian],
 [obsidian,obsidian,obsidian,obsidian,obsidian]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:obsidian_leggings>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:obsidian_leggings>, [
 [obsidian,obsidian,obsidian,obsidian,obsidian],
 [obsidian,obsidian,obsidian,obsidian,obsidian],
 [obsidian,null,null,null,obsidian],
 [obsidian,null,null,null,obsidian],
 [obsidian,null,null,null,obsidian]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:obsidian_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:obsidian_boots>, [
 [null,obsidian,null,obsidian,null],
 [null,obsidian,null,obsidian,null],
 [obsidian,obsidian,null,obsidian,obsidian]]);
@@ -264,27 +264,27 @@ recipes.addShaped(<armorplus:obsidian_sword>, [
 //Emerald
 var emer = <metaitem:plateEmerald>;
 var em = <minecraft:emerald>;
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:emerald_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:emerald_helmet>, [
 [emer,emer,em,emer,emer],
 [em,null,null,null,em],
 [em,null,null,null,em]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:emerald_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:emerald_chestplate>, [
 [em,null,null,null,em],
 [em,null,null,null,em],
 [emer,emer,emer,emer,emer],
 [emer,em,emer,em,emer],
 [emer,emer,emer,emer,emer]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:emerald_leggings>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:emerald_leggings>, [
 [emer,emer,emer,emer,emer],
 [emer,em,em,em,emer],
 [em,null,null,null,em],
 [em,null,null,null,em],
 [em,null,null,null,em]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:emerald_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:emerald_boots>, [
 [emer,null,null,null,emer],
 [emer,null,null,null,emer],
 [em,null,null,null,em]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:emerald_sword>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:emerald_sword>, [
 [null,null,emer,null,null],
 [null,null,emer,null,null],
 [null,null,emer,null,null],
@@ -297,12 +297,12 @@ var sca = <armorplus:material:1>;
 var chip = <minecraft:prismarine_crystals>;
 var shard = <minecraft:prismarine_shard>;
 var block = <minecraft:prismarine>;
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:guardian_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:guardian_helmet>, [
 [sca,chip,sca,chip,sca,chip,sca],
 [sca,block,null,sea,null,block,sca],
 [sca,null,null,null,null,null,sca],
 [sea,null,null,null,null,null,sea]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:guardian_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:guardian_chestplate>, [
 [sea,null,null,null,null,null,sea],
 [sca,null,null,null,null,null,sca],
 [sca,null,null,null,null,null,sca],
@@ -310,7 +310,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:guardian_chestplate>, [
 [sca,sca,block,sea,block,sca,sca],
 [sca,sca,block,sea,block,sca,sca],
 [chip,sca,sca,block,sca,sca,chip]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:guardian_leggings>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:guardian_leggings>, [
 [sea,sca,chip,sca,chip,sca,sea],
 [sca,block,block,sea,block,block,sca],
 [sca,block,null,null,null,block,sca],
@@ -318,12 +318,12 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:guardian_leggings>, [
 [sca,block,null,null,null,block,sca],
 [sca,block,null,null,null,block,sca],
 [chip,chip,null,null,null,chip,chip]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:guardian_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:guardian_boots>, [
 [sca,chip,null,null,null,chip,sca],
 [sca,chip,null,null,null,chip,sca],
 [sca,chip,null,null,null,chip,sca],
 [sea,sea,null,null,null,sea,sea]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:guardian_sword>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:guardian_sword>, [
 [null,null,sca,null,null],
 [null,null,sca,null,null],
 [null,null,sca,null,null],
@@ -336,13 +336,13 @@ var scale = <armorplus:material:3>;
 var cryst = <minecraft:end_crystal>;
 var ends = <minecraft:end_stone>;
 var compobs = <armorplus:compressed_obsidian>;
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:ender_dragon_helmet>, [
 [null,null,scale,scale,scale,null,null],
 [null,scale,scale,scale,scale,scale,null],
 [scale,cryst,cryst,scale,cryst,cryst,scale],
 [scale,scale,scale,<redstonearsenal:armor.helmet_flux>,scale,scale,scale],
 [null,scale,null,null,null,scale,null]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:ender_dragon_chestplate>, [
 [null,scale,null,null,null,scale,null],
 [scale,scale,scale,null,scale,scale,scale],
 [scale,scale,scale,scale,scale,scale,scale],
@@ -350,7 +350,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_chestplate
 [scale,scale,cryst,<redstonearsenal:armor.plate_flux>,cryst,scale,scale],
 [null,scale,scale,cryst,scale,scale,null],
 [null,scale,scale,scale,scale,scale,null]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_leggings>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:ender_dragon_leggings>, [
 [null,scale,cryst,<redstonearsenal:armor.legs_flux>,cryst,scale,null],
 [scale,scale,scale,scale,scale,scale,scale],
 [scale,scale,null,null,null,scale,scale],
@@ -358,12 +358,12 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_leggings>,
 [eye,eye,null,null,null,eye,eye],
 [eye,eye,null,null,null,eye,eye],
 [scale,scale,null,null,null,scale,scale]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:ender_dragon_boots>, [
 [eye,eye,null,<redstonearsenal:armor.boots_flux>,null,eye,eye],
 [scale,scale,null,null,null,scale,scale],
 [scale,scale,null,null,null,scale,scale],
 [cryst,cryst,null,null,null,cryst,cryst]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_battle_axe>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:ender_dragon_battle_axe>, [
 [null,null,null,compobs,scale,null,null],
 [null,null,compobs,scale,scale,ends,null],
 [null,null,scale,scale,<redstonearsenal:tool.axe_flux>,scale,scale],
@@ -371,7 +371,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_battle_axe
 [null,null,ends,null,scale,compobs,null],
 [null,ends,null,null,null,null,null],
 [ends,null,null,null,null,null,null]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_sword>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:ender_dragon_sword>, [
 [null,null,null,null,null,scale,scale],
 [null,null,null,null,scale,scale,scale],
 [compobs,null,null,scale,scale,scale,null],
@@ -385,12 +385,12 @@ var star = <minecraft:nether_star>;
 var bone = <armorplus:material:2>;
 var sand = <minecraft:soul_sand>;
 
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:super_star_helmet>, [
 [sand,bone,bone,<armorplus:obsidian_helmet>,bone,bone,sand],
 [bone,star,null,null,null,star,bone],
 [bone,null,null,null,null,null,bone],
 [star,null,null,null,null,null,star]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:super_star_chestplate>, [
 [star,null,null,null,null,null,star],
 [star,null,null,null,null,null,star],
 [bone,null,null,null,null,null,bone],
@@ -398,7 +398,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_chestplate>,
 [bone,bone,star,<armorplus:obsidian_chestplate>,star,bone,bone],
 [bone,bone,sand,star,sand,bone,bone],
 [bone,bone,bone,bone,bone,bone,bone]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_leggings>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:super_star_leggings>, [
 [sand,bone,bone,<armorplus:obsidian_leggings>,bone,bone,sand],
 [bone,sand,sand,star,sand,sand,bone],
 [star,sand,null,null,null,sand,star],
@@ -406,12 +406,12 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_leggings>, [
 [star,sand,null,null,null,sand,star],
 [bone,sand,null,null,null,sand,bone],
 [star,star,null,null,null,star,star]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:super_star_boots>, [
 [null,star,null,<armorplus:obsidian_boots>,null,star,null],
 [null,bone,null,null,null,bone,null],
 [null,bone,null,null,null,bone,null],
 [sand,sand,null,null,null,sand,sand]]);
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_sword>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:super_star_sword>, [
 [null,null,null,null,null,star,star],
 [null,null,null,null,star,star,star],
 [compobs,null,null,star,star,star,null],
@@ -432,7 +432,7 @@ recipes.addShaped(<armorplus:emerald_bow>, [
 [null,<metaitem:stickEmerald>,null,null,<minecraft:string>],
 [null,null,<metaitem:stickEmerald>,<metaitem:stickEmerald>,<minecraft:string>]]);
 
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_bow>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:ender_dragon_bow>, [
 [null,null,null,<armorplus:material:3>,<armorplus:material:3>,<armorplus:material:3>,null],
 [null,null,<armorplus:material:3>,<armorplus:material:3>,null,<minecraft:dragon_breath>,null],
 [null,<redstonearsenal:tool.bow_flux>,null,null,null,<minecraft:dragon_breath>,null],
@@ -441,7 +441,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:ender_dragon_bow>, [
 [null,null,<armorplus:material:3>,<armorplus:material:3>,null,<minecraft:dragon_breath>,null],
 [null,null,null,<armorplus:material:3>,<armorplus:material:3>,<armorplus:material:3>,null]]);
 	
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_bow>, [
+mods.extendedcrafting.TableCrafting.addShaped(3, <armorplus:super_star_bow>, [
 [null,null,null,bone,bone,bone,null],
 [null,null,bone,bone,null,star,null],
 [null,bone,null,null,null,star,null],
@@ -453,7 +453,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:super_star_bow>, [
 	
 //Ultimate Helmet
 //Left		
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part>, [
 	[null,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null], 
 	[null,null,null,<armorplus:lapis_helmet>,<enderio:block_reinforced_obsidian>], 
 	[null,null,null,<armorplus:knight_slime_helmet>,<enderio:block_reinforced_obsidian>], 
@@ -461,7 +461,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part>, [
 	[null,null,null,<metaitem:quantumstar>,<enderio:block_reinforced_obsidian>]]);
 	
 //Middle
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:1>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:1>, [
 	[null,null,<enderio:block_reinforced_obsidian>,null,null], 
 	[null,<enderio:block_reinforced_obsidian>,<armorplus:super_star_helmet>,<enderio:block_reinforced_obsidian>,null], 
 	[<enderio:block_reinforced_obsidian>,<armorplus:cobalt_helmet>,<armorplus:manyullyn_helmet>,<armorplus:ardite_helmet>,<enderio:block_reinforced_obsidian>],
@@ -469,14 +469,14 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:1>, [
 	[null,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null]]);
 	
 //Right
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:2>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:2>, [
 	[null,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null], 
 	[<enderio:block_reinforced_obsidian>,<armorplus:redstone_helmet>,null,null,null], 
 	[<enderio:block_reinforced_obsidian>,<armorplus:infused_lava_helmet>,null,null,null], 
 	[<enderio:block_reinforced_obsidian>,<armorplus:emerald_helmet>,null,null,null], 
 	[<enderio:block_reinforced_obsidian>,<metaitem:quantumstar>,null,null,null]]);
 
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <armorplus:the_ultimate_helmet>, [
 [null,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,null],
 [null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null],
 [null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<nomilabs:ultimate_gem>,<armorplus:the_ultimate_part:1>,<nomilabs:ultimate_gem>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null],
@@ -489,7 +489,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_helmet>, [
 
 //Infinity Helmet	
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_helmet>);
-mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_helmet>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <avaritia:infinity_helmet>, [
 [null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null],
 [null,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<draconicevolution:draconic_helm>,<armorplus:the_ultimate_helmet>,<armorplus:the_ultimate_helmet>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<ore:ingotInfinity>,<ore:ingotInfinity>,<metaitem:qts.helmet>,<ore:ingotInfinity>,<ore:ingotInfinity>,<metaitem:ingotNeutronium>,null],
@@ -507,7 +507,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_helmet>, [
 
 //Ultimate Chestplate
 //Left		
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:5>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:5>, [
 	[<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null,null],
 	[<enderio:block_reinforced_obsidian>,<metaitem:quantumstar>,<armorplus:lapis_chestplate>,null,null],
 	[<enderio:block_reinforced_obsidian>,<armorplus:knight_slime_chestplate>,<armorplus:coal_chestplate>,null,null],
@@ -515,7 +515,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:5>, [
 	[null,null,null,null,null]]);
 	
 //Middle
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:4>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:4>, [
 	[null,null,null,null,null],
 	[null,<enderio:block_reinforced_obsidian>,<armorplus:super_star_chestplate>,<enderio:block_reinforced_obsidian>,null], 
 	[<enderio:block_reinforced_obsidian>,<armorplus:cobalt_chestplate>,<armorplus:manyullyn_chestplate>,<armorplus:ardite_chestplate>,<enderio:block_reinforced_obsidian>],
@@ -523,14 +523,14 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:4>, [
 	[null,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null]]);
 	
 //Right
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:3>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:3>, [
 	[null,null,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>],
 	[null,null,<armorplus:redstone_chestplate>,<metaitem:quantumstar>,<enderio:block_reinforced_obsidian>],
 	[null,null,<armorplus:infused_lava_chestplate>,<armorplus:emerald_chestplate>,<enderio:block_reinforced_obsidian>],
 	[null,null,null,null,null],
 	[null,null,null,null,null]]);
 	
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <armorplus:the_ultimate_chestplate>, [
 [null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,null,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null],
 [<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,null,null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,null,null,null,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>],
@@ -543,7 +543,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_chestplate
 
 //Infinity Chestplate
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_chestplate>);
-mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_chestplate>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <avaritia:infinity_chestplate>, [
 [null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null],
 [<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,null,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
 [<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
@@ -557,7 +557,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_chestplate>, [
 
 //Ultimate Leggings
 //Left		
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:8>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:8>, [
 	[<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>,null,null,null],
 	[<enderio:block_reinforced_obsidian>,<armorplus:lapis_leggings>,null,null,null],
 	[<enderio:block_reinforced_obsidian>,<armorplus:knight_slime_leggings>,null,null,null],
@@ -565,7 +565,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:8>, [
 	[<enderio:block_reinforced_obsidian>,<armorplus:coal_leggings>,null,null,null]]);
 	
 //Middle
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:7>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:7>, [
 	[<enderio:block_reinforced_obsidian>,<metaitem:quantumstar>,<armorplus:super_star_leggings>,<metaitem:quantumstar>,<enderio:block_reinforced_obsidian>],
 	[<enderio:block_reinforced_obsidian>,<armorplus:cobalt_leggings>,<armorplus:manyullyn_leggings>,<armorplus:ardite_leggings>,<enderio:block_reinforced_obsidian>], 
 	[<enderio:block_reinforced_obsidian>,<enderio:item_dark_steel_leggings>,<armorplus:guardian_leggings>,<enderio:item_end_steel_leggings>,<enderio:block_reinforced_obsidian>],
@@ -573,14 +573,14 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:7>, [
 	[null,null,null,null,null]]);
 	
 //Right
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:6>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:6>, [
 	[null,null,null,<enderio:block_reinforced_obsidian>,<enderio:block_reinforced_obsidian>],
 	[null,null,null,<armorplus:redstone_leggings>,<enderio:block_reinforced_obsidian>],
 	[null,null,null,<armorplus:infused_lava_leggings>,<enderio:block_reinforced_obsidian>],
 	[null,null,null,<metaitem:quantumstar>,<enderio:block_reinforced_obsidian>],
 	[null,null,null,<armorplus:emerald_leggings>,<enderio:block_reinforced_obsidian>]]);
 
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_leggings>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <armorplus:the_ultimate_leggings>, [
 [<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>, <nomilabs:ultimate_gem>, <armorplus:the_ultimate_part:7>, <nomilabs:ultimate_gem>, <simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>],
 [<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<armorplus:material:4>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>],
@@ -593,7 +593,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_leggings>,
 
 //Infinity Leggings
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_pants>);
-mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_pants>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <avaritia:infinity_pants>, [
 [<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>],
 [<metaitem:ingotNeutronium>,<draconicevolution:draconic_legs>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<armorplus:the_ultimate_leggings>,<draconicevolution:wyvern_legs>,<metaitem:ingotNeutronium>],
 [<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<armorplus:the_ultimate_leggings>,<metaitem:ingotNeutronium>],
@@ -609,7 +609,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_pants>, [
 
 //Ultimate Boots
 //Left		
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:11>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:11>, [
 	[null,null,null,null,null],
 	[null,null,null,null,null],
 	[null,null,null,null,null],
@@ -617,7 +617,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:11>, 
 	[<enderio:block_reinforced_obsidian>,<armorplus:knight_slime_boots>,null,null,null]]);
 	
 //Middle
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:10>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:10>, [
 	[null,null,null,null,null],
 	[<enderio:block_reinforced_obsidian>,<armorplus:guardian_boots>,null,<armorplus:manyullyn_boots>,<enderio:block_reinforced_obsidian>],
 	[<enderio:block_reinforced_obsidian>,<armorplus:cobalt_boots>,null,<armorplus:ardite_boots>,<enderio:block_reinforced_obsidian>],
@@ -625,14 +625,14 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:10>, 
 	[null,<enderio:item_dark_steel_boots>,null,<enderio:item_end_steel_boots>,null]]);
 	
 //Right
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_part:9>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <armorplus:the_ultimate_part:9>, [
 	[null,null,null,null,null],
 	[null,null,null,null,null],
 	[null,null,null,null,null],
 	[null,null,null,<armorplus:infused_lava_boots>,<armorplus:redstone_boots>],
 	[null,null,null,<armorplus:emerald_boots>,<enderio:block_reinforced_obsidian>]]);
 
-mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <armorplus:the_ultimate_boots>, [
 [null,<armorplus:material:4>,<armorplus:material:4>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<armorplus:material:4>,<armorplus:material:4>,null],
 [null,<armorplus:material:4>,<armorplus:the_ultimate_part:10>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<armorplus:super_star_boots>,<armorplus:material:4>,null],
 [null,<armorplus:material:4>,<nomilabs:ultimate_gem>,<simplyjetpacks:metaitemmods:3>,null,<simplyjetpacks:metaitemmods:3>,<nomilabs:ultimate_gem>,<armorplus:material:4>,null],
@@ -647,7 +647,7 @@ mods.extendedcrafting.TableCrafting.addShaped(<armorplus:the_ultimate_boots>, [
 
 //Infinity Boots
 mods.avaritia.ExtremeCrafting.remove(<avaritia:infinity_boots>);
-mods.extendedcrafting.TableCrafting.addShaped(<avaritia:infinity_boots>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <avaritia:infinity_boots>, [
 [null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<metaitem:qts.boots>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<metaitem:qts.boots>,<metaitem:ingotNeutronium>,null],
 [null,<metaitem:ingotNeutronium>,<draconicevolution:draconic_boots>,<metaitem:ingotNeutronium>,null,<metaitem:ingotNeutronium>,<draconicevolution:wyvern_boots>,<metaitem:ingotNeutronium>,null],
