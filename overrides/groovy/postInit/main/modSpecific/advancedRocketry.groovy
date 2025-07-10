@@ -16,9 +16,6 @@ mods.enderio.enchanter.recipeBuilder()
 	.register()
 
 // Recipes for Industrial Rebreather Kit
-int airtightId = Enchantment.getEnchantmentID(enchantment('advancedrocketry:spacebreathing'))
-ItemStack airtight = item('minecraft:enchanted_book').withNbt(['StoredEnchantments': [['id': (short) airtightId, 'lvl': (short) 1]]])
-
 if (LabsModeHelper.normal) {
 	mods.gregtech.assembler.recipeBuilder()
 		.inputs(
