@@ -456,23 +456,18 @@ mods.gregtech.coal_recipes.recipeBuilder()
 	.duration(600).EUt(VA[ULV])
 	.replace().buildAndRegister()
 
-mods.gregtech.coal_recipes.changeByOutput([metaitem('ulv_covers:conveyor.module.ulv')], null)
-	// Don't copy properties; ULV components have none
-	.forEach { ChangeRecipeBuilder builder ->
-		// Remove Original
-		builder.builder{ it.replace() }
+var conveyorBuilder = mods.gregtech.coal_recipes.recipeBuilder()
+	.inputs(metaitem('ulv_covers:electric.motor.ulv') * 48, ore('cableGtHexLead') * 3)
+	.circuitMeta(5)
+	.outputs(metaitem('ulv_covers:conveyor.module.ulv') * 64)
+	.duration(600).EUt(VA[ULV])
+	.replace() // Removes the original recipe, once
 
-		for (var rubber : [fluid('rubber'), fluid('silicone_rubber'), fluid('styrene_butadiene_rubber')]) {
-			builder.copyOriginal()
-				.changeInput(0) {
-					it.copyWithAmount((int) (it.getAmount() / 2)) // Reduce motor amt to half
-				}.builder { RecipeBuilder recipe ->
-					recipe.clearFluidInputs()
-						.fluidInputs(rubber * (L * 2 * 48))
-						.circuitMeta(5)
-				}.buildAndRegister()
-		}
-	}
+for (var rubber : [fluid('rubber'), fluid('silicone_rubber'), fluid('styrene_butadiene_rubber')]) {
+	conveyorBuilder.copy()
+		.fluidInputs(rubber * (L * 2 * 48))
+		.buildAndRegister()
+}
 
 // Field Generators (ZPM, UV (HM Only))
 mods.gregtech.coal_recipes.changeByOutput([metaitem('field.generator.zpm')], null)
@@ -484,7 +479,7 @@ mods.gregtech.coal_recipes.changeByOutput([metaitem('field.generator.zpm')], nul
 	}
 
 if (LabsModeHelper.expert) {
-	mods.gregtech.coal_recipes.changeByOutput([metaitem('field.generator.zpm')], null)
+	mods.gregtech.coal_recipes.changeByOutput([metaitem('field.generator.uv')], null)
 		.forEach { ChangeRecipeBuilder builder ->
 			builder.builder { RecipeBuilder recipe ->
 				recipe.fluidInputs(fluid('taranium') * (L * 2 * 48)) // Original Amount x 48 (64 production, 3/4 discount)
