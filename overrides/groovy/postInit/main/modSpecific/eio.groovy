@@ -2,7 +2,7 @@ package postInit.main.modSpecific
 
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import net.minecraft.item.ItemStack
-import classes.postInit.Common
+import classes.Common
 
 import static gregtech.api.GTValues.*
 

@@ -21,7 +21,7 @@ import static gregtech.api.unification.ore.OrePrefix.*
 import static gregtech.api.GTValues.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
-import classes.postInit.Common
+import classes.Common
 
 /* Mixed */
 // Fillable Items
