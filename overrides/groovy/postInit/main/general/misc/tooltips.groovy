@@ -396,14 +396,12 @@ for (var material : GregTechAPI.materialManager.registeredMaterials) {
 
 // Pumps
 // Change Unit in Tooltips to L/s
-var tiers = Common.getVoltageNames(LV, UV)
-for (int i = 0; i < tiers.size(); i++) {
-	String tier = tiers[i]
-	long transferAmt = 1280 * (long) Math.pow(4, i)
+for (var tier : Common.getVoltageNames(LV, UV)) {
+	long transferAmt = 1280 * (long) Math.pow(4, tier.key)
 
 	String transferFmt = TextFormattingUtil.formatNumbers(transferAmt)
 
-	customHandleTooltip(metaitem("electric.pump.${tier}")) {
+	customHandleTooltip(metaitem("electric.pump.${tier.value}")) {
 		it.subList(it.size() - 1, it.size()).clear() // Remove last
 		it.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', transferFmt))
 	}
