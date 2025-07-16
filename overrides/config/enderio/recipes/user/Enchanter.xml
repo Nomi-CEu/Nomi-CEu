@@ -5,7 +5,7 @@
 <recipe name="Enchanter: draconicevolution:enchant_reaper"><disabled/></recipe>
 <recipe name="Reaper Enchantment" required="false" disabled="false">
     <enchanting>
-      <input name="oredict:block_draconium" amount="12"/>
+      <input name="oredict:blockDraconium" amount="12"/>
       <enchantment name="draconicevolution:enchant_reaper" costMultiplier="1"/>
     </enchanting>
   </recipe>
