@@ -1,6 +1,7 @@
 package postInit.main.modSpecific
 
 import com.nomiceu.nomilabs.util.ItemMeta
+import gregtech.api.recipes.ingredients.GTRecipeOreInput
 import gregtech.api.unification.OreDictUnifier
 import mezz.jei.api.ingredients.VanillaTypes
 import nc.enumm.MetaEnums
@@ -122,7 +123,7 @@ var oreInputs = [
 for (var input : oreInputs) {
 	mods.gregtech.large_chemical_reactor.recipeBuilder()
 		.outputs(item('nuclearcraft:gem_dust', 1))
-		.inputs(OreDictUnifier.get(input.key, material('pyrolusite')) * (3 * input.value))
+		.input(new GTRecipeOreInput(input.key, material('pyrolusite'), (3 * input.value)))
 		.fluidInputs(fluid('sulfuric_acid') * 3000)
 		.fluidOutputs(fluid('manganese') * 4320)
 		.duration(200).EUt(VA[EV])
@@ -130,7 +131,7 @@ for (var input : oreInputs) {
 
 	mods.gregtech.large_chemical_reactor.recipeBuilder()
 		.outputs(item('nuclearcraft:gem_dust', 1))
-		.inputs(OreDictUnifier.get(input.key, material('redstone')) * (6 * input.value))
+		.input(new GTRecipeOreInput(input.key, material('redstone'), (6 * input.value)))
 		.fluidInputs(fluid('sulfuric_acid') * 6000)
 		.fluidOutputs(fluid('redstone') * 19008)
 		.duration(200).EUt(VA[EV])
