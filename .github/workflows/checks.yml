@@ -12,7 +12,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check Line Endings
-        uses: erclu/check-crlf@v1
+        run: |
+          git add --renormalize . # Ensure Git Attributes is applied, changing all files to LF (as we are Unix)
+          git diff --cached --exit-code # Throws if changes are detected
 
       - name: Restore NPM Cached Files
         uses: actions/cache@v4
