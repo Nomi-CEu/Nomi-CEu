@@ -44,3 +44,12 @@ mods.gregtech.macerator.changeByOutput([item('enderio:block_holy_fog')], null)
 		b.changeEachOutput {item('enderio:block_holier_fog') }
 			.replaceAndRegister()
 	}
+
+// Fix Reaper Enchanter Recipe
+mods.enderio.enchanter.remove(enchantment('draconicevolution:enchant_reaper'))
+mods.enderio.enchanter.recipeBuilder()
+	.enchantment(enchantment('draconicevolution:enchant_reaper'))
+	.input(ore('blockDraconium'))
+	.amountPerLevel(12)
+	.xpCostMultiplier(1)
+	.register()
