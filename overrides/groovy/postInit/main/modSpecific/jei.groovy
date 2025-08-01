@@ -1,7 +1,10 @@
 package postInit.main.modSpecific
 
+import com.mcmoddev.densemetals.init.ModBlocks
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.common.metatileentities.MetaTileEntities
+import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidUtil
 
@@ -25,6 +28,22 @@ mods.jei.ingredient.hide(item('advancedrocketry:bucketenrichedlava'))
 
 // Armor Plus
 mods.jei.ingredient.hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
+
+// Dense Ores
+var visibleDenseOres = ["iron", "coal", "gold", "diamond", "emerald", "lapis", "redstone"]
+
+// The '.toString()' is important here to normalise the GStrings into Java Strings, to allow for proper set searching
+var exclusionSet = new ObjectOpenHashSet<>(visibleDenseOres.collect { it -> "dense_${it}_ore".toString() })
+
+for (var denseOre : ModBlocks.DENSE_ORES) {
+	if (exclusionSet.contains(denseOre.getRegistryName().getPath()))
+		continue
+
+	if (!denseOre.resolve()) continue // An 'invalid' dense ore
+
+	println "Hiding Dense Ore ${denseOre.getRegistryName()}..."
+	mods.jei.ingredient.removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
+}
 
 // NuclearCraft
 mods.jei.ingredient.removeAndHide(item('nuclearcraft:block_depleted_uranium'))
