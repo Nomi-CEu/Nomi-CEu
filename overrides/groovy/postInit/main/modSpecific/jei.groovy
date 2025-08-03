@@ -30,7 +30,7 @@ mods.jei.ingredient.hide(item('advancedrocketry:bucketenrichedlava'))
 mods.jei.ingredient.hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
 
 // Dense Ores
-var visibleDenseOres = ["iron", "coal", "gold", "diamond", "emerald", "lapis", "redstone"]
+var visibleDenseOres = ['iron', 'coal', 'gold', 'diamond', 'emerald', 'lapis', 'redstone']
 
 // The '.toString()' is important here to normalise the GStrings into Java Strings, to allow for proper set searching
 var exclusionSet = new ObjectOpenHashSet<>(visibleDenseOres.collect { it -> "dense_${it}_ore".toString() })
