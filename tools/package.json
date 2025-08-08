@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@actions/core": "^1.10.1",
 		"@inquirer/confirm": "^3.1.6",
-		"@inquirer/prompts": "^5.0.2",
+		"@inquirer/prompts": "^7.8.1",
 		"@octokit/plugin-retry": "^7.1.1",
 		"@octokit/plugin-throttling": "^9.3.1",
 		"@octokit/rest": "^21.0.1",
@@ -63,7 +63,7 @@
 		"gulp-rename": "^2.0.0",
 		"gulp-zip": "^6.0.0",
 		"hash-wasm": "^4.11.0",
-		"inquirer": "^9.2.20",
+		"inquirer": "^12.9.1",
 		"javascript-stringify": "^2.1.0",
 		"just-diff": "^6.0.2",
 		"just-remove": "^3.2.0",
