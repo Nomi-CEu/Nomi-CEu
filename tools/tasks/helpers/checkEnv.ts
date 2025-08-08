@@ -1,4 +1,3 @@
-import gulp from "gulp";
 import { checkEnvironmentalVariables } from "#utils/util.ts";
 
 const vars = [
@@ -15,12 +14,10 @@ const vars = [
  * Check required env. variables for validity and cancel
  * the build if something is unset.
  */
-async function checkEnv() {
+export default async function checkEnv() {
 	checkEnvironmentalVariables(vars);
 
 	if (!/.+\/.+/.exec(process.env.GITHUB_REPOSITORY ?? "")) {
 		throw new Error("Malformed repository slug.");
 	}
 }
-
-export default gulp.series(checkEnv);

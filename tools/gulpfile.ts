@@ -48,8 +48,16 @@ export const buildTypoCheck = gulp.series(
 	extractTypoCheckFiles,
 );
 
-import checkTasks from "./tasks/checks/index.ts";
-export const check = gulp.series(checkTasks);
+import checkEnvTask from "#tasks/helpers/checkEnv.ts";
+export const checkEnv = checkEnvTask;
+
+import {
+	checkManifestStructure,
+	checkManifestFilesExist,
+} from "#tasks/helpers/checkManifest.ts";
+export const checkManifest = () => checkManifestStructure(true);
+export const fixManifest = () => checkManifestStructure(false);
+export const checkManifestFiles = checkManifestFilesExist;
 
 import * as zip from "./tasks/misc/zip.ts";
 export const zipClient = zip.zipClient;

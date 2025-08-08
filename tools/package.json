@@ -9,7 +9,9 @@
 	"private": true,
 	"scripts": {
 		"gulp": "node --import ./tsNodeESMRegister.mjs  node_modules/gulp/bin/gulp.js",
-		"check": "tsc --pretty --noUnusedLocals --noUnusedParameters"
+		"check": "tsc --pretty --noUnusedLocals --noUnusedParameters",
+		"groovyLint": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info",
+		"groovyFix": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info --fix"
 	},
 	"imports": {
 		"#types/*": "./types/*",
@@ -69,6 +71,7 @@
 		"marked": "^12.0.2",
 		"merge-stream": "^2.0.0",
 		"mustache": "^4.2.0",
+		"npm-groovy-lint": "^15.2.1",
 		"picomatch": "^4.0.2",
 		"prettier": "^3.2.5",
 		"retry-axios": "^3.1.3",

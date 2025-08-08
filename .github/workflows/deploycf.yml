@@ -47,7 +47,7 @@ jobs:
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npm run gulp check
+        run: npm run gulp checkEnv
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
