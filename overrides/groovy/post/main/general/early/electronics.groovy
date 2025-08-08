@@ -4,27 +4,27 @@ import gregtech.api.recipes.RecipeMaps
 
 // Pyrolyse Oven
 replaceRecipeInput(metaitem('pyrolyse_oven'), [
-	[metaitem('electric.piston.lv'), ore('circuitLv'), ore('wireGtQuadrupleCupronickel')],
-	[ore('circuitLv'), metaitem('hull.ulv'), ore('circuitLv')],
-	[metaitem('electric.piston.lv'), metaitem('electric.pump.lv'), ore('wireGtQuadrupleCupronickel')]])
+    [metaitem('electric.piston.lv'), ore('circuitLv'), ore('wireGtQuadrupleCupronickel')],
+    [ore('circuitLv'), metaitem('hull.ulv'), ore('circuitLv')],
+    [metaitem('electric.piston.lv'), metaitem('electric.pump.lv'), ore('wireGtQuadrupleCupronickel')]])
 
 // HV Coil
 mods.gregtech.assembler.recipeBuilder()
-	.inputs(metaitem('stickSteelMagnetic'), metaitem('wireFineSilver') * 16)
-	.circuitMeta(1)
-	.outputs(metaitem('voltage_coil.hv'))
-	.changeRecycling()
-	.duration(200).EUt(VA[HV])
-	.replace().buildAndRegister()
+    .inputs(metaitem('stickSteelMagnetic'), metaitem('wireFineSilver') * 16)
+    .circuitMeta(1)
+    .outputs(metaitem('voltage_coil.hv'))
+    .changeRecycling()
+    .duration(200).EUt(VA[HV])
+    .replace().buildAndRegister()
 
 // EV Coil
 mods.gregtech.assembler.recipeBuilder()
-	.inputs(metaitem('stickNeodymiumMagnetic'), metaitem('wireFinePlatinum') * 16)
-	.circuitMeta(1)
-	.outputs(metaitem('voltage_coil.ev'))
-	.changeRecycling()
-	.duration(200).EUt(VA[EV])
-	.replace().buildAndRegister()
+    .inputs(metaitem('stickNeodymiumMagnetic'), metaitem('wireFinePlatinum') * 16)
+    .circuitMeta(1)
+    .outputs(metaitem('voltage_coil.ev'))
+    .changeRecycling()
+    .duration(200).EUt(VA[EV])
+    .replace().buildAndRegister()
 
 // Refresh HV and EV Energy and Dynamo Recipes, and EV High-Amp and Adjustable Transformers
 // Note: EV 4A Energy Input and Output Hatches are added after this script is loaded, in recyclingAdditions (misc)

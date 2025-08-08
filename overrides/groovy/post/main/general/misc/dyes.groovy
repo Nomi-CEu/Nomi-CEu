@@ -43,46 +43,46 @@ addShapedConversionRecipe(metaitem('dye.white'), item('minecraft:dye', 15))
 
 def dyeHelperMap = [:]
 for (def color : EnumDyeColor.values()) {
-	dyeHelperMap.put(color.getName(), ore('dye' + color.getName().capitalize()))
+    dyeHelperMap.put(color.getName(), ore('dye' + color.getName().capitalize()))
 }
 
 // Fix Elevator Redyeing
 for (def entry in dyeHelperMap.entrySet()) {
-	crafting.remove('elevatorid:redye_' + entry.key)
-	crafting.addShapeless(item('elevatorid:elevator_' + entry.key), [ore('blockElevator'), entry.value])
+    crafting.remove('elevatorid:redye_' + entry.key)
+    crafting.addShapeless(item('elevatorid:elevator_' + entry.key), [ore('blockElevator'), entry.value])
 }
 
 // Fix Slime Block Redyeing
 for (def color : EnumDyeColor.values()) {
-	def name = color.getName()
-	def meta = color.getMetadata()
-	def oreIng = dyeHelperMap.get(name)
-	crafting.remove('darkutils:dyed_slime_block_' + name)
-	crafting.shapedBuilder()
-		.output(item('darkutils:slime_dyed', meta) * 8)
-		.matrix('SSS',
-			'SDS',
-			'SSS')
-		.key('S', ore('blockSlime'))
-		.key('D', oreIng)
-		.register()
+    def name = color.getName()
+    def meta = color.getMetadata()
+    def oreIng = dyeHelperMap.get(name)
+    crafting.remove('darkutils:dyed_slime_block_' + name)
+    crafting.shapedBuilder()
+        .output(item('darkutils:slime_dyed', meta) * 8)
+        .matrix('SSS',
+            'SDS',
+            'SSS')
+        .key('S', ore('blockSlime'))
+        .key('D', oreIng)
+        .register()
 }
 
 // Fix Satchel Redeying
 addOreDictToOreDict(ore('dye'), dyeHelperMap.values())
 
 static void addOreDictToOreDict(OreDictIngredient addTo, Collection<OreDictIngredient> from) {
-	for (def ing in from) {
-		for (def stack in ing) {
-			addTo.add(stack)
-		}
-	}
+    for (def ing in from) {
+        for (def stack in ing) {
+            addTo.add(stack)
+        }
+    }
 }
 
 static void addShapedConversionRecipe(ItemStack outputStack, ItemStack inputStack) {
-	crafting.shapedBuilder()
-		.output(outputStack)
-		.matrix([[inputStack]])
-		.recipeClassFunction((output, width, height, ingredients) -> new ShapedConversionRecipe(output, ingredients, width, height))
-		.register()
+    crafting.shapedBuilder()
+        .output(outputStack)
+        .matrix([[inputStack]])
+        .recipeClassFunction((output, width, height, ingredients) -> new ShapedConversionRecipe(output, ingredients, width, height))
+        .register()
 }

@@ -10,34 +10,34 @@ import static gregtech.api.unification.ore.OrePrefix.*
 // Polymer Materials (Skipping Raw Rubber, no blocks or rods)
 var materials = [
     Rubber,
-	SiliconeRubber,
-	StyreneButadieneRubber,
-	Epoxy,
-	ReinforcedEpoxyResin,
-	Polyethylene,
-	PolyvinylChloride,
-	Polytetrafluoroethylene,
-	Polybenzimidazole,
-	PolyphenyleneSulfide,
-	Polycaprolactam,
+    SiliconeRubber,
+    StyreneButadieneRubber,
+    Epoxy,
+    ReinforcedEpoxyResin,
+    Polyethylene,
+    PolyvinylChloride,
+    Polytetrafluoroethylene,
+    Polybenzimidazole,
+    PolyphenyleneSulfide,
+    Polycaprolactam,
 ]
 
 var prefixes = [
     block,
-	stick,
+    stick,
 ]
 
 for (def material : materials) {
-	var dust = OreDictUnifier.get(dust, material)
-	for (def prefix : prefixes) {
-		var stack = OreDictUnifier.get(prefix, material)
-		if (stack.empty) continue
+    var dust = OreDictUnifier.get(dust, material)
+    for (def prefix : prefixes) {
+        var stack = OreDictUnifier.get(prefix, material)
+        if (stack.empty) continue
 
-		mods.gregtech.extruder.changeByOutput([stack], null)
-			.forEach { ChangeRecipeBuilder builder ->
-				builder.changeInput(0) {
-					new GTRecipeItemInput(dust)
-				}.buildAndRegister()
-			}
-	}
+        mods.gregtech.extruder.changeByOutput([stack], null)
+            .forEach { ChangeRecipeBuilder builder ->
+                builder.changeInput(0) {
+                    new GTRecipeItemInput(dust)
+                }.buildAndRegister()
+            }
+    }
 }

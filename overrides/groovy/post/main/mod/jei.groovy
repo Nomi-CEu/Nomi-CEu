@@ -33,13 +33,13 @@ var visibleDenseOres = ['iron', 'coal', 'gold', 'diamond', 'emerald', 'lapis', '
 var exclusionSet = new ObjectOpenHashSet<>(visibleDenseOres.collect { it -> "dense_${it}_ore".toString() })
 
 for (var denseOre : ModBlocks.DENSE_ORES) {
-	if (exclusionSet.contains(denseOre.getRegistryName().getPath()))
-		continue
+    if (exclusionSet.contains(denseOre.getRegistryName().getPath()))
+        continue
 
-	if (!denseOre.resolve()) continue // An 'invalid' dense ore
+    if (!denseOre.resolve()) continue // An 'invalid' dense ore
 
-	println "Hiding Dense Ore ${denseOre.getRegistryName()}..."
-	mods.jei.ingredient.removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
+    println "Hiding Dense Ore ${denseOre.getRegistryName()}..."
+    mods.jei.ingredient.removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
 }
 
 // NuclearCraft
@@ -47,17 +47,17 @@ mods.jei.ingredient.removeAndHide(item('nuclearcraft:block_depleted_uranium'))
 
 // Nomi Labs
 if (LabsModeHelper.expert) {
-	mods.jei.ingredient.hide(item('nomilabs:impossiblerealmdata'))
+    mods.jei.ingredient.hide(item('nomilabs:impossiblerealmdata'))
 }
 
 if (LabsModeHelper.normal) {
-	mods.jei.ingredient.hide(fluid('liquid_nitrogen'))
+    mods.jei.ingredient.hide(fluid('liquid_nitrogen'))
 }
 
 // GregTech
 // Higher Tier Muffler Hatches
 for (var tier : [MV, HV, EV, IV, LuV, ZPM, UV]) {
-	mods.jei.ingredient.removeAndHide(MetaTileEntities.MUFFLER_HATCH[tier].getStackForm())
+    mods.jei.ingredient.removeAndHide(MetaTileEntities.MUFFLER_HATCH[tier].getStackForm())
 }
 
 // Extended Crafting
@@ -67,15 +67,15 @@ mods.jei.ingredient.hide(item('extendedcrafting:material', 49)) // Enhanced Ende
 
 // Better Questing
 List<ItemStack> lootBoxes = [
-	item('bq_standard:loot_chest'),
-	item('bq_standard:loot_chest', 25),
-	item('bq_standard:loot_chest', 50),
-	item('bq_standard:loot_chest', 75),
-	item('bq_standard:loot_chest', 100),
-	item('bq_standard:loot_chest', 101),
-	item('bq_standard:loot_chest', 102),
-	item('bq_standard:loot_chest', 103),
-	item('bq_standard:loot_chest', 104),
+    item('bq_standard:loot_chest'),
+    item('bq_standard:loot_chest', 25),
+    item('bq_standard:loot_chest', 50),
+    item('bq_standard:loot_chest', 75),
+    item('bq_standard:loot_chest', 100),
+    item('bq_standard:loot_chest', 101),
+    item('bq_standard:loot_chest', 102),
+    item('bq_standard:loot_chest', 103),
+    item('bq_standard:loot_chest', 104),
 ]
 lootBoxes.forEach { mods.jei.ingredient.hide(it) }
 
@@ -97,9 +97,9 @@ mods.jei.category.hideCategory('Avatitia.Extreme')
 
 // DME
 if (LabsModeHelper.expert) {
-	mods.jei.category.hideCategory('deepmoblearning.simulation_chamber')
-	mods.jei.category.hideCategory('deepmoblearning.extraction_chamber')
-	mods.jei.category.hideCategory('deepmoblearning.trial_keystone')
+    mods.jei.category.hideCategory('deepmoblearning.simulation_chamber')
+    mods.jei.category.hideCategory('deepmoblearning.extraction_chamber')
+    mods.jei.category.hideCategory('deepmoblearning.trial_keystone')
 }
 
 // EIO
@@ -136,25 +136,25 @@ if (LabsModeHelper.expert) {
 /* Recipe Catalyst Overrides */
 // Crafting (Remove Thermal's Auto Crafter, and Add Avaritia's Compressed)
 overrideRecipeCatalysts('minecraft.crafting',
-	item('minecraft:crafting_table'),
-	item('avaritia:compressed_crafting_table'),
-	metaitem('workbench'),
-	item('actuallyadditions:item_crafter_on_a_stick'),
-	item('appliedenergistics2:molecular_assembler'),
-	item('extrautils2:crafter'),
-	item('enderio:block_crafter'),
-	item('enderio:block_inventory_panel'))
+    item('minecraft:crafting_table'),
+    item('avaritia:compressed_crafting_table'),
+    metaitem('workbench'),
+    item('actuallyadditions:item_crafter_on_a_stick'),
+    item('appliedenergistics2:molecular_assembler'),
+    item('extrautils2:crafter'),
+    item('enderio:block_crafter'),
+    item('enderio:block_inventory_panel'))
 
 // Smelting (add More Furnaces' Furnaces)
 List<Object> furnaceCatalysts = [item('minecraft:furnace')]
 for (var meta : [0, 5, 6, 1, 2, 3]) { // in tier order
-	furnaceCatalysts.add(item('morefurnaces:furnaceblock', meta))
+    furnaceCatalysts.add(item('morefurnaces:furnaceblock', meta))
 }
 furnaceCatalysts.add(metaitem('steam_furnace_bronze'))
 furnaceCatalysts.add(metaitem('steam_furnace_steel'))
 for (var furnace : MetaTileEntities.ELECTRIC_FURNACE) {
-	if (furnace == null) continue
-	furnaceCatalysts.add(furnace.getStackForm())
+    if (furnace == null) continue
+    furnaceCatalysts.add(furnace.getStackForm())
 }
 furnaceCatalysts.add(metaitem('steam_oven'))
 furnaceCatalysts.add(metaitem('multi_furnace'))
@@ -163,25 +163,25 @@ overrideRecipeCatalysts('minecraft.smelting', furnaceCatalysts.toArray())
 
 // Extended Crafting (Add PAuto ExCrafting Crafters)
 overrideRecipeCatalysts('extendedcrafting:table_crafting_5x5',
-	item('extendedcrafting:table_advanced'),
-	item('packagedexcrafting:advanced_crafter'))
+    item('extendedcrafting:table_advanced'),
+    item('packagedexcrafting:advanced_crafter'))
 
 overrideRecipeCatalysts('extendedcrafting:table_crafting_7x7',
-	item('extendedcrafting:table_elite'),
-	item('packagedexcrafting:elite_crafter'))
+    item('extendedcrafting:table_elite'),
+    item('packagedexcrafting:elite_crafter'))
 
 overrideRecipeCatalysts('extendedcrafting:table_crafting_9x9',
-	item('extendedcrafting:table_ultimate'),
-	item('packagedexcrafting:ultimate_crafter'))
+    item('extendedcrafting:table_ultimate'),
+    item('packagedexcrafting:ultimate_crafter'))
 
 // Crafting Core (Add PAuto ExCrafting Combination Package Crafter + Marked Pedestals)
 overrideRecipeCatalysts('extendedcrafting:combination_crafting',
-	item('extendedcrafting:crafting_core'),
-	item('extendedcrafting:pedestal'),
-	item('packagedexcrafting:combination_crafter'),
-	item('packagedexcrafting:marked_pedestal'))
+    item('extendedcrafting:crafting_core'),
+    item('extendedcrafting:pedestal'),
+    item('packagedexcrafting:combination_crafter'),
+    item('packagedexcrafting:marked_pedestal'))
 
 // Draconic Fusion (Add Packaged Draconic Core)
 overrideRecipeCatalysts('DraconicEvolution.Fusion',
-	item('draconicevolution:fusion_crafting_core'),
-	item('packageddraconic:fusion_crafter'))
+    item('draconicevolution:fusion_crafting_core'),
+    item('packageddraconic:fusion_crafter'))

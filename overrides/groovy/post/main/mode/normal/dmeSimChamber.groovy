@@ -14,7 +14,7 @@ for (var model : models) {
     if (!Loader.isModLoaded(model.modID)) continue // Edge Case
 
     int tier = MetadataManager.minDataModelTier
-    while (!MetadataManager.isMaxDataModelTier(tier)){
+    while (!MetadataManager.isMaxDataModelTier(tier)) {
         addDMERecipe(model, tier)
         tier = MetadataManager.getNextDataModelTier(tier)
     }
@@ -34,11 +34,11 @@ void addDMERecipe(MetadataDataModel model, int tier) {
     int chance = tierData.get().pristineChance
 
     mods.gregtech.dme_sim_chamber.recipeBuilder()
-            .dataItem(item("deepmoblearning:${modelPath}"), tier)
-            .input(item('deepmoblearning:polymer_clay').item)
-            .output(living.item)
-            .chancedOutput(pristine, chance * 100, 0) // Chanced Outputs are In Per 100 (100 = 1%)
-            .EUt(eut as int)
-            .duration(300)
-            .buildAndRegister()
+        .dataItem(item("deepmoblearning:${modelPath}"), tier)
+        .input(item('deepmoblearning:polymer_clay').item)
+        .output(living.item)
+        .chancedOutput(pristine, chance * 100, 0) // Chanced Outputs are In Per 100 (100 = 1%)
+        .EUt(eut as int)
+        .duration(300)
+        .buildAndRegister()
 }

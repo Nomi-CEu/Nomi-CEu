@@ -53,7 +53,7 @@ fixItemFluidTooltip(item('thermalfoundation:fluid_mana'), fluid('mana'))
 
 // Tooltip Additions
 for (Fluid labsFluid : LabsFluids.BLOCKS.keySet()) {
-	addFluidTooltip(new FluidStack(labsFluid, 1))
+    addFluidTooltip(new FluidStack(labsFluid, 1))
 }
 
 /* Advanced Rocketry */
@@ -74,9 +74,9 @@ addFluidTooltip(fluid('fire_water'))
 // XP (Extra Tooltip)
 Supplier<List<String>> gtTooltip = createFluidTooltip(null, fluid('xpjuice').fluid, FluidState.LIQUID)
 addFluidTooltip(fluid('xpjuice'), () -> {
-	def result = [translate("nomiceu.tooltip.eio.liquid_xp")]
-	result.addAll(gtTooltip.get())
-	return result
+    def result = [translate("nomiceu.tooltip.eio.liquid_xp")]
+    result.addAll(gtTooltip.get())
+    return result
 })
 
 addFluidTooltip(fluid('liquid_sunshine'))
@@ -116,8 +116,8 @@ addFluidTooltip(fluid('emerald'))
  * Replaces 'Item Fluids', or fluids that are actually items in JEI, with actual fluid stacks.
  */
 static void fixItemFluid(ItemStack itemForm, FluidStack fluidForm) {
-	mods.jei.ingredient.hide(itemForm)
-	mods.jei.ingredient.add(VanillaTypes.FLUID, fluidForm * 1000)
+    mods.jei.ingredient.hide(itemForm)
+    mods.jei.ingredient.add(VanillaTypes.FLUID, fluidForm * 1000)
 }
 
 
@@ -126,7 +126,7 @@ static void fixItemFluid(ItemStack itemForm, FluidStack fluidForm) {
  * (To be replaced by a Labs one in a future version of Labs)
  */
 static void addFluidTooltip(FluidStack fluidForm, FluidState type = FluidState.LIQUID) {
-	addFluidTooltip(fluidForm, createFluidTooltip(null, fluidForm.fluid, type))
+    addFluidTooltip(fluidForm, createFluidTooltip(null, fluidForm.fluid, type))
 }
 
 /**
@@ -134,25 +134,25 @@ static void addFluidTooltip(FluidStack fluidForm, FluidState type = FluidState.L
  * (To be replaced by a Labs one in a future version of Labs)
  */
 static void addFluidTooltip(FluidStack fluidForm, Supplier<List<String>> tooltip) {
-	var existing = getFluidTooltip(fluidForm.fluid)
+    var existing = getFluidTooltip(fluidForm.fluid)
 
-	// Only Register if Not Already Registered (aka previous runs of this script)
-	// However, this is not reloadable. To be fixed in a future version of Labs.
-	if (existing != null && existing.isEmpty())
-		registerTooltip(fluidForm.fluid, tooltip)
+    // Only Register if Not Already Registered (aka previous runs of this script)
+    // However, this is not reloadable. To be fixed in a future version of Labs.
+    if (existing != null && existing.isEmpty())
+        registerTooltip(fluidForm.fluid, tooltip)
 }
 
 /**
  * Does both of the above two util functions.
  */
 static void fixItemFluidTooltip(ItemStack itemForm, FluidStack fluidForm, FluidState type = FluidState.LIQUID) {
-	fixItemFluid(itemForm, fluidForm)
-	addFluidTooltip(fluidForm, type)
+    fixItemFluid(itemForm, fluidForm)
+    addFluidTooltip(fluidForm, type)
 }
 
 /**
  * Hides the Fluid Form of a Fluid in JEI.
  */
 static void hideFluid(FluidStack fluidForm) {
-	mods.jei.ingredient.hide(VanillaTypes.FLUID, fluidForm)
+    mods.jei.ingredient.hide(VanillaTypes.FLUID, fluidForm)
 }

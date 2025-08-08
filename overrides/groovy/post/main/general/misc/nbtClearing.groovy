@@ -24,8 +24,8 @@ for (def material : ["wood", "bronze", "steel", "aluminium", "stainless_steel", 
 // NC Coolers
 for (def meta : 1..15) {
     nbtClearingRecipe(item('nuclearcraft:cooler', meta), item('nuclearcraft:cooler'),
-            translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.can_clear'),
-            translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.warning'))
+        translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.can_clear'),
+        translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.warning'))
 }
 
 // Bronze & Gold Cell
@@ -54,9 +54,9 @@ var normalClearer = { ItemStack it ->
 // GregTech Drawers
 for (def meta : 0..4) {
     nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_rubber_wood', meta), normalClearer,
-            empty, WARNING_TOOLTIP)
+        empty, WARNING_TOOLTIP)
     nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_treated_wood', meta), normalClearer,
-            empty, WARNING_TOOLTIP)
+        empty, WARNING_TOOLTIP)
 
     canClearDrawers.add(item('gregtechdrawers:basicdrawers_gregtech_rubber_wood', meta))
     canClearDrawers.add(item('gregtechdrawers:basicdrawers_gregtech_treated_wood', meta))
@@ -96,8 +96,8 @@ nbtClearingRecipe(item('thermalexpansion:tank'), {
 List<ItemStack> clearableContainers = []
 
 // Super/Quantum Chests & Tanks
-clearableContainers.addAll(QUANTUM_CHEST.collect {it.getStackForm() })
-clearableContainers.addAll(QUANTUM_TANK.collect {it.getStackForm() })
+clearableContainers.addAll(QUANTUM_CHEST.collect { it.getStackForm() })
+clearableContainers.addAll(QUANTUM_TANK.collect { it.getStackForm() })
 
 // Drums
 for (def material : ["wood", "bronze", "steel", "aluminium", "stainless_steel", "titanium", "tungstensteel", "gold"]) {
@@ -114,7 +114,7 @@ clearableContainers.add(metaitem('fluid_cell.universal'))
 
 // Material Cells
 for (def material : ["steel", "aluminium", "stainless_steel", "titanium", "tungstensteel"]) {
-	clearableContainers.add(metaitem("large_fluid_cell.${material}"))
+    clearableContainers.add(metaitem("large_fluid_cell.${material}"))
 }
 
 // EIO Tanks

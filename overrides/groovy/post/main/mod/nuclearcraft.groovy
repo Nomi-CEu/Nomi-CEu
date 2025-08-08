@@ -18,19 +18,19 @@ import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecip
 
 /* Hide Molten Salt Reactor Fluids */
 for (var toHide : NCFissionFluids.fluidList) {
-	if (FluidRegistry.getFluid(toHide.getName()) instanceof FluidFission)
-		mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
-	else
-		println "NuclearCraft Script: Skipping Fluid ${toHide.getName()} as registered outside of NC!"
+    if (FluidRegistry.getFluid(toHide.getName()) instanceof FluidFission)
+        mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+    else
+        println "NuclearCraft Script: Skipping Fluid ${toHide.getName()} as registered outside of NC!"
 }
 
 for (var toHide : NCCoolantFluids.fluidList) {
-	// Ignore Normal Molten Fluids & Registered Outside of NC
-	var fluidReg = FluidRegistry.getFluid(toHide.getName())
-	if (fluidReg instanceof FluidCoolant || fluidReg instanceof FluidHotCoolant)
-		mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
-	else
-		println "NuclearCraft Script: Skipping Fluid ${toHide.getName()} as registered outside of NC, or is a Molten Fluid!"
+    // Ignore Normal Molten Fluids & Registered Outside of NC
+    var fluidReg = FluidRegistry.getFluid(toHide.getName())
+    if (fluidReg instanceof FluidCoolant || fluidReg instanceof FluidHotCoolant)
+        mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
+    else
+        println "NuclearCraft Script: Skipping Fluid ${toHide.getName()} as registered outside of NC, or is a Molten Fluid!"
 }
 
 // LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
@@ -38,11 +38,11 @@ crafting.addShapeless(metaitem('blockUranium'), [item('nuclearcraft:block_deplet
 
 // Thorium -> Prepared Thorium
 for (var thorium : [ore('dustThorium'), ore('ingotThorium')]) {
-	mods.gregtech.thermal_centrifuge.recipeBuilder()
-		.inputs(thorium)
-		.outputs(item('nuclearcraft:thorium', 4))
-		.duration(950).EUt(48) // Special Case: Reduced Power Consumption & Match Other NC Recipes
-		.buildAndRegister()
+    mods.gregtech.thermal_centrifuge.recipeBuilder()
+        .inputs(thorium)
+        .outputs(item('nuclearcraft:thorium', 4))
+        .duration(950).EUt(48) // Special Case: Reduced Power Consumption & Match Other NC Recipes
+        .buildAndRegister()
 }
 
 // Obsolete Thermal Centrifuge Recipes
@@ -53,14 +53,14 @@ mods.gregtech.thermal_centrifuge.removeByOutput([item('nuclearcraft:thorium', 5)
 
 /* Fuel Values */
 Map<String, List<Integer>> fuelMetas = [
-    'thorium': [0],
-	'uranium': [0, 2, 4, 6],
-	'neptunium': [0, 2],
-	'plutonium': [0, 2, 4, 6],
-	'americium': [0, 2],
-	'curium': [0, 2, 4, 6, 8, 10],
-	'berkelium': [0, 2],
-	'californium': [0, 2, 4, 6]
+    'thorium'    : [0],
+    'uranium'    : [0, 2, 4, 6],
+    'neptunium'  : [0, 2],
+    'plutonium'  : [0, 2, 4, 6],
+    'americium'  : [0, 2],
+    'curium'     : [0, 2, 4, 6, 8, 10],
+    'berkelium'  : [0, 2],
+    'californium': [0, 2, 4, 6]
 ]
 
 var u235 = Tuple.tuple(new ItemMeta(item('nuclearcraft:uranium', 4)), metaitem('ingotUranium235'))
@@ -74,66 +74,66 @@ var p239Tiny = Tuple.tuple(new ItemMeta(item('nuclearcraft:plutonium', 6)), meta
 var p241Tiny = Tuple.tuple(new ItemMeta(item('nuclearcraft:plutonium', 10)), metaitem('nuggetPlutonium241'))
 
 var checkReplacementsOrDefault = { ItemStack stack, Tuple2<ItemMeta, ItemStack>... toReplace ->
-	for (var replacement : toReplace) {
-		if (replacement.v1.compareWith(stack))
-			return replacement.v2 * stack.count
-	}
+    for (var replacement : toReplace) {
+        if (replacement.v1.compareWith(stack))
+            return replacement.v2 * stack.count
+    }
 
-	return stack
+    return stack
 }
 
 /* Fuel Decomposition Recipe Changes */
 // Replace NC U235 and U238 with GT Versions
 for (var meta : fuelMetas['uranium']) {
-	mods.gregtech.thermal_centrifuge.changeByInput([item('nuclearcraft:fuel_uranium', meta)], null)
-		.changeEachOutput { ItemStack stack -> checkReplacementsOrDefault(stack, u235, u238) }
-		.replaceAndRegister()
+    mods.gregtech.thermal_centrifuge.changeByInput([item('nuclearcraft:fuel_uranium', meta)], null)
+        .changeEachOutput { ItemStack stack -> checkReplacementsOrDefault(stack, u235, u238) }
+        .replaceAndRegister()
 }
 
 // Replace NC P239 and U241 with GT Versions
 for (var meta : fuelMetas['plutonium']) {
-	mods.gregtech.thermal_centrifuge.changeByInput([item('nuclearcraft:fuel_plutonium', meta)], null)
-		.changeEachOutput { ItemStack stack -> checkReplacementsOrDefault(stack, p239, p241) }
-		.replaceAndRegister()
+    mods.gregtech.thermal_centrifuge.changeByInput([item('nuclearcraft:fuel_plutonium', meta)], null)
+        .changeEachOutput { ItemStack stack -> checkReplacementsOrDefault(stack, p239, p241) }
+        .replaceAndRegister()
 }
 
 /* Depleted Fuel Recycling Changes */
 // Increase All Outputs by 10%
 // Replace NC U235, U238, P239 and P241 with GT Versions
 for (var fuel : fuelMetas) {
-	for (var meta : fuel.value) {
-		mods.gregtech.centrifuge.changeByInput([item("nuclearcraft:depleted_fuel_${fuel.key}", meta)], null)
-			.changeEachOutput { ItemStack stack ->
-				stack = checkReplacementsOrDefault(stack, u235Tiny, u238Tiny, p239Tiny, p241Tiny)
-				stack.count = (int) Math.ceil(stack.count * 1.1f)
-				return stack
-			}.replaceAndRegister()
-	}
+    for (var meta : fuel.value) {
+        mods.gregtech.centrifuge.changeByInput([item("nuclearcraft:depleted_fuel_${fuel.key}", meta)], null)
+            .changeEachOutput { ItemStack stack ->
+                stack = checkReplacementsOrDefault(stack, u235Tiny, u238Tiny, p239Tiny, p241Tiny)
+                stack.count = (int) Math.ceil(stack.count * 1.1f)
+                return stack
+            }.replaceAndRegister()
+    }
 }
 
 /* Crushed Rhodochrosite from Redstone & Pyrolusite */
 var oreInputs = [
-	(oreprefix('ore')): 2, // Double Ore Req for Normal Ore
-	(oreprefix('oreNetherrack')): 1,
-	(oreprefix('oreEndstone')): 1,
+    (oreprefix('ore'))          : 2, // Double Ore Req for Normal Ore
+    (oreprefix('oreNetherrack')): 1,
+    (oreprefix('oreEndstone'))  : 1,
 ]
 
 for (var input : oreInputs) {
-	mods.gregtech.large_chemical_reactor.recipeBuilder()
-		.outputs(item('nuclearcraft:gem_dust', 1))
-		.input(new GTRecipeOreInput(input.key, material('pyrolusite'), (3 * input.value)))
-		.fluidInputs(fluid('sulfuric_acid') * 3000)
-		.fluidOutputs(fluid('manganese') * 4320)
-		.duration(200).EUt(VA[EV])
-		.buildAndRegister()
+    mods.gregtech.large_chemical_reactor.recipeBuilder()
+        .outputs(item('nuclearcraft:gem_dust', 1))
+        .input(new GTRecipeOreInput(input.key, material('pyrolusite'), (3 * input.value)))
+        .fluidInputs(fluid('sulfuric_acid') * 3000)
+        .fluidOutputs(fluid('manganese') * 4320)
+        .duration(200).EUt(VA[EV])
+        .buildAndRegister()
 
-	mods.gregtech.large_chemical_reactor.recipeBuilder()
-		.outputs(item('nuclearcraft:gem_dust', 1))
-		.input(new GTRecipeOreInput(input.key, material('redstone'), (6 * input.value)))
-		.fluidInputs(fluid('sulfuric_acid') * 6000)
-		.fluidOutputs(fluid('redstone') * 19008)
-		.duration(200).EUt(VA[EV])
-		.buildAndRegister()
+    mods.gregtech.large_chemical_reactor.recipeBuilder()
+        .outputs(item('nuclearcraft:gem_dust', 1))
+        .input(new GTRecipeOreInput(input.key, material('redstone'), (6 * input.value)))
+        .fluidInputs(fluid('sulfuric_acid') * 6000)
+        .fluidOutputs(fluid('redstone') * 19008)
+        .duration(200).EUt(VA[EV])
+        .buildAndRegister()
 }
 
 // Change Active Cooler Recipe from NC Helium -> GT Liquid Helium
@@ -141,23 +141,23 @@ changeCoolerRecipe(fluid('liquid_helium'), MetaEnums.CoolerType.HELIUM)
 
 // Replace Cooler Crafting Recipes with Canner Recipes
 def replaceCannerRecipe = (ItemStack cooler, FluidStack fluid) -> {
-	crafting.removeByOutput(cooler)
-	mods.gregtech.canner.recipeBuilder()
-		.inputs(item('nuclearcraft:cooler'))
-		.fluidInputs(fluid)
-		.outputs(cooler)
-		.duration(400).EUt(VA[LV])
-		.buildAndRegister()
+    crafting.removeByOutput(cooler)
+    mods.gregtech.canner.recipeBuilder()
+        .inputs(item('nuclearcraft:cooler'))
+        .fluidInputs(fluid)
+        .outputs(cooler)
+        .duration(400).EUt(VA[LV])
+        .buildAndRegister()
 }
 
 // Add a Hidden version of Cooler Canner Recipe, using Solids (LEGACY RECIPES)
 def addLegacyCoolerRecipe = (ItemStack cooler, OreDictIngredient ing) -> {
-	mods.gregtech.canner.recipeBuilder()
-		.hidden()
-		.inputs(item('nuclearcraft:cooler'), ing * 16)
-		.outputs(cooler)
-		.duration(400).EUt(VA[LV])
-		.buildAndRegister()
+    mods.gregtech.canner.recipeBuilder()
+        .hidden()
+        .inputs(item('nuclearcraft:cooler'), ing * 16)
+        .outputs(cooler)
+        .duration(400).EUt(VA[LV])
+        .buildAndRegister()
 }
 
 replaceCannerRecipe(item('nuclearcraft:cooler', 1), fluid('water') * 1000)

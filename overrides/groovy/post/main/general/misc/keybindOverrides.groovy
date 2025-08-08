@@ -19,7 +19,7 @@ addOverride('key.saveToolbarActivator', Keyboard.KEY_NONE)
 
 // Some People Remove CraftPresence
 if (Loader.isModLoaded('craftpresence'))
-	addOverride('key.craftpresence.config_keycode.name', Keyboard.KEY_NONE)
+    addOverride('key.craftpresence.config_keycode.name', Keyboard.KEY_NONE)
 
 addOverride('key.openRocketUI', KeyModifier.CONTROL, Keyboard.KEY_C)
 

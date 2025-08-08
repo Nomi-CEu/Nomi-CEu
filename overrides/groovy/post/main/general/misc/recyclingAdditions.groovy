@@ -10,28 +10,28 @@ import gregtech.api.recipes.ingredients.nbtmatch.NBTTagType
 // 4x and 9x Fluid Hatches
 // Only add these in Hard Mode, in Normal Mode, these are added in Mode-Specific/Normal-Mode/buses.groovy
 if (LabsModeHelper.expert) {
-	changeStackRecycling(metaitem('fluid_hatch.import_4x'), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem('fluid_hatch.import_4x.iv'), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem('fluid_hatch.import_9x'), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem('fluid_hatch.import_9x.iv'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.import_4x'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.import_4x.iv'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.import_9x'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.import_9x.iv'), ASSEMBLER_RECIPES)
 
-	changeStackRecycling(metaitem('fluid_hatch.export_4x'), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem('fluid_hatch.export_4x.iv'), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem('fluid_hatch.export_9x'), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem('fluid_hatch.export_9x.iv'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.export_4x'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.export_4x.iv'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.export_9x'), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem('fluid_hatch.export_9x.iv'), ASSEMBLER_RECIPES)
 }
 
 // LuV, ZPM and UV Parts
 var addRecyclingToParts = { String tier ->
-	changeStackRecycling(metaitem("electric.motor.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("electric.pump.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("conveyor.module.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("electric.piston.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("robot.arm.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("field.generator.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("emitter.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("sensor.${tier}"), ASSEMBLY_LINE_RECIPES)
-	changeStackRecycling(metaitem("fluid.regulator.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("electric.motor.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("electric.pump.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("conveyor.module.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("electric.piston.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("robot.arm.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("field.generator.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("emitter.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("sensor.${tier}"), ASSEMBLY_LINE_RECIPES)
+    changeStackRecycling(metaitem("fluid.regulator.${tier}"), ASSEMBLER_RECIPES)
 }
 
 addRecyclingToParts('luv')
@@ -41,22 +41,22 @@ addRecyclingToParts('uv')
 // EV, IV, LuV, ZPM, UV and UHV Misc Energy Hatches
 
 var addRecyclingToHatches = { String tier ->
-	changeStackRecycling(metaitem("energy_hatch.input_4a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("energy_hatch.output_4a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("energy_hatch.input_16a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("energy_hatch.output_16a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("energy_hatch.input_4a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("energy_hatch.output_4a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("energy_hatch.input_16a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("energy_hatch.output_16a.${tier}"), ASSEMBLER_RECIPES)
 
-	changeStackRecycling(metaitem("transformer.adjustable.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("transformer.adjustable.${tier}"), ASSEMBLER_RECIPES)
 
-	changeStackRecycling(metaitem("substation_hatch.input_64a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("substation_hatch.output_64a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("substation_hatch.input_64a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("substation_hatch.output_64a.${tier}"), ASSEMBLER_RECIPES)
 
-	changeStackRecycling(metaitem("laser_hatch.target_256a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("laser_hatch.source_256a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("laser_hatch.target_1024a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("laser_hatch.source_1024a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("laser_hatch.target_4096a.${tier}"), ASSEMBLER_RECIPES)
-	changeStackRecycling(metaitem("laser_hatch.source_4096a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("laser_hatch.target_256a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("laser_hatch.source_256a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("laser_hatch.target_1024a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("laser_hatch.source_1024a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("laser_hatch.target_4096a.${tier}"), ASSEMBLER_RECIPES)
+    changeStackRecycling(metaitem("laser_hatch.source_4096a.${tier}"), ASSEMBLER_RECIPES)
 }
 
 // EV Hatches (Just 4A Hatches + Adjustable Transformer)

@@ -15,18 +15,18 @@ ore('questbookSteamLiquidBoiler').add(item('gregtech:machine', 6))
 
 // Singleblock Miners
 if (LabsModeHelper.expert)
-	ore('questbookSingleMiner').add(metaitem('steam_miner'))
+    ore('questbookSingleMiner').add(metaitem('steam_miner'))
 
 for (def tier : ['lv', 'mv', 'hv']) {
-	ore('questbookSingleMiner').add(metaitem("miner.${tier}"))
+    ore('questbookSingleMiner').add(metaitem("miner.${tier}"))
 }
 
 // Rock Breaker (Used in HM Only)
 for (def type : ['bronze', 'steel'])
-	ore('questbookRockBreaker').add(metaitem("steam_rock_breaker_${type}"))
+    ore('questbookRockBreaker').add(metaitem("steam_rock_breaker_${type}"))
 
 for (def tier : ['lv', 'mv'])
-	ore('questbookRockBreaker').add(metaitem("rock_breaker.${tier}"))
+    ore('questbookRockBreaker').add(metaitem("rock_breaker.${tier}"))
 
 
 // Early Conveyors (for Manual Automation)
@@ -35,12 +35,12 @@ ore('questbookConveyor').add(metaitem('conveyor.module.lv'))
 
 // Chemical Dyes
 for (def color : EnumDyeColor.values()) {
-	ore('questbookChemicalDye').add(metaitem("dye.${color.getName()}"))
+    ore('questbookChemicalDye').add(metaitem("dye.${color.getName()}"))
 }
 
 // Fishers
 for (def tier : ['lv', 'mv', 'hv', 'ev']) {
-	ore('questbookFisher').add(metaitem("fisher.${tier}"))
+    ore('questbookFisher').add(metaitem("fisher.${tier}"))
 }
 
 // Spikes

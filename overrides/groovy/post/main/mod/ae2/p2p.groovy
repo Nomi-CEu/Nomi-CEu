@@ -13,10 +13,10 @@ crafting.addShapeless(Common.meP2p, [p2pOre])
 
 // Assembler Recipes: Any P2P (Ore Dict) + Circuit -> Variant of P2P (Excluding ME)
 for (int i : 0..Common.p2pVariants.size() - 1) {
-	mods.gregtech.assembler.recipeBuilder()
-		.inputs(p2pOre)
-		.circuitMeta(i + 1)
-		.outputs(Common.p2pVariants[i].value)
-		.duration(10).EUt(VA[LV])
-		.buildAndRegister()
+    mods.gregtech.assembler.recipeBuilder()
+        .inputs(p2pOre)
+        .circuitMeta(i + 1)
+        .outputs(Common.p2pVariants[i].value)
+        .duration(10).EUt(VA[LV])
+        .buildAndRegister()
 }
