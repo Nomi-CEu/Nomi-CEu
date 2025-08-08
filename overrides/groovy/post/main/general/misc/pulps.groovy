@@ -1,9 +1,11 @@
-import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
-import gregtech.api.recipes.ingredients.GTRecipeItemInput
-import gregtech.api.unification.OreDictUnifier
+package post.main.general.misc
 
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.ore.OrePrefix.*
+
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
+import gregtech.api.recipes.ingredients.GTRecipeItemInput
+import gregtech.api.unification.OreDictUnifier
 
 /* Add Extruder Recipes from Pulps to Blocks/Rods */
 
@@ -27,9 +29,9 @@ var prefixes = [
     stick,
 ]
 
-for (def material : materials) {
+for (var material : materials) {
     var dust = OreDictUnifier.get(dust, material)
-    for (def prefix : prefixes) {
+    for (var prefix : prefixes) {
         var stack = OreDictUnifier.get(prefix, material)
         if (stack.empty) continue
 

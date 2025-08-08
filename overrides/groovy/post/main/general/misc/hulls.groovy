@@ -1,5 +1,8 @@
 package post.main.general.misc
 
+import static gregtech.api.GTValues.*
+import static gregtech.loaders.recipe.CraftingComponent.*
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import gregtech.api.recipes.RecipeBuilder
@@ -13,16 +16,16 @@ var pbi = fluid('polybenzimidazole')
 
 for (var tier : peHulls) {
     ChangeRecipeBuilderCollection peRecipes = mods.gregtech.assembler.changeByOutput([HULL.getIngredient(tier)], null)
-    peRecipes.forEach { ChangeRecipeBuilder it ->
-        it.builder { RecipeBuilder builder ->
-            builder.clearFluidInputs()
+    peRecipes.forEach { ChangeRecipeBuilder builder ->
+        builder.builder { RecipeBuilder recipe ->
+            recipe.clearFluidInputs()
                 .fluidInputs(ptfe * 144)
         }.buildAndRegister()
     }
 
-    peRecipes.copy().forEach { ChangeRecipeBuilder it ->
-        it.builder { RecipeBuilder builder ->
-            builder.clearFluidInputs()
+    peRecipes.copy().forEach { ChangeRecipeBuilder builder ->
+        builder.builder { RecipeBuilder recipe ->
+            recipe.clearFluidInputs()
                 .fluidInputs(pbi * 72)
         }.buildAndRegister()
     }
@@ -30,9 +33,9 @@ for (var tier : peHulls) {
 
 for (var tier : ptfeHulls) {
     mods.gregtech.assembler.changeByOutput([HULL.getIngredient(tier)], null)
-        .forEach { ChangeRecipeBuilder it ->
-            it.builder { RecipeBuilder builder ->
-                builder.clearFluidInputs()
+        .forEach { ChangeRecipeBuilder builder ->
+            builder.builder { RecipeBuilder recipe ->
+                recipe.clearFluidInputs()
                     .fluidInputs(pbi * 144)
             }.buildAndRegister()
         }

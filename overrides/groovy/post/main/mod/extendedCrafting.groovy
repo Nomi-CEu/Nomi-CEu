@@ -1,3 +1,5 @@
+package post.main.mod
+
 // Make Crystalline Recipe 'Strict', e.g. only allowed in tier 3 table
 mods.extendedcrafting.table_crafting.removeByOutput(item('extendedcrafting:material', 24)) // Crystalline
 mods.extendedcrafting.table_crafting.shapedBuilder()

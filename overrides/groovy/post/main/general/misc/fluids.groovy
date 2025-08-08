@@ -1,13 +1,15 @@
 package post.main.general.misc
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
+import static gregtech.api.util.FluidTooltipUtil.*
+
 import com.nomiceu.nomilabs.fluid.registry.LabsFluids
 import gregtech.api.fluids.FluidState
+import java.util.function.Supplier
 import mezz.jei.api.ingredients.VanillaTypes
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.Fluid
 import net.minecraftforge.fluids.FluidStack
-
-import java.util.function.Supplier
 
 /*
  * This File fixes Fluids being Items in JEI, as well as adding GT Tooltips to all Fluids.
@@ -74,7 +76,7 @@ addFluidTooltip(fluid('fire_water'))
 // XP (Extra Tooltip)
 Supplier<List<String>> gtTooltip = createFluidTooltip(null, fluid('xpjuice').fluid, FluidState.LIQUID)
 addFluidTooltip(fluid('xpjuice'), () -> {
-    def result = [translate("nomiceu.tooltip.eio.liquid_xp")]
+    var result = [translate('nomiceu.tooltip.eio.liquid_xp')]
     result.addAll(gtTooltip.get())
     return result
 })
@@ -120,7 +122,6 @@ static void fixItemFluid(ItemStack itemForm, FluidStack fluidForm) {
     mods.jei.ingredient.add(VanillaTypes.FLUID, fluidForm * 1000)
 }
 
-
 /**
  * Adds GT Tooltips to a fluid. Once added, cannot be removed via reloading.
  * (To be replaced by a Labs one in a future version of Labs)
@@ -138,7 +139,7 @@ static void addFluidTooltip(FluidStack fluidForm, Supplier<List<String>> tooltip
 
     // Only Register if Not Already Registered (aka previous runs of this script)
     // However, this is not reloadable. To be fixed in a future version of Labs.
-    if (existing != null && existing.isEmpty())
+    if (existing?.empty)
         registerTooltip(fluidForm.fluid, tooltip)
 }
 

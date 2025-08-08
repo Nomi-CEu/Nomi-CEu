@@ -3,8 +3,14 @@
 
 package post.main.general.misc
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
+import static gregtech.api.GTValues.*
+import static gregtech.api.unification.ore.OrePrefix.*
+
 import appeng.core.AEConfig
 import appeng.core.features.AEFeature
+import classes.post.Common
 import com.nomiceu.nomilabs.config.LabsConfig
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.GregTechAPI
@@ -16,7 +22,6 @@ import gregtech.common.pipelike.fluidpipe.ItemBlockFluidPipe
 import mustapelto.deepmoblearning.common.metadata.MetadataLivingMatter
 import mustapelto.deepmoblearning.common.metadata.MetadataManager
 import net.minecraft.item.ItemStack
-import classes.post.Common
 
 /* Mixed */
 // Fillable Items
@@ -42,14 +47,17 @@ for (ItemStack fill : fillable) {
 
 /* MC */
 // XP Bottle
-addTooltip(item('minecraft:experience_bottle'), translatable("nomiceu.tooltip.mc.xp_bottle"))
+addTooltip(item('minecraft:experience_bottle'), translatable('nomiceu.tooltip.mc.xp_bottle'))
 
 /* Actually Additions */
 
 // Drill Core
 addTooltip(item('actuallyadditions:item_misc', 16), translatable('nomiceu.tooltip.actuallyadditions.drill_core.1'))
 if (LabsModeHelper.normal) {
-    addTooltip(item('actuallyadditions:item_misc', 16), [translatableEmpty(), translatable('nomiceu.tooltip.actuallyadditions.drill_core.2')])
+    addTooltip(item('actuallyadditions:item_misc', 16), [
+        translatableEmpty(),
+        translatable('nomiceu.tooltip.actuallyadditions.drill_core.2'),
+    ])
 }
 
 // Canola
@@ -69,7 +77,7 @@ addTooltip(item('actuallyadditions:item_solidified_experience'), [
     translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.desc.1'),
     translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.desc.2'),
     translatableEmpty(),
-    translatable("nomiceu.tooltip.actuallyadditions.solidifed_xp.amount"),
+    translatable('nomiceu.tooltip.actuallyadditions.solidifed_xp.amount'),
 ])
 
 // Tiny Fuels
@@ -79,7 +87,7 @@ var tinyFuels = [
 ]
 
 for (var item : tinyFuels) {
-    addTooltip(item, translatable("tooltip.nomilabs.tiny_fuels"))
+    addTooltip(item, translatable('tooltip.nomilabs.tiny_fuels'))
 }
 
 /* Advanced Rocketry */
@@ -134,8 +142,8 @@ addTooltip(item('appliedenergistics2:material', 61), translatable('nomiceu.toolt
 
 // Hyper Acceleration Card
 addTooltip(item('nae2:upgrade'), [
-    translatable("nomiceu.tooltip.ae2.hyper_acceleration_card.1"),
-    translatable("nomiceu.tooltip.ae2.hyper_acceleration_card.2")
+    translatable('nomiceu.tooltip.ae2.hyper_acceleration_card.1'),
+    translatable('nomiceu.tooltip.ae2.hyper_acceleration_card.2'),
 ])
 
 // Pure Certus Quartz
@@ -158,17 +166,16 @@ addTooltip(Common.meP2p, [
     translatable('nomiceu.tooltip.ae2.p2p.me'),
     translatableEmpty(),
     translatable('nomiceu.tooltip.ae2.p2p.type', 'ME'),
-    translatable("nomiceu.tooltip.ae2.p2p.desc"),
+    translatable('nomiceu.tooltip.ae2.p2p.desc'),
 ])
 
 // Other P2P
 for (var item : Common.p2pVariants) {
     addTooltip(item.value, [
         translatable('nomiceu.tooltip.ae2.p2p.type', item.key),
-        translatable("nomiceu.tooltip.ae2.p2p.desc"),
+        translatable('nomiceu.tooltip.ae2.p2p.desc'),
     ])
 }
-
 
 // Dense Cables, Conduits, and Controller
 // Only apply tooltip if channels not enabled (manually, by players)
@@ -243,7 +250,9 @@ for (ItemStack storage : storageCells) {
 }
 
 // Quartz Knives
-for (ItemStack knife : [item('appliedenergistics2:nether_quartz_cutting_knife'), item('appliedenergistics2:certus_quartz_cutting_knife')]) {
+var cuttingKnifes = [item('appliedenergistics2:nether_quartz_cutting_knife'),
+                     item('appliedenergistics2:certus_quartz_cutting_knife')]
+for (var knife : cuttingKnifes) {
     addTooltip(knife, translatable('nomiceu.tooltip.ae2.quartz_knife'))
 }
 
@@ -255,32 +264,32 @@ List<ItemStack> buses = [
     item('appliedenergistics2:part', 261), // ME Fluid Export Buses
 ]
 for (var bus : buses) {
-    addTooltip(bus, [translatable("nomiceu.tooltip.ae2.buses.warning")])
+    addTooltip(bus, [translatable('nomiceu.tooltip.ae2.buses.warning')])
 }
 
 // Storage Exposer Warning
-addTooltip(item('nae2:exposer'), [translatableEmpty(), translatable("nomiceu.tooltip.ae2.storage_exposer.warning")])
+addTooltip(item('nae2:exposer'), [translatableEmpty(), translatable('nomiceu.tooltip.ae2.storage_exposer.warning')])
 
 // Matter Cannon
 addTooltip(item('appliedenergistics2:matter_cannon'), [
     translatableEmpty(),
-    translatable("nomiceu.tooltip.ae2.matter_cannon.1"),
-    translatable("nomiceu.tooltip.ae2.matter_cannon.2"),
-    translatable("nomiceu.tooltip.ae2.storage_cell_like")
+    translatable('nomiceu.tooltip.ae2.matter_cannon.1'),
+    translatable('nomiceu.tooltip.ae2.matter_cannon.2'),
+    translatable('nomiceu.tooltip.ae2.storage_cell_like'),
 ])
 
 // Color Applicator
 addTooltip(item('appliedenergistics2:color_applicator'), [
     translatableEmpty(),
-    translatable("nomiceu.tooltip.ae2.color_applicator.1"),
-    translatable("nomiceu.tooltip.ae2.storage_cell_like")
+    translatable('nomiceu.tooltip.ae2.color_applicator.1'),
+    translatable('nomiceu.tooltip.ae2.storage_cell_like'),
 ])
 
 // Tiny TNT
 addTooltip(item('appliedenergistics2:tiny_tnt'), [
-    translatable("nomiceu.tooltip.ae2.tiny_tnt.1"),
-    translatable("nomiceu.tooltip.ae2.tiny_tnt.2"),
-    translatable("nomiceu.tooltip.ae2.tiny_tnt.3"),
+    translatable('nomiceu.tooltip.ae2.tiny_tnt.1'),
+    translatable('nomiceu.tooltip.ae2.tiny_tnt.2'),
+    translatable('nomiceu.tooltip.ae2.tiny_tnt.3'),
 ])
 
 /* Dimensional Edibles */
@@ -347,22 +356,22 @@ addTooltip(metaitem('cover.facade'), [
 
 // ULV Covers
 // Change tooltips to match other covers
-customHandleTooltip(metaitem('ulv_covers:conveyor.module.ulv')) {
-    it.clear()
-    it.add(translate('metaitem.conveyor.module.tooltip'))
-    it.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
+customHandleTooltip(metaitem('ulv_covers:conveyor.module.ulv')) { tooltip ->
+    tooltip.clear()
+    tooltip.add(translate('metaitem.conveyor.module.tooltip'))
+    tooltip.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
 }
 
-customHandleTooltip(metaitem('ulv_covers:robot.arm.ulv')) {
-    it.clear()
-    it.add(translate('metaitem.robot.arm.tooltip'))
-    it.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
+customHandleTooltip(metaitem('ulv_covers:robot.arm.ulv')) { tooltip ->
+    tooltip.clear()
+    tooltip.add(translate('metaitem.robot.arm.tooltip'))
+    tooltip.add(translate('gregtech.universal.tooltip.item_transfer_rate', 4))
 }
 
-customHandleTooltip(metaitem('ulv_covers:electric.pump.ulv')) {
-    it.clear()
-    it.add(translate('metaitem.electric.pump.tooltip'))
-    it.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', 320))
+customHandleTooltip(metaitem('ulv_covers:electric.pump.ulv')) { tooltip ->
+    tooltip.clear()
+    tooltip.add(translate('metaitem.electric.pump.tooltip'))
+    tooltip.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', 320))
 }
 
 // Pipes
@@ -377,14 +386,14 @@ for (var material : GregTechAPI.materialManager.registeredMaterials) {
         // Wood & Treated Wood Pipes don't have tiny, huge, quad and nonuple
         if (pipe.empty) continue
 
-        var pipeBlock = (BlockFluidPipe) ((ItemBlockFluidPipe) pipe.getItem()).block
+        var pipeBlock = (BlockFluidPipe) ((ItemBlockFluidPipe) pipe.item).block
 
         var prop = pipeBlock.createItemProperties(pipe)
-        String transferAmt = TextFormattingUtil.formatNumbers(prop.getThroughput() * 20)
+        String transferAmt = TextFormattingUtil.formatNumbers(prop.throughput * 20)
 
-        customHandleTooltip(pipe) {
-            it.subList(0, 1).clear() // Remove first
-            it.add(0, translate('nomiceu.tooltip.gregtech.transfer_l_s', transferAmt))
+        customHandleTooltip(pipe) { tooltip ->
+            tooltip.subList(0, 1).clear() // Remove first
+            tooltip.add(0, translate('nomiceu.tooltip.gregtech.transfer_l_s', transferAmt))
         }
     }
 }
@@ -396,9 +405,9 @@ for (var tier : Common.getVoltageNames(LV, UV)) {
 
     String transferFmt = TextFormattingUtil.formatNumbers(transferAmt)
 
-    customHandleTooltip(metaitem("electric.pump.${tier.value}")) {
-        it.subList(it.size() - 1, it.size()).clear() // Remove last
-        it.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', transferFmt))
+    customHandleTooltip(metaitem("electric.pump.${tier.value}")) { tooltip ->
+        tooltip.subList(tooltip.size() - 1, tooltip.size()).clear() // Remove last
+        tooltip.add(translate('nomiceu.tooltip.gregtech.transfer_l_s', transferFmt))
     }
 }
 
@@ -420,7 +429,7 @@ List<ItemStack> facades = [
 ]
 
 for (ItemStack facade : facades) {
-    addTooltip(facade, [translatableEmpty(), translatable("nomiceu.tooltip.eio.facade")])
+    addTooltip(facade, [translatableEmpty(), translatable('nomiceu.tooltip.eio.facade')])
 }
 
 /* Project Red */

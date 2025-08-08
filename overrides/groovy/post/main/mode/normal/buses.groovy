@@ -1,8 +1,8 @@
 package post.main.mode.normal
 
-import com.nomiceu.nomilabs.util.LabsModeHelper
-
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.createRecipe
+
+import com.nomiceu.nomilabs.util.LabsModeHelper
 
 // Changes Buses and Hatches in Normal Mode to not be assembler recipe for first couple tiers.
 if (!LabsModeHelper.normal) return

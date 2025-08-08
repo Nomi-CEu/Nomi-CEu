@@ -1,5 +1,7 @@
 package post.main.mode.expert
 
+import static gregtech.api.GTValues.*
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.item.ItemStack
 
@@ -18,7 +20,15 @@ createStabilizedMinerRecipe(item('nomilabs:tiereightship'), item('nomilabs:tiere
 // No Recycling, Accidental Recycling would be horrible, and most of the expensive ingredients cannot be recycled back
 void createStabilizedMinerRecipe(ItemStack nonStab, ItemStack stab) {
     mods.gregtech.assembly_line.recipeBuilder()
-        .inputs(nonStab, item('nomilabs:heartofauniverse'), item('draconicevolution:chaos_shard') * 4, metaitem('field.generator.uv') * 24, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7, metaitem('plateDenseIridium') * 7)
+        .inputs(
+            nonStab,
+            item('nomilabs:heartofauniverse'),
+            item('draconicevolution:chaos_shard') * 4,
+            metaitem('field.generator.uv') * 24,
+            metaitem('plateDenseIridium') * 7,
+            metaitem('plateDenseIridium') * 7,
+            metaitem('plateDenseIridium') * 7,
+            metaitem('plateDenseIridium') * 7)
         .fluidInputs(fluid('rocket_fuel') * 48000, fluid('omnium') * 576, fluid('neutronium') * 576)
         .outputs(stab)
         .duration(2500).EUt(VA[UHV])

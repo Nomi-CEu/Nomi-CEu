@@ -1,14 +1,16 @@
 package post.main.mod
 
+import static gregtech.api.GTValues.*
+
+import classes.post.Common
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import net.minecraft.item.ItemStack
-import classes.post.Common
 
 /* Cleanup EIO Glasses in JEI, removing the dyed versions of each variant of glass
  * Since we are lazy, remove all, then add back the original
  */
 for (var stack in Common.eioGlasses) {
-    mods.jei.ingredient.hide(new ItemStack(stack.getItem(), 1, Short.MAX_VALUE))
+    mods.jei.ingredient.hide(new ItemStack(stack.item, 1, Short.MAX_VALUE))
     mods.jei.ingredient.add(stack.copy())
 }
 
@@ -32,7 +34,7 @@ mods.gregtech.assembler.recipeBuilder()
     .inputs(item('enderio:item_me_conduit') * 4, ore('itemConduitBinder') * 5)
     .outputs(item('enderio:item_me_conduit', 1) * 2)
     .duration(80).EUt(VHA[LV])
-    .buildAndRegister();
+    .buildAndRegister()
 
 // Replace the 'old' Glowstone nano particles with the 'not old' one
 // Not really serving any purpose, but removing the need for two items that do the same thing

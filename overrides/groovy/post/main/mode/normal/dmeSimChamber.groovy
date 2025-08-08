@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.Loader
 // Adds Recipes for the DME Simulation Chamber
 if (!LabsModeHelper.normal) return
 
-def models = MetadataManager.dataModelMetadataList
+var models = MetadataManager.dataModelMetadataList
 for (var model : models) {
     if (!Loader.isModLoaded(model.modID)) continue // Edge Case
 
@@ -23,13 +23,13 @@ for (var model : models) {
 }
 
 void addDMERecipe(MetadataDataModel model, int tier) {
-    def tierData = MetadataManager.getDataModelTierData(tier)
+    var tierData = MetadataManager.getDataModelTierData(tier)
     if (!tierData.present || !tierData.get().canSimulate) return
 
-    def modelPath = model.dataModelRegistryID
-    def living = model.livingMatter
-    def pristine = model.pristineMatter
-    def eut = model.simulationRFCost / 4
+    var modelPath = model.dataModelRegistryID
+    var living = model.livingMatter
+    var pristine = model.pristineMatter
+    var eut = model.simulationRFCost / 4
 
     int chance = tierData.get().pristineChance
 

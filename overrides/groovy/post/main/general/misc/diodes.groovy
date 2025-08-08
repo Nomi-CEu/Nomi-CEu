@@ -1,9 +1,10 @@
 package post.main.general.misc
 
+import static gregtech.api.GTValues.*
+import static gregtech.loaders.recipe.CraftingComponent.*
+
 import com.cleanroommc.groovyscript.api.IIngredient
 import gregtech.api.items.metaitem.MetaItem
-import gregtech.api.unification.OreDictUnifier
-import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
 import gregtech.common.metatileentities.MetaTileEntities
 import net.minecraft.item.ItemStack
@@ -21,14 +22,14 @@ replaceRecipe(HV, IV, ore('smdDiodes'))
 // Both Min Tier and Max Tier are inclusive
 void replaceRecipe(int minTier, int maxTier, IIngredient oreDict) {
     for (int tier = minTier; tier <= maxTier; tier++) {
-        def hull = getIngredientFromGTComponent(HULL, tier)
-        def plate = getIngredientFromGTComponent(PLATE, tier)
-        def cable = getIngredientFromGTComponent(CABLE_QUAD, tier)
-        def diode = MetaTileEntities.DIODES[tier].getStackForm()
+        var hull = getIngredientFromGTComponent(HULL, tier)
+        var plate = getIngredientFromGTComponent(PLATE, tier)
+        var cable = getIngredientFromGTComponent(CABLE_QUAD, tier)
+        var diode = MetaTileEntities.DIODES[tier].stackForm
 
         crafting.shapedBuilder()
             .output(diode)
-            .matrix("CDC", "DHD", "PDP")
+            .matrix('CDC', 'DHD', 'PDP')
             .key('H', hull)
             .key('D', oreDict)
             .key('P', plate)
@@ -39,21 +40,13 @@ void replaceRecipe(int minTier, int maxTier, IIngredient oreDict) {
 
 IIngredient getIngredientFromGTComponent(Component comp, int tier) {
     Object ing = comp.getIngredient(tier)
-    if (ing instanceof MetaItem.MetaValueItem) {
-        def meta = (MetaItem.MetaValueItem) ing
-        return meta.getStackForm() as IIngredient
+
+    return switch (ing) {
+        case MetaItem.MetaValueItem -> ((MetaItem.MetaValueItem) ing).stackForm as IIngredient
+        case UnificationEntry -> ore(((UnificationEntry) ing).toString())
+        case ItemStack -> ing as IIngredient
+        default -> {
+            println "[Diodes] Failed to cast class ${ing.class.name} to an IIngredient!"
+        }
     }
-    if (ing instanceof OrePrefix) {
-        def prefix = (OrePrefix) ing
-        return ore(prefix)
-    }
-    if (ing instanceof Enum) {
-        def enumIng = (Enum) ing
-        return item(enumIng.name())
-    }
-    if (ing instanceof UnificationEntry) {
-        def entry = (UnificationEntry) ing
-        return OreDictUnifier.get(entry) as IIngredient
-    }
-    if (ing instanceof ItemStack) return ing as IIngredient
 }

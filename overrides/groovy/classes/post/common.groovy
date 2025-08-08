@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack
 import org.apache.commons.lang3.tuple.Pair
 
 class Common {
+
     /* Cached Values */
     private static ItemStack meP2p = null
     private static List<Pair<String, ItemStack>> p2pVariants = null
@@ -19,7 +20,7 @@ class Common {
      */
     static List<Pair<Integer, String>> getVoltageNames(int from, int to) {
         if (voltageNames == null) {
-            voltageNames = new ArrayList<>()
+            voltageNames = []
             for (int i = 0; i < GTValues.VN.length; i++) {
                 voltageNames.add(Pair.of(i, GTValues.VN[i].toLowerCase()))
             }
@@ -54,19 +55,21 @@ class Common {
         if (eioGlasses != null) return eioGlasses
 
         eioGlasses = []
-        for (var prefix in [null, 'holy', 'unholy', 'pasture', 'not_holy', 'not_unholy', 'not_pasture']) {
-            if (prefix == null) {
-                prefix = ''
-            } else {
-                prefix = "_$prefix"
+
+        var prefixes = ['holy', 'unholy', 'pasture', 'not_holy', 'not_unholy', 'not_pasture']
+            .collect { prefix -> "block_${prefix}".toString() }
+        prefixes.add('block')
+
+        var suffixes = ['fused', 'enlightened_fused', 'dark_fused']
+            .collectMany { suffix -> ["${suffix}_quartz", "${suffix}_glass"] }
+
+        for (var prefix : prefixes) {
+            for (var suffix : suffixes) {
+                eioGlasses.add(item("enderio:${prefix}_${suffix}"))
             }
-            eioGlasses.add(item("enderio:block${prefix}_fused_quartz"))
-            eioGlasses.add(item("enderio:block${prefix}_fused_glass"))
-            eioGlasses.add(item("enderio:block${prefix}_enlightened_fused_quartz"))
-            eioGlasses.add(item("enderio:block${prefix}_enlightened_fused_glass"))
-            eioGlasses.add(item("enderio:block${prefix}_dark_fused_quartz"))
-            eioGlasses.add(item("enderio:block${prefix}_dark_fused_glass"))
         }
+
         return eioGlasses
     }
+
 }

@@ -1,6 +1,10 @@
 package post.main.mode.expert
 
+import static gregtech.api.GTValues.*
+import static gregtech.api.unification.material.Materials.*
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
+import gregtech.api.unification.ore.OrePrefix
 
 if (!LabsModeHelper.expert) return
 
@@ -10,17 +14,17 @@ if (!LabsModeHelper.expert) return
 
 // Diamond
 mods.gregtech.universal_crystallizer.recipeBuilder()
-    .inputs(ore('dustCarbon') * 64, ore('dustCarbon') * 64, ore('dustCarbon') * 64, ore('dustCarbon') * 64, ore('dustCarbon') * 64, ore('dustCarbon') * 64, ore('dustCarbon') * 64, ore('dustCarbon') * 64)
+    .inputs([ore('dustCarbon') * 64] * 8) // Add 8 stacks of 64 carbon
     .outputs(item('minecraft:diamond') * 32)
     .fluidInputs(fluid('naquadah_enriched') * 3)
     .duration(12).EUt(VHA[UHV])
     .buildAndRegister()
 
 // Empowered Blocks
-var materials = [ore('dustRedstone'), ore('dustLapis'), ore('dustDiamond'), ore('dustCoal'), ore('dustEmerald'), ore('dustIron')]
+var materials = [Redstone, Lapis, Diamond, Coal, Emerald, Iron]
 for (int i = 0; i < materials.size(); i++) {
     mods.gregtech.universal_crystallizer.recipeBuilder()
-        .inputs(materials[i] * 63)
+        .input(OrePrefix.dust, materials[i])
         .outputs(item('actuallyadditions:block_crystal_empowered', i) * 7)
         .fluidInputs(fluid('naquadah_enriched') * 3)
         .duration(7).EUt(VH[UHV])
@@ -29,7 +33,11 @@ for (int i = 0; i < materials.size(); i++) {
 
 // Crystal Matrix
 mods.gregtech.universal_crystallizer.recipeBuilder()
-    .inputs(ore('gemPerfectDiamond') * 3, item('minecraft:nether_star') * 9, ore('plateDiamond') * 27, ore('gemDiamond') * 27)
+    .inputs(
+        ore('gemPerfectDiamond') * 3,
+        item('minecraft:nether_star') * 9,
+        ore('plateDiamond') * 27,
+        ore('gemDiamond') * 27)
     .outputs(metaitem('nomilabs:ingotCrystalMatrix'))
     .fluidInputs(fluid('naquadah_enriched') * 3)
     .duration(12).EUt(VH[UHV])
@@ -46,21 +54,31 @@ mods.gregtech.universal_crystallizer.recipeBuilder()
 // Draconic Evolution Recipes
 // In Fusion: 100 ticks
 mods.gregtech.universal_crystallizer.recipeBuilder()
-    .inputs(item('actuallyadditions:block_crystal_empowered', 4), metaitem('blockNetherStar') * 2, item('draconicevolution:draconic_core') * 4, item('armorplus:block_compressed_infused_lava_crystal') * 2)
+    .inputs(
+        item('actuallyadditions:block_crystal_empowered', 4),
+        metaitem('blockNetherStar') * 2,
+        item('draconicevolution:draconic_core') * 4,
+        item('armorplus:block_compressed_infused_lava_crystal') * 2)
     .outputs(item('draconicevolution:wyvern_core'))
     .fluidInputs(fluid('naquadah_enriched') * 30)
     .duration(100).EUt(VH[UHV])
     .buildAndRegister()
 
 mods.gregtech.universal_crystallizer.recipeBuilder()
-    .inputs(item('minecraft:nether_star'), item('draconicevolution:wyvern_core') * 4, metaitem('nomilabs:blockAwakenedDraconium') * 2)
+    .inputs(
+        item('minecraft:nether_star'),
+        item('draconicevolution:wyvern_core') * 4,
+        metaitem('nomilabs:blockAwakenedDraconium') * 2)
     .outputs(item('draconicevolution:awakened_core'))
     .fluidInputs(fluid('naquadah_enriched') * 30)
     .duration(100).EUt(VA[UHV])
     .buildAndRegister()
 
 mods.gregtech.universal_crystallizer.recipeBuilder()
-    .inputs(ore('blockDraconium') * 5, item('draconicevolution:wyvern_core') * 4, item('draconicevolution:dragon_heart') * 2)
+    .inputs(
+        ore('blockDraconium') * 5,
+        item('draconicevolution:wyvern_core') * 4,
+        item('draconicevolution:dragon_heart') * 2)
     .outputs(metaitem('nomilabs:blockAwakenedDraconium') * 5)
     .fluidInputs(fluid('naquadah_enriched') * 30)
     .duration(100).EUt((int) V[UHV])

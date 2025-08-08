@@ -1,10 +1,14 @@
 package post.main.general.misc
 
-import net.minecraft.item.EnumDyeColor
-import net.minecraft.item.ItemStack
-
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.NBTClearingRecipeHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.CAN_CLEAR_TOOLTIP
 import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.WARNING_TOOLTIP
+import static gregtech.common.metatileentities.MetaTileEntities.*
+
+import net.minecraft.item.EnumDyeColor
+import net.minecraft.item.ItemStack
 
 // NBT Clearing Recipes
 nbtClearingRecipe(item('minecraft:water_bucket'), item('minecraft:bucket'))
@@ -12,17 +16,17 @@ nbtClearingRecipe(item('minecraft:lava_bucket'), item('minecraft:bucket'))
 nbtClearingRecipe(item('forge:bucketfilled'), item('minecraft:bucket'))
 
 // Shulker Boxes
-for (def color : EnumDyeColor.values()) {
+for (var color : EnumDyeColor.values()) {
     nbtClearingRecipe(item("minecraft:${color.name}_shulker_box"))
 }
 
 // GT Crates
-for (def material : ["wood", "bronze", "steel", "aluminium", "stainless_steel", "titanium", "tungstensteel"]) {
+for (var material : ['wood', 'bronze', 'steel', 'aluminium', 'stainless_steel', 'titanium', 'tungstensteel']) {
     nbtClearingRecipe(metaitem("crate.${material}"))
 }
 
 // NC Coolers
-for (def meta : 1..15) {
+for (var meta : 1..15) {
     nbtClearingRecipe(item('nuclearcraft:cooler', meta), item('nuclearcraft:cooler'),
         translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.can_clear'),
         translatable('nomiceu.tooltip.nc.nbt_clearing.cooler.warning'))
@@ -38,21 +42,21 @@ var empty = translatableEmpty()
 List<ItemStack> canClearDrawers = []
 
 // Wooden Type Drawers
-for (def meta : 0..4) {
-    nbtClearingRecipe(item('storagedrawers:basicdrawers', meta), {
-        var tag = transferSubTags(it, 'material')
-        it.tagCompound = transferDrawerUpgradeData(it, tag)
+for (var meta : 0..4) {
+    nbtClearingRecipe(item('storagedrawers:basicdrawers', meta), { stack ->
+        var tag = transferSubTags(stack, 'material')
+        stack.tagCompound = transferDrawerUpgradeData(stack, tag)
     }, empty, WARNING_TOOLTIP)
 
     canClearDrawers.add(item('storagedrawers:basicdrawers', meta))
 }
 
-var normalClearer = { ItemStack it ->
-    it.tagCompound = transferDrawerUpgradeData(it, null)
+var normalClearer = { ItemStack stack ->
+    stack.tagCompound = transferDrawerUpgradeData(stack, null)
 }
 
 // GregTech Drawers
-for (def meta : 0..4) {
+for (var meta : 0..4) {
     nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_rubber_wood', meta), normalClearer,
         empty, WARNING_TOOLTIP)
     nbtClearingRecipe(item('gregtechdrawers:basicdrawers_gregtech_treated_wood', meta), normalClearer,
@@ -67,13 +71,13 @@ nbtClearingRecipe(item('storagedrawers:compdrawers'), normalClearer, empty, WARN
 canClearDrawers.add(item('storagedrawers:compdrawers'))
 
 /* Framed Drawer Like */
-def framedClearer = { ItemStack it ->
-    var tag = transferSubTags(it, 'MatS', 'MatT', 'MatF')
-    it.tagCompound = transferDrawerUpgradeData(it, tag)
+var framedClearer = { ItemStack stack ->
+    var tag = transferSubTags(stack, 'MatS', 'MatT', 'MatF')
+    stack.tagCompound = transferDrawerUpgradeData(stack, tag)
 }
 
 // Framed Drawers
-for (def meta : 0..4) {
+for (var meta : 0..4) {
     nbtClearingRecipe(item('storagedrawers:customdrawers', meta), framedClearer, empty, WARNING_TOOLTIP)
     canClearDrawers.add(item('storagedrawers:customdrawers', meta))
 }
@@ -88,19 +92,19 @@ for (var canClear : canClearDrawers) {
 }
 
 // Thermal Portable Tanks
-nbtClearingRecipe(item('thermalexpansion:tank'), {
-    it.tagCompound = transferSubTags(it, 'Creative', 'Level', 'RSControl')
-})
+nbtClearingRecipe(item('thermalexpansion:tank')) { stack ->
+    stack.tagCompound = transferSubTags(stack, 'Creative', 'Level', 'RSControl')
+}
 
 // Tooltips for Other Clearable Containers
 List<ItemStack> clearableContainers = []
 
 // Super/Quantum Chests & Tanks
-clearableContainers.addAll(QUANTUM_CHEST.collect { it.getStackForm() })
-clearableContainers.addAll(QUANTUM_TANK.collect { it.getStackForm() })
+clearableContainers.addAll((QUANTUM_CHEST*.stackForm))
+clearableContainers.addAll((QUANTUM_TANK*.stackForm))
 
 // Drums
-for (def material : ["wood", "bronze", "steel", "aluminium", "stainless_steel", "titanium", "tungstensteel", "gold"]) {
+for (var material : ['wood', 'bronze', 'steel', 'aluminium', 'stainless_steel', 'titanium', 'tungstensteel', 'gold']) {
     clearableContainers.add(metaitem("drum.${material}"))
 }
 
@@ -113,7 +117,7 @@ clearableContainers.add(metaitem('fluid_cell'))
 clearableContainers.add(metaitem('fluid_cell.universal'))
 
 // Material Cells
-for (def material : ["steel", "aluminium", "stainless_steel", "titanium", "tungstensteel"]) {
+for (var material : ['steel', 'aluminium', 'stainless_steel', 'titanium', 'tungstensteel']) {
     clearableContainers.add(metaitem("large_fluid_cell.${material}"))
 }
 
@@ -122,6 +126,6 @@ for (def material : ["steel", "aluminium", "stainless_steel", "titanium", "tungs
 clearableContainers.add(item('enderio:block_tank'))
 clearableContainers.add(item('enderio:block_tank', 1))
 
-for (def container : clearableContainers) {
+for (var container : clearableContainers) {
     addTooltip(container, CAN_CLEAR_TOOLTIP)
 }

@@ -1,4 +1,7 @@
 package post.main.mod
+
+import static gregtech.api.GTValues.*
+
 // Conductive Plate
 mods.gregtech.assembler.recipeBuilder()
     .inputs(metaitem('plateRedAlloy'), item('projectred-core:resource_item'))

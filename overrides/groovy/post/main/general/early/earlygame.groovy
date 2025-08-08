@@ -1,5 +1,11 @@
 package post.main.general.early
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeInputTooltip
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
+import static gregtech.api.GTValues.*
+import static org.apache.commons.lang3.tuple.Pair.of
+
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
@@ -9,10 +15,6 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder
 import gregtech.client.utils.TooltipHelper
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
-
-import static org.apache.commons.lang3.tuple.Pair.of
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeInputTooltip
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
 // Change Recipe for AA's Crafting Table on a Stick to be Stick + Table
 crafting.replaceShapeless(item('actuallyadditions:item_crafter_on_a_stick'),
@@ -50,7 +52,7 @@ if (LabsModeHelper.expert) {
 // Compressed Coke Clay Recipe
 // Add Input Tooltip for Non-Consumed Wooden Form
 addRecipeInputTooltip('gregtech:compressed_coke_clay', 4,
-    translatable("nomiceu.tooltip.mixed.not_consumed").addFormat(TooltipHelper.BLINKING_CYAN))
+    translatable('nomiceu.tooltip.mixed.not_consumed').addFormat(TooltipHelper.BLINKING_CYAN))
 
 // Wood Pulp
 // Output 4 for Normal, 2 for Expert
@@ -139,13 +141,13 @@ if (LabsModeHelper.normal) {
     replaceRecipeInput(metaitem('steam_oven'), [
         [item('gregtech:metal_casing'), metaitem('gearInvar'), item('gregtech:metal_casing')],
         [item('gregtech:boiler_firebox_casing'), item('morefurnaces:furnaceblock', 5), item('gregtech:boiler_firebox_casing')],
-        [item('gregtech:metal_casing'), metaitem('gearInvar'), item('gregtech:metal_casing')]
+        [item('gregtech:metal_casing'), metaitem('gearInvar'), item('gregtech:metal_casing')],
     ])
 
     replaceRecipeInput(metaitem('steam_grinder'), [
         [item('gregtech:metal_casing'), metaitem('gearPotin'), item('gregtech:metal_casing')],
         [item('gregtech:metal_casing'), item('minecraft:diamond'), item('gregtech:metal_casing')],
-        [item('gregtech:metal_casing'), metaitem('gearPotin'), item('gregtech:metal_casing')]
+        [item('gregtech:metal_casing'), metaitem('gearPotin'), item('gregtech:metal_casing')],
     ])
 }
 
@@ -159,7 +161,6 @@ if (LabsModeHelper.expert) {
         .duration(100).EUt(VA[ULV])
         .buildAndRegister()
 }
-
 
 // Ender Lily Extractor Recipe
 mods.gregtech.extractor.recipeBuilder()
@@ -327,23 +328,23 @@ crafting.shapedBuilder()
 // Basic Cell Mass Change
 mods.gregtech.bender.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { it * (it.count * 4) }
+        builder.changeEachOutput { out -> out * (out.count * 4) }
             .replaceAndRegister()
     }
 
 mods.gregtech.extruder.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { it * (it.count * 4) }
+        builder.changeEachOutput { out -> out * (out.count * 4) }
             .replaceAndRegister()
     }
 
 /* Assembler Recipe Mass Change (Excl. Basic Cell & Labs Cells) */
-for (var material : ["steel", "aluminium", "stainless_steel", "titanium", "tungstensteel"]) {
+for (var material : ['steel', 'aluminium', 'stainless_steel', 'titanium', 'tungstensteel']) {
     mods.gregtech.assembler.changeByOutput([metaitem("large_fluid_cell.${material}")], null)
         .forEach { ChangeRecipeBuilder builder ->
-            builder.changeEachOutput { it * 4 }
-                .builder {
-                    it.changeRecycling()
+            builder.changeEachOutput { out -> out * 4 }
+                .builder { recipe ->
+                    recipe.changeRecycling()
                 }.replaceAndRegister()
         }
 }
@@ -354,30 +355,30 @@ ChangeRecipeBuilderCollection<SimpleRecipeBuilder> lubeRecipes = mods.gregtech.b
     null, [fluid('lubricant') * 1000])
 
 // Raw Oil: 2x Input, 0.5x Output
-lubeRecipes.forEach {
-    it.builder {
-        it.clearFluidInputs()
+lubeRecipes.forEach { builder ->
+    builder.builder { recipe ->
+        recipe.clearFluidInputs()
             .fluidInputs(fluid('oil_medium') * 2000)
     }.buildAndRegister()
 }
 
 // Light Oil: 1x Input, 0.5x Output
-lubeRecipes.copy().forEach {
-    it.builder {
-        it.clearFluidInputs()
+lubeRecipes.copy().forEach { builder ->
+    builder.builder { recipe ->
+        recipe.clearFluidInputs()
             .fluidInputs(fluid('oil_light') * 1000)
-    }.changeEachFluidOutput {
-        return it * (it.amount / 2)
+    }.changeEachFluidOutput { out ->
+        return out * (out.amount / 2)
     }.buildAndRegister()
 }
 
 // Heavy Oil: 1x Input, 4x Output
-lubeRecipes.copy().forEach {
-    it.builder {
-        it.clearFluidInputs()
+lubeRecipes.copy().forEach { builder ->
+    builder.builder { recipe ->
+        recipe.clearFluidInputs()
             .fluidInputs(fluid('oil_heavy') * 1000)
-    }.changeEachFluidOutput {
-        return it * (it.amount * 4)
+    }.changeEachFluidOutput { out ->
+        return out * (out.amount * 4)
     }.buildAndRegister()
 }
 
@@ -385,7 +386,7 @@ lubeRecipes.copy().forEach {
 var dustsAndFuels = [
     of(metaitem('dustCoal'), item('minecraft:coal')),
     of(metaitem('dustCharcoal'), item('minecraft:coal', 1)),
-    of(metaitem('dustCoke'), metaitem('gemCoke'))
+    of(metaitem('dustCoke'), metaitem('gemCoke')),
 ]
 
 for (var pair : dustsAndFuels) {

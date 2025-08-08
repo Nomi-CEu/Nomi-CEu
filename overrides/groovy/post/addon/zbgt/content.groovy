@@ -1,29 +1,35 @@
 // MODS_LOADED: zbgt
 // ^, Makes the script not run as long as ZBGT isn't a mod in the player's instance.
 
+package post.addon.zbgt
+
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
+import static gregtech.api.GTValues.*
+
 import classes.post.Common
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.api.recipes.Recipe
 
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
-
 /* Creative Item Recipes */
 
 // TODO: Implement the Creative computing hatch and Creative data hatch
 
-// Energy Source Hatch
-crafting.remove('zbgt:creative_energy_sink_to_energy_source')
-crafting.remove('zbgt:creative_emitter_to_energy_hatch')
-crafting.remove('zbgt:creative_energy_hatch_to_emitter')
+crafting.with {
+    // Energy Source Hatch
+    remove('zbgt:creative_energy_sink_to_energy_source')
+    remove('zbgt:creative_emitter_to_energy_hatch')
+    remove('zbgt:creative_energy_hatch_to_emitter')
 
-// Creative Item Bus (Useless since you already have chest)
-crafting.remove('zbgt:creative_item_bus_to_chest')
-crafting.remove('zbgt:creative_chest_to_item_bus')
+    // Creative Item Bus (Useless since you already have chest)
+    remove('zbgt:creative_item_bus_to_chest')
+    remove('zbgt:creative_chest_to_item_bus')
 
-// Creative Tank
-crafting.remove('zbgt:creative_fluid_hatch_to_tank')
-crafting.remove('zbgt:creative_tank_to_fluid_hatch')
+    // Creative Tank
+    remove('zbgt:creative_fluid_hatch_to_tank')
+    remove('zbgt:creative_tank_to_fluid_hatch')
+}
 
 if (LabsModeHelper.normal) {
     // NM Specific
@@ -132,13 +138,13 @@ mods.gregtech.assembly_line.recipeBuilder()
 addTooltip(item('zbgt:yottank_cell', 0), [
     translatableEmpty(),
     translatable('nomiceu.tooltip.yottank_cell.yottank_cell.1'),
-    translatable('nomiceu.tooltip.yottank_cell.yottank_cell.2')
+    translatable('nomiceu.tooltip.yottank_cell.yottank_cell.2'),
 ])
 
 for (int i = 1; i <= 3; i++) {
     addTooltip(item('zbgt:yottank_cell', i), [
         translatableEmpty(),
-        translatable('nomiceu.tooltip.yottank_cell.yottank_cell.1')
+        translatable('nomiceu.tooltip.yottank_cell.yottank_cell.1'),
     ])
 }
 
@@ -177,23 +183,23 @@ mods.jei.ingredient.removeAndHide(metaitem('zbgt:coolant_cell.30k'))
 mods.gregtech.assembler.removeByInput([
     metaitem('zbgt:coolant_cell.30k') * 2, // 30K Cell * 2
     metaitem('plateTin') * 8, // Tin Plates * 8
-    metaitem('circuit.integrated').withNbt(['Configuration': 1])
+    metaitem('circuit.integrated').withNbt(['Configuration' : 1]),
 ], null)
 
 /* Unwrap Craft for Wraps (Excl. Circuits) */
-for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').getItem().getAllItems()) {
+for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').item.allItems) {
     if (!meta.unlocalizedName.startsWith('wrapped.') || meta.unlocalizedName.startsWith('wrapped.circuit.')) continue
 
-    List<Recipe> recipes = mods.gregtech.assembler.findByOutput([meta.getStackForm()], null)
+    List<Recipe> recipes = mods.gregtech.assembler.findByOutput([meta.stackForm], null)
 
     if (recipes == null)
         println "ZBGT Addon Script: Could not find recipes for wrap ${meta.unlocalizedName}!"
 
     for (Recipe recipe : recipes) {
         mods.gregtech.assembler.recipeBuilder()
-            .inputs(meta.getStackForm())
+            .inputs(meta.stackForm)
             .circuitMeta(1)
-            .outputs(recipe.getInputs().get(0).inputStacks[0]) // First input, e.g. first accepted stack
+            .outputs(recipe.inputs.get(0).inputStacks[0]) // First input, e.g. first accepted stack
             .duration(100).EUt(VA[LV])
             .buildAndRegister()
     }

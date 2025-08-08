@@ -1,5 +1,7 @@
 package post.main.mod.ae2
 
+import static gregtech.api.GTValues.*
+
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
 
@@ -139,10 +141,16 @@ var makeInterface = { String recipeName, OreDictIngredient plate, ItemStack movi
 }
 
 // Interface
-makeInterface('appliedenergistics2:network/blocks/interfaces_interface', ore('plateAluminium'), metaitem('robot.arm.mv'), item('appliedenergistics2:interface'))
+makeInterface('appliedenergistics2:network/blocks/interfaces_interface',
+    ore('plateAluminium'),
+    metaitem('robot.arm.mv'),
+    item('appliedenergistics2:interface'))
 
 // Fluid Interface
-makeInterface('appliedenergistics2:network/blocks/fluid_interfaces_interface', ore('plateLapis'), metaitem('electric.pump.mv'), item('appliedenergistics2:fluid_interface'))
+makeInterface('appliedenergistics2:network/blocks/fluid_interfaces_interface',
+    ore('plateLapis'),
+    metaitem('electric.pump.mv'),
+    item('appliedenergistics2:fluid_interface'))
 
 /* Cables */
 // Quartz Fiber
@@ -259,7 +267,7 @@ crafting.shapelessBuilder()
     .output(item('appliedenergistics2:part', 522))
     .input(item('appliedenergistics2:part', 520))
     .input(item('appliedenergistics2:material', 24))
-    .input(item('appliedenergistics2:fluid_interface').or(item('appliedenergistics2:part', 441)))
+    .input(item('appliedenergistics2:fluid_interface') | item('appliedenergistics2:part', 441))
     .replace().register()
 
 /* Buses */

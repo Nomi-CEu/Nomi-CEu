@@ -1,5 +1,8 @@
 package post.main.general.misc
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static gregtech.api.recipes.RecipeMaps.*
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition
 import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher
@@ -83,24 +86,25 @@ addRecyclingToHatches('uv')
 changeStackRecycling(metaitem('energy_hatch.input.uhv'), ASSEMBLY_LINE_RECIPES)
 changeStackRecycling(metaitem('energy_hatch.output.uhv'), ASSEMBLY_LINE_RECIPES)
 
-changeStackRecycling(metaitem("energy_hatch.input_4a.uhv"), ASSEMBLER_RECIPES)
-changeStackRecycling(metaitem("energy_hatch.output_4a.uhv"), ASSEMBLER_RECIPES)
-changeStackRecycling(metaitem("energy_hatch.input_16a.uhv"), ASSEMBLER_RECIPES)
-changeStackRecycling(metaitem("energy_hatch.output_16a.uhv"), ASSEMBLER_RECIPES)
+changeStackRecycling(metaitem('energy_hatch.input_4a.uhv'), ASSEMBLER_RECIPES)
+changeStackRecycling(metaitem('energy_hatch.output_4a.uhv'), ASSEMBLER_RECIPES)
+changeStackRecycling(metaitem('energy_hatch.input_16a.uhv'), ASSEMBLER_RECIPES)
+changeStackRecycling(metaitem('energy_hatch.output_16a.uhv'), ASSEMBLER_RECIPES)
 
-changeStackRecycling(metaitem("substation_hatch.input_64a.uhv"), ASSEMBLER_RECIPES)
-changeStackRecycling(metaitem("substation_hatch.output_64a.uhv"), ASSEMBLER_RECIPES)
+changeStackRecycling(metaitem('substation_hatch.input_64a.uhv'), ASSEMBLER_RECIPES)
+changeStackRecycling(metaitem('substation_hatch.output_64a.uhv'), ASSEMBLER_RECIPES)
 
 // Batteries
+var chargeMatcher = NBTMatcher.NOT_PRESENT_OR_HAS_KEY
 NBTCondition charge = NBTCondition.create(NBTTagType.LONG, 'Charge', 0L)
 
-changeStackRecyclingNBT(metaitem('battery.re.ulv.tantalum'), ASSEMBLER_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
+changeStackRecyclingNBT(metaitem('battery.re.ulv.tantalum'), ASSEMBLER_RECIPES, chargeMatcher, charge)
 
-changeStackRecyclingNBT(metaitem('energy_crystal'), AUTOCLAVE_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
-changeStackRecyclingNBT(metaitem('lapotron_crystal'), ASSEMBLER_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
+changeStackRecyclingNBT(metaitem('energy_crystal'), AUTOCLAVE_RECIPES, chargeMatcher, charge)
+changeStackRecyclingNBT(metaitem('lapotron_crystal'), ASSEMBLER_RECIPES, chargeMatcher, charge)
 
-changeStackRecyclingNBT(metaitem('energy.lapotronic_orb'), CIRCUIT_ASSEMBLER_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
-changeStackRecyclingNBT(metaitem('energy.lapotronic_orb_cluster'), ASSEMBLY_LINE_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
-changeStackRecyclingNBT(metaitem('energy.module'), ASSEMBLY_LINE_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
-changeStackRecyclingNBT(metaitem('energy.cluster'), ASSEMBLY_LINE_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
-changeStackRecyclingNBT(metaitem('max.battery'), ASSEMBLY_LINE_RECIPES, NBTMatcher.NOT_PRESENT_OR_HAS_KEY, charge)
+changeStackRecyclingNBT(metaitem('energy.lapotronic_orb'), CIRCUIT_ASSEMBLER_RECIPES, chargeMatcher, charge)
+changeStackRecyclingNBT(metaitem('energy.lapotronic_orb_cluster'), ASSEMBLY_LINE_RECIPES, chargeMatcher, charge)
+changeStackRecyclingNBT(metaitem('energy.module'), ASSEMBLY_LINE_RECIPES, chargeMatcher, charge)
+changeStackRecyclingNBT(metaitem('energy.cluster'), ASSEMBLY_LINE_RECIPES, chargeMatcher, charge)
+changeStackRecyclingNBT(metaitem('max.battery'), ASSEMBLY_LINE_RECIPES, chargeMatcher, charge)

@@ -1,5 +1,7 @@
 package post.main.mod
 
+import static gregtech.api.GTValues.*
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.item.ItemStack
 

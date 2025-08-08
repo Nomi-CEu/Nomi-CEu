@@ -1,11 +1,13 @@
 package post.main.mod.ae2
 
-import org.apache.commons.lang3.tuple.Pair
+import static appeng.items.misc.ItemCrystalSeed.*
+import static gregtech.api.GTValues.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.nbt.NBTTagCompound
+import org.apache.commons.lang3.tuple.Pair
 
 // Standardise fluix dust
 ore('dustFluix').add(item('appliedenergistics2:material', 8))
@@ -40,10 +42,12 @@ crafting.remove('appliedenergistics2:misc/deconstruction_certus_quartz_pillar')
 crafting.remove('appliedenergistics2:misc/deconstruction_certus_quartz_block')
 crafting.remove('appliedenergistics2:misc/deconstruction_certus_chiseled_quartz')
 
-crafting.shapelessBuilder()
-    .output(metaitem('gemCertusQuartz') * 4)
-    .input(item('appliedenergistics2:quartz_block').or(item('appliedenergistics2:quartz_pillar')).or(item('appliedenergistics2:chiseled_quartz_block')))
-    .register()
+// Add to certus block oreDict, so GT's decomposition recipe accepts it
+ore('blockCertusQuartz').with {
+    add(item('appliedenergistics2:quartz_block'))
+    add(item('appliedenergistics2:quartz_pillar'))
+    add(item('appliedenergistics2:chiseled_quartz_block'))
+}
 
 // Name Press
 mods.gregtech.laser_engraver.recipeBuilder()
@@ -54,13 +58,14 @@ mods.gregtech.laser_engraver.recipeBuilder()
     .duration(1600).EUt(VA[MV])
     .buildAndRegister()
 
-// Certus Block
+// Certus Block (not shapeless, to avoid conflict with GT's)
 crafting.remove('appliedenergistics2:decorative/certus_quartz_block')
 crafting.shapedBuilder()
-    .output(item('appliedenergistics2:quartz_block'))
+    .output(item('appliedenergistics2:quartz_block') * 2)
     .matrix(
-        'CC',
-        'CC')
+        'CCC',
+        'C C',
+        'CCC')
     .key('C', metaitem('gemCertusQuartz'))
     .register()
 
@@ -106,7 +111,11 @@ mods.appliedenergistics2.inscriber.recipeBuilder()
     .output(item('appliedenergistics2:material', 20))
     .inscribe().register()
 
-var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, ItemStack press, ItemStack circuit, ItemStack processor ->
+var applyProcessorChange = { OreDictIngredient lens,
+                             OreDictIngredient plate,
+                             ItemStack press,
+                             ItemStack circuit,
+                             ItemStack processor ->
     /* Presses */
     mods.appliedenergistics2.inscriber.removeByOutput(press)
     mods.gregtech.laser_engraver.recipeBuilder()
@@ -136,12 +145,25 @@ var applyProcessorChange = { OreDictIngredient lens, OreDictIngredient plate, It
 }
 
 // Calculation
-applyProcessorChange(ore('craftingLensBlue'), ore('plateCertusQuartz'), item('appliedenergistics2:material', 13), item('appliedenergistics2:material', 16), item('appliedenergistics2:material', 23))
+applyProcessorChange(
+    ore('craftingLensBlue'),
+    ore('plateCertusQuartz'),
+    item('appliedenergistics2:material', 13),
+    item('appliedenergistics2:material', 16),
+    item('appliedenergistics2:material', 23))
 
 // Engineering
-applyProcessorChange(ore('craftingLensRed'), ore('plateDiamond'), item('appliedenergistics2:material', 14), item('appliedenergistics2:material', 17), item('appliedenergistics2:material', 24))
+applyProcessorChange(
+    ore('craftingLensRed'),
+    ore('plateDiamond'),
+    item('appliedenergistics2:material', 14),
+    item('appliedenergistics2:material', 17),
+    item('appliedenergistics2:material', 24))
 
 // Logic
-applyProcessorChange(ore('craftingLensGreen'), ore('plateGold'), item('appliedenergistics2:material', 15), item('appliedenergistics2:material', 18), item('appliedenergistics2:material', 22))
-
-
+applyProcessorChange(
+    ore('craftingLensGreen'),
+    ore('plateGold'),
+    item('appliedenergistics2:material', 15),
+    item('appliedenergistics2:material', 18),
+    item('appliedenergistics2:material', 22))

@@ -1,11 +1,12 @@
 package post.main.general.mid
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.chanced
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static gregtech.api.GTValues.*
 
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.chance.output.impl.ChancedItemOutput
-
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.chanced
 
 // Processing Array
 replaceRecipeInput(metaitem('processing_array'),

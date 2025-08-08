@@ -1,5 +1,8 @@
 package post.main.mod.ae2
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.*
+import static gregtech.api.GTValues.*
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.util.LabsModeHelper
@@ -100,14 +103,16 @@ crafting.shapedBuilder()
 
 /* Storage */
 // Storage Cell Removals
-crafting.remove('appliedenergistics2:network/cells/storage_cell_1k')
-crafting.remove('appliedenergistics2:network/cells/storage_cell_4k')
-crafting.remove('appliedenergistics2:network/cells/storage_cell_16k')
-crafting.remove('appliedenergistics2:network/cells/storage_cell_64k')
-crafting.remove('appliedenergistics2:network/cells/fluid_storage_cell_1k')
-crafting.remove('appliedenergistics2:network/cells/fluid_storage_cell_4k')
-crafting.remove('appliedenergistics2:network/cells/fluid_storage_cell_16k')
-crafting.remove('appliedenergistics2:network/cells/fluid_storage_cell_64k')
+crafting.with {
+    remove('appliedenergistics2:network/cells/storage_cell_1k')
+    remove('appliedenergistics2:network/cells/storage_cell_4k')
+    remove('appliedenergistics2:network/cells/storage_cell_16k')
+    remove('appliedenergistics2:network/cells/storage_cell_64k')
+    remove('appliedenergistics2:network/cells/fluid_storage_cell_1k')
+    remove('appliedenergistics2:network/cells/fluid_storage_cell_4k')
+    remove('appliedenergistics2:network/cells/fluid_storage_cell_16k')
+    remove('appliedenergistics2:network/cells/fluid_storage_cell_64k')
+}
 
 // Storage Housing
 crafting.shapedBuilder()
@@ -227,41 +232,39 @@ if (LabsModeHelper.normal) {
     // 1k Fluid Storage
     crafting.removeByOutput(item('appliedenergistics2:material', 54))
     mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 22), ore('circuitEv') * 2)
+        .inputs(
+            ore('gemExquisiteLapis') * 2,
+            ore('crystalPureCertusQuartz') * 4,
+            item('appliedenergistics2:material', 22),
+            ore('circuitEv') * 2)
         .outputs(item('appliedenergistics2:material', 54))
         .duration(100).EUt(VHA[EV])
         .buildAndRegister()
 
-    // 4k Fluid Storage
-    crafting.removeByOutput(item('appliedenergistics2:material', 55))
-    mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 23), item('appliedenergistics2:material', 54) * 3)
-        .outputs(item('appliedenergistics2:material', 55))
-        .duration(100).EUt(VHA[EV])
-        .buildAndRegister()
-
-    // 16k Fluid Storage
-    crafting.removeByOutput(item('appliedenergistics2:material', 56))
-    mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 23), item('appliedenergistics2:material', 55) * 3)
-        .outputs(item('appliedenergistics2:material', 56))
-        .duration(100).EUt(VHA[EV])
-        .buildAndRegister()
-
-    // 64k Fluid Storage
-    crafting.removeByOutput(item('appliedenergistics2:material', 57))
-    mods.gregtech.assembler.recipeBuilder()
-        .inputs(ore('gemExquisiteLapis') * 2, ore('crystalPureCertusQuartz') * 4, item('appliedenergistics2:material', 23), item('appliedenergistics2:material', 56) * 3)
-        .outputs(item('appliedenergistics2:material', 57))
-        .duration(100).EUt(VHA[EV])
-        .buildAndRegister()
+    // 4-64k Fluid Storage
+    for (int outputMeta : 55.57) {
+        crafting.removeByOutput(item('appliedenergistics2:material', outputMeta))
+        mods.gregtech.assembler.recipeBuilder()
+            .inputs(
+                ore('gemExquisiteLapis') * 2,
+                ore('crystalPureCertusQuartz') * 4,
+                item('appliedenergistics2:material', 23),
+                item('appliedenergistics2:material', outputMeta - 1) * 3)
+            .outputs(item('appliedenergistics2:material', outputMeta))
+            .duration(100).EUt(VHA[EV])
+            .buildAndRegister()
+    }
 }
 
 // AE2 Processor Shortcut
 for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 288]) {
     // Logic Processor
     mods.gregtech.circuit_assembler.recipeBuilder()
-        .inputs(ore('circuitEv'), metaitem('plate.nand_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+        .inputs(
+            ore('circuitEv'),
+            metaitem('plate.nand_memory_chip') * 8,
+            metaitem('wireFineElectrum') * 16,
+            item('appliedenergistics2:part', 16) * 2)
         .fluidInputs(joiningFluid)
         .outputs(item('appliedenergistics2:material', 22) * 16)
         .duration(400).EUt(VA[IV])
@@ -269,7 +272,11 @@ for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 2
 
     // Calculation Processor
     mods.gregtech.circuit_assembler.recipeBuilder()
-        .inputs(ore('circuitEv'), metaitem('plate.central_processing_unit') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+        .inputs(
+            ore('circuitEv'),
+            metaitem('plate.central_processing_unit') * 8,
+            metaitem('wireFineElectrum') * 16,
+            item('appliedenergistics2:part', 16) * 2)
         .fluidInputs(joiningFluid)
         .outputs(item('appliedenergistics2:material', 23) * 16)
         .duration(400).EUt(VA[IV])
@@ -277,7 +284,11 @@ for (FluidStack joiningFluid : [fluid('tin') * 576, fluid('soldering_alloy') * 2
 
     // Engineering Processor
     mods.gregtech.circuit_assembler.recipeBuilder()
-        .inputs(ore('circuitEv'), metaitem('plate.nor_memory_chip') * 8, metaitem('wireFineElectrum') * 16, item('appliedenergistics2:part', 16) * 2)
+        .inputs(
+            ore('circuitEv'),
+            metaitem('plate.nor_memory_chip') * 8,
+            metaitem('wireFineElectrum') * 16,
+            item('appliedenergistics2:part', 16) * 2)
         .fluidInputs(joiningFluid)
         .outputs(item('appliedenergistics2:material', 24) * 16)
         .duration(400).EUt(VA[IV])

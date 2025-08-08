@@ -1,18 +1,18 @@
 package post.main.general.misc
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translate
+import static com.nomiceu.nomilabs.util.LabsTranslate.Translatable
+
 import com.google.common.base.CaseFormat
+import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import com.nomiceu.nomilabs.util.ItemMeta
 import com.nomiceu.nomilabs.util.LabsModeHelper
-import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 import net.minecraftforge.fluids.FluidUtil
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler
 import net.minecraftforge.fluids.capability.IFluidHandlerItem
-
-import static com.nomiceu.nomilabs.util.LabsTranslate.Translatable
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translate
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
 /*
  * Allows recipes with buckets to accept all fluid containers.
@@ -29,7 +29,7 @@ ore('dough').add(item('actuallyadditions:item_misc', 9))
 
 // AE2 Cable Cleaning
 var caseConverter = CaseFormat.LOWER_UNDERSCORE.converterTo(CaseFormat.UPPER_CAMEL)
-for (var entry : [0: 'glass', 20: 'covered', 40: 'smart', 60: 'dense_smart', 500: 'dense_covered']) {
+for (var entry : [0 : 'glass', 20 : 'covered', 40 : 'smart', 60 : 'dense_smart', 500 : 'dense_covered']) {
     var cables = ore("ae2Colored${caseConverter.convert(entry.value)}Cable")
     var output = item('appliedenergistics2:part', entry.key + 16)
 
@@ -152,7 +152,7 @@ if (LabsModeHelper.expert) {
         .setInputTooltip(4, IngredientFluidBucket.getInputTooltip(fluid('water')))
         .register()
 
-    // Concrete Bucket recipe is changed, see below
+// Concrete Bucket recipe is changed, see below
 }
 
 /* Lava Bucket */
@@ -177,8 +177,8 @@ crafting.shapedBuilder()
 crafting.removeByOutput(item('thermalexpansion:device', 1))
 crafting.shapedBuilder()
     .output(item('thermalexpansion:device', 1)
-        .withNbt(['Facing'   : (byte) 3, 'SideCache': [(byte) 0, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1],
-                  'RSControl': (byte) 0, 'Energy': 0]))
+        .withNbt(['Facing'    : (byte) 3, 'SideCache' : [(byte) 0, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1],
+                  'RSControl' : (byte) 0, 'Energy'    : 0]))
     .matrix(' A ', 'BCB', 'DED')
     .key('A', fluidIng(fluid('lava')))
     .key('B', item('minecraft:brick_block'))
@@ -401,7 +401,8 @@ crafting.shapedBuilder()
 
 // IIngredient Class that Matches Based on FluidStack in Containers
 class IngredientFluidBucket extends SimpleIIngredient {
-    public static final AMOUNT = 1000
+
+    public static final int AMOUNT = 1000
 
     private final FluidStack stack
     private final ItemStack[] matchingStacks
@@ -415,6 +416,27 @@ class IngredientFluidBucket extends SimpleIIngredient {
         }
 
         this.matchingStacks = new ItemStack[]{display}
+    }
+
+    static IFluidHandlerItem getHandler(ItemStack itemStack) {
+        if (itemStack.empty) return null
+
+        IFluidHandlerItem handler = null
+        if (itemStack.hasCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)) {
+            var newStack = itemStack.copy()
+            if (newStack.count > 1) {
+                newStack.count = 1
+            }
+            handler = newStack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)
+        }
+        return handler
+    }
+
+    static Translatable[] getInputTooltip(FluidStack fluidStack) {
+        return new Translatable[]{
+            new TranslatableFluidTooltip(fluidStack),
+            translatable('nomiceu.tooltip.mixed.accepts_fluid_container')
+        }
     }
 
     @Override
@@ -439,35 +461,16 @@ class IngredientFluidBucket extends SimpleIIngredient {
         if (handler == null) return super.applyTransform(matchedInput)
         handler.drain(stack, true)
 
-        return handler.getContainer() * 1
+        return handler.container * 1
     }
 
-    static IFluidHandlerItem getHandler(ItemStack itemStack) {
-        if (itemStack.isEmpty()) return null
-
-        IFluidHandlerItem handler = null
-        if (itemStack.hasCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)) {
-            itemStack = itemStack.copy()
-            if (itemStack.getCount() > 1) {
-                itemStack.setCount(1)
-            }
-            handler = itemStack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)
-        }
-        return handler
-    }
-
-    static Translatable[] getInputTooltip(FluidStack fluidStack) {
-        return new Translatable[]{
-            new TranslatableFluidTooltip(fluidStack),
-            translatable('nomiceu.tooltip.mixed.accepts_fluid_container')
-        }
-    }
 }
 
 /**
  * Simple wrapper class so we can use translated name of fluid in tooltip
  */
 class TranslatableFluidTooltip extends Translatable {
+
     FluidStack fluid
 
     TranslatableFluidTooltip(FluidStack fluid) {
@@ -479,6 +482,7 @@ class TranslatableFluidTooltip extends Translatable {
     protected String translateThis() {
         return translate(key, fluid.fluid.getLocalizedName(fluid))
     }
+
 }
 
 static IngredientFluidBucket fluidIng(FluidStack stack, ItemStack display = null) {
@@ -496,19 +500,20 @@ static ItemStack fillStack(ItemStack itemStack, FluidStack fluidStack) {
  */
 class NoNBTIngredient extends SimpleIIngredient {
 
-    private final ItemStack stack;
+    private final ItemStack stack
 
     NoNBTIngredient(ItemStack stack) {
-        this.stack = stack;
+        this.stack = stack
     }
 
     @Override
     ItemStack[] getMatchingStacks() {
-        return new ItemStack[]{stack};
+        return new ItemStack[]{stack}
     }
 
     @Override
     boolean test(ItemStack itemStack) {
-        return ItemMeta.compare(itemStack, stack) && (!itemStack.hasTagCompound() || itemStack.getTagCompound().isEmpty());
+        return ItemMeta.compare(itemStack, stack) && (!itemStack.hasTagCompound() || itemStack.tagCompound.empty)
     }
+
 }

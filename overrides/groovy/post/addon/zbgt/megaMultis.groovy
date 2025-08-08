@@ -1,9 +1,11 @@
 // MODS_LOADED: zbgt
 // ^, Makes the script not run as long as ZBGT isn't a mod in the player's instance.
 
-import com.nomiceu.nomilabs.util.LabsModeHelper
+package post.addon.zbgt
 
 import static gregtech.api.GTValues.*
+
+import com.nomiceu.nomilabs.util.LabsModeHelper
 
 /* Mega Multiblocks Recipes */
 

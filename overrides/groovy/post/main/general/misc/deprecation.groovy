@@ -1,5 +1,10 @@
 package post.main.general.misc
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.forMaterial
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
+import static gregtech.api.recipes.RecipeMaps.*
+
 import com.nomiceu.nomilabs.gregtech.material.registry.LabsMaterials
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import gregtech.api.recipes.RecipeBuilder
@@ -8,10 +13,6 @@ import gregtech.api.recipes.ingredients.GTRecipeOreInput
 import gregtech.api.unification.OreDictUnifier
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
-
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.forMaterial
 
 var deprecated = translatable('nomiceu.tooltip.mixed.deprecated')
 var deprecation = translatable('nomiceu.tooltip.mixed.deprecation')
@@ -108,34 +109,34 @@ mods.gregtech.arc_furnace.changeByOutput([metaitem('nomilabs:ingotInfinity')], n
     .forEach { ChangeRecipeBuilder builder ->
         builder.builder { RecipeBuilder recipe ->
             recipe.category(RecipeCategories.ARC_FURNACE_RECYCLING)
-        }.changeEachInput {
-            return new GTRecipeOreInput(OreDictUnifier.getOreDictionaryNames(it.inputStacks[0]).first())
-        }.changeEachOutput { item('avaritia:resource', 6) * it.count }
+        }.changeEachInput { input ->
+            return new GTRecipeOreInput(OreDictUnifier.getOreDictionaryNames(input.inputStacks[0]).first())
+        }.changeEachOutput { out -> item('avaritia:resource', 6) * out.count }
             .replaceAndRegister()
-    }
+        }
 
 for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES]) {
-    map.getVirtualized().changeByOutput([metaitem('nomilabs:ingotInfinity')], null)
+    map.virtualized.changeByOutput([metaitem('nomilabs:ingotInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
-            builder.changeEachOutput { item('avaritia:resource', 6) * it.count }
+            builder.changeEachOutput { out -> item('avaritia:resource', 6) * out.count }
                 .replaceAndRegister()
         }
 }
 
 // Recipes for Block
 for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES, EXTRUDER_RECIPES]) {
-    map.getVirtualized().changeByOutput([metaitem('nomilabs:blockInfinity')], null)
+    map.virtualized.changeByOutput([metaitem('nomilabs:blockInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
-            builder.changeEachOutput { item('avaritia:block_resource', 1) * it.count }
+            builder.changeEachOutput { out -> item('avaritia:block_resource', 1) * out.count }
                 .replaceAndRegister()
         }
 }
 
 // Recipes for Plate
 for (var map : [FORGE_HAMMER_RECIPES, CUTTER_RECIPES, EXTRUDER_RECIPES, BENDER_RECIPES]) {
-    map.getVirtualized().changeByOutput([metaitem('nomilabs:plateInfinity')], null)
+    map.virtualized.changeByOutput([metaitem('nomilabs:plateInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
-            builder.changeEachOutput { item('moreplates:infinity_plate') * it.count }
+            builder.changeEachOutput { out -> item('moreplates:infinity_plate') * out.count }
                 .replaceAndRegister()
         }
 }

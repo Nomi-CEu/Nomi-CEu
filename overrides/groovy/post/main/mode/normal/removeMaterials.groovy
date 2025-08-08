@@ -1,12 +1,13 @@
 package post.main.mode.normal
 
+import static com.nomiceu.nomilabs.gregtech.material.registry.LabsMaterials.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.removeAndHideMaterial
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.unification.material.Material
 
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.removeAndHideMaterial
-
 // Normal Mode Specific (Hiding Hard Mode Materials)
-if (!LabsModeHelper.isNormal()) return
+if (!LabsModeHelper.normal) return
 
 Material[] materials = [
     // Elemental Materials
@@ -97,9 +98,9 @@ Material[] materials = [
     Snowchestite,
     Dulysite,
     // Endgame Materials
-    KaptonK
+    KaptonK,
 ]
 
-for (def material : materials) {
+for (var material : materials) {
     removeAndHideMaterial(material, false)
 }

@@ -3,6 +3,8 @@
 
 package post.main.general.misc
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.KeyBindingHelpers.*
+
 import net.minecraftforge.client.settings.KeyModifier
 import net.minecraftforge.fml.common.Loader
 import org.lwjgl.input.Keyboard
@@ -44,7 +46,7 @@ addOverride('key.groovyscript.reload', Keyboard.KEY_NONE)
 
 // Doesn't affect ability to move bookmarks for some reason?
 // Also fixes Middle Click not working for sorting inventory
-addOverride("key.jeiutilities.pickBookmark", Keyboard.KEY_NONE)
+addOverride('key.jeiutilities.pickBookmark', Keyboard.KEY_NONE)
 
 addOverride('key.journeymap.fullscreen_chat_position', Keyboard.KEY_NONE)
 

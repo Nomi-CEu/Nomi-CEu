@@ -1,5 +1,8 @@
 package post.main.mod
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
+import static gregtech.api.GTValues.*
+
 import com.mcmoddev.densemetals.init.ModBlocks
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.common.metatileentities.MetaTileEntities
@@ -12,125 +15,129 @@ import net.minecraftforge.fluids.FluidUtil
 
 /* Item Removals */
 
-// AR
-mods.jei.ingredient.hide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
-mods.jei.ingredient.hide(item('advancedrocketry:quartzcrucible'))
-mods.jei.ingredient.hide(item('advancedrocketry:iquartzcrucible'))
+mods.jei.ingredient.with {
+    // AR
+    hide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
+    hide(item('advancedrocketry:quartzcrucible'))
+    hide(item('advancedrocketry:iquartzcrucible'))
 
-mods.jei.ingredient.hide(item('advancedrocketry:bucketrocketfuel'))
-mods.jei.ingredient.hide(item('advancedrocketry:bucketnitrogen'))
-mods.jei.ingredient.hide(item('advancedrocketry:buckethydrogen'))
-mods.jei.ingredient.hide(item('advancedrocketry:bucketoxygen'))
-mods.jei.ingredient.hide(item('advancedrocketry:bucketenrichedlava'))
+    hide(item('advancedrocketry:bucketrocketfuel'))
+    hide(item('advancedrocketry:bucketnitrogen'))
+    hide(item('advancedrocketry:buckethydrogen'))
+    hide(item('advancedrocketry:bucketoxygen'))
+    hide(item('advancedrocketry:bucketenrichedlava'))
 
-// Armor Plus
-mods.jei.ingredient.hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
+    // Armor Plus
+    hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
 
-// Dense Ores
-var visibleDenseOres = ['iron', 'coal', 'gold', 'diamond', 'emerald', 'lapis', 'redstone']
+    // Dense Ores
+    var visibleDenseOres = ['iron', 'coal', 'gold', 'diamond', 'emerald', 'lapis', 'redstone']
 
-// The '.toString()' is important here to normalise the GStrings into Java Strings, to allow for proper set searching
-var exclusionSet = new ObjectOpenHashSet<>(visibleDenseOres.collect { it -> "dense_${it}_ore".toString() })
+    // The '.toString()' is important here to normalise the GStrings into Java Strings, to allow for proper set searching
+    var exclusionSet = new ObjectOpenHashSet<>(visibleDenseOres.collect { type ->  "dense_${type}_ore".toString() })
 
-for (var denseOre : ModBlocks.DENSE_ORES) {
-    if (exclusionSet.contains(denseOre.getRegistryName().getPath()))
-        continue
+    for (var denseOre : ModBlocks.DENSE_ORES) {
+        if (exclusionSet.contains(denseOre.registryName.path))
+            continue
 
-    if (!denseOre.resolve()) continue // An 'invalid' dense ore
+        if (!denseOre.resolve()) continue // An 'invalid' dense ore
 
-    println "Hiding Dense Ore ${denseOre.getRegistryName()}..."
-    mods.jei.ingredient.removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
+        println "Hiding Dense Ore ${denseOre.registryName}..."
+        removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
+    }
+
+    // NuclearCraft
+    removeAndHide(item('nuclearcraft:block_depleted_uranium'))
+
+    // Nomi Labs
+    if (LabsModeHelper.expert) {
+        hide(item('nomilabs:impossiblerealmdata'))
+    }
+
+    if (LabsModeHelper.normal) {
+        hide(fluid('liquid_nitrogen'))
+    }
+
+    // GregTech
+    // Higher Tier Muffler Hatches
+    for (var tier : [MV, HV, EV, IV, LuV, ZPM, UV]) {
+        removeAndHide(MetaTileEntities.MUFFLER_HATCH[tier].stackForm)
+    }
+
+    // Extended Crafting
+    // Ender & Enhanced Ender
+    hide(item('extendedcrafting:storage', 5)) // Block of Ender
+    hide(item('extendedcrafting:material', 49)) // Enhanced Ender Nugget
+
+    // Better Questing
+    List<ItemStack> lootBoxes = [
+        item('bq_standard:loot_chest'),
+        item('bq_standard:loot_chest', 25),
+        item('bq_standard:loot_chest', 50),
+        item('bq_standard:loot_chest', 75),
+        item('bq_standard:loot_chest', 100),
+        item('bq_standard:loot_chest', 101),
+        item('bq_standard:loot_chest', 102),
+        item('bq_standard:loot_chest', 103),
+        item('bq_standard:loot_chest', 104),
+    ]
+    lootBoxes.forEach { box -> hide(box) }
+
+    hide(item('betterquesting:placeholder'))
+    hide(fluid('betterquesting.placeholder'))
+
+    // Modded Buckets
+    hideItemIgnoreNBT(item('forge:bucketfilled'))
+
+    // Add back Creosote Bucket, has usages in recipes and furnace
+    add(FluidUtil.getFilledBucket(fluid('creosote') * 1000))
+
+    // Add Concrete Cell to JEI
+    add(metaitem('fluid_cell').withNbt(['Fluid' : ['FluidName' : 'concrete', 'Amount' : 1000]]))
 }
 
-// NuclearCraft
-mods.jei.ingredient.removeAndHide(item('nuclearcraft:block_depleted_uranium'))
+/* Remove Categories (Some appear randomly after /gs reload) */
+mods.jei.category.with {
+    // Avatitia
+    hideCategory('Avatitia.Extreme')
 
-// Nomi Labs
-if (LabsModeHelper.expert) {
-    mods.jei.ingredient.hide(item('nomilabs:impossiblerealmdata'))
-}
+    // DME
+    if (LabsModeHelper.expert) {
+        hideCategory('deepmoblearning.simulation_chamber')
+        hideCategory('deepmoblearning.extraction_chamber')
+        hideCategory('deepmoblearning.trial_keystone')
+    }
 
-if (LabsModeHelper.normal) {
-    mods.jei.ingredient.hide(fluid('liquid_nitrogen'))
-}
+    // EIO
+    hideCategory('CombustionGenerator')
+    hideCategory('GrindingBall')
+    hideCategory('SagMill')
+    hideCategory('SolarPanel')
+    hideCategory('StirlingGenerator')
+    hideCategory('LavaGenerator')
 
-// GregTech
-// Higher Tier Muffler Hatches
-for (var tier : [MV, HV, EV, IV, LuV, ZPM, UV]) {
-    mods.jei.ingredient.removeAndHide(MetaTileEntities.MUFFLER_HATCH[tier].getStackForm())
-}
+    // AR
+    hideCategory('zmaster587.AR.rollingMachine')
+    hideCategory('zmaster587.AR.lathe')
+    hideCategory('zmaster587.AR.precisionAssembler')
+    hideCategory('zmaster587.AR.sawMill')
+    hideCategory('zmaster587.AR.chemicalReactor')
+    hideCategory('zmaster587.AR.crystallizer')
+    hideCategory('zmaster587.AR.electrolyzer')
+    hideCategory('zmaster587.AR.arcFurnace')
+    hideCategory('zmaster587.AR.platePresser')
+    hideCategory('zmaster587.AR.centrifuge')
 
-// Extended Crafting
-// Ender & Enhanced Ender
-mods.jei.ingredient.hide(item('extendedcrafting:storage', 5)) // Block of Ender
-mods.jei.ingredient.hide(item('extendedcrafting:material', 49)) // Enhanced Ender Nugget
+    // Armor Plus
+    hideCategory('armorplus:lava_infuser_infusing')
+    hideCategory('armorplus:high_tech_bench')
+    hideCategory('armorplus:ulti_tech_bench')
+    hideCategory('armorplus:workbench')
 
-// Better Questing
-List<ItemStack> lootBoxes = [
-    item('bq_standard:loot_chest'),
-    item('bq_standard:loot_chest', 25),
-    item('bq_standard:loot_chest', 50),
-    item('bq_standard:loot_chest', 75),
-    item('bq_standard:loot_chest', 100),
-    item('bq_standard:loot_chest', 101),
-    item('bq_standard:loot_chest', 102),
-    item('bq_standard:loot_chest', 103),
-    item('bq_standard:loot_chest', 104),
-]
-lootBoxes.forEach { mods.jei.ingredient.hide(it) }
-
-mods.jei.ingredient.hide(item('betterquesting:placeholder'))
-mods.jei.ingredient.hide(fluid('betterquesting.placeholder'))
-
-// Modded Buckets
-hideItemIgnoreNBT(item('forge:bucketfilled'))
-
-// Add back Creosote Bucket, has usages in recipes and furnace
-mods.jei.ingredient.add(FluidUtil.getFilledBucket(fluid('creosote') * 1000))
-
-// Add Concrete Cell to JEI
-mods.jei.ingredient.add(metaitem('fluid_cell').withNbt(['Fluid': ['FluidName': 'concrete', 'Amount': 1000]]))
-
-/* Remove Categories (Appear Randomly after /gs reload) */
-// Avatitia
-mods.jei.category.hideCategory('Avatitia.Extreme')
-
-// DME
-if (LabsModeHelper.expert) {
-    mods.jei.category.hideCategory('deepmoblearning.simulation_chamber')
-    mods.jei.category.hideCategory('deepmoblearning.extraction_chamber')
-    mods.jei.category.hideCategory('deepmoblearning.trial_keystone')
-}
-
-// EIO
-mods.jei.category.hideCategory('CombustionGenerator')
-mods.jei.category.hideCategory('GrindingBall')
-mods.jei.category.hideCategory('SagMill')
-mods.jei.category.hideCategory('SolarPanel')
-mods.jei.category.hideCategory('StirlingGenerator')
-mods.jei.category.hideCategory('LavaGenerator')
-
-// AR
-mods.jei.category.hideCategory('zmaster587.AR.rollingMachine')
-mods.jei.category.hideCategory('zmaster587.AR.lathe')
-mods.jei.category.hideCategory('zmaster587.AR.precisionAssembler')
-mods.jei.category.hideCategory('zmaster587.AR.sawMill')
-mods.jei.category.hideCategory('zmaster587.AR.chemicalReactor')
-mods.jei.category.hideCategory('zmaster587.AR.crystallizer')
-mods.jei.category.hideCategory('zmaster587.AR.electrolyzer')
-mods.jei.category.hideCategory('zmaster587.AR.arcFurnace')
-mods.jei.category.hideCategory('zmaster587.AR.platePresser')
-mods.jei.category.hideCategory('zmaster587.AR.centrifuge')
-
-// Armor Plus
-mods.jei.category.hideCategory('armorplus:lava_infuser_infusing')
-mods.jei.category.hideCategory('armorplus:high_tech_bench')
-mods.jei.category.hideCategory('armorplus:ulti_tech_bench')
-mods.jei.category.hideCategory('armorplus:workbench')
-
-// Vanilla
-if (LabsModeHelper.expert) {
-    mods.jei.category.hideCategory('jeresources.mob')
+    // Vanilla
+    if (LabsModeHelper.expert) {
+        hideCategory('jeresources.mob')
+    }
 }
 
 /* Recipe Catalyst Overrides */
@@ -147,15 +154,19 @@ overrideRecipeCatalysts('minecraft.crafting',
 
 // Smelting (add More Furnaces' Furnaces)
 List<Object> furnaceCatalysts = [item('minecraft:furnace')]
+
 for (var meta : [0, 5, 6, 1, 2, 3]) { // in tier order
     furnaceCatalysts.add(item('morefurnaces:furnaceblock', meta))
 }
+
 furnaceCatalysts.add(metaitem('steam_furnace_bronze'))
 furnaceCatalysts.add(metaitem('steam_furnace_steel'))
+
 for (var furnace : MetaTileEntities.ELECTRIC_FURNACE) {
     if (furnace == null) continue
-    furnaceCatalysts.add(furnace.getStackForm())
+    furnaceCatalysts.add(furnace.stackForm)
 }
+
 furnaceCatalysts.add(metaitem('steam_oven'))
 furnaceCatalysts.add(metaitem('multi_furnace'))
 

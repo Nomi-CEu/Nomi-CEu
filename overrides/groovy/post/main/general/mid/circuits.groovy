@@ -1,8 +1,10 @@
+package post.main.general.mid
+
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.recipeproperties.CleanroomProperty
-
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
 
 // EV: Tier 1 (Workstation)
 mods.gregtech.circuit_assembler.changeByOutput([metaitem('circuit.workstation')], null)

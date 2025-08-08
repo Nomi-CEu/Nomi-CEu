@@ -1,5 +1,7 @@
 package post.main.general.mid
 
+import static gregtech.api.GTValues.*
+
 import com.cleanroommc.groovyscript.api.IIngredient
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.ingredients.GTRecipeInput
@@ -10,8 +12,8 @@ import net.minecraft.item.ItemStack
 // Blaze Powder (pre-elemental reduction)
 // Decrease voltage to MV (from HV), by reducing EUt by 4, and increasing duration by 4
 mods.gregtech.chemical_reactor.changeByInput([metaitem('dustCarbon'), metaitem('dustSulfur')], null)
-    .changeEUt { it -> (int) (it / 4) }
-    .changeDuration { it -> (int) (it * 4) }
+    .changeEUt { eu -> (int) (eu / 4) }
+    .changeDuration { duration -> (int) (duration * 4) }
     .replaceAndRegister()
 
 /* Elemental Reduction Fluid */
@@ -73,7 +75,7 @@ addPowderFromReduction(carbonLike, item('thermalfoundation:material', 2053)) // 
 
 // Replace existing Blaze Rod recipe (4 -> 1)
 mods.gregtech.compressor.changeByInput([item('minecraft:blaze_powder') * 4], null)
-    .changeEachInput { GTRecipeInput it -> return it.withAmount(5) }
+    .changeEachInput { GTRecipeInput input -> return input.withAmount(5) }
     .replaceAndRegister()
 
 // Move Blaze Rod recipe out of recycling category
@@ -82,9 +84,9 @@ mods.gregtech.macerator.changeByInput([item('minecraft:blaze_rod')], null)
 
 // Blizz, Blitz and Basalz Compression and Maceration
 var rodsToDusts = [
-    2048: 2049, // Blizz
-    2050: 2051, // Blitz
-    2052: 2053, // Basalz
+    2048 : 2049, // Blizz
+    2050 : 2051, // Blitz
+    2052 : 2053, // Basalz
 ]
 
 rodsToDusts.forEach { int rodMeta, int dustMeta ->
@@ -105,10 +107,10 @@ rodsToDusts.forEach { int rodMeta, int dustMeta ->
 }
 
 var nameToDust = [
-    "pyrotheum" : item('thermalfoundation:material', 1024),
-    "cryotheum" : item('thermalfoundation:material', 1025),
-    "aerotheum" : item('thermalfoundation:material', 1026),
-    "petrotheum": item('thermalfoundation:material', 1027),
+    'pyrotheum'  : item('thermalfoundation:material', 1024),
+    'cryotheum'  : item('thermalfoundation:material', 1025),
+    'aerotheum'  : item('thermalfoundation:material', 1026),
+    'petrotheum' : item('thermalfoundation:material', 1027),
 ]
 
 // Extraction
@@ -124,8 +126,8 @@ nameToDust.forEach { String name, ItemStack dust ->
 
 if (LabsModeHelper.expert) {
     // Remove powder -> dust recipes
-    nameToDust.values().forEach {
-        crafting.removeByOutput(it)
+    nameToDust.values().forEach { dust ->
+        crafting.removeByOutput(dust)
     }
 
     // Pyrotheum

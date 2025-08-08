@@ -11,7 +11,7 @@ mods.jei.ingredient.hide(item('thermalexpansion:tank'))
 // Basic..Resonant
 for (int level : 0..4) {
     mods.jei.ingredient.add(item('thermalexpansion:tank')
-        .withNbt([RSControl: (byte) 0, 'Creative': (byte) 0, 'Level': (byte) level]))
+        .withNbt(['RSControl' : (byte) 0, 'Creative' : (byte) 0, 'Level' : (byte) level]))
 }
 
 // No Creative Tank
@@ -22,11 +22,11 @@ mods.jei.ingredient.hide(item('thermalexpansion:cell'))
 
 // Basic..Resonant
 for (int level : 0..4) {
-    mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 0, 'Level': (byte) level]))
+    mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative' : (byte) 0, 'Level' : (byte) level]))
 }
 
 // Creative
-mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative': (byte) 1, 'Level': (byte) 4]))
+mods.jei.ingredient.add(item('thermalexpansion:cell').withNbt(['Creative' : (byte) 1, 'Level' : (byte) 4]))
 
 /* Hide Unused Augments */
 mods.jei.ingredient.removeAndHide(item('thermalexpansion:augment', 352)) // Pyroconvective Loop
@@ -49,20 +49,20 @@ mods.jei.ingredient.hide(item('thermalfoundation:material', 264)) // Mana Infuse
 /* Upgrade Recipes */
 // Machines (Do each manually, side cache varies)
 createAllUpgradeRecipes(item('thermalexpansion:machine', 4) // Phytogenic Insolator
-    .withNbt(['Facing'   : (byte) 3, 'SideCache': [(byte) 3, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
-              'RSControl': (byte) 0, 'Energy': 0]))
+    .withNbt(['Facing'    : (byte) 3, 'SideCache' : [(byte) 3, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
+              'RSControl' : (byte) 0, 'Energy'    : 0]))
 createAllUpgradeRecipes(item('thermalexpansion:machine', 5) // Compactor
-    .withNbt(['Facing'   : (byte) 3, 'SideCache': [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
-              'RSControl': (byte) 0, 'Energy': 0]))
+    .withNbt(['Facing'    : (byte) 3, 'SideCache' : [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
+              'RSControl' : (byte) 0, 'Energy'    : 0]))
 createAllUpgradeRecipes(item('thermalexpansion:machine', 9) // Energetic Infuser
-    .withNbt(['Facing'   : (byte) 3, 'SideCache': [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
-              'RSControl': (byte) 0, 'Energy': 0]))
+    .withNbt(['Facing'    : (byte) 3, 'SideCache' : [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
+              'RSControl' : (byte) 0, 'Energy'    : 0]))
 createAllUpgradeRecipes(item('thermalexpansion:machine', 14) // Glacial Precipitator
-    .withNbt(['Facing'   : (byte) 3, 'SideCache': [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
-              'RSControl': (byte) 0, 'Energy': 0]))
+    .withNbt(['Facing'    : (byte) 3, 'SideCache' : [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
+              'RSControl' : (byte) 0, 'Energy'    : 0]))
 createAllUpgradeRecipes(item('thermalexpansion:machine', 15) // Igneous Extruder
-    .withNbt(['Facing'   : (byte) 3, 'SideCache': [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
-              'RSControl': (byte) 0, 'Energy': 0]))
+    .withNbt(['Facing'    : (byte) 3, 'SideCache' : [(byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2],
+              'RSControl' : (byte) 0, 'Energy'    : 0]))
 
 // Dynamos
 var dynamoMetas = [
@@ -73,18 +73,19 @@ var dynamoMetas = [
 ]
 for (var meta : dynamoMetas) {
     createAllUpgradeRecipes(item('thermalexpansion:dynamo', meta)
-        .withNbt(['Facing': (byte) 1, 'RSControl': (byte) 0, 'Energy': 0]))
+        .withNbt(['Facing' : (byte) 1, 'RSControl' : (byte) 0, 'Energy' : 0]))
 }
 
 // Misc
 createAllUpgradeRecipes(item('thermalexpansion:tank')
-    .withNbt(['RSControl': (byte) 0, 'Creative': (byte) 0]))
+    .withNbt(['RSControl' : (byte) 0, 'Creative' : (byte) 0]))
 createAllUpgradeRecipes(item('thermalexpansion:cell')
-    .withNbt(['Creative': (byte) 0]))
+    .withNbt(['Creative' : (byte) 0]))
 
 /* Upgrade Recipe Classes and Functions */
 
 class UpgradeIngredient extends SimpleIIngredient {
+
     static String tagKey = 'Level'
 
     ItemStack toUpgrade
@@ -92,15 +93,15 @@ class UpgradeIngredient extends SimpleIIngredient {
 
     UpgradeIngredient(ItemStack toUpgrade, List<Integer> matchingLevels) {
         this.toUpgrade = toUpgrade
-        this.matchingLevels = new HashSet<>(matchingLevels.collect { (byte) it })
+        this.matchingLevels = new HashSet<>(matchingLevels.collect { level -> (byte) level })
     }
 
     @Override
     ItemStack[] getMatchingStacks() {
         return matchingLevels.stream()
-            .map {
+            .map { level ->
                 var result = toUpgrade.copy()
-                result.tagCompound.setByte(tagKey, it)
+                result.tagCompound.setByte(tagKey, level)
                 return result
             }.toArray()
     }
@@ -115,6 +116,7 @@ class UpgradeIngredient extends SimpleIIngredient {
 
         return matchingLevels.contains(tag.getByte(tagKey))
     }
+
 }
 
 void createAllUpgradeRecipes(ItemStack toUpgrade) {
@@ -133,7 +135,8 @@ void createAllUpgradeRecipes(ItemStack toUpgrade) {
         var result = toUpgrade.copy()
         result.tagCompound.setByte(UpgradeIngredient.tagKey, (byte) level)
 
-        var upgrade = item('thermalfoundation:upgrade', 33 + level - 2) // Upgrades: 33 = Reinforced, 34 = Signalum, etc.
+        // Upgrades: 33 = Reinforced, 34 = Signalum, etc.
+        var upgrade = item('thermalfoundation:upgrade', 33 + level - 2)
 
         createUpgradeRecipe(result, toUpgrade, upgrade, (0..level - 2).toList())
     }
@@ -169,6 +172,6 @@ List<ItemStack> ingots = [
     item('thermalfoundation:material', 166), // Lumium
     item('thermalfoundation:material', 167), // Enderium
 ]
-ingots.forEach { mods.thermalexpansion.compactor.removeByInput(it) }
+ingots.forEach { ingot -> mods.thermalexpansion.compactor.removeByInput(ingot) }
 
 mods.thermalexpansion.compactor.removeByOutput(item('thermalfoundation:material', 264)) // Mana Infused Gear

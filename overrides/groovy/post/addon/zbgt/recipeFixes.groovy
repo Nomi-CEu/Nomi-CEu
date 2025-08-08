@@ -1,14 +1,16 @@
 // MODS_LOADED: zbgt
 // ^, Makes the script not run as long as ZBGT isn't a mod in the player's instance.
 
+package post.addon.zbgt
+
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
+import static gregtech.api.GTValues.*
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import com.zorbatron.zbgt.api.recipes.properties.CoALProperty
 import gregtech.api.recipes.RecipeBuilder
 import gregtech.api.recipes.recipeproperties.ComputationProperty
-
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
-import static gregtech.api.GTValues.*
 
 /* Circuit Assembly Line */
 
@@ -114,7 +116,7 @@ mods.gregtech.coal_recipes.changeByOutput([metaitem('field.generator.zpm')], nul
     .forEach { ChangeRecipeBuilder builder ->
         builder.builder { RecipeBuilder recipe ->
             recipe.fluidInputs(fluid('awakened_draconium') * (L * 9 * 48)) // Original Amount x 48 (64 production, 3/4 discount)
-        }.copyProperties(CoALProperty.instance, ComputationProperty.instance) // CoAL supports total computation, but never used
+        }.copyProperties(CoALProperty.instance, ComputationProperty.instance) // Ignore total computation; never used
             .replaceAndRegister()
     }
 
@@ -123,7 +125,7 @@ if (LabsModeHelper.expert) {
         .forEach { ChangeRecipeBuilder builder ->
             builder.builder { RecipeBuilder recipe ->
                 recipe.fluidInputs(fluid('taranium') * (L * 2 * 48)) // Original Amount x 48 (64 production, 3/4 discount)
-            }.copyProperties(CoALProperty.instance, ComputationProperty.instance) // CoAL supports total computation, but never used
+            }.copyProperties(CoALProperty.instance, ComputationProperty.instance) // Ignore total computation; never used
                 .replaceAndRegister()
         }
 }

@@ -41,22 +41,22 @@ ore('dyeWhite').remove(item('minecraft:dye', 15))
 ore('dye').remove(item('minecraft:dye', 15))
 addShapedConversionRecipe(metaitem('dye.white'), item('minecraft:dye', 15))
 
-def dyeHelperMap = [:]
-for (def color : EnumDyeColor.values()) {
-    dyeHelperMap.put(color.getName(), ore('dye' + color.getName().capitalize()))
+var dyeHelperMap = [:]
+for (var color : EnumDyeColor.values()) {
+    dyeHelperMap.put(color.name, ore('dye' + color.name.capitalize()))
 }
 
 // Fix Elevator Redyeing
-for (def entry in dyeHelperMap.entrySet()) {
+for (var entry in dyeHelperMap.entrySet()) {
     crafting.remove('elevatorid:redye_' + entry.key)
     crafting.addShapeless(item('elevatorid:elevator_' + entry.key), [ore('blockElevator'), entry.value])
 }
 
 // Fix Slime Block Redyeing
-for (def color : EnumDyeColor.values()) {
-    def name = color.getName()
-    def meta = color.getMetadata()
-    def oreIng = dyeHelperMap.get(name)
+for (var color : EnumDyeColor.values()) {
+    var name = color.name
+    var meta = color.metadata
+    var oreIng = dyeHelperMap.get(name)
     crafting.remove('darkutils:dyed_slime_block_' + name)
     crafting.shapedBuilder()
         .output(item('darkutils:slime_dyed', meta) * 8)
@@ -72,8 +72,8 @@ for (def color : EnumDyeColor.values()) {
 addOreDictToOreDict(ore('dye'), dyeHelperMap.values())
 
 static void addOreDictToOreDict(OreDictIngredient addTo, Collection<OreDictIngredient> from) {
-    for (def ing in from) {
-        for (def stack in ing) {
+    for (var ing in from) {
+        for (var stack in ing) {
             addTo.add(stack)
         }
     }
@@ -83,6 +83,7 @@ static void addShapedConversionRecipe(ItemStack outputStack, ItemStack inputStac
     crafting.shapedBuilder()
         .output(outputStack)
         .matrix([[inputStack]])
-        .recipeClassFunction((output, width, height, ingredients) -> new ShapedConversionRecipe(output, ingredients, width, height))
-        .register()
+        .recipeClassFunction { output, width, height, ingredients ->
+            new ShapedConversionRecipe(output, ingredients, width, height)
+        }.register()
 }
