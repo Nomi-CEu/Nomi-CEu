@@ -1,5 +1,5 @@
 // SIDE: CLIENT
-// ^, Makes the Script only Run Client-Side
+// ^, Keyboard overrides should only be loaded on the client
 
 package post.main.general.misc
 

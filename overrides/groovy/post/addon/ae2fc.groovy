@@ -1,5 +1,5 @@
 // MODS_LOADED: ae2fc
-// ^, Makes the script not run as long as AE2 FC isn't a mod in the player's instance.
+// ^, Only runs when a player adds AE2 FC themselves
 
 package post.addon
 

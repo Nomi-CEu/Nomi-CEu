@@ -10,8 +10,8 @@
 	"scripts": {
 		"gulp": "node --import ./tsNodeESMRegister.mjs  node_modules/gulp/bin/gulp.js",
 		"check": "tsc --pretty --noUnusedLocals --noUnusedParameters",
-		"groovyLint": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info",
-		"groovyFix": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info --fix"
+		"groovyLint": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info && npm run gulp checkGrs",
+		"groovyFix": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info --fix && npm run gulp checkGrs"
 	},
 	"imports": {
 		"#types/*": "./types/*",
@@ -58,6 +58,7 @@
 		"fake-diff": "^1.0.0",
 		"fancy-log": "^2.0.0",
 		"filesize": "^10.1.1",
+		"glob": "^11.0.3",
 		"gray-matter": "^4.0.3",
 		"gulp": "^5.0.0",
 		"gulp-rename": "^2.0.0",

@@ -51,6 +51,9 @@ export const buildTypoCheck = gulp.series(
 import checkEnvTask from "#tasks/helpers/checkEnv.ts";
 export const checkEnv = checkEnvTask;
 
+import checkGrsTask from "#tasks/helpers/checkGrs.ts";
+export const checkGrs = checkGrsTask;
+
 import {
 	checkManifestStructure,
 	checkManifestFilesExist,

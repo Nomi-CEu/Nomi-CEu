@@ -1,5 +1,5 @@
 // SIDE: CLIENT
-// ^ Script only runs Client-Side
+// ^, Tooltips should only be processed on the client
 
 package post.main.general.misc
 

@@ -1,5 +1,5 @@
 // MODS_LOADED: zbgt
-// ^, Makes the script not run as long as ZBGT isn't a mod in the player's instance.
+// ^, Only runs when a player adds ZBGT themselves
 
 package post.addon.zbgt
 
