@@ -196,7 +196,7 @@ var blocksDisabled as IItemStack[][IOreDictEntry] = {
 
 	#blockPlutonium
 	<ore:blockPlutonium> : [
-		<metaitem:blockPlutonium>
+//		<metaitem:blockPlutonium>
 	],
 
 	#blockPulsatingIron
