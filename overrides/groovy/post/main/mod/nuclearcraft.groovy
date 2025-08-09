@@ -2,11 +2,12 @@ package post.main.mod
 
 import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecipe
 import static gregtech.api.GTValues.*
+import static org.apache.commons.lang3.tuple.Pair.of
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.util.ItemMeta
 import gregtech.api.recipes.ingredients.GTRecipeOreInput
-import it.unimi.dsi.fastutil.Pair
+import org.apache.commons.lang3.tuple.Pair
 import mezz.jei.api.ingredients.VanillaTypes
 import nc.enumm.MetaEnums
 import nc.fluid.FluidCoolant
@@ -66,20 +67,20 @@ Map<String, List<Integer>> fuelMetas = [
     'californium' : [0, 2, 4, 6],
 ]
 
-var u235 = Pair.of(new ItemMeta(item('nuclearcraft:uranium', 4)), metaitem('ingotUranium235'))
-var u238 = Pair.of(new ItemMeta(item('nuclearcraft:uranium', 8)), metaitem('ingotUranium'))
-var p239 = Pair.of(new ItemMeta(item('nuclearcraft:plutonium', 4)), metaitem('ingotPlutonium'))
-var p241 = Pair.of(new ItemMeta(item('nuclearcraft:plutonium', 8)), metaitem('ingotPlutonium241'))
+var u235 = of(new ItemMeta(item('nuclearcraft:uranium', 4)), metaitem('ingotUranium235'))
+var u238 = of(new ItemMeta(item('nuclearcraft:uranium', 8)), metaitem('ingotUranium'))
+var p239 = of(new ItemMeta(item('nuclearcraft:plutonium', 4)), metaitem('ingotPlutonium'))
+var p241 = of(new ItemMeta(item('nuclearcraft:plutonium', 8)), metaitem('ingotPlutonium241'))
 
-var u235Tiny = Pair.of(new ItemMeta(item('nuclearcraft:uranium', 6)), metaitem('nuggetUranium235'))
-var u238Tiny = Pair.of(new ItemMeta(item('nuclearcraft:uranium', 10)), metaitem('nuggetUranium'))
-var p239Tiny = Pair.of(new ItemMeta(item('nuclearcraft:plutonium', 6)), metaitem('nuggetPlutonium'))
-var p241Tiny = Pair.of(new ItemMeta(item('nuclearcraft:plutonium', 10)), metaitem('nuggetPlutonium241'))
+var u235Tiny = of(new ItemMeta(item('nuclearcraft:uranium', 6)), metaitem('nuggetUranium235'))
+var u238Tiny = of(new ItemMeta(item('nuclearcraft:uranium', 10)), metaitem('nuggetUranium'))
+var p239Tiny = of(new ItemMeta(item('nuclearcraft:plutonium', 6)), metaitem('nuggetPlutonium'))
+var p241Tiny = of(new ItemMeta(item('nuclearcraft:plutonium', 10)), metaitem('nuggetPlutonium241'))
 
 var checkReplacementsOrDefault = { ItemStack stack, Pair<ItemMeta, ItemStack>... toReplace ->
     for (var replacement : toReplace) {
-        if (replacement.left().compareWith(stack))
-            return replacement.right() * stack.count
+        if (replacement.left.compareWith(stack))
+            return replacement.right * stack.count
     }
 
     return stack
