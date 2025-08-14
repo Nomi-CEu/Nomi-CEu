@@ -1,0 +1,38 @@
+{
+	"extends": "all",
+	"rules": {
+        "braces.ElseBlockBraces": "off",
+        "braces.IfStatementBraces": "off",
+        "convention.CompileStatic": "off",
+        "convention.NoDef": "off",
+        "convention.ImplicitReturnStatement": "warn",
+        "convention.VariableTypeRequired": "off",
+        "design.BuilderMethodWithSideEffects": "off",
+        "design.Instanceof": "off",
+        "design.NestedForLoop": "off",
+        "dry.DuplicateListLiteral": "off",
+        "dry.DuplicateNumberLiteral": "off",
+        "dry.DuplicateStringLiteral": "off",
+        "formatting.BlankLineBeforePackage": "off",
+		"formatting.Indentation": {
+			"spacesPerIndentLevel": 4,
+			"severity": "error"
+		},
+        "formatting.LineLength": {
+            "length": 130
+        },
+        "formatting.SpaceAroundMapEntryColon": {
+            "characterBeforeColonRegex": "\\s",
+            "characterAfterColonRegex": "\\s"
+        },
+        "groovyism.UseCollectMany": "off",
+        "imports.NoWildcardImports": "off",
+        "logging.Println": "off",
+        "naming.ClassNameSameAsFilename": "off",
+        "naming.FactoryMethodName": "off",
+        "naming.PackageNameMatchesFilePath": {
+            "groupId": "post"
+        },
+        "unnecessary.UnnecessaryReturnKeyword": "off"
+	}
+}

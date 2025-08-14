@@ -5,13 +5,13 @@
   "debug": false,
   "classes": {
     "postInit": [
-      "classes/postInit"
+      "classes/post"
     ]
   },
   "loaders": {
     "postInit": [
-      "postInit/main",
-      "postInit/addon"
+      "post/main",
+      "post/addon"
     ]
   }
 }
