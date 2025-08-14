@@ -209,15 +209,6 @@ chemical_reactor.recipeBuilder().inputs(<metaitem:board.coated>).fluidInputs([<l
 //	[<metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>]
 //]);
 
-
-recipes.removeByRecipeName("gregtech:coated_board");
-recipes.removeByRecipeName("gregtech:coated_board_1x");
-recipes.addShaped(<metaitem:board.coated> * 3, [
-	[<metaitem:rubber_drop>, <metaitem:rubber_drop>, <metaitem:rubber_drop>],
-	[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-	[<metaitem:rubber_drop>, <metaitem:rubber_drop>, <metaitem:rubber_drop>]
-]);
-
 // topaz lens oredict
 <ore:craftingLensOrange>.add(<metaitem:lensTopaz>);
 
