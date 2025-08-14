@@ -6,7 +6,7 @@ on:
       tag:
         description: |
           Tag to release (aka 1.6.1a, 1.6.1-beta-3, 2.0, etc.).
-          
+
           If this is just a release, then the version will be grabbed from the top line of version.txt. However, this field is needed if version.txt does not exist or is empty.
         type: string
         required: false
@@ -31,7 +31,7 @@ on:
       tag:
         description: |
           Tag to release (aka 1.6.1a, 1.6.1-beta-3, 2.0, etc.).
-          
+
           If this is just a release, then the version will be grabbed from the top line of version.txt. However, this field is needed if version.txt does not exist or is empty.
         type: string
         required: false
@@ -45,7 +45,7 @@ on:
         type: boolean
         required: false
         default: false
-        
+
 jobs:
   createReleaseCommit:
     name: Create Release Commit (${{ inputs.version }})
@@ -93,7 +93,7 @@ jobs:
 
       - name: Check Environmental Variables
         working-directory: ./tools
-        run: npm run gulp check
+        run: npm run gulp checkEnv
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}

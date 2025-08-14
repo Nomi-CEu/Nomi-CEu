@@ -63,6 +63,12 @@ jobs:
         working-directory: ./tools
         run: npm ci
 
+      - name: Check Manifest Files
+        working-directory: ./tools
+        run: npm run gulp checkManifestFiles
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
       - name: Make Artifact Names
         id: artifactNames
         working-directory: ./tools

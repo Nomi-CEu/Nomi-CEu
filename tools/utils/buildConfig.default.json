@@ -15,6 +15,7 @@
 	"copyFromSharedClientGlobs": ["overrides/**/*"],
 	"normalZipGlobs": ["**/*"],
 	"cfZipGlobs": ["**/*", "!**/pack-mode-switcher.*"],
+	"grsGlobs": ["overrides/groovy/**/*.groovy"],
 	"buildDestinationDirectory": "../build",
 	"nightlyHookAvatar": "",
 	"nightlyHookName": ""
