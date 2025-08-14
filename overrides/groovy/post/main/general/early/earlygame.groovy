@@ -169,12 +169,38 @@ mods.gregtech.extractor.recipeBuilder()
     .duration(80).EUt(VA[ULV])
     .buildAndRegister()
 
-// Coated Circuit Board
+/* Coated Circuit Board */
+
+// Coated Circuit Board, Normal (allows planks instead of forcing plates)
+crafting.shapedBuilder()
+    .output(metaitem('board.coated') * 3)
+    .shape('RRR', 'PPP', 'RRR')
+    .key('R', metaitem('rubber_drop'))
+    .key('P', ore('plankWood'))
+    .replace().register()
+
+// Coated Circuit Board from Treated Wood (2x Normal Wood)
+crafting.shapedBuilder()
+    .output(metaitem('board.coated') * 6)
+    .shape('RRR', 'PPP', 'RRR')
+    .key('R', metaitem('rubber_drop'))
+    .key('P', ore('plankTreatedWood'))
+    .register()
+
+// Coated Circuit Board Assembler
 mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('plateWood'))
     .fluidInputs(fluid('glue') * 100)
     .circuitMeta(1)
-    .outputs(metaitem('board.coated'))
+    .outputs(metaitem('board.coated') * 2)
+    .duration(100).EUt(VA[ULV])
+    .buildAndRegister()
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('plateTreatedWood'))
+    .fluidInputs(fluid('glue') * 100)
+    .circuitMeta(1)
+    .outputs(metaitem('board.coated') * 4)
     .duration(100).EUt(VA[ULV])
     .buildAndRegister()
 
