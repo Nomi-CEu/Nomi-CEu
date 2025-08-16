@@ -45,8 +45,7 @@ crafting.shapedBuilder()
     .matrix(
         'S S',
         'EPE',
-        'FFF'
-    )
+        'FFF')
     .key('S', metaitem('sensor.lv'))
     .key('P', ore('itemIlluminatedPanel'))
     .key('E', item('appliedenergistics2:material', 24))
