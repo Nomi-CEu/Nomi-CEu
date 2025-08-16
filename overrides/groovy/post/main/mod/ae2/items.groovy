@@ -39,6 +39,20 @@ crafting.shapelessBuilder()
     .input(ore('itemIlluminatedPanel'), item('actuallyadditions:item_laser_wrench'))
     .replace().register()
 
+// Network Visualisation Tool
+crafting.shapedBuilder()
+    .output(item('ae2stuff:visualiser'))
+    .matrix(
+        'S S',
+        'EPE',
+        'FFF'
+    )
+    .key('S', metaitem('sensor.lv'))
+    .key('P', ore('itemIlluminatedPanel'))
+    .key('E', item('appliedenergistics2:material', 24))
+    .key('F', item('appliedenergistics2:material', 12))
+    .register()
+
 /* Materials */
 // Pattern
 crafting.shapedBuilder()
