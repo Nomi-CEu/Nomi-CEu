@@ -249,7 +249,7 @@ if (LabsModeHelper.normal) {
             ore('gemExquisiteLapis') * 2,
             ore('crystalPureCertusQuartz') * 4,
             item('appliedenergistics2:material', 22),
-            ore('circuitEv') * 2)
+            ore('circuitHv') * 2)
         .outputs(item('appliedenergistics2:material', 54))
         .duration(100).EUt(VHA[EV])
         .buildAndRegister()
@@ -374,4 +374,3 @@ mods.gregtech.autoclave.recipeBuilder()
     .outputs(item('appliedenergistics2:material', 7) * 16)
     .duration(160).EUt(VA[EV])
     .buildAndRegister()
-
