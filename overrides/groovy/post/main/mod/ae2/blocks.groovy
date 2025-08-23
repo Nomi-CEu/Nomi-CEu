@@ -3,9 +3,62 @@ package post.main.mod.ae2
 import static gregtech.api.GTValues.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.item.ItemStack
 
 /* Usable Blocks */
+// Early Items
+// Charger
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:charger'))
+    .matrix(
+        'DCD',
+        'D  ',
+        'DCD')
+    .key('D', LabsModeHelper.expert ? ore('plateBlackSteel') : ore('plateDarkSteel'))
+    .key('C', metaitem('plateCertusQuartz'))
+    .replace().register()
+
+// Energy Acceptor
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:energy_acceptor'))
+    .matrix(
+        'PFP',
+        'FHF',
+        'PFP')
+    .key('P', metaitem('nomilabs:plateElectricalSteel'))
+    .key('F', item('moreplates:fluix_plate'))
+    .key('H', metaitem('hull.lv'))
+    .replace().register()
+
+// Crystal Growth Chamber
+crafting.shapedBuilder()
+    .output(item('ae2stuff:grower'))
+    .matrix(
+        'FCF',
+        'CHC',
+        'FCF')
+    .key('F', LabsModeHelper.expert ? ore('frameGtBlackSteel') : ore('frameGtDarkSteel'))
+    .key('C', item('appliedenergistics2:material', 1))
+    .key('H', metaitem('hull.lv'))
+    .replace().register()
+
+// ME Chest
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:chest'))
+    .matrix(
+        'GPG',
+        'CSF',
+        'DQD')
+    .key('G', item('appliedenergistics2:quartz_glass'))
+    .key('P', item('appliedenergistics2:part', 180))
+    .key('C', item('appliedenergistics2:material', 10))
+    .key('S', item('actuallyadditions:block_giant_chest'))
+    .key('F', item('appliedenergistics2:material', 12))
+    .key('D', ore('blockDarkSteel'))
+    .key('Q', item('appliedenergistics2:material', 11))
+    .replace().register()
+
 // ME Drive
 crafting.shapedBuilder()
     .output(item('appliedenergistics2:drive'))
@@ -69,45 +122,6 @@ crafting.shapedBuilder()
         'PPP')
     .key('P', metaitem('plateTitanium'))
     .key('S', metaitem('quantumstar'))
-    .replace().register()
-
-// Energy Acceptor
-crafting.shapedBuilder()
-    .output(item('appliedenergistics2:energy_acceptor'))
-    .matrix(
-        'PFP',
-        'FHF',
-        'PFP')
-    .key('P', metaitem('nomilabs:plateElectricalSteel'))
-    .key('F', item('moreplates:fluix_plate'))
-    .key('H', metaitem('hull.lv'))
-    .replace().register()
-
-// Charger
-crafting.shapedBuilder()
-    .output(item('appliedenergistics2:charger'))
-    .matrix(
-        'DCD',
-        'D  ',
-        'DCD')
-    .key('D', metaitem('nomilabs:plateDarkSteel'))
-    .key('C', metaitem('plateCertusQuartz'))
-    .replace().register()
-
-// ME Chest
-crafting.shapedBuilder()
-    .output(item('appliedenergistics2:chest'))
-    .matrix(
-        'GPG',
-        'CSF',
-        'DQD')
-    .key('G', item('appliedenergistics2:quartz_glass'))
-    .key('P', item('appliedenergistics2:part', 180))
-    .key('C', item('appliedenergistics2:material', 10))
-    .key('S', item('actuallyadditions:block_giant_chest'))
-    .key('F', item('appliedenergistics2:material', 12))
-    .key('D', ore('blockDarkSteel'))
-    .key('Q', item('appliedenergistics2:material', 11))
     .replace().register()
 
 // Quantum Ring
@@ -360,4 +374,3 @@ mods.gregtech.alloy_smelter.recipeBuilder()
     .outputs(item('appliedenergistics2:quartz_vibrant_glass'))
     .duration(80).EUt(VHA[LV])
     .buildAndRegister()
-
