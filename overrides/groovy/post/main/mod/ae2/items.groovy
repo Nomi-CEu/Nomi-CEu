@@ -251,7 +251,7 @@ if (LabsModeHelper.normal) {
             item('appliedenergistics2:material', 22),
             ore('circuitHv') * 2)
         .outputs(item('appliedenergistics2:material', 54))
-        .duration(100).EUt(VHA[EV])
+        .duration(100).EUt(VHA[HV])
         .buildAndRegister()
 
     // 4-64k Fluid Storage
@@ -264,7 +264,7 @@ if (LabsModeHelper.normal) {
                 item('appliedenergistics2:material', 23),
                 item('appliedenergistics2:material', outputMeta - 1) * 3)
             .outputs(item('appliedenergistics2:material', outputMeta))
-            .duration(100).EUt(VHA[EV])
+            .duration(100).EUt(VHA[HV])
             .buildAndRegister()
     }
 }
