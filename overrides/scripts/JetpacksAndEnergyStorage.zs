@@ -127,7 +127,10 @@ val sumCapacitorBankPower as IRecipeFunction = function(out, ins, cInfo) {
 		if (ins.right.tag.memberGet("enderio:energy")) {
 			energy += ins.right.tag.memberGet("enderio:energy");
 		}
-		return out.updateTag({"enderio:energy": energy});
+		if energy > 0 {
+			return out.updateTag({"enderio:energy": energy});
+		}
+		return out;
 	};
 
 // advanced capacitor bank
