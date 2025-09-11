@@ -50,7 +50,7 @@ makeShaped("of_flux_controller", <fluxnetworks:fluxcontroller>,
       X : <enderio:item_endergy_conduit:11>, //Superconductor Wire
 	  I : <actuallyadditions:block_phantom_energyface>, //AA Phantom Energyface
 	  B : <metaitem:battery_buffer.luv.16>, //LuV Battery Buffer 16x
-	  P : <actuallyadditions:block_player_interface> //AA Player Interface
+	  P : <extrautils2:playerchest> //XU2 Player Chest
       });
 
 //Flux Configurator
