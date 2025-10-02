@@ -28,9 +28,11 @@ mods.gregtech.particle_accelerator.recipeBuilder()
         .EUt(VA[UEV]).duration(600)
         .buildAndRegister()
 mods.gregtech.assembly_line.recipeBuilder()
-        .inputs(item('gregtech:meta_item_1', 209) * 4, item('gregtech:meta_item_1', 149) * 2,
+        .inputs(item('gregtech:meta_item_1', 209) * 4,
+        item('gregtech:meta_item_1', 149) * 2,
         item('gregtech:meta_item_1', 497) * 8, ore('circuitUv') * 8,
-        ore('pipeHugeFluidNeutronium') * 4, ore('plateTrinaquadalloy') * 8)
+        ore('pipeHugeFluidNeutronium') * 4,
+        ore('plateTrinaquadalloy') * 8)
         .fluidInputs(fluid('tritanium') * 1152)
         .outputs(item('nomilabs:acceleration_coil'))
         .stationResearch(b -> b.researchStack(item('gregtech:fusion_casing', 1)).CWUt(128))
