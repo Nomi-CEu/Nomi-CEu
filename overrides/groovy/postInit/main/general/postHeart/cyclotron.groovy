@@ -12,7 +12,6 @@ import gregtech.api.recipes.recipeproperties.TemperatureProperty
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.*
 import static gregtech.api.GTValues.*
 
-  
 mods.gregtech.cyclotron.recipeBuilder()
         .inputs(item('gregtech:meta_foil', 64))
         .fluidInputs(fluid('hydrogen') * 1000)
@@ -44,6 +43,3 @@ mods.gregtech.assembly_line.recipeBuilder()
         .stationResearch(b -> b.researchStack(item('gregtech:fusion_casing', 1)).CWUt(128))
         .EUt(VA[UHV]).duration(600)
         .buildAndRegister()
-
-
-  
