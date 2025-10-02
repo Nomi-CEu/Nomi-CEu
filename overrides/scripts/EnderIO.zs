@@ -350,7 +350,7 @@ recipes.addShaped(<enderio:block_enchanter>, [
 
     
 recipes.remove(<enderio:block_soul_binder>);
-mods.extendedcrafting.TableCrafting.addShaped(<enderio:block_soul_binder>, [
+mods.extendedcrafting.TableCrafting.addShaped(2, <enderio:block_soul_binder>, [
     [<ore:plateSoularium>, <ore:plateSoularium>, <ore:plateSoularium>,  <ore:plateSoularium>,<ore:plateSoularium>],
     [<ore:plateSoularium>, <metaitem:plateTungstenSteel>, <enderio:block_enderman_skull>,<metaitem:plateTungstenSteel>,<ore:plateSoularium>],
     [<ore:plateSoularium>, <minecraft:skull:4>,          <ore:itemSoulMachineChassi>,   <minecraft:skull:2>,         <ore:plateSoularium>],

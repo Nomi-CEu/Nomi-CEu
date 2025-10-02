@@ -209,113 +209,12 @@ chemical_reactor.recipeBuilder().inputs(<metaitem:board.coated>).fluidInputs([<l
 //	[<metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>, <metaitem:wireGtSingleCopper>]
 //]);
 
-
-recipes.removeByRecipeName("gregtech:coated_board");
-recipes.removeByRecipeName("gregtech:coated_board_1x");
-recipes.addShaped(<metaitem:board.coated> * 3, [
-	[<metaitem:rubber_drop>, <metaitem:rubber_drop>, <metaitem:rubber_drop>],
-	[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-	[<metaitem:rubber_drop>, <metaitem:rubber_drop>, <metaitem:rubber_drop>]
-]);
-
-// workstation use vibrant
-// Workstation * 1
-<recipemap:circuit_assembler>.findRecipe(120, [<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <metaitem:component.diode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltBlueAlloy> * 16], [<liquid:soldering_alloy> * 144]).remove();
-// Workstation * 1
-<recipemap:circuit_assembler>.findRecipe(120, [<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <metaitem:component.diode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:boltBlueAlloy> * 16], [<liquid:tin> * 288]).remove();
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:nomilabs:boltVibrantAlloy> * 16])
-	.fluidInputs([<liquid:tin> * 288])
-	.outputs(<metaitem:circuit.workstation>)
-	.duration(400)
-	.EUt(120)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.plastic>, <metaitem:circuit.assembly> * 2, <ore:componentDiode> * 4, <metaitem:plate.random_access_memory> * 4, <metaitem:wireFineElectrum> * 16, <metaitem:nomilabs:boltVibrantAlloy> * 16])
-	.fluidInputs([<liquid:soldering_alloy> * 144])
-	.outputs(<metaitem:circuit.workstation>)
-	.duration(400)
-	.EUt(120)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
-
 // topaz lens oredict
 <ore:craftingLensOrange>.add(<metaitem:lensTopaz>);
 
 // HV coil (Moved to Groovy)
 
 // Energy Hatch & Dynamo Hatch Recycling Recipes Refresh (Moved to Groovy)
-
-// high tier circuit progression changes
-// nano iv
-// Nano Supercomputer * 1
-<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:soldering_alloy> * 144]).remove();
-// Nano Supercomputer * 1
-<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:tin> * 288]).remove();
-// Nano Supercomputer * 1
-<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:tin> * 288]).remove();
-// Nano Supercomputer * 1
-<recipemap:circuit_assembler>.findRecipe(600, [<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:plate.random_access_memory> * 16, <metaitem:wireFineElectrum> * 16], [<liquid:soldering_alloy> * 144]).remove();
-
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
-	.fluidInputs(<liquid:tin> * 288)
-	.outputs(<metaitem:circuit.nano_computer>)
-	.duration(200)
-	.EUt(600)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
-
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.smd.diode> * 8, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
-	.fluidInputs(<liquid:soldering_alloy> * 144)
-	.outputs(<metaitem:circuit.nano_computer>)
-	.duration(200)
-	.EUt(600)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
-
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
-	.fluidInputs(<liquid:tin> * 288)
-	.outputs(<metaitem:circuit.nano_computer>)
-	.duration(200)
-	.EUt(600)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
-
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.advanced>, <metaitem:circuit.nano_assembly> * 2, <metaitem:component.advanced_smd.diode> * 2, <metaitem:plate.nor_memory_chip> * 4, <metaitem:nomilabs:wireFineLumium> * 8, <metaitem:wireFineTungstenSteel> * 16])
-	.fluidInputs(<liquid:soldering_alloy> * 144)
-	.outputs(<metaitem:circuit.nano_computer>)
-	.duration(200)
-	.EUt(600)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
-
-// Crystal Supercomputer * 1
-<recipemap:circuit_assembler>.findRecipe(9600, [<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineNiobiumTitanium> * 32], [<liquid:soldering_alloy> * 144]).remove();
-// Crystal Supercomputer * 1
-<recipemap:circuit_assembler>.findRecipe(9600, [<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:wireFineNiobiumTitanium> * 32], [<liquid:tin> * 288]).remove();
-
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:nomilabs:wireFineEnderium> * 32])
-	.fluidInputs(<liquid:tin> * 288)
-	.outputs(<metaitem:circuit.crystal_computer>)
-	.duration(400)
-	.EUt(9600)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
-
-circuit_assembler.recipeBuilder()
-	.inputs([<metaitem:circuit_board.elite>, <metaitem:circuit.crystal_assembly> * 2, <metaitem:plate.random_access_memory> * 4, <metaitem:plate.nor_memory_chip> * 32, <metaitem:plate.nand_memory_chip> * 64, <metaitem:nomilabs:wireFineEnderium> * 32])
-	.fluidInputs(<liquid:soldering_alloy> * 144)
-	.outputs(<metaitem:circuit.crystal_computer>)
-	.duration(400)
-	.EUt(9600)
-	.property("cleanroom", "cleanroom")
-	.buildAndRegister();
 
 // Voltage Control Unit recipes
 recipes.remove(<metaitem:gcym:tiered_hatch.ulv>);

@@ -88,7 +88,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nThis machine requires §eME Power§r, which is provided through a §aME Network§r connection. Placing it next to your §3Energy Acceptor§r accomplishes this for now, or you can connect it via §3Fluix Glass Cables§r.\n\nJEI doesn\u0027t show the Chamber\u0027s recipes directly, so we\u0027ll explain it here:\n\nSeeds are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding Pure Crystal, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you effectively double your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nFluix Crystals you\u0027ve already had to make in a pool of water by now, and it\u0027s the same ingredients here: insert one each of a §6Redstone§r, §6Charged Certus Quartz Crystal§r, and a §6Nether Quartz§r to produce two Fluix Crystals.",
+          "desc:8": "The §3Crystal Growth Chamber§r allows you to perform §bApplied Energistics§r\u0027s world crafting recipes inside of a machine. Hooray, you never have to drop more things in water again!\n\nIt is used for growing §6Crystal Seeds§r into §6Pure Crystals§r, and also for creating §6Fluix Crystals§r.\n\nThis machine requires §eME Power§r, which is provided through a §aME Network§r connection. Placing it next to your §3Energy Acceptor§r accomplishes this for now, or you can connect it via §3Fluix Glass Cables§r.\n\nSee §bJEI§r for the recipes the Chamber can perform, but basically:\n\n§6Seeds§r are made by pulverizing any of the three crystal types and mixing the dust with sand. A seed grows into the corresponding §ePure Crystal§r, which is substitutable for the original crystal in most recipes. Using Pure Crystals lets you §aeffectively double§r your material efficiency, which is nice. And no, you can\u0027t grind down Pure Crystals to further multiply your resources. Sorry.\n\nYou can also make §6Fluix Crystals§r in an easier to automate way, using the same ingredients as before.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5304,7 +5304,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types. Oh, and they\u0027re relatively cheaper to make.\n\nThe only downside is that §ethey will not connect to §bApplied Energistics §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use AE cables like §6Fluix Cables§r for those. §2Furthermore, they are known to sometimes disconnect from machine hulls and full-block interfaces, so use AE cables like §6Fluix Cables§r for those.",
+          "desc:8": "§6ME Conduits§r have the advantage of being able to share a block space with other conduit types, but they are more expensive to make, and §ccan sometimes cause connection issues§r, so use them wisely and only when needed.\n\nThey also §ewill not connect to §bApplied Energistics §emicroparts§r like slab-form §6Interfaces§r or §6Level Emitters§r, so you have to use §6Fluix Cables§r for those.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -49411,7 +49411,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Whether or not you (or your server admin) picked the default §bLost Cities§r overworld type, you have the option of teleporting yourself to the §eLost Cities Dimension§r. This is useful if you like other world types but want to still be able to explore cities for things like §eloot and spawners§r.\n\nTo create a portal, you must place a §aBed§r down on two §6Blocks of Diamond§r. Then, you surround the bed with any kind of §eMonster Skulls§r. Sleep in this bed and you will be teleported there.\n\n§cDon\u0027t forget to have a way to get back!§r You can use the §e/sethome§r command to register where your house is, and §e/home§r to return to it. If you supply a name (for example §e/sethome nether§r) then you can register and teleport to up to 25 homes by default.\n\nThere are some §erestrictions§r on this though: §eIt takes a few seconds of standing still for /home to activate§r, and there is a §ecooldown§r between uses. These restrictions can be bypassed by enabling cheats.\n\n§e/setwarp§r and §e/warp§r work much the same, §cbut they can only be created and removed by people with operator permissions.§r Warp points are server-wide for any player to use - great for meeting points and events.\n\nLater on you\u0027ll have other means of teleportation.\n\nMonster Skulls might take a little while to get if you\u0027re playing in §ePeaceful§r. §6Skeleton Skulls§r would be the way to go in that case.",
+          "desc:8": "Whether or not you (or your server admin) picked the default §bLost Cities§r overworld type, you have the option of teleporting yourself to the §eLost Cities Dimension§r. This is useful if you like other world types but want to still be able to explore cities for things like §eloot and spawners§r.\n\nTo create a portal, you must place a §aBed§r down on two §6Blocks of Diamond§r. Then, you surround the bed with any kind of §eMonster Skulls§r. Sleep in this bed and you will be teleported there.\n\n§cDon\u0027t forget to have a way to get back!§r You can use the §e/sethome§r command to register where your house is, and §e/home§r to return to it. If you supply a name (for example §e/sethome nether§r) then you can register and teleport to up to 25 homes by default.\n\n§e/setwarp§r and §e/warp§r work much the same, §cbut they can only be created and removed by people with operator permissions.§r Warp points are server-wide for any player to use - great for meeting points and events.\n\nLater on you\u0027ll have other means of teleportation.\n\nMonster Skulls might take a little while to get if you\u0027re playing in §ePeaceful§r. §6Skeleton Skulls§r would be the way to go in that case.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -66760,7 +66760,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You will be handling many different fluids, from §9Water§r and §9Steam§r to §9Lava§r. Some of these you might want to store, and others are collected from in-world.\n\nFor fluid collection, §bGregTech §6Cells§r is your best friend. Offering much more storage per item than a bucket, and being stackable, these allow for quick collection of in-world fluids, like Water and Lava. These come in many tiers, but currently, you can make §6Basic§r and §6Bronze§r cells.\n\nYou also have §6Universal Cells§r, made by simply placing a Basic Cell in a §3Crafting Table§r. These are the same as Basic Cells, but they can store partial buckets.\n\nFor fluid storage, you have many choices, but currently, you can only use §bEnderIO §6Portable Tanks§r, §bGregTech §6Drums§r or §bGregTech §6Wooden Barrels§r. Portable Tanks provide less storage, but are cheaper, and don\u0027t have restrictions on fluid temperature and type. Drums are available in multiple sizes, and allow for §aauto-output§r on the bottom side (use a §eScrewdriver§r to toggle).\n\n§aNote the restrictions on fluid temperature and fluid type for Cells, Barrels and Drums!\n\n§dNomi-CEu§r has another special feature: crafting recipes involving filled buckets can use §aany fluid container§r. Remember this when mass-crafting §6Water Sources§r or §6Cobblestone Generators§r. It can save you a lot of fiddling!\n\n§aIn such recipes, only the fluid inside the container is consumed; not the container itself.§r",
+          "desc:8": "You will be handling many different fluids, from §9Water§r and §9Steam§r to §9Lava§r. Some of these you might want to store, and others are collected from in-world.\n\nFor fluid collection, §bGregTech §6Cells§r is your best friend. Offering much more storage per item than a bucket, and being stackable, these allow for quick collection of in-world fluids, like Water and Lava. These come in many tiers, but currently, you can make §6Basic§r, §6Bronze§r and §6Gold§r cells. You probably only need Gold cells over the other choices when you want to transport §dacids§r.\n\nYou also have §6Universal Cells§r, made by simply placing a Basic Cell in a §3Crafting Table§r. These are the same as Basic Cells, but they can store partial buckets.\n\nFor fluid storage, you have many choices, but currently, you can only use §bEnderIO §6Portable Tanks§r, §bGregTech §6Drums§r or §bGregTech §6Wooden Barrels§r. Portable Tanks provide less storage, but are cheaper, and don\u0027t have restrictions on fluid temperature and type. Drums are available in multiple sizes, and allow for §aauto-output§r on the bottom side (use a §eScrewdriver§r to toggle).\n\n§aNote the restrictions on fluid temperature and fluid type for Cells, Barrels and Drums!\n\n§dNomi-CEu§r has another special feature: crafting recipes involving filled buckets can use §aany fluid container§r. Remember this when mass-crafting §6Water Sources§r or §6Cobblestone Generators§r. It can save you a lot of fiddling!\n\n§aIn such recipes, only the fluid inside the container is consumed; not the container itself.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -66798,6 +66798,18 @@
             "1:10": {
               "Count:3": 1,
               "Damage:2": 1611,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "nomilabs:meta_item"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1617,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }

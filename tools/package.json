@@ -9,7 +9,9 @@
 	"private": true,
 	"scripts": {
 		"gulp": "node --import ./tsNodeESMRegister.mjs  node_modules/gulp/bin/gulp.js",
-		"check": "tsc --pretty --noUnusedLocals --noUnusedParameters"
+		"check": "tsc --pretty --noUnusedLocals --noUnusedParameters",
+		"groovyLint": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info && npm run gulp checkGrs",
+		"groovyFix": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info --fix && npm run gulp checkGrs"
 	},
 	"imports": {
 		"#types/*": "./types/*",
@@ -21,7 +23,7 @@
 	"devDependencies": {
 		"@actions/core": "^1.10.1",
 		"@inquirer/confirm": "^3.1.6",
-		"@inquirer/prompts": "^5.0.2",
+		"@inquirer/prompts": "^7.8.1",
 		"@octokit/plugin-retry": "^7.1.1",
 		"@octokit/plugin-throttling": "^9.3.1",
 		"@octokit/rest": "^21.0.1",
@@ -56,12 +58,13 @@
 		"fake-diff": "^1.0.0",
 		"fancy-log": "^2.0.0",
 		"filesize": "^10.1.1",
+		"glob": "^11.0.3",
 		"gray-matter": "^4.0.3",
 		"gulp": "^5.0.0",
 		"gulp-rename": "^2.0.0",
 		"gulp-zip": "^6.0.0",
 		"hash-wasm": "^4.11.0",
-		"inquirer": "^9.2.20",
+		"inquirer": "^12.9.1",
 		"javascript-stringify": "^2.1.0",
 		"just-diff": "^6.0.2",
 		"just-remove": "^3.2.0",
@@ -69,6 +72,7 @@
 		"marked": "^12.0.2",
 		"merge-stream": "^2.0.0",
 		"mustache": "^4.2.0",
+		"npm-groovy-lint": "^15.2.1",
 		"picomatch": "^4.0.2",
 		"prettier": "^3.2.5",
 		"retry-axios": "^3.1.3",

@@ -193,7 +193,7 @@ function makeExtremeRecipe5(output as IItemStack,
          [null,null,null,null,null],
          [null,null,null,null,null]] as IIngredient[][];
 
-    mods.extendedcrafting.TableCrafting.addShaped(output,
+    mods.extendedcrafting.TableCrafting.addShaped(2, output,
         textToIngredients(ingredients, output, recipe, replacements));
 }
 
@@ -210,7 +210,7 @@ function makeExtremeRecipe7(output as IItemStack,
          [null,null,null,null,null,null,null],
          [null,null,null,null,null,null,null]] as IIngredient[][];
 
-    mods.extendedcrafting.TableCrafting.addShaped(output,
+    mods.extendedcrafting.TableCrafting.addShaped(3, output,
         textToIngredients(ingredients, output, recipe, replacements));
 }
 
@@ -229,7 +229,7 @@ function makeExtremeRecipe9(output as IItemStack,
          [null,null,null,null,null,null,null,null,null],
          [null,null,null,null,null,null,null,null,null]] as IIngredient[][];
 
-    mods.extendedcrafting.TableCrafting.addShaped(output,
+    mods.extendedcrafting.TableCrafting.addShaped(4, output,
         textToIngredients(ingredients, output, recipe, replacements));
 }
 

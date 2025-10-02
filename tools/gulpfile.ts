@@ -48,8 +48,19 @@ export const buildTypoCheck = gulp.series(
 	extractTypoCheckFiles,
 );
 
-import checkTasks from "./tasks/checks/index.ts";
-export const check = gulp.series(checkTasks);
+import checkEnvTask from "#tasks/helpers/checkEnv.ts";
+export const checkEnv = checkEnvTask;
+
+import checkGrsTask from "#tasks/helpers/checkGrs.ts";
+export const checkGrs = checkGrsTask;
+
+import {
+	checkManifestStructure,
+	checkManifestFilesExist,
+} from "#tasks/helpers/checkManifest.ts";
+export const checkManifest = () => checkManifestStructure(true);
+export const fixManifest = () => checkManifestStructure(false);
+export const checkManifestFiles = checkManifestFilesExist;
 
 import * as zip from "./tasks/misc/zip.ts";
 export const zipClient = zip.zipClient;
@@ -79,3 +90,6 @@ export const portQB = gulp.series(qbPort.default, fixQB);
 
 import * as qbInfo from "./tasks/helpers/questInfo/index.ts";
 export const infoQB = qbInfo.default;
+
+import * as labs from "./tasks/misc/updateLabs.ts";
+export const updateLabs = labs.updateLabs;

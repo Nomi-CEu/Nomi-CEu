@@ -313,7 +313,7 @@ mods.extendedcrafting.TableCrafting.remove(<extendedcrafting:singularity_ultimat
 //[null,                            <extendedcrafting:material:140>,     <nomilabs:stabilizeduranium>, <nomilabs:stabilizedneptunium>, <nomilabs:stabilizedplutonium>,     <nomilabs:stabilizedamericium>,   <nomilabs:stabilizedcurium>, <extendedcrafting:material:140>,    null],
 //[null,                            null,                                <extendedcrafting:material:140>,    <nomilabs:stabilizedberkelium>, <nomilabs:stabilizedcalifornium>,   <nomilabs:stabilizedeinsteinium>, <extendedcrafting:material:140>,   null,                               null]]);
 
-mods.extendedcrafting.TableCrafting.addShaped(0, <extendedcrafting:singularity_ultimate>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <extendedcrafting:singularity_ultimate>, [
 	[<ore:nuggetNetherStar>, <nomilabs:solidifiedhydrogen>, <nomilabs:solidifiedhelium>, <ore:dustLithium>, <ore:ingotBeryllium>, <ore:dustBoron>, <ore:dustCarbon>, <nomilabs:solidifiednitrogen>, <ore:nuggetNetherStar>], 
 	[<nomilabs:solidifiedoxygen>, <nomilabs:solidifiedfluorine>, <nomilabs:solidifiedneon>, <ore:dustSodium>, <ore:dustMagnesium>, <ore:ingotAluminium>, <ore:dustSilicon>, <ore:dustPhosphorus>, <ore:dustSulfur>], 
 	[<nomilabs:solidifiedchlorine>, <nomilabs:solidifiedargon>, <ore:dustPotassium>, <ore:dustCalcium>, <ore:ingotTitanium>, <ore:ingotVanadium>, <ore:ingotChrome>, <ore:ingotManganese>, <ore:ingotIron>], 
@@ -420,7 +420,7 @@ makeExtremeRecipe9(<avaritia:resource:5>,
 
 /////////// Ultimate Gem ////////////
 
-mods.extendedcrafting.TableCrafting.addShapeless(<nomilabs:ultimate_gem>,
+mods.extendedcrafting.TableCrafting.addShapeless(2, <nomilabs:ultimate_gem>,
     [<thermalfoundation:material:893>,
      <actuallyadditions:item_crystal_empowered:5>,
      <enderio:item_material:16>,
@@ -464,7 +464,7 @@ makeExtremeRecipe9(<avaritia:skullfire_sword>,
      "N        "],
     { A : <ore:ingotCrystalMatrix>,
       B : <armorplus:material:2>,
-      C : <minecraft:log:*>,
+      C : <ore:logWood>,
       D : <armorplus:redstone_sword>,
       E : <armorplus:lapis_sword>,
       F : <armorplus:emerald_sword>,
@@ -514,7 +514,7 @@ makeExtremeRecipe9(<draconicevolution:creative_rf_source>,
       H : <avaritia:resource:5> });
 
 // GT Infinite Energy
-mods.extendedcrafting.TableCrafting.addShaped(0, <metaitem:infinite_energy>, [
+mods.extendedcrafting.TableCrafting.addShaped(4, <metaitem:infinite_energy>, [
 	[<ore:wireGtHexMercuryBariumCalciumCuprate>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexMercuryBariumCalciumCuprate>], 
 	[<ore:wireGtHexUraniumTriplatinum>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexUraniumTriplatinum>], 
 	[<ore:wireGtHexSamariumIronArsenicOxide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexRutheniumTriniumAmericiumNeutronate>, <ore:wireGtHexEnrichedNaquadahTriniumEuropiumDuranide>, <ore:wireGtHexUraniumRhodiumDinaquadide>, <ore:wireGtHexIndiumTinBariumTitaniumCuprate>, <ore:wireGtHexSamariumIronArsenicOxide>], 
@@ -776,7 +776,7 @@ dynamo5 = dynamo5.only(isResonant);
 //Ultimate Collections
 
 //Ultimate Generator
-mods.extendedcrafting.TableCrafting.addShapeless(<nomilabs:ultimate_generator>,
+mods.extendedcrafting.TableCrafting.addShapeless(4, <nomilabs:ultimate_generator>,
 [<meta_tile_entity:large_boiler.bronze>, <meta_tile_entity:large_boiler.steel>, <meta_tile_entity:combustion_generator.lv>, <meta_tile_entity:combustion_generator.mv>, <nuclearcraft:fission_controller_new_fixed>, <nuclearcraft:salt_fission_controller>, <meta_tile_entity:combustion_generator.hv>, <meta_tile_entity:large_boiler.titanium>, <meta_tile_entity:large_boiler.tungstensteel>,
 <solarflux:solar_panel_1>, <solarflux:solar_panel_4>, <solarflux:solar_panel_5>, <solarflux:solar_panel_6>, <draconicevolution:generator>, <solarflux:solar_panel_7>, <solarflux:solar_panel_8>, <solarflux:solar_panel_wyvern>, <solarflux:solar_panel_neutronium>,
 <solarflux:solar_panel_2>, <solarflux:solar_panel_3>, xu01, xu02, xu03, xu04, xu05, <solarflux:solar_panel_chaotic>, <solarflux:solar_panel_draconic>,
