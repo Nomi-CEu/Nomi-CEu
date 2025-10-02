@@ -1,14 +1,3 @@
-import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
-
-import gregtech.api.recipes.RecipeBuilder
-import gregtech.api.recipes.RecipeMaps
-import gregtech.api.recipes.chance.output.impl.ChancedItemOutput
-import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition
-import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher
-import gregtech.api.recipes.recipeproperties.CleanroomProperty
-import gregtech.api.recipes.recipeproperties.ResearchProperty
-import gregtech.api.recipes.recipeproperties.TemperatureProperty
-
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.*
 import static gregtech.api.GTValues.*
 
