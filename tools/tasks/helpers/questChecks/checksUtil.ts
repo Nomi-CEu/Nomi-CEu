@@ -22,7 +22,7 @@ export function logOrThrowProblem(
 ) {
 	if (data.shouldCheck)
 		throw new Error(
-			`${data.name} with ID ${data.id} at ${data.key} has ${describer}${describer ? ` ${describer}` : ""}
+			`${data.name} with ID ${data.id} at ${data.key} has ${describer ? ` ${describer}` : ""}
 			${problem}${conditionBefore ? ` ${conditionBefore}` : ""}!`,
 		);
 
