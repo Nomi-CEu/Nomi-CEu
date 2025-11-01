@@ -3,13 +3,9 @@
   "packId": "nomiceu",
   "version": "1.0.0",
   "debug": false,
-  "classes": {
-    "postInit": [
-      "classes/post"
-    ]
-  },
   "loaders": {
     "postInit": [
+      "post/classes",
       "post/main",
       "post/addon"
     ]

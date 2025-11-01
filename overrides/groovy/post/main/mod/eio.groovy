@@ -2,7 +2,8 @@ package post.main.mod
 
 import static gregtech.api.GTValues.*
 
-import classes.post.Common
+import post.classes.Common
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import net.minecraft.item.ItemStack
 

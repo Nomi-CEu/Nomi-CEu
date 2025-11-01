@@ -2141,9 +2141,6 @@ mods.jei.JEI.removeAndHide(<moreplates:hammer>);
 
 
 //The One Probe Removals
-mods.jei.JEI.removeAndHide(<theoneprobe:iron_helmet_probe>);
-mods.jei.JEI.removeAndHide(<theoneprobe:gold_helmet_probe>);
-mods.jei.JEI.removeAndHide(<theoneprobe:diamond_helmet_probe>);
 //mods.jei.JEI.removeAndHide(<theoneprobe:probenote>);
 mods.jei.JEI.removeAndHide(<theoneprobe:creativeprobe>);
 
