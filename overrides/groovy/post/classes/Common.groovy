@@ -4,6 +4,9 @@ import gregtech.api.GTValues
 import net.minecraft.item.ItemStack
 import org.apache.commons.lang3.tuple.Pair
 
+/**
+ * Class containing various util functions used across scripts.
+ */
 class Common {
 
     /* Cached Values */
