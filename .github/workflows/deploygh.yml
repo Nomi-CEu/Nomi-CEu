@@ -21,14 +21,14 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
           owner: Nomi-CEu
 
       - name: Checkout Tag
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -43,9 +43,9 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -63,7 +63,7 @@ jobs:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Download Built Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: Built Pack
           path: ./build/

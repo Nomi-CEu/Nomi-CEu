@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check Line Endings
         run: |
@@ -27,9 +27,9 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -75,7 +75,7 @@ jobs:
     needs: checks
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Restore NPM Cached Files
         uses: actions/cache@v4
@@ -88,9 +88,9 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -103,3 +103,11 @@ jobs:
         run: npm run gulp checkManifestFiles
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      - name: Upload Mod List
+        uses: actions/upload-artifact@v5
+        with:
+          name: Mod List
+          path: ./build/modlist.html
+          if-no-files-found: error
+          compression-level: 9

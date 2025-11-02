@@ -102,7 +102,7 @@ jobs:
 
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -127,9 +127,9 @@ jobs:
           restore-keys: ${{ runner.os }}-build-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -157,7 +157,7 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload All Files
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Built Pack
           path: |
@@ -177,7 +177,7 @@ jobs:
       mmc: ${{ steps.artifactNames.outputs.mmc }}
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -193,9 +193,9 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -230,7 +230,7 @@ jobs:
 
       - name: Upload Changelogs
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Changelogs
           path: ./build/*.md
@@ -244,7 +244,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -260,9 +260,9 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -272,7 +272,7 @@ jobs:
 
       - name: Download Changelog Artifacts
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: Changelogs
           path: ./build/
@@ -285,7 +285,7 @@ jobs:
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Client Zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ needs.makeNames.outputs.client }}
           path: ./build/client/**/*
@@ -299,7 +299,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -324,9 +324,9 @@ jobs:
           restore-keys: ${{ runner.os }}-build-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -336,7 +336,7 @@ jobs:
 
       - name: Download Changelog Artifacts
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: Changelogs
           path: ./build/
@@ -349,7 +349,7 @@ jobs:
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Server Zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ needs.makeNames.outputs.server }}
           path: ./build/server/**/*
@@ -363,7 +363,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -379,9 +379,9 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -391,7 +391,7 @@ jobs:
 
       - name: Download Changelog Artifacts
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: Changelogs
           path: ./build/
@@ -404,7 +404,7 @@ jobs:
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Lang Zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ needs.makeNames.outputs.lang }}
           path: ./build/lang/**/*
