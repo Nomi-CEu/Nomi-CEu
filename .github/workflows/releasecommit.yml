@@ -58,14 +58,14 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
           owner: Nomi-CEu
 
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           token: ${{ steps.token.outputs.token }}
@@ -81,9 +81,9 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           check-latest: true
 
       - name: Setup NPM Packages
@@ -105,7 +105,7 @@ jobs:
         run: npm run gulp updateFilesAll
 
       - name: Commit and Push Release Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         id: commit-release
         if: ${{ !inputs.update_files }}
         with:
@@ -116,7 +116,7 @@ jobs:
           tagging_message: "${{ inputs.tag }}"
 
       - name: Commit and Push Update Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         id: commit-update
         if: ${{ inputs.update_files }}
         with:
