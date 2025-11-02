@@ -3,6 +3,8 @@ import { logWarn } from "#utils/log.ts";
 import { fetchFileInfo } from "#utils/curseForgeAPI.ts";
 import fs from "fs";
 import upath from "upath";
+import buildConfig from "#buildConfig";
+import {buildModList} from "#tasks/misc/createModList.ts";
 
 export async function checkManifestStructure(throwErrors: boolean) {
 	let prevProjId = 0;
@@ -69,9 +71,18 @@ export async function checkManifestStructure(throwErrors: boolean) {
 
 export async function checkManifestFilesExist() {
 	// Check if the file exists to the given project id (will throw if invalid)
-	return Promise.all(
+	await Promise.all(
 		modpackManifest.files.map((file) =>
 			fetchFileInfo(file.projectID, file.fileID),
 		),
 	);
+
+	// Write a modlist
+	if (!fs.existsSync(buildConfig.buildDestinationDirectory)) {
+		await fs.promises.mkdir(buildConfig.buildDestinationDirectory, {
+			recursive: true,
+		});
+	}
+
+	return buildModList(buildConfig.buildDestinationDirectory);
 }
