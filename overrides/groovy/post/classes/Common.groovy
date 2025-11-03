@@ -24,7 +24,7 @@ class Common {
         if (voltageNamesCache == null) {
             voltageNamesCache = []
             for (int i = 0; i < GTValues.VN.length; i++) {
-                voltageNamesCache.add(Pair.of(i, GTValues.VN[i].toLowerCase()))
+                voltageNamesCache.add(Pair.of(i, GTValues.VN[i].toLowerCase(Locale.ENGLISH)))
             }
         }
 
