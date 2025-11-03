@@ -30,6 +30,6 @@ for (Pair<Integer, String> voltage : voltages) {
         .inputs(nonUniversalIng)
         .circuitMeta(1)
         .outputs(universal)
-        .duration(10).EUt(VHA[voltage.key])
+        .duration(10).EUt(VHA[Math.max(0, voltage.key - 1)])
         .buildAndRegister()
 }
