@@ -1,5 +1,5 @@
 // SIDE: CLIENT
-// ^, Tooltips should only be processed on the client
+// ^, Tooltips affects Client Only
 
 package post.main.general.misc
 
@@ -8,9 +8,10 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.ore.OrePrefix.*
 
+import post.classes.Common
+
 import appeng.core.AEConfig
 import appeng.core.features.AEFeature
-import classes.post.Common
 import com.nomiceu.nomilabs.config.LabsConfig
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.GregTechAPI
@@ -22,6 +23,9 @@ import gregtech.common.pipelike.fluidpipe.ItemBlockFluidPipe
 import mustapelto.deepmoblearning.common.metadata.MetadataLivingMatter
 import mustapelto.deepmoblearning.common.metadata.MetadataManager
 import net.minecraft.item.ItemStack
+
+// This file specifies most custom tooltip changes.
+// Exceptions: Fluid Tooltips, NBT Clearing Tooltips, Deprecation Tooltips, and Tooltips for Addons
 
 /* Mixed */
 // Fillable Items
@@ -162,7 +166,7 @@ addTooltip(item('appliedenergistics2:material', 1), translatable('nomiceu.toolti
 
 // ME P2P (Special)
 // Add a new line after its unique tooltip so it is easier to read the global p2p tooltip
-addTooltip(Common.meP2p, [
+addTooltip(item('appliedenergistics2:part', 460), [
     translatable('nomiceu.tooltip.ae2.p2p.me'),
     translatableEmpty(),
     translatable('nomiceu.tooltip.ae2.p2p.type', 'ME'),

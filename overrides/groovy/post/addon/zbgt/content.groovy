@@ -7,7 +7,8 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addToolti
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
 
-import classes.post.Common
+import post.classes.Common
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.api.recipes.Recipe
