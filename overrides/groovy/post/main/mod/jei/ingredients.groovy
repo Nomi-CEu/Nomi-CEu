@@ -76,8 +76,6 @@ mods.jei.ingredient.with {
     removeAndHide(item('gregtech:ore_kaemanite_0', 2))
     removeAndHide(item('gregtech:ore_fluorite_0', 1))
     removeAndHide(item('gregtech:ore_fluorite_0', 2))
-    removeAndHide(item('gregtech:ore_darmstadtite_0', 0))
-    removeAndHide(item('gregtech:ore_darmstadtite_0', 1))
     removeAndHide(item('gregtech:ore_laurite_0', 0))
     removeAndHide(item('gregtech:ore_laurite_0', 2))
     removeAndHide(item('gregtech:ore_cuprorhodsite_0', 0))
@@ -256,23 +254,16 @@ mods.jei.ingredient.with {
     removeAndHide(item('gregtech:meta_crushed_centrifuged', 2031))
 
     if (LabsModeHelper.normal) {
-        removeAndHide(item('gregtech:ore_darmstadtite_0', 2))
         removeAndHide(item('gregtech:ore_cooperite_0', 1))
         removeAndHide(item('gregtech:ore_tantalite_0', 2))
         removeAndHide(item('gregtech:ore_pentlandite_0', 1))
-        removeAndHide(item('nomilabs:meta_dust', 110)) // Darmstadtite
-        removeAndHide(item('nomilabs:meta_dust_small', 110))
-        removeAndHide(item('nomilabs:meta_dust_tiny', 110))
-        removeAndHide(item('nomilabs:meta_dust_impure', 110))
-        removeAndHide(item('nomilabs:meta_dust_pure', 110))
-        removeAndHide(item('nomilabs:meta_crushed', 110))
-        removeAndHide(item('nomilabs:meta_crushed_purified', 110))
-        removeAndHide(item('nomilabs:meta_crushed_centrifuged', 110))
     }
     
     if (LabsModeHelper.expert) {
         removeAndHide(item('gregtech:ore_snowchestite_0', 1))
         removeAndHide(item('gregtech:ore_snowchestite_0', 2))
+        removeAndHide(item('gregtech:ore_darmstadtite_0', 0))
+        removeAndHide(item('gregtech:ore_darmstadtite_0', 1))
         removeAndHide(item('gregtech:ore_dulysite_0', 0))
         removeAndHide(item('gregtech:ore_dulysite_0', 1))
         removeAndHide(item('gregtech:ore_lithium_0', 0))
