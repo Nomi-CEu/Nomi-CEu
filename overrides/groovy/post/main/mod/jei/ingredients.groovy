@@ -51,11 +51,26 @@ mods.jei.ingredient.with {
 
     // Nomi Labs
     if (LabsModeHelper.expert) {
+        hide(item('nomilabs:nomicoin'))
+        hide(item('nomilabs:nomicoin5'))
+        hide(item('nomilabs:nomicoin25'))
+        hide(item('nomilabs:nomicoin100'))
+        hide(item('nomilabs:woodenwidget'))
+        hide(item('nomilabs:woodwidgetleft'))
+        hide(item('nomilabs:woodwidgetright'))
+        hide(item('nomilabs:stonewidget'))
+        hide(item('nomilabs:stonewidgetup'))
+        hide(item('nomilabs:stonewidgetdown'))
+        hide(item('nomilabs:alloywidget'))
+        hide(item('nomilabs:enderwidget'))
         hide(item('nomilabs:impossiblerealmdata'))
+        hide(item('nomilabs:creativeportabletankmold'))
+        removeAndHide(item('bountiful:bountyboarditem'))
+        removeAndHide(item('bountiful:bounty'))
     }
 
     if (LabsModeHelper.normal) {
-        removeAndHide(item('nomilabs:densemagma'))
+        hide(item('nomilabs:densemagma'))
         hide(fluid('liquid_nitrogen'))
     }
 
