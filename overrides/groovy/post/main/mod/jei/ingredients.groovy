@@ -65,8 +65,6 @@ mods.jei.ingredient.with {
         hide(item('nomilabs:enderwidget'))
         hide(item('nomilabs:impossiblerealmdata'))
         hide(item('nomilabs:creativeportabletankmold'))
-        removeAndHide(item('bountiful:bountyboarditem'))
-        removeAndHide(item('bountiful:bounty'))
     }
 
     if (LabsModeHelper.normal) {
@@ -321,6 +319,12 @@ mods.jei.ingredient.with {
 
     hide(item('betterquesting:placeholder'))
     hide(fluid('betterquesting.placeholder'))
+    
+    // Bountiful
+    if (LabsModeHelper.expert) {
+        removeAndHide(item('bountiful:bountyboarditem'))
+        removeAndHide(item('bountiful:bounty'))
+    }
 
     // Modded Buckets
     hideItemIgnoreNBT(item('forge:bucketfilled'))
