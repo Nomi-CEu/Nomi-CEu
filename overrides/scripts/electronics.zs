@@ -231,8 +231,6 @@ recipes.remove(<metaitem:gcym:tiered_hatch.uhv>);
 // wetware
 // Stem Cells * 32
 <recipemap:chemical_reactor>.findRecipe(30720, [<metaitem:dustOsmiridium>], [<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500]).remove();
-// Stem Cells * 32
-<recipemap:large_chemical_reactor>.findRecipe(30720, [<metaitem:dustOsmiridium>], [<liquid:bacteria> * 500, <liquid:sterilized_growth_medium> * 500]).remove();
 
 chemical_reactor.recipeBuilder()
 	.inputs(<minecraft:dragon_egg>)
