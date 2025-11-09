@@ -1,12 +1,11 @@
 package post.main.general.late
 
-import gregtech.api.recipes.ingredients.GTRecipeOreInput
-
 import static gregtech.api.GTValues.*
 
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.AssemblyLineRecipeBuilder
+import gregtech.api.recipes.ingredients.GTRecipeOreInput
 import gregtech.api.recipes.recipeproperties.ResearchProperty
 
 // ZPM Field Generator
