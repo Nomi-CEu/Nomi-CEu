@@ -1,4 +1,4 @@
-package post.main.general.misc
+package post.main.general.misc.content
 
 import static gregtech.api.GTValues.*
 import static gregtech.loaders.recipe.CraftingComponent.*
@@ -46,7 +46,7 @@ IIngredient getIngredientFromGTComponent(Component comp, int tier) {
         case UnificationEntry -> ore(((UnificationEntry) ing).toString())
         case ItemStack -> ing as IIngredient
         default -> {
-            println "[Diodes] Failed to cast class ${ing.class.name} to an IIngredient!"
+            log.error "[Diodes] Failed to cast class ${ing.class.name} to an IIngredient!"
         }
     }
 }

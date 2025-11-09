@@ -1,4 +1,4 @@
-package post.main.general.misc
+package post.main.general.misc.content
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.NBTClearingRecipeHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
