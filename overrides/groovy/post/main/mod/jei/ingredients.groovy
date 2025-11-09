@@ -99,7 +99,7 @@ mods.jei.ingredient.with {
 
     hide(item('betterquesting:placeholder'))
     hide(fluid('betterquesting.placeholder'))
-    
+
     // Bountiful
     if (LabsModeHelper.expert) {
         removeAndHide(item('bountiful:bountyboarditem'))
