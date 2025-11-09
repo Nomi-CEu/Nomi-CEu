@@ -14,11 +14,10 @@ import net.minecraft.item.ItemStack
  */
 List<Pair<Integer, String>> voltages = Common.getVoltageNames(ULV, UHV)
 for (Pair<Integer, String> voltage : voltages) {
-    String oreDictSuffix = "${Ascii.toUpperCase(voltage.value.charAt(0))}${voltage.value.substring(1)}"
-    OreDictIngredient oreIng = ore("circuit${oreDictSuffix}")
+    OreDictIngredient oreIng = ore(Common.combineCamelCase('circuit', voltage.value))
 
     // Create a new oredict, not including universal
-    OreDictIngredient nonUniversalIng = ore("circuitExclUniversal${oreDictSuffix}")
+    OreDictIngredient nonUniversalIng = ore(Common.combineCamelCase('circuitExclUniversal', voltage.value))
     nonUniversalIng.add(oreIng)
 
     // Add universal to main circuit oredict
