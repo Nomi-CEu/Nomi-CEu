@@ -6,7 +6,7 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.removeAn
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.unification.material.Material
 
-// Normal Mode Specific (Hiding Hard Mode Materials)
+// Hide Hard Mode Specific Materials
 if (!LabsModeHelper.normal) return
 
 Material[] materials = [
