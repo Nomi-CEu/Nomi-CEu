@@ -24,7 +24,7 @@ for (var toHide : NCFissionFluids.fluidList) {
     if (FluidRegistry.getFluid(toHide.name) instanceof FluidFission)
         mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
     else
-        log.info "NuclearCraft Script: Skipping Fluid ${toHide.name} as registered outside of NC!"
+        log.info "Skipping Fluid ${toHide.name} as registered outside of NC!"
 }
 
 for (var toHide : NCCoolantFluids.fluidList) {
@@ -33,8 +33,7 @@ for (var toHide : NCCoolantFluids.fluidList) {
     if (fluidReg instanceof FluidCoolant || fluidReg instanceof FluidHotCoolant)
         mods.jei.ingredient.hide(VanillaTypes.FLUID, new FluidStack(toHide, 1))
     else
-        log.info 'NuclearCraft Script: ' +
-            "Skipping Fluid ${toHide.name} as registered outside of NC, or is a Molten Fluid!"
+        log.info "Skipping Fluid ${toHide.name} as registered outside of NC, or is a Molten Fluid!"
 }
 
 // LEGACY: NC Uranium 238 Block -> GT Uranium 238 Block
