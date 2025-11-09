@@ -27,7 +27,7 @@
         },
         "groovyism.UseCollectMany": "off",
         "imports.NoWildcardImports": "off",
-        "logging.Println": "off",
+        "logging.Println": "warning",
         "naming.ClassNameSameAsFilename": "off",
         "naming.FactoryMethodName": "off",
         "naming.PackageNameMatchesFilePath": {
