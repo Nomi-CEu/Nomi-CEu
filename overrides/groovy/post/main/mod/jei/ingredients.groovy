@@ -6,10 +6,8 @@ package post.main.mod.jei
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 import static gregtech.api.GTValues.*
 
-import com.mcmoddev.densemetals.init.ModBlocks
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.common.metatileentities.MetaTileEntities
-import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidUtil
@@ -30,28 +28,25 @@ mods.jei.ingredient.with {
     // Armor Plus
     hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
 
-    // Dense Ores
-    var visibleDenseOres = ['iron', 'coal', 'gold', 'diamond', 'emerald', 'lapis', 'redstone']
-
-    // The '.toString()' is important here to normalise the GStrings into Java Strings, to allow for proper set searching
-    var exclusionSet = new ObjectOpenHashSet<>(visibleDenseOres.collect { type ->  "dense_${type}_ore".toString() })
-
-    for (var denseOre : ModBlocks.DENSE_ORES) {
-        if (exclusionSet.contains(denseOre.registryName.path))
-            continue
-
-        if (!denseOre.resolve()) continue // An 'invalid' dense ore
-
-        log.info "Hiding Dense Ore ${denseOre.registryName}..."
-        removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
-    }
-
     // NuclearCraft
     removeAndHide(item('nuclearcraft:block_depleted_uranium'))
 
     // Nomi Labs
     if (LabsModeHelper.expert) {
+        hide(item('nomilabs:nomicoin'))
+        hide(item('nomilabs:nomicoin5'))
+        hide(item('nomilabs:nomicoin25'))
+        hide(item('nomilabs:nomicoin100'))
+        hide(item('nomilabs:woodenwidget'))
+        hide(item('nomilabs:woodwidgetleft'))
+        hide(item('nomilabs:woodwidgetright'))
+        hide(item('nomilabs:stonewidget'))
+        hide(item('nomilabs:stonewidgetup'))
+        hide(item('nomilabs:stonewidgetdown'))
+        hide(item('nomilabs:alloywidget'))
+        hide(item('nomilabs:enderwidget'))
         hide(item('nomilabs:impossiblerealmdata'))
+        hide(item('nomilabs:creativeportabletankmold'))
     }
 
     if (LabsModeHelper.normal) {
@@ -85,6 +80,12 @@ mods.jei.ingredient.with {
 
     hide(item('betterquesting:placeholder'))
     hide(fluid('betterquesting.placeholder'))
+
+    // Bountiful
+    if (LabsModeHelper.expert) {
+        removeAndHide(item('bountiful:bountyboarditem'))
+        removeAndHide(item('bountiful:bounty'))
+    }
 
     // Modded Buckets
     hideItemIgnoreNBT(item('forge:bucketfilled'))

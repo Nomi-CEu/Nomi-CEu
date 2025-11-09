@@ -96,6 +96,7 @@ Material[] materials = [
     SodiumMethoxide,
     // Microverse Materials
     Snowchestite,
+    Darmstadtite,
     Dulysite,
     // Endgame Materials
     KaptonK,
