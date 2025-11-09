@@ -18,7 +18,7 @@ Recipe dimethylRecipe = mods.gregtech.chemical_reactor.find(null,
     [fluid('hypochlorous_acid') * 1000, fluid('ammonia') * 2000, fluid('methanol') * 2000])
 
 // Remove from CR and LCR
-mods.gregtech.chemical_reactor.getRecipeMap().removeRecipe(dimethylRecipe)
+mods.gregtech.chemical_reactor.recipeMap.removeRecipe(dimethylRecipe)
 
 // Add to LCR
 mods.gregtech.large_chemical_reactor.recipeBuilder()
