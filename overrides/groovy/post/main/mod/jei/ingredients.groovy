@@ -6,10 +6,8 @@ package post.main.mod.jei
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.*
 import static gregtech.api.GTValues.*
 
-import com.mcmoddev.densemetals.init.ModBlocks
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.common.metatileentities.MetaTileEntities
-import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidUtil
@@ -29,22 +27,6 @@ mods.jei.ingredient.with {
 
     // Armor Plus
     hide(item('armorplus:block_melting_obsidian')) // Null Texture Item
-
-    // Dense Ores
-    var visibleDenseOres = ['iron', 'coal', 'diamond', 'emerald', 'lapis', 'redstone']
-
-    // The '.toString()' is important here to normalise the GStrings into Java Strings, to allow for proper set searching
-    var exclusionSet = new ObjectOpenHashSet<>(visibleDenseOres.collect { type ->  "dense_${type}_ore".toString() })
-
-    for (var denseOre : ModBlocks.DENSE_ORES) {
-        if (exclusionSet.contains(denseOre.registryName.path))
-            continue
-
-        if (!denseOre.resolve()) continue // An 'invalid' dense ore
-
-        log.info "Hiding Dense Ore ${denseOre.registryName}..."
-        removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
-    }
 
     // NuclearCraft
     removeAndHide(item('nuclearcraft:block_depleted_uranium'))
@@ -68,7 +50,6 @@ mods.jei.ingredient.with {
     }
 
     if (LabsModeHelper.normal) {
-        hide(item('nomilabs:densemagma'))
         hide(fluid('liquid_nitrogen'))
     }
 
