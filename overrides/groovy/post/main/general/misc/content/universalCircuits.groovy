@@ -5,7 +5,6 @@ import static gregtech.api.GTValues.*
 import post.classes.Common
 
 import org.apache.commons.lang3.tuple.Pair
-import com.google.common.base.Ascii
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
 

@@ -21,7 +21,7 @@ class Common {
     static String combineCamelCase(String... strings) {
         StringBuilder builder = new StringBuilder()
 
-        if (strings.length <= 0) return ""
+        if (strings.length <= 0) return ''
         if (strings.length == 1) return strings[0]
 
         builder.append(strings[0])
