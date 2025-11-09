@@ -42,7 +42,7 @@ mods.jei.ingredient.with {
 
         if (!denseOre.resolve()) continue // An 'invalid' dense ore
 
-        println "Hiding Dense Ore ${denseOre.registryName}..."
+        log.info "Hiding Dense Ore ${denseOre.registryName}..."
         removeAndHide(new ItemStack(Item.getItemFromBlock(denseOre)))
     }
 
