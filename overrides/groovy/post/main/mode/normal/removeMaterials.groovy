@@ -1,7 +1,7 @@
 package post.main.mode.normal
 
 import static com.nomiceu.nomilabs.gregtech.material.registry.LabsMaterials.*
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.removeAndHideMaterial
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.hideMaterial
 
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.unification.material.Material
@@ -102,5 +102,5 @@ Material[] materials = [
 ]
 
 for (var material : materials) {
-    removeAndHideMaterial(material, false)
+    hideMaterial(material, false)
 }
