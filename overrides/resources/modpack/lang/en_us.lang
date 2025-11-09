@@ -16,6 +16,7 @@ nomiceu.tooltip.mixed.accepts_fluid_container=§7Accepts §aBuckets§7, §aCells
 nomiceu.tooltip.mixed.not_consumed=Ingredient Not Consumed!
 nomiceu.tooltip.mixed.deprecated=§cItem Deprecated! Place in Crafting Grid to Convert!§r
 nomiceu.tooltip.mixed.deprecation=§cConversion Recipe from Deprecated Item to Alternative!§r
+nomiceu.tooltip.mixed.dyeable=Can be §bDyed§r!
 
 # MC
 nomiceu.tooltip.mc.xp_bottle=§eGives 25 XP, or one XP Level!§r
@@ -111,7 +112,6 @@ nomiceu.tooltip.gregtech.transfer_l_s=§bTransfer Rate:§r %sL/s
 
 # Ender IO
 nomiceu.tooltip.eio.fused_glass.make=Made with §6Tempered Glass§r and §7White Dye§r
-nomiceu.tooltip.eio.glass.dye=Can be §bDyed§r!
 nomiceu.tooltip.eio.liquid_xp=§e20L = 1XP, 500L = 1 XP Level!§r
 nomiceu.tooltip.eio.facade=§cMay cause FPS lag if used excessively!§r
 

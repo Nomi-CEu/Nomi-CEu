@@ -4,6 +4,7 @@ import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ShapedConversionRecipe
 import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
+import post.classes.Common
 
 // Backport MC 1.14 Dye Mechanics
 ore('dyeBlack').remove(item('minecraft:dye', 0))
@@ -43,7 +44,7 @@ addShapedConversionRecipe(metaitem('dye.white'), item('minecraft:dye', 15))
 
 var dyeHelperMap = [:]
 for (var color : EnumDyeColor.values()) {
-    dyeHelperMap.put(color.name, ore('dye' + color.name.capitalize()))
+    dyeHelperMap.put(color.name, ore(Common.combineCamelCase('dye', color.name)))
 }
 
 // Fix Elevator Redyeing

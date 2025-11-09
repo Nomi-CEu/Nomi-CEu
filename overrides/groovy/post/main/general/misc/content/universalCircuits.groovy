@@ -5,7 +5,6 @@ import static gregtech.api.GTValues.*
 import post.classes.Common
 
 import org.apache.commons.lang3.tuple.Pair
-import com.google.common.base.Ascii
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.ItemStack
 
@@ -14,11 +13,10 @@ import net.minecraft.item.ItemStack
  */
 List<Pair<Integer, String>> voltages = Common.getVoltageNames(ULV, UHV)
 for (Pair<Integer, String> voltage : voltages) {
-    String oreDictSuffix = "${Ascii.toUpperCase(voltage.value.charAt(0))}${voltage.value.substring(1)}"
-    OreDictIngredient oreIng = ore("circuit${oreDictSuffix}")
+    OreDictIngredient oreIng = ore(Common.combineCamelCase('circuit', voltage.value))
 
     // Create a new oredict, not including universal
-    OreDictIngredient nonUniversalIng = ore("circuitExclUniversal${oreDictSuffix}")
+    OreDictIngredient nonUniversalIng = ore(Common.combineCamelCase('circuitExclUniversal', voltage.value))
     nonUniversalIng.add(oreIng)
 
     // Add universal to main circuit oredict

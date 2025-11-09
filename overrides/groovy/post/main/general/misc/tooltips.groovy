@@ -296,6 +296,12 @@ addTooltip(item('appliedenergistics2:tiny_tnt'), [
     translatable('nomiceu.tooltip.ae2.tiny_tnt.3'),
 ])
 
+/* AE2 Stuff */
+// Wireless Connector & Hub
+for (String wireless : ['ae2stuff:wireless', 'ae2stuff:wireless_hub']) {
+    addTooltip(item(wireless), translatable('nomiceu.tooltip.mixed.dyeable'))
+}
+
 /* Dimensional Edibles */
 
 // Island Cake
@@ -421,7 +427,7 @@ for (var tier : Common.getVoltageNames(LV, UV)) {
 addTooltip(item('enderio:block_fused_glass'), translatable('nomiceu.tooltip.eio.fused_glass.make'))
 
 for (ItemStack stack in Common.eioGlasses) {
-    addTooltip(stack, translatable('nomiceu.tooltip.eio.glass.dye'))
+    addTooltip(stack, translatable('nomiceu.tooltip.mixed.dyeable'))
 }
 
 // Facades
