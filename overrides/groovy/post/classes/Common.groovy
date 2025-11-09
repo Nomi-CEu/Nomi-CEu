@@ -1,5 +1,6 @@
 package post.classes
 
+import com.google.common.base.Ascii
 import gregtech.api.GTValues
 import net.minecraft.item.ItemStack
 import org.apache.commons.lang3.tuple.Pair
@@ -13,6 +14,24 @@ class Common {
     private static List<Pair<String, ItemStack>> p2pVariantsCache = null
     private static List<ItemStack> eioGlassesCache = null
     private static List<Pair<Integer, String>> voltageNamesCache = null
+
+    /**
+     * Takes an array of strings, and concatenates them by camel case.
+     */
+    static String combineCamelCase(String... strings) {
+        StringBuilder builder = new StringBuilder()
+
+        if (strings.length <= 0) return ''
+        if (strings.length == 1) return strings[0]
+
+        builder.append(strings[0])
+        for (int i = 1; i < strings.length; i++) {
+            builder.append(Ascii.toUpperCase(strings[i].charAt(0)))
+            builder.append(strings[i].substring(1))
+        }
+
+        return builder.toString()
+    }
 
     /**
      * Gets a continuous sublist of GregTech tier to voltage names, in lowercase.<br>
