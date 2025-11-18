@@ -1,4 +1,4 @@
-package post.main.general.misc.content
+package post.main.general.misc.qol
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ShapedConversionRecipe
