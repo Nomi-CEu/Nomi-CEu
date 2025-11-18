@@ -1,4 +1,4 @@
-package post.main.general.misc.content
+package post.main.general.misc.qol
 
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.ore.OrePrefix.*

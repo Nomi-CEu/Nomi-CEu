@@ -8,7 +8,6 @@ import static gregtech.api.GTValues.*
 
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.common.metatileentities.MetaTileEntities
-import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidUtil
 
@@ -50,6 +49,7 @@ mods.jei.ingredient.with {
     }
 
     if (LabsModeHelper.normal) {
+        hide(item('nomilabs:densemagma'))
         hide(fluid('liquid_nitrogen'))
     }
 

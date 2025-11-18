@@ -1,4 +1,4 @@
-package post.main.general.misc.content
+package post.main.general.misc.qol
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
