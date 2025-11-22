@@ -1,10 +1,11 @@
 package post.main.general.misc.qol
 
+import static post.classes.Common.*
+
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ShapedConversionRecipe
 import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
-import static post.classes.Common.*
 
 // Backport MC 1.14 Dye Mechanics
 ore('dyeBlack').remove(item('minecraft:dye', 0))

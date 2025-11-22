@@ -1,8 +1,9 @@
 package post.main.mod
 
+import static post.classes.Common.*
+
 import net.minecraft.init.SoundEvents
 import net.minecraft.item.EnumDyeColor
-import static post.classes.Common.*
 
 // Network Visualisation Tool
 // Not replacing the recipe; prevents breaking existing patterns

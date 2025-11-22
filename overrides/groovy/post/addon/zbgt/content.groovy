@@ -194,7 +194,7 @@ for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').item.allItems) {
     List<Recipe> recipes = mods.gregtech.assembler.findByOutput([meta.stackForm], null)
 
     if (recipes == null) {
-        logger.error "ZBGT Addon Script: Could not find recipes for wrap ${meta.unlocalizedName}!"
+        GRS_LOG.error "Could not find recipes for wrap ${meta.unlocalizedName}!"
         continue
     }
 

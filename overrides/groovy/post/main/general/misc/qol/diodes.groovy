@@ -47,7 +47,7 @@ IIngredient getIngredientFromGTComponent(Component comp, int tier) {
         case UnificationEntry -> ore(((UnificationEntry) ing).toString())
         case ItemStack -> ing as IIngredient
         default -> {
-            logger.error "[Diodes] Failed to cast class ${ing.class.name} to an IIngredient!"
+            GRS_LOG.error "Failed to cast class ${ing.class.name} to an IIngredient!"
         }
     }
 }

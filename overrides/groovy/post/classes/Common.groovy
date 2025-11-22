@@ -17,11 +17,11 @@ class Common {
     private static List<Pair<Integer, String>> voltageNamesCache = null
 
     /**
-     * The groovy script logger.
+     * The GroovyScript logger.
      * Use this instead of the global variable `log`, as that may be overrided by another import
      * e.g. OrePrefix log
      */
-    public static GroovyLog logger = GroovyLog.get()
+    public static final GroovyLog GRS_LOG = GroovyLog.get()
 
     /**
      * Takes an array of strings, and concatenates them by camel case.
