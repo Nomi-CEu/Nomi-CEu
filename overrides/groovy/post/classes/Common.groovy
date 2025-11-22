@@ -1,5 +1,6 @@
 package post.classes
 
+import com.cleanroommc.groovyscript.api.GroovyLog
 import com.google.common.base.Ascii
 import gregtech.api.GTValues
 import net.minecraft.item.ItemStack
@@ -14,6 +15,13 @@ class Common {
     private static List<Pair<String, ItemStack>> p2pVariantsCache = null
     private static List<ItemStack> eioGlassesCache = null
     private static List<Pair<Integer, String>> voltageNamesCache = null
+
+    /**
+     * The groovy script logger.
+     * Use this instead of the global variable `log`, as that may be overrided by another import
+     * e.g. OrePrefix log
+     */
+    public static GroovyLog logger = GroovyLog.get()
 
     /**
      * Takes an array of strings, and concatenates them by camel case.

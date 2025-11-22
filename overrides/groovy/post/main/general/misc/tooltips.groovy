@@ -8,7 +8,7 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.ore.OrePrefix.*
 
-import post.classes.Common
+import static post.classes.Common.*
 
 import appeng.core.AEConfig
 import appeng.core.features.AEFeature
@@ -174,7 +174,7 @@ addTooltip(item('appliedenergistics2:part', 460), [
 ])
 
 // Other P2P
-for (var item : Common.p2pVariants) {
+for (var item : p2pVariants) {
     addTooltip(item.value, [
         translatable('nomiceu.tooltip.ae2.p2p.type', item.key),
         translatable('nomiceu.tooltip.ae2.p2p.desc'),
@@ -410,7 +410,7 @@ for (var material : GregTechAPI.materialManager.registeredMaterials) {
 
 // Pumps
 // Change Unit in Tooltips to L/s
-for (var tier : Common.getVoltageNames(LV, UV)) {
+for (var tier : getVoltageNames(LV, UV)) {
     long transferAmt = 1280 * (long) Math.pow(4, tier.key)
 
     String transferFmt = TextFormattingUtil.formatNumbers(transferAmt)
@@ -426,7 +426,7 @@ for (var tier : Common.getVoltageNames(LV, UV)) {
 // Glasses
 addTooltip(item('enderio:block_fused_glass'), translatable('nomiceu.tooltip.eio.fused_glass.make'))
 
-for (ItemStack stack in Common.eioGlasses) {
+for (ItemStack stack in eioGlasses) {
     addTooltip(stack, translatable('nomiceu.tooltip.mixed.dyeable'))
 }
 

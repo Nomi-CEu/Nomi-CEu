@@ -2,7 +2,7 @@ package post.main.mod
 
 import net.minecraft.init.SoundEvents
 import net.minecraft.item.EnumDyeColor
-import post.classes.Common
+import static post.classes.Common.*
 
 // Network Visualisation Tool
 // Not replacing the recipe; prevents breaking existing patterns
@@ -41,7 +41,7 @@ for (String type : ['ae2stuff:wireless', 'ae2stuff:wireless_hub']) {
                 'WDW',
                 'WWW')
             .key('W', item(type))
-            .key('D', ore(Common.combineCamelCase('dye', color.name)))
+            .key('D', ore(combineCamelCase('dye', color.name)))
             .replace().register()
 
         // Add to the chisel group

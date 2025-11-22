@@ -7,6 +7,7 @@ import static com.nomiceu.nomilabs.gregtech.material.registry.LabsMaterials.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.hideMaterial
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.ore.OrePrefix.*
+import static post.classes.Common.*
 
 import com.mcmoddev.densemetals.init.ModBlocks
 import com.nomiceu.nomilabs.util.LabsModeHelper
@@ -40,7 +41,7 @@ mods.jei.ingredient.with {
 
         if (!denseOre.resolve()) continue // An 'invalid' dense ore
 
-        log.info "Hiding Dense Ore ${denseOre.registryName}..."
+        logger.info "Hiding Dense Ore ${denseOre.registryName}..."
         hide(new ItemStack(Item.getItemFromBlock(denseOre)))
     }
 
@@ -55,7 +56,7 @@ mods.jei.ingredient.with {
     var nether = 1
     var end = 2
 
-    var removeAllProcessing =  { Material mat ->
+    var removeAllProcessing = { Material mat ->
         removeOres(mat, normal, nether, end)
 
         for (var prefix : [dustImpure, dustPure, crushed, crushedPurified, crushedCentrifuged]) {
