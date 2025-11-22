@@ -19,14 +19,14 @@ import net.minecraft.item.ItemStack
 /* Unobtainable Ore Removals */
 mods.jei.ingredient.with {
     // Vanilla Ores
-    hide(item('minecraft:iron_ore>'))
-    hide(item('minecraft:coal_ore>'))
-    hide(item('minecraft:redstone_ore>'))
-    hide(item('minecraft:diamond_ore>'))
-    hide(item('minecraft:lapis_ore>'))
-    hide(item('minecraft:gold_ore>'))
-    hide(item('minecraft:emerald_ore>'))
-    hide(item('minecraft:quartz_ore>'))
+    hide(item('minecraft:iron_ore'))
+    hide(item('minecraft:coal_ore'))
+    hide(item('minecraft:redstone_ore'))
+    hide(item('minecraft:diamond_ore'))
+    hide(item('minecraft:lapis_ore'))
+    hide(item('minecraft:gold_ore'))
+    hide(item('minecraft:emerald_ore'))
+    hide(item('minecraft:quartz_ore'))
 
     // Dense Ores
     var visibleDenseOres = [Iron, Coal, Diamond, Emerald, Lapis, Redstone]
