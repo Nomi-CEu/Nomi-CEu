@@ -7,6 +7,7 @@ import static com.nomiceu.nomilabs.gregtech.material.registry.LabsMaterials.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.hideMaterial
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.ore.OrePrefix.*
+import static post.classes.Common.*
 
 import com.mcmoddev.densemetals.init.ModBlocks
 import com.nomiceu.nomilabs.util.LabsModeHelper
@@ -19,14 +20,14 @@ import net.minecraft.item.ItemStack
 /* Unobtainable Ore Removals */
 mods.jei.ingredient.with {
     // Vanilla Ores
-    hide(item('minecraft:iron_ore>'))
-    hide(item('minecraft:coal_ore>'))
-    hide(item('minecraft:redstone_ore>'))
-    hide(item('minecraft:diamond_ore>'))
-    hide(item('minecraft:lapis_ore>'))
-    hide(item('minecraft:gold_ore>'))
-    hide(item('minecraft:emerald_ore>'))
-    hide(item('minecraft:quartz_ore>'))
+    hide(item('minecraft:iron_ore'))
+    hide(item('minecraft:coal_ore'))
+    hide(item('minecraft:redstone_ore'))
+    hide(item('minecraft:diamond_ore'))
+    hide(item('minecraft:lapis_ore'))
+    hide(item('minecraft:gold_ore'))
+    hide(item('minecraft:emerald_ore'))
+    hide(item('minecraft:quartz_ore'))
 
     // Dense Ores
     var visibleDenseOres = [Iron, Coal, Diamond, Emerald, Lapis, Redstone]
@@ -40,7 +41,7 @@ mods.jei.ingredient.with {
 
         if (!denseOre.resolve()) continue // An 'invalid' dense ore
 
-        log.info "Hiding Dense Ore ${denseOre.registryName}..."
+        GRS_LOG.info "Hiding Dense Ore ${denseOre.registryName}..."
         hide(new ItemStack(Item.getItemFromBlock(denseOre)))
     }
 
@@ -55,7 +56,7 @@ mods.jei.ingredient.with {
     var nether = 1
     var end = 2
 
-    var removeAllProcessing =  { Material mat ->
+    var removeAllProcessing = { Material mat ->
         removeOres(mat, normal, nether, end)
 
         for (var prefix : [dustImpure, dustPure, crushed, crushedPurified, crushedCentrifuged]) {
