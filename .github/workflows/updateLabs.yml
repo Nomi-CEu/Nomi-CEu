@@ -23,7 +23,7 @@ jobs:
           owner: Nomi-CEu
 
       - name: Checkout Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: refs/heads/main
           fetch-depth: 0
@@ -38,10 +38,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages

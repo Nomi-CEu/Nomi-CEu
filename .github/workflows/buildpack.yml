@@ -102,7 +102,7 @@ jobs:
 
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -126,25 +126,16 @@ jobs:
           key: ${{ runner.os }}-build-${{ hashFiles('./.cache', './manifest.json') }}
           restore-keys: ${{ runner.os }}-build-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
-
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp checkEnv
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Build and Zip Pack
         working-directory: ./tools
@@ -177,7 +168,7 @@ jobs:
       mmc: ${{ steps.artifactNames.outputs.mmc }}
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -192,25 +183,16 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
-
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp checkEnv
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Make Artifact Names
         id: artifactNames
@@ -244,7 +226,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -259,10 +241,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -299,7 +281,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -323,10 +305,10 @@ jobs:
           key: ${{ runner.os }}-build-${{ hashFiles('./.cache', './manifest.json') }}
           restore-keys: ${{ runner.os }}-build-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -363,7 +345,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -378,10 +360,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages

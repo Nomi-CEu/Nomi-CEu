@@ -1,13 +1,15 @@
-# This workflow file tests PRs made from forks. Disable this if it is considered too much of a security risk (although many efforts have been taken to reduce risk)
+# This workflow file tests PRs made from forks.
+
+# Disable this if it is considered too much of a security risk (although many efforts have been taken to reduce risk)
 # If workflow enabled, make sure to set the environment used to need a specific team (admin-devs), and default GITHUB_TOKEN perms to read!
 # See https://securitylab.github.com/research/github-actions-preventing-pwn-requests/ for more information!
 
 # Actions taken to reduce risk:
 # This workflow is only started if a PR has the 'fork-build' label, and when the deployment to `forkprbuildpack` is approved (by admin-devs)
-# Only the CFCORE_API_TOKEN secret is accessed, meaning it is the only one revealed, meaning that the other secrets cannot be used by nodejs tools
+# Only the CFCORE_API_TOKEN secret is accessed, meaning it is the only one revealed
 # GITHUB_TOKEN permissions are set to read
 
-name: "[NOT CALLABLE] Fork PR Build Pack"
+name: "[NOT CALLABLE] Fork PR Checks"
 
 on:
   pull_request_target:
@@ -32,12 +34,28 @@ env:
   SKIP_CHANGELOG: true
 
 jobs:
-  setup:
-    # Only continue if we are in base Nomi-CEu Repo, pull request is from fork and pr has fork-build label
-    if: "${{ github.repository_owner == 'Nomi-CEu' && github.event.pull_request.head.repo.owner.login != 'Nomi-CEu' && contains(github.event.pull_request.labels.*.name, 'fork-build') }}"
-    name: Setup (${{ github.event.pull_request.head.sha }})
+  secretChecks:
+    # Only allow runs from PRs that have the fork-build label
+    if: contains(github.event.pull_request.labels.*.name, 'fork-build')
+    name: Secrets Check
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
+    outputs:
+      success: ${{ steps.secretChecks.outputs.success }}
+    steps:
+      - name: Secret Checks
+        id: secretChecks
+        uses: Nomi-CEu/SecretChecker@v1.1.0
+        with:
+          secrets: ${{ toJSON(secrets) }}
+          check: CFCORE_API_TOKEN
+
+  setup:
+    # Only allow runs that have the CFCORE_API_TOKEN secret (e.g. we are in the main repo)
+    if: needs.secretChecks.outputs.success == 'true'
+    name: Setup (${{ github.event.pull_request.head.sha }})
+    runs-on: ubuntu-latest
+    needs: secretChecks
     outputs:
       client: ${{ steps.artifactNames.outputs.client }}
       server: ${{ steps.artifactNames.outputs.server }}
@@ -45,7 +63,7 @@ jobs:
       mmc: ${{ steps.artifactNames.outputs.mmc }}
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -53,10 +71,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -80,7 +98,7 @@ jobs:
     needs: setup
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -88,10 +106,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -118,7 +136,7 @@ jobs:
     needs: setup
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -126,10 +144,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -156,7 +174,7 @@ jobs:
     needs: setup
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -164,10 +182,10 @@ jobs:
 
       # Don't use cache to prevent cache poisoning
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages

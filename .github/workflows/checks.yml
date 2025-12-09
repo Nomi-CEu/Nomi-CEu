@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Check Line Endings
         run: |
@@ -26,10 +26,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -68,14 +68,27 @@ jobs:
           files: .github/ README.md overrides/README.md
 
   secretChecks:
+    name: Secrets Check
+    runs-on: ubuntu-latest
+    outputs:
+      success: ${{ steps.secretChecks.outputs.success }}
+    steps:
+      - name: Secret Checks
+        id: secretChecks
+        uses: Nomi-CEu/SecretChecker@v1.1.0
+        with:
+          secrets: ${{ toJSON(secrets) }}
+          check: CFCORE_API_TOKEN
+
+  advancedChecks:
+    # Only allow runs that have the CFCORE_API_TOKEN secret (e.g. we are in the main repo)
+    if: needs.secretChecks.outputs.success == 'true'
     name: Checks (with Secret Requirements)
     runs-on: ubuntu-latest
-    # Only allow runs from commits to Nomi-CEu Branches or from pull requests from Nomi-CEu repo
-    if: "${{ github.repository_owner == 'Nomi-CEu' && ( !github.event.pull_request || ( github.event.pull_request.head.repo.owner.login == 'Nomi-CEu' ) ) }}"
-    needs: checks
+    needs: [checks, secretChecks]
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Restore NPM Cached Files
         uses: actions/cache@v4
@@ -87,10 +100,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
+      - name: Setup NodeJS v24
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
