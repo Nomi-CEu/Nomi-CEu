@@ -22,7 +22,7 @@ jobs:
     name: Secrets Check
     runs-on: ubuntu-latest
     outputs:
-      success: steps.secretChecks.outputs.success
+      success: ${{ steps.secretChecks.outputs.success }}
     steps:
       - name: Secret Checks
         id: secretChecks

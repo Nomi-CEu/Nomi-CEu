@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: fork-pr-build-pack
     outputs:
-      success: steps.secretChecks.outputs.success
+      success: ${{ steps.secretChecks.outputs.success }}
     steps:
       - name: Secret Checks
         id: secretChecks
