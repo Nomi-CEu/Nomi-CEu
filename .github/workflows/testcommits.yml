@@ -25,6 +25,7 @@ jobs:
     # Only allow runs that have the CFCORE_API_TOKEN secret (e.g. we are in the main repo)
     if: needs.secretChecks.outputs.success == 'true'
     name: Test Commits
+    needs: secretChecks
     uses: ./.github/workflows/createchangelog.yml
     with:
       release_type: "Cutting Edge Build"
