@@ -8,8 +8,22 @@ on:
       - test-buildscript*
 
 jobs:
+  secretChecks:
+    name: Secrets Check
+    runs-on: ubuntu-latest
+    outputs:
+      success: steps.secretChecks.outputs.success
+    steps:
+      - name: Secret Checks
+        id: secretChecks
+        uses: Nomi-CEu/SecretChecker@v1.1.0
+        with:
+          secrets: ${{ toJSON(secrets) }}
+          check: CFCORE_API_TOKEN
+
   testCommits:
-    if: "${{ github.repository_owner == 'Nomi-CEu' }}"
+    # Only allow runs that have the CFCORE_API_TOKEN secret (e.g. we are in the main repo)
+    if: needs.secretChecks.outputs.success == 'true'
     name: Test Commits
     uses: ./.github/workflows/createchangelog.yml
     with:
