@@ -191,7 +191,7 @@ async function performActions(
 	const id = Number.parseInt(
 		(
 			await input({
-				message: `What to replace deps with?`,
+				message: "What to replace deps with?",
 			})
 		).trim(),
 	);

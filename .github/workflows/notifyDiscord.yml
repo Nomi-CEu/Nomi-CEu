@@ -1,0 +1,68 @@
+name: Notify Discord
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "The nightly version the discord message is referencing. Example: '12 Dec 2025 — main-1234567'"
+        type: string
+        required: true
+      run_id:
+        description: The GitHub Action run id of the build pack that the discord message is referencing.
+        type: number
+        required: true
+  workflow_call:
+    inputs:
+      version:
+        description: "The nightly version the discord message is referencing. Example: '12 Dec 2025 — main-1234567'"
+        type: string
+        required: true
+      run_id:
+        description: The GitHub Action run id of the build pack that the discord message is referencing.
+        type: number
+        required: true
+
+jobs:
+  notifyDiscord:
+    name: Notify Discord
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Ref
+        uses: actions/checkout@v6
+
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
+        with:
+          path: |
+            ~/.npm
+            ./tools/node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
+
+      - name: Restore Build Cached Files
+        uses: actions/cache@v4
+        id: build-cache
+        with:
+          path: |
+            ./.cache
+          key: ${{ runner.os }}-build-${{ hashFiles('./.cache', './manifest.json') }}
+          restore-keys: ${{ runner.os }}-build-
+
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          check-latest: true
+
+      - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Notify Discord
+        working-directory: ./tools
+        run: npm run gulp notifyDiscord
+        env:
+          VERSION_NAME: ${{ inputs.version }}
+          GITHUB_RUN_ID: ${{ inputs.run_id }}

@@ -46,12 +46,12 @@ const getModChangesFormatting: (
 export default async function generateModChanges(
 	data: ChangelogData,
 ): Promise<void> {
-	const oldManifest: ModpackManifest = JSON.parse(
+	const oldManifest = JSON.parse(
 		await getFileAtRevision("manifest.json", data.since),
-	);
-	const newManifest: ModpackManifest = JSON.parse(
+	) as ModpackManifest;
+	const newManifest = JSON.parse(
 		await getFileAtRevision("manifest.json", data.to),
-	);
+	) as ModpackManifest;
 	const comparisonResult = await compareAndExpandManifestDependencies(
 		oldManifest,
 		newManifest,
@@ -86,16 +86,12 @@ export default async function generateModChanges(
 		if (block.list.length == 0) {
 			return;
 		}
-		const list = block.list
-			// Yeet invalid project names.
-			.filter((project) => !/project-\d*/.test(project.modName))
-			.sort()
-			.map((name) => name);
+		const list = block.list.sort().map((name) => name);
 
 		list.forEach((info) => {
 			let commits: Commit[] | undefined = undefined;
-			if (info.projectID && projectIDsToCommits.has(info.projectID)) {
-				commits = projectIDsToCommits.get(info.projectID) ?? [];
+			if (projectIDsToCommits.has(info.mod.id)) {
+				commits = projectIDsToCommits.get(info.mod.id) ?? [];
 
 				// Sort array so newest commits appear at end instead of start of commit string
 				sortCommitListReverse(commits, (commit) => commit);
@@ -122,27 +118,20 @@ function getModChangeMessage(
 	data: ChangelogData,
 	commits?: Commit[],
 ): ChangelogMessage {
-	const oldVersion = cleanupVersion(info.oldVersion);
-	const newVersion = cleanupVersion(info.newVersion);
-
-	// If not provided with either version, return just mod name
-	if ((!oldVersion && !newVersion) || !info.projectID)
-		return {
-			commitMessage: info.modName,
-			specialFormatting: getModChangesFormatting(commits),
-		};
+	const oldVersion = cleanupVersion(info.old?.displayName);
+	const newVersion = cleanupVersion(info.new?.displayName);
 
 	// Replace in template
 	let text = mustache.render(template, {
-		modName: info.modName,
+		modName: info.mod.name,
 		oldVersion: oldVersion,
 		newVersion: newVersion,
 	});
 
 	// Parse Info
 	let subMessages: ChangelogMessage[] | undefined = undefined;
-	if (data.modInfoList.has(info.projectID)) {
-		const modInfo = data.modInfoList.get(info.projectID);
+	if (data.modInfoList.has(info.mod.id)) {
+		const modInfo = data.modInfoList.get(info.mod.id);
 		if (modInfo?.info) text = `${text} ***(${modInfo.info})***`;
 		if (modInfo?.details)
 			subMessages = modInfo?.details.map((detail) => {
@@ -196,7 +185,7 @@ async function getCommitChange(
 		newManifest = JSON.parse(
 			await getFileAtRevision("manifest.json", sha),
 		) as ModpackManifest;
-	} catch (e) {
+	} catch {
 		logError(dedent`
 			Failed to parse the manifest.json file at commit ${sha} or the commit before!
 			Skipping...`);

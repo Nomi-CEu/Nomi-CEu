@@ -6,7 +6,6 @@ import upath from "upath";
 import { compareBufferToHashDef } from "./hashes.ts";
 import { execSync } from "child_process";
 import {
-	ExternalDependency,
 	ModpackManifest,
 	ModpackManifestFile,
 } from "#types/modpackManifest.ts";
@@ -41,6 +40,7 @@ import { NomiConfig } from "#types/axios.ts";
 import { BuildData } from "#types/transformFiles.js";
 import { retry } from "@octokit/plugin-retry";
 import { throttling } from "@octokit/plugin-throttling";
+import { CurseForgeFileInfo, CurseForgeModInfo } from "#types/curseForge.ts";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
@@ -111,9 +111,9 @@ fileDownloader.interceptors.response.use(async (response) => {
 		return retryOrThrow(response, "No Response Error");
 
 	const buf: Uint8Array[] = [];
-	const dataStream = response.data as stream.Stream;
+	const dataStream = response.data;
 	const buffer = await new Promise<Buffer>((resolve) => {
-		dataStream.on("data", (chunk) => buf.push(chunk));
+		dataStream.on("data", (chunk) => buf.push(chunk as Uint8Array));
 		dataStream.on("end", () => {
 			resolve(Buffer.concat(buf));
 		});
@@ -313,10 +313,10 @@ function fixConfig(
 /**
  * Use Axios Retry API to retry if Hash Failed or No Response.
  */
-function retryOrThrow(
+async function retryOrThrow(
 	response: AxiosResponse<unknown, unknown>,
 	error: string,
-) {
+): Promise<AxiosResponse<unknown, unknown, object>> {
 	const currentState = {
 		...DEFAULT_OPTIONS,
 		...retryCfg,
@@ -345,9 +345,9 @@ function retryOrThrow(
 			if (timeout <= 0) throw new Error(error);
 			config.timeout = timeout;
 		}
-		config.transformRequest = [(data) => data];
+		config.transformRequest = [(data) => data as unknown];
 		axiosError.message = error;
-		retryState.onRetry(retryState.retryCount, axiosError, config);
+		await retryState.onRetry(retryState.retryCount, axiosError, config);
 
 		return new Promise<AxiosResponse<unknown, unknown>>((resolve) => {
 			setTimeout(() => resolve(fileDownloader(config)), delay);
@@ -445,18 +445,16 @@ export async function getFileAtRevision(
 	return output;
 }
 
+export function getFileUrl(mod?: CurseForgeModInfo, file?: CurseForgeFileInfo) {
+	if (!mod || !file) return "";
+
+	return `${mod.links.websiteUrl}/files/${file.id}`;
+}
+
 export interface ManifestFileListComparisonResult {
 	removed: ModChangeInfo[];
 	modified: ModChangeInfo[];
 	added: ModChangeInfo[];
-}
-
-async function getModName(projectID: number): Promise<string> {
-	return fetchProject(projectID).then((info) => info.name);
-}
-
-async function getFileName(projectID: number, fileID: number): Promise<string> {
-	return fetchFileInfo(projectID, fileID).then((info) => info.displayName);
 }
 
 export async function compareAndExpandManifestDependencies(
@@ -499,15 +497,14 @@ export async function compareAndExpandManifestDependencies(
 		// Doesn't exist in new, but exists in old. Removed. Left outer join.
 		if (!newFileInfo && oldFileInfo) {
 			const names = Promise.all([
-				getModName(projectID),
-				getFileName(projectID, oldFileInfo.fileID),
+				fetchProject(projectID),
+				fetchFileInfo(projectID, oldFileInfo.fileID),
 			]);
 			toFetch.push(
 				names.then(([mod, file]) => {
 					removed.push({
-						modName: mod,
-						projectID: projectID,
-						oldVersion: file,
+						mod,
+						old: file,
 					});
 				}),
 			);
@@ -515,15 +512,14 @@ export async function compareAndExpandManifestDependencies(
 		// Doesn't exist in old, but exists in new. Added. Right outer join.
 		else if (newFileInfo && !oldFileInfo) {
 			const names = Promise.all([
-				getModName(projectID),
-				getFileName(projectID, newFileInfo.fileID),
+				fetchProject(projectID),
+				fetchFileInfo(projectID, newFileInfo.fileID),
 			]);
 			toFetch.push(
 				names.then(([mod, file]) => {
 					added.push({
-						modName: mod,
-						projectID: projectID,
-						newVersion: file,
+						mod,
+						new: file,
 					});
 				}),
 			);
@@ -531,17 +527,16 @@ export async function compareAndExpandManifestDependencies(
 		// Exists in both. Modified? Inner join.
 		else if (oldFileInfo.fileID != newFileInfo.fileID) {
 			const names = Promise.all([
-				getModName(projectID),
-				getFileName(projectID, oldFileInfo.fileID),
-				getFileName(projectID, newFileInfo.fileID),
+				fetchProject(projectID),
+				fetchFileInfo(projectID, oldFileInfo.fileID),
+				fetchFileInfo(projectID, newFileInfo.fileID),
 			]);
 			toFetch.push(
 				names.then(([mod, oldFile, newFile]) => {
 					modified.push({
-						modName: mod,
-						projectID: projectID,
-						oldVersion: oldFile,
-						newVersion: newFile,
+						mod,
+						old: oldFile,
+						new: newFile,
 					});
 				}),
 			);
@@ -549,45 +544,6 @@ export async function compareAndExpandManifestDependencies(
 	}
 	// Fetch All Modifications Async
 	await Promise.all(toFetch);
-
-	// Compare external dependencies the same way.
-	const oldExternalMap: { [key: string]: ExternalDependency } = (
-		oldFiles.externalDependencies || []
-	).reduce((map: Record<string, ExternalDependency>, file) => {
-		map[file.name] = file;
-		return map;
-	}, {});
-	const newExternalMap: { [key: string]: ExternalDependency } = (
-		newFiles.externalDependencies || []
-	).reduce((map: Record<string, ExternalDependency>, file) => {
-		map[file.name] = file;
-		return map;
-	}, {});
-
-	const externalNames = Array.from(
-		new Set([
-			...(oldFiles.externalDependencies || []).map((dep) => dep.name),
-			...(newFiles.externalDependencies || []).map((dep) => dep.name),
-		]),
-	);
-
-	externalNames.forEach((name) => {
-		const oldDep = oldExternalMap[name];
-		const newDep = newExternalMap[name];
-
-		// Doesn't exist in new, but exists in old. Removed. Left outer join.
-		if (!newDep && oldDep) {
-			removed.push({ modName: oldDep.name });
-		}
-		// Doesn't exist in old, but exists in new. Added. Right outer join.
-		else if (newDep && !oldDep) {
-			added.push({ modName: newDep.name });
-		}
-		// Exists in both. Modified? Inner join.
-		else if (oldDep.url != newDep.url || oldDep.name != newDep.name) {
-			modified.push({ modName: newDep.name });
-		}
-	});
 
 	return {
 		removed: removed,
@@ -610,13 +566,13 @@ export async function getVersionManifest(
 	/**
 	 * Fetch the manifest file of all Minecraft versions.
 	 */
-	const manifest: VersionsManifest = (
+	const manifest = (
 		await axios({
 			url: LAUNCHERMETA_VERSION_MANIFEST,
 			method: "get",
 			responseType: "json",
 		})
-	)?.data;
+	)?.data as VersionsManifest;
 
 	if (!manifest) return undefined;
 
@@ -631,7 +587,7 @@ export async function getVersionManifest(
 			method: "get",
 			responseType: "json",
 		})
-	)?.data;
+	)?.data as VersionManifest | undefined;
 }
 
 /**
@@ -688,7 +644,7 @@ export async function getIssueURLs(): Promise<void> {
 			if (!issueURLCache.has(issue.number))
 				issueURLCache.set(issue.number, issue.html_url);
 		});
-	} catch (e) {
+	} catch {
 		logError(
 			"Failed to get all Issue URLs of Repo. This may be because there are no issues, or because of rate limits.",
 		);
@@ -711,7 +667,7 @@ export async function getIssueURL(issueNumber: number): Promise<string> {
 		});
 		if (issueInfo.status !== 200) {
 			logError(
-				`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. Returned Status Code ${issueInfo.status}, expected Status 200.`,
+				`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. Returned Status Code ${issueInfo.status as number}, expected Status 200.`,
 			);
 			issueURLCache.set(issueNumber, "");
 			return "";
@@ -721,7 +677,7 @@ export async function getIssueURL(issueNumber: number): Promise<string> {
 		);
 		issueURLCache.set(issueNumber, issueInfo.data.html_url);
 		return issueInfo.data.html_url;
-	} catch (e) {
+	} catch {
 		logError(
 			`Failed to get the Issue/PR Info for Issue/PR #${issueNumber}. This may be because this is not a PR or Issue, it was deleted, or because of rate limits.`,
 		);
@@ -765,7 +721,7 @@ export async function getCommitAuthors(): Promise<void> {
 			if (!commitAuthorCache.has(commit.sha))
 				commitAuthorCache.set(commit.sha, commit.author?.login ?? "");
 		});
-	} catch (e) {
+	} catch {
 		logError(
 			"Failed to get all Commit Authors of Repo. This may be because there are no commits, or because of rate limits.",
 		);
@@ -795,7 +751,7 @@ export async function formatAuthor(commit: Commit) {
 		});
 		if (commitInfo.status !== 200) {
 			logError(
-				`Failed to get the Author Info for Commit ${commit.hash}. Returned Status Code ${commitInfo.status}, expected Status 200.`,
+				`Failed to get the Author Info for Commit ${commit.hash}. Returned Status Code ${commitInfo.status as number}, expected Status 200.`,
 			);
 			commitAuthorCache.set(commit.hash, "");
 			return defaultFormat;
@@ -811,7 +767,7 @@ export async function formatAuthor(commit: Commit) {
 			`No Author Cache for Commit ${commit.hash}. Retrieved Specifically.`,
 		);
 		return `@${commitInfo.data.author.login}`;
-	} catch (e) {
+	} catch {
 		logError(
 			`Failed to get Commit Author for Commit ${commit.hash}. This may be because there are no commits, or because of rate limits.`,
 		);
@@ -905,8 +861,10 @@ export function shouldSkipChangelog(): boolean {
 
 	let skip = false;
 	try {
-		skip = JSON.parse((process.env.SKIP_CHANGELOG ?? "false").toLowerCase());
-	} catch (err) {
+		skip = JSON.parse(
+			(process.env.SKIP_CHANGELOG ?? "false").toLowerCase(),
+		) as boolean;
+	} catch {
 		throw new Error("Skip Changelog Env Variable set to Invalid Value.");
 	}
 

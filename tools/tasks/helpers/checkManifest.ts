@@ -4,7 +4,7 @@ import { fetchFileInfo } from "#utils/curseForgeAPI.ts";
 import fs from "fs";
 import upath from "upath";
 import buildConfig from "#buildConfig";
-import {buildModList} from "#tasks/misc/createModList.ts";
+import { buildModList } from "#tasks/misc/createModList.ts";
 
 export async function checkManifestStructure(throwErrors: boolean) {
 	let prevProjId = 0;

@@ -5,7 +5,12 @@ import {
 	fetchProjectsBulk,
 } from "#utils/curseForgeAPI.ts";
 import { modpackManifest } from "#globals";
-import { checkGitTag, cleanupVersion, getFileAtRevision } from "#utils/util.ts";
+import {
+	checkGitTag,
+	cleanupVersion,
+	getFileAtRevision,
+	getFileUrl,
+} from "#utils/util.ts";
 import { ModpackManifest } from "#types/modpackManifest.ts";
 import { CurseForgeFileInfo, CurseForgeModInfo } from "#types/curseForge.ts";
 import logInfo from "#utils/log.ts";
@@ -128,7 +133,7 @@ function formatModList(modList: ModFileInfo[]): string {
 		output.push(dedent`
 			<tr>
 				<td><a href="${modFile.modInfo.links.websiteUrl}">${modFile.modInfo.name}</a></td>
-				<td><a href="${modFile.modInfo.links.websiteUrl}/files/${modFile.fileInfo.id}">v${cleanupVersion(modFile.fileInfo.displayName)}</a></td>
+				<td><a href=${getFileUrl(modFile.modInfo, modFile.fileInfo)}>v${cleanupVersion(modFile.fileInfo.displayName)}</a></td>
 				${getTickCross(modFile.inClient)}
 				${getTickCross(modFile.inServer)}
 				<td>${modFile.modInfo.authors.map((author) => `<a href=${author.url}>${author.name}</a>`).join(", ")}</td>
@@ -158,7 +163,9 @@ async function getFileInfos(tag = ""): Promise<ModFileInfo[]> {
 
 	if (tag) {
 		checkGitTag(tag);
-		manifest = JSON.parse(await getFileAtRevision("manifest.json", tag));
+		manifest = JSON.parse(
+			await getFileAtRevision("manifest.json", tag),
+		) as ModpackManifest;
 	}
 
 	manifest.files.sort((a, b) => a.projectID - b.projectID);

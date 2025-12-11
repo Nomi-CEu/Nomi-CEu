@@ -39,7 +39,7 @@ jobs:
 
       - name: Check Buildscripts
         working-directory: ./tools
-        run: npm run check
+        run: npm run check && npm run lint
 
       - name: Check Manifest
         working-directory: ./tools

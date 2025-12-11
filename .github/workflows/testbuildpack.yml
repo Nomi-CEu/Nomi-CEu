@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   secretChecks:
-    name: Secrets Check
+    name: Secret Checks
     runs-on: ubuntu-latest
     outputs:
       success: ${{ steps.secretChecks.outputs.success }}
@@ -49,3 +49,14 @@ jobs:
       skip_changelog: ${{ github.event.pull_request != null }}
       release_type: Cutting Edge Build
     secrets: inherit
+
+  notifyDiscord:
+    # Only run if its a push to main, and [NIGHTLY] is included in the latest pushed commit
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, '[NIGHTLY]')
+    name: Notify Discord
+    needs: build
+    uses: ./github/workflows/notifyDiscord.yml
+    with:
+      version: ${{ needs.build.outputs.discordVersionName }}
+      run_id: ${{ github.run_id }}
+
