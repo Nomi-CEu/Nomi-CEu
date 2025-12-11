@@ -66,3 +66,4 @@ jobs:
         env:
           VERSION_NAME: ${{ inputs.version }}
           GITHUB_RUN_ID: ${{ inputs.run_id }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
