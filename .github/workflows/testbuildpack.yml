@@ -55,7 +55,7 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, '[NIGHTLY]')
     name: Notify Discord
     needs: build
-    uses: ./github/workflows/notifyDiscord.yml
+    uses: ./.github/workflows/notifyDiscord.yml
     with:
       version: ${{ needs.build.outputs.discordVersionName }}
       run_id: ${{ github.run_id }}
