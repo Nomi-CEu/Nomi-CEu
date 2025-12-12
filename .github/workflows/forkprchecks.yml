@@ -270,7 +270,6 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        if: ${{ inputs.branch }}
         uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ secrets.APP_ID }}
