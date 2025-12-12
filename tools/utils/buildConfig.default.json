@@ -17,6 +17,8 @@
 	"cfZipGlobs": ["**/*", "!**/pack-mode-switcher.*"],
 	"grsGlobs": ["overrides/groovy/**/*.groovy"],
 	"buildDestinationDirectory": "../build",
-	"nightlyHookAvatar": "",
-	"nightlyHookName": ""
+	"nightlyHookAvatar": "https://github.com/Nomi-CEu.png",
+	"nightlyHookName": "NFu Nightly Builds",
+	"nightlyUrl": "https://nightly.link/Nomi-CEu/Nomi-CEu/workflows/testbuildpack/main",
+	"actionsRunsUrl": "https://github.com/Nomi-CEu/Nomi-CEu/actions/runs/"
 }

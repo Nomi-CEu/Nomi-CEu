@@ -86,6 +86,10 @@ on:
         type: boolean
         default: false
         required: false
+    outputs:
+      discordVersionName:
+        description: The nightly version name to use for discord announcements
+        value: ${{ jobs.makeNames.outputs.discordVersionName }}
 
 env:
   GITHUB_TAG: ${{ inputs.tag }}
@@ -166,6 +170,7 @@ jobs:
       server: ${{ steps.artifactNames.outputs.server }}
       lang: ${{ steps.artifactNames.outputs.lang }}
       mmc: ${{ steps.artifactNames.outputs.mmc }}
+      discordVersionName: ${{ steps.artifactNames.outputs.discordVersionName }}
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v6

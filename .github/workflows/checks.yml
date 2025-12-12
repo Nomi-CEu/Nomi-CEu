@@ -2,6 +2,11 @@ name: Checks
 on:
   push:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - unlocked
+      - synchronize
 
 jobs:
   checks:
@@ -39,7 +44,7 @@ jobs:
 
       - name: Check Buildscripts
         working-directory: ./tools
-        run: npm run check
+        run: npm run check && npm run lint
 
       - name: Check Manifest
         working-directory: ./tools
@@ -68,7 +73,7 @@ jobs:
           files: .github/ README.md overrides/README.md
 
   secretChecks:
-    name: Secrets Check
+    name: Secret Checks
     runs-on: ubuntu-latest
     outputs:
       success: ${{ steps.secretChecks.outputs.success }}
@@ -124,3 +129,93 @@ jobs:
           path: ./build/modlist.html
           if-no-files-found: error
           compression-level: 9
+
+  manifestSecretChecks:
+    name: Manifest Secret Checks
+    runs-on: ubuntu-latest
+    outputs:
+      success: ${{ steps.secretChecks.outputs.success }}
+    steps:
+      - name: Secret Checks
+        id: secretChecks
+        uses: Nomi-CEu/SecretChecker@v1.1.0
+        with:
+          secrets: ${{ toJSON(secrets) }}
+          check: |
+            APP_ID
+            APP_KEY
+
+  manifestChangeComment:
+    # Only run if we are on a PR, and we are on main repo (checked via advancedChecks dependency)
+    if: github.event_name == 'pull_request' && needs.manifestSecretChecks.outputs.success == 'true'
+    name: Post Manifest Change Comment
+    runs-on: ubuntu-latest
+    needs: [advancedChecks, manifestSecretChecks]
+    steps:
+      - name: Get Token
+        id: token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Checkout Base Ref
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
+        id: npm-cache
+        with:
+          path: |
+            ~/.npm
+            ./tools/node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
+
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          check-latest: true
+
+      - name: Setup NPM Packages
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Checkout Head Ref
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: ./temp
+          sparse-checkout: manifest.json
+
+      - name: Generate Comment Contents
+        working-directory: ./tools
+        run: npm run gulp manifestChangeComment
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      - name: Find Comment
+        if: ${{ hashFiles('./build/modChanges.md') != '' }}
+        uses: peter-evans/find-comment@v4
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'nomi-ceu-management[bot]'
+          body-includes: |
+            ## PR Mod Changes
+            *This comment is automatically updated with PR changes (when the workflow runs).*
+
+      - name: Create or Update Comment
+        if: ${{ hashFiles('./build/modChanges.md') != '' }}
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: ./build/modChanges.md
+          edit-mode: replace
+          token: ${{ steps.token.outputs.token }}

@@ -172,7 +172,7 @@ const fixupParsing: Parser = {
 	applyFixCalback: (fix) =>
 		fix.changeFixes === undefined ||
 		fix.changeFixes === null ||
-		(fix.changeFixes as boolean),
+		fix.changeFixes,
 };
 
 const overridesParsing: Parser = {

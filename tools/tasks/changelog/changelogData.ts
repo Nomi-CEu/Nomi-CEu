@@ -57,8 +57,8 @@ export default class ChangelogData {
 			try {
 				this.isTest = JSON.parse(
 					(process.env.TEST_CHANGELOG ?? "false").toLowerCase(),
-				);
-			} catch (err) {
+				) as boolean;
+			} catch {
 				throw new Error("Test Changelog Env Variable set to Invalid Value.");
 			}
 		} else this.isTest = false;
@@ -67,6 +67,7 @@ export default class ChangelogData {
 		this.builder = [];
 
 		// List of all commits to put into changelog commit section
+		// Duplicated from resetForIteration, but we need to do this inline to stop ts from complaining
 		this.commitList = [];
 
 		this.commitFixes = new Map<string, FixUpInfo>();
