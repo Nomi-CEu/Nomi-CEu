@@ -63,21 +63,21 @@ export async function makeManifestChangeComment() {
 		changes.added,
 		description,
 		"[{{{ modName }}}]({{{ modUrl}}}): *[v{{{ newVersion }}}]({{{ newUrl }}})*",
-		"Project ID: {{{ projectID }}}; File ID: {{{ newFileID }}}",
+		"*Project ID: {{{ projectID }}}; File ID: {{{ newFileID }}}*",
 		"Additions",
 	);
 	printChange(
 		changes.removed,
 		description,
 		"[{{{ modName }}}]({{{ modUrl}}}): *[v{{{ oldVersion }}}]({{{ oldUrl }}})*",
-		"Project ID: {{{ projectID }}}; File ID: {{{ oldFileID }}}",
+		"*Project ID: {{{ projectID }}}; File ID: {{{ oldFileID }}}*",
 		"Removals",
 	);
 	printChange(
 		changes.modified,
 		description,
 		"[{{{ modName }}}]({{{ modUrl}}}): *[v{{{ oldVersion }}}]({{{ oldUrl }}}) ⇥ [v{{{ newVersion }}}]({{{ newUrl }}})*",
-		"Project ID: {{{ projectID }}}; Old File ID: {{{ oldFileID }}}, New File ID: {{ newFileID }}}",
+		"*Project ID: {{{ projectID }}}; Old File ID: {{{ oldFileID }}}, New File ID: {{{ newFileID }}}*",
 		"Updates",
 	);
 
