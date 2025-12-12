@@ -263,7 +263,7 @@ jobs:
 
   manifestChangeComment:
     # Only run if we are on a PR, and we are on main repo (checked via advancedChecks dependency)
-    if: github.event_name == 'pull_request' && needs.manifestSecretChecks.outputs.success == 'true'
+    if: needs.manifestSecretChecks.outputs.success == 'true'
     name: Post Manifest Change Comment
     runs-on: ubuntu-latest
     needs: [advancedChecks, manifestSecretChecks]
