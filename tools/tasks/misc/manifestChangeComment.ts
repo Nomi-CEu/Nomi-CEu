@@ -52,6 +52,8 @@ export async function makeManifestChangeComment() {
 	}
 
 	const description = [];
+	// Preamble
+	// MUST update `checks.yml` and `forkprchecks.yml` if this changes!
 	description.push("## PR Mod Changes");
 	description.push(
 		"*This comment is automatically updated with PR changes (when the workflow runs).*",
@@ -61,18 +63,21 @@ export async function makeManifestChangeComment() {
 		changes.added,
 		description,
 		"[{{{ modName }}}]({{{ modUrl}}}): *[v{{{ newVersion }}}]({{{ newUrl }}})*",
+		"Project ID: {{{ projectID }}}; File ID: {{{ newFileID }}}",
 		"Additions",
 	);
 	printChange(
 		changes.removed,
 		description,
 		"[{{{ modName }}}]({{{ modUrl}}}): *[v{{{ oldVersion }}}]({{{ oldUrl }}})*",
+		"Project ID: {{{ projectID }}}; File ID: {{{ oldFileID }}}",
 		"Removals",
 	);
 	printChange(
 		changes.modified,
 		description,
 		"[{{{ modName }}}]({{{ modUrl}}}): *[v{{{ oldVersion }}}]({{{ oldUrl }}}) ⇥ [v{{{ newVersion }}}]({{{ newUrl }}})*",
+		"Project ID: {{{ projectID }}}; Old File ID: {{{ oldFileID }}}, New File ID: {{ newFileID }}}",
 		"Updates",
 	);
 
@@ -82,7 +87,8 @@ export async function makeManifestChangeComment() {
 function printChange(
 	changes: ModChangeInfo[],
 	description: string[],
-	template: string,
+	templateMain: string,
+	templateDetails: string,
 	type: string,
 ) {
 	if (changes.length === 0) return;
@@ -94,7 +100,7 @@ function printChange(
 		const oldVersion = cleanupVersion(change.old?.displayName);
 		const newVersion = cleanupVersion(change.new?.displayName);
 
-		const replacementObj = {
+		const mainReplacementObject = {
 			modName: change.mod.name,
 			modUrl: change.mod.links.websiteUrl,
 			oldVersion,
@@ -103,6 +109,17 @@ function printChange(
 			newUrl: getFileUrl(change.mod, change.new),
 		};
 
-		description.push(`- ${mustache.render(template, replacementObj)}`);
+		const detailsReplacementObject = {
+			projectID: change.mod.id,
+			oldFileID: change.old?.id,
+			newFileID: change.new?.id,
+		};
+
+		description.push(
+			`- ${mustache.render(templateMain, mainReplacementObject)}`,
+		);
+		description.push(
+			`  - ${mustache.render(templateDetails, detailsReplacementObject)}`,
+		);
 	}
 }
