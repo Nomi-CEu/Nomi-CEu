@@ -14,6 +14,9 @@ name: "[NOT CALLABLE] Fork PR Checks"
 on:
   pull_request_target:
     types:
+      - opened
+      - reopened
+      - unlocked
       - synchronize
       - labeled
     paths-ignore:
@@ -205,3 +208,106 @@ jobs:
           path: ./build/lang/**/*
           if-no-files-found: error
           compression-level: 9
+
+  advancedChecks:
+    # Only allow runs that have the CFCORE_API_TOKEN secret (e.g. we are in the main repo)
+    if: needs.secretChecks.outputs.success == 'true'
+    name: Checks (with Secret Requirements)
+    runs-on: ubuntu-latest
+    needs: [secretChecks]
+    steps:
+      - name: Checkout Ref
+        uses: actions/checkout@v6
+
+      # Don't use cache to prevent cache poisoning
+
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          check-latest: true
+
+      - name: Setup NPM Packages
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Check Manifest Files
+        working-directory: ./tools
+        run: npm run gulp checkManifestFiles
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      - name: Upload Mod List
+        uses: actions/upload-artifact@v5
+        with:
+          name: Mod List
+          path: ./build/modlist.html
+          if-no-files-found: error
+          compression-level: 9
+
+  manifestSecretChecks:
+    name: Manifest Secret Checks
+    runs-on: ubuntu-latest
+    needs: [secretChecks]
+    outputs:
+      success: ${{ steps.secretChecks.outputs.success }}
+    steps:
+      - name: Secret Checks
+        id: secretChecks
+        uses: Nomi-CEu/SecretChecker@v1.1.0
+        with:
+          secrets: ${{ toJSON(secrets) }}
+          check: |
+            APP_ID
+            APP_KEY
+
+  manifestChangeComment:
+    # Only run if we are on a PR, and we are on main repo (checked via advancedChecks dependency)
+    if: github.event_name == 'pull_request' && needs.manifestSecretChecks.outputs.success == 'true'
+    name: Post Manifest Change Comment
+    runs-on: ubuntu-latest
+    needs: [advancedChecks, manifestSecretChecks]
+    steps:
+      - name: Get Token
+        id: token
+        if: ${{ inputs.branch }}
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_KEY }}
+          owner: Nomi-CEu
+
+      - name: Checkout Base Ref
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+
+      # Don't use cache to prevent cache poisoning
+
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          check-latest: true
+
+      - name: Setup NPM Packages
+        working-directory: ./tools
+        run: npm ci
+
+      - name: Checkout Head Ref
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: ../temp
+          sparse-checkout: manifest.json
+
+      - name: Check Manifest Files
+        working-directory: ./tools
+        run: npm run gulp manifestChangeComment
+        env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
+
+      - uses: mshick/add-pr-comment@v2
+        if: ${{ hashFiles('./build/modChanges.md') != '' }}
+        with:
+          message-path: ./build/modChanges.md
