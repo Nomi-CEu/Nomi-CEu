@@ -21,6 +21,7 @@ export async function makeArtifactNames(): Promise<void> {
 	});
 
 	setOutput("discordVersionName", buildData.discordVersion);
+	logInfo(`Set 'discordVersionName': '${buildData.discordVersion}'`);
 
 	return Promise.resolve();
 }
