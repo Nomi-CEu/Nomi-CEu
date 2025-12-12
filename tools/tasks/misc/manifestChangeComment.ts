@@ -18,7 +18,7 @@ import mustache from "mustache";
 export async function makeManifestChangeComment() {
 	const changedManifest = JSON.parse(
 		await fs.promises.readFile(
-			upath.join(rootDirectory, "..", "temp", "manifest.json"),
+			upath.join(rootDirectory, "temp", "manifest.json"),
 			"utf-8",
 		),
 	) as ModpackManifest;
