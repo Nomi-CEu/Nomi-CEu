@@ -483,7 +483,7 @@ export async function compareAndExpandManifestDependencies(
 			...oldFiles.files.map((f) => f.projectID),
 			...newFiles.files.map((f) => f.projectID),
 		]),
-	);
+	).sort();
 
 	// Fetch projects in bulk and discard the result.
 	// Future calls to fetchProject() and fetchProjectsBulk() will hit the cache.
