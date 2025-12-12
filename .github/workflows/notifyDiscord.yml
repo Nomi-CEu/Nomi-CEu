@@ -9,7 +9,7 @@ on:
         required: true
       run_id:
         description: The GitHub Action run id of the build pack that the discord message is referencing.
-        type: number
+        type: string
         required: true
   workflow_call:
     inputs:
@@ -19,7 +19,7 @@ on:
         required: true
       run_id:
         description: The GitHub Action run id of the build pack that the discord message is referencing.
-        type: number
+        type: string
         required: true
 
 jobs:
