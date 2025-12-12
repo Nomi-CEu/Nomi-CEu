@@ -59,4 +59,5 @@ jobs:
     with:
       version: ${{ needs.build.outputs.discordVersionName }}
       run_id: ${{ github.run_id }}
-
+    secrets:
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
