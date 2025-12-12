@@ -194,7 +194,7 @@ jobs:
           path: ./temp
           sparse-checkout: manifest.json
 
-      - name: Check Manifest Files
+      - name: Generate Comment Contents
         working-directory: ./tools
         run: npm run gulp manifestChangeComment
         env:
@@ -204,3 +204,4 @@ jobs:
         if: ${{ hashFiles('./build/modChanges.md') != '' }}
         with:
           message-path: ./build/modChanges.md
+          repo-token: ${{ steps.token.outputs.token }}

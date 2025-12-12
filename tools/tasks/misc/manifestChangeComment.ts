@@ -73,7 +73,7 @@ export async function makeManifestChangeComment() {
 		changes.modified,
 		description,
 		"[{{{ modName }}}]({{{ modUrl}}}): *[v{{{ oldVersion }}}]({{{ oldUrl }}}) ⇥ [v{{{ newVersion }}}]({{{ newUrl }}})*",
-		"Removals",
+		"Updates",
 	);
 
 	return fs.promises.writeFile(outputFilePath, description.join("\n"));
