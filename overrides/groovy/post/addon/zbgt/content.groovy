@@ -7,7 +7,8 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addToolti
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
 
-import classes.post.Common
+import static post.classes.Common.*
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.api.recipes.Recipe
@@ -192,8 +193,10 @@ for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').item.allItems) {
 
     List<Recipe> recipes = mods.gregtech.assembler.findByOutput([meta.stackForm], null)
 
-    if (recipes == null)
-        println "ZBGT Addon Script: Could not find recipes for wrap ${meta.unlocalizedName}!"
+    if (recipes == null) {
+        GRS_LOG.error "Could not find recipes for wrap ${meta.unlocalizedName}!"
+        continue
+    }
 
     for (Recipe recipe : recipes) {
         mods.gregtech.assembler.recipeBuilder()
@@ -206,7 +209,7 @@ for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').item.allItems) {
 }
 
 /* Unwrap Craft for Circuits */
-for (var tier : Common.getVoltageNames(ULV, UHV)) {
+for (var tier : getVoltageNames(ULV, UHV)) {
     mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem("zbgt:wrapped.circuit.${tier.value}"))
         .circuitMeta(1)
@@ -216,7 +219,7 @@ for (var tier : Common.getVoltageNames(ULV, UHV)) {
 }
 
 /* Dropper Cover Assembler Recipes (LuV-UV Already Exist) */
-for (var tier : Common.getVoltageNames(LV, IV)) {
+for (var tier : getVoltageNames(LV, IV)) {
     mods.gregtech.assembler.recipeBuilder()
         .inputs(
             metaitem("conveyor.module.${tier.value}"),

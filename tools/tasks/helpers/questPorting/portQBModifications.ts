@@ -112,12 +112,10 @@ function findAllParsers(modify: Modified): {
 	const foundBuncableParsers = new Map<string, BunchedParserPath[]>();
 	const foundSimpleParserIds = new Set<string>();
 	for (const change of modify.change) {
-		const pathList = (change.path as string[] | number[]).map(
-			(path: string | number): string => {
-				if (typeof path === "number") path = (path as number).toString();
-				return path.split(":")[0];
-			},
-		);
+		const pathList = change.path.map((path: string | number): string => {
+			if (typeof path === "number") path = path.toString();
+			return path.split(":")[0];
+		});
 		const path = pathList.join("/");
 
 		// Instead of filtering out ignored parsers before, we must check if the parser match is one that is ignored
@@ -263,7 +261,7 @@ const modifyDesc = async (
 			logInfo("Replacing Description...");
 			description = newQuest;
 			break;
-		case "CUSTOM":
+		case "CUSTOM": {
 			const template = (await select({
 				message: "What Should the Original Text Be?",
 				choices: [
@@ -288,13 +286,14 @@ const modifyDesc = async (
 				return;
 			}
 			break;
+		}
 	}
 
 	questToModify["properties:10"]["betterquesting:10"]["desc:8"] = description;
 };
 
 const modifyIcon = async (questToModify: Quest, modify: Modified) => {
-	// We could assert is modification, but its too complicated with all the different content that could be changed.
+	// We could assert is modification, but it's too complicated with all the different content that could be changed.
 	const oldIcon =
 		modify.oldQuest["properties:10"]["betterquesting:10"]["icon:10"];
 	const newIcon =
@@ -593,7 +592,7 @@ const modifyTasks = async (
 				logInfo("Applying Description Change...");
 				try {
 					taskObj = JSON.parse(apply) as Task;
-				} catch (e) {
+				} catch {
 					logWarn("Invalid JSON! Enter your own Below!");
 					taskObj = await getCustomTasks(
 						currentTaskString,
@@ -653,7 +652,7 @@ async function getCustomTasks(
 		}
 		try {
 			foundTask = JSON.parse(taskString) as Task;
-		} catch (e) {
+		} catch {
 			logWarn("Invalid JSON!");
 			foundTask = undefined;
 		}
@@ -712,7 +711,7 @@ const modifyPrerequisites = async (
 			id(toAdd),
 			index === -1 || !preRequisiteTypeArrayCurrent
 				? 0
-				: preRequisiteTypeArrayCurrent[index] ?? 0,
+				: (preRequisiteTypeArrayCurrent[index] ?? 0),
 		);
 	}
 
@@ -763,7 +762,7 @@ const modifyGeneral = async (
 	assertIsModification(change);
 	logInfo(`Change in '${path.pop()}':`);
 
-	const newValue = lodash.get(modify.currentQuest, change.path);
+	const newValue = lodash.get(modify.currentQuest, change.path) as unknown;
 	const newValueAsString = stringify(newValue) ?? "";
 
 	logInfo(colors.bold("Change in Source Quest:"));

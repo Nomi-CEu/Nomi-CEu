@@ -156,7 +156,7 @@ export default class PortQBData {
 			],
 		})) as Mode;
 
-		this.sourceOption = (await select({
+		this.sourceOption = await select({
 			message:
 				"Which version should we use, for both Source Files? (We need to check both Normal and Expert to Port!)",
 			choices: [
@@ -169,7 +169,7 @@ export default class PortQBData {
 					value: "CFG-OVERRIDE" as SourceOption,
 				},
 			],
-		})) as SourceOption;
+		});
 
 		switch (this.type) {
 			case "NORMAL":

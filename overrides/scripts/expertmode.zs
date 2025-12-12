@@ -173,19 +173,6 @@ mixer.recipeBuilder()
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
 
-// Network Visualization Tool
-recipes.removeByRecipeName("ae2stuff:recipe5");
-makeShaped("ae2stuff_nvt", <ae2stuff:visualiser>, [
-		"S S",
-		"EPE",
-		"FFF",
-	], {
-		S: <metaitem:sensor.lv>,
-        E: <appliedenergistics2:material:24>, // Eng Processor
-        P: <ore:itemIlluminatedPanel>,
-        F: <ore:crystalPureFluix>
-	});
-
 // Conduit Binder Composite
 mixer.recipeBuilder()
 	.inputs([<ore:gravel> * 4, <ore:sand> * 4])

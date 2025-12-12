@@ -1376,16 +1376,6 @@ for oreDictEntry, items in miscDisabled {
 // Coal Coke (not fuelCoke)
 <ore:blockCoalCoke>.add(<metaitem:blockCoke>);
 
-//Ores
-mods.jei.JEI.removeAndHide(<minecraft:iron_ore>);
-mods.jei.JEI.removeAndHide(<minecraft:coal_ore>);
-mods.jei.JEI.removeAndHide(<minecraft:redstone_ore>);
-mods.jei.JEI.removeAndHide(<minecraft:diamond_ore>);
-mods.jei.JEI.removeAndHide(<minecraft:lapis_ore>);
-mods.jei.JEI.removeAndHide(<minecraft:gold_ore>);
-mods.jei.JEI.removeAndHide(<minecraft:emerald_ore>);
-mods.jei.JEI.removeAndHide(<minecraft:quartz_ore>);
-
 //Add moreplates neutronium plate to gtce neutronium ore dict
 //<ore:plateNeutronium>.add(<moreplates:neutronium_plate:0>);
 
@@ -2141,9 +2131,6 @@ mods.jei.JEI.removeAndHide(<moreplates:hammer>);
 
 
 //The One Probe Removals
-mods.jei.JEI.removeAndHide(<theoneprobe:iron_helmet_probe>);
-mods.jei.JEI.removeAndHide(<theoneprobe:gold_helmet_probe>);
-mods.jei.JEI.removeAndHide(<theoneprobe:diamond_helmet_probe>);
 //mods.jei.JEI.removeAndHide(<theoneprobe:probenote>);
 mods.jei.JEI.removeAndHide(<theoneprobe:creativeprobe>);
 

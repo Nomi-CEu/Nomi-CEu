@@ -2,14 +2,15 @@ package post.main.mod
 
 import static gregtech.api.GTValues.*
 
-import classes.post.Common
+import static post.classes.Common.*
+
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import net.minecraft.item.ItemStack
 
 /* Cleanup EIO Glasses in JEI, removing the dyed versions of each variant of glass
  * Since we are lazy, remove all, then add back the original
  */
-for (var stack in Common.eioGlasses) {
+for (var stack in eioGlasses) {
     mods.jei.ingredient.hide(new ItemStack(stack.item, 1, Short.MAX_VALUE))
     mods.jei.ingredient.add(stack.copy())
 }

@@ -1,4 +1,4 @@
-package post.main.general.misc
+package post.main.general.misc.qol
 
 import static gregtech.api.GTValues.*
 import static gregtech.loaders.recipe.CraftingComponent.*
