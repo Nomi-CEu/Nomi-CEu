@@ -21,6 +21,10 @@ on:
         description: The GitHub Action run id of the build pack that the discord message is referencing.
         type: string
         required: true
+    secrets:
+      DISCORD_WEBHOOK_URL:
+        description: The webhook URL to push to.
+        required: true
 
 jobs:
   notifyDiscord:
