@@ -3,6 +3,9 @@
 
 package post.addon.zbgt
 
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
+import gregtech.api.recipes.RecipeBuilder
+
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
@@ -208,12 +211,32 @@ for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').item.allItems) {
     }
 }
 
+/* Deprecate Generics (for Labs') */
+for (var tier : getVoltageNames(ULV, UHV)) {
+    var generic = metaitem("zbgt:generic_circuit.${tier.value}")
+
+    // Hide + Tooltips
+    mods.jei.ingredient.hide(generic)
+    addTooltip(generic, [
+        translatable('nomiceu.tooltip.mixed.deprecated_no_conversion'),
+        translatable('nomiceu.tooltip.mixed.deprecation_usable.1'),
+        translatable('nomiceu.tooltip.mixed.deprecation_usable.2', 'Nomi Labs\' Universal Circuits'),
+    ])
+
+    // Hide assembler recipe (but don't remove for compat)
+    mods.gregtech.assembler.changeByOutput([generic], null)
+        .forEach { ChangeRecipeBuilder builder ->
+            builder.builder { RecipeBuilder recipe -> recipe.hidden() }
+                .replaceAndRegister();
+        }
+}
+
 /* Unwrap Craft for Circuits */
 for (var tier : getVoltageNames(ULV, UHV)) {
     mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem("zbgt:wrapped.circuit.${tier.value}"))
         .circuitMeta(1)
-        .outputs(metaitem("zbgt:generic_circuit.${tier.value}")) // Circuit Wraps contain one circuit only
+        .outputs(metaitem("nomilabs:universal_circuit.${tier.value}")) // Circuit Wraps contain one circuit only
         .duration(100).EUt(VA[LV])
         .buildAndRegister()
 }
