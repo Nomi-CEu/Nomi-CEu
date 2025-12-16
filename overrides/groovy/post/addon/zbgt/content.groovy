@@ -3,18 +3,16 @@
 
 package post.addon.zbgt
 
-import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
-import gregtech.api.recipes.RecipeBuilder
-
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
-
 import static post.classes.Common.*
 
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.api.recipes.Recipe
+import gregtech.api.recipes.RecipeBuilder
 
 /* Creative Item Recipes */
 
@@ -227,7 +225,7 @@ for (var tier : getVoltageNames(ULV, UHV)) {
     mods.gregtech.assembler.changeByOutput([generic], null)
         .forEach { ChangeRecipeBuilder builder ->
             builder.builder { RecipeBuilder recipe -> recipe.hidden() }
-                .replaceAndRegister();
+                .replaceAndRegister()
         }
 }
 
