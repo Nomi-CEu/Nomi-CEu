@@ -1,9 +1,35 @@
 package post.main.mod
 
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 import static gregtech.api.GTValues.*
 
+import com.cleanroommc.groovyscript.compat.vanilla.CraftingInfo
+import com.cleanroommc.groovyscript.compat.vanilla.CraftingRecipe.InputList
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.item.ItemStack
+import net.minecraft.nbt.NBTTagCompound
+import net.minecraftforge.common.util.Constants
+
+/* Space Station ID Chip Copy Recipe */
+var spaceStationChip = item('advancedrocketry:spacestationchip')
+var exampleNbt = [ UUID : 1 ]
+
+var sourceChip = spaceStationChip.copy()
+    .withNbt(exampleNbt) // Example only
+    .withNbtFilter { NBTTagCompound nbt ->
+        // NBT handling: not empty, contains UUID
+        !nbt.empty && nbt.hasKey('UUID', Constants.NBT.TAG_ANY_NUMERIC)
+    }.mark('source')
+    .reuse()
+
+crafting.shapelessBuilder()
+    .output(spaceStationChip.copy().withNbt(exampleNbt)) // Example only
+    .input(sourceChip, spaceStationChip.copy().whenNoNbt())
+    .recipeFunction { ItemStack output, InputList inputs, CraftingInfo info ->
+        output.tagCompound = inputs.findMarkedOrEmpty('source').tagCompound.copy()
+        return output
+    }.setOutputTooltip(translatable('nomiceu.tooltip.advancedrocketry.copy_station_id_chips'))
+    .register()
 
 /* Airtight Seal Recipes */
 // Industrial Rebreather Kit -> Airtight Seal
