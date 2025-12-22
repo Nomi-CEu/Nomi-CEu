@@ -163,6 +163,15 @@ mods.gregtech.assembly_line.recipeBuilder()
 
 /* Special Parts */
 // ME Beam Former
+crafting.shapedBuilder()
+    .output(item('nae2:part') * 2)
+    .matrix('CCC', 'CPC', 'CCC')
+    .key('C', item('appliedenergistics2:part', 16))
+    .key('P', item('appliedenergistics2:material', 9))
+    .register()
+
+// Old, legacy recipe (hidden)
+// TODO Remove in 1.8
 mods.gregtech.assembler.recipeBuilder()
     .outputs(item('nae2:part') * 2)
     .inputs(
@@ -173,7 +182,7 @@ mods.gregtech.assembler.recipeBuilder()
         item('appliedenergistics2:material', 41),
         item('appliedenergistics2:part', 16) * 4)
     .duration(200).EUt(VA[EV])
-    .buildAndRegister()
+    .hidden().buildAndRegister()
 
 // Reconstruction Chamber
 mods.gregtech.assembler.recipeBuilder()

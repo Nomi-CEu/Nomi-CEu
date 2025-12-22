@@ -4,8 +4,8 @@
 package post.addon
 
 import static gregtech.api.GTValues.*
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
 import com.nomiceu.nomilabs.util.LabsModeHelper
 
