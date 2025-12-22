@@ -30,7 +30,7 @@ crafting.with {
         .key('E', LabsModeHelper.expert ? ore('plateTitanium') : ore('plateStainlessSteel'))
         .key('I', item('appliedenergistics2:part', 220)) // Storage Bus
         .key('P', item('appliedenergistics2:material', 24)) // Engineering Processor
-        .key('G', LabsModeHelper.expert ? metaitem('field.generator.ev') : metaitem('field.generator.hv'))
+        .key('G', metaitem('field.generator.hv'))
         .key('F', item('appliedenergistics2:part', 221)) // Fluid Storage Bus
         .register()
 
