@@ -18,17 +18,34 @@ on:
       - "overrides/config-overrides/expert/betterquesting/DefaultQuests.json" # Expert QB Json in Config Overrides
 
 jobs:
+  secretChecks:
+    name: Secrets Check
+    runs-on: ubuntu-latest
+    outputs:
+      success: ${{ steps.secretChecks.outputs.success }}
+    steps:
+      - name: Secret Checks
+        id: secretChecks
+        uses: Nomi-CEu/SecretChecker@v1.1.0
+        with:
+          secrets: ${{ toJSON(secrets) }}
+          check: |
+            APP_ID
+            APP_KEY
+
   updateLang:
+    # Only allow runs that have the APP_ID and APP_KEY secrets (e.g. we are in the main repo)
+    if: needs.secretChecks.outputs.success == 'true'
     name: Update English Lang in Nomi-CEu-Translations
     runs-on: ubuntu-latest
-    # Prevent Workflow from Running on Forks
-    if: "${{ github.repository_owner == 'Nomi-CEu' }}"
+    needs: secretChecks
+
     steps:
       # We have to use a custom app token, as the default GITHUB_TOKEN only has access to the base repo.
       # Nomi-CEu-Management has access to all of Nomi-CEu's Repos.
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v2
         with:
           # Shared Org Secret: Contains the Nomi-CEu-Management App ID (773030)
           app-id: ${{ secrets.APP_ID }}
@@ -36,16 +53,16 @@ jobs:
           # run `cat {PEM_FILE_PATH} | base64 -w 0 && echo` to encode the key first if changing the key.
           # Paste the output of the command into the secret value.
           private-key: ${{ secrets.APP_KEY }}
-          owner: Nomi-CEu
-          
+          owner: ${{ github.repository_owner }}
+
       - name: Dispatch Workflow
-        uses: actions/github-script@v5
+        uses: actions/github-script@v8
         with:
           github-token: ${{ steps.token.outputs.token }}
           # A Javascript Function Body to send the Workflow Dispatch Event.
           script: |
             await github.rest.repos.createDispatchEvent({
-              owner: "Nomi-CEu", 
+              owner: "Nomi-CEu",
               repo: "Nomi-CEu-Translations",
               event_type: "update_english_lang",
               client_payload: {

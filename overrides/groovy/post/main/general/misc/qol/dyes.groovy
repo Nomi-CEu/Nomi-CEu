@@ -1,4 +1,6 @@
-package post.main.general.misc
+package post.main.general.misc.qol
+
+import static post.classes.Common.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ShapedConversionRecipe
@@ -43,7 +45,7 @@ addShapedConversionRecipe(metaitem('dye.white'), item('minecraft:dye', 15))
 
 var dyeHelperMap = [:]
 for (var color : EnumDyeColor.values()) {
-    dyeHelperMap.put(color.name, ore('dye' + color.name.capitalize()))
+    dyeHelperMap.put(color.name, ore(combineCamelCase('dye', color.name)))
 }
 
 // Fix Elevator Redyeing

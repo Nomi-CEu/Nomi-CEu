@@ -13274,7 +13274,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Endervoirs are multiblocks formed by at least three Endervoir blocks. You can right-click a block with a wrench to make it output into adjacent machines.\n\nThe maximum transfer rate of an Endervoir is one bucket per second.",
+          "desc:8": "Endervoirs form a multiblock structure that generates water much faster than the NuclearCraft Infinite Water Source. They are formed with at least three Endervoir blocks, and you must fill two of the blocks with water to start the endervoir.\n\nYou can right-click a block with a wrench to make it output into adjacent machines.\n\nThe maximum transfer rate of an Endervoir is one bucket per second.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

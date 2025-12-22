@@ -32,6 +32,6 @@ export async function updateLabs(): Promise<void> {
 
 	return fs.promises.writeFile(
 		upath.join(rootDirectory, "manifest.json"),
-		JSON.stringify(manifest, null, 2),
+		JSON.stringify(manifest, null, 2) + "\n",
 	);
 }

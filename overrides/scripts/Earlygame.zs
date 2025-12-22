@@ -212,18 +212,6 @@ chemical_reactor.recipeBuilder().inputs([<minecraft:ender_pearl>,<minecraft:blaz
 recipes.remove(<extrautils2:endershard>);
 recipes.addShapeless(<extrautils2:endershard> * 8, [<minecraft:ender_pearl>]);
 
-//Dimethylhydrazine: Changes the EU/t
-chemical_reactor.findRecipe(480, [null], [<liquid:dimethylamine> * 1000, <liquid:monochloramine> * 1000]).remove();
-// 1,1-Dimethylhydrazine * 1000
-<recipemap:large_chemical_reactor>.findRecipe(480, null, [<liquid:dimethylamine> * 1000, <liquid:monochloramine> * 1000]).remove();
-chemical_reactor.recipeBuilder()
-	.fluidInputs(<liquid:monochloramine> * 1000, <liquid:dimethylamine> * 1000)
-	.fluidOutputs(<liquid:dimethylhydrazine> * 1000,<liquid:hydrochloric_acid> * 1000)
-	.EUt(120).duration(960).buildAndRegister();
-
-//Remove other recipe for Dimethylhydrazine
-chemical_reactor.findRecipe(480, [null], [<liquid:methanol> * 2000, <liquid:ammonia> * 2000, <liquid:hypochlorous_acid> * 1000]).remove();
-
 //Lava Factory Casing
 recipes.remove(<actuallyadditions:block_misc:7>);
 recipes.addShaped(<actuallyadditions:block_misc:7> * 2, [[<metaitem:plateAluminium>, <metaitem:plateSteel>, <metaitem:plateAluminium>],[<metaitem:plateSteel>, null, <metaitem:plateSteel>], [<metaitem:plateAluminium>, <metaitem:plateSteel>, <metaitem:plateAluminium>]]);

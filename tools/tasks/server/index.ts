@@ -22,6 +22,7 @@ import {
 } from "#globals";
 import { deleteAsync } from "del";
 import logInfo, { logWarn } from "#utils/log.ts";
+import type Vinyl from "vinyl";
 
 let g_forgeJar: string | undefined = undefined;
 
@@ -66,7 +67,9 @@ async function downloadForge() {
 		}
 		// Look for the installation profile.
 		else if (!forgeProfile && file.path == "version.json") {
-			forgeProfile = JSON.parse((await file.buffer()).toString());
+			forgeProfile = JSON.parse(
+				(await file.buffer()).toString(),
+			) as ForgeProfile;
 		}
 
 		if (forgeUniversalJar && forgeProfile) {
@@ -263,9 +266,12 @@ async function processLaunchscripts() {
 		src(["../launchscripts/**"])
 			.pipe(
 				through.obj((file, _, callback) => {
-					if (file.isBuffer()) {
-						const rendered = mustache.render(file.contents.toString(), rules);
-						file.contents = Buffer.from(rendered);
+					if ((file as Vinyl).isBuffer()) {
+						const rendered = mustache.render(
+							((file as Vinyl).contents as Buffer)?.toString(),
+							rules,
+						);
+						(file as Vinyl).contents = Buffer.from(rendered);
 					}
 					callback(null, file);
 				}),

@@ -66,7 +66,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 			headers: tokenHeaders,
 			responseType: "json",
 		})
-	).data;
+	).data as CurseForgeLegacyMCVersion[] | undefined;
 
 	if (!versionsManifest) {
 		throw new Error("Failed to fetch CurseForge version manifest.");
@@ -121,7 +121,9 @@ async function upload(files: { name: string; displayName: string }[]) {
 				(parentID ? `(child of ${parentID})` : ""),
 		);
 
-		const response: { id: number } = (await getAxios()(options)).data;
+		const response: { id: number } = (await getAxios()(options)).data as {
+			id: number;
+		};
 
 		if (response && response.id) {
 			uploadedIDs.push({
