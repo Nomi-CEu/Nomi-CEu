@@ -242,7 +242,7 @@ if (LabsModeHelper.normal) {
         .buildAndRegister()
 
     // 4-64k Fluid Storage
-    for (int outputMeta : 55.57) {
+    for (int outputMeta : 55..57) {
         crafting.removeByOutput(item('appliedenergistics2:material', outputMeta))
         mods.gregtech.assembler.recipeBuilder()
             .inputs(
