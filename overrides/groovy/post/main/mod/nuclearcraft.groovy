@@ -155,6 +155,7 @@ var replaceCannerRecipe = (ItemStack cooler, FluidStack fluid) -> {
 }
 
 // Add a Hidden version of Cooler Canner Recipe, using Solids (LEGACY RECIPES)
+// TODO Remove in 1.8
 var addLegacyCoolerRecipe = (ItemStack cooler, OreDictIngredient ing) -> {
     mods.gregtech.canner.recipeBuilder()
         .hidden()
