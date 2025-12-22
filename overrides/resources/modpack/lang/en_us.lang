@@ -16,6 +16,9 @@ nomiceu.tooltip.mixed.accepts_fluid_container=§7Accepts §aBuckets§7, §aCells
 nomiceu.tooltip.mixed.not_consumed=Ingredient Not Consumed!
 nomiceu.tooltip.mixed.deprecated=§cItem Deprecated! Place in Crafting Grid to Convert!§r
 nomiceu.tooltip.mixed.deprecation=§cConversion Recipe from Deprecated Item to Alternative!§r
+nomiceu.tooltip.mixed.deprecated_no_conversion=§cItem Deprecated!§r
+nomiceu.tooltip.mixed.deprecation_usable.1=You can still make this item by the old recipe, and use it.
+nomiceu.tooltip.mixed.deprecation_usable.2=However, you should use §d%s§7 in the future.
 nomiceu.tooltip.mixed.dyeable=Can be §bDyed§r!
 
 # MC
@@ -41,6 +44,7 @@ nomiceu.tooltip.advancedrocketry.orbital_laser_drill.3=§7Consumes §e1,000,000�
 nomiceu.tooltip.advancedrocketry.orbital_laser_drill.4=§cExtremely finicky. Use at your own risk.§r
 nomiceu.tooltip.advancedrocketry.orbital_laser_drill.5=§cTry restarting your world if it isn't working.§r
 nomiceu.tooltip.advancedrocketry.basic_lens=§7A basic lens, used for the Orbital Laser Drill.§r
+nomiceu.tooltip.advancedrocketry.copy_station_id_chips=§dAllows you to copy Space Station ID Chips!§r
 
 # AE2 & NAE2
 nomiceu.tooltip.ae2.crafting_terminal_removal.1=§cThis item is being removed.§r

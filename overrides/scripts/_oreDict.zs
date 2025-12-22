@@ -714,6 +714,11 @@ var ingotsDisabled as IItemStack[][IOreDictEntry] = {
 		<projectred-core:resource_item:103>
 	],
 
+	#ingotRedAlloy
+	<ore:ingotRedAlloy> : [
+		<projectred-core:resource_item:103>
+	],
+
 	#ingotSignalum
 	<ore:ingotSignalum> : [
 		<thermalfoundation:material:165>
