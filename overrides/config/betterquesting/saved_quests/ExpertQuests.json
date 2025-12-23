@@ -55095,7 +55095,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§3Centrifuges§r provide you with §21 tiny pile§r of additional materials when processing ore dusts (§e9 tiny piles \u003d 1 dust§r). Sometimes it\u0027s the main dust, but often it\u0027s a different useful material that is otherwise unobtainable.\n\nInstead of washing §6impure dusts§r (made from macerating or hammering ores) in a cauldron, you can get more out of each dust by centrifuging it. The same is true of §6pure dusts§r, when you eventually make a §3Washer§r or §3Chemical Bath§r. Note however that pure and impure dusts will usually give different byproducts (always check in §bJEI§r).",
+          "desc:8": "§3Centrifuges§r provide you with an 11% chance of additional materials when processing ore dusts (§eApproximately 1 Dust Every 9 Recipes§r). Sometimes it\u0027s the main dust, but often it\u0027s a different useful material that is otherwise unobtainable.\n\nInstead of washing §6impure dusts§r (made from macerating or hammering ores) in a cauldron, you can get more out of each dust by centrifuging it. The same is true of §6pure dusts§r, when you eventually make a §3Washer§r or §3Chemical Bath§r. Note however that pure and impure dusts will usually give different byproducts (always check in §bJEI§r).",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
