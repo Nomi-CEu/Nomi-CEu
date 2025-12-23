@@ -3,7 +3,6 @@ package post.main.mod
 import static post.classes.Common.*
 
 import net.minecraft.init.SoundEvents
-import net.minecraft.item.EnumDyeColor
 
 // Network Visualisation Tool
 // Not replacing the recipe; prevents breaking existing patterns
@@ -28,7 +27,7 @@ for (String type : ['ae2stuff:wireless', 'ae2stuff:wireless_hub']) {
 
     mods.chisel.carving.addVariation(type, item(type))
 
-    for (var color : EnumDyeColor.values()) {
+    for (var color : colorInfo) {
         int wirelessMeta = color.metadata + 1 // + 1 because 0 is fluix
 
         // Hides dyed variants from JEI
@@ -42,7 +41,7 @@ for (String type : ['ae2stuff:wireless', 'ae2stuff:wireless_hub']) {
                 'WDW',
                 'WWW')
             .key('W', item(type))
-            .key('D', ore(combineCamelCase('dye', color.name)))
+            .key('D', color.oreDict)
             .replace().register()
 
         // Add to the chisel group

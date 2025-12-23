@@ -2,9 +2,7 @@ package post.main.general.misc.qol
 
 import static post.classes.Common.*
 
-import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ShapedConversionRecipe
-import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
 
 // Backport MC 1.14 Dye Mechanics
@@ -43,41 +41,29 @@ ore('dyeWhite').remove(item('minecraft:dye', 15))
 ore('dye').remove(item('minecraft:dye', 15))
 addShapedConversionRecipe(metaitem('dye.white'), item('minecraft:dye', 15))
 
-var dyeHelperMap = [:]
-for (var color : EnumDyeColor.values()) {
-    dyeHelperMap.put(color.name, ore(combineCamelCase('dye', color.name)))
-}
-
 // Fix Elevator Redyeing
-for (var entry in dyeHelperMap.entrySet()) {
-    crafting.remove('elevatorid:redye_' + entry.key)
-    crafting.addShapeless(item('elevatorid:elevator_' + entry.key), [ore('blockElevator'), entry.value])
+for (var color in colorInfo) {
+    crafting.remove('elevatorid:redye_' + color.unlocalizedName)
+    crafting.addShapeless(item('elevatorid:elevator_' + color.unlocalizedName), [ore('blockElevator'), color.oreDict])
 }
 
 // Fix Slime Block Redyeing
-for (var color : EnumDyeColor.values()) {
-    var name = color.name
-    var meta = color.metadata
-    var oreIng = dyeHelperMap.get(name)
-    crafting.remove('darkutils:dyed_slime_block_' + name)
+for (var color in colorInfo) {
+    crafting.remove('darkutils:dyed_slime_block_' + color.unlocalizedName)
     crafting.shapedBuilder()
-        .output(item('darkutils:slime_dyed', meta) * 8)
+        .output(item('darkutils:slime_dyed', color.metadata) * 8)
         .matrix('SSS',
             'SDS',
             'SSS')
         .key('S', ore('blockSlime'))
-        .key('D', oreIng)
+        .key('D', color.oreDict)
         .register()
 }
 
 // Fix Satchel Redeying
-addOreDictToOreDict(ore('dye'), dyeHelperMap.values())
-
-static void addOreDictToOreDict(OreDictIngredient addTo, Collection<OreDictIngredient> from) {
-    for (var ing in from) {
-        for (var stack in ing) {
-            addTo.add(stack)
-        }
+for (var color in colorInfo) {
+    for (var stack in color.oreDict) {
+        ore('dye').add(stack)
     }
 }
 
