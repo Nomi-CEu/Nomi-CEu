@@ -24847,7 +24847,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §aSoft Mallet§r can be used to temporarily stop a machine from functioning. This is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the mallet.\n\nAlthough you can make it out of §6Wood§r, it is probably better to make it out of §6Rubber§r.\n\nThis quest accepts a §aSoft Mallet§r made from any material.",
+          "desc:8": "A §aSoft Mallet§r can be used to temporarily stop a machine from functioning.\n\nThis is useful when you have two machines running and both are unable to keep going because of a lack of power... let one finish then turn the other one back on with a second hit from the mallet.\n\nThis quest accepts a §aSoft Mallet§r made from any material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24861,7 +24861,7 @@
                 "AttackSpeed:5": -2.4,
                 "Durability:3": 0,
                 "HarvestLevel:3": 1,
-                "Material:8": "rubber",
+                "Material:8": "wood",
                 "MaxDurability:3": 48,
                 "ToolSpeed:5": 4.0
               },
@@ -24921,7 +24921,7 @@
                   "AttackSpeed:5": -2.4,
                   "Durability:3": 0,
                   "HarvestLevel:3": 1,
-                  "Material:8": "rubber",
+                  "Material:8": "wood",
                   "MaxDurability:3": 48,
                   "ToolSpeed:5": 4.0
                 },
