@@ -6194,7 +6194,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These are easier to mass produce than §6Electronic Circuits§r, and they\u0027re required to produce the §6Advanced Integrated Circuit§r, your first §6HV§r circuit.\n\nOtherwise, they fulfill the same requirements.",
+          "desc:8": "These (can be?) easier to mass produce than §6Electronic Circuits§r, but regardless, they lead to cheaper §bMV§r circuits, and they\u0027re required to produce the §6Advanced Integrated Circuit§r, your first §6HV§r circuit.\n\nOtherwise, they fulfill the same requirements.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6261,7 +6261,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2Two Integrated Circuits§r and various other components will create a §2Good Integrated Circuit.§r",
+          "desc:8": "§2Two Integrated Circuits§r and various other components will create §dtwo §2Good Integrated Circuits.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

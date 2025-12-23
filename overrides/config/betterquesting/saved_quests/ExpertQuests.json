@@ -5183,7 +5183,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Much easier to mass produce than §6Electronic Circuits§r, and they fulfill the same function in nearly all cases.\n\nYou should be batch crafting these.",
+          "desc:8": "These (can be?) easier to mass produce than §6Electronic Circuits§r, but regardless, they\u0027re required to produce the §6Advanced Integrated Circuit§r, your first §6HV§r circuit.\n\nOtherwise, they fulfill the same requirements.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5348,7 +5348,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Your first tier three circuit, formed from §2two Good Integrated Circuits§r, §6RAM§r, and §6Transistors§r, among other ingredients.\n\nAs you\u0027ll realize is the pattern, it is expensive and unwieldy to make the first forms of each tier of circuits. Fortunately, you don\u0027t have to make many of them.\n\nPrioritize using these circuits to make things needed for unlocking the next theme of circuits, which require more infrastructure but are much cheaper to produce. Eventually each tier through six will have a circuit recipe instead of requiring processors, arrays, or mainframes.",
+          "desc:8": "Your first tier three circuit, formed from §2only one Good Integrated Circuit§r, §6RAM§r, and §6Transistors§r, among other ingredients.\n\nAs you\u0027ll realize is the pattern, it is expensive and unwieldy to make the first forms of each tier of circuits. Fortunately, you don\u0027t have to make many of them.\n\nPrioritize using these circuits to make things needed for unlocking the next theme of circuits, which require more infrastructure but are much cheaper to produce. Eventually each tier through six will have a circuit recipe instead of requiring processors, arrays, or mainframes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
