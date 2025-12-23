@@ -56,12 +56,6 @@ if (LabsModeHelper.normal) {
         .duration(500).EUt(VA[HV])
         .buildAndRegister()
 } else {
-    ItemStack respiration = item('minecraft:enchanted_book')
-    ItemStack holding = respiration.copy()
-
-    respiration.addEnchantment(enchantment('minecraft:respiration'), 1)
-    holding.addEnchantment(enchantment('cofhcore:holding'), 1)
-
     mods.extendedcrafting.table_crafting.shapedBuilder()
         .tierAdvanced()
         .output(item('nomilabs:industrial_rebreather_kit'))
@@ -77,11 +71,11 @@ if (LabsModeHelper.normal) {
         .key('C', metaitem('gas_collector.mv'))
         .key('T', ore('plateDoubleTitanium'))
         .key('P', item('advancedrocketry:pressuretank', 1)) // Normal Pressure Tank
-        .key('Z', respiration)
+        .key('Z', metaitem('buffer.mv'))
         .key('F', metaitem('fluid.regulator.ev'))
         .key('A', metaitem('pipeSmallFluidPolytetrafluoroethylene'))
         .key('D', ore('dustQuicklime'))
-        .key('Y', holding)
+        .key('Y', metaitem('super_tank.mv'))
         .key('B', metaitem('chemical_reactor.mv'))
         .key('X', metaitem('duct_tape'))
         .register()

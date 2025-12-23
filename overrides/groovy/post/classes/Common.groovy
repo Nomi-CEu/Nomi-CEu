@@ -1,8 +1,12 @@
 package post.classes
 
 import com.cleanroommc.groovyscript.api.GroovyLog
+import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.google.common.base.Ascii
 import gregtech.api.GTValues
+import gregtech.api.unification.material.MarkerMaterial
+import gregtech.api.unification.material.MarkerMaterials
+import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
 import org.apache.commons.lang3.tuple.Pair
 
@@ -15,6 +19,7 @@ class Common {
     private static List<Pair<String, ItemStack>> p2pVariantsCache = null
     private static List<ItemStack> eioGlassesCache = null
     private static List<Pair<Integer, String>> voltageNamesCache = null
+    private static List<ColorInfo> colorInfoCache = null
 
     /**
      * The GroovyScript logger.
@@ -93,6 +98,56 @@ class Common {
         }
 
         return eioGlassesCache
+    }
+
+    static List<ColorInfo> getColorInfo() {
+        if (colorInfoCache != null) return colorInfoCache
+
+        // We can't use marker materials' COLORS map, as it is broken for dark gray
+        colorInfoCache = []
+
+        for (int i = 0; i < EnumDyeColor.values().length; i++) {
+            var dye = EnumDyeColor.byMetadata(i)
+            var marker = MarkerMaterials.Color.VALUES[i]
+
+            colorInfoCache.add(new ColorInfo(dye, marker))
+        }
+
+        return colorInfoCache
+    }
+
+}
+
+class ColorInfo {
+
+    // CAREFUL: this may not be what you expect
+    // It matches (most) unlocalised items, but not ore dicts.
+    // Light blue = light_blue NOT lightBlue
+    // Light gray = silver NOT lightGray
+    private final String unlocalizedName
+
+    // Metadata of the relevant dye
+    private final int metadata
+
+    // Ore dict name of the dye
+    private final String oreDictName
+
+    ColorInfo(EnumDyeColor color, MarkerMaterial marker) {
+        unlocalizedName = color.name
+        metadata = color.metadata
+        oreDictName = "dye${marker.toCamelCaseString()}".toString()
+    }
+
+    String getUnlocalizedName() {
+        return unlocalizedName
+    }
+
+    int getMetadata() {
+        return metadata
+    }
+
+    OreDictIngredient getOreDict() {
+        return ore(oreDictName)
     }
 
 }
