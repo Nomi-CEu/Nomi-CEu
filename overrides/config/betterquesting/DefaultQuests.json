@@ -7992,7 +7992,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "By placing them in the path of an §3Atomic Reconstructor§r\u0027s laser beam, §6Coal§r can be turned into §6Void Crystals§r, and §6Iron Ingots§r into §6Enori Crystals§r.\n\nKeep in mind you can efficiently do this with blocks, splitting them into nine base items as usual.",
+          "desc:8": "By placing them in the path of an §3Atomic Reconstructor§r\u0027s laser beam, §6Coal§r can be turned into §eVoid Crystals§r, and §6Iron Ingots§r into §eEnori Crystals§r. You will also need the crystals that come from §6Diamond§r, §6Emerald§r, §6Lapis§r and §6Redstone§r.\n\nKeep in mind you can §amore efficiently§r do this with blocks, splitting them into nine base items as usual.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16195,6 +16195,24 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:sky_compass"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
