@@ -1,7 +1,8 @@
 package post.main.general.misc
 
+import static post.classes.Common.*
+
 import com.nomiceu.nomilabs.util.LabsModeHelper
-import net.minecraft.item.EnumDyeColor
 
 // Steam Boilers
 ore('questbookSteamSolidBoiler').add(item('gregtech:machine', 1))
@@ -35,8 +36,8 @@ ore('questbookConveyor').add(metaitem('ulv_covers:conveyor.module.ulv'))
 ore('questbookConveyor').add(metaitem('conveyor.module.lv'))
 
 // Chemical Dyes
-for (var color : EnumDyeColor.values()) {
-    ore('questbookChemicalDye').add(metaitem("dye.${color.name}"))
+for (var color : colorInfo) {
+    ore('questbookChemicalDye').add(metaitem("dye.${color.unlocalizedName}"))
 }
 
 // Fishers
