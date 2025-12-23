@@ -3177,7 +3177,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with §aMaintenance§r, it won\u0027t be nearly as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, and the rest of the top face is built from §3Filter Casings§r. The rest of the wall space is filled with §3Plascrete§r.\n\nFor transfer between the clean environment and the outside world:\n\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n\n- Energy through §bGregTech §3Hulls§r or §3Diodes§r (of any tier). Note that Diodes can transport up to §e16 amps§r, whilst Hulls can only transport §e1 amp§r.\n\n- Your AE network through §bGregTech §3Hulls§r (of any tier).\n\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective. §bApplied Energistics §3P2P Tunnels§r may also fit your liking.\n\nYou will also need an §3Energy§r and §3Maintenance Hatch§r for cleaning. §3Cleanroom Glass§r can replace any §3Plascrete§r, apart from the edges.\n\nIf you\u0027re facing issues forming the Cleanroom:\n\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r. The floor block directly under the controller must also be §3Plascrete§r or §3Cleanroom Glass§r.\n\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.\n\n- Try rotating the controller with a wrench, or for even side lengths, try the other central positions.",
+          "desc:8": "The §2Cleanroom§r is a hollow multiblock free of contaminants. Going forward, most new circuit-related recipes, as well as some unique things like §3Fusion Casings§r, will need to be run in machines inside a Cleanroom. This is another ported §5GT5u§r feature, but just like with §aMaintenance§r, it won\u0027t be nearly as harsh.\n\nOnce built, it must be well-maintained and powered for a while to clean the inside. The Cleanroom\u0027s power draw will decrease once it fully cleans itself. Recipes requiring the Cleanroom will §conly§r run when inside a §cfully-cleaned§r Cleanroom; if not, the recipe will not start, or recipe progress might be lost. (Recipe inputs will §enever be voided§r.)\n\nThe Cleanroom can be built in any size between 5x5x5 and 15x15x15. The Controller is placed in the center of the top face, and the rest of the top face is built from §3Filter Casings§r. The rest of the wall space is filled with §3Plascrete§r.\n\nFor transfer between the clean environment and the outside world:\n\n- Items and fluids through §3Passthrough Hatches§r. They automatically input from one side and output from the opposite side.\n\n- Energy through §bGregTech §3Hulls§r or §3Diodes§r (of any tier). Note that Diodes can transport up to §e16 amps§r, whilst Hulls can only transport §e1 amp§r.\n\n- Your §dME Network§r through §bGregTech §3Hulls§r (of any tier) or through §bME Beam Formers§r, although they will have to pass through §6Cleanroom Glass§r and not §6Plascrete§r.\n\n- Players through regular §3Doors§r. The room remains clean when doors are opened.\n\nApart from the \"official\" solutions, non-physical methods of transfer such as §3Ender Chests§r might be effective. §bApplied Energistics §3P2P Tunnels§r may also fit your liking.\n\nYou will also need an §3Energy§r and §3Maintenance Hatch§r for cleaning. §3Cleanroom Glass§r can replace any §3Plascrete§r, apart from the edges.\n\nIf you\u0027re facing issues forming the Cleanroom:\n\n- The wall space must be at least 75% §3Plascrete§r or §3Cleanroom Glass§r. The floor block directly under the controller must also be §3Plascrete§r or §3Cleanroom Glass§r.\n\n- GT generators and Muffler Hatches are §cnot allowed§r in Cleanrooms.\n\n- Try rotating the controller with a wrench, or for even side lengths, try the other central positions.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56055,22 +56055,13 @@
       }
     },
     "1069:10": {
-      "preRequisiteTypes:7": [
-        0,
-        0,
-        1,
-        0
-      ],
       "preRequisites:11": [
-        54,
-        105,
-        132,
-        148
+        784
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Laser-ify your ME Networks!\n\nThe §6ME Beam Former§r is a device that creates a beam between two points to connect networks over empty space or transparent blocks. You\u0027ll need two devices to set up a link.\n\nThis is great for transporting your ME Networks into §aCleanrooms§r, as an alternative to passing them through §6Machine Hulls§r, although they will have to pass through §6Cleanroom Glass§r and not §6Plascrete§r.\n\nThe beam updates in real-time based on changes to the blocks along its path. §eIf a non-transparent block gets in the way, the connection breaks§r. This makes it useful not only for linking networks together, but also for detecting arbitrary block updates if necessary.\n\nThe beam\u0027s color matches the cable color of the Beam Former it originates from. If the two devices have different cable colors, the color of the first activated Beam Former takes precedence.\n\nThe maximum distance the beam can cover is 32 blocks, or 34 blocks if you include the Beam Formers themselves.",
+          "desc:8": "Laser-ify your ME Networks!\n\nThe §6ME Beam Former§r is a device that creates a beam between two points that have §aline of sight§r, to connect networks over §aempty space or transparent blocks§r. You\u0027ll need two devices to set up a link.\n\nThe maximum distance the beam can cover is 32 blocks, or 34 blocks if you include the Beam Formers themselves. Note that these emitters §cdo consume some power§r, and the power they consume does slightly increase with distance.\n\nThe beam\u0027s color matches the cable color of the Beam Former it originates from. If the two devices have different cable colors, the color of the first activated Beam Former takes precedence.\n\nThe beam also updates in real-time based on changes to the blocks along its path. §eIf a non-transparent block gets in the way, the connection breaks§r. This makes it useful not only for linking networks together, but also for detecting arbitrary block updates if necessary.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -56082,7 +56073,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "ME Beam Former",
+          "name:8": "Cooler Cables",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -56476,7 +56467,7 @@
     },
     "1076:10": {
       "preRequisites:11": [
-        93,
+        98,
         902
       ],
       "properties:10": {
@@ -56494,7 +56485,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Gregtech Console",
+          "name:8": "GregTech Console",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -56509,8 +56500,22 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 503,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -58671,6 +58676,100 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1115:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0,
+        0
+      ],
+      "preRequisites:11": [
+        100,
+        129,
+        1069
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Wireless Connectors§r do away with the cables entirely. Simply place two, connect them together with a §eWireless Setup Kit§r, and voila!\n\nHowever, §cdon\u0027t try and expand this across long distances§r! The energy cost increases with distance, and it can quickly add up. Also, Wireless Connectors can only connect §awithin the same dimension§r.\n\n§6Wireless Hubs§r can also be helpful: they connect to up to 32 other wireless connectors. You can place it on your main network, and then branch out to a bunch of wireless connectors.\n\nIf you\u0027re dealing with hubs, an §eAdvanced Wireless Setup Kit§r may make things easier: see its tooltip for how to use it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "ae2stuff:wireless_kit"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "No... Cables?",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1115,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "ae2stuff:wireless"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "ae2stuff:wireless_kit"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "ae2stuff:wireless_hub"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "ae2stuff:adv_wireless_kit",
+              "tag:10": {
+                "loc:10": {},
+                "mode:3": 0
+              }
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -59922,7 +60021,7 @@
           "id:3": 835,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 360,
+          "x:3": 404,
           "y:3": -264
         },
         "105:10": {
@@ -60027,7 +60126,7 @@
           "id:3": 1076,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 404,
+          "x:3": 360,
           "y:3": -264
         },
         "120:10": {
@@ -65543,8 +65642,8 @@
           "id:3": 1069,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 18,
-          "y:3": 480
+          "x:3": -156,
+          "y:3": 474
         },
         "77:10": {
           "id:3": 1070,
@@ -65601,6 +65700,13 @@
           "sizeY:3": 24,
           "x:3": 144,
           "y:3": 744
+        },
+        "85:10": {
+          "id:3": 1115,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -156,
+          "y:3": 516
         }
       }
     }
