@@ -372,12 +372,12 @@
     },
     "4:10": {
       "preRequisites:11": [
-        3
+        1098
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Ores in §5Nomifactory§r exist in large clusters, or \u0027§eveins§r\u0027. These veins are scattered around the world, and are relatively common. §2The upgraded HV Electric Prospector\u0027s Scanner you were given will tell you the types of ores you can find within a 7x7 chunk area!§r\n\nWhile the Scanner requires energy to work, you are unlikely to deplete its battery. That said, the quest book will later guide you towards making §2an HV Battery§r to charge §aHV tools§r in your inventory.\n\nIn order to proceed, you\u0027ll need to locate a source of §6Iron§r. You have a few options. §6Magnetite§r veins are higher up and contain large amounts of iron, as well as some §6Vanadium§r and §6Gold§r. Another good source of iron is §6Limonite§r veins, which contain several types of iron. Finally, §6Pyrite§r can be found paired with §6Copper§r in several types of veins.\n\n§6Wrought Iron§r is obtained simply by §esmelting Iron a second time§r. It has more durability than Iron, so it is better for making tools, but §cdo not convert your entire Iron supply over to Wrought Iron§r. The two materials are not interchangeable and you\u0027ll need Iron or Wrought Iron as demanded by various recipes.",
+          "desc:8": "In order to proceed, you\u0027ll need to locate a source of §6Iron§r. You have a few options.\n\n§6Magnetite§r veins are higher up and contain medium amounts of iron, as well as some §6Vanadium§r and §6Gold§r.\n\nAnother good source of iron is §6Limonite§r and §6Banded Iron§r veins, which contain several types of iron tightly packed together.\n\nFinally, §6Pyrite§r can be found paired with §6Copper§r in several types of veins.\n\n§6Wrought Iron§r is obtained simply by §esmelting Iron a second time§r. It has more durability than Iron, so it is better for making tools, but §cdo not convert your entire Iron supply over to Wrought Iron§r. The two materials are not interchangeable and you\u0027ll need Iron or Wrought Iron as demanded by various recipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -559,7 +559,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Before you continue, you\u0027ll need access to some more materials.\n\n§6Redstone§r: Found only deep in the world, in massive veins paired with §6Cinnabar§r and §6Ruby§r.\n\n§6Copper§r: Three primary sources. §6Tetrahedrite§r veins are a great source, but they only spawn rarely, and only high up. §6Copper§r veins are lower and more common, but contain copper more sparingly, paired with §eIron§r. You can also find a §6Copper Tin§r vein, which as the name suggests, is copper, in the form of §eChalcopyrite§r, paired with large amounts of §eTin§r. You\u0027ll also find §eMalachite§r inside of §6Banded Iron§r veins, which is another type of copper ore.\n\n§6Tin§r: Found very commonly, at very shallow depths. §6Cassiterite§r is another type of tin ore, and smelts to two tin, so you might want to go searching for veins containing that.\n\n§6Coal§r: Found in relatively shallow depths, or deep in the world paired with §eGraphite§r and §eDiamond§r.\n\n§6Gold§r: Found inside of §6Magnetite§r veins, close to the surface.",
+          "desc:8": "Before you continue, you\u0027ll need access to some more materials.\n\n§6Redstone§r: Found only deep in the world, in massive veins paired with §6Cinnabar§r and §6Ruby§r.\n\n§6Copper§r: Three primary sources. §6Tetrahedrite§r veins are a great source, but they only spawn rarely, and only high up. §6Copper§r veins are lower and more common, but contain copper more sparingly, paired with §eIron§r. You can also find a §6Copper Tin§r vein, which as the name suggests, is copper, in the form of §eChalcopyrite§r, paired with large amounts of §eTin§r. You\u0027ll also find §eMalachite§r inside of §6Banded Iron§r veins, which is another type of copper ore.\n\n§6Tin§r: Found very commonly, at very shallow depths. §6Cassiterite§r is another type of tin ore, and smelts to two tin, so you might want to go searching for veins containing that.\n\n§6Gold§r: Found inside of §6Magnetite§r veins, close to the surface.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -627,12 +627,6 @@
               "id:8": "gregtech:meta_ingot"
             },
             "3:10": {
-              "Count:3": 16,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:coal"
-            },
-            "4:10": {
               "Count:3": 6,
               "Damage:2": 0,
               "OreDict:8": "",
@@ -24777,12 +24771,12 @@
     },
     "370:10": {
       "preRequisites:11": [
-        4
+        1098
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No hoops to jump through here. Smelt §6Wood Logs§r to get §6Charcoal§r. It will serve you well as a fuel source until you locate a vein of §6Coal§r.\n\nYou might want to craft Charcoal into §6Tiny Charcoal§r pieces to save some fuel. One tiny piece is enough to smelt exactly one item. Just put charcoal into the crafting grid to make some!\n\nYou can also make §6Tiny Coal§r in the same way.",
+          "desc:8": "No hoops to jump through here. Simply smelt §6Wood Logs§r to get §6Charcoal§r. It can serve as an additional fuel source to your vein of §6Coal§r.\n\nYou might want to craft Charcoal into §6Tiny Charcoal§r pieces to save some fuel. One tiny piece is enough to smelt exactly one item. Just put charcoal into the crafting grid to make some!\n\nYou can also make §6Tiny Coal§r in the same way.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -67701,6 +67695,72 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "1098:10": {
+      "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Ores in §5Nomifactory§r exist in large clusters, or \u0027§eveins§r\u0027. These veins are scattered around the world, and are relatively common.\n\nSimply right click your §6HV Prospector Scanner§r to see where these veins are, and double click to set a waypoint. You can use the sidebar on the right to filter for the ores you want.\n\nYou can also use the prospector app within your §6Terminal§r, which is less convenient, but has a §alarger range§r!\n\nWhile the prospector requires energy to work, you are unlikely to deplete its battery, and even if you do, §bthere is a quest for you to instantly refill its battery§r!\n\nYour first task is to find some §6Coal Ore§r. You can find them in veins, in relatively shallow depths, or deep in the world paired with §eGraphite§r and §eDiamond§r.\n\nWhen you mine the ore, §bthe ore itself will drop§r instead of coal, so you will need to smelt it, perhaps with some wood planks, but each ore gives you §atwo Coal§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:coal"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Coal Supply",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1098,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:coal"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -72761,7 +72821,7 @@
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -24,
-          "y:3": -36
+          "y:3": -72
         },
         "1:10": {
           "id:3": 4,
@@ -72873,7 +72933,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": -42
+          "y:3": -78
         },
         "17:10": {
           "id:3": 37,
@@ -72949,8 +73009,8 @@
           "id:3": 370,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 40
+          "x:3": 36,
+          "y:3": 0
         },
         "28:10": {
           "id:3": 371,
@@ -73027,7 +73087,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -60,
-          "y:3": -6
+          "y:3": -42
         },
         "39:10": {
           "id:3": 530,
@@ -73139,7 +73199,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
-          "y:3": -72
+          "y:3": -108
         },
         "55:10": {
           "id:3": 909,
@@ -73195,14 +73255,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -6
+          "y:3": -42
         },
         "63:10": {
           "id:3": 1048,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -42
+          "y:3": -78
         },
         "64:10": {
           "id:3": 1075,
@@ -73245,6 +73305,13 @@
           "sizeY:3": 24,
           "x:3": -180,
           "y:3": 240
+        },
+        "70:10": {
+          "id:3": 1098,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -12
         }
       }
     },
