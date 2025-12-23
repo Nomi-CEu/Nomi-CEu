@@ -15,6 +15,7 @@ nomiceu.tooltip.mixed.accepts_fluid=§7Fluid: §b%s§r
 nomiceu.tooltip.mixed.accepts_fluid_container=§7Accepts §aBuckets§7, §aCells§7, §aDrums§7, and other §aFluid Containers§7!
 nomiceu.tooltip.mixed.not_consumed=Ingredient Not Consumed!
 nomiceu.tooltip.mixed.deprecated=§cItem Deprecated! Place in Crafting Grid to Convert!§r
+nomiceu.tooltip.mixed.deprecated_recipe=§cRecipe Deprecated! Use Alternative!§r
 nomiceu.tooltip.mixed.deprecation=§cConversion Recipe from Deprecated Item to Alternative!§r
 nomiceu.tooltip.mixed.deprecated_no_conversion=§cItem Deprecated!§r
 nomiceu.tooltip.mixed.deprecation_usable.1=You can still make this item by the old recipe, and use it.
@@ -142,3 +143,7 @@ nomiceu.tooltip.drawers.nbt_clearing.drawers.can_clear.2=Upgrades will be §aKep
 
 # XTones
 nomiceu.tooltip.xtones.lamp=§eRequires a redstone signal to light.§r
+
+# Addons
+# AE2FC
+nomiceu.tooltip.addon.ae2fc.discretizer=§cRequired for AE2 Fluid Crafting to work!§r

@@ -184,7 +184,6 @@ mixer.recipeBuilder()
 recipes.removeByRecipeName("gregtech:clay_block_to_dust");
 recipes.removeByRecipeName("gregtech:clay_ball_to_dust");
 
-
 //Item conduit - by hand
 recipes.addShaped(<enderio:item_item_conduit> * 4, [
 	[<ore:itemConduitBinder>, <metaitem:foilPolyvinylChloride>, <ore:itemConduitBinder>], 
@@ -283,12 +282,6 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 4, [
 
 recipes.addShaped(<storagedrawers:upgrade_storage:3>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotAluminium>, <storagedrawers:upgrade_template>, <ore:ingotAluminium>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 recipes.addShaped(<storagedrawers:upgrade_storage:4>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotVibrantAlloy>, <storagedrawers:upgrade_template>, <ore:ingotVibrantAlloy>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
-
-//Crystal Growth Chamber
-recipes.addShaped(<ae2stuff:grower>, [
-	[<ore:frameGtBlueSteel>, <appliedenergistics2:material:1>, <ore:frameGtBlueSteel>], 
-	[<appliedenergistics2:material:1>, <meta_tile_entity:hull.lv>, <appliedenergistics2:material:1>], 
-	[<ore:frameGtBlueSteel>, <appliedenergistics2:material:1>, <ore:frameGtBlueSteel>]]);	
 
 // Remove LCR Radon
 <recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:ingotPlutonium> * 8, <metaitem:dustUranium>], [<liquid:air> * 10000]).remove();
