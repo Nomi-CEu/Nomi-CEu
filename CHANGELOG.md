@@ -12,6 +12,9 @@
 
 <hr>
 
+**Wondering how this will impact your setups and patterns?**    
+**Checkout the [Recipe Changelog](https://github.com/Nomi-CEu/Branding/blob/main/Nomi%20CEu/Releases/1.7.6/RECIPE_CHANGELOG.md).**
+
 **See the [Full Changelog](https://github.com/Nomi-CEu/Branding/blob/main/Nomi%20CEu/Releases/1.7.6/FULL_CHANGELOG.md) for all changes!**
 
 <hr>
