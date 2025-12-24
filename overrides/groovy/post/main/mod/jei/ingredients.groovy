@@ -1,5 +1,5 @@
 // SIDE: CLIENT
-// ^, JEI Ingredient Removals affects Client Only
+// ^, JEI Ingredient Removals and Description Changes affects Client Only
 
 package post.main.mod.jei
 
@@ -11,7 +11,7 @@ import gregtech.common.metatileentities.MetaTileEntities
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidUtil
 
-/* General Item Removals. Some item removals may be in other scripts. */
+/* General Item Removals and Description Changes. Some item removals may be in other scripts. */
 mods.jei.ingredient.with {
     // AR
     hide(item('advancedrocketry:crystal:*')) // Random Crystal Blocks
@@ -96,3 +96,10 @@ mods.jei.ingredient.with {
     // Add Concrete Cell to JEI
     add(metaitem('fluid_cell').withNbt(['Fluid' : ['FluidName' : 'concrete', 'Amount' : 1000]]))
 }
+
+/* Descriptions */
+
+// AE2 Seeds: Change advice to use crystal growth chamber
+replaceDescription(item('appliedenergistics2:material', 10), 'nomiceu.jei.description.pure_certus')
+replaceDescription(item('appliedenergistics2:material', 11), 'nomiceu.jei.description.pure_quartz')
+replaceDescription(item('appliedenergistics2:material', 12), 'nomiceu.jei.description.pure_fluix')
