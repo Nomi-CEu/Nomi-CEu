@@ -27166,7 +27166,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oThis quest accepts any Brewery from LV to IV.§r\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power. Building §2many Breweries§r is necessary to brew enough Biomass for plastics. §2An alternative and more resource efficient way of making biomass is with a Pyrolyse Oven, Water, and Bio Chaff.§r",
+          "desc:8": "§oThis quest accepts any Brewery from LV to IV.§r\n\nYou can turn §6Plant Balls§r and other various §6sugary crops§r into §9Biomass§r with a §3Brewery§r. Biomass is the first step towards making Plastic in the form of §9Polyethylene§r.\n\nThe Brewery is a very very slow machine, but it requires almost no power, so you can easily §dparallelize§r it with many Breweries to increase output.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27215,13 +27215,13 @@
     },
     "505:10": {
       "preRequisites:11": [
-        504,
-        546
+        546,
+        1118
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Ethanol§r is alcohol, which you can first produce from distilling §9Biomass§r.\n\nBoiling §6Sugar Cane§r in a §3Brewery§r is a great way to get Biomass, but you can also get it from other crops and saplings if you want.\n\nOnce you have a hefty starting stock of Ethanol, consider making and distilling §9Fermented Biomass§r in a §3Distillation Tower§r for extra chemicals.",
+          "desc:8": "§9Ethanol§r is alcohol, which you can first produce from distilling §9Biomass§r.\n\nBoiling §6Sugar Cane§r in a §3Brewery§r is a good way to get Biomass, but you can also get it from other crops and saplings if you want, and even at a §ahigher efficiency§r with §6Bio Chaff§r and a §3Pyrolyse Oven§r.\n\nOnce you have a hefty starting stock of Ethanol, consider making and distilling §9Fermented Biomass§r in a §3Distillation Tower§r for extra chemicals.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -58874,6 +58874,45 @@
           "taskID:8": "bq_standard:checkbox"
         }
       }
+    },
+    "1118:10": {
+      "preRequisiteTypes:7": [
+        2,
+        0
+      ],
+      "preRequisites:11": [
+        22,
+        504
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 0,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:air"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "\"Brewery\" or \"Pyrolyse Oven\"",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1118,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -60260,6 +60299,13 @@
           "sizeY:3": 24,
           "x:3": 172,
           "y:3": -404
+        },
+        "124:10": {
+          "id:3": 1118,
+          "sizeX:3": 0,
+          "sizeY:3": 0,
+          "x:3": 296,
+          "y:3": -136
         }
       }
     },
