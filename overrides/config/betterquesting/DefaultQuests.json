@@ -66225,8 +66225,8 @@
     },
     "1074:10": {
       "preRequisites:11": [
-        902,
-        98
+        98,
+        902
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -67714,7 +67714,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Ores in §5Nomifactory§r exist in large clusters, or \u0027§eveins§r\u0027. These veins are scattered around the world, and are relatively common.\n\nSimply right click your §6HV Prospector Scanner§r to see where these veins are, and double click to set a waypoint. You can use the sidebar on the right to filter for the ores you want.\n\nYou can also use the prospector app within your §6Terminal§r, which is less convenient, but has a §a larger range§r!\n\nWhile the prospector requires energy to work, you are unlikely to deplete its battery, and even if you do, §bthere is a quest for you to instantly refill its battery§r!\n\nYour first task is to find some §6Coal Ore§r. You can find them in veins, in relatively shallow depths, or deep in the world paired with §eGraphite§r and §eDiamond§r.\n\nWhen you mine the ore, §bthe ore itself will drop§r instead of coal, so you will need to smelt it, perhaps with some wood planks, but each ore gives you §atwo Coal§r.",
+          "desc:8": "Ores in §5Nomifactory§r exist in large clusters, or \u0027§eveins§r\u0027. These veins are scattered around the world, and are relatively common.\n\nSimply right click your §6HV Prospector Scanner§r to see where these veins are, and double click to set a waypoint. You can use the sidebar on the right to filter for the ores you want.\n\nYou can also use the prospector app within your §6Terminal§r, which is less convenient, but has a §alarger range§r!\n\nWhile the prospector requires energy to work, you are unlikely to deplete its battery, and even if you do, §bthere is a quest for you to instantly refill its battery§r!\n\nYour first task is to find some §6Coal Ore§r. You can find them in veins, in relatively shallow depths, or deep in the world paired with §eGraphite§r and §eDiamond§r.\n\nWhen you mine the ore, §bthe ore itself will drop§r instead of coal, so you will need to smelt it, perhaps with some wood planks, but each ore gives you §atwo Coal§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -67775,14 +67775,14 @@
     },
     "1099:10": {
       "preRequisiteTypes:7": [
-        0,
         1,
+        0,
         0
       ],
       "preRequisites:11": [
-        1067,
         100,
-        129
+        129,
+        1067
       ],
       "properties:10": {
         "betterquesting:10": {
