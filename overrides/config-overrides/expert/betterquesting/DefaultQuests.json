@@ -58691,7 +58691,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Wireless Connectors§r do away with the cables entirely. Simply place two, connect them together with a §eWireless Setup Kit§r, and voila!\n\nHowever, §cdon\u0027t try and expand this across long distances§r! The energy cost increases with distance, and it can quickly add up. Also, Wireless Connectors can only connect §awithin the same dimension§r.\n\n§6Wireless Hubs§r can also be helpful: they connect to up to 32 other wireless connectors. You can place it on your main network, and then branch out to a bunch of wireless connectors.\n\nIf you\u0027re dealing with hubs, an §eAdvanced Wireless Setup Kit§r may make things easier: see its tooltip for how to use it.",
+          "desc:8": "§6Wireless Connectors§r do away with the cables entirely. Simply place two, connect them together with a §eWireless Setup Kit§r, and voila!\n\nHowever, §cbe cautious about expanding across long distances§r! The energy cost increases §dlogarithmically§r with distance, so while it isn\u0027t a major concern, it can add up. Also, Wireless Connectors can only connect §awithin the same dimension§r.\n\n§6Wireless Hubs§r can also be helpful: they connect to up to 32 other wireless connectors. You can place it on your main network, and then branch out to a bunch of wireless connectors.\n\nIf you\u0027re dealing with hubs, an §eAdvanced Wireless Setup Kit§r may make things easier: see its tooltip for how to use it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
