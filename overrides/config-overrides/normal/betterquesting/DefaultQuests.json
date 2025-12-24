@@ -5723,7 +5723,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Bending Machine§r to make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r once you get §9Polyethylene (PE)§r, and for cutting §6Wafers§r into usable components.\n\nThe blade will require you to make §2Vanadiumsteel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.",
+          "desc:8": "Cuts things up.\n\nThe §3Cutting Machine§r is able to cut wafers, rods, wood, and various other things for you, making it a versatile crafting tool. Cutting blocks into 9 plates may be faster than using a §2Bending Machine§r to make them one at a time.\n\nThe MV version is required for cutting §6Silicon Boules§r for easier §6Diodes§r once you get §9Polyethylene (PE)§r, and for cutting §6Wafers§r into usable components.\n\nThe blade will require you to make §2Vanadium Steel§r.\n\nCutting Machines work with plain §9Water§r for all recipes. You can also use §9Distilled Water§r which speeds up the processing somewhat, or §9Lubricant§r that speeds it up greatly (and uses very little per operation). These might be a little tricky to make right now, but are very worthwhile upgrades in the future.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6527,7 +6527,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Chrome§r, or Chromium, is used in the production of many alloys. §6Stainless Steel§r, §6Vanadiumsteel§r and §6Kanthal§r are the ones you will encounter soon.\n\nIt is primarily obtained by electrolyzing §6Ruby Dust§r. You will need a lot of this soon, so be sure to find a robust source of it.",
+          "desc:8": "§6Chrome§r, or Chromium, is used in the production of many alloys. §6Stainless Steel§r, §6Vanadium Steel§r and §6Kanthal§r are the ones you will encounter soon.\n\nIt is primarily obtained by electrolyzing §6Ruby Dust§r. You will need a lot of this soon, so be sure to find a robust source of it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36631,7 +36631,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Vanadiumsteel Ingots",
+          "name:8": "Vanadium Steel Ingots",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -51783,7 +51783,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2In GTCEu, higher-tier blends of dusts require higher-tier Mixers to mix. The MV Mixer is required for making Vanadiumsteel and Stainless Steel.\n\nThere will not be more mixer quests above this one. Remember this when making higher-tier dust blends.§r",
+          "desc:8": "§2In GTCEu, higher-tier blends of dusts require higher-tier Mixers to mix. The MV Mixer is required for making Vanadium Steel and Stainless Steel.\n\nThere will not be more mixer quests above this one. Remember this when making higher-tier dust blends.§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51850,7 +51850,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§2A bit of Vanadiumsteel is used for progression. It\u0027s also a very strong tool material.\n\n§6Vanadium§r is an element acquired by processing §6Vanadium Magnetite Ore§r.",
+          "desc:8": "§2A bit of Vanadium Steel is used for progression. It\u0027s also a very strong tool material.\n\n§6Vanadium§r is an element acquired by processing §6Vanadium Magnetite Ore§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -51862,7 +51862,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "§2Vanadiumsteel§r",
+          "name:8": "§2Vanadium Steel§r",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
