@@ -18,7 +18,9 @@
 <hr>
 <p></p>
 
-<b>See the [Full Changelog](https://github.com/Nomi-CEu/Branding/blob/main/Nomi%20CEu/Releases/1.7.6/FULL_CHANGELOG.md) for all changes!</b>
+<b>Wondering how this will impact your setups and patterns?<br>Checkout the <a href = "https://github.com/Nomi-CEu/Branding/blob/main/Nomi%20CEu/Releases/1.7.6/RECIPE_CHANGELOG.md">Recipe Changelog</a>.</b>
+
+<b>See the <a href="https://github.com/Nomi-CEu/Branding/blob/main/Nomi%20CEu/Releases/1.7.6/FULL_CHANGELOG.md">Full Changelog</a> for all changes!</b>
 
 <p></p>
 <hr>
