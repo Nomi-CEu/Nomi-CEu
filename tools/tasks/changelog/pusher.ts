@@ -296,15 +296,6 @@ export async function formatMessage(
 		return `${indentation}* ${message}`;
 	}
 
-	if (commits.length === 1) {
-		const commit = commits[0];
-		const shortSHA = commit.hash.substring(0, 7);
-		const formattedCommit = `[\`${shortSHA}\`](${repoLink}commit/${commit.hash})`;
-		const author = await formatAuthor(commit);
-
-		return `${indentation}* ${message} - ${author} (${formattedCommit})`;
-	}
-
 	const formattedCommits: string[] = [];
 	const authors: string[] = [];
 	const retrievedAuthors: { commit: Commit; name: string; email: string }[] =
