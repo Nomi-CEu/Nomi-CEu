@@ -411,7 +411,7 @@ for (var material : GregTechAPI.materialManager.registeredMaterials) {
 // Pumps
 // Change Unit in Tooltips to L/s
 for (var tier : getVoltageNames(LV, UV)) {
-    long transferAmt = 1280 * (long) Math.pow(4, tier.key)
+    long transferAmt = 1280 * (long) Math.pow(4, tier.key - 1) // voltage - 1, as 1280 is for LV (index 1)
 
     String transferFmt = TextFormattingUtil.formatNumbers(transferAmt)
 
