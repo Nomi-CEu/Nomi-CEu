@@ -21,7 +21,7 @@ makeShaped("of_flux_plug", <fluxnetworks:fluxplug>,
      "XIX",
      "CUC"],
     { C : <ore:circuitLuv>, //T6 Circuit
-      S : <metaitem:sensor.luv>, //LuV Sensor
+      S : <metaitem:emitter.luv>, //LuV Emitter
       X : <enderio:item_endergy_conduit:11>, //Superconductor Wire
 	  I : <actuallyadditions:block_phantom_energyface>, //Phantom Energyface
 	  U : <metaitem:energy_converter.luv.16> //LuV CEU 16x
@@ -51,6 +51,48 @@ makeShaped("of_flux_controller", <fluxnetworks:fluxcontroller>,
 	  I : <actuallyadditions:block_phantom_energyface>, //AA Phantom Energyface
 	  B : <metaitem:battery_buffer.luv.16>, //LuV Battery Buffer 16x
 	  P : <extrautils2:playerchest> //XU2 Player Chest
+      });
+
+//Basic Flux Storage
+makeShaped("of_flux_storage", <fluxnetworks:fluxstorage>,
+    ["SAE",
+     "CBC",
+     "XIX"],
+    { C : <ore:circuitLuv>, //T6 Circuit
+      S : <metaitem:sensor.luv>, //LuV Sensor
+	  E : <metaitem:emitter.luv>, //LuV Emitter
+      X : <enderio:item_endergy_conduit:11>, //Superconductor Wire
+	  I : <actuallyadditions:block_phantom_energyface>, //AA Phantom Energyface
+	  B : <metaitem:battery_buffer.luv.4>, //LuV Battery Buffer 4x
+	  A : <metaitem:energy_crystal> //Energium Crystal
+      });
+
+//Herculean Flux Storage
+makeShaped("of_herculean_flux_storage", <fluxnetworks:herculeanfluxstorage>,
+    ["SAE",
+     "CBC",
+     "XIX"],
+    { C : <ore:circuitLuv>, //T6 Circuit
+      S : <metaitem:sensor.luv>, //LuV Sensor
+	  E : <metaitem:emitter.luv>, //LuV Emitter
+      X : <enderio:item_endergy_conduit:11>, //Superconductor Wire
+	  I : <actuallyadditions:block_phantom_energyface>, //AA Phantom Energyface
+	  B : <metaitem:battery_buffer.luv.4>, //LuV Battery Buffer 4x
+	  A : <metaitem:lapotron_crystal> //Lapotron Crystal
+      });
+
+//Gargantuan Flux Storage
+makeShaped("of_gargantuan_flux_storage", <fluxnetworks:gargantuanfluxstorage>,
+    ["SAE",
+     "CBC",
+     "XIX"],
+    { C : <ore:circuitLuv>, //T6 Circuit
+      S : <metaitem:sensor.luv>, //LuV Sensor
+	  E : <metaitem:emitter.luv>, //LuV Emitter
+      X : <enderio:item_endergy_conduit:11>, //Superconductor Wire
+	  I : <actuallyadditions:block_phantom_energyface>, //AA Phantom Energyface
+	  B : <metaitem:battery_buffer.luv.4>, //LuV Battery Buffer 4x
+	  A : <metaitem:energy.lapotronic_orb> //Lapotronic Energy Orb
       });
 
 //Flux Configurator
