@@ -19,6 +19,25 @@ mods.gregtech.fusion_reactor.changeByOutput(null, [fluid('plutonium')])
             .replaceAndRegister()
     }
 
+// ZPM 4A Dynamo Hatch
+// GT forgot to remove the transformer from its recipe, making it inconsistent
+// Keep the original recipe (but hidden) to avoid breaking patterns
+// Although the two recipes seem to conflict, patterns set to the original won't use the new one
+// (as its registered first and so will be checked first)
+// TODO remove the original recipe in 1.8; if not already done so by GT
+mods.gregtech.assembler.changeByOutput([metaitem('energy_hatch.output_4a.zpm')], null)
+    .forEach { ChangeRecipeBuilder builder ->
+        // Make original hidden
+        builder.copyOriginal()
+            .builder { recipe -> recipe.hidden() }
+            .replaceAndRegister()
+
+        // New recipe with no transformer (first input)
+        builder.copyOriginal()
+            .removeInputs(0)
+            .replaceAndRegister()
+    }
+
 // Omnium Implosion Compressor Recipes
 ImplosionRecipeBuilder builder = mods.gregtech.implosion_compressor.recipeBuilder()
     .inputs(item('extendedcrafting:singularity_ultimate'))
