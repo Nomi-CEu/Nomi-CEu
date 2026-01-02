@@ -5,9 +5,7 @@ import scripts.common.makeShaped as makeShaped;
 print("--- loading FluxNetworks.zs ---");
 
 //Remove all default recipes
-recipes.remove(<fluxnetworks:fluxcore>);
 recipes.remove(<fluxnetworks:fluxconfigurator>);
-recipes.remove(<fluxnetworks:fluxblock>);
 recipes.remove(<fluxnetworks:fluxplug>);
 recipes.remove(<fluxnetworks:fluxpoint>);
 recipes.remove(<fluxnetworks:fluxcontroller>);
@@ -29,9 +27,9 @@ makeShaped("of_flux_plug", <fluxnetworks:fluxplug>,
 
 //Flux Point
 makeShaped("of_flux_point", <fluxnetworks:fluxpoint>,
-    ["CUC",
+    ["CSC",
      "XIX",
-     "CSC"],
+     "CUC"],
     { C : <ore:circuitLuv>, //T6 Circuit
       S : <metaitem:sensor.luv>, //LuV Sensor
       X : <enderio:item_endergy_conduit:11>, //Superconductor Wire
