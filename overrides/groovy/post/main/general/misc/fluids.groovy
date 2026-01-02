@@ -1,3 +1,6 @@
+// SIDE: CLIENT
+// ^, Fluid Tooltips and Fluids in JEI affects Client Only
+
 package post.main.general.misc
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*

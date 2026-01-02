@@ -1,4 +1,5 @@
 import ChangelogData from "#tasks/changelog/changelogData.ts";
+import { CurseForgeFileInfo, CurseForgeModInfo } from "#types/curseForge.ts";
 
 export interface Commit {
 	hash: string;
@@ -265,10 +266,9 @@ export class Ignored {
 }
 
 export interface ModChangeInfo {
-	modName: string;
-	projectID?: number;
-	oldVersion?: string;
-	newVersion?: string;
+	mod: CurseForgeModInfo;
+	old?: CurseForgeFileInfo;
+	new?: CurseForgeFileInfo;
 }
 
 export interface ExpandedMessage {

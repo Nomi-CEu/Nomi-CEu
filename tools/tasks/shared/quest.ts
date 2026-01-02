@@ -133,10 +133,10 @@ export async function transformQuestBook(): Promise<void> {
 	// Quest Book Objects
 	const questBookNormal: QuestBook = JSON.parse(
 		await fs.promises.readFile(questPathNormalSource, "utf-8"),
-	);
+	) as QuestBook;
 	const questBookExpert: QuestBook = JSON.parse(
 		await fs.promises.readFile(questPathExpertSource, "utf-8"),
-	);
+	) as QuestBook;
 
 	// Quest Book Paths
 	const questPathNormalDefault = upath.join(

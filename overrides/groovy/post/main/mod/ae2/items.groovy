@@ -39,19 +39,6 @@ crafting.shapelessBuilder()
     .input(ore('itemIlluminatedPanel'), item('actuallyadditions:item_laser_wrench'))
     .replace().register()
 
-// Network Visualisation Tool
-crafting.shapedBuilder()
-    .output(item('ae2stuff:visualiser'))
-    .matrix(
-        'S S',
-        'EPE',
-        'FFF')
-    .key('S', metaitem('sensor.lv'))
-    .key('P', ore('itemIlluminatedPanel'))
-    .key('E', item('appliedenergistics2:material', 24))
-    .key('F', item('appliedenergistics2:material', 12))
-    .register()
-
 /* Materials */
 // Pattern
 crafting.shapedBuilder()
@@ -249,13 +236,13 @@ if (LabsModeHelper.normal) {
             ore('gemExquisiteLapis') * 2,
             ore('crystalPureCertusQuartz') * 4,
             item('appliedenergistics2:material', 22),
-            ore('circuitEv') * 2)
+            ore('circuitHv') * 2)
         .outputs(item('appliedenergistics2:material', 54))
-        .duration(100).EUt(VHA[EV])
+        .duration(100).EUt(VHA[HV])
         .buildAndRegister()
 
     // 4-64k Fluid Storage
-    for (int outputMeta : 55.57) {
+    for (int outputMeta : 55..57) {
         crafting.removeByOutput(item('appliedenergistics2:material', outputMeta))
         mods.gregtech.assembler.recipeBuilder()
             .inputs(
@@ -264,7 +251,7 @@ if (LabsModeHelper.normal) {
                 item('appliedenergistics2:material', 23),
                 item('appliedenergistics2:material', outputMeta - 1) * 3)
             .outputs(item('appliedenergistics2:material', outputMeta))
-            .duration(100).EUt(VHA[EV])
+            .duration(100).EUt(VHA[HV])
             .buildAndRegister()
     }
 }
@@ -374,4 +361,3 @@ mods.gregtech.autoclave.recipeBuilder()
     .outputs(item('appliedenergistics2:material', 7) * 16)
     .duration(160).EUt(VA[EV])
     .buildAndRegister()
-

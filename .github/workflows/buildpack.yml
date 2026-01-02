@@ -86,6 +86,10 @@ on:
         type: boolean
         default: false
         required: false
+    outputs:
+      discordVersionName:
+        description: The nightly version name to use for discord announcements
+        value: ${{ jobs.makeNames.outputs.discordVersionName }}
 
 env:
   GITHUB_TAG: ${{ inputs.tag }}
@@ -102,7 +106,7 @@ jobs:
 
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -126,25 +130,16 @@ jobs:
           key: ${{ runner.os }}-build-${{ hashFiles('./.cache', './manifest.json') }}
           restore-keys: ${{ runner.os }}-build-
 
-      - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
-
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp checkEnv
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Build and Zip Pack
         working-directory: ./tools
@@ -157,7 +152,7 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload All Files
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Built Pack
           path: |
@@ -175,9 +170,10 @@ jobs:
       server: ${{ steps.artifactNames.outputs.server }}
       lang: ${{ steps.artifactNames.outputs.lang }}
       mmc: ${{ steps.artifactNames.outputs.mmc }}
+      discordVersionName: ${{ steps.artifactNames.outputs.discordVersionName }}
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -192,25 +188,16 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
         run: npm ci
-
-      - name: Check Environmental Variables
-        working-directory: ./tools
-        run: npm run gulp checkEnv
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Make Artifact Names
         id: artifactNames
@@ -230,7 +217,7 @@ jobs:
 
       - name: Upload Changelogs
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Changelogs
           path: ./build/*.md
@@ -244,7 +231,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -259,10 +246,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -272,7 +259,7 @@ jobs:
 
       - name: Download Changelog Artifacts
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: Changelogs
           path: ./build/
@@ -285,7 +272,7 @@ jobs:
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Client Zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ needs.makeNames.outputs.client }}
           path: ./build/client/**/*
@@ -299,7 +286,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -323,10 +310,10 @@ jobs:
           key: ${{ runner.os }}-build-${{ hashFiles('./.cache', './manifest.json') }}
           restore-keys: ${{ runner.os }}-build-
 
-      - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -336,7 +323,7 @@ jobs:
 
       - name: Download Changelog Artifacts
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: Changelogs
           path: ./build/
@@ -349,7 +336,7 @@ jobs:
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Server Zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ needs.makeNames.outputs.server }}
           path: ./build/server/**/*
@@ -363,7 +350,7 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
@@ -378,10 +365,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -391,7 +378,7 @@ jobs:
 
       - name: Download Changelog Artifacts
         if: ${{ !inputs.skip_changelog }}
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: Changelogs
           path: ./build/
@@ -404,7 +391,7 @@ jobs:
           MADE_CHANGELOG: true # Changelog Already Exists
 
       - name: Upload Lang Zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ needs.makeNames.outputs.lang }}
           path: ./build/lang/**/*

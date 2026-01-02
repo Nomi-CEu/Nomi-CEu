@@ -1,4 +1,4 @@
-package post.main.general.misc
+package post.main.general.misc.qol
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.recipes.RecipeMaps.*

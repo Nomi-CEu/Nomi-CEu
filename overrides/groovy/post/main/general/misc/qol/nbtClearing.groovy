@@ -1,4 +1,4 @@
-package post.main.general.misc
+package post.main.general.misc.qol
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.NBTClearingRecipeHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.*
@@ -6,8 +6,8 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.CAN_CLEAR_TOOLTIP
 import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.WARNING_TOOLTIP
 import static gregtech.common.metatileentities.MetaTileEntities.*
+import static post.classes.Common.*
 
-import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
 
 // NBT Clearing Recipes
@@ -16,8 +16,8 @@ nbtClearingRecipe(item('minecraft:lava_bucket'), item('minecraft:bucket'))
 nbtClearingRecipe(item('forge:bucketfilled'), item('minecraft:bucket'))
 
 // Shulker Boxes
-for (var color : EnumDyeColor.values()) {
-    nbtClearingRecipe(item("minecraft:${color.name}_shulker_box"))
+for (var color : colorInfo) {
+    nbtClearingRecipe(item("minecraft:${color.unlocalizedName}_shulker_box"))
 }
 
 // GT Crates

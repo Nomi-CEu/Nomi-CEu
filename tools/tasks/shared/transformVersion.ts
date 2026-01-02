@@ -6,4 +6,5 @@ import { BuildData } from "#types/transformFiles.js";
  */
 export default async function transformManifestVersion(): Promise<void> {
 	modpackManifest.version = new BuildData().rawVersion;
+	return Promise.resolve();
 }

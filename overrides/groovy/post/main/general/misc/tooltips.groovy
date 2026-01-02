@@ -1,5 +1,5 @@
 // SIDE: CLIENT
-// ^, Tooltips should only be processed on the client
+// ^, Tooltips affects Client Only
 
 package post.main.general.misc
 
@@ -8,9 +8,10 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
 import static gregtech.api.unification.ore.OrePrefix.*
 
+import static post.classes.Common.*
+
 import appeng.core.AEConfig
 import appeng.core.features.AEFeature
-import classes.post.Common
 import com.nomiceu.nomilabs.config.LabsConfig
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.GregTechAPI
@@ -22,6 +23,9 @@ import gregtech.common.pipelike.fluidpipe.ItemBlockFluidPipe
 import mustapelto.deepmoblearning.common.metadata.MetadataLivingMatter
 import mustapelto.deepmoblearning.common.metadata.MetadataManager
 import net.minecraft.item.ItemStack
+
+// This file specifies most custom tooltip changes.
+// Exceptions: Fluid Tooltips, NBT Clearing Tooltips, Deprecation Tooltips, and Tooltips for Addons
 
 /* Mixed */
 // Fillable Items
@@ -162,7 +166,7 @@ addTooltip(item('appliedenergistics2:material', 1), translatable('nomiceu.toolti
 
 // ME P2P (Special)
 // Add a new line after its unique tooltip so it is easier to read the global p2p tooltip
-addTooltip(Common.meP2p, [
+addTooltip(item('appliedenergistics2:part', 460), [
     translatable('nomiceu.tooltip.ae2.p2p.me'),
     translatableEmpty(),
     translatable('nomiceu.tooltip.ae2.p2p.type', 'ME'),
@@ -170,7 +174,7 @@ addTooltip(Common.meP2p, [
 ])
 
 // Other P2P
-for (var item : Common.p2pVariants) {
+for (var item : p2pVariants) {
     addTooltip(item.value, [
         translatable('nomiceu.tooltip.ae2.p2p.type', item.key),
         translatable('nomiceu.tooltip.ae2.p2p.desc'),
@@ -292,6 +296,12 @@ addTooltip(item('appliedenergistics2:tiny_tnt'), [
     translatable('nomiceu.tooltip.ae2.tiny_tnt.3'),
 ])
 
+/* AE2 Stuff */
+// Wireless Connector & Hub
+for (String wireless : ['ae2stuff:wireless', 'ae2stuff:wireless_hub']) {
+    addTooltip(item(wireless), translatable('nomiceu.tooltip.mixed.dyeable'))
+}
+
 /* Dimensional Edibles */
 
 // Island Cake
@@ -400,8 +410,8 @@ for (var material : GregTechAPI.materialManager.registeredMaterials) {
 
 // Pumps
 // Change Unit in Tooltips to L/s
-for (var tier : Common.getVoltageNames(LV, UV)) {
-    long transferAmt = 1280 * (long) Math.pow(4, tier.key)
+for (var tier : getVoltageNames(LV, UV)) {
+    long transferAmt = 1280 * (long) Math.pow(4, tier.key - 1) // voltage - 1, as 1280 is for LV (index 1)
 
     String transferFmt = TextFormattingUtil.formatNumbers(transferAmt)
 
@@ -416,8 +426,8 @@ for (var tier : Common.getVoltageNames(LV, UV)) {
 // Glasses
 addTooltip(item('enderio:block_fused_glass'), translatable('nomiceu.tooltip.eio.fused_glass.make'))
 
-for (ItemStack stack in Common.eioGlasses) {
-    addTooltip(stack, translatable('nomiceu.tooltip.eio.glass.dye'))
+for (ItemStack stack in eioGlasses) {
+    addTooltip(stack, translatable('nomiceu.tooltip.mixed.dyeable'))
 }
 
 // Facades

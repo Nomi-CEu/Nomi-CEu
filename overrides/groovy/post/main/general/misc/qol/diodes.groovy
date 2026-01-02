@@ -1,7 +1,8 @@
-package post.main.general.misc
+package post.main.general.misc.qol
 
 import static gregtech.api.GTValues.*
 import static gregtech.loaders.recipe.CraftingComponent.*
+import static post.classes.Common.*
 
 import com.cleanroommc.groovyscript.api.IIngredient
 import gregtech.api.items.metaitem.MetaItem
@@ -46,7 +47,7 @@ IIngredient getIngredientFromGTComponent(Component comp, int tier) {
         case UnificationEntry -> ore(((UnificationEntry) ing).toString())
         case ItemStack -> ing as IIngredient
         default -> {
-            println "[Diodes] Failed to cast class ${ing.class.name} to an IIngredient!"
+            GRS_LOG.error "Failed to cast class ${ing.class.name} to an IIngredient!"
         }
     }
 }
