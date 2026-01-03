@@ -154,3 +154,7 @@ nomiceu.tooltip.xtones.lamp=§eRequires a redstone signal to light.§r
 # Addons
 # AE2FC
 nomiceu.tooltip.addon.ae2fc.discretizer=§cRequired for AE2 Fluid Crafting to work!§r
+
+# FluxNetworks
+nomiceu.tooltip.addon.ae2fc.storages.1=§eIt is recommended to add at least one Flux Networks Storage to each §r
+nomiceu.tooltip.addon.ae2fc.storages.2=§enetwork, as the buffer makes flux points push energy more reliably.§r
