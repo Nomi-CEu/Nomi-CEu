@@ -110,7 +110,19 @@ const generalCategory: Category = {
 	commitKey: "[GENERAL]",
 	categoryName: "General Changes",
 	defaultSubCategory: other,
-	subCategories: [jeiChanges, modUpdates, modAdditions, modRemovals, other],
+	subCategories: [jeiChanges, other],
+};
+const addonCategory: Category = {
+	commitKey: "[ADDON]",
+	categoryName: "Addon Support Changes",
+	defaultSubCategory: emptySubCategory,
+	subCategories: [emptySubCategory],
+};
+const modChangesCategory: Category = {
+	commitKey: undefined, // Addition via internal logic ONLY
+	categoryName: "Mod Changes",
+	defaultSubCategory: emptySubCategory, // Should never happen; set to non-existent sub-category
+	subCategories: [modUpdates, modAdditions, modRemovals],
 };
 const internalCategory: Category = {
 	commitKey: "[INTERNAL]",
@@ -132,6 +144,8 @@ export const categories: Category[] = [
 	questBookCategory,
 	bugCategory,
 	generalCategory,
+	addonCategory,
+	modChangesCategory,
 	internalCategory,
 ];
 
@@ -252,17 +266,17 @@ export const modChangesAllocations: Record<
 	ModChangesAllocation
 > = {
 	added: {
-		category: generalCategory,
+		category: modChangesCategory,
 		subCategory: modAdditions,
 		template: "{{{ modName }}}: *v{{{ newVersion }}}*",
 	},
 	updated: {
-		category: generalCategory,
+		category: modChangesCategory,
 		subCategory: modUpdates,
 		template: "{{{ modName }}}: *v{{{ oldVersion }}} ⇥ v{{{ newVersion }}}*",
 	},
 	removed: {
-		category: generalCategory,
+		category: modChangesCategory,
 		subCategory: modRemovals,
 		template: "{{{ modName }}}: *v{{{ oldVersion }}}*",
 	},
