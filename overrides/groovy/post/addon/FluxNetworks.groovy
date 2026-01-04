@@ -23,7 +23,7 @@ crafting.shapedBuilder()
         'XUX')
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('E', metaitem('emitter.luv')) // LuV Emitter
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
     .key('U', metaitem('energy_converter.luv.16')) // 16x LuV Converter
     .register()
@@ -37,7 +37,7 @@ crafting.shapedBuilder()
         'CSC',
         'XFX',
         'CUC')
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('S', metaitem('sensor.luv')) // LuV Sensor
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
@@ -55,7 +55,7 @@ crafting.shapedBuilder()
         'XUX')
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('S', metaitem('sensor.luv')) // LuV Sensor
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
     .key('U', metaitem('energy_converter.luv.16')) // 16x LuV Converter
     .register()
@@ -69,7 +69,7 @@ crafting.shapedBuilder()
         'CUC',
         'XFX',
         'CSC')
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('S', metaitem('sensor.luv')) // LuV Sensor
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
@@ -86,9 +86,9 @@ crafting.shapedBuilder()
         'CBC',
         'XFX')
     .key('S', metaitem('sensor.luv')) // LuV Sensor
-    .key('P', item('extrautils2:playerchest'))
+    .key('P', item('extrautils2:playerchest')) // XU2 Player Chest
     .key('E', metaitem('emitter.luv')) // LuV Emitter
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('B', metaitem('battery_buffer.luv.4')) // 16x LuV Battery Buffer
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
@@ -105,7 +105,7 @@ crafting.shapedBuilder()
     .key('S', metaitem('sensor.luv')) // LuV Sensor
     .key('A', metaitem('energy_crystal')) // Energium Crystal
     .key('E', metaitem('emitter.luv')) // LuV Emitter
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('B', metaitem('battery_buffer.luv.4')) // 4x LuV Battery Buffer
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
@@ -121,7 +121,7 @@ crafting.shapedBuilder()
         'XFX')
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('A', metaitem('lapotron_crystal')) // Lapotron Crystal
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('B', item('fluxnetworks:fluxstorage')) // Basic Flux Storage
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
     .register()
@@ -136,7 +136,7 @@ crafting.shapedBuilder()
         'XFX')
     .key('X', item('enderio:item_endergy_conduit:11')) // Drac. Superconductor Conduit
     .key('A', metaitem('energy.lapotronic_orb')) // Lapotronic Energy Orb
-    .key('C', ore('circuitLuv')) // T6 Circut
+    .key('C', ore('circuitLuv')) // Any LuV Circuit
     .key('B', item('fluxnetworks:herculeanfluxstorage')) // Herculean Flux Storage
     .key('F', item('actuallyadditions:block_phantom_energyface')) // Phantom Energyface
     .register()
