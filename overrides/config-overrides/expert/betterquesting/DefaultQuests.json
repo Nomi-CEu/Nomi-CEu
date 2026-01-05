@@ -58926,6 +58926,65 @@
       "questID:3": 1118,
       "rewards:9": {},
       "tasks:9": {}
+    },
+    "1119:10": {
+      "preRequisites:11": [
+        282
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "As your AE2 network gets larger, it may begin to get difficult to manage it. These two tools help you with that.\n\nThe §6Network Tool§r, when §eright-clicked§r on any ME machine connected to your network, shows §aall connected parts that form your network§r, their power consumption, and overall system §dpower input, output and storage§r.\n\nThe §6Network Visualiser§r, when §eright-clicked§r on an ME cable connected to your network, displays a visual §aoverlay of all parts and connections§r of your network. You can §eshift-scroll§r to change what is shown on the overlay.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:network_tool"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Managing your AE2 Network",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1119,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:network_tool"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "ae2stuff:visualiser"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -65295,7 +65354,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -126,
-          "y:3": 360
+          "y:3": 372
         },
         "1:10": {
           "id:3": 1,
@@ -65337,13 +65396,13 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
-          "y:3": 258
+          "y:3": 270
         },
         "7:10": {
           "id:3": 73,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -158,
+          "x:3": -156,
           "y:3": 432
         },
         "8:10": {
@@ -65351,14 +65410,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
-          "y:3": 258
+          "y:3": 270
         },
         "9:10": {
           "id:3": 75,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
-          "y:3": 312
+          "y:3": 324
         },
         "10:10": {
           "id:3": 89,
@@ -65428,7 +65487,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
-          "y:3": 294
+          "y:3": 306
         },
         "20:10": {
           "id:3": 108,
@@ -65463,35 +65522,35 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
-          "y:3": 330
+          "y:3": 342
         },
         "25:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -228,
-          "y:3": 366
+          "y:3": 378
         },
         "26:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -264,
-          "y:3": 366
+          "y:3": 378
         },
         "27:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
-          "y:3": 366
+          "y:3": 378
         },
         "28:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -156,
-          "y:3": 366
+          "y:3": 378
         },
         "29:10": {
           "id:3": 117,
@@ -65547,7 +65606,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -192,
-          "y:3": 330
+          "y:3": 342
         },
         "37:10": {
           "id:3": 132,
@@ -65568,7 +65627,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -66,
-          "y:3": 366
+          "y:3": 378
         },
         "40:10": {
           "id:3": 237,
@@ -65673,21 +65732,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -66,
-          "y:3": 330
+          "y:3": 342
         },
         "55:10": {
           "id:3": 918,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -66,
-          "y:3": 294
+          "y:3": 306
         },
         "56:10": {
           "id:3": 924,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 366
+          "x:3": -18,
+          "y:3": 378
         },
         "57:10": {
           "id:3": 926,
@@ -65791,8 +65850,8 @@
           "id:3": 1064,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 450
+          "x:3": 18,
+          "y:3": 480
         },
         "72:10": {
           "id:3": 1065,
@@ -65898,6 +65957,13 @@
           "sizeY:3": 24,
           "x:3": 102,
           "y:3": 696
+        },
+        "87:10": {
+          "id:3": 1119,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -18,
+          "y:3": 342
         }
       }
     }

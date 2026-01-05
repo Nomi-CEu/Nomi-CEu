@@ -68048,6 +68048,78 @@
       "questID:3": 1102,
       "rewards:9": {},
       "tasks:9": {}
+    },
+    "1103:10": {
+      "preRequisites:11": [
+        282
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "As your AE2 network gets larger, it may begin to get difficult to manage it. These two tools help you with that.\n\nThe §6Network Tool§r, when §eright-clicked§r on any ME machine connected to your network, shows §aall connected parts that form your network§r, their power consumption, and overall system §dpower input, output and storage§r.\n\nThe §6Network Visualiser§r, when §eright-clicked§r on an ME cable connected to your network, displays a visual §aoverlay of all parts and connections§r of your network. You can §eshift-scroll§r to change what is shown on the overlay.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "appliedenergistics2:network_tool"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Managing your AE2 Network",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 1103,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nomilabs:nomicoin5"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "entryLogic:8": "AND",
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:network_tool"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "ae2stuff:visualiser"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -74934,7 +75006,7 @@
           "id:3": 1067,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
+          "x:3": -198,
           "y:3": 444
         },
         "66:10": {
@@ -74997,7 +75069,7 @@
           "id:3": 1099,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -200,
+          "x:3": -198,
           "y:3": 480
         },
         "75:10": {
@@ -75006,6 +75078,13 @@
           "sizeY:3": 24,
           "x:3": 48,
           "y:3": 660
+        },
+        "76:10": {
+          "id:3": 1103,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -66,
+          "y:3": 312
         }
       }
     },
