@@ -94,12 +94,6 @@ const featureCategory: Category = {
 	defaultSubCategory: bothModes,
 	subCategories: [qolChanges, bothModes, normalMode, hardMode],
 };
-const questBookCategory: Category = {
-	commitKey: "[QB]",
-	categoryName: "Quest Book Changes",
-	defaultSubCategory: bothModes,
-	subCategories: [bothModes, normalMode, hardMode],
-};
 const bugCategory: Category = {
 	commitKey: "[BUG]",
 	categoryName: "Bug Fixes",
@@ -117,6 +111,12 @@ const addonCategory: Category = {
 	categoryName: "Addon Support Changes",
 	defaultSubCategory: emptySubCategory,
 	subCategories: [emptySubCategory],
+};
+const questBookCategory: Category = {
+	commitKey: "[QB]",
+	categoryName: "Quest Book Changes",
+	defaultSubCategory: bothModes,
+	subCategories: [bothModes, normalMode, hardMode],
 };
 const modChangesCategory: Category = {
 	commitKey: undefined, // Addition via internal logic ONLY
@@ -141,10 +141,10 @@ export const categories: Category[] = [
 	balancingCategory,
 	performanceCategory,
 	featureCategory,
-	questBookCategory,
 	bugCategory,
 	generalCategory,
 	addonCategory,
+	questBookCategory,
 	modChangesCategory,
 	internalCategory,
 ];
