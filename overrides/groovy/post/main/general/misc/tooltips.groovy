@@ -228,7 +228,7 @@ for (ItemStack crafting : craftingStorages) {
 // View Cell
 addTooltip(item('appliedenergistics2:view_cell'), [
     translatable('nomiceu.tooltip.ae2.view_cell.1'),
-    translatable('nomiceu.tooltip.ae2.view_cell.2')
+    translatable('nomiceu.tooltip.ae2.view_cell.2'),
 ])
 
 // Storage Cells
