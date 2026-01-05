@@ -157,14 +157,11 @@ crafting.shapedBuilder()
 // Flux Storages
 // Specify that they help with "network stability"
 addTooltip(item('fluxnetworks:fluxstorage'), [
-    translatable('nomiceu.tooltip.addon.ae2fc.storages.1'),
-    translatable('nomiceu.tooltip.addon.ae2fc.storages.2'),
+    translatable('nomiceu.tooltip.addon.ae2fc.storages'),
 ])
 addTooltip(item('fluxnetworks:herculeanfluxstorage'), [
-    translatable('nomiceu.tooltip.addon.ae2fc.storages.1'),
-    translatable('nomiceu.tooltip.addon.ae2fc.storages.2'),
+    translatable('nomiceu.tooltip.addon.ae2fc.storages'),
 ])
 addTooltip(item('fluxnetworks:gargantuanfluxstorage'), [
-    translatable('nomiceu.tooltip.addon.ae2fc.storages.1'),
-    translatable('nomiceu.tooltip.addon.ae2fc.storages.2'),
+    translatable('nomiceu.tooltip.addon.ae2fc.storages'),
 ])
