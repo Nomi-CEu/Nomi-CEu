@@ -101,9 +101,10 @@ crafting.shapedBuilder()
     .key('C', item('appliedenergistics2:material', 23))
     .replace().register()
 
-/* Storage */
-// Storage Cell Removals
+/* Cells */
+// Cell Crafting Removals
 crafting.with {
+    remove('appliedenergistics2:network/cells/view_cell')
     remove('appliedenergistics2:network/cells/storage_cell_1k')
     remove('appliedenergistics2:network/cells/storage_cell_4k')
     remove('appliedenergistics2:network/cells/storage_cell_16k')
@@ -124,6 +125,20 @@ crafting.shapedBuilder()
     .key('W', metaitem('wireFineRedAlloy'))
     .key('P', metaitem('nomilabs:plateElectricalSteel'))
     .replace().register()
+
+// View Cell
+// Change recipe bypassing storage housing
+crafting.shapedBuilder()
+    .output(item('appliedenergistics2:view_cell'))
+    .matrix(
+        'WPW',
+        'PCP',
+        'WPW')
+    .key('W', metaitem('wireFineRedAlloy'))
+    .key('P', metaitem('nomilabs:plateElectricalSteel'))
+    // Recipe accepts normal certus gem, charged certus gem or pure certus gem
+    .key('C', metaitem('gemCertusQuartz') | item('appliedenergistics2:material', 1) | item('appliedenergistics2:material', 10))
+    .register()
 
 // 1k Storage
 crafting.shapedBuilder()

@@ -225,6 +225,12 @@ for (ItemStack crafting : craftingStorages) {
     addTooltip(crafting, translatable('nomiceu.tooltip.ae2.crafting_storage'))
 }
 
+// View Cell
+addTooltip(item('appliedenergistics2:view_cell'), [
+    translatable('nomiceu.tooltip.ae2.view_cell.1'),
+    translatable('nomiceu.tooltip.ae2.view_cell.2')
+])
+
 // Storage Cells
 var storageCells = [
     item('appliedenergistics2:storage_cell_1k'),
