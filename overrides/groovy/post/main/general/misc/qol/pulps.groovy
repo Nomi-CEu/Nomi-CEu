@@ -38,7 +38,7 @@ for (var material : materials) {
         mods.gregtech.extruder.changeByOutput([stack], null)
             .forEach { ChangeRecipeBuilder builder ->
                 builder.changeInput(0) {
-                    new GTRecipeItemInput(dust)
+                    new GTRecipeItemInput(dust * 9)
                 }.buildAndRegister()
             }
     }
