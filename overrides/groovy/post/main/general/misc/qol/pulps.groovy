@@ -4,6 +4,8 @@ import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.ore.OrePrefix.*
 
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
+
+import gregtech.api.recipes.ingredients.GTRecipeInput
 import gregtech.api.recipes.ingredients.GTRecipeItemInput
 import gregtech.api.unification.OreDictUnifier
 
@@ -37,8 +39,8 @@ for (var material : materials) {
 
         mods.gregtech.extruder.changeByOutput([stack], null)
             .forEach { ChangeRecipeBuilder builder ->
-                builder.changeInput(0) {
-                    new GTRecipeItemInput(dust, it.amount)
+                builder.changeInput(0) { GTRecipeInput input ->
+                    new GTRecipeItemInput(dust, input.amount)
                 }.buildAndRegister()
             }
     }
