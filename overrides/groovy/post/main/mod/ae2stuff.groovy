@@ -3,7 +3,6 @@ package post.main.mod
 import static post.classes.Common.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
-import net.minecraft.init.SoundEvents
 
 // Network Visualisation Tool
 crafting.shapedBuilder()
@@ -90,7 +89,6 @@ crafting.shapedBuilder()
 for (String type : ['ae2stuff:wireless', 'ae2stuff:wireless_hub']) {
     // Init chisel group
     mods.chisel.carving.addGroup(type)
-    mods.chisel.carving.setSound(type, SoundEvents.BLOCK_STONE_PLACE)
 
     mods.chisel.carving.addVariation(type, item(type))
 

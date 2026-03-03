@@ -104,7 +104,7 @@ class UpgradeIngredient extends SimpleIIngredient {
         return matchingLevels.stream()
             .map { level ->
                 var result = toUpgrade.copy()
-                result.tagCompound.setByte(tagKey, level)
+                result.func_77978_p().func_74774_a(tagKey, level)
                 return result
             }.toArray()
     }
@@ -114,10 +114,10 @@ class UpgradeIngredient extends SimpleIIngredient {
         if (!ItemMeta.compare(toUpgrade, itemStack)) return false
 
         // Check Level
-        var tag = itemStack.tagCompound
+        var tag = itemStack.func_77978_p()
         if (tag == null) return true
 
-        return matchingLevels.contains(tag.getByte(tagKey))
+        return matchingLevels.contains(tag.func_74771_c(tagKey))
     }
 
 }
@@ -126,7 +126,7 @@ void createAllUpgradeRecipes(ItemStack toUpgrade) {
     // Upgrade
     for (var level : 1..4) {
         var result = toUpgrade.copy()
-        result.tagCompound.setByte(UpgradeIngredient.tagKey, (byte) level)
+        result.func_77978_p().func_74774_a(UpgradeIngredient.tagKey, (byte) level)
 
         var upgrade = item('thermalfoundation:upgrade', level - 1) // Upgrades: 0 = Hardened, 1 = Reinforced, etc.
 
@@ -136,7 +136,7 @@ void createAllUpgradeRecipes(ItemStack toUpgrade) {
     // Conversion
     for (var level : 2..4) {
         var result = toUpgrade.copy()
-        result.tagCompound.setByte(UpgradeIngredient.tagKey, (byte) level)
+        result.func_77978_p().func_74774_a(UpgradeIngredient.tagKey, (byte) level)
 
         // Upgrades: 33 = Reinforced, 34 = Signalum, etc.
         var upgrade = item('thermalfoundation:upgrade', 33 + level - 2)

@@ -116,7 +116,7 @@ class IngredientMCEmpower extends SimpleIIngredient {
     Ingredient toMcIngredient() { return ing }
 
     @Override
-    ItemStack[] getMatchingStacks() { return ing.matchingStacks }
+    ItemStack[] getMatchingStacks() { return ing.func_193365_a() }
 
     @Override
     boolean test(ItemStack itemStack) { return ing.apply(itemStack) }

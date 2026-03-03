@@ -424,8 +424,8 @@ class IngredientFluidContainer extends SimpleIIngredient {
         IFluidHandlerItem handler = null
         if (itemStack.hasCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)) {
             var newStack = itemStack.copy()
-            if (newStack.count > 1) {
-                newStack.count = 1
+            if (newStack.amount > 1) {
+                newStack.amount = 1
             }
             handler = newStack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)
         }
@@ -515,7 +515,7 @@ class NoNBTIngredient extends SimpleIIngredient {
 
     @Override
     boolean test(ItemStack itemStack) {
-        return ItemMeta.compare(itemStack, stack) && (!itemStack.hasTagCompound() || itemStack.tagCompound.empty)
+        return ItemMeta.compare(itemStack, stack) && (!itemStack.hasTagCompound() || itemStack.func_77978_p().func_82582_d())
     }
 
 }

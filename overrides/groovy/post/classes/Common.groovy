@@ -105,12 +105,13 @@ class Common {
 
         // We can't use marker materials' COLORS map, as it is broken for dark gray
         colorInfoCache = []
+        var dyes = EnumDyeColor.values()
 
-        for (int i = 0; i < EnumDyeColor.values().length; i++) {
-            var dye = EnumDyeColor.byMetadata(i)
+        for (int i = 0; i < dyes.length; i++) {
+            var dye = dyes[i]
             var marker = MarkerMaterials.Color.VALUES[i]
 
-            colorInfoCache.add(new ColorInfo(dye, marker))
+            colorInfoCache.add(new ColorInfo(dye, i, marker))
         }
 
         return colorInfoCache
@@ -132,9 +133,9 @@ class ColorInfo {
     // Ore dict name of the dye
     private final String oreDictName
 
-    ColorInfo(EnumDyeColor color, MarkerMaterial marker) {
-        unlocalizedName = color.name
-        metadata = color.metadata
+    ColorInfo(EnumDyeColor color, int metadata, MarkerMaterial marker) {
+        unlocalizedName = color.name().toLowerCase(Locale.ENGLISH)
+        this.metadata = metadata
         oreDictName = "dye${marker.toCamelCaseString()}".toString()
     }
 

@@ -18,13 +18,13 @@ ore('dustFluix').add(item('appliedenergistics2:material', 8))
 // Fix the recipes.
 var createCrystalSeed = { int progress ->
     NBTTagCompound nbt = new NBTTagCompound()
-    nbt.setInteger('progress', progress)
+    nbt.func_74768_a('progress', progress)
 
     // Use ItemStack constructor directly to set capNbt
     Item seedItem = item('appliedenergistics2:crystal_seed').item
-    var seed = new ItemStack(seedItem, 1, progress, nbt.copy())
+    var seed = new ItemStack(seedItem, 1, progress, nbt)
 
-    seed.setTagCompound(nbt)
+    seed.func_77982_d(nbt)
     return seed
 }
 
