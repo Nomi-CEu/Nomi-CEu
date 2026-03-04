@@ -2,6 +2,7 @@ package post.main.mod.ae2
 
 import static appeng.items.misc.ItemCrystalSeed.*
 import static gregtech.api.GTValues.*
+import static post.classes.Common.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.Item
@@ -17,14 +18,13 @@ ore('dustFluix').add(item('appliedenergistics2:material', 8))
 // They do NOT correctly set the NBT, although it appears correct in most scenarios, it does not work in AE2 autocraft.
 // Fix the recipes.
 var createCrystalSeed = { int progress ->
-    NBTTagCompound nbt = new NBTTagCompound()
-    nbt.func_74768_a('progress', progress)
+    NBTTagCompound nbt = parseNbtJson("{progress:${progress}}")
 
     // Use ItemStack constructor directly to set capNbt
     Item seedItem = item('appliedenergistics2:crystal_seed').item
     var seed = new ItemStack(seedItem, 1, progress, nbt)
 
-    seed.func_77982_d(nbt)
+    setStackTag(seed, nbt)
     return seed
 }
 
