@@ -8,7 +8,9 @@ import gregtech.api.unification.material.MarkerMaterial
 import gregtech.api.unification.material.MarkerMaterials
 import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
+import net.minecraft.item.crafting.Ingredient
 import net.minecraft.nbt.NBTTagCompound
+import net.minecraftforge.fml.common.registry.ForgeRegistries
 import org.apache.commons.lang3.tuple.Pair
 
 /**
@@ -21,6 +23,7 @@ class Common {
     private static List<ItemStack> eioGlassesCache = null
     private static List<Pair<Integer, String>> voltageNamesCache = null
     private static List<ColorInfo> colorInfoCache = null
+    private static Map<Ingredient, ItemStack[]> ingredientMatchingStacksCache = new IdentityHashMap<>()
 
     /**
      * The GroovyScript logger.
@@ -118,60 +121,55 @@ class Common {
         return colorInfoCache
     }
 
-    static ItemStack[] ingredientMatchingStacks(def ingredient) {
-        if (ingredient.metaClass.respondsTo(ingredient, 'getMatchingStacks')) return ingredient.getMatchingStacks() as ItemStack[]
-        return ingredient.func_193365_a() as ItemStack[]
+    // groovylint-disable-next-line UnnecessaryGetter
+    static ItemStack[] ingredientMatchingStacks(Ingredient ingredient) {
+        var cachedStacks = ingredientMatchingStacksCache.get(ingredient)
+        if (cachedStacks != null) return cachedStacks
+
+        for (var item : ForgeRegistries.ITEMS) {
+            for (int meta = 0; meta < 128; meta++) {
+                var candidate = new ItemStack(item, 1, meta)
+                if (candidate.isEmpty()) continue
+                if (!ingredient.apply(candidate)) continue
+
+                ItemStack[] resolvedStacks = [candidate.copy()] as ItemStack[]
+                ingredientMatchingStacksCache.put(ingredient, resolvedStacks)
+                return resolvedStacks
+            }
+        }
+
+        ItemStack[] resolvedStacks = [] as ItemStack[]
+        ingredientMatchingStacksCache.put(ingredient, resolvedStacks)
+        return resolvedStacks
     }
 
     static boolean isNbtEmpty(NBTTagCompound nbt) {
         if (nbt == null) return true
-        try {
-            return nbt.isEmpty() as boolean
-        } catch (MissingMethodException ignored) {
-            return nbt.func_82582_d() as boolean
-        }
+        // groovylint-disable-next-line UnnecessaryGetter
+        return nbt.isEmpty() as boolean
     }
 
     static boolean nbtHasNumericKey(NBTTagCompound nbt, String key) {
         if (nbt == null || isNbtEmpty(nbt)) return false
 
-        try {
-            return nbt.hasKey(key, net.minecraftforge.common.util.Constants.NBT.TAG_ANY_NUMERIC) as boolean
-        } catch (MissingMethodException ignored) {
-            return nbt.func_150297_b(key, net.minecraftforge.common.util.Constants.NBT.TAG_ANY_NUMERIC) as boolean
-        }
+        return nbt.hasKey(key, net.minecraftforge.common.util.Constants.NBT.TAG_ANY_NUMERIC) as boolean
     }
 
     static void nbtSetInt(NBTTagCompound nbt, String key, int value) {
-        try {
-            nbt.setInteger(key, value)
-        } catch (MissingMethodException ignored) {
-            nbt.func_74768_a(key, value)
-        }
+        nbt.setInteger(key, value)
     }
 
     static void nbtSetByte(NBTTagCompound nbt, String key, byte value) {
-        try {
-            nbt.setByte(key, value)
-        } catch (MissingMethodException ignored) {
-            nbt.func_74774_a(key, value)
-        }
+        nbt.setByte(key, value)
     }
 
     static byte nbtGetByte(NBTTagCompound nbt, String key) {
-        try {
-            return (nbt.getByte(key) ?: ((byte) 0)) as byte
-        } catch (MissingMethodException ignored) {
-            return (nbt.func_74771_c(key) ?: ((byte) 0)) as byte
-        }
+        return (nbt.getByte(key) ?: ((byte) 0)) as byte
     }
 
     static NBTTagCompound getTag(ItemStack stack) {
-        try {
-            return stack.getTagCompound() as NBTTagCompound
-        } catch (MissingMethodException ignored) {
-            return stack.func_77978_p() as NBTTagCompound
-        }
+        // groovylint-disable-next-line UnnecessaryGetter
+        return stack.getTagCompound() as NBTTagCompound
     }
 
     static NBTTagCompound getOrCreateTag(ItemStack stack) {
@@ -184,28 +182,13 @@ class Common {
     }
 
     static void setStackTag(ItemStack stack, NBTTagCompound tag) {
-        try {
-            stack.setTagCompound(tag)
-        } catch (MissingMethodException ignored) {
-            stack.func_77982_d(tag)
-        }
+        // groovylint-disable-next-line UnnecessarySetter
+        stack.setTagCompound(tag)
     }
 
     static NBTTagCompound copyTag(NBTTagCompound tag) {
         if (tag == null) return null
-        try {
-            return tag.copy() as NBTTagCompound
-        } catch (MissingMethodException ignored) {
-            return tag.func_74737_b() as NBTTagCompound
-        }
-    }
-
-    static NBTTagCompound parseNbtJson(String json) {
-        try {
-            return net.minecraft.nbt.JsonToNBT.getTagFromJson(json) as NBTTagCompound
-        } catch (MissingMethodException ignored) {
-            return net.minecraft.nbt.JsonToNBT.func_180713_a(json) as NBTTagCompound
-        }
+        return tag.copy() as NBTTagCompound
     }
 
 }
