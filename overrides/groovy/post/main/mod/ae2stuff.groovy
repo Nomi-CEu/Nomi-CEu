@@ -3,7 +3,6 @@ package post.main.mod
 import static post.classes.Common.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 
-
 // Network Visualisation Tool
 crafting.shapedBuilder()
     .output(item('ae2stuff:visualiser'))

@@ -23,7 +23,7 @@ class Common {
     private static List<ItemStack> eioGlassesCache = null
     private static List<Pair<Integer, String>> voltageNamesCache = null
     private static List<ColorInfo> colorInfoCache = null
-    private static Map<Ingredient, ItemStack[]> ingredientMatchingStacksCache = new IdentityHashMap<>()
+    private static final Map<Ingredient, ItemStack[]> ingredientMatchingStacksCache = new IdentityHashMap<>()
 
     /**
      * The GroovyScript logger.
@@ -129,7 +129,7 @@ class Common {
         for (var item : ForgeRegistries.ITEMS) {
             for (int meta = 0; meta < 128; meta++) {
                 var candidate = new ItemStack(item, 1, meta)
-                if (candidate.isEmpty()) continue
+                if (candidate.empty) continue
                 if (!ingredient.apply(candidate)) continue
 
                 ItemStack[] resolvedStacks = [candidate.copy()] as ItemStack[]

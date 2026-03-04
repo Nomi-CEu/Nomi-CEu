@@ -8,7 +8,6 @@ import com.cleanroommc.groovyscript.compat.vanilla.CraftingRecipe.InputList
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import net.minecraft.item.ItemStack
 import net.minecraft.nbt.NBTTagCompound
-import net.minecraftforge.common.util.Constants
 
 /* Space Station ID Chip Copy Recipe */
 var spaceStationChip = item('advancedrocketry:spacestationchip')
