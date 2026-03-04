@@ -1,5 +1,7 @@
 package post.main.mod
 
+import static post.classes.Common.*
+
 import de.ellpeck.actuallyadditions.api.recipe.EmpowererRecipe
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.common.items.MetaItems
@@ -116,7 +118,7 @@ class IngredientMCEmpower extends SimpleIIngredient {
     Ingredient toMcIngredient() { return ing }
 
     @Override
-    ItemStack[] getMatchingStacks() { return ing.func_193365_a() }
+    ItemStack[] getMatchingStacks() { return ingredientMatchingStacks(ing) }
 
     @Override
     boolean test(ItemStack itemStack) { return ing.apply(itemStack) }

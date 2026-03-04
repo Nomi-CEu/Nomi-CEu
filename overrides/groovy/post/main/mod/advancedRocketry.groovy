@@ -18,7 +18,7 @@ var sourceChip = spaceStationChip.copy()
     .withNbt(exampleNbt) // Example only
     .withNbtFilter { NBTTagCompound nbt ->
         // NBT handling: not empty, contains UUID
-        nbt != null && !nbt.func_82582_d() && nbt.func_150297_b('UUID', Constants.NBT.TAG_ANY_NUMERIC)
+        nbtHasNumericKey(nbt, 'UUID')
     }.mark('source')
     .reuse()
 
@@ -26,7 +26,7 @@ crafting.shapelessBuilder()
     .output(spaceStationChip.copy().withNbt(exampleNbt)) // Example only
     .input(sourceChip, spaceStationChip.copy().whenNoNbt())
     .recipeFunction { ItemStack output, InputList inputs, CraftingInfo info ->
-        output.func_77982_d(inputs.findMarkedOrEmpty('source').func_77978_p().func_74737_b())
+        setStackTag(output, copyTag(getTag(inputs.findMarkedOrEmpty('source'))))
         return output
     }.setOutputTooltip(translatable('nomiceu.tooltip.advancedrocketry.copy_station_id_chips'))
     .register()
