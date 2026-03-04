@@ -1,6 +1,6 @@
 # Nomi-CEu 1.7.7 Sponge Compatability.
 
-This fork packages the Sponge-compatible Groovy changes and includes SpongeForge for server use.
+This fork packages the Sponge-compatible Groovy changes. SpongeForge is not bundled; download it separately from https://github.com/SpongePowered/SpongeForge/releases.
 
 <p align="center"><img src="https://raw.githubusercontent.com/Nomi-CEu/Branding/refs/heads/main/Nomi%20CEu/Logo/256x/logo-normal.png" alt="Logo"></p>
 <h1 align="center">Nomifactory CEu</h1>
