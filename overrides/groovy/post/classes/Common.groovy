@@ -23,7 +23,7 @@ class Common {
     private static List<ItemStack> eioGlassesCache = null
     private static List<Pair<Integer, String>> voltageNamesCache = null
     private static List<ColorInfo> colorInfoCache = null
-    private static final Map<Ingredient, ItemStack[]> ingredientMatchingStacksCache = new IdentityHashMap<>()
+    private static final Map<Ingredient, ItemStack[]> INGREDIENT_MATCHING_STACKS_CACHE = new IdentityHashMap<>()
 
     /**
      * The GroovyScript logger.
@@ -123,7 +123,7 @@ class Common {
 
     // groovylint-disable-next-line UnnecessaryGetter
     static ItemStack[] ingredientMatchingStacks(Ingredient ingredient) {
-        var cachedStacks = ingredientMatchingStacksCache.get(ingredient)
+        var cachedStacks = INGREDIENT_MATCHING_STACKS_CACHE.get(ingredient)
         if (cachedStacks != null) return cachedStacks
 
         for (var item : ForgeRegistries.ITEMS) {
@@ -133,13 +133,13 @@ class Common {
                 if (!ingredient.apply(candidate)) continue
 
                 ItemStack[] resolvedStacks = [candidate.copy()] as ItemStack[]
-                ingredientMatchingStacksCache.put(ingredient, resolvedStacks)
+                INGREDIENT_MATCHING_STACKS_CACHE.put(ingredient, resolvedStacks)
                 return resolvedStacks
             }
         }
 
         ItemStack[] resolvedStacks = [] as ItemStack[]
-        ingredientMatchingStacksCache.put(ingredient, resolvedStacks)
+        INGREDIENT_MATCHING_STACKS_CACHE.put(ingredient, resolvedStacks)
         return resolvedStacks
     }
 
