@@ -362,13 +362,13 @@ crafting.shapedBuilder()
 // Basic Cell Mass Change
 mods.gregtech.bender.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { out -> out * (out.count * 4) }
+        builder.changeEachOutput { out -> out * (out.amount * 4) }
             .replaceAndRegister()
     }
 
 mods.gregtech.extruder.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { out -> out * (out.count * 4) }
+        builder.changeEachOutput { out -> out * (out.amount * 4) }
             .replaceAndRegister()
     }
 

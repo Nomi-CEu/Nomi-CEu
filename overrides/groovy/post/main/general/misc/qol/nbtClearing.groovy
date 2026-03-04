@@ -45,14 +45,14 @@ List<ItemStack> canClearDrawers = []
 for (var meta : 0..4) {
     nbtClearingRecipe(item('storagedrawers:basicdrawers', meta), { stack ->
         var tag = transferSubTags(stack, 'material')
-        stack.tagCompound = transferDrawerUpgradeData(stack, tag)
+        stack.func_77982_d(transferDrawerUpgradeData(stack, tag))
     }, empty, WARNING_TOOLTIP)
 
     canClearDrawers.add(item('storagedrawers:basicdrawers', meta))
 }
 
 var normalClearer = { ItemStack stack ->
-    stack.tagCompound = transferDrawerUpgradeData(stack, null)
+    stack.func_77982_d(transferDrawerUpgradeData(stack, null))
 }
 
 // GregTech Drawers
@@ -73,7 +73,7 @@ canClearDrawers.add(item('storagedrawers:compdrawers'))
 /* Framed Drawer Like */
 var framedClearer = { ItemStack stack ->
     var tag = transferSubTags(stack, 'MatS', 'MatT', 'MatF')
-    stack.tagCompound = transferDrawerUpgradeData(stack, tag)
+    stack.func_77982_d(transferDrawerUpgradeData(stack, tag))
 }
 
 // Framed Drawers
@@ -93,7 +93,7 @@ for (var canClear : canClearDrawers) {
 
 // Thermal Portable Tanks
 nbtClearingRecipe(item('thermalexpansion:tank')) { stack ->
-    stack.tagCompound = transferSubTags(stack, 'Creative', 'Level', 'RSControl')
+    stack.func_77982_d(transferSubTags(stack, 'Creative', 'Level', 'RSControl'))
 }
 
 // Tooltips for Other Clearable Containers
