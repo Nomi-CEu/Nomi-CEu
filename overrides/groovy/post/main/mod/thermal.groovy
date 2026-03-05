@@ -114,10 +114,10 @@ class UpgradeIngredient extends SimpleIIngredient {
         if (!ItemMeta.compare(toUpgrade, itemStack)) return false
 
         // Check Level
-        var tag = getTag(itemStack)
+        var tag = itemStack.hasProperty("tagCompound") ? itemStack.tagCompound : getTag(itemStack)
         if (tag == null) return true
 
-        return matchingLevels.contains(nbtGetByte(tag, tagKey))
+        return matchingLevels.contains(tag.getByte(tagKey))
     }
 
 }
@@ -126,7 +126,6 @@ void createAllUpgradeRecipes(ItemStack toUpgrade) {
     // Upgrade
     for (var level : 1..4) {
         var result = toUpgrade.copy().withNbt([(UpgradeIngredient.tagKey) : (byte) level])
-
         var upgrade = item('thermalfoundation:upgrade', level - 1) // Upgrades: 0 = Hardened, 1 = Reinforced, etc.
 
         createUpgradeRecipe(result, toUpgrade, upgrade, [level - 1])
