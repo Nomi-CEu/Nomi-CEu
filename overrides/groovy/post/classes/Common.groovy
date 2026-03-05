@@ -109,13 +109,10 @@ class Common {
 
         // We can't use marker materials' COLORS map, as it is broken for dark gray
         colorInfoCache = []
+
         var dyes = EnumDyeColor.values()
-
         for (int i = 0; i < dyes.length; i++) {
-            var dye = dyes[i]
-            var marker = MarkerMaterials.Color.VALUES[i]
-
-            colorInfoCache.add(new ColorInfo(dye, i, marker))
+            colorInfoCache.add(new ColorInfo(dyes[i], i, MarkerMaterials.Color.VALUES[i]))
         }
 
         return colorInfoCache
@@ -143,54 +140,10 @@ class Common {
         return resolvedStacks
     }
 
-    static boolean isNbtEmpty(NBTTagCompound nbt) {
-        if (nbt == null) return true
-        // groovylint-disable-next-line UnnecessaryGetter
-        return nbt.isEmpty() as boolean
-    }
-
-    static boolean nbtHasNumericKey(NBTTagCompound nbt, String key) {
-        if (nbt == null || isNbtEmpty(nbt)) return false
-
-        return nbt.hasKey(key, net.minecraftforge.common.util.Constants.NBT.TAG_ANY_NUMERIC) as boolean
-    }
-
-    static void nbtSetInt(NBTTagCompound nbt, String key, int value) {
-        nbt.setInteger(key, value)
-    }
-
-    static void nbtSetByte(NBTTagCompound nbt, String key, byte value) {
-        nbt.setByte(key, value)
-    }
-
-    static byte nbtGetByte(NBTTagCompound nbt, String key) {
-        return (nbt.getByte(key) ?: ((byte) 0)) as byte
-    }
-
     static NBTTagCompound getTag(ItemStack stack) {
         // groovylint-disable-next-line UnnecessaryGetter
         return stack.getTagCompound() as NBTTagCompound
     }
-
-    static NBTTagCompound getOrCreateTag(ItemStack stack) {
-        var tag = getTag(stack)
-        if (tag != null) return tag
-
-        tag = new NBTTagCompound()
-        setStackTag(stack, tag)
-        return tag
-    }
-
-    static void setStackTag(ItemStack stack, NBTTagCompound tag) {
-        // groovylint-disable-next-line UnnecessarySetter
-        stack.setTagCompound(tag)
-    }
-
-    static NBTTagCompound copyTag(NBTTagCompound tag) {
-        if (tag == null) return null
-        return tag.copy() as NBTTagCompound
-    }
-
 }
 
 class ColorInfo {
@@ -207,10 +160,14 @@ class ColorInfo {
     // Ore dict name of the dye
     private final String oreDictName
 
-    ColorInfo(EnumDyeColor color, int metadata, MarkerMaterial marker) {
+    ColorInfo(EnumDyeColor color, int metadata,  MarkerMaterial marker) {
         unlocalizedName = color.name().toLowerCase(Locale.ENGLISH)
         this.metadata = metadata
         oreDictName = "dye${marker.toCamelCaseString()}".toString()
+    }
+
+    ColorInfo(EnumDyeColor color,  MarkerMaterial marker) {
+        this(color, color.hasProperty("metadata") ? color.metadata: color.getMetadata(), marker)
     }
 
     String getUnlocalizedName() {
