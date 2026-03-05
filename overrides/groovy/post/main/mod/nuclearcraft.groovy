@@ -109,7 +109,7 @@ for (var fuel : fuelMetas) {
         mods.gregtech.centrifuge.changeByInput([item("nuclearcraft:depleted_fuel_${fuel.key}", meta)], null)
             .changeEachOutput { ItemStack stack ->
                 var newOutput = checkReplacementsOrDefault(stack, u235Tiny, u238Tiny, p239Tiny, p241Tiny)
-                if(stack.hasProperty('count')){
+                if (stack.hasProperty('count')) {
                     newOutput.count = (int) Math.ceil(stack.count * 1.1f)
                 } else {
                     newOutput.amount = (int) Math.ceil(stack.amount * 1.1f)

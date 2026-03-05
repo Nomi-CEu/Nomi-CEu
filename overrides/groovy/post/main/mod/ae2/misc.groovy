@@ -6,7 +6,6 @@ import static gregtech.api.GTValues.*
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.nbt.NBTTagCompound
 import org.apache.commons.lang3.tuple.Pair
 
 // Standardise fluix dust

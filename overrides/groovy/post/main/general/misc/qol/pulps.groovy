@@ -5,7 +5,6 @@ import static gregtech.api.unification.ore.OrePrefix.*
 
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 
-import gregtech.api.recipes.ingredients.GTRecipeInput
 import gregtech.api.recipes.ingredients.GTRecipeItemInput
 import gregtech.api.unification.OreDictUnifier
 

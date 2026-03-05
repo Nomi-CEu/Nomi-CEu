@@ -144,6 +144,7 @@ class Common {
         // groovylint-disable-next-line UnnecessaryGetter
         return stack.getTagCompound() as NBTTagCompound
     }
+
 }
 
 class ColorInfo {
@@ -167,7 +168,7 @@ class ColorInfo {
     }
 
     ColorInfo(EnumDyeColor color,  MarkerMaterial marker) {
-        this(color, color.hasProperty("metadata") ? color.metadata: color.getMetadata(), marker)
+        this(color, color.hasProperty('metadata') ? color.metadata : color.getMetadata(), marker)
     }
 
     String getUnlocalizedName() {

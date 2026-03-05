@@ -114,7 +114,7 @@ class UpgradeIngredient extends SimpleIIngredient {
         if (!ItemMeta.compare(toUpgrade, itemStack)) return false
 
         // Check Level
-        var tag = itemStack.hasProperty("tagCompound") ? itemStack.tagCompound : getTag(itemStack)
+        var tag = itemStack.hasProperty('tagCompound') ? itemStack.tagCompound : getTag(itemStack)
         if (tag == null) return true
 
         return matchingLevels.contains(tag.getByte(tagKey))
