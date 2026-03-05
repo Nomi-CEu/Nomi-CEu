@@ -111,14 +111,14 @@ mods.gregtech.arc_furnace.changeByOutput([metaitem('nomilabs:ingotInfinity')], n
             recipe.category(RecipeCategories.ARC_FURNACE_RECYCLING)
         }.changeEachInput { input ->
             return new GTRecipeOreInput(OreDictUnifier.getOreDictionaryNames(input.inputStacks[0]).first())
-        }.changeEachOutput { out -> item('avaritia:resource', 6) * out.amount }
+        }.changeEachOutput { out -> item('avaritia:resource', 6) * (out.hasProperty('amount') ? out.amount : out.count) }
             .replaceAndRegister()
         }
 
 for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES]) {
     map.virtualized.changeByOutput([metaitem('nomilabs:ingotInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
-            builder.changeEachOutput { out -> item('avaritia:resource', 6) * out.amount }
+            builder.changeEachOutput { out -> item('avaritia:resource', 6) * (out.hasProperty('amount') ? out.amount : out.count) }
                 .replaceAndRegister()
         }
 }
@@ -127,7 +127,7 @@ for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES]) {
 for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES, EXTRUDER_RECIPES]) {
     map.virtualized.changeByOutput([metaitem('nomilabs:blockInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
-            builder.changeEachOutput { out -> item('avaritia:block_resource', 1) * out.amount }
+            builder.changeEachOutput { out -> item('avaritia:block_resource', 1) * (out.hasProperty('amount') ? out.amount : out.count) }
                 .replaceAndRegister()
         }
 }
@@ -136,7 +136,7 @@ for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES, EXTRUDER_RECIPES]) {
 for (var map : [FORGE_HAMMER_RECIPES, CUTTER_RECIPES, EXTRUDER_RECIPES, BENDER_RECIPES]) {
     map.virtualized.changeByOutput([metaitem('nomilabs:plateInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
-            builder.changeEachOutput { out -> item('moreplates:infinity_plate') * out.amount }
+            builder.changeEachOutput { out -> item('moreplates:infinity_plate') * (out.hasProperty('amount') ? out.amount : out.count) }
                 .replaceAndRegister()
         }
 }
