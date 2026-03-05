@@ -63,7 +63,6 @@ static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
     ItemStack sideStack = item('xtones:zane').first
     ItemStack trimStack = trim ? item('extendedcrafting:storage', 4).first : IIngredient.EMPTY.first
     ItemStack frontStack = front ? item('xtones:zane', 15).first : IIngredient.EMPTY.first
-
     var frameable = (IFrameable) stack.item
     return frameable.decorate(stack.copy(), sideStack, trimStack, frontStack)
 }
