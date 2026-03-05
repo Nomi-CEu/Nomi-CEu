@@ -2,10 +2,11 @@ package post.main.mod.ae2
 
 import static appeng.items.misc.ItemCrystalSeed.*
 import static gregtech.api.GTValues.*
-import static post.classes.Common.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
+import net.minecraft.nbt.NBTTagCompound
 import org.apache.commons.lang3.tuple.Pair
 
 // Standardise fluix dust
