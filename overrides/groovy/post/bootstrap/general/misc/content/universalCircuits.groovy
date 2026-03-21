@@ -1,4 +1,4 @@
-package post.main.general.misc.content
+package post.bootstrap.general.misc.content
 
 import static gregtech.api.GTValues.*
 
