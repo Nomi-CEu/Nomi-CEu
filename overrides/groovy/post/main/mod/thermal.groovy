@@ -4,6 +4,9 @@ import com.nomiceu.nomilabs.groovy.SimpleIIngredient
 import com.nomiceu.nomilabs.util.ItemMeta
 import net.minecraft.item.ItemStack
 
+// Allow Flux Infused Shovel as a hoe in farming station
+ore('toolHoe').add(item('redstonearsenal:tool.shovel_flux'))
+
 /* Fix Tanks in JEI */
 // Remove All, then add them back
 mods.jei.ingredient.hide(item('thermalexpansion:tank'))

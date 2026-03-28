@@ -1,5 +1,5 @@
 // SIDE: CLIENT
-// ^, Keyboard overrides should only be loaded on the client
+// ^, Keyboard Overrides affects Client Only
 
 package post.main.general.misc
 
@@ -41,12 +41,6 @@ addOverride('key.xu2.searchforitems', Keyboard.KEY_NONE)
 
 addOverride('key.ftbutilities.nbt', Keyboard.KEY_NONE)
 addOverride('key.ftbutilities.trash', Keyboard.KEY_NONE)
-
-addOverride('key.groovyscript.reload', Keyboard.KEY_NONE)
-
-// Doesn't affect ability to move bookmarks for some reason?
-// Also fixes Middle Click not working for sorting inventory
-addOverride('key.jeiutilities.pickBookmark', Keyboard.KEY_NONE)
 
 addOverride('key.journeymap.fullscreen_chat_position', Keyboard.KEY_NONE)
 

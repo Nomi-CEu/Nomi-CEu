@@ -2,6 +2,7 @@ package post.main.general.mid
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.chanced
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
+import static com.nomiceu.nomilabs.groovy.OreByProductChanger.AdvancedProcessing
 import static gregtech.api.GTValues.*
 
 import com.nomiceu.nomilabs.util.LabsModeHelper
@@ -35,6 +36,14 @@ mods.gregtech.electromagnetic_separator.changeByInput([metaitem('dustPureNaquada
             .chancedOutput(metaitem('dustNaquadahEnriched'), 2000, 500)
             .chancedOutput(metaitem('dustNaquadah'), 5000, 375)
     }.replaceAndRegister()
+
+AdvancedProcessing.ELECTROMAGNETIC_SEPARATOR.change(material('naquadah'), metaitem('dustNaquadahEnriched'))
+
+AdvancedProcessing.ELECTROMAGNETIC_SEPARATOR_BYPRODUCT_1.change(material('naquadah'), metaitem('dustNaquadahEnriched'))
+AdvancedProcessing.ELECTROMAGNETIC_SEPARATOR_BYPRODUCT_1.changeChance(material('naquadah'), 2000, 500)
+
+AdvancedProcessing.ELECTROMAGNETIC_SEPARATOR_BYPRODUCT_2.change(material('naquadah'), metaitem('dustNaquadah'))
+AdvancedProcessing.ELECTROMAGNETIC_SEPARATOR_BYPRODUCT_2.changeChance(material('naquadah'), 5000, 375)
 
 // Nether Star Block -> Nether Star
 crafting.addShapeless(item('minecraft:nether_star') * 9, [ore('blockNetherStar')])

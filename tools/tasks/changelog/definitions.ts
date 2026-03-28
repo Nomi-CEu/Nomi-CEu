@@ -94,12 +94,6 @@ const featureCategory: Category = {
 	defaultSubCategory: bothModes,
 	subCategories: [qolChanges, bothModes, normalMode, hardMode],
 };
-const questBookCategory: Category = {
-	commitKey: "[QB]",
-	categoryName: "Quest Book Changes",
-	defaultSubCategory: bothModes,
-	subCategories: [bothModes, normalMode, hardMode],
-};
 const bugCategory: Category = {
 	commitKey: "[BUG]",
 	categoryName: "Bug Fixes",
@@ -110,7 +104,25 @@ const generalCategory: Category = {
 	commitKey: "[GENERAL]",
 	categoryName: "General Changes",
 	defaultSubCategory: other,
-	subCategories: [jeiChanges, modUpdates, modAdditions, modRemovals, other],
+	subCategories: [jeiChanges, other],
+};
+const addonCategory: Category = {
+	commitKey: "[ADDON]",
+	categoryName: "Addon Support Changes",
+	defaultSubCategory: emptySubCategory,
+	subCategories: [emptySubCategory],
+};
+const questBookCategory: Category = {
+	commitKey: "[QB]",
+	categoryName: "Quest Book Changes",
+	defaultSubCategory: bothModes,
+	subCategories: [bothModes, normalMode, hardMode],
+};
+const modChangesCategory: Category = {
+	commitKey: undefined, // Addition via internal logic ONLY
+	categoryName: "Mod Changes",
+	defaultSubCategory: emptySubCategory, // Should never happen; set to non-existent sub-category
+	subCategories: [modUpdates, modAdditions, modRemovals],
 };
 const internalCategory: Category = {
 	commitKey: "[INTERNAL]",
@@ -129,9 +141,11 @@ export const categories: Category[] = [
 	balancingCategory,
 	performanceCategory,
 	featureCategory,
-	questBookCategory,
 	bugCategory,
 	generalCategory,
+	addonCategory,
+	questBookCategory,
+	modChangesCategory,
 	internalCategory,
 ];
 
@@ -172,7 +186,7 @@ const fixupParsing: Parser = {
 	applyFixCalback: (fix) =>
 		fix.changeFixes === undefined ||
 		fix.changeFixes === null ||
-		(fix.changeFixes as boolean),
+		fix.changeFixes,
 };
 
 const overridesParsing: Parser = {
@@ -252,17 +266,17 @@ export const modChangesAllocations: Record<
 	ModChangesAllocation
 > = {
 	added: {
-		category: generalCategory,
+		category: modChangesCategory,
 		subCategory: modAdditions,
 		template: "{{{ modName }}}: *v{{{ newVersion }}}*",
 	},
 	updated: {
-		category: generalCategory,
+		category: modChangesCategory,
 		subCategory: modUpdates,
 		template: "{{{ modName }}}: *v{{{ oldVersion }}} ⇥ v{{{ newVersion }}}*",
 	},
 	removed: {
-		category: generalCategory,
+		category: modChangesCategory,
 		subCategory: modRemovals,
 		template: "{{{ modName }}}: *v{{{ oldVersion }}}*",
 	},

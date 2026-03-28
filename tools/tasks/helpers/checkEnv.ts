@@ -14,10 +14,11 @@ const vars = [
  * Check required env. variables for validity and cancel
  * the build if something is unset.
  */
-export default async function checkEnv() {
+export default async function checkEnv(): Promise<void> {
 	checkEnvironmentalVariables(vars);
 
 	if (!/.+\/.+/.exec(process.env.GITHUB_REPOSITORY ?? "")) {
 		throw new Error("Malformed repository slug.");
 	}
+	return Promise.resolve();
 }

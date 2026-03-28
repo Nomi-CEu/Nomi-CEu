@@ -31,7 +31,9 @@ async function getForgeURLs() {
 	for (const file of files) {
 		// Look for the installation profile.
 		if (!forgeProfile && file.path == "version.json") {
-			forgeProfile = JSON.parse((await file.buffer()).toString());
+			forgeProfile = JSON.parse(
+				(await file.buffer()).toString(),
+			) as ForgeProfile;
 		}
 	}
 

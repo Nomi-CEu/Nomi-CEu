@@ -3,6 +3,7 @@ package post.main.general.early
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.JEIHelpers.addRecipeInputTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
 import static gregtech.api.GTValues.*
 import static org.apache.commons.lang3.tuple.Pair.of
 
@@ -47,6 +48,13 @@ if (LabsModeHelper.expert) {
 } else {
     // Remove mc paper recipe, is useless with endercore's shapeless one
     crafting.remove('minecraft:paper')
+
+    // Fix piston recipes: in only NM, GT forgot to use oredict for planks
+    mods.gregtech.assembler.changeByOutput([item('minecraft:piston')], null)
+        .forEach { ChangeRecipeBuilder builder ->
+            builder.changeInput(1) { return toGtInput(ore('plankWood')) }
+                .replaceAndRegister()
+        }
 }
 
 // Compressed Coke Clay Recipe

@@ -74,7 +74,7 @@ async function checkAndFix(shouldCheck: boolean) {
 		checkNormalQB = JSON.parse(nml1) as QuestBook;
 		checkExpertQB = JSON.parse(exp1) as QuestBook;
 	} else {
-		const normalSrc = (await select({
+		const normalSrc = await select({
 			message: "Which version should we use, for the Normal Source File?",
 			choices: [
 				{
@@ -86,9 +86,9 @@ async function checkAndFix(shouldCheck: boolean) {
 					value: "CFG-OVERRIDE" as SourceOption,
 				},
 			],
-		})) as SourceOption;
+		});
 
-		const expertSrc = (await select({
+		const expertSrc = await select({
 			message: "Which version should we use, for the Expert Source File?",
 			choices: [
 				{
@@ -100,7 +100,7 @@ async function checkAndFix(shouldCheck: boolean) {
 					value: "CFG-OVERRIDE" as SourceOption,
 				},
 			],
-		})) as SourceOption;
+		});
 
 		checkNormalQB = JSON.parse(
 			await fs.promises.readFile(
@@ -110,7 +110,7 @@ async function checkAndFix(shouldCheck: boolean) {
 				),
 				"utf-8",
 			),
-		);
+		) as QuestBook;
 
 		checkExpertQB = JSON.parse(
 			await fs.promises.readFile(
@@ -120,7 +120,7 @@ async function checkAndFix(shouldCheck: boolean) {
 				),
 				"utf-8",
 			),
-		);
+		) as QuestBook;
 	}
 
 	logInfo(colors.bold("Processing Normal QB..."));

@@ -551,12 +551,6 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 2, [
 	[<ore:stickWood>, <storagedrawers:customdrawers>, <ore:stickWood>],
 	[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 
-//Crystal Growth Chamber
-recipes.addShaped(<ae2stuff:grower>, [
-	[<ore:frameGtDarkSteel>, <appliedenergistics2:material:1>, <ore:frameGtDarkSteel>], 
-	[<appliedenergistics2:material:1>, <meta_tile_entity:hull.lv>, <appliedenergistics2:material:1>], 
-	[<ore:frameGtDarkSteel>, <appliedenergistics2:material:1>, <ore:frameGtDarkSteel>]]);	
-
 //Distillation Tower
 recipes.removeByRecipeName("gregtech:distillation_tower");
 recipes.addShaped(<meta_tile_entity:distillation_tower>, [

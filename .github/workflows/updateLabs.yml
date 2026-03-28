@@ -16,14 +16,14 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
-          owner: Nomi-CEu
+          owner: ${{ github.repository_owner }}
 
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: refs/heads/main
           fetch-depth: 0
@@ -38,10 +38,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages

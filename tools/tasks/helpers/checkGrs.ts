@@ -66,6 +66,10 @@ const preProcValidators: {
 	},
 ];
 
+const commonClassImport = /^import\spost\.classes\.Common/m;
+const logGlobalUse =
+	/^\s*log\.(msg|exception|format|(debug|info|warn|error|fatal)(MC)?)/m;
+
 export default async function checkGrsFiles(): Promise<void> {
 	const grsFiles = await glob(buildConfig.grsGlobs, {
 		cwd: rootDirectory,
@@ -129,5 +133,18 @@ async function checkGrsFile(file: string): Promise<void> {
 				"Package declarations must follow preprocessor descriptions after exactly one blank line!",
 			);
 		}
+	}
+
+	// Check for usage of grs global variable log, and non-static import of common class
+	if (commonClassImport.test(contents)) {
+		throw new Error(
+			"The `Common` class should not be imported as instance! Import all static fields instead (`import static post.classes.Common.*`)",
+		);
+	}
+
+	if (logGlobalUse.test(contents)) {
+		throw new Error(
+			"The GroovyScript global `log` variable should not be used! Use the static `GRS_LOG` field in the Common class instead!",
+		);
 	}
 }

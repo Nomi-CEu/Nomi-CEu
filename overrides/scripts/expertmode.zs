@@ -173,19 +173,6 @@ mixer.recipeBuilder()
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
 
-// Network Visualization Tool
-recipes.removeByRecipeName("ae2stuff:recipe5");
-makeShaped("ae2stuff_nvt", <ae2stuff:visualiser>, [
-		"S S",
-		"EPE",
-		"FFF",
-	], {
-		S: <metaitem:sensor.lv>,
-        E: <appliedenergistics2:material:24>, // Eng Processor
-        P: <ore:itemIlluminatedPanel>,
-        F: <ore:crystalPureFluix>
-	});
-
 // Conduit Binder Composite
 mixer.recipeBuilder()
 	.inputs([<ore:gravel> * 4, <ore:sand> * 4])
@@ -196,7 +183,6 @@ mixer.recipeBuilder()
 // Remove clay hand mortaring
 recipes.removeByRecipeName("gregtech:clay_block_to_dust");
 recipes.removeByRecipeName("gregtech:clay_ball_to_dust");
-
 
 //Item conduit - by hand
 recipes.addShaped(<enderio:item_item_conduit> * 4, [
@@ -296,12 +282,6 @@ recipes.addShaped(<storagedrawers:upgrade_template> * 4, [
 
 recipes.addShaped(<storagedrawers:upgrade_storage:3>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotAluminium>, <storagedrawers:upgrade_template>, <ore:ingotAluminium>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
 recipes.addShaped(<storagedrawers:upgrade_storage:4>, [[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>], [<ore:ingotVibrantAlloy>, <storagedrawers:upgrade_template>, <ore:ingotVibrantAlloy>], [<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
-
-//Crystal Growth Chamber
-recipes.addShaped(<ae2stuff:grower>, [
-	[<ore:frameGtBlueSteel>, <appliedenergistics2:material:1>, <ore:frameGtBlueSteel>], 
-	[<appliedenergistics2:material:1>, <meta_tile_entity:hull.lv>, <appliedenergistics2:material:1>], 
-	[<ore:frameGtBlueSteel>, <appliedenergistics2:material:1>, <ore:frameGtBlueSteel>]]);	
 
 // Remove LCR Radon
 <recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:ingotPlutonium> * 8, <metaitem:dustUranium>], [<liquid:air> * 10000]).remove();

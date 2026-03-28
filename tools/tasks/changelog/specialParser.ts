@@ -36,7 +36,11 @@ import {
 	modInfoList,
 	priorityKey,
 } from "./definitions.ts";
-import {bringOverPRLabels, findCategories, findSubCategory} from "./parser.ts";
+import {
+	bringOverPRLabels,
+	findCategories,
+	findSubCategory,
+} from "./parser.ts";
 import ChangelogData from "./changelogData.ts";
 import toml from "toml-v1";
 import { logError } from "#utils/log.ts";
@@ -51,16 +55,12 @@ export function specialParserSetup(inputData: ChangelogData): void {
 /**
  * Reads a commit's priority.
  */
-export async function parsePriority(
+export function parsePriority(
 	commitBody: string,
 	commitObject: Commit,
-): Promise<number | undefined> {
+): number | undefined {
 	if (!commitBody.includes(priorityKey)) return undefined;
-	const info = await parseTOML<PriorityInfo>(
-		commitBody,
-		commitObject,
-		priorityKey,
-	);
+	const info = parseTOML<PriorityInfo>(commitBody, commitObject, priorityKey);
 	if (!info) return undefined;
 
 	if (!info.priority) {
@@ -82,12 +82,12 @@ export async function parsePriority(
  * @commit The Commit Body. Does check whether the ignore key is there.
  * @return Returns undefined to continue, and an Ignored object if to skip.
  */
-export async function parseIgnore(
+export function parseIgnore(
 	commitBody: string,
 	commitObject: Commit,
-): Promise<Ignored | undefined> {
+): Ignored | undefined {
 	if (!commitBody.includes(ignoreKey)) return undefined;
-	const info = await parseTOML<IgnoreInfo>(commitBody, commitObject, ignoreKey);
+	const info = parseTOML<IgnoreInfo>(commitBody, commitObject, ignoreKey);
 	if (!info) return undefined;
 
 	if (!info.checks) {
@@ -182,10 +182,11 @@ export async function parseCoAuthor(
 		coAuthorsKey,
 		coAuthorsList,
 		(item) => !item.email || !item.name,
-		async (item) => {
+		(item) => {
 			const authors = data.coAuthorList.get(commitObject.hash) ?? [];
 			authors.push(item);
 			data.coAuthorList.set(commitObject.hash, authors);
+			return Promise.resolve();
 		},
 		(item) => item as unknown as AuthorInfo,
 	);
@@ -205,10 +206,11 @@ export async function parseFixUp(
 		fixUpKey,
 		fixUpList,
 		(item) => !item.sha || (!item.newTitle && !item.newBody),
-		async (item) => {
+		(item) => {
 			if (!item.mode) item.mode = "REPLACE"; // Default Mode is Replace (Legacy Compat)
 			// Only override if no other overrides, from newer commits, set
 			if (!data.commitFixes.has(item.sha)) data.commitFixes.set(item.sha, item);
+			return Promise.resolve();
 		},
 		(item) => item as unknown as FixUpInfo,
 		(matter) => {
@@ -275,8 +277,9 @@ export async function parseModInfo(
 				(invalidInfo && invalidRootDetails && invalidDetails)
 			);
 		},
-		async (item) => {
-			data.modInfoList.set(item.projectID, await getParsedModInfo(item));
+		(item) => {
+			data.modInfoList.set(item.projectID, getParsedModInfo(item));
+			return Promise.resolve();
 		},
 	);
 }
@@ -284,7 +287,7 @@ export async function parseModInfo(
 /**
  * Gets the parsed mod info of a mod info.
  */
-async function getParsedModInfo(modInfo: ModInfo): Promise<ParsedModInfo> {
+function getParsedModInfo(modInfo: ModInfo): ParsedModInfo {
 	const subMessages: ChangelogMessage[] = [];
 	if (modInfo.detail)
 		subMessages.push({
@@ -393,13 +396,13 @@ async function expandDetailsLevel(
 				await addDetailsLevel(
 					commitBody,
 					commitObject,
-					item as unknown[],
+					item,
 					`${indentation}${indentationLevel}`,
 					result,
 				);
 				return;
 			}
-			let string = item as string;
+			let string = item;
 			string = dedent(string).trim();
 
 			// Legacy Nested Details
@@ -503,9 +506,10 @@ export async function parseCombine(
 		combineKey,
 		combineList,
 		(item) => !item,
-		async (item) => {
+		(item) => {
 			if (!data.combineList.has(item)) data.combineList.set(item, []);
 			data.combineList.get(item)?.push(commitObject);
+			return Promise.resolve();
 		},
 		(root) => root[combineRoot] as string,
 	);
@@ -520,13 +524,13 @@ export async function parseCombine(
  * @param matterCallback An optional callback to perform on the matter.
  * @returns item The Item/Object. Undefined if error.
  */
-async function parseTOML<T>(
+function parseTOML<T>(
 	commitBody: string,
 	commitObject: Commit,
 	delimiter: string,
 	itemKey?: string,
 	matterCallback?: (matter: GrayMatterFile<string>) => void,
-): Promise<T | undefined> {
+): T | undefined {
 	let item: T;
 	const endMessage = getEndMessage(delimiter);
 
@@ -542,7 +546,7 @@ async function parseTOML<T>(
 			delimiters: delimiter,
 			engines: {
 				toml: (input): Record<string, unknown> => {
-					return parse(input) as Record<string, unknown>;
+					return parse(input);
 				},
 			},
 			language: "toml",
@@ -551,7 +555,7 @@ async function parseTOML<T>(
 		if (matterCallback) matterCallback(parseResult);
 
 		if (!itemKey) item = parseResult.data as T;
-		else item = parseResult.data[itemKey];
+		else item = parseResult.data[itemKey] as T;
 	} catch (e) {
 		logError(dedent`
 			Failed parsing TOML in body:
@@ -652,7 +656,7 @@ async function parseTOMLWithRootToList<T>(
 
 	// Parse Root TOML
 	try {
-		root = await parseTOML<Record<string, unknown>>(
+		root = parseTOML<Record<string, unknown>>(
 			commitBody,
 			commitObject,
 			delimiter,
@@ -729,8 +733,8 @@ async function parseTOMLWithRootToList<T>(
 
 	let list: T[];
 	try {
-		list = root[listKey] as unknown as T[];
-	} catch (e) {
+		list = root[listKey] as T[];
+	} catch {
 		logError(dedent`
 			List (key: '${listKey}') in body:
 			\`\`\`

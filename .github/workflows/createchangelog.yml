@@ -62,18 +62,19 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v1
+        if: ${{ inputs.branch }}
+        uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
-          owner: Nomi-CEu
+          owner: ${{ github.repository_owner }}
 
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
-          token: ${{ steps.token.outputs.token }}
+          token: ${{ inputs.branch && steps.token.outputs.token || github.token }}
 
       - name: Restore NPM Cached Files
         uses: actions/cache@v4
@@ -85,10 +86,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-
 
-      - name: Setup NodeJS v20
-        uses: actions/setup-node@v4
+      - name: Setup NodeJS v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           check-latest: true
 
       - name: Setup NPM Packages
@@ -107,7 +108,7 @@ jobs:
 
       - name: Commit and Push Changelog
         if: ${{ inputs.branch }}
-        uses: "stefanzweifel/git-auto-commit-action@v5"
+        uses: stefanzweifel/git-auto-commit-action@v7
         id: "commit-template"
         with:
           commit_message: "Upload Changelogs for Release ${{ inputs.tag }}"
@@ -118,7 +119,7 @@ jobs:
           create_branch: true
 
       - name: Upload Changelog
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Changelogs
           path: |

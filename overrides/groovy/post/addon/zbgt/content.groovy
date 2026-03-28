@@ -6,11 +6,13 @@ package post.addon.zbgt
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 import static gregtech.api.GTValues.*
+import static post.classes.Common.*
 
-import classes.post.Common
+import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.api.recipes.Recipe
+import gregtech.api.recipes.RecipeBuilder
 
 /* Creative Item Recipes */
 
@@ -192,8 +194,10 @@ for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').item.allItems) {
 
     List<Recipe> recipes = mods.gregtech.assembler.findByOutput([meta.stackForm], null)
 
-    if (recipes == null)
-        println "ZBGT Addon Script: Could not find recipes for wrap ${meta.unlocalizedName}!"
+    if (recipes == null) {
+        GRS_LOG.error "Could not find recipes for wrap ${meta.unlocalizedName}!"
+        continue
+    }
 
     for (Recipe recipe : recipes) {
         mods.gregtech.assembler.recipeBuilder()
@@ -205,18 +209,38 @@ for (MetaItem.MetaValueItem meta : item('zbgt:zbgt_meta_item').item.allItems) {
     }
 }
 
+/* Deprecate Generics (for Labs') */
+for (var tier : getVoltageNames(ULV, UHV)) {
+    var generic = metaitem("zbgt:generic_circuit.${tier.value}")
+
+    // Hide + Tooltips
+    mods.jei.ingredient.hide(generic)
+    addTooltip(generic, [
+        translatable('nomiceu.tooltip.mixed.deprecated_no_conversion'),
+        translatable('nomiceu.tooltip.mixed.deprecation_usable.1'),
+        translatable('nomiceu.tooltip.mixed.deprecation_usable.2', 'Nomi Labs\' Universal Circuits'),
+    ])
+
+    // Hide assembler recipe (but don't remove for compat)
+    mods.gregtech.assembler.changeByOutput([generic], null)
+        .forEach { ChangeRecipeBuilder builder ->
+            builder.builder { RecipeBuilder recipe -> recipe.hidden() }
+                .replaceAndRegister()
+        }
+}
+
 /* Unwrap Craft for Circuits */
-for (var tier : Common.getVoltageNames(ULV, UHV)) {
+for (var tier : getVoltageNames(ULV, UHV)) {
     mods.gregtech.assembler.recipeBuilder()
         .inputs(metaitem("zbgt:wrapped.circuit.${tier.value}"))
         .circuitMeta(1)
-        .outputs(metaitem("zbgt:generic_circuit.${tier.value}")) // Circuit Wraps contain one circuit only
+        .outputs(metaitem("nomilabs:universal_circuit.${tier.value}")) // Circuit Wraps contain one circuit only
         .duration(100).EUt(VA[LV])
         .buildAndRegister()
 }
 
 /* Dropper Cover Assembler Recipes (LuV-UV Already Exist) */
-for (var tier : Common.getVoltageNames(LV, IV)) {
+for (var tier : getVoltageNames(LV, IV)) {
     mods.gregtech.assembler.recipeBuilder()
         .inputs(
             metaitem("conveyor.module.${tier.value}"),

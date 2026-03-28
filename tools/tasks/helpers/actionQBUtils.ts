@@ -559,7 +559,7 @@ function sortKeysRecursiveIgnoreArray<T extends object>(
 
 	// We can modify results, Object.Keys returns a static array
 	Object.keys(result).forEach(function (key) {
-		const current = lodash.get(result, key);
+		const current = lodash.get(result, key) as unknown;
 		if (current) {
 			if (typeof current === "object") {
 				lodash.set(result, key, sortKeys(current, { compare }));
@@ -663,7 +663,7 @@ export async function readFromPorter(
 	// Make Sure Porter has Every Key
 	for (const key of Object.keys(defaultPorter)) {
 		// @ts-expect-error Cannot use String as Key
-		if (!savedPorter[key]) savedPorter[key] = defaultPorter[key];
+		if (!savedPorter[key]) savedPorter[key] = defaultPorter[key] as unknown;
 	}
 
 	// Add in Map

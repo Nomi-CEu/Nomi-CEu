@@ -93,3 +93,9 @@ export const infoQB = qbInfo.default;
 
 import * as labs from "./tasks/misc/updateLabs.ts";
 export const updateLabs = labs.updateLabs;
+
+import * as manifestChange from "./tasks/misc/manifestChangeComment.ts";
+export const manifestChangeComment = manifestChange.makeManifestChangeComment;
+
+import * as discord from "./tasks/misc/discord.ts";
+export const notifyDiscord = discord.default;

@@ -5,6 +5,7 @@ import static gregtech.api.GTValues.*
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.AssemblyLineRecipeBuilder
+import gregtech.api.recipes.ingredients.GTRecipeOreInput
 import gregtech.api.recipes.recipeproperties.ResearchProperty
 
 // ZPM Field Generator
@@ -26,6 +27,16 @@ if (LabsModeHelper.expert) {
                 .replaceAndRegister()
         }
 }
+
+// UV Energy Cluster
+// Allow all UV circuits, not just wetware
+mods.gregtech.assembly_line.changeByOutput([metaitem('energy.cluster')], null)
+    .forEach { ChangeRecipeBuilder builder ->
+        builder.changeInput(2) { input ->
+            return new GTRecipeOreInput('circuitUv', 4)
+        }.copyProperties(ResearchProperty.instance)
+            .replaceAndRegister()
+    }
 
 // Dark Soularium Jetplate
 mods.gregtech.assembly_line.recipeBuilder()

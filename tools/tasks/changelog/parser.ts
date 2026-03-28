@@ -138,7 +138,7 @@ export async function parseCommitBody(
 		return true;
 	}
 	if (commitBody.includes(ignoreKey)) {
-		const ignore = await parseIgnore(commitBody, commitObject);
+		const ignore = parseIgnore(commitBody, commitObject);
 
 		// Only return if ignore is not undefined
 		if (ignore) return ignore;
@@ -146,7 +146,7 @@ export async function parseCommitBody(
 
 	let newPriority = 0;
 	if (commitBody.includes(priorityKey)) {
-		const priority = await parsePriority(commitBody, commitObject);
+		const priority = parsePriority(commitBody, commitObject);
 
 		// Only set if priority is not undefined or 0
 		if (priority) newPriority = priority;

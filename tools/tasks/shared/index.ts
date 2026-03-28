@@ -118,8 +118,10 @@ async function fetchOrMakeChangelog() {
 	if (isEnvVariableSet("MADE_CHANGELOG")) {
 		let made = false;
 		try {
-			made = JSON.parse((process.env.MADE_CHANGELOG ?? "false").toLowerCase());
-		} catch (err) {
+			made = JSON.parse(
+				(process.env.MADE_CHANGELOG ?? "false").toLowerCase(),
+			) as boolean;
+		} catch {
 			throw new Error("Made Changelog Env Variable set to Invalid Value.");
 		}
 

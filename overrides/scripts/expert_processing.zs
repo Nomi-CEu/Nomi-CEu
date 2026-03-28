@@ -298,7 +298,6 @@ chemical_reactor.recipeBuilder()
 // H2SO4 require V2O5
 // Sulfur Trioxide * 1000
 <recipemap:chemical_reactor>.findRecipe(7, null, [<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000]).remove();
-<recipemap:large_chemical_reactor>.findRecipe(7, null, [<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000]).remove();
 
 chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:sulfur_dioxide> * 1000, <liquid:oxygen> * 1000)
@@ -320,8 +319,6 @@ large_chemical_reactor.recipeBuilder()
 // Fluoroantimonic Acid
 // Fluoroantimonic Acid * 1000
 <recipemap:chemical_reactor>.findRecipe(480, [<metaitem:dustAntimonyTrifluoride> * 4], [<liquid:hydrofluoric_acid> * 4000]).remove();
-// Fluoroantimonic Acid * 1000
-<recipemap:large_chemical_reactor>.findRecipe(480, [<metaitem:dustAntimonyTrifluoride> * 4], [<liquid:hydrofluoric_acid> * 4000]).remove();
 
 chemical_reactor.recipeBuilder()
     .inputs(<metaitem:dustAntimonyTrifluoride> * 4)
@@ -397,13 +394,10 @@ electrolyzer.recipeBuilder()
 <recipemap:electrolyzer>.findRecipe(120, [<metaitem:dustPlatinumRaw> * 3], null).remove();
 // Palladium Dust * 1
 <recipemap:chemical_reactor>.findRecipe(120, [<metaitem:dustPalladiumRaw> * 5], [<liquid:hydrochloric_acid> * 1000]).remove();
-<recipemap:large_chemical_reactor>.findRecipe(120, [<metaitem:dustPalladiumRaw> * 5], [<liquid:hydrochloric_acid> * 1000]).remove();
 // Ruthenium Tetroxide Dust * 5
 <recipemap:chemical_reactor>.findRecipe(1920, [<metaitem:dustInertMetalMixture> * 6], [<liquid:sulfuric_acid> * 1500]).remove();
-<recipemap:large_chemical_reactor>.findRecipe(1920, [<metaitem:dustInertMetalMixture> * 6], [<liquid:sulfuric_acid> * 1500]).remove();
 // Ruthenium Dust * 1
 <recipemap:chemical_reactor>.findRecipe(120, [<metaitem:dustRutheniumTetroxide> * 5, <metaitem:dustCarbon> * 2], null).remove();
-<recipemap:large_chemical_reactor>.findRecipe(120, [<metaitem:dustRutheniumTetroxide> * 5, <metaitem:dustCarbon> * 2], null).remove();
 // Rhodium Dust * 2
 <recipemap:electrolyzer>.findRecipe(120, null, [<liquid:rhodium_sulfate> * 1000]).remove();
 // Iridium Metal Residue * 5
@@ -412,7 +406,6 @@ electrolyzer.recipeBuilder()
 <recipemap:centrifuge>.findRecipe(120, [<metaitem:dustIridiumMetalResidue> * 5], null).remove();
 // Iridium Dust * 1
 <recipemap:chemical_reactor>.findRecipe(30, [<metaitem:dustIridiumChloride> * 4], [<liquid:hydrogen> * 3000]).remove();
-<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustIridiumChloride> * 4], [<liquid:hydrogen> * 3000]).remove();
 // Osmium Tetroxide Dust * 5
 <recipemap:distillation_tower>.findRecipe(120, null, [<liquid:acidic_osmium_solution> * 2000]).remove();
 // Osmium Tetroxide Dust * 1
@@ -421,7 +414,6 @@ electrolyzer.recipeBuilder()
 <recipemap:distillery>.findRecipe(30, [<metaitem:circuit.integrated>.withTag({Configuration: 1})], [<liquid:acidic_osmium_solution> * 400]).remove();
 // Osmium Dust * 1
 <recipemap:chemical_reactor>.findRecipe(30, [<metaitem:dustOsmiumTetroxide> * 5], [<liquid:hydrogen> * 8000]).remove();
-<recipemap:large_chemical_reactor>.findRecipe(30, [<metaitem:dustOsmiumTetroxide> * 5], [<liquid:hydrogen> * 8000]).remove();
 
 // Formic Acid
 chemical_reactor.recipeBuilder()
