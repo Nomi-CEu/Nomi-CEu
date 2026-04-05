@@ -6,6 +6,7 @@
   "loaders": {
     "postInit": [
       "post/classes",
+      "post/bootstrap",
       "post/main",
       "post/addon"
     ]
