@@ -36,11 +36,12 @@ for (var material : materials) {
         var stack = OreDictUnifier.get(prefix, material)
         if (stack.empty) continue
 
-        mods.gregtech.extruder.changeByOutput([stack], null)
-            .forEach { ChangeRecipeBuilder builder ->
-                builder.changeInput(0) {
-                    new GTRecipeItemInput(dust, dust.hasProperty('amount') ? dust.amount : dust.count)
-                }.buildAndRegister()
-            }
+        mods.gregtech.extruder.changeByOutput([stack], null).each { builder ->
+            builder.changeInput(0) { input ->
+                def amount = input.respondsTo('getAmount') ? input.getAmount() :
+                    input.respondsTo('getCount') ? input.getCount() : 1
+                new GTRecipeItemInput(dust, amount)
+            }.buildAndRegister()
+        }
     }
 }
