@@ -38,8 +38,8 @@ for (var material : materials) {
 
         mods.gregtech.extruder.changeByOutput([stack], null).each { builder ->
             builder.changeInput(0) { input ->
-                def amount = input.respondsTo('getAmount') ? input.getAmount() :
-                    input.respondsTo('getCount') ? input.getCount() : 1
+                def amount = input.hasProperty('amount') ? input.amount :
+                    input.hasProperty('count') ? input.count : 1
                 new GTRecipeItemInput(dust, amount)
             }.buildAndRegister()
         }
