@@ -1,6 +1,7 @@
 package post.main.mod
 
 import static post.classes.Common.*
+import static post.classes.NBTUtil.*
 import de.ellpeck.actuallyadditions.api.recipe.EmpowererRecipe
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.common.items.MetaItems

@@ -2,6 +2,7 @@ package post.main.mod.ae2
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.*
 import static gregtech.api.GTValues.*
+import static post.classes.SpongeAdaptor.*
 
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
@@ -335,7 +336,7 @@ quartzRecipes[0].copy().forEach { ChangeRecipeBuilder builder ->
             .inputs(item('appliedenergistics2:material', 8))
             .circuitMeta(1)
     }.changeEachOutput { output ->
-        return item('appliedenergistics2:material', 7) * (output.hasProperty('count') ? output.count : output.amount)
+        return item('appliedenergistics2:material', 7) * getItemStackSize(output)
     }.changeEachChancedOutput { output ->
         return chanced(item('appliedenergistics2:material', 7), output.chance, output.chanceBoost)
     }.buildAndRegister()

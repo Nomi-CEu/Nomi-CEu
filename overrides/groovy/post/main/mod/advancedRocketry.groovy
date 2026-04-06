@@ -2,6 +2,7 @@ package post.main.mod
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 import static gregtech.api.GTValues.*
+import static post.classes.NBTUtil.*
 
 import com.cleanroommc.groovyscript.compat.vanilla.CraftingInfo
 import com.cleanroommc.groovyscript.compat.vanilla.CraftingRecipe.InputList

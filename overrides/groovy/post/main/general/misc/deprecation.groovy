@@ -4,6 +4,7 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.MaterialHelpers.forMater
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TooltipHelpers.addTooltip
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 import static gregtech.api.recipes.RecipeMaps.*
+import static post.classes.SpongeAdaptor.*
 
 import com.nomiceu.nomilabs.gregtech.material.registry.LabsMaterials
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
@@ -111,7 +112,7 @@ mods.gregtech.arc_furnace.changeByOutput([metaitem('nomilabs:ingotInfinity')], n
             recipe.category(RecipeCategories.ARC_FURNACE_RECYCLING)
         }.changeEachInput { input ->
             return new GTRecipeOreInput(OreDictUnifier.getOreDictionaryNames(input.inputStacks[0]).first())
-        }.changeEachOutput { out -> item('avaritia:resource', 6) * (out.hasProperty('count') ? out.count : out.amount) }
+        }.changeEachOutput { out -> item('avaritia:resource', 6) * getItemStackSize(out) }
             .replaceAndRegister()
         }
 
@@ -119,7 +120,7 @@ for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES]) {
     map.virtualized.changeByOutput([metaitem('nomilabs:ingotInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
             builder.changeEachOutput { out ->
-                item('avaritia:resource', 6) * (out.hasProperty('count') ? out.count : out.amount)
+                item('avaritia:resource', 6) * getItemStackSize(out)
             }
                 .replaceAndRegister()
         }
@@ -130,7 +131,7 @@ for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES, EXTRUDER_RECIPES]) {
     map.virtualized.changeByOutput([metaitem('nomilabs:blockInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
             builder.changeEachOutput { out ->
-                item('avaritia:block_resource', 1) * (out.hasProperty('count') ? out.count : out.amount)
+                item('avaritia:block_resource', 1) * getItemStackSize(out)
             }
                 .replaceAndRegister()
         }
@@ -141,7 +142,7 @@ for (var map : [FORGE_HAMMER_RECIPES, CUTTER_RECIPES, EXTRUDER_RECIPES, BENDER_R
     map.virtualized.changeByOutput([metaitem('nomilabs:plateInfinity')], null)
         .forEach { ChangeRecipeBuilder builder ->
             builder.changeEachOutput { out ->
-                item('moreplates:infinity_plate') * (out.hasProperty('count') ? out.count : out.amount)
+                item('moreplates:infinity_plate') * getItemStackSize(out)
             }
                 .replaceAndRegister()
         }

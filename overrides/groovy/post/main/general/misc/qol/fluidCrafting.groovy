@@ -3,6 +3,8 @@ package post.main.general.misc.qol
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translate
 import static com.nomiceu.nomilabs.util.LabsTranslate.Translatable
+import static post.classes.NBTUtil.*
+import static post.classes.SpongeAdaptor.*
 
 import com.google.common.base.CaseFormat
 import com.nomiceu.nomilabs.groovy.SimpleIIngredient
@@ -424,8 +426,8 @@ class IngredientFluidContainer extends SimpleIIngredient {
         IFluidHandlerItem handler = null
         if (itemStack.hasCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)) {
             var newStack = itemStack.copy()
-            if (newStack.amount > 1) {
-                newStack.amount = 1
+            if (getItemStackSize(newStack) > 1) {
+                setItemStackSize(newStack, 1)
             }
             handler = newStack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null)
         }

@@ -8,9 +8,6 @@ import gregtech.api.unification.material.MarkerMaterial
 import gregtech.api.unification.material.MarkerMaterials
 import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
-import net.minecraft.item.crafting.Ingredient
-import net.minecraft.nbt.NBTTagCompound
-import net.minecraftforge.fml.common.registry.ForgeRegistries
 import org.apache.commons.lang3.tuple.Pair
 
 /**
@@ -23,7 +20,6 @@ class Common {
     private static List<ItemStack> eioGlassesCache = null
     private static List<Pair<Integer, String>> voltageNamesCache = null
     private static List<ColorInfo> colorInfoCache = null
-    private static final Map<Ingredient, ItemStack[]> INGREDIENT_MATCHING_STACKS_CACHE = new IdentityHashMap<>()
 
     /**
      * The GroovyScript logger.
@@ -116,33 +112,6 @@ class Common {
         }
 
         return colorInfoCache
-    }
-
-    // groovylint-disable-next-line UnnecessaryGetter
-    static ItemStack[] ingredientMatchingStacks(Ingredient ingredient) {
-        var cachedStacks = INGREDIENT_MATCHING_STACKS_CACHE.get(ingredient)
-        if (cachedStacks != null) return cachedStacks
-
-        for (var item : ForgeRegistries.ITEMS) {
-            for (int meta = 0; meta < 128; meta++) {
-                var candidate = new ItemStack(item, 1, meta)
-                if (candidate.empty) continue
-                if (!ingredient.apply(candidate)) continue
-
-                ItemStack[] resolvedStacks = [candidate.copy()] as ItemStack[]
-                INGREDIENT_MATCHING_STACKS_CACHE.put(ingredient, resolvedStacks)
-                return resolvedStacks
-            }
-        }
-
-        ItemStack[] resolvedStacks = [] as ItemStack[]
-        INGREDIENT_MATCHING_STACKS_CACHE.put(ingredient, resolvedStacks)
-        return resolvedStacks
-    }
-
-    static NBTTagCompound getTag(ItemStack stack) {
-        // groovylint-disable-next-line UnnecessaryGetter
-        return stack.getTagCompound() as NBTTagCompound
     }
 
 }
