@@ -2,7 +2,7 @@ package post.main.general.misc.qol
 
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.ore.OrePrefix.*
-import static post.classes.SpongeAdaptor.*
+import static post.classes.SpongeAdapter.*
 import gregtech.api.recipes.ingredients.GTRecipeItemInput
 import gregtech.api.unification.OreDictUnifier
 
@@ -36,7 +36,7 @@ for (var material : materials) {
 
         mods.gregtech.extruder.changeByOutput([stack], null).each { builder ->
             builder.changeInput(0) { input ->
-                new GTRecipeItemInput(dust, getItemStackSize(input))
+                new GTRecipeItemInput(dust, getSize(input))
             }.buildAndRegister()
         }
     }

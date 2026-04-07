@@ -4,7 +4,7 @@ import static com.nomiceu.nomilabs.groovy.NCActiveCoolerHelper.changeCoolerRecip
 import static gregtech.api.GTValues.*
 import static org.apache.commons.lang3.tuple.Pair.of
 import static post.classes.Common.*
-import static post.classes.SpongeAdaptor.*
+import static post.classes.SpongeAdapter.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.util.ItemMeta
@@ -81,7 +81,7 @@ var p241Tiny = of(new ItemMeta(item('nuclearcraft:plutonium', 10)), metaitem('nu
 var checkReplacementsOrDefault = { ItemStack stack, Pair<ItemMeta, ItemStack>... toReplace ->
     for (var replacement : toReplace) {
         if (replacement.left.compareWith(stack))
-            return replacement.right * getItemStackSize(stack)
+            return replacement.right * getSize(stack)
     }
 
     return stack
@@ -110,7 +110,7 @@ for (var fuel : fuelMetas) {
         mods.gregtech.centrifuge.changeByInput([item("nuclearcraft:depleted_fuel_${fuel.key}", meta)], null)
             .changeEachOutput { ItemStack stack ->
                 var newOutput = checkReplacementsOrDefault(stack, u235Tiny, u238Tiny, p239Tiny, p241Tiny)
-                setItemStackSize(newOutput, (int) Math.ceil(getItemStackSize(stack) * 1.1f))
+                setSize(newOutput, (int) Math.ceil(getSize(stack) * 1.1f))
                 return newOutput
             }.replaceAndRegister()
     }

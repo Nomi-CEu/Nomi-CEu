@@ -6,7 +6,7 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.trans
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
 import static gregtech.api.GTValues.*
 import static org.apache.commons.lang3.tuple.Pair.of
-import static post.classes.SpongeAdaptor.*
+import static post.classes.SpongeAdapter.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
@@ -363,13 +363,13 @@ crafting.shapedBuilder()
 // Basic Cell Mass Change
 mods.gregtech.bender.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { out -> out * (getItemStackSize(out) * 4) }
+        builder.changeEachOutput { out -> out * (getSize(out) * 4) }
             .replaceAndRegister()
     }
 
 mods.gregtech.extruder.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { out -> out * (getItemStackSize(out) * 4) }
+        builder.changeEachOutput { out -> out * (getSize(out) * 4) }
             .replaceAndRegister()
     }
 
