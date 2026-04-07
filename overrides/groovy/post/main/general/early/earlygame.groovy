@@ -403,7 +403,7 @@ lubeRecipes.copy().forEach { builder ->
         recipe.clearFluidInputs()
             .fluidInputs(fluid('oil_light') * 1000)
     }.changeEachFluidOutput { out ->
-        return out * (out.amount / 2)
+        return out * (getSize(out) / 2)
     }.buildAndRegister()
 }
 
@@ -413,7 +413,7 @@ lubeRecipes.copy().forEach { builder ->
         recipe.clearFluidInputs()
             .fluidInputs(fluid('oil_heavy') * 1000)
     }.changeEachFluidOutput { out ->
-        return out * (out.amount * 4)
+        return out * (getSize(out) * 4)
     }.buildAndRegister()
 }
 

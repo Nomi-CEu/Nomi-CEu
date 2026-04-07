@@ -1,5 +1,6 @@
 package post.classes
 
+import net.minecraft.item.EnumDyeColor
 import net.minecraft.item.ItemStack
 
 /**
@@ -37,6 +38,17 @@ class SpongeAdapter {
 
     static ItemStack itemStack(String name, int meta) {
         return toItemStack(item(name, meta))
+    }
+
+    // Dye helpers for cross-runtime enum metadata access.
+    static EnumDyeColor getDyeByIndex(int index) {
+        return EnumDyeColor.values()[index]
+    }
+
+    static int getDyeMeta(EnumDyeColor dye) {
+        if (dye.hasProperty('metadata')) return dye.metadata as int
+        if (dye.hasProperty('getMetadata')) return dye.getMetadata() as int
+        return dye.ordinal()
     }
 
 }
