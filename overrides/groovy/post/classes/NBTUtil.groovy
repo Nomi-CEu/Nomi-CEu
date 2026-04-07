@@ -33,7 +33,23 @@ class NBTUtil {
 
     static NBTTagCompound getTag(ItemStack stack) {
         // groovylint-disable-next-line UnnecessaryGetter
-        return stack.getTagCompound() as NBTTagCompound
+        return stack?.getTagCompound() as NBTTagCompound
+    }
+
+    static void setTag(ItemStack stack, NBTTagCompound tag) {
+        if (stack != null) stack.tagCompound = tag
+    }
+
+    static boolean isEmpty(NBTTagCompound tag) {
+        return tag == null || tag.empty
+    }
+
+    static boolean hasNumericKey(NBTTagCompound tag, String key) {
+        return tag != null && !tag.empty && tag.hasKey(key, 99)
+    }
+
+    static NBTTagCompound copyTag(NBTTagCompound original) {
+        return original?.copy() as NBTTagCompound
     }
 
 }

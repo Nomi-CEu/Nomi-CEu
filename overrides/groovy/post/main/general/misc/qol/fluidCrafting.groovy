@@ -517,7 +517,7 @@ class NoNBTIngredient extends SimpleIIngredient {
 
     @Override
     boolean test(ItemStack itemStack) {
-        return ItemMeta.compare(itemStack, stack) && (!itemStack.hasTagCompound() || isNbtEmpty(getTag(itemStack)))
+        return ItemMeta.compare(itemStack, stack) && (!itemStack.hasTagCompound() || isEmpty(getTag(itemStack)))
     }
 
 }
