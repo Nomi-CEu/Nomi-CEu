@@ -5,6 +5,10 @@ import net.minecraft.item.crafting.Ingredient
 import net.minecraft.nbt.NBTTagCompound
 import net.minecraftforge.fml.common.registry.ForgeRegistries
 
+/**
+ * Shared NBT and ingredient helpers used by post-init scripts.
+ * Contains Sponge-safe accessors and a cache-backed ingredient stack resolver.
+ */
 class NBTUtil {
 
     private static final Map<Ingredient, ItemStack[]> INGREDIENT_MATCHING_STACKS_CACHE = new IdentityHashMap<>()

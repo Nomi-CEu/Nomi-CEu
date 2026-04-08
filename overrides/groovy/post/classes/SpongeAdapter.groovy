@@ -30,7 +30,6 @@ class SpongeAdapter {
 
     static int getDyeMeta(EnumDyeColor dye) {
         if (dye.hasProperty('metadata')) return dye.metadata as int
-        if (dye.hasProperty('getMetadata')) return dye.getMetadata() as int
         return dye.ordinal()
     }
 
