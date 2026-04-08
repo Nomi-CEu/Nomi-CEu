@@ -1,7 +1,6 @@
 package post.main.general.misc.qol
 
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.translatable
-import static post.classes.SpongeAdapter.*
 
 import com.cleanroommc.groovyscript.api.IIngredient
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IFrameable
@@ -20,18 +19,18 @@ crafting.addShaped('hand_framing_tool_recipe', item('nomilabs:hand_framing_tool'
 
 // Specify Hand Framing Tool separately, so we can add its tooltip properly
 List<ItemStack> items = [
-    itemStack('storagedrawers:customdrawers'),
-    itemStack('storagedrawers:customdrawers', 1),
-    itemStack('storagedrawers:customdrawers', 2),
-    itemStack('storagedrawers:customdrawers', 3),
-    itemStack('storagedrawers:customdrawers', 4),
-    itemStack('storagedrawers:customtrim'),
-    itemStack('framedcompactdrawers:framed_compact_drawer'),
-    itemStack('framedcompactdrawers:framed_slave'),
-    itemStack('framedcompactdrawers:framed_drawer_controller'),
+    item('storagedrawers:customdrawers').first,
+    item('storagedrawers:customdrawers', 1).first,
+    item('storagedrawers:customdrawers', 2).first,
+    item('storagedrawers:customdrawers', 3).first,
+    item('storagedrawers:customdrawers', 4).first,
+    item('storagedrawers:customtrim').first,
+    item('framedcompactdrawers:framed_compact_drawer').first,
+    item('framedcompactdrawers:framed_slave').first,
+    item('framedcompactdrawers:framed_drawer_controller').first,
 ]
 
-ItemStack tool = itemStack('nomilabs:hand_framing_tool')
+ItemStack tool = item('nomilabs:hand_framing_tool').first
 items.add(tool)
 
 for (ItemStack stack : items) {
@@ -61,9 +60,9 @@ for (ItemStack stack : items) {
 }
 
 static ItemStack addNBT(ItemStack stack, boolean trim, boolean front) {
-    ItemStack sideStack = itemStack('xtones:zane')
-    ItemStack trimStack = trim ? itemStack('extendedcrafting:storage', 4) : ItemStack.EMPTY
-    ItemStack frontStack = front ? itemStack('xtones:zane', 15) : ItemStack.EMPTY
+    ItemStack sideStack = item('xtones:zane').first
+    ItemStack trimStack = trim ? item('extendedcrafting:storage', 4).first : IIngredient.EMPTY.first
+    ItemStack frontStack = front ? item('xtones:zane', 15).first : IIngredient.EMPTY.first
     var frameable = (IFrameable) stack.item
     return frameable.decorate(stack.copy(), sideStack, trimStack, frontStack)
 }
