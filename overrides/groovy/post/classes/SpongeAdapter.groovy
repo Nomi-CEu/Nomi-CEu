@@ -1,6 +1,8 @@
 package post.classes
 
 import net.minecraft.item.EnumDyeColor
+import net.minecraft.item.ItemStack
+import net.minecraft.item.crafting.Ingredient
 
 /**
  * Central adapter for Sponge compatibility issues.
@@ -21,6 +23,10 @@ class SpongeAdapter {
         if (obj == null) return
         if (obj.hasProperty('count')) obj.count = value
         else if (obj.hasProperty('amount')) obj.amount = value
+    }
+
+    static ItemStack[] getMatchingStacks(Ingredient ing) {
+        return ing.hasProperty('matchingStacks') ? ing.matchingStacks : NBTUtil.ingredientMatchingStacks(ing)
     }
 
     // Dye helpers for cross-runtime enum metadata access.
