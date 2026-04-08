@@ -25,8 +25,13 @@ class SpongeAdapter {
         else if (obj.hasProperty('amount')) obj.amount = value
     }
 
-    static ItemStack[] getMatchingStacks(Ingredient ing) {
+    static ItemStack[] matchingStacks(Ingredient ing) {
         return ing.hasProperty('matchingStacks') ? ing.matchingStacks : NBTUtil.ingredientMatchingStacks(ing)
+    }
+
+    // Backward-compatible alias for older call sites.
+    static ItemStack[] getMatchingStacks(Ingredient ing) {
+        return matchingStacks(ing)
     }
 
     // Dye helpers for cross-runtime enum metadata access.
