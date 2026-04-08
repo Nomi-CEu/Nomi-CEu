@@ -118,9 +118,7 @@ class IngredientMCEmpower extends SimpleIIngredient {
 
     @Override
     ItemStack[] getMatchingStacks() {
-        return ing.hasProperty('matchingStacks')
-            ? ing.matchingStacks
-            : ingredientMatchingStacks(ing)
+        return ing.hasProperty('matchingStacks') ? ing.matchingStacks : ingredientMatchingStacks(ing)
     }
 
     @Override
