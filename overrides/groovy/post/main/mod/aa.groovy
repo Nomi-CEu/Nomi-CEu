@@ -1,6 +1,6 @@
 package post.main.mod
 
-import static post.classes.SpongeAdapter.getMatchingStacks as spongeMatchingStacks
+import static post.classes.SpongeAdapter.matchingStacks
 import de.ellpeck.actuallyadditions.api.recipe.EmpowererRecipe
 import gregtech.api.items.metaitem.MetaItem
 import gregtech.common.items.MetaItems
@@ -117,7 +117,7 @@ class IngredientMCEmpower extends SimpleIIngredient {
     Ingredient toMcIngredient() { return ing }
 
     @Override
-    ItemStack[] getMatchingStacks() { return spongeMatchingStacks(ing) }
+    ItemStack[] getMatchingStacks() { return matchingStacks(ing) }
 
     @Override
     boolean test(ItemStack itemStack) { return ing.apply(itemStack) }
