@@ -1,6 +1,6 @@
 import fs from "fs";
 import gulp, { dest, src } from "gulp";
-import upath from "upath";
+import { join, basename, resolve } from "upath";
 import buildConfig from "#buildConfig";
 import {
 	modDestDirectory,
@@ -30,8 +30,8 @@ import { transformQuestBook } from "./quest.ts";
 import logInfo from "#utils/log.ts";
 
 async function sharedCleanUp() {
-	await deleteAsync(upath.join(sharedDestDirectory, "*"), { force: true });
-	await deleteAsync(upath.join(tempDirectory, "*"), { force: true });
+	await deleteAsync(join(sharedDestDirectory, "*"), { force: true });
+	await deleteAsync(join(tempDirectory, "*"), { force: true });
 }
 
 /**
@@ -54,9 +54,9 @@ async function copyOverrides() {
 	// Copy, not Symlink, so we can transform the files as we wish
 	return promiseStream(
 		src(buildConfig.copyToSharedDirGlobs, {
-			cwd: upath.join(rootDirectory),
+			cwd: join(rootDirectory),
 			encoding: false,
-		}).pipe(dest(upath.join(sharedDestDirectory, overridesFolder))),
+		}).pipe(dest(join(sharedDestDirectory, overridesFolder))),
 	);
 }
 
@@ -66,8 +66,8 @@ async function copyOverrides() {
 async function copyPackModeSwitchers() {
 	return promiseStream(
 		src(buildConfig.packModeSwitcherGlobs, {
-			cwd: upath.join(rootDirectory),
-		}).pipe(dest(upath.join(sharedDestDirectory, overridesFolder))),
+			cwd: join(rootDirectory),
+		}).pipe(dest(join(sharedDestDirectory, overridesFolder))),
 	);
 }
 
@@ -77,7 +77,7 @@ async function copyPackModeSwitchers() {
 async function fetchExternalDependencies() {
 	const dependencies = modpackManifest.externalDependencies;
 	if (dependencies) {
-		const destDirectory = upath.join(modDestDirectory, "mods");
+		const destDirectory = join(modDestDirectory, "mods");
 
 		if (!fs.existsSync(destDirectory)) {
 			await fs.promises.mkdir(destDirectory, { recursive: true });
@@ -100,10 +100,10 @@ async function fetchExternalDependencies() {
 
 		await Promise.all(
 			depDefs.map(async (depDef) => {
-				const dest = upath.join(destDirectory, upath.basename(depDef.url));
+				const dest = join(destDirectory, basename(depDef.url));
 				const cachePath = (await downloadOrRetrieveFileDef(depDef)).cachePath;
 
-				return fs.promises.symlink(upath.resolve(dest, cachePath), dest);
+				return fs.promises.symlink(resolve(dest, cachePath), dest);
 			}),
 		);
 	}
@@ -116,7 +116,7 @@ async function fetchOrMakeChangelog() {
 	if (shouldSkipChangelog()) return;
 
 	if (isEnvVariableSet("MADE_CHANGELOG")) {
-		let made = false;
+		let made: boolean;
 		try {
 			made = JSON.parse(
 				(process.env.MADE_CHANGELOG ?? "false").toLowerCase(),
@@ -181,7 +181,7 @@ async function writeToChangelog(
 	let handle: fs.promises.FileHandle | undefined = undefined;
 	try {
 		handle = await fs.promises.open(
-			upath.join(buildConfig.buildDestinationDirectory, changelogFile),
+			join(buildConfig.buildDestinationDirectory, changelogFile),
 			"w",
 		);
 

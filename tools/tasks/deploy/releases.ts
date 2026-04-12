@@ -1,7 +1,7 @@
 import { modpackManifest } from "#globals";
 
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import buildConfig from "#buildConfig";
 import { makeArtifactNameBody, octokit } from "#utils/util.ts";
 import sanitize from "sanitize-filename";
@@ -41,7 +41,7 @@ async function deployReleases(): Promise<void> {
 	 * Obligatory file check.
 	 */
 	files.forEach((file) => {
-		const path = upath.join(buildConfig.buildDestinationDirectory, file);
+		const path = join(buildConfig.buildDestinationDirectory, file);
 		if (!fs.existsSync(path)) {
 			throw new Error(`File ${path} doesn't exist!`);
 		}
@@ -67,7 +67,7 @@ async function deployReleases(): Promise<void> {
 	// Since we've grabbed, or built, everything beforehand, the Changelog file should be in the build dir
 	let changelog = (
 		await fs.promises.readFile(
-			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+			join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 		)
 	).toString();
 
@@ -95,7 +95,7 @@ async function deployReleases(): Promise<void> {
 
 				// Dumb workaround thanks to broken typings. Data should accept buffers...
 				data: (await fs.promises.readFile(
-					upath.join(buildConfig.buildDestinationDirectory, file),
+					join(buildConfig.buildDestinationDirectory, file),
 				)) as unknown as string,
 			});
 		}),

@@ -1,5 +1,5 @@
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import {
 	configFolder,
 	configOverridesFolder,
@@ -38,7 +38,7 @@ async function updateFilesSetup(): Promise<void> {
 	}
 	buildData = new BuildData();
 
-	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
+	const versionsFilePath: string = join(templatesFolder, "versions.txt");
 	updateFileVersion = "";
 
 	if (!buildData.isVersionBuild() && !updateFiles) return;
@@ -143,7 +143,7 @@ async function updateIssueTemplates(): Promise<void> {
 	// Filenames
 	const fileNames: string[] = ["001-bug-report.yml", "002-feature-request.yml"];
 
-	const versionsFilePath: string = upath.join(templatesFolder, "versions.txt");
+	const versionsFilePath: string = join(templatesFolder, "versions.txt");
 
 	let versionList: string = await fs.promises.readFile(
 		versionsFilePath,
@@ -167,7 +167,7 @@ async function updateIssueTemplates(): Promise<void> {
 		versions: versionList,
 	};
 
-	const issueTemplatesFolder: string = upath.join(
+	const issueTemplatesFolder: string = join(
 		rootDirectory,
 		".github",
 		"ISSUE_TEMPLATE",
@@ -175,8 +175,8 @@ async function updateIssueTemplates(): Promise<void> {
 
 	// Write to issue templates
 	for (const fileName of fileNames) {
-		const readPath = upath.join(templatesFolder, fileName);
-		const writePath = upath.join(issueTemplatesFolder, fileName);
+		const readPath = join(templatesFolder, fileName);
+		const writePath = join(issueTemplatesFolder, fileName);
 		await modifyFile(readPath, writePath, replacementObject);
 	}
 }
@@ -184,13 +184,9 @@ async function updateIssueTemplates(): Promise<void> {
 async function updateMainMenuConfig(): Promise<void> {
 	// Filename & paths
 	const fileName = "mainmenu.json";
-	const pathFromCfg = upath.join("CustomMainMenu", fileName);
-	const readPath: string = upath.join(templatesFolder, fileName);
-	const writePathCfg: string = upath.join(
-		rootDirectory,
-		configFolder,
-		pathFromCfg,
-	);
+	const pathFromCfg = join("CustomMainMenu", fileName);
+	const readPath: string = join(templatesFolder, fileName);
+	const writePathCfg: string = join(rootDirectory, configFolder, pathFromCfg);
 
 	if (!updateFiles && !buildData.isVersionBuild())
 		throw new Error(
@@ -212,7 +208,7 @@ async function updateMainMenuConfig(): Promise<void> {
 
 		await modifyFile(
 			readPath,
-			upath.join(rootDirectory, configOverridesFolder, mode, pathFromCfg),
+			join(rootDirectory, configOverridesFolder, mode, pathFromCfg),
 			replacementObject,
 			addWarningJSON,
 		);
@@ -222,8 +218,8 @@ async function updateMainMenuConfig(): Promise<void> {
 /* Functions USED in Build Process */
 export async function updateLabsVersion(rootDir: string): Promise<void> {
 	const fileName = "nomilabs-version.cfg";
-	const readPath: string = upath.join(templatesFolder, fileName);
-	const writePath = upath.join(rootDir, configFolder, fileName);
+	const readPath: string = join(templatesFolder, fileName);
+	const writePath = join(rootDir, configFolder, fileName);
 
 	const replacementObject: Record<string, unknown> = {
 		version: updateFiles

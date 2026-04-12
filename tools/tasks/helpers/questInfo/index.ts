@@ -1,7 +1,7 @@
 import { input, select } from "@inquirer/prompts";
 import { InfoAction, InfoMode, Mode } from "#types/actionQBTypes.ts";
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import { rootDirectory } from "#globals";
 import {
 	booleanSelect,
@@ -38,10 +38,7 @@ export default async function questInfo(): Promise<void> {
 	const quests = questsString.split(",").map((s) => Number.parseInt(s.trim()));
 	const qb = JSON.parse(
 		await fs.promises.readFile(
-			upath.join(
-				rootDirectory,
-				mode == "EXPERT" ? cfgExpertPath : cfgNormalPath,
-			),
+			join(rootDirectory, mode == "EXPERT" ? cfgExpertPath : cfgNormalPath),
 			"utf-8",
 		),
 	) as QuestBook;
@@ -125,10 +122,7 @@ export default async function questInfo(): Promise<void> {
 		const parsed = stringifyQB(qb);
 
 		return fs.promises.writeFile(
-			upath.join(
-				rootDirectory,
-				mode == "EXPERT" ? cfgExpertPath : cfgNormalPath,
-			),
+			join(rootDirectory, mode == "EXPERT" ? cfgExpertPath : cfgNormalPath),
 			parsed,
 		);
 	}

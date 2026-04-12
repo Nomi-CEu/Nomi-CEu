@@ -1,4 +1,4 @@
-import upath from "upath";
+import { join, basename, dirname, resolve } from "upath";
 import unzip from "unzipper";
 import through from "through2";
 import mustache from "mustache";
@@ -27,7 +27,7 @@ import type Vinyl from "vinyl";
 let g_forgeJar: string | undefined = undefined;
 
 async function serverCleanUp() {
-	return deleteAsync(upath.join(serverDestDirectory, "*"), { force: true });
+	return deleteAsync(join(serverDestDirectory, "*"), { force: true });
 }
 
 /**
@@ -92,7 +92,7 @@ async function downloadForge() {
 	 */
 	logInfo("Extracting the Forge jar...");
 	await fs.promises.writeFile(
-		upath.join(serverDestDirectory, upath.basename(forgeUniversalPath)),
+		join(serverDestDirectory, basename(forgeUniversalPath)),
 		forgeUniversalJar,
 	);
 
@@ -101,7 +101,7 @@ async function downloadForge() {
 	 *
 	 * We will need it to process launchscripts.
 	 */
-	g_forgeJar = upath.basename(forgeUniversalPath);
+	g_forgeJar = basename(forgeUniversalPath);
 
 	/**
 	 * Finally, fetch libraries.
@@ -125,13 +125,9 @@ async function downloadForge() {
 				];
 			}
 
-			const destPath = upath.join(
-				serverDestDirectory,
-				"libraries",
-				libraryPath,
-			);
+			const destPath = join(serverDestDirectory, "libraries", libraryPath);
 
-			await fs.promises.mkdir(upath.dirname(destPath), { recursive: true });
+			await fs.promises.mkdir(dirname(destPath), { recursive: true });
 			return fs.promises.copyFile(
 				(await downloadOrRetrieveFileDef(def)).cachePath,
 				destPath,
@@ -166,11 +162,11 @@ async function downloadMinecraftServer() {
 		throw new Error(`No server jar file found for ${versionManifest.id}`);
 	}
 
-	const dest = upath.join(
+	const dest = join(
 		serverDestDirectory,
 		`minecraft_server.${versionManifest.id}.jar`,
 	);
-	await fs.promises.copyFile(upath.resolve(serverJar.cachePath), dest);
+	await fs.promises.copyFile(resolve(serverJar.cachePath), dest);
 }
 
 /**
@@ -178,11 +174,11 @@ async function downloadMinecraftServer() {
  */
 async function copyServerMods() {
 	return promiseStream(
-		src(["*", upath.join("server", "*")], {
+		src(["*", join("server", "*")], {
 			cwd: modDestDirectory,
 			resolveSymlinks: true,
 			encoding: false,
-		}).pipe(dest(upath.join(serverDestDirectory, "mods"))),
+		}).pipe(dest(join(serverDestDirectory, "mods"))),
 	);
 }
 
@@ -196,7 +192,7 @@ async function copyServerOverrides() {
 			allowEmpty: true,
 			resolveSymlinks: true,
 			encoding: false,
-		}).pipe(dest(upath.join(serverDestDirectory))),
+		}).pipe(dest(join(serverDestDirectory))),
 	);
 }
 
@@ -236,7 +232,7 @@ async function copyServerChangelog() {
 	if (shouldSkipChangelog()) return;
 
 	return promiseStream(
-		src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
+		src(join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
 			dest(serverDestDirectory),
 		),
 	);

@@ -4,7 +4,7 @@ import {
 	modpackManifest,
 	sharedDestDirectory,
 } from "#globals";
-import upath from "upath";
+import { join } from "upath";
 import fs from "fs";
 import { dest, series, src } from "gulp";
 import buildConfig from "#buildConfig";
@@ -48,7 +48,7 @@ async function copyMMCChangelog() {
 	if (shouldSkipChangelog()) return;
 
 	return promiseStream(
-		src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
+		src(join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
 			dest(mmcDestDirectory),
 		),
 	);
@@ -62,8 +62,8 @@ async function copyOverrides() {
 		src("**/*", {
 			resolveSymlinks: true,
 			encoding: false,
-			cwd: upath.join(sharedDestDirectory, "overrides"),
-		}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft"))),
+			cwd: join(sharedDestDirectory, "overrides"),
+		}).pipe(dest(join(mmcDestDirectory, ".minecraft"))),
 	);
 }
 
@@ -72,11 +72,11 @@ async function copyOverrides() {
  */
 async function copyMMCModJars() {
 	return promiseStream(
-		src(["*", upath.join("client", "*")], {
+		src(["*", join("client", "*")], {
 			cwd: modDestDirectory,
 			resolveSymlinks: true,
 			encoding: false,
-		}).pipe(dest(upath.join(mmcDestDirectory, ".minecraft", "mods"))),
+		}).pipe(dest(join(mmcDestDirectory, ".minecraft", "mods"))),
 	);
 }
 
@@ -88,7 +88,7 @@ async function createMMCConfig() {
 	};
 
 	return fs.promises.writeFile(
-		upath.join(mmcDestDirectory, "instance.cfg"),
+		join(mmcDestDirectory, "instance.cfg"),
 		Object.keys(cfg)
 			.map((key) => {
 				return `${key}=${cfg[key]}`;
@@ -134,7 +134,7 @@ async function createMMCManifest() {
 	}
 
 	return fs.promises.writeFile(
-		upath.join(mmcDestDirectory, "mmc-pack.json"),
+		join(mmcDestDirectory, "mmc-pack.json"),
 		JSON.stringify(manifest, null, "\t"),
 	);
 }

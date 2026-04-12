@@ -5,14 +5,14 @@ import {
 	sharedDestDirectory,
 } from "#globals";
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import buildConfig from "#buildConfig";
 import { deleteAsync } from "del";
 import { promiseStream, shouldSkipChangelog } from "#utils/util.ts";
 import { buildModList } from "#tasks/misc/createModList.ts";
 
 async function clientCleanUp() {
-	return deleteAsync(upath.join(clientDestDirectory, "*"), { force: true });
+	return deleteAsync(join(clientDestDirectory, "*"), { force: true });
 }
 
 /**
@@ -28,7 +28,7 @@ async function createClientDirs() {
  * Exports the modpack manifest.
  */
 async function exportModpackManifest() {
-	const manifestPath = upath.join(clientDestDirectory, "manifest.json");
+	const manifestPath = join(clientDestDirectory, "manifest.json");
 
 	// Filter client side files only and prune build-specific fields.
 	const newFiles = modpackManifest.files
@@ -84,7 +84,7 @@ async function copyClientChangelog() {
 	if (shouldSkipChangelog()) return;
 
 	return promiseStream(
-		src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
+		src(join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
 			dest(clientDestDirectory),
 		),
 	);
@@ -100,7 +100,7 @@ async function copyClientOverrides() {
 			allowEmpty: true,
 			resolveSymlinks: true,
 			encoding: false,
-		}).pipe(dest(upath.join(clientDestDirectory, "overrides"))),
+		}).pipe(dest(join(clientDestDirectory, "overrides"))),
 	);
 }
 

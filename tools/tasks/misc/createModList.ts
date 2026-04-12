@@ -15,7 +15,7 @@ import { ModpackManifest } from "#types/modpackManifest.ts";
 import { CurseForgeFileInfo, CurseForgeModInfo } from "#types/curseForge.ts";
 import logInfo from "#utils/log.ts";
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import dedent from "dedent-js";
 
 export interface ModFileInfo {
@@ -118,10 +118,7 @@ export async function buildModList(dest: string): Promise<void> {
 		</html>
 	`;
 
-	return fs.promises.writeFile(
-		upath.join(dest, "modlist.html"),
-		formattedModList,
-	);
+	return fs.promises.writeFile(join(dest, "modlist.html"), formattedModList);
 }
 
 /**

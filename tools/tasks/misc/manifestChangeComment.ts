@@ -1,5 +1,5 @@
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import { modpackManifest, rootDirectory } from "#globals";
 import { ModpackManifest } from "#types/modpackManifest.ts";
 import {
@@ -18,7 +18,7 @@ import mustache from "mustache";
 export async function makeManifestChangeComment() {
 	const changedManifest = JSON.parse(
 		await fs.promises.readFile(
-			upath.join(rootDirectory, "temp", "manifest.json"),
+			join(rootDirectory, "temp", "manifest.json"),
 			"utf-8",
 		),
 	) as ModpackManifest;
@@ -29,7 +29,7 @@ export async function makeManifestChangeComment() {
 	);
 
 	// Prepare build dir
-	const outputFilePath = upath.join(
+	const outputFilePath = join(
 		buildConfig.buildDestinationDirectory,
 		"modChanges.md",
 	);

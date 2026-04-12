@@ -1,13 +1,13 @@
 import { modDestDirectory, modpackManifest } from "#globals";
 import { fetchMods } from "#utils/curseForgeAPI.ts";
-import upath from "upath";
+import { join } from "upath";
 import fs from "fs";
 import { deleteAsync } from "del";
 import { parallel, series } from "gulp";
 import logInfo from "#utils/log.ts";
 
 async function modCleanUp() {
-	return deleteAsync(upath.join(modDestDirectory, "*"), { force: true });
+	return deleteAsync(join(modDestDirectory, "*"), { force: true });
 }
 
 /**
@@ -15,14 +15,14 @@ async function modCleanUp() {
  */
 async function createModDirs() {
 	// This also makes the base dir, as it is recursive.
-	if (!fs.existsSync(upath.join(modDestDirectory, "client"))) {
-		await fs.promises.mkdir(upath.join(modDestDirectory, "client"), {
+	if (!fs.existsSync(join(modDestDirectory, "client"))) {
+		await fs.promises.mkdir(join(modDestDirectory, "client"), {
 			recursive: true,
 		});
 	}
 
-	if (!fs.existsSync(upath.join(modDestDirectory, "server"))) {
-		await fs.promises.mkdir(upath.join(modDestDirectory, "server"), {
+	if (!fs.existsSync(join(modDestDirectory, "server"))) {
+		await fs.promises.mkdir(join(modDestDirectory, "server"), {
 			recursive: true,
 		});
 	}
@@ -46,7 +46,7 @@ async function downloadClientMods(): Promise<void> {
 	logInfo("Fetching Client Mods...");
 	await fetchMods(
 		modpackManifest.files.filter((f) => f.sides && f.sides.includes("client")),
-		upath.join(modDestDirectory, "client"),
+		join(modDestDirectory, "client"),
 	);
 }
 
@@ -57,7 +57,7 @@ async function downloadServerMods(): Promise<void> {
 	logInfo("Fetching Server Mods...");
 	await fetchMods(
 		modpackManifest.files.filter((f) => f.sides && f.sides.includes("server")),
-		upath.join(modDestDirectory, "server"),
+		join(modDestDirectory, "server"),
 	);
 }
 

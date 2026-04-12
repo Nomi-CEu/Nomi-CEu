@@ -1,47 +1,44 @@
 import buildConfig from "#buildConfig";
-import upath from "upath";
+import { join } from "upath";
 import manifest from "./../manifest.json" with { type: "json" };
 import { ModpackManifest } from "#types/modpackManifest.ts";
 
-export const sharedDestDirectory = upath.join(
+export const sharedDestDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"shared",
 );
-export const modDestDirectory = upath.join(
+export const modDestDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"mods",
 );
-export const clientDestDirectory = upath.join(
+export const clientDestDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"client",
 );
-export const mmcDestDirectory = upath.join(
+export const mmcDestDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"mmc",
 );
-export const serverDestDirectory = upath.join(
+export const serverDestDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"server",
 );
-export const langDestDirectory = upath.join(
+export const langDestDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"lang",
 );
-export const typoCheckDirectory = upath.join(
+export const typoCheckDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"typo-check",
 );
-export const tempDirectory = upath.join(
+export const tempDirectory = join(
 	buildConfig.buildDestinationDirectory,
 	"temp",
 );
 export const modpackManifest = manifest as ModpackManifest;
 export const overridesFolder = modpackManifest.overrides || "overrides";
-export const configFolder = upath.join(overridesFolder, "config");
-export const configOverridesFolder = upath.join(
-	overridesFolder,
-	"config-overrides",
-);
+export const configFolder = join(overridesFolder, "config");
+export const configOverridesFolder = join(overridesFolder, "config-overrides");
 export const rootDirectory = "..";
 export const templatesFolder = "templates";
 export const storageFolder = "storage";

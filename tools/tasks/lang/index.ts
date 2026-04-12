@@ -1,5 +1,5 @@
 import { dest, series, src } from "gulp";
-import upath from "upath";
+import { join } from "upath";
 import buildConfig from "#buildConfig";
 import {
 	langDestDirectory,
@@ -10,14 +10,10 @@ import fs from "fs";
 import { deleteAsync } from "del";
 import { promiseStream, shouldSkipChangelog } from "#utils/util.ts";
 
-const resourcesPath = upath.join(
-	sharedDestDirectory,
-	overridesFolder,
-	"resources",
-);
+const resourcesPath = join(sharedDestDirectory, overridesFolder, "resources");
 
 async function langCleanUp() {
-	return deleteAsync(upath.join(langDestDirectory, "*"), { force: true });
+	return deleteAsync(join(langDestDirectory, "*"), { force: true });
 }
 
 /**
@@ -54,7 +50,7 @@ async function copyLangChangelog() {
 	if (shouldSkipChangelog()) return;
 
 	return promiseStream(
-		src(upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
+		src(join(buildConfig.buildDestinationDirectory, "CHANGELOG.md")).pipe(
 			dest(langDestDirectory),
 		),
 	);
@@ -62,8 +58,8 @@ async function copyLangChangelog() {
 
 async function copyLangFiles() {
 	return promiseStream(
-		src(upath.join("**", "*.lang"), { cwd: resourcesPath }).pipe(
-			dest(upath.join(langDestDirectory, "assets")),
+		src(join("**", "*.lang"), { cwd: resourcesPath }).pipe(
+			dest(join(langDestDirectory, "assets")),
 		),
 	);
 }
@@ -71,7 +67,7 @@ async function copyLangFiles() {
 async function copyLangMcMeta() {
 	return promiseStream(
 		src("pack.mcmeta", { cwd: resourcesPath }).pipe(
-			dest(upath.join(langDestDirectory)),
+			dest(join(langDestDirectory)),
 		),
 	);
 }

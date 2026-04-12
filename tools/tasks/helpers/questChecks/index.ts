@@ -15,7 +15,7 @@ import {
 import { input, select } from "@inquirer/prompts";
 import { SourceOption } from "#types/actionQBTypes.ts";
 import logInfo, { logError, logWarn } from "#utils/log.ts";
-import upath from "upath";
+import { join } from "upath";
 import { rootDirectory } from "#globals";
 import colors from "colors";
 import { isEnvVariableSet } from "#utils/util.ts";
@@ -52,21 +52,21 @@ async function checkAndFix(shouldCheck: boolean) {
 
 	if (shouldCheck) {
 		const nml1 = await fs.promises.readFile(
-			upath.join(rootDirectory, cfgNormalPath),
+			join(rootDirectory, cfgNormalPath),
 			"utf-8",
 		);
 		const nml2 = await fs.promises.readFile(
-			upath.join(rootDirectory, cfgOverrideNormalPath),
+			join(rootDirectory, cfgOverrideNormalPath),
 			"utf-8",
 		);
 		if (nml1 !== nml2) throw new Error("Normal Quest Books are not the Same!");
 
 		const exp1 = await fs.promises.readFile(
-			upath.join(rootDirectory, cfgExpertPath),
+			join(rootDirectory, cfgExpertPath),
 			"utf-8",
 		);
 		const exp2 = await fs.promises.readFile(
-			upath.join(rootDirectory, cfgOverrideExpertPath),
+			join(rootDirectory, cfgOverrideExpertPath),
 			"utf-8",
 		);
 		if (exp1 !== exp2) throw new Error("Expert Quest Books are not the Same!");
@@ -104,7 +104,7 @@ async function checkAndFix(shouldCheck: boolean) {
 
 		checkNormalQB = JSON.parse(
 			await fs.promises.readFile(
-				upath.join(
+				join(
 					rootDirectory,
 					normalSrc === "CFG" ? cfgNormalPath : cfgOverrideNormalPath,
 				),
@@ -114,7 +114,7 @@ async function checkAndFix(shouldCheck: boolean) {
 
 		checkExpertQB = JSON.parse(
 			await fs.promises.readFile(
-				upath.join(
+				join(
 					rootDirectory,
 					expertSrc === "CFG" ? cfgExpertPath : cfgOverrideExpertPath,
 				),
@@ -133,16 +133,10 @@ async function checkAndFix(shouldCheck: boolean) {
 		const normal = stringifyQB(checkNormalQB);
 		const expert = stringifyQB(checkExpertQB);
 		await Promise.all([
-			fs.promises.writeFile(upath.join(rootDirectory, cfgNormalPath), normal),
-			fs.promises.writeFile(
-				upath.join(rootDirectory, cfgOverrideNormalPath),
-				normal,
-			),
-			fs.promises.writeFile(upath.join(rootDirectory, cfgExpertPath), expert),
-			fs.promises.writeFile(
-				upath.join(rootDirectory, cfgOverrideExpertPath),
-				expert,
-			),
+			fs.promises.writeFile(join(rootDirectory, cfgNormalPath), normal),
+			fs.promises.writeFile(join(rootDirectory, cfgOverrideNormalPath), normal),
+			fs.promises.writeFile(join(rootDirectory, cfgExpertPath), expert),
+			fs.promises.writeFile(join(rootDirectory, cfgOverrideExpertPath), expert),
 		]);
 	} else logInfo(colors.green("Successful. No Formatting Errors!"));
 }

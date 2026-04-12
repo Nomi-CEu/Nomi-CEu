@@ -8,7 +8,7 @@ import {
 	SavedPorter,
 	SpecialModifierHandler,
 } from "#types/actionQBTypes.ts";
-import upath from "upath";
+import { join } from "upath";
 import fs from "fs";
 import PortQBData from "./questPorting/portQBData.ts";
 import { input, select } from "@inquirer/prompts";
@@ -81,32 +81,32 @@ export const defaultPorter = {
 } as SavedPorter;
 
 /* Paths */
-export const cfgNormalPath = upath.join(
+export const cfgNormalPath = join(
 	configFolder,
 	"betterquesting",
 	"DefaultQuests.json",
 );
-export const cfgExpertPath = upath.join(
+export const cfgExpertPath = join(
 	configFolder,
 	"betterquesting",
 	"saved_quests",
 	"ExpertQuests.json",
 );
 
-export const cfgOverrideNormalPath = upath.join(
+export const cfgOverrideNormalPath = join(
 	configOverridesFolder,
 	"normal",
 	"betterquesting",
 	"DefaultQuests.json",
 );
-export const cfgOverrideExpertPath = upath.join(
+export const cfgOverrideExpertPath = join(
 	configOverridesFolder,
 	"expert",
 	"betterquesting",
 	"DefaultQuests.json",
 );
 
-export const savedQuestPorter = upath.join(storageFolder, "savedQBPorter.json");
+export const savedQuestPorter = join(storageFolder, "savedQBPorter.json");
 
 const nomiCoinMatcher = /^nomilabs:nomicoin[0-9]*$/;
 
@@ -583,7 +583,7 @@ export async function save(toSave: QuestBook): Promise<void> {
 	const parsed = stringifyQB(toSave);
 
 	for (const path of data.outputPaths) {
-		await fs.promises.writeFile(upath.join(rootDirectory, path), parsed);
+		await fs.promises.writeFile(join(rootDirectory, path), parsed);
 	}
 
 	logInfo(`Saved Files: ${data.outputPaths.join(", ")}!`);

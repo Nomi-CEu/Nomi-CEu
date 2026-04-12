@@ -3,19 +3,19 @@
 import { langDestDirectory, typoCheckDirectory } from "#globals";
 import { allFiles } from "async-folder-walker";
 import fs from "fs";
-import upath from "upath";
+import { join, dirname } from "upath";
 import { deleteAsync } from "del";
 
 const extractor = /^(.*?)=(.*)$/gm;
 
 export async function extractTypoCheckFiles() {
-	await deleteAsync(upath.join(typoCheckDirectory, "*"), { force: true });
+	await deleteAsync(join(typoCheckDirectory, "*"), { force: true });
 
 	if (!fs.existsSync(typoCheckDirectory)) {
 		await fs.promises.mkdir(typoCheckDirectory, { recursive: true });
 	}
 
-	const files = await allFiles(upath.join(langDestDirectory, "assets"), {
+	const files = await allFiles(join(langDestDirectory, "assets"), {
 		statFilter: (st) => !st.isDirectory(),
 		shaper: (fwData) => fwData,
 	});
@@ -28,14 +28,12 @@ export async function extractTypoCheckFiles() {
 			return `${p1}=${removeFormatting(p2)}`;
 		});
 
-		const directory = upath.dirname(
-			upath.join(typoCheckDirectory, file.relname),
-		);
+		const directory = dirname(join(typoCheckDirectory, file.relname));
 		if (!fs.existsSync(directory))
 			await fs.promises.mkdir(directory, { recursive: true });
 
 		await fs.promises.writeFile(
-			upath.join(typoCheckDirectory, file.relname),
+			join(typoCheckDirectory, file.relname),
 			contents,
 		);
 	}

@@ -2,7 +2,7 @@ import { sha1 } from "hash-wasm";
 import { FileDef } from "#types/fileDef.ts";
 import fs from "fs";
 import buildConfig from "#buildConfig";
-import upath from "upath";
+import { join, basename } from "upath";
 import { compareBufferToHashDef } from "./hashes.ts";
 import { execSync } from "child_process";
 import {
@@ -22,25 +22,14 @@ import { modpackManifest, repoName, repoOwner, rootDirectory } from "#globals";
 import { Octokit } from "@octokit/rest";
 import logInfo, { logError, logWarn } from "./log.ts";
 import lodash from "lodash";
-import axios, {
-	AxiosError,
-	AxiosInstance,
-	AxiosRequestConfig,
-	AxiosResponse,
-	AxiosStatic,
-} from "axios";
-import axiosRetry, {
-	DEFAULT_OPTIONS,
-	IAxiosRetryConfig,
-	IAxiosRetryConfigExtended,
-	namespace,
-} from "axios-retry";
-import stream from "node:stream";
+import axios, { AxiosError, AxiosStatic } from "axios";
+import { getConfig, attach, RetryConfig } from "retry-axios";
 import { NomiConfig } from "#types/axios.ts";
 import { BuildData } from "#types/transformFiles.js";
 import { retry } from "@octokit/plugin-retry";
 import { throttling } from "@octokit/plugin-throttling";
 import { CurseForgeFileInfo, CurseForgeModInfo } from "#types/curseForge.ts";
+import * as stream from "node:stream";
 
 const LIBRARY_REG = /^(.+?):(.+?):(.+?)$/;
 
@@ -89,26 +78,34 @@ export const octokit = new RetryOctokit({
 	},
 });
 
-const retryCfg: IAxiosRetryConfig = {
-	retries: 10,
-	retryDelay: (count) => count * 100,
-	onRetry: (count, error, cfg) =>
+const retryCfg: RetryConfig = {
+	retry: 5,
+	retryDelay: 100,
+	onError: (error) => {
+		const cfg = getConfig(error);
 		logWarn(
-			`Retrying HTTP Request of URL ${cfg.url} in 100ms. (${error.message}) (${count} Times)`,
-		),
-	onMaxRetryTimesExceeded: (error) => {
-		throw error;
+			`Retrying HTTP Request of URL ${error.config?.url ?? "UNKNOWN"} after backoff. (${error.message}) (${cfg?.currentRetryAttempt ?? 0} / ${cfg?.retry ?? 0})`,
+		);
 	},
 };
 
-axiosRetry(axios, retryCfg);
+class FileDownloadError extends AxiosError {}
+
+attach(axios);
+axios.defaults.raxConfig = retryCfg;
 
 const fileDownloader = axios.create();
-axiosRetry(fileDownloader, retryCfg);
 fileDownloader.interceptors.response.use(async (response) => {
 	if (response.status < 200 || response.status > 299) return response; // Error, Probably Handled by Axios Retry
-	if (!response.data || !(response.data instanceof stream.Stream))
-		return retryOrThrow(response, "No Response Error");
+	if (!response.data || !(response.data instanceof stream.Stream)) {
+		// Throw file download error to retry (if we should)
+		const error = new FileDownloadError(
+			"No Response Error",
+			undefined,
+			response.config,
+		);
+		return Promise.reject(error);
+	}
 
 	const buf: Uint8Array[] = [];
 	const dataStream = response.data;
@@ -132,16 +129,23 @@ fileDownloader.interceptors.response.use(async (response) => {
 			success = false;
 			break;
 		}
-		if (!success)
-			return retryOrThrow(
-				response,
-				`Failed to Download File from ${url}, File Checksum Checking Failed!`,
+		if (!success) {
+			// Throw file download error to retry (if we should)
+			const error = new FileDownloadError(
+				"File Checksum Error",
+				undefined,
+				response.config,
 			);
+			return Promise.reject(error);
+		}
 	}
 
 	response.data = buffer;
 	return response;
 }, null);
+
+attach(fileDownloader);
+fileDownloader.defaults.raxConfig = retryCfg;
 
 export function getAxios(): AxiosStatic {
 	return axios;
@@ -217,7 +221,7 @@ export async function downloadOrRetrieveFileDef(
 ): Promise<RetrievedFileDef> {
 	const fileNameSha = await sha1(fileDef.url);
 
-	const cachedFilePath = upath.join(
+	const cachedFilePath = join(
 		buildConfig.downloaderCacheDirectory,
 		fileNameSha,
 	);
@@ -266,7 +270,7 @@ export async function downloadOrRetrieveFileDef(
 		// noinspection PointlessBooleanExpressionJS,JSObjectNullOrUndefined
 		if (handle && (await handle.stat()).isFile()) {
 			logInfo(
-				`Couldn't download ${upath.basename(fileDef.url)}, cleaning up ${fileNameSha}...`,
+				`Couldn't download ${basename(fileDef.url)}, cleaning up ${fileNameSha}...`,
 			);
 
 			await handle.close();
@@ -291,70 +295,6 @@ export async function downloadFileDef(fileDef: FileDef): Promise<Buffer> {
 	});
 
 	return response.data as Buffer;
-}
-
-function fixConfig(
-	axiosInstance: AxiosInstance | AxiosStatic,
-	config: AxiosRequestConfig,
-) {
-	// @ts-expect-error agent non-existent in type declaration`
-	if (axiosInstance.defaults.agent === config.agent) {
-		// @ts-expect-error agent non-existent in type declaration
-		delete config.agent;
-	}
-	if (axiosInstance.defaults.httpAgent === config.httpAgent) {
-		delete config.httpAgent;
-	}
-	if (axiosInstance.defaults.httpsAgent === config.httpsAgent) {
-		delete config.httpsAgent;
-	}
-}
-
-/**
- * Use Axios Retry API to retry if Hash Failed or No Response.
- */
-async function retryOrThrow(
-	response: AxiosResponse<unknown, unknown>,
-	error: string,
-): Promise<AxiosResponse<unknown, unknown, object>> {
-	const currentState = {
-		...DEFAULT_OPTIONS,
-		...retryCfg,
-		...response.config[namespace],
-	};
-	const config = { ...response.config };
-
-	currentState.retryCount = currentState.retryCount || 0;
-	currentState.lastRequestTime = currentState.lastRequestTime || Date.now();
-	config[namespace] = currentState;
-
-	const axiosError = new AxiosError<unknown, unknown>();
-
-	const retryState = currentState as Required<IAxiosRetryConfigExtended>;
-	if (retryState.retryCount < retryState.retries) {
-		retryState.retryCount++;
-		const delay = retryState.retryDelay(retryState.retryCount, axiosError);
-		fixConfig(fileDownloader, config);
-		if (
-			!retryState.shouldResetTimeout &&
-			config.timeout &&
-			currentState.lastRequestTime
-		) {
-			const lastRequestDuration = Date.now() - currentState.lastRequestTime;
-			const timeout = config.timeout - lastRequestDuration - delay;
-			if (timeout <= 0) throw new Error(error);
-			config.timeout = timeout;
-		}
-		config.transformRequest = [(data) => data as unknown];
-		axiosError.message = error;
-		await retryState.onRetry(retryState.retryCount, axiosError, config);
-
-		return new Promise<AxiosResponse<unknown, unknown>>((resolve) => {
-			setTimeout(() => resolve(fileDownloader(config)), delay);
-		});
-	}
-
-	throw new Error(error);
 }
 
 /**
@@ -813,7 +753,7 @@ export async function getForgeJar(): Promise<{
 	const forgeMavenLibrary = `net.minecraftforge:forge:${minecraft.version}-${parsedForgeEntry[1]}`;
 	const forgeInstallerPath =
 		libraryToPath(forgeMavenLibrary) + "-installer.jar";
-	const forgeUniversalPath = upath.join(
+	const forgeUniversalPath = join(
 		"maven",
 		libraryToPath(forgeMavenLibrary) + ".jar",
 	);
@@ -859,7 +799,7 @@ export function getUniqueToArray<T>(
 export function shouldSkipChangelog(): boolean {
 	if (!isEnvVariableSet("SKIP_CHANGELOG")) return false;
 
-	let skip = false;
+	let skip: boolean;
 	try {
 		skip = JSON.parse(
 			(process.env.SKIP_CHANGELOG ?? "false").toLowerCase(),

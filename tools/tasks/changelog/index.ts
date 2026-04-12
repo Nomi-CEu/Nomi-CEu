@@ -1,6 +1,6 @@
 import fs from "fs";
 import { rootDirectory } from "#globals";
-import upath from "upath";
+import { join } from "upath";
 import { marked } from "marked";
 import buildConfig from "#buildConfig";
 import { categoriesSetup } from "./categoryManagement.ts";
@@ -77,11 +77,11 @@ export const createRootChangelog = async (): Promise<void> => {
 
 	// Write files.
 	await fs.promises.writeFile(
-		upath.join(rootDirectory, "CHANGELOG.md"),
+		join(rootDirectory, "CHANGELOG.md"),
 		builder.join("\n"),
 	);
 	return fs.promises.writeFile(
-		upath.join(rootDirectory, "CHANGELOG_CF.md"),
+		join(rootDirectory, "CHANGELOG_CF.md"),
 		await marked(builder.join("\n"), { async: true }),
 	);
 };
@@ -95,11 +95,11 @@ export const createBuildChangelog = async (): Promise<void> => {
 
 	// Write files.
 	await fs.promises.writeFile(
-		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
+		join(buildConfig.buildDestinationDirectory, "CHANGELOG.md"),
 		builder.join("\n"),
 	);
 	return fs.promises.writeFile(
-		upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
+		join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
 		await marked(builder.join("\n"), { async: true }),
 	);
 };

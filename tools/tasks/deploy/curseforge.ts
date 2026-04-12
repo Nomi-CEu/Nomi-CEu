@@ -1,7 +1,7 @@
 import { modpackManifest } from "#globals";
 
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import buildConfig from "#buildConfig";
 import {
 	getAxios,
@@ -30,11 +30,7 @@ const variablesToCheck = [
 
 async function upload(files: { name: string; displayName: string }[]) {
 	const filePaths = files.map((file) => {
-		const path = upath.join(
-			buildConfig.buildDestinationDirectory,
-			"cf",
-			file.name,
-		);
+		const path = join(buildConfig.buildDestinationDirectory, "cf", file.name);
 		if (!fs.existsSync(path)) {
 			throw new Error(`File ${path} doesn't exist!`);
 		}
@@ -44,7 +40,7 @@ async function upload(files: { name: string; displayName: string }[]) {
 	// Since we've built everything beforehand, the changelog must be available in the shared directory.
 	let changelog = (
 		await fs.promises.readFile(
-			upath.join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
+			join(buildConfig.buildDestinationDirectory, "CHANGELOG_CF.md"),
 		)
 	).toString();
 

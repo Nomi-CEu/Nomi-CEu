@@ -3,7 +3,7 @@ import buildConfig from "#buildConfig";
 import { rootDirectory } from "#globals";
 import fs from "fs";
 import logInfo from "#utils/log.ts";
-import upath from "upath";
+import { join } from "upath";
 
 const packageDef = /^package\s[a-z]+/;
 const commentDef = /^\/\/\s\S+/;
@@ -85,7 +85,7 @@ async function checkGrsFile(file: string): Promise<void> {
 	logInfo(`Checking File ${file}...`);
 
 	const contents = await fs.promises.readFile(
-		upath.join(rootDirectory, file),
+		join(rootDirectory, file),
 		"utf-8",
 	);
 	const lines = contents.split("\n");

@@ -5,7 +5,7 @@ import { ForgeProfile } from "#types/forgeProfile.ts";
 import { sha1 } from "hash-wasm";
 import { fetchFileInfo } from "#utils/curseForgeAPI.ts";
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import buildConfig from "#buildConfig";
 import logInfo from "#utils/log.ts";
 
@@ -88,9 +88,7 @@ export default async function pruneCache(): Promise<void> {
 	const cache = (
 		await fs.promises.readdir(buildConfig.downloaderCacheDirectory)
 	).filter((entity) =>
-		fs
-			.statSync(upath.join(buildConfig.downloaderCacheDirectory, entity))
-			.isFile(),
+		fs.statSync(join(buildConfig.downloaderCacheDirectory, entity)).isFile(),
 	);
 
 	const shaMap: { [key: string]: boolean } = {};
@@ -104,7 +102,7 @@ export default async function pruneCache(): Promise<void> {
 
 	for (const sha of cache) {
 		if (!shaMap[sha]) {
-			const path = upath.join(buildConfig.downloaderCacheDirectory, sha);
+			const path = join(buildConfig.downloaderCacheDirectory, sha);
 			const stat = fs.existsSync(path) ? await fs.promises.stat(path) : null;
 
 			if (stat && stat.isFile()) {

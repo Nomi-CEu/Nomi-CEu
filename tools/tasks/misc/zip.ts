@@ -5,7 +5,7 @@ import {
 	modpackManifest,
 	serverDestDirectory,
 } from "#globals";
-import upath from "upath";
+import { join } from "upath";
 import zip from "gulp-zip";
 import gulp, { src } from "gulp";
 import buildConfig from "#buildConfig";
@@ -31,7 +31,7 @@ function makeZipper(src: string, artifactName: string, isCFZip = false) {
 			src,
 			isCFZip ? buildConfig.cfZipGlobs : buildConfig.normalZipGlobs,
 			isCFZip
-				? upath.join(buildConfig.buildDestinationDirectory, "cf")
+				? join(buildConfig.buildDestinationDirectory, "cf")
 				: buildConfig.buildDestinationDirectory,
 			sanitize(
 				(

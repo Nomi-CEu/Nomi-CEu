@@ -1,5 +1,5 @@
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import { rootDirectory } from "#globals";
 import { ModpackManifest } from "#types/modpackManifest.js";
 
@@ -18,10 +18,7 @@ export async function updateLabs(): Promise<void> {
 	}
 
 	const manifest = JSON.parse(
-		await fs.promises.readFile(
-			upath.join(rootDirectory, "manifest.json"),
-			"utf-8",
-		),
+		await fs.promises.readFile(join(rootDirectory, "manifest.json"), "utf-8"),
 	) as ModpackManifest;
 
 	for (const file of manifest.files) {
@@ -31,7 +28,7 @@ export async function updateLabs(): Promise<void> {
 	}
 
 	return fs.promises.writeFile(
-		upath.join(rootDirectory, "manifest.json"),
+		join(rootDirectory, "manifest.json"),
 		JSON.stringify(manifest, null, 2) + "\n",
 	);
 }

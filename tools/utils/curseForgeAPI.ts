@@ -5,7 +5,7 @@ import {
 } from "#types/curseForge.ts";
 import { ModpackManifestFile } from "#types/modpackManifest.ts";
 import buildConfig from "#buildConfig";
-import upath from "upath";
+import { join, basename, resolve } from "upath";
 import fs from "fs";
 import { FileDef } from "#types/fileDef.ts";
 import {
@@ -353,17 +353,17 @@ export async function fetchMods(
 
 				if (modFile.reason == RetrievedFileDefReason.Downloaded) {
 					logInfo(
-						`Downloaded ${upath.basename(fileDef.url)}... (${fetched} / ${toFetch.length})`,
+						`Downloaded ${basename(fileDef.url)}... (${fetched} / ${toFetch.length})`,
 					);
 				} else if (modFile.reason == RetrievedFileDefReason.CacheHit) {
 					logInfo(
-						`Fetched ${upath.basename(fileDef.url)} from cache... (${fetched} / ${toFetch.length})`,
+						`Fetched ${basename(fileDef.url)} from cache... (${fetched} / ${toFetch.length})`,
 					);
 				}
 
-				const dest = upath.join(destination, fileInfo.fileName);
+				const dest = join(destination, fileInfo.fileName);
 
-				await fs.promises.symlink(upath.resolve(modFile.cachePath), dest);
+				await fs.promises.symlink(resolve(modFile.cachePath), dest);
 			}),
 		);
 	} else {

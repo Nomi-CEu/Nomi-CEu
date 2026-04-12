@@ -172,7 +172,7 @@ function checkFormattingChar(data: ChecksData) {
 			continue;
 		}
 
-		let signal = "";
+		let signal: string;
 
 		// Check for invalid formatting, including legacy 'f' signal
 		if (invalidFormatting.test(char.char)) {

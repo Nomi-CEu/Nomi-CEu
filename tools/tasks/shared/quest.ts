@@ -1,5 +1,5 @@
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import {
 	overridesFolder,
 	configFolder,
@@ -12,15 +12,12 @@ import {
 	QuestLine as QuestLine,
 } from "#types/bqQuestBook.ts";
 
-const sharedQBDefaults = upath.join(
+const sharedQBDefaults = join(
 	sharedDestDirectory,
 	configFolder,
 	"betterquesting",
 );
-const sharedConfigOverrides = upath.join(
-	sharedDestDirectory,
-	configOverridesFolder,
-);
+const sharedConfigOverrides = join(sharedDestDirectory, configOverridesFolder);
 
 const langFileLocation = "resources/questbook/lang";
 
@@ -120,11 +117,8 @@ function stripUselessMetadata(object: Record<string, unknown>) {
  */
 export async function transformQuestBook(): Promise<void> {
 	// Source Quest Book File Locations
-	const questPathNormalSource = upath.join(
-		sharedQBDefaults,
-		"DefaultQuests.json",
-	);
-	const questPathExpertSource = upath.join(
+	const questPathNormalSource = join(sharedQBDefaults, "DefaultQuests.json");
+	const questPathExpertSource = join(
 		sharedQBDefaults,
 		"saved_quests",
 		"ExpertQuests.json",
@@ -139,23 +133,20 @@ export async function transformQuestBook(): Promise<void> {
 	) as QuestBook;
 
 	// Quest Book Paths
-	const questPathNormalDefault = upath.join(
-		sharedQBDefaults,
-		"DefaultQuests.json",
-	);
-	const questPathNormalOverride = upath.join(
+	const questPathNormalDefault = join(sharedQBDefaults, "DefaultQuests.json");
+	const questPathNormalOverride = join(
 		sharedConfigOverrides,
 		"normal",
 		"betterquesting",
 		"DefaultQuests.json",
 	);
 
-	const questPathExpertDefault = upath.join(
+	const questPathExpertDefault = join(
 		sharedQBDefaults,
 		"saved_quests",
 		"ExpertQuests.json",
 	);
-	const questPathExpertOverride = upath.join(
+	const questPathExpertOverride = join(
 		sharedConfigOverrides,
 		"expert",
 		"betterquesting",
@@ -163,7 +154,7 @@ export async function transformQuestBook(): Promise<void> {
 	);
 
 	// Quest Lang Location
-	const questLangLocation = upath.join(
+	const questLangLocation = join(
 		sharedDestDirectory,
 		overridesFolder,
 		langFileLocation,
@@ -226,7 +217,7 @@ export async function transformQuestBook(): Promise<void> {
 	// Write lang file.
 	await fs.promises.mkdir(questLangLocation, { recursive: true });
 	await fs.promises.writeFile(
-		upath.join(questLangLocation, "en_us.lang"),
+		join(questLangLocation, "en_us.lang"),
 		lines.join("\n"),
 	);
 

@@ -2,7 +2,7 @@ import { modpackManifest, rootDirectory } from "#globals";
 import { logWarn } from "#utils/log.ts";
 import { fetchFileInfo } from "#utils/curseForgeAPI.ts";
 import fs from "fs";
-import upath from "upath";
+import { join } from "upath";
 import buildConfig from "#buildConfig";
 import { buildModList } from "#tasks/misc/createModList.ts";
 import dedent from "dedent-js";
@@ -18,7 +18,7 @@ export async function checkManifestStructure(throwErrors: boolean) {
 
 	// Check formatting
 	const fileString = await fs.promises.readFile(
-		upath.join(rootDirectory, "manifest.json"),
+		join(rootDirectory, "manifest.json"),
 		"utf-8",
 	);
 	const saveString = JSON.stringify(modpackManifest, null, 2) + "\n";
@@ -107,7 +107,7 @@ export async function checkManifestStructure(throwErrors: boolean) {
 
 	if (notifiedUnSorted || keysWrongOrder || requiresFormat) {
 		await fs.promises.writeFile(
-			upath.join(rootDirectory, "manifest.json"),
+			join(rootDirectory, "manifest.json"),
 			JSON.stringify(modpackManifest, null, 2) + "\n",
 		);
 	}
