@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: Secret Checks
         id: secretChecks
-        uses: Nomi-CEu/SecretChecker@9de55f1a6e04dfa7ead446328c0420bb0a748e81
+        uses: Nomi-CEu/SecretChecker@9de55f1a6e04dfa7ead446328c0420bb0a748e81 # v1.1.0
         with:
           secrets: ${{ toJSON(secrets) }}
           check: CFCORE_API_TOKEN

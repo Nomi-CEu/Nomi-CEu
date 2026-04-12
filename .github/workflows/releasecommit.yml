@@ -11,14 +11,14 @@ on:
         type: string
         required: false
       release_type:
-        description: 'Release Type. Will be ignored if not a release.'
+        description: "Release Type. Will be ignored if not a release."
         type: choice
         required: false
-        default: 'Release'
+        default: "Release"
         options:
-          - 'Release'
-          - 'Beta Release'
-          - 'Alpha Release'
+          - "Release"
+          - "Beta Release"
+          - "Alpha Release"
       update_files:
         description: |
           Whether this commit is just to update files. version.txt will not be changed. This is used when the templates are changed, and the main files need to be updated.
@@ -36,7 +36,7 @@ on:
         type: string
         required: false
       release_type:
-        description: 'Release Type. Will be ignored if not a release.'
+        description: "Release Type. Will be ignored if not a release."
         type: string
         required: false
       update_files:
@@ -105,7 +105,7 @@ jobs:
         run: npm run gulp updateFilesAll
 
       - name: Commit and Push Release Changes
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         id: commit-release
         if: ${{ !inputs.update_files }}
         with:
@@ -116,7 +116,7 @@ jobs:
           tagging_message: "${{ inputs.tag }}"
 
       - name: Commit and Push Update Changes
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         id: commit-update
         if: ${{ inputs.update_files }}
         with:

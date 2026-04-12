@@ -48,7 +48,7 @@ jobs:
     steps:
       - name: Secret Checks
         id: secretChecks
-        uses: Nomi-CEu/SecretChecker@9de55f1a6e04dfa7ead446328c0420bb0a748e81
+        uses: Nomi-CEu/SecretChecker@9de55f1a6e04dfa7ead446328c0420bb0a748e81 # v1.1.0
         with:
           secrets: ${{ toJSON(secrets) }}
           check: CFCORE_API_TOKEN
@@ -254,7 +254,7 @@ jobs:
     steps:
       - name: Secret Checks
         id: secretChecks
-        uses: Nomi-CEu/SecretChecker@9de55f1a6e04dfa7ead446328c0420bb0a748e81
+        uses: Nomi-CEu/SecretChecker@9de55f1a6e04dfa7ead446328c0420bb0a748e81 # v1.1.0
         with:
           secrets: ${{ toJSON(secrets) }}
           check: |
@@ -310,18 +310,18 @@ jobs:
 
       - name: Find Comment
         if: ${{ hashFiles('./build/modChanges.md') != '' }}
-        uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad
+        uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4.0.0
         id: fc
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'nomi-ceu-management[bot]'
+          comment-author: "nomi-ceu-management[bot]"
           body-includes: |
             ## PR Mod Changes
             *This comment is automatically updated with PR changes (when the workflow runs).*
 
       - name: Create or Update Comment
         if: ${{ hashFiles('./build/modChanges.md') != '' }}
-        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}

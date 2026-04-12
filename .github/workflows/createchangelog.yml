@@ -10,12 +10,12 @@ on:
         description: Release Type
         type: choice
         required: true
-        default: 'Release'
+        default: "Release"
         options:
-          - 'Release'
-          - 'Beta Release'
-          - 'Alpha Release'
-          - 'Cutting Edge Build'
+          - "Release"
+          - "Beta Release"
+          - "Alpha Release"
+          - "Cutting Edge Build"
       compare_tag:
         description: Tag(s) to compare against. If not set, will use the tag before `Tag`. If specifying multiple, separate by commas. (Spaces allowed).
         required: false
@@ -105,10 +105,9 @@ jobs:
           COMPARE_TAG: ${{ inputs.compare_tag }}
           TEST_CHANGELOG: ${{ inputs.test }}
 
-
       - name: Commit and Push Changelog
         if: ${{ inputs.branch }}
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         id: "commit-template"
         with:
           commit_message: "Upload Changelogs for Release ${{ inputs.tag }}"
