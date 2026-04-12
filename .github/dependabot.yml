@@ -27,11 +27,14 @@ updates:
       - "javascript"
     schedule:
       interval: "weekly"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     groups:
+      npm-breaking:
+        applies-to: version-updates
+        update-types:
+          - major
+
       npm-safe-updates:
         applies-to: version-updates
-        patterns:
-          - "*"
+        update-types:
+          - minor
+          - patch
