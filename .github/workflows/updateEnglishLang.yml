@@ -45,7 +45,7 @@ jobs:
       # Nomi-CEu-Management has access to all of Nomi-CEu's Repos.
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           # Shared Org Secret: Contains the Nomi-CEu-Management App ID (773030)
           app-id: ${{ secrets.APP_ID }}
@@ -56,7 +56,7 @@ jobs:
           owner: ${{ github.repository_owner }}
 
       - name: Dispatch Workflow
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           github-token: ${{ steps.token.outputs.token }}
           # A Javascript Function Body to send the Workflow Dispatch Event.

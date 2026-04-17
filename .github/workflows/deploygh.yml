@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
@@ -33,7 +33,7 @@ jobs:
           fetch-depth: 0
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: npm-cache
         with:
           path: |
@@ -63,7 +63,7 @@ jobs:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Download Built Artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           name: Built Pack
           path: ./build/
