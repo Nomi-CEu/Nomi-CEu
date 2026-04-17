@@ -1,0 +1,40 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    labels:
+      - "dependencies"
+      - "auto-creation"
+      - "github-actions"
+    schedule:
+      interval: "weekly"
+    groups:
+      actions-breaking:
+        applies-to: version-updates
+        update-types:
+          - major
+      actions-safe-updates:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: "npm"
+    directory: "/tools"
+    labels:
+      - "dependencies"
+      - "auto-creation"
+      - "javascript"
+    schedule:
+      interval: "weekly"
+    groups:
+      npm-breaking:
+        applies-to: version-updates
+        update-types:
+          - major
+
+      npm-safe-updates:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
