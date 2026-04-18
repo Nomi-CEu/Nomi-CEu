@@ -22,7 +22,7 @@ jobs:
           git diff --cached --exit-code # Throws if changes are detected
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: npm-cache
         with:
           path: |
@@ -96,7 +96,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: npm-cache
         with:
           path: |
@@ -123,7 +123,7 @@ jobs:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Upload Mod List
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: Mod List
           path: ./build/modlist.html
@@ -154,7 +154,7 @@ jobs:
     steps:
       - name: Get Token
         id: token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
@@ -166,7 +166,7 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha }}
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: npm-cache
         with:
           path: |
