@@ -1,10 +1,9 @@
 package post.main.general.late
 
-import cofh.thermalexpansion.util.managers.machine.CompactorManager
-
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
 
+import cofh.thermalexpansion.util.managers.machine.CompactorManager
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.ImplosionRecipeBuilder

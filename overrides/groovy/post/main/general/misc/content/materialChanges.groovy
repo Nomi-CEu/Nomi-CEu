@@ -52,7 +52,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('black_steel')])
         }.changeCircuitMeta { meta -> meta } // Copy Circuit
             .changeEachFluidOutput { FluidStack fluid -> return fluid * (L * 9) }
             .replaceAndRegister()
-        }
+    }
 
 /* Change Mixer Recipes */
 mods.gregtech.mixer.removeByOutput([metaitem('dustBlackSteel')], null)

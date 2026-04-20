@@ -113,7 +113,7 @@ mods.gregtech.arc_furnace.changeByOutput([metaitem('nomilabs:ingotInfinity')], n
             return new GTRecipeOreInput(OreDictUnifier.getOreDictionaryNames(input.inputStacks[0]).first())
         }.changeEachOutput { out -> item('avaritia:resource', 6) * out.count }
             .replaceAndRegister()
-        }
+    }
 
 for (var map : [COMPRESSOR_RECIPES, ALLOY_SMELTER_RECIPES]) {
     map.virtualized.changeByOutput([metaitem('nomilabs:ingotInfinity')], null)
