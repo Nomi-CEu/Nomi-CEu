@@ -18,9 +18,29 @@ mods.gregtech.circuit_assembler.changeByOutput([metaitem('circuit.workstation')]
 // IV: Tier 2 (Nano Supercomputer)
 mods.gregtech.circuit_assembler.changeByOutput([metaitem('circuit.nano_computer')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.removeInputs(-1, -2)
+        builder.removeInputs(-1)
             .builder { RecipeBuilder recipe ->
-                recipe.inputs(ore('wireFineLumium') * 8, ore('wireFineTungstenSteel') * 16)
+                recipe.inputs(ore('wireFineTungstenSteel') * 16)
+            }.copyProperties(CleanroomProperty.instance)
+            .replaceAndRegister()
+    }
+
+// IV: Tier 3 (Quantumprocesor Assembly)
+mods.gregtech.circuit_assembler.changeByOutput([metaitem('circuit.quantum_assembly')], null)
+    .forEach { ChangeRecipeBuilder builder ->
+        builder.removeInputs(-1)
+            .builder { RecipeBuilder recipe ->
+                recipe.inputs(ore('wireFineLumium') * 16)
+            }.copyProperties(CleanroomProperty.instance)
+            .replaceAndRegister()
+    }
+
+// ZPM: Tier 1 (Quantumprocessor Mainframe)
+mods.gregtech.circuit_assembler.changeByOutput([metaitem('circuit.quantum_mainframe')], null)
+    .forEach { ChangeRecipeBuilder builder ->
+        builder.removeInputs(-1)
+            .builder { RecipeBuilder recipe ->
+                recipe.inputs(ore('wireGtSingleSignalum') * 48)
             }.copyProperties(CleanroomProperty.instance)
             .replaceAndRegister()
     }
