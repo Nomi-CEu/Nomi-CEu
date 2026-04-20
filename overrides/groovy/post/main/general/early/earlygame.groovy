@@ -445,7 +445,7 @@ mods.gregtech.gas_collector.changeByOutput(null, [fluid('air') * 10000])
 
         // LEGACY: Circuit 4 for Void World / Lost Cities
         builder.copyOriginal()
-            .changeCircuitMeta {4 }
+            .changeCircuitMeta { 4 }
             .builder { GasCollectorRecipeBuilder recipe ->
                 // Don't copy properties or add overworld dim to keep legacy behaviour
                 recipe.dimension(119) // Void World
