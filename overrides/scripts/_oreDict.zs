@@ -2389,40 +2389,6 @@ mods.jei.JEI.removeAndHide(<betterquesting:guide_book>);
 //fluidextractor.recipeBuilder().inputs(<minecraft:nether_star>).fluidOutputs([<liquid:nether_star> * 144]).duration(40).EUt(30).buildAndRegister();
 //fluidextractor.recipeBuilder().inputs(<metaitem:blockNetherStar>).fluidOutputs([<liquid:nether_star> * 1296]).duration(360).EUt(30).buildAndRegister();
 
-//Molten Empowered Restonia
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredrestonia> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<actuallyadditions:block_crystal_empowered>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredrestonia> * 576).notConsumable(<metaitem:shape.mold.gear>).outputs([<moreplates:empowered_restonia_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered>).fluidOutputs([<liquid:moltenempoweredrestonia> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Palis
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredpalis> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<actuallyadditions:block_crystal_empowered:1>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredpalis> * 576).notConsumable(<metaitem:shape.mold.gear>).outputs([<moreplates:empowered_palis_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:1>).fluidOutputs([<liquid:moltenempoweredpalis> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Enori
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredenori> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<actuallyadditions:block_crystal_empowered:5>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredenori> * 576).notConsumable(<metaitem:shape.mold.gear>).outputs([<moreplates:empowered_enori_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:5>).fluidOutputs([<liquid:moltenempoweredenori> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Diamatine
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempowereddiamatine> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<actuallyadditions:block_crystal_empowered:2>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempowereddiamatine> * 576).notConsumable(<metaitem:shape.mold.gear>).outputs([<moreplates:empowered_diamatine_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:2>).fluidOutputs([<liquid:moltenempowereddiamatine> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Emeradic
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredemeradic> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<actuallyadditions:block_crystal_empowered:4>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredemeradic> * 576).notConsumable(<metaitem:shape.mold.gear>).outputs([<moreplates:empowered_emeradic_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:4>).fluidOutputs([<liquid:moltenempoweredemeradic> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Void
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredvoid> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<actuallyadditions:block_crystal_empowered:3>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredvoid> * 576).notConsumable(<metaitem:shape.mold.gear>).outputs([<moreplates:empowered_void_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:3>).fluidOutputs([<liquid:moltenempoweredvoid> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Dark Soularium
-solidifier.recipeBuilder().fluidInputs(<liquid:moltendarksoularium> * 144).notConsumable(<metaitem:shape.mold.ingot>).outputs([<simplyjetpacks:metaitemmods:3>]).duration(40).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<simplyjetpacks:metaitemmods:3>).fluidOutputs([<liquid:moltendarksoularium> * 144]).duration(20).EUt(30).buildAndRegister();
-
 //Molten Soularium
 //solidifier.recipeBuilder().fluidInputs(<liquid:moltensoularium> * 1296).notConsumable(<metaitem:shape.mold.block>).outputs([<enderio:block_alloy:7>]).duration(400).EUt(30).buildAndRegister();
 //solidifier.recipeBuilder().fluidInputs(<liquid:moltensoularium> * 144).notConsumable(<metaitem:shape.mold.ingot>).outputs([<enderio:item_alloy_ingot:7>]).duration(40).EUt(30).buildAndRegister();
