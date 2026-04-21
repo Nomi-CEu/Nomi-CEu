@@ -42,7 +42,7 @@ export async function additions(): Promise<void> {
 		const addingID = ++newID;
 		logInfo(`Adding New Quest with ID ${addingID}...`);
 
-		const newQuest = { ...addition } as Quest; // Copy Quest
+		const newQuest = { ...addition }; // Copy Quest
 		newQuest["questID:3"] = addingID;
 		addingQuests.push(newQuest);
 
@@ -120,7 +120,7 @@ export async function removals(): Promise<void> {
 		logInfo("Removing Quest...");
 		const newId = id(quest);
 
-		const newEmptyQuest = { ...emptyQuest } as Quest; // Copy Quest
+		const newEmptyQuest = { ...emptyQuest }; // Copy Quest
 		newEmptyQuest["questID:3"] = newId;
 		data.toChangeIDsToQuests.set(newId, newEmptyQuest);
 
