@@ -17,7 +17,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.lumium')])
             .changeEachFluidOutput { fluid -> fluid * (L * 4) }
             .copyProperties(TemperatureProperty.instance)
             .replaceAndRegister()
-        }
+    }
 
 // Signalum
 mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.signalum')])
@@ -30,7 +30,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.signalum')
             .changeEachFluidOutput { fluid -> fluid * (L * 4) }
             .copyProperties(TemperatureProperty.instance)
             .replaceAndRegister()
-        }
+    }
 
 // Enderium
 mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.enderium')])
@@ -43,7 +43,7 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('molten.enderium')
             .changeEachFluidOutput { fluid -> fluid * (L * 4) }
             .copyProperties(TemperatureProperty.instance)
             .replaceAndRegister()
-        }
+    }
 
 // Fluxed Electrum
 mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('electrum_flux')])
@@ -55,4 +55,4 @@ mods.gregtech.alloy_blast_smelter.changeByOutput(null, [fluid('electrum_flux')])
             .changeEachFluidOutput { fluid -> fluid * (L * 9) }
             .copyProperties(TemperatureProperty.instance)
             .replaceAndRegister()
-        }
+    }

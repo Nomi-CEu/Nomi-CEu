@@ -3,6 +3,7 @@ package post.main.general.late
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.RecyclingHelpers.*
 import static gregtech.api.GTValues.*
 
+import cofh.thermalexpansion.util.managers.machine.CompactorManager
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.ImplosionRecipeBuilder
@@ -109,6 +110,79 @@ createRecipe(metaitem('charger.uhv'), [
     [metaitem('wireGtQuadrupleEuropium'), metaitem('hull.uhv'), metaitem('wireGtQuadrupleEuropium')],
     [metaitem('cableGtSingleEuropium'), ore('circuitUhv'), metaitem('cableGtSingleEuropium')],
 ])
+
+// Empowered Crystals
+var empoweredNames = [
+    'restonia',
+    'palis',
+    'diamatine',
+    'void',
+    'emeradic',
+    'enori',
+]
+
+empoweredNames.eachWithIndex { String empowered, int idx ->
+    var crystal = item('actuallyadditions:item_crystal_empowered', idx)
+    var block = item('actuallyadditions:block_crystal_empowered', idx)
+    var liquid = fluid("moltenempowered${empowered}")
+
+    // Crystal & Blocks -> Liquid
+    mods.gregtech.extractor.recipeBuilder()
+        .inputs(crystal * 1)
+        .fluidOutputs(liquid * L)
+        .duration(40).EUt(VA[LV])
+        .buildAndRegister()
+
+    mods.gregtech.extractor.recipeBuilder()
+        .inputs(block * 1)
+        .fluidOutputs(liquid * (L * 9))
+        .duration(200).EUt(VA[LV])
+        .buildAndRegister()
+
+    // Liquid -> Crystal & Blocks
+    mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(liquid * L)
+        .notConsumable(metaitem('shape.mold.ball'))
+        .outputs(crystal * 1)
+        .duration(80).EUt(VA[LV])
+        .buildAndRegister()
+
+    mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(liquid * (L * 9))
+        .notConsumable(metaitem('shape.mold.block'))
+        .outputs(block * 1)
+        .duration(400).EUt(VA[LV])
+        .buildAndRegister()
+
+    // Liquid -> Gear
+    mods.gregtech.fluid_solidifier.recipeBuilder()
+        .fluidInputs(liquid * (L * 4))
+        .notConsumable(metaitem('shape.mold.gear'))
+        .outputs(item("moreplates:empowered_${empowered}_gear"))
+        .duration(200).EUt(VA[LV])
+        .buildAndRegister()
+
+    // Gearworking Die -> Gear
+    mods.thermal.compactor.recipeBuilder()
+        .input(crystal * 4)
+        .output(item("moreplates:empowered_${empowered}_gear"))
+        .mode(CompactorManager.Mode.GEAR)
+        .register()
+}
+
+// Dark Soularium: Ingot <-> Liquid
+mods.gregtech.extractor.recipeBuilder()
+    .inputs(item('simplyjetpacks:metaitemmods', 3))
+    .fluidOutputs(fluid('moltendarksoularium') * L)
+    .duration(20).EUt(VA[LV])
+    .buildAndRegister()
+
+mods.gregtech.fluid_solidifier.recipeBuilder()
+    .fluidInputs(fluid('moltendarksoularium') * L)
+    .notConsumable(metaitem('shape.mold.ingot'))
+    .outputs(item('simplyjetpacks:metaitemmods', 3))
+    .duration(40).EUt(VA[LV])
+    .buildAndRegister()
 
 // HM Ore Drilling Plants
 if (LabsModeHelper.expert) {

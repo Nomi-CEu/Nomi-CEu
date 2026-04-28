@@ -1,2 +1,31 @@
 # line 1360 of jar file
 item.nuclearcraft.thorium._232.name=Prepared Thorium-232
+
+# Molten -> Liquid
+# Isn't performed for all NuclearCraft fluids; just ones visible in JEI
+tile.nuclearcraft.fluid_quartz.name=Liquid Quartz
+fluid.quartz=Liquid Quartz
+
+tile.nuclearcraft.fluid_lapis.name=Liquid Lapis
+fluid.lapis=Liquid Lapis
+
+tile.nuclearcraft.fluid_diamond.name=Liquid Diamond
+fluid.diamond=Liquid Diamond
+
+tile.nuclearcraft.fluid_emerald.name=Liquid Emerald
+fluid.emerald=Liquid Emerald
+
+tile.nuclearcraft.fluid_unsweetened_chocolate.name=Liquid Unsweetened Chocolate
+fluid.unsweetened_chocolate=Liquid Unsweetened Chocolate
+
+tile.nuclearcraft.fluid_dark_chocolate.name=Liquid Dark Chocolate
+fluid.dark_chocolate=Liquid Dark Chocolate
+
+tile.nuclearcraft.fluid_milk_chocolate.name=Liquid Milk Chocolate
+fluid.milk_chocolate=Liquid Milk Chocolate
+
+tile.nuclearcraft.fluid_sugar.name=Liquid Sugar
+fluid.sugar=Liquid Sugar
+
+tile.nuclearcraft.fluid_gelatin.name=Liquid Gelatin
+fluid.gelatin=Liquid Gelatin
