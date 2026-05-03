@@ -237,7 +237,7 @@ const modifyDesc = async (
 	logInfo(colors.bold("If Replaced:"));
 	console.log(fakeDiff(originalQuest, newQuest));
 
-	const applyMode = (await select({
+	const applyMode: DescriptionTaskChange = await select({
 		message: "How Should we Apply this Change to the Description?",
 		choices: [
 			{ name: "Apply Changes on top of Existing Description", value: "APPLY" },
@@ -245,7 +245,7 @@ const modifyDesc = async (
 			{ name: "Enter Own Description", value: "CUSTOM" },
 			{ name: "Ignore this Change", value: "IGNORE" },
 		],
-	})) as DescriptionTaskChange;
+	});
 	if (applyMode === "IGNORE") {
 		logInfo("Ignoring...");
 		return;
@@ -262,14 +262,14 @@ const modifyDesc = async (
 			description = newQuest;
 			break;
 		case "CUSTOM": {
-			const template = (await select({
+			const template: CustomDescriptionTaskTemplate = await select({
 				message: "What Should the Original Text Be?",
 				choices: [
 					{ name: "Description with Changes Applied", value: "APPLY" },
 					{ name: "Description with Changes Replaced", value: "REPLACE" },
 					{ name: "Original Description", value: "ORIGINAL" },
 				],
-			})) as CustomDescriptionTaskTemplate;
+			});
 			const templateStr =
 				template === "APPLY"
 					? apply
@@ -342,7 +342,7 @@ const modifyTasks = async (
 			),
 		);
 
-		const solution = (await select({
+		const solution: TaskDifferentSolution = await select({
 			message: "What should we do?",
 			choices: [
 				{
@@ -358,7 +358,7 @@ const modifyTasks = async (
 					value: "IGNORE",
 				},
 			],
-		})) as TaskDifferentSolution;
+		});
 
 		switch (solution) {
 			case "APPLY":
@@ -522,7 +522,7 @@ const modifyTasks = async (
 				),
 			);
 
-			const choice = (await select({
+			const choice: YesIgnoreNo = await select({
 				message: "Is this Correct?",
 				choices: [
 					{
@@ -538,7 +538,7 @@ const modifyTasks = async (
 						value: "IGNORE",
 					},
 				],
-			})) as YesIgnoreNo;
+			});
 			if (choice === "IGNORE") {
 				logNotImportant("Skipping...");
 				cancelled = true;
@@ -568,7 +568,7 @@ const modifyTasks = async (
 		logInfo(colors.bold("If Replaced:"));
 		console.log(fakeDiff(currentTaskString, newTaskString));
 
-		const applyMode = (await select({
+		const applyMode: DescriptionTaskChange = await select({
 			message: "How Should we Apply this Task Change?",
 			choices: [
 				{
@@ -579,7 +579,7 @@ const modifyTasks = async (
 				{ name: "Enter Own Task", value: "CUSTOM" },
 				{ name: "Ignore this Change", value: "IGNORE" },
 			],
-		})) as DescriptionTaskChange;
+		});
 
 		if (applyMode === "IGNORE") {
 			logInfo("Ignoring...");
@@ -627,14 +627,14 @@ async function getCustomTasks(
 	let foundTask: Task | undefined = undefined;
 
 	while (!foundTask) {
-		const template = (await select({
+		const template: CustomDescriptionTaskTemplate = await select({
 			message: "What Should the Default Text Be?",
 			choices: [
 				{ name: "Description with Changes Applied", value: "APPLY" },
 				{ name: "Description with Changes Replaced", value: "REPLACE" },
 				{ name: "Original Description", value: "ORIGINAL" },
 			],
-		})) as CustomDescriptionTaskTemplate;
+		});
 		const templateStr =
 			template === "APPLY"
 				? apply

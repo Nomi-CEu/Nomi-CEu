@@ -142,7 +142,7 @@ export default class PortQBData {
 			});
 		}
 
-		this.type = (await select({
+		this.type = await select({
 			message: "How should we port?",
 			choices: [
 				{
@@ -154,7 +154,7 @@ export default class PortQBData {
 					value: "EXPERT",
 				},
 			],
-		})) as Mode;
+		});
 
 		this.sourceOption = await select({
 			message:

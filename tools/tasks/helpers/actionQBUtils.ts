@@ -306,7 +306,7 @@ async function finalizeFoundQuest(sourceID: number, addToList: () => void) {
 }
 
 async function isRightQuest(message: string): Promise<YesIgnoreNo> {
-	return (await select({
+	return await select({
 		message: message,
 		choices: [
 			{
@@ -322,7 +322,7 @@ async function isRightQuest(message: string): Promise<YesIgnoreNo> {
 				value: "IGNORE",
 			},
 		],
-	})) as YesIgnoreNo;
+	});
 }
 
 export async function booleanSelect(
