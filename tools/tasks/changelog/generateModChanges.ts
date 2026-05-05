@@ -37,7 +37,7 @@ const getModChangesFormatting: (
 			return formatMessage(message, indentation, commits, subMessage);
 		},
 		storage: commits,
-	} as SpecialChangelogFormatting<Commit[] | undefined>;
+	};
 };
 
 /**

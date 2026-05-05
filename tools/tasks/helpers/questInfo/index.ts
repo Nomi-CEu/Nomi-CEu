@@ -21,7 +21,7 @@ export default async function questInfo(): Promise<void> {
 	const questsString = await input({
 		message: "Quest IDs:",
 	});
-	const mode = (await select({
+	const mode: Mode = await select({
 		message: "Which Quest Book?",
 		choices: [
 			{
@@ -33,7 +33,7 @@ export default async function questInfo(): Promise<void> {
 				value: "EXPERT",
 			},
 		],
-	})) as Mode;
+	});
 
 	const quests = questsString.split(",").map((s) => Number.parseInt(s.trim()));
 	const qb = JSON.parse(
@@ -48,7 +48,7 @@ export default async function questInfo(): Promise<void> {
 			.map((quest) => [id(quest), quest]),
 	);
 
-	infoMode = (await select({
+	infoMode = await select({
 		message: "What to do?",
 		choices: [
 			{
@@ -60,7 +60,7 @@ export default async function questInfo(): Promise<void> {
 				value: "MODIFY",
 			},
 		],
-	})) as InfoMode;
+	});
 	saveString = "";
 
 	for (const questID of quests) {
@@ -137,7 +137,7 @@ async function performActions(
 	questID: number,
 	questKey: string,
 ) {
-	const action = (await select({
+	const action: InfoAction = await select({
 		message: `What to do (Quest Key ${questKey})?`,
 		choices: [
 			{
@@ -153,7 +153,7 @@ async function performActions(
 				value: "NOTHING",
 			},
 		],
-	})) as InfoAction;
+	});
 
 	if (action === "NOTHING") return;
 
