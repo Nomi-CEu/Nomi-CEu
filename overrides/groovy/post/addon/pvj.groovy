@@ -3,7 +3,7 @@
 
 package post.addon
 
-def addCutting(Collection<ItemStack> output, Collection<IIngredient> input) {
+void addCutting(Collection<ItemStack> output, Collection<IIngredient> input) {
     mods.gregtech.cutter.recipeBuilder()
         .inputs(input)
         .fluidInputs(liquid('water') * 4)
@@ -24,39 +24,37 @@ def addCutting(Collection<ItemStack> output, Collection<IIngredient> input) {
         .outputs(output)
         .duration(200).EUt(7)
         .buildAndRegister()
-
-
 }
 
 List<String> woodTypes = [
-    "willow",
-    "mangrove",
-    "palm",
-    "redwood",
-    "fir",
-    "pine",
-    "aspen",
-    "maple",
-    "baobab",
-    "cottonwood",
-    "juniper",
-    "cherry_blossom",
-    "jacaranda",
+    'willow',
+    'mangrove',
+    'palm',
+    'redwood',
+    'fir',
+    'pine',
+    'aspen',
+    'maple',
+    'baobab',
+    'cottonwood',
+    'juniper',
+    'cherry_blossom',
+    'jacaranda',
 ]
 
 for (woodType in woodTypes) {
     def items = [
-        log: item("pvj:log_${woodType}"),
-        planks: item("pvj:planks_${woodType}"),
-        stairs: item("pvj:${woodType}_stairs"),
-        slab: item("pvj:${woodType}_slab"),
-        fence: item("pvj:${woodType}_fence"),
-        fenceGate: item("pvj:${woodType}_fence_gate"),
-        trapdoor: item("pvj:${woodType}_trapdoor"),
-        door: item("pvj:${woodType}_door_item"),
-        boat: item("pvj:${woodType}_boat"),
-        button: item("pvj:${woodType}_button"),
-        pressurePlate: item("pvj:${woodType}_pressure_plate")
+        log : item("pvj:log_${woodType}"),
+        planks : item("pvj:planks_${woodType}"),
+        stairs : item("pvj:${woodType}_stairs"),
+        slab : item("pvj:${woodType}_slab"),
+        fence : item("pvj:${woodType}_fence"),
+        fenceGate : item("pvj:${woodType}_fence_gate"),
+        trapdoor : item("pvj:${woodType}_trapdoor"),
+        door : item("pvj:${woodType}_door_item"),
+        boat : item("pvj:${woodType}_boat"),
+        button : item("pvj:${woodType}_button"),
+        pressurePlate : item("pvj:${woodType}_pressure_plate"),
     ]
 
     /*
@@ -128,7 +126,7 @@ for (woodType in woodTypes) {
         shapedBuilder()
             .name("PVJ Fence Gate ${woodType}")
             .output(items.fenceGate)
-            .matrix('F F','SPS', 'SPS')
+            .matrix('F F', 'SPS', 'SPS')
             .key('P', items.planks)
             .key('S', ore('stickWood'))
             .key('F', ore('itemFlint'))
@@ -159,7 +157,7 @@ for (woodType in woodTypes) {
         shapedBuilder()
             .name("PVJ Door ${woodType}")
             .output(items.door)
-            .matrix('PTS','PRI', 'PPC')
+            .matrix('PTS', 'PRI', 'PPC')
             .key('P', items.planks)
             // TODO: consider adding oredic to PVJ's other trapdoors and using oredic here
             .key('T', item('minecraft:trapdoor'))
@@ -182,7 +180,7 @@ for (woodType in woodTypes) {
         shapedBuilder()
             .name("PVJ Boat ${woodType}")
             .output(items.boat)
-            .matrix('PSP','PKP', 'HHH')
+            .matrix('PSP', 'PKP', 'HHH')
             .key('P', items.planks)
             .key('H', items.slab)
             .key('S', item('minecraft:wooden_shovel'))
