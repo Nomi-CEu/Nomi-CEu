@@ -3,7 +3,11 @@
 
 package post.classes.addon
 
+/**
+ * Class containing some shared constants needed for the pvj scripts.
+ */
 class PVJConsts {
+
     public static final List<String> WOOD_TYPES = [
         'willow',
         'mangrove',
@@ -56,6 +60,7 @@ class PVJConsts {
         'granite',
         'diorite',
         'sandstone',
-        'red_sandstone'
+        'red_sandstone',
     ]
+
 }

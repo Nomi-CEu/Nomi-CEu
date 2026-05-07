@@ -5,7 +5,6 @@ package post.addon.pvj
 
 import static post.classes.addon.PVJConsts.*
 
-
 mods.jei.ingredient.with {
     /* These items should probably not show up in JEI, and only in world */
 
@@ -14,8 +13,8 @@ mods.jei.ingredient.with {
         hide(item("pvj:fallenleaves_${VANILLA_TREE_TYPE}"))
         hide(item("pvj:${VANILLA_TREE_TYPE}_twigs"))
     }
-    hide(item("pvj:fallenleaves_darkoak"))
-    hide(item("pvj:dark_oak_twigs"))
+    hide(item('pvj:fallenleaves_darkoak'))
+    hide(item('pvj:dark_oak_twigs'))
     for (TREE_TYPE in TREE_TYPES) {
         hide(item("pvj:fallenleaves_${TREE_TYPE}"))
         hide(item("pvj:${TREE_TYPE}_twigs"))
