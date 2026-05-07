@@ -1,7 +1,9 @@
 // MODS_LOADED: pvj
 // ^, Only runs when a player adds Project: Vibrant Journey themselves
 
-package post.addon
+package post.addon.pvj
+
+import static post.classes.addon.PVJConsts.*
 
 void addCutting(Collection<ItemStack> output, Collection<IIngredient> input) {
     mods.gregtech.cutter.recipeBuilder()
@@ -26,35 +28,19 @@ void addCutting(Collection<ItemStack> output, Collection<IIngredient> input) {
         .buildAndRegister()
 }
 
-List<String> woodTypes = [
-    'willow',
-    'mangrove',
-    'palm',
-    'redwood',
-    'fir',
-    'pine',
-    'aspen',
-    'maple',
-    'baobab',
-    'cottonwood',
-    'juniper',
-    'cherry_blossom',
-    'jacaranda',
-]
-
-for (woodType in woodTypes) {
+for (WOOD_TYPE in WOOD_TYPES) {
     def items = [
-        log : item("pvj:log_${woodType}"),
-        planks : item("pvj:planks_${woodType}"),
-        stairs : item("pvj:${woodType}_stairs"),
-        slab : item("pvj:${woodType}_slab"),
-        fence : item("pvj:${woodType}_fence"),
-        fenceGate : item("pvj:${woodType}_fence_gate"),
-        trapdoor : item("pvj:${woodType}_trapdoor"),
-        door : item("pvj:${woodType}_door_item"),
-        boat : item("pvj:${woodType}_boat"),
-        button : item("pvj:${woodType}_button"),
-        pressurePlate : item("pvj:${woodType}_pressure_plate"),
+        log : item("pvj:log_${WOOD_TYPE}"),
+        planks : item("pvj:planks_${WOOD_TYPE}"),
+        stairs : item("pvj:${WOOD_TYPE}_stairs"),
+        slab : item("pvj:${WOOD_TYPE}_slab"),
+        fence : item("pvj:${WOOD_TYPE}_fence"),
+        fenceGate : item("pvj:${WOOD_TYPE}_fence_gate"),
+        trapdoor : item("pvj:${WOOD_TYPE}_trapdoor"),
+        door : item("pvj:${WOOD_TYPE}_door_item"),
+        boat : item("pvj:${WOOD_TYPE}_boat"),
+        button : item("pvj:${WOOD_TYPE}_button"),
+        pressurePlate : item("pvj:${WOOD_TYPE}_pressure_plate"),
     ]
 
     /*
@@ -64,10 +50,10 @@ for (woodType in woodTypes) {
 
     // Planks
     crafting.with {
-        remove("pvj:${woodType}_planks")
-        addShapeless("PVJ Planks ${woodType}", items.planks * 2, [items.log])
+        remove("pvj:${WOOD_TYPE}_planks")
+        addShapeless("PVJ Planks ${WOOD_TYPE}", items.planks * 2, [items.log])
         shapedBuilder()
-            .name("PVJ Planks ${woodType} saw")
+            .name("PVJ Planks ${WOOD_TYPE} saw")
             .output(items.planks * 4)
             .matrix('S', 'L')
             .key('S', ore('toolSaw'))
@@ -85,16 +71,16 @@ for (woodType in woodTypes) {
 
     // Slab
     crafting.with {
-        remove("pvj:${woodType}_slab")
+        remove("pvj:${WOOD_TYPE}_slab")
         shapedBuilder()
-            .name("PVJ Slab ${woodType}")
+            .name("PVJ Slab ${WOOD_TYPE}")
             .output(items.slab * 2)
             .matrix('SP')
             .key('S', ore('toolSaw'))
             .key('P', items.planks)
             .register()
         shapedBuilder()
-            .name("PVJ Planks ${woodType} slabs")
+            .name("PVJ Planks ${WOOD_TYPE} slabs")
             .output(items.planks)
             .matrix('S', 'S')
             .key('S', items.slab)
@@ -104,9 +90,9 @@ for (woodType in woodTypes) {
 
     // Fence
     crafting.with {
-        remove("pvj:${woodType}_fence")
+        remove("pvj:${WOOD_TYPE}_fence")
         shapedBuilder()
-            .name("PVJ Fence ${woodType}")
+            .name("PVJ Fence ${WOOD_TYPE}")
             .output(items.fence)
             .matrix('PSP', 'PSP', 'PSP')
             .key('P', items.planks)
@@ -122,9 +108,9 @@ for (woodType in woodTypes) {
 
     // Fence Gate
     crafting.with {
-        remove("pvj:${woodType}_fence_gate")
+        remove("pvj:${WOOD_TYPE}_fence_gate")
         shapedBuilder()
-            .name("PVJ Fence Gate ${woodType}")
+            .name("PVJ Fence Gate ${WOOD_TYPE}")
             .output(items.fenceGate)
             .matrix('F F', 'SPS', 'SPS')
             .key('P', items.planks)
@@ -132,7 +118,7 @@ for (woodType in woodTypes) {
             .key('F', ore('itemFlint'))
             .register()
         shapedBuilder()
-            .name("PVJ GregtTech Fence Gate ${woodType}")
+            .name("PVJ GregtTech Fence Gate ${WOOD_TYPE}")
             .output(items.fenceGate * 2)
             .matrix('ITI', 'SPS', 'SPS')
             .key('P', items.planks)
@@ -149,13 +135,13 @@ for (woodType in woodTypes) {
         .buildAndRegister()
 
     // Trapdoor
-    crafting.remove("pvj:${woodType}_trapdoor")
+    crafting.remove("pvj:${WOOD_TYPE}_trapdoor")
 
     // Door
     crafting.with {
-        remove("pvj:${woodType}_door")
+        remove("pvj:${WOOD_TYPE}_door")
         shapedBuilder()
-            .name("PVJ Door ${woodType}")
+            .name("PVJ Door ${WOOD_TYPE}")
             .output(items.door)
             .matrix('PTS', 'PRI', 'PPC')
             .key('P', items.planks)
@@ -176,9 +162,9 @@ for (woodType in woodTypes) {
 
     // Boat
     crafting.with {
-        remove("pvj:${woodType}_boat")
+        remove("pvj:${WOOD_TYPE}_boat")
         shapedBuilder()
-            .name("PVJ Boat ${woodType}")
+            .name("PVJ Boat ${WOOD_TYPE}")
             .output(items.boat)
             .matrix('PSP', 'PKP', 'HHH')
             .key('P', items.planks)
@@ -195,8 +181,8 @@ for (woodType in woodTypes) {
         .buildAndRegister()
 
     // Button
-    crafting.remove("pvj:${woodType}_button")
+    crafting.remove("pvj:${WOOD_TYPE}_button")
 
     // Pressure Plate
-    crafting.remove("pvj:${woodType}_pressure_plate")
+    crafting.remove("pvj:${WOOD_TYPE}_pressure_plate")
 }
