@@ -24,28 +24,32 @@ crafting.shapedBuilder()
         .key('F', ore('frameGtHslaSteel'))
         .key('S', metaitem('sensor.hv'))
 
-for (int i = 0;i < 3; i++) {
+for (int i = 0; i < 3; i++) {
     def hvRecipeParams = [
-        wallMultiplier: i * 8 + 8,
-        circ: i + 1,
-        outputMetaId: i,
+        wallMultiplier : i * 8 + 8,
+        circ : i + 1,
+        outputMetaId : i,
     ]
 
     def ivRecipeParams = [
-        wallMultiplier: i * 8 + 32,
-        circ: i + 4,
-        outputMetaId: i + 3,
+        wallMultiplier : i * 8 + 32,
+        circ : i + 4,
+        outputMetaId : i + 3,
     ]
 
     mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('compactmachines3:wallbreakable') * hvRecipeParams.wallMultiplier, ore('frameGtUltimet') * 4, metaitem('field.generator.hv'))
+        .inputs(item('compactmachines3:wallbreakable') * hvRecipeParams.wallMultiplier,
+                ore('frameGtUltimet') * 4,
+                metaitem('field.generator.hv'))
         .circuitMeta(hvRecipeParams.circ)
         .outputs(item('compactmachines3:machine', hvRecipeParams.outputMetaId))
         .duration(200).EUt(VA[HV])
         .buildAndRegister()
 
     mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('compactmachines3:wallbreakable') * ivRecipeParams.wallMultiplier, ore('frameGtUltimet') * 4, metaitem('field.generator.iv'))
+        .inputs(item('compactmachines3:wallbreakable') * ivRecipeParams.wallMultiplier,
+                ore('frameGtUltimet') * 4,
+                metaitem('field.generator.iv'))
         .circuitMeta(ivRecipeParams.circ)
         .outputs(item('compactmachines3:machine', ivRecipeParams.outputMetaId))
         .duration(200).EUt(VA[IV])
@@ -53,7 +57,10 @@ for (int i = 0;i < 3; i++) {
 }
 
 mods.gregtech.assembler.recipeBuilder()
-    .inputs(ore('frameGtUltimet'), metaitem('passthrough_hatch_item'), metaitem('passthrough_hatch_fluid'), metaitem('diode.hv'))
+    .inputs(ore('frameGtUltimet'),
+            metaitem('passthrough_hatch_item'),
+            metaitem('passthrough_hatch_fluid'),
+            metaitem('diode.hv'))
     .outputs(item('compactmachines3:tunneltool') * 4)
     .duration(100).EUt(VA[HV])
     .buildAndRegister()

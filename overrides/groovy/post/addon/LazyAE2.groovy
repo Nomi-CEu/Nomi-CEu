@@ -16,18 +16,19 @@ mods.jei.category.hideCategory('threng.agg')
 mods.jei.category.hideCategory('threng.energize')
 
 ore_dict.remove('dustCoal', item('threng:material', 3))
-mods.jei.ingredient.removeAndHide(item('threng:material', 3))
 
-crafting.remove("threng:machine_core");
-crafting.remove("threng:spec_core_64");
-crafting.remove("threng:ma_frame");
-crafting.remove("threng:spec_core_64");
-crafting.remove("threng:spec_core_64");
-crafting.remove("threng:ma_io_port");
-crafting.remove("threng:ma_vent");
-crafting.remove("threng:ma_controller");
-crafting.remove("threng:ma_mod_cpu");
-crafting.remove("threng:ma_mod_pattern");
+crafting.with {
+    remove('threng:machine_core')
+    remove('threng:spec_core_64')
+    remove('threng:ma_frame')
+    remove('threng:spec_core_64')
+    remove('threng:spec_core_64')
+    remove('threng:ma_io_port')
+    remove('threng:ma_vent')
+    remove('threng:ma_controller')
+    remove('threng:ma_mod_cpu')
+    remove('threng:ma_mod_pattern')
+}
 
 mods.threng.centrifuge.removeByOutput(item('appliedenergistics2:material', 10))
 mods.threng.centrifuge.recipeBuilder()
@@ -49,7 +50,11 @@ mods.gregtech.autoclave.recipeBuilder()
 
 for (var tinLike : [fluid('tin') * (L * 2), fluid('soldering_alloy') * L]) {
     mods.gregtech.circuit_assembler.recipeBuilder()
-    .inputs(ore('frameGtTitanium'), ore('circuitIv'), item('appliedenergistics2:material', 24) * 3, item('threng:material') * 4, item('appliedenergistics2:part', 16) * 4)
+    .inputs(ore('frameGtTitanium'),
+            ore('circuitIv'),
+            item('appliedenergistics2:material', 24) * 3,
+            item('threng:material') * 4,
+            item('appliedenergistics2:part', 16) * 4)
     .fluidInputs(tinLike)
     .outputs(item('threng:material', 4))
     .duration(400).EUt(VA[EV])
@@ -57,8 +62,7 @@ for (var tinLike : [fluid('tin') * (L * 2), fluid('soldering_alloy') * L]) {
 }
 
 mods.gregtech.assembler.recipeBuilder()
-    .inputs(
-        ore('frameGtBlackSteel'),
+    .inputs(ore('frameGtBlackSteel'),
         ore('circuitIv'),
         item('threng:material', 6),
         metaitem('sensor.ev') * 4,
@@ -74,34 +78,42 @@ mods.gregtech.assembler.recipeBuilder()
     .duration(100).EUt(VA[EV])
     .buildAndRegister()
 
-for (var plasticLike : [
-    fluid('plastic') * (L * 2),
-    fluid('polytetrafluoroethylene') * L,
-    fluid('polybenzimidazole') * (L / 2)
-]) {
+for (var plasticLike : [fluid('plastic') * (L * 2), fluid('polytetrafluoroethylene') * L, fluid('polybenzimidazole') * (L / 2)]) {
     mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('threng:material', 5) * 4, ore('frameGtBlueSteel') * 4, item('extrautils2:crafter'), ore('circuitHv'))
+        .inputs(item('threng:material', 5) * 4,
+                ore('frameGtBlueSteel') * 4,
+                item('extrautils2:crafter'),
+                ore('circuitHv'))
         .fluidInputs(plasticLike)
         .outputs(item('threng:big_assembler') * 4)
         .duration(150).EUt(VA[EV])
         .buildAndRegister()
 
     mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('threng:big_assembler') * 4, ore('pipeNormalItemPlatinum') * 4, item('appliedenergistics2:interface') * 4)
+        .inputs(item('threng:big_assembler') * 4,
+                ore('pipeNormalItemPlatinum') * 4,
+                item('appliedenergistics2:interface') * 4)
         .fluidInputs(plasticLike)
         .outputs(item('threng:big_assembler', 5))
         .duration(150).EUt(VA[EV])
         .buildAndRegister()
 
     mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('threng:big_assembler') * 4, item('appliedenergistics2:material', 24) * 4, item('appliedenergistics2:interface') * 4, item('appliedenergistics2:molecular_assembler'))
+        .inputs(item('threng:big_assembler') * 4,
+                item('appliedenergistics2:material', 24) * 4,
+                item('appliedenergistics2:interface') * 4,
+                item('appliedenergistics2:molecular_assembler'))
         .fluidInputs(plasticLike)
         .outputs(item('threng:big_assembler', 3))
         .duration(150).EUt(VA[EV])
         .buildAndRegister()
 
     mods.gregtech.assembler.recipeBuilder()
-        .inputs(item('threng:big_assembler') * 4, item('threng:material', 6) * 4, item('appliedenergistics2:crafting_accelerator') * 4, item('appliedenergistics2:interface') * 4, item('appliedenergistics2:molecular_assembler'))
+        .inputs(item('threng:big_assembler') * 4,
+                item('threng:material', 6) * 4,
+                item('appliedenergistics2:crafting_accelerator') * 4,
+                item('appliedenergistics2:interface') * 4,
+                item('appliedenergistics2:molecular_assembler'))
         .fluidInputs(plasticLike)
         .outputs(item('threng:big_assembler', 4))
         .duration(150).EUt(VA[EV])
@@ -135,56 +147,56 @@ crafting.shapedBuilder()
         .key('U', item('threng:material', 4))
         .key('F', item('appliedenergistics2:material', 43))
 
-mods.threng.etcher.removeByOutput(item('appliedenergistics2:material', 22))
-mods.threng.etcher.removeByOutput(item('appliedenergistics2:material', 23))
-mods.threng.etcher.removeByOutput(item('appliedenergistics2:material', 24))
-mods.threng.etcher.removeByOutput(item('threng:material', 6))
-mods.threng.etcher.removeByOutput(item('threng:material', 14))
+mods.threng.etcher.with {
+    removeByOutput(item('appliedenergistics2:material', 22))
+    removeByOutput(item('appliedenergistics2:material', 23))
+    removeByOutput(item('appliedenergistics2:material', 24))
+    removeByOutput(item('threng:material', 6))
+    removeByOutput(item('threng:material', 14))
 
-mods.threng.etcher.recipeBuilder()
-    .input(ore('circuitLv'))
-    .top(ore('plateGold'))
-    .bottom(ore('plateSilicon'))
-    .output(item('appliedenergistics2:material', 22))
-    .register()
-mods.threng.etcher.recipeBuilder()
-    .input(ore('circuitLv'))
-    .top(ore('plateCertusQuartz'))
-    .bottom(ore('plateSilicon'))
-    .output(item('appliedenergistics2:material', 23))
-    .register()
-mods.threng.etcher.recipeBuilder()
-    .input(ore('circuitLv'))
-    .top(ore('plateGold'))
-    .bottom(ore('plateDiamond'))
-    .output(item('appliedenergistics2:material', 24))
-    .register()
+    recipeBuilder()
+        .input(ore('circuitLv'))
+        .top(ore('plateGold'))
+        .bottom(ore('plateSilicon'))
+        .output(item('appliedenergistics2:material', 22))
+        .register()
+    recipeBuilder()
+        .input(ore('circuitLv'))
+        .top(ore('plateCertusQuartz'))
+        .bottom(ore('plateSilicon'))
+        .output(item('appliedenergistics2:material', 23))
+        .register()
+    recipeBuilder()
+        .input(ore('circuitLv'))
+        .top(ore('plateGold'))
+        .bottom(ore('plateDiamond'))
+        .output(item('appliedenergistics2:material', 24))
+        .register()
 
-mods.threng.etcher.recipeBuilder()
-    .input(ore('circuitEv'))
-    .top(item('threng:material', 5))
-    .bottom(ore('plateSilicon'))
-    .output(item('threng:material', 6))
-    .register()
-mods.threng.etcher.recipeBuilder()
-    .input(ore('circuitEv'))
-    .top(item('threng:material', 13))
-    .bottom(ore('plateSilicon'))
-    .output(item('threng:material', 14))
-    .register()
+    recipeBuilder()
+        .input(ore('circuitEv'))
+        .top(item('threng:material', 5))
+        .bottom(ore('plateSilicon'))
+        .output(item('threng:material', 6))
+        .register()
+    recipeBuilder()
+        .input(ore('circuitEv'))
+        .top(item('threng:material', 13))
+        .bottom(ore('plateSilicon'))
+        .output(item('threng:material', 14))
+        .register()
+}
 
-mods.jei.ingredient.removeAndHide(item('threng:machine'))
-mods.jei.ingredient.removeAndHide(item('threng:machine', 5))
-mods.jei.ingredient.removeAndHide(item('threng:material', 1))
-mods.jei.ingredient.removeAndHide(item('threng:material', 2))
-mods.jei.ingredient.removeAndHide(item('threng:material', 7))
-mods.jei.ingredient.removeAndHide(item('threng:material', 8))
-mods.jei.ingredient.removeAndHide(item('threng:material', 9))
-mods.jei.ingredient.removeAndHide(item('threng:material', 10))
-mods.jei.ingredient.removeAndHide(item('threng:material', 11))
-mods.jei.ingredient.removeAndHide(item('threng:material', 12))
-
-
-
-
-
+mods.jei.ingredient.with {
+    removeAndHide(item('threng:machine'))
+    removeAndHide(item('threng:machine', 5))
+    removeAndHide(item('threng:material', 1))
+    removeAndHide(item('threng:material', 2))
+    removeAndHide(item('threng:material', 3))
+    removeAndHide(item('threng:material', 7))
+    removeAndHide(item('threng:material', 8))
+    removeAndHide(item('threng:material', 9))
+    removeAndHide(item('threng:material', 10))
+    removeAndHide(item('threng:material', 11))
+    removeAndHide(item('threng:material', 12))
+}
