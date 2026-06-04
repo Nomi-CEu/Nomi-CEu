@@ -63,12 +63,12 @@ jobs:
         run: npm run gulp buildTypoCheck
 
       - name: Lang Typo Check
-        uses: crate-ci/typos@aca895bf05aec0cb7dffa6f94495e923224d9f17 # v1.46.2
+        uses: crate-ci/typos@44e2070e6017f834bf069503acb35ca0ca0b75f2 # v1.47.1
         with:
           files: build/typo-check/
 
       - name: Other Misc Typo Check
-        uses: crate-ci/typos@aca895bf05aec0cb7dffa6f94495e923224d9f17 # v1.46.2
+        uses: crate-ci/typos@44e2070e6017f834bf069503acb35ca0ca0b75f2 # v1.47.1
         with:
           files: .github/ README.md overrides/README.md
 
