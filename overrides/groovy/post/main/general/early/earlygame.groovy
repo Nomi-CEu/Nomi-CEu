@@ -13,6 +13,7 @@ import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilderCollection
 import com.nomiceu.nomilabs.groovy.RecipePredicates
 import com.nomiceu.nomilabs.util.LabsModeHelper
 import gregtech.api.recipes.builders.SimpleRecipeBuilder
+import gregtech.api.recipes.builders.GasCollectorRecipeBuilder
 import gregtech.client.utils.TooltipHelper
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
@@ -430,3 +431,24 @@ for (var pair : dustsAndFuels) {
         .duration(100).EUt(VA[LV])
         .buildAndRegister()
 }
+
+// Gas Collector in Void World / Lost Cities
+mods.gregtech.gas_collector.changeByOutput(null, [fluid('air') * 10000])
+    .forEach { ChangeRecipeBuilder builder ->
+        builder.builder { GasCollectorRecipeBuilder recipe ->
+            // Re-add the overworld dimension as it is lost during changeByOutput
+            // We could perform copyProperties but this is easier
+            recipe.dimension(0) // Overworld
+                .dimension(119) // Void World
+                .dimension(111) // Lost Cities
+        }.replaceAndRegister()
+
+        // LEGACY: Circuit 4 for Void World / Lost Cities
+        builder.copyOriginal()
+            .changeCircuitMeta { 4 }
+            .builder { GasCollectorRecipeBuilder recipe ->
+                // Don't copy properties or add overworld dim to keep legacy behaviour
+                recipe.dimension(119) // Void World
+                    .dimension(111) // Lost Cities
+            }.buildAndRegister()
+    }
