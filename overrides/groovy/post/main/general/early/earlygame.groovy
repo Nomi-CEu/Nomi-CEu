@@ -6,6 +6,7 @@ import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.trans
 import static com.nomiceu.nomilabs.groovy.GroovyHelpers.GTRecipeHelpers.toGtInput
 import static gregtech.api.GTValues.*
 import static org.apache.commons.lang3.tuple.Pair.of
+import static post.classes.SpongeAdapter.*
 
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
@@ -362,13 +363,13 @@ crafting.shapedBuilder()
 // Basic Cell Mass Change
 mods.gregtech.bender.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { out -> out * (out.count * 4) }
+        builder.changeEachOutput { out -> out * (getSize(out) * 4) }
             .replaceAndRegister()
     }
 
 mods.gregtech.extruder.changeByOutput([metaitem('fluid_cell')], null)
     .forEach { ChangeRecipeBuilder builder ->
-        builder.changeEachOutput { out -> out * (out.count * 4) }
+        builder.changeEachOutput { out -> out * (getSize(out) * 4) }
             .replaceAndRegister()
     }
 
@@ -402,7 +403,7 @@ lubeRecipes.copy().forEach { builder ->
         recipe.clearFluidInputs()
             .fluidInputs(fluid('oil_light') * 1000)
     }.changeEachFluidOutput { out ->
-        return out * (out.amount / 2)
+        return out * (getSize(out) / 2)
     }.buildAndRegister()
 }
 
@@ -412,7 +413,7 @@ lubeRecipes.copy().forEach { builder ->
         recipe.clearFluidInputs()
             .fluidInputs(fluid('oil_heavy') * 1000)
     }.changeEachFluidOutput { out ->
-        return out * (out.amount * 4)
+        return out * (getSize(out) * 4)
     }.buildAndRegister()
 }
 
