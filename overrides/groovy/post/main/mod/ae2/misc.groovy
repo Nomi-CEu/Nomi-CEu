@@ -6,7 +6,6 @@ import static gregtech.api.GTValues.*
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.nbt.NBTTagCompound
 import org.apache.commons.lang3.tuple.Pair
 
 // Standardise fluix dust
@@ -17,15 +16,7 @@ ore('dustFluix').add(item('appliedenergistics2:material', 8))
 // They do NOT correctly set the NBT, although it appears correct in most scenarios, it does not work in AE2 autocraft.
 // Fix the recipes.
 var createCrystalSeed = { int progress ->
-    NBTTagCompound nbt = new NBTTagCompound()
-    nbt.setInteger('progress', progress)
-
-    // Use ItemStack constructor directly to set capNbt
-    Item seedItem = item('appliedenergistics2:crystal_seed').item
-    var seed = new ItemStack(seedItem, 1, progress, nbt.copy())
-
-    seed.setTagCompound(nbt)
-    return seed
+    return item('appliedenergistics2:crystal_seed', progress).withNbt(['progress' : progress])
 }
 
 var seeds = [Pair.of('CertusQuartz', CERTUS), Pair.of('NetherQuartz', NETHER), Pair.of('Fluix', FLUIX)]

@@ -90,7 +90,7 @@ crafting.shapedBuilder()
 for (String type : ['ae2stuff:wireless', 'ae2stuff:wireless_hub']) {
     // Init chisel group
     mods.chisel.carving.addGroup(type)
-    mods.chisel.carving.setSound(type, SoundEvents.BLOCK_STONE_PLACE)
+    //mods.chisel.carving.setSound(type, SoundEvents.BLOCK_STONE_PLACE)
 
     mods.chisel.carving.addVariation(type, item(type))
 
