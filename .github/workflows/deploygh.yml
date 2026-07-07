@@ -28,12 +28,12 @@ jobs:
           owner: ${{ github.repository_owner }}
 
       - name: Checkout Tag
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |

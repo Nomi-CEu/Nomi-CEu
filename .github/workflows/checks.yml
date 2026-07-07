@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Check Line Endings
         run: |
@@ -22,7 +22,7 @@ jobs:
           git diff --cached --exit-code # Throws if changes are detected
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -93,10 +93,10 @@ jobs:
     needs: [checks, secretChecks]
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -161,12 +161,12 @@ jobs:
           owner: ${{ github.repository_owner }}
 
       - name: Checkout Base Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.base.sha }}
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -187,7 +187,7 @@ jobs:
         run: npm ci
 
       - name: Checkout Head Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: ./temp

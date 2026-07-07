@@ -106,13 +106,13 @@ jobs:
 
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -122,7 +122,7 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Restore Build Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: build-cache
         with:
           path: |
@@ -173,13 +173,13 @@ jobs:
       discordVersionName: ${{ steps.artifactNames.outputs.discordVersionName }}
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -231,13 +231,13 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -286,13 +286,13 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -302,7 +302,7 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Restore Build Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: build-cache
         with:
           path: |
@@ -350,13 +350,13 @@ jobs:
     needs: makeNames
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ inputs.tag }}
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
