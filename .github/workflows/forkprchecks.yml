@@ -66,7 +66,7 @@ jobs:
       mmc: ${{ steps.artifactNames.outputs.mmc }}
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -75,7 +75,7 @@ jobs:
       # Don't use cache to prevent cache poisoning
 
       - name: Setup NodeJS v24
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           check-latest: true
@@ -101,7 +101,7 @@ jobs:
     needs: setup
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -110,7 +110,7 @@ jobs:
       # Don't use cache to prevent cache poisoning
 
       - name: Setup NodeJS v24
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           check-latest: true
@@ -139,7 +139,7 @@ jobs:
     needs: setup
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -148,7 +148,7 @@ jobs:
       # Don't use cache to prevent cache poisoning
 
       - name: Setup NodeJS v24
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           check-latest: true
@@ -177,7 +177,7 @@ jobs:
     needs: setup
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -186,7 +186,7 @@ jobs:
       # Don't use cache to prevent cache poisoning
 
       - name: Setup NodeJS v24
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           check-latest: true
@@ -217,12 +217,12 @@ jobs:
     needs: [secretChecks]
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # Don't use cache to prevent cache poisoning
 
       - name: Setup NodeJS v24
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           check-latest: true
@@ -277,7 +277,7 @@ jobs:
           owner: ${{ github.repository_owner }}
 
       - name: Checkout Base Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
@@ -285,7 +285,7 @@ jobs:
       # Don't use cache to prevent cache poisoning
 
       - name: Setup NodeJS v24
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           check-latest: true
@@ -295,7 +295,7 @@ jobs:
         run: npm ci
 
       - name: Checkout Head Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: ./temp
