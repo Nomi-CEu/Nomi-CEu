@@ -9,7 +9,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 16777216, Range: [1;9223372036854775807])
-    +L:Generation Rate=16777216
+    +L:Generation Rate=2147483647
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -27,7 +27,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 8388608, Range: [1;9223372036854775807])
-    +L:Generation Rate=8388608
+    +L:Generation Rate=16777216
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -49,7 +49,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 524288, Range: [1;9223372036854775807])
-    +L:Generation Rate=524288
+    +L:Generation Rate=1048576
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -85,7 +85,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 65536, Range: [1;9223372036854775807])
-    +L:Generation Rate=65536
+    +L:Generation Rate=32768
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -143,7 +143,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 32, Range: [1;9223372036854775807])
-    +L:Generation Rate=32
+    +L:Generation Rate=64
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -161,7 +161,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 128, Range: [1;9223372036854775807])
-    +L:Generation Rate=128
+    +L:Generation Rate=256
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -197,7 +197,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 2048, Range: [1;9223372036854775807])
-    +L:Generation Rate=2048
+    +L:Generation Rate=1024
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -215,7 +215,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 8192, Range: [1;9223372036854775807])
-    +L:Generation Rate=8192
+    +L:Generation Rate=2048
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
@@ -233,7 +233,7 @@
     +B:Connected Texture=true
 
     # How many RF/FE does this solar panel produce per tick? (Default: 32768, Range: [1;9223372036854775807])
-    +L:Generation Rate=32768
+    +L:Generation Rate=4096
 
     # How high is this solar panel? (Default: 6.0, Range: [0.0;16.0])
     +F:Height=6.0
