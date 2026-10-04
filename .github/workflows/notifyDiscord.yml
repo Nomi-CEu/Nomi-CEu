@@ -32,10 +32,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Ref
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Restore NPM Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: |
@@ -45,7 +45,7 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Restore Build Cached Files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: build-cache
         with:
           path: |
@@ -54,7 +54,7 @@ jobs:
           restore-keys: ${{ runner.os }}-build-
 
       - name: Setup NodeJS v24
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           check-latest: true
