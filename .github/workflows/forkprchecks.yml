@@ -316,6 +316,8 @@ jobs:
           path: ./temp
           sparse-checkout: manifest.json
           persist-credentials: false
+          # Needed to allow checkout from pull-request-target
+          allow-unsafe-pr-checkout: true
 
       - name: Generate Comment Contents
         working-directory: ./tools
