@@ -71,6 +71,8 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+          # Needed to allow checkout from pull-request-target
+          allow-unsafe-pr-checkout: true
 
       # Don't use cache to prevent cache poisoning
 
@@ -106,6 +108,8 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+          # Needed to allow checkout from pull-request-target
+          allow-unsafe-pr-checkout: true
 
       # Don't use cache to prevent cache poisoning
 
@@ -144,6 +148,8 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+          # Needed to allow checkout from pull-request-target
+          allow-unsafe-pr-checkout: true
 
       # Don't use cache to prevent cache poisoning
 
@@ -182,6 +188,8 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+          # Needed to allow checkout from pull-request-target
+          allow-unsafe-pr-checkout: true
 
       # Don't use cache to prevent cache poisoning
 
@@ -218,6 +226,11 @@ jobs:
     steps:
       - name: Checkout Ref
         uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          # Needed to allow checkout from pull-request-target
+          allow-unsafe-pr-checkout: true
 
       # Don't use cache to prevent cache poisoning
 
@@ -281,6 +294,8 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
+          # Needed to allow checkout from pull-request-target
+          allow-unsafe-pr-checkout: true
 
       # Don't use cache to prevent cache poisoning
 
