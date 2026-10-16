@@ -98,16 +98,6 @@ vacuum_freezer.recipeBuilder()
 	.EUt(6000)
 	.buildAndRegister();
 
-// Allow Gas Collector to work in LostCities, void dims
-gas_collector.recipeBuilder()
-	.fluidOutputs(<liquid:air> * 10000)
-	.circuit(4)
-	.property("dimension", 111)
-	.property("dimension", 119)
-	.duration(200)
-	.EUt(16)
-	.buildAndRegister();
-
 canner.recipeBuilder()
 	.inputs(<minecraft:glass_bottle>)
 	.fluidInputs(<liquid:xpjuice> * 500)
