@@ -2,10 +2,7 @@ package post.main.general.misc.qol
 
 import static gregtech.api.unification.material.Materials.*
 import static gregtech.api.unification.ore.OrePrefix.*
-
-import com.nomiceu.nomilabs.groovy.ChangeRecipeBuilder
-
-import gregtech.api.recipes.ingredients.GTRecipeInput
+import static post.classes.SpongeAdapter.*
 import gregtech.api.recipes.ingredients.GTRecipeItemInput
 import gregtech.api.unification.OreDictUnifier
 
@@ -37,11 +34,8 @@ for (var material : materials) {
         var stack = OreDictUnifier.get(prefix, material)
         if (stack.empty) continue
 
-        mods.gregtech.extruder.changeByOutput([stack], null)
-            .forEach { ChangeRecipeBuilder builder ->
-                builder.changeInput(0) { GTRecipeInput input ->
-                    new GTRecipeItemInput(dust, input.amount)
-                }.buildAndRegister()
-            }
+        mods.gregtech.extruder.changeByOutput([stack], null).each { builder ->
+            builder.changeInput(0) { input -> new GTRecipeItemInput(dust, getSize(input)) }.buildAndRegister()
+        }
     }
 }

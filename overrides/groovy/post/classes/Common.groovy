@@ -1,5 +1,7 @@
 package post.classes
 
+import static post.classes.SpongeAdapter.*
+
 import com.cleanroommc.groovyscript.api.GroovyLog
 import com.cleanroommc.groovyscript.helper.ingredient.OreDictIngredient
 import com.google.common.base.Ascii
@@ -107,10 +109,9 @@ class Common {
         colorInfoCache = []
 
         for (int i = 0; i < EnumDyeColor.values().length; i++) {
-            var dye = EnumDyeColor.byMetadata(i)
+            var dye = getDyeByIndex(i)
             var marker = MarkerMaterials.Color.VALUES[i]
-
-            colorInfoCache.add(new ColorInfo(dye, marker))
+            colorInfoCache.add(new ColorInfo(dye, getDyeMeta(dye), marker))
         }
 
         return colorInfoCache
@@ -132,10 +133,14 @@ class ColorInfo {
     // Ore dict name of the dye
     private final String oreDictName
 
-    ColorInfo(EnumDyeColor color, MarkerMaterial marker) {
-        unlocalizedName = color.name
-        metadata = color.metadata
+    ColorInfo(EnumDyeColor color, int metadata, MarkerMaterial marker) {
+        unlocalizedName = color.name().toLowerCase(Locale.ENGLISH)
+        this.metadata = metadata
         oreDictName = "dye${marker.toCamelCaseString()}".toString()
+    }
+
+    ColorInfo(EnumDyeColor color, MarkerMaterial marker) {
+        this(color, getDyeMeta(color), marker)
     }
 
     String getUnlocalizedName() {

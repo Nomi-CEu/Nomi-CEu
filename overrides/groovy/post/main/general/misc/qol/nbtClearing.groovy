@@ -7,6 +7,7 @@ import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.CAN_CLEAR_TOOLTIP
 import static com.nomiceu.nomilabs.groovy.NBTClearingRecipe.WARNING_TOOLTIP
 import static gregtech.common.metatileentities.MetaTileEntities.*
 import static post.classes.Common.*
+import static post.classes.NBTUtil.*
 
 import net.minecraft.item.ItemStack
 
@@ -45,14 +46,14 @@ List<ItemStack> canClearDrawers = []
 for (var meta : 0..4) {
     nbtClearingRecipe(item('storagedrawers:basicdrawers', meta), { stack ->
         var tag = transferSubTags(stack, 'material')
-        stack.tagCompound = transferDrawerUpgradeData(stack, tag)
+        setTag(stack, transferDrawerUpgradeData(stack, tag))
     }, empty, WARNING_TOOLTIP)
 
     canClearDrawers.add(item('storagedrawers:basicdrawers', meta))
 }
 
 var normalClearer = { ItemStack stack ->
-    stack.tagCompound = transferDrawerUpgradeData(stack, null)
+    setTag(stack, transferDrawerUpgradeData(stack, null))
 }
 
 // GregTech Drawers
@@ -73,7 +74,7 @@ canClearDrawers.add(item('storagedrawers:compdrawers'))
 /* Framed Drawer Like */
 var framedClearer = { ItemStack stack ->
     var tag = transferSubTags(stack, 'MatS', 'MatT', 'MatF')
-    stack.tagCompound = transferDrawerUpgradeData(stack, tag)
+    setTag(stack, transferDrawerUpgradeData(stack, tag))
 }
 
 // Framed Drawers
@@ -93,7 +94,7 @@ for (var canClear : canClearDrawers) {
 
 // Thermal Portable Tanks
 nbtClearingRecipe(item('thermalexpansion:tank')) { stack ->
-    stack.tagCompound = transferSubTags(stack, 'Creative', 'Level', 'RSControl')
+    setTag(stack, transferSubTags(stack, 'Creative', 'Level', 'RSControl'))
 }
 
 // Tooltips for Other Clearable Containers
