@@ -37,6 +37,26 @@ mods.gregtech.assembler.recipeBuilder()
     .duration(80).EUt(VHA[LV])
     .buildAndRegister()
 
+// EIO Crystal Recipes - Autoclave
+mods.gregtech.autoclave.recipeBuilder()
+    .inputs(item('enderio:block_enderman_skull') * 32, ore('itemVibrantCrystal') * 16)
+    .fluidInputs(fluid('xpjuice') * 48000)
+    .outputs(item('enderio:item_material', 16) * 16)
+    .duration(600).EUt(VHA[UV])
+    .buildAndRegister()
+mods.gregtech.autoclave.recipeBuilder()
+    .inputs(ore('gemExquisiteEmerald') * 16, ore('gemEmerald') * 16)
+    .fluidInputs(fluid('xpjuice') * 32000)
+    .outputs(item('enderio:item_material', 17) * 16)
+    .duration(600).EUt(VHA[UV])
+    .buildAndRegister()
+mods.gregtech.autoclave.recipeBuilder()
+    .inputs(ore('shulkerShell') * 32, ore('itemVibrantCrystal') * 16)
+    .fluidInputs(fluid('xpjuice') * 64000)
+    .outputs(item('enderio:item_material', 19) * 16)
+    .duration(600).EUt(VHA[UV])
+    .buildAndRegister()
+
 // Replace the 'old' Glowstone nano particles with the 'not old' one
 // Not really serving any purpose, but removing the need for two items that do the same thing
 mods.jei.ingredient.hide(item('enderio:block_holy_fog'))
